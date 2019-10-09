@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="0" cat="smain" end="22" id="1" rel="--">
+      <node begin="0" cat="mwu" end="4" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="Prof." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Prof." spectype="deeleigen" word="Prof."/>
+        <node begin="1" end="2" id="4" lemma="P." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="P." spectype="deeleigen" word="P."/>
+        <node begin="2" end="3" id="5" lemma="L." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="L." spectype="deeleigen" word="L."/>
+        <node begin="3" end="4" id="6" lemma="Dijk" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Dijk" spectype="deeleigen" word="Dijk"/>
+      </node>
+      <node begin="4" end="5" id="7" lemma="vraag" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vraag" word="vroeg" wvorm="pv"/>
+      <node begin="5" end="6" getal="getal" id="8" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+      <node begin="6" end="7" id="9" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="af" vztype="fin" word="af"/>
+      <node begin="7" cat="whsub" end="22" id="10" rel="vc">
+        <node begin="7" end="8" id="11" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="hoe"/>
+        <node begin="7" cat="ssub" end="22" id="12" rel="body">
+          <node begin="8" cat="np" end="10" id="13" index="2" rel="su">
+            <node begin="8" end="9" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="15" lemma="makelaardij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="makelaardij" word="makelaardij"/>
+          </node>
+          <node begin="17" end="18" id="16" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+          <node begin="7" cat="inf" end="22" id="17" rel="vc">
+            <node begin="7" end="8" id="18" index="1" rel="predc"/>
+            <node begin="8" end="10" id="19" index="2" rel="su"/>
+            <node begin="10" end="11" getal="getal" id="20" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+            <node begin="11" cat="pp" end="17" id="21" rel="mod">
+              <node begin="11" end="12" id="22" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="12" cat="np" end="17" id="23" rel="obj1">
+                <node begin="12" end="13" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="13" cat="ppres" end="16" id="25" rel="mod">
+                  <node begin="13" cat="pp" end="15" id="26" rel="mod">
+                    <node begin="13" end="14" id="27" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                    <node begin="14" end="15" getal="mv" id="28" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj1" root="ons" status="vol" vwtype="pr" word="ons"/>
+                  </node>
+                  <node begin="15" buiging="met-e" end="16" id="29" lemma="liggen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="liggend" word="liggende" wvorm="od"/>
+                </node>
+                <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="30" lemma="periode" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="periode" word="periode"/>
+              </node>
+            </node>
+            <node begin="18" buiging="zonder" end="19" id="31" lemma="opstellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel" word="opstellen" wvorm="inf"/>
+            <node begin="19" cat="pp" end="22" id="32" rel="mod">
+              <node begin="19" end="20" id="33" lemma="tegenover" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegenover" vztype="init" word="tegenover"/>
+              <node begin="20" cat="np" end="22" id="34" rel="obj1">
+                <node begin="20" end="21" id="35" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="36" lemma="schaalvergroting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schaalvergroting" word="schaalvergroting"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Prof. P. L. Dijk vroeg zich af hoe de makelaardij zich in de voor ons liggende periode moet opstellen tegenover de schaalvergroting .</sentence>
+</alpino_ds>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="34" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="12" end="13" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="21" end="22" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="1" cat="smain" end="33" id="4" rel="--">
+      <node begin="1" cat="pp" end="21" id="5" rel="mod">
+        <node begin="1" end="2" id="6" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="Door"/>
+        <node begin="2" cat="conj" end="21" id="7" rel="obj1">
+          <node begin="5" conjtype="neven" end="6" id="8" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="2" cat="np" end="21" id="9" rel="cnj">
+            <node begin="2" end="3" id="10" index="1" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="3" buiging="met-e" end="4" graad="basis" id="11" index="2" lemma="onrechtmatig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="onrechtmatig" word="onrechtmatige"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="12" lemma="bezetting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bezetting" word="bezetting"/>
+            <node begin="7" cat="pp" end="9" id="13" index="3" rel="mod">
+              <node begin="7" end="8" id="14" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="jordanie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Jordanie" word="Jordanie"/>
+            </node>
+            <node begin="9" cat="pp" end="12" id="16" index="4" rel="mod">
+              <node begin="9" end="10" id="17" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="10" cat="np" end="12" id="18" rel="obj1">
+                <node begin="10" buiging="zonder" end="11" id="19" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+                <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="20" lemma="gebied" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebied" word="gebied"/>
+              </node>
+            </node>
+            <node begin="13" cat="rel" end="21" id="21" index="5" rel="mod">
+              <node begin="13" end="14" id="22" index="6" lemma="waarop" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarop" word="waarop"/>
+              <node begin="13" cat="ssub" end="21" id="23" rel="body">
+                <node begin="13" end="14" id="24" index="6" rel="pc"/>
+                <node begin="14" end="15" genus="onz" getal="ev" id="25" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+                <node begin="15" cat="conj" end="18" id="26" rel="mod">
+                  <node begin="15" buiging="zonder" end="16" graad="basis" id="27" lemma="volkenrechtelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="volkenrechtelijk" word="volkenrechtelijk"/>
+                  <node begin="16" conjtype="neven" end="17" id="28" lemma="noch" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="noch" word="noch"/>
+                  <node begin="17" buiging="zonder" end="18" graad="basis" id="29" lemma="historisch" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="historisch" word="historisch"/>
+                </node>
+                <node begin="18" cat="np" end="20" id="30" rel="obj1">
+                  <node begin="18" buiging="zonder" end="19" id="31" lemma="enig" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="enig" vwtype="onbep" word="enig"/>
+                  <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="32" lemma="recht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="recht" word="recht"/>
+                </node>
+                <node begin="20" end="21" id="33" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+          <node begin="2" cat="np" end="21" id="34" rel="cnj">
+            <node begin="2" end="3" id="35" index="1" rel="det"/>
+            <node begin="3" end="4" id="36" index="2" rel="mod"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="37" lemma="annexatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="annexatie" word="annexatie"/>
+            <node begin="7" end="9" id="38" index="3" rel="mod"/>
+            <node begin="9" end="12" id="39" index="4" rel="mod"/>
+            <node begin="13" end="21" id="40" index="5" rel="mod"/>
+          </node>
+        </node>
+      </node>
+      <node begin="22" end="23" id="41" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="23" cat="np" end="25" id="42" rel="su">
+        <node begin="23" buiging="zonder" end="24" id="43" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+        <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="44" lemma="land" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="land" word="land"/>
+      </node>
+      <node begin="25" cat="pp" end="29" id="45" rel="mod">
+        <node begin="25" end="26" id="46" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+        <node begin="26" cat="np" end="29" id="47" rel="obj1">
+          <node begin="26" end="27" id="48" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="27" buiging="zonder" end="28" graad="basis" id="49" lemma="groot" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="groot" word="groot"/>
+          <node begin="28" end="29" genus="onz" getal="ev" graad="basis" id="50" lemma="deel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="deel" word="deel"/>
+        </node>
+      </node>
+      <node begin="29" cat="ap" end="33" id="51" rel="predc">
+        <node begin="29" buiging="zonder" end="30" graad="basis" id="52" lemma="verantwoordelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="verantwoordelijk" word="verantwoordelijk"/>
+        <node begin="30" cat="pp" end="33" id="53" rel="pc">
+          <node begin="30" end="31" id="54" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+          <node begin="31" cat="np" end="33" id="55" rel="obj1">
+            <node begin="31" end="32" id="56" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="32" end="33" genus="onz" getal="ev" graad="basis" id="57" lemma="vluchtelingenprobleem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="probleem" word="vluchtelingenprobleem"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="33" end="34" id="58" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&quot; Door de onrechtmatige bezetting en annexatie door Jordanie van dit gebied , waarop het volkenrechtelijk noch historisch enig recht heeft , is dit land voor een groot deel verantwoordelijk voor het vluchtelingenprobleem .</sentence>
+</alpino_ds>

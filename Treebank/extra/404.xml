@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="sv1" end="16" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="begin" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="begin" word="Begin" wvorm="pv"/>
+      <node begin="1" cat="pp" end="4" id="3" rel="mod">
+        <node begin="1" end="2" id="4" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="2" cat="np" end="4" id="5" rel="obj1">
+          <node begin="2" buiging="zonder" end="3" getal="getal" id="6" lemma="uw" naamval="stan" npagr="agr" pdtype="det" persoon="2" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)" pt="vnw" rel="det" root="u" status="vol" vwtype="bez" word="uw"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="stad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stad" word="stad"/>
+        </node>
+      </node>
+      <node begin="4" cat="conj" end="16" id="8" rel="obj1">
+        <node begin="6" conjtype="neven" end="7" id="9" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+        <node begin="4" cat="np" end="16" id="10" rel="cnj">
+          <node begin="4" end="5" id="11" index="1" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="5" end="6" id="12" lemma="imbiss" pos="name" postag="SPEC(vreemd)" pt="spec" rel="hd" root="Imbiss" spectype="vreemd" word="Imbiss"/>
+          <node begin="8" cat="rel" end="16" id="13" index="2" rel="mod">
+            <node begin="8" end="9" getal="getal" id="14" index="3" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" status="vol" vwtype="vb" word="waar"/>
+            <node begin="8" cat="ssub" end="16" id="15" rel="body">
+              <node begin="8" end="9" id="16" index="3" rel="mod"/>
+              <node begin="9" end="10" genus="masc" getal="ev" id="17" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="men"/>
+              <node begin="10" buiging="zonder" end="11" graad="basis" id="18" lemma="uitsluitend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="sluit_uit" word="uitsluitend"/>
+              <node begin="11" cat="conj" end="15" id="19" rel="obj1">
+                <node begin="11" cat="np" end="13" id="20" rel="cnj">
+                  <node begin="11" buiging="met-e" end="12" graad="basis" id="21" lemma="frans" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Frans" word="Franse"/>
+                  <node begin="12" end="13" getal="mv" graad="basis" id="22" lemma="chanson" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="chanson" word="chansons"/>
+                </node>
+                <node begin="13" conjtype="neven" end="14" id="23" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+                <node begin="14" end="15" getal="mv" graad="basis" id="24" lemma="schlager" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="Schlagers" word="Schlagers"/>
+              </node>
+              <node begin="15" end="16" id="25" lemma="draaien" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="draai" word="draait" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+        <node begin="4" cat="np" end="16" id="26" rel="cnj">
+          <node begin="4" end="5" id="27" index="1" rel="det"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="28" lemma="cafétarium" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="cafetaria" word="cafétaria"/>
+          <node begin="8" end="16" id="29" index="2" rel="mod"/>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="30" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>Begin in uw stad een Imbiss of cafétaria waar men uitsluitend Franse chansons of Schlagers draait !</sentence>
+</alpino_ds>

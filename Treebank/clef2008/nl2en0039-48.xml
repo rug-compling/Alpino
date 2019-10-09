@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="whq" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="whd">
+        <node begin="0" end="1" getal="ev" id="3" lemma="wie" naamval="gen" pdtype="pron" persoon="3m" pos="det" postag="VNW(vb,pron,gen,vol,3m,ev)" pt="vnw" rel="det" root="wie" status="vol" vwtype="vb" word="Wiens"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="stem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stem" word="stem"/>
+      </node>
+      <node begin="0" cat="sv1" end="8" id="5" rel="body">
+        <node begin="0" end="2" id="6" index="1" rel="su"/>
+        <node begin="2" end="3" id="7" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom_voor" word="komt" wvorm="pv"/>
+        <node begin="3" end="4" id="8" lemma="voor" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="voor" vztype="fin" word="voor"/>
+        <node begin="4" cat="pp" end="8" id="9" rel="ld">
+          <node begin="4" end="5" id="10" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="5" cat="np" end="8" id="11" rel="obj1">
+            <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="film" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="film" word="film"/>
+            <node begin="7" end="8" genus="genus" getal="ev" graad="basis" id="14" lemma="Dragonheart" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Dragonheart" word="Dragonheart"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="15" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wiens stem komt voor in de film Dragonheart ?</sentence>
+</alpino_ds>

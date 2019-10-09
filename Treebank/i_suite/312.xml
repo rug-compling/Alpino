@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="pp" end="3" id="1" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="slegts" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="slechts" word="Slegts"/>
+      <node begin="1" end="2" id="3" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+      <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="4" lemma="bezoek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="bezoek" word="bezoek"/>
+    </node>
+    <node begin="3" end="4" id="5" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Slegts op bezoek .</sentence>
+</alpino_ds>

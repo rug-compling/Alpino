@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" frame="pronoun(nwh,fir,pl,de,nom,def,wkpro)" gen="de" id="2" lcat="np" num="pl" per="fir" pos="pron" rel="su" root="we" sense="we" special="wkpro" wh="nwh" word="We"/>
+      <node begin="1" end="2" frame="verb(hebben,pl,transitive)" id="3" infl="pl" lcat="smain" pos="verb" rel="hd" root="garandeer" sc="transitive" sense="garandeer" tense="present" word="garanderen"/>
+      <node begin="2" cat="np" end="7" id="4" rel="obj1">
+        <node begin="2" end="3" frame="determiner(een)" id="5" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+        <node aform="base" begin="3" end="4" frame="adjective(e)" id="6" infl="e" lcat="ap" pos="adj" rel="mod" root="kwalitatief" sense="kwalitatief" vform="adj" word="kwalitatieve"/>
+        <node begin="4" end="5" frame="noun(de,mass,sg)" gen="de" id="7" lcat="np" num="sg" pos="noun" rel="hd" root="eind_verwerking" sense="eind_verwerking" word="eindverwerking"/>
+        <node begin="5" cat="pp" end="7" id="8" rel="mod">
+          <node begin="5" end="6" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="9" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+          <node begin="6" end="7" frame="v_noun(intransitive)" id="10" lcat="np" pos="verb" rel="obj1" root="stort" sc="intransitive" sense="stort" special="v_noun" word="storten"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>We garanderen een kwalitatieve eindverwerking voor storten</sentence>
+  <comments>
+    <comment>Q#61|We garanderen een kwalitatieve eindverwerking voor storten|1|1|0.09767682184379467</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="32" id="0" rel="top">
+    <node begin="13" end="14" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="du" end="31" id="2" rel="--">
+      <node begin="0" cat="cp" end="13" id="3" rel="sat">
+        <node begin="0" conjtype="onder" end="1" frame="complementizer" id="4" lcat="cp" lemma="indien" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="indien" sense="indien" word="Indien"/>
+        <node begin="1" cat="ssub" end="13" id="5" rel="body">
+          <node begin="1" cat="np" end="4" id="6" index="1" rel="su">
+            <node begin="1" end="2" frame="determiner(de)" id="7" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+            <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="8" lcat="np" lemma="belegger" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="belegger" sense="belegger" word="belegger"/>
+            <node begin="3" end="4" frame="pp" id="9" lcat="pp" lemma="voordien" pos="pp" postag="BW()" pt="bw" rel="mod" root="voordien" sense="voordien" word="voordien"/>
+          </node>
+          <node begin="8" end="9" frame="verb(hebben,past(sg),aux_psp_hebben)" id="10" infl="sg" lcat="ssub" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" sc="aux_psp_hebben" sense="heb" tense="past" word="had" wvorm="pv"/>
+          <node begin="1" cat="ppart" end="13" id="11" rel="vc">
+            <node begin="1" end="4" id="12" index="1" rel="su"/>
+            <node begin="4" end="5" frame="adverb" id="13" lcat="advp" lemma="reeds" pos="adv" postag="BW()" pt="bw" rel="mod" root="reeds" sense="reeds" word="reeds"/>
+            <node begin="5" cat="np" end="8" id="14" rel="obj1">
+              <node begin="5" end="6" frame="determiner(een)" id="15" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+              <node aform="base" begin="6" buiging="met-e" end="7" frame="adjective(e)" graad="basis" id="16" infl="e" lcat="ap" lemma="mooi" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="mooi" sense="mooi" vform="adj" word="mooie"/>
+              <node begin="7" end="8" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="17" lcat="np" lemma="winst" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="winst" sense="winst" word="winst"/>
+            </node>
+            <node begin="9" buiging="zonder" end="10" frame="verb(hebben,psp,transitive)" id="18" infl="psp" lcat="ppart" lemma="boeken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="boek" sc="transitive" sense="boek" word="geboekt" wvorm="vd"/>
+            <node begin="10" cat="pp" end="13" id="19" rel="mod">
+              <node begin="10" end="11" frame="preposition(op,[af,na])" id="20" lcat="pp" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" sense="op" vztype="init" word="op"/>
+              <node begin="11" cat="np" end="13" id="21" rel="obj1">
+                <node begin="11" buiging="zonder" end="12" frame="determiner(het,nwh,nmod,pro,nparg)" id="22" infl="het" lcat="detp" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" sense="dat" vwtype="aanw" wh="nwh" word="dat"/>
+                <node begin="12" end="13" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="23" lcat="np" lemma="aandeel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aandeel" sense="aandeel" word="aandeel"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="14" cat="smain" end="31" id="24" rel="nucl">
+        <node begin="14" end="15" frame="tmp_adverb" id="25" lcat="advp" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" sense="dan" special="tmp" word="dan"/>
+        <node begin="15" end="16" frame="verb(hebben,modal_not_u,fixed([vc(leef,inf,intransitive),er_pp(met,A),extra_sbar(A)],no_passive))" id="26" infl="modal_not_u" lcat="smain" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" sc="fixed([vc(leef,inf,intransitive),er_pp(met,A),extra_sbar(A)],no_passive)" sense="kan-met-leef" tense="present" word="kan" wvorm="pv"/>
+        <node begin="16" case="nom" def="def" end="17" frame="pronoun(nwh,thi,sg,de,nom,def)" gen="de" genus="masc" getal="ev" id="27" lcat="np" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" sense="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+        <node aform="base" begin="18" buiging="zonder" end="19" frame="adjective(no_e(adv))" graad="basis" id="28" infl="no_e" lcat="ap" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="vaak" sense="vaak" vform="adj" word="vaak"/>
+        <node begin="20" buiging="zonder" end="21" frame="verb(hebben,inf,intransitive)" id="29" infl="inf" lcat="inf" lemma="leven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="svp" root="leef" sc="intransitive" sense="leef" word="leven" wvorm="inf"/>
+        <node begin="17" cat="pp" end="31" id="30" rel="pc">
+          <node begin="17" end="18" frame="er_vp_adverb" getal="getal" id="31" lcat="advp" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="pobj1" root="er" sense="er" special="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="19" end="20" frame="preposition(met,[mee],extracted_np)" id="32" lcat="pp" lemma="mee" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="met" sc="extracted_np" sense="met" vztype="fin" word="mee"/>
+          <node begin="21" cat="cp" end="31" id="33" rel="vc">
+            <node begin="21" conjtype="onder" end="22" frame="complementizer(dat)" id="34" lcat="cp" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" sense="dat" word="dat"/>
+            <node begin="22" cat="ssub" end="31" id="35" rel="body">
+              <node begin="22" case="nom" def="def" end="23" frame="pronoun(nwh,thi,sg,de,nom,def)" gen="de" genus="masc" getal="ev" id="36" index="2" lcat="np" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" sense="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+              <node begin="29" end="30" frame="verb('hebben/zijn',sg,modifier(aux(inf)))" id="37" infl="sg" lcat="ssub" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" sc="modifier(aux(inf))" sense="moet" tense="present" word="moet" wvorm="pv"/>
+              <node begin="22" cat="inf" end="31" id="38" rel="vc">
+                <node begin="22" end="23" id="39" index="2" rel="su"/>
+                <node begin="23" cat="np" end="28" id="40" rel="obj1">
+                  <node begin="23" end="24" frame="determiner(een)" id="41" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+                  <node begin="24" end="25" frame="mod_noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="42" lcat="np" lemma="deel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="deel" sense="deel" special="mod" word="deel"/>
+                  <node begin="25" cat="pp" end="28" id="43" rel="mod">
+                    <node begin="25" end="26" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="44" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+                    <node begin="26" cat="np" end="28" id="45" rel="obj1">
+                      <node begin="26" buiging="zonder" end="27" frame="determiner(de,nwh,nmod,pro,nparg)" id="46" infl="de" lcat="detp" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" sense="die" vwtype="aanw" wh="nwh" word="die"/>
+                      <node begin="27" end="28" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="47" lcat="np" lemma="winst" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="winst" sense="winst" word="winst"/>
+                    </node>
+                  </node>
+                </node>
+                <node begin="28" end="29" frame="adverb" id="48" lcat="advp" lemma="opnieuw" pos="adv" postag="BW()" pt="bw" rel="mod" root="opnieuw" sense="opnieuw" word="opnieuw"/>
+                <node begin="30" buiging="zonder" end="31" frame="verb(hebben,inf,ninv(transitive,part_transitive(in)))" id="49" infl="inf" lcat="inf" lemma="inboeten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="boet_in" sc="part_transitive(in)" sense="boet_in" word="inboeten" wvorm="inf"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="31" end="32" frame="punct(punt)" id="50" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Indien de belegger voordien reeds een mooie winst had geboekt op dat aandeel , dan kan hij er vaak mee leven dat hij een deel van die winst opnieuw moet inboeten .</sentence>
+  <comments>
+    <comment>Q#DM_20021021_01-90-10-3|Indien de belegger voordien reeds een mooie winst had geboekt op dat aandeel , dan kan hij er vaak mee leven dat hij een deel van die winst opnieuw moet inboeten .|1|1|-0.5778173507360599</comment>
+  </comments>
+</alpino_ds>

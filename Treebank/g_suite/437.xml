@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="14" id="2" rel="--">
+      <node begin="0" cat="cp" end="7" id="3" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="zoals"/>
+        <node begin="1" cat="ssub" end="7" id="5" rel="body">
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="6" lemma="Feyenoord" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Feyenoord" word="Feyenoord"/>
+          <node begin="2" cat="np" end="4" id="7" rel="obj1">
+            <node begin="2" end="3" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="beker" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beker" word="beker"/>
+          </node>
+          <node begin="4" end="5" id="10" lemma="winnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="win" word="won" wvorm="pv"/>
+          <node begin="5" cat="pp" end="7" id="11" rel="mod">
+            <node begin="5" end="6" id="12" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="6" end="7" id="13" lemma="1970" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1970" word="1970"/>
+          </node>
+        </node>
+      </node>
+      <node begin="8" end="9" id="14" lemma="winnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="win" word="won" wvorm="pv"/>
+      <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="15" lemma="Feyenoord" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Feyenoord" word="Feyenoord"/>
+      <node begin="10" cat="np" end="12" id="16" rel="obj1">
+        <node begin="10" end="11" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="18" lemma="beker" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beker" word="beker"/>
+      </node>
+      <node begin="12" cat="pp" end="14" id="19" rel="mod">
+        <node begin="12" end="13" id="20" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="13" end="14" id="21" lemma="2002" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="2002" word="2002"/>
+      </node>
+    </node>
+  </node>
+  <sentence>zoals Feyenoord de beker won in 1970 , won Feyenoord de beker in 2002</sentence>
+</alpino_ds>

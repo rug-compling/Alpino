@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="23" id="2" rel="--">
+      <node begin="0" cat="pp" end="7" id="3" rel="mod">
+        <node begin="0" end="1" id="4" lemma="gezien" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="gezien" vztype="init" word="Gezien"/>
+        <node begin="1" cat="np" end="7" id="5" rel="obj1">
+          <node begin="1" end="2" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" buiging="met-e" end="3" graad="basis" id="7" lemma="lang" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="lang" word="lange"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="duur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="duur" word="duur"/>
+          <node begin="4" cat="pp" end="7" id="9" rel="mod">
+            <node begin="4" end="5" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="5" cat="np" end="7" id="11" rel="obj1">
+              <node begin="5" buiging="met-e" end="6" graad="basis" id="12" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,agr,basis)" pt="vnw" rel="mod" root="veel" vwtype="onbep" word="vele"/>
+              <node begin="6" end="7" getal="mv" graad="basis" id="13" lemma="verzekeringscontract" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verzekeringscontract" word="verzekeringscontracten"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="14" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="8" end="9" getal="ev" id="15" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dit" status="vol" vwtype="aanw" word="dit"/>
+      <node begin="9" buiging="zonder" end="10" graad="basis" id="16" lemma="onvermijdelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="onvermijdelijk" word="onvermijdelijk"/>
+      <node begin="11" cat="cp" end="23" id="17" rel="mod">
+        <node begin="11" end="12" id="18" lemma="vooral" pos="adv" postag="BW()" pt="bw" rel="mod" root="vooral" word="vooral"/>
+        <node begin="12" conjtype="onder" end="13" id="19" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="omdat"/>
+        <node begin="13" cat="ssub" end="23" id="20" rel="body">
+          <node begin="13" cat="np" end="18" id="21" rel="su">
+            <node begin="13" end="14" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="23" lemma="aard" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aard" word="aard"/>
+            <node begin="15" cat="pp" end="18" id="24" rel="mod">
+              <node begin="15" end="16" id="25" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="16" cat="np" end="18" id="26" rel="obj1">
+                <node begin="16" buiging="met-e" end="17" id="27" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+                <node begin="17" end="18" getal="mv" graad="basis" id="28" lemma="contract" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="contract" word="contracten"/>
+              </node>
+            </node>
+          </node>
+          <node begin="18" cat="np" end="21" id="29" rel="obj1">
+            <node begin="18" end="19" id="30" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="19" buiging="met-e" end="20" graad="basis" id="31" lemma="tussentijds" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="tussentijds" word="tussentijdse"/>
+            <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="32" lemma="premieverhoging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="premieverhoging" word="premieverhoging"/>
+          </node>
+          <node begin="21" end="22" id="33" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="22" end="23" id="34" lemma="toelaten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="laat" word="toelaat" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Gezien de lange duur van vele verzekeringscontracten is dit onvermijdelijk , vooral omdat de aard van deze contracten een tussentijdse premieverhoging niet toelaat .</sentence>
+</alpino_ds>

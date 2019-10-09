@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="het" pos="noun" rel="su" root="het" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="zal" pos="verb" rel="hd" root="zal" word="zal"/>
+      <node begin="0" cat="inf" end="12" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="5" end="6" id="6" lemma="ben" pos="verb" rel="hd" root="ben" word="zijn"/>
+        <node begin="0" cat="ppart" end="12" id="7" rel="vc">
+          <node begin="0" end="1" id="8" index="1" rel="pobj1"/>
+          <node begin="2" cat="np" end="4" id="9" index="2" rel="obj2">
+            <node begin="2" end="3" id="10" lemma="de" pos="det" rel="det" root="de" word="de"/>
+            <node begin="3" end="4" id="11" lemma="coördinator" pos="noun" rel="hd" root="coördinator" word="coördinator"/>
+          </node>
+          <node begin="4" end="5" id="12" lemma="niet" pos="adv" rel="mod" root="niet" word="niet"/>
+          <node begin="6" end="7" id="13" lemma="sta_toe" pos="verb" rel="hd" root="sta_toe" word="toegestaan"/>
+          <node begin="2" cat="ti" end="12" id="14" rel="vc">
+            <node begin="10" end="11" id="15" lemma="te" pos="comp" rel="cmp" root="te" word="te"/>
+            <node begin="2" cat="inf" end="12" id="16" rel="body">
+              <node begin="2" end="4" id="17" index="2" rel="su"/>
+              <node begin="7" cat="np" end="9" id="18" rel="obj1">
+                <node begin="7" end="8" id="19" lemma="de" pos="det" rel="det" root="de" word="de"/>
+                <node begin="8" end="9" id="20" lemma="wet" pos="noun" rel="hd" root="wet" word="wet"/>
+              </node>
+              <node begin="9" end="10" id="21" lemma="opzij" pos="adv" rel="ld" root="opzij" word="opzij"/>
+              <node begin="11" end="12" id="22" lemma="zet" pos="verb" rel="hd" root="zet" word="zetten"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="23" lemma="." pos="punct" rel="--" root="." word="."/>
+    <node begin="13" end="14" id="24" lemma="&quot;" pos="punct" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>Het zal de coördinator niet zijn toegestaan de wet opzij te zetten . &quot;</sentence>
+</alpino_ds>

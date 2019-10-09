@@ -1,0 +1,30 @@
+#!/bin/sh
+# the next line restarts using wish \
+exec wish -f "$0" "$@"
+
+##############################################################################
+# CLIG -- Computational Linguistic's Interactive Grapher
+# v: 1.2
+# author karsten konrad, konrad@coli.uni-sb.de
+# last update: 9-Jan-96
+##############################################################################
+
+# this is the main file for the grapher which gets executed whenever the
+# grapher gets started.
+
+if [info exists env(CLIG_DIR)] {set cligdir $env(CLIG_DIR)} \
+else {if [info exists argv0] \
+        {set cligdir [file dirname $argv0]} \
+        else {set cligdir .}}
+
+source $cligdir/main.tcl
+
+open-clig
+
+# opening file or copyright
+
+if {[info exists argc]&&($argc==1)&&($argv=="stdin")} {
+        read-clig} \
+else {if {[info exists argc]&&($argc==1)&&($argv!="stdin")} {
+        source $argv} \
+      else {show $copyright}}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="5" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="overwinning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="overwinning" word="overwinning"/>
+        <node begin="2" end="3" id="5" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
+        <node begin="3" cat="pp" end="5" id="6" rel="mod">
+          <node begin="3" end="4" id="7" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="8" lemma="Ajax" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Ajax" word="Ajax"/>
+        </node>
+      </node>
+      <node begin="5" end="6" id="9" lemma="lijken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="lijk" word="leek" wvorm="pv"/>
+      <node begin="6" end="7" getal="ev" id="10" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj2" root="me" status="red" vwtype="pr" word="me"/>
+      <node begin="7" buiging="zonder" end="8" id="11" lemma="verdienen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="predc" root="verdiend" word="verdiend" wvorm="vd"/>
+    </node>
+  </node>
+  <sentence>De overwinning gisteren tegen Ajax leek me verdiend</sentence>
+</alpino_ds>

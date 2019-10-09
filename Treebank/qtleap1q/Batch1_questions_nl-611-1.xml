@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="0" cat="smain" end="22" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+      <node begin="0" cat="inf" end="22" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" end="3" id="6" lemma="graag" pos="adj" postag="BW()" pt="bw" rel="mod" root="graag" word="graag"/>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="weten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="weet" word="weten" wvorm="inf"/>
+        <node begin="4" cat="conj" end="22" id="8" rel="vc">
+          <node begin="4" cat="cp" end="15" id="9" rel="cnj">
+            <node begin="4" conjtype="onder" end="5" id="10" lemma="of" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="of" word="of"/>
+            <node begin="5" cat="ssub" end="15" id="11" rel="body">
+              <node begin="5" end="6" getal="ev" id="12" index="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+              <node begin="10" end="11" id="13" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+              <node begin="5" cat="inf" end="15" id="14" rel="vc">
+                <node begin="5" end="6" id="15" index="2" rel="su"/>
+                <node begin="6" cat="np" end="10" id="16" rel="obj1">
+                  <node begin="6" end="7" genus="genus" getal="ev" graad="basis" id="17" lemma="Facebook" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mod" root="Facebook" word="Facebook"/>
+                  <node begin="7" end="8" getal="mv" graad="dim" id="18" lemma="spel" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" root="spel_DIM" word="spelletjes"/>
+                  <node begin="8" cat="cp" end="10" id="19" rel="mod">
+                    <node begin="8" conjtype="onder" end="9" id="20" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="zoals"/>
+                    <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="21" lemma="Farmville" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="body" root="Farmville" word="Farmville"/>
+                  </node>
+                </node>
+                <node begin="11" buiging="zonder" end="12" id="22" lemma="spelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="speel" word="spelen" wvorm="inf"/>
+                <node begin="12" cat="pp" end="15" id="23" rel="mod">
+                  <node begin="12" end="13" id="24" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                  <node begin="13" cat="np" end="15" id="25" rel="obj1">
+                    <node begin="13" buiging="zonder" end="14" getal="ev" id="26" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+                    <node begin="14" end="15" genus="genus" getal="ev" graad="basis" id="27" lemma="Mac" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Mac" word="Mac"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="15" conjtype="neven" end="16" id="28" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="16" cat="cp" end="22" id="29" rel="cnj">
+            <node begin="16" conjtype="onder" end="17" id="30" lemma="of" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="of" word="of"/>
+            <node begin="17" cat="ssub" end="22" id="31" rel="body">
+              <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="32" lemma="Flash" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Flash" word="Flash"/>
+              <node begin="18" end="19" id="33" lemma="werken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="werk" word="werkt" wvorm="pv"/>
+              <node begin="19" cat="cp" end="22" id="34" rel="mod">
+                <node begin="19" conjtype="onder" end="20" id="35" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="zoals"/>
+                <node begin="20" cat="ssub" end="22" id="36" rel="body">
+                  <node begin="20" end="21" genus="onz" getal="ev" id="37" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+                  <node begin="21" end="22" id="38" lemma="horen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="hoor" word="hoort" wvorm="pv"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="39" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ik wil graag weten of ik Facebook spelletjes zoals Farmville kan spelen op mijn Mac en of Flash werkt zoals het hoort .</sentence>
+</alpino_ds>

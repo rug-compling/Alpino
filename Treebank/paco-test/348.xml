@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="44" id="0" rel="top">
+    <node begin="7" end="8" frame="punct(dubb_punt)" id="1" lcat="punct" pos="punct" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+    <node begin="21" end="22" frame="punct(komma)" id="2" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="28" end="29" frame="punct(komma)" id="3" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="30" end="31" frame="punct(komma)" id="4" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="du" end="43" id="5" rel="--">
+      <node begin="0" cat="smain" end="7" id="6" rel="nucl">
+        <node begin="3" end="4" frame="verb(unacc,sg3,passive)" id="7" infl="sg3" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt"/>
+        <node begin="4" cat="np" end="6" id="8" index="1" rel="su">
+          <node begin="4" end="5" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="9" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+          <node aform="base" begin="5" end="6" frame="adjective(ende(padv))" id="10" infl="e" lcat="np" pos="adj" rel="hd" root="volg" sense="volg" vform="gerund" word="volgende"/>
+        </node>
+        <node begin="0" cat="ppart" end="7" id="11" rel="vc">
+          <node begin="0" cat="pp" end="3" id="12" rel="mod">
+            <node begin="0" end="1" frame="preposition(in,[])" id="13" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="In"/>
+            <node begin="1" cat="np" end="3" id="14" rel="obj1">
+              <node begin="1" end="2" frame="determiner(de,nwh,nmod,pro,nparg)" id="15" infl="de" lcat="detp" pos="det" rel="det" root="deze" sense="deze" wh="nwh" word="deze"/>
+              <node begin="2" end="3" frame="noun(het,count,pl)" gen="het" id="16" lcat="np" num="pl" pos="noun" rel="hd" root="rapport" sense="rapport" word="rapporten"/>
+            </node>
+          </node>
+          <node begin="4" end="6" id="17" index="1" rel="obj1"/>
+          <node begin="6" end="7" frame="verb(hebben,psp,transitive)" id="18" infl="psp" lcat="ppart" pos="verb" rel="hd" root="vermeld" sc="transitive" sense="vermeld" word="vermeld"/>
+        </node>
+      </node>
+      <node begin="8" cat="conj" end="43" id="19" rel="sat">
+        <node begin="8" cat="np" end="40" id="20" rel="cnj">
+          <node begin="8" end="9" frame="determiner(de)" id="21" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="9" end="10" frame="noun(de,count,sg)" gen="de" id="22" lcat="np" num="sg" pos="noun" rel="hd" root="identificatie" sense="identificatie" word="identificatie"/>
+          <node begin="10" cat="pp" end="40" id="23" rel="mod">
+            <node begin="10" end="11" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="24" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="11" cat="conj" end="40" id="25" rel="obj1">
+              <node begin="13" end="14" frame="conj(en)" id="26" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+              <node begin="11" cat="np" end="40" id="27" rel="cnj">
+                <node begin="11" end="12" frame="determiner(de)" id="28" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                <node begin="12" end="13" frame="noun(het,count,pl)" gen="het" id="29" lcat="np" num="pl" pos="noun" rel="hd" root="materiaal" sense="materiaal" word="materialen"/>
+                <node begin="22" cat="conj" end="40" id="30" index="2" rel="app">
+                  <node begin="22" cat="np" end="35" id="31" rel="cnj">
+                    <node begin="22" cat="np" end="34" id="32" index="3" rel="mod">
+                      <node begin="22" end="23" frame="determiner(de)" id="33" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                      <node begin="23" end="24" frame="tmp_noun(de,count,sg)" gen="de" id="34" lcat="np" num="sg" pos="noun" rel="hd" root="datum" sense="datum" special="tmp" word="datum"/>
+                      <node begin="24" cat="pp" end="34" id="35" rel="mod">
+                        <node begin="24" end="25" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="36" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                        <node begin="25" cat="conj" end="34" id="37" rel="obj1">
+                          <node begin="25" cat="np" end="27" id="38" rel="cnj">
+                            <node begin="25" end="26" frame="determiner(de)" id="39" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                            <node begin="26" end="27" frame="noun(de,count,sg)" gen="de" id="40" lcat="np" num="sg" pos="noun" rel="hd" root="inventaris_wijziging" sense="inventaris_wijziging" word="inventariswijziging"/>
+                          </node>
+                          <node begin="27" end="28" frame="conj(en)" id="41" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                          <node begin="29" cat="np" end="34" id="42" rel="cnj">
+                            <node aform="base" begin="29" end="30" frame="adjective(no_e(adv))" id="43" infl="no_e" lcat="ap" pos="adj" rel="mod" root="eventueel" sense="eventueel" vform="adj" word="eventueel"/>
+                            <node begin="31" end="32" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="44" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                            <node begin="32" end="33" frame="noun(het,count,sg,app_measure)" gen="het" id="45" lcat="np" num="sg" pos="noun" rel="hd" root="materiaal_balans_gebied" sc="app_measure" sense="materiaal_balans_gebied" word="materiaalbalansgebied"/>
+                            <node begin="33" end="34" frame="noun(both,both,both)" gen="both" id="46" lcat="np" num="both" pos="noun" rel="app" root="var" sense="var" word="var"/>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node begin="34" end="35" frame="noun(de,count,sg)" gen="de" id="47" lcat="np" num="sg" pos="noun" rel="hd" root="verzending" sense="verzending" word="verzending"/>
+                  </node>
+                  <node begin="35" end="36" frame="conj(en)" id="48" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                  <node begin="22" cat="np" end="40" id="49" rel="cnj">
+                    <node begin="22" end="34" id="50" index="3" rel="mod"/>
+                    <node begin="36" end="37" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="51" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                    <node begin="37" end="38" frame="noun(het,count,sg)" gen="het" id="52" lcat="np" num="sg" pos="noun" rel="hd" root="materiaal_balans_gebied" sense="materiaal_balans_gebied" word="materiaalbalansgebied"/>
+                    <node begin="38" cat="pp" end="40" id="53" rel="mod">
+                      <node begin="38" end="39" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="54" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                      <node begin="39" end="40" frame="noun(de,count,sg)" gen="de" id="55" lcat="np" num="sg" pos="noun" rel="obj1" root="bestemming" sense="bestemming" word="bestemming"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="14" cat="np" end="40" id="56" rel="cnj">
+                <node begin="14" end="15" frame="determiner(de)" id="57" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                <node begin="15" end="16" frame="noun(het,count,pl)" gen="het" id="58" lcat="np" num="pl" pos="noun" rel="hd" root="partij_gegeven" sense="partij_gegeven" word="partijgegevens"/>
+                <node begin="16" cat="pp" end="21" id="59" rel="mod">
+                  <node begin="16" end="17" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="60" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+                  <node begin="17" cat="np" end="21" id="61" rel="obj1">
+                    <node begin="17" end="18" frame="determiner(elke,nwh,mod)" id="62" infl="elke" lcat="detp" pos="det" rel="det" root="elk" sense="elk" wh="nwh" word="elke"/>
+                    <node begin="18" end="19" frame="tmp_noun(de,count,sg,measure)" gen="de" id="63" lcat="np" num="sg" pos="noun" rel="hd" root="partij" sc="measure" sense="partij-MEAS" special="tmp" word="partij"/>
+                    <node begin="19" cat="np" end="21" id="64" rel="mod">
+                      <node aform="base" begin="19" end="20" frame="adjective(e)" id="65" infl="e" lcat="ap" pos="adj" rel="mod" root="kern_technisch" sense="kern_technisch" vform="adj" word="kerntechnische"/>
+                      <node begin="20" end="21" frame="noun(het,count,pl)" gen="het" id="66" lcat="np" num="pl" pos="noun" rel="hd" root="materiaal" sense="materiaal" word="materialen"/>
+                    </node>
+                  </node>
+                </node>
+                <node begin="22" end="40" id="67" index="2" rel="app"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="40" end="41" frame="conj(of)" id="68" lcat="vg" pos="vg" rel="crd" root="of" sense="of" word="of"/>
+        <node begin="41" cat="np" end="43" id="69" rel="cnj">
+          <node begin="41" end="42" frame="determiner(de)" id="70" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node aform="base" begin="42" end="43" frame="adjective(ge_e)" id="71" infl="e" lcat="np" pos="adj" rel="hd" root="geadresseerd" sense="geadresseerd" vform="psp" word="geadresseerde"/>
+        </node>
+      </node>
+    </node>
+    <node begin="43" end="44" frame="punct(punt)" id="72" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>In deze rapporten wordt het volgende vermeld : de identificatie van de materialen en de partijgegevens voor elke partij kerntechnische materialen , de datum van de inventariswijziging en , eventueel , het materiaalbalansgebied var verzending en het materiaalbalansgebied van bestemming of de geadresseerde .</sentence>
+  <comments>
+    <comment>Q#348|In deze rapporten wordt het volgende vermeld : de identificatie van de materialen en de partijgegevens voor elke partij kerntechnische materialen , de datum van de inventariswijziging en , eventueel , het materiaalbalansgebied var verzending en het materiaalbalansgebied van bestemming of de geadresseerde .|1|1|13.868334168837404</comment>
+  </comments>
+</alpino_ds>

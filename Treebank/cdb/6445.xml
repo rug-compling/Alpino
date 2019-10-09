@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="15" id="2" rel="--">
+      <node begin="1" end="2" id="3" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="15" id="4" rel="vc">
+        <node begin="0" end="1" getal="getal" id="5" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+        <node begin="2" end="3" id="6" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+        <node begin="6" buiging="zonder" end="7" id="7" lemma="nemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="neem" word="genomen" wvorm="vd"/>
+        <node begin="3" cat="np" end="15" id="8" index="1" rel="obj1">
+          <node begin="3" end="4" getal="mv" graad="basis" id="9" lemma="foto" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="foto" word="foto&apos;s"/>
+          <node begin="4" cat="pp" end="6" id="10" rel="mod">
+            <node begin="4" end="5" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="5" end="6" getal="mv" graad="basis" id="12" lemma="zeehondenconcentratie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="concentratie" word="zeehondenconcentraties"/>
+          </node>
+          <node begin="8" cat="rel" end="15" id="13" rel="mod">
+            <node begin="8" end="9" getal="getal" id="14" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="8" cat="ssub" end="15" id="15" rel="body">
+              <node begin="8" end="9" id="16" index="2" rel="su"/>
+              <node begin="13" end="14" id="17" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
+              <node begin="8" cat="ppart" end="15" id="18" rel="vc">
+                <node begin="8" end="9" id="19" index="2" rel="obj1"/>
+                <node begin="9" end="10" id="20" lemma="thuis" pos="adv" postag="BW()" pt="bw" rel="mod" root="thuis" word="thuis"/>
+                <node begin="10" end="11" id="21" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+                <node begin="11" end="12" id="22" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="mod" root="eens" word="eens"/>
+                <node begin="12" buiging="zonder" end="13" id="23" lemma="opletten" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="mod" root="oplettend" word="oplettend" wvorm="od"/>
+                <node begin="14" buiging="zonder" end="15" id="24" lemma="bestuderen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bestudeer" word="bestudeerd" wvorm="vd"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="3" end="15" id="25" index="1" rel="su"/>
+    </node>
+    <node begin="15" end="16" id="26" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Er worden ook foto&apos;s van zeehondenconcentraties genomen , die thuis nog eens oplettend worden bestudeerd .</sentence>
+</alpino_ds>

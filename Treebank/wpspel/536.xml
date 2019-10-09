@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="whq" end="12" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welke" vwtype="vb" word="Welke"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="wals" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wals" word="wals"/>
+        <node begin="2" cat="pp" end="4" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="Chopin" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Chopin" word="Chopin"/>
+        </node>
+      </node>
+      <node begin="0" cat="sv1" end="12" id="8" rel="body">
+        <node begin="0" end="4" id="9" index="1" rel="su"/>
+        <node begin="4" end="5" id="10" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+        <node begin="0" cat="inf" end="12" id="11" rel="vc">
+          <node begin="0" end="4" id="12" index="1" rel="su"/>
+          <node begin="5" cat="pp" end="8" id="13" rel="mod">
+            <node begin="5" end="6" id="14" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="volgens"/>
+            <node begin="6" cat="np" end="8" id="15" rel="obj1">
+              <node begin="6" end="7" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="17" lemma="titel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="titel" word="titel"/>
+            </node>
+          </node>
+          <node begin="8" cat="ap" end="11" id="18" rel="me">
+            <node begin="8" end="9" id="19" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
+            <node begin="9" buiging="zonder" end="10" graad="basis" id="20" lemma="heel" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="heel" word="heel"/>
+            <node begin="10" buiging="zonder" end="11" graad="basis" id="21" lemma="kort" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="kort" word="kort"/>
+          </node>
+          <node begin="11" buiging="zonder" end="12" id="22" lemma="duren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="duur" word="duren" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="23" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke wals van Chopin zou volgens de titel maar heel kort duren ?</sentence>
+</alpino_ds>

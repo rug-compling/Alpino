@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="3" end="4" id="2" lemma="&amp;quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="du" end="5" id="3" rel="--">
+      <node begin="0" cat="smain" end="2" id="4" rel="tag">
+        <node begin="0" end="1" genus="fem" getal="ev" id="5" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="Ze"/>
+        <node begin="1" end="2" id="6" lemma="vragen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vraag" word="vroeg" wvorm="pv"/>
+      </node>
+      <node begin="4" conjtype="neven" end="5" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="nucl" root="en" word="En"/>
+    </node>
+    <node begin="5" end="6" id="8" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+    <node begin="6" end="7" id="9" lemma="&amp;quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>Ze vroeg : &quot; En ? &quot;</sentence>
+</alpino_ds>

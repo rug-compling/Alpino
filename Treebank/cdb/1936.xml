@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="doen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="doe" word="doe" wvorm="pv"/>
+      <node begin="2" end="3" getal="ev" id="4" lemma="alles" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="alles" status="vol" vwtype="onbep" word="alles"/>
+      <node begin="3" cat="oti" end="14" id="5" rel="mod">
+        <node begin="3" end="4" id="6" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+        <node begin="4" cat="ti" end="14" id="7" rel="body">
+          <node begin="12" end="13" id="8" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="4" cat="inf" end="14" id="9" rel="body">
+            <node begin="4" cat="np" end="11" id="10" rel="obj1">
+              <node begin="4" end="5" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="5" buiging="met-e" end="6" graad="basis" id="12" lemma="roemrucht" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="roemrucht" word="roemruchte"/>
+              <node begin="6" buiging="met-e" end="7" graad="basis" id="13" lemma="koninklijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="koninklijk" word="koninklijke"/>
+              <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="14" lemma="traditie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="traditie" word="traditie"/>
+              <node begin="8" cat="pp" end="11" id="15" rel="mod">
+                <node begin="8" end="9" id="16" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="9" cat="np" end="11" id="17" rel="obj1">
+                  <node begin="9" end="10" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="10" end="11" getal="mv" graad="basis" id="19" lemma="stoottroep" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Stoottroepen" word="Stoottroepen"/>
+                </node>
+              </node>
+            </node>
+            <node begin="11" buiging="zonder" end="12" graad="basis" id="20" lemma="levendig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="levendig" word="levendig"/>
+            <node begin="13" buiging="zonder" end="14" id="21" lemma="houden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="houd" word="houden" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ik doe alles om de roemruchte koninklijke traditie van de Stoottroepen levendig te houden .</sentence>
+</alpino_ds>

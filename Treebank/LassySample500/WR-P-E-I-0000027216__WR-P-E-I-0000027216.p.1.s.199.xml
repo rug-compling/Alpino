@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="35" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="23" end="24" id="2" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="26" end="27" id="3" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="27" end="28" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="34" id="5" rel="--">
+      <node begin="0" cat="smain" end="6" id="6" rel="cnj">
+        <node begin="0" end="1" genus="masc" getal="ev" id="7" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+        <node begin="1" end="2" id="8" lemma="zoeken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zoek" word="zocht" wvorm="pv"/>
+        <node begin="2" cat="np" end="6" id="9" rel="obj1">
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="10" lemma="steun" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="steun" word="steun"/>
+          <node begin="3" cat="pp" end="6" id="11" rel="mod">
+            <node begin="3" end="4" id="12" lemma="vanuit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="vanuit" vztype="init" word="vanuit"/>
+            <node begin="4" cat="np" end="6" id="13" rel="obj1">
+              <node begin="4" end="5" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="15" lemma="Midden-Oosten" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Midden-Oosten" word="Midden-Oosten"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="0" cat="smain" end="11" id="16" rel="cnj">
+        <node begin="0" end="1" id="17" index="1" rel="su"/>
+        <node begin="7" end="8" id="18" lemma="maken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="maak" word="maakte" wvorm="pv"/>
+        <node begin="8" cat="np" end="11" id="19" rel="obj1">
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="20" lemma="vrede" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vrede" word="vrede"/>
+          <node begin="9" cat="pp" end="11" id="21" rel="mod">
+            <node begin="9" end="10" id="22" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="23" lemma="Pakistan" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Pakistan" word="Pakistan"/>
+          </node>
+        </node>
+      </node>
+      <node begin="11" conjtype="neven" end="12" id="24" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="0" cat="smain" end="34" id="25" rel="cnj">
+        <node begin="0" end="1" id="26" index="1" rel="su"/>
+        <node begin="12" end="13" id="27" lemma="presenteren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="presenteer" word="presenteerde" wvorm="pv"/>
+        <node begin="13" buiging="zonder" end="14" graad="basis" id="28" lemma="uiteindelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="uiteindelijk" word="uiteindelijk"/>
+        <node begin="14" cat="pp" end="16" id="29" rel="mod">
+          <node begin="14" end="15" id="30" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="15" end="16" id="31" lemma="1977" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1977" word="1977"/>
+        </node>
+        <node begin="16" cat="np" end="19" id="32" rel="obj1">
+          <node begin="16" end="17" id="33" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="17" buiging="met-e" end="18" graad="basis" id="34" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+          <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="35" lemma="grondwet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="grond_wet" word="grondwet"/>
+        </node>
+        <node begin="19" cat="pp" end="26" id="36" rel="obj2">
+          <node begin="19" end="20" id="37" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+          <node begin="20" cat="np" end="26" id="38" rel="obj1">
+            <node begin="20" end="21" id="39" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="21" cat="mwu" end="23" id="40" rel="hd">
+              <node begin="21" end="22" id="41" lemma="loya" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="loya" spectype="deeleigen" word="loya"/>
+              <node begin="22" end="23" id="42" lemma="jirga" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="jirga" spectype="deeleigen" word="jirga"/>
+            </node>
+            <node begin="24" cat="np" end="26" id="43" rel="mod">
+              <node begin="24" buiging="met-e" end="25" graad="basis" id="44" lemma="raadgevend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="raadgevende" word="raadgevende"/>
+              <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="45" lemma="vergadering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vergadering" word="vergadering"/>
+            </node>
+          </node>
+        </node>
+        <node begin="28" cat="whrel" end="34" id="46" rel="mod">
+          <node begin="28" end="29" id="47" index="2" lemma="waarbij" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarbij" word="waarbij"/>
+          <node begin="28" cat="ssub" end="34" id="48" rel="body">
+            <node begin="29" cat="np" end="31" id="49" index="3" rel="su">
+              <node begin="29" end="30" id="50" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="30" end="31" getal="mv" graad="basis" id="51" lemma="communist" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="communist" word="communisten"/>
+            </node>
+            <node begin="32" end="33" id="52" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+            <node begin="28" cat="ppart" end="34" id="53" rel="vc">
+              <node begin="28" end="29" id="54" index="2" rel="mod"/>
+              <node begin="29" end="31" id="55" index="3" rel="obj1"/>
+              <node begin="31" end="32" id="56" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+              <node begin="33" buiging="zonder" end="34" id="57" lemma="uitnodigen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="nodig_uit" word="uitgenodigd" wvorm="vd"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="34" end="35" id="58" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hij zocht steun vanuit het Midden-Oosten , maakte vrede met Pakistan en presenteerde uiteindelijk in 1977 een nieuwe grondwet aan de loya jirga ( raadgevende vergadering ) , waarbij de communisten niet waren uitgenodigd .</sentence>
+</alpino_ds>

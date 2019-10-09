@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="zonder" end="1" getal="ev" id="3" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="Mijn"/>
+        <node begin="1" end="2" genus="genus" getal="ev" graad="basis" id="4" lemma="iTunes" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="iTunes" word="iTunes"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zien" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zie" word="ziet" wvorm="pv"/>
+      <node begin="3" cat="np" end="5" id="6" rel="obj1">
+        <node begin="3" buiging="zonder" end="4" getal="ev" id="7" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="iPad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="iPad" word="iPad"/>
+      </node>
+      <node begin="5" end="6" id="9" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+    </node>
+  </node>
+  <sentence>Mijn iTunes ziet mijn iPad niet</sentence>
+</alpino_ds>

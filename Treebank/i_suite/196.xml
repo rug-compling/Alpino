@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="ppart" end="4" id="2" rel="predm">
+        <node begin="0" cat="pp" end="3" id="3" rel="ld">
+          <node begin="0" end="1" id="4" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+          <node begin="1" cat="np" end="3" id="5" rel="obj1">
+            <node begin="1" buiging="met-e" end="2" graad="basis" id="6" lemma="goed" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="goed" word="goede"/>
+            <node begin="2" end="3" getal="mv" graad="basis" id="7" lemma="baan" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="baan" word="banen"/>
+          </node>
+        </node>
+        <node begin="3" buiging="zonder" end="4" id="8" lemma="leiden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geleid" word="geleid" wvorm="vd"/>
+      </node>
+      <node begin="4" end="5" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="agressie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="agressie" word="agressie"/>
+      <node begin="6" buiging="zonder" end="7" graad="basis" id="11" lemma="gezond" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="gezond" word="gezond"/>
+    </node>
+  </node>
+  <sentence>In goede banen geleid is agressie gezond</sentence>
+</alpino_ds>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="np" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+      <node begin="1" cat="mwu" end="5" id="3" rel="mod">
+        <node begin="1" end="2" id="4" lemma="aller-" pos="adj" postag="SPEC(afgebr)" pt="spec" rel="mwp" root="aller-" spectype="afgebr" word="aller-"/>
+        <node begin="2" end="3" id="5" lemma="aller-" pos="adj" postag="SPEC(afgebr)" pt="spec" rel="mwp" root="aller-" spectype="afgebr" word="aller-"/>
+        <node begin="3" end="4" id="6" lemma="aller-" pos="adj" postag="SPEC(afgebr)" pt="spec" rel="mwp" root="aller-" spectype="afgebr" word="aller-"/>
+        <node begin="4" buiging="met-e" end="5" graad="basis" id="7" lemma="allerliefst" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="allerliefste" word="allerliefste"/>
+      </node>
+      <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="8" lemma="buurvrouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="buurvrouw" word="buurvrouw"/>
+    </node>
+  </node>
+  <sentence>De aller- aller- aller- allerliefste buurvrouw</sentence>
+</alpino_ds>

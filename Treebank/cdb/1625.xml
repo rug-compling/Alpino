@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="0" cat="smain" end="18" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="2" lemma="Rusland" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Rusland" word="Rusland"/>
+      <node begin="1" end="2" id="3" lemma="winnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="win" word="won" wvorm="pv"/>
+      <node begin="2" cat="pp" end="4" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="6" lemma="Moskou" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Moskou" word="Moskou"/>
+      </node>
+      <node begin="4" cat="pp" end="7" id="7" rel="mod">
+        <node begin="4" end="5" id="8" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="5" cat="np" end="7" id="9" rel="obj1">
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="groep" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="groep" word="groep"/>
+          <node begin="6" end="7" id="11" lemma="4" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="app" root="4" word="4"/>
+        </node>
+      </node>
+      <node begin="7" cat="pp" end="9" id="12" rel="mod">
+        <node begin="7" end="8" id="13" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+        <node begin="8" end="9" id="14" lemma="2-0" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="2-0" word="2-0"/>
+      </node>
+      <node begin="9" cat="pp" end="18" id="15" rel="pc">
+        <node begin="9" end="10" id="16" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="10" cat="np" end="18" id="17" rel="obj1">
+          <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="18" lemma="Noord-Ierland" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Noord-Ierland" word="Noord-Ierland"/>
+          <node begin="11" cat="rel" end="18" id="19" rel="mod">
+            <node begin="11" end="12" getal="ev" id="20" index="1" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
+            <node begin="11" cat="ssub" end="18" id="21" rel="body">
+              <node begin="11" end="12" id="22" index="1" rel="su"/>
+              <node begin="12" cat="np" end="16" id="23" rel="obj1">
+                <node begin="12" end="13" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="13" buiging="met-e" end="14" graad="basis" id="25" lemma="geblesseerd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="geblesseerde" word="geblesseerde"/>
+                <node begin="14" cat="mwu" end="16" id="26" rel="hd">
+                  <node begin="14" end="15" id="27" lemma="George" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="George" spectype="deeleigen" word="George"/>
+                  <node begin="15" end="16" id="28" lemma="Best" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Best" spectype="deeleigen" word="Best"/>
+                </node>
+              </node>
+              <node begin="16" buiging="zonder" end="17" id="29" lemma="duchten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="mod" root="geducht" word="geducht" wvorm="vd"/>
+              <node begin="17" end="18" id="30" lemma="missen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="mis" word="miste" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="31" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Rusland won in Moskou in groep 4 met 2-0 van Noord-Ierland dat de geblesseerde George Best geducht miste .</sentence>
+</alpino_ds>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="15" id="2" rel="--">
+      <node begin="0" cat="mwu" end="2" id="3" rel="sat">
+        <node begin="0" end="1" id="4" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mwp" root="zo" word="Zo"/>
+        <node begin="1" end="2" id="5" lemma="ja" pos="adv" postag="TSW()" pt="tsw" rel="mwp" root="ja" word="ja"/>
+      </node>
+      <node begin="3" cat="sv1" end="15" id="6" rel="nucl">
+        <node begin="3" end="4" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="4" cat="np" end="13" id="8" rel="su">
+          <node begin="4" end="5" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="bouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bouw" word="bouw"/>
+          <node begin="6" cat="pp" end="11" id="11" rel="mod">
+            <node begin="6" end="7" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="7" cat="np" end="11" id="13" rel="obj1">
+              <node begin="7" end="8" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="8" buiging="met-e" end="9" graad="basis" id="15" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+              <node begin="9" buiging="met-e" end="10" id="16" lemma="overdekken" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="overdekt" word="overdekte" wvorm="vd"/>
+              <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="17" lemma="tribune" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tribune" word="tribune"/>
+            </node>
+          </node>
+          <node begin="11" cat="pp" end="13" id="18" rel="mod">
+            <node begin="11" end="12" id="19" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="12" end="13" genus="genus" getal="ev" graad="basis" id="20" lemma="Woudesteijn" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Woudesteijn" word="Woudesteijn"/>
+          </node>
+        </node>
+        <node begin="13" cat="ppart" end="15" id="21" rel="predc">
+          <node begin="13" buiging="zonder" end="14" graad="basis" id="22" lemma="economisch" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="economisch" word="economisch"/>
+          <node begin="14" buiging="zonder" end="15" id="23" lemma="verantwoorden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verantwoord" word="verantwoord" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="24" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Zo ja , is de bouw van een nieuwe overdekte tribune op Woudesteijn economisch verantwoord ?</sentence>
+  <comments>
+    <comment>&quot;zo ja&quot; ???</comment>
+  </comments>
+</alpino_ds>

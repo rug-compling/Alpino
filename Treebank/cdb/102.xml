@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="45" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="28" end="29" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="44" id="3" rel="--">
+      <node begin="0" cat="conj" end="15" id="4" index="1" rel="su">
+        <node begin="3" conjtype="neven" end="4" id="5" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="0" cat="np" end="15" id="6" rel="cnj">
+          <node begin="0" end="1" id="7" index="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+          <node begin="1" buiging="met-e" end="2" id="8" index="3" lemma="toenemen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="toenemend" word="toenemende" wvorm="od"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="9" lemma="industrialisering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="industrialisering" word="industrialisering"/>
+          <node begin="5" cat="pp" end="8" id="10" index="4" rel="mod">
+            <node begin="5" end="6" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="6" cat="np" end="8" id="12" rel="obj1">
+              <node begin="6" end="7" id="13" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="14" lemma="bedrijfsleven" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bedrijfsleven" word="bedrijfsleven"/>
+            </node>
+          </node>
+          <node begin="9" cat="rel" end="15" id="15" index="5" rel="mod">
+            <node begin="9" end="10" getal="getal" id="16" index="6" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="9" cat="ssub" end="15" id="17" rel="body">
+              <node begin="9" end="10" id="18" index="6" rel="su"/>
+              <node begin="11" end="12" id="19" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+              <node begin="10" cat="ppart" end="15" id="20" rel="predc">
+                <node begin="10" buiging="zonder" end="11" id="21" lemma="paren" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gepaard" word="gepaard" wvorm="vd"/>
+                <node begin="12" cat="pp" end="15" id="22" rel="pc">
+                  <node begin="12" end="13" id="23" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                  <node begin="13" cat="np" end="15" id="24" rel="obj1">
+                    <node begin="13" buiging="met-e" end="14" graad="basis" id="25" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="grote"/>
+                    <node begin="14" end="15" getal="mv" graad="basis" id="26" lemma="diepte-investering" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="investering" word="diepte-investeringen"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="0" cat="np" end="15" id="27" rel="cnj">
+          <node begin="0" end="1" id="28" index="2" rel="det"/>
+          <node begin="1" end="2" id="29" index="3" rel="mod"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="30" lemma="automatisering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="automatisering" word="automatisering"/>
+          <node begin="5" end="8" id="31" index="4" rel="mod"/>
+          <node begin="9" end="15" id="32" index="5" rel="mod"/>
+        </node>
+      </node>
+      <node begin="15" end="16" id="33" lemma="zullen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zal" word="zullen" wvorm="pv"/>
+      <node begin="0" cat="inf" end="44" id="34" rel="vc">
+        <node begin="0" end="15" id="35" index="1" rel="su"/>
+        <node begin="27" buiging="zonder" end="28" id="36" lemma="leiden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="leid" word="leiden" wvorm="inf"/>
+        <node begin="16" cat="pp" end="44" id="37" rel="pc">
+          <node begin="16" end="17" id="38" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+          <node begin="17" cat="np" end="44" id="39" rel="obj1">
+            <node begin="17" end="18" id="40" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="41" lemma="schaalvergroting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schaalvergroting" word="schaalvergroting"/>
+            <node begin="20" cat="pp" end="27" id="42" rel="mod">
+              <node begin="20" end="21" id="43" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+              <node begin="21" end="22" id="44" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="22" cat="np" end="27" id="45" rel="obj1">
+                <node begin="22" end="23" id="46" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="23" end="24" getal="mv" graad="basis" id="47" lemma="gevolg" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gevolg" word="gevolgen"/>
+                <node begin="24" cat="pp" end="27" id="48" rel="mod">
+                  <node begin="24" end="25" id="49" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="25" cat="np" end="27" id="50" rel="obj1">
+                    <node begin="25" end="26" id="51" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                    <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="52" lemma="werkstaking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="staking" word="werkstaking"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="18" cat="ap" end="44" id="53" rel="mod">
+              <node begin="18" buiging="met-e" end="19" graad="basis" id="54" lemma="zodanig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="zodanig" word="zodanige"/>
+              <node begin="29" cat="cp" end="44" id="55" rel="mod">
+                <node begin="29" conjtype="onder" end="30" id="56" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+                <node begin="30" cat="ssub" end="44" id="57" rel="body">
+                  <node begin="30" buiging="met-e" end="31" getal-n="zonder-n" id="58" index="7" lemma="deze" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(aanw,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="su" root="deze" vwtype="aanw" word="deze"/>
+                  <node begin="42" end="43" id="59" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+                  <node begin="30" cat="inf" end="44" id="60" rel="vc">
+                    <node begin="30" end="31" id="61" index="7" rel="su"/>
+                    <node begin="31" cat="pp" end="39" id="62" rel="mod">
+                      <node begin="31" end="32" id="63" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                      <node begin="32" cat="np" end="39" id="64" rel="obj1">
+                        <node begin="32" end="33" id="65" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                        <node begin="33" buiging="zonder" end="34" id="66" lemma="toenemen" pos="adj" positie="prenom" postag="WW(od,prenom,zonder)" pt="ww" rel="mod" root="toenemend" word="toenemend" wvorm="od"/>
+                        <node begin="34" end="35" genus="onz" getal="ev" graad="basis" id="67" lemma="aantal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aantal" word="aantal"/>
+                        <node begin="35" cat="np" end="39" id="68" rel="mod">
+                          <node begin="35" end="36" getal="mv" graad="basis" id="69" lemma="sector" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="sector" word="sectoren"/>
+                          <node begin="36" cat="pp" end="39" id="70" rel="mod">
+                            <node begin="36" end="37" id="71" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                            <node begin="37" cat="np" end="39" id="72" rel="obj1">
+                              <node begin="37" end="38" id="73" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                              <node begin="38" end="39" genus="onz" getal="ev" graad="basis" id="74" lemma="bedrijfsleven" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bedrijfsleven" word="bedrijfsleven"/>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node begin="39" cat="ppart" end="42" id="75" rel="predc">
+                      <node begin="39" cat="advp" end="41" id="76" rel="mod">
+                        <node begin="39" end="40" id="77" lemma="nauwelijks" pos="adv" postag="BW()" pt="bw" rel="hd" root="nauwelijks" word="nauwelijks"/>
+                        <node begin="40" buiging="zonder" end="41" graad="comp" id="78" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vwtype="onbep" word="meer"/>
+                      </node>
+                      <node begin="41" buiging="zonder" end="42" id="79" lemma="verantwoorden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verantwoord" word="verantwoord" wvorm="vd"/>
+                    </node>
+                    <node begin="43" buiging="zonder" end="44" id="80" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="44" end="45" id="81" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De toenemende industrialisering en automatisering van het bedrijfsleven , die gepaard gaat met grote diepte-investeringen zullen tot een zodanige schaalvergroting ook van de gevolgen van een werkstaking leiden , dat deze in een toenemend aantal sectoren van het bedrijfsleven nauwelijks meer verantwoord zal zijn .</sentence>
+</alpino_ds>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="18" end="19" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="conj" end="20" id="2" rel="--">
+      <node begin="0" cat="smain" end="7" id="3" rel="cnj">
+        <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" index="1" lemma="Feyenoord" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Feyenoord" word="Feyenoord"/>
+        <node begin="0" cat="ppart" end="7" id="6" rel="vc">
+          <node begin="0" end="1" id="7" lemma="ondertussen" pos="adv" postag="BW()" pt="bw" rel="mod" root="ondertussen" word="Ondertussen"/>
+          <node begin="2" end="3" id="8" index="1" rel="su"/>
+          <node begin="3" end="4" id="9" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+          <node begin="4" cat="pp" end="6" id="10" rel="ld">
+            <node begin="4" end="5" id="11" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="12" lemma="Italië" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Italie" word="Italie"/>
+          </node>
+          <node begin="6" buiging="zonder" end="7" id="13" lemma="reizen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="reis" word="gereisd" wvorm="vd"/>
+        </node>
+      </node>
+      <node begin="7" conjtype="neven" end="8" id="14" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="8" cat="smain" end="20" id="15" rel="cnj">
+        <node begin="8" cat="np" end="10" id="16" rel="su">
+          <node begin="8" end="9" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="9" end="10" getal="mv" graad="basis" id="18" lemma="Rotterdammer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="rotterdammers" word="Rotterdammers"/>
+        </node>
+        <node begin="10" end="11" id="19" lemma="zitten" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="zit" word="zaten" wvorm="pv"/>
+        <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="20" lemma="zondagmiddag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="zondagmiddag" word="zondagmiddag"/>
+        <node begin="12" cat="pp" end="15" id="21" rel="ld">
+          <node begin="12" end="13" id="22" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="13" cat="np" end="15" id="23" rel="obj1">
+            <node begin="13" end="14" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="25" lemma="tribune" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tribune" word="tribune"/>
+          </node>
+        </node>
+        <node begin="15" cat="pp" end="20" id="26" rel="mod">
+          <node begin="15" end="16" id="27" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+          <node begin="16" cat="np" end="20" id="28" rel="obj1">
+            <node begin="16" cat="mwu" end="18" id="29" rel="hd">
+              <node begin="16" end="17" id="30" lemma="Internazionale-Ac" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Internazionale-Ac" spectype="deeleigen" word="Internazionale-Ac"/>
+              <node begin="17" end="18" id="31" lemma="Milan" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Milan" spectype="deeleigen" word="Milan"/>
+            </node>
+            <node begin="19" end="20" id="32" lemma="0-0" pos="num" postag="SPEC(symb)" pt="spec" rel="mod" root="0-0" spectype="symb" word="0-0"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="33" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="21" end="22" id="34" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ondertussen is Feyenoord al naar Italie gereisd en de Rotterdammers zaten zondagmiddag op de tribune bij Internazionale-Ac Milan ( 0-0 ) .</sentence>
+</alpino_ds>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="`" pos="punct" postag="LET()" pt="let" rel="--" root="`" word="`"/>
+    <node begin="3" end="4" id="2" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="4" end="5" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="5" end="6" id="4" lemma="`" pos="punct" postag="LET()" pt="let" rel="--" root="`" word="`"/>
+    <node begin="8" end="9" id="5" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="9" end="10" id="6" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="10" end="11" id="7" lemma="`" pos="punct" postag="LET()" pt="let" rel="--" root="`" word="`"/>
+    <node begin="12" end="13" id="8" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="14" end="15" id="9" lemma="`" pos="punct" postag="LET()" pt="let" rel="--" root="`" word="`"/>
+    <node begin="17" end="18" id="10" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="23" end="24" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="1" cat="du" end="28" id="12" rel="--">
+      <node begin="1" cat="smain" end="23" id="13" rel="dp">
+        <node begin="1" cat="conj" end="17" id="14" rel="su">
+          <node begin="1" cat="mwu" end="3" id="15" rel="cnj">
+            <node begin="1" end="2" id="16" lemma="Das" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Das" spectype="deeleigen" word="Das"/>
+            <node begin="2" end="3" id="17" lemma="Rheingold" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Rheingold" spectype="deeleigen" word="Rheingold"/>
+          </node>
+          <node begin="6" cat="mwu" end="8" id="18" rel="cnj">
+            <node begin="6" end="7" getal="getal" id="19" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="name" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="mwp" root="Die" status="vol" vwtype="aanw" word="Die"/>
+            <node begin="7" end="8" id="20" lemma="Walküre" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Walküre" spectype="deeleigen" word="Walküre"/>
+          </node>
+          <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="21" lemma="Siegfried" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Siegfried" word="Siegfried"/>
+          <node begin="13" conjtype="neven" end="14" id="22" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="15" cat="mwu" end="17" id="23" rel="cnj">
+            <node begin="15" end="16" id="24" lemma="Die" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Die" spectype="deeleigen" word="Die"/>
+            <node begin="16" end="17" id="25" lemma="Götterdämmerung" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Götterdämmerung" spectype="deeleigen" word="Götterdämmerung"/>
+          </node>
+        </node>
+        <node begin="18" end="19" id="26" lemma="vormen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="vorm" word="vormen" wvorm="pv"/>
+        <node begin="19" end="20" id="27" lemma="samen" pos="adj" postag="BW()" pt="bw" rel="predm" root="samen" word="samen"/>
+        <node begin="20" cat="np" end="23" id="28" rel="obj1">
+          <node begin="20" end="21" id="29" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="21" buiging="met-e" end="22" graad="basis" id="30" lemma="muzikaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="muzikaal" word="muzikale"/>
+          <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="31" lemma="tetralogie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tetralogie" word="tetralogie"/>
+        </node>
+      </node>
+      <node begin="24" cat="whq" end="28" id="32" rel="dp">
+        <node begin="24" end="25" getal="ev" id="33" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" root="wat" status="vol" vwtype="vb" word="Wat"/>
+        <node begin="24" cat="sv1" end="28" id="34" rel="body">
+          <node begin="24" end="25" id="35" index="1" rel="predc"/>
+          <node begin="25" end="26" id="36" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          <node begin="26" cat="np" end="28" id="37" rel="su">
+            <node begin="26" end="27" id="38" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="39" lemma="titel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="titel" word="titel"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>` Das Rheingold &apos; , ` Die Walküre &apos; , ` Siegfried &apos; en ` Die Götterdämmerung &apos; vormen samen een muzikale tetralogie . Wat is de titel</sentence>
+</alpino_ds>

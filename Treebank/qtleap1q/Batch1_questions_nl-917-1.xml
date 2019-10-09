@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="‘" pos="punct" postag="LET()" pt="let" rel="--" root="‘" word="‘"/>
+    <node begin="0" cat="whq" end="6" id="2" rel="--">
+      <node begin="0" end="1" getal="ev" id="3" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" root="wat" status="vol" vwtype="vb" word="Wat"/>
+      <node begin="0" cat="sv1" end="6" id="4" rel="body">
+        <node begin="0" end="1" id="5" index="1" rel="predc"/>
+        <node begin="1" end="2" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="3" cat="mwu" end="6" id="7" rel="su">
+          <node begin="3" end="4" id="8" lemma="low" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="low" spectype="deeleigen" word="low"/>
+          <node begin="4" end="5" id="9" lemma="density" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="density" spectype="deeleigen" word="density"/>
+          <node begin="5" end="6" id="10" lemma="memory" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="memory" spectype="deeleigen" word="memory"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="’" pos="punct" postag="LET()" pt="let" rel="--" root="’" word="’"/>
+    <node begin="7" end="8" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wat is ‘ low density memory ’ ?</sentence>
+</alpino_ds>

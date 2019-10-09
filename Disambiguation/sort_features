@@ -1,0 +1,2 @@
+#!/bin/sh
+sort -t\| -k2,2n data.weights | grep -v 'e-[01]'

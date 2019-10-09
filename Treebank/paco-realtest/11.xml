@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="30" id="0" rel="top">
+    <node begin="15" end="16" id="1" pos="punct" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="conj" end="29" id="2" rel="--">
+      <node begin="0" cat="smain" end="15" id="3" rel="cnj">
+        <node begin="0" cat="pp" end="6" id="4" rel="pc">
+          <node begin="0" end="1" id="5" pos="prep" rel="hd" root="aan" word="Aan"/>
+          <node begin="1" cat="np" end="6" id="6" rel="obj1">
+            <node begin="1" end="2" id="7" infl="het" pos="det" rel="det" root="het" wh="nwh" word="het"/>
+            <node begin="2" end="3" gen="het" id="8" num="sg" pos="noun" rel="hd" root="einde" special="tmp" word="einde"/>
+            <node begin="3" cat="pp" end="6" id="9" rel="mod">
+              <node begin="3" end="4" id="10" pos="prep" rel="hd" root="van" word="van"/>
+              <node begin="4" cat="np" end="6" id="11" rel="obj1">
+                <node begin="4" end="5" id="12" infl="de" pos="det" rel="det" root="de" word="de"/>
+                <node begin="5" end="6" gen="de" id="13" num="sg" pos="noun" rel="hd" root="rit" word="rit"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="6" end="7" id="14" infl="pl" pos="verb" rel="hd" root="lig" sc="pc_pp(aan)" tense="present" word="liggen"/>
+        <node begin="7" end="8" id="15" pos="adv" rel="mod" root="er" special="er" word="er"/>
+        <node begin="8" cat="np" end="15" id="16" rel="su">
+          <node begin="8" end="9" id="17" infl="pl_num" pos="num" rel="det" root="vier" special="hoofd" word="vier"/>
+          <node aform="base" begin="9" end="10" id="18" infl="e" pos="adj" rel="mod" root="nuttig" vform="adj" word="nuttige"/>
+          <node begin="10" end="11" gen="het" id="19" num="pl" pos="noun" rel="hd" root="rapport" word="rapporten"/>
+          <node begin="11" cat="pp" end="15" id="20" rel="mod">
+            <node begin="11" end="12" id="21" pos="prep" rel="hd" root="over" word="over"/>
+            <node begin="12" cat="np" end="15" id="22" rel="obj1">
+              <node begin="12" end="13" id="23" infl="de" pos="det" rel="det" root="de" word="de"/>
+              <node begin="13" end="14" id="24" infl="pl_num" pos="num" rel="det" root="vier" special="hoofd" word="vier"/>
+              <node begin="14" end="15" gen="het" id="25" num="pl" pos="noun" rel="hd" root="thema" word="thema&apos;s"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="16" end="17" id="26" pos="vg" rel="crd" root="maar" word="maar"/>
+      <node begin="17" cat="smain" end="29" id="27" rel="cnj">
+        <node begin="17" end="18" id="28" index="1" infl="het" pos="det" rel="su" root="het" wh="nwh" word="het"/>
+        <node begin="18" end="19" id="29" infl="sg" pos="verb" rel="hd" root="laat_toe" sc="part_vp(toe)" tense="present" word="laat"/>
+        <node begin="19" cat="cp" end="23" id="30" rel="predm">
+          <node begin="19" end="20" id="31" pos="comp" rel="cmp" root="als" sc="als" word="als"/>
+          <node begin="20" cat="ap" end="23" id="32" rel="body">
+            <node begin="20" cat="advp" end="22" id="33" rel="mod">
+              <node begin="20" end="21" gen="het" id="34" num="sg" pos="noun" rel="me" root="instrument" word="instrument"/>
+              <node begin="21" end="22" id="35" pos="adv" rel="hd" root="te" special="me_intensifier" word="te"/>
+            </node>
+            <node aform="base" begin="22" end="23" id="36" infl="no_e" pos="adj" rel="hd" root="weinig" vform="adj" word="weinig"/>
+          </node>
+        </node>
+        <node begin="23" end="24" id="37" pos="part" rel="svp" root="toe" word="toe"/>
+        <node begin="17" cat="oti" end="29" id="38" rel="vc">
+          <node begin="24" end="25" id="39" pos="comp" rel="cmp" root="om" sc="om" word="om"/>
+          <node begin="17" cat="ti" end="29" id="40" rel="body">
+            <node begin="27" end="28" id="41" pos="comp" rel="cmp" root="te" sc="te" word="te"/>
+            <node begin="17" cat="inf" end="29" id="42" rel="body">
+              <node begin="17" end="18" id="43" index="1" rel="su"/>
+              <node begin="25" end="26" gen="de" id="44" num="pl" pos="noun" rel="obj1" root="stap" word="stappen"/>
+              <node begin="26" end="27" id="45" pos="adv" rel="ld" root="vooruit" special="dir" word="vooruit"/>
+              <node begin="28" end="29" id="46" infl="inf" pos="verb" rel="hd" root="zet" sc="np_ld_dir" word="zetten"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="29" end="30" id="47" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Aan het einde van de rit liggen er vier nuttige rapporten over de vier thema&apos;s , maar het laat als instrument te weinig toe om stappen vooruit te zetten .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

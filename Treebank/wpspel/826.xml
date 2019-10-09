@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="12" end="13" id="1" lemma="`" pos="punct" postag="LET()" pt="let" rel="--" root="`" word="`"/>
+    <node begin="18" end="19" id="2" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="19" end="20" id="3" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="0" cat="du" end="27" id="4" rel="--">
+      <node begin="0" cat="smain" end="18" id="5" rel="dp">
+        <node begin="0" cat="np" end="4" id="6" rel="su">
+          <node begin="0" end="1" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="8" lemma="zangeres" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zangeres" word="zangeres"/>
+          <node begin="2" cat="mwu" end="4" id="9" rel="app">
+            <node begin="2" end="3" id="10" lemma="Céline" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Céline" spectype="deeleigen" word="Céline"/>
+            <node begin="3" end="4" id="11" lemma="Dion" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Dion" spectype="deeleigen" word="Dion"/>
+          </node>
+        </node>
+        <node begin="4" end="5" id="12" lemma="scoren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="scoor" word="scoorde" wvorm="pv"/>
+        <node begin="5" cat="np" end="7" id="13" rel="obj1">
+          <node begin="5" end="6" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="15" lemma="hit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hit" word="hit"/>
+        </node>
+        <node begin="7" cat="pp" end="9" id="16" rel="mod">
+          <node begin="7" end="8" id="17" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="8" end="9" id="18" lemma="1998" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1998" word="1998"/>
+        </node>
+        <node begin="9" cat="pp" end="18" id="19" rel="mod">
+          <node begin="9" end="10" id="20" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="10" cat="np" end="18" id="21" rel="obj1">
+            <node begin="10" end="11" id="22" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="23" lemma="nummer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="nummer" word="nummer"/>
+            <node begin="13" cat="mwu" end="18" id="24" rel="app">
+              <node begin="13" end="14" id="25" lemma="My" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="My" spectype="vreemd" word="My"/>
+              <node begin="14" end="15" id="26" lemma="Heart" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Heart" spectype="vreemd" word="Heart"/>
+              <node begin="15" end="16" id="27" lemma="Will" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Will" spectype="vreemd" word="Will"/>
+              <node begin="16" end="17" id="28" lemma="Go" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Go" spectype="vreemd" word="Go"/>
+              <node begin="17" end="18" id="29" lemma="On" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="On" spectype="vreemd" word="On"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="20" cat="whq" end="27" id="30" rel="dp">
+        <node begin="20" cat="pp" end="23" id="31" index="1" rel="whd">
+          <node begin="20" end="21" id="32" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+          <node begin="21" cat="np" end="23" id="33" rel="obj1">
+            <node begin="21" buiging="zonder" end="22" id="34" lemma="welk" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="welk" vwtype="vb" word="welk"/>
+            <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="35" lemma="film" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="film" word="film"/>
+          </node>
+        </node>
+        <node begin="20" cat="sv1" end="27" id="36" rel="body">
+          <node begin="23" end="24" id="37" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+          <node begin="24" cat="np" end="26" id="38" index="2" rel="su">
+            <node begin="24" buiging="zonder" end="25" id="39" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="dat"/>
+            <node begin="25" end="26" genus="onz" getal="ev" graad="basis" id="40" lemma="nummer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="nummer" word="nummer"/>
+          </node>
+          <node begin="20" cat="ppart" end="27" id="41" rel="vc">
+            <node begin="20" end="23" id="42" index="1" rel="mod"/>
+            <node begin="24" end="26" id="43" index="2" rel="obj1"/>
+            <node begin="26" buiging="zonder" end="27" id="44" lemma="zingen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zing" word="gezongen" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="27" end="28" id="45" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>De zangeres Céline Dion scoorde een hit in 1998 met het nummer ` My Heart Will Go On &apos; . In welk film werd dat nummer gezongen ?</sentence>
+  <comments>
+    <comment>spelling: &quot;welk&quot; should be &quot;welke&quot;</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="13" end="14" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="21" id="3" rel="--">
+      <node begin="0" cat="pp" end="13" id="4" rel="mod">
+        <node begin="0" end="1" id="5" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+        <node begin="1" cat="np" end="13" id="6" rel="obj1">
+          <node begin="1" end="2" id="7" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="2" buiging="zonder" end="3" graad="basis" id="8" lemma="open" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="open" word="open"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="brief" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="brief" word="brief"/>
+          <node begin="5" cat="rel" end="13" id="10" rel="mod">
+            <node begin="5" end="6" getal="getal" id="11" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="5" cat="ssub" end="13" id="12" rel="body">
+              <node begin="6" end="7" genus="masc" getal="ev" id="13" index="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+              <node begin="11" end="12" id="14" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+              <node begin="5" cat="ppart" end="13" id="15" rel="vc">
+                <node begin="5" end="6" id="16" index="1" rel="obj1"/>
+                <node begin="6" end="7" id="17" index="2" rel="su"/>
+                <node begin="7" end="8" id="18" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+                <node begin="8" cat="pp" end="11" id="19" rel="obj2">
+                  <node begin="8" end="9" id="20" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+                  <node begin="9" cat="mwu" end="11" id="21" rel="obj1">
+                    <node begin="9" end="10" id="22" lemma="Marga" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Marga" spectype="deeleigen" word="Marga"/>
+                    <node begin="10" end="11" id="23" lemma="Klompe" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Klompe" spectype="deeleigen" word="Klompe"/>
+                  </node>
+                </node>
+                <node begin="12" buiging="zonder" end="13" id="24" lemma="sturen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stuur" word="gestuurd" wvorm="vd"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="14" end="15" id="25" lemma="geven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="geef" word="geeft" wvorm="pv"/>
+      <node begin="15" end="16" genus="masc" getal="ev" id="26" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+      <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="27" lemma="lucht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="lucht" word="lucht"/>
+      <node begin="17" cat="pp" end="21" id="28" rel="obj2">
+        <node begin="17" end="18" id="29" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+        <node begin="18" cat="np" end="21" id="30" rel="obj1">
+          <node begin="18" buiging="zonder" end="19" getal="ev" id="31" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+          <node begin="19" buiging="met-e" end="20" id="32" lemma="opkroppen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="opgekropt" word="opgekropte" wvorm="vd"/>
+          <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="33" lemma="gemoed" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gemoed" word="gemoed"/>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="34" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>In een open brief , die hij ook aan Marga Klompe heeft gestuurd , geeft hij lucht aan zijn opgekropte gemoed .</sentence>
+</alpino_ds>

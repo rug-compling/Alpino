@@ -1,0 +1,25 @@
+#!/usr/bin/perl
+
+$type=shift(@ARGV);
+
+if ($type =~ /^bi/) {
+  while (<>) {
+    chomp;
+    ($w1,$w2,$nr) = split('\|');
+    print("b('$w1','$w2',$nr).\n");
+  }
+}
+elsif ($type =~ /^tri/) {
+  while (<>) {
+    chomp;
+    ($w1,$w2,$w3,$nr) = split('\|');
+    print("t('$w1','$w2','$w3',$nr).\n");
+  }
+}
+elsif ($type =~ /^four/) {
+  while (<>) {
+    chomp;
+    ($w1,$w2,$w3,$w4,$nr) = split('\|');
+    print("f('$w1','$w2','$w3','$w4',$nr).\n");
+  }
+}

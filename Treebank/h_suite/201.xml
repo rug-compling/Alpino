@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="vandaag" pos="adv" postag="BW()" pt="bw" rel="mod" root="vandaag" word="Vandaag"/>
+      <node begin="1" end="2" id="3" lemma="arriveren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="arriveer" word="arriveert" wvorm="pv"/>
+      <node begin="2" cat="np" end="6" id="4" rel="su">
+        <node begin="2" buiging="met-e" end="3" getal="mv" id="5" lemma="ons" naamval="stan" npagr="rest" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" pt="vnw" rel="det" root="onze" status="vol" vwtype="bez" word="onze"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="voorzitter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzitter" word="voorzitter"/>
+        <node begin="4" cat="np" end="6" id="7" rel="app">
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="professor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="professor" word="professor"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="Nerbonne" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Nerbonne" word="Nerbonne"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Vandaag arriveert onze voorzitter professor Nerbonne</sentence>
+</alpino_ds>

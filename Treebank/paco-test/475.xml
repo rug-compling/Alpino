@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="10" end="11" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="13" end="14" frame="punct(komma)" id="2" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="21" id="3" rel="--">
+      <node begin="3" end="4" frame="verb('hebben/zijn',modal_not_u,aux(inf))" id="4" infl="modal_not_u" lcat="smain" pos="verb" rel="hd" root="kan" sc="aux(inf)" sense="kan" tense="present" word="kan"/>
+      <node begin="0" cat="inf" end="21" id="5" rel="vc">
+        <node begin="19" end="20" frame="verb(unacc,inf,passive)" id="6" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+        <node begin="0" cat="ppart" end="21" id="7" rel="vc">
+          <node begin="0" cat="pp" end="3" id="8" rel="mod">
+            <node begin="0" end="1" frame="preposition(over,[heen])" id="9" lcat="pp" pos="prep" rel="hd" root="over" sense="over" word="Over"/>
+            <node begin="1" cat="np" end="3" id="10" rel="obj1">
+              <node begin="1" end="2" frame="determiner(de,nwh,nmod,pro,nparg)" id="11" infl="de" lcat="detp" pos="det" rel="det" root="deze" sense="deze" wh="nwh" word="deze"/>
+              <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="12" lcat="np" num="sg" pos="noun" rel="hd" root="mededeling" sense="mededeling" word="mededeling"/>
+            </node>
+          </node>
+          <node begin="4" cat="pp" end="13" id="13" rel="mod">
+            <node begin="4" end="5" frame="preposition(overeenkomstig,[])" id="14" lcat="pp" pos="prep" rel="hd" root="overeenkomstig" sense="overeenkomstig" word="overeenkomstig"/>
+            <node begin="5" cat="np" end="13" id="15" rel="obj1">
+              <node begin="5" end="6" frame="determiner(de)" id="16" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="6" end="7" frame="noun(de,count,sg)" gen="de" id="17" lcat="np" num="sg" pos="noun" rel="hd" root="procedure" sense="procedure" word="procedure"/>
+              <node begin="7" cat="pp" end="13" id="18" rel="mod">
+                <node begin="7" end="8" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="19" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                <node begin="8" cat="conj" end="13" id="20" rel="obj1">
+                  <node begin="8" cat="np" end="10" id="21" rel="cnj">
+                    <node begin="8" end="9" frame="noun(het,count,sg)" gen="het" id="22" lcat="np" num="sg" pos="noun" rel="hd" root="artikel" sense="artikel" word="artikel"/>
+                    <node begin="9" end="10" frame="number(hoofd(pl_num))" id="23" infl="pl_num" lcat="detp" pos="num" rel="app" root="53" sense="53" special="hoofd" word="53"/>
+                  </node>
+                  <node begin="11" cat="np" end="13" id="24" rel="cnj">
+                    <node begin="11" end="12" frame="noun(het,count,sg)" gen="het" id="25" lcat="np" num="sg" pos="noun" rel="hd" root="lid" sense="lid" word="lid"/>
+                    <node begin="12" end="13" frame="number(hoofd(pl_num))" id="26" infl="pl_num" lcat="detp" pos="num" rel="app" root="4" sense="4" special="hoofd" word="4"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="14" cat="pp" end="17" id="27" rel="mod">
+            <node begin="14" end="15" frame="preposition(in,[])" id="28" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+            <node begin="15" cat="np" end="17" id="29" rel="obj1">
+              <node begin="15" end="16" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="30" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+              <node begin="16" end="17" frame="proper_name(both,'ORG')" id="31" lcat="np" neclass="ORG" num="both" pos="name" rel="hd" root="Contactcomité" sense="Contactcomité" word="Contactcomité"/>
+            </node>
+          </node>
+          <node begin="17" cat="pp" end="19" id="32" rel="pc">
+            <node begin="17" end="18" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="33" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="18" end="19" frame="noun(de,count,pl)" gen="de" id="34" lcat="np" num="pl" pos="noun" rel="obj1" root="gedachte" sense="gedachte" word="gedachten"/>
+          </node>
+          <node begin="20" end="21" frame="verb(hebben,psp,pc_pp(van))" id="35" infl="psp" lcat="ppart" pos="verb" rel="hd" root="wissel" sc="pc_pp(van)" sense="wissel-van" word="gewisseld"/>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" frame="punct(punt)" id="36" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Over deze mededeling kan overeenkomstig de procedure van artikel 53 , lid 4 , in het Contactcomité van gedachten worden gewisseld .</sentence>
+  <comments>
+    <comment>Q#475|Over deze mededeling kan overeenkomstig de procedure van artikel 53 , lid 4 , in het Contactcomité van gedachten worden gewisseld .|1|1|-4.4320057399034</comment>
+  </comments>
+</alpino_ds>

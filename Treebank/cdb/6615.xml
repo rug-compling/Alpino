@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="11" end="12" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="17" id="3" rel="--">
+      <node begin="0" cat="np" end="3" id="4" rel="cnj">
+        <node begin="0" end="1" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="6" lemma="dubieus" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="dubieus" word="dubieuze"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="redenering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="redenering" word="redenering"/>
+      </node>
+      <node begin="4" conjtype="neven" end="5" id="8" lemma="want" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="want" word="want"/>
+      <node begin="5" cat="smain" end="17" id="9" rel="cnj">
+        <node begin="5" end="6" id="10" lemma="tenslotte" pos="adv" postag="BW()" pt="bw" rel="mod" root="tenslotte" word="tenslotte"/>
+        <node begin="6" end="7" id="11" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="7" cat="np" end="9" id="12" rel="su">
+          <node begin="7" end="8" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="8" end="9" genus="genus" getal="ev" graad="basis" id="14" lemma="SAR" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="SAR" word="SAR"/>
+        </node>
+        <node begin="9" cat="advp" end="11" id="15" rel="mod">
+          <node begin="9" end="10" id="16" lemma="alleen" pos="adv" postag="BW()" pt="bw" rel="hd" root="alleen" word="alleen"/>
+          <node begin="10" end="11" id="17" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
+        </node>
+        <node begin="12" cat="whrel" end="17" id="18" rel="predc">
+          <node begin="12" end="13" getal="ev" id="19" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="wat"/>
+          <node begin="12" cat="ssub" end="17" id="20" rel="body">
+            <node begin="13" cat="np" end="15" id="21" index="2" rel="su">
+              <node begin="13" end="14" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="14" end="15" genus="genus" getal="ev" graad="basis" id="23" lemma="SAR" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="SAR" word="SAR"/>
+            </node>
+            <node begin="15" end="16" id="24" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+            <node begin="12" cat="inf" end="17" id="25" rel="vc">
+              <node begin="12" end="13" id="26" index="1" rel="predc"/>
+              <node begin="13" end="15" id="27" index="2" rel="su"/>
+              <node begin="16" buiging="zonder" end="17" id="28" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="29" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>Een dubieuze redenering , want tenslotte is de SAR alleen maar , wat de SAR moet zijn :</sentence>
+</alpino_ds>

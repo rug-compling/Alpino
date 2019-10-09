@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="1" end="2" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="conj" end="5" id="2" rel="--">
+      <node begin="0" end="1" frame="noun(de,mass,sg)" gen="de" id="3" lcat="np" num="sg" pos="noun" rel="cnj" root="vrede_opbouw" sense="vrede_opbouw" word="Vredesopbouw"/>
+      <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="4" lcat="np" num="sg" pos="noun" rel="cnj" root="conflict_preventie" sense="conflict_preventie" word="conflictpreventie"/>
+      <node begin="3" end="4" frame="conj(en)" id="5" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="4" end="5" frame="noun(de,count,sg)" gen="de" id="6" lcat="np" num="sg" pos="noun" rel="cnj" root="conflict_oplossing" sense="conflict_oplossing" word="conflictoplossing"/>
+    </node>
+  </node>
+  <sentence>Vredesopbouw , conflictpreventie en conflictoplossing</sentence>
+  <comments>
+    <comment>Q#532|Vredesopbouw , conflictpreventie en conflictoplossing|1|1|0.3779398111937455</comment>
+  </comments>
+</alpino_ds>

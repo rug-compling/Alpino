@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="11" end="12" id="1" pos="punct" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="inf" end="21" id="2" rel="--">
+      <node aform="base" begin="0" end="1" id="3" infl="no_e" pos="adj" rel="mod" root="regelmatig" vform="adj" word="Regelmatig"/>
+      <node begin="1" end="2" gen="de" id="4" num="pl" pos="noun" rel="obj1" root="evaluatie" word="evaluaties"/>
+      <node begin="2" end="3" id="5" infl="inf" pos="verb" rel="hd" root="voer" sc="transitive" word="voeren"/>
+      <node begin="3" cat="pp" end="21" id="6" rel="mod">
+        <node begin="3" end="4" id="7" pos="prep" rel="hd" root="over" word="over"/>
+        <node begin="4" cat="np" end="21" id="8" rel="obj1">
+          <node begin="4" end="5" id="9" infl="de" pos="det" rel="det" root="de" word="de"/>
+          <node aform="base" begin="5" end="6" id="10" infl="e" pos="adj" rel="mod" root="internationaal" vform="adj" word="internationale"/>
+          <node begin="6" end="7" gen="de" id="11" num="pl" pos="noun" rel="hd" root="reactie" word="reacties"/>
+          <node begin="7" cat="pp" end="21" id="12" rel="mod">
+            <node begin="7" end="8" id="13" pos="prep" rel="hd" root="op" word="op"/>
+            <node begin="8" cat="np" end="21" id="14" rel="obj1">
+              <node begin="10" end="11" id="15" pos="verb" rel="hd" root="moedig_aan" sc="transitive" special="v_noun" word="aanmoedigen"/>
+              <node begin="8" cat="np" end="21" id="16" rel="obj1">
+                <node aform="base" begin="8" end="9" id="17" infl="e" pos="adj" rel="mod" root="humanitair" vform="adj" word="humanitaire"/>
+                <node begin="9" end="10" gen="de" id="18" num="pl" pos="noun" rel="hd" root="crisis" word="crisissen"/>
+                <node begin="12" cat="rel" end="21" id="19" rel="mod">
+                  <node begin="12" end="13" id="20" index="1" pos="pp" rel="rhd" root="waaronder" special="waar" word="waaronder"/>
+                  <node begin="12" cat="np" end="21" id="21" rel="body">
+                    <node begin="12" end="13" id="22" index="1" rel="mod"/>
+                    <node begin="13" end="14" id="23" infl="het" pos="det" rel="det" root="het" wh="nwh" word="het"/>
+                    <node begin="14" end="15" id="24" pos="verb" rel="hd" root="onderzoek" sc="intransitive" special="v_noun" word="onderzoeken"/>
+                    <node begin="15" cat="pp" end="21" id="25" rel="mod">
+                      <node begin="15" end="16" id="26" pos="prep" rel="hd" root="van" word="van"/>
+                      <node begin="16" cat="np" end="21" id="27" rel="obj1">
+                        <node begin="16" end="17" id="28" infl="de" pos="det" rel="det" root="de" word="de"/>
+                        <node begin="17" end="18" gen="de" id="29" num="sg" pos="noun" rel="hd" root="effectiviteit" word="effectiviteit"/>
+                        <node begin="18" cat="pp" end="21" id="30" rel="mod">
+                          <node begin="18" end="19" id="31" pos="prep" rel="hd" root="van" word="van"/>
+                          <node begin="19" cat="np" end="21" id="32" rel="obj1">
+                            <node begin="19" end="20" id="33" infl="de" pos="det" rel="det" root="de" word="de"/>
+                            <node begin="20" end="21" gen="de" id="34" num="pl" pos="noun" rel="hd" root="donor" word="donoren"/>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="35" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Regelmatig evaluaties voeren over de internationale reacties op humanitaire crisissen aanmoedigen , waaronder het onderzoeken van de effectiviteit van de donoren .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

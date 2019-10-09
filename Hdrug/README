@@ -1,0 +1,39 @@
+       HDRUG: a Graphical User Environment for 
+        Natural Language Processing in Prolog
+
+
+                  Gertjan van Noord
+              Alfa-informatica and BCN
+              University of Groningen
+
+What is Hdrug?
+--------------
+
+Hdrug is an environment to develop logic grammars / parsers /
+generators for natural languages. The package requires SICStus
+Prolog version 3, and the Tcl/Tk libraries.
+
+Hdrug offers various tools to visualize lexical entries, grammar
+rules, definite-clause definitions, parse trees, feature structures,
+lexical- rule- and type-hierarchies, graphs of the comparison of
+different parsers on a corpus of test sentences etc. Visualizations
+are provided in a Tk widget, in LaTeX/DVI format, and using the
+Clig. Hdrug allows for easy comparison of different
+parsers/generators; it has extensive possibilities to compile feature
+equations into Prolog terms; it can produce graphical (Tk), and
+ordinary Prolog output of trees, feature structures, Prolog terms (and
+combinations thereof), plotted graphs of statistical information, and
+tables of statistical information.  The package comes with a number of
+example grammars, including parsers and generators.
+
+
+How to install?
+---------------
+
+refer to the file README.INSTALL
+
+Copyright notice
+----------------
+see the file Copyright and the file COPYING
+
+

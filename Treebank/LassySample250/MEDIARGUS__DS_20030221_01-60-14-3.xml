@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" case="both" def="def" end="1" frame="pronoun(nwh,thi,both,de,both,def,wkpro)" gen="de" genus="fem" getal="ev" id="2" lcat="np" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" root="ze" sense="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="Ze"/>
+      <node begin="1" end="2" frame="verb(hebben,sg3,intransitive)" id="3" infl="sg3" lcat="smain" lemma="volstaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="volsta" sc="intransitive" sense="volsta" tense="present" word="volstaat" wvorm="pv"/>
+      <node begin="2" cat="oti" end="14" id="4" rel="mod">
+        <node begin="2" end="3" frame="modal_adverb" id="5" lcat="advp" lemma="net" pos="adv" postag="BW()" pt="bw" rel="mod" root="net" sc="modal" sense="net" word="net"/>
+        <node begin="3" end="4" frame="complementizer(om)" id="6" lcat="oti" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" sc="om" sense="om" vztype="init" word="om"/>
+        <node begin="4" cat="ti" end="14" id="7" rel="body">
+          <node begin="12" end="13" frame="complementizer(te)" id="8" lcat="cp" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" sense="te" vztype="init" word="te"/>
+          <node begin="4" cat="inf" end="14" id="9" rel="body">
+            <node begin="4" cat="np" end="8" id="10" rel="obj1">
+              <node begin="4" end="5" frame="determiner(de)" id="11" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+              <node begin="5" end="6" frame="noun(de,mass,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="12" lcat="np" lemma="aangroei" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aangroei" sense="aangroei" word="aangroei"/>
+              <node begin="6" cat="pp" end="8" id="13" rel="mod">
+                <node begin="6" end="7" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="14" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+                <node begin="7" end="8" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="15" lcat="np" lemma="gas" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="gas" sense="gas" word="gas"/>
+              </node>
+            </node>
+            <node begin="8" cat="pp" end="11" id="16" rel="mod">
+              <node begin="8" end="9" frame="preposition(op,[af,na])" id="17" lcat="pp" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" sense="op" vztype="init" word="op"/>
+              <node begin="9" cat="np" end="11" id="18" rel="obj1">
+                <node begin="9" end="10" frame="determiner(de)" id="19" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+                <node begin="10" end="11" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="20" lcat="np" lemma="bodem" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bodem" sense="bodem" word="bodem"/>
+              </node>
+            </node>
+            <node begin="11" end="12" frame="particle(tegen)" id="21" lcat="part" lemma="tegen" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="tegen" sense="tegen" vztype="fin" word="tegen"/>
+            <node begin="13" buiging="zonder" end="14" frame="verb(zijn,inf(no_e),part_transitive(tegen))" id="22" infl="inf(no_e)" lcat="inf" lemma="gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga_tegen" sc="part_transitive(tegen)" sense="ga_tegen" word="gaan" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" frame="punct(punt)" id="23" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Ze volstaat net om de aangroei van gas op de bodem tegen te gaan .</sentence>
+  <comments>
+    <comment>Q#DS_20030221_01-60-14-3|Ze volstaat net om de aangroei van gas op de bodem tegen te gaan .|1|1|-0.18489982066691021</comment>
+  </comments>
+</alpino_ds>

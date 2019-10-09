@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="29" id="0" rel="top">
+    <node begin="0" cat="smain" end="28" id="1" rel="--">
+      <node begin="0" cat="np" end="6" id="2" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="3" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" end="2" frame="noun(de,count,pl)" gen="de" id="4" lcat="np" num="pl" pos="noun" rel="hd" root="onderhandeling" sense="onderhandeling" word="onderhandelingen"/>
+        <node begin="2" cat="pp" end="6" id="5" rel="mod">
+          <node begin="2" end="3" frame="preposition(over,[heen])" id="6" lcat="pp" pos="prep" rel="hd" root="over" sense="over" word="over"/>
+          <node begin="3" cat="np" end="6" id="7" rel="obj1">
+            <node begin="3" end="4" frame="determiner(de)" id="8" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node aform="base" begin="4" end="5" frame="adjective(e)" id="9" infl="e" lcat="ap" pos="adj" rel="mod" root="economisch" sense="economisch" vform="adj" word="economische"/>
+            <node begin="5" end="6" frame="noun(de,count,pl)" gen="de" id="10" lcat="np" num="pl" pos="noun" rel="hd" root="partnerschap_overeenkomst" sense="partnerschap_overeenkomst" word="partnerschapsovereenkomsten"/>
+          </node>
+        </node>
+      </node>
+      <node begin="6" end="7" frame="verb(hebben,pl,transitive)" id="11" infl="pl" lcat="smain" pos="verb" rel="hd" root="beoog" sc="transitive" sense="beoog" tense="present" word="beogen"/>
+      <node begin="7" cat="np" end="28" id="12" rel="obj1">
+        <node begin="7" cat="mwu" end="9" id="13" mwu_root="met_name" mwu_sense="met_name" rel="mod">
+          <node begin="7" end="8" frame="modal_adverb" id="14" lcat="advp" pos="adv" rel="mwp" root="met" sc="modal" sense="met" word="met"/>
+          <node begin="8" end="9" frame="modal_adverb" id="15" lcat="advp" pos="adv" rel="mwp" root="name" sc="modal" sense="name" word="name"/>
+        </node>
+        <node begin="9" end="10" frame="noun(de,count,sg)" gen="de" id="16" lcat="np" num="sg" pos="noun" rel="hd" root="vaststelling" sense="vaststelling" word="vaststelling"/>
+        <node begin="10" cat="pp" end="28" id="17" rel="mod">
+          <node begin="10" end="11" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="18" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+          <node begin="11" cat="np" end="28" id="19" rel="obj1">
+            <node begin="11" end="12" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="20" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+            <node begin="12" end="13" frame="noun(het,count,sg)" gen="het" id="21" lcat="np" num="sg" pos="noun" rel="hd" root="tijdschema" sense="tijdschema" word="tijdschema"/>
+            <node begin="13" cat="pp" end="28" id="22" rel="mod">
+              <node begin="13" end="14" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="23" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+              <node begin="14" cat="np" end="28" id="24" rel="obj1">
+                <node begin="14" end="15" frame="determiner(de)" id="25" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                <node aform="base" begin="15" end="16" frame="adjective(e)" id="26" infl="e" lcat="ap" pos="adj" rel="mod" root="geleidelijk" sense="geleidelijk" vform="adj" word="geleidelijke"/>
+                <node begin="16" end="17" frame="noun(de,count,sg)" gen="de" id="27" lcat="np" num="sg" pos="noun" rel="hd" root="opheffing" sense="opheffing" word="opheffing"/>
+                <node begin="17" cat="pp" end="28" id="28" rel="mod">
+                  <node begin="17" end="18" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="29" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                  <node begin="18" cat="np" end="28" id="30" rel="obj1">
+                    <node begin="18" end="19" frame="noun(de,count,pl)" gen="de" id="31" lcat="np" num="pl" pos="noun" rel="hd" root="handel_belemmering" sense="handel_belemmering" word="handelsbelemmeringen"/>
+                    <node begin="19" cat="pp" end="28" id="32" rel="mod">
+                      <node begin="19" end="20" frame="preposition(tussen,[door,in,vandaan])" id="33" lcat="pp" pos="prep" rel="hd" root="tussen" sense="tussen" word="tussen"/>
+                      <node begin="20" cat="np" end="28" id="34" rel="obj1">
+                        <node begin="20" end="21" frame="determiner(de)" id="35" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                        <node begin="21" end="22" frame="noun(de,count,pl)" gen="de" id="36" lcat="np" num="pl" pos="noun" rel="hd" root="partij" sense="partij" word="partijen"/>
+                        <node begin="22" cat="pp" end="28" id="37" rel="mod">
+                          <node begin="22" end="23" frame="preposition(in,[])" id="38" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                          <node begin="23" cat="np" end="28" id="39" rel="obj1">
+                            <node begin="23" end="24" frame="noun(de,both,sg)" gen="de" id="40" lcat="np" num="sg" pos="noun" rel="hd" root="overeenstemming" sense="overeenstemming" word="overeenstemming"/>
+                            <node begin="24" cat="pp" end="28" id="41" rel="mod">
+                              <node begin="24" end="25" frame="preposition(met,[mee,[en,al]])" id="42" lcat="pp" pos="prep" rel="hd" root="met" sense="met" word="met"/>
+                              <node begin="25" cat="np" end="28" id="43" rel="obj1">
+                                <node begin="25" end="26" frame="determiner(de)" id="44" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                                <node aform="base" begin="26" end="27" frame="adjective(e)" id="45" infl="e" lcat="ap" pos="adj" rel="mod" root="desbetreffend" sense="desbetreffend" vform="adj" word="desbetreffende"/>
+                                <node begin="27" end="28" frame="noun(de,count,pl)" gen="de" id="46" lcat="np" num="pl" pos="noun" rel="hd" root="WTO_regel" sense="WTO_regel" word="WTO-regels"/>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="28" end="29" frame="punct(punt)" id="47" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De onderhandelingen over de economische partnerschapsovereenkomsten beogen met name vaststelling van het tijdschema voor de geleidelijke opheffing van handelsbelemmeringen tussen de partijen in overeenstemming met de desbetreffende WTO-regels .</sentence>
+  <comments>
+    <comment>Q#561|De onderhandelingen over de economische partnerschapsovereenkomsten beogen met name vaststelling van het tijdschema voor de geleidelijke opheffing van handelsbelemmeringen tussen de partijen in overeenstemming met de desbetreffende WTO-regels .|1|1|4.550123299320591</comment>
+  </comments>
+</alpino_ds>

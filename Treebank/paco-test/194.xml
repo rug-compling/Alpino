@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="sv1" end="3" id="1" rel="--">
+      <node begin="0" end="1" frame="verb(hebben,sg1,transitive)" id="2" infl="sg1" lcat="sv1" pos="verb" rel="hd" root="selecteer" sc="transitive" sense="selecteer" tense="present" word="Selecteer"/>
+      <node begin="1" cat="np" end="3" id="3" rel="obj1">
+        <node begin="1" end="2" frame="determiner(een)" id="4" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+        <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="kas_boek_code" sense="kas_boek_code" word="kasboekcode"/>
+      </node>
+    </node>
+    <node begin="3" end="4" frame="punct(punt)" id="6" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Selecteer een kasboekcode .</sentence>
+  <comments>
+    <comment>Q#194|Selecteer een kasboekcode .|1|1|0.8240362040931094</comment>
+  </comments>
+</alpino_ds>

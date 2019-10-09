@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="12" end="13" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="19" id="2" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="3" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="4" lemma="houden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="houd" word="houdt" wvorm="pv"/>
+      <node begin="2" cat="conj" end="19" id="5" rel="obj1">
+        <node begin="2" cat="np" end="12" id="6" rel="cnj">
+          <node begin="2" end="3" id="7" lemma="eerst" pos="adv" postag="BW()" pt="bw" rel="mod" root="eerst" word="eerst"/>
+          <node begin="3" end="4" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="werkconferentie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="conferentie" word="werkconferentie"/>
+          <node begin="5" cat="pp" end="12" id="10" rel="mod">
+            <node begin="5" end="6" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="6" cat="np" end="12" id="12" rel="obj1">
+              <node begin="6" buiging="met-e" end="7" graad="basis" id="13" lemma="Nederlands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Nederlands" word="Nederlandse"/>
+              <node begin="7" buiging="met-e" end="8" graad="basis" id="14" lemma="diplomatiek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="diplomatiek" word="diplomatieke"/>
+              <node begin="8" end="9" getal="mv" graad="basis" id="15" lemma="vertegenwoordiger" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vertegenwoordiger" word="vertegenwoordigers"/>
+              <node begin="9" cat="pp" end="12" id="16" rel="mod">
+                <node begin="9" end="10" id="17" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="10" cat="np" end="12" id="18" rel="obj1">
+                  <node begin="10" end="11" id="19" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                  <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="20" lemma="Midden-Oosten" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Midden-Oosten" word="Midden-Oosten"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="13" cat="np" end="19" id="21" rel="cnj">
+          <node begin="13" end="14" id="22" lemma="daarna" pos="adv" postag="BW()" pt="bw" rel="mod" root="daarna" word="daarna"/>
+          <node begin="14" end="15" getal="mv" graad="basis" id="23" lemma="bespreking" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bespreking" word="besprekingen"/>
+          <node begin="15" cat="pp" end="19" id="24" rel="mod">
+            <node begin="15" end="16" id="25" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="16" cat="np" end="19" id="26" rel="obj1">
+              <node begin="16" end="17" id="27" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="17" buiging="met-e" end="18" graad="basis" id="28" lemma="Libanees" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Libanese" word="Libanese"/>
+              <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="29" lemma="regering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="regering" word="regering"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="30" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hij houdt eerst een werkconferentie van Nederlandse diplomatieke vertegenwoordigers in het Midden-Oosten , daarna besprekingen met de Libanese regering .</sentence>
+</alpino_ds>

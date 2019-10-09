@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="31" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="11" end="12" id="2" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="13" end="14" id="3" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="24" end="25" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="30" id="5" rel="--">
+      <node begin="0" cat="np" end="24" id="6" rel="su">
+        <node begin="0" end="1" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="8" lemma="hoofd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="hoofd" word="hoofd"/>
+        <node begin="2" cat="pp" end="6" id="9" rel="mod">
+          <node begin="2" end="3" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="3" cat="np" end="6" id="11" rel="obj1">
+            <node begin="3" cat="mwu" end="5" id="12" rel="det">
+              <node begin="3" end="4" id="13" lemma="Albert" pos="det" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Albert" spectype="deeleigen" word="Albert"/>
+              <node begin="4" end="5" id="14" lemma="Heijn&apos;s" pos="det" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Heijn&apos;s" spectype="deeleigen" word="Heijn&apos;s"/>
+            </node>
+            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="15" lemma="personeelsbeheer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="beheer" word="personeelsbeheer"/>
+          </node>
+        </node>
+        <node begin="7" cat="np" end="13" id="16" rel="app">
+          <node begin="7" end="8" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="18" lemma="heer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="heer" word="heer"/>
+          <node begin="9" cat="mwu" end="11" id="19" rel="app">
+            <node begin="9" end="10" id="20" lemma="F." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="F." spectype="deeleigen" word="F."/>
+            <node begin="10" end="11" id="21" lemma="Brandsma" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Brandsma" spectype="deeleigen" word="Brandsma"/>
+          </node>
+          <node begin="12" end="13" id="22" lemma="54" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="54" word="54"/>
+        </node>
+        <node begin="14" cat="rel" end="24" id="23" rel="mod">
+          <node begin="14" cat="pp" end="16" id="24" index="1" rel="rhd">
+            <node begin="14" end="15" id="25" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="15" end="16" getal="getal" id="26" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="noun" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="obj1" root="wie" status="vol" vwtype="vb" word="wie"/>
+          </node>
+          <node begin="14" cat="ssub" end="24" id="27" rel="body">
+            <node begin="14" end="16" id="28" index="1" rel="mod"/>
+            <node begin="16" end="17" getal="mv" id="29" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
+            <node begin="17" cat="pp" end="21" id="30" rel="mod">
+              <node begin="17" end="18" id="31" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+              <node begin="18" cat="np" end="21" id="32" rel="obj1">
+                <node begin="18" buiging="zonder" end="19" id="33" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+                <node begin="19" buiging="met-e" end="20" graad="basis" id="34" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+                <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="35" lemma="arbeidssysteem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="systeem" word="arbeidssysteem"/>
+              </node>
+            </node>
+            <node begin="21" cat="np" end="23" id="36" rel="obj1">
+              <node begin="21" end="22" id="37" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="38" lemma="gesprek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gesprek" word="gesprek"/>
+            </node>
+            <node begin="23" end="24" id="39" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+      <node begin="25" end="26" id="40" lemma="rekenen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="reken" word="rekent" wvorm="pv"/>
+      <node begin="26" cat="pp" end="30" id="41" rel="pc">
+        <node begin="26" end="27" id="42" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="27" cat="np" end="30" id="43" rel="obj1">
+          <node begin="27" end="28" id="44" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="28" buiging="zonder" end="29" graad="basis" id="45" lemma="groot" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="groot" word="groot"/>
+          <node begin="29" end="30" genus="onz" getal="ev" graad="basis" id="46" lemma="succes" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="succes" word="succes"/>
+        </node>
+      </node>
+    </node>
+    <node begin="30" end="31" id="47" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het hoofd van Albert Heijn&apos;s personeelsbeheer , de heer F. Brandsma ( 54 ) met wie wij over dit nieuwe arbeidssysteem een gesprek hebben , rekent op een groot succes .</sentence>
+</alpino_ds>

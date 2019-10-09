@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="22" id="2" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="3" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="2" cat="ap" end="7" id="5" rel="predc">
+        <node begin="2" cat="mwu" end="5" id="6" rel="hd">
+          <node begin="2" end="3" id="7" lemma="voor" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="voor" vztype="init" word="voor"/>
+          <node begin="3" end="4" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="adj" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+          <node begin="4" end="5" getal-n="zonder-n" id="9" lemma="eerst" numtype="rang" pos="adj" positie="nom" postag="TW(rang,nom,zonder-n)" pt="tw" rel="mwp" root="eerst" word="eerst"/>
+        </node>
+        <node begin="5" cat="pp" end="7" id="10" rel="mod">
+          <node begin="5" end="6" id="11" lemma="sedert" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="sedert" vztype="init" word="sedert"/>
+          <node begin="6" end="7" id="12" lemma="1927" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1927" word="1927"/>
+        </node>
+      </node>
+      <node begin="8" cat="cp" end="22" id="13" rel="su">
+        <node begin="8" conjtype="onder" end="9" id="14" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="9" cat="ssub" end="22" id="15" rel="body">
+          <node begin="9" cat="np" end="13" id="16" index="1" rel="su">
+            <node begin="9" end="10" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="10" buiging="met-e" end="11" graad="basis" id="18" lemma="Duits" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Duits" word="Duitse"/>
+            <node begin="11" cat="mwu" end="13" id="19" rel="hd">
+              <node begin="11" end="12" id="20" lemma="Grand" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Grand" spectype="deeleigen" word="Grand"/>
+              <node begin="12" end="13" id="21" lemma="Prix" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Prix" spectype="deeleigen" word="Prix"/>
+            </node>
+          </node>
+          <node begin="20" end="21" id="22" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+          <node begin="9" cat="ppart" end="22" id="23" rel="vc">
+            <node begin="9" end="13" id="24" index="1" rel="obj1"/>
+            <node begin="13" end="14" id="25" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+            <node begin="14" cat="pp" end="20" id="26" rel="ld">
+              <node begin="14" end="15" id="27" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+              <node begin="15" cat="np" end="20" id="28" rel="obj1">
+                <node begin="15" end="16" id="29" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="30" lemma="nurnburgring" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="Nurnburgring" word="Nurnburgring"/>
+                <node begin="17" cat="pp" end="20" id="31" rel="mod">
+                  <node begin="17" end="18" id="32" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                  <node begin="18" cat="np" end="20" id="33" rel="obj1">
+                    <node begin="18" end="19" id="34" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="35" lemma="Eifel" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Eifel" word="Eifel"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="21" buiging="zonder" end="22" id="36" lemma="houden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="houd" word="gehouden" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het was voor het eerst sedert 1927 , dat de Duitse Grand Prix niet op de Nurnburgring in de Eifel werd gehouden .</sentence>
+</alpino_ds>

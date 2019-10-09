@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="27" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="9" end="10" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="16" end="17" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="19" end="20" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="22" end="23" id="5" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="smain" end="26" id="6" rel="--">
+      <node begin="10" end="11" id="7" lemma="zullen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zal" word="zullen" wvorm="pv"/>
+      <node begin="11" cat="np" end="13" id="8" index="1" rel="su">
+        <node begin="11" end="12" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="12" end="13" getal="mv" graad="basis" id="10" lemma="minister" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="minister" word="ministers"/>
+      </node>
+      <node begin="0" cat="inf" end="26" id="11" rel="vc">
+        <node begin="0" cat="pp" end="9" id="12" rel="mod">
+          <node begin="0" end="1" id="13" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+          <node begin="1" cat="np" end="9" id="14" rel="obj1">
+            <node begin="1" end="2" id="15" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="2" buiging="met-e" end="3" graad="sup" id="16" lemma="ongunstig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="ongunstig" word="ongunstigste"/>
+            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="17" lemma="geval" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geval" word="geval"/>
+            <node begin="5" cat="ppart" end="9" id="18" rel="mod">
+              <node begin="5" end="6" id="19" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
+              <node begin="6" end="7" id="20" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+              <node begin="7" buiging="zonder" end="8" graad="basis" id="21" lemma="reeel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="reëel" word="reeel"/>
+              <node begin="8" buiging="zonder" end="9" id="22" lemma="achten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geacht" word="geacht" wvorm="vd"/>
+            </node>
+          </node>
+        </node>
+        <node begin="11" end="13" id="23" index="1" rel="su"/>
+        <node begin="13" cat="pp" end="15" id="24" rel="mod">
+          <node begin="13" end="14" id="25" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="14" end="15" id="26" lemma="1990" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1990" word="1990"/>
+        </node>
+        <node begin="15" buiging="zonder" end="16" id="27" lemma="besluiten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="besluit" word="besluiten" wvorm="inf"/>
+        <node begin="11" cat="ti" end="26" id="28" rel="vc">
+          <node begin="24" end="25" id="29" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="11" cat="inf" end="26" id="30" rel="body">
+            <node begin="11" end="13" id="31" index="1" rel="su"/>
+            <node begin="17" cat="np" end="22" id="32" rel="obj1">
+              <node begin="17" end="18" id="33" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="34" lemma="betiteling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="betiteling" word="betiteling"/>
+              <node begin="20" cat="np" end="22" id="35" rel="app">
+                <node begin="20" buiging="zonder" end="21" id="36" lemma="beschermen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="mod" root="beschermd" word="beschermd" wvorm="vd"/>
+                <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="37" lemma="dorpsgezicht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="dorpsgezicht" word="dorpsgezicht"/>
+              </node>
+            </node>
+            <node begin="23" end="24" id="38" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
+            <node begin="25" buiging="zonder" end="26" id="39" lemma="heffen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="hef" word="heffen" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="26" end="27" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>In het ongunstigste geval ( maar wel reeel geacht ) zullen de ministers in 1990 besluiten , de betiteling &quot; beschermd dorpsgezicht &quot; op te heffen .</sentence>
+</alpino_ds>

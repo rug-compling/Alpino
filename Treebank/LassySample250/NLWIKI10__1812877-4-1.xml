@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="np" end="6" id="1" rel="--">
+      <node begin="0" end="1" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="2" lcat="np" lemma="lijst" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="lijst" sense="lijst" word="Lijst"/>
+      <node begin="1" cat="pp" end="6" id="3" rel="mod">
+        <node begin="1" end="2" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="4" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+        <node begin="2" cat="np" end="6" id="5" rel="obj1">
+          <node begin="2" end="3" frame="noun(het,count,pl)" gen="het" getal="mv" graad="basis" id="6" lcat="np" lemma="geslacht" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="geslacht" sense="geslacht" word="geslachten"/>
+          <node begin="3" cat="pp" end="6" id="7" rel="mod">
+            <node begin="3" end="4" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="8" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+            <node begin="4" cat="np" end="6" id="9" rel="obj1">
+              <node begin="4" end="5" frame="determiner(de)" id="10" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+              <node begin="5" end="6" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lcat="np" lemma="grassenfamilie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gras_familie" sense="gras_familie" word="grassenfamilie"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Lijst van geslachten van de grassenfamilie</sentence>
+  <comments>
+    <comment>Q#1812877-4-1|Lijst van geslachten van de grassenfamilie|1|1|0.11058765710440419</comment>
+  </comments>
+</alpino_ds>

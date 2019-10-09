@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="smain" end="16" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+        <node begin="1" buiging="zonder" end="2" id="4" lemma="uitspreken" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="mod" root="uitgesproken" word="uitgesproken" wvorm="vd"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="favoriet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="favoriet" word="favoriet"/>
+      </node>
+      <node begin="3" end="4" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="16" id="7" rel="vc">
+        <node begin="0" end="3" id="8" index="1" rel="su"/>
+        <node begin="4" end="5" getal="getal" id="9" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="5" cat="pp" end="11" id="10" rel="mod">
+          <node begin="5" end="6" id="11" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="6" cat="np" end="11" id="12" rel="obj1">
+            <node begin="6" end="7" id="13" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="14" lemma="begin" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="begin" word="begin"/>
+            <node begin="8" cat="pp" end="11" id="15" rel="mod">
+              <node begin="8" end="9" id="16" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="9" cat="np" end="11" id="17" rel="obj1">
+                <node begin="9" buiging="zonder" end="10" id="18" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+                <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="19" lemma="seizoen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="seizoen" word="seizoen"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="11" cat="advp" end="13" id="20" rel="mod">
+          <node begin="11" end="12" id="21" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+          <node begin="12" end="13" id="22" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="hd" root="niet" word="niet"/>
+        </node>
+        <node begin="13" cat="pp" end="15" id="23" rel="ld">
+          <node begin="13" end="14" id="24" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+          <node begin="14" end="15" id="25" lemma="voren" pos="adv" postag="BW()" pt="bw" rel="obj1" root="voren" word="voren"/>
+        </node>
+        <node begin="15" buiging="zonder" end="16" id="26" lemma="komen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kom" word="gekomen" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="16" end="17" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een uitgesproken favoriet is er in het begin van dit seizoen nog niet naar voren gekomen .</sentence>
+</alpino_ds>

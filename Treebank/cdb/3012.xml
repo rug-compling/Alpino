@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" cat="pp" end="4" id="2" rel="ld">
+        <node begin="0" end="1" id="3" lemma="rond" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="rond" vztype="init" word="Rond"/>
+        <node begin="1" cat="np" end="4" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="2" buiging="met-e" end="3" graad="basis" id="6" lemma="heel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="heel" word="hele"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="bos" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bos" word="bos"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="8" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
+      <node begin="5" cat="np" end="12" id="9" rel="su">
+        <node begin="5" end="6" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="6" cat="ap" end="9" id="11" rel="mod">
+          <node begin="6" cat="np" end="8" id="12" rel="me">
+            <node begin="6" end="7" id="13" lemma="2.70" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="2.70" word="2.70"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="14" lemma="meter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="meter" word="meter"/>
+          </node>
+          <node begin="8" buiging="met-e" end="9" graad="basis" id="15" lemma="hoog" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="hoog" word="hoge"/>
+        </node>
+        <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="16" lemma="afrastering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="afrastering" word="afrastering"/>
+        <node begin="10" cat="pp" end="12" id="17" rel="mod">
+          <node begin="10" end="11" id="18" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="19" lemma="prikkeldraad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="prikkeldraad" word="prikkeldraad"/>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Rond het hele bos staat een 2.70 meter hoge afrastering met prikkeldraad .</sentence>
+</alpino_ds>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="0" cat="conj" end="21" id="1" rel="--">
+      <node begin="0" cat="smain" end="9" id="2" rel="cnj">
+        <node begin="0" cat="pp" end="3" id="3" rel="pc">
+          <node begin="0" end="1" frame="preposition(aan,[vooraf])" id="4" lcat="pp" pos="prep" rel="hd" root="aan" sense="aan" word="Aan"/>
+          <node begin="1" cat="np" end="3" id="5" rel="obj1">
+            <node begin="1" end="2" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="6" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+            <node begin="2" end="3" frame="noun(het,mass,sg)" gen="het" id="7" lcat="np" num="sg" pos="noun" rel="hd" root="beleid" sense="beleid" word="beleid"/>
+          </node>
+        </node>
+        <node begin="3" end="4" frame="verb(zijn,sg3,part_pc_pp(vooraf,aan))" id="8" infl="sg3" lcat="smain" pos="verb" rel="hd" root="ga_vooraf" sc="part_pc_pp(vooraf,aan)" sense="ga_vooraf-aan" tense="present" word="gaat"/>
+        <node begin="4" cat="np" end="8" id="9" rel="su">
+          <node begin="4" cat="detp" end="6" id="10" rel="det">
+            <node begin="4" end="5" frame="intensifier" id="11" lcat="advp" pos="adv" rel="mod" root="heel" sense="heel" special="intensifier" word="heel"/>
+            <node begin="5" end="6" frame="determiner(wat,nwh,mod,pro,nparg,ntopicpro)" id="12" infl="wat" lcat="detp" pos="det" rel="hd" root="wat" sense="wat" wh="nwh" word="wat"/>
+          </node>
+          <node aform="base" begin="6" end="7" frame="adjective(end(both))" id="13" infl="no_e" lcat="ppres" pos="adj" rel="mod" root="bereid_voor" sense="bereid_voor" vform="gerund" word="voorbereidend"/>
+          <node begin="7" end="8" frame="noun(het,count,sg)" gen="het" id="14" lcat="np" num="sg" pos="noun" rel="hd" root="werk" sense="werk" word="werk"/>
+        </node>
+        <node begin="8" end="9" frame="particle(vooraf)" id="15" lcat="part" pos="part" rel="svp" root="vooraf" sense="vooraf" word="vooraf"/>
+      </node>
+      <node begin="9" end="10" frame="conj(en)" id="16" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="10" cat="smain" end="21" id="17" rel="cnj">
+        <node aform="base" begin="10" end="11" frame="adjective(no_e(sentadv))" id="18" infl="no_e" lcat="ap" pos="adj" rel="mod" root="natuurlijk" sense="natuurlijk" vform="adj" word="natuurlijk"/>
+        <node begin="11" end="12" frame="verb(unacc,sg_heeft,copula)" id="19" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="is"/>
+        <node begin="12" end="13" frame="sentence_adverb" id="20" lcat="advp" pos="adv" rel="mod" root="ook" sense="ook" special="sentence" word="ook"/>
+        <node begin="13" cat="np" end="18" id="21" rel="su">
+          <node begin="13" end="14" frame="determiner(de)" id="22" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="14" end="15" frame="noun(de,count,sg)" gen="de" id="23" lcat="np" num="sg" pos="noun" rel="hd" root="uitvoering" sense="uitvoering" word="uitvoering"/>
+          <node begin="15" cat="pp" end="18" id="24" rel="mod">
+            <node begin="15" end="16" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="25" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="16" cat="np" end="18" id="26" rel="obj1">
+              <node begin="16" end="17" frame="determiner(het,nwh,nmod,pro,nparg)" id="27" infl="het" lcat="detp" pos="det" rel="det" root="dit" sense="dit" wh="nwh" word="dit"/>
+              <node begin="17" end="18" frame="noun(het,mass,sg)" gen="het" id="28" lcat="np" num="sg" pos="noun" rel="hd" root="beleid" sense="beleid" word="beleid"/>
+            </node>
+          </node>
+        </node>
+        <node begin="18" cat="np" end="21" id="29" rel="predc">
+          <node begin="18" end="19" frame="determiner(een)" id="30" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+          <node aform="base" begin="19" end="20" frame="adjective(e)" id="31" infl="e" lcat="ap" pos="adj" rel="mod" root="heel" sense="heel" vform="adj" word="hele"/>
+          <node begin="20" end="21" frame="noun(de,count,sg)" gen="de" id="32" lcat="np" num="sg" pos="noun" rel="hd" root="opgaaf" sense="opgaaf" word="opgave"/>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" frame="punct(punt)" id="33" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Aan het beleid gaat heel wat voorbereidend werk vooraf en natuurlijk is ook de uitvoering van dit beleid een hele opgave .</sentence>
+  <comments>
+    <comment>Q#118|Aan het beleid gaat heel wat voorbereidend werk vooraf en natuurlijk is ook de uitvoering van dit beleid een hele opgave .|1|1|-7.633570941277494</comment>
+  </comments>
+</alpino_ds>

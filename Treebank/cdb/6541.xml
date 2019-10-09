@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="0" cat="smain" end="19" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" index="1" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="19" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="sup"/>
+        <node begin="3" end="4" id="6" lemma="zelfs" pos="adv" postag="BW()" pt="bw" rel="mod" root="zelfs" word="zelfs"/>
+        <node begin="4" cat="np" end="6" id="7" rel="mod">
+          <node begin="4" buiging="met-e" end="5" id="8" lemma="enig" naamval="stan" npagr="rest" pdtype="det" pos="num" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enige" vwtype="onbep" word="enige"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="tijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tijd" word="tijd"/>
+        </node>
+        <node begin="2" cat="pp" end="7" id="10" rel="pc">
+          <node begin="2" end="3" getal="getal" id="11" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="6" end="7" id="12" lemma="naar" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="naar" vztype="fin" word="naar"/>
+        </node>
+        <node begin="7" buiging="zonder" end="8" id="13" lemma="uitzien" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zie" word="uitgezien" wvorm="vd"/>
+        <node begin="8" cat="cp" end="19" id="14" rel="su">
+          <node begin="8" conjtype="onder" end="9" id="15" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="9" cat="ssub" end="19" id="16" rel="body">
+            <node begin="9" cat="np" end="11" id="17" index="2" rel="su">
+              <node begin="9" end="10" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="10" end="11" getal="mv" graad="basis" id="19" lemma="museum" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="museum" word="musea"/>
+            </node>
+            <node begin="17" end="18" id="20" lemma="zullen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="zal" word="zouden" wvorm="pv"/>
+            <node begin="9" cat="inf" end="19" id="21" rel="vc">
+              <node begin="9" end="11" id="22" index="2" rel="su"/>
+              <node begin="11" cat="np" end="17" id="23" rel="obj1">
+                <node begin="11" end="12" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="12" buiging="met-e" end="13" graad="basis" id="25" lemma="exclusief" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="exclusief" word="exclusieve"/>
+                <node begin="13" end="14" getal="mv" graad="basis" id="26" lemma="recht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="recht" word="rechten"/>
+                <node begin="14" cat="pp" end="17" id="27" rel="mod">
+                  <node begin="14" end="15" id="28" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                  <node begin="15" cat="np" end="17" id="29" rel="obj1">
+                    <node begin="15" end="16" id="30" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="31" lemma="vertoning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vertoning" word="vertoning"/>
+                  </node>
+                </node>
+              </node>
+              <node begin="18" buiging="zonder" end="19" id="32" lemma="verwerven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verwerf" word="verwerven" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="33" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het heeft er zelfs enige tijd naar uitgezien dat de musea de exclusieve rechten voor de vertoning zouden verwerven .</sentence>
+</alpino_ds>

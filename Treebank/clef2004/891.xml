@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="6" end="7" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="whq" end="8" id="3" rel="--">
+      <node begin="0" end="1" getal="getal" id="4" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="whd" root="waar" status="vol" vwtype="vb" word="Waar"/>
+      <node begin="0" cat="sv1" end="8" id="5" rel="body">
+        <node begin="1" end="2" id="6" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+        <node begin="2" cat="np" end="6" id="7" index="2" rel="su">
+          <node begin="2" cat="mwu" end="4" id="8" rel="hd">
+            <node begin="2" end="3" id="9" lemma="Hewlett" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hewlett" spectype="deeleigen" word="Hewlett"/>
+            <node begin="3" end="4" id="10" lemma="Packard" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Packard" spectype="deeleigen" word="Packard"/>
+          </node>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="HP" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mod" root="HP" word="HP"/>
+        </node>
+        <node begin="0" cat="ppart" end="8" id="12" rel="vc">
+          <node begin="0" end="1" id="13" index="1" rel="mod"/>
+          <node begin="2" end="6" id="14" index="2" rel="obj1"/>
+          <node begin="7" buiging="zonder" end="8" id="15" lemma="oprichten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="richt_op" word="opgericht" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="16" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Waar werd Hewlett Packard ( HP ) opgericht ?</sentence>
+</alpino_ds>

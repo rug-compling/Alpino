@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="mwu" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="All" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="All" spectype="vreemd" word="All"/>
+      <node begin="1" end="2" id="3" lemma="you" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="you" spectype="vreemd" word="you"/>
+      <node begin="2" end="3" id="4" lemma="need" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="need" spectype="vreemd" word="need"/>
+      <node begin="3" end="4" id="5" lemma="is" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="is" spectype="vreemd" word="is"/>
+      <node begin="4" end="5" id="6" lemma="love" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="love" spectype="vreemd" word="love"/>
+    </node>
+    <node begin="5" end="6" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="6" end="7" id="8" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>All you need is love . &quot;</sentence>
+</alpino_ds>

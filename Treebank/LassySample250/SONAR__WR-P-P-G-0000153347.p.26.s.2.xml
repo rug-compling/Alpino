@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="0" end="1" frame="punct(aanhaal_both)" id="1" lcat="punct" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" sense="&apos;" special="aanhaal_both" word="&apos;"/>
+    <node begin="12" end="13" frame="punct(komma)" id="2" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="1" cat="du" end="18" id="3" rel="--">
+      <node begin="1" cat="smain" end="12" id="4" rel="dp">
+        <node begin="1" case="both" def="def" end="2" frame="pronoun(nwh,je,sg,de,both,def,wkpro)" gen="de" getal="ev" id="5" index="1" lcat="np" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" sense="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="Je"/>
+        <node begin="2" end="3" frame="verb('hebben/zijn',sg,modifier(aux(inf)))" id="6" infl="sg" lcat="smain" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" sc="modifier(aux(inf))" sense="moet" tense="present" word="moet" wvorm="pv"/>
+        <node begin="1" cat="inf" end="12" id="7" rel="vc">
+          <node begin="1" end="2" id="8" index="1" rel="su"/>
+          <node aform="base" begin="3" buiging="zonder" end="4" frame="adjective(no_e(adv))" graad="basis" id="9" infl="no_e" lcat="ap" lemma="echt" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="echt" sense="echt" vform="adj" word="echt"/>
+          <node begin="4" end="5" frame="sentence_adverb" id="10" lcat="advp" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="mod" root="altijd" sense="altijd" special="sentence" word="altijd"/>
+          <node begin="5" buiging="zonder" end="6" frame="verb(hebben,inf,sbar)" id="11" infl="inf" lcat="inf" lemma="zorgen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zorg" sc="sbar" sense="zorg" word="zorgen" wvorm="inf"/>
+          <node begin="6" cat="cp" end="12" id="12" rel="vc">
+            <node begin="6" conjtype="onder" end="7" frame="complementizer(dat)" id="13" lcat="cp" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" sense="dat" word="dat"/>
+            <node begin="7" cat="ssub" end="12" id="14" rel="body">
+              <node begin="7" case="both" def="def" end="8" frame="pronoun(nwh,je,sg,de,both,def,wkpro)" gen="de" getal="ev" id="15" lcat="np" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" sense="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="je"/>
+              <node begin="8" cat="np" end="11" id="16" rel="obj1">
+                <node begin="8" end="9" frame="determiner(een)" id="17" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+                <node begin="9" end="10" frame="number(rang)" id="18" lcat="ap" lemma="tweede" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="tweede" sense="tweede" special="rang" word="tweede"/>
+                <node begin="10" end="11" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="19" lcat="np" lemma="ekster" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ekster" sense="ekster" word="ekster"/>
+              </node>
+              <node begin="11" end="12" frame="verb(hebben,sg3,transitive_ndev_ndev)" id="20" infl="sg3" lcat="ssub" lemma="zien" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zie" sc="transitive_ndev_ndev" sense="zie" tense="present" word="ziet" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="13" cat="smain" end="18" id="21" rel="dp">
+        <node aform="compar" begin="13" end="14" frame="adjective(anders)" id="22" infl="anders" lcat="ap" lemma="anders" pos="adj" postag="BW()" pt="bw" rel="mod" root="anders" sense="anders" vform="adj" word="anders"/>
+        <node begin="14" end="15" frame="verb(zijn,sg3,part_intransitive(fout))" id="23" infl="sg3" lcat="smain" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga_fout" sc="part_intransitive(fout)" sense="ga_fout" tense="present" word="gaat" wvorm="pv"/>
+        <node begin="15" end="16" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" genus="onz" getal="ev" id="24" infl="het" lcat="np" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" sense="het" status="red" vwtype="pers" wh="nwh" word="het"/>
+        <node begin="16" end="17" frame="adverb" id="25" lcat="advp" lemma="helemaal" pos="adv" postag="BW()" pt="bw" rel="mod" root="helemaal" sense="helemaal" word="helemaal"/>
+        <node begin="17" buiging="zonder" end="18" frame="particle(fout)" graad="basis" id="26" lcat="part" lemma="fout" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="fout" sense="fout" word="fout"/>
+      </node>
+    </node>
+    <node begin="18" end="19" frame="punct(punt)" id="27" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+    <node begin="19" end="20" frame="punct(aanhaal_both)" id="28" lcat="punct" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" sense="&apos;" special="aanhaal_both" word="&apos;"/>
+  </node>
+  <sentence>&apos; Je moet echt altijd zorgen dat je een tweede ekster ziet , anders gaat het helemaal fout . &apos;</sentence>
+  <comments>
+    <comment>Q#WR-P-P-G-0000153347.p.26.s.2|&apos; Je moet echt altijd zorgen dat je een tweede ekster ziet , anders gaat het helemaal fout . &apos;|1|1|-0.28587544296044265</comment>
+  </comments>
+</alpino_ds>

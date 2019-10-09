@@ -1,0 +1,329 @@
+ifeq "$(shell if [ -r ../Makefile.include ]; then echo yes; fi)" "yes"
+include ../Makefile.include
+else
+ifeq "$(shell if [ -r $(ALPINO_HOME)/Makefile.include ]; then echo yes; fi)" "yes"
+include $(ALPINO_HOME)/Makefile.include
+endif
+endif
+
+default:
+	@echo "make testN suite=SUITE"
+	@echo "will run Alpino on the test suite ../Suites/SUITE"
+	@echo "and will compare the results with the treebank in"
+	@echo "../Treebank/SUITE/"
+	@echo "It will find all results, including the best possible result"
+	@echo "for SUITE would be for the current grammar."
+	@echo "Default options are specified in this Makefile using"
+	@echo "variable SUITE_test1_options and SUITE_testN_options"
+	@echo "You can always specify extra=\"<various alpino options>\" to"
+	@echo "pass on any non-default options to Alpino."
+	@echo
+	@echo
+	@echo "Each run creates its own working directory"
+	@echo "for temporary stuff; in addition it appends summarizing"
+	@echo "statistics to some of the files in a directory dedicated"
+	@echo "to that suite."
+
+include $(ALPINO_HOME)/Makefile.hpc
+
+include $(ALPINO_HOME)/Makefile.errormining
+
+cat=cat
+LOGS=*/job*/log?
+
+suitepath=../Suites
+suite=cdb
+dir=./
+debug=1
+
+ifndef TMPDIR
+TMPDIR=/tmp
+endif
+
+## defaults for testN target
+default_testN_options=-testN stop_if_optimal=off debug=$(debug) user_max=900000 max_sentence_length=25 
+
+## defaults per suite for testN target
+LassySmall_testN_options=suite_shortest_first=on max_sentence_length=20
+cdb_testN_options=suite_shortest_first=on
+PPH_testN_options=suite_shortest_first=on
+PPI_testN_options=suite_shortest_first=on
+WSU_testN_options=suite_shortest_first=on
+dpc-ind_testN_options=suite_shortest_first=on -flag treebank ../Treebank/dpc
+dpc-rou_testN_options=suite_shortest_first=on -flag treebank ../Treebank/dpc
+cgn_exs_testN_options="number_analyses=5000"
+ovistrain_testN_options=-flag treebank ../Treebank/ovis
+oviswg_testN_options=-flag treebank ../Treebank/ovis
+wpspel_annot_testN_options=-flag treebank ../Treebank/wpspel
+
+job := job${shell echo $$$$}
+
+cpu1=${shell ls -t $(suite)/*/log?|head -n 1}
+cpu2=$(prefix)$(suite)/time
+
+L1 := $(shell mktemp -u)
+L2 := $(shell mktemp -u)
+L3 := $(shell mktemp -u)
+
+compare_cpu:
+	@grep 'cputime total' $(cpu1) | awk '{ print $$3 }' >$(L1)
+	@grep 'cputime total' $(cpu2)| awk '{ print $$3 }' >$(L2) 
+	@grep 'Running parser(s) on' $(cpu1) | awk '{ print $$6 }' > $(L3)
+	@echo "NEW	PREV		ITEM"
+	@paste $(L1) $(L2) $(L3) |\
+          awk 'BEGIN {I=1}                                                  \
+                     { if (NF==3) {                                         \
+                          if ($$1>1.1*$$2 && $$1>500)                      \
+                             { F="???" };                                   \
+                          if ($$2>1.1*$$1 && $$2>500)                      \
+                             { F="!!!" };                                   \
+                          if(F) { print $$1 "\t" $$2 "\t\t" $$3 "\t" F }    \
+                          F="";                                             \
+                          I=I+1;                                            \
+                          N=N+$$1;                                          \
+                          M=M+$$2 }                                         \
+                     }                                                      \
+               END {print "------------";                                   \
+                    print "AVERAGES after " I-1 " sentences";               \
+                    print "AV " N/(I-1) "\t" M/(I-1) "\t\t\t" (N/(I-1))/(M/(I-1)) "\t\t$(cpu1)"; \
+                    print "================================================";           \
+                   }' 
+	rm -f $(L1) $(L2) $(L3)
+
+best1=${shell ls -t $(suite)/*/best|head -n 1}
+best2=$(suite)/best
+
+compare_best:
+	@grep 'BEST SCORE' $(best1) | awk '{ print $$11, $$3, $$15 }' \
+                                      > $(L1)
+	@grep 'BEST SCORE' $(best2) | awk '{ print $$11, $$3, $$15 }' \
+                                      > $(L2)
+	@$(MAKE) compare_best0 suite=$(suite) L1=$(L1) L2=$(L2)
+
+COMPARE_C=$(ALPINO_HOME)/TestN/compare_c 
+
+compare_best0:
+	echo $(L1) $(L2)
+	@$(COMPARE_C) $(suite) $(L1) $(L2)
+	@rm -f $(L1) $(L2)
+
+testN:
+	mkdir -p $(suite)/$(job)
+	echo "extra=$(extra)" >> $(suite)/bests
+	-$(MAKE) trees dir=$(suite)/$(job) 
+	$(MAKE) testNrest job=$(job) suite=$(suite) part=""
+
+testNrest:
+	$(MAKE) -s bestall dir=$(suite)/$(job) \
+                | tee $(suite)/$(job)/bests
+	cat $(suite)/$(job)/bests >> $(suite)/bests
+	grep 'cputime total' $(suite)/$(job)/logN\
+                                 > $(suite)/$(job)/time
+	-grep '^T#' $(suite)/$(job)/logN\
+                                 >> $(suite)/$(job)/time
+	grep 'BEST SCORE' $(suite)/$(job)/logN\
+                                 > $(suite)/$(job)/best
+	$(MAKE) -s --no-print-directory bestall dir=$(suite)/$(job) \
+                >> $(suite)/$(job)/best
+	$(MAKE) report
+	-$(MAKE) compare_best suite=$(suite)
+
+trees:
+	@echo > $(dir)/times
+	hostname -f >>$(dir)/times
+	@echo `date` >> $(dir)/times
+	@echo `hostname` >> $(dir)/times
+	@echo "extra=$(extra)" >> $(dir)/times
+	echo "parser_comparisons." | \
+        $(ALPINO)\
+          -flag suite $(suitepath)/$(suite)\
+          $(default_testN_options)\
+          $($(suite)_testN_options)\
+          $(extra) -notk cmdint=off\
+                          2>$(dir)/logN | tee -a $(dir)/times #> $(dir)/result
+	@cat $(dir)/times >> $(suite)/times
+
+## REPORTING STATISTICS ETC
+
+log=${shell ls -t */*/log?|head -n 1}
+
+## make bestall dir=DIR
+## computes average BEST/WORST/FIRST score, based on DIR/log
+## the log file should have been created with end_hook=best_score
+
+bestall:
+	$(MAKE) bestall0 grep=BEST
+	$(MAKE) bestall0 grep=FIRST
+	$(MAKE) bestall0 grep=WORST
+	@grep 'solution(s)' $(dir)/log? |\
+                    awk 'BEGIN {N=0; T=0}\
+                               {N=N+1; T=T+$$2}\
+                         END   {printf "%d sentences\n%.2f readings/sentence\n",N,T/N}' 
+
+
+bestall0:
+	@grep '$(grep) SCORE' $(dir)/log? |\
+        awk '{ PEN=($$7 > $$9 ? $$7 : $$9)-$$5; P=P+PEN; N=N+($$7 > $$9 ? $$7 : $$9); T++; CA=CA+$$3} END { printf "$(grep): ca-score: %.3f\n", 100*(1-P/N); printf "$(grep): per-sent: %.3f\n",CA/T}'
+
+## make report suite=SUITE n=N
+## displays summarizing statistics of the last N runs for suite SUITE
+n=5
+report:
+	@if [ -f $(suite)/times ]; then\
+         grep '^%XX' $(suite)/times | tail -n $(n); fi
+	@echo "WORST	FIRST	BEST	TREES/SENT"
+	@if [ -f $(suite)/bests ]; then\
+ echo "----- recent:";\
+ grep 'readings/s' $(suite)/bests |tail -n $(n)|cut -d' ' -f 1  >$(TMPDIR)/.logrd ;\
+ grep 'WORST: ca-score' $(suite)/bests | tail -n $(n) | cut -d' ' -f 3 >$(TMPDIR)/.logra ;\
+ grep 'FIRST: ca-score' $(suite)/bests | tail -n $(n) | cut -d' ' -f 3 >$(TMPDIR)/.logrb ;\
+ grep 'BEST: ca-score' $(suite)/bests | tail -n $(n) | cut -d' ' -f 3  >$(TMPDIR)/.logrc ;\
+ paste $(TMPDIR)/.logra $(TMPDIR)/.logrb $(TMPDIR)/.logrc $(TMPDIR)/.logrd ;\
+ fi
+	@$(MAKE) -s reportcurrentbest
+	@if [ -f $(suite)/scores ]; then\
+          echo "----- recent:";\
+          grep ca-score $(suite)/scores | tail -n $(n); fi
+	@$(MAKE) -s reportcurrentscore
+
+reportcurrentbest:
+	@if [ -f $(suite)/best ]; then\
+        best=`tail $(suite)/best | grep '^BEST: ca-score'|awk '{ print $$3}'`;\
+        first=`tail $(suite)/best | grep '^FIRST: ca-score'|awk '{ print $$3}'`;\
+        worst=`tail $(suite)/best | grep '^WORST: ca-score'|awk '{ print $$3}'`;\
+        trees=`tail $(suite)/best | grep 'readings/sentence'|awk '{ print $$1}'`;\
+        echo "----- expected:";\
+        echo "$$worst	$$first	$$best	$$trees $(suite)";\
+        fi
+
+JOBNAME=$(suite).t
+SHORTJOBNAME=$(ssuite).t
+ssuite=$(shell echo $(suite) | tr -d "aeiou_" | rev | cut -c-8 | rev)
+
+hpctests:
+	$(MAKE) job HPCTARGET=testN suite=i_suite 
+	$(MAKE) shortjob HPCTARGET=testN suite=h_suite 
+	$(MAKE) shortjob HPCTARGET=testN suite=g_suite 
+	$(MAKE) shortjob HPCTARGET=testN suite=leuven_yellow_pages 
+	$(MAKE) shortjob HPCTARGET=testN suite=lot_test_suite1 
+	$(MAKE) job HPCTARGET=testN suite=cgn_exs
+	$(MAKE) job HPCTARGET=testN suite=qa 
+	$(MAKE) job HPCTARGET=testN suite=extra
+	$(MAKE) job HPCTARGET=testN suite=cdb
+	$(MAKE) job HPCTARGET=testN suite=PPH
+	$(MAKE) job HPCTARGET=testN suite=PPI
+	$(MAKE) job HPCTARGET=testN suite=dpc-ind
+	$(MAKE) job HPCTARGET=testN suite=dpc-rou
+	$(MAKE) job HPCTARGET=testN suite=wpspel_annot
+
+tests:
+	nohup $(MAKE) testN suite=i_suite  &
+	nohup $(MAKE) testN suite=h_suite  &
+	nohup $(MAKE) testN suite=g_suite  &
+	nohup $(MAKE) testN suite=leuven_yellow_pages  &
+	nohup $(MAKE) testN suite=lot_test_suite1  &
+	nohup $(MAKE) testN suite=cgn_exs &
+	nohup $(MAKE) testN suite=qa  &
+	nohup $(MAKE) testN suite=extra &
+	nohup $(MAKE) testN suite=cdb &
+	nohup $(MAKE) testN suite=PPH &
+	nohup $(MAKE) testN suite=PPI &
+	nohup $(MAKE) testN suite=dpc-ind &
+	nohup $(MAKE) testN suite=dpc-rou &
+	nohup $(MAKE) testN suite=wpspel_annot &
+	nohup $(MAKE) testN suite=LassySmall &
+
+bf:
+	@echo "        BEST-CA          #PARSES        SUITE"
+	@echo "      NEW     OLD      NEW      OLD"
+	@$(MAKE) -s bf0 |\
+            awk '{ G=" ";\
+                   if ($$1>$$2) {G="!"};\
+                   if ($$2>$$1) {G="?"};\
+                   printf "%s %7.3f %7.3f %8.2f %8.2f %s %s\n",\
+                               G,$$1,$$2,$$3,$$4,$$5,$$6;\
+                   N=N+1; A=A+$$1; B=B+$$2; C=C+$$3; D=D+$$4 }\
+                END {printf "\n  %7.3f %7.3f %8.2f %8.2f mean\n",\
+                       A/N,B/N,C/N,D/N}'
+
+bf0:
+	for file in `echo $(shell ls $(ORDERED) */*/bests 2>/dev/null)`; do \
+        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
+        times=`echo $$file | sed -e 's/bests/times/'`;\
+        echo `grep 'BEST: ca-score' $$file | awk '{ print $$3 }' `"	"`if [ -f $$suite/best ]; then grep 'BEST: ca-score' $$suite/best | tail -n 2 | head -n 1 | awk '{ print $$3 }'; fi`"	"`grep readings/sentence $$file | awk '{ print $$1 }'`"	"`if [ -f $$suite/best ]; then grep 'readings/sentence' $$suite/best | tail -n 2 |head -n 1 | awk '{ print $$1 }'; fi`"	"$$suite"	"`grep extra= $$times|sed -e 's/extra=//'`;\
+        done
+
+upd_all:
+	@for file in `echo $(shell ls $(ORDERED) */*/score 2>/dev/null)`; do \
+        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
+	echo "cp $$file $(prefix)$$suite/";\
+        done
+	@for file in `echo $(shell ls $(ORDERED) */*/best 2>/dev/null)`; do \
+        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
+	echo "cp $$file $(prefix)$$suite/";\
+        done
+	@for file in `echo $(shell ls $(ORDERED) */*/time 2>/dev/null)`; do \
+        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
+	echo "cp $$file $(prefix)$$suite/";\
+        done
+	@for file in `echo $(shell ls $(ORDERED) */*/result 2>/dev/null)`; do \
+        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
+	echo "cp $$file $(prefix)$$suite/";\
+        done
+
+rm_all:
+	@for dir in */job*;\
+         do\
+             if    cmp -s $$dir/score $$dir/../score \
+                || cmp -s $$dir/best $$dir/../best     ;\
+             then echo "rm -rf $$dir";\
+             fi;\
+         done
+
+ORDERED=-rt
+
+compare_best_logs:
+	@for file in `echo $(shell ls $(ORDERED) $(suite)/*/logN 2>/dev/null)`;\
+        do echo $$file;\
+           $(MAKE) -s compare_best best1=$$file suite=$(suite);\
+        done
+
+compare_last_logs:
+	$(MAKE) -s compare_best\
+        best2=$(shell ls -S $(suite)/*/logN | tail -n2 | head -n1 )\
+        best1=$(shell ls -S $(suite)/*/logN | tail -n1 )
+
+errors:
+	@if [ -f $(suite)/best ] && [ -f $(suite).errors ];\
+        then $(ALPINO_HOME)/TestN/compare_errors $(suite)/best $(suite).errors;\
+        fi
+
+err:
+	@if [ -f $(suite).errors ];\
+        then\
+         for file in \
+             `echo $(shell ls $(ORDERED) $(suite)/*/logN 2>/dev/null)`;\
+         do echo $$file;\
+            $(ALPINO_HOME)/TestN/compare_errors -q $$file $(suite).errors;\
+         done;\
+        fi
+
+err_timeout:
+	for pat in `make err suite=$(suite)| awk  '/new error/{ print $$4}' | sort -u`; do grep "^T#$$pat|" $(suite)/job*/logN; done |grep -v time_out|grep -v out_of_memory | sort -t\| -k2,2n 
+
+jobsuites=$(sort $(dir $(wildcard */job*)))
+cb:
+	for j in $(jobsuites); do $(MAKE) -s compare_best_logs suite=$$j; done
+
+cg:
+	@for file in `ls -tr */job*/log*`;\
+        do echo $$file;\
+           $(MAKE) -s compare_cpu cpu1=$$file cpu2=`dirname $$file`/../time;\
+        done | grep '^AV '
+
+complete_testN:
+	ls -d */job* | awk -F '/' '{printf "make testNrest suite=%s job=%s\n",$$1,$$2 }'
+
+kill:
+	-ps -ef |grep sicstus | grep testN | awk '{ print $$2 }' | xargs kill
+	rm -rf */job*

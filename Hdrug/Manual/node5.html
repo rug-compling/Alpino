@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-/W3C/DTD HTML 4.0 Transitional//EN"
+     "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>HDRUG Reference Manual</TITLE>
+<link rel=stylesheet href="http://www.let.rug.nl/~vannoord/doc.css" 
+      type="text/css">
+<link rel=next href="node6.html">
+</HEAD>
+<BODY>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node6.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+<H1>5. Graphical User Interface</H1>
+<P>The Hdrug widget
+(<TT><A HREF="ale1.png">ale1.png</A></TT>)
+contains the following sub-widgets (from top-to-bottom).</P>
+<UL><LI><P>MenuBar. The MenuBar contains a number of menubuttons. Each of
+these menu's is described below.</P>
+<LI><P>ObjectBar. The ObjectBar is initially invisible. Once `objects' are
+produced by a parser or generator these objects will be placed on this
+bar.</P>
+<LI><P>Two scrollable canvases. Each canvas is initially left blank but is
+used for graphical output such as parse-trees, etc. You can scroll the
+canvas using the scrollbars, but also using the middle mouse
+button. The relative size of the canvases can be adapted by dragging
+the border with the left mouse button, or with the file-enlarge left
+canvas resp. enlarge right canvas commands.</P>
+<LI><P>TkConsol. If the global variable tkconsol is on, then the
+TkConsol widget treats standard input, standard output and error
+output.</P>
+<LI><P>ButtonBar. The ButtonBar contains three buttons that can be used to
+change the value of the top category, the parser and the
+generator. The current values of these are also listed next to the
+corresponding buttons. The checkbox `new canvas' can be switched on in
+order for the next graphical output to be directed to a seperate
+window. Finally the rightmost button is a button that is added by manu
+applications, and which functions as an `About' button.</P>
+</UL><H2>5.1. <a name="anc1"></a>The MenuBar</H2>
+<UL><LI><P>The File Menu. The file menu contains buttons of which the meaning is
+rather straightforward. The first items can be used to (re)compile
+grammar files. The detailed meaning is dependent on the application.</P>
+</UL><P>The `compile prolog file' button lets you choose a Prolog file
+which will be compiled. The `reconsult prolog file' button
+behaves similarly but reconsults the file. The `source tk/tcl file'
+button can be used to source a Tcl/Tk file. The `halt' button
+halts the application (really!).</P>
+<P>The `enlarge left canvas' and `enlarge right canvas' buttons
+adapt the relative size of the two canvases.</P>
+<P>It is also possible to restart the application. This implies that the
+graphical environment is restarted, but the application files are not
+reconsulted. This is useful if you are adding/debugging parts of the
+graphical interface. Use `restart x' to restart.  `quit x -
+keep prolog alive' allows you to stop the interface, but continue
+the Prolog session.</P>
+<UL><LI><P>The Debug Menu. The debug menu contains a few buttons that are
+straightforward interfaces to the corresponding Prolog predicates. It
+contains the options</P>
+<LI><P>nodebug</P>
+<LI><P>debug</P>
+<LI><P>remove spypoints</P>
+<LI><P>spy predicate</P>
+<LI><P>unspy predicate</P>
+<LI><P>statistics</P>
+<LI><P>The Options Menu. The options menu provides an interface to the
+global variables.</P>
+<LI><P>The Parse Menu. The parse menu is a more interesting menu, although it
+consists of only a single button.  Pressing this button will present a
+dialog widget asking you for a sentence. You can either type in a new
+sentence, or select one of the available test sentences. The available
+sentences are the sentences that were previously parsed during the
+current session, or that were listed in the test-suite, or that were
+the result of generation in the current session. The sentence you type
+or select will be parsed using the current parser, and the current top
+category. Some statistical output will be presented on standard
+output. For each parse result a numbered object is created. Each
+object is visible as a button on the ObjectBar, allowing you to
+inspect each object.  The maximum number of objects that is built is
+limited by the max_objects flag.</P>
+</UL><P>The option `compare parsers' allows you to parse a single test
+sentence for each of the active parsers.</P>
+<P>Use the option `parser selection' to activate or de-active a
+particular parser.</P>
+<UL><LI><P>The Generate Menu</P>
+</UL><P>generate lf. This option is the inverse of the parse option. Now you
+are prompted for a logical form, which is subsequently input to the
+current generator. Again, you can either specify a logical form `by
+hand' or select a pre-existing logical form. Note that there is (yet)
+no concept of a test-suite for logical forms.</P>
+<P>generate object. This option takes the logical form from the object
+that you select, and generates from this logical form. Note that other
+information ofthis object is not taken into account in the generation
+process.</P>
+<P>generator selection. Use this option to activate or de-activate a
+particular generator.</P>
+<P>compare generators on lf. Generate from a given logical form for each
+of the active generators.</P>
+<P>compare generators on object. Generate from the logical form of a
+given object for each of the active generators.</P>
+<UL><LI><P>The Test-suite Menu</P>
+</UL><P>The test-suite menu contains a number of options in order to test the
+application for a (pre-defined) set of sentences. This set of
+sentences is defined in a file called {suite.pl} in the application
+directory, and consists of a number of Prolog clauses for the
+predicate sentence/2, where the first argument is a unique identifier
+of that sentence, and the second argument is a list of atoms.  Note
+that there is (yet) no concept of a test-suite for logical forms.</P>
+<P>The following options are provided.</P>
+<P>run test-suite. If this option is chosen then all sentences are parsed
+in turn, for each of the parsers that are `active'}. Use the `parser
+selection' option to select the parsers you want to include/exclude
+for the run.</P>
+<P>run test-suite and view. This option behaves similar to the previous
+option, but in addition statistical information comparing the
+different parsers is shown in a separate TK widget. The statistical
+information is updated after a sentence has been parsed by all active
+parsers.</P>
+<P>reload test-suite. Choosing this option reloads the test-suite.
+Note that it does <B>not</B> destroy existing test-results.</P>
+<P>view test-results. This option contains a number of sub-options that
+allow you to view the test-results in various ways.</P>
+<P>individual tk. Presents a graph in which the length of the 
+sentence is plotted against the parse time, for each of the different
+parsers and sentences.</P>
+<P>totals per #words tk. Similarly, but now averages per sentence length
+are used.</P>
+<P>totals per #words latex. This produces an Xdvi window containing a
+table of the parse results, again averaged over sentence-length. Note
+that all :atex files are placed in a temporary directory, given by the
+environment variable $TMPDIR. If this variable is not set, the
+directory /tmp is used.  The predicate latex:files/5 can be used to
+get the actual file names that are used.</P>
+<P>totals per #readings latex. This produces a table of the parse
+results, averaged over the number of readings.</P>
+<P>individual prolog. This simply gives a Prolog listing of the 
+table_entry/6 predicate.</P>
+<P>totals per #words prolog. Prolog output of the average cputimes per
+parser per #words. This is given as a list of terms 
+t(Length,Time,Parser) with the obvious interpretation.</P>
+<P>destroy test results. Removes the test-results, i.e. retracts all
+clauses of the table_entry/6 predicate.</P>
+<UL><LI><P>The View Menu. The `view menu' contains several sub-menus indicating
+the type of things you can view. Typically, you can view `objects'
+(the result of parsing and generation) `predicates' (Prolog
+predicates) and `types' (if your application uses
+library(hdrug_feature). For each of the sub-menus you can choose
+between different output widgets: Tk, CLiG, Prolog, DOT and LaTeX.
+Finally, for each combination of `thing' and `output widget' you can
+choose between a number of different output filters. The choice of
+filter determines whether the output is printed as a tree, a feature
+structure or the internal Prolog encoding.</P>
+</UL><P>Note that not all view options will produce results. Sometimes these
+options are only defined for particular inputs. For example, in the
+Tree Adjoining Grammar application there are parsers that build
+derivation trees, and there are parsers that build derived trees.
+Hdrug is not always able to tell in advance whether e.g. the 
+Tree(dt) filter (for derivation trees) is defined for a particular
+object.</P>
+<UL><LI><P>The Help Menu. The help menu contains an interface to the various
+on-line help resources.  The About button produces a rather ugly
+picture of the author of Hdrug. The Version button produces some
+information concerning the version of SICStus, Hdrug and application.
+Finally some applications add an extra `About the Grammar' option that
+mentions the authors of the application.</P>
+</UL><H2>5.2. <a name="anc2"></a>The ObjectBar</H2>
+<UL><LI><P>ObjectBar. The results of parsing and generation are asserted in the
+database as `objects'. The existence of objects is indicated in the
+ObjectBar. For example, if we have parsed the sentence `jan kust
+marie' in an application, then the ObjectBar contains two buttons,
+labeled `1' and `2', indicating the first and second parse
+result. Pressing the button gives rise to a submenu containing three
+options. The first option allows inspection of the object. The
+possibilities are essentially those described above under the `view
+menu'. The second and third option allow the generation from the
+logical form representation of the object (if the application in fact
+defines a generator), either for the current generator, or for all
+active generators.</P>
+</UL><H2>5.3. <a name="anc3"></a>The ButtonBar</H2>
+<UL><LI><P>ButtonBar. The ButtonBar contains maximally three buttons that can be
+used to change the value of the top category, the parser and the
+generator. The current values of these are also listed next to the
+corresponding buttons. Note that there is only a `generator' button if
+there are generators defined; similarly the `parser' button might not
+exist in some applications.</P>
+</UL><P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node6.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+
+
+</BODY></HTML>

@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-/W3C/DTD HTML 4.0 Transitional//EN"
+     "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>HDRUG Reference Manual</TITLE>
+<link rel=stylesheet href="http://www.let.rug.nl/~vannoord/doc.css" 
+      type="text/css">
+<link rel=next href="node9.html">
+</HEAD>
+<BODY>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node9.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+<H1>8. List of Predicates</H1>
+<P>This chapter lists the
+important predicates used in Hdrug.</P>
+<H2>8.1. <a name="anc1"></a>concat(Atom,Atom,Atom)</H2>
+<P>Two of the three arguments must be Prolog atoms. The print-name of
+the third atom is the concatenation of the print names of the first
+two atoms. Examples:</P>
+<BLOCKQUOTE>| ?- concat(foo,bar,X).</BLOCKQUOTE>
+<BLOCKQUOTE>X = foobar ?</BLOCKQUOTE>
+<BLOCKQUOTE>yes<BR>
+| ?- concat(X,bar,foobar).</BLOCKQUOTE>
+<BLOCKQUOTE>X = foo ?</BLOCKQUOTE>
+<BLOCKQUOTE>yes<BR>
+| ?- concat(foo,X,foobar).</BLOCKQUOTE>
+<BLOCKQUOTE>X = bar ?</BLOCKQUOTE>
+<H2>8.2. <a name="anc2"></a>concat_all(+ListOfAtoms,?Atom[,+Atom])</H2>
+<P>concetenates the print names of all the atoms in ListOfAtoms
+together; possibly using the optional third argument as a
+seperator. Example:</P>
+<BLOCKQUOTE>?- concat_all([foo,bar,foo,bar],L,'+').</BLOCKQUOTE>
+<BLOCKQUOTE>L = 'foo+bar+foo+bar' ?</BLOCKQUOTE>
+<H2>8.3. <a name="anc3"></a>between(+Lower, +Upper, ?Number[, +/-])</H2>
+<P>Is true when Lower, Upper, and Number are integers, and Lower =&lt;
+Number =&lt; Upper.  If Lower and Upper are given,  Number can be tested
+or enumerated.  If either Lower or Upper is absent, there is not
+enough information to find it, hence failure.  Numbers are generated
+in ascending order. If you want descending order, use between/4. The
+optional fourth argument is the atom + to indicate ascending order, or</P>
+<UL><LI><P>to indicate descending order. Example:</P>
+</UL><BLOCKQUOTE>?- findall(X,between(1,10,X), Xs).</BLOCKQUOTE>
+<BLOCKQUOTE>Xs = [1,2,3,4,5,6,7,8,9,10] ?</BLOCKQUOTE>
+<BLOCKQUOTE>?- findall(X,between(1,10,X,-), Xs).</BLOCKQUOTE>
+<BLOCKQUOTE>Xs = [10,9,8,7,6,5,4,3,2,1] ?</BLOCKQUOTE>
+<H2>8.4. <a name="anc4"></a>atom_term(+Atom,?Term).</H2>
+<P>Atom is read-in as if it where a Prolog term. Example:</P>
+<BLOCKQUOTE>| ?- atom_term('f(A,B,A)',L).</BLOCKQUOTE>
+<BLOCKQUOTE>L = f(_A,_B,_A) ?</BLOCKQUOTE>
+<H2>8.5. <a name="anc5"></a>term_atom(+Term,?Atom).</H2>
+<P>The Prolog term Term is turned into an atom, as if quotes were placed
+around it. Example:</P>
+<BLOCKQUOTE>| ?- term_atom(f(f(f(f))),L).</BLOCKQUOTE>
+<BLOCKQUOTE>L = 'f(f(f(f)))' ?</BLOCKQUOTE>
+<P>As is clear from the following example, the result is arbitrary in
+case Term contains variables:</P>
+<BLOCKQUOTE>?- term_atom(f(_A,_B,_A),L).</BLOCKQUOTE>
+<BLOCKQUOTE>L = 'f(_83,_105,_83)' ?</BLOCKQUOTE>
+<H2>8.6. <a name="anc6"></a>gen_sym(-Atom[,+Prefix])</H2>
+<P>A new atom Atom is generated. If Prefix is specified, then the print
+name of Atom will start with Prefix.</P>
+<H2>8.7. <a name="anc7"></a>report_count_edges_pred(:Spec)</H2>
+<P>Writes to standard output the number of times :Spec succeeds. Example:</P>
+<BLOCKQUOTE>| ?- report_count_edges_pred(library_directory/1).</BLOCKQUOTE>
+<BLOCKQUOTE>library_directory/1: 2</BLOCKQUOTE>
+<H2>8.8. <a name="anc8"></a>report_count_edges(:Goal)</H2>
+<P>Writes to standard output the number of times :Goal succeeds. Example:</P>
+<BLOCKQUOTE>| ?- report_count_edges(lists:member(_,[a,b,c,d])).</BLOCKQUOTE>
+<BLOCKQUOTE>lists:member(_95,[a,b,c,d]) : 4</BLOCKQUOTE>
+<H2>8.9. <a name="anc9"></a>count_edges(:Goal,?Int)</H2>
+<P>Int is an integer indicating the number of times Goal succeeds.</P>
+<H2>8.10. <a name="anc10"></a>debug_call(+Int,:Goal)</H2>
+<P>If Int is smaller or equal to the current value of flag(debug), then
+Goal is called. Used to wrap around debugging and continuation
+calls. Larger values for Int indicate that the goal is executed less
+often.</P>
+<H2>8.11. <a name="anc11"></a>debug_message(+Int,+FormatStr,+FormatArgs)</H2>
+<P>If Int is smaller or equal to the current value of flag(debug), then
+the goal format(user_error,FormatStr,FormatArgs) is executed.</P>
+<H2>8.12. <a name="anc12"></a>initialize_flag(+Flag,?Val)</H2>
+<P>Hdrug manages a number of global variables, called flags. This
+predicate sets flag Flag to Val only if Flag is currently
+undefined.</P>
+<H2>8.13. <a name="anc13"></a>set_flag(+Flag,?Val)</H2>
+<P>Hdrug manages a number of global variables, called flags. This predicate sets flag Flag to Val.</P>
+<H2>8.14. <a name="anc14"></a>flag(+Flag[,?OldVal[,?NewVal]])</H2>
+<P>Hdrug manages a number of global variables, called flags. This
+predicate sets flag Flag to NewVal, unifying the old value with
+OldVal. If only two arguments are given, then the flag is
+unchanged. If only a single argument is given, then Flag is allowed to
+be uninstantiated. It will be bound to all existing flags upon
+backtracking.</P>
+<H2>8.15. <a name="anc15"></a>un_prettyvars(+Term0,?Term)</H2>
+<P>Reverses the effect of prettyvars; i.e. all '$VAR'/1 terms are
+replaced by corresponding variables.</P>
+<H2>8.16. <a name="anc16"></a>prettyvars(?Term)</H2>
+<P>Similar to the built-in numbervars, except that all variables which
+only occur once in Term are replaced by '$VAR'('_').</P>
+<H2>8.17. <a name="anc17"></a>prolog_conjunction(Conjunction, ListOfConjuncts)</H2>
+<P>handles the syntax of conjuncts.  This code wraps call(_) around
+variables, flattens conjunctions to (A;(B;(C;(D;E)))) form, and drops
+'true' conjuncts.</P>
+<H2>8.18. <a name="anc18"></a>prolog_disjunction(Disjunction,ListOfDisjuncts)</H2>
+<P>handles the syntax of disjuncts.  This code wraps call(_) around
+variables, flattens disjunctions to (A,(B,(C,(D,E)))) form, and drops
+'false' disjuncts.</P>
+<H2>8.19. <a name="anc19"></a>try_hook(:Goal[,:Goal])</H2>
+<P>Tries to call Goal, but only if the predicate is known to exist. If
+the first Goal fails, or if it does not exist, then the second goal is
+called. If no second goal is given then the predicate succeeds.</P>
+<H2>8.20. <a name="anc20"></a>hook(:Goal).</H2>
+<P>hook/1 calls its argument, but only if it is defined; if it is not
+defined the precate fails. Useful to call optional hook predicates for
+which no undefined predicate warnings should be produced.</P>
+<H2>8.21. <a name="anc21"></a>if_gui(:Goal[,:AltGoal])</H2>
+<P>calls Goal only if graphical user interface is currently running; if
+not the predicate calls AltGoal, if it is specified, or succeeds</P>
+<H2>8.22. <a name="anc22"></a>r</H2>
+<P>Starts the command interpreter.</P>
+<H2>8.23. <a name="anc23"></a>start_x</H2>
+<P>Attempts to start the graphical user interface, but will not start it
+if flag(tcltk) is switched off</P>
+<H2>8.24. <a name="anc24"></a>update_array(+List,+ArrayName)</H2>
+<P>a Tcl array named ArrayName is constructed where the values in List
+are to be the values in the array, i.e. ArrayName(1), ArrayName(2),
+etc.; the special value ArrayName(max) is set to the last index of the
+array (counting starts at 0). The flag update_array_max can be used to
+pass to Tcl only the first N items. If that value is 0 then all items
+are passed on (default=1000).</P>
+<H2>8.25. <a name="anc25"></a>tk_fs(+Term)</H2>
+<P>Term is displayed as a feature-structure on the canvas widget of the
+graphical user interface</P>
+<H2>8.26. <a name="anc26"></a>tk_fs(List)</H2>
+<P>Each Term in List is displayed as a feature-structure on the canvas
+widget of the graphical user interface</P>
+<H2>8.27. <a name="anc27"></a>tk_term(?Term)</H2>
+<P>Term is displayed on the canvas of the graphical user interface</P>
+<H2>8.28. <a name="anc28"></a>tcl_eval(+Cmd[,-Return])</H2>
+<P>Abbrevation for the tcltk library predicate tcl_eval/3. The current
+TclTk interpreter, accessible through the tcl_interp flag, is added as
+the first argument.</P>
+<H2>8.29. <a name="anc29"></a>tcl(+Expr[,+Subs[,-ReturnAtom]])</H2>
+<P>Expr is a string as accepted as the second argument of format/3; the
+optional Subs is equivalent to the third argument of format/3. After
+evaluating the meta-charcters in Expr, the string is sent as a tcl
+command using the current tcl interpreter (flag tcl_interp). The
+return string is turned into an atom and available in the optional
+third argument.</P>
+<H2>8.30. <a name="anc30"></a>show_object_no(+No,+Style,+Output)</H2>
+<P>Displays the object numbered No using the Style and Output. These latter two arguments are of the type accepted by the first and second argument of the generic show/3 predicate.</P>
+<H2>8.31. <a name="anc31"></a>show(+Style,+Medium,+Things)</H2>
+<P>Generic interface to the Hdrug visualization tools. Style is one of:</P>
+<P>words (only defined for object/2 things; displays the phonological representation of an object, i.e. Phon in object(Ident,o(Cat,Phon,Sem))</P>
+<P>sem (only defined for object/2 things; displays the semantic representation of an object, i.e. Sem in object(Ident,o(Cat,Phon,Sem))</P>
+<P>fs(+Path) (extracts the feature structure at path Path; and displays the result as a feature structure in matrix notation. In such a Path the prefix might consist of integers to refer to daughters in a tree/3 tree structure; 0 is the root node of a local tree.)</P>
+<P>fs (feature structure in matrix notation)</P>
+<P>term(print) output as a Prolog term, using print where appropriate (in order that any application-specific portray/1 hook predicates will be applicable)</P>
+<P>term(write) same as term(print), but not using print.</P>
+<P>tree(Format) displays as a tree using Format as the relevant tree-format. Such a tree-format is defined by clauses for the hook predicates graphic_path, graphic_daughter and graphic_label.</P>
+<P>Medium is one of:</P>
+<P>user (normal text to SICStus Prolog standard output).</P>
+<P>tk (on a canvas of the graphical user interface).</P>
+<P>latex (latex code is input to latex and either xdvi or dvips followed by ghostview).</P>
+<P>clig (using the CLiG system).</P>
+<P>dot</P>
+<P>and Things is a list where each element is one of:</P>
+<P>object(Ident,o(Cat,Words,Sem))</P>
+<P>value(Term)</P>
+<P>clause(Head,Body), Body a <U>list</U> of goals.</P>
+<H2>8.32. <a name="anc32"></a>hdrug_latex:latex_tree(+TreeFormat,+Term)</H2>
+<P>Displays Term as a tree according to the TreeFormat specifications, in Ghostview. This predicate produces LaTeX code (with PsTricks extensions); it runs LaTeX and dvips on the result. The TreeFormat should be specified by means of clauses for the hook predicates graphic_path, graphic_daughter and graphic_label.</P>
+<H2>8.33. <a name="anc33"></a>hdrug_latex:latex_tree(+TreeFormat,+ListOfTerms)</H2>
+<P>Displays each Term in ListOfTerms as a tree according to the TreeFormat specifications, in Ghostview. This predicate produces LaTeX code (with PsTricks extensions); it runs LaTeX and dvips on the result. The TreeFormat should be specified by means of clauses for the hook predicates graphic_path, graphic_daughter and graphic_label.</P>
+<H2>8.34. <a name="anc34"></a>hdrug_latex:latex_fs(+Term)</H2>
+<P>Displays Term as a feature structure in Xdvi. The predicate produces LaTeX code (using Chris Manning's avm macro's); it runs LaTeX and xdvi on the result.</P>
+<H2>8.35. <a name="anc35"></a>hdrug_latex:latex_fs_list(+List)</H2>
+<P>Displays each Term in List as a feature structure in Xdvi. The predicate produces LaTeX code (using Chris Manning's avm macro's); it runs LaTeX and xdvi on the result.</P>
+<H2>8.36. <a name="anc36"></a>hdrug_latex:latex_term(+Term)</H2>
+<P>Displays Term in Xdvi. The predicate produces LaTeX code; it runs LaTeX and xdvi on the result.</P>
+<H2>8.37. <a name="anc37"></a>hdrug_latex:latex_term_list(+List)</H2>
+<P>Displays each Term in List in Xdvi. The predicate produces LaTeX code; it runs LaTeX and xdvi on the result.</P>
+<H2>8.38. <a name="anc38"></a>generate(Sem)</H2>
+<P>generates from the semantic representation Sem. Sem is first filtered
+through the hook predicate extern_sem.</P>
+<H2>8.39. <a name="anc39"></a>parse(Phon)</H2>
+<P>parses from the phonological representation Phon; typically Phon is a
+list of atoms, refer to the extern_phon hook predicate for more
+complex possibilities.</P>
+<H2>8.40. <a name="anc40"></a>generate_obj_no(Integer)</H2>
+<P>generated from the semantic representation of object Integer. Only the
+semantic representation of that object is passed to the generator.</P>
+<H2>8.41. <a name="anc41"></a>available</H2>
+<P>Lists all available parsers and generators, and their associated
+activity status. During parser comparison and generator comparison,
+only those parsers and generators are compared which are currenly
+active.</P>
+<H2>8.42. <a name="anc42"></a>object(No,Object)</H2>
+<P>Results of parsing and generation are normally added to the
+database. This predicate can be used to fetch such an object. The
+first argument is an integer used as the key of the object, the second
+argument is a triple o(Cat,Phon,Sem).</P>
+<H2>8.43. <a name="anc43"></a>reset_table / reset_table(ParGen)</H2>
+<P>Without an argument, removes all results of parser comparison and
+generator comparison runs. With an argument, only remove information
+concerning that particular parser or generator.</P>
+<H2>8.44. <a name="anc44"></a>parser_comparisons /
+parser_comparisons(Keys)</H2>
+<P>Without arguments, compares active parsers on all sentences in test
+suite. With an argument, Keys is a list of keys which relate to the
+first argument of the sentence hook predicate. The active parsers will
+be compared on sentences with a matching key.</P>
+<H2>8.45. <a name="anc45"></a>generator_comparisons / generator_comparisons(Keys)</H2>
+<P>Without arguments, compares active generators for all logical forms of
+test suite. With an argument, Keys is a list of keys which relate to
+the first argument of the lf hook predicate. Only the logical forms
+with a matching key are compared.</P>
+<H2>8.46. <a name="anc46"></a>sentences</H2>
+<P>lists all sentences in test-suite</P>
+<H2>8.47. <a name="anc47"></a>lfs</H2>
+<P>lists all logical forms in test-suite</P>
+<H2>8.48. <a name="anc48"></a>parse_compare(Sentence)/parse_compare(Max,Sentence)</H2>
+<P>Compares active parsers on Sentence. In the binary format, Max is an
+integer indicating the maximum amount of msec.</P>
+<H2>8.49. <a name="anc49"></a>generate_compare(Lf)/generate_compare(Max,Lf)</H2>
+<P>Compares active generators on Lf. In the binary format, Max is an
+integer indicating the maximum amount of msec.</P>
+<H2>8.50. <a name="anc50"></a>compile_user_clause[(Module)]</H2>
+<P>This predicate will construct Module:user_clause/2 definitions based
+on the available Module:clause/2 clauses (if no Module is specified,
+user is assumed). In the body of these clauses feature constraints are
+expanded out. The user_clause predicate is used for graphical display
+of predicates defined in the grammar. So you have to add a (typically
+multifile) predicate user:user_clause(A,B) :- Module:user_clause(A,B)
+for each Module.</P>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node9.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+
+
+</BODY></HTML>

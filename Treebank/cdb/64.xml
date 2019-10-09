@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="sv1" end="8" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="nemen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="neem" word="Neem" wvorm="pv"/>
+      <node begin="1" buiging="zonder" end="2" graad="basis" id="3" lemma="spoedig" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="spoedig" word="spoedig"/>
+      <node begin="2" cat="np" end="8" id="4" rel="obj1">
+        <node begin="2" end="3" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="3" buiging="met-e" end="4" graad="basis" id="6" lemma="principiele" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="principieel" word="principiele"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="7" lemma="beslissing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beslissing" word="beslissing"/>
+        <node begin="5" cat="pp" end="8" id="8" rel="mod">
+          <node begin="5" end="6" id="9" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+          <node begin="6" cat="np" end="8" id="10" rel="obj1">
+            <node begin="6" end="7" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="12" lemma="schiphollijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="Schiphollijn" word="Schiphollijn"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Neem spoedig een principiele beslissing over de Schiphollijn .</sentence>
+</alpino_ds>

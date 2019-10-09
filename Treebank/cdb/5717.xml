@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="31" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="16" end="17" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="18" end="19" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="22" end="23" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="30" id="5" rel="--">
+      <node begin="0" cat="pp" end="3" id="6" rel="mod">
+        <node begin="0" end="1" id="7" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="Aan"/>
+        <node begin="1" cat="np" end="3" id="8" rel="obj1">
+          <node begin="1" end="2" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="10" lemma="einde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="einde" word="einde"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="11" lemma="roepen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="roep" word="riep" wvorm="pv"/>
+      <node begin="4" cat="np" end="6" id="12" rel="su">
+        <node begin="4" end="5" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="14" lemma="paus" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="paus" word="paus"/>
+      </node>
+      <node begin="6" cat="np" end="8" id="15" rel="obj2">
+        <node begin="6" end="7" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="17" lemma="menigte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="menigte" word="menigte"/>
+      </node>
+      <node begin="8" cat="conj" end="27" id="18" rel="mod">
+        <node begin="8" cat="pp" end="22" id="19" rel="cnj">
+          <node begin="8" end="9" id="20" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="9" cat="np" end="22" id="21" rel="obj1">
+            <node begin="9" end="10" id="22" lemma="veertien" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="veertien" word="veertien"/>
+            <node begin="10" end="11" getal="mv" graad="basis" id="23" lemma="taal" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="taal" word="talen"/>
+            <node begin="12" cat="rel" end="22" id="24" rel="mod">
+              <node begin="12" end="13" id="25" lemma="waaronder" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waaronder" word="waaronder"/>
+              <node begin="13" cat="conj" end="22" id="26" rel="body">
+                <node begin="13" cat="np" end="16" id="27" rel="cnj">
+                  <node begin="13" end="14" id="28" index="1" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+                  <node begin="14" end="15" id="29" index="2" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                  <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="30" lemma="Russisch" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Russisch" word="Russisch"/>
+                </node>
+                <node begin="13" cat="np" end="18" id="31" rel="cnj">
+                  <node begin="13" end="14" id="32" index="1" rel="mod"/>
+                  <node begin="14" end="15" id="33" index="2" rel="det"/>
+                  <node begin="17" buiging="zonder" end="18" graad="basis" id="34" lemma="Chinees" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="Chinees" word="Chinees"/>
+                </node>
+                <node begin="13" cat="np" end="20" id="35" rel="cnj">
+                  <node begin="13" end="14" id="36" index="1" rel="mod"/>
+                  <node begin="14" end="15" id="37" index="2" rel="det"/>
+                  <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="38" lemma="Vietnamees" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Vietnamees" word="Vietnamees"/>
+                </node>
+                <node begin="20" conjtype="neven" end="21" id="39" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                <node begin="13" cat="np" end="22" id="40" rel="cnj">
+                  <node begin="13" end="14" id="41" index="1" rel="mod"/>
+                  <node begin="14" end="15" id="42" index="2" rel="det"/>
+                  <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="43" lemma="Arabisch" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Arabisch" word="Arabisch"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="23" conjtype="neven" end="24" id="44" lemma="alsmede" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="alsmede" word="alsmede"/>
+        <node begin="24" cat="pp" end="27" id="45" rel="cnj">
+          <node begin="24" end="25" id="46" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="25" cat="np" end="27" id="47" rel="obj1">
+            <node begin="25" end="26" id="48" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="26" end="27" genus="onz" getal="ev" graad="basis" id="49" lemma="Nederlands" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Nederlands" word="Nederlands"/>
+          </node>
+        </node>
+      </node>
+      <node begin="27" cat="mwu" end="29" id="50" rel="obj1">
+        <node begin="27" buiging="zonder" end="28" graad="basis" id="51" lemma="zalig" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="Zalig" word="Zalig"/>
+        <node begin="28" end="29" id="52" lemma="Pasen" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Pasen" spectype="deeleigen" word="Pasen"/>
+      </node>
+      <node begin="29" end="30" id="53" lemma="toe" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="toe" vztype="fin" word="toe"/>
+    </node>
+    <node begin="30" end="31" id="54" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Aan het einde riep de paus de menigte in veertien talen , waaronder ook het Russisch , Chinees , Vietnamees en Arabisch , alsmede in het Nederlands Zalig Pasen toe .</sentence>
+</alpino_ds>

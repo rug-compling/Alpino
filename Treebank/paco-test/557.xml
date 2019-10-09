@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="5" end="6" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="13" end="14" frame="punct(komma)" id="2" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="18" id="3" rel="--">
+      <node begin="1" end="2" frame="verb(unacc,sg3,passive)" id="4" infl="sg3" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt"/>
+      <node begin="0" cat="ppart" end="18" id="5" rel="vc">
+        <node begin="0" end="1" frame="er_vp_adverb" id="6" lcat="advp" pos="adv" rel="mod" root="er" sense="er" special="er" word="Er"/>
+        <node begin="2" cat="pp" end="13" id="7" rel="mod">
+          <node begin="2" end="3" frame="preposition(in,[])" id="8" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+          <node begin="3" cat="np" end="13" id="9" rel="obj1">
+            <node begin="3" end="4" frame="determiner(de)" id="10" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="4" end="5" frame="tmp_noun(de,count,sg)" gen="de" id="11" lcat="np" num="sg" pos="noun" rel="hd" root="voorbereiding_periode" sense="voorbereiding_periode" special="tmp" word="voorbereidingsperiode"/>
+            <node begin="6" cat="rel" end="13" id="12" rel="mod">
+              <node begin="6" case="no_obl" end="7" frame="rel_pronoun(de,no_obl)" gen="de" id="13" index="1" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+              <node begin="6" cat="ssub" end="13" id="14" rel="body">
+                <node begin="6" end="7" id="15" index="1" rel="su"/>
+                <node aform="base" begin="7" end="8" frame="adjective(no_e(adv))" id="16" infl="no_e" lcat="ap" pos="adj" rel="mod" root="uiterlijk" sense="uiterlijk" vform="adj" word="uiterlijk"/>
+                <node begin="8" cat="pp" end="12" id="17" rel="mod">
+                  <node begin="8" end="9" frame="preposition(op,[af,na])" id="18" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+                  <node begin="9" cat="mwu" end="12" id="19" mwu_root="31_december_2007" mwu_sense="31_december_2007" rel="obj1">
+                    <node begin="9" end="10" frame="tmp_np" id="20" lcat="np" pos="noun" rel="mwp" root="31" sense="31" special="tmp" word="31"/>
+                    <node begin="10" end="11" frame="tmp_np" id="21" lcat="np" pos="noun" rel="mwp" root="december" sense="december" special="tmp" word="december"/>
+                    <node begin="11" end="12" frame="tmp_np" id="22" lcat="np" pos="noun" rel="mwp" root="2007" sense="2007" special="tmp" word="2007"/>
+                  </node>
+                </node>
+                <node begin="12" end="13" frame="verb(zijn,sg3,ninv(intransitive,part_intransitive(af)))" id="23" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="loop_af" sc="part_intransitive(af)" sense="loop_af" tense="present" word="afloopt"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="14" end="15" frame="verb(hebben,psp,pc_pp(over))" id="24" infl="psp" lcat="ppart" pos="verb" rel="hd" root="onderhandel" sc="pc_pp(over)" sense="onderhandel-over" word="onderhandeld"/>
+        <node begin="15" cat="pp" end="18" id="25" rel="pc">
+          <node begin="15" end="16" frame="preposition(over,[heen])" id="26" lcat="pp" pos="prep" rel="hd" root="over" sense="over" word="over"/>
+          <node begin="16" cat="np" end="18" id="27" rel="obj1">
+            <node aform="base" begin="16" end="17" frame="adjective(e)" id="28" infl="e" lcat="ap" pos="adj" rel="mod" root="economisch" sense="economisch" vform="adj" word="economische"/>
+            <node begin="17" end="18" frame="noun(de,count,pl)" gen="de" id="29" lcat="np" num="pl" pos="noun" rel="hd" root="partnerschap_overeenkomst" sense="partnerschap_overeenkomst" word="partnerschapsovereenkomsten"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" frame="punct(punt)" id="30" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Er wordt in de voorbereidingsperiode , die uiterlijk op 31 december 2007 afloopt , onderhandeld over economische partnerschapsovereenkomsten .</sentence>
+  <comments>
+    <comment>Q#557|Er wordt in de voorbereidingsperiode , die uiterlijk op 31 december 2007 afloopt , onderhandeld over economische partnerschapsovereenkomsten .|1|1|-4.004872137644648</comment>
+  </comments>
+</alpino_ds>

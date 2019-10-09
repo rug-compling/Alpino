@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="1" end="2" id="2" infl="sg_hebt" lemma="kunnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kan" sc="aux(inf)" stype="declarative" tense="present" word="kunt" wvorm="pv"/>
+      <node begin="2" case="both" def="def" end="3" gen="de" getal="getal" id="3" index="1" lemma="u" naamval="nomin" num="sg" pdtype="pron" per="u" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" rnum="sg" root="u" status="vol" vwtype="pers" wh="nwh" word="u"/>
+      <node begin="0" cat="inf" end="8" id="4" rel="vc">
+        <node begin="0" buiging="zonder" end="1" id="5" infl="inf" lemma="reageren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="reageer" sc="intransitive" word="Reageren" wvorm="inf"/>
+        <node begin="2" end="3" id="6" index="1" rel="su"/>
+        <node begin="3" cat="pp" end="8" id="7" rel="mod">
+          <node begin="3" end="4" id="8" lemma="via" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="via" vztype="init" word="via"/>
+          <node begin="4" cat="mwu" end="8" his="normal" his_1="url" id="9" mwu_root="hugo @ ad. nl." mwu_sense="hugo @ ad. nl." rel="obj1">
+            <node begin="4" end="5" id="10" lemma="hugo" neclass="MISC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="hugo" spectype="deeleigen" word="hugo"/>
+            <node begin="5" end="6" id="11" lemma="@" neclass="MISC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="@" spectype="deeleigen" word="@"/>
+            <node begin="6" end="7" id="12" lemma="ad." neclass="MISC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="ad." spectype="deeleigen" word="ad."/>
+            <node begin="7" end="8" id="13" lemma="nl." neclass="MISC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="nl." spectype="deeleigen" word="nl."/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Reageren kunt u via hugo @ ad. nl.</sentence>
+</alpino_ds>

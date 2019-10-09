@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="7" id="2" rel="--">
+      <node begin="0" cat="du" end="3" id="3" rel="cnj">
+        <node begin="0" cat="np" end="2" id="4" rel="nucl">
+          <node begin="0" end="1" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="6" lemma="boef" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="boef" word="boef"/>
+        </node>
+        <node begin="2" end="3" id="7" lemma="trouwens" pos="tag" postag="BW()" pt="bw" rel="tag" root="trouwens" word="trouwens"/>
+      </node>
+      <node begin="4" conjtype="neven" end="5" id="8" lemma="want" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="want" word="want"/>
+      <node begin="5" cat="smain" end="7" id="9" rel="cnj">
+        <node begin="5" end="6" genus="masc" getal="ev" id="10" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+        <node begin="6" end="7" id="11" lemma="slapen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="slaap" word="sliep" wvorm="pv"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Een boef trouwens , want hij sliep</sentence>
+</alpino_ds>

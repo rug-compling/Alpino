@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="23" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="daarnaast" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarnaast" word="Daarnaast"/>
+      <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="2" end="3" getal="getal" id="5" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+      <node begin="3" end="4" getal="ev" graad="basis" id="6" lemma="sprake" naamval="dat" ntype="soort" pos="noun" postag="N(soort,ev,basis,dat)" pt="n" rel="su" root="sprake" word="sprake"/>
+      <node begin="4" cat="pp" end="10" id="7" rel="pc">
+        <node begin="4" end="5" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="5" cat="conj" end="10" id="9" rel="obj1">
+          <node begin="5" cat="np" end="7" id="10" rel="cnj">
+            <node begin="5" buiging="met-e" end="6" graad="basis" id="11" lemma="ongeoorloofd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ongeoorloofd" word="ongeoorloofde"/>
+            <node begin="6" end="7" getal="mv" graad="dim" id="12" lemma="cadeau" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" root="cadeau_DIM" word="cadeautjes"/>
+          </node>
+          <node begin="7" conjtype="neven" end="8" id="13" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="8" cat="np" end="10" id="14" rel="cnj">
+            <node begin="8" buiging="met-e" end="9" graad="basis" id="15" lemma="financeel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="financieel" word="financiële"/>
+            <node begin="9" end="10" getal="mv" graad="basis" id="16" lemma="vergoeding" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vergoeding" word="vergoedingen"/>
+          </node>
+        </node>
+      </node>
+      <node begin="11" cat="whrel" end="23" id="17" rel="mod">
+        <node begin="11" end="12" id="18" index="1" lemma="waarbij" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarbij" word="waarbij"/>
+        <node begin="11" cat="ssub" end="23" id="19" rel="body">
+          <node begin="11" end="12" id="20" index="1" rel="mod"/>
+          <node begin="12" cat="np" end="17" id="21" rel="su">
+            <node begin="12" end="13" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="helft" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="helft" word="helft"/>
+            <node begin="14" cat="pp" end="17" id="24" rel="mod">
+              <node begin="14" end="15" id="25" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="15" cat="np" end="17" id="26" rel="obj1">
+                <node begin="15" buiging="met-e" end="16" id="27" lemma="alle" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" vwtype="onbep" word="alle"/>
+                <node begin="16" end="17" getal="mv" graad="basis" id="28" lemma="cadeau" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="cadeau" word="cadeaus"/>
+              </node>
+            </node>
+          </node>
+          <node begin="17" end="18" id="29" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="19" end="20" id="30" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+          <node begin="18" cat="ap" end="23" id="31" rel="predc">
+            <node begin="18" buiging="zonder" end="19" graad="basis" id="32" lemma="relevant" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="relevant" word="relevant"/>
+            <node begin="20" cat="pp" end="23" id="33" rel="pc">
+              <node begin="20" end="21" id="34" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+              <node begin="21" cat="np" end="23" id="35" rel="obj1">
+                <node begin="21" end="22" id="36" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="37" lemma="beroepsuitoefening" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beroeps_uitoefening" word="beroepsuitoefening"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="38" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Daarnaast was er sprake van ongeoorloofde cadeautjes en financiële vergoedingen , waarbij de helft van alle cadeaus niet relevant was voor de beroepsuitoefening .</sentence>
+</alpino_ds>

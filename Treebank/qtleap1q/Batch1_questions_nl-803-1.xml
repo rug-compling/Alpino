@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="11" id="2" rel="--">
+      <node begin="6" end="7" id="3" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
+      <node begin="7" cat="np" end="9" id="4" index="1" rel="su">
+        <node begin="7" buiging="met-e" end="8" id="5" lemma="verschillen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="verschil" word="verschillende" wvorm="od"/>
+        <node begin="8" end="9" getal="mv" graad="basis" id="6" lemma="website" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="website" word="website"/>
+      </node>
+      <node begin="0" cat="ppart" end="11" id="7" rel="vc">
+        <node begin="0" cat="cp" end="5" id="8" rel="mod">
+          <node begin="0" conjtype="onder" end="1" id="9" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+          <node begin="1" cat="ssub" end="5" id="10" rel="body">
+            <node begin="1" end="2" getal="ev" id="11" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+            <node begin="2" cat="mwu" end="4" id="12" mwu_root="Google Chrome" mwu_sense="Google Chrome" rel="obj1">
+              <node begin="2" end="3" id="13" lemma="Google" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Google" spectype="deeleigen" word="Google"/>
+              <node begin="3" end="4" id="14" lemma="Chrome" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Chrome" spectype="deeleigen" word="Chrome"/>
+            </node>
+            <node begin="4" end="5" id="15" lemma="openen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="open" word="open" wvorm="pv"/>
+          </node>
+        </node>
+        <node begin="7" end="9" id="16" index="1" rel="obj1"/>
+        <node begin="9" buiging="zonder" end="10" graad="basis" id="17" lemma="gelijktijdig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="gelijktijdig" word="gelijktijdig"/>
+        <node begin="10" buiging="zonder" end="11" id="18" lemma="openen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="open" word="geopend" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="11" end="12" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als ik Google Chrome open , worden verschillende website gelijktijdig geopend .</sentence>
+</alpino_ds>

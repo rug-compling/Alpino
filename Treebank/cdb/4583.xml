@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="0" cat="smain" end="25" id="1" rel="--">
+      <node begin="13" end="14" id="2" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="14" cat="np" end="20" id="3" index="1" rel="su">
+        <node begin="14" end="15" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="5" lemma="aanleiding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aanleiding" word="aanleiding"/>
+        <node begin="16" cat="pp" end="20" id="6" rel="mod">
+          <node begin="16" end="17" id="7" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+          <node begin="17" cat="np" end="20" id="8" rel="obj1">
+            <node begin="17" end="18" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="18" buiging="zonder" end="19" getal-n="zonder-n" id="10" lemma="componeren" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="componeer" word="componeren" wvorm="inf"/>
+            <node begin="19" end="20" id="11" lemma="ervan" pos="pp" postag="BW()" pt="bw" rel="mod" root="ervan" word="ervan"/>
+          </node>
+        </node>
+      </node>
+      <node begin="0" cat="ppart" end="25" id="12" rel="vc">
+        <node begin="0" cat="cp" end="13" id="13" rel="mod">
+          <node begin="0" conjtype="onder" end="1" id="14" lemma="hoewel" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="hoewel" word="Hoewel"/>
+          <node begin="1" cat="ssub" end="13" id="15" rel="body">
+            <node begin="1" cat="np" end="5" id="16" rel="su">
+              <node begin="1" end="2" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="18" lemma="aard" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aard" word="aard"/>
+              <node begin="3" cat="np" end="5" id="19" rel="mod">
+                <node begin="3" end="4" id="20" lemma="de" lwtype="bep" naamval="gen" npagr="rest3" pos="det" postag="LID(bep,gen,rest3)" pt="lid" rel="det" root="der" word="der"/>
+                <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="21" lemma="muziek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="muziek" word="muziek"/>
+              </node>
+            </node>
+            <node begin="5" cat="pp" end="9" id="22" rel="mod">
+              <node begin="5" end="6" id="23" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="6" cat="np" end="9" id="24" rel="obj1">
+                <node begin="6" buiging="zonder" end="7" id="25" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+                <node begin="7" buiging="zonder" end="8" id="26" lemma="enkel" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="enkel" vwtype="onbep" word="enkel"/>
+                <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="27" lemma="opzicht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="opzicht" word="opzicht"/>
+              </node>
+            </node>
+            <node begin="9" cat="np" end="12" id="28" rel="obj1">
+              <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="29" lemma="verwantschap" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verwantschap" word="verwantschap"/>
+              <node begin="10" cat="pp" end="12" id="30" rel="mod">
+                <node begin="10" end="11" id="31" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="32" lemma="Mozart" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Mozart" word="Mozart"/>
+              </node>
+            </node>
+            <node begin="12" end="13" id="33" lemma="tonen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="toon" word="toont" wvorm="pv"/>
+          </node>
+        </node>
+        <node begin="14" end="20" id="34" index="1" rel="su"/>
+        <node begin="20" end="21" id="35" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+        <node begin="21" cat="pp" end="24" id="36" rel="mod">
+          <node begin="21" end="22" id="37" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+          <node begin="22" cat="np" end="24" id="38" rel="obj1">
+            <node begin="22" end="23" id="39" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="40" lemma="familierelatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="relatie" word="familierelatie"/>
+          </node>
+        </node>
+        <node begin="24" buiging="zonder" end="25" id="41" lemma="ontstaan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ontsta" word="ontstaan" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="25" end="26" id="42" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" word=";"/>
+  </node>
+  <sentence>Hoewel de aard der muziek in geen enkel opzicht verwantschap met Mozart toont is de aanleiding tot het componeren ervan ook uit de familierelatie ontstaan ;</sentence>
+</alpino_ds>

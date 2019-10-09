@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" getal="mv" id="2" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="Wij"/>
+      <node begin="1" end="2" id="3" lemma="aan_bevelen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="beveel_aan" word="bevelen" wvorm="pv"/>
+      <node begin="2" cat="mwu" end="5" id="4" rel="obj1">
+        <node begin="2" end="3" id="5" lemma="Microsoft" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Microsoft" spectype="deeleigen" word="Microsoft"/>
+        <node begin="3" end="4" id="6" lemma="Security" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Security" spectype="deeleigen" word="Security"/>
+        <node begin="4" end="5" id="7" lemma="Essentials" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Essentials" spectype="deeleigen" word="Essentials"/>
+      </node>
+      <node begin="5" end="6" id="8" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
+    </node>
+    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Wij bevelen Microsoft Security Essentials aan .</sentence>
+</alpino_ds>

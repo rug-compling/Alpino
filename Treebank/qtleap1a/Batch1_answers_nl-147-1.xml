@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="conj" end="11" id="1" rel="--">
+      <node begin="0" cat="sv1" end="3" id="2" rel="cnj">
+        <node begin="0" end="1" id="3" lemma="ontgrendelen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ontgrendel" word="Ontgrendel" wvorm="pv"/>
+        <node begin="1" cat="np" end="3" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="werk_balk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="werk_balk" word="werkbalk"/>
+        </node>
+      </node>
+      <node begin="3" conjtype="neven" end="4" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="4" cat="sv1" end="11" id="8" rel="cnj">
+        <node begin="4" end="5" id="9" lemma="slepen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="sleep" word="sleep" wvorm="pv"/>
+        <node begin="5" buiging="met-e" end="6" getal-n="zonder-n" id="10" lemma="deze" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(aanw,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="obj1" root="deze" vwtype="aanw" word="deze"/>
+        <node begin="6" cat="pp" end="11" id="11" rel="ld">
+          <node begin="6" end="7" id="12" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+          <node begin="7" cat="np" end="11" id="13" rel="obj1">
+            <node begin="7" end="8" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="8" cat="ppart" end="10" id="15" rel="mod">
+              <node begin="8" end="9" id="16" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="mod" root="door" vztype="init" word="door"/>
+              <node begin="9" end="10" getal="ev" id="17" lemma="gekozen" naamval="obl" pdtype="pron" persoon="2v" pos="adj" postag="VNW(pers,pron,obl,vol,2v,ev)" pt="vnw" rel="hd" root="gekozen" status="vol" vwtype="pers" word="gekozen"/>
+            </node>
+            <node begin="10" buiging="zonder" end="11" id="18" lemma="positie" pos="noun" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="hd" root="positie" word="positie" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="." naamval="stan" ntype="soort" pos="punct" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ontgrendel de werkbalk en sleep deze naar de door gekozen positie .</sentence>
+</alpino_ds>

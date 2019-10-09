@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="smain" end="16" id="1" rel="--">
+      <node begin="0" cat="np" end="7" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="vooral" pos="adv" postag="BW()" pt="bw" rel="mod" root="vooral" word="Vooral"/>
+        <node begin="1" end="2" id="4" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="2" buiging="zonder" end="3" getal-n="zonder-n" id="5" lemma="optreden" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="optreden" word="optreden" wvorm="inf"/>
+        <node begin="3" cat="pp" end="7" id="6" rel="mod">
+          <node begin="3" end="4" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="4" cat="mwu" end="7" id="8" rel="obj1">
+            <node begin="4" end="5" id="9" lemma="Dick" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Dick" spectype="deeleigen" word="Dick"/>
+            <node begin="5" end="6" id="10" lemma="van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+            <node begin="6" end="7" id="11" lemma="Dijk" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Dijk" spectype="deeleigen" word="Dijk"/>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="12" lemma="betekenen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="beteken" word="betekende" wvorm="pv"/>
+      <node begin="8" cat="pp" end="14" id="13" rel="mod">
+        <node begin="8" end="9" id="14" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+        <node begin="9" cat="np" end="14" id="15" rel="obj1">
+          <node begin="9" end="10" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="10" buiging="met-e" end="11" graad="basis" id="17" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="grote"/>
+          <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="18" lemma="schare" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schare" word="schare"/>
+          <node begin="12" cat="np" end="14" id="19" rel="mod">
+            <node begin="12" buiging="zonder" end="13" id="20" lemma="meekomen" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="mod" root="meegekomen" word="meegekomen" wvorm="vd"/>
+            <node begin="13" end="14" getal="mv" graad="basis" id="21" lemma="Amsterdammer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Amsterdammer" word="Amsterdammers"/>
+          </node>
+        </node>
+      </node>
+      <node begin="14" cat="np" end="16" id="22" rel="obj1">
+        <node begin="14" end="15" id="23" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="24" lemma="teleurstelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="teleurstelling" word="teleurstelling"/>
+      </node>
+    </node>
+    <node begin="16" end="17" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Vooral het optreden van Dick van Dijk betekende voor de grote schare meegekomen Amsterdammers een teleurstelling .</sentence>
+</alpino_ds>

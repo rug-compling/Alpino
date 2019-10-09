@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" frame="v_noun(intransitive)" id="2" index="1" lcat="np" pos="verb" rel="su" root="stort" sc="intransitive" sense="stort" special="v_noun" word="Storten"/>
+      <node begin="1" end="2" frame="verb('hebben/zijn',sg,modifier(aux(inf)))" id="3" infl="sg" lcat="smain" pos="verb" rel="hd" root="moet" sc="modifier(aux(inf))" sense="moet" tense="present" word="moet"/>
+      <node begin="0" cat="inf" end="6" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="3" end="4" frame="verb(unacc,inf,copula)" id="6" infl="inf" lcat="inf" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" word="zijn"/>
+        <node begin="2" cat="ap" end="6" id="7" rel="predc">
+          <node aform="compar" begin="2" end="3" frame="adjective(er(adv))" id="8" infl="no_e" lcat="ap" pos="adj" rel="hd" root="duur" sense="duur" vform="adj" word="duurder"/>
+          <node begin="4" cat="cp" end="6" id="9" rel="obcomp">
+            <node begin="4" end="5" frame="comparative(dan)" id="10" lcat="comparative" pos="comparative" rel="cmp" root="dan" sense="dan" word="dan"/>
+            <node begin="5" end="6" frame="verb(unacc,inf,intransitive)" id="11" infl="inf" lcat="inf" pos="verb" rel="body" root="verbrand" sc="intransitive" sense="verbrand" word="verbranden"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Storten moet duurder zijn dan verbranden</sentence>
+  <comments>
+    <comment>Q#155|Storten moet duurder zijn dan verbranden|1|1|0.4121599372403335</comment>
+  </comments>
+</alpino_ds>

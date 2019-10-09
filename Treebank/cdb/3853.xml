@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="27" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="6" end="7" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="26" id="3" rel="--">
+      <node begin="4" cat="sv1" end="6" id="4" rel="tag">
+        <node begin="4" end="5" id="5" lemma="dunken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="dunk" word="dunkt" wvorm="pv"/>
+        <node begin="5" end="6" getal="mv" id="6" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj2" root="ons" status="vol" vwtype="pr" word="ons"/>
+      </node>
+      <node begin="0" cat="smain" end="26" id="7" rel="nucl">
+        <node begin="0" cat="np" end="2" id="8" index="1" rel="su">
+          <node begin="0" buiging="met-e" end="1" id="9" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="Deze"/>
+          <node begin="1" end="2" getal="mv" graad="basis" id="10" lemma="opmerking" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="opmerking" word="opmerkingen"/>
+        </node>
+        <node begin="2" end="3" id="11" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+        <node begin="0" cat="ti" end="26" id="12" rel="vc">
+          <node begin="9" end="10" id="13" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="0" cat="inf" end="26" id="14" rel="body">
+            <node begin="0" end="2" id="15" index="1" rel="obj1"/>
+            <node begin="7" end="8" id="16" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+            <node begin="8" buiging="zonder" end="9" graad="basis" id="17" lemma="los" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="los" word="los"/>
+            <node begin="10" buiging="zonder" end="11" id="18" lemma="maken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="maak" word="maken" wvorm="inf"/>
+            <node begin="11" cat="pp" end="26" id="19" rel="pc">
+              <node begin="11" end="12" id="20" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="12" cat="whrel" end="26" id="21" rel="obj1">
+                <node begin="12" end="13" getal="ev" id="22" index="2" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="wat"/>
+                <node begin="12" cat="ssub" end="26" id="23" rel="body">
+                  <node begin="12" end="13" id="24" index="2" rel="obj1"/>
+                  <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="25" lemma="zondagmiddag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="zondagmiddag" word="zondagmiddag"/>
+                  <node begin="14" cat="np" end="22" id="26" rel="su">
+                    <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="27" lemma="mevrouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="mevrouw" word="mevrouw"/>
+                    <node begin="15" cat="mwu" end="20" id="28" rel="app">
+                      <node begin="15" end="16" id="29" lemma="J." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="J." spectype="deeleigen" word="J."/>
+                      <node begin="16" end="17" id="30" lemma="M." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="M." spectype="deeleigen" word="M."/>
+                      <node begin="17" end="18" id="31" lemma="C." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="C." spectype="deeleigen" word="C."/>
+                      <node begin="18" end="19" id="32" lemma="Buis-de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Buis-de" spectype="deeleigen" word="Buis-de"/>
+                      <node begin="19" end="20" id="33" lemma="Moei" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Moei" spectype="deeleigen" word="Moei"/>
+                    </node>
+                    <node begin="20" cat="pp" end="22" id="34" rel="mod">
+                      <node begin="20" end="21" id="35" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+                      <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="36" lemma="Slikkerveer" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Slikkerveer" word="Slikkerveer"/>
+                    </node>
+                  </node>
+                  <node begin="22" end="23" id="37" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
+                  <node begin="23" cat="pp" end="26" id="38" rel="mod">
+                    <node begin="23" end="24" id="39" lemma="tijdens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tijdens" vztype="init" word="tijdens"/>
+                    <node begin="24" cat="np" end="26" id="40" rel="obj1">
+                      <node begin="24" end="25" id="41" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                      <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="42" lemma="discussie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="discussie" word="discussie"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="26" end="27" id="43" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>Deze opmerkingen zijn , dunkt ons , niet los te maken van wat zondagmiddag mevrouw J. M. C. Buis-de Moei uit Slikkerveer zei tijdens een discussie :</sentence>
+</alpino_ds>

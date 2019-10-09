@@ -1,0 +1,73 @@
+Where to get it?
+----------------
+
+The package is available from anonymous ftp in directory:
+
+http://www.let.rug.nl/~vannoord/Hdrug/
+
+What other software do you need?
+--------------------------------
+
+In order to use the full functionality of Hdrug you need the 
+following programs: (apart from the requirement that you have some
+UNIX machine running the X window system).
+
+
+Package                                     Free?   Really neccessary Included
+SICStus Prolog 3.12.3                       -              + (1)        -
+Tcl/Tk 8.4                                  +              +            -
+BLT library 2.4 (extensions of Tcl/Tk)      +              - (2)        -
+Latex and Xdvi                              +              - (3)        -
+Pstricks                                    +              - (4)        -
+Clig 1.4                                    +              -            +
+
+ad (1) *not* required if you install a binary distribution
+
+ad (2) Only for Tk output of viewing the statistics of a comparison of
+different parsers. The availability of BLT must be stated in Makefile.defs
+
+ad (3) Obviously, only for LaTeX/Xdvi output.
+
+ad (4) This is a collection of LaTeX style files that I use to produce
+trees (including trees in which nodes are complex feature structure
+matrices). This uses Postscript so you also need dvips and ghostview
+or similar.
+
+The program has been tested for HP-UX 9 and 10, Linux (both on Intel
+and on Alpha), Sparc-solaris, and Win32.  As long as you manage to get 
+library(tcltk) to work, you should be all set.
+
+installation (from sources):
+----------------------------
+
+step 1 
+
+make sure that Sicstus, including Tcl/Tk and the library(tcltk) are
+properly installed.
+
+step 2 
+
+- Copy Makefile.defs.in to Makefile.defs
+- adapt some definitions in Makefile.defs for your platform
+- run:
+
+      make 
+
+step 3
+
+Check that it works. You can test any of the example applications,
+by cd-ing to one of the sub-directories of ./Applications, and then say:
+
+     ../../hdrug -l start
+
+this should start up the GUI for that application. 
+
+step 4
+
+If it works, you can install hdrug by:
+
+     make install
+
+This will copy the hdrug script to BINDIR, as well as some stuff to
+LIBDIR
+

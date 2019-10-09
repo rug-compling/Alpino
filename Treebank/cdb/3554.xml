@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="11" end="12" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="14" id="3" rel="--">
+      <node begin="0" cat="ap" end="4" id="4" rel="mod">
+        <node begin="0" cat="np" end="2" id="5" rel="me">
+          <node begin="0" end="1" id="6" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="Twee"/>
+          <node begin="1" end="2" getal="mv" graad="basis" id="7" lemma="deur" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="deur" word="deuren"/>
+        </node>
+        <node begin="2" buiging="zonder" end="3" graad="comp" id="8" lemma="verder" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="verder" word="verder"/>
+        <node begin="3" end="4" id="9" lemma="echter" pos="adv" postag="BW()" pt="bw" rel="mod" root="echter" word="echter"/>
+      </node>
+      <node begin="4" end="5" id="10" lemma="luchten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="lucht" word="luchtte" wvorm="pv"/>
+      <node begin="5" cat="np" end="11" id="11" rel="su">
+        <node begin="5" cat="mwu" end="8" id="12" rel="hd">
+          <node begin="5" end="6" id="13" lemma="Theo" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Theo" spectype="deeleigen" word="Theo"/>
+          <node begin="6" end="7" id="14" lemma="van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+          <node begin="7" end="8" id="15" lemma="London" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="London" spectype="deeleigen" word="London"/>
+        </node>
+        <node begin="9" cat="np" end="11" id="16" rel="app">
+          <node begin="9" end="10" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="18" lemma="graafschapamateur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="amateur" word="Graafschapamateur"/>
+        </node>
+      </node>
+      <node begin="12" cat="np" end="14" id="19" rel="obj1">
+        <node begin="12" buiging="zonder" end="13" getal="ev" id="20" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+        <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="21" lemma="gemoed" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gemoed" word="gemoed"/>
+      </node>
+    </node>
+    <node begin="14" end="15" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Twee deuren verder echter luchtte Theo van London , de Graafschapamateur , zijn gemoed .</sentence>
+  <comments>
+    <comment>Echter: geannoteerd naar voobeeld van cdb/906</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="13" end="14" id="1" pos="punct" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="20" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" rel="su">
+        <node begin="0" end="1" id="4" infl="het" pos="det" rel="det" root="het" wh="nwh" word="Het"/>
+        <node begin="1" end="2" id="5" num="both" pos="name" rel="hd" root="ISS" word="ISS"/>
+      </node>
+      <node begin="2" end="3" id="6" infl="sg3" pos="verb" rel="hd" root="vlieg" sc="ld_pp" tense="present" word="vliegt"/>
+      <node begin="3" cat="pp" end="7" id="7" rel="mod">
+        <node begin="3" end="4" id="8" pos="prep" rel="hd" root="op" word="op"/>
+        <node begin="4" cat="np" end="7" id="9" rel="obj1">
+          <node begin="4" end="5" id="10" infl="pl_num" pos="num" rel="det" root="400" special="hoofd" word="400"/>
+          <node begin="5" end="6" gen="de" id="11" num="meas" pos="noun" rel="hd" root="kilo_meter" sc="measure" special="meas_mod" word="km"/>
+          <node begin="6" end="7" gen="de" id="12" num="sg" pos="noun" rel="mod" root="hoogte" word="hoogte"/>
+        </node>
+      </node>
+      <node begin="7" cat="pp" end="13" id="13" rel="ld">
+        <node begin="7" end="8" id="14" pos="prep" rel="hd" root="in" word="in"/>
+        <node begin="8" cat="np" end="13" id="15" rel="obj1">
+          <node begin="8" end="9" id="16" infl="een" pos="det" rel="det" root="een" word="een"/>
+          <node begin="9" end="10" gen="de" id="17" num="sg" pos="noun" rel="hd" root="baan" word="baan"/>
+          <node begin="10" cat="pp" end="13" id="18" rel="mod">
+            <node begin="10" end="11" id="19" pos="prep" rel="hd" root="om" word="om"/>
+            <node begin="11" cat="np" end="13" id="20" rel="obj1">
+              <node begin="11" end="12" id="21" infl="de" pos="det" rel="det" root="de" word="de"/>
+              <node begin="12" end="13" gen="de" id="22" num="sg" pos="noun" rel="hd" root="aarde" word="aarde"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="14" cat="pp" end="20" id="23" rel="mod">
+        <node begin="14" end="15" id="24" pos="prep" rel="hd" root="tegen" word="tegen"/>
+        <node begin="15" cat="np" end="20" id="25" rel="obj1">
+          <node begin="15" end="16" id="26" infl="een" pos="det" rel="det" root="een" word="een"/>
+          <node begin="16" end="17" gen="de" id="27" num="sg" pos="noun" rel="hd" root="omloop_snelheid" word="omloopsnelheid"/>
+          <node begin="17" cat="pp" end="20" id="28" rel="mod">
+            <node begin="17" end="18" id="29" pos="prep" rel="hd" root="van" word="van"/>
+            <node begin="18" cat="np" end="20" id="30" rel="obj1">
+              <node begin="18" end="19" id="31" infl="pl_num" pos="num" rel="det" root="90" special="hoofd" word="90"/>
+              <node begin="19" end="20" gen="de" id="32" num="pl" pos="noun" rel="hd" root="minuut" special="tmp" word="minuten"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="33" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Het ISS vliegt op 400 km hoogte in een baan om de aarde , tegen een omloopsnelheid van 90 minuten .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

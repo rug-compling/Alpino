@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="12" end="13" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="16" end="17" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="du" end="24" id="4" rel="--">
+      <node begin="0" cat="smain" end="11" id="5" rel="dp">
+        <node begin="0" cat="np" end="4" id="6" rel="su">
+          <node begin="0" end="1" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+          <node begin="1" end="2" id="8" lemma="front" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="hd" root="front" spectype="vreemd" word="front"/>
+          <node begin="2" cat="np" end="4" id="9" rel="mod">
+            <node begin="2" end="3" id="10" lemma="de" lwtype="bep" naamval="gen" npagr="rest3" pos="det" postag="LID(bep,gen,rest3)" pt="lid" rel="det" root="der" word="der"/>
+            <node begin="3" end="4" getal="mv" graad="basis" id="11" lemma="activist" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="activist" word="activisten"/>
+          </node>
+        </node>
+        <node begin="4" end="5" id="12" lemma="vertonen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="vertoon" word="vertoont" wvorm="pv"/>
+        <node begin="5" end="6" id="13" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+        <node begin="6" end="7" id="14" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+        <node begin="7" cat="np" end="11" id="15" rel="obj1">
+          <node begin="7" end="8" id="16" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="17" lemma="beeld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="beeld" word="beeld"/>
+          <node begin="9" cat="pp" end="11" id="18" rel="mod">
+            <node begin="9" end="10" id="19" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="20" lemma="lusteloosheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="lusteloosheid" word="lusteloosheid"/>
+          </node>
+        </node>
+      </node>
+      <node begin="13" cat="conj" end="24" id="21" rel="dp">
+        <node begin="18" conjtype="neven" end="19" id="22" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="13" cat="smain" end="24" id="23" rel="cnj">
+          <node begin="17" end="18" id="24" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          <node begin="21" cat="np" end="23" id="25" index="1" rel="su">
+            <node begin="21" buiging="zonder" end="22" graad="basis" id="26" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="det" root="veel" vwtype="onbep" word="veel"/>
+            <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="27" lemma="werk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="werk" word="werk"/>
+          </node>
+          <node begin="13" cat="ppart" end="24" id="28" index="2" rel="vc">
+            <node begin="13" cat="pp" end="16" id="29" rel="mod">
+              <node begin="13" end="14" id="30" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+              <node begin="14" cat="np" end="16" id="31" rel="obj1">
+                <node begin="14" end="15" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="33" lemma="basis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="basis" word="basis"/>
+              </node>
+            </node>
+            <node begin="20" end="21" id="34" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
+            <node begin="21" end="23" id="35" index="1" rel="obj1"/>
+            <node begin="23" buiging="zonder" end="24" id="36" lemma="verzetten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verzet" word="verzet" wvorm="vd"/>
+          </node>
+        </node>
+        <node begin="13" cat="smain" end="24" id="37" rel="cnj">
+          <node begin="19" end="20" id="38" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+          <node begin="21" end="23" id="39" index="1" rel="su"/>
+          <node begin="13" end="24" id="40" index="2" rel="vc"/>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="41" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het front der activisten vertoont dan wel een beeld van lusteloosheid , &quot; aan de basis &quot; is en wordt toch veel werk verzet .</sentence>
+</alpino_ds>

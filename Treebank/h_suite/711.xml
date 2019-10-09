@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="laten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="laat" word="laat" wvorm="pv"/>
+      <node begin="3" cat="np" end="5" id="4" index="1" rel="obj1">
+        <node begin="3" buiging="zonder" end="4" id="5" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="6" lemma="misverstand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="misverstand" word="misverstand"/>
+      </node>
+      <node begin="2" cat="inf" end="6" id="7" rel="vc">
+        <node begin="2" end="3" id="8" lemma="hierover" pos="pp" postag="BW()" pt="bw" rel="pc" root="hierover" word="hierover"/>
+        <node begin="3" end="5" id="9" index="1" rel="su"/>
+        <node begin="5" buiging="zonder" end="6" id="10" lemma="bestaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="besta" word="bestaan" wvorm="inf"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Ik laat hierover geen misverstand bestaan</sentence>
+</alpino_ds>

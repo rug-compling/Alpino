@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="conj" end="7" id="1" rel="--">
+      <node begin="0" cat="smain" end="5" id="2" rel="cnj">
+        <node begin="0" cat="np" end="2" id="3" index="1" rel="su">
+          <node begin="0" end="1" frame="determiner(de)" id="4" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="De"/>
+          <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="5" lcat="np" lemma="melding" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="melding" sense="melding" word="melding"/>
+        </node>
+        <node begin="2" end="3" frame="verb(unacc,sg3,passive)" id="6" index="2" infl="sg3" lcat="smain" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt" wvorm="pv"/>
+        <node begin="0" cat="ppart" end="5" id="7" rel="vc">
+          <node begin="0" end="2" id="8" index="1" rel="obj1"/>
+          <node aform="base" begin="3" end="4" frame="adjective(pred(adv))" id="9" infl="pred" lcat="ap" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" sense="wel" vform="adj" word="wel"/>
+          <node begin="4" buiging="zonder" end="5" frame="verb(hebben,psp,ninv(transitive,part_transitive(goed)))" id="10" infl="psp" lcat="ppart" lemma="goedkeuren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="keur_goed" sc="part_transitive(goed)" sense="keur_goed" word="goedgekeurd" wvorm="vd"/>
+        </node>
+      </node>
+      <node begin="5" conjtype="neven" end="6" frame="conj(en)" id="11" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="0" cat="smain" end="7" id="12" rel="cnj">
+        <node begin="0" end="2" id="13" index="1" rel="su"/>
+        <node begin="2" end="3" id="14" index="2" rel="hd"/>
+        <node begin="0" cat="ppart" end="7" id="15" rel="vc">
+          <node begin="0" end="2" id="16" index="1" rel="obj1"/>
+          <node begin="6" buiging="zonder" end="7" frame="verb(hebben,psp,transitive)" id="17" infl="psp" lcat="ppart" lemma="registreren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="registreer" sc="transitive" sense="registreer" word="geregistreerd" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" frame="punct(punt)" id="18" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De melding wordt wel goedgekeurd en geregistreerd .</sentence>
+  <comments>
+    <comment>Q#WR-P-P-E-0000000003.p.1284.s.2|De melding wordt wel goedgekeurd en geregistreerd .|1|1|-0.30805063966543283</comment>
+  </comments>
+</alpino_ds>

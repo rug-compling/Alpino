@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="27" id="2" rel="--">
+      <node begin="0" cat="mwu" end="2" id="3" rel="su">
+        <node begin="0" end="1" id="4" lemma="Jan" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jan" spectype="deeleigen" word="Jan"/>
+        <node begin="1" end="2" id="5" lemma="Janssen" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Janssen" spectype="deeleigen" word="Janssen"/>
+      </node>
+      <node begin="2" end="3" id="6" lemma="herhalen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="herhaal" word="herhaalde" wvorm="pv"/>
+      <node begin="3" end="4" genus="onz" getal="ev" id="7" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="4" cat="np" end="6" id="8" rel="mod">
+        <node begin="4" buiging="met-e" end="5" id="9" lemma="enkele" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enkel" vwtype="onbep" word="enkele"/>
+        <node begin="5" end="6" getal="mv" graad="basis" id="10" lemma="maal" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="maal" word="malen"/>
+      </node>
+      <node begin="7" cat="cp" end="27" id="11" rel="mod">
+        <node begin="7" conjtype="onder" end="8" id="12" lemma="toen" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="toen" word="toen"/>
+        <node begin="8" cat="ssub" end="27" id="13" rel="body">
+          <node begin="8" end="9" genus="masc" getal="ev" id="14" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+          <node begin="9" end="10" getal="getal" id="15" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+          <node begin="10" cat="conj" end="13" id="16" rel="predm">
+            <node begin="10" buiging="zonder" end="11" id="17" lemma="vermoeien" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="cnj" root="vermoeid" word="vermoeid" wvorm="vd"/>
+            <node begin="11" conjtype="neven" end="12" id="18" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="12" buiging="zonder" end="13" graad="basis" id="19" lemma="bezweet" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="bezweet" word="bezweet"/>
+          </node>
+          <node begin="13" cat="pp" end="18" id="20" rel="mod">
+            <node begin="13" end="14" id="21" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
+            <node begin="14" cat="np" end="18" id="22" rel="obj1">
+              <node begin="14" end="15" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="24" lemma="finish" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="finish" word="finish"/>
+              <node begin="16" cat="pp" end="18" id="25" rel="mod">
+                <node begin="16" end="17" id="26" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="17" end="18" genus="genus" getal="ev" graad="basis" id="27" lemma="Thonon-les-Bains" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Thonon-les-Bains" word="Thonon-les-Bains"/>
+              </node>
+            </node>
+          </node>
+          <node begin="18" cat="pp" end="26" id="28" rel="ld">
+            <node begin="18" end="19" id="29" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="19" cat="np" end="26" id="30" rel="obj1">
+              <node begin="19" end="20" id="31" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="32" lemma="gevecht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gevecht" word="gevecht"/>
+              <node begin="21" cat="pp" end="26" id="33" rel="mod">
+                <node begin="21" end="22" id="34" lemma="om" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="om" vztype="init" word="om"/>
+                <node begin="22" cat="np" end="26" id="35" rel="obj1">
+                  <node begin="22" end="23" id="36" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="23" buiging="met-e" end="24" graad="basis" id="37" lemma="koel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="koel" word="koele"/>
+                  <node begin="24" end="25" getal="mv" graad="dim" id="38" lemma="fles" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" root="flesje" word="flesjes"/>
+                  <node begin="25" end="26" genus="onz" getal="ev" graad="basis" id="39" lemma="mineraalwater" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mod" root="mineraalwater" word="mineraalwater"/>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="26" end="27" id="40" lemma="storten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="stort" word="stortte" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="27" end="28" id="41" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Jan Janssen herhaalde het enkele malen , toen hij zich vermoeid en bezweet na de finish in Thonon-les-Bains in het gevecht om de koele flesjes mineraalwater stortte .</sentence>
+</alpino_ds>

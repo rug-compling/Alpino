@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" index="1" lemma="Ida" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Ida" word="Ida"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="7" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="4" buiging="zonder" end="5" id="6" lemma="lezen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="lees" word="gelezen" wvorm="vd"/>
+        <node begin="2" cat="np" end="7" id="7" rel="obj1">
+          <node begin="3" end="4" getal="mv" graad="basis" id="8" lemma="boek" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="boek" word="boeken"/>
+          <node begin="2" cat="detp" end="7" id="9" rel="det">
+            <node begin="2" end="3" id="10" lemma="evenveel" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="evenveel" word="evenveel"/>
+            <node begin="5" cat="cp" end="7" id="11" rel="obcomp">
+              <node begin="5" conjtype="onder" end="6" id="12" lemma="als" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="Rik" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="body" root="Rik" word="Rik"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Ida heeft evenveel boeken gelezen als Rik</sentence>
+</alpino_ds>

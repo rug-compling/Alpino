@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="16" end="17" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="23" id="2" rel="--">
+      <node begin="0" cat="pp" end="7" id="3" rel="mod">
+        <node begin="0" end="1" id="4" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="Door"/>
+        <node begin="1" cat="np" end="7" id="5" rel="obj1">
+          <node begin="1" end="2" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" buiging="met-e" end="3" graad="basis" id="7" lemma="slecht" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="slecht" word="slechte"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="toestand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="toestand" word="toestand"/>
+          <node begin="4" cat="pp" end="7" id="9" rel="mod">
+            <node begin="4" end="5" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="5" cat="np" end="7" id="11" rel="obj1">
+              <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="6" end="7" getal="mv" graad="basis" id="13" lemma="weg" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="weg" word="wegen"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="14" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="8" cat="np" end="12" id="15" rel="su">
+        <node begin="8" end="9" id="16" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="17" lemma="aanbod" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aanbod" word="aanbod"/>
+        <node begin="10" cat="pp" end="12" id="18" rel="mod">
+          <node begin="10" end="11" id="19" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="11" end="12" getal="mv" graad="basis" id="20" lemma="buspassagier" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="passagier" word="buspassagiers"/>
+        </node>
+      </node>
+      <node begin="12" cat="ap" end="16" id="21" rel="predc">
+        <node begin="12" buiging="zonder" end="13" graad="basis" id="22" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="mod" root="veel" vwtype="onbep" word="veel"/>
+        <node begin="13" buiging="zonder" end="14" graad="comp" id="23" lemma="groot" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="groter" word="groter"/>
+        <node begin="14" cat="cp" end="16" id="24" rel="obcomp">
+          <node begin="14" conjtype="onder" end="15" id="25" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+          <node begin="15" buiging="zonder" end="16" graad="basis" id="26" lemma="normaal" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="body" root="normaal" word="normaal"/>
+        </node>
+      </node>
+      <node begin="17" cat="whrel" end="23" id="27" rel="mod">
+        <node begin="17" end="18" getal="ev" id="28" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="wat"/>
+        <node begin="17" cat="ssub" end="23" id="29" rel="body">
+          <node begin="17" end="18" id="30" index="1" rel="su"/>
+          <node begin="18" end="19" id="31" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
+          <node begin="19" cat="np" end="22" id="32" rel="obj1">
+            <node begin="19" end="20" id="33" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="20" buiging="met-e" end="21" id="34" lemma="extra-vertragen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="vertragend" word="extra-vertragende" wvorm="od"/>
+            <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="35" lemma="factor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="factor" word="factor"/>
+          </node>
+          <node begin="22" end="23" id="36" lemma="opleveren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="lever" word="opleverde" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Door de slechte toestand van de wegen was het aanbod van buspassagiers veel groter dan normaal , wat weer een extra-vertragende factor opleverde .</sentence>
+</alpino_ds>

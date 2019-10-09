@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="0" cat="smain" end="7" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" index="1" rel="su">
+        <node begin="0" buiging="met-e" end="1" id="4" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="Deze"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="activiteit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="activiteit" word="activiteit"/>
+      </node>
+      <node begin="2" end="3" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="7" id="7" rel="vc">
+        <node begin="0" end="2" id="8" index="1" rel="obj1"/>
+        <node begin="3" buiging="zonder" end="4" id="9" lemma="onderbrengen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="breng_onder" word="ondergebracht" wvorm="vd"/>
+        <node begin="4" cat="pp" end="7" id="10" rel="ld">
+          <node begin="4" end="5" id="11" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+          <node begin="6" end="7" getal="mv" graad="basis" id="12" lemma="screening" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="Screeningen" word="Screeningen"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Deze activiteit is ondergebracht bij &apos; Screeningen &apos; .</sentence>
+</alpino_ds>

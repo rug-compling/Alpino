@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="maken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="maak" word="maakt" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="4" rel="obj2">
+        <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="6" lemma="deelnemer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="deelnemer" word="deelnemers"/>
+      </node>
+      <node begin="4" end="5" genus="onz" getal="ev" id="7" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="pobj1" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="5" buiging="zonder" end="6" graad="basis" id="8" lemma="moeilijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="moeilijk" word="moeilijk"/>
+      <node begin="6" cat="ti" end="9" id="9" rel="vc">
+        <node begin="7" end="8" id="10" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="6" cat="inf" end="9" id="11" rel="body">
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="oneerlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="oneerlijk" word="oneerlijk"/>
+          <node begin="8" buiging="zonder" end="9" id="13" lemma="spelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="speel" word="spelen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Hij maakt de deelnemers het moeilijk oneerlijk te spelen</sentence>
+</alpino_ds>

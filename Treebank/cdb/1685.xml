@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="29" id="0" rel="top">
+    <node begin="16" end="17" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="21" end="22" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="28" id="3" rel="--">
+      <node begin="1" end="2" id="4" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="28" id="5" rel="vc">
+        <node begin="0" buiging="zonder" end="1" id="6" lemma="vraag" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gevraagd" word="Gevraagd" wvorm="vd"/>
+        <node begin="2" cat="cp" end="28" id="7" rel="vc">
+          <node begin="2" conjtype="onder" end="3" id="8" lemma="of" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="of" word="of"/>
+          <node begin="3" cat="ssub" end="28" id="9" rel="body">
+            <node begin="3" cat="np" end="5" id="10" rel="su">
+              <node begin="3" end="4" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="12" lemma="minister" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="minister" word="minister"/>
+            </node>
+            <node begin="7" end="8" id="13" lemma="delen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="deel" word="deelt" wvorm="pv"/>
+            <node begin="5" cat="np" end="28" id="14" rel="obj1">
+              <node begin="5" end="6" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="16" lemma="mening" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="mening" word="mening"/>
+              <node begin="8" cat="cp" end="28" id="17" rel="vc">
+                <node begin="8" conjtype="onder" end="9" id="18" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+                <node begin="9" cat="ssub" end="28" id="19" rel="body">
+                  <node begin="9" cat="np" end="11" id="20" rel="su">
+                    <node begin="9" buiging="met-e" end="10" id="21" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+                    <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="22" lemma="commissie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="commissie" word="commissie"/>
+                  </node>
+                  <node begin="11" cat="np" end="14" id="23" rel="obj1">
+                    <node begin="11" cat="ap" end="13" id="24" rel="mod">
+                      <node begin="11" end="12" id="25" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="mod" root="zeer" word="zeer"/>
+                      <node begin="12" buiging="zonder" end="13" graad="basis" id="26" lemma="goed" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="hd" root="goed" word="goed"/>
+                    </node>
+                    <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="27" lemma="werk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="werk" word="werk"/>
+                  </node>
+                  <node begin="14" end="15" id="28" lemma="doen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="doe" word="doet" wvorm="pv"/>
+                  <node begin="15" cat="cp" end="28" id="29" rel="mod">
+                    <node begin="15" end="16" id="30" lemma="door" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="door" vztype="init" word="door"/>
+                    <node begin="17" cat="ti" end="28" id="31" rel="body">
+                      <node begin="26" end="27" id="32" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+                      <node begin="17" cat="inf" end="28" id="33" rel="body">
+                        <node begin="17" cat="advp" end="21" id="34" rel="mod">
+                          <node begin="17" end="18" getal="getal" id="35" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="hd" root="waar" status="vol" vwtype="vb" word="waar"/>
+                          <node begin="18" end="19" id="36" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+                          <node begin="19" cat="pp" end="21" id="37" rel="mod">
+                            <node begin="19" end="20" id="38" lemma="te" pos="prep" postag="VZ(versm)" pt="vz" rel="hd" root="ter" vztype="versm" word="ter"/>
+                            <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="39" lemma="wereld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="wereld" word="wereld"/>
+                          </node>
+                        </node>
+                        <node begin="22" cat="np" end="26" id="40" rel="obj1">
+                          <node begin="22" end="23" id="41" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                          <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="42" lemma="schending" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schending" word="schending"/>
+                          <node begin="24" cat="pp" end="26" id="43" rel="mod">
+                            <node begin="24" end="25" id="44" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                            <node begin="25" end="26" getal="mv" graad="basis" id="45" lemma="mensenrechten" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="rechten" word="mensenrechten"/>
+                          </node>
+                        </node>
+                        <node begin="27" buiging="zonder" end="28" id="46" lemma="signaleren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="signaleer" word="signaleren" wvorm="inf"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="28" end="29" id="47" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Gevraagd wordt of de minister de mening deelt dat deze commissie zeer goed werk doet door , waar ook ter wereld , de schending van mensenrechten te signaleren .</sentence>
+</alpino_ds>

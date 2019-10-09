@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="whq" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welke" vwtype="vb" word="Welke"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="oliemaatschappij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oliemaatschappij" word="oliemaatschappij"/>
+      </node>
+      <node begin="0" cat="sv1" end="8" id="5" rel="body">
+        <node begin="0" end="2" id="6" index="1" rel="su"/>
+        <node begin="2" end="3" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="3" cat="np" end="8" id="8" rel="predc">
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="eigenaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="eigenaar" word="eigenaar"/>
+          <node begin="4" cat="pp" end="8" id="10" rel="mod">
+            <node begin="4" end="5" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="5" cat="np" end="8" id="12" rel="obj1">
+              <node begin="5" end="6" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="6" cat="mwu" end="8" id="14" rel="hd">
+                <node begin="6" end="7" id="15" lemma="Brent" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Brent" spectype="deeleigen" word="Brent"/>
+                <node begin="7" end="8" id="16" lemma="Spar" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Spar" spectype="deeleigen" word="Spar"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="17" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke oliemaatschappij is eigenaar van de Brent Spar ?</sentence>
+</alpino_ds>

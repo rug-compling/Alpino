@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="smain" end="3" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="zonder" end="1" getal="getal" id="3" lemma="uw" naamval="stan" npagr="agr" pdtype="det" persoon="2" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)" pt="vnw" rel="det" root="uw" status="vol" vwtype="bez" word="Uw"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="wil" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wil" word="wil"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="geschieden" pos="verb" postag="WW(pv,conj,ev)" pt="ww" pvagr="ev" pvtijd="conj" rel="hd" root="geschiede" word="geschiede" wvorm="pv"/>
+    </node>
+    <node begin="3" end="4" id="6" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Uw wil geschiede .</sentence>
+</alpino_ds>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="0" cat="du" end="8" id="2" rel="--">
+      <node begin="0" cat="np" end="4" id="3" rel="dp">
+        <node begin="0" buiging="met-e" end="1" graad="basis" id="4" lemma="Nederlandstalig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Nederlandstalig" word="Nederlandstalige"/>
+        <node begin="1" cat="mwu" end="3" id="5" rel="mod">
+          <node begin="1" end="2" id="6" lemma="Star" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Star" spectype="deeleigen" word="Star"/>
+          <node begin="2" end="3" id="7" lemma="Trek" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Trek" spectype="deeleigen" word="Trek"/>
+        </node>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="site" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="site" word="site"/>
+      </node>
+      <node begin="5" cat="np" end="8" id="9" rel="dp">
+        <node begin="5" end="6" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="6" cat="mwu" end="8" id="11" rel="hd">
+          <node begin="6" buiging="met-e" end="7" graad="basis" id="12" lemma="origineel" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Originele" word="Originele"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="13" lemma="serie" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Serie" word="Serie"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Nederlandstalige Star Trek site - De Originele Serie</sentence>
+</alpino_ds>

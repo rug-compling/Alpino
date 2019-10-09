@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="meneer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="meneer" word="Meneer"/>
+        <node begin="1" end="2" genus="genus" getal="ev" graad="basis" id="4" lemma="Prikkebeen" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Prikkebeen" word="Prikkebeen"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ahi" end="7" id="6" rel="vc">
+        <node begin="3" cat="mwu" end="5" id="7" mwu_root="aan het" mwu_sense="aan het" rel="cmp">
+          <node begin="3" end="4" id="8" lemma="aan" pos="comp" postag="VZ(init)" pt="vz" rel="mwp" root="aan" vztype="init" word="aan"/>
+          <node begin="4" end="5" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="comp" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+        </node>
+        <node begin="0" cat="inf" end="7" id="10" rel="body">
+          <node begin="0" end="2" id="11" index="1" rel="su"/>
+          <node begin="5" end="6" getal="mv" graad="basis" id="12" lemma="vlinder" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="vlinder" word="vlinders"/>
+          <node begin="6" buiging="zonder" end="7" id="13" lemma="vangen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vang" word="vangen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Meneer Prikkebeen is aan het vlinders vangen</sentence>
+</alpino_ds>

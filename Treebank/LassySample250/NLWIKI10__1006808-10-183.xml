@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" end="1" frame="punct(aanhaal_links)" id="1" lcat="punct" lemma="«" pos="punct" postag="LET()" pt="let" rel="--" root="«" sense="«" special="aanhaal_links" word="«"/>
+    <node begin="2" end="3" frame="punct(aanhaal_rechts)" id="2" lcat="punct" lemma="»" pos="punct" postag="LET()" pt="let" rel="--" root="»" sense="»" special="aanhaal_rechts" word="»"/>
+    <node begin="3" end="4" frame="punct(haak_open)" id="3" lcat="punct" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" sense="(" special="haak_open" word="("/>
+    <node begin="5" end="6" frame="punct(haak_sluit)" id="4" lcat="punct" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+    <node begin="6" end="7" frame="punct(ligg_streep)" id="5" lcat="punct" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" sense="-" special="ligg_streep" word="-"/>
+    <node begin="1" cat="du" end="9" id="6" rel="--">
+      <node begin="1" cat="np" end="5" id="7" rel="dp">
+        <node begin="1" end="2" frame="proper_name(both,'PER')" getal="mv" graad="basis" id="8" lcat="np" lemma="brainwave" neclass="PER" ntype="soort" num="both" pos="name" postag="N(soort,mv,basis)" pt="n" rel="hd" root="BrainWaves" sense="BrainWaves" word="BrainWaves"/>
+        <node begin="4" end="5" frame="np(year)" id="9" lcat="np" lemma="1983" neclass="year" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="1983" sense="1983" word="1983"/>
+      </node>
+      <node begin="7" cat="mwu" end="9" id="10" mwu_root="Marian_Koonan" mwu_sense="Marian_Koonan" rel="dp">
+        <node begin="7" end="8" frame="proper_name(both,'PER')" id="11" lcat="np" lemma="Marian" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Marian" sense="Marian" spectype="deeleigen" word="Marian"/>
+        <node begin="8" end="9" frame="proper_name(both,'PER')" id="12" lcat="np" lemma="Koonan" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Koonan" sense="Koonan" spectype="deeleigen" word="Koonan"/>
+      </node>
+    </node>
+  </node>
+  <sentence>« BrainWaves » ( 1983 ) - Marian Koonan</sentence>
+  <comments>
+    <comment>Q#1006808-10-183|« BrainWaves » ( 1983 ) - Marian Koonan|1|1|0.12099844493575039</comment>
+  </comments>
+</alpino_ds>

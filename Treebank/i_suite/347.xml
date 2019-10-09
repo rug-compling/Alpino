@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="9" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" rel="tag">
+        <node begin="0" buiging="met-e" end="1" graad="sup" id="4" lemma="goed" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="goed" word="Beste"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="5" lemma="luisteraar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="luisteraar" word="luisteraars"/>
+      </node>
+      <node begin="3" cat="sv1" end="9" id="6" rel="nucl">
+        <node begin="3" end="4" id="7" lemma="zetten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zet" word="zet" wvorm="pv"/>
+        <node begin="4" cat="np" end="6" id="8" rel="obj1">
+          <node begin="4" buiging="zonder" end="5" getal="getal" id="9" lemma="uw" naamval="stan" npagr="agr" pdtype="det" persoon="2" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)" pt="vnw" rel="det" root="u" status="vol" vwtype="bez" word="uw"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="radio" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="radio" word="radio"/>
+        </node>
+        <node begin="6" end="7" id="11" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
+        <node begin="7" cat="pp" end="9" id="12" rel="ld">
+          <node begin="7" end="8" id="13" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="8" end="9" id="14" lemma="3" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="3" word="3"/>
+        </node>
+      </node>
+    </node>
+    <node begin="9" end="10" id="15" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>Beste luisteraars , zet uw radio maar op 3 !</sentence>
+</alpino_ds>

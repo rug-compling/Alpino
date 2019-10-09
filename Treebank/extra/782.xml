@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="denken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="denk" word="denk" wvorm="pv"/>
+      <node begin="2" end="3" id="4" lemma="namelijk" pos="adv" postag="BW()" pt="bw" rel="mod" root="namelijk" word="namelijk"/>
+      <node begin="3" cat="cp" end="12" id="5" rel="vc">
+        <node begin="3" conjtype="onder" end="4" id="6" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="4" cat="ssub" end="12" id="7" rel="body">
+          <node begin="4" end="5" genus="onz" getal="ev" id="8" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="het"/>
+          <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="belangrijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="belangrijk" word="belangrijk"/>
+          <node begin="6" end="7" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          <node begin="7" cat="cp" end="12" id="11" rel="su">
+            <node begin="7" conjtype="onder" end="8" id="12" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+            <node begin="8" cat="ssub" end="12" id="13" rel="body">
+              <node begin="8" end="9" getal="mv" id="14" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
+              <node begin="9" cat="pp" end="11" id="15" rel="pc">
+                <node begin="9" end="10" getal="getal" id="16" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="daar" status="vol" vwtype="aanw" word="daar"/>
+                <node begin="10" end="11" id="17" lemma="naar" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="naar" vztype="fin" word="naartoe"/>
+              </node>
+              <node begin="11" end="12" id="18" lemma="toe_werken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="werk_toe" word="werken" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ik denk namelijk dat het belangrijk is dat wij daar naartoe werken .</sentence>
+</alpino_ds>

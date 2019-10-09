@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" cat="np" end="12" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="de" pos="det" rel="det" root="de" word="De"/>
+        <node aform="base" begin="1" end="2" id="4" infl="e" pos="adj" rel="mod" root="consequent" vform="adj" word="consequente"/>
+        <node begin="2" end="3" gen="de" id="5" num="sg" pos="noun" rel="hd" root="aandacht" word="aandacht"/>
+        <node begin="3" cat="pp" end="8" id="6" rel="mod">
+          <node begin="3" end="4" id="7" pos="prep" rel="hd" root="voor" word="voor"/>
+          <node begin="4" cat="conj" end="8" id="8" rel="obj1">
+            <node begin="4" cat="np" end="6" id="9" rel="cnj">
+              <node begin="4" end="5" id="10" index="1" infl="de" pos="det" rel="det" root="de" word="de"/>
+              <node begin="5" end="6" gen="de" id="11" num="sg" pos="noun" rel="hd" root="betekenis_verlening" word="betekenisverlening"/>
+            </node>
+            <node begin="6" end="7" id="12" pos="vg" rel="crd" root="en" word="en"/>
+            <node begin="4" cat="np" end="8" id="13" rel="cnj">
+              <node begin="4" end="5" id="14" index="1" rel="det"/>
+              <node begin="7" end="8" gen="de" id="15" num="sg" pos="noun" rel="hd" root="zienswijze" word="zienswijze"/>
+            </node>
+          </node>
+        </node>
+        <node begin="8" cat="pp" end="12" id="16" rel="mod">
+          <node begin="8" end="9" id="17" pos="prep" rel="hd" root="van" word="van"/>
+          <node begin="9" cat="conj" end="12" id="18" rel="obj1">
+            <node begin="9" end="10" gen="het" id="19" num="pl" pos="noun" rel="cnj" root="kind" word="kinderen"/>
+            <node begin="10" end="11" id="20" pos="vg" rel="crd" root="en" word="en"/>
+            <node begin="11" end="12" gen="de" id="21" num="pl" pos="noun" rel="cnj" root="jongere" word="jongeren"/>
+          </node>
+        </node>
+      </node>
+      <node begin="12" end="13" id="22" infl="sg3" pos="verb" rel="hd" root="verg" sc="transitive" tense="present" word="vergt"/>
+      <node begin="13" end="14" gen="de" id="23" num="pl" pos="noun" rel="obj1" root="inspanning" word="inspanningen"/>
+    </node>
+    <node begin="14" end="15" id="24" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>De consequente aandacht voor de betekenisverlening en zienswijze van kinderen en jongeren vergt inspanningen .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

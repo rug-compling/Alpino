@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="whq" end="5" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" root="wat" status="vol" vwtype="vb" word="Wat"/>
+      <node begin="0" cat="sv1" end="5" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+        <node begin="2" end="3" getal="ev" id="5" index="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="0" cat="inf" end="5" id="6" rel="vc">
+          <node begin="0" end="1" id="7" index="1" rel="obj1"/>
+          <node begin="2" end="3" id="8" index="2" rel="su"/>
+          <node begin="3" end="4" id="9" lemma="hieraan" pos="pp" postag="BW()" pt="bw" rel="pc" root="hieraan" word="hieraan"/>
+          <node begin="4" buiging="zonder" end="5" id="10" lemma="doen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="doe" word="doen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="5" end="6" id="11" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wat kan ik hieraan doen ?</sentence>
+</alpino_ds>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="9" end="10" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="11" end="12" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="13" end="14" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="17" end="18" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="23" end="24" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="27" id="6" rel="--">
+      <node begin="0" cat="pp" end="17" id="7" rel="ld">
+        <node begin="0" end="1" id="8" lemma="tegenover" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegenover" vztype="init" word="Tegenover"/>
+        <node begin="1" cat="np" end="17" id="9" rel="obj1">
+          <node begin="1" buiging="zonder" end="2" getal="ev" id="10" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+          <node begin="2" cat="ppres" end="7" id="11" rel="mod">
+            <node begin="2" cat="np" end="4" id="12" rel="obj1">
+              <node begin="2" end="3" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="14" lemma="pathetiek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pathetiek" word="pathetiek"/>
+            </node>
+            <node begin="4" cat="advp" end="6" id="15" rel="mod">
+              <node begin="4" end="5" id="16" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+              <node begin="5" end="6" id="17" lemma="zelden" pos="adv" postag="BW()" pt="bw" rel="hd" root="zelden" word="zelden"/>
+            </node>
+            <node begin="6" buiging="met-e" end="7" id="18" lemma="naderen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="naderend" word="naderende" wvorm="od"/>
+          </node>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="19" lemma="hang" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hang" word="hang"/>
+          <node begin="8" cat="pp" end="17" id="20" rel="mod">
+            <node begin="8" end="9" id="21" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+            <node begin="10" cat="conj" end="17" id="22" rel="obj1">
+              <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="23" lemma="waarachtigheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="waarachtigheid" word="Waarachtigheid"/>
+              <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="24" lemma="orde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="orde" word="Orde"/>
+              <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="25" lemma="rust" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="rust" word="Rust"/>
+              <node begin="15" conjtype="neven" end="16" id="26" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="27" lemma="wet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="wet" word="Wet"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="18" end="19" id="28" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
+      <node begin="19" end="20" id="29" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
+      <node begin="20" cat="np" end="27" id="30" rel="su">
+        <node begin="20" end="21" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="21" buiging="met-e" end="22" graad="basis" id="32" lemma="bizar" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="bizar" word="bizarre"/>
+        <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="33" lemma="handelsgeest" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="geest" word="handelsgeest"/>
+        <node begin="24" cat="conj" end="27" id="34" rel="mod">
+          <node begin="24" buiging="zonder" end="25" graad="basis" id="35" lemma="satanisch" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="cnj" root="satanisch" word="satanisch"/>
+          <node begin="25" conjtype="neven" end="26" id="36" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="26" buiging="zonder" end="27" graad="basis" id="37" lemma="meedogenloos" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="meedogenloos" word="meedogenloos"/>
+        </node>
+      </node>
+    </node>
+    <node begin="27" end="28" id="38" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Tegenover zijn de pathetiek niet zelden naderende hang naar &quot; Waarachtigheid , Orde , Rust en Wet &quot; staat weer de bizarre handelsgeest , satanisch en meedogenloos .</sentence>
+</alpino_ds>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="30" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="20" end="21" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="29" id="3" rel="--">
+      <node begin="0" cat="np" end="2" id="4" rel="su">
+        <node begin="0" buiging="zonder" end="1" getal="ev" id="5" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="Zijn"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="6" lemma="tekening" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="tekening" word="tekeningen"/>
+      </node>
+      <node begin="2" end="3" id="7" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+      <node begin="3" end="4" id="8" lemma="daarbij" pos="adv" postag="BW()" pt="bw" rel="mod" root="daarbij" word="daarbij"/>
+      <node begin="4" cat="ap" end="29" id="9" rel="predc">
+        <node begin="5" buiging="zonder" end="6" graad="basis" id="10" lemma="opvallend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="opvallend" word="opvallend"/>
+        <node begin="4" cat="ap" end="29" id="11" rel="mod">
+          <node begin="4" end="5" id="12" lemma="zo" pos="adj" postag="BW()" pt="bw" rel="hd" root="zo" word="zo"/>
+          <node begin="7" cat="cp" end="29" id="13" rel="obcomp">
+            <node begin="7" conjtype="onder" end="8" id="14" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+            <node begin="8" cat="ssub" end="29" id="15" rel="body">
+              <node begin="8" cat="pp" end="14" id="16" rel="mod">
+                <node begin="8" end="9" id="17" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="9" cat="np" end="14" id="18" rel="obj1">
+                  <node begin="9" end="10" id="19" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                  <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="20" lemma="midden" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="midden" word="midden"/>
+                  <node begin="11" cat="np" end="14" id="21" rel="mod">
+                    <node begin="11" end="12" id="22" lemma="de" lwtype="bep" naamval="gen" npagr="rest3" pos="det" postag="LID(bep,gen,rest3)" pt="lid" rel="det" root="der" word="der"/>
+                    <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="23" lemma="dertiger" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="dertiger" word="dertiger"/>
+                    <node begin="13" end="14" getal="mv" graad="basis" id="24" lemma="jaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="jaar" word="jaren"/>
+                  </node>
+                </node>
+              </node>
+              <node begin="14" cat="conj" end="17" id="25" rel="su">
+                <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="26" lemma="burgemeester" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="burgemeester" word="burgemeester"/>
+                <node begin="15" conjtype="neven" end="16" id="27" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="28" lemma="schoolhoofd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="schoolhoofd" word="schoolhoofd"/>
+              </node>
+              <node begin="17" cat="pp" end="19" id="29" rel="ld">
+                <node begin="17" end="18" id="30" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+                <node begin="18" end="19" genus="masc" getal="ev" id="31" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="vol" vwtype="pers" word="hem"/>
+              </node>
+              <node begin="19" end="20" id="32" lemma="komen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kom" word="kwamen" wvorm="pv"/>
+              <node begin="21" cat="cp" end="29" id="33" rel="mod">
+                <node begin="21" conjtype="onder" end="22" id="34" lemma="toen" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="toen" word="toen"/>
+                <node begin="22" cat="ssub" end="29" id="35" rel="body">
+                  <node begin="22" end="23" getal="mv" id="36" index="1" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
+                  <node begin="27" end="28" id="37" lemma="willen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="wil" word="wilden" wvorm="pv"/>
+                  <node begin="22" cat="inf" end="29" id="38" rel="vc">
+                    <node begin="22" end="23" id="39" index="1" rel="su"/>
+                    <node begin="23" cat="np" end="27" id="40" rel="obj1">
+                      <node begin="23" end="24" getal="mv" graad="basis" id="41" lemma="handenarbeidles" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="les" word="handenarbeidlessen"/>
+                      <node begin="24" cat="pp" end="27" id="42" rel="mod">
+                        <node begin="24" end="25" id="43" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                        <node begin="25" cat="np" end="27" id="44" rel="obj1">
+                          <node begin="25" end="26" id="45" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                          <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="46" lemma="jeugd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="jeugd" word="jeugd"/>
+                        </node>
+                      </node>
+                    </node>
+                    <node begin="28" buiging="zonder" end="29" id="47" lemma="opzetten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zet" word="opzetten" wvorm="inf"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="29" end="30" id="48" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Zijn tekeningen waren daarbij zo opvallend , dat in het midden der dertiger jaren burgemeester en schoolhoofd bij hem kwamen , toen zij handenarbeidlessen voor de jeugd wilden opzetten .</sentence>
+</alpino_ds>

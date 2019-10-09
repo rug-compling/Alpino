@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="6" id="2" rel="su">
+        <node begin="0" cat="np" end="2" id="3" rel="obj1">
+          <node begin="0" end="1" frame="determiner(een)" id="4" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="Een"/>
+          <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="klacht" sense="klacht" word="klacht"/>
+        </node>
+        <node begin="2" end="3" frame="v_noun(transitive)" id="6" lcat="np" pos="verb" rel="hd" root="dien_in" sc="transitive" sense="dien_in" special="v_noun" word="indienen"/>
+        <node begin="3" cat="pp" end="6" id="7" rel="mod">
+          <node begin="3" end="4" frame="preposition(bij,[vandaan])" id="8" lcat="pp" pos="prep" rel="hd" root="bij" sense="bij" word="bij"/>
+          <node begin="4" cat="np" end="6" id="9" rel="obj1">
+            <node begin="4" end="5" frame="determiner(de)" id="10" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="5" end="6" frame="noun(de,count,sg)" gen="de" id="11" lcat="np" num="sg" pos="noun" rel="hd" root="klacht_manager" sense="klacht_manager" word="klachtenmanager"/>
+          </node>
+        </node>
+      </node>
+      <node begin="6" end="7" frame="verb(unacc,sg_heeft,copula)" id="12" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="is"/>
+      <node aform="base" begin="7" end="8" frame="adjective(no_e(adv))" id="13" infl="no_e" lcat="ap" pos="adj" rel="predc" root="eenvoudig" sense="eenvoudig" vform="adj" word="eenvoudig"/>
+    </node>
+    <node begin="8" end="9" frame="punct(punt)" id="14" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Een klacht indienen bij de klachtenmanager is eenvoudig .</sentence>
+  <comments>
+    <comment>Q#144|Een klacht indienen bij de klachtenmanager is eenvoudig .|1|1|0.9925030531939204</comment>
+  </comments>
+</alpino_ds>

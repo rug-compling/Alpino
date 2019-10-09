@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="8" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" end="3" getal="ev" id="6" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="mod" root="me" status="red" vwtype="pr" word="me"/>
+        <node begin="3" end="4" id="7" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
+        <node begin="4" cat="np" end="7" id="8" rel="obj1">
+          <node begin="4" end="5" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="5" buiging="met-e" end="6" graad="basis" id="10" lemma="mooi" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="mooi" word="mooie"/>
+          <node begin="6" end="7" getal="mv" graad="basis" id="11" lemma="boek" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="boek" word="boeken"/>
+        </node>
+        <node begin="7" buiging="zonder" end="8" id="12" lemma="kopen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="koop" word="gekocht" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>hij heeft me toch een mooie boeken gekocht !</sentence>
+</alpino_ds>

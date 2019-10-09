@@ -1,0 +1,95 @@
+#!/bin/bash
+# This script tries to isolate data that provokes errors in programs
+# Synopsis: ie1 file1 file2
+# where file is a data file for the first program, file2 - for the second one
+# The result is in ~/tmp/q1
+#
+# This function tests the data
+function f1() {
+  ./maketuple.pl ver=3 total=2 words=1 sep='\|' out=llfeats.tpl \
+  $1 llfeats
+  #./print_tuple.pl llfeats.tpl llfeats.fsa | grep -v -q 'not found'
+  ~/fadd/test_fadd unigram.probs '|' 1 unigrams.tpl tags.fsa | grep -v -q 'for tuple'
+  return $?
+}
+# Chop off the tail
+no_of_lines=`wc -l $1 | awk '{print $1;}'`
+deleted=1
+cp $1 ~/tmp/q2
+#cp $2 ~/tmp/qq.fsa
+while [ $deleted -gt 0 ] ; do
+  right=$no_of_lines
+  deleted=0
+  left=1
+  while [ $left -le $right ] ; do
+    middle=$(((left + right) / 2))
+    head -${middle} ~/tmp/q2 > ~/tmp/q1
+    echo "Trying +${middle}-$((no_of_lines - middle))" 
+    if f1 $2 ; then
+      echo "Exit status is $?"
+      left=$((middle + 1))
+    else
+      echo "Exit status is $?"
+      right=$((middle - 1))
+    fi
+  done
+  if [ $left -ge $no_of_lines ] ; then
+    first=$no_of_lines
+  else
+    first=$((left + 1))
+  fi
+# Now chop off the first lines
+  right=$first
+  left=1
+  while [ $left -le $right ] ; do
+    middle=$(((left + right) / 2))
+    head -${first} ~/tmp/q2 | tail -${middle} > ~/tmp/q1
+    echo "Trying -$((first - middle))+$((middle))-$((no_of_lines - first))" 
+    if f1 $2 ; then
+      echo "Exit status is $?"
+      left=$((middle + 1))
+    else
+      echo "Exit status is $?"
+      right=$((middle - 1))
+    fi
+  done
+  if [ $left -ge $first ] ; then
+    last=$first
+  else
+    last=$((left + 1))
+  fi
+  echo "Isolated a range of $last lines"
+  head -${first} ~/tmp/q2 | tail -${last} > ~/tmp/q1 # wa stail with middle
+# Now we have the range in ~/tmp/q1
+# Try to delete ranges of lines inside
+  no_of_lines=`wc -l ~/tmp/q1 | awk '{print $1;}'`
+  cp ~/tmp/q1 ~/tmp/q2
+  first=1
+  last=$((no_of_lines - 1))
+  cp ~/tmp/q1 ~/tmp/q3
+  while [ $first -lt $no_of_lines ] ; do
+    left=1
+    right=$((last - 1))
+    while [ $left -le $right ] ; do
+      middle=$(((left + right) / 2))
+      head -${first} ~/tmp/q2 > ~/tmp/q1
+      tail -${middle} ~/tmp/q2 >> ~/tmp/q1
+      echo "Trying +${first}-$((last - middle))+${middle}"
+      if f1 $2 ; then
+        echo "Exit status is $?"
+	left=$((middle + 1))
+      else
+        echo "Exit status is $?"
+	right=$((middle - 1))
+	cp ~/tmp/q1 ~/tmp/q3
+	deleted=1
+      fi
+    done
+    cp ~/tmp/q3 ~/tmp/q2
+    no_of_lines=`wc -l ~/tmp/q2 | awk '{print $1;}'`
+    first=$((first + 1))
+    last=$((no_of_lines - first))
+  done
+done
+cp ~/tmp/q2 ~/tmp/q1
+echo "Now no of lines is $no_of_lines"

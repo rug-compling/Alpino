@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="9" end="10" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="smain" end="13" id="3" rel="--">
+      <node begin="3" end="4" id="4" lemma="kunnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kan" word="kon" wvorm="pv"/>
+      <node begin="4" cat="np" end="9" id="5" index="1" rel="su">
+        <node begin="4" end="5" getal="ev" graad="basis" id="6" lemma="Breero" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Breero" word="Breero&apos;s"/>
+        <node begin="6" cat="mwu" end="9" id="7" rel="hd">
+          <node begin="6" end="7" id="8" lemma="De" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
+          <node begin="7" end="8" id="9" lemma="Spaanse" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Spaanse" spectype="deeleigen" word="Spaanse"/>
+          <node begin="8" end="9" id="10" lemma="Brabander" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Brabander" spectype="deeleigen" word="Brabander"/>
+        </node>
+      </node>
+      <node begin="0" cat="inf" end="13" id="11" rel="vc">
+        <node begin="0" cat="np" end="3" id="12" rel="mod">
+          <node begin="0" end="1" id="13" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+          <node begin="1" buiging="zonder" end="2" graad="basis" id="14" lemma="vorig" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="vorig" word="vorig"/>
+          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="15" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
+        </node>
+        <node begin="4" end="9" id="16" index="1" rel="su"/>
+        <node begin="10" end="11" id="17" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+        <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="18" lemma="uitkomst" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="svp" root="uitkomst" word="uitkomst"/>
+        <node begin="12" buiging="zonder" end="13" id="19" lemma="bieden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bied" word="bieden" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="13" end="14" id="20" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" word=";"/>
+  </node>
+  <sentence>Het vorig jaar kon Breero&apos;s &quot; De Spaanse Brabander &quot; nog uitkomst bieden ;</sentence>
+</alpino_ds>

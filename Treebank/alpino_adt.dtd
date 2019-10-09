@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- Alpino Abstract Dependency Structures DTD -->
+
+<!-- 
+
+  Abstract Dependency Trees (ADTs) are used as an input format for
+  the Alpino chart generator. Please refer to
+
+    Documentation/Generation/adt.html
+
+  in the Alpino top-level directory for more information about ADTs.
+  The definition of ADTs is based on that of normal Alpino Dependency
+  Structures.
+-->
+
+<!--
+  Alpino Dependency Structure
+
+  Sentence and comments elements are optional and unused. But let's
+  allow for writing down the original sentence if someone is interested.
+-->
+<!ELEMENT alpino_adt    (node, sentence?, comments?)                 >
+<!ATTLIST alpino_adt 
+          version       NMTOKEN     #IMPLIED>
+
+
+<!--                    Node                                       -->
+<!--                    een knoop van een dependency tree          -->
+<!ELEMENT  node         (node*)                                      >
+<!--
+    rel             de dependency relatie van de knoop
+    cat             de categorie van de knoop
+    pos             de part of speech tag van de knoop (het woord)
+    root            de stam van het woord
+    sense           de sense van het woord
+    word            het woord zoals het in de zin voorkomt
+    index           een co-index om gedeelde structuren mogelijk te maken
+    id              een per zin uniek nummer om de knopen te kunnen identificeren
+
+    case            naamval van nomina (nom,acc,dat,..)
+    comparative     type complement van comparatives (dan,als,dat,..)
+    def             definitietheid van nomina (def,indef,..)
+    gen             gender van nomina (de,het,..)
+    infl            inflection van adjectieven, determiners
+    neclass         classificatie van namen (org, loc, per, misc)
+    num             getalinformatie van nomina (sg,pl,..)
+    per             persoonsinformatie van nomina (fir,thi,..)
+    refl            reflexiviteit van pronomina (refl)
+    sc              subcategorizatie frame
+    special         vergaarbak voor andere speciale features
+    wh              geeft vraagwoordinformatie voor pronomina (ywh,nwh,rwh)
+
+    misschien dat er meerdere #REQUIRED zijn, of dat in sommige
+    NMTOKEN beter gebruikt kan worden ipv. CDATA.  
+
+    Het is ook mogelijk een opsomming van de mogelijke waarden te
+    geven.  Voor sommige attributen is dat misschien wenselijk.
+-->
+<!ATTLIST node
+          rel   (hdf|hd|cmp|sup|su|obj1|pobj1|obj2|se|pc|vc|svp|predc|ld|me|predm|
+                 obcomp|mod|body|spec|det|part|app|whd|rhd|cnj|crd|nucl|sat|tag|
+                 dp|top|mwp|dlink|--) 
+                #REQUIRED
+          cat   (smain|np|ppart|pp|ssub|inf|cp|du|ap|advp|ti|rel|whrel|whsub|conj|
+                 whq|oti|ahi|detp|sv1|svan|mwu|top)
+                #IMPLIED
+          pos             CDATA       #IMPLIED
+	  sense           CDATA       #IMPLIED
+          root            CDATA       #IMPLIED
+          word            CDATA       #IMPLIED
+          index           CDATA       #IMPLIED
+          id              CDATA       #IMPLIED
+
+          mwu_root        CDATA       #IMPLIED
+
+          case            CDATA       #IMPLIED
+          comparative     CDATA       #IMPLIED
+          def             CDATA       #IMPLIED
+          gen             CDATA       #IMPLIED
+          infl            CDATA       #IMPLIED
+          neclass         CDATA       #IMPLIED
+          num             CDATA       #IMPLIED
+          per             CDATA       #IMPLIED
+          refl            CDATA       #IMPLIED
+          sc              CDATA       #IMPLIED
+          special         CDATA       #IMPLIED
+          tense           CDATA       #IMPLIED
+          wh              CDATA       #IMPLIED
+>
+
+
+
+<!--                    Sentence                                   -->
+<!--                    de tekst van de gehele zin                 -->
+<!ELEMENT  sentence     (#PCDATA)                                    >
+
+
+<!--                    Comments                                   -->
+<!--                    een of meerdere comment elementen          -->
+<!ELEMENT  comments     (comment+)                                   >
+
+
+<!--                    Comment                                    -->
+<!--                    een commentaar entry                       -->
+<!ELEMENT  comment      (#PCDATA)                                    >
+

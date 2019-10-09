@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="0" end="1" frame="punct(ligg_streep)" id="1" lcat="punct" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" sense="-" special="ligg_streep" word="-"/>
+    <node begin="6" end="7" frame="punct(haak_open)" id="2" lcat="punct" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" sense="(" special="haak_open" word="("/>
+    <node begin="9" end="10" frame="punct(haak_sluit)" id="3" lcat="punct" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+    <node begin="16" end="17" frame="punct(komma)" id="4" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="1" cat="conj" end="24" id="5" rel="--">
+      <node begin="1" cat="smain" end="16" id="6" rel="cnj">
+        <node begin="1" cat="mwu" end="3" id="7" index="1" mwu_root="Winnsboro_Mills" mwu_sense="Winnsboro_Mills" rel="su">
+          <node begin="1" end="2" frame="proper_name(both,'PER')" id="8" lcat="np" lemma="Winnsboro" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Winnsboro" sense="Winnsboro" spectype="deeleigen" word="Winnsboro"/>
+          <node begin="2" end="3" frame="proper_name(both,'PER')" id="9" lcat="np" lemma="Mills" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Mills" sense="Mills" spectype="deeleigen" word="Mills"/>
+        </node>
+        <node begin="3" end="4" frame="verb(unacc,sg_heeft,copula)" id="10" infl="sg_heeft" lcat="smain" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="is" wvorm="pv"/>
+        <node begin="4" cat="np" end="16" id="11" rel="predc">
+          <node begin="4" end="5" frame="determiner(een)" id="12" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+          <node begin="5" end="6" frame="meas_mod_noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="13" lcat="np" lemma="plaats" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="plaats" sense="plaats" special="meas_mod" word="plaats"/>
+          <node begin="7" cat="mwu" end="9" id="14" mwu_root="census-designated_place" mwu_sense="census-designated_place" rel="mod">
+            <node begin="7" end="8" frame="proper_name(both)" id="15" lcat="np" lemma="census-designated" num="both" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="census-designated" sense="census-designated" spectype="vreemd" word="census-designated"/>
+            <node begin="8" end="9" frame="proper_name(both)" id="16" lcat="np" lemma="place" num="both" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="place" sense="place" spectype="vreemd" word="place"/>
+          </node>
+          <node begin="10" cat="pp" end="16" id="17" rel="mod">
+            <node begin="10" end="11" frame="preposition(in,[])" id="18" lcat="pp" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" sense="in" vztype="init" word="in"/>
+            <node begin="11" cat="np" end="16" id="19" rel="obj1">
+              <node begin="11" end="12" frame="determiner(de)" id="20" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+              <node aform="base" begin="12" buiging="met-e" end="13" frame="adjective(e)" graad="basis" id="21" infl="e" lcat="ap" lemma="amerikaanse" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Amerikaans" sense="Amerikaans" vform="adj" word="Amerikaanse"/>
+              <node begin="13" end="14" frame="noun(de,count,sg)" gen="de" id="22" lcat="np" lemma="staan" num="sg" pos="noun" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="staat" sense="staat" word="staat" wvorm="pv"/>
+              <node begin="14" cat="mwu" end="16" id="23" mwu_root="South_Carolina" mwu_sense="South_Carolina" rel="app">
+                <node begin="14" end="15" frame="proper_name(both,'LOC')" id="24" lcat="np" lemma="South" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="South" sense="South" spectype="deeleigen" word="South"/>
+                <node begin="15" end="16" frame="proper_name(both,'LOC')" id="25" lcat="np" lemma="Carolina" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Carolina" sense="Carolina" spectype="deeleigen" word="Carolina"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="17" conjtype="neven" end="18" frame="conj(en)" id="26" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="1" cat="smain" end="24" id="27" rel="cnj">
+        <node begin="1" end="3" id="28" index="1" rel="su"/>
+        <node begin="18" end="19" frame="verb(unacc,sg3,ld_pp)" id="29" infl="sg3" lcat="smain" lemma="vallen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="val" sc="ld_pp" sense="val" tense="present" word="valt" wvorm="pv"/>
+        <node begin="19" cat="ppart" end="21" id="30" rel="mod">
+          <node aform="base" begin="19" buiging="zonder" end="20" frame="adjective(no_e(adv))" graad="basis" id="31" infl="no_e" lcat="ap" lemma="bestuurlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="bestuurlijk" sense="bestuurlijk" vform="adj" word="bestuurlijk"/>
+          <node aform="base" begin="20" buiging="zonder" end="21" frame="adjective(ge_no_e(adv))" id="32" infl="no_e" lcat="ppart" lemma="gezien" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gezien" sense="gezien" vform="psp" word="gezien" wvorm="vd"/>
+        </node>
+        <node begin="21" cat="pp" end="24" id="33" rel="ld">
+          <node begin="21" end="22" frame="preposition(onder,[door,vandaan])" id="34" lcat="pp" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" sense="onder" vztype="init" word="onder"/>
+          <node begin="22" cat="mwu" end="24" id="35" mwu_root="Fairfield_County" mwu_sense="Fairfield_County" rel="obj1">
+            <node begin="22" end="23" frame="proper_name(both,'ORG')" id="36" lcat="np" lemma="Fairfield" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Fairfield" sense="Fairfield" spectype="deeleigen" word="Fairfield"/>
+            <node begin="23" end="24" frame="proper_name(both,'ORG')" id="37" lcat="np" lemma="County" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="County" sense="County" spectype="deeleigen" word="County"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" frame="punct(punt)" id="38" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>- Winnsboro Mills is een plaats ( census-designated place ) in de Amerikaanse staat South Carolina , en valt bestuurlijk gezien onder Fairfield County .</sentence>
+  <comments>
+    <comment>Q#1044491-2-1|- Winnsboro Mills is een plaats ( census-designated place ) in de Amerikaanse staat South Carolina , en valt bestuurlijk gezien onder Fairfield County .|1|1|-0.1114121849987014</comment>
+  </comments>
+</alpino_ds>

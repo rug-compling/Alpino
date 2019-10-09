@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" end="1" getal="mv" graad="basis" id="2" lemma="deskundigen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="deskundigen" word="Deskundigen"/>
+      <node begin="1" end="2" id="3" lemma="zeggen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zeg" word="zeggen" wvorm="pv"/>
+      <node begin="2" end="3" id="4" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+      <node begin="3" end="4" id="5" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="mod" root="eens" word="eens"/>
+    </node>
+    <node begin="4" end="5" id="6" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>Deskundigen zeggen wel eens :</sentence>
+</alpino_ds>

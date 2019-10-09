@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="0" cat="smain" end="21" id="1" rel="--">
+      <node begin="0" cat="np" end="6" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="voetbalwedstrijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voetbalwedstrijd" word="voetbalwedstrijd"/>
+        <node begin="2" cat="mwu" end="6" id="5" rel="app">
+          <node begin="2" end="3" id="6" lemma="Estudiantes" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Estudiantes" spectype="deeleigen" word="Estudiantes"/>
+          <node begin="3" end="4" id="7" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+          <node begin="4" end="5" id="8" lemma="la" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="la" spectype="vreemd" word="la"/>
+          <node begin="5" end="6" id="9" lemma="Plata-Feyenoord" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Plata-Feyenoord" spectype="vreemd" word="Plata-Feyenoord"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="10" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+      <node begin="0" cat="inf" end="21" id="11" rel="vc">
+        <node begin="0" end="6" id="12" index="1" rel="su"/>
+        <node begin="19" buiging="zonder" end="20" id="13" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+        <node begin="0" cat="ppart" end="21" id="14" rel="vc">
+          <node begin="0" end="6" id="15" index="1" rel="obj1"/>
+          <node begin="7" cat="np" end="9" id="16" rel="mod">
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="17" lemma="woensdag" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="woensdag" word="woensdag"/>
+            <node begin="8" end="9" id="18" lemma="a.s." pos="adv" postag="SPEC(afk)" pt="spec" rel="mod" root="aanstaande" spectype="afk" word="a.s."/>
+          </node>
+          <node begin="9" buiging="zonder" end="10" graad="basis" id="19" lemma="waarschijnlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="waarschijnlijk" word="waarschijnlijk"/>
+          <node begin="10" end="11" id="20" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="11" cat="pp" end="19" id="21" rel="mod">
+            <node begin="11" end="12" id="22" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="12" cat="np" end="19" id="23" rel="obj1">
+              <node begin="12" end="13" id="24" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="13" cat="mwu" end="16" id="25" rel="hd">
+                <node begin="13" end="14" id="26" lemma="Boca" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Boca" spectype="deeleigen" word="Boca"/>
+                <node begin="14" end="15" id="27" lemma="Juniors" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Juniors" spectype="deeleigen" word="Juniors"/>
+                <node begin="15" end="16" id="28" lemma="Stadion" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Stadion" spectype="deeleigen" word="Stadion"/>
+              </node>
+              <node begin="16" cat="pp" end="19" id="29" rel="mod">
+                <node begin="16" end="17" id="30" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="17" cat="mwu" end="19" id="31" rel="obj1">
+                  <node begin="17" end="18" id="32" lemma="Buenos" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Buenos" spectype="deeleigen" word="Buenos"/>
+                  <node begin="18" end="19" id="33" lemma="Aires" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Aires" spectype="deeleigen" word="Aires"/>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="20" buiging="zonder" end="21" id="34" lemma="spelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="speel" word="gespeeld" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De voetbalwedstrijd Estudiantes de la Plata-Feyenoord zal woensdag a.s. waarschijnlijk niet in het Boca Juniors Stadion in Buenos Aires worden gespeeld .</sentence>
+</alpino_ds>

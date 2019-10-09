@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="du" end="5" id="1" rel="--">
+      <node begin="0" cat="pp" end="3" id="2" rel="dp">
+        <node begin="0" end="1" id="3" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="1" cat="mwu" end="3" id="4" rel="obj1">
+          <node begin="1" buiging="zonder" end="2" id="5" lemma="purmerend" pos="name" positie="prenom" postag="WW(od,prenom,zonder)" pt="ww" rel="mwp" root="purmerend" word="purmerend" wvorm="od"/>
+          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="6" lemma="overwhere" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="overwhere" word="overwhere"/>
+        </node>
+      </node>
+      <node begin="3" cat="pp" end="5" id="7" rel="dp">
+        <node begin="3" end="4" id="8" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="schiphol" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="schiphol" word="schiphol"/>
+      </node>
+    </node>
+  </node>
+  <sentence>van purmerend overwhere naar schiphol</sentence>
+</alpino_ds>

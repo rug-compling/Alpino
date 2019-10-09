@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="cp" end="2" id="2" rel="predm">
+        <node begin="0" end="1" id="3" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="Als"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="lijstduwer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="lijstduwer" word="lijstduwer"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+      <node begin="3" end="4" genus="masc" getal="ev" id="6" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+      <node begin="3" cat="ppart" end="9" id="7" rel="vc">
+        <node begin="3" end="4" id="8" index="1" rel="obj1"/>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="kiezen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kies" word="gekozen" wvorm="vd"/>
+        <node begin="5" cat="pp" end="9" id="10" rel="ld">
+          <node begin="5" end="6" id="11" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="6" cat="np" end="9" id="12" rel="obj1">
+            <node begin="6" end="7" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="7" buiging="met-e" end="8" graad="basis" id="14" lemma="Amsterdams" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Amsterdams" word="Amsterdamse"/>
+            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="gemeenteraad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gemeente_raad" word="gemeenteraad"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als lijstduwer werd hij gekozen in de Amsterdamse gemeenteraad .</sentence>
+</alpino_ds>

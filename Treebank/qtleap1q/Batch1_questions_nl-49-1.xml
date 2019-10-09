@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="9" id="2" rel="--">
+      <node begin="0" cat="cp" end="3" id="3" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="wanneer" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="wanneer" word="Wanneer"/>
+        <node begin="1" cat="ssub" end="3" id="5" rel="body">
+          <node begin="1" end="2" getal="ev" id="6" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+          <node begin="2" end="3" id="7" lemma="typen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="typ" word="typ" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="8" lemma="openen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="open" word="openen" wvorm="pv"/>
+      <node begin="5" end="6" getal="getal" id="9" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+      <node begin="6" buiging="zonder" end="7" graad="basis" id="10" lemma="spontaan" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="spontaan" word="spontaan"/>
+      <node begin="7" cat="np" end="9" id="11" rel="su">
+        <node begin="7" buiging="zonder" end="8" graad="basis" id="12" lemma="allerlei" pos="det" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="det" root="allerlei" word="allerlei"/>
+        <node begin="8" end="9" getal="mv" graad="basis" id="13" lemma="menu’s" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="menu’s" word="menu’s"/>
+      </node>
+    </node>
+    <node begin="9" end="10" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Wanneer ik typ , openen er spontaan allerlei menu’s .</sentence>
+</alpino_ds>

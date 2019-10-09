@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="wpa" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="wpa" word="WPA"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" cat="conj" end="5" id="4" rel="predc">
+        <node begin="2" buiging="zonder" end="3" graad="comp" id="5" lemma="recent" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="cnj" root="recent" word="recenter"/>
+        <node begin="3" conjtype="neven" end="4" id="6" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="4" buiging="zonder" end="5" graad="comp" id="7" lemma="veilig" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="cnj" root="veilig" word="veiliger"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>WPA is recenter en veiliger .</sentence>
+</alpino_ds>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="np" end="11" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" getal-n="zonder-n" id="2" lemma="in_voegen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="voeg_in" word="Invoegen" wvorm="inf"/>
+      <node begin="1" cat="pp" end="8" id="3" rel="mod">
+        <node begin="1" end="2" id="4" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="2" cat="conj" end="8" id="5" rel="obj1">
+          <node begin="2" cat="np" end="4" id="6" rel="cnj">
+            <node begin="2" end="3" id="7" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="8" lemma="symbool" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="symbool" word="symbool"/>
+          </node>
+          <node begin="4" conjtype="neven" end="5" id="9" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+          <node begin="5" cat="np" end="8" id="10" rel="cnj">
+            <node begin="5" end="6" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="speciaal" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="speciaal" word="speciaal"/>
+            <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="13" lemma="karakter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="karakter" word="karakter"/>
+          </node>
+        </node>
+      </node>
+      <node begin="8" cat="pp" end="11" id="14" rel="mod">
+        <node begin="8" end="9" id="15" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="9" cat="np" end="11" id="16" rel="obj1">
+          <node begin="9" end="10" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="18" lemma="email" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="email" word="e-mail"/>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Invoegen van een symbool of een speciaal karakter in een e-mail .</sentence>
+</alpino_ds>

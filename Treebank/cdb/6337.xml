@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="30" id="0" rel="top">
+    <node begin="16" end="17" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="25" end="26" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="29" id="3" rel="--">
+      <node begin="0" cat="smain" end="25" id="4" rel="nucl">
+        <node begin="0" cat="np" end="6" id="5" rel="su">
+          <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="6" lemma="uitgangspunt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="uitgangspunt" word="Uitgangspunt"/>
+          <node begin="1" cat="pp" end="6" id="7" rel="mod">
+            <node begin="1" end="2" id="8" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+            <node begin="2" cat="np" end="6" id="9" rel="obj1">
+              <node begin="2" end="3" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="11" lemma="voorstelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorstelling" word="voorstelling"/>
+              <node begin="4" cat="pp" end="6" id="12" rel="mod">
+                <node begin="4" end="5" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="14" lemma="Freehold" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Freehold" word="Freehold"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="6" end="7" id="15" lemma="lijken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="lijk" word="leek" wvorm="pv"/>
+        <node begin="7" end="8" genus="masc" getal="ev" id="16" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj2" root="hem" status="vol" vwtype="pers" word="hem"/>
+        <node begin="8" cat="np" end="25" id="17" rel="predc">
+          <node begin="8" end="9" id="18" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="19" lemma="bedrijf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bedrijf" word="bedrijf"/>
+          <node begin="10" cat="pp" end="25" id="20" rel="mod">
+            <node begin="10" end="11" id="21" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="11" cat="np" end="25" id="22" rel="obj1">
+              <node begin="11" end="12" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="12" buiging="met-e" end="13" graad="basis" id="24" lemma="nachtelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nachtelijk" word="nachtelijke"/>
+              <node begin="13" end="14" getal="mv" graad="basis" id="25" lemma="straat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="straat" word="straten"/>
+              <node begin="14" cat="pp" end="16" id="26" rel="mod">
+                <node begin="14" end="15" id="27" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="28" lemma="Berlijn" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Berlijn" word="Berlijn"/>
+              </node>
+              <node begin="17" cat="rel" end="25" id="29" rel="mod">
+                <node begin="17" end="18" id="30" index="1" lemma="waarin" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarin" word="waarin"/>
+                <node begin="17" cat="ssub" end="25" id="31" rel="body">
+                  <node begin="17" end="18" id="32" index="1" rel="mod"/>
+                  <node begin="18" cat="np" end="23" id="33" rel="su">
+                    <node begin="18" end="19" id="34" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="19" end="20" getal="mv" graad="basis" id="35" lemma="trommel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="trommel" word="trommels"/>
+                    <node begin="20" cat="pp" end="23" id="36" rel="mod">
+                      <node begin="20" end="21" id="37" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                      <node begin="21" cat="np" end="23" id="38" rel="obj1">
+                        <node begin="21" end="22" id="39" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                        <node begin="22" end="23" genus="genus" getal="ev" graad="basis" id="40" lemma="Spartacus-opstand" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="opstand" word="Spartacus-opstand"/>
+                      </node>
+                    </node>
+                  </node>
+                  <node begin="23" buiging="zonder" end="24" graad="basis" id="41" lemma="vergeefs" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="vergeefs" word="vergeefs"/>
+                  <node begin="24" end="25" id="42" lemma="klinken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="klink" word="klinken" wvorm="pv"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="26" cat="np" end="29" id="43" rel="sat">
+        <node begin="26" cat="np" end="28" id="44" rel="det">
+          <node begin="26" end="27" id="45" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="46" lemma="soort" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="soort" word="soort"/>
+        </node>
+        <node begin="28" end="29" genus="onz" getal="ev" graad="basis" id="47" lemma="walpurgisnacht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="nacht" word="Walpurgisnacht"/>
+      </node>
+    </node>
+    <node begin="29" end="30" id="48" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Uitgangspunt voor de voorstelling van Freehold leek hem het bedrijf in de nachtelijke straten van Berlijn , waarin de trommels van de Spartacus-opstand vergeefs klinken , een soort Walpurgisnacht .</sentence>
+</alpino_ds>

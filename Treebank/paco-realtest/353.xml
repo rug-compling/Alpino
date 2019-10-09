@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="30" id="0" rel="top">
+    <node begin="22" end="23" id="1" pos="punct" rel="--" root="-" special="ligg_streep" word="-"/>
+    <node begin="0" cat="du" end="29" id="2" rel="--">
+      <node begin="0" cat="conj" end="22" id="3" rel="dp">
+        <node begin="0" cat="smain" end="10" id="4" rel="cnj">
+          <node begin="0" cat="np" end="2" id="5" index="1" rel="su">
+            <node begin="0" end="1" id="6" infl="de" pos="det" rel="det" root="de" word="De"/>
+            <node begin="1" end="2" gen="de" id="7" num="sg" pos="noun" rel="hd" root="spel_theorie" word="speltheorie"/>
+          </node>
+          <node begin="2" end="3" id="8" infl="sg" pos="verb" rel="hd" root="ben" sc="passive" tense="past" word="was"/>
+          <node begin="0" cat="ppart" end="10" id="9" rel="vc">
+            <node begin="0" end="2" id="10" index="1" rel="obj1"/>
+            <node aform="base" begin="3" end="4" id="11" infl="no_e" pos="adj" rel="mod" root="oorspronkelijk" vform="adj" word="oorspronkelijk"/>
+            <node begin="4" end="5" id="12" infl="psp" pos="verb" rel="hd" root="bedoel" sc="nonp_pred_np" word="bedoeld"/>
+            <node begin="5" cat="cp" end="10" id="13" rel="predc">
+              <node begin="5" end="6" id="14" pos="comp" rel="cmp" root="als" sc="als" word="als"/>
+              <node begin="6" cat="np" end="10" id="15" rel="body">
+                <node aform="base" begin="6" end="7" id="16" infl="no_e" pos="adj" rel="mod" root="wiskundig" vform="adj" word="wiskundig"/>
+                <node begin="7" end="8" gen="het" id="17" num="sg" pos="noun" rel="hd" root="model" word="model"/>
+                <node begin="8" cat="pp" end="10" id="18" rel="mod">
+                  <node begin="8" end="9" id="19" pos="prep" rel="hd" root="voor" word="voor"/>
+                  <node begin="9" end="10" gen="de" id="20" num="sg" pos="noun" rel="obj1" root="strategie" word="strategie"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="10" end="11" id="21" pos="vg" rel="crd" root="maar" word="maar"/>
+        <node begin="0" cat="smain" end="22" id="22" rel="cnj">
+          <node begin="0" end="2" id="23" index="1" rel="su"/>
+          <node begin="11" end="12" id="24" infl="sg" pos="verb" rel="hd" root="blijk" sc="copula" tense="past" word="bleek"/>
+          <node begin="12" end="13" id="25" pos="adv" rel="mod" root="ook" special="sentence" word="ook"/>
+          <node aform="base" begin="13" end="14" id="26" infl="no_e" pos="adj" rel="predc" root="nuttig" vform="adj" word="nuttig"/>
+          <node begin="14" cat="pp" end="22" id="27" rel="mod">
+            <node begin="14" end="15" id="28" pos="prep" rel="hd" root="bij" word="bij"/>
+            <node begin="15" cat="np" end="22" id="29" rel="obj1">
+              <node begin="15" end="16" id="30" infl="het" pos="det" rel="det" root="het" wh="nwh" word="het"/>
+              <node begin="16" end="17" id="31" pos="verb" rel="hd" root="onderbouw" sc="intransitive" special="v_noun" word="onderbouwen"/>
+              <node begin="17" cat="pp" end="22" id="32" rel="mod">
+                <node begin="17" end="18" id="33" pos="prep" rel="hd" root="van" word="van"/>
+                <node begin="18" cat="np" end="22" id="34" rel="obj1">
+                  <node begin="18" end="19" id="35" infl="de" pos="det" rel="det" root="de" word="de"/>
+                  <node begin="19" cat="ap" end="21" id="36" rel="mod">
+                    <node aform="super" begin="19" end="20" id="37" infl="no_e" pos="adj" rel="mod" root="goed" vform="adj" word="best"/>
+                    <node aform="base" begin="20" end="21" id="38" infl="e" pos="adj" rel="hd" root="mogelijk" vform="adj" word="mogelijke"/>
+                  </node>
+                  <node begin="21" end="22" gen="de" id="39" num="sg" pos="noun" rel="hd" root="beslissing" word="beslissing"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="23" cat="inf" end="29" id="40" rel="dp">
+        <node begin="23" cat="mwu" end="26" id="41" mwu_root="al_dan_niet" mwu_sense="al_dan_niet" rel="mod">
+          <node begin="23" end="24" id="42" pos="adv" rel="mwp" root="al" word="al"/>
+          <node begin="24" end="25" id="43" pos="adv" rel="mwp" root="dan" word="dan"/>
+          <node begin="25" end="26" id="44" pos="adv" rel="mwp" root="niet" word="niet"/>
+        </node>
+        <node begin="26" end="27" id="45" infl="inf" pos="verb" rel="hd" root="werk_samen" sc="part_pc_pp(samen,met)" word="samenwerken"/>
+        <node begin="27" cat="pp" end="29" id="46" rel="pc">
+          <node begin="27" end="28" id="47" pos="prep" rel="hd" root="met" word="met"/>
+          <node begin="28" end="29" gen="de" id="48" num="pl" pos="noun" rel="obj1" root="rivaal" word="rivalen"/>
+        </node>
+      </node>
+    </node>
+    <node begin="29" end="30" id="49" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>De speltheorie was oorspronkelijk bedoeld als wiskundig model voor strategie maar bleek ook nuttig bij het onderbouwen van de best mogelijke beslissing - al dan niet samenwerken met rivalen .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

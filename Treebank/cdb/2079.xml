@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="14" end="15" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="22" id="3" rel="--">
+      <node begin="0" end="1" getal="getal" id="4" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+      <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+      <node begin="2" cat="np" end="22" id="6" rel="su">
+        <node begin="2" cat="detp" end="6" id="7" rel="det">
+          <node begin="2" cat="mwu" end="5" id="8" rel="mod">
+            <node begin="2" end="3" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="adv" postag="LID(onbep,stan,agr)" pt="lid" rel="mwp" root="een" word="een"/>
+            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="10" lemma="stuk" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="stuk" word="stuk"/>
+            <node begin="4" conjtype="neven" end="5" id="11" lemma="of" pos="adv" postag="VG(neven)" pt="vg" rel="mwp" root="of" word="of"/>
+          </node>
+          <node begin="5" end="6" id="12" lemma="dertig" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="dertig" word="dertig"/>
+        </node>
+        <node begin="6" end="7" getal="mv" graad="dim" id="13" lemma="deel" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" root="deeltje" word="deeltjes"/>
+        <node begin="8" cat="rel" end="22" id="14" rel="mod">
+          <node begin="8" end="9" getal="getal" id="15" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+          <node begin="8" cat="ssub" end="22" id="16" rel="body">
+            <node begin="8" end="9" id="17" index="1" rel="su"/>
+            <node begin="9" end="10" id="18" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="predm" root="allemaal" word="allemaal"/>
+            <node begin="11" end="12" id="19" lemma="konden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kan" word="konden" wvorm="pv"/>
+            <node begin="8" cat="inf" end="22" id="20" rel="vc">
+              <node begin="8" end="9" id="21" index="1" rel="su"/>
+              <node begin="12" buiging="zonder" end="13" id="22" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+              <node begin="8" cat="ppart" end="22" id="23" rel="vc">
+                <node begin="8" end="9" id="24" index="1" rel="obj1"/>
+                <node begin="10" buiging="zonder" end="11" graad="dim" id="25" lemma="netjes" pos="adj" positie="vrij" postag="ADJ(vrij,dim,zonder)" pt="adj" rel="mod" root="netjes" word="netjes"/>
+                <node begin="13" buiging="zonder" end="14" id="26" lemma="classificeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="classificeer" word="geclassificeerd" wvorm="vd"/>
+                <node begin="15" cat="cp" end="22" id="27" rel="mod">
+                  <node begin="15" end="16" id="28" lemma="al" pos="comp" postag="BW()" pt="bw" rel="cmp" root="al" word="al"/>
+                  <node begin="16" cat="sv1" end="22" id="29" rel="body">
+                    <node begin="16" end="17" id="30" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+                    <node begin="17" cat="np" end="20" id="31" rel="su">
+                      <node begin="17" buiging="zonder" end="18" getal="mv" id="32" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+                      <node begin="18" buiging="met-e" end="19" graad="basis" id="33" lemma="onderling" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="onderling" word="onderlinge"/>
+                      <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="34" lemma="verband" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verband" word="verband"/>
+                    </node>
+                    <node begin="20" end="21" id="35" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+                    <node begin="21" buiging="zonder" end="22" graad="basis" id="36" lemma="overduidelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="overduidelijk" word="overduidelijk"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Er waren een stuk of dertig deeltjes , die allemaal netjes konden worden geclassificeerd , al was hun onderlinge verband niet overduidelijk .</sentence>
+</alpino_ds>

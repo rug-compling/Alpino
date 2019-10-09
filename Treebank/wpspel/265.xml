@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="0" cat="whq" end="18" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="whd">
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="welk" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welk"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="terechtstellingsgereedschap" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gereedschap" word="terechtstellingsgereedschap"/>
+      </node>
+      <node begin="0" cat="sv1" end="18" id="5" rel="body">
+        <node begin="0" end="2" id="6" index="1" rel="su"/>
+        <node begin="2" end="3" id="7" lemma="bestaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="besta" word="bestaat" wvorm="pv"/>
+        <node begin="3" cat="pp" end="18" id="8" rel="pc">
+          <node begin="3" end="4" id="9" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+          <node begin="4" cat="np" end="18" id="10" rel="obj1">
+            <node begin="4" end="5" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="12" lemma="mes" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="mes" word="mes"/>
+            <node begin="6" cat="pp" end="10" id="13" rel="mod">
+              <node begin="6" end="7" id="14" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+              <node begin="7" cat="np" end="10" id="15" rel="obj1">
+                <node begin="7" end="8" id="16" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="8" buiging="met-e" end="9" graad="basis" id="17" lemma="schuin" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="schuin" word="schuine"/>
+                <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="snede" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="snede" word="snede"/>
+              </node>
+            </node>
+            <node begin="10" cat="rel" end="18" id="19" rel="mod">
+              <node begin="10" end="11" getal="ev" id="20" index="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
+              <node begin="10" cat="ssub" end="18" id="21" rel="body">
+                <node begin="10" end="11" id="22" index="2" rel="su"/>
+                <node begin="11" cat="pp" end="14" id="23" rel="mod">
+                  <node begin="11" end="12" id="24" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>
+                  <node begin="12" cat="np" end="14" id="25" rel="obj1">
+                    <node begin="12" end="13" id="26" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
+                    <node begin="13" end="14" getal="mv" graad="basis" id="27" lemma="paal" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="paal" word="palen"/>
+                  </node>
+                </node>
+                <node begin="14" cat="mwu" end="17" id="28" rel="ld">
+                  <node begin="14" end="15" id="29" lemma="op" pos="adv" postag="VZ(fin)" pt="vz" rel="mwp" root="op" vztype="fin" word="op"/>
+                  <node begin="15" conjtype="neven" end="16" id="30" lemma="en" pos="adv" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
+                  <node begin="16" end="17" id="31" lemma="neer" pos="adv" postag="BW()" pt="bw" rel="mwp" root="neer" word="neer"/>
+                </node>
+                <node begin="17" end="18" id="32" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="33" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welk terechtstellingsgereedschap bestaat uit een mes met een schuine snede dat tussen twee palen op en neer gaat ?</sentence>
+</alpino_ds>

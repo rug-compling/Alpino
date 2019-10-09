@@ -1,0 +1,631 @@
+\documentstyle[12pt,a4wide,epsf]{article} 
+% Specifies the document style.
+
+\parindent0mm \parskip1.5ex plus 0.5ex minus 0.5ex
+\pagestyle{plain}  % Vielleicht aber doch...
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+\makeindex
+\frenchspacing
+\textheight 22cm % DIN_A4 = 22 cm
+
+\setlength{\arraycolsep}{0.0mm}
+\def\epsfsize#1#2{\epsfxsize}
+
+%indexhack
+\newcommand{\indexentry}[2]
+{\item #1 #2}
+
+\newcommand{\toindex}[1]
+{\index{#1}#1}
+
+\newcommand{\itindex}[1]
+{\index{#1}{\em #1}}
+
+\newcommand{\fig}[1]{fig. \ref{#1}}
+
+\hyphenation{}
+
+\bibliographystyle{pubsbib}
+
+\begin{document}
+
+\title{Extending {\sc Clig}: Interaction and User Defined Graphics}
+
+\author{Karsten Konrad, konrad@coli.uni-sb.de}
+
+
+
+\maketitle
+
+\abstract{The {\sc Clig} grapher for linguistic data structures has
+ been designed to be extendible for both user defined and interactive
+ graphics. This paper describes how a user can add new graphical
+ objects to the grapher by adding {\sc Tcl}-code to its sources and
+ how interaction between the grapher and an underlying application can
+ be programed.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Inhaltsverzeichnis %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+\cite{konrad 95a} describes the {\sc Clig} grapher and its use as a
+general tool for visualizing common linguistic graphical notations. The
+main purpose of the program is its use as a graphical interface for
+applications in computational linguistics. These applications can
+display their data by creating {\it description strings\/} and sending
+them to the grapher. These strings are hierarchical textual
+descriptions of the graphical structures. E.g., the following text is
+the description for the graphical structure seen in Figure \ref{ex-1}:
+
+\begin{quote}
+\begin{verbatim}
+{drs {plain-text B}
+     {tree {plain-text s} 
+           {plain-text B} 
+           {tree {plain-text vp1} 
+                 {tree {plain-text vp} 
+                       {tree {plain-text v} 
+                             {plain-text owns}} 
+                       {tree {plain-text np} 
+                              {tree {plain-text pn} 
+                                    {plain-text ulysses}}}}}} 
+      {plain-text jones(B)}}
+\end{verbatim}
+\end{quote}
+
+\begin{figure}[ht]
+\begin{center}
+\leavevmode
+\epsfbox{drs-tree.ps}
+\caption{A DRS with a tree nested inside.}
+\label{ex-1}
+\end{center}
+\end{figure}
+
+With its description string language, {\sc Clig} provides a wide range
+of possibilities to create the graphical representations one has in
+mind. Objects can e.g. be ordered in stacks or sequences, can be put
+in boxes or can each be assigned colors separately. The basic
+notations like trees, texts or DRS boxes can be nested freely within
+each other, producing complex graphical structures like. However, for
+certain applications, the grapher's built-in facilities might not be
+sufficient to produce the desired output. {\sc Clig} has been
+designed in a way that makes it relatively easy to add new graphical
+features. Section \ref{extend} describes how a user can add his or her
+own graphical objects to the grapher.
+
+By linking objects in the description string to pieces of code, an
+application defines {\it interactive\/} graphics where a user can
+perform application-dependent actions by clicking on objects with the
+mouse cursor. Interactive graphics are under the control of the
+application which creates the description strings. The application
+decides which objects behave in what way by sending the appropriate
+code with their descriptions. Interaction between grapher and
+application is freely programmable and therefore very flexible, but
+may also require some effort on the side of the programmer of the
+application. {\sc Clig} is extendible in the sense that the application
+programmer can add the amount of interactive behavior needed for the
+specific application. Section \ref{interact} explains how interfaces
+between applications and the grapher can be build.
+
+\subsection{Tcl/Tk as the programming environment}
+
+{\sc Clig} has been implemented using the software package {\sc
+Tcl/Tk}, a programming system for graphical user interfaces. {\sc
+Tcl}, the {\it tool command language\/}, is a simple interpreted
+scripting language providing basic programming facilities like
+variables, procedure definitions and loops.  {\sc Tk} is a toolkit for
+the X Windows System that extends the core {\sc Tcl}-language with
+commands to build Motif-like graphical user interfaces. The {\sc
+Tcl/Tk} package can be used via the interpreter program {\sc Wish}
+that contains the language interpreter for {\sc Tcl} and the {\sc Tk}
+toolkit. {\sc Clig}'s source code is a set of {\sc Tcl} scripts which
+gets interpreted by {\sc Wish}.
+
+The use of Tcl/Tk has some obvious advantages and one minor drawback.
+One advantage is portability: {\sc Tcl/Tk} is free and widely available
+for different OS-platforms. The X-Windows functionality used by {\sc
+Tk} gets emulated for foreign systems like Windows or Mac OS. Another
+advantage is the {\it rapid prototyping\/} of code. Since {\sc Tcl}
+gets interpreted, code extensions or modifications for the grapher can
+be loaded on-the-fly without the need for recompilations. Modified code
+simply overwrites old, while new code can be added following {\sc
+Clig}'s simple code conventions (see section \ref{code}).  In contrast
+to C or C++, {\sc Tcl/Tk} hides low-level details of the X-Windows
+environment from its users, making it generally easier to write {\sc
+Tcl/Tk} graphical user interfaces than C/C++ user interfaces.  The
+minor disadvantage of {\sc Tcl/Tk} is the slower execution speed of the
+interpreted {\sc Tcl} code which can be circumvented by writing C
+routines for time-critical algorithms. Thanks to the speed of modern
+work stations, this kind of optimization is rarely necessary. {\sc
+Clig} currently does not contain any non-{\sc Tcl} code.
+
+\section{Interaction}
+\label{interact}
+
+An interactive graphical structure contains parts which are mouse
+sensitive; in {\sc Clig} these parts are linked to small {\sc Tcl}
+programs called {\it scripts}. A {\sc Tcl} script in an interactive
+graphical structure could e.g. open a pop-up menu or ask an application
+for more information on whatever a user has clicked on. The linking of
+code to graphical objects in the description strings can be done by the
+special commands {\tt clickable} and {\tt active}.
+
+\subsection{The {\tt clickable} command}
+
+The {\tt clickable} command uses one single script which gets executed
+when the user {\it double-clicks\/} on the associated object.  The
+command takes two arguments, the object to be drawn and the {\sc Tcl}
+script linked to it.  The following example creates a mouse sensitive
+text box which produces a short message when clicked by the user:
+
+\begin{quote}
+\begin{verbatim}
+{clickable {bigbox plain-text "click me!"} 
+           {puts "YOU CLICKED ME!"}}
+\end{verbatim}
+\end{quote}
+
+\subsection{The {\tt active} command}
+
+The {\tt active} command can define multiple possibilities for the
+same object or define special behaviors.  It allows the use of
+several event-script pairs for the same object. An {\it event\/} can
+be any X-Window event known in {\sc Tk} such as {\tt <Leave>}, {\tt
+<1>}, {\tt <Double-3>} etc.
+
+The general syntax for {\tt active} is 
+
+\begin{quote}
+\begin{verbatim}
+{active <object> {<event> <script>} ... {<event> <script>}}
+\end{verbatim}
+\end{quote}
+If you wanted the message from the last example to appear when the
+middle mouse button gets clicked once, you would express it like this:
+
+\begin{quote}
+\begin{verbatim}
+{active {bigbox plain-text "click me!"} 
+        {<2> {puts "YOU CLICKED ME!"}}}
+\end{verbatim}
+\end{quote}
+
+\subsubsection{Popup menues}
+
+Popup menues are a standard feature of {\sc Tk} which have been
+included into the {\tt active} command in recent {\sc Clig} versions
+(Version 1.4 or greater). {\tt Active} accepts the keyword {\tt popup}
+in a event-command-pair and uses the command part as a definition of a
+popup menu as described in \cite{Ousterhout 94}. The following example
+defines a box which shows a popup menu when clicked on. When you select
+one of the buttons in it, it will print a short message.
+
+\begin{quote}
+\begin{verbatim}
+{active {bigbox {color red {plain-text "CLICK ME!"}}}
+             {popup <1> {{command -label "TEST1" 
+                                -command "puts TEST1"}
+                         {command -label "TEST2" 
+                                -command "puts TEST2"}
+                         {separator}
+                         {command -label "TEST3" -command "puts
+             TEST3"}}}}
+\end{verbatim}
+\end{quote}
+
+\subsection{Application meets {\sc Clig}}
+
+The concept of interfaces between applications and {\sc Clig} is shown
+in Figure \ref{archy1}. The application ``talks'' to the grapher by
+sending it description strings. Some systems like {\sc Sicstus3} have
+their own {\sc Tcl/Tk} interface which can be used for this. Another
+way to create an interface to the grapher is the use of the {\bf send}
+mechanism which can be used by any {\sc Tk} application. We are also
+currently working on a very simple interface which uses {\sc Clig}'s
+standard input and output. In all these cases, the main drawing routine
+{\tt clig} gets called by the application with an description string
+containing {\tt clickable} or {\tt active} commands. The commands use
+{\sc Tcl} scripts which in response to a mouse action force the
+application to do something. The following example is taken from a
+larger description string.
+
+\begin{quote}
+\begin{verbatim}
+{bigbox clickable 
+	{plain-text "app(1,2)"}
+	{prolog_event "click(sem_node, d1, 3)"}}
+\end{verbatim}
+\end{quote}
+
+The example structure is created by the educational tool developed in
+the FraCaS project. The tool uses the {\sc Tcl/Tk} interface provided
+by {\sc Sicstus3} Prolog. In the example, the text {\tt app(1,2)} is
+linked to a script specifying that a
+\verb'prolog_event' command gets executed when the text gets
+double-clicked with the mouse. The \verb'prolog_event' command results
+in an event which gets noticed by a loop in Prolog waiting for such an
+event. The string \verb'click(sem_node, d1, 3)' informs Prolog that the
+node {\tt 3} has been clicked on. The main loop then can take the
+appropriate action and will display a new graph where node 1 has been
+applied to node 2.
+
+The concrete realization of the interface between an application and
+{\sc Clig} depends on what the host system offers as a means of
+communicating with {\sc Tcl/Tk}. We are currently experimenting with
+different general approaches like using a TCP/IP channel or simple
+standard input/output piping to allow a common interface.
+
+
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\epsfbox{architekt.eps}
+\caption{Application-to-Clig interaction.}
+\label{archy1}
+\end{center}
+\end{figure}
+
+\section{Adding graphical objects}
+\label{extend}
+
+This section describes how user defined objects can be included into
+the grapher. Subsection \ref{descr} explains how code extensions
+appear in the description strings which are used for all
+representation and interfacing purposes within the grapher. Subsection
+\ref{code} explains the conventions necessary for code extensions.
+
+\subsection{Description strings}
+\label{descr}
+
+The description of a graphical object in {\sc Clig} is done with a
+hierarchical list in {\sc Tcl}-syntax, the {\em description
+string}. The general syntax of a description string is
+
+\begin{quote}
+\begin{verbatim}
+{<command> <parameter_1> ... <parameter_n>}
+\end{verbatim}
+\end{quote}
+
+Most commands take description strings as their parameters. If a
+command takes only one description as parameter, the command is said
+to {\it modify\/} the description. The general syntax for such a
+modifying command is
+
+\begin{quote}
+\begin{verbatim}
+{<modify-command> <command> <parameter_1> ... <parameter_n>}
+\end{verbatim}
+\end{quote}
+
+E.g. a description string like \verb'{neg plain-text "x"}'  is a
+Tcl-list with 3 members, with the first two of them being
+commands. The {\tt neg} command modifies the output of the {\tt
+plain-text} command by putting a negation in front of the text.
+
+Whenever {\sc Clig} draws a graph, it really interprets a
+description string like this as a piece of {\sc Tcl}-code which lacks
+some information, e.g. the exact positioning of the objects. The
+description string gets executed by an internal interpreter which
+recursively fills in the missing information after it has calculated
+the correct positions of all objects in the drawing area. Each command
+in the description string has an equivalent {\sc Tcl} procedure which
+gets called with the missing information and all parameters. Extending
+{\sc Clig} means writing such procedures and adding them to the source
+code. 
+
+As an example, take a look at the code which is responsible for drawing
+negations:
+
+\begin{quote}
+\begin{verbatim}
+proc neg {x y where mtags obj} { ;# draw negated drs
+        seq $x $y $where $mtags \
+        [list {sign neg} {plain-text " "} $obj]}
+\end{verbatim}
+\end{quote}
+
+Without going into details, the code for {\tt neg} simply calls another
+command used in {\sc Clig}, {\tt seq}, with three graphical objects,
+the negation sign, a space character and the object which should be
+negated. The {\tt seq} command gets some additional parameters it
+inherits from the {\tt neg}-call, namely $x$ and $y$ for the exact
+position of the object, $where$ for the canvas which should be used
+({\sc Clig} uses two canvases, one for actual drawing and one for
+calculating the size of an object) and $mtags$ which is used for active
+(clickable) regions. The $mtags$ parameter contains a set of labels and
+usually is only manipulated by the {\tt active} and {\tt clickable}
+procedures for grouping together objects with the same scripts linked
+to them. All other commands do not change $mtags$ but must inherit this
+parameter to each of its daughters. By inheriting labels to their
+daughters, clickable objects correctly execute their associated script
+when one of their daughter objects are clicked on.
+
+\subsection{Code conventions}
+\label{code}
+
+Each graphical command for {\sc Clig} must have exactly 5 parameters:
+the $x$ and $y$ positions of the top left corner, the $where$ canvas,
+the $mtags$ parameter and an additional parameter $obj$ containing
+everything that was in the object description string except the command
+name itself.
+
+Each command must return the width and height of the drawn object as a
+list. A good example of the use of the sizes would be the code for {\tt
+underline} which simply underlines another object:
+
+\begin{quote}
+\begin{verbatim}
+proc underline {x y where mtag obj} { 
+        ;# drawing
+        set size [execobj $obj $x $y $where $mtag]
+        ;#
+        set yline [expr $y+[lindex $size 1]+2]
+        $where create line $x $yline \
+                           [expr $x+[lindex $size 0]] $yline
+        ;# returning the complete size of the underlined
+        ;# object:
+        list [lindex $size 0] [expr $yline-$y]}
+\end{verbatim}
+\end{quote}
+
+The {\tt underline} procedure first draws the object $obj$ by calling
+{\tt execobj}, the main drawing function which tries to execute the
+description string $obj$ at position $x$,$y$. {\tt execobj}, the
+interpreter procedure, returns the width and height of the object
+which {\tt underline} uses to calculate where ($y$ position $+$ 2
+points) and with which width to draw the line under the object. {\tt
+underline} returns the width of the object and the height $+$ 2 points
+as the size of the object drawn.
+
+This example covers almost everything one has to know about writing
+code for extending the grapher. A procedure has to have a unique name,
+must use the 5 formal parameters described above and must return the
+correct width and height of the object it draws---and then it is a
+legal extension of the grapher. An application can simply load the
+additional code using the methods described in section \ref{include}
+and then use the new procedures in the same way as the ``factory''
+commands {\sc Clig} provides. A user can even replace the built-in
+commands by simply overwriting them with his own code since {\sc Tcl}
+will not report an error for redefining procedures. In this way, an
+application might modify the graphical output for its special needs,
+e.g. by either optimizing for beautiful layout or speed, without the
+need for actually changing the original code.
+
+Admitedly, the simple convention used here has a few practical
+drawbacks. The layout algorithm of an object can only use rectangular
+regions for calculating the positions of its daughters. In the case of
+objects with very irregular shape, this may result in a waste of space
+and/or may result in an aesthetically unsatisfying result. Another
+drawback ist the strict top-down approach of drawing the graphics.
+Some graphical structures must calculate the size of their daughters
+before they can actually draw them; in this case a bottom-up approach
+would be better. However, the nasty side effect of having to draw
+objects unecessarily because of repeated size calculations with {\sc
+Clig}'s top-down algorithm can be circumvented by using the {\tt
+calcsize} command described in the next section.
+
+\subsection{Canvases and calculating sizes}
+
+Sometimes a command has to know the size of an object {\em before\/} it
+gets drawn. E.g., the {\tt stack} command stacks several objects on top
+of each other; the command uses the size of the biggest box as the
+maximum $x$ size of the whole object and centers all objects within
+this maximum size. Therefore, before any object gets drawn, {\tt stack}
+calculates all sizes and stores the maximum in the variable $xsize$. A
+simplified version of this calculation routine would look like this:
+
+\begin{quote}
+\begin{verbatim}
+foreach item $stack {
+        set size [calcsize $item]
+        set xsize [max $xsize [lindex $size 0]]}
+\end{verbatim}
+\end{quote}
+
+The procedure which calculates the size of all objects, {\tt calcsize},
+actually draws the object on an invisible canvas and returns the
+size which every {\sc Clig} drawing procedure returns.
+
+The {\tt calcsize} procedure is almost identical to {\tt execobj}
+except that it does not need any coordinates nor $mtags$ which only
+play a role in the visible drawing area. While {\tt execobj} uses the
+visible {\it .graphics} canvas, {\tt calcsize} simply uses the canvas
+{\it .invisible}. This special canvas never gets displayed by the
+grapher; it only exists for evaluating sizes. Procedures can take
+advantage of this distinction by minimizing what actually gets drawn
+during size evaluation. Since drawing in an invisible area does not
+have to look good or even complete, procedures may leave out any
+actual drawing whenever they encounter {\tt .invisible} as their
+$where$ parameter, as long as they can calculate the correct size of
+the object they draw.
+
+As an additional optimization, {\tt calcsize} uses a {\it
+memoization\/} technique for storing sizes it already has calculated.
+
+
+\subsection{Including your own code}
+\label{include}
+
+To include your own code into {\sc Clig}, you can simply change the
+file {extend.tcl} in the {\sc Clig}-directory so that it loads your
+files when you start the grapher. The only problem with this is that
+the extensions get loaded whether they are needed or not and that you
+have to modify {\tt extend.tcl} whenever you install the grapher. An
+application using {\sc Clig} usually can do better by simply
+performing the {\tt source} command of {\sc Tcl}. In this way, an
+extension gets loaded only when needed by the specific application. 
+
+
+\subsection{An example: Circles}
+
+Supposed that you wanted to write a package for {\sc Clig} for
+displaying e.g. {\em finite state machines\/} and therefore needed
+circles to represent the states of the machine. In this case you would
+have to write your own code, since circles are not supported in the
+standard release of {\sc Clig}.
+
+The first step would be to create a new file {\tt circle.tcl} and to
+add this file to the {\tt extend.tcl} loading list as described in
+section \ref{include}. The file {\tt circles.tcl} will be loaded
+whenever you run {\sc Clig}. Every time you change your code, you can
+include your changes simply by exiting your old {\sc Clig} and restarting
+it again. An even easier way would be to use the {\bf Load...}  option
+from the {\sc Clig} main menu. Although this option usually is used to
+load object descriptions, it also is able to load arbitrary {\sc Tcl}
+source code.
+
+Now you can add the circle code. You want to use the commands {\tt
+state} for a normal state and {\tt final} for a final state in your
+finite state package. A state simply consists of a circle of a
+certain size, while a final state will be displayed as two concentric
+circles. Additionally, you want to have states to have arbitrary sizes,
+so that \verb'{final 20}' will display a finite state with a radius of 
+20 points.
+
+The code for a normal state could look like this:
+
+\begin{quote}
+\begin{verbatim}
+procedure state {x y where mtags rad} {
+        set rad_size [expr $rad*2] 
+        $where create oval $x $y \
+                           [expr $x+$rad_size] \ 
+                           [expr $y+$rad_size] \
+                           -outline black -tags $mtags
+        list $rad_size $rad_size}
+\end{verbatim}
+\end{quote}
+
+Since you wanted the state to have a radius of $rad$, the size of the
+complete object will be 2 $rad$ in x and 2 $rad$ in y direction. The
+procedure draws an oval with a black outline which bears the labels
+$mtags$. The labels are necessary for interactive graphs, see
+section \ref{interact}.
+The code does draw an oval whenever the procedure gets called, but this
+may not always be necessary. Trees and other complex structures often
+check for the size of their daughters just to see where they can be
+placed. The following refinement of the code leaves out this unnecessary
+drawing of the circle:  
+
+\begin{quote}
+\begin{verbatim}
+proc state {x y where mtags rad} {
+        set rad_size [expr $rad*2] 
+        if {$where!=".invisible"} {
+           $where create oval $x $y \
+                              [expr $x+$rad_size] \ 
+                              [expr $y+$rad_size] \
+                              -outline black -tags $mtags}
+        list $rad_size $rad_size}
+\end{verbatim}
+\end{quote}
+
+This version only draws the circle when the destination canvas is not
+equal to {\tt .invisible}.
+The code for final states is very similar to the code for states; it
+just puts a smaller circle inside the outer circle.
+
+\begin{quote}
+\begin{verbatim}
+proc final {x y where mtags rad} {
+        set rad_size [expr $rad*2] 
+        set offset 3
+        if {$where!=".invisible"} {
+           $where create oval $x $y \
+                              [expr $x+$rad_size] \ 
+                              [expr $y+$rad_size] \
+                              -outline black -tags $mtags
+           $where create oval [expr $x+$offset] \
+                              [expr $y+$offset] \
+                              [expr $x+$rad_size-$offset] \ 
+                              [expr $y+$rad_size-$offset] \
+                              -outline black -tags $mtags}
+        list $rad_size $rad_size}
+\end{verbatim}
+\end{quote}
+
+After rerunning {\sc Clig}, you should have the possibility to display
+states and final states as displayed. For a quick test, just type in the
+following test file in a text editor and load it with {\sc Clig}:
+
+\begin{quote}
+\begin{verbatim}
+# example: two states
+clig {Seq {state 20}
+          {final 20}}
+\end{verbatim}
+\end{quote}
+
+\subsection{Colors}
+
+The {\tt color} command provides an easy way to add color information
+to graphs. User defined object code must include the following to be
+compatible with the {\tt color} command:
+
+\begin{itemize}
+\item the command \verb'globals main_color' to make the global variable
+\verb'main_color' known to the procedure
+\item each drawing command (like e.g. drawing a line) must use
+\verb'main_color' for the main drawing color. Most drawing commands,
+e.g.  {\tt create line} use {\tt -fill} as the option for specifying
+the foreground color.
+\end{itemize}
+
+The code for {\tt underline} contains only one drawing command, the
+{\tt create line} code which draws the underlining line. With 
+\verb'-fill $main_color', the line's color can be changed by a {\tt
+color} command:
+
+\begin{quote}
+\begin{verbatim}
+proc underline {x y where mtag obj} { ;# line under object
+        global main_color
+        set size [execobj $obj $x $y $where $mtag]
+        set yline [expr $y+[lindex $size 1]+1]
+        $where create line $x $yline \
+                           [expr $x+[lindex $size 0]] $yline \
+                           -tags $mtag -fill $main_color
+        list [lindex $size 0] [expr $yline-$y]}
+\end{verbatim}
+\end{quote}
+ 
+
+\newpage
+\begin{thebibliography}{kako}
+   \bibitem[Fracas 95]{Fracas 95}
+        Robin Cooper, Dick Crouch, Jan van Eijck, Chris Fox,
+        Josef van Genabith, Jan Jaspars, Hans Kamp,
+        Manfed Pinkal, Massimo Poesio and Steve Pulman.
+        {\em Evaluating the State of the Art}. FraCaS Deliverable D10.
+        University of Edingburgh, Centre for Cognitive Sciences. 
+   \bibitem[Kamp 93]{kamp 93} Hans Kamp and Uwe Reyle.
+        {\em From Discourse to Logic}.  Kluwer Academic Press,
+        Dordrecht - Boston - London, 1993 
+   \bibitem[Konrad 95a]{konrad 95a} Karsten Konrad. {\em The {\sc Clig}
+           grapher for linguistic data structures}. 
+           unpublished, 1995.
+   \bibitem[Ousterhout 94]{Ousterhout 94} John K. Ousterhout. {\em Tcl
+           and the Tk Toolkit\/}.  Reading, Massachusetts - Menlo Park,
+           California - New York, Addison-Wesley Professional Computing
+           Series, 1994.  
+   \bibitem[Pollard 87]{Pollard 87} Carl Pollard
+           and Ivan A. Sag. {\em Information-Based Syntax and
+           Semantics. Volume 1: Fundamentals}. CSLI Lecture Notes,
+           Menlo Park - Stanford - Palo Alto, Center for the Study of 
+           Language and Information (CSLI), 1987
+   \bibitem[Sicstus 95]{Sicstus 95} Programming Systems Group of the
+           Swedish Institute of Computer Science. {\em SICStus Prolog
+           User's Manual}. Release 3. Swedish Institute of Computer 
+           Science, 1995.
+\end{thebibliography}
+
+\end{document}

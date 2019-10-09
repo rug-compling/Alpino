@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="16" id="2" rel="--">
+      <node begin="0" cat="mwu" end="2" id="3" rel="su">
+        <node begin="0" end="1" id="4" lemma="Jan" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jan" spectype="deeleigen" word="Jan"/>
+        <node begin="1" end="2" id="5" lemma="Tinbergen" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Tinbergen" spectype="deeleigen" word="Tinbergen"/>
+      </node>
+      <node begin="2" end="3" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="3" cat="ppart" end="16" id="7" rel="predc">
+        <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="heilig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="heilig" word="heilig"/>
+        <node begin="6" buiging="zonder" end="7" id="9" lemma="overtuigen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="overtuig" word="overtuigd" wvorm="vd"/>
+        <node begin="3" cat="pp" end="16" id="10" rel="pc">
+          <node begin="3" end="4" getal="getal" id="11" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="pobj1" root="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="5" end="6" id="12" lemma="van" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="van" vztype="fin" word="van"/>
+          <node begin="8" cat="cp" end="16" id="13" rel="vc">
+            <node begin="8" conjtype="onder" end="9" id="14" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+            <node begin="9" cat="ssub" end="16" id="15" rel="body">
+              <node begin="9" cat="conj" end="12" id="16" rel="su">
+                <node begin="9" buiging="zonder" end="10" graad="basis" id="17" lemma="oost" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="oost" word="oost"/>
+                <node begin="10" conjtype="neven" end="11" id="18" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="west" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="west" word="west"/>
+              </node>
+              <node begin="12" buiging="zonder" end="13" graad="basis" id="20" lemma="sterk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="sterk" word="sterk"/>
+              <node begin="13" cat="pp" end="15" id="21" rel="ld">
+                <node begin="13" end="14" id="22" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+                <node begin="14" end="15" getal="mv" id="23" lemma="elkaar" naamval="obl" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="obj1" root="elkaar" status="vol" vwtype="recip" word="elkaar"/>
+              </node>
+              <node begin="15" end="16" id="24" lemma="toegroeien" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="groei" word="toegroeien" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Jan Tinbergen is er heilig van overtuigd , dat oost en west sterk naar elkaar toegroeien .</sentence>
+</alpino_ds>

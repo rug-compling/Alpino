@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="4" end="5" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="6" end="7" frame="punct(komma)" id="2" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="9" end="10" frame="punct(komma)" id="3" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="conj" end="11" id="4" rel="--">
+      <node begin="0" cat="mwu" end="4" id="5" rel="cnj">
+        <node begin="0" end="1" frame="proper_name(both,'ORG')" id="6" lcat="np" lemma="Tony" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Tony" sense="Tony" spectype="deeleigen" word="Tony"/>
+        <node begin="1" end="2" frame="proper_name(both,'ORG')" id="7" lcat="np" lemma="&amp;" neclass="ORG" num="both" pos="name" postag="SPEC(symb)" pt="spec" rel="mwp" root="&amp;" sense="&amp;" spectype="symb" word="&amp;"/>
+        <node begin="2" end="3" frame="proper_name(both,'ORG')" id="8" lcat="np" lemma="de" lwtype="bep" naamval="stan" neclass="ORG" npagr="rest" num="both" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="De" sense="De" word="De"/>
+        <node begin="3" end="4" frame="proper_name(both,'ORG')" id="9" lcat="np" lemma="Hangmatten" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hangmatten" sense="Hangmatten" spectype="deeleigen" word="Hangmatten"/>
+      </node>
+      <node begin="5" end="6" frame="proper_name(both,'LOC')" id="10" lcat="np" lemma="Houthalen-Oost" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="cnj" root="Houthalen-Oost" sense="Houthalen-Oost" spectype="deeleigen" word="Houthalen-Oost"/>
+      <node begin="7" cat="mwu" end="9" id="11" rel="cnj">
+        <node begin="7" buiging="zonder" end="8" frame="proper_name(both,'ORG')" graad="basis" id="12" lcat="np" lemma="cultureel" neclass="ORG" num="both" pos="name" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="Cultureel" sense="Cultureel" word="Cultureel"/>
+        <node begin="8" end="9" frame="proper_name(both,'ORG')" genus="onz" getal="ev" graad="basis" id="13" lcat="np" lemma="centrum" naamval="stan" neclass="ORG" ntype="soort" num="both" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Centrum" sense="Centrum" word="Centrum"/>
+      </node>
+      <node begin="10" end="11" frame="proper_name(both,'LOC')" id="14" lcat="np" lemma="Kastanjestr" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="cnj" root="Kastanjestr" sense="Kastanjestr" spectype="deeleigen" word="Kastanjestr"/>
+    </node>
+    <node begin="11" end="12" frame="punct(punt)" id="15" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Tony &amp; De Hangmatten , Houthalen-Oost , Cultureel Centrum , Kastanjestr .</sentence>
+  <comments>
+    <comment>Q#DM_19980527_01-58-10-24|Tony &amp; De Hangmatten , Houthalen-Oost , Cultureel Centrum , Kastanjestr .|1|1|0.07904890398600209</comment>
+  </comments>
+</alpino_ds>

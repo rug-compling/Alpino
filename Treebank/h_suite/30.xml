@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" getal="mv" id="2" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="We"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="heb" word="hadden" wvorm="pv"/>
+      <node begin="3" cat="np" end="5" id="4" rel="obj1">
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="5" lemma="weinig" naamval="stan" npagr="agr" pdtype="grad" pos="det" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="det" root="weinig" vwtype="onbep" word="weinig"/>
+        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="6" lemma="profijt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="profijt" word="profijt"/>
+      </node>
+      <node begin="2" cat="pp" end="6" id="7" rel="pc">
+        <node begin="2" end="3" getal="getal" id="8" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="noun" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="daar" status="vol" vwtype="aanw" word="daar"/>
+        <node begin="5" end="6" id="9" lemma="van" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="van" vztype="fin" word="van"/>
+      </node>
+    </node>
+  </node>
+  <sentence>We hadden daar weinig profijt van</sentence>
+</alpino_ds>

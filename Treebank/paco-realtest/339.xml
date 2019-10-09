@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" infl="de" pos="det" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" gen="de" id="4" num="sg" pos="noun" rel="hd" root="thuis_markt" word="thuismarkt"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="sg" pos="verb" rel="hd" root="kan" sc="aux(inf)" tense="past" word="kon"/>
+      <node begin="0" cat="inf" end="13" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="su"/>
+        <node begin="3" end="4" id="8" pos="adv" rel="mod" root="niet" word="niet"/>
+        <node begin="4" end="5" id="9" infl="inf(no_e)" pos="verb" rel="hd" root="voldoe" sc="pc_pp(aan)" word="voldoen"/>
+        <node begin="5" cat="pp" end="13" id="10" rel="pc">
+          <node begin="5" end="6" id="11" pos="prep" rel="hd" root="aan" word="aan"/>
+          <node begin="6" cat="np" end="13" id="12" rel="obj1">
+            <node begin="6" end="7" id="13" infl="de" pos="det" rel="det" root="de" word="de"/>
+            <node aform="base" begin="7" end="8" id="14" infl="e" pos="adj" rel="mod" root="daaropvolgend" vform="adj" word="daaropvolgende"/>
+            <node begin="8" end="9" gen="de" id="15" num="sg" pos="noun" rel="hd" root="vraag" word="vraag"/>
+            <node begin="9" cat="pp" end="13" id="16" rel="mod">
+              <node begin="9" end="10" id="17" pos="prep" rel="hd" root="naar" word="naar"/>
+              <node begin="10" cat="np" end="13" id="18" rel="obj1">
+                <node aform="base" begin="10" end="11" id="19" infl="e" pos="adj" rel="mod" root="massaal" vform="adj" word="massale"/>
+                <node begin="11" end="12" gen="de" id="20" num="pl" pos="noun" rel="hd" root="hoeveelheid" sc="measure" word="hoeveelheden"/>
+                <node begin="12" end="13" gen="de" id="21" num="sg" pos="noun" rel="mod" root="kabel" word="kabel"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="22" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>De thuismarkt kon niet voldoen aan de daaropvolgende vraag naar massale hoeveelheden kabel .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

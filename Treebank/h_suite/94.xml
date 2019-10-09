@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="np" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+      <node begin="1" cat="ppres" end="4" id="3" rel="mod">
+        <node begin="1" cat="np" end="3" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" getal="mv" graad="dim" id="6" lemma="poes" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" root="poesje" word="poesjes"/>
+        </node>
+        <node begin="3" buiging="met-e" end="4" id="7" lemma="aaien" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="aaiend" word="aaiende" wvorm="od"/>
+      </node>
+      <node begin="4" end="5" genus="onz" getal="ev" graad="dim" id="8" lemma="meisje" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="meisje" word="meisje"/>
+    </node>
+  </node>
+  <sentence>Het de poesjes aaiende meisje</sentence>
+</alpino_ds>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="3" end="4" id="2" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
+      <node begin="4" cat="np" end="6" id="3" index="1" rel="su">
+        <node begin="4" end="5" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="5" end="6" getal="mv" graad="dim" id="5" lemma="pakket" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" root="pakket_DIM" word="pakketjes"/>
+      </node>
+      <node begin="0" cat="ppart" end="7" id="6" rel="vc">
+        <node begin="0" cat="pp" end="3" id="7" rel="mod">
+          <node begin="0" end="1" id="8" lemma="via" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="via" vztype="init" word="Via"/>
+          <node begin="1" cat="np" end="3" id="9" rel="obj1">
+            <node begin="1" end="2" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="11" lemma="post" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="post" word="post"/>
+          </node>
+        </node>
+        <node begin="4" end="6" id="12" index="1" rel="obj1"/>
+        <node begin="6" buiging="zonder" end="7" id="13" lemma="versturen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verstuur" word="verstuurd" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Via de post worden de pakketjes verstuurd .</sentence>
+</alpino_ds>

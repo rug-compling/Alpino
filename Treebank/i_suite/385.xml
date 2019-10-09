@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="4" id="2" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="ongelooflijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="ongelooflijk" word="Ongelooflijk"/>
+      <node begin="2" conjtype="neven" end="3" id="4" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="5" lemma="waar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="waar" word="waar"/>
+    </node>
+    <node begin="4" end="5" id="6" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>Ongelooflijk , maar waar !</sentence>
+</alpino_ds>

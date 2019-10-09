@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="3" end="4" id="2" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="8" id="3" rel="vc">
+        <node begin="0" cat="pp" end="3" id="4" rel="mod">
+          <node begin="0" end="1" id="5" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="Bij"/>
+          <node begin="1" cat="np" end="3" id="6" rel="obj1">
+            <node begin="1" end="2" getal="ev" id="7" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="hd" root="mij" status="vol" vwtype="pr" word="mij"/>
+            <node begin="2" end="3" id="8" lemma="thuis" pos="adv" postag="BW()" pt="bw" rel="mod" root="thuis" word="thuis"/>
+          </node>
+        </node>
+        <node begin="4" cat="pp" end="7" id="9" rel="mod">
+          <node begin="4" end="5" id="10" lemma="om" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="om" vztype="init" word="om"/>
+          <node begin="5" cat="mwu" end="7" id="11" rel="obj1">
+            <node begin="5" buiging="zonder" end="6" graad="basis" id="12" lemma="half" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="half" word="half"/>
+            <node begin="6" end="7" id="13" lemma="zes" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="zes" word="zes"/>
+          </node>
+        </node>
+        <node begin="7" buiging="zonder" end="8" id="14" lemma="eten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="eet" word="gegeten" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Bij mij thuis wordt om half zes gegeten</sentence>
+</alpino_ds>

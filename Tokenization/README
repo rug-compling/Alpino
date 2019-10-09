@@ -1,0 +1,35 @@
+
+The script "tokenize.sh" does the tokenization
+
+It uses "tok", which is a C program created by FSA that does most of the 
+tokenization.  In addition there are a number of Perl scripts that do some 
+more difficult stuff that requires more global information (for which no
+sequential transducer can be defined).
+
+In the input, every paragraph of text is supposed to be given on a single line.
+If your input is not like that, cf the script paragraph_per_line.
+
+
+
+Example 1
+---------
+
+For an example text, cf the text file t1. 
+
+./paragraph_per_line t1.txt | ./tokenize.sh
+
+results in a file where each line contains a single tokenized sentence.
+
+
+Example 2: identifiers
+----------------------
+
+Often it is desirable to have identifiers which indicate the paragraph number
+and the sentence number in that paragraph. For this purpose, we need the
+two scripts ./add_key and ./number_sents.
+
+./paragraph_per_line t1.txt | ./add_key | ./tokenize.sh | ./number_sents
+
+Each line is now prefixed with an identifier X-Y where X is the paragraph number
+and Y is the sentence number. 
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="whd">
+        <node begin="0" end="1" id="3" lemma="hoeveel" naamval="stan" numtype="hoofd" pos="adj" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="hoeveel" word="Hoeveel"/>
+        <node begin="1" buiging="zonder" end="2" id="4" lemma="reizen" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="reis" word="reizen" wvorm="inf"/>
+      </node>
+      <node begin="0" cat="sv1" end="7" id="5" rel="body">
+        <node begin="0" end="2" id="6" index="1" rel="obj1"/>
+        <node begin="2" end="3" id="7" lemma="maken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="maak" word="maakte" wvorm="pv"/>
+        <node begin="3" cat="mwu" end="5" id="8" rel="su">
+          <node begin="3" end="4" id="9" lemma="Christoffel" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Christoffel" spectype="deeleigen" word="Christoffel"/>
+          <node begin="4" end="5" id="10" lemma="Columbus" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Columbus" spectype="deeleigen" word="Columbus"/>
+        </node>
+        <node begin="5" cat="pp" end="7" id="11" rel="mod">
+          <node begin="5" end="6" id="12" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+          <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="13" lemma="Amerika" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Amerika" word="Amerika"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="14" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoeveel reizen maakte Christoffel Columbus naar Amerika ?</sentence>
+</alpino_ds>

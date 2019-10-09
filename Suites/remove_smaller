@@ -1,0 +1,39 @@
+#!/usr/bin/perl -w
+# © Gertjan van Noord, 2004.
+# mailto:vannoord@let.rug.nl
+#
+
+@freq=();
+@score=();
+while (<>) {
+    chomp;
+    ($score,$freq,@line)=split;
+    $line=join(' ',@line);
+    ${ $freq[scalar @line]}{$line} = $freq;
+    ${ $score[scalar @line]}{$line} = $score;
+
+}
+
+for($i=@score-1;$i>-1;$i--) {
+    foreach $key (keys %{$freq[$i]}) {
+	@words=split / /,$key;
+	for ($j=2;$j<@words;$j++) {
+	    for($k=0;$k+$j<=@words;$k++) {
+		$leftstr=join(' ',@words[$k..$k+$j-1]);
+		if (exists ${$score[$j]}{$leftstr} && 
+		    ( ${$score[$j]}{$leftstr} <= ${$score[$i]}{$key} ||
+		      ${$freq[$j]}{$leftstr} == ${$freq[$i]}{$key})) {
+		    $ignore{$leftstr}=1;
+		}
+	    }
+	}
+    }
+}
+
+for($i=@score-1;$i>-1;$i--) {
+    foreach $key (keys %{$freq[$i]}) {
+	if (!$ignore{$key}) {
+	    print "${$score[$i]}{$key} ${$freq[$i]}{$key} $key\n";
+	}
+    }
+}

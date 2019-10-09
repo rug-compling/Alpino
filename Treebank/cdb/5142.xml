@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" cat="conj" end="3" id="2" rel="mod">
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="uitwendig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="uitwendig" word="Uitwendig"/>
+        <node begin="1" conjtype="neven" end="2" id="4" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="inwendig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="inwendig" word="inwendig"/>
+      </node>
+      <node begin="3" end="4" id="6" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="4" cat="np" end="7" id="7" rel="su">
+        <node begin="4" end="5" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="5" buiging="met-e" end="6" graad="basis" id="9" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+        <node begin="6" end="7" getal="mv" graad="basis" id="10" lemma="wagen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="wagen" word="wagens"/>
+      </node>
+      <node begin="7" cat="np" end="12" id="11" rel="obj1">
+        <node begin="8" end="9" getal="mv" graad="basis" id="12" lemma="afmeting" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="afmeting" word="afmetingen"/>
+        <node begin="7" cat="detp" end="12" id="13" rel="det">
+          <node begin="7" buiging="zonder" end="8" graad="basis" id="14" lemma="dezelfde" pos="det" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="hd" root="dezelfde" word="dezelfde"/>
+          <node begin="9" cat="cp" end="12" id="15" rel="obcomp">
+            <node begin="9" conjtype="onder" end="10" id="16" lemma="als" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+            <node begin="10" cat="np" end="12" id="17" rel="body">
+              <node begin="10" buiging="zonder" end="11" getal="mv" id="18" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+              <node begin="11" end="12" getal="mv" graad="basis" id="19" lemma="voorganger" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="voorganger" word="voorgangers"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Uitwendig en inwendig hebben de nieuwe wagens dezelfde afmetingen als hun voorgangers .</sentence>
+</alpino_ds>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="11" id="2" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="3" lemma="of" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="of" word="Of"/>
+      <node begin="1" cat="conj" end="11" id="4" rel="nucl">
+        <node begin="2" conjtype="neven" end="3" id="5" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+        <node begin="3" end="4" id="6" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="cnj" root="zo" word="zo"/>
+        <node begin="1" cat="np" end="11" id="7" rel="cnj">
+          <node begin="1" end="2" getal="mv" graad="basis" id="8" lemma="marginalen" ntype="soort" pos="adj" postag="N(soort,mv,basis)" pt="n" rel="hd" root="marginaal" word="marginalen"/>
+          <node begin="5" cat="rel" end="11" id="9" rel="mod">
+            <node begin="5" end="6" getal="getal" id="10" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="5" cat="ssub" end="11" id="11" rel="body">
+              <node begin="5" end="6" id="12" index="1" rel="su"/>
+              <node begin="6" cat="np" end="8" id="13" rel="obj1">
+                <node begin="6" end="7" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="15" lemma="geld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geld" word="geld"/>
+              </node>
+              <node begin="8" buiging="zonder" end="9" graad="basis" id="16" lemma="echt" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="echt" word="écht"/>
+              <node begin="9" buiging="zonder" end="10" graad="basis" id="17" lemma="nodig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="nodig" word="nodig"/>
+              <node begin="10" end="11" id="18" lemma="hebben" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="heb" word="hadden" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Of marginalen of zo , die het geld écht nodig hadden .</sentence>
+</alpino_ds>

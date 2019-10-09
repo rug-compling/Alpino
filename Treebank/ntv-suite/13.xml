@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="3" cat="np" end="6" id="3" index="1" rel="su">
+        <node begin="3" buiging="zonder" end="4" id="4" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+        <node begin="4" buiging="met-e" end="5" graad="basis" id="5" lemma="serieus" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="serieus" word="serieuze"/>
+        <node begin="5" end="6" getal="mv" graad="basis" id="6" lemma="tegenkandidaat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="tegen_kandidaat" word="tegenkandidaten"/>
+      </node>
+      <node begin="0" cat="ppart" end="7" id="7" rel="vc">
+        <node begin="0" end="1" getal="getal" id="8" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+        <node begin="2" end="3" getal="getal" id="9" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+        <node begin="3" end="6" id="10" index="1" rel="su"/>
+        <node begin="6" buiging="zonder" end="7" id="11" lemma="melden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="meld" word="gemeld" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Er hebben zich geen serieuze tegenkandidaten gemeld .</sentence>
+</alpino_ds>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="13" end="14" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="16" end="17" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="18" id="4" rel="--">
+      <node begin="0" cat="np" end="2" id="5" rel="dp">
+        <node begin="0" buiging="zonder" end="1" id="6" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="Geen"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="7" lemma="wonder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="wonder" word="wonder"/>
+      </node>
+      <node begin="2" end="3" id="8" lemma="daarom" pos="adv" postag="BW()" pt="bw" rel="dp" root="daarom" word="daarom"/>
+      <node begin="4" cat="cp" end="18" id="9" rel="dp">
+        <node begin="4" conjtype="onder" end="5" id="10" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="5" cat="ssub" end="18" id="11" rel="body">
+          <node begin="5" cat="np" end="7" id="12" rel="su">
+            <node begin="5" buiging="met-e" end="6" id="13" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="verklaring" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verklaring" word="verklaring"/>
+          </node>
+          <node begin="7" cat="pp" end="16" id="15" rel="mod">
+            <node begin="7" end="8" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="8" cat="np" end="16" id="17" rel="obj1">
+              <node begin="8" end="9" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="19" lemma="brief" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="brief" word="brief"/>
+              <node begin="10" cat="pp" end="16" id="20" rel="mod">
+                <node begin="10" end="11" id="21" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+                <node begin="11" cat="np" end="16" id="22" rel="obj1">
+                  <node begin="11" end="12" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="24" lemma="staatssecretaris" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="staatssecretaris" word="staatssecretaris"/>
+                  <node begin="14" cat="np" end="16" id="25" rel="app">
+                    <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="26" lemma="kardinaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kardinaal" word="kardinaal"/>
+                    <node begin="15" end="16" genus="genus" getal="ev" graad="basis" id="27" lemma="Villot" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Villot" word="Villot"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="17" end="18" id="28" lemma="ontbreken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ontbreek" word="ontbreekt" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="29" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Geen wonder daarom , dat deze verklaring in de brief aan de staatssecretaris , kardinaal Villot , ontbreekt .</sentence>
+</alpino_ds>

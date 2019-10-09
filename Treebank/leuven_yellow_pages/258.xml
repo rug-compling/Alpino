@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="2" cat="np" end="7" id="4" rel="predc">
+        <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="Boerenbond" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Boerenbond" word="Boerenbond"/>
+        <node begin="4" cat="pp" end="7" id="7" rel="mod">
+          <node begin="4" end="5" id="8" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
+          <node begin="5" cat="mwu" end="7" id="9" rel="obj1">
+            <node begin="5" end="6" id="10" lemma="De" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
+            <node begin="6" end="7" id="11" lemma="Batselier" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Batselier" spectype="deeleigen" word="Batselier"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Het was de Boerenbond tegen De Batselier</sentence>
+</alpino_ds>

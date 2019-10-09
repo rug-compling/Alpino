@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="13" end="14" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="24" id="2" rel="--">
+      <node begin="0" cat="pp" end="4" id="3" rel="mod">
+        <node begin="0" end="1" id="4" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+        <node begin="1" cat="np" end="4" id="5" rel="obj1">
+          <node begin="1" end="2" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" buiging="met-e" end="3" graad="basis" id="7" lemma="agrarisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="agrarisch" word="agrarische"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="sector" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sector" word="sector"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="9" lemma="richten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="richt" word="richten" wvorm="pv"/>
+      <node begin="5" cat="np" end="7" id="10" rel="su">
+        <node begin="5" end="6" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="6" end="7" getal="mv" graad="basis" id="12" lemma="schijnwerper" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="schijnwerper" word="schijnwerpers"/>
+      </node>
+      <node begin="7" cat="np" end="9" id="13" rel="obj1">
+        <node begin="7" buiging="zonder" end="8" getal="mv" id="14" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+        <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="15" lemma="licht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="licht" word="licht"/>
+      </node>
+      <node begin="9" cat="pp" end="13" id="16" rel="pc">
+        <node begin="9" end="10" id="17" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="10" cat="conj" end="13" id="18" rel="obj1">
+          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="19" lemma="koffie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="koffie" word="koffie"/>
+          <node begin="11" conjtype="neven" end="12" id="20" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="21" lemma="suiker" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="suiker" word="suiker"/>
+        </node>
+      </node>
+      <node begin="14" cat="cp" end="24" id="22" rel="mod">
+        <node begin="14" conjtype="onder" end="15" id="23" lemma="terwijl" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="terwijl" word="terwijl"/>
+        <node begin="15" cat="ssub" end="24" id="24" rel="body">
+          <node begin="15" cat="np" end="20" id="25" rel="su">
+            <node begin="15" end="16" getal="mv" graad="basis" id="26" lemma="product" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="produkt" word="produkten"/>
+            <node begin="16" cat="cp" end="20" id="27" rel="mod">
+              <node begin="16" end="17" id="28" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+              <node begin="17" cat="conj" end="20" id="29" rel="body">
+                <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="30" lemma="cacao" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="cacao" word="cacao"/>
+                <node begin="18" conjtype="neven" end="19" id="31" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="32" lemma="rubber" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="rubber" word="rubber"/>
+              </node>
+            </node>
+          </node>
+          <node begin="20" cat="pp" end="23" id="33" rel="ld">
+            <node begin="20" end="21" id="34" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="21" cat="np" end="23" id="35" rel="obj1">
+              <node begin="21" end="22" id="36" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="37" lemma="schaduw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schaduw" word="schaduw"/>
+            </node>
+          </node>
+          <node begin="23" end="24" id="38" lemma="blijven" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="blijf" word="blijven" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="39" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>In de agrarische sector richten de schijnwerpers hun licht op koffie en suiker , terwijl produkten als cacao en rubber in de schaduw blijven .</sentence>
+</alpino_ds>

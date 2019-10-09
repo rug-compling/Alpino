@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" cat="np" end="5" id="2" rel="predc">
+        <node begin="0" buiging="met-e" end="1" getal-n="zonder-n" graad="sup" id="3" lemma="laat" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,sup,met-e,zonder-n,stan)" pt="adj" rel="hd" root="laat" word="Laatste"/>
+        <node begin="1" cat="rel" end="5" id="4" rel="mod">
+          <node begin="1" end="2" getal="ev" id="5" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="wat"/>
+          <node begin="1" cat="ssub" end="5" id="6" rel="body">
+            <node begin="2" end="3" getal="ev" id="7" index="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+            <node begin="1" cat="ppart" end="4" id="8" rel="vc">
+              <node begin="1" end="2" id="9" index="1" rel="obj1"/>
+              <node begin="2" end="3" id="10" index="2" rel="su"/>
+              <node begin="3" buiging="zonder" end="4" id="11" lemma="horen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="hoor" word="gehoord" wvorm="vd"/>
+            </node>
+            <node begin="4" end="5" id="12" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" id="13" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="6" cat="cp" end="14" id="14" rel="su">
+        <node begin="6" conjtype="onder" end="7" id="15" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="7" cat="ssub" end="14" id="16" rel="body">
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="17" lemma="PJ" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="PJ" word="PJ"/>
+          <node begin="8" cat="advp" end="10" id="18" rel="mod">
+            <node begin="8" end="9" id="19" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="hd" root="niet" word="niet"/>
+            <node begin="9" buiging="zonder" end="10" graad="comp" id="20" lemma="meer" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vwtype="onbep" word="meer"/>
+          </node>
+          <node begin="10" end="11" id="21" lemma="mee_doen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="doe_mee" word="meedeed" wvorm="pv"/>
+          <node begin="11" cat="pp" end="14" id="22" rel="pc">
+            <node begin="11" end="12" id="23" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+            <node begin="12" cat="np" end="14" id="24" rel="obj1">
+              <node begin="12" end="13" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="26" lemma="Hobbit" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Hobbit" word="Hobbit"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Laatste wat ik gehoord had was dat PJ niet meer meedeed aan de Hobbit .</sentence>
+</alpino_ds>

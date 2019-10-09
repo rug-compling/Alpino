@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" id="2" lemma="zingen" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="predm" root="zing" word="Zingend" wvorm="od"/>
+      <node begin="1" end="2" id="3" lemma="komen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kom_terug" word="kwamen" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="4" rel="su">
+        <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="6" lemma="wandelaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="wandelaar" word="wandelaars"/>
+      </node>
+      <node begin="4" end="5" id="7" lemma="terug" pos="part" postag="BW()" pt="bw" rel="svp" root="terug" word="terug"/>
+    </node>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Zingend kwamen de wandelaars terug .</sentence>
+</alpino_ds>

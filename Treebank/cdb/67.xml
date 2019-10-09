@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="14" end="15" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="22" id="2" rel="--">
+      <node begin="4" end="5" id="3" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+      <node begin="5" cat="np" end="7" id="4" index="1" rel="su">
+        <node begin="5" end="6" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="6" lemma="lijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="lijn" word="lijn"/>
+      </node>
+      <node begin="0" cat="conj" end="22" id="7" rel="vc">
+        <node begin="0" cat="inf" end="14" id="8" rel="cnj">
+          <node begin="0" cat="pp" end="4" id="9" rel="mod">
+            <node begin="0" end="1" id="10" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="Tussen"/>
+            <node begin="1" cat="conj" end="4" id="11" rel="obj1">
+              <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="12" lemma="Amsterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Amsterdam" word="Amsterdam"/>
+              <node begin="2" conjtype="neven" end="3" id="13" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="14" lemma="Schiphol" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Schiphol" word="Schiphol"/>
+            </node>
+          </node>
+          <node begin="5" end="7" id="15" index="1" rel="su"/>
+          <node begin="7" cat="np" end="13" id="16" rel="obj1">
+            <node begin="7" buiging="zonder" end="8" graad="basis" id="17" lemma="ruim" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ruim" word="ruim"/>
+            <node begin="8" end="9" id="18" lemma="twaalf" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twaalf" word="twaalf"/>
+            <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="19" lemma="miljoen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="miljoen" word="miljoen"/>
+            <node begin="10" end="11" getal="mv" graad="basis" id="20" index="2" lemma="reiziger" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="reiziger" word="reizigers"/>
+            <node begin="11" cat="pp" end="13" id="21" index="3" rel="mod">
+              <node begin="11" end="12" id="22" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
+              <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="23" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="jaar" word="jaar"/>
+            </node>
+          </node>
+          <node begin="13" buiging="zonder" end="14" id="24" index="4" lemma="vervoeren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vervoer" word="vervoeren" wvorm="inf"/>
+        </node>
+        <node begin="5" cat="inf" end="22" id="25" rel="cnj">
+          <node begin="5" end="7" id="26" index="1" rel="su"/>
+          <node begin="13" end="14" id="27" index="4" rel="hd"/>
+          <node begin="15" cat="pp" end="19" id="28" rel="mod">
+            <node begin="15" end="16" id="29" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>
+            <node begin="16" cat="conj" end="19" id="30" rel="obj1">
+              <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="31" lemma="Schiphol" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Schiphol" word="Schiphol"/>
+              <node begin="17" conjtype="neven" end="18" id="32" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="33" lemma="Leiden" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Leiden" word="Leiden"/>
+            </node>
+          </node>
+          <node begin="10" cat="np" end="22" id="34" rel="obj1">
+            <node begin="10" end="11" id="35" index="2" rel="mod"/>
+            <node begin="11" end="13" id="36" index="3" rel="mod"/>
+            <node begin="19" buiging="zonder" end="20" graad="basis" id="37" lemma="ruim" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ruim" word="ruim"/>
+            <node begin="20" end="21" id="38" lemma="elf" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="elf" word="elf"/>
+            <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="39" lemma="miljoen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="miljoen" word="miljoen"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Tussen Amsterdam en Schiphol zal de lijn ruim twaalf miljoen reizigers per jaar vervoeren , tussen Schiphol en Leiden ruim elf miljoen .</sentence>
+</alpino_ds>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="smain" end="16" id="1" rel="--">
+      <node begin="0" cat="ppres" end="7" id="2" rel="predm">
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="waarschijnlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="waarschijnlijk" word="Waarschijnlijk"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="lering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="lering" word="lering"/>
+        <node begin="2" buiging="zonder" end="3" id="5" lemma="trekken" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="hd" root="trek" word="trekkende" wvorm="od"/>
+        <node begin="3" cat="pp" end="7" id="6" rel="pc">
+          <node begin="3" end="4" id="7" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+          <node begin="4" cat="np" end="7" id="8" rel="obj1">
+            <node begin="4" end="5" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="5" cat="mwu" end="7" id="10" rel="hd">
+              <node begin="5" end="6" id="11" lemma="één" naamval="stan" numtype="rang" pos="name" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mwp" root="Eerste" word="Eerste"/>
+              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="wereldoorlog" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Wereldoorlog" word="Wereldoorlog"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="13" lemma="eisen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="eis" word="eisten" wvorm="pv"/>
+      <node begin="8" cat="np" end="10" id="14" rel="su">
+        <node begin="8" end="9" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="9" end="10" getal="mv" graad="basis" id="16" lemma="overwinnaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="overwinnaar" word="overwinnaars"/>
+      </node>
+      <node begin="10" cat="np" end="16" id="17" rel="obj1">
+        <node begin="10" buiging="zonder" end="11" id="18" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+        <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="compensatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="compensatie" word="compensatie"/>
+        <node begin="12" cat="pp" end="16" id="20" rel="mod">
+          <node begin="12" end="13" id="21" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="13" cat="np" end="16" id="22" rel="obj1">
+            <node begin="13" end="14" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="14" end="15" getal="mv" graad="basis" id="24" lemma="verslag" ntype="soort" pos="adj" postag="N(soort,mv,basis)" pt="n" rel="mod" root="verslagen" word="verslagen"/>
+            <node begin="15" end="16" getal="mv" graad="basis" id="25" lemma="natie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="natie" word="naties"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="26" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Waarschijnlijk lering trekkende uit de Eerste Wereldoorlog eisten de overwinnaars geen compensatie van de verslagen naties .</sentence>
+</alpino_ds>

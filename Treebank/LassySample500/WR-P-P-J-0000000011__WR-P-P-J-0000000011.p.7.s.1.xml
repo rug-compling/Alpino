@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="11" end="12" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="14" id="3" rel="--">
+      <node begin="0" end="1" getal="getal" id="4" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+      <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="6" cat="mwu" end="8" id="6" rel="svp">
+        <node begin="6" end="7" id="7" lemma="in" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="8" lemma="omloop" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="omloop" word="omloop"/>
+      </node>
+      <node begin="2" cat="np" end="14" id="9" rel="su">
+        <node begin="2" buiging="met-e" end="3" graad="basis" id="10" lemma="verschillend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="verschil" word="verschillende"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="11" lemma="definitie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="definitie" word="definities"/>
+        <node begin="4" cat="pp" end="6" id="12" rel="mod">
+          <node begin="4" end="5" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="14" lemma="PPS" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="PPS" word="PPS"/>
+        </node>
+        <node begin="9" cat="ap" end="11" id="15" rel="mod">
+          <node begin="9" end="10" id="16" lemma="soms" pos="adv" postag="BW()" pt="bw" rel="mod" root="soms" word="soms"/>
+          <node begin="10" buiging="zonder" end="11" graad="basis" id="17" lemma="kort" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="kort" word="kort"/>
+        </node>
+        <node begin="12" cat="ppart" end="14" id="18" rel="mod">
+          <node begin="12" buiging="zonder" end="13" graad="basis" id="19" lemma="vaak" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="vaak" word="vaak"/>
+          <node begin="13" buiging="zonder" end="14" id="20" lemma="uitbreiden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="uitgebreid" word="uitgebreid" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Er zijn verschillende definities van PPS in omloop , soms kort , vaak uitgebreid .</sentence>
+</alpino_ds>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="3" end="4" frame="complementizer(inf)" id="1" lcat="--" pos="comp" rel="--" root="alvorens" sc="inf" sense="alvorens" word="alvorens"/>
+    <node begin="0" cat="du" end="6" id="2" rel="--">
+      <node begin="0" cat="sv1" end="3" id="3" rel="dp">
+        <node begin="0" end="1" frame="verb(hebben,sg1,transitive)" id="4" infl="sg1" lcat="sv1" pos="verb" rel="hd" root="selecteer" sc="transitive" sense="selecteer" tense="present" word="Selecteer"/>
+        <node begin="1" cat="np" end="3" id="5" rel="obj1">
+          <node begin="1" end="2" frame="determiner(een)" id="6" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+          <node begin="2" end="3" frame="noun(both,count,sg)" gen="both" id="7" lcat="np" num="sg" pos="noun" rel="hd" root="record" sense="record" word="record"/>
+        </node>
+      </node>
+      <node begin="4" cat="ti" end="6" id="8" rel="dp">
+        <node begin="4" end="5" frame="complementizer(te)" id="9" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+        <node begin="5" end="6" frame="verb(hebben,inf,transitive)" id="10" infl="inf" lcat="inf" pos="verb" rel="body" root="verwijder" sc="transitive" sense="verwijder" word="verwijderen"/>
+      </node>
+    </node>
+    <node begin="6" end="7" frame="punct(punt)" id="11" lcat="--" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Selecteer een record alvorens te verwijderen .</sentence>
+  <comments>
+    <comment>Q#192|Selecteer een record alvorens te verwijderen .|1|3|3.2229766653233165</comment>
+  </comments>
+</alpino_ds>

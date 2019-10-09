@@ -1,0 +1,114 @@
+#!/usr/bin/perl -w
+# (c) Gertjan van Noord
+#
+# This program is free software; you can redistribute it and/or modify 
+# it under the terms of the GNU General Public License as published by 
+# the Free Software Foundation; either version 2 of the License, or    
+# (at your option) any later version.                                  
+#                                                                      
+# This program is distributed in the hope that it will be useful,      
+# but WITHOUT ANY WARRANTY; without even the implied warranty of       
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the        
+# GNU General Public License for more details.                         
+#                                                                      
+# You should have received a copy of the GNU General Public License    
+# along with this program; if not, write to the Free Software          
+# Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.            
+#                                                                      
+# cf. the file COPYING                                                 
+#
+# script to create parsability table, as explained in my paper
+# Error Mining for Wide Coverage Grammar Engineering
+#
+# takes two arguments: the Ngram file of the mistakes, and the Ngram file
+# of all sentences
+
+($mistakes,$oks) = @ARGV;
+
+%mistakes=();
+%oks=();
+%perc=();
+
+$ignore_shorter=1;
+
+open(MISTAKES,"<$mistakes") || die("cannot open $mistakes: $!\n");
+while(<MISTAKES>) {
+    chomp;
+    @pair = split('\|');
+    shift @pair if (@pair == 3);
+    $ngram = $pair[0];
+    $count = $pair[1];
+    if (@pair > 2) { print STDERR "IGNORE: $_\n"; next; }
+    $mistakes{$ngram}=$count;
+}
+close(MISTAKES);
+
+open(OKS,"<$oks") || 
+    die("cannot open all file $oks: $!\n");
+while(<OKS>) {
+    chomp;
+    @pair = split('\|');
+    shift @pair if (@pair == 3);
+    $ngram = $pair[0];
+    $allcount = $pair[1];
+    if (@pair > 2) { print STDERR "IGNORE: $_\n"; next; }
+    if ($mistakes{$ngram}) {
+	$teller=$allcount-$mistakes{$ngram};
+	$noemer=$allcount;
+####	$qual=int(1000*&R::call("maxBinomConfInt",($teller,$noemer)));
+	$qual=int(1000*$teller/$noemer);
+	@words=split(' ',$ngram);
+	$leftstr=join(' ',@words[0..$#words-1]);
+	$rightstr=join(' ',@words[1..$#words]);
+        if ($leftstr) {
+	    $leftq=$perc{$leftstr};
+	} else {
+	    $leftq=1000;
+	}
+        if ($rightstr) {
+	    $rightq=$perc{$rightstr};
+	} else {
+	    $rightq=1000;
+	}
+	if ($qual < $leftq && $qual < $rightq) {
+	    $perc{$ngram} = $qual;
+	    if ($leftstr && $ignore_shorter) { 
+		$ignore{$leftstr} = 1; 
+	    }
+	    if ($rightstr && $ignore_shorter) { 
+		$ignore{$rightstr} = 1;
+	    }
+	} 
+#elsif ($qual == $leftq && $qual == $rightq) {
+#  $perc{$ngram} = $qual;
+#  if ($leftstr) { 
+#		$ignore{$leftstr} = 1; 
+#  }
+#  if ($rightstr) { 
+#		$ignore{$rightstr} = 1;
+#  }
+#	} 
+           else {
+	    $perc{$ngram} = -1;
+	}
+    }
+}
+close(OKS);
+
+@results = sort { 
+    $aval= $perc{$a};
+    $bval= $perc{$b};
+    $aval == $bval ? $a cmp $b : $aval <=> $bval;
+} keys %perc;
+
+foreach $key (@results) {
+    if (!$ignore{$key} && $perc{$key} >= 0) {
+	write;
+    }
+}
+
+format STDOUT = 
+@#.### @<<<< @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+$perc{$key}/1000,$mistakes{$key},$key
+.
+

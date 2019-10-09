@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="33" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="5" end="6" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="6" end="7" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="7" end="8" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="9" end="10" id="5" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="11" end="12" id="6" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="13" end="14" id="7" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="21" end="22" id="8" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="27" end="28" id="9" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="32" id="10" rel="--">
+      <node begin="0" cat="pp" end="13" id="11" rel="ld">
+        <node begin="0" end="1" id="12" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="Onder"/>
+        <node begin="1" cat="np" end="13" id="13" rel="obj1">
+          <node begin="1" end="2" getal="mv" graad="basis" id="14" lemma="begrip" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="begrip" word="begrippen"/>
+          <node begin="2" cat="cp" end="13" id="15" rel="mod">
+            <node begin="2" conjtype="onder" end="3" id="16" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+            <node begin="4" cat="conj" end="13" id="17" rel="body">
+              <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="18" lemma="gedoogbeleid" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="gedoogbeleid" word="gedoogbeleid"/>
+              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="19" lemma="consensusmaatschappij" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="consensusmaatschappij" word="consensusmaatschappij"/>
+              <node begin="10" conjtype="neven" end="11" id="20" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="21" lemma="poldermodel" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="poldermodel" word="poldermodel"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="14" end="15" id="22" lemma="gaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ga_schuil" word="ging" wvorm="pv"/>
+      <node begin="17" buiging="zonder" end="18" graad="basis" id="23" lemma="schuil" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="schuil" word="schuil"/>
+      <node begin="15" cat="np" end="32" id="24" rel="su">
+        <node begin="15" end="16" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="26" lemma="betweterigheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="betweterigheid" word="betweterigheid"/>
+        <node begin="18" cat="rel" end="32" id="27" rel="mod">
+          <node begin="18" end="19" id="28" index="1" lemma="waarmee" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarmee" word="waarmee"/>
+          <node begin="18" cat="ssub" end="32" id="29" rel="body">
+            <node begin="18" end="19" id="30" index="1" rel="mod"/>
+            <node begin="19" cat="np" end="27" id="31" rel="su">
+              <node begin="19" end="20" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="20" end="21" getal="mv" graad="basis" id="33" lemma="Nederlander" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Nederlander" word="Nederlanders"/>
+              <node begin="22" cat="ppart" end="27" id="34" rel="mod">
+                <node begin="22" buiging="zonder" end="23" id="35" lemma="overtuigen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="overtuigd" word="overtuigd" wvorm="vd"/>
+                <node begin="23" cat="pp" end="27" id="36" rel="pc">
+                  <node begin="23" end="24" id="37" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="24" cat="np" end="27" id="38" rel="obj1">
+                    <node begin="24" buiging="zonder" end="25" getal="mv" id="39" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+                    <node begin="25" buiging="met-e" end="26" graad="basis" id="40" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="grote"/>
+                    <node begin="26" buiging="zonder" end="27" graad="basis" id="41" lemma="gelijk" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="gelijk" word="gelijk"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="28" buiging="zonder" end="29" graad="basis" id="42" lemma="decennialang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="decennium_lang" word="decennialang"/>
+            <node begin="29" cat="np" end="31" id="43" rel="obj1">
+              <node begin="29" end="30" id="44" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="45" lemma="wereld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wereld" word="wereld"/>
+            </node>
+            <node begin="31" end="32" id="46" lemma="terechtwijzen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="wijs_terecht" word="terechtwezen" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="32" end="33" id="47" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Onder begrippen als &quot; gedoogbeleid &quot; , &quot; consensusmaatschappij &quot; en &quot; poldermodel &quot; ging de betweterigheid schuil waarmee de Nederlanders , overtuigd van hun grote gelijk , decennialang de wereld terechtwezen .</sentence>
+</alpino_ds>

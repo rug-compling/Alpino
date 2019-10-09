@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="20" id="2" rel="--">
+      <node begin="0" cat="np" end="4" id="3" index="1" rel="su">
+        <node begin="0" end="1" id="4" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="terrein" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="terrein" word="terrein"/>
+        <node begin="2" cat="pp" end="4" id="6" rel="mod">
+          <node begin="2" end="3" id="7" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="8" lemma="Oirschot" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Oirschot" word="Oirschot"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="9" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+      <node begin="0" cat="inf" end="20" id="10" rel="vc">
+        <node begin="0" end="4" id="11" index="1" rel="su"/>
+        <node begin="5" buiging="zonder" end="6" graad="basis" id="12" lemma="voorlopig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="voorlopig" word="voorlopig"/>
+        <node begin="6" cat="ap" end="9" id="13" rel="predc">
+          <node begin="6" cat="np" end="8" id="14" rel="me">
+            <node begin="6" end="7" id="15" lemma="1200" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="1200" word="1200"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="16" lemma="hectare" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hectare" word="hectare"/>
+          </node>
+          <node begin="8" buiging="zonder" end="9" graad="comp" id="17" lemma="groot" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="groter" word="groter"/>
+        </node>
+        <node begin="9" buiging="zonder" end="10" id="18" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+        <node begin="11" cat="pp" end="20" id="19" rel="mod">
+          <node begin="11" end="12" id="20" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="12" cat="ap" end="14" id="21" rel="mod">
+            <node begin="12" buiging="zonder" end="13" graad="comp" id="22" lemma="laat" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="later" word="later"/>
+            <node begin="13" end="14" id="23" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+          </node>
+          <node begin="14" cat="np" end="20" id="24" rel="obj1">
+            <node begin="14" end="15" id="25" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="15" buiging="met-e" end="16" graad="basis" id="26" lemma="mogelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="mogelijk" word="mogelijke"/>
+            <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="27" lemma="uitloop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="uitloop" word="uitloop"/>
+            <node begin="17" cat="pp" end="20" id="28" rel="mod">
+              <node begin="17" end="18" id="29" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="18" cat="np" end="20" id="30" rel="obj1">
+                <node begin="18" end="19" id="31" lemma="500" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="500" word="500"/>
+                <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="32" lemma="hectare" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hectare" word="hectare"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="33" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het terrein bij Oirschot zal voorlopig 1200 hectare groter worden , met later nog een mogelijke uitloop van 500 hectare .</sentence>
+</alpino_ds>

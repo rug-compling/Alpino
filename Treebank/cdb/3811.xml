@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="3" end="4" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="smain" end="12" id="3" rel="--">
+      <node begin="0" cat="np" end="7" id="4" rel="su">
+        <node begin="0" end="1" id="5" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="2" buiging="met-e" end="3" graad="basis" id="6" lemma="klassiekerig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="klassiekerige" word="klassiekerige"/>
+        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="7" lemma="gedoe" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gedoe" word="gedoe"/>
+        <node begin="5" cat="pp" end="7" id="8" rel="mod">
+          <node begin="5" end="6" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="10" lemma="Ekseption" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Ekseption" word="Ekseption"/>
+        </node>
+      </node>
+      <node begin="7" end="8" id="11" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="8" end="9" id="12" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
+      <node begin="9" end="10" id="13" lemma="langzamerhand" pos="adv" postag="BW()" pt="bw" rel="mod" root="langzamerhand" word="langzamerhand"/>
+      <node begin="10" cat="ap" end="12" id="14" rel="predc">
+        <node begin="10" buiging="zonder" end="11" graad="basis" id="15" lemma="genoegzaam" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="genoegzaam" word="genoegzaam"/>
+        <node begin="11" buiging="zonder" end="12" graad="basis" id="16" lemma="bekend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="bekend" word="bekend"/>
+      </node>
+    </node>
+    <node begin="12" end="13" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het &quot; klassiekerige &quot; gedoe van Ekseption is zo langzamerhand genoegzaam bekend .</sentence>
+</alpino_ds>

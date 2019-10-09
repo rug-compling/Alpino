@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="denken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="denk" word="denk" wvorm="pv"/>
+      <node begin="2" cat="cp" end="7" id="4" rel="vc">
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="3" cat="ssub" end="7" id="6" rel="body">
+          <node begin="3" cat="np" end="5" id="7" index="1" rel="su">
+            <node begin="3" buiging="zonder" end="4" getal="ev" id="8" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="email" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="email" word="email"/>
+          </node>
+          <node begin="3" cat="ppart" end="6" id="10" rel="vc">
+            <node begin="3" end="5" id="11" index="1" rel="obj1"/>
+            <node begin="5" buiging="zonder" end="6" id="12" lemma="hacken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="hack" word="gehackt" wvorm="vd"/>
+          </node>
+          <node begin="6" end="7" id="13" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ik denk dat mijn email gehackt is .</sentence>
+</alpino_ds>

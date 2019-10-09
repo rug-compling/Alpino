@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="37" id="0" rel="top">
+    <node begin="8" end="9" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="36" id="2" rel="--">
+      <node begin="0" cat="np" end="8" id="3" rel="su">
+        <node begin="0" cat="mwu" end="2" id="4" mwu_root="eenieder" mwu_sense="eenieder" rel="hd">
+          <node begin="0" case="both" def="def" end="1" frame="pronoun(nwh,thi,sg,de,both,def,strpro)" gen="de" id="5" lcat="np" num="sg" per="thi" pos="pron" rel="mwp" root="Een" sense="Een" special="strpro" wh="nwh" word="Een"/>
+          <node begin="1" case="both" def="def" end="2" frame="pronoun(nwh,thi,sg,de,both,def,strpro)" gen="de" id="6" lcat="np" num="sg" per="thi" pos="pron" rel="mwp" root="ieder" sense="ieder" special="strpro" wh="nwh" word="ieder"/>
+        </node>
+        <node begin="2" cat="rel" end="5" id="7" rel="mod">
+          <node begin="2" case="no_obl" end="3" frame="rel_pronoun(de,no_obl)" gen="de" id="8" index="1" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+          <node begin="2" cat="ssub" end="5" id="9" rel="body">
+            <node begin="2" end="3" id="10" index="1" rel="su"/>
+            <node begin="3" end="4" frame="noun(het,count,pl)" gen="het" id="11" lcat="np" num="pl" pos="noun" rel="obj1" root="erts" sense="erts" word="ertsen"/>
+            <node begin="4" end="5" frame="verb(hebben,sg3,ninv(transitive,part_transitive(uit)))" id="12" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="voer_uit" sc="part_transitive(uit)" sense="voer_uit" tense="present" word="uitvoert"/>
+          </node>
+        </node>
+        <node begin="5" cat="pp" end="8" id="13" rel="mod">
+          <node begin="5" end="6" frame="preposition(naar,[toe])" id="14" lcat="pp" pos="prep" rel="hd" root="naar" sense="naar" word="naar"/>
+          <node begin="6" cat="np" end="8" id="15" rel="obj1">
+            <node begin="6" end="7" frame="number(rang)" id="16" lcat="ap" pos="num" rel="mod" root="derde" sense="derde" special="rang" word="derde"/>
+            <node begin="7" end="8" frame="proper_name(both,'LOC')" id="17" lcat="np" neclass="LOC" num="both" pos="name" rel="hd" root="Staten" sense="Staten" word="Staten"/>
+          </node>
+        </node>
+      </node>
+      <node begin="9" end="10" frame="verb(hebben,sg3,pred_np)" id="18" infl="sg3" lcat="smain" pos="verb" rel="hd" root="stel" sc="pred_np" sense="stel" tense="present" word="stelt"/>
+      <node begin="10" cat="np" end="12" id="19" rel="obj1">
+        <node begin="10" end="11" frame="determiner(de)" id="20" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node begin="11" end="12" frame="noun(de,count,sg)" gen="de" id="21" lcat="np" num="sg" pos="noun" rel="hd" root="commissie" sense="commissie" word="Commissie"/>
+      </node>
+      <node begin="12" end="13" frame="er_adverb(van)" id="22" lcat="pp" pos="pp" rel="mod" root="hiervan" sense="hiervan" special="er" word="hiervan"/>
+      <node begin="13" cat="pp" end="15" id="23" rel="mod">
+        <node begin="13" end="14" frame="preposition(in,[])" id="24" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+        <node begin="14" end="15" frame="noun(de,count,sg)" gen="de" id="25" lcat="np" num="sg" pos="noun" rel="obj1" root="kennis" sense="kennis" word="kennis"/>
+      </node>
+      <node begin="15" cat="pp" end="36" id="26" rel="predc">
+        <node begin="15" end="16" frame="preposition(aan,[vooraf])" id="27" lcat="pp" pos="prep" rel="hd" root="aan" sense="aan" word="aan"/>
+        <node begin="16" cat="np" end="36" id="28" rel="obj1">
+          <node begin="16" end="17" frame="determiner(de)" id="29" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="17" end="18" frame="noun(de,count,sg,pred_pp(aan))" gen="de" id="30" lcat="np" num="sg" pos="noun" rel="hd" root="hand" sc="pred_pp(aan)" sense="hand" word="hand"/>
+          <node begin="18" cat="pp" end="36" id="31" rel="mod">
+            <node begin="18" end="19" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="32" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="19" cat="np" end="36" id="33" rel="obj1">
+              <node begin="19" end="20" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="34" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+              <node begin="20" end="21" frame="noun(het,count,sg)" gen="het" id="35" lcat="np" num="sg" pos="noun" rel="hd" root="model" sense="model" word="model"/>
+              <node begin="21" cat="rel" end="36" id="36" rel="mod">
+                <node begin="21" case="no_obl" end="22" frame="rel_pronoun(het,no_obl)" gen="het" id="37" index="2" lcat="np" pos="pron" rel="rhd" root="dat" sense="dat" wh="rel" word="dat"/>
+                <node begin="21" cat="ssub" end="36" id="38" rel="body">
+                  <node begin="21" end="22" id="39" index="2" rel="su"/>
+                  <node begin="22" end="23" frame="verb(unacc,sg_heeft,passive)" id="40" infl="sg_heeft" lcat="ssub" pos="verb" rel="hd" root="ben" sc="passive" sense="ben" tense="present" word="is"/>
+                  <node begin="21" cat="ppart" end="36" id="41" rel="vc">
+                    <node begin="21" end="22" id="42" index="2" rel="obj1"/>
+                    <node begin="23" end="24" frame="verb(hebben,psp,ninv(transitive,part_transitive(op)))" id="43" infl="psp" lcat="ppart" pos="verb" rel="hd" root="neem_op" sc="part_transitive(op)" sense="neem_op" word="opgenomen"/>
+                    <node begin="24" cat="conj" end="36" id="44" rel="mod">
+                      <node begin="24" cat="pp" end="27" id="45" rel="cnj">
+                        <node begin="24" end="25" frame="preposition(in,[])" id="46" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                        <node begin="25" cat="np" end="27" id="47" rel="obj1">
+                          <node begin="25" end="26" frame="noun(de,count,sg)" gen="de" id="48" lcat="np" num="sg" pos="noun" rel="hd" root="bijlage" sense="bijlage" word="bijlage"/>
+                          <node begin="26" end="27" frame="proper_name(both,'ORG')" id="49" lcat="np" neclass="ORG" num="both" pos="name" rel="app" root="VII" sense="VII" word="VII"/>
+                        </node>
+                      </node>
+                      <node begin="27" end="28" frame="conj(en)" id="50" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                      <node begin="28" cat="pp" end="36" id="51" rel="cnj">
+                        <node aform="base" begin="28" end="29" frame="adjective(pred(adv))" id="52" infl="pred" lcat="ap" pos="adj" rel="mod" root="wel" sense="wel" vform="adj" word="wel"/>
+                        <node begin="29" end="30" frame="preposition(op,[af,na])" id="53" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+                        <node begin="30" cat="np" end="36" id="54" rel="obj1">
+                          <node begin="30" end="31" frame="determiner(de)" id="55" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                          <node begin="31" end="32" frame="tmp_noun(de,count,sg)" gen="de" id="56" lcat="np" num="sg" pos="noun" rel="hd" root="datum" sense="datum" special="tmp" word="datum"/>
+                          <node begin="32" cat="pp" end="36" id="57" rel="mod">
+                            <node begin="32" end="33" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="58" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                            <node begin="33" cat="np" end="36" id="59" rel="obj1">
+                              <node begin="33" end="34" frame="determiner(de)" id="60" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                              <node aform="base" begin="34" end="35" frame="adjective(e)" id="61" infl="e" lcat="ap" pos="adj" rel="mod" root="feitelijk" sense="feitelijk" vform="adj" word="feitelijke"/>
+                              <node begin="35" end="36" frame="noun(de,count,sg)" gen="de" id="62" lcat="np" num="sg" pos="noun" rel="hd" root="verzending" sense="verzending" word="verzending"/>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="36" end="37" frame="punct(punt)" id="63" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Een ieder die ertsen uitvoert naar derde Staten , stelt de Commissie hiervan in kennis aan de hand van het model dat is opgenomen in bijlage VII en wel op de datum van de feitelijke verzending .</sentence>
+  <comments>
+    <comment>Q#364|Een ieder die ertsen uitvoert naar derde Staten , stelt de Commissie hiervan in kennis aan de hand van het model dat is opgenomen in bijlage VII en wel op de datum van de feitelijke verzending .|1|1|7.781023604027624</comment>
+  </comments>
+</alpino_ds>

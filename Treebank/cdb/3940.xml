@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="31" id="0" rel="top">
+    <node begin="9" end="10" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="17" end="18" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="22" end="23" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="30" id="4" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="5" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="2" cat="np" end="30" id="7" rel="predc">
+        <node begin="2" end="3" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="9" lemma="heer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="heer" word="heren"/>
+        <node begin="4" cat="conj" end="30" id="10" rel="app">
+          <node begin="4" cat="np" end="9" id="11" rel="cnj">
+            <node begin="4" cat="mwu" end="7" id="12" rel="hd">
+              <node begin="4" end="5" id="13" lemma="D." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="D." spectype="deeleigen" word="D."/>
+              <node begin="5" end="6" id="14" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+              <node begin="6" end="7" id="15" lemma="Vroome" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Vroome" spectype="deeleigen" word="Vroome"/>
+            </node>
+            <node begin="7" cat="pp" end="9" id="16" rel="mod">
+              <node begin="7" end="8" id="17" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+              <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="18" lemma="Stein" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Stein" word="Stein"/>
+            </node>
+          </node>
+          <node begin="10" cat="conj" end="17" id="19" rel="cnj">
+            <node begin="12" conjtype="neven" end="13" id="20" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="10" cat="np" end="17" id="21" rel="cnj">
+              <node begin="10" cat="mwu" end="12" id="22" rel="hd">
+                <node begin="10" end="11" id="23" lemma="C." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="C." spectype="deeleigen" word="C."/>
+                <node begin="11" end="12" id="24" lemma="Roskam" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Roskam" spectype="deeleigen" word="Roskam"/>
+              </node>
+              <node begin="15" cat="pp" end="17" id="25" index="1" rel="mod">
+                <node begin="15" end="16" id="26" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+                <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="27" lemma="Geleen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Geleen" word="Geleen"/>
+              </node>
+            </node>
+            <node begin="13" cat="np" end="17" id="28" rel="cnj">
+              <node begin="13" cat="mwu" end="15" id="29" rel="hd">
+                <node begin="13" end="14" id="30" lemma="H." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="H." spectype="deeleigen" word="H."/>
+                <node begin="14" end="15" id="31" lemma="Koops" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Koops" spectype="deeleigen" word="Koops"/>
+              </node>
+              <node begin="15" end="17" id="32" index="1" rel="mod"/>
+            </node>
+          </node>
+          <node begin="18" cat="np" end="22" id="33" rel="cnj">
+            <node begin="18" cat="mwu" end="20" id="34" rel="hd">
+              <node begin="18" end="19" id="35" lemma="A." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="A." spectype="deeleigen" word="A."/>
+              <node begin="19" end="20" id="36" lemma="Derwall" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Derwall" spectype="deeleigen" word="Derwall"/>
+            </node>
+            <node begin="20" cat="pp" end="22" id="37" rel="mod">
+              <node begin="20" end="21" id="38" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+              <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="39" lemma="Kerkrade" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Kerkrade" word="Kerkrade"/>
+            </node>
+          </node>
+          <node begin="23" cat="conj" end="30" id="40" rel="cnj">
+            <node begin="25" conjtype="neven" end="26" id="41" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="23" cat="np" end="30" id="42" rel="cnj">
+              <node begin="23" cat="mwu" end="25" id="43" rel="hd">
+                <node begin="23" end="24" id="44" lemma="N." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="N." spectype="deeleigen" word="N."/>
+                <node begin="24" end="25" id="45" lemma="Hilhorst" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hilhorst" spectype="deeleigen" word="Hilhorst"/>
+              </node>
+              <node begin="28" cat="pp" end="30" id="46" index="2" rel="mod">
+                <node begin="28" end="29" id="47" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+                <node begin="29" end="30" genus="onz" getal="ev" graad="basis" id="48" lemma="Sittard" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Sittard" word="Sittard"/>
+              </node>
+            </node>
+            <node begin="26" cat="np" end="30" id="49" rel="cnj">
+              <node begin="26" cat="mwu" end="28" id="50" rel="hd">
+                <node begin="26" end="27" id="51" lemma="J." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="J." spectype="deeleigen" word="J."/>
+                <node begin="27" end="28" id="52" lemma="Lenarts" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lenarts" spectype="deeleigen" word="Lenarts"/>
+              </node>
+              <node begin="28" end="30" id="53" index="2" rel="mod"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="30" end="31" id="54" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het zijn de heren D. de Vroome uit Stein , C. Roskam en H. Koops uit Geleen , A. Derwall uit Kerkrade , N. Hilhorst en J. Lenarts uit Sittard .</sentence>
+</alpino_ds>

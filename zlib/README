@@ -1,0 +1,53 @@
+sics-zlib - Simple Sicstus zlib module
+======================================
+Daniël de Kok <me@danieldk.eu>
+
+Introduction
+------------
+
+sics-zlib provides a very simple interface to zlib. Currently it only contains
+the functionality that I need, but more may be added in the future.
+
+Compilation
+-----------
+
+Requirements
+
+- Sicstus Prolog 3.12.x (4.x.x is untested!)
+- A decent C compiler
+
+Execute 'make' in the source directory.
+
+Usage
+-----
+
+The following predicates are provided:
+
+ zlib_compress(+UncompressedByteList,-CompressedByteList)
+ zlib_compress(+UncompressedByteList,+Level,-CompressedByteList)
+ zlib_compress_term(+Term,-CompressedByteList,-UncompressedLength)
+ zlib_compress_term(+Term,+Level,-CompressedByteList,-UncompressedLength)
+ zlib_uncompress(+CompressedBytesList,+UncompressedLength,-UncompressedByteList)
+ zlib_uncompress_term(+CompressedByteList,+UncompressedLength,-Term)
+
+It is up to the caller to keep the length of the uncompressed byte list
+for uncompression.
+
+To give an example, the predicate test_compress/0 is always true:
+
+ test_compress :-
+    atom_chars(abababababababababababababababab,U),
+    length(U,NU),
+    zlib_compress(U,C),
+    zlib_uncompress(C,NU,U).
+
+Todo
+----
+
+- Stream I/O
+- gzip format support
+
+License
+-------
+
+This module is covered by the zlib license.

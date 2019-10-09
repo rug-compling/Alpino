@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="27" id="0" rel="top">
+    <node begin="0" cat="smain" end="26" id="1" rel="--">
+      <node begin="0" end="1" frame="het_noun" id="2" lcat="np" pos="noun" rel="sup" root="het" sense="het" special="het" word="Het"/>
+      <node begin="1" end="2" frame="verb(unacc,sg_heeft,copula_vp)" id="3" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="ben" sc="copula_vp" sense="ben" tense="present" word="is"/>
+      <node begin="2" end="3" frame="adverb" id="4" lcat="advp" pos="adv" rel="mod" root="niet" sense="niet" word="niet"/>
+      <node begin="3" cat="np" end="8" id="5" rel="predc">
+        <node begin="3" end="4" frame="determiner(de)" id="6" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node begin="4" end="5" frame="noun(de,count,sg,subject_vp)" gen="de" id="7" lcat="np" num="sg" pos="noun" rel="hd" root="taak" sc="subject_vp" sense="taak" word="taak"/>
+        <node begin="5" cat="pp" end="8" id="8" rel="mod">
+          <node begin="5" end="6" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="9" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+          <node begin="6" cat="np" end="8" id="10" rel="obj1">
+            <node begin="6" end="7" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="11" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+            <node begin="7" end="8" frame="proper_name(both,'ORG')" id="12" lcat="np" neclass="ORG" num="both" pos="name" rel="hd" root="Comité" sense="Comité" word="Comité"/>
+          </node>
+        </node>
+      </node>
+      <node begin="8" cat="ti" end="26" id="13" rel="su">
+        <node begin="24" end="25" frame="complementizer(te)" id="14" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+        <node begin="8" cat="inf" end="26" id="15" rel="body">
+          <node begin="8" cat="np" end="24" id="16" rel="obj1">
+            <node begin="8" end="9" frame="determiner(de)" id="17" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="9" end="10" frame="noun(both,both,both)" gen="both" id="18" lcat="np" num="both" pos="noun" rel="hd" root="gegrondheid" sense="gegrondheid" word="gegrondheid"/>
+            <node begin="10" cat="pp" end="24" id="19" rel="mod">
+              <node begin="10" end="11" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="20" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+              <node begin="11" cat="np" end="24" id="21" rel="obj1">
+                <node begin="11" end="12" frame="determiner(de)" id="22" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                <node begin="12" cat="ppart" end="23" id="23" rel="mod">
+                  <node begin="12" cat="pp" end="22" id="24" rel="mod">
+                    <node begin="12" end="13" frame="preposition(door,[heen])" id="25" lcat="pp" pos="prep" rel="hd" root="door" sense="door" word="door"/>
+                    <node begin="13" cat="np" end="22" id="26" rel="obj1">
+                      <node begin="13" end="14" frame="determiner(de)" id="27" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                      <node begin="14" cat="ppart" end="18" id="28" rel="mod">
+                        <node begin="14" cat="pp" end="17" id="29" rel="mod">
+                          <node begin="14" end="15" frame="preposition(in,[])" id="30" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                          <node begin="15" cat="np" end="17" id="31" rel="obj1">
+                            <node begin="15" end="16" frame="noun(het,count,sg)" gen="het" id="32" lcat="np" num="sg" pos="noun" rel="hd" root="artikel" sense="artikel" word="artikel"/>
+                            <node begin="16" end="17" frame="number(hoofd(pl_num))" id="33" infl="pl_num" lcat="detp" pos="num" rel="app" root="49" sense="49" special="hoofd" word="49"/>
+                          </node>
+                        </node>
+                        <node aform="base" begin="17" end="18" frame="adjective(ge_e)" id="34" infl="e" lcat="ppart" pos="adj" rel="hd" root="bedoeld" sense="bedoeld" vform="psp" word="bedoelde"/>
+                      </node>
+                      <node begin="18" end="19" frame="noun(de,count,pl)" gen="de" id="35" lcat="np" num="pl" pos="noun" rel="hd" root="autoriteit" sense="autoriteit" word="autoriteiten"/>
+                      <node begin="19" cat="pp" end="22" id="36" rel="mod">
+                        <node begin="19" end="20" frame="preposition(in,[])" id="37" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                        <node begin="20" cat="np" end="22" id="38" rel="obj1">
+                          <node aform="base" begin="20" end="21" frame="adjective(e)" id="39" infl="e" lcat="ap" pos="adj" rel="mod" root="afzonderlijk" sense="afzonderlijk" vform="adj" word="afzonderlijke"/>
+                          <node begin="21" end="22" frame="noun(both,count,pl)" gen="both" id="40" lcat="np" num="pl" pos="noun" rel="hd" root="geval" sense="geval" word="gevallen"/>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node aform="base" begin="22" end="23" frame="adjective(ge_both(adv))" id="41" infl="both" lcat="ppart" pos="adj" rel="hd" root="genomen" sense="genomen" vform="psp" word="genomen"/>
+                </node>
+                <node begin="23" end="24" frame="noun(de,count,pl)" gen="de" id="42" lcat="np" num="pl" pos="noun" rel="hd" root="beslissing" sense="beslissing" word="beslissingen"/>
+              </node>
+            </node>
+          </node>
+          <node begin="25" end="26" frame="verb(hebben,inf,transitive)" id="43" infl="inf" lcat="inf" pos="verb" rel="hd" root="beoordeel" sc="transitive" sense="beoordeel" word="beoordelen"/>
+        </node>
+      </node>
+    </node>
+    <node begin="26" end="27" frame="punct(punt)" id="44" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Het is niet de taak van het Comité de gegrondheid van de door de in artikel 49 bedoelde autoriteiten in afzonderlijke gevallen genomen beslissingen te beoordelen .</sentence>
+  <comments>
+    <comment>Q#490|Het is niet de taak van het Comité de gegrondheid van de door de in artikel 49 bedoelde autoriteiten in afzonderlijke gevallen genomen beslissingen te beoordelen .|1|1|-1.4499439497870452</comment>
+  </comments>
+</alpino_ds>

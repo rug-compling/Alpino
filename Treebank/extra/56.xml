@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" cat="advp" end="3" id="2" rel="mod">
+        <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="3" lemma="begin" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="begin" word="Begin"/>
+        <node begin="1" cat="np" end="3" id="4" rel="mod">
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="oktober" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="oktober" word="oktober"/>
+          <node begin="2" end="3" id="6" lemma="1994" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="1994" word="1994"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" lemma="verdwijnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verdwijn" word="verdween" wvorm="pv"/>
+      <node begin="4" cat="np" end="7" id="8" rel="su">
+        <node begin="4" end="5" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="5" buiging="met-e" end="6" graad="basis" id="10" lemma="32-jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="32-jarige" word="32-jarige"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="vrouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vrouw" word="vrouw"/>
+      </node>
+      <node begin="7" cat="pp" end="13" id="12" rel="ld">
+        <node begin="7" end="8" id="13" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+        <node begin="8" cat="np" end="13" id="14" rel="obj1">
+          <node begin="8" end="9" id="15" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="9" end="10" genus="onz" getal="ev" graad="dim" id="16" lemma="plaats" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="plaatsje" word="plaatsje"/>
+          <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="17" lemma="Richmond" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Richmond" word="Richmond"/>
+          <node begin="11" cat="pp" end="13" id="18" rel="mod">
+            <node begin="11" end="12" id="19" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="20" lemma="Canada" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Canada" word="Canada"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Begin oktober 1994 verdween een 32-jarige vrouw uit het plaatsje Richmond in Canada .</sentence>
+</alpino_ds>

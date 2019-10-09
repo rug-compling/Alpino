@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="4" end="5" id="2" lemma="behoeven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="behoef" word="behoeft" wvorm="pv"/>
+      <node begin="5" end="6" getal="ev" id="3" index="1" lemma="niemand" naamval="stan" pdtype="pron" persoon="3p" pos="noun" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="su" root="niemand" status="vol" vwtype="onbep" word="niemand"/>
+      <node begin="0" cat="ti" end="8" id="4" rel="vc">
+        <node begin="6" end="7" id="5" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="0" cat="inf" end="8" id="6" rel="body">
+          <node begin="0" cat="pp" end="4" id="7" rel="pc">
+            <node begin="0" end="1" id="8" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="Op"/>
+            <node begin="1" cat="np" end="4" id="9" rel="obj1">
+              <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="10" lemma="goedertierenheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="goedertierenheid" word="goedertierenheid"/>
+              <node begin="2" cat="pp" end="4" id="11" rel="mod">
+                <node begin="2" end="3" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="3" end="4" getal="mv" graad="basis" id="13" lemma="parkeerwachter" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="parkeerwachters" word="parkeerwachters"/>
+              </node>
+            </node>
+          </node>
+          <node begin="5" end="6" id="14" index="1" rel="su"/>
+          <node begin="7" buiging="zonder" end="8" id="15" lemma="rekenen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="reken" word="rekenen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Op goedertierenheid van parkeerwachters behoeft niemand te rekenen .</sentence>
+</alpino_ds>

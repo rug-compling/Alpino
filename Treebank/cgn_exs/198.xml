@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="whq" end="5" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="noun" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="whd" root="waar" status="vol" vwtype="vb" word="waar"/>
+      <node begin="0" cat="sv1" end="5" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="wonen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="woon" word="woont" wvorm="pv"/>
+        <node begin="2" end="3" genus="masc" getal="ev" id="5" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+        <node begin="0" cat="pp" end="5" id="6" rel="ld">
+          <node begin="0" end="1" id="7" index="1" rel="obj1"/>
+          <node begin="3" buiging="zonder" end="4" graad="basis" id="8" lemma="recht" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="recht" word="recht"/>
+          <node begin="4" end="5" id="9" lemma="tegenover" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegenover" vztype="init" word="tegenover"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>waar woont hij recht tegenover</sentence>
+</alpino_ds>

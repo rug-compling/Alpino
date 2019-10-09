@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" cat="advp" end="2" id="2" index="1" rel="whd">
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="waar" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="waar" word="waar"/>
+        <node begin="1" end="2" id="4" lemma="anders" pos="adj" postag="BW()" pt="bw" rel="mod" root="anders" word="anders"/>
+      </node>
+      <node begin="0" cat="sv1" end="7" id="5" rel="body">
+        <node begin="2" end="3" id="6" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+        <node begin="3" end="4" getal="ev" id="7" index="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="0" cat="inf" end="7" id="8" rel="vc">
+          <node begin="0" end="2" id="9" index="1" rel="mod"/>
+          <node begin="3" end="4" id="10" index="2" rel="su"/>
+          <node begin="4" cat="np" end="6" id="11" rel="obj1">
+            <node begin="4" buiging="met-e" end="5" id="12" lemma="zulk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="zulke" vwtype="aanw" word="zulke"/>
+            <node begin="5" end="6" getal="mv" graad="basis" id="13" lemma="oliebol" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="oliebol" word="oliebollen"/>
+          </node>
+          <node begin="6" buiging="zonder" end="7" id="14" lemma="kopen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="koop" word="kopen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="15" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>waar anders kan ik zulke oliebollen kopen ?</sentence>
+</alpino_ds>

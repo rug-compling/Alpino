@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="Dat"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" cat="np" end="8" id="4" rel="predc">
+        <node begin="2" end="3" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="6" lemma="voorbeeld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="voorbeeld" word="voorbeeld"/>
+        <node begin="4" cat="pp" end="8" id="7" rel="mod">
+          <node begin="4" end="5" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="5" cat="whrel" end="8" id="9" rel="obj1">
+            <node begin="5" end="6" id="10" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="rhd" root="hoe" word="hoe"/>
+            <node begin="5" cat="ssub" end="8" id="11" rel="body">
+              <node begin="5" end="6" id="12" index="1" rel="predc"/>
+              <node begin="6" end="7" genus="onz" getal="ev" id="13" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+              <node begin="7" end="8" id="14" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Dat is een voorbeeld van hoe het moet</sentence>
+</alpino_ds>

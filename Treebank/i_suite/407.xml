@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="4" end="5" id="2" lemma="euh" pos="--" postag="TSW()" pt="tsw" rel="--" root="euh" word="euh"/>
+    <node begin="5" end="6" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="7" id="4" rel="--">
+      <node begin="0" end="1" getal="mv" id="5" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="Wij"/>
+      <node begin="1" end="2" id="6" lemma="willen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="wil" word="willen" wvorm="pv"/>
+      <node begin="2" cat="pp" end="7" id="7" rel="ld">
+        <node begin="2" end="3" id="8" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+        <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="9" lemma="Wembley" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Wembley" word="Wembley"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="10" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>Wij willen naar , euh , Wembley !</sentence>
+</alpino_ds>

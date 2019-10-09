@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="np" end="6" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="verkeerd" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="verkeerd" word="Verkeerd"/>
+      <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="3" lemma="wacht_woord" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="wacht_woord" word="wachtwoord"/>
+      <node begin="2" cat="pp" end="6" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+        <node begin="3" cat="np" end="6" id="6" rel="obj1">
+          <node begin="3" end="4" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="draadloos" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="draadloos" word="draadloos"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="netwerk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="netwerk" word="netwerk"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Verkeerd wachtwoord voor het draadloos netwerk .</sentence>
+</alpino_ds>

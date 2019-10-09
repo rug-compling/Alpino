@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="Dat"/>
+      <node begin="1" end="2" id="3" lemma="maken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="maak" word="maakte" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="4" rel="obj1">
+        <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="6" lemma="leaseauto" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="leaseauto" word="leaseauto"/>
+      </node>
+      <node begin="5" end="6" id="7" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      <node begin="6" buiging="zonder" end="7" graad="comp" id="8" lemma="aantrekkelijk" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="predc" root="aantrekkelijk" word="aantrekkelijker"/>
+      <node begin="4" cat="pp" end="8" id="9" rel="pc">
+        <node begin="4" end="5" getal="getal" id="10" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="7" end="8" id="11" lemma="op" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="op" vztype="fin" word="op"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dat maakte de leaseauto er niet aantrekkelijker op .</sentence>
+</alpino_ds>

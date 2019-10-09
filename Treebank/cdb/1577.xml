@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="smain" end="16" id="1" rel="--">
+      <node begin="0" cat="pp" end="5" id="2" rel="pc">
+        <node begin="0" end="1" id="3" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="Met"/>
+        <node begin="1" cat="np" end="5" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="vrijlating" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vrijlating" word="vrijlating"/>
+          <node begin="3" cat="pp" end="5" id="7" rel="mod">
+            <node begin="3" end="4" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="4" end="5" genus="genus" getal="ev" graad="basis" id="9" lemma="Hetzel" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Hetzel" word="Hetzel"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" id="10" lemma="eindigen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="eindig" word="eindigde" wvorm="pv"/>
+      <node begin="6" cat="np" end="16" id="11" rel="su">
+        <node begin="6" end="7" getal-n="zonder-n" graad="basis" id="12" lemma="één" numtype="hoofd" pos="noun" positie="nom" postag="TW(hoofd,nom,zonder-n,basis)" pt="tw" rel="hd" root="een" word="een"/>
+        <node begin="7" cat="np" end="16" id="13" rel="mod">
+          <node begin="7" end="8" id="14" lemma="de" lwtype="bep" naamval="gen" npagr="rest3" pos="det" postag="LID(bep,gen,rest3)" pt="lid" rel="det" root="der" word="der"/>
+          <node begin="8" buiging="met-e" end="9" graad="sup" id="15" lemma="sensationeel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="sensationeelst" word="sensationeelste"/>
+          <node begin="9" end="10" getal="mv" graad="basis" id="16" lemma="strafproces" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="strafproces" word="strafprocessen"/>
+          <node begin="10" cat="rel" end="16" id="17" rel="mod">
+            <node begin="10" end="11" getal="getal" id="18" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="10" cat="ssub" end="16" id="19" rel="body">
+              <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="20" index="2" lemma="westduitsland" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="WestDuitsland" word="WestDuitsland"/>
+              <node begin="14" end="15" id="21" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+              <node begin="10" cat="ppart" end="16" id="22" rel="vc">
+                <node begin="10" end="11" id="23" index="1" rel="obj1"/>
+                <node begin="11" end="12" id="24" index="2" rel="su"/>
+                <node begin="12" cat="pp" end="14" id="25" rel="mod">
+                  <node begin="12" end="13" id="26" lemma="sinds" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="sinds" vztype="init" word="sinds"/>
+                  <node begin="13" end="14" getal="mv" graad="basis" id="27" lemma="jaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="jaar" word="jaren"/>
+                </node>
+                <node begin="15" buiging="zonder" end="16" id="28" lemma="beleven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="beleef" word="beleefd" wvorm="vd"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="29" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Met de vrijlating van Hetzel eindigde een der sensationeelste strafprocessen die WestDuitsland sinds jaren heeft beleefd .</sentence>
+</alpino_ds>

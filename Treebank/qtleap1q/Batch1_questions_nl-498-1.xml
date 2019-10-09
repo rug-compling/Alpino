@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="whq" end="16" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="16" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+        <node begin="2" end="3" getal="ev" id="5" index="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="0" cat="inf" end="16" id="6" rel="vc">
+          <node begin="0" end="1" id="7" index="1" rel="mod"/>
+          <node begin="2" end="3" id="8" index="2" rel="su"/>
+          <node begin="3" cat="np" end="10" id="9" rel="obj1">
+            <node begin="3" end="4" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="4" buiging="met-e" end="5" graad="basis" id="11" lemma="dubbel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="dubbel" word="dubbele"/>
+            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="12" lemma="venster" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="venster" word="venster"/>
+            <node begin="6" cat="pp" end="10" id="13" rel="mod">
+              <node begin="6" end="7" id="14" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="7" cat="mwu" end="10" id="15" rel="obj1">
+                <node begin="7" end="8" id="16" lemma="Windows" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Windows" spectype="deeleigen" word="Windows"/>
+                <node begin="8" end="9" id="17" lemma="Live" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Live" spectype="deeleigen" word="Live"/>
+                <node begin="9" end="10" id="18" lemma="Messenger" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Messenger" spectype="deeleigen" word="Messenger"/>
+              </node>
+            </node>
+          </node>
+          <node begin="10" buiging="zonder" end="11" id="19" lemma="verwijderen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verwijder" word="verwijderen" wvorm="inf"/>
+          <node begin="11" cat="pp" end="16" id="20" rel="mod">
+            <node begin="11" end="12" id="21" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="12" cat="np" end="16" id="22" rel="obj1">
+              <node begin="12" end="13" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="13" cat="mwu" end="15" id="24" rel="mod">
+                <node begin="13" end="14" id="25" lemma="Windows" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Windows" spectype="deeleigen" word="Windows"/>
+                <node begin="14" end="15" id="26" lemma="7" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="7" spectype="deeleigen" word="7"/>
+              </node>
+              <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="27" lemma="werk_balk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="werk_balk" word="werkbalk"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="28" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe kan ik het dubbele venster van Windows Live Messenger verwijderen in de Windows 7 werkbalk ?</sentence>
+</alpino_ds>

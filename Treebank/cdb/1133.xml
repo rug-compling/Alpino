@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="7" end="8" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="12" end="13" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="14" end="15" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="15" end="16" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="1" cat="du" end="18" id="6" rel="--">
+      <node begin="1" cat="du" end="14" id="7" rel="nucl">
+        <node begin="1" cat="smain" end="7" id="8" rel="dp">
+          <node begin="1" end="2" genus="masc" getal="ev" id="9" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+          <node begin="2" end="3" id="10" lemma="lopen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="loop" word="loopt" wvorm="pv"/>
+          <node begin="3" end="4" id="11" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="af" vztype="fin" word="af"/>
+          <node begin="4" cat="cp" end="7" id="12" rel="mod">
+            <node begin="4" conjtype="onder" end="5" id="13" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+            <node begin="5" cat="np" end="7" id="14" rel="body">
+              <node begin="5" end="6" id="15" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="16" lemma="wekker" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wekker" word="wekker"/>
+            </node>
+          </node>
+        </node>
+        <node begin="8" cat="du" end="14" id="17" rel="dp">
+          <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="18" lemma="Cor" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="tag" root="Cor" word="Cor"/>
+          <node begin="8" cat="du" end="14" id="19" rel="nucl">
+            <node begin="8" cat="ap" end="11" id="20" rel="nucl">
+              <node begin="8" buiging="zonder" end="9" graad="basis" id="21" lemma="kalm" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="kalm" word="kalm"/>
+              <node begin="9" end="10" id="22" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
+              <node begin="10" end="11" id="23" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
+            </node>
+            <node begin="13" buiging="zonder" end="14" graad="basis" id="24" lemma="kalm" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="sat" root="kalm" word="kalm"/>
+          </node>
+        </node>
+      </node>
+      <node begin="16" cat="sv1" end="18" id="25" rel="tag">
+        <node begin="16" end="17" id="26" lemma="zeggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zeg" word="zegt" wvorm="pv"/>
+        <node begin="17" end="18" genus="fem" getal="ev" id="27" lemma="zij" naamval="nomin" pdtype="pron" persoon="3v" pos="noun" postag="VNW(pers,pron,nomin,vol,3v,ev,fem)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
+      </node>
+    </node>
+    <node begin="18" end="19" id="28" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&quot; Hij loopt af als een wekker , kalm nu maar Cor , kalm &quot; , zegt zij .</sentence>
+</alpino_ds>

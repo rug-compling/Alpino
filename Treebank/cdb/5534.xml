@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="daarover" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarover" word="Daarover"/>
+      <node begin="1" end="2" id="3" lemma="doen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="doe" word="deed" wvorm="pv"/>
+      <node begin="2" cat="np" end="6" id="4" rel="su">
+        <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="heer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="heer" word="heer"/>
+        <node begin="4" cat="mwu" end="6" id="7" rel="app">
+          <node begin="4" end="5" id="8" lemma="R." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="R." spectype="deeleigen" word="R."/>
+          <node begin="5" end="6" id="9" lemma="Lode" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lode" spectype="deeleigen" word="Lode"/>
+        </node>
+      </node>
+      <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="10" lemma="navraag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="navraag" word="navraag"/>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Daarover deed de heer R. Lode navraag .</sentence>
+</alpino_ds>

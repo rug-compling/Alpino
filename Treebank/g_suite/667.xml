@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="cp" end="6" id="1" rel="--">
+      <node begin="0" conjtype="onder" end="1" id="2" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+      <node begin="1" cat="ssub" end="6" id="3" rel="body">
+        <node begin="1" end="2" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="1" cat="conj" end="5" id="5" rel="vc">
+          <node begin="1" cat="ppart" end="3" id="6" rel="cnj">
+            <node begin="1" end="2" id="7" index="1" rel="obj1"/>
+            <node begin="2" buiging="zonder" end="3" id="8" lemma="opbellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bel" word="opgebeld" wvorm="vd"/>
+          </node>
+          <node begin="3" conjtype="neven" end="4" id="9" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="1" cat="ppart" end="5" id="10" rel="cnj">
+            <node begin="1" end="2" id="11" index="1" rel="obj1"/>
+            <node begin="4" buiging="zonder" end="5" id="12" lemma="beschimpen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="beschimp" word="beschimpt" wvorm="vd"/>
+          </node>
+        </node>
+        <node begin="5" end="6" id="13" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+      </node>
+    </node>
+  </node>
+  <sentence>dat ik opgebeld en beschimpt werd</sentence>
+</alpino_ds>

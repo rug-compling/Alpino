@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="Men"/>
+      <node begin="1" end="2" id="3" lemma="kopen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="koop" word="koopt" wvorm="pv"/>
+      <node begin="2" cat="pp" end="5" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+        <node begin="3" cat="np" end="5" id="6" rel="obj1">
+          <node begin="3" end="4" id="7" lemma="tien" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="tien" word="tien"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="gulden" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gulden" word="gulden"/>
+        </node>
+      </node>
+      <node begin="5" cat="np" end="7" id="9" rel="obj1">
+        <node begin="5" end="6" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="11" lemma="deelname-biljet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="biljet" word="deelname-biljet"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Men koopt voor tien gulden een deelname-biljet .</sentence>
+</alpino_ds>

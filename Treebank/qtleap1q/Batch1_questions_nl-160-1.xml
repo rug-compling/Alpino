@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="np" end="9" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" id="2" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="Geen"/>
+      <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="3" lemma="geluid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geluid" word="geluid"/>
+      <node begin="2" cat="pp" end="9" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+        <node begin="3" cat="np" end="9" id="6" rel="obj1">
+          <node begin="3" end="4" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="4" buiging="zonder" end="5" getal-n="zonder-n" id="8" lemma="voeren" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="voer" word="voeren" wvorm="inf"/>
+          <node begin="5" cat="pp" end="9" id="9" rel="mod">
+            <node begin="5" end="6" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="6" cat="np" end="9" id="11" rel="obj1">
+              <node begin="6" end="7" id="12" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="7" end="8" genus="genus" getal="ev" graad="basis" id="13" lemma="Skype" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mod" root="Skype" word="Skype"/>
+              <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="14" lemma="gesprek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gesprek" word="gesprek"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Geen geluid bij het voeren van een Skype gesprek</sentence>
+</alpino_ds>

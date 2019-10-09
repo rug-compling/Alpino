@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="0" cat="smain" end="18" id="1" rel="--">
+      <node begin="0" cat="pp" end="7" id="2" rel="pc">
+        <node begin="0" end="1" id="3" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="Aan"/>
+        <node begin="1" cat="np" end="7" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" buiging="met-e" end="3" graad="basis" id="6" lemma="fraai" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="fraai" word="fraaie"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="bloem" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bloem" word="bloemen"/>
+          <node begin="4" cat="pp" end="7" id="8" rel="mod">
+            <node begin="4" end="5" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="5" cat="np" end="7" id="10" rel="obj1">
+              <node begin="5" buiging="met-e" end="6" id="11" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="plant" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="plant" word="plant"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="13" lemma="herkennen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="herken" word="herkent" wvorm="pv"/>
+      <node begin="8" end="9" getal="getal" id="14" lemma="u" naamval="nomin" pdtype="pron" persoon="2b" pos="noun" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" root="u" status="vol" vwtype="pers" word="u"/>
+      <node begin="9" buiging="zonder" end="10" graad="basis" id="15" lemma="onmiddelijk" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="onmiddelijk" word="onmiddelijk"/>
+      <node begin="10" cat="np" end="18" id="16" rel="obj1">
+        <node begin="10" end="11" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="18" lemma="verwantschap" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verwantschap" word="verwantschap"/>
+        <node begin="12" cat="pp" end="18" id="19" rel="mod">
+          <node begin="12" end="13" id="20" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="13" cat="conj" end="18" id="21" rel="obj1">
+            <node begin="13" cat="np" end="15" id="22" rel="cnj">
+              <node begin="13" end="14" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="24" lemma="tomaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tomaat" word="tomaat"/>
+            </node>
+            <node begin="15" conjtype="neven" end="16" id="25" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="16" cat="np" end="18" id="26" rel="cnj">
+              <node begin="16" end="17" id="27" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="28" lemma="aardappel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aardappel" word="aardappel"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="29" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Aan de fraaie bloemen van deze plant herkent u onmiddelijk de verwantschap met de tomaat en de aardappel .</sentence>
+</alpino_ds>

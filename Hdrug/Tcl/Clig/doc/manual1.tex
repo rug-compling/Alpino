@@ -1,0 +1,915 @@
+\documentstyle[12pt,a4wide,epsf]{article} 
+% Specifies the document style.
+
+\parindent0mm \parskip1.5ex plus 0.5ex minus 0.5ex
+\pagestyle{plain}  % Vielleicht aber doch...
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+\makeindex
+\frenchspacing
+\textheight 22cm % DIN_A4 = 22 cm
+
+\setlength{\arraycolsep}{0.0mm}
+\def\epsfsize#1#2{\epsfxsize}
+
+%indexhack
+\newcommand{\indexentry}[2]
+{\item #1 #2}
+
+\newcommand{\toindex}[1]
+{\index{#1}#1}
+
+\newcommand{\itindex}[1]
+{\index{#1}{\em #1}}
+
+\newcommand{\fig}[1]{fig. \ref{#1}}
+
+\hyphenation{}
+
+\bibliographystyle{pubsbib}
+
+\begin{document}
+
+\title{The {\sc Clig} Grapher for Linguistic Data Structures}
+
+\author{Karsten Konrad, konrad@coli.uni-sb.de}
+
+
+
+\maketitle
+
+\abstract{This paper describes {\sc Clig}, an interactive, extendible
+ grapher for visualizing linguistic data structures developed in the
+ FraCaS project. The grapher has been designed both to be stand-alone
+ and to be used as an add-on for linguistic applications which display
+ their output in a graphical manner. The focus of this paper is to
+ introduce the reader with {\sc Clig}'s graphical description language
+ and its use as a general tool to display trees, feature structures,
+ $\lambda$-expressions and semantic structures such as DRSs.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Inhaltsverzeichnis %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\tableofcontents
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Abbildungsverzeichnis %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\listoftables
+%\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+%\newpage
+
+%%%definitionen
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+
+\section{Introduction: What is {\sc Clig}?}
+
+A {\em grapher\/} is a program for displaying graphical information.
+The program {\sc Clig}\footnote{{\sc Clig} stands for {\em
+Computational Linguistics Interactive Grapher}} is a grapher which has
+especially been designed to provide developers of applications in
+computational linguistics with a way to display their data structures.
+{\sc Clig} provides most graphical notations common in syntax and
+semantics such as trees, AV-Matrices or {\it Discourse Representation
+Structures}\footnote{see \cite{Kamp 93}}. A flexible layout algorithm
+allows the use of arbitrarily nested or embedded notations like e.g. a
+tree of feature structures.
+
+Depending on the application, graphical structures can be assigned an
+{\it interactive\/} behavior.  This means that a user can click on
+mouse sensitive regions in the display area which will result in an
+action performed by the underlying application. E.g. a user might click
+on a node in a tree and get further information on that node.
+
+{\sc Clig} is written in Tcl/Tk\footnote{see \cite{Ousterhout 94}}, the
+widespread programming system for developing graphical user interfaces
+(GUIs). One of the major properties {\sc Clig} has, thanks to the
+Tcl/Tk-environment, is its extendibility. The source code of {\sc Clig}
+can be seen as a basic set of ready-to-use tools which can be extended
+with additional, more application specific modules if needed. A
+developer may add his or her own graphical data structures to the
+grapher (which is not very hard if you follow some simple conventions)
+and provide these with their own interaction capabilities such as
+clickable regions or edit windows. Communication between the {\sc Clig}
+grapher and an application is possible when the application's host
+system (e.g. {\sc Common Lisp}) provides a way to send a simple command
+string to Tcl/Tk. {\sc Clig}'s interactive possibilities can be used
+when the host system can give control to Tcl/Tk and read its
+variables. Most modern programming environments provide these
+communication channels or will so in the near future, since Tcl/Tk is
+becoming the most popular extension language so far.
+
+In conclusion, the {\sc Clig} grapher so far has the following
+properties:
+
+\begin{itemize}
+\item It can display graphical data from simple text to nested
+DRS, trees and typed feature structures
+\item Missing graphical elements can be added by the user following
+a simple convention
+\item Description strings are used to describe the graphics and can
+be sent to the grapher by any application
+\item Graphical elements, such as a text or a whole DRS can be
+specified to be clickable and can be associated with executable
+Tcl-code
+\item This code can specify any kind of interactive behavior via the
+underlying application
+\item {\sc Clig} provides standard facilities such as saving and loading
+of graphical objects and printing to Postscript
+\end{itemize}
+
+The focus of this introductory paper is the use of {\sc Clig} as a
+pure displaying tool for graphical information. {\sc Clig} uses a
+human-readable ASCII-representation for the graphs it displays which
+can be created and modified with common text editors like {\sc vi} or
+{\sc Emacs}. Once you understand this description language, you can
+simply enter graphs in your text editor and display them by loading
+them into the grapher. Although I believe that very few people will use
+{\sc Clig} in this way ({\sc Clig} usually gets its input from
+programs, not human users), it is a good way to become familiar with
+the grapher and its possibilities. More advanced users, who want to use
+{\sf Clig} in interactive applications will find more detailed
+information in \cite{Konrad 95b}.
+
+\section{Using {\sc Clig}}
+
+To get a quick overview of {\sc Clig}'s capabilities, the program comes
+with a set of examples which can be loaded using the menu bar. The next
+section describes how you can install the grapher on your machine.
+
+\subsection{A quick installation guide}
+
+In order to install {\sc Clig}, you need:
+
+\begin{itemize}
+\item a terminal with Tcl 7.4 and Tk 4.0 (or higher) running on it
+\item the current release of the grapher ({\tt clig-release.tar.gz})
+\end{itemize}
+
+If you cannot run {\tt wish}, the Tcl/Tk-interpreter on your machine,
+please ask your system operator for help or install the current version
+of Tcl/Tk in your home directory (the current version can be ftp'ed via
+{\tt <URL:ftp://ftp.smli.com/pub/tcl/>}).
+
+You then can do the following step by step:
+
+\begin{itemize}
+\item[1.] Put {\tt clig-release.tar.gz} in a directory of its own
+
+\item[2.] {\tt gunzip clig-release.tar.gz}
+
+\item[3.] {\tt tar -xvf clig-release.tar}
+
+\item[4.] {\tt clig}
+\end{itemize}
+
+I everything went well, you now should be able to load some examples
+from the {\tt examples} directory. 
+
+\subsection{The menu bar}
+
+The menu bars provides the user with the standard facilities of the
+grapher for loading and saving graphics, printing and setting some
+preferences. It also contains some simple help-mechanisms where you can
+get information about the basic functions hidden in the menu bar and
+the program itself. 
+
+The {\bf File} menu contains the following menu points:
+
+\begin{description}
+\item[New Window] opens a new {\sc Clig} process with a main
+window of its own.
+
+\item[Load] opens a file-selector box which lets you load a graphics
+
+\item[Save] opens a file-selector box which lets you save a graphics
+
+\item[Print] Postscript printing to a file
+
+\item[Editor] Opens an editor window with which you can view and edit 
+the description strings of the currently displayed graphics.
+
+\item[Exit] closes main window and quits program.
+
+\end{description}
+
+The {\bf View} menu lets you change how things are displayed.
+
+\begin{description}
+\item[Redisplay] redisplays the current graph. This graph may not be visible
+after you have selected some of the information in the Help-menu. This
+option also is useful to see how fast a graph gets drawn and to
+redisplay after changing font sizes, switching off colors etc.
+
+\item[Fit Window] expands the main window to the exact size of current
+graph after the window size has been changed. Note that you can set the
+size of the main window with your window managers resize button. It
+will stay the same size until you use Fit Window.
+
+\item[View Top] display the topmost graph in the graph stack, which is
+usually the last graph you loaded.
+
+\item[Clear Stack] removes all graphs from memory and displays a copyright
+message.
+
+\item[Tree Hspace] lets you choose how much distance a node in a tree
+at least should have from its neighbor sibling.
+
+\item[Tree Vspace] lets you choose how much distance a node in a tree
+should have from its parent node.
+
+\item[Zoom] is used to adjust the size of the displayed graphics. 
+
+\item[No Colors] switches color graphics on and off. This option should
+be used if you either have no way of displaying colors on your screen
+or if you want to make a hardcopy which should be printed on a
+monochrome printing device.
+\end{description}
+
+The {\bf Help} menu contains general information and some basic tips
+for using the program.
+
+The menu bar also contains two buttons with arrows in them. These are
+used to walk through the graph stack. {\sc Clig} stores all distinct
+graphics it has to display in a stack, with the topmost being the newest
+object. Thus, if you load three graphs, all three can be reviewed by
+using the arrow keys. {\sc Clig} does not store objects twice in the
+stack.
+
+\section{The description string}
+
+This section explains the {\it description strings\/} which are used to
+describe the graphical information to be displayed.  A description
+string is a list in Tcl-syntax containing a hierarchical description of
+the object to be drawn without any exact positioning information. The
+main function {\tt clig} takes this description as an argument and
+performs a top-down drawing algorithm on the string. The keywords
+(commands) contained in the string actually are Tcl-functions for
+graphical objects which take care of the positioning of their
+children. The following examples are description strings:
+
+\begin{itemize}
+\item \verb'{plain-text "NP"}'
+\item \verb'{sign lambda}'
+\item \verb'{drs {plain-text "x"} {plain-text "John(x)"}}'  
+\end{itemize}
+
+The first example describes the plain text {\tt NP} (a text with no
+further graphical information which also is not clickable in any way).
+The keyword for the description always is the first word, in this case
+{\tt plain-text}. The second example describes the $\lambda$-sign. The
+third describes a graphical structure with two children, the plain text
+{\tt x} and the plain text {\tt John(x)}. These two children are to be
+placed in a rectangle with the first child being boxed on top of the
+remaining second; the children also are centered within the whole
+structure. The result is a simple DRS as shown in \fig{drs1}.
+
+In a loadable file, {\sf Clig} requires all descriptions to be
+preceeded by the command {\sf clig}.  You therefore can try all
+examples in this paper by yourself just by typing them into a text
+file, add the word {\tt clig} in front of the example and loading them
+with the {\bf Load...} option in the main menu of {\sc Clig}. Another
+possibility is to edit the description in the editor window of {\sc
+Clig} itself. Note that the editor only displays the actual descriptions
+without any of the useful comments that may be in the example files.
+
+
+\begin{figure}[h]
+\begin{center}
+\leavevmode
+\epsfbox{drs1.ps}
+\caption{A simple DRS realized with {\tt drs}}
+\label{drs1}
+\end{center}
+\end{figure}
+
+We already mentioned the fact that the description string is both a
+description for a graphical object and a command sequence that realizes
+this object on the screen. A description string actually is a piece of
+Tcl-code with commands to draw certain objects; only the exact
+positioning information is missing. Each keyword stands for one command
+that has additional parameters which tell it where to draw its object,
+e.g. the keyword {\tt drs} corresponds to the Tcl-command {\tt drs}
+which has the parameters $x$, $y$, $where$, $mtags$ and $objs$. The $x$
+and $y$ parameters are used to place the object when it is finally
+drawn. The $where$ parameter chooses the canvas window where the object
+is drawn ({\sc Clig} supports multiple windows open at the same
+time). The $mtags$ parameter is used to inherit object indexes for
+clickable regions\footnote{Tcl/Tk can logically group objects by
+assigning labels to them. Each clickable object inherits a certain
+label belonging to itself to all its daughter objects. The parameter
+$mtags$ contains all labels inherited from a parent object.} while the
+final $objs$ parameter consists of a list containing daughter object
+descriptions.  The first one of these objects will be drawn in the case
+of {\tt drs} in the head with a box around it, the rest below the top
+box. All parameters except $objs$ are invisible in the description
+string; they will be filled in when the grapher performs the
+description as a Tcl-program.
+
+The following sections explain the graphical commands allowed in the
+description string along with their parameters and some simple
+examples.
+
+\subsection{Text}
+
+Perhaps the most used command in {\sc Clig}'s description strings is
+{\tt plain-text} which displays a string in {\sc Clig}'s standard
+font. The text is not mouse-sensitive. {\tt Plain-text} takes a simple
+string as parameter, e.g.
+
+\begin{quote}
+\verb'{plain-text "This is a plain text."}'
+\end{quote}
+
+To emphasize certain information, you can use {\tt bold-text}, which
+does the same as {\tt plain-text} but with a bolder font.
+
+\begin{quote}
+\verb'{bold-text "This is a bold text."}'
+\end{quote}
+
+Text can also be set in {\it italics\/} by the {\tt slant-text}
+command. The current version of {\sc Clig} uses the standard Helvetica
+font family for its display area. These fonts should be installed for
+your terminal.
+
+By using either a {\tt small-} or {\tt big-} prefix, the font size used
+can be decreased/increased by 2 points. The command {\tt big-bold-text}
+for example will draw a bold text with a bigger font size than normal.
+
+Some special characters are very common in computational linguistics.
+The following commands produce the analogous signs in the {\em
+symbol\/} font\footnote{which should be installed for your terminal.}.
+
+\begin{quote}
+\begin{tabular}{rr}
+{\tt sign neg} & displays $\neg$ \\
+{\tt sign disj} & displays $\vee$ \\
+{\tt sign conj} & displays $\wedge$ \\
+{\tt sign lambda}] & displays $\lambda$ \\
+{\tt sign merge} & displays $\otimes$ \\
+{\tt sign forall} & displays $\forall$ \\ 
+{\tt sign exists} & displays $\exists$ \\
+{\tt sign subseteq} & displays $\subseteq$ \\
+{\tt sign emptyset} & displays $\emptyset$ \\
+\end{description} 
+\end{quote}
+
+\subsection{Boxes and frames}
+
+You can draw boxes around arbitrary objects with the {\tt smallbox} and
+{\tt bigbox} commands. {\tt Smallbox} uses a border of 2 points, while
+{\tt bigbox} will leave 6 points of border space. The thickness of the
+border stays the same.
+
+\begin{quote}
+\verb'{smallbox {plain-text "This is a text in a small box."}}'
+\end{quote}
+
+\begin{quote}
+\verb'{bigbox {plain-text "This is a text in a big box."}}'
+\end{quote}
+
+You can design boxes with arbitrary border-width with {\tt boxed}:
+
+\begin{quote}
+\verb'{boxed 3 {plain-text "This box has a 3 point border."}}'
+\end{quote}
+
+The command {\tt framed} does the same as {\tt boxed}, but without
+actually drawing the border. {\tt framed} gets used when objects should
+be drawn with additional space around them.
+
+A special case of a box is the diamond. The command {\tt diamond}
+takes an object and puts it in a square diamond (see fig. \ref{diamond}):
+
+\begin{quote}
+\verb'{diamond {plain-text "diamond"}}'
+\end{quote}
+
+\begin{figure}[hb]
+\begin{center}
+\leavevmode
+\epsfbox{diamond.ps}
+\caption{The diamond box}
+\label{diamond}
+\end{center}
+\end{figure}
+
+\subsection{Brackets}
+
+Round and square brackets are drawn by the {\tt bracket} and {\tt
+squarebracket} commands. The syntax is similar to the boxes. E.g.
+
+\begin{quote}
+\verb'{squarebracket {plain-text "Text in square brackets."}}'
+\end{quote}
+
+draws the text in square brackets.
+
+\subsection{Lists}
+
+Lists in angle brackets can be drawn with the {\tt anglelist} command.
+The objects get separated by commas.
+
+\begin{quote}
+\verb'{anglelist {plain-text "first"} {plain-text "second"}}'
+\end{quote}
+
+\subsection{Sequences and stacks}
+
+So far, you can only display one (possibly nested) object. Sometimes it
+is necessary to display several objects adjacent to each other
+(sequences) or on top of each other (stacks). A good example of a
+sequence would be a complex logical formula containing variables (which
+we would display as plain text) and logical connectives provided as
+special commands. The following description string displays the formula
+$\exists x (f(x)\vee v(x))$:
+
+\begin{quote}
+\verb'{seq {sign exists} {plain-text "x(f(x)"}' \newline
+\verb'     {sign disj} {plain-text "v(x))"}}'
+\end{quote}
+
+{\tt seq} orders objects horizontally with minimum space between
+the objects. If objects have different heights, they will be centered
+vertically. The almost equivalent command {\tt Seq} does leave more
+space between the objects.
+
+{\em Stacks\/} are the same as sequences, but ordered vertically. The
+description string below describes three boxes stacked on each other
+(see fig. \ref{threebox}):
+
+\begin{quote}
+\verb'{stack {smallbox {plain-text "tiny"}}' \newline
+\verb'       {smallbox {plain-text "bigger"}}' \newline
+\verb'       {smallbox {plain-text "very large"}}}'
+\end{quote}
+
+Again, {\tt Stack} would do the same with a bit more space between the
+boxes.
+ 
+\begin{figure}[hb]
+\begin{center}
+\leavevmode
+\epsfbox{threebox.ps}
+\caption{Three boxes ``stacked'' on each other.}
+\label{threebox}
+\end{center}
+\end{figure}
+
+\subsection{Arranging space}
+
+Stacks and sequences can be used to order objects in almost any way in
+the display area. However, they do not allow you to arrange for
+additional (or less) space around or between objects. With {\tt
+vspace}, {\tt hspace} and {\tt space} you can add or subtract room
+between objects. These commands basically draw ``invisible'' objects
+which take some space in {\sc Clig}'s drawing area. Both {\tt hspace}
+and {\tt vspace} consume one parameter, while {\tt space} needs two
+integers as parameters. The following description string puts the tiny box
+floating 6 points over the other two.
+
+\begin{quote}
+\verb'{stack {smallbox {plain-text "tiny"}}' \newline
+\verb'       {vspace 6}' \newline
+\verb'       {smallbox {plain-text "bigger"}}' \newline
+\verb'       {smallbox {plain-text "very large"}}}'
+\end{quote}   
+
+\subsection{Sub- and Superpositioning}
+
+The {\tt sub} and {\tt super} commands provide a general approach to
+labeling objects with others. They can for example be used for
+subscribing or superscribing with texts:
+
+\begin{quote}
+\begin{verbatim}
+{sub {slant-plain-text X} {small-plain-text 1}}
+{super {slant-plain-text X} {small-plain-text 2}}
+\end{verbatim}
+\end{quote}
+
+The first description string will result in $X_1$ while the second will
+be interpreted as $X^2$. Using {\tt sub} and {\tt super} can cause
+problems when used together with {\tt seq} or other sequence building
+commands. The centering {\tt seq} does will lead to objects being out
+of position like in the following example:
+
+\begin{quote}
+\begin{verbatim}
+{seq {sub {slant-plain-text A} {small-plain-text 1}} {plain-text B}}
+\end{verbatim}
+\end{quote}
+
+In this example, the $A$ will come out too high compared with the $B$
+because $A_1$ will be centered according to its complete size. To
+circumvent this problem, you can use the {\tt subscript} and {\tt
+superscript} commands which do exactly the same as {\tt sub} and {\tt
+super} but will reserve extra space on top or bottom of the object to
+force a correct centering. Note that you might waste some space in this
+way.
+
+
+\subsection{Using colors}
+
+Generally, {\sc Clig} uses black as the main color for drawing objects.
+The {\tt color} command encapsulates an object and forces it to be
+drawn in some other color you choose. If you have a color display, you
+could produce a red text within a blue box with the following example:
+ 
+\begin{quote}
+\verb'{color blue {bigbox color red  plain-text "colors"}}' \newline
+\end{quote}   
+
+The color name used can be any arbitrary color which is defined in 
+the {\tt rgb.txt} in your X library directory.
+
+If you want to change the background of any object, you can use
+the {\tt color-area} command which draws the object on a colored
+rectangular region:
+
+\begin{quote}
+\verb'{color-area blue {bigbox color red  plain-text "colors"}}' \newline
+\end{quote}
+
+\subsection{Trees}
+
+{\sc Clig}'s trees are built with the {\tt tree} command. The command
+takes one parameter---the parent node---and an arbitrary number of
+children. Each child may either be another tree or a leaf consisting of
+any object drawable by the grapher. The next example represents a
+syntactical analysis expressed as a tree (see fig. \ref{postman}):
+
+
+
+\begin{quote}
+\begin{verbatim}
+  {tree {plain-text S} 
+        {tree {plain-text NP} 
+              {tree {plain-text DET}
+                    {plain-text The}} 
+              {tree {plain-text N} 
+                    {plain-text postman}}} 
+        {tree {plain-text VP} 
+              {tree {plain-text V} 
+                    {plain-text bites}} 
+              {tree {plain-text NP} 
+                    {tree {plain-text DET} 
+                          {plain-text the}} 
+                          {tree {plain-text N} 
+                          {plain-text dog}}}}}
+\end{verbatim}
+\end{quote}
+
+\begin{figure}[h]
+\begin{center}
+\leavevmode
+\epsfbox{postman.ps}
+\caption{A sample syntactical tree.}
+\label{postman}
+\end{center}
+\end{figure}
+
+If you want horizontally oriented trees, just use {\tt htree} instead
+of {\tt tree}.
+
+
+
+\subsection{Feature structures}
+
+{\em Feature Structures\/} are used mostly by unification based grammar
+formalisms such as HPSG \footnote{see \cite{Pollard 87}}. Graphically
+represented as an {\it Attribute Value Matrix}, a feature structure
+consists of a square bracket around a set of label-value-pairs. A typed
+feature structure may also have a type name in its brackets
+or---depending on the notation---in front of it. To realize feature
+structures, {\sc Clig} provides the {\tt fs} and {\tt feature}
+commands. Figure \ref{fs1} illustrates the following nested typed
+feature structure:
+
+\begin{quote}
+\begin{verbatim}
+{fs {plain-text "word"}
+         {feature "PHON" {plain-text <she>}}
+         {feature "SYNSEM" 
+           {fs {plain-text synsem}
+               {feature "LOCAL"
+                {fs {plain-text local}
+                  {feature "CATEGORY" 
+                    {fs {plain-text head}
+                        {feature "HEAD" 
+                          {fs {feature "CASE" 
+                                       {plain-text nom}}}}
+                        {feature  "SUBCAT" {plain-text <>}}}}
+                  {feature "CONTENT" 
+                    {fs {plain-text "ppro"}}}}}}}}
+\end{verbatim}
+\end{quote} 
+
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\epsfbox{fs1.ps}
+\caption{A feature structure.}
+\label{fs1}
+\end{center}
+\end{figure}
+
+\subsection{Complex Boxes}
+
+{\it Complex Boxes\/} are those graphical objects which are used
+in the DRT and Situation Theory:
+
+\begin{description}
+\item[{\tt drs}:] draws an object $a$ above a set of objects $c_1 ...
+c_n$ and draws a box around $a$ and a box around $c_1 ... c_n$. (see
+figure \ref{drs-cb})
+
+\begin{quote}
+\begin{verbatim}
+{drs {SEQ {plain-text "a"} {plain-text "x"}} 
+     {plain-text "dog(a)"} 
+     {plain-text "Jones(x)"}
+     {plain-text "owns(x,a)"}}
+\end{verbatim}
+\end{quote} 
+
+\begin{figure}[h]
+\begin{center}
+\leavevmode
+\epsfbox{drs_cb.ps}
+\caption{The {\tt drs} command}
+\label{drs-cb}
+\end{center}
+\end{figure}
+
+\item[{\tt cornerbox}:] is almost like {\tt drs}, but object $a$ gets
+drawn in the northwest corner of the main box (figure \ref{corner-cb}).
+
+\begin{quote}
+\begin{verbatim}
+{cornerbox {plain-text "This is in the corner..."} 
+           {plain-text "...and this is below"}}
+\end{verbatim}
+\end{quote}
+
+\begin{figure}[hb]
+\begin{center}
+\leavevmode
+\epsfbox{corner_cb.ps}
+\caption{A cornerbox}
+\label{corner-cb}
+\end{center}
+\end{figure}
+
+\item[{\tt followboxes}:] draws an object $a$ followed by a sequence of
+objects $c_1 ... c_n$ where each $c_x$ is drawn in a box aligned to the
+side of $a$ (see figure \ref{follow-cb}).
+
+\begin{quote}
+\begin{verbatim}
+{followboxes {drs {plain-text "x"} {plain-text "dog(x)"}}
+                  {plain-text "this follows the drs"}}
+\end{verbatim}
+\end{quote}
+
+\begin{figure}[ht]
+\begin{center}
+\leavevmode
+\epsfbox{follow_cb.ps}
+\caption{Followboxes}
+\label{follow-cb}
+\end{center}
+\end{figure}
+
+\item[{\tt stackboxes}:] puts a set of objects $o_1 ... o_n$ each in a box
+and draws them above an object $z$ (figure \ref{stack-cb}).
+
+\begin{quote}
+\begin{verbatim}
+{stackboxes {plain-text "highest"} 
+            {plain-text "higher"}
+            {cornerbox {plain-text "cornerbox"} 
+                       {plain-text "lowest"}}}
+\end{verbatim}
+\end{quote}
+
+\begin{figure}[hb]
+\begin{center}
+\leavevmode
+\epsfbox{stack_cb.ps}
+\caption{The {\tt stackboxes} command}
+\label{stack-cb}
+\end{center}
+\end{figure}
+
+\item[{\tt stairboxes}:] draws boxes like {\tt stackboxes}, but also
+indents the boxes on the left-hand side (figure \ref{stair-cb}).
+
+\begin{quote}
+\begin{verbatim}
+{stairboxes {plain-text "highest"} 
+            {plain-text "higher"}
+            {cornerbox {plain-text "cornerbox"} 
+                       {plain-text "lowest"}}}
+\end{verbatim}
+\end{quote}
+
+\begin{figure}[hb]
+\begin{center}
+\leavevmode
+\epsfbox{stair_cb.ps}
+\caption{{\tt Stairboxes} indent boxes.}
+\label{stair-cb}
+\end{center}
+\end{figure}
+
+\end{description}
+
+\subsection{Interaction}
+
+Each object in the drawing area can be linked to a piece of {\sc Tcl}
+code by using the commands {\tt clickable} and {\tt active}. While {\tt
+clickable} simply performs one command which gets executed when the
+user double-clicks on the associated object, {\tt active} can define
+multiple possibilities for the same object or define special
+behaviors. \cite{Konrad 95b} explains in a detailed way how you can
+define interactive behavior within graphs. The following example
+creates a mouse sensitive text-box which produces a short message with
+the Tcl command {\tt puts} when clicked on:
+
+\begin{quote}
+\begin{verbatim}
+{clickable {bigbox plain-text "click me!"} 
+           {puts "YOU CLICKED ME!"}}
+\end{verbatim}
+\end{quote}
+
+{\tt active} allows the use of several event-command pairs for the same
+object. The general syntax for {\tt active} is 
+
+\begin{quote}
+\begin{verbatim}
+{active <object> {<event> <command>} ... {<event> <command>}}
+\end{verbatim}
+\end{quote}
+
+An event is an event description {\sc Tk} uses, e.g. \verb'<Double-2>'
+for a double click on the middle mouse button. If you wanted the
+message from the last example to appear when the middle mouse button
+gets clicked once, you would express it like this: 
+
+\begin{quote}
+\begin{verbatim}
+{active {bigbox plain-text "click me!"} 
+        {<2> {puts "YOU CLICKED ME!"}}}
+\end{verbatim}
+\end{quote}
+
+\subsubsection{Popup menues}
+
+Popup menues are a standard feature of {\sc Tk} which have been
+included into the {\tt active} command in recent {\sc Clig} versions
+(Version 1.4 or greater). {\tt Active} accepts the keyword {\tt popup}
+in a event-command-pair and uses the command part as a definition of a
+popup menu as described in \cite{Ousterhout 94}. The following example
+defines a box which shows a popup menu when clicked on. When you select
+one of the buttons in it, it will print a short message.
+
+\begin{quote}
+\begin{verbatim}
+{active {bigbox {color red {plain-text "CLICK ME!"}}}
+             {popup <1> {{command -label "TEST1" 
+                                -command "puts TEST1"}
+                         {command -label "TEST2" 
+                                -command "puts TEST2"}
+                         {separator}
+                         {command -label "TEST3" -command "puts
+             TEST3"}}}}
+\end{verbatim}
+\end{quote}
+
+
+\subsection{Other commands}
+
+{\sc Clig} provides additional graphical objects for some special
+applications, e.g. Intentional Logic. The table of commands in section
+\ref{table} summarizes all commands.  
+
+\subsection{Table of commands}
+\label{table}
+
+The following list summarizes the predefined graphical objects you can use
+in the description string along with their parameters ($s$ stands for
+strings, $d$ for object descriptions, $c$ for Tcl-scripts and $e$ for a
+event-command pair):
+
+
+\begin{center}
+\begin{tabular}{l|l|l}
+   Name & Description & Parameters \\ \hline
+   {\tt active} & links object to events & $d$ $e_1$ ... $e_n$ \\
+   {\tt anglelist} & draws objects as a list & $d_1$ ... $d_n$ \\ 
+   {\tt bigbox} & draws box with large frame (6 pts) around object & $d$ \\
+   {\tt bold-text} & draws text in bold font & $s$ \\
+   {\tt boxed} & draws box with frame size $x$ around object & $x$ $d$ \\
+   {\tt bracket} & draws round brackets around object & $d$ \\
+   {\tt clickable} & links object to command & $d$ $c$ \\
+   {\tt color} & changes foreground color for $d$ & $color$ $d$ \\
+   {\tt color-area} & changes background color for $d$ & $color$ $d$ \\ 
+   {\tt cornerbox} & like {\tt drs} with $d_{top}$ in the top left corner &
+     $d_{top}$ $d_1$ ... $d_n$ \\
+   {\tt diamond} & draws square diamond around object & $d$ \\
+   {\tt drs} & DRS-like structure & $d_{top}$ $d_1$ ... $d_n$ \\  
+   {\tt feature} & draws single feature-value pair & $string$ $d$ \\
+   {\tt followboxes} & draws followboxes & $d_{main}$ $d_1$ ... $d_n$ \\
+   {\tt framed} & leaves extra space $x$ around object & $x$ $d$ \\
+   {\tt fs} & feature structure & $d_1$ ... $d_n$ \\
+   {\tt htree} & like tree, but from left to right & $d_{parent}$
+     $d_{child-1}$ ... $d_{child-n}$ \\
+   {\tt imp} & implication & $d_1$ $d_2$ \\
+   {\tt leftstack} & same as stack, but without centering & $d_1$ ...
+     $d_n$ \\
+   {\tt leftStack} & same as leftstack, with more space between objects
+     & $d_1$ ... $d_n$ \\
+   {\tt neg} & negates object & $d$ \\
+   {\tt plain-text} & draws text & $s$ \\
+   {\tt Seq} & draws horizontal sequence of objects & $d_1$ ... $d_n$ \\
+   {\tt seq} & same as Seq, but with minimum space & $d_1$ ... $d_n$ \\
+   {\tt SEQ} & same as Seq, with more space (see {\tt imp}) &
+         $d_1$ ... $d_n$ \\ 
+   {\tt sign} & displays some special signs & $name$ \\
+   {\tt slant-text} & draws a text in {\tt italics} & $string$ \\ 
+   {\tt smallbox} & draws box with small frame (2 pts) around object &
+$d$ \\
+   {\tt squarebracket} & draws square brackets around object & $d$ \\
+   {\tt Stack} & stacks objects on top of each other & $d_1$ ... $d_n$ \\
+   {\tt stack} & same as Stack, but with minimum space & $d_1$ ...
+     $d_n$ \\
+   {\tt stackboxes} & draws stackboxes & $d_1$ ... $d_n$ $d_{lowest}$
+\\
+   {\tt sub} & draws $d_2$ subpositioned to $d_1$ & $d_1$ $d_2$ \\
+    {\tt subscrupt} &  draws $d_2$ superpositioned to $d_1$ & $d_1$ $d_2$
+\\ & with forced correct centering & \\
+
+   {\tt super} &  draws $d_2$ superpositioned to $d_1$ & $d_1$ $d_2$ \\
+    {\tt super} &  draws $d_2$ superpositioned to $d_1$ & $d_1$ $d_2$
+\\ & with forced correct centering & \\
+
+   {\tt tree} & draws tree & $d_{parent}$ $d_{child-1}$ ...
+     $d_{child-n}$ \\
+   {\tt underline} & draws a line under the object & $d$ \\
+   \hline
+\end{tabular}
+\end{center}
+
+\section{What is not in this paper: Future works}
+
+The purpose of this paper was to introduce {\sf Clig} as as a pure
+displaying tool for graphical information and to show its graphical
+capabilities. It therefore does not tell you in detail
+
+\begin{itemize}
+\item how you can extend {\sc Clig} with your own graphical objects
+\item how you can make graphs interactive
+\item how applications can use {\sc Clig} 
+\end{itemize}
+
+The topics of interaction and extendibility are dealt with in the paper
+\cite{Konrad 95b} which will also give some detailed information about
+the state of the interfaces.
+  
+\newpage
+\begin{thebibliography}{kako}
+   \bibitem[Fracas 95]{Fracas 95}
+        Robin Cooper, Dick Crouch, Jan van Eijck, Chris Fox,
+        Josef van Genabith, Jan Jaspars, Hans Kamp,
+        Manfed Pinkal, Massimo Poesio and Steve Pulman.
+        {\em Evaluating the State of the Art}. FraCaS Deliverable D10.
+        University of Edingburgh, Centre for Cognitive Sciences. 
+   \bibitem[Kamp 93]{kamp 93} Hans Kamp and Uwe Reyle.
+        {\em From Discourse to Logic}.  Kluwer Academic Press,
+        Dordrecht - Boston - London, 1993 
+   \bibitem[Konrad 95b]{Konrad 95b} Karsten Konrad. {\em Extending {\sc Clig}:
+           Interaction and User Defined Graphics}. 
+           unpublished draft, 1995.
+   \bibitem[Ousterhout 94]{Ousterhout 94} John K. Ousterhout. {\em Tcl
+           and the Tk Toolkit\/}.  Reading, Massachusetts - Menlo Park,
+           California - New York, Addison-Wesley Professional Computing
+           Series, 1994.  
+   \bibitem[Pollard 87]{Pollard 87} Carl Pollard
+           and Ivan A. Sag. {\em Information-Based Syntax and
+           Semantics. Volume 1: Fundamentals}. CSLI Lecture Notes,
+           Menlo Park - Stanford - Palo Alto, Center for the Study of 
+           Language and Information (CSLI), 1987
+   \bibitem[Sicstus 95]{Sicstus 95} Programming Systems Group of the
+           Swedish Institute of Computer Science. {\em SICStus Prolog
+           User's Manual}. Release 3. Swedish Institute of Computer 
+           Science, 1995.
+\end{thebibliography}
+
+\end{document} 

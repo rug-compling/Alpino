@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="smain" end="21" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="betreffen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="betref" word="betreft" wvorm="pv"/>
+      <node begin="2" end="3" getal="getal" id="4" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" status="vol" vwtype="aanw" word="hier"/>
+      <node begin="3" cat="np" end="21" id="5" rel="obj1">
+        <node begin="3" end="4" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="4" buiging="met-e" end="5" graad="basis" id="7" lemma="bijzonder" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="bijzonder" word="bijzondere"/>
+        <node begin="5" end="6" getal="mv" graad="basis" id="8" lemma="project" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="project" word="projecten"/>
+        <node begin="6" cat="pp" end="13" id="9" rel="mod">
+          <node begin="6" end="7" id="10" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+          <node begin="7" cat="conj" end="13" id="11" rel="obj1">
+            <node begin="8" conjtype="neven" end="9" id="12" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="7" cat="np" end="13" id="13" rel="cnj">
+              <node begin="7" end="8" id="14" lemma="aids-" pos="prefix" postag="SPEC(afgebr)" pt="spec" rel="hd" root="Aids" spectype="afgebr" word="Aids-"/>
+              <node begin="10" cat="pp" end="13" id="15" index="1" rel="mod">
+                <node begin="10" end="11" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="11" cat="mwu" end="13" id="17" mwu_root="Sao_Paulo" mwu_sense="Sao_Paulo" rel="obj1">
+                  <node begin="11" end="12" id="18" lemma="Sao" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Sao" spectype="deeleigen" word="Sao"/>
+                  <node begin="12" end="13" id="19" lemma="Paulo" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Paulo" spectype="deeleigen" word="Paulo"/>
+                </node>
+              </node>
+            </node>
+            <node begin="9" cat="np" end="13" id="20" rel="cnj">
+              <node begin="9" end="10" getal="mv" graad="basis" id="21" lemma="hiv-kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="HIV_kind" word="HIV-kinderen"/>
+              <node begin="10" end="13" id="22" index="1" rel="mod"/>
+            </node>
+          </node>
+        </node>
+        <node begin="13" cat="pp" end="21" id="23" rel="mod">
+          <node begin="13" end="14" id="24" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="14" cat="np" end="21" id="25" rel="obj1">
+            <node begin="14" end="15" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="15" buiging="met-e" end="16" graad="basis" id="27" lemma="brabants" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Brabants" word="Brabantse"/>
+            <node begin="16" cat="mwu" end="18" id="28" mwu_root="pater_Montfortaan" mwu_sense="pater_Montfortaan" rel="hd">
+              <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="29" lemma="pater" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="pater" word="pater"/>
+              <node begin="17" end="18" id="30" lemma="Montfortaan" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Montfortaan" spectype="deeleigen" word="Montfortaan"/>
+            </node>
+            <node begin="18" cat="mwu" end="21" id="31" mwu_root="Antoon_van_Noye" mwu_sense="Antoon_van_Noye" rel="app">
+              <node begin="18" end="19" id="32" lemma="Antoon" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Antoon" spectype="deeleigen" word="Antoon"/>
+              <node begin="19" end="20" id="33" lemma="van" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+              <node begin="20" end="21" id="34" lemma="Noye" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Noye" spectype="deeleigen" word="Noye"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Het betreft hier de bijzondere projecten voor Aids- en HIV-kinderen in Sao Paulo van de Brabantse pater Montfortaan Antoon van Noye</sentence>
+</alpino_ds>

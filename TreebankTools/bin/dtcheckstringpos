@@ -1,0 +1,106 @@
+#!/usr/bin/perl -w
+# checkstringpos.pl
+
+# We willen de stringposities checken
+# 1. We kunnen kijken of de stringposities buiten het bereik vallen
+# 2. We kunnen kijken of er overlap is
+# 3. We kunnen kijken wat er op de niet gebruikte plekken staat
+
+# Uitwerking:
+# 1. We splitten de sentence op whitespace.  Dat geeft ons de lengte
+#    L.  We hebben dan (als het goed is) posities van 0 tot (L-1)
+# 2. We maken een soort getallenlijn, een array van lengte
+#    L.  Iedere keer als we een woord tegenkomen markeren we (door
+#    de waarden op 1 te zetten) het bereik.  Als het al gemarkeerd is
+#    hebben we overlap.
+# 3. De tokens waar 0 op de "getallenlijn" staat.
+
+use strict "vars";
+
+my ($prog) = $0 =~ m|([^/]*$)|;
+
+unless ($ENV{"ALPINO_HOME"}) {
+    die ("$prog: Error: Please set your ALPINO_HOME environment variable\n");
+}
+
+die "Usage: $prog <treebank-files>\n" unless (@ARGV);
+
+my($query, $treebank, $stylesheet);
+
+$query = '//node[@word]';
+$treebank = $ENV{"ALPINO_HOME"} . "/Treebank";
+$stylesheet = $ENV{"ALPINO_HOME"} . "/TreebankTools/stylesheets/debugout.xsl";
+
+use vars qw($begin $end $root $filename $sentence);
+my (@bezet, @tokens);
+
+open (XMLMATCH, "dtxslt --stylesheet $stylesheet -q '$query' @ARGV|")
+    or die "can' fork";
+
+sub error
+{
+    print "$filename\t @_\n"
+}
+
+while (<XMLMATCH>) {
+    chomp;
+    if (/^>$/) {
+        if ($begin >= $end) {
+            error "//sentence\tRANGE ERROR: begin: $begin end: $end ($root=root)";
+        }
+        if ($begin < 0) {
+            error "//sentence\tbegin out of range: $begin (root=$root)";
+        }
+        if ($end > @tokens) {
+            error "//sentence\tend out of range: $end (root=$root)";
+        }
+	if ($begin != $end-1) {
+            error "//sentence\tmulti word unit not split: $begin $end (root=$root)";
+        }
+
+        # overlap?
+        for (my $i = $begin; $i < $end; $i++) {
+            if ($bezet[$i]) {
+                # error "OVERLAP: $i (root=$root)";
+                error "//sentence\tOVERLAP: root=$root [$begin,$end]";
+            }
+        }
+
+        # markeren
+        for (my $i = $begin; $i < $end; $i++) {
+            $bezet[$i] = 1
+        }
+
+        undef $begin;
+        undef $end;
+        undef $root;
+    }
+
+    elsif (/^sentence/) {
+      my ($name,$value) = /^(.*?)=(.*)/;
+      ${$name} = $value;
+
+      @tokens = split(' ', $sentence);
+      @bezet = (0) x @tokens;
+    }
+
+    elsif (/^-$/) {
+
+        # hier kunnen de niet gebruikte tokens geprint worden.
+        for (my $i = 0; $i < @tokens ; ++$i) {
+            if (!$bezet[$i]) {
+                # voor interpunctie geven we geen uitvoer ## VOORTAAN WEL!
+      ##          if ($tokens[$i] !~ /(^[-.,=()"';:?!\/`]+$)|^[.]+$/) {
+                    error "//sentence\tNIET GEBRUIKT $tokens[$i] [$i," . ($i+1) . "]";
+##                }
+            }
+        }
+    }
+    elsif (/^(begin|end|root|filename)/) {
+        my ($name,$value) = /^(.*?)=(.*)/;
+        ${$name} = $value;
+    }
+
+}
+
+close (XMLMATCH) or die "Error opening dtxslt $!";

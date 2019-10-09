@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="conj" end="3" id="1" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="vrede" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="vrede" word="vrede"/>
+      <node begin="1" conjtype="neven" end="2" id="3" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="4" lemma="gerechtigheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="gerechtigheid" word="gerechtigheid"/>
+    </node>
+    <node begin="3" end="4" id="5" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>vrede of gerechtigheid ?</sentence>
+</alpino_ds>

@@ -1,0 +1,53 @@
+#!/usr/bin/perl -w
+
+$lex = "../../Lexicon/Build/lex.t";
+$morelex="morelex";
+
+open($f,"<$lex");
+while (<$f> ) {
+    chomp;
+    ($word,undef,$val) = split/	/;
+    if ($val !~ /^#/) {
+	$lex{$word}++;
+    }
+}
+
+open($f,"<$morelex");
+while (<$f> ) {
+    chomp;
+    $lex{$_}++;
+}
+
+while (<>) {
+    chomp;
+    ($class,$word,undef,undef,undef,undef) = split('\|');
+    if ($class ne "MISC") {
+	print "$_\n";
+	next;
+    }
+    if (defined $lex{$word}) {
+	print(STDERR "ignoring $_\n"); next;
+    } 
+    if ($word =~ /^[A-Z]*[-]/) {
+	print(STDERR "ignoring $_\n"); next;
+    }
+    if ($word =~ /[-][a-z]*$/) {
+	print(STDERR "ignoring $_\n"); next;
+    }
+    if ($word =~ /zaak-[A-Z]/) {
+	print(STDERR "ignoring $_\n"); next;
+    }
+    if ($word =~ /dossier-[A-Z]/) {
+	print(STDERR "ignoring $_\n"); next;
+    }
+    if ($word =~ /'s$/) {
+	print(STDERR "ignoring $_\n"); next;
+    }
+    if ($word =~ /isch$/) {
+	print(STDERR "ignoring $_\n"); next;
+    }
+    if ($word =~ /ische$/) {
+	print(STDERR "ignoring $_\n"); next;
+    }
+    print "$_\n";
+}

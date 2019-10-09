@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="1" cat="sv1" end="5" id="2" rel="--">
+      <node begin="1" end="2" id="3" lemma="laten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="laat" word="Laat" wvorm="pv"/>
+      <node begin="2" cat="mwu" end="4" id="4" rel="obj1">
+        <node begin="2" end="3" id="5" lemma="Bernadette" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bernadette" spectype="deeleigen" word="Bernadette"/>
+        <node begin="3" end="4" id="6" lemma="Devlin" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Devlin" spectype="deeleigen" word="Devlin"/>
+      </node>
+      <node begin="4" buiging="zonder" end="5" graad="basis" id="7" lemma="vrij" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="vrij" word="vrij"/>
+    </node>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="6" end="7" id="9" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>&quot; Laat Bernadette Devlin vrij . &quot;</sentence>
+</alpino_ds>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="conj" end="10" id="1" rel="--">
+      <node begin="0" cat="inf" end="5" id="2" rel="cnj">
+        <node begin="0" cat="np" end="2" id="3" index="1" rel="obj1">
+          <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="cake" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="cake" word="cake"/>
+        </node>
+        <node begin="2" cat="pp" end="4" id="6" rel="mod">
+          <node begin="2" end="3" id="7" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+          <node begin="3" end="4" getal="mv" graad="dim" id="8" lemma="blok" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="obj1" root="blokje" word="blokjes"/>
+        </node>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="snijden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="snijd" word="snijden" wvorm="inf"/>
+      </node>
+      <node begin="5" conjtype="neven" end="6" id="10" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="0" cat="inf" end="10" id="11" rel="cnj">
+        <node begin="0" end="2" id="12" index="1" rel="obj1"/>
+        <node begin="6" buiging="zonder" end="7" id="13" lemma="drenken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="drenk" word="drenken" wvorm="inf"/>
+        <node begin="7" cat="pp" end="10" id="14" rel="pc">
+          <node begin="7" end="8" id="15" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="8" cat="np" end="10" id="16" rel="obj1">
+            <node begin="8" end="9" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="rum" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rum" word="rum"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="10" end="11" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De cake aan blokjes snijden en drenken in de rum .</sentence>
+</alpino_ds>

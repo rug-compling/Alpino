@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="14" end="15" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="25" id="2" rel="--">
+      <node begin="15" end="16" id="3" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
+      <node begin="18" cat="np" end="24" id="4" index="1" rel="su">
+        <node begin="18" end="19" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="19" end="20" getal="mv" graad="basis" id="6" lemma="foto’s" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="foto’s" word="foto’s"/>
+        <node begin="20" cat="pp" end="24" id="7" rel="mod">
+          <node begin="20" end="21" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="21" cat="np" end="24" id="9" rel="obj1">
+            <node begin="21" buiging="zonder" end="22" getal="ev" id="10" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+            <node begin="22" end="23" genus="genus" getal="ev" graad="basis" id="11" lemma="Facebook" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mod" root="Facebook" word="Facebook"/>
+            <node begin="23" end="24" getal="mv" graad="basis" id="12" lemma="contact" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="contact" word="contacten"/>
+          </node>
+        </node>
+      </node>
+      <node begin="0" cat="ppart" end="25" id="13" rel="vc">
+        <node begin="0" cat="cp" end="14" id="14" rel="mod">
+          <node begin="0" conjtype="onder" end="1" id="15" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+          <node begin="1" cat="ssub" end="14" id="16" rel="body">
+            <node begin="1" end="2" getal="ev" id="17" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+            <node begin="2" cat="np" end="4" id="18" rel="obj1">
+              <node begin="2" buiging="zonder" end="3" getal="ev" id="19" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+              <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="20" lemma="iPhone" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="iPhone" word="iPhone"/>
+            </node>
+            <node begin="4" end="5" id="21" lemma="verbinden" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="verbind" word="verbind" wvorm="pv"/>
+            <node begin="5" cat="pp" end="8" id="22" rel="pc">
+              <node begin="5" end="6" id="23" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+              <node begin="6" cat="np" end="8" id="24" rel="obj1">
+                <node begin="6" buiging="zonder" end="7" getal="ev" id="25" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+                <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="26" lemma="computer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="computer" word="computer"/>
+              </node>
+            </node>
+            <node begin="8" cat="pp" end="14" id="27" rel="mod">
+              <node begin="8" cat="mwu" end="11" id="28" rel="hd">
+                <node begin="8" end="9" id="29" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="door" vztype="init" word="door"/>
+                <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="30" lemma="middel" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="middel" word="middel"/>
+                <node begin="10" end="11" id="31" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+              </node>
+              <node begin="11" cat="np" end="14" id="32" rel="obj1">
+                <node begin="11" end="12" id="33" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="34" lemma="USB" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="USB" word="USB"/>
+                <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="35" lemma="kabel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kabel" word="kabel"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="16" end="17" id="36" lemma="hierdoor" pos="pp" postag="BW()" pt="bw" rel="mod" root="hierdoor" word="hierdoor"/>
+        <node begin="17" end="18" id="37" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+        <node begin="18" end="24" id="38" index="1" rel="obj1"/>
+        <node begin="24" buiging="zonder" end="25" id="39" lemma="actualiseren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="actualiseer" word="geactualiseerd" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="25" end="26" id="40" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Als ik mijn iPhone verbind met mijn computer door middel van een USB kabel , worden hierdoor dan de foto’s van mijn Facebook contacten geactualiseerd ?</sentence>
+</alpino_ds>

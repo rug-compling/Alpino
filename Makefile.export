@@ -1,0 +1,128 @@
+###           -*-Mode: makefile;-*-
+
+include Makefile.include
+
+PWD=$(shell pwd)
+
+#PLATFORM=${shell echo "prolog_flag(host_type,X), write(X), nl, fail."\
+#     | sicstus 2>/dev/null}
+
+## use ldd --version to find out which glibc version is used
+
+HARDWARE=$(shell uname -i)
+KERNEL=$(shell uname -s)
+GLIBC=$(shell getconf GNU_LIBC_VERSION)
+PLATFORM=$(shell echo "$(HARDWARE) $(KERNEL) $(GLIBC)" | tr ' ' '-' )
+
+##REV=${shell svn info Makefile.export | awk '/Revision:/ { print $$2 }' }
+TAR=Alpino-$(PLATFORM)-$(shell svnversion)-$(PROLOG).tar.gz 
+
+
+
+ifeq ($(PROLOG),sicstus)
+export-default:
+	$(MAKE)
+	( cd create_bin ; $(MAKE) )
+	$(MAKE) install BINDIR=$(PWD)/bin\
+                     LIBDIR=$(PWD)/lib\
+                     MANDIR=$(PWD)/man\
+                     PREFIX=$(PWD)\
+                     ALPINO_HOME=$(PWD)
+	cp create_bin/Alpino bin/
+	$(MAKE) tar
+else
+export-default:
+	$(MAKE)
+	$(MAKE) install BINDIR=$(PWD)/bin\
+                     LIBDIR=$(PWD)/lib\
+                     MANDIR=$(PWD)/man\
+                     PREFIX=$(PWD)\
+                     ALPINO_HOME=$(PWD)
+	$(MAKE) tar
+endif
+
+echo:
+	@echo $(TAR)
+
+tar:
+	( cd .. ; tar czf $(TAR)\
+                  --exclude=.svn\
+                  --exclude=.git\
+                  --exclude=TG\
+                  --exclude=T2\
+                  --exclude=TGuides\
+                  --exclude=*~\
+                  --exclude=.#*\
+                  --exclude=.nfs*\
+                  --exclude=*.o\
+                  --exclude=*.a\
+                  --exclude=*.po\
+                  --exclude=*.sav\
+                  --exclude=*.mapfile\
+                  --exclude=Test\
+                  --exclude=Derivbank\
+                  --exclude=src/Alpino.bak\
+                  --exclude=zlib\
+                  --exclude=Specialization\
+                  --exclude=Disambiguation\
+                  --exclude=spldgen*sav.c\
+                  --exclude=derivbank.so\
+                  --exclude=pro_fadd.so\
+                  --exclude=pro_lm.so\
+                  --exclude=tokenize.so\
+                  --exclude=corpusreader.so\
+                  --exclude=zlib.so\
+                  --exclude=Grammar/grammar_lc.pl\
+                  --exclude=Grammar/penalty_weights.pl\
+                  --exclude=Grammar/cdb\
+                  --exclude=Tokenization/tok.c\
+                  --exclude=Tokenization/tok_no_breaks.c\
+                  --exclude=Tokenization/libtok.c\
+                  --exclude=Tokenization/entities.c\
+                  --exclude=Treebank/Machin*\
+                  --exclude=Treebank/eans\
+                  --exclude=Treebank/lassy\
+                  --exclude=Treebank/webdemo\
+                  --exclude=Treebank/tt2014\
+                  --exclude=Treebank/tt2015\
+                  --exclude=Treebank/LassySample250\
+                  --exclude=Treebank/LassySample500\
+                  --exclude=Suites/Machine\
+                  --exclude=ovis*\
+                  --exclude=LassySample250\
+                  --exclude=LassySample500\
+                  --exclude=PosTagger/Construct\
+                  --exclude=Names/seeds\
+                  --exclude=Names/features.pl\
+                  --exclude=Names/Create\
+                  --exclude=Generation/fluency/Create\
+                  --exclude=Lexicon/Build\
+                  --exclude=Names/Build\
+                  --exclude=LocalMachine\
+                  --exclude=src/guides_data.c\
+                  --exclude=log\
+                  --exclude=*_glue_*.c\
+                  --exclude=spldgen_s_*\
+                  --exclude=nohup.out\
+                  --exclude=Suites/wikipedia\
+                  --exclude=Suites/europarl\
+                  --exclude=Suites/Eindhoven\
+                  --exclude=RSTCode\
+                  --exclude=Suites/eans\
+                  --exclude=Suites/CLEF2003\
+                  --exclude=Suites/PAROLE\
+                  --exclude=Suites/Spectrum*\
+                  --exclude=Suites/volkskrant1997\
+                  --exclude=Suites/TwNC-02\
+                  --exclude=Suites/lassy.*\
+                  Alpino )
+	sync
+	cp src/Alpino bin/
+	$(MAKE) -s --no-print-directory export-install
+
+
+export-install: 
+	@echo mv ../$(TAR) ~/public_html/alp/Alpino/versions/binary/$(TAR)
+	@echo and make sure latest.tar.gz points to this new file
+
+

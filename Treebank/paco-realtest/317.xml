@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="smain" end="10" id="1" rel="--">
+      <node begin="1" end="2" id="2" infl="pl" pos="verb" rel="hd" root="word" sc="passive" tense="present" word="worden"/>
+      <node begin="2" cat="np" end="5" id="3" index="1" rel="su">
+        <node begin="2" end="3" id="4" pos="adv" rel="mod" root="minstens" sc="noun_prep" word="minstens"/>
+        <node begin="3" end="4" id="5" infl="pl_num" pos="num" rel="det" root="vijf" special="hoofd" word="vijf"/>
+        <node begin="4" end="5" gen="de" id="6" num="pl" pos="noun" rel="hd" root="activiteit" word="activiteiten"/>
+      </node>
+      <node begin="0" cat="ppart" end="10" id="7" rel="vc">
+        <node aform="base" begin="0" end="1" id="8" infl="no_e" pos="adj" rel="mod" root="wekelijks" vform="adj" word="Wekelijks"/>
+        <node begin="2" end="5" id="9" index="1" rel="obj1"/>
+        <node begin="5" end="6" id="10" infl="psp" pos="verb" rel="hd" root="organiseer" sc="transitive" word="georganiseerd"/>
+        <node begin="6" cat="conj" end="10" id="11" rel="mod">
+          <node begin="7" end="8" id="12" pos="vg" rel="crd" root="en" word="en"/>
+          <node begin="6" cat="pp" end="10" id="13" rel="cnj">
+            <node begin="6" end="7" id="14" pos="prep" rel="hd" root="voor" word="voor"/>
+            <node begin="9" end="10" gen="de" id="15" index="2" num="pl" pos="noun" rel="obj1" root="bewoner" word="bewoners"/>
+          </node>
+          <node begin="8" cat="pp" end="10" id="16" rel="cnj">
+            <node begin="8" end="9" id="17" pos="prep" rel="hd" root="door" word="door"/>
+            <node begin="9" end="10" id="18" index="2" rel="obj1"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="10" end="11" id="19" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Wekelijks worden minstens vijf activiteiten georganiseerd voor en door bewoners .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" rel="obj1">
+        <node begin="0" cat="detp" end="3" id="3" rel="det">
+          <node begin="0" cat="np" end="2" id="4" rel="me">
+            <node begin="0" end="1" id="5" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="drie" word="Drie"/>
+            <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="6" lemma="procent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="procent" word="procent"/>
+          </node>
+          <node begin="2" buiging="zonder" end="3" graad="comp" id="7" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="det" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,comp)" pt="vnw" rel="hd" root="meer" vwtype="onbep" word="meer"/>
+        </node>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="winst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="winst" word="winst"/>
+      </node>
+      <node begin="4" end="5" id="9" lemma="behalen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="behaal" word="behaalden" wvorm="pv"/>
+      <node begin="5" end="6" getal="mv" id="10" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
+      <node begin="6" cat="np" end="9" id="11" rel="mod">
+        <node begin="6" end="7" id="12" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="13" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
+        <node begin="8" end="9" id="14" lemma="daarop" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarop" word="daarop"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Drie procent meer winst behaalden wij het jaar daarop</sentence>
+</alpino_ds>

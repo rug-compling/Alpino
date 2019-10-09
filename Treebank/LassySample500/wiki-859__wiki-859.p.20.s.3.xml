@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="np" end="8" id="1" rel="--">
+      <node begin="0" cat="mwu" end="3" id="2" rel="hd">
+        <node begin="0" end="1" id="3" lemma="Jan" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jan" spectype="deeleigen" word="Jan"/>
+        <node begin="1" end="2" id="4" lemma="van" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+        <node begin="2" end="3" id="5" lemma="Eyck" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Eyck" spectype="deeleigen" word="Eyck"/>
+      </node>
+      <node begin="3" cat="pp" end="5" id="6" rel="mod">
+        <node begin="3" end="4" id="7" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="artcyclopedia" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="artcyclopedia" word="artcyclopedia"/>
+      </node>
+      <node begin="5" cat="pp" end="8" id="9" rel="mod">
+        <node begin="5" end="6" id="10" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+        <node begin="6" cat="np" end="8" id="11" rel="obj1">
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="det" root="veel" vwtype="onbep" word="veel"/>
+          <node begin="7" end="8" getal="mv" graad="basis" id="13" lemma="link" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="link" word="links"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Jan van Eyck op artcyclopedia met veel links</sentence>
+</alpino_ds>

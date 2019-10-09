@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" cat="np" end="7" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="met-e" end="2" getal-n="zonder-n" id="4" lemma="enig" naamval="stan" pdtype="det" pos="adj" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="hd" root="enig" vwtype="onbep" word="enige"/>
+        <node begin="2" cat="rel" end="7" id="5" rel="mod">
+          <node begin="2" end="3" getal="getal" id="6" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+          <node begin="2" cat="ssub" end="7" id="7" rel="body">
+            <node begin="2" end="3" id="8" index="1" rel="su"/>
+            <node begin="3" end="4" genus="onz" getal="ev" id="9" index="2" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+            <node begin="4" end="5" id="10" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+            <node begin="5" end="6" id="11" lemma="zien" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zie" word="zag" wvorm="pv"/>
+            <node begin="3" cat="inf" end="7" id="12" rel="vc">
+              <node begin="3" end="4" id="13" index="2" rel="su"/>
+              <node begin="6" buiging="zonder" end="7" id="14" lemma="aankomen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom" word="aankomen" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="15" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="8" cat="np" end="11" id="16" rel="predc">
+        <node begin="8" end="9" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="jongeman" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="jongeman" word="jongeman"/>
+        <node begin="10" end="11" id="19" lemma="zelf" pos="adv" postag="BW()" pt="bw" rel="mod" root="zelf" word="zelf"/>
+      </node>
+    </node>
+    <node begin="11" end="12" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De enige die het niet zag aankomen was de jongeman zelf .</sentence>
+</alpino_ds>

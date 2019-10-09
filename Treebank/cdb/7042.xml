@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="gebouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebouw" word="gebouw"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="3" cat="pp" end="9" id="6" rel="mod">
+        <node begin="3" end="4" id="7" lemma="sinds" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="sinds" vztype="init" word="sinds"/>
+        <node begin="4" cat="np" end="9" id="8" rel="obj1">
+          <node begin="4" end="5" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="10" lemma="begin" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="begin" word="begin"/>
+          <node begin="6" cat="pp" end="9" id="11" rel="mod">
+            <node begin="6" end="7" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="7" cat="np" end="9" id="13" rel="obj1">
+              <node begin="7" buiging="zonder" end="8" id="14" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+              <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="15" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="9" cat="mwu" end="11" id="16" rel="predc">
+        <node begin="9" end="10" id="17" lemma="in" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+        <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="18" lemma="gebruik" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="gebruik" word="gebruik"/>
+      </node>
+    </node>
+    <node begin="11" end="12" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het gebouw is sinds het begin van dit jaar in gebruik .</sentence>
+</alpino_ds>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="whq" end="10" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="10" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="predc"/>
+        <node begin="1" end="2" id="5" lemma="noemen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="noem" word="noemen" wvorm="pv"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="arts" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="arts" word="artsen"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="tegenwoordig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="tegenwoordig" word="tegenwoordig"/>
+        <node begin="4" cat="np" end="10" id="8" rel="obj1">
+          <node begin="4" end="5" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="ziekte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ziekte" word="ziekte"/>
+          <node begin="6" cat="rel" end="10" id="11" rel="mod">
+            <node begin="6" end="7" getal="getal" id="12" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="6" cat="ssub" end="10" id="13" rel="body">
+              <node begin="6" end="7" id="14" index="2" rel="su"/>
+              <node begin="7" buiging="zonder" end="8" graad="comp" id="15" lemma="vroeger" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="vroeg" word="vroeger"/>
+              <node begin="8" buiging="zonder" end="9" graad="basis" id="16" lemma="bleekzucht" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="zucht" word="bleekzucht"/>
+              <node begin="9" end="10" id="17" lemma="heten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heet" word="heette" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="10" end="11" id="18" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe noemen artsen tegenwoordig de ziekte die vroeger bleekzucht heette ?</sentence>
+</alpino_ds>

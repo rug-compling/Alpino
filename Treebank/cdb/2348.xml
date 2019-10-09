@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="8" end="9" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="18" end="19" id="3" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="1" cat="conj" end="20" id="4" rel="--">
+      <node begin="1" cat="smain" end="8" id="5" rel="cnj">
+        <node begin="3" end="4" id="6" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+        <node begin="4" cat="np" end="6" id="7" index="1" rel="su">
+          <node begin="4" end="5" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="strokartonsituatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="situatie" word="strokartonsituatie"/>
+        </node>
+        <node begin="1" cat="inf" end="8" id="10" rel="vc">
+          <node begin="1" cat="pp" end="3" id="11" rel="mod">
+            <node begin="1" end="2" id="12" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+            <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="13" lemma="Parijs" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Parijs" word="Parijs"/>
+          </node>
+          <node begin="4" end="6" id="14" index="1" rel="su"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="15" lemma="onzin" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="predc" root="onzin" word="onzin"/>
+          <node begin="7" buiging="zonder" end="8" id="16" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
+        </node>
+      </node>
+      <node begin="9" conjtype="neven" end="10" id="17" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="10" cat="smain" end="20" id="18" rel="cnj">
+        <node begin="12" end="13" id="19" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+        <node begin="13" end="14" getal="ev" id="20" index="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="10" cat="inf" end="20" id="21" rel="vc">
+          <node begin="10" cat="pp" end="12" id="22" rel="mod">
+            <node begin="10" end="11" id="23" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="24" lemma="Ijmuiden" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Ijmuiden" word="Ijmuiden"/>
+          </node>
+          <node begin="13" end="14" id="25" index="2" rel="su"/>
+          <node begin="14" end="15" getal="ev" id="26" lemma="iets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="iets" status="vol" vwtype="onbep" word="iets"/>
+          <node begin="15" cat="pp" end="17" id="27" rel="mod">
+            <node begin="15" end="16" id="28" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="29" lemma="staal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="staal" word="staal"/>
+          </node>
+          <node begin="17" buiging="zonder" end="18" id="30" lemma="maken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="maak" word="maken" wvorm="inf"/>
+          <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="31" lemma="Hoogovens" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mod" root="Hoogovens" word="Hoogovens"/>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="32" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="21" end="22" id="33" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="22" end="23" id="34" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>&quot; In Parijs zou een strokartonsituatie onzin zijn , en in Ijmuiden zou ik iets in staal maken ( Hoogovens ) . &quot;</sentence>
+</alpino_ds>

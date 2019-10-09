@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="3" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="Het"/>
+        <node begin="1" end="2" frame="noun(both,both,both)" gen="both" id="4" lcat="np" num="both" pos="noun" rel="hd" root="ontwerp-uitvoeringsplan" sense="ontwerp-uitvoeringsplan" word="ontwerp-uitvoeringsplan"/>
+      </node>
+      <node begin="2" end="3" frame="verb(hebben,sg,part_transitive(uit))" id="5" infl="sg" lcat="smain" pos="verb" rel="hd" root="zet_uit" sc="part_transitive(uit)" sense="zet_uit" tense="present" word="zet"/>
+      <node begin="3" end="4" frame="er_adverb(voor)" id="6" lcat="pp" pos="pp" rel="mod" root="hiervoor" sense="hiervoor" special="er" word="hiervoor"/>
+      <node begin="4" cat="np" end="6" id="7" rel="obj1">
+        <node begin="4" end="5" frame="number(hoofd(pl_num))" id="8" infl="pl_num" lcat="detp" pos="num" rel="det" root="twee" sense="twee" special="hoofd" word="twee"/>
+        <node begin="5" end="6" frame="noun(het,count,pl)" gen="het" id="9" lcat="np" num="pl" pos="noun" rel="hd" root="spoor" sense="spoor" word="sporen"/>
+      </node>
+      <node begin="6" end="7" frame="particle(uit)" id="10" lcat="part" pos="part" rel="svp" root="uit" sense="uit" word="uit"/>
+    </node>
+    <node begin="7" end="8" frame="punct(dubb_punt)" id="11" lcat="punct" pos="punct" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+  </node>
+  <sentence>Het ontwerp-uitvoeringsplan zet hiervoor twee sporen uit :</sentence>
+  <comments>
+    <comment>Q#137|Het ontwerp-uitvoeringsplan zet hiervoor twee sporen uit :|1|1|-2.5369154693451703</comment>
+  </comments>
+</alpino_ds>

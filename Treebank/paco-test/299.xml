@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="1" end="2" frame="verb(unacc,sg_heeft,passive)" id="2" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="ben" sc="passive" sense="ben" tense="present" word="is"/>
+      <node begin="3" cat="np" end="5" id="3" index="1" rel="su">
+        <node begin="3" end="4" frame="determiner(een)" id="4" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+        <node begin="4" end="5" frame="noun(het,count,sg)" gen="het" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="formulier" sense="formulier" word="formulier"/>
+      </node>
+      <node begin="0" cat="ppart" end="6" id="6" rel="vc">
+        <node begin="0" end="1" frame="er_vp_adverb" id="7" lcat="advp" pos="adv" rel="mod" root="er" sense="er" special="er" word="Er"/>
+        <node begin="2" end="3" frame="adverb" id="8" lcat="advp" pos="adv" rel="mod" root="al" sense="al" word="al"/>
+        <node begin="3" end="5" id="9" index="1" rel="obj1"/>
+        <node begin="5" end="6" frame="verb(hebben,psp,transitive)" id="10" infl="psp" lcat="ppart" pos="verb" rel="hd" root="open" sc="transitive" sense="open" word="geopend"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Er is al een formulier geopend</sentence>
+  <comments>
+    <comment>Q#299|Er is al een formulier geopend|1|1|-1.0922405228122258</comment>
+  </comments>
+</alpino_ds>

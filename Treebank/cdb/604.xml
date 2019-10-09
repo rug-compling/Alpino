@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="10" id="1" rel="--">
+      <node begin="0" end="1" getal="mv" id="2" index="1" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+      <node begin="1" end="2" id="3" lemma="zullen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zal" word="zullen" wvorm="pv"/>
+      <node begin="0" cat="inf" end="10" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" cat="pp" end="4" id="6" rel="mod">
+          <node begin="2" end="3" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="3" end="4" getal="mv" id="8" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj1" root="ons" status="vol" vwtype="pr" word="ons"/>
+        </node>
+        <node begin="0" cat="ti" end="9" id="9" rel="vc">
+          <node begin="7" end="8" id="10" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="0" cat="inf" end="9" id="11" rel="body">
+            <node begin="0" end="1" id="12" index="1" rel="su"/>
+            <node begin="4" cat="np" end="6" id="13" rel="obj1">
+              <node begin="4" buiging="zonder" end="5" id="14" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+              <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="15" lemma="woordspeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="woordspeling" word="woordspeling"/>
+            </node>
+            <node begin="6" buiging="zonder" end="7" graad="comp" id="16" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vwtype="onbep" word="meer"/>
+            <node begin="8" buiging="zonder" end="9" id="17" lemma="pruimen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="pruim" word="pruimen" wvorm="inf"/>
+          </node>
+        </node>
+        <node begin="9" buiging="zonder" end="10" id="18" lemma="krijgen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="krijgen" word="krijgen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="10" end="11" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="11" end="12" id="20" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>ze zullen van ons geen woordspeling meer te pruimen krijgen . &quot;</sentence>
+</alpino_ds>

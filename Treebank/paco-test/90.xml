@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" end="1" frame="determiner(het,nwh,nmod,pro,nparg)" id="2" infl="het" lcat="np" pos="det" rel="su" root="dat" sense="dat" wh="nwh" word="Dat"/>
+      <node begin="1" end="2" frame="verb(unacc,sg_heeft,copula)" id="3" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="is"/>
+      <node begin="2" cat="np" end="14" id="4" rel="predc">
+        <node begin="2" end="3" frame="determiner(een)" id="5" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+        <node aform="base" begin="3" end="4" frame="adjective(no_e(adv))" id="6" infl="no_e" lcat="ap" pos="adj" rel="mod" root="typisch" sense="typisch" vform="adj" word="typisch"/>
+        <node begin="4" end="5" frame="noun(het,count,sg)" gen="het" id="7" lcat="np" num="sg" pos="noun" rel="hd" root="voorbeeld" sense="voorbeeld" word="voorbeeld"/>
+        <node begin="5" cat="pp" end="12" id="8" rel="mod">
+          <node begin="5" end="6" frame="preposition(van,[],pc_adv)" id="9" lcat="pp" pos="prep" rel="hd" root="van" sc="pc_adv" sense="van" word="van"/>
+          <node begin="6" cat="whrel" end="12" id="10" rel="obj1">
+            <node begin="6" end="7" frame="wh_adjective" id="11" index="1" lcat="ap" pos="adj" rel="rhd" root="hoe" sense="hoe" wh="ywh" word="hoe"/>
+            <node begin="6" cat="ssub" end="12" id="12" rel="body">
+              <node begin="6" end="7" id="13" index="1" rel="mod"/>
+              <node begin="7" case="nom" def="def" end="8" frame="pronoun(nwh,fir,pl,de,nom,def)" gen="de" id="14" lcat="np" num="pl" per="fir" pos="pron" rel="su" root="wij" sense="wij" wh="nwh" word="wij"/>
+              <node aform="base" begin="8" end="9" frame="adjective(no_e(adv))" id="15" infl="no_e" lcat="ap" pos="adj" rel="mod" root="preventief" sense="preventief" vform="adj" word="preventief"/>
+              <node begin="9" end="10" frame="verb(zijn,pl,ninv(pc_pp(met),part_pc_pp(om,met)))" id="16" infl="pl" lcat="ssub" pos="verb" rel="hd" root="ga_om" sc="part_pc_pp(om,met)" sense="ga_om-met" tense="present" word="omgaan"/>
+              <node begin="10" cat="pp" end="12" id="17" rel="pc">
+                <node begin="10" end="11" frame="preposition(met,[mee,[en,al]])" id="18" lcat="pp" pos="prep" rel="hd" root="met" sense="met" word="met"/>
+                <node begin="11" end="12" frame="noun(de,count,pl)" gen="de" id="19" lcat="np" num="pl" pos="noun" rel="obj1" root="maatregel" sense="maatregel" word="maatregelen"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="12" cat="pp" end="14" id="20" rel="mod">
+          <node begin="12" end="13" frame="preposition(tegen,[aan,in,op])" id="21" lcat="pp" pos="prep" rel="hd" root="tegen" sense="tegen" word="tegen"/>
+          <node begin="13" end="14" frame="noun(de,count,sg)" gen="de" id="22" lcat="np" num="sg" pos="noun" rel="obj1" root="milieu_verontreiniging" sense="milieu_verontreiniging" word="milieuverontreiniging"/>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" frame="punct(punt)" id="23" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Dat is een typisch voorbeeld van hoe wij preventief omgaan met maatregelen tegen milieuverontreiniging .</sentence>
+  <comments>
+    <comment>Q#90|Dat is een typisch voorbeeld van hoe wij preventief omgaan met maatregelen tegen milieuverontreiniging .|1|1|-1.6077042640974504</comment>
+  </comments>
+</alpino_ds>

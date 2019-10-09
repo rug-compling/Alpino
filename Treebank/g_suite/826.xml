@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="np" end="4" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+      <node begin="1" cat="ppart" end="3" id="3" rel="mod">
+        <node begin="1" end="2" id="4" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
+        <node begin="2" buiging="zonder" end="3" id="5" lemma="vinden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gevonden" word="gevonden" wvorm="vd"/>
+      </node>
+      <node begin="3" end="4" getal="mv" graad="basis" id="6" lemma="exemplaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="exemplaar" word="exemplaren"/>
+    </node>
+  </node>
+  <sentence>De gisteren gevonden exemplaren</sentence>
+</alpino_ds>

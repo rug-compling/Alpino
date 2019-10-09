@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="32" id="0" rel="top">
+    <node begin="19" end="20" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="31" id="2" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="3" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" word="Maar"/>
+      <node begin="1" cat="smain" end="31" id="4" rel="nucl">
+        <node begin="1" cat="np" end="12" id="5" rel="su">
+          <node begin="1" end="2" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="consumptie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="consumptie" word="consumptie"/>
+          <node begin="3" cat="pp" end="12" id="8" rel="mod">
+            <node begin="3" cat="mwu" end="5" id="9" rel="mod">
+              <node begin="3" end="4" id="10" lemma="met" pos="adv" postag="VZ(init)" pt="vz" rel="mwp" root="met" vztype="init" word="met"/>
+              <node begin="4" end="5" getal="ev" graad="basis" id="11" lemma="naam" naamval="dat" ntype="soort" pos="adv" postag="N(soort,ev,basis,dat)" pt="n" rel="mwp" root="name" word="name"/>
+            </node>
+            <node begin="5" end="6" id="12" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="6" cat="conj" end="12" id="13" rel="obj1">
+              <node begin="6" cat="np" end="10" id="14" rel="cnj">
+                <node begin="6" end="7" id="15" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="16" lemma="continent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="continent" word="continent"/>
+                <node begin="8" cat="pp" end="10" id="17" rel="mod">
+                  <node begin="8" end="9" id="18" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="19" lemma="Europa" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Europa" word="Europa"/>
+                </node>
+              </node>
+              <node begin="10" conjtype="neven" end="11" id="20" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="21" lemma="Japan" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Japan" word="Japan"/>
+            </node>
+          </node>
+        </node>
+        <node begin="12" end="13" id="22" lemma="geven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="geef" word="gaf" wvorm="pv"/>
+        <node begin="13" cat="ti" end="31" id="23" rel="vc">
+          <node begin="17" end="18" id="24" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="13" cat="inf" end="31" id="25" rel="body">
+            <node begin="18" buiging="zonder" end="19" id="26" lemma="zien" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zie" word="zien" wvorm="inf"/>
+            <node begin="13" cat="np" end="31" id="27" rel="obj1">
+              <node begin="13" end="14" id="28" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="29" lemma="groei" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="groei" word="groei"/>
+              <node begin="14" cat="ap" end="31" id="30" rel="mod">
+                <node begin="15" buiging="met-e" end="16" graad="basis" id="31" lemma="sterk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="sterk" word="sterke"/>
+                <node begin="14" cat="ap" end="31" id="32" rel="mod">
+                  <node begin="14" end="15" id="33" lemma="zo" pos="adj" postag="BW()" pt="bw" rel="hd" root="zo" word="zo"/>
+                  <node begin="20" cat="cp" end="31" id="34" rel="obcomp">
+                    <node begin="20" conjtype="onder" end="21" id="35" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+                    <node begin="21" cat="ssub" end="31" id="36" rel="body">
+                      <node begin="21" cat="np" end="23" id="37" index="1" rel="su">
+                        <node begin="21" end="22" id="38" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                        <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="39" lemma="kostenstijging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stijging" word="kostenstijging"/>
+                      </node>
+                      <node begin="28" end="29" id="40" lemma="kunnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kan" word="kon" wvorm="pv"/>
+                      <node begin="21" cat="inf" end="31" id="41" rel="vc">
+                        <node begin="21" end="23" id="42" index="1" rel="su"/>
+                        <node begin="29" buiging="zonder" end="30" id="43" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+                        <node begin="21" cat="ppart" end="31" id="44" rel="vc">
+                          <node begin="21" end="23" id="45" index="1" rel="obj1"/>
+                          <node begin="23" buiging="zonder" end="24" graad="basis" id="46" lemma="kennelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="kennelijk" word="kennelijk"/>
+                          <node begin="24" cat="pp" end="28" id="47" rel="mod">
+                            <node begin="24" end="25" id="48" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                            <node begin="25" cat="np" end="28" id="49" rel="obj1">
+                              <node begin="25" cat="ppres" end="27" id="50" rel="mod">
+                                <node begin="25" end="26" id="51" lemma="vrij" pos="adj" postag="BW()" pt="bw" rel="mod" root="vrij" word="vrij"/>
+                                <node begin="26" buiging="met-e" end="27" id="52" lemma="bevredigen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="bevredigend" word="bevredigende" wvorm="od"/>
+                              </node>
+                              <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="53" lemma="wijze" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wijze" word="wijze"/>
+                            </node>
+                          </node>
+                          <node begin="30" buiging="zonder" end="31" id="54" lemma="doorberekenen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bereken" word="doorberekend" wvorm="vd"/>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="31" end="32" id="55" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Maar de consumptie met name op het continent van Europa en Japan gaf een zo sterke groei te zien , dat de kostenstijging kennelijk op vrij bevredigende wijze kon worden doorberekend .</sentence>
+</alpino_ds>

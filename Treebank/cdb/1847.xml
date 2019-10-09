@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="0" cat="smain" end="19" id="1" rel="--">
+      <node begin="0" cat="pp" end="9" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="Na"/>
+        <node begin="1" cat="np" end="9" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" cat="mwu" end="4" id="6" rel="mod">
+            <node begin="2" end="3" id="7" lemma="3-" pos="num" postag="SPEC(symb)" pt="spec" rel="mwp" root="3-" spectype="symb" word="3-"/>
+            <node begin="3" end="4" id="8" lemma="1" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="1" word="1"/>
+          </node>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="nederlaag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="nederlaag" word="nederlaag"/>
+          <node begin="5" cat="np" end="7" id="10" rel="mod">
+            <node begin="5" buiging="met-e" end="6" graad="basis" id="11" lemma="vorig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vorig" word="vorige"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="week" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="week" word="week"/>
+          </node>
+          <node begin="7" cat="pp" end="9" id="13" rel="mod">
+            <node begin="7" end="8" id="14" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="15" lemma="Jena" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Jena" word="Jena"/>
+          </node>
+        </node>
+      </node>
+      <node begin="9" end="10" id="16" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="10" end="11" genus="onz" getal="ev" id="17" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="11" buiging="zonder" end="12" graad="basis" id="18" lemma="duidelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="duidelijk" word="duidelijk"/>
+      <node begin="12" cat="cp" end="19" id="19" rel="su">
+        <node begin="12" conjtype="onder" end="13" id="20" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="13" cat="ssub" end="19" id="21" rel="body">
+          <node begin="13" end="14" getal="getal" id="22" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="14" buiging="zonder" end="15" graad="basis" id="23" lemma="veel" naamval="stan" pdtype="grad" pos="num" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="su" root="veel" vwtype="onbep" word="veel"/>
+          <node begin="15" cat="mwu" end="18" id="24" rel="svp">
+            <node begin="15" end="16" id="25" lemma="op" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+            <node begin="16" end="17" id="26" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="fixed" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+            <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="27" lemma="spel" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="spel" word="spel"/>
+          </node>
+          <node begin="18" end="19" id="28" lemma="staan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="sta" word="stond" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="29" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Na de 3- 1 nederlaag vorige week in Jena was het duidelijk dat er veel op het spel stond .</sentence>
+</alpino_ds>

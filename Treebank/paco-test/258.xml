@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" case="both" def="def" end="1" frame="pronoun(nwh,u,sg,de,both,def)" gen="de" id="2" lcat="np" num="sg" per="u" pos="pron" rel="su" root="u" sense="u" wh="nwh" word="U"/>
+      <node begin="1" end="2" frame="verb(hebben,sg_hebt,transitive_ndev)" id="3" infl="sg_hebt" lcat="smain" pos="verb" rel="hd" root="heb" sc="transitive_ndev" sense="heb" tense="present" word="hebt"/>
+      <node begin="2" cat="np" end="4" id="4" rel="obj1">
+        <node begin="2" end="3" frame="determiner(geen,nwh,mod,pro,yparg,nwkpro,geen)" id="5" infl="geen" lcat="detp" pos="det" rel="det" root="geen" sense="geen" wh="nwh" word="geen"/>
+        <node begin="3" end="4" frame="noun(het,count,pl)" gen="het" id="6" lcat="np" num="pl" pos="noun" rel="hd" root="toegang_recht" sense="toegang_recht" word="toegangsrechten"/>
+      </node>
+      <node begin="4" cat="oti" end="12" id="7" rel="mod">
+        <node begin="4" end="5" frame="complementizer(om)" id="8" lcat="oti" pos="comp" rel="cmp" root="om" sc="om" sense="om" word="om"/>
+        <node begin="5" cat="ti" end="12" id="9" rel="body">
+          <node begin="7" end="8" frame="complementizer(te)" id="10" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+          <node begin="5" cat="inf" end="12" id="11" rel="body">
+            <node begin="5" end="6" frame="noun(de,count,pl)" gen="de" id="12" lcat="np" num="pl" pos="noun" rel="obj1" root="notitie" sense="notitie" word="notities"/>
+            <node begin="6" end="7" frame="adverb" id="13" lcat="advp" pos="adv" rel="mod" root="weer" sense="weer" word="weer"/>
+            <node begin="8" end="9" frame="verb(hebben,inf,transitive)" id="14" infl="inf" lcat="inf" pos="verb" rel="hd" root="geef" sc="transitive" sense="geef" word="geven"/>
+            <node begin="9" cat="pp" end="12" id="15" rel="mod">
+              <node begin="9" end="10" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="16" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+              <node begin="10" cat="np" end="12" id="17" rel="obj1">
+                <node begin="10" end="11" frame="determiner(de,nwh,nmod,pro,nparg)" id="18" infl="de" lcat="detp" pos="det" rel="det" root="deze" sense="deze" wh="nwh" word="deze"/>
+                <node begin="11" end="12" frame="noun(de,count,sg)" gen="de" id="19" lcat="np" num="sg" pos="noun" rel="hd" root="klant_code" sense="klant_code" word="klantcode"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" frame="punct(punt)" id="20" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>U hebt geen toegangsrechten om notities weer te geven voor deze klantcode .</sentence>
+  <comments>
+    <comment>Q#258|U hebt geen toegangsrechten om notities weer te geven voor deze klantcode .|1|1|-6.7547206599084</comment>
+  </comments>
+</alpino_ds>

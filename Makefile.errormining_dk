@@ -1,0 +1,27 @@
+DPATH=/net/aistaff/dekok/aps/bin
+
+%.mined : %.oks %.mistakes %.oks-fsa %.mistakes-fsa
+	$(DPATH)/mine -t 0.01  $*.oks-fsa $*.mistakes-fsa $*.oks $*.mistakes > $*.mined
+
+%.db : %.mined %.mistakes
+	$(DPATH)/createminedb $*.mined $*.mistakes $*.db
+
+%.oks-fsa : %.oks
+	cat $*.oks | tr -s '\012\011 ' '\012' |\
+         LANG=POSIX LC_ALL=POSIX sort -u |\
+         $(DPATH)/fsa_build -N -o $*.oks-fsa
+
+%.mistakes-fsa : %.mistakes
+	cat $*.mistakes | tr -s '\012\011 ' '\012' |\
+         LANG=POSIX LC_ALL=POSIX sort -u |\
+         $(DPATH)/fsa_build -N -o $*.mistakes-fsa
+
+%.oks : %.q
+	zcat $*.q | $(ALPINO_HOME)/bin/q -o | sort -u > $*.oks
+
+%.mistakes : %.q
+	zcat $*.q | $(ALPINO_HOME)/bin/q -m | sort -u > $*.mistakes
+
+
+%.q : %.log.gz
+	zcat $*.log.gz | grep '^Q' | gzip > $*.q

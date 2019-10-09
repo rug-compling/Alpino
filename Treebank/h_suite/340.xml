@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="nemen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="neem" word="nam" wvorm="pv"/>
+      <node begin="2" cat="np" end="6" id="4" rel="obj1">
+        <node begin="2" end="3" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="3" cat="mwu" end="5" id="6" rel="mod">
+          <node begin="3" end="4" id="7" lemma="16.6" naamval="stan" numtype="hoofd" pos="adj" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="16.6" word="16.6"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="procent" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="procents" word="procents"/>
+        </node>
+        <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="belang" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="belang" word="belang"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Hij nam een 16.6 procents belang</sentence>
+</alpino_ds>

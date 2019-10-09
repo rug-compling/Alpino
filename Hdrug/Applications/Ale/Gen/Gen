@@ -1,0 +1,3 @@
+#!/bin/sh
+../../../hdrug -l ../start  -grammar gengram -decl gengram_decl -suite gengram_suite -parse -generate $@
+

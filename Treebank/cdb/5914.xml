@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="0" cat="smain" end="23" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="minister" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="minister" word="Minister"/>
+        <node begin="1" end="2" genus="genus" getal="ev" graad="basis" id="4" lemma="Beernink" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Beernink" word="Beernink"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="23" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="su"/>
+        <node begin="3" cat="pp" end="20" id="8" rel="mod">
+          <node begin="3" end="4" id="9" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
+          <node begin="4" cat="np" end="20" id="10" rel="obj1">
+            <node begin="4" buiging="zonder" end="5" graad="basis" id="11" lemma="ampel" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="ampel" word="ampel"/>
+            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="12" lemma="overleg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="overleg" word="overleg"/>
+            <node begin="6" cat="conj" end="20" id="13" rel="mod">
+              <node begin="6" end="7" id="14" lemma="zowel" pos="vg" postag="BW()" pt="bw" rel="crd" root="zowel" word="zowel"/>
+              <node begin="7" cat="pp" end="13" id="15" rel="cnj">
+                <node begin="7" end="8" id="16" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                <node begin="8" cat="np" end="13" id="17" rel="obj1">
+                  <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="18" lemma="gedeputeerde" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="gedeputeerd" word="gedeputeerde"/>
+                  <node begin="9" end="10" getal="mv" graad="basis" id="19" lemma="state" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="staat" word="staten"/>
+                  <node begin="10" cat="pp" end="13" id="20" rel="mod">
+                    <node begin="10" end="11" id="21" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                    <node begin="11" cat="np" end="13" id="22" rel="obj1">
+                      <node begin="11" end="12" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                      <node begin="12" end="13" getal="mv" graad="basis" id="24" lemma="provincie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="provincie" word="provincies"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="13" conjtype="onder" end="14" id="25" lemma="als" pos="vg" postag="VG(onder)" pt="vg" rel="crd" root="als" word="als"/>
+              <node begin="14" cat="pp" end="20" id="26" rel="cnj">
+                <node begin="14" end="15" id="27" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                <node begin="15" cat="np" end="20" id="28" rel="obj1">
+                  <node begin="15" end="16" id="29" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="30" lemma="raad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="raad" word="raad"/>
+                  <node begin="17" cat="pp" end="20" id="31" rel="mod">
+                    <node begin="17" end="18" id="32" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                    <node begin="18" cat="np" end="20" id="33" rel="obj1">
+                      <node begin="18" buiging="met-e" end="19" graad="basis" id="34" lemma="territoriaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="territoriaal" word="territoriale"/>
+                      <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="35" lemma="decentralisatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="decentralisatie" word="decentralisatie"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="20" cat="np" end="22" id="36" rel="obj1">
+          <node begin="20" end="21" id="37" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="21" end="22" getal="mv" graad="basis" id="38" lemma="plan" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="plan" word="plannen"/>
+        </node>
+        <node begin="22" buiging="zonder" end="23" id="39" lemma="ontwerpen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ontwerp" word="ontworpen" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="23" end="24" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Minister Beernink heeft na ampel overleg zowel met gedeputeerde staten van de provincies als met de raad voor territoriale decentralisatie de plannen ontworpen .</sentence>
+</alpino_ds>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="pp" end="3" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="achter" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="achter" vztype="init" word="Achter"/>
+        <node begin="1" cat="np" end="3" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="scherm" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="scherm" word="schermen"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" lemma="heersen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heers" word="heerst" wvorm="pv"/>
+      <node begin="4" end="5" id="8" lemma="echter" pos="adv" postag="BW()" pt="bw" rel="mod" root="echter" word="echter"/>
+      <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="ontreddering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="ontreddering" word="ontreddering"/>
+      <node begin="6" cat="pp" end="8" id="10" rel="ld">
+        <node begin="6" end="7" id="11" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="12" lemma="Eindhoven" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Eindhoven" word="Eindhoven"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Achter de schermen heerst echter ontreddering in Eindhoven .</sentence>
+</alpino_ds>

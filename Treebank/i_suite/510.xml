@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+    <node begin="0" cat="conj" end="11" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" rel="cnj">
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="4" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="det" root="veel" vwtype="onbep" word="Veel"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="sterkte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sterkte" word="sterkte"/>
+      </node>
+      <node begin="3" conjtype="neven" end="4" id="6" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="4" cat="smain" end="11" id="7" rel="cnj">
+        <node begin="4" cat="whrel" end="8" id="8" rel="ld">
+          <node begin="4" end="5" getal="getal" id="9" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" status="vol" vwtype="vb" word="waar"/>
+          <node begin="4" cat="ssub" end="8" id="10" rel="body">
+            <node begin="4" end="5" id="11" index="1" rel="ld"/>
+            <node begin="5" cat="np" end="7" id="12" rel="su">
+              <node begin="5" end="6" id="13" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="wil" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wil" word="wil"/>
+            </node>
+            <node begin="7" end="8" id="15" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          </node>
+        </node>
+        <node begin="8" end="9" id="16" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="9" cat="np" end="11" id="17" rel="su">
+          <node begin="9" end="10" id="18" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="19" lemma="weg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="weg" word="weg"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Veel sterkte ! en waar een wil is is een weg</sentence>
+</alpino_ds>

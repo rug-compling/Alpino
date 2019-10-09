@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="23" id="2" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="g.s." naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="G.S." word="G.S."/>
+      <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="2" cat="mwu" end="4" id="5" rel="svp">
+        <node begin="2" end="3" id="6" lemma="van" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="mening" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="mening" word="mening"/>
+      </node>
+      <node begin="5" cat="cp" end="23" id="8" rel="vc">
+        <node begin="5" conjtype="onder" end="6" id="9" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="6" cat="ssub" end="23" id="10" rel="body">
+          <node begin="13" cat="np" end="20" id="11" index="1" rel="su">
+            <node begin="13" end="14" id="12" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="13" lemma="steun" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="steun" word="steun"/>
+            <node begin="15" cat="pp" end="18" id="14" rel="mod">
+              <node begin="15" end="16" id="15" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="16" cat="mwu" end="18" id="16" rel="obj1">
+                <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="17" lemma="flo" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="flo" word="flo"/>
+                <node begin="17" end="18" id="18" lemma="50.000" naamval="stan" numtype="hoofd" pos="noun" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="50.000" word="50.000"/>
+              </node>
+            </node>
+            <node begin="18" cat="pp" end="20" id="19" rel="mod">
+              <node begin="18" end="19" id="20" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
+              <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="21" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="jaar" word="jaar"/>
+            </node>
+          </node>
+          <node begin="20" end="21" id="22" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+          <node begin="6" cat="inf" end="23" id="23" rel="vc">
+            <node begin="13" end="20" id="24" index="1" rel="su"/>
+            <node begin="21" buiging="zonder" end="22" id="25" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+            <node begin="6" cat="ppart" end="23" id="26" rel="vc">
+              <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="27" lemma="GVAV" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj2" root="GVAV" word="GVAV"/>
+              <node begin="7" cat="pp" end="13" id="28" rel="mod">
+                <node begin="7" end="8" id="29" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+                <node begin="8" cat="np" end="13" id="30" rel="obj1">
+                  <node begin="8" end="9" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="32" lemma="tijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tijd" word="tijd"/>
+                  <node begin="10" cat="pp" end="13" id="33" rel="mod">
+                    <node begin="10" end="11" id="34" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                    <node begin="11" cat="np" end="13" id="35" rel="obj1">
+                      <node begin="11" end="12" id="36" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="drie" word="drie"/>
+                      <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="37" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="13" end="20" id="38" index="1" rel="obj1"/>
+              <node begin="22" buiging="zonder" end="23" id="39" lemma="verlenen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verleen" word="verleend" wvorm="vd"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>G.S. zijn van mening , dat GVAV over de tijd van drie jaar een steun van flo 50.000 per jaar moet worden verleend .</sentence>
+</alpino_ds>

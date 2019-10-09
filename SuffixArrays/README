@@ -1,0 +1,55 @@
+Suffix Arrays with Perfect Hash Finite Automata
+
+./suffix_array [Options] [File]
+
+where Options can be:
+
+-v      Prints some continuation messages to standard error.
+-s      Uses the suffix sort implementation by McIlroy; should be
+        better in cases where your input contains long duplicated strings.
+        This is the default.
+-q      Uses the qsort sort implementation. Is faster for 'easy' input.
+-d DICT Use DICT as the perfect hash dictionary file (default: words.fsa).
+-F STR  Use STR as the separator string between words in the output 
+        (default: the space character).
+-G STR  Use STR as the separator string between in the output in front of
+        the count (default: tab). Only makes sense in case of -n.
+-c      Output perfect hash codes, (rather than words).
+-w      Output words (rather than perfect hash codes), this is the default.
+-n INT  The suffix array is printed to standard output. For every suffix,
+        the first INT words (or codes) are printed. If INT=0, then no
+        output is produced. Default: INT=0.
+-e      If this option is specified, then all intermediate length suffixes
+        are printed too. 
+-u      If this option is set, then duplicate lines representing suffixes
+        are only printed once; the number of duplicates is printed at the
+        end of the line. So, in combination with the -n suffix you can use this
+        program to count all ngrams for a particular value of n.
+-f INT  In combination with -u, this option specifies that only those lines
+        should be printed with a count of more than INT.
+-b      Dump the suffix array in binary format.
+-h      This message.
+
+The program reads text from File or standard input. Each line is
+treated as a single word, and that word is mapped to its perfect hash
+code (as defined by the dictionary specified by -d). The suffix array
+is computed. The suffix array is then printed to standard output,
+where for every suffix we print the first INT words (or codes) on a
+single line. Alternatively, the suffix array is printed in binary
+format completely.
+
+Example:
+
+% tr -s '\012\011 ' '\012' < TEXT | sort -u | fsa_build -N -o words.fsa
+
+NB: make sure the environment variables LANG and LC_ALL are defined as
+LANG=POSIX
+LC_ALL=POSIX 
+
+followed by one of:
+
+% tr -s '\012\011 ' '\012' < TEXT | ./suffix_array -n 8
+% tr -s '\012\011 ' '\012' < TEXT | ./suffix_array -n 3 -u | sort -nr -k 4
+% tr -s '\012\011 ' '\012' < TEXT | ./suffix_array -b > TEXT.suf
+
+etc, ...

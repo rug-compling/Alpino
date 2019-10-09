@@ -1,0 +1,22 @@
+#ifndef alpino
+#define alpino
+
+### context auto-detection code
+
+unshift @TredMacro::AUTO_CONTEXT_GUESSING,
+  sub {
+      if (PML::SchemaName() eq 'alpino_ds_pml') {
+          return 'Alpino';
+      } else {
+          return undef;
+      }
+  };
+
+
+### -- probably load the PML macros first
+#include <contrib/pml/PML.mak>
+
+#binding-context Alpino
+#include "alpino.mak"
+
+#endif alpino

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="smain" end="17" id="1" rel="--">
+      <node begin="10" end="11" id="2" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" word="kunnen" wvorm="pv"/>
+      <node begin="11" end="12" getal="mv" id="3" index="1" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+      <node begin="0" cat="inf" end="17" id="4" rel="vc">
+        <node begin="0" cat="pp" end="10" id="5" rel="mod">
+          <node begin="0" end="1" id="6" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="Met"/>
+          <node begin="1" cat="np" end="10" id="7" rel="obj1">
+            <node begin="1" end="2" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="9" lemma="snelheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="snelheid" word="snelheid"/>
+            <node begin="3" cat="pp" end="10" id="10" rel="mod">
+              <node begin="3" end="4" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="4" cat="np" end="10" id="12" rel="obj1">
+                <node begin="4" cat="conj" end="7" id="13" rel="det">
+                  <node begin="4" end="5" id="14" lemma="300" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="cnj" root="300" word="300"/>
+                  <node begin="5" end="6" id="15" lemma="tot" pos="vg" postag="VZ(init)" pt="vz" rel="crd" root="tot" vztype="init" word="tot"/>
+                  <node begin="6" end="7" id="16" lemma="400" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="cnj" root="400" word="400"/>
+                </node>
+                <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="17" lemma="kilometer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kilometer" word="kilometer"/>
+                <node begin="8" cat="pp" end="10" id="18" rel="mod">
+                  <node begin="8" end="9" id="19" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
+                  <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="20" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="uur" word="uur"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="11" end="12" id="21" index="1" rel="su"/>
+        <node begin="12" cat="pp" end="15" id="22" rel="mod">
+          <node begin="12" end="13" id="23" lemma="rond" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="rond" vztype="init" word="rond"/>
+          <node begin="13" cat="mwu" end="15" id="24" rel="obj1">
+            <node begin="13" end="14" id="25" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="noun" postag="LID(onbep,stan,agr)" pt="lid" rel="mwp" root="een" word="een"/>
+            <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="26" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="uur" word="uur"/>
+          </node>
+        </node>
+        <node begin="15" end="16" getal="getal" id="27" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="ld" root="hier" status="vol" vwtype="aanw" word="hier"/>
+        <node begin="16" buiging="zonder" end="17" id="28" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="17" end="18" id="29" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Met een snelheid van 300 tot 400 kilometer per uur kunnen ze rond een uur hier zijn .</sentence>
+</alpino_ds>

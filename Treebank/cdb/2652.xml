@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="12" end="13" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="27" id="3" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="4" lemma="veelzeggend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="veelzeggend" word="Veelzeggend"/>
+      <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" cat="np" end="27" id="6" rel="su">
+        <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="mening" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="mening" word="mening"/>
+        <node begin="4" cat="pp" end="27" id="9" rel="mod">
+          <node begin="4" end="5" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="5" cat="np" end="27" id="11" rel="obj1">
+            <node begin="5" cat="mwu" end="7" id="12" rel="hd">
+              <node begin="5" end="6" id="13" lemma="Jan" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jan" spectype="deeleigen" word="Jan"/>
+              <node begin="6" end="7" id="14" lemma="Bols" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bols" spectype="deeleigen" word="Bols"/>
+            </node>
+            <node begin="8" cat="ppres" end="27" id="15" rel="mod">
+              <node begin="8" buiging="zonder" end="9" id="16" lemma="lepelen" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="hd" root="lepelend" word="lepelend" wvorm="od"/>
+              <node begin="9" cat="pp" end="27" id="17" rel="mod">
+                <node begin="9" end="10" id="18" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+                <node begin="10" cat="np" end="27" id="19" rel="obj1">
+                  <node begin="10" end="11" id="20" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="21" lemma="ijssorbet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ijssorbet" word="ijssorbet"/>
+                  <node begin="13" cat="rel" end="27" id="22" rel="mod">
+                    <node begin="13" end="14" getal="getal" id="23" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+                    <node begin="13" cat="ssub" end="27" id="24" rel="body">
+                      <node begin="13" end="14" id="25" index="1" rel="su"/>
+                      <node begin="14" cat="pp" end="18" id="26" rel="mod">
+                        <node begin="14" end="15" id="27" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                        <node begin="15" cat="np" end="18" id="28" rel="obj1">
+                          <node begin="15" end="16" id="29" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                          <node begin="16" buiging="met-e" end="17" id="30" lemma="branden" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="brandend" word="brandende" wvorm="od"/>
+                          <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="31" lemma="zon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zon" word="zon"/>
+                        </node>
+                      </node>
+                      <node begin="18" end="19" id="32" lemma="tenminste" pos="adv" postag="BW()" pt="bw" rel="mod" root="tenminste" word="tenminste"/>
+                      <node begin="19" end="20" getal="getal" id="33" lemma="ergens" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(onbep,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="ergens" status="vol" vwtype="onbep" word="ergens"/>
+                      <node begin="20" end="21" id="34" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+                      <node begin="23" end="24" id="35" lemma="oproepen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="roep" word="oproept" wvorm="pv"/>
+                      <node begin="21" cat="np" end="27" id="36" rel="obj1">
+                        <node begin="21" buiging="met-e" end="22" id="37" lemma="enig" naamval="stan" npagr="rest" pdtype="det" pos="num" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enige" vwtype="onbep" word="enige"/>
+                        <node begin="22" end="23" getal="mv" graad="basis" id="38" lemma="relatie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="relatie" word="relaties"/>
+                        <node begin="24" cat="pp" end="27" id="39" rel="mod">
+                          <node begin="24" end="25" id="40" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                          <node begin="25" cat="np" end="27" id="41" rel="obj1">
+                            <node begin="25" end="26" id="42" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                            <node begin="26" buiging="zonder" end="27" getal-n="zonder-n" id="43" lemma="schaatsen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="schaats" word="schaatsen" wvorm="inf"/>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="27" end="28" id="44" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>Veelzeggend is de mening van Jan Bols , lepelend aan een ijssorbet , die in de brandende zon tenminste ergens nog enige relaties oproept met het schaatsen :</sentence>
+</alpino_ds>

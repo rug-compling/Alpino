@@ -1,0 +1,87 @@
+#!/usr/bin/perl -w
+
+use Getopt::Std;
+getopts('f:');
+
+if (!$opt_f) {
+    die "Usage: $0 -f feature\n";
+}
+
+# opt_f: feature
+
+
+sub score {
+    ($pen,$n) = @_;
+    if ($n) {
+	return 100*(1-$pen/$n);
+    } else {
+	return 100;
+    }
+}
+
+sub pen {
+  ($ov,$corr,$sys) = @_;
+  return max($corr,$sys)-$ov;
+}
+
+sub min {
+  ($a,$b) = @_;
+  return $a<$b ? $a : $b;
+}
+
+sub max {
+  ($a,$b) = @_;
+  return $a>$b ? $a : $b;
+}
+
+$pn=0;
+$nn=0;
+$positives=0;
+$negatives=0;
+
+while (<>) {
+    next if /^[%\#]/;
+    next if !/\|/;
+    chomp;
+    ($key,undef,$triple,$features) = split/\#/;
+
+    if ($prevkey && ($key ne $prevkey)) {
+	if ($pn && $nn) {
+            if ( $positives > $negatives){
+                $v="+";
+            } elsif ( $negatives > $positives) {
+                $v="-";
+            } else {
+                $v="";
+            }
+	    printf "$prevkey\t%.2f\t%.2f\t%s\n",$positives,$negatives,$v;
+        }
+	$pn=0;
+	$nn=0;
+	$positives=0;
+	$negatives=0;
+    }
+    $prevkey=$key;
+
+    ($overlap,$correct,$system) = split/\|/,$triple;
+    $this_pen=pen($overlap,$correct,$system);
+    $this_n=max($correct,$system);
+    $this_score=score($this_pen,$this_n);
+
+    $feature_count=0;
+    foreach $pair (split/\|/,$features) {
+	($count,$feature) = split/\@/,$pair;
+	if ($feature eq $opt_f) {
+	    $feature_count=$count;
+	    next;
+	}
+    }
+    if ($feature_count) {
+	$positives=max($this_score,$positives);
+	$pn++;
+    } else {
+	$negatives=max($this_score,$negatives);
+	$nn++;
+    }
+    # print "$key|$this_score|$feature_count\n";
+}

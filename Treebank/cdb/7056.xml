@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="0" cat="smain" end="24" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="daarbij" pos="pp" postag="BW()" pt="bw" rel="pc" root="daarbij" word="Daarbij"/>
+      <node begin="1" end="2" id="3" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+      <node begin="2" cat="cp" end="24" id="4" rel="su">
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="3" cat="ssub" end="24" id="6" rel="body">
+          <node begin="13" end="14" genus="onz" getal="ev" id="7" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="het"/>
+          <node begin="17" end="18" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          <node begin="3" cat="ti" end="24" id="9" rel="vc">
+            <node begin="15" end="16" id="10" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="3" cat="inf" end="24" id="11" rel="body">
+              <node begin="3" cat="pp" end="13" id="12" rel="mod">
+                <node begin="3" end="4" id="13" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+                <node begin="4" cat="np" end="13" id="14" rel="obj1">
+                  <node begin="4" buiging="met-e" end="5" graad="basis" id="15" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="grote"/>
+                  <node begin="5" end="6" getal="mv" graad="basis" id="16" lemma="vertraging" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vertraging" word="vertragingen"/>
+                  <node begin="6" cat="pp" end="13" id="17" rel="mod">
+                    <node begin="6" end="7" id="18" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                    <node begin="7" cat="np" end="13" id="19" rel="obj1">
+                      <node begin="7" end="8" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                      <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="21" lemma="lossing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="lossing" word="lossing"/>
+                      <node begin="9" cat="pp" end="13" id="22" rel="mod">
+                        <node begin="9" end="10" id="23" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                        <node begin="10" cat="np" end="13" id="24" rel="obj1">
+                          <node begin="10" end="11" getal="mv" graad="basis" id="25" lemma="graanboot" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="graan_boot" word="graanboten"/>
+                          <node begin="11" cat="pp" end="13" id="26" rel="mod">
+                            <node begin="11" end="12" id="27" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                            <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="28" lemma="Rotterdam" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Rotterdam" word="Rotterdam"/>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="14" buiging="zonder" end="15" graad="basis" id="29" lemma="moeilijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="moeilijk" word="moeilijk"/>
+              <node begin="16" buiging="zonder" end="17" id="30" lemma="beoordelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="beoordeel" word="beoordelen" wvorm="inf"/>
+              <node begin="18" cat="whsub" end="24" id="31" index="1" rel="vc">
+                <node begin="18" end="19" id="32" index="2" lemma="wanneer" pos="adv" postag="BW()" pt="bw" rel="whd" root="wanneer" word="wanneer"/>
+                <node begin="18" cat="ssub" end="24" id="33" rel="body">
+                  <node begin="19" cat="np" end="21" id="34" index="3" rel="su">
+                    <node begin="19" end="20" id="35" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                    <node begin="20" buiging="zonder" end="21" graad="basis" id="36" lemma="goed" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="goed" word="goed"/>
+                  </node>
+                  <node begin="22" end="23" id="37" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+                  <node begin="18" cat="inf" end="24" id="38" rel="vc">
+                    <node begin="18" end="19" id="39" index="2" rel="mod"/>
+                    <node begin="19" end="21" id="40" index="3" rel="su"/>
+                    <node begin="21" buiging="zonder" end="22" graad="basis" id="41" lemma="beschikbaar" pos="fixed" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="beschikbaar" word="beschikbaar"/>
+                    <node begin="23" buiging="zonder" end="24" id="42" lemma="komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom" word="komen" wvorm="inf"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="18" end="24" id="43" index="1" rel="su"/>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="44" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Daarbij komt dat door grote vertragingen in de lossing van graanboten op Rotterdam het moeilijk te beoordelen is wanneer het goed beschikbaar zal komen .</sentence>
+</alpino_ds>

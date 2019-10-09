@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-/W3C/DTD HTML 4.0 Transitional//EN"
+     "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>HDRUG Reference Manual</TITLE>
+<link rel=stylesheet href="http://www.let.rug.nl/~vannoord/doc.css" 
+      type="text/css">
+<link rel=next href="node14.html">
+</HEAD>
+<BODY>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node14.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+<H1>13. hdrug_show: Visualization</H1>
+<P>The libraries contain predicates to visualize trees,
+feature-structures and Prolog terms (including Prolog clauses). A
+number of different output media are available: LaTeX, Tcl/Tk, CLiG, DOT,
+and ordinary text output. The visualization tools are all available by
+means of a single generic predicate show/3.</P>
+<P>Viewing Prolog Terms representing Feature Structures</P>
+<P>Note that a couple of predicates are available to view Prolog terms as
+feature structures. Again, the predicate show/3 is available as an
+interface to this functionality. For example, you might
+try the conjunction:</P>
+<BLOCKQUOTE>Y:cat:agr &lt;=&gt; Y:cat:subj:cat:agr, show(fs,tk,[value(Y)]).</BLOCKQUOTE>
+<P>Instead of <B>tk</B>, any of the identifiers <B>latex</B>, <B>user</B>, <B>clig</B>, <B>dot</B> can be
+used to direct the output to a different medium. For instance, the
+query</P>
+<BLOCKQUOTE>Y:cat:agr &lt;=&gt; Y:cat:subj:cat:agr, show(fs,latex,[value(Y)]).</BLOCKQUOTE>
+<P>But if you insist on ordinary output, try:</P>
+<BLOCKQUOTE>show(fs,user,[value(X)]).</BLOCKQUOTE>
+<P>This produces:</P>
+<BLOCKQUOTE>{sign}<BR>
+|cat {verb}<BR>
+|&nbsp;&nbsp;&nbsp;&nbsp;|agr &lt;A&gt;<BR>
+|&nbsp;&nbsp;&nbsp;&nbsp;|subj {sign}<BR>
+|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|cat {cat}<BR>
+|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|agr &lt;A&gt;.</BLOCKQUOTE>
+<P>Not only can you view feature structures this way, but also clauses;
+cf. show/3 below.</P>
+<P>Tree Formats</P>
+<P>The libraries contain extensive possibilities to produce output in the
+form of trees. Only a few declarations are needed to define what
+things you want to see in the tree. In effect, such declarations
+define a `tree format'.</P>
+<P>In Hdrug, there can be any number of tree formats. These tree formats
+are named by a ground identifier. A tree format consists of three
+parts: the <B>path</B> definition indicates what part of the object you
+want to view as a tree; the <B>label</B> definition indicates how you want
+to print the node of a tree; and the <B>daughter</B> definition indicates
+what you consider the daughters of a node.</P>
+<P>Because we want to be able to have multiple tree formats around, we
+must declare the corresponding predicates `multifile', as otherwise
+existing tree formats would be erased.</P>
+<P>For example, the following predicates define a tree-format called `s'
+(this example is taken from the `Dcg' application).</P>
+<BLOCKQUOTE>:- multifile graphic_path/3.<BR>
+graphic_path(s,node(_,S),S).</BLOCKQUOTE>
+<BLOCKQUOTE>:- multifile graphic_label/3.<BR>
+graphic_label(s,Term,Label) :-<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;functor(Term,Label,_).</BLOCKQUOTE>
+<BLOCKQUOTE>:- multifile graphic_daughter/4.<BR>
+graphic_daughter(s,1,Term,D) :-<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;arg(1,Term,D).</BLOCKQUOTE>
+<BLOCKQUOTE>graphic_daughter(s,2,Term,D) :-<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;arg(2,Term,D).</BLOCKQUOTE>
+<P>The first predicate defines that we want to take the semantics part
+of a node as the term that we want to view as a tree. The second
+predicate defines that for a given tree Term we want to print its
+functor as the node label. Finally the third predicate defines that
+for a given tree Term the first daughter is to be the first
+argument of the term, and the second daughter is to be the second
+argument.</P>
+<P>As another example of a tree format definition, consider the
+constraint-based Categorial Grammar application.
+application. Here we find:</P>
+<BLOCKQUOTE>:- multifile graphic_path/3.<BR>
+graphic_path(syn,Obj,Obj).</BLOCKQUOTE>
+<BLOCKQUOTE>:- multifile graphic_label/3.<BR>
+graphic_label(syn,tree(Sign,_,[_|_]),Label) :-<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;cat_symbol(Sign,Label).</BLOCKQUOTE>
+<BLOCKQUOTE>graphic_label(syn,tree(W,_,[]),W).</BLOCKQUOTE>
+<BLOCKQUOTE>:- multifile graphic_daughter/4.<BR>
+graphic_daughter(syn,No,tree(_,_,[H|T]),D) :-<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;nth(No,[H|T],D).</BLOCKQUOTE>
+<P>Here, objects generally are of the form tree(Node,_,ListOfDs).
+Therefore, the path part of the tree format definition simply unifies
+the object and the tree part. The label part of the tree format
+definition distinguishes two cases. If there are no more daughters,
+then the node is a terminal, and this terminal is simply taken to be
+the node label. In the other case the node label is defined by a
+seperate predicate `cat_symbol'. This predicate changes the internal
+representation into some more readable format. Finally, the daughter
+part of the tree format definition uses the Sicstus library predicate
+`nth'.  The effect of the definition is that the first daughter is the
+first element of the daughter list, etc.</P>
+<P>Tk Output</P>
+<P>The library defines the predicate show/3 index{show (predicate)} as a generic
+interface to the visualization tools. If a tree is to be displayed on
+the Tcl/Tk Canvas widget, then we can use this predicate by taking the 
+desired tree format as the first argument, the atom {   t tk} as the
+second argument, and a list of objects we want to be displayed as the
+third and final argument.  For instance:</P>
+<BLOCKQUOTE>?- findall(object(A,B), object(A,B), Objects),<BR>
+   show(syn,tk,Objects).</BLOCKQUOTE>
+<P>If the tree is output thru the Tk/Tcl canvas, then the nodes of the
+trees are buttons. For each tree format we can define what action
+should be undertaken if a button is pressed. This is defined by the
+predicate show_node/2. The first argument is the identifier of the
+tree format, the second argument is the current node (note: this is
+not the label as defined by graphic_label, but the term on the basis
+of which graphic_label is defined).</P>
+<P>The following definition, from the Constraint-based Categorial Grammar
+application, prints the node as a feature structure in a separate Tk
+window.</P>
+<BLOCKQUOTE>show_node(syn,tree(Sign,[_|_],_)) :-<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show(fs,tk,[value(Sign)]).</BLOCKQUOTE>
+<P>If this predicate is not defined then the label will simply be written
+out as a Prolog term to standard output.</P>
+<P>Similarly, the predicates show_node2/2 and show_node3/2 can be used
+to define an action for pressing the second and third mouse-button
+respectively. Generally these predicates should be defined multifile.</P>
+<P>LaTeX output</P>
+<P>The predicate show/3 is also used to produce LaTeX output of
+trees. A variant of the previous example produces LaTeX:</P>
+<BLOCKQUOTE>?- findall(object(A,B), object(A,B), Objects),<BR>
+   show(syn,latex,Objects).</BLOCKQUOTE>
+<P>This ensures that a LaTeX file is created and the appropriate shell
+commands are called to get ghostview to display the tree. The first
+argument is the name of a tree-format.</P>
+<P>CLiG Output</P>
+<P>A further possibility concerns is to use the CLiG system for
+displaying output. In that case the example becomes;</P>
+<BLOCKQUOTE>?- findall(object(A,B), object(A,B), Objects),<BR>
+   show(syn,latex,Objects).</BLOCKQUOTE>
+<P>Dot Output</P>
+<P>For trees, you can also use the DOT graph visualization programme.</P>
+<P>ASCII Art Output</P>
+<P>Ordinary text (to standard output) is available as well; in that case
+the identifier <B>user</B> is used:</P>
+<BLOCKQUOTE>?- findall(object(A,B), object(A,B), Objects),<BR>
+   show(syn,user,Objects).</BLOCKQUOTE>
+<P>Trees of feature structures</P>
+<P>Trees in which each of the nodes is a feature-structure are supported
+for Tk output and LaTeX output. Nodes are interpreted as a
+description of a feature-structure if the tree format identifier
+matches matrix(_).</P>
+<P>User defined action for a given node can be obtained using a tree
+format which matches user(_). In such a case you are responsible for
+displaying a given node by defining the predicate tk_tree_user_node/2
+where the first argument is the label of the current node, and the
+second argument is a Tcl/Tk frame identifier already packed as part of
+the tree, which can be further worked upon.</P>
+<P>Visualization of clauses</P>
+<P>The third argument of the predicate show
+can be a clause. An is example is
+<TT><A HREF="clause.png">clause.png</A></TT></P>
+<P>Visualization of the type declarations</P>
+<P>Refer to the predicates pretty_type/0, pretty_type/1.</P>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node14.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+
+
+</BODY></HTML>

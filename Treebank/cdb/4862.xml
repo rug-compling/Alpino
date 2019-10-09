@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="21" id="2" rel="--">
+      <node begin="0" cat="np" end="9" id="3" rel="predc">
+        <node begin="0" end="1" id="4" lemma="een" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="hd" root="een" word="Een"/>
+        <node begin="1" cat="pp" end="9" id="5" rel="mod">
+          <node begin="1" end="2" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="2" cat="np" end="9" id="7" rel="obj1">
+            <node begin="2" end="3" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="3" buiging="met-e" end="4" graad="basis" id="9" lemma="weinig" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,agr,basis)" pt="vnw" rel="mod" root="weinig" vwtype="onbep" word="weinige"/>
+            <node begin="4" end="5" getal="mv" graad="basis" id="10" lemma="verrassing" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verrassing" word="verrassingen"/>
+            <node begin="5" cat="pp" end="9" id="11" rel="mod">
+              <node begin="5" end="6" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="6" cat="np" end="9" id="13" rel="obj1">
+                <node begin="6" end="7" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="7" buiging="zonder" end="8" id="15" lemma="aflopen" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="mod" root="afgelopen" word="afgelopen" wvorm="vd"/>
+                <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="16" lemma="weekeinde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="weekeinde" word="weekeinde"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="9" end="10" id="17" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="11" cat="cp" end="21" id="18" rel="su">
+        <node begin="11" conjtype="onder" end="12" id="19" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="12" cat="ssub" end="21" id="20" rel="body">
+          <node begin="12" cat="np" end="14" id="21" index="1" rel="su">
+            <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="runner-up" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="runner-up" word="runner-up"/>
+            <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="23" lemma="Feijenoord" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Feijenoord" word="Feijenoord"/>
+          </node>
+          <node begin="16" end="17" id="24" lemma="weten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="weet" word="wist" wvorm="pv"/>
+          <node begin="12" cat="ti" end="21" id="25" rel="vc">
+            <node begin="17" end="18" id="26" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="12" cat="inf" end="21" id="27" rel="body">
+              <node begin="12" end="14" id="28" index="1" rel="su"/>
+              <node begin="14" end="15" getal="getal" id="29" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="zich" status="red" vwtype="refl" word="zich"/>
+              <node begin="15" buiging="zonder" end="16" graad="basis" id="30" lemma="voortreffelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="voortreffelijk" word="voortreffelijk"/>
+              <node begin="18" buiging="zonder" end="19" id="31" lemma="handhaven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="handhaaf" word="handhaven" wvorm="inf"/>
+              <node begin="19" cat="pp" end="21" id="32" rel="mod">
+                <node begin="19" end="20" id="33" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
+                <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="34" lemma="HCAW" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="HCAW" word="HCAW"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een van de weinige verrassingen van het afgelopen weekeinde was , dat runner-up Feijenoord zich voortreffelijk wist te handhaven tegen HCAW .</sentence>
+</alpino_ds>

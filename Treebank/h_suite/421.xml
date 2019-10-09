@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="np" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+      <node begin="1" cat="conj" end="6" id="3" rel="mod">
+        <node begin="1" cat="ppart" end="4" id="4" rel="cnj">
+          <node begin="1" cat="pp" end="3" id="5" index="1" rel="mod">
+            <node begin="1" end="2" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="7" lemma="Amsterdam" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Amsterdam" word="Amsterdam"/>
+          </node>
+          <node begin="3" end="4" id="8" lemma="in-" pos="prefix" postag="SPEC(afgebr)" pt="spec" rel="hd" root="in" spectype="afgebr" word="in-"/>
+        </node>
+        <node begin="4" conjtype="neven" end="5" id="9" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="1" cat="ppart" end="6" id="10" rel="cnj">
+          <node begin="1" end="3" id="11" index="1" rel="mod"/>
+          <node begin="5" buiging="met-e" end="6" id="12" lemma="uitvoeren" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="uitgevoerd" word="uitgevoerde" wvorm="vd"/>
+        </node>
+      </node>
+      <node begin="6" end="7" getal="mv" graad="basis" id="13" lemma="drug" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="drug" word="drugs"/>
+    </node>
+  </node>
+  <sentence>De in Amsterdam in- en uitgevoerde drugs</sentence>
+</alpino_ds>

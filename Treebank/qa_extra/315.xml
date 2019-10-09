@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="wanneer" pos="adv" postag="BW()" pt="bw" rel="whd" root="wanneer" word="Wanneer"/>
+      <node begin="0" cat="sv1" end="6" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        <node begin="2" cat="np" end="5" id="5" index="2" rel="su">
+          <node begin="2" end="3" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" cat="mwu" end="5" id="7" rel="hd">
+            <node begin="3" end="4" id="8" lemma="Koude" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Koude" spectype="deeleigen" word="Koude"/>
+            <node begin="4" end="5" id="9" lemma="Oorlog" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Oorlog" spectype="deeleigen" word="Oorlog"/>
+          </node>
+        </node>
+        <node begin="0" cat="ppart" end="6" id="10" rel="vc">
+          <node begin="0" end="1" id="11" index="1" rel="mod"/>
+          <node begin="2" end="5" id="12" index="2" rel="su"/>
+          <node begin="5" buiging="zonder" end="6" id="13" lemma="beginnen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="begin" word="begonnen" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="14" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wanneer was de Koude Oorlog begonnen ?</sentence>
+</alpino_ds>

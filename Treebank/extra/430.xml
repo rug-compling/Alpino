@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="20" id="2" rel="--">
+      <node begin="0" cat="pp" end="3" id="3" rel="mod">
+        <node begin="0" end="1" id="4" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="Tot"/>
+        <node begin="1" end="2" id="5" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="obj1" root="nu" word="nu"/>
+        <node begin="2" end="3" id="6" lemma="toe" pos="part" postag="VZ(fin)" pt="vz" rel="hdf" root="toe" vztype="fin" word="toe"/>
+      </node>
+      <node begin="3" end="4" id="7" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="4" end="5" getal="getal" id="8" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+      <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="sprake" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="sprake" word="sprake"/>
+      <node begin="6" cat="pp" end="20" id="10" rel="pc">
+        <node begin="6" end="7" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="7" cat="np" end="20" id="12" rel="obj1">
+          <node begin="7" end="8" id="13" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="14" lemma="intentie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="intentie" word="intentie"/>
+          <node begin="9" cat="pp" end="20" id="15" rel="mod">
+            <node begin="9" end="10" id="16" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+            <node begin="10" cat="np" end="20" id="17" rel="obj1">
+              <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="18" lemma="reorganisatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="reorganisatie" word="reorganisatie"/>
+              <node begin="12" cat="rel" end="20" id="19" rel="mod">
+                <node begin="12" end="13" id="20" index="1" lemma="waarvoor" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarvoor" word="waarvoor"/>
+                <node begin="12" cat="ssub" end="20" id="21" rel="body">
+                  <node begin="16" cat="np" end="18" id="22" index="2" rel="su">
+                    <node begin="16" end="17" id="23" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                    <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="24" lemma="overlegfase" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="overleg_fase" word="overlegfase"/>
+                  </node>
+                  <node begin="18" end="19" id="25" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+                  <node begin="12" cat="ppart" end="20" id="26" rel="vc">
+                    <node begin="12" end="13" id="27" index="1" rel="mod"/>
+                    <node begin="13" cat="pp" end="16" id="28" rel="mod">
+                      <node begin="13" end="14" id="29" lemma="conform" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="conform" vztype="init" word="conform"/>
+                      <node begin="14" cat="np" end="16" id="30" rel="obj1">
+                        <node begin="14" end="15" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                        <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="32" lemma="wet-renault" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wet-Renault" word="wet-Renault"/>
+                      </node>
+                    </node>
+                    <node begin="16" end="18" id="33" index="2" rel="su"/>
+                    <node begin="19" buiging="zonder" end="20" id="34" lemma="beginnen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="begin" word="begonnen" wvorm="vd"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Tot nu toe was er sprake van een intentie tot reorganisatie , waarvoor conform de wet-Renault een overlegfase was begonnen .</sentence>
+</alpino_ds>

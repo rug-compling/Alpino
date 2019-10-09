@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="10" end="11" frame="punct(haak_open)" id="1" lcat="punct" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" sense="(" special="haak_open" word="("/>
+    <node begin="0" cat="smain" end="12" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" rel="su">
+        <node begin="0" buiging="zonder" end="1" frame="determiner(het,nwh,nmod,pro,nparg)" id="4" infl="het" lcat="detp" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" sense="dit" vwtype="aanw" wh="nwh" word="Dit"/>
+        <node begin="1" end="2" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="5" lcat="np" lemma="document" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="document" sense="document" word="document"/>
+      </node>
+      <node begin="2" end="3" frame="verb(unacc,sg_heeft,copula)" id="6" infl="sg_heeft" lcat="smain" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="is" wvorm="pv"/>
+      <node begin="3" cat="np" end="12" id="7" rel="predc">
+        <node begin="3" end="4" frame="determiner(een)" id="8" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+        <node begin="4" end="5" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lcat="np" lemma="samenvatting" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="samenvatting" sense="samenvatting" word="samenvatting"/>
+        <node begin="5" cat="pp" end="12" id="10" rel="mod">
+          <node begin="5" end="6" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="11" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+          <node begin="6" cat="np" end="12" id="12" rel="obj1">
+            <node begin="6" end="7" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="13" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+            <node aform="base" begin="7" buiging="zonder" end="8" frame="adjective(no_e(adv))" graad="basis" id="14" infl="no_e" lcat="ap" lemma="europees" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="Europees" sense="Europees" vform="adj" word="Europees"/>
+            <node aform="base" begin="8" buiging="zonder" end="9" frame="adjective(no_e(adv))" graad="basis" id="15" infl="no_e" lcat="ap" lemma="openbaar" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="openbaar" sense="openbaar" vform="adj" word="openbaar"/>
+            <node begin="9" end="10" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="16" lcat="np" lemma="beoordelingsrapport" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="beoordeling_rapport" sense="beoordeling_rapport" word="beoordelingsrapport"/>
+            <node begin="11" end="12" frame="noun(both,both,both)" gen="both" id="17" lcat="np" lemma="EPAR" num="both" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mod" root="epar" sense="epar" spectype="deeleigen" word="EPAR"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" frame="punct(haak_sluit)" id="18" lcat="punct" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+    <node begin="13" end="14" frame="punct(punt)" id="19" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Dit document is een samenvatting van het Europees openbaar beoordelingsrapport ( EPAR ) .</sentence>
+  <comments>
+    <comment>Q#humandocs_PDFs_EPAR_Zyprexav_316299nl1-s6.1|Dit document is een samenvatting van het Europees openbaar beoordelingsrapport ( EPAR ) .|1|1|-0.04136513342347917</comment>
+  </comments>
+</alpino_ds>

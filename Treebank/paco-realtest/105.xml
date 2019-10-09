@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="42" id="0" rel="top">
+    <node begin="17" end="18" id="1" pos="punct" rel="--" root="," special="komma" word=","/>
+    <node begin="24" end="25" id="2" pos="punct" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="41" id="3" rel="--">
+      <node begin="0" cat="conj" end="8" id="4" rel="su">
+        <node begin="0" cat="np" end="2" id="5" rel="cnj">
+          <node begin="0" end="1" id="6" infl="de" pos="det" rel="det" root="de" word="De"/>
+          <node begin="1" end="2" gen="de" id="7" num="sg" pos="noun" rel="hd" root="genocide" word="genocide"/>
+        </node>
+        <node begin="2" end="3" id="8" pos="vg" rel="crd" root="en" word="en"/>
+        <node begin="3" cat="np" end="8" id="9" rel="cnj">
+          <node begin="3" end="4" gen="de" id="10" num="pl" pos="noun" rel="hd" root="vernieling" word="vernielingen"/>
+          <node begin="4" cat="pp" end="8" id="11" rel="mod">
+            <node begin="4" end="5" id="12" pos="prep" rel="hd" root="in" word="in"/>
+            <node begin="5" cat="np" end="8" id="13" rel="obj1">
+              <node begin="5" end="6" id="14" neclass="LOC" num="both" pos="name" rel="hd" root="Rwanda" word="Rwanda"/>
+              <node begin="6" cat="pp" end="8" id="15" rel="mod">
+                <node begin="6" end="7" id="16" pos="prep" rel="hd" root="in" word="in"/>
+                <node begin="7" end="8" id="17" neclass="year" pos="noun" rel="obj1" root="1994" word="1994"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="8" end="9" id="18" infl="pl" pos="verb" rel="hd" root="ben" sc="copula" tense="past" word="waren"/>
+      <node begin="9" cat="np" end="11" id="19" rel="predc">
+        <node begin="9" end="10" id="20" infl="de" pos="det" rel="det" root="de" word="de"/>
+        <node begin="10" end="11" gen="de" id="21" num="sg" pos="noun" rel="hd" root="uitbarsting" word="uitbarsting"/>
+      </node>
+      <node begin="11" cat="pp" end="41" id="22" rel="mod">
+        <node begin="11" end="12" id="23" pos="prep" rel="hd" root="van" word="van"/>
+        <node begin="12" cat="np" end="41" id="24" rel="obj1">
+          <node begin="12" end="13" id="25" infl="pl_num" pos="num" rel="det" root="vier" special="hoofd" word="vier"/>
+          <node begin="13" end="14" gen="het" id="26" num="pl" pos="noun" rel="hd" root="jaar" special="tmp" word="jaren"/>
+          <node begin="14" cat="pp" end="41" id="27" rel="mod">
+            <node begin="14" end="15" id="28" pos="prep" rel="hd" root="van" word="van"/>
+            <node begin="15" cat="np" end="41" id="29" rel="obj1">
+              <node aform="base" begin="15" end="16" id="30" infl="e" pos="adj" rel="mod" root="intern" vform="adj" word="interne"/>
+              <node begin="16" end="17" gen="de" id="31" num="sg" pos="noun" rel="hd" root="burger_oorlog" word="burgeroorlog"/>
+              <node begin="18" cat="rel" end="41" id="32" rel="mod">
+                <node begin="18" cat="pp" end="20" id="33" index="1" rel="rhd">
+                  <node begin="18" end="19" id="34" pos="prep" rel="hd" root="tijdens" word="tijdens"/>
+                  <node begin="19" case="obl" end="20" gen="both" id="35" pos="pron" rel="obj1" root="welk" wh="rel" word="dewelke"/>
+                </node>
+                <node begin="18" cat="ssub" end="41" id="36" rel="body">
+                  <node begin="23" end="24" id="37" infl="sg" pos="verb" rel="hd" root="ben" sc="passive" tense="past" word="was"/>
+                  <node begin="18" cat="ppart" end="41" id="38" rel="vc">
+                    <node begin="18" end="20" id="39" index="1" rel="mod"/>
+                    <node begin="22" end="23" id="40" infl="psp" pos="verb" rel="hd" root="verdeel" sc="transitive" word="verdeeld"/>
+                    <node begin="25" cat="pp" end="31" id="41" rel="mod">
+                      <node begin="25" end="26" id="42" pos="prep" rel="hd" root="met" word="met"/>
+                      <node begin="26" cat="np" end="31" id="43" rel="obj1">
+                        <node begin="26" end="27" id="44" infl="een" pos="det" rel="det" root="een" word="een"/>
+                        <node begin="27" end="28" gen="het" id="45" num="sg" pos="noun" rel="hd" root="stuk" special="meas_mod" word="stuk"/>
+                        <node begin="28" cat="pp" end="31" id="46" rel="mod">
+                          <node begin="28" end="29" id="47" pos="prep" rel="hd" root="in" word="in"/>
+                          <node begin="29" cat="np" end="31" id="48" rel="obj1">
+                            <node begin="29" end="30" id="49" infl="het" pos="det" rel="det" root="het" wh="nwh" word="het"/>
+                            <node begin="30" end="31" gen="het" id="50" num="sg" pos="noun" rel="hd" root="noorden" word="noorden"/>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node begin="20" cat="np" end="41" id="51" index="2" rel="obj1">
+                      <node begin="20" end="21" id="52" infl="het" pos="det" rel="det" root="het" wh="nwh" word="het"/>
+                      <node begin="21" end="22" gen="het" id="53" num="sg" pos="noun" rel="hd" root="land" word="land"/>
+                      <node begin="31" cat="rel" end="41" id="54" rel="mod">
+                        <node begin="31" case="no_obl" end="32" gen="het" id="55" index="3" pos="pron" rel="rhd" root="dat" wh="rel" word="dat"/>
+                        <node begin="31" cat="ssub" end="41" id="56" rel="body">
+                          <node begin="31" end="32" id="57" index="3" rel="su"/>
+                          <node begin="32" end="33" id="58" infl="sg" pos="verb" rel="hd" root="word" sc="passive" tense="past" word="werd"/>
+                          <node begin="31" cat="conj" end="41" id="59" rel="vc">
+                            <node begin="34" end="35" id="60" pos="vg" rel="crd" root="en" word="en"/>
+                            <node begin="31" cat="ppart" end="41" id="61" rel="cnj">
+                              <node begin="31" end="32" id="62" index="3" rel="obj1"/>
+                              <node begin="33" end="34" id="63" infl="psp" pos="verb" rel="hd" root="bezet" sc="transitive" word="bezet"/>
+                              <node begin="36" cat="pp" end="41" id="64" index="4" rel="mod">
+                                <node begin="36" end="37" id="65" pos="prep" rel="hd" root="door" word="door"/>
+                                <node begin="37" cat="np" end="41" id="66" rel="obj1">
+                                  <node begin="37" end="38" id="67" infl="het" pos="det" rel="det" root="het" wh="nwh" word="het"/>
+                                  <node begin="38" cat="mwu" end="41" id="68" mwu_root="Rwandees_Patriottisch_Front" mwu_sense="Rwandees_Patriottisch_Front" rel="hd">
+                                    <node begin="38" end="39" id="69" neclass="ORG" num="both" pos="name" rel="mwp" root="Rwandees" word="Rwandees"/>
+                                    <node begin="39" end="40" id="70" neclass="ORG" num="both" pos="name" rel="mwp" root="Patriottisch" word="Patriottisch"/>
+                                    <node begin="40" end="41" id="71" neclass="ORG" num="both" pos="name" rel="mwp" root="Front" word="Front"/>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                            <node begin="31" cat="ppart" end="41" id="72" rel="cnj">
+                              <node begin="31" end="32" id="73" index="3" rel="obj1"/>
+                              <node begin="35" end="36" id="74" infl="psp" pos="verb" rel="hd" root="bestuur" sc="transitive" word="bestuurd"/>
+                              <node begin="36" end="41" id="75" index="4" rel="mod"/>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node begin="20" end="41" id="76" index="2" rel="su"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="41" end="42" id="77" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>De genocide en vernielingen in Rwanda in 1994 waren de uitbarsting van vier jaren van interne burgeroorlog , tijdens dewelke het land verdeeld was , met een stuk in het noorden dat werd bezet en bestuurd door het Rwandees Patriottisch Front .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

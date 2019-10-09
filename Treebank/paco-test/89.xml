@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="31" id="0" rel="top">
+    <node begin="7" end="8" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="19" end="20" frame="punct(komma)" id="2" lcat="--" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="du" end="30" id="3" rel="--">
+      <node begin="0" cat="du" end="19" id="4" rel="dp">
+        <node begin="0" cat="du" end="7" id="5" rel="dp">
+          <node begin="0" end="1" frame="complementizer(root)" id="6" lcat="du" pos="comp" rel="dlink" root="dus" sc="root" sense="dus" word="Dus"/>
+          <node begin="1" cat="smain" end="7" id="7" rel="nucl">
+            <node begin="1" cat="np" end="4" id="8" index="1" rel="su">
+              <node begin="1" end="2" frame="determiner(de,nwh,nmod,pro,nparg)" id="9" infl="de" lcat="detp" pos="det" rel="det" root="die" sense="die" wh="nwh" word="die"/>
+              <node aform="base" begin="2" end="3" frame="adjective(stof)" id="10" infl="stof" lcat="ap" pos="adj" rel="mod" root="betonnen" sense="betonnen" vform="adj" word="betonnen"/>
+              <node begin="3" end="4" frame="noun(both,both,both)" gen="both" id="11" lcat="np" num="both" pos="noun" rel="hd" root="inkuiping" sense="inkuiping" word="inkuiping"/>
+            </node>
+            <node begin="4" end="5" frame="verb(unacc,sg_heeft,passive)" id="12" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="ben" sc="passive" sense="ben" tense="present" word="is"/>
+            <node begin="1" cat="ppart" end="7" id="13" rel="vc">
+              <node begin="1" end="4" id="14" index="1" rel="obj1"/>
+              <node aform="base" begin="5" end="6" frame="adjective(no_e(adv))" id="15" infl="no_e" lcat="ap" pos="adj" rel="mod" root="vloeistof_dicht" sense="vloeistof_dicht" vform="adj" word="vloeistofdicht"/>
+              <node begin="6" end="7" frame="verb(hebben,psp,ninv(transitive,part_transitive(uit)))" id="16" infl="psp" lcat="ppart" pos="verb" rel="hd" root="voer_uit" sc="part_transitive(uit)" sense="voer_uit" word="uitgevoerd"/>
+            </node>
+          </node>
+        </node>
+        <node begin="8" cat="smain" end="19" id="17" rel="dp">
+          <node begin="8" end="9" frame="determiner(de,nwh,nmod,pro,nparg)" id="18" infl="de" lcat="np" pos="det" rel="su" root="die" sense="die" wh="nwh" word="die"/>
+          <node begin="9" end="10" frame="verb(hebben,sg3,refl_ld_pp)" id="19" infl="sg3" lcat="smain" pos="verb" rel="hd" root="bevind" sc="refl_ld_pp" sense="zich-bevind" tense="present" word="bevindt"/>
+          <node begin="10" end="11" frame="reflexive(u_thi,both)" id="20" lcat="np" num="both" per="u_thi" pos="pron" refl="refl" rel="se" root="zich" sense="zich" word="zich"/>
+          <node begin="11" cat="pp" end="19" id="21" rel="ld">
+            <node begin="11" end="12" frame="preposition(tot,[toe,[aan,toe]],pp)" id="22" lcat="pp" pos="prep" rel="hd" root="tot" sc="pp" sense="tot" word="tot"/>
+            <node begin="12" cat="pp" end="19" id="23" rel="obj1">
+              <node begin="12" end="13" frame="modal_adverb(adv_noun_prep)" id="24" lcat="advp" pos="adv" rel="mod" root="bijna" sc="adv_noun_prep" sense="bijna" word="bijna"/>
+              <node begin="13" end="14" frame="preposition(aan,[vooraf])" id="25" lcat="pp" pos="prep" rel="hd" root="aan" sense="aan" word="aan"/>
+              <node begin="14" cat="np" end="19" id="26" rel="obj1">
+                <node begin="14" end="15" frame="determiner(de)" id="27" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                <node begin="15" end="16" frame="noun(de,count,sg)" gen="de" id="28" lcat="np" num="sg" pos="noun" rel="hd" root="nok" sense="nok" word="nok"/>
+                <node begin="16" cat="pp" end="19" id="29" rel="mod">
+                  <node begin="16" end="17" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="30" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                  <node begin="17" cat="np" end="19" id="31" rel="obj1">
+                    <node begin="17" end="18" frame="determiner(de)" id="32" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                    <node begin="18" end="19" frame="noun(de,count,sg)" gen="de" id="33" lcat="np" num="sg" pos="noun" rel="hd" root="tank" sense="tank" word="tank"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="20" cat="sv1" end="30" id="34" rel="dp">
+        <node begin="20" end="21" frame="verb(hebben,sg3,refl_ld_pp)" id="35" infl="sg3" lcat="sv1" pos="verb" rel="hd" root="bevind" sc="refl_ld_pp" sense="zich-bevind" tense="present" word="bevindt"/>
+        <node begin="21" end="22" frame="reflexive(u_thi,both)" id="36" lcat="np" num="both" per="u_thi" pos="pron" refl="refl" rel="se" root="zich" sense="zich" word="zich"/>
+        <node begin="22" cat="pp" end="30" id="37" rel="ld">
+          <node begin="22" end="23" frame="preposition(op,[af,na])" id="38" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+          <node begin="23" cat="np" end="30" id="39" rel="obj1">
+            <node begin="23" end="24" frame="modal_adverb(noun_prep)" id="40" lcat="advp" pos="adv" rel="mod" root="ongeveer" sc="noun_prep" sense="ongeveer" word="ongeveer"/>
+            <node begin="24" end="25" frame="number(hoofd(sg_num))" id="41" infl="sg_num" lcat="detp" pos="num" rel="det" root="1" sense="1" special="hoofd" word="1"/>
+            <node begin="25" end="26" frame="meas_mod_noun(de,count,meas,measure)" gen="de" id="42" lcat="np" num="meas" pos="noun" rel="hd" root="meter" sc="measure" sense="meter-MEAS" special="meas_mod" word="meter"/>
+            <node begin="26" end="27" frame="meas_mod_noun(de,count,sg)" gen="de" id="43" lcat="np" num="sg" pos="noun" rel="mod" root="afstand" sense="afstand" special="meas_mod" word="afstand"/>
+            <node begin="27" cat="pp" end="30" id="44" rel="mod">
+              <node begin="27" end="28" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="45" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+              <node begin="28" cat="np" end="30" id="46" rel="obj1">
+                <node begin="28" end="29" frame="determiner(de)" id="47" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                <node begin="29" end="30" frame="noun(de,count,sg)" gen="de" id="48" lcat="np" num="sg" pos="noun" rel="hd" root="tank" sense="tank" word="tank"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="30" end="31" frame="punct(punt)" id="49" lcat="--" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Dus die betonnen inkuiping is vloeistofdicht uitgevoerd , die bevindt zich tot bijna aan de nok van de tank , bevindt zich op ongeveer 1 meter afstand van de tank .</sentence>
+  <comments>
+    <comment>Q#89|Dus die betonnen inkuiping is vloeistofdicht uitgevoerd , die bevindt zich tot bijna aan de nok van de tank , bevindt zich op ongeveer 1 meter afstand van de tank .|1|2|2.145275751143271</comment>
+  </comments>
+</alpino_ds>

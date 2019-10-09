@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" pos="det" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" id="4" lemma="overdracht" pos="noun" rel="hd" root="overdracht" word="overdracht"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="heb" pos="verb" rel="hd" root="heb" word="heeft"/>
+      <node begin="3" cat="np" end="8" id="6" rel="obj1">
+        <node begin="3" end="4" id="7" lemma="geen" pos="det" rel="det" root="geen" word="geen"/>
+        <node begin="4" end="5" id="8" lemma="gevolg" pos="noun" rel="hd" root="gevolg" word="gevolgen"/>
+        <node begin="5" cat="pp" end="8" id="9" rel="mod">
+          <node begin="5" end="6" id="10" lemma="voor" pos="prep" rel="hd" root="voor" word="voor"/>
+          <node begin="6" cat="np" end="8" id="11" rel="obj1">
+            <node begin="6" end="7" id="12" lemma="de" pos="det" rel="det" root="de" word="de"/>
+            <node begin="7" end="8" id="13" lemma="werkgelegenheid" pos="noun" rel="hd" root="werkgelegenheid" word="werkgelegenheid"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="14" lemma="." pos="punct" rel="--" root="." word="."/>
+  </node>
+  <sentence>De overdracht heeft geen gevolgen voor de werkgelegenheid .</sentence>
+</alpino_ds>

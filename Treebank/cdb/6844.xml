@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="daarbij" pos="pp" postag="BW()" pt="bw" rel="ld" root="daarbij" word="Daarbij"/>
+      <node begin="1" end="2" id="3" lemma="zitten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zit" word="zit" wvorm="pv"/>
+      <node begin="2" cat="np" end="7" id="4" rel="su">
+        <node begin="2" end="3" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="3" end="4" genus="onz" getal="ev" graad="dim" id="6" lemma="lijst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="lijstje" word="lijstje"/>
+        <node begin="4" cat="pp" end="7" id="7" rel="mod">
+          <node begin="4" end="5" id="8" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="5" cat="np" end="7" id="9" rel="obj1">
+            <node begin="5" end="6" id="10" lemma="zes" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="zes" word="zes"/>
+            <node begin="6" end="7" getal="mv" graad="basis" id="11" lemma="naam" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="naam" word="namen"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Daarbij zit een lijstje met zes namen .</sentence>
+</alpino_ds>

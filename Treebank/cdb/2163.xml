@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+      <node begin="2" cat="np" end="5" id="4" rel="su">
+        <node begin="2" end="3" id="5" lemma="slechts" pos="adv" postag="BW()" pt="bw" rel="mod" root="slechts" word="slechts"/>
+        <node begin="3" end="4" id="6" lemma="duizend" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="duizend" word="duizend"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="7" lemma="toeschouwer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="toeschouwer" word="toeschouwers"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Er waren slechts duizend toeschouwers .</sentence>
+</alpino_ds>

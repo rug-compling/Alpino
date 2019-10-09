@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="14" end="15" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="19" id="3" rel="--">
+      <node begin="0" cat="np" end="14" id="4" index="1" rel="su">
+        <node begin="0" cat="mwu" end="5" id="5" rel="hd">
+          <node begin="0" end="1" id="6" lemma="Mr." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Mr." spectype="deeleigen" word="Mr."/>
+          <node begin="1" end="2" id="7" lemma="M." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="M." spectype="deeleigen" word="M."/>
+          <node begin="2" end="3" id="8" lemma="D." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="D." spectype="deeleigen" word="D."/>
+          <node begin="3" end="4" id="9" lemma="van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+          <node begin="4" end="5" id="10" lemma="Wolferen" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wolferen" spectype="deeleigen" word="Wolferen"/>
+        </node>
+        <node begin="6" cat="np" end="14" id="11" rel="app">
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="secretaris-generaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="secretaris-generaal" word="secretaris-generaal"/>
+          <node begin="7" cat="pp" end="14" id="13" rel="mod">
+            <node begin="7" end="8" id="14" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="8" cat="np" end="14" id="15" rel="obj1">
+              <node begin="8" end="9" id="16" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="17" lemma="ministerie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="ministerie" word="ministerie"/>
+              <node begin="10" cat="pp" end="14" id="18" rel="mod">
+                <node begin="10" end="11" id="19" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="11" cat="mwu" end="14" id="20" rel="obj1">
+                  <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="21" lemma="onderwijs" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Onderwijs" word="Onderwijs"/>
+                  <node begin="12" conjtype="neven" end="13" id="22" lemma="en" pos="noun" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
+                  <node begin="13" end="14" getal="mv" graad="basis" id="23" lemma="wetenschap" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Wetenschappen" word="Wetenschappen"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="15" end="16" id="24" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+      <node begin="0" cat="inf" end="19" id="25" rel="vc">
+        <node begin="0" end="14" id="26" index="1" rel="su"/>
+        <node begin="16" cat="np" end="18" id="27" rel="obj1">
+          <node begin="16" end="17" id="28" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="29" lemma="openingsplechtigheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="plechtigheid" word="openingsplechtigheid"/>
+        </node>
+        <node begin="18" buiging="zonder" end="19" id="30" lemma="verrichten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verricht" word="verrichten" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="19" end="20" id="31" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Mr. M. D. van Wolferen , secretaris-generaal van het ministerie van Onderwijs en Wetenschappen , zal de openingsplechtigheid verrichten .</sentence>
+</alpino_ds>

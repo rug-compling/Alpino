@@ -1,0 +1,6 @@
+ovis/./211.xml	//node[(@cat="np" or @cat="smain" or @cat="ppart" or @cat="advp" or @cat="ap" or @cat="ppart" or @cat="ppres" or @cat="pp" or @cat="inf" or @cat="ssub" or @cat="sv1" or @cat="detp") and ./node and not(./node[@rel="hd"])]	No head
+ovis/./226.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+ovis/./345.xml	//node[count(node[@rel="tag"]) > 1]/node[@rel="tag"]	rel "tag" occurs more than once
+ovis/./406.xml	//node[count(node[@rel="tag"]) > 1]/node[@rel="tag"]	rel "tag" occurs more than once
+ovis/./990.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+ovis/./994.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?

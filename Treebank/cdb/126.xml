@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="16" end="17" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="22" id="3" rel="--">
+      <node begin="0" cat="np" end="16" id="4" rel="su">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="5" lemma="regisseur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="regisseur" word="Regisseur"/>
+        <node begin="1" cat="mwu" end="3" id="6" rel="app">
+          <node begin="1" end="2" id="7" lemma="Gunther" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Gunther" spectype="deeleigen" word="Gunther"/>
+          <node begin="2" end="3" id="8" lemma="Hassert" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hassert" spectype="deeleigen" word="Hassert"/>
+        </node>
+        <node begin="4" cat="rel" end="16" id="9" rel="mod">
+          <node begin="4" end="5" getal="getal" id="10" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+          <node begin="4" cat="ssub" end="16" id="11" rel="body">
+            <node begin="4" end="5" id="12" index="1" rel="su"/>
+            <node begin="14" end="15" id="13" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
+            <node begin="4" cat="ppart" end="16" id="14" rel="vc">
+              <node begin="4" end="5" id="15" index="1" rel="su"/>
+              <node begin="5" end="6" getal="getal" id="16" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+              <node begin="6" cat="pp" end="10" id="17" rel="mod">
+                <node begin="6" end="7" id="18" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="volgens"/>
+                <node begin="7" cat="mwu" end="10" id="19" rel="obj1">
+                  <node begin="7" end="8" id="20" lemma="Bild" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bild" spectype="deeleigen" word="Bild"/>
+                  <node begin="8" end="9" id="21" lemma="am" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="am" spectype="vreemd" word="am"/>
+                  <node begin="9" end="10" id="22" lemma="Sonntag" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Sonntag" spectype="vreemd" word="Sonntag"/>
+                </node>
+              </node>
+              <node begin="10" cat="ap" end="12" id="23" rel="mod">
+                <node begin="10" end="11" id="24" lemma="nogal" pos="adv" postag="BW()" pt="bw" rel="mod" root="nogal" word="nogal"/>
+                <node begin="11" buiging="zonder" end="12" graad="basis" id="25" lemma="onaardig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="onaardig" word="onaardig"/>
+              </node>
+              <node begin="12" cat="pp" end="14" id="26" rel="pc">
+                <node begin="12" end="13" id="27" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+                <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="28" lemma="Corry" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Corry" word="Corry"/>
+              </node>
+              <node begin="15" buiging="zonder" end="16" id="29" lemma="uitlaten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="laat" word="uitgelaten" wvorm="vd"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="17" end="18" id="30" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
+      <node begin="18" end="19" id="31" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+      <node begin="19" cat="pp" end="22" id="32" rel="ld">
+        <node begin="19" end="20" id="33" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+        <node begin="20" cat="np" end="22" id="34" rel="obj1">
+          <node begin="20" end="21" id="35" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="36" lemma="telefoon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="telefoon" word="telefoon"/>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="37" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>Regisseur Gunther Hassert , die zich volgens Bild am Sonntag nogal onaardig over Corry had uitgelaten , kwam ook aan de telefoon :</sentence>
+</alpino_ds>

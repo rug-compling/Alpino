@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" index="1" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="Men"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="7" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="3" cat="ap" end="5" id="6" rel="mod">
+          <node begin="3" end="4" id="7" lemma="vrijwel" pos="adv" postag="BW()" pt="bw" rel="mod" root="vrijwel" word="vrijwel"/>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="geheel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="geheel" word="geheel"/>
+        </node>
+        <node begin="2" cat="pp" end="6" id="9" rel="pc">
+          <node begin="2" end="3" getal="getal" id="10" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="5" end="6" id="11" lemma="van" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="van" vztype="fin" word="van"/>
+        </node>
+        <node begin="6" buiging="zonder" end="7" id="12" lemma="terugkomen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kom" word="teruggekomen" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Men is er vrijwel geheel van teruggekomen .</sentence>
+</alpino_ds>

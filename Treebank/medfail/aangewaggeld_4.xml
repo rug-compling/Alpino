@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="9" end="10" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="13" end="14" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="16" end="17" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="20" id="5" rel="--">
+      <node begin="4" end="5" id="6" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+      <node begin="6" cat="ppres" end="9" id="7" rel="predm">
+        <node begin="6" buiging="zonder" end="7" id="8" lemma="schuddebollen" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="hd" root="schuddebollend" word="schuddebollend" wvorm="od"/>
+        <node begin="7" cat="pp" end="9" id="9" rel="mod">
+          <node begin="7" end="8" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="11" lemma="zelfverzekerdheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="zelfverzekerdheid" word="zelfverzekerdheid"/>
+        </node>
+      </node>
+      <node begin="10" cat="np" end="19" id="12" index="1" rel="su">
+        <node begin="10" end="11" id="13" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="11" cat="ap" end="13" id="14" rel="mod">
+          <node begin="11" buiging="zonder" end="12" graad="basis" id="15" lemma="ontzettend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ontzettend" word="ontzettend"/>
+          <node begin="12" buiging="met-e" end="13" graad="basis" id="16" lemma="dik" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="dik" word="dikke"/>
+        </node>
+        <node begin="14" cat="ppart" end="16" id="17" rel="mod">
+          <node begin="14" buiging="zonder" end="15" graad="basis" id="18" lemma="bont" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="bont" word="bont"/>
+          <node begin="15" buiging="met-e" end="16" id="19" lemma="kleden" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="gekleed" word="geklede" wvorm="vd"/>
+        </node>
+        <node begin="17" buiging="met-e" end="18" graad="basis" id="20" lemma="roetzwart" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="roet_zwart" word="roetzwarte"/>
+        <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="21" lemma="mama" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="mama" word="mama"/>
+      </node>
+      <node begin="0" cat="ppart" end="20" id="22" rel="vc">
+        <node begin="0" cat="du" end="4" id="23" rel="mod">
+          <node begin="0" conjtype="neven" end="1" id="24" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" word="En"/>
+          <node begin="1" cat="pp" end="4" id="25" rel="nucl">
+            <node begin="1" end="2" id="26" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="2" cat="advp" end="4" id="27" rel="obj1">
+              <node begin="2" end="3" id="28" lemma="helemaal" pos="adv" postag="BW()" pt="bw" rel="mod" root="helemaal" word="helemaal"/>
+              <node begin="3" end="4" id="29" lemma="achteraan" pos="adv" postag="BW()" pt="bw" rel="hd" root="achteraan" word="achteraan"/>
+            </node>
+          </node>
+        </node>
+        <node begin="10" end="19" id="30" index="1" rel="su"/>
+        <node begin="19" buiging="zonder" end="20" id="31" lemma="aanwaggelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="aangewaggeld" word="aangewaggeld" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="20" end="21" id="32" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>En van helemaal achteraan komt , schuddebollend van zelfverzekerdheid , een ontzettend dikke , bont geklede , roetzwarte mama aangewaggeld .</sentence>
+</alpino_ds>

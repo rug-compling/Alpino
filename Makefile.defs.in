@@ -1,0 +1,43 @@
+###           -*-Mode: makefile;-*-
+### directory to install binaries in:
+
+#PREFIX=$(ALPINO_HOME)
+#BINDIR=$(PREFIX)/bin
+
+### directory to install man page in:
+#MANDIR=$(PREFIX)/man
+
+### default suite
+#SUITE=Suites/g_suite
+
+### Daciuk's fsa dictionary construction tools
+#S_FSA_MORPH_SCRIPT=morph_data.pl
+#S_FSA_BUILD=fsa_build
+
+### Path to the Boost library (default: /usr)
+#BOOST_HOME=/net/aps/64
+
+# Uncomment this on Darwin/OS X
+#PLATFORM=darwin
+
+# Uncomment this on Windows
+#PLATFORM=windows
+
+### include your preferences here!
+### those options will appear in the Alpino startup script
+### for a per user default, define the environment variable with
+### the same name
+#DEFAULT_ALPINO_OPTIONS=
+
+### path to TrEd executable (this may be a wrapper script
+### for setting PATH, PERLLIB, LD_LIBRARY_PATH etc. )
+#TRED_EXECUTABLE=echo TrEd not available on this machine --- dttred
+
+#SPLFR=splfr
+#SPLFR=swipl-lfr.pl
+
+#the location of the Alpino saved state
+#you may prefer to put this on a local disk, or even a virtual disk,
+#for fast start-up. Of course, the resulting saved state may no longer
+#be accessible from other machines, or (virtual disk) after reboot.
+#DISK=/dev/shm

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="ontbreken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ontbreek" word="ontbreekt" wvorm="pv"/>
+      <node begin="2" end="3" getal="mv" id="4" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj2" root="ons" status="vol" vwtype="pr" word="ons"/>
+      <node begin="3" cat="pp" end="5" id="5" rel="pc">
+        <node begin="3" end="4" id="6" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="7" lemma="lef" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="lef" word="lef"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Het ontbreekt ons aan lef</sentence>
+</alpino_ds>

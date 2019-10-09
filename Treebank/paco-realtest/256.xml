@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="conj" end="11" id="1" rel="--">
+      <node begin="0" cat="smain" end="6" id="2" rel="cnj">
+        <node begin="1" end="2" id="3" index="1" infl="sg3" pos="verb" rel="hd" root="word" sc="passive" tense="present" word="wordt"/>
+        <node begin="2" cat="np" end="5" id="4" index="2" rel="su">
+          <node begin="2" end="3" id="5" infl="de" pos="det" rel="det" root="de" word="de"/>
+          <node aform="base" begin="3" end="4" id="6" infl="e" pos="adj" rel="mod" root="ingebouwd" vform="psp" word="ingebouwde"/>
+          <node begin="4" end="5" gen="both" id="7" num="both" pos="noun" rel="hd" root="flitser" word="flitser"/>
+        </node>
+        <node begin="0" cat="ppart" end="6" id="8" rel="vc">
+          <node begin="0" end="1" id="9" index="3" pos="adv" rel="mod" root="eerst" word="Eerst"/>
+          <node begin="2" end="5" id="10" index="2" rel="obj1"/>
+          <node begin="5" end="6" id="11" infl="psp" pos="verb" rel="hd" root="klap_uit" sc="part_transitive(uit)" word="uitgeklapt"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="12" pos="vg" rel="crd" root="en" word="en"/>
+      <node begin="0" cat="smain" end="11" id="13" rel="cnj">
+        <node begin="1" end="2" id="14" index="1" rel="hd"/>
+        <node begin="7" cat="np" end="10" id="15" index="4" rel="su">
+          <node begin="7" end="8" id="16" infl="de" pos="det" rel="det" root="de" word="de"/>
+          <node aform="base" begin="8" end="9" id="17" infl="e" pos="adj" rel="mod" root="draadloos" vform="adj" word="draadloze"/>
+          <node begin="9" end="10" gen="de" id="18" num="sg" pos="noun" rel="hd" root="modus" word="modus"/>
+        </node>
+        <node begin="0" cat="ppart" end="11" id="19" rel="vc">
+          <node begin="0" end="1" id="20" index="3" rel="mod"/>
+          <node begin="7" end="10" id="21" index="4" rel="obj1"/>
+          <node begin="10" end="11" id="22" infl="psp" pos="verb" rel="hd" root="activeer" sc="transitive" word="geactiveerd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="23" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Eerst wordt de ingebouwde flitser uitgeklapt en de draadloze modus geactiveerd .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

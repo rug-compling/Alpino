@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="6" end="7" id="2" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="7" end="8" getal="mv" id="3" index="1" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+      <node begin="0" cat="ppart" end="11" id="4" rel="vc">
+        <node begin="0" cat="cp" end="6" id="5" rel="mod">
+          <node begin="0" cat="mwu" end="2" id="6" mwu_root="nadat" mwu_sense="nadat" rel="cmp">
+            <node begin="0" conjtype="onder" end="1" id="7" lemma="Na" pos="comp" postag="VG(onder)" pt="vg" rel="mwp" root="Na" word="Na"/>
+            <node begin="1" conjtype="onder" end="2" id="8" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="mwp" root="dat" word="dat"/>
+          </node>
+          <node begin="2" cat="ssub" end="6" id="9" rel="body">
+            <node begin="2" end="3" getal="mv" id="10" index="2" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+            <node begin="2" cat="ppart" end="5" id="11" rel="vc">
+              <node begin="2" end="3" id="12" index="2" rel="su"/>
+              <node begin="3" buiging="zonder" end="4" graad="basis" id="13" lemma="lekker" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="lekker" word="lekker"/>
+              <node begin="4" buiging="zonder" end="5" id="14" lemma="uit_spelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="speel_uit" word="uitgespeeld" wvorm="vd"/>
+            </node>
+            <node begin="5" end="6" id="15" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+          </node>
+        </node>
+        <node begin="7" end="8" id="16" index="1" rel="su"/>
+        <node begin="8" cat="np" end="10" id="17" rel="obj1">
+          <node begin="8" end="9" id="18" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="19" lemma="etenstentje" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="etenstentje" word="etenstentje"/>
+        </node>
+        <node begin="10" buiging="zonder" end="11" id="20" lemma="op_zoeken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zoek_op" word="opgezocht" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="11" end="12" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Na dat we lekker uitgespeeld waren hebben we een etenstentje opgezocht .</sentence>
+</alpino_ds>

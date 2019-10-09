@@ -1,0 +1,36 @@
+#!/usr/bin/perl -w
+
+use Getopt::Std;
+getopts('s:');
+## -s suite
+
+$opt_s =~ s/_/\\_/g;
+
+print "\\documentclass{article}\\usepackage{a4wide}\n";
+print "\\usepackage[utf8]{inputenc}\\usepackage{graphicx}\n";
+print "\\usepackage[T1]{fontenc}\n";
+print "\\title{$opt_s}\\author{The Alpino Team}\n";
+print "\\begin{document}\\maketitle\n";
+
+while (<>) {
+  chomp;
+  ($file,@words) = split;
+  $sent = join(' ',@words);
+  
+  $width = `awk '/MediaBox/ { if (\$4>400) {print 400} else {print \$4}}' $file.pdf`;
+  chomp($width);
+
+  $sent =~ s/_/\\_/g;
+  $sent =~ s/[&]/\\&/g;
+  $sent =~ s/[#]/\\#/g;
+  $sent =~ s/[<]/\$\\langle\$/g;
+  $sent =~ s/[>]/\$\\rangle\$/g;
+  $sent =~ s/[%]/\\%/g;
+
+  $filestring = $file;
+  $filestring =~ s/_/\\_/g;
+  print "\\includegraphics[width=$width"."pt]{{$file}.pdf}\\centering\n";
+  print "\n\\nopagebreak\n{$filestring. $sent}\n\n\n";
+}
+
+print "\\end{document}\n";

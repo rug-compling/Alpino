@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="6" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" buiging="zonder" end="2" getal-n="zonder-n" id="4" lemma="verkondigen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="verkondig" word="verkondigen" wvorm="inf"/>
+        <node begin="2" cat="cp" end="6" id="5" rel="vc">
+          <node begin="2" conjtype="onder" end="3" id="6" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="3" cat="ssub" end="6" id="7" rel="body">
+            <node begin="3" cat="np" end="5" id="8" rel="su">
+              <node begin="3" end="4" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="wereld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wereld" word="wereld"/>
+            </node>
+            <node begin="5" end="6" id="11" lemma="vergaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="verga" word="vergaat" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+      <node begin="6" end="7" id="12" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="13" lemma="tijdverspilling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="predc" root="verspilling" word="tijdverspilling"/>
+    </node>
+  </node>
+  <sentence>Het verkondigen dat de wereld vergaat is tijdverspilling</sentence>
+</alpino_ds>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="0" cat="du" end="7" id="2" rel="--">
+      <node begin="0" end="1" getal="getal" id="3" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="dp" root="hier" status="vol" vwtype="aanw" word="Hier"/>
+      <node begin="1" cat="np" end="3" id="4" rel="dp">
+        <node begin="1" end="2" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="doos" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="doos" word="doos"/>
+      </node>
+      <node begin="4" cat="whq" end="7" id="7" rel="dp">
+        <node begin="4" end="5" getal="ev" id="8" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" root="wat" status="vol" vwtype="vb" word="Wat"/>
+        <node begin="4" cat="sv1" end="7" id="9" rel="body">
+          <node begin="4" end="5" id="10" index="1" rel="su"/>
+          <node begin="5" end="6" id="11" lemma="zitten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zit" word="zit" wvorm="pv"/>
+          <node begin="6" end="7" id="12" lemma="erin" pos="pp" postag="BW()" pt="bw" rel="ld" root="erin" word="erin"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hier een doos - Wat zit erin ?</sentence>
+</alpino_ds>

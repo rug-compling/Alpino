@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="smain" end="15" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="ben" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="15" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" end="3" id="6" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+        <node begin="3" end="4" id="7" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="mod" root="eens" word="eens"/>
+        <node begin="7" buiging="zonder" end="8" id="8" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" word="geweest" wvorm="vd"/>
+        <node begin="4" cat="pp" end="15" id="9" rel="ld">
+          <node begin="4" end="5" id="10" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="5" cat="np" end="15" id="11" rel="obj1">
+            <node begin="5" end="6" id="12" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="fabriek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="fabriek" word="fabriek"/>
+            <node begin="8" cat="rel" end="15" id="14" rel="mod">
+              <node begin="8" end="9" getal="getal" id="15" index="2" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" status="vol" vwtype="vb" word="waar"/>
+              <node begin="8" cat="ssub" end="15" id="16" rel="body">
+                <node begin="13" end="14" id="17" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+                <node begin="8" cat="ppart" end="15" id="18" rel="vc">
+                  <node begin="8" end="9" id="19" index="2" rel="mod"/>
+                  <node begin="9" buiging="zonder" end="10" graad="basis" id="20" lemma="hard" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="hard" word="hard"/>
+                  <node begin="10" cat="pp" end="13" id="21" rel="mod">
+                    <node begin="10" end="11" id="22" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+                    <node begin="11" cat="np" end="13" id="23" rel="obj1">
+                      <node begin="11" end="12" id="24" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                      <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="25" lemma="machine" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="machine" word="machine"/>
+                    </node>
+                  </node>
+                  <node begin="14" buiging="zonder" end="15" id="26" lemma="werken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="werk" word="gewerkt" wvorm="vd"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ik ben wel eens in een fabriek geweest waar hard aan een machine werd gewerkt .</sentence>
+</alpino_ds>

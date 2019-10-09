@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="3" end="4" id="2" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="4" end="5" genus="masc" getal="ev" id="3" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+      <node begin="0" cat="ppart" end="7" id="4" rel="vc">
+        <node begin="0" cat="cp" end="3" id="5" rel="mod">
+          <node begin="0" conjtype="onder" end="1" id="6" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="Zoals"/>
+          <node begin="1" cat="ti" end="3" id="7" rel="body">
+            <node begin="1" end="2" id="8" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="2" buiging="zonder" end="3" id="9" lemma="zien" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="zie" word="zien" wvorm="inf"/>
+          </node>
+        </node>
+        <node begin="4" end="5" id="10" index="1" rel="su"/>
+        <node begin="5" end="6" id="11" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+        <node begin="6" buiging="zonder" end="7" id="12" lemma="reageren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="reageer" word="gereageerd" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Zoals te zien heeft hij niet gereageerd</sentence>
+</alpino_ds>

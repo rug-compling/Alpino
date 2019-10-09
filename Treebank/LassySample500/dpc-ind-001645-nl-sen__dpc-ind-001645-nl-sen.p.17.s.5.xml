@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="20" end="21" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="21" end="22" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="25" id="4" rel="--">
+      <node begin="0" cat="du" end="20" id="5" rel="nucl">
+        <node begin="0" cat="smain" end="7" id="6" rel="dp">
+          <node begin="0" cat="np" end="2" id="7" index="1" rel="su">
+            <node begin="0" end="1" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+            <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="9" lemma="Westen" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Westen" word="Westen"/>
+          </node>
+          <node begin="2" end="3" id="10" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+          <node begin="0" cat="inf" end="7" id="11" rel="vc">
+            <node begin="0" end="2" id="12" index="1" rel="su"/>
+            <node begin="3" end="4" getal="getal" id="13" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj2" root="zich" status="red" vwtype="refl" word="zich"/>
+            <node begin="4" cat="np" end="6" id="14" rel="obj1">
+              <node begin="4" buiging="zonder" end="5" graad="basis" id="15" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="mod" root="veel" vwtype="onbep" word="veel"/>
+              <node begin="5" buiging="zonder" end="6" graad="comp" id="16" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="hd" root="meer" vwtype="onbep" word="meer"/>
+            </node>
+            <node begin="6" buiging="zonder" end="7" id="17" lemma="veroorloven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="veroorloof" word="veroorloven" wvorm="inf"/>
+          </node>
+        </node>
+        <node begin="8" cat="sv1" end="20" id="18" rel="dp">
+          <node begin="8" end="9" id="19" lemma="kijken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kijk" word="kijk" wvorm="pv"/>
+          <node begin="9" end="10" id="20" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
+          <node begin="10" cat="pp" end="20" id="21" rel="ld">
+            <node begin="10" end="11" id="22" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+            <node begin="11" cat="np" end="20" id="23" rel="obj1">
+              <node begin="11" end="12" id="24" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="25" lemma="verschil" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verschil" word="verschil"/>
+              <node begin="13" cat="pp" end="15" id="26" rel="mod">
+                <node begin="13" end="14" id="27" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="14" end="15" getal="mv" graad="basis" id="28" lemma="defensieuitgave" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="defensie_uitgave" word="defensieuitgaven"/>
+              </node>
+              <node begin="15" cat="pp" end="20" id="29" rel="mod">
+                <node begin="15" end="16" id="30" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>
+                <node begin="16" cat="conj" end="20" id="31" rel="obj1">
+                  <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="32" lemma="China" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="China" word="China"/>
+                  <node begin="17" conjtype="neven" end="18" id="33" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                  <node begin="18" cat="np" end="20" id="34" rel="cnj">
+                    <node begin="18" end="19" id="35" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="19" end="20" getal="mv" graad="basis" id="36" lemma="VS" ntype="eigen" pos="name" postag="N(eigen,mv,basis)" pt="n" rel="hd" root="VS" word="VS"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="22" cat="sv1" end="25" id="37" rel="tag">
+        <node begin="22" end="23" id="38" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
+        <node begin="23" cat="np" end="25" id="39" rel="su">
+          <node begin="23" end="24" id="40" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="41" lemma="analist" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="analist" word="analist"/>
+        </node>
+      </node>
+    </node>
+    <node begin="25" end="26" id="42" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het Westen kan zich veel meer veroorloven - kijk maar naar het verschil in defensieuitgaven tussen China en de VS &quot; , zei de analist .</sentence>
+</alpino_ds>

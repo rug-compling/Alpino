@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="6" end="7" id="2" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="8" end="9" id="3" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="du" end="13" id="4" rel="--">
+      <node begin="0" cat="np" end="3" id="5" rel="dp">
+        <node begin="0" buiging="zonder" end="1" id="6" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="Geen"/>
+        <node begin="1" buiging="zonder" end="2" graad="basis" id="7" lemma="internet" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="internet" word="internet"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="8" lemma="toegang" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="toegang" word="toegang"/>
+      </node>
+      <node begin="4" cat="conj" end="13" id="9" rel="dp">
+        <node begin="4" end="5" id="10" lemma="zowel" pos="vg" postag="BW()" pt="bw" rel="crd" root="zowel" word="zowel"/>
+        <node begin="5" cat="ap" end="8" id="11" rel="cnj">
+          <node begin="5" buiging="zonder" end="6" graad="basis" id="12" lemma="draadloos" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="draadloos" word="draadloos"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="13" lemma="WiFi" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="WiFi" word="wifi"/>
+        </node>
+        <node begin="9" end="10" id="14" lemma="als" pos="vg" postag="VZ(init)" pt="vz" rel="crd" root="als" vztype="init" word="als"/>
+        <node begin="10" cat="pp" end="13" id="15" rel="cnj">
+          <node begin="10" end="11" id="16" lemma="via" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="via" vztype="init" word="via"/>
+          <node begin="11" cat="np" end="13" id="17" rel="obj1">
+            <node begin="11" end="12" id="18" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="19" lemma="netwerk_kabel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="netwerk_kabel" word="netwerkkabel"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Geen internet toegang , zowel draadloos ( wifi ) als via een netwerkkabel</sentence>
+</alpino_ds>

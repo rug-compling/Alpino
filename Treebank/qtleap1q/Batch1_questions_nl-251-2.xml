@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="‘" pos="punct" postag="LET()" pt="let" rel="--" root="‘" word="‘"/>
+    <node begin="0" cat="smain" end="6" id="2" rel="--">
+      <node begin="0" end="1" getal="ev" id="3" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="4" lemma="zien" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zie" word="zie" wvorm="pv"/>
+      <node begin="2" cat="np" end="6" id="5" rel="obj1">
+        <node begin="2" end="3" id="6" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="4" cat="mwu" end="6" id="7" rel="hd">
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="8" lemma="certificaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="certificaat" word="certificaat"/>
+          <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="fout" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="fout" word="fout"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="10" lemma="’" pos="punct" postag="LET()" pt="let" rel="--" root="’" word="’"/>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ik zie een ‘ certificaat fout ’ .</sentence>
+</alpino_ds>

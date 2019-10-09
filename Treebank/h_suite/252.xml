@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="0" cat="du" end="6" id="2" rel="--">
+      <node begin="0" cat="smain" end="2" id="3" rel="tag">
+        <node begin="0" end="1" genus="fem" getal="ev" id="4" lemma="zij" naamval="nomin" pdtype="pron" persoon="3v" pos="pron" postag="VNW(pers,pron,nomin,vol,3v,ev,fem)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="Zij"/>
+        <node begin="1" end="2" id="5" lemma="antwoorden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="antwoord" word="antwoordde" wvorm="pv"/>
+      </node>
+      <node begin="3" cat="np" end="6" id="6" rel="nucl">
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+        <node begin="4" buiging="zonder" end="5" getal-n="zonder-n" id="8" lemma="denken" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="denk" word="denken" wvorm="inf"/>
+        <node begin="5" end="6" id="9" lemma="aan" pos="prep" postag="VZ(fin)" pt="vz" rel="pc" root="aan" vztype="fin" word="aan"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="10" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>Zij antwoordde : geen denken aan !</sentence>
+</alpino_ds>

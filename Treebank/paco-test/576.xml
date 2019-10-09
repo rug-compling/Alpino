@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="smain" end="20" id="1" rel="--">
+      <node begin="1" end="2" frame="verb(hebben,sg3,aux(te))" id="2" infl="sg3" lcat="smain" pos="verb" rel="hd" root="dien" sc="aux(te)" sense="dien" tense="present" word="dient"/>
+      <node begin="0" cat="ti" end="20" id="3" rel="vc">
+        <node begin="2" end="3" frame="complementizer(te)" id="4" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+        <node begin="0" cat="inf" end="20" id="5" rel="body">
+          <node begin="3" end="4" frame="verb(unacc,inf,passive)" id="6" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+          <node begin="0" cat="ppart" end="20" id="7" rel="vc">
+            <node begin="0" end="1" frame="adverb" id="8" lcat="advp" pos="adv" rel="mod" root="voorts" sense="voorts" word="Voorts"/>
+            <node begin="4" end="5" frame="verb(hebben,psp,pc_pp(in))" id="9" infl="psp" lcat="ppart" pos="verb" rel="hd" root="voorzie" sc="pc_pp(in)" sense="voorzie-in" word="voorzien"/>
+            <node begin="5" cat="pp" end="20" id="10" rel="pc">
+              <node begin="5" end="6" frame="preposition(in,[])" id="11" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+              <node begin="6" cat="np" end="20" id="12" rel="obj1">
+                <node begin="6" end="7" frame="determiner(de)" id="13" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                <node aform="base" begin="7" end="8" frame="adjective(e)" id="14" infl="e" lcat="ap" pos="adj" rel="mod" root="specifiek" sense="specifiek" vform="adj" word="specifieke"/>
+                <node begin="8" end="9" frame="noun(de,count,pl)" gen="de" id="15" lcat="np" num="pl" pos="noun" rel="hd" root="behoefte" sense="behoefte" word="behoeften"/>
+                <node begin="9" cat="pp" end="20" id="16" rel="mod">
+                  <node begin="9" end="10" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="17" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                  <node begin="10" cat="np" end="20" id="18" rel="obj1">
+                    <node begin="10" end="11" frame="noun(het,count,pl)" gen="het" id="19" lcat="np" num="pl" pos="noun" rel="hd" root="land" sense="land" word="landen"/>
+                    <node begin="11" cat="rel" end="20" id="20" rel="mod">
+                      <node begin="11" case="no_obl" end="12" frame="rel_pronoun(de,no_obl)" gen="de" id="21" index="1" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+                      <node begin="11" cat="ssub" end="20" id="22" rel="body">
+                        <node begin="11" end="12" id="23" index="1" rel="su"/>
+                        <node begin="12" end="13" frame="reflexive(u_thi,both)" id="24" lcat="np" num="both" per="u_thi" pos="pron" refl="refl" rel="se" root="zich" sense="zich" word="zich"/>
+                        <node begin="13" cat="pp" end="19" id="25" rel="ld">
+                          <node begin="13" end="14" frame="preposition(in,[])" id="26" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                          <node begin="14" cat="np" end="19" id="27" rel="obj1">
+                            <node begin="14" end="15" frame="determiner(een)" id="28" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+                            <node begin="15" end="16" frame="noun(de,count,sg)" gen="de" id="29" lcat="np" num="sg" pos="noun" rel="hd" root="situatie" sense="situatie" word="situatie"/>
+                            <node begin="16" cat="pp" end="19" id="30" rel="mod">
+                              <node begin="16" end="17" frame="preposition(na,[])" id="31" lcat="pp" pos="prep" rel="hd" root="na" sense="na" word="na"/>
+                              <node begin="17" cat="np" end="19" id="32" rel="obj1">
+                                <node begin="17" end="18" frame="determiner(een)" id="33" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+                                <node begin="18" end="19" frame="noun(het,count,sg)" gen="het" id="34" lcat="np" num="sg" pos="noun" rel="hd" root="conflict" sense="conflict" word="conflict"/>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node begin="19" end="20" frame="verb(hebben,pl,refl_ld_pp)" id="35" infl="pl" lcat="ssub" pos="verb" rel="hd" root="bevind" sc="refl_ld_pp" sense="zich-bevind" tense="present" word="bevinden"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" frame="punct(punt)" id="36" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Voorts dient te worden voorzien in de specifieke behoeften van landen die zich in een situatie na een conflict bevinden .</sentence>
+  <comments>
+    <comment>Q#576|Voorts dient te worden voorzien in de specifieke behoeften van landen die zich in een situatie na een conflict bevinden .|1|1|-7.664848673393821</comment>
+  </comments>
+</alpino_ds>

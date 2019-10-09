@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="ppres" end="2" id="2" rel="predm">
+        <node begin="0" end="1" getal="mv" graad="basis" id="3" lemma="marslied" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="lied" word="Marsliederen"/>
+        <node begin="1" buiging="zonder" end="2" id="4" lemma="zingen" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="hd" root="zing" word="zingend" wvorm="od"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="komen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kom_terug" word="kwamen" wvorm="pv"/>
+      <node begin="3" cat="np" end="5" id="6" rel="su">
+        <node begin="3" end="4" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="8" lemma="wandelaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="wandelaar" word="wandelaars"/>
+      </node>
+      <node begin="5" end="6" id="9" lemma="terug" pos="part" postag="BW()" pt="bw" rel="svp" root="terug" word="terug"/>
+    </node>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Marsliederen zingend kwamen de wandelaars terug .</sentence>
+</alpino_ds>

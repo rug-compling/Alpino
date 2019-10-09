@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" cat="ap" end="2" id="2" rel="predm">
+        <node begin="0" end="1" getal="ev" id="3" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="adv" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="mod" root="wat" status="vol" vwtype="vb" word="Wat"/>
+        <node begin="1" buiging="zonder" end="2" graad="basis" id="4" lemma="giftig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="giftig" word="giftig"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
+      <node begin="3" end="4" genus="masc" getal="ev" id="6" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+    </node>
+    <node begin="4" end="5" id="7" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>Wat giftig zei hij :</sentence>
+</alpino_ds>

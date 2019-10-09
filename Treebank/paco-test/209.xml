@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="sv1" end="12" id="1" rel="--">
+      <node begin="0" end="1" frame="verb(hebben,sg1,part_transitive(uit))" id="2" infl="sg1" lcat="sv1" pos="verb" rel="hd" root="voer_uit" sc="part_transitive(uit)" sense="voer_uit" tense="present" word="Voer"/>
+      <node begin="1" cat="np" end="3" id="3" rel="obj1">
+        <node begin="1" end="2" frame="determiner(de)" id="4" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="LAN_upgrade" sense="LAN_upgrade" word="LAN-upgrade"/>
+      </node>
+      <node begin="3" end="4" frame="particle(uit)" id="6" lcat="part" pos="part" rel="svp" root="uit" sense="uit" word="uit"/>
+      <node begin="4" cat="pp" end="8" id="7" rel="mod">
+        <node begin="4" end="5" frame="preposition(vanuit,[])" id="8" lcat="pp" pos="prep" rel="hd" root="vanuit" sense="vanuit" word="vanuit"/>
+        <node begin="5" cat="np" end="8" id="9" rel="obj1">
+          <node begin="5" end="6" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="10" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+          <node begin="6" end="7" frame="noun(het,count,sg)" gen="het" id="11" lcat="np" num="sg" pos="noun" rel="hd" root="palet" sense="palet" word="palet"/>
+          <node begin="7" end="8" frame="proper_name(both,'ORG')" id="12" lcat="np" neclass="ORG" num="both" pos="name" rel="app" root="Kaarten-Bankbeheer" sense="Kaarten-Bankbeheer" word="Kaarten-Bankbeheer"/>
+        </node>
+      </node>
+      <node begin="8" cat="cp" end="12" id="13" rel="mod">
+        <node begin="8" end="9" frame="complementizer(inf)" id="14" lcat="cp" pos="comp" rel="cmp" root="alvorens" sc="inf" sense="alvorens" word="alvorens"/>
+        <node begin="9" cat="ti" end="12" id="15" rel="body">
+          <node begin="10" end="11" frame="complementizer(te)" id="16" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+          <node begin="9" cat="inf" end="12" id="17" rel="body">
+            <node begin="9" end="10" frame="particle(verder)" id="18" lcat="part" pos="part" rel="svp" root="verder" sense="verder" word="verder"/>
+            <node begin="11" end="12" frame="verb(zijn,inf(no_e),part_intransitive(verder))" id="19" infl="inf(no_e)" lcat="inf" pos="verb" rel="hd" root="ga_verder" sc="part_intransitive(verder)" sense="ga_verder" word="gaan"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" frame="punct(punt)" id="20" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Voer de LAN-upgrade uit vanuit het palet Kaarten-Bankbeheer alvorens verder te gaan .</sentence>
+  <comments>
+    <comment>Q#209|Voer de LAN-upgrade uit vanuit het palet Kaarten-Bankbeheer alvorens verder te gaan .|1|1|-3.6345346797298594</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="smain" end="20" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" index="1" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="Men"/>
+      <node begin="1" end="2" id="3" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+      <node begin="0" cat="inf" end="20" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" end="3" id="6" lemma="daarmee" pos="adv" postag="BW()" pt="bw" rel="mod" root="daarmee" word="daarmee"/>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="bereiken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bereiken" word="bereiken" wvorm="inf"/>
+        <node begin="4" cat="cp" end="20" id="8" rel="vc">
+          <node begin="4" conjtype="onder" end="5" id="9" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="5" cat="ssub" end="20" id="10" rel="body">
+            <node begin="9" end="10" id="11" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
+            <node begin="5" cat="ppart" end="20" id="12" rel="vc">
+              <node begin="10" buiging="zonder" end="11" id="13" lemma="verkrijgen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verkrijg" word="verkregen" wvorm="vd"/>
+              <node begin="5" cat="np" end="20" id="14" index="2" rel="obj1">
+                <node begin="5" end="6" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="6" cat="ap" end="8" id="16" rel="mod">
+                  <node begin="6" buiging="zonder" end="7" graad="sup" id="17" lemma="groot" pos="adj" positie="vrij" postag="ADJ(vrij,sup,zonder)" pt="adj" rel="mod" root="grootst" word="grootst"/>
+                  <node begin="7" buiging="met-e" end="8" graad="basis" id="18" lemma="mogelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="mogelijk" word="mogelijke"/>
+                </node>
+                <node begin="8" end="9" getal="mv" graad="basis" id="19" lemma="waarborg" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="waarborg" word="waarborgen"/>
+                <node begin="11" cat="pp" end="20" id="20" rel="mod">
+                  <node begin="11" end="12" id="21" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                  <node begin="12" cat="np" end="20" id="22" rel="obj1">
+                    <node begin="12" end="13" id="23" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                    <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="24" lemma="behoud" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="behoud" word="behoud"/>
+                    <node begin="14" cat="pp" end="20" id="25" rel="mod">
+                      <node begin="14" end="15" id="26" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                      <node begin="15" cat="conj" end="20" id="27" rel="obj1">
+                        <node begin="15" cat="np" end="17" id="28" rel="cnj">
+                          <node begin="15" end="16" id="29" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                          <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="30" lemma="natuurschoon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="natuurschoon" word="natuurschoon"/>
+                        </node>
+                        <node begin="17" conjtype="neven" end="18" id="31" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                        <node begin="18" cat="np" end="20" id="32" rel="cnj">
+                          <node begin="18" end="19" id="33" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                          <node begin="19" end="20" getal="mv" graad="basis" id="34" lemma="recreatiemogelijkheid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mogelijkheid" word="recreatiemogelijkheden"/>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="5" end="20" id="35" index="2" rel="su"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Men wil daarmee bereiken dat de grootst mogelijke waarborgen worden verkregen voor het behoud van het natuurschoon en de recreatiemogelijkheden .</sentence>
+</alpino_ds>

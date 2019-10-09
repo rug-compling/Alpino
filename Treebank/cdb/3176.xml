@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="smain" end="20" id="1" rel="--">
+      <node begin="0" cat="mwu" end="3" id="2" index="1" rel="su">
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="rood" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="Rood" word="Rood"/>
+        <node begin="1" conjtype="neven" end="2" id="4" lemma="en" pos="noun" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="wit" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="Wit" word="Wit"/>
+      </node>
+      <node begin="3" end="4" id="6" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="20" id="7" rel="vc">
+        <node begin="0" end="3" id="8" index="1" rel="su"/>
+        <node begin="4" end="5" id="9" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="zaterdagmiddag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="zaterdagmiddag" word="zaterdagmiddag"/>
+        <node begin="6" cat="pp" end="16" id="11" rel="mod">
+          <node begin="6" end="7" id="12" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="7" cat="np" end="16" id="13" rel="obj1">
+            <node begin="7" end="8" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="8" buiging="met-e" end="9" graad="sup" id="15" lemma="inlassen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="ingelast" word="ingelaste"/>
+            <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="16" lemma="duel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="duel" word="duel"/>
+            <node begin="10" cat="pp" end="16" id="17" rel="mod">
+              <node begin="10" end="11" id="18" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
+              <node begin="11" cat="np" end="16" id="19" rel="obj1">
+                <node begin="11" end="12" id="20" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="12" cat="ppres" end="15" id="21" rel="mod">
+                  <node begin="12" cat="pp" end="14" id="22" rel="mod">
+                    <node begin="12" end="13" id="23" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                    <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="24" lemma="degradatiegevaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="gevaar" word="degradatiegevaar"/>
+                  </node>
+                  <node begin="14" buiging="met-e" end="15" id="25" lemma="verkeren" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="verkerend" word="verkerende" wvorm="od"/>
+                </node>
+                <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="26" lemma="VOC" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="VOC" word="VOC"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="16" end="17" id="27" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+        <node begin="17" cat="pp" end="19" id="28" rel="predc">
+          <node begin="17" end="18" id="29" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="18" end="19" getal="mv" graad="basis" id="30" lemma="moeilijkheid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="moeilijkheid" word="moeilijkheden"/>
+        </node>
+        <node begin="19" buiging="zonder" end="20" id="31" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" word="geweest" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="20" end="21" id="32" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Rood en Wit was ook zaterdagmiddag in het ingelaste duel tegen het in degradatiegevaar verkerende VOC al in moeilijkheden geweest .</sentence>
+</alpino_ds>

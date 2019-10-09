@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" end="1" getal="mv" id="2" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="We"/>
+      <node begin="1" end="2" id="3" lemma="voelen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="voel" word="voelden" wvorm="pv"/>
+      <node begin="2" end="3" getal="mv" id="4" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="se" root="ons" status="vol" vwtype="pr" word="ons"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="5" lemma="plotseling" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="plotseling" word="plotseling"/>
+      <node begin="4" buiging="zonder" end="5" id="6" lemma="bevrijden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="predc" root="bevrijd" word="bevrijd" wvorm="vd"/>
+    </node>
+    <node begin="5" end="6" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>We voelden ons plotseling bevrijd .</sentence>
+  <comments>
+    <comment>&apos;bevrijd&apos; -adjective is not in vDale</comment>
+  </comments>
+</alpino_ds>

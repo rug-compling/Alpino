@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="smain" end="20" id="1" rel="--">
+      <node begin="6" end="7" id="2" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="20" id="3" rel="vc">
+        <node begin="0" cat="pp" end="6" id="4" rel="mod">
+          <node begin="0" end="1" id="5" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="Voor"/>
+          <node begin="1" cat="np" end="6" id="6" rel="obj1">
+            <node begin="1" end="2" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="2" cat="conj" end="5" id="8" rel="mod">
+              <node begin="2" end="3" id="9" lemma="derde" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="cnj" root="derde" word="derde"/>
+              <node begin="3" conjtype="neven" end="4" id="10" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="4" end="5" id="11" lemma="vierde" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="cnj" root="vierde" word="vierde"/>
+            </node>
+            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="12" lemma="kwartaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kwartaal" word="kwartaal"/>
+          </node>
+        </node>
+        <node begin="14" buiging="zonder" end="15" id="13" lemma="rekenen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="reken" word="gerekend" wvorm="vd"/>
+        <node begin="7" cat="pp" end="20" id="14" rel="pc">
+          <node begin="7" end="8" id="15" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="8" cat="np" end="20" id="16" rel="obj1">
+            <node begin="8" end="9" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="groei" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="groei" word="groei"/>
+            <node begin="10" cat="pp" end="14" id="19" rel="mod">
+              <node begin="10" end="11" id="20" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="11" cat="np" end="14" id="21" rel="obj1">
+                <node begin="11" end="12" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="12" buiging="met-e" end="13" graad="basis" id="23" lemma="Amerikaans" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Amerikaans" word="Amerikaanse"/>
+                <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="24" lemma="economie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="economie" word="economie"/>
+              </node>
+            </node>
+            <node begin="15" cat="pp" end="20" id="25" rel="mod">
+              <node begin="15" end="16" id="26" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="16" cat="np" end="20" id="27" rel="obj1">
+                <node begin="16" cat="conj" end="19" id="28" rel="det">
+                  <node begin="16" end="17" id="29" lemma="4" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="cnj" root="4" word="4"/>
+                  <node begin="17" conjtype="neven" end="18" id="30" lemma="à" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="à" word="à"/>
+                  <node begin="18" end="19" id="31" lemma="5" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="cnj" root="5" word="5"/>
+                </node>
+                <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="32" lemma="procent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="procent" word="procent"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="33" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Voor het derde en vierde kwartaal wordt op een groei van de Amerikaanse economie gerekend van 4 à 5 procent .</sentence>
+</alpino_ds>

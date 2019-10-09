@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="29" id="0" rel="top">
+    <node begin="0" cat="smain" end="28" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="Twee"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="persoon" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="persoon" word="personen"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="28" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="su"/>
+        <node begin="3" end="4" id="8" lemma="vannacht" pos="adv" postag="BW()" pt="bw" rel="mod" root="vannacht" word="vannacht"/>
+        <node begin="4" cat="mwu" end="7" id="9" rel="svp">
+          <node begin="4" end="5" id="10" lemma="om" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="om" vztype="init" word="om"/>
+          <node begin="5" end="6" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="fixed" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+          <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="12" lemma="leven" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="leven" word="leven"/>
+        </node>
+        <node begin="7" buiging="zonder" end="8" id="13" lemma="komen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kom" word="gekomen" wvorm="vd"/>
+        <node begin="8" cat="pp" end="28" id="14" rel="mod">
+          <node begin="8" end="9" id="15" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+          <node begin="9" cat="np" end="28" id="16" rel="obj1">
+            <node begin="9" end="10" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="18" lemma="botsing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="botsing" word="botsing"/>
+            <node begin="11" cat="pp" end="17" id="19" rel="mod">
+              <node begin="11" end="12" id="20" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>
+              <node begin="12" cat="conj" end="17" id="21" rel="obj1">
+                <node begin="12" cat="np" end="14" id="22" rel="cnj">
+                  <node begin="12" end="13" id="23" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="24" lemma="personenauto" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="personenauto" word="personenauto"/>
+                </node>
+                <node begin="14" conjtype="neven" end="15" id="25" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                <node begin="15" cat="np" end="17" id="26" rel="cnj">
+                  <node begin="15" end="16" id="27" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="28" lemma="posttrein" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="trein" word="posttrein"/>
+                </node>
+              </node>
+            </node>
+            <node begin="17" cat="pp" end="28" id="29" rel="mod">
+              <node begin="17" end="18" id="30" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+              <node begin="18" cat="np" end="28" id="31" rel="obj1">
+                <node begin="18" end="19" id="32" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="19" cat="ppart" end="23" id="33" rel="mod">
+                  <node begin="19" cat="pp" end="22" id="34" rel="mod">
+                    <node begin="19" end="20" id="35" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                    <node begin="20" cat="np" end="22" id="36" rel="obj1">
+                      <node begin="20" buiging="met-e" end="21" graad="basis" id="37" lemma="automatisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="automatisch" word="automatische"/>
+                      <node begin="21" end="22" getal="mv" graad="basis" id="38" lemma="knipperlicht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="licht" word="knipperlichten"/>
+                    </node>
+                  </node>
+                  <node begin="22" buiging="met-e" end="23" id="39" lemma="beveiligen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="beveiligd" word="beveiligde" wvorm="vd"/>
+                </node>
+                <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="40" lemma="overweg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="overweg" word="overweg"/>
+                <node begin="24" cat="pp" end="28" id="41" rel="mod">
+                  <node begin="24" end="25" id="42" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                  <node begin="25" cat="np" end="28" id="43" rel="obj1">
+                    <node begin="25" end="26" id="44" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="45" lemma="gemeente" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gemeente" word="gemeente"/>
+                    <node begin="27" end="28" genus="onz" getal="ev" graad="basis" id="46" lemma="Nunspeet" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Nunspeet" word="Nunspeet"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="28" end="29" id="47" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Twee personen zijn vannacht om het leven gekomen bij een botsing tussen een personenauto en een posttrein op een met automatische knipperlichten beveiligde overweg in de gemeente Nunspeet .</sentence>
+</alpino_ds>

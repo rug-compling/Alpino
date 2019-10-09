@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="12" end="13" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="13" end="14" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="25" id="4" rel="--">
+      <node begin="0" cat="np" end="2" id="5" index="1" rel="su">
+        <node begin="0" end="1" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="natuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="natuur" word="natuur"/>
+      </node>
+      <node begin="2" end="3" id="8" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="25" id="9" rel="vc">
+        <node begin="0" end="2" id="10" index="1" rel="su"/>
+        <node begin="3" cat="np" end="5" id="11" rel="obj1">
+          <node begin="3" end="4" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="13" lemma="agressie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="agressie" word="agressie"/>
+        </node>
+        <node begin="5" cat="pp" end="9" id="14" rel="mod">
+          <node begin="5" end="6" id="15" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="6" cat="conj" end="9" id="16" rel="obj1">
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="17" lemma="mens" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="mens" word="mens"/>
+            <node begin="7" conjtype="neven" end="8" id="18" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="19" lemma="dier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="dier" word="dier"/>
+          </node>
+        </node>
+        <node begin="11" buiging="zonder" end="12" id="20" lemma="programmeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="programmeer" word="geprogrammeerd" wvorm="vd"/>
+        <node begin="9" cat="ap" end="25" id="21" rel="mod">
+          <node begin="9" buiging="zonder" end="10" graad="basis" id="22" lemma="zodanig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="zodanig" word="zodanig"/>
+          <node begin="14" cat="cp" end="25" id="23" rel="obcomp">
+            <node begin="14" conjtype="onder" end="15" id="24" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+            <node begin="15" cat="ssub" end="25" id="25" rel="body">
+              <node begin="15" cat="conj" end="23" id="26" rel="su">
+                <node begin="15" cat="np" end="19" id="27" rel="cnj">
+                  <node begin="15" end="16" id="28" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="29" lemma="verhouding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verhouding" word="verhouding"/>
+                  <node begin="17" cat="np" end="19" id="30" rel="mod">
+                    <node begin="17" end="18" id="31" lemma="de" lwtype="bep" naamval="gen" npagr="rest3" pos="det" postag="LID(bep,gen,rest3)" pt="lid" rel="det" root="der" word="der"/>
+                    <node begin="18" end="19" getal="mv" graad="basis" id="32" lemma="soort" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="soort" word="soorten"/>
+                  </node>
+                </node>
+                <node begin="19" conjtype="neven" end="20" id="33" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                <node begin="20" cat="np" end="23" id="34" rel="cnj">
+                  <node begin="20" end="21" id="35" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                  <node begin="21" buiging="zonder" end="22" graad="basis" id="36" lemma="biologisch" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="biologisch" word="biologisch"/>
+                  <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="37" lemma="evenwicht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="evenwicht" word="evenwicht"/>
+                </node>
+              </node>
+              <node begin="23" buiging="zonder" end="24" id="38" lemma="handhaven" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="predc" root="gehandhaafd" word="gehandhaafd" wvorm="vd"/>
+              <node begin="24" end="25" id="39" lemma="blijven" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="blijf" word="blijven" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="25" end="26" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De natuur heeft de agressie in mens en dier zodanig &quot; geprogrammeerd &quot; , dat de verhouding der soorten en het biologisch evenwicht gehandhaafd blijven .</sentence>
+</alpino_ds>

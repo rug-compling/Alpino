@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" gen="both" getal="mv" graad="basis" id="4" lemma="vleugel_spits" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="vleugel_spits" word="vleugelspitsen"/>
+        <node begin="2" cat="pp" end="4" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="Fortitudo" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="Fortitudo" word="Fortitudo"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="8" infl="pl" lemma="kunnen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kan" sc="aux(inf)" stype="declarative" tense="past" word="konden" wvorm="pv"/>
+      <node begin="0" cat="inf" end="9" id="9" rel="vc">
+        <node begin="0" end="4" id="10" index="1" rel="su"/>
+        <node begin="5" cat="mwu" end="8" his="normal" his_1="normal" id="11" mwu_root="frank en vrij" mwu_sense="frank en vrij" rel="mod">
+          <node aform="base" begin="5" end="6" id="12" infl="pred" lemma="frank" pos="adj" postag="BW()" pt="bw" rel="mwp" root="frank" vform="adj" word="frank"/>
+          <node aform="base" begin="6" end="7" id="13" infl="pred" lemma="en" pos="adj" postag="BW()" pt="bw" rel="mwp" root="en" vform="adj" word="en"/>
+          <node aform="base" begin="7" end="8" id="14" infl="pred" lemma="vrij" pos="adj" postag="BW()" pt="bw" rel="mwp" root="vrij" vform="adj" word="vrij"/>
+        </node>
+        <node begin="8" buiging="zonder" end="9" id="15" infl="inf" lemma="rond_lopen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="loop_rond" sc="part_intransitive(rond)" word="rondlopen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>De vleugelspitsen van Fortitudo konden frank en vrij rondlopen .</sentence>
+</alpino_ds>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="sv1" end="5" id="1" rel="--">
+      <node begin="0" end="1" frame="verb('hebben/zijn',modal_not_u,aux(inf))" id="2" infl="modal_not_u" lcat="sv1" pos="verb" rel="hd" root="kan" sc="aux(inf)" sense="kan" tense="present" word="Kan"/>
+      <node begin="1" cat="np" end="3" id="3" index="1" rel="su">
+        <node begin="1" end="2" frame="determiner(een)" id="4" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+        <node begin="2" end="3" frame="noun(het,count,sg)" gen="het" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="bestand" sense="bestand" word="bestand"/>
+      </node>
+      <node begin="1" cat="inf" end="5" id="6" rel="vc">
+        <node begin="1" end="3" id="7" index="1" rel="su"/>
+        <node begin="3" end="4" frame="adverb" id="8" lcat="advp" pos="adv" rel="mod" root="niet" sense="niet" word="niet"/>
+        <node begin="4" end="5" frame="verb(hebben,inf,intransitive)" id="9" infl="inf" lcat="inf" pos="verb" rel="hd" root="decomprimeren" sc="intransitive" sense="decomprimeren" word="decomprimeren"/>
+      </node>
+    </node>
+    <node begin="5" end="6" frame="punct(punt)" id="10" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Kan een bestand niet decomprimeren .</sentence>
+  <comments>
+    <comment>Q#277|Kan een bestand niet decomprimeren .|1|1|-2.0556523750786084</comment>
+  </comments>
+</alpino_ds>

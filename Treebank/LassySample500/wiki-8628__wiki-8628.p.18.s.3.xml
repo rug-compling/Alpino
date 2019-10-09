@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="13" end="14" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="23" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" rel="su">
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="5" lemma="naam" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="naam" word="namen"/>
+      </node>
+      <node begin="2" end="3" id="6" lemma="slaan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="sla" word="slaan" wvorm="pv"/>
+      <node begin="3" cat="pp" end="23" id="7" rel="pc">
+        <node begin="3" end="4" id="8" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="4" cat="np" end="23" id="9" rel="obj1">
+          <node begin="4" end="5" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="feit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="feit" word="feit"/>
+          <node begin="6" cat="cp" end="23" id="12" rel="vc">
+            <node begin="6" conjtype="onder" end="7" id="13" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+            <node begin="7" cat="conj" end="23" id="14" rel="body">
+              <node begin="7" cat="ssub" end="13" id="15" rel="cnj">
+                <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="16" index="1" lemma="bovengist" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="boven_gist" word="bovengist"/>
+                <node begin="11" end="12" id="17" lemma="blijven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="blijf" word="blijft" wvorm="pv"/>
+                <node begin="7" cat="inf" end="13" id="18" rel="vc">
+                  <node begin="7" end="8" id="19" index="1" rel="su"/>
+                  <node begin="8" cat="pp" end="11" id="20" rel="ld">
+                    <node begin="8" end="9" id="21" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                    <node begin="9" cat="np" end="11" id="22" rel="obj1">
+                      <node begin="9" end="10" id="23" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                      <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="24" lemma="brouwsel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="brouwsel" word="brouwsel"/>
+                    </node>
+                  </node>
+                  <node begin="12" buiging="zonder" end="13" id="25" lemma="drijven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="drijf" word="drijven" wvorm="inf"/>
+                </node>
+              </node>
+              <node begin="14" conjtype="onder" end="15" id="26" lemma="terwijl" pos="comp" postag="VG(onder)" pt="vg" rel="crd" root="terwijl" word="terwijl"/>
+              <node begin="15" cat="ssub" end="23" id="27" rel="cnj">
+                <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="28" lemma="ondergist" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="onder_gist" word="ondergist"/>
+                <node begin="16" cat="pp" end="22" id="29" rel="ld">
+                  <node begin="16" end="17" id="30" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+                  <node begin="17" cat="np" end="22" id="31" rel="obj1">
+                    <node begin="17" end="18" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="33" lemma="bodem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bodem" word="bodem"/>
+                    <node begin="19" cat="pp" end="22" id="34" rel="mod">
+                      <node begin="19" end="20" id="35" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                      <node begin="20" cat="np" end="22" id="36" rel="obj1">
+                        <node begin="20" end="21" id="37" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                        <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="38" lemma="ketel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ketel" word="ketel"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node begin="22" end="23" id="39" lemma="zakken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zak" word="zakt" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De namen slaan op het feit dat bovengist op het brouwsel blijft drijven , terwijl ondergist naar de bodem van de ketel zakt .</sentence>
+</alpino_ds>

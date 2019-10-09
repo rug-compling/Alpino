@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="17" end="18" id="2" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="du" end="23" id="3" rel="--">
+      <node begin="0" cat="smain" end="17" id="4" rel="nucl">
+        <node begin="0" end="1" getal="mv" id="5" index="1" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="Zij"/>
+        <node begin="1" end="2" id="6" lemma="zullen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zal" word="zullen" wvorm="pv"/>
+        <node begin="0" cat="inf" end="17" id="7" rel="vc">
+          <node begin="0" end="1" id="8" index="1" rel="su"/>
+          <node begin="2" cat="pp" end="5" id="9" rel="mod">
+            <node begin="2" end="3" id="10" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="3" cat="np" end="5" id="11" rel="obj1">
+              <node begin="3" end="4" id="12" lemma="6" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="6" word="6"/>
+              <node begin="4" end="5" getal="mv" graad="basis" id="13" lemma="week" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="week" word="weken"/>
+            </node>
+          </node>
+          <node begin="10" buiging="zonder" end="11" id="14" lemma="bezoeken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bezoek" word="bezoeken" wvorm="inf"/>
+          <node begin="5" cat="np" end="17" id="15" rel="obj1">
+            <node begin="5" cat="detp" end="9" id="16" rel="det">
+              <node begin="5" cat="mwu" end="8" id="17" rel="mod">
+                <node begin="5" end="6" id="18" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mwp" root="niet" word="niet"/>
+                <node begin="6" buiging="zonder" end="7" graad="comp" id="19" lemma="minder" naamval="stan" pdtype="grad" pos="num" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="minder" vwtype="onbep" word="minder"/>
+                <node begin="7" conjtype="onder" end="8" id="20" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="mwp" root="dan" word="dan"/>
+              </node>
+              <node begin="8" end="9" id="21" lemma="19" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="hd" root="19" word="19"/>
+            </node>
+            <node begin="9" end="10" getal="mv" graad="basis" id="22" lemma="stad" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="stad" word="steden"/>
+            <node begin="12" cat="rel" end="17" id="23" rel="mod">
+              <node begin="12" end="13" id="24" lemma="waarbij" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarbij" word="waarbij"/>
+              <node begin="13" cat="du" end="17" id="25" rel="body">
+                <node begin="13" cat="pp" end="16" id="26" rel="dp">
+                  <node begin="13" end="14" id="27" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                  <node begin="14" cat="mwu" end="16" id="28" rel="obj1">
+                    <node begin="14" end="15" id="29" lemma="9" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="9" word="9"/>
+                    <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="30" lemma="oktober" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="oktober" word="oktober"/>
+                  </node>
+                </node>
+                <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="31" lemma="Amsterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="dp" root="Amsterdam" word="Amsterdam"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="18" cat="np" end="23" id="32" rel="sat">
+        <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="33" lemma="amstelhal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="Amstelhal" word="Amstelhal"/>
+        <node begin="19" cat="pp" end="23" id="34" rel="mod">
+          <node begin="19" end="20" id="35" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="20" cat="np" end="23" id="36" rel="obj1">
+            <node begin="20" end="21" id="37" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="21" buiging="met-e" end="22" graad="basis" id="38" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+            <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="39" lemma="RAI" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="RAI" word="RAI"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="40" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="24" end="25" id="41" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Zij zullen in 6 weken niet minder dan 19 steden bezoeken , waarbij op 9 oktober Amsterdam ( Amstelhal van de nieuwe RAI ) .</sentence>
+</alpino_ds>

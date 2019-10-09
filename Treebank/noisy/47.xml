@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="natuurlijk" pos="adj" rel="mod" root="natuurlijk" word="Natuurlijk"/>
+      <node begin="1" end="2" id="3" lemma="reageer" pos="verb" rel="hd" root="reageer" word="reageerden"/>
+      <node begin="2" cat="np" end="4" id="4" rel="su">
+        <node begin="2" end="3" id="5" lemma="de" pos="det" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" id="6" lemma="fabrikant" pos="noun" rel="hd" root="fabrikant" word="fabrikanten"/>
+      </node>
+      <node begin="4" end="5" id="7" lemma="verheugd" pos="adj" rel="mod" root="verheugd" word="verheugd"/>
+      <node begin="5" cat="pp" end="8" id="8" rel="pc">
+        <node begin="5" end="6" id="9" lemma="op" pos="prep" rel="hd" root="op" word="op"/>
+        <node begin="6" cat="np" end="8" id="10" rel="obj1">
+          <node begin="6" end="7" id="11" lemma="het" pos="det" rel="det" root="het" word="het"/>
+          <node begin="7" end="8" id="12" lemma="initiatief" pos="noun" rel="hd" root="initiatief" word="initiatief"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" rel="--" root="." word="."/>
+  </node>
+  <sentence>Natuurlijk reageerden de fabrikanten verheugd op het initiatief .</sentence>
+</alpino_ds>

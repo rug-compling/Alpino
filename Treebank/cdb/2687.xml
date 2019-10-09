@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="3" end="4" id="2" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+      <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="3" index="1" lemma="proces-verbaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="su" root="proces-verbaal" word="proces-verbaal"/>
+      <node begin="0" cat="inf" end="9" id="4" rel="vc">
+        <node begin="4" end="5" id="5" index="1" rel="su"/>
+        <node begin="5" buiging="zonder" end="6" id="6" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+        <node begin="0" cat="ppart" end="9" id="7" rel="vc">
+          <node begin="0" cat="pp" end="3" id="8" rel="mod">
+            <node begin="0" end="1" id="9" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="Tegen"/>
+            <node begin="1" cat="mwu" end="3" id="10" rel="obj1">
+              <node begin="1" end="2" id="11" lemma="Van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Van" spectype="deeleigen" word="Van"/>
+              <node begin="2" end="3" id="12" lemma="V." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="V." spectype="deeleigen" word="V."/>
+            </node>
+          </node>
+          <node begin="4" end="5" id="13" index="1" rel="obj1"/>
+          <node begin="6" buiging="zonder" end="7" id="14" lemma="opmaken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="maak" word="opgemaakt" wvorm="vd"/>
+          <node begin="7" cat="pp" end="9" id="15" rel="mod">
+            <node begin="7" end="8" id="16" lemma="wegens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="wegens" vztype="init" word="wegens"/>
+            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="17" lemma="dierenmishandeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="handeling" word="dierenmishandeling"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="9" end="10" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Tegen Van V. zal proces-verbaal worden opgemaakt wegens dierenmishandeling .</sentence>
+</alpino_ds>

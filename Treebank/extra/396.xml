@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="np" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+      <node begin="1" cat="ppart" end="4" id="3" rel="mod">
+        <node begin="1" cat="pp" end="3" id="4" rel="mod">
+          <node begin="1" end="2" id="5" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="2" end="3" id="6" lemma="1985" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1985" word="1985"/>
+        </node>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="overlijden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="overleden" word="overleden" wvorm="vd"/>
+      </node>
+      <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="adjunct-directeur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="adjunct_directeur" word="adjunct-directeur"/>
+    </node>
+  </node>
+  <sentence>De in 1985 overleden adjunct-directeur</sentence>
+</alpino_ds>

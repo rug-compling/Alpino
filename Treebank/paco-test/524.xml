@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="29" id="0" rel="top">
+    <node begin="15" end="16" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="23" end="24" frame="punct(komma)" id="2" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="du" end="28" id="3" rel="--">
+      <node begin="0" cat="smain" end="15" id="4" rel="nucl">
+        <node begin="0" cat="np" end="2" id="5" index="1" rel="su">
+          <node begin="0" end="1" frame="determiner(de)" id="6" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+          <node begin="1" end="2" frame="tmp_noun(de,count,pl)" gen="de" id="7" lcat="np" num="pl" pos="noun" rel="hd" root="partij" sense="partij" special="tmp" word="partijen"/>
+        </node>
+        <node begin="2" end="3" frame="verb(hebben,pl,refl_er_pp_vp(tot))" id="8" infl="pl" lcat="smain" pos="verb" rel="hd" root="verbind" sc="refl_er_pp_vp(tot)" sense="zich-verbind-tot" tense="present" word="verbinden"/>
+        <node begin="3" end="4" frame="reflexive(u_thi,both)" id="9" lcat="np" num="both" per="u_thi" pos="pron" refl="refl" rel="se" root="zich" sense="zich" word="zich"/>
+        <node begin="0" cat="pp" end="15" id="10" rel="pc">
+          <node begin="4" end="5" frame="er_adverb(tot)" id="11" lcat="pp" pos="pp" rel="hd" root="ertoe" sense="ertoe" special="er" word="ertoe"/>
+          <node begin="0" cat="conj" end="15" id="12" rel="vc">
+            <node begin="0" cat="ti" end="12" id="13" rel="cnj">
+              <node begin="10" end="11" frame="complementizer(te)" id="14" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+              <node begin="0" cat="inf" end="12" id="15" rel="body">
+                <node begin="0" end="2" id="16" index="1" rel="su"/>
+                <node begin="5" cat="conj" end="10" id="17" index="2" rel="obj1">
+                  <node begin="5" cat="np" end="8" id="18" rel="cnj">
+                    <node begin="5" end="6" frame="determiner(alle,nwh,mod,pro,nparg)" id="19" index="3" infl="alle" lcat="detp" pos="det" rel="det" root="alle" sense="alle" wh="nwh" word="alle"/>
+                    <node aform="base" begin="6" end="7" frame="adjective(e)" id="20" index="4" infl="e" lcat="ap" pos="adj" rel="mod" root="fundamenteel" sense="fundamenteel" vform="adj" word="fundamentele"/>
+                    <node begin="7" end="8" frame="noun(de,count,pl)" gen="de" id="21" lcat="np" num="pl" pos="noun" rel="hd" root="vrijheid" sense="vrijheid" word="vrijheden"/>
+                  </node>
+                  <node begin="8" end="9" frame="conj(en)" id="22" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                  <node begin="5" cat="np" end="10" id="23" rel="cnj">
+                    <node begin="5" end="6" id="24" index="3" rel="det"/>
+                    <node begin="6" end="7" id="25" index="4" rel="mod"/>
+                    <node begin="9" end="10" frame="noun(de,count,pl)" gen="de" id="26" lcat="np" num="pl" pos="noun" rel="hd" root="mensenrechten" sense="mensenrechten" word="mensenrechten"/>
+                  </node>
+                </node>
+                <node begin="11" end="12" frame="verb(hebben,inf,transitive)" id="27" infl="inf" lcat="inf" pos="verb" rel="hd" root="bevorder" sc="transitive" sense="bevorder" word="bevorderen"/>
+              </node>
+            </node>
+            <node begin="12" end="13" frame="conj(en)" id="28" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+            <node begin="0" cat="ti" end="15" id="29" rel="cnj">
+              <node begin="13" end="14" frame="complementizer(te)" id="30" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+              <node begin="0" cat="inf" end="15" id="31" rel="body">
+                <node begin="0" end="2" id="32" index="1" rel="su"/>
+                <node begin="5" end="10" id="33" index="2" rel="obj1"/>
+                <node begin="14" end="15" frame="verb(hebben,inf,transitive)" id="34" infl="inf" lcat="inf" pos="verb" rel="hd" root="bescherm" sc="transitive" sense="bescherm" word="beschermen"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="16" cat="conj" end="28" id="35" rel="sat">
+        <node begin="16" end="17" frame="left_conj(als)" id="36" lcat="vg" pos="vg" rel="crd" root="zowel" sense="zowel" special="left" word="zowel"/>
+        <node begin="17" end="18" frame="noun(het,count,pl)" gen="het" id="37" lcat="np" num="pl" pos="noun" rel="cnj" root="burger_recht" sense="burger_recht" word="burgerrechten"/>
+        <node begin="18" end="19" frame="conj(en)" id="38" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+        <node begin="19" cat="np" end="21" id="39" rel="cnj">
+          <node aform="base" begin="19" end="20" frame="adjective(e)" id="40" infl="e" lcat="ap" pos="adj" rel="mod" root="politiek" sense="politiek" vform="adj" word="politieke"/>
+          <node begin="20" end="21" frame="noun(het,count,pl)" gen="het" id="41" lcat="np" num="pl" pos="noun" rel="hd" root="recht" sense="recht" word="rechten"/>
+        </node>
+        <node begin="21" end="22" frame="right_conj(als)" id="42" lcat="vg" pos="vg" rel="crd" root="als" sense="als" special="right" word="als"/>
+        <node begin="22" cat="np" end="28" id="43" rel="cnj">
+          <node begin="22" cat="conj" end="27" id="44" rel="mod">
+            <node aform="base" begin="22" end="23" frame="adjective(e)" id="45" infl="e" lcat="ap" pos="adj" rel="cnj" root="economisch" sense="economisch" vform="adj" word="economische"/>
+            <node aform="base" begin="24" end="25" frame="adjective(e)" id="46" infl="e" lcat="ap" pos="adj" rel="cnj" root="sociaal" sense="sociaal" vform="adj" word="sociale"/>
+            <node begin="25" end="26" frame="conj(en)" id="47" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+            <node aform="base" begin="26" end="27" frame="adjective(e)" id="48" infl="e" lcat="ap" pos="adj" rel="cnj" root="cultureel" sense="cultureel" vform="adj" word="culturele"/>
+          </node>
+          <node begin="27" end="28" frame="noun(het,count,pl)" gen="het" id="49" lcat="np" num="pl" pos="noun" rel="hd" root="recht" sense="recht" word="rechten"/>
+        </node>
+      </node>
+    </node>
+    <node begin="28" end="29" frame="punct(punt)" id="50" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De partijen verbinden zich ertoe alle fundamentele vrijheden en mensenrechten te bevorderen en te beschermen , zowel burgerrechten en politieke rechten als economische , sociale en culturele rechten .</sentence>
+  <comments>
+    <comment>Q#524|De partijen verbinden zich ertoe alle fundamentele vrijheden en mensenrechten te bevorderen en te beschermen , zowel burgerrechten en politieke rechten als economische , sociale en culturele rechten .|1|1|-7.9335036115101785</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="31" id="0" rel="top">
+    <node begin="9" end="10" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="np" end="30" id="2" rel="--">
+      <node begin="0" end="1" frame="tmp_noun(de,count,sg)" gen="de" id="3" lcat="np" num="sg" pos="noun" rel="hd" root="datum" sense="datum" special="tmp" word="Datum"/>
+      <node begin="1" cat="rel" end="30" id="4" rel="mod">
+        <node begin="1" end="2" frame="waar_adverb(op)" id="5" index="1" lcat="pp" pos="pp" rel="rhd" root="waarop" sense="waarop" special="waar" word="waarop"/>
+        <node begin="1" cat="ssub" end="30" id="6" rel="body">
+          <node begin="1" end="2" id="7" index="1" rel="mod"/>
+          <node begin="2" cat="np" end="8" id="8" rel="su">
+            <node begin="2" end="3" frame="determiner(de)" id="9" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="3" cat="ppart" end="7" id="10" rel="mod">
+              <node begin="3" cat="pp" end="6" id="11" rel="mod">
+                <node begin="3" end="4" frame="preposition(door,[heen])" id="12" lcat="pp" pos="prep" rel="hd" root="door" sense="door" word="door"/>
+                <node begin="4" cat="np" end="6" id="13" rel="obj1">
+                  <node begin="4" end="5" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="14" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                  <node begin="5" end="6" frame="noun(het,count,sg)" gen="het" id="15" lcat="np" num="sg" pos="noun" rel="hd" root="verslag" sense="verslag" word="verslag"/>
+                </node>
+              </node>
+              <node aform="base" begin="6" end="7" frame="adjective(ge_both(adv))" id="16" infl="both" lcat="ppart" pos="adj" rel="hd" root="bestreken" sense="bestreken" vform="psp" word="bestreken"/>
+            </node>
+            <node begin="7" end="8" frame="tmp_noun(de,count,sg)" gen="de" id="17" lcat="np" num="sg" pos="noun" rel="hd" root="periode" sense="periode" special="tmp" word="periode"/>
+          </node>
+          <node begin="8" end="9" frame="verb('hebben/zijn',sg3,ninv(intransitive,part_intransitive(aan)))" id="18" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="vang_aan" sc="part_intransitive(aan)" sense="vang_aan" tense="present" word="aanvangt"/>
+          <node begin="10" cat="cp" end="20" id="19" rel="mod">
+            <node begin="10" cat="mwu" end="13" id="20" mwu_root="dat_wil_zeggen" mwu_sense="dat_wil_zeggen" rel="cmp">
+              <node begin="10" end="11" frame="complementizer(np)" id="21" lcat="cp" pos="comp" rel="mwp" root="dat" sc="np" sense="dat" word="dat"/>
+              <node begin="11" end="12" frame="complementizer(np)" id="22" lcat="cp" pos="comp" rel="mwp" root="wil" sc="np" sense="wil" word="wil"/>
+              <node begin="12" end="13" frame="complementizer(np)" id="23" lcat="cp" pos="comp" rel="mwp" root="zeggen" sc="np" sense="zeggen" word="zeggen"/>
+            </node>
+            <node begin="13" cat="np" end="20" id="24" rel="body">
+              <node begin="13" cat="pp" end="16" id="25" rel="mod">
+                <node begin="13" end="14" frame="preposition(om,[heen])" id="26" lcat="pp" pos="prep" rel="hd" root="om" sense="om" word="om"/>
+                <node begin="14" cat="mwu" end="16" id="27" mwu_root="00.00_uur" mwu_sense="00.00_uur" rel="obj1">
+                  <node begin="14" end="15" frame="tmp_np" id="28" lcat="np" pos="noun" rel="mwp" root="00.00" sense="00.00" special="tmp" word="00.00"/>
+                  <node begin="15" end="16" frame="tmp_np" id="29" lcat="np" pos="noun" rel="mwp" root="uur" sense="uur" special="tmp" word="uur"/>
+                </node>
+              </node>
+              <node begin="16" cat="pp" end="19" id="30" rel="pc">
+                <node begin="16" end="17" frame="preposition(op,[af,na])" id="31" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+                <node begin="17" cat="np" end="19" id="32" rel="obj1">
+                  <node begin="17" end="18" frame="determiner(de)" id="33" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="18" end="19" frame="tmp_noun(de,count,sg)" gen="de" id="34" lcat="np" num="sg" pos="noun" rel="hd" root="dag" sense="dag" special="tmp" word="dag"/>
+                </node>
+              </node>
+              <node aform="base" begin="19" end="20" frame="adjective(ende(padv),pp(op))" id="35" infl="e" lcat="np" pos="adj" rel="hd" root="volg" sc="pp(op)" sense="volg-op" vform="gerund" word="volgende"/>
+            </node>
+          </node>
+          <node begin="20" cat="pp" end="30" id="36" rel="mod">
+            <node begin="20" end="21" frame="preposition(op,[af,na])" id="37" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+            <node begin="21" cat="np" end="30" id="38" rel="obj1">
+              <node begin="21" end="22" frame="determiner(de)" id="39" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="22" end="23" frame="tmp_noun(de,count,sg)" gen="de" id="40" lcat="np" num="sg" pos="noun" rel="hd" root="dag" sense="dag" special="tmp" word="dag"/>
+              <node begin="23" cat="rel" end="30" id="41" rel="mod">
+                <node begin="23" end="24" frame="waar_adverb(op)" id="42" index="2" lcat="pp" pos="pp" rel="rhd" root="waarop" sense="waarop" special="waar" word="waarop"/>
+                <node begin="23" cat="ssub" end="30" id="43" rel="body">
+                  <node begin="24" cat="np" end="28" id="44" index="3" rel="su">
+                    <node begin="24" end="25" frame="determiner(de)" id="45" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                    <node aform="base" begin="25" end="26" frame="adjective(ende(adv))" id="46" infl="e" lcat="ppres" pos="adj" rel="mod" root="voorafgaand" sense="voorafgaand" vform="gerund" word="voorafgaande"/>
+                    <node aform="base" begin="26" end="27" frame="adjective(e)" id="47" infl="e" lcat="ap" pos="adj" rel="mod" root="actueel" sense="actueel" vform="adj" word="actuele"/>
+                    <node begin="27" end="28" frame="noun(de,count,sg)" gen="de" id="48" lcat="np" num="sg" pos="noun" rel="hd" root="inventaris" sense="inventaris" word="inventaris"/>
+                  </node>
+                  <node begin="28" end="29" frame="verb(unacc,past(sg),passive)" id="49" infl="sg" lcat="ssub" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="past" word="werd"/>
+                  <node begin="23" cat="ppart" end="30" id="50" rel="vc">
+                    <node begin="23" end="24" id="51" index="2" rel="mod"/>
+                    <node begin="24" end="28" id="52" index="3" rel="obj1"/>
+                    <node begin="29" end="30" frame="verb(hebben,psp,ninv(transitive,part_transitive(op)))" id="53" infl="psp" lcat="ppart" pos="verb" rel="hd" root="stel_op" sc="part_transitive(op)" sense="stel_op" word="opgesteld"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="30" end="31" frame="punct(punt)" id="54" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Datum waarop de door het verslag bestreken periode aanvangt , dat wil zeggen om 00.00 uur op de dag volgende op de dag waarop de voorafgaande actuele inventaris werd opgesteld .</sentence>
+  <comments>
+    <comment>Q#430|Datum waarop de door het verslag bestreken periode aanvangt , dat wil zeggen om 00.00 uur op de dag volgende op de dag waarop de voorafgaande actuele inventaris werd opgesteld .|1|1|0.9678945924695096</comment>
+  </comments>
+</alpino_ds>

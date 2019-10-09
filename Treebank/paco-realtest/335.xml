@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="6" end="7" id="1" pos="punct" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="15" id="2" rel="--">
+      <node begin="0" end="1" id="3" infl="het" pos="det" rel="su" root="dit" wh="nwh" word="Dit"/>
+      <node begin="1" end="2" id="4" infl="sg" pos="verb" rel="hd" root="omvat" sc="transitive" tense="past" word="omvatte"/>
+      <node begin="2" cat="np" end="15" id="5" rel="obj1">
+        <node begin="2" end="3" id="6" infl="de" pos="det" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" gen="de" id="7" num="sg" pos="noun" rel="hd" root="renovatie" word="renovatie"/>
+        <node begin="4" cat="pp" end="15" id="8" rel="mod">
+          <node begin="4" end="5" id="9" pos="prep" rel="hd" root="van" word="van"/>
+          <node begin="5" cat="conj" end="15" id="10" rel="obj1">
+            <node begin="5" end="6" gen="het" id="11" num="pl" pos="noun" rel="cnj" root="gebouw" word="gebouwen"/>
+            <node begin="7" end="8" id="12" pos="vg" rel="crd" root="en" word="en"/>
+            <node begin="8" cat="np" end="15" id="13" rel="cnj">
+              <node aform="base" begin="8" end="9" id="14" infl="e" pos="adj" rel="mod" root="technisch" vform="adj" word="technische"/>
+              <node begin="9" end="10" gen="de" id="15" num="sg" pos="noun" rel="hd" root="bijstand" word="bijstand"/>
+              <node begin="10" cat="pp" end="15" id="16" rel="mod">
+                <node begin="10" end="11" id="17" pos="prep" rel="hd" root="aan" word="aan"/>
+                <node begin="11" cat="np" end="15" id="18" rel="obj1">
+                  <node begin="11" end="12" id="19" infl="het" pos="det" rel="det" root="het" wh="nwh" word="het"/>
+                  <node begin="12" cat="mwu" end="15" id="20" mwu_root="Ministerie_van_Justitie" mwu_sense="Ministerie_van_Justitie" rel="hd">
+                    <node begin="12" end="13" id="21" neclass="ORG" num="both" pos="name" rel="mwp" root="Ministerie" word="Ministerie"/>
+                    <node begin="13" end="14" id="22" neclass="ORG" num="both" pos="name" rel="mwp" root="van" word="van"/>
+                    <node begin="14" end="15" id="23" neclass="ORG" num="both" pos="name" rel="mwp" root="Justitie" word="Justitie"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="24" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Dit omvatte de renovatie van gebouwen , en technische bijstand aan het Ministerie van Justitie .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="mv" graad="basis" id="2" lemma="diplomaat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="diplomaten" word="Diplomaten"/>
+      <node begin="1" end="2" id="3" lemma="krijgen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="krijg" word="krijgen" wvorm="pv"/>
+      <node begin="2" cat="np" end="8" id="4" rel="obj1">
+        <node begin="2" buiging="zonder" end="3" id="5" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+        <node begin="3" buiging="met-e" end="4" graad="basis" id="6" lemma="speciaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="speciaal" word="speciale"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="7" lemma="&quot;cd&quot;-nummerplaat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="plaat" word="&quot;Cd&quot;-nummerplaten"/>
+        <node begin="5" cat="pp" end="8" id="8" rel="mod">
+          <node begin="5" end="6" id="9" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="6" cat="np" end="8" id="10" rel="obj1">
+            <node begin="6" buiging="zonder" end="7" getal="mv" id="11" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+            <node begin="7" end="8" getal="mv" graad="basis" id="12" lemma="wagen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="wagen" word="wagens"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Diplomaten krijgen geen speciale &quot;Cd&quot;-nummerplaten op hun wagens .</sentence>
+</alpino_ds>

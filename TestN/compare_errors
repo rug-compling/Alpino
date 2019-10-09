@@ -1,0 +1,50 @@
+#!/usr/bin/perl
+
+use Getopt::Std;
+getopts('q');
+$opt_q ||=0;
+
+($best,$errors) = @ARGV;
+
+open BEST, $best;
+%best=();
+while (<BEST>) {
+  chomp;
+  if(/^BEST SCORE/) {
+    @line= split;
+    $score=$line[2];
+    $key=$line[10];
+    $key =~ s/;//;
+    $best{$key} = "$score";
+  }
+}
+
+open ERRORS, $errors;
+%errors=();
+while (<ERRORS>) {
+#  if(/^[0-9]+/) {
+    chomp;
+    @line = split;
+    $key=$line[0];
+    $errors{$key}++;
+#  }
+}
+
+foreach $key (sort { $a <=> $b} keys %best) {
+  $score=$best{$key};
+  if ($score < 100) {
+    if (! exists $errors{$key}) {
+      print "new error for $key ($best{$key}) ???\n";
+    }
+  } else {
+    if (exists $errors{$key}) {
+      print "error disappeared for $key !!!\n";
+    }
+  }
+}
+
+foreach $key (sort { $a <=> $b} keys %errors) {
+    if (! exists $best{$key}) {
+	print "no result for $key\n" unless $opt_q;
+    }
+}

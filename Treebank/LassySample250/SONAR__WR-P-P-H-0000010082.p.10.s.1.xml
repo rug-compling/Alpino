@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="30" id="0" rel="top">
+    <node begin="5" end="6" frame="punct(aanhaal_both)" id="1" lcat="punct" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" sense="&quot;" special="aanhaal_both" word="&quot;"/>
+    <node begin="10" end="11" frame="punct(aanhaal_both)" id="2" lcat="punct" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" sense="&quot;" special="aanhaal_both" word="&quot;"/>
+    <node begin="25" end="26" frame="punct(aanhaal_both)" id="3" lcat="punct" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" sense="&quot;" special="aanhaal_both" word="&quot;"/>
+    <node begin="0" cat="smain" end="29" id="4" rel="--">
+      <node begin="0" cat="ap" end="5" id="5" rel="mod">
+        <node aform="compar" begin="0" buiging="zonder" end="1" frame="adjective(er(adv))" graad="comp" id="6" infl="no_e" lcat="ap" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="goed" sense="goed" vform="adj" word="Beter"/>
+        <node begin="1" cat="cp" end="5" id="7" rel="obcomp">
+          <node begin="1" conjtype="onder" end="2" frame="comparative(dan)" id="8" lcat="comparative" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" sense="dan" word="dan"/>
+          <node begin="2" cat="np" end="5" id="9" rel="body">
+            <node begin="2" end="3" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="10" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+            <node begin="3" end="4" frame="noun(het,count,sg,app_measure)" gen="het" genus="onz" getal="ev" graad="basis" id="11" lcat="np" lemma="woord" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="woord" sc="app_measure" sense="woord" word="woord"/>
+            <node begin="4" end="5" frame="tmp_noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="12" lcat="np" lemma="competitie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="app" root="competitie" sense="competitie" special="tmp" word="competitie"/>
+          </node>
+        </node>
+      </node>
+      <node begin="6" end="7" frame="verb(hebben,sg3,intransitive)" id="13" infl="sg3" lcat="smain" lemma="drukken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="druk" sc="intransitive" sense="druk" tense="present" word="drukt" wvorm="pv"/>
+      <node begin="7" cat="np" end="29" id="14" rel="su">
+        <node begin="7" end="8" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="15" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+        <node begin="8" end="9" frame="noun(het,count,sg,app_measure)" gen="het" genus="onz" getal="ev" graad="basis" id="16" lcat="np" lemma="woord" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="woord" sc="app_measure" sense="woord" word="woord"/>
+        <node begin="9" cat="np" end="25" id="17" rel="app">
+          <node begin="9" end="10" frame="noun(de,mass,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="18" lcat="np" lemma="concurrentie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="concurrentie" sense="concurrentie" word="concurrentie"/>
+          <node begin="11" cat="mwu" end="25" id="19" mwu_root="uit_waar_het_om_gaat_in_een_vrijemarkteconomie_:_letterlijk_het_blijven_samen_lopen" mwu_sense="uit_waar_het_om_gaat_in_een_vrijemarkteconomie_:_letterlijk_het_blijven_samen_lopen" rel="app">
+            <node begin="11" end="12" frame="proper_name(both)" id="20" lcat="np" lemma="uit" num="both" pos="name" postag="VZ(fin)" pt="vz" rel="mwp" root="uit" sense="uit" vztype="fin" word="uit"/>
+            <node begin="12" end="13" frame="proper_name(both)" getal="getal" id="21" lcat="np" lemma="waar" naamval="obl" num="both" pdtype="adv-pron" persoon="3o" pos="name" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mwp" root="waar" sense="waar" status="vol" vwtype="vb" word="waar"/>
+            <node begin="13" end="14" frame="proper_name(both)" genus="onz" getal="ev" id="22" lcat="np" lemma="het" naamval="stan" num="both" pdtype="pron" persoon="3" pos="name" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="mwp" root="het" sense="het" status="red" vwtype="pers" word="het"/>
+            <node begin="14" end="15" frame="proper_name(both)" id="23" lcat="np" lemma="om" num="both" pos="name" postag="VZ(fin)" pt="vz" rel="mwp" root="om" sense="om" vztype="fin" word="om"/>
+            <node begin="15" end="16" frame="proper_name(both)" id="24" lcat="np" lemma="gaan" num="both" pos="name" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="mwp" root="gaat" sense="gaat" word="gaat" wvorm="pv"/>
+            <node begin="16" end="17" frame="proper_name(both)" id="25" lcat="np" lemma="in" num="both" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="in" sense="in" vztype="init" word="in"/>
+            <node begin="17" end="18" frame="proper_name(both)" id="26" lcat="np" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" num="both" pos="name" postag="LID(onbep,stan,agr)" pt="lid" rel="mwp" root="een" sense="een" word="een"/>
+            <node begin="18" end="19" frame="proper_name(both)" genus="zijd" getal="ev" graad="basis" id="27" lcat="np" lemma="vrijemarkteconomie" naamval="stan" ntype="soort" num="both" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="vrijemarkteconomie" sense="vrijemarkteconomie" word="vrijemarkteconomie"/>
+            <node begin="19" end="20" frame="proper_name(both)" id="28" lcat="np" lemma=":" num="both" pos="name" postag="LET()" pt="let" rel="mwp" root=":" sense=":" word=":"/>
+            <node begin="20" buiging="zonder" end="21" frame="proper_name(both)" graad="basis" id="29" lcat="np" lemma="letterlijk" num="both" pos="name" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="letterlijk" sense="letterlijk" word="letterlijk"/>
+            <node begin="21" end="22" frame="proper_name(both)" genus="onz" getal="ev" id="30" lcat="np" lemma="het" naamval="stan" num="both" pdtype="pron" persoon="3" pos="name" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="mwp" root="het" sense="het" status="red" vwtype="pers" word="het"/>
+            <node begin="22" end="23" frame="proper_name(both)" id="31" lcat="np" lemma="blijven" num="both" pos="name" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="mwp" root="blijven" sense="blijven" word="blijven" wvorm="pv"/>
+            <node begin="23" end="24" frame="proper_name(both)" id="32" lcat="np" lemma="samen" num="both" pos="name" postag="BW()" pt="bw" rel="mwp" root="samen" sense="samen" word="samen"/>
+            <node begin="24" buiging="zonder" end="25" frame="proper_name(both)" id="33" lcat="np" lemma="lopen" num="both" pos="name" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="mwp" root="lopen" sense="lopen" word="lopen" wvorm="inf"/>
+          </node>
+        </node>
+        <node begin="26" cat="pp" end="29" id="34" rel="mod">
+          <node begin="26" end="27" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="35" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+          <node begin="27" cat="np" end="29" id="36" rel="obj1">
+            <node aform="base" begin="27" buiging="met-e" end="28" frame="adjective(ende(padv))" graad="basis" id="37" infl="e" lcat="ppres" lemma="verschillende" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="verschil" sense="verschil" vform="gerund" word="verschillende"/>
+            <node begin="28" end="29" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="38" lcat="np" lemma="marktdeelnemer" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="markt_deelnemer" sense="markt_deelnemer" word="marktdeelnemers"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="29" end="30" frame="punct(punt)" id="39" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Beter dan het woord competitie &quot; drukt het woord concurrentie &quot; uit waar het om gaat in een vrijemarkteconomie : letterlijk het blijven samen lopen &quot; van verschillende marktdeelnemers .</sentence>
+  <comments>
+    <comment>Q#WR-P-P-H-0000010082.p.10.s.1|Beter dan het woord competitie &quot; drukt het woord concurrentie &quot; uit waar het om gaat in een vrijemarkteconomie : letterlijk het blijven samen lopen &quot; van verschillende marktdeelnemers .|1|1|0.1502124029918419</comment>
+  </comments>
+</alpino_ds>

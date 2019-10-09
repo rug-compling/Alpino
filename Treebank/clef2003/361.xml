@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="whq" end="4" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="noun" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="whd" root="waar" status="vol" vwtype="vb" word="Waar"/>
+      <node begin="0" cat="sv1" end="4" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
+        <node begin="2" end="3" genus="genus" getal="ev" graad="basis" id="5" lemma="RSA" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="su" root="RSA" word="RSA"/>
+        <node begin="0" cat="pp" end="4" id="6" rel="pc">
+          <node begin="0" end="1" id="7" index="1" rel="obj1"/>
+          <node begin="3" end="4" id="8" lemma="voor" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="voor" vztype="fin" word="voor"/>
+        </node>
+      </node>
+    </node>
+    <node begin="4" end="5" id="9" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Waar staat RSA voor ?</sentence>
+</alpino_ds>

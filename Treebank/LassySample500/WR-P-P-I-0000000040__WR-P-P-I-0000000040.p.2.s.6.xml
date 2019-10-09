@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="20" id="2" rel="--">
+      <node begin="0" cat="smain" end="10" id="3" rel="cnj">
+        <node begin="0" cat="conj" end="3" id="4" index="1" rel="su">
+          <node begin="0" end="1" getal="mv" graad="basis" id="5" lemma="politicus" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="politicus" word="Politici"/>
+          <node begin="1" conjtype="neven" end="2" id="6" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="2" end="3" getal="mv" graad="basis" id="7" lemma="journalist" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="journalist" word="journalisten"/>
+        </node>
+        <node begin="3" end="4" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+        <node begin="0" cat="ppart" end="10" id="9" rel="vc">
+          <node begin="0" end="3" id="10" index="1" rel="obj1"/>
+          <node begin="4" cat="mwu" end="7" id="11" rel="mod">
+            <node begin="4" conjtype="onder" end="5" id="12" lemma="als" pos="fixed" postag="VG(onder)" pt="vg" rel="mwp" root="als" word="als"/>
+            <node begin="5" end="6" genus="onz" getal="ev" id="13" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="fixed" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="mwp" root="het" status="red" vwtype="pers" word="het"/>
+            <node begin="6" end="7" id="14" lemma="zijn" pos="fixed" postag="WW(pv,conj,ev)" pt="ww" pvagr="ev" pvtijd="conj" rel="mwp" root="waar" word="ware" wvorm="pv"/>
+          </node>
+          <node begin="7" cat="pp" end="9" id="15" rel="pc">
+            <node begin="7" end="8" id="16" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+            <node begin="8" end="9" getal="mv" id="17" lemma="elkaar" naamval="obl" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="obj1" root="elkaar" status="vol" vwtype="recip" word="elkaar"/>
+          </node>
+          <node begin="9" buiging="zonder" end="10" id="18" lemma="veroordelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="veroordeel" word="veroordeeld" wvorm="vd"/>
+        </node>
+      </node>
+      <node begin="11" conjtype="neven" end="12" id="19" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+      <node begin="12" cat="whq" end="20" id="20" rel="cnj">
+        <node begin="12" end="13" getal="getal" id="21" index="2" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="whd" root="wie" status="vol" vwtype="vb" word="wie"/>
+        <node begin="12" cat="sv1" end="20" id="22" rel="body">
+          <node begin="12" end="13" id="23" index="2" rel="su"/>
+          <node begin="13" end="14" id="24" lemma="zetten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zet" word="zet" wvorm="pv"/>
+          <node begin="14" cat="pp" end="17" id="25" rel="mod">
+            <node begin="14" end="15" id="26" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="15" cat="np" end="17" id="27" rel="obj1">
+              <node begin="15" end="16" id="28" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="29" lemma="samenleving" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="samenleving" word="samenleving"/>
+            </node>
+          </node>
+          <node begin="17" end="18" id="30" lemma="vandaag" pos="adv" postag="BW()" pt="bw" rel="mod" root="vandaag" word="vandaag"/>
+          <node begin="18" cat="np" end="20" id="31" rel="obj1">
+            <node begin="18" end="19" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="33" lemma="boventoon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="boventoon" word="boventoon"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="34" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Politici en journalisten zijn als het ware tot elkaar veroordeeld , maar wie zet in de samenleving vandaag de boventoon ?</sentence>
+</alpino_ds>

@@ -1,0 +1,80 @@
+#!/usr/bin/perl -w
+
+$file = shift @ARGV;
+$lex = "../../Lexicon/Build/lex.t";
+$morelex = "morelex";
+
+open($f,"<../Build/org") || die("cannot open ../Build/org: $!\n");
+while (<$f> ) {
+    chomp;
+    $dict{$_} = 'ORG';
+}
+
+open($f,"<../Build/per")|| die("cannot open ../Build/per: $!\n");
+while (<$f> ) {
+    chomp;
+    $dict{$_} = 'PER';
+}
+
+open($f,"<../Build/misc")|| die("cannot open ../Build/misc: $!\n");
+while (<$f> ) {
+    chomp;
+    $dict{$_} = 'MISC';
+}
+
+open($f,"<../Build/geo")|| die("cannot open ../Build/geo: $!\n");
+while (<$f> ) {
+    chomp;
+    $dict{$_} = 'LOC';
+}
+
+open($f,"<$file")|| die("cannot open $file: $!\n");
+while (<$f> ) {
+    chomp;
+    push @maxent, $_;
+}
+
+open($f,"<$lex")|| die("cannot open $lex: $!\n");
+while (<$f> ) {
+    chomp;
+    ($word,undef,$val) = split/	/;
+    if ($val !~ /^#/) {
+	$lex{$word}++;
+    }
+}
+
+open($f,"<$morelex");
+while (<$f> ) {
+    chomp;
+    $lex{$_}++;
+}
+
+
+while (<>) {
+    chomp;
+    $m = shift @maxent;
+    if (defined $lex{$_}) {
+	print "MISC DICT\n";
+    } elsif (/^[A-Z]*[-]/) {
+	print "MISC DICT\n";
+    } elsif (/[-][a-z]*$/) {
+	print "MISC DICT\n";
+    } elsif (/zaak-[A-Z]/) {
+	print "MISC DICT\n";
+    } elsif (/dossier-[A-Z]/) {
+	print "MISC DICT\n";
+    } elsif (/'s$/) {
+	print "MISC DICT\n";
+    } elsif (/isch$/) {
+	print "MISC DICT\n";
+    } elsif (/ische$/) {
+	print "MISC DICT\n";
+    } elsif (/^(.*)s$/ && $dict{$1} && $dict{$1} eq 'PER') {
+	print "MISC MISC\n";
+    } elsif ($dict{$_}) {
+	print "$dict{$_} DICT\n";
+    } else {
+	print "$m MAXENT\n";
+    }
+}
+

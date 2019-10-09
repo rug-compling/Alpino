@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="sv1" end="9" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="Kan" wvorm="pv"/>
+      <node begin="1" end="2" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      <node begin="1" cat="inf" end="9" id="4" rel="vc">
+        <node begin="1" end="2" id="5" index="1" rel="su"/>
+        <node begin="2" cat="mwu" end="5" id="6" rel="obj1">
+          <node begin="2" end="3" id="7" lemma="European" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="European" spectype="deeleigen" word="European"/>
+          <node begin="3" end="4" id="8" lemma="model" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="model" spectype="deeleigen" word="model"/>
+          <node begin="4" end="5" id="9" lemma="CV" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="CV" spectype="deeleigen" word="CV"/>
+        </node>
+        <node begin="5" buiging="zonder" end="6" id="10" lemma="downloaden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="download" word="downloaden" wvorm="inf"/>
+        <node begin="6" cat="pp" end="9" id="11" rel="mod">
+          <node begin="6" end="7" id="12" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="7" cat="np" end="9" id="13" rel="obj1">
+            <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="14" lemma=".doc" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mod" root=".doc" word=".doc"/>
+            <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="15" lemma="formaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="formaat" word="formaat"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="9" end="10" id="16" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Kan ik European model CV downloaden in .doc formaat ?</sentence>
+</alpino_ds>

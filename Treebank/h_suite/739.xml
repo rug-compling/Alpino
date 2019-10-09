@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+      <node begin="0" cat="inf" end="9" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" cat="ap" end="8" id="6" rel="ld">
+          <node begin="2" cat="np" end="4" id="7" rel="me">
+            <node begin="2" end="3" id="8" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="kilometer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kilo_meter" word="kilometer"/>
+          </node>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="10" lemma="ver" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="ver" word="ver"/>
+          <node begin="5" cat="pp" end="8" id="11" rel="pc">
+            <node begin="5" end="6" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="6" cat="np" end="8" id="13" rel="obj1">
+              <node begin="6" end="7" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="15" lemma="water" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="water" word="water"/>
+            </node>
+          </node>
+        </node>
+        <node begin="8" buiging="zonder" end="9" id="16" lemma="wonen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="woon" word="wonen" wvorm="inf"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Hij zou twee kilometer ver van het water wonen</sentence>
+</alpino_ds>

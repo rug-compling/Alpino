@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="7" end="8" id="2" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="8" end="9" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="sv1" end="14" id="4" rel="--">
+      <node begin="0" end="1" id="5" lemma="geven" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="geef" word="Geef" wvorm="pv"/>
+      <node begin="1" cat="np" end="14" id="6" rel="obj1">
+        <node begin="1" end="2" id="7" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="2" buiging="met-e" end="3" graad="basis" id="8" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="naam" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="naam" word="naam"/>
+        <node begin="4" cat="pp" end="14" id="10" rel="mod">
+          <node begin="4" end="5" id="11" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+          <node begin="6" cat="np" end="14" id="12" rel="obj1">
+            <node begin="6" end="7" getal="mv" graad="basis" id="13" lemma="telamone" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="telamones" word="telamones"/>
+            <node begin="9" cat="np" end="14" id="14" rel="app">
+              <node begin="9" end="10" getal="mv" graad="basis" id="15" lemma="mannenbeeld" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="beeld" word="mannenbeelden"/>
+              <node begin="10" cat="rel" end="14" id="16" rel="mod">
+                <node begin="10" end="11" getal="getal" id="17" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+                <node begin="10" cat="ssub" end="14" id="18" rel="body">
+                  <node begin="10" end="11" id="19" index="1" rel="su"/>
+                  <node begin="11" cat="cp" end="13" id="20" rel="predc">
+                    <node begin="11" end="12" id="21" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+                    <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="zuil" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="zuil" word="zuil"/>
+                  </node>
+                  <node begin="13" end="14" id="23" lemma="fungeren" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="fungeer" word="fungeren" wvorm="pv"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Geef een andere naam voor &apos; telamones &apos; , mannenbeelden die als zuil fungeren .</sentence>
+</alpino_ds>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="6" end="7" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="8" end="9" frame="punct(komma)" id="2" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="10" end="11" frame="punct(komma)" id="3" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="np" end="14" id="4" rel="--">
+      <node begin="0" end="1" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="5" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+      <node begin="1" end="2" frame="noun(het,count,sg)" gen="het" id="6" lcat="np" num="sg" pos="noun" rel="hd" root="gevaar" sense="gevaar" word="gevaar"/>
+      <node begin="2" cat="pp" end="4" id="7" rel="mod">
+        <node begin="2" end="3" frame="preposition(op,[af,na])" id="8" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+        <node begin="3" end="4" frame="noun(de,mass,sg)" gen="de" id="9" lcat="np" num="sg" pos="noun" rel="obj1" root="blootstelling" sense="blootstelling" word="blootstelling"/>
+      </node>
+      <node begin="4" cat="pp" end="14" id="10" rel="mod">
+        <node begin="4" end="5" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="11" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+        <node begin="5" cat="conj" end="14" id="12" rel="obj1">
+          <node begin="5" end="6" frame="noun(both,count,pl)" gen="both" id="13" lcat="np" num="pl" pos="noun" rel="cnj" root="mens" sense="mens" word="mensen"/>
+          <node begin="7" end="8" frame="noun(de,count,pl)" gen="de" id="14" lcat="np" num="pl" pos="noun" rel="cnj" root="plant" sense="plant" word="planten"/>
+          <node begin="9" end="10" frame="noun(het,count,pl)" gen="het" id="15" lcat="np" num="pl" pos="noun" rel="cnj" root="dier" sense="dier" word="dieren"/>
+          <node begin="11" end="12" frame="within_word_conjunct" id="16" lcat="np" pos="prefix" rel="cnj" root="grond" sense="grond" word="grond-"/>
+          <node begin="12" end="13" frame="conj(en)" id="17" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+          <node begin="13" end="14" frame="noun(het,both,sg)" gen="het" id="18" lcat="np" num="sg" pos="noun" rel="cnj" root="oppervlakte_water" sense="oppervlakte_water" word="oppervlaktewater"/>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" frame="punct(punt_komma)" id="19" lcat="punct" pos="punct" rel="--" root=";" sense=";" special="punt_komma" word=";"/>
+  </node>
+  <sentence>het gevaar op blootstelling voor mensen , planten , dieren , grond- en oppervlaktewater ;</sentence>
+  <comments>
+    <comment>Q#77|het gevaar op blootstelling voor mensen , planten , dieren , grond- en oppervlaktewater ;|1|1|1.5793902455340416</comment>
+  </comments>
+</alpino_ds>

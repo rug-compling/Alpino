@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="15" end="16" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="26" id="2" rel="--">
+      <node begin="0" cat="np" end="10" id="3" index="1" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="4" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" end="2" frame="noun(de,count,pl)" gen="de" id="5" lcat="np" num="pl" pos="noun" rel="hd" root="maatregel" sense="maatregel" word="maatregelen"/>
+        <node begin="2" cat="rel" end="10" id="6" rel="mod">
+          <node begin="2" case="no_obl" end="3" frame="rel_pronoun(de,no_obl)" gen="de" id="7" index="2" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+          <node begin="2" cat="ssub" end="10" id="8" rel="body">
+            <node begin="2" end="3" id="9" index="2" rel="su"/>
+            <node begin="4" end="5" frame="verb(unacc,pl,passive)" id="10" infl="pl" lcat="ssub" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="worden"/>
+            <node begin="2" cat="ppart" end="10" id="11" rel="vc">
+              <node begin="2" end="3" id="12" index="2" rel="obj1"/>
+              <node begin="3" end="4" frame="verb(hebben,psp,transitive)" id="13" infl="psp" lcat="ppart" pos="verb" rel="hd" root="neem" sc="transitive" sense="neem" word="genomen"/>
+              <node begin="5" cat="pp" end="10" id="14" rel="mod">
+                <node begin="5" end="6" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="15" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+                <node begin="6" cat="np" end="10" id="16" rel="obj1">
+                  <node begin="6" end="7" frame="determiner(de)" id="17" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="7" end="8" frame="noun(de,count,sg)" gen="de" id="18" lcat="np" num="sg" pos="noun" rel="hd" root="vervanging" sense="vervanging" word="vervanging"/>
+                  <node begin="8" cat="np" end="10" id="19" rel="mod">
+                    <node begin="8" end="9" frame="determiner(der)" id="20" infl="der" lcat="detp" pos="det" rel="det" root="de" sense="de" word="der"/>
+                    <node begin="9" end="10" frame="noun(het,count,pl)" gen="het" id="21" lcat="np" num="pl" pos="noun" rel="hd" root="element" sense="element" word="elementen"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="10" end="11" frame="verb('hebben/zijn',pl,modifier(aux(inf)))" id="22" infl="pl" lcat="smain" pos="verb" rel="hd" root="moet" sc="modifier(aux(inf))" sense="moet" tense="present" word="moeten"/>
+      <node begin="0" cat="inf" end="26" id="23" rel="vc">
+        <node begin="0" end="10" id="24" index="1" rel="su"/>
+        <node begin="13" end="14" frame="verb(unacc,inf,passive)" id="25" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+        <node begin="0" cat="ppart" end="26" id="26" rel="vc">
+          <node begin="0" end="10" id="27" index="1" rel="obj1"/>
+          <node begin="11" cat="cp" end="13" id="28" rel="mod">
+            <node begin="11" end="12" frame="complementizer(a)" id="29" lcat="cp" pos="comp" rel="cmp" root="zo" sc="a" sense="zo" word="zo"/>
+            <node aform="base" begin="12" end="13" frame="adjective(no_e(adv))" id="30" infl="no_e" lcat="ap" pos="adj" rel="body" root="nodig" sense="nodig" vform="adj" word="nodig"/>
+          </node>
+          <node begin="14" end="15" frame="verb(hebben,psp,ninv(transitive,part_transitive(aan)))" id="31" infl="psp" lcat="ppart" pos="verb" rel="hd" root="geef_aan" sc="part_transitive(aan)" sense="geef_aan" word="aangegeven"/>
+          <node begin="16" cat="whrel" end="26" id="32" rel="mod">
+            <node begin="16" end="17" frame="waar_adverb(bij)" id="33" index="3" lcat="pp" pos="pp" rel="rhd" root="waarbij" sense="waarbij" special="waar" word="waarbij"/>
+            <node begin="16" cat="ssub" end="26" id="34" rel="body">
+              <node begin="17" end="18" frame="verb(hebben,sg3,aux(te))" id="35" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="dien" sc="aux(te)" sense="dien" tense="present" word="dient"/>
+              <node begin="16" cat="ti" end="26" id="36" rel="vc">
+                <node begin="18" end="19" frame="complementizer(te)" id="37" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+                <node begin="16" cat="inf" end="26" id="38" rel="body">
+                  <node begin="19" end="20" frame="verb(unacc,inf,passive)" id="39" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+                  <node begin="16" cat="ppart" end="26" id="40" rel="vc">
+                    <node begin="16" end="17" id="41" index="3" rel="mod"/>
+                    <node begin="20" end="21" frame="verb(hebben,psp,sbar)" id="42" infl="psp" lcat="ppart" pos="verb" rel="hd" root="vermeld" sc="sbar" sense="vermeld" word="vermeld"/>
+                    <node begin="21" cat="cp" end="26" id="43" rel="vc">
+                      <node begin="21" end="22" frame="complementizer(of)" id="44" lcat="cp" pos="comp" rel="cmp" root="of" sc="of" sense="of" word="of"/>
+                      <node begin="22" cat="ssub" end="26" id="45" rel="body">
+                        <node begin="22" end="23" frame="determiner(het,nwh,nmod,pro,nparg)" id="46" infl="het" lcat="np" pos="det" rel="su" root="dit" sense="dit" wh="nwh" word="dit"/>
+                        <node begin="23" cat="np" end="25" id="47" rel="predc">
+                          <node begin="23" end="24" frame="determiner(een)" id="48" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+                          <node begin="24" end="25" frame="noun(de,count,sg)" gen="de" id="49" lcat="np" num="sg" pos="noun" rel="hd" root="routine_verrichting" sense="routine_verrichting" word="routineverrichting"/>
+                        </node>
+                        <node begin="25" end="26" frame="verb(unacc,sg_heeft,copula)" id="50" infl="sg_heeft" lcat="ssub" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="is"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="26" end="27" frame="punct(haak_sluit)" id="51" lcat="--" pos="punct" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+    <node begin="27" end="28" frame="punct(punt)" id="52" lcat="--" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De maatregelen die genomen worden voor de vervanging der elementen moeten zo nodig worden aangegeven , waarbij dient te worden vermeld of dit een routineverrichting is ) .</sentence>
+  <comments>
+    <comment>Q#383|De maatregelen die genomen worden voor de vervanging der elementen moeten zo nodig worden aangegeven , waarbij dient te worden vermeld of dit een routineverrichting is ) .|1|1|-19.45392813159212</comment>
+  </comments>
+</alpino_ds>

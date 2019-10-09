@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+
+import sys
+
+def previous(key,words,tags,roots):
+    print("# sent_id = {}".format(key))
+    print("# test = ",end="")
+    for word in words:
+        print(word,end=" ")
+    print()
+    n=1
+    for word,tag,root in zip(words,tags,roots):
+        print("{}\t{}\t{}\t{}\t_\t_\t_\t_\t_\t_".format(n,word,root,tag))
+        n=n+1
+    print()
+        
+
+def main():
+    words=[]
+    tags=[]
+    roots=[]
+    prevkey=""
+    for line in sys.stdin:
+        line = line.rstrip()
+        [word,tag,key,p0,p,h,c,root] = line.split('|')
+        if prevkey == key:
+            words.append(word)
+            tags.append(tag)
+            roots.append(root)
+        else:
+            if prevkey:
+                previous(prevkey,words,tags,roots)
+            words=[word]
+            tags=[tag]
+            roots=[root]
+            prevkey=key
+    if prevkey:
+        previous(prevkey,words,tags,roots)
+
+
+if __name__ == "__main__":
+    main()

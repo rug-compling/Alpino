@@ -1,0 +1,18 @@
+#include <sstream>
+#include <stdexcept>
+#include <string>
+#include <vector>
+
+#include <boost/config.hpp>
+
+#if defined(BOOST_HAS_THREADS)
+#include <boost/thread.hpp>
+#endif
+
+#include <IndexedCorpus/util/base64.hh>
+
+#include "IndexedCorpus/IndexedCorpusReader.hh"
+
+using namespace std;
+using namespace indexedcorpus;
+

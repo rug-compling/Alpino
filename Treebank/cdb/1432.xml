@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="smain" end="16" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="gaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ga" word="ging" wvorm="pv"/>
+      <node begin="2" end="3" getal="getal" id="4" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" status="vol" vwtype="aanw" word="hier"/>
+      <node begin="3" cat="pp" end="16" id="5" rel="pc">
+        <node begin="3" end="4" id="6" lemma="om" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="om" vztype="init" word="om"/>
+        <node begin="4" cat="np" end="16" id="7" rel="obj1">
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="verontreiniging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verontreiniging" word="verontreiniging"/>
+          <node begin="5" cat="pp" end="16" id="9" rel="mod">
+            <node begin="5" end="6" id="10" lemma="via" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="via" vztype="init" word="via"/>
+            <node begin="6" cat="np" end="16" id="11" rel="obj1">
+              <node begin="6" end="7" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="7" buiging="met-e" end="8" graad="basis" id="13" lemma="zgn." naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="zgn." word="zgn."/>
+              <node begin="8" buiging="met-e" end="9" graad="basis" id="14" lemma="laag" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="laag" word="lage"/>
+              <node begin="9" end="10" getal="mv" graad="basis" id="15" lemma="bron" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bron" word="bronnen"/>
+              <node begin="10" cat="pp" end="12" id="16" rel="mod">
+                <node begin="10" end="11" id="17" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="11" end="12" id="18" lemma="0" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="0" word="0"/>
+              </node>
+              <node begin="12" cat="pp" end="16" id="19" rel="mod">
+                <node begin="12" end="13" id="20" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+                <node begin="13" cat="np" end="16" id="21" rel="obj1">
+                  <node begin="13" end="14" id="22" lemma="plm." pos="adv" postag="SPEC(afk)" pt="spec" rel="mod" root="plm." spectype="afk" word="plm."/>
+                  <node begin="14" end="15" id="23" lemma="40" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="40" word="40"/>
+                  <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="24" lemma="meter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="meter" word="meter"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het ging hier om verontreiniging via de zgn. lage bronnen van 0 tot plm. 40 meter .</sentence>
+</alpino_ds>

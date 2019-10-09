@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="duren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="duur" word="duurde" wvorm="pv"/>
+      <node begin="2" end="3" id="4" lemma="even" pos="adj" postag="BW()" pt="bw" rel="me" root="even" word="even"/>
+      <node begin="3" cat="oti" end="8" id="5" rel="su">
+        <node begin="3" end="4" id="6" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+        <node begin="4" cat="ti" end="8" id="7" rel="body">
+          <node begin="6" end="7" id="8" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="4" cat="inf" end="8" id="9" rel="body">
+            <node begin="4" end="5" getal="ev" id="10" lemma="iedereen" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="obj1" root="iedereen" status="vol" vwtype="onbep" word="iedereen"/>
+            <node begin="5" buiging="zonder" end="6" graad="basis" id="11" lemma="stil" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="stil" word="stil"/>
+            <node begin="7" buiging="zonder" end="8" id="12" lemma="krijgen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="krijg" word="krijgen" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Het duurde even om iedereen stil te krijgen</sentence>
+</alpino_ds>

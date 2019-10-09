@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="14" id="2" rel="--">
+      <node begin="0" cat="cp" end="6" id="3" rel="sat">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+        <node begin="1" cat="ssub" end="6" id="5" rel="body">
+          <node begin="1" cat="np" end="3" id="6" index="1" rel="su">
+            <node begin="1" end="2" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="8" lemma="probleem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="probleem" word="probleem"/>
+          </node>
+          <node begin="4" end="5" id="9" lemma="blijven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="blijf" word="blijft" wvorm="pv"/>
+          <node begin="1" cat="inf" end="6" id="10" rel="vc">
+            <node begin="1" end="3" id="11" index="1" rel="su"/>
+            <node begin="3" end="4" getal="getal" id="12" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+            <node begin="5" buiging="zonder" end="6" id="13" lemma="voor_doen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="doe_voor" word="voordoen" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+      <node begin="7" cat="sv1" end="14" id="14" rel="nucl">
+        <node begin="7" end="8" id="15" lemma="op_vragen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="vraag_op" word="vraag" wvorm="pv"/>
+        <node begin="8" end="9" id="16" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+        <node begin="9" cat="np" end="11" id="17" rel="obj1">
+          <node begin="9" buiging="zonder" end="10" getal="getal" id="18" lemma="u" naamval="stan" npagr="agr" pdtype="det" persoon="2" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)" pt="vnw" rel="det" root="u" status="vol" vwtype="bez" word="uw"/>
+          <node begin="10" end="11" getal="mv" graad="basis" id="19" lemma="gegeven" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gegeven" word="gegevens"/>
+        </node>
+        <node begin="11" end="12" id="20" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
+        <node begin="12" cat="pp" end="14" id="21" rel="mod">
+          <node begin="12" end="13" id="22" lemma="via" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="via" vztype="init" word="via"/>
+          <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="email" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="email" word="e-mail"/>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als het probleem zich blijft voordoen , vraag dan uw gegevens op via e-mail .</sentence>
+</alpino_ds>

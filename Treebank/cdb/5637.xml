@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="37" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="16" end="17" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="20" end="21" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="23" end="24" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="36" id="5" rel="--">
+      <node begin="0" cat="smain" end="11" id="6" rel="nucl">
+        <node begin="0" cat="np" end="2" id="7" rel="su">
+          <node begin="0" buiging="zonder" end="1" getal="ev" id="8" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="Zijn"/>
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="9" lemma="muziekinteresse" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="interesse" word="muziekinteresse"/>
+        </node>
+        <node begin="2" end="3" id="10" lemma="blijken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="blijk" word="blijkt" wvorm="pv"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="11" lemma="veelzijdig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="veelzijdig" word="veelzijdig"/>
+        <node begin="5" cat="pp" end="11" id="12" rel="mod">
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="13" lemma="getuige" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="getuige" word="getuige"/>
+          <node begin="6" cat="np" end="11" id="14" rel="obj1">
+            <node begin="6" end="7" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="16" lemma="inhoud" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="inhoud" word="inhoud"/>
+            <node begin="8" cat="pp" end="11" id="17" rel="mod">
+              <node begin="8" end="9" id="18" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="9" cat="np" end="11" id="19" rel="obj1">
+                <node begin="9" end="10" id="20" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="21" lemma="programma" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="programma" word="programma"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="11" cat="conj" end="36" id="22" rel="sat">
+        <node begin="11" cat="np" end="23" id="23" rel="cnj">
+          <node begin="11" cat="mwu" end="14" id="24" rel="hd">
+            <node begin="11" end="12" id="25" lemma="Ode" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Ode" spectype="vreemd" word="Ode"/>
+            <node begin="12" end="13" id="26" lemma="aan" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="aan" vztype="init" word="aan"/>
+            <node begin="13" end="14" id="27" lemma="Napoleon" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Napoleon" spectype="deeleigen" word="Napoleon"/>
+          </node>
+          <node begin="14" cat="pp" end="20" id="28" rel="mod">
+            <node begin="14" end="15" id="29" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+            <node begin="15" cat="conj" end="20" id="30" rel="obj1">
+              <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="31" lemma="strijkorkest" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="orkest" word="strijkorkest"/>
+              <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="32" lemma="piano" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="piano" word="piano"/>
+              <node begin="18" conjtype="neven" end="19" id="33" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="34" lemma="spreker" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="spreker" word="spreker"/>
+            </node>
+          </node>
+          <node begin="21" cat="pp" end="23" id="35" rel="mod">
+            <node begin="21" end="22" id="36" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="22" end="23" genus="genus" getal="ev" graad="basis" id="37" lemma="Schonberg" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Schonberg" word="Schonberg"/>
+          </node>
+        </node>
+        <node begin="24" cat="np" end="30" id="38" rel="cnj">
+          <node begin="24" cat="mwu" end="28" id="39" rel="hd">
+            <node begin="24" end="25" id="40" lemma="Le" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Le" spectype="deeleigen" word="Le"/>
+            <node begin="25" end="26" id="41" lemma="Chant" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Chant" spectype="deeleigen" word="Chant"/>
+            <node begin="26" end="27" id="42" lemma="du" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="du" spectype="deeleigen" word="du"/>
+            <node begin="27" end="28" id="43" lemma="Rossignol" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Rossignol" spectype="deeleigen" word="Rossignol"/>
+          </node>
+          <node begin="28" cat="pp" end="30" id="44" rel="mod">
+            <node begin="28" end="29" id="45" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="29" end="30" genus="genus" getal="ev" graad="basis" id="46" lemma="Strawinsky" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Strawinsky" word="Strawinsky"/>
+          </node>
+        </node>
+        <node begin="30" conjtype="neven" end="31" id="47" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="31" cat="np" end="36" id="48" rel="cnj">
+          <node begin="31" end="32" id="49" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="32" end="33" genus="onz" getal="ev" graad="basis" id="50" lemma="fragment" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="fragment" word="fragment"/>
+          <node begin="33" end="34" genus="zijd" getal="ev" graad="basis" id="51" lemma="gotterdammerung" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="app" root="Gotterdammerung" word="Gotterdammerung"/>
+          <node begin="34" cat="pp" end="36" id="52" rel="mod">
+            <node begin="34" end="35" id="53" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="35" end="36" genus="zijd" getal="ev" graad="basis" id="54" lemma="Wagner" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Wagner" word="Wagner"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="36" end="37" id="55" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Zijn muziekinteresse blijkt veelzijdig , getuige de inhoud van het programma Ode aan Napoleon voor strijkorkest , piano en spreker , van Schonberg , Le Chant du Rossignol van Strawinsky en een fragment Gotterdammerung van Wagner .</sentence>
+</alpino_ds>

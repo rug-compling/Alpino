@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="ppart" end="3" id="2" rel="mod">
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="kleden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gekleed" word="Gekleed" wvorm="vd"/>
+        <node begin="1" cat="cp" end="3" id="4" rel="mod">
+          <node begin="1" conjtype="onder" end="2" id="5" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="zoals"/>
+          <node begin="2" end="3" id="6" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="body" root="altijd" word="altijd"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom_binnen" word="kwam" wvorm="pv"/>
+      <node begin="4" end="5" genus="masc" getal="ev" id="8" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+      <node begin="5" end="6" id="9" lemma="binnen" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="binnen" vztype="fin" word="binnen"/>
+    </node>
+  </node>
+  <sentence>Gekleed zoals altijd kwam hij binnen</sentence>
+</alpino_ds>

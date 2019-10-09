@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="30" id="0" rel="top">
+    <node begin="15" end="16" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="18" end="19" id="2" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="21" end="22" id="3" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="du" end="29" id="4" rel="--">
+      <node begin="0" cat="smain" end="15" id="5" rel="dp">
+        <node begin="0" cat="pp" end="3" id="6" rel="mod">
+          <node begin="0" end="1" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="Van"/>
+          <node begin="1" cat="np" end="3" id="8" rel="obj1">
+            <node begin="1" end="2" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="2" buiging="met-e" end="3" getal-n="mv-n" graad="sup" id="10" lemma="laat" pos="noun" positie="nom" postag="ADJ(nom,sup,met-e,mv-n)" pt="adj" rel="hd" root="laatste" word="laatsten"/>
+          </node>
+        </node>
+        <node begin="3" end="4" id="11" lemma="sturen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="stuur" word="stuurde" wvorm="pv"/>
+        <node begin="4" cat="np" end="6" id="12" rel="su">
+          <node begin="4" end="5" id="13" lemma="71" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="71" word="71"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="14" lemma="percent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="percent" word="percent"/>
+        </node>
+        <node begin="6" cat="np" end="8" id="15" rel="obj1">
+          <node begin="6" end="7" id="16" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="17" lemma="kind" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kind" word="kind"/>
+        </node>
+        <node begin="8" end="9" id="18" lemma="alleen" pos="adv" postag="BW()" pt="bw" rel="predm" root="alleen" word="alleen"/>
+        <node begin="9" cat="mwu" end="11" id="19" rel="ld">
+          <node begin="9" end="10" id="20" lemma="op" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="21" lemma="weg" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="weg" word="weg"/>
+        </node>
+        <node begin="11" cat="cp" end="15" id="22" rel="mod">
+          <node begin="11" conjtype="onder" end="12" id="23" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+          <node begin="12" cat="ssub" end="15" id="24" rel="body">
+            <node begin="12" end="13" genus="onz" getal="ev" id="25" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+            <node begin="13" end="14" id="26" lemma="zeven" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="predc" root="zeven" word="zeven"/>
+            <node begin="14" end="15" id="27" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+      <node begin="16" cat="smain" end="29" id="28" rel="dp">
+        <node begin="16" cat="np" end="21" id="29" rel="su">
+          <node begin="16" buiging="met-e" end="17" graad="comp" id="30" lemma="jongere" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="jonger" word="jongere"/>
+          <node begin="17" end="18" getal="mv" graad="basis" id="31" lemma="moeder" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="moeder" word="moeders"/>
+          <node begin="19" cat="np" end="21" id="32" rel="mod">
+            <node begin="19" end="20" id="33" lemma="61" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="61" word="61"/>
+            <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="34" lemma="percent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="percent" word="percent"/>
+          </node>
+        </node>
+        <node begin="22" end="23" id="35" lemma="wagen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="waag" word="waagden" wvorm="pv"/>
+        <node begin="23" end="24" genus="onz" getal="ev" id="36" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+        <node begin="24" end="25" id="37" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+        <node begin="25" cat="pp" end="29" id="38" rel="mod">
+          <node begin="25" end="26" id="39" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="26" cat="np" end="29" id="40" rel="obj1">
+            <node begin="26" end="27" getal="mv" graad="basis" id="41" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kind" word="kinderen"/>
+            <node begin="27" cat="pp" end="29" id="42" rel="mod">
+              <node begin="27" end="28" id="43" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="28" end="29" id="44" lemma="vijf" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="vijf" word="vijf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="29" end="30" id="45" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Van de laatsten stuurde 71 percent een kind alleen op weg als het zeven was , jongere moeders ( 61 percent ) waagden het al met kinderen van vijf .</sentence>
+</alpino_ds>

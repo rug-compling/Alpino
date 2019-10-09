@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="8" end="9" frame="punct(punt_komma)" id="1" lcat="punct" pos="punct" rel="--" root=";" sense=";" special="punt_komma" word=";"/>
+    <node begin="0" cat="du" end="13" id="2" rel="--">
+      <node begin="0" cat="sv1" end="8" id="3" rel="dp">
+        <node begin="0" end="1" frame="verb(hebben,subjunctive,vp)" id="4" infl="subjunctive" lcat="sv1" pos="verb" rel="hd" root="gelief" sc="vp" sense="gelief" word="Gelieve"/>
+        <node begin="1" cat="ti" end="8" id="5" rel="vc">
+          <node begin="6" end="7" frame="complementizer(te)" id="6" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+          <node begin="1" cat="inf" end="8" id="7" rel="body">
+            <node begin="1" cat="np" end="5" id="8" rel="obj1">
+              <node begin="1" end="2" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="9" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+              <node aform="base" begin="2" end="3" frame="adjective(e)" id="10" infl="e" lcat="ap" pos="adj" rel="mod" root="volledig" sense="volledig" vform="adj" word="volledige"/>
+              <node aform="base" begin="3" end="4" frame="adjective(end(both))" id="11" infl="no_e" lcat="ppres" pos="adj" rel="mod" root="begeleid" sense="begeleid" vform="gerund" word="begeleidend"/>
+              <node begin="4" end="5" frame="noun(het,count,sg)" gen="het" id="12" lcat="np" num="sg" pos="noun" rel="hd" root="document" sense="document" word="document"/>
+            </node>
+            <node begin="5" end="6" frame="particle(toe)" id="13" lcat="part" pos="part" rel="svp" root="toe" sense="toe" word="toe"/>
+            <node begin="7" end="8" frame="verb(hebben,inf,part_transitive(toe))" id="14" infl="inf" lcat="inf" pos="verb" rel="hd" root="voeg_toe" sc="part_transitive(toe)" sense="voeg_toe" word="voegen"/>
+          </node>
+        </node>
+      </node>
+      <node begin="9" cat="conj" end="13" id="15" rel="dp">
+        <node begin="9" end="10" frame="left_conj(als)" id="16" lcat="vg" pos="vg" rel="crd" root="zowel" sense="zowel" special="left" word="zowel"/>
+        <node begin="10" end="11" frame="noun(het,count,sg)" gen="het" id="17" lcat="np" num="sg" pos="noun" rel="cnj" root="kennisgeving_formulier" sense="kennisgeving_formulier" word="kennisgevingsformulier"/>
+        <node begin="11" end="12" frame="right_conj(als)" id="18" lcat="vg" pos="vg" rel="crd" root="als" sense="als" special="right" word="als"/>
+        <node begin="12" end="13" frame="noun(het,count,sg)" gen="het" id="19" lcat="np" num="sg" pos="noun" rel="cnj" root="overbrenging_formulier" sense="overbrenging_formulier" word="overbrengingsformulier"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Gelieve het volledige begeleidend document toe te voegen ; zowel kennisgevingsformulier als overbrengingsformulier</sentence>
+  <comments>
+    <comment>Q#85|Gelieve het volledige begeleidend document toe te voegen ; zowel kennisgevingsformulier als overbrengingsformulier|1|1|-0.04006968882151374</comment>
+  </comments>
+</alpino_ds>

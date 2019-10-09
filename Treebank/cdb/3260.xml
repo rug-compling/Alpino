@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="14" end="15" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="19" id="2" rel="--">
+      <node begin="0" cat="np" end="4" id="3" index="1" rel="su">
+        <node begin="0" end="1" id="4" lemma="minstens" pos="adv" postag="BW()" pt="bw" rel="mod" root="minstens" word="Minstens"/>
+        <node begin="1" end="2" id="5" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="drie" word="drie"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="6" lemma="miljoen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="miljoen" word="miljoen"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="arbeider" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="arbeider" word="arbeiders"/>
+      </node>
+      <node begin="4" end="5" id="8" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="19" id="9" rel="vc">
+        <node begin="0" end="4" id="10" index="1" rel="obj1"/>
+        <node begin="5" buiging="zonder" end="6" id="11" lemma="betrekken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="betrek" word="betrokken" wvorm="vd"/>
+        <node begin="6" cat="pp" end="19" id="12" rel="pc">
+          <node begin="6" end="7" id="13" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+          <node begin="7" cat="np" end="19" id="14" rel="obj1">
+            <node begin="7" cat="conj" end="10" id="15" rel="mod">
+              <node begin="7" buiging="met-e" end="8" graad="basis" id="16" lemma="nationaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="nationaal" word="nationale"/>
+              <node begin="8" conjtype="neven" end="9" id="17" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="9" buiging="met-e" end="10" graad="basis" id="18" lemma="plaatselijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="plaatselijk" word="plaatselijke"/>
+            </node>
+            <node begin="10" end="11" getal="mv" graad="basis" id="19" lemma="staking" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="staking" word="stakingen"/>
+            <node begin="11" cat="conj" end="19" id="20" rel="mod">
+              <node begin="11" cat="pp" end="14" id="21" rel="cnj">
+                <node begin="11" end="12" id="22" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="12" cat="np" end="14" id="23" rel="obj1">
+                  <node begin="12" buiging="met-e" end="13" graad="basis" id="24" lemma="kort" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="kort" word="korte"/>
+                  <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="25" lemma="duur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="duur" word="duur"/>
+                </node>
+              </node>
+              <node begin="15" conjtype="neven" end="16" id="26" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+              <node begin="16" cat="pp" end="19" id="27" rel="cnj">
+                <node begin="16" end="17" id="28" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="17" cat="np" end="19" id="29" rel="obj1">
+                  <node begin="17" buiging="met-e" end="18" graad="basis" id="30" lemma="ongewoon" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ongewoon" word="ongewone"/>
+                  <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="31" lemma="hevigheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hevigheid" word="hevigheid"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="32" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Minstens drie miljoen arbeiders waren betrokken bij nationale en plaatselijke stakingen van korte duur , maar van ongewone hevigheid .</sentence>
+</alpino_ds>

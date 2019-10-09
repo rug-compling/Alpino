@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="0" cat="conj" end="21" id="1" rel="--">
+      <node begin="0" cat="smain" end="9" id="2" rel="cnj">
+        <node begin="0" cat="pp" end="3" id="3" rel="mod">
+          <node begin="0" end="1" id="4" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+          <node begin="1" cat="np" end="3" id="5" rel="obj1">
+            <node begin="1" end="2" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="7" lemma="Frans" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Frans" word="Frans"/>
+          </node>
+        </node>
+        <node begin="3" end="4" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+        <node begin="4" cat="np" end="6" id="9" rel="su">
+          <node begin="4" buiging="met-e" end="5" graad="basis" id="10" lemma="buitenlands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="buitenlands" word="buitenlandse"/>
+          <node begin="5" end="6" getal="mv" graad="basis" id="11" lemma="woord" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="woord" word="woorden"/>
+        </node>
+        <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="officieel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="officieel" word="officieel"/>
+        <node begin="7" cat="ap" end="9" id="13" rel="predc">
+          <node begin="7" end="8" id="14" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="8" buiging="zonder" end="9" graad="basis" id="15" lemma="welkom" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="welkom" word="welkom"/>
+        </node>
+      </node>
+      <node begin="9" conjtype="neven" end="10" id="16" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="10" cat="smain" end="21" id="17" rel="cnj">
+        <node begin="12" end="13" id="18" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+        <node begin="17" cat="np" end="20" id="19" index="1" rel="su">
+          <node begin="17" end="18" id="20" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="18" buiging="zonder" end="19" graad="basis" id="21" lemma="Ijslands" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="IJslands" word="IJslands"/>
+          <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="22" lemma="woord" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="woord" word="woord"/>
+        </node>
+        <node begin="10" cat="ppart" end="21" id="23" rel="vc">
+          <node begin="10" cat="pp" end="12" id="24" rel="mod">
+            <node begin="10" end="11" id="25" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="26" lemma="IJsland" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="IJsland" word="IJsland"/>
+          </node>
+          <node begin="13" cat="pp" end="17" id="27" rel="pc">
+            <node begin="13" end="14" id="28" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+            <node begin="14" cat="np" end="17" id="29" rel="obj1">
+              <node begin="14" buiging="zonder" end="15" id="30" lemma="elk" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="elk" vwtype="onbep" word="elk"/>
+              <node begin="15" buiging="zonder" end="16" graad="basis" id="31" lemma="nieuw" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="nieuw" word="nieuw"/>
+              <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="32" lemma="begrip" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="begrip" word="begrip"/>
+            </node>
+          </node>
+          <node begin="17" end="20" id="33" index="1" rel="obj1"/>
+          <node begin="20" buiging="zonder" end="21" id="34" lemma="bedenken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bedenk" word="bedacht" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>In het Frans zijn buitenlandse woorden officieel niet welkom en op IJsland wordt voor elk nieuw begrip een IJslands woord bedacht .</sentence>
+</alpino_ds>

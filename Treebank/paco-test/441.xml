@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="smain" end="15" id="1" rel="--">
+      <node begin="0" cat="np" end="8" id="2" index="1" rel="su">
+        <node begin="0" end="1" frame="determiner(alle,nwh,mod,pro,nparg)" id="3" infl="alle" lcat="detp" pos="det" rel="det" root="alle" sense="alle" wh="nwh" word="alle"/>
+        <node begin="1" cat="ppart" end="6" id="4" rel="mod">
+          <node begin="1" cat="pp" end="5" id="5" rel="pc">
+            <node begin="1" end="2" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="6" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+            <node begin="2" cat="np" end="5" id="7" rel="obj1">
+              <node begin="2" end="3" frame="determiner(een)" id="8" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+              <node aform="base" begin="3" end="4" frame="adjective(stof)" id="9" infl="stof" lcat="ap" pos="adj" rel="mod" root="zelfde" sense="zelfde" vform="adj" word="zelfde"/>
+              <node begin="4" end="5" frame="noun(het,count,sg)" gen="het" id="10" lcat="np" num="sg" pos="noun" rel="hd" root="gebruik" sense="gebruik" word="gebruik"/>
+            </node>
+          </node>
+          <node aform="base" begin="5" end="6" frame="adjective(ge_e,pp(voor))" id="11" infl="e" lcat="ppart" pos="adj" rel="hd" root="bestemd" sc="pp(voor)" sense="bestemd-voor" vform="psp" word="bestemde"/>
+        </node>
+        <node aform="base" begin="6" end="7" frame="adjective(e)" id="12" infl="e" lcat="ap" pos="adj" rel="mod" root="kern_technisch" sense="kern_technisch" vform="adj" word="kerntechnische"/>
+        <node begin="7" end="8" frame="noun(het,count,pl)" gen="het" id="13" lcat="np" num="pl" pos="noun" rel="hd" root="materiaal" sense="materiaal" word="materialen"/>
+      </node>
+      <node begin="8" end="9" frame="verb('hebben/zijn',pl,modifier(aux(inf)))" id="14" infl="pl" lcat="smain" pos="verb" rel="hd" root="moet" sc="modifier(aux(inf))" sense="moet" tense="present" word="moeten"/>
+      <node begin="0" cat="inf" end="15" id="15" rel="vc">
+        <node begin="0" end="8" id="16" index="1" rel="su"/>
+        <node begin="9" end="10" frame="verb(unacc,inf,passive)" id="17" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+        <node begin="0" cat="ppart" end="15" id="18" rel="vc">
+          <node begin="0" end="8" id="19" index="1" rel="obj1"/>
+          <node begin="10" end="11" frame="verb(hebben,psp,np_pc_pp(met))" id="20" infl="psp" lcat="ppart" pos="verb" rel="hd" root="identificeer" sc="np_pc_pp(met)" sense="identificeer-met" word="geidentificeerd"/>
+          <node begin="11" cat="pp" end="15" id="21" rel="pc">
+            <node begin="11" end="12" frame="preposition(met,[mee,[en,al]])" id="22" lcat="pp" pos="prep" rel="hd" root="met" sense="met" word="met"/>
+            <node begin="12" cat="np" end="15" id="23" rel="obj1">
+              <node begin="12" end="13" frame="determiner(een)" id="24" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+              <node aform="base" begin="13" end="14" frame="adjective(stof)" id="25" infl="stof" lcat="ap" pos="adj" rel="mod" root="zelfde" sense="zelfde" vform="adj" word="zelfde"/>
+              <node begin="14" end="15" frame="noun(de,count,sg)" gen="de" id="26" lcat="np" num="sg" pos="noun" rel="hd" root="code" sense="code" word="code"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" frame="punct(punt_komma)" id="27" lcat="punct" pos="punct" rel="--" root=";" sense=";" special="punt_komma" word=";"/>
+  </node>
+  <sentence>alle voor een zelfde gebruik bestemde kerntechnische materialen moeten worden geidentificeerd met een zelfde code ;</sentence>
+  <comments>
+    <comment>Q#441|alle voor een zelfde gebruik bestemde kerntechnische materialen moeten worden geidentificeerd met een zelfde code ;|1|1|-7.0873688473144565</comment>
+  </comments>
+</alpino_ds>

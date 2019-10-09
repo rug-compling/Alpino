@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="np" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+      <node begin="1" cat="detp" end="4" id="3" rel="det">
+        <node begin="1" cat="mwu" end="3" id="4" rel="mod">
+          <node begin="1" end="2" id="5" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mwp" root="nog" word="nog"/>
+          <node begin="2" buiging="zonder" end="3" id="6" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="adv" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="mwp" root="geen" vwtype="onbep" word="geen"/>
+        </node>
+        <node begin="3" end="4" id="7" lemma="honderd" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="honderd" word="honderd"/>
+      </node>
+      <node begin="4" buiging="met-e" end="5" getal-n="mv-n" graad="basis" id="8" lemma="aanwezig" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" root="aanwezig" word="aanwezigen"/>
+    </node>
+    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De nog geen honderd aanwezigen .</sentence>
+</alpino_ds>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welke"/>
+        <node begin="1" end="2" getal="mv" graad="dim" id="4" lemma="lied" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" root="liedje" word="liedjes"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="laten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="laat" word="laat" wvorm="pv"/>
+      <node begin="3" end="4" getal="ev" id="6" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj2" root="me" status="red" vwtype="pr" word="me"/>
+      <node begin="4" buiging="zonder" end="5" graad="basis" id="7" lemma="koud" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="koud" word="koud"/>
+    </node>
+  </node>
+  <sentence>Welke liedjes laat me koud</sentence>
+</alpino_ds>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="cp" end="6" id="1" rel="--">
+      <node begin="0" conjtype="onder" end="1" id="2" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="Zoals"/>
+      <node begin="1" cat="ssub" end="6" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="blijken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="blijk" word="blijkt" wvorm="pv"/>
+        <node begin="2" cat="pp" end="6" id="5" rel="pc">
+          <node begin="2" end="3" id="6" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+          <node begin="3" cat="np" end="6" id="7" rel="obj1">
+            <node begin="3" end="4" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="4" buiging="met-e" end="5" graad="basis" id="9" lemma="indrukwekkend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="indrukwekkend" word="indrukwekkende"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="slotmonoloog" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="monoloog" word="slotmonoloog"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Zoals blijkt uit een indrukwekkende slotmonoloog .</sentence>
+</alpino_ds>

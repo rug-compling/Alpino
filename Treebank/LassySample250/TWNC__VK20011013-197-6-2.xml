@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="smain" end="3" id="1" rel="--">
+      <node begin="0" end="1" frame="er_vp_adverb" getal="getal" id="2" lcat="advp" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" sense="er" special="er" status="red" vwtype="aanw" word="Er"/>
+      <node begin="1" end="2" frame="verb(unacc,sg_heeft,intransitive)" id="3" infl="sg_heeft" lcat="smain" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="intransitive" sense="ben" tense="present" word="is" wvorm="pv"/>
+      <node begin="2" end="3" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="4" lcat="np" lemma="verschil" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="su" root="verschil" sense="verschil" word="verschil"/>
+    </node>
+    <node begin="3" end="4" frame="punct(punt)" id="5" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Er is verschil .</sentence>
+  <comments>
+    <comment>Q#VK20011013-197-6-2|Er is verschil .|1|1|-0.06503811253005301</comment>
+  </comments>
+</alpino_ds>

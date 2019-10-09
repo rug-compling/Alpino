@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="zuiderbuurtbewoner" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="buurtbewoners" word="Zuiderbuurtbewoners"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="winnen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="win" word="wonnen" wvorm="pv"/>
+      <node begin="3" cat="np" end="5" id="6" rel="obj1">
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="8" lemma="oefenduel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="duel" word="oefenduel"/>
+      </node>
+      <node begin="5" buiging="zonder" end="6" id="9" lemma="verdienen" pos="adv" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="mod" root="verdiend" word="verdiend" wvorm="vd"/>
+      <node begin="6" cat="pp" end="8" id="10" rel="mod">
+        <node begin="6" end="7" id="11" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+        <node begin="7" end="8" id="12" lemma="2-0" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="2-0" word="2-0"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De Zuiderbuurtbewoners wonnen dit oefenduel verdiend met 2-0 .</sentence>
+</alpino_ds>

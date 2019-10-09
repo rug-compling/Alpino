@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="2" end="3" frame="verb('hebben/zijn',pl,modifier(aux(inf)))" id="2" infl="pl" lcat="smain" pos="verb" rel="hd" root="moet" sc="modifier(aux(inf))" sense="moet" tense="present" word="moeten"/>
+      <node begin="3" cat="np" end="5" id="3" index="1" rel="su">
+        <node begin="3" end="4" frame="determiner(de)" id="4" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node begin="4" end="5" frame="noun(de,count,pl)" gen="de" id="5" lcat="np" num="pl" pos="noun" rel="hd" root="mededeling" sense="mededeling" word="mededelingen"/>
+      </node>
+      <node begin="0" cat="inf" end="12" id="6" rel="vc">
+        <node begin="0" cat="cp" end="2" id="7" rel="mod">
+          <node begin="0" end="1" frame="complementizer(a)" id="8" lcat="cp" pos="comp" rel="cmp" root="zo" sc="a" sense="zo" word="Zo"/>
+          <node aform="base" begin="1" end="2" frame="adjective(no_e(adv))" id="9" infl="no_e" lcat="ap" pos="adj" rel="body" root="mogelijk" sense="mogelijk" vform="adj" word="mogelijk"/>
+        </node>
+        <node begin="3" end="5" id="10" index="1" rel="su"/>
+        <node begin="5" end="6" frame="fixed_part([betrekking])" id="11" lcat="fixed" pos="fixed" rel="svp" root="betrekking" sense="betrekking" word="betrekking"/>
+        <node begin="6" end="7" frame="verb(hebben,inf,fixed([{[[betrekking],pc(op)]}],no_passive))" id="12" infl="inf" lcat="inf" pos="verb" rel="hd" root="heb" sc="fixed([{[[betrekking],pc(op)]}],no_passive)" sense="betrekking-heb-op" word="hebben"/>
+        <node begin="7" cat="pp" end="12" id="13" rel="pc">
+          <node begin="7" end="8" frame="preposition(op,[af,na])" id="14" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+          <node begin="8" cat="np" end="12" id="15" rel="obj1">
+            <node begin="8" end="9" frame="determiner(de)" id="16" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node aform="base" begin="9" end="10" frame="adjective(ende(padv))" id="17" infl="e" lcat="ppres" pos="adj" rel="mod" root="volg" sense="volg" vform="gerund" word="volgende"/>
+            <node begin="10" end="11" frame="number(hoofd(pl_num))" id="18" infl="pl_num" lcat="detp" pos="num" rel="det" root="twee" sense="twee" special="hoofd" word="twee"/>
+            <node begin="11" end="12" frame="tmp_noun(het,count,pl)" gen="het" id="19" lcat="np" num="pl" pos="noun" rel="hd" root="jaar" sense="jaar" special="tmp" word="jaren"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" frame="punct(punt)" id="20" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Zo mogelijk moeten de mededelingen betrekking hebben op de volgende twee jaren .</sentence>
+  <comments>
+    <comment>Q#435|Zo mogelijk moeten de mededelingen betrekking hebben op de volgende twee jaren .|1|1|-7.811925104353435</comment>
+  </comments>
+</alpino_ds>

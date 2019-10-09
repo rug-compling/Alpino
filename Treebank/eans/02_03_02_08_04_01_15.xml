@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="sv1" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="Is" wvorm="pv"/>
+      <node begin="1" cat="np" end="3" id="3" index="1" rel="su">
+        <node begin="1" buiging="zonder" end="2" id="4" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="pijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pijn" word="pijn"/>
+      </node>
+      <node begin="1" cat="ppart" end="6" id="6" rel="vc">
+        <node begin="1" end="3" id="7" index="1" rel="su"/>
+        <node begin="3" cat="ap" end="5" id="8" rel="mod">
+          <node begin="3" end="4" id="9" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+          <node begin="4" end="5" id="10" lemma="vaak" pos="adj" postag="BW()" pt="bw" rel="hd" root="vaak" word="vaker"/>
+        </node>
+        <node begin="5" buiging="zonder" end="6" id="11" lemma="optreden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="treed_op" word="opgetreden" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Is die pijn al vaker opgetreden ?</sentence>
+</alpino_ds>

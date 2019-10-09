@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="15" end="16" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="smain" end="24" id="2" rel="--">
+      <node begin="0" cat="np" end="5" id="3" rel="su">
+        <node begin="0" buiging="zonder" end="1" id="4" lemma="standaardiseren" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="mod" root="gestandaardiseerd" word="Gestandaardiseerd" wvorm="vd"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="onderzoek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="onderzoek" word="onderzoek"/>
+        <node begin="2" cat="pp" end="5" id="6" rel="mod">
+          <node begin="2" end="3" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="3" cat="np" end="5" id="8" rel="obj1">
+            <node begin="3" end="4" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" end="5" getal="mv" graad="basis" id="10" lemma="oog" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="oog" word="ogen"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" id="11" lemma="gebeuren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="gebeur" word="gebeurt" wvorm="pv"/>
+      <node begin="6" cat="pp" end="11" id="12" rel="mod">
+        <node begin="6" end="7" id="13" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="7" cat="conj" end="11" id="14" rel="obj1">
+          <node begin="7" cat="np" end="9" id="15" rel="cnj">
+            <node begin="7" end="8" id="16" index="1" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="8" end="9" id="17" lemma="zuigelingen-" pos="prefix" postag="SPEC(afgebr)" pt="spec" rel="hd" root="zuigelingen" spectype="afgebr" word="zuigelingen-"/>
+          </node>
+          <node begin="9" conjtype="neven" end="10" id="18" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="7" cat="np" end="11" id="19" rel="cnj">
+            <node begin="7" end="8" id="20" index="1" rel="det"/>
+            <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="21" lemma="peuterleeftijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="peuter_leeftijd" word="peuterleeftijd"/>
+          </node>
+        </node>
+      </node>
+      <node begin="11" cat="pp" end="15" id="22" rel="mod">
+        <node begin="11" end="12" id="23" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="volgens"/>
+        <node begin="12" cat="np" end="15" id="24" rel="obj1">
+          <node begin="12" end="13" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="13" buiging="met-e" end="14" graad="basis" id="26" lemma="zogenaamd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="zogenaamd" word="zogenaamde"/>
+          <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="27" lemma="VOV-methode" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="VOV_methode" word="VOV-methode"/>
+        </node>
+      </node>
+      <node begin="16" cat="ppart" end="24" id="28" rel="mod">
+        <node begin="16" cat="mwu" end="18" id="29" rel="mod">
+          <node begin="16" end="17" id="30" lemma="met" pos="comp" postag="VZ(init)" pt="vz" rel="mwp" root="met" vztype="init" word="met"/>
+          <node begin="17" end="18" getal="ev" graad="basis" id="31" lemma="naam" naamval="dat" ntype="soort" pos="comp" postag="N(soort,ev,basis,dat)" pt="n" rel="mwp" root="name" word="name"/>
+        </node>
+        <node begin="18" buiging="zonder" end="19" id="32" lemma="richten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gericht" word="gericht" wvorm="vd"/>
+        <node begin="19" cat="pp" end="24" id="33" rel="pc">
+          <node begin="19" end="20" id="34" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="20" cat="np" end="24" id="35" rel="obj1">
+            <node begin="20" buiging="met-e" end="21" graad="basis" id="36" lemma="vroeg" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vroeg" word="vroege"/>
+            <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="37" lemma="onderkenning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="onderkenning" word="onderkenning"/>
+            <node begin="22" cat="pp" end="24" id="38" rel="mod">
+              <node begin="22" end="23" id="39" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="40" lemma="amblyopie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="amblyopie" word="amblyopie"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="41" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="25" end="26" id="42" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Gestandaardiseerd onderzoek van de ogen gebeurt op de zuigelingen- en peuterleeftijd volgens de zogenaamde VOV-methode ( met name gericht op vroege onderkenning van amblyopie ) .</sentence>
+</alpino_ds>

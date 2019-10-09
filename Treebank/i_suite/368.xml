@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" cat="mwu" end="3" id="4" rel="hd">
+          <node begin="1" end="2" getal="mv" graad="basis" id="5" lemma="personeel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="personeels" word="personeels"/>
+          <node begin="2" buiging="zonder" end="3" graad="basis" id="6" lemma="bestand" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="bestand" word="bestand"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" lemma="bestaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="besta" word="bestaat" wvorm="pv"/>
+    </node>
+    <node begin="4" end="5" id="8" lemma="..." pos="punct" postag="LET()" pt="let" rel="--" root="..." word="..."/>
+  </node>
+  <sentence>Het personeels bestand bestaat ...</sentence>
+</alpino_ds>

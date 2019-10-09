@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+    <node begin="0" cat="du" end="7" id="2" rel="--">
+      <node begin="0" cat="smain" end="5" id="3" rel="nucl">
+        <node begin="1" end="2" id="4" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+        <node begin="2" end="3" getal="ev" id="5" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+        <node begin="3" end="4" getal="ev" id="6" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="wat" status="vol" vwtype="onbep" word="wat"/>
+        <node begin="0" cat="ap" end="5" id="7" rel="predc">
+          <node begin="0" end="1" id="8" lemma="daarvoor" pos="pp" postag="BW()" pt="bw" rel="pc" root="daarvoor" word="Daarvoor"/>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="9" lemma="nodig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="nodig" word="nodig"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="10" lemma="hahahaha" pos="tag" postag="TSW()" pt="tsw" rel="tag" root="hahahaha" word="hahahaha"/>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Daarvoor heb je wat nodig ! hahahaha .</sentence>
+</alpino_ds>

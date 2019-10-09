@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="met-e" end="1" getal="mv" graad="basis" id="3" lemma="beide" naamval="stan" pdtype="grad" pos="det" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,mv,basis)" pt="vnw" rel="det" root="beide" vwtype="onbep" word="Beide"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="anti_virus_scanner" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="anti_virus_scanner" word="antivirusscanners"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="6" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="goed" word="goed"/>
+    </node>
+    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Beide antivirusscanners zijn goed .</sentence>
+</alpino_ds>

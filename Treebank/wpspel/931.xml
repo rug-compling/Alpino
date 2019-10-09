@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="12" end="13" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="whq" end="16" id="2" rel="--">
+      <node begin="0" end="1" id="3" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="16" id="4" rel="body">
+        <node begin="0" end="1" id="5" index="1" rel="predc"/>
+        <node begin="1" end="2" id="6" lemma="noemen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="noem" word="noemt" wvorm="pv"/>
+        <node begin="2" end="3" genus="masc" getal="ev" id="7" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="men"/>
+        <node begin="3" cat="pp" end="6" id="8" rel="mod">
+          <node begin="3" end="4" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="4" cat="np" end="6" id="10" rel="obj1">
+            <node begin="4" end="5" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="psychologie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="psychologie" word="psychologie"/>
+          </node>
+        </node>
+        <node begin="6" cat="np" end="16" id="13" rel="obj1">
+          <node begin="6" end="7" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="7" buiging="met-e" end="8" graad="basis" id="15" lemma="obsessioneel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="obsessionele" word="obsessionele"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="16" lemma="angst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="angst" word="angst"/>
+          <node begin="9" cat="pp" end="16" id="17" rel="mod">
+            <node begin="9" end="10" id="18" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+            <node begin="10" cat="conj" end="16" id="19" rel="obj1">
+              <node begin="10" cat="np" end="12" id="20" rel="cnj">
+                <node begin="10" buiging="met-e" end="11" graad="basis" id="21" index="2" lemma="bepalen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="bepaald" word="bepaalde"/>
+                <node begin="11" end="12" getal="mv" graad="basis" id="22" lemma="voorwerp" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="voorwerp" word="voorwerpen"/>
+              </node>
+              <node begin="10" cat="np" end="14" id="23" rel="cnj">
+                <node begin="10" end="11" id="24" index="2" rel="mod"/>
+                <node begin="13" end="14" getal="mv" graad="basis" id="25" lemma="dier" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dier" word="dieren"/>
+              </node>
+              <node begin="14" conjtype="neven" end="15" id="26" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+              <node begin="10" cat="np" end="16" id="27" rel="cnj">
+                <node begin="10" end="11" id="28" index="2" rel="mod"/>
+                <node begin="15" end="16" getal="mv" graad="basis" id="29" lemma="toestand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="toestand" word="toestanden"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="30" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe noemt men in de psychologie een obsessionele angst voor bepaalde voorwerpen , dieren of toestanden ?</sentence>
+</alpino_ds>

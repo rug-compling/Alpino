@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="np" end="7" id="1" rel="--">
+      <node aform="super" begin="0" end="1" id="2" infl="e" pos="adj" rel="mod" root="belangrijk" vform="adj" word="Belangrijkste"/>
+      <node begin="1" end="2" gen="het" id="3" num="pl" pos="noun" rel="hd" root="resultaat" word="resultaten"/>
+      <node begin="2" cat="pp" end="7" id="4" rel="mod">
+        <node begin="2" end="3" id="5" pos="prep" rel="hd" root="van" word="van"/>
+        <node begin="3" cat="np" end="7" id="6" rel="obj1">
+          <node begin="3" end="4" id="7" infl="de" pos="det" rel="det" root="de" word="de"/>
+          <node begin="4" end="5" gen="de" id="8" num="pl" pos="noun" rel="hd" root="geval_studie" word="gevalstudies"/>
+          <node begin="5" cat="pp" end="7" id="9" rel="mod">
+            <node begin="5" end="6" id="10" pos="prep" rel="hd" root="op" word="op"/>
+            <node begin="6" end="7" id="11" neclass="LOC" num="both" pos="name" rel="obj1" root="Landniveau" word="Landniveau"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Belangrijkste resultaten van de gevalstudies op Landniveau</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

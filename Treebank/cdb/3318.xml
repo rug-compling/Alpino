@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="35" id="0" rel="top">
+    <node begin="17" end="18" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="34" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="2." pos="num" postag="SPEC(symb)" pt="spec" rel="tag" root="2." spectype="symb" word="2."/>
+      <node begin="1" cat="conj" end="34" id="4" rel="nucl">
+        <node begin="1" cat="smain" end="17" id="5" rel="cnj">
+          <node begin="1" cat="mwu" end="4" id="6" rel="mod">
+            <node begin="1" end="2" id="7" lemma="op" pos="pp" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+            <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="8" lemma="grond" naamval="stan" ntype="soort" pos="pp" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="grond" word="grond"/>
+            <node begin="3" end="4" id="9" lemma="daarvan" pos="pp" postag="BW()" pt="bw" rel="mwp" root="daarvan" word="daarvan"/>
+          </node>
+          <node begin="4" end="5" id="10" lemma="vervallen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="verval" word="vervalt" wvorm="pv"/>
+          <node begin="5" cat="pp" end="11" id="11" rel="mod">
+            <node begin="5" end="6" id="12" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+            <node begin="6" cat="np" end="11" id="13" rel="obj1">
+              <node begin="6" buiging="zonder" end="7" graad="basis" id="14" lemma="voortijdig" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="voortijdig" word="voortijdig"/>
+              <node begin="7" buiging="zonder" end="8" getal-n="zonder-n" id="15" lemma="overlijden" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="overlijden" word="overlijden" wvorm="inf"/>
+              <node begin="8" cat="pp" end="11" id="16" rel="mod">
+                <node begin="8" end="9" id="17" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="9" cat="np" end="11" id="18" rel="obj1">
+                  <node begin="9" end="10" id="19" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="20" lemma="deelnemer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="deelnemer" word="deelnemer"/>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="11" cat="np" end="13" id="21" index="1" rel="su">
+            <node begin="11" end="12" id="22" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="23" lemma="spaargeld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="spaargeld" word="spaargeld"/>
+          </node>
+          <node begin="13" end="14" id="24" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="14" cat="pp" end="17" id="25" rel="pc">
+            <node begin="14" end="15" id="26" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+            <node begin="15" cat="np" end="17" id="27" rel="obj1">
+              <node begin="15" end="16" id="28" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="29" lemma="verzekeringsmaatschappij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verzekeringsmaatschappij" word="verzekeringsmaatschappij"/>
+            </node>
+          </node>
+        </node>
+        <node begin="18" conjtype="neven" end="19" id="30" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+        <node begin="11" cat="smain" end="34" id="31" rel="cnj">
+          <node begin="11" end="13" id="32" index="1" rel="su"/>
+          <node begin="19" end="20" id="33" lemma="blijven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="blijf" word="blijft" wvorm="pv"/>
+          <node begin="20" cat="pp" end="34" id="34" rel="ld">
+            <node begin="20" end="21" id="35" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="21" cat="np" end="34" id="36" rel="obj1">
+              <node begin="21" end="22" id="37" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="38" lemma="bezit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bezit" word="bezit"/>
+              <node begin="23" cat="pp" end="34" id="39" rel="mod">
+                <node begin="23" end="24" id="40" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="24" cat="conj" end="34" id="41" rel="obj1">
+                  <node begin="24" cat="np" end="26" id="42" rel="cnj">
+                    <node begin="24" end="25" id="43" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="44" lemma="stichting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stichting" word="stichting"/>
+                  </node>
+                  <node begin="26" cat="mwu" end="29" id="45" rel="crd">
+                    <node begin="26" conjtype="neven" end="27" id="46" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
+                    <node begin="27" end="28" id="47" lemma="/" pos="vg" postag="LET()" pt="let" rel="mwp" root="/" word="/"/>
+                    <node begin="28" conjtype="neven" end="29" id="48" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="mwp" root="of" word="of"/>
+                  </node>
+                  <node begin="29" cat="np" end="34" id="49" rel="cnj">
+                    <node begin="29" end="30" id="50" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="30" end="31" getal="mv" graad="basis" id="51" lemma="erfgenaam" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="erfgenaam" word="erfgenamen"/>
+                    <node begin="31" cat="pp" end="34" id="52" rel="mod">
+                      <node begin="31" end="32" id="53" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                      <node begin="32" cat="np" end="34" id="54" rel="obj1">
+                        <node begin="32" end="33" id="55" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                        <node begin="33" end="34" genus="zijd" getal="ev" graad="basis" id="56" lemma="deelnemer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="deelnemer" word="deelnemer"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="34" end="35" id="57" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>2. op grond daarvan vervalt bij voortijdig overlijden van de deelnemer het spaargeld niet aan de verzekeringsmaatschappij , maar blijft in het bezit van de stichting en / of de erfgenamen van de deelnemer .</sentence>
+</alpino_ds>

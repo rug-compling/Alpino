@@ -1,0 +1,95 @@
+* you *need* to use the UTF-8 language environment. This is, because there
+is some internal communication between Prolog and the foreign language 
+interface which at the moment only works under this locale.
+
+* in order to build/use the SICStus version, you need to set the following
+SICStus Prolog variables:
+export SP_CTYPE=utf8
+export SP_CSETLEN=212
+
+* you need to set the ALPINO_HOME environment variable to the
+directory that contains the Alpino stuff
+
+This should be it.
+
+You may need to install additional packages, e.g. the boost library 
+(is mostly part of your setup anyhow).
+
+
+==========================================================================
+
+potential issues:
+
+* tcl/tk problems:
+
+  - make sure you have the tcl/tk dynamic libraries installed, typically
+    the files you need are
+      /usr/lib/libtk8.4.so
+      /usr/lib/libtcl8.4.so
+
+  Gerlof Bouma reports that he had to create symbolic links
+      /usr/lib/libtcl8.4.so.0 --> /usr/lib/libtcl8.4.so
+      /usr/lib/libtk8.4.so.0 --> /usr/lib/libtk8.4.so
+
+
+if you have tcl/tk 8.4 installed, but you get an error that no
+usable init.tcl could be found, then it may be the case that your
+tcl and tk library scripts are not in /usr/lib/tcl8.4 and /usr/lib/tk8.4
+but somewhere else. For instance, for Ubuntu these are located in
+/usr/share/tcltk/tcl8.4 and /usr/share/tcltk/tk8.4. In such cases, define
+the following environment variables to point to the right directory, e.g.:
+
+export TCL_LIBRARY=/usr/share/tcltk/tcl8.4
+export TK_LIBRARY=/usr/share/tcltk/tk8.4
+
+
+* error:
+
+Resource error: insufficient memory
+
+This sometimes appears to happen during startup, even if the system has 
+enough memory. Try again (even 3 or 4 times) seems to solve this weird issue. 
+
+
+* treebank tools
+
+  for the treebank tools you need at least the following libraries:
+      libxml2
+      libxslt and libexslt
+      libpopt
+      libz
+
+
+you will find the relevant scripts in the Alpino/bin directory
+
+====================================================================
+
+* if you want to re-compile from sources:
+
+  be prepared for some work....
+
+
+  - make sure you have latest SICStus 3 installed, including the 
+    tcl/tk libraries. Alpino is not compatible with SICStus 4. 
+
+  - make sure you have latest version of Jan Daciuk's s_fsa tools
+    ftp://ftp.pg.gda.pl/pub/software/xtras-PG/fsa/fsa_current.tar.gz
+
+  - make realclean
+
+  - [optional] edit Makefile.defs
+               edit Hdrug/Makefile.defs
+    for any non-default settings
+
+  - make
+    make install
+
+====================================================================
+
+  - to build Alpino on Mac OS X or Windows, set the 'PLATFORM'
+    variable to 'darwin' or 'windows' respectively in Makefile.defs
+
+  - building Alpino on Windows requires Visual Studio 2005
+
+
+=====================================================================

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="np" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+      <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="3" lemma="plan" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="plan" word="plan"/>
+      <node begin="2" cat="rel" end="6" id="4" rel="mod">
+        <node begin="2" end="3" getal="getal" id="5" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="noun" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" status="vol" vwtype="vb" word="waar"/>
+        <node begin="2" cat="ssub" end="6" id="6" rel="body">
+          <node begin="2" end="3" id="7" index="1" rel="ld"/>
+          <node begin="3" end="4" id="8" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="mod" root="altijd" word="altijd"/>
+          <node begin="4" end="5" getal="ev" id="9" lemma="iets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="iets" status="vol" vwtype="onbep" word="iets"/>
+          <node begin="5" end="6" id="10" lemma="tussenkomen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom_tussen" word="tussenkomt" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Het plan waar altijd iets tussenkomt</sentence>
+</alpino_ds>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="whq" end="4" id="1" rel="--">
+      <node begin="0" end="1" frame="wh_tmp_adverb" id="2" index="1" lcat="advp" lemma="wanneer" pos="adv" postag="BW()" pt="bw" rel="whd" root="wanneer" sense="wanneer" special="tmp" wh="ywh" word="Wanneer"/>
+      <node begin="0" cat="sv1" end="4" id="3" rel="body">
+        <node begin="1" end="2" frame="verb(unacc,sg3,passive)" id="4" infl="sg3" lcat="sv1" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt" wvorm="pv"/>
+        <node begin="2" end="3" frame="proper_name(both,'PER')" id="5" index="2" lcat="np" lemma="Pegasys" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="su" root="Pegasys" sense="Pegasys" spectype="deeleigen" word="Pegasys"/>
+        <node begin="0" cat="ppart" end="4" id="6" rel="vc">
+          <node begin="0" end="1" id="7" index="1" rel="mod"/>
+          <node begin="2" end="3" id="8" index="2" rel="obj1"/>
+          <node begin="3" buiging="zonder" end="4" frame="verb(hebben,psp,ninv(transitive,part_transitive(voor)))" id="9" infl="psp" lcat="ppart" lemma="voorschrijven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schrijf_voor" sc="part_transitive(voor)" sense="schrijf_voor" word="voorgeschreven" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="4" end="5" frame="punct(vraag)" id="10" lcat="punct" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" sense="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Wanneer wordt Pegasys voorgeschreven ?</sentence>
+  <comments>
+    <comment>Q#humandocs_PDFs_EPAR_pegasys_H-395-nl1-s8.1|Wanneer wordt Pegasys voorgeschreven ?|1|1|-0.10611654360822943</comment>
+  </comments>
+</alpino_ds>

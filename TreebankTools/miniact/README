@@ -1,0 +1,32 @@
+Mini Alpino Corpus Tool (act)
+=============================
+Daniël de Kok <me@danieldk.eu>
+
+Introduction
+------------
+
+Alpino includes the 'act' utility written in Python to create and extract
+compact corpora. This tool works great, but has some dependencies that we
+do not or can not install for distributed. mini-act implements a tiny subset
+of act, specifically:
+
+- Creating act corpora
+- Listing corpus contents
+- Extract all or specific corpus files.
+
+Compilation
+___________
+
+Requirements:
+
+- A decent C++ compiler.
+- Some luck.
+
+Usage
+_____
+
+[...]
+
+Todo
+____
+

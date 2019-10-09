@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-/W3C/DTD HTML 4.0 Transitional//EN"
+     "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>HDRUG Reference Manual</TITLE>
+<link rel=stylesheet href="http://www.let.rug.nl/~vannoord/doc.css" 
+      type="text/css">
+<link rel=next href="node5.html">
+</HEAD>
+<BODY>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node5.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+<H1>4. Global Variables</H1>
+<P>Hdrug manages a number of `global' variables.  A flag consists of a
+ground key (the `global variable') and a value (arbitrary Prolog
+term).  Flags can be set by means of command-line options,
+command-interpreter commands, the Options menu, and directly by Prolog
+predicates.</P>
+<P>Global variables are passed on to Tcl/Tk. For this purpose there
+exists a Tcl/Tk array variable, called `flag'. If the graphical user
+interface is running, then this Tcl/Tk variable is automatically
+updated when the Prolog flag is altered.  
+The predicate tk_flag/1 can be used to explicitly send the value of a
+flag to Tcl/Tk.</P>
+<H2>4.1. <a name="anc1"></a>generator(Generator)</H2>
+<P>on/off. determines whether Generator is currently active or not,
+i.e. whether it will take part in generator comparison runs or
+not.</P>
+<H2>4.2. <a name="anc2"></a>parser(Parser)</H2>
+<P>on/off. Determines whether Parser is currently active or not,
+i.e. whether it will take part in parser comparison runs or not.</P>
+<H2>4.3. <a name="anc3"></a>application_name</H2>
+<P>Used by the graphical user interface. Determines which application
+default file is loaded, and the title of the widget.</P>
+<H2>4.4. <a name="anc4"></a>batch_command</H2>
+<P>This flag can be used to run a command <B>after</B> `hdrug' is initialized
+and <B>after</B> the application is initialized by
+hdrug_initialization/0. The value of the flag is called as a goal and
+all solutions are found using a failure-driven loop, after which the
+program terminates.</P>
+<H2>4.5. <a name="anc5"></a>clig_tree_active_nodes</H2>
+<P>Boolean flag which determines whether nodes of clig_trees should be
+clickable. This is nice, but for large trees slow.</P>
+<H2>4.6. <a name="anc6"></a>blt_graph_lines</H2>
+<P>on/off. Should we connect dots in a blt_graph widget? Default:
+off.</P>
+<H2>4.7. <a name="anc7"></a>debug</H2>
+<P>0/1/2. Determines the number and detail of continuation
+messages. Default: 0 (minimum)</P>
+<H2>4.8. <a name="anc8"></a>demo</H2>
+<P>on/off. If demo=on then the system provides somewhat more
+information. A short representation of the semantic form of a parse
+will be shown. Note that during test-suite runs this value is off.</P>
+<H2>4.9. <a name="anc9"></a>nodeskip</H2>
+<P>Integer. This flag determines for LaTeX-based tree output the value
+of nodeskip that is passed on to pstree. If you don't like the tree
+that is produced then you might try to increase or decrease this
+value. If the tree is ugly because nodes are too far apart, decrease
+this value; if the tree is a mess, increase it.</P>
+<H2>4.10. <a name="anc10"></a>object_exists_check</H2>
+<P>on/off. If parse and generation results are saved as objects (flag
+object_saving) then the system normally checks whether an equivalent
+object has already been constructed on the basis of the same parse /
+generation request. This flag determines wether such a check should be
+made</P>
+<H2>4.11. <a name="anc11"></a>object_saving</H2>
+<P>This value determines whether parse/generation results should be kept
+as objects for later inspection. If the value is off, no objects are
+asserted. If it is semi then for each new parse request older objects
+are removed. If it is on ojbjects are never removed.</P>
+<H2>4.12. <a name="anc12"></a>parser</H2>
+<P>Atom. Determines which parser is currently the parser to use for
+parse commands.</P>
+<H2>4.13. <a name="anc13"></a>add_help_menu</H2>
+<P>on/off. determines whether on-line help info
+must be available through the graphical user interface. Should be
+switched off if you run Hdrug on the display of a different machine
+and the connection with that machine is slow (like over a
+phone-line).</P>
+<H2>4.14. <a name="anc14"></a>print_table_total</H2>
+<P>on/off. determines whether during a parse comparison totals should be
+displayed after each sentence.</P>
+<H2>4.15. <a name="anc15"></a>start_results_within_bound</H2>
+<P>Integer. Determines for the results_within_bound command
+(hdrug_stats) at which number of millisecond reporting should
+start. Default: 100.</P>
+<H2>4.16. <a name="anc16"></a>end_results_within_bound</H2>
+<P>Integer. Determines for the results_within_bound command
+(hdrug_stats) at which number of millisecond reporting should
+end. Default: 5000.</P>
+<H2>4.17. <a name="anc17"></a>incr_results_within_bound</H2>
+<P>Integer. Determines for the results_within_bound command
+(hdrug_stats) with which number of millisecond increment percentages
+should be shown. Default: 100.</P>
+<H2>4.18. <a name="anc18"></a>clig_tree_hspace</H2>
+<P>Integer. Determines the horizontal width between nodes in CLIG
+trees.</P>
+<H2>4.19. <a name="anc19"></a>clig_tree_vspace</H2>
+<P>Integer. Determines the vertical width between nodes in CLIG
+trees.</P>
+<H2>4.20. <a name="anc20"></a>tcltk</H2>
+<P>on/off. Determines whether the graphical user interface
+starts. Default: on</P>
+<H2>4.21. <a name="anc21"></a>tkconsol</H2>
+<P>on/off. Determines whether or not the tkconsol feature
+(cf. library(tkconsol) should be used. Default: off.</P>
+<H2>4.22. <a name="anc22"></a>top_features</H2>
+<P>Atom. Determines top category used by the parsers. If the value is
+`vp', then the predicate user:top(vp,Cat) determines the top category
+(start symbol)</P>
+<H2>4.23. <a name="anc23"></a>useful_try_check</H2>
+<P>on/off. This flag determines during a test-suite run whether a
+sentence should be parsed even if a shorter sentence has already been
+timed-out for the current parser. If the value is on, then the
+sentence is skipped for the current parser.</P>
+<H2>4.24. <a name="anc24"></a>user_clause_expansion</H2>
+<P>on/off. This flag determines whether term_expansion should be used to
+expand each clause into a user:user_clause/2 predicate. Default:
+off. Note that you need a multifile declaration for user:user_clause/2
+in each file that you load with this flag on. It is often better to
+load your grammar files with `assertall' and then explicitly construct
+the user_clause definitions using the `compile_user_clause/[0,1]'
+predicate.</P>
+<H2>4.25. <a name="anc25"></a>cmdint</H2>
+<P>on/off. This flag determines whether the command-interpreter should
+be switched on upon startup. Default: off.~n</P>
+<H2>4.26. <a name="anc26"></a>update_array_max</H2>
+<P>Integer. Indicates how many items are passed on in update_array/2
+(this predicate is used to inform the gui about the available
+predicates, types, lexical entries, test sentences, etc.). The default
+is 1000.</P>
+<H2>4.27. <a name="anc27"></a>hdrug_status</H2>
+<P>This flag is not meant to be set by an application, but is set by
+Hdrug to communicate the status of the latest parse/generation attempt.
+The flag has three possible values: success, out_of_memory, time_out.
+Every parse/generation starts out with te value 'success'. The latter
+two values are set in the case of a time out exception and a resource
+error exception.</P>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node5.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+
+
+</BODY></HTML>

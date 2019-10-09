@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="8" end="9" id="2" infl="sg3" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" sc="passive" stype="declarative" tense="present" word="wordt" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="12" id="3" rel="vc">
+        <node begin="0" cat="ti" end="8" id="4" rel="mod">
+          <node begin="6" end="7" id="5" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+          <node begin="0" cat="inf" end="8" id="6" rel="body">
+            <node begin="0" cat="pp" end="6" id="7" rel="pc">
+              <node begin="0" end="1" id="8" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="Aan"/>
+              <node begin="1" cat="np" end="6" id="9" rel="obj1">
+                <node begin="1" end="2" id="10" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="2" end="3" gen="het" getal="mv" graad="basis" id="11" lemma="pand" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="pand" word="panden"/>
+                <node begin="3" cat="pp" end="6" id="12" rel="mod">
+                  <node begin="3" end="4" id="13" lemma="langs" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="langs" vztype="init" word="langs"/>
+                  <node begin="4" cat="np" end="6" id="14" rel="obj1">
+                    <node begin="4" end="5" id="15" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="16" lemma="weg" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="weg" special="tmp" word="weg"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="7" buiging="zonder" end="8" id="17" infl="inf(no_e)" lemma="zien" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zie" sc="np_pc_pp(aan)" word="zien" wvorm="inf"/>
+          </node>
+        </node>
+        <node begin="9" end="10" getal="getal" id="18" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" special="er_loc" status="vol" vwtype="aanw" word="hier"/>
+        <node aform="base" begin="10" buiging="zonder" end="11" graad="basis" id="19" infl="no_e" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="goed" vform="adj" word="goed"/>
+        <node begin="11" buiging="zonder" end="12" id="20" infl="psp" lemma="boeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="boer" sc="intransitive" word="geboerd" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="12" end="13" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Aan de panden langs de weg te zien wordt hier goed geboerd .</sentence>
+</alpino_ds>

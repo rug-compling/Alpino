@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="np" end="7" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" id="2" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="Geen"/>
+      <node begin="1" buiging="zonder" end="2" graad="basis" id="3" lemma="internet" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="internet" word="internet"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="4" lemma="toegang" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="toegang" word="toegang"/>
+      <node begin="3" cat="pp" end="7" id="5" rel="mod">
+        <node begin="3" end="4" id="6" lemma="via" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="via" vztype="init" word="via"/>
+        <node begin="4" cat="np" end="7" id="7" rel="obj1">
+          <node begin="4" end="5" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="draadloos" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="draadloos" word="draadloos"/>
+          <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="10" lemma="netwerk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="netwerk" word="netwerk"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Geen internet toegang via het draadloos netwerk .</sentence>
+</alpino_ds>

@@ -1,0 +1,76 @@
+#!/usr/bin/perl -w
+#
+# (c) Gertjan van Noord
+#
+# This program is free software; you can redistribute it and/or modify 
+# it under the terms of the GNU General Public License as published by 
+# the Free Software Foundation; either version 2 of the License, or    
+# (at your option) any later version.                                  
+#                                                                      
+# This program is distributed in the hope that it will be useful,      
+# but WITHOUT ANY WARRANTY; without even the implied warranty of       
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the        
+# GNU General Public License for more details.                         
+#                                                                      
+# You should have received a copy of the GNU General Public License    
+# along with this program; if not, write to the Free Software          
+# Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.            
+#                                                                      
+# cf. the file COPYING                                                 
+#
+
+
+
+
+# script to compute frequencies of ngrams. Of course, the idea is that
+# suffix_array can be used more efficiently for this. But this script
+# allows us to check that suffix_array is actually doing what it should do!
+# Can also be used for comparison, if you don't believe it's worth the 
+# trouble.
+#
+# Note that the input is supposed to be tokenized already, in the sense
+# that every line is treated as a single word. 
+#
+# cat text | tr -s '\012\011 ' '\012' | ./make_ngram [-n N -F F]
+# where N is the number of words in an Ngram (3 by default)
+# and F is the output field seperator (space by default)
+# 
+# 
+# if you want sorted output, pipe the output to:
+#
+#     sort -t F -kN+1,N+1nr
+
+$opt_F=" ";
+$opt_n=3;
+use Getopt::Std;
+getopts('n:F:');
+@gram=();
+
+for($i=0;$i<$opt_n;$i++) {
+    $gram[$i] = "";
+}
+
+$i=0;
+while(<>) {
+    $i++;
+    chomp;
+    push(@gram,$_);
+    shift @gram;
+    if($i>$opt_n) {
+	$key=join($opt_F,@gram);
+	$hash{$key}++;
+    }
+}
+
+for($i=0;$i<$opt_n;$i++) {
+    push(@gram,"EOF");
+    shift @gram;
+    $key=join($opt_F,@gram);
+    $hash{$key}++;
+}
+
+
+
+foreach $triple (keys %hash) {
+    print "$triple$opt_F$hash{$triple}\n";   
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="12" end="13" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="14" end="15" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="smain" end="18" id="3" rel="--">
+      <node begin="0" cat="np" end="2" id="4" rel="su">
+        <node begin="0" end="1" id="5" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="Ook"/>
+        <node begin="1" end="2" genus="masc" getal="ev" id="6" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="hd" root="hij" status="vol" vwtype="pers" word="hij"/>
+      </node>
+      <node begin="2" end="3" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="3" cat="np" end="18" id="8" rel="predc">
+        <node begin="3" end="4" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="beroepsbiljarter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="biljarter" word="beroepsbiljarter"/>
+        <node begin="5" cat="rel" end="18" id="11" rel="mod">
+          <node begin="5" end="6" getal="getal" id="12" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+          <node begin="5" cat="ssub" end="18" id="13" rel="body">
+            <node begin="5" end="6" id="14" index="1" rel="su"/>
+            <node begin="16" end="17" id="15" lemma="willen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="wil" word="wilde" wvorm="pv"/>
+            <node begin="5" cat="inf" end="18" id="16" rel="vc">
+              <node begin="5" end="6" id="17" index="1" rel="su"/>
+              <node begin="6" end="7" id="18" lemma="liever" pos="adv" postag="BW()" pt="bw" rel="mod" root="liever" word="liever"/>
+              <node begin="7" cat="pp" end="14" id="19" rel="ld">
+                <node begin="7" end="8" id="20" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+                <node begin="8" cat="np" end="14" id="21" rel="obj1">
+                  <node begin="8" end="9" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="9" end="10" getal="mv" graad="basis" id="23" lemma="rij" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="rij" word="rijen"/>
+                  <node begin="10" cat="pp" end="14" id="24" rel="mod">
+                    <node begin="10" end="11" id="25" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                    <node begin="11" cat="np" end="14" id="26" rel="obj1">
+                      <node begin="11" end="12" id="27" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                      <node begin="13" end="14" getal="mv" graad="basis" id="28" lemma="amateur" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="amateur" word="amateurs"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="15" end="16" id="29" lemma="terug" pos="part" postag="BW()" pt="bw" rel="svp" root="terug" word="terug"/>
+              <node begin="17" buiging="zonder" end="18" id="30" lemma="keren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="keer" word="keren" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="31" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ook hij is een beroepsbiljarter die liever naar de rijen van de &quot; amateurs &quot; terug wilde keren .</sentence>
+</alpino_ds>

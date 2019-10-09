@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoeveel" numtype="hoofd" pos="det" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="whd" root="hoeveel" word="Hoeveel"/>
+      <node begin="0" cat="sv1" end="6" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
+        <node begin="2" end="3" getal="getal" id="5" index="2" lemma="u" naamval="nomin" pdtype="pron" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" root="u" status="vol" vwtype="pers" word="u"/>
+        <node begin="0" cat="ppart" end="6" id="6" rel="vc">
+          <node begin="2" end="3" id="7" index="2" rel="su"/>
+          <node begin="3" buiging="zonder" end="4" id="8" lemma="denken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="denk" word="gedacht" wvorm="vd"/>
+          <node begin="0" cat="ti" end="6" id="9" rel="vc">
+            <node begin="4" end="5" id="10" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="0" cat="inf" end="6" id="11" rel="body">
+              <node begin="0" end="1" id="12" index="1" rel="obj1"/>
+              <node begin="2" end="3" id="13" index="2" rel="su"/>
+              <node begin="5" buiging="zonder" end="6" id="14" lemma="besteden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="besteed" word="besteden" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="15" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoeveel had u gedacht te besteden ?</sentence>
+</alpino_ds>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="1" end="2" frame="punct(ligg_streep)" id="1" lcat="punct" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" sense="-" special="ligg_streep" word="-"/>
+    <node begin="6" end="7" frame="particle(op)" id="2" lcat="--" lemma="op" pos="part" postag="VZ(init)" pt="vz" rel="--" root="op" sense="op" vztype="init" word="op"/>
+    <node begin="11" end="12" frame="punct(ligg_streep)" id="3" lcat="punct" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" sense="-" special="ligg_streep" word="-"/>
+    <node begin="16" end="17" frame="punct(komma)" id="4" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="du" end="21" id="5" rel="--">
+      <node begin="0" cat="inf" end="6" id="6" rel="dp">
+        <node begin="0" end="1" frame="proper_name(both,'PER')" id="7" lcat="np" lemma="Trimhockey" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="obj1" root="Trimhockey" sense="Trimhockey" spectype="deeleigen" word="Trimhockey"/>
+        <node begin="2" cat="conj" end="5" id="8" rel="mod">
+          <node aform="base" begin="2" buiging="zonder" end="3" frame="adjective(no_e(adv))" graad="basis" id="9" infl="no_e" lcat="ap" lemma="vrijblijvend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="vrijblijvend" sense="vrijblijvend" vform="adj" word="vrijblijvend"/>
+          <node begin="3" conjtype="neven" end="4" frame="conj(en)" id="10" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+          <node aform="base" begin="4" buiging="zonder" end="5" frame="adjective(ge_both(adv))" id="11" infl="both" lcat="ppart" lemma="ontspannen" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="cnj" root="ontspannen" sense="ontspannen" vform="psp" word="ontspannen" wvorm="vd"/>
+        </node>
+        <node begin="5" buiging="zonder" end="6" frame="verb(hebben,inf,transitive)" id="12" infl="inf" lcat="inf" lemma="trainen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="train" sc="transitive" sense="train" word="trainen" wvorm="inf"/>
+      </node>
+      <node begin="7" end="8" frame="sentence_adverb" id="13" lcat="advp" lemma="meestal" pos="adv" postag="BW()" pt="bw" rel="dp" root="meestal" sense="meestal" special="sentence" word="meestal"/>
+      <node begin="8" cat="smain" end="18" id="14" rel="dp">
+        <node begin="8" cat="np" end="11" id="15" rel="su">
+          <node begin="8" end="9" frame="determiner(een)" id="16" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+          <node aform="base" begin="9" buiging="met-e" end="10" frame="adjective(e)" graad="basis" id="17" infl="e" lcat="ap" lemma="doordeweeks" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="doordeweeks" sense="doordeweeks" vform="adj" word="doordeweekse"/>
+          <node begin="10" end="11" frame="tmp_noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="18" lcat="np" lemma="dag" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dag" sense="dag" special="tmp" word="dag"/>
+        </node>
+        <node begin="12" end="13" frame="verb(hebben,sg,ld_pp)" id="19" infl="sg" lcat="smain" lemma="zitten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zit" sc="ld_pp" sense="zit" tense="present" word="zit" wvorm="pv"/>
+        <node begin="13" cat="pp" end="16" id="20" rel="ld">
+          <node begin="13" end="14" frame="preposition(in,[])" id="21" lcat="pp" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" sense="in" vztype="init" word="in"/>
+          <node begin="14" cat="np" end="16" id="22" rel="obj1">
+            <node begin="14" end="15" frame="determiner(de)" id="23" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+            <node begin="15" end="16" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="24" lcat="np" lemma="lift" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="lift" sense="lift" word="lift"/>
+          </node>
+        </node>
+        <node begin="17" end="18" frame="adverb" id="25" lcat="advp" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" sense="zo" word="zo"/>
+      </node>
+      <node begin="18" cat="sv1" end="21" id="26" rel="dp">
+        <node begin="18" end="19" frame="verb(unacc,past(sg),te_passive)" id="27" infl="sg" lcat="sv1" lemma="vallen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="val" sc="te_passive" sense="val" tense="past" word="viel" wvorm="pv"/>
+        <node begin="19" cat="ti" end="21" id="28" rel="vc">
+          <node begin="19" end="20" frame="complementizer(te)" id="29" lcat="cp" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" sense="te" vztype="init" word="te"/>
+          <node begin="20" buiging="zonder" end="21" frame="verb(hebben,inf,transitive)" id="30" infl="inf" lcat="inf" lemma="beluisteren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="beluister" sc="transitive" sense="beluister" word="beluisteren" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" frame="punct(punt)" id="31" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Trimhockey - vrijblijvend en ontspannen trainen op meestal een doordeweekse dag - zit in de lift , zo viel te beluisteren .</sentence>
+  <comments>
+    <comment>Q#nh20000124-87-9-4|Trimhockey - vrijblijvend en ontspannen trainen op meestal een doordeweekse dag - zit in de lift , zo viel te beluisteren .|1|5|0.028032714812165772</comment>
+  </comments>
+</alpino_ds>

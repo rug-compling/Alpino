@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="conj" end="15" id="2" rel="--">
+      <node begin="0" cat="np" end="5" id="3" rel="cnj">
+        <node begin="0" end="1" id="4" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="man" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="man" word="man"/>
+        <node begin="2" cat="ppart" end="5" id="6" rel="mod">
+          <node begin="2" buiging="zonder" end="3" id="7" lemma="geboren" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geboren" word="geboren" wvorm="vd"/>
+          <node begin="3" cat="pp" end="5" id="8" rel="mod">
+            <node begin="3" end="4" id="9" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="vrijdag" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="vrijdag" word="vrijdag"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" conjtype="neven" end="6" id="11" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="6" cat="np" end="11" id="12" rel="cnj">
+        <node begin="6" end="7" id="13" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="14" lemma="vrouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vrouw" word="vrouw"/>
+        <node begin="8" cat="ppart" end="11" id="15" rel="mod">
+          <node begin="8" buiging="zonder" end="9" id="16" lemma="geboren" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geboren" word="geboren" wvorm="vd"/>
+          <node begin="9" cat="pp" end="11" id="17" rel="mod">
+            <node begin="9" end="10" id="18" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="19" lemma="dinsdag" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="dinsdag" word="dinsdag"/>
+          </node>
+        </node>
+      </node>
+      <node begin="12" conjtype="neven" end="13" id="20" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="13" cat="mwu" end="15" id="21" rel="cnj">
+        <node begin="13" end="14" id="22" lemma="vice" pos="adv" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="vice" spectype="vreemd" word="vice"/>
+        <node begin="14" end="15" id="23" lemma="versa" pos="adv" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="versa" spectype="vreemd" word="versa"/>
+      </node>
+    </node>
+    <node begin="15" end="16" id="24" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="16" end="17" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een man geboren op vrijdag en een vrouw geboren op dinsdag ( en vice versa ) .</sentence>
+</alpino_ds>

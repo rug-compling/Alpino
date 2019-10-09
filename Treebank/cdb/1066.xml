@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="du" end="6" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" word="En"/>
+      <node begin="1" cat="smain" end="6" id="3" rel="nucl">
+        <node begin="2" end="3" id="4" lemma="bedanken" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="bedank" word="bedankten" wvorm="pv"/>
+        <node begin="3" cat="np" end="5" id="5" rel="su">
+          <node begin="3" end="4" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="4" end="5" getal="mv" graad="basis" id="7" lemma="Roemeen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Roemeen" word="Roemenen"/>
+        </node>
+        <node begin="1" cat="pp" end="6" id="8" rel="pc">
+          <node begin="1" end="2" getal="getal" id="9" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="noun" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="daar" status="vol" vwtype="aanw" word="daar"/>
+          <node begin="5" end="6" id="10" lemma="voor" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="voor" vztype="fin" word="voor"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>En daar bedankten de Roemenen voor .</sentence>
+</alpino_ds>

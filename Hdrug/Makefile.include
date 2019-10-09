@@ -1,0 +1,66 @@
+ifndef HDRUGDIR
+       HDRUGDIR=$(shell pwd)
+endif
+
+ifeq "$(shell if [ -r $(ALPINO_HOME)/Makefile.include ]; then echo yes; fi)" "yes"
+include $(ALPINO_HOME)/Makefile.include
+endif
+
+ifeq "$(shell if [ -r $(HDRUGDIR)/Makefile.defs ]; then echo yes; fi)" "yes"
+include $(HDRUGDIR)/Makefile.defs
+endif
+
+ifndef PREFIX
+       PREFIX=/usr/local
+endif
+
+ifndef SICSTUS
+	SICSTUS=sicstus
+endif
+
+ifndef BINDIR
+       BINDIR=$(PREFIX)/bin
+endif
+
+ifndef LIBDIR
+       LIBDIR=$(PREFIX)/lib/hdrug
+endif
+
+ifndef MANDIR
+       MANDIR=$(PREFIX)/man
+endif
+
+ifndef TARGET
+       TARGET=hdrug
+endif
+
+ifndef PATH_TO_LIBDIR
+       PATH_TO_LIBDIR=$(LIBDIR)
+endif
+
+ifndef SICSTUS
+       SICSTUS=sicstus
+endif
+
+ifndef BLT
+       BLT=noblt
+endif
+
+ifndef BLTLIB
+       BLTLIB=none
+endif
+
+.SUFFIXES: .po .pl
+
+.pl.po: 
+	-echo "save_files('$*','$*.po')." | ../../hdrug -l start -notk
+
+
+PWD=$(shell pwd)
+
+ifeq ($(PLATFORM),windows)
+CURDIR=$(shell cygpath -m $(PWD))
+else
+CURDIR=$(PWD)
+endif
+

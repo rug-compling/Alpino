@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="9" end="10" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="1" cat="du" end="15" id="3" rel="--">
+      <node begin="1" cat="smain" end="9" id="4" rel="nucl">
+        <node begin="1" end="2" id="5" lemma="soms" pos="adv" postag="BW()" pt="bw" rel="mod" root="soms" word="Soms"/>
+        <node begin="2" end="3" id="6" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+        <node begin="3" end="4" getal="ev" id="7" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="5" end="6" id="8" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+        <node begin="6" end="7" id="9" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="mod" root="eens" word="eens"/>
+        <node begin="7" buiging="zonder" end="8" id="10" lemma="balen" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="obj1" root="baal" word="balen" wvorm="inf"/>
+        <node begin="4" cat="pp" end="9" id="11" rel="pc">
+          <node begin="4" end="5" getal="getal" id="12" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="8" end="9" id="13" lemma="van" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="van" vztype="fin" word="van"/>
+        </node>
+      </node>
+      <node begin="10" cat="inf" end="15" id="14" rel="sat">
+        <node begin="10" cat="np" end="12" id="15" rel="mod">
+          <node begin="10" buiging="met-e" end="11" id="16" lemma="ieder" naamval="stan" npagr="evz" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="det" root="iedere" vwtype="onbep" word="iedere"/>
+          <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="17" lemma="dag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dag" word="dag"/>
+        </node>
+        <node begin="12" cat="np" end="14" id="18" rel="mod">
+          <node begin="12" end="13" id="19" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
+          <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="20" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="uur" word="uur"/>
+        </node>
+        <node begin="14" buiging="zonder" end="15" id="21" lemma="trainen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="train" word="trainen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="15" end="16" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&quot; Soms heb ik er wel eens balen van , iedere dag twee uur trainen .</sentence>
+</alpino_ds>

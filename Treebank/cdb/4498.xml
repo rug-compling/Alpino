@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="conj" end="20" id="1" rel="--">
+      <node begin="0" cat="smain" end="10" id="2" rel="cnj">
+        <node begin="0" end="1" genus="fem" getal="ev" id="3" lemma="zij" naamval="nomin" pdtype="pron" persoon="3v" pos="noun" postag="VNW(pers,pron,nomin,vol,3v,ev,fem)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="Zij"/>
+        <node begin="1" end="2" id="4" lemma="weten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="weet" word="weet" wvorm="pv"/>
+        <node begin="2" cat="cp" end="10" id="5" rel="vc">
+          <node begin="2" conjtype="onder" end="3" id="6" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="3" cat="conj" end="10" id="7" rel="body">
+            <node begin="3" cat="ssub" end="6" id="8" rel="cnj">
+              <node begin="3" end="4" genus="fem" getal="ev" id="9" index="1" lemma="zij" naamval="nomin" pdtype="pron" persoon="3v" pos="noun" postag="VNW(pers,pron,nomin,vol,3v,ev,fem)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
+              <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="tekort" naamval="stan" ntype="soort" pos="part" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="svp" root="tekort" word="tekort"/>
+              <node begin="5" end="6" id="11" lemma="schieten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="schiet" word="schiet" wvorm="pv"/>
+            </node>
+            <node begin="6" conjtype="neven" end="7" id="12" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="3" cat="ssub" end="10" id="13" rel="cnj">
+              <node begin="3" end="4" id="14" index="1" rel="su"/>
+              <node begin="7" end="8" id="15" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+              <node begin="8" buiging="zonder" end="9" graad="basis" id="16" lemma="ongehoorzaam" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="ongehoorzaam" word="ongehoorzaam"/>
+              <node begin="9" end="10" id="17" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="10" conjtype="neven" end="11" id="18" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+      <node begin="11" cat="smain" end="20" id="19" rel="cnj">
+        <node begin="11" end="12" genus="fem" getal="ev" id="20" index="2" lemma="zij" naamval="nomin" pdtype="pron" persoon="3v" pos="noun" postag="VNW(pers,pron,nomin,vol,3v,ev,fem)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
+        <node begin="12" end="13" id="21" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+        <node begin="11" cat="inf" end="20" id="22" rel="vc">
+          <node begin="11" end="12" id="23" index="2" rel="su"/>
+          <node begin="18" buiging="zonder" end="19" id="24" lemma="leren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="leer" word="leren" wvorm="inf"/>
+          <node begin="11" cat="inf" end="20" id="25" rel="vc">
+            <node begin="11" end="12" id="26" index="2" rel="su"/>
+            <node begin="13" cat="pp" end="18" id="27" rel="mod">
+              <node begin="13" end="14" id="28" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+              <node begin="14" cat="np" end="18" id="29" rel="obj1">
+                <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="30" lemma="genade" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="genade" word="genade"/>
+                <node begin="15" cat="pp" end="18" id="31" rel="mod">
+                  <node begin="15" end="16" id="32" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="16" cat="np" end="18" id="33" rel="obj1">
+                    <node begin="16" end="17" id="34" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="35" lemma="Heer" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Heer" word="Heer"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="19" buiging="zonder" end="20" id="36" lemma="leven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="leef" word="leven" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Zij weet dat zij tekort schiet en ook ongehoorzaam is maar zij moet uit genade van de Heer leren leven .</sentence>
+</alpino_ds>

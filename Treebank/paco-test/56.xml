@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="3" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" id="4" lcat="np" num="sg" pos="noun" rel="hd" root="eind_verwerking_capaciteit" sense="eind_verwerking_capaciteit" word="eindverwerkingscapaciteit"/>
+      </node>
+      <node begin="2" end="3" frame="verb(unacc,sg3,passive)" id="5" infl="sg3" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt"/>
+      <node begin="0" cat="ppart" end="11" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="obj1"/>
+        <node begin="3" end="4" frame="verb(hebben,psp,ninv(transitive,part_transitive(in)))" id="8" infl="psp" lcat="ppart" pos="verb" rel="hd" root="vul_in" sc="part_transitive(in)" sense="vul_in" word="ingevuld"/>
+        <node begin="4" cat="pp" end="11" id="9" rel="mod">
+          <node begin="4" end="5" frame="preposition(met,[mee,[en,al]])" id="10" lcat="pp" pos="prep" rel="hd" root="met" sense="met" word="met"/>
+          <node begin="5" cat="np" end="11" id="11" rel="obj1">
+            <node begin="5" end="6" frame="noun(de,count,pl)" gen="de" id="12" lcat="np" num="pl" pos="noun" rel="hd" root="installatie" sense="installatie" word="installaties"/>
+            <node begin="6" cat="rel" end="11" id="13" rel="mod">
+              <node begin="6" case="no_obl" end="7" frame="rel_pronoun(de,no_obl)" gen="de" id="14" index="2" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+              <node begin="6" cat="ssub" end="11" id="15" rel="body">
+                <node begin="6" end="7" id="16" index="2" rel="su"/>
+                <node begin="7" end="8" frame="verb(hebben,pl,pc_pp(aan))" id="17" infl="pl" lcat="ssub" pos="verb" rel="hd" root="beantwoord" sc="pc_pp(aan)" sense="beantwoord-aan" tense="present" word="beantwoorden"/>
+                <node begin="8" cat="pp" end="11" id="18" rel="pc">
+                  <node begin="8" end="9" frame="preposition(aan,[vooraf])" id="19" lcat="pp" pos="prep" rel="hd" root="aan" sense="aan" word="aan"/>
+                  <node begin="9" cat="np" end="11" id="20" rel="obj1">
+                    <node begin="9" end="10" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="21" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                    <node begin="10" end="11" frame="noun(het,count,sg)" gen="het" id="22" lcat="np" num="sg" pos="noun" rel="hd" root="BBT_principe" sense="BBT_principe" word="BBT-principe"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>De eindverwerkingscapaciteit wordt ingevuld met installaties die beantwoorden aan het BBT-principe</sentence>
+  <comments>
+    <comment>Q#56|De eindverwerkingscapaciteit wordt ingevuld met installaties die beantwoorden aan het BBT-principe|1|1|1.16621919019585</comment>
+  </comments>
+</alpino_ds>

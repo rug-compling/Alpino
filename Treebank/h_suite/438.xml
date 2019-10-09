@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" index="1" rel="su">
+        <node begin="0" buiging="zonder" end="1" getal-n="zonder-n" graad="basis" id="3" lemma="tweederde" pos="num" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="hd" root="tweederde" word="Tweederde"/>
+        <node begin="1" cat="pp" end="4" id="4" rel="mod">
+          <node begin="1" end="2" id="5" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="2" cat="np" end="4" id="6" rel="obj1">
+            <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="3" buiging="met-e" end="4" getal-n="mv-n" graad="basis" id="8" lemma="aanwezig" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" root="aanwezig" word="aanwezigen"/>
+          </node>
+        </node>
+      </node>
+      <node begin="4" end="5" id="9" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="7" id="10" rel="vc">
+        <node begin="0" end="4" id="11" index="1" rel="su"/>
+        <node begin="5" end="6" getal="ev" id="12" lemma="niets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="niets" status="vol" vwtype="onbep" word="niets"/>
+        <node begin="6" buiging="zonder" end="7" id="13" lemma="zien" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zie" word="gezien" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Tweederde van de aanwezigen had niets gezien</sentence>
+</alpino_ds>

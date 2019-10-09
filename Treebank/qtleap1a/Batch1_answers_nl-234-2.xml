@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="12" id="2" rel="--">
+      <node begin="7" end="8" id="3" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+      <node begin="8" cat="np" end="10" id="4" index="1" rel="su">
+        <node begin="8" end="9" id="5" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="6" lemma="toetsenbord" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="toetsenbord" word="toetsenbord"/>
+      </node>
+      <node begin="0" cat="inf" end="12" id="7" rel="vc">
+        <node begin="0" cat="cp" end="6" id="8" rel="mod">
+          <node begin="0" conjtype="onder" end="1" id="9" lemma="indien" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="indien" word="Indien"/>
+          <node begin="1" cat="ssub" end="6" id="10" rel="body">
+            <node begin="1" end="2" getal="ev" id="11" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dit" status="vol" vwtype="aanw" word="dit"/>
+            <node begin="2" end="3" id="12" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+            <node begin="3" cat="np" end="5" id="13" rel="predc">
+              <node begin="3" end="4" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="15" lemma="geval" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geval" word="geval"/>
+            </node>
+            <node begin="5" end="6" id="16" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          </node>
+        </node>
+        <node begin="8" end="10" id="17" index="1" rel="su"/>
+        <node begin="10" buiging="zonder" end="11" id="18" lemma="beschadigd" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="predc" root="beschadigd" word="beschadigd" wvorm="vd"/>
+        <node begin="11" buiging="zonder" end="12" id="19" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Indien dit niet het geval is , kan het toetsenbord beschadigd zijn .</sentence>
+</alpino_ds>

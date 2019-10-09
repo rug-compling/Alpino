@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="5" end="6" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="12" end="13" frame="punct(komma)" id="2" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="18" id="3" rel="--">
+      <node begin="0" cat="pp" end="12" id="4" rel="mod">
+        <node begin="0" end="1" frame="preposition(in,[])" id="5" lcat="pp" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" sense="in" vztype="init" word="In"/>
+        <node begin="1" cat="np" end="12" id="6" rel="obj1">
+          <node begin="1" end="2" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="7" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+          <node begin="2" end="3" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="8" lcat="np" lemma="weekblad" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="week_blad" sense="week_blad" word="weekblad"/>
+          <node begin="3" cat="mwu" end="5" id="9" rel="app">
+            <node begin="3" end="4" frame="proper_name(both,'ORG')" id="10" lcat="np" lemma="Voetbal" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Voetbal" sense="Voetbal" spectype="deeleigen" word="Voetbal"/>
+            <node begin="4" end="5" frame="proper_name(both,'ORG')" id="11" lcat="np" lemma="International" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="International" sense="International" spectype="deeleigen" word="International"/>
+          </node>
+          <node begin="6" cat="rel" end="12" id="12" rel="mod">
+            <node begin="6" case="no_obl" end="7" frame="rel_pronoun(het,no_obl)" gen="het" getal="ev" id="13" index="1" lcat="np" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="dat" sense="dat" status="vol" vwtype="aanw" wh="rel" word="dat"/>
+            <node begin="6" cat="ssub" end="12" id="14" rel="body">
+              <node begin="6" end="7" id="15" index="1" rel="su"/>
+              <node begin="7" end="8" frame="sentence_adverb" id="16" lcat="advp" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" sense="ook" special="sentence" word="ook"/>
+              <node begin="8" cat="pp" end="11" id="17" rel="ld">
+                <node begin="8" end="9" frame="preposition(onder,[door,vandaan])" id="18" lcat="pp" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" sense="onder" vztype="init" word="onder"/>
+                <node begin="9" cat="np" end="11" id="19" rel="obj1">
+                  <node begin="9" buiging="zonder" end="10" frame="determiner(pron)" getal="ev" id="20" infl="pron" lcat="detp" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" sense="zijn" status="vol" vwtype="bez" word="zijn"/>
+                  <node begin="10" end="11" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="21" lcat="np" lemma="leiding" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="leiding" sense="leiding" word="leiding"/>
+                </node>
+              </node>
+              <node begin="11" end="12" frame="verb(hebben,sg3,ld_pp)" id="22" infl="sg3" lcat="ssub" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" sc="ld_pp" sense="sta" tense="present" word="staat" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="13" end="14" frame="verb(unacc,sg_heeft,pc_pp(voor))" id="23" infl="sg_heeft" lcat="smain" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="pc_pp(voor)" sense="ben-voor" tense="present" word="is" wvorm="pv"/>
+      <node begin="15" cat="np" end="17" id="24" rel="su">
+        <node aform="compar" begin="15" buiging="zonder" end="16" frame="adjective(meer)" graad="comp" id="25" infl="meer" lcat="ap" lemma="minder" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,comp)" pt="vnw" rel="det" root="minder" sense="minder" vform="adj" vwtype="onbep" word="minder"/>
+        <node begin="16" end="17" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="26" lcat="np" lemma="ruimte" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ruimte" sense="ruimte" word="ruimte"/>
+      </node>
+      <node begin="14" cat="pp" end="18" id="27" rel="pc">
+        <node begin="14" end="15" frame="er_loc_adverb" getal="getal" id="28" lcat="advp" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="daar" sense="daar" special="er_loc" status="vol" vwtype="aanw" word="daar"/>
+        <node begin="17" end="18" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="29" lcat="pp" lemma="voor" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="voor" sense="voor" vztype="fin" word="voor"/>
+      </node>
+    </node>
+    <node begin="18" end="19" frame="punct(punt)" id="30" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>In het weekblad Voetbal International , dat ook onder zijn leiding staat , is daar minder ruimte voor .</sentence>
+  <comments>
+    <comment>Q#TR20050224-142-3-6|In het weekblad Voetbal International , dat ook onder zijn leiding staat , is daar minder ruimte voor .|1|1|-0.03778798659181849</comment>
+  </comments>
+</alpino_ds>

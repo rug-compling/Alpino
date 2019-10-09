@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" end="1" frame="punct(aanhaal_both)" id="1" lcat="punct" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" sense="&quot;" special="aanhaal_both" word="&quot;"/>
+    <node begin="11" end="12" frame="punct(komma)" id="2" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="1" cat="smain" end="17" id="3" rel="--">
+      <node begin="1" cat="np" end="11" id="4" rel="su">
+        <node begin="1" end="2" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="5" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="Het"/>
+        <node aform="super" begin="2" buiging="met-e" end="3" frame="adjective(ste)" graad="sup" id="6" infl="e" lcat="ap" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="groot" sense="groot" vform="adj" word="grootste"/>
+        <node begin="3" end="4" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="7" lcat="np" lemma="gevaar" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gevaar" sense="gevaar" word="gevaar"/>
+        <node begin="4" cat="pp" end="11" id="8" rel="mod">
+          <node begin="4" end="5" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="9" lcat="pp" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" sense="voor" vztype="init" word="voor"/>
+          <node begin="5" cat="np" end="11" id="10" rel="obj1">
+            <node begin="5" end="6" frame="determiner(de)" id="11" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+            <node begin="6" end="7" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="12" lcat="np" lemma="leerling" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="leerling" sense="leerling" word="leerlingen"/>
+            <node begin="7" cat="pp" end="11" id="13" rel="mod">
+              <node begin="7" end="8" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="14" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+              <node begin="8" cat="np" end="11" id="15" rel="obj1">
+                <node begin="8" end="9" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="16" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                <node aform="compar" begin="9" buiging="zonder" end="10" frame="adjective(er(adv))" graad="comp" id="17" infl="no_e" lcat="ap" lemma="laag" pos="adj" positie="prenom" postag="ADJ(prenom,comp,zonder)" pt="adj" rel="mod" root="laag" sense="laag" vform="adj" word="lager"/>
+                <node begin="10" end="11" frame="noun(het,mass,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="18" lcat="np" lemma="onderwijs" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="onderwijs" sense="onderwijs" word="onderwijs"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="12" end="13" frame="verb(unacc,sg3,copula)" id="19" infl="sg3" lcat="smain" lemma="blijven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="blijf" sc="copula" sense="blijf" tense="present" word="blijft" wvorm="pv"/>
+      <node begin="13" cat="np" end="17" id="20" rel="predc">
+        <node begin="13" end="14" frame="determiner(de)" id="21" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+        <node begin="14" end="15" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="22" lcat="np" lemma="dodehoekspiegel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dode_hoek_spiegel" sense="dode_hoek_spiegel" word="dodehoekspiegel"/>
+        <node begin="15" cat="pp" end="17" id="23" rel="mod">
+          <node begin="15" end="16" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="24" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+          <node begin="16" end="17" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="25" lcat="np" lemma="vrachtwagen" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="vracht_wagen" sense="vracht_wagen" word="vrachtwagens"/>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" frame="punct(punt)" id="26" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>&quot; Het grootste gevaar voor de leerlingen van het lager onderwijs , blijft de dodehoekspiegel van vrachtwagens .</sentence>
+  <comments>
+    <comment>Q#DM_20060905_01-19-3-2|&quot; Het grootste gevaar voor de leerlingen van het lager onderwijs , blijft de dodehoekspiegel van vrachtwagens .|1|1|0.03560025827172272</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="np" end="6" id="1" rel="--">
+      <node begin="0" end="1" getal="mv" graad="basis" id="2" lemma="probleem" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="probleem" word="Problemen"/>
+      <node begin="1" cat="pp" end="6" id="3" rel="mod">
+        <node begin="1" end="2" id="4" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+        <node begin="2" cat="np" end="6" id="5" rel="obj1">
+          <node begin="2" end="3" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="3" buiging="zonder" end="4" getal-n="zonder-n" id="7" lemma="spelen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="speel" word="spelen" wvorm="inf"/>
+          <node begin="4" cat="pp" end="6" id="8" rel="mod">
+            <node begin="4" end="5" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="Farmville2" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Farmville2" word="Farmville2"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Problemen met het spelen van Farmville2</sentence>
+</alpino_ds>

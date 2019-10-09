@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="EU" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="EU" word="EU"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+      <node begin="0" cat="inf" end="13" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="su"/>
+        <node begin="3" cat="conj" end="7" id="8" rel="predc">
+          <node begin="3" conjtype="neven" end="4" id="9" lemma="eerder" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="eerder" word="eerder"/>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="10" lemma="pro_actief" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="pro_actief" word="proactief"/>
+          <node begin="5" conjtype="onder" end="6" id="11" lemma="dan" pos="vg" postag="VG(onder)" pt="vg" rel="crd" root="dan" word="dan"/>
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="reactief" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="reactief" word="reactief"/>
+        </node>
+        <node begin="7" buiging="zonder" end="8" id="13" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
+        <node begin="8" cat="pp" end="13" id="14" rel="mod">
+          <node begin="8" cat="mwu" end="11" id="15" mwu_root="ten aanzien van" mwu_sense="ten aanzien van" rel="hd">
+            <node begin="8" end="9" id="16" lemma="ten" pos="prep" postag="VZ(versm)" pt="vz" rel="mwp" root="ten" vztype="versm" word="ten"/>
+            <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="17" lemma="aanzien" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="aanzien" word="aanzien"/>
+            <node begin="10" end="11" id="18" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+          </node>
+          <node begin="11" cat="np" end="13" id="19" rel="obj1">
+            <node begin="11" buiging="met-e" end="12" id="20" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+            <node begin="12" end="13" getal="mv" graad="basis" id="21" lemma="veiligheid_kwestie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="veiligheid_kwestie" word="veiligheidskwesties"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De EU moet eerder proactief dan reactief zijn ten aanzien van deze veiligheidskwesties .</sentence>
+</alpino_ds>

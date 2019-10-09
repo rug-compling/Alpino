@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="14" id="2" rel="--">
+      <node begin="0" cat="du" end="7" id="3" rel="cnj">
+        <node begin="0" cat="smain" end="3" id="4" rel="tag">
+          <node begin="0" end="1" getal="ev" id="5" index="1" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="Je"/>
+          <node begin="1" end="2" id="6" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+          <node begin="0" cat="inf" end="3" id="7" rel="vc">
+            <node begin="0" end="1" id="8" index="1" rel="su"/>
+            <node begin="2" buiging="zonder" end="3" id="9" lemma="zeggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zeg" word="zeggen" wvorm="inf"/>
+          </node>
+        </node>
+        <node begin="3" cat="smain" end="7" id="10" rel="nucl">
+          <node begin="3" end="4" getal="mv" id="11" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+          <node begin="4" end="5" id="12" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="13" lemma="geld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="geld" word="geld"/>
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="14" lemma="zat" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="zat" word="zat"/>
+        </node>
+      </node>
+      <node begin="8" conjtype="neven" end="9" id="15" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+      <node begin="9" cat="smain" end="14" id="16" rel="cnj">
+        <node begin="9" end="10" getal="ev" id="17" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
+        <node begin="10" end="11" id="18" lemma="mee_vallen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="val_mee" word="valt" wvorm="pv"/>
+        <node begin="11" end="12" id="19" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+        <node begin="12" end="13" id="20" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+        <node begin="13" end="14" id="21" lemma="mee" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="mee" vztype="fin" word="mee"/>
+      </node>
+    </node>
+    <node begin="14" end="15" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Je zal zeggen ze hebben geld zat , maar dat valt ook wel mee .</sentence>
+</alpino_ds>

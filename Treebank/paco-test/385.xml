@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="9" end="10" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="np" end="14" id="2" rel="--">
+      <node begin="0" end="1" frame="noun(de,count,sg)" gen="de" id="3" lcat="np" num="sg" pos="noun" rel="hd" root="methode" sense="methode" word="Methode"/>
+      <node begin="1" cat="pp" end="14" id="4" rel="mod">
+        <node begin="1" end="2" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="5" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+        <node begin="2" cat="np" end="14" id="6" rel="obj1">
+          <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="7" lcat="np" num="sg" pos="noun" rel="hd" root="identificatie" sense="identificatie" word="identificatie"/>
+          <node begin="3" cat="pp" end="9" id="8" rel="mod">
+            <node begin="3" end="4" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="9" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="4" cat="conj" end="9" id="10" rel="obj1">
+              <node begin="4" cat="np" end="7" id="11" rel="cnj">
+                <node begin="4" end="5" frame="determiner(de)" id="12" index="1" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                <node aform="base" begin="5" end="6" frame="adjective(ende(padv))" id="13" index="2" infl="e" lcat="ppres" pos="adj" rel="mod" root="verschil" sense="verschil" vform="gerund" word="verschillende"/>
+                <node begin="6" end="7" frame="noun(het,count,pl)" gen="het" id="14" lcat="np" num="pl" pos="noun" rel="hd" root="splijtstof_element" sense="splijtstof_element" word="splijtstofelementen"/>
+              </node>
+              <node begin="7" end="8" frame="conj('en/of')" id="15" lcat="vg" pos="vg" rel="crd" root="en/of" sense="en/of" word="en/of"/>
+              <node begin="4" cat="np" end="9" id="16" rel="cnj">
+                <node begin="4" end="5" id="17" index="1" rel="det"/>
+                <node begin="5" end="6" id="18" index="2" rel="mod"/>
+                <node begin="8" end="9" frame="noun(het,count,pl)" gen="het" id="19" lcat="np" num="pl" pos="noun" rel="hd" root="pakket" sense="pakket" word="pakketten"/>
+              </node>
+            </node>
+          </node>
+          <node begin="10" cat="cp" end="14" id="20" rel="mod">
+            <node begin="10" cat="mwu" end="12" id="21" mwu_root="voorzover" mwu_sense="voorzover" rel="cmp">
+              <node begin="10" end="11" frame="complementizer(zoals)" id="22" lcat="cp" pos="comp" rel="mwp" root="voor" sc="zoals" sense="voor" word="voor"/>
+              <node begin="11" end="12" frame="complementizer(zoals)" id="23" lcat="cp" pos="comp" rel="mwp" root="zover" sc="zoals" sense="zover" word="zover"/>
+            </node>
+            <node begin="12" cat="mwu" end="14" id="24" mwu_root="van_toepassing" mwu_sense="van_toepassing" rel="body">
+              <node aform="base" begin="12" end="13" frame="adjective(pred(nonadv))" id="25" infl="pred" lcat="ap" pos="adj" rel="mwp" root="van" sense="van" vform="adj" word="van"/>
+              <node aform="base" begin="13" end="14" frame="adjective(pred(nonadv))" id="26" infl="pred" lcat="ap" pos="adj" rel="mwp" root="toepassing" sense="toepassing" vform="adj" word="toepassing"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" frame="punct(punt)" id="27" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Methode van identificatie van de verschillende splijtstofelementen en/of pakketten , voor zover van toepassing .</sentence>
+  <comments>
+    <comment>Q#385|Methode van identificatie van de verschillende splijtstofelementen en/of pakketten , voor zover van toepassing .|1|1|3.8512235709102285</comment>
+  </comments>
+</alpino_ds>

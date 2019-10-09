@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="19" end="20" id="2" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="0" cat="smain" end="25" id="3" rel="--">
+      <node begin="0" cat="pp" end="5" id="4" rel="mod">
+        <node begin="0" cat="mwu" end="3" id="5" rel="hd">
+          <node begin="0" end="1" id="6" lemma="te" pos="prep" postag="VZ(versm)" pt="vz" rel="mwp" root="Ten" vztype="versm" word="Ten"/>
+          <node begin="1" end="2" getal="ev" graad="basis" id="7" lemma="gevolg" naamval="dat" ntype="soort" pos="prep" postag="N(soort,ev,basis,dat)" pt="n" rel="mwp" root="gevolge" word="gevolge"/>
+          <node begin="2" end="3" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+        </node>
+        <node begin="3" cat="np" end="5" id="9" rel="obj1">
+          <node begin="3" buiging="met-e" end="4" id="10" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+          <node begin="4" end="5" getal="mv" graad="basis" id="11" lemma="ongeval" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="ongeval" word="ongevallen"/>
+        </node>
+      </node>
+      <node begin="5" end="6" id="12" lemma="komen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kom" word="kwamen" wvorm="pv"/>
+      <node begin="6" cat="pp" end="8" id="13" rel="mod">
+        <node begin="6" end="7" id="14" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="7" end="8" id="15" lemma="1969" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1969" word="1969"/>
+      </node>
+      <node begin="9" cat="ppart" end="19" id="16" rel="mod">
+        <node begin="9" buiging="zonder" end="10" id="17" lemma="rekenen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gerekend" word="gerekend" wvorm="vd"/>
+        <node begin="10" cat="pp" end="19" id="18" rel="mod">
+          <node begin="10" end="11" id="19" lemma="binnen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="binnen" vztype="init" word="binnen"/>
+          <node begin="11" cat="np" end="19" id="20" rel="obj1">
+            <node begin="11" end="12" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="termijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="termijn" word="termijn"/>
+            <node begin="13" cat="pp" end="19" id="23" rel="mod">
+              <node begin="13" end="14" id="24" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="14" cat="np" end="19" id="25" rel="obj1">
+                <node begin="14" end="15" id="26" lemma="30" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="30" word="30"/>
+                <node begin="15" end="16" getal="mv" graad="basis" id="27" lemma="dag" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dag" word="dagen"/>
+                <node begin="16" cat="pp" end="19" id="28" rel="mod">
+                  <node begin="16" end="17" id="29" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
+                  <node begin="17" cat="np" end="19" id="30" rel="obj1">
+                    <node begin="17" end="18" id="31" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                    <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="32" lemma="ongeval" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="ongeval" word="ongeval"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="20" cat="np" end="22" id="33" rel="su">
+        <node begin="20" end="21" id="34" lemma="3042" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="3042" word="3042"/>
+        <node begin="21" end="22" getal="mv" graad="basis" id="35" lemma="weggebruiker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gebruiker" word="weggebruikers"/>
+      </node>
+      <node begin="22" cat="mwu" end="25" id="36" rel="svp">
+        <node begin="22" end="23" id="37" lemma="om" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="om" vztype="init" word="om"/>
+        <node begin="23" end="24" id="38" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="fixed" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+        <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="39" lemma="leven" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="leven" word="leven"/>
+      </node>
+    </node>
+    <node begin="25" end="26" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ten gevolge van deze ongevallen kwamen in 1969 - gerekend binnen de termijn van 30 dagen na het ongeval - 3042 weggebruikers om het leven .</sentence>
+</alpino_ds>

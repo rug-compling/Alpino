@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="11" end="12" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="17" end="18" frame="punct(komma)" id="2" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="sv1" end="27" id="3" rel="--">
+      <node begin="0" end="1" frame="verb(hebben,subjunctive,vp)" id="4" infl="subjunctive" lcat="sv1" pos="verb" rel="hd" root="gelief" sc="vp" sense="gelief" word="Gelieve"/>
+      <node begin="1" cat="ti" end="27" id="5" rel="vc">
+        <node begin="4" end="5" frame="complementizer(te)" id="6" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+        <node begin="1" cat="inf" end="27" id="7" rel="body">
+          <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="8" lcat="np" num="sg" pos="noun" rel="obj1" root="rekening" sense="rekening" word="rekening"/>
+          <node begin="5" end="6" frame="verb(hebben,inf,fixed([{[er_pp(met,A),acc(rekening)]},extra_sbar(A)],norm_passive))" id="9" infl="inf" lcat="inf" pos="verb" rel="hd" root="houd" sc="fixed([{[er_pp(met,A),acc(rekening)]},extra_sbar(A)],norm_passive)" sense="rekening-houd-met" word="houden"/>
+          <node begin="1" cat="pp" end="27" id="10" rel="pc">
+            <node begin="1" end="2" frame="er_vp_adverb" id="11" lcat="advp" pos="adv" rel="pobj1" root="er" sense="er" special="er" word="er"/>
+            <node begin="3" end="4" frame="preposition(met,[mee],extracted_np)" id="12" lcat="pp" pos="prep" rel="hd" root="met" sc="extracted_np" sense="met" word="mee"/>
+            <node begin="6" cat="cp" end="27" id="13" rel="vc">
+              <node begin="6" end="7" frame="complementizer(dat)" id="14" lcat="cp" pos="comp" rel="cmp" root="dat" sc="dat" sense="dat" word="dat"/>
+              <node begin="7" cat="ssub" end="27" id="15" rel="body">
+                <node begin="7" cat="np" end="17" id="16" index="1" rel="su">
+                  <node begin="7" end="8" frame="determiner(de)" id="17" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="8" cat="ppart" end="10" id="18" rel="mod">
+                    <node aform="base" begin="8" end="9" frame="adjective(no_e(adv))" id="19" infl="no_e" lcat="ap" pos="adj" rel="mod" root="procedureel" sense="procedureel" vform="adj" word="procedureel"/>
+                    <node aform="base" begin="9" end="10" frame="adjective(ge_e)" id="20" infl="e" lcat="ppart" pos="adj" rel="hd" root="bepaald" sense="bepaald" vform="psp" word="bepaalde"/>
+                  </node>
+                  <node begin="10" end="11" frame="tmp_noun(de,count,pl)" gen="de" id="21" lcat="np" num="pl" pos="noun" rel="hd" root="periode" sense="periode" special="tmp" word="periodes"/>
+                  <node begin="12" cat="np" end="17" id="22" rel="app">
+                    <node begin="12" cat="cp" end="16" id="23" rel="mod">
+                      <node begin="12" end="13" frame="complementizer(zoals)" id="24" lcat="cp" pos="comp" rel="cmp" root="zoals" sc="zoals" sense="zoals" word="zoals"/>
+                      <node begin="13" cat="ppart" end="16" id="25" rel="body">
+                        <node begin="13" end="14" frame="verb(hebben,psp,ninv(sbar,part_sbar(vast)))" id="26" infl="psp" lcat="ppart" pos="verb" rel="hd" root="leg_vast" sc="part_sbar(vast)" sense="leg_vast" word="vastgelegd"/>
+                        <node begin="14" cat="pp" end="16" id="27" rel="mod">
+                          <node begin="14" end="15" frame="preposition(in,[])" id="28" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                          <node begin="15" end="16" frame="noun(de,count,sg)" gen="de" id="29" lcat="np" num="sg" pos="noun" rel="obj1" root="verordening" sense="verordening" word="verordening"/>
+                        </node>
+                      </node>
+                    </node>
+                    <node begin="16" end="17" frame="number(hoofd(both))" id="30" infl="both" lcat="np" pos="num" rel="hd" root="259/93" sense="259/93" special="hoofd" word="259/93"/>
+                  </node>
+                </node>
+                <node begin="24" end="25" frame="verb(zijn,pl,aux(te_inf))" id="31" infl="pl" lcat="ssub" pos="verb" rel="hd" root="begin" sc="aux(te_inf)" sense="begin" tense="present" word="beginnen"/>
+                <node begin="7" cat="ti" end="27" id="32" rel="vc">
+                  <node begin="25" end="26" frame="complementizer(te)" id="33" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+                  <node begin="7" cat="inf" end="27" id="34" rel="body">
+                    <node begin="7" end="17" id="35" index="1" rel="su"/>
+                    <node begin="18" cat="pp" end="24" id="36" rel="mod">
+                      <node begin="18" end="19" frame="modal_adverb" id="37" lcat="advp" pos="adv" rel="mod" root="pas" sc="modal" sense="pas" word="pas"/>
+                      <node begin="19" end="20" frame="preposition(na,[])" id="38" lcat="pp" pos="prep" rel="hd" root="na" sense="na" word="na"/>
+                      <node begin="20" cat="np" end="24" id="39" rel="obj1">
+                        <node begin="20" end="21" frame="noun(both,both,both)" gen="both" id="40" lcat="np" num="both" pos="noun" rel="hd" root="vervollediging" sense="vervollediging" word="vervollediging"/>
+                        <node begin="21" cat="pp" end="24" id="41" rel="mod">
+                          <node begin="21" end="22" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="42" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                          <node begin="22" cat="np" end="24" id="43" rel="obj1">
+                            <node begin="22" end="23" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="44" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                            <node begin="23" end="24" frame="noun(het,count,sg)" gen="het" id="45" lcat="np" num="sg" pos="noun" rel="hd" root="dossier" sense="dossier" word="dossier"/>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node begin="26" end="27" frame="verb('hebben/zijn',inf,intransitive)" id="46" infl="inf" lcat="inf" pos="verb" rel="hd" root="loop" sc="intransitive" sense="loop" word="lopen"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="27" end="28" frame="punct(punt)" id="47" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Gelieve er rekening mee te houden dat de procedureel bepaalde periodes , zoals vastgelegd in verordening 259/93 , pas na vervollediging van het dossier beginnen te lopen .</sentence>
+  <comments>
+    <comment>Q#84|Gelieve er rekening mee te houden dat de procedureel bepaalde periodes , zoals vastgelegd in verordening 259/93 , pas na vervollediging van het dossier beginnen te lopen .|1|1|-2.4110995711879415</comment>
+  </comments>
+</alpino_ds>

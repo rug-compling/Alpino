@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="19" id="2" rel="--">
+      <node begin="0" cat="mwu" end="3" id="3" rel="tag">
+        <node begin="0" end="1" id="4" lemma="ja" pos="tag" postag="TSW()" pt="tsw" rel="mwp" root="Ja" word="Ja"/>
+        <node begin="1" end="2" id="5" lemma="," pos="tag" postag="LET()" pt="let" rel="mwp" root="," word=","/>
+        <node begin="2" end="3" id="6" lemma="ja" pos="tag" postag="TSW()" pt="tsw" rel="mwp" root="ja" word="ja"/>
+      </node>
+      <node begin="4" cat="whq" end="19" id="7" rel="nucl">
+        <node begin="4" end="5" id="8" index="1" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="whd" root="hoe" word="hoe"/>
+        <node begin="4" cat="sv1" end="19" id="9" rel="body">
+          <node begin="5" end="6" id="10" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+          <node begin="6" end="7" genus="masc" getal="ev" id="11" index="2" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="men"/>
+          <node begin="4" cat="inf" end="19" id="12" rel="vc">
+            <node begin="4" end="5" id="13" index="1" rel="mod"/>
+            <node begin="6" end="7" id="14" index="2" rel="su"/>
+            <node begin="7" end="8" getal="getal" id="15" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="zich" status="red" vwtype="refl" word="zich"/>
+            <node begin="8" end="9" id="16" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+            <node begin="9" cat="pp" end="11" id="17" rel="ld">
+              <node begin="9" end="10" id="18" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="10" end="11" getal="mv" graad="basis" id="19" lemma="bocht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="bocht" word="bochten"/>
+            </node>
+            <node begin="11" buiging="zonder" end="12" id="20" lemma="wringen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="wring" word="wringen" wvorm="inf"/>
+            <node begin="12" cat="oti" end="19" id="21" rel="mod">
+              <node begin="12" end="13" id="22" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+              <node begin="13" cat="ti" end="19" id="23" rel="body">
+                <node begin="17" end="18" id="24" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+                <node begin="13" cat="inf" end="19" id="25" rel="body">
+                  <node begin="13" cat="whrel" end="16" id="26" rel="obj1">
+                    <node begin="13" end="14" getal="ev" id="27" index="3" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="wat"/>
+                    <node begin="13" cat="ssub" end="16" id="28" rel="body">
+                      <node begin="13" end="14" id="29" index="3" rel="su"/>
+                      <node begin="14" buiging="zonder" end="15" graad="basis" id="30" lemma="krom" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="krom" word="krom"/>
+                      <node begin="15" end="16" id="31" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+                    </node>
+                  </node>
+                  <node begin="16" buiging="zonder" end="17" graad="basis" id="32" lemma="recht" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="recht" word="recht"/>
+                  <node begin="18" buiging="zonder" end="19" id="33" lemma="praten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="praat" word="praten" wvorm="inf"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="34" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ja , ja , hoe kan men zich niet in bochten wringen om wat krom is recht te praten .</sentence>
+</alpino_ds>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="0" cat="smain" end="23" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="mod">
+        <node begin="0" end="1" frame="determiner(de)" id="3" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node aform="base" begin="1" end="2" frame="adjective(ende(padv))" id="4" infl="e" lcat="ppres" pos="adj" rel="mod" root="overeenkomstsluitende" sense="overeenkomstsluitende" vform="gerund" word="overeenkomstsluitende"/>
+        <node begin="2" end="3" frame="tmp_noun(de,count,pl)" gen="de" id="5" lcat="np" num="pl" pos="noun" rel="hd" root="partij" sense="partij" special="tmp" word="partijen"/>
+      </node>
+      <node begin="3" end="4" frame="verb(hebben,pl,pc_pp(over))" id="6" infl="pl" lcat="smain" pos="verb" rel="hd" root="beslis" sc="pc_pp(over)" sense="beslis-over" tense="present" word="beslissen"/>
+      <node begin="4" cat="pp" end="6" id="7" rel="mod">
+        <node begin="4" end="5" frame="preposition(binnen,[])" id="8" lcat="pp" pos="prep" rel="hd" root="binnen" sense="binnen" word="binnen"/>
+        <node begin="5" end="6" frame="number(hoofd(pl_num))" id="9" infl="pl_num" lcat="np" pos="num" rel="obj1" root="30" sense="30" special="hoofd" word="30"/>
+      </node>
+      <node begin="6" end="7" frame="tmp_noun(de,count,pl)" gen="de" id="10" lcat="np" num="pl" pos="noun" rel="su" root="dag" sense="dag" special="tmp" word="dagen"/>
+      <node begin="7" cat="pp" end="14" id="11" rel="mod">
+        <node begin="7" end="8" frame="preposition(na,[])" id="12" lcat="pp" pos="prep" rel="hd" root="na" sense="na" word="na"/>
+        <node begin="8" cat="np" end="14" id="13" rel="obj1">
+          <node begin="8" end="9" frame="determiner(de)" id="14" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="9" end="10" frame="noun(de,count,sg)" gen="de" id="15" lcat="np" num="sg" pos="noun" rel="hd" root="keuze" sense="keuze" word="keuze"/>
+          <node begin="10" cat="pp" end="14" id="16" rel="mod">
+            <node begin="10" end="11" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="17" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="11" cat="np" end="14" id="18" rel="obj1">
+              <node begin="11" end="12" frame="determiner(de)" id="19" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="12" end="13" frame="number(rang)" id="20" lcat="ap" pos="num" rel="mod" root="derde" sense="derde" special="rang" word="derde"/>
+              <node begin="13" end="14" frame="noun(de,count,sg)" gen="de" id="21" lcat="np" num="sg" pos="noun" rel="hd" root="bemiddelaar" sense="bemiddelaar" word="bemiddelaar"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node aform="base" begin="14" end="15" frame="adjective(postn_pred(padv))" id="22" infl="pred" lcat="ap" pos="adj" rel="predm" root="samen" sense="samen" vform="adj" word="samen"/>
+      <node begin="15" cat="pp" end="23" id="23" rel="pc">
+        <node begin="15" end="16" frame="preposition(over,[heen])" id="24" lcat="pp" pos="prep" rel="hd" root="over" sense="over" word="over"/>
+        <node begin="16" cat="np" end="23" id="25" rel="obj1">
+          <node begin="16" end="17" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="26" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+          <node begin="17" end="18" frame="noun(het,count,sg)" gen="het" id="27" lcat="np" num="sg" pos="noun" rel="hd" root="reglement" sense="reglement" word="reglement"/>
+          <node begin="18" cat="pp" end="23" id="28" rel="mod">
+            <node begin="18" end="19" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="29" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="19" cat="np" end="23" id="30" rel="obj1">
+              <node begin="19" end="20" frame="noun(de,count,sg)" gen="de" id="31" lcat="np" num="sg" pos="noun" rel="hd" root="orde" sense="orde" word="orde"/>
+              <node begin="20" cat="pp" end="23" id="32" rel="mod">
+                <node begin="20" end="21" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="33" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+                <node begin="21" cat="np" end="23" id="34" rel="obj1">
+                  <node begin="21" end="22" frame="determiner(de)" id="35" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="22" end="23" frame="noun(de,count,sg)" gen="de" id="36" lcat="np" num="sg" pos="noun" rel="hd" root="bemiddeling_procedure" sense="bemiddeling_procedure" word="bemiddelingsprocedure"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" frame="punct(punt)" id="37" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De overeenkomstsluitende partijen beslissen binnen 30 dagen na de keuze van de derde bemiddelaar samen over het reglement van orde voor de bemiddelingsprocedure .</sentence>
+  <comments>
+    <comment>Q#337|De overeenkomstsluitende partijen beslissen binnen 30 dagen na de keuze van de derde bemiddelaar samen over het reglement van orde voor de bemiddelingsprocedure .|1|1|5.943333966208655</comment>
+  </comments>
+</alpino_ds>

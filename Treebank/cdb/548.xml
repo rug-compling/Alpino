@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="0" cat="conj" end="21" id="1" rel="--">
+      <node begin="0" cat="smain" end="8" id="2" rel="cnj">
+        <node begin="0" cat="np" end="2" id="3" rel="su">
+          <node begin="0" end="1" id="4" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="idee" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="idee" word="idee"/>
+        </node>
+        <node begin="2" end="3" id="6" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
+        <node begin="3" cat="pp" end="8" id="7" rel="ld">
+          <node begin="3" end="4" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="4" cat="np" end="8" id="9" rel="obj1">
+            <node begin="4" end="5" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="schilder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schilder" word="schilder"/>
+            <node begin="6" cat="mwu" end="8" id="12" rel="app">
+              <node begin="6" end="7" id="13" lemma="Lei" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lei" spectype="deeleigen" word="Lei"/>
+              <node begin="7" end="8" id="14" lemma="Moulin" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Moulin" spectype="deeleigen" word="Moulin"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="8" conjtype="neven" end="9" id="15" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="9" cat="smain" end="21" id="16" rel="cnj">
+        <node begin="9" cat="np" end="11" id="17" index="1" rel="su">
+          <node begin="9" end="10" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="10" end="11" getal="mv" graad="basis" id="19" lemma="kostuum" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kostuum" word="kostuums"/>
+        </node>
+        <node begin="11" end="12" id="20" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" word="werden" wvorm="pv"/>
+        <node begin="9" cat="ppart" end="21" id="21" rel="vc">
+          <node begin="9" end="11" id="22" index="1" rel="obj1"/>
+          <node begin="12" buiging="zonder" end="13" id="23" lemma="kopen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="koop" word="gekocht" wvorm="vd"/>
+          <node begin="13" cat="pp" end="18" id="24" rel="pc">
+            <node begin="13" end="14" id="25" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="14" cat="np" end="18" id="26" rel="obj1">
+              <node begin="14" end="15" id="27" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="28" lemma="Rijksmuseum" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Rijksmuseum" word="Rijksmuseum"/>
+              <node begin="16" cat="pp" end="18" id="29" rel="mod">
+                <node begin="16" end="17" id="30" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="31" lemma="Amsterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Amsterdam" word="Amsterdam"/>
+              </node>
+            </node>
+          </node>
+          <node begin="18" cat="pp" end="21" id="32" rel="mod">
+            <node begin="18" end="19" id="33" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+            <node begin="19" cat="np" end="21" id="34" rel="obj1">
+              <node begin="19" end="20" id="35" lemma="1500" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="1500" word="1500"/>
+              <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="36" lemma="gulden" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gulden" word="gulden"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="37" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>Het idee kwam van de schilder Lei Moulin en de kostuums werden gekocht van het Rijksmuseum in Amsterdam voor 1500 gulden :</sentence>
+</alpino_ds>

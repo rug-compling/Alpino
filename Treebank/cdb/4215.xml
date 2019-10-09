@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="8" end="9" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="13" end="14" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="18" end="19" id="4" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="19" end="20" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="27" id="6" rel="--">
+      <node begin="0" cat="cp" end="18" id="7" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="8" lemma="hoewel" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="hoewel" word="Hoewel"/>
+        <node begin="1" cat="ssub" end="18" id="9" rel="body">
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="10" lemma="ppp" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="su" root="PPP" word="PPP"/>
+          <node begin="2" buiging="zonder" end="3" graad="basis" id="11" lemma="uiteindelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="uiteindelijk" word="uiteindelijk"/>
+          <node begin="3" cat="pp" end="6" id="12" rel="mod">
+            <node begin="3" end="4" id="13" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="4" cat="np" end="6" id="14" rel="obj1">
+              <node begin="4" buiging="met-e" end="5" graad="basis" id="15" lemma="commerciel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="commercieel" word="commerciele"/>
+              <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="16" lemma="basis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="basis" word="basis"/>
+            </node>
+          </node>
+          <node begin="6" end="7" id="17" lemma="werken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="werk" word="werkt" wvorm="pv"/>
+          <node begin="9" cat="du" end="18" id="18" rel="mod">
+            <node begin="9" cat="smain" end="13" id="19" rel="dp">
+              <node begin="9" end="10" getal="mv" id="20" index="1" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+              <node begin="10" end="11" id="21" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" word="moeten" wvorm="pv"/>
+              <node begin="9" cat="inf" end="13" id="22" rel="vc">
+                <node begin="9" end="10" id="23" index="1" rel="su"/>
+                <node begin="11" end="12" id="24" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+                <node begin="12" buiging="zonder" end="13" id="25" lemma="eten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="eet" word="eten" wvorm="inf"/>
+              </node>
+            </node>
+            <node begin="14" cat="smain" end="18" id="26" rel="dp">
+              <node begin="14" end="15" getal="ev" id="27" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
+              <node begin="15" end="16" id="28" lemma="lijken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lijk" word="lijkt" wvorm="pv"/>
+              <node begin="16" end="17" getal="ev" id="29" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj2" root="me" status="red" vwtype="pr" word="me"/>
+              <node begin="17" buiging="zonder" end="18" graad="basis" id="30" lemma="reeel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="reëel" word="reeel"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="20" end="21" id="31" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="21" cat="np" end="24" id="32" rel="su">
+        <node begin="21" buiging="zonder" end="22" getal="ev" id="33" lemma="haar" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="haar" status="vol" vwtype="bez" word="haar"/>
+        <node begin="22" buiging="met-e" end="23" graad="sup" id="34" lemma="voornaam" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="voornaamst" word="voornaamste"/>
+        <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="35" lemma="doel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="doel" word="doel"/>
+      </node>
+      <node begin="24" cat="pp" end="27" id="36" rel="predc">
+        <node begin="24" end="25" id="37" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="25" cat="np" end="27" id="38" rel="obj1">
+          <node begin="25" buiging="met-e" end="26" graad="basis" id="39" lemma="ideele" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ideele" word="ideele"/>
+          <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="40" lemma="aard" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aard" word="aard"/>
+        </node>
+      </node>
+    </node>
+    <node begin="27" end="28" id="41" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>Hoewel PPP uiteindelijk op commerciele basis werkt ( &quot; we moeten ook eten , dat lijkt me reeel ) , is haar voornaamste doel van ideele aard :</sentence>
+</alpino_ds>

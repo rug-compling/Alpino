@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="whq" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welke"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="4" lemma="beroemd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="beroemd" word="beroemde"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="gebeurtenis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gebeurtenis" word="gebeurtenis"/>
+      </node>
+      <node begin="0" cat="sv1" end="9" id="6" rel="body">
+        <node begin="0" end="3" id="7" index="1" rel="obj1"/>
+        <node begin="3" end="4" id="8" lemma="vieren" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="vier" word="vieren" wvorm="pv"/>
+        <node begin="4" cat="np" end="6" id="9" rel="su">
+          <node begin="4" end="5" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="Fransen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Fransman" word="Fransen"/>
+        </node>
+        <node begin="6" cat="pp" end="9" id="12" rel="mod">
+          <node begin="6" end="7" id="13" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="7" cat="mwu" end="9" id="14" rel="obj1">
+            <node begin="7" end="8" id="15" lemma="11" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="11" word="11"/>
+            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="16" lemma="november" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="november" word="november"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="9" end="10" id="17" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke beroemde gebeurtenis vieren de Fransen op 11 november ?</sentence>
+</alpino_ds>

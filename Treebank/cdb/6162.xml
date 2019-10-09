@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="smain" end="15" id="1" rel="--">
+      <node begin="0" cat="cp" end="3" id="2" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="3" lemma="doordat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="doordat" word="Doordat"/>
+        <node begin="1" cat="ssub" end="3" id="4" rel="body">
+          <node begin="1" end="2" getal="mv" id="5" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
+          <node begin="2" end="3" id="6" lemma="vertragen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="vertraag" word="vertraagden" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" lemma="krijgen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="krijg" word="krijg" wvorm="pv"/>
+      <node begin="4" end="5" getal="ev" id="8" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="noun" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+      <node begin="5" end="6" id="9" lemma="misschien" pos="adv" postag="BW()" pt="bw" rel="mod" root="misschien" word="misschien"/>
+      <node begin="6" cat="np" end="15" id="10" rel="obj1">
+        <node begin="6" end="7" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="12" lemma="indruk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="indruk" word="indruk"/>
+        <node begin="8" cat="cp" end="15" id="13" rel="vc">
+          <node begin="8" conjtype="onder" end="9" id="14" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="9" cat="ssub" end="15" id="15" rel="body">
+            <node begin="9" end="10" getal="mv" id="16" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+            <node begin="11" end="12" id="17" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+            <node begin="12" end="13" getal="ev" id="18" lemma="alles" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="alles" status="vol" vwtype="onbep" word="alles"/>
+            <node begin="10" cat="pp" end="14" id="19" rel="pc">
+              <node begin="10" end="11" getal="getal" id="20" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+              <node begin="13" end="14" id="21" lemma="aan" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="aan" vztype="fin" word="aan"/>
+            </node>
+            <node begin="14" end="15" id="22" lemma="doen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="doe" word="doen" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Doordat wij vertraagden krijg je misschien de indruk dat we er niet alles aan doen .</sentence>
+</alpino_ds>

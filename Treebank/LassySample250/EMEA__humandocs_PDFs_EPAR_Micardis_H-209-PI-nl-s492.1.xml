@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="conj" end="4" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="cnj">
+        <node aform="base" begin="0" buiging="met-e" end="1" frame="adjective(e)" graad="basis" id="3" infl="e" lcat="ap" lemma="algemeen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="algemeen" sense="algemeen" vform="adj" word="Algemene"/>
+        <node begin="1" end="2" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="4" lcat="np" lemma="aandoening" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="aandoening" sense="aandoening" word="aandoeningen"/>
+      </node>
+      <node begin="2" conjtype="neven" end="3" frame="conj(en)" id="5" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="3" end="4" frame="noun(both,both,both)" gen="both" getal="mv" graad="basis" id="6" lcat="np" lemma="toedieningsplaatsstoornis" ntype="soort" num="both" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="toedieningsplaatsstoornissen" sense="toedieningsplaatsstoornissen" word="toedieningsplaatsstoornissen"/>
+    </node>
+  </node>
+  <sentence>Algemene aandoeningen en toedieningsplaatsstoornissen</sentence>
+  <comments>
+    <comment>Q#humandocs_PDFs_EPAR_Micardis_H-209-PI-nl-s492.1|Algemene aandoeningen en toedieningsplaatsstoornissen|1|1|0.03920642374586634</comment>
+  </comments>
+</alpino_ds>

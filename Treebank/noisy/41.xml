@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="smain" end="10" id="1" rel="--">
+      <node begin="0" cat="ap" end="2" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="eerder" pos="adj" rel="hd" root="eerder" word="Eerder"/>
+        <node begin="1" end="2" id="4" lemma="al" pos="adv" rel="mod" root="al" word="al"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="bedank" pos="verb" rel="hd" root="bedank" word="bedankte"/>
+      <node begin="3" cat="np" end="5" id="6" rel="su">
+        <node begin="3" end="4" id="7" lemma="korpschef" pos="noun" rel="hd" root="korpschef" word="korpschef"/>
+        <node begin="4" end="5" id="8" lemma="Nordholt" pos="name" rel="app" root="Nordholt" word="Nordholt"/>
+      </node>
+      <node begin="5" cat="cp" end="10" id="9" rel="predc">
+        <node begin="5" end="6" id="10" lemma="als" pos="comp" rel="cmp" root="als" word="als"/>
+        <node begin="6" cat="np" end="10" id="11" rel="body">
+          <node begin="6" end="7" id="12" lemma="lid" pos="noun" rel="hd" root="lid" word="lid"/>
+          <node begin="7" cat="pp" end="10" id="13" rel="mod">
+            <node begin="7" end="8" id="14" lemma="van" pos="prep" rel="hd" root="van" word="van"/>
+            <node begin="8" cat="np" end="10" id="15" rel="obj1">
+              <node begin="8" end="9" id="16" lemma="de" pos="det" rel="det" root="de" word="de"/>
+              <node begin="9" end="10" id="17" lemma="NPB" pos="name" rel="hd" root="NPB" word="NPB"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="10" end="11" id="18" lemma="." pos="punct" rel="--" root="." word="."/>
+  </node>
+  <sentence>Eerder al bedankte korpschef Nordholt als lid van de NPB .</sentence>
+</alpino_ds>

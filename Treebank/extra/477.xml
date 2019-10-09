@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="zonder" end="1" getal="ev" id="3" infl="pron" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="Zijn"/>
+        <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="antwoord" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="antwoord" word="antwoord"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="sg" lemma="over_laten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="laat_over" sc="part_fixed(over,[vc(raad,pass_te,intransitive),acc],norm_passive)" stype="declarative" tense="present" word="laat" wvorm="pv"/>
+      <node begin="3" end="4" id="6" lemma="echter" pos="adv" postag="BW()" pt="bw" rel="mod" root="echter" special="sentence" word="echter"/>
+      <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="7" infl="no_e" lemma="weinig" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="obj1" rnum="sg" root="weinig" vform="adj" vwtype="onbep" word="weinig"/>
+      <node begin="5" cat="ti" end="7" id="8" rel="svp">
+        <node begin="5" end="6" id="9" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+        <node begin="6" buiging="zonder" end="7" id="10" infl="inf" lemma="raden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="raad" sc="intransitive" word="raden" wvorm="inf"/>
+      </node>
+      <node begin="7" end="8" id="11" lemma="over" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="over" vztype="fin" word="over"/>
+    </node>
+    <node begin="8" end="9" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Zijn antwoord laat echter weinig te raden over .</sentence>
+</alpino_ds>

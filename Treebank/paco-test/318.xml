@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="np" end="5" id="1" rel="--">
+      <node begin="0" end="1" frame="noun(de,count,pl)" gen="de" id="2" lcat="np" num="pl" pos="noun" rel="hd" root="taak" sense="taak" word="Taken"/>
+      <node begin="1" cat="pp" end="5" id="3" rel="mod">
+        <node begin="1" end="2" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="4" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+        <node begin="2" cat="np" end="5" id="5" rel="obj1">
+          <node begin="2" end="3" frame="determiner(de)" id="6" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node aform="base" begin="3" end="4" frame="adjective(ende(padv))" id="7" infl="e" lcat="ppres" pos="adj" rel="mod" root="overeenkomstsluitende" sense="overeenkomstsluitende" vform="gerund" word="overeenkomstsluitende"/>
+          <node begin="4" end="5" frame="tmp_noun(de,count,pl)" gen="de" id="8" lcat="np" num="pl" pos="noun" rel="hd" root="partij" sense="partij" special="tmp" word="partijen"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Taken van de overeenkomstsluitende partijen</sentence>
+  <comments>
+    <comment>Q#318|Taken van de overeenkomstsluitende partijen|1|1|-1.336451265288116</comment>
+  </comments>
+</alpino_ds>

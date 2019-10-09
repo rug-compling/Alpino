@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="werken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="werk" word="werkt" wvorm="pv"/>
+      <node begin="2" cat="pp" end="9" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="3" cat="np" end="9" id="6" rel="obj1">
+          <node begin="3" end="4" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="luchtmachtbasis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="luchtmachtbasis" word="luchtmachtbasis"/>
+          <node begin="5" cat="mwu" end="7" id="9" rel="app">
+            <node begin="5" end="6" id="10" lemma="Kleine" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kleine" spectype="deeleigen" word="Kleine"/>
+            <node begin="6" end="7" id="11" lemma="Brogel" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Brogel" spectype="deeleigen" word="Brogel"/>
+          </node>
+          <node begin="7" cat="pp" end="9" id="12" rel="mod">
+            <node begin="7" end="8" id="13" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="14" lemma="Limburg" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Limburg" word="Limburg"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Hij werkt op de luchtmachtbasis Kleine Brogel in Limburg</sentence>
+</alpino_ds>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="12" id="2" rel="--">
+      <node begin="0" cat="smain" end="7" id="3" rel="dp">
+        <node begin="0" cat="np" end="4" id="4" rel="su">
+          <node begin="0" buiging="zonder" end="1" getal="ev" id="5" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="Mijn"/>
+          <node begin="1" cat="mwu" end="3" id="6" rel="mod">
+            <node begin="1" end="2" id="7" lemma="Galaxyt" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Galaxyt" spectype="deeleigen" word="Galaxyt"/>
+            <node begin="2" end="3" id="8" lemma="Y" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Y" spectype="deeleigen" word="Y"/>
+          </node>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="smartphone" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="smartphone" word="smartphone"/>
+        </node>
+        <node begin="4" end="5" id="10" lemma="vast_lopen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="loop_vast" word="loopt" wvorm="pv"/>
+        <node begin="5" buiging="zonder" end="6" graad="basis" id="11" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="vaak" word="vaak"/>
+        <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="vast" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="vast" word="vast"/>
+      </node>
+      <node begin="8" cat="whq" end="12" id="13" rel="dp">
+        <node begin="8" end="9" getal="ev" id="14" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" root="wat" status="vol" vwtype="vb" word="wat"/>
+        <node begin="8" cat="sv1" end="12" id="15" rel="body">
+          <node begin="9" end="10" id="16" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+          <node begin="10" end="11" getal="ev" id="17" index="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+          <node begin="8" cat="inf" end="12" id="18" rel="vc">
+            <node begin="8" end="9" id="19" index="1" rel="obj1"/>
+            <node begin="10" end="11" id="20" index="2" rel="su"/>
+            <node begin="11" buiging="zonder" end="12" id="21" lemma="doen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="doe" word="doen" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="22" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Mijn Galaxyt Y smartphone loopt vaak vast , wat kan ik doen ?</sentence>
+</alpino_ds>

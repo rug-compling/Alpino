@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="8" end="9" id="2" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="10" end="11" id="3" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="smain" end="13" id="4" rel="--">
+      <node begin="0" cat="cp" end="4" id="5" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="6" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+        <node begin="1" cat="ssub" end="4" id="7" rel="body">
+          <node begin="1" end="2" getal="ev" id="8" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="9" lemma="Chrome" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Chrome" word="Chrome"/>
+          <node begin="3" end="4" id="10" lemma="openen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="open" word="open" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="5" end="6" id="11" lemma="zien" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zie" word="zie" wvorm="pv"/>
+      <node begin="6" end="7" getal="ev" id="12" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      <node begin="7" cat="np" end="13" id="13" rel="obj1">
+        <node begin="7" end="8" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="15" lemma="Microsoft" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="Microsoft" word="microsoft"/>
+        <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="16" lemma="Bing" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="Bing" word="Bing"/>
+        <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="17" lemma="pagina" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pagina" word="pagina"/>
+      </node>
+    </node>
+    <node begin="13" end="14" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als ik Chrome open , zie ik een ( microsoft ) Bing pagina .</sentence>
+</alpino_ds>

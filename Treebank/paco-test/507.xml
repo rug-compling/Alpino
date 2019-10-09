@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="14" end="15" frame="punct(ligg_streep)" id="1" lcat="punct" pos="punct" rel="--" root="-" sense="-" special="ligg_streep" word="-"/>
+    <node begin="16" end="17" frame="punct(komma)" id="2" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="du" end="20" id="3" rel="--">
+      <node begin="0" cat="smain" end="14" id="4" rel="dp">
+        <node begin="0" cat="conj" end="6" id="5" index="1" rel="su">
+          <node begin="0" cat="np" end="4" id="6" rel="cnj">
+            <node begin="0" end="1" frame="determiner(de)" id="7" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+            <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" id="8" lcat="np" num="sg" pos="noun" rel="hd" root="situatie" sense="situatie" word="situatie"/>
+            <node begin="2" cat="pp" end="4" id="9" rel="mod">
+              <node begin="2" end="3" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="10" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+              <node begin="3" end="4" frame="noun(de,count,pl)" gen="de" id="11" lcat="np" num="pl" pos="noun" rel="obj1" root="vrouw" sense="vrouw" word="vrouwen"/>
+            </node>
+          </node>
+          <node begin="4" end="5" frame="conj(en)" id="12" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+          <node begin="5" end="6" frame="noun(both,both,both)" gen="both" id="13" lcat="np" num="both" pos="noun" rel="cnj" root="gendervraagstukken" sense="gendervraagstukken" word="gendervraagstukken"/>
+        </node>
+        <node begin="6" end="7" frame="verb(unacc,pl,passive)" id="14" infl="pl" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="worden"/>
+        <node begin="0" cat="ppart" end="14" id="15" rel="vc">
+          <node begin="0" end="6" id="16" index="1" rel="obj1"/>
+          <node aform="base" begin="7" end="8" frame="adjective(no_e(adv))" id="17" infl="no_e" lcat="ap" pos="adj" rel="mod" root="systematisch" sense="systematisch" vform="adj" word="systematisch"/>
+          <node begin="8" cat="pp" end="10" id="18" rel="svp">
+            <node begin="8" end="9" frame="preposition(in,[])" id="19" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+            <node begin="9" end="10" frame="noun(de,count,sg)" gen="de" id="20" lcat="np" num="sg" pos="noun" rel="obj1" root="aanmerking" sense="aanmerking" word="aanmerking"/>
+          </node>
+          <node begin="10" end="11" frame="verb(hebben,psp,fixed([svp_pp(in,aanmerking),acc],norm_passive))" id="21" infl="psp" lcat="ppart" pos="verb" rel="hd" root="neem" sc="fixed([svp_pp(in,aanmerking),acc],norm_passive)" sense="in-aanmerking-neem" word="genomen"/>
+          <node begin="11" cat="pp" end="14" id="22" rel="mod">
+            <node begin="11" end="12" frame="preposition(op,[af,na])" id="23" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+            <node begin="12" cat="np" end="14" id="24" rel="obj1">
+              <node begin="12" end="13" frame="determiner(alle,nwh,mod,pro,nparg)" id="25" infl="alle" lcat="detp" pos="det" rel="det" root="alle" sense="alle" wh="nwh" word="alle"/>
+              <node begin="13" end="14" frame="noun(het,count,pl)" gen="het" id="26" lcat="np" num="pl" pos="noun" rel="hd" root="gebied" sense="gebied" word="gebieden"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="15" cat="conj" end="20" id="27" rel="dp">
+        <node aform="base" begin="15" end="16" frame="adjective(no_e(adv))" id="28" infl="no_e" lcat="ap" pos="adj" rel="cnj" root="politiek" sense="politiek" vform="adj" word="politiek"/>
+        <node aform="base" begin="17" end="18" frame="adjective(no_e(adv))" id="29" infl="no_e" lcat="ap" pos="adj" rel="cnj" root="economisch" sense="economisch" vform="adj" word="economisch"/>
+        <node begin="18" end="19" frame="conj(en)" id="30" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+        <node aform="base" begin="19" end="20" frame="adjective(no_e(adv))" id="31" infl="no_e" lcat="ap" pos="adj" rel="cnj" root="sociaal" sense="sociaal" vform="adj" word="sociaal"/>
+      </node>
+    </node>
+    <node begin="20" end="21" frame="punct(punt)" id="32" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De situatie van vrouwen en gendervraagstukken worden systematisch in aanmerking genomen op alle gebieden - politiek , economisch en sociaal .</sentence>
+  <comments>
+    <comment>Q#507|De situatie van vrouwen en gendervraagstukken worden systematisch in aanmerking genomen op alle gebieden - politiek , economisch en sociaal .|1|1|4.266754303332211</comment>
+  </comments>
+</alpino_ds>

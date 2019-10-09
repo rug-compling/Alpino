@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" word=";"/>
+    <node begin="0" cat="du" end="6" id="2" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="Kongo-Vrijstaat" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="dp" root="Kongo-Vrijstaat" word="Kongo-Vrijstaat"/>
+      <node begin="2" cat="np" end="6" id="4" rel="dp">
+        <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="voorloper" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorloper" word="voorloper"/>
+        <node begin="4" cat="pp" end="6" id="7" rel="mod">
+          <node begin="4" end="5" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="Belgisch-Kongo" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Belgisch-Kongo" word="Belgisch-Kongo"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Kongo-Vrijstaat ; de voorloper van Belgisch-Kongo</sentence>
+</alpino_ds>

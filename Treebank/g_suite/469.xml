@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="predc">
+        <node begin="0" end="1" id="3" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="1" buiging="zonder" end="2" graad="basis" id="4" lemma="goed" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="goed" word="goed"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="idee" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="idee" word="idee"/>
+      </node>
+      <node begin="3" end="4" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="4" cat="oti" end="9" id="7" rel="su">
+        <node begin="4" end="5" id="8" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+        <node begin="5" cat="ti" end="9" id="9" rel="body">
+          <node begin="6" end="7" id="10" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="5" cat="inf" end="9" id="11" rel="body">
+            <node begin="7" buiging="zonder" end="8" id="12" lemma="gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="gaan" wvorm="inf"/>
+            <node begin="5" cat="inf" end="9" id="13" rel="vc">
+              <node begin="5" end="6" id="14" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
+              <node begin="8" buiging="zonder" end="9" id="15" lemma="slapen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="slaap" word="slapen" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>een goed idee is om nu te gaan slapen</sentence>
+</alpino_ds>

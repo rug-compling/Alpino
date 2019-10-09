@@ -1,0 +1,15 @@
+#include <cstdio>
+#include <cstring>
+#include <iostream>
+#include <stdexcept>
+
+#include <stdint.h>
+#include <zlib.h>
+
+#include <IndexedCorpus/DzChunk.hh>
+#include <IndexedCorpus/DzIstreamBuf.hh>
+#include <IndexedCorpus/gzip.hh>
+
+using namespace std;
+using namespace indexedcorpus;
+

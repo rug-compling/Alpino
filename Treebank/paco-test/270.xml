@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="sv1" end="13" id="1" rel="--">
+      <node begin="0" end="1" frame="verb(hebben,sg1,transitive)" id="2" infl="sg1" lcat="sv1" pos="verb" rel="hd" root="gebruik" sc="transitive" sense="gebruik" tense="present" word="Gebruik"/>
+      <node begin="1" cat="np" end="3" id="3" rel="obj1">
+        <node begin="1" end="2" frame="determiner(de)" id="4" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="vervang_knop" sense="vervang_knop" word="vervangknop"/>
+      </node>
+      <node begin="3" cat="cp" end="8" id="6" rel="mod">
+        <node begin="3" end="4" frame="complementizer" id="7" lcat="cp" pos="comp" rel="cmp" root="voordat" sense="voordat" word="voordat"/>
+        <node begin="4" cat="ssub" end="8" id="8" rel="body">
+          <node begin="4" case="both" def="def" end="5" frame="pronoun(nwh,u,sg,de,both,def)" gen="de" id="9" lcat="np" num="sg" per="u" pos="pron" rel="su" root="u" sense="u" wh="nwh" word="u"/>
+          <node begin="5" cat="np" end="7" id="10" rel="obj1">
+            <node begin="5" end="6" frame="determiner(een)" id="11" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+            <node begin="6" end="7" frame="noun(both,both,both)" gen="both" id="12" lcat="np" num="both" pos="noun" rel="hd" root="e-mailbericht" sense="e-mailbericht" word="e-mailbericht"/>
+          </node>
+          <node begin="7" end="8" frame="verb(hebben,sg3,transitive)" id="13" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="verzend" sc="transitive" sense="verzend" tense="present" word="verzendt"/>
+        </node>
+      </node>
+      <node begin="8" cat="oti" end="13" id="14" rel="mod">
+        <node begin="8" end="9" frame="complementizer(om)" id="15" lcat="oti" pos="comp" rel="cmp" root="om" sc="om" sense="om" word="om"/>
+        <node begin="9" cat="ti" end="13" id="16" rel="body">
+          <node begin="11" end="12" frame="complementizer(te)" id="17" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+          <node begin="9" cat="inf" end="13" id="18" rel="body">
+            <node begin="9" cat="np" end="11" id="19" rel="obj1">
+              <node begin="9" end="10" frame="determiner(alle,nwh,mod,pro,nparg)" id="20" infl="alle" lcat="detp" pos="det" rel="det" root="alle" sense="alle" wh="nwh" word="alle"/>
+              <node begin="10" end="11" frame="noun(de,count,pl)" gen="de" id="21" lcat="np" num="pl" pos="noun" rel="hd" root="functie" sense="functie" word="functies"/>
+            </node>
+            <node begin="12" end="13" frame="verb(hebben,inf,transitive)" id="22" infl="inf" lcat="inf" pos="verb" rel="hd" root="verwijder" sc="transitive" sense="verwijder" word="verwijderen"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" frame="punct(punt)" id="23" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Gebruik de vervangknop voordat u een e-mailbericht verzendt om alle functies te verwijderen .</sentence>
+  <comments>
+    <comment>Q#270|Gebruik de vervangknop voordat u een e-mailbericht verzendt om alle functies te verwijderen .|1|1|-2.851587676336314</comment>
+  </comments>
+</alpino_ds>

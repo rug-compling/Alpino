@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="daarop" pos="pp" rel="pc" root="daarop" word="Daarop"/>
+      <node begin="1" end="2" id="3" lemma="sta" pos="verb" rel="hd" root="sta" word="staat"/>
+      <node begin="2" cat="pp" end="6" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="volgens" pos="prep" rel="hd" root="volgens" word="volgens"/>
+        <node begin="3" cat="np" end="6" id="6" rel="obj1">
+          <node begin="3" end="4" id="7" lemma="het" pos="det" rel="det" root="het" word="het"/>
+          <node begin="4" end="5" id="8" lemma="islamitisch" pos="adj" rel="mod" root="islamitisch" word="islamitisch"/>
+          <node begin="5" end="6" id="9" lemma="recht" pos="noun" rel="hd" root="recht" word="recht"/>
+        </node>
+      </node>
+      <node begin="6" cat="np" end="8" id="10" rel="su">
+        <node begin="6" end="7" id="11" lemma="de" pos="det" rel="det" root="de" word="de"/>
+        <node begin="7" end="8" id="12" lemma="dood_straf" pos="noun" rel="hd" root="dood_straf" word="doodstraf"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" rel="--" root="." word="."/>
+  </node>
+  <sentence>Daarop staat volgens het islamitisch recht de doodstraf .</sentence>
+</alpino_ds>

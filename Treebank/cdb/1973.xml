@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="23" id="2" rel="--">
+      <node begin="0" cat="np" end="12" id="3" rel="su">
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="5" lemma="spreker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="spreker" word="sprekers"/>
+        <node begin="2" cat="pp" end="6" id="6" rel="mod">
+          <node begin="2" end="3" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="3" cat="np" end="6" id="8" rel="obj1">
+            <node begin="3" end="4" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" buiging="met-e" end="5" graad="basis" id="10" lemma="links" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="links" word="linkse"/>
+            <node begin="5" end="6" getal="mv" graad="basis" id="11" lemma="partiij" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="partiijen" word="partiijen"/>
+          </node>
+        </node>
+        <node begin="6" cat="conj" end="12" id="12" rel="app">
+          <node begin="6" cat="mwu" end="8" id="13" rel="cnj">
+            <node begin="6" end="7" id="14" lemma="Haolam" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Haolam" spectype="deeleigen" word="Haolam"/>
+            <node begin="7" end="8" id="15" lemma="Haze" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Haze" spectype="deeleigen" word="Haze"/>
+          </node>
+          <node begin="9" end="10" genus="genus" getal="ev" graad="basis" id="16" lemma="Maki" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="cnj" root="Maki" word="Maki"/>
+          <node begin="10" conjtype="neven" end="11" id="17" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="11" end="12" genus="genus" getal="ev" graad="basis" id="18" lemma="Rakach" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="cnj" root="Rakach" word="Rakach"/>
+        </node>
+      </node>
+      <node begin="12" end="13" id="19" lemma="baseren" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="baseer" word="baseerden" wvorm="pv"/>
+      <node begin="13" cat="np" end="15" id="20" rel="obj1">
+        <node begin="13" buiging="zonder" end="14" getal="mv" id="21" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+        <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="22" lemma="kritiek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kritiek" word="kritiek"/>
+      </node>
+      <node begin="15" buiging="zonder" end="16" graad="basis" id="23" lemma="voornamelijk" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="voornamelijk" word="voornamelijk"/>
+      <node begin="16" cat="pp" end="23" id="24" rel="pc">
+        <node begin="16" end="17" id="25" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="17" cat="np" end="23" id="26" rel="obj1">
+          <node begin="17" end="18" getal="ev" graad="basis" id="27" lemma="Israël" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Israel" word="Israels"/>
+          <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="28" lemma="politiek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="politiek" word="politiek"/>
+          <node begin="19" cat="pp" end="23" id="29" rel="mod">
+            <node begin="19" end="20" id="30" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="20" cat="np" end="23" id="31" rel="obj1">
+              <node begin="20" end="21" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="21" buiging="met-e" end="22" id="33" lemma="bezetten" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="bezet" word="bezette" wvorm="vd"/>
+              <node begin="22" end="23" getal="mv" graad="basis" id="34" lemma="gebied" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gebied" word="gebieden"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De sprekers van de linkse partiijen Haolam Haze , Maki en Rakach baseerden hun kritiek voornamelijk op Israels politiek in de bezette gebieden .</sentence>
+</alpino_ds>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="smain" end="15" id="1" rel="--">
+      <node begin="0" cat="np" end="6" id="2" index="1" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="3" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" cat="ppart" end="5" id="4" rel="mod">
+          <node begin="1" cat="pp" end="4" id="5" rel="mod">
+            <node begin="1" end="2" frame="preposition(in,[])" id="6" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+            <node begin="2" cat="np" end="4" id="7" rel="obj1">
+              <node begin="2" end="3" frame="noun(het,count,sg,app_measure)" gen="het" id="8" lcat="np" num="sg" pos="noun" rel="hd" root="lid" sc="app_measure" sense="lid" word="lid"/>
+              <node begin="3" end="4" frame="noun(de,count,sg)" gen="de" id="9" lcat="np" num="sg" pos="noun" rel="app" root="1" sense="1" word="1"/>
+            </node>
+          </node>
+          <node aform="base" begin="4" end="5" frame="adjective(ge_e)" id="10" infl="e" lcat="ppart" pos="adj" rel="hd" root="bedoeld" sense="bedoeld" vform="psp" word="bedoelde"/>
+        </node>
+        <node begin="5" end="6" frame="noun(de,count,pl)" gen="de" id="11" lcat="np" num="pl" pos="noun" rel="hd" root="autoriteit" sense="autoriteit" word="autoriteiten"/>
+      </node>
+      <node begin="6" end="7" frame="verb('hebben/zijn',pl,modifier(aux(inf)))" id="12" infl="pl" lcat="smain" pos="verb" rel="hd" root="moet" sc="modifier(aux(inf))" sense="moet" tense="present" word="moeten"/>
+      <node begin="0" cat="inf" end="15" id="13" rel="vc">
+        <node begin="0" end="6" id="14" index="1" rel="su"/>
+        <node begin="7" cat="conj" end="14" id="15" rel="predc">
+          <node begin="7" end="8" frame="noun(het,count,pl)" gen="het" id="16" lcat="np" num="pl" pos="noun" rel="cnj" root="overheid_lichaam" sense="overheid_lichaam" word="overheidslichamen"/>
+          <node begin="8" end="9" frame="conj(of)" id="17" lcat="vg" pos="vg" rel="crd" root="of" sense="of" word="of"/>
+          <node begin="9" cat="np" end="14" id="18" rel="cnj">
+            <node begin="9" cat="ppart" end="13" id="19" rel="mod">
+              <node begin="9" cat="pp" end="12" id="20" rel="mod">
+                <node begin="9" end="10" frame="preposition(door,[heen])" id="21" lcat="pp" pos="prep" rel="hd" root="door" sense="door" word="door"/>
+                <node begin="10" cat="np" end="12" id="22" rel="obj1">
+                  <node begin="10" end="11" frame="determiner(de)" id="23" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="11" end="12" frame="noun(de,count,sg)" gen="de" id="24" lcat="np" num="sg" pos="noun" rel="hd" root="overheid" sense="overheid" word="overheid"/>
+                </node>
+              </node>
+              <node aform="base" begin="12" end="13" frame="adjective(ge_both(adv))" id="25" infl="both" lcat="ppart" pos="adj" rel="hd" root="aangewezen" sense="aangewezen" vform="psp" word="aangewezen"/>
+            </node>
+            <node begin="13" end="14" frame="noun(de,count,pl)" gen="de" id="26" lcat="np" num="pl" pos="noun" rel="hd" root="instantie" sense="instantie" word="instanties"/>
+          </node>
+        </node>
+        <node begin="14" end="15" frame="verb(unacc,inf,copula)" id="27" infl="inf" lcat="inf" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" word="zijn"/>
+      </node>
+    </node>
+    <node begin="15" end="16" frame="punct(punt)" id="28" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De in lid 1 bedoelde autoriteiten moeten overheidslichamen of door de overheid aangewezen instanties zijn .</sentence>
+  <comments>
+    <comment>Q#485|De in lid 1 bedoelde autoriteiten moeten overheidslichamen of door de overheid aangewezen instanties zijn .|1|1|7.110919104675151</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="8" id="2" rel="--">
+      <node begin="0" cat="sv1" end="2" id="3" rel="dp">
+        <node begin="0" end="1" id="4" lemma="geven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="geef" word="Geeft" wvorm="pv"/>
+        <node begin="1" end="2" id="5" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      </node>
+      <node begin="3" cat="smain" end="8" id="6" rel="dp">
+        <node begin="3" end="4" getal="mv" id="7" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+        <node begin="4" end="5" id="8" lemma="kopen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="koop" word="kopen" wvorm="pv"/>
+        <node begin="5" end="6" id="9" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+        <node begin="6" cat="np" end="8" id="10" rel="obj1">
+          <node begin="6" end="7" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="7" buiging="met-e" end="8" graad="basis" id="12" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="nieuw" word="nieuwe"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>Geeft niet , we kopen wel een nieuwe !</sentence>
+</alpino_ds>

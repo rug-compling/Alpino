@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="32" id="0" rel="top">
+    <node begin="13" end="14" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="31" id="2" rel="--">
+      <node begin="3" end="4" id="3" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="31" id="4" rel="vc">
+        <node begin="0" cat="pp" end="3" id="5" rel="mod">
+          <node begin="0" end="1" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+          <node begin="1" cat="np" end="3" id="7" rel="obj1">
+            <node begin="1" end="2" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="9" lemma="rapport" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="rapport" word="rapport"/>
+          </node>
+        </node>
+        <node begin="4" buiging="zonder" end="5" id="10" lemma="spreken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="spreek" word="gesproken" wvorm="vd"/>
+        <node begin="5" cat="pp" end="31" id="11" rel="pc">
+          <node begin="5" end="6" id="12" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+          <node begin="6" cat="conj" end="31" id="13" rel="obj1">
+            <node begin="6" cat="conj" end="13" id="14" rel="cnj">
+              <node begin="8" conjtype="neven" end="9" id="15" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="6" cat="np" end="13" id="16" rel="cnj">
+                <node begin="6" end="7" id="17" index="1" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="7" buiging="zonder" end="8" getal-n="zonder-n" id="18" lemma="slaan" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="sla" word="slaan" wvorm="inf"/>
+                <node begin="10" cat="pp" end="13" id="19" index="2" rel="mod">
+                  <node begin="10" end="11" id="20" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="11" cat="np" end="13" id="21" rel="obj1">
+                    <node begin="11" end="12" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="12" end="13" getal="mv" graad="basis" id="23" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kind" word="kinderen"/>
+                  </node>
+                </node>
+              </node>
+              <node begin="6" cat="np" end="13" id="24" rel="cnj">
+                <node begin="6" end="7" id="25" index="1" rel="det"/>
+                <node begin="9" buiging="zonder" end="10" getal-n="zonder-n" id="26" lemma="schoppen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="schop" word="schoppen" wvorm="inf"/>
+                <node begin="10" end="13" id="27" index="2" rel="mod"/>
+              </node>
+            </node>
+            <node begin="14" cat="np" end="25" id="28" rel="cnj">
+              <node begin="14" end="15" id="29" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="15" buiging="zonder" end="16" getal-n="zonder-n" id="30" lemma="dwingen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="dwing" word="dwingen" wvorm="inf"/>
+              <node begin="16" cat="pp" end="18" id="31" rel="mod">
+                <node begin="16" end="17" id="32" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="17" end="18" getal="mv" graad="basis" id="33" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="kind" word="kinderen"/>
+              </node>
+              <node begin="18" cat="oti" end="25" id="34" rel="vc">
+                <node begin="18" end="19" id="35" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+                <node begin="19" cat="ti" end="25" id="36" rel="body">
+                  <node begin="23" end="24" id="37" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+                  <node begin="19" cat="inf" end="25" id="38" rel="body">
+                    <node begin="19" cat="np" end="21" id="39" rel="obj1">
+                      <node begin="19" buiging="zonder" end="20" id="40" lemma="uitbraken" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="mod" root="uitgebraakt" word="uitgebraakt" wvorm="vd"/>
+                      <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="41" lemma="voedsel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="voedsel" word="voedsel"/>
+                    </node>
+                    <node begin="21" end="22" id="42" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
+                    <node begin="22" end="23" id="43" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
+                    <node begin="24" buiging="zonder" end="25" id="44" lemma="eten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="eet" word="eten" wvorm="inf"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="25" conjtype="neven" end="26" id="45" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="26" cat="np" end="31" id="46" rel="cnj">
+              <node begin="26" end="27" id="47" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="27" buiging="zonder" end="28" graad="basis" id="48" lemma="verkeerd" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="verkeerd" word="verkeerd"/>
+              <node begin="28" buiging="zonder" end="29" id="49" lemma="behandelen" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="behandel" word="behandelen" wvorm="inf"/>
+              <node begin="29" cat="pp" end="31" id="50" rel="mod">
+                <node begin="29" end="30" id="51" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                <node begin="30" end="31" getal="mv" graad="basis" id="52" lemma="medicijn" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="medicijn" word="medicijnen"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="31" end="32" id="53" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>In het rapport wordt gesproken over het slaan en schoppen van de kinderen , het dwingen van kinderen om uitgebraakt voedsel weer op te eten en het verkeerd behandelen met medicijnen .</sentence>
+</alpino_ds>

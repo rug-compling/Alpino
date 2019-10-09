@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="18" id="2" rel="--">
+      <node begin="0" cat="cp" end="8" id="3" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+        <node begin="1" cat="ssub" end="8" id="5" rel="body">
+          <node begin="1" end="2" getal="ev" id="6" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+          <node begin="2" end="3" id="7" lemma="prober" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="prober" word="prober" wvorm="pv"/>
+          <node begin="1" cat="ti" end="8" id="8" rel="vc">
+            <node begin="4" end="5" id="9" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="1" cat="inf" end="8" id="10" rel="body">
+              <node begin="1" end="2" id="11" index="1" rel="su"/>
+              <node begin="3" end="4" id="12" lemma="in" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="in" vztype="fin" word="in"/>
+              <node begin="5" buiging="zonder" end="6" id="13" lemma="in_loggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="log_in" word="loggen" wvorm="inf"/>
+              <node begin="6" cat="pp" end="8" id="14" rel="mod">
+                <node begin="6" end="7" id="15" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+                <node begin="7" end="8" genus="genus" getal="ev" graad="basis" id="16" lemma="Facebook" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Facebook" word="Facebook"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="9" end="10" id="17" lemma="verschijnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="verschijn" word="verschijnt" wvorm="pv"/>
+      <node begin="10" end="11" getal="getal" id="18" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+      <node begin="11" cat="np" end="13" id="19" rel="su">
+        <node begin="11" end="12" id="20" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="21" lemma="pagina" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pagina" word="pagina"/>
+      </node>
+      <node begin="13" cat="oti" end="18" id="22" rel="mod">
+        <node begin="13" end="14" id="23" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+        <node begin="14" cat="ti" end="18" id="24" rel="body">
+          <node begin="16" end="17" id="25" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="14" cat="inf" end="18" id="26" rel="body">
+            <node begin="14" cat="np" end="16" id="27" rel="obj1">
+              <node begin="14" buiging="zonder" end="15" getal="ev" id="28" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+              <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="29" lemma="identiteit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="identiteit" word="identiteit"/>
+            </node>
+            <node begin="17" buiging="zonder" end="18" id="30" lemma="controleren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="controleer" word="controleren" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="31" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als ik prober in te loggen bij Facebook , verschijnt er een pagina om mijn identiteit te controleren .</sentence>
+</alpino_ds>

@@ -1,0 +1,16 @@
+
+#
+# example: a tree within a drs
+#
+
+clig {drs {plain-text B}
+     {tree {plain-text s} 
+           {plain-text B} 
+           {tree {plain-text vp1} 
+                 {tree {plain-text vp} 
+                       {tree {plain-text v} 
+                             {plain-text owns}} 
+                       {tree {plain-text np} 
+                              {tree {plain-text pn} 
+                                    {plain-text ulysses}}}}}} 
+      {plain-text jones(B)}}

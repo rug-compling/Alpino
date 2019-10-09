@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="23" id="2" rel="--">
+      <node begin="0" cat="pp" end="2" id="3" rel="mod">
+        <node begin="0" end="1" id="4" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="Volgens"/>
+        <node begin="1" end="2" genus="masc" getal="ev" id="5" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="vol" vwtype="pers" word="hem"/>
+      </node>
+      <node begin="2" end="3" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="3" end="4" genus="onz" getal="ev" id="7" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="nodig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="nodig" word="nodig"/>
+      <node begin="6" cat="ti" end="23" id="9" rel="su">
+        <node begin="14" end="15" id="10" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="6" cat="inf" end="23" id="11" rel="body">
+          <node begin="6" cat="conj" end="14" id="12" rel="obj1">
+            <node begin="6" end="7" id="13" lemma="zowel" pos="vg" postag="BW()" pt="bw" rel="crd" root="zowel" word="zowel"/>
+            <node begin="8" conjtype="onder" end="9" id="14" lemma="als" pos="vg" postag="VG(onder)" pt="vg" rel="crd" root="als" word="als"/>
+            <node begin="7" cat="np" end="14" id="15" rel="cnj">
+              <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="16" lemma="bestuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bestuur" word="bestuur"/>
+              <node begin="10" cat="pp" end="14" id="17" index="1" rel="mod">
+                <node begin="10" end="11" id="18" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="11" cat="np" end="14" id="19" rel="obj1">
+                  <node begin="11" end="12" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="12" buiging="met-e" end="13" graad="basis" id="21" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="grote"/>
+                  <node begin="13" end="14" getal="mv" graad="basis" id="22" lemma="onderneming" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="onderneming" word="ondernemingen"/>
+                </node>
+              </node>
+            </node>
+            <node begin="9" cat="np" end="14" id="23" rel="cnj">
+              <node begin="9" end="10" getal="mv" graad="basis" id="24" lemma="commissaris" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="commissaris" word="commissarissen"/>
+              <node begin="10" end="14" id="25" index="1" rel="mod"/>
+            </node>
+          </node>
+          <node begin="15" buiging="zonder" end="16" id="26" lemma="internationaliseren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="internationaliseer" word="internationaliseren" wvorm="inf"/>
+          <node begin="16" cat="cp" end="23" id="27" rel="mod">
+            <node begin="16" end="17" id="28" lemma="door" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="door" vztype="init" word="door"/>
+            <node begin="17" cat="ti" end="23" id="29" rel="body">
+              <node begin="21" end="22" id="30" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+              <node begin="17" cat="inf" end="23" id="31" rel="body">
+                <node begin="18" end="19" getal="mv" graad="basis" id="32" lemma="buitenlander" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="buitenlander" word="buitenlanders"/>
+                <node begin="17" cat="pp" end="20" id="33" rel="mod">
+                  <node begin="17" end="18" getal="getal" id="34" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+                  <node begin="19" end="20" id="35" lemma="voor" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="voor" vztype="fin" word="voor"/>
+                </node>
+                <node begin="20" end="21" id="36" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
+                <node begin="22" buiging="zonder" end="23" id="37" lemma="trekken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="trek" word="trekken" wvorm="inf"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="38" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Volgens hem is het nodig , zowel bestuur als commissarissen van de grote ondernemingen te internationaliseren door er buitenlanders voor aan te trekken .</sentence>
+</alpino_ds>

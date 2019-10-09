@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="smain" end="17" id="1" rel="--">
+      <node begin="0" cat="np" end="11" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" infl="onze" pos="det" rel="det" root="ons" word="Onze"/>
+        <node begin="1" end="2" gen="de" id="4" num="sg" pos="noun" rel="hd" root="schat" word="schat"/>
+        <node begin="2" cat="pp" end="11" id="5" rel="mod">
+          <node begin="2" end="3" id="6" pos="prep" rel="hd" root="aan" word="aan"/>
+          <node begin="3" cat="conj" end="11" id="7" rel="obj1">
+            <node begin="4" end="5" id="8" pos="vg" rel="crd" root="en" word="en"/>
+            <node begin="3" cat="np" end="11" id="9" rel="cnj">
+              <node begin="3" end="4" gen="de" id="10" num="sg" pos="noun" rel="hd" root="kennis" word="kennis"/>
+              <node begin="6" cat="pp" end="11" id="11" index="2" rel="mod">
+                <node begin="6" end="7" id="12" pos="prep" rel="hd" root="inzake" word="inzake"/>
+                <node begin="7" cat="conj" end="11" id="13" rel="obj1">
+                  <node begin="7" end="8" gen="het" id="14" num="sg" pos="noun" rel="cnj" root="risico_beheer" word="risicobeheer"/>
+                  <node begin="8" end="9" id="15" pos="vg" rel="crd" root="en" word="en"/>
+                  <node begin="9" cat="np" end="11" id="16" rel="cnj">
+                    <node aform="base" begin="9" end="10" id="17" infl="e" pos="adj" rel="mod" root="economisch" vform="adj" word="economische"/>
+                    <node begin="10" end="11" gen="de" id="18" num="pl" pos="noun" rel="hd" root="trend" word="trends"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="5" cat="np" end="11" id="19" rel="cnj">
+              <node begin="5" end="6" gen="de" id="20" num="sg" pos="noun" rel="hd" root="expertise" word="expertise"/>
+              <node begin="6" end="11" id="21" index="2" rel="mod"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="11" end="12" id="22" infl="sg3" pos="verb" rel="hd" root="word" sc="passive" tense="present" word="wordt"/>
+      <node begin="0" cat="ppart" end="17" id="23" rel="vc">
+        <node begin="0" end="11" id="24" index="1" rel="obj1"/>
+        <node begin="12" end="13" id="25" infl="psp" pos="verb" rel="hd" root="ondersteun" sc="transitive" word="ondersteund"/>
+        <node begin="13" cat="pp" end="17" id="26" rel="mod">
+          <node begin="13" end="14" id="27" pos="prep" rel="hd" root="door" word="door"/>
+          <node begin="14" cat="np" end="17" id="28" rel="obj1">
+            <node begin="14" end="15" id="29" infl="een" pos="det" rel="det" root="een" word="een"/>
+            <node aform="base" begin="15" end="16" id="30" infl="no_e" pos="adj" rel="mod" root="wereldwijd" vform="adj" word="wereldwijd"/>
+            <node begin="16" end="17" gen="het" id="31" num="sg" pos="noun" rel="hd" root="informatie_netwerk" word="informatienetwerk"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="32" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Onze schat aan kennis en expertise inzake risicobeheer en economische trends wordt ondersteund door een wereldwijd informatienetwerk .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

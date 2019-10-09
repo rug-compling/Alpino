@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="18" end="19" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="21" end="22" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="smain" end="24" id="4" rel="--">
+      <node begin="8" end="9" id="5" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" word="kunnen" wvorm="pv"/>
+      <node begin="16" cat="np" end="18" id="6" index="1" rel="su">
+        <node begin="16" end="17" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="17" end="18" getal="mv" graad="basis" id="8" lemma="blok" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="blok" word="blokken"/>
+      </node>
+      <node begin="0" cat="inf" end="24" id="9" rel="vc">
+        <node begin="16" end="18" id="10" index="1" rel="su"/>
+        <node begin="22" buiging="zonder" end="23" id="11" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+        <node begin="0" cat="ppart" end="24" id="12" rel="vc">
+          <node begin="0" cat="cp" end="7" id="13" rel="mod">
+            <node begin="0" conjtype="onder" end="1" id="14" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+            <node begin="1" cat="ssub" end="7" id="15" rel="body">
+              <node begin="1" cat="np" end="3" id="16" rel="su">
+                <node begin="1" end="2" id="17" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="2" buiging="zonder" end="3" id="18" lemma="storten" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stort" word="storten" wvorm="inf"/>
+              </node>
+              <node begin="3" cat="np" end="6" id="19" rel="mod">
+                <node begin="3" buiging="zonder" end="4" id="20" lemma="volgen" pos="adj" positie="prenom" postag="WW(od,prenom,zonder)" pt="ww" rel="mod" root="volgend" word="volgend" wvorm="od"/>
+                <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="21" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
+                <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="22" lemma="maart" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="maart" word="maart"/>
+              </node>
+              <node begin="6" end="7" id="23" lemma="beginnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="begin" word="begint" wvorm="pv"/>
+            </node>
+          </node>
+          <node begin="9" cat="pp" end="16" id="24" rel="mod">
+            <node begin="9" end="10" id="25" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="10" cat="np" end="16" id="26" rel="obj1">
+              <node begin="10" end="11" id="27" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="11" end="12" id="28" lemma="één" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="eerste" word="eerste"/>
+              <node begin="12" end="13" getal="mv" graad="basis" id="29" lemma="week" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="week" word="weken"/>
+              <node begin="13" cat="pp" end="16" id="30" rel="mod">
+                <node begin="13" end="14" id="31" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="14" cat="np" end="16" id="32" rel="obj1">
+                  <node begin="14" end="15" id="33" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="34" lemma="zomer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zomer" word="zomer"/>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="16" end="18" id="35" index="1" rel="obj1"/>
+          <node begin="19" cat="pp" end="21" id="36" rel="mod">
+            <node begin="19" end="20" id="37" lemma="boven" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="boven" vztype="init" word="boven"/>
+            <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="38" lemma="water" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="water" word="water"/>
+          </node>
+          <node begin="23" buiging="zonder" end="24" id="39" lemma="verwachten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verwacht" word="verwacht" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als het storten volgend jaar maart begint , kunnen in de eerste weken van de zomer de blokken &quot; boven water &quot; worden verwacht .</sentence>
+</alpino_ds>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" buiging="zonder" end="1" id="1" lemma="&lt;@&gt;" pos="--" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="--" root="&lt;@&gt;" word="&lt;@&gt;" wvorm="inf"/>
+    <node begin="1" cat="du" end="8" id="2" rel="--">
+      <node begin="1" cat="pp" end="4" id="3" rel="dp">
+        <node begin="1" end="2" id="4" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="2" cat="mwu" end="4" id="5" rel="obj1">
+          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="6" lemma="amsterdam" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="amsterdam" word="amsterdam"/>
+          <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="centraal" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="centraal" word="centraal"/>
+        </node>
+      </node>
+      <node begin="4" cat="pp" end="8" id="8" rel="dp">
+        <node begin="4" end="5" id="9" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+        <node begin="5" cat="mwu" end="8" id="10" rel="obj1">
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="nederhorst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="nederhorst" word="nederhorst"/>
+          <node begin="6" end="7" id="12" lemma="ten" pos="prep" postag="VZ(versm)" pt="vz" rel="mwp" root="ten" vztype="versm" word="ten"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="13" lemma="berg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="berg" word="berg"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>&lt;@&gt; van amsterdam centraal naar nederhorst ten berg</sentence>
+</alpino_ds>

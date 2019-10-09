@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
+      <node begin="2" cat="svan" end="6" id="4" rel="vc">
+        <node begin="2" end="3" id="5" lemma="van" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="van" vztype="init" word="van"/>
+        <node begin="3" cat="smain" end="6" id="6" rel="body">
+          <node begin="3" end="4" getal="ev" id="7" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+          <node begin="4" end="5" id="8" lemma="komen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kom" word="kom" wvorm="pv"/>
+          <node begin="5" end="6" id="9" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Hij zei van ik kom niet</sentence>
+</alpino_ds>

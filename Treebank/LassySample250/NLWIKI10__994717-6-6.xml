@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" end="1" frame="punct(aanhaal_both)" id="1" lcat="punct" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" sense="&quot;" special="aanhaal_both" word="&quot;"/>
+    <node begin="8" end="9" frame="punct(aanhaal_both)" id="2" lcat="punct" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" sense="&quot;" special="aanhaal_both" word="&quot;"/>
+    <node begin="9" end="10" frame="punct(ligg_streep)" id="3" lcat="punct" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" sense="-" special="ligg_streep" word="-"/>
+    <node begin="1" cat="du" end="11" id="4" rel="--">
+      <node begin="1" cat="mwu" end="8" id="5" mwu_root="Oikea_sointi_|_Lay_Down_a_Tune" mwu_sense="Oikea_sointi_|_Lay_Down_a_Tune" rel="dp">
+        <node begin="1" end="2" frame="proper_name(both)" genus="zijd" getal="ev" graad="basis" id="6" lcat="np" lemma="oikea" naamval="stan" ntype="soort" num="both" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Oikea" sense="Oikea" word="Oikea"/>
+        <node begin="2" end="3" frame="proper_name(both)" genus="zijd" getal="ev" graad="basis" id="7" lcat="np" lemma="sointi" naamval="stan" ntype="soort" num="both" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="sointi" sense="sointi" word="sointi"/>
+        <node begin="3" end="4" frame="proper_name(both)" id="8" lcat="np" lemma="|" num="both" pos="name" postag="LET()" pt="let" rel="mwp" root="|" sense="|" word="|"/>
+        <node begin="4" end="5" frame="proper_name(both)" id="9" lcat="np" lemma="Lay" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lay" sense="Lay" spectype="deeleigen" word="Lay"/>
+        <node begin="5" end="6" frame="proper_name(both)" id="10" lcat="np" lemma="Down" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Down" sense="Down" spectype="deeleigen" word="Down"/>
+        <node begin="6" end="7" frame="proper_name(both)" id="11" lcat="np" lemma="a" num="both" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="a" sense="a" spectype="vreemd" word="a"/>
+        <node begin="7" end="8" frame="proper_name(both)" id="12" lcat="np" lemma="tune" num="both" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Tune" sense="Tune" spectype="vreemd" word="Tune"/>
+      </node>
+      <node begin="10" end="11" frame="tmp_np" id="13" lcat="np" lemma="4:11" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="dp" root="4:11" sense="4:11" special="tmp" word="4:11"/>
+    </node>
+  </node>
+  <sentence>&quot; Oikea sointi | Lay Down a Tune &quot; - 4:11</sentence>
+  <comments>
+    <comment>Q#994717-6-6|&quot; Oikea sointi __ Lay Down a Tune &quot; - 4:11|1|1|0.07629625999999999</comment>
+  </comments>
+</alpino_ds>

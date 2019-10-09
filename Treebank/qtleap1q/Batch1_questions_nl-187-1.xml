@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="np" end="4" id="1" rel="--">
+      <node begin="0" end="1" getal="mv" graad="basis" id="2" lemma="probleem" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="probleem" word="Problemen"/>
+      <node begin="1" cat="pp" end="4" id="3" rel="mod">
+        <node begin="1" end="2" id="4" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+        <node begin="2" cat="mwu" end="4" id="5" rel="obj1">
+          <node begin="2" end="3" id="6" lemma="MEO" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="MEO" spectype="deeleigen" word="MEO"/>
+          <node begin="3" end="4" id="7" lemma="GO" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="GO" spectype="deeleigen" word="GO"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Problemen met MEO GO</sentence>
+</alpino_ds>

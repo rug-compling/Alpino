@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="conj" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="cnj">
+        <node aform="base" begin="0" end="1" frame="adjective(e)" id="3" infl="e" lcat="ap" pos="adj" rel="mod" root="nieuw" sense="nieuw" vform="adj" word="Nieuwe"/>
+        <node begin="1" end="2" frame="noun(het,count,pl)" gen="het" id="4" lcat="np" num="pl" pos="noun" rel="hd" root="procédé" sense="procédé" word="procédés"/>
+      </node>
+      <node begin="2" end="3" frame="conj(of)" id="5" lcat="vg" pos="vg" rel="crd" root="of" sense="of" word="of"/>
+      <node begin="3" cat="np" end="6" id="6" rel="cnj">
+        <node begin="3" end="4" frame="noun(de,count,pl)" gen="de" id="7" lcat="np" num="pl" pos="noun" rel="hd" root="wijziging" sense="wijziging" word="wijzigingen"/>
+        <node begin="4" cat="pp" end="6" id="8" rel="mod">
+          <node begin="4" end="5" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="9" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+          <node begin="5" end="6" frame="noun(het,count,pl)" gen="het" id="10" lcat="np" num="pl" pos="noun" rel="obj1" root="procédé" sense="procédé" word="procédés"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Nieuwe procédés of wijzigingen van procédés</sentence>
+  <comments>
+    <comment>Q#310|Nieuwe procédés of wijzigingen van procédés|1|1|3.2834215439917953</comment>
+  </comments>
+</alpino_ds>

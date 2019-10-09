@@ -1,0 +1,13 @@
+#!/usr/bin/perl -w
+$first=1;
+while (<>) {
+    chomp;
+    next if /DOCSTART/;
+    if ($_) {
+	($word,undef,undef) = split;
+	if ($first) { print $word; $first=0; } else { print " $word"; }
+    } else {
+	print "\n";
+	$first = 1;
+    }
+}

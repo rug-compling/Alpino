@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="smain" end="16" id="1" rel="--">
+      <node begin="9" end="10" frame="verb('hebben/zijn',sg,modifier(aux(inf)))" id="2" infl="sg" lcat="smain" pos="verb" rel="hd" root="moet" sc="modifier(aux(inf))" sense="moet" tense="present" word="moet"/>
+      <node begin="10" cat="np" end="13" id="3" index="1" rel="su">
+        <node begin="10" end="11" frame="determiner(de)" id="4" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node aform="base" begin="11" end="12" frame="adjective(e)" id="5" infl="e" lcat="ap" pos="adj" rel="mod" root="uiteindelijk" sense="uiteindelijk" vform="adj" word="uiteindelijke"/>
+        <node begin="12" end="13" frame="noun(de,count,sg)" gen="de" id="6" lcat="np" num="sg" pos="noun" rel="hd" root="ontvanger" sense="ontvanger" word="ontvanger"/>
+      </node>
+      <node begin="0" cat="inf" end="16" id="7" rel="vc">
+        <node begin="10" end="13" id="8" index="1" rel="su"/>
+        <node begin="14" end="15" frame="verb(unacc,inf,passive)" id="9" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+        <node begin="0" cat="ppart" end="16" id="10" rel="vc">
+          <node begin="0" cat="cp" end="9" id="11" rel="mod">
+            <node begin="0" end="1" frame="complementizer" id="12" lcat="cp" pos="comp" rel="cmp" root="indien" sense="indien" word="Indien"/>
+            <node begin="1" cat="ssub" end="9" id="13" rel="body">
+              <node begin="1" end="2" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="14" infl="het" lcat="np" pos="det" rel="su" root="het" sense="het" wh="nwh" word="het"/>
+              <node begin="2" cat="np" end="8" id="15" rel="obj1">
+                <node begin="2" end="3" frame="determiner(een)" id="16" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+                <node begin="3" end="4" frame="noun(de,count,sg)" gen="de" id="17" lcat="np" num="sg" pos="noun" rel="hd" root="export" sense="export" word="export"/>
+                <node begin="4" cat="pp" end="8" id="18" rel="mod">
+                  <node begin="4" end="5" frame="preposition(uit,[vandaan])" id="19" lcat="pp" pos="prep" rel="hd" root="uit" sense="uit" word="uit"/>
+                  <node begin="5" cat="np" end="8" id="20" rel="obj1">
+                    <node begin="5" end="6" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="21" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                    <node begin="6" cat="mwu" end="8" id="22" mwu_root="Verenigd_Koninkrijk" mwu_sense="Verenigd_Koninkrijk" rel="hd">
+                      <node begin="6" end="7" frame="proper_name(both,'LOC')" id="23" lcat="np" neclass="LOC" num="both" pos="name" rel="mwp" root="Verenigd" sense="Verenigd" word="Verenigd"/>
+                      <node begin="7" end="8" frame="proper_name(both,'LOC')" id="24" lcat="np" neclass="LOC" num="both" pos="name" rel="mwp" root="Koninkrijk" sense="Koninkrijk" word="Koninkrijk"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="8" end="9" frame="verb(hebben,sg3,transitive)" id="25" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="betref" sc="transitive" sense="betref" tense="present" word="betreft"/>
+            </node>
+          </node>
+          <node begin="10" end="13" id="26" index="1" rel="obj1"/>
+          <node begin="13" end="14" frame="adverb" id="27" lcat="advp" pos="adv" rel="mod" root="eveneens" sense="eveneens" word="eveneens"/>
+          <node begin="15" end="16" frame="verb(hebben,psp,transitive)" id="28" infl="psp" lcat="ppart" pos="verb" rel="hd" root="vermeld" sc="transitive" sense="vermeld" word="vermeld"/>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" frame="punct(punt)" id="29" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Indien het een export uit het Verenigd Koninkrijk betreft moet de uiteindelijke ontvanger eveneens worden vermeld .</sentence>
+  <comments>
+    <comment>Q#432|Indien het een export uit het Verenigd Koninkrijk betreft moet de uiteindelijke ontvanger eveneens worden vermeld .|1|1|-7.302941614284598</comment>
+  </comments>
+</alpino_ds>

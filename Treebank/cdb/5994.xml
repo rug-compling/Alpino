@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="36" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="13" end="14" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="18" end="19" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="21" end="22" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="24" end="25" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="29" end="30" id="6" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="35" id="7" rel="--">
+      <node begin="0" cat="np" end="3" id="8" rel="su">
+        <node begin="0" end="1" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="10" lemma="Amsterdams" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Amsterdams" word="Amsterdamse"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="11" lemma="joffer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Joffers" word="Joffers"/>
+      </node>
+      <node begin="3" end="4" id="12" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+      <node begin="4" cat="np" end="35" id="13" rel="predc">
+        <node begin="4" end="5" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="15" lemma="groep" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="groep" word="groep"/>
+        <node begin="6" end="7" getal="mv" graad="basis" id="16" lemma="kunstzuster" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="zuster" word="kunstzusters"/>
+        <node begin="8" cat="ppres" end="35" id="17" rel="mod">
+          <node begin="8" buiging="zonder" end="9" id="18" lemma="bestaan" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="hd" root="bestaand" word="bestaande" wvorm="od"/>
+          <node begin="9" cat="pp" end="35" id="19" rel="pc">
+            <node begin="9" end="10" id="20" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+            <node begin="10" cat="conj" end="35" id="21" rel="obj1">
+              <node begin="10" cat="mwu" end="13" id="22" rel="cnj">
+                <node begin="10" end="11" id="23" lemma="Maria" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Maria" spectype="deeleigen" word="Maria"/>
+                <node begin="11" end="12" id="24" lemma="van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+                <node begin="12" end="13" id="25" lemma="Regttren" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Regttren" spectype="deeleigen" word="Regttren"/>
+              </node>
+              <node begin="14" cat="mwu" end="18" id="26" rel="cnj">
+                <node begin="14" end="15" id="27" lemma="Ans" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ans" spectype="deeleigen" word="Ans"/>
+                <node begin="15" end="16" id="28" lemma="van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+                <node begin="16" end="17" id="29" lemma="den" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="den" spectype="deeleigen" word="den"/>
+                <node begin="17" end="18" id="30" lemma="Berg" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Berg" spectype="deeleigen" word="Berg"/>
+              </node>
+              <node begin="19" cat="mwu" end="21" id="31" rel="cnj">
+                <node begin="19" end="20" id="32" lemma="Jo" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jo" spectype="deeleigen" word="Jo"/>
+                <node begin="20" end="21" id="33" lemma="Brouwer-Stumpff" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Brouwer-Stumpff" spectype="deeleigen" word="Brouwer-Stumpff"/>
+              </node>
+              <node begin="22" cat="mwu" end="24" id="34" rel="cnj">
+                <node begin="22" end="23" id="35" lemma="Nelly" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nelly" spectype="deeleigen" word="Nelly"/>
+                <node begin="23" end="24" id="36" lemma="Bodenheim" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bodenheim" spectype="deeleigen" word="Bodenheim"/>
+              </node>
+              <node begin="25" cat="mwu" end="27" id="37" rel="cnj">
+                <node begin="25" end="26" id="38" lemma="Lizzy" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lizzy" spectype="deeleigen" word="Lizzy"/>
+                <node begin="26" end="27" id="39" lemma="Ansingh" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ansingh" spectype="deeleigen" word="Ansingh"/>
+              </node>
+              <node begin="27" cat="mwu" end="29" id="40" rel="cnj">
+                <node begin="27" end="28" id="41" lemma="Coba" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Coba" spectype="deeleigen" word="Coba"/>
+                <node begin="28" end="29" id="42" lemma="Ritsema" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ritsema" spectype="deeleigen" word="Ritsema"/>
+              </node>
+              <node begin="30" cat="mwu" end="32" id="43" rel="cnj">
+                <node begin="30" end="31" id="44" lemma="Betsie" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Betsie" spectype="deeleigen" word="Betsie"/>
+                <node begin="31" end="32" id="45" lemma="Westendorp-Osiech" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Westendorp-Osiech" spectype="deeleigen" word="Westendorp-Osiech"/>
+              </node>
+              <node begin="32" conjtype="neven" end="33" id="46" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="33" cat="mwu" end="35" id="47" rel="cnj">
+                <node begin="33" end="34" id="48" lemma="Jacoba" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jacoba" spectype="deeleigen" word="Jacoba"/>
+                <node begin="34" end="35" id="49" lemma="Surie" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Surie" spectype="deeleigen" word="Surie"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="35" end="36" id="50" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De Amsterdamse Joffers waren een groep kunstzusters , bestaande uit Maria van Regttren , Ans van den Berg , Jo Brouwer-Stumpff , Nelly Bodenheim , Lizzy Ansingh Coba Ritsema , Betsie Westendorp-Osiech en Jacoba Surie .</sentence>
+</alpino_ds>

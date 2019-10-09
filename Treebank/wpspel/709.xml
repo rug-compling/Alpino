@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="7" end="8" id="2" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="0" cat="du" end="16" id="3" rel="--">
+      <node begin="0" cat="whq" end="6" id="4" rel="tag">
+        <node begin="0" cat="np" end="2" id="5" index="1" rel="whd">
+          <node begin="0" buiging="met-e" end="1" id="6" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welke"/>
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="prins" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="prins" word="prins"/>
+        </node>
+        <node begin="0" cat="sv1" end="6" id="8" rel="body">
+          <node begin="0" end="2" id="9" index="1" rel="su"/>
+          <node begin="2" end="3" id="10" lemma="spreken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="spreek" word="sprak" wvorm="pv"/>
+          <node begin="3" cat="pp" end="6" id="11" rel="mod">
+            <node begin="3" end="4" id="12" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+            <node begin="4" cat="np" end="6" id="13" rel="obj1">
+              <node begin="4" end="5" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="15" lemma="ruimtevaarder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ruimtevaarder" word="ruimtevaarder"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="8" cat="smain" end="16" id="16" rel="nucl">
+        <node begin="8" cat="pp" end="11" id="17" rel="mod">
+          <node begin="8" end="9" id="18" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="9" cat="np" end="11" id="19" rel="obj1">
+            <node begin="9" end="10" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="21" lemma="ruimte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ruimte" word="ruimte"/>
+          </node>
+        </node>
+        <node begin="11" end="12" id="22" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="12" end="13" getal="getal" id="23" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="13" end="14" id="24" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
+        <node begin="14" cat="np" end="16" id="25" rel="su">
+          <node begin="14" buiging="zonder" end="15" id="26" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+          <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="27" lemma="protocol" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="protocol" word="protocol"/>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="28" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="17" end="18" id="29" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke prins sprak tot een ruimtevaarder : &apos; in de ruimte is er toch geen protocol &apos; ?</sentence>
+</alpino_ds>

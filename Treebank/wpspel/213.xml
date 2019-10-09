@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="whq" end="20" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="20" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="predc"/>
+        <node begin="1" end="2" id="5" lemma="heten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heet" word="heet" wvorm="pv"/>
+        <node begin="2" cat="np" end="20" id="6" rel="su">
+          <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="schildertechniek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="techniek" word="schildertechniek"/>
+          <node begin="4" cat="rel" end="20" id="9" rel="mod">
+            <node begin="4" end="5" id="10" index="2" lemma="waarbij" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarbij" word="waarbij"/>
+            <node begin="4" cat="conj" end="20" id="11" rel="body">
+              <node begin="4" cat="ssub" end="10" id="12" rel="cnj">
+                <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="13" index="3" lemma="water" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="su" root="water" word="water"/>
+                <node begin="8" end="9" id="14" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+                <node begin="4" cat="ppart" end="10" id="15" rel="vc">
+                  <node begin="4" end="5" id="16" index="2" rel="mod"/>
+                  <node begin="5" end="6" id="17" index="3" rel="obj1"/>
+                  <node begin="6" cat="pp" end="8" id="18" rel="mod">
+                    <node begin="6" end="7" id="19" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                    <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="20" lemma="papier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="papier" word="papier"/>
+                  </node>
+                  <node begin="9" buiging="zonder" end="10" id="21" lemma="opzuigen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zuig_op" word="opgezogen" wvorm="vd"/>
+                </node>
+              </node>
+              <node begin="10" conjtype="neven" end="11" id="22" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="4" cat="ssub" end="20" id="23" rel="cnj">
+                <node begin="11" cat="np" end="18" id="24" index="4" rel="su">
+                  <node begin="11" end="12" id="25" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="12" buiging="met-e" end="13" graad="basis" id="26" lemma="optimaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="optimaal" word="optimale"/>
+                  <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="27" lemma="binding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="binding" word="binding"/>
+                  <node begin="14" cat="pp" end="18" id="28" rel="mod">
+                    <node begin="14" end="15" id="29" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>
+                    <node begin="15" cat="conj" end="18" id="30" rel="obj1">
+                      <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="31" lemma="kleur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="kleur" word="kleur"/>
+                      <node begin="16" conjtype="neven" end="17" id="32" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                      <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="33" lemma="drager" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="drager" word="drager"/>
+                    </node>
+                  </node>
+                </node>
+                <node begin="18" end="19" id="34" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+                <node begin="4" cat="ppart" end="20" id="35" rel="vc">
+                  <node begin="4" end="5" id="36" index="2" rel="mod"/>
+                  <node begin="11" end="18" id="37" index="4" rel="obj1"/>
+                  <node begin="19" buiging="zonder" end="20" id="38" lemma="bereiken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bereik" word="bereikt" wvorm="vd"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="39" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe heet de schildertechniek waarbij water in papier wordt opgezogen en een optimale binding tussen kleur en drager wordt bereikt ?</sentence>
+</alpino_ds>

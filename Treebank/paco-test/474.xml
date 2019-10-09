@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="12" end="13" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="19" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="4" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="commissie" sense="commissie" word="Commissie"/>
+      </node>
+      <node begin="2" end="3" frame="verb(hebben,sg3,np_ld_pp)" id="6" infl="sg3" lcat="smain" pos="verb" rel="hd" root="stel" sc="np_ld_pp" sense="stel" tense="present" word="stelt"/>
+      <node begin="3" cat="np" end="6" id="7" rel="obj1">
+        <node begin="3" end="4" frame="determiner(de)" id="8" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node aform="base" begin="4" end="5" frame="adjective(e)" id="9" infl="e" lcat="ap" pos="adj" rel="mod" root="overig" sense="overig" vform="adj" word="overige"/>
+        <node begin="5" end="6" frame="noun(de,count,pl)" gen="de" id="10" lcat="np" num="pl" pos="noun" rel="hd" root="lidstaat" sense="lidstaat" word="lidstaten"/>
+      </node>
+      <node aform="base" begin="6" end="7" frame="adjective(no_e(adv))" id="11" infl="no_e" lcat="ap" pos="adj" rel="mod" root="onmiddellijk" sense="onmiddellijk" vform="adj" word="onmiddellijk"/>
+      <node begin="7" cat="pp" end="12" id="12" rel="ld">
+        <node begin="7" end="8" frame="preposition(in,[])" id="13" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+        <node begin="8" cat="np" end="12" id="14" rel="obj1">
+          <node begin="8" end="9" frame="noun(de,count,sg)" gen="de" id="15" lcat="np" num="sg" pos="noun" rel="hd" root="kennis" sense="kennis" word="kennis"/>
+          <node begin="9" cat="pp" end="12" id="16" rel="mod">
+            <node begin="9" end="10" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="17" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="10" cat="np" end="12" id="18" rel="obj1">
+              <node begin="10" end="11" frame="determiner(de,nwh,nmod,pro,nparg)" id="19" infl="de" lcat="detp" pos="det" rel="det" root="deze" sense="deze" wh="nwh" word="deze"/>
+              <node begin="11" end="12" frame="noun(het,count,pl)" gen="het" id="20" lcat="np" num="pl" pos="noun" rel="hd" root="gegeven" sense="gegeven" word="gegevens"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="13" cat="ppart" end="19" id="21" rel="predm">
+        <node begin="13" cat="cp" end="15" id="22" rel="mod">
+          <node begin="13" end="14" frame="complementizer(a)" id="23" lcat="cp" pos="comp" rel="cmp" root="zo" sc="a" sense="zo" word="zo"/>
+          <node aform="base" begin="14" end="15" frame="adjective(no_e(adv))" id="24" infl="no_e" lcat="ap" pos="adj" rel="body" root="nodig" sense="nodig" vform="adj" word="nodig"/>
+        </node>
+        <node aform="base" begin="15" end="16" frame="adjective(ge_no_e(padv),pp(van))" id="25" infl="no_e" lcat="ppart" pos="adj" rel="hd" root="voorzien" sc="pp(van)" sense="voorzien-van" vform="psp" word="voorzien"/>
+        <node begin="16" cat="pp" end="19" id="26" rel="pc">
+          <node begin="16" end="17" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="27" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+          <node begin="17" cat="np" end="19" id="28" rel="obj1">
+            <node begin="17" end="18" frame="determiner(pron)" id="29" infl="pron" lcat="detp" pos="det" rel="det" root="haar" sense="haar" word="haar"/>
+            <node begin="18" end="19" frame="noun(de,count,pl)" gen="de" id="30" lcat="np" num="pl" pos="noun" rel="hd" root="opmerking" sense="opmerking" word="opmerkingen"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" frame="punct(punt)" id="31" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De Commissie stelt de overige lidstaten onmiddellijk in kennis van deze gegevens , zo nodig voorzien van haar opmerkingen .</sentence>
+  <comments>
+    <comment>Q#474|De Commissie stelt de overige lidstaten onmiddellijk in kennis van deze gegevens , zo nodig voorzien van haar opmerkingen .|1|1|7.053918651958902</comment>
+  </comments>
+</alpino_ds>

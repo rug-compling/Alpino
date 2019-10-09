@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="2" end="3" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="1" cat="du" end="5" id="3" rel="--">
+      <node begin="1" end="2" id="4" lemma="nee" pos="tag" postag="TSW()" pt="tsw" rel="nucl" root="nee" word="Nee"/>
+      <node begin="3" cat="sv1" end="5" id="5" rel="tag">
+        <node begin="3" end="4" id="6" lemma="zeggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zeg" word="zegt" wvorm="pv"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="7" lemma="Gerrit" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Gerrit" word="Gerrit"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&quot; Nee , zegt Gerrit .</sentence>
+</alpino_ds>

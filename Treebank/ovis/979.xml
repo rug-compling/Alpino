@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="du" end="5" id="1" rel="--">
+      <node begin="0" cat="mwu" end="3" id="2" rel="dp">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="veenendaal" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="veenendaal" word="veenendaal"/>
+        <node begin="1" end="2" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="klomp" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="klomp" word="klomp"/>
+      </node>
+      <node begin="3" cat="pp" end="5" id="6" rel="dp">
+        <node begin="3" end="4" id="7" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="8" lemma="apeldoorn" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="apeldoorn" word="apeldoorn"/>
+      </node>
+    </node>
+  </node>
+  <sentence>veenendaal de klomp naar apeldoorn</sentence>
+</alpino_ds>

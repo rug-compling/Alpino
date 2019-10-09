@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="7" end="8" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="15" id="3" rel="--">
+      <node begin="0" cat="mwu" end="2" id="4" rel="tag">
+        <node begin="0" buiging="met-e" end="1" graad="basis" id="5" lemma="lief" naamval="stan" pos="adv" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Lieve" word="Lieve"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="6" lemma="help" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="help" word="help"/>
+      </node>
+      <node begin="3" cat="smain" end="15" id="7" rel="nucl">
+        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="8" lemma="Parijs" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Parijs" word="Parijs"/>
+        <node begin="4" end="5" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="5" cat="np" end="7" id="10" rel="predc">
+          <node begin="5" end="6" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="12" lemma="gekkenhuis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gekkenhuis" word="gekkenhuis"/>
+        </node>
+        <node begin="8" cat="cp" end="15" id="13" rel="mod">
+          <node begin="8" conjtype="onder" end="9" id="14" lemma="wanneer" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="wanneer" word="wanneer"/>
+          <node begin="9" cat="ssub" end="15" id="15" rel="body">
+            <node begin="9" end="10" getal="getal" id="16" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+            <node begin="10" cat="conj" end="14" id="17" rel="su">
+              <node begin="10" cat="np" end="12" id="18" rel="cnj">
+                <node begin="10" buiging="met-e" end="11" graad="basis" id="19" index="1" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="grote"/>
+                <node begin="11" end="12" getal="mv" graad="basis" id="20" lemma="beurs" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="beurs" word="beurzen"/>
+              </node>
+              <node begin="12" conjtype="neven" end="13" id="21" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="10" cat="np" end="14" id="22" rel="cnj">
+                <node begin="10" end="11" id="23" index="1" rel="mod"/>
+                <node begin="13" end="14" getal="mv" graad="basis" id="24" lemma="show" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="show" word="shows"/>
+              </node>
+            </node>
+            <node begin="14" end="15" id="25" lemma="plaatsvinden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="vind" word="plaatsvinden" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="26" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Lieve help , Parijs is een gekkenhuis , wanneer er grote beurzen en shows plaatsvinden .</sentence>
+</alpino_ds>

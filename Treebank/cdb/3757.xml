@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" buiging="met-e" end="2" graad="sup" id="4" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="groot" word="grootste"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="gevaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gevaar" word="gevaar"/>
+      </node>
+      <node begin="3" end="4" id="6" lemma="wachten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wacht" word="wacht" wvorm="pv"/>
+      <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="7" lemma="Engeland" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj2" root="Engeland" word="Engeland"/>
+      <node begin="5" cat="pp" end="8" id="8" rel="mod">
+        <node begin="5" end="6" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="6" cat="np" end="8" id="10" rel="obj1">
+          <node begin="6" end="7" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="7" end="8" getal="mv" graad="basis" id="12" lemma="groepswedstrijd" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="wedstrijden" word="groepswedstrijden"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het grootste gevaar wacht Engeland in de groepswedstrijden .</sentence>
+</alpino_ds>

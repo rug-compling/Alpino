@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="7" end="8" frame="conj(of)" id="1" lcat="--" pos="vg" rel="--" root="of" sense="of" word="of"/>
+    <node begin="0" cat="du" end="14" id="2" rel="--">
+      <node begin="0" cat="smain" end="7" id="3" rel="dp">
+        <node begin="0" cat="np" end="3" id="4" index="1" rel="su">
+          <node begin="0" end="1" frame="determiner(de)" id="5" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+          <node aform="base" begin="1" end="2" frame="adjective(e)" id="6" infl="e" lcat="ap" pos="adj" rel="mod" root="kern_technisch" sense="kern_technisch" vform="adj" word="kerntechnische"/>
+          <node begin="2" end="3" frame="noun(het,count,pl)" gen="het" id="7" lcat="np" num="pl" pos="noun" rel="hd" root="materiaal" sense="materiaal" word="materialen"/>
+        </node>
+        <node begin="3" end="4" frame="verb('hebben/zijn',pl,aux(inf))" id="8" infl="pl" lcat="smain" pos="verb" rel="hd" root="kan" sc="aux(inf)" sense="kan" tense="present" word="kunnen"/>
+        <node begin="0" cat="inf" end="7" id="9" rel="vc">
+          <node begin="0" end="3" id="10" index="1" rel="su"/>
+          <node begin="0" cat="ppart" end="6" id="11" rel="vc">
+            <node begin="0" end="3" id="12" index="1" rel="obj1"/>
+            <node aform="base" begin="4" end="5" frame="adjective(no_e(adv))" id="13" infl="no_e" lcat="ap" pos="adj" rel="mod" root="los" sense="los" vform="adj" word="los"/>
+            <node begin="5" end="6" frame="verb(hebben,psp,transitive)" id="14" infl="psp" lcat="ppart" pos="verb" rel="hd" root="stort" sc="transitive" sense="stort" word="gestort"/>
+          </node>
+          <node begin="6" end="7" frame="verb(unacc,inf,passive)" id="15" infl="inf" lcat="inf" pos="verb" rel="hd" root="ben" sc="passive" sense="ben" word="zijn"/>
+        </node>
+      </node>
+      <node begin="8" cat="sv1" end="14" id="16" rel="dp">
+        <node begin="8" end="9" frame="verb(hebben,sg,np_pc_pp(in))" id="17" infl="sg" lcat="sv1" pos="verb" rel="hd" root="vervat" sc="np_pc_pp(in)" sense="vervat-in" tense="present" word="vervat"/>
+        <node begin="9" cat="pp" end="13" id="18" rel="pc">
+          <node begin="9" end="10" frame="preposition(in,[])" id="19" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+          <node begin="10" cat="np" end="13" id="20" rel="obj1">
+            <node begin="10" end="11" frame="determiner(een)" id="21" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+            <node begin="11" end="12" frame="noun(het,count,sg,measure)" gen="het" id="22" lcat="np" num="sg" pos="noun" rel="hd" root="aantal" sc="measure" sense="aantal-MEAS" word="aantal"/>
+            <node aform="base" begin="12" end="13" frame="adjective(e)" id="23" infl="e" lcat="np" pos="adj" rel="mod" root="identificeerbare" sense="identificeerbare" vform="adj" word="identificeerbare"/>
+          </node>
+        </node>
+        <node begin="13" end="14" frame="noun(het,count,pl)" gen="het" id="24" lcat="np" num="pl" pos="noun" rel="obj1" root="artikel" sense="artikel" word="artikelen"/>
+      </node>
+    </node>
+    <node begin="14" end="15" frame="punct(punt)" id="25" lcat="--" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De kerntechnische materialen kunnen los gestort zijn of vervat in een aantal identificeerbare artikelen .</sentence>
+  <comments>
+    <comment>Q#371|De kerntechnische materialen kunnen los gestort zijn of vervat in een aantal identificeerbare artikelen .|1|3|4.8641511759904335</comment>
+  </comments>
+</alpino_ds>

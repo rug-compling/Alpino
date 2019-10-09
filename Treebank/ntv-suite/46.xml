@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="du" end="6" id="1" rel="--">
+      <node begin="0" end="1" genus="genus" getal="ev" graad="basis" id="2" lemma="Oprah" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="dp" root="Oprah" word="Oprah"/>
+      <node begin="1" cat="pp" end="4" id="3" rel="dp">
+        <node begin="1" end="2" id="4" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+        <node begin="2" cat="np" end="4" id="5" rel="obj1">
+          <node begin="2" end="3" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="rechter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rechter" word="rechter"/>
+        </node>
+      </node>
+      <node begin="4" cat="pp" end="6" id="8" rel="dp">
+        <node begin="4" end="5" id="9" lemma="wegens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="wegens" vztype="init" word="wegens"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="smaad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="smaad" word="smaad"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Oprah voor de rechter wegens smaad .</sentence>
+</alpino_ds>

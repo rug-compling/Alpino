@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="conj" end="12" id="1" rel="--">
+      <node begin="0" cat="smain" end="7" id="2" rel="cnj">
+        <node begin="0" cat="np" end="3" id="3" index="1" rel="su">
+          <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+          <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="kort" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="kort" word="korte"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="lening" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="lening" word="lening"/>
+        </node>
+        <node begin="3" end="4" id="7" index="2" lemma="zetten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zet" word="zette" wvorm="pv"/>
+        <node begin="4" end="5" id="8" lemma="in" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="in" vztype="fin" word="in"/>
+        <node begin="5" cat="pp" end="7" id="9" rel="pc">
+          <node begin="5" end="6" id="10" index="3" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="6" end="7" id="11" lemma="101,40" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="101,40" word="101,40"/>
+        </node>
+      </node>
+      <node begin="7" end="8" id="12" lemma="tegen" pos="vg" postag="VZ(init)" pt="vz" rel="crd" root="tegen" vztype="init" word="tegen"/>
+      <node begin="0" cat="smain" end="12" id="13" rel="cnj">
+        <node begin="0" end="3" id="14" index="1" rel="su"/>
+        <node begin="3" end="4" id="15" index="2" rel="hd"/>
+        <node begin="8" cat="np" end="11" id="16" rel="mod">
+          <node begin="8" buiging="met-e" end="9" graad="basis" id="17" lemma="vorig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vorig" word="vorige"/>
+          <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="week" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="week" word="week"/>
+          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="19" lemma="vrijdag" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="vrijdag" word="vrijdag"/>
+        </node>
+        <node begin="5" cat="pp" end="12" id="20" rel="pc">
+          <node begin="5" end="6" id="21" index="3" rel="hd"/>
+          <node begin="11" end="12" id="22" lemma="100,80" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="100,80" word="100,80"/>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De korte lening zette in op 101,40 tegen vorige week vrijdag 100,80 .</sentence>
+</alpino_ds>

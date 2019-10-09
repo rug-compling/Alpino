@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="0" cat="du" end="18" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" word="En"/>
+      <node begin="1" cat="smain" end="18" id="3" rel="nucl">
+        <node begin="4" end="5" id="4" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+        <node begin="5" cat="np" end="7" id="5" index="1" rel="su">
+          <node begin="5" end="6" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="7" lemma="gemeentebestuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gemeentebestuur" word="gemeentebestuur"/>
+        </node>
+        <node begin="1" cat="inf" end="18" id="8" rel="vc">
+          <node begin="1" cat="pp" end="4" id="9" rel="obj2">
+            <node begin="1" end="2" id="10" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+            <node begin="2" cat="np" end="4" id="11" rel="obj1">
+              <node begin="2" end="3" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="3" end="4" getal="mv" graad="basis" id="13" lemma="inzitten" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="ingezetene" word="ingezetenen"/>
+            </node>
+          </node>
+          <node begin="5" end="7" id="14" index="1" rel="su"/>
+          <node begin="7" cat="advp" end="9" id="15" rel="mod">
+            <node begin="7" end="8" id="16" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="hd" root="niet" word="niet"/>
+            <node begin="8" buiging="zonder" end="9" graad="comp" id="17" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vwtype="onbep" word="meer"/>
+          </node>
+          <node begin="9" buiging="zonder" end="10" graad="basis" id="18" lemma="duidelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="duidelijk" word="duidelijk"/>
+          <node begin="10" buiging="zonder" end="11" id="19" lemma="maken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="maak" word="maken" wvorm="inf"/>
+          <node begin="11" cat="whsub" end="18" id="20" rel="vc">
+            <node begin="11" end="12" id="21" index="2" lemma="waarom" pos="adv" postag="BW()" pt="bw" rel="whd" root="waarom" word="waarom"/>
+            <node begin="11" cat="ssub" end="18" id="22" rel="body">
+              <node begin="11" end="12" id="23" index="2" rel="mod"/>
+              <node begin="12" end="13" getal="getal" id="24" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+              <node begin="13" cat="conj" end="17" id="25" rel="su">
+                <node begin="13" end="14" getal="ev" id="26" lemma="niets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="cnj" root="niets" status="vol" vwtype="onbep" word="niets"/>
+                <node begin="14" conjtype="neven" end="15" id="27" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+                <node begin="15" cat="np" end="17" id="28" rel="cnj">
+                  <node begin="15" end="16" id="29" lemma="te" pos="adv" postag="BW()" pt="bw" rel="mod" root="te" word="te"/>
+                  <node begin="16" buiging="zonder" end="17" graad="basis" id="30" lemma="weinig" naamval="stan" pdtype="grad" pos="det" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="hd" root="weinig" vwtype="onbep" word="weinig"/>
+                </node>
+              </node>
+              <node begin="17" end="18" id="31" lemma="gebeuren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="gebeur" word="gebeurt" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="32" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>En aan de ingezetenen kan het gemeentebestuur niet meer duidelijk maken waarom er niets of te weinig gebeurt .</sentence>
+</alpino_ds>

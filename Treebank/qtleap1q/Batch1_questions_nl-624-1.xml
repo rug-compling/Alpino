@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="17" id="2" rel="--">
+      <node begin="0" cat="cp" end="10" id="3" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="wanneer" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="wanneer" word="Wanneer"/>
+        <node begin="1" cat="ssub" end="10" id="5" rel="body">
+          <node begin="1" end="2" getal="ev" id="6" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+          <node begin="2" cat="np" end="4" id="7" rel="obj1">
+            <node begin="2" end="3" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="persoon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="persoon" word="persoon"/>
+          </node>
+          <node begin="4" end="5" id="10" lemma="toe_voegen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="voeg_toe" word="toevoeg" wvorm="pv"/>
+          <node begin="5" cat="cp" end="10" id="11" rel="predm">
+            <node begin="5" end="6" id="12" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+            <node begin="6" cat="np" end="10" id="13" rel="body">
+              <node begin="6" end="7" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="15" lemma="favoriet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="favoriet" word="favoriet"/>
+              <node begin="8" cat="pp" end="10" id="16" rel="mod">
+                <node begin="8" end="9" id="17" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                <node begin="9" end="10" genus="genus" getal="ev" graad="basis" id="18" lemma="Facebook" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Facebook" word="Facebook"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="11" end="12" id="19" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="ben" wvorm="pv"/>
+      <node begin="12" end="13" getal="ev" id="20" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      <node begin="13" end="14" id="21" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+      <node begin="14" end="15" id="22" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+      <node begin="15" cat="np" end="17" id="23" rel="predc">
+        <node begin="15" buiging="zonder" end="16" getal="mv" id="24" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+        <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="25" lemma="favoriet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="favoriet" word="favoriet"/>
+      </node>
+    </node>
+    <node begin="17" end="18" id="26" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wanneer ik een persoon toevoeg als een favoriet op Facebook , ben ik dan ook hun favoriet ?</sentence>
+</alpino_ds>

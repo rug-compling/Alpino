@@ -1,0 +1,17 @@
+#!/usr/bin/perl -w
+while (<>) {
+    chomp;
+    @all = split/\|/;
+
+    shift @all;           #key
+    $goal = shift @all;
+
+    push(@all,'finish');
+
+    while (@all) {
+        print "$goal|";
+        print join("|",@all);
+        print "\n";
+        pop @all;
+    }
+}

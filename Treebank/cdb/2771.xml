@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" cat="mwu" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="Achmed" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Achmed" spectype="deeleigen" word="Achmed"/>
+        <node begin="1" end="2" id="4" lemma="al-Azjari" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="al-Azjari" spectype="deeleigen" word="al-Azjari"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="geloven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="geloof" word="gelooft" wvorm="pv"/>
+      <node begin="3" end="4" getal="ev" id="6" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" word="dat"/>
+      <node begin="4" end="5" id="7" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+    </node>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Achmed al-Azjari gelooft dat niet .</sentence>
+</alpino_ds>

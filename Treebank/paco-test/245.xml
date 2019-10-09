@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" frame="determiner(het,nwh,nmod,pro,nparg)" id="3" infl="het" lcat="detp" pos="det" rel="det" root="dit" sense="dit" wh="nwh" word="Dit"/>
+        <node begin="1" end="2" frame="meas_mod_noun(both,count,sg)" gen="both" id="4" lcat="np" num="sg" pos="noun" rel="hd" root="code_nummer" sense="code_nummer" special="meas_mod" word="codenummer"/>
+      </node>
+      <node begin="2" end="3" frame="verb(unacc,sg_heeft,passive)" id="5" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="ben" sc="passive" sense="ben" tense="present" word="is"/>
+      <node begin="0" cat="ppart" end="9" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="obj1"/>
+        <node begin="3" end="4" frame="adverb" id="8" lcat="advp" pos="adv" rel="mod" root="al" sense="al" word="al"/>
+        <node begin="4" end="5" frame="verb(hebben,psp,ninv(so_pp_np,part_so_pp_np(toe)))" id="9" infl="psp" lcat="ppart" pos="verb" rel="hd" root="wijs_toe" sc="part_so_pp_np(toe)" sense="wijs_toe" word="toegewezen"/>
+        <node begin="5" cat="pp" end="9" id="10" rel="obj2">
+          <node begin="5" end="6" frame="preposition(aan,[vooraf])" id="11" lcat="pp" pos="prep" rel="hd" root="aan" sense="aan" word="aan"/>
+          <node begin="6" cat="np" end="9" id="12" rel="obj1">
+            <node begin="6" end="7" frame="determiner(een)" id="13" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+            <node aform="compar" begin="7" end="8" frame="adjective(ere)" id="14" infl="e" lcat="ap" pos="adj" rel="mod" root="ander" sense="ander" vform="adj" word="andere"/>
+            <node begin="8" end="9" frame="noun(de,count,sg)" gen="de" id="15" lcat="np" num="sg" pos="noun" rel="hd" root="gebruiker" sense="gebruiker" word="gebruiker"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Dit codenummer is al toegewezen aan een andere gebruiker</sentence>
+  <comments>
+    <comment>Q#245|Dit codenummer is al toegewezen aan een andere gebruiker|1|1|-5.6290224989688955</comment>
+  </comments>
+</alpino_ds>

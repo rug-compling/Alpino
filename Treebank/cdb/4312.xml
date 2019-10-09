@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="1" cat="smain" end="12" id="2" rel="--">
+      <node begin="3" end="4" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="4" end="5" genus="masc" getal="ev" id="4" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+      <node begin="1" cat="ppart" end="12" id="5" rel="vc">
+        <node begin="1" cat="np" end="3" id="6" rel="mod">
+          <node begin="1" buiging="zonder" end="2" graad="basis" id="7" lemma="vorig" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="vorig" word="Vorig"/>
+          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="8" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
+        </node>
+        <node begin="4" end="5" id="9" index="1" rel="su"/>
+        <node begin="6" end="7" id="10" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+        <node begin="8" buiging="zonder" end="9" id="11" lemma="denken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="denk" word="gedacht" wvorm="vd"/>
+        <node begin="4" cat="pp" end="12" id="12" rel="pc">
+          <node begin="5" end="6" getal="getal" id="13" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="pobj1" root="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="7" end="8" id="14" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+          <node begin="4" cat="ti" end="12" id="15" rel="vc">
+            <node begin="10" end="11" id="16" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="4" cat="inf" end="12" id="17" rel="body">
+              <node begin="4" end="5" id="18" index="1" rel="su"/>
+              <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="19" lemma="prof" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="predc" root="prof" word="prof"/>
+              <node begin="11" buiging="zonder" end="12" id="20" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&quot; Vorig jaar heeft hij er al aan gedacht prof te worden .</sentence>
+</alpino_ds>

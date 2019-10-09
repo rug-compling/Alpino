@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="whq" end="12" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" root="wat" status="vol" vwtype="vb" word="Wat"/>
+      <node begin="0" cat="sv1" end="12" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="predc"/>
+        <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="2" cat="np" end="7" id="6" rel="su">
+          <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" buiging="met-e" end="4" graad="basis" id="8" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="naam" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="naam" word="naam"/>
+          <node begin="5" cat="pp" end="7" id="10" rel="mod">
+            <node begin="5" end="6" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="12" lemma="Nicosia" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Nicosia" word="Nicosia"/>
+          </node>
+        </node>
+        <node begin="7" cat="pp" end="12" id="13" rel="mod">
+          <node begin="7" end="8" id="14" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="volgens"/>
+          <node begin="8" cat="np" end="12" id="15" rel="obj1">
+            <node begin="8" end="9" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="9" end="10" getal="mv" graad="basis" id="17" lemma="spellingswijziging" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="spelling_wijziging" word="spellingswijzigingen"/>
+            <node begin="10" cat="pp" end="12" id="18" rel="mod">
+              <node begin="10" end="11" id="19" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="20" lemma="Cyprus" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Cyprus" word="Cyprus"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="21" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wat is de nieuwe naam van Nicosia volgens de spellingswijzigingen in Cyprus ?</sentence>
+</alpino_ds>

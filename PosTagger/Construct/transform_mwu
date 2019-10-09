@@ -1,0 +1,38 @@
+#!/usr/bin/perl -w
+
+# dit script transformeert multi-word-units
+
+
+while (<>) {
+  next if !/\|/;
+  chomp;
+  #($_,$tag,$key,$p,$q) = split(/\|/);
+  @FIELDS = split(/\|/);
+  if (@FIELDS >= 8) {
+
+      ($w,$tag,$key,$p,$q,$heuristic,$extracontext,$root) = @FIELDS;
+
+      if ($w ne "") {
+	  $_ = $w;
+
+	  @words = split;
+	  if (@words > 1) {
+	      $length = scalar @words;
+	      for ($i=1;$i<=$length;$i++) {
+		  $s = $p+$i-1;
+		  $t = $p+$i;
+		  #print "$words[$i-1]|$i-$tag|$key|$s|$t\n";
+		  print "$words[$i-1]|$i/$length-$tag|$key|$s|$t|$heuristic|$extracontext|$words[$i-1]\n";
+	      }
+	  } else {
+	      #print "$_|$tag|$key|$p|$q\n";
+	      print "$_|$tag|$key|$p|$q|$heuristic|$extracontext|$root\n";
+	  }
+      } else {
+	  printf STDERR "ignore line $. $_\n";
+      }
+  } else {
+      printf STDERR "ignore line $. $_\n";
+  }
+}
+

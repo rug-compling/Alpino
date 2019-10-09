@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="smain" end="10" id="1" rel="--">
+      <node begin="0" case="both" def="def" end="1" gen="de" getal="mv" id="2" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" rnum="pl" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="Ze"/>
+      <node begin="1" end="2" id="3" infl="pl" lemma="tonen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="toon" sc="transitive" stype="declarative" tense="present" word="tonen" wvorm="pv"/>
+      <node begin="2" cat="np" end="10" id="4" rel="obj1">
+        <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="5" lemma="verwantschap" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="verwantschap" word="verwantschap"/>
+        <node begin="3" cat="pp" end="10" id="6" rel="mod">
+          <node begin="3" end="4" id="7" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="4" cat="np" end="10" id="8" rel="obj1">
+            <node begin="4" end="5" id="9" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node aform="base" begin="5" buiging="met-e" end="6" graad="basis" id="10" infl="e" lemma="vroeg" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vroeg" vform="adj" word="vroege"/>
+            <node begin="6" end="7" gen="het" getal="mv" graad="basis" id="11" lemma="landschap" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="landschap" word="landschappen"/>
+            <node begin="7" cat="pp" end="10" id="12" rel="mod">
+              <node begin="7" end="8" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="8" cat="mwu" end="10" his="normal" his_1="names_dictionary" id="14" mwu_root="Leo Gestel" mwu_sense="Leo Gestel" rel="obj1">
+                <node begin="8" end="9" id="15" lemma="Leo" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Leo" spectype="deeleigen" word="Leo"/>
+                <node begin="9" end="10" id="16" lemma="Gestel" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Gestel" spectype="deeleigen" word="Gestel"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="10" end="11" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Ze tonen verwantschap met de vroege landschappen van Leo Gestel .</sentence>
+</alpino_ds>

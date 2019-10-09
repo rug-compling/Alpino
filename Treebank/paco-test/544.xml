@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="13" end="14" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="18" id="2" rel="--">
+      <node begin="0" cat="mwu" end="2" id="3" index="1" mwu_root="De_Raad" mwu_sense="De_Raad" rel="su">
+        <node begin="0" end="1" frame="proper_name(both,'PER')" id="4" lcat="np" neclass="PER" num="both" pos="name" rel="mwp" root="De" sense="De" word="De"/>
+        <node begin="1" end="2" frame="proper_name(both,'PER')" id="5" lcat="np" neclass="PER" num="both" pos="name" rel="mwp" root="Raad" sense="Raad" word="Raad"/>
+      </node>
+      <node begin="2" end="3" frame="verb('hebben/zijn',modal_not_u,aux(inf))" id="6" infl="modal_not_u" lcat="smain" pos="verb" rel="hd" root="kan" sc="aux(inf)" sense="kan" tense="present" word="kan"/>
+      <node begin="0" cat="inf" end="18" id="7" rel="vc">
+        <node begin="0" end="2" id="8" index="1" rel="su"/>
+        <node begin="4" end="5" frame="verb(hebben,inf,transitive)" id="9" infl="inf" lcat="inf" pos="verb" rel="hd" root="neem" sc="transitive" sense="neem" word="nemen"/>
+        <node begin="3" cat="np" end="18" id="10" rel="obj1">
+          <node begin="3" end="4" frame="noun(het,count,pl)" gen="het" id="11" lcat="np" num="pl" pos="noun" rel="hd" root="besluit" sense="besluit" word="besluiten"/>
+          <node begin="5" cat="rel" end="18" id="12" rel="mod">
+            <node begin="5" case="no_obl" end="6" frame="rel_pronoun(de,no_obl)" gen="de" id="13" index="2" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+            <node begin="5" cat="conj" end="18" id="14" rel="body">
+              <node begin="5" cat="ssub" end="11" id="15" rel="cnj">
+                <node begin="5" end="6" id="16" index="2" rel="su"/>
+                <node begin="6" cat="pp" end="9" id="17" rel="mod">
+                  <node begin="6" end="7" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="18" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+                  <node begin="7" cat="np" end="9" id="19" rel="obj1">
+                    <node begin="7" end="8" frame="determiner(de)" id="20" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                    <node begin="8" end="9" frame="tmp_noun(de,count,pl)" gen="de" id="21" lcat="np" num="pl" pos="noun" rel="hd" root="partij" sense="partij" special="tmp" word="partijen"/>
+                  </node>
+                </node>
+                <node aform="base" begin="9" end="10" frame="adjective(end(adv))" id="22" infl="no_e" lcat="ppres" pos="adj" rel="predc" root="bindend" sense="bindend" vform="gerund" word="bindend"/>
+                <node begin="10" end="11" frame="verb(unacc,pl,copula)" id="23" infl="pl" lcat="ssub" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="zijn"/>
+              </node>
+              <node begin="11" end="12" frame="conj(en)" id="24" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+              <node begin="5" cat="ssub" end="18" id="25" rel="cnj">
+                <node begin="5" end="6" id="26" index="2" rel="su"/>
+                <node begin="12" cat="conj" end="17" id="27" rel="obj1">
+                  <node begin="12" end="13" frame="noun(de,count,pl)" gen="de" id="28" lcat="np" num="pl" pos="noun" rel="cnj" root="resolutie" sense="resolutie" word="resoluties"/>
+                  <node begin="14" end="15" frame="noun(de,count,pl)" gen="de" id="29" lcat="np" num="pl" pos="noun" rel="cnj" root="aanbeveling" sense="aanbeveling" word="aanbevelingen"/>
+                  <node begin="15" end="16" frame="conj(en)" id="30" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                  <node begin="16" end="17" frame="noun(het,count,pl)" gen="het" id="31" lcat="np" num="pl" pos="noun" rel="cnj" root="advies" sense="advies" word="adviezen"/>
+                </node>
+                <node begin="17" end="18" frame="verb(hebben,pl,transitive)" id="32" infl="pl" lcat="ssub" pos="verb" rel="hd" root="formuleer" sc="transitive" sense="formuleer" tense="present" word="formuleren"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" frame="punct(punt)" id="33" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De Raad kan besluiten nemen die voor de partijen bindend zijn en resoluties , aanbevelingen en adviezen formuleren .</sentence>
+  <comments>
+    <comment>Q#544|De Raad kan besluiten nemen die voor de partijen bindend zijn en resoluties , aanbevelingen en adviezen formuleren .|1|1|-4.041636155885907</comment>
+  </comments>
+</alpino_ds>

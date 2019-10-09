@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="6" end="7" id="2" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="0" cat="smain" end="9" id="3" rel="--">
+      <node begin="0" end="1" getal="mv" id="4" index="1" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="We"/>
+      <node begin="1" end="2" id="5" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" word="moeten" wvorm="pv"/>
+      <node begin="0" cat="inf" end="9" id="6" rel="vc">
+        <node begin="0" end="1" id="7" index="1" rel="su"/>
+        <node begin="3" cat="ap" end="6" id="8" rel="mod">
+          <node begin="3" end="4" id="9" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="mod" root="hoe" word="hoe"/>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="10" lemma="triest" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="triest" word="triest"/>
+          <node begin="5" end="6" id="11" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+        </node>
+        <node begin="7" end="8" genus="masc" getal="ev" id="12" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="vol" vwtype="pers" word="hem"/>
+        <node begin="8" buiging="zonder" end="9" id="13" lemma="ontslaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ontsla" word="ontslaan" wvorm="inf"/>
+      </node>
+    </node>
+  </node>
+  <sentence>We moeten - hoe triest ook - hem ontslaan</sentence>
+</alpino_ds>

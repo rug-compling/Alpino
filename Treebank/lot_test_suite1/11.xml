@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="2" end="3" id="2" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
+      <node begin="3" end="4" genus="fem" getal="ev" id="3" index="1" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+      <node begin="4" end="5" id="4" lemma="zelf" pos="adv" postag="BW()" pt="bw" rel="predm" root="zelf" word="zelf"/>
+      <node begin="0" cat="ppart" end="6" id="5" rel="vc">
+        <node begin="0" cat="np" end="2" id="6" rel="obj1">
+          <node begin="0" buiging="zonder" end="1" id="7" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="Dat"/>
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="8" lemma="werkwoord" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="werkwoord" word="werkwoord"/>
+        </node>
+        <node begin="3" end="4" id="9" index="1" rel="su"/>
+        <node begin="5" buiging="zonder" end="6" id="10" lemma="uitvinden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vind" word="uitgevonden" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dat werkwoord had ze zelf uitgevonden .</sentence>
+</alpino_ds>

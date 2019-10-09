@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="22" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" rel="su">
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="4" lemma="smaakvol" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="smaakvol" word="Smaakvol"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="nachtvertier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="vertier" word="nachtvertier"/>
+      </node>
+      <node begin="2" end="3" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="3" end="4" getal="getal" id="7" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+      <node begin="4" end="5" id="8" lemma="nauwelijks" pos="adv" postag="BW()" pt="bw" rel="mod" root="nauwelijks" word="nauwelijks"/>
+      <node begin="6" cat="cp" end="22" id="9" rel="mod">
+        <node begin="6" conjtype="onder" end="7" id="10" lemma="behalve" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="behalve" word="behalve"/>
+        <node begin="7" end="8" id="11" lemma="misschien" pos="adv" postag="BW()" pt="bw" rel="mod" root="misschien" word="misschien"/>
+        <node begin="8" cat="np" end="22" id="12" rel="body">
+          <node begin="8" end="9" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="9" end="10" getal="mv" graad="basis" id="14" lemma="ontmoetingskroeg" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kroeg" word="ontmoetingskroegen"/>
+          <node begin="10" cat="pp" end="22" id="15" rel="mod">
+            <node begin="10" end="11" id="16" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+            <node begin="11" cat="np" end="22" id="17" rel="obj1">
+              <node begin="11" end="12" getal="mv" graad="basis" id="18" lemma="homofiel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="homofiel" word="homofielen"/>
+              <node begin="12" cat="rel" end="22" id="19" rel="mod">
+                <node begin="12" end="13" getal="getal" id="20" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="noun" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" status="vol" vwtype="vb" word="waar"/>
+                <node begin="12" cat="ssub" end="22" id="21" rel="body">
+                  <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="22" index="2" lemma="Hollywood" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Hollywood" word="Hollywood"/>
+                  <node begin="18" end="19" id="23" lemma="schijnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="schijn" word="schijnt" wvorm="pv"/>
+                  <node begin="12" cat="ti" end="22" id="24" rel="vc">
+                    <node begin="20" end="21" id="25" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+                    <node begin="12" cat="inf" end="22" id="26" rel="body">
+                      <node begin="13" end="14" id="27" index="2" rel="su"/>
+                      <node begin="14" cat="np" end="17" id="28" rel="obj1">
+                        <node begin="14" end="15" id="29" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&apos;n"/>
+                        <node begin="15" buiging="met-e" end="16" graad="basis" id="30" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="grote"/>
+                        <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="31" lemma="aantrekkingskracht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aantrekkingskracht" word="aantrekkingskracht"/>
+                      </node>
+                      <node begin="12" cat="pp" end="18" id="32" rel="pc">
+                        <node begin="12" end="13" id="33" index="1" rel="obj1"/>
+                        <node begin="17" end="18" id="34" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                      </node>
+                      <node begin="19" end="20" id="35" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
+                      <node begin="21" buiging="zonder" end="22" id="36" lemma="oefenen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="oefen" word="oefenen" wvorm="inf"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Smaakvol nachtvertier is er nauwelijks , behalve misschien de ontmoetingskroegen voor homofielen waar Hollywood &apos;n grote aantrekkingskracht op schijnt uit te oefenen .</sentence>
+</alpino_ds>

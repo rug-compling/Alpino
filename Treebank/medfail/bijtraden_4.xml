@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="16" id="2" rel="--">
+      <node begin="0" cat="np" end="6" id="3" rel="su">
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="5" lemma="republikein" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Republikein" word="Republikeinen"/>
+        <node begin="2" cat="rel" end="6" id="6" rel="mod">
+          <node begin="2" end="3" getal="getal" id="7" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+          <node begin="2" cat="ssub" end="6" id="8" rel="body">
+            <node begin="2" end="3" id="9" index="1" rel="su"/>
+            <node begin="3" end="4" getal="mv" id="10" lemma="hen" naamval="obl" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,obl,vol,3p,mv)" pt="vnw" rel="obj1" root="hen" status="vol" vwtype="pers" word="hen"/>
+            <node begin="4" end="5" id="11" lemma="daarin" pos="pp" postag="BW()" pt="bw" rel="pc" root="daarin" word="daarin"/>
+            <node begin="5" end="6" id="12" lemma="bijtreden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="treed_bij" word="bijtraden" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="13" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+      <node begin="8" end="9" id="14" lemma="vooral" pos="adv" postag="BW()" pt="bw" rel="mod" root="vooral" word="vooral"/>
+      <node begin="9" cat="np" end="16" id="15" rel="predc">
+        <node begin="9" buiging="met-e" end="10" getal-n="mv-n" id="16" lemma="matigen" pos="adj" positie="nom" postag="WW(vd,nom,met-e,mv-n)" pt="ww" rel="hd" root="gematigd" word="gematigden" wvorm="vd"/>
+        <node begin="10" cat="pp" end="16" id="17" rel="mod">
+          <node begin="10" end="11" id="18" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+          <node begin="11" cat="np" end="16" id="19" rel="obj1">
+            <node begin="11" end="12" id="20" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="21" lemma="noordoosten" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="noordoosten" word="noordoosten"/>
+            <node begin="13" cat="pp" end="16" id="22" rel="mod">
+              <node begin="13" end="14" id="23" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="14" cat="np" end="16" id="24" rel="obj1">
+                <node begin="14" end="15" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="26" lemma="VS" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="VS" word="VS"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De Republikeinen die hen daarin bijtraden , waren vooral gematigden uit het noordoosten van de VS .</sentence>
+</alpino_ds>

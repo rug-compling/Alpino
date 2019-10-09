@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="7" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="voorbeeld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="voorbeeld" word="voorbeeld"/>
+        <node begin="2" cat="rel" end="7" id="5" rel="mod">
+          <node begin="2" end="3" getal="ev" id="6" index="1" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
+          <node begin="2" cat="ssub" end="7" id="7" rel="body">
+            <node begin="2" end="3" id="8" index="1" rel="su"/>
+            <node begin="4" buiging="zonder" end="5" graad="comp" id="9" lemma="vroeger" pos="adv" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="vroeger" word="vroeger"/>
+            <node begin="3" cat="pp" end="6" id="10" rel="pc">
+              <node begin="3" end="4" getal="getal" id="11" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="noun" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="hier" status="vol" vwtype="aanw" word="hier"/>
+              <node begin="5" end="6" id="12" lemma="van" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="van" vztype="fin" word="van"/>
+            </node>
+            <node begin="6" end="7" id="13" lemma="bestaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="besta" word="bestond" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="14" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="15" lemma="ongrammaticaal" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="predc" root="grammaticaal" word="ongrammaticaal"/>
+    </node>
+  </node>
+  <sentence>Het voorbeeld dat hier vroeger van bestond is ongrammaticaal</sentence>
+</alpino_ds>

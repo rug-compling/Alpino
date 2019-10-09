@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="whq" end="12" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welke"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="inlog_gegeven" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="inlog_gegeven" word="inloggegevens"/>
+      </node>
+      <node begin="0" cat="sv1" end="12" id="5" rel="body">
+        <node begin="0" end="2" id="6" index="1" rel="obj1"/>
+        <node begin="2" end="3" id="7" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+        <node begin="3" end="4" getal="ev" id="8" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="4" cat="ap" end="12" id="9" rel="predc">
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="10" lemma="nodig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="nodig" word="nodig"/>
+          <node begin="5" cat="oti" end="12" id="11" rel="vc">
+            <node begin="5" end="6" id="12" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+            <node begin="6" cat="ti" end="12" id="13" rel="body">
+              <node begin="10" end="11" id="14" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+              <node begin="6" cat="inf" end="12" id="15" rel="body">
+                <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="16" lemma="internet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="internet" word="internet"/>
+                <node begin="7" cat="pp" end="10" id="17" rel="mod">
+                  <node begin="7" end="8" id="18" lemma="via" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="via" vztype="init" word="via"/>
+                  <node begin="8" cat="mwu" end="10" id="19" rel="obj1">
+                    <node begin="8" end="9" id="20" lemma="PT" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="PT" spectype="deeleigen" word="PT"/>
+                    <node begin="9" end="10" id="21" lemma="Wifi" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wifi" spectype="deeleigen" word="Wifi"/>
+                  </node>
+                </node>
+                <node begin="11" buiging="zonder" end="12" id="22" lemma="bereiken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bereik" word="bereiken" wvorm="inf"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Welke inloggegevens heb ik nodig om internet via PT Wifi te bereiken .</sentence>
+</alpino_ds>

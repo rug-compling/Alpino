@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="32" id="0" rel="top">
+    <node begin="5" end="6" frame="punct(dubb_punt)" id="1" lcat="punct" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+    <node begin="18" end="19" frame="punct(komma)" id="2" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="du" end="31" id="3" rel="--">
+      <node begin="0" cat="np" end="5" id="4" rel="tag">
+        <node begin="0" end="1" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="5" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="Het"/>
+        <node begin="1" end="2" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="6" lcat="np" lemma="onderwerp" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="onderwerp" sense="onderwerp" word="onderwerp"/>
+        <node begin="2" cat="pp" end="5" id="7" rel="mod">
+          <node begin="2" end="3" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="8" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+          <node begin="3" cat="np" end="5" id="9" rel="obj1">
+            <node begin="3" end="4" frame="determiner(de)" id="10" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+            <node begin="4" end="5" frame="tmp_noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lcat="np" lemma="week" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="week" sense="week" special="tmp" word="week"/>
+          </node>
+        </node>
+      </node>
+      <node begin="6" cat="smain" end="31" id="12" rel="nucl">
+        <node begin="6" cat="np" end="8" id="13" index="1" rel="su">
+          <node begin="6" end="7" frame="determiner(een)" id="14" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+          <node begin="7" end="8" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="dim" id="15" lcat="np" lemma="meisje" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="meisje" sense="meisje" word="meisje"/>
+        </node>
+        <node begin="8" end="9" frame="verb(unacc,past(sg),passive)" id="16" infl="sg" lcat="smain" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" sc="passive" sense="word" tense="past" word="werd" wvorm="pv"/>
+        <node begin="6" cat="ppart" end="31" id="17" rel="vc">
+          <node begin="6" end="8" id="18" index="1" rel="obj1"/>
+          <node begin="9" cat="pp" end="11" id="19" rel="mod">
+            <node begin="9" end="10" frame="preposition(tot,[toe,[aan,toe]])" id="20" lcat="pp" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" sense="tot" vztype="init" word="tot"/>
+            <node begin="10" end="11" frame="noun(het,mass,sg)" gen="het" id="21" lcat="np" lemma="thuis" num="sg" pos="noun" postag="BW()" pt="bw" rel="obj1" root="thuis" sense="thuis" word="thuis"/>
+          </node>
+          <node begin="11" buiging="zonder" end="12" frame="verb('hebben/zijn',psp,np_ld_pp)" id="22" infl="psp" lcat="ppart" lemma="volgen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="volg" sc="np_ld_pp" sense="volg" word="gevolgd" wvorm="vd"/>
+          <node begin="12" cat="pp" end="31" id="23" rel="ld">
+            <node begin="12" end="13" frame="preposition(door,[heen])" id="24" lcat="pp" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" sense="door" vztype="init" word="door"/>
+            <node begin="13" cat="conj" end="31" id="25" rel="obj1">
+              <node begin="15" conjtype="neven" end="16" frame="conj(en)" id="26" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+              <node begin="13" cat="np" end="31" id="27" rel="cnj">
+                <node begin="13" buiging="zonder" end="14" frame="determiner(pron)" getal="ev" id="28" infl="pron" lcat="detp" lemma="haar" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="haar" sense="haar" status="vol" vwtype="bez" word="haar"/>
+                <node begin="14" end="15" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="29" lcat="np" lemma="ex-vriend" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ex_vriend" sense="ex_vriend" word="ex-vriend"/>
+                <node begin="19" cat="rel" end="31" id="30" index="2" rel="mod">
+                  <node begin="19" case="no_obl" end="20" frame="rel_pronoun(de,no_obl)" gen="de" getal="getal" id="31" index="3" lcat="np" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" sense="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+                  <node begin="19" cat="ssub" end="31" id="32" rel="body">
+                    <node begin="19" end="20" id="33" index="3" rel="su"/>
+                    <node begin="20" cat="pp" end="23" id="34" rel="mod">
+                      <node begin="20" end="21" frame="preposition(na,[])" id="35" lcat="pp" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" sense="na" vztype="init" word="na"/>
+                      <node begin="21" cat="np" end="23" id="36" rel="obj1">
+                        <node begin="21" buiging="zonder" end="22" frame="determiner(pron)" getal="ev" id="37" infl="pron" lcat="detp" lemma="haar" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="haar" sense="haar" status="vol" vwtype="bez" word="haar"/>
+                        <node begin="22" end="23" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="38" lcat="np" lemma="vlucht" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vlucht" sense="vlucht" word="vlucht"/>
+                      </node>
+                    </node>
+                    <node begin="23" cat="np" end="28" id="39" rel="obj1">
+                      <node begin="23" end="24" frame="determiner(de)" id="40" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+                      <node begin="24" end="25" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="41" lcat="np" lemma="ruiten" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="ruit" sense="ruit" word="ruiten"/>
+                      <node begin="25" cat="pp" end="28" id="42" rel="mod">
+                        <node begin="25" end="26" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="43" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+                        <node begin="26" cat="np" end="28" id="44" rel="obj1">
+                          <node begin="26" end="27" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="45" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                          <node begin="27" end="28" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="46" lcat="np" lemma="appartement" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="appartement" sense="appartement" word="appartement"/>
+                        </node>
+                      </node>
+                    </node>
+                    <node begin="28" cat="pp" end="30" id="47" rel="mod">
+                      <node begin="28" end="29" frame="preposition(met,[mee,[en,al]])" id="48" lcat="pp" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" sense="met" vztype="init" word="met"/>
+                      <node begin="29" end="30" frame="noun(both,count,pl)" gen="both" getal="mv" graad="basis" id="49" lcat="np" lemma="steen" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="steen" sense="steen" word="stenen"/>
+                    </node>
+                    <node begin="30" end="31" frame="verb(hebben,past(pl),transitive)" id="50" infl="pl" lcat="ssub" lemma="bekogelen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="bekogel" sc="transitive" sense="bekogel" tense="past" word="bekogelden" wvorm="pv"/>
+                  </node>
+                </node>
+              </node>
+              <node begin="16" cat="np" end="31" id="51" rel="cnj">
+                <node begin="16" buiging="zonder" end="17" frame="determiner(pron)" getal="ev" id="52" infl="pron" lcat="detp" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" sense="zijn" status="vol" vwtype="bez" word="zijn"/>
+                <node begin="17" end="18" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="53" lcat="np" lemma="vrienden" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vriend" sense="vriend" word="vrienden"/>
+                <node begin="19" end="31" id="54" index="2" rel="mod"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="31" end="32" frame="punct(punt)" id="55" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Het onderwerp van de week : een meisje werd tot thuis gevolgd door haar ex-vriend en zijn vrienden , die na haar vlucht de ruiten van het appartement met stenen bekogelden .</sentence>
+  <comments>
+    <comment>Q#DM_20020315_01-127-3-3|Het onderwerp van de week : een meisje werd tot thuis gevolgd door haar ex-vriend en zijn vrienden , die na haar vlucht de ruiten van het appartement met stenen bekogelden .|1|1|-0.00515324144415901</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="12" end="13" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="14" end="15" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="21" id="4" rel="--">
+      <node begin="0" cat="np" end="14" id="5" rel="su">
+        <node begin="0" end="1" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="groep" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="groep" word="groep"/>
+        <node begin="2" cat="np" end="14" id="8" rel="mod">
+          <node begin="2" cat="mwu" end="5" id="9" rel="hd">
+            <node begin="2" end="3" id="10" lemma="non" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="non" spectype="vreemd" word="non"/>
+            <node begin="3" end="4" id="11" lemma="compos" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="compos" spectype="vreemd" word="compos"/>
+            <node begin="4" end="5" id="12" lemma="mentis" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="mentis" spectype="vreemd" word="mentis"/>
+          </node>
+          <node begin="5" cat="rel" end="14" id="13" rel="mod">
+            <node begin="5" end="6" getal="ev" id="14" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="wat"/>
+            <node begin="5" cat="ssub" end="14" id="15" rel="body">
+              <node begin="5" end="6" id="16" index="1" rel="su"/>
+              <node begin="6" cat="pp" end="12" id="17" rel="pc">
+                <node begin="6" end="7" id="18" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+                <node begin="7" cat="np" end="12" id="19" rel="obj1">
+                  <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="20" lemma="nincompoop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="nincompoop" word="nincompoop"/>
+                  <node begin="9" cat="np" end="12" id="21" rel="mod">
+                    <node begin="9" end="10" id="22" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                    <node begin="10" buiging="met-e" end="11" graad="basis" id="23" lemma="sullig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="sullige" word="sullige"/>
+                    <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="24" lemma="figuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="figuur" word="figuur"/>
+                  </node>
+                </node>
+              </node>
+              <node begin="13" end="14" id="25" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="15" end="16" id="26" lemma="vormen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="vorm" word="vormt" wvorm="pv"/>
+      <node begin="17" cat="np" end="20" id="27" rel="obj1">
+        <node begin="17" end="18" id="28" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="18" buiging="zonder" end="19" graad="basis" id="29" lemma="fijn" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="fijn" word="fijn"/>
+        <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="30" lemma="voorbeeld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="voorbeeld" word="voorbeeld"/>
+      </node>
+      <node begin="16" cat="pp" end="21" id="31" rel="pc">
+        <node begin="16" end="17" getal="getal" id="32" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="noun" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="hier" status="vol" vwtype="aanw" word="hier"/>
+        <node begin="20" end="21" id="33" lemma="van" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="van" vztype="fin" word="van"/>
+      </node>
+    </node>
+    <node begin="21" end="22" id="34" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De groep non compos mentis wat tot nincompoop ( een sullige figuur ) werd , vormt hier een fijn voorbeeld van .</sentence>
+</alpino_ds>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="19" id="2" rel="--">
+      <node begin="7" end="8" id="3" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+      <node begin="9" cat="np" end="11" id="4" index="1" rel="su">
+        <node begin="9" end="10" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="6" lemma="icoon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="icoon" word="icoon"/>
+      </node>
+      <node begin="0" cat="inf" end="19" id="7" rel="vc">
+        <node begin="9" end="11" id="8" index="1" rel="su"/>
+        <node begin="11" buiging="zonder" end="12" id="9" lemma="moeten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="moet" word="moeten" wvorm="inf"/>
+        <node begin="0" cat="inf" end="19" id="10" rel="vc">
+          <node begin="0" cat="cp" end="6" id="11" rel="mod">
+            <node begin="0" conjtype="onder" end="1" id="12" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+            <node begin="1" cat="ssub" end="6" id="13" rel="body">
+              <node begin="1" end="2" genus="onz" getal="ev" id="14" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+              <node begin="2" cat="np" end="5" id="15" rel="predc">
+                <node begin="2" end="3" id="16" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="3" end="4" genus="genus" getal="ev" graad="basis" id="17" lemma="Android" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mod" root="Android" word="Android"/>
+                <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="18" lemma="tablet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tablet" word="tablet"/>
+              </node>
+              <node begin="5" end="6" id="19" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+            </node>
+          </node>
+          <node begin="8" end="9" getal="getal" id="20" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="9" end="11" id="21" index="1" rel="su"/>
+          <node begin="12" buiging="zonder" end="13" id="22" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
+          <node begin="13" cat="pp" end="19" id="23" rel="mod">
+            <node begin="13" end="14" id="24" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="14" cat="np" end="19" id="25" rel="obj1">
+              <node begin="14" end="15" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="27" lemma="vorm" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vorm" word="vorm"/>
+              <node begin="16" cat="pp" end="19" id="28" rel="mod">
+                <node begin="16" end="17" id="29" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="17" cat="np" end="19" id="30" rel="obj1">
+                  <node begin="17" end="18" id="31" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="32" lemma="wereld_bol" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wereld_bol" word="wereldbol"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="33" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als het een Android tablet is , zou er een icoon moeten zijn in de vorm van een wereldbol .</sentence>
+</alpino_ds>

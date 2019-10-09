@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" frame="complementizer(root)" id="2" lcat="du" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" sc="root" sense="maar" word="Maar"/>
+      <node begin="1" cat="smain" end="7" id="3" rel="nucl">
+        <node begin="1" end="2" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" genus="onz" getal="ev" id="4" infl="het" lcat="np" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" sense="het" status="red" vwtype="pers" wh="nwh" word="het"/>
+        <node begin="2" end="3" frame="verb(hebben,sg3,fixed([{[[te,werk],acc]}],norm_passive))" id="5" infl="sg3" lcat="smain" lemma="stellen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="stel" sc="fixed([{[[te,werk],acc]}],norm_passive)" sense="te-werk-stel" tense="present" word="stelt" wvorm="pv"/>
+        <node begin="3" cat="np" end="5" id="6" rel="obj1">
+          <node begin="3" end="4" frame="noun(het,count,pl,measure)" gen="het" getal="mv" graad="basis" id="7" lcat="np" lemma="tientallen" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="tientallen" sc="measure" sense="tientallen-MEAS" word="tientallen"/>
+          <node begin="4" end="5" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="8" lcat="np" lemma="streekgenoot" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="streek_genoot" sense="streek_genoot" word="streekgenoten"/>
+        </node>
+        <node begin="5" cat="mwu" end="7" id="9" rel="svp">
+          <node begin="5" end="6" frame="fixed_part([te,werk])" id="10" lcat="fixed" lemma="te" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="te" sense="te" vztype="init" word="te"/>
+          <node begin="6" end="7" frame="fixed_part([te,werk])" genus="onz" getal="ev" graad="basis" id="11" lcat="fixed" lemma="werk" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="werk" sense="werk" word="werk"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" frame="punct(punt)" id="12" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+    <node begin="8" end="9" frame="punct(aanhaal_both)" id="13" lcat="punct" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" sense="&quot;" special="aanhaal_both" word="&quot;"/>
+  </node>
+  <sentence>Maar het stelt tientallen streekgenoten te werk . &quot;</sentence>
+  <comments>
+    <comment>Q#DS_20070106_01-22-20-4|Maar het stelt tientallen streekgenoten te werk . &quot;|1|1|-0.09070468459312883</comment>
+  </comments>
+</alpino_ds>

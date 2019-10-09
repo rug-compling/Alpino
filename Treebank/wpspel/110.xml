@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="whq" end="8" id="2" rel="--">
+      <node begin="0" end="1" getal="ev" id="3" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" root="wat" status="vol" vwtype="vb" word="Wat"/>
+      <node begin="0" cat="sv1" end="8" id="4" rel="body">
+        <node begin="0" end="1" id="5" index="1" rel="obj1"/>
+        <node begin="1" end="2" id="6" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb_gemeen" word="hebben" wvorm="pv"/>
+        <node begin="2" cat="conj" end="7" id="7" rel="su">
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="8" lemma="maïs" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="maïs" word="maïs"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="suikerriet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="suikerriet" word="suikerriet"/>
+          <node begin="5" conjtype="neven" end="6" id="10" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="bamboe" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="bamboe" word="bamboe"/>
+        </node>
+        <node begin="7" buiging="zonder" end="8" graad="basis" id="12" lemma="gemeen" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="gemeen" word="gemeen"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wat hebben maïs , suikerriet en bamboe gemeen ?</sentence>
+</alpino_ds>

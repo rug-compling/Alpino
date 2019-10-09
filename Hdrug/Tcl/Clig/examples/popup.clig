@@ -1,0 +1,13 @@
+#
+# example: popup
+# a simple popup menu for demonstration
+#
+# The example displays text which opens a popup-menu with 3 entries and a 
+# separator
+#
+
+clig {active {bigbox {color red {plain-text "CLICK ME!"}}}
+             {popup <1> {{command -label "TEST1" -command "puts TEST1"}
+                         {command -label "TEST2" -command "puts TEST2"}
+                         {separator}
+                         {command -label "TEST3" -command "puts TEST3"}}}}

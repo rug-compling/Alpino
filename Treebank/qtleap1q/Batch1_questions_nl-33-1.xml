@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+      <node begin="2" cat="conj" end="7" id="4" rel="obj1">
+        <node begin="2" cat="np" end="4" id="5" rel="cnj">
+          <node begin="2" buiging="zonder" end="3" id="6" index="1" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="draadloos" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="draadloos" word="draadloos"/>
+        </node>
+        <node begin="4" conjtype="neven" end="5" id="8" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+        <node begin="2" cat="np" end="7" id="9" rel="cnj">
+          <node begin="2" end="3" id="10" index="1" rel="det"/>
+          <node begin="5" cat="mwu" end="7" id="11" rel="hd">
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="kabel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="kabel" word="kabel"/>
+            <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="13" lemma="internet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="internet" word="internet"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ik heb geen draadloos of kabel internet .</sentence>
+</alpino_ds>

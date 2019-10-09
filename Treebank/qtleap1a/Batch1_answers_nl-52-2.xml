@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="conj" end="9" id="1" rel="--">
+      <node begin="0" cat="sv1" end="4" id="2" rel="cnj">
+        <node begin="0" end="1" id="3" lemma="gaan" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ga" word="Ga" wvorm="pv"/>
+        <node begin="1" cat="pp" end="4" id="4" rel="ld">
+          <node begin="1" end="2" id="5" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+          <node begin="2" cat="mwu" end="4" id="6" rel="obj1">
+            <node begin="2" end="3" id="7" lemma="Email" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Email" spectype="deeleigen" word="Email"/>
+            <node begin="3" end="4" id="8" lemma="Login" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Login" spectype="deeleigen" word="Login"/>
+          </node>
+        </node>
+      </node>
+      <node begin="4" conjtype="neven" end="5" id="9" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="5" cat="sv1" end="9" id="10" rel="cnj">
+        <node begin="5" end="6" id="11" lemma="selecteren" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="selecteer" word="selecteer" wvorm="pv"/>
+        <node begin="6" end="7" id="12" lemma="nogmaals" pos="adv" postag="BW()" pt="bw" rel="mod" root="nogmaals" word="nogmaals"/>
+        <node begin="7" cat="mwu" end="9" id="13" rel="obj1">
+          <node begin="7" end="8" id="14" lemma="Change" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Change" spectype="deeleigen" word="Change"/>
+          <node begin="8" end="9" id="15" lemma="Password" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Password" spectype="deeleigen" word="Password"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Ga naar Email Login en selecteer nogmaals Change Password</sentence>
+</alpino_ds>

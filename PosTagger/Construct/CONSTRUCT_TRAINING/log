@@ -1,0 +1,1360 @@
+%%%cov|cov|total|timeo|memout|ok	
+
+AD 1994
+86.71	620139	24044	0      	537740
+90.58	620139	38316	1	561695	2005/03/29
+93.32	620142	21398	0	578706	new cluster summer 2005
+
+-------------------------------------------------------
+
+AD 1999
+
+96.99		585847	19009	4	568222	2004/07/20
+92.52		585847	25089	5	542043	2004/12/10
+93.17		601732	23017	3	560605	2005/10/29
+91.23		658213	40239	3	600509	2006/05/22
+91.13		658140	41014	4	599787	2006/05/27
+90.97		657876	44060	2	598484	2006/07
+89.72	97.72	658213	53806	9	590602	2006/11/06
+
+nov2007
+total:    662087
+ok:       588740
+coverage: 0.889218486392272
+coverage: 0.977489548363103 (ignoring time_out)
+time_out:   59789
+failure:   12674
+start_hook(time_out):   255
+
+maa2008
+total:    662077
+ok:       637016
+coverage: 0.962147907267584
+coverage: 0.979218643116819 (ignoring time_out)
+time_out:   11542
+failure:   12911
+out_of_memory:   26
+
+dec2008
+total:    662021
+ok:       643115
+coverage: 0.971441993531927
+coverage: 0.983410401795818 (ignoring time_out)
+time_out:   8057
+failure:   10297
+out_of_memory:   9
+
+nov2012
+total:    662018
+ok:       649563
+coverage: 0.981186312154654
+coverage: 0.986000006071774 (ignoring time_out)
+time_out:   3232
+failure:   8899
+
+nov2012
+total:    662018
+ok:       649557
+coverage: 0.981177248956977
+coverage: 0.986034303999806 (ignoring time_out)
+time_out:   3261
+failure:   8875
+
+
+
+-------------------------------------------------------
+
+AD 2000
+90.70	667423	28410	0	605344
+92.62	667423	29268	2	618136	2004/12/28	2x segm viol
+
+maart2007
+total:    766249
+ok:       671872
+coverage: 0.876832465686742
+coverage: 0.976937270714071 (ignoring time_out)
+failure:   15143
+time_out:   78516
+
+okt2007
+total:    766245
+ok:       690185
+coverage: 0.900736709538072
+coverage: 0.977992563580817 (ignoring time_out)
+failure:   14773
+time_out:   60529
+
+maa2008
+total:    766249
+ok:       722664
+coverage: 0.943119012227096
+coverage: 0.979130620932788 (ignoring time_out)
+failure:   14640
+time_out:   28182
+out_of_memory:   89
+
+nov2008 (some jobs over 24 hour)
+total:    766138
+ok:       745344
+coverage: 0.972858675591082
+coverage: 0.983478587875149 (ignoring time_out)
+failure:   11890
+time_out:   8273
+out_of_memory:   13
+
+-------------------------------------------------------
+
+AD 2001 t/m ad20010214
+
+92.99	97895	4223	0	91029	march 2006
+
+maart2007:
+total:    731533
+ok:       635523
+coverage: 0.868755066415322
+coverage: 0.975666783855026 (ignoring time_out)
+failure:   14979
+start_hook(time_out):   8
+time_out:   80160
+
+okt2007:
+
+total:    731533
+ok:       656634
+coverage: 0.897613641489858
+coverage: 0.975988014072763 (ignoring time_out)
+failure:   15241
+time_out:   58744
+
+feb2008
+total:    731532
+ok:       674573
+coverage: 0.92213737744897
+coverage: 0.978114075343608 (ignoring time_out)
+failure:   14263
+time_out:   41865
+out_of_memory:   3
+
+okt2008
+total:    728703
+ok:       708238
+coverage: 0.971915855979734
+coverage: 0.982134759631185 (ignoring time_out)
+time_out:   7582
+failure:   12095
+out_of_memory:   17
+
+sep2017
+total:    731194
+ok:       718100
+coverage: 0.982092303820874
+time_out/time_out:   37
+time_out/failure:   5827
+failure:   6804
+
+
+-------------------------------------------------------
+
+AD 2002
+93.77	513074	16134	1	481100	new cluster summer 2005
+
+new cluster summer 2010
+total:    585609
+ok:       549084
+coverage: 0.937629032340692
+coverage: 0.984964105434233 (ignoring time_out)
+failure:   7975
+time_out:   28143
+
+september 2017
+
+total:    584893
+ok:       574128
+coverage: 0.981594924199811
+failure:   5878
+time_out/failure:   4435
+time_out/time_out:   32
+
+-------------------------------------------------------
+
+AD 2003
+
+april 2007: ??
+total:    12842943
+ok:       11139614
+coverage: 0.867372377188001
+coverage: 0.956539980549107 (ignoring time_out)
+time_out:   1197205
+failure:   473070
+start_hook(time_out):   31
+start_hook(out_of_memory):   29
+out_of_memory:   77
+
+
+maa2008
+total:    401078
+ok:       386979
+coverage: 0.964847236697101
+coverage: 0.972827234607379 (ignoring time_out)
+time_out:   3290
+failure:   9857
+out_of_memory:   30
+
+dec2008
+
+total:    402614
+ok:       388864
+coverage: 0.965848182129782
+coverage: 0.977457821391944 (ignoring time_out)
+time_out:   4782
+failure:   8054
+out_of_memory:   6
+
+
+-------------------------------------------------------
+
+AD 2004
+
+92.46	434289	14775	4	401536	december 1 2005
+
+nov2011
+
+total:    476170
+ok:       449505
+coverage: 0.944001092046958
+coverage: 0.981098512544607 (ignoring time_out)
+time_out:   18005
+failure:   8147
+
+mar2016
+total:    476179
+ok:       464900
+coverage: 0.976313529156053
+failure:   6780
+time_out/failure:   3519
+time_out/time_out:   29
+
+
+-------------------------------------------------------
+
+AD2005
+
+september 2017
+total:    408649
+ok:       400303
+coverage: 0.979576604861385
+time_out/failure:   3219
+time_out/time_out:   33
+failure:   4346
+
+
+-------------------------------------------------------
+
+NRC 1994
+
+92.38	631636	23299	0	583501
+92.01	631636	30326	1	581138	2004/12/08
+93.08	631589	24154	2	587871	new cluster summer 2005
+91.63	722918	38030	6	662398	2005/12/14 (MAX=22)
+
+-------------------------------------------------------
+
+NRC 1995
+
+84.09	640120	59022	2	538297	2003/08/26
+91.72	640120	33021	2	587132	2005/01/01
+93.11	640054	24299	2	595964	new cluster summer 2005
+
+-------------------------------------------------------
+
+NRC 1998
+
+91.32 	2985	110	0	2726	march 2006
+
+-------------------------------------------------------
+
+NRC 1999
+
+92.75	310804	12312	2	288266	28/11/05
+
+nov2007
+total:    350740
+ok:       311279
+coverage: 0.887492159434339
+coverage: 0.973002288100626 (ignoring time_out)
+failure:   8170
+time_out:   30824
+start_hook(time_out):   111
+
+apr2008
+total:    350737
+ok:       339356
+coverage: 0.967551185075997
+coverage: 0.976490967582282 (ignoring time_out)
+time_out:   3211
+failure:   7827
+out_of_memory:   29
+
+jan2009
+total:    350135
+ok:       338869
+coverage: 0.967823839376241
+coverage: 0.980725206856733 (ignoring time_out)
+failure:   6354
+time_out:   4606
+out_of_memory:   8
+
+nov2011
+total:    346466
+ok:       326225
+coverage: 0.941578683045378
+coverage: 0.986247407595518 (ignoring time_out)
+failure:   4370
+time_out:   15692
+
+
+-------------------------------------------------------
+
+NRC 2000
+
+92.89	770886	30123	5	716043	29/11/05
+
+september 2015, peregrine:
+
+total:    860199
+ok:       843010
+coverage: 0.980017414574999
+coverage: 0.980058430785793 (ignoring time_out)
+time_out:   36
+failure:   16616
+
+november 2018, peregrine
+
+total:    923119
+ok:       904460
+coverage: 0.979787004709035
+failure:   9536
+time_out/time_out:   6782
+time_out/failure:   1858
+
+train_options=user_max=90000 use_guides=off max_sentence_length=24
+
+
+-------------------------------------------------------
+
+NRC 2001
+
+93.24	708921	25653	3	660996	new cluster summer 2005
+
+jul2008
+total:    821493
+ok:       794856
+coverage: 0.967574891082456
+coverage: 0.977669428826916 (ignoring time_out)
+time_out:   8482
+failure:   17523
+out_of_memory:   14
+
+jan2009
+total:    820162
+ok:       793380
+coverage: 0.967345475649933
+coverage: 0.981019623360083 (ignoring time_out)
+failure:   14764
+time_out:   11432
+out_of_memory:   6
+
+
+-------------------------------------------------------
+
+NRC 2002
+
+90.02	        667604	49542	5		september 2006
+89.18   97.41   667488  56400   9       595276  21nov 2006
+
+okt2007
+total:    671358
+ok:       596914
+coverage: 0.889114302652236
+coverage: 0.974588475014613 (ignoring time_out)
+failure:   15113
+time_out:   58880
+
+maa2008
+total:    673997
+ok:       631423
+coverage: 0.936833546736855
+coverage: 0.976375481095591 (ignoring time_out)
+failure:   14847
+time_out:   27296
+out_of_memory:   39
+
+nov2008 
+some jobs over 24 hours
+total:    663825
+ok:       643354
+coverage: 0.969162053251987
+coverage: 0.980794326414128 (ignoring time_out)
+time_out:   7873
+failure:   12214
+out_of_memory:   4
+
+
+dec2012
+total:    673775
+ok:       659161
+coverage: 0.978310266780453
+coverage: 0.983995688792952 (ignoring time_out)
+failure:   10476
+time_out:   3893
+
+mar2016
+
+total:    673774
+ok:       660244
+coverage: 0.979919082659764
+time_out/failure:   5836
+time_out/time_out:   37
+failure:   7394
+
+-------------------------------------------------------
+
+NRC 2003
+
+90.62	373233	25194	3	338225	june 2006
+
+apr2008
+total:    374218
+ok:       362526
+coverage: 0.968756179553095
+coverage: 0.978406431919941 (ignoring time_out)
+time_out:   3691
+failure:   7770
+out_of_memory:   3
+
+jan2009
+total:    375479
+ok:       363673
+coverage: 0.968557495891914
+coverage: 0.98167953355288 (ignoring time_out)
+time_out:   5019
+failure:   6560
+out_of_memory:   3
+
+
+
+-------------------------------------------------------
+
+NRC 2004
+
+93.20	436477	15721	0	406785	2005/09/24 robustness without skips
+
+total:    505099
+ok:       433325
+coverage: 0.857901124334041
+coverage: 0.974261027535394 (ignoring time_out)
+failure:   10811
+start_hook(out_of_memory):   29
+start_hook(time_out):   8
+time_out:   60326
+
+sep2007:
+total:    505099
+ok:       449477
+coverage: 0.889879013817093
+coverage: 0.975491025891443 (ignoring time_out)
+failure:   10670
+time_out:   44329
+
+feb2008:
+total:    505076
+ok:       453284
+coverage: 0.897457016369814
+coverage: 0.977128395711089 (ignoring time_out)
+failure:   10167
+time_out:   41182
+
+okt2008:
+total:    517627
+ok:       501835
+coverage: 0.969491545070099
+coverage: 0.981229286224056 (ignoring time_out)
+time_out:   6192
+failure:   9122
+out_of_memory:   18
+
+
+-------------------------------------------------------
+
+PAROOL 1998
+
+90.12	6530	272	0	5885	march 2006
+
+-------------------------------------------------------
+
+PAROOL 1998+1999
+
+april 2007
+total:    582745
+ok:       528195
+coverage: 0.906391303228685
+coverage: 0.974382104552448 (ignoring time_out)
+failure:   13250
+time_out:   40663
+start_hook(time_out):   1
+
+
+
+-------------------------------------------------------
+
+PAROOL 2000
+
+90.99	665265	39903	0	605340	may 2006
+90.93	665052	42588	3	604754	july 2006
+
+sep2007:
+total:    670750
+ok:       598128
+coverage: 0.891730152814014
+coverage: 0.972948705018886 (ignoring time_out)
+failure:   15751
+time_out:   55992
+
+feb2008:
+total:    670748
+ok:       604301
+coverage: 0.900935969991711
+coverage: 0.974462135847182 (ignoring time_out)
+time_out:   50610
+failure:   14982
+start_hook(time_out):   11
+
+aug2008:
+total:    670784
+ok:       649636
+coverage: 0.968472712527431
+coverage: 0.977860867261539 (ignoring time_out)
+time_out:   6440
+failure:   13853
+out_of_memory:   15
+
+
+
+-------------------------------------------------------
+
+PAROOL 2001
+
+85.68	567164	41257	1	485935 	2003/06/14
+93.68	567164	17704	1	531310	new cluster summer 2005
+
+jan2008:
+total:    667802
+ok:       594082
+coverage: 0.889607997580121
+coverage: 0.977123016623601 (ignoring time_out)
+failure:   13437
+time_out:   59811
+
+feb2009:
+total:    666802
+ok:       647804
+coverage: 0.971508783716906
+coverage: 0.983131462288992 (ignoring time_out)
+time_out:   7883
+failure:   10308
+out_of_memory:   5
+
+
+
+-------------------------------------------------------
+
+PAROOL 2002
+
+91.18	475733	25640	1	433754	2005/03/21
+93.67	475733	13840	1	445638	new cluster summer 2005
+91.48	512800	29564	4	469102	july 2006
+
+oktober 2011:
+total:    570280
+ok:       547414
+coverage: 0.959903906852774
+coverage: 0.985708137736314 (ignoring time_out)
+failure:   7406
+time_out:   14929
+
+
+-------------------------------------------------------
+
+PAROOL 2003
+
+92.73	182851	5543	0	169572	2005/09/29 robustness without skips
+
+nov2007
+total:    217187
+ok:       195564
+coverage: 0.900440634107935
+coverage: 0.96894446866701 (ignoring time_out)
+failure:   5318
+time_out:   15355
+start_hook(time_out):   62
+
+maa2008
+total:    215805
+ok:       208298
+coverage: 0.96521396631218
+coverage: 0.972260211630827 (ignoring time_out)
+failure:   5086
+time_out:   1564
+out_of_memory:   6
+
+dec2008
+
+total:    221648
+ok:       214252
+coverage: 0.966631776510503
+coverage: 0.976999124471035 (ignoring time_out)
+failure:   4208
+time_out:   2352
+out_of_memory:   3
+
+mar2016
+total:    220009
+ok:       215278
+coverage: 0.978496334240872
+time_out/time_out:   3
+failure:   2629
+time_out/failure:   1657
+
+
+-------------------------------------------------------
+
+PAROOL 2004
+
+89.68	285561	18554	0	256082	2006/09/18
+
+sep2007
+total:    303368
+ok:       273464
+coverage: 0.901426650141083
+coverage: 0.965355587091126 (ignoring time_out)
+failure:   7910
+time_out:   20090
+
+feb 2008
+total:    303366
+ok:       275580
+coverage: 0.908407665987619
+coverage: 0.966943975635173 (ignoring time_out)
+failure:   7518
+time_out:   18365
+
+okt 2008
+total:    303256
+ok:       292131
+coverage: 0.96331482311974
+coverage: 0.971764925038005 (ignoring time_out)
+failure:   6631
+time_out:   2637
+out_of_memory:   3
+
+
+-------------------------------------------------------
+
+TROUW 1999
+
+92.14	422132	19091	0	388961
+92.49	422132	18741	4	390414	2004/12/22
+87.18   97.71   496898  433200  0       53571   jan 2008
+
+jul2008:
+total:    492065
+ok:       477319
+coverage: 0.970032414416795
+coverage: 0.980171466707737 (ignoring time_out)
+time_out:   5090
+failure:   9216
+out_of_memory:   6
+
+oktober2009:
+total:    492276
+ok:       474265
+coverage: 0.963412800949061
+coverage: 0.983374906434604 (ignoring time_out)
+time_out:   9993
+failure:   7590
+out_of_memory:   68
+
+
+-------------------------------------------------------
+
+TROUW 2000
+
+86.07	604842	54844	0	520595	2003/10/02
+93.49	604842	20799	0	565455	new cluster summer 2005
+
+feb 2011
+total:    696237
+ok:       663198
+coverage: 0.952546331206184
+coverage: 0.985797164784104 (ignoring time_out)
+failure:   9182
+time_out:   23484
+start_hook(time_out):   1
+out_of_memory:   1
+
+mar 2016
+total:    691664
+ok:       678343
+coverage: 0.980740648638645
+failure:   6664
+time_out/failure:   6198
+time_out/time_out:   35
+
+
+-------------------------------------------------------
+
+TROUW 2002
+
+92.87	447555	17619	1	415658	2005/11/25
+91.08	494887	29687	4	450766	april 2006
+
+maart2007:
+total:    514394
+ok:       448817
+coverage: 0.872516009129189
+coverage: 0.974248936354954 (ignoring time_out)
+time_out:   53714
+failure:   11388
+
+okt2007:
+total:    514396
+ok:       459234
+coverage: 0.892763551816111
+coverage: 0.975447808272425 (ignoring time_out)
+failure:   11061
+time_out:   43603
+
+feb2008:
+total:    515049
+ok:       472471
+coverage: 0.917332137330623
+coverage: 0.976898297094557 (ignoring time_out)
+failure:   10698
+time_out:   31405
+out_of_memory:   4
+
+okt2008:
+total:    514898
+ok:       499471
+coverage: 0.970038726116629
+coverage: 0.981518090851209 (ignoring time_out)
+failure:   8955
+time_out:   6022
+out_of_memory:   6
+
+total:    514796
+ok:       504058
+coverage: 0.979141252068781
+coverage: 0.984953825831741 (ignoring time_out)
+failure:   7410
+time_out:   3038
+
+
+-------------------------------------------------------
+
+TROUW 2003
+
+91.24	336945	18553	5	307416	2005/12/3
+89.44	335964	27660	3	300486	2006/09/18
+
+sep2007:
+total:    349518
+ok:       311678
+coverage: 0.891736620145457
+coverage: 0.976872471063164 (ignoring time_out)
+failure:   7077
+time_out:   30461
+
+feb2008:
+total:    349517
+ok:       314450
+coverage: 0.899670116188912
+coverage: 0.977624538702366 (ignoring time_out)
+failure:   6897
+time_out:   27870
+start_hook(time_out):   2
+
+okt2008
+total:    352059
+ok:       341783
+coverage: 0.970811710537154
+coverage: 0.982163280554039 (ignoring time_out)
+failure:   5916
+time_out:   4069
+out_of_memory:   4
+
+
+-------------------------------------------------------
+
+TROUW 2004
+
+92.86		302540	11088	1	280937	2005/09/30 robustness no skips
+90.20		340021	22554	0	306723  may 2006
+90.04		339844	24166	1	306011	july 2006
+88.80	97.14	340021	29202	6	301933	nov 2006
+
+sep2007:
+total:    351933
+ok:       312095
+coverage: 0.886802317486567
+coverage: 0.972391854335174 (ignoring time_out)
+failure:   8399
+time_out:   30977
+
+feb2008:
+total:    351933
+ok:       315101
+coverage: 0.895343715991396
+coverage: 0.973775213466548 (ignoring time_out)
+failure:   8043
+time_out:   28346
+start_hook(time_out):   4
+
+aug2008:
+total:    353874
+ok:       341987
+coverage: 0.966408947817585
+coverage: 0.976840571844785 (ignoring time_out)
+failure:   7644
+time_out:   3779
+out_of_memory:   6
+
+okt2009
+total:    353799
+ok:       339798
+coverage: 0.960426682947097
+coverage: 0.981034567380842 (ignoring time_out)
+failure:   6112
+time_out:   7432
+out_of_memory:   63
+
+
+
+-------------------------------------------------------
+
+VOLKSKRANT 1997
+
+87.66		644779	21591	6	565213
+96.01		644779	25732	4	619066	2004/11/29
+93.63		644779	22176	3	603710	new cluster summer 2005
+92.31		667258	34523	6	722865	december 2005; up to 22 words
+92.54		708000	33549	5	655163	march 2006
+90.84		722838	46979	3	656604	may 2006
+90.67		719334	50124	2	652228	july 2006
+89.28	97.63	722838	61769	6	645387	okt 2006
+
+sep2007:
+total:    718137
+ok:       635412
+coverage: 0.884806102456774
+coverage: 0.976999281948303 (ignoring time_out)
+failure:   14608
+time_out:   67766
+
+feb2008:
+total:    722465
+ok:       647727
+coverage: 0.896551390032735
+coverage: 0.978228267911916 (ignoring time_out)
+failure:   14140
+time_out:   60322
+
+aug2008:
+total:    722465
+ok:       701330
+coverage: 0.970745987694906
+coverage: 0.981203612376096 (ignoring time_out)
+time_out:   7700
+failure:   13114
+out_of_memory:   20
+
+sep2017:
+total:    721131
+ok:       707497
+coverage: 0.981093587711525
+time_out/time_out:   41
+time_out/failure:   6819
+failure:   6590
+
+
+-------------------------------------------------------
+
+VOLKSKRANT 1999
+92.28	880381	36247	5	812384	januari 2006; up to 22 words
+
+maa2008:
+
+total:    915209
+ok:       859977
+coverage: 0.939650943117911
+coverage: 0.973682690968625 (ignoring time_out)
+failure:   21857
+time_out:   31988
+out_of_memory:   67
+
+nov2008 some parts timed out 
+
+total:    911236
+ok:       882474
+coverage: 0.968436277759
+coverage: 0.978593401036619 (ignoring time_out)
+time_out:   9458
+failure:   17822
+out_of_memory:   13
+
+nov2012
+
+total:    914763
+ok:       894341
+coverage: 0.977675091799734
+coverage: 0.982676762182908 (ignoring time_out)
+time_out:   4656
+failure:   14520
+
+
+-------------------------------------------------------
+
+VOLKSKRANT 2000
+
+feb2008:
+total:    921427
+ok:       832834
+coverage: 0.903852394166874
+coverage: 0.975601584702142 (ignoring time_out)
+failure:   20179
+time_out:   67765
+start_hook(time_out):   22
+
+aug2008:
+total:    921018
+ok:       893069
+coverage: 0.969654230427636
+coverage: 0.978722914593571 (ignoring time_out)
+failure:   18695
+time_out:   8534
+out_of_memory:   25
+
+okt2009:
+total:    836362
+ok:       807157
+coverage: 0.965080909940911
+coverage: 0.983723577473578 (ignoring time_out)
+failure:   12696
+time_out:   15850
+out_of_memory:   104
+
+nov2011
+total:    920627
+ok:       871371
+coverage: 0.946497332796018
+coverage: 0.986875947807316 (ignoring time_out)
+failure:   11002
+time_out:   37668
+
+
+-------------------------------------------------------
+
+VOLKSKRANT2001
+
+94.13		790505	19726	0	744074	2004/02/18
+96.40		790505	28449	2	762071	2004/11/20
+93.20		790505	24819	2	736763	new cluster summer 2005
+90.57		907893	55629	7	823734	june 2006
+90.78		907241	57659	4	823591	aug  2006
+89.67	97.16	907173	69932	7	813464	okt 2006
+
+okt2007
+total:    916956
+ok:       821418
+coverage: 0.895809613547433
+coverage: 0.972281010752383 (ignoring time_out)
+failure:   22476
+time_out:   72120
+out_of_memory:   1
+
+feb2008
+total:    918136
+ok:       845907
+coverage: 0.921330826805615
+coverage: 0.974781946344223 (ignoring time_out)
+failure:   21148
+time_out:   50345
+out_of_memory:   8
+
+nov2008
+(some jobs timed out)
+cat *.log | /storage/vannoord/z64/Alpino/bin/q  -c
+total:    911135
+ok:       883191
+coverage: 0.969330560235311
+coverage: 0.979662261543206 (ignoring time_out)
+failure:   17513
+time_out:   9609
+out_of_memory:   8
+
+mar2016
+total:    917436
+ok:       899867
+coverage: 0.980849890346575
+time_out/failure:   7253
+failure:   9692
+time_out/time_out:   37
+
+
+-------------------------------------------------------
+
+
+VOLKSKRANT2002
+
+92.82	624800	18149	2	579926	2004/05/12
+92.38	624800	24649	0	577218	2004/12/15
+
+jan2008:
+total:    724523
+ok:       648555
+coverage: 0.895147566053804
+coverage: 0.97370835066142 (ignoring time_out)
+failure:   16998
+time_out:   58456
+
+jul2008:
+total:    722184
+ok:       699872
+coverage: 0.969104826470816
+coverage: 0.977731583153118 (ignoring time_out)
+time_out:   6372
+failure:   15371
+out_of_memory:   7
+
+
+sep 2009
+total:    681349
+ok:       656710
+coverage: 0.963837915664366
+coverage: 0.981470853733627 (ignoring time_out)
+failure:   11852
+time_out:   12241
+out_of_memory:   77
+
+
+
+-------------------------------------------------------
+
+
+VOLKSKRANT2003
+
+92.89	364055	12182	2	338191	2005/09/24 robustness without skips
+92.32	409307	17393	2	377888	march 2006
+
+-------------------------------------------------------
+
+VOLKSKRANT2004
+
+92.64	414728	14823	0	384216	2005/10/30 
+89.36	446273	34729	1	398800	2006/09/18
+
+nov2007:
+total:    453212
+ok:       405026
+coverage: 0.89367889641051
+coverage: 0.970173278591926 (ignoring time_out)
+time_out:   35734
+failure:   12081
+
+maa2008
+
+total:     453199
+ok:        437237
+coverage:  0.964779
+coverage:  0.972937 (ignoring time_out)
+failure:   11760
+time_out:  3800
+out_of_memory: 17
+
+dec2008
+
+total:    454490
+ok:       439277
+coverage: 0.966527316332593
+coverage: 0.977267822778896 (ignoring time_out)
+failure:   9794
+time_out:   4995
+out_of_memory:   2
+
+-------------------------------------------------------
+
+VOLKSKRANT 2005
+jul2008
+total:    528653
+ok:       509064
+coverage: 0.962945448148407
+coverage: 0.971110704147972 (ignoring time_out)
+time_out:   4445
+failure:   14266
+out_of_memory:   8
+
+jan2009
+total:    528416
+ok:       509270
+coverage: 0.963767183431236
+coverage: 0.97477643708082 (ignoring time_out)
+time_out:   5968
+failure:   12264
+out_of_memory:   6
+
+
+
+-------------------------------------------------------
+
+CGN
+
+79.63	930360	16352	0	740843	2006/08
+
+-------------------------------------------------------
+
+CLEF 
+
+91.85	2895188	149139	17	2659339	march 2006
+90.31	2898637	196705	12	2617825	may 2006
+90.08	2916242	210935	8	2626990	july 2006
+88.83	97.38	2898596	254384	7	2574939	sept 2006
+88.26   97.33   3012514 2658836                 sept 2007
+89.16   97.44   3012514 2686098 0       256000  jan 2008
+
+feb2008:
+total:    3012514
+ok:       2686098
+coverage: 0.891646644629701
+coverage: 0.974454691686674 (ignoring time_out)
+failure:   66049
+time_out:   256000
+
+jul2008:
+total:    3004353
+ok:       2911504
+coverage: 0.96909517623262
+coverage: 0.979746878039096 (ignoring time_out)
+
+dec2008
+total:    2367121
+ok:       2294815
+coverage: 0.969454032979303
+coverage: 0.982015051931174 (ignoring time_out)
+failure:   38538
+time_out:   30278
+out_of_memory:   24
+
+mar2016
+total:    3029291
+ok:       2971234
+coverage: 0.980834789394614
+time_out/time_out:   152
+failure:   28247
+time_out/failure:   27588
+
+feb2019
+total:    3259845
+ok:       3194243
+coverage: 0.97987573028779
+failure:   28509
+time_out/time_out:   27387
+time_out/failure:   7881
+
+
+-------------------------------------------------------
+
+WPSPEL
+
+88.09	2898	229	0	2553	sept 2006
+
+april 2007
+total:    2898
+ok:       2672
+coverage: 0.922015182884748
+coverage: 0.960805465659835 (ignoring time_out)
+time_out:   117
+failure:   109
+
+
+-------------------------------------------------------
+
+CLEF200[3456]
+
+april 2007
+total:    1594
+ok:       1588
+coverage: 0.996235884567127
+coverage: 0.999370673379484 (ignoring time_out)
+failure:   1
+time_out:   5
+
+jan2008:
+CLEF200[34567] qa_extra wpspel
+total:    4691
+ok:       4242
+coverage: 0.904284800682157
+coverage: 0.975845410628019 (ignoring time_out)
+time_out:   344
+failure:   105
+
+------------------------------------------------------------
+
+WIKIPEDIA
+
+apr2008:
+total:    826454
+ok:       798928
+coverage: 0.966693851079431
+coverage: 0.971364653243848 (ignoring time_out)
+time_out:   3974
+failure:   15855
+out_of_memory:   4
+
+-------------------------------------------------------------
+
+MEDIARGUS 
+DS 2007
+
+dec2008
+total:    589851
+ok:       570437
+coverage: 0.967086603226917
+coverage: 0.975901718153092 (ignoring time_out)
+failure:   11153
+time_out:   5328
+start_hook(time_out):   2
+out_of_memory:   5
+
+-------------------------------------------------------------
+
+MEDIARGUS
+DM 2006
+
+dec2008
+total:    1045596
+ok:       1004874
+coverage: 0.961053791330495
+coverage: 0.970844914888252 (ignoring time_out)
+time_out:   10545
+failure:   24919
+out_of_memory:   5
+
+---------------------------------------------------------------
+
+SONAR WRPEA
+
+total:    1467563
+ok:       1283686
+coverage: 0.874705889968608
+coverage: 0.884679583575118 (ignoring time_out)
+time_out:   16545
+failure:   139554
+start_hook(time_out):   25
+start_hook(out_of_memory):   225
+out_of_memory:   176
+
+SONAR WRPEJ
+
+total:    1034553
+ok:       967548
+coverage: 0.935232897686247
+coverage: 0.947924075783138 (ignoring time_out)
+time_out:   13851
+failure:   46889
+out_of_memory:   96
+
+SONAR WRPEC
+total:    128644
+ok:       117888
+coverage: 0.916389415751998
+coverage: 0.925475541878302 (ignoring time_out)
+failure:   8766
+time_out:   1263
+out_of_memory:   5
+
+SONAR WRPEG
+total:    2434288
+ok:       2348285
+coverage: 0.964670162281538
+coverage: 0.966111220135132 (ignoring time_out)
+time_out:   3631
+failure:   79412
+out_of_memory:   6
+
+SONAR WRPE overig
+total:    129309
+ok:       123548
+coverage: 0.955447803323821
+coverage: 0.965709149177317 (ignoring time_out)
+failure:   2248
+time_out:   1374
+out_of_memory:   9
+
+SONAR WRPPI
+total:    226586
+ok:       216309
+coverage: 0.954644152772016
+coverage: 0.983880138092271 (ignoring time_out)
+failure:   3229
+time_out:   6733
+out_of_memory:   44
+
+SONAR WRPPG
+total:    2817053
+ok:       2704343
+coverage: 0.9599901031326
+coverage: 0.975876111208342 (ignoring time_out)
+time_out:   45858
+failure:   54784
+out_of_memory:   363
+
+SONAR WRPP rest
+total:    618605
+ok:       577018
+coverage: 0.932772932646842
+coverage: 0.941099143414469 (ignoring time_out)
+failure:   32488
+time_out:   5473
+out_of_memory:   91
+
+DAISY
+klm svb uwv
+
+sept 2009
+
+total:    13048
+ok:       12669
+coverage: 0.970953402820356
+coverage: 0.979511365393536 (ignoring time_out)
+failure:   246
+time_out:   114
+
+okt 2009
+total:    13048
+ok:       12726
+coverage: 0.975321888412017
+coverage: 0.983994432846207 (ignoring time_out)
+failure:   198
+time_out:   115
+
+----------------------------------------------------
+
+WS U E A
+nov 2018 (up to 25 words)
+
+total:    13006
+ok:       12718
+coverage: 0.977856373981239
+failure:   178
+time_out/time_out:   68
+time_out/failure:   25

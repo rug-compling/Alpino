@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" cat="pp" end="3" id="2" index="1" rel="whd">
+        <node begin="0" end="1" id="3" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+        <node begin="1" cat="np" end="3" id="4" rel="obj1">
+          <node begin="1" buiging="met-e" end="2" id="5" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welke" vwtype="vb" word="welke"/>
+          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="6" lemma="tijdperk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="tijdperk" word="tijdperk"/>
+        </node>
+      </node>
+      <node begin="0" cat="sv1" end="7" id="7" rel="body">
+        <node begin="0" end="3" id="8" index="1" rel="mod"/>
+        <node begin="3" end="4" id="9" lemma="dragen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="draag" word="droegen" wvorm="pv"/>
+        <node begin="4" cat="np" end="6" id="10" rel="su">
+          <node begin="4" buiging="met-e" end="5" id="11" lemma="sommig" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="sommige" vwtype="onbep" word="sommige"/>
+          <node begin="5" end="6" getal="mv" graad="basis" id="12" lemma="vrouw" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vrouw" word="vrouwen"/>
+        </node>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="peplos" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="peplos" word="peplos"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="14" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>In welke tijdperk droegen sommige vrouwen peplos ?</sentence>
+  <comments>
+    <comment>spelling: &quot;welke&quot; should be &quot;welk&quot;</comment>
+  </comments>
+</alpino_ds>

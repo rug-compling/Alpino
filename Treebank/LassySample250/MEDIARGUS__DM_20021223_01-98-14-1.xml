@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="8" end="9" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="16" end="17" frame="punct(haak_open)" id="2" lcat="punct" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" sense="(" special="haak_open" word="("/>
+    <node begin="0" cat="du" end="22" id="3" rel="--">
+      <node begin="0" cat="smain" end="16" id="4" rel="nucl">
+        <node begin="0" cat="pp" end="2" id="5" rel="mod">
+          <node begin="0" end="1" frame="preposition(in,[])" id="6" lcat="pp" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" sense="in" vztype="init" word="In"/>
+          <node begin="1" end="2" frame="proper_name(both,'LOC')" id="7" lcat="np" lemma="Noorwegen" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="obj1" root="Noorwegen" sense="Noorwegen" spectype="deeleigen" word="Noorwegen"/>
+        </node>
+        <node begin="2" end="3" frame="verb(unacc,pl,copula)" id="8" infl="pl" lcat="smain" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="zijn" wvorm="pv"/>
+        <node begin="3" cat="np" end="6" id="9" rel="su">
+          <node begin="3" end="4" frame="determiner(de)" id="10" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+          <node aform="base" begin="4" buiging="met-e" end="5" frame="adjective(e)" graad="basis" id="11" infl="e" lcat="ap" lemma="kalm" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="kalm" sense="kalm" vform="adj" word="kalme"/>
+          <node begin="5" end="6" frame="noun(both,count,pl)" gen="both" getal="mv" graad="basis" id="12" lcat="np" lemma="fjord" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="fjord" sense="fjord" word="fjorden"/>
+        </node>
+        <node begin="6" cat="np" end="8" id="13" rel="predc">
+          <node aform="base" begin="6" buiging="met-e" end="7" frame="adjective(e)" graad="basis" id="14" infl="e" lcat="ap" lemma="ideaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ideaal" sense="ideaal" vform="adj" word="ideale"/>
+          <node begin="7" end="8" frame="noun(het,count,pl)" gen="het" getal="mv" graad="basis" id="15" lcat="np" lemma="kweekgebied" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kweek_gebied" sense="kweek_gebied" word="kweekgebieden"/>
+        </node>
+        <node begin="9" cat="cp" end="16" id="16" rel="mod">
+          <node begin="9" end="10" frame="modal_adverb" id="17" lcat="advp" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" sc="modal" sense="ook" word="ook"/>
+          <node begin="10" end="11" frame="complementizer(al)" id="18" lcat="cp" lemma="al" pos="comp" postag="BW()" pt="bw" rel="cmp" root="al" sc="al" sense="al" word="al"/>
+          <node begin="11" cat="sv1" end="16" id="19" rel="body">
+            <node begin="11" end="12" frame="verb(hebben,sg3,part_transitive(op))" id="20" infl="sg3" lcat="sv1" lemma="leveren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lever_op" sc="part_transitive(op)" sense="lever_op" tense="present" word="levert" wvorm="pv"/>
+            <node begin="12" end="13" frame="determiner(het,nwh,nmod,pro,nparg)" getal="ev" id="21" infl="het" lcat="np" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" sense="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
+            <node begin="13" cat="np" end="15" id="22" rel="obj1">
+              <node aform="base" begin="13" buiging="met-e" end="14" frame="adjective(e)" graad="basis" id="23" infl="e" lcat="ap" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" sense="nieuw" vform="adj" word="nieuwe"/>
+              <node begin="14" end="15" frame="noun(het,count,pl)" gen="het" getal="mv" graad="basis" id="24" lcat="np" lemma="probleem" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="probleem" sense="probleem" word="problemen"/>
+            </node>
+            <node begin="15" end="16" frame="particle(op)" id="25" lcat="part" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" sense="op" vztype="fin" word="op"/>
+          </node>
+        </node>
+      </node>
+      <node begin="17" cat="sv1" end="22" id="26" rel="sat">
+        <node begin="17" end="18" frame="verb(hebben,sg1,transitive_ndev_ndev)" id="27" infl="sg1" lcat="sv1" lemma="zien" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zie" sc="transitive_ndev_ndev" sense="zie" tense="present" word="zie" wvorm="pv"/>
+        <node begin="18" cat="np" end="22" id="28" rel="obj1">
+          <node begin="18" end="19" frame="determiner(de)" id="29" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+          <node begin="19" end="20" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="30" lcat="np" lemma="aflevering" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aflevering" sense="aflevering" word="aflevering"/>
+          <node begin="20" cat="pp" end="22" id="31" rel="mod">
+            <node begin="20" end="21" frame="preposition(van,[af],tmp_adv)" id="32" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sc="tmp_adv" sense="van" vztype="init" word="van"/>
+            <node begin="21" end="22" frame="tmp_adverb" id="33" lcat="advp" lemma="morgen" pos="adv" postag="BW()" pt="bw" rel="obj1" root="morgen" sense="morgen" special="tmp" word="morgen"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" frame="punct(haak_sluit)" id="34" lcat="punct" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+    <node begin="23" end="24" frame="punct(punt)" id="35" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>In Noorwegen zijn de kalme fjorden ideale kweekgebieden , ook al levert dat nieuwe problemen op ( zie de aflevering van morgen ) .</sentence>
+  <comments>
+    <comment>Q#DM_20021223_01-98-14-1|In Noorwegen zijn de kalme fjorden ideale kweekgebieden , ook al levert dat nieuwe problemen op ( zie de aflevering van morgen ) .|1|1|0.16789741538618072</comment>
+  </comments>
+</alpino_ds>

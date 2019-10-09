@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="du" end="5" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="dp" root="dit" status="vol" vwtype="aanw" word="Dit"/>
+      <node begin="1" cat="oti" end="5" id="3" rel="dp">
+        <node begin="1" end="2" id="4" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+        <node begin="2" cat="ti" end="5" id="5" rel="body">
+          <node begin="3" end="4" id="6" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="2" cat="inf" end="5" id="7" rel="body">
+            <node begin="2" end="3" id="8" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
+            <node begin="4" buiging="zonder" end="5" id="9" lemma="rusten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="rust_uit" word="rusten" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Dit om uit te rusten</sentence>
+</alpino_ds>

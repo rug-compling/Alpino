@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="du" end="4" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="dp">
+        <node begin="0" cat="mwu" end="2" id="3" mwu_root="je reinste" mwu_sense="je reinste" rel="det">
+          <node begin="0" buiging="zonder" end="1" getal="ev" id="4" lemma="je" naamval="stan" npagr="agr" pdtype="det" persoon="2v" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)" pt="vnw" rel="mwp" root="je" status="red" vwtype="bez" word="Je"/>
+          <node begin="1" buiging="met-e" end="2" getal-n="zonder-n" graad="sup" id="5" lemma="rein" naamval="stan" pos="det" positie="nom" postag="ADJ(nom,sup,met-e,zonder-n,stan)" pt="adj" rel="mwp" root="reinste" word="reinste"/>
+        </node>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="entertainment" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="entertainment" word="entertainment"/>
+      </node>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="natuurlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="dp" root="natuurlijk" word="natuurlijk"/>
+    </node>
+    <node begin="4" end="5" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Je reinste entertainment natuurlijk .</sentence>
+</alpino_ds>

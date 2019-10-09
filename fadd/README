@@ -1,0 +1,149 @@
+User guide for the fadd library of finite-state utilities.
+
+1. Introduction
+
+  This file explains how to use the fadd library. The library is not a
+  stand-alone utility. You also need the fsa package available from
+  http://www.pg.gda.pl/~jandac/fsa.html .
+
+  The purpose of the library is to provide funtions that access
+  dictionaries in form of finite-state automata, and tuples in form of
+  custom structures relying on finite-state automata.
+
+  The library consists of the main library in C++, a C interface,
+  a prolog - C interface, header files, and a tuple building script.
+
+2. Preparing data to be used by the library
+
+2.1. Building dictionaries for restoration of diacritics
+
+  The dictionaries are finite state-automata containing words with
+  diacritics. They are build using fsa_build (or fsa_ubuild) from the
+  fsa package. The command to build a dictionary is:
+
+  fsa_build -O -i your_word_list -o your_automaton
+
+  For fsa_build, the input list should be sorted and duplicates should
+  be removed. REMEMBER to do that. On unix, sort -u will usually do,
+  but beware of LANG and LOCALE settings. They can corrupt sort output.
+
+  The option -O makes the automaton smaller, but it takes a little bit
+  more memory and time to construct the automaton. The program
+  fsa_build can also be used as a filter, i.e. instead of reading the
+  word list from a file, it can read it from the standard input:
+
+  sort -u your_word_list | fsa_build -O -o your_automaton
+
+  The automaton can also be produced on the standard out put (just
+  omit the -o option), but it probably does not make sense.
+
+  It is also possible to use fsa_ubuild to build the automaton. That
+  program accepts unsorted input and duplicates, but it is much slower
+  and requires much more memory than fsa_build.
+
+2.2. Building automata for recognition of prefixes of verbs
+
+  The dictionaries for recognition of prefixes of verbs are
+  finite-state automata built form strings containing the verbs, a
+  separator, and a code. The automaton is built using fsa_build from
+  the fsa package. The command to build is:
+
+  fsa_build -O -i your_strings -o your automaton
+
+  The input strings should be sorted and duplicates removed. On unix,
+  sort -u will do, but beware of LANG and LOCALE settings. They can
+  corrupt sort output.
+
+  The separator can be specified using -A option of fsa_build, e.g.
+
+  fsa_build -A \# -O -i your_strings -o your automaton
+
+  The default value is '+'. The code is a capital letter. 'A' means
+  the verb has no prefix, 'B' - the prefix is one character long, 'C'
+  - the prefix is two characters long, and so on.
+
+2.3. Building automata for morphological analysis.
+
+  The dictionaries for morphological analysis are finite-state
+  automata. They are built using fsa_build or fsa_ubuild from the
+  fsa_package. The format of strings in those automata depends on the
+  language. The Alpino grammar strips prefixes and infixes, so the
+  library works as if Dutch were a language without prefixes and
+  infixes. If your data has the form:
+
+  inflected_form base_form categories
+
+  where the columns are separated with tabulation characters, you can
+  use morph_data.pl from the fsa package to encode the strings. Then
+  they should be sorted, duplicates removed, and fed to fsa_build:
+
+  morph_data.pl your_data | sort -u | fsa_build -O -o your_automaton
+
+  On unix, you can sort the strings using sort -u command, but beware
+  of LANG and LOCALE settings. They can corrupt sort output. If your
+  data contain '+' character, you can specify another character as a
+  separator using -A option of fsa_build, e.g.:
+
+  morph_data.pl your_data | sort -u | fsa_build -A \# -O -o your_automaton
+
+2.4. Building tuples
+
+  Tuples are tables with words and integer numbers. They are
+  represented as tables with word numbers, and word numbers are
+  obtained with perfect hashing using finite-state automata. A tuple
+  representation consists of a tuple dictionary (encoded table), and a
+  few finite-state automata - dictionaries for words contained in
+  columns of a tuple. Words in tuples should preceed numbers.
+
+  Tuples can be built using maketuple.pl script. It has its own man
+  page.
+
+3. Using the library
+
+  The library has C and sicstus prolog interfaces. Prolog users should
+  first look into the file pro_fadd.h for functions with the prefix
+  pro_. If a particular function is not present there, then the
+  corresponding function without the pro_ prefix from fadd.h should be
+  used. The general pattern of use is:
+
+  init_something()
+  do_something()
+  close_something()
+
+  The init_something() functions return dictionary number that should
+  be used in other functions.
+
+  The library itself must be initialized with fadd_init_lib().
+
+3.1. Restoration of diacritics
+
+  First call init_accent(). Then use accent_word() to obtain a list of
+  words that are identical when deprived of diacritics. Use
+  close_accent() when finished.
+
+3.2. Obtaining prefixes of verbs
+
+  First call init_dict() with FADD_PREFIX as the dictionary type. Then
+  use prefix_word() on verbs you want check. Call close_prefix() when
+  finished.
+
+3.3. Performing morphological analysis of words
+
+  First call init_morph(). For Dutch in Alpino grammar, no prefixes
+  nor infixes are used. Call morph_word() for every word you want to
+  analyse. Call close_morph() when finished.
+
+3.4. Retrieving numbers from tuples
+
+  First call init_tuple(). The first argument should be the tuple table
+  structure (the one with .tpl suffix) produced by maketuple.pl
+  script. The next arguments are names of dictionaries for each column
+  containing words. If you have one dictionary for all columns, just
+  specify it sufficient number of times. Then use word_tuple_grams()
+  with a list of words from the tuple from which you wnt to get
+  numbers. Call close_tuple() when finished.
+
+  For tuples version 3, use word_tuple_fpgrams() instead of
+  word_tuple_grams(). Version 3 is capable of handling real numbers.
+
+

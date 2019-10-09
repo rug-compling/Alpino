@@ -1,0 +1,528 @@
+#!/usr/bin/perl -w
+
+########################################################################
+#
+# getNgramData 1.9
+#
+########################################################################
+
+# Option -g added, to ignore redundant tuples, for more compact models
+
+# version 1.9
+# Option -e added: create tags of form context_label*pos_tag used in "naive context" mode
+
+# version 1.8
+# Option -n added: used to indicate that tags are combinations of chunk tags
+# and POS tags in the form chunk_tag*pos_tag, as used in the "naive combined"
+# chunking method. This information is necessary to be able to recognize
+# multiword POS tags.
+
+# version 1.7
+# UNKNOWN_WORD entry in lexicon changed to just 1 tag: most frequent tag
+# for all words that occur only once; this is used in baseline handling
+# of unknown words
+
+# version 1.6
+# Frequency threshold (-f option) now applied to all components of model
+
+# version 1.3
+# This version also generates "tag given word" probablities
+
+# version 1.2
+# Individual parts of multi-word tags not in lexicon; instead, *base* tags
+# are used and any other required multi-words are concatenated to tag,
+# following ^ and separated by comma's.
+
+# version 1.1
+# Also creates a word->tags lexicon (file name: "wordTagLex").
+# Note; this list is not sorted, which is necessary for fadd script.
+# An <UNKNOWN_WORD> can be included in the lexicon which represents words
+# that occur only once; since this set is quite large a percentage can
+# be given (hard coded) to indicate how much of the most frequent tags
+# for 'unknown' words should be used; this is now set to 0 since another
+# solution for handling unknown words is used in the tagger.
+
+########################################################################
+
+use Getopt::Std;
+
+getopts('c:d:f:g:n:e:');
+
+$opt_c ||= 0;
+$opt_d ||= "./";
+$opt_f ||= 0;
+$opt_g ||= 0;
+$opt_n ||= 0;
+$opt_e ||= 0;
+
+# usage: getNgramData < <training_data_file>
+#
+# options: -c = use extra context (0 means using dummy everywhere)
+#          -d = directory to write files to
+#          -f = minimal frequency - tuple is otherwise ignored
+#          -g = maximal -log score - tuple is otherwise ignored
+#               this number should be the same as the various MAX_*_VALUE in
+#               ../tagger.h; in that case produces smaller, equivalent, models
+#          -n = naive combined; tags of form chunk_tag*pos_tag (* is separator)
+#          -e = naive context; create tags of form context_label*pos_tag (* is separator)
+#
+# input: "frames" file created by alpino containing lines in this format:
+#        word|tag|sentence_key|startpos|endpos|heuristic|contextinfo
+#
+# output: frequency and diversity data for different types of n-grams:
+#
+#         - word-tag probabilities (seeing word, given tag)
+#
+#         - tag-word probabilities (seeing tag, given word; use for baseline)
+#
+#         - 3-gram context tag probabilities
+#
+#         - 4-gram tag context probabilities
+#         - 3-gram tag context probabilities
+#         - 2-gram tag context probabilities
+#
+#         - 3-gram tag context prefix frequency and diversity data
+#         - 2-gram tag context prefix frequency and diversity data
+#
+#         - used-context
+#
+#         - word->tags lexicon
+#
+# 'used-context' is a file containing a list of all values used as
+# 'context'. These will be used by the tagger in expanding states.
+
+########################################################################
+
+$SENTENCE_START             = "xxx_sentence_start";
+$SENTENCE_END               = "xxx_sentence_end";
+$DUMMY_CONTEXT              = "<DUMMY_CONTEXT>";
+$DUMMY_WORD                 = "<DUMMY_WORD>";
+$UNKNOWN_WORD               = "<UNKNOWN_WORD>";
+
+$THRESHOLD                  = $opt_f;  # used for computing word-tag freq
+#$UNKNOWN_WORD_TAGPERCENTAGE = 0;  # percentage of most frequent tags to be used for unknown words
+
+$firstTag                   = $SENTENCE_START;
+$secondTag                  = $SENTENCE_START;
+$oldContext                 = $DUMMY_CONTEXT;
+
+$previousKey                = "<NONE>";
+
+%wordFreq                   = ();
+%wordTagFreq                = ();
+
+%contextTrigramFreq         = ();
+
+%usedContext                = ();
+
+%tagFourgramFreq            = ();
+%tagTrigramFreq             = ();
+%tagBigramFreq              = ();
+%tagUnigramFreq             = ();
+
+%prefixTrigramFreq          = ();
+%prefixBigramFreq           = ();
+%prefixUnigramFreq          = ();
+
+%prefixTrigramDiv           = ();
+%prefixBigramDiv            = ();
+
+%lexicon                    = ();
+
+$previousMultiTag           = "<NONE>";
+$previousMultiNumber        = 0;
+$multiTagFirstWord          = "";
+$multiTagRestWords          = "";
+
+
+########################################################################
+# subroutine(s)
+########################################################################
+
+sub addToLexicon{
+  my $word  = $_[0];
+  my $tag   = $_[1];
+  my $words = $_[2];
+
+  my $entry = $word ."|". $tag;
+
+  if($words ne ""){
+    $entry .= "^$words";
+  }
+
+  $lexicon{$entry}++;
+}
+
+
+########################################################################
+# collect data on n-grams in input
+########################################################################
+
+while(<>){
+
+  next if !/.*\|.*/;
+
+  chomp();	
+			
+  # get word, tag, sentence key, context
+  ($word,$thirdTag,$sentenceKey,undef,undef,undef,$newContext) = split(/\|/);
+
+  if (       !defined($word)
+	  || !defined($thirdTag)
+	  || !defined($sentenceKey)
+          || !defined($newContext)
+	     ) { next; }
+
+  if ($. % 1000000==0) 
+    { $m= $./1000000;
+      print STDERR "read $m million lines\n";}
+
+  # als we een multitag zien en het getal is 1, dan wordt de tag
+  # opgeslagen in previousMultiTag, en het getal 1 in
+  # previousMultiNumber, en het woord in $multiTagFirstWord.  als het
+  # getal hoger is dan 1 en volgt op previousMultiNumber en de tag
+  # komt overeen met previousMultiTag, dan wordt het betreffende woord
+  # toegevoegd aan multiTagRestWords.  als we een gewone tag zien en
+  # previousMultiTag is niet <NONE>, dan worden de opgeslagen gegevens
+  # verwerkt: multiTagFirstWord en previousMultiTag worden opgeslagen
+  # in het lexicon, waarbij de tag wordt uitgebreid met de informatie
+  # dat multiTagRestWords vereist zijn.
+
+  if($opt_n){
+	# naive combined: temporarily remove chunk part
+	# so; thirdTag=chunk*tag -> chunk_part=chunk, thirdTag=tag
+	($chunkPart,$posPart) = split(/\*/,$thirdTag);
+	$thirdTag = $posPart;
+  }
+
+  if($opt_e){
+	# naive context: put context in position of chunk part
+	# so; thirdTag=tag -> chunk_part=context, thirdTag=tag
+	$chunkPart = $newContext;
+  }
+
+  # recognize multiword tag
+  if($thirdTag =~ /^(\d+)[-\/](.+)$/){
+
+	# reconstruct thirdTag
+	if($opt_n || $opt_e){
+	  $thirdTag = $chunkPart . "*" . $thirdTag;
+	}
+
+    $number  = $1;
+    $baseTag = $2;
+
+    # if tag was converted from WOTAN format, multi-word tag will have an extra number
+    if($baseTag =~ /^\d+-(.+)$/){
+      $baseTag = $1;
+    }
+
+    if($number == 1){
+      if($previousMultiTag ne "<NONE>"){
+		addToLexicon($multiTagFirstWord,$previousMultiTag,$multiTagRestWords);
+      }
+	  $previousMultiTag    = $baseTag;
+      $previousMultiNumber = $number;
+      $multiTagFirstWord   = $word;
+	  if($opt_n || $opt_e){
+		$multiTagRestWords = "$chunkPart";
+	  }else{
+		$multiTagRestWords = "";
+	  }
+    }elsif(($number == $previousMultiNumber+1) && ($baseTag eq $previousMultiTag)){
+      $previousMultiNumber = $number;
+      if($multiTagRestWords ne ""){
+		$multiTagRestWords .= ",";
+	  }
+	  if($opt_n || $opt_e){
+		$multiTagRestWords .= "$word,$chunkPart";
+	  }else{
+		$multiTagRestWords .= "$word";
+	  }
+    }
+  }else{
+	if($previousMultiTag ne "<NONE>"){
+	  addToLexicon($multiTagFirstWord,$previousMultiTag,$multiTagRestWords);
+	  $previousMultiTag = "<NONE>";
+	}
+	# reconstruct thirdTag
+	if($opt_n || $opt_e){
+	  $thirdTag = $chunkPart . "*" . $thirdTag;
+	}
+    addToLexicon($word,$thirdTag,"");
+  }
+
+  # not using context implemented by using dummy everywhere
+  if(!$opt_c){
+    $newContext = $DUMMY_CONTEXT;
+  }
+
+  # if new sentence, then
+  if ($sentenceKey ne $previousKey){
+    if ($previousKey ne "<NONE>"){
+      # take care of ending of previous sentence (with sentenceEnd for third tag)
+      $bigram   = $oldContext . "|" . $SENTENCE_END;
+      $trigram  = $secondTag . "|" . $bigram;
+      $fourgram = $firstTag . "|" . $trigram;
+	
+      $prefixUnigram = $oldContext;	
+      $prefixBigram  = $secondTag . "|" . $prefixUnigram;
+      $prefixTrigram = $firstTag . "|" . $prefixBigram;
+
+      # diversity
+      if (!exists $tagFourgramFreq{$fourgram}){
+		$prefixTrigramDiv{$prefixTrigram}++;	
+      }
+      if (!exists $tagTrigramFreq{$trigram}){
+		$prefixBigramDiv{$prefixBigram}++;	
+      }
+	
+      # store tag n-grams	
+      $tagBigramFreq{$bigram}++;
+      $tagTrigramFreq{$trigram}++;
+      $tagFourgramFreq{$fourgram}++;
+
+      # store prefix n-grams
+      $prefixUnigramFreq{$prefixUnigram}++;
+      $prefixBigramFreq{$prefixBigram}++;
+      $prefixTrigramFreq{$prefixTrigram}++;
+
+      # store context n-gram
+      $contextTrigram = $oldContext . "|" . $SENTENCE_END . "|" . $DUMMY_CONTEXT;
+      $contextTrigramFreq{$contextTrigram}++;
+
+      # replace tags by default start-of-sentence tags
+      $firstTag    = $SENTENCE_START;
+      $secondTag   = $SENTENCE_START;
+      $oldContext  = $DUMMY_CONTEXT;
+
+    }
+    $previousKey = $sentenceKey;
+  }
+
+  $bigram   = $oldContext . "|" . $thirdTag;
+  $trigram  = $secondTag . "|" . $bigram;	
+  $fourgram = $firstTag . "|" . $trigram;
+
+  $prefixUnigram = $oldContext;
+  $prefixBigram  = $secondTag . "|" . $prefixUnigram;
+  $prefixTrigram = $firstTag . "|" . $prefixBigram;
+
+  # diversity
+  if (!exists $tagFourgramFreq{$fourgram}){
+    $prefixTrigramDiv{$prefixTrigram}++;	
+  }
+  if (!exists $tagTrigramFreq{$trigram}){
+    $prefixBigramDiv{$prefixBigram}++;	
+  }
+
+  # store tag n-grams	
+  $tagUnigramFreq{$thirdTag}++;
+  $tagBigramFreq{$bigram}++;	
+  $tagTrigramFreq{$trigram}++;	
+  $tagFourgramFreq{$fourgram}++;
+
+  # store prefix n-grams
+  $prefixUnigramFreq{$prefixUnigram}++;
+  $prefixBigramFreq{$prefixBigram}++;
+  $prefixTrigramFreq{$prefixTrigram}++;
+
+  # store context n-gram
+  $contextTrigram = $oldContext . "|" . $thirdTag . "|" . $newContext;
+  $contextTrigramFreq{$contextTrigram}++;
+
+  # keep track of encountered contexts
+  $usedContext{$newContext} = 1;
+
+  # store word-tag combination
+  $wordTag = $word . "|" . $thirdTag;
+  $wordTagFreq{$wordTag}++;
+  $wordFreq{$word}++;
+
+  # set previous to current
+  $firstTag    = $secondTag;
+  $secondTag   = $thirdTag;
+  $oldContext  = $newContext;
+}
+
+print STDERR "read all $. lines\n";
+
+########################################################################
+# take care of end of last sentence in file
+########################################################################
+
+$bigram   = $oldContext . "|" . $SENTENCE_END;
+$trigram  = $secondTag . "|" . $bigram;
+$fourgram = $firstTag . "|" . $trigram;
+
+$prefixUnigram = $oldContext;
+$prefixBigram  = $secondTag . "|" . $prefixUnigram;
+$prefixTrigram = $firstTag . "|" . $prefixBigram;
+
+if (!exists $tagFourgramFreq{$fourgram}){
+  $prefixTrigramDiv{$prefixTrigram}++;	
+}
+if (!exists $tagTrigramFreq{$trigram}){
+  $prefixBigramDiv{$prefixBigram}++;	
+}
+
+$tagBigramFreq{$bigram}++;
+$tagTrigramFreq{$trigram}++;
+$tagFourgramFreq{$fourgram}++;
+
+$prefixUnigramFreq{$prefixUnigram}++;
+$prefixBigramFreq{$prefixBigram}++;
+$prefixTrigramFreq{$prefixTrigram}++;
+
+if($previousMultiTag ne "<NONE>"){
+  addToLexicon($multiTagFirstWord,$previousMultiTag,$multiTagRestWords);
+}
+
+########################################################################
+# compute probabilities and diversity, print to appropriate files
+########################################################################
+
+# open files
+open(TAG_4_FREQ,">$opt_d"."/tag4")          || die("ERROR: can't create file $opt_d"."tag4\n");
+open(TAG_3_FREQ,">$opt_d"."/tag3")          || die("ERROR: can't create file $opt_d"."tag3\n");
+open(TAG_2_FREQ,">$opt_d"."/tag2")          || die("ERROR: can't create file $opt_d"."tag2\n");
+open(PRE_3_FDIV,">$opt_d"."/prefix3")       || die("ERROR: can't create file $opt_d"."prefix3\n");
+open(PRE_2_FDIV,">$opt_d"."/prefix2")       || die("ERROR: can't create file $opt_d"."prefix2\n");
+open(CONTEXT_3_FREQ,">$opt_d"."/context3")  || die("ERROR: can't create file $opt_d"."context3\n");
+open(WORD_TAG_FREQ,">$opt_d"."/wordTag")    || die("ERROR: can't create file $opt_d"."wordTag\n");
+open(TAG_WORD_FREQ,">$opt_d"."/tagWord")    || die("ERROR: can't create file $opt_d"."tagWord\n");
+open(USED_CONTEXT,">$opt_d"."/usedContext") || die("ERROR: can't create file $opt_d"."usedContext\n");
+open(WORD_TAG_LEX,">$opt_d"."/wordTagLex")  || die("ERROR: can't create file $opt_d"."wordTagLex\n");
+
+# 4-gram tag context data
+foreach $fourgram (keys %tagFourgramFreq){
+  ($firstTag,$secondTag,$thirdTag,undef) = split(/\|/,$fourgram);
+  $trigram = $firstTag . "|" . $secondTag . "|" . $thirdTag;
+  if( $tagFourgramFreq{$fourgram} > $THRESHOLD ) {
+      $probability = $tagFourgramFreq{$fourgram} / $prefixTrigramFreq{$trigram};
+      $probability = int(-100 * log($probability));	
+      if ($opt_g && $probability < $opt_g) {
+	  print TAG_4_FREQ "$fourgram\|$probability\n";
+      }
+  }
+}
+
+# 3-gram tag context data
+foreach $trigram (keys %tagTrigramFreq){
+  ($firstTag,$secondTag,undef) = split(/\|/,$trigram);
+  $bigram = $firstTag . "|" . $secondTag;
+  if( $tagTrigramFreq{$trigram} > $THRESHOLD ) {
+      $probability = $tagTrigramFreq{$trigram} / $prefixBigramFreq{$bigram};
+      $probability = int(-100 * log($probability));	
+      if ($opt_g && $probability < $opt_g) {
+	  print TAG_3_FREQ "$trigram\|$probability\n";
+      }
+  }
+}
+
+# 2-gram tag context data
+foreach $bigram (keys %tagBigramFreq){
+  ($unigram,undef) = split(/\|/,$bigram);
+  if( $tagBigramFreq{$bigram} > $THRESHOLD ) {
+      $probability = $tagBigramFreq{$bigram} / $prefixUnigramFreq{$unigram};
+      $probability = int(-100 * log($probability));	
+      if ($opt_g && $probability < $opt_g) {
+	  print TAG_2_FREQ "$bigram\|$probability\n";
+      }
+  }
+}
+
+# 3-gram tag context prefix data
+foreach $trigram (keys %prefixTrigramFreq){
+    if( $prefixTrigramFreq{$trigram} > $THRESHOLD ) {
+	$frequency = $prefixTrigramFreq{$trigram};
+	$diversity = $prefixTrigramDiv{$trigram};
+	print PRE_3_FDIV "$trigram\|$frequency|$diversity\n";
+    }
+}
+
+# 2-gram tag context prefix data
+foreach $bigram (keys %prefixBigramFreq){
+    if( $prefixBigramFreq{$bigram} > $THRESHOLD ) {
+	$frequency = $prefixBigramFreq{$bigram};
+	$diversity = $prefixBigramDiv{$bigram};
+	print PRE_2_FDIV "$bigram\|$frequency|$diversity\n";
+    }
+}
+
+# 3-gram context tag data
+foreach $trigram (keys %contextTrigramFreq){
+    if( $contextTrigramFreq{$trigram} > $THRESHOLD ){
+	($firstTag,$secondTag,undef) = split(/\|/,$trigram);
+	$bigram = $firstTag . "|" . $secondTag;
+	$probability = $contextTrigramFreq{$trigram} / $tagBigramFreq{$bigram};
+	$probability = int(-100 * log($probability));	
+	if ($opt_g && $probability < $opt_g) {
+	    print CONTEXT_3_FREQ "$trigram\|$probability\n";
+	}
+    }
+}
+
+# word-tags lexicon
+foreach $pair (keys %lexicon){
+  # lexicon (word is printed twice as this format is required by fadd morphology handling)
+    if ($lexicon{$pair} > $THRESHOLD) {
+	($word,$tag) = split(/\|/,$pair);
+	print WORD_TAG_LEX "$word\t$word\t$tag\n";
+    }
+}
+
+# word-tag data, tag-word data
+%unknown = ();
+foreach $pair (keys %wordTagFreq){
+  ($word,$tag) = split(/\|/,$pair);
+  # word-tag data (probability of seeing word given tag)
+  if ($wordFreq{$word} > $THRESHOLD){
+    $probability = int(-100 * log($wordTagFreq{$pair} / $tagUnigramFreq{$tag}));
+    if ($opt_g && $probability < $opt_g) {
+	print WORD_TAG_FREQ "$pair\|$probability\n";
+    }
+  }
+  # tag-word data (probability of seeing tag given word; used for baseline)
+  if ($wordTagFreq{$pair} > $THRESHOLD) {
+      $probability = int(-100 * log($wordTagFreq{$pair} / $wordFreq{$word}));
+      $reversedPair = "$tag|$word";
+      if ($opt_g && $probability < $opt_g) {
+	  print TAG_WORD_FREQ "$reversedPair\|$probability\n";
+      }
+  }
+  # collect data for unknown word; collect tags for all words that occur only once
+  #if($UNKNOWN_WORD_TAGPERCENTAGE>0){
+  if ($wordFreq{$word} == 1){
+    $unknown{$tag}++;
+  }
+  #}
+}
+# print tag that was most often assigned to words that occur only once
+@sortedUnknown = reverse sort{$unknown{$a} <=> $unknown{$b}} keys %unknown;
+$count         = @sortedUnknown;
+if($count>0){
+  print WORD_TAG_LEX "$UNKNOWN_WORD\t$UNKNOWN_WORD\t$sortedUnknown[0]\n";
+}
+print WORD_TAG_FREQ "$DUMMY_WORD|$SENTENCE_END|0\n";
+print WORD_TAG_FREQ "$DUMMY_WORD|$SENTENCE_START|0\n";
+
+# used context labels
+foreach $label (keys %usedContext){
+    print USED_CONTEXT "$label\n";
+}
+
+# close files
+close(TAG_4_FREQ);
+close(TAG_3_FREQ);
+close(TAG_2_FREQ);
+close(PRE_3_FDIV);
+close(PRE_2_FDIV);
+close(CONTEXT_3_FREQ);
+close(WORD_TAG_FREQ);
+close(TAG_WORD_FREQ);
+close(USED_CONTEXT);
+close(WORD_TAG_LEX);
+
+######################################################################################################
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="1" cat="smain" end="7" id="2" rel="--">
+      <node begin="1" cat="np" end="3" id="3" rel="su">
+        <node begin="1" end="2" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="5" lemma="zaterdagspeler" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="spelers" word="zaterdagspelers"/>
+      </node>
+      <node begin="3" end="4" id="6" lemma="doen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="doe" word="doen" wvorm="pv"/>
+      <node begin="4" end="5" id="7" lemma="vanavond" pos="adv" postag="BW()" pt="bw" rel="mod" root="vanavond" word="vanavond"/>
+      <node begin="5" end="6" id="8" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      <node begin="6" end="7" id="9" lemma="mee" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="mee" vztype="fin" word="mee"/>
+    </node>
+    <node begin="7" end="8" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="8" end="9" id="11" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>&quot; De zaterdagspelers doen vanavond niet mee . &quot;</sentence>
+</alpino_ds>

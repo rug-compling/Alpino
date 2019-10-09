@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="whq" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" index="1" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="whd" root="wie" status="vol" vwtype="vb" word="Wie"/>
+      <node begin="0" cat="ssub" end="8" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="su"/>
+        <node begin="1" end="2" id="5" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+        <node begin="0" cat="ppart" end="8" id="6" rel="vc">
+          <node begin="0" end="1" id="7" index="1" rel="obj1"/>
+          <node begin="2" buiging="zonder" end="3" id="8" lemma="verkiezen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verkies" word="verkozen" wvorm="vd"/>
+          <node begin="3" cat="pp" end="6" id="9" rel="pc">
+            <node begin="3" end="4" id="10" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+            <node begin="4" cat="mwu" end="6" id="11" rel="obj1">
+              <node begin="4" end="5" id="12" lemma="Miss" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Miss" spectype="deeleigen" word="Miss"/>
+              <node begin="5" end="6" id="13" lemma="Universe" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Universe" spectype="deeleigen" word="Universe"/>
+            </node>
+          </node>
+          <node begin="6" cat="pp" end="8" id="14" rel="mod">
+            <node begin="6" end="7" id="15" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="7" end="8" id="16" lemma="1994" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1994" word="1994"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="17" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wie werd verkozen tot Miss Universe in 1994 ?</sentence>
+</alpino_ds>

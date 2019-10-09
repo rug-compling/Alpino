@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="14" end="15" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="20" end="21" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="23" id="3" rel="--">
+      <node begin="0" cat="conj" end="20" id="4" rel="su">
+        <node begin="0" cat="np" end="11" id="5" rel="cnj">
+          <node begin="0" end="1" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="omvang" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="omvang" word="omvang"/>
+          <node begin="2" cat="pp" end="11" id="8" rel="mod">
+            <node begin="2" end="3" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="3" cat="np" end="11" id="10" rel="obj1">
+              <node begin="3" end="4" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="4" end="5" genus="genus" getal="ev" graad="basis" id="12" lemma="Rijnpoorthaven" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="haven" word="Rijnpoorthaven"/>
+              <node begin="5" cat="pp" end="11" id="13" rel="mod">
+                <node begin="5" end="6" id="14" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="6" cat="np" end="11" id="15" rel="obj1">
+                  <node begin="6" end="7" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="7" cat="ppart" end="10" id="17" rel="mod">
+                    <node begin="7" cat="pp" end="9" id="18" rel="mod">
+                      <node begin="7" end="8" id="19" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+                      <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="20" lemma="Rotterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Rotterdam" word="Rotterdam"/>
+                    </node>
+                    <node begin="9" buiging="met-e" end="10" id="21" lemma="voorstellen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="voorgesteld" word="voorgestelde" wvorm="vd"/>
+                  </node>
+                  <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="22" lemma="vorm" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vorm" word="vorm"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="11" conjtype="neven" end="12" id="23" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="12" cat="np" end="20" id="24" rel="cnj">
+          <node begin="12" end="13" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="26" lemma="plaats" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="plaats" word="plaats"/>
+          <node begin="15" cat="rel" end="20" id="27" rel="mod">
+            <node begin="15" end="16" getal="getal" id="28" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" status="vol" vwtype="vb" word="waar"/>
+            <node begin="15" cat="ssub" end="20" id="29" rel="body">
+              <node begin="16" cat="np" end="18" id="30" index="2" rel="su">
+                <node begin="16" buiging="met-e" end="17" id="31" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+                <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="32" lemma="haven" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="haven" word="haven"/>
+              </node>
+              <node begin="18" end="19" id="33" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+              <node begin="15" cat="ppart" end="20" id="34" rel="vc">
+                <node begin="15" end="16" id="35" index="1" rel="mod"/>
+                <node begin="16" end="18" id="36" index="2" rel="obj1"/>
+                <node begin="19" buiging="zonder" end="20" id="37" lemma="projecteren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="projecteer" word="geprojecteerd" wvorm="vd"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="21" end="22" id="38" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="22" buiging="zonder" end="23" graad="basis" id="39" lemma="aanvaardbaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="aanvaardbaar" word="aanvaardbaar"/>
+    </node>
+    <node begin="23" end="24" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De omvang van de Rijnpoorthaven in de door Rotterdam voorgestelde vorm en de plaats , waar deze haven is geprojecteerd , zijn aanvaardbaar .</sentence>
+</alpino_ds>

@@ -1,0 +1,16 @@
+annotate:
+	mkdir -p Treebank/$(suite)/uncorrected
+	$(ALPINO_HOME)/src/Alpino -notk cmdint=off\
+          -veryfast\
+          user_max=600000 debug=1\
+          xml_format_frame=off\
+          xml_format_failed_parse=on\
+          display_main_parts=off\
+          display_quality=off\
+          parse_unannotated_only=uncorrected\
+          -flag suite Suites/$(suite)\
+          -flag treebank Treebank/$(suite)/uncorrected\
+          demo=off\
+          end_hook=xml $(extra)\
+          batch_command="parser_comparisons" 2> $(suite).log
+

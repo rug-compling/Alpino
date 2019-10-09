@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="pp" end="5" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="Met"/>
+        <node begin="1" cat="np" end="5" id="4" rel="obj1">
+          <node begin="1" cat="ap" end="4" id="5" rel="det">
+            <node begin="1" cat="np" end="3" id="6" rel="me">
+              <node begin="1" end="2" id="7" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
+              <node begin="2" end="3" getal="mv" graad="basis" id="8" lemma="seconde" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="seconde" word="seconden"/>
+            </node>
+            <node begin="3" buiging="zonder" end="4" graad="basis" id="9" lemma="teveel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="hd" root="teveel" vwtype="onbep" word="teveel"/>
+          </node>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="achterstand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="achterstand" word="achterstand"/>
+        </node>
+      </node>
+      <node begin="5" end="6" id="11" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom_binnen" word="kwam" wvorm="pv"/>
+      <node begin="6" end="7" genus="masc" getal="ev" id="12" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+      <node begin="7" end="8" id="13" lemma="binnen" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="binnen" vztype="fin" word="binnen"/>
+    </node>
+  </node>
+  <sentence>Met twee seconden teveel achterstand kwam hij binnen</sentence>
+</alpino_ds>

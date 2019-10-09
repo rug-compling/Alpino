@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="14" id="2" rel="--">
+      <node begin="0" cat="whrel" end="4" id="3" index="1" rel="su">
+        <node begin="0" end="1" getal="ev" id="4" index="2" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="Wat"/>
+        <node begin="0" cat="ssub" end="4" id="5" rel="body">
+          <node begin="0" end="1" id="6" index="2" rel="obj1"/>
+          <node begin="1" end="2" getal="ev" id="7" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
+          <node begin="2" buiging="zonder" end="3" graad="basis" id="8" lemma="precies" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="precies" word="precies"/>
+          <node begin="3" end="4" id="9" lemma="betekenen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="beteken" word="betekent" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="5" end="6" id="10" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+      <node begin="0" cat="inf" end="14" id="11" rel="vc">
+        <node begin="0" end="4" id="12" index="1" rel="su"/>
+        <node begin="6" end="7" id="13" lemma="pas" pos="adv" postag="BW()" pt="bw" rel="mod" root="pas" word="pas"/>
+        <node begin="7" buiging="zonder" end="8" id="14" lemma="blijken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="blijk" word="blijken" wvorm="inf"/>
+        <node begin="8" cat="cp" end="14" id="15" rel="mod">
+          <node begin="8" conjtype="onder" end="9" id="16" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+          <node begin="9" cat="ssub" end="14" id="17" rel="body">
+            <node begin="9" end="10" getal="mv" id="18" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+            <node begin="10" cat="np" end="13" id="19" rel="obj1">
+              <node begin="10" end="11" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="11" buiging="met-e" end="12" graad="basis" id="21" lemma="volledig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="volledig" word="volledige"/>
+              <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="tekst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tekst" word="tekst"/>
+            </node>
+            <node begin="13" end="14" id="23" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Wat dat precies betekent , zal pas blijken als we de volledige tekst hebben .</sentence>
+</alpino_ds>

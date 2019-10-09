@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="14" id="2" rel="--">
+      <node begin="0" cat="cp" end="7" id="3" rel="sat">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+        <node begin="1" cat="ssub" end="7" id="5" rel="body">
+          <node begin="1" cat="np" end="3" id="6" index="1" rel="su">
+            <node begin="1" end="2" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="2" end="3" getal="mv" graad="basis" id="8" lemma="heer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="heren" word="heren"/>
+          </node>
+          <node begin="5" end="6" id="9" lemma="willen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="wil" word="willen" wvorm="pv"/>
+          <node begin="1" cat="inf" end="7" id="10" rel="vc">
+            <node begin="1" end="3" id="11" index="1" rel="su"/>
+            <node begin="3" end="4" getal="getal" id="12" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" status="vol" vwtype="aanw" word="hier"/>
+            <node begin="4" end="5" id="13" lemma="even" pos="adj" postag="BW()" pt="bw" rel="mod" root="even" word="even"/>
+            <node begin="6" buiging="zonder" end="7" id="14" lemma="wachten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="wacht" word="wachten" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+      <node begin="8" cat="smain" end="14" id="15" rel="nucl">
+        <node begin="9" end="10" id="16" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+        <node begin="10" end="11" getal="ev" id="17" index="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="8" cat="inf" end="14" id="18" rel="vc">
+          <node begin="8" end="9" id="19" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+          <node begin="10" end="11" id="20" index="2" rel="su"/>
+          <node begin="11" cat="np" end="13" id="21" rel="obj1">
+            <node begin="11" end="12" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="23" lemma="directeur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="directeur" word="directeur"/>
+          </node>
+          <node begin="13" buiging="zonder" end="14" id="24" lemma="waarschuwen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="waarschuw" word="waarschuwen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als de heren hier even willen wachten , dan zal ik de directeur waarschuwen .</sentence>
+</alpino_ds>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="31" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="3" end="4" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="5" end="6" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="7" end="8" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="10" end="11" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="12" end="13" id="6" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="14" end="15" id="7" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="16" end="17" id="8" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="23" end="24" id="9" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="30" id="10" rel="--">
+      <node begin="0" cat="conj" end="16" id="11" rel="sat">
+        <node begin="0" buiging="zonder" end="1" id="12" lemma="knutselen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="cnj" root="knutsel" word="Kuntselen" wvorm="inf"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="13" lemma="atelierwerk" naamval="stan" ntype="soort" pos="verb" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="werk" word="atelierwerk"/>
+        <node begin="4" buiging="zonder" end="5" id="14" lemma="dansen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="cnj" root="dans" word="dansen" wvorm="inf"/>
+        <node begin="6" buiging="zonder" end="7" id="15" lemma="spelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="cnj" root="speel" word="spelen" wvorm="inf"/>
+        <node begin="8" cat="inf" end="10" id="16" rel="cnj">
+          <node begin="8" end="9" getal="mv" graad="basis" id="17" lemma="dier" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="dier" word="dieren"/>
+          <node begin="9" buiging="zonder" end="10" id="18" lemma="verzorgen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verzorgen" word="verzorgen" wvorm="inf"/>
+        </node>
+        <node begin="11" buiging="zonder" end="12" id="19" lemma="goochelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="cnj" root="goochel" word="goochelen" wvorm="inf"/>
+        <node begin="13" buiging="zonder" end="14" id="20" lemma="tekenen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="cnj" root="teken" word="tekenen" wvorm="inf"/>
+        <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="21" lemma="acrobatiek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="acrobatiek" word="acrobatiek"/>
+      </node>
+      <node begin="17" cat="conj" end="30" id="22" rel="nucl">
+        <node begin="17" cat="smain" end="23" id="23" rel="cnj">
+          <node begin="17" cat="np" end="20" id="24" rel="su">
+            <node begin="17" buiging="met-e" end="18" id="25" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" vwtype="onbep" word="alle"/>
+            <node begin="18" buiging="met-e" end="19" graad="basis" id="26" lemma="mogelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="mogelijk" word="mogelijke"/>
+            <node begin="19" end="20" getal="mv" graad="basis" id="27" lemma="ontspanningsvorm" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vorm" word="ontspanningsvormen"/>
+          </node>
+          <node begin="20" end="21" id="28" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+          <node begin="21" end="22" getal="getal" id="29" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="22" buiging="zonder" end="23" graad="basis" id="30" lemma="mogelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="mogelijk" word="mogelijk"/>
+        </node>
+        <node begin="24" conjtype="neven" end="25" id="31" lemma="want" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="want" word="want"/>
+        <node begin="25" cat="smain" end="30" id="32" rel="cnj">
+          <node begin="25" cat="np" end="27" id="33" rel="su">
+            <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="34" lemma="tante" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tante" word="tante"/>
+            <node begin="26" buiging="zonder" end="27" graad="basis" id="35" lemma="iet" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="app" root="Iet" word="Iet"/>
+          </node>
+          <node begin="27" end="28" id="36" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
+          <node begin="28" cat="cp" end="30" id="37" rel="predc">
+            <node begin="28" end="29" id="38" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+            <node begin="29" end="30" genus="zijd" getal="ev" graad="basis" id="39" lemma="stelregel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="stelregel" word="stelregel"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="30" end="31" id="40" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>Kuntselen , atelierwerk , dansen , spelen , dieren verzorgen , goochelen , tekenen , acrobatiek , alle mogelijke ontspanningsvormen waren er mogelijk , want tante Iet had als stelregel :</sentence>
+  <comments>
+    <comment>typo: kuntselen should be knutselen</comment>
+  </comments>
+</alpino_ds>

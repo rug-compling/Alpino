@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="9" id="2" rel="--">
+      <node begin="0" cat="du" end="2" id="3" rel="tag">
+        <node begin="0" end="1" id="4" lemma="hallo" pos="tag" postag="TSW()" pt="tsw" rel="tag" root="hallo" word="Hallo"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="Linda" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="nucl" root="Linda" word="Linda"/>
+      </node>
+      <node begin="3" cat="du" end="9" id="6" rel="nucl">
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="leuk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="dp" root="leuk" word="leuk"/>
+        <node begin="4" cat="cp" end="9" id="8" rel="dp">
+          <node begin="4" conjtype="onder" end="5" id="9" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="5" cat="ssub" end="9" id="10" rel="body">
+            <node begin="5" end="6" getal="ev" id="11" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+            <node begin="6" cat="pp" end="8" id="12" rel="ld">
+              <node begin="6" end="7" id="13" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+              <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="14" lemma="Spanje" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Spanje" word="Spanje"/>
+            </node>
+            <node begin="8" end="9" id="15" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="9" end="10" id="16" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>Hallo Linda , leuk dat je naar Spanje gaat !</sentence>
+</alpino_ds>

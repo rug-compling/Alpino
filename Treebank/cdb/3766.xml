@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="0" cat="conj" end="23" id="1" rel="--">
+      <node begin="0" cat="smain" end="11" id="2" rel="cnj">
+        <node begin="0" cat="np" end="6" id="3" rel="su">
+          <node begin="0" buiging="met-e" end="1" getal-n="mv-n" graad="comp" id="4" lemma="jong" pos="noun" positie="nom" postag="ADJ(nom,comp,met-e,mv-n)" pt="adj" rel="hd" root="jongere" word="Jongeren"/>
+          <node begin="1" cat="pp" end="3" id="5" rel="mod">
+            <node begin="1" end="2" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="2" end="3" id="7" lemma="14" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="14" word="14"/>
+          </node>
+          <node begin="3" cat="pp" end="6" id="8" rel="mod">
+            <node begin="3" end="4" id="9" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+            <node begin="4" cat="np" end="6" id="10" rel="obj1">
+              <node begin="4" end="5" id="11" lemma="17" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="17" word="17"/>
+              <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="12" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
+            </node>
+          </node>
+        </node>
+        <node begin="6" end="7" id="13" lemma="verkeren" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="verkeer" word="verkeren" wvorm="pv"/>
+        <node begin="7" cat="pp" end="11" id="14" rel="ld">
+          <node begin="7" end="8" id="15" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="8" cat="np" end="11" id="16" rel="obj1">
+            <node begin="8" end="9" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="9" buiging="met-e" end="10" graad="basis" id="18" lemma="belangrijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="belangrijk" word="belangrijke"/>
+            <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="19" lemma="levensfase" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="levensfase" word="levensfase"/>
+          </node>
+        </node>
+      </node>
+      <node begin="11" conjtype="neven" end="12" id="20" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="12" cat="smain" end="23" id="21" rel="cnj">
+        <node begin="12" end="13" genus="onz" getal="ev" id="22" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="het"/>
+        <node begin="13" end="14" id="23" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+        <node begin="14" end="15" id="24" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+        <node begin="15" end="16" id="25" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
+        <node begin="16" cat="ti" end="23" id="26" rel="su">
+          <node begin="21" end="22" id="27" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="16" cat="inf" end="23" id="28" rel="body">
+            <node begin="16" cat="np" end="19" id="29" rel="obj1">
+              <node begin="16" end="17" id="30" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="17" buiging="met-e" end="18" graad="basis" id="31" lemma="levensbeschouwelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="levensbeschouwelijk" word="levensbeschouwelijke"/>
+              <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="32" lemma="vorming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vorming" word="vorming"/>
+            </node>
+            <node begin="19" end="20" id="33" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+            <node begin="20" end="21" id="34" lemma="achterwege" pos="fixed" postag="BW()" pt="bw" rel="svp" root="achterwege" word="achterwege"/>
+            <node begin="22" buiging="zonder" end="23" id="35" lemma="laten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="laat" word="laten" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Jongeren van 14 tot 17 jaar verkeren in een belangrijke levensfase en het gaat niet aan de levensbeschouwelijke vorming dan achterwege te laten .</sentence>
+</alpino_ds>

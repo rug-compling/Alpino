@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="15" end="16" id="2" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="20" end="21" id="3" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="0" cat="smain" end="27" id="4" rel="--">
+      <node begin="12" end="13" id="5" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+      <node begin="13" cat="np" end="15" id="6" index="1" rel="su">
+        <node begin="13" buiging="met-e" end="14" id="7" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+        <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="8" lemma="monitoring" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="monitoring" word="monitoring"/>
+      </node>
+      <node begin="0" cat="inf" end="27" id="9" rel="vc">
+        <node begin="13" end="15" id="10" index="1" rel="su"/>
+        <node begin="25" buiging="zonder" end="26" id="11" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+        <node begin="0" cat="ppart" end="27" id="12" rel="vc">
+          <node begin="0" cat="cp" end="11" id="13" rel="mod">
+            <node begin="0" conjtype="onder" end="1" id="14" lemma="zodra" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zodra" word="Zodra"/>
+            <node begin="1" cat="ssub" end="11" id="15" rel="body">
+              <node begin="1" cat="np" end="9" id="16" rel="su">
+                <node begin="1" end="2" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="2" buiging="met-e" end="3" graad="basis" id="18" lemma="elektronisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="electronisch" word="elektronische"/>
+                <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="19" lemma="vorm" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vorm" word="vorm"/>
+                <node begin="4" cat="pp" end="9" id="20" rel="mod">
+                  <node begin="4" end="5" id="21" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="5" cat="np" end="9" id="22" rel="obj1">
+                    <node begin="5" end="6" id="23" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                    <node begin="6" cat="mwu" end="9" id="24" rel="hd">
+                      <node begin="6" buiging="zonder" end="7" graad="basis" id="25" lemma="integraal" pos="name" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="Integraal" word="Integraal"/>
+                      <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="26" lemma="dossier" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Dossier" word="Dossier"/>
+                      <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="27" lemma="JGZ" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="JGZ" word="JGZ"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="9" buiging="zonder" end="10" graad="basis" id="28" lemma="beschikbaar" pos="fixed" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="beschikbaar" word="beschikbaar"/>
+              <node begin="10" end="11" id="29" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+            </node>
+          </node>
+          <node begin="13" end="15" id="30" index="1" rel="obj1"/>
+          <node begin="16" cat="pp" end="20" id="31" rel="mod">
+            <node begin="16" end="17" id="32" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
+            <node begin="17" cat="conj" end="20" id="33" rel="obj1">
+              <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="34" lemma="uniformering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="uniformering" word="uniformering"/>
+              <node begin="18" conjtype="neven" end="19" id="35" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="36" lemma="protocollering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="protocollering" word="protocollering"/>
+            </node>
+          </node>
+          <node begin="21" cat="pp" end="25" id="37" rel="mod">
+            <node begin="21" end="22" id="38" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="22" cat="np" end="25" id="39" rel="obj1">
+              <node begin="22" end="23" id="40" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="23" buiging="met-e" end="24" graad="basis" id="41" lemma="efficiënt" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="efficiënt" word="efficiënte"/>
+              <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="42" lemma="wijze" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wijze" word="wijze"/>
+            </node>
+          </node>
+          <node begin="26" buiging="zonder" end="27" id="43" lemma="uitvoeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voer_uit" word="uitgevoerd" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="27" end="28" id="44" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Zodra een elektronische vorm van het Integraal Dossier JGZ beschikbaar komt , kan deze monitoring - na uniformering en protocollering - op een efficiënte wijze worden uitgevoerd .</sentence>
+</alpino_ds>

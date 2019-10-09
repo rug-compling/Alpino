@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ ! $# -eq 1 ]; then
+    echo "Usage: guess_all <search-string> " 1>&2
+    exit 1
+fi
+
+echo $1 | mgquery twnc | $ALPINO_HOME/Names/context "$1" |\
+          $ALPINO_HOME/Names/sents2c45 > $HOME/tmp/a23
+
+$ALPINO_HOME/Names/Create/classify --model=$ALPINO_HOME/Names/Create/ned.train.model --test=$HOME/tmp/a23 -b -w | sort | uniq -c | sort -nr

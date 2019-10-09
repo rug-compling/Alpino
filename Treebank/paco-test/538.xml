@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="12" end="13" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="25" id="2" rel="--">
+      <node begin="3" end="4" frame="verb(unacc,sg3,passive)" id="3" infl="sg3" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt"/>
+      <node begin="0" cat="ppart" end="25" id="4" rel="vc">
+        <node begin="0" cat="pp" end="3" id="5" rel="mod">
+          <node begin="0" end="1" frame="preposition(in,[])" id="6" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="In"/>
+          <node begin="1" cat="np" end="3" id="7" rel="obj1">
+            <node begin="1" end="2" frame="determiner(de,nwh,nmod,pro,nparg)" id="8" infl="de" lcat="detp" pos="det" rel="det" root="die" sense="die" wh="nwh" word="die"/>
+            <node begin="2" end="3" frame="noun(de,count,pl)" gen="de" id="9" lcat="np" num="pl" pos="noun" rel="hd" root="regeling" sense="regeling" word="regelingen"/>
+          </node>
+        </node>
+        <node begin="4" end="5" frame="verb(hebben,psp,sbar)" id="10" infl="psp" lcat="ppart" pos="verb" rel="hd" root="bepaal" sc="sbar" sense="bepaal" word="bepaald"/>
+        <node begin="5" cat="conj" end="25" id="11" rel="vc">
+          <node begin="5" cat="whsub" end="12" id="12" rel="cnj">
+            <node begin="5" cat="np" end="8" id="13" index="1" rel="whd">
+              <node begin="5" end="6" frame="determiner(welke,rwh,nmod,pro,yparg)" id="14" infl="welke" lcat="detp" pos="det" rel="det" root="welk" sense="welk" wh="rwh" word="welke"/>
+              <node begin="6" end="7" frame="noun(de,count,pl,measure)" gen="de" id="15" lcat="np" num="pl" pos="noun" rel="hd" root="categorie" sc="measure" sense="categorie-MEAS" word="categorieën"/>
+              <node begin="7" end="8" frame="noun(de,count,pl)" gen="de" id="16" lcat="np" num="pl" pos="noun" rel="mod" root="persoon" sense="persoon" word="personen"/>
+            </node>
+            <node begin="5" cat="ssub" end="12" id="17" rel="body">
+              <node begin="5" end="8" id="18" index="1" rel="su"/>
+              <node begin="8" cat="pp" end="11" id="19" rel="ld">
+                <node begin="8" end="9" frame="preposition(onder,[door,vandaan])" id="20" lcat="pp" pos="prep" rel="hd" root="onder" sense="onder" word="onder"/>
+                <node begin="9" cat="np" end="11" id="21" rel="obj1">
+                  <node begin="9" end="10" frame="determiner(de)" id="22" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="10" end="11" frame="noun(de,count,pl)" gen="de" id="23" lcat="np" num="pl" pos="noun" rel="hd" root="regeling" sense="regeling" word="regelingen"/>
+                </node>
+              </node>
+              <node begin="11" end="12" frame="verb(unacc,pl,ld_pp)" id="24" infl="pl" lcat="ssub" pos="verb" rel="hd" root="val" sc="ld_pp" sense="val" tense="present" word="vallen"/>
+            </node>
+          </node>
+          <node begin="13" end="14" frame="conj(maar)" id="25" lcat="vg" pos="vg" rel="crd" root="alsmede" sense="alsmede" word="alsmede"/>
+          <node begin="14" cat="whsub" end="25" id="26" rel="cnj">
+            <node begin="14" cat="pp" end="17" id="27" index="2" rel="whd">
+              <node begin="14" end="15" frame="preposition(op,[af,na])" id="28" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+              <node begin="15" cat="np" end="17" id="29" rel="obj1">
+                <node begin="15" end="16" frame="determiner(welke,rwh,nmod,pro,yparg)" id="30" infl="welke" lcat="detp" pos="det" rel="det" root="welk" sense="welk" wh="rwh" word="welke"/>
+                <node begin="16" end="17" frame="noun(de,count,sg)" gen="de" id="31" lcat="np" num="sg" pos="noun" rel="hd" root="wijze" sense="wijze" word="wijze"/>
+              </node>
+            </node>
+            <node begin="14" cat="ssub" end="25" id="32" rel="body">
+              <node begin="17" cat="conj" end="22" id="33" index="3" rel="su">
+                <node begin="17" cat="np" end="19" id="34" rel="cnj">
+                  <node begin="17" end="18" frame="determiner(de)" id="35" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="18" end="19" frame="noun(de,count,sg)" gen="de" id="36" lcat="np" num="sg" pos="noun" rel="hd" root="overname" sense="overname" word="overname"/>
+                </node>
+                <node begin="19" end="20" frame="conj(en)" id="37" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                <node begin="20" cat="np" end="22" id="38" rel="cnj">
+                  <node begin="20" end="21" frame="determiner(de)" id="39" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="21" end="22" frame="noun(de,mass,sg)" gen="de" id="40" lcat="np" num="sg" pos="noun" rel="hd" root="terugkeer" sense="terugkeer" word="terugkeer"/>
+                </node>
+              </node>
+              <node begin="22" end="23" frame="verb(hebben,pl,aux(te))" id="41" infl="pl" lcat="ssub" pos="verb" rel="hd" root="dien" sc="aux(te)" sense="dien" tense="present" word="dienen"/>
+              <node begin="14" cat="ti" end="25" id="42" rel="vc">
+                <node begin="23" end="24" frame="complementizer(te)" id="43" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+                <node begin="14" cat="inf" end="25" id="44" rel="body">
+                  <node begin="14" end="17" id="45" index="2" rel="mod"/>
+                  <node begin="17" end="22" id="46" index="3" rel="su"/>
+                  <node begin="24" end="25" frame="verb(unacc,inf,intransitive)" id="47" infl="inf" lcat="inf" pos="verb" rel="hd" root="geschied" sc="intransitive" sense="geschied" word="geschieden"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="25" end="26" frame="punct(punt)" id="48" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>In die regelingen wordt bepaald welke categorieën personen onder de regelingen vallen , alsmede op welke wijze de overname en de terugkeer dienen te geschieden .</sentence>
+  <comments>
+    <comment>Q#538|In die regelingen wordt bepaald welke categorieën personen onder de regelingen vallen , alsmede op welke wijze de overname en de terugkeer dienen te geschieden .|1|1|1.58265964771986</comment>
+  </comments>
+</alpino_ds>

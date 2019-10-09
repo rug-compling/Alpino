@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="32" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="11" end="12" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="18" end="19" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="22" end="23" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="31" id="5" rel="--">
+      <node begin="0" cat="cp" end="5" id="6" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="7" lemma="doordat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="doordat" word="doordat"/>
+        <node begin="1" cat="ssub" end="5" id="8" rel="body">
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="9" lemma="Nederland" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Nederland" word="Nederland"/>
+          <node begin="2" cat="np" end="4" id="10" rel="predc">
+            <node begin="2" end="3" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="12" lemma="koopmansrepubliek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="republiek" word="koopmansrepubliek"/>
+          </node>
+          <node begin="4" end="5" id="13" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="14" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
+      <node begin="7" end="8" genus="onz" getal="ev" id="15" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="8" cat="np" end="31" id="16" rel="obj1">
+        <node begin="8" buiging="zonder" end="9" id="17" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+        <node begin="9" buiging="met-e" end="10" graad="basis" id="18" lemma="absoluut" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="absoluut" word="absolute"/>
+        <node begin="10" end="11" getal="mv" graad="basis" id="19" lemma="koning" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="koning" word="koningen"/>
+        <node begin="12" cat="rel" end="31" id="20" rel="mod">
+          <node begin="12" end="13" getal="getal" id="21" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+          <node begin="12" cat="ssub" end="31" id="22" rel="body">
+            <node begin="12" end="13" id="23" index="1" rel="su"/>
+            <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="24" lemma="Amsterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Amsterdam" word="Amsterdam"/>
+            <node begin="14" end="15" id="25" lemma="versieren" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="versier" word="versierden" wvorm="pv"/>
+            <node begin="15" cat="pp" end="22" id="26" rel="pc">
+              <node begin="15" end="16" id="27" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+              <node begin="16" cat="conj" end="22" id="28" rel="obj1">
+                <node begin="16" cat="np" end="18" id="29" rel="cnj">
+                  <node begin="16" buiging="met-e" end="17" graad="basis" id="30" index="2" lemma="luisterrijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="luisterrijk" word="luisterrijke"/>
+                  <node begin="17" end="18" getal="mv" graad="basis" id="31" lemma="kerk" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kerk" word="kerken"/>
+                </node>
+                <node begin="16" cat="np" end="20" id="32" rel="cnj">
+                  <node begin="16" end="17" id="33" index="2" rel="mod"/>
+                  <node begin="19" end="20" getal="mv" graad="basis" id="34" lemma="park" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="park" word="parken"/>
+                </node>
+                <node begin="20" conjtype="neven" end="21" id="35" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                <node begin="16" cat="np" end="22" id="36" rel="cnj">
+                  <node begin="16" end="17" id="37" index="2" rel="mod"/>
+                  <node begin="21" end="22" getal="mv" graad="basis" id="38" lemma="paleis" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="paleis" word="paleizen"/>
+                </node>
+              </node>
+            </node>
+            <node begin="23" cat="cp" end="31" id="39" rel="mod">
+              <node begin="23" conjtype="onder" end="24" id="40" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="zoals"/>
+              <node begin="24" cat="ssub" end="31" id="41" rel="body">
+                <node begin="24" cat="np" end="26" id="42" index="3" rel="su">
+                  <node begin="24" end="25" id="43" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="25" end="26" getal="mv" graad="basis" id="44" lemma="Habsburger" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="burger" word="Habsburgers"/>
+                </node>
+                <node begin="27" end="28" id="45" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+                <node begin="24" cat="ppart" end="31" id="46" rel="vc">
+                  <node begin="24" end="26" id="47" index="3" rel="su"/>
+                  <node begin="26" end="27" getal="ev" id="48" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" word="dat"/>
+                  <node begin="28" buiging="zonder" end="29" id="49" lemma="doen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="doe" word="gedaan" wvorm="vd"/>
+                  <node begin="29" cat="pp" end="31" id="50" rel="mod">
+                    <node begin="29" end="30" id="51" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                    <node begin="30" end="31" genus="onz" getal="ev" graad="basis" id="52" lemma="Wenen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Wenen" word="Wenen"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="31" end="32" id="53" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>doordat Nederland een koopmansrepubliek was , had het geen absolute koningen , die Amsterdam versierden met luisterrijke kerken , parken en paleizen , zoals de Habsburgers dat hebben gedaan met Wenen .</sentence>
+</alpino_ds>

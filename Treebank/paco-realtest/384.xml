@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="11" end="12" id="1" pos="punct" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="25" id="2" rel="--">
+      <node begin="0" cat="pp" end="3" id="3" rel="mod">
+        <node begin="0" end="1" id="4" pos="prep" rel="hd" root="over" word="Over"/>
+        <node begin="1" cat="np" end="3" id="5" rel="obj1">
+          <node begin="1" end="2" id="6" infl="het" pos="det" rel="det" root="het" wh="nwh" word="het"/>
+          <node begin="2" end="3" gen="het" id="7" num="sg" pos="noun" rel="hd" root="algemeen" word="algemeen"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="8" infl="pl" pos="verb" rel="hd" root="breng" sc="fixed([[in,beeld],acc],norm_passive)" tense="present" word="brengen"/>
+      <node begin="4" cat="np" end="6" id="9" rel="su">
+        <node begin="4" end="5" id="10" infl="de" pos="det" rel="det" root="de" word="de"/>
+        <node begin="5" end="6" gen="het" id="11" num="pl" pos="noun" rel="hd" root="medium" word="media"/>
+      </node>
+      <node begin="6" end="7" id="12" pos="adv" rel="mod" root="vooral" word="vooral"/>
+      <node begin="7" cat="np" end="9" id="13" rel="obj1">
+        <node aform="base" begin="7" end="8" id="14" infl="e" pos="adj" rel="mod" root="mondig" vform="adj" word="mondige"/>
+        <node begin="8" end="9" gen="het" id="15" num="pl" pos="noun" rel="hd" root="kind" word="kinderen"/>
+      </node>
+      <node begin="9" cat="mwu" end="11" id="16" mwu_root="in_beeld" mwu_sense="in_beeld" rel="svp">
+        <node begin="9" end="10" id="17" pos="fixed" rel="mwp" root="in" word="in"/>
+        <node begin="10" end="11" id="18" pos="fixed" rel="mwp" root="beeld" word="beeld"/>
+      </node>
+      <node begin="12" cat="cp" end="25" id="19" rel="mod">
+        <node begin="12" end="13" id="20" pos="comp" rel="cmp" root="al" sc="al" word="al"/>
+        <node begin="13" cat="sv1" end="25" id="21" rel="body">
+          <node begin="13" end="14" id="22" infl="sg_heeft" pos="verb" rel="hd" root="ben" sc="copula_sbar" tense="present" word="is"/>
+          <node begin="14" end="15" id="23" pos="noun" rel="sup" root="het" special="het" word="het"/>
+          <node aform="base" begin="15" end="16" id="24" infl="no_e" pos="adj" rel="predc" root="duidelijk" sc="subject_sbar_no_het" vform="adj" word="duidelijk"/>
+          <node begin="16" cat="cp" end="25" id="25" rel="su">
+            <node begin="16" end="17" id="26" pos="comp" rel="cmp" root="dat" sc="dat" word="dat"/>
+            <node begin="17" cat="ssub" end="25" id="27" rel="body">
+              <node begin="17" cat="np" end="21" id="28" index="1" rel="su">
+                <node aform="base" begin="17" end="18" id="29" infl="e" pos="adj" rel="mod" root="kritisch" vform="adj" word="kritische"/>
+                <node begin="18" end="19" gen="de" id="30" num="pl" pos="noun" rel="hd" root="bedenking" word="bedenkingen"/>
+                <node begin="19" cat="pp" end="21" id="31" rel="mod">
+                  <node begin="19" end="20" id="32" pos="prep" rel="hd" root="van" word="van"/>
+                  <node begin="20" end="21" gen="het" id="33" num="pl" pos="noun" rel="obj1" root="kind" word="kinderen"/>
+                </node>
+              </node>
+              <node begin="17" cat="ppart" end="24" id="34" rel="vc">
+                <node begin="17" end="21" id="35" index="1" rel="obj1"/>
+                <node aform="base" begin="21" end="22" id="36" infl="both" pos="adj" rel="mod" root="zelden" vform="adj" word="zelden"/>
+                <node aform="base" begin="22" end="23" id="37" infl="no_e" pos="adj" rel="predc" root="ernstig" vform="adj" word="ernstig"/>
+                <node begin="23" end="24" id="38" infl="psp" pos="verb" rel="hd" root="neem" sc="nonp_pred_np" word="genomen"/>
+              </node>
+              <node begin="24" end="25" id="39" infl="pl" pos="verb" rel="hd" root="word" sc="passive" tense="present" word="worden"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="25" end="26" id="40" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Over het algemeen brengen de media vooral mondige kinderen in beeld , al is het duidelijk dat kritische bedenkingen van kinderen zelden ernstig genomen worden .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

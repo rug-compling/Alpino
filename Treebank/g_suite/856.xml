@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="cp" end="4" id="1" rel="--">
+      <node begin="0" cat="mwu" end="2" id="2" rel="cmp">
+        <node begin="0" end="1" id="3" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mwp" root="zo" word="Zo"/>
+        <node begin="1" end="2" id="4" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mwp" root="niet" word="niet"/>
+      </node>
+      <node begin="2" cat="np" end="4" id="5" rel="body">
+        <node begin="2" end="3" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="Nederlander" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Nederlander" word="Nederlanders"/>
+      </node>
+    </node>
+    <node begin="4" end="5" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Zo niet de Nederlanders .</sentence>
+</alpino_ds>

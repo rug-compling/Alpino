@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="noun" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="Je"/>
+      <node begin="1" end="2" id="3" lemma="zien" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zie" word="ziet" wvorm="pv"/>
+      <node begin="2" end="3" getal="getal" id="4" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" status="vol" vwtype="aanw" word="hier"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="5" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="vaak" word="vaak"/>
+      <node begin="4" cat="np" end="8" id="6" index="1" rel="obj1">
+        <node begin="4" end="5" getal="mv" graad="basis" id="7" lemma="meeuw" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="meeuw" word="meeuwen"/>
+        <node begin="5" cat="pp" end="8" id="8" rel="mod">
+          <node begin="5" end="6" id="9" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="6" cat="np" end="8" id="10" rel="obj1">
+            <node begin="6" buiging="met-e" end="7" graad="basis" id="11" lemma="bruin" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="bruin" word="bruine"/>
+            <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="12" lemma="bekken" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bek" word="bekken"/>
+          </node>
+        </node>
+      </node>
+      <node begin="4" cat="inf" end="9" id="13" rel="vc">
+        <node begin="4" end="8" id="14" index="1" rel="su"/>
+        <node begin="8" buiging="zonder" end="9" id="15" lemma="rondvliegen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vlieg" word="rondvliegen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Je ziet hier vaak meeuwen met bruine bekken rondvliegen .</sentence>
+</alpino_ds>

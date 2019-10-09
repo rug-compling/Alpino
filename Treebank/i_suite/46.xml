@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" cat="cp" end="3" id="2" index="1" rel="whd">
+        <node begin="0" conjtype="onder" end="1" id="3" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+        <node begin="1" cat="np" end="3" id="4" rel="body">
+          <node begin="1" end="2" getal="ev" id="5" lemma="wie" naamval="gen" pdtype="pron" persoon="3m" pos="det" postag="VNW(vb,pron,gen,vol,3m,ev)" pt="vnw" rel="det" root="wie" status="vol" vwtype="vb" word="wiens"/>
+          <node begin="2" end="3" genus="onz" getal="ev" graad="dim" id="6" lemma="vriendin" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="vriendin_DIM" word="vriendinnetje"/>
+        </node>
+      </node>
+      <node begin="0" cat="sv1" end="6" id="7" rel="body">
+        <node begin="0" end="3" id="8" index="1" rel="predc"/>
+        <node begin="3" end="4" id="9" lemma="kennen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ken" word="kende" wvorm="pv"/>
+        <node begin="4" end="5" getal="getal" id="10" lemma="u" naamval="nomin" pdtype="pron" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" root="u" status="vol" vwtype="pers" word="u"/>
+        <node begin="5" end="6" genus="fem" getal="getal" id="11" lemma="haar" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,getal,fem)" pt="vnw" rel="obj1" root="haar" status="vol" vwtype="pers" word="haar"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Als wiens vriendinnetje kende u haar ?</sentence>
+</alpino_ds>

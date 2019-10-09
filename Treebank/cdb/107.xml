@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="1" cat="smain" end="15" id="2" rel="--">
+      <node begin="1" cat="conj" end="11" id="3" rel="su">
+        <node begin="1" cat="np" end="4" id="4" rel="cnj">
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+          <node begin="2" buiging="met-e" end="3" graad="basis" id="6" lemma="Russisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Russisch" word="Russische"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="ambassade" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ambassade" word="ambassade"/>
+        </node>
+        <node begin="4" conjtype="neven" end="5" id="8" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="5" cat="np" end="11" id="9" rel="cnj">
+          <node begin="5" end="6" id="10" lemma="vooral" pos="adv" postag="BW()" pt="bw" rel="mod" root="vooral" word="vooral"/>
+          <node begin="6" end="7" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="12" lemma="departement" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="departement" word="departement"/>
+          <node begin="8" cat="pp" end="11" id="13" rel="mod">
+            <node begin="8" end="9" id="14" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="9" cat="mwu" end="11" id="15" rel="obj1">
+              <node begin="9" buiging="met-e" end="10" graad="basis" id="16" lemma="buitenlands" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Buitenlandse" word="Buitenlandse"/>
+              <node begin="10" end="11" getal="mv" graad="basis" id="17" lemma="zaak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Zaken" word="Zaken"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="11" end="12" id="18" lemma="doen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="doe" word="deden" wvorm="pv"/>
+      <node begin="12" buiging="zonder" end="13" graad="basis" id="19" lemma="veel" naamval="stan" pdtype="grad" pos="num" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="obj1" root="veel" vwtype="onbep" word="veel"/>
+      <node begin="13" cat="pp" end="15" id="20" rel="mod">
+        <node begin="13" end="14" id="21" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+        <node begin="14" end="15" getal="mv" id="22" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj1" root="ons" status="vol" vwtype="pr" word="ons"/>
+      </node>
+    </node>
+    <node begin="15" end="16" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&quot; De Russische ambassade en vooral het departement van Buitenlandse Zaken deden veel voor ons .</sentence>
+</alpino_ds>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="np" end="6" id="1" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="lijst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="lijst" word="Lijst"/>
+      <node begin="1" cat="pp" end="6" id="3" rel="mod">
+        <node begin="1" end="2" id="4" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="2" cat="np" end="6" id="5" rel="obj1">
+          <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="persoon" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="persoon" word="personen"/>
+          <node begin="3" cat="ppart" end="6" id="7" rel="mod">
+            <node begin="3" buiging="zonder" end="4" id="8" lemma="overlijden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="overleden" word="overleden" wvorm="vd"/>
+            <node begin="4" cat="pp" end="6" id="9" rel="mod">
+              <node begin="4" end="5" id="10" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="5" end="6" id="11" lemma="1983" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1983" word="1983"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Lijst van personen overleden in 1983</sentence>
+</alpino_ds>

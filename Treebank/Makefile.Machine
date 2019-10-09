@@ -1,0 +1,154 @@
+SUITES=$(ALPINO_HOME)/Suites/Machine
+
+include $(ALPINO_HOME)/Makefile.errormining
+include $(ALPINO_HOME)/Makefile.triples
+include $(ALPINO_HOME)/Makefile.hpc
+
+#miniact=act
+miniact=$(ALPINO_HOME)/bin/miniact
+
+MIN=0
+MAX=0
+annotate:
+	mkdir -p $(DISK)/$(suite)
+	rm -f $(DISK)/$(suite)/*
+	zcat $(SUITES)/$(suite).sents.gz | \
+        $(ALPINO_HOME)/src/Alpino -notk cmdint=off\
+          -veryfast\
+          user_max=190000 debug=1\
+          min_sentence_length=$(MIN)\
+          max_sentence_length=$(MAX)\
+          xml_format_frame=on\
+          xml_format_failed_parse=on\
+          display_main_parts=off\
+          parse_unannotated_only=off\
+          -flag suite undefined\
+          -flag treebank $(DISK)/$(suite)\
+          demo=off\
+          end_hook=xml $(extra) -parse 2>> $(DISK)/$(suite).log
+	$(miniact) -c $(DISK)/$(suite)
+	-$(MAKE) e LOGS=$(DISK)/$(suite).log > $(DISK)/$(suite).errors
+	gzip -f $(DISK)/$(suite).log
+	rm -rf $(DISK)/$(suite)
+	mv $(DISK)/$(suite).* .
+
+
+dump:
+	echo '<?xml version="1.0" encoding="UTF-8"?>'
+	echo "<alpino_ds_list>"
+	zcat $(SUITES)/$(suite).sents.gz | \
+        $(ALPINO_HOME)/src/Alpino -notk cmdint=off\
+          -veryfast\
+          user_max=190000 debug=1\
+          min_sentence_length=$(MIN)\
+          max_sentence_length=$(MAX)\
+	  xml_format_header=off\
+          xml_format_frame=on\
+          xml_format_failed_parse=on\
+          display_main_parts=off\
+          parse_unannotated_only=off\
+          -flag suite undefined\
+          demo=off\
+          end_hook=dump_xml $(extra) -parse 
+	echo "</alpino_ds_list>"
+
+finish:
+	$(miniact) -c $(DISK)/$(suite)
+	-$(MAKE) e LOGS=$(DISK)/$(suite).log > $(DISK)/$(suite).errors
+	gzip -f $(DISK)/$(suite).log
+	rm -rf $(DISK)/$(suite)
+	mv $(DISK)/$(suite).* .
+
+
+annotatemore:
+#	mkdir -p ./$(suite)
+#	rm -f ./$(suite)/*
+	zcat $(SUITES)/$(suite).sents.gz | \
+        $(ALPINO_HOME)/src/Alpino -notk cmdint=off\
+          -veryfast\
+          user_max=190000 debug=1\
+          min_sentence_length=$(MIN)\
+          max_sentence_length=$(MAX)\
+          xml_format_frame=on\
+          xml_format_failed_parse=on\
+          display_main_parts=off\
+          parse_unannotated_only=on\
+          -flag suite undefined\
+          -flag treebank ./$(suite)\
+          demo=off\
+          end_hook=xml $(extra) -parse 2>> ./$(suite).log
+	$(miniact) -c ./$(suite)
+	-$(MAKE) e LOGS=./$(suite).log > ./$(suite).errors
+	gzip -f ./$(suite).log
+	rm -rf ./$(suite)
+
+annotate_for_humans:
+	$(MAKE) annotate extra="end_hook=xml_without_comments xml_format_frame=off $(extra)"
+
+
+HPCTARGET=annotate
+
+sometriples:
+	make wikipedian.triples TRIPLES_TARGET=wikipedian
+	make mediargus.triples TRIPLES_TARGET=mediargus
+	make clefn.triples TRIPLES_TARGET=clefn
+	make europarl3.triples TRIPLES_TARGET=europarl3
+
+restart:
+	gunzip $(suite).log.gz
+	$(miniact) -x $(suite)
+	rm -f $(suite).data.dz
+	rm -f $(suite).index
+	make annotate suite=$(suite)
+
+restart0:
+	gunzip $(suite).log.gz
+	$(miniact) -x $(suite)
+	rm -f $(suite).data.dz
+	rm -f $(suite).index
+
+missing:
+	@$(MAKE) --no-print-directory missing0 2>/dev/null
+
+missing0:
+	@echo suite: `( cd $(SUITES) ; ls $(FILES:%=%.sents.gz) | wc )`
+	@echo index: `ls $(FILES:%=%.index) | wc`
+	@echo data: `ls $(FILES:%=%.data.dz)  | wc`
+	@echo log: `ls $(FILES:%=%.log.gz) | wc`
+
+missing-suites:
+	@$(MAKE) --no-print-directory missing0 2>&1 \
+        | grep '^ls: cannot access' \
+        | awk '{ print $$4 }' \
+        | awk -F. '{ print $$1 }' \
+        | sort -u
+
+
+#cpu1=${shell ls -t $(suite)$(part)/*/log?|head -n 1}
+#cpu2=$(prefix)$(suite)$(part)/time
+
+compare_la:
+	@grep 'Lexical analysis' $(cpu1) | awk '{ print $$17 }' >$(TMPDIR)/.l1
+	@grep 'Lexical analysis' $(cpu2)| awk '{ print $$17 }' >$(TMPDIR)/.l2 
+	@grep '**** parsing ' $(cpu1) | awk '{ print $$3 }' > $(TMPDIR)/.l3
+	@echo "NEW	PREV		ITEM"
+	@paste $(TMPDIR)/.l1 $(TMPDIR)/.l2 $(TMPDIR)/.l3 |\
+          awk 'BEGIN {I=1}                                                  \
+                     { if (NF==3) {                                         \
+                          if ($$1>1.1*$$2 && $$1>500)                      \
+                             { F="???" };                                   \
+                          if ($$2>1.1*$$1 && $$2>500)                      \
+                             { F="!!!" };                                   \
+                          if(F) { print $$1 "\t" $$2 "\t\t" $$3 "\t" F "\t" $$1/$$2}    \
+                          F="";                                             \
+                          I=I+1;                                            \
+                          N=N+$$1;                                          \
+                          M=M+$$2 }                                         \
+                     }                                                      \
+               END {print "------------";                                   \
+                    print "AVERAGES after " I-1 " sentences";               \
+                    print "AV " N/(I-1) "\t" M/(I-1) "\t\t\t" (N/(I-1))/(M/(I-1)) "\t\t$(cpu1)"; \
+                    print "================================================";           \
+                   }' 
+
+

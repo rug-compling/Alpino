@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="0" cat="smain" end="22" id="1" rel="--">
+      <node begin="0" cat="np" end="7" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" id="4" lemma="één" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="eerste" word="eerste"/>
+        <node begin="2" end="3" id="5" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="6" lemma="maanden" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="maand" word="maanden"/>
+        <node begin="4" cat="pp" end="7" id="7" rel="mod">
+          <node begin="4" end="5" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="5" cat="np" end="7" id="9" rel="obj1">
+            <node begin="5" buiging="zonder" end="6" id="10" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+            <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="11" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="12" lemma="geven" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="geef" word="geven" wvorm="pv"/>
+      <node begin="8" cat="pp" end="15" id="13" rel="mod">
+        <node begin="8" cat="mwu" end="11" id="14" rel="hd">
+          <node begin="8" end="9" id="15" lemma="te" pos="prep" postag="VZ(versm)" pt="vz" rel="mwp" root="ten" vztype="versm" word="ten"/>
+          <node begin="9" end="10" getal="ev" graad="basis" id="16" lemma="opzicht" naamval="dat" ntype="soort" pos="prep" postag="N(soort,ev,basis,dat)" pt="n" rel="mwp" root="opzichte" word="opzichte"/>
+          <node begin="10" end="11" id="17" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+        </node>
+        <node begin="11" cat="np" end="15" id="18" rel="obj1">
+          <node begin="11" buiging="zonder" end="12" graad="basis" id="19" lemma="dezelfde" pos="det" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="det" root="dezelfde" word="dezelfde"/>
+          <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="20" lemma="periode" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="periode" word="periode"/>
+          <node begin="13" cat="pp" end="15" id="21" rel="mod">
+            <node begin="13" end="14" id="22" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="14" end="15" id="23" lemma="1969" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1969" word="1969"/>
+          </node>
+        </node>
+      </node>
+      <node begin="15" cat="ti" end="22" id="24" rel="vc">
+        <node begin="20" end="21" id="25" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="15" cat="inf" end="22" id="26" rel="body">
+          <node begin="15" cat="np" end="20" id="27" rel="obj1">
+            <node begin="15" end="16" id="28" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="29" lemma="stijging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stijging" word="stijging"/>
+            <node begin="17" cat="pp" end="20" id="30" rel="mod">
+              <node begin="17" end="18" id="31" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="18" cat="np" end="20" id="32" rel="obj1">
+                <node begin="18" end="19" id="33" lemma="30" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="30" word="30"/>
+                <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="34" lemma="procent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="procent" word="procent"/>
+              </node>
+            </node>
+          </node>
+          <node begin="21" buiging="zonder" end="22" id="35" lemma="zien" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zie" word="zien" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De eerste twee maanden van dit jaar geven ten opzichte van dezelfde periode van 1969 een stijging van 30 procent te zien .</sentence>
+</alpino_ds>

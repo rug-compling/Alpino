@@ -1,0 +1,123 @@
+#!/usr/bin/perl -w
+
+use FindBin;
+use lib $FindBin::Bin;        # this will turn out to be the current directory!
+
+
+while (<>) {
+    @features = ();
+    for($i=0;$i<34;$i++) { $features[$i] = "";}
+    chomp;	
+    s/,/COMMA/g;
+    ($cat,$words,$lc2,$lc,undef,undef)=split(/\|/);
+    @words=split(' ',$words);
+    $features[0] = lc($lc);
+    $features[31] = lc($lc2);
+
+    if ($words =~ /[0-9][0-9][0-9][0-9]/) {
+	$features[1] = "year";
+    } elsif ($words =~ /[0-9]/) {
+	$features[1] = "num";
+    } 
+    if ($words =~ /^[a-z][^ ]*[-][A-Z]/) {
+	$features[2] = "x-Y";
+    } elsif ($words =~ /^[A-Z][^ ]*[-][a-z]/) {
+	$features[2] = "X-y";
+    } elsif ($words =~ /-/) {
+	$features[2] = "X-Y"
+    }
+    if ($words =~ /[\']/) {
+	$features[3] = "dash";
+    }
+    if ($words =~ /[&]/) {
+	$features[4] = "ampersand";
+    }
+    if ($words =~ / en /) {
+	$features[5] = "en";
+    }
+    if ($words =~ / voor /) {
+	$features[6] = "voor";
+    }
+    if ($words =~ /[A-Z][.] [A-Z]/) {
+	$features[7] = "initiaal";
+    }
+
+    $tail = substr $words,-1;
+    $features[8] = "$tail";
+    $tail = substr $words,-2;
+    $features[9] = "$tail";
+    $tail = substr $words,-5;
+    $features[10] = "$tail";
+    $head = substr $words,0,4;
+    $features[11] = "$head";
+
+    $features[12] = "$words";
+    for ($i=0;$i<5;$i++) {
+	if($words[$i]) {
+	    $features[13+$i] = "$words[$i]";
+	} 
+    }
+
+    for ($i=0;$i<5;$i++) {
+	if($words[$i]) {
+	    if (lc($words[$i]) eq $words[$i]) {
+		$features[18+$i] = "l";
+	    } elsif (uc($words[$i]) eq $words[$i]) {
+		$features[18+$i] = "u";
+	    } else {
+		$features[18+$i] = "m";
+	    }
+	}
+    }
+   
+    $r = "";
+    foreach $w (@words) {
+	if (lc($w) eq $w) {
+	    $r = $r."l";
+	} elsif (uc($w) eq $w) {
+	    $r = $r."u";
+	} else {
+	    $r = $r."m";
+	}
+    }
+    $features[23] = $r;
+
+    if ($words =~ /\bbv\b|\bnv\b|\bb[.]v[.]\b|\bn[.]v[.]\b|\bb[.]v\b|\bn[.]v\b|bureau|unie|commissie|commission|dagblad|instituut|werken|gelegenheden|onderwijs|bank|school|universiteit|aviation|unie|zaken|invest|gemeenschap|radio|televisie|raad|bescherming|agentschap|maatschappij|team\b|parlement|organisatie|organisation|beweging|orkest|technology|newspaper|magazine|groep|kwartet|trio\bshops|airways|trade|partij|centrum|vereniging|news|dienst|telecom|\bair\b|orgaan|overleg|administratie|corporation|group|holding|fund|academie|academy|university|bureau|companies|company|genootschap|college|center|enterprise|technologies|automatisering|brigade|bedrijf|stichting|koninklijk|internationa|society|ontwikkeling|uitgever|onderzoek|wetenschap|club|media|pharma|fonds|service|industrie|product|ontwikkel|platform|forum|centrale|federatie|federation|journal\b|business|systems|divisi|toezicht|instrument|foundation|gymnasium|lyceum|gasthuis|comit|\borde\b|association|associatie|philharm|orchest|orkest|uitg[.]|\bhof\b|venture|front|omroep|bescherming|bond|council|partido|unlimited|leefbaar|institute\b|netwerk\b|agency|network\b|[kc]orps|party|dispuut|gezelschap|alliantie|rundfunk|railway|lloyd|ltd|inc[.]/io) {
+	$features[24] = "org";
+    }
+    if ($words =~ /stadium|piazza|plaza|\brue\b|berg\b|basiliek|kerk\b|garden\b|eiland|kerke|kapelle|plein\b|land\b|route\b|\bcol\bstadion|museum|theater|kathedraal|straat\b|oceaan|zee\b|rivier\b|kanaal\b|maison|square|avenue|weg\b|village|pavillon|huis\b|hotel|restaurant|airport|paleis|luchthaven|vliegveld|markt|center|ziekenhuis|hospitaal|regio\b|county/io) {
+	$features[25] = "loc";
+    }
+    if ($words =~ /verdrag|conferentie|conference|toernooi|tournament|festival|prijs|show|prijzen|disease|disorder|bachelor|verordening|\bwet\b|\bact\b|\bGP\b/io) {
+	$features[26] = "misc";
+    }
+
+    if ($lc =~ /kampioen\b|voorzitter\b|jarige\b|kanselier\b|saxofonist\b|prins\b|prinses\b|regisseur\b|regiseusse\b|broer\b|zus\b|geneticus\b|leider\b|baas\b|generaal\b|trainer\b|coach\b|zanger\b|acteur\b|actrice\b|voorzitter\b|rechter\b|weduwe\b|presentator\b|president\b|minister\b|vriend\b|woordvoerder\b|rivaal\b|fotograaf\b|commissaris\b|magnaat\b|speler\b|senator\b|kanselier\b|gebroeders\b|kampioen\b|oplichter\b|dictator\b|fransman\b|missionaris\b|gouverneur\b|architect\b|couturier\b|overste\b|doelman\b|voetballer\b|advocate\b|advocaat\b|componist\b|bouwvakker\b|galeriehouder\b|paus\b|professor\b|cineast\b|handelaar\b|gezel\b|beeldhouwer\b|kamerlid\b|theatermaker\b|voorganger\b|docent\b|kunstenaar\b|historicus\b|coördinator\b|schrijver\b|auteur\b|zakenman\b|bevelhebber\b|producent\b|echtpaar\b|hongaar\b|italiaan\b|duitser\b|engelsman\b|amerikaan\b|belg\b|nederlander\b|fries\b|argentijn\b|australiër\b|zweed\b|premier\b|landgenoot\b|lid\b|percussionist\b|commandant\b|manager\b|directeur\b|braziliaan\b|'er\b|'er\b|'er\b|keizer\b|secretaris\b|therapeut\b|dokter\b|arts\b|meester\b|activist\b|mevrouw\b|meneer\b|topman\b|kundige\b|bestuurder\b|krijgsheer\b|leraar\b|lerares\b|verloofde\b|onderhandelaar\b|verslaggever\b|verslaggeefster\b|wethouder\b|collega\b|koning\b|koningin\b|vrouw\b|bisschop\b|dochter\b|verdediger\b|filosoof\b|moeder\b|vader\b|pianist\b|dominee\b|zangeres\b|zanger\b|redacteur\b|invaller\b|voorganger\b|woordvoerster\b|gedeputeerde\b|schilder\b|fotograaf\b|historicus\b|oom\b|tante\b|aanvoerder\b|psychiater\b|chef\b/io) {
+	$features[27] = "per";
+    }
+
+    if ($lc =~ /commissie\b|partij\b|agentschap\b|krant\b|blad\b|tijdschrift\b|bedrijf\b|vennootschap\b|stichting\b|bureau\b|merk\b|holding\b|uitgever\b|uitgeverij\b|fabrikant\b|concern\b|maatschappij\b|exploitant\b|producent\b|omroep\b|bond\b|federatie\b|brouwer\b|club\b|bouwer\b|partij\b|organisatie\b|verzekeraar\b|fonds\b|concern\b|fabriek\b|waterschap\b|marktleider\b|groep\b|gigant\b|dienst\b|orkest\b|partij\b|departement\b|projectontwikkelaar\b|keten\b|coörperatie\b|team\b|automatiseerder\b|vereniging\b|institute\b|netwerk\b|agency|network\b|instituut\b/io) {
+	$features[28] = "org";
+    }
+
+    if ($lc =~ /stadje\b|dorpje\b|district\b|camping\b|provincie\b|theatre\b|theater\b|stad\b|dorp\b|galerie\b|restaurant\b|tehuis\b|wijk\b|eiland\b|rivier\b|café\b|hartje\b|plein\b|paviljoen\b|kuuroord\b|bestemming\b|gebied\b|voormalige\b|staat\b|staten\b|gemeente\b|provincie\b|terrein\b|graafschap\b|luchthaven\b|vliegveld\b|district\b|vliegbasis\b|streek\b|bisdom\b|berg\b|republiek\b|regio\b|buurland\b|bos\b|woud\b|woonplaats\b|plaats/io) {
+	$features[29] = "loc";
+    }
+
+    if ($lc =~ /film\b|toneelstuk\b|reportage\b|\bwet\b|agreement|handvest|productie\b|tentoonstelling\b|festival\b|registratie\b|symfonie\b|project\b|drama\b|documentaire\b|voorstelling\b|programma\b|serie\b|cyclus\b|album\b|roman\b|operatie\b|werk\b|reeks\b|boek\b|manifestatie\b|komedie\b|elpee\b|CD\b/io) {
+	$features[30] = "misc";
+    }
+
+    if ($words =~ /^.[bcdfghjklmnpqrstvwxz]{1,}$/o) {
+       $features[32] = "novowels";
+    } 
+
+    if ($words =~ /^[bcdfghjklmnpqrstvwxz]{2,}$/io) {
+       $features[33] = "novowels";
+    } 
+
+    $features[34] = "$cat\n";
+
+    $|=1;
+    print join ",",@features;
+}

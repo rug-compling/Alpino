@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="sv1" end="5" id="1" rel="--">
+      <node begin="0" end="1" frame="verb(hebben,sg_hebt,modifier(aux(inf)))" id="2" infl="sg_hebt" lcat="sv1" pos="verb" rel="hd" root="wil" sc="modifier(aux(inf))" sense="wil" tense="present" word="Wilt"/>
+      <node begin="1" case="both" def="def" end="2" frame="pronoun(nwh,u,sg,de,both,def)" gen="de" id="3" index="1" lcat="np" num="sg" per="u" pos="pron" rel="su" root="u" sense="u" wh="nwh" word="u"/>
+      <node begin="1" cat="inf" end="5" id="4" rel="vc">
+        <node begin="1" end="2" id="5" index="1" rel="su"/>
+        <node begin="2" cat="np" end="4" id="6" rel="obj1">
+          <node begin="2" end="3" frame="determiner(de)" id="7" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="3" end="4" frame="noun(de,count,pl)" gen="de" id="8" lcat="np" num="pl" pos="noun" rel="hd" root="wijziging" sense="wijziging" word="wijzigingen"/>
+        </node>
+        <node begin="4" end="5" frame="verb(hebben,inf,ninv(transitive,part_transitive(op)))" id="9" infl="inf" lcat="inf" pos="verb" rel="hd" root="sla_op" sc="part_transitive(op)" sense="sla_op" word="opslaan"/>
+      </node>
+    </node>
+    <node begin="5" end="6" frame="punct(vraag)" id="10" lcat="punct" pos="punct" rel="--" root="?" sense="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Wilt u de wijzigingen opslaan ?</sentence>
+  <comments>
+    <comment>Q#243|Wilt u de wijzigingen opslaan ?|1|1|-0.5057764414995092</comment>
+  </comments>
+</alpino_ds>

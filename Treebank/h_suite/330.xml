@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="verslijten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="verslijt" word="verslijt" wvorm="pv"/>
+      <node begin="2" end="3" genus="masc" getal="ev" id="4" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="vol" vwtype="pers" word="hem"/>
+      <node begin="3" cat="conj" end="8" id="5" rel="predc">
+        <node begin="3" cat="pp" end="6" id="6" rel="cnj">
+          <node begin="3" end="4" id="7" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+          <node begin="4" cat="np" end="6" id="8" rel="obj1">
+            <node begin="4" end="5" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="oplichter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oplichter" word="oplichter"/>
+          </node>
+        </node>
+        <node begin="6" conjtype="neven" end="7" id="11" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="7" buiging="zonder" end="8" graad="basis" id="12" lemma="oneerlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="oneerlijk" word="oneerlijk"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Ik verslijt hem voor een oplichter en oneerlijk</sentence>
+</alpino_ds>

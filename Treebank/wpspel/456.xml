@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="whq" end="20" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="20" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="predc"/>
+        <node begin="1" end="2" id="5" lemma="heten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heet" word="heet" wvorm="pv"/>
+        <node begin="2" cat="np" end="20" id="6" rel="su">
+          <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="film" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="film" word="film"/>
+          <node begin="4" cat="pp" end="6" id="9" rel="mod">
+            <node begin="4" end="5" id="10" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+            <node begin="5" end="6" id="11" lemma="1960" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1960" word="1960"/>
+          </node>
+          <node begin="6" cat="rel" end="20" id="12" rel="mod">
+            <node begin="6" end="7" id="13" index="2" lemma="waarin" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarin" word="waarin"/>
+            <node begin="6" cat="ssub" end="20" id="14" rel="body">
+              <node begin="6" end="7" id="15" index="2" rel="mod"/>
+              <node begin="7" cat="mwu" end="9" id="16" rel="su">
+                <node begin="7" end="8" id="17" lemma="Federico" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Federico" spectype="deeleigen" word="Federico"/>
+                <node begin="8" end="9" id="18" lemma="Fellini" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Fellini" spectype="deeleigen" word="Fellini"/>
+              </node>
+              <node begin="9" cat="np" end="12" id="19" rel="obj1">
+                <node begin="9" end="10" id="20" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="10" buiging="met-e" end="11" graad="basis" id="21" lemma="modern" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="modern" word="moderne"/>
+                <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="22" lemma="Rome" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Rome" word="Rome"/>
+              </node>
+              <node begin="12" end="13" id="23" lemma="afbeelden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="beeld_af" word="afbeeldt" wvorm="pv"/>
+              <node begin="13" cat="cp" end="20" id="24" rel="predc">
+                <node begin="13" conjtype="onder" end="14" id="25" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+                <node begin="14" cat="np" end="20" id="26" rel="body">
+                  <node begin="14" end="15" id="27" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="28" lemma="stad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stad" word="stad"/>
+                  <node begin="16" cat="pp" end="20" id="29" rel="mod">
+                    <node begin="16" buiging="zonder" end="17" graad="basis" id="30" lemma="vol" pos="prep" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="vol" word="vol"/>
+                    <node begin="17" cat="conj" end="20" id="31" rel="obj1">
+                      <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="32" lemma="decadentie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="decadentie" word="decadentie"/>
+                      <node begin="18" conjtype="neven" end="19" id="33" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                      <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="34" lemma="corruptie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="corruptie" word="corruptie"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="35" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe heet de film uit 1960 waarin Federico Fellini het moderne Rome afbeeldt als een stad vol decadentie en corruptie ?</sentence>
+</alpino_ds>

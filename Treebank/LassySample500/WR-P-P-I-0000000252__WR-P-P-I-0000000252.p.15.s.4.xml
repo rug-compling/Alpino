@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="du" end="12" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" word="Maar"/>
+      <node begin="1" cat="smain" end="12" id="3" rel="nucl">
+        <node begin="1" cat="np" end="3" id="4" rel="su">
+          <node begin="1" end="2" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="voorziening" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorziening" word="voorziening"/>
+        </node>
+        <node begin="3" end="4" id="7" lemma="richten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="richt" word="richt" wvorm="pv"/>
+        <node begin="4" end="5" getal="getal" id="8" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+        <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="natuurlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="natuurlijk" word="natuurlijk"/>
+        <node begin="6" end="7" id="10" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+        <node begin="7" cat="pp" end="12" id="11" rel="pc">
+          <node begin="7" end="8" id="12" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="8" cat="np" end="12" id="13" rel="obj1">
+            <node begin="8" end="9" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="9" buiging="met-e" end="10" graad="sup" id="15" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="groot" word="grootste"/>
+            <node begin="10" buiging="met-e" end="11" graad="basis" id="16" lemma="gemeen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gemeen" word="gemene"/>
+            <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="17" lemma="deler" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="deler" word="deler"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Maar een voorziening richt zich natuurlijk wel op de grootste gemene deler .</sentence>
+</alpino_ds>

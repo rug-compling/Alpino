@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+      <node begin="2" buiging="zonder" end="3" graad="basis" id="4" lemma="natuurlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="natuurlijk" word="natuurlijk"/>
+      <node begin="3" end="4" id="5" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      <node begin="4" cat="mwu" end="7" id="6" mwu_root="uit de lucht" mwu_sense="uit de lucht" rel="svp">
+        <node begin="4" end="5" id="7" lemma="uit" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="uit" vztype="init" word="uit"/>
+        <node begin="5" end="6" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="fixed" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="9" lemma="lucht" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="lucht" word="lucht"/>
+      </node>
+      <node begin="7" buiging="zonder" end="8" id="10" lemma="vallen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="svp" root="val" word="vallen" wvorm="inf"/>
+      <node begin="8" cat="cp" end="12" id="11" rel="su">
+        <node begin="8" conjtype="onder" end="9" id="12" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="9" cat="ssub" end="12" id="13" rel="body">
+          <node begin="9" cat="ppart" end="11" id="14" rel="vc">
+            <node begin="9" end="10" getal="getal" id="15" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+            <node begin="10" buiging="zonder" end="11" id="16" lemma="winnen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="win" word="gewonnen" wvorm="vd"/>
+          </node>
+          <node begin="11" end="12" id="17" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Het komt natuurlijk niet uit de lucht vallen dat er gewonnen wordt</sentence>
+</alpino_ds>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="du" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="daarna" pos="adv" postag="BW()" pt="bw" rel="dp" root="Daarna" word="Daarna"/>
+      <node begin="1" cat="conj" end="6" id="3" rel="dp">
+        <node begin="1" cat="mwu" end="4" id="4" rel="cnj">
+          <node begin="1" end="2" getal="getal" id="5" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="noun" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mwp" root="Hier" status="vol" vwtype="aanw" word="Hier"/>
+          <node begin="2" conjtype="neven" end="3" id="6" lemma="en" pos="noun" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
+          <node begin="3" end="4" id="7" lemma="nu" pos="noun" postag="BW()" pt="bw" rel="mwp" root="Nu" word="Nu"/>
+        </node>
+        <node begin="4" conjtype="neven" end="5" id="8" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="9" lemma="Tweekamp" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="cnj" root="Tweekamp" word="Tweekamp"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Daarna Hier en Nu en Tweekamp .</sentence>
+</alpino_ds>

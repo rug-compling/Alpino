@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" cat="np" end="7" id="4" rel="su">
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="hoop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hoop" word="hoop"/>
+        <node begin="3" cat="pp" end="7" id="6" rel="mod">
+          <node begin="3" end="4" id="7" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="4" cat="np" end="7" id="8" rel="obj1">
+            <node begin="4" end="5" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="5" buiging="met-e" end="6" graad="comp" id="10" lemma="goed" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="goed" word="betere"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="toekomst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="toekomst" word="toekomst"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Er is hoop op een betere toekomst</sentence>
+</alpino_ds>

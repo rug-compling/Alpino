@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="5" end="6" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="8" id="3" rel="--">
+      <node begin="3" conjtype="neven" end="4" id="4" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+      <node begin="0" cat="smain" end="8" id="5" rel="cnj">
+        <node begin="0" end="1" getal="getal" id="6" index="1" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+        <node begin="1" end="2" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="6" cat="np" end="8" id="8" index="2" rel="su">
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="9" lemma="weinig" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="det" root="weinig" vwtype="onbep" word="weinig"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="10" lemma="interesse" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="interesse" word="interesse"/>
+        </node>
+      </node>
+      <node begin="0" cat="ssub" end="8" id="11" rel="cnj">
+        <node begin="0" end="1" id="12" index="1" rel="mod"/>
+        <node begin="4" end="5" id="13" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        <node begin="6" end="8" id="14" index="2" rel="su"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Er is , of was , weinig interesse</sentence>
+</alpino_ds>

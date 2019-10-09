@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="Toch"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="2" cat="np" end="5" id="4" rel="su">
+        <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="factor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="factor" word="factor"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="7" lemma="snelheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="app" root="snelheid" word="snelheid"/>
+      </node>
+      <node begin="5" buiging="zonder" end="6" graad="basis" id="8" lemma="uiteindelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="uiteindelijk" word="uiteindelijk"/>
+      <node begin="6" buiging="zonder" end="7" graad="basis" id="9" lemma="doorslaggevend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="doorslaggevend" word="doorslaggevend"/>
+    </node>
+    <node begin="7" end="8" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Toch was de factor snelheid uiteindelijk doorslaggevend .</sentence>
+</alpino_ds>

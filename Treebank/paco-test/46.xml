@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="inf" end="12" id="1" rel="--">
+      <node begin="0" end="1" frame="noun(het,count,pl)" gen="het" id="2" lcat="np" num="pl" pos="noun" rel="obj1" root="controle_systeem" sense="controle_systeem" word="Controlesystemen"/>
+      <node begin="1" end="2" frame="verb(hebben,inf,ninv(transitive,part_transitive(op)))" id="3" infl="inf" lcat="inf" pos="verb" rel="hd" root="zet_op" sc="part_transitive(op)" sense="zet_op" word="opzetten"/>
+      <node begin="2" cat="oti" end="12" id="4" rel="mod">
+        <node begin="2" end="3" frame="complementizer(om)" id="5" lcat="oti" pos="comp" rel="cmp" root="om" sc="om" sense="om" word="om"/>
+        <node begin="3" cat="ti" end="12" id="6" rel="body">
+          <node begin="9" end="10" frame="complementizer(te)" id="7" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+          <node begin="3" cat="inf" end="12" id="8" rel="body">
+            <node begin="10" end="11" frame="verb('hebben/zijn',inf,aux(inf))" id="9" infl="inf" lcat="inf" pos="verb" rel="hd" root="kan" sc="aux(inf)" sense="kan" word="kunnen"/>
+            <node begin="3" cat="inf" end="12" id="10" rel="vc">
+              <node begin="3" cat="np" end="8" id="11" rel="obj1">
+                <node begin="3" end="4" frame="determiner(de)" id="12" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                <node begin="4" cat="conj" end="7" id="13" rel="mod">
+                  <node aform="base" begin="4" end="5" frame="adjective(ge_e)" id="14" infl="e" lcat="ppart" pos="adj" rel="cnj" root="ingezameld" sense="ingezameld" vform="psp" word="ingezamelde"/>
+                  <node begin="5" end="6" frame="conj(en)" id="15" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                  <node aform="base" begin="6" end="7" frame="adjective(e)" id="16" infl="e" lcat="ap" pos="adj" rel="cnj" root="gerecycleerde" sense="gerecycleerde" vform="adj" word="gerecycleerde"/>
+                </node>
+                <node begin="7" end="8" frame="noun(de,count,pl)" gen="de" id="17" lcat="np" num="pl" pos="noun" rel="hd" root="afval_stroom" sense="afval_stroom" word="afvalstromen"/>
+              </node>
+              <node aform="compar" begin="8" end="9" frame="adjective(er(adv))" id="18" infl="no_e" lcat="ap" pos="adj" rel="mod" root="goed" sense="goed" vform="adj" word="beter"/>
+              <node begin="11" end="12" frame="verb('hebben/zijn',inf,transitive)" id="19" infl="inf" lcat="inf" pos="verb" rel="hd" root="volg" sc="transitive" sense="volg" word="volgen"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" frame="punct(punt)" id="20" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Controlesystemen opzetten om de ingezamelde en gerecycleerde afvalstromen beter te kunnen volgen .</sentence>
+  <comments>
+    <comment>Q#46|Controlesystemen opzetten om de ingezamelde en gerecycleerde afvalstromen beter te kunnen volgen .|1|1|-5.803748616972223</comment>
+  </comments>
+</alpino_ds>

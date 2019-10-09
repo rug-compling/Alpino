@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="smain" end="10" id="1" rel="--">
+      <node begin="0" cat="ppart" end="4" id="2" rel="predm">
+        <node begin="0" buiging="zonder" end="1" graad="comp" id="3" lemma="laat" pos="adv" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="later" word="Later"/>
+        <node begin="1" buiging="zonder" end="2" id="4" lemma="uitbrengen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="uitgebracht" word="uitgebracht" wvorm="vd"/>
+        <node begin="2" cat="cp" end="4" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="single" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="single" word="single"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="8" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+      <node begin="5" cat="np" end="7" id="9" rel="su">
+        <node begin="5" buiging="zonder" end="6" id="10" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+        <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="11" lemma="nummer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="nummer" word="nummer"/>
+      </node>
+      <node begin="7" cat="np" end="10" id="12" rel="predc">
+        <node begin="7" end="8" id="13" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="8" buiging="zonder" end="9" graad="basis" id="14" lemma="groot" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="groot" word="groot"/>
+        <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="15" lemma="succes" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="succes" word="succes"/>
+      </node>
+    </node>
+    <node begin="10" end="11" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Later uitgebracht als single werd dit nummer een groot succes .</sentence>
+</alpino_ds>

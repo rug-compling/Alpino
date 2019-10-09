@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="39" id="0" rel="top">
+    <node begin="0" cat="smain" end="38" id="1" rel="--">
+      <node begin="6" end="7" frame="verb('hebben/zijn',sg,modifier(aux(inf)))" id="2" infl="sg" lcat="smain" pos="verb" rel="hd" root="moet" sc="modifier(aux(inf))" sense="moet" tense="present" word="moet"/>
+      <node begin="0" cat="inf" end="38" id="3" rel="vc">
+        <node begin="14" end="15" frame="verb(unacc,inf,passive)" id="4" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+        <node begin="0" cat="ppart" end="38" id="5" rel="vc">
+          <node begin="0" cat="pp" end="6" id="6" rel="mod">
+            <node begin="0" end="1" frame="preposition(in,[])" id="7" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="In"/>
+            <node begin="1" cat="np" end="6" id="8" rel="obj1">
+              <node begin="1" end="2" frame="determiner(de)" id="9" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="2" end="3" frame="noun(het,count,pl)" gen="het" id="10" lcat="np" num="pl" pos="noun" rel="hd" root="statuut" sense="statuut" word="statuten"/>
+              <node begin="3" cat="pp" end="6" id="11" rel="mod">
+                <node begin="3" end="4" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="12" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                <node begin="4" cat="np" end="6" id="13" rel="obj1">
+                  <node begin="4" end="5" frame="determiner(de)" id="14" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="5" end="6" frame="noun(de,count,sg)" gen="de" id="15" lcat="np" num="sg" pos="noun" rel="hd" root="belegging_maatschappij" sense="belegging_maatschappij" word="beleggingsmaatschappij"/>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="15" end="16" frame="verb(hebben,psp,transitive)" id="16" infl="psp" lcat="ppart" pos="verb" rel="hd" root="vermeld" sc="transitive" sense="vermeld" word="vermeld"/>
+          <node begin="7" cat="np" end="38" id="17" index="1" rel="obj1">
+            <node begin="7" end="8" frame="determiner(de)" id="18" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="8" end="9" frame="noun(de,count,sg)" gen="de" id="19" lcat="np" num="sg" pos="noun" rel="hd" root="beurs" sense="beurs" word="beurs"/>
+            <node begin="9" cat="pp" end="38" id="20" rel="mod">
+              <node begin="9" end="10" frame="preposition(in,[])" id="21" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+              <node begin="10" cat="np" end="38" id="22" rel="obj1">
+                <node begin="10" end="11" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="23" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                <node begin="11" end="12" frame="noun(het,count,sg)" gen="het" id="24" lcat="np" num="sg" pos="noun" rel="hd" root="land" sense="land" word="land"/>
+                <node begin="12" cat="pp" end="38" id="25" rel="mod">
+                  <node begin="12" end="13" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="26" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                  <node begin="13" cat="np" end="38" id="27" rel="obj1">
+                    <node begin="13" end="14" frame="noun(de,count,sg)" gen="de" id="28" lcat="np" num="sg" pos="noun" rel="hd" root="verhandeling" sense="verhandeling" word="verhandeling"/>
+                    <node begin="16" cat="rel" end="38" id="29" rel="mod">
+                      <node begin="16" end="17" frame="waar_adverb(van)" id="30" index="2" lcat="pp" pos="pp" rel="rhd" root="waarvan" sense="waarvan" special="waar" word="waarvan"/>
+                      <node begin="16" cat="ssub" end="38" id="31" rel="body">
+                        <node begin="16" end="17" id="32" index="2" rel="mod"/>
+                        <node begin="17" cat="np" end="19" id="33" rel="su">
+                          <node begin="17" end="18" frame="determiner(de)" id="34" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                          <node begin="18" end="19" frame="noun(de,count,sg)" gen="de" id="35" lcat="np" num="sg" pos="noun" rel="hd" root="notering" sense="notering" word="notering"/>
+                        </node>
+                        <node begin="21" end="22" frame="verb(hebben,sg3,transitive)" id="36" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="bepaal" sc="transitive" sense="bepaal" tense="present" word="bepaalt"/>
+                        <node begin="19" cat="np" end="38" id="37" rel="obj1">
+                          <node begin="19" end="20" frame="determiner(de)" id="38" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                          <node begin="20" end="21" frame="noun(de,count,sg)" gen="de" id="39" lcat="np" num="sg" pos="noun" rel="hd" root="prijs" sense="prijs" word="prijs"/>
+                          <node begin="22" cat="pp" end="38" id="40" rel="mod">
+                            <node begin="22" end="23" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="41" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                            <node begin="23" cat="np" end="38" id="42" rel="obj1">
+                              <node begin="23" end="24" frame="determiner(de)" id="43" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                              <node begin="24" end="25" frame="noun(de,count,pl)" gen="de" id="44" lcat="np" num="pl" pos="noun" rel="hd" root="transactie" sense="transactie" word="transacties"/>
+                              <node begin="25" cat="rel" end="38" id="45" rel="mod">
+                                <node begin="25" case="no_obl" end="26" frame="rel_pronoun(de,no_obl)" gen="de" id="46" index="3" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+                                <node begin="25" cat="ssub" end="38" id="47" rel="body">
+                                  <node begin="25" end="26" id="48" index="3" rel="su"/>
+                                  <node begin="36" end="37" frame="verb(unacc,pl,passive)" id="49" infl="pl" lcat="ssub" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="worden"/>
+                                  <node begin="25" cat="ppart" end="38" id="50" rel="vc">
+                                    <node begin="25" end="26" id="51" index="3" rel="obj1"/>
+                                    <node begin="26" cat="pp" end="29" id="52" rel="mod">
+                                      <node begin="26" end="27" frame="preposition(in,[])" id="53" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                                      <node begin="27" cat="np" end="29" id="54" rel="obj1">
+                                        <node begin="27" end="28" frame="determiner(het,nwh,nmod,pro,nparg)" id="55" infl="het" lcat="detp" pos="det" rel="det" root="dat" sense="dat" wh="nwh" word="dat"/>
+                                        <node begin="28" end="29" frame="noun(het,count,sg)" gen="het" id="56" lcat="np" num="sg" pos="noun" rel="hd" root="land" sense="land" word="land"/>
+                                      </node>
+                                    </node>
+                                    <node begin="29" cat="pp" end="36" id="57" rel="mod">
+                                      <node begin="29" end="30" frame="preposition(door,[heen])" id="58" lcat="pp" pos="prep" rel="hd" root="door" sense="door" word="door"/>
+                                      <node begin="30" cat="np" end="36" id="59" rel="obj1">
+                                        <node begin="30" end="31" frame="determiner(de)" id="60" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                                        <node begin="31" end="32" frame="noun(de,count,sg)" gen="de" id="61" lcat="np" num="sg" pos="noun" rel="hd" root="belegging_maatschappij" sense="belegging_maatschappij" word="beleggingsmaatschappij"/>
+                                        <node begin="32" cat="pp" end="36" id="62" rel="mod">
+                                          <node begin="32" end="33" frame="preposition(buiten,[om])" id="63" lcat="pp" pos="prep" rel="hd" root="buiten" sense="buiten" word="buiten"/>
+                                          <node begin="33" cat="np" end="35" id="64" rel="obj1">
+                                            <node begin="33" end="34" frame="determiner(de)" id="65" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                                            <node begin="34" end="35" frame="noun(de,count,sg)" gen="de" id="66" lcat="np" num="sg" pos="noun" rel="hd" root="beurs" sense="beurs" word="beurs"/>
+                                          </node>
+                                          <node begin="35" end="36" frame="particle(om)" id="67" lcat="part" pos="part" rel="hdf" root="om" sense="om" word="om"/>
+                                        </node>
+                                      </node>
+                                    </node>
+                                    <node begin="37" end="38" frame="verb(hebben,psp,transitive)" id="68" infl="psp" lcat="ppart" pos="verb" rel="hd" root="verricht" sc="transitive" sense="verricht" word="verricht"/>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="7" end="38" id="69" index="1" rel="su"/>
+      </node>
+      <node begin="7" end="38" id="70" index="1" rel="su"/>
+    </node>
+    <node begin="38" end="39" frame="punct(punt)" id="71" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>In de statuten van de beleggingsmaatschappij moet de beurs in het land van verhandeling worden vermeld waarvan de notering de prijs bepaalt van de transacties die in dat land door de beleggingsmaatschappij buiten de beurs om worden verricht .</sentence>
+  <comments>
+    <comment>Q#466|In de statuten van de beleggingsmaatschappij moet de beurs in het land van verhandeling worden vermeld waarvan de notering de prijs bepaalt van de transacties die in dat land door de beleggingsmaatschappij buiten de beurs om worden verricht .|1|1|-13.102646921086134</comment>
+  </comments>
+</alpino_ds>

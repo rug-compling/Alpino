@@ -1,0 +1,50 @@
+This is an incorporation of ALE 3.1 to the Hdrug system.
+
+Most effort was devoted to this based on Ale 3.0. With 3.1 we have
+done not much testing yet.
+
+For more info on Ale, cf. the ALE Homepage,
+http://www.sfs.nphil.uni-tuebingen.de/~gpenn/ale.html 
+
+How to use the script?
+
+../../hdrug  -l start <options>
+
+options include the normal Hdrug options (cf. man hdrug) and:
+
+-grammar GrammarFile  
+	grammar-compiles GrammarFile instead of hpsg.pl
+
+-suite SuiteFile
+	compiles SuiteFile instead of suite.pl
+
+-decl DeclFile
+	compiles DeclFile instead of hpsg_decl.pl
+
+-parse
+	(default) allow compilation of grammar rules for parsing
+
+-noparse 
+	do not allow compilation of grammar rules for parsing
+
+-generate
+	allow compilation of grammar rules for generation
+
+-nogenerate
+	(default) do not allow compilation of grammar rules for generation
+
+EXAMPLES
+
+% ../../hdrug -l start
+	normal use, compiles hpsg grammar, and starts with tcltk env
+        equivalent to:
+
+% cd Hpsg
+% ../../../hdrug -l ../start -grammar hpsg -decl hpsg_decl -suite hpsg_suite
+
+
+% cd CG 
+% ../../../hdrug -l ../start -grammar cg -decl cg_decl -suite cg_suite
+	compiles categorial grammar example, and starts with
+        corresponding declarations and sample sentences
+

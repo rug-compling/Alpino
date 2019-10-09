@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="«" pos="punct" postag="LET()" pt="let" rel="--" root="«" word="«"/>
+    <node begin="3" end="4" id="2" lemma="»" pos="punct" postag="LET()" pt="let" rel="--" root="»" word="»"/>
+    <node begin="4" end="5" id="3" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="np" end="6" id="4" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="5" lemma="geslacht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geslacht" word="Geslacht"/>
+      <node begin="2" end="3" genus="genus" getal="ev" graad="basis" id="6" lemma="Pentalagus" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Pentalagus" word="Pentalagus"/>
+      <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="7" lemma="amamikonijn" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="Amamikonijn" word="Amamikonijn"/>
+    </node>
+    <node begin="6" end="7" id="8" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+  </node>
+  <sentence>Geslacht « Pentalagus » ( Amamikonijn )</sentence>
+</alpino_ds>

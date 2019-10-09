@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="15" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      <node begin="1" end="2" id="3" lemma="denken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="denk" word="denk" wvorm="pv"/>
+      <node begin="2" cat="cp" end="15" id="4" rel="vc">
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="3" cat="ssub" end="15" id="6" rel="body">
+          <node begin="3" end="4" genus="onz" getal="ev" id="7" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="het"/>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="belangrijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="belangrijk" word="belangrijk"/>
+          <node begin="5" end="6" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          <node begin="6" cat="cp" end="15" id="10" rel="su">
+            <node begin="6" conjtype="onder" end="7" id="11" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+            <node begin="7" cat="ssub" end="15" id="12" rel="body">
+              <node begin="7" end="8" getal="getal" id="13" lemma="u" naamval="nomin" pdtype="pron" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" root="u" status="vol" vwtype="pers" word="u"/>
+              <node begin="8" cat="np" end="12" id="14" rel="obj1">
+                <node begin="8" buiging="zonder" end="9" id="15" lemma="zo&apos;n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="zo&apos;n" vwtype="aanw" word="zo&apos;n"/>
+                <node begin="9" end="10" genus="genus" getal="ev" graad="basis" id="16" lemma="punt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,genus,stan)" pt="n" rel="hd" root="punt" word="punt"/>
+                <node begin="10" cat="pp" end="12" id="17" rel="mod">
+                  <node begin="10" end="11" id="18" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="zorg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="zorg" word="zorg"/>
+                </node>
+              </node>
+              <node begin="12" cat="mwu" end="14" id="20" rel="svp">
+                <node begin="12" end="13" id="21" lemma="naar" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="naar" vztype="init" word="naar"/>
+                <node begin="13" end="14" id="22" lemma="voren" pos="fixed" postag="BW()" pt="bw" rel="mwp" root="voren" word="voren"/>
+              </node>
+              <node begin="14" end="15" id="23" lemma="brengen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="breng" word="brengt" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>ik denk dat het belangrijk is dat u zo&apos;n punt van zorg naar voren brengt</sentence>
+</alpino_ds>

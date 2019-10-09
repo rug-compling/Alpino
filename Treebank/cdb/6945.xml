@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="22" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" index="1" rel="su">
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="brand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="brand" word="brand"/>
+      </node>
+      <node begin="2" end="3" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="22" id="7" rel="vc">
+        <node begin="0" end="2" id="8" index="1" rel="su"/>
+        <node begin="3" cat="pp" end="6" id="9" rel="mod">
+          <node begin="3" end="4" id="10" lemma="omstreeks" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="omstreeks" vztype="init" word="omstreeks"/>
+          <node begin="4" cat="mwu" end="6" id="11" rel="obj1">
+            <node begin="4" end="5" id="12" lemma="tien" naamval="stan" numtype="hoofd" pos="noun" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="tien" word="tien"/>
+            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="13" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="uur" word="uur"/>
+          </node>
+        </node>
+        <node begin="6" buiging="zonder" end="7" id="14" lemma="ontstaan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ontsta" word="ontstaan" wvorm="vd"/>
+        <node begin="7" cat="pp" end="22" id="15" rel="mod">
+          <node begin="7" end="8" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="8" cat="np" end="22" id="17" rel="obj1">
+            <node begin="8" end="9" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="19" lemma="meubelzaak" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zaak" word="meubelzaak"/>
+            <node begin="10" end="11" genus="genus" getal="ev" graad="basis" id="20" lemma="Maranka" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Maranka" word="Maranka"/>
+            <node begin="12" cat="np" end="22" id="21" rel="app">
+              <node begin="12" end="13" id="22" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="23" lemma="gebouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebouw" word="gebouw"/>
+              <node begin="14" cat="pp" end="17" id="24" rel="mod">
+                <node begin="14" end="15" id="25" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="15" cat="np" end="17" id="26" rel="obj1">
+                  <node begin="15" end="16" id="27" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="drie" word="drie"/>
+                  <node begin="16" end="17" getal="mv" graad="basis" id="28" lemma="verdieping" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verdieping" word="verdiepingen"/>
+                </node>
+              </node>
+              <node begin="17" cat="pp" end="22" id="29" rel="mod">
+                <node begin="17" end="18" id="30" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                <node begin="18" cat="np" end="22" id="31" rel="obj1">
+                  <node begin="18" end="19" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="33" lemma="hoek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hoek" word="hoek"/>
+                  <node begin="20" cat="mwu" end="22" id="34" rel="app">
+                    <node begin="20" end="21" id="35" lemma="Anegang-Lange" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Anegang-Lange" spectype="deeleigen" word="Anegang-Lange"/>
+                    <node begin="21" end="22" id="36" lemma="Veerstraat" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Veerstraat" spectype="deeleigen" word="Veerstraat"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De brand is omstreeks tien uur ontstaan in de meubelzaak Maranka , een gebouw van drie verdiepingen op de hoek Anegang-Lange Veerstraat .</sentence>
+</alpino_ds>

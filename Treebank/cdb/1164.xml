@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="8" end="9" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="12" id="3" rel="--">
+      <node begin="0" cat="smain" end="5" id="4" rel="cnj">
+        <node begin="0" end="1" getal="mv" id="5" index="1" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="Wij"/>
+        <node begin="1" end="2" id="6" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" word="kunnen" wvorm="pv"/>
+        <node begin="0" cat="inf" end="5" id="7" rel="vc">
+          <node begin="0" end="1" id="8" index="1" rel="su"/>
+          <node begin="2" buiging="zonder" end="3" graad="comp" id="9" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="beter" word="beter"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="10" lemma="machine" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="machine" word="machines"/>
+          <node begin="4" buiging="zonder" end="5" id="11" index="2" lemma="maken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="maak" word="maken" wvorm="inf"/>
+        </node>
+      </node>
+      <node begin="4" cat="smain" end="12" id="12" rel="cnj">
+        <node begin="4" end="5" id="13" index="2" rel="hd"/>
+        <node begin="6" end="7" genus="fem" getal="ev" id="14" lemma="zij" naamval="nomin" pdtype="pron" persoon="3v" pos="noun" postag="VNW(pers,pron,nomin,vol,3v,ev,fem)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
+        <node begin="7" cat="conj" end="12" id="15" rel="obj1">
+          <node begin="7" buiging="zonder" end="8" graad="comp" id="16" lemma="cacaoboter" pos="noun" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="cnj" root="boter" word="cacaoboter"/>
+          <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="17" lemma="cacaopoeder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="poeder" word="cacaopoeder"/>
+          <node begin="10" conjtype="neven" end="11" id="18" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+          <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="palmolie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="olie" word="palmolie"/>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Wij kunnen beter machines maken , zij cacaoboter , cacaopoeder of palmolie .</sentence>
+</alpino_ds>

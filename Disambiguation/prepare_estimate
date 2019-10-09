@@ -1,0 +1,195 @@
+#!/usr/bin/perl -w
+
+use Getopt::Std;
+use POSIX qw(strtod);
+
+# OPTIONS
+$opt_l = 0;
+$opt_b = 0;  # select best opt_n parses
+$opt_u = 0;  # assign all parses equal score of zero, except for the
+             # best one, which gets 1
+$opt_y = 0;
+getopts('n:f:l:buy');
+
+$opt_f ||= "features";
+$opt_n ||= 1000000;
+
+
+%fsindex=();
+
+# to make it easy to duplicate results...
+srand(13);
+
+sub score {
+    ($pen,$n) = @_;
+    if ($n) {
+	return (1-$pen/$n);
+    } else {
+	return 1;
+    }
+}
+
+sub pen {
+  ($ov,$corr,$sys) = @_;
+  return max($corr,$sys)-$ov;
+}
+
+sub max {
+  ($a,$b) = @_;
+  return $a>$b ? $a : $b;
+}
+
+open(FEATURES,"$opt_f") or die "Can't find features file $opt_f: $!\n";
+while (<FEATURES>) {
+  next if /^[%\#]/;
+  chomp;
+  ($ind,$feat) = split/\|/;
+  $fsindex{$feat}=$ind;
+}
+close FEATURES;
+print STDERR "reading features file $opt_f done\n";
+
+$prevkey=-1;
+$numberofparses=0;
+@output=();
+while(<>) {
+  next if /^[%\#]/;
+  next if !/\|/;
+  chomp;
+  if ($. % 25000==0) 
+    { print STDERR "read $. lines\n";}
+
+  if ($opt_y) {
+      (undef,$key,undef,$score,$pairs) = split/\#/;
+  } else {
+      ($key,$length,$scoretriple,$pairs) = split/\#/;
+      next if ($opt_l && $length > $opt_l);
+      if ($scoretriple =~ /\|/) {
+	  ($score_overlap,$score_correct,$score_system) = split/\|/,$scoretriple;
+	  $this_pen=pen($score_overlap,$score_correct,$score_system);
+	  $this_n=max($score_correct,$score_system);
+	  $score=score($this_pen,$this_n);
+      } else {
+	  $score=$scoretriple;
+      }
+  }
+
+  if ($key eq $prevkey) {
+      push @output, format_line($score,$pairs);
+      $numberofparses++;
+  }
+  else { #new key
+    # print stuff of previous key first..
+    if ($numberofparses) {
+	if ($numberofparses > $opt_n) {
+	    print "$opt_n\n";
+	    if ($opt_b) {
+		sort_best( \@output );
+	    } elsif ($opt_u) {
+		score_best_only( \@output);
+            } else {
+		fisher_yates_shuffle( \@output );
+	    }
+	    print join('',@output[0..$opt_n-1]);
+	} else {
+	    print "$numberofparses\n";
+	    print join('',@output);
+	}
+    }
+    @output = (format_line($score,$pairs));
+    $prevkey = $key;
+    $numberofparses=1;
+  }
+}
+
+# don't forget last sentence
+if ($numberofparses) {
+    if ($numberofparses > $opt_n) {
+	print "$opt_n\n";
+	if ($opt_b) {
+	    sort_best( \@output );
+	} elsif ($opt_u) {
+	    score_best_only( \@output);
+	} else {
+	    fisher_yates_shuffle( \@output );
+	}
+	print join('',@output[0..$opt_n-1]);
+    } else {
+	print "$numberofparses\n";
+	print join('',@output);
+    }
+}
+
+sub format_line {
+  ($lscore,$lpairs) = @_;
+  @lpairs = split/\|/,$lpairs;
+  $nrpairs=0;
+  $out="";
+  foreach $lpair (@lpairs) {
+    ($ln,$lfeat) = split/\@/,$lpair;
+
+    if (defined $fsindex{$lfeat}) {
+      $nrpairs++;
+      $out .= " $fsindex{$lfeat} $ln";
+    }
+
+  }
+  return "$lscore $nrpairs$out\n";
+}
+
+# fisher_yates_shuffle( \@array ) : generate a random permutation
+# of @array in place
+sub fisher_yates_shuffle {
+    my $array = shift;
+    my $i;
+    for ($i = @$array; --$i; ) {
+        my $j = int rand ($i+1);
+        next if $i == $j;
+        @$array[$i,$j] = @$array[$j,$i];
+    }
+}
+
+sub score_best_only {
+    my $array = shift;
+    my $best=0;
+    foreach $score (@$array) {
+	$s = strtod($score);
+	if ($s > $best) {
+	    $best=$s;
+	}
+    }
+    @good=();
+    @bad=();
+    for($i=0;$i<@$array;$i++) {
+	($sc,@rest) = split / /,@$array[$i];
+	if ($sc >= $best) {
+	    @arr=(1,@rest);
+	    $str=join(' ',@arr);
+	    push @good,$str;
+	} else {
+	    @arr=(0,@rest);
+	    $str=join(' ',@arr);
+	    push @bad, $str;
+	}
+    }
+    if (@bad) {
+	fisher_yates_shuffle(\@bad);
+    }
+    @$array = (@good,@bad);
+}
+
+
+
+sub sort_best {
+    my $array = shift;
+    @arr = sort {strtod($b) <=> strtod($a)} @$array;
+    @$array=@arr;
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="sv1" end="9" id="1" rel="--">
+      <node begin="0" end="1" frame="verb(hebben,sg1,transitive)" id="2" infl="sg1" lcat="sv1" pos="verb" rel="hd" root="selecteer" sc="transitive" sense="selecteer" tense="present" word="Selecteer"/>
+      <node begin="1" cat="np" end="3" id="3" rel="obj1">
+        <node begin="1" end="2" frame="determiner(een)" id="4" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+        <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="transactie" sense="transactie" word="transactie"/>
+      </node>
+      <node begin="3" cat="oti" end="9" id="6" rel="mod">
+        <node begin="3" end="4" frame="complementizer(om)" id="7" lcat="oti" pos="comp" rel="cmp" root="om" sc="om" sense="om" word="om"/>
+        <node begin="4" cat="ti" end="9" id="8" rel="body">
+          <node begin="7" end="8" frame="complementizer(te)" id="9" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+          <node begin="4" cat="inf" end="9" id="10" rel="body">
+            <node begin="4" cat="np" end="6" id="11" rel="obj1">
+              <node aform="base" begin="4" end="5" frame="adjective(e)" id="12" infl="e" lcat="ap" pos="adj" rel="mod" root="mogelijk" sense="mogelijk" vform="adj" word="mogelijke"/>
+              <node begin="5" end="6" frame="noun(de,count,pl)" gen="de" id="13" lcat="np" num="pl" pos="noun" rel="hd" root="overeenkomst" sense="overeenkomst" word="overeenkomsten"/>
+            </node>
+            <node begin="6" end="7" frame="adverb" id="14" lcat="advp" pos="adv" rel="mod" root="weer" sense="weer" word="weer"/>
+            <node begin="8" end="9" frame="verb(hebben,inf,transitive)" id="15" infl="inf" lcat="inf" pos="verb" rel="hd" root="geef" sc="transitive" sense="geef" word="geven"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Selecteer een transactie om mogelijke overeenkomsten weer te geven</sentence>
+  <comments>
+    <comment>Q#231|Selecteer een transactie om mogelijke overeenkomsten weer te geven|1|1|-0.6686658725489859</comment>
+  </comments>
+</alpino_ds>

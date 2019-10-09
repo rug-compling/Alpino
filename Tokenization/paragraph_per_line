@@ -1,0 +1,38 @@
+#!/usr/bin/perl -w
+# © Gertjan van Noord, 1999
+# mailto:vannoord@let.rug.nl
+#
+# tokenizes paragraphs. Two newlines in a row are interpreted
+# as a paragraph break. A single newline followed by end-of-sentence
+# punctuation is interpreted as a paragraph break also. Other newlines
+# are removed. In the output, every line consists of a paragraph.
+# the resulting representation is suitable for ./tokenize.sh
+
+$temp="";
+while (<>) {
+  y/\cM//d;   # get rid of DOS <CR>
+  chomp;      # get rid of <NL>
+  if ($_ eq "" ) {
+      if ($temp) {
+	  print "$temp\n";
+          $temp="";
+      }
+  } elsif (/[.:;!?]$/) {
+      if ($temp) {
+	  print "$temp $_\n";
+          $temp="";
+      } else {
+	  print "$_\n";
+      }
+  } else {
+      if ($temp) {
+	  $temp .= " $_";
+      } else {
+	  $temp =  $_;
+      }
+  }
+}
+
+if ($temp) {
+    print "$temp\n";
+}

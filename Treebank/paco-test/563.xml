@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="0" cat="smain" end="27" id="1" rel="--">
+      <node begin="3" end="4" frame="verb(unacc,sg3,passive)" id="2" infl="sg3" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt"/>
+      <node begin="0" cat="ppart" end="27" id="3" rel="vc">
+        <node begin="0" cat="pp" end="3" id="4" rel="mod">
+          <node begin="0" end="1" frame="preposition(in,[])" id="5" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="In"/>
+          <node begin="1" cat="np" end="3" id="6" rel="obj1">
+            <node begin="1" end="2" frame="determiner(de,nwh,nmod,pro,nparg)" id="7" infl="de" lcat="detp" pos="det" rel="det" root="deze" sense="deze" wh="nwh" word="deze"/>
+            <node begin="2" end="3" frame="noun(de,mass,sg)" gen="de" id="8" lcat="np" num="sg" pos="noun" rel="hd" root="context" sense="context" word="context"/>
+          </node>
+        </node>
+        <node begin="6" end="7" frame="verb(hebben,psp,transitive)" id="9" infl="psp" lcat="ppart" pos="verb" rel="hd" root="besteed" sc="transitive" sense="besteed" word="besteed"/>
+        <node begin="4" cat="np" end="27" id="10" index="1" rel="obj1">
+          <node aform="base" begin="4" end="5" frame="adjective(e)" id="11" infl="e" lcat="ap" pos="adj" rel="mod" root="bijzonder" sense="bijzonder" vform="adj" word="bijzondere"/>
+          <node begin="5" end="6" frame="noun(de,mass,sg)" gen="de" id="12" lcat="np" num="sg" pos="noun" rel="hd" root="aandacht" sense="aandacht" word="aandacht"/>
+          <node begin="7" cat="pp" end="27" id="13" rel="mod">
+            <node begin="7" end="8" frame="preposition(aan,[vooraf])" id="14" lcat="pp" pos="prep" rel="hd" root="aan" sense="aan" word="aan"/>
+            <node begin="8" cat="conj" end="27" id="15" rel="obj1">
+              <node begin="8" cat="np" end="15" id="16" rel="cnj">
+                <node begin="8" end="9" frame="noun(de,count,sg)" gen="de" id="17" lcat="np" num="sg" pos="noun" rel="hd" root="verbetering" sense="verbetering" word="verbetering"/>
+                <node begin="9" cat="pp" end="15" id="18" rel="mod">
+                  <node begin="9" end="10" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="19" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                  <node begin="10" cat="np" end="15" id="20" rel="obj1">
+                    <node begin="10" end="11" frame="determiner(de)" id="21" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                    <node begin="11" end="12" frame="noun(de,count,sg)" gen="de" id="22" lcat="np" num="sg" pos="noun" rel="hd" root="toegang" sense="toegang" word="toegang"/>
+                    <node begin="12" cat="pp" end="15" id="23" rel="mod">
+                      <node begin="12" end="13" frame="preposition(tot,[toe,[aan,toe]])" id="24" lcat="pp" pos="prep" rel="hd" root="tot" sense="tot" word="tot"/>
+                      <node begin="13" cat="np" end="15" id="25" rel="obj1">
+                        <node begin="13" end="14" frame="determiner(de)" id="26" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                        <node begin="14" end="15" frame="proper_name(both,'ORG')" id="27" lcat="np" neclass="ORG" num="both" pos="name" rel="hd" root="Gemeenschap" sense="Gemeenschap" word="Gemeenschap"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="15" end="16" frame="conj(en)" id="28" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+              <node begin="16" cat="np" end="27" id="29" rel="cnj">
+                <node aform="compar" begin="16" end="17" frame="adjective(ere)" id="30" infl="e" lcat="ap" pos="adj" rel="mod" root="ander" sense="ander" vform="adj" word="andere"/>
+                <node begin="17" end="18" frame="noun(de,count,pl)" gen="de" id="31" lcat="np" num="pl" pos="noun" rel="hd" root="markt" sense="markt" word="markten"/>
+                <node begin="18" cat="pp" end="27" id="32" rel="mod">
+                  <node begin="18" end="19" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="33" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+                  <node begin="19" cat="conj" end="27" id="34" rel="obj1">
+                    <node begin="20" end="21" frame="conj(en)" id="35" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                    <node begin="19" cat="np" end="27" id="36" rel="cnj">
+                      <node begin="19" end="20" frame="noun(het,count,pl)" gen="het" id="37" lcat="np" num="pl" pos="noun" rel="hd" root="product" sense="product" word="producten"/>
+                      <node begin="22" cat="pp" end="27" id="38" index="2" rel="mod">
+                        <node begin="22" end="23" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="39" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                        <node begin="23" cat="np" end="27" id="40" rel="obj1">
+                          <node begin="23" end="24" frame="noun(de,count,sg)" gen="de" id="41" lcat="np" num="sg" pos="noun" rel="hd" root="oorsprong" sense="oorsprong" word="oorsprong"/>
+                          <node begin="24" cat="pp" end="27" id="42" rel="mod">
+                            <node begin="24" end="25" frame="preposition(uit,[vandaan])" id="43" lcat="pp" pos="prep" rel="hd" root="uit" sense="uit" word="uit"/>
+                            <node begin="25" cat="np" end="27" id="44" rel="obj1">
+                              <node begin="25" end="26" frame="determiner(de)" id="45" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                              <node begin="26" end="27" frame="noun(het,count,pl)" gen="het" id="46" lcat="np" num="pl" pos="noun" rel="hd" root="ACS_land" sense="ACS_land" word="ACS-landen"/>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node begin="21" cat="np" end="27" id="47" rel="cnj">
+                      <node begin="21" end="22" frame="noun(de,count,pl)" gen="de" id="48" lcat="np" num="pl" pos="noun" rel="hd" root="dienst" sense="dienst" word="diensten"/>
+                      <node begin="22" end="27" id="49" index="2" rel="mod"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="4" end="27" id="50" index="1" rel="su"/>
+    </node>
+    <node begin="27" end="28" frame="punct(punt)" id="51" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>In deze context wordt bijzondere aandacht besteed aan verbetering van de toegang tot de Gemeenschap en andere markten voor producten en diensten van oorsprong uit de ACS-landen .</sentence>
+  <comments>
+    <comment>Q#563|In deze context wordt bijzondere aandacht besteed aan verbetering van de toegang tot de Gemeenschap en andere markten voor producten en diensten van oorsprong uit de ACS-landen .|1|1|-4.811393832535449</comment>
+  </comments>
+</alpino_ds>

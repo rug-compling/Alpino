@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" word="werden" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="3" index="1" rel="su">
+        <node begin="2" end="3" id="4" lemma="negen" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="negen" word="negen"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="5" lemma="piraat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="piraat" word="piraten"/>
+      </node>
+      <node begin="0" cat="conj" end="7" id="6" rel="vc">
+        <node begin="0" cat="ppart" end="5" id="7" rel="cnj">
+          <node begin="0" end="1" id="8" index="2" lemma="toen" pos="adv" postag="BW()" pt="bw" rel="mod" root="toen" word="Toen"/>
+          <node begin="2" end="4" id="9" index="1" rel="obj1"/>
+          <node begin="4" buiging="zonder" end="5" id="10" lemma="oppakken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="pak_op" word="opgepakt" wvorm="vd"/>
+        </node>
+        <node begin="5" conjtype="neven" end="6" id="11" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="0" cat="ppart" end="7" id="12" rel="cnj">
+          <node begin="0" end="1" id="13" index="2" rel="mod"/>
+          <node begin="2" end="4" id="14" index="1" rel="obj1"/>
+          <node begin="6" buiging="zonder" end="7" id="15" lemma="ontwapenen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ontwapen" word="ontwapend" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Toen werden negen piraten opgepakt en ontwapend .</sentence>
+</alpino_ds>

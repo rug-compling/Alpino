@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="21" id="2" rel="--">
+      <node begin="0" cat="cp" end="7" id="3" rel="sat">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+        <node begin="1" cat="ssub" end="7" id="5" rel="body">
+          <node begin="1" end="2" getal="ev" id="6" index="1" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+          <node begin="5" end="6" id="7" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="hebt" wvorm="pv"/>
+          <node begin="1" cat="ppart" end="7" id="8" rel="vc">
+            <node begin="1" end="2" id="9" index="1" rel="su"/>
+            <node begin="2" cat="np" end="5" id="10" rel="obj1">
+              <node begin="2" end="3" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="3" buiging="met-e" end="4" graad="basis" id="12" lemma="draadloos" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="draadloos" word="draadloze"/>
+              <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="13" lemma="netwerk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="netwerk" word="netwerk"/>
+            </node>
+            <node begin="6" buiging="zonder" end="7" id="14" lemma="localiseren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="localiseer" word="gelokaliseerd" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+      <node begin="8" cat="smain" end="21" id="15" rel="nucl">
+        <node begin="9" end="10" id="16" lemma="hoeven" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="hoef" word="hoef" wvorm="pv"/>
+        <node begin="10" end="11" getal="ev" id="17" index="2" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+        <node begin="8" cat="ti" end="21" id="18" rel="vc">
+          <node begin="19" end="20" id="19" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="8" cat="inf" end="21" id="20" rel="body">
+            <node begin="8" end="9" id="21" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+            <node begin="10" end="11" id="22" index="2" rel="su"/>
+            <node begin="11" end="12" id="23" lemma="alleen" pos="adj" postag="BW()" pt="bw" rel="mod" root="alleen" word="alleen"/>
+            <node begin="12" cat="np" end="18" id="24" rel="obj1">
+              <node begin="12" buiging="zonder" end="13" getal="ev" id="25" lemma="je" naamval="stan" npagr="agr" pdtype="det" persoon="2v" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="je" status="red" vwtype="bez" word="je"/>
+              <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="26" lemma="wacht_woord" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="wacht_woord" word="wachtwoord"/>
+              <node begin="14" cat="pp" end="18" id="27" rel="mod">
+                <node begin="14" end="15" id="28" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="15" cat="np" end="18" id="29" rel="obj1">
+                  <node begin="15" buiging="zonder" end="16" getal="ev" id="30" lemma="je" naamval="stan" npagr="agr" pdtype="det" persoon="2v" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="je" status="red" vwtype="bez" word="je"/>
+                  <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="31" lemma="PT-" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="PT-" word="PT-"/>
+                  <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="32" lemma="omgeving" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="omgeving" word="omgeving"/>
+                </node>
+              </node>
+            </node>
+            <node begin="18" end="19" id="33" lemma="in" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="in" vztype="fin" word="in"/>
+            <node begin="20" buiging="zonder" end="21" id="34" lemma="in_voeren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voer_in" word="voeren" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als je het draadloze netwerk hebt gelokaliseerd , dan hoef je alleen je wachtwoord van je PT- omgeving in te voeren .</sentence>
+</alpino_ds>

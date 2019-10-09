@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="8" id="2" rel="--">
+      <node begin="0" end="1" getal="mv" graad="basis" id="3" lemma="luisteraar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="tag" root="luisteraar" word="Luisteraars"/>
+      <node begin="2" cat="smain" end="8" id="4" rel="nucl">
+        <node begin="2" cat="np" end="4" id="5" rel="su">
+          <node begin="2" end="3" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="minister-president" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="minister-president" word="minister-president"/>
+        </node>
+        <node begin="4" end="5" id="8" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+        <node begin="5" end="6" id="9" lemma="juist" pos="adv" postag="BW()" pt="bw" rel="mod" root="juist" word="juist"/>
+        <node begin="6" cat="pp" end="8" id="10" rel="ld">
+          <node begin="6" end="7" id="11" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+          <node begin="7" end="8" id="12" lemma="buiten" pos="adv" postag="VZ(fin)" pt="vz" rel="obj1" root="buiten" vztype="fin" word="buiten"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Luisteraars , de minister-president komt juist naar buiten .</sentence>
+</alpino_ds>

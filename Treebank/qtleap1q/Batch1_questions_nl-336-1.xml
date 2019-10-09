@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="3" end="4" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="smain" end="7" id="3" rel="--">
+      <node begin="0" cat="du" end="5" id="4" rel="su">
+        <node begin="0" buiging="zonder" end="1" getal-n="zonder-n" id="5" lemma="installeren" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="dp" root="installeer" word="Installeren" wvorm="inf"/>
+        <node begin="2" cat="np" end="5" id="6" rel="dp">
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="Microsoft" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="Microsoft" word="Microsoft"/>
+          <node begin="4" end="5" genus="genus" getal="ev" graad="basis" id="8" lemma="Office" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Office" word="Office"/>
+        </node>
+      </node>
+      <node begin="5" end="6" id="9" lemma="vast_staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta_vast" word="staat" wvorm="pv"/>
+      <node begin="6" buiging="zonder" end="7" graad="basis" id="10" lemma="vast" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="vast" word="vast"/>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Installeren ( Microsoft ) Office staat vast .</sentence>
+</alpino_ds>

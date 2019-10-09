@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="conj" end="10" id="1" rel="--">
+      <node begin="0" cat="sv1" end="5" id="2" rel="cnj">
+        <node begin="0" end="1" id="3" lemma="uit_schakelen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="schakel_uit" word="Schakel" wvorm="pv"/>
+        <node begin="1" end="2" id="4" lemma="vervolgens" pos="adv" postag="BW()" pt="bw" rel="mod" root="vervolgens" word="vervolgens"/>
+        <node begin="2" cat="np" end="4" id="5" rel="obj1">
+          <node begin="2" buiging="met-e" end="3" getal="mv" graad="basis" id="6" lemma="beide" naamval="stan" pdtype="grad" pos="det" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,mv,basis)" pt="vnw" rel="det" root="beide" vwtype="onbep" word="beide"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="apparaat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="apparaat" word="apparaten"/>
+        </node>
+        <node begin="4" end="5" id="8" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
+      </node>
+      <node begin="5" conjtype="neven" end="6" id="9" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="6" cat="sv1" end="10" id="10" rel="cnj">
+        <node begin="6" end="7" id="11" lemma="op_starten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="start_op" word="start" wvorm="pv"/>
+        <node begin="7" buiging="met-e" end="8" getal-n="zonder-n" id="12" lemma="deze" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(aanw,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="obj1" root="deze" vwtype="aanw" word="deze"/>
+        <node begin="8" end="9" id="13" lemma="opnieuw" pos="adv" postag="BW()" pt="bw" rel="mod" root="opnieuw" word="opnieuw"/>
+        <node begin="9" end="10" id="14" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
+      </node>
+    </node>
+    <node begin="10" end="11" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Schakel vervolgens beide apparaten uit en start deze opnieuw op .</sentence>
+</alpino_ds>

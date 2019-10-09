@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" cat="mwu" end="4" id="4" rel="hd">
+          <node begin="1" buiging="zonder" end="2" graad="basis" id="5" lemma="academisch" pos="name" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="Academisch" word="Academisch"/>
+          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="6" lemma="ziekenhuis" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Ziekenhuis" word="Ziekenhuis"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="Groningen" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mwp" root="Groningen" word="Groningen"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="12" id="9" rel="vc">
+        <node begin="0" end="4" id="10" index="1" rel="su"/>
+        <node begin="8" buiging="zonder" end="9" id="11" lemma="beginnen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="begin" word="begonnen" wvorm="vd"/>
+        <node begin="5" cat="np" end="12" id="12" rel="obj1">
+          <node begin="5" end="6" id="13" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="14" lemma="wetenschappelijk" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="wetenschappelijk" word="wetenschappelijk"/>
+          <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="15" lemma="onderzoek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="onderzoek" word="onderzoek"/>
+          <node begin="9" cat="pp" end="12" id="16" rel="mod">
+            <node begin="9" end="10" id="17" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+            <node begin="10" cat="np" end="12" id="18" rel="obj1">
+              <node begin="10" buiging="met-e" end="11" id="19" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+              <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="20" lemma="toepassing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="toepassing" word="toepassing"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het Academisch Ziekenhuis Groningen is een wetenschappelijk onderzoek begonnen naar deze toepassing .</sentence>
+</alpino_ds>

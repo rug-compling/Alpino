@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="het" pos="det" rel="su" root="het" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="verricht" pos="verb" rel="hd" root="verricht" word="verrichtte"/>
+      <node begin="2" cat="np" end="8" id="4" rel="obj1">
+        <node begin="2" end="3" id="5" lemma="werkzaamheid" pos="noun" rel="hd" root="werkzaamheid" word="werkzaamheden"/>
+        <node begin="3" cat="pp" end="8" id="6" rel="mod">
+          <node begin="3" cat="mwu" end="6" id="7" rel="hd">
+            <node begin="3" end="4" id="8" lemma="ten" pos="prep" rel="mwp" root="ten" word="ten"/>
+            <node begin="4" end="5" id="9" lemma="behoeve" pos="prep" rel="mwp" root="behoeve" word="behoeve"/>
+            <node begin="5" end="6" id="10" lemma="van" pos="prep" rel="mwp" root="van" word="van"/>
+          </node>
+          <node begin="6" cat="mwu" end="8" id="11" rel="obj1">
+            <node begin="6" end="7" id="12" lemma="Vie" pos="name" rel="mwp" root="Vie" word="Vie"/>
+            <node begin="7" end="8" id="13" lemma="d&apos;Or" pos="name" rel="mwp" root="d&apos;Or" word="d&apos;Or"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="14" lemma="." pos="punct" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het verrichtte werkzaamheden ten behoeve van Vie d&apos;Or .</sentence>
+</alpino_ds>

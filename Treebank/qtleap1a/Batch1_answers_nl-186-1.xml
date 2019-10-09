@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="conj" end="8" id="1" rel="--">
+      <node begin="0" cat="sv1" end="2" id="2" rel="cnj">
+        <node begin="0" end="1" id="3" lemma="gaan" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ga" word="Ga" wvorm="pv"/>
+        <node begin="1" end="2" id="4" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="ld" root="naar" vztype="init" word="naar"/>
+      </node>
+      <node begin="2" conjtype="neven" end="3" id="5" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="3" cat="sv1" end="8" id="6" rel="cnj">
+        <node begin="3" end="4" id="7" lemma="aan_maken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="maak_aan" word="maak" wvorm="pv"/>
+        <node begin="4" cat="np" end="7" id="8" rel="obj1">
+          <node begin="4" end="5" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="5" buiging="zonder" end="6" graad="basis" id="10" lemma="nieuw" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="nieuw" word="nieuw"/>
+          <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="11" lemma="account" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="account" word="account"/>
+        </node>
+        <node begin="7" end="8" id="12" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ga naar en maak een nieuw account aan .</sentence>
+</alpino_ds>

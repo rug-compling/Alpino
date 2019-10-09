@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" end="1" frame="punct(aanhaal_both)" id="1" lcat="punct" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" sense="&apos;" special="aanhaal_both" word="&apos;"/>
+    <node begin="1" cat="smain" end="13" id="2" rel="--">
+      <node begin="1" case="nom" def="def" end="2" frame="pronoun(nwh,fir,sg,de,nom,def)" gen="de" getal="ev" id="3" lcat="np" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" sense="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
+      <node begin="2" end="3" frame="verb(hebben,past(sg),transitive)" id="4" infl="sg" lcat="smain" lemma="krijgen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="krijg" sc="transitive" sense="krijg" tense="past" word="kreeg" wvorm="pv"/>
+      <node begin="3" cat="np" end="13" id="5" rel="obj1">
+        <node begin="3" end="4" frame="determiner(de)" id="6" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+        <node begin="4" end="5" frame="noun(de,count,sg,sbar)" gen="de" genus="zijd" getal="ev" graad="basis" id="7" lcat="np" lemma="indruk" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="indruk" sc="sbar" sense="indruk" word="indruk"/>
+        <node begin="5" cat="cp" end="13" id="8" rel="vc">
+          <node begin="5" conjtype="onder" end="6" frame="complementizer(dat)" id="9" lcat="cp" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" sense="dat" word="dat"/>
+          <node begin="6" cat="ssub" end="13" id="10" rel="body">
+            <node begin="6" case="nom" def="def" end="7" frame="pronoun(nwh,thi,both,de,nom,def)" gen="de" genus="fem" getal="ev" id="11" lcat="np" lemma="zij" naamval="nomin" num="both" pdtype="pron" per="thi" persoon="3v" pos="pron" postag="VNW(pers,pron,nomin,vol,3v,ev,fem)" pt="vnw" rel="su" root="zij" sense="zij" status="vol" vwtype="pers" wh="nwh" word="zij"/>
+            <node begin="8" end="9" frame="sentence_adverb" id="12" lcat="advp" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" sense="ook" special="sentence" word="ook"/>
+            <node begin="9" cat="mwu" end="11" id="13" rel="svp">
+              <node begin="9" buiging="zonder" end="10" frame="fixed_part([geen,bal])" id="14" lcat="fixed" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="fixed" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="mwp" root="geen" sense="geen" vwtype="onbep" word="geen"/>
+              <node begin="10" end="11" frame="fixed_part([geen,bal])" genus="zijd" getal="ev" graad="basis" id="15" lcat="fixed" lemma="bal" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="bal" sense="bal" word="bal"/>
+            </node>
+            <node begin="7" cat="pp" end="12" id="16" rel="pc">
+              <node begin="7" end="8" frame="er_vp_adverb" getal="getal" id="17" lcat="advp" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" sense="er" special="er" status="red" vwtype="aanw" word="er"/>
+              <node begin="11" end="12" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="18" lcat="pp" lemma="van" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="van" sense="van" vztype="fin" word="van"/>
+            </node>
+            <node begin="12" end="13" frame="verb(hebben,past(sg),fixed([er_pp(van),[geen,bal]],no_passive))" id="19" infl="sg" lcat="ssub" lemma="geloven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="geloof" sc="fixed([er_pp(van),[geen,bal]],no_passive)" sense="geen-bal-geloof-van" tense="past" word="geloofde" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" frame="punct(punt)" id="20" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+    <node begin="14" end="15" frame="punct(aanhaal_both)" id="21" lcat="punct" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" sense="&apos;" special="aanhaal_both" word="&apos;"/>
+  </node>
+  <sentence>&apos; Ik kreeg de indruk dat zij er ook geen bal van geloofde . &apos;</sentence>
+  <comments>
+    <comment>Q#VK20050512-7-3-2|&apos; Ik kreeg de indruk dat zij er ook geen bal van geloofde . &apos;|1|1|-0.2605573044633246</comment>
+  </comments>
+</alpino_ds>

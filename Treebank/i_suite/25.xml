@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="15" end="16" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="21" id="2" rel="--">
+      <node begin="0" end="1" getal="getal" id="3" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+      <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+      <node begin="2" cat="np" end="15" id="5" rel="su">
+        <node begin="2" cat="detp" end="4" id="6" rel="det">
+          <node begin="2" end="3" id="7" lemma="nogal" pos="adv" postag="BW()" pt="bw" rel="mod" root="nogal" word="nogal"/>
+          <node begin="3" end="4" getal="ev" id="8" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" root="wat" status="vol" vwtype="onbep" word="wat"/>
+        </node>
+        <node begin="4" buiging="met-e" end="5" graad="basis" id="9" lemma="financieel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="financieel" word="financiële"/>
+        <node begin="5" cat="mwu" end="15" id="10" rel="hd">
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="verp" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="verp" word="verp"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="l" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="l" word="l"/>
+          <node begin="7" end="8" id="13" lemma="i" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="i" spectype="symb" word="i"/>
+          <node begin="8" buiging="zonder" end="9" graad="basis" id="14" lemma="ch" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="ch" word="ch"/>
+          <node begin="9" end="10" id="15" lemma="t" pos="noun" postag="SPEC(afk)" pt="spec" rel="mwp" root="t" spectype="afk" word="t"/>
+          <node begin="10" end="11" id="16" lemma="i" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="i" spectype="symb" word="i"/>
+          <node begin="11" end="12" id="17" lemma="n" pos="noun" postag="BW()" pt="bw" rel="mwp" root="n" word="n"/>
+          <node begin="12" end="13" id="18" lemma="g" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="g" spectype="symb" word="g"/>
+          <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="19" lemma="e" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="e" word="e"/>
+          <node begin="14" end="15" id="20" lemma="n" pos="noun" postag="BW()" pt="bw" rel="mwp" root="n" word="n"/>
+        </node>
+      </node>
+      <node begin="16" cat="whrel" end="21" id="21" rel="mod">
+        <node begin="16" end="17" id="22" index="1" lemma="waardoor" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waardoor" word="waardoor"/>
+        <node begin="16" cat="ssub" end="21" id="23" rel="body">
+          <node begin="16" end="17" id="24" index="1" rel="mod"/>
+          <node begin="17" end="18" getal="getal" id="25" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="18" cat="np" end="20" id="26" rel="su">
+            <node begin="18" buiging="zonder" end="19" graad="basis" id="27" lemma="weinig" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="det" root="weinig" vwtype="onbep" word="weinig"/>
+            <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="28" lemma="ruimte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ruimte" word="ruimte"/>
+          </node>
+          <node begin="20" end="21" id="29" lemma="onstaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ontsta" word="onstond" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="30" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Er waren nogal wat financiële verp l i ch t i n g e n , waardoor er weinig ruimte onstond .</sentence>
+</alpino_ds>

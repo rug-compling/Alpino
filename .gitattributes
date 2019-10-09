@@ -1,0 +1,5 @@
+Generation/fluency/bigrams.tpl filter=lfs diff=lfs merge=lfs -text
+Tokenization/libtok.c filter=lfs diff=lfs merge=lfs -text
+Tokenization/libtok_no_breaks.c filter=lfs diff=lfs merge=lfs -text
+Generation/fluency/trigrams.tpl filter=lfs diff=lfs merge=lfs -text
+Grammar/corpus_frequency_features.fsa filter=lfs diff=lfs merge=lfs -text

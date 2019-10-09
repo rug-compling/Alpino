@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" frame="pronoun(nwh,fir,sg,de,nom,def)" gen="de" getal="ev" id="2" lcat="np" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" sense="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
+      <node begin="1" end="2" frame="verb(hebben,past(sg),tr_sbar)" id="3" infl="sg" lcat="smain" lemma="weten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="weet" sc="tr_sbar" sense="weet" tense="past" word="wist" wvorm="pv"/>
+      <node begin="2" end="3" frame="sentence_adverb" id="4" lcat="advp" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" sense="ook" special="sentence" word="ook"/>
+      <node begin="3" cat="advp" end="5" id="5" rel="mod">
+        <node begin="3" end="4" frame="adverb" id="6" lcat="advp" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="hd" root="niet" sense="niet" word="niet"/>
+        <node begin="4" end="5" frame="adverb" id="7" lcat="advp" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="mod" root="eens" sense="eens" word="eens"/>
+      </node>
+      <node begin="5" cat="whsub" end="9" id="8" rel="vc">
+        <node begin="5" case="both" def="indef" end="6" frame="pronoun(ywh,thi,sg,het,both,indef,nparg)" gen="het" getal="ev" id="9" index="1" lcat="np" lemma="wat" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" root="wat" sense="wat" special="nparg" status="vol" vwtype="vb" wh="ywh" word="wat"/>
+        <node begin="5" cat="ssub" end="9" id="10" rel="body">
+          <node begin="5" end="6" id="11" index="1" rel="predc"/>
+          <node begin="6" cat="np" end="8" id="12" rel="su">
+            <node begin="6" end="7" frame="determiner(de)" id="13" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+            <node begin="7" end="8" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="14" lcat="np" lemma="score" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="score" sense="score" word="score"/>
+          </node>
+          <node begin="8" end="9" frame="verb(unacc,past(sg),copula)" id="15" infl="sg" lcat="ssub" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="copula" sense="ben" tense="past" word="was" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="9" end="10" frame="punct(punt)" id="16" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Ik wist ook niet eens wat de score was .</sentence>
+  <comments>
+    <comment>Q#ad20000703-123-7-8|Ik wist ook niet eens wat de score was .|1|1|-0.29731081403013443</comment>
+  </comments>
+</alpino_ds>

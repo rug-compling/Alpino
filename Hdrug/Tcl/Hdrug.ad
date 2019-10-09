@@ -1,0 +1,161 @@
+!++++++++++
+!+ colors +
+!++++++++++
+
+*background:		burlywood3
+*status*background:		burlywood1
+*activeBackground:	burlywood1
+*foreground:		Black
+*disabledForeground:    Grey80
+
+! canvas
+*Canvas*Background:     wheat3
+*Canvas*Foreground:	Black
+*Canvas*highlightBackground: wheat3
+
+*Text*Background:	wheat3
+*Text*Foreground:	Black
+
+! scrollbar
+*Scrollbar*foreground:  wheat3
+*Scrollbar*background:  burlywood3
+*Scrollbar*activeForeground: burlywood1
+
+! listbox
+*Listbox*foreground: black
+*Listbox*background: wheat3
+*Listbox*selectBackground: burlywood1
+
+! buttons representing objects
+*bb.o*Menubutton.background: DarkSeaGreen3
+*bb.o*Menubutton.activeBackground: DarkSeaGreen2
+*bb.o*Menubutton.highlightBackground: DarkSeaGreen1
+!*bb.o*Menubutton.background: green
+! buttons representing objects
+*bb.o*Button.background: DarkSeaGreen3
+*bb.o*Button.activeBackground: DarkSeaGreen2
+*bb.o*Button.highlightBackground: DarkSeaGreen1
+!*bb.o*Menubutton.background: green
+
+
+! entries
+*Entry*foreground: black
+*Entry*background: white
+*pp.top*Entry.background: burlywood1
+*bb*Entry.background: burlywood1
+
+!+++++++++
+!+ fonts +
+!+++++++++
+
+!!*Text*Font:	-----bold-r-normal--14-140-*-*-*-*---*
+!*Listbox*font:	---times-bold-r-normal-*-14-*-*-*-*-*-*-*
+
+!!! t is the button/label bar at the bottom
+!*t*Label*font:  -----bold-o-normal--14-140-*-*-*-*---*
+!*Entry*font:  -----bold-r-normal--14-140-*-*-*-*---*
+
+!! on the laptop:
+!*t*font:  -----bold-o-normal--8-80-*-*-*-*---*
+
+
+!+++++++++++
+!+ reliefs +
+!+++++++++++
+
+*Canvas*Relief:			raised
+*Menubutton*Relief: 		raised
+*Button*Relief: 		raised
+*Scrollbar*Relief:		sunken
+*Entry*Relief:			sunken
+*Label*Relief:          	flat
+*Menu*Relief: 			raised
+*menu*Menubutton.Relief:	flat
+
+! feature structures...
+
+! attribute names
+*attl*Font:   -----medium-o-normal--*-120-*-*-*-*---*
+
+! untyped values
+*v_a_ll*Font: -----medium-r-normal--*-120-*-*-*-*---*
+
+! variable names (for reentrancy, structure sharing)
+*varl*Font:   -----bold-r-normal--*-120-*-*-*-*---*
+*varl1*Font:   -----bold-r-normal--*-120-*-*-*-*---*
+*varl2*Font:   -----bold-r-normal--*-120-*-*-*-*---*
+*varl3*Font:   -----bold-r-normal--*-120-*-*-*-*---*
+*varl4*Font:   -----bold-r-normal--*-120-*-*-*-*---*
+*varl5*Font:   -----bold-r-normal--*-120-*-*-*-*---*
+*varl6*Font:   -----bold-r-normal--*-120-*-*-*-*---*
+*varl7*Font:   -----bold-r-normal--*-120-*-*-*-*---*
+*varl8*Font:   -----bold-r-normal--*-120-*-*-*-*---*
+*varl9*Font:   -----bold-r-normal--*-120-*-*-*-*---*
+*varl10*Font:   -----bold-r-normal--*-120-*-*-*-*---*
+*varl11*Font:   -----bold-r-normal--*-120-*-*-*-*---*
+*varl12*Font:   -----bold-r-normal--*-120-*-*-*-*---*
+*varl13*Font:   -----bold-r-normal--*-120-*-*-*-*---*
+*varl14*Font:   -----bold-r-normal--*-120-*-*-*-*---*
+*varl15*Font:   -----bold-r-normal--*-120-*-*-*-*---*
+
+! type names
+*typel*Font:  -----bold-o-normal--*-120-*-*-*-*---*
+
+! feature structures
+*v_a_l.BorderWidth:  4
+*v_a_l.Relief: ridge
+
+! this one for terminal symbols...
+! this is sort of a hack, assuming that terminal symbols are untyped
+! and that resources of other occurences of untyped things are
+! overwritten by the *v_a_l* .. resources below 
+*v_a_ll.Background: DarkSeaGreen4
+*v_a_ll.Foreground: White
+
+! should include variable, if feature structure starts with variable
+*varl.Background: wheat3
+
+
+! color of feature structures
+*v_a_l*Background: DarkSeaGreen3
+*v_a_l*Foreground: Black
+
+
+! tree nodes (new style)
+*cv*Button.background: DarkSeaGreen4
+*cv*Button.foreground: White
+*cv*Button.activeForeground: Black
+*cv*Button.activeBackground: DarkSeaGreen2
+*cv*Button.highlightBackground: DarkSeaGreen2
+
+*cv*Button*Pad: 1
+
+! vertical distance between nodes in a tree. 
+*Vert_dist:		20
+
+
+
+
+
+! I use the following for the laptop:
+! *cv.canvas.Label*Font: *-*-clean-medium-r-*-*-10-*-*-*-*-*-*-*
+!*Vert_dist:		20
+
+!large screen:
+!*cv.canvas.Width:	500
+!*cw.canvas.Width:	500
+
+!*cv.canvas.Height:	500
+!*cw.canvas.Height:	500
+
+!on the laptop:
+!*cv.canvas.Width:	250
+!*cw.canvas.Width:	250
+!
+!*cv.canvas.Height:	200
+!*cw.canvas.Height:	200
+
+! I set this to zero on the laptop:
+*Helpline:		1
+
+

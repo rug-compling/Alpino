@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="ppart" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="obj1">
+        <node begin="0" buiging="met-e" end="1" graad="basis" id="3" lemma="duur" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="duur" word="Dure"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="sieraad" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="sieraad" word="sieraden"/>
+      </node>
+      <node begin="2" buiging="zonder" end="3" id="5" lemma="stelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="steel" word="gestolen" wvorm="vd"/>
+      <node begin="3" cat="pp" end="5" id="6" rel="mod">
+        <node begin="3" end="4" id="7" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="8" lemma="TEFAF" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="TEFAF" word="TEFAF"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dure sieraden gestolen op TEFAF .</sentence>
+</alpino_ds>

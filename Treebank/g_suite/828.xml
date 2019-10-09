@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="np" end="4" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+      <node begin="1" cat="np" end="3" id="3" rel="mod">
+        <node begin="1" buiging="zonder" end="2" graad="basis" id="4" lemma="vorig" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="vorig" word="vorig"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
+      </node>
+      <node begin="3" buiging="met-e" end="4" getal-n="mv-n" id="6" lemma="afstuderen" pos="adj" positie="nom" postag="WW(vd,nom,met-e,mv-n)" pt="ww" rel="hd" root="afgestudeerd" word="afgestudeerden" wvorm="vd"/>
+    </node>
+  </node>
+  <sentence>De vorig jaar afgestudeerden</sentence>
+</alpino_ds>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="np" end="9" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="3" lemma="terugtocht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="terugtocht" word="terugtocht"/>
+      <node begin="2" cat="pp" end="9" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+        <node begin="3" cat="conj" end="9" id="6" rel="obj1">
+          <node begin="3" cat="np" end="7" id="7" rel="cnj">
+            <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" cat="mwu" end="7" id="9" mwu_root="Strook_van_Gaza" mwu_sense="Strook_van_Gaza" rel="hd">
+              <node begin="4" end="5" id="10" lemma="Strook" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Strook" spectype="deeleigen" word="Strook"/>
+              <node begin="5" end="6" id="11" lemma="van" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+              <node begin="6" end="7" id="12" lemma="Gaza" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Gaza" spectype="deeleigen" word="Gaza"/>
+            </node>
+          </node>
+          <node begin="7" conjtype="neven" end="8" id="13" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="8" end="9" genus="genus" getal="ev" graad="basis" id="14" lemma="Jericho" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="cnj" root="Jericho" word="Jericho"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>De terugtocht uit de Strook van Gaza en Jericho</sentence>
+</alpino_ds>

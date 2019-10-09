@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="4" end="5" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="6" id="3" rel="--">
+      <node begin="0" cat="smain" end="2" id="4" rel="nucl">
+        <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="5" lemma="Feyenoord" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Feyenoord" word="Feyenoord"/>
+        <node begin="1" end="2" id="6" lemma="winnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="win" word="won" wvorm="pv"/>
+      </node>
+      <node begin="3" end="4" id="7" lemma="hoor" pos="tag" postag="TSW()" pt="tsw" rel="tag" root="hoor" word="hoor"/>
+      <node begin="5" end="6" id="8" lemma="3-2" pos="num" postag="SPEC(symb)" pt="spec" rel="sat" root="3-2" spectype="symb" word="3-2"/>
+    </node>
+  </node>
+  <sentence>Feyenoord won , hoor , 3-2</sentence>
+</alpino_ds>

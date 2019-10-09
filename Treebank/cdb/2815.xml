@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="du" end="15" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" word="Maar"/>
+      <node begin="1" cat="smain" end="15" id="3" rel="nucl">
+        <node begin="1" cat="np" end="3" id="4" index="1" rel="su">
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="raad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="raad" word="raad"/>
+        </node>
+        <node begin="3" end="4" id="7" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+        <node begin="1" cat="inf" end="15" id="8" rel="vc">
+          <node begin="1" end="3" id="9" index="1" rel="su"/>
+          <node begin="13" buiging="zonder" end="14" id="10" lemma="laten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="laat" word="laten" wvorm="inf"/>
+          <node begin="4" cat="inf" end="15" id="11" rel="vc">
+            <node begin="4" end="5" getal="getal" id="12" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="zich" status="red" vwtype="refl" word="zich"/>
+            <node begin="5" cat="pp" end="13" id="13" rel="mod">
+              <node begin="5" end="6" id="14" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+              <node begin="6" cat="np" end="13" id="15" rel="obj1">
+                <node begin="6" end="7" id="16" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="17" lemma="adviescollege" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="adviescollege" word="adviescollege"/>
+                <node begin="8" cat="pp" end="13" id="18" rel="mod">
+                  <node begin="8" cat="mwu" end="11" id="19" rel="hd">
+                    <node begin="8" end="9" id="20" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="onder" vztype="init" word="onder"/>
+                    <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="21" lemma="leiding" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="leiding" word="leiding"/>
+                    <node begin="10" end="11" id="22" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+                  </node>
+                  <node begin="11" cat="mwu" end="13" id="23" rel="obj1">
+                    <node begin="11" end="12" id="24" lemma="prof." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="prof." spectype="deeleigen" word="prof."/>
+                    <node begin="12" end="13" id="25" lemma="Brasz" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Brasz" spectype="deeleigen" word="Brasz"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="14" buiging="zonder" end="15" id="26" lemma="voorlichten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="licht" word="voorlichten" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Maar de raad heeft zich door een adviescollege onder leiding van prof. Brasz laten voorlichten .</sentence>
+</alpino_ds>

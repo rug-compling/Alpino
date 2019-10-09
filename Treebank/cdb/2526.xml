@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="42" id="0" rel="top">
+    <node begin="16" end="17" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="18" end="19" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="24" end="25" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="28" end="29" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="34" end="35" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="41" id="6" rel="--">
+      <node begin="0" cat="ssub" end="34" id="7" rel="nucl">
+        <node begin="0" cat="np" end="5" id="8" index="1" rel="su">
+          <node begin="0" end="1" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+          <node begin="1" cat="mwu" end="5" id="10" rel="hd">
+            <node begin="1" buiging="met-e" end="2" graad="basis" id="11" lemma="koninklijk" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Koninklijke" word="Koninklijke"/>
+            <node begin="2" buiging="met-e" end="3" graad="basis" id="12" lemma="Nederlands" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Nederlandse" word="Nederlandse"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="13" lemma="textielunie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="TextielUnie" word="TextielUnie"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="14" lemma="nv" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="NV" word="NV"/>
+          </node>
+        </node>
+        <node begin="5" end="6" id="15" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+        <node begin="0" cat="inf" end="34" id="16" rel="vc">
+          <node begin="0" end="5" id="17" index="1" rel="su"/>
+          <node begin="6" cat="pp" end="18" id="18" rel="pc">
+            <node begin="6" end="7" id="19" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="7" cat="np" end="18" id="20" rel="obj1">
+              <node begin="7" end="8" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="8" buiging="met-e" end="9" graad="basis" id="22" lemma="Amerikaans" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Amerikaans" word="Amerikaanse"/>
+              <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="23" lemma="firma" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="firma" word="firma"/>
+              <node begin="10" cat="mwu" end="14" id="24" rel="app">
+                <node begin="10" end="11" id="25" lemma="Howe" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Howe" spectype="deeleigen" word="Howe"/>
+                <node begin="11" end="12" id="26" lemma="and" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="and" spectype="vreemd" word="and"/>
+                <node begin="12" end="13" id="27" lemma="Bainbridge" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Bainbridge" spectype="vreemd" word="Bainbridge"/>
+                <node begin="13" end="14" id="28" lemma="Inc." pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Inc." spectype="vreemd" word="Inc."/>
+              </node>
+              <node begin="14" cat="pp" end="18" id="29" rel="mod">
+                <node begin="14" end="15" id="30" lemma="te" pos="prep" postag="SPEC(vreemd)" pt="spec" rel="hd" root="te" spectype="vreemd" word="te"/>
+                <node begin="15" cat="np" end="18" id="31" rel="obj1">
+                  <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="32" lemma="Boston" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Boston" word="Boston"/>
+                  <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="33" lemma="VS" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mod" root="VS" word="VS"/>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="19" buiging="zonder" end="20" id="34" lemma="samenwerken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="werk" word="samenwerken" wvorm="inf"/>
+          <node begin="20" cat="pp" end="34" id="35" rel="mod">
+            <node begin="20" end="21" id="36" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="21" cat="np" end="34" id="37" rel="obj1">
+              <node begin="21" end="22" id="38" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="22" buiging="met-e" end="23" graad="basis" id="39" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+              <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="40" lemma="joint-venture" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="joint-venture" word="joint-venture"/>
+              <node begin="25" cat="mwu" end="28" id="41" rel="app">
+                <node begin="25" buiging="met-e" end="26" graad="basis" id="42" lemma="bainbridge" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Bainbridge" word="Bainbridge"/>
+                <node begin="26" end="27" id="43" lemma="Europe" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Europe" spectype="deeleigen" word="Europe"/>
+                <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="44" lemma="nv" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="NV" word="NV"/>
+              </node>
+              <node begin="29" cat="rel" end="34" id="45" rel="mod">
+                <node begin="29" buiging="met-e" end="30" getal-n="zonder-n" id="46" index="2" lemma="welk" naamval="stan" pdtype="det" pos="noun" positie="nom" postag="VNW(vb,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="rhd" root="welke" vwtype="vb" word="welke"/>
+                <node begin="29" cat="ssub" end="34" id="47" rel="body">
+                  <node begin="29" end="30" id="48" index="2" rel="su"/>
+                  <node begin="31" end="32" id="49" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+                  <node begin="29" cat="ppart" end="34" id="50" rel="vc">
+                    <node begin="29" end="30" id="51" index="2" rel="obj1"/>
+                    <node begin="30" buiging="zonder" end="31" id="52" lemma="vestigen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vestig" word="gevestigd" wvorm="vd"/>
+                    <node begin="32" cat="pp" end="34" id="53" rel="ld">
+                      <node begin="32" end="33" id="54" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                      <node begin="33" end="34" genus="onz" getal="ev" graad="basis" id="55" lemma="Haaksbergen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Haaksbergen" word="Haaksbergen"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="35" cat="smain" end="41" id="56" rel="tag">
+        <node begin="35" end="36" id="57" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="su" root="zo" word="zo"/>
+        <node begin="36" end="37" id="58" lemma="blijken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="blijk" word="blijkt" wvorm="pv"/>
+        <node begin="37" cat="pp" end="41" id="59" rel="pc">
+          <node begin="37" end="38" id="60" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+          <node begin="38" cat="np" end="41" id="61" rel="obj1">
+            <node begin="38" end="39" id="62" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="39" cat="mwu" end="41" id="63" rel="hd">
+              <node begin="39" buiging="met-e" end="40" graad="basis" id="64" lemma="Nederlands" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Nederlandse" word="Nederlandse"/>
+              <node begin="40" end="41" genus="zijd" getal="ev" graad="basis" id="65" lemma="staatscourant" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Staatscourant" word="Staatscourant"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="41" end="42" id="66" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De Koninklijke Nederlandse TextielUnie NV gaat met de Amerikaanse firma Howe and Bainbridge Inc. te Boston ( VS ) samenwerken in een nieuwe joint-venture , Bainbridge Europe NV , welke gevestigd wordt in Haaksbergen , zo blijkt uit de Nederlandse Staatscourant .</sentence>
+</alpino_ds>

@@ -1,0 +1,7 @@
+#!/usr/bin/perl -w
+
+while (<>) {
+  chomp;
+  ($name,$weight)=split/\|/;
+  if ($weight) { printf "feature_weight(%s,%f).\n",$name,0-$weight; }
+}

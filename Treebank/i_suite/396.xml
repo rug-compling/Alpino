@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" buiging="met-e" end="1" getal="mv" id="3" lemma="ons" naamval="stan" npagr="rest" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" pt="vnw" rel="det" root="ons" status="vol" vwtype="bez" word="Onze"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="bovenbuur" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="boven_buur" word="bovenburen"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+      <node begin="3" end="4" id="6" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
+      <node begin="0" cat="ahi" end="8" id="7" rel="vc">
+        <node begin="4" cat="mwu" end="6" id="8" mwu_root="aan het" mwu_sense="aan het" rel="cmp">
+          <node begin="4" end="5" id="9" lemma="aan" pos="comp" postag="VZ(init)" pt="vz" rel="mwp" root="aan" vztype="init" word="aan"/>
+          <node begin="5" end="6" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="comp" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+        </node>
+        <node begin="0" cat="inf" end="8" id="11" rel="body">
+          <node begin="0" end="2" id="12" index="1" rel="su"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="ruzie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="ruzie" word="ruzie"/>
+          <node begin="7" buiging="zonder" end="8" id="14" lemma="maken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="maak" word="maken" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Onze bovenburen waren weer aan het ruzie maken</sentence>
+</alpino_ds>

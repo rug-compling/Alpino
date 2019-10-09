@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="30" id="0" rel="top">
+    <node begin="14" end="15" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="16" end="17" id="2" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="22" end="23" id="3" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="0" cat="smain" end="29" id="4" rel="--">
+      <node begin="0" cat="pp" end="3" id="5" rel="mod">
+        <node begin="0" end="1" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+        <node begin="1" cat="np" end="3" id="7" rel="obj1">
+          <node begin="1" buiging="zonder" end="2" getal="ev" id="8" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="9" lemma="openingstoespraak" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="toespraak" word="openingstoespraak"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="10" lemma="gaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ga" word="ging" wvorm="pv"/>
+      <node begin="4" cat="np" end="6" id="11" rel="su">
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="12" lemma="voorzitter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzitter" word="voorzitter"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="13" lemma="Broeksz" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Broeksz" word="Broeksz"/>
+      </node>
+      <node begin="6" buiging="zonder" end="7" graad="basis" id="14" lemma="uitvoerig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="uitvoerig" word="uitvoerig"/>
+      <node begin="7" end="8" id="15" lemma="in" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="in" vztype="fin" word="in"/>
+      <node begin="8" cat="pp" end="29" id="16" rel="pc">
+        <node begin="8" end="9" id="17" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="9" cat="np" end="29" id="18" rel="obj1">
+          <node begin="9" end="10" id="19" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="20" lemma="brief" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="brief" word="brief"/>
+          <node begin="11" cat="pp" end="29" id="21" rel="mod">
+            <node begin="11" end="12" id="22" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="12" cat="np" end="29" id="23" rel="obj1">
+              <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="24" lemma="crm-minister" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="minister" word="CRM-minister"/>
+              <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="25" lemma="Klompe" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Klompe" word="Klompe"/>
+              <node begin="15" cat="rel" end="29" id="26" rel="mod">
+                <node begin="15" end="16" id="27" index="1" lemma="waarin" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarin" word="waarin"/>
+                <node begin="15" cat="ssub" end="29" id="28" rel="body">
+                  <node begin="25" cat="np" end="27" id="29" index="2" rel="su">
+                    <node begin="25" buiging="met-e" end="26" graad="basis" id="30" lemma="vergaand" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vergaand" word="vergaande"/>
+                    <node begin="26" end="27" getal="mv" graad="basis" id="31" lemma="mogelijkheid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mogelijkheid" word="mogelijkheden"/>
+                  </node>
+                  <node begin="27" end="28" id="32" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
+                  <node begin="15" cat="ppart" end="29" id="33" rel="vc">
+                    <node begin="15" end="16" id="34" index="1" rel="mod"/>
+                    <node begin="17" cat="pp" end="22" id="35" rel="mod">
+                      <node begin="17" cat="mwu" end="20" id="36" rel="hd">
+                        <node begin="17" end="18" id="37" lemma="te" pos="prep" postag="VZ(versm)" pt="vz" rel="mwp" root="ten" vztype="versm" word="ten"/>
+                        <node begin="18" end="19" getal="ev" graad="basis" id="38" lemma="detriment" naamval="dat" ntype="soort" pos="prep" postag="N(soort,ev,basis,dat)" pt="n" rel="mwp" root="detrimente" word="detrimente"/>
+                        <node begin="19" end="20" id="39" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+                      </node>
+                      <node begin="20" cat="np" end="22" id="40" rel="obj1">
+                        <node begin="20" end="21" id="41" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                        <node begin="21" end="22" getal="mv" graad="basis" id="42" lemma="omroepvereniging" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vereniging" word="omroepverenigingen"/>
+                      </node>
+                    </node>
+                    <node begin="23" cat="np" end="25" id="43" rel="obj2">
+                      <node begin="23" end="24" id="44" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                      <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="45" lemma="NOS" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="NOS" word="NOS"/>
+                    </node>
+                    <node begin="25" end="27" id="46" index="2" rel="obj1"/>
+                    <node begin="28" buiging="zonder" end="29" id="47" lemma="toebedelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bedeel" word="toebedeeld" wvorm="vd"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="29" end="30" id="48" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>In zijn openingstoespraak ging voorzitter Broeksz uitvoerig in op de brief van CRM-minister Klompe , waarin - ten detrimente van de omroepverenigingen - de NOS vergaande mogelijkheden worden toebedeeld .</sentence>
+</alpino_ds>

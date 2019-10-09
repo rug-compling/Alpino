@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="0" cat="du" end="5" id="2" rel="--">
+      <node begin="0" end="1" getal="mv" graad="basis" id="3" lemma="verkiezing" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="tag" root="verkiezing" word="Verkiezingen"/>
+      <node begin="2" cat="ppart" end="5" id="4" rel="nucl">
+        <node begin="2" cat="np" end="4" id="5" rel="obj1">
+          <node begin="2" end="3" id="6" lemma="61" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="61" word="61"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="partij" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="partij" word="partijen"/>
+        </node>
+        <node begin="4" buiging="zonder" end="5" id="8" lemma="aanmelden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="meld_aan" word="aangemeld" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Verkiezingen : 61 partijen aangemeld .</sentence>
+</alpino_ds>

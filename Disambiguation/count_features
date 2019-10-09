@@ -1,0 +1,136 @@
+#!/usr/bin/perl -w
+
+use Getopt::Std;
+
+$opt_a=0;
+$opt_c="";
+$opt_f=0;
+$opt_n=0;
+$opt_s=0;
+
+getopts('ac:fn:s');
+
+# opt_c: start counting from the counts collected in this file
+# opt_n: only take into account first opt_n parses of each sentence
+# opt_s: simplified counting: only count %fs hash
+# opt_a: a sequence of counts files, are all merged together
+# opt_f: extraction for fluency
+
+%fs=();  # number of parses that a feature occurs in
+%gs=();  # number of sentences that a feature occurs in (at least 1 parse)
+%hs=();  # number of sentences for which this feature distinguishes
+         # parses, i.e., there are at least two parses which have
+         # different counts of this feature.
+
+if ($opt_c) {
+    open(COUNTS,"$opt_c") or die "Can't find counts file $opt_c: $!\n";
+    while(<COUNTS>) {
+	chomp;
+	($key,$f,$g,$h) = split/\|/;
+	$fs{$key}+=$f;
+	$gs{$key}+=$g;
+	$hs{$key}+=$h;
+    }
+    close COUNTS;
+    print STDERR "reading counts file $opt_c done;\n";
+} 
+
+if ($opt_a) {
+    while(<>) {
+        next if /^[%\#]/;
+        next if !/\|/;
+        chomp;
+        if (! ($. % 25000)) { 
+            print STDERR "read $. lines\n";
+        }
+	($key,$f,$g,$h) = split/\|/;
+	$fs{$key}+=$f;
+	$gs{$key}+=$g;
+	$hs{$key}+=$h;
+    }
+} else {  # !$opt_a
+    %lgs=();
+    %ucs=();
+    %uct=();
+    $prevkey=-1;
+    $lcount=0;
+    
+    while (<>) {
+        next if /^[%\#]/;
+        next if !/\|/;
+        chomp;
+        if (! ($. % 25000)) { 
+            print STDERR "read $. lines\n";
+        }
+    
+	if ($opt_f) {
+	    (undef,$key,undef,undef,$features) = split/\#/;
+	} else {
+	    ($key,undef,undef,$features) = split/\#/;
+	}
+
+        if ($key ne $prevkey) {
+            if (!$opt_s) {
+                foreach $lfeat (keys %lgs) {
+                    $gs{$lfeat}++;
+                    if ($uct{$lfeat}) {
+                        $hs{$lfeat}++;
+                    }
+                }
+                %lgs=();
+                %ucs=();
+                %uct=();
+            }
+            $lcount=0;
+        }
+        if (!$opt_n || $opt_n > $lcount) {
+            %seen=();
+            $lcount++;
+            foreach $pair (split/\|/,$features) {
+                ($count,$feature) = split/\@/,$pair;
+                $fs{$feature}++;
+                if (!$opt_s) {
+                    $lgs{$feature}++;
+                    $seen{$feature}++;
+                    if ($lcount==1) {
+                        $ucs{$feature}=$count;
+                    } elsif (!$ucs{$feature} || $ucs{$feature} != $count) {
+                        $uct{$feature}=1;
+                    }
+                }
+            }
+            if (!$opt_s && $lcount > 1) {
+                foreach $feature (keys %ucs) {
+                    if (! $seen{$feature}) {
+                        $uct{$feature}=1;
+                    }
+                    
+                }
+            }
+            
+        }
+        $prevkey=$key;
+    }
+
+    if (!$opt_s) {
+        foreach $lfeat (keys %lgs) {
+            $gs{$lfeat}++;
+            if ($uct{$lfeat}) {
+                $hs{$lfeat}++;
+            }
+        }
+    }
+}
+
+foreach $key (keys %fs) {
+    $dist=0;
+    if ($opt_s) {
+        print "$key|$fs{$key}\n";
+    } else {
+        if ($hs{$key}) {
+            $dist = $hs{$key}
+        }
+        print "$key|$fs{$key}|$gs{$key}|$dist\n";
+    }
+}
+

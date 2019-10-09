@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="6" end="7" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="15" id="2" rel="--">
+      <node begin="0" cat="cp" end="6" id="3" rel="mod">
+        <node begin="0" end="1" frame="complementizer" id="4" lcat="cp" pos="comp" rel="cmp" root="nadat" sense="nadat" word="Nadat"/>
+        <node begin="1" cat="ssub" end="6" id="5" rel="body">
+          <node begin="1" cat="np" end="3" id="6" index="1" rel="su">
+            <node begin="1" end="2" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="7" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+            <node begin="2" end="3" frame="proper_name(both,'ORG')" id="8" lcat="np" neclass="ORG" num="both" pos="name" rel="hd" root="Contactcomité" sense="Contactcomité" word="Contactcomité"/>
+          </node>
+          <node begin="4" end="5" frame="verb(hebben,sg_heeft,aux_psp_hebben)" id="9" infl="sg_heeft" lcat="ssub" pos="verb" rel="hd" root="heb" sc="aux_psp_hebben" sense="heb" tense="present" word="heeft"/>
+          <node begin="1" cat="ppart" end="6" id="10" rel="vc">
+            <node begin="1" end="3" id="11" index="1" rel="su"/>
+            <node begin="3" end="4" frame="noun(het,count,sg)" gen="het" id="12" lcat="np" num="sg" pos="noun" rel="obj1" root="advies" sense="advies" word="advies"/>
+            <node begin="5" end="6" frame="verb(hebben,psp,ninv(transitive,part_transitive(uit)))" id="13" infl="psp" lcat="ppart" pos="verb" rel="hd" root="breng_uit" sc="part_transitive(uit)" sense="breng_uit" word="uitgebracht"/>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" frame="verb(hebben,sg3,part_transitive(voor))" id="14" infl="sg3" lcat="smain" pos="verb" rel="hd" root="stel_voor" sc="part_transitive(voor)" sense="stel_voor" tense="present" word="stelt"/>
+      <node begin="8" cat="np" end="10" id="15" rel="su">
+        <node begin="8" end="9" frame="determiner(de)" id="16" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node begin="9" end="10" frame="proper_name(both,'ORG')" id="17" lcat="np" neclass="ORG" num="both" pos="name" rel="hd" root="Commissie" sense="Commissie" word="Commissie"/>
+      </node>
+      <node begin="10" cat="cp" end="12" id="18" rel="mod">
+        <node begin="10" end="11" frame="complementizer(a)" id="19" lcat="cp" pos="comp" rel="cmp" root="zo" sc="a" sense="zo" word="zo"/>
+        <node aform="base" begin="11" end="12" frame="adjective(no_e(adv))" id="20" infl="no_e" lcat="ap" pos="adj" rel="body" root="nodig" sense="nodig" vform="adj" word="nodig"/>
+      </node>
+      <node begin="12" cat="np" end="14" id="21" rel="obj1">
+        <node aform="base" begin="12" end="13" frame="adjective(ende(adv))" id="22" infl="e" lcat="ppres" pos="adj" rel="mod" root="passend" sense="passend" vform="gerund" word="passende"/>
+        <node begin="13" end="14" frame="noun(de,count,pl)" gen="de" id="23" lcat="np" num="pl" pos="noun" rel="hd" root="maatregel" sense="maatregel" word="maatregelen"/>
+      </node>
+      <node begin="14" end="15" frame="particle(voor)" id="24" lcat="part" pos="part" rel="svp" root="voor" sense="voor" word="voor"/>
+    </node>
+    <node begin="15" end="16" frame="punct(punt)" id="25" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Nadat het Contactcomité advies heeft uitgebracht , stelt de Commissie zo nodig passende maatregelen voor .</sentence>
+  <comments>
+    <comment>Q#468|Nadat het Contactcomité advies heeft uitgebracht , stelt de Commissie zo nodig passende maatregelen voor .|1|1|-12.264787858332868</comment>
+  </comments>
+</alpino_ds>

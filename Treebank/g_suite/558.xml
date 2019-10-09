@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      <node begin="1" end="2" id="3" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+      <node begin="0" cat="inf" end="8" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="4" buiging="zonder" end="5" id="6" lemma="wonen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="woon" word="wonen" wvorm="inf"/>
+        <node begin="2" cat="advp" end="8" id="7" rel="ld">
+          <node begin="2" end="3" getal="getal" id="8" lemma="nergens" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(onbep,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="hd" root="nergens" status="vol" vwtype="onbep" word="nergens"/>
+          <node begin="3" cat="ap" end="8" id="9" rel="mod">
+            <node begin="3" buiging="met-s" end="4" graad="basis" id="10" lemma="anders" pos="adj" positie="postnom" postag="ADJ(postnom,basis,met-s)" pt="adj" rel="hd" root="anders" word="anders"/>
+            <node begin="5" cat="cp" end="8" id="11" rel="obcomp">
+              <node begin="5" conjtype="onder" end="6" id="12" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+              <node begin="6" cat="pp" end="8" id="13" rel="body">
+                <node begin="6" end="7" id="14" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="15" lemma="Aduard" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Aduard" word="Aduard"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>ik wil nergens anders wonen dan in Aduard</sentence>
+</alpino_ds>

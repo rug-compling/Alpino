@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="3" end="4" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="du" end="14" id="2" rel="--">
+      <node begin="0" cat="conj" end="8" id="3" rel="dp">
+        <node begin="0" cat="mwu" end="3" id="4" mwu_root="España_Km_36" mwu_sense="España_Km_36" rel="cnj">
+          <node begin="0" end="1" frame="proper_name(both)" id="5" lcat="np" lemma="España" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="España" sense="España" spectype="deeleigen" word="España"/>
+          <node begin="1" end="2" frame="proper_name(both)" id="6" lcat="np" lemma="Km" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Km" sense="Km" spectype="deeleigen" word="Km"/>
+          <node begin="2" end="3" frame="proper_name(both)" id="7" lcat="np" lemma="36" num="both" numtype="hoofd" pos="name" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="36" sense="36" word="36"/>
+        </node>
+        <node begin="4" cat="mwu" end="8" id="8" mwu_root="Carretera_Nacional_N-1_ES-28750" mwu_sense="Carretera_Nacional_N-1_ES-28750" rel="cnj">
+          <node begin="4" end="5" frame="proper_name(both)" id="9" lcat="np" lemma="Carretera" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Carretera" sense="Carretera" spectype="deeleigen" word="Carretera"/>
+          <node begin="5" end="6" frame="proper_name(both)" id="10" lcat="np" lemma="Nacional" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nacional" sense="Nacional" spectype="deeleigen" word="Nacional"/>
+          <node begin="6" end="7" frame="proper_name(both)" id="11" lcat="np" lemma="N-1" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="N-1" sense="N-1" spectype="deeleigen" word="N-1"/>
+          <node begin="7" end="8" frame="proper_name(both)" id="12" lcat="np" lemma="ES-28750" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="ES-28750" sense="ES-28750" spectype="deeleigen" word="ES-28750"/>
+        </node>
+      </node>
+      <node begin="8" cat="mwu" end="14" id="13" mwu_root="San_Agustín_de_Guadalix_Madrid_+34-91-848-8500" mwu_sense="San_Agustín_de_Guadalix_Madrid_+34-91-848-8500" rel="dp">
+        <node begin="8" end="9" frame="proper_name(both)" id="14" lcat="np" lemma="San" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="San" sense="San" spectype="deeleigen" word="San"/>
+        <node begin="9" end="10" frame="proper_name(both)" id="15" lcat="np" lemma="Agustín" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Agustín" sense="Agustín" spectype="deeleigen" word="Agustín"/>
+        <node begin="10" end="11" frame="proper_name(both)" id="16" lcat="np" lemma="de" lwtype="bep" naamval="stan" npagr="rest" num="both" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" sense="de" word="de"/>
+        <node begin="11" end="12" frame="proper_name(both)" id="17" lcat="np" lemma="Guadalix" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Guadalix" sense="Guadalix" spectype="deeleigen" word="Guadalix"/>
+        <node begin="12" end="13" frame="proper_name(both)" id="18" lcat="np" lemma="Madrid" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Madrid" sense="Madrid" spectype="deeleigen" word="Madrid"/>
+        <node begin="13" end="14" frame="proper_name(both)" id="19" lcat="np" lemma="+34-91-848-8500" num="both" pos="name" postag="SPEC(symb)" pt="spec" rel="mwp" root="+34-91-848-8500" sense="+34-91-848-8500" spectype="symb" word="+34-91-848-8500"/>
+      </node>
+    </node>
+  </node>
+  <sentence>España Km 36 , Carretera Nacional N-1 ES-28750 San Agustín de Guadalix Madrid +34-91-848-8500</sentence>
+  <comments>
+    <comment>Q#vetdocs_PDFs_EPAR_zubrin_V-057-PI-nl-s271.1|España Km 36 , Carretera Nacional N-1 ES-28750 San Agustín de Guadalix Madrid +34-91-848-8500|1|2|0.17796976999999997</comment>
+  </comments>
+</alpino_ds>

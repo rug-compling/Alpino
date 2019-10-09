@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="35" id="0" rel="top">
+    <node begin="0" cat="conj" end="34" id="1" rel="--">
+      <node begin="7" end="8" frame="conj(en)" id="2" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="0" cat="smain" end="34" id="3" rel="cnj">
+        <node begin="0" cat="pp" end="6" id="4" index="1" rel="mod">
+          <node begin="0" cat="mwu" end="3" id="5" mwu_root="op_basis_van" mwu_sense="op_basis_van" rel="hd">
+            <node begin="0" end="1" frame="preposition([op,basis,van],[])" id="6" lcat="pp" pos="prep" rel="mwp" root="Op" sense="Op" word="Op"/>
+            <node begin="1" end="2" frame="preposition([op,basis,van],[])" id="7" lcat="pp" pos="prep" rel="mwp" root="basis" sense="basis" word="basis"/>
+            <node begin="2" end="3" frame="preposition([op,basis,van],[])" id="8" lcat="pp" pos="prep" rel="mwp" root="van" sense="van" word="van"/>
+          </node>
+          <node begin="3" cat="conj" end="6" id="9" rel="obj1">
+            <node begin="3" end="4" frame="noun(de,count,sg)" gen="de" id="10" lcat="np" num="sg" pos="noun" rel="cnj" root="niet_discriminatie" sense="niet_discriminatie" word="niet-discriminatie"/>
+            <node begin="4" end="5" frame="conj(en)" id="11" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+            <node begin="5" end="6" frame="noun(de,mass,sg)" gen="de" id="12" lcat="np" num="sg" pos="noun" rel="cnj" root="wederkerigheid" sense="wederkerigheid" word="wederkerigheid"/>
+          </node>
+        </node>
+        <node begin="6" end="7" frame="verb(hebben,pl,transitive)" id="13" infl="pl" lcat="smain" pos="verb" rel="hd" root="vergemakkelijk" sc="transitive" sense="vergemakkelijk" tense="present" word="vergemakkelijken"/>
+        <node begin="9" cat="np" end="12" id="14" index="2" rel="su">
+          <node begin="9" end="10" frame="determiner(de)" id="15" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node aform="base" begin="10" end="11" frame="adjective(ende(padv))" id="16" infl="e" lcat="ppres" pos="adj" rel="mod" root="overeenkomstsluitende" sense="overeenkomstsluitende" vform="gerund" word="overeenkomstsluitende"/>
+          <node begin="11" end="12" frame="tmp_noun(de,count,pl)" gen="de" id="17" lcat="np" num="pl" pos="noun" rel="hd" root="partij" sense="partij" special="tmp" word="partijen"/>
+        </node>
+        <node begin="12" cat="pp" end="19" id="18" index="3" rel="mod">
+          <node begin="12" end="13" frame="preposition(op,[af,na])" id="19" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+          <node begin="13" cat="np" end="19" id="20" rel="obj1">
+            <node begin="13" end="14" frame="determiner(de)" id="21" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="14" cat="ppart" end="18" id="22" rel="mod">
+              <node begin="14" cat="pp" end="17" id="23" rel="mod">
+                <node begin="14" end="15" frame="preposition(in,[])" id="24" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                <node begin="15" cat="np" end="17" id="25" rel="obj1">
+                  <node begin="15" end="16" frame="determiner(de,nwh,nmod,pro,nparg)" id="26" infl="de" lcat="detp" pos="det" rel="det" root="deze" sense="deze" wh="nwh" word="deze"/>
+                  <node begin="16" end="17" frame="noun(de,count,sg)" gen="de" id="27" lcat="np" num="sg" pos="noun" rel="hd" root="overeenkomst" sense="overeenkomst" word="overeenkomst"/>
+                </node>
+              </node>
+              <node aform="base" begin="17" end="18" frame="adjective(ge_e)" id="28" infl="e" lcat="ppart" pos="adj" rel="hd" root="bepaald" sense="bepaald" vform="psp" word="bepaalde"/>
+            </node>
+            <node begin="18" end="19" frame="noun(de,count,pl)" gen="de" id="29" lcat="np" num="pl" pos="noun" rel="hd" root="voorwaarde" sense="voorwaarde" word="voorwaarden"/>
+          </node>
+        </node>
+        <node begin="19" cat="conj" end="34" id="30" index="4" rel="obj1">
+          <node begin="19" cat="np" end="23" id="31" rel="cnj">
+            <node begin="19" end="20" frame="determiner(de)" id="32" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="20" end="21" frame="noun(both,count,sg)" gen="both" id="33" lcat="np" num="sg" pos="noun" rel="hd" root="handel" sense="handel" word="handel"/>
+            <node begin="21" cat="pp" end="23" id="34" rel="mod">
+              <node begin="21" end="22" frame="preposition(in,[])" id="35" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+              <node begin="22" end="23" frame="noun(de,count,pl)" gen="de" id="36" lcat="np" num="pl" pos="noun" rel="obj1" root="wijn" sense="wijn" word="wijnen"/>
+            </node>
+          </node>
+          <node begin="23" end="24" frame="conj(en)" id="37" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+          <node begin="24" cat="np" end="34" id="38" rel="cnj">
+            <node aform="base" begin="24" end="25" frame="adjective(ge_e)" id="39" infl="e" lcat="ppart" pos="adj" rel="mod" root="gedistilleerd" sense="gedistilleerd" vform="psp" word="gedistilleerde"/>
+            <node begin="25" end="26" frame="noun(de,count,pl)" gen="de" id="40" lcat="np" num="pl" pos="noun" rel="hd" root="drank" sense="drank" word="dranken"/>
+            <node begin="26" cat="rel" end="34" id="41" rel="mod">
+              <node begin="26" case="no_obl" end="27" frame="rel_pronoun(de,no_obl)" gen="de" id="42" index="5" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+              <node begin="26" cat="ssub" end="34" id="43" rel="body">
+                <node begin="26" end="27" id="44" index="5" rel="su"/>
+                <node begin="32" end="33" frame="verb(unacc,pl,passive)" id="45" infl="pl" lcat="ssub" pos="verb" rel="hd" root="ben" sc="passive" sense="ben" tense="present" word="zijn"/>
+                <node begin="26" cat="ppart" end="34" id="46" rel="vc">
+                  <node begin="26" end="27" id="47" index="5" rel="obj1"/>
+                  <node begin="27" cat="pp" end="32" id="48" rel="mod">
+                    <node begin="27" end="28" frame="preposition(in,[])" id="49" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                    <node begin="28" cat="conj" end="32" id="50" rel="obj1">
+                      <node begin="28" end="29" frame="proper_name(both,'LOC')" id="51" lcat="np" neclass="LOC" num="both" pos="name" rel="cnj" root="Canada" sense="Canada" word="Canada"/>
+                      <node begin="29" end="30" frame="conj(of)" id="52" lcat="vg" pos="vg" rel="crd" root="of" sense="of" word="of"/>
+                      <node begin="30" cat="np" end="32" id="53" rel="cnj">
+                        <node begin="30" end="31" frame="determiner(de)" id="54" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                        <node begin="31" end="32" frame="proper_name(both,'ORG')" id="55" lcat="np" neclass="ORG" num="both" pos="name" rel="hd" root="Gemeenschap" sense="Gemeenschap" word="Gemeenschap"/>
+                      </node>
+                    </node>
+                  </node>
+                  <node begin="33" end="34" frame="verb(hebben,psp,transitive)" id="56" infl="psp" lcat="ppart" pos="verb" rel="hd" root="produceer" sc="transitive" sense="produceer" word="geproduceerd"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="0" cat="ssub" end="34" id="57" rel="cnj">
+        <node begin="0" end="6" id="58" index="1" rel="mod"/>
+        <node begin="8" end="9" frame="verb(hebben,pl,transitive)" id="59" infl="pl" lcat="ssub" pos="verb" rel="hd" root="bevorder" sc="transitive" sense="bevorder" tense="present" word="bevorderen"/>
+        <node begin="9" end="12" id="60" index="2" rel="su"/>
+        <node begin="12" end="19" id="61" index="3" rel="mod"/>
+        <node begin="19" end="34" id="62" index="4" rel="obj1"/>
+      </node>
+    </node>
+    <node begin="34" end="35" frame="punct(punt)" id="63" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Op basis van niet-discriminatie en wederkerigheid vergemakkelijken en bevorderen de overeenkomstsluitende partijen op de in deze overeenkomst bepaalde voorwaarden de handel in wijnen en gedistilleerde dranken die in Canada of de Gemeenschap zijn geproduceerd .</sentence>
+  <comments>
+    <comment>Q#308|Op basis van niet-discriminatie en wederkerigheid vergemakkelijken en bevorderen de overeenkomstsluitende partijen op de in deze overeenkomst bepaalde voorwaarden de handel in wijnen en gedistilleerde dranken die in Canada of de Gemeenschap zijn geproduceerd .|1|1|3.5484076272730776</comment>
+  </comments>
+</alpino_ds>

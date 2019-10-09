@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" cat="smain" end="2" id="2" rel="dp">
+        <node begin="0" end="1" frame="proper_name(both,'LOC')" id="3" lcat="np" neclass="LOC" num="both" pos="name" rel="su" root="Doel" sense="Doel" word="Doel"/>
+        <node begin="1" end="2" frame="verb(unacc,sg_heeft,intransitive)" id="4" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="ben" sc="intransitive" sense="ben" tense="present" word="is"/>
+      </node>
+      <node begin="2" cat="inf" end="7" id="5" rel="dp">
+        <node begin="2" cat="np" end="6" id="6" rel="obj1">
+          <node begin="2" end="3" frame="noun(de,mass,sg)" gen="de" id="7" lcat="np" num="sg" pos="noun" rel="hd" root="verspreiding" sense="verspreiding" word="verspreiding"/>
+          <node begin="3" cat="pp" end="6" id="8" rel="mod">
+            <node begin="3" end="4" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="9" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="4" cat="np" end="6" id="10" rel="obj1">
+              <node aform="base" begin="4" end="5" frame="adjective(e)" id="11" infl="e" lcat="ap" pos="adj" rel="mod" root="mogelijk" sense="mogelijk" vform="adj" word="mogelijke"/>
+              <node begin="5" end="6" frame="noun(de,count,sg)" gen="de" id="12" lcat="np" num="sg" pos="noun" rel="hd" root="verontreiniging" sense="verontreiniging" word="verontreiniging"/>
+            </node>
+          </node>
+        </node>
+        <node begin="6" end="7" frame="verb(zijn,inf(no_e),ninv(transitive,part_transitive(tegen)))" id="13" infl="inf(no_e)" lcat="inf" pos="verb" rel="hd" root="ga_tegen" sc="part_transitive(tegen)" sense="ga_tegen" word="tegengaan"/>
+      </node>
+    </node>
+    <node begin="7" end="8" frame="punct(punt)" id="14" lcat="--" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Doel is verspreiding van mogelijke verontreiniging tegengaan .</sentence>
+  <comments>
+    <comment>Q#95|Doel is verspreiding van mogelijke verontreiniging tegengaan .|1|2|-0.3037836891015355</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="17" id="2" rel="--">
+      <node begin="0" cat="cp" end="7" id="3" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+        <node begin="1" cat="ssub" end="7" id="5" rel="body">
+          <node begin="1" end="2" getal="ev" id="6" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+          <node begin="2" cat="np" end="4" id="7" rel="obj1">
+            <node begin="2" buiging="zonder" end="3" getal="ev" id="8" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="pc" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="pc" word="PC"/>
+          </node>
+          <node begin="4" cat="pp" end="6" id="10" rel="obj2">
+            <node begin="4" end="5" id="11" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+            <node begin="5" end="6" getal="ev" id="12" lemma="iemand" naamval="stan" pdtype="pron" persoon="3p" pos="noun" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="obj1" root="iemand" status="vol" vwtype="onbep" word="iemand"/>
+          </node>
+          <node begin="6" end="7" id="13" lemma="verkopen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="verkoop" word="verkoop" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="8" end="9" id="14" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="9" cat="np" end="11" id="15" rel="su">
+        <node begin="9" buiging="zonder" end="10" id="16" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>
+        <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="17" lemma="persoon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="persoon" word="persoon"/>
+      </node>
+      <node begin="11" end="12" id="18" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+      <node begin="12" cat="np" end="17" id="19" rel="obj1">
+        <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="20" lemma="toegang" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="toegang" word="toegang"/>
+        <node begin="13" cat="pp" end="17" id="21" rel="mod">
+          <node begin="13" end="14" id="22" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+          <node begin="14" cat="np" end="17" id="23" rel="obj1">
+            <node begin="14" buiging="zonder" end="15" getal="ev" id="24" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+            <node begin="15" end="16" genus="genus" getal="ev" graad="basis" id="25" lemma="Facebook" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mod" root="Facebook" word="Facebook"/>
+            <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="26" lemma="profiel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="profiel" word="profiel"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="27" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Als ik mijn PC aan iemand verkoop , heeft die persoon dan toegang tot mijn Facebook profiel ?</sentence>
+</alpino_ds>

@@ -1,0 +1,1989 @@
+\documentstyle[gj_bib_art,a4wide,leqno,fleqn,prolog,matrix]{article}
+\begin{document}
+\bibliographystyle{named}
+
+\title{The Dutch verbal complex: A Lexicalist Account}
+\author{Gosse Bouma}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+
+This paper documents an implementation of a categorial analysis of the Dutch verbal complex. The analysis is formulated in terms of  a unification-based categorial grammar in which extensive use is made of lexical rules. The starting point of the analysis is the proposal of \shortcite{hoeksema-ms}. In section 3, we argue that a categorial account of `cross-serial dependencies' based on some form of division, must include both the disharmonic and harmonic versions of this rule. In section 4, we show how the overgeneration (both in terms of word order and in terms of spurious derivations) that results form including division  can be avoided. Several minor issues are briefly mentioned in section 5. In section 6, we show how the analysis of (partial) {\sc vp}-fronting proposed by \shortcite{Nerbonne93} can be incorporated easily. We also note that the  grammaticality judgements at this point are not very clear, and that some issues are left unexplained. Finally, we argue that both word order and scope of adjuncts in sentences headed by a verbal complex suggests that these must be treated as arguments. 
+
+\section{Verb raising, Extraposition, and Partial Extraposition}
+
+In Dutch, verbs selecting a {\sc vp}-complement come in at least three 
+varieties. First of all, a verb, such as {\em weigeren}, may simply 
+subcategorize for a full {\sc vp} to its right (\ref{extrap}). In most 
+transformational accounts, it is assumed that the {\sc vp}-complement originates 
+in the midfield, and is (obligatorily) extraposed to the right. This is why the 
+verbs in this class are called {\em extraposition} verbs. 
+\begin{equation}
+\label{extrap}
+\mbox{\ldots dat Jan Marie verbiedt [het boek te lezen]} 
+\end{equation}
+
+Second, a verb may form a `verbal complex' or `verb cluster' with the head of 
+its
+{\sc vp}-complement.  In this case, the non-verbal elements of the {\sc
+vp}-complement normally occur to the left of the governing verb, whereas the
+verbal head of the {\sc vp}-complement occurs to the right (\ref{vr}a).  This is
+the so-called {\em verb-raising} (VR) construction, as transformational accounts
+have assumed that in this case the head of the embedded {\sc vp}-complement is
+raised from its original position left of the governing verb to a position on 
+the
+right.  Modals, such as {\em willen} or {\em kunnen} are typical VR-verbs, as 
+well
+as perception verbs such as {\em zien} or {\em horen} and causatives such as 
+{\em
+laten}.  The VR-construction gives rise to so-called {\em cross-serial
+dependencies}, as the non-verbal arguments of a complex verb-cluster occur in an
+order which is identical to the order of the verbs selecting for these arguments
+(\ref{vr}b,c).
+
+
+\begin{equation}
+\label{vr}
+\begin{array}[t]{ll}
+a. & \mbox{\ldots dat Jan het boek wil lezen} \\
+b.& \mbox{\ldots dat Jan Marie$_1$ het boek$_2$ laat$_1$ lezen$_2$} \\
+c. & \mbox{\ldots dat Jan$_1$ Marie$_2$ het boek$_3$ wil$_1$ laten$_2$ 
+lezen$_3$}
+\end{array}
+\end{equation}
+
+Finally, there is a small class of verbs (containing {\em proberen} and {\em 
+verzuimen}) that induce word orders that are a mixture of extraposition and 
+verb-raising. Instances of such mixed word orders (\ref{p_extrap}) are known as 
+`the 
+third construction' \cite{denBestenRutten89}, or as cases of  
+{\em partial} extraposition \cite{hoeksema-ms}. 
+
+\begin{equation}
+\label{p_extrap}
+\begin{array}[t]{ll}
+a. & \mbox{\ldots dat Jan het boek aan Marie verzuimt te geven} \\
+b.& \mbox{\ldots dat Jan het boek verzuimt aan Marie  te geven} \\
+c. & \mbox{\ldots dat Jan verzuimt het boek aan Marie te geven} \\
+\end{array}
+\end{equation}
+
+
+\subsection{A Categorial Analysis}
+
+In \shortcite{hoeksema-ms}  a categorial analysis of verb raising and 
+related constructions is presented. 
+
+Extraposition verbs are simply assigned a category which selects for a {\sc vp} 
+complement on its right, thus eliminating the  need for a special  {\em 
+extraposition}-operation:
+
+\begin{equation}
+\begin{array}[t]{ll}
+\mbox{verbieden :} & (\mbox{\sc np}\backslash\mbox{\sc vp})/ \mbox{\sc vp}
+\end{array}
+\end{equation}
+
+
+Verb raising verbs are assigned schematic (polymorphic) categories of the 
+following 
+type:
+ 
+\begin{equation}
+\begin{array}[t]{ll}
+\mbox{willen :} & (\$\backslash \mbox{\sc vp})/(\$\backslash \mbox{\sc vp} ) \\ 
+\mbox{laten :} & (\$\backslash (\mbox{\sc np}\backslash\mbox{\sc vp}))/
+						(\$\backslash \mbox{\sc vp} )
+\end{array}
+\end{equation}
+
+The $\$\backslash$-symbol in these category-schemata represents a variable which 
+can be instantiated by an arbitrary number of arguments, all of which must be 
+dominated by a $\backslash$. Thus, the category of {\em willen} subsumes
+{\sc vp$/$vp , (np$\backslash$vp)$/$(np$\backslash $vp)}, and {\sc 
+(np$\backslash$(np$\backslash$vp))$/$(np$\backslash$(np$\backslash $vp))}.
+The following are derivations of (\ref{vr}b,c).
+
+{\sc
+\begin{equation}
+\mbox{
+\begin{tabular}[t]{ccccccc}
+\ldots {\em Jan} & {\em Marie} & {\em het boek} & {\em laat} & {\em lezen} \\
+\ldots np & np & np & $(\$\backslash$tv$)/(\$\backslash$vp$)$ & np$\backslash$vp  
+\\
+\cline{4-5}
+&&& \multicolumn{2}{c}{np$\backslash$tv} \\
+\cline{3-4} && tv \\
+\cline{2-3} & \multicolumn{2}{c}{vp }\\
+\cline{1-2} \multicolumn{2}{c}{s}
+\end{tabular}
+}
+\end{equation}
+
+\begin{equation}
+\mbox{
+\begin{tabular}[t]{cccc@{\hspace{2cm}}c}
+\ldots {\em Jan} & {\em Marie} & {\em het boek} & {\em wil} & {\em laten lezen}  
+\\
+\cline{5-5}
+\ldots np & np & np & $(\$\backslash$vp)$/(\$\backslash$vp) &
+np$\backslash$np$\backslash$vp \\
+\cline{4-5}
+&&& \multicolumn{2}{c}{np$\backslash$np$\backslash$vp} \\
+\cline{3-4} && np$\backslash$vp \\
+\cline{2-3} & \multicolumn{2}{c}{vp }\\
+\cline{1-2} \multicolumn{2}{c}{s}
+\end{tabular}
+}
+\end{equation}
+} 
+
+Partial extraposition verbs, finally, are treated as VR verbs, that is 
+they also receive a polymorphic category (\ref{pe-le}).  The difference between 
+the 
+two verb types is
+that for VR verbs, it is obligatory that only the verbal head of its complement
+follows the VR verb, whereas for PE verbs this constraint does not hold.  We 
+will
+explain below how this difference is accounted for.
+
+\begin{equation}
+\label{pe-le}
+\begin{array}[t]{ll}
+\mbox{verzuimen :} & (\$\backslash \mbox{\sc vp})/(\$\backslash \mbox{\sc vp} ) 
+\\ 
+\mbox{proberen :} & (\$\backslash\mbox{\sc vp})/(\$\backslash \mbox{\sc vp} )
+\end{array}
+\end{equation}
+
+The analysis of \shortcite{hoeksema-ms} differs from most categorial analyses in
+that it treats the possibility of verb raising (and the related cross-serial 
+word
+orders) as a consequence of the category of certain lexical items.  Other
+treatmentss have accounted for cross-serial word order either by a combination 
+of
+a non-directional flexible CG with word order constraints
+\cite{Houtman84,Steedman85} or by introducing disharmonic rules of composition
+\cite{Cremers-diss}.  The advantage of using lexically assigned category 
+schemata
+is that it encapsulates the machinery required to derive cross-serial word 
+orders
+fully into the lexicon.  As a consequence, the interaction of these rules with
+other (syntactic) rules is controlled more easily and overgeneration can be
+avoided.
+
+\section{Division}
+
+\subsection{Implementation}
+We have implemented an analysis of Dutch verb clusters in which verb-raising 
+and partial extraposition verbs may be subject to a lexical rule of `division'.
+We think of such lexical rules as recursive, relational, constraints on  
+categories. 
+
+The variable notation used by Hoeksema, and introduced originally in the work of
+Steedman, cannot be translated directly into a unification-based setting, as 
+there
+is no corresponding feature structure for the class of categories which is
+supposed to be subsumed by a \$-category.  That is, we cannot define a feature
+structure, such that all feature structures corresponding to legal 
+instantiations
+of the \$-category are subsumed by it.\footnote{ An encoding of categories using
+{\sc subcat}-lists, as has been proposed in \shortcite{Wittenburg-diss}, will 
+not
+solve the problem either.}  Therefore, we have chosen for a slightly different
+approach.
+
+The effect of the category schemata Hoeksema assumes is similar to that of the 
+categorial rule {\em rightward disharmonic division}:
+
+\begin{equation}
+X/Y \rightarrow (Z\backslash X)/(Z\backslash Y) \mbox{\hspace{1cm} \bf Rightward 
+Disharmonic Division}
+\end{equation}
+That is, all categories subsumed by the category schema assigned to {\em willen} 
+could be derived by applying the rule disharmonic composition zero or more times 
+to the category {\sc vp$/$vp}. 
+
+Instead of using polymorphic categories, we therefore assume that VR and PE 
+verbs
+are subject to a lexical rule of division.  An illustrative lexical entry, as 
+well
+as a first approximation of the definition of {\em division} is presented below.
+
+\pr
+\pred
+\head{\rel{lex}(\con{willen},\var{Sign}) \; \prologif }
+\body{\var{Sign0} \Leftrightarrow \con{vp}/\con{vp},}
+\body{\rel{division}(\var{Sign0},\var{Sign}).}
+\epred
+\pred
+\head{\rel{division}(\var{In},\var{In}).}
+\head{\rel{division}(\var{In},\var{Out}) \; \prologif}
+\body{\var{Out} \Leftrightarrow 
+(\var{Z}\backslash\var{X})/(\var{Z}\backslash\var{Y}),}
+\body{\rel{division}(\var{In},\var{X}/\var{Y}).}
+\epred
+\epr
+The {\em division}-relation succeeds if its second argument is the result of 
+applying the categorial rule (disharmonic) division to the first argument 
+an arbitrary number of times. 
+
+A consequence of introducing recursive lexical rules such as division is that 
+certain lexical entries will be infinitely ambiguous. This is not without 
+consequences 
+for the generative capacity of the grammar \cite{carpenter-lexical}. We hope to 
+report 
+on the possiblities of parsing with grammars containing recursive lexical rules 
+elsewhere.
+
+\subsection{Other cases of division}
+
+The definition of division presented in the previous section only allows for
+disharmonic division on right-directional functors.  However, once we take some
+additional data into account, it becomes clear that other instances of division are
+also needed.
+
+The auxiliaries {\em hebben} en {\em zijn} are VR verbs which select a {\sc 
+vp}-complement headed by a participle:
+
+\begin{equation}
+\begin{array}[t]{ll}
+a. & \ldots\mbox{dat Jan Marie heeft gekust.} \\
+b. & \ldots\mbox{dat Jan te laat is gekomen}.
+\end{array}
+\end{equation}
+ 
+These constructions are somewhat exceptional, however, in that a word order in 
+which the participle precedes the auxiliary is also possible:
+
+\begin{equation}
+\begin{array}[t]{ll}
+a. & \ldots\mbox{dat Jan Marie gekust heeft.} \\
+b. & \ldots\mbox{dat Jan te laat gekomen is}.
+\end{array}
+\end{equation}
+ 
+One might try to account for these data by assigning auxiliaries not only the
+category of VR verbs, but also the category {\sc vp$\backslash $vp}.  This will not
+quite suffice, however.  Consider for instance the combination of an auxiliary with
+an extraposition verb.  Again, the participle may either precede or follow the
+auxiliary, but the extraposed complement must always follow the rightmost element in
+the sentence.
+
+\begin{equation}
+\label{hebben}
+\begin{array}[t]{ll}
+a. & \ldots\mbox{dat Jan heeft [$_{\mbox{\sc vp}}$ geleerd zich aan te passen]}. \\
+b. & \ldots\mbox{dat Jan [ geleerd heeft  ] zich aan te passen}.
+\end{array}
+\end{equation}
+
+\noindent The most straightforward analysis of (\ref{hebben}b) is to assume that
+{\em hebben}, when selecting a complement to its left also behaves as a VR verb,
+that is, as a verb that may inherit the arguments of the head of its complement.
+Given this assumption, {\em heeft} in (\ref{hebben}b) first combines with the
+participle {\em geleerd} and next combines with the extraposed phrase {\em het
+contract te tekenen}.  Note, however, that this requires a left-directional version
+of disharmonic division:
+
+\begin{equation}
+Y\backslash X \rightarrow (Y/Z)\backslash(X/Z) \mbox{\bf {\hspace{2cm} Leftward 
+Disharmonic Division}}
+\end{equation}
+The derivation of (\ref{hebben}b) is sketched below:
+
+{\sc 
+\begin{equation}
+\label{gew-heeft-deriv}
+\mbox{
+\begin{tabular}[t]{cccc}
+\ldots {\em Jan}&{\em geleerd} & {\em heeft} & {\em zich aan te passen} 
+\\
+\ldots np & vp$/$vp & vp$\backslash$vp& vp \\
+&& $\Downarrow$ \\
+&& (vp$/$vp)$\backslash$(vp$/$vp) \\
+\cline{2-3}
+& \multicolumn{2}{c}{vp$/$vp} \\
+\cline{2-4} && \multicolumn{2}{c}{vp} 
+\end{tabular}
+}
+\end{equation}
+}
+
+If an auxiliary is selected by a VR verb, the participle governed by the auxiliary
+may appear either in final position, or it may precede both the VR verb and the
+auxiliary:
+
+\begin{equation}
+\label{geprotesteerd}
+\begin{array}[t]{ll}
+a. & \ldots\mbox{dat Jan zou hebben geprotesteerd}. \\
+b. & \ldots\mbox{dat Jan geprotesteerd zou hebben}.
+\end{array}
+\end{equation}
+The derivation of (\ref{geprotesteerd}b) is as follows:
+
+{\sc 
+\begin{equation}
+\mbox{
+\begin{tabular}[t]{cccc}
+\ldots {\em Jan}&{\em geprotesteerd} & {\em zou} & {\em hebben} \\
+\ldots np & vp & vp$/$vp & vp$\backslash$vp \\
+&& $\Downarrow$ \\
+&& (vp$\backslash$vp)$/$(vp$\backslash$vp) \\
+\cline{3-4}
+&& \multicolumn{2}{c}{vp$\backslash$vp} \\
+\cline{2-4} & \multicolumn{3}{c}{vp} 
+\end{tabular}
+}
+\end{equation}
+}
+
+\noindent Next, consider a case in which the participle is actually an extraposition
+verb.  Again, two word orders are possible:
+
+\begin{equation}
+\label{gew-zou-hebben}
+\begin{array}[t]{ll}
+a. & \ldots\mbox{dat Jan moet hebben [$_{\mbox{\sc vp}}$ geleerd zich aan te passen]}. \\
+b. & \ldots\mbox{dat Jan [ geleerd  [ moet hebben ]] zich aan te passen}.
+\end{array}
+\end{equation}
+
+\noindent The most likely analysis of (\ref{gew-zou-hebben}b) is that {\em hebben}
+is assigned the category {\sc ((vp$/$vp)$\backslash$(vp$/$vp))} (as in
+(\ref{gew-heeft-deriv})).  Next, {\em moet} has to combine with this complex
+category.  This can be achieved, but implies that {\em harmonic} division of VR
+verbs (\ref{hd}) must also be possible.  The stepwise derivation of the category for
+{\em moet} required in this case is shown in (\ref{zou}).  It consists of one
+instance of disharmonic division followed by an instance of harmonic division.
+
+\begin{equation}
+\label{hd}
+X/Y \rightarrow (X/Z)/(Y/Z) \mbox{\bf \hspace{2cm} Rightward Harmonic Division}
+\end{equation}
+
+\begin{equation}
+\label{zou}
+\mbox{\sc
+vp$/$vp $\rightarrow$ (vp$\backslash$vp)$/$(vp$\backslash$vp) $\rightarrow$
+((vp$\backslash$vp)$/$(vp$\backslash$vp))$/
+			$((vp$\backslash$vp)$/$(vp$\backslash$vp))
+}
+\end{equation}
+
+Finally, consider cases in which an auxiliary selects a participle which is  
+extrapostion verb also selecting an {\sc np}-object (control-verbs, such as {\em 
+beloven} or {\em verbieden} are typical examples of the latter category). 
+
+\begin{equation}
+\label{beloven}
+\begin{array}[t]{ll}
+a. & \ldots\mbox{dat Jan Marie heeft beloofd de diskette mee te brengen}. \\
+b. & \ldots\mbox{dat Jan Marie [ beloofd heeft] de diskette mee te brengen}.
+\end{array}
+\end{equation}
+
+\noindent The category of {\em beloven} is {\sc (np$\backslash$vp)$/$vp}.  This
+implies that {\em heeft} in (\ref{beloven}b) can only combine with the preceding
+participle if it can undergo leftward harmonic division (\ref{hld}), as well as
+disharmonic division.
+
+\begin{equation}
+\label{hld}
+Y\backslash X \rightarrow (Z\backslash Y)\backslash (Z\backslash X) \mbox{\bf 
+\hspace{2cm} Leftward Harmonic Division}
+\end{equation}
+
+\noindent The derivation of (\ref{beloven}b) is shown below.
+
+\begin{equation}
+\mbox{\sc
+\begin{tabular}[t]{ccccc}
+{\em J.}& {\em M.} & {\em beloofd}  & {\em heeft} & {\em de diskette 
+mee 
+te brengen}\\
+\ldots np & np & (np$\backslash$vp)$/$vp & vp$\backslash$vp & vp \\
+&&& $\Downarrow$ \\
+&&& (np$\backslash$vp)$\backslash$(np$\backslash$vp) \\
+&&& $\Downarrow$ \\
+&&& ((np$\backslash$vp)$/$vp)$\backslash$((np$\backslash$vp)$/$vp) \\
+\cline{3-4}
+&& \multicolumn{2}{c}{(np$\backslash$vp)$/$vp} \\
+\cline{3-5} && \multicolumn{3}{c}{np$\backslash$vp} 
+\end{tabular}
+}
+\end{equation}
+
+The upshot of the discussion in this section is that all four possibilities of
+division are needed to account for the full range of word order facts associated
+with `verb raising'.  While at first blush it may seem that VR requires only
+rightward disharmonic division, participle inversion requires that leftward
+disharmonic division is also available.  Combinations of VR verbs with 
+auxiliaries
+and extraposition verbs show that the harmonic instances of division are also
+required.  Therefore, in the sequel we will assume that VR verbs are subject to 
+a
+lexical rule of division, which comes in the following four varieties:
+
+\begin{equation}
+\begin{array}[t]{ll}
+\mbox{ Right Disharmonic} &X/Y \rightarrow (Z\backslash X)/(Z\backslash Y) \\
+\mbox{ Left Disharmonic} & Y\backslash X \rightarrow (Y/Z)\backslash(X/Z) \\
+\mbox{ Right Harmonic} & X/Y \rightarrow (X/Z)/(Y/Z) \\
+\mbox{ Left Harmonic} & 
+Y\backslash X \rightarrow (Z\backslash Y)\backslash (Z\backslash X) 
+\end{array}
+\end{equation}
+
+The definition of {\em division} as a relational constraint is modified 
+accordingly:
+
+\pr
+\pred
+\head{\rel{division}(\var{In},\var{In}).}
+\head{\rel{division}(\var{In},\var{Out}) \; \prologif 
+	\mbox{\hspace{2cm} \% rightward disharmonic}}
+\body{\var{Out} \Leftrightarrow 
+(\var{Z}\backslash\var{X})/(\var{Z}\backslash\var{Y}),}
+\body{\rel{division}(\var{In},\var{X}/ \var{Y}).}
+\head{\rel{division}(\var{In},\var{Out}) \; \prologif
+	\mbox{\hspace{2cm} \% leftward disharmonic}}
+\body{\var{Out} \Leftrightarrow 
+(\var{Y}/ \var{Z})\backslash(\var{X}/ \var{Z}),}
+\body{\rel{division}(\var{In},\var{Y}/ \var{X}).}
+\head{\rel{division}(\var{In},\var{Out}) \; \prologif
+	\mbox{\hspace{2cm} \% rightward harmonic}}
+\body{\var{Out} \Leftrightarrow 
+(\var{X}/ \var{Z})/(\var{Y}/ \var{Z}),}
+\body{\rel{division}(\var{In},\var{X}/ \var{Y}).}
+\head{\rel{division}(\var{In},\var{Out}) \; \prologif
+	\mbox{\hspace{2cm} \% leftward harmonic}}
+\body{\var{Out} \Leftrightarrow 
+(\var{Z}\backslash\var{Y})\backslash(\var{Z}\backslash\var{X}),}
+\body{\rel{division}(\var{In},\var{Y}\backslash\var{X}).}
+\epred
+\epr
+
+\section{Phrasal and subphrasal constituents}
+
+In this section, we discuss the distribution of the feature {\sc phrase} (and 
+its
+companion {\sc rphrase}).  This feature is used to account for the difference
+between VR and PE verbs, and also to eliminate the spurious ambiguity that 
+results
+form freely applying harmonic division.
+
+\subsection{Avoiding overgeneration}
+
+The analysis of VR as we have discussed it so far overgenerates in several ways.
+The grammar makes it possible for both VR and PE verbs to combine
+with the verbal head of their complement, before combining with the (non-verbal)
+arguments of that head, but nothing in the analysis requires that this actually
+must be so.  For PE verbs this is fine, as in these cases both the VR and the
+extraposed word order is allowed, as well as cases that are a mixture of both 
+((\ref{cremers}c) is taken from \shortcite{Cremers-diss}, the `partially 
+extraposed' {\sc 
+vp} appears is italic):
+
+\begin{equation}
+\label{cremers}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \ldots\mbox{dat hij {\em de chef voor zich} meende {\em te hebben 
+gewonnen}}. \\
+b. && \ldots\mbox{dat hij meende {\em de chef voor zich te hebben gewonnen}}. \\
+c. && \ldots\mbox{dat hij  {\em de chef} meende {\em voor zich te hebben 
+gewonnen}}. \\
+\end{array}
+\end{equation}
+
+\noindent For VR verbs, however, only the VR word order is grammatical, and 
+thus, 
+the
+following sentences need to be ruled out:
+
+\begin{equation}
+\label{ungramm}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. &^*& \ldots\mbox{dat Jan moet [een artikel lezen]}. \\
+b. &^*& \ldots\mbox{dat Jan wil [aan zijn proefschrift werken]}. \\
+c. &^*& \ldots\mbox{dat Jan [geleerd [zich aan te passen]] heeft}.
+\end{array}
+\end{equation}
+
+
+\noindent In (\ref{ungramm}a,b), an {\sc np} or {\sc pp} argument occurs to the
+right of a VR verb, leading to ungrammaticality.  In (\ref{ungramm}c), an extraposed
+{\sc vp}-complement has not been `extraposed' fully, also leading to
+ungrammaticality.  The derivation of these phrases is straightforward, however, and
+involves no appeal to division whatsoever.
+
+
+The observation we have failed to incorporate is that when a verb is a VR
+trigger, the process of verb raising is in fact obligatory.  That is, a VR verb
+must (and not only may) combine with the verbal head of its complement, before
+this head combines with its own (non-verbal) complements.  In
+\shortcite{hoeksema-ms} this is achieved by imposing the constraint that the
+complement of a VR verb must be lexical (i.e.  {\sc [+lex]}).  We follow this
+suggestion here, but, for reasons that will become apparent below, we have 
+chosen
+to introduce a feature {\sc phrase} instead of {\sc lex}.  Thus, we impose the
+constraint that the verbal complement of a VR verb must be {\sc -phrase}.  This
+is achieved as follows:
+
+\pr
+\pred
+\head{\rel{lex}(\con{willen},\var{Sign}) \; \prologif }
+\body{\var{Sign0} \Leftrightarrow \con{iv}/\con{vp},}
+\body{\rel{division}(\var{Sign0},\var{Sign}),}
+\body{\var{Sign0}\con{:arg:phrase} \Leftrightarrow \con{'-'}}. 
+\head{\rel{lex}(\con{hebben},\var{Sign}) \; \prologif }
+\body{\var{Sign0} \Leftrightarrow \con{vp}\backslash \con{vp},}
+\body{\rel{division}(\var{Sign0},\var{Sign}),}
+\body{\var{Sign0}\con{:arg:phrase} \Leftrightarrow \con{'-'}}.
+\epred
+\epr
+
+\noindent Note that the relevant constraint is added to the argument of the
+`output' of {\em division} and not to the argumentof the `input'.  On the
+assumption that combinations of a verb and one or more of its {\sc pp} or {\sc
+np} arguments as well as combinations of an extraposition verb and its {\sc
+vp}-complement are marked {\sc [+phrase]}, this will rule out the ungrammatical
+cases in (\ref{ungramm}).
+
+The next, and more difficult, matter that needs to be settled is when exactly a
+constituent is marked as {\sc [+phrase]}.  Below, we discuss an approach in 
+which each functor specifies whether the result of combining this functor with 
+its argument will be phrasal or not. We believe that this solution makes it 
+reasonably straightforward to account for a wide range of facts. Some of 
+alternative approaches are discussed in the section \ref{alternatives}.  
+
+\subsubsection{Basic verb clusters}
+
+The combination of a functor and an argument usually is {\sc +phrase}, but
+there are some exceptions.  First of all, the combination of a verb with the
+verbal head of its complement is not {\sc +phrase}:
+
+\begin{equation}
+\label{rb}
+\ldots\mbox{(dat Jan het manuscript) zou [willen lezen]}. \\
+\end{equation}
+
+\noindent On the assumption that (\ref{rb}) has an analysis in which {\em
+willen} combines with {\em lezen}, before it acts as argument of {\em zou}, it
+must be the case that {\em willen lezen} is not {\sc +phrase}.\footnote{
+\label{against-lb} It is difficult to find evidence for or against a particular
+phrase structure inside verb clusters.  Conjunction facts show that pretty much
+any structure is possible.  The fact that certain parts of the cluster can be
+topicalized as a constituent is also not very solid evidence, as we will show
+below.  One consideration that might be an argument in favor of 
+right-bracnhing  is the fact that {\em willen} on its own cannot be 
+topicalized. This follows if
+we assume a right-branching structure.  Second, there may be a cross-linguistic
+argument for the structure in (\ref{rb}).  In German, the phenomenon known as
+{\em auxiliary-flip} orders (finite) auxiliaries in front of the verb cluster,
+whereas they normally occur at the end of the cluster.  This is easily accounted
+for if we assume that {\em haben} takes a verb cluster instead of a lexical unit
+as argument.  Hinrichs and Nakazawa (\citeyear{HinrichsNakazawa93}) have
+presented an analysis in terms of HPSG that is, in all relevant aspects,
+compatible with the present categorial account.}
+
+Second, combinations of a verb-prefix and a verb or verb cluster are not {\sc 
++phrase}:
+
+\begin{equation}
+\label{sep-prefix}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \ldots\mbox{dat Jan Marie heeft aangesproken}. \\
+b. && \ldots\mbox{dat Jan Marie heeft [ aan durven spreken ]}. \\
+\end{array}
+\end{equation}
+
+\noindent For (\ref{sep-prefix}a) it might be suggested that {\em aangesproken}
+is a word, as far as syntax is concerned, but this cannot be the whole story,
+given examples such as (\ref{sep-prefix}b), where the prefix has been seperated
+from the verb to which it belongs.  If {\em heeft} as a VR verb takes {\em aan
+durven spreken} as argument, the combination of {\em aan} and the verb cluster
+{\em durven spreken} cannot be {\sc +phrase}.
+
+To account for the rule (complex phrases are {\sc +phrase}) as well as the
+exceptions\footnote{
+Apart from verb clusters and seperable prefixes, there are a number of elements 
+that may somtimes occur to the left of a VR verb. Together with the verb, these 
+always form a more or less fixed and idiomatic expression. Some examples are 
+listed below (see also \cite{ans}, p. 1012 ff.):
+
+\[
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \ldots\mbox{dat deze stichting in korte tijd veel goeds heeft tot stand 
+gebracht.} \\
+b. && \ldots\mbox{dat de man ontkent zich aan zwendel te hebben schuldig 
+gemaakt} \\
+c. && \ldots\mbox{dat Deng de Russen had duidelijk gemaakt, dat het om 
+een beperkte actie ging.}
+\end{array}
+\]
+
+The heterogenous nature of this class of elements and expressions is further 
+support for an analysis in which the phrasal status of complex constituents is a 
+lexical property of the verbs involved.
+}
+we introduce an auxiliary feature {\sc rphrase}, (for `resultant
+phrase') which may be present on the argument category of functors.  The rule is
+that a functor specifies its argument as {\sc +rphrase}, but there are some
+exceptional cases where this specification is left out.  Sample lexical entries
+are provided below.
+
+\begin{equation}
+\begin{array}[t]{ll}
+\mbox{lezen :} & \mbox{\sc np[+rphrase]$\backslash$vp} \\ 
+\mbox{denken :}& \mbox{\sc pp[+rphrase]$\backslash$vp} \\
+\mbox{leren :} & \mbox{\sc vp}/ \mbox{\sc vp[+rphrase]} \\ 
+\mbox{spreken :} & \mbox{\sc pref$\backslash($ np[+rphrase]$\backslash$vp)}
+\end{array}
+\end{equation}
+
+The feature-specification {\sc [+rphrase]} specifies that the result of
+combining a functor with this argument is a phrase.  Thus, application is
+extended as follows:
+
+\pr
+\pred
+\head{\rel{application}(\var{Value},\var{Functor},\var{Argument}) \; \prologif }
+\body{\var{Functor}\con{:arg} \Leftrightarrow \con{Argument},}
+\body{\var{Functor}\con{:val} \Leftrightarrow \con{Value},}
+%\body{\var{Value}\con{:phrase} \Leftrightarrow \con{Functor}\con{:phrase},}
+\body{\var{Value}\con{:phrase} \Leftrightarrow \con{Argument}\con{:rphrase}.}
+\epred
+\epr
+
+Consider now the following examples, where {\sc p} and {\sc rp} abbreviate {\sc
+phrase} and {\sc rphrase}.  For VR verbs, we supply the category as it can be
+derived using division.  The effect of `argument inheritance' is made explicit
+in the form of an index.
+
+\begin{equation}
+\label{boekwillezen}
+\mbox{\sc
+\begin{tabular}[t]{ccccc}
+\ldots {\em een boek}& {\em wil} & {\em lezen} \\
+\ldots np & (np$_i\backslash$vp)$/$(np$_i\backslash$vp)[-p] & 
+np[+rp]$\backslash$vp \\
+\cline{2-3}
+& \multicolumn{2}{c}{np[+rp]$\backslash$vp} \\
+\cline{1-3}  \multicolumn{3}{c}{vp[+p]} 
+\end{tabular}
+}
+\end{equation}
+
+\begin{equation}
+\label{wilboeklezen}
+\mbox{\sc
+\begin{tabular}[t]{ccccc}
+\ldots {\em wil} & {\em een boek} & {\em lezen} \\
+\ldots vp$/$vp[-p] & np & np[+rp]$\backslash$vp \\
+\cline{2-3}
+& \multicolumn{2}{c}{vp[+p]} \\
+\cline{1-3}  \multicolumn{3}{c}{***} 
+\end{tabular}
+}
+\end{equation} 
+
+\noindent Example (\ref{wilboeklezen}) is correctly ruled out (as a possible
+word order in subordinate clauses), as {\em een boek lezen} is a phrase.
+
+Note also that in (\ref{boekwillezen}) the whole constituent {\em een boek wil
+lezen} is a phrase, thus accounting for the fact that {\em \ldots zou een boek
+willen lezen} is not possible in subordinate clauses.  This follows from the
+fact that {\sc rphrase} is located on arguments and the fact that VR verbs
+inherit the argument specifications of their complement by division.  That is,
+even if a functor does not directly combine with its argument, as is typically
+the case in VR constructions, the information that once this argument is found a
+phrase has been derived, is preserved.
+
+\subsubsection{Participle Inversion}
+
+Cases where an auxiliary selects to the left for an extraposition verb are the
+mirror image of the examples above:
+
+\begin{equation}
+\label{boekheeftgew}
+\mbox{\sc
+\begin{tabular}[t]{ccccc}
+\ldots {\em geleerd}& {\em heeft} & {\em zich aan te passen} \\
+\ldots vp$/$vp[+rp] & (vp$/$vp$_i$)[-p]$\backslash$(vp$/$vp$_i$) & 
+vp[+p] \\
+\cline{1-2}
+\multicolumn{2}{c}{vp$/$vp[+rp]} \\
+\cline{1-3}  \multicolumn{3}{c}{vp[+p]} 
+\end{tabular}
+}
+\end{equation}
+
+\begin{equation}
+\label{gewboekheeft}
+\mbox{\sc
+\begin{tabular}[t]{ccccc}
+\ldots {\em geleerd}& {\em zich aan te passen} & {\em heeft}  \\
+\ldots vp$/$vp[+rp] & vp[+p] & vp[-p]$\backslash$vp \\
+\cline{1-2}
+\multicolumn{2}{c}{vp[+p]} \\
+\cline{1-3}  \multicolumn{3}{c}{***} 
+\end{tabular}
+}
+\end{equation}
+
+One additional assumption is needed for these cases, however.  Consider the
+example in (\ref{zouetc}).  The verb cluster {\em geleerd hebben} is not a
+phrase, which means that it can be the argument of {\em zou}.
+
+\begin{equation}
+\label{zouetc}
+\mbox{\sc
+\begin{tabular}[t]{lcccc}
+$^*$\ldots {\em zou} & {\em geweigerd}& {\em hebben} & {\em zich aan te passen} 
+\\
+(vp$/$vp$_i$)/(vp$/$vp$_i$)[-p] & vp$/$vp[+rp] & 
+(vp$/$vp$_j$)[-p]$\backslash$(vp$/$vp$_j$) & 
+vp[+p] \\
+\cline{2-3}
+& \multicolumn{2}{c}{vp$/$vp[+rp]} \\
+\cline{1-3}  \multicolumn{3}{c}{vp$/$vp[+rp]} 
+\end{tabular}
+}
+\end{equation}
+
+\noindent To rule out these cases, we simply add the information that the
+argument of left-directional {\em hebben} is {\sc +phrase}.  Thus, we get:
+
+\begin{equation}
+\mbox{\sc
+\begin{tabular}[t]{lcccc}
+$^*$\ldots {\em zou} & {\em geweigerd}& {\em hebben} & {\em het boek te lezen} 
+\\
+(vp$/$vp$_i$)/(vp$/$vp$_i$)[-p] & vp$/$vp[+rp] & 
+(vp$/$vp$_j$)[-p,+rp]$\backslash$(vp$/$vp$_j$) & 
+vp[+p] \\
+\cline{2-3}
+& \multicolumn{2}{c}{(vp$/$vp[+rp])[+p]} \\
+\cline{1-3}  \multicolumn{3}{c}{***} 
+\end{tabular}
+}
+\end{equation}
+
+\noindent Note that since we are using two features to code information about
+the phrasal status of constituent, no contradiction arises on the argument of
+{\em hebben}.  The correct word order for cases where a left-directional
+auxiliary is selected by a VR verb is shown in (\ref{zous}).  The derivation of
+the verb cluster is as shown in (\ref{zouoke}).
+
+\begin{equation}
+\label{zous}
+\mbox{...dat Jan geweigerd zou hebben het contract te tekenen}
+\end{equation}
+
+\begin{equation}
+\label{zouoke}
+\mbox{\sc
+\begin{tabular}[t]{ccccc}
+{\em geweigerd}& {\em zou} & {\em hebben}  \\
+vp$/$vp[+rp] 
+&((vp$/$vp)$_j$$\backslash$(vp$/$vp$_i$))/ &  
+(vp$/$vp$_k$)[-p,+rp]$\backslash$(vp$/$vp$_k$) \\
+& \hspace{1cm}((vp$/$vp)$_j$$\backslash$(vp$/$vp$_i$))[-p] \\
+\cline{2-3}
+& \multicolumn{2}{c}{(vp$/$vp$_l$)[-p,+rp]$\backslash$(vp$/$vp$_l$)} \\
+\cline{1-3}  \multicolumn{3}{c}{(vp$/$vp[+rp])[+p]} 
+\end{tabular}
+}
+\end{equation}
+
+\subsubsection{Seperable Verb Prefixes}
+\label{prefixes}
+
+There is a class of verbs in Dutch, consisting of a prefix and a verbal stem,
+whose prefix may be seperated from the stem.  Seperation is possible if the verb
+is a {\em te}-infinitive and/or if it is selected by a VR verb:
+
+\begin{equation}
+\label{sep-prefix2}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \ldots\mbox{dat Jan Marie niet durft aan te spreken}. \\
+b. && \ldots\mbox{dat Jan Marie niet aan durft te spreken}. \\
+c. && \ldots\mbox{dat Jan Marie  wil aanspreken}. \\
+d. && \ldots\mbox{dat Jan Marie aan wil spreken}. \\
+e. && \ldots\mbox{dat Jan Marie heeft aan durven spreken}. \\
+\end{array}
+\end{equation}
+
+\noindent An example such as (\ref{sep-prefix2}e) shows that apart from a
+position adjacent to the verb selecting for it or a position on the
+left-periphery of the the verb cluster, the prefix may also be positioned inside
+the verb cluster.  These facts can be accounted for by assigning the following
+category to {\em spreken}:
+
+\begin{equation}
+\begin{array}{ll}
+\mbox{spreken :} & \mbox{\sc pref[aan]$\backslash$(np[+rp]$\backslash$vp)} 
+\end{array}
+\end{equation}
+
+The constituent {\em aan te spreken} is not a phrase, and thus can be selected
+by a VR verb.  However, via division, a VR verb can also select a verb which has
+not yet combine with its prefix.  This leads to the cases where the prefix
+occurs to the left of a VR verb.  The derivation of (\ref{sep-prefix2}e) is
+shown below.
+
+\begin{equation}
+\mbox{\sc
+\begin{tabular}[t]{lcccc}
+{\em heeft} & {\em aan}& {\em durven} & {\em spreken} \\
+(np$_i$$\backslash$vp)/ &  pref & 
+(pref$_i$$\backslash$(np$_j$$\backslash$vp))/
+& pref$\backslash$(np[+rp]$\backslash$vp) \\
+\hspace{0.5cm}(np$_i$$\backslash$vp)[-p] 
+&& \hspace{1cm}(pref$_i$$\backslash$(np$_j$$\backslash$vp))[-p] \\
+\cline{3-4}
+&& \multicolumn{2}{c}{pref$\backslash$(np[+rp]$\backslash$vp)} \\
+\cline{2-4}  \multicolumn{3}{c}{np[+rp]$\backslash$vp} \\
+\cline{1-3}  \multicolumn{3}{c}{np[+rp]$\backslash$vp} \\
+\end{tabular}
+}
+\end{equation}
+
+We have analyzed instances of partial extraposition by assuming that PE verbs
+are subject to the same rule of division as VR verbs.  PE verbs, however, may
+not seperate a prefix from the verb selecting for it:
+
+\begin{equation}
+\label{sep-prefix-PE}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \ldots\mbox{dat Jan haar  heeft besloten op te bellen}. \\
+b. &^*& \ldots\mbox{dat Jan haar op heeft besloten te bellen}. \\
+c. &^*& \ldots\mbox{dat Jan haar heeft op besloten te bellen}. 
+\end{array}
+\end{equation}
+
+\noindent The difference between these cases, and the VR examples in
+(\ref{sep-prefix2}) is that PE verbs do not require their argument to be {\sc
+-phrase}, but that they do specify their argument as {\sc +rphrase}.  Thus, a
+phrase such as {\em schijnt te bellen} is not marked as {\sc +phrase}, whereas
+{\em besloten te bellen} is.  This suggests that prefixes may be attached to
+nonphrasal constituents, but not to phrasal constituents.\footnote{ Note that
+something similar needs to be said to prevent adjuncts from occuring in between
+a prefix and its verb:
+
+\[ i. ^*\ldots\mbox{dat Jan Marie op gisteren belde.} \]
+
+\noindent If adjuncts are introduced as arguments, there is principle nothing to
+prevent the derivation of such examples.  If adjunct-arguments are marked {\sc
++rphrase}, however, the same mechanism that accounts for PE cases also rules out
+this example.}  
+We can implement this idea by specifying prefixes as {\sc
+-phrase} (a reasonable assumption, given the fact that they can be incorporated
+into a root).  To rule out the ungrammatical cases in (\ref{sep-prefix-PE}) we
+furthermore must require that in application, the values of {\sc phrase} on
+argument and functor must match (\ref{application}).  That is, only nonphrasal 
+functors may select a
+nonphrasal argument.  Note that the feature {\sc phrase} is not passed on from
+functor or argument to value, and that, apart from prefixes, no constituents are
+ever marked {\sc -phrase}, so that this solution can be adopted without
+interfering with the earlier examples.
+
+\pr
+\label{application}
+\pred
+\head{\rel{application}(\var{Value},\var{Functor},\var{Argument}) \; \prologif }
+\body{\var{Functor}\con{:arg} \Leftrightarrow \con{Argument},}
+\body{\var{Functor}\con{:val} \Leftrightarrow \con{Value},}
+\body{\var{Value}\con{:phrase} \Leftrightarrow \con{Argument}\con{:rphrase},}
+\body{\var{Argument}\con{:phrase} \Leftrightarrow \con{Functor}\con{:phrase}.}
+\epred
+\epr
+ 
+\noindent The matching and specification of the {\sc phrase} and {\sc 
+rphrase} features in functor, argument, and value according to the  modified 
+definition of {\em application} can be visualized as follows:
+
+\begin{equation}
+\mbox{\sc
+\begin{tabular}[t]{lcccc}
+Functor & Argument \\
+$\Downarrow$ & $\Downarrow$ \\
+A$/_{\alpha\mbox{\sc phrase}}$B &	B[$\alpha$phrase,$\beta$rphrase] \\
+\cline{1-2} 
+\multicolumn{2}{c}{A[$\beta$phrase]} \\
+\multicolumn{2}{c}{$\Uparrow$} \\
+\multicolumn{2}{c}{Value}
+\end{tabular}
+}
+\end{equation}
+
+\noindent The derivation of (\ref{sep-prefix-PE}c) is now correctly ruled out:
+\begin{equation}
+\mbox{\sc
+\begin{tabular}[t]{lcccc}
+{\em heeft} & {\em op}& {\em besloten} & {\em te bellen} \\
+(np$_i$$\backslash$vp)/ &  pref[-p] & 
+(pref$_i$$\backslash$(np$_j$$\backslash$vp))/
+& pref$\backslash$(np[+rp]$\backslash$vp) \\
+\hspace{0.5cm}(np$_i$$\backslash$vp)[+rp] 
+&& \hspace{1cm}(pref$_i$$\backslash$(np$_j$$\backslash$vp))[-p] \\
+\cline{3-4}
+&& \multicolumn{2}{c}{pref$\backslash$(np[+rp]$\backslash$vp)[+p]} \\
+\cline{2-4}  \multicolumn{3}{c}{***} 
+\end{tabular}
+}
+\end{equation}
+
+\subsubsection{Alternative Accounts}
+\label{alternatives}
+
+{\bf Using a LEX Feature.}  Gertjan van Noord (p.c.)  has developed an
+alternative account in terms of HPSG of Dutch verb clusters.  His analysis
+(based on an analysis of German verb clusters developed in
+\shortcite{HinrichsNakazawa89}, \shortcite{HinrichsNakazawa93}, and
+\shortcite{Nerbonne93}) simply states that all VR verbs require a {\sc +lex}
+argument.  All complex phrases are {\sc -lex}.  The {\sc head-complement} rule 
+schema allows a
+head to combine with any number of its complements, which, together with the
+possibility of argument inheritance, leads to completely `flat' {\sc vp}'s. 
+
+The obvious advantage of this solution over the one just discussed, is its  
+simplicity. As the use of a rule schema that allows arbitrary branching {\sc 
+vp}'s does not seem essential, one might even consider adopting a similar 
+approach in a categorial setting. That is, we could simply assume that VR verbs 
+select a {\sc +lex} argument and mark all complex phrases as {\sc -lex}. 
+This implies, however, that the following
+cluster must receive a left-branching analysis:
+
+\begin{equation}
+\mbox{\ldots dat Marie [[zou kunnen] komen]}
+\end{equation}
+
+\noindent The definition of {\em division} presented earlier indeed makes such
+an analysis possible.  The fact that a verb may not combine with any of its
+arguments before being selected by a VR verb follows immediately under this
+account.
+
+There are only a few minor problems.  First of all, it is not clear how the
+possibility of seperable prefixes occurring inside the verb cluster can be
+accounted for.  Under this account, one would expect that prefixes that are not
+incorporated lexically must always occur on the left periphery of the verb
+cluster.\footnote{One might explore the possibility that prefixes are in fact
+functors, taking verbs as arguments.}  Second, this proposal forces one to adopt
+a left-branching structure for clusters of VR verbs.  In footnote
+\ref{against-lb} we observed that this may be problematic.
+
+
+{\bf Locate PHRASE on value categories.}  Instead of working with two features
+ on arguments to control the marking and selection of phrasal constituents, one
+ could also try to use only one ({\sc phrase}) feature.  In that case, functors
+ must specify on their values whether they give rise to phrasal constituents.
+ Thus, we would obtain the following lexical entries:
+
+\begin{equation}
+\begin{array}[t]{ll}
+\mbox{lezen :} & \mbox{\sc np$\backslash$vp[+phrase]} \\ 
+\mbox{denken :}& \mbox{\sc pp$\backslash$vp[+phrase]} \\
+\mbox{weigeren :} & \mbox{\sc vp[+phrase]}/ \mbox{\sc vp} \\ 
+\mbox{spreken :} & \mbox{\sc pref$\backslash($ np$\backslash$vp[+phrase])}
+\end{array}
+\end{equation}
+
+The interaction of {\sc phrase} and the lexical rule of {\em division} requires
+special attention in this case.  As before, VR verbs must specify that they take
+a {\sc -phrase} argument after division has applied.  Also, in the rule of {\em
+division} itself, we must ensure that when argument inheritance takes place, the
+value of {\sc phrase} of the argument from which inheritance takes place is also
+inherited.  This is necessary to rule out cases such as the following:
+
+\begin{equation}
+\mbox{\sc
+\begin{tabular}[t]{lc@{\hspace{0cm}}ccc}
+$^*$&{\em zou} &  {\em het boek} & {\em willen}& {\em lezen}\\
+&vp$/$vp[-phrase] & np  & (np$_i\backslash$vp)$/$(np$_i\backslash$vp)[-phrase] & 
+np$\backslash$vp[+phrase] \\
+\cline{4-5}
+&&& \multicolumn{2}{c}{np$\backslash$vp} \\
+\cline{3-5} 
+&&\multicolumn{2}{c}{vp} \\
+\end{tabular}
+}
+\end{equation}
+
+\noindent If {\em division} is applied as defined previously, the {\sc +phrase}
+feature on the value of {\em lezen} is simply lost, and consequently, it is no
+longer recognized that {\em een boek willen lezen} is phrasal.  Thus, we need to
+modify {\em division} as follows:
+
+\pr
+\pred
+\head{\rel{division}(\var{In},\var{In}).}
+\head{\rel{division}(\var{In},\var{Out}) \; \prologif 
+	\mbox{\hspace{2cm} \% rightward disharmonic}}
+\body{\var{Out} \Leftrightarrow 
+(\var{Z}\backslash\var{X})/(\var{Z}\backslash\var{Y}),}
+\body{\var{X}\con{:phrase} \Leftrightarrow \var{Y}\con{:phrase}},
+\body{\rel{division}(\var{In},\var{X}/ \var{Y}).}
+\head{(\rel{etc.})}
+\epred
+\epr
+
+\noindent Given these modifications, the basic facts follow as before.  For PE
+verbs and the category of the auxiliary in participle inversion, we must assume
+that the specification {\sc +phrase} on the value category is added after
+division has taken place.  It is not clear, however, how the fact that seperable
+prefixes may not appear to the left of PE verbs can be accounted for.
+
+\subsection{Eliminating spurious ambiguity}
+\label{sp-ambig}
+
+A grammar employing both application and division is usually in danger of
+producing spurious derivations of certain sentences.  This is also the case for
+the present fragment.  The feature {\sc phrase}, however, already serves to
+disambiguate many cases that would otherwise have two or more derivations.  The
+ambiguity that remains can be eliminated by restricting harmonic division to
+{\sc +phrase} arguments only.
+
+Consider first the interaction of VR and extraposition verbs. Ignoring {\sc 
+phrase}, 
+the following example has two derivations:
+
+\begin{equation}
+\mbox{\sc
+\begin{tabular}[t]{ccccc}
+\ldots & {\em moet} & {\em leren}& {\em zich aan te passen} \\
+	1. & vp$/$vp[-p] & vp$/$vp[+rp] 	& vp \\
+	& \\
+	2. & (vp$/$vp)/(vp$/$vp)[-p] & vp$/$vp[+rp] 	& vp \\
+\end{tabular}
+}
+\end{equation}
+
+\noindent We could either simply combine {\em leren} with the {\sc vp} {\em
+zich aan te passen} and combine the resulting {\sc vp} with {\em moet} or we
+could apply harmonic division to {\em moet} and then derive the constituent {\em
+moet leren} before combining with the extraposed {\sc vp}.  The introduction
+of {\sc phrase} will rule the first derivation out, as the combination of an
+extraposition verb with its complement is phrasal.
+
+Similarly, consider cases of participle inversion.
+
+\begin{equation}
+\mbox{\sc
+\begin{tabular}[t]{ccccc}
+\ldots & {\em het boek} & {\em gelezen}& {\em heeft} \\
+1. & np & np[+rp]$\backslash$vp   &   vp[-p]$\backslash$vp  \\
+			&&\\
+2. & np & np[+rp]$\backslash$vp  & 
+(np$\backslash$vp)[-p]$\backslash$(np$\backslash$vp)
+\end{tabular}
+}
+\end{equation}
+ 
+\noindent We might derive the {\sc vp} {\em het boek gelezen} first, and next
+combine that with {\em heeft} using just application, but this is blocked by the
+fact that {\em hebben} selects a {\sc -phrase} argument.  The only derivation
+left is therefore the one on which harmonic division applies to {\em heeft},
+which then combines with {\em gelezen} and {\em een boek} in that order.
+
+Two remaining cases of spurious ambiguity are the following:
+
+\begin{equation}
+\label{spurious}
+\mbox{\sc
+\begin{tabular}[t]{ccccc}
+\ldots & {\em zou} & {\em kunnen}& {\em komen} \\
+1.& 	vp$/$vp[-p] & vp$/$vp[-p] 	& vp \\
+	&& \\
+2. &	(vp$/$vp$_i$)/(vp$/$vp$_i$)[-p] & vp$/$vp[-p] 	& vp \\
+\end{tabular}
+}
+\end{equation}
+\begin{equation}
+\label{pref-spu}
+\mbox{\sc
+\begin{tabular}[t]{ccccc}
+\ldots & {\em op} & {\em gebeld}& {\em heeft} \\
+1. &	pref[-p] & pref$\backslash$(np$\backslash$vp) &  vp[-p]$\backslash$vp \\
+	&& \\
+2. &	pref[-p] & pref$\backslash$(np$\backslash$vp) & 
+	(pref$\backslash$(np$\backslash$vp))[-p]$\backslash
+			$(pref$\backslash$(np$\backslash$vp))
+\end{tabular}
+}
+\end{equation}
+
+\noindent As {\em kunnen komen} is not phrasal, both the left-branching and the
+right-branching derivation of (\ref{spurious}) is available.  In the preceding
+discussion, we have assumed that the right-branching derivation is correct.  The
+left-branching derivation can be ruled out by assuming that in harmonic
+division, the inherited argument is always {\sc +phrase} (see
+(\ref{div-no-sp})).  This blocks harmonic division in those cases where it is
+applied to a VR verb to derive an argument category that is also a VR verb.  The
+same constraint will also rule out a left-branching derivation of
+(\ref{pref-spu}).
+
+\pr
+\label{div-no-sp}
+\pred
+\head{\rel{division}(\var{In},\var{In}).}
+\head{\vdots}
+\head{\rel{division}(\var{In},\var{Out}) \; \prologif
+	\mbox{\hspace{2cm} \% rightward harmonic}}
+\body{\var{Out} \Leftrightarrow 
+(\var{X}/ \var{Z})/(\var{Y}/ \var{Z}),}
+\body{\var{Z}\con{:phrase} \Leftrightarrow +},
+\body{\rel{division}(\var{In},\var{X}/ \var{Y}).}
+\head{\rel{division}(\var{In},\var{Out}) \; \prologif
+	\mbox{\hspace{2cm} \% leftward harmonic}}
+\body{\var{Out} \Leftrightarrow 
+(\var{Z}\backslash\var{Y})\backslash(\var{Z}\backslash\var{X}),}
+\body{\var{Z}\con{:phrase} \Leftrightarrow +,}
+\body{\rel{division}(\var{In},\var{Y}\backslash\var{X}).}
+\epred
+\epr
+
+\section{Minor Issues}
+
+\subsection{Om}
+
+Most extraposition verbs select for a {\sc vp} which may be optionally prefixed
+by the complementizer {\em om} (\ref{om1}a,b).  For other extraposition verbs,
+the presence of {\em om} is impossible (\ref{om1}c,d).  With VR verbs, {\em om}
+is always impossible (\ref{om1}e,f). With PE verbs, {\em om} is only possible if 
+the complement {\sc vp} has been extraposed fully (i.e. in those cases where 
+{\em partial extraposition} is in fact full extraposition) (\ref{om1}g-i)
+
+\begin{equation}
+\label{om1}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \ldots\mbox{dat Jan beloofde  haar te zullen bellen.} \\
+b. && \ldots\mbox{dat Jan beloofde om haar te zullen bellen.} \\
+c. && \ldots\mbox{dat Jan zei  haar te zullen bellen.} \\
+d. &^*& \ldots\mbox{dat Jan zei om haar te zullen bellen.} \\
+e. &^*& \ldots\mbox{dat Jan om het boek schijnt te lezen} \\
+f. &^*& \ldots\mbox{dat Jan het boek schijnt om te lezen} \\
+g. &^*& \ldots\mbox{dat Jan om de deur beloofde te schilderen} \\
+h. &^*& \ldots\mbox{dat Jan de deur beloofde om te schilderen} \\
+i. && \ldots\mbox{dat Jan beloofde om de deur te schilderen} \\
+\end{array}
+\end{equation}
+
+We may account for this fact by assuming that {\em om} is a {\sc vp}-specifier,
+with the category indicated below.  Extraposition verbs which optionally take
+{\em om}-clauses are are unspecified for the feature {\sc om}, whereas
+extraposition verbs which cannot combine with {\em om}-clauses are {\sc -om}.
+
+\begin{equation}
+\begin{array}[t]{ll}
+\mbox{om :} & \mbox{\sc vp[+om]$/$vp[-om]} \\ 
+\mbox{beloven :}& \mbox{\sc vp$/$vp[+rp]} \\
+\mbox{zeggen :} & \mbox{\sc vp$/$vp[+rp,-om]} \\ 
+\end{array}
+\end{equation}
+
+The ungrammaticality of the examples (\ref{om1}e-h) follows from the assumption
+that {\em om} takes a {\sc vp} as argument, together with the fact that at no
+point in the derivation a {\sc vp} is derived that could function as argument of
+{\em om}.  Note that this does not rule out cases where a VR
+verb selects a {\em te-infinitive} consisting of a simple intransitive {\sc vp}, 
+as in \ref{om2} below.  To rule these out, we must specify for all VR verbs 
+(selecting a {\em te-infinitive}) that they select for a {\sc vp} complement that is 
+marked {\sc -om}.\footnote{
+The reason that VR verbs cannot combine with an {\em om}-clause seems to be that 
+a {\sc vp} headed by {\\em om} cannot be part of a verb cluster. One reasonable 
+possibility to achieve this, would be to specify the argument of {\em om} as 
+{\sc +rprhase}. This does not suffice, however, as it fails to rule out the 
+left-branching analysis of (\ref{om2}), i.e. {\em [schijnt om] te verliezen]}.}
+
+\begin{equation}
+\label{om2}
+^* \ldots\mbox{dat Jan  schijnt om te verliezen.} 
+\end{equation}
+
+
+\subsection{Infinitivus pro Participio}
+
+The auxiliaries {\em hebben} and {\em zijn} normally select a {\sc vp}
+headed by a participle (\ref{aux}a,b). If the {\sc vp} is headed by a VR
+verb, however, this verb must be in the infinitive form (\ref{aux}c,d). This
+phenomenon is known as  {\em Infinitivus pro Participio} ({\sc ipp}). 
+
+\begin{equation}
+\label{aux}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \ldots\mbox{dat Jan  is gevallen} \\
+b. && \ldots\mbox{dat Jan het boek heeft gelezen.} \\
+c. &^*& \ldots\mbox{dat Jan het boek is gaan kopen.} \\
+d. && \ldots\mbox{dat Jan het boek heeft moeten lezen.} \\
+\end{array}
+\end{equation} 
+
+The possibility of {\sc Ipp} is sometimes used as a test to distinguish between
+(partial) extraposition and VR verbs.  Only proper VR verbs give rise to the
+{\sc ipp}-effect.  Note that this implies that {\em proberen} must be ambiguous
+between a VR verb and a PE verb:
+
+\begin{equation}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \ldots\mbox{dat we water hebben verzuimd te drinken} \\
+b. &^*& \ldots\mbox{dat we water hebben verzuimen te drinken} \\
+c. && \ldots\mbox{dat Jan het boek heeft geprobeerd te lezen} \\
+d. && \ldots\mbox{dat Jan het boek heeft proberen te lezen.} \\
+\end{array}
+\end{equation}
+
+\noindent We can account for these facts either by assuming that there is an
+additional entry for auxiliaries, selecting {\sc vp}'s headed by a VR verb in
+the infinitive (i.e.  their argument would (minimally) be an {\sc vp[inf,vr]})
+or we can assume that the infinitive form of VR verbs can also function as
+participle (i.e.  {\em willen} would be {\sc vp[prt]} as well as {\sc vp[inf]}).
+We have adopted the latter solution.
+
+\subsection{Participle and Modal Inversion}
+
+Auxiliaries may select a participle to the right as well as to the left. The 
+left-directional possibility is not available, however, if the {\sc vp} selected 
+by the auxiliary is headed by a VR verb (and is therefore headed by an 
+infinitive).
+
+\begin{equation}
+\label{ipp-inv}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \ldots\mbox{dat Jan  het boek gelezen heeft.} \\
+b. && \ldots\mbox{dat Jan het boek lezen moet.} \\
+c. && \ldots\mbox{dat Jan het boek is gaan kopen.} \\
+c^\prime. &^*& \ldots\mbox{dat Jan het boek gaan is kopen.} \\
+c^{\prime\prime}. &^*& \ldots\mbox{dat Jan het boek gaan kopen is.} \\
+d. && \ldots\mbox{dat Jan het boek heeft moeten lezen.} \\
+d^\prime. &^*& \ldots\mbox{dat Jan het boek moeten heeft lezen.} \\
+d^{\prime\prime}. &^*& \ldots\mbox{dat Jan het boek moeten lezen heeft.} \\
+\end{array}
+\end{equation} 
+
+We have already presented an account of participle inversion, but, given our
+solution of {\sc ipp} which simply treats infinitives of VR verbs as
+participles,  we still need to account for the
+ungrammaticality of the primed instances of(\ref{ipp-inv}c,d).
+
+A closer look at the examples (\ref{ipp-inv}c$^\prime$,d$^\prime$) shows
+that they are in fact not derivable.
+
+\begin{equation}
+\label{gaaniskopen}
+\mbox{\sc
+\begin{tabular}[t]{ccccc}
+\ldots & {\em gaan} & {\em is}& {\em kopen} \\
+&	tv$/$tv[-p] & (tv$/$tv$_i$)[-p,+rp]$\backslash$(tv$/$tv$_i$) &  tv \\
+\cline{2-3}
+& \multicolumn{2}{c}{(tv$/$tv[-p])[+p]} \\
+\cline{2-4}
+& \multicolumn{2}{c}{***} \\
+\end{tabular}
+}
+\end{equation}
+
+The only possibility of deriving the verb cluster {\em gaan is kopen} is by 
+combining {\em gaan} and {\em is } first. This gives rise to a phrasal 
+category, which is looking for a nonphrasal complement. In section 
+\ref{prefixes}, where we discussed the impossibility of seperating a prefix 
+form its verb root by a PE verb (as in (\ref{pref-ex})), we have encountered a 
+similar situation.
+
+\begin{equation}
+\label{pref-ex}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \ldots\mbox{dat Jan haar  heeft besloten op te bellen}. \\
+b. &^*& \ldots\mbox{dat Jan haar op heeft besloten te bellen}. \\
+c. &^*& \ldots\mbox{dat Jan haar heeft op besloten te bellen}. 
+\end{array}
+\end{equation}
+There, we have proposed a constraint requiring that the {\sc phrase} feature on 
+functor and argument must unify. This constraint not only accounts for 
+examples such as (\ref{pref-ex}), but also blocks the derivation of 
+(\ref{gaaniskopen}). Since {\em gaan is} is a phrasal constituent selecting a 
+nonphrasal argument, no combination of this functor with its argument is 
+possible.
+
+This still leaves the examples in 
+(\ref{ipp-inv}c$^{\prime\prime}$,d$^{\prime\prime}$). These are derivable, as 
+the 
+verbal constituents {\em gaan kopen} and {\em moeten lezen} are not phrasal and 
+are headed by a verb whose form is ambiguous between a participle and an 
+infinitive. To rule these out, we stipulate that inverted auxiliaries select a 
+{\sc -ipp} argument, and mark all VR verbs as {\sc +ipp}. 
+
+Apart from auxiliaries, modals may also select a verbal complement to the left:
+
+\begin{equation}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \ldots\mbox{dat Jan  komen wil} \\
+b. && \ldots\mbox{dat Jan wil komen.} \\
+c. && \ldots\mbox{dat de manager de spits wil verbieden het contract te tekenen} \\
+d. && \ldots\mbox{dat de manager de spits verbieden wil het contract te tekenen.} \\
+\end{array}
+\end{equation} 
+The possibility of modal inversion is restricted to finite forms of modals:
+\begin{equation}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \ldots\mbox{dat Jan  heeft willen komen.} \\
+b. &^*& \ldots\mbox{dat Jan heeft komen willen.} \\
+c. &^*& \ldots\mbox{dat zou komen heeft willen} 
+\end{array} 
+\end{equation} 
+We can account for this fact by making a left-directional category 
+available only for finite modals:
+\begin{equation}
+\begin{array}{ll}
+\mbox{wil:} & \mbox{\sc (vp[-p,+rp]$\backslash$vp)[fin]} \\ 
+\mbox{zal:} & \mbox{\sc (vp[-p,+rp]$\backslash$vp)[fin]} \\ 
+\end{array}
+\end{equation}
+
+Another restriction on modal inversion is that the selected {\sc vp} may not be 
+headed by a VR verb:
+\begin{equation}
+\label{modal-inv}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \ldots\mbox{dat Jan  zal willen komen.} \\
+b. &^*& \ldots\mbox{dat Jan willen zal komen.} \\
+c. &^*& \ldots\mbox{dat Jan willen komen zal.} 
+\end{array} 
+\end{equation}
+
+\noindent Thus, modal inversion is subject to the same constraint as participle
+inversion.  As was the case with participle inversion, we may accunt for the 
+ungrammaticality of the examples in (\ref{modal-inv}) by stipulating that 
+inverted modals select a {\sc -ipp} verbal argument. 
+
+The connection between  the ungrammaticality of (\ref{gaaniskopen}) and
+(\ref{modal-inv}b,c)  and the (im-)possibility of {\sc ipp} on the governed verb is
+further confirmed by the observation that instances of participle inversion and
+modal inversion are grammatical when the argument is headed by a PE verb (which 
+are not subject to {\sc ipp}):
+
+\begin{equation}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \ldots\mbox{dat Jan  haar besloten heeft te kussen.} \\
+b. && \ldots\mbox{dat Jan haar besluiten zou te kussen.} \\
+\end{array} 
+\end{equation}
+
+\section{Fronting of Verbal Constituents}
+
+In lexicalist accounts of German verb clusters, the possibility of fronting full 
+or partial {\sc vp}'s as well parts of a verb cluster has received considerable 
+attention \cite{Nerbonne86},\cite{Johnson86},\cite{Nerbonne93}. 
+
+For Dutch, the data are roughly as follows. Although fronting of verbal 
+constituents in general appears to be a rather marked phenomenon, it is possible 
+in Dutch to topicalize full {\sc vp}'s (\ref{fronting}a,b), as well as 
+partial {\sc vp}'s (\ref{fronting}c,d):\footnote{
+Examples (\ref{fronting}a-c) are taken 
+from the ANS \cite{ans} and (\ref{fronting}d) is from \shortcite{hoeksema-ms})}
+
+\begin{equation}
+\label{fronting}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \mbox{Iets gedronken heb je natuurlijk wel?} \\
+b. && \mbox{Het proefstuk gauw even afmaken wilde hij niet.} \\
+c. && \mbox{Aanvaarden zul je het.} \\
+d. && \mbox{Uit kunnen staan heb ik die man nooit} \\
+\end{array} 
+\end{equation}
+
+The possibility of fronting full constituents is something that requires
+explanation, given the fact that the functors selecting for these constituents
+are VR verbs, and thus normally combine with a nonphrasal argument.  In
+\shortcite{Nerbonne93}, it is suggested that the possibility of fronting full as
+well as partial {\sc vp}'s can be accounted for, without introducing spurous
+ambiguity elsewhere, by stipulating that the lexical rule which introduces
+incomplete constituents (by moving an element from {\sc subcat} to {\sc slash})
+removes the specification {\sc +lex} from its argument.  This suggestion is
+easily incorporated in the present framework.
+
+The lexical rule that optionally moves an element to {\sc slash} is given below.
+The predicate {\em unify\_except} unifies its two first arguments, except for
+the features specified in the third argument.
+
+\pr
+\pred
+\head{\rel{push\_to\_slash}(\var{In},\var{Out}) \; \prologif}
+	\body{\var{In} \Leftrightarrow \var{Out}.}
+\head{\rel{push\_to\_slash}(\var{In},\var{Out}) \; \prologif}
+	\body{\var{Out}\con{:slash} \Leftrightarrow \var{Slash},}
+	\body{\rel{push\_to\_slash}(\var{In},\var{Out},\var{Slash}).}
+\epred
+\pred
+\head{\rel{push\_to\_slash}(\var{In},\var{Out},\var{Slash})  ;\ \prologif}
+	\body{\var{In}\con{:arg} \Leftrightarrow \var{Arg},}
+	\body{\rel{unify\_except}(\var{Arg},\var{Slash},[\con{phrase}]),}
+	\body{\var{In}\con{:val} \Leftrightarrow \var{Out}.}
+\head{\rel{push\_to\_slash}(\var{In},\var{Out},\var{Slash})  ;\ \prologif}
+	\body{\var{In}\con{:arg} \Leftrightarrow \var{Out}\con{:arg},}
+	\body{\var{In}\con{:dir} \Leftrightarrow \var{Out}\con{:dir},}
+	\body{\var{In}\con{:val} \Leftrightarrow \var{InVal},}
+	\body{\var{Out}\con{:val} \Leftrightarrow \var{OutVal},}
+	\body{\rel{push\_to\_slash}(\var{InVal},\var{OutVal},\var{Slash}) .}
+\epred
+\epr
+
+The constraint {\em push\_to\_slash} can be  added to verbal lexical entries:
+
+
+\pr
+\pred
+\head{\rel{lex}(\con{willen},\var{Sign}) \; \prologif }
+	\body{\var{Sign0} \Leftrightarrow \con{vp}/\con{vp},}
+	\body{\rel{division}(\var{Sign0},\var{Sign1}),}
+	\body{\rel{push\_to\_slash}(\var{Sign1},\var{Sign}).}
+\epred
+\pred
+\head{\rel{lex}(\con{kussen},\var{Sign}) \; \prologif }
+	\body{\var{Sign0} \Leftrightarrow \con{np}\backslash\con{vp},}
+	\body{\rel{push\_to\_slash}(\var{Sign0},\var{Sign}).}
+\epred
+\epr
+
+\noindent By ordering the application of {\em push\_to\_slash} after {\em
+division}, we account for the fact that a partial {\sc vp} may be fronted.  That
+is, it accounts for the fact that a VR verb may combine with arguments inherited
+from the head of its complement, before actually combining with that head.
+
+\subsection{Remaining Issues}
+Our treatment of fronting of (partial) {\sc vp}'s predicts that full {\sc vp}'s 
+can be fronted and that a verb along with any number of its arguments can be 
+fronted in case this verb is selected by a VR verb. There are a number of 
+additional constraints on fronting, however, some of which are discussed below.
+
+{\bf Fronting single VR verbs.} In \shortcite{Nerbonne93} it is observed that 
+while it is possible to front a 
+complex verbal constituent, it is impossible to front a single modal. A Dutch 
+example of fronting a verb cluster is given in (\ref{fronting}d). Fronting of a 
+single VR verb in Dutch is impossible:
+
+\begin{equation}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a.  &^*& \mbox{Kunnen heb ik die vent nooit uitstaan.} \\
+b. &^*& \mbox{Moeten heb ik dit boek lezen}
+\end{array} 
+\end{equation}
+
+\noindent The ungrammaticality of these examples follows from the fact that {\em
+hebben} cannot combine with {\em uitstaan} before combining with the head of its
+complement {\em kunnen}.  Remember that in section \ref{sp-ambig} we introduced
+a constraint restricting applications of harmonic composition to situations in
+which a phrasal argument is inherited.  This constraint is needed to eliminate
+the spurious ambiguity caused by the introduction of harminic division.  The
+same constraint also precludes the derivation of the ungrammatical examples
+above.  Ignoring the effects of verb second, we need a to derive roughly the
+following:
+
+\begin{equation}
+\mbox{\sc
+\begin{tabular}[t]{ccccc}
+{\em kunnen} & \ldots & {\em heb} & {\em uitstaan} \\
+tv/tv[-p]&	tv$/$tv  &  tv \\
+&& $\Downarrow$ \\
+&& (tv$/$tv$_i$[+p])$/$(tv$/$tv$_i$[+p]) \\
+&& $\Downarrow$ \\
+&& (tv$/$tv$_i$[+p])[slash:tv$/$tv$_i$[+p]] \\
+\cline{3-4}
+&& \multicolumn{2}{c}{tv[slash:tv$/$tv[+p]]} \\
+\end{tabular}
+}
+\end{equation}
+
+\noindent First, harmonic division must be applied to {\em heb}, leading to the
+specification {\sc [+phrase]} on the inherited argument.  Next, we can move the
+first argument of {\em heb} to {\sc slash}, and combine {\em heb} with {\em
+uitstaan}.  The rest of the derivation must fail, however, as there is a
+category {\sc tv/tv[+p]} on {\sc slash}, while the fronted element is in fact of
+category {\sc tv/tv[-p]}.
+
+{\bf Fronting Participles.}
+Fronting of a single participle in general is possible, and can typically 
+be found in newspaper prose \cite{ans}:
+
+\begin{equation}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \mbox{Aangenomen wordt dat de voorzitter ontvoerd is.} \\
+b. && \mbox{Gedacht wordt aan een verhoging van de olieprijs.} \\
+\end{array} 
+\end{equation}
+
+\noindent In this somewhat particular construction (note, for instance, that the 
+governing verb is always the passive auxiliary), it is also possible to front a 
+single extraposition verb:
+
+\begin{equation}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \mbox{Besloten werd het voorstel te accepteren.} \\
+b. && \mbox{Voorgesteld werd om Joop een nieuw contract aan te bieden.} \\
+\end{array} 
+\end{equation}
+
+\noindent In this respect, extrapostion verbs differ from VR verbs, which cannot 
+be fronted without the verb they govern. The difference is as prediced, given 
+the fact that to front a single extrapostion or VR verb we need to apply 
+harmonic division, which is unproblematic if the inherited argument is phrasal. 
+This is the case for extraposition verbs, but not for VR verbs.
+
+{\bf Fronting with non-finite VR verbs.} The examples cited at the beginning of 
+this section all consist of a fronted verbal constituent which is selected by a 
+finite verb in verb second position (i.e. immediately following the fronted 
+material). It is difficult to construct examples in which the governing verb is 
+non-finite:
+
+\begin{equation}
+\label{fronting2}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. &?& \mbox{Dit voorstel geweigerd zou je natuurlijk wel hebben?} \\
+b. && \mbox{Het proefstuk gauw even afmaken zou hij niet willen.} \\
+c. && \mbox{Aanvaarden zul je het wel moeten.} \\
+d. && \mbox{Uitstaan heb ik die man nooit gekund.} \\
+\end{array} 
+\end{equation}
+
+The examples (\ref{fronting2}b-d) seem to be just acceptable, whereas 
+(\ref{fronting2}a), in which a governing auxiliary is seperated from its 
+participle,
+is considerably less acceptable. 
+
+{\bf Long distance fronting.} It is not clear to what extent fronting of verbal 
+constituents is possible across clause boundaries. The example below does seem 
+acceptable. 
+
+\begin{equation}
+\mbox{Aanvaarden denk ik dat ik dit voorstel wel zal moeten.} \\
+\end{equation}
+
+
+{\bf Fronting complements of (Partial) Extraposition verbs.}
+Our account of fronting, suggests that fronting of full {\sc vp}s that are 
+complements of extrapostion verbs should be unproblematic:
+
+\begin{equation}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \mbox{Dit voorstel te weigeren heb ik me voorgenomen} \\
+b. && \mbox{Het werkstuk volgende week af te ronden heeft Jan voorgesteld.} \\
+\end{array} 
+\end{equation} 
+
+\noindent Fronting of partially extraposed verbal complements should also be 
+possible, in case the governing verb is a PE verb:
+
+\begin{equation}
+\mbox{Een nieuwe taak te geven probeerden ze hem niet.} \\
+\end{equation} 
+
+
+
+{\bf Stranding Prefixes.}
+In \shortcite{hoeksema-ms} it is observed that one cannot front a verb which 
+selects for a prefix, while leaving the prefix behind:
+
+\begin{equation}
+\label{fronting3}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \mbox{Uitstaan heb ik die man nooit gekund.} \\
+b. && \mbox{Uitstaan heb ik die man nooit gekund.} \\ 
+c. &^*& \mbox{Staan heb ik die man nooit uit kunnen/gekund.} \\
+d. &^*& \mbox{Kunnen staan heb ik die man nooit uit.} \\
+\end{array} 
+\end{equation}
+
+\noindent The impossibility of (\ref{fronting3}c) in particular needs to be 
+explained, as there is nothing that prevents {\em kunnen} to undergo division, 
+followed by a movement of the verbal complement to {\sc slash} and finally, to 
+combine with {\em uit}. 
+
+
+{\bf Fronting and IPP.}  In \shortcite{Hoeksema88} it is observed that the {\sc
+ipp} effect only occurs if a VR verb does in fact combine with the head of its
+complement in the verb cluster.  If this is not the case, i.e.  if the governed
+verb or {\sc vp} has been fronted, the VR verb appears in its participle form.
+
+\begin{equation}
+\label{fronting-ipp}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \mbox{Stelen heeft ze nooit gewild.} \\
+b. && \mbox{Werken heeft Piet nooit gehoeven.}\\
+c. && \mbox{Die man uitstaan heb ik nooit gekund.}\\
+\end{array}
+\end{equation}
+
+\noindent Hoeksema takes this as further evidence for the fact that governors in 
+the verbal complex may not be complex (where participles, as opposed to 
+infinitives, are considered to be complex). 
+
+It seems difficult to give a formal account of these data. One solution might be 
+to enter the participle forms of VR verbs together with some constraint that 
+forces the lexical rule {\em push\_to\_slash} to be applied so as to move the 
+verbal argument of this verb to  {\sc slash}. While this may be a formal 
+possibility, it is rather different from the mechanisms we have used so far. 
+
+Another option might be to consider the fronted material as not verbal at all, 
+but as some kind of nominalization. In that case, the participle form is not 
+categorized as a VR verb, but as a verb taking a nominal argument. That this 
+subcategorization must exist follows from examples such as:
+
+\begin{equation}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \mbox{Dat heeft ze nooit gewild.} \\
+b. && \mbox{Dat harde werken heeft ze nooit gewild.}\\
+\end{array}
+\end{equation} 
+
+Note, however, that if the examples in (\ref{fronting-ipp}) involve 
+nominalizations, it is hard to account for partial frontings, if these are 
+grammatical:
+
+\begin{equation}
+\mbox{Uitstaan heb ik die man nooit gekund.}
+\end{equation} 
+
+
+\section{The Position and Scope of Adjuncts}
+
+
+\subsection{Adjuncts as arguments} 
+
+The position of verb modifiers in Dutch is not fixed.  Adjuncts can, at least in
+principle, occur anywhere to the left of the verb:
+
+\begin{equation}
+\label{adj-ex}
+\begin{array}[t]{llllllll}
+a. & \mbox{dat} & \mbox{waarschijnlijk} & \mbox{niemand} & \mbox{het ongeluk} & 
+\mbox{zag}\\
+& \mbox{that} & \mbox{probably} & \mbox{nobody} & \mbox{the accident} & 
+\mbox{saw} 
+\\
+& \multicolumn{6}{l}{\mbox{\em that noboby probably saw the accident}} \\
+b. & \mbox{dat} & \mbox{Johan} & \mbox{opzettelijk} & \mbox{een ongeluk} & 
+\mbox{veroorzaakt}\\
+& \mbox{that} & \mbox{J.} & \mbox{deliberately} & \mbox{an accident} & 
+\mbox{causes} 
+\\
+& \multicolumn{6}{l}{\mbox{\em that J. deliberately causes an accident}} \\
+c. & \mbox{dat} & \mbox{Johan} & \mbox{Marie} & \mbox{opzettelijk} & \mbox{geen 
+cadeau} & \mbox{geeft} \\
+& \mbox{that} & \mbox{J.} & \mbox{M.} & \mbox{deliberately} & \mbox{no present} 
+& 
+\mbox{gives} \\
+& \multicolumn{6}{l}{\mbox{\em that J. deliberately gave M. no present}}
+\end{array}
+\end{equation}
+
+\noindent There are several ways to account for this fact.  One can assign
+multiple categories to adjuncts or one can assign a polymorphic category {\sc
+x$/$x} to adjuncts, with {\sc x} restricted to `verbal projections'
+\cite{bouma:88}.
+
+Alternatively, one can assume that adjuncts are not functors, but arguments of
+the verb.  Since adjuncts are optional, can be iterated, and can occur in
+several positions, this implies that verbs must be polymorphic.  The constraint
+{\em add\_adjuncts} has this effect, as it optionally adds one or more adjuncts
+as arguments to the `initial' category of a verb:
+
+\begin{equation}
+\label{add-adj}
+\begin{array}[t]{l}
+\att{lex}(\con{veroorzaken},\var{Sign}) \con{:-} \\
+\hspace{1cm}  
+\var{Sign0} \Leftrightarrow \con{np}\backslash(\con{np}\backslash\con{s})), \\
+\hspace{1cm}  
+\att{add\_adjuncts}(\var{Sign0},\var{Sign}). \\
+\att{lex}(\con{geven},\var{Sign}) \con{ :-} \\
+\hspace{1cm}
+\var{Sign0} \Leftrightarrow 
+\con{np}\backslash(\con{np}\backslash(\con{np}\backslash\con{s}))), \\
+\hspace{1cm}  
+\att{add\_adjuncts}(\var{Sign0},\var{Sign}). \\
+\\
+\att{add\_adjuncts}(\con{In},\con{Out}) \con{:-} \\
+\hspace{1cm}  
+\var{In} \Leftrightarrow \con{s}, \\
+\hspace{1cm}  
+\var{In} \Leftrightarrow \var{Out}. \\
+\att{add\_adjuncts}( \var{In},\var{Adj}\backslash \var{OutVal}) \con{ :-} \\
+\hspace{1cm} \var{Adj} \Leftrightarrow \con{adj}, \\
+\hspace{1cm} \var{Adj}\con{:rphrase} \Leftrightarrow +, \\
+\hspace{1cm} \att{add\_adjuncts}(\var{In}, \var{OutVal}). \\
+\att{add\_adjuncts}(\var{In},\var{Out}) \con{ :-} \\
+\hspace{1cm} \var{In}\con{:arg} \Leftrightarrow \var{Out}\con{:arg}, \\
+\hspace{1cm} \var{In}\con{:dir} \Leftrightarrow \var{Out}\con{:dir}, \\
+\hspace{1cm} \var{In}\con{:val} \Leftrightarrow \var{InVal}, \\
+\hspace{1cm} \var{Out}\con{:val} \Leftrightarrow \var{OutVal}, \\
+\hspace{1cm} \att{add\_adjuncts}(\var{InVal}, \var{OutVal}). \\
+\end{array}
+\end{equation} 
+
+\noindent The derivation of (\ref{adj-ex}a) is given below.
+{\sc 
+\begin{equation}
+\mbox{
+\begin{tabular}[t]{rcccccc}
+\ldots {\em Johan} & {\em opzettelijk} & {\em een ongeluk} & {\em veroorzaakt}\\
+        np         &  adj              &  np  &  np$\backslash$(np$\backslash$ 
+s) \\
+                                                &&&$\Downarrow$ \\
+                          &&& np$\backslash$(adj$\backslash$(np$\backslash$ s)) 
+\\
+\cline{3-4}     && \multicolumn{1}{c}{adj$\backslash$(np$\backslash$ s)} \\
+\cline{2-3} & \multicolumn{2}{c}{np$\backslash$ s} \\
+\cline{1-3}  \multicolumn{2}{c}{s} \\
+\end{tabular}
+}
+\end{equation}
+}
+
+An interesting implication of this analysis is that in a categorial setting the
+notion `head' can be equated with the notion `main functor'.  This has been
+proposed by \shortcite{barry-pickering}, but they are forced to assign a
+category containing Kleene-star operators to verbal elements. The present
+proposal is an alternative for such assignments which avoids introducing new
+categorial operators.  
+
+The second thing to note is that treating adjuncts as arguments makes it easy to 
+account for the fact that adjuncts can be extracted and fronted in {\sc 
+wh}-questions, relatives, and topicalization constructions. If the lexical rule 
+{\em push\_to\_slash} operates on the output of {\em add\_adjuncts}, this 
+follows automatically. 
+
+Finally, this analysis allows us to give a straightforward account of the
+distribution and scope of adjuncts in verb phrases headed by a verbal complex.
+
+\subsection{Adjuncts and verb clusters}
+
+In sentences headed by a verb cluster, we find the same pattern as in simple 
+clauses, i.e. adjuncts may occur anywhere to the left of the verb 
+cluster.\footnote{Adjuncts cannot occur within the verb cluster. This is 
+accounted for in the rule which adds adjuncts (\ref{add-adj}) by stipulating 
+that the added adjunct argument is {\sc +rphrase}. Note that the same 
+stipulation, together with the constraint that requires the phrasal status of 
+functor and argument ot be unifiable, also rules out examples such as (i) 
+below, in which an adjunct occurs left of a sperable prefix:
+
+
+\[ i. ^*\ldots\mbox{\em dat Jan Marie op gisteren heeft gebeld.} \]
+}
+
+
+\begin{equation}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \ldots\mbox{dat waarschijnlijk niemand dat ongeluk heeft zien gebeuren.} 
+\\
+b. && \ldots\mbox{dat Frits iedere dag iemand vis zag eten.} \\
+c. && \ldots\mbox{dat Frits hem iedere dag vis zag eten.} \\
+d. && \ldots\mbox{dat Frits hem dat boek duidelijk zag stelen.} \\
+\end{array} 
+\end{equation}
+
+\noindent Note that these examples are an argument against assigning multiple 
+categories to adjuncts. As the subcategorization requirements of a verbal 
+complex can be arbitrarily complex, it will be impossible to provide an 
+exhaustive list of categories for adjuncts modifying such verb complexes. 
+
+Another issue that needs to be accounted for is the fact that adjuncts, when 
+they occur to the left of a verb cluster, may take scope over the entire 
+cluster, but also over (embedded) parts of it:\footnote{
+There seem to be exceptions here, as \shortcite{hoeksema-ms} observes, for 
+instance, that the negation {\em niet} always takes wide scope (while noting 
+that \shortcite{haegeman} claim otherwise). We might account for this fact by 
+assigning {\em niet} a polymorphic category after all, or by letting VR verbs 
+select for `non-negative' complements only.}
+
+\begin{equation}
+\label{interaction}
+\begin{array}[t]{ll}
+a. & 
+\begin{array}[t]{llllll}
+\mbox{dat} & \mbox{Frits} & \mbox{Marie} & \mbox{volgens mij} & \mbox{lijkt} & 
+\mbox{te ontwijken.} \\
+\mbox{that} & \mbox{F.}& \mbox{M.}& \mbox{to me} & \mbox{seems} & \mbox{to 
+avoid} \\
+\multicolumn{6}{l}{\mbox{\em It seems to me that F. avoids M.}} 
+\end{array} \\
+b. & 
+\begin{array}[t]{llllll}
+\mbox{dat}& \mbox{Frits} & \mbox{Marie} & \mbox{opzettelijk} & \mbox{lijkt} & 
+\mbox{te 
+ontwijken.} \\
+\mbox{that}& \mbox{F.} &\mbox{M.} & \mbox{to me} & \mbox{seems} & \mbox{to 
+avoid} \\
+\multicolumn{6}{l}{\mbox{\em It seems that F. deliberately avoids M.}} 
+\end{array} \\
+c. & 
+\begin{array}[t]{llllll}
+\mbox{dat} & \mbox{Frits} & \mbox{Marie} & \mbox{de laatste tijd} & \mbox{lijkt} 
+& 
+\mbox{te ontwijken.}  \\
+\mbox{that}& \mbox{F.} &\mbox{M.} & \mbox{lately} & \mbox{seems} & \mbox{to 
+avoid} \\
+\multicolumn{6}{l}{\mbox{\em It seems lately as if  F. avoids M.}} \\
+\multicolumn{6}{l}{\mbox{\em It seems as if  F. avoids M. lately}} 
+\end{array}
+\end{array}
+\end{equation}
+
+\noindent In (\ref{interaction}a) the adjunct modifies the entire verb cluster
+(in the most likely reading).  However, we also find structurally similar
+examples in which the adjunct modifies the governed verb (\ref{interaction}b).
+Finally, there are examples that are ambiguous between a wide and narrow scope
+reading (\ref{interaction}c).  We take it that the latter case is actually what
+needs to be accounted for, i.e.  examples such as (\ref{interaction}a) and
+(\ref{interaction}b) are cases in which there is a strong preference for a wide
+and narrow scope reading, respectively, but we will remain silent about the
+(semantic) factors determining such preferences.
+
+Examples of sentences in which an adjuncts takes narrow scope are in fact quite 
+frequent: 
+\begin{equation}
+\begin{array}[t]{ll@{\hspace{0cm}}l}
+a. && \ldots\mbox{dat Frits het artikel morgen probeert af te hebben.} \\
+b. && \ldots\mbox{dat van Basten de bal sierlijk in het doel probeerde te 
+werken.} \\
+\end{array} 
+\end{equation}
+Nevertheless, these cases are difficult to if one does not assume that adjuncts 
+are in fact arguments of the verb they modify. An approach which assigns a 
+polymorphic category to verbal adjuncts may get the word order facts right, but 
+will not be able to account for the fact that a modifier may take scope over 
+only part of the verb cluster it takes as argument. 
+ 
+If one treats adjuncts as arguments, on the other hand, the preceding data can
+be accounted for quite naturally.  Assuming the lexical entries for {\em lijken}
+en {\em ontwijken} to be as in (\ref{lex}), example (\ref{interaction}c) has two
+possible derivations ((\ref{wide}) and (\ref{narrow})).
+
+\begin{equation}
+\label{lex}
+\begin{array}[t]{l}
+lex(lijken,\var{Sign}) \con{:-} \\
+\hspace{1cm} \var{Sign0} \Leftrightarrow  \con{vp}/\con{vp}, \\
+\hspace{1cm} \att{add\_adjuncts}(\var{Sign0},\var{Sign1}), \\
+\hspace{1cm} \att{division}(\var{Sign1},\var{Sign}).\\
+lex(ontwijken,\var{Sign}) \con{:-} \\
+\hspace{1cm} \var{Sign0} \Leftrightarrow  \con{np}\backslash\con{vp}, \\
+\hspace{1cm} \att{add\_adjuncts}(\var{Sign0},\var{Sign} ).
+\end{array}
+\end{equation}
+
+{\sc 
+\begin{equation}
+\label{wide}
+\mbox{
+\begin{tabular}[t]{rcccccc}
+\ldots {\em Frits} & {\em Maria} & {\em de laatste tijd} & {\em lijkt}
+                                                        & {\em te ontwijken}\\
+        np      & np            & adj                   & vp/vp  &  
+np$\backslash$vp\\
+                                                &&&$\Downarrow$ \\
+                                       &&& 
+(np$\backslash$vp)$/$(np$\backslash$vp)\\
+                                      &&&$\Downarrow$ \\
+                       &&& 
+(adj$\backslash$(np$\backslash$vp))$/$(np$\backslash$vp) \\
+\cline{4-5}     &&& \multicolumn{1}{r}{adj$\backslash$(np$\backslash$vp)} \\
+\cline{3-4} && \multicolumn{2}{c}{np$\backslash$vp}
+\end{tabular}
+}
+\end{equation}
+
+\begin{equation}
+\label{narrow}
+\mbox{
+\begin{tabular}[t]{rcccccc}
+\ldots {\em Frits} & {\em Maria} & {\em de laatste tijd} & {\em lijkt}
+                                                        & {\em te ontwijken}\\
+        np      & np            & adj                   & vp$/$vp  &  
+np$\backslash$vp\\
+                                        &&&$\Downarrow$ & $\Downarrow$\\
+        &&& 
+(adj$\backslash$(np$\backslash$vp))/(adj$\backslash$(np$\backslash$vp))
+                         & adj$\backslash$(np$\backslash$vp)\\
+\cline{4-5}     &&& \multicolumn{2}{c}{adj$\backslash$(np$\backslash$vp)} \\
+\cline{3-4} && \multicolumn{2}{c}{np$\backslash$vp}
+\end{tabular}
+}
+\end{equation}
+}
+
+\noindent Procedurally speaking, the rule that adds adjuncts can be applied
+either to the VR verb (after division has taken place) or to the governed verb.
+In the latter case, the adjunct is `inherited' by the matrix verb.  Assuming
+that adjuncts take scope over the verbs introducing them, this accounts for the
+ambiguity observed above.  In the first case, the adjunct is introduced by the
+VR verb, and thus, the adjunct will take scope over this verb (and thus, over
+the entire verb cluster).  In the second case, the adjunct is introduced by the
+governed verb, over which it takes scope.  It does not take scope over the VR
+verb, as this verb only inherits the adjunct as argument.
+
+% \section{Clitic Placement}
+
+%\bibliography{gb_references}
+ 
+\section{Implementation}
+
+The fragment discussed in the preceding sections has been fully implemented.\footnote{ in Sicstus Prolog.  Copies of the implementation are available upon request.}
+
+The implemented grammar contains the syntactic rules rightward and leftward
+application, and two construction specific rules for topicalization/{\sc
+wh}-questions and relatives.  For the latter two constructions, it seems easiest to
+use a syntactic rule, eventhough we could have chosen a lexicalist account, using
+lexical rules.
+
+The grammar contains lexical rules for division, gap-introduction, the addition 
+of adjuncts, and verb second/first. 
+
+Semantic representations are constructed, although we have not been overly 
+concerned with this aspect, so that the semantics ignores many subtleties. It 
+does account for the scope variation of adjuncts, however.
+
+Lexical entries are computed by a component interfacing the grammar and the lexicon (a list of word forms and associated subcategorization properties and semantics). It applies morphology, builds the appropriate feature structures by combining syntactic and semantic information, adds default information, and applies lexical rules.
+
+The grammar uses feature-structures, that are compiled into Prolog-terms for 
+efficiency. For the same reason, lexical entries and syntactic rules are 
+partially evaluated. The parser works in two stages. First, it constructs a set 
+of possible derivation-trees on the basis of a context-free approximation of the 
+actual grammar. Next, it tries to expand each of the context-free derivations 
+into a full-fledged derivation on the basis of the actual grammar. Eventhough 
+the performance of this parser is still not very impressive, it is in many cases 
+substantially faster than using a shift-reduce parser with naive backtracking 
+(which is the alternative method we have used). 
+
+\addcontentsline{toc}{section}{\hspace{0.5cm}References}
+\bibliography{gb_references}
+
+
+%{\small
+%\subsection{The Grammar}
+%\input{cug}
+
+%\subsection{The Lexicon}
+%\input{lexicon}
+
+%\subsection{Examples}
+%\input{examples}
+
+%\subsection{Handling Feature Unification Constraints}
+%\input{ubg_utils}
+
+%\subsection{The parser}
+%\input{parser}
+
+%\subsection{The Context-free Grammar}
+%\input{cf_grammar}
+
+%\subsection{The Grammar/Parser Interface}
+%\input{interface}
+%}
+\end{document}
+

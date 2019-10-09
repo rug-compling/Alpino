@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="du" end="10" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" word="Maar"/>
+      <node begin="1" cat="smain" end="10" id="3" rel="nucl">
+        <node begin="1" end="2" genus="onz" getal="ev" id="4" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="het"/>
+        <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="3" cat="np" end="5" id="6" rel="predc">
+          <node begin="3" end="4" getal="ev" id="7" lemma="iets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" root="iets" status="vol" vwtype="onbep" word="iets"/>
+          <node begin="4" buiging="met-s" end="5" graad="basis" id="8" lemma="anders" pos="adj" positie="postnom" postag="ADJ(postnom,basis,met-s)" pt="adj" rel="mod" root="ander" word="anders"/>
+        </node>
+        <node begin="5" cat="oti" end="10" id="9" rel="su">
+          <node begin="5" end="6" id="10" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+          <node begin="6" cat="ti" end="10" id="11" rel="body">
+            <node begin="8" end="9" id="12" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="6" cat="inf" end="10" id="13" rel="body">
+              <node begin="6" buiging="zonder" end="7" graad="basis" id="14" lemma="gewoon" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="gewoon" word="gewoon"/>
+              <node begin="7" end="8" id="15" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+              <node begin="9" buiging="zonder" end="10" id="16" lemma="komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom" word="komen" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Maar het is iets anders om gewoon niet te komen</sentence>
+</alpino_ds>

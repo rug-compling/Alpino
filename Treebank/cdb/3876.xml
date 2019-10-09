@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+      <node begin="1" end="2" id="3" lemma="blijken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="blijk" word="bleek" wvorm="pv"/>
+      <node begin="2" cat="np" end="8" id="4" rel="su">
+        <node begin="2" buiging="zonder" end="3" id="5" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="6" lemma="verband" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verband" word="verband"/>
+        <node begin="4" cat="pp" end="8" id="7" rel="mod">
+          <node begin="4" end="5" id="8" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>
+          <node begin="5" cat="conj" end="8" id="9" rel="obj1">
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="amfetamine" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="amfetamine" word="amfetamine"/>
+            <node begin="6" conjtype="neven" end="7" id="11" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="12" lemma="prestatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="prestatie" word="prestatie"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>er bleek geen verband tussen amfetamine en prestatie .</sentence>
+</alpino_ds>

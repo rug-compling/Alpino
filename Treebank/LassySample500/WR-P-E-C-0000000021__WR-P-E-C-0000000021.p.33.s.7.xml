@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="15" end="16" id="2" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="17" end="18" id="3" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="smain" end="19" id="4" rel="--">
+      <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="2" cat="conj" end="17" id="6" index="1" rel="su">
+        <node begin="4" conjtype="neven" end="5" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="2" cat="np" end="17" id="8" rel="cnj">
+          <node begin="2" end="3" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" buiging="met-e" end="4" graad="basis" id="10" lemma="muzikaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="muzikaal" word="muzikale"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="11" index="2" lemma="voorganger" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorganger" word="voorganger"/>
+          <node begin="8" cat="pp" end="17" id="12" index="3" rel="mod">
+            <node begin="8" end="9" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="9" cat="np" end="17" id="14" rel="obj1">
+              <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="15" lemma="Wobbelke" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Wobbelke" word="Wobbelke"/>
+              <node begin="11" cat="np" end="17" id="16" rel="mod">
+                <node begin="11" end="12" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="12" end="13" genus="onz" getal="ev" graad="dim" id="18" lemma="koosnaam" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="koos_naam_DIM" word="koosnaampje"/>
+                <node begin="13" cat="pp" end="17" id="19" rel="mod">
+                  <node begin="13" end="14" id="20" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                  <node begin="14" cat="np" end="17" id="21" rel="obj1">
+                    <node begin="14" end="15" getal="ev" graad="basis" id="22" lemma="Japix" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Japix" word="Japix"/>
+                    <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="23" lemma="vrouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vrouw" word="vrouw"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="5" cat="np" end="17" id="24" rel="cnj">
+          <node begin="5" end="6" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" buiging="met-e" end="7" graad="basis" id="26" lemma="inhoudelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="inhoudelijk" word="inhoudelijke"/>
+          <node begin="7" end="8" id="27" index="2" rel="hd"/>
+          <node begin="8" end="17" id="28" index="3" rel="mod"/>
+        </node>
+      </node>
+      <node begin="0" cat="ppart" end="19" id="29" rel="vc">
+        <node begin="0" end="1" id="30" lemma="daarmee" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarmee" word="Daarmee"/>
+        <node begin="2" end="17" id="31" index="1" rel="obj1"/>
+        <node begin="18" buiging="zonder" end="19" id="32" lemma="traceren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="traceer" word="getraceerd" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="19" end="20" id="33" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="20" end="21" id="34" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+  </node>
+  <sentence>Daarmee zijn de muzikale en de inhoudelijke voorganger van Wobbelke ( een koosnaampje voor Japix &apos; vrouw ) getraceerd . )</sentence>
+</alpino_ds>

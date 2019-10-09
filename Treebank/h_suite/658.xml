@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="cp" end="5" id="1" rel="--">
+      <node begin="0" conjtype="onder" end="1" id="2" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+      <node begin="1" cat="sv1" end="5" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        <node begin="2" end="3" genus="onz" getal="ev" id="5" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+        <node begin="3" cat="np" end="5" id="6" rel="predc">
+          <node begin="3" end="4" id="7" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="training" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="training" word="training"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Als was het een training</sentence>
+</alpino_ds>

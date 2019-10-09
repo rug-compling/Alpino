@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="cp" end="6" id="1" rel="--">
+      <node begin="0" conjtype="onder" end="1" id="2" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+      <node begin="1" cat="ssub" end="6" id="3" rel="body">
+        <node begin="1" end="2" getal="ev" id="4" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="2" end="3" genus="masc" getal="ev" id="5" index="1" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj2" root="hem" status="vol" vwtype="pers" word="hem"/>
+        <node begin="3" end="4" id="6" lemma="opdragen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="draag_op" word="opdroeg" wvorm="pv"/>
+        <node begin="2" cat="ti" end="6" id="7" rel="vc">
+          <node begin="4" end="5" id="8" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="2" cat="inf" end="6" id="9" rel="body">
+            <node begin="2" end="3" id="10" index="1" rel="su"/>
+            <node begin="5" buiging="zonder" end="6" id="11" lemma="vertrekken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vertrek" word="vertrekken" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>dat ik hem opdroeg te vertrekken</sentence>
+</alpino_ds>

@@ -1,0 +1,11 @@
+#!/usr/bin/perl -w
+
+$mode = shift;
+$n = shift;
+
+while (<>) {
+  chomp;
+  my @line = split / /;
+  print "sentence($n,$mode,[",join(",",@line),"]).\n";
+  $n++;
+}

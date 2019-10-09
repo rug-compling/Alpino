@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="9" end="10" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="17" id="2" rel="--">
+      <node begin="0" cat="np" end="3" id="3" index="1" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="4" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node aform="base" begin="1" end="2" frame="adjective(ge_e)" id="5" infl="e" lcat="ppart" pos="adj" rel="mod" root="gereinigd" sense="gereinigd" vform="psp" word="gereinigde"/>
+        <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="6" lcat="np" num="sg" pos="noun" rel="hd" root="grond" sense="grond" word="grond"/>
+      </node>
+      <node begin="3" end="4" frame="verb('hebben/zijn',modal_not_u,aux(inf))" id="7" infl="modal_not_u" lcat="smain" pos="verb" rel="hd" root="kan" sc="aux(inf)" sense="kan" tense="present" word="kan"/>
+      <node begin="0" cat="inf" end="17" id="8" rel="vc">
+        <node begin="0" end="3" id="9" index="1" rel="su"/>
+        <node begin="7" end="8" frame="verb(unacc,inf,passive)" id="10" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+        <node begin="0" cat="ppart" end="17" id="11" rel="vc">
+          <node begin="0" end="3" id="12" index="1" rel="obj1"/>
+          <node begin="4" cat="pp" end="7" id="13" rel="mod">
+            <node begin="4" end="5" frame="preposition(in,[])" id="14" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+            <node begin="5" cat="np" end="7" id="15" rel="obj1">
+              <node begin="5" end="6" frame="determiner(de)" id="16" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="6" end="7" frame="noun(de,mass,sg)" gen="de" id="17" lcat="np" num="sg" pos="noun" rel="hd" root="bouw_nijverheid" sense="bouw_nijverheid" word="bouwnijverheid"/>
+            </node>
+          </node>
+          <node begin="8" end="9" frame="verb(hebben,psp,transitive)" id="18" infl="psp" lcat="ppart" pos="verb" rel="hd" root="gebruik" sc="transitive" sense="gebruik" word="gebruikt"/>
+          <node begin="10" cat="oti" end="17" id="19" rel="mod">
+            <node begin="10" end="11" frame="modal_adverb" id="20" lcat="advp" pos="adv" rel="mod" root="bijvoorbeeld" sc="modal" sense="bijvoorbeeld" word="bijvoorbeeld"/>
+            <node begin="11" end="12" frame="complementizer(om)" id="21" lcat="oti" pos="comp" rel="cmp" root="om" sc="om" sense="om" word="om"/>
+            <node begin="12" cat="ti" end="17" id="22" rel="body">
+              <node begin="15" end="16" frame="complementizer(te)" id="23" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+              <node begin="12" cat="inf" end="17" id="24" rel="body">
+                <node begin="12" end="13" frame="er_vp_adverb" id="25" lcat="advp" pos="adv" rel="mod" root="er" sense="er" special="er" word="er"/>
+                <node begin="13" end="14" frame="noun(de,count,pl)" gen="de" id="26" lcat="np" num="pl" pos="noun" rel="obj1" root="beton_teen" sense="beton_teen" word="betonstenen"/>
+                <node begin="14" end="15" frame="particle(mee)" id="27" lcat="part" pos="part" rel="svp" root="mee" sense="mee" word="mee"/>
+                <node begin="16" end="17" frame="verb(hebben,inf,part_transitive(mee))" id="28" infl="inf" lcat="inf" pos="verb" rel="hd" root="maak_mee" sc="part_transitive(mee)" sense="maak_mee" word="maken"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" frame="punct(punt)" id="29" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De gereinigde grond kan in de bouwnijverheid worden gebruikt , bijvoorbeeld om er betonstenen mee te maken .</sentence>
+  <comments>
+    <comment>Q#97|De gereinigde grond kan in de bouwnijverheid worden gebruikt , bijvoorbeeld om er betonstenen mee te maken .|1|1|-6.448809272402368</comment>
+  </comments>
+</alpino_ds>

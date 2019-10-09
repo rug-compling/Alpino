@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="7" end="8" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="21" id="3" rel="--">
+      <node begin="0" cat="inf" end="7" id="4" rel="cnj">
+        <node begin="0" cat="pp" end="3" id="5" rel="mod">
+          <node begin="0" end="1" id="6" lemma="binnen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="binnen" vztype="init" word="binnen"/>
+          <node begin="1" cat="np" end="3" id="7" rel="obj1">
+            <node begin="1" end="2" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="9" lemma="week" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="week" word="week"/>
+          </node>
+        </node>
+        <node begin="3" cat="np" end="5" id="10" rel="obj1">
+          <node begin="3" end="4" id="11" lemma="50" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="50" word="50"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="12" lemma="gulden" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gulden" word="gulden"/>
+        </node>
+        <node begin="6" buiging="zonder" end="7" id="13" lemma="betalen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="betaal" word="betalen" wvorm="inf"/>
+      </node>
+      <node begin="8" conjtype="onder" end="9" id="14" lemma="of" pos="vg" postag="VG(onder)" pt="vg" rel="crd" root="of" word="of"/>
+      <node begin="9" cat="smain" end="21" id="15" rel="cnj">
+        <node begin="9" end="10" getal="mv" id="16" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
+        <node begin="10" end="11" id="17" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+        <node begin="11" cat="ppart" end="21" id="18" rel="predc">
+          <node begin="11" buiging="zonder" end="12" id="19" lemma="noodzaken" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="noodzaak" word="genoodzaakt" wvorm="vd"/>
+          <node begin="12" cat="ti" end="21" id="20" rel="vc">
+            <node begin="19" end="20" id="21" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="12" cat="inf" end="21" id="22" rel="body">
+              <node begin="12" cat="np" end="14" id="23" rel="obj1">
+                <node begin="12" end="13" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="25" lemma="vordering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vordering" word="vordering"/>
+              </node>
+              <node begin="14" cat="pp" end="18" id="26" rel="mod">
+                <node begin="14" end="15" id="27" lemma="via" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="via" vztype="init" word="via"/>
+                <node begin="15" cat="np" end="18" id="28" rel="obj1">
+                  <node begin="15" end="16" id="29" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="16" buiging="met-e" end="17" graad="basis" id="30" lemma="gerechtelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gerechtelijk" word="gerechtelijke"/>
+                  <node begin="17" end="18" getal="mv" graad="basis" id="31" lemma="instantie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="instantie" word="instanties"/>
+                </node>
+              </node>
+              <node begin="18" end="19" id="32" lemma="door" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="door" vztype="fin" word="door"/>
+              <node begin="20" buiging="zonder" end="21" id="33" lemma="zetten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zet" word="zetten" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="34" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>binnen een week 50 gulden , betalen , of wij zijn genoodzaakt de vordering via de gerechtelijke instanties door te zetten .</sentence>
+</alpino_ds>

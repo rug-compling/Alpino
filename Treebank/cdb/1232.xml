@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="ruin" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ruin" word="ruin"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="stuiten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="stuit" word="stuitte" wvorm="pv"/>
+      <node begin="3" cat="pp" end="9" id="6" rel="pc">
+        <node begin="3" end="4" id="7" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="4" cat="np" end="9" id="8" rel="obj1">
+          <node begin="4" cat="ap" end="6" id="9" rel="mod">
+            <node begin="4" end="5" id="10" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="mod" root="zeer" word="zeer"/>
+            <node begin="5" buiging="met-e" end="6" graad="basis" id="11" lemma="fel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="fel" word="felle"/>
+          </node>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="tegenstand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tegenstand" word="tegenstand"/>
+          <node begin="7" cat="pp" end="9" id="13" rel="mod">
+            <node begin="7" end="8" id="14" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="8" end="9" genus="genus" getal="ev" graad="basis" id="15" lemma="Ereprijs" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Ereprijs" word="Ereprijs"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De ruin stuitte op zeer felle tegenstand van Ereprijs .</sentence>
+</alpino_ds>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="16" id="2" rel="--">
+      <node begin="0" cat="mwu" end="3" id="3" rel="dp">
+        <node begin="0" end="1" id="4" lemma="een" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="Een" word="Een"/>
+        <node begin="1" conjtype="neven" end="2" id="5" lemma="en" pos="noun" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
+        <node begin="2" buiging="zonder" end="3" getal-n="zonder-n" graad="basis" id="6" lemma="ander" pos="noun" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="mwp" root="ander" word="ander"/>
+      </node>
+      <node begin="3" cat="oti" end="16" id="7" rel="dp">
+        <node begin="3" end="4" id="8" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+        <node begin="4" cat="ti" end="16" id="9" rel="body">
+          <node begin="5" end="6" id="10" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="4" cat="inf" end="16" id="11" rel="body">
+            <node begin="4" buiging="zonder" end="5" graad="basis" id="12" lemma="mogelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="mogelijk" word="mogelijk"/>
+            <node begin="6" buiging="zonder" end="7" id="13" lemma="maken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="maak" word="maken" wvorm="inf"/>
+            <node begin="8" cat="cp" end="16" id="14" rel="vc">
+              <node begin="8" conjtype="onder" end="9" id="15" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+              <node begin="9" cat="ssub" end="16" id="16" rel="body">
+                <node begin="9" cat="np" end="11" id="17" rel="su">
+                  <node begin="9" buiging="zonder" end="10" graad="comp" id="18" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,comp)" pt="vnw" rel="det" root="meer" vwtype="onbep" word="meer"/>
+                  <node begin="10" end="11" getal="mv" graad="basis" id="19" lemma="15-jarig" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="jarig" word="15-jarigen"/>
+                </node>
+                <node begin="11" cat="np" end="15" id="20" rel="obj1">
+                  <node begin="11" buiging="met-e" end="12" id="21" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+                  <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="vorm" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vorm" word="vorm"/>
+                  <node begin="13" cat="pp" end="15" id="23" rel="mod">
+                    <node begin="13" end="14" id="24" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                    <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="25" lemma="onderwijs" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="onderwijs" word="onderwijs"/>
+                  </node>
+                </node>
+                <node begin="15" end="16" id="26" lemma="genieten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="geniet" word="genieten" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een en ander om mogelijk te maken , dat meer 15-jarigen deze vorm van onderwijs genieten .</sentence>
+</alpino_ds>

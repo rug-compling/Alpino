@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="whq" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="whd" root="waar" status="vol" vwtype="vb" word="Waar"/>
+      <node begin="0" cat="sv1" end="8" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="nemen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="neem_deel" word="neemt" wvorm="pv"/>
+        <node begin="2" cat="mwu" end="4" id="5" rel="su">
+          <node begin="2" end="3" id="6" lemma="Ben" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ben" spectype="deeleigen" word="Ben"/>
+          <node begin="3" end="4" id="7" lemma="Cramer" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Cramer" spectype="deeleigen" word="Cramer"/>
+        </node>
+        <node begin="4" cat="pp" end="6" id="8" rel="mod">
+          <node begin="4" end="5" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="5" end="6" id="10" lemma="2000" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="2000" word="2000"/>
+        </node>
+        <node begin="0" cat="pp" end="7" id="11" rel="pc">
+          <node begin="0" end="1" id="12" index="1" rel="obj1"/>
+          <node begin="6" end="7" id="13" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+        </node>
+        <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="14" lemma="deel" naamval="stan" ntype="soort" pos="part" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="svp" root="deel" word="deel"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="15" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Waar neemt Ben Cramer in 2000 aan deel ?</sentence>
+</alpino_ds>

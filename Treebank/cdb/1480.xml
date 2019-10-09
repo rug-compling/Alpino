@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="34" id="0" rel="top">
+    <node begin="23" end="24" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="28" end="29" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="29" end="30" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="du" end="33" id="4" rel="--">
+      <node begin="0" cat="du" end="28" id="5" rel="nucl">
+        <node begin="0" cat="whrel" end="23" id="6" rel="dp">
+          <node begin="0" end="1" id="7" index="1" lemma="waarbij" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarbij" word="waarbij"/>
+          <node begin="0" cat="ssub" end="23" id="8" rel="body">
+            <node begin="1" cat="np" end="3" id="9" index="2" rel="su">
+              <node begin="1" end="2" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="11" lemma="geld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geld" word="geld"/>
+            </node>
+            <node begin="13" end="14" id="12" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+            <node begin="0" cat="ppart" end="23" id="13" rel="vc">
+              <node begin="0" end="1" id="14" index="1" rel="mod"/>
+              <node begin="1" end="3" id="15" index="2" rel="obj1"/>
+              <node begin="3" cat="ap" end="5" id="16" rel="mod">
+                <node begin="3" end="4" id="17" lemma="zoveel" numtype="hoofd" pos="adj" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="hd" root="zoveel" word="zoveel"/>
+                <node begin="4" buiging="zonder" end="5" graad="basis" id="18" lemma="mogelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="obcomp" root="mogelijk" word="mogelijk"/>
+              </node>
+              <node begin="5" cat="pp" end="13" id="19" rel="pc">
+                <node begin="5" end="6" id="20" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+                <node begin="6" cat="conj" end="13" id="21" rel="obj1">
+                  <node begin="6" cat="np" end="8" id="22" rel="cnj">
+                    <node begin="6" end="7" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="24" lemma="astmabestrijding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bestrijding" word="astmabestrijding"/>
+                  </node>
+                  <node begin="8" conjtype="neven" end="9" id="25" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                  <node begin="9" cat="np" end="13" id="26" rel="cnj">
+                    <node begin="9" end="10" id="27" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="10" buiging="zonder" end="11" graad="basis" id="28" lemma="ruim" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ruim" word="ruim"/>
+                    <node begin="11" end="12" id="29" lemma="800.000" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="800.000" word="800.000"/>
+                    <node begin="12" end="13" getal="mv" graad="basis" id="30" lemma="astmapatient" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="astmapatienten" word="astmapatienten"/>
+                  </node>
+                </node>
+              </node>
+              <node begin="14" buiging="zonder" end="15" id="31" lemma="besteden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="besteed" word="besteed" wvorm="vd"/>
+              <node begin="15" cat="cp" end="23" id="32" rel="mod">
+                <node begin="15" cat="mwu" end="18" id="33" rel="cmp">
+                  <node begin="15" end="16" id="34" lemma="in" pos="comp" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+                  <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="35" lemma="plaats" naamval="stan" ntype="soort" pos="comp" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="plaats" word="plaats"/>
+                  <node begin="17" end="18" id="36" lemma="van" pos="comp" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+                </node>
+                <node begin="18" cat="pp" end="23" id="37" rel="body">
+                  <node begin="18" end="19" id="38" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+                  <node begin="19" cat="np" end="23" id="39" rel="obj1">
+                    <node begin="19" end="20" id="40" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                    <node begin="20" buiging="zonder" end="21" graad="basis" id="41" lemma="kostbaar" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="kostbaar" word="kostbaar"/>
+                    <node begin="21" buiging="zonder" end="22" graad="basis" id="42" lemma="eigen" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="eigen" word="eigen"/>
+                    <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="43" lemma="kantoorpand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pand" word="kantoorpand"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="24" cat="smain" end="28" id="44" rel="dp">
+          <node begin="24" end="25" id="45" lemma="dragen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="draag" word="dragen" wvorm="pv"/>
+          <node begin="25" end="26" getal="mv" id="46" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
+          <node begin="26" end="27" getal="ev" id="47" lemma="niets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="niets" status="vol" vwtype="onbep" word="niets"/>
+          <node begin="27" end="28" id="48" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="af" vztype="fin" word="af"/>
+        </node>
+      </node>
+      <node begin="30" cat="pp" end="33" id="49" rel="tag">
+        <node begin="30" end="31" id="50" lemma="aldus" pos="prep" postag="BW()" pt="bw" rel="hd" root="aldus" word="aldus"/>
+        <node begin="31" cat="np" end="33" id="51" rel="obj1">
+          <node begin="31" end="32" id="52" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="32" end="33" genus="onz" getal="ev" graad="basis" id="53" lemma="bestuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bestuur" word="bestuur"/>
+        </node>
+      </node>
+    </node>
+    <node begin="33" end="34" id="54" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>waarbij het geld zoveel mogelijk aan de astmabestrijding en de ruim 800.000 astmapatienten wordt besteed in plaats van aan een kostbaar eigen kantoorpand , dragen wij niets af , &quot; aldus het bestuur .</sentence>
+  <comments>
+    <comment>mis-tokenization?</comment>
+  </comments>
+</alpino_ds>

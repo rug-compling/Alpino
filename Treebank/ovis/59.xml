@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" cat="smain" end="6" id="2" rel="nucl">
+        <node begin="0" end="1" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="1" end="2" id="4" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+        <node begin="0" cat="inf" end="6" id="5" rel="vc">
+          <node begin="0" end="1" id="6" index="1" rel="su"/>
+          <node begin="2" cat="pp" end="5" id="7" rel="mod">
+            <node begin="2" end="3" id="8" lemma="om" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="om" vztype="init" word="om"/>
+            <node begin="3" cat="mwu" end="5" id="9" rel="obj1">
+              <node begin="3" end="4" id="10" lemma="tweeentwintig" naamval="stan" numtype="hoofd" pos="noun" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="tweeentwintig" word="tweeentwintig"/>
+              <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="11" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="uur" word="uur"/>
+            </node>
+          </node>
+          <node begin="5" buiging="zonder" end="6" id="12" lemma="vertrekken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vertrek" word="vertrekken" wvorm="inf"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="13" lemma="ja" pos="tag" postag="TSW()" pt="tsw" rel="tag" root="ja" word="ja"/>
+    </node>
+  </node>
+  <sentence>ik wil om tweeentwintig uur vertrekken ja</sentence>
+</alpino_ds>

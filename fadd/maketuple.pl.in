@@ -1,0 +1,1141 @@
+#!/usr/bin/perl
+eval 'exec /usr/bin/perl -S $0 ${1+"$@"}'
+    if $running_under_some_shell;
+			# this emulates #! processing on NIH machines.
+			# (remove #! line above if indigestible)
+
+eval '$'.$1.'$2;' while $ARGV[0] =~ /^([A-Za-z_0-9]+=)(.*)/ && shift;
+			# 'process any FOO=bar switches
+
+# This script creates a special structure for holding a tuple,
+# consisting of a number of words followed by a number of integer numbers.
+# The input is a table with columns representing words and numbers.
+#
+# Synopsis:
+# maketuple total=n words=w [ver=3|4] [ms=s] [sep=c] [out=x] [rest=y] \
+#           table_file file...
+#
+# where n is a number of words and numbers in a tuple,
+# w is the number of words in a tuple,
+# 3 is a number of a new version (impying a different format and use of reals
+# s is the size of mantissa (only in version 3) - otherwise calculated
+# c is a separator of columns in the input table
+# x is the name of the output file (the tuple) - otherwise it is table_name.tpl
+# y is the name of a temporary file used to store numerical part of tuples
+# table_file is the name of the file that holds the input table
+# file is the name of the file that will hold words of ith column of the table
+#  and the name of the corresponding automaton (dictionary) will have .fsa
+#  at the end. If the file is preceeded by a '+', it means that
+#  the corresponding automaton has already been built.
+# The input table cannot be read from standard input, as it is processed
+# in a few passes.
+
+# Set the path to fsa utilities here
+$fsa="@@S_FSA_PATH@@";
+if ($fsa) { 
+    $fsahash="$fsa/fsa_hash";
+    $fsabuild="$fsa/fsa_build";
+} else {
+    $fsahash="fsa_hash";
+    $fsabuild="fsa_build";
+}
+
+# Set this to 1 if you want to have the unsorted version of the table
+# for debugging purposes, i.e. the table will be written without sorting.
+# Remember that such table will not be usable for normal purpose.
+$debug_nosort = 0;
+
+#for ($i = 0; $ARGV[$i]; $i++) { printf "[%d] %s\n", $i, $ARGV[$i]; }
+
+# If the first argument is "--help" or there are not sufficient parameters
+# or essential parameters defined, print synopsis and quit.
+if ($#ARGV < 0) {
+    synopsis();
+    exit;
+}
+if (!defined $words) {
+    printf stderr "Number of words not defined\n";
+    synopsis();
+    exit;
+}
+if (!defined $total) {
+    printf stderr "Number of tuple items (words+numbers) not defined\n";
+    synopsis();
+    exit;
+}
+
+# Set the version number
+if (!defined $ver) {
+    $ver = 0;
+}
+
+# Set the precision for real numbers
+if (!defined $rprec) {
+    $rprec = 0.5;
+}
+
+# See whether to store hash keys in the first column (version 3 and 4)
+if (!defined $del1 || $del1 != 0) {
+    $del1 = 1;
+}
+
+# See if the file already contains hash keys
+$hash_alr_processed = 0;
+if (defined $words_are_numbers && $words_are_numbers ne "n") {
+    $hash_alr_processed = 1;
+}
+
+# Set file names
+$table_name = $ARGV[0];		# name of the input file
+$out ||= "$table_name.tpl";	# output name is input name + .tpl or specified
+$rest ||= "rest";		# temporary file for storing numerical columns
+
+if ($ARGV[0] eq "") {
+    printf "Synopsis: %s total=n words=w [sep=c] table_file file...\n", $0;
+    exit;
+}
+if (!$hash_alr_processed) {
+# fnames are names of files for word columns
+    $fnames[0]="";
+    shift;
+    while ($ARGV[0] ne "") {
+	$fnames[$fns++] = shift;
+	printf "Setting column name for %d to %s\n", $fns - 1, $fnames[$fns - 1];
+    }
+    for ($i = $words; $i < $total; $i++) {
+	$unsigned[$i] = 0;
+    }
+    printf "%d columns, %d non-numeric, separator=$sep, output=%s, input=%s\n",
+    $total, $words, $out, $table_name;
+    $all_equal = 0;
+    # Set the names for hash automata for columns
+    for ($i = 0; $i < $words; $i++) {
+	$same_as[$i] = $i;
+	if (defined $fnames[$i] && substr($fnames[$i], 0, 1) eq "+") {
+	    printf "automaton already built for %s\n", substr($fnames[$i], 1);
+	    $fnames[$i] = substr($fnames[$i], 1);
+	    $tocreate[$i] = 0;
+	}
+	elsif (defined $fnames[$i] && substr($fnames[$i], 0, 1) eq "=") {
+	    $all_equal = 1;
+	    if (i == 0) {
+		# Words in all columns from the same dictionary
+		$tocreate[0] = 1;
+		if (substr($fnames[$i], 1) eq "") {
+		    # Name set automatically by the script
+		    $fnames[0] = "tplwd0";
+		}
+		else {
+		    # Name set to what the user provides
+		    $fnames[0] = substr($fnames[$i], 1);
+		    printf "Name for all columns set to $fnames[0]\n";
+		}
+	    }
+	    else {
+		$tocreate[$i] = 0;
+		if (substr($fnames[$i], 1) eq "") {
+		    # The name for following columns is the same as the previous
+		    $fnames[$i] = $fnames[$i - 1];
+		    $same_as[$i] = $same_as[$i - 1];
+		}
+		else {
+		    # This column is the same as the given column
+		    $fnames[$i] = substr($fnames[$i], 1);
+		    for ($wn = 0; $wn < $i; $wn++) {
+			if ($fnames[$wn] eq $fnames[$i]) {
+			    $same_as[$i] = $wn;
+			    last;
+			}
+		    }
+		}
+	    }
+	}
+	else {
+	    if ($all_equal) {
+		$fnames[$i] = $fnames[$i - 1];
+		$same_as[$i] = $same_as[$i - 1];
+		$tocreate[$i] = 0;
+	    }
+	    else {
+		$tocreate[$i] = 1;
+	    }
+	}
+	if (!defined($fnames[$i])) {
+	    printf "Name for column $i not defined\n";
+	    $fnames[$i] = "tplwd$i";
+	}
+	elsif ($fnames[$i] eq "") {
+	    printf "Name for column $i empty\n";
+	    $fnames[$i] = "tplwd$i";
+	}
+	else {
+	    printf "Name for column $i already defined as $fnames[$i]\n";
+	    printf "fnames[%d] is %s\n", $i, $fnames[$i];
+	}
+	printf "Automaton for column $i is %s to be created\n",
+	($tocreate[$i] ? "" : "not");
+    }
+
+    # Create hash automata
+    # Words from columns are sorted and made into fsa with numbering info
+    for ($i = 0; $i < $words; $i++) {
+	$fn = $fnames[$i];
+	printf "Name of dictionary for column %d is %s\n", $i, $fn;
+	if ($tocreate[$i]) {
+	    printf "Processing column $i from file $table_name\n";
+	    open(TABLE, "<$table_name")
+		or die "$0: Cannot open table file $table_name $!\n";
+	    open(DATA1, "| LANG=POSIX LC_ALL=POSIX sort -u > $fn")
+		or die "$0: Cannot sort and write to $fn $!\n";
+	    while(<TABLE>) {
+		chop;
+		if (defined $sep) {
+		    @line = split $sep;
+		}
+		else {
+		    @line = split;
+		}
+		printf DATA1 "%s\n", $line[$i];
+		# Print words from columns of the same vocabulary
+		for ($wn = $i + 1; $wn < $words; $wn++) {
+		    if ($same_as[$wn] == $i) {
+			printf DATA1 "%s\n", $line[$wn];
+		    }
+		}
+		if ($i == ($total - 1)) {
+		    # Find the sizes of integers
+		    for ($j = $words; $j < $total; $j++) {
+			if ($line[$j] < 0) {
+			    $unsigned[$j] = 1;
+			    $cs = size_of_int(- $line[$j] + 1);
+			}
+			else {
+			    $cs = size_of_int($line[$j]);
+			}
+			if ($cs > $ss[$j]) {
+			    $ss[$j] = $cs;
+			}
+		    }
+		}
+	    }
+	    close(TABLE);
+	    close(DATA1);
+	    printf "Building automaton\n";
+	    printf "Executing $fsabuild -N -i $fn -o $fn.fsa\n";
+	    system ("$fsabuild -N -i $fn -o $fn.fsa") == 0
+		or die "$0: Cannot execute fsa_build $!\n";
+	}
+	# Read the size
+	open(DATA1, "<$fn.fsa") or
+	    die "$0: Cannot read column $i from $fn.fsa $!\n";
+	read DATA1, $buf, 9;
+	$ss[$i] = (ord(substr($buf, 7, 1)) >> 4);
+	close(DATA1);
+    }
+}
+else {
+    # Hash keys are already computed off-line; they are in the input
+    open(TABLE, "<$table_name") or
+	die "$0: Cannot read the input from $table_name $!\n";
+    $max_in_col1 = 0;
+    while(<TABLE>) {
+	chop;
+	if (defined $sep) {
+	    @line = split $sep;
+	}
+	else {
+	    @line = split;
+	}
+	for ($i = 0; $i < $words; $i++) {
+	    $cs = size_of_int($line[$i]);
+	    if ($cs > $ss[$i]) {
+		$ss[$i] = $cs;
+	    }
+	}
+	# For the case when we have already hash keys in input
+	if ($line[0] > $max_in_col1) {
+	    $max_in_col1 = $line[0];
+	}
+    }
+    close(TABLE);
+}
+    
+
+# Find the number of pointers in the first column if hash keys not represented
+if ($del1 == 1 && ($ver == 3 || $ver == 4)) {
+    if ($hash_alr_processed) {
+	$col1 = $max_in_col1 + 1;
+    }
+    elsif ($tocreate[0] && !defined $col1) {
+	$fn = $fnames[0];
+	open(DATA1, "wc -l $fn | awk '{print \$1;}' |");
+	while (<DATA1>) {
+	    chop;
+	    @line = split;
+	    $col1 = $line[0];
+	    if ($col1 != 0) {
+		last;
+	    }
+	}
+    }
+    $col1++;			# to accommodate for a fake pointer
+    printf stderr "col1 is $col1\n";
+}
+
+
+# Count the size of numbers (i.e. the numerical part)
+printf "Counting the size of numbers\n";
+open(TABLE, "<$table_name")
+    or die "$0: Cannot open table file $table_name $!\n";
+if ($ver == 3 || $ver == 4) {
+    # Set the size of the first column to 0 with del1=1
+    if ($del1 == 1) {
+	$ss[0] = 0;
+    }
+    for ($jjj = $words; $jjj < $total; $jjj++) {
+	if (defined $ms) {
+	    $max_mant_size[$jjj] = $ms;
+	}
+	else {
+	    $max_mant_size[$jjj] = 0;
+	}
+    }
+    if ($total > $words) {
+	while(<TABLE>) {
+	    chop;
+	    if (defined $sep) {
+		@line = split $sep;
+	    }
+	    else {
+		@line = split;
+	    }
+	    # Find the sizes of numbers
+	    for ($j = $words; $j < $total; $j++) {
+		if (frac($line[$j]) != 0) {
+		    # Real number
+		    use POSIX qw(frexp);
+		    ($mantissa, $exponent) = frexp($line[$j]);
+		    # $mantissa is a real number 0.0 <= abs($mantissa) <= 0.5
+		    # $exponent is an integer,
+		    #   $line[$j] == $mantissa * 2^$exponent
+
+		    if (!defined $ms) {
+			# Find the precision
+			# - find mantissa
+			($mdigits = $line[$j]) =~
+			    s/^([+-]?)((?=\d|\.\d)\d*(\.\d*)?)([Ee]([+-]?\d+))?$/$2/;
+			# cut out significant numbers
+			$mdigits =~ s/(0*(\d)*)\.((\d)*)/$1$3/;
+			$prec = $rprec * (10 ** (- length($mdigits)));
+			$mant_size = 0;
+			if ($prec != 0.0) {
+			    $prec *= 128;
+			    $mant_size = 1;
+			    while (int $prec == 0) {
+				$prec *=256;
+				$mant_size++;
+			    }
+			}
+			if ($mant_size > $max_mant_size[$j]) {
+			    $max_mant_size[$j] = $mant_size;
+			    $j, $max_mant_size[$j];
+			}
+		    }
+		    else {
+			$mant_size = $ms;
+		    }
+		    # Size of the whole number
+		    $cs = $mant_size + size_of_int($exponent);
+		}
+		else {
+		    if ($line[$j] < 0) {
+			$unsigned[$j] = 1;
+			$cs = size_of_int(- $line[$j] + 1);
+		    }
+		    else {
+			$cs = size_of_int($line[$j]);
+		    }
+		}
+		if ($cs > $ss[$j]) {
+		    $ss[$j] = $cs;
+		}
+	    }
+	}
+    }
+    $total_num_size = 0;
+    for ($i = $words; $i < $total; $i++) {
+	$total_num_size += $ss[$i];
+    }
+} else {			# versions other than 3
+    if ($total > $words) {
+	while(<TABLE>) {
+	    chop;
+	    if (defined $sep) {
+		@line = split $sep;
+	    }
+	    else {
+		@line = split;
+	    }
+	    # Find the sizes of integers
+	    for ($j = $words; $j < $total; $j++) {
+		if ($line[$j] < 0) {
+		    $unsigned[$j] = 1;
+		    $cs = size_of_int(- $line[$j] + 1);
+		}
+		else {
+		    $cs = size_of_int($line[$j]);
+		}
+		if ($cs > $ss[$j]) {
+		    $ss[$j] = $cs;
+		}
+	    }
+	}
+    }
+}
+close(TABLE);
+
+
+#for ($i = 0; $i < $total; $i++) { printf "size[%d]=%d\n", $i, $ss[$i]; }
+
+
+if(!$hash_alr_processed) {
+# Convert words to numbers using fsa_hash and automata created in previous step
+# The results are in files .wd$i
+    open(TABLE, "<$table_name")
+    or die "$0: Cannot open table file $table_name $!\n";
+    printf "Opening pipes for piping data to fsa_hash\n";
+    for ($i = 0; $i < $words; $i++) {
+	$fn = $fnames[$i];
+	$fh = "DATA$i";
+	open ($fh, "| $fsahash -N -d $fn.fsa | awk '{print \$NF;}' > $fn.wd$i")
+	    or die "$0: Cannot open pipe to fsa_hash $!\n";
+    }
+    if ($total > $words) {
+	open(REST, ">$rest") or die "$0: Cannot open $rest for writing $!\n";
+    }
+    printf "Piping data\n";
+    while (<TABLE>) {
+	chop;
+	if (defined $sep) {
+	    @line = split $sep;
+	}
+	else {
+	    @line = split;
+	}
+	for ($i = 0; $i < $words; $i++) {
+	    $fh = "DATA$i";
+	    printf $fh "%s\n", $line[$i];
+	}
+	if ($total > $words) {
+	    for ($i = $words; $i < $total; $i++) {
+		printf REST "%s ", $line[$i];
+	    }
+	    printf REST "\n";
+	}
+    }
+    printf "Closing pipes\n";
+    for ($i = 0; $i < $words; $i++) {
+	$fh = "DATA$i";
+	close($fh);
+    }
+    close(TABLE);
+    if ($total > $words) {
+	close(REST);
+    }
+}
+$string_size = 0;
+for ($i = 0; $i < $words; $i++) {
+    $string_size += $ss[$i];
+}
+$tuple_size = 0;
+for ($i = 0; $i < $total; $i++) {
+    $tuple_size += $ss[$i];
+}
+if (!$hash_alr_processed) {
+    $fn = "paste";
+    for ($i = 0; $i < $words; $i++) {
+	$fn = $fn . " " . $fnames[$i] . ".wd$i";
+    }
+    if ($total > $words) {
+	$fn = $fn . " $rest";
+    }
+    $fn = $fn . " |";
+}
+else {
+    $fn = $table_name;
+}
+
+# Write the prologue part of the tuple file
+# DATA1 is a file where each line has hash keys for words followed by numbers
+# (in other words: original input with words replaced with hash keys)
+printf "Opening $fn\n";
+open(DATA1, "$fn") or die "$0: Cannot open $fn for reading $!\n";
+printf "Opening $out\n";
+open(TABLE, ">$out") or die "$0: Cannot open $out for writing $!\n";
+printf "Writing signature\n";
+printf TABLE "\\TUPL";
+# Write version, number of words in a tuple, number of numbers in a tuple
+$s = n2b($ver, 1) . n2b($words, 1) . n2b($total - $words, 1);
+for ($i = 0; $i < $total; $i++) {
+    $s = $s . n2b($ss[$i], 1);
+}
+printf TABLE "%s", $s;
+
+# Writing the sign vector
+$sign_vec_size = ($total - $words + 7) >> 3;
+$s = "";
+for ($i = 0; $i < $sign_vec_size; $i++) {
+    $s = $s . chr(0);
+}
+for ($i = 0; $i < ($total - $words); $i++) {
+    if ($unsigned[$i]) {
+	substr($s, $i >> 3, 1) = chr(ord(substr($s, $i >> 3, 1))
+				    | (1 << ($i & 3)));
+    }
+}
+printf TABLE "%s", $s;
+
+if ($ver == 0) {
+# Putting the data into a table
+    printf "Puttting data into a table\n";
+    $line_no = 0;
+    $j = 1;
+    while (<DATA1>) {
+	chop;
+	@line = split;
+	$s = "";
+	for ($i = 0; $i < $total; $i++) {
+	    $s = $s . n2b($line[$i], $ss[$i]);
+	}
+	$tbl[$line_no++] = $s;
+	# The following code is for debugging only
+#	 if ($j) {
+#	     for ($k = 0; $k < $total; $k++) {
+#		 printf "%d ", $line[$k];
+#	     }
+#	     printf "\n";
+#	     for ($k = 0; $k < $tuple_size; $k++) {
+#		 printf "%02x ", ord(substr($s, $k, 1));
+#	     }
+#	     printf "\n";
+#	     $j = 0;
+#	 }
+	# end of that code
+    }
+    close(DATA1);
+
+# Sorting the table (in memory)
+    if ($debug_nosort == 0) {
+	printf "Sorting data\n";
+	if ($version == 0 && $words == 1) {
+	    # Hash codes are not stored, but the tuples must be
+	    # sorted on them, not on their binary representations
+	    @tbl = sort {
+		reverse(substr($a, 0, $ss[0])) cmp
+		    reverse(substr($b, 0, $ss[0]));
+	    } @tbl;
+	} else {
+	    # Business as usual
+	    @tbl = sort {
+		substr($a, 0, $string_size) cmp substr($b, 0, $string_size);
+	    } @tbl;
+	}
+    }
+
+# Writing the table
+    for ($i = 0; $i < $line_no; $i++) {
+	printf TABLE "%s", (($words == 1) ? substr($tbl[$i],$ss[0]) : $tbl[$i]);
+    # The following code is for debugging only
+#    printf "%06d: ", $i;
+#    for ($j = 0; $j < $tuple_size; $j++) {
+#	printf "%02x ", ord(substr($tbl[$i], $j, 1));
+#    }
+#    printf "\n";
+	# end of that code
+    }
+
+} else {
+
+# Version 3 | 4
+    $line_no = 0;
+    $j = 0;
+    @root = ();
+    printf stderr "Building a tree\n";
+    while (<DATA1>) {
+	chop;
+	@line = split;
+#	 for ($i = 0; $i < $words; $i++) {
+#	     printf " %d", $line[$i];
+#	 }
+#	 printf "\n";
+	# Create the numerical part
+	$s = "";
+	for ($i = $words; $i < $total; $i++) {
+	    if ($max_mant_size[$i] == 0) {
+		# Integer
+		$s = $s . n2b($line[$i], $ss[$i]);
+	    }
+	    else {
+		# Real number
+		($mantissa, $exponent) = frexp($line[$i]);
+#		printf stderr "Real %g, mant is %g\n", $line[$i], $mantissa;
+		$s = $s . frac2bytes($mantissa, $max_mant_size[$i])
+		    . sn2b($exponent, $ss[$i] - $max_mant_size[$i]);
+	    }
+	}
+	# Create a tree
+	# The root has a list of pointers (1 for each child).
+	# Those pointers point to records (lists) of 3 fields:
+	#       0 - hash key
+	#       1 - reference to a subtree
+	#       2 - index in the column (level of subtree) - filled later
+	$node = \@root;
+	for ($i = 0; $i < $words; $i++) {
+	    undef $n;
+	    undef $prev_node;
+	    undef $prev_m;
+	    $n = $line[$i];
+	    $l = $m = 0;
+	    $r = (scalar @$node) - 1;
+	    while ($l <= $r) {
+		$m = int (($l + $r) / 2);
+		if ($n < $node->[$m]->[0]) {
+		    $r = $m - 1;
+		}
+		elsif ($n > $node->[$m]->[0]) {
+		    $l = $m + 1;
+		}
+		else {
+#		    printf stderr "Found $n at $m\n";
+		    last;
+		}
+	    }
+	    if ($l > $r) {
+#		printf stderr "Not found, added $n at $l\n";
+#		printf stderr "Before: "; print_subtree($node);
+		splice(@$node, $l, 0, [$n, [()], 0]);
+#		printf stderr "After: "; print_subtree($node);
+		$m = $l;
+	    }
+#	    printf stderr "Choosing $m item\n";
+	    $node = $node->[$m]->[1];
+	}
+	$node->[0] = $s;
+#	print_tree(\@root, $words);
+    }
+
+    # Add a fake tuple at the end to facilitate computation
+    $node = \@root;
+    for ($i = 0; $i < $words; $i++) {
+	$r = (scalar @$node);
+	splice(@$node, $r, 0, [0, [()], 0]); # no matter what the key is
+	$node = $node->[$r]->[1];
+    }
+
+    # Calculate indexes
+    printf stderr "Calculating indexes\n";
+#    print_tree(\@root, $words);
+    $curr_indx[$words] = 0;
+    calculate_indexes(\@root, $words);
+    printf "---\n";
+    print_tree(\@root, $words);
+
+    # Write the mantissa size vector
+    printf stderr "Writing mantissa size vector\n";
+    for ($i = $words; $i < $total; $i++) {
+	printf TABLE "%s", n2b($max_mant_size[$i], 1);
+    }
+
+    # Calculate sizes of the tree
+    $tree_size = 0;
+    if ($words != 1) {
+	for ($i = 0; $i < $words; $i++) {
+	    $tree_size +=
+		$curr_indx[$i] * ($ss[$i] +
+				  ($i < $words - 1 ?
+				   size_of_int($curr_indx[$i + 1]) : 0));
+	}
+    }
+    if ($del1 == 1) {
+	$tree_size += ($col1 - $curr_indx[0]);
+    }
+    printf stderr "Tree size is %d\n", $tree_size;
+    printf stderr "Size of numerical part is $total_num_size\n";
+
+    # Calculate the size of addresses
+    if ($words != 1) {
+	$size_of_addresses =
+	    size_of_int(13 + 2 * $total + $sign_vec_size + 4 * $words
+			+ $tree_size +
+			$curr_indx[$words - 1] * $total_num_size);
+    }
+    else {
+	$size_of_addresses =
+	    size_of_int(13 + 2 * $total + $sign_vec_size +
+			(scalar @root) * $total_num_size);
+    }
+    # Write the size of addresses
+    printf TABLE "%s", n2b($size_of_addresses, 1);
+
+    # Write the address of numerical columns (from root of the tree)
+    if ($words != 1) {
+	printf TABLE "%s", n2b($tree_size, $size_of_addresses);
+	printf stderr "Tree size is $tree_size\n";
+    }
+    else {
+	# Otherwise just write the number of tuples
+	printf TABLE "%s", n2b(scalar @root, $size_of_addresses);
+    }
+
+    # Write the description of columns for words (keys)
+    printf stderr "Writing description of word columns\n";
+    $col1size = 0;
+    if ($words != 1) {
+	$col_addr = 0;
+	if ($ver == 3) {
+	    for ($i = 0; $i < $words; $i++) {
+		# Write the column address (relative to the root of the tree)
+		printf TABLE "%s", n2b($col_addr, $size_of_addresses);
+		# Write the pointer size
+		$ptr_size = ($i < $words - 1 ?
+			     size_of_int($curr_indx[$i + 1]) : 0);
+		printf TABLE "%s", n2b($ptr_size, 1);
+		$col_addr += $curr_indx[$i] * ($ss[$i] + $ptr_size);
+	    }
+	}
+	else {			# version 4
+	    $prev_curr_indx = 0;
+	    for ($i = 0; $i < $words; $i++) {
+		# Write the column address (relative to the root of the tree)
+		printf TABLE "%s", n2b($col_addr, $size_of_addresses);
+		# Write the pointer size
+		$ptr_size = ($i < $words - 1 ?
+			     size_of_int($curr_indx[$i + 1] - $prev_curr_indx)
+			     : 0);
+		if ($del1 == 1 && $i == 0  && $col1 != scalar @root) {
+		    $ptr_size = size_of_int($curr_indx[1] + 1);
+		}
+		if ($i == 0) {
+		    $col1size = $ptr_size;
+		}
+		printf TABLE "%s", n2b($ptr_size, 1);
+		if ($del1 == 1 && $i == 0  && $col1 != scalar @root) {
+		    $col_addr += $col1 * $ptr_size;
+		}
+		else {
+		    $col_addr += $curr_indx[$i] * ($ss[$i] + $ptr_size);
+		}
+		$prev_curr_indx = ($i < $words - 1 ? $curr_indx[$i + 1] : 0);
+	    }
+	}
+    }
+
+    # Write the tree
+    printf stderr "Writing the tree\n";
+    if ($del1 == 1) {
+	# Don't store hash keys in the first column
+
+	# The first column contains some keys.
+	# If the keys are calculated only for the words from this column,
+	# then there are no holes: all values are represented.
+	# However, if more columns share the same perfect hash automaton,
+	# then there is no guarranty for no holes.
+	# j counts subsequent children of root, i counts subsequent values
+	$j = 0;
+	printf stderr "del1=1, col1=$col1 (number of items in first column)\n";
+	$next_null = 0;
+	if ($ver == 3) {
+	    # In this version, pointers are never relative
+	    for ($i = 0; $i < $col1; $i++) {
+		# See if the next consecutive number is present in first column
+		if ($i == $root[$j]->[0]) {
+		    # Hash key with value i present 
+		    # Write the index
+		    printf TABLE "%s", n2b($root[$j]->[2],
+					   size_of_int($curr_indx[1]));
+		    # x is a pointer to children
+		    $x = $root[$j]->[1];
+		    # next_null is an index after those children
+		    $next_null = $root[$j]->[2] + scalar @$x;
+		    # Diagnostics
+#		     printf stderr "pointer %d printed on %d bytes\n",
+#			    $root[$j]->[2], size_of_int($curr_indx[1]);
+		    $j++;
+		}
+		else {
+		    # Hash key with value i not present
+		    # Write NULL pointer
+		    printf TABLE "%s", n2b($next_null,
+					   size_of_int($curr_indx[1]));
+#		     printf stderr "NULL %d printed on %d bytes\n",
+#			    $next_null, size_of_int($curr_indx[1]);
+		}
+	    }
+	}
+	else {			# version 4
+	    if ($col1size == size_of_int($curr_indx[1])) {
+		printf stderr "version 4, absolute pointers\n";
+		# Do not use relative pointers for column 1
+		for ($i = 0; $i < $col1; $i++) {
+#		     printf stderr "item $i of $col1\n";
+#		     printf stderr "j is $j, item j is $root[$j]->[0]\n";
+		    $x = $root[$j]->[1];
+		    if ($i == $root[$j]->[0]) {
+			# hash key present
+			printf TABLE "%s", n2b($root[$j]->[2],
+					       size_of_int($curr_indx[1]));
+#			  printf stderr "pointer %d printed on %d bytes\n",
+#				 $root[$j]->[2],	size_of_int($curr_indx[1]);
+			$next_null = $root[$j]->[2] + scalar @$x;
+			$j++;
+		    }
+		    else {
+			# hash key not present
+			printf TABLE "%s", n2b($next_null,
+					       size_of_int($curr_indx[1]));
+#			 printf stderr "NULL %d printed on %d bytes\n",
+#				$next_null,size_of_int($curr_indx[1]);
+		    }
+		}
+	    }
+	    else {
+		printf stderr "col1size is $col1size, not %d\n", size_of_int($curr_indx[1]);
+		# Use relative pointers for column 1
+		for ($i = 0; $i < $col1; $i++) {
+		    if ($i == $root[$j]) {
+			# hash key present
+			printf TABLE "%s", n2b($root[$j]->[2], $col1size);
+#			 printf stderr "pointer %d printed on %d bytes\n",
+#				$root[$j]->[2], $col1size;
+			$j++;
+		    }
+		    else {
+			printf stderr "Error, hole in column1!!!\n";
+			exit 1;
+		    }
+		}
+	    }
+	} #if version 4
+    }#if del1=1
+    if ($words != 1) {
+	if ($ver == 3) {
+	    # Write the rest of the tree.
+	    # If del1 is 1, the first column has already been written
+	    for ($i = $del1; $i < $words; $i++) {
+		printf stderr "Writing column $i\n";
+		write_level(\@root, $i, 0);
+	    }
+	}
+	else {
+	    for ($i = $del1; $i < $words; $i++) {
+		write_rlevel(\@root, $i, 0, 0);
+	    }
+	}
+    }
+    printf stderr "Writing the numerical part\n";
+    write_number_columns(\@root, 0);
+}
+
+
+close(TABLE);
+printf "Done.\n";
+
+
+
+
+# Calculates the number of bytes necessary to store a given integer
+# Parameters:
+# n		- the integer.
+# Returns:	- the number of bytes it takes to store it.
+sub size_of_int {
+    my ($n) = @_;
+    my ($i);
+    if ($n < 0) {
+	$n = - $n + 1;
+    }
+    $i = 1;
+    $n >>= 8;
+    while ($n > 0) {
+	$n >>= 8;
+	$i++;
+    }
+    return $i;
+}
+
+
+# Converts an integer into a string of bytes being its binary representation
+# Parameters:
+# n		- the integer to convert;
+# s		- size of the string (in bytes)
+# Returns:	- the representation string.
+# Remark:	The integer must be positive. Little endian (least significant
+#		byte comes first) in the string of bytes.
+sub n2b {
+    my ($n, $s) = @_;
+    my ($i);
+    $i = "";
+    while ($s > 0) {
+	$i = ($i . chr($n & 0xFF));
+	$n >>= 8;
+	$s--;
+    }
+    return $i;
+}
+
+
+# Converts an integer into a string of bytes being its binary representation
+# Parameters:
+# n		- the integer to convert;
+# s		- size of the string (in bytes)
+# Returns:	- the representation string.
+# Remark:	The integer may be signed. Little endian (least significant
+#		byte comes first) in the string.
+sub sn2b {
+    my ($n, $s) = @_;
+    my ($i);
+    if ($n >= 0) {
+	return n2b($n, $s);
+    }
+    $i = "";
+    while ($s > 0) {
+	if ($n != 0) {
+	    $i = ($i . chr($n & 0xFF));
+	}
+	else {
+	    $i = ($i . chr(0xFF));
+	}
+	$n = int ($n / 256);
+	$s--;
+    }
+    return $i;
+}
+
+
+# Returns the fraction part of a real number
+# Parameters:
+# n		- the real number.
+# Returns:	- the fraction.
+# Remark:	Why isn't it a standard function?
+sub frac {
+    my ($n) = @_;
+    return ($n - int $n);
+}
+
+# Calculates indexes in nodes of a tree
+# Parameters:
+# node		- reference to a list of nodes in a tree (children of one node)
+# level		- level of the node (root is 0)
+# Returns:	Nothing.
+# Remark:	Individual nodes of the tree are accessible via pointers
+#		from their parents. However, they are stored in a file
+#		in layers according to their level. Pointers are replaced
+#		with indexes being the ordinal numbers of nodes in their
+#		layers.
+sub calculate_indexes {
+    my ($node, $level) = @_;
+    my ($i, $sum);
+#    printf "calculate_indexes(_,%d), curr_indx[%d] = %d\n", $level,
+#	  $words - $level,
+#	  $curr_indx[$words - $level];
+#    printf "this node has %d items\n", @$node + 0;
+    for ($i = 0; $i < @$node; $i++) {
+#	  printf stderr "We are at level %d, item %d (nr %d)\n",
+#		 $words - $level, $node->[$i]->[0], $i;
+#	  printf stderr "curr_indx is %d\n", $curr_indx[$words - $level];
+
+	# Set the index field to the number of items already counted
+	# in the next layer
+	$node->[$i]->[2] = $curr_indx[$words - $level + 1];
+
+	# Treat this item as counted in the current layer
+	$curr_indx[$words - $level]++;
+
+	# Handle further layers
+	if ($level > 1) {
+	    calculate_indexes($node->[$i]->[1], $level - 1);
+	}
+    }
+#    printf stderr "At end curr_indx[%d] = %d\n", $words - $level,
+#	    $curr_indx[$words - $level];
+}
+
+# Writes one layer of states with equal level
+# Parameters:
+# node		- node of the tree;
+# plevel	- the level that should be written;
+# level		- the level of the node.
+sub write_level {
+    my ($node, $plevel, $level) = @_;
+    my ($i);
+#    printf stderr "write_level(.,$plevel,$level)\n";
+    for ($i = 0; $i < scalar @$node; $i++) {
+	if ($level < $plevel) {
+	    write_level($node->[$i]->[1], $plevel, $level + 1);
+	}
+	else {
+	    printf TABLE "%s", n2b($node->[$i]->[0], $ss[$level]);
+	    if ($level < $words - 1) {
+		printf TABLE "%s", n2b($node->[$i]->[2],
+				       size_of_int($curr_indx[$level + 1]));
+	    }
+	}
+    }
+}
+
+# Writes one layer of states with equal level using relative indexes
+# Parameters:
+# node		- node of the tree;
+# plevel	- the level that should be written;
+# level		- the level of the node
+# nindx		- index of the current node
+sub write_rlevel {
+    my ($node, $plevel, $level, $nindx) = @_;
+    my ($i);
+    for ($i = 0; $i < scalar @$node; $i++) {
+	if ($level < $plevel) {
+	    write_rlevel($node->[$i]->[1], $plevel, $level + 1,
+			 n2b($node->[$i]->[2] + $i));
+	}
+	else {
+	    printf TABLE "%s", n2b($node->[$i]->[0], $ss[$level]);
+	    if ($level < $words - 1) {
+		printf TABLE "%s", n2b($node->[$i]->[2] - $nindx -$i,
+				       size_of_int($curr_indx[$level + 1]));
+	    }
+	}
+    }
+}
+
+
+# Writes number columns
+# Parameters:
+# node		- node of the tree
+# level		- level of the tree
+sub write_number_columns {
+    my ($node, $level) = @_;
+    my ($i);
+#    printf stderr "write_number_columns($level)\n";
+    for ($i = 0; $i < scalar @$node; $i++) {
+	if ($level < $words - 1) {
+	    write_number_columns($node->[$i]->[1], $level + 1);
+	}
+	else {
+#	     printf stderr "length of numerical part is %d\n",
+#		    length($node->[$i]->[1]->[0]);
+	    printf TABLE "%s", $node->[$i]->[1]->[0];
+	}
+    }
+}
+
+# Prints a list of children for a given subtree
+# Parameters:
+# node		- root of the subtree
+# The printed values are:
+# [number] word (index)
+# where number numbers subsequent words on this level in the subtree,
+# word is the word (hash key) stored in the tree, and index is the index
+# of the first child in the next layer.
+sub print_subtree {
+    my($node) = @_;
+    my($i);
+    for ($i = 0; $i < scalar @$node; $i++) {
+	printf stderr " [%d]%d(%d)", $i, $node->[$i]->[0], $node->[$i]->[2];
+    }
+    printf stderr "\n";
+}
+
+# Prints a tree
+# Parameters:
+# node		- root of the tree
+# level		- levels to go (i.e. the height of the subtree)
+sub print_tree {
+    my($node, $level) = @_;
+    my($i);
+    if ($level > 0) {
+	printf stderr "level %d: ", $level;
+	print_subtree($node);
+	for ($i = 0; $i < scalar @$node; $i++) {
+	    print_tree($node->[$i]->[1], $level - 1);
+	}
+    }
+}
+
+# Converts a fraction into a string of bytes - binary representation
+# Parameters:
+# n		- fraction to convert
+# l		- length of the string
+sub frac2bytes {
+    my ($n, $l) = @_;
+    my ($s, $i, $x, $negative);
+    $s = ""; $negative = 0;
+    if ($n < 0.0) {
+	# Negative number, special treatment required
+	$negative = 1;
+	$n = -$n;
+    }
+    $n *= 128;
+    $x = ((int $n) & 0xff);
+#    printf stderr "First byte: %x\n", $x & 0xff;
+    if ($negative) {
+	$s = n2b(($x | 0x80), 1) . $s;
+    }
+    else {
+	$s = n2b($x, 1) . $s;
+    }
+    $n -= $x;
+#    printf stderr "Rest is %g\n", $n;
+    for ($i = 1; $i < $l; $i++) {
+	$n *= 256;
+	$x = ((int $n) & 0xff);
+#	printf stderr "Next byte: %x\n", $x;
+	$s = n2b($x, 1) . $s;
+	$n -= $x;
+#	printf stderr "Rest is %g\n", $n;
+    }
+    return $s;
+}
+
+# Prints synopsis
+sub synopsis {
+    printf stderr "Synopsis:\n";
+    printf stderr "maketuple named_param_set... [named_option_set...] ";
+    printf stderr "table_file [file...]\n\n";
+    printf stderr "where:\n";
+    printf stderr "named_param_set is a set of obligatory assignments\n";
+    printf stderr "(each assignment must be present) in arbitrary order:\n";
+    printf stderr "\ttotal=n\n";
+    printf stderr "\t\t- sets the number of items in a tuple\n";
+    printf stderr "\twords=n\n";
+    printf stderr "\t\t- number of words (strings) in a tuple\n";
+    printf stderr "named_option_set is a set of optional assignments\n";
+    printf stderr "in arbitrary order:\n";
+    printf stderr "\tver=3|4\n";
+    printf stderr "\t\t- sets the version number to 3 or 4 (default: 0)\n";
+    printf stderr "\tms=n\n";
+    printf stderr "\t\t- sets the mantissa size to n (only for version 3|4)\n";
+    printf stderr "\tsep=c\n";
+    printf stderr "\t\t- sets the input column separator to c ";
+    printf stderr "(default: blank)\n";
+    printf stderr "\tout=s\n";
+    printf stderr "\t\t- sets the name of the output file to s\n";
+    printf stderr "\t\t   (default: table_name.tpl)\n";
+    printf stderr "\trest=y\n";
+    printf stderr "\t\t- sets the name for a temporary file\n";
+    printf stderr "\trprec=r\n";
+    printf stderr "\t\t- sets the precision of reals to r (only ver 3|4)\n";
+    printf stderr "\tdel1=0\n";
+    printf stderr "\t\t- hash keys stored in first column (only v 3|4)\n";
+    printf stderr "\t\t  (otherwise hash keys omitted from the first column)";
+    printf stderr "\n";
+    printf stderr "\twords_are_numbers=y\n";
+    printf stderr "\t\t- words are already hash keys in input\n";
+    printf stderr "table_file is name of the input file\n";
+    printf stderr "file is the name of the file that will hold words for ith";
+    printf stderr " column\n";
+    printf stderr "while the name of the corresponding fsa will have .fsa ";
+    printf stderr "appended\n";
+    printf stderr "If the file is preceeded by a '+', the corresponding ";
+    printf stderr "automaton\n";
+    printf stderr "has already been built\n";
+    printf stderr "(n - integer, s - string, c - character, r -real)\n";
+}

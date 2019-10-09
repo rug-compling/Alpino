@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="3" end="4" id="2" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+      <node begin="4" cat="np" end="6" id="3" index="1" rel="su">
+        <node begin="4" end="5" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="5" lemma="hoofdagent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="agent" word="hoofdagent"/>
+      </node>
+      <node begin="0" cat="inf" end="8" id="6" rel="vc">
+        <node begin="0" cat="np" end="3" id="7" rel="vc">
+          <node begin="0" cat="mwu" end="2" id="8" rel="det">
+            <node begin="0" end="1" getal="ev" id="9" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="mwp" root="Wat" status="vol" vwtype="vb" word="Wat"/>
+            <node begin="1" end="2" id="10" lemma="voor" pos="det" postag="VZ(init)" pt="vz" rel="mwp" root="voor" vztype="init" word="voor"/>
+          </node>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="11" lemma="affiniteit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="affiniteit" word="affiniteit"/>
+        </node>
+        <node begin="4" end="6" id="12" index="1" rel="su"/>
+        <node begin="6" end="7" id="13" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+        <node begin="7" buiging="zonder" end="8" id="14" lemma="uitleggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="leg" word="uitleggen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Wat voor affiniteit kan de hoofdagent niet uitleggen .</sentence>
+</alpino_ds>

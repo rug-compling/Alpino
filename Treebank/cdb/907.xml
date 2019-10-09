@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="31" id="0" rel="top">
+    <node begin="19" end="20" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="30" id="2" rel="--">
+      <node begin="0" cat="sv1" end="7" id="3" rel="cnj">
+        <node begin="0" cat="mwu" end="3" id="4" index="1" rel="su">
+          <node begin="0" end="1" id="5" lemma="George" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="George" spectype="deeleigen" word="George"/>
+          <node begin="1" end="2" id="6" lemma="Hamilton" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hamilton" spectype="deeleigen" word="Hamilton"/>
+          <node begin="2" end="3" id="7" lemma="iv" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="iv" spectype="deeleigen" word="iv"/>
+        </node>
+        <node begin="3" end="4" id="8" lemma="zingen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zing" word="zong" wvorm="pv"/>
+        <node begin="4" cat="mwu" end="6" id="9" rel="mod">
+          <node begin="4" end="5" id="10" lemma="zonder" pos="adv" postag="VZ(init)" pt="vz" rel="mwp" root="zonder" vztype="init" word="zonder"/>
+          <node begin="5" buiging="zonder" end="6" graad="comp" id="11" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="meer" vwtype="onbep" word="meer"/>
+        </node>
+        <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="goed" word="goed"/>
+      </node>
+      <node begin="7" conjtype="neven" end="8" id="13" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="0" cat="sv1" end="30" id="14" rel="cnj">
+        <node begin="0" end="3" id="15" index="1" rel="su"/>
+        <node begin="8" end="9" id="16" lemma="verrassen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verraste" word="verraste" wvorm="pv"/>
+        <node begin="9" end="10" id="17" lemma="bovendien" pos="adv" postag="BW()" pt="bw" rel="mod" root="bovendien" word="bovendien"/>
+        <node begin="10" cat="pp" end="30" id="18" rel="mod">
+          <node begin="10" end="11" id="19" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="11" cat="np" end="30" id="20" rel="obj1">
+            <node begin="11" end="12" id="21" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="12" buiging="met-e" end="13" graad="basis" id="22" lemma="voortreffelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="voortreffelijk" word="voortreffelijke"/>
+            <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="versie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="versie" word="versie"/>
+            <node begin="14" cat="pp" end="30" id="24" rel="mod">
+              <node begin="14" end="15" id="25" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="15" cat="np" end="30" id="26" rel="obj1">
+                <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="27" lemma="Suzanne" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Suzanne" word="Suzanne"/>
+                <node begin="16" cat="pp" end="19" id="28" rel="mod">
+                  <node begin="16" end="17" id="29" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="17" cat="mwu" end="19" id="30" rel="obj1">
+                    <node begin="17" end="18" id="31" lemma="Leonard" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Leonard" spectype="deeleigen" word="Leonard"/>
+                    <node begin="18" end="19" id="32" lemma="Cohen" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Cohen" spectype="deeleigen" word="Cohen"/>
+                  </node>
+                </node>
+                <node begin="20" cat="np" end="30" id="33" rel="app">
+                  <node begin="20" end="21" id="34" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="35" lemma="lied" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="lied" word="lied"/>
+                  <node begin="22" cat="rel" end="30" id="36" rel="mod">
+                    <node begin="22" end="23" getal="ev" id="37" index="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
+                    <node begin="22" cat="ssub" end="30" id="38" rel="body">
+                      <node begin="22" end="23" id="39" index="2" rel="su"/>
+                      <node begin="22" cat="ppart" end="29" id="40" rel="vc">
+                        <node begin="22" end="23" id="41" index="2" rel="obj1"/>
+                        <node begin="23" end="24" id="42" lemma="langzamerhand" pos="adv" postag="BW()" pt="bw" rel="mod" root="langzamerhand" word="langzamerhand"/>
+                        <node begin="24" cat="pp" end="28" id="43" rel="pc">
+                          <node begin="24" end="25" id="44" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                          <node begin="25" cat="np" end="28" id="45" rel="obj1">
+                            <node begin="25" buiging="met-e" end="26" id="46" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" vwtype="onbep" word="alle"/>
+                            <node begin="26" buiging="met-e" end="27" graad="basis" id="47" lemma="mogelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="mogelijk" word="mogelijke"/>
+                            <node begin="27" end="28" getal="mv" graad="basis" id="48" lemma="stijl" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="stijl" word="stijlen"/>
+                          </node>
+                        </node>
+                        <node begin="28" buiging="zonder" end="29" id="49" lemma="zingen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zing" word="gezongen" wvorm="vd"/>
+                      </node>
+                      <node begin="29" end="30" id="50" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="30" end="31" id="51" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>George Hamilton iv zong zonder meer goed en verraste bovendien met een voortreffelijke versie van Suzanne van Leonard Cohen , een lied dat langzamerhand in alle mogelijke stijlen gezongen is .</sentence>
+</alpino_ds>

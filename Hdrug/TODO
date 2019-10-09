@@ -1,0 +1,27 @@
+-  <?=?>  seems to require that attribute *must* exist in order to succeed.
+this is not nice.
+
+- check in feature library whether an attribute that is defined for a subtype
+  is not defined for a supertype...
+
+doc's need more work...
+
+DONE - have separate .po files for separate binary distributions (sigh..)
+
+DONE - bug in ALE Hpsg grammar: `too much variables'
+
+- hdrug_stats..
+- DOCUMENTATION help_pred
+  stats
+- visualization libraries should produce strings first, to be sent to
+  files later (a.o. to prevent dangling open files)
+- these libraries should also better work as libraries for other
+  programs (hdrug_clig is almost ok)
+- document new hooks clicking 2,3 on obj button
+DONE - further integrate clig. 
+
+
+
+-  problem with clig: after you change any of the clig variables, you might
+   need to restart the gui, otherwise strange behaviour of clig output
+   results

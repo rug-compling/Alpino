@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="0" cat="du" end="14" id="2" rel="--">
+      <node begin="0" cat="smain" end="11" id="3" rel="nucl">
+        <node begin="0" end="1" id="4" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="Ook"/>
+        <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="2" end="3" getal="getal" id="6" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="3" cat="np" end="11" id="7" rel="su">
+          <node begin="3" end="4" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="zaalvoetbalploeg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zaal_voetbal_ploeg" word="zaalvoetbalploeg"/>
+          <node begin="5" cat="rel" end="11" id="10" rel="mod">
+            <node begin="5" end="6" getal="getal" id="11" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="5" cat="ssub" end="11" id="12" rel="body">
+              <node begin="5" end="6" id="13" index="1" rel="su"/>
+              <node begin="6" end="7" id="14" lemma="uitkomen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom_uit" word="uitkomt" wvorm="pv"/>
+              <node begin="7" cat="pp" end="11" id="15" rel="mod">
+                <node begin="7" end="8" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="8" cat="np" end="11" id="17" rel="obj1">
+                  <node begin="8" end="9" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="19" lemma="KBVB" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="KBVB" word="KBVB"/>
+                  <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="20" lemma="zaalvoetbalcompetitie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zaal_voetbal_competitie" word="zaalvoetbalcompetitie"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="12" cat="mwu" end="14" id="21" rel="sat">
+        <node begin="12" end="13" id="22" lemma="ZVK" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="ZVK" spectype="deeleigen" word="ZVK"/>
+        <node begin="13" end="14" id="23" lemma="Katelijne" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Katelijne" spectype="deeleigen" word="Katelijne"/>
+      </node>
+    </node>
+    <node begin="14" end="15" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ook is er een zaalvoetbalploeg die uitkomt in de KBVB zaalvoetbalcompetitie : ZVK Katelijne .</sentence>
+</alpino_ds>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="17" end="18" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="27" id="2" rel="--">
+      <node begin="0" cat="pp" end="7" id="3" rel="mod">
+        <node begin="0" end="1" id="4" lemma="naast" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naast" vztype="init" word="Naast"/>
+        <node begin="1" cat="np" end="7" id="5" rel="obj1">
+          <node begin="1" buiging="zonder" end="2" id="6" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>
+          <node begin="2" cat="ppres" end="5" id="7" rel="mod">
+            <node begin="2" end="3" id="8" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="mod" root="altijd" word="altijd"/>
+            <node begin="3" end="4" id="9" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
+            <node begin="4" buiging="met-e" end="5" graad="basis" id="10" lemma="overrompelend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="overrompelend" word="overrompelende"/>
+          </node>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="pianist" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pianist" word="pianist"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="Wilson" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Wilson" word="Wilson"/>
+        </node>
+      </node>
+      <node begin="7" end="8" id="13" lemma="zorgen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zorg" word="zorgen" wvorm="pv"/>
+      <node begin="8" cat="np" end="11" id="14" rel="su">
+        <node begin="8" end="9" id="15" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+        <node begin="9" end="10" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="10" end="11" getal="mv" graad="basis" id="17" lemma="blazer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="blazers" word="blazers"/>
+      </node>
+      <node begin="11" cat="cp" end="17" id="18" rel="vc">
+        <node begin="11" conjtype="onder" end="12" id="19" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="12" cat="ssub" end="17" id="20" rel="body">
+          <node begin="13" buiging="zonder" end="14" graad="basis" id="21" index="1" lemma="veel" naamval="stan" pdtype="grad" pos="noun" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="su" root="veel" vwtype="onbep" word="veel"/>
+          <node begin="12" cat="ti" end="16" id="22" rel="vc">
+            <node begin="14" end="15" id="23" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="12" cat="inf" end="16" id="24" rel="body">
+              <node begin="12" end="13" getal="getal" id="25" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+              <node begin="13" end="14" id="26" index="1" rel="obj1"/>
+              <node begin="15" buiging="zonder" end="16" id="27" lemma="genieten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="geniet" word="genieten" wvorm="inf"/>
+            </node>
+          </node>
+          <node begin="16" end="17" id="28" lemma="vallen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="val" word="valt" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="18" cat="cp" end="27" id="29" rel="mod">
+        <node begin="18" end="19" id="30" lemma="al" pos="comp" postag="BW()" pt="bw" rel="cmp" root="al" word="al"/>
+        <node begin="19" cat="sv1" end="27" id="31" rel="body">
+          <node begin="19" end="20" id="32" lemma="tellen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="tel" word="tel" wvorm="pv"/>
+          <node begin="20" end="21" getal="ev" id="33" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+          <node begin="21" cat="np" end="23" id="34" rel="obj1">
+            <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="35" lemma="Goodman" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Goodman" word="Goodman"/>
+            <node begin="22" end="23" id="36" lemma="zelf" pos="adv" postag="BW()" pt="bw" rel="mod" root="zelf" word="zelf"/>
+          </node>
+          <node begin="23" end="24" id="37" lemma="daarbij" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarbij" word="daarbij"/>
+          <node begin="24" end="25" id="38" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="25" end="26" id="39" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
+          <node begin="26" end="27" id="40" lemma="mee" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="mee" vztype="fin" word="mee"/>
+        </node>
+      </node>
+    </node>
+    <node begin="27" end="28" id="41" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Naast die altijd weer overrompelende pianist Wilson zorgen ook de blazers dat er veel te genieten valt , al tel ik Goodman zelf daarbij niet zo mee .</sentence>
+</alpino_ds>

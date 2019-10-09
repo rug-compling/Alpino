@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="whq" end="17" id="1" rel="--">
+      <node begin="0" cat="np" end="13" id="2" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welke" vwtype="vb" word="Welke"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="ziekte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ziekte" word="ziekte"/>
+        <node begin="2" cat="rel" end="13" id="5" rel="mod">
+          <node begin="2" end="3" getal="getal" id="6" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+          <node begin="2" cat="ssub" end="13" id="7" rel="body">
+            <node begin="2" end="3" id="8" index="2" rel="su"/>
+            <node begin="4" end="5" id="9" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+            <node begin="3" cat="ppart" end="13" id="10" rel="predc">
+              <node begin="3" buiging="zonder" end="4" id="11" lemma="paren" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gepaard" word="gepaard" wvorm="vd"/>
+              <node begin="5" cat="pp" end="13" id="12" rel="pc">
+                <node begin="5" end="6" id="13" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                <node begin="6" cat="conj" end="13" id="14" rel="obj1">
+                  <node begin="6" end="7" getal="mv" graad="basis" id="15" lemma="klierzwelling" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="zwelling" word="klierzwellingen"/>
+                  <node begin="7" conjtype="neven" end="8" id="16" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                  <node begin="8" cat="np" end="13" id="17" rel="cnj">
+                    <node begin="8" buiging="met-e" end="9" graad="basis" id="18" lemma="licht" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="licht" word="lichte"/>
+                    <node begin="9" end="10" getal="mv" graad="basis" id="19" lemma="vlek" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vlek" word="vlekken"/>
+                    <node begin="10" cat="pp" end="13" id="20" rel="mod">
+                      <node begin="10" end="11" id="21" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                      <node begin="11" cat="np" end="13" id="22" rel="obj1">
+                        <node begin="11" end="12" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                        <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="24" lemma="huid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="huid" word="huid"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="0" cat="sv1" end="17" id="25" rel="body">
+        <node begin="0" end="13" id="26" index="1" rel="su"/>
+        <node begin="13" end="14" id="27" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="14" buiging="zonder" end="15" graad="basis" id="28" lemma="gevaarlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="gevaarlijk" word="gevaarlijk"/>
+        <node begin="15" cat="pp" end="17" id="29" rel="mod">
+          <node begin="15" end="16" id="30" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+          <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="31" lemma="zwangerschap" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="zwangerschap" word="zwangerschap"/>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="32" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke ziekte die gepaard gaat met klierzwellingen en lichte vlekken op de huid is gevaarlijk bij zwangerschap ?</sentence>
+</alpino_ds>

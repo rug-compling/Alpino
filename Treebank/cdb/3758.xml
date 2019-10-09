@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="7" end="8" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="11" end="12" id="3" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="smain" end="16" id="4" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="5" index="1" lemma="Engeland" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Engeland" word="Engeland"/>
+      <node begin="1" end="2" id="6" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+      <node begin="0" cat="conj" end="16" id="7" rel="vc">
+        <node begin="2" conjtype="onder" end="3" id="8" lemma="of" pos="vg" postag="VG(onder)" pt="vg" rel="crd" root="of" word="of"/>
+        <node begin="0" cat="inf" end="11" id="9" rel="cnj">
+          <node begin="0" end="1" id="10" index="1" rel="su"/>
+          <node begin="3" end="4" getal="getal" id="11" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="daar" status="vol" vwtype="aanw" word="daar"/>
+          <node begin="4" buiging="zonder" end="5" id="12" lemma="sneuvelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="sneuvel" word="sneuvelen" wvorm="inf"/>
+          <node begin="6" cat="conj" end="11" id="13" rel="mod">
+            <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="14" lemma="Brazilie" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Brazilie" word="Brazilie"/>
+            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="roemenie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Roemenie" word="Roemenie"/>
+            <node begin="9" conjtype="neven" end="10" id="16" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="17" lemma="Tsjechoslowakije" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Tsjechoslowakije" word="Tsjechoslowakije"/>
+          </node>
+        </node>
+        <node begin="12" conjtype="neven" end="13" id="18" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+        <node begin="13" cat="smain" end="16" id="19" rel="cnj">
+          <node begin="13" end="14" genus="onz" getal="ev" id="20" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+          <node begin="14" end="15" id="21" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+          <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="22" lemma="wereldkampioen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="predc" root="wereldkampioen" word="wereldkampioen"/>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Engeland zal of daar sneuvelen ( Brazilie , Roemenie en Tsjechoslowakije ) of het wordt wereldkampioen .</sentence>
+</alpino_ds>

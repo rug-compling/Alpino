@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="np" end="6" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" id="2" infl="welk" lemma="enig" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="enig" vwtype="onbep" word="Enig"/>
+      <node begin="1" end="2" gen="both" genus="onz" getal="ev" graad="basis" id="3" lemma="idee" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="idee" word="idee"/>
+      <node begin="2" cat="pp" end="6" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="3" cat="whrel" end="6" id="6" rel="obj1">
+          <node begin="3" case="both" def="indef" end="4" gen="het" getal="ev" id="7" index="1" lemma="wat" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" rnum="sg" root="wat" special="nparg" status="vol" vwtype="vb" wh="ywh" word="wat"/>
+          <node begin="3" cat="ssub" end="6" id="8" rel="body">
+            <node begin="3" end="4" id="9" index="1" rel="su"/>
+            <node begin="4" end="5" getal="getal" id="10" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" special="er" status="red" vwtype="aanw" word="er"/>
+            <node begin="5" end="6" id="11" infl="sg" lemma="gebeuren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="gebeur" sc="intransitive" tense="past" word="gebeurde" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Enig idee van wat er gebeurde ?</sentence>
+</alpino_ds>

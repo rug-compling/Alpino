@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="37" id="0" rel="top">
+    <node begin="23" end="24" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="26" end="27" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="27" end="28" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="36" id="4" rel="--">
+      <node begin="7" end="8" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="9" cat="np" end="16" id="6" index="1" rel="su">
+        <node begin="9" end="10" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="10" end="11" genus="genus" getal="ev" graad="basis" id="8" lemma="PSP-er" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="PSP-er" word="PSP-er"/>
+        <node begin="11" cat="mwu" end="16" id="9" rel="app">
+          <node begin="11" end="12" id="10" lemma="A." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="A." spectype="deeleigen" word="A."/>
+          <node begin="12" end="13" id="11" lemma="G." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="G." spectype="deeleigen" word="G."/>
+          <node begin="13" end="14" id="12" lemma="van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+          <node begin="14" end="15" id="13" lemma="de" lwtype="bep" naamval="gen" npagr="rest3" pos="noun" postag="LID(bep,gen,rest3)" pt="lid" rel="mwp" root="der" word="der"/>
+          <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="14" lemma="spek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Spek" word="Spek"/>
+        </node>
+      </node>
+      <node begin="0" cat="ppart" end="36" id="15" rel="vc">
+        <node begin="0" cat="cp" end="7" id="16" rel="mod">
+          <node begin="0" conjtype="onder" end="1" id="17" lemma="behalve" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="behalve" word="Behalve"/>
+          <node begin="1" cat="np" end="7" id="18" rel="body">
+            <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="19" lemma="psp-senator" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="senator" word="PSP-senator"/>
+            <node begin="2" cat="mwu" end="7" id="20" rel="app">
+              <node begin="2" end="3" id="21" lemma="mr." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="mr." spectype="deeleigen" word="mr."/>
+              <node begin="3" end="4" id="22" lemma="J." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="J." spectype="deeleigen" word="J."/>
+              <node begin="4" end="5" id="23" lemma="H." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="H." spectype="deeleigen" word="H."/>
+              <node begin="5" end="6" id="24" lemma="van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+              <node begin="6" end="7" id="25" lemma="Wijk" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wijk" spectype="deeleigen" word="Wijk"/>
+            </node>
+          </node>
+        </node>
+        <node begin="8" end="9" id="26" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
+        <node begin="9" end="16" id="27" index="1" rel="su"/>
+        <node begin="18" buiging="zonder" end="19" id="28" lemma="stellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="gesteld" wvorm="vd"/>
+        <node begin="16" cat="np" end="36" id="29" rel="obj1">
+          <node begin="16" buiging="met-e" end="17" graad="basis" id="30" lemma="schriftelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="schriftelijk" word="schriftelijke"/>
+          <node begin="17" end="18" getal="mv" graad="basis" id="31" lemma="vraag" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vraag" word="vragen"/>
+          <node begin="19" cat="pp" end="36" id="32" rel="mod">
+            <node begin="19" cat="mwu" end="22" id="33" rel="hd">
+              <node begin="19" end="20" id="34" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="met" vztype="init" word="met"/>
+              <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="35" lemma="betrekking" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="betrekking" word="betrekking"/>
+              <node begin="21" end="22" id="36" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="tot" vztype="init" word="tot"/>
+            </node>
+            <node begin="22" cat="np" end="36" id="37" rel="obj1">
+              <node begin="22" end="23" id="38" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="24" buiging="zonder" end="25" graad="basis" id="39" lemma="open" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="open" word="open"/>
+              <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="40" lemma="dag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dag" word="dag"/>
+              <node begin="28" cat="ppart" end="36" id="41" rel="mod">
+                <node begin="28" buiging="zonder" end="29" id="42" lemma="houden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gehouden" word="gehouden" wvorm="vd"/>
+                <node begin="29" cat="pp" end="32" id="43" rel="mod">
+                  <node begin="29" end="30" id="44" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                  <node begin="30" cat="mwu" end="32" id="45" rel="obj1">
+                    <node begin="30" end="31" id="46" lemma="31" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="31" word="31"/>
+                    <node begin="31" end="32" genus="zijd" getal="ev" graad="basis" id="47" lemma="juli" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="juli" word="juli"/>
+                  </node>
+                </node>
+                <node begin="32" cat="pp" end="36" id="48" rel="mod">
+                  <node begin="32" end="33" id="49" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                  <node begin="33" cat="np" end="36" id="50" rel="obj1">
+                    <node begin="33" end="34" id="51" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="34" end="35" genus="zijd" getal="ev" graad="basis" id="52" lemma="vliegbasis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vliegbasis" word="vliegbasis"/>
+                    <node begin="35" end="36" genus="onz" getal="ev" graad="basis" id="53" lemma="Twenthe" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Twenthe" word="Twenthe"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="36" end="37" id="54" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Behalve PSP-senator mr. J. H. van Wijk heeft gisteren de PSP-er A. G. van der Spek schriftelijke vragen gesteld met betrekking tot de &quot; open dag &quot; , gehouden op 31 juli op de vliegbasis Twenthe .</sentence>
+</alpino_ds>

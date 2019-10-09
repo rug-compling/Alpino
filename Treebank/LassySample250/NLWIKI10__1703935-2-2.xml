@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" frame="pronoun(nwh,thi,sg,de,nom,def)" gen="de" genus="masc" getal="ev" id="2" lcat="np" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" sense="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+      <node begin="1" end="2" frame="verb(hebben,past(sg),intransitive)" id="3" infl="sg" lcat="smain" lemma="spelen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="speel" sc="intransitive" sense="speel" tense="past" word="speelde" wvorm="pv"/>
+      <node begin="2" end="3" frame="tmp_noun(both,count,sg)" gen="both" id="4" lcat="np" lemma="eenmaal" num="sg" pos="noun" postag="BW()" pt="bw" rel="mod" root="eenmaal" sense="eenmaal" special="tmp" word="eenmaal"/>
+      <node begin="3" cat="pp" end="7" id="5" rel="mod">
+        <node begin="3" end="4" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="6" lcat="pp" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" sense="voor" vztype="init" word="voor"/>
+        <node begin="4" cat="np" end="7" id="7" rel="obj1">
+          <node begin="4" end="5" frame="determiner(de)" id="8" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+          <node begin="5" cat="mwu" end="7" id="9" mwu_root="Rode_Duivels" mwu_sense="Rode_Duivels" rel="hd">
+            <node begin="5" end="6" frame="proper_name(both,'ORG')" id="10" lcat="np" lemma="Rode" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Rode" sense="Rode" spectype="deeleigen" word="Rode"/>
+            <node begin="6" end="7" frame="proper_name(both,'ORG')" id="11" lcat="np" lemma="Duivels" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Duivels" sense="Duivels" spectype="deeleigen" word="Duivels"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" frame="punct(punt)" id="12" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Hij speelde eenmaal voor de Rode Duivels .</sentence>
+  <comments>
+    <comment>Q#1703935-2-2|Hij speelde eenmaal voor de Rode Duivels .|1|1|-0.02364589412931316</comment>
+  </comments>
+</alpino_ds>

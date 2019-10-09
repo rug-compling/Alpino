@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="2" end="3" id="2" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" word="kunnen" wvorm="pv"/>
+      <node begin="3" end="4" getal="mv" id="3" index="1" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+      <node begin="0" cat="inf" end="13" id="4" rel="vc">
+        <node begin="0" cat="mwu" end="2" id="5" rel="mod">
+          <node begin="0" end="1" id="6" lemma="de" lwtype="bep" naamval="gen" npagr="evmo" pos="adv" postag="LID(bep,gen,evmo)" pt="lid" rel="mwp" root="&apos;s" word="&apos;s"/>
+          <node begin="1" end="2" id="7" lemma="anderdaags" pos="adv" postag="BW()" pt="bw" rel="mwp" root="Anderdaags" word="Anderdaags"/>
+        </node>
+        <node begin="3" end="4" id="8" index="1" rel="su"/>
+        <node begin="4" cat="np" end="6" id="9" rel="obj1">
+          <node begin="4" buiging="zonder" end="5" getal="mv" id="10" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="werk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="werk" word="werk"/>
+        </node>
+        <node begin="6" buiging="zonder" end="7" id="12" lemma="overdoen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="doe_over" word="overdoen" wvorm="inf"/>
+        <node begin="7" cat="cp" end="13" id="13" rel="mod">
+          <node begin="7" conjtype="onder" end="8" id="14" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="omdat"/>
+          <node begin="8" cat="ssub" end="13" id="15" rel="body">
+            <node begin="8" end="9" getal="mv" graad="basis" id="16" lemma="collega" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="collega" word="collega&apos;s"/>
+            <node begin="9" cat="np" end="11" id="17" rel="obj1">
+              <node begin="9" buiging="zonder" end="10" getal="mv" id="18" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+              <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="19" lemma="evenement" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="evenement" word="evenement"/>
+            </node>
+            <node begin="11" end="12" id="20" lemma="eroverheen" pos="pp" postag="BW()" pt="bw" rel="ld" root="eroverheen" word="eroverheen"/>
+            <node begin="12" end="13" id="21" lemma="pappen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="pap" word="papten" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&apos;s Anderdaags kunnen ze hun werk overdoen omdat collega&apos;s hun evenement eroverheen papten .</sentence>
+</alpino_ds>

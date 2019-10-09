@@ -1,0 +1,21 @@
+#!/usr/bin/perl -w
+
+@counts=();
+$alllines=0;
+$allwords=0;
+while(<>) {
+    $alllines++;
+    @words=split;
+    $length=scalar @words;
+    $allwords = $allwords+$length;
+    $counts[$length]++;
+}
+
+$mean = $allwords/$alllines;
+print "mean: $mean words per line\n";
+
+for($i=1;$i< scalar @counts;$i++) {
+    if ($counts[$i]) {
+	print "$i $counts[$i]\n";
+    } 
+}

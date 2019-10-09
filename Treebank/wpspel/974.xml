@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="whq" end="15" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welke"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="index" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="index" word="index"/>
+      </node>
+      <node begin="0" cat="sv1" end="15" id="5" rel="body">
+        <node begin="0" end="2" id="6" index="1" rel="su"/>
+        <node begin="2" end="3" id="7" lemma="geven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="geef_weer" word="geeft" wvorm="pv"/>
+        <node begin="3" cat="np" end="14" id="8" rel="obj1">
+          <node begin="3" end="4" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="evolutie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="evolutie" word="evolutie"/>
+          <node begin="5" cat="pp" end="14" id="11" rel="mod">
+            <node begin="5" end="6" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="6" cat="np" end="14" id="13" rel="obj1">
+              <node begin="6" end="7" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="7" end="8" id="15" lemma="20" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="20" word="20"/>
+              <node begin="8" buiging="met-e" end="9" graad="sup" id="16" lemma="belangrijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="belangrijk" word="belangrijkste"/>
+              <node begin="9" end="10" getal="mv" graad="basis" id="17" lemma="aandeel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="aandeel" word="aandelen"/>
+              <node begin="10" cat="pp" end="14" id="18" rel="mod">
+                <node begin="10" end="11" id="19" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                <node begin="11" cat="np" end="14" id="20" rel="obj1">
+                  <node begin="11" end="12" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="12" buiging="met-e" end="13" graad="basis" id="22" lemma="Brussels" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Brussels" word="Brusselse"/>
+                  <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="effectenbeurs" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="effectenbeurs" word="effectenbeurs"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="14" end="15" id="24" lemma="weer" pos="part" postag="BW()" pt="bw" rel="svp" root="weer" word="weer"/>
+      </node>
+    </node>
+    <node begin="15" end="16" id="25" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke index geeft de evolutie van de 20 belangrijkste aandelen op de Brusselse effectenbeurs weer ?</sentence>
+</alpino_ds>

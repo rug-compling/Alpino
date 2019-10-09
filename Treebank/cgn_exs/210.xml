@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="sv1" end="8" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="denken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="denk" word="denk" wvorm="pv"/>
+      <node begin="1" cat="pp" end="8" id="3" rel="pc">
+        <node begin="1" end="2" getal="getal" id="4" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="pobj1" root="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="2" end="3" id="5" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+        <node begin="3" cat="ti" end="8" id="6" rel="vc">
+          <node begin="6" end="7" id="7" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="3" cat="inf" end="8" id="8" rel="body">
+            <node begin="3" end="4" genus="fem" getal="getal" id="9" lemma="haar" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,obl,vol,3,getal,fem)" pt="vnw" rel="obj1" root="haar" status="vol" vwtype="pers" word="haar"/>
+            <node begin="4" end="5" id="10" lemma="vanavond" pos="adv" postag="BW()" pt="bw" rel="mod" root="vanavond" word="vanavond"/>
+            <node begin="5" end="6" id="11" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+            <node begin="7" buiging="zonder" end="8" id="12" lemma="bellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bel" word="bellen" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>denk er aan haar vanavond nog te bellen .</sentence>
+</alpino_ds>

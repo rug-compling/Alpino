@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="whq" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="whd">
+        <node begin="0" end="1" id="3" lemma="hoeveel" naamval="stan" numtype="hoofd" pos="adj" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="hoeveel" word="Hoeveel"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="verloskundigen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verloskundige" word="verloskundigen"/>
+      </node>
+      <node begin="0" cat="sv1" end="5" id="5" rel="body">
+        <node begin="0" end="2" id="6" index="1" rel="su"/>
+        <node begin="2" end="3" id="7" lemma="werken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="werk" word="werken" wvorm="pv"/>
+        <node begin="3" cat="pp" end="5" id="8" rel="mod">
+          <node begin="3" end="4" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="Nederland" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Nederland" word="Nederland"/>
+        </node>
+      </node>
+    </node>
+    <node begin="5" end="6" id="11" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoeveel verloskundigen werken in Nederland ?</sentence>
+</alpino_ds>

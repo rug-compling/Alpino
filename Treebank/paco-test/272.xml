@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="sv1" end="7" id="1" rel="--">
+      <node begin="0" end="1" frame="verb(hebben,sg_hebt,modifier(aux(inf)))" id="2" infl="sg_hebt" lcat="sv1" pos="verb" rel="hd" root="wil" sc="modifier(aux(inf))" sense="wil" tense="present" word="Wilt"/>
+      <node begin="1" case="both" def="def" end="2" frame="pronoun(nwh,u,sg,de,both,def)" gen="de" id="3" index="1" lcat="np" num="sg" per="u" pos="pron" rel="su" root="u" sense="u" wh="nwh" word="u"/>
+      <node begin="1" cat="inf" end="7" id="4" rel="vc">
+        <node begin="1" end="2" id="5" index="1" rel="su"/>
+        <node begin="2" end="3" frame="noun(de,count,pl)" gen="de" id="6" lcat="np" num="pl" pos="noun" rel="obj1" root="wijziging" sense="wijziging" word="wijzigingen"/>
+        <node begin="3" cat="pp" end="6" id="7" rel="ld">
+          <node begin="3" end="4" frame="preposition(in,[])" id="8" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+          <node begin="4" cat="np" end="6" id="9" rel="obj1">
+            <node begin="4" end="5" frame="determiner(de,nwh,nmod,pro,nparg)" id="10" infl="de" lcat="detp" pos="det" rel="det" root="deze" sense="deze" wh="nwh" word="deze"/>
+            <node begin="5" end="6" frame="noun(de,count,sg)" gen="de" id="11" lcat="np" num="sg" pos="noun" rel="hd" root="brief_code" sense="brief_code" word="briefcode"/>
+          </node>
+        </node>
+        <node begin="6" end="7" frame="verb(hebben,inf,ninv(np_ld_pp,part_np_ld_pp(op)))" id="12" infl="inf" lcat="inf" pos="verb" rel="hd" root="sla_op" sc="part_np_ld_pp(op)" sense="sla_op" word="opslaan"/>
+      </node>
+    </node>
+    <node begin="7" end="8" frame="punct(vraag)" id="13" lcat="punct" pos="punct" rel="--" root="?" sense="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Wilt u wijzigingen in deze briefcode opslaan ?</sentence>
+  <comments>
+    <comment>Q#272|Wilt u wijzigingen in deze briefcode opslaan ?|1|1|-0.019654606639405103</comment>
+  </comments>
+</alpino_ds>

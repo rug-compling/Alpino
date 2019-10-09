@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" cat="pp" end="2" id="2" index="1" rel="whd">
+        <node begin="0" end="1" id="3" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="Van"/>
+        <node begin="1" end="2" getal="getal" id="4" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="obj1" root="wie" status="vol" vwtype="vb" word="wie"/>
+      </node>
+      <node begin="0" cat="sv1" end="6" id="5" rel="body">
+        <node begin="0" end="2" id="6" index="1" rel="pc"/>
+        <node begin="2" end="3" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="3" cat="np" end="6" id="8" rel="su">
+          <node begin="3" end="4" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="besturingsysteem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="besturing_systeem" word="besturingsysteem"/>
+          <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="11" lemma="OS/2" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="OS/2" word="OS/2"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Van wie is het besturingsysteem OS/2 ?</sentence>
+</alpino_ds>

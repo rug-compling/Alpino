@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" cat="mwu" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="Gene" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Gene" spectype="deeleigen" word="Gene"/>
+        <node begin="1" end="2" id="4" lemma="Clark" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Clark" spectype="deeleigen" word="Clark"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="maken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="maak" word="maakt" wvorm="pv"/>
+      <node begin="3" cat="np" end="5" id="6" rel="obj1">
+        <node begin="3" buiging="met-e" end="4" graad="basis" id="7" lemma="prachtig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="prachtig" word="prachtige"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="kampvuurmuziek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="muziek" word="kampvuurmuziek"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="9" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" word=";"/>
+  </node>
+  <sentence>Gene Clark maakt prachtige kampvuurmuziek ;</sentence>
+</alpino_ds>

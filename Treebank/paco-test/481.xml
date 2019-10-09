@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="0" cat="smain" end="25" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="3" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="Het"/>
+        <node begin="1" end="2" frame="noun(both,count,sg)" gen="both" id="4" lcat="np" num="sg" pos="noun" rel="hd" root="prospectus" sense="prospectus" word="prospectus"/>
+      </node>
+      <node begin="2" end="3" frame="verb('hebben/zijn',sg,modifier(aux(inf)))" id="5" infl="sg" lcat="smain" pos="verb" rel="hd" root="moet" sc="modifier(aux(inf))" sense="moet" tense="present" word="moet"/>
+      <node begin="0" cat="inf" end="25" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="su"/>
+        <node begin="5" end="6" frame="verb(hebben,inf,transitive)" id="8" infl="inf" lcat="inf" pos="verb" rel="hd" root="bevat" sc="transitive" sense="bevat" word="bevatten"/>
+        <node begin="3" cat="np" end="25" id="9" rel="obj1">
+          <node begin="3" end="4" frame="determiner(de)" id="10" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="4" end="5" frame="noun(het,count,pl)" gen="het" id="11" lcat="np" num="pl" pos="noun" rel="hd" root="gegeven" sense="gegeven" word="gegevens"/>
+          <node begin="6" cat="rel" end="25" id="12" rel="mod">
+            <node begin="6" case="no_obl" end="7" frame="rel_pronoun(de,no_obl)" gen="de" id="13" index="2" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+            <node begin="6" cat="ssub" end="25" id="14" rel="body">
+              <node begin="6" end="7" id="15" index="2" rel="su"/>
+              <node begin="7" cat="pp" end="10" id="16" rel="mod">
+                <node begin="7" end="8" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="17" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+                <node begin="8" cat="np" end="10" id="18" rel="obj1">
+                  <node begin="8" end="9" frame="determiner(de)" id="19" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="9" end="10" frame="noun(de,count,pl)" gen="de" id="20" lcat="np" num="pl" pos="noun" rel="hd" root="belegger" sense="belegger" word="beleggers"/>
+                </node>
+              </node>
+              <node aform="base" begin="10" end="11" frame="adjective(no_e(adv))" id="21" infl="no_e" lcat="ap" pos="adj" rel="predc" root="noodzakelijk" sense="noodzakelijk" vform="adj" word="noodzakelijk"/>
+              <node begin="11" end="12" frame="verb(unacc,pl,copula)" id="22" infl="pl" lcat="ssub" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="zijn"/>
+              <node begin="12" cat="oti" end="25" id="23" rel="mod">
+                <node begin="12" end="13" frame="complementizer(om)" id="24" lcat="oti" pos="comp" rel="cmp" root="om" sc="om" sense="om" word="om"/>
+                <node begin="13" cat="ti" end="25" id="25" rel="body">
+                  <node begin="17" end="18" frame="complementizer(te)" id="26" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+                  <node begin="13" cat="inf" end="25" id="27" rel="body">
+                    <node begin="18" end="19" frame="verb('hebben/zijn',inf,aux(inf))" id="28" infl="inf" lcat="inf" pos="verb" rel="hd" root="kan" sc="aux(inf)" sense="kan" word="kunnen"/>
+                    <node begin="13" cat="inf" end="25" id="29" rel="vc">
+                      <node begin="13" case="dat_acc" def="def" end="14" frame="pronoun(nwh,thi,both,de,dat_acc,def,wkpro)" gen="de" id="30" lcat="np" num="both" per="thi" pos="pron" rel="obj2" root="zich" sense="zich" special="wkpro" wh="nwh" word="zich"/>
+                      <node begin="19" end="20" frame="verb(hebben,inf,np_np)" id="31" infl="inf" lcat="inf" pos="verb" rel="hd" root="vorm" sc="np_np" sense="vorm" word="vormen"/>
+                      <node begin="14" cat="np" end="25" id="32" rel="obj1">
+                        <node begin="14" end="15" frame="determiner(een)" id="33" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+                        <node aform="base" begin="15" end="16" frame="adjective(ge_no_e(adv))" id="34" infl="no_e" lcat="ppart" pos="adj" rel="mod" root="verantwoord" sense="verantwoord" vform="psp" word="verantwoord"/>
+                        <node begin="16" end="17" frame="noun(het,count,sg)" gen="het" id="35" lcat="np" num="sg" pos="noun" rel="hd" root="oordeel" sense="oordeel" word="oordeel"/>
+                        <node begin="20" cat="pp" end="25" id="36" rel="mod">
+                          <node begin="20" end="21" frame="preposition(over,[heen])" id="37" lcat="pp" pos="prep" rel="hd" root="over" sense="over" word="over"/>
+                          <node begin="21" cat="np" end="25" id="38" rel="obj1">
+                            <node begin="21" end="22" frame="determiner(de)" id="39" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                            <node begin="22" cat="ppart" end="24" id="40" rel="mod">
+                              <node begin="22" case="dat_acc" def="def" end="23" frame="pronoun(nwh,thi,pl,de,dat_acc,def)" gen="de" id="41" lcat="np" num="pl" per="thi" pos="pron" rel="obj2" root="hun" sense="hun" wh="nwh" word="hun"/>
+                              <node aform="base" begin="23" end="24" frame="adjective(ge_both(adv),so_np)" id="42" infl="both" lcat="ppart" pos="adj" rel="hd" root="aangeboden" sc="so_np" sense="aangeboden" vform="psp" word="aangeboden"/>
+                            </node>
+                            <node begin="24" end="25" frame="noun(de,count,sg)" gen="de" id="43" lcat="np" num="sg" pos="noun" rel="hd" root="belegging" sense="belegging" word="belegging"/>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="25" end="26" frame="punct(punt)" id="44" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Het prospectus moet de gegevens bevatten die voor de beleggers noodzakelijk zijn om zich een verantwoord oordeel te kunnen vormen over de hun aangeboden belegging .</sentence>
+  <comments>
+    <comment>Q#481|Het prospectus moet de gegevens bevatten die voor de beleggers noodzakelijk zijn om zich een verantwoord oordeel te kunnen vormen over de hun aangeboden belegging .|1|1|-7.503462529925727</comment>
+  </comments>
+</alpino_ds>

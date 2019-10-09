@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="np" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+      <node begin="1" cat="ap" end="4" id="3" rel="mod">
+        <node begin="1" end="2" getal="ev" id="4" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj1" root="mij" status="vol" vwtype="pr" word="mij"/>
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="erg" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="erg" word="erg"/>
+        <node begin="3" buiging="met-e" end="4" graad="basis" id="6" lemma="storend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="storende" word="storende"/>
+      </node>
+      <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="7" lemma="geluid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geluid" word="geluid"/>
+    </node>
+  </node>
+  <sentence>Het mij erg storende geluid</sentence>
+</alpino_ds>

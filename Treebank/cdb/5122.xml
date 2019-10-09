@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="0" cat="smain" end="19" id="1" rel="--">
+      <node begin="0" cat="np" end="9" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="resultaat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="resultaat" word="resultaten"/>
+        <node begin="2" cat="rel" end="9" id="5" rel="mod">
+          <node begin="2" end="3" getal="getal" id="6" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+          <node begin="2" cat="ssub" end="9" id="7" rel="body">
+            <node begin="2" end="3" id="8" index="1" rel="obj1"/>
+            <node begin="3" cat="np" end="6" id="9" rel="su">
+              <node begin="3" end="4" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="4" cat="mwu" end="6" id="11" rel="hd">
+                <node begin="4" end="5" id="12" lemma="Curacaosche" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Curacaosche" spectype="deeleigen" word="Curacaosche"/>
+                <node begin="5" end="6" id="13" lemma="Handel-Maatschappij" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Handel-Maatschappij" spectype="deeleigen" word="Handel-Maatschappij"/>
+              </node>
+            </node>
+            <node begin="6" cat="pp" end="8" id="14" rel="mod">
+              <node begin="6" end="7" id="15" lemma="gedurende" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="gedurende" vztype="init" word="gedurende"/>
+              <node begin="7" end="8" id="16" lemma="1969" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1969" word="1969"/>
+            </node>
+            <node begin="8" end="9" id="17" lemma="behalen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="behaal" word="behaalde" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+      <node begin="9" end="10" id="18" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+      <node begin="10" cat="conj" end="19" id="19" rel="predc">
+        <node begin="10" cat="ppres" end="12" id="20" rel="cnj">
+          <node begin="10" end="11" id="21" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="mod" root="zeer" word="zeer"/>
+          <node begin="11" buiging="zonder" end="12" id="22" lemma="bevredigen" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="hd" root="bevredigend" word="bevredigend" wvorm="od"/>
+        </node>
+        <node begin="12" conjtype="neven" end="13" id="23" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="13" cat="ap" end="19" id="24" rel="cnj">
+          <node begin="13" buiging="zonder" end="14" graad="basis" id="25" lemma="aanmerkelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="aanmerkelijk" word="aanmerkelijk"/>
+          <node begin="14" buiging="zonder" end="15" graad="comp" id="26" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="beter" word="beter"/>
+          <node begin="15" cat="cp" end="19" id="27" rel="obcomp">
+            <node begin="15" conjtype="onder" end="16" id="28" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+            <node begin="16" cat="np" end="19" id="29" rel="body">
+              <node begin="16" end="17" getal="getal" id="30" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="hd" root="die" status="vol" vwtype="aanw" word="die"/>
+              <node begin="17" cat="pp" end="19" id="31" rel="mod">
+                <node begin="17" end="18" id="32" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="18" end="19" id="33" lemma="1968" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1968" word="1968"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="34" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De resultaten die de Curacaosche Handel-Maatschappij gedurende 1969 behaalde waren zeer bevredigend en aanmerkelijk beter dan die van 1968 .</sentence>
+</alpino_ds>

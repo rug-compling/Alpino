@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="Robbert" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Robbert" word="Robbert"/>
+      <node begin="1" end="2" id="3" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
+      <node begin="2" cat="cp" end="11" id="4" rel="vc">
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="3" cat="ssub" end="11" id="6" rel="body">
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" index="1" lemma="Arie" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Arie" word="Arie"/>
+          <node begin="7" end="8" id="8" lemma="hoeven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="hoef" word="hoeft" wvorm="pv"/>
+          <node begin="3" cat="ti" end="11" id="9" rel="vc">
+            <node begin="8" end="9" id="10" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="3" cat="inf" end="11" id="11" rel="body">
+              <node begin="3" end="4" id="12" index="1" rel="su"/>
+              <node begin="9" buiging="zonder" end="10" id="13" lemma="willen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="wil" word="willen" wvorm="inf"/>
+              <node begin="3" cat="inf" end="11" id="14" rel="vc">
+                <node begin="3" end="4" id="15" index="1" rel="su"/>
+                <node begin="4" cat="np" end="6" id="16" rel="obj1">
+                  <node begin="4" end="5" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="18" lemma="trein" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="trein" word="trein"/>
+                </node>
+                <node begin="6" end="7" id="19" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+                <node begin="10" buiging="zonder" end="11" id="20" lemma="missen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="mis" word="missen" wvorm="inf"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Robbert zei dat Arie de trein niet hoeft te willen missen</sentence>
+</alpino_ds>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+        <node begin="1" cat="mwu" end="3" id="4" rel="hd">
+          <node begin="1" end="2" id="5" lemma="ADB" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="ADB" spectype="deeleigen" word="ADB"/>
+          <node begin="2" end="3" id="6" lemma="router" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="router" spectype="deeleigen" word="router"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="4" cat="np" end="6" id="8" rel="obj1">
+        <node begin="4" buiging="met-e" end="5" id="9" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="functie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="functie" word="functie"/>
+      </node>
+      <node begin="6" end="7" id="11" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+    </node>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een ADB router heeft deze functie niet .</sentence>
+</alpino_ds>

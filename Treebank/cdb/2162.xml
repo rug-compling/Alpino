@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="16" end="17" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="19" id="2" rel="--">
+      <node begin="0" cat="np" end="16" id="3" rel="su">
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="ruststand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stand" word="ruststand"/>
+        <node begin="2" cat="pp" end="16" id="6" rel="mod">
+          <node begin="2" end="3" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="3" cat="np" end="16" id="8" rel="obj1">
+            <node begin="3" end="4" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="wedstrijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wedstrijd" word="wedstrijd"/>
+            <node begin="5" cat="rel" end="16" id="11" rel="mod">
+              <node begin="5" end="6" getal="getal" id="12" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+              <node begin="5" cat="ssub" end="16" id="13" rel="body">
+                <node begin="5" end="6" id="14" index="1" rel="su"/>
+                <node begin="14" end="15" id="15" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+                <node begin="5" cat="ppart" end="16" id="16" rel="vc">
+                  <node begin="5" end="6" id="17" index="1" rel="obj1"/>
+                  <node begin="6" end="7" id="18" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
+                  <node begin="7" cat="pp" end="14" id="19" rel="mod">
+                    <node begin="7" end="8" id="20" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                    <node begin="8" cat="np" end="14" id="21" rel="obj1">
+                      <node begin="8" end="9" id="22" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                      <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="23" lemma="terrein" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="terrein" word="terrein"/>
+                      <node begin="10" cat="pp" end="12" id="24" rel="mod">
+                        <node begin="10" end="11" id="25" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                        <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="26" lemma="HFC" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="HFC" word="HFC"/>
+                      </node>
+                      <node begin="12" cat="pp" end="14" id="27" rel="mod">
+                        <node begin="12" end="13" id="28" lemma="te" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="te" vztype="init" word="te"/>
+                        <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="29" lemma="Haarlem" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Haarlem" word="Haarlem"/>
+                      </node>
+                    </node>
+                  </node>
+                  <node begin="15" buiging="zonder" end="16" id="30" lemma="spelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="speel" word="gespeeld" wvorm="vd"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="17" end="18" id="31" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="18" end="19" id="32" lemma="0-1" pos="num" postag="SPEC(symb)" pt="spec" rel="predc" root="0-1" spectype="symb" word="0-1"/>
+    </node>
+    <node begin="19" end="20" id="33" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De ruststand van de wedstrijd die gisteren op het terrein van HFC te Haarlem werd gespeeld , was 0-1 .</sentence>
+</alpino_ds>

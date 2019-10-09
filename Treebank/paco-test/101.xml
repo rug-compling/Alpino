@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="13" end="14" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="du" end="23" id="2" rel="--">
+      <node begin="0" cat="sv1" end="13" id="3" rel="sat">
+        <node begin="0" end="1" frame="verb(unacc,sg3,intransitive)" id="4" infl="sg3" lcat="sv1" pos="verb" rel="hd" root="gebeur" sc="intransitive" sense="gebeur" tense="present" word="Gebeurt"/>
+        <node begin="1" cat="np" end="3" id="5" rel="su">
+          <node begin="1" end="2" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="6" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+          <node begin="2" end="3" frame="noun(het,count,sg)" gen="het" id="7" lcat="np" num="sg" pos="noun" rel="hd" root="ongeval" sense="ongeval" word="ongeval"/>
+        </node>
+        <node begin="3" cat="conj" end="13" id="8" rel="mod">
+          <node begin="3" cat="pp" end="6" id="9" rel="cnj">
+            <node begin="3" end="4" frame="preposition(bij,[vandaan])" id="10" lcat="pp" pos="prep" rel="hd" root="bij" sense="bij" word="bij"/>
+            <node begin="4" cat="np" end="6" id="11" rel="obj1">
+              <node begin="4" end="5" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="12" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+              <node begin="5" end="6" frame="v_noun(intransitive)" id="13" lcat="np" pos="verb" rel="hd" root="verwerk" sc="intransitive" sense="verwerk" special="v_noun" word="verwerken"/>
+            </node>
+          </node>
+          <node begin="6" end="7" frame="conj(of)" id="14" lcat="vg" pos="vg" rel="crd" root="of" sense="of" word="of"/>
+          <node begin="7" cat="pp" end="13" id="15" rel="cnj">
+            <node begin="7" end="8" frame="preposition(bij,[vandaan])" id="16" lcat="pp" pos="prep" rel="hd" root="bij" sense="bij" word="bij"/>
+            <node begin="8" cat="np" end="13" id="17" rel="obj1">
+              <node begin="8" end="9" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="18" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+              <node begin="9" end="10" frame="v_noun(intransitive)" id="19" lcat="np" pos="verb" rel="hd" root="transporteer" sc="intransitive" sense="transporteer" special="v_noun" word="transporteren"/>
+              <node begin="10" cat="pp" end="13" id="20" rel="mod">
+                <node begin="10" end="11" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="21" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                <node begin="11" cat="np" end="13" id="22" rel="obj1">
+                  <node aform="base" begin="11" end="12" frame="adjective(e)" id="23" infl="e" lcat="ap" pos="adj" rel="mod" root="gevaarlijk" sense="gevaarlijk" vform="adj" word="gevaarlijke"/>
+                  <node begin="12" end="13" frame="noun(de,count,pl)" gen="de" id="24" lcat="np" num="pl" pos="noun" rel="hd" root="stof" sense="stof" word="stoffen"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="14" cat="smain" end="23" id="25" rel="nucl">
+        <node begin="14" end="15" frame="tmp_adverb" id="26" lcat="advp" pos="adv" rel="mod" root="dan" sense="dan" special="tmp" word="dan"/>
+        <node begin="15" end="16" frame="verb(unacc,sg3,intransitive)" id="27" infl="sg3" lcat="smain" pos="verb" rel="hd" root="ontsta" sc="intransitive" sense="ontsta" tense="present" word="ontstaat"/>
+        <node begin="16" end="17" frame="er_vp_adverb" id="28" lcat="advp" pos="adv" rel="mod" root="er" sense="er" special="er" word="er"/>
+        <node begin="17" cat="np" end="23" id="29" rel="su">
+          <node begin="17" end="18" frame="determiner(een)" id="30" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+          <node begin="18" end="19" frame="noun(het,count,sg)" gen="het" id="31" lcat="np" num="sg" pos="noun" rel="hd" root="risico" sense="risico" word="risico"/>
+          <node begin="19" cat="pp" end="23" id="32" rel="mod">
+            <node begin="19" end="20" frame="preposition(op,[af,na])" id="33" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+            <node begin="20" cat="np" end="23" id="34" rel="obj1">
+              <node begin="20" end="21" frame="determiner(een)" id="35" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+              <node aform="base" begin="21" end="22" frame="adjective(e)" id="36" infl="e" lcat="ap" pos="adj" rel="mod" root="ernstig" sense="ernstig" vform="adj" word="ernstige"/>
+              <node begin="22" end="23" frame="noun(de,count,sg)" gen="de" id="37" lcat="np" num="sg" pos="noun" rel="hd" root="bodem_verontreiniging" sense="bodem_verontreiniging" word="bodemverontreiniging"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" frame="punct(punt)" id="38" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Gebeurt het ongeval bij het verwerken of bij het transporteren van gevaarlijke stoffen , dan ontstaat er een risico op een ernstige bodemverontreiniging .</sentence>
+  <comments>
+    <comment>Q#101|Gebeurt het ongeval bij het verwerken of bij het transporteren van gevaarlijke stoffen , dan ontstaat er een risico op een ernstige bodemverontreiniging .|1|1|1.4356570184773099</comment>
+  </comments>
+</alpino_ds>

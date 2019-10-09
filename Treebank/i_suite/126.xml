@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="7" end="8" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="9" end="10" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="13" id="4" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="5" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="6" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="7" rel="predc">
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="8" lemma="groot" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="groot" word="groot"/>
+        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="feest" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="feest" word="feest"/>
+      </node>
+      <node begin="5" cat="cp" end="13" id="10" rel="mod">
+        <node begin="5" end="6" id="11" lemma="net" pos="adv" postag="BW()" pt="bw" rel="mod" root="net" word="net"/>
+        <node begin="6" conjtype="onder" end="7" id="12" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+        <node begin="8" cat="pp" end="13" id="13" rel="body">
+          <node begin="8" buiging="zonder" end="9" graad="basis" id="14" lemma="natuurlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="natuurlijk" word="natuurlijk"/>
+          <node begin="10" end="11" id="15" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+          <node begin="11" cat="np" end="13" id="16" rel="obj1">
+            <node begin="11" end="12" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="12" end="13" getal="mv" graad="basis" id="18" lemma="buur" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="buur" word="buren"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Het was groot feest , net als , natuurlijk , bij de buren</sentence>
+</alpino_ds>

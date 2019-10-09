@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="3" end="4" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="5" end="6" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="8" end="9" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="10" end="11" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="14" end="15" id="6" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="16" end="17" id="7" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="18" end="19" id="8" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="22" id="9" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="10" lemma="aalbrecht" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="Aalbrecht" word="Aalbrecht"/>
+      <node begin="2" end="3" genus="genus" getal="ev" graad="basis" id="11" lemma="Boosten" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="cnj" root="Boosten" word="Boosten"/>
+      <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="12" lemma="Derks" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Derks" word="Derks"/>
+      <node begin="6" cat="mwu" end="8" id="13" rel="cnj">
+        <node begin="6" end="7" id="14" lemma="Van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Van" spectype="deeleigen" word="Van"/>
+        <node begin="7" end="8" id="15" lemma="Gemert" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Gemert" spectype="deeleigen" word="Gemert"/>
+      </node>
+      <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="16" lemma="Keizer" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Keizer" word="Keizer"/>
+      <node begin="11" cat="mwu" end="14" id="17" rel="cnj">
+        <node begin="11" end="12" id="18" lemma="Van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Van" spectype="deeleigen" word="Van"/>
+        <node begin="12" end="13" id="19" lemma="der" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="der" spectype="deeleigen" word="der"/>
+        <node begin="13" end="14" id="20" lemma="Kroft" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kroft" spectype="deeleigen" word="Kroft"/>
+      </node>
+      <node begin="15" end="16" genus="genus" getal="ev" graad="basis" id="21" lemma="Pijper" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="cnj" root="Pijper" word="Pijper"/>
+      <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="22" lemma="Vervoort" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Vervoort" word="Vervoort"/>
+      <node begin="19" end="20" genus="genus" getal="ev" graad="basis" id="23" lemma="Wellinga" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="cnj" root="Wellinga" word="Wellinga"/>
+      <node begin="20" conjtype="neven" end="21" id="24" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="21" end="22" genus="genus" getal="ev" graad="basis" id="25" lemma="Elsinga" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="cnj" root="Elsinga" word="Elsinga"/>
+    </node>
+    <node begin="22" end="23" id="26" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Aalbrecht , Boosten , Derks , Van Gemert , Keizer , Van der Kroft , Pijper , Vervoort , Wellinga en Elsinga .</sentence>
+</alpino_ds>

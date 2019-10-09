@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="5" end="6" frame="punct(dubb_punt)" id="1" lcat="punct" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+    <node begin="6" end="7" frame="punct(haak_open)" id="2" lcat="punct" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" sense="(" special="haak_open" word="("/>
+    <node begin="0" cat="du" end="13" id="3" rel="--">
+      <node begin="0" cat="du" end="3" id="4" rel="dp">
+        <node begin="0" end="1" frame="tag" genus="onz" getal="ev" graad="basis" id="5" lcat="advp" lemma="mja" naamval="stan" ntype="soort" pos="tag" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="tag" root="mja" sense="mja" word="mja"/>
+        <node begin="1" cat="du" end="3" id="6" rel="nucl">
+          <node begin="1" conjtype="neven" end="2" frame="complementizer(root)" id="7" lcat="du" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" sc="root" sense="en" word="en"/>
+          <node begin="2" end="3" frame="noun(both,both,both)" gen="both" genus="zijd" getal="ev" graad="basis" id="8" lcat="np" lemma="respectere...mja" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="nucl" root="respectere...mja" sense="respectere...mja" word="respectere...mja"/>
+        </node>
+      </node>
+      <node begin="3" cat="sv1" end="13" id="9" rel="dp">
+        <node begin="3" end="4" frame="verb(hebben,sg,transitive)" id="10" infl="sg" lcat="sv1" lemma="weten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="weet" sc="transitive" sense="weet" tense="present" word="weet" wvorm="pv"/>
+        <node begin="4" cat="np" end="10" id="11" rel="su">
+          <node begin="4" case="both" def="def" end="5" frame="pronoun(nwh,u,sg,de,both,def)" gen="de" getal="getal" id="12" lcat="np" lemma="ge" naamval="nomin" num="sg" pdtype="pron" per="u" persoon="2" pos="pron" postag="VNW(pers,pron,nomin,red,2,getal)" pt="vnw" rel="hd" root="ge" sense="ge" status="red" vwtype="pers" wh="nwh" word="ge"/>
+          <node begin="7" cat="mwu" end="10" id="13" mwu_root="as_die_mense" mwu_sense="as_die_mense" rel="app">
+            <node begin="7" end="8" frame="proper_name(both)" genus="zijd" getal="ev" graad="basis" id="14" lcat="np" lemma="as" naamval="stan" ntype="soort" num="both" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="as" sense="as" word="as"/>
+            <node begin="8" buiging="zonder" end="9" frame="proper_name(both)" id="15" lcat="np" lemma="die" naamval="stan" npagr="rest" num="both" pdtype="det" pos="name" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="mwp" root="die" sense="die" vwtype="aanw" word="die"/>
+            <node begin="9" end="10" frame="proper_name(both)" genus="zijd" getal="ev" graad="basis" id="16" lcat="np" lemma="mens" naamval="stan" ntype="soort" num="both" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="mense" sense="mense" word="mense"/>
+          </node>
+        </node>
+        <node begin="10" cat="np" end="13" id="17" rel="obj1">
+          <node begin="10" end="11" frame="determiner(het,nwh,nmod,pro,nparg)" getal="ev" id="18" infl="het" lcat="detp" lemma="da" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="det" root="dat" sense="dat" status="vol" vwtype="aanw" wh="nwh" word="da"/>
+          <node aform="base" begin="11" buiging="zonder" end="12" frame="adjective(no_e(adv))" graad="basis" id="19" infl="no_e" lcat="ap" lemma="echt" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="echt" sense="echt" vform="adj" word="echt"/>
+          <node begin="12" end="13" frame="noun(both,both,both)" gen="both" id="20" lcat="np" lemma="woude" num="both" pos="noun" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="woude" sense="woude" word="woude" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" frame="punct(hellip)" id="21" lcat="punct" lemma="..." pos="punct" postag="LET()" pt="let" rel="--" root="..." sense="..." special="hellip" word="..."/>
+    <node begin="14" end="15" frame="punct(dubb_punt)" id="22" lcat="punct" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+    <node begin="15" end="16" frame="punct(haak_open)" id="23" lcat="punct" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" sense="(" special="haak_open" word="("/>
+  </node>
+  <sentence>mja en respectere...mja weet ge : ( as die mense da echt woude ... : (</sentence>
+  <comments>
+    <comment>Q#WR-P-E-A-0000009487.p.2.s.1|mja en respectere...mja weet ge : ( as die mense da echt woude ... : (|1|2|0.23798650818852501</comment>
+  </comments>
+</alpino_ds>

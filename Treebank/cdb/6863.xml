@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="smain" end="15" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="KLM" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="KLM" word="KLM"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
+      <node begin="3" end="4" id="6" lemma="vanmorgen" pos="adv" postag="BW()" pt="bw" rel="mod" root="vanmorgen" word="vanmorgen"/>
+      <node begin="0" cat="ti" end="15" id="7" rel="vc">
+        <node begin="13" end="14" id="8" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="0" cat="inf" end="15" id="9" rel="body">
+          <node begin="0" end="2" id="10" index="1" rel="su"/>
+          <node begin="4" cat="np" end="9" id="11" rel="obj1">
+            <node begin="4" end="5" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="13" lemma="behandeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="behandeling" word="behandeling"/>
+            <node begin="6" cat="pp" end="9" id="14" rel="mod">
+              <node begin="6" end="7" id="15" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="7" cat="np" end="9" id="16" rel="obj1">
+                <node begin="7" buiging="met-e" end="8" id="17" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+                <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="18" lemma="zaak" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zaak" word="zaak"/>
+              </node>
+            </node>
+          </node>
+          <node begin="9" cat="cp" end="13" id="19" rel="predc">
+            <node begin="9" end="10" id="20" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+            <node begin="10" cat="np" end="13" id="21" rel="body">
+              <node begin="10" end="11" id="22" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="11" buiging="met-e" end="12" graad="basis" id="23" lemma="intern" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="intern" word="interne"/>
+              <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="24" lemma="aangelegenheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aangelegenheid" word="aangelegenheid"/>
+            </node>
+          </node>
+          <node begin="14" buiging="zonder" end="15" id="25" lemma="beschouwen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="beschouw" word="beschouwen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="26" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De KLM zei vanmorgen de behandeling van deze zaak als een interne aangelegenheid te beschouwen .</sentence>
+</alpino_ds>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="sv1" end="8" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="kunnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kan" word="Kunt" wvorm="pv"/>
+      <node begin="1" end="2" getal="getal" id="3" index="1" lemma="u" naamval="nomin" pdtype="pron" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" root="u" status="vol" vwtype="pers" word="u"/>
+      <node begin="1" cat="inf" end="8" id="4" rel="vc">
+        <node begin="1" end="2" id="5" index="1" rel="su"/>
+        <node begin="2" end="3" getal="mv" id="6" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj2" root="ons" status="vol" vwtype="pr" word="ons"/>
+        <node begin="4" cat="np" end="6" id="7" rel="obj1">
+          <node begin="4" buiging="met-e" end="5" graad="comp" id="8" lemma="nader" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="nader" word="nadere"/>
+          <node begin="5" end="6" getal="mv" graad="basis" id="9" lemma="gegeven" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gegeven" word="gegevens"/>
+        </node>
+        <node begin="3" cat="pp" end="7" id="10" rel="pc">
+          <node begin="3" end="4" getal="getal" id="11" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="daar" status="vol" vwtype="aanw" word="daar"/>
+          <node begin="6" end="7" id="12" lemma="over" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="over" vztype="fin" word="over"/>
+        </node>
+        <node begin="7" buiging="zonder" end="8" id="13" lemma="verstrekken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verstrek" word="verstrekken" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="14" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Kunt u ons daar nadere gegevens over verstrekken ?</sentence>
+</alpino_ds>

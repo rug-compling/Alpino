@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="inf" end="3" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="niets" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="niets" status="vol" vwtype="onbep" word="Niets"/>
+      <node begin="1" end="2" id="3" lemma="buiten" pos="adv" postag="VZ(fin)" pt="vz" rel="ld" root="buiten" vztype="fin" word="buiten"/>
+      <node begin="2" buiging="zonder" end="3" id="4" lemma="steken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="steek" word="steken" wvorm="inf"/>
+    </node>
+    <node begin="3" end="4" id="5" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Niets buiten steken .</sentence>
+</alpino_ds>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="12" end="13" id="2" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="14" end="15" id="3" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="whq" end="17" id="4" rel="--">
+      <node begin="0" end="1" id="5" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="17" id="6" rel="body">
+        <node begin="0" end="1" id="7" index="1" rel="predc"/>
+        <node begin="1" end="2" id="8" lemma="heten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heet" word="heet" wvorm="pv"/>
+        <node begin="2" cat="np" end="17" id="9" rel="su">
+          <node begin="2" end="3" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="11" lemma="muurschildertechniek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="techniek" word="muurschildertechniek"/>
+          <node begin="4" cat="rel" end="17" id="12" rel="mod">
+            <node begin="4" end="5" id="13" index="2" lemma="waarbij" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarbij" word="waarbij"/>
+            <node begin="4" cat="ssub" end="17" id="14" rel="body">
+              <node begin="15" end="16" id="15" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+              <node begin="4" cat="ppart" end="17" id="16" rel="vc">
+                <node begin="4" end="5" id="17" index="2" rel="mod"/>
+                <node begin="5" cat="pp" end="14" id="18" rel="mod">
+                  <node begin="5" end="6" id="19" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                  <node begin="6" cat="np" end="14" id="20" rel="obj1">
+                    <node begin="6" end="7" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="7" buiging="met-e" end="8" graad="basis" id="22" lemma="droog" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="droog" word="droge"/>
+                    <node begin="9" cat="ppart" end="11" id="23" rel="mod">
+                      <node begin="9" end="10" id="24" lemma="reeds" pos="adv" postag="BW()" pt="bw" rel="mod" root="reeds" word="reeds"/>
+                      <node begin="10" buiging="met-e" end="11" id="25" lemma="verharden" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="verhard" word="verharde" wvorm="vd"/>
+                    </node>
+                    <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="26" lemma="ondergrond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ondergrond" word="ondergrond"/>
+                    <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="27" lemma="pleister" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="pleister" word="pleister"/>
+                  </node>
+                </node>
+                <node begin="16" buiging="zonder" end="17" id="28" lemma="schilderen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schilder" word="geschilderd" wvorm="vd"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="29" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe heet de muurschildertechniek waarbij op de droge , reeds verharde ondergrond ( pleister ) wordt geschilderd ?</sentence>
+</alpino_ds>

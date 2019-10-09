@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="smain" end="10" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="tentoonstelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tentoonstelling" word="tentoonstelling"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="10" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="obj1"/>
+        <node begin="3" buiging="zonder" end="4" id="8" lemma="begeleiden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="begeleid" word="begeleid" wvorm="vd"/>
+        <node begin="4" cat="pp" end="10" id="9" rel="mod">
+          <node begin="4" end="5" id="10" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+          <node begin="5" cat="np" end="10" id="11" rel="obj1">
+            <node begin="5" end="6" id="12" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="6" cat="conj" end="9" id="13" rel="mod">
+              <node begin="6" buiging="met-e" end="7" graad="basis" id="14" lemma="uitvoerig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="uitvoerig" word="uitvoerige"/>
+              <node begin="7" conjtype="neven" end="8" id="15" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="8" buiging="met-e" end="9" graad="basis" id="16" lemma="informatief" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="informatief" word="informatieve"/>
+            </node>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="17" lemma="catalogus" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="catalogus" word="catalogus"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="10" end="11" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De tentoonstelling wordt begeleid door een uitvoerige en informatieve catalogus .</sentence>
+</alpino_ds>

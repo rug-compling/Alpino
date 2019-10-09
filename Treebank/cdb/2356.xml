@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="Davids" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Davids" word="Davids"/>
+      <node begin="1" end="2" id="3" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
+      <node begin="2" buiging="zonder" end="3" graad="basis" id="4" lemma="fortuinlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="fortuinlijk" word="fortuinlijk"/>
+      <node begin="3" cat="pp" end="6" id="5" rel="pc">
+        <node begin="3" end="4" id="6" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+        <node begin="4" cat="np" end="6" id="7" rel="obj1">
+          <node begin="4" end="5" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="winstpunt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="punt" word="winstpunt"/>
+        </node>
+      </node>
+      <node begin="6" cat="pp" end="13" id="10" rel="mod">
+        <node begin="6" end="7" id="11" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+        <node begin="7" cat="np" end="13" id="12" rel="obj1">
+          <node begin="7" end="8" id="13" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="14" lemma="blunder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="blunder" word="blunder"/>
+          <node begin="9" cat="pp" end="13" id="15" rel="mod">
+            <node begin="9" end="10" id="16" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="10" cat="mwu" end="13" id="17" rel="obj1">
+              <node begin="10" end="11" id="18" lemma="V." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="V." spectype="deeleigen" word="V."/>
+              <node begin="11" end="12" id="19" lemma="d." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="d." spectype="deeleigen" word="d."/>
+              <node begin="12" end="13" id="20" lemma="Lei" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lei" spectype="deeleigen" word="Lei"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Davids kwam fortuinlijk aan een winstpunt door een blunder van V. d. Lei .</sentence>
+</alpino_ds>

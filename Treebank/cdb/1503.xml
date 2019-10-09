@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" cat="np" end="6" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="1" cat="mwu" end="4" id="4" rel="hd">
+          <node begin="1" end="2" id="5" lemma="Gruppo" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Gruppo" spectype="deeleigen" word="Gruppo"/>
+          <node begin="2" end="3" id="6" lemma="Nuova" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nuova" spectype="deeleigen" word="Nuova"/>
+          <node begin="3" end="4" id="7" lemma="Consonanza" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Consonanza" spectype="deeleigen" word="Consonanza"/>
+        </node>
+        <node begin="4" cat="pp" end="6" id="8" rel="mod">
+          <node begin="4" end="5" id="9" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="10" lemma="Rome" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Rome" word="Rome"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="11" lemma="bestaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="besta" word="bestaat" wvorm="pv"/>
+      <node begin="7" cat="pp" end="13" id="12" rel="pc">
+        <node begin="7" end="8" id="13" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+        <node begin="8" cat="np" end="13" id="14" rel="obj1">
+          <node begin="8" end="9" id="15" lemma="zes" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="zes" word="zes"/>
+          <node begin="9" end="10" getal="mv" graad="basis" id="16" lemma="componist" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="componist" word="componisten"/>
+          <node begin="10" cat="rel" end="13" id="17" rel="mod">
+            <node begin="10" end="11" getal="getal" id="18" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="10" cat="ssub" end="13" id="19" rel="body">
+              <node begin="10" end="11" id="20" index="1" rel="su"/>
+              <node begin="11" buiging="zonder" end="12" graad="basis" id="21" lemma="collectief" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="collectief" word="collectief"/>
+              <node begin="12" end="13" id="22" lemma="improviseren" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="improviseer" word="improviseren" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>de Gruppo Nuova Consonanza uit Rome bestaat uit zes componisten die collectief improviseren .</sentence>
+</alpino_ds>

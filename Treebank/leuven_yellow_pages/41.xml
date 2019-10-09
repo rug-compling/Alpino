@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" cat="smain" end="6" id="2" rel="nucl">
+        <node begin="0" end="1" genus="masc" getal="ev" id="3" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+        <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="0" cat="inf" end="6" id="5" rel="vc">
+          <node begin="0" end="1" id="6" index="1" rel="su"/>
+          <node begin="4" buiging="zonder" end="5" id="7" lemma="gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="gaan" wvorm="inf"/>
+          <node begin="0" cat="inf" end="6" id="8" rel="vc">
+            <node begin="0" end="1" id="9" index="1" rel="su"/>
+            <node begin="2" end="3" id="10" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
+            <node begin="3" end="4" id="11" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+            <node begin="5" buiging="zonder" end="6" id="12" lemma="vissen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vis" word="vissen" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+      <node begin="6" buiging="zonder" end="7" graad="basis" id="13" lemma="zeker" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="tag" root="zeker" word="zeker"/>
+    </node>
+    <node begin="7" end="8" id="14" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>Hij is toch wel gaan vissen zeker !</sentence>
+</alpino_ds>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="conj" end="4" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="cnj">
+        <node begin="0" buiging="met-e" end="1" graad="basis" id="3" index="1" lemma="lekker" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="lekker" word="lekkere"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="citroen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="citroen" word="citroenen"/>
+      </node>
+      <node begin="2" conjtype="neven" end="3" id="5" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="0" cat="np" end="4" id="6" rel="cnj">
+        <node begin="0" end="1" id="7" index="1" rel="mod"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="8" lemma="banaan" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="banaan" word="bananen"/>
+      </node>
+    </node>
+  </node>
+  <sentence>lekkere citroenen en bananen</sentence>
+</alpino_ds>

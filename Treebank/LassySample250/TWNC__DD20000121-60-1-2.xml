@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="6" end="7" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="14" id="2" rel="--">
+      <node begin="1" end="2" frame="verb('hebben/zijn',sg3,part_transitive(op))" id="3" infl="sg3" lcat="smain" lemma="volgen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="volg_op" sc="part_transitive(op)" sense="volg_op" tense="present" word="volgt" wvorm="pv"/>
+      <node begin="2" cat="np" end="5" id="4" rel="obj1">
+        <node begin="2" end="3" frame="proper_name(both,'PER')" id="5" lcat="np" lemma="Eric" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="hd" root="Eric" sense="Eric" spectype="deeleigen" word="Eric"/>
+        <node begin="3" cat="pp" end="5" id="6" rel="mod">
+          <node begin="3" end="4" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="7" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+          <node begin="4" end="5" frame="proper_name(both,'LOC')" getal="mv" graad="basis" id="8" lcat="np" lemma="vierse" neclass="LOC" ntype="soort" num="both" pos="name" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="Viersen" sense="Viersen" word="Viersen"/>
+        </node>
+      </node>
+      <node begin="5" end="6" frame="particle(op)" id="9" lcat="part" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" sense="op" vztype="fin" word="op"/>
+      <node begin="0" cat="np" end="14" id="10" rel="su">
+        <node begin="0" end="1" frame="proper_name(both,'PER')" getal="mv" graad="basis" id="11" lcat="np" lemma="booger" neclass="PER" ntype="soort" num="both" pos="name" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Boogers" sense="Boogers" word="Boogers"/>
+        <node begin="7" cat="rel" end="14" id="12" rel="mod">
+          <node begin="7" case="no_obl" end="8" frame="rel_pronoun(de,no_obl)" gen="de" getal="getal" id="13" index="1" lcat="np" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" sense="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+          <node begin="7" cat="ssub" end="14" id="14" rel="body">
+            <node begin="7" end="8" id="15" index="1" rel="su"/>
+            <node begin="12" end="13" frame="verb(hebben,modal_not_u,aux(inf))" id="16" infl="modal_not_u" lcat="ssub" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" sc="aux(inf)" sense="zal" tense="present" word="zal" wvorm="pv"/>
+            <node begin="7" cat="inf" end="14" id="17" rel="vc">
+              <node begin="7" end="8" id="18" index="1" rel="su"/>
+              <node begin="8" cat="pp" end="12" id="19" rel="ld">
+                <node begin="8" end="9" frame="preposition(naar,[toe])" id="20" lcat="pp" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" sense="naar" vztype="init" word="naar"/>
+                <node begin="9" cat="np" end="12" id="21" rel="obj1">
+                  <node begin="9" end="10" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="22" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                  <node aform="base" begin="10" buiging="met-e" end="11" frame="adjective(e)" graad="basis" id="23" infl="e" lcat="ap" lemma="krimpens" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Krimpense" sense="Krimpense" vform="adj" word="Krimpense"/>
+                  <node begin="11" end="12" frame="proper_name(both,'ORG')" genus="zijd" getal="ev" graad="basis" id="24" lcat="np" lemma="koag" naamval="stan" neclass="ORG" ntype="soort" num="both" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="KOAG" sense="KOAG" word="KOAG"/>
+                </node>
+              </node>
+              <node begin="13" buiging="zonder" end="14" frame="verb(hebben,inf,ld_pp)" id="25" infl="inf" lcat="inf" lemma="verkassen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verkas" sc="ld_pp" sense="verkas" word="verkassen" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" frame="punct(punt)" id="26" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Boogers volgt Eric van Viersen op , die naar het Krimpense KOAG zal verkassen .</sentence>
+  <comments>
+    <comment>Q#DD20000121-60-1-2|Boogers volgt Eric van Viersen op , die naar het Krimpense KOAG zal verkassen .|1|1|-0.24509957933257942</comment>
+  </comments>
+</alpino_ds>

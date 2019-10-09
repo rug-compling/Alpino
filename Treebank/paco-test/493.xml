@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="0" cat="smain" end="24" id="1" rel="--">
+      <node begin="5" end="6" frame="verb('hebben/zijn',pl,aux(inf))" id="2" infl="pl" lcat="smain" pos="verb" rel="hd" root="kan" sc="aux(inf)" sense="kan" tense="present" word="kunnen"/>
+      <node begin="6" cat="np" end="8" id="3" index="1" rel="su">
+        <node begin="6" end="7" frame="determiner(de)" id="4" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node begin="7" end="8" frame="noun(de,count,pl)" gen="de" id="5" lcat="np" num="pl" pos="noun" rel="hd" root="lidstaat" sense="lidstaat" word="lidstaten"/>
+      </node>
+      <node begin="0" cat="inf" end="24" id="6" rel="vc">
+        <node begin="0" cat="pp" end="5" id="7" rel="mod">
+          <node begin="0" end="1" frame="preposition(in,[])" id="8" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="In"/>
+          <node begin="1" cat="np" end="5" id="9" rel="obj1">
+            <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" id="10" lcat="np" num="sg" pos="noun" rel="hd" root="afwijking" sense="afwijking" word="afwijking"/>
+            <node begin="2" cat="pp" end="5" id="11" rel="mod">
+              <node begin="2" end="3" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="12" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+              <node begin="3" cat="np" end="5" id="13" rel="obj1">
+                <node begin="3" end="4" frame="noun(het,count,sg)" gen="het" id="14" lcat="np" num="sg" pos="noun" rel="hd" root="artikel" sense="artikel" word="artikel"/>
+                <node begin="4" end="5" frame="number(hoofd(pl_num))" id="15" infl="pl_num" lcat="detp" pos="num" rel="app" root="6" sense="6" special="hoofd" word="6"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="6" end="8" id="16" index="1" rel="su"/>
+        <node begin="8" end="9" frame="noun(de,count,pl)" gen="de" id="17" index="2" lcat="np" num="pl" pos="noun" rel="obj1" root="beheer_maatschappij" sense="beheer_maatschappij" word="beheermaatschappijen"/>
+        <node begin="9" end="10" frame="verb(hebben,inf,np_vp_obj1)" id="18" infl="inf" lcat="inf" pos="verb" rel="hd" root="machtig" sc="np_vp_obj1" sense="machtig" word="machtigen"/>
+        <node begin="8" cat="ti" end="16" id="19" rel="vc">
+          <node begin="14" end="15" frame="complementizer(te)" id="20" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+          <node begin="8" cat="inf" end="16" id="21" rel="body">
+            <node begin="8" end="9" id="22" index="2" rel="su"/>
+            <node begin="10" end="11" frame="noun(het,count,pl)" gen="het" id="23" lcat="np" num="pl" pos="noun" rel="obj1" root="certificaat" sense="certificaat" word="certificaten"/>
+            <node begin="11" cat="pp" end="13" id="24" rel="pc">
+              <node begin="11" end="12" frame="preposition(aan,[vooraf])" id="25" lcat="pp" pos="prep" rel="hd" root="aan" sense="aan" word="aan"/>
+              <node begin="12" end="13" frame="proper_name(both,'PER')" id="26" lcat="np" neclass="PER" num="both" pos="name" rel="obj1" root="Toonder" sense="Toonder" word="toonder"/>
+            </node>
+            <node begin="13" end="14" frame="particle(uit)" id="27" lcat="part" pos="part" rel="svp" root="uit" sense="uit" word="uit"/>
+            <node begin="15" end="16" frame="verb(hebben,inf,part_np_pc_pp(uit,aan))" id="28" infl="inf" lcat="inf" pos="verb" rel="hd" root="geef_uit" sc="part_np_pc_pp(uit,aan)" sense="geef_uit-aan" word="geven"/>
+          </node>
+        </node>
+        <node begin="16" cat="pp" end="24" id="29" rel="mod">
+          <node begin="16" end="17" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="30" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+          <node begin="17" cat="np" end="24" id="31" rel="obj1">
+            <node begin="17" cat="ppart" end="20" id="32" rel="mod">
+              <node begin="17" cat="pp" end="19" id="33" rel="pc">
+                <node begin="17" end="18" frame="preposition(op,[af,na])" id="34" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+                <node begin="18" end="19" frame="noun(de,count,sg)" gen="de" id="35" lcat="np" num="sg" pos="noun" rel="obj1" root="naam" sense="naam" word="naam"/>
+              </node>
+              <node aform="base" begin="19" end="20" frame="adjective(ge_e,pp(op))" id="36" infl="e" lcat="ppart" pos="adj" rel="hd" root="gesteld" sc="pp(op)" sense="gesteld-op" vform="psp" word="gestelde"/>
+            </node>
+            <node begin="20" end="21" frame="noun(het,count,pl)" gen="het" id="37" lcat="np" num="pl" pos="noun" rel="hd" root="effect" sense="effect" word="effecten"/>
+            <node begin="21" cat="pp" end="24" id="38" rel="mod">
+              <node begin="21" end="22" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="39" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+              <node begin="22" cat="np" end="24" id="40" rel="obj1">
+                <node aform="compar" begin="22" end="23" frame="adjective(ere)" id="41" infl="e" lcat="ap" pos="adj" rel="mod" root="ander" sense="ander" vform="adj" word="andere"/>
+                <node begin="23" end="24" frame="noun(de,count,pl)" gen="de" id="42" lcat="np" num="pl" pos="noun" rel="hd" root="vennootschap" sense="vennootschap" word="vennootschappen"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" frame="punct(punt)" id="43" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>In afwijking van artikel 6 kunnen de lidstaten beheermaatschappijen machtigen certificaten aan toonder uit te geven van op naam gestelde effecten van andere vennootschappen .</sentence>
+  <comments>
+    <comment>Q#493|In afwijking van artikel 6 kunnen de lidstaten beheermaatschappijen machtigen certificaten aan toonder uit te geven van op naam gestelde effecten van andere vennootschappen .|1|1|3.022295805477843</comment>
+  </comments>
+</alpino_ds>

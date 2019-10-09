@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" cat="mwu" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="Aalt" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Aalt" spectype="deeleigen" word="Aalt"/>
+        <node begin="1" end="2" id="4" lemma="Toersen" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Toersen" spectype="deeleigen" word="Toersen"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+      <node begin="3" end="4" getal-n="zonder-n" id="6" lemma="drie" numtype="rang" pos="num" positie="nom" postag="TW(rang,nom,zonder-n)" pt="tw" rel="predc" root="derde" word="derde"/>
+    </node>
+    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Aalt Toersen werd derde .</sentence>
+</alpino_ds>

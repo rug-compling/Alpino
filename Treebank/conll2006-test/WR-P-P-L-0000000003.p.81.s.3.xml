@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="20" end="21" id="2" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="conj" end="22" id="3" rel="--">
+      <node begin="0" cat="smain" end="10" id="4" rel="cnj">
+        <node begin="0" end="1" getal="getal" id="5" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+        <node begin="1" end="2" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+        <node begin="2" cat="np" end="9" id="7" rel="su">
+          <node begin="2" buiging="met-e" end="3" graad="basis" id="8" lemma="divers" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="divers" word="diverse"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="9" lemma="ontwikkeling" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="ontwikkeling" word="ontwikkelingen"/>
+          <node begin="4" cat="pp" end="9" id="10" rel="mod">
+            <node begin="4" cat="mwu" end="8" id="11" rel="hd">
+              <node begin="4" end="5" id="12" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+              <node begin="5" end="6" id="13" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="prep" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+              <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="14" lemma="gebied" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="gebied" word="gebied"/>
+              <node begin="7" end="8" id="15" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+            </node>
+            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="16" lemma="(jeugd-)monitoring" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="(jeugd-)monitoring" word="(jeugd-)monitoring"/>
+          </node>
+        </node>
+        <node begin="9" buiging="zonder" end="10" id="17" lemma="gaan" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="predc" root="ga" word="gaande" wvorm="od"/>
+      </node>
+      <node begin="11" conjtype="neven" end="12" id="18" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+      <node begin="12" cat="smain" end="22" id="19" rel="cnj">
+        <node begin="12" cat="np" end="19" id="20" rel="su">
+          <node begin="12" buiging="met-e" end="13" graad="basis" id="21" lemma="landelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="landelijk" word="landelijke"/>
+          <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="22" lemma="consensus" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="consensus" word="consensus"/>
+          <node begin="14" cat="pp" end="19" id="23" rel="mod">
+            <node begin="14" end="15" id="24" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+            <node begin="15" cat="conj" end="19" id="25" rel="obj1">
+              <node begin="16" conjtype="neven" end="17" id="26" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="15" cat="np" end="19" id="27" rel="cnj">
+                <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="28" lemma="inhoud" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="inhoud" word="inhoud"/>
+                <node begin="18" end="19" id="29" index="1" lemma="daarvan" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarvan" word="daarvan"/>
+              </node>
+              <node begin="17" cat="np" end="19" id="30" rel="cnj">
+                <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="31" lemma="periodiciteit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="periodiciteit" word="periodiciteit"/>
+                <node begin="18" end="19" id="32" index="1" rel="mod"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="19" end="20" id="33" lemma="ontbreken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ontbreek" word="ontbreekt" wvorm="pv"/>
+        <node begin="21" end="22" id="34" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+      </node>
+    </node>
+    <node begin="22" end="23" id="35" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="23" end="24" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Er zijn diverse ontwikkelingen op het gebied van (jeugd-)monitoring gaande , maar landelijke consensus over inhoud en periodiciteit daarvan ontbreekt ( nog ) .</sentence>
+</alpino_ds>

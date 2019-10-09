@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="1" end="2" frame="punct(dubb_punt)" id="1" lcat="punct" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+    <node begin="5" end="6" frame="punct(punt_komma)" id="2" lcat="punct" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" sense=";" special="punt_komma" word=";"/>
+    <node begin="7" end="8" frame="punct(punt)" id="3" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+    <node begin="11" end="12" frame="punct(komma)" id="4" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="13" end="14" frame="punct(haak_open)" id="5" lcat="punct" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" sense="(" special="haak_open" word="("/>
+    <node begin="0" cat="du" end="16" id="6" rel="--">
+      <node begin="0" cat="np" end="5" id="7" rel="dp">
+        <node begin="0" end="1" frame="proper_name(both,'LOC')" id="8" lcat="np" lemma="paris" neclass="LOC" num="both" pos="name" postag="SPEC(vreemd)" pt="spec" rel="hd" root="Paris" sense="Paris" spectype="vreemd" word="Paris"/>
+        <node begin="2" cat="mwu" end="5" id="9" mwu_root="F.-X._de_Guibert" mwu_sense="F.-X._de_Guibert" rel="app">
+          <node begin="2" end="3" frame="proper_name(both,'PER')" id="10" lcat="np" lemma="F.-X." neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="F.-X." sense="F.-X." spectype="deeleigen" word="F.-X."/>
+          <node begin="3" end="4" frame="proper_name(both,'PER')" id="11" lcat="np" lemma="de" lwtype="bep" naamval="stan" neclass="PER" npagr="rest" num="both" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" sense="de" word="de"/>
+          <node begin="4" end="5" frame="proper_name(both,'PER')" id="12" lcat="np" lemma="Guibert" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Guibert" sense="Guibert" spectype="deeleigen" word="Guibert"/>
+        </node>
+      </node>
+      <node begin="6" buiging="zonder" end="7" frame="proper_name(both,'PER')" id="13" lcat="np" lemma="é" neclass="PER" num="both" pos="name" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="dp" root="Ed" sense="Ed" word="Éd" wvorm="vd"/>
+      <node begin="8" cat="np" end="13" id="14" rel="dp">
+        <node begin="8" end="9" frame="determiner(de)" id="15" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+        <node begin="9" cat="mwu" end="11" id="16" mwu_root="l&apos;_Œil" mwu_sense="l&apos;_Œil" rel="hd">
+          <node begin="9" end="10" frame="proper_name(both)" id="17" lcat="np" lemma="l&apos;" num="both" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="l&apos;" sense="l&apos;" spectype="vreemd" word="l&apos;"/>
+          <node begin="10" end="11" frame="proper_name(both)" id="18" lcat="np" lemma="œil" num="both" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Œil" sense="Œil" spectype="vreemd" word="Œil"/>
+        </node>
+        <node begin="12" end="13" frame="number(hoofd(pl_num))" id="19" infl="pl_num" lcat="np" lemma="1991" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="app" root="1991" sense="1991" special="hoofd" word="1991"/>
+      </node>
+      <node begin="14" cat="mwu" end="16" id="20" mwu_root="2ème_éd" mwu_sense="2ème_éd" rel="dp">
+        <node begin="14" end="15" frame="proper_name(both)" getal-n="zonder-n" id="21" lcat="np" lemma="2ème" num="both" numtype="rang" pos="name" positie="nom" postag="TW(rang,nom,zonder-n)" pt="tw" rel="mwp" root="2ème" sense="2ème" word="2ème"/>
+        <node begin="15" end="16" frame="proper_name(both)" genus="zijd" getal="ev" graad="basis" id="22" lcat="np" lemma="é" naamval="stan" ntype="soort" num="both" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="éd" sense="éd" word="éd"/>
+      </node>
+    </node>
+    <node begin="16" end="17" frame="punct(punt)" id="23" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+    <node begin="17" end="18" frame="punct(haak_sluit)" id="24" lcat="punct" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+    <node begin="18" end="19" frame="punct(punt)" id="25" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Paris : F.-X. de Guibert ; Éd . de l&apos; Œil , 1991 ( 2ème éd . ) .</sentence>
+  <comments>
+    <comment>Q#363385-8-172|Paris : F.-X. de Guibert ; Éd . de l&apos; Œil , 1991 ( 2ème éd . ) .|1|4|0.2902903469422874</comment>
+  </comments>
+</alpino_ds>

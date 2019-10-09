@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="34" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="8" end="9" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="19" end="20" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="26" end="27" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="33" id="5" rel="--">
+      <node begin="0" end="1" getal="ev" id="6" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="7" lemma="denken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="denk" word="dacht" wvorm="pv"/>
+      <node begin="2" cat="cp" end="33" id="8" rel="vc">
+        <node begin="2" conjtype="onder" end="3" id="9" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="3" cat="ssub" end="33" id="10" rel="body">
+          <node begin="3" cat="np" end="8" id="11" rel="su">
+            <node begin="3" buiging="met-e" end="4" getal-n="mv-n" graad="basis" id="12" lemma="beide" naamval="stan" pdtype="grad" pos="noun" positie="nom" postag="VNW(onbep,grad,stan,nom,met-e,mv-n,basis)" pt="vnw" rel="hd" root="beiden" vwtype="onbep" word="beiden"/>
+            <node begin="5" cat="conj" end="8" id="13" rel="app">
+              <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="14" lemma="Biesheuvel" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Biesheuvel" word="Biesheuvel"/>
+              <node begin="6" conjtype="neven" end="7" id="15" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="16" lemma="Verkuyl" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Verkuyl" word="Verkuyl"/>
+            </node>
+          </node>
+          <node begin="13" end="14" id="17" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+          <node begin="9" cat="ap" end="33" id="18" rel="predc">
+            <node begin="9" end="10" genus="onz" getal="ev" id="19" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+            <node begin="12" end="13" id="20" lemma="eens" pos="adj" postag="BW()" pt="bw" rel="hd" root="eens" word="eens"/>
+            <node begin="10" cat="pp" end="33" id="21" rel="pc">
+              <node begin="10" end="11" getal="getal" id="22" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="pobj1" root="er" status="red" vwtype="aanw" word="er"/>
+              <node begin="11" end="12" id="23" lemma="over" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="over" vztype="fin" word="over"/>
+              <node begin="14" cat="conj" end="33" id="24" rel="vc">
+                <node begin="14" cat="cp" end="19" id="25" rel="cnj">
+                  <node begin="14" conjtype="onder" end="15" id="26" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+                  <node begin="15" cat="ssub" end="19" id="27" rel="body">
+                    <node begin="15" cat="np" end="17" id="28" rel="su">
+                      <node begin="15" end="16" id="29" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                      <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="30" lemma="kernoorlog" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oorlog" word="kernoorlog"/>
+                    </node>
+                    <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="31" lemma="zonde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="predc" root="zonde" word="zonde"/>
+                    <node begin="18" end="19" id="32" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+                  </node>
+                </node>
+                <node begin="20" conjtype="neven" end="21" id="33" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+                <node begin="21" cat="cp" end="33" id="34" rel="cnj">
+                  <node begin="21" conjtype="onder" end="22" id="35" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+                  <node begin="22" cat="ssub" end="33" id="36" rel="body">
+                    <node begin="22" cat="np" end="25" id="37" rel="predc">
+                      <node begin="22" end="23" id="38" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                      <node begin="23" buiging="met-e" end="24" graad="basis" id="39" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="grote"/>
+                      <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="40" lemma="probleem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="probleem" word="probleem"/>
+                    </node>
+                    <node begin="25" end="26" id="41" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+                    <node begin="27" cat="whq" end="33" id="42" rel="su">
+                      <node begin="27" end="28" id="43" index="1" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="whd" root="hoe" word="hoe"/>
+                      <node begin="27" cat="sv1" end="33" id="44" rel="body">
+                        <node begin="27" end="28" id="45" index="1" rel="mod"/>
+                        <node begin="28" end="29" id="46" lemma="raken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="raak" word="raak" wvorm="pv"/>
+                        <node begin="29" end="30" getal="ev" id="47" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="noun" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+                        <node begin="30" cat="np" end="32" id="48" rel="obj1">
+                          <node begin="30" buiging="zonder" end="31" id="49" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>
+                          <node begin="31" end="32" genus="zijd" getal="ev" graad="basis" id="50" lemma="zonde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zonde" word="zonde"/>
+                        </node>
+                        <node begin="32" buiging="zonder" end="33" graad="basis" id="51" lemma="kwijt" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="kwijt" word="kwijt"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="33" end="34" id="52" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ik dacht dat beiden , Biesheuvel en Verkuyl , het er over eens waren dat een kernoorlog zonde is , maar dat het grote probleem is , hoe raak je die zonde kwijt .</sentence>
+</alpino_ds>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="25" id="2" rel="--">
+      <node begin="0" cat="smain" end="22" id="3" rel="cnj">
+        <node begin="4" end="5" id="4" index="1" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+        <node begin="5" cat="np" end="20" id="5" index="2" rel="su">
+          <node begin="5" end="6" id="6" lemma="3" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="3" word="3"/>
+          <node begin="6" end="7" id="7" lemma="pas" pos="adv" postag="BW()" pt="bw" rel="mod" root="pas" word="pas"/>
+          <node begin="7" buiging="met-e" end="8" getal-n="mv-n" id="8" lemma="benoemen" pos="noun" positie="nom" postag="WW(vd,nom,met-e,mv-n)" pt="ww" rel="hd" root="benoemde" word="benoemden" wvorm="vd"/>
+          <node begin="9" cat="rel" end="20" id="9" rel="mod">
+            <node begin="9" end="10" getal="getal" id="10" index="3" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="9" cat="ssub" end="20" id="11" rel="body">
+              <node begin="9" end="10" id="12" index="3" rel="su"/>
+              <node begin="10" end="11" id="13" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+              <node begin="11" end="12" id="14" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+              <node begin="12" buiging="zonder" end="13" graad="basis" id="15" lemma="geheel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="geheel" word="geheel"/>
+              <node begin="13" cat="ap" end="19" id="16" rel="predc">
+                <node begin="13" cat="pp" end="16" id="17" rel="pc">
+                  <node begin="13" end="14" id="18" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="14" cat="np" end="16" id="19" rel="obj1">
+                    <node begin="14" end="15" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="15" end="16" getal="mv" graad="basis" id="21" lemma="feit" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="feit" word="feiten"/>
+                  </node>
+                </node>
+                <node begin="16" cat="mwu" end="19" id="22" rel="hd">
+                  <node begin="16" end="17" id="23" lemma="op" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+                  <node begin="17" end="18" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="adj" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+                  <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="25" lemma="hoogte" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="hoogte" word="hoogte"/>
+                </node>
+              </node>
+              <node begin="19" end="20" id="26" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+        <node begin="0" cat="ppart" end="22" id="27" rel="vc">
+          <node begin="0" cat="pp" end="4" id="28" index="4" rel="mod">
+            <node begin="0" end="1" id="29" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="Van"/>
+            <node begin="1" cat="np" end="4" id="30" rel="obj1">
+              <node begin="1" end="2" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="2" end="3" id="32" lemma="5" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="5" word="5"/>
+              <node begin="3" end="4" getal="mv" graad="basis" id="33" lemma="werkplaatsassistent" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="assistent" word="werkplaatsassistenten"/>
+            </node>
+          </node>
+          <node begin="5" end="20" id="34" index="2" rel="su"/>
+          <node begin="20" buiging="zonder" end="21" graad="basis" id="35" lemma="blanco" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="blanco" word="blanco"/>
+          <node begin="21" buiging="zonder" end="22" id="36" index="5" lemma="stemmen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stem" word="gestemd" wvorm="vd"/>
+        </node>
+      </node>
+      <node begin="22" conjtype="neven" end="23" id="37" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="0" cat="smain" end="25" id="38" rel="cnj">
+        <node begin="4" end="5" id="39" index="1" rel="hd"/>
+        <node begin="23" end="24" id="40" index="6" lemma="twee" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="su" root="twee" word="twee"/>
+        <node begin="0" cat="ppart" end="25" id="41" rel="vc">
+          <node begin="0" end="4" id="42" index="4" rel="mod"/>
+          <node begin="21" end="22" id="43" index="5" rel="hd"/>
+          <node begin="23" end="24" id="44" index="6" rel="su"/>
+          <node begin="24" end="25" id="45" lemma="voor" pos="adj" postag="VZ(fin)" pt="vz" rel="predc" root="voor" vztype="fin" word="voor"/>
+        </node>
+      </node>
+    </node>
+    <node begin="25" end="26" id="46" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Van de 5 werkplaatsassistenten hebben 3 pas benoemden , die nog niet geheel van de feiten op de hoogte waren blanco gestemd en twee voor .</sentence>
+</alpino_ds>

@@ -1,0 +1,23 @@
+extra/./98.xml	//node[ @cat and @rel="mod" and not(@cat="rel") and not(@cat="cp") and not(@cat="np") and not(@cat="advp") and not(@cat="ap") and not(@cat="ppart") and not(@cat="pp") and not(@cat="mwu") and not(@cat="conj") and not(@cat="oti") and not(@cat="du") and not(@cat="smain") and not(@cat="whrel") and not(@cat="ti") and not(@cat="sv1") and not(@cat="ppres")]	unexpected mod-category.   Expected cats: rel cp np advp ap ppart pp mwu conj oti du smain whrel ti sv1 ppres
+extra/./112.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+extra/./403.xml	//node[ @cat and @rel="predm" and not(@cat="advp") and not(@cat="np") and not(@cat="ap") and not(@cat="ppart") and not(@cat="ppres") and not(@cat="cp") and not(@cat="pp") and not(@cat="conj") and not(@cat="mwu") and not(@cat="whrel")]	unexpected predm-category.   Expected cats: advp np ap ppart ppres cp pp conj mwu whrel
+extra/./420.xml	//node[@pt="lid" and not(@rel="det" or ../@rel="det" or @rel="mwp" or @rel="--") ]	unexpected role for determiner
+extra/./560.xml	//node[@pos="comp" and @root="dat" and not(../@cat="cp")]	dat comp without cp
+extra/./561.xml	//node[@pos="comp" and @root="dat" and not(../@cat="cp")]	dat comp without cp
+extra/./570.xml	//node[@pos="comp" and @root="dat" and not(../@cat="cp")]	dat comp without cp
+extra/./570.xml	//node[@pos="comp" and @root="dat" and not(../@cat="cp")]	dat comp without cp
+extra/./571.xml	//node[@pos="comp" and @root="dat" and not(../@cat="cp")]	dat comp without cp
+extra/./572.xml	//node[@pos="comp" and @root="dat" and not(../@cat="cp")]	dat comp without cp
+extra/./610.xml	//node[@pos="comp" and @root="dat" and not(../@cat="cp")]	dat comp without cp
+extra/./611.xml	//node[@pos="comp" and @root="dat" and not(../@cat="cp")]	dat comp without cp
+extra/./45.xml	//node[ @naamval="gen" and @pt="n" and not(@rel="det" or @rel="mwp" or @rel="hd") ]	Genitive noun, but not determiner?
+extra/./349.xml	//node[@lemma="als" and (../@rel="predc" or ../@rel="predm" ) and not(@rel="crd") and ../node[@cat="np" or @pt="n"] and not(@postag="VZ(init)") and not ( @begin = //node[@lemma="net"]/@end) ]	als is perhaps VZ(init) here
+extra/./951.xml	//node[ @cat and @rel="svp" and not(@cat="pp") and not(@cat="mwu") and not(@cat="ti") and not(@cat="ahi") and not(@cat="inf")]	unexpected svp-category.   Expected cats: pp mwu ti ahi inf
+extra/./952.xml	//node[ @cat and @rel="svp" and not(@cat="pp") and not(@cat="mwu") and not(@cat="ti") and not(@cat="ahi") and not(@cat="inf")]	unexpected svp-category.   Expected cats: pp mwu ti ahi inf
+extra/./954.xml	//node[ @cat and @rel="svp" and not(@cat="pp") and not(@cat="mwu") and not(@cat="ti") and not(@cat="ahi") and not(@cat="inf")]	unexpected svp-category.   Expected cats: pp mwu ti ahi inf
+extra/./955.xml	//node[ @cat and @rel="svp" and not(@cat="pp") and not(@cat="mwu") and not(@cat="ti") and not(@cat="ahi") and not(@cat="inf")]	unexpected svp-category.   Expected cats: pp mwu ti ahi inf
+extra/./956.xml	//node[ @cat and @rel="svp" and not(@cat="pp") and not(@cat="mwu") and not(@cat="ti") and not(@cat="ahi") and not(@cat="inf")]	unexpected svp-category.   Expected cats: pp mwu ti ahi inf
+extra/./957.xml	//node[ @cat and @rel="svp" and not(@cat="pp") and not(@cat="mwu") and not(@cat="ti") and not(@cat="ahi") and not(@cat="inf")]	unexpected svp-category.   Expected cats: pp mwu ti ahi inf
+extra/./1147.xml	//node[@wvorm="pv" and not(../@cat="smain" or ../@cat="ssub" or ../@cat="sv1" or ../@cat="mwu" or ../@cat="top" or ../@cat="du") ]	unexpected finite verb?
+extra/./1156.xml	//node[ ../@cat="detp" and not(@rel="hd") and not(@rel="obcomp") and not(@rel="mod") and not(@rel="me")]	unexpected detp-daughter.   Expected rels: hd obcomp mod me
+extra/./1247.xml	//node[ @cat and @rel="svp" and not(@cat="pp") and not(@cat="mwu") and not(@cat="ti") and not(@cat="ahi") and not(@cat="inf")]	unexpected svp-category.   Expected cats: pp mwu ti ahi inf

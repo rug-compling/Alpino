@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="smain" end="17" id="1" rel="--">
+      <node begin="0" cat="pp" end="3" id="2" rel="mod">
+        <node begin="0" end="1" frame="preposition(met,[mee,[en,al]])" id="3" lcat="pp" pos="prep" rel="hd" root="met" sense="met" word="Met"/>
+        <node begin="1" cat="np" end="3" id="4" rel="obj1">
+          <node begin="1" end="2" frame="determiner(de,nwh,nmod,pro,nparg)" id="5" infl="de" lcat="detp" pos="det" rel="det" root="deze" sense="deze" wh="nwh" word="deze"/>
+          <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="6" lcat="np" num="sg" pos="noun" rel="hd" root="oproep" sense="oproep" word="oproep"/>
+        </node>
+      </node>
+      <node begin="3" end="4" frame="verb(hebben,pl,part_np_vp_obj1(uit))" id="7" infl="pl" lcat="smain" pos="verb" rel="hd" root="nodig_uit" sc="part_np_vp_obj1(uit)" sense="nodig_uit" tense="present" word="nodigen"/>
+      <node begin="4" case="nom" def="def" end="5" frame="pronoun(nwh,fir,pl,de,nom,def,wkpro)" gen="de" id="8" lcat="np" num="pl" per="fir" pos="pron" rel="su" root="we" sense="we" special="wkpro" wh="nwh" word="we"/>
+      <node begin="5" cat="conj" end="8" id="9" index="1" rel="obj1">
+        <node begin="5" end="6" frame="noun(het,count,pl)" gen="het" id="10" lcat="np" num="pl" pos="noun" rel="cnj" root="bedrijf" sense="bedrijf" word="bedrijven"/>
+        <node begin="6" end="7" frame="conj(en)" id="11" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+        <node begin="7" end="8" frame="noun(de,count,pl)" gen="de" id="12" lcat="np" num="pl" pos="noun" rel="cnj" root="organisatie" sense="organisatie" word="organisaties"/>
+      </node>
+      <node begin="8" end="9" frame="particle(uit)" id="13" lcat="part" pos="part" rel="svp" root="uit" sense="uit" word="uit"/>
+      <node begin="5" cat="oti" end="17" id="14" rel="vc">
+        <node begin="9" end="10" frame="complementizer(om)" id="15" lcat="oti" pos="comp" rel="cmp" root="om" sc="om" sense="om" word="om"/>
+        <node begin="5" cat="ti" end="17" id="16" rel="body">
+          <node begin="11" end="12" frame="complementizer(te)" id="17" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+          <node begin="5" cat="inf" end="17" id="18" rel="body">
+            <node begin="5" end="8" id="19" index="1" rel="su"/>
+            <node begin="10" end="11" frame="reflexive(u_thi,both)" id="20" lcat="np" num="both" per="u_thi" pos="pron" refl="refl" rel="se" root="zich" sense="zich" word="zich"/>
+            <node begin="12" end="13" frame="verb(hebben,inf,refl_ld_pp)" id="21" infl="inf" lcat="inf" pos="verb" rel="hd" root="engageer" sc="refl_ld_pp" sense="zich-engageer" word="engageren"/>
+            <node begin="13" cat="pp" end="17" id="22" rel="ld">
+              <node begin="13" end="14" frame="preposition(in,[])" id="23" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+              <node begin="14" cat="np" end="17" id="24" rel="obj1">
+                <node begin="14" end="15" frame="determiner(de,nwh,nmod,pro,nparg)" id="25" infl="de" lcat="detp" pos="det" rel="det" root="deze" sense="deze" wh="nwh" word="deze"/>
+                <node aform="base" begin="15" end="16" frame="adjective(ende(padv))" id="26" infl="e" lcat="ppres" pos="adj" rel="mod" root="vernieuw" sense="vernieuw" vform="gerund" word="vernieuwende"/>
+                <node begin="16" end="17" frame="noun(de,mass,sg)" gen="de" id="27" lcat="np" num="sg" pos="noun" rel="hd" root="aanpak" sense="aanpak" word="aanpak"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" frame="punct(punt)" id="28" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Met deze oproep nodigen we bedrijven en organisaties uit om zich te engageren in deze vernieuwende aanpak .</sentence>
+  <comments>
+    <comment>Q#177|Met deze oproep nodigen we bedrijven en organisaties uit om zich te engageren in deze vernieuwende aanpak .|1|1|-7.941228327055687</comment>
+  </comments>
+</alpino_ds>

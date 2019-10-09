@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" cat="np" end="7" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="Het"/>
+        <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="verlies" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="verlies" word="verlies"/>
+        <node begin="2" cat="pp" end="5" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="3" cat="np" end="5" id="7" rel="obj1">
+            <node begin="3" end="4" id="8" infl="pl_num" lemma="51" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="51" special="hoofd" word="51"/>
+            <node begin="4" end="5" gen="de" getal="mv" graad="basis" id="9" lemma="beurt" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="beurt" word="beurten"/>
+          </node>
+        </node>
+        <node begin="5" cat="pp" end="7" id="10" rel="mod">
+          <node begin="5" end="6" id="11" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="6" end="7" id="12" lemma="30-13" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="30-13" word="30-13"/>
+        </node>
+      </node>
+      <node begin="7" end="8" id="13" infl="sg" lemma="over_laten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="laat_over" sc="part_fixed(over,[vc(raad,pass_te,intransitive),acc],norm_passive)" stype="declarative" tense="present" word="laat" wvorm="pv"/>
+      <node begin="8" end="9" id="14" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" special="tmp" word="dan"/>
+      <node begin="9" end="10" id="15" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" special="sentence" word="ook"/>
+      <node aform="base" begin="10" buiging="zonder" end="11" graad="basis" id="16" infl="no_e" lemma="weinig" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="obj1" rnum="sg" root="weinig" vform="adj" vwtype="onbep" word="weinig"/>
+      <node begin="11" cat="ti" end="13" id="17" rel="svp">
+        <node begin="11" end="12" id="18" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+        <node begin="12" buiging="zonder" end="13" id="19" infl="inf" lemma="raden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="raad" sc="intransitive" word="raden" wvorm="inf"/>
+      </node>
+      <node begin="13" end="14" id="20" lemma="over" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="over" vztype="fin" word="over"/>
+    </node>
+    <node begin="14" end="15" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Het verlies in 51 beurten met 30-13 laat dan ook weinig te raden over .</sentence>
+</alpino_ds>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" cat="pp" end="2" id="2" rel="mod">
+        <node begin="0" end="1" id="3" pos="prep" rel="hd" root="in" word="In"/>
+        <node begin="1" end="2" id="4" neclass="year" pos="noun" rel="obj1" root="2005" word="2005"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="pl" pos="verb" rel="hd" root="ben" sc="copula" tense="past" word="waren"/>
+      <node begin="3" cat="np" end="7" id="6" rel="su">
+        <node begin="3" end="4" id="7" infl="both" pos="num" rel="hd" root="60,5%" special="hoofd" word="60,5%"/>
+        <node begin="4" cat="pp" end="7" id="8" rel="mod">
+          <node begin="4" end="5" id="9" pos="prep" rel="hd" root="van" word="van"/>
+          <node begin="5" cat="np" end="7" id="10" rel="obj1">
+            <node begin="5" end="6" id="11" infl="de" pos="det" rel="det" root="de" word="de"/>
+            <node aform="base" begin="6" end="7" id="12" num="pl" pos="adj" rel="hd" root="werkloos" special="a_noun" word="werklozen"/>
+          </node>
+        </node>
+      </node>
+      <node begin="7" cat="np" end="12" id="13" rel="mod">
+        <node begin="7" end="8" id="14" pos="adv" rel="mod" root="al" sc="modal" word="al"/>
+        <node begin="8" cat="detp" end="11" id="15" rel="det">
+          <node begin="8" cat="mwu" end="10" id="16" mwu_root="meer_dan" mwu_sense="meer_dan" rel="mod">
+            <node begin="8" end="9" id="17" infl="both" pos="det" rel="mwp" root="meer" special="pre_num_adv" word="meer"/>
+            <node begin="9" end="10" id="18" infl="both" pos="det" rel="mwp" root="dan" special="pre_num_adv" word="dan"/>
+          </node>
+          <node begin="10" end="11" id="19" infl="sg_num" pos="num" rel="hd" root="één" special="hoofd" word="één"/>
+        </node>
+        <node begin="11" end="12" gen="het" id="20" num="meas" pos="noun" rel="hd" root="jaar" special="tmp" word="jaar"/>
+      </node>
+      <node aform="base" begin="12" end="13" id="21" infl="no_e" pos="adj" rel="predc" root="werkloos" vform="adj" word="werkloos"/>
+    </node>
+    <node begin="13" end="14" id="22" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>In 2005 waren 60,5% van de werklozen al meer dan één jaar werkloos .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

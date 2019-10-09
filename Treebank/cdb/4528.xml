@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="35" id="0" rel="top">
+    <node begin="23" end="24" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="27" end="28" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="smain" end="34" id="3" rel="--">
+      <node begin="0" cat="np" end="5" id="4" rel="su">
+        <node begin="0" end="1" id="5" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="6" lemma="bestuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bestuur" word="bestuur"/>
+        <node begin="2" cat="pp" end="5" id="7" rel="mod">
+          <node begin="2" end="3" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="3" cat="np" end="5" id="9" rel="obj1">
+            <node begin="3" end="4" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="stichting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stichting" word="Stichting"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" id="12" lemma="adviseren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="adviseer" word="adviseert" wvorm="pv"/>
+      <node begin="6" cat="np" end="8" id="13" index="1" rel="obj2">
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="minister" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="minister" word="minister"/>
+        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="15" lemma="Roolvink" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Roolvink" word="Roolvink"/>
+      </node>
+      <node begin="8" buiging="zonder" end="9" graad="basis" id="16" lemma="eenstemmig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="eenstemmig" word="eenstemmig"/>
+      <node begin="6" cat="conj" end="34" id="17" rel="vc">
+        <node begin="6" cat="ti" end="20" id="18" rel="cnj">
+          <node begin="18" end="19" id="19" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="6" cat="inf" end="20" id="20" rel="body">
+            <node begin="6" end="8" id="21" index="1" rel="su"/>
+            <node begin="9" cat="np" end="11" id="22" rel="obj1">
+              <node begin="9" buiging="zonder" end="10" id="23" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>
+              <node begin="10" end="11" getal="mv" graad="basis" id="24" lemma="uitkering" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="uitkering" word="uitkeringen"/>
+            </node>
+            <node begin="11" cat="pp" end="15" id="25" rel="mod">
+              <node begin="11" end="12" id="26" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
+              <node begin="12" cat="mwu" end="15" id="27" rel="obj1">
+                <node begin="12" end="13" id="28" lemma="1" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="1" word="1"/>
+                <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="29" lemma="januari" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="januari" word="januari"/>
+                <node begin="14" end="15" id="30" lemma="1970" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="1970" word="1970"/>
+              </node>
+            </node>
+            <node begin="15" cat="pp" end="18" id="31" rel="mod">
+              <node begin="15" end="16" id="32" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+              <node begin="16" cat="np" end="18" id="33" rel="obj1">
+                <node begin="16" end="17" id="34" lemma="3" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="3" word="3"/>
+                <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="35" lemma="pct" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="pct" word="pct"/>
+              </node>
+            </node>
+            <node begin="19" buiging="zonder" end="20" id="36" lemma="verhogen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verhoog" word="verhogen" wvorm="inf"/>
+          </node>
+        </node>
+        <node begin="20" conjtype="neven" end="21" id="37" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="6" cat="ti" end="34" id="38" rel="cnj">
+          <node begin="29" end="30" id="39" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="6" cat="inf" end="34" id="40" rel="body">
+            <node begin="6" end="8" id="41" index="1" rel="su"/>
+            <node begin="21" cat="np" end="23" id="42" rel="obj1">
+              <node begin="21" buiging="zonder" end="22" id="43" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>
+              <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="44" lemma="verhoging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verhoging" word="verhoging"/>
+            </node>
+            <node begin="24" cat="pp" end="27" id="45" rel="mod">
+              <node begin="24" end="25" id="46" lemma="vanwege" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="vanwege" vztype="init" word="vanwege"/>
+              <node begin="25" cat="np" end="27" id="47" rel="obj1">
+                <node begin="25" end="26" id="48" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="49" lemma="liquiditeit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="liquiditeit" word="liquiditeit"/>
+              </node>
+            </node>
+            <node begin="28" end="29" id="50" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
+            <node begin="30" buiging="zonder" end="31" id="51" lemma="keren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="keer" word="keren" wvorm="inf"/>
+            <node begin="31" cat="pp" end="34" id="52" rel="mod">
+              <node begin="31" end="32" id="53" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
+              <node begin="32" cat="mwu" end="34" id="54" rel="obj1">
+                <node begin="32" end="33" id="55" lemma="1" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="1" word="1"/>
+                <node begin="33" end="34" genus="zijd" getal="ev" graad="basis" id="56" lemma="april" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="april" word="april"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="34" end="35" id="57" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het bestuur van de Stichting adviseert minister Roolvink eenstemmig die uitkeringen per 1 januari 1970 met 3 pct te verhogen en die verhoging ( vanwege de liquiditeit ) uit te keren na 1 april .</sentence>
+</alpino_ds>

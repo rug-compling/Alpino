@@ -1,0 +1,75 @@
+#!/usr/bin/perl
+eval 'exec /usr/bin/perl -S $0 ${1+"$@"}'
+    if $running_under_some_shell;
+			# this emulates #! processing on NIH machines.
+			# (remove #! line above if indigestible)
+
+eval '$'.$1.'$2;' while $ARGV[0] =~ /^([A-Za-z_0-9]+=)(.*)/ && shift;
+			# 'process any FOO=bar switches
+
+# This script reads a tuple, and converts it to a finite-state automaton.
+# It acts as a filter.
+
+
+# Set the path to fsa utilities here
+$fsa="@@S_FSA_PATH@@";
+
+#for ($i = 0; $ARGV[$i]; $i++) { printf "[%d] %s\n", $i, $ARGV[$i]; }
+
+# Set file names
+$tuple_name = $ARGV[0];
+if ($ARGV[0] eq "") {
+    printf "Synopsis: %s tuple_file \n", $0;
+    exit;
+}
+
+# Read the signature
+open(DATA1, "<$tuple_name") or die "Cannot read from $tuple_name $!\n";
+read DATA1, $buf, 8;		# read signature
+if (substr($buf, 0, 5) ne "\\TUPL") {
+    printf stderr "This is not a tuple file\n";
+    exit;
+}
+$version = ord(substr($buf, 5, 1));
+if ($version != 0) {
+    printf "Wrong tuple version!\n";
+    exit;
+}
+if ($words == 1) {
+    printf "Tuple is a unigram. No acceleration possible.\n";
+    exit;
+}
+$words = ord(substr($buf, 6, 1));
+$numbers = ord(substr($buf, 7, 1));
+$total = $words + $numbers;
+read DATA1, $ss, $total;	# read sizes vector
+$sign_vect_size = (($total + 7) >> 3);
+read DATA1, $sign_vect, $sign_vect_size; # read sign vector
+$string_size = 0;
+for ($i = 0; $i < $words; $i++) {
+    $string_size += ord(substr($ss,$i,1));
+}
+$tuple_size = $string_size;
+for ($i = $words; $i < $total; $i++) {
+    $tuple_size += ord(substr($ss,$i,1));
+}
+# Read the tuples
+$tpl_nr = 0;
+while (read DATA1, $buf, $tuple_size) {
+    $nrs[$tuple_nr] = substr($buf, $string_size);
+    $wn[$tuple_nr] = substr($buf, $string_size - $ss[$words - 1],
+			    $ss[$words - 1]);
+    $m = 0;
+    for ($j = 0; $j < $words; $j++) {
+	$n = 0;
+	for ($k = 0; $k < ord(substr($ss,$j,1)); $k++) {
+	    $n = $n + (ord(substr($buf,$m++, 1)) << (8 * $k));
+	}
+    }
+    printf "\n";
+    $tuple_nr++;
+}
+close(DATA1);
+printf "End of the tuple\n";
+
+

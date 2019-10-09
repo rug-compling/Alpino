@@ -1,0 +1,61 @@
+These are some of the files used for some of the experiments reported 
+in my article in Computational Linguistics,
+`Efficient and Robust Parsing with the Head-corner Parser'.
+
+NOTICE: cf. the file README in the Anlt2 directory, concerning the
+Alvey NL Tools, which states:
+
+  These files were supplied by John Carroll, johnca@cogs.susx.ac.uk,
+  and are derived from a version of the ALVEY Natural Language Tools. Current
+  information about these ALVEY NL Tools is available at
+  <http://www.cl.cam.ac.uk/Research/NL/anlt.html>
+
+REQUIREMENTS:
+
+This package requires Hdrug 4 / SICStus 3.7.1. 
+
+USAGE:
+
+Make sure you have Hdrug. Edit the scripts sh, shg and shgm. These
+scripts take three arguments, resp. the parser, the compiled grammar,
+and the suite file, e.g.:
+
+slow startup, no precompilation of grammar required:
+% ../../hdrug -l start -flag grammar anlt2.conv load_grammar_mode=interpret
+
+after precompilation (``make all''), you can do quick start-up with e.g.:
+% ../../hdrug -l start load_grammar_mode=compile
+
+
+
+FILES:
+
+Anlt2: original Anlt grammar as I got it from John Carroll, second version
+
+Makefile:
+
+README:
+
+anlt2.conv: interface between Alvey 2nd version grammar in Anlt2 and
+the parser compilers.
+
+anlt2.suite: The 100 longer test sentences as selected by John Carroll (used
+in his ACL 94 paper).
+
+anlt2_hc.pl: compiled Alvey2 grammar for _hc_ parser.
+
+anlt2_hc_lc.pl: compiled Alvey2 grammar for _hc_ parser in left-corner mode.
+
+anlt2_lc.pl: compiled Alvey2 grammar for _lc_ parser.
+
+start.pl: declarations for Hdrug.
+
+hc.pl: head-corner parser
+
+hc_compile.pl: head-corner grammar compiler
+
+lc.pl: left-corner parser
+
+lc_compile.pl: grammar compiler for left-corner parser.
+
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="Dat"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="bed" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bed" word="bed"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="3" cat="ap" end="8" id="6" rel="predc">
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="lekker" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="lekker" word="lekker"/>
+        <node begin="4" cat="oti" end="8" id="8" rel="vc">
+          <node begin="4" end="5" id="9" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+          <node begin="5" cat="ti" end="8" id="10" rel="body">
+            <node begin="6" end="7" id="11" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="5" cat="inf" end="8" id="12" rel="body">
+              <node begin="5" end="6" id="13" lemma="op" pos="prep" postag="VZ(fin)" pt="vz" rel="ld" root="op" vztype="fin" word="op"/>
+              <node begin="7" buiging="zonder" end="8" id="14" lemma="liggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="lig" word="liggen" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Dat bed is lekker om op te liggen</sentence>
+</alpino_ds>

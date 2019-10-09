@@ -1,0 +1,541 @@
+<!DOCTYPE HTML PUBLIC "-/W3C/DTD HTML 4.0 Transitional//EN"
+     "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>HDRUG Reference Manual</TITLE>
+<link rel=stylesheet href="http://www.let.rug.nl/~vannoord/doc.css" 
+      type="text/css">
+<link rel=next href="node7.html">
+</HEAD>
+<BODY>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node7.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+<H1>6. Interfacing Hdrug</H1>
+<P>For an application to work with the Hdrug system, there are a number
+of predicates you have to supply. Furthermore, you can extend the Hdrug
+system with application-specific options. Finally, you can always
+overwrite existing Hdrug definitions. In this chapter I discuss
+the various possibilities.</P>
+<P>Parsers and Generators</P>
+<P>In Hdrug you can define any number of parsers and generators. A parser
+and generator is identified by an atomic identifier. A parser is
+declared by the following directive:</P>
+<BLOCKQUOTE>:- flag(parser(Identifier),on/off).</BLOCKQUOTE>
+<P>Similarly, a generator is declared by:</P>
+<BLOCKQUOTE>:- flag(generator(Identifier),on/off).</BLOCKQUOTE>
+<P>This defines a parser of generator and moreover tells Hdrug whether
+this parser is active (on) or not (off).  Only if a parser is active,
+it will be used in parser-comparison runs.  Not only should the application
+define which parsers and generators exist, but usually it will also
+define the `current' parser and generator.  This is achieved by
+initializing the <B>parser</B> and <B>generator</B> flag.</P>
+<BLOCKQUOTE>:- initialize_flag(parser,Identifier).<BR>
+:- initialize_flag(generator,Identifier).</BLOCKQUOTE>
+<P>Summarizing, there exist a number of parsers. A subset of those
+parsers are active. One of the parsers is the current parser.</P>
+<P>If a parser (generator) is defined, then there should be a module with
+the same name which provides the following predicates. Note that only
+the first one of these predicates, parse/1 or generate/1, is
+obligatory. The others are not.</P>
+<UL><LI><P>parse/1;generate/1. This predicate is the predicate that does the
+actual parsing (generation).  At the time of calling, the argument of
+the parse/1 (generate/1) predicate is a term o(Obj,Str,Sem) where Obj
+is a term in which the top-category is already instantiated.
+Furthermore, part of the term might be instantiated to some
+representation of the input string (in case of parsing if the
+predicate phonology/2 is defined) or some representation of the input
+logical form (in case of generation if the predicate semantics/2 is
+defined). But note that the string and logical form are also available
+(if instantiated) in the second and third argument of the o/3 term.</P>
+<LI><P>count/0.This optional predicate is thought of as a predicate that
+might produce some statistical information e.g. on the number of chart
+edges built. Note that library(hdrug_util) contains predicates to
+count the number of clauses for a given predicate.</P>
+<LI><P>count/1. Similarly, but this time the argument should get bound to
+some integer. The argument of this predicate determines the final
+argument of the table_entry/6 predicate in test runs.</P>
+<LI><P>clean/0. If the parser adds items, chart edges etc. to the database,
+then this predicate defines the way to remove these again.</P>
+</UL><P>Top categories</P>
+<P>Usually a grammar comes with a notion of a `start symbol' or `top
+category'.  In Hdrug there can be any number of different top
+categories. These top categories are Prolog terms. Each one of them is
+associated with an atomic identifier for reference purposes. Each top
+category is defined by a clause for the predicate top/2,
+where the first argument is the atomic identifier and the second
+argument is the top-category term. For example:</P>
+<BLOCKQUOTE>top(s,node(s,_)).<BR>
+top(np,node(np,_)).</BLOCKQUOTE>
+<P>The flag `top_features' is used to indicate what the current choice
+of top-category is. Usually an application defines a default value for
+this flag by the directive:</P>
+<BLOCKQUOTE>:- initialize_flag(top_features,Identifier).</BLOCKQUOTE>
+<P>The identifier relates to the first argument of a top/2 definition.</P>
+<P>Strings and Semantics</P>
+<P>The predicate semantics/2 defines which part of an object
+contains the semantics (if any). For example, in an application
+categories are generally of the form node(Syn,Sem). Therefore,
+the following definition of semantics/2 is used:</P>
+<BLOCKQUOTE>semantics(node(_,Sem),Sem).</BLOCKQUOTE>
+<P>The predicate is mainly used for generation. By default, the predicate
+is defined as semantics(_,_).</P>
+<P>In a similar way, the predicate phonology(Node,Phon) can be
+defined. This is only useful for `sign-based' grammars in which the
+string to be parsed is considered a part of the category. The default
+definition is phonology(_,_).</P>
+<P>The predicate extern_sem/2 can be used to define a mapping between
+`internal' and `external' formats of the semantic representation. This
+predicate is used in two ways: if a semantic representation is read
+in, and if a semantic representation is written out. The first
+argument is the external representation, the second argument the
+internal one. The default definition is extern_sem(X,X).</P>
+<P>Grammar compilation</P>
+<P>Currently, the grammar menu contains four distinct options to
+recompile (parts of) the grammar. It is assumed that if an application
+is started, the grammars are already compiled. These options will thus
+be chosen if the grammar has to be recompiled (e.g. because part of
+the grammar has been changed).</P>
+<P>The following four predicates have to be provided by the application.
+If these predicates do not fulfill your needs, you can always extend
+the grammar menu (cf. below), or even overwrite it (as in the Ale 
+application).</P>
+<UL><LI><P>compile_grammar/0 should recompile the whole grammar.</P>
+<LI><P>reconsult_grammar/0 should recompile the whole grammar. If files
+are to be loaded, then `reconsult' is used rather than `compile'. This
+allows easier debugging.</P>
+<LI><P>compile_grammar_file/1 should recompile the grammar file that is 
+its argument.</P>
+<LI><P>reconsult_grammar_file/1 idem, but uses reconsult</P>
+</UL><P>Test-suites</P>
+<P>A test suite consists of a number of Prolog clauses for the predicate
+sentence/2, where the first argument is a unique identifier of that
+sentence, and the second argument is a list of atoms; and clauses for
+the predicate lf/2.  For example:</P>
+<BLOCKQUOTE>sentence(a,[john,kisses,mary]).<BR>
+sentence(b,[john,will,kiss,mary]).<BR>
+lf(1,fut(kiss(john,mary))).<BR>
+lf(2,past(kiss(mary,john))).</BLOCKQUOTE>
+<P>The test suite might also contain a definition of the predicate
+user_max/2.  This predicate is used to define an upper time limit,
+possibly based on the length of the test sentence (the first
+argument), for parsing that sentence in a test-suite run.  By default,
+Hdrug behaves as if this predicate is defined as follows:</P>
+<BLOCKQUOTE>user_max(L,Max) :-<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max is 10000 + (L <B> L </B> 300).</BLOCKQUOTE>
+<P>Statistical information for each parse is preserved by the dynamic
+predicate table_entry/6.
+The arguments of this predicate
+indicate:</P>
+<UL><LI><P>an atom (the unique identifier of the sentence)</P>
+<LI><P>an integer (the length of the sentence)</P>
+<LI><P>an integer (the number of parses of the sentence, i.e. the
+degree of ambiguity)</P>
+<LI><P>an atom (the name of the parser)</P>
+<LI><P>an integer (the amount of milliseconds it took to parse the
+sentence. In case of time-out the atom `time_out').</P>
+<LI><P>a term (often used to indicate the number of chart-edges built).
+It is determined by the count/1.</P>
+</UL><P>Extending the Graphical User Interface</P>
+<P>It is easy to extend the Graphical User Interface for a specific
+application. There are two predicates that you can define. The first
+predicate, gram_startup_hook_begin/0 is called before loading of
+hdrug.tcl, whereas the predicate gram_startup_hook_end/0 is called at
+the end of the loading of this file.</P>
+<P>Viewing Prolog Clauses</P>
+<P>If you want to use Hdrug's built-in facilities to view Prolog clauses,
+then it is neccessary that these clauses are accessible via the
+predicate user_clause/2.  The arguments of this predicate are the head
+and the body of the clause respectively. The reason that Hdrug does
+not use the built-in clause/3 predicate, is that this predicate is
+only available for dynamic clauses.</P>
+<P>The easiest way to obtain user_clause/2 definitions is to turn on a
+term_expansion definition with the appropriate effect. This is done by
+setting the user_clause_expansion flag to on.</P>
+<H2>6.1. <a name="anc1"></a>use_canvas(+Mode,LeftRightTop)</H2>
+<P>Mode is a term indicating the type of data-structure to be displayed. It
+is one of tree(TreeMode), fs, text, chart, stat. The predicate should 
+instantiate the second argument as one of the atoms left, right or top 
+(for a new widget).</P>
+<H2>6.2. <a name="anc2"></a>help_hook(PredSymbol,UsageString,ExplanationString)</H2>
+<P>This predicate can be defined to provide help on a hook predicate with
+predicate symbol PredSymbol. The UsageString is a list of character
+codes which shortly shows the usage of the predicate. The help_hook
+predicate which is defined for the help_hook predicate itself has as
+its UsageString &quot;help_hook(PredSymbol, UsageString,
+ExplanationString)&quot;. The ExplanationString is a list of
+charactercodes containing further explanation.</P>
+<H2>6.3. <a name="anc3"></a>ParserModule:parse(o(Cat,Str,Sem))</H2>
+<P>If ParserModule is the current parser, then this predicate is called
+to do the actual parsing. At the time of calling, the argument of the
+parse/1 predicate is a term o(Obj,Str,Sem) where Cat is a term in
+which the top-category  is already instantiated. Furthermore, part of
+the term may have been instantiated to some representation of the
+input string (if the hook predicate phonology/2 was defined to do
+so). The input string is also available in the second argument of the
+o/3 term. The third argument is not used for parsing.</P>
+<H2>6.4. <a name="anc4"></a>GeneratorModule:generate(o(Cat,Str,Sem))</H2>
+<P>If GeneratorModule is the current generator, then this predicate is
+called to do the actual generation. At the time of calling, the
+argument of the generate/1 predicate is a term o(Obj,Str,Sem) where
+Cat is a term in which the top-category  is already
+instantiated. Furthermore, part of the term may have been instantiated
+to some representation of the input semantics (if the hook predicate
+{semantics/2} was defined to do so). The input semantics is also
+available in the third argument of the o/3 term. The second argument
+is not used for generation.</P>
+<H2>6.5. <a name="anc5"></a>Module:count</H2>
+<P>This optional predicate is thought of as a predicate that might
+display some statistical information e.g. on the number of chart edges
+built. The predicate Module:count is called in module Parser after
+parsing has been completed for parser Parser or it is called in module
+Generator after generation has been completed for generator
+Generator. Note that library(hdrug_util) contains predicates to count
+the number of clauses for a given predicate.</P>
+<H2>6.6. <a name="anc6"></a>Module:count</H2>
+<P>This optional predicate is thought of as a predicate that might
+display some statistical information e.g. on the number of chart edges
+built. The predicate Module:count is called in module Parser after
+parsing has been completed for parser Parser or it is called in module
+Generator after generation has been completed for generator
+Generator. Note that library(hdrug_util) contains predicates to count
+the number of clauses for a given predicate.</P>
+<H2>6.7. <a name="anc7"></a>Module:clean</H2>
+<P>This optional predicate is thought of
+as a predicate that might remove e.g. chart edges added dynamically to
+the database once parsing has been completed. The predicate
+Module:clean is called in module Parser after parsing has been
+completed for parser Parser or it is called in module Generator after
+generation has been completed for generator Generator.</P>
+<H2>6.8. <a name="anc8"></a>start_hook(parse/generate,Module,o(A,B,C),Term)</H2>
+<P>This predicate is a hook that is called before the parser starts. Its
+first argument is either the atom parse or the atom generate; the
+second argument is the current parser or generator (hence the name of
+the module); the third argument is an object. The fourth argument can
+be anything. It wis provided to pass on arbitrary information to the
+result_hook and end_hook hook predicates. For example, the predicate
+could pass on information concerning the current memory usage of
+Sicstus. This information could then be used by end_hook to compute
+the amount of memory that the parser has consumed. The time required
+by the start_hook predicate is NOT considered to be part of parsing
+time; cf start_hook0/4 for a similar hook predicate of which timing IS
+considered part of parsing time</P>
+<H2>6.9. <a name="anc9"></a>start_hook0(parse/generate,Module,o(A,B,C),Term)</H2>
+<P>This predicate is a hook that is called before the parser starts. Its
+first argument is either the atom parse or the atom generate; the
+second argument is the current parser or generator (hence the name of
+the module); the third argument is an object. The fourth argument can
+be anything. It is provided to pass on arbitrary information to the
+result_hook and end_hook hook predicates. For example, the predicate
+could pass on information concerning the current memory usage of
+Sicstus. This information could then be used by end_hook to compute
+the amount of memory that the parser has consumed. The time required
+by the start_hook0 predicate IS considered to be part of parsing time;
+cf start_hook/4 for a similar hook predicate of which timing is NOT
+considered part of parsing time</P>
+<H2>6.10. <a name="anc10"></a>result_hook(parse/generate,Module,o(A,B,C),Term)</H2>
+<P>This predicate is a hook that is called for each time the parser or
+generator succeeds. Its first argument is either the atom parse or the
+atom generate; the second argument is the current parser or generator
+(hence the name of the module); the third argument is an object. The
+fourth argument can be anything. It is provided to pass on arbitrary
+information from the start_hook hook predicate. Warning: the time
+taken by result_hook will always be considered as part of the time
+required for parsing. Consider using the demo flag to ensure that
+expensive result_hooks are not fired for parsing comparison runs.</P>
+<H2>6.11. <a name="anc11"></a>end_hook(parse/generate,Module,o(A,B,C),Term)</H2>
+<P>This predicate is a hook that is called if the parser / generator can
+not wfind any results anymore. Its first argument is either the atom
+parse or the atom generate; the second argument is the current parser
+or generator (hence the name of the module); the third argument is an
+object. The fourth argument can be anything. It is provided to pass on
+arbitrary information from the start_hook hook predicate. Note that at
+the moment of calling this predicate the object will typically NOT be
+instantiated. The time required by end_hook is NOT considered to be
+part of parsing time; see end_hook0.</P>
+<H2>6.12. <a name="anc12"></a>end_hook0(parse/generate,Module,o(A,B,C),Term)</H2>
+<P>This predicate is a hook that is called if the parser / generator can
+not find any results anymore. Its first argument is either the atom
+parse or the atom generate; the second argument is the current parser
+or generator (hence the name of the module); the third argument is an
+object. The fourth argument can be anything. It is provided to pass on
+arbitrary information from the start_hook hook predicate. Note that at
+the moment of calling this predicate the object will typically NOT be
+instantiated. The time required by end_hook0 IS considered to be part
+of parsing time; see end_hook0.</P>
+<H2>6.13. <a name="anc13"></a>top(Name,Cat)</H2>
+<P>Usually a grammar comes with a notion of a `start symbol' or `top
+category'. In Hdrug there can be any number of different top
+categories, of which one is the currently used top category. These top
+categories are Prolog terms. Each one of them is associated with an
+atomic identifier for reference purposes. Each top category is defined
+by a clause for the predicate top/2, where the first argument is the
+atomic identifier and the second argument is the top-category
+term. The latter term will be unified with the first argument of the
+o/3 terms passed on to parsers and generators.</P>
+<BLOCKQUOTE>top(s,node(s,_)).<BR>
+top(np,node(np,_)).</BLOCKQUOTE>
+<P>The flag `top_features' is used to indicate what the current choice of
+top-category is. Usually an application defines a default value for
+this flag. The identifier relates to the first argument of a top/2
+definition.</P>
+<H2>6.14. <a name="anc14"></a>semantics(Cat,Sem)</H2>
+<P>The predicate semantics/2 defines which part of an object contains
+the semantics (if any). For example, if in an application categories
+are generally of the form node(Syn,Sem), then the following definition
+of semantics/2 is used:</P>
+<BLOCKQUOTE>semantics(node(_,Sem),Sem).</BLOCKQUOTE>
+<P>The predicate is mainly used for generation.</P>
+<H2>6.15. <a name="anc15"></a>phonology(Cat,Phon)</H2>
+<P>This predicate is useful for `sign-based' grammars in which the
+string to be parsed is considered a part of the category. This
+predicate is called before parsing so that in such cases the current
+string Phon can be unified with some part of the object.</P>
+<H2>6.16. <a name="anc16"></a>extern_sem(Extern,Intern)</H2>
+<P>This predicate can be defined in order to distinguish internal and
+external semantic representations. This predicate is used in two ways:
+if a semantic representation is read in, and if a semantic
+representation is written out. The first argument is the external
+representation, the second argument the internal one. The default
+definition is extern_sem(X,X). A typical usage of this predicate could
+be a situation in which an external format such as kisses(john,mary)
+is to be translated into a feature structure format such as [
+pred=kisses, arg1=john, arg2=mary]. NB, the external format is read in
+as a single Prolog term.</P>
+<H2>6.17. <a name="anc17"></a>extern_phon(Extern,Intern)</H2>
+<P>This predicate can be defined in order to distinguish internal and
+external phonological representations. This predicate is used in two
+ways: if a phonological representation is read in, and if a
+phonological representation is written out. The first argument is the
+external representation, the second argument the internal one. The
+default definition is extern_phon(X,X). NB, the external format is
+read in as a list of Prolog terms.</P>
+<H2>6.18. <a name="anc18"></a>sentence(Key,Sentence),
+sentence(Key,Max,Sentence)</H2>
+<P>Applications can define a number of test sentences by defining
+clauses for this predicate. For ease of reference, Key is some atomic
+identifier (typically an integer). Sentence is typically a list of
+atoms. The parser comparison predicates refer to this atomic
+identifier. Example sentences are also listed in the listbox available
+through the parse menu-button. Max can be an integer indicating the
+maximum amount of milliseconds allowed for this sentence in parser
+comparison runs.</P>
+<H2>6.19. <a name="anc19"></a>lf(Key,LF), lf(Key,Max,Lf)</H2>
+<P>Applications can define a number of test logical forms by defining
+clauses for this predicate. For ease of reference, Key is some atomic
+identifier (typically an integer). LF is a term (external format of a
+logical form). The generator comparison predicates refer to this
+atomic identifier. Example logical forms are also listed in the
+listbox available through the generate menu-button. Max can be an
+integer indicating the maximum amount of milliseconds allowed for this
+lf in generator comparison runs.</P>
+<H2>6.20. <a name="anc20"></a>user_max(Length,Max)</H2>
+<P>This predicate is used to define an upper time limit, possibly based
+on the length of the test sentence (the first argument), for parsing
+that sentence in a test-suite run. By default, Hdrug behaves as if
+this predicate is defined as follows: user_max(L,Max) :- Max is 10000
++ (L <B> L </B> 300). If you don't want a time out at all, then define this
+predicate as user_max(_,0).</P>
+<H2>6.21. <a name="anc21"></a>gram_startup_hook_begin</H2>
+<P>This predicate is meant to be used to extend the graphical user
+interface. It is called right before Hdrug's own graphical user
+interface definitions are loaded (i.e., right before hdrug.tcl is
+sourced).</P>
+<H2>6.22. <a name="anc22"></a>gram_startup_hook_end</H2>
+<P>This predicate is meant to be used to extend the graphical user
+interface. It is called right after Hdrug's own graphical user
+interface definitions are loaded (i.e., right after hdrug.tcl is
+sourced). A typical use is to add application specific menu-buttons,
+etc.</P>
+<H2>6.23. <a name="anc23"></a>user_clause(Head,Body)</H2>
+<P>If you want to use Hdrug's built-in facilities to view Prolog
+clauses, then it is neccessary that these clauses are accessible via
+the predicate user_clause/2. The arguments of this predicate are the
+head and the body of the clause respectively. Note that the body of
+the clause should be provided as a list of goals, rather than a
+conjunction. The reason that Hdrug does not use the built-in clause/3
+predicate, is that this predicate is only available for dynamic
+clauses. The easiest way to obtain user_clause/2 definitions is to
+turn on a term_expansion definition with the appropriate effect; cf
+flag(user_clause_expansion).</P>
+<H2>6.24. <a name="anc24"></a>graphic_path(Format,Obj,Term)</H2>
+<P>One of the three hook predicates which together define tree
+formats. The others are graphic_label/3 and graphic_daughter/4. The
+Hdrug libraries contain extensive possibilities to produce output in
+the form of trees. Only a few declarations are needed to define what
+things you want to see in the tree. In effect, such declarations
+define a `tree format'. In Hdrug, there can be any number of tree
+formats. These tree formats are named by a ground identifier. A tree
+format consists of three parts: the path definition indicates what
+part of the object you want to view as a tree; the label definition
+indicates how you want to print the node of a tree; and the daughter
+definition indicates what you consider the daughters of a node. The
+graphic_path definition is the first part. For instance if the parser
+creates an object of the form node(Syn,Sem,DerivTree) where DerivTree
+is a derivation tree, then we can define a tree format `dt' where the
+graphic_path definition extracts the third argument of this term:
+graphic_path(dt,node(_,_,Tree),Tree).</P>
+<H2>6.25. <a name="anc25"></a>graphic_label(Format,Node,Label)</H2>
+<P>One of the three hook predicates which together define tree
+formats. The others are graphic_path/3 and graphic_daughter/4. The
+Hdrug libraries contain extensive possibilities to produce output in
+the form of trees. Only a few declarations are needed to define what
+things you want to see in the tree. In effect, such declarations
+define a `tree format'. In Hdrug, there can be any number of tree
+formats. These tree formats are named by a ground identifier. A tree
+format consists of three parts: the path definition indicates what
+part of the object you want to view as a tree; the label definition
+indicates how you want to print the node of a tree; and the daughter
+definition indicates what you consider the daughters of a node. The
+graphic_label definition is the second part. For instance, if subtrees
+are of the form tree(Node,Ds), where Node are terms representing
+syntactic objects such as np(Agr,Case) and vp(Agr,Subcat,Sem) then a
+tree format could be defined which only displays the functor symbol:
+graphic_label(syn,tree(Term,_),Label) :- functor(Term,Label,_).</P>
+<H2>6.26. <a name="anc26"></a>graphic_daughter(Format,No,Term,Daughter)</H2>
+<P>One of the three hook predicates which together define tree
+formats. The others are graphic_label/3 and graphic_daughter/4. The
+Hdrug libraries contain extensive possibilities to produce output in
+the form of trees. Only a few declarations are needed to define what
+things you want to see in the tree. In effect, such declarations
+define a `tree format'. In Hdrug, there can be any number of tree
+formats. These tree formats are named by a ground identifier. A tree
+format consists of three parts: the path definition indicates what
+part of the object you want to view as a tree; the label definition
+indicates how you want to print the node of a tree; and the daughter
+definition indicates what you consider the daughters of a node. The
+graphic_daughter definition is the third part. For instance if
+subtrees are of the form tree(Label,Daughters), where Daughters is a
+list of daughters, then you could simply define:
+graphic_daughter(syn,No,tree(_,Ds),D):- lists:nth(No,Ds,D).</P>
+<H2>6.27. <a name="anc27"></a>show_node(Format,Node)</H2>
+<P>If trees are displayed on the canvas widget, then it is possible to
+define an action for clicking the left-most mouse button on the node
+of the tree. This action is defined by this predicate. Format is the
+identifier of a tree format, and Node is the full sub-tree (that was
+used as input to the graphic_label definition).</P>
+<H2>6.28. <a name="anc28"></a>show_node2(Format,Node)</H2>
+<P>If trees are displayed on the canvas widget, then it is possible to
+define an action for clicking the middle mouse button on the node of
+the tree. This action is defined by this predicate. Format is the
+identifier of a tree format, and Node is the full sub-tree (that was
+used as input to the graphic_label definition).</P>
+<H2>6.29. <a name="anc29"></a>show_node3(Format,Node)</H2>
+<P>If trees are displayed on the canvas widget, then it is possible to
+define an action for clicking the rightmost mouse button on the node
+of the tree. This action is defined by this predicate. Format is the
+identifier of a tree format, and Node is the full sub-tree (that was
+used as input to the graphic_label definition).</P>
+<H2>6.30. <a name="anc30"></a>tk_tree_user_node(Label,Frame)</H2>
+<P>If a tree-format is defined which matches user(_), then if a tree is
+to be displayed on the Canvas widget this predicate is responsible for
+creating the actual nodes of the tree. Label is the current label, and
+Frame is the identifier of a Tcl/Tk frame which should be further used
+for this label. The frame is already packed.</P>
+<H2>6.31. <a name="anc31"></a>clig_tree_user_node(Label)</H2>
+<P>If a tree-format is defined which matches user(_), then if a tree is
+to be displayed using Clig output, then this predicate is responsible
+for creating the actual nodes of the tree. Label is the current
+label.</P>
+<H2>6.32. <a name="anc32"></a>dot_tree_user_node(Label)</H2>
+<P>If a tree-format is defined which matches user(_), then if a tree is
+to be displayed using DOT output, then this predicate is responsible
+for creating the actual label of the nodes of the tree. Label is the current
+label.</P>
+<H2>6.33. <a name="anc33"></a>latex_tree_user_node(Label)</H2>
+<P>If a tree-format is defined which matches user(_), then if a tree is
+to be displayed using LaTeX output, then this predicate is responsible
+for creating the actual nodes of the tree. Label is the current
+label.</P>
+<H2>6.34. <a name="anc34"></a>shorten_label(Label0,Label)</H2>
+<P>This predicate can be defined for feature-structure display of tree
+nodes; its intended use is to reduce the information of a given
+node.</P>
+<H2>6.35. <a name="anc35"></a>call_build_lab(F,Fs,L)</H2>
+<P>for library(hdrug_call_tree)</P>
+<H2>6.36. <a name="anc36"></a>call_build_lab(Functor/Arity)</H2>
+<P>for library(hdrug_call_tree)</P>
+<H2>6.37. <a name="anc37"></a>exceptional_sentence_length(Phon,Length)</H2>
+<P>For (internal) phonological representations this predicate can be
+defined to return the length of the representation. If the predicate
+is not defined, then the representation is assumed to be a list, and
+the length is assumed to be the number of elements of the list. The
+length of phonological representations is used by the display of the
+results of parser comparison runs.</P>
+<H2>6.38. <a name="anc38"></a>exceptional_lf_length(Sem,Length)</H2>
+<P>For (internal) semantic representations this predicate can be defined
+to return the length of the representation. If the predicate is not
+defined, then the representation is assumed to be a term, and the
+length is assumed to be the number of characters required to print the
+term. The length of semantic representations is used by the display of
+the results of generator comparison runs.</P>
+<H2>6.39. <a name="anc39"></a>hdrug_initialization</H2>
+<P>If hdrug is started, then three things happen. First, hdrug treats
+its command line options. After that, the predicate
+hdrug_initialization is called. Finally, the graphical user interface
+is started (if flag(tcltk) is on). This predicate can thus be used to
+define application-specific initialization.</P>
+<H2>6.40. <a name="anc40"></a>hdrug_command(Name,Goal,Args)</H2>
+<P>This predicate can be used to define further commands for the command
+interpreter. Name is the first word of the command, Goal is the
+resulting Prolog goal, and Args is a possibly empty list of arguments
+to the command.</P>
+<H2>6.41. <a name="anc41"></a>hdrug_command_help(Name,UsageString,ExplanationString)</H2>
+<P>This predicate can be used to provide help information on commands
+for the command interpreter. Name is the first word of the command,
+The second argument displays usage information in a short form (list
+of character codes); the third argument is a list of character codes
+containing an explanation of the command.</P>
+<H2>6.42. <a name="anc42"></a>help_flag(Flag,Help)</H2>
+<P>This predicate can be used to provide help information on global
+variable Flag. Help is a list of character codes containing the help
+info.</P>
+<H2>6.43. <a name="anc43"></a>option(Option,ArgvIn,ArgvOut)</H2>
+<P>This predicate can be used to define application-specific
+command-line options to the hdrug command. Option is the option minus
+the minus sign; moreover Option relates to the first argument of a
+corresponding usage_option/3 definition. The second and third argument
+is a difference list of the list of options in case the option takes
+further arguments.</P>
+<H2>6.44. <a name="anc44"></a>usage_option(Option,UsageString,ExplanationString)</H2>
+<P>This predicate is defined to provide help information on the Option
+startup option (cf. option/3). The UsageString is a list of character
+codes presenting short usage information; ExplanationString is a list
+of character codes containing the explanation of the option.</P>
+<H2>6.45. <a name="anc45"></a>tk_tree_show_node_help(TreeFormat,Atom)</H2>
+<P>If a tree according to TreeFormat is displayed on the canvas, then
+this predicate can be defined in order that below the widget a short
+message appears indicating what actions are bound to clicking on the
+tree nodes. Atom is the message.</P>
+<H2>6.46. <a name="anc46"></a>show_relation(F/A)</H2>
+<P>you can define the relation show_relation/1 to define an action for
+pressing the first mouse-button on a relation name, when viewing
+predicate definitions in the Tk Canvas. The argument is a
+Functor/Arity pair. For example,</P>
+<BLOCKQUOTE>show_relation(F/A) :-<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show_predicate(F/A,fs,tk).</BLOCKQUOTE>
+<P>will show the predicate definition.</P>
+<H2>6.47. <a name="anc47"></a>display_extern_sem(+ExtSem)</H2>
+<P>Predicate to print a given external format of semantics.</P>
+<H2>6.48. <a name="anc48"></a>display_extern_phon(+ExtPhon)</H2>
+<P>Predicate to print a given external format of phonology.</P>
+<H2>6.49. <a name="anc49"></a>compile_test_suite(+File)</H2>
+<P>Predicate to compile the test suite in file File.</P>
+<H2>6.50. <a name="anc50"></a>reconsult_test_suite(+File)</H2>
+<P>Predicate to reconsult the test suite in file File.</P>
+<H2>6.51. <a name="anc51"></a>show_object_default2(+Int)</H2>
+<P>Predicate which is called if the user presses mouse button &lt;2&gt; on the
+object button number Int. A typical definition could be, for instance:</P>
+<BLOCKQUOTE>show_object_default2(No):-<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;show_object_no(No,tree(syn),clig).</BLOCKQUOTE>
+<H2>6.52. <a name="anc52"></a>show_object_default3(+Int)</H2>
+<P>Predicate which is called if the user presses mouse button &lt;2&gt; on the
+object button number Int.</P>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node7.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+
+
+</BODY></HTML>

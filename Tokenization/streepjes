@@ -1,0 +1,24 @@
+#!/usr/bin/perl -w
+
+## part of tokenization.
+##
+## attempts to distinguish various use of -
+## "huis- tuin- en keuken"  should be left alone
+## "ik ga -zoals gezegd- naar huis" will be rewritten into
+## "ik ga - zoals gezegd - naar huis"
+
+while (<>) {
+    if(/[ ][-]([^ ][^-]*[^ ])[-][ ]/) {
+	$prefix=$`;
+	$middle=$1;
+	$suffix=$';   # '
+	if ($prefix !~ /(en |of )$/ &&
+            $suffix !~ /^(en |of )/) {
+	    print "$prefix - $middle - $suffix";
+	} else {
+	    print;
+	}
+    } else {
+	print;
+    }
+}

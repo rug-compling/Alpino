@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="sv1" end="8" id="1" rel="--">
+      <node begin="0" end="1" frame="verb(unacc,sg_heeft,copula)" id="2" infl="sg_heeft" lcat="sv1" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="Is"/>
+      <node begin="1" cat="np" end="8" id="3" rel="predc">
+        <node begin="1" end="2" frame="determiner(de,nwh,nmod,pro,nparg)" id="4" infl="de" lcat="detp" pos="det" rel="det" root="deze" sense="deze" wh="nwh" word="deze"/>
+        <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="wijziging" sense="wijziging" word="wijziging"/>
+        <node begin="3" cat="pp" end="8" id="6" rel="mod">
+          <node begin="3" end="4" frame="modal_adverb" id="7" lcat="advp" pos="adv" rel="mod" root="alleen" sc="modal" sense="alleen" word="alleen"/>
+          <node begin="4" end="5" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="8" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+          <node begin="5" cat="np" end="8" id="9" rel="obj1">
+            <node begin="5" end="6" frame="determiner(de)" id="10" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node aform="base" begin="6" end="7" frame="adjective(e)" id="11" infl="e" lcat="ap" pos="adj" rel="mod" root="huidig" sense="huidig" vform="adj" word="huidige"/>
+            <node begin="7" end="8" frame="tmp_noun(de,count,sg)" gen="de" id="12" lcat="np" num="sg" pos="noun" rel="hd" root="periode" sense="periode" special="tmp" word="periode"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" frame="punct(vraag)" id="13" lcat="punct" pos="punct" rel="--" root="?" sense="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Is deze wijziging alleen voor de huidige periode ?</sentence>
+  <comments>
+    <comment>Q#224|Is deze wijziging alleen voor de huidige periode ?|1|1|2.012531041565884</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="np" end="8" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
+      <node begin="1" end="2" id="3" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="4" lemma="keer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="keer" word="keer"/>
+      <node begin="3" cat="cp" end="8" id="5" rel="vc">
+        <node begin="3" conjtype="onder" end="4" id="6" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="4" cat="ssub" end="8" id="7" rel="body">
+          <node begin="4" end="5" getal="mv" id="8" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+          <node begin="5" end="6" genus="onz" getal="ev" id="9" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+          <node begin="6" end="7" id="10" lemma="erover" pos="pp" postag="BW()" pt="bw" rel="pc" root="erover" word="erover"/>
+          <node begin="7" end="8" id="11" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>weer een keer dat we het erover hebben</sentence>
+</alpino_ds>

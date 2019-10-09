@@ -1,0 +1,68 @@
+<!ELEMENT kranten (DOC+)>
+<!ATTLIST kranten
+		  name CDATA #REQUIRED>
+<!ELEMENT DOC 		 (DOCNO,DOCID,HEAD,BODY,INFO)>
+<!ELEMENT DOCNO		 (#PCDATA) >
+<!ELEMENT DOCID		 (#PCDATA) >
+
+<!ELEMENT HEAD 		 (RU*,SEC?,PA*,DAT,UI,AU*,COP?,RES?,LEW?,ED?,BIBLIO?,RIGHTS?)>
+<!ELEMENT RU 		 (#PCDATA) >
+<!ELEMENT SEC 		 (#PCDATA) >
+<!ELEMENT PA 		 (#PCDATA) >
+<!ELEMENT DAT 		 (#PCDATA) >
+<!ELEMENT UI 		 (#PCDATA) >
+<!ELEMENT AU  		 (#PCDATA) >
+<!ELEMENT COP 		 (#PCDATA) >
+<!ELEMENT RES 		 (#PCDATA) >
+<!ELEMENT LEW 		 (#PCDATA) >
+<!ELEMENT ED 		 (#PCDATA) >
+<!ELEMENT BIBLIO 	 (#PCDATA) >
+<!ELEMENT RIGHTS	 (#PCDATA) >
+
+<!ELEMENT BODY 		 (TI*,LE*,TE?,KAD*,OS*,FO*)>
+<!ELEMENT TI  		 (P*)>
+<!ELEMENT LE  		 (P+)>
+<!ELEMENT TE  		 (P+)>
+<!ELEMENT KAD 		 (P*)>
+<!ELEMENT OS 		 (P*)>
+<!ELEMENT FO  		 (P*)>
+
+<!ELEMENT INFO		 (BY*,DL*,CH*,IN*,FT?,TA?,ORG*,PER*,LEV*,FTG*,IL*,ILL*,CD?,SO*,HTR*,TR?,
+                GEO*,RE*,AFL?,DAG*,LET*,PAG*,TAB*,KO*,COR*,EVE?,AFF?)>
+<!ELEMENT BY		 (#PCDATA) >
+<!ELEMENT DL		 (#PCDATA) >
+<!ELEMENT CH 		 (#PCDATA) >
+<!ELEMENT IN 		 (#PCDATA) >
+<!ELEMENT FT 		 (#PCDATA) >
+<!ELEMENT TA  		 (#PCDATA) >
+<!ELEMENT ORG 		 (#PCDATA) >
+<!ELEMENT PER 		 (#PCDATA) >
+<!ELEMENT LEV		 (#PCDATA) >
+<!ELEMENT FTG 		 (#PCDATA) >
+<!ELEMENT IL  		 (#PCDATA) >
+<!ELEMENT ILL 		 (#PCDATA) >
+<!ELEMENT CD  		 (#PCDATA) >
+<!ELEMENT SO  		 (#PCDATA) >
+<!ELEMENT HTR 		 (#PCDATA) >
+<!ELEMENT TR  		 (#PCDATA) >
+<!ELEMENT GEO 		 (#PCDATA) >
+<!ELEMENT RE  		 (#PCDATA) >
+<!ELEMENT AFL		 (#PCDATA) >
+<!ELEMENT DAG		 (#PCDATA) >
+<!ELEMENT LET		 (#PCDATA) >
+<!ELEMENT PAG		 (#PCDATA) >
+<!ELEMENT TAB		 (#PCDATA) >
+<!ELEMENT KO 		 (#PCDATA) >
+<!ELEMENT COR		 (#PCDATA) >
+<!ELEMENT EVE		 (#PCDATA) >
+<!ELEMENT AFF		 (#PCDATA) >
+
+<!ELEMENT P 		 (#PCDATA) >
+
+<!ENTITY   gt       ">">
+<!ENTITY   lt       "<">
+<!ENTITY   klaver   "k">
+<!ENTITY   ruiten   "r">
+<!ENTITY   harten   "h">
+<!ENTITY   schoppen "s">
+

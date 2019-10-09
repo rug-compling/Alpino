@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="14" id="2" rel="--">
+      <node begin="0" cat="smain" end="7" id="3" rel="cnj">
+        <node begin="0" cat="pp" end="3" id="4" rel="mod">
+          <node begin="0" end="1" id="5" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="Voor"/>
+          <node begin="1" cat="np" end="3" id="6" rel="obj1">
+            <node begin="1" end="2" id="7" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="8" lemma="pastoor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pastoor" word="pastoor"/>
+          </node>
+        </node>
+        <node begin="3" end="4" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="4" end="5" genus="masc" getal="ev" id="10" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+        <node begin="5" cat="ap" end="7" id="11" rel="predc">
+          <node begin="5" buiging="zonder" end="6" graad="basis" id="12" lemma="bijzonder" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="bijzonder" word="bijzonder"/>
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="13" lemma="jong" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="jong" word="jong"/>
+        </node>
+      </node>
+      <node begin="8" conjtype="neven" end="9" id="14" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+      <node begin="9" cat="smain" end="14" id="15" rel="cnj">
+        <node begin="9" cat="mwu" end="11" id="16" mwu_root="Piet Capoen" mwu_sense="Piet Capoen" rel="su">
+          <node begin="9" end="10" id="17" lemma="Piet" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Piet" spectype="deeleigen" word="Piet"/>
+          <node begin="10" end="11" id="18" lemma="Capoen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Capoen" spectype="deeleigen" word="Capoen"/>
+        </node>
+        <node begin="11" end="12" id="19" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+        <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="20" lemma="ervaring" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="ervaring" word="ervaring"/>
+        <node begin="13" buiging="zonder" end="14" graad="basis" id="21" lemma="zat" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="zat" word="zat"/>
+      </node>
+    </node>
+    <node begin="14" end="15" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Voor een pastoor is hij bijzonder jong , maar Piet Capoen heeft ervaring zat .</sentence>
+</alpino_ds>

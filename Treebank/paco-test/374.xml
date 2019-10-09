@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="31" id="0" rel="top">
+    <node begin="15" end="16" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="30" id="2" rel="--">
+      <node begin="0" cat="cp" end="15" id="3" rel="mod">
+        <node begin="0" end="1" frame="complementizer" id="4" lcat="cp" pos="comp" rel="cmp" root="indien" sense="indien" word="Indien"/>
+        <node begin="1" cat="ssub" end="15" id="5" rel="body">
+          <node begin="1" cat="np" end="3" id="6" rel="su">
+            <node begin="1" end="2" frame="determiner(een)" id="7" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+            <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="8" lcat="np" num="sg" pos="noun" rel="hd" root="installatie" sense="installatie" word="installatie"/>
+          </node>
+          <node begin="3" end="4" frame="verb(hebben,sg3,pc_pp(onder))" id="9" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="ressorteer" sc="pc_pp(onder)" sense="ressorteer-onder" tense="present" word="ressorteert"/>
+          <node begin="4" cat="pp" end="15" id="10" rel="pc">
+            <node begin="4" end="5" frame="preposition(onder,[door,vandaan])" id="11" lcat="pp" pos="prep" rel="hd" root="onder" sense="onder" word="onder"/>
+            <node begin="5" cat="conj" end="15" id="12" rel="obj1">
+              <node begin="7" end="8" frame="conj(of)" id="13" lcat="vg" pos="vg" rel="crd" root="of" sense="of" word="of"/>
+              <node begin="5" cat="np" end="15" id="14" rel="cnj">
+                <node begin="5" end="6" frame="determiner(een)" id="15" index="1" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+                <node begin="6" end="7" frame="noun(de,count,sg)" gen="de" id="16" lcat="np" num="sg" pos="noun" rel="hd" root="persoon" sense="persoon" word="persoon"/>
+                <node begin="9" cat="rel" end="15" id="17" index="2" rel="mod">
+                  <node begin="9" case="no_obl" end="10" frame="rel_pronoun(de,no_obl)" gen="de" id="18" index="3" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+                  <node begin="9" cat="ssub" end="15" id="19" rel="body">
+                    <node begin="9" end="10" id="20" index="3" rel="su"/>
+                    <node begin="13" end="14" frame="verb(unacc,sg_heeft,passive)" id="21" infl="sg_heeft" lcat="ssub" pos="verb" rel="hd" root="ben" sc="passive" sense="ben" tense="present" word="is"/>
+                    <node begin="9" cat="ppart" end="15" id="22" rel="vc">
+                      <node begin="9" end="10" id="23" index="3" rel="obj1"/>
+                      <node begin="10" cat="pp" end="13" id="24" rel="ld">
+                        <node begin="10" end="11" frame="preposition(buiten,[om])" id="25" lcat="pp" pos="prep" rel="hd" root="buiten" sense="buiten" word="buiten"/>
+                        <node begin="11" cat="np" end="13" id="26" rel="obj1">
+                          <node begin="11" end="12" frame="determiner(de)" id="27" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                          <node begin="12" end="13" frame="proper_name(both,'ORG')" id="28" lcat="np" neclass="ORG" num="both" pos="name" rel="hd" root="Gemeenschap" sense="Gemeenschap" word="Gemeenschap"/>
+                        </node>
+                      </node>
+                      <node begin="14" end="15" frame="verb(hebben,psp,np_ld_pp)" id="29" infl="psp" lcat="ppart" pos="verb" rel="hd" root="vestig" sc="np_ld_pp" sense="vestig" word="gevestigd"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="5" cat="np" end="15" id="30" rel="cnj">
+                <node begin="5" end="6" id="31" index="1" rel="det"/>
+                <node begin="8" end="9" frame="noun(de,count,sg)" gen="de" id="32" lcat="np" num="sg" pos="noun" rel="hd" root="onderneming" sense="onderneming" word="onderneming"/>
+                <node begin="9" end="15" id="33" index="2" rel="mod"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="16" end="17" frame="verb(hebben,pl,ld_pp)" id="34" infl="pl" lcat="smain" pos="verb" rel="hd" root="rust" sc="ld_pp" sense="rust" tense="present" word="rusten"/>
+      <node begin="17" cat="np" end="23" id="35" rel="su">
+        <node begin="17" end="18" frame="determiner(de)" id="36" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node begin="18" cat="ppart" end="22" id="37" rel="mod">
+          <node begin="18" cat="pp" end="21" id="38" rel="mod">
+            <node begin="18" end="19" frame="preposition(in,[])" id="39" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+            <node begin="19" cat="np" end="21" id="40" rel="obj1">
+              <node begin="19" end="20" frame="determiner(de,nwh,nmod,pro,nparg)" id="41" infl="de" lcat="detp" pos="det" rel="det" root="deze" sense="deze" wh="nwh" word="deze"/>
+              <node begin="20" end="21" frame="noun(de,count,sg)" gen="de" id="42" lcat="np" num="sg" pos="noun" rel="hd" root="verordening" sense="verordening" word="verordening"/>
+            </node>
+          </node>
+          <node aform="base" begin="21" end="22" frame="adjective(ge_both(adv))" id="43" infl="both" lcat="ppart" pos="adj" rel="hd" root="voorgeschreven" sense="voorgeschreven" vform="psp" word="voorgeschreven"/>
+        </node>
+        <node begin="22" end="23" frame="noun(de,count,pl)" gen="de" id="44" lcat="np" num="pl" pos="noun" rel="hd" root="verplichting" sense="verplichting" word="verplichtingen"/>
+      </node>
+      <node begin="23" cat="pp" end="30" id="45" rel="ld">
+        <node begin="23" end="24" frame="preposition(op,[af,na])" id="46" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+        <node begin="24" cat="np" end="30" id="47" rel="obj1">
+          <node begin="24" end="25" frame="determiner(de)" id="48" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node aform="base" begin="25" end="26" frame="adjective(e)" id="49" infl="e" lcat="ap" pos="adj" rel="mod" root="plaatselijk" sense="plaatselijk" vform="adj" word="plaatselijke"/>
+          <node begin="26" end="27" frame="noun(de,count,sg)" gen="de" id="50" lcat="np" num="sg" pos="noun" rel="hd" root="directie" sense="directie" word="directie"/>
+          <node begin="27" cat="pp" end="30" id="51" rel="mod">
+            <node begin="27" end="28" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="52" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="28" cat="np" end="30" id="53" rel="obj1">
+              <node begin="28" end="29" frame="determiner(de)" id="54" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="29" end="30" frame="noun(de,count,sg)" gen="de" id="55" lcat="np" num="sg" pos="noun" rel="hd" root="installatie" sense="installatie" word="installatie"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="30" end="31" frame="punct(punt)" id="56" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Indien een installatie ressorteert onder een persoon of onderneming die buiten de Gemeenschap is gevestigd , rusten de in deze verordening voorgeschreven verplichtingen op de plaatselijke directie van de installatie .</sentence>
+  <comments>
+    <comment>Q#374|Indien een installatie ressorteert onder een persoon of onderneming die buiten de Gemeenschap is gevestigd , rusten de in deze verordening voorgeschreven verplichtingen op de plaatselijke directie van de installatie .|1|1|-5.160322507753584</comment>
+  </comments>
+</alpino_ds>

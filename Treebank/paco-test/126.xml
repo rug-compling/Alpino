@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="12" end="13" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="conj" end="16" id="2" rel="--">
+      <node begin="0" cat="smain" end="4" id="3" rel="cnj">
+        <node begin="0" cat="np" end="2" id="4" index="1" rel="su">
+          <node begin="0" end="1" frame="determiner(een)" id="5" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="Een"/>
+          <node begin="1" end="2" frame="noun(both,count,sg)" gen="both" id="6" lcat="np" num="sg" pos="noun" rel="hd" root="evaluatie_kader" sense="evaluatie_kader" word="evaluatiekader"/>
+        </node>
+        <node begin="2" end="3" frame="verb(unacc,past(sg),passive)" id="7" infl="sg" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="past" word="werd"/>
+        <node begin="0" cat="ppart" end="4" id="8" rel="vc">
+          <node begin="0" end="2" id="9" index="1" rel="obj1"/>
+          <node begin="3" end="4" frame="verb(hebben,psp,ninv(transitive,part_transitive(op)))" id="10" infl="psp" lcat="ppart" pos="verb" rel="hd" root="stel_op" sc="part_transitive(op)" sense="stel_op" word="opgesteld"/>
+        </node>
+      </node>
+      <node begin="4" end="5" frame="conj(en)" id="11" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="0" cat="smain" end="16" id="12" rel="cnj">
+        <node begin="0" end="2" id="13" index="1" rel="su"/>
+        <node begin="5" end="6" frame="verb(unacc,sg3,passive)" id="14" infl="sg3" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt"/>
+        <node begin="0" cat="ppart" end="16" id="15" rel="vc">
+          <node begin="0" end="2" id="16" index="1" rel="obj1"/>
+          <node begin="6" end="7" frame="verb(hebben,psp,ninv(np_pc_pp(op),part_np_pc_pp(toe,op)))" id="17" infl="psp" lcat="ppart" pos="verb" rel="hd" root="pas_toe" sc="part_np_pc_pp(toe,op)" sense="pas_toe-op" word="toegepast"/>
+          <node begin="7" cat="pp" end="16" id="18" rel="pc">
+            <node begin="7" end="8" frame="preposition(op,[af,na])" id="19" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+            <node begin="8" cat="np" end="16" id="20" rel="obj1">
+              <node begin="8" end="9" frame="determiner(de)" id="21" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="9" end="10" frame="noun(de,count,sg)" gen="de" id="22" lcat="np" num="sg" pos="noun" rel="hd" root="aanvaarding_plicht" sense="aanvaarding_plicht" word="aanvaardingsplicht"/>
+              <node begin="10" cat="pp" end="16" id="23" rel="mod">
+                <node begin="10" end="11" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="24" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+                <node begin="11" cat="conj" end="16" id="25" rel="obj1">
+                  <node begin="11" end="12" frame="noun(both,both,both)" gen="both" id="26" lcat="np" num="both" pos="noun" rel="cnj" root="aeea" sense="aeea" word="AEEA"/>
+                  <node begin="13" end="14" frame="noun(de,count,pl)" gen="de" id="27" lcat="np" num="pl" pos="noun" rel="cnj" root="batterij" sense="batterij" word="batterijen"/>
+                  <node begin="14" end="15" frame="conj(en)" id="28" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                  <node begin="15" end="16" frame="noun(de,count,pl)" gen="de" id="29" lcat="np" num="pl" pos="noun" rel="cnj" root="lood_start_batterij" sense="lood_start_batterij" word="loodstartbatterijen"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" frame="punct(punt)" id="30" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Een evaluatiekader werd opgesteld en wordt toegepast op de aanvaardingsplicht voor AEEA , batterijen en loodstartbatterijen .</sentence>
+  <comments>
+    <comment>Q#126|Een evaluatiekader werd opgesteld en wordt toegepast op de aanvaardingsplicht voor AEEA , batterijen en loodstartbatterijen .|1|1|-9.545127736626558</comment>
+  </comments>
+</alpino_ds>

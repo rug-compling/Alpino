@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="19" end="20" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="smain" end="21" id="2" rel="--">
+      <node begin="0" cat="np" end="12" id="3" rel="su">
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="preventief" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="preventief" word="preventieve"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="zorg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zorg" word="zorg"/>
+        <node begin="3" cat="pp" end="12" id="7" rel="mod">
+          <node begin="3" end="4" id="8" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+          <node begin="4" cat="conj" end="12" id="9" rel="obj1">
+            <node begin="5" conjtype="neven" end="6" id="10" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="4" cat="np" end="12" id="11" rel="cnj">
+              <node begin="4" end="5" getal="mv" graad="basis" id="12" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kind" word="kinderen"/>
+              <node begin="7" cat="pp" end="9" id="13" index="1" rel="mod">
+                <node begin="7" end="8" id="14" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="8" end="9" id="15" lemma="4" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="obj1" root="4" word="4"/>
+              </node>
+              <node begin="9" cat="pp" end="12" id="16" index="2" rel="mod">
+                <node begin="9" end="10" id="17" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+                <node begin="10" cat="np" end="12" id="18" rel="obj1">
+                  <node begin="10" end="11" id="19" lemma="19" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="19" word="19"/>
+                  <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="20" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
+                </node>
+              </node>
+            </node>
+            <node begin="6" cat="ap" end="12" id="21" rel="cnj">
+              <node begin="6" buiging="met-e" end="7" getal-n="mv-n" graad="basis" id="22" lemma="jeugdig" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" root="jeugdig" word="jeugdigen"/>
+              <node begin="7" end="9" id="23" index="1" rel="mod"/>
+              <node begin="9" end="12" id="24" index="2" rel="mod"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="12" end="13" id="25" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="13" cat="mwu" end="15" id="26" rel="svp">
+        <node begin="13" end="14" id="27" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+        <node begin="14" end="15" getal="mv" graad="basis" id="28" lemma="hand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="hand" word="handen"/>
+      </node>
+      <node begin="15" cat="pp" end="21" id="29" rel="pc">
+        <node begin="15" end="16" id="30" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="16" cat="np" end="21" id="31" rel="obj1">
+          <node begin="16" end="17" id="32" lemma="44" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="44" word="44"/>
+          <node begin="17" buiging="met-e" end="18" graad="basis" id="33" lemma="(inter)gemeentelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gemeentelijk" word="(inter)gemeentelijke"/>
+          <node begin="18" end="19" getal="mv" graad="basis" id="34" lemma="gezondheidsdienst" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gezondheid_dienst" word="gezondheidsdiensten"/>
+          <node begin="20" end="21" getal="mv" graad="basis" id="35" lemma="GGD" ntype="eigen" pos="noun" postag="N(eigen,mv,basis)" pt="n" rel="mod" root="GGD" word="GGD-en"/>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="36" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="22" end="23" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De preventieve zorg voor kinderen en jeugdigen van 4 tot 19 jaar is in handen van 44 (inter)gemeentelijke gezondheidsdiensten ( GGD-en ) .</sentence>
+</alpino_ds>

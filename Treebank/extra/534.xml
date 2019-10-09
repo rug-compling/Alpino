@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" cat="smain" end="5" id="2" rel="nucl">
+        <node begin="0" cat="np" end="3" id="3" index="1" rel="su">
+          <node begin="0" buiging="zonder" end="1" graad="basis" id="4" lemma="stoned" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predm" root="stoned" word="Stoned"/>
+          <node begin="1" end="2" id="5" lemma="auto" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="auto" vztype="fin" word="auto"/>
+          <node begin="2" buiging="zonder" end="3" getal-n="zonder-n" id="6" lemma="auto_rijden" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="rijd_auto" word="rijden" wvorm="inf"/>
+        </node>
+        <node begin="3" end="4" id="7" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+        <node begin="0" cat="inf" end="5" id="8" rel="vc">
+          <node begin="0" end="3" id="9" index="1" rel="su"/>
+          <node begin="4" buiging="zonder" end="5" id="10" lemma="kunnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kan" word="kunnen" wvorm="inf"/>
+        </node>
+      </node>
+      <node begin="5" cat="sv1" end="7" id="11" rel="tag">
+        <node begin="5" end="6" id="12" lemma="vinden" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="vind" word="vind" wvorm="pv"/>
+        <node begin="6" end="7" getal="ev" id="13" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Stoned auto rijden moet kunnen vind ik .</sentence>
+</alpino_ds>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" word="En"/>
+      <node begin="1" cat="du" end="7" id="3" rel="nucl">
+        <node begin="1" end="2" genus="masc" getal="ev" id="4" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="dp" root="hij" status="vol" vwtype="pers" word="hij"/>
+        <node begin="2" cat="inf" end="7" id="5" rel="dp">
+          <node begin="2" end="3" id="6" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
+          <node begin="3" cat="pp" end="6" id="7" rel="ld">
+            <node begin="3" end="4" id="8" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="4" cat="np" end="6" id="9" rel="obj1">
+              <node begin="4" end="5" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="rij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rij" word="rij"/>
+            </node>
+          </node>
+          <node begin="6" buiging="zonder" end="7" id="12" lemma="staan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="sta" word="staan" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>En hij maar in de rij staan !</sentence>
+</alpino_ds>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" cat="np" end="5" id="4" rel="predc">
+        <node begin="2" end="3" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="6" lemma="publiek" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="publiek" word="publiek"/>
+        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="7" lemma="geheim" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geheim" word="geheim"/>
+      </node>
+      <node begin="5" cat="cp" end="11" id="8" rel="su">
+        <node begin="5" conjtype="onder" end="6" id="9" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="6" cat="ssub" end="11" id="10" rel="body">
+          <node begin="6" end="7" getal="getal" id="11" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="7" cat="pp" end="9" id="12" rel="ld">
+            <node begin="7" end="8" id="13" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="14" lemma="Limburg" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Limburg" word="Limburg"/>
+          </node>
+          <node begin="9" end="10" getal="mv" graad="basis" id="15" lemma="atoomwapen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="atoomwapen" word="atoomwapens"/>
+          <node begin="10" end="11" id="16" lemma="liggen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="lig" word="liggen" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Het is een publiek geheim dat er in Limburg atoomwapens liggen</sentence>
+</alpino_ds>

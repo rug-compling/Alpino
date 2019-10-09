@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" cat="np" end="6" id="2" rel="su">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="onderminister" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="onder_minister" word="Onderminister"/>
+        <node begin="1" cat="pp" end="4" id="4" rel="mod">
+          <node begin="1" end="2" id="5" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="2" cat="np" end="4" id="6" rel="obj1">
+            <node begin="2" buiging="met-e" end="3" graad="basis" id="7" lemma="buitenlands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="buitenlands" word="buitenlandse"/>
+            <node begin="3" end="4" getal="mv" graad="basis" id="8" lemma="zaak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="zaak" word="zaken"/>
+          </node>
+        </node>
+        <node begin="4" cat="mwu" end="6" id="9" rel="app">
+          <node begin="4" end="5" id="10" lemma="Jossi" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jossi" spectype="deeleigen" word="Jossi"/>
+          <node begin="5" end="6" id="11" lemma="Beilin" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Beilin" spectype="deeleigen" word="Beilin"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="12" lemma="reageren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="reageer" word="reageerde" wvorm="pv"/>
+      <node begin="7" end="8" id="13" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
+      <node begin="8" buiging="zonder" end="9" graad="basis" id="14" lemma="enthousiast" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="enthoesiast" word="enthousiast"/>
+      <node begin="9" cat="pp" end="12" id="15" rel="pc">
+        <node begin="9" end="10" id="16" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="10" cat="np" end="12" id="17" rel="obj1">
+          <node begin="10" end="11" id="18" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="19" lemma="plan-rabin" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="plan_Rabin" word="plan-Rabin"/>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Onderminister van buitenlandse zaken Jossi Beilin reageerde gisteren enthousiast op het plan-Rabin .</sentence>
+</alpino_ds>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="whq" end="12" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" root="wat" status="vol" vwtype="vb" word="Wat"/>
+      <node begin="0" cat="sv1" end="12" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="predc"/>
+        <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+        <node begin="2" cat="mwu" end="5" id="6" rel="mod">
+          <node begin="2" end="3" id="7" lemma="heden" pos="adv" postag="BW()" pt="bw" rel="mwp" root="heden" word="heden"/>
+          <node begin="3" end="4" id="8" lemma="te" pos="adv" postag="VZ(versm)" pt="vz" rel="mwp" root="ten" vztype="versm" word="ten"/>
+          <node begin="4" end="5" getal="ev" graad="basis" id="9" lemma="dag" naamval="dat" ntype="soort" pos="adv" postag="N(soort,ev,basis,dat)" pt="n" rel="mwp" root="dage" word="dage"/>
+        </node>
+        <node begin="5" cat="np" end="12" id="10" rel="su">
+          <node begin="5" end="6" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" buiging="met-e" end="7" graad="sup" id="12" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="groot" word="grootste"/>
+          <node begin="7" end="8" getal="mv" graad="basis" id="13" lemma="dier" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dier" word="dieren"/>
+          <node begin="8" cat="rel" end="12" id="14" rel="mod">
+            <node begin="8" end="9" getal="getal" id="15" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="8" cat="ssub" end="12" id="16" rel="body">
+              <node begin="8" end="9" id="17" index="2" rel="su"/>
+              <node begin="9" cat="pp" end="11" id="18" rel="mod">
+                <node begin="9" end="10" id="19" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="20" lemma="land" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="land" word="land"/>
+              </node>
+              <node begin="11" end="12" id="21" lemma="leven" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="leef" word="leven" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="22" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wat zijn heden ten dage de grootste dieren die op land leven ?</sentence>
+</alpino_ds>

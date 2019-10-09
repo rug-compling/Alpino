@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="10" end="11" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="21" id="2" rel="--">
+      <node begin="0" end="1" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="3" infl="het" lcat="np" pos="det" rel="su" root="het" sense="het" wh="nwh" word="het"/>
+      <node begin="1" end="2" frame="verb(unacc,sg_heeft,copula)" id="4" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="is"/>
+      <node begin="2" cat="np" end="21" id="5" rel="predc">
+        <node begin="2" end="3" frame="determiner(een)" id="6" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+        <node begin="3" end="4" frame="noun(de,count,sg)" gen="de" id="7" lcat="np" num="sg" pos="noun" rel="hd" root="evolutie" sense="evolutie" word="evolutie"/>
+        <node begin="4" cat="rel" end="10" id="8" rel="mod">
+          <node begin="4" case="no_obl" end="5" frame="rel_pronoun(de,no_obl)" gen="de" id="9" index="1" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+          <node begin="4" cat="ssub" end="10" id="10" rel="body">
+            <node begin="4" end="5" id="11" index="1" rel="su"/>
+            <node aform="base" begin="5" end="6" frame="adjective(no_e(adv))" id="12" infl="no_e" lcat="ap" pos="adj" rel="mod" root="wereldwijd" sense="wereldwijd" vform="adj" word="wereldwijd"/>
+            <node begin="6" cat="mwu" end="9" id="13" mwu_root="aan_de_gang" mwu_sense="aan_de_gang" rel="predc">
+              <node aform="base" begin="6" end="7" frame="adjective(pred(nonadv))" id="14" infl="pred" lcat="ap" pos="adj" rel="mwp" root="aan" sense="aan" vform="adj" word="aan"/>
+              <node aform="base" begin="7" end="8" frame="adjective(pred(nonadv))" id="15" infl="pred" lcat="ap" pos="adj" rel="mwp" root="de" sense="de" vform="adj" word="de"/>
+              <node aform="base" begin="8" end="9" frame="adjective(pred(nonadv))" id="16" infl="pred" lcat="ap" pos="adj" rel="mwp" root="gang" sense="gang" vform="adj" word="gang"/>
+            </node>
+            <node begin="9" end="10" frame="verb(unacc,sg_heeft,copula)" id="17" infl="sg_heeft" lcat="ssub" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="is"/>
+          </node>
+        </node>
+        <node begin="11" cat="np" end="21" id="18" rel="app">
+          <node begin="11" end="12" frame="determiner(een)" id="19" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+          <node aform="base" begin="12" end="13" frame="adjective(e)" id="20" infl="e" lcat="ap" pos="adj" rel="mod" root="absoluut" sense="absoluut" vform="adj" word="absolute"/>
+          <node begin="13" end="14" frame="noun(de,count,sg)" gen="de" id="21" lcat="np" num="sg" pos="noun" rel="hd" root="voorwaarde" sense="voorwaarde" word="voorwaarde"/>
+          <node begin="14" cat="pp" end="21" id="22" rel="mod">
+            <node begin="14" end="15" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="23" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+            <node begin="15" cat="np" end="21" id="24" rel="obj1">
+              <node begin="15" end="16" frame="determiner(een)" id="25" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+              <node aform="base" begin="16" end="17" frame="adjective(e)" id="26" infl="e" lcat="ap" pos="adj" rel="mod" root="duurzaam" sense="duurzaam" vform="adj" word="duurzame"/>
+              <node begin="17" end="18" frame="noun(de,count,sg)" gen="de" id="27" lcat="np" num="sg" pos="noun" rel="hd" root="ontwikkeling" sense="ontwikkeling" word="ontwikkeling"/>
+              <node begin="18" cat="pp" end="21" id="28" rel="mod">
+                <node begin="18" end="19" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="29" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                <node begin="19" cat="np" end="21" id="30" rel="obj1">
+                  <node begin="19" end="20" frame="determiner(onze)" id="31" infl="onze" lcat="detp" pos="det" rel="det" root="ons" sense="ons" word="onze"/>
+                  <node begin="20" end="21" frame="noun(de,count,sg)" gen="de" id="32" lcat="np" num="sg" pos="noun" rel="hd" root="maatschappij" sense="maatschappij" word="maatschappij"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" frame="punct(punt)" id="33" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>het is een evolutie die wereldwijd aan de gang is , een absolute voorwaarde voor een duurzame ontwikkeling van onze maatschappij .</sentence>
+  <comments>
+    <comment>Q#121|het is een evolutie die wereldwijd aan de gang is , een absolute voorwaarde voor een duurzame ontwikkeling van onze maatschappij .|1|1|-7.747376892767319</comment>
+  </comments>
+</alpino_ds>

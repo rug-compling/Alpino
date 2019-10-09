@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="0" cat="conj" end="24" id="1" rel="--">
+      <node begin="0" cat="smain" end="10" id="2" rel="cnj">
+        <node begin="0" cat="pp" end="3" id="3" index="1" rel="mod">
+          <node begin="0" end="1" frame="modal_adverb" id="4" lcat="advp" pos="adv" rel="mod" root="ook" sc="modal" sense="ook" word="ook"/>
+          <node begin="1" end="2" frame="preposition(bij,[vandaan])" id="5" lcat="pp" pos="prep" rel="hd" root="bij" sense="bij" word="bij"/>
+          <node begin="2" end="3" frame="noun(both,both,both)" gen="both" id="6" lcat="np" num="both" pos="noun" rel="obj1" root="kunststofrecyclaat" sense="kunststofrecyclaat" word="kunststofrecyclaat"/>
+        </node>
+        <node begin="3" end="4" frame="verb(unacc,sg_heeft,copula)" id="7" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="is"/>
+        <node begin="4" cat="pp" end="8" id="8" rel="mod">
+          <node begin="4" end="5" frame="preposition(in,[])" id="9" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+          <node begin="5" cat="np" end="8" id="10" rel="obj1">
+            <node begin="5" end="6" frame="determiner(de)" id="11" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="6" end="7" frame="number(rang)" id="12" lcat="ap" pos="num" rel="mod" root="eerste" sense="eerste" special="rang" word="eerste"/>
+            <node begin="7" end="8" frame="meas_mod_noun(de,count,sg)" gen="de" id="13" lcat="np" num="sg" pos="noun" rel="hd" root="plaats" sense="plaats" special="meas_mod" word="plaats"/>
+          </node>
+        </node>
+        <node begin="8" end="9" frame="noun(de,count,sg)" gen="de" id="14" lcat="np" num="sg" pos="noun" rel="su" root="kwaliteit_verbetering" sense="kwaliteit_verbetering" word="kwaliteitsverbetering"/>
+        <node aform="base" begin="9" end="10" frame="adjective(no_e(adv))" id="15" infl="no_e" lcat="ap" pos="adj" rel="predc" root="nodig" sense="nodig" vform="adj" word="nodig"/>
+      </node>
+      <node begin="10" end="11" frame="conj(en)" id="16" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="0" cat="smain" end="24" id="17" rel="cnj">
+        <node begin="11" end="12" frame="verb(hebben,sg3,aux(te))" id="18" infl="sg3" lcat="smain" pos="verb" rel="hd" root="dien" sc="aux(te)" sense="dien" tense="present" word="dient"/>
+        <node begin="0" cat="ti" end="24" id="19" rel="vc">
+          <node begin="14" end="15" frame="complementizer(te)" id="20" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+          <node begin="0" cat="inf" end="24" id="21" rel="body">
+            <node begin="15" end="16" frame="verb(unacc,inf,passive)" id="22" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+            <node begin="0" cat="ppart" end="24" id="23" rel="vc">
+              <node begin="0" end="3" id="24" index="1" rel="mod"/>
+              <node begin="12" end="13" frame="er_vp_adverb" id="25" lcat="advp" pos="adv" rel="mod" root="er" sense="er" special="er" word="er"/>
+              <node begin="13" end="14" frame="verb(hebben,psp,pc_pp(aan))" id="26" infl="psp" lcat="ppart" pos="verb" rel="hd" root="sleutel" sc="pc_pp(aan)" sense="sleutel-aan" word="gesleuteld"/>
+              <node begin="16" cat="pp" end="24" id="27" rel="pc">
+                <node begin="16" end="17" frame="preposition(aan,[vooraf])" id="28" lcat="pp" pos="prep" rel="hd" root="aan" sense="aan" word="aan"/>
+                <node begin="17" cat="np" end="24" id="29" rel="obj1">
+                  <node begin="17" end="18" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="30" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                  <node begin="18" end="19" frame="noun(het,count,sg)" gen="het" id="31" lcat="np" num="sg" pos="noun" rel="hd" root="imago" sense="imago" word="imago"/>
+                  <node begin="19" cat="pp" end="24" id="32" rel="mod">
+                    <node begin="19" end="20" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="33" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                    <node begin="20" cat="np" end="24" id="34" rel="obj1">
+                      <node begin="20" end="21" frame="noun(het,count,pl)" gen="het" id="35" lcat="np" num="pl" pos="noun" rel="hd" root="product" sense="product" word="producten"/>
+                      <node begin="21" cat="pp" end="24" id="36" rel="mod">
+                        <node begin="21" end="22" frame="preposition(uit,[vandaan])" id="37" lcat="pp" pos="prep" rel="hd" root="uit" sense="uit" word="uit"/>
+                        <node begin="22" cat="np" end="24" id="38" rel="obj1">
+                          <node aform="base" begin="22" end="23" frame="adjective(e)" id="39" infl="e" lcat="ap" pos="adj" rel="mod" root="gerecycleerde" sense="gerecycleerde" vform="adj" word="gerecycleerde"/>
+                          <node begin="23" end="24" frame="noun(both,count,sg)" gen="both" id="40" lcat="np" num="sg" pos="noun" rel="hd" root="kunststof" sense="kunststof" word="kunststof"/>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" frame="punct(punt)" id="41" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>ook bij kunststofrecyclaat is in de eerste plaats kwaliteitsverbetering nodig en dient er gesleuteld te worden aan het imago van producten uit gerecycleerde kunststof .</sentence>
+  <comments>
+    <comment>Q#129|ook bij kunststofrecyclaat is in de eerste plaats kwaliteitsverbetering nodig en dient er gesleuteld te worden aan het imago van producten uit gerecycleerde kunststof .|1|1|-2.015962685246374</comment>
+  </comments>
+</alpino_ds>

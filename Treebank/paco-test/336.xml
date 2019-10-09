@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="3" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" cat="ppart" end="3" id="4" rel="mod">
+          <node begin="1" end="2" frame="adverb" id="5" lcat="advp" pos="adv" rel="mod" root="aldus" sense="aldus" word="aldus"/>
+          <node aform="base" begin="2" end="3" frame="adjective(ge_e)" id="6" infl="e" lcat="ppart" pos="adj" rel="hd" root="aangesteld" sense="aangesteld" vform="psp" word="aangestelde"/>
+        </node>
+        <node begin="3" end="4" frame="noun(de,count,sg)" gen="de" id="7" lcat="np" num="sg" pos="noun" rel="hd" root="bemiddelaar" sense="bemiddelaar" word="bemiddelaar"/>
+      </node>
+      <node begin="4" end="5" frame="verb(hebben,sg3,transitive)" id="8" infl="sg3" lcat="smain" pos="verb" rel="hd" root="leid" sc="transitive" sense="leid" tense="present" word="leidt"/>
+      <node begin="5" cat="np" end="7" id="9" rel="obj1">
+        <node begin="5" end="6" frame="determiner(de)" id="10" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node begin="6" end="7" frame="noun(de,mass,sg)" gen="de" id="11" lcat="np" num="sg" pos="noun" rel="hd" root="bemiddeling" sense="bemiddeling" word="bemiddeling"/>
+      </node>
+      <node begin="7" cat="cp" end="9" id="12" rel="predm">
+        <node begin="7" end="8" frame="complementizer(als)" id="13" lcat="cp" pos="comp" rel="cmp" root="als" sc="als" sense="als" word="als"/>
+        <node begin="8" end="9" frame="noun(de,count,sg)" gen="de" id="14" lcat="np" num="sg" pos="noun" rel="body" root="voorzitter" sense="voorzitter" word="voorzitter"/>
+      </node>
+    </node>
+    <node begin="9" end="10" frame="punct(punt)" id="15" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De aldus aangestelde bemiddelaar leidt de bemiddeling als voorzitter .</sentence>
+  <comments>
+    <comment>Q#336|De aldus aangestelde bemiddelaar leidt de bemiddeling als voorzitter .|1|1|7.836648375411605</comment>
+  </comments>
+</alpino_ds>

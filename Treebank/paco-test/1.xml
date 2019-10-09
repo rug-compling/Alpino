@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="np" end="7" id="1" rel="--">
+      <node begin="0" end="1" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="2" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="Het"/>
+      <node begin="1" end="2" frame="noun(het,count,sg)" gen="het" id="3" lcat="np" num="sg" pos="noun" rel="hd" root="uitvoering_plan" sense="uitvoering_plan" word="uitvoeringsplan"/>
+      <node begin="2" cat="mwu" end="7" id="4" mwu_root="Milieuverantwoord_Beheer_van_Huishoudelijke_Afvalstoffen" mwu_sense="Milieuverantwoord_Beheer_van_Huishoudelijke_Afvalstoffen" rel="app">
+        <node begin="2" end="3" frame="proper_name(both)" id="5" lcat="np" num="both" pos="name" rel="mwp" root="Milieuverantwoord" sense="Milieuverantwoord" word="Milieuverantwoord"/>
+        <node begin="3" end="4" frame="proper_name(both)" id="6" lcat="np" num="both" pos="name" rel="mwp" root="Beheer" sense="Beheer" word="Beheer"/>
+        <node begin="4" end="5" frame="proper_name(both)" id="7" lcat="np" num="both" pos="name" rel="mwp" root="van" sense="van" word="van"/>
+        <node begin="5" end="6" frame="proper_name(both)" id="8" lcat="np" num="both" pos="name" rel="mwp" root="Huishoudelijke" sense="Huishoudelijke" word="Huishoudelijke"/>
+        <node begin="6" end="7" frame="proper_name(both)" id="9" lcat="np" num="both" pos="name" rel="mwp" root="Afvalstoffen" sense="Afvalstoffen" word="Afvalstoffen"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Het uitvoeringsplan Milieuverantwoord Beheer van Huishoudelijke Afvalstoffen</sentence>
+  <comments>
+    <comment>Q#1|Het uitvoeringsplan Milieuverantwoord Beheer van Huishoudelijke Afvalstoffen|1|1|0.47930952413561057</comment>
+  </comments>
+</alpino_ds>

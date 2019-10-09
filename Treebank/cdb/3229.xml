@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="18" id="2" rel="--">
+      <node begin="3" end="4" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="4" cat="np" end="6" id="4" index="1" rel="su">
+        <node begin="4" end="5" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="6" lemma="aankoop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aankoop" word="aankoop"/>
+      </node>
+      <node begin="0" cat="ppart" end="18" id="7" rel="vc">
+        <node begin="0" cat="pp" end="3" id="8" rel="mod">
+          <node begin="0" end="1" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+          <node begin="1" cat="np" end="3" id="10" rel="obj1">
+            <node begin="1" end="2" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="2" buiging="zonder" end="3" getal-n="zonder-n" graad="basis" id="12" lemma="algemeen" pos="adj" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="hd" root="algemeen" word="algemeen"/>
+          </node>
+        </node>
+        <node begin="4" end="6" id="13" index="1" rel="obj1"/>
+        <node begin="6" buiging="zonder" end="7" id="14" lemma="verrichten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verricht" word="verricht" wvorm="vd"/>
+        <node begin="7" cat="pp" end="18" id="15" rel="mod">
+          <node begin="7" end="8" id="16" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+          <node begin="8" cat="np" end="18" id="17" rel="obj1">
+            <node begin="8" buiging="met-e" end="9" graad="basis" id="18" lemma="minnelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="minnelijke" word="minnelijke"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="19" lemma="schikking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schikking" word="schikking"/>
+            <node begin="11" cat="ppres" end="18" id="20" rel="mod">
+              <node begin="11" cat="conj" end="14" id="21" rel="mod">
+                <node begin="11" end="12" getal="getal" id="22" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="cnj" root="hier" status="vol" vwtype="aanw" word="hier"/>
+                <node begin="12" conjtype="neven" end="13" id="23" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                <node begin="13" end="14" getal="getal" id="24" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="cnj" root="daar" status="vol" vwtype="aanw" word="daar"/>
+              </node>
+              <node begin="15" buiging="zonder" end="16" id="25" lemma="gaan" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="hd" root="gaand" word="gaande" wvorm="od"/>
+              <node begin="14" cat="ppart" end="18" id="26" rel="predc">
+                <node begin="14" buiging="zonder" end="15" id="27" lemma="paren" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gepaard" word="gepaard" wvorm="vd"/>
+                <node begin="16" cat="pp" end="18" id="28" rel="pc">
+                  <node begin="16" end="17" id="29" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                  <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="30" lemma="ruilverkaveling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="ruilverkaveling" word="ruilverkaveling"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="31" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>In het algemeen is de aankoop verricht bij minnelijke schikking , hier en daar gepaard gaande met ruilverkaveling .</sentence>
+</alpino_ds>

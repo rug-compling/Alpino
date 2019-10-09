@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      <node begin="1" end="2" id="3" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+      <node begin="0" cat="inf" end="8" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="3" buiging="zonder" end="4" id="6" lemma="willen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="wil" word="willen" wvorm="inf"/>
+        <node begin="0" cat="inf" end="8" id="7" rel="vc">
+          <node begin="0" end="1" id="8" index="1" rel="su"/>
+          <node begin="2" end="3" id="9" lemma="graag" pos="adj" postag="BW()" pt="bw" rel="mod" root="graag" word="graag"/>
+          <node begin="4" buiging="zonder" end="5" id="10" lemma="meedenken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="denk_mee" word="meedenken" wvorm="inf"/>
+          <node begin="5" cat="pp" end="8" id="11" rel="mod">
+            <node begin="5" end="6" id="12" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+            <node begin="6" cat="np" end="8" id="13" rel="obj1">
+              <node begin="6" end="7" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="15" lemma="oplossing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oplossing" word="oplossing"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>ik zou graag willen meedenken over een oplossing</sentence>
+  <comments>
+    <comment>why would the over-PP be a complement?</comment>
+  </comments>
+</alpino_ds>

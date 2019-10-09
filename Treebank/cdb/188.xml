@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="1" cat="smain" end="7" id="2" rel="--">
+      <node begin="1" end="2" getal="mv" graad="basis" id="3" lemma="vrouw" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="vrouwen" word="Vrouwen"/>
+      <node begin="2" end="3" id="4" lemma="maken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="maak" word="maken" wvorm="pv"/>
+      <node begin="3" end="4" getal="getal" id="5" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+      <node begin="4" cat="np" end="7" id="6" rel="obj1">
+        <node begin="4" cat="detp" end="6" id="7" rel="det">
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="ontzettend" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ontzettend" word="ontzettend"/>
+          <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="hd" root="veel" vwtype="onbep" word="veel"/>
+        </node>
+        <node begin="6" end="7" getal="mv" graad="basis" id="10" lemma="illusie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="illusie" word="illusies"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&quot; Vrouwen maken zich ontzettend veel illusies .</sentence>
+  <comments>
+    <comment>Hm. Perhaps zich is an ordinary obj2, and &apos;illusies&apos; is an obj1. Like: Ik maakte hun een stapel pannenkoeken.</comment>
+  </comments>
+</alpino_ds>

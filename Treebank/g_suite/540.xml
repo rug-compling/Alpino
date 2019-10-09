@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+      <node begin="1" end="2" id="3" lemma="krijgen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="krijg" word="krijgt" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="4" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="obj2"/>
+        <node begin="2" end="3" getal="ev" id="6" lemma="alles" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="alles" status="vol" vwtype="onbep" word="alles"/>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="toesturen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stuur" word="toegestuurd" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>hij krijgt alles toegestuurd</sentence>
+</alpino_ds>

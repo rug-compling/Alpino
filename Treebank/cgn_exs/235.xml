@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" cat="np" end="3" id="1" rel="--">
+      <node begin="0" cat="detp" end="2" id="2" rel="det">
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="precies" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="precies" word="precies"/>
+        <node begin="1" end="2" id="4" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="drie" word="drie"/>
+      </node>
+      <node begin="2" end="3" getal="mv" graad="basis" id="5" lemma="boek" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="boek" word="boeken"/>
+    </node>
+  </node>
+  <sentence>precies drie boeken</sentence>
+</alpino_ds>

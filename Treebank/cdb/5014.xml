@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="37" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="4" end="5" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="21" end="22" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="36" id="4" rel="--">
+      <node begin="0" cat="np" end="4" id="5" index="1" rel="su">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="6" lemma="staatssecretaris" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="staatssecretaris" word="Staatssecretaris"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="Haex" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Haex" word="Haex"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="landmacht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="macht" word="landmacht"/>
+      </node>
+      <node begin="5" end="6" id="9" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="36" id="10" rel="vc">
+        <node begin="0" end="4" id="11" index="1" rel="su"/>
+        <node begin="6" end="7" id="12" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
+        <node begin="7" cat="pp" end="16" id="13" rel="mod">
+          <node begin="7" cat="mwu" end="10" id="14" rel="hd">
+            <node begin="7" end="8" id="15" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+            <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="16" lemma="antwoord" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="antwoord" word="antwoord"/>
+            <node begin="9" end="10" id="17" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+          </node>
+          <node begin="10" cat="np" end="16" id="18" rel="obj1">
+            <node begin="10" buiging="met-e" end="11" graad="basis" id="19" lemma="mondeling" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="mondeling" word="mondelinge"/>
+            <node begin="11" end="12" getal="mv" graad="basis" id="20" lemma="vraag" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vraag" word="vragen"/>
+            <node begin="12" cat="pp" end="16" id="21" rel="mod">
+              <node begin="12" end="13" id="22" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="13" cat="np" end="16" id="23" rel="obj1">
+                <node begin="13" end="14" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="25" lemma="socialist" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="socialist" word="socialist"/>
+                <node begin="15" end="16" genus="genus" getal="ev" graad="basis" id="26" lemma="Wieldraaijer" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Wieldraaijer" word="Wieldraaijer"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="16" cat="pp" end="20" id="27" rel="mod">
+          <node begin="16" end="17" id="28" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="17" cat="np" end="20" id="29" rel="obj1">
+            <node begin="17" end="18" id="30" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="18" cat="mwu" end="20" id="31" rel="hd">
+              <node begin="18" end="19" id="32" lemma="Tweede" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Tweede" spectype="deeleigen" word="Tweede"/>
+              <node begin="19" end="20" id="33" lemma="Kamer" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kamer" spectype="deeleigen" word="Kamer"/>
+            </node>
+          </node>
+        </node>
+        <node begin="20" buiging="zonder" end="21" id="34" lemma="mededelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="deel" word="medegedeeld" wvorm="vd"/>
+        <node begin="22" cat="cp" end="36" id="35" rel="vc">
+          <node begin="22" conjtype="onder" end="23" id="36" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="23" cat="ssub" end="36" id="37" rel="body">
+            <node begin="24" end="25" id="38" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+            <node begin="23" cat="ppart" end="36" id="39" rel="vc">
+              <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="40" lemma="opdracht" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="svp" root="opdracht" word="opdracht"/>
+              <node begin="25" buiging="zonder" end="26" id="41" lemma="geven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geef" word="gegeven" wvorm="vd"/>
+              <node begin="26" cat="pp" end="36" id="42" rel="pc">
+                <node begin="26" end="27" id="43" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+                <node begin="27" cat="np" end="36" id="44" rel="obj1">
+                  <node begin="27" end="28" id="45" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="28" buiging="zonder" end="29" graad="basis" id="46" lemma="psychologisch" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="psychologisch" word="psychologisch"/>
+                  <node begin="29" end="30" genus="onz" getal="ev" graad="basis" id="47" lemma="onderzoek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="onderzoek" word="onderzoek"/>
+                  <node begin="30" cat="pp" end="36" id="48" rel="mod">
+                    <node begin="30" end="31" id="49" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+                    <node begin="31" cat="np" end="36" id="50" rel="obj1">
+                      <node begin="31" end="32" id="51" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                      <node begin="32" end="33" genus="onz" getal="ev" graad="basis" id="52" lemma="leefklimaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="klimaat" word="leefklimaat"/>
+                      <node begin="33" cat="pp" end="36" id="53" rel="mod">
+                        <node begin="33" end="34" id="54" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                        <node begin="34" cat="np" end="36" id="55" rel="obj1">
+                          <node begin="34" buiging="met-e" end="35" graad="basis" id="56" lemma="dienstplichtig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="dienstplichtige" word="dienstplichtige"/>
+                          <node begin="35" end="36" getal="mv" graad="basis" id="57" lemma="militair" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="militair" word="militairen"/>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="36" end="37" id="58" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Staatssecretaris Haex ( landmacht ) heeft gisteren in antwoord op mondelinge vragen van de socialist Wieldraaijer in de Tweede Kamer medegedeeld , dat opdracht is gegeven tot een psychologisch onderzoek naar het leefklimaat van dienstplichtige militairen .</sentence>
+</alpino_ds>

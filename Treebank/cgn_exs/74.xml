@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="overtreder" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="overtreder" word="overtreders"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="krijgen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="krijg" word="kregen" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="9" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="obj2"/>
+        <node begin="3" cat="pp" end="6" id="8" rel="mod">
+          <node begin="3" end="4" id="9" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+          <node begin="4" cat="np" end="6" id="10" rel="obj1">
+            <node begin="4" end="5" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="politierechter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="politierechter" word="politierechter"/>
+          </node>
+        </node>
+        <node begin="6" cat="np" end="8" id="13" rel="obj1">
+          <node begin="6" end="7" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="15" lemma="rijverbod" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="rij_verbod" word="rijverbod"/>
+        </node>
+        <node begin="8" buiging="zonder" end="9" id="16" lemma="opleggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leg_op" word="opgelegd" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="9" end="10" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>de overtreders kregen door de politierechter een rijverbod opgelegd .</sentence>
+</alpino_ds>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" getal="mv" id="2" index="1" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="We"/>
+      <node begin="1" end="2" id="3" infl="pl" lemma="willen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="wil" sc="modifier(aux(inf))" stype="declarative" tense="present" word="willen" wvorm="pv"/>
+      <node begin="0" cat="inf" end="12" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="3" buiging="zonder" end="4" id="6" infl="inf" lemma="komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom" sc="er_pp_sbar(tot)" word="komen" wvorm="inf"/>
+        <node begin="2" cat="pp" end="12" id="7" rel="pc">
+          <node begin="2" end="3" id="8" lemma="ertoe" pos="pp" postag="BW()" pt="bw" rel="hd" root="ertoe" special="er" word="ertoe"/>
+          <node begin="4" cat="cp" end="12" id="9" rel="vc">
+            <node begin="4" conjtype="onder" end="5" id="10" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+            <node begin="5" cat="ssub" end="12" id="11" rel="body">
+              <node begin="5" end="6" gen="de" getal="mv" graad="basis" id="12" lemma="leer_kracht" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" rnum="pl" root="leer_kracht" word="leerkrachten"/>
+              <node begin="8" end="9" id="13" infl="pl" lemma="krijgen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="krijg" sc="transitive" tense="present" word="krijgen" wvorm="pv"/>
+              <node begin="6" cat="np" end="12" id="14" rel="obj1">
+                <node aform="compar" begin="6" buiging="zonder" end="7" graad="comp" id="15" infl="meer" lemma="meer" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,comp)" pt="vnw" rel="det" root="meer" vform="adj" vwtype="onbep" word="meer"/>
+                <node begin="7" end="8" gen="het" genus="onz" getal="ev" graad="basis" id="16" lemma="oog" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="oog" word="oog"/>
+                <node begin="9" cat="pp" end="12" id="17" rel="mod">
+                  <node begin="9" end="10" id="18" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                  <node begin="10" cat="np" end="12" id="19" rel="obj1">
+                    <node aform="base" begin="10" buiging="met-e" end="11" graad="basis" id="20" infl="e" lemma="sociaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="sociaal" vform="adj" word="sociale"/>
+                    <node begin="11" end="12" gen="het" getal="mv" graad="basis" id="21" lemma="aspect" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="aspect" word="aspecten"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>We willen ertoe komen dat leerkrachten meer oog krijgen voor sociale aspecten .</sentence>
+</alpino_ds>

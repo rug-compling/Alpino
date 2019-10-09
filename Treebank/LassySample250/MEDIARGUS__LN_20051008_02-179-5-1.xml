@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" end="1" frame="noun(de,count,sg)" gen="de" id="2" lcat="np" lemma="n" num="sg" pos="noun" postag="BW()" pt="bw" rel="su" root="n" sense="n" word="n"/>
+      <node begin="1" end="2" frame="verb(unacc,sg_heeft,copula)" id="3" infl="sg_heeft" lcat="smain" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="Is" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="4" rel="predc">
+        <node begin="2" end="3" frame="determiner(een)" id="5" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+        <node begin="3" end="4" frame="noun(both,both,both)" gen="both" genus="onz" getal="ev" graad="basis" id="6" lcat="np" lemma="shopaholic" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="shopaholic" sense="shopaholic" word="shopaholic"/>
+      </node>
+    </node>
+  </node>
+  <sentence>n Is een shopaholic</sentence>
+  <comments>
+    <comment>Q#LN_20051008_02-179-5-1|n Is een shopaholic|1|1|-0.03449915372541912</comment>
+  </comments>
+</alpino_ds>

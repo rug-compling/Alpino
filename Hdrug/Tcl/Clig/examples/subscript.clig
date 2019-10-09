@@ -1,0 +1,11 @@
+#
+# example: subscript 4-Jan-96
+#
+# use of subscript command to place a text in subscript
+# note that the complete object does take more space than
+# necessary because of SEQs centering
+#
+
+clig {Seq {subscript {plain-text X} {small-bold-text V}} 
+          {subscript {plain-text A} {small-plain-text 1}}
+          {plain-text M}}

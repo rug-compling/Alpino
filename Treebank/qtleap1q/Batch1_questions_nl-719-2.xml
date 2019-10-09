@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="sv1" end="15" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="Heeft" wvorm="pv"/>
+      <node begin="1" cat="np" end="4" id="3" rel="su">
+        <node begin="1" end="2" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="2" buiging="met-e" end="3" graad="basis" id="5" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="persoon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="persoon" word="persoon"/>
+      </node>
+      <node begin="4" end="5" id="7" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+      <node begin="5" cat="np" end="7" id="8" rel="obj1">
+        <node begin="5" buiging="zonder" end="6" id="9" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="10" lemma="toegang" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="toegang" word="toegang"/>
+      </node>
+      <node begin="7" buiging="zonder" end="8" graad="comp" id="11" lemma="meer" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vwtype="onbep" word="meer"/>
+      <node begin="8" cat="pp" end="11" id="12" rel="pc">
+        <node begin="8" end="9" id="13" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+        <node begin="9" cat="np" end="11" id="14" rel="obj1">
+          <node begin="9" buiging="met-e" end="10" id="15" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+          <node begin="10" end="11" getal="mv" graad="basis" id="16" lemma="bestand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bestand" word="bestanden"/>
+        </node>
+      </node>
+      <node begin="11" cat="cp" end="15" id="17" rel="mod">
+        <node begin="11" conjtype="onder" end="12" id="18" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+        <node begin="12" cat="ssub" end="15" id="19" rel="body">
+          <node begin="12" end="13" getal="ev" id="20" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+          <node begin="13" end="14" getal="mv" id="21" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="obj1" root="ze" status="red" vwtype="pers" word="ze"/>
+          <node begin="14" end="15" id="22" lemma="verwijderen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="verwijder" word="verwijder" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="23" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Heeft de andere persoon dan geen toegang meer tot deze bestanden als ik ze verwijder ?</sentence>
+</alpino_ds>

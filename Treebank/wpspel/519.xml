@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="0" cat="whq" end="21" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welke" vwtype="vb" word="Welke"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="dame" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dame" word="dame"/>
+      </node>
+      <node begin="0" cat="sv1" end="21" id="5" rel="body">
+        <node begin="0" end="2" id="6" index="1" rel="su"/>
+        <node begin="2" end="3" id="7" lemma="dwingen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="dwing_af" word="dwong" wvorm="pv"/>
+        <node begin="3" cat="pp" end="7" id="8" rel="mod">
+          <node begin="3" end="4" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="4" cat="np" end="7" id="10" rel="obj1">
+            <node begin="4" end="5" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="5" buiging="met-e" end="6" graad="basis" id="12" lemma="zogenaamd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="zogenaamd" word="zogenaamde"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="damesvrede" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vrede" word="Damesvrede"/>
+          </node>
+        </node>
+        <node begin="7" cat="pp" end="11" id="14" rel="pc">
+          <node begin="7" end="8" id="15" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="8" cat="np" end="11" id="16" rel="obj1">
+            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="17" lemma="koning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="koning" word="koning"/>
+            <node begin="9" cat="mwu" end="11" id="18" rel="app">
+              <node begin="9" end="10" id="19" lemma="Frans" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Frans" spectype="deeleigen" word="Frans"/>
+              <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="20" lemma="i" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="I" word="I"/>
+            </node>
+          </node>
+        </node>
+        <node begin="11" end="12" id="21" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="af" vztype="fin" word="af"/>
+        <node begin="12" cat="cp" end="21" id="22" rel="vc">
+          <node begin="12" conjtype="onder" end="13" id="23" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="13" cat="ssub" end="21" id="24" rel="body">
+            <node begin="13" end="14" genus="masc" getal="ev" id="25" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+            <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="26" lemma="afstand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="afstand" word="afstand"/>
+            <node begin="15" end="16" id="27" lemma="doen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="doe" word="deed" wvorm="pv"/>
+            <node begin="16" cat="pp" end="21" id="28" rel="pc">
+              <node begin="16" end="17" id="29" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="17" cat="np" end="21" id="30" rel="obj1">
+                <node begin="17" buiging="met-e" end="18" id="31" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" vwtype="onbep" word="alle"/>
+                <node begin="18" end="19" getal="mv" graad="basis" id="32" lemma="aanspraak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="aanspraak" word="aanspraken"/>
+                <node begin="19" cat="pp" end="21" id="33" rel="mod">
+                  <node begin="19" end="20" id="34" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                  <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="35" lemma="Vlaanderen" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Vlaanderen" word="Vlaanderen"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="36" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke dame dwong in de zogenaamde Damesvrede van koning Frans I af dat hij afstand deed van alle aanspraken op Vlaanderen ?</sentence>
+</alpino_ds>

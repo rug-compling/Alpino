@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="60" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="5" end="6" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="9" end="10" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="13" end="14" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="17" end="18" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="21" end="22" id="6" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="26" end="27" id="7" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="30" end="31" id="8" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="35" end="36" id="9" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="39" end="40" id="10" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="43" end="44" id="11" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="47" end="48" id="12" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="51" end="52" id="13" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="59" id="14" rel="--">
+      <node begin="0" cat="mwu" end="2" id="15" rel="cnj">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="16" lemma="juffrouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Juffrouw" word="Juffrouw"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="17" lemma="ooievaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Ooievaar" word="Ooievaar"/>
+      </node>
+      <node begin="3" cat="np" end="5" id="18" rel="cnj">
+        <node begin="3" end="4" id="19" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="20" lemma="hamster" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="hamster" word="Hamsters"/>
+      </node>
+      <node begin="6" cat="mwu" end="9" id="21" rel="cnj">
+        <node begin="6" end="7" id="22" lemma="Jodokus" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jodokus" spectype="deeleigen" word="Jodokus"/>
+        <node begin="7" end="8" id="23" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+        <node begin="8" end="9" id="24" lemma="Marmot" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Marmot" spectype="deeleigen" word="Marmot"/>
+      </node>
+      <node begin="10" cat="mwu" end="13" id="25" rel="cnj">
+        <node begin="10" end="11" id="26" lemma="Truus" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Truus" spectype="deeleigen" word="Truus"/>
+        <node begin="11" end="12" id="27" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+        <node begin="12" end="13" id="28" lemma="Mier" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Mier" spectype="deeleigen" word="Mier"/>
+      </node>
+      <node begin="14" cat="mwu" end="17" id="29" rel="cnj">
+        <node begin="14" end="15" id="30" lemma="Stoffel" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Stoffel" spectype="deeleigen" word="Stoffel"/>
+        <node begin="15" end="16" id="31" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+        <node begin="16" end="17" id="32" lemma="Schildpad" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Schildpad" spectype="deeleigen" word="Schildpad"/>
+      </node>
+      <node begin="18" cat="mwu" end="21" id="33" rel="cnj">
+        <node begin="18" end="19" id="34" lemma="Jacob" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jacob" spectype="deeleigen" word="Jacob"/>
+        <node begin="19" end="20" id="35" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+        <node begin="20" end="21" id="36" lemma="Uil" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Uil" spectype="deeleigen" word="Uil"/>
+      </node>
+      <node begin="22" cat="mwu" end="26" id="37" rel="cnj">
+        <node begin="22" end="23" id="38" lemma="momfer" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Momfer" spectype="deeleigen" word="Momfer"/>
+        <node begin="23" end="24" id="39" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+        <node begin="24" end="25" id="40" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+        <node begin="25" end="26" id="41" lemma="Mol" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Mol" spectype="deeleigen" word="Mol"/>
+      </node>
+      <node begin="27" cat="mwu" end="30" id="42" rel="cnj">
+        <node begin="27" end="28" id="43" lemma="Droes" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Droes" spectype="deeleigen" word="Droes"/>
+        <node begin="28" end="29" id="44" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+        <node begin="29" end="30" id="45" lemma="Beer" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Beer" spectype="deeleigen" word="Beer"/>
+      </node>
+      <node begin="31" cat="mwu" end="35" id="46" rel="cnj">
+        <node begin="31" end="32" id="47" lemma="Ed" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ed" spectype="deeleigen" word="Ed"/>
+        <node begin="32" conjtype="neven" end="33" id="48" lemma="en" pos="noun" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
+        <node begin="33" end="34" id="49" lemma="Willem" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Willem" spectype="deeleigen" word="Willem"/>
+        <node begin="34" end="35" id="50" lemma="Bever" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bever" spectype="deeleigen" word="Bever"/>
+      </node>
+      <node begin="36" cat="mwu" end="39" id="51" rel="cnj">
+        <node begin="36" end="37" genus="zijd" getal="ev" graad="basis" id="52" lemma="meneer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Meneer" word="Meneer"/>
+        <node begin="37" end="38" id="53" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+        <node begin="38" end="39" id="54" lemma="Raaf" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Raaf" spectype="deeleigen" word="Raaf"/>
+      </node>
+      <node begin="40" cat="mwu" end="43" id="55" rel="cnj">
+        <node begin="40" end="41" id="56" lemma="Zoef" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Zoef" spectype="deeleigen" word="Zoef"/>
+        <node begin="41" end="42" id="57" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+        <node begin="42" end="43" id="58" lemma="Haas" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Haas" spectype="deeleigen" word="Haas"/>
+      </node>
+      <node begin="44" cat="mwu" end="47" id="59" rel="cnj">
+        <node begin="44" end="45" id="60" lemma="Bor" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bor" spectype="deeleigen" word="Bor"/>
+        <node begin="45" end="46" id="61" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+        <node begin="46" end="47" id="62" lemma="Wolf" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wolf" spectype="deeleigen" word="Wolf"/>
+      </node>
+      <node begin="48" cat="mwu" end="51" id="63" rel="cnj">
+        <node begin="48" end="49" id="64" lemma="Lowieke" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lowieke" spectype="deeleigen" word="Lowieke"/>
+        <node begin="49" end="50" id="65" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+        <node begin="50" end="51" id="66" lemma="Vos" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Vos" spectype="deeleigen" word="Vos"/>
+      </node>
+      <node begin="52" cat="mwu" end="55" id="67" rel="cnj">
+        <node begin="52" end="53" id="68" lemma="Meindert" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Meindert" spectype="deeleigen" word="Meindert"/>
+        <node begin="53" end="54" id="69" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="noun" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+        <node begin="54" end="55" genus="onz" getal="ev" graad="basis" id="70" lemma="paard" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Paard" word="Paard"/>
+      </node>
+      <node begin="55" conjtype="neven" end="56" id="71" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="56" cat="mwu" end="59" id="72" rel="cnj">
+        <node begin="56" end="57" id="73" lemma="Gerrit" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Gerrit" spectype="deeleigen" word="Gerrit"/>
+        <node begin="57" end="58" id="74" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+        <node begin="58" end="59" id="75" lemma="Duif" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Duif" spectype="deeleigen" word="Duif"/>
+      </node>
+    </node>
+    <node begin="59" end="60" id="76" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Juffrouw Ooievaar , de Hamsters , Jodokus de Marmot , Truus de Mier , Stoffel de Schildpad , Jacob de Uil , Momfer de de Mol , Droes de Beer , Ed en Willem Bever , Meneer de Raaf , Zoef de Haas , Bor de Wolf , Lowieke de Vos , Meindert het Paard en Gerrit de Duif .</sentence>
+</alpino_ds>

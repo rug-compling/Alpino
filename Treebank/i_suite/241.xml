@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="3" end="4" id="2" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="0" cat="smain" end="10" id="3" rel="--">
+      <node begin="0" cat="ap" end="3" id="4" rel="mod">
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="5" lemma="momenteel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="momenteel" word="Momenteel"/>
+        <node begin="2" end="3" id="6" lemma="1998" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="1998" word="1998"/>
+      </node>
+      <node begin="4" end="5" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="5" end="6" genus="masc" getal="ev" id="8" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+      <node begin="6" cat="np" end="10" id="9" rel="predc">
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="10" lemma="fractievoorzitter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="fractie_voorzitter" word="fractievoorzitter"/>
+        <node begin="7" cat="pp" end="10" id="11" rel="mod">
+          <node begin="7" end="8" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="8" cat="np" end="10" id="13" rel="obj1">
+            <node begin="8" end="9" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="9" end="10" getal="mv" graad="basis" id="15" lemma="groen" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Groenen" word="Groenen"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Momenteel - 1998 - is hij fractievoorzitter van de Groenen</sentence>
+</alpino_ds>

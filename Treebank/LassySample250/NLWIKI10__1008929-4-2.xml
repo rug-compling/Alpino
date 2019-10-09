@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="15" end="16" frame="punct(haak_sluit)" id="1" lcat="punct" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+    <node begin="16" end="17" frame="punct(komma)" id="2" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="21" end="22" frame="punct(haak_open)" id="3" lcat="punct" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" sense="(" special="haak_open" word="("/>
+    <node begin="0" cat="du" end="23" id="4" rel="--">
+      <node begin="0" cat="smain" end="15" id="5" rel="dp">
+        <node begin="2" end="3" frame="verb(unacc,sg_heeft,passive)" id="6" infl="sg_heeft" lcat="smain" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="passive" sense="ben" tense="present" word="is" wvorm="pv"/>
+        <node begin="3" cat="np" end="6" id="7" index="1" rel="su">
+          <node begin="3" end="4" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="8" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+          <node begin="4" end="5" frame="noun(het,count,sg,measure)" gen="het" genus="onz" getal="ev" graad="basis" id="9" lcat="np" lemma="aantal" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aantal" sc="measure" sense="aantal-MEAS" word="aantal"/>
+          <node begin="5" end="6" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="10" lcat="np" lemma="inwoner" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="inwoner" sense="inwoner" word="inwoners"/>
+        </node>
+        <node begin="0" cat="ppart" end="15" id="11" rel="vc">
+          <node begin="0" cat="pp" end="2" id="12" rel="mod">
+            <node begin="0" end="1" frame="preposition(in,[])" id="13" lcat="pp" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" sense="in" vztype="init" word="In"/>
+            <node begin="1" end="2" frame="np(year)" id="14" lcat="np" lemma="2006" neclass="year" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="2006" sense="2006" word="2006"/>
+          </node>
+          <node begin="3" end="6" id="15" index="1" rel="obj1"/>
+          <node begin="6" cat="pp" end="12" id="16" rel="mod">
+            <node begin="6" end="7" frame="preposition(door,[heen])" id="17" lcat="pp" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" sense="door" vztype="init" word="door"/>
+            <node begin="7" cat="np" end="12" id="18" rel="obj1">
+              <node begin="7" end="8" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="19" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+              <node begin="8" cat="mwu" end="12" id="20" mwu_root="United_States_Census_Bureau" mwu_sense="United_States_Census_Bureau" rel="hd">
+                <node begin="8" end="9" frame="proper_name(both,'ORG')" id="21" lcat="np" lemma="United" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="United" sense="United" spectype="deeleigen" word="United"/>
+                <node begin="9" end="10" frame="proper_name(both,'ORG')" id="22" lcat="np" lemma="States" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="States" sense="States" spectype="deeleigen" word="States"/>
+                <node begin="10" end="11" frame="proper_name(both,'ORG')" id="23" lcat="np" lemma="Census" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Census" sense="Census" spectype="deeleigen" word="Census"/>
+                <node begin="11" end="12" frame="proper_name(both,'ORG')" id="24" lcat="np" lemma="Bureau" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bureau" sense="Bureau" spectype="deeleigen" word="Bureau"/>
+              </node>
+            </node>
+          </node>
+          <node begin="12" buiging="zonder" end="13" frame="verb(hebben,psp,np_pc_pp(op))" id="25" infl="psp" lcat="ppart" lemma="schatten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schat" sc="np_pc_pp(op)" sense="schat-op" word="geschat" wvorm="vd"/>
+          <node begin="13" cat="pp" end="15" id="26" rel="pc">
+            <node begin="13" end="14" frame="preposition(op,[af,na])" id="27" lcat="pp" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" sense="op" vztype="init" word="op"/>
+            <node begin="14" end="15" frame="number(hoofd(both))" id="28" infl="both" lcat="np" lemma="73(2" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="73(2" sense="73(2" special="hoofd" word="73(2"/>
+          </node>
+        </node>
+      </node>
+      <node begin="17" cat="np" end="23" id="29" rel="dp">
+        <node begin="17" end="18" frame="determiner(een)" id="30" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+        <node begin="18" end="19" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="31" lcat="np" lemma="daling" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="daling" sense="daling" word="daling"/>
+        <node begin="19" cat="pp" end="23" id="32" rel="mod">
+          <node begin="19" end="20" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="33" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+          <node begin="20" cat="np" end="23" id="34" rel="obj1">
+            <node begin="20" end="21" frame="noun(de,count,sg)" gen="de" id="35" lcat="np" lemma="1" num="sg" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="hd" root="1" sense="1" word="1"/>
+            <node begin="22" end="23" frame="number(hoofd(both))" id="36" infl="both" lcat="np" lemma="-1.4%" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="-1.4%" sense="-1.4%" special="hoofd" word="-1.4%"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" frame="punct(haak_sluit)" id="37" lcat="punct" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+    <node begin="24" end="25" frame="punct(punt)" id="38" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>In 2006 is het aantal inwoners door het United States Census Bureau geschat op 73(2 ) , een daling van 1 ( -1.4% ) .</sentence>
+  <comments>
+    <comment>Q#1008929-4-2|In 2006 is het aantal inwoners door het United States Census Bureau geschat op 73(2 ) , een daling van 1 ( -1.4% ) .|1|2|0.11143816661300028</comment>
+  </comments>
+</alpino_ds>

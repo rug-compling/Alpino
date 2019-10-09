@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="3" index="1" lemma="epilepsie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="epilepsie" word="epilepsie"/>
+      <node begin="0" cat="ppart" end="6" id="4" rel="vc">
+        <node begin="0" end="1" id="5" lemma="meestal" pos="adv" postag="BW()" pt="bw" rel="mod" root="meestal" word="Meestal"/>
+        <node begin="2" end="3" id="6" index="1" rel="obj1"/>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="behandelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="behandel" word="behandeld" wvorm="vd"/>
+        <node begin="4" cat="pp" end="6" id="8" rel="mod">
+          <node begin="4" end="5" id="9" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="5" end="6" getal="mv" graad="basis" id="10" lemma="medicijn" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="medicijn" word="medicijnen"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Meestal wordt epilepsie behandeld met medicijnen .</sentence>
+</alpino_ds>

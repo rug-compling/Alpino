@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="&apos;&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;&apos;" word="&apos;&apos;"/>
+    <node begin="0" cat="np" end="5" id="2" rel="--">
+      <node begin="0" cat="mwu" end="3" id="3" rel="hd">
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="De" word="De"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="blind" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Blinde" word="Blinde"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="fotograaf" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Fotograaf" word="Fotograaf"/>
+      </node>
+      <node begin="4" end="5" id="7" lemma="1973" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="(1973)" word="(1973)"/>
+    </node>
+  </node>
+  <sentence>De Blinde Fotograaf &apos;&apos; (1973)</sentence>
+</alpino_ds>

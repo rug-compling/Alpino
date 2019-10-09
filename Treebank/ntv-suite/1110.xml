@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="smain" end="10" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="Ook"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" cat="ap" end="5" id="4" rel="predc">
+        <node begin="2" cat="advp" end="4" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+          <node begin="3" end="4" id="7" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="hd" root="niet" word="niet"/>
+        </node>
+        <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="bekend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="bekend" word="bekend"/>
+      </node>
+      <node begin="5" cat="cp" end="10" id="9" rel="su">
+        <node begin="5" conjtype="onder" end="6" id="10" lemma="of" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="of" word="of"/>
+        <node begin="6" cat="ssub" end="10" id="11" rel="body">
+          <node begin="6" end="7" genus="genus" getal="ev" graad="basis" id="12" index="1" lemma="Milly" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="su" root="Milly" word="Milly"/>
+          <node begin="8" end="9" id="13" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          <node begin="6" cat="ppart" end="10" id="14" rel="vc">
+            <node begin="6" end="7" id="15" index="1" rel="su"/>
+            <node begin="7" buiging="zonder" end="8" graad="basis" id="16" lemma="vrijwillig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="vrijwillig" word="vrijwillig"/>
+            <node begin="9" buiging="zonder" end="10" id="17" lemma="meegaan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ga_mee" word="meegegaan" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="10" end="11" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ook is nog niet bekend of Milly vrijwillig is meegegaan .</sentence>
+</alpino_ds>

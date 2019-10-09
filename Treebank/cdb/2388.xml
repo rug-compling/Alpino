@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="0" cat="smain" end="18" id="1" rel="--">
+      <node begin="12" end="13" id="2" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" word="kunnen" wvorm="pv"/>
+      <node begin="13" end="14" getal="mv" id="3" index="1" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+      <node begin="0" cat="inf" end="18" id="4" rel="vc">
+        <node begin="0" cat="pp" end="12" id="5" rel="mod">
+          <node begin="0" end="1" id="6" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="Met"/>
+          <node begin="1" cat="conj" end="12" id="7" rel="obj1">
+            <node begin="1" cat="np" end="8" id="8" rel="cnj">
+              <node begin="1" cat="ap" end="4" id="9" rel="mod">
+                <node begin="1" cat="np" end="3" id="10" rel="mod">
+                  <node begin="1" end="2" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="2" end="3" genus="onz" getal="ev" graad="dim" id="12" lemma="beetje" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="beetje" word="beetje"/>
+                </node>
+                <node begin="3" buiging="zonder" end="4" graad="basis" id="13" lemma="vlug" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="vlug" word="vlug"/>
+              </node>
+              <node begin="4" cat="pp" end="7" id="14" rel="mod">
+                <node begin="4" end="5" id="15" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+                <node begin="5" cat="np" end="7" id="16" rel="obj1">
+                  <node begin="5" end="6" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="18" lemma="stoel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stoel" word="stoel"/>
+                </node>
+              </node>
+              <node begin="7" buiging="zonder" end="8" getal-n="zonder-n" id="19" lemma="rennen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="ren" word="rennen" wvorm="inf"/>
+            </node>
+            <node begin="8" conjtype="neven" end="9" id="20" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="9" cat="np" end="12" id="21" rel="cnj">
+              <node begin="9" end="10" id="22" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&apos;n"/>
+              <node begin="10" buiging="met-e" end="11" graad="basis" id="23" lemma="soepel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="soepel" word="soepele"/>
+              <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="24" lemma="polsbeweging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beweging" word="polsbeweging"/>
+            </node>
+          </node>
+        </node>
+        <node begin="13" end="14" id="25" index="1" rel="su"/>
+        <node begin="14" cat="np" end="17" id="26" rel="mod">
+          <node begin="14" end="15" id="27" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&apos;n"/>
+          <node begin="15" buiging="zonder" end="16" graad="basis" id="28" lemma="heel" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="heel" word="heel"/>
+          <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="29" lemma="eind" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="eind" word="eind"/>
+        </node>
+        <node begin="17" buiging="zonder" end="18" id="30" lemma="komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom" word="komen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="18" end="19" id="31" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Met een beetje vlug uit de stoel rennen en &apos;n soepele polsbeweging kunnen we &apos;n heel eind komen .</sentence>
+</alpino_ds>

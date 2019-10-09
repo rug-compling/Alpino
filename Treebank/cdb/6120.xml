@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="12" end="13" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="21" id="2" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="3" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="4" lemma="blijken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="blijk" word="bleek" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="echter" pos="adv" postag="BW()" pt="bw" rel="mod" root="echter" word="echter"/>
+      <node begin="3" end="4" id="6" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      <node begin="4" cat="ap" end="12" id="7" rel="predc">
+        <node begin="4" cat="mwu" end="6" id="8" rel="hd">
+          <node begin="4" end="5" id="9" lemma="in" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="staat" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="staat" word="staat"/>
+        </node>
+        <node begin="6" cat="ti" end="12" id="11" rel="vc">
+          <node begin="10" end="11" id="12" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="6" cat="inf" end="12" id="13" rel="body">
+            <node begin="6" end="7" getal="getal" id="14" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="zich" status="red" vwtype="refl" word="zich"/>
+            <node begin="7" buiging="zonder" end="8" graad="basis" id="15" lemma="redelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="redelijk" word="redelijk"/>
+            <node begin="8" cat="pp" end="10" id="16" rel="ld">
+              <node begin="8" end="9" id="17" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="18" lemma="evenwicht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="evenwicht" word="evenwicht"/>
+            </node>
+            <node begin="11" buiging="zonder" end="12" id="19" lemma="houden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="houd" word="houden" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+      <node begin="13" cat="whrel" end="21" id="20" rel="mod">
+        <node begin="13" end="14" id="21" index="1" lemma="waardoor" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waardoor" word="waardoor"/>
+        <node begin="13" cat="ssub" end="21" id="22" rel="body">
+          <node begin="14" cat="np" end="17" id="23" index="2" rel="su">
+            <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="24" lemma="doelman" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="doelman" word="doelman"/>
+            <node begin="15" cat="mwu" end="17" id="25" rel="app">
+              <node begin="15" end="16" id="26" lemma="Wolfgang" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wolfgang" spectype="deeleigen" word="Wolfgang"/>
+              <node begin="16" end="17" id="27" lemma="Blochwitz" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Blochwitz" spectype="deeleigen" word="Blochwitz"/>
+            </node>
+          </node>
+          <node begin="19" end="20" id="28" lemma="kunnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kan" word="kon" wvorm="pv"/>
+          <node begin="13" cat="inf" end="21" id="29" rel="vc">
+            <node begin="13" end="14" id="30" index="1" rel="mod"/>
+            <node begin="14" end="17" id="31" index="2" rel="su"/>
+            <node begin="17" buiging="zonder" end="18" id="32" lemma="koppen" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="mod" root="koppend" word="koppend" wvorm="od"/>
+            <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="33" lemma="redding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="redding" word="redding"/>
+            <node begin="20" buiging="zonder" end="21" id="34" lemma="brengen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breng" word="brengen" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hij bleek echter niet in staat zich redelijk in evenwicht te houden , waardoor doelman Wolfgang Blochwitz koppend redding kon brengen .</sentence>
+</alpino_ds>

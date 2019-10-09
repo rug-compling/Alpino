@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" frame="pronoun(nwh,fir,pl,de,nom,def,wkpro)" gen="de" id="2" lcat="np" num="pl" per="fir" pos="pron" rel="su" root="we" sense="we" special="wkpro" wh="nwh" word="We"/>
+      <node begin="1" end="2" frame="verb(hebben,pl,transitive)" id="3" infl="pl" lcat="smain" pos="verb" rel="hd" root="verbeter" sc="transitive" sense="verbeter" tense="present" word="verbeteren"/>
+      <node begin="2" cat="np" end="9" id="4" rel="obj1">
+        <node begin="2" end="3" frame="determiner(de)" id="5" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node aform="base" begin="3" end="4" frame="adjective(e)" id="6" infl="e" lcat="ap" pos="adj" rel="mod" root="selectief" sense="selectief" vform="adj" word="selectieve"/>
+        <node begin="4" end="5" frame="noun(de,count,sg)" gen="de" id="7" lcat="np" num="sg" pos="noun" rel="hd" root="inzameling" sense="inzameling" word="inzameling"/>
+        <node begin="5" cat="pp" end="9" id="8" rel="mod">
+          <node begin="5" end="6" frame="preposition(bij,[vandaan])" id="9" lcat="pp" pos="prep" rel="hd" root="bij" sense="bij" word="bij"/>
+          <node begin="6" cat="conj" end="9" id="10" rel="obj1">
+            <node begin="6" end="7" frame="noun(de,count,pl)" gen="de" id="11" lcat="np" num="pl" pos="noun" rel="cnj" root="burger" sense="burger" word="burgers"/>
+            <node begin="7" end="8" frame="conj(en)" id="12" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="én"/>
+            <node begin="8" end="9" frame="noun(het,count,pl)" gen="het" id="13" lcat="np" num="pl" pos="noun" rel="cnj" root="bedrijf" sense="bedrijf" word="bedrijven"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>We verbeteren de selectieve inzameling bij burgers én bedrijven</sentence>
+  <comments>
+    <comment>Q#152|We verbeteren de selectieve inzameling bij burgers én bedrijven|1|1|0.7685999013814201</comment>
+  </comments>
+</alpino_ds>

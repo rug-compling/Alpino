@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="4" end="5" id="2" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+      <node begin="5" cat="np" end="7" id="3" index="1" rel="su">
+        <node begin="5" end="6" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="5" lemma="consument" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="consument" word="consument"/>
+      </node>
+      <node begin="0" cat="inf" end="14" id="6" rel="vc">
+        <node begin="5" end="7" id="7" index="1" rel="su"/>
+        <node begin="12" buiging="zonder" end="13" id="8" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+        <node begin="0" cat="ppart" end="14" id="9" rel="vc">
+          <node begin="0" cat="pp" end="4" id="10" rel="mod">
+            <node begin="0" end="1" id="11" lemma="alleen" pos="adv" postag="BW()" pt="bw" rel="mod" root="alleen" word="Alleen"/>
+            <node begin="1" end="2" id="12" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="2" cat="np" end="4" id="13" rel="obj1">
+              <node begin="2" buiging="met-e" end="3" id="14" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+              <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="15" lemma="wijze" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wijze" word="wijze"/>
+            </node>
+          </node>
+          <node begin="5" end="7" id="16" index="1" rel="obj1"/>
+          <node begin="7" cat="np" end="10" id="17" rel="obj2">
+            <node begin="7" end="8" id="18" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="8" buiging="zonder" end="9" graad="basis" id="19" lemma="breed" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="breed" word="breed"/>
+            <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="20" lemma="aanbod" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aanbod" word="aanbod"/>
+          </node>
+          <node begin="10" cat="mwu" end="12" id="21" mwu_root="ter beschikking" mwu_sense="ter beschikking" rel="predc">
+            <node begin="10" end="11" id="22" lemma="ter" pos="adj" postag="VZ(versm)" pt="vz" rel="mwp" root="ter" vztype="versm" word="ter"/>
+            <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="23" lemma="beschikking" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="beschikking" word="beschikking"/>
+          </node>
+          <node begin="13" buiging="zonder" end="14" id="24" lemma="stellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="gesteld" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Alleen op deze wijze kan de consument een breed aanbod ter beschikking worden gesteld .</sentence>
+</alpino_ds>

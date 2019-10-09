@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="4" end="5" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="13" end="14" frame="punct(haak_open)" id="2" lcat="punct" pos="punct" rel="--" root="(" sense="(" special="haak_open" word="("/>
+    <node begin="18" end="19" frame="punct(komma)" id="3" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="np" end="26" id="4" rel="--">
+      <node begin="0" end="1" frame="noun(het,count,sg)" gen="het" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="diagram" sense="diagram" word="Diagram"/>
+      <node begin="1" cat="pp" end="6" id="6" rel="mod">
+        <node begin="1" end="2" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="7" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+        <node begin="2" cat="np" end="6" id="8" rel="obj1">
+          <node begin="2" end="3" frame="determiner(de)" id="9" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="3" end="4" frame="noun(de,count,sg)" gen="de" id="10" lcat="np" num="sg" pos="noun" rel="hd" root="koel_middel_stroming" sense="koel_middel_stroming" word="koelmiddelstroming"/>
+          <node aform="base" begin="5" end="6" frame="adjective(no_e(adv))" id="11" infl="no_e" lcat="ap" pos="adj" rel="mod" root="noodzakelijk" sense="noodzakelijk" vform="adj" word="noodzakelijk"/>
+        </node>
+      </node>
+      <node begin="6" cat="pp" end="26" id="12" rel="mod">
+        <node begin="6" end="7" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="13" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+        <node begin="7" cat="np" end="26" id="14" rel="obj1">
+          <node begin="7" end="8" frame="determiner(de)" id="15" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="8" end="9" frame="noun(de,count,sg)" gen="de" id="16" lcat="np" num="sg" pos="noun" rel="hd" root="berekening" sense="berekening" word="berekening"/>
+          <node begin="9" cat="pp" end="26" id="17" rel="mod">
+            <node begin="9" end="10" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="18" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="10" cat="np" end="26" id="19" rel="obj1">
+              <node begin="10" end="11" frame="determiner(de)" id="20" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node aform="base" begin="11" end="12" frame="adjective(e)" id="21" infl="e" lcat="ap" pos="adj" rel="mod" root="thermisch" sense="thermisch" vform="adj" word="thermische"/>
+              <node begin="12" end="13" frame="noun(de,count,sg)" gen="de" id="22" lcat="np" num="sg" pos="noun" rel="hd" root="balans" sense="balans" word="balans"/>
+              <node begin="14" cat="np" end="26" id="23" rel="mod">
+                <node begin="14" end="15" frame="noun(de,count,sg)" gen="de" id="24" lcat="np" num="sg" pos="noun" rel="hd" root="vermelding" sense="vermelding" word="vermelding"/>
+                <node begin="15" cat="pp" end="26" id="25" rel="mod">
+                  <node begin="15" end="16" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="26" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                  <node begin="16" cat="conj" end="26" id="27" rel="obj1">
+                    <node begin="20" end="21" frame="conj(en)" id="28" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                    <node begin="16" cat="np" end="26" id="29" rel="cnj">
+                      <node begin="16" end="17" frame="determiner(de)" id="30" index="1" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                      <node begin="17" end="18" frame="noun(de,count,sg)" gen="de" id="31" lcat="np" num="sg" pos="noun" rel="hd" root="druk" sense="druk" word="druk"/>
+                      <node begin="22" cat="pp" end="26" id="32" index="2" rel="mod">
+                        <node begin="22" end="23" frame="preposition(op,[af,na])" id="33" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+                        <node begin="23" cat="np" end="26" id="34" rel="obj1">
+                          <node begin="23" end="24" frame="determiner(de)" id="35" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                          <node aform="super" begin="24" end="25" frame="adjective(ste)" id="36" infl="e" lcat="ap" pos="adj" rel="mod" root="voornaam" sense="voornaam" vform="adj" word="voornaamste"/>
+                          <node begin="25" end="26" frame="meas_mod_noun(both,count,pl)" gen="both" id="37" lcat="np" num="pl" pos="noun" rel="hd" root="punt" sense="punt" special="meas_mod" word="punten"/>
+                        </node>
+                      </node>
+                    </node>
+                    <node begin="16" cat="np" end="26" id="38" rel="cnj">
+                      <node begin="16" end="17" id="39" index="1" rel="det"/>
+                      <node begin="19" end="20" frame="noun(de,count,pl)" gen="de" id="40" lcat="np" num="pl" pos="noun" rel="hd" root="temperatuur" sense="temperatuur" word="temperaturen"/>
+                      <node begin="22" end="26" id="41" index="2" rel="mod"/>
+                    </node>
+                    <node begin="16" cat="np" end="26" id="42" rel="cnj">
+                      <node begin="16" end="17" id="43" index="1" rel="det"/>
+                      <node begin="21" end="22" frame="noun(both,both,both)" gen="both" id="44" lcat="np" num="both" pos="noun" rel="hd" root="debiet" sense="debiet" word="debiet"/>
+                      <node begin="22" end="26" id="45" index="2" rel="mod"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="26" end="27" frame="punct(haak_sluit)" id="46" lcat="punct" pos="punct" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+    <node begin="27" end="28" frame="punct(punt)" id="47" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Diagram van de koelmiddelstroming , noodzakelijk voor de berekening van de thermische balans ( vermelding van de druk , temperaturen en debiet op de voornaamste punten ) .</sentence>
+  <comments>
+    <comment>Q#390|Diagram van de koelmiddelstroming , noodzakelijk voor de berekening van de thermische balans ( vermelding van de druk , temperaturen en debiet op de voornaamste punten ) .|1|1|5.699103289432786</comment>
+  </comments>
+</alpino_ds>

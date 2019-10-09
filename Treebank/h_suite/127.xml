@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="cp" end="4" id="1" rel="--">
+      <node begin="0" conjtype="onder" end="1" id="2" lemma="opdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="opdat" word="Opdat"/>
+      <node begin="1" cat="ssub" end="4" id="3" rel="body">
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" index="1" lemma="God" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="god" word="God"/>
+        <node begin="2" end="3" id="5" lemma="worden" pos="verb" postag="WW(pv,conj,ev)" pt="ww" pvagr="ev" pvtijd="conj" rel="hd" root="word" word="worde" wvorm="pv"/>
+        <node begin="1" cat="ppart" end="4" id="6" rel="vc">
+          <node begin="1" end="2" id="7" index="1" rel="obj1"/>
+          <node begin="3" buiging="zonder" end="4" id="8" lemma="verheerlijken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verheerlijk" word="verheerlijkt" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Opdat God worde verheerlijkt</sentence>
+</alpino_ds>

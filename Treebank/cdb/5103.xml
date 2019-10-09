@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="9" end="10" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="19" id="2" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="3" lemma="want" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="want" word="want"/>
+      <node begin="1" cat="du" end="19" id="4" rel="nucl">
+        <node begin="1" cat="sv1" end="9" id="5" rel="sat">
+          <node begin="1" end="2" id="6" lemma="stellen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="stel" word="stel" wvorm="pv"/>
+          <node begin="2" cat="cp" end="9" id="7" rel="vc">
+            <node begin="2" conjtype="onder" end="3" id="8" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+            <node begin="3" cat="ssub" end="9" id="9" rel="body">
+              <node begin="4" cat="np" end="7" id="10" rel="su">
+                <node begin="4" end="5" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="5" buiging="met-e" end="6" graad="basis" id="12" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="grote"/>
+                <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="neus" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="neus" word="neus"/>
+              </node>
+              <node begin="3" cat="pp" end="8" id="14" rel="ld">
+                <node begin="3" end="4" getal="getal" id="15" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+                <node begin="7" end="8" id="16" lemma="op" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="op" vztype="fin" word="op"/>
+              </node>
+              <node begin="8" end="9" id="17" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+        <node begin="10" cat="smain" end="19" id="18" rel="nucl">
+          <node begin="10" end="11" id="19" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+          <node begin="11" end="12" id="20" lemma="rennen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ren" word="rennen" wvorm="pv"/>
+          <node begin="12" cat="np" end="15" id="21" rel="su">
+            <node begin="12" buiging="met-e" end="13" id="22" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" vwtype="onbep" word="alle"/>
+            <node begin="13" buiging="met-e" end="14" graad="basis" id="23" lemma="grootneuzig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="grootneuzige" word="grootneuzige"/>
+            <node begin="14" end="15" getal="mv" graad="basis" id="24" lemma="piraat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="piraat" word="piraten"/>
+          </node>
+          <node begin="15" cat="pp" end="19" id="25" rel="ld">
+            <node begin="15" end="16" id="26" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+            <node begin="16" cat="np" end="19" id="27" rel="obj1">
+              <node begin="16" end="17" id="28" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="17" buiging="zonder" end="18" graad="basis" id="29" lemma="plastisch" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="plastisch" word="plastisch"/>
+              <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="30" lemma="chirurg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="chirurg" word="chirurg"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="31" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>want stel dat er een grote neus op staat , dan rennen alle grootneuzige piraten naar de plastisch chirurg .</sentence>
+</alpino_ds>

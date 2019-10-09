@@ -1,0 +1,97 @@
+\begin{verbatim}
+%%%%%%%%%%%%%%%%%%%%%%%%% io etc. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% morphological_prefix/1 called by check_wrd in parser
+
+morphological_prefix(te).
+
+%%%% check_and_display_result/1 is called by the parser   
+
+check_and_display_result(t(Sign,Ds)) :-
+        startsymbol(Sign),
+        display_tree(t(Sign,Ds),0),
+        display_semantics(Sign),
+        ttyflush.
+        
+startsymbol(X) :-
+        X <=> s,
+        ( X <=> vfirst
+        ; X <=> vsecond
+        ),
+        X:gap <=> empty.
+
+display_tree(t(Sign,w(Word)),Indent) :-
+        cat_symbol(Sign,Sym),
+        nl, tab(Indent), write(Sym), write(' -- '), write(Word).
+display_tree(t(Sign,[D|Ds]),Indent) :-
+        cat_symbol(Sign,Sym),
+        nl, tab(Indent), write(Sym), 
+        NewIndent is Indent + 3,
+        display_ds([D|Ds],NewIndent).
+
+display_ds([],_).
+display_ds([D|Ds],Indent) :-
+        display_tree(D,Indent),
+        display_ds(Ds,Indent).
+        
+cat_symbol(Sign,Sym) :-
+        ( Sign:gap <=> empty -> cat_symbol0(Sign,Sym)
+        ; cat_symbol0(Sign,Sym0),
+          Sign:gap <=> Gap,
+          cat_symbol0(Gap,GapSym),
+          Sym = Sym0-GapSym
+        ).
+        
+cat_symbol0(Sign,Cat) :-
+        Sign:cat <=> Var,
+        var(Var),!,
+        Var = Cat.
+cat_symbol0(Sign,Cat) :-
+        ( Sign:cat <=> n
+        ; Sign:cat <=> np
+        ; Sign:cat <=> pref
+        ; Sign:cat <=> pp
+        ; Sign:cat <=> adj
+        ),
+        Sign:cat <=> Cat.
+cat_symbol0(Sign,s) :-
+        Sign:cat <=> sent.
+cat_symbol0(Sign,Symbol) :-
+        ( Sign <=> Val/Arg -> Symbol = ValSym/ArgSym
+        ; Sign <=> Arg\Val,
+          Symbol = ArgSym\ValSym
+        ),
+        cat_symbol0(Val,ValSym),
+        cat_symbol0(Arg,ArgSym).
+
+
+display_semantics(Sign) :-
+        Sign:sem <=> Sem,
+        \+ \+ ( prolog:prettyvars(Sem),
+                nl, write(Sem)
+              ).
+              
+         
+/*portray(fvt(F,V,T)) :-
+        cat_symbol(fvt(F,V,T),Cat),
+        write(Cat).           
+portray(t(Sign,_Ds)) :-
+        portray(Sign).
+*/      
+%%%%%%%%%%%%%%%% grammar compilation (for efficiency only) %%%%%%%%%%%%%%%%
+:- dynamic lex/2, rule0/4.
+
+compile_lexicon :-
+        retractall(lex(_,_)),
+        ( lexic(Word,Sign), assert(lex(Word,Sign)), 
+          write(Word), write(', '), ttyflush, fail
+        ; true
+        ).
+
+compile_rules :-
+        retractall(rule0(_,_,_,_)),
+        ( rule(Name,Lhs,Rhs,Head), assert(rule0(Name,Lhs,Rhs,Head)), fail
+        ; true
+        ).
+
+\end{verbatim}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="30" id="0" rel="top">
+    <node begin="12" end="13" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="conj" end="29" id="2" rel="--">
+      <node begin="0" cat="smain" end="12" id="3" rel="cnj">
+        <node begin="0" cat="np" end="3" id="4" index="1" rel="su">
+          <node begin="0" end="1" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="5" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="Het"/>
+          <node begin="1" cat="mwu" end="3" id="6" mwu_root="Gemengd_Comité" mwu_sense="Gemengd_Comité" rel="hd">
+            <node begin="1" end="2" frame="proper_name(both,'ORG')" id="7" lcat="np" neclass="ORG" num="both" pos="name" rel="mwp" root="Gemengd" sense="Gemengd" word="Gemengd"/>
+            <node begin="2" end="3" frame="proper_name(both,'ORG')" id="8" lcat="np" neclass="ORG" num="both" pos="name" rel="mwp" root="Comité" sense="Comité" word="Comité"/>
+          </node>
+        </node>
+        <node begin="3" end="4" frame="verb(hebben,sg3,part_sbar(toe))" id="9" infl="sg3" lcat="smain" pos="verb" rel="hd" root="zie_toe" sc="part_sbar(toe)" sense="zie_toe" tense="present" word="ziet"/>
+        <node begin="4" end="5" frame="er_adverb(op)" id="10" lcat="pp" pos="pp" rel="mod" root="erop" sense="erop" special="er" word="erop"/>
+        <node begin="5" end="6" frame="particle(toe)" id="11" lcat="part" pos="part" rel="svp" root="toe" sense="toe" word="toe"/>
+        <node begin="6" cat="cp" end="12" id="12" rel="vc">
+          <node begin="6" end="7" frame="complementizer(dat)" id="13" lcat="cp" pos="comp" rel="cmp" root="dat" sc="dat" sense="dat" word="dat"/>
+          <node begin="7" cat="ssub" end="12" id="14" rel="body">
+            <node begin="7" cat="np" end="9" id="15" rel="su">
+              <node begin="7" end="8" frame="determiner(de)" id="16" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="8" end="9" frame="noun(de,count,sg)" gen="de" id="17" lcat="np" num="sg" pos="noun" rel="hd" root="overeenkomst" sense="overeenkomst" word="overeenkomst"/>
+            </node>
+            <node begin="9" cat="pp" end="11" id="18" rel="mod">
+              <node begin="9" end="10" frame="preposition(naar,[toe])" id="19" lcat="pp" pos="prep" rel="hd" root="naar" sense="naar" word="naar"/>
+              <node begin="10" end="11" frame="v_noun(intransitive)" id="20" lcat="np" pos="verb" rel="obj1" root="behoor" sc="intransitive" sense="behoor" special="v_noun" word="behoren"/>
+            </node>
+            <node begin="11" end="12" frame="verb(hebben,sg3,intransitive)" id="21" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="werk" sc="intransitive" sense="werk" tense="present" word="werkt"/>
+          </node>
+        </node>
+      </node>
+      <node begin="13" end="14" frame="conj(en)" id="22" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="0" cat="smain" end="29" id="23" rel="cnj">
+        <node begin="0" end="3" id="24" index="1" rel="su"/>
+        <node begin="14" end="15" frame="verb('hebben/zijn',modal_not_u,aux(inf))" id="25" infl="modal_not_u" lcat="smain" pos="verb" rel="hd" root="kan" sc="aux(inf)" sense="kan" tense="present" word="kan"/>
+        <node begin="0" cat="inf" end="29" id="26" rel="vc">
+          <node begin="0" end="3" id="27" index="1" rel="su"/>
+          <node begin="15" end="16" frame="noun(de,mass,sg)" gen="de" id="28" lcat="np" num="sg" pos="noun" rel="obj1" root="aandacht" sense="aandacht" word="aandacht"/>
+          <node begin="16" end="17" frame="verb(hebben,inf,np_pc_pp(aan))" id="29" infl="inf" lcat="inf" pos="verb" rel="hd" root="besteed" sc="np_pc_pp(aan)" sense="besteed-aan" word="besteden"/>
+          <node begin="17" cat="pp" end="29" id="30" rel="pc">
+            <node begin="17" end="18" frame="preposition(aan,[vooraf])" id="31" lcat="pp" pos="prep" rel="hd" root="aan" sense="aan" word="aan"/>
+            <node begin="18" cat="conj" end="29" id="32" rel="obj1">
+              <node begin="18" cat="np" end="25" id="33" rel="cnj">
+                <node begin="18" end="19" frame="determiner(elke,nwh,mod)" id="34" infl="elke" lcat="detp" pos="det" rel="det" root="elk" sense="elk" wh="nwh" word="elke"/>
+                <node begin="19" end="20" frame="noun(de,count,sg)" gen="de" id="35" lcat="np" num="sg" pos="noun" rel="hd" root="aangelegenheid" sense="aangelegenheid" word="aangelegenheid"/>
+                <node begin="20" cat="pp" end="25" id="36" rel="mod">
+                  <node begin="20" cat="mwu" end="23" id="37" mwu_root="met_betrekking_tot" mwu_sense="met_betrekking_tot" rel="hd">
+                    <node begin="20" end="21" frame="preposition([met,betrekking,tot],[])" id="38" lcat="pp" pos="prep" rel="mwp" root="met" sense="met" word="met"/>
+                    <node begin="21" end="22" frame="preposition([met,betrekking,tot],[])" id="39" lcat="pp" pos="prep" rel="mwp" root="betrekking" sense="betrekking" word="betrekking"/>
+                    <node begin="22" end="23" frame="preposition([met,betrekking,tot],[])" id="40" lcat="pp" pos="prep" rel="mwp" root="tot" sense="tot" word="tot"/>
+                  </node>
+                  <node begin="23" cat="np" end="25" id="41" rel="obj1">
+                    <node begin="23" end="24" frame="determiner(de)" id="42" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                    <node begin="24" end="25" frame="noun(de,count,sg)" gen="de" id="43" lcat="np" num="sg" pos="noun" rel="hd" root="uitvoering" sense="uitvoering" word="uitvoering"/>
+                  </node>
+                </node>
+              </node>
+              <node begin="25" end="26" frame="conj(en)" id="44" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+              <node begin="26" cat="np" end="29" id="45" rel="cnj">
+                <node begin="26" end="27" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="46" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                <node begin="27" end="28" frame="v_noun(intransitive)" id="47" lcat="np" pos="verb" rel="hd" root="functioneer" sc="intransitive" sense="functioneer" special="v_noun" word="functioneren"/>
+                <node begin="28" end="29" frame="er_adverb(van)" id="48" lcat="pp" pos="pp" rel="mod" root="ervan" sense="ervan" special="er" word="ervan"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="29" end="30" frame="punct(punt)" id="49" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Het Gemengd Comité ziet erop toe dat de overeenkomst naar behoren werkt , en kan aandacht besteden aan elke aangelegenheid met betrekking tot de uitvoering en het functioneren ervan .</sentence>
+  <comments>
+    <comment>Q#320|Het Gemengd Comité ziet erop toe dat de overeenkomst naar behoren werkt , en kan aandacht besteden aan elke aangelegenheid met betrekking tot de uitvoering en het functioneren ervan .|1|1|-1.031906529377359</comment>
+  </comments>
+</alpino_ds>

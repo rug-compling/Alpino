@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="comp" id="2" lemma="laat" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="later" word="Later"/>
+      <node begin="1" end="2" id="3" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
+      <node begin="2" cat="mwu" end="4" id="4" rel="su">
+        <node begin="2" end="3" id="5" lemma="flo" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="flo" spectype="deeleigen" word="flo"/>
+        <node begin="3" end="4" id="6" lemma="145.40" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="145.40" word="145.40"/>
+      </node>
+      <node begin="4" cat="mwu" end="7" id="7" rel="svp">
+        <node begin="4" end="5" id="8" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="uit" vztype="init" word="uit"/>
+        <node begin="5" end="6" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="10" lemma="bus" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="bus" word="bus"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Later kwam flo 145.40 uit de bus .</sentence>
+</alpino_ds>

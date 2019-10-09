@@ -1,0 +1,19 @@
+#
+# example: resizing
+#
+# This examples demonstrates some of the "complex boxes" objects
+# These objects are resizable, meaning that a parent object can cause
+# a resizing of a daughter if need be.
+#
+# You usually won't see any effect in description strings.
+
+
+clig {followboxes {stairboxes {plain-text "small place"}
+                              {plain-text "This object requires much space"} 
+                              {stackboxes {plain-text "Stackboxes"} 
+                                   {followboxes
+                                        {bigbox {Stack
+                                          {plain-text "this"}
+                                          {plain-text "is resized"}}}
+                                        {plain-text "...everything changes"}}}}
+                  {vspace 200} {plain-text "This is resized too"}}

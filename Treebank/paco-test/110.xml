@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" cat="mwu" end="2" id="2" mwu_root="tenslotte" mwu_sense="tenslotte" rel="mod">
+        <node begin="0" end="1" frame="sentence_adverb" id="3" lcat="advp" pos="adv" rel="mwp" root="Ten" sense="Ten" special="sentence" word="Ten"/>
+        <node begin="1" end="2" frame="sentence_adverb" id="4" lcat="advp" pos="adv" rel="mwp" root="slotte" sense="slotte" special="sentence" word="slotte"/>
+      </node>
+      <node begin="2" end="3" frame="verb(hebben,sg3,transitive)" id="5" infl="sg3" lcat="smain" pos="verb" rel="hd" root="garandeer" sc="transitive" sense="garandeer" tense="present" word="garandeert"/>
+      <node begin="3" cat="np" end="5" id="6" rel="su">
+        <node begin="3" end="4" frame="determiner(een)" id="7" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+        <node begin="4" end="5" frame="noun(both,both,both)" gen="both" id="8" lcat="np" num="both" pos="noun" rel="hd" root="traceerbaarheidsprocedure" sense="traceerbaarheidsprocedure" word="traceerbaarheidsprocedure"/>
+      </node>
+      <node begin="5" cat="np" end="12" id="9" rel="obj1">
+        <node begin="5" end="6" frame="determiner(de)" id="10" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node aform="base" begin="6" end="7" frame="adjective(e)" id="11" infl="e" lcat="ap" pos="adj" rel="mod" root="administratief" sense="administratief" vform="adj" word="administratieve"/>
+        <node begin="7" end="8" frame="noun(de,count,sg)" gen="de" id="12" lcat="np" num="sg" pos="noun" rel="hd" root="opvolging" sense="opvolging" word="opvolging"/>
+        <node begin="8" cat="pp" end="12" id="13" rel="mod">
+          <node begin="8" end="9" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="14" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+          <node begin="9" cat="np" end="12" id="15" rel="obj1">
+            <node begin="9" end="10" frame="determiner(de)" id="16" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node aform="base" begin="10" end="11" frame="adjective(ende(padv))" id="17" infl="e" lcat="ppres" pos="adj" rel="mod" root="treed_op" sense="treed_op" vform="gerund" word="optredende"/>
+            <node begin="11" end="12" frame="noun(de,count,pl)" gen="de" id="18" lcat="np" num="pl" pos="noun" rel="hd" root="grond_stroom" sense="grond_stroom" word="grondstromen"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" frame="punct(punt)" id="19" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Ten slotte garandeert een traceerbaarheidsprocedure de administratieve opvolging van de optredende grondstromen .</sentence>
+  <comments>
+    <comment>Q#110|Ten slotte garandeert een traceerbaarheidsprocedure de administratieve opvolging van de optredende grondstromen .|1|1|-2.7046930467429666</comment>
+  </comments>
+</alpino_ds>

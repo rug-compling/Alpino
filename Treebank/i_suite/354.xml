@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="9" end="10" id="2" lemma="..." pos="punct" postag="LET()" pt="let" rel="--" root="..." word="..."/>
+    <node begin="0" cat="conj" end="11" id="3" rel="--">
+      <node begin="0" cat="smain" end="4" id="4" rel="cnj">
+        <node begin="0" cat="np" end="2" id="5" rel="su">
+          <node begin="0" end="1" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="7" lemma="ziekenhuis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="ziekenhuis" word="ziekenhuis"/>
+        </node>
+        <node begin="2" end="3" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="3" end="4" id="9" lemma="rechtdoor" pos="adv" postag="BW()" pt="bw" rel="ld" root="rechtdoor" word="rechtdoor"/>
+      </node>
+      <node begin="5" conjtype="neven" end="6" id="10" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+      <node begin="6" cat="smain" end="11" id="11" rel="cnj">
+        <node begin="6" cat="np" end="8" id="12" rel="su">
+          <node begin="6" end="7" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="14" lemma="ambulance" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ambulance" word="ambulance"/>
+        </node>
+        <node begin="8" end="9" id="15" lemma="gaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ga" word="ging" wvorm="pv"/>
+        <node begin="10" end="11" id="16" lemma="linksaf" pos="adv" postag="BW()" pt="bw" rel="ld" root="linksaf" word="linksaf"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Het ziekenhuis is rechtdoor , maar de ambulance ging ... linksaf</sentence>
+</alpino_ds>

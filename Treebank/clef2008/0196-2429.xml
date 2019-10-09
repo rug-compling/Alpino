@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="sv1" end="11" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="liggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lig" word="Ligt" wvorm="pv"/>
+      <node begin="1" cat="np" end="3" id="3" rel="su">
+        <node begin="1" end="2" id="4" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="hart" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="hart" word="hart"/>
+      </node>
+      <node begin="3" cat="pp" end="6" id="6" rel="mod">
+        <node begin="3" end="4" id="7" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="4" cat="np" end="6" id="8" rel="obj1">
+          <node begin="4" end="5" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="romp" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="romp" word="romp"/>
+        </node>
+      </node>
+      <node begin="6" cat="conj" end="11" id="11" rel="ld">
+        <node begin="6" cat="ap" end="8" id="12" rel="cnj">
+          <node begin="6" buiging="zonder" end="7" graad="comp" id="13" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vwtype="onbep" word="meer"/>
+          <node begin="7" buiging="zonder" end="8" graad="basis" id="14" lemma="links" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="links" word="links"/>
+        </node>
+        <node begin="8" conjtype="neven" end="9" id="15" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+        <node begin="9" cat="ap" end="11" id="16" rel="cnj">
+          <node begin="9" buiging="zonder" end="10" graad="comp" id="17" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vwtype="onbep" word="meer"/>
+          <node begin="10" buiging="zonder" end="11" graad="basis" id="18" lemma="rechts" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="rechts" word="rechts"/>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="19" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Ligt het hart in de romp meer links of meer rechts ?</sentence>
+</alpino_ds>

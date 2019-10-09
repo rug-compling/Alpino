@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node aform="base" begin="0" end="1" frame="adjective(ge_e)" id="3" infl="e" lcat="ppart" pos="adj" rel="mod" root="ingevoerd" sense="ingevoerd" vform="psp" word="Ingevoerde"/>
+        <node begin="1" end="2" frame="tmp_noun(de,count,sg)" gen="de" id="4" lcat="np" num="sg" pos="noun" rel="hd" root="datum" sense="datum" special="tmp" word="datum"/>
+      </node>
+      <node begin="2" end="3" frame="verb(unacc,sg_heeft,copula)" id="5" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="is"/>
+      <node begin="3" cat="np" end="8" id="6" rel="predc">
+        <node begin="3" end="4" frame="determiner(geen,nwh,mod,pro,yparg,nwkpro,geen)" id="7" infl="geen" lcat="detp" pos="det" rel="det" root="geen" sense="geen" wh="nwh" word="geen"/>
+        <node aform="base" begin="4" end="5" frame="adjective(e)" id="8" infl="e" lcat="ap" pos="adj" rel="mod" root="huidig" sense="huidig" vform="adj" word="huidige"/>
+        <node begin="5" end="6" frame="tmp_noun(de,count,sg)" gen="de" id="9" lcat="np" num="sg" pos="noun" rel="hd" root="periode" sense="periode" special="tmp" word="periode"/>
+        <node begin="6" cat="pp" end="8" id="10" rel="mod">
+          <node begin="6" end="7" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="11" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+          <node begin="7" end="8" frame="number(hoofd(both))" id="12" infl="both" lcat="np" pos="num" rel="obj1" root="%1" sense="%1" special="hoofd" word="%1"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Ingevoerde datum is geen huidige periode voor %1</sentence>
+  <comments>
+    <comment>Q#185|Ingevoerde datum is geen huidige periode voor %1|1|1|2.6402427477898223</comment>
+  </comments>
+</alpino_ds>

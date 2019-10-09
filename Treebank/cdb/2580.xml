@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="mwu" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="zijn" pos="noun" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="mwp" root="Ben" word="Ben" wvorm="pv"/>
+        <node begin="1" end="2" id="4" lemma="Korsten" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Korsten" spectype="deeleigen" word="Korsten"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+      <node begin="3" cat="np" end="6" id="6" rel="predc">
+        <node begin="3" end="4" id="7" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="4" buiging="zonder" end="5" id="8" lemma="verbitteren" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="mod" root="verbitterd" word="verbitterd" wvorm="vd"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="man" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="man" word="man"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ben Korsten werd een verbitterd man .</sentence>
+</alpino_ds>

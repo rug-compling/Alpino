@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" cat="mwu" end="3" id="2" mwu_root="19_maart_2008" mwu_sense="19_maart_2008" rel="mod">
+        <node begin="0" end="1" frame="tmp_np" id="3" lcat="np" lemma="19" naamval="stan" numtype="hoofd" pos="noun" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="19" sense="19" special="tmp" word="19"/>
+        <node begin="1" end="2" frame="tmp_np" id="4" lcat="np" lemma="maart" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="maart" sense="maart" special="tmp" spectype="deeleigen" word="maart"/>
+        <node begin="2" end="3" frame="tmp_np" id="5" lcat="np" lemma="2008" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="2008" sense="2008" special="tmp" word="2008"/>
+      </node>
+      <node begin="3" buiging="met-e" end="4" frame="verb(hebben,past(sg),transitive)" id="6" infl="sg" lcat="smain" lemma="verstrekken" pos="verb" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="verstrek" sc="transitive" sense="verstrek" tense="past" word="verstrekte" wvorm="vd"/>
+      <node begin="4" cat="np" end="9" id="7" rel="su">
+        <node begin="4" end="5" frame="determiner(de)" id="8" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+        <node begin="5" end="6" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lcat="np" lemma="houder" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="houder" sense="houder" word="houder"/>
+        <node begin="6" cat="pp" end="9" id="10" rel="mod">
+          <node begin="6" end="7" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="11" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+          <node begin="7" cat="np" end="9" id="12" rel="obj1">
+            <node begin="7" end="8" frame="determiner(de)" id="13" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+            <node begin="8" end="9" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="14" lcat="np" lemma="handelsvergunning" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="handel_vergunning" sense="handel_vergunning" word="handelsvergunning"/>
+          </node>
+        </node>
+      </node>
+      <node begin="9" cat="np" end="11" id="15" rel="obj1">
+        <node aform="base" begin="9" buiging="met-e" end="10" frame="adjective(ende(padv))" id="16" infl="e" lcat="ppres" lemma="aanvullen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="vul_aan" sense="vul_aan" vform="gerund" word="aanvullende" wvorm="od"/>
+        <node begin="10" end="11" frame="noun(het,count,pl)" gen="het" getal="mv" graad="basis" id="17" lcat="np" lemma="gegeven" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gegeven" sense="gegeven" word="gegevens"/>
+      </node>
+    </node>
+    <node begin="11" end="12" frame="punct(punt)" id="18" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>19 maart 2008 verstrekte de houder van de handelsvergunning aanvullende gegevens .</sentence>
+  <comments>
+    <comment>Q#pdfs_human_referral_remeron_remeron_bi_nl-s10.2|19 maart 2008 verstrekte de houder van de handelsvergunning aanvullende gegevens .|1|1|0.0010904981710504903</comment>
+  </comments>
+</alpino_ds>

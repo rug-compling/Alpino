@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="15" end="16" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="22" id="2" rel="--">
+      <node begin="0" cat="np" end="5" id="3" rel="cnj">
+        <node begin="0" end="1" id="4" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="actie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="actie" word="actie"/>
+        <node begin="2" cat="pp" end="5" id="6" rel="mod">
+          <node begin="2" end="3" id="7" lemma="via" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="via" vztype="init" word="via"/>
+          <node begin="3" cat="np" end="5" id="8" rel="obj1">
+            <node begin="3" buiging="met-e" end="4" graad="basis" id="9" lemma="diplomatiek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="diplomatiek" word="diplomatieke"/>
+            <node begin="4" end="5" getal="mv" graad="basis" id="10" lemma="kanaal" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kanaal" word="kanalen"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" conjtype="neven" end="6" id="11" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="6" cat="np" end="22" id="12" rel="cnj">
+        <node begin="6" end="7" id="13" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="14" lemma="dreigement" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="dreigement" word="dreigement"/>
+        <node begin="8" cat="ti" end="22" id="15" rel="vc">
+          <node begin="13" end="14" id="16" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="8" cat="inf" end="22" id="17" rel="body">
+            <node begin="8" cat="np" end="12" id="18" rel="obj1">
+              <node begin="8" buiging="met-e" end="9" id="19" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="num" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" vwtype="onbep" word="alle"/>
+              <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="20" lemma="luchtverkeer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verkeer" word="luchtverkeer"/>
+              <node begin="10" cat="pp" end="12" id="21" rel="mod">
+                <node begin="10" end="11" id="22" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+                <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="23" lemma="Algiers" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Algiers" word="Algiers"/>
+              </node>
+            </node>
+            <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="24" lemma="stop" naamval="stan" ntype="soort" pos="part" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="svp" root="stop" word="stop"/>
+            <node begin="14" buiging="zonder" end="15" id="25" lemma="zetten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zet" word="zetten" wvorm="inf"/>
+            <node begin="16" cat="cp" end="22" id="26" rel="mod">
+              <node begin="16" conjtype="onder" end="17" id="27" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+              <node begin="17" cat="ssub" end="22" id="28" rel="body">
+                <node begin="17" cat="np" end="19" id="29" index="1" rel="su">
+                  <node begin="17" end="18" id="30" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="31" lemma="el-al-bemanning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bemanning" word="EL-AL-bemanning"/>
+                </node>
+                <node begin="20" end="21" id="32" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+                <node begin="17" cat="ppart" end="22" id="33" rel="vc">
+                  <node begin="17" end="19" id="34" index="1" rel="obj1"/>
+                  <node begin="19" end="20" id="35" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+                  <node begin="21" buiging="zonder" end="22" id="36" lemma="vrijlaten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="laat" word="vrijgelaten" wvorm="vd"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>een actie via diplomatieke kanalen en het dreigement alle luchtverkeer naar Algiers stop te zetten , als een EL-AL-bemanning niet werd vrijgelaten .</sentence>
+</alpino_ds>

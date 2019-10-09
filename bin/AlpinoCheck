@@ -1,0 +1,9 @@
+#!/bin/sh
+# script for checking failing sentences
+# if the guides are to blame, you will see which left-corner is missing
+# if the parser fails, use the command "check_tags" to re-parse with all
+# tags. You will then see the tags that are used in best parse that were missing
+# with pos_tagger=on
+#
+Alpino  -notk -veryfast robustness=off use_guides=off keep_notree=on end_hook=new_left_corners check_tags=on "$@"
+

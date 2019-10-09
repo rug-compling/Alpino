@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="0" cat="smain" end="25" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+      <node begin="0" cat="inf" end="25" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" buiging="zonder" end="3" id="6" lemma="weten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="weet" word="weten" wvorm="inf"/>
+        <node begin="3" cat="conj" end="25" id="7" rel="vc">
+          <node begin="3" cat="cp" end="15" id="8" rel="cnj">
+            <node begin="3" conjtype="onder" end="4" id="9" lemma="of" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="of" word="of"/>
+            <node begin="4" cat="ssub" end="15" id="10" rel="body">
+              <node begin="4" cat="np" end="7" id="11" index="2" rel="su">
+                <node begin="4" end="5" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="13" lemma="gemeente" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gemeente" word="gemeente"/>
+                <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="14" lemma="Groningen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Groningen" word="Groningen"/>
+              </node>
+              <node begin="7" cat="cp" end="9" id="15" rel="predm">
+                <node begin="7" conjtype="onder" end="8" id="16" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+                <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="17" lemma="aandeelhouder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="aandeelhouder" word="aandeelhouder"/>
+              </node>
+              <node begin="10" end="11" id="18" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+              <node begin="4" cat="ppart" end="15" id="19" rel="vc">
+                <node begin="4" end="7" id="20" index="2" rel="obj1"/>
+                <node begin="9" buiging="zonder" end="10" id="21" lemma="vertegenwoordigen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vertegenwoordig" word="vertegenwoordigd" wvorm="vd"/>
+                <node begin="11" cat="pp" end="15" id="22" rel="mod">
+                  <node begin="11" end="12" id="23" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                  <node begin="12" cat="np" end="15" id="24" rel="obj1">
+                    <node begin="12" end="13" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="13" buiging="met-e" end="14" graad="basis" id="26" lemma="bewust" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="bewust" word="bewuste"/>
+                    <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="27" lemma="vergadering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vergadering" word="vergadering"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="15" conjtype="neven" end="16" id="28" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="16" cat="whsub" end="25" id="29" rel="cnj">
+            <node begin="16" end="17" getal="ev" id="30" index="3" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" root="wat" status="vol" vwtype="vb" word="wat"/>
+            <node begin="16" cat="ssub" end="25" id="31" rel="body">
+              <node begin="16" end="17" id="32" index="3" rel="predc"/>
+              <node begin="19" end="20" id="33" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+              <node begin="17" cat="np" end="25" id="34" rel="su">
+                <node begin="17" end="18" id="35" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="36" lemma="standpunt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="standpunt" word="standpunt"/>
+                <node begin="20" cat="rel" end="25" id="37" rel="mod">
+                  <node begin="20" end="21" getal="ev" id="38" index="4" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
+                  <node begin="20" cat="ssub" end="25" id="39" rel="body">
+                    <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="40" index="5" lemma="Groningen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Groningen" word="Groningen"/>
+                    <node begin="23" end="24" id="41" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+                    <node begin="20" cat="ppart" end="25" id="42" rel="vc">
+                      <node begin="20" end="21" id="43" index="4" rel="obj1"/>
+                      <node begin="21" end="22" id="44" index="5" rel="su"/>
+                      <node begin="22" end="23" id="45" lemma="toen" pos="adv" postag="BW()" pt="bw" rel="mod" root="toen" word="toen"/>
+                      <node begin="24" buiging="zonder" end="25" id="46" lemma="innemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="neem" word="ingenomen" wvorm="vd"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="25" end="26" id="47" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hij wil weten of de gemeente Groningen als aandeelhouder vertegenwoordigd was op de bewuste vergadering en wat het standpunt was dat Groningen toen heeft ingenomen .</sentence>
+</alpino_ds>

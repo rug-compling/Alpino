@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dit" status="vol" vwtype="aanw" word="Dit"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="0" cat="ti" end="11" id="4" rel="vc">
+        <node begin="2" end="3" id="5" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="0" cat="inf" end="11" id="6" rel="body">
+          <node begin="0" end="1" id="7" index="1" rel="obj1"/>
+          <node begin="3" buiging="zonder" end="4" id="8" lemma="wijten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="wijt" word="wijten" wvorm="inf"/>
+          <node begin="4" cat="pp" end="11" id="9" rel="pc">
+            <node begin="4" end="5" id="10" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+            <node begin="5" cat="np" end="11" id="11" rel="obj1">
+              <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="6" buiging="met-e" end="7" graad="basis" id="13" lemma="flauw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="flauw" word="flauwe"/>
+              <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="14" lemma="stemming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stemming" word="stemming"/>
+              <node begin="8" cat="pp" end="11" id="15" rel="mod">
+                <node begin="8" end="9" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="9" cat="mwu" end="11" id="17" rel="obj1">
+                  <node begin="9" end="10" id="18" lemma="Wall" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wall" spectype="deeleigen" word="Wall"/>
+                  <node begin="10" end="11" id="19" lemma="Street" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Street" spectype="deeleigen" word="Street"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dit was te wijten aan de flauwe stemming in Wall Street .</sentence>
+</alpino_ds>

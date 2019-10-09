@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="15" end="16" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="20" end="21" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="24" id="3" rel="--">
+      <node begin="0" cat="np" end="3" id="4" rel="su">
+        <node begin="0" end="1" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="6" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="ontwikkeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ontwikkeling" word="ontwikkeling"/>
+      </node>
+      <node begin="3" end="4" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="4" cat="conj" end="24" id="9" rel="predc">
+        <node begin="4" cat="np" end="15" id="10" rel="cnj">
+          <node begin="4" end="5" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="5" buiging="met-e" end="6" graad="comp" id="12" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="groot" word="grotere"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="motor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="motor" word="motor"/>
+          <node begin="7" cat="rel" end="15" id="14" rel="mod">
+            <node begin="7" end="8" getal="getal" id="15" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="7" cat="ssub" end="15" id="16" rel="body">
+              <node begin="7" end="8" id="17" index="1" rel="su"/>
+              <node begin="8" cat="pp" end="11" id="18" rel="mod">
+                <node begin="8" end="9" id="19" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                <node begin="9" cat="np" end="11" id="20" rel="obj1">
+                  <node begin="9" end="10" getal="mv" graad="basis" id="21" lemma="ruimbemeten" ntype="soort" pos="adj" postag="N(soort,mv,basis)" pt="n" rel="mod" root="ruimbemeten" word="ruimbemeten"/>
+                  <node begin="10" end="11" getal="mv" graad="basis" id="22" lemma="paardekracht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kracht" word="paardekrachten"/>
+                </node>
+              </node>
+              <node begin="11" cat="np" end="14" id="23" rel="obj1">
+                <node begin="11" end="12" id="24" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="12" buiging="met-e" end="13" graad="comp" id="25" lemma="lang" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="langer" word="langere"/>
+                <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="26" lemma="levensduur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="levensduur" word="levensduur"/>
+              </node>
+              <node begin="14" end="15" id="27" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+        <node begin="16" cat="np" end="20" id="28" rel="cnj">
+          <node begin="16" end="17" id="29" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="30" lemma="toepassing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="toepassing" word="toepassing"/>
+          <node begin="18" cat="pp" end="20" id="31" rel="mod">
+            <node begin="18" end="19" id="32" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="33" lemma="stuurbekrachtiging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="stuurbekrachtiging" word="stuurbekrachtiging"/>
+          </node>
+        </node>
+        <node begin="21" cat="np" end="24" id="34" rel="cnj">
+          <node begin="21" end="22" id="35" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="22" buiging="zonder" end="23" graad="basis" id="36" lemma="halfautomatisch" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="automatisch" word="halfautomatisch"/>
+          <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="37" lemma="transmissiesysteem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="systeem" word="transmissiesysteem"/>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="38" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een andere ontwikkeling is de grotere motor die met ruimbemeten paardekrachten een langere levensduur heeft , de toepassing van stuurbekrachtiging , een halfautomatisch transmissiesysteem .</sentence>
+</alpino_ds>

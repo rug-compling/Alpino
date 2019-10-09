@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="whq" end="8" id="1" rel="--">
+      <node begin="0" cat="pp" end="3" id="2" index="1" rel="whd">
+        <node begin="0" end="1" id="3" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="Op"/>
+        <node begin="1" cat="np" end="3" id="4" rel="obj1">
+          <node begin="1" buiging="met-e" end="2" id="5" lemma="welke" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="welke"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="dag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dag" word="dag"/>
+        </node>
+      </node>
+      <node begin="0" cat="sv1" end="8" id="7" rel="body">
+        <node begin="0" end="3" id="8" index="1" rel="mod"/>
+        <node begin="3" end="4" id="9" lemma="vallen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="val" word="valt" wvorm="pv"/>
+        <node begin="4" cat="np" end="6" id="10" rel="su">
+          <node begin="4" end="5" id="11" lemma="eerste" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="eerste" word="eerste"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="kerstdag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kerst_dag" word="kerstdag"/>
+        </node>
+        <node begin="6" cat="pp" end="8" id="13" rel="mod">
+          <node begin="6" end="7" id="14" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="7" end="8" id="15" lemma="2010" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="2010" word="2010"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="16" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Op welke dag valt eerste kerstdag in 2010 ?</sentence>
+</alpino_ds>

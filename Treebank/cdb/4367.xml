@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="20" id="2" rel="--">
+      <node begin="1" end="2" id="3" lemma="konden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kan" word="konden" wvorm="pv"/>
+      <node begin="2" end="3" getal="mv" id="4" index="1" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+      <node begin="0" cat="inf" end="20" id="5" rel="vc">
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="6" lemma="gelukkig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="gelukkig" word="Gelukkig"/>
+        <node begin="2" end="3" id="7" index="1" rel="su"/>
+        <node begin="3" end="4" id="8" lemma="steeds" pos="adv" postag="BW()" pt="bw" rel="mod" root="steeds" word="steeds"/>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="vertrouwen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vertrouw" word="vertrouwen" wvorm="inf"/>
+        <node begin="5" cat="pp" end="20" id="10" rel="pc">
+          <node begin="5" end="6" id="11" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="6" cat="conj" end="20" id="12" rel="obj1">
+            <node begin="9" conjtype="neven" end="10" id="13" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="6" cat="np" end="20" id="14" rel="cnj">
+              <node begin="6" end="7" id="15" index="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="7" buiging="met-e" end="8" graad="basis" id="16" index="3" lemma="geweldig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="geweldig" word="geweldige"/>
+              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="17" lemma="lichaamskracht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kracht" word="lichaamskracht"/>
+              <node begin="12" cat="rel" end="20" id="18" index="4" rel="mod">
+                <node begin="12" end="13" getal="getal" id="19" index="5" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+                <node begin="12" cat="ssub" end="20" id="20" rel="body">
+                  <node begin="12" end="13" id="21" index="5" rel="su"/>
+                  <node begin="13" cat="np" end="15" id="22" rel="obj1">
+                    <node begin="13" buiging="met-e" end="14" getal="mv" id="23" lemma="ons" naamval="stan" npagr="rest" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" pt="vnw" rel="det" root="onze" status="vol" vwtype="bez" word="onze"/>
+                    <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="24" lemma="stripheld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="held" word="stripheld"/>
+                  </node>
+                  <node begin="15" cat="pp" end="19" id="25" rel="ld">
+                    <node begin="15" end="16" id="26" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+                    <node begin="16" cat="np" end="19" id="27" rel="obj1">
+                      <node begin="16" end="17" id="28" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                      <node begin="17" buiging="met-e" end="18" graad="sup" id="29" lemma="onmogelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="onmogelijk" word="onmogelijkste"/>
+                      <node begin="18" end="19" getal="mv" graad="basis" id="30" lemma="situatie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="situatie" word="situaties"/>
+                    </node>
+                  </node>
+                  <node begin="19" end="20" id="31" lemma="redden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="red" word="redden" wvorm="pv"/>
+                </node>
+              </node>
+            </node>
+            <node begin="6" cat="np" end="20" id="32" rel="cnj">
+              <node begin="6" end="7" id="33" index="2" rel="det"/>
+              <node begin="7" end="8" id="34" index="3" rel="mod"/>
+              <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="35" lemma="behendigheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="behendigheid" word="behendigheid"/>
+              <node begin="12" end="20" id="36" index="4" rel="mod"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Gelukkig konden we steeds vertrouwen op de geweldige lichaamskracht en behendigheid , die onze stripheld uit de onmogelijkste situaties redden .</sentence>
+</alpino_ds>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="27" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="11" end="12" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="16" end="17" id="3" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="22" end="23" id="4" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="smain" end="26" id="5" rel="--">
+      <node begin="0" cat="np" end="11" id="6" rel="su">
+        <node begin="0" end="1" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="8" lemma="heer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="heer" word="heer"/>
+        <node begin="2" end="3" genus="genus" getal="ev" graad="basis" id="9" lemma="Schravemade" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Schravemade" word="Schravemade"/>
+        <node begin="4" cat="np" end="11" id="10" rel="app">
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="districtsbestuurder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bestuurder" word="districtsbestuurder"/>
+          <node begin="5" cat="pp" end="11" id="12" rel="mod">
+            <node begin="5" end="6" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="6" cat="np" end="11" id="14" rel="obj1">
+              <node begin="6" end="7" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="7" cat="mwu" end="9" id="16" rel="hd">
+                <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="17" lemma="metaalbedrijfsbond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Metaalbedrijfsbond" word="Metaalbedrijfsbond"/>
+                <node begin="8" end="9" id="18" lemma="NVV" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="NVV" spectype="symb" word="NVV"/>
+              </node>
+              <node begin="9" cat="pp" end="11" id="19" rel="mod">
+                <node begin="9" end="10" id="20" lemma="te" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="te" vztype="init" word="te"/>
+                <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="21" lemma="Rotterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Rotterdam" word="Rotterdam"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="12" end="13" id="22" lemma="zien" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zie" word="ziet" wvorm="pv"/>
+      <node begin="13" cat="np" end="22" id="23" index="1" rel="obj1">
+        <node begin="13" buiging="met-e" end="14" id="24" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+        <node begin="14" buiging="met-e" end="15" getal="mv" graad="basis" id="25" lemma="beide" naamval="stan" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,mv,basis)" pt="vnw" rel="det" root="beide" vwtype="onbep" word="beide"/>
+        <node begin="15" end="16" getal="mv" graad="basis" id="26" lemma="sprint" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="sprints" word="sprints"/>
+        <node begin="17" cat="oti" end="22" id="27" rel="mod">
+          <node begin="17" end="18" id="28" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+          <node begin="18" cat="ti" end="22" id="29" rel="body">
+            <node begin="20" end="21" id="30" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="18" cat="inf" end="22" id="31" rel="body">
+              <node begin="18" cat="pp" end="20" id="32" rel="mod">
+                <node begin="18" end="19" id="33" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="19" end="20" getal="mv" graad="basis" id="34" lemma="atletiekterm" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="termen" word="atletiektermen"/>
+              </node>
+              <node begin="21" buiging="zonder" end="22" id="35" lemma="spreken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="spreek" word="spreken" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="13" cat="inf" end="26" id="36" rel="vc">
+        <node begin="13" end="22" id="37" index="1" rel="su"/>
+        <node begin="23" end="24" getal="getal" id="38" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+        <node begin="24" buiging="zonder" end="25" graad="basis" id="39" lemma="duidelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="duidelijk" word="duidelijk"/>
+        <node begin="25" buiging="zonder" end="26" id="40" lemma="ontwikkelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ontwikkel" word="ontwikkelen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="26" end="27" id="41" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De heer Schravemade , districtsbestuurder van de Metaalbedrijfsbond NVV te Rotterdam , ziet deze beide sprints ( om in atletiektermen te spreken ) zich duidelijk ontwikkelen .</sentence>
+</alpino_ds>

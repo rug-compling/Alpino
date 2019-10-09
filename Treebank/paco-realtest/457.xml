@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="smain" end="16" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="de" pos="det" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" gen="het" id="4" num="pl" pos="noun" rel="hd" root="beeld" word="beelden"/>
+        <node begin="2" cat="pp" end="4" id="5" rel="mod">
+          <node begin="2" end="3" id="6" pos="prep" rel="hd" root="van" word="van"/>
+          <node begin="3" end="4" gen="de" id="7" num="pl" pos="noun" rel="obj1" root="volwassene" word="volwassenen"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="8" infl="pl" pos="verb" rel="hd" root="bepaal" sc="transitive" tense="present" word="bepalen"/>
+      <node aform="base" begin="5" end="6" id="9" infl="no_e" pos="adj" rel="mod" root="vaak" vform="adj" word="vaak"/>
+      <node begin="6" cat="np" end="16" id="10" rel="obj1">
+        <node begin="6" end="7" id="11" infl="de" pos="det" rel="det" root="de" word="de"/>
+        <node begin="7" end="8" gen="de" id="12" num="sg" pos="noun" rel="hd" root="manier" word="manier"/>
+        <node begin="8" cat="rel" end="16" id="13" rel="mod">
+          <node begin="8" end="9" id="14" index="1" pos="pp" rel="rhd" root="waarop" special="waar" word="waarop"/>
+          <node begin="8" cat="ssub" end="16" id="15" rel="body">
+            <node begin="9" cat="np" end="14" id="16" index="2" rel="su">
+              <node begin="9" end="10" id="17" infl="de" pos="det" rel="det" root="de" word="de"/>
+              <node begin="10" end="11" gen="het" id="18" num="pl" pos="noun" rel="hd" root="beeld" word="beelden"/>
+              <node begin="11" cat="pp" end="14" id="19" rel="mod">
+                <node begin="11" end="12" id="20" pos="prep" rel="hd" root="van" word="van"/>
+                <node begin="12" cat="np" end="14" id="21" rel="obj1">
+                  <node begin="12" end="13" gen="het" id="22" num="pl" pos="noun" rel="hd" root="kind" word="kinderen"/>
+                  <node begin="13" end="14" id="23" pos="adv" rel="mod" root="zelf" special="postnp" word="zelf"/>
+                </node>
+              </node>
+            </node>
+            <node begin="14" end="15" id="24" infl="pl" pos="verb" rel="hd" root="word" sc="passive" tense="present" word="worden"/>
+            <node begin="8" cat="ppart" end="16" id="25" rel="vc">
+              <node begin="8" end="9" id="26" index="1" rel="mod"/>
+              <node begin="9" end="14" id="27" index="2" rel="obj1"/>
+              <node begin="15" end="16" id="28" infl="psp" pos="verb" rel="hd" root="bestudeer" sc="transitive" word="bestudeerd"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="29" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>De beelden van volwassenen bepalen vaak de manier waarop de beelden van kinderen zelf worden bestudeerd .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

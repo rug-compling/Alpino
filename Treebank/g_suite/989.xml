@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="0" cat="du" end="4" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="oftewel" pos="comp" postag="BW()" pt="bw" rel="dlink" root="oftewel" word="Oftewel"/>
+      <node begin="2" cat="np" end="4" id="4" rel="nucl">
+        <node begin="2" buiging="met-e" end="3" graad="basis" id="5" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="grote"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="6" lemma="probleem" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="probleem" word="problemen"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Oftewel : grote problemen</sentence>
+</alpino_ds>

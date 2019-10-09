@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="np" end="4" id="1" rel="--">
+      <node begin="0" end="1" frame="proper_name(both,'LOC')" getal="mv" graad="basis" id="2" lcat="np" lemma="muis" neclass="LOC" ntype="soort" num="both" pos="name" postag="N(soort,mv,basis)" pt="n" rel="mod" root="Muizen" sense="Muizen" word="Muizen"/>
+      <node begin="1" end="2" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="3" lcat="np" lemma="voorproever" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="voor_pro_ever" sense="voor_pro_ever" word="voorproevers"/>
+      <node begin="2" cat="pp" end="4" id="4" rel="mod">
+        <node begin="2" end="3" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="5" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+        <node begin="3" end="4" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="6" lcat="np" lemma="wereldleider" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="wereld_leider" sense="wereld_leider" word="wereldleiders"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Muizen voorproevers van wereldleiders</sentence>
+  <comments>
+    <comment>Q#DS_20031008_01-60-8-1|Muizen voorproevers van wereldleiders|1|1|0.09970872401728476</comment>
+  </comments>
+</alpino_ds>

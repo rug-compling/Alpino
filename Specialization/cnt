@@ -1,0 +1,16 @@
+#!/usr/bin/perl -w
+
+while (<>) {
+    chomp;
+    @array = split /\|/;
+    $val = pop @array;
+    $key = join('|',@array);
+    $keys{$key}++;
+    $$key{$val}++;
+}
+
+foreach $key (keys %keys) {
+    foreach $val (keys %$key) {
+	print "$key|$val|$keys{$key}|$$key{$val}\n";
+    }
+}

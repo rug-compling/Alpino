@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="31" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="7" end="8" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="14" end="15" id="3" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="16" end="17" id="4" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="smain" end="30" id="5" rel="--">
+      <node begin="0" cat="conj" end="19" id="6" index="1" rel="su">
+        <node begin="8" conjtype="neven" end="9" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="0" cat="np" end="19" id="8" rel="cnj">
+          <node begin="0" end="1" genus="genus" getal="ev" graad="basis" id="9" lemma="Matroos" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="matroos" word="Matroos"/>
+          <node begin="1" cat="mwu" end="5" id="10" rel="app">
+            <node begin="1" end="2" id="11" lemma="Jan" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jan" spectype="deeleigen" word="Jan"/>
+            <node begin="2" end="3" id="12" lemma="Renzo" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Renzo" spectype="deeleigen" word="Renzo"/>
+            <node begin="3" end="4" id="13" lemma="Geert" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Geert" spectype="deeleigen" word="Geert"/>
+            <node begin="4" end="5" id="14" lemma="M." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="M." spectype="deeleigen" word="M."/>
+          </node>
+          <node begin="6" end="7" id="15" lemma="22" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="22" word="22"/>
+          <node begin="17" cat="pp" end="19" id="16" index="2" rel="mod">
+            <node begin="17" end="18" id="17" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+            <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="18" lemma="Groningen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Groningen" word="Groningen"/>
+          </node>
+        </node>
+        <node begin="9" cat="np" end="19" id="19" rel="cnj">
+          <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="20" lemma="glazenwasser" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="glazenwasser" word="glazenwasser"/>
+          <node begin="10" cat="mwu" end="14" id="21" rel="app">
+            <node begin="10" end="11" id="22" lemma="Hendrik" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hendrik" spectype="deeleigen" word="Hendrik"/>
+            <node begin="11" end="12" id="23" lemma="van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+            <node begin="12" end="13" id="24" lemma="der" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="der" spectype="deeleigen" word="der"/>
+            <node begin="13" end="14" id="25" lemma="L." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="L." spectype="deeleigen" word="L."/>
+          </node>
+          <node begin="15" end="16" id="26" lemma="19" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="19" word="19"/>
+          <node begin="17" end="19" id="27" index="2" rel="mod"/>
+        </node>
+      </node>
+      <node begin="19" end="20" id="28" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="30" id="29" rel="vc">
+        <node begin="0" end="19" id="30" index="1" rel="su"/>
+        <node begin="20" buiging="zonder" end="21" id="31" lemma="ervaren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ervaar" word="ervaren" wvorm="vd"/>
+        <node begin="21" cat="whsub" end="30" id="32" rel="vc">
+          <node begin="21" cat="ap" end="23" id="33" index="3" rel="whd">
+            <node begin="21" end="22" id="34" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="mod" root="hoe" word="hoe"/>
+            <node begin="22" buiging="zonder" end="23" graad="basis" id="35" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="goed" word="goed"/>
+          </node>
+          <node begin="21" cat="ssub" end="30" id="36" rel="body">
+            <node begin="21" end="23" id="37" index="3" rel="predc"/>
+            <node begin="23" cat="np" end="28" id="38" rel="su">
+              <node begin="23" end="24" id="39" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="40" lemma="apparatuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="apparatuur" word="apparatuur"/>
+              <node begin="25" cat="pp" end="28" id="41" rel="mod">
+                <node begin="25" end="26" id="42" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="26" cat="np" end="28" id="43" rel="obj1">
+                  <node begin="26" end="27" id="44" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="45" lemma="politie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="politie" word="politie"/>
+                </node>
+              </node>
+            </node>
+            <node begin="28" end="29" id="46" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+            <node begin="29" end="30" id="47" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="30" end="31" id="48" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Matroos Jan Renzo Geert M. ( 22 ) en glazenwasser Hendrik van der L. ( 19 ) uit Groningen hebben ervaren hoe goed de apparatuur van de politie wel is .</sentence>
+</alpino_ds>

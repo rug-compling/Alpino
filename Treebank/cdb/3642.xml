@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="smain" end="20" id="1" rel="--">
+      <node begin="0" cat="pp" end="2" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+        <node begin="1" end="2" genus="genus" getal="ev" graad="basis" id="4" lemma="Geneve" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Geneve" word="Geneve"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="ontploffen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ontplof" word="ontplofte" wvorm="pv"/>
+      <node begin="3" cat="np" end="6" id="6" rel="su">
+        <node begin="3" end="4" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="4" buiging="met-e" end="5" graad="basis" id="8" lemma="hels" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="hels" word="helse"/>
+        <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="apparaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="apparaat" word="apparaat"/>
+      </node>
+      <node begin="6" cat="cp" end="20" id="10" rel="mod">
+        <node begin="6" end="7" id="11" lemma="vlak" pos="adv" postag="BW()" pt="bw" rel="mod" root="vlak" word="vlak"/>
+        <node begin="7" conjtype="onder" end="8" id="12" lemma="nadat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="nadat" word="nadat"/>
+        <node begin="8" cat="ssub" end="20" id="13" rel="body">
+          <node begin="8" cat="conj" end="14" id="14" index="1" rel="su">
+            <node begin="8" cat="np" end="11" id="15" rel="cnj">
+              <node begin="8" end="9" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="9" end="10" id="17" lemma="56" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="56" word="56"/>
+              <node begin="10" end="11" getal="mv" graad="basis" id="18" lemma="passagier" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="passagier" word="passagiers"/>
+            </node>
+            <node begin="11" conjtype="neven" end="12" id="19" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="12" cat="np" end="14" id="20" rel="cnj">
+              <node begin="12" end="13" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="22" lemma="bemanning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bemanning" word="bemanning"/>
+            </node>
+          </node>
+          <node begin="18" end="19" id="23" lemma="hebben" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="heb" word="hadden" wvorm="pv"/>
+          <node begin="8" cat="ppart" end="20" id="24" rel="vc">
+            <node begin="8" end="14" id="25" index="1" rel="su"/>
+            <node begin="14" cat="np" end="16" id="26" rel="obj1">
+              <node begin="14" end="15" id="27" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="28" lemma="toestel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="toestel" word="toestel"/>
+            </node>
+            <node begin="16" cat="mwu" end="18" id="29" rel="mod">
+              <node begin="16" end="17" id="30" lemma="in" pos="adv" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+              <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="31" lemma="allerijl" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="allerijl" word="allerijl"/>
+            </node>
+            <node begin="19" buiging="zonder" end="20" id="32" lemma="verlaten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verlaat" word="verlaten" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="33" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>In Geneve ontplofte het helse apparaat vlak nadat de 56 passagiers en de bemanning het toestel in allerijl hadden verlaten .</sentence>
+</alpino_ds>

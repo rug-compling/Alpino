@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="want" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="want" word="Want"/>
+      <node begin="1" cat="smain" end="7" id="3" rel="nucl">
+        <node begin="1" buiging="zonder" end="2" graad="basis" id="4" lemma="natuurlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="natuurlijk" word="natuurlijk"/>
+        <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="3" end="4" genus="onz" getal="ev" id="6" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+        <node begin="4" cat="np" end="7" id="7" rel="predc">
+          <node begin="4" cat="np" end="6" id="8" rel="mod">
+            <node begin="4" end="5" id="9" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
+            <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="10" lemma="keer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,genus,stan)" pt="n" rel="hd" root="keer" word="keer"/>
+          </node>
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="11" lemma="hetzelfde" pos="det" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="hetzelfde" word="hetzelfde"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Want natuurlijk is het twee keer hetzelfde .</sentence>
+</alpino_ds>

@@ -1,0 +1,222 @@
+further changes through SVN!
+
+4.335  . time-out did not work once at least one solution was found
+
+4.334  . escape % in strings from parse-widget
+       . toplevel print options now applied in clig output of terms (long
+         terms gave rise to memory crashes in tcl...)
+       . menu_flag and hdrug_menu_flag: now ordered alphabetically - different interface
+       . install: check if saved state is different before copying
+       . faster creation of object buttons after (re)start_x
+
+4.333  . distinguish failure and success status for parsing/generation
+       . removed calls to trimcore/0 since they appeared to give rise
+         to segm faults
+
+4.332  . maximum geometry (for my new 24'' screen!) 1600x800
+       . -suite Suite (shorthand for -flag suite Suite)
+
+4.329  . bug: hdrug_status flag was incorrect in case of out of memory
+         exception with timeout enabled)
+       . start_hook in scope of time-out and memory exception handling
+
+4.328  . bug in generation: max timeout not set...
+         thanks Giuliano Lancioni  
+
+4.326  . wrapped various FORMAT_tree_user_node calls in try_hook, with
+         default
+       . similar for change_tree/2
+
+4.325  . hdrug_status new flag to communicate time-out, out-of-memory
+       . also repaired bug in time-out not working in parse_compare and
+         generation_compare
+
+4.324  . result_hook now first constructs object before user_result_hook
+         is called
+
+4.323  . improved implementation of unify_except and unify_except_l in
+         feature library
+       . two seperate option menus: Hdrug and Options
+
+4.322  . result_hook is now outside of result_term; similar for out of
+         memory catch
+
+4.321  . hdrug_clig: allow non-list tails in lists (detected LvdBeek)
+       . hdrug_feature: added error messages in case if_defined was used
+         for non-existing features (would fail silently before)
+       . hdrug_cmdint: extra command  'l <keys>' list sentences with these
+         keys)
+
+4.320  . completeley re-did construction of binary distribution. This involves
+         a lot of minor changes. 
+       . compatible with (requires?) SICStus 3.9
+       . removed all *non*-blt stuff in hdrug_stats (since it was mostly
+         broken anyway, and BLT can be installed easily enough)
+       . make xref in Prolog/ --- this involved a large number of minor 
+         improvements/changes. 
+       . added menu-items to resize console window (if tkconsol=on)
+       . self-extracting/installing executable for Windows platform
+       . applications updated to use more CLiG by default
+
+4.319  . changes in Applications/Shpsg
+
+4.318  . reposition widget after displaying (hdrug_gui, hdrug_clig)
+       . top-canvas: 2-ary variant with name of top-level widget
+       . two new example applications, from Rob Malouf: stochastic
+         context-free grammar, and stochastic attribute-value grammar.
+       . simplified .po construction in Applications hierarchy, to
+         build much faster. Hope this doesn't introduce any problems.
+
+4.315  . new: gui_max_objects are placed on the buttonbar; in addition
+         there are < > buttons to get buttons for other objects
+
+4.314  . new hook use_canvas/2 to determine where output should appear
+
+4.313  . hdrug_gui: flags were not passed on to Tcl...
+       . also, gram_startup_hook_end was not called at the end...
+       . added separator in options menu, so that application specific
+         options stand out more clearly
+
+4.312  . clig bug corrected by R.Malouf
+       . wrong url in manpage, detected by B.Villada
+
+4.310  . cvs
+
+4.309  . current_ref was not set properly if user_max was used.
+       . link to manual in hdrug.tcl was outdated
+
+4.308  . sparc link in Hdrug/index.html now works
+       . clig output now uses same variables in feature structures as in
+         constraints on these (I should have fixed that long ago).
+       . finally got rid of tcl error if object doesnt' exist anymore
+       . Prolog/hdrug_show: got rid of nonsense in displaying multiple
+         tk trees
+       . flag clig_fontsize interface to clig_globals(fontsize)
+
+4.307  . bug in hdrug_tk (write_pretty_constraint_tks), thanx Gosse
+       . bug in hdrug_latex (escape_l)
+       . bug in hdrug_feature:not_type/2
+
+4.306  . Don't use Sicstus 3.8.4 ...
+
+4.305  . Prolog/hdrug_call_tree: added some hook()'s
+
+4.304  . manual.ps repaired (no more palatino for smaller pdf)
+       . manual.pdf
+
+4.302  . added Chat-80 (don't forget the classics)
+
+4.301  . help system now as in fsa. 
+
+4.300  . Make procedure changed:  LIBDIR is used!
+       . and .po files packed per binary distribution
+
+4.223  . FSBox has finally gone
+
+4.222  . binary for HP-PA. Should work now.
+
+4.221  . updated to Ale version 3.2 (beta)
+         but there is still a problem with `too many permanent
+         variables'
+
+4.220  . moved to Linux/Alpha platform
+       . binary distribution stuff
+       . SICStus 3.8.2
+
+4.211  . do not start X if batch_command is set.
+
+4.210  . flag batch_command
+         this flag can be used to run a command *after* `hdrug' is
+         initialized and *after* the application is initialized by
+         hdrug_initialization/0. The value of the flag is called
+         as a goal and all solutions are found using a failure-driven
+         loop, after which the program terminates.
+
+4.209  . SICStus 3.8.1
+
+4.208  . added hook for action when clicking with 2 or 3 on
+         numbered object button
+       . clig stuff is now more tightly integrated into Hdrug
+       . use select_widget/2 instaed of select_canvas/2.
+       . active tree nodes in clig_tree (if clig_tree_active_nodes=on)
+       . second mouse button in tkconsol widget: increase height
+         third mouse                           : decrease
+
+4.205  . stack trees on left canvas
+       . separate archives with binary version
+       . on_exception around hdrug_main
+
+4.204  . hooks for compilation of suites
+       . add_help_menu flag 
+       . more robust options handling, more informative error message
+       . /=>
+         X:vform /=> fin. 
+         Type inequality. 
+
+4.203
+       . bug in hdrug_feature: change of booleans recognized too many terms
+         as booleans
+       . added if_defined constraint!
+
+4.200  . simplified make procedure, anticipating binary runtime distribution
+
+4.102  . adapted to SICStus 3.8
+
+4.101  . intensional boolean types were not displayed correctly
+
+4.100  . BLT2.4 is now supported (and BLT 1.9 is not).
+         I'm also using Tcl/Tk 8.0 now. Shouldn't make a difference (?).
+
+4.0.6  . bug in startup script (-script works again)
+
+4.0.5  . help system moved into help.pl; Not quite finished yet. Want
+         to be able to use this as a separate module. 
+       . bug in hdrug_txt:txt_fs/1
+       . new hooks display_extern_sem, display_extern_phon
+       . variable nodes are displayed '_' instead of '' in hdrug_show:trees
+
+4.0.4  . startup script: works with bash too.
+       . error message from cmdint
+
+4.0.3  . flag(chart_ystart) removed; this is computed automatically.
+
+4.0.2  . Applications/Ale/ale.tcl chart tree always available
+       . hdrug_error in hdrug_gui
+       . bug in hdrug_cmdint which mis-treated commands solely consisting
+         of Prolog variable
+       . new library: hdrug_chart.pl for pretty printing of charts. 
+         TO DO: alter ALE and SEM to use this.
+
+4.0.1  . bitmaps work
+       . added a few help-lines
+       . Applications/Ale: added pretty printing of chart and chart items. Wow!
+
+
+most important changes in 4.0.0
+-------------------------------
+
+- new: extendible treatment of command-line options
+- command interpreter re-implemented, enhanced, simplified
+- directory and file architecture simplified
+- new: on-line help system; this is also used to generate parts of
+  refman automatically
+- new: reference manual, cf. directory Manual
+- new: tkconsol (use tkconsol=on to try it out)
+- new: active object button (number of object that is being shown is highlited
+- simplified example applications; no separate scripts anymore, just type
+  hdrug -l start
+- new: allow test runs of generation, just like parsing. 
+- TkTree Tcl/Tk is not used anymore (this was already altered in one of
+  the last pre 4.0.0 versions).
+- link-clause is gone; now uses multifile declarations for more commands,
+  tree formats, portray, ..
+- term expansion is gone. There is some support still in hdrug_util, in order
+  to obtain user:user_clause/2 definitions (for visualization of your Prolog
+  clauses). Use the flag user_clause_expansion.
+- generic interface to the visualization commands by means of the 
+  show/3 command. Simplified much of the interfaces of the visualization
+  libraries.
+- Alvey application added to Applications directory
+- ALE application updated to version 3.1
+- documentation is added to distribution
+

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="38" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="14" end="15" id="2" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="17" end="18" id="3" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="smain" end="37" id="4" rel="--">
+      <node begin="0" cat="np" end="17" id="5" rel="su">
+        <node begin="0" cat="mwu" end="2" id="6" rel="hd">
+          <node begin="0" end="1" id="7" lemma="Charlie" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Charlie" spectype="deeleigen" word="Charlie"/>
+          <node begin="1" end="2" id="8" lemma="Greene" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Greene" spectype="deeleigen" word="Greene"/>
+        </node>
+        <node begin="3" cat="pp" end="17" id="9" rel="mod">
+          <node begin="3" end="4" id="10" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="4" cat="conj" end="9" id="11" rel="obj1">
+            <node begin="4" cat="mwu" end="6" id="12" rel="cnj">
+              <node begin="4" end="5" id="13" lemma="Jim" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jim" spectype="deeleigen" word="Jim"/>
+              <node begin="5" end="6" id="14" lemma="Hines" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hines" spectype="deeleigen" word="Hines"/>
+            </node>
+            <node begin="6" conjtype="neven" end="7" id="15" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="7" cat="mwu" end="9" id="16" rel="cnj">
+              <node begin="7" end="8" id="17" lemma="Ronnie" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ronnie" spectype="deeleigen" word="Ronnie"/>
+              <node begin="8" end="9" id="18" lemma="Gray" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Gray" spectype="deeleigen" word="Gray"/>
+            </node>
+          </node>
+          <node begin="9" cat="np" end="17" id="19" rel="predc">
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="20" lemma="wereldrecordhouder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="houder" word="wereldrecordhouder"/>
+            <node begin="10" cat="pp" end="14" id="21" rel="mod">
+              <node begin="10" end="11" id="22" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+              <node begin="11" cat="np" end="14" id="23" rel="obj1">
+                <node begin="11" end="12" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="12" buiging="met-e" end="13" graad="basis" id="25" lemma="kort" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="kort" word="korte"/>
+                <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="26" lemma="sprintafstand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="afstand" word="sprintafstand"/>
+              </node>
+            </node>
+            <node begin="15" cat="np" end="17" id="27" rel="mod">
+              <node begin="15" end="16" id="28" lemma="9,9" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="9,9" word="9,9"/>
+              <node begin="16" buiging="zonder" end="17" graad="basis" id="29" lemma="sec" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="sec" word="sec"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="18" end="19" id="30" lemma="laten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="laat" word="liet" wvorm="pv"/>
+      <node begin="19" cat="np" end="23" id="31" rel="obj2">
+        <node begin="19" end="20" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="20" cat="detp" end="22" id="33" rel="det">
+          <node begin="20" buiging="zonder" end="21" graad="basis" id="34" lemma="ruim" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ruim" word="ruim"/>
+          <node begin="21" end="22" id="35" lemma="drieduizend" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="drieduizend" word="drieduizend"/>
+        </node>
+        <node begin="22" end="23" getal="mv" graad="basis" id="36" lemma="toeschouwer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="toeschouwer" word="toeschouwers"/>
+      </node>
+      <node begin="23" end="24" id="37" lemma="zien" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="svp" root="zie" word="zien" wvorm="pv"/>
+      <node begin="24" cat="cp" end="37" id="38" rel="vc">
+        <node begin="24" conjtype="onder" end="25" id="39" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="25" cat="ssub" end="37" id="40" rel="body">
+          <node begin="25" end="26" genus="masc" getal="ev" id="41" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+          <node begin="26" cat="pp" end="30" id="42" rel="mod">
+            <node begin="26" end="27" id="43" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+            <node begin="27" end="28" id="44" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="28" cat="np" end="30" id="45" rel="obj1">
+              <node begin="28" end="29" id="46" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="29" end="30" getal="mv" graad="basis" id="47" lemma="sintel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="sintels" word="sintels"/>
+            </node>
+          </node>
+          <node begin="30" cat="pp" end="33" id="48" rel="mod">
+            <node begin="30" end="31" id="49" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="31" cat="np" end="33" id="50" rel="obj1">
+              <node begin="31" buiging="met-e" end="32" id="51" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" vwtype="onbep" word="alle"/>
+              <node begin="32" end="33" getal="mv" graad="basis" id="52" lemma="opzicht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="opzicht" word="opzichten"/>
+            </node>
+          </node>
+          <node begin="33" cat="pp" end="36" id="53" rel="ld">
+            <node begin="33" end="34" id="54" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+            <node begin="34" cat="np" end="36" id="55" rel="obj1">
+              <node begin="34" end="35" id="56" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="35" end="36" getal="mv" graad="basis" id="57" lemma="voet" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="voet" word="voeten"/>
+            </node>
+          </node>
+          <node begin="36" end="37" id="58" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="37" end="38" id="59" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Charlie Greene , met Jim Hines en Ronnie Gray wereldrecordhouder op de korte sprintafstand ( 9,9 sec ) liet de ruim drieduizend toeschouwers zien dat hij ook op de sintels in alle opzichten uit de voeten kwam .</sentence>
+</alpino_ds>

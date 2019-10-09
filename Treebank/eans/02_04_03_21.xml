@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="12" id="2" rel="--">
+      <node begin="0" cat="whrel" end="5" id="3" rel="sat">
+        <node begin="0" end="1" id="4" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="rhd" root="hoe" word="Hoe"/>
+        <node begin="0" cat="ssub" end="5" id="5" rel="body">
+          <node begin="1" end="2" genus="onz" getal="ev" id="6" index="2" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+          <node begin="3" end="4" id="7" lemma="mogen" pos="verb" postag="WW(pv,conj,ev)" pt="ww" pvagr="ev" pvtijd="conj" rel="hd" root="mag" word="moge" wvorm="pv"/>
+          <node begin="0" cat="inf" end="5" id="8" rel="vc">
+            <node begin="0" end="1" id="9" index="1" rel="predc"/>
+            <node begin="1" end="2" id="10" index="2" rel="su"/>
+            <node begin="2" end="3" id="11" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+            <node begin="4" buiging="zonder" end="5" id="12" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+      <node begin="6" cat="smain" end="12" id="13" rel="nucl">
+        <node begin="6" end="7" genus="fem" getal="ev" id="14" index="3" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+        <node begin="7" end="8" id="15" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+        <node begin="6" cat="ppart" end="12" id="16" rel="vc">
+          <node begin="6" end="7" id="17" index="3" rel="su"/>
+          <node begin="9" buiging="zonder" end="10" graad="basis" id="18" lemma="hard" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="hard" word="hard"/>
+          <node begin="8" cat="pp" end="11" id="19" rel="mod">
+            <node begin="8" end="9" getal="getal" id="20" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+            <node begin="10" end="11" id="21" lemma="voor" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="voor" vztype="fin" word="voor"/>
+          </node>
+          <node begin="11" buiging="zonder" end="12" id="22" lemma="werken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="werk" word="gewerkt" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hoe het ook moge zijn , ze heeft er hard voor gewerkt .</sentence>
+</alpino_ds>

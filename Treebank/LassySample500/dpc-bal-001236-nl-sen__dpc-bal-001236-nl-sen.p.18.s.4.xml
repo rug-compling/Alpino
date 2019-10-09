@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" word=";"/>
+    <node begin="0" cat="du" end="18" id="2" rel="--">
+      <node begin="0" cat="smain" end="7" id="3" rel="dp">
+        <node begin="0" cat="np" end="4" id="4" rel="su">
+          <node begin="0" buiging="zonder" end="1" id="5" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="Geen"/>
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="6" lemma="land" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="land" word="land"/>
+          <node begin="2" cat="pp" end="4" id="7" rel="mod">
+            <node begin="2" end="3" id="8" lemma="te" pos="prep" postag="VZ(versm)" pt="vz" rel="hd" root="te" vztype="versm" word="ter"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="wereld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="wereld" word="wereld"/>
+          </node>
+        </node>
+        <node begin="4" end="5" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="5" buiging="zonder" end="6" graad="comp" id="11" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vwtype="onbep" word="meer"/>
+        <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="autonoom" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="autonoom" word="autonoom"/>
+      </node>
+      <node begin="8" cat="smain" end="18" id="13" rel="dp">
+        <node begin="8" cat="np" end="12" id="14" index="1" rel="su">
+          <node begin="8" buiging="zonder" end="9" id="15" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+          <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="16" lemma="land" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="land" word="land"/>
+          <node begin="10" cat="pp" end="12" id="17" rel="mod">
+            <node begin="10" end="11" id="18" lemma="te" pos="prep" postag="VZ(versm)" pt="vz" rel="hd" root="te" vztype="versm" word="ter"/>
+            <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="wereld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="wereld" word="wereld"/>
+          </node>
+        </node>
+        <node begin="12" end="13" id="20" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+        <node begin="16" end="17" id="21" lemma="zelf" pos="adv" postag="BW()" pt="bw" rel="predm" root="zelf" word="zelf"/>
+        <node begin="8" cat="inf" end="18" id="22" rel="vc">
+          <node begin="8" end="12" id="23" index="1" rel="su"/>
+          <node begin="13" end="14" getal="getal" id="24" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+          <node begin="14" buiging="zonder" end="15" graad="comp" id="25" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vwtype="onbep" word="meer"/>
+          <node begin="15" end="16" id="26" lemma="alleen" pos="adj" postag="BW()" pt="bw" rel="mod" root="alleen" word="alleen"/>
+          <node begin="17" buiging="zonder" end="18" id="27" lemma="redden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="red" word="redden" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="28" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Geen land ter wereld is meer autonoom ; geen land ter wereld kan zich meer alleen zelf redden .</sentence>
+</alpino_ds>

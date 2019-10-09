@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="du" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" rel="sat">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="koningin" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="koningin" word="koningin"/>
+        <node begin="2" cat="pp" end="4" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="Lombardije" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Lombardije" word="Lombardije"/>
+        </node>
+      </node>
+      <node begin="4" cat="smain" end="8" id="8" rel="nucl">
+        <node begin="4" end="5" getal="getal" id="9" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="su" root="die" status="vol" vwtype="aanw" word="die"/>
+        <node begin="5" end="6" id="10" lemma="gaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ga" word="ging" wvorm="pv"/>
+        <node begin="4" cat="ahi" end="8" id="11" rel="vc">
+          <node begin="6" end="7" id="12" lemma="uit" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="uit" vztype="init" word="uit"/>
+          <node begin="4" cat="inf" end="8" id="13" rel="body">
+            <node begin="4" end="5" id="14" index="1" rel="su"/>
+            <node begin="7" buiging="zonder" end="8" id="15" lemma="rijden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="rij" word="rijden" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>de koningin van Lombardije die ging uit rijden</sentence>
+</alpino_ds>

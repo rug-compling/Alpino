@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="37" id="0" rel="top">
+    <node begin="20" end="21" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="36" id="2" rel="--">
+      <node begin="0" cat="np" end="6" id="3" rel="su">
+        <node begin="0" end="1" frame="noun(de,both,sg)" gen="de" id="4" lcat="np" num="sg" pos="noun" rel="hd" root="erkenning" sense="erkenning" word="Erkenning"/>
+        <node begin="1" cat="pp" end="4" id="5" rel="mod">
+          <node begin="1" end="2" frame="preposition(door,[heen])" id="6" lcat="pp" pos="prep" rel="hd" root="door" sense="door" word="door"/>
+          <node begin="2" cat="np" end="4" id="7" rel="obj1">
+            <node begin="2" end="3" frame="determiner(de)" id="8" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="3" end="4" frame="tmp_noun(de,count,pl)" gen="de" id="9" lcat="np" num="pl" pos="noun" rel="hd" root="partij" sense="partij" special="tmp" word="partijen"/>
+          </node>
+        </node>
+        <node begin="4" cat="pp" end="6" id="10" rel="mod">
+          <node begin="4" end="5" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="11" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+          <node begin="5" end="6" frame="noun(both,both,both)" gen="both" id="12" lcat="np" num="both" pos="noun" rel="obj1" root="niet-overheidsactoren" sense="niet-overheidsactoren" word="niet-overheidsactoren"/>
+        </node>
+      </node>
+      <node begin="6" end="7" frame="verb(unacc,sg_heeft,intransitive)" id="13" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="ben" sc="intransitive" sense="ben" tense="present" word="is"/>
+      <node begin="7" cat="ap" end="36" id="14" rel="mod">
+        <node aform="base" begin="7" end="8" frame="adjective(no_e(adv),pp(van))" id="15" infl="no_e" lcat="ap" pos="adj" rel="hd" root="afhankelijk" sc="pp(van)" sense="afhankelijk-van" vform="adj" word="afhankelijk"/>
+        <node begin="8" cat="pp" end="36" id="16" rel="pc">
+          <node begin="8" end="9" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="17" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+          <node begin="9" cat="conj" end="36" id="18" rel="obj1">
+            <node begin="9" cat="np" end="28" id="19" rel="cnj">
+              <node begin="9" end="10" frame="determiner(de)" id="20" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="10" end="11" frame="noun(de,mass,sg)" gen="de" id="21" lcat="np" num="sg" pos="noun" rel="hd" root="mate" sense="mate" word="mate"/>
+              <node begin="11" cat="rel" end="28" id="22" rel="mod">
+                <node begin="11" end="12" frame="waar_adverb(in)" id="23" index="1" lcat="pp" pos="pp" rel="rhd" root="waarin" sense="waarin" special="waar" word="waarin"/>
+                <node begin="11" cat="ssub" end="28" id="24" rel="body">
+                  <node begin="11" end="12" id="25" index="1" rel="mod"/>
+                  <node begin="12" case="nom" def="def" end="13" frame="pronoun(nwh,thi,both,de,nom,def)" gen="de" id="26" lcat="np" num="both" per="thi" pos="pron" rel="su" root="zij" sense="zij" wh="nwh" word="zij"/>
+                  <node begin="13" end="14" frame="verb(hebben,pl,pc_pp(aan))" id="27" infl="pl" lcat="ssub" pos="verb" rel="hd" root="beantwoord" sc="pc_pp(aan)" sense="beantwoord-aan" tense="present" word="beantwoorden"/>
+                  <node begin="14" cat="pp" end="28" id="28" rel="pc">
+                    <node begin="14" end="15" frame="preposition(aan,[vooraf])" id="29" lcat="pp" pos="prep" rel="hd" root="aan" sense="aan" word="aan"/>
+                    <node begin="15" cat="conj" end="28" id="30" rel="obj1">
+                      <node begin="15" cat="np" end="20" id="31" rel="cnj">
+                        <node begin="15" end="16" frame="determiner(de)" id="32" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                        <node begin="16" end="17" frame="noun(de,count,pl)" gen="de" id="33" lcat="np" num="pl" pos="noun" rel="hd" root="behoefte" sense="behoefte" word="behoeften"/>
+                        <node begin="17" cat="pp" end="20" id="34" rel="mod">
+                          <node begin="17" end="18" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="35" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                          <node begin="18" cat="np" end="20" id="36" rel="obj1">
+                            <node begin="18" end="19" frame="determiner(de)" id="37" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                            <node begin="19" end="20" frame="noun(de,count,sg)" gen="de" id="38" lcat="np" num="sg" pos="noun" rel="hd" root="bevolking" sense="bevolking" word="bevolking"/>
+                          </node>
+                        </node>
+                      </node>
+                      <node begin="21" cat="np" end="24" id="39" rel="cnj">
+                        <node begin="21" end="22" frame="determiner(pron)" id="40" infl="pron" lcat="detp" pos="det" rel="det" root="hun" sense="hun" word="hun"/>
+                        <node aform="base" begin="22" end="23" frame="adjective(e)" id="41" infl="e" lcat="ap" pos="adj" rel="mod" root="specifiek" sense="specifiek" vform="adj" word="specifieke"/>
+                        <node begin="23" end="24" frame="noun(de,count,sg)" gen="de" id="42" lcat="np" num="sg" pos="noun" rel="hd" root="deskundigheid" sense="deskundigheid" word="deskundigheid"/>
+                      </node>
+                      <node begin="24" end="25" frame="conj(en)" id="43" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                      <node begin="25" cat="np" end="28" id="44" rel="cnj">
+                        <node begin="25" end="26" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="45" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                        <node aform="base" begin="26" end="27" frame="adjective(no_e(adv))" id="46" infl="no_e" lcat="ap" pos="adj" rel="mod" root="democratisch" sense="democratisch" vform="adj" word="democratisch"/>
+                        <node begin="27" end="28" frame="noun(het,count,sg)" gen="het" id="47" lcat="np" num="sg" pos="noun" rel="hd" root="gehalte" sense="gehalte" word="gehalte"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="28" end="29" frame="conj(en)" id="48" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+            <node begin="29" cat="np" end="36" id="49" rel="cnj">
+              <node begin="29" end="30" frame="determiner(de)" id="50" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="30" end="31" frame="noun(de,mass,sg)" gen="de" id="51" lcat="np" num="sg" pos="noun" rel="hd" root="transparantie" sense="transparantie" word="transparantie"/>
+              <node begin="31" cat="pp" end="36" id="52" rel="mod">
+                <node begin="31" end="32" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="53" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                <node begin="32" cat="conj" end="36" id="54" rel="obj1">
+                  <node begin="32" cat="np" end="34" id="55" rel="cnj">
+                    <node begin="32" end="33" frame="determiner(pron)" id="56" index="2" infl="pron" lcat="detp" pos="det" rel="det" root="hun" sense="hun" word="hun"/>
+                    <node begin="33" end="34" frame="noun(de,count,sg)" gen="de" id="57" lcat="np" num="sg" pos="noun" rel="hd" root="organisatie" sense="organisatie" word="organisatie"/>
+                  </node>
+                  <node begin="34" end="35" frame="conj(en)" id="58" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                  <node begin="32" cat="np" end="36" id="59" rel="cnj">
+                    <node begin="32" end="33" id="60" index="2" rel="det"/>
+                    <node begin="35" end="36" frame="noun(het,mass,sg)" gen="het" id="61" lcat="np" num="sg" pos="noun" rel="hd" root="beheer" sense="beheer" word="beheer"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="36" end="37" frame="punct(punt)" id="62" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Erkenning door de partijen van niet-overheidsactoren is afhankelijk van de mate waarin zij beantwoorden aan de behoeften van de bevolking , hun specifieke deskundigheid en het democratisch gehalte en de transparantie van hun organisatie en beheer .</sentence>
+  <comments>
+    <comment>Q#515|Erkenning door de partijen van niet-overheidsactoren is afhankelijk van de mate waarin zij beantwoorden aan de behoeften van de bevolking , hun specifieke deskundigheid en het democratisch gehalte en de transparantie van hun organisatie en beheer .|1|1|2.3434911260532822</comment>
+  </comments>
+</alpino_ds>

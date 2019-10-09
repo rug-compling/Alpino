@@ -1,0 +1,65 @@
+This is the binary stand-alone runtime version of Hdrug.
+
+Note that the executable is dependent on the tcl/tk dynamic libraries. 
+These should be installed on your system. If these are not, then you can
+download tcl/tk from www.scriptics.com
+
+installation:
+-------------
+
+on Unix, simply run `make'. This should construct the script 
+Hdrug.sh. You might want to check the contents of that script, but it
+should work as is. 
+
+on Windows, you will run a self-installing binary. 
+
+examples:
+---------
+
+the directory Applications contains a number of Hdrug applications of
+varying interest, quality and size.  The typical way to run such an
+application is by loading its start file. 
+
+For instance, the command 
+
+(UNIX)  hdrug.sh -l Applications/Ale/start
+(WIN32) hdrug.bat -l Applications\Ale\start
+
+should open the Hdrug window with the Ale HPSG grammar loaded. You can
+then e.g. parse a sentence, visualize various grammar rules etc.
+
+Some applications assume you are in the corresponding
+directory. In the general case it's therefore safer to cd to that
+directory first. 
+
+documentation
+-------------
+
+documentation is available on-line from the Hdrug application. In
+addition it is available from the Hdrug web-page:
+
+http://www.let.rug.nl/~vannoord/Hdrug
+
+running your own application
+----------------------------
+
+This should work for simple cases. Note that any user code loaded by
+Hdrug will be Prolog-interpreted rather than compiled and cannot be
+Prolog-debugged (this is because this version of Hdrug is running as a
+SICStus runtime system which includes neither a debugger nor a
+compiler). For these reasons, if you want to develop an application
+with Hdrug, it makes much more sense to buy SICStus first.
+
+Another thing to watch out for is the use of SICStus libraries. You
+can only use those libraries that are present in Hdrug (lists,
+timeout, system, charsio, terms, ugraphs, ordsets, assoc, arrays,
+random). In addition, if you want to include a use_module directive in
+a module of yours, make sure you use the use_module/3 variant which
+does not try to load the file, but only loads the predicates from an
+already loaded module (since the file is normally not available, or at
+a different location than expected). For instance, to ensure that your
+parser includes the predicate member/2, you would have:
+
+:- use_module(lists, library(lists), [ member/2 ]).
+
+===============================================================================

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="np" end="11" id="1" rel="--">
+      <node begin="0" end="1" gen="de" genus="zijd" getal="ev" graad="basis" id="2" lemma="tijd" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="tijd" sc="vp" special="tmp" word="Tijd"/>
+      <node begin="1" end="2" id="3" lemma="genoeg" pos="adv" postag="BW()" pt="bw" rel="mod" root="genoeg" special="postnp" word="genoeg"/>
+      <node begin="2" end="3" id="4" lemma="dus" pos="adv" postag="BW()" pt="bw" rel="mod" root="dus" special="postnp" word="dus"/>
+      <node begin="3" cat="oti" end="11" id="5" rel="vc">
+        <node begin="3" end="4" id="6" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" sc="om" vztype="init" word="om"/>
+        <node begin="4" cat="ti" end="11" id="7" rel="body">
+          <node begin="9" end="10" id="8" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+          <node begin="4" cat="inf" end="11" id="9" rel="body">
+            <node begin="4" end="5" id="10" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+            <node begin="5" cat="pp" end="9" id="11" rel="pc">
+              <node begin="5" end="6" id="12" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+              <node begin="6" cat="np" end="9" id="13" rel="obj1">
+                <node begin="6" end="7" id="14" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node aform="base" begin="7" buiging="zonder" end="8" graad="basis" id="15" infl="both" lemma="eigen" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="eigen" vform="adj" word="eigen"/>
+                <node begin="8" end="9" gen="het" genus="onz" getal="ev" graad="basis" id="16" lemma="leven" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="leven" special="tmp" word="leven"/>
+              </node>
+            </node>
+            <node begin="10" buiging="zonder" end="11" id="17" infl="inf" lemma="beginnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="begin" sc="pc_pp(aan)" word="beginnen" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Tijd genoeg dus om nog aan een eigen leven te beginnen .</sentence>
+</alpino_ds>

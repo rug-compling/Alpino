@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="2" end="3" frame="punct(schuin_streep)" id="1" lcat="punct" lemma="/" pos="punct" postag="LET()" pt="let" rel="--" root="/" sense="/" special="schuin_streep" word="/"/>
+    <node begin="4" end="5" frame="punct(dubb_punt)" id="2" lcat="punct" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+    <node begin="0" cat="np" end="7" id="3" rel="--">
+      <node begin="0" cat="mwu" end="2" id="4" mwu_root="Sofie_Albrecht" mwu_sense="Sofie_Albrecht" rel="mod">
+        <node begin="0" end="1" frame="proper_name(both,'PER')" id="5" lcat="np" lemma="Sofie" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Sofie" sense="Sofie" spectype="deeleigen" word="Sofie"/>
+        <node begin="1" end="2" frame="proper_name(both,'PER')" id="6" lcat="np" lemma="Albrecht" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Albrecht" sense="Albrecht" spectype="deeleigen" word="Albrecht"/>
+      </node>
+      <node begin="3" end="4" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="7" lcat="np" lemma="foto" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="foto" sense="foto" word="Foto"/>
+      <node begin="5" cat="mwu" end="7" id="8" mwu_root="Diane_Hendrikx" mwu_sense="Diane_Hendrikx" rel="app">
+        <node begin="5" end="6" frame="proper_name(both,'PER')" id="9" lcat="np" lemma="Diane" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Diane" sense="Diane" spectype="deeleigen" word="Diane"/>
+        <node begin="6" end="7" frame="proper_name(both,'PER')" id="10" lcat="np" lemma="Hendrikx" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hendrikx" sense="Hendrikx" spectype="deeleigen" word="Hendrikx"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Sofie Albrecht / Foto : Diane Hendrikx</sentence>
+  <comments>
+    <comment>Q#WR-P-P-H-0000085848.p.3.s.1|Sofie Albrecht / Foto : Diane Hendrikx|1|1|0.09214773000000001</comment>
+  </comments>
+</alpino_ds>

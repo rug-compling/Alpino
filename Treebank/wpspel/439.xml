@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welke" vwtype="vb" word="Welke"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="4" lemma="Nederlands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Nederlands" word="Nederlandse"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="jurist" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="juriste" word="jurist"/>
+      </node>
+      <node begin="0" cat="sv1" end="7" id="6" rel="body">
+        <node begin="0" end="3" id="7" index="1" rel="su"/>
+        <node begin="3" end="4" id="8" lemma="ontsnappen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ontsnap" word="ontsnapte" wvorm="pv"/>
+        <node begin="4" cat="pp" end="7" id="9" rel="mod">
+          <node begin="4" end="5" id="10" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="5" cat="np" end="7" id="11" rel="obj1">
+            <node begin="5" end="6" id="12" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="boekenkist" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kist" word="boekenkist"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="14" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke Nederlandse jurist ontsnapte in een boekenkist ?</sentence>
+</alpino_ds>

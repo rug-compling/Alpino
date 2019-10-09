@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="5" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" buiging="zonder" end="2" getal-n="zonder-n" id="4" lemma="proberen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="probeer" word="proberen" wvorm="inf"/>
+        <node begin="2" cat="oti" end="5" id="5" rel="vc">
+          <node begin="2" end="3" id="6" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+          <node begin="3" cat="ti" end="5" id="7" rel="body">
+            <node begin="3" end="4" id="8" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="4" buiging="zonder" end="5" id="9" lemma="slapen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="slaap" word="slapen" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" id="10" lemma="lukken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="luk" word="lukte" wvorm="pv"/>
+      <node begin="6" end="7" id="11" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+    </node>
+  </node>
+  <sentence>Het proberen om te slapen lukte niet</sentence>
+</alpino_ds>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="np" end="5" id="1" rel="--">
+      <node aform="base" begin="0" end="1" id="2" infl="e" pos="adj" rel="mod" root="bijzonder" vform="adj" word="BIJZONDERE"/>
+      <node begin="1" end="2" gen="de" id="3" num="pl" pos="noun" rel="hd" root="bepaling" word="BEPALINGEN"/>
+      <node begin="2" cat="pp" end="5" id="4" rel="mod">
+        <node begin="2" end="3" id="5" pos="prep" rel="hd" root="inzake" word="INZAKE"/>
+        <node begin="3" cat="np" end="5" id="6" rel="obj1">
+          <node begin="3" end="4" id="7" infl="de" pos="det" rel="det" root="de" word="DE"/>
+          <node begin="4" end="5" gen="de" id="8" num="sg" pos="noun" rel="hd" root="veiligheid_controle" word="VEILIGHEIDSCONTROLE"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>BIJZONDERE BEPALINGEN INZAKE DE VEILIGHEIDSCONTROLE</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="27" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="8" end="9" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="smain" end="26" id="3" rel="--">
+      <node begin="0" cat="pp" end="3" id="4" rel="mod">
+        <node begin="0" end="1" id="5" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="Bij"/>
+        <node begin="1" cat="np" end="3" id="6" rel="obj1">
+          <node begin="1" end="2" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="8" lemma="beroepssamenstelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="samenstelling" word="beroepssamenstelling"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="9" lemma="doen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="doe" word="doet" wvorm="pv"/>
+      <node begin="4" end="5" getal="getal" id="10" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+      <node begin="10" end="11" id="11" lemma="voor" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="voor" vztype="fin" word="voor"/>
+      <node begin="5" cat="np" end="26" id="12" rel="su">
+        <node begin="5" end="6" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="7" buiging="met-e" end="8" id="14" lemma="storen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="storend" word="storende" wvorm="od"/>
+        <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="15" lemma="factor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="factor" word="factor"/>
+        <node begin="11" cat="cp" end="26" id="16" rel="vc">
+          <node begin="11" conjtype="onder" end="12" id="17" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="12" cat="ssub" end="26" id="18" rel="body">
+            <node begin="12" cat="np" end="14" id="19" rel="su">
+              <node begin="12" end="13" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="13" end="14" getal="mv" graad="basis" id="21" lemma="predikant" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="predikant" word="predikanten"/>
+            </node>
+            <node begin="14" cat="pp" end="24" id="22" rel="mod">
+              <node begin="14" cat="mwu" end="17" id="23" rel="hd">
+                <node begin="14" end="15" id="24" lemma="als" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="als" vztype="init" word="als"/>
+                <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="25" lemma="gevolg" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="gevolg" word="gevolg"/>
+                <node begin="16" end="17" id="26" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+              </node>
+              <node begin="17" cat="np" end="24" id="27" rel="obj1">
+                <node begin="17" end="18" id="28" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="29" lemma="inrichting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="inrichting" word="inrichting"/>
+                <node begin="19" cat="pp" end="24" id="30" rel="mod">
+                  <node begin="19" end="20" id="31" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="20" cat="np" end="24" id="32" rel="obj1">
+                    <node begin="20" buiging="zonder" end="21" getal="mv" id="33" lemma="ons" naamval="stan" npagr="evon" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,zonder,evon)" pt="vnw" rel="det" root="ons" status="vol" vwtype="bez" word="ons"/>
+                    <node begin="21" buiging="met-e" end="22" graad="basis" id="34" lemma="geheel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="geheel" word="gehele"/>
+                    <node begin="22" buiging="zonder" end="23" graad="basis" id="35" lemma="kerkelijk" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="kerkelijk" word="kerkelijk"/>
+                    <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="36" lemma="leven" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="leven" word="leven"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="24" buiging="zonder" end="25" graad="basis" id="37" lemma="oververtegenwoordigd" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="vertegenwoordigd" word="oververtegenwoordigd"/>
+            <node begin="25" end="26" id="38" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="26" end="27" id="39" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Bij de beroepssamenstelling doet zich de &quot; storende &quot; factor voor dat de predikanten als gevolg van de inrichting van ons gehele kerkelijk leven oververtegenwoordigd zijn .</sentence>
+</alpino_ds>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+      <node begin="2" cat="np" end="12" id="4" rel="obj1">
+        <node begin="2" buiging="met-e" end="3" graad="basis" id="5" lemma="goed" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="goed" word="goede"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="hoop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hoop" word="hoop"/>
+        <node begin="4" cat="cp" end="12" id="7" rel="vc">
+          <node begin="4" conjtype="onder" end="5" id="8" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="5" cat="ssub" end="12" id="9" rel="body">
+            <node begin="5" end="6" getal="ev" id="10" index="1" lemma="alles" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="alles" status="vol" vwtype="onbep" word="alles"/>
+            <node begin="6" end="7" id="11" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+            <node begin="5" cat="ppart" end="12" id="12" rel="vc">
+              <node begin="5" end="6" id="13" index="1" rel="obj1"/>
+              <node begin="7" buiging="zonder" end="8" id="14" lemma="oplossen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="los" word="opgelost" wvorm="vd"/>
+              <node begin="8" cat="cp" end="12" id="15" rel="mod">
+                <node begin="8" conjtype="onder" end="9" id="16" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+                <node begin="9" cat="ssub" end="12" id="17" rel="body">
+                  <node begin="9" cat="ppart" end="11" id="18" rel="vc">
+                    <node begin="9" end="10" getal="getal" id="19" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+                    <node begin="10" buiging="zonder" end="11" id="20" lemma="praten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="praat" word="gepraat" wvorm="vd"/>
+                  </node>
+                  <node begin="11" end="12" id="21" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ik heb goede hoop dat alles wordt opgelost als er gepraat wordt .</sentence>
+</alpino_ds>

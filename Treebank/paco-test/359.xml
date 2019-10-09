@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="9" end="10" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="pp" end="22" id="2" rel="--">
+      <node begin="0" cat="np" end="5" id="3" rel="mod">
+        <node begin="0" end="1" frame="determiner(de)" id="4" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node aform="base" begin="1" end="2" frame="adjective(e)" id="5" infl="e" lcat="ap" pos="adj" rel="mod" root="vermoedelijk" sense="vermoedelijk" vform="adj" word="vermoedelijke"/>
+        <node begin="2" end="3" frame="tmp_noun(de,count,sg)" gen="de" id="6" lcat="np" num="sg" pos="noun" rel="hd" root="datum" sense="datum" special="tmp" word="datum"/>
+        <node begin="3" cat="pp" end="5" id="7" rel="mod">
+          <node begin="3" end="4" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="8" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+          <node begin="4" end="5" frame="noun(de,both,sg)" gen="de" id="9" lcat="np" num="sg" pos="noun" rel="obj1" root="aankomst" sense="aankomst" word="aankomst"/>
+        </node>
+      </node>
+      <node begin="5" end="6" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="10" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+      <node begin="6" cat="conj" end="22" id="11" rel="obj1">
+        <node begin="6" cat="np" end="9" id="12" rel="cnj">
+          <node begin="6" end="7" frame="determiner(de)" id="13" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node aform="base" begin="7" end="8" frame="adjective(e)" id="14" infl="e" lcat="ap" pos="adj" rel="mod" root="kern_technisch" sense="kern_technisch" vform="adj" word="kerntechnische"/>
+          <node begin="8" end="9" frame="noun(het,count,pl)" gen="het" id="15" lcat="np" num="pl" pos="noun" rel="hd" root="materiaal" sense="materiaal" word="materialen"/>
+        </node>
+        <node begin="10" cat="np" end="13" id="16" rel="cnj">
+          <node begin="10" end="11" frame="determiner(de)" id="17" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="11" end="12" frame="meas_mod_noun(de,count,sg)" gen="de" id="18" lcat="np" num="sg" pos="noun" rel="hd" root="plaats" sense="plaats" special="meas_mod" word="plaats"/>
+          <node begin="12" end="13" frame="er_wh_loc_adverb" id="19" lcat="advp" pos="adv" rel="mod" root="waar" sense="waar" special="er_loc" wh="ywh" word="waar"/>
+        </node>
+        <node begin="13" end="14" frame="conj(en)" id="20" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+        <node begin="14" cat="np" end="22" id="21" rel="cnj">
+          <node begin="14" end="15" frame="determiner(de)" id="22" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="15" end="16" frame="tmp_noun(de,count,sg)" gen="de" id="23" lcat="np" num="sg" pos="noun" rel="hd" root="datum" sense="datum" special="tmp" word="datum"/>
+          <node begin="16" cat="rel" end="22" id="24" rel="mod">
+            <node begin="16" end="17" frame="waar_adverb(op)" id="25" index="1" lcat="pp" pos="pp" rel="rhd" root="waarop" sense="waarop" special="waar" word="waarop"/>
+            <node begin="16" cat="ssub" end="22" id="26" rel="body">
+              <node begin="17" case="nom" def="def" end="18" frame="pronoun(nwh,thi,both,de,nom,def)" gen="de" id="27" index="2" lcat="np" num="both" per="thi" pos="pron" rel="su" root="zij" sense="zij" wh="nwh" word="zij"/>
+              <node begin="19" end="20" frame="verb(hebben,pl,aux(inf))" id="28" infl="pl" lcat="ssub" pos="verb" rel="hd" root="zal" sc="aux(inf)" sense="zal" tense="present" word="zullen"/>
+              <node begin="16" cat="inf" end="22" id="29" rel="vc">
+                <node begin="17" end="18" id="30" index="2" rel="su"/>
+                <node begin="20" end="21" frame="verb(unacc,inf,passive)" id="31" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+                <node begin="16" cat="ppart" end="22" id="32" rel="vc">
+                  <node begin="16" end="17" id="33" index="1" rel="mod"/>
+                  <node begin="17" end="18" id="34" index="2" rel="obj1"/>
+                  <node aform="base" begin="18" end="19" frame="adjective(no_e(adv))" id="35" infl="no_e" lcat="ap" pos="adj" rel="mod" root="vermoedelijk" sense="vermoedelijk" vform="adj" word="vermoedelijk"/>
+                  <node begin="21" end="22" frame="verb(hebben,psp,ninv(transitive,part_transitive(uit)))" id="36" infl="psp" lcat="ppart" pos="verb" rel="hd" root="pak_uit" sc="part_transitive(uit)" sense="pak_uit" word="uitgepakt"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" frame="punct(punt)" id="37" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>de vermoedelijke datum van aankomst van de kerntechnische materialen , de plaats waar en de datum waarop zij vermoedelijk zullen worden uitgepakt .</sentence>
+  <comments>
+    <comment>Q#359|de vermoedelijke datum van aankomst van de kerntechnische materialen , de plaats waar en de datum waarop zij vermoedelijk zullen worden uitgepakt .|1|1|-3.1649151440387975</comment>
+  </comments>
+</alpino_ds>

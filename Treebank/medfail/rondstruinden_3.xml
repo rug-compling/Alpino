@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="smain" end="15" id="1" rel="--">
+      <node begin="0" cat="conj" end="6" id="2" index="1" rel="su">
+        <node begin="0" cat="np" end="2" id="3" rel="cnj">
+          <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+          <node begin="1" end="2" getal="mv" graad="basis" id="5" lemma="XTC-gebruiker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="xtc_gebruiker" word="xtc-gebruikers"/>
+        </node>
+        <node begin="2" conjtype="neven" end="3" id="6" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="3" cat="np" end="6" id="7" rel="cnj">
+          <node begin="3" buiging="zonder" end="4" getal="mv" id="8" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+          <node begin="4" buiging="met-e" end="5" graad="basis" id="9" lemma="nuchter" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nuchter" word="nuchtere"/>
+          <node begin="5" end="6" getal="mv" graad="basis" id="10" lemma="tegenhanger" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="tegenhanger" word="tegenhangers"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="11" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" word="werden" wvorm="pv"/>
+      <node begin="7" end="8" id="12" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="predm" root="allemaal" word="allemaal"/>
+      <node begin="0" cat="ppart" end="15" id="13" rel="vc">
+        <node begin="0" end="6" id="14" index="1" rel="obj1"/>
+        <node begin="8" buiging="zonder" end="9" id="15" lemma="filmen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="film" word="gefilmd" wvorm="vd"/>
+        <node begin="9" cat="cp" end="15" id="16" rel="mod">
+          <node begin="9" conjtype="onder" end="10" id="17" lemma="terwijl" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="terwijl" word="terwijl"/>
+          <node begin="10" cat="ssub" end="15" id="18" rel="body">
+            <node begin="10" end="11" getal="mv" id="19" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+            <node begin="11" cat="pp" end="14" id="20" rel="ld">
+              <node begin="11" end="12" id="21" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="12" cat="np" end="14" id="22" rel="obj1">
+                <node begin="12" end="13" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="13" end="14" getal="mv" graad="basis" id="24" lemma="winkel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="winkel" word="winkels"/>
+              </node>
+            </node>
+            <node begin="14" end="15" id="25" lemma="rondstruinen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="struin_rond" word="rondstruinden" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="26" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De xtc-gebruikers en hun nuchtere tegenhangers werden allemaal gefilmd terwijl ze in de winkels rondstruinden .</sentence>
+</alpino_ds>

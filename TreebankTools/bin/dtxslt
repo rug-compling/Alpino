@@ -1,0 +1,102 @@
+#!/usr/bin/env python
+
+import os
+import sys
+
+from optparse import OptionParser
+
+ALPINO_HOME = os.getenv("ALPINO_HOME")
+if not ALPINO_HOME:
+	sys.stderr.write("act: Error: please set your ALPINO_HOME variable\n")
+	sys.exit(1)
+
+sys.path.insert(0, os.path.join(ALPINO_HOME, "TreebankTools/python-lib"))
+
+from actlib import *
+
+def usage(progName):
+	print "Usage %s [OPTIONS] <dzcorpora|directories>" % progName
+
+if __name__ == "__main__":
+	if len(sys.argv) < 2:
+		usage(sys.argv[0])
+		sys.exit(1)
+	
+	parser = OptionParser("%prog [OPTIONS] arguments")
+
+	parser.add_option("--param", dest="param", action="append",
+		help="Parameter for stylesheet")
+
+	parser.add_option("-r", "--recursive", action="store_true", dest="recursive",
+		help="Recursively create or update archives")
+
+	parser.add_option("-q", "--query", "-e", "--expr", dest="query",
+		help="XPath expression to search for")
+
+	parser.add_option("--stdin",  action="store_true", dest="stdin",
+		help="Read file arguments from stdin.  Any non-option arguments on the commandline will be ignored.")
+	
+	parser.add_option("--stringparam", dest="stringParam", action="append",
+		help="String-parameter for stylesheet")
+
+	parser.add_option("-s", "--stylesheet", dest="stylesheet",
+		help="stylesheet to use for output")
+					
+	(options, args) = parser.parse_args()
+
+	if not (args or options.stdin):
+		msg("Error: No arguments to process.  Exiting....")
+		sys.exit(1)
+		
+	# stylesheet alvast parsen indien nodig
+	stylesheet = None
+	styledoc = None
+
+	params = {}
+
+	# A quick hack to use queries with accented characters (latin1 input assumed)
+	if options.query:
+	#	options.query = options.query.decode('latin1').encode('utf8')
+		params["expr"] = xslt_quote_string(options.query)
+
+	if options.stringParam:
+		for param in options.stringParam:
+			if param.find('=') == -1:
+				raise(RuntimeError("Incorrect parameter value '%s', " % param +
+					"should have form 'parameter=value'!"))
+			(p, v) = param.split('=', 1)
+			v = xslt_quote_string(v)
+			params[p] = v
+	
+	if options.param:
+		for param in options.param:
+			if param.find('=') == -1:
+				raise(RuntimeError("Incorrect parameter value '%s', " % param +
+					"should have form 'parameter=value'!"))
+			(p, v) = param.split('=', 1)
+			params[p] = v
+
+	if not options.stylesheet:
+		msg("Error: no stylesheet specified.")
+		sys.exit(1)
+
+	# Compile the stylesheet
+	styledoc = libxml2.parseFile(options.stylesheet)
+	stylesheet = libxslt.parseStylesheetDoc(styledoc)
+
+	if options.stdin:
+                # args = get_arglist_from_stdin()
+                # wrong, will be read in by process_arguments()
+                args = []
+
+	if options.query:
+		process_arguments(args, xmlmatch_from_mem, options.stdin,
+			options.recursive, True, params=params,
+			query=options.query, stylesheet=stylesheet)
+	else:
+		process_arguments(args, xmlmatch_from_mem, options.stdin,
+			options.recursive, True, params=params,
+			stylesheet=stylesheet)
+
+
+	stylesheet.freeStylesheet()

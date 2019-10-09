@@ -1,0 +1,12 @@
+treebank(4,r(r1,s,[r(r2,np(sg),[r(l2,d(sg),[w(a)]),r(l3,n(sg),[w(dog)])]),r(l7,v(sg),[w(barks)])])).
+treebank(3,r(r1,s,[r(r2,np(sg),[r(l2,d(sg),[w(a)]),r(l4,n(sg),[w(cat)])]),r(l7,v(sg),[w(barks)])])).
+treebank(1,r(r1,s,[r(r2,np(sg),[r(l2,d(sg),[w(a)]),r(l3,n(sg),[w(dog)])]),r(l8,v(sg),[w(barked)])])).
+treebank(6,r(r1,s,[r(r2,np(sg),[r(l2,d(sg),[w(a)]),r(l4,n(sg),[w(cat)])]),r(l8,v(sg),[w(barked)])])).
+treebank(2,r(r1,s,[r(r2,np(sg),[r(l1,d(sg),[w(the)]),r(l3,n(sg),[w(dog)])]),r(l7,v(sg),[w(barks)])])).
+treebank(5,r(r1,s,[r(r2,np(sg),[r(l1,d(sg),[w(the)]),r(l4,n(sg),[w(cat)])]),r(l7,v(sg),[w(barks)])])).
+treebank(7,r(r1,s,[r(r2,np(sg),[r(l1,d(sg),[w(the)]),r(l3,n(sg),[w(dog)])]),r(l8,v(sg),[w(barked)])])).
+treebank(1,r(r1,s,[r(r2,np(sg),[r(l1,d(sg),[w(the)]),r(l4,n(sg),[w(cat)])]),r(l8,v(sg),[w(barked)])])).
+treebank(6,r(r1,s,[r(r2,np(pl),[r(l1,d(pl),[w(the)]),r(l5,n(pl),[w(dogs)])]),r(l9,v(pl),[w(bark)])])).
+treebank(1,r(r1,s,[r(r2,np(pl),[r(l1,d(pl),[w(the)]),r(l6,n(pl),[w(cats)])]),r(l9,v(pl),[w(bark)])])).
+treebank(8,r(r1,s,[r(r2,np(pl),[r(l1,d(pl),[w(the)]),r(l5,n(pl),[w(dogs)])]),r(l8,v(pl),[w(barked)])])).
+treebank(6,r(r1,s,[r(r2,np(pl),[r(l1,d(pl),[w(the)]),r(l6,n(pl),[w(cats)])]),r(l8,v(pl),[w(barked)])])).

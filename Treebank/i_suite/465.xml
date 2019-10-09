@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="11" end="12" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="14" id="3" rel="--">
+      <node begin="0" cat="smain" end="7" id="4" rel="dp">
+        <node begin="0" end="1" id="5" lemma="hierover" pos="pp" postag="BW()" pt="bw" rel="mod" root="hierover" word="Hierover"/>
+        <node begin="1" end="2" id="6" lemma="laten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="laat" word="laat" wvorm="pv"/>
+        <node begin="2" end="3" getal="ev" id="7" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="3" end="4" getal="getal" id="8" lemma="je" naamval="obl" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pr,pron,obl,red,2v,getal)" pt="vnw" rel="obj2" root="je" status="red" vwtype="pr" word="je"/>
+        <node begin="4" buiging="zonder" end="5" graad="basis" id="9" lemma="gauw" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="gauw" word="gauw"/>
+        <node begin="5" end="6" getal="ev" id="10" lemma="iets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="iets" status="vol" vwtype="onbep" word="iets"/>
+        <node begin="6" buiging="zonder" end="7" id="11" lemma="weten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="svp" root="weet" word="weten" wvorm="inf"/>
+      </node>
+      <node begin="8" cat="du" end="14" id="12" rel="dp">
+        <node begin="8" cat="pp" end="11" id="13" rel="dp">
+          <node begin="8" end="9" id="14" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="9" cat="np" end="11" id="15" rel="obj1">
+            <node begin="9" buiging="met-e" end="10" graad="basis" id="16" lemma="vriendelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vriendelijk" word="vriendelijke"/>
+            <node begin="10" end="11" getal="mv" graad="basis" id="17" lemma="groet" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="groet" word="groeten"/>
+          </node>
+        </node>
+        <node begin="12" cat="mwu" end="14" id="18" rel="dp">
+          <node begin="12" end="13" id="19" lemma="Corrie" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Corrie" spectype="deeleigen" word="Corrie"/>
+          <node begin="13" end="14" id="20" lemma="Koevoet" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Koevoet" spectype="deeleigen" word="Koevoet"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Hierover laat ik je gauw iets weten . met vriendelijke groeten , Corrie Koevoet</sentence>
+</alpino_ds>

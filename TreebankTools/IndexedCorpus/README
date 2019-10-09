@@ -1,0 +1,37 @@
+libcorpus
+=========
+Daniël de Kok <me@danieldk.eu>
+
+Introduction
+------------
+
+This library provides a generic interface to indexed corpora. An indexed
+corpus consists of a data file and an index file. The data file is a
+concatenation of chunks of data, such as XML documents or compressed
+derivation trees. The index file contains names for each chunk, along with
+the offset and size of the chunk encoded in base64 format.
+
+Design
+------
+
+Nearly functionality is modelled as C++ classes using RAII, meaning that
+memory is managed by virtue of construction/destruction. Where necessary,
+errors are reported as exceptions. Language-specific wrappers can catch
+exceptions and translate them to the language's native error reporting
+method.
+
+Compilation
+-----------
+
+Requirements
+
+- Sicstus Prolog 3.12.x (4.x.x is untested!)
+- A C++ compiler.
+- A C++ standard library with TR1 extensions.
+
+Execute 'make' in the source directory.
+
+Todo
+----
+
+- Modify act to use IndexedCorpus.

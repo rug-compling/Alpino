@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="np" end="12" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="romantisch" pos="adj" rel="mod" root="romantisch" word="Romantisch"/>
+      <node begin="1" end="2" id="3" lemma="verhaal" pos="noun" rel="hd" root="verhaal" word="verhaal"/>
+      <node begin="2" cat="pp" end="12" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="over" pos="prep" rel="hd" root="over" word="over"/>
+        <node begin="3" cat="np" end="12" id="6" rel="obj1">
+          <node begin="3" end="4" id="7" lemma="blind" pos="adj" rel="mod" root="blind" word="blinde"/>
+          <node begin="4" end="5" id="8" lemma="vrouw" pos="noun" rel="hd" root="vrouw" word="vrouw"/>
+          <node begin="5" cat="rel" end="12" id="9" rel="mod">
+            <node begin="5" end="6" id="10" index="1" lemma="die" pos="pron" rel="rhd" root="die" word="die"/>
+            <node begin="5" cat="ssub" end="12" id="11" rel="body">
+              <node begin="5" end="6" id="12" index="1" rel="su"/>
+              <node begin="6" cat="pp" end="8" id="13" rel="mod">
+                <node begin="6" end="7" id="14" lemma="na" pos="prep" rel="hd" root="na" word="na"/>
+                <node begin="7" end="8" id="15" lemma="verkrachting" pos="noun" rel="obj1" root="verkrachting" word="verkrachting"/>
+              </node>
+              <node begin="8" end="9" id="16" lemma="strijd" pos="verb" rel="hd" root="strijd" word="strijdt"/>
+              <node begin="9" cat="pp" end="12" id="17" rel="pc">
+                <node begin="9" end="10" id="18" lemma="voor" pos="prep" rel="hd" root="voor" word="voor"/>
+                <node begin="10" cat="np" end="12" id="19" rel="obj1">
+                  <node begin="10" end="11" id="20" lemma="haar" pos="det" rel="det" root="haar" word="haar"/>
+                  <node begin="11" end="12" id="21" lemma="recht" pos="noun" rel="hd" root="recht" word="recht"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="22" lemma="." pos="punct" rel="--" root="." word="."/>
+  </node>
+  <sentence>Romantisch verhaal over blinde vrouw die na verkrachting strijdt voor haar recht .</sentence>
+</alpino_ds>

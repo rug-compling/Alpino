@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="smain" end="20" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
+      <node begin="2" cat="pp" end="5" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="3" cat="np" end="5" id="6" rel="obj1">
+          <node begin="3" end="4" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="vierkant" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="Vierkant" word="Vierkant"/>
+        </node>
+      </node>
+      <node begin="5" cat="mwu" end="7" id="9" rel="svp">
+        <node begin="5" end="6" id="10" lemma="in" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="botsing" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="botsing" word="botsing"/>
+      </node>
+      <node begin="7" cat="pp" end="20" id="12" rel="pc">
+        <node begin="7" end="8" id="13" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+        <node begin="8" cat="np" end="20" id="14" rel="obj1">
+          <node begin="8" end="9" id="15" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="16" lemma="auto" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="auto" word="auto"/>
+          <node begin="10" cat="ppres" end="15" id="17" rel="mod">
+            <node begin="10" buiging="zonder" end="11" id="18" lemma="komen" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="hd" root="komend" word="komende" wvorm="od"/>
+            <node begin="11" cat="pp" end="15" id="19" rel="ld">
+              <node begin="11" end="12" id="20" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+              <node begin="12" cat="np" end="15" id="21" rel="obj1">
+                <node begin="12" end="13" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="richting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="richting" word="richting"/>
+                <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="24" lemma="Hillegom" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Hillegom" word="Hillegom"/>
+              </node>
+            </node>
+          </node>
+          <node begin="15" cat="ppart" end="20" id="25" rel="mod">
+            <node begin="15" buiging="zonder" end="16" id="26" lemma="besturen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bestuurd" word="bestuurd" wvorm="vd"/>
+            <node begin="16" cat="pp" end="20" id="27" rel="mod">
+              <node begin="16" end="17" id="28" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+              <node begin="17" cat="np" end="20" id="29" rel="obj1">
+                <node begin="17" end="18" id="30" lemma="V." pos="noun" postag="SPEC(symb)" pt="spec" rel="hd" root="V." spectype="symb" word="V."/>
+                <node begin="18" cat="pp" end="20" id="31" rel="mod">
+                  <node begin="18" end="19" id="32" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+                  <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="33" lemma="Velsen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Velsen" word="Velsen"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="34" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hij kwam op het Vierkant in botsing met een auto komende uit de richting Hillegom bestuurd door V. uit Velsen .</sentence>
+</alpino_ds>

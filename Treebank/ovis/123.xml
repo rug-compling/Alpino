@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="du" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="delven" pos="noun" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="dp" root="delf" word="delft" wvorm="pv"/>
+      <node begin="1" cat="pp" end="3" id="3" rel="dp">
+        <node begin="1" end="2" id="4" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="arnhem" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="Arnhem" word="arnhem"/>
+      </node>
+      <node begin="3" cat="pp" end="5" id="6" rel="dp">
+        <node begin="3" end="4" id="7" lemma="via" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="via" vztype="init" word="via"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="8" lemma="groning" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="groningen" word="groningen"/>
+      </node>
+    </node>
+  </node>
+  <sentence>delft naar arnhem via groningen</sentence>
+</alpino_ds>

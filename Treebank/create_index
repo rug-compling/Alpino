@@ -1,0 +1,100 @@
+#!/usr/bin/perl
+
+use File::Basename;
+($dir,$outputfile) = @ARGV;
+
+@files=glob("$dir/*.data.dz");
+if (@files) {
+
+    open(OUTPUT,">$outputfile") || die "cannot write to $outputfile: $!\n";
+
+    print OUTPUT '
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+     "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+  <HEAD>
+    <TITLE>Compact Corpora Index</TITLE>
+    <link rel=stylesheet href=http://www.let.rug.nl/~vannoord/vn.css type="text/css">
+  </HEAD>
+  <BODY><div class="box">
+';
+
+    print OUTPUT "<H1>$dir</H1>\n";
+
+    print OUTPUT '
+<div align=center>
+<img src="/~vannoord/trees/treebank.png" width=150
+</div>
+';
+
+    print OUTPUT '<div align=left><p>
+This corpus is divided in various sub-parts. For each part, there are a number
+of links. The first link is for manual browsing: you will get a listing of
+all sentences with the possibility to view the corresponding dependency 
+structure.</p>';
+
+    print OUTPUT '<p> If you want to download a sub-part completely, you will need two
+files, with the extension <tt>.data.dz</tt> and <tt>.index</tt>. The
+files are created with <b>dictzip</b>. The first file is the
+compressed content (gzipped concatenation of a number of XML files,
+where each XML file contains a single dependency structure. The second
+file is an index file which you need in order to recover the original
+file names. You can use the <b>act</b> (Alpino Corpus Tool) to do all
+of this automatically. <b>act</b> is shipped with Alpino. However,
+once you use <b>act</b> there is not much reason to actually unpack
+the corpus since searching (full XPATH) and browsing (including
+graphical) etc., is supported, directly on the <tt>.data.dz</tt> and
+<tt>.index</tt> files.  </p>';
+
+    print OUTPUT "<p>This directory contains the following compact corpora:</p>\n\n";
+
+    foreach $file (@files) {
+	($name,$ldir,$ext) = fileparse($file,'.data.dz');
+	print OUTPUT "<a href=\"/vannoord/bin/alpinods_dir?$ldir$name\">browse $name</a> (download <a href=\"$name.data.dz\">.data.dz </a>, <a href=\"$name.index\">.index</a>)<br>\n";
+    }
+    print OUTPUT '
+ </div>
+</BODY>
+</HTML>
+
+';
+    close OUTPUT;
+
+} else {
+    
+    @files=glob("$dir/*.xml");
+    if (@files) {
+	open(OUTPUT,">$outputfile") || die "cannot write to $outputfile: $!\n";
+
+	print OUTPUT '
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+     "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+  <HEAD>
+    <TITLE>Compact Corpora Index</TITLE>
+    <link rel=stylesheet href=http://www.let.rug.nl/~vannoord/vn.css type="text/css">
+  </HEAD>
+  <BODY><div class="box">
+';
+
+	print OUTPUT "<H1>$dir</H1>\n";
+
+	print OUTPUT '
+<div align=center>
+<img src="/~vannoord/trees/treebank.png" width=150
+</div>
+';
+
+
+	print OUTPUT "<div align=left><p><a href=\"/vannoord/bin/alpinods_dir?$dir\">Browse this corpus</a><br>\n";
+	print OUTPUT '
+</div>
+</div></BODY>
+</HTML>
+
+';
+	close OUTPUT;
+    }
+}
+
+

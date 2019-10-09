@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" buiging="zonder" end="1" id="1" lemma="&lt;@&gt;" pos="--" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="--" root="&lt;@&gt;" word="&lt;@&gt;" wvorm="inf"/>
+    <node begin="1" cat="du" end="7" id="2" rel="--">
+      <node begin="1" cat="pp" end="5" id="3" rel="dp">
+        <node begin="1" end="2" id="4" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="2" cat="mwu" end="5" id="5" rel="obj1">
+          <node begin="2" dial="dial" end="3" id="6" lemma="den" lwtype="bep" pos="name" postag="LID(bep,dial)" pt="lid" rel="mwp" root="den" word="den"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="haag" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="haag" word="haag"/>
+          <node begin="4" end="5" id="8" lemma="mariahoeve" pos="name" postag="BW()" pt="bw" rel="mwp" root="mariahoeve" word="mariahoeve"/>
+        </node>
+      </node>
+      <node begin="5" cat="pp" end="7" id="9" rel="dp">
+        <node begin="5" end="6" id="10" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="schiphol" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="schiphol" word="schiphol"/>
+      </node>
+    </node>
+  </node>
+  <sentence>&lt;@&gt; van den haag mariahoeve naar schiphol</sentence>
+</alpino_ds>

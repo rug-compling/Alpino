@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="du" end="4" id="1" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="vandromme" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="dp" root="Vandromme" word="Vandromme"/>
+      <node begin="1" cat="ap" end="4" id="3" rel="dp">
+        <node begin="1" buiging="zonder" end="2" graad="comp" id="4" lemma="dicht" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="dicht" word="dichter"/>
+        <node begin="2" cat="pp" end="4" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="Athene" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Athene" word="Athene"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Vandromme dichter bij Athene</sentence>
+</alpino_ds>

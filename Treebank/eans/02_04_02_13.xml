@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="a.u.b." pos="tag" postag="SPEC(afk)" pt="spec" rel="tag" root="alstublieft" spectype="afk" word="A.u.b."/>
+      <node begin="1" cat="inf" end="7" id="3" rel="nucl">
+        <node begin="1" cat="np" end="3" id="4" rel="obj1">
+          <node begin="1" buiging="zonder" end="2" id="5" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+          <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="fiets" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="fiets" word="fietsen"/>
+        </node>
+        <node begin="3" cat="pp" end="6" id="7" rel="ld">
+          <node begin="3" end="4" id="8" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
+          <node begin="4" cat="np" end="6" id="9" rel="obj1">
+            <node begin="4" end="5" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="raam" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="raam" word="raam"/>
+          </node>
+        </node>
+        <node begin="6" buiging="zonder" end="7" id="12" lemma="plaatsen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="plaats" word="plaatsen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>A.u.b. geen fietsen tegen het raam plaatsen .</sentence>
+</alpino_ds>

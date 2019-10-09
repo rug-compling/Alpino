@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" end="1" genus="fem" getal="ev" id="2" index="1" lemma="zij" naamval="nomin" pdtype="pron" persoon="3v" pos="pron" postag="VNW(pers,pron,nomin,vol,3v,ev,fem)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="Zij"/>
+      <node begin="1" end="2" id="3" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+      <node begin="0" cat="conj" end="5" id="4" rel="vc">
+        <node begin="0" cat="inf" end="3" id="5" rel="cnj">
+          <node begin="0" end="1" id="6" index="1" rel="su"/>
+          <node begin="2" buiging="zonder" end="3" id="7" lemma="uitrusten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="rust_uit" word="uitrusten" wvorm="inf"/>
+        </node>
+        <node begin="3" conjtype="neven" end="4" id="8" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="0" cat="inf" end="5" id="9" rel="cnj">
+          <node begin="0" end="1" id="10" index="1" rel="su"/>
+          <node begin="4" buiging="zonder" end="5" id="11" lemma="pauzeren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="pauzeer" word="pauzeren" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Zij wil uitrusten en pauzeren</sentence>
+</alpino_ds>

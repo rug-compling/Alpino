@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="np" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="3" lemma="man" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="man" word="man"/>
+      <node begin="2" cat="cp" end="6" id="4" rel="mod">
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="zoals"/>
+        <node begin="3" cat="ssub" end="6" id="6" rel="body">
+          <node begin="3" end="4" getal="ev" id="7" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+          <node begin="4" end="5" getal="getal" id="8" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="obj1" root="die" status="vol" vwtype="aanw" word="die"/>
+          <node begin="5" end="6" id="9" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ken" word="ken" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>De man zoals ik die ken</sentence>
+</alpino_ds>

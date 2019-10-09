@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="14" id="2" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="3" lemma="want" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="want" word="Want"/>
+      <node begin="1" cat="smain" end="14" id="4" rel="nucl">
+        <node begin="1" cat="cp" end="7" id="5" rel="mod">
+          <node begin="1" conjtype="onder" end="2" id="6" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+          <node begin="2" cat="ssub" end="7" id="7" rel="body">
+            <node begin="2" cat="np" end="4" id="8" rel="su">
+              <node begin="2" end="3" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="3" end="4" getal="mv" graad="basis" id="10" lemma="krant" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="krant" word="kranten"/>
+            </node>
+            <node begin="4" cat="np" end="6" id="11" rel="obj1">
+              <node begin="4" end="5" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="13" lemma="brievenbus" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="brievenbus" word="brievenbus"/>
+            </node>
+            <node begin="6" end="7" id="14" lemma="uitpuilen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="puil" word="uitpuilen" wvorm="pv"/>
+          </node>
+        </node>
+        <node begin="8" end="9" id="15" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="9" end="10" getal="ev" id="16" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
+        <node begin="10" cat="ppart" end="14" id="17" rel="predc">
+          <node begin="10" buiging="zonder" end="11" graad="basis" id="18" lemma="taktisch" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="taktisch" word="taktisch"/>
+          <node begin="11" cat="advp" end="13" id="19" rel="mod">
+            <node begin="11" end="12" id="20" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+            <node begin="12" end="13" id="21" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="hd" root="niet" word="niet"/>
+          </node>
+          <node begin="13" buiging="zonder" end="14" id="22" lemma="verantwoorden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verantwoord" word="verantwoord" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Want als de kranten de brievenbus uitpuilen , is dat taktisch ook niet verantwoord .</sentence>
+  <comments>
+    <comment>&apos;uit de brievenbus&apos; should be pc, but spelling mistake</comment>
+  </comments>
+</alpino_ds>

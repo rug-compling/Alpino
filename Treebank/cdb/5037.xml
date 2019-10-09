@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="smain" end="17" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="interessant" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="interessant" word="Interessant"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" buiging="zonder" end="3" graad="basis" id="4" lemma="natuurlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="natuurlijk" word="natuurlijk"/>
+      <node begin="3" cat="np" end="17" id="5" rel="su">
+        <node begin="3" end="4" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="7" lemma="positie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="positie" word="positie"/>
+        <node begin="5" cat="pp" end="8" id="8" rel="mod">
+          <node begin="5" end="6" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="6" cat="np" end="8" id="10" rel="obj1">
+            <node begin="6" end="7" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="12" lemma="kampioenschap" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kampioenschap" word="kampioenschap"/>
+          </node>
+        </node>
+        <node begin="8" cat="pp" end="17" id="13" rel="mod">
+          <node begin="8" end="9" id="14" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="9" cat="np" end="17" id="15" rel="obj1">
+            <node begin="9" end="10" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="10" buiging="met-e" end="11" graad="comp" id="17" lemma="oud" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="ouder" word="oudere"/>
+            <node begin="11" end="12" getal="mv" graad="basis" id="18" lemma="deelneemster" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="deelneemster" word="deelneemsters"/>
+            <node begin="12" cat="conj" end="17" id="19" rel="app">
+              <node begin="12" cat="mwu" end="14" id="20" rel="cnj">
+                <node begin="12" end="13" genus="onz" getal="ev" graad="dim" id="21" lemma="at" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="mwp" root="Attje" word="Attje"/>
+                <node begin="13" end="14" id="22" lemma="Keulen" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Keulen" spectype="deeleigen" word="Keulen"/>
+              </node>
+              <node begin="14" conjtype="neven" end="15" id="23" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="15" cat="mwu" end="17" id="24" rel="cnj">
+                <node begin="15" end="16" id="25" lemma="Stien" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Stien" spectype="deeleigen" word="Stien"/>
+                <node begin="16" end="17" id="26" lemma="Kaiser" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kaiser" spectype="deeleigen" word="Kaiser"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Interessant is natuurlijk de positie in het kampioenschap van de oudere deelneemsters Attje Keulen en Stien Kaiser .</sentence>
+</alpino_ds>

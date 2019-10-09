@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="smain" end="18" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="2" cat="mwu" end="4" id="3" index="1" rel="su">
+        <node begin="2" end="3" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="5" lemma="raad" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Raad" word="Raad"/>
+      </node>
+      <node begin="0" cat="ppart" end="18" id="6" rel="vc">
+        <node begin="0" end="1" id="7" lemma="overigens" pos="adv" postag="BW()" pt="bw" rel="mod" root="overigens" word="Overigens"/>
+        <node begin="2" end="4" id="8" index="1" rel="su"/>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="afspreken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="spreek_af" word="afgesproken" wvorm="vd"/>
+        <node begin="5" cat="pp" end="14" id="10" rel="mod">
+          <node begin="5" cat="mwu" end="9" id="11" rel="hd">
+            <node begin="5" end="6" id="12" lemma="al" pos="prep" postag="BW()" pt="bw" rel="mwp" root="al" word="al"/>
+            <node begin="6" end="7" id="13" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="naar" vztype="init" word="naar"/>
+            <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="14" lemma="gelang" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="gelang" word="gelang"/>
+            <node begin="8" end="9" id="15" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+          </node>
+          <node begin="9" cat="np" end="14" id="16" rel="obj1">
+            <node begin="9" end="10" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="18" lemma="ontwikkeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ontwikkeling" word="ontwikkeling"/>
+            <node begin="11" cat="pp" end="14" id="19" rel="mod">
+              <node begin="11" end="12" id="20" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="12" cat="np" end="14" id="21" rel="obj1">
+                <node begin="12" end="13" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="situatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="situatie" word="situatie"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="2" cat="ti" end="18" id="24" rel="vc">
+          <node begin="16" end="17" id="25" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="2" cat="inf" end="18" id="26" rel="body">
+            <node begin="2" end="4" id="27" index="1" rel="su"/>
+            <node begin="14" cat="np" end="16" id="28" rel="obj1">
+              <node begin="14" buiging="met-e" end="15" graad="basis" id="29" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+              <node begin="15" end="16" getal="mv" graad="basis" id="30" lemma="besluit" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="besluit" word="besluiten"/>
+            </node>
+            <node begin="17" buiging="zonder" end="18" id="31" lemma="overwegen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="overweeg" word="overwegen" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Overigens heeft de Raad afgesproken al naar gelang van de ontwikkeling van de situatie nieuwe besluiten te overwegen</sentence>
+</alpino_ds>

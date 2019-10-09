@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="3" end="4" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="np" end="5" id="3" rel="--">
+      <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+      <node begin="2" buiging="met-e" end="3" graad="basis" id="5" lemma="lelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="lelijk" word="lelijke"/>
+      <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="6" lemma="autoweg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="autoweg" word="autoweg"/>
+    </node>
+  </node>
+  <sentence>De ( lelijke ) autoweg</sentence>
+</alpino_ds>

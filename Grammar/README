@@ -1,0 +1,86 @@
+
+adjectives
+----------
+
+feature ADV
+			tmploc	    adv
+
+both: abbreviation for   ntmploc, (yadv;padv)
+adv                      ntmploc, yadv
+locadv                   loc      yadv
+tmpadv                   (tmp;me) yadv
+nonadv                   ntmploc  nadv
+padv                     ntmploc  padv
+oadv                     ntmploc  oadv
+
+
+tmploc: <-tmploc,tmp,loc,me>
+adv:    <yadv,padv,nadv,oadv>
+
+        predc    predm    vp-mod     
+
+yadv:     +        -        +        	leuk
+padv:     +        +        -           blij
+oadv:     -        -        +           dikwijls graag
+nadv:     +        -        -           bloeddoorlopen
+detadv:   +        -        +    +raise to determiner  "veel, weinig,meer, minder"
+
+        after raised to adverb
+
+	arg of tmp-P(sinds) arg of loc-P(van)    me-arg-of-adj(geleden)
+                               ld of verb	 
+tmp:	 +			  -		 -
+loc      -			  +		 -
+ntmploc  -			  -		 -
+me	 -			  -		 +
+
+feature INFL
+
+--ADV feature:
+		cform	aform	    agr				nominalize	marked-agr
+stof		base	attr					y		n		houten
+prefix		base	attr                                    n		n		terracotta; deeltijds
+e		base	attr	   ~(het,indef,sg)		y		?		leuke
+ere		compar	attr	   ~(het,indef,sg)		y		?		grotere
+ste		super	attr					y		n		grootste
+
+++ADV feature
+pred		base	nattr					?		?		doodop
+both		base	attr;nattr				n		n		dichtgeknepen (-en past part's)
+no_e		base	attr;nattr  (het,indef,sg)		?		YES		leuk
+er		compar  attr;nattr  (het,indef,sg;indef,pl)	n		YES		groter
+st              super	attr;nattr  (het,indef,sg)		?		?		grootst
+het_st		super	nattr					?		?		het grootst(e)
+ende            base    attr;nattr ~(het,indef,sg)              y		?		wachtende (-e pres part's)
+
+pred_compar	compar	nattr					?		?		anders NOT-PROD
+comp_both	compar	attr;nattr				n		n		meer NOT-PROD
+
+can_nominalize: ycan_nominalize ncan_nominalize
+whether the adjective can be a nomen (undergoes n --> a)
+
+can_marked_attr: ycan_marked_attr ncan_marked_attr
+whether the adjective allows marked agreement as in "een groot man" (n-->a[marked] n)
+
+
+cform: {base,compar,super}
+
+        "+obcomp"           "op X na"
+base	    -			-
+compar	    +			-
+super	    -			+
+
+
+aform: <attr,nattr,iets,only_n,anders>
+
+       "predc/predm"   "adv"  "anders"	"n-adj-n"   "nominalized"  "iets"
+
+nattr     +	         +       -	    -	         -	      -
+attr	  -		 -	 -	    +		 -
+-
+[ special cases:
+iets      -		 -	 -	    -		 -	      +
+only_n    -		 -	 -	    -		 +	      -
+anders    -		 -	 +	    -		 -	      +
+]
+

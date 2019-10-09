@@ -1,0 +1,21 @@
+#include <cmath>
+#include <cstdio>
+#include <cstring>
+#include <iostream>
+#include <limits>
+#include <stdexcept>
+#include <string>
+#include <vector>
+
+#include <unistd.h>
+#include <zlib.h>
+#include <sys/time.h>
+
+#include <boost/cstdint.hpp>
+
+#include <IndexedCorpus/DzOstreamBuf.hh>
+#include <IndexedCorpus/dictzip.hh>
+#include <IndexedCorpus/util/bufutil.hh>
+
+using namespace std;
+using namespace indexedcorpus;

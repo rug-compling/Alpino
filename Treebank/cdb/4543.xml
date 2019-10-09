@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="31" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="1" cat="smain" end="30" id="2" rel="--">
+      <node begin="4" end="5" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="5" cat="np" end="7" id="4" index="1" rel="su">
+        <node begin="5" buiging="met-e" end="6" id="5" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" vwtype="onbep" word="alle"/>
+        <node begin="6" end="7" getal="mv" graad="basis" id="6" lemma="partner" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="partner" word="partners"/>
+      </node>
+      <node begin="1" cat="ppart" end="30" id="7" rel="vc">
+        <node begin="1" cat="mwu" end="4" id="8" rel="mod">
+          <node begin="1" end="2" id="9" lemma="voor" pos="adv" postag="VZ(init)" pt="vz" rel="mwp" root="Voor" vztype="init" word="Voor"/>
+          <node begin="2" end="3" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="adv" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+          <node begin="3" end="4" getal-n="zonder-n" id="11" lemma="eerst" numtype="rang" pos="adv" positie="nom" postag="TW(rang,nom,zonder-n)" pt="tw" rel="mwp" root="eerst" word="eerst"/>
+        </node>
+        <node begin="5" end="7" id="12" index="1" rel="su"/>
+        <node begin="7" buiging="zonder" end="8" id="13" lemma="onderschrijven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="onderschrijf" word="onderschreven" wvorm="vd"/>
+        <node begin="8" cat="cp" end="30" id="14" rel="vc">
+          <node begin="8" conjtype="onder" end="9" id="15" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="9" cat="ssub" end="30" id="16" rel="body">
+            <node begin="9" cat="np" end="16" id="17" index="2" rel="su">
+              <node begin="9" end="10" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="10" buiging="met-e" end="11" graad="basis" id="19" lemma="budgettair" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="budgettaire" word="budgettaire"/>
+              <node begin="11" end="12" getal="mv" graad="basis" id="20" lemma="bevoegdheid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bevoegdheid" word="bevoegdheden"/>
+              <node begin="12" cat="pp" end="16" id="21" rel="mod">
+                <node begin="12" end="13" id="22" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="13" cat="np" end="16" id="23" rel="obj1">
+                  <node begin="13" end="14" id="24" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                  <node begin="14" buiging="met-e" end="15" graad="basis" id="25" lemma="Europees" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Europees" word="Europese"/>
+                  <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="26" lemma="parlement" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="parlement" word="parlement"/>
+                </node>
+              </node>
+            </node>
+            <node begin="16" end="17" id="27" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
+            <node begin="9" cat="ppart" end="30" id="28" rel="vc">
+              <node begin="9" end="16" id="29" index="2" rel="obj1"/>
+              <node begin="17" buiging="zonder" end="18" id="30" lemma="versterken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="versterk" word="versterkt" wvorm="vd"/>
+              <node begin="18" cat="pp" end="30" id="31" rel="mod">
+                <node begin="18" end="19" id="32" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+                <node begin="19" cat="np" end="30" id="33" rel="obj1">
+                  <node begin="19" end="20" id="34" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                  <node begin="20" buiging="met-e" end="21" graad="basis" id="35" lemma="financiel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="financieel" word="financiele"/>
+                  <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="36" lemma="reglement" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="reglement" word="reglement"/>
+                  <node begin="22" cat="rel" end="30" id="37" rel="mod">
+                    <node begin="22" end="23" getal="ev" id="38" index="3" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
+                    <node begin="22" cat="ssub" end="30" id="39" rel="body">
+                      <node begin="22" end="23" id="40" index="3" rel="su"/>
+                      <node begin="26" end="27" id="41" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+                      <node begin="22" cat="inf" end="30" id="42" rel="vc">
+                        <node begin="22" end="23" id="43" index="3" rel="su"/>
+                        <node begin="27" buiging="zonder" end="28" id="44" lemma="moeten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="moet" word="moeten" wvorm="inf"/>
+                        <node begin="22" cat="inf" end="30" id="45" rel="vc">
+                          <node begin="22" end="23" id="46" index="3" rel="su"/>
+                          <node begin="28" buiging="zonder" end="29" id="47" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+                          <node begin="22" cat="ppart" end="30" id="48" rel="vc">
+                            <node begin="22" end="23" id="49" index="3" rel="obj1"/>
+                            <node begin="23" cat="pp" end="26" id="50" rel="mod">
+                              <node begin="23" end="24" id="51" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                              <node begin="24" cat="mwu" end="26" id="52" rel="obj1">
+                                <node begin="24" end="25" id="53" lemma="1" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="1" word="1"/>
+                                <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="54" lemma="januari" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="januari" word="januari"/>
+                              </node>
+                            </node>
+                            <node begin="29" buiging="zonder" end="30" id="55" lemma="vaststellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="vastgesteld" wvorm="vd"/>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="30" end="31" id="56" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>- Voor het eerst hebben alle partners onderschreven dat de budgettaire bevoegdheden van het Europese parlement worden versterkt bij het financiele reglement dat voor 1 januari zal moeten worden vastgesteld .</sentence>
+</alpino_ds>

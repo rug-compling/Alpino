@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="cp" end="3" id="1" rel="--">
+      <node begin="0" cat="mwu" end="2" id="2" rel="cmp">
+        <node begin="0" end="1" id="3" lemma="laten" pos="comp" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="mwp" root="laat" word="laat" wvorm="pv"/>
+        <node begin="1" buiging="zonder" end="2" id="4" lemma="staan" pos="comp" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="mwp" root="staan" word="staan" wvorm="inf"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="binnenshuis" pos="adv" postag="BW()" pt="bw" rel="body" root="binnenshuis" word="binnenshuis"/>
+    </node>
+    <node begin="3" end="4" id="6" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>laat staan binnenshuis .</sentence>
+</alpino_ds>

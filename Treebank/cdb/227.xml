@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="11" id="2" rel="--">
+      <node begin="5" end="6" id="3" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+      <node begin="6" conjtype="onder" end="7" id="4" index="1" lemma="dat" pos="noun" postag="VG(onder)" pt="vg" rel="su" root="dat" word="dat"/>
+      <node begin="0" cat="inf" end="11" id="5" rel="vc">
+        <node begin="0" cat="pp" end="4" id="6" rel="mod">
+          <node begin="0" end="1" id="7" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="Volgens"/>
+          <node begin="1" cat="np" end="4" id="8" rel="obj1">
+            <node begin="1" end="2" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="2" buiging="met-e" end="3" graad="basis" id="10" lemma="Indonesisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Indonesisch" word="Indonesische"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="11" lemma="zienswijze" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zienswijze" word="zienswijze"/>
+          </node>
+        </node>
+        <node begin="6" end="7" id="12" index="1" rel="su"/>
+        <node begin="7" cat="np" end="10" id="13" rel="obj1">
+          <node begin="7" end="8" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="8" buiging="met-e" end="9" graad="basis" id="15" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+          <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="16" lemma="inflatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="inflatie" word="inflatie"/>
+        </node>
+        <node begin="10" buiging="zonder" end="11" id="17" lemma="betekenen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="beteken" word="betekenen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="11" end="12" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Volgens de Indonesische zienswijze , zou dat een nieuwe inflatie betekenen .</sentence>
+</alpino_ds>

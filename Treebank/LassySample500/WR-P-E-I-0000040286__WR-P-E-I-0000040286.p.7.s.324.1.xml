@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="conj" end="9" id="1" rel="--">
+      <node begin="1" conjtype="neven" end="2" id="2" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="0" cat="np" end="9" id="3" rel="cnj">
+        <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="4" lemma="Europa" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Europa" word="Europa"/>
+        <node begin="3" cat="pp" end="9" id="5" index="1" rel="mod">
+          <node begin="3" end="4" id="6" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
+          <node begin="4" cat="np" end="9" id="7" rel="obj1">
+            <node begin="4" end="5" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="dominantie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dominantie" word="dominantie"/>
+            <node begin="6" cat="pp" end="9" id="10" rel="mod">
+              <node begin="6" end="7" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="7" cat="np" end="9" id="12" rel="obj1">
+                <node begin="7" end="8" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="14" lemma="as" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="As" word="As"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="2" cat="np" end="9" id="15" rel="cnj">
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="16" lemma="Azië" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Azië" word="Azië"/>
+        <node begin="3" end="9" id="17" index="1" rel="mod"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Europa en Azië onder de dominantie van de As</sentence>
+</alpino_ds>

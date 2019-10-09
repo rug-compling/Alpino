@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="4" end="5" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="7" end="8" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="9" end="10" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="smain" end="16" id="5" rel="--">
+      <node begin="0" cat="conj" end="9" id="6" rel="su">
+        <node begin="0" cat="np" end="4" id="7" rel="cnj">
+          <node begin="0" end="1" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+          <node begin="2" buiging="met-e" end="3" graad="basis" id="9" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuwe" word="nieuwe"/>
+          <node begin="3" buiging="zonder" end="4" id="10" lemma="vliegen" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vliegen" word="vliegen" wvorm="inf"/>
+        </node>
+        <node begin="5" conjtype="neven" end="6" id="11" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="6" cat="np" end="9" id="12" rel="cnj">
+          <node begin="6" end="7" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="8" end="9" genus="genus" getal="ev" graad="basis" id="14" lemma="A-sexuelen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="A-sexuelen" word="A-sexuelen"/>
+        </node>
+      </node>
+      <node begin="10" end="11" id="15" lemma="doen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="doe" word="deden" wvorm="pv"/>
+      <node begin="11" end="12" getal="ev" id="16" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj2" root="mij" status="vol" vwtype="pr" word="mij"/>
+      <node begin="12" cat="ppart" end="15" id="17" rel="predc">
+        <node begin="12" cat="advp" end="14" id="18" rel="mod">
+          <node begin="12" end="13" getal="ev" id="19" lemma="iets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="me" root="iets" status="vol" vwtype="onbep" word="iets"/>
+          <node begin="13" end="14" id="20" lemma="te" pos="adv" postag="BW()" pt="bw" rel="hd" root="te" word="te"/>
+        </node>
+        <node begin="14" buiging="zonder" end="15" id="21" lemma="chargeren" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gechargeerd" word="gechargeerd" wvorm="vd"/>
+      </node>
+      <node begin="15" end="16" id="22" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
+    </node>
+    <node begin="16" end="17" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het &quot; nieuwe vliegen &quot; en de &quot; A-sexuelen &quot; deden mij iets te gechargeerd aan .</sentence>
+</alpino_ds>

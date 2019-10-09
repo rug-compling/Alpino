@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="cp" end="9" id="1" rel="--">
+      <node begin="0" conjtype="onder" end="1" id="2" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="Omdat"/>
+      <node begin="1" cat="ssub" end="9" id="3" rel="body">
+        <node begin="1" cat="ap" end="4" id="4" rel="predc">
+          <node begin="1" cat="pp" end="3" id="5" rel="obj2">
+            <node begin="1" end="2" id="6" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+            <node begin="2" buiging="zonder" end="3" getal="mv" id="7" lemma="ons" naamval="stan" npagr="evon" pdtype="det" persoon="1" pos="pron" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,zonder,evon)" pt="vnw" rel="obj1" root="ons" status="vol" vwtype="bez" word="ons"/>
+          </node>
+          <node begin="3" buiging="zonder" end="4" graad="basis" id="8" lemma="bekend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="bekend" word="bekend"/>
+        </node>
+        <node begin="4" end="5" id="9" lemma="ben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="5" cat="cp" end="9" id="10" rel="su">
+          <node begin="5" conjtype="onder" end="6" id="11" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="6" cat="ssub" end="9" id="12" rel="body">
+            <node begin="6" end="7" genus="masc" getal="ev" id="13" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+            <node begin="7" end="8" getal="mv" graad="basis" id="14" lemma="duif" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="duif" word="duiven"/>
+            <node begin="8" end="9" id="15" lemma="houd" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="houd" word="houdt" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Omdat aan ons bekend is dat hij duiven houdt</sentence>
+</alpino_ds>

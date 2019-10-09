@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="23" id="2" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="3" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="4" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+      <node begin="2" cat="pp" end="23" id="5" rel="pc">
+        <node begin="2" end="3" id="6" lemma="om" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="om" vztype="init" word="om"/>
+        <node begin="3" cat="np" end="23" id="7" rel="obj1">
+          <node begin="3" end="4" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="4" buiging="met-e" end="5" graad="basis" id="9" lemma="duurzaam" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="duurzaam" word="duurzame"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="taak" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="taak" word="taak"/>
+          <node begin="7" cat="rel" end="23" id="11" rel="mod">
+            <node begin="7" end="8" getal="getal" id="12" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="7" cat="conj" end="23" id="13" rel="body">
+              <node begin="7" cat="ssub" end="13" id="14" rel="cnj">
+                <node begin="7" end="8" id="15" index="1" rel="su"/>
+                <node begin="11" end="12" id="16" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+                <node begin="7" cat="inf" end="13" id="17" rel="vc">
+                  <node begin="7" end="8" id="18" index="1" rel="su"/>
+                  <node begin="8" end="9" id="19" lemma="nooit" pos="adv" postag="BW()" pt="bw" rel="mod" root="nooit" word="nooit"/>
+                  <node begin="9" cat="ppart" end="11" id="20" rel="predc">
+                    <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="21" lemma="geheel" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mod" root="geheel" word="geheel"/>
+                    <node begin="10" buiging="zonder" end="11" id="22" lemma="volbrengen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="volbracht" word="volbracht" wvorm="vd"/>
+                  </node>
+                  <node begin="12" buiging="zonder" end="13" id="23" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
+                </node>
+              </node>
+              <node begin="13" conjtype="neven" end="14" id="24" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="7" cat="ssub" end="23" id="25" rel="cnj">
+                <node begin="7" end="8" id="26" index="1" rel="su"/>
+                <node begin="16" end="17" id="27" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+                <node begin="7" cat="inf" end="23" id="28" rel="vc">
+                  <node begin="7" end="8" id="29" index="1" rel="su"/>
+                  <node begin="14" end="15" id="30" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="mod" root="altijd" word="altijd"/>
+                  <node begin="17" buiging="zonder" end="18" id="31" lemma="gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="gaan" wvorm="inf"/>
+                  <node begin="15" cat="ppart" end="23" id="32" rel="predc">
+                    <node begin="15" buiging="zonder" end="16" id="33" lemma="paren" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gepaard" word="gepaard" wvorm="vd"/>
+                    <node begin="18" cat="pp" end="23" id="34" rel="pc">
+                      <node begin="18" end="19" id="35" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                      <node begin="19" cat="conj" end="23" id="36" rel="obj1">
+                        <node begin="19" cat="np" end="21" id="37" rel="cnj">
+                          <node begin="19" buiging="zonder" end="20" graad="basis" id="38" index="2" lemma="menselijk" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="menselijk" word="menselijk"/>
+                          <node begin="20" buiging="zonder" end="21" id="39" lemma="falen" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="faal" word="falen" wvorm="inf"/>
+                        </node>
+                        <node begin="21" conjtype="neven" end="22" id="40" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                        <node begin="19" cat="np" end="23" id="41" rel="cnj">
+                          <node begin="19" end="20" id="42" index="2" rel="mod"/>
+                          <node begin="22" buiging="zonder" end="23" id="43" lemma="slagen" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="slaag" word="slagen" wvorm="inf"/>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="44" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het gaat om een duurzame taak , die nooit geheel volbracht zal zijn en altijd gepaard zal gaan met menselijk falen en slagen .</sentence>
+</alpino_ds>

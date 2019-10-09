@@ -1,0 +1,20 @@
+g_suite/./632.xml	//node[@wvorm="pv" and not(../@cat="smain" or ../@cat="ssub" or ../@cat="sv1" or ../@cat="mwu" or ../@cat="top" or ../@cat="du") ]	unexpected finite verb?
+g_suite/./653.xml	//node[ @cat and @rel="predc" and not(@cat="np") and not(@cat="ap") and not(@cat="ppart") and not(@cat="ppres") and not(@cat="cp") and not(@cat="pp") and not(@cat="conj") and not(@cat="mwu") and not(@cat="whrel") and not(@cat="oti")]	unexpected predc-category.   Expected cats: np ap ppart ppres cp pp conj mwu whrel oti
+g_suite/./841.xml	//node[ @cat and @rel="vc" and not(@cat="cp") and not(@cat="ti") and not(@cat="ppart") and not(@cat="inf") and not(@cat="oti") and not(@cat="conj") and not(@cat="whsub") and not(@cat="ahi") and not(@cat="svan") and not(@cat="smain")]	unexpected vc-category.   Expected cats: cp ti ppart inf oti conj whsub ahi svan smain
+g_suite/./842.xml	//node[ @cat and @rel="vc" and not(@cat="cp") and not(@cat="ti") and not(@cat="ppart") and not(@cat="inf") and not(@cat="oti") and not(@cat="conj") and not(@cat="whsub") and not(@cat="ahi") and not(@cat="svan") and not(@cat="smain")]	unexpected vc-category.   Expected cats: cp ti ppart inf oti conj whsub ahi svan smain
+g_suite/./887.xml	//node[node[@rel="hd" and @pt and not(@pt="ww")] and node[@rel="su"]]	subject without a verb?
+g_suite/./887.xml	//node[@cat="inf" and node[@rel="hd" and @pt and not(@wvorm="inf")]]	inf cat without inf hd?
+g_suite/./896.xml	//node[@rel="whd" and not(@index)]	whd without index?
+g_suite/./898.xml	//node[@rel="whd" and not(@index)]	whd without index?
+g_suite/./899.xml	//node[@rel="whd" and not(@index)]	whd without index?
+g_suite/./954.xml	//node[ ../@cat="detp" and not(@rel="hd") and not(@rel="obcomp") and not(@rel="mod") and not(@rel="me")]	unexpected detp-daughter.   Expected rels: hd obcomp mod me
+g_suite/./954.xml	//node[ @cat and @rel="mod" and not(@cat="rel") and not(@cat="cp") and not(@cat="np") and not(@cat="advp") and not(@cat="ap") and not(@cat="ppart") and not(@cat="pp") and not(@cat="mwu") and not(@cat="conj") and not(@cat="oti") and not(@cat="du") and not(@cat="smain") and not(@cat="whrel") and not(@cat="ti") and not(@cat="sv1") and not(@cat="ppres")]	unexpected mod-category.   Expected cats: rel cp np advp ap ppart pp mwu conj oti du smain whrel ti sv1 ppres
+g_suite/./959.xml	//node[@pos="comp" and @root="dat" and not(../@cat="cp")]	dat comp without cp
+g_suite/./962.xml	//node[@pos="comp" and @root="dat" and not(../@cat="cp")]	dat comp without cp
+g_suite/./524.xml	//node[@lemma="als" and (../@rel="predc" or ../@rel="predm" ) and not(@rel="crd") and ../node[@cat="np" or @pt="n"] and not(@postag="VZ(init)") and not ( @begin = //node[@lemma="net"]/@end) ]	als is perhaps VZ(init) here
+g_suite/./687.xml	//node[@lemma="als" and (../@rel="predc" or ../@rel="predm" ) and not(@rel="crd") and ../node[@cat="np" or @pt="n"] and not(@postag="VZ(init)") and not ( @begin = //node[@lemma="net"]/@end) ]	als is perhaps VZ(init) here
+g_suite/./887.xml	//node[@cat="inf" and node[@rel="hd" and @pt and ( not(@wvorm="inf") or @postag="WW(inf,nom,zonder,zonder-n)")]]	inf cat without inf hd?
+g_suite/./887.xml	//node[@cat="inf" and node[@rel="hd" and @pt and not(@postag="WW(inf,vrij,zonder)")]]	inf cat without inf hd?
+g_suite/./960.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
+g_suite/./961.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
+g_suite/./962.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative

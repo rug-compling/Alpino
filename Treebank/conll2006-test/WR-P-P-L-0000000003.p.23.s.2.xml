@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="/" pos="punct" postag="LET()" pt="let" rel="--" root="/" word="/"/>
+    <node begin="14" end="15" id="2" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="du" end="17" id="3" rel="--">
+      <node begin="0" cat="conj" end="14" id="4" rel="nucl">
+        <node begin="0" cat="smain" end="5" id="5" rel="cnj">
+          <node begin="0" cat="np" end="2" id="6" index="1" rel="su">
+            <node begin="0" end="1" id="7" lemma="achttien" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="achttien" word="Achttien"/>
+            <node begin="1" end="2" getal="mv" graad="basis" id="8" lemma="product" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="product" word="producten"/>
+          </node>
+          <node begin="2" end="3" id="9" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
+          <node begin="0" cat="ppart" end="5" id="10" rel="vc">
+            <node begin="0" end="2" id="11" index="1" rel="obj1"/>
+            <node begin="3" buiging="zonder" end="4" graad="basis" id="12" lemma="individueel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="individueel" word="individueel"/>
+            <node begin="4" buiging="zonder" end="5" id="13" lemma="aanbieden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bied_aan" word="aangeboden" wvorm="vd"/>
+          </node>
+        </node>
+        <node begin="5" conjtype="neven" end="6" id="14" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="6" cat="smain" end="14" id="15" rel="cnj">
+          <node begin="6" cat="np" end="8" id="16" rel="su">
+            <node begin="6" end="7" id="17" lemma="11" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="11" word="11"/>
+            <node begin="7" end="8" getal="mv" graad="basis" id="18" lemma="product" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="product" word="producten"/>
+          </node>
+          <node begin="8" end="9" id="19" lemma="omvatten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="omvat" word="omvatten" wvorm="pv"/>
+          <node begin="9" cat="np" end="14" id="20" rel="obj1">
+            <node begin="9" end="10" id="21" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="10" cat="conj" end="13" id="22" rel="mod">
+              <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="23" lemma="doelgroep" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="doelgroep" word="doelgroep"/>
+              <node begin="12" buiging="met-e" end="13" graad="basis" id="24" lemma="populatiegericht" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="populatie_gericht" word="populatiegerichte"/>
+            </node>
+            <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="25" lemma="aanbod" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aanbod" word="aanbod"/>
+          </node>
+        </node>
+      </node>
+      <node begin="15" cat="np" end="17" id="26" rel="sat">
+        <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="27" lemma="tabel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tabel" word="tabel"/>
+        <node begin="16" end="17" id="28" lemma="2" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="app" root="2" word="2"/>
+      </node>
+    </node>
+    <node begin="17" end="18" id="29" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="18" end="19" id="30" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Achttien producten worden individueel aangeboden en 11 producten omvatten het doelgroep / populatiegerichte aanbod ( tabel 2 ) .</sentence>
+</alpino_ds>

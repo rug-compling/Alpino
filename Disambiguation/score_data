@@ -1,0 +1,39 @@
+#!/usr/bin/perl -w
+
+sub score {
+    ($pen,$n) = @_;
+    if ($n) {
+	return (1-$pen/$n);
+    } else {
+	return 1;
+    }
+}
+
+sub pen {
+  ($ov,$corr,$sys) = @_;
+  return max($corr,$sys)-$ov;
+}
+
+sub max {
+  ($a,$b) = @_;
+  return $a>$b ? $a : $b;
+}
+
+while(<>) {
+  next if /^[%\#]/;
+  next if !/\|/;
+  chomp;
+  if ($. % 25000==0) 
+    { print STDERR "read $. lines\n";}
+
+      ($key,$length,$scoretriple,$pairs) = split/\#/;
+      if ($scoretriple =~ /\|/) {
+	  ($score_overlap,$score_correct,$score_system) = split/\|/,$scoretriple;
+	  $this_pen=pen($score_overlap,$score_correct,$score_system);
+	  $this_n=max($score_correct,$score_system);
+	  $score=score($this_pen,$this_n);
+      } else {
+	  $score=$scoretriple;
+      }
+      printf "P#%s#%s#%.5f#%s\n",$key,$length,$score,$pairs
+  }

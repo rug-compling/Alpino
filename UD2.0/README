@@ -1,0 +1,41 @@
+this is all from the CONLL2017 shared task
+dataset: UD_Dutch-LassySmall
+
+originally from the data provided by that
+shared task:
+
+dev.conllu 
+test.conllu
+train.conllu
+
+the other .conllu files are generated on the basis of Alpino, and Gosse's
+universal_dependencies_2.0.xq script.
+
+---------
+
+3 versions of input, depending on tokenization:
+
+alp-*:  use Alpino tokenization (almost 100%) and sentence splitting (35%). 
+Works horribly for sentence splitting because the data is actually just
+random sentences concatenated together. Since there are very many titles in
+the Wikipedia data, this is *very* unrealistic input!
+
+udpipe*: tokenized version of test-data as provided by CONLL2017, using UDPIPE.
+Not available for the development data.
+
+tokenized*: use gold tokenization and sentence splitting
+
+---------
+
+*-model*: use special disambiguation model trained on CONLL2017 training data.
+A copy of that model is ud2_weights.pl, but it has to be moved to ../Grammar to
+use this.
+
+without the "model" infix, use the standard Alpino model.
+
+---------
+
+Evaluation: simply run the python script with the gold and system files as 
+arguments. E.g.:
+
+./conll17_ud_eval.py dev.conllu alp-dev.conllu

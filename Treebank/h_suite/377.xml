@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="2" lemma="overgewicht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="su" root="overgewicht" word="Overgewicht"/>
+      <node begin="1" end="2" id="3" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+      <node begin="2" cat="np" end="5" id="4" rel="predc">
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="volksvijand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="volksvijand" word="volksvijand"/>
+        <node begin="3" cat="np" end="5" id="6" rel="app">
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="nummer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="nummer" word="nummer"/>
+          <node begin="4" end="5" id="8" lemma="één" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="app" root="één" word="één"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Overgewicht wordt volksvijand nummer één</sentence>
+</alpino_ds>

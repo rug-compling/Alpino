@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="3" end="4" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="ppart" end="11" id="2" rel="--">
+      <node begin="0" end="1" frame="loc_adverb" id="3" lcat="advp" lemma="buiten" pos="adv" postag="VZ(init)" pt="vz" rel="mod" root="buiten" sense="buiten" special="loc" vztype="init" word="Buiten"/>
+      <node aform="base" begin="1" buiging="zonder" end="2" frame="adjective(no_e(adv))" graad="basis" id="4" infl="no_e" lcat="ap" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="goed" sense="goed" vform="adj" word="goed"/>
+      <node begin="2" buiging="zonder" end="3" frame="verb(hebben,psp,ninv(intransitive,part_intransitive(op)))" id="5" infl="psp" lcat="ppart" lemma="opletten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="let_op" sc="part_intransitive(op)" sense="let_op" word="opgelet" wvorm="vd"/>
+      <node begin="4" cat="pp" end="8" id="6" rel="mod">
+        <node begin="4" end="5" frame="modal_adverb" id="7" lcat="advp" lemma="vooral" pos="adv" postag="BW()" pt="bw" rel="mod" root="vooral" sc="modal" sense="vooral" word="vooral"/>
+        <node begin="5" end="6" frame="preposition(op,[af,na])" id="8" lcat="pp" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" sense="op" vztype="init" word="op"/>
+        <node begin="6" cat="np" end="8" id="9" rel="obj1">
+          <node begin="6" end="7" frame="determiner(de)" id="10" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+          <node begin="7" end="8" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lcat="np" lemma="halte" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="halte" sense="halte" word="halte"/>
+        </node>
+      </node>
+      <node begin="8" cat="pp" end="11" id="12" rel="mod">
+        <node begin="8" end="9" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="13" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+        <node begin="9" cat="np" end="11" id="14" rel="obj1">
+          <node begin="9" end="10" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="15" lcat="np" lemma="tramlijn" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tram_lijn" sense="tram_lijn" word="tramlijn"/>
+          <node begin="10" end="11" frame="number(hoofd(pl_num))" id="16" infl="pl_num" lcat="detp" lemma="4" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="app" root="4" sense="4" special="hoofd" word="4"/>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" frame="punct(punt)" id="17" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Buiten goed opgelet , vooral op de halte van tramlijn 4 .</sentence>
+  <comments>
+    <comment>Q#vk20000210-127-16-1|Buiten goed opgelet , vooral op de halte van tramlijn 4 .|1|1|0.22675764459077458</comment>
+  </comments>
+</alpino_ds>

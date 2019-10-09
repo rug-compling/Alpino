@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="1" end="2" id="2" infl="sg" lemma="zitten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zit" sc="subj_control(wk_te)" stype="declarative" tense="past" word="zat" wvorm="pv"/>
+      <node begin="2" case="both" def="def" end="3" gen="de" getal="getal" id="3" index="1" lemma="u" naamval="nomin" num="sg" pdtype="pron" per="u" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" rnum="sg" root="u" status="vol" vwtype="pers" wh="nwh" word="u"/>
+      <node begin="3" end="4" id="4" lemma="nou" pos="adv" postag="BW()" pt="bw" rel="mod" root="nou" word="nou"/>
+      <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="5" infl="no_e" lemma="echt" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="echt" vform="adj" word="echt"/>
+      <node begin="0" cat="ti" end="8" id="6" rel="vc">
+        <node begin="6" end="7" id="7" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+        <node begin="0" cat="inf" end="8" id="8" rel="body">
+          <node begin="2" end="3" id="9" index="1" rel="su"/>
+          <node begin="0" cat="pp" end="6" id="10" rel="pc">
+            <node begin="0" end="1" getal="getal" id="11" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="daar" special="er_loc" status="vol" vwtype="aanw" word="Daar"/>
+            <node begin="5" end="6" id="12" lemma="op" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="op" vztype="fin" word="op"/>
+          </node>
+          <node begin="7" buiging="zonder" end="8" id="13" infl="inf" lemma="wachten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="wacht" sc="pc_pp(op)" word="wachten" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Daar zat u nou echt op te wachten .</sentence>
+</alpino_ds>

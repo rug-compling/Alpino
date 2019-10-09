@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="met-e" end="1" getal="mv" graad="basis" id="3" lemma="beide" naamval="stan" pdtype="grad" pos="det" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,mv,basis)" pt="vnw" rel="det" root="beide" vwtype="onbep" word="Beide"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="groep" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="groep" word="groepen"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="verschillen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="verschil" word="verschilden" wvorm="pv"/>
+      <node begin="3" cat="ap" end="6" id="6" rel="mod">
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="genetisch" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="genetisch" word="genetisch"/>
+        <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="vrij" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="vrij" word="vrij"/>
+        <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="sterk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="sterk" word="sterk"/>
+      </node>
+      <node begin="6" cat="pp" end="8" id="10" rel="pc">
+        <node begin="6" end="7" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="7" end="8" getal="mv" id="12" lemma="elkaar" naamval="obl" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="obj1" root="elkaar" status="vol" vwtype="recip" word="elkaar"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Beide groepen verschilden genetisch vrij sterk van elkaar .</sentence>
+</alpino_ds>

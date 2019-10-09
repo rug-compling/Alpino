@@ -1,0 +1,58 @@
+cat ../../Suites/Volkskrant/apr?.sents | head -n 20000 > 20000.txt
+cat ../../Suites/Volkskrant/apr?.sents | head -n 40000 > 40000.txt
+
+./create_trigram 20000.txt >20000.trigram
+./create_trigram 40000.txt >40000.trigram
+
+./create_fourgram 20000.txt >20000.fourgram
+./create_fourgram 40000.txt >40000.fourgram
+
+./2pl tri 20000.trigram > 20000_trigram.pl
+./2pl tri 40000.trigram > 40000_trigram.pl
+
+./2pl four 20000.fourgram > 20000_fourgram.pl
+./2pl four 40000.fourgram > 40000_fourgram.pl
+
+./create_trigram_prob 20000.txt >20000.fptrigram
+./create_trigram_prob 40000.txt >40000.fptrigram
+
+./2pl tri 20000.fptrigram > 20000_fptrigram.pl
+./2pl tri 40000.fptrigram > 40000_fptrigram.pl
+
+# prolog
+make 20000_trigram.po 40000_trigram.po
+make 20000_fourgram.po 40000_fourgram.po
+make 20000_fptrigram.po 40000_fptrigram.po
+
+# tuple (table):
+make 20000.ttpl
+make 40000.ttpl
+make 20000.ftpl
+make 40000.ftpl
+
+# tuple (tree):
+rm -f *.ttpl *.ftpl *.fpttpl *.fsa
+make 20000.ttpl VERSION=ver=4
+make 40000.ttpl VERSION=ver=4
+make 20000.ftpl VERSION=ver=4
+make 40000.ftpl VERSION=ver=4
+make 20000.fpttpl
+make 40000.fpttpl
+
+
+# hash:
+./load_trigram 20000_trigram.txt
+./load_trigram 40000_trigram.txt
+./load_fourgram 20000_trigram.txt
+./load_fourgram 40000_trigram.txt
+./load_trigramfp 20000_fptrigram.txt
+./load_trigramfp 40000_fptrigram.txt
+
+# dict:
+make 20000.tconc 
+make 40000.tconc 
+make 20000.fconc 
+make 40000.fconc 
+make 20000.fptconc 
+make 40000.fptconc 
+

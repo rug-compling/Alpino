@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="Tony" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Tony" word="Tony"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" cat="ap" end="9" id="4" rel="predc">
+        <node begin="2" cat="mwu" end="4" id="5" rel="hd">
+          <node begin="2" end="3" id="6" lemma="in" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="staat" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="staat" word="staat"/>
+        </node>
+        <node begin="4" cat="ti" end="9" id="8" rel="vc">
+          <node begin="7" end="8" id="9" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="4" cat="inf" end="9" id="10" rel="body">
+            <node begin="4" cat="np" end="6" id="11" rel="obj1">
+              <node begin="4" end="5" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="13" lemma="buurvrouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="buurvrouw" word="buurvrouw"/>
+            </node>
+            <node begin="6" end="7" id="14" lemma="neer" pos="part" postag="BW()" pt="bw" rel="svp" root="neer" word="neer"/>
+            <node begin="8" buiging="zonder" end="9" id="15" lemma="knallen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="knal" word="knallen" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Tony is in staat de buurvrouw neer te knallen</sentence>
+</alpino_ds>

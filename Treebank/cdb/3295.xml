@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="smain" end="20" id="1" rel="--">
+      <node begin="0" cat="conj" end="7" id="2" index="1" rel="su">
+        <node begin="2" conjtype="neven" end="3" id="3" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="0" cat="np" end="7" id="4" rel="cnj">
+          <node begin="0" end="1" id="5" index="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+          <node begin="1" end="2" id="6" lemma="werknemers-" pos="noun" postag="SPEC(afgebr)" pt="spec" rel="hd" root="werknemers-" spectype="afgebr" word="werknemers-"/>
+          <node begin="4" cat="pp" end="7" id="7" index="3" rel="mod">
+            <node begin="4" end="5" id="8" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="5" cat="np" end="7" id="9" rel="obj1">
+              <node begin="5" end="6" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="groot-metaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="groot-metaal" word="groot-metaal"/>
+            </node>
+          </node>
+        </node>
+        <node begin="0" cat="np" end="7" id="12" rel="cnj">
+          <node begin="0" end="1" id="13" index="2" rel="det"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="14" lemma="werkgeversorganisatie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="werkgeversorganisatie" word="werkgeversorganisaties"/>
+          <node begin="4" end="7" id="15" index="3" rel="mod"/>
+        </node>
+      </node>
+      <node begin="7" end="8" id="16" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="20" id="17" rel="vc">
+        <node begin="0" end="7" id="18" index="1" rel="su"/>
+        <node begin="8" end="9" id="19" lemma="vannacht" pos="adv" postag="BW()" pt="bw" rel="mod" root="vannacht" word="vannacht"/>
+        <node begin="9" cat="pp" end="12" id="20" rel="mod">
+          <node begin="9" end="10" id="21" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
+          <node begin="10" cat="np" end="12" id="22" rel="obj1">
+            <node begin="10" buiging="zonder" end="11" graad="basis" id="23" lemma="urenlang" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="urenlang" word="urenlang"/>
+            <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="24" lemma="overleg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="overleg" word="overleg"/>
+          </node>
+        </node>
+        <node begin="12" cat="np" end="14" id="25" rel="obj1">
+          <node begin="12" buiging="met-e" end="13" graad="basis" id="26" lemma="volledig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="volledig" word="volledige"/>
+          <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="27" lemma="overeenstemming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="overeenstemming" word="overeenstemming"/>
+        </node>
+        <node begin="14" buiging="zonder" end="15" id="28" lemma="bereiken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bereik" word="bereikt" wvorm="vd"/>
+        <node begin="15" cat="pp" end="20" id="29" rel="mod">
+          <node begin="15" end="16" id="30" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+          <node begin="16" cat="np" end="20" id="31" rel="obj1">
+            <node begin="16" end="17" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="17" buiging="met-e" end="18" graad="basis" id="33" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+            <node begin="18" buiging="met-e" end="19" graad="basis" id="34" lemma="tweejarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="tweejarig" word="tweejarige"/>
+            <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="35" lemma="CAO" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="CAO" word="CAO"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De werknemers- en werkgeversorganisaties in de groot-metaal hebben vannacht na urenlang overleg volledige overeenstemming bereikt over de nieuwe tweejarige CAO .</sentence>
+</alpino_ds>

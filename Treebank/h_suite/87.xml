@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+        <node begin="1" cat="ap" end="3" id="4" rel="mod">
+          <node begin="1" end="2" id="5" lemma="te" pos="adv" postag="BW()" pt="bw" rel="mod" root="te" word="te"/>
+          <node begin="2" buiging="met-e" end="3" graad="basis" id="6" lemma="mooi" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="mooi" word="mooie"/>
+        </node>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="analyse" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="analyse" word="analyse"/>
+      </node>
+      <node begin="4" end="5" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="5" cat="ap" end="8" id="9" rel="predc">
+        <node begin="5" cat="mwu" end="7" id="10" rel="mod">
+          <node begin="5" end="6" id="11" lemma="verre" pos="adv" postag="BW()" pt="bw" rel="mwp" root="verre" word="verre"/>
+          <node begin="6" end="7" id="12" lemma="van" pos="adv" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+        </node>
+        <node begin="7" buiging="zonder" end="8" graad="basis" id="13" lemma="ideaal" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="ideaal" word="ideaal"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Een te mooie analyse is verre van ideaal</sentence>
+</alpino_ds>

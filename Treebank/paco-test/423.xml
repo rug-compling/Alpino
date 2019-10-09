@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="smain" end="16" id="1" rel="--">
+      <node begin="0" cat="np" end="5" id="2" index="1" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="3" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" id="4" lcat="np" num="sg" pos="noun" rel="hd" root="gewicht_eenheid" sense="gewicht_eenheid" word="gewichtseenheid"/>
+        <node begin="2" cat="pp" end="5" id="5" rel="mod">
+          <node begin="2" end="3" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="6" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+          <node begin="3" cat="np" end="5" id="7" rel="obj1">
+            <node begin="3" end="4" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="8" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+            <node begin="4" end="5" frame="noun(het,count,sg)" gen="het" id="9" lcat="np" num="sg" pos="noun" rel="hd" root="element" sense="element" word="element"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" frame="verb('hebben/zijn',sg,modifier(aux(inf)))" id="10" infl="sg" lcat="smain" pos="verb" rel="hd" root="moet" sc="modifier(aux(inf))" sense="moet" tense="present" word="moet"/>
+      <node begin="0" cat="inf" end="16" id="11" rel="vc">
+        <node begin="0" end="5" id="12" index="1" rel="su"/>
+        <node begin="6" end="7" frame="verb(unacc,inf,passive)" id="13" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+        <node begin="0" cat="ppart" end="16" id="14" rel="vc">
+          <node begin="0" end="5" id="15" index="1" rel="obj1"/>
+          <node begin="7" end="8" frame="verb(hebben,psp,ninv(transitive,part_transitive(aan)))" id="16" infl="psp" lcat="ppart" pos="verb" rel="hd" root="geef_aan" sc="part_transitive(aan)" sense="geef_aan" word="aangegeven"/>
+          <node begin="8" cat="cp" end="16" id="17" rel="mod">
+            <node begin="8" end="9" frame="complementizer" id="18" lcat="cp" pos="comp" rel="cmp" root="indien" sense="indien" word="indien"/>
+            <node begin="9" cat="ssub" end="16" id="19" rel="body">
+              <node begin="9" case="nom" def="def" end="10" frame="pronoun(nwh,thi,both,de,nom,def)" gen="de" id="20" lcat="np" num="both" per="thi" pos="pron" rel="su" root="zij" sense="zij" wh="nwh" word="zij"/>
+              <node begin="10" end="11" frame="verb(zijn,sg3,ninv(pc_pp(van),part_pc_pp(af,van)))" id="21" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="wijk_af" sc="part_pc_pp(af,van)" sense="wijk_af-van" tense="present" word="afwijkt"/>
+              <node begin="11" cat="pp" end="14" id="22" rel="pc">
+                <node begin="11" end="12" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="23" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                <node begin="12" cat="np" end="14" id="24" rel="obj1">
+                  <node begin="12" end="13" frame="determiner(de)" id="25" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="13" end="14" frame="noun(de,count,pl)" gen="de" id="26" lcat="np" num="pl" pos="noun" rel="hd" root="standaard_eenheid" sense="standaard_eenheid" word="standaardeenheden"/>
+                </node>
+              </node>
+              <node begin="14" cat="cp" end="16" id="27" rel="mod">
+                <node begin="14" end="15" frame="complementizer(als)" id="28" lcat="cp" pos="comp" rel="cmp" root="als" sc="als" sense="als" word="als"/>
+                <node aform="base" begin="15" end="16" frame="adjective(ge_no_e(adv))" id="29" infl="no_e" lcat="ppart" pos="adj" rel="body" root="vermeld" sense="vermeld" vform="psp" word="vermeld"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" frame="preposition(in,[])" id="30" lcat="--" pos="prep" rel="--" root="in" sense="in" word="in"/>
+    <node begin="17" cat="mwu" end="20" id="31" mwu_root="(" mwu_sense="(" rel="--">
+      <node begin="17" end="18" frame="punct(haak_open)" id="32" lcat="--" pos="punct" rel="mwp" root="(" sense="(" special="haak_open" word="("/>
+      <node begin="18" end="19" frame="punct(haak_open)" id="33" lcat="--" pos="punct" rel="mwp" root="12" sense="12" special="haak_open" word="12"/>
+      <node begin="19" end="20" frame="punct(haak_open)" id="34" lcat="--" pos="punct" rel="mwp" root=")" sense=")" special="haak_open" word=")"/>
+    </node>
+    <node begin="20" end="21" frame="punct(punt)" id="35" lcat="--" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De gewichtseenheid van het element moet worden aangegeven indien zij afwijkt van de standaardeenheden als vermeld in ( 12 ) .</sentence>
+  <comments>
+    <comment>Q#423|De gewichtseenheid van het element moet worden aangegeven indien zij afwijkt van de standaardeenheden als vermeld in ( 12 ) .|1|3|-2.6953522625134263</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="6" end="7" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="13" id="3" rel="--">
+      <node begin="2" cat="sv1" end="6" id="4" rel="tag">
+        <node begin="2" end="3" id="5" lemma="laten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="laat" word="liet" wvorm="pv"/>
+        <node begin="3" end="4" genus="masc" getal="ev" id="6" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+        <node begin="4" end="5" id="7" lemma="erop" pos="pp" postag="BW()" pt="bw" rel="pc" root="erop" word="erop"/>
+        <node begin="5" buiging="zonder" end="6" id="8" lemma="volgen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="svp" root="volg" word="volgen" wvorm="inf"/>
+      </node>
+      <node begin="0" cat="du" end="13" id="9" rel="nucl">
+        <node begin="0" conjtype="neven" end="1" id="10" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" word="Maar"/>
+        <node begin="7" cat="smain" end="13" id="11" rel="nucl">
+          <node begin="7" cat="np" end="9" id="12" rel="obj1">
+            <node begin="7" buiging="zonder" end="8" id="13" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+            <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="14" lemma="perspectief" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="perspectief" word="perspectief"/>
+          </node>
+          <node begin="9" end="10" id="15" lemma="zien" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zie" word="zien" wvorm="pv"/>
+          <node begin="10" end="11" getal="mv" id="16" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+          <node begin="11" cat="advp" end="13" id="17" rel="mod">
+            <node begin="11" end="12" id="18" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+            <node begin="12" end="13" id="19" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="hd" root="niet" word="niet"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Maar , liet hij erop volgen , dit perspectief zien we nog niet .</sentence>
+</alpino_ds>

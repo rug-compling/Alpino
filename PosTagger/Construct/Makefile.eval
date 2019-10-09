@@ -1,0 +1,38 @@
+# parameters for 'make eval'
+
+s = 3
+d = 1
+m = 3
+t = -1
+p = -1
+
+fadddatadir=.
+
+# make eval m=0 p=0
+# leaves no ambiguity
+# make eval m=3 is the standard Alpino method
+# which leaves some, but not much, ambiguity
+
+eval:
+	$(TAGGER) -a 0 -s $(s) -d $(d) -m $(m)\
+                  --starttag xxx_sentence_start --endtag xxx_sentence_end\
+                  -t $(t) -p $(p) --fadddatadir=$(fadddatadir)/\
+                  --lexanalysisfile $(suite).la.testing\
+                  --framesfile $(suite).frames.testing
+
+suite=parool2001_test
+
+evals:
+	@$(MAKE) --no-print-directory eval m=3 > mistakes.txt
+	@grep '^#S' mistakes.txt
+
+mistakes=mistakes.txt
+analyse_mistakes_w: $(mistakes)
+	@echo "	ASSIGNED CORRECT"
+	@grep MISTAKE $(mistakes) | awk '{ print $$3,$$5,$$7 }' |\
+          sort | uniq -c | sort -nr 
+
+analyse_mistakes: $(mistakes)
+	@echo "	ASSIGNED CORRECT"
+	@grep MISTAKE $(mistakes) | awk '{ print $$5,$$7 }' |\
+          sort | uniq -c | sort -nr

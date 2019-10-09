@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="whq" end="12" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="4" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welke" vwtype="vb" word="Welke"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="titel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="titel" word="titel"/>
+      </node>
+      <node begin="0" cat="sv1" end="12" id="6" rel="body">
+        <node begin="0" end="2" id="7" index="1" rel="obj1"/>
+        <node begin="2" end="3" id="8" lemma="dragen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="draag" word="draagt" wvorm="pv"/>
+        <node begin="3" cat="np" end="6" id="9" rel="su">
+          <node begin="3" end="4" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="4" buiging="met-e" end="5" graad="basis" id="11" lemma="Brits" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Brits" word="Britse"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="troonopvolger" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="troonopvolger" word="troonopvolger"/>
+        </node>
+        <node begin="6" end="7" id="13" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="mod" root="altijd" word="altijd"/>
+        <node begin="8" cat="pp" end="12" id="14" rel="mod">
+          <node begin="8" end="9" id="15" lemma="naast" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naast" vztype="init" word="naast"/>
+          <node begin="9" cat="np" end="12" id="16" rel="obj1">
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="17" lemma="prins" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="prins" word="prins"/>
+            <node begin="10" cat="pp" end="12" id="18" rel="mod">
+              <node begin="10" end="11" id="19" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="20" lemma="Wales" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Wales" word="Wales"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="21" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke titel draagt de Britse troonopvolger altijd , naast prins van Wales ?</sentence>
+</alpino_ds>

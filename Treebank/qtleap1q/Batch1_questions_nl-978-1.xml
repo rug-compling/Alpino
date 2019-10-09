@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="7" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="mod"/>
+        <node begin="1" end="2" id="5" lemma="selecteren" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="selecteer" word="selecteer" wvorm="pv"/>
+        <node begin="2" end="3" getal="ev" id="6" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="dia" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="dia" word="dia&apos;s"/>
+        <node begin="4" cat="pp" end="7" id="8" rel="mod">
+          <node begin="4" end="5" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="5" cat="mwu" end="7" id="10" rel="obj1">
+            <node begin="5" end="6" id="11" lemma="PowerPoint" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="PowerPoint" spectype="deeleigen" word="PowerPoint"/>
+            <node begin="6" end="7" id="12" lemma="2013" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="2013" spectype="deeleigen" word="2013"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe selecteer ik dia&apos;s in PowerPoint 2013 ?</sentence>
+</alpino_ds>

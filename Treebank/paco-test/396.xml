@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="1" end="2" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="conj" end="7" id="2" rel="--">
+      <node begin="0" end="1" frame="noun(de,mass,sg)" gen="de" id="3" lcat="np" num="sg" pos="noun" rel="cnj" root="doorstroming" sense="doorstroming" word="Doorstroming"/>
+      <node begin="2" end="3" frame="meas_mod_noun(de,count,sg)" gen="de" id="4" lcat="np" num="sg" pos="noun" rel="cnj" root="plaats" sense="plaats" special="meas_mod" word="plaats"/>
+      <node begin="3" end="4" frame="conj(en)" id="5" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="4" cat="np" end="7" id="6" rel="cnj">
+        <node begin="4" end="5" frame="noun(de,count,sg)" gen="de" id="7" lcat="np" num="sg" pos="noun" rel="hd" root="behandeling" sense="behandeling" word="behandeling"/>
+        <node begin="5" cat="pp" end="7" id="8" rel="mod">
+          <node begin="5" end="6" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="9" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+          <node begin="6" end="7" frame="noun(het,count,pl)" gen="het" id="10" lcat="np" num="pl" pos="noun" rel="obj1" root="kern_materiaal" sense="kern_materiaal" word="kernmaterialen"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Doorstroming , plaats en behandeling van kernmaterialen</sentence>
+  <comments>
+    <comment>Q#396|Doorstroming , plaats en behandeling van kernmaterialen|1|1|3.994103451798221</comment>
+  </comments>
+</alpino_ds>

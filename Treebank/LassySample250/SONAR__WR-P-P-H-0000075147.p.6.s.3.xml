@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="9" end="10" frame="punct(dubb_punt)" id="1" lcat="punct" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+    <node begin="10" end="11" frame="punct(aanhaal_both)" id="2" lcat="punct" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" sense="&quot;" special="aanhaal_both" word="&quot;"/>
+    <node begin="0" cat="du" end="26" id="3" rel="--">
+      <node begin="0" conjtype="neven" end="1" frame="complementizer(root)" id="4" lcat="du" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" sc="root" sense="maar" word="Maar"/>
+      <node begin="1" cat="du" end="26" id="5" rel="nucl">
+        <node begin="1" cat="smain" end="9" id="6" rel="nucl">
+          <node begin="1" cat="np" end="4" id="7" rel="su">
+            <node begin="1" end="2" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="8" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+            <node aform="base" begin="2" buiging="met-e" end="3" frame="adjective(e)" graad="basis" id="9" infl="e" lcat="ap" lemma="jong" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jong" sense="jong" vform="adj" word="jonge"/>
+            <node begin="3" end="4" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="10" lcat="np" lemma="netwerk" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="netwerk" sense="netwerk" word="netwerk"/>
+          </node>
+          <node begin="4" end="5" frame="verb(hebben,sg3,transitive)" id="11" infl="sg3" lcat="smain" lemma="bieden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="bied" sc="transitive" sense="bied" tense="present" word="biedt" wvorm="pv"/>
+          <node begin="5" cat="pp" end="8" id="12" rel="mod">
+            <node begin="5" end="6" frame="preposition(volgens,[])" id="13" lcat="pp" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" sense="volgens" vztype="init" word="volgens"/>
+            <node begin="6" cat="mwu" end="8" id="14" mwu_root="Alexis_Bogaert" mwu_sense="Alexis_Bogaert" rel="obj1">
+              <node begin="6" end="7" frame="proper_name(both,'PER')" id="15" lcat="np" lemma="Alexis" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Alexis" sense="Alexis" spectype="deeleigen" word="Alexis"/>
+              <node begin="7" end="8" frame="proper_name(both,'PER')" id="16" lcat="np" lemma="Bogaert" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bogaert" sense="Bogaert" spectype="deeleigen" word="Bogaert"/>
+            </node>
+          </node>
+          <node begin="8" end="9" frame="noun(het,count,pl)" gen="het" getal="mv" graad="basis" id="17" lcat="np" lemma="voordeel" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="voordeel" sense="voordeel" word="voordelen"/>
+        </node>
+        <node begin="11" cat="smain" end="26" id="18" rel="sat">
+          <node begin="11" end="12" frame="proper_name(both,'ORG')" id="19" index="1" lcat="np" lemma="Mobistar" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="su" root="Mobistar" sense="Mobistar" spectype="deeleigen" word="Mobistar"/>
+          <node begin="12" end="13" frame="verb('hebben/zijn',past(sg),aux(inf))" id="20" infl="sg" lcat="smain" lemma="kunnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kan" sc="aux(inf)" sense="kan" tense="past" word="kon" wvorm="pv"/>
+          <node begin="11" cat="inf" end="26" id="21" rel="vc">
+            <node begin="11" end="12" id="22" index="1" rel="su"/>
+            <node begin="13" end="14" frame="adverb" id="23" lcat="advp" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" sense="al" word="al"/>
+            <node begin="14" cat="np" end="16" id="24" rel="obj1">
+              <node aform="compar" begin="14" buiging="zonder" end="15" frame="adjective(meer)" graad="comp" id="25" infl="meer" lcat="ap" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,comp)" pt="vnw" rel="det" root="meer" sense="meer" vform="adj" vwtype="onbep" word="meer"/>
+              <node begin="15" end="16" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="26" lcat="np" lemma="rekening" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rekening" sense="rekening" word="rekening"/>
+            </node>
+            <node begin="16" buiging="zonder" end="17" frame="verb(hebben,inf,fixed([{[acc(rekening),pc(met)]}],norm_passive))" id="27" infl="inf" lcat="inf" lemma="houden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="houd" sc="fixed([{[acc(rekening),pc(met)]}],norm_passive)" sense="rekening-houd-met" word="houden" wvorm="inf"/>
+            <node begin="17" cat="pp" end="26" id="28" rel="pc">
+              <node begin="17" end="18" frame="preposition(met,[mee,[en,al]])" id="29" lcat="pp" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" sense="met" vztype="init" word="met"/>
+              <node begin="18" cat="conj" end="26" id="30" rel="obj1">
+                <node begin="18" cat="np" end="20" id="31" rel="cnj">
+                  <node aform="compar" begin="18" buiging="met-e" end="19" frame="adjective(ere)" graad="comp" id="32" infl="e" lcat="ap" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="nieuw" sense="nieuw" vform="adj" word="nieuwere"/>
+                  <node begin="19" end="20" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="33" lcat="np" lemma="technologi" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="technologie" sense="technologie" word="technologieën"/>
+                </node>
+                <node begin="20" conjtype="neven" end="21" frame="conj(en)" id="34" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+                <node begin="21" cat="np" end="26" id="35" rel="cnj">
+                  <node begin="21" end="22" frame="determiner(de)" id="36" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="22" end="23" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="37" lcat="np" lemma="ambitie" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="ambitie" sense="ambitie" word="ambities"/>
+                  <node begin="23" cat="pp" end="26" id="38" rel="mod">
+                    <node begin="23" end="24" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="39" lcat="pp" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" sense="voor" vztype="init" word="voor"/>
+                    <node begin="24" cat="np" end="26" id="40" rel="obj1">
+                      <node aform="base" begin="24" buiging="met-e" end="25" frame="adjective(e)" graad="basis" id="41" infl="e" lcat="ap" lemma="vast" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vast" sense="vast" vform="adj" word="vaste"/>
+                      <node begin="25" end="26" frame="noun(de,mass,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="42" lcat="np" lemma="telefonie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="telefonie" sense="telefonie" word="telefonie"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="26" end="27" frame="punct(punt)" id="43" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+    <node begin="27" end="28" frame="punct(aanhaal_both)" id="44" lcat="punct" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" sense="&quot;" special="aanhaal_both" word="&quot;"/>
+  </node>
+  <sentence>Maar het jonge netwerk biedt volgens Alexis Bogaert voordelen : &quot; Mobistar kon al meer rekening houden met nieuwere technologieën en de ambities voor vaste telefonie . &quot;</sentence>
+  <comments>
+    <comment>Q#WR-P-P-H-0000075147.p.6.s.3|Maar het jonge netwerk biedt volgens Alexis Bogaert voordelen : &quot; Mobistar kon al meer rekening houden met nieuwere technologieën en de ambities voor vaste telefonie . &quot;|1|1|-0.11349418899308582</comment>
+  </comments>
+</alpino_ds>

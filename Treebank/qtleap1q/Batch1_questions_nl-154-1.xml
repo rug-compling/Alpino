@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+      <node begin="2" cat="np" end="5" id="4" rel="obj1">
+        <node begin="2" buiging="zonder" end="3" id="5" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="6" lemma="internet" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="internet" word="internet"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="7" lemma="verbinding" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verbinding" word="verbindingen"/>
+      </node>
+      <node begin="5" cat="pp" end="9" id="8" rel="mod">
+        <node begin="5" end="6" id="9" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+        <node begin="6" cat="np" end="9" id="10" rel="obj1">
+          <node begin="6" end="7" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="7" cat="mwu" end="9" id="12" rel="hd">
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="13" lemma="netwerk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="netwerk" word="netwerk"/>
+            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="14" lemma="kabel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="kabel" word="kabel"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="9" end="10" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ik heb geen internet verbindingen met een netwerk kabel .</sentence>
+</alpino_ds>

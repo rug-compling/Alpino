@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="np" end="4" id="1" rel="--">
+      <node begin="0" cat="mwu" end="3" id="2" rel="det">
+        <node begin="0" end="1" id="3" lemma="vier" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="vier" word="vier"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="komma" naamval="stan" ntype="soort" pos="num" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="komma" word="komma"/>
+        <node begin="2" end="3" id="5" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="drie" word="drie"/>
+      </node>
+      <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="6" lemma="miljoen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="miljoen" word="miljoen"/>
+    </node>
+  </node>
+  <sentence>vier komma drie miljoen</sentence>
+</alpino_ds>

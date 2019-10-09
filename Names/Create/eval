@@ -1,0 +1,37 @@
+#!/usr/bin/perl -w
+
+use Getopt::Std;
+use vars qw($opt_d);
+getopts('d');
+
+while (<>) {
+    chomp;
+    ($l,$r,$type,@name) = split;
+    $n++;
+    $used{$type}++;
+    if ($l eq $r) { 
+	$ok{$type}++;
+	$ok++;
+    } else {
+	if ($opt_d) {
+	    if ($type eq 'DICT') {
+		print "dictionary wrong: ", join ' ', @name, 
+		"should be $l instead of $r\n";
+	    }
+	    if ($type eq 'MAXENT') {
+		print "maxent wrong: ", join ' ', @name, 
+		"should be $l instead of $r\n";
+	    }
+	}
+    }
+}
+
+$acc = $ok/$n;
+$dict = $ok{'DICT'}/$used{'DICT'} ;
+$d = $used{'DICT'};
+$m = $used{'MAXENT'};
+$maxent = $ok{'MAXENT'}/$used{'MAXENT'} ;
+
+printf " Accuracy overall: %.4f\n",$acc;
+printf " items from  DICT: %.4f ($d cases)\n", $dict;
+printf " items from MODEL: %.4f ($m cases)\n", $maxent;

@@ -1,0 +1,29 @@
+#!/usr/bin/perl
+# © Gertjan van Noord, 1998.
+# mailto:vannoord@let.rug.nl
+
+$file = shift @ARGV;
+
+if ($file =~ /parool2004/) {
+    $ignore_at=1;
+    $ad_at=1;
+} elsif ($file =~ /ad200[34]/) {
+    $ignore_at=0;
+    $ad_at=1;
+} else {
+    $ignore_at=0;
+    $ad_at=1;
+}
+
+while (<>)  {
+    if ($ignore_at && /^@/){
+	next;
+    }
+    if ($ad_at) {
+        s/[@] ad [.] nl/\@ad.nl/g;
+    }
+    s/www [.] ([a-z0-9][a-z0-9-]*) ?[.] ?(nl|cz|net|es|fr|info|edu|gov|com|ed ?[.] ?uk|co ?[.] ?uk|org|de|be)\b/www.$1.$2/g;
+    s/ [.] nl/.nl/g;
+    s/[&] ?gt ?[;]/>/g;
+    print;
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" cat="pp" end="6" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="juist" pos="adv" postag="BW()" pt="bw" rel="mod" root="juist" word="Juist"/>
+        <node begin="1" cat="mwu" end="3" id="4" rel="hd">
+          <node begin="1" end="2" id="5" lemma="danken" pos="prep" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="mwp" root="dank" word="dank" wvorm="pv"/>
+          <node begin="2" end="3" genus="fem" getal="ev" id="6" lemma="zij" naamval="nomin" pdtype="pron" persoon="3v" pos="prep" postag="VNW(pers,pron,nomin,vol,3v,ev,fem)" pt="vnw" rel="mwp" root="zij" status="vol" vwtype="pers" word="zij"/>
+        </node>
+        <node begin="3" cat="np" end="6" id="7" rel="obj1">
+          <node begin="3" end="4" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="4" buiging="met-e" end="5" graad="basis" id="9" lemma="verregaand" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="verregaand" word="verregaande"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="concentratie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="concentratie" word="concentratie"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="11" lemma="weten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="weet" word="wist" wvorm="pv"/>
+      <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="12" index="1" lemma="Feijenoord" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Feijenoord" word="Feijenoord"/>
+      <node begin="7" cat="ti" end="11" id="13" rel="vc">
+        <node begin="9" end="10" id="14" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="7" cat="inf" end="11" id="15" rel="body">
+          <node begin="7" end="8" id="16" index="1" rel="su"/>
+          <node begin="8" end="9" getal="getal" id="17" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="zich" status="red" vwtype="refl" word="zich"/>
+          <node begin="10" buiging="zonder" end="11" id="18" lemma="handhaven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="handhaaf" word="handhaven" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Juist dank zij een verregaande concentratie wist Feijenoord zich te handhaven .</sentence>
+</alpino_ds>

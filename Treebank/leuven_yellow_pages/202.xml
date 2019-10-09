@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="np" end="5" id="1" rel="--">
+      <node begin="0" cat="detp" end="4" id="2" rel="det">
+        <node begin="0" cat="mwu" end="3" id="3" rel="mod">
+          <node begin="0" end="1" id="4" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="adv" postag="LID(onbep,stan,agr)" pt="lid" rel="mwp" root="een" word="een"/>
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="stuk" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="stuk" word="stuk"/>
+          <node begin="2" conjtype="onder" end="3" id="6" lemma="of" pos="adv" postag="VG(onder)" pt="vg" rel="mwp" root="of" word="of"/>
+        </node>
+        <node begin="3" end="4" id="7" lemma="zes" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="zes" word="zes"/>
+      </node>
+      <node begin="4" end="5" getal="mv" graad="basis" id="8" lemma="boek" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="boek" word="boeken"/>
+    </node>
+  </node>
+  <sentence>een stuk of zes boeken</sentence>
+</alpino_ds>

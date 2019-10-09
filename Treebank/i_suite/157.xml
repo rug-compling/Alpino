@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="aanvaller" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aanvaller" word="Aanvaller"/>
+        <node begin="1" cat="mwu" end="3" id="4" rel="app">
+          <node begin="1" end="2" id="5" lemma="Jean" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jean" spectype="deeleigen" word="Jean"/>
+          <node begin="2" end="3" id="6" lemma="Wobos" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wobos" spectype="deeleigen" word="Wobos"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="afwezig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="afwezig" word="afwezig"/>
+      <node begin="5" cat="pp" end="7" id="9" rel="mod">
+        <node begin="5" end="6" id="10" lemma="wegens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="wegens" vztype="init" word="wegens"/>
+        <node begin="6" buiging="zonder" end="7" graad="basis" id="11" lemma="ziek" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="obj1" root="ziek" word="ziek"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Aanvaller Jean Wobos was afwezig wegens ziek .</sentence>
+</alpino_ds>

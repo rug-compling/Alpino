@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="du" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="3.7" pos="num" postag="SPEC(symb)" pt="spec" rel="dp" root="3.7" spectype="symb" word="3.7"/>
+      <node begin="1" cat="conj" end="5" id="3" rel="dp">
+        <node begin="1" cat="np" end="3" id="4" rel="cnj">
+          <node begin="1" buiging="zonder" end="2" graad="basis" id="5" lemma="buitenlands" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="Buitenlands" word="Buitenlands"/>
+          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="6" lemma="beleid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="beleid" word="beleid"/>
+        </node>
+        <node begin="3" conjtype="neven" end="4" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="8" lemma="veiligheidsbeleid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="veiligheid_beleid" word="veiligheidsbeleid"/>
+      </node>
+    </node>
+  </node>
+  <sentence>3.7 Buitenlands beleid en veiligheidsbeleid</sentence>
+</alpino_ds>

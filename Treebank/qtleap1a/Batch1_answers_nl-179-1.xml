@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="‘" pos="punct" postag="LET()" pt="let" rel="--" root="‘" word="‘"/>
+    <node begin="13" end="14" id="2" lemma="’" pos="punct" postag="LET()" pt="let" rel="--" root="’" word="’"/>
+    <node begin="0" cat="conj" end="19" id="3" rel="--">
+      <node begin="0" cat="sv1" end="8" id="4" rel="cnj">
+        <node begin="0" end="1" id="5" lemma="klikken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="klik" word="Klik" wvorm="pv"/>
+        <node begin="1" cat="pp" end="5" id="6" rel="mod">
+          <node begin="1" end="2" id="7" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="2" cat="np" end="5" id="8" rel="obj1">
+            <node begin="2" buiging="zonder" end="3" getal="ev" id="9" lemma="je" naamval="stan" npagr="agr" pdtype="det" persoon="2v" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="je" status="red" vwtype="bez" word="je"/>
+            <node begin="3" buiging="zonder" end="4" graad="basis" id="10" lemma="rechter" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="rechter" word="rechter"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="muis_knop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="muis_knop" word="muisknop"/>
+          </node>
+        </node>
+        <node begin="5" cat="pp" end="8" id="12" rel="pc">
+          <node begin="5" end="6" id="13" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="6" cat="np" end="8" id="14" rel="obj1">
+            <node begin="6" end="7" id="15" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="16" lemma="bestand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bestand" word="bestand"/>
+          </node>
+        </node>
+      </node>
+      <node begin="8" conjtype="neven" end="9" id="17" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="9" cat="sv1" end="13" id="18" rel="cnj">
+        <node begin="9" end="10" id="19" lemma="selecteren" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="selecteer" word="selecteer" wvorm="pv"/>
+        <node begin="11" cat="mwu" end="13" id="20" mwu_root="Openen met" mwu_sense="Openen met" rel="obj1">
+          <node begin="11" end="12" id="21" lemma="Openen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Openen" spectype="deeleigen" word="Openen"/>
+          <node begin="12" end="13" id="22" lemma="met" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="met" spectype="deeleigen" word="met"/>
+        </node>
+      </node>
+      <node begin="14" conjtype="neven" end="15" id="23" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="15" cat="sv1" end="19" id="24" rel="cnj">
+        <node begin="15" end="16" id="25" lemma="kiezen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kies" word="kies" wvorm="pv"/>
+        <node begin="16" cat="pp" end="19" id="26" rel="pc">
+          <node begin="16" end="17" id="27" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+          <node begin="17" cat="mwu" end="19" id="28" mwu_root="Adobe Reader" mwu_sense="Adobe Reader" rel="obj1">
+            <node begin="17" end="18" id="29" lemma="Adobe" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Adobe" spectype="deeleigen" word="Adobe"/>
+            <node begin="18" end="19" id="30" lemma="Reader" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Reader" spectype="deeleigen" word="Reader"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="31" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Klik met je rechter muisknop op het bestand en selecteer ‘ Openen met ’ en kies voor Adobe Reader .</sentence>
+</alpino_ds>

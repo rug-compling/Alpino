@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="18" id="2" rel="--">
+      <node begin="0" cat="cp" end="8" id="3" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+        <node begin="1" cat="ssub" end="8" id="5" rel="body">
+          <node begin="1" end="2" getal="ev" id="6" index="1" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+          <node begin="6" end="7" id="7" lemma="willen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="wil" word="wilt" wvorm="pv"/>
+          <node begin="1" cat="inf" end="8" id="8" rel="vc">
+            <node begin="1" end="2" id="9" index="1" rel="su"/>
+            <node begin="2" cat="np" end="6" id="10" rel="obj1">
+              <node begin="2" buiging="zonder" end="3" id="11" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+              <node begin="3" buiging="met-e" end="4" id="12" lemma="betaald" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="betaald" word="betaalde" wvorm="vd"/>
+              <node begin="4" cat="mwu" end="6" id="13" rel="hd">
+                <node begin="4" end="5" id="14" lemma="antivirus" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="antivirus" spectype="deeleigen" word="antivirus"/>
+                <node begin="5" end="6" id="15" lemma="software" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="software" spectype="deeleigen" word="software"/>
+              </node>
+            </node>
+            <node begin="7" buiging="zonder" end="8" id="16" lemma="gebruiken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="gebruik" word="gebruiken" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+      <node begin="9" end="10" id="17" lemma="voor_stellen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="stel_voor" word="stellen" wvorm="pv"/>
+      <node begin="10" end="11" getal="mv" id="18" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
+      <node begin="11" end="12" id="19" lemma="voor" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="voor" vztype="fin" word="voor"/>
+      <node begin="12" cat="cp" end="18" id="20" rel="vc">
+        <node begin="12" conjtype="onder" end="13" id="21" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="13" cat="ssub" end="18" id="22" rel="body">
+          <node begin="13" end="14" getal="ev" id="23" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+          <node begin="14" cat="np" end="17" id="24" rel="obj1">
+            <node begin="14" buiging="met-e" end="15" id="25" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+            <node begin="15" buiging="met-e" end="16" id="26" lemma="betaald" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="betaald" word="betaalde" wvorm="vd"/>
+            <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="27" lemma="versie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="versie" word="versie"/>
+          </node>
+          <node begin="17" end="18" id="28" lemma="de-installeren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="de-installeer" word="de-installeert" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="29" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als je geen betaalde antivirus software wilt gebruiken , stellen wij voor dat je deze betaalde versie de-installeert .</sentence>
+</alpino_ds>

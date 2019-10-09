@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="pp" end="4" id="1" rel="--">
+      <node begin="0" end="1" frame="preposition(met,[mee,[en,al]])" id="2" lcat="pp" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" sense="met" vztype="init" word="Met"/>
+      <node begin="1" cat="np" end="4" id="3" rel="obj1">
+        <node begin="1" buiging="zonder" end="2" frame="determiner(pron)" getal="ev" id="4" infl="pron" lcat="detp" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" sense="zijn" status="vol" vwtype="bez" word="zijn"/>
+        <node aform="base" begin="2" buiging="met-e" end="3" frame="adjective(e)" graad="basis" id="5" infl="e" lcat="ap" lemma="bekakt" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="bekakt" sense="bekakt" vform="adj" word="bekakte"/>
+        <node begin="3" end="4" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lcat="np" lemma="klap" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="klap" sense="klap" word="klap"/>
+      </node>
+    </node>
+    <node begin="4" end="5" frame="punct(punt)" id="7" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Met zijn bekakte klap .</sentence>
+  <comments>
+    <comment>Q#WR-P-E-G-0000004691.p.382.s.1|Met zijn bekakte klap .|1|1|-0.006464703239957905</comment>
+  </comments>
+</alpino_ds>

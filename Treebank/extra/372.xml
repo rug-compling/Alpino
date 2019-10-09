@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="whq" end="5" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" index="1" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="whd" root="wie" status="vol" vwtype="vb" word="Wie"/>
+      <node begin="0" cat="sv1" end="5" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="su"/>
+        <node begin="1" end="2" id="5" lemma="bepalen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="bepaal" word="bepaalt" wvorm="pv"/>
+        <node begin="2" cat="cp" end="5" id="6" rel="vc">
+          <node begin="2" conjtype="neven" end="3" id="7" lemma="of" pos="comp" postag="VG(neven)" pt="vg" rel="cmp" root="of" word="of"/>
+          <node begin="3" cat="ssub" end="5" id="8" rel="body">
+            <node begin="3" end="4" getal="mv" id="9" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+            <node begin="4" end="5" id="10" lemma="doorgaan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ga_door" word="doorgaan" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="5" end="6" id="11" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wie bepaalt of we doorgaan ?</sentence>
+</alpino_ds>

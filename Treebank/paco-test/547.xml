@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="6" end="7" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="24" id="2" rel="--">
+      <node begin="7" end="8" frame="verb('hebben/zijn',sg,modifier(aux(inf)))" id="3" infl="sg" lcat="smain" pos="verb" rel="hd" root="moet" sc="modifier(aux(inf))" sense="moet" tense="present" word="moet"/>
+      <node begin="8" cat="np" end="16" id="4" index="1" rel="su">
+        <node begin="8" end="9" frame="determiner(de)" id="5" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node begin="9" end="10" frame="noun(de,both,sg)" gen="de" id="6" lcat="np" num="sg" pos="noun" rel="hd" root="deelneming" sense="deelneming" word="deelneming"/>
+        <node begin="10" cat="pp" end="16" id="7" rel="mod">
+          <node begin="10" end="11" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="8" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+          <node begin="11" cat="np" end="16" id="9" rel="obj1">
+            <node begin="11" end="12" frame="determiner(een)" id="10" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+            <node begin="12" end="13" frame="noun(de,count,sg)" gen="de" id="11" lcat="np" num="sg" pos="noun" rel="hd" root="vertegenwoordiger" sense="vertegenwoordiger" word="vertegenwoordiger"/>
+            <node begin="13" cat="pp" end="16" id="12" rel="mod">
+              <node begin="13" end="14" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="13" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+              <node begin="14" cat="np" end="16" id="14" rel="obj1">
+                <node begin="14" end="15" frame="determiner(de,nwh,nmod,pro,nparg)" id="15" infl="de" lcat="detp" pos="det" rel="det" root="die" sense="die" wh="nwh" word="die"/>
+                <node begin="15" end="16" frame="noun(de,count,sg)" gen="de" id="16" lcat="np" num="sg" pos="noun" rel="hd" root="ACS_staat" sense="ACS_staat" word="ACS-staat"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="0" cat="inf" end="24" id="17" rel="vc">
+        <node begin="8" end="16" id="18" index="1" rel="su"/>
+        <node begin="22" end="23" frame="verb(unacc,inf,passive)" id="19" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+        <node begin="0" cat="ppart" end="24" id="20" rel="vc">
+          <node begin="0" cat="cp" end="6" id="21" rel="mod">
+            <node begin="0" end="1" frame="complementizer" id="22" lcat="cp" pos="comp" rel="cmp" root="indien" sense="indien" word="Indien"/>
+            <node begin="1" cat="ssub" end="6" id="23" rel="body">
+              <node begin="1" cat="np" end="3" id="24" rel="su">
+                <node begin="1" end="2" frame="determiner(een)" id="25" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+                <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="26" lcat="np" num="sg" pos="noun" rel="hd" root="ACS_staat" sense="ACS_staat" word="ACS-staat"/>
+              </node>
+              <node begin="3" cat="np" end="5" id="27" rel="obj1">
+                <node begin="3" end="4" frame="determiner(geen,nwh,mod,pro,yparg,nwkpro,geen)" id="28" infl="geen" lcat="detp" pos="det" rel="det" root="geen" sense="geen" wh="nwh" word="geen"/>
+                <node begin="4" end="5" frame="noun(het,count,sg)" gen="het" id="29" lcat="np" num="sg" pos="noun" rel="hd" root="parlement" sense="parlement" word="parlement"/>
+              </node>
+              <node begin="5" end="6" frame="verb(hebben,sg_heeft,transitive_ndev)" id="30" infl="sg_heeft" lcat="ssub" pos="verb" rel="hd" root="heb" sc="transitive_ndev" sense="heb" tense="present" word="heeft"/>
+            </node>
+          </node>
+          <node begin="8" end="16" id="31" index="1" rel="obj1"/>
+          <node begin="16" end="17" frame="pp(voor)" id="32" lcat="pp" pos="pp" rel="mod" root="vooraf" sense="vooraf" word="vooraf"/>
+          <node begin="17" cat="pp" end="22" id="33" rel="mod">
+            <node begin="17" end="18" frame="preposition(door,[heen])" id="34" lcat="pp" pos="prep" rel="hd" root="door" sense="door" word="door"/>
+            <node begin="18" cat="np" end="22" id="35" rel="obj1">
+              <node begin="18" end="19" frame="determiner(de)" id="36" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node aform="base" begin="19" end="20" frame="adjective(e)" id="37" infl="e" lcat="ap" pos="adj" rel="mod" root="Paritaire" sense="Paritaire" vform="adj" word="Paritaire"/>
+              <node aform="base" begin="20" end="21" frame="adjective(e)" id="38" infl="e" lcat="ap" pos="adj" rel="mod" root="parlementair" sense="parlementair" vform="adj" word="Parlementaire"/>
+              <node begin="21" end="22" frame="noun(de,count,sg)" gen="de" id="39" lcat="np" num="sg" pos="noun" rel="hd" root="vergadering" sense="vergadering" word="Vergadering"/>
+            </node>
+          </node>
+          <node begin="23" end="24" frame="verb(hebben,psp,ninv(transitive,part_transitive(goed)))" id="40" infl="psp" lcat="ppart" pos="verb" rel="hd" root="keur_goed" sc="part_transitive(goed)" sense="keur_goed" word="goedgekeurd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" frame="punct(punt)" id="41" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Indien een ACS-staat geen parlement heeft , moet de deelneming van een vertegenwoordiger van die ACS-staat vooraf door de Paritaire Parlementaire Vergadering worden goedgekeurd .</sentence>
+  <comments>
+    <comment>Q#547|Indien een ACS-staat geen parlement heeft , moet de deelneming van een vertegenwoordiger van die ACS-staat vooraf door de Paritaire Parlementaire Vergadering worden goedgekeurd .|1|1|-10.31638901873064</comment>
+  </comments>
+</alpino_ds>

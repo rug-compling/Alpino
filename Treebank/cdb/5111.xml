@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="29" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="14" end="15" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="22" end="23" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="25" end="26" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="1" cat="du" end="28" id="5" rel="--">
+      <node begin="1" cat="smain" end="14" id="6" rel="dp">
+        <node begin="1" cat="np" end="4" id="7" rel="su">
+          <node begin="1" end="2" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+          <node begin="2" buiging="met-e" end="3" id="9" lemma="neerploffen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="ploffend" word="neerploffende" wvorm="od"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="10" lemma="massa" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="massa" word="massa"/>
+        </node>
+        <node begin="4" end="5" id="11" lemma="veroorzaken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="veroorzaak" word="veroorzaakt" wvorm="pv"/>
+        <node begin="5" end="6" id="12" lemma="doorgaans" pos="adv" postag="BW()" pt="bw" rel="mod" root="doorgaans" word="doorgaans"/>
+        <node begin="6" end="7" id="13" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+        <node begin="7" cat="np" end="14" id="14" rel="obj1">
+          <node begin="7" end="8" id="15" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="8" end="9" id="16" lemma="twee" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="tweede" word="tweede"/>
+          <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="17" lemma="lawine" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="lawine" word="lawine"/>
+          <node begin="10" cat="pp" end="14" id="18" rel="mod">
+            <node begin="10" end="11" id="19" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="11" cat="np" end="14" id="20" rel="obj1">
+              <node begin="11" end="12" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="12" buiging="met-e" end="13" graad="basis" id="22" lemma="tegenoverliggend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="tegenoverliggend" word="tegenoverliggende"/>
+              <node begin="13" end="14" getal="mv" graad="basis" id="23" lemma="helling" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="helling" word="hellingen"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="15" cat="du" end="28" id="24" rel="dp">
+        <node begin="15" cat="smain" end="22" id="25" rel="nucl">
+          <node begin="15" cat="np" end="18" id="26" rel="su">
+            <node begin="15" buiging="met-e" end="16" id="27" lemma="ieder" naamval="stan" npagr="evz" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="det" root="iedere" vwtype="onbep" word="Iedere"/>
+            <node begin="16" buiging="met-e" end="17" graad="basis" id="28" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="29" lemma="sneeuwval" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="val" word="sneeuwval"/>
+          </node>
+          <node begin="18" end="19" id="30" lemma="brengen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="breng" word="brengt" wvorm="pv"/>
+          <node begin="19" cat="np" end="22" id="31" rel="obj1">
+            <node begin="19" buiging="zonder" end="20" graad="basis" id="32" lemma="nieuw" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="nieuw" word="nieuw"/>
+            <node begin="20" buiging="zonder" end="21" graad="basis" id="33" lemma="nieuw" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="nieuw" word="nieuw"/>
+            <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="34" lemma="risico" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="risico" word="risico"/>
+          </node>
+        </node>
+        <node begin="23" cat="conj" end="28" id="35" rel="sat">
+          <node begin="23" cat="np" end="25" id="36" rel="cnj">
+            <node begin="23" buiging="met-e" end="24" id="37" lemma="elk" naamval="stan" npagr="evz" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="det" root="elke" vwtype="onbep" word="elke"/>
+            <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="38" lemma="storm" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="storm" word="storm"/>
+          </node>
+          <node begin="26" cat="np" end="28" id="39" rel="cnj">
+            <node begin="26" buiging="met-e" end="27" id="40" lemma="elk" naamval="stan" npagr="evz" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="det" root="elke" vwtype="onbep" word="elke"/>
+            <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="41" lemma="fohn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="fohn" word="fohn"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="28" end="29" id="42" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>( De neerploffende massa veroorzaakt doorgaans nog een tweede lawine op de tegenoverliggende hellingen ) Iedere nieuwe sneeuwval brengt nieuw nieuw risico , elke storm , elke fohn .</sentence>
+</alpino_ds>

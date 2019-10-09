@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="33" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="32" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" rel="su">
+        <node begin="0" buiging="met-e" end="1" id="4" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="Deze"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="ontwikkeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ontwikkeling" word="ontwikkeling"/>
+      </node>
+      <node begin="2" end="3" id="6" lemma="brengen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="breng" word="bracht" wvorm="pv"/>
+      <node begin="3" cat="np" end="6" id="7" index="1" rel="obj1">
+        <node begin="3" end="4" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="4" cat="mwu" end="6" id="9" rel="hd">
+          <node begin="4" end="5" id="10" lemma="WitGele" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="WitGele" spectype="deeleigen" word="WitGele"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="kruis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Kruis" word="Kruis"/>
+        </node>
+      </node>
+      <node begin="7" cat="pp" end="9" id="12" rel="mod">
+        <node begin="7" end="8" id="13" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="8" end="9" id="14" lemma="1968" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1968" word="1968"/>
+      </node>
+      <node begin="3" cat="pp" end="32" id="15" rel="pc">
+        <node begin="6" end="7" getal="getal" id="16" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="pobj1" root="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="9" end="10" id="17" lemma="toe" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="toe" vztype="fin" word="toe"/>
+        <node begin="3" cat="ti" end="32" id="18" rel="vc">
+          <node begin="12" end="13" id="19" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="3" cat="inf" end="32" id="20" rel="body">
+            <node begin="3" end="6" id="21" index="1" rel="su"/>
+            <node begin="11" end="12" id="22" lemma="voor" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="voor" vztype="fin" word="voor"/>
+            <node begin="13" buiging="zonder" end="14" id="23" lemma="stellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel" word="stellen" wvorm="inf"/>
+            <node begin="14" cat="ti" end="32" id="24" rel="vc">
+              <node begin="23" end="24" id="25" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+              <node begin="14" cat="inf" end="32" id="26" rel="body">
+                <node begin="14" cat="np" end="22" id="27" rel="obj1">
+                  <node begin="14" end="15" id="28" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="15" buiging="met-e" end="16" graad="basis" id="29" lemma="gezamenlijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gezamenlijk" word="gezamenlijke"/>
+                  <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="30" lemma="gedragslijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gedragslijn" word="gedragslijn"/>
+                  <node begin="17" cat="pp" end="22" id="31" rel="mod">
+                    <node begin="17" end="18" id="32" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                    <node begin="18" cat="np" end="22" id="33" rel="obj1">
+                      <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="34" lemma="samenwerking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="samenwerking" word="samenwerking"/>
+                      <node begin="19" cat="pp" end="22" id="35" rel="mod">
+                        <node begin="19" end="20" id="36" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>
+                        <node begin="20" cat="np" end="22" id="37" rel="obj1">
+                          <node begin="20" buiging="met-e" end="21" graad="basis" id="38" lemma="plaatselijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="plaatselijk" word="plaatselijke"/>
+                          <node begin="21" end="22" getal="mv" graad="basis" id="39" lemma="vereniging" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vereniging" word="verenigingen"/>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node begin="22" end="23" id="40" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
+                <node begin="24" buiging="zonder" end="25" id="41" lemma="stippelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stippel" word="stippelen" wvorm="inf"/>
+                <node begin="25" cat="pp" end="32" id="42" rel="mod">
+                  <node begin="25" cat="mwu" end="28" id="43" rel="hd">
+                    <node begin="25" end="26" id="44" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+                    <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="45" lemma="basis" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="basis" word="basis"/>
+                    <node begin="27" end="28" id="46" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+                  </node>
+                  <node begin="28" cat="np" end="32" id="47" rel="obj1">
+                    <node begin="28" end="29" id="48" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                    <node begin="29" buiging="zonder" end="30" graad="basis" id="49" lemma="gezamenlijk" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="gezamenlijk" word="gezamenlijk"/>
+                    <node begin="30" buiging="zonder" end="31" graad="basis" id="50" lemma="landelijk" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="landelijk" word="landelijk"/>
+                    <node begin="31" end="32" genus="onz" getal="ev" graad="basis" id="51" lemma="advies" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="advies" word="advies"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="32" end="33" id="52" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Deze ontwikkeling bracht het WitGele Kruis er in 1968 toe , voor te stellen een gezamenlijke gedragslijn voor samenwerking tussen plaatselijke verenigingen uit te stippelen op basis van een gezamenlijk landelijk advies .</sentence>
+</alpino_ds>

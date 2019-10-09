@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="9" end="10" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="14" end="15" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="20" id="3" rel="--">
+      <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="20" id="5" rel="vc">
+        <node begin="0" buiging="zonder" end="1" id="6" lemma="inschrijven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schrijf_in" word="Ingeschreven" wvorm="vd"/>
+        <node begin="2" cat="conj" end="20" id="7" index="1" rel="obj1">
+          <node begin="2" cat="np" end="9" id="8" rel="cnj">
+            <node begin="2" cat="mwu" end="4" id="9" index="2" rel="mod">
+              <node begin="2" end="3" id="10" lemma="onder" pos="adv" postag="VZ(init)" pt="vz" rel="mwp" root="onder" vztype="init" word="onder"/>
+              <node begin="3" buiging="zonder" end="4" graad="comp" id="11" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="meer" vwtype="onbep" word="meer"/>
+            </node>
+            <node begin="4" end="5" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="5" cat="mwu" end="9" id="13" rel="hd">
+              <node begin="5" end="6" id="14" lemma="partij" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Partij" spectype="deeleigen" word="Partij"/>
+              <node begin="6" end="7" id="15" lemma="van" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+              <node begin="7" end="8" id="16" lemma="de" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+              <node begin="8" end="9" id="17" lemma="niks" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Niks" spectype="deeleigen" word="Niks"/>
+            </node>
+          </node>
+          <node begin="2" cat="np" end="14" id="18" rel="cnj">
+            <node begin="2" end="4" id="19" index="2" rel="mod"/>
+            <node begin="10" cat="mwu" end="14" id="20" rel="hd">
+              <node begin="10" end="11" id="21" lemma="De" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
+              <node begin="11" end="12" id="22" lemma="stemmen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Stem" spectype="deeleigen" word="Stem"/>
+              <node begin="12" end="13" id="23" lemma="van" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+              <node begin="13" end="14" id="24" lemma="jezelf" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jezelf" spectype="deeleigen" word="Jezelf"/>
+            </node>
+          </node>
+          <node begin="2" cat="np" end="17" id="25" rel="cnj">
+            <node begin="2" end="4" id="26" index="2" rel="mod"/>
+            <node begin="15" end="16" id="27" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="16" end="17" genus="genus" getal="ev" graad="basis" id="28" lemma="Piratenpartij" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Piratenpartij" word="Piratenpartij"/>
+          </node>
+          <node begin="17" conjtype="neven" end="18" id="29" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="2" cat="np" end="20" id="30" rel="cnj">
+            <node begin="2" end="4" id="31" index="2" rel="mod"/>
+            <node begin="18" cat="mwu" end="20" id="32" rel="hd">
+              <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="33" lemma="lijst" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Lijst" word="Lijst"/>
+              <node begin="19" end="20" id="34" lemma="0" numtype="hoofd" pos="name" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="0" word="0"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="2" end="20" id="35" index="1" rel="su"/>
+    </node>
+    <node begin="20" end="21" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ingeschreven zijn onder meer de Partij van de Niks , De Stem van Jezelf , de Piratenpartij en Lijst 0 .</sentence>
+</alpino_ds>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="smain" end="17" id="1" rel="--">
+      <node begin="0" cat="np" end="5" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="het" pos="det" rel="det" root="dit" wh="nwh" word="Dit"/>
+        <node aform="base" begin="1" end="2" id="4" infl="e" pos="adj" rel="mod" root="indrukwekkend" vform="adj" word="indrukwekkende"/>
+        <node begin="2" end="3" gen="het" id="5" num="sg" pos="noun" rel="hd" root="aanbod" word="aanbod"/>
+        <node begin="3" cat="pp" end="5" id="6" rel="mod">
+          <node begin="3" end="4" id="7" pos="prep" rel="hd" root="aan" word="aan"/>
+          <node begin="4" end="5" gen="de" id="8" num="pl" pos="noun" rel="obj1" root="functie" word="functies"/>
+        </node>
+      </node>
+      <node begin="5" end="6" id="9" infl="sg3" pos="verb" rel="hd" root="geef" sc="transitive" tense="present" word="geeft"/>
+      <node begin="6" cat="np" end="8" id="10" rel="mod">
+        <node begin="6" end="7" id="11" infl="de" pos="det" rel="det" root="de" word="de"/>
+        <node begin="7" end="8" gen="both" id="12" num="bare_meas" pos="noun" rel="hd" root="E-620" special="amount_meas_mod" word="E-620"/>
+      </node>
+      <node begin="8" cat="np" end="17" id="13" rel="obj1">
+        <node begin="8" end="9" id="14" infl="een" pos="det" rel="det" root="een" word="een"/>
+        <node begin="9" end="10" gen="het" id="15" num="sg" pos="noun" rel="hd" root="potentieel" word="potentieel"/>
+        <node begin="10" cat="rel" end="17" id="16" rel="mod">
+          <node begin="10" end="11" id="17" index="1" pos="pp" rel="rhd" root="waarvan" special="waar" word="waarvan"/>
+          <node begin="10" cat="ssub" end="17" id="18" rel="body">
+            <node begin="11" cat="np" end="13" id="19" index="2" rel="su">
+              <node begin="11" end="12" id="20" infl="een" pos="det" rel="det" root="een" word="een"/>
+              <node begin="12" end="13" gen="de" id="21" num="sg" pos="noun" rel="hd" root="fotograaf" word="fotograaf"/>
+            </node>
+            <node begin="15" end="16" id="22" infl="sg" pos="verb" rel="hd" root="kan" sc="aux(inf)" tense="past" word="kon"/>
+            <node begin="10" cat="inf" end="17" id="23" rel="vc">
+              <node begin="10" end="11" id="24" index="1" rel="pc"/>
+              <node begin="11" end="13" id="25" index="2" rel="su"/>
+              <node begin="13" cat="advp" end="15" id="26" rel="mod">
+                <node begin="13" end="14" id="27" pos="adv" rel="mod" root="enkel" sc="modal" word="enkel"/>
+                <node begin="14" end="15" id="28" pos="adv" rel="hd" root="maar" word="maar"/>
+              </node>
+              <node begin="16" end="17" id="29" infl="inf" pos="verb" rel="hd" root="droom" sc="pc_pp(van)" word="dromen"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="30" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Dit indrukwekkende aanbod aan functies geeft de E-620 een potentieel waarvan een fotograaf enkel maar kon dromen .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

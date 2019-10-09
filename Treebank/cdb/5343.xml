@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="0" cat="smain" end="18" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="2" lemma="Amsterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Amsterdam" word="Amsterdam"/>
+      <node begin="1" end="2" id="3" lemma="veroveren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verover" word="veroverde" wvorm="pv"/>
+      <node begin="2" cat="np" end="8" id="4" rel="obj1">
+        <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" id="6" lemma="twee" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="tweede" word="tweede"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="7" lemma="plaats" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="plaats" word="plaats"/>
+        <node begin="5" cat="pp" end="8" id="8" rel="mod">
+          <node begin="5" end="6" id="9" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="6" cat="np" end="8" id="10" rel="obj1">
+            <node begin="6" end="7" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="12" lemma="ranglijst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ranglijst" word="ranglijst"/>
+          </node>
+        </node>
+      </node>
+      <node begin="8" cat="pp" end="12" id="13" rel="mod">
+        <node begin="8" end="9" id="14" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+        <node begin="9" cat="np" end="12" id="15" rel="obj1">
+          <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="16" lemma="winst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="winst" word="winst"/>
+          <node begin="10" cat="pp" end="12" id="17" rel="mod">
+            <node begin="10" end="11" id="18" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="19" lemma="HDM" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="HDM" word="HDM"/>
+          </node>
+        </node>
+      </node>
+      <node begin="12" cat="pp" end="18" id="20" rel="mod">
+        <node begin="12" end="13" id="21" lemma="via" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="via" vztype="init" word="via"/>
+        <node begin="13" cat="np" end="18" id="22" rel="obj1">
+          <node begin="13" end="14" id="23" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="24" lemma="treffer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="treffer" word="treffer"/>
+          <node begin="15" cat="pp" end="18" id="25" rel="mod">
+            <node begin="15" end="16" id="26" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="16" cat="mwu" end="18" id="27" rel="obj1">
+              <node begin="16" end="17" id="28" lemma="Eeftink" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Eeftink" spectype="deeleigen" word="Eeftink"/>
+              <node begin="17" end="18" id="29" lemma="Schattekerk" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Schattekerk" spectype="deeleigen" word="Schattekerk"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="30" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Amsterdam veroverde de tweede plaats op de ranglijst door winst op HDM via een treffer van Eeftink Schattekerk .</sentence>
+</alpino_ds>

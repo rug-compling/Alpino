@@ -1,0 +1,32 @@
+#!/usr/bin/perl -w
+
+# input:          .zest file 
+# output: smaller .zest file where only features with a number lower 
+#           than -f are kept
+
+
+use Getopt::Std;
+
+
+# OPTIONS
+$opt_f = 100;  # only features with a lower number are kept
+
+getopts('f:');
+
+while(<>) {
+  @nlist=();
+  @fields=split;
+  if (@fields < 2) {
+    print "$fields[0]\n";
+  } else {
+    for($i=2;@fields>$i;$i=$i+2) {
+      if ($fields[$i] < $opt_f) {
+	push(@nlist,$fields[$i],$fields[$i+1])
+      }
+    }
+    $len=@nlist/2;
+    print "$fields[0] $len @nlist\n";
+
+  }
+}
+

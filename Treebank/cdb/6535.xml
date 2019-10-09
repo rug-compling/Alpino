@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="9" end="10" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="12" end="13" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="22" id="3" rel="--">
+      <node begin="0" cat="np" end="12" id="4" rel="su">
+        <node begin="0" end="1" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="6" lemma="secretaris" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="secretaris" word="secretaris"/>
+        <node begin="2" cat="pp" end="5" id="7" rel="mod">
+          <node begin="2" end="3" id="8" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+          <node begin="3" cat="np" end="5" id="9" rel="obj1">
+            <node begin="3" end="4" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="voorlichting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorlichting" word="voorlichting"/>
+          </node>
+        </node>
+        <node begin="5" cat="pp" end="9" id="12" rel="mod">
+          <node begin="5" end="6" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="6" cat="np" end="9" id="14" rel="obj1">
+            <node begin="6" end="7" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="7" buiging="met-e" end="8" graad="basis" id="16" lemma="Tsjechisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Tsjechisch" word="Tsjechische"/>
+            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="17" lemma="ambassade" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ambassade" word="ambassade"/>
+          </node>
+        </node>
+        <node begin="10" cat="mwu" end="12" id="18" rel="app">
+          <node begin="10" end="11" id="19" lemma="Jozef" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jozef" spectype="deeleigen" word="Jozef"/>
+          <node begin="11" end="12" id="20" lemma="Pazout" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Pazout" spectype="deeleigen" word="Pazout"/>
+        </node>
+      </node>
+      <node begin="13" end="14" id="21" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
+      <node begin="14" cat="cp" end="22" id="22" rel="vc">
+        <node begin="14" conjtype="onder" end="15" id="23" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="15" cat="ssub" end="22" id="24" rel="body">
+          <node begin="15" cat="np" end="18" id="25" index="1" rel="su">
+            <node begin="15" end="16" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="27" lemma="heer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="heer" word="heer"/>
+            <node begin="17" end="18" genus="genus" getal="ev" graad="basis" id="28" lemma="Cihak" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Cihak" word="Cihak"/>
+          </node>
+          <node begin="20" end="21" id="29" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          <node begin="15" cat="ppart" end="22" id="30" rel="vc">
+            <node begin="15" end="18" id="31" index="1" rel="obj1"/>
+            <node begin="18" cat="pp" end="20" id="32" rel="ld">
+              <node begin="18" end="19" id="33" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+              <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="34" lemma="Praag" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Praag" word="Praag"/>
+            </node>
+            <node begin="21" buiging="zonder" end="22" id="35" lemma="terugroepen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="roep" word="teruggeroepen" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De secretaris voor de voorlichting van de Tsjechische ambassade , Jozef Pazout , zei dat de heer Cihak naar Praag is teruggeroepen .</sentence>
+</alpino_ds>

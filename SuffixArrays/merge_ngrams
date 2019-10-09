@@ -1,0 +1,53 @@
+#!/usr/bin/perl -w
+#
+# (c) Gertjan van Noord
+#
+# This program is free software; you can redistribute it and/or modify 
+# it under the terms of the GNU General Public License as published by 
+# the Free Software Foundation; either version 2 of the License, or    
+# (at your option) any later version.                                  
+#                                                                      
+# This program is distributed in the hope that it will be useful,      
+# but WITHOUT ANY WARRANTY; without even the implied warranty of       
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the        
+# GNU General Public License for more details.                         
+#                                                                      
+# You should have received a copy of the GNU General Public License    
+# along with this program; if not, write to the Free Software          
+# Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.            
+#                                                                      
+# cf. the file COPYING                                                 
+#
+
+# Assume you have several Ngram files created fromd different corpora/
+# different parts of a corpus. These files must have been created using
+# the -N switch of suffix_array.
+# First, merge those files using the following UNIX command:
+#
+# LANG=POSIX LC_ALL=POSIX sort -t\| -k1,1n -k2,2
+#
+# and pipe the result to this script, which will sum the counts for 
+# identical N-grams.
+
+
+while (<>) {
+    chomp;
+#    ($N,$ngram,$count) = split('\|');
+#    split using | but allow for | in 2nd field (sigh)
+    /^([^|]*)\|(.*)\|([^|]*)$/o;
+    if (defined $1 && defined $2 && defined $3) {
+        $N=$1;
+        $ngram=$2;
+        $count=$3;
+        if (defined $prev_ngram && $ngram eq $prev_ngram && $N == $prev_N) {
+            $prev_count+=$count;
+        } else {
+            print "$prev_N|$prev_ngram|$prev_count\n" if (defined $prev_ngram);
+            $prev_count=$count;
+            $prev_ngram=$ngram;
+            $prev_N=$N;
+        }
+    }
+}
+
+print "$prev_N|$prev_ngram|$prev_count\n" if (defined $prev_ngram);

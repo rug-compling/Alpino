@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="15" id="1" rel="--">
+      <node begin="0" cat="np" end="6" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="1" cat="mwu" end="6" id="4" rel="hd">
+          <node begin="1" end="2" id="5" lemma="Gele" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Gele" spectype="deeleigen" word="Gele"/>
+          <node begin="2" end="3" id="6" lemma="Lis" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lis" spectype="deeleigen" word="Lis"/>
+          <node begin="3" end="4" id="7" lemma="&apos;" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="&apos;" spectype="deeleigen" word="&apos;"/>
+          <node begin="4" end="5" id="8" lemma="Variegata" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Variegata" spectype="deeleigen" word="Variegata"/>
+          <node begin="5" end="6" id="9" lemma="&apos;" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="&apos;" spectype="deeleigen" word="&apos;"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="10" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="7" cat="cp" end="10" id="11" rel="predc">
+        <node begin="7" end="8" id="12" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+        <node begin="8" cat="np" end="10" id="13" rel="body">
+          <node begin="8" buiging="met-e" end="9" graad="basis" id="14" lemma="wetenschappelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="wetenschappelijk" word="wetenschappelijke"/>
+          <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="15" lemma="naam" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="naam" word="naam"/>
+        </node>
+      </node>
+      <node begin="10" cat="mwu" end="15" id="16" rel="obj1">
+        <node begin="10" end="11" id="17" lemma="Iris" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Iris" spectype="deeleigen" word="Iris"/>
+        <node begin="11" end="12" id="18" lemma="pseudacorus" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="pseudacorus" spectype="deeleigen" word="pseudacorus"/>
+        <node begin="12" end="13" id="19" lemma="&apos;" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="&apos;" spectype="deeleigen" word="&apos;"/>
+        <node begin="13" end="14" id="20" lemma="Variegata" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Variegata" spectype="deeleigen" word="Variegata"/>
+        <node begin="14" end="15" id="21" lemma="&apos;" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="&apos;" spectype="deeleigen" word="&apos;"/>
+      </node>
+    </node>
+  </node>
+  <sentence>de Gele Lis &apos; Variegata &apos; heeft als wetenschappelijke naam Iris pseudacorus &apos; Variegata &apos;</sentence>
+</alpino_ds>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="np" end="17" id="1" rel="--">
+      <node begin="0" end="1" frame="noun(de,count,sg)" gen="de" id="2" lcat="np" num="sg" pos="noun" rel="hd" root="toepassing" sense="toepassing" word="Toepassing"/>
+      <node begin="1" cat="rel" end="17" id="3" rel="mod">
+        <node begin="1" case="no_obl" end="2" frame="rel_pronoun(de,no_obl)" gen="de" id="4" index="1" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+        <node begin="1" cat="ssub" end="17" id="5" rel="body">
+          <node begin="1" end="2" id="6" index="1" rel="su"/>
+          <node begin="2" end="3" frame="verb(unacc,sg3,passive)" id="7" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt"/>
+          <node begin="1" cat="ppart" end="17" id="8" rel="vc">
+            <node begin="1" end="2" id="9" index="1" rel="obj1"/>
+            <node begin="3" end="4" frame="verb(hebben,psp,transitive)" id="10" infl="psp" lcat="ppart" pos="verb" rel="hd" root="gebruik" sc="transitive" sense="gebruik" word="gebruikt"/>
+            <node begin="4" cat="oti" end="17" id="11" rel="mod">
+              <node begin="4" end="5" frame="complementizer(om)" id="12" lcat="oti" pos="comp" rel="cmp" root="om" sc="om" sense="om" word="om"/>
+              <node begin="5" cat="conj" end="17" id="13" rel="body">
+                <node begin="5" cat="ti" end="13" id="14" rel="cnj">
+                  <node begin="11" end="12" frame="complementizer(te)" id="15" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+                  <node begin="5" cat="inf" end="13" id="16" rel="body">
+                    <node begin="5" cat="conj" end="10" id="17" index="2" rel="obj1">
+                      <node begin="5" end="6" frame="noun(het,count,pl)" gen="het" id="18" lcat="np" num="pl" pos="noun" rel="cnj" root="voorbeeld_rapport" sense="voorbeeld_rapport" word="voorbeeldrapporten"/>
+                      <node begin="6" end="7" frame="conj(en)" id="19" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                      <node begin="7" cat="np" end="10" id="20" rel="cnj">
+                        <node begin="7" cat="mwu" end="9" id="21" mwu_root="online" mwu_sense="online" rel="mod">
+                          <node aform="base" begin="7" end="8" frame="adjective(both(adv))" id="22" infl="both" lcat="ap" pos="adj" rel="mwp" root="on" sense="on" vform="adj" word="on"/>
+                          <node aform="base" begin="8" end="9" frame="adjective(both(adv))" id="23" infl="both" lcat="ap" pos="adj" rel="mwp" root="line" sense="line" vform="adj" word="line"/>
+                        </node>
+                        <node begin="9" end="10" frame="noun(de,count,pl)" gen="de" id="24" lcat="np" num="pl" pos="noun" rel="hd" root="handleiding" sense="handleiding" word="handleidingen"/>
+                      </node>
+                    </node>
+                    <node begin="10" end="11" frame="adverb" id="25" index="3" lcat="advp" pos="adv" rel="mod" root="weer" sense="weer" word="weer"/>
+                    <node begin="12" end="13" frame="verb(hebben,inf,transitive)" id="26" infl="inf" lcat="inf" pos="verb" rel="hd" root="geef" sc="transitive" sense="geef" word="geven"/>
+                  </node>
+                </node>
+                <node begin="13" end="14" frame="conj(en)" id="27" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                <node begin="5" cat="ti" end="17" id="28" rel="cnj">
+                  <node begin="15" end="16" frame="complementizer(te)" id="29" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+                  <node begin="5" cat="inf" end="17" id="30" rel="body">
+                    <node begin="5" end="10" id="31" index="2" rel="obj1"/>
+                    <node begin="10" end="11" id="32" index="3" rel="mod"/>
+                    <node begin="14" end="15" frame="particle(af)" id="33" lcat="part" pos="part" rel="svp" root="af" sense="af" word="af"/>
+                    <node begin="16" end="17" frame="verb(hebben,inf,part_transitive(af))" id="34" infl="inf" lcat="inf" pos="verb" rel="hd" root="druk_af" sc="part_transitive(af)" sense="druk_af" word="drukken"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" frame="punct(punt)" id="35" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Toepassing die wordt gebruikt om voorbeeldrapporten en on line handleidingen weer te geven en af te drukken .</sentence>
+  <comments>
+    <comment>Q#179|Toepassing die wordt gebruikt om voorbeeldrapporten en on line handleidingen weer te geven en af te drukken .|1|1|-8.488093403164921</comment>
+  </comments>
+</alpino_ds>

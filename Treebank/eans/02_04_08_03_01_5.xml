@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="7" id="2" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="moeder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="tag" root="moeder" word="Moeder"/>
+      <node begin="2" cat="smain" end="7" id="4" rel="nucl">
+        <node begin="2" end="3" genus="onz" getal="ev" graad="dim" id="5" lemma="Kareltje" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,dim,onz,stan)" pt="n" rel="su" root="Kareltje" word="Kareltje"/>
+        <node begin="3" end="4" id="6" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+        <node begin="4" end="5" id="7" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
+        <node begin="5" cat="np" end="7" id="8" rel="obj1">
+          <node begin="5" end="6" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="10" lemma="bloedneus" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="neus" word="bloedneus"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="11" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>Moeder , Kareltje heeft weer een bloedneus !</sentence>
+</alpino_ds>

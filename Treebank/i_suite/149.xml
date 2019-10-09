@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="bevinden" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="bevind" word="bevind" wvorm="pv"/>
+      <node begin="2" end="3" getal="ev" id="4" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="se" root="me" status="red" vwtype="pr" word="me"/>
+      <node begin="3" cat="pp" end="7" id="5" rel="ld">
+        <node begin="3" end="4" getal="getal" id="6" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="4" cat="np" end="6" id="7" rel="mod">
+          <node begin="4" end="5" id="8" lemma="tien" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="tien" word="tien"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="meter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="meter" word="meter"/>
+        </node>
+        <node begin="6" end="7" id="10" lemma="buiten" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="buiten" vztype="fin" word="buiten"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Ik bevind me er tien meter buiten</sentence>
+</alpino_ds>

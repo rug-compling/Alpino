@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="4" rel="mod">
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="voorjaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="voorjaar" word="voorjaar"/>
+        <node begin="3" end="4" id="6" lemma="2007" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="2007" word="2007"/>
+      </node>
+      <node begin="4" cat="np" end="6" id="7" rel="obj1">
+        <node begin="4" end="5" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="antwoord" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="antwoord" word="antwoord"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Ik wil voorjaar 2007 een antwoord</sentence>
+</alpino_ds>

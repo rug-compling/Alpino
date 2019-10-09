@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" cat="np" end="8" id="2" rel="su">
+        <node begin="0" end="1" frame="determiner(een)" id="3" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="Een"/>
+        <node aform="base" begin="1" end="2" frame="adjective(e)" id="4" infl="e" lcat="ap" pos="adj" rel="mod" root="origineel" sense="origineel" vform="adj" word="originele"/>
+        <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="medium_campagne" sense="medium_campagne" word="mediacampagne"/>
+        <node begin="3" cat="pp" end="8" id="6" rel="mod">
+          <node begin="3" end="4" frame="preposition(in,[])" id="7" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+          <node begin="4" cat="np" end="8" id="8" rel="obj1">
+            <node begin="4" end="5" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="9" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+            <node begin="5" end="6" frame="tmp_noun(het,count,sg)" gen="het" id="10" lcat="np" num="sg" pos="noun" rel="hd" root="najaar" sense="najaar" special="tmp" word="najaar"/>
+            <node begin="6" cat="pp" end="8" id="11" rel="mod">
+              <node begin="6" end="7" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="12" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+              <node begin="7" end="8" frame="np(year)" id="13" lcat="np" neclass="year" pos="noun" rel="obj1" root="2006" sense="2006" word="2006"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="8" end="9" frame="verb(hebben,past(sg),transitive)" id="14" infl="sg" lcat="smain" pos="verb" rel="hd" root="ondersteun" sc="transitive" sense="ondersteun" tense="past" word="ondersteunde"/>
+      <node begin="9" cat="np" end="11" id="15" rel="obj1">
+        <node begin="9" end="10" frame="determiner(het,nwh,nmod,pro,nparg)" id="16" infl="het" lcat="detp" pos="det" rel="det" root="dit" sense="dit" wh="nwh" word="dit"/>
+        <node begin="10" end="11" frame="noun(het,count,sg)" gen="het" id="17" lcat="np" num="sg" pos="noun" rel="hd" root="initiatief" sense="initiatief" word="initiatief"/>
+      </node>
+    </node>
+    <node begin="11" end="12" frame="punct(punt)" id="18" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Een originele mediacampagne in het najaar van 2006 ondersteunde dit initiatief .</sentence>
+  <comments>
+    <comment>Q#124|Een originele mediacampagne in het najaar van 2006 ondersteunde dit initiatief .|1|1|-2.0695252103293122</comment>
+  </comments>
+</alpino_ds>

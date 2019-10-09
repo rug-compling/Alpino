@@ -1,0 +1,9 @@
+#
+# example: a simple drs "John owns dog" 4-Jan-96
+#
+# SEQ leaves more space between objects than Seq or seq
+
+clig {drs {SEQ {plain-text "a"} {plain-text "x"}} 
+        {plain-text "dog(a)"} 
+        {plain-text "Jones(x)"}
+        {plain-text "owns(x,a)"}}

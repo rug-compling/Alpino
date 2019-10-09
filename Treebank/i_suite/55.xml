@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" rel="su">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" vwtype="onbep" word="Alle"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="werkzaamheden" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="werkzaamheid" word="werkzaamheden"/>
+        <node begin="2" cat="cp" end="4" id="5" rel="mod">
+          <node begin="2" buiging="zonder" end="3" graad="basis" id="6" lemma="inclusief" pos="comp" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cmp" root="inclusief" word="inclusief"/>
+          <node begin="3" buiging="zonder" end="4" id="7" lemma="opruimen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="ruim_op" word="opruimen" wvorm="inf"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="8" lemma="kosten" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kost" word="kostten" wvorm="pv"/>
+      <node begin="5" end="6" getal="mv" id="9" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj2" root="ons" status="vol" vwtype="pr" word="ons"/>
+      <node begin="6" cat="np" end="8" id="10" rel="me">
+        <node begin="6" end="7" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="12" lemma="fortuin" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="fortuin" word="fortuin"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Alle werkzaamheden inclusief opruimen kostten ons een fortuin .</sentence>
+</alpino_ds>

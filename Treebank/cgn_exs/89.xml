@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="np" end="8" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+      <node begin="1" end="2" getal="mv" graad="basis" id="3" lemma="bal" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bal" word="ballen"/>
+      <node begin="2" cat="rel" end="8" id="4" rel="mod">
+        <node begin="2" end="3" getal="getal" id="5" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+        <node begin="2" cat="ssub" end="8" id="6" rel="body">
+          <node begin="2" end="3" id="7" index="1" rel="obj1"/>
+          <node begin="3" cat="np" end="5" id="8" rel="su">
+            <node begin="3" end="4" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="keeper" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="keeper" word="keeper"/>
+          </node>
+          <node begin="5" cat="pp" end="7" id="11" rel="ld">
+            <node begin="5" end="6" id="12" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+            <node begin="6" end="7" id="13" lemma="voren" pos="adv" postag="BW()" pt="bw" rel="obj1" root="voren" word="voren"/>
+          </node>
+          <node begin="7" end="8" id="14" lemma="schieten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="schiet" word="schiet" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>de ballen die de keeper naar voren schiet</sentence>
+</alpino_ds>

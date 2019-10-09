@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="16" end="17" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="21" id="2" rel="--">
+      <node begin="0" cat="smain" end="6" id="3" rel="cnj">
+        <node begin="0" cat="np" end="2" id="4" rel="su">
+          <node begin="0" buiging="zonder" end="1" id="5" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="Die"/>
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="6" lemma="stranding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stranding" word="stranding"/>
+        </node>
+        <node begin="2" end="3" id="7" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        <node begin="3" cat="np" end="5" id="8" rel="predc">
+          <node begin="3" buiging="zonder" end="4" getal="ev" id="9" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="schuld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schuld" word="schuld"/>
+        </node>
+        <node begin="5" end="6" id="11" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      </node>
+      <node begin="6" conjtype="neven" end="7" id="12" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="7" cat="smain" end="21" id="13" rel="cnj">
+        <node begin="17" end="18" id="14" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+        <node begin="18" end="19" getal="ev" id="15" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="7" cat="ppart" end="21" id="16" rel="vc">
+          <node begin="7" cat="cp" end="16" id="17" rel="mod">
+            <node begin="7" end="8" id="18" lemma="voorzover" pos="comp" postag="BW()" pt="bw" rel="cmp" root="voorzover" word="voorzover"/>
+            <node begin="8" cat="ssub" end="16" id="19" rel="body">
+              <node begin="8" end="9" getal="ev" id="20" index="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+              <node begin="14" end="15" id="21" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+              <node begin="8" cat="ppart" end="16" id="22" rel="vc">
+                <node begin="8" end="9" id="23" index="2" rel="su"/>
+                <node begin="9" end="10" id="24" lemma="toen" pos="adv" postag="BW()" pt="bw" rel="mod" root="toen" word="toen"/>
+                <node begin="10" end="11" id="25" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
+                <node begin="11" cat="np" end="14" id="26" rel="obj1">
+                  <node begin="11" end="12" getal="ev" id="27" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="num" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="det" root="wat" status="vol" vwtype="onbep" word="wat"/>
+                  <node begin="12" buiging="met-e" end="13" graad="basis" id="28" lemma="klein" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="klein" word="kleine"/>
+                  <node begin="13" end="14" getal="mv" graad="basis" id="29" lemma="fout" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="fout" word="fouten"/>
+                </node>
+                <node begin="15" buiging="zonder" end="16" id="30" lemma="maken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="maak" word="gemaakt" wvorm="vd"/>
+              </node>
+            </node>
+          </node>
+          <node begin="18" end="19" id="31" index="1" rel="su"/>
+          <node begin="19" end="20" id="32" lemma="ervan" pos="pp" postag="BW()" pt="bw" rel="pc" root="ervan" word="ervan"/>
+          <node begin="20" buiging="zonder" end="21" id="33" lemma="leren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geleerd" word="geleerd" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="34" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="22" end="23" id="35" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>Die stranding was mijn schuld niet en voorzover ik toen toch wat kleine fouten heb gemaakt , heb ik ervan geleerd . &quot;</sentence>
+</alpino_ds>

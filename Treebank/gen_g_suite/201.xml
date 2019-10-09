@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="mannen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="man" word="mannen"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zien" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zie" word="zien" wvorm="pv"/>
+      <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="Jan" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Jan" word="Jan"/>
+    </node>
+  </node>
+  <sentence>de mannen zien Jan</sentence>
+</alpino_ds>
