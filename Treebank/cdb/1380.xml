@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="conj" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="cnj">
+        <node begin="0" end="1" id="3" lemma="12" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="12" word="12"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="percent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="percent" word="percent"/>
+      </node>
+      <node begin="2" conjtype="neven" end="3" id="5" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="3" cat="np" end="6" id="6" rel="cnj">
+        <node begin="3" cat="np" end="5" id="7" rel="me">
+          <node begin="3" buiging="zonder" end="4" id="8" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="frank" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="frank" word="frank"/>
+        </node>
+        <node begin="5" buiging="zonder" end="6" graad="comp" id="10" lemma="veel" naamval="stan" pdtype="grad" pos="num" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="hd" root="meer" vwtype="onbep" word="meer"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>12 percent en geen frank meer .</sentence>
+  <comments>
+    <comment>alternatief: meer als mod bij frank?? Yes, according to Leuven YP</comment>
+  </comments>
+</alpino_ds>

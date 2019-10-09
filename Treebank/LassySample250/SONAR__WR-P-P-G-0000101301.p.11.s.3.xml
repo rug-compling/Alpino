@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="11" end="12" frame="punct(ligg_streep)" id="1" lcat="punct" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" sense="-" special="ligg_streep" word="-"/>
+    <node begin="0" cat="du" end="20" id="2" rel="--">
+      <node begin="0" cat="smain" end="11" id="3" rel="dp">
+        <node begin="0" cat="np" end="2" id="4" index="1" rel="su">
+          <node begin="0" buiging="zonder" end="1" frame="determiner(geen,nwh,mod,pro,yparg,nwkpro,geen)" id="5" infl="geen" lcat="detp" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" sense="geen" vwtype="onbep" wh="nwh" word="Geen"/>
+          <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lcat="np" lemma="beroepsgroep" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beroep_groep" sense="beroep_groep" word="beroepsgroep"/>
+        </node>
+        <node begin="2" end="3" frame="verb(unacc,sg_heeft,passive)" id="7" infl="sg_heeft" lcat="smain" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="passive" sense="ben" tense="present" word="is" wvorm="pv"/>
+        <node begin="0" cat="ppart" end="11" id="8" rel="vc">
+          <node begin="0" end="2" id="9" index="1" rel="obj1"/>
+          <node begin="5" buiging="zonder" end="6" frame="verb(hebben,psp,transitive)" id="10" infl="psp" lcat="ppart" lemma="organiseren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="organiseer" sc="transitive" sense="organiseer" word="georganiseerd" wvorm="vd"/>
+          <node begin="3" cat="ap" end="11" id="11" rel="mod">
+            <node aform="base" begin="4" buiging="zonder" end="5" frame="adjective(no_e(adv))" graad="basis" id="12" infl="no_e" lcat="ap" lemma="slecht" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="slecht" sense="slecht" vform="adj" word="slecht"/>
+            <node begin="3" cat="advp" end="11" id="13" rel="mod">
+              <node begin="3" comparative="als" end="4" frame="comp_adverb(als)" id="14" lcat="advp" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="hd" root="zo" sense="zo" special="comp" word="zo"/>
+              <node begin="6" cat="cp" end="11" id="15" rel="obcomp">
+                <node begin="6" end="7" frame="comparative(als)" id="16" lcat="comparative" lemma="als" pos="comparative" postag="VZ(init)" pt="vz" rel="cmp" root="als" sense="als" vztype="init" word="als"/>
+                <node begin="7" cat="conj" end="11" id="17" rel="body">
+                  <node begin="7" cat="np" end="9" id="18" rel="cnj">
+                    <node begin="7" end="8" frame="determiner(de)" id="19" index="2" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+                    <node begin="8" end="9" frame="noun(de,mass,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="20" lcat="np" lemma="verpleging" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verpleging" sense="verpleging" word="verpleging"/>
+                  </node>
+                  <node begin="9" conjtype="neven" end="10" frame="conj(en)" id="21" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+                  <node begin="7" cat="np" end="11" id="22" rel="cnj">
+                    <node begin="7" end="8" id="23" index="2" rel="det"/>
+                    <node begin="10" end="11" frame="noun(de,mass,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="24" lcat="np" lemma="verzorging" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verzorging" sense="verzorging" word="verzorging"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="12" cat="smain" end="20" id="25" rel="dp">
+        <node begin="12" cat="np" end="17" id="26" rel="su">
+          <node begin="12" end="13" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="27" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+          <node begin="13" end="14" frame="noun(het,count,sg,measure)" gen="het" genus="onz" getal="ev" graad="basis" id="28" lcat="np" lemma="percentage" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="percentage" sc="measure" sense="percentage-MEAS" word="percentage"/>
+          <node begin="14" cat="np" end="17" id="29" rel="mod">
+            <node begin="14" end="15" frame="noun(het,count,pl)" gen="het" getal="mv" graad="basis" id="30" lcat="np" lemma="vakbondslid" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vakbond_lid" sense="vakbond_lid" word="vakbondsleden"/>
+            <node begin="15" cat="pp" end="17" id="31" rel="mod">
+              <node begin="15" end="16" frame="preposition(onder,[door,vandaan])" id="32" lcat="pp" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" sense="onder" vztype="init" word="onder"/>
+              <node begin="16" case="dat_acc" def="def" end="17" frame="pronoun(nwh,thi,pl,de,dat_acc,def)" gen="de" getal="mv" id="33" lcat="np" lemma="hen" naamval="obl" num="pl" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(pers,pron,obl,vol,3p,mv)" pt="vnw" rel="obj1" root="hen" sense="hen" status="vol" vwtype="pers" wh="nwh" word="hen"/>
+            </node>
+          </node>
+        </node>
+        <node begin="17" end="18" frame="verb(unacc,sg_heeft,copula)" id="34" infl="sg_heeft" lcat="smain" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="is" wvorm="pv"/>
+        <node begin="18" cat="ap" end="20" id="35" rel="predc">
+          <node aform="base" begin="18" buiging="zonder" end="19" frame="adjective(no_e(adv))" graad="basis" id="36" infl="no_e" lcat="ap" lemma="dramatisch" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="dramatisch" sense="dramatisch" vform="adj" word="dramatisch"/>
+          <node aform="base" begin="19" buiging="zonder" end="20" frame="adjective(no_e(adv))" graad="basis" id="37" infl="no_e" lcat="ap" lemma="laag" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="laag" sense="laag" vform="adj" word="laag"/>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" frame="punct(punt)" id="38" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Geen beroepsgroep is zo slecht georganiseerd als de verpleging en verzorging - het percentage vakbondsleden onder hen is dramatisch laag .</sentence>
+  <comments>
+    <comment>Q#WR-P-P-G-0000101301.p.11.s.3|Geen beroepsgroep is zo slecht georganiseerd als de verpleging en verzorging - het percentage vakbondsleden onder hen is dramatisch laag .|1|1|-0.0689582083382404</comment>
+  </comments>
+</alpino_ds>

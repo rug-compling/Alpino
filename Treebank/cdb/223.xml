@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="40" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="12" end="13" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="23" end="24" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="29" end="30" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="36" end="37" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="39" id="6" rel="--">
+      <node begin="0" cat="np" end="2" id="7" rel="su">
+        <node begin="0" end="1" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="9" lemma="gezelschap" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gezelschap" word="gezelschap"/>
+      </node>
+      <node begin="2" end="3" id="10" lemma="bestaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="besta" word="bestaat" wvorm="pv"/>
+      <node begin="3" cat="pp" end="6" id="11" rel="mod">
+        <node begin="3" end="4" id="12" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+        <node begin="4" cat="np" end="6" id="13" rel="obj1">
+          <node begin="4" end="5" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="15" lemma="merendeel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="merendeel" word="merendeel"/>
+        </node>
+      </node>
+      <node begin="6" cat="pp" end="39" id="16" rel="pc">
+        <node begin="6" end="7" id="17" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+        <node begin="7" cat="conj" end="39" id="18" rel="obj1">
+          <node begin="10" conjtype="neven" end="11" id="19" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="7" cat="np" end="39" id="20" rel="cnj">
+            <node begin="7" buiging="met-e" end="8" getal-n="mv-n" graad="comp" id="21" lemma="oud" pos="noun" positie="nom" postag="ADJ(nom,comp,met-e,mv-n)" pt="adj" rel="hd" root="ouderen" word="ouderen"/>
+            <node begin="13" cat="conj" end="39" id="22" index="1" rel="mod">
+              <node begin="13" cat="rel" end="23" id="23" rel="cnj">
+                <node begin="13" end="14" getal="getal" id="24" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+                <node begin="13" cat="ssub" end="23" id="25" rel="body">
+                  <node begin="13" end="14" id="26" index="2" rel="su"/>
+                  <node begin="17" end="18" id="27" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+                  <node begin="13" cat="ppart" end="23" id="28" rel="vc">
+                    <node begin="13" end="14" id="29" index="2" rel="su"/>
+                    <node begin="14" end="15" id="30" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="mod" root="eens" word="eens"/>
+                    <node begin="15" cat="np" end="17" id="31" rel="obj1">
+                      <node begin="15" buiging="zonder" end="16" getal="mv" id="32" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+                      <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="33" lemma="heil" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="heil" word="heil"/>
+                    </node>
+                    <node begin="18" buiging="zonder" end="19" id="34" lemma="zien" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zie" word="gezien" wvorm="vd"/>
+                    <node begin="19" cat="pp" end="23" id="35" rel="pc">
+                      <node begin="19" end="20" id="36" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                      <node begin="20" cat="np" end="23" id="37" rel="obj1">
+                        <node begin="20" end="21" id="38" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                        <node begin="21" buiging="met-e" end="22" graad="basis" id="39" lemma="Brabants" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Brabants" word="Brabantse"/>
+                        <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="40" lemma="wonderpakket" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="pakket" word="wonderpakket"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="24" conjtype="neven" end="25" id="41" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+              <node begin="25" cat="rel" end="39" id="42" rel="cnj">
+                <node begin="25" end="26" getal="getal" id="43" index="3" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+                <node begin="25" cat="ssub" end="39" id="44" rel="body">
+                  <node begin="25" end="26" id="45" index="3" rel="su"/>
+                  <node begin="37" end="38" id="46" lemma="willen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="wil" word="willen" wvorm="pv"/>
+                  <node begin="25" cat="inf" end="39" id="47" rel="vc">
+                    <node begin="25" end="26" id="48" index="3" rel="su"/>
+                    <node begin="26" end="27" id="49" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
+                    <node begin="27" cat="np" end="36" id="50" rel="obj1">
+                      <node begin="27" end="28" id="51" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                      <node begin="28" end="29" genus="onz" getal="ev" graad="basis" id="52" lemma="bloed" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bloed" word="bloed"/>
+                      <node begin="30" cat="np" end="36" id="53" rel="mod">
+                        <node begin="30" end="31" id="54" lemma="althans" pos="adv" postag="BW()" pt="bw" rel="mod" root="althans" word="althans"/>
+                        <node begin="31" end="32" id="55" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                        <node begin="32" end="33" genus="onz" getal="ev" graad="basis" id="56" lemma="geld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geld" word="geld"/>
+                        <node begin="33" cat="pp" end="36" id="57" rel="mod">
+                          <node begin="33" end="34" id="58" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                          <node begin="34" cat="np" end="36" id="59" rel="obj1">
+                            <node begin="34" end="35" id="60" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                            <node begin="35" end="36" genus="zijd" getal="ev" graad="basis" id="61" lemma="genezer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="genezer" word="genezer"/>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node begin="38" buiging="zonder" end="39" id="62" lemma="zien" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zie" word="zien" wvorm="inf"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="9" cat="np" end="39" id="63" rel="cnj">
+            <node begin="9" buiging="met-e" end="10" getal-n="mv-n" graad="basis" id="64" lemma="kreupel" pos="noun" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" root="kreupele" word="kreupelen"/>
+            <node begin="13" end="39" id="65" index="1" rel="mod"/>
+          </node>
+          <node begin="11" cat="np" end="39" id="66" rel="cnj">
+            <node begin="11" buiging="met-e" end="12" getal-n="mv-n" graad="basis" id="67" lemma="zieken" pos="noun" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" root="zieke" word="zieken"/>
+            <node begin="13" end="39" id="68" index="1" rel="mod"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="39" end="40" id="69" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het gezelschap bestaat voor het merendeel uit ouderen , kreupelen en zieken , die eens hun heil hebben gezien in het Brabantse wonderpakket , maar die nu het bloed , althans het geld van de genezer , willen zien .</sentence>
+</alpino_ds>

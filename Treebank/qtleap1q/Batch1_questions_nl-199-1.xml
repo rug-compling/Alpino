@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="6" end="7" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="8" end="9" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="17" id="4" rel="--">
+      <node begin="0" cat="cp" end="8" id="5" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="6" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+        <node begin="1" cat="ssub" end="8" id="7" rel="body">
+          <node begin="1" end="2" getal="ev" id="8" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+          <node begin="2" cat="np" end="6" id="9" rel="obj1">
+            <node begin="2" buiging="zonder" end="3" getal="ev" id="10" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="11" lemma="internet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="internet" word="internet"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="browser" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="browser" word="browser"/>
+          </node>
+          <node begin="7" end="8" id="13" lemma="openen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="open" word="open" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="9" end="10" id="14" lemma="zien" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zie" word="zie" wvorm="pv"/>
+      <node begin="10" end="11" getal="ev" id="15" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      <node begin="11" end="12" id="16" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      <node begin="12" cat="conj" end="17" id="17" rel="obj1">
+        <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="18" lemma="Google" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Google" word="Google"/>
+        <node begin="13" conjtype="neven" end="14" id="19" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+        <node begin="14" cat="np" end="17" id="20" rel="cnj">
+          <node begin="14" end="15" id="21" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="15" buiging="met-e" end="16" graad="basis" id="22" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
+          <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="23" lemma="pagina" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pagina" word="pagina"/>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als ik mijn internet ( browser ) open , zie ik niet Google maar een andere pagina .</sentence>
+</alpino_ds>

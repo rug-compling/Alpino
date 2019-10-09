@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="du" end="20" id="1" rel="--">
+      <node begin="0" end="1" frame="proper_name(both,'LOC')" id="2" lcat="np" lemma="BERINGEN" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="dp" root="Beringen" sense="Beringen" spectype="deeleigen" word="BERINGEN"/>
+      <node begin="1" cat="smain" end="20" id="3" rel="dp">
+        <node begin="1" cat="np" end="15" id="4" rel="su">
+          <node begin="1" end="2" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="5" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="Het"/>
+          <node aform="base" begin="2" buiging="met-e" end="3" frame="adjective(e)" graad="basis" id="6" infl="e" lcat="ap" lemma="gloednieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gloednieuw" sense="gloednieuw" vform="adj" word="gloednieuwe"/>
+          <node begin="3" end="4" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="7" lcat="np" lemma="naaiatelier" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="naai_atelier" sense="naai_atelier" word="naaiatelier"/>
+          <node begin="4" cat="pp" end="15" id="8" rel="mod">
+            <node begin="4" end="5" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="9" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+            <node begin="5" cat="np" end="15" id="10" rel="obj1">
+              <node begin="5" end="6" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lcat="np" lemma="vzw" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vzw" sense="vzw" word="vzw"/>
+              <node begin="6" cat="mwu" end="10" id="12" rel="app">
+                <node begin="6" end="7" frame="proper_name(both,'ORG')" id="13" lcat="np" lemma="Sociale" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Sociale" sense="Sociale" spectype="deeleigen" word="Sociale"/>
+                <node begin="7" end="8" frame="proper_name(both,'ORG')" id="14" lcat="np" lemma="Werkplaatsen" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Werkplaatsen" sense="Werkplaatsen" spectype="deeleigen" word="Werkplaatsen"/>
+                <node begin="8" end="9" frame="proper_name(both,'ORG')" id="15" lcat="np" lemma="de" lwtype="bep" naamval="stan" neclass="ORG" npagr="rest" num="both" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="De" sense="De" word="De"/>
+                <node begin="9" end="10" frame="proper_name(both,'ORG')" id="16" lcat="np" lemma="Posthoorn" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Posthoorn" sense="Posthoorn" spectype="deeleigen" word="Posthoorn"/>
+              </node>
+              <node begin="10" cat="pp" end="15" id="17" rel="mod">
+                <node begin="10" end="11" frame="preposition(in,[])" id="18" lcat="pp" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" sense="in" vztype="init" word="in"/>
+                <node begin="11" cat="np" end="15" id="19" rel="obj1">
+                  <node begin="11" end="12" frame="determiner(de)" id="20" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="12" end="13" frame="proper_name(both,'LOC')" id="21" lcat="np" lemma="Koolmijnlaan" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="hd" root="Koolmijnlaan" sense="Koolmijnlaan" spectype="deeleigen" word="Koolmijnlaan"/>
+                  <node begin="13" cat="pp" end="15" id="22" rel="mod">
+                    <node begin="13" end="14" frame="preposition(in,[])" id="23" lcat="pp" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" sense="in" vztype="init" word="in"/>
+                    <node begin="14" end="15" frame="proper_name(both,'LOC')" id="24" lcat="np" lemma="Beringen" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="obj1" root="Beringen" sense="Beringen" spectype="deeleigen" word="Beringen"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="15" end="16" frame="verb(hebben,past(sg),transitive)" id="25" infl="sg" lcat="smain" lemma="openen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="open" sc="transitive" sense="open" tense="past" word="opende" wvorm="pv"/>
+        <node begin="16" end="17" frame="tmp_adverb" id="26" lcat="advp" lemma="onlangs" pos="adv" postag="BW()" pt="bw" rel="mod" root="onlangs" sense="onlangs" special="tmp" word="onlangs"/>
+        <node aform="base" begin="17" buiging="zonder" end="18" frame="adjective(no_e(adv))" graad="basis" id="27" infl="no_e" lcat="ap" lemma="officieel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="officieel" sense="officieel" vform="adj" word="officieel"/>
+        <node begin="18" cat="np" end="20" id="28" rel="obj1">
+          <node begin="18" buiging="zonder" end="19" frame="determiner(pron)" getal="ev" id="29" infl="pron" lcat="detp" lemma="haar" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="haar" sense="haar" status="vol" vwtype="bez" word="haar"/>
+          <node begin="19" end="20" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="30" lcat="np" lemma="deur" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="deur" sense="deur" word="deuren"/>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" frame="punct(punt)" id="31" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>BERINGEN Het gloednieuwe naaiatelier van vzw Sociale Werkplaatsen De Posthoorn in de Koolmijnlaan in Beringen opende onlangs officieel haar deuren .</sentence>
+  <comments>
+    <comment>Q#LN_20040313_01-503-2-1|BERINGEN Het gloednieuwe naaiatelier van vzw Sociale Werkplaatsen De Posthoorn in de Koolmijnlaan in Beringen opende onlangs officieel haar deuren .|1|2|0.04963552725421923</comment>
+  </comments>
+</alpino_ds>

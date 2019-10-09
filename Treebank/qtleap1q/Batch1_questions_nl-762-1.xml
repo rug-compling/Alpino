@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="27" id="0" rel="top">
+    <node begin="14" end="15" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="26" id="2" rel="--">
+      <node begin="0" cat="smain" end="20" id="3" rel="cnj">
+        <node begin="0" cat="cp" end="14" id="4" rel="mod">
+          <node begin="0" conjtype="onder" end="1" id="5" lemma="wanneer" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="wanneer" word="Wanneer"/>
+          <node begin="1" cat="ssub" end="14" id="6" rel="body">
+            <node begin="1" end="2" getal="ev" id="7" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+            <node begin="2" end="3" id="8" lemma="proberen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="probeer" word="probeer" wvorm="pv"/>
+            <node begin="1" cat="oti" end="14" id="9" rel="vc">
+              <node begin="3" end="4" id="10" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+              <node begin="1" cat="ti" end="14" id="11" rel="body">
+                <node begin="12" end="13" id="12" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+                <node begin="1" cat="inf" end="14" id="13" rel="body">
+                  <node begin="1" end="2" id="14" index="1" rel="su"/>
+                  <node begin="4" cat="pp" end="8" id="15" rel="mod">
+                    <node begin="4" end="5" id="16" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                    <node begin="5" cat="mwu" end="8" id="17" rel="obj1">
+                      <node begin="5" end="6" id="18" lemma="Windows" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Windows" spectype="deeleigen" word="Windows"/>
+                      <node begin="6" end="7" id="19" lemma="Media" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Media" spectype="deeleigen" word="Media"/>
+                      <node begin="7" end="8" id="20" lemma="Player" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Player" spectype="deeleigen" word="Player"/>
+                    </node>
+                  </node>
+                  <node begin="8" cat="np" end="12" id="21" rel="obj1">
+                    <node begin="8" end="9" getal="mv" graad="basis" id="22" lemma="video" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="video" word="video&apos;s"/>
+                    <node begin="9" cat="pp" end="12" id="23" rel="mod">
+                      <node begin="9" end="10" id="24" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                      <node begin="10" cat="np" end="12" id="25" rel="obj1">
+                        <node begin="10" end="11" id="26" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                        <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="27" lemma="internet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="internet" word="internet"/>
+                      </node>
+                    </node>
+                  </node>
+                  <node begin="13" buiging="zonder" end="14" id="28" lemma="bekijken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bekijk" word="bekijken" wvorm="inf"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="15" end="16" id="29" lemma="horen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="hoor" word="hoor" wvorm="pv"/>
+        <node begin="16" end="17" getal="ev" id="30" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="17" cat="np" end="20" id="31" rel="obj1">
+          <node begin="17" end="18" id="32" lemma="alleen" pos="adj" postag="BW()" pt="bw" rel="mod" root="alleen" word="alleen"/>
+          <node begin="18" end="19" id="33" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="34" lemma="geluid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geluid" word="geluid"/>
+        </node>
+      </node>
+      <node begin="20" conjtype="neven" end="21" id="35" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="21" cat="smain" end="26" id="36" rel="cnj">
+        <node begin="21" end="22" getal="ev" id="37" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="22" end="23" id="38" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+        <node begin="23" end="24" getal="ev" id="39" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="24" cat="np" end="26" id="40" rel="obj1">
+          <node begin="24" buiging="zonder" end="25" id="41" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+          <node begin="25" end="26" genus="onz" getal="ev" graad="basis" id="42" lemma="beeld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="beeld" word="beeld"/>
+        </node>
+      </node>
+    </node>
+    <node begin="26" end="27" id="43" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Wanneer ik probeer om met Windows Media Player video&apos;s op het internet te bekijken , hoor ik alleen het geluid en ik heb ik geen beeld .</sentence>
+</alpino_ds>

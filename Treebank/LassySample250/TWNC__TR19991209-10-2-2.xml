@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="8" end="9" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="12" end="13" frame="punct(komma)" id="2" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="15" id="3" rel="--">
+      <node begin="0" case="both" def="def" end="1" frame="pronoun(nwh,thi,both,de,both,def,wkpro)" gen="de" getal="mv" id="4" lcat="np" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" sense="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="Ze"/>
+      <node begin="1" end="2" frame="verb(hebben,pl,transitive_ndev_ndev)" id="5" infl="pl" lcat="smain" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" sc="transitive_ndev_ndev" sense="kan" tense="present" word="kunnen" wvorm="pv"/>
+      <node begin="2" cat="conj" end="15" id="6" rel="obj1">
+        <node begin="2" cat="np" end="8" id="7" rel="cnj">
+          <node begin="2" end="3" frame="determiner(een)" id="8" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+          <node begin="3" cat="np" end="5" id="9" rel="obj1">
+            <node aform="base" begin="3" buiging="met-e" end="4" frame="adjective(ge_e)" id="10" infl="e" lcat="ppart" lemma="nabootsen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="nagebootst" sense="nagebootst" vform="psp" word="nagebootste" wvorm="vd"/>
+            <node begin="4" end="5" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lcat="np" lemma="hand" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hand" sense="hand" word="hand"/>
+          </node>
+          <node begin="5" cat="pp" end="7" id="12" rel="ld">
+            <node begin="5" end="6" frame="preposition(in,[])" id="13" lcat="pp" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" sense="in" vztype="init" word="in"/>
+            <node begin="6" end="7" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="14" lcat="np" lemma="vleeskleur" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="vlees_kleur" sense="vlees_kleur" word="vleeskleur"/>
+          </node>
+          <node begin="7" buiging="zonder" end="8" frame="v_noun(np_ld_pp)" id="15" lcat="np" lemma="nemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem" sc="np_ld_pp" sense="neem" special="v_noun" word="nemen" wvorm="inf"/>
+        </node>
+        <node begin="9" conjtype="neven" end="10" frame="conj(of)" id="16" lcat="vg" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" sense="of" word="of"/>
+        <node begin="10" cat="conj" end="15" id="17" rel="cnj">
+          <node begin="10" cat="np" end="12" id="18" rel="cnj">
+            <node begin="10" end="11" frame="determiner(een)" id="19" index="1" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+            <node begin="11" end="12" frame="noun(both,both,both)" gen="both" genus="zijd" getal="ev" graad="basis" id="20" lcat="np" lemma="grijper" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="grijper" sense="grijper" word="grijper"/>
+          </node>
+          <node begin="13" conjtype="neven" end="14" frame="conj(of)" id="21" lcat="vg" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" sense="of" word="of"/>
+          <node begin="10" cat="np" end="15" id="22" rel="cnj">
+            <node begin="10" end="11" id="23" index="1" rel="det"/>
+            <node begin="14" end="15" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="24" lcat="np" lemma="haak" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="haak" sense="haak" word="haak"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" frame="punct(punt)" id="25" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Ze kunnen een nagebootste hand in vleeskleur nemen , of een grijper , of haak .</sentence>
+  <comments>
+    <comment>Q#TR19991209-10-2-2|Ze kunnen een nagebootste hand in vleeskleur nemen , of een grijper , of haak .|1|1|0.0647290340272969</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="13" end="14" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="18" end="19" id="2" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="0" cat="du" end="23" id="3" rel="--">
+      <node begin="0" cat="smain" end="18" id="4" rel="dp">
+        <node begin="0" cat="pp" end="2" id="5" rel="mod">
+          <node begin="0" end="1" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+          <node begin="1" end="2" id="7" lemma="1992" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1992" word="1992"/>
+        </node>
+        <node begin="2" end="3" id="8" lemma="spelen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="speel" word="speelde" wvorm="pv"/>
+        <node begin="3" cat="mwu" end="5" id="9" rel="su">
+          <node begin="3" end="4" id="10" lemma="Denzel" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Denzel" spectype="deeleigen" word="Denzel"/>
+          <node begin="4" end="5" id="11" lemma="Washington" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Washington" spectype="deeleigen" word="Washington"/>
+        </node>
+        <node begin="5" cat="np" end="7" id="12" rel="obj1">
+          <node begin="5" end="6" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="hoofdrol" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hoofdrol" word="hoofdrol"/>
+        </node>
+        <node begin="7" cat="pp" end="18" id="15" rel="pc">
+          <node begin="7" end="8" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="8" cat="np" end="18" id="17" rel="obj1">
+            <node begin="8" end="9" id="18" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="19" lemma="film" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="film" word="film"/>
+            <node begin="10" cat="pp" end="18" id="20" rel="mod">
+              <node begin="10" end="11" id="21" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+              <node begin="11" cat="conj" end="18" id="22" rel="obj1">
+                <node begin="11" cat="np" end="16" id="23" rel="cnj">
+                  <node begin="11" end="12" id="24" index="1" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="12" buiging="met-e" end="13" graad="basis" id="25" index="2" lemma="Amerikaans" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Amerikaans" word="Amerikaanse"/>
+                  <node begin="14" buiging="met-e" end="15" graad="basis" id="26" index="3" lemma="zwart" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="zwart" word="zwarte"/>
+                  <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="27" lemma="nationalist" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="nationalist" word="nationalist"/>
+                </node>
+                <node begin="16" conjtype="neven" end="17" id="28" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                <node begin="11" cat="np" end="18" id="29" rel="cnj">
+                  <node begin="11" end="12" id="30" index="1" rel="det"/>
+                  <node begin="12" end="13" id="31" index="2" rel="mod"/>
+                  <node begin="14" end="15" id="32" index="3" rel="mod"/>
+                  <node begin="17" buiging="zonder" end="18" graad="basis" id="33" lemma="moslim" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="moslim" word="moslim"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="19" cat="whq" end="23" id="34" rel="dp">
+        <node begin="19" end="20" id="35" index="4" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+        <node begin="19" cat="sv1" end="23" id="36" rel="body">
+          <node begin="19" end="20" id="37" index="4" rel="predc"/>
+          <node begin="20" end="21" id="38" lemma="heten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heet" word="heet" wvorm="pv"/>
+          <node begin="21" cat="np" end="23" id="39" rel="su">
+            <node begin="21" end="22" id="40" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="41" lemma="film" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="film" word="film"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="42" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>In 1992 speelde Denzel Washington de hoofdrol in een film over een Amerikaanse , zwarte nationalist en moslim . Hoe heet de film ?</sentence>
+</alpino_ds>

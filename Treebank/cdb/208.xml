@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="41" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="15" end="16" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="24" end="25" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="40" id="4" rel="--">
+      <node begin="5" end="6" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="6" cat="np" end="15" id="6" index="1" rel="su">
+        <node begin="6" end="7" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="7" cat="mwu" end="9" id="8" rel="hd">
+          <node begin="7" end="8" id="9" lemma="Formule" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Formule" spectype="deeleigen" word="Formule"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="10" lemma="fordrijder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Fordrijder" word="Fordrijder"/>
+        </node>
+        <node begin="9" cat="mwu" end="11" id="11" rel="app">
+          <node begin="9" end="10" id="12" lemma="Ton" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ton" spectype="deeleigen" word="Ton"/>
+          <node begin="10" end="11" id="13" lemma="Strous" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Strous" spectype="deeleigen" word="Strous"/>
+        </node>
+        <node begin="12" cat="mwu" end="15" id="14" rel="mod">
+          <node begin="12" end="13" id="15" lemma="Radio" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Radio" spectype="deeleigen" word="Radio"/>
+          <node begin="13" end="14" id="16" lemma="Veronica" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Veronica" spectype="deeleigen" word="Veronica"/>
+          <node begin="14" end="15" id="17" lemma="Team" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Team" spectype="deeleigen" word="Team"/>
+        </node>
+      </node>
+      <node begin="0" cat="ppart" end="40" id="18" rel="vc">
+        <node begin="0" cat="pp" end="5" id="19" rel="mod">
+          <node begin="0" end="1" id="20" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="Na"/>
+          <node begin="1" cat="np" end="5" id="21" rel="obj1">
+            <node begin="1" end="2" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="2" end="3" getal="mv" graad="basis" id="23" lemma="race" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="race" word="races"/>
+            <node begin="3" cat="pp" end="5" id="24" rel="mod">
+              <node begin="3" end="4" id="25" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+              <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="26" lemma="Zandvoort" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Zandvoort" word="Zandvoort"/>
+            </node>
+          </node>
+        </node>
+        <node begin="6" end="15" id="27" index="1" rel="su"/>
+        <node begin="18" buiging="zonder" end="19" id="28" lemma="indienen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="dien" word="ingediend" wvorm="vd"/>
+        <node begin="16" cat="np" end="40" id="29" rel="obj1">
+          <node begin="16" end="17" id="30" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="31" lemma="protest" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="protest" word="protest"/>
+          <node begin="19" cat="pp" end="40" id="32" rel="mod">
+            <node begin="19" end="20" id="33" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
+            <node begin="20" cat="np" end="40" id="34" rel="obj1">
+              <node begin="20" end="21" id="35" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="36" lemma="dnrt-coureur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="Dnrt-coureur" word="Dnrt-coureur"/>
+              <node begin="22" cat="mwu" end="24" id="37" rel="app">
+                <node begin="22" end="23" id="38" lemma="Huub" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Huub" spectype="deeleigen" word="Huub"/>
+                <node begin="23" end="24" id="39" lemma="Vermeulen" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Vermeulen" spectype="deeleigen" word="Vermeulen"/>
+              </node>
+              <node begin="25" cat="rel" end="40" id="40" rel="mod">
+                <node begin="25" end="26" getal="getal" id="41" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+                <node begin="25" cat="ssub" end="40" id="42" rel="body">
+                  <node begin="25" end="26" id="43" index="2" rel="obj1"/>
+                  <node begin="26" end="27" genus="masc" getal="ev" id="44" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+                  <node begin="28" end="29" id="45" lemma="beschuldigen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="beschuldigde" word="beschuldigde" wvorm="pv"/>
+                  <node begin="25" cat="pp" end="40" id="46" rel="pc">
+                    <node begin="27" end="28" id="47" lemma="ervan" pos="pp" postag="BW()" pt="bw" rel="hd" root="ervan" word="ervan"/>
+                    <node begin="25" cat="ti" end="40" id="48" rel="vc">
+                      <node begin="37" end="38" id="49" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+                      <node begin="25" cat="inf" end="40" id="50" rel="body">
+                        <node begin="25" end="26" id="51" index="2" rel="su"/>
+                        <node begin="38" buiging="zonder" end="39" id="52" lemma="hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb" word="hebben" wvorm="inf"/>
+                        <node begin="25" cat="ppart" end="40" id="53" rel="vc">
+                          <node begin="25" end="26" id="54" index="2" rel="su"/>
+                          <node begin="29" end="30" genus="masc" getal="ev" id="55" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="vol" vwtype="pers" word="hem"/>
+                          <node begin="30" cat="pp" end="33" id="56" rel="mod">
+                            <node begin="30" end="31" id="57" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+                            <node begin="31" cat="np" end="33" id="58" rel="obj1">
+                              <node begin="31" end="32" id="59" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                              <node begin="32" end="33" genus="genus" getal="ev" graad="basis" id="60" lemma="Tarzanbocht" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Tarzanbocht" word="Tarzanbocht"/>
+                            </node>
+                          </node>
+                          <node begin="33" buiging="zonder" end="34" graad="basis" id="61" lemma="opzettelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="opzettelijk" word="opzettelijk"/>
+                          <node begin="34" cat="pp" end="37" id="62" rel="ld">
+                            <node begin="34" end="35" id="63" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                            <node begin="35" cat="np" end="37" id="64" rel="obj1">
+                              <node begin="35" end="36" id="65" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                              <node begin="36" end="37" genus="zijd" getal="ev" graad="basis" id="66" lemma="baan" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="baan" word="baan"/>
+                            </node>
+                          </node>
+                          <node begin="39" buiging="zonder" end="40" id="67" lemma="rammen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ram" word="geramd" wvorm="vd"/>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="40" end="41" id="68" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Na de races op Zandvoort heeft de Formule Fordrijder Ton Strous ( Radio Veronica Team ) een protest ingediend tegen de Dnrt-coureur Huub Vermeulen , die hij ervan beschuldigde hem bij de Tarzanbocht opzettelijk van de baan te hebben geramd .</sentence>
+</alpino_ds>

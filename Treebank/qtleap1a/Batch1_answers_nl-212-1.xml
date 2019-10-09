@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="mogelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="mogelijk" word="Mogelijk"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" cat="ti" end="9" id="4" rel="su">
+        <node begin="4" end="5" id="5" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="2" cat="inf" end="9" id="6" rel="body">
+          <node begin="2" cat="np" end="4" id="7" rel="obj1">
+            <node begin="2" buiging="zonder" end="3" id="8" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="probleem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="probleem" word="probleem"/>
+          </node>
+          <node begin="5" buiging="zonder" end="6" id="10" lemma="wijten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="wijt" word="wijten" wvorm="inf"/>
+          <node begin="6" cat="pp" end="9" id="11" rel="pc">
+            <node begin="6" end="7" id="12" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+            <node begin="7" cat="np" end="9" id="13" rel="obj1">
+              <node begin="7" buiging="zonder" end="8" getal="getal" id="14" lemma="u" naamval="stan" npagr="agr" pdtype="det" persoon="2" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)" pt="vnw" rel="det" root="u" status="vol" vwtype="bez" word="uw"/>
+              <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="15" lemma="anti_virus_programma" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="anti_virus_programma" word="antivirusprogramma"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Mogelijk is dit probleem te wijten aan uw antivirusprogramma .</sentence>
+</alpino_ds>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+      <node begin="2" end="3" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      <node begin="0" cat="ppart" end="5" id="4" rel="vc">
+        <node begin="2" end="3" id="5" index="1" rel="su"/>
+        <node begin="0" cat="pp" end="4" id="6" rel="ld">
+          <node begin="0" end="1" getal="getal" id="7" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="noun" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="daar" status="vol" vwtype="aanw" word="daar"/>
+          <node begin="3" end="4" id="8" lemma="heen" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="heen" vztype="fin" word="heen"/>
+        </node>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="bellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bel" word="gebeld" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>daar heb ik heen gebeld</sentence>
+</alpino_ds>

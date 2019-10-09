@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="34" id="0" rel="top">
+    <node begin="22" end="23" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="33" id="2" rel="--">
+      <node begin="23" end="24" id="3" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+      <node begin="0" cat="inf" end="33" id="4" rel="vc">
+        <node begin="28" buiging="zonder" end="29" id="5" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+        <node begin="0" cat="ppart" end="33" id="6" rel="vc">
+          <node begin="0" cat="conj" end="22" id="7" rel="mod">
+            <node begin="0" cat="cp" end="5" id="8" rel="cnj">
+              <node begin="0" conjtype="onder" end="1" id="9" lemma="wanneer" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="wanneer" word="Wanneer"/>
+              <node begin="1" cat="ssub" end="5" id="10" rel="body">
+                <node begin="1" cat="np" end="3" id="11" rel="su">
+                  <node begin="1" end="2" id="12" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="13" lemma="aanval" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aanval" word="aanval"/>
+                </node>
+                <node begin="3" buiging="zonder" end="4" graad="basis" id="14" lemma="lang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="me" root="lang" word="lang"/>
+                <node begin="4" end="5" id="15" lemma="duren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="duur" word="duurt" wvorm="pv"/>
+              </node>
+            </node>
+            <node begin="5" conjtype="neven" end="6" id="16" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+            <node begin="6" cat="cp" end="22" id="17" rel="cnj">
+              <node begin="6" conjtype="onder" end="7" id="18" lemma="wanneer" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="wanneer" word="wanneer"/>
+              <node begin="7" cat="ssub" end="22" id="19" rel="body">
+                <node begin="7" cat="np" end="9" id="20" rel="su">
+                  <node begin="7" end="8" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="22" lemma="ervaring" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ervaring" word="ervaring"/>
+                </node>
+                <node begin="9" end="10" id="23" lemma="leren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="leer" word="leert" wvorm="pv"/>
+                <node begin="10" cat="cp" end="22" id="24" rel="vc">
+                  <node begin="10" conjtype="onder" end="11" id="25" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+                  <node begin="11" cat="ssub" end="22" id="26" rel="body">
+                    <node begin="11" cat="pp" end="15" id="27" rel="mod">
+                      <node begin="11" end="12" id="28" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
+                      <node begin="12" cat="np" end="15" id="29" rel="obj1">
+                        <node begin="12" end="13" id="30" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                        <node begin="13" end="14" id="31" lemma="één" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="eerste" word="eerste"/>
+                        <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="32" lemma="aanval" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aanval" word="aanval"/>
+                      </node>
+                    </node>
+                    <node begin="15" end="16" getal="getal" id="33" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+                    <node begin="16" end="17" id="34" lemma="meestal" pos="adv" postag="BW()" pt="bw" rel="mod" root="meestal" word="meestal"/>
+                    <node begin="17" end="18" id="35" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+                    <node begin="18" cat="conj" end="21" id="36" rel="su">
+                      <node begin="18" end="19" id="37" lemma="één" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="cnj" root="één" word="één"/>
+                      <node begin="19" conjtype="neven" end="20" id="38" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+                      <node begin="20" buiging="zonder" end="21" graad="comp" id="39" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="cnj" root="meer" vwtype="onbep" word="meer"/>
+                    </node>
+                    <node begin="21" end="22" id="40" lemma="volgen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="volg" word="volgen" wvorm="pv"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="24" cat="pp" end="27" id="41" rel="mod">
+            <node begin="24" end="25" id="42" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="25" cat="np" end="27" id="43" rel="obj1">
+              <node begin="25" end="26" id="44" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="45" lemma="rectiole" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rectiole" word="rectiole"/>
+            </node>
+          </node>
+          <node begin="27" buiging="zonder" end="28" id="46" lemma="proberen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="probeer" word="geprobeerd" wvorm="vd"/>
+          <node begin="29" cat="ti" end="33" id="47" rel="vc">
+            <node begin="31" end="32" id="48" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="29" cat="inf" end="33" id="49" rel="body">
+              <node begin="29" cat="np" end="31" id="50" rel="obj1">
+                <node begin="29" end="30" id="51" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="52" lemma="aanval" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aanval" word="aanval"/>
+              </node>
+              <node begin="32" buiging="zonder" end="33" id="53" lemma="stoppen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stop" word="stoppen" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="33" end="34" id="54" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Wanneer een aanval lang duurt of wanneer de ervaring leert dat na de eerste aanval er meestal nog één of meer volgen , kan met een rectiole geprobeerd worden de aanval te stoppen .</sentence>
+</alpino_ds>

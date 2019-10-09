@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+      <node begin="2" cat="np" end="8" id="4" rel="obj1">
+        <node begin="2" end="3" getal="mv" graad="basis" id="5" lemma="bestand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bestand" word="bestanden"/>
+        <node begin="3" cat="rel" end="8" id="6" rel="mod">
+          <node begin="3" end="4" getal="getal" id="7" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+          <node begin="3" cat="ssub" end="8" id="8" rel="body">
+            <node begin="3" end="4" id="9" index="1" rel="su"/>
+            <node begin="6" end="7" id="10" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" word="kunnen" wvorm="pv"/>
+            <node begin="3" cat="inf" end="8" id="11" rel="vc">
+              <node begin="3" end="4" id="12" index="1" rel="su"/>
+              <node begin="3" cat="ppart" end="6" id="13" rel="vc">
+                <node begin="3" end="4" id="14" index="1" rel="obj1"/>
+                <node begin="4" end="5" id="15" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+                <node begin="5" buiging="zonder" end="6" id="16" lemma="openen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="open" word="geopend" wvorm="vd"/>
+              </node>
+              <node begin="7" buiging="zonder" end="8" id="17" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ik heb bestanden die niet geopend kunnen worden .</sentence>
+</alpino_ds>

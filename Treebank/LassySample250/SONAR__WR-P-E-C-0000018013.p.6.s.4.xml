@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" case="both" def="indef" end="1" frame="pronoun(nwh,thi,sg,het,both,indef,strpro)" gen="het" getal="ev" id="2" lcat="np" lemma="zoiets" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="zoiets" sense="zoiets" special="strpro" status="vol" vwtype="onbep" wh="nwh" word="Zoiets"/>
+      <node begin="1" end="2" frame="verb(hebben,sg3,transitive)" id="3" infl="sg3" lcat="smain" lemma="stelen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="steel" sc="transitive" sense="steel" tense="present" word="steelt" wvorm="pv"/>
+      <node begin="2" end="3" frame="adverb" id="4" lcat="advp" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" sense="toch" word="toch"/>
+      <node begin="3" case="both" def="def" end="4" frame="pronoun(nwh,thi,sg,de,both,def,strpro)" gen="de" getal="ev" id="5" lcat="np" lemma="iedereen" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="obj1" root="iedereen" sense="iedereen" special="strpro" status="vol" vwtype="onbep" wh="nwh" word="iedereen"/>
+      <node begin="4" cat="np" end="7" id="6" rel="mod">
+        <node begin="4" end="5" frame="determiner(de)" id="7" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+        <node begin="5" end="6" frame="number(rang)" id="8" lcat="ap" lemma="eerste" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="eerste" sense="eerste" special="rang" word="eerste"/>
+        <node begin="6" end="7" frame="tmp_noun(de,count,meas)" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lcat="np" lemma="keer" naamval="stan" ntype="soort" num="meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="keer" sense="keer" special="tmp" word="keer"/>
+      </node>
+    </node>
+    <node begin="7" end="8" frame="punct(vraag)" id="10" lcat="punct" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" sense="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Zoiets steelt toch iedereen de eerste keer ?</sentence>
+  <comments>
+    <comment>Q#WR-P-E-C-0000018013.p.6.s.4|Zoiets steelt toch iedereen de eerste keer ?|1|1|0.006954123622395839</comment>
+  </comments>
+</alpino_ds>

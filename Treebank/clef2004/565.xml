@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="sv1" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="noemen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="noem" word="Noem" wvorm="pv"/>
+      <node begin="1" cat="np" end="6" id="3" rel="obj1">
+        <node begin="1" end="2" id="4" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="dier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="dier" word="dier"/>
+        <node begin="3" cat="rel" end="6" id="6" rel="mod">
+          <node begin="3" end="4" getal="ev" id="7" index="1" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
+          <node begin="3" cat="ssub" end="6" id="8" rel="body">
+            <node begin="3" end="4" id="9" index="1" rel="su"/>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="licht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="licht" word="licht"/>
+            <node begin="5" end="6" id="11" lemma="geven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="geef" word="geeft" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Noem een dier dat licht geeft .</sentence>
+</alpino_ds>

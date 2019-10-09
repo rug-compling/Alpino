@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="du" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" rel="dp">
+        <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="3" lemma="DWS" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mod" root="DWS" word="DWS"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="oefenmeester" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oefenmeester" word="oefenmeester"/>
+        <node begin="2" cat="mwu" end="4" id="5" rel="app">
+          <node begin="2" end="3" id="6" lemma="Joop" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Joop" spectype="deeleigen" word="Joop"/>
+          <node begin="3" end="4" id="7" lemma="Brand" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Brand" spectype="deeleigen" word="Brand"/>
+        </node>
+      </node>
+      <node begin="4" cat="pp" end="6" id="8" rel="dp">
+        <node begin="4" end="5" id="9" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="afloop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="afloop" word="afloop"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>DWS oefenmeester Joop Brand na afloop :</sentence>
+</alpino_ds>

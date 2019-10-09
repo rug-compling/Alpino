@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="0" cat="smain" end="11" id="2" rel="--">
+      <node begin="0" cat="pp" end="2" id="3" rel="mod">
+        <node begin="0" end="1" id="4" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+        <node begin="1" end="2" id="5" lemma="2002" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="2002" word="2002"/>
+      </node>
+      <node begin="2" end="3" id="6" lemma="verschijnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verschijn" word="verscheen" wvorm="pv"/>
+      <node begin="3" cat="np" end="11" id="7" rel="su">
+        <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="kabinetsnota" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kabinet_nota" word="kabinetsnota"/>
+        <node begin="6" cat="mwu" end="11" id="10" rel="app">
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="11" lemma="privé" pos="name" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="Privé" word="Privé"/>
+          <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="12" lemma="geweld" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Geweld" word="Geweld"/>
+          <node begin="8" end="9" id="13" lemma="-" pos="name" postag="LET()" pt="let" rel="mwp" root="-" word="-"/>
+          <node begin="9" buiging="met-e" end="10" graad="basis" id="14" lemma="publiek" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Publieke" word="Publieke"/>
+          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="15" lemma="zaak" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Zaak" word="Zaak"/>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="16" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="12" end="13" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>In 2002 verscheen de kabinetsnota &apos; Privé Geweld - Publieke Zaak &apos; .</sentence>
+</alpino_ds>

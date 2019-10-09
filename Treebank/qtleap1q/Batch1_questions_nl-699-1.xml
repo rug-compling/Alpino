@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+      <node begin="2" cat="np" end="6" id="4" rel="obj1">
+        <node begin="2" buiging="met-e" end="3" graad="basis" id="5" lemma="tegenstrijdig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="tegenstrijdig" word="tegenstrijdige"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="6" lemma="kopie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kopie" word="kopieen"/>
+        <node begin="4" cat="pp" end="6" id="7" rel="mod">
+          <node begin="4" end="5" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="5" end="6" getal="mv" graad="basis" id="9" lemma="bestand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="bestand" word="bestanden"/>
+        </node>
+      </node>
+      <node begin="6" cat="pp" end="8" id="10" rel="mod">
+        <node begin="6" end="7" id="11" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="12" lemma="Dropbox" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Dropbox" word="Dropbox"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ik heb tegenstrijdige kopieen van bestanden in Dropbox .</sentence>
+</alpino_ds>

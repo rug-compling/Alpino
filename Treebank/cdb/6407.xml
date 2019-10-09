@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="smain" end="3" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="kardinaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kardinaal" word="Kardinaal"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="Alfrink" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Alfrink" word="Alfrink"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
+    </node>
+    <node begin="3" end="4" id="6" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>Kardinaal Alfrink zei :</sentence>
+</alpino_ds>

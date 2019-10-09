@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="16" end="17" id="1" lemma="`" pos="punct" postag="LET()" pt="let" rel="--" root="`" word="`"/>
+    <node begin="18" end="19" id="2" lemma="&amp;apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="0" cat="smain" end="27" id="3" rel="--">
+      <node begin="0" end="1" getal="getal" id="4" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+      <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="sprake" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="sprake" word="sprake"/>
+      <node begin="3" cat="pp" end="27" id="7" rel="pc">
+        <node begin="3" end="4" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="4" cat="np" end="27" id="9" rel="obj1">
+          <node begin="4" end="5" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="5" buiging="met-e" end="6" graad="basis" id="11" lemma="regelrecht" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="regelrecht" word="regelrechte"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="vertrouwenscrisis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vertrouwen_crisis" word="vertrouwenscrisis"/>
+          <node begin="7" cat="rel" end="27" id="13" rel="mod">
+            <node begin="7" end="8" getal="getal" id="14" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="7" cat="ssub" end="27" id="15" rel="body">
+              <node begin="7" end="8" id="16" index="1" rel="su"/>
+              <node begin="10" end="11" id="17" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+              <node begin="8" cat="ap" end="27" id="18" rel="predc">
+                <node begin="8" buiging="zonder" end="9" graad="basis" id="19" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="mod" root="veel" vwtype="onbep" word="veel"/>
+                <node begin="9" buiging="zonder" end="10" graad="comp" id="20" lemma="verder" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="ver" word="verder"/>
+                <node begin="11" cat="cp" end="27" id="21" rel="obcomp">
+                  <node begin="11" end="12" id="22" lemma="dan" pos="comparative" postag="BW()" pt="bw" rel="cmp" root="dan" word="dan"/>
+                  <node begin="12" cat="np" end="27" id="23" rel="body">
+                    <node begin="12" end="13" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="13" buiging="met-e" end="14" graad="basis" id="25" lemma="aloud" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="aloud" word="aloude"/>
+                    <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="26" lemma="klacht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="klacht" word="klacht"/>
+                    <node begin="15" cat="cp" end="27" id="27" rel="vc">
+                      <node begin="15" conjtype="onder" end="16" id="28" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+                      <node begin="17" cat="ssub" end="27" id="29" rel="body">
+                        <node begin="17" end="18" getal="mv" id="30" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+                        <node begin="19" cat="pp" end="22" id="31" rel="mod">
+                          <node begin="19" end="20" id="32" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                          <node begin="20" cat="mwu" end="22" id="33" rel="obj1">
+                            <node begin="20" end="21" id="34" lemma="Den" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Den" spectype="deeleigen" word="Den"/>
+                            <node begin="21" end="22" id="35" lemma="Haag" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Haag" spectype="deeleigen" word="Haag"/>
+                          </node>
+                        </node>
+                        <node begin="23" cat="np" end="25" id="36" rel="obj1">
+                          <node begin="23" end="24" id="37" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                          <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="38" lemma="puinhoop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="puinhoop" word="puinhoop"/>
+                        </node>
+                        <node begin="22" cat="pp" end="26" id="39" rel="pc">
+                          <node begin="22" end="23" getal="getal" id="40" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+                          <node begin="25" end="26" id="41" lemma="van" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="van" vztype="fin" word="van"/>
+                        </node>
+                        <node begin="26" end="27" id="42" lemma="maken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="maak" word="maken" wvorm="pv"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="27" end="28" id="43" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Er is sprake van een regelrechte vertrouwenscrisis die veel verder gaat dan de aloude klacht dat ` ze &apos; in Den Haag er een puinhoop van maken .</sentence>
+</alpino_ds>

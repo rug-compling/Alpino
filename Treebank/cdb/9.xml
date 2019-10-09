@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+      <node begin="2" end="3" getal="ev" id="3" index="1" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="noun" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+      <node begin="0" cat="inf" end="14" id="4" rel="vc">
+        <node begin="2" end="3" id="5" index="1" rel="su"/>
+        <node begin="7" buiging="zonder" end="8" id="6" lemma="moeten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="moet" word="moeten" wvorm="inf"/>
+        <node begin="0" cat="inf" end="14" id="7" rel="vc">
+          <node begin="2" end="3" id="8" index="1" rel="su"/>
+          <node begin="8" buiging="zonder" end="9" id="9" lemma="kunnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kan" word="kunnen" wvorm="inf"/>
+          <node begin="0" cat="inf" end="14" id="10" rel="vc">
+            <node begin="0" end="1" getal="ev" id="11" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" word="Dat"/>
+            <node begin="2" end="3" id="12" index="1" rel="su"/>
+            <node begin="3" end="4" id="13" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+            <node begin="9" buiging="zonder" end="10" id="14" lemma="schuiven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="schuif" word="schuiven" wvorm="inf"/>
+            <node begin="4" cat="pp" end="14" id="15" rel="ld">
+              <node begin="4" end="5" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="5" cat="np" end="14" id="17" rel="obj1">
+                <node begin="5" end="6" id="18" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="19" lemma="fabriek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="fabriek" word="fabriek"/>
+                <node begin="10" cat="rel" end="14" id="20" rel="mod">
+                  <node begin="10" end="11" getal="getal" id="21" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+                  <node begin="10" cat="ssub" end="14" id="22" rel="body">
+                    <node begin="10" end="11" id="23" index="2" rel="su"/>
+                    <node begin="11" end="12" getal="ev" id="24" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" word="dat"/>
+                    <node begin="12" end="13" id="25" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="predm" root="allemaal" word="allemaal"/>
+                    <node begin="13" end="14" id="26" lemma="afwerken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="werkt" word="afwerkt" wvorm="pv"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dat zou je dan in een fabriek moeten kunnen schuiven die dat allemaal afwerkt .</sentence>
+</alpino_ds>

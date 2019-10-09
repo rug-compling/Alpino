@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="np" end="4" id="1" rel="--">
+      <node begin="0" cat="mwu" end="2" id="2" rel="hd">
+        <node begin="0" end="1" id="3" lemma="zeven" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="zeven" word="zeven"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="uur" word="uur"/>
+      </node>
+      <node begin="2" cat="mwu" end="4" id="5" rel="mod">
+        <node begin="2" end="3" id="6" lemma="&apos;s" lwtype="bep" naamval="gen" npagr="evmo" pos="adv" postag="LID(bep,gen,evmo)" pt="lid" rel="mwp" root="&apos;s" word="&apos;s"/>
+        <node begin="3" end="4" getal="ev" graad="basis" id="7" lemma="avonds" naamval="gen" ntype="soort" pos="adv" postag="N(soort,ev,basis,gen)" pt="n" rel="mwp" root="avonds" word="avonds"/>
+      </node>
+    </node>
+  </node>
+  <sentence>zeven uur &apos;s avonds</sentence>
+</alpino_ds>

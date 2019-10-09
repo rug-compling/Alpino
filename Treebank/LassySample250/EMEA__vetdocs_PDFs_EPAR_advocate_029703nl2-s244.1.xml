@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="conj" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="cnj">
+        <node begin="0" end="1" frame="number(hoofd(pl_num))" id="3" infl="pl_num" lcat="detp" lemma="10" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="10" sense="10" special="hoofd" word="10"/>
+        <node begin="1" end="2" frame="meas_mod_noun(both,count,meas,measure)" gen="both" id="4" lcat="np" lemma="%" num="meas" pos="noun" postag="SPEC(symb)" pt="spec" rel="hd" root="procent" sc="measure" sense="procent-MEAS" special="meas_mod" spectype="symb" word="%"/>
+        <node begin="2" end="3" frame="noun(both,both,both)" gen="both" genus="zijd" getal="ev" graad="basis" id="5" lcat="np" lemma="imidacloprid" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="imidacloprid" sense="imidacloprid" word="imidacloprid"/>
+      </node>
+      <node begin="3" conjtype="neven" end="4" frame="conj(en)" id="6" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="4" cat="np" end="7" id="7" rel="cnj">
+        <node begin="4" end="5" frame="number(hoofd(pl_num))" id="8" infl="pl_num" lcat="detp" lemma="2.5" pos="num" postag="SPEC(symb)" pt="spec" rel="det" root="2.5" sense="2.5" special="hoofd" spectype="symb" word="2.5"/>
+        <node begin="5" end="6" frame="meas_mod_noun(both,count,meas,measure)" gen="both" id="9" lcat="np" lemma="%" num="meas" pos="noun" postag="SPEC(symb)" pt="spec" rel="hd" root="procent" sc="measure" sense="procent-MEAS" special="meas_mod" spectype="symb" word="%"/>
+        <node begin="6" end="7" frame="noun(both,both,both)" gen="both" genus="zijd" getal="ev" graad="basis" id="10" lcat="np" lemma="moxidectine" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="moxidectine" sense="moxidectine" word="moxidectine"/>
+      </node>
+    </node>
+  </node>
+  <sentence>10 % imidacloprid en 2.5 % moxidectine</sentence>
+  <comments>
+    <comment>Q#vetdocs_PDFs_EPAR_advocate_029703nl2-s244.1|10 % imidacloprid en 2.5 % moxidectine|1|1|-0.03372735090862433</comment>
+  </comments>
+</alpino_ds>

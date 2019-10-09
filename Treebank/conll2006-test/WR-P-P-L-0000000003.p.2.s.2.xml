@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="13" end="14" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="25" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" rel="su">
+        <node begin="0" buiging="met-e" end="1" id="4" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="Deze"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="5" lemma="ontwikkeling" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="ontwikkeling" word="ontwikkelingen"/>
+      </node>
+      <node begin="2" end="3" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="3" cat="ppart" end="25" id="7" rel="predc">
+        <node begin="3" buiging="zonder" end="4" id="8" lemma="richten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gericht" word="gericht" wvorm="vd"/>
+        <node begin="4" cat="pp" end="25" id="9" rel="pc">
+          <node begin="4" end="5" id="10" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="5" cat="np" end="25" id="11" rel="obj1">
+            <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="realisatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="realisatie" word="realisatie"/>
+            <node begin="7" cat="pp" end="25" id="14" rel="mod">
+              <node begin="7" end="8" id="15" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="8" cat="np" end="25" id="16" rel="obj1">
+                <node begin="8" end="9" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="9" cat="ap" end="11" id="18" rel="mod">
+                  <node begin="9" buiging="zonder" end="10" graad="basis" id="19" lemma="kwalitatief" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="kwalitatief" word="kwalitatief"/>
+                  <node begin="10" buiging="met-e" end="11" graad="basis" id="20" lemma="hoogstaand" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="hoogstaand" word="hoogstaande"/>
+                </node>
+                <node begin="11" buiging="met-e" end="12" graad="basis" id="21" lemma="integraal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="integraal" word="integrale"/>
+                <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="jeugdgezondheidszorg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="jeugd_gezondheidszorg" word="jeugdgezondheidszorg"/>
+                <node begin="14" cat="rel" end="25" id="23" rel="mod">
+                  <node begin="14" end="15" getal="getal" id="24" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+                  <node begin="14" cat="ssub" end="25" id="25" rel="body">
+                    <node begin="14" end="15" id="26" index="1" rel="su"/>
+                    <node begin="22" end="23" id="27" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+                    <node begin="14" cat="inf" end="25" id="28" rel="vc">
+                      <node begin="14" end="15" id="29" index="1" rel="su"/>
+                      <node begin="23" buiging="zonder" end="24" id="30" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+                      <node begin="14" cat="ppart" end="25" id="31" rel="vc">
+                        <node begin="14" end="15" id="32" index="1" rel="obj1"/>
+                        <node begin="15" cat="pp" end="19" id="33" rel="mod">
+                          <node begin="15" end="16" id="34" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
+                          <node begin="16" cat="mwu" end="19" id="35" rel="obj1">
+                            <node begin="16" end="17" id="36" lemma="1" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="1" word="1"/>
+                            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="37" lemma="januari" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="januari" word="januari"/>
+                            <node begin="18" end="19" id="38" lemma="2003" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="2003" word="2003"/>
+                          </node>
+                        </node>
+                        <node begin="19" cat="pp" end="22" id="39" rel="mod">
+                          <node begin="19" end="20" id="40" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
+                          <node begin="20" cat="np" end="22" id="41" rel="obj1">
+                            <node begin="20" buiging="met-e" end="21" graad="basis" id="42" lemma="gemeentelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gemeentelijk" word="gemeentelijke"/>
+                            <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="43" lemma="regie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="regie" word="regie"/>
+                          </node>
+                        </node>
+                        <node begin="24" buiging="zonder" end="25" id="44" lemma="uitvoeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voer_uit" word="uitgevoerd" wvorm="vd"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="25" end="26" id="45" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Deze ontwikkelingen zijn gericht op de realisatie van een kwalitatief hoogstaande integrale jeugdgezondheidszorg , die per 1 januari 2003 onder gemeentelijke regie zal worden uitgevoerd .</sentence>
+</alpino_ds>

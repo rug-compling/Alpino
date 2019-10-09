@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="2" end="3" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="4" end="5" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="1" cat="du" end="6" id="4" rel="--">
+      <node begin="1" end="2" id="5" lemma="He" pos="adv" postag="SPEC(vreemd)" pt="spec" rel="tag" root="He" spectype="vreemd" word="He"/>
+      <node begin="3" end="4" id="6" lemma="kijken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="tag" root="kijk" word="kijk" wvorm="pv"/>
+      <node begin="5" end="6" getal="mv" graad="basis" id="7" lemma="aap" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="nucl" root="aap" word="apen"/>
+    </node>
+    <node begin="6" end="7" id="8" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>&quot; He , kijk , apen !</sentence>
+</alpino_ds>

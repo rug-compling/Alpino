@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="obj1">
+        <node begin="0" end="1" frame="determiner(de)" id="3" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" id="4" lcat="np" num="sg" pos="noun" rel="hd" root="parking" sense="parking" word="parking"/>
+      </node>
+      <node begin="2" end="3" frame="verb(hebben,sg1,part_transitive(binnen))" id="5" infl="sg1" lcat="smain" pos="verb" rel="hd" root="rijd_binnen" sc="part_transitive(binnen)" sense="rijd_binnen" tense="present" word="rijd"/>
+      <node begin="3" case="both" def="def" end="4" frame="pronoun(nwh,je,sg,de,both,def,wkpro)" gen="de" id="6" lcat="np" num="sg" per="je" pos="pron" rel="su" root="je" sense="je" special="wkpro" wh="nwh" word="je"/>
+      <node begin="4" end="5" frame="particle(binnen)" id="7" lcat="part" pos="part" rel="svp" root="binnen" sense="binnen" word="binnen"/>
+      <node begin="5" cat="pp" end="8" id="8" rel="mod">
+        <node begin="5" end="6" frame="preposition(via,[])" id="9" lcat="pp" pos="prep" rel="hd" root="via" sense="via" word="via"/>
+        <node begin="6" cat="np" end="8" id="10" rel="obj1">
+          <node begin="6" end="7" frame="determiner(de)" id="11" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="7" end="8" frame="tmp_noun(de,count,sg)" gen="de" id="12" lcat="np" num="sg" pos="noun" rel="hd" root="Leuvens_steen_weg" sense="Leuvens_steen_weg" special="tmp" word="Leuvensesteenweg"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" frame="punct(punt)" id="13" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De parking rijd je binnen via de Leuvensesteenweg .</sentence>
+  <comments>
+    <comment>Q#99|De parking rijd je binnen via de Leuvensesteenweg .|1|1|-0.44388975772611117</comment>
+  </comments>
+</alpino_ds>

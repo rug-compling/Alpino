@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="du" end="19" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" word="Maar"/>
+      <node begin="1" cat="conj" end="19" id="3" rel="nucl">
+        <node begin="1" cat="smain" end="11" id="4" rel="cnj">
+          <node begin="1" cat="np" end="6" id="5" index="1" rel="su">
+            <node begin="1" buiging="zonder" end="2" id="6" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+            <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="7" lemma="duel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="duel" word="duel"/>
+            <node begin="3" cat="pp" end="6" id="8" rel="mod">
+              <node begin="3" end="4" id="9" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+              <node begin="4" cat="mwu" end="6" id="10" rel="obj1">
+                <node begin="4" end="5" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="De" word="De"/>
+                <node begin="5" end="6" id="12" lemma="Hollandiaan" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hollandiaan" spectype="deeleigen" word="Hollandiaan"/>
+              </node>
+            </node>
+          </node>
+          <node begin="6" end="7" id="13" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+          <node begin="1" cat="ppart" end="11" id="14" rel="vc">
+            <node begin="1" end="6" id="15" index="1" rel="obj1"/>
+            <node begin="7" cat="ap" end="10" id="16" rel="mod">
+              <node begin="7" end="8" id="17" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+              <node begin="8" end="9" getal="mv" graad="basis" id="18" lemma="maanden" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="me" root="maand" word="maanden"/>
+              <node begin="9" end="10" id="19" lemma="geleden" pos="adj" postag="BW()" pt="bw" rel="hd" root="geleden" word="geleden"/>
+            </node>
+            <node begin="10" buiging="zonder" end="11" id="20" lemma="plannen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="plan" word="gepland" wvorm="vd"/>
+          </node>
+        </node>
+        <node begin="11" conjtype="neven" end="12" id="21" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="1" cat="smain" end="19" id="22" rel="cnj">
+          <node begin="1" end="6" id="23" index="1" rel="su"/>
+          <node begin="12" end="13" id="24" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
+          <node begin="13" end="14" id="25" lemma="bovendien" pos="adv" postag="BW()" pt="bw" rel="mod" root="bovendien" word="bovendien"/>
+          <node begin="14" buiging="zonder" end="15" graad="basis" id="26" lemma="plotseling" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="plotseling" word="plotseling"/>
+          <node begin="15" cat="ap" end="17" id="27" rel="mod">
+            <node begin="15" buiging="zonder" end="16" graad="basis" id="28" lemma="buitengewoon" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="buitengewoon" word="buitengewoon"/>
+            <node begin="16" buiging="zonder" end="17" graad="basis" id="29" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="goed" word="goed"/>
+          </node>
+          <node begin="17" cat="mwu" end="19" id="30" rel="svp">
+            <node begin="17" end="18" id="31" lemma="van" pos="fixed" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+            <node begin="18" end="19" id="32" lemma="pas" pos="fixed" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="pas" spectype="deeleigen" word="pas"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="33" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="20" end="21" id="34" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>Maar dit duel met De Hollandiaan was al maanden geleden gepland en kwam bovendien plotseling buitengewoon goed van pas . &quot;</sentence>
+</alpino_ds>

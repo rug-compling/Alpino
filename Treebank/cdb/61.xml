@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="smain" end="16" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+      <node begin="0" cat="inf" end="16" id="3" rel="vc">
+        <node begin="14" buiging="zonder" end="15" id="4" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+        <node begin="0" cat="ppart" end="16" id="5" rel="vc">
+          <node begin="0" buiging="zonder" end="1" graad="basis" id="6" lemma="waarschijnlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="waarschijnlijk" word="Waarschijnlijk"/>
+          <node begin="2" cat="pp" end="4" id="7" rel="mod">
+            <node begin="2" end="3" id="8" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="november" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="november" word="november"/>
+          </node>
+          <node begin="4" cat="pp" end="14" id="10" rel="pc">
+            <node begin="4" end="5" id="11" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="5" cat="np" end="14" id="12" rel="obj1">
+              <node begin="5" end="6" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="kiellegging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kiellegging" word="kiellegging"/>
+              <node begin="7" cat="pp" end="14" id="15" rel="mod">
+                <node begin="7" end="8" id="16" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="8" cat="np" end="14" id="17" rel="obj1">
+                  <node begin="8" buiging="zonder" end="9" id="18" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+                  <node begin="9" cat="ppart" end="13" id="19" rel="mod">
+                    <node begin="9" buiging="zonder" end="10" graad="basis" id="20" lemma="speciaal" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="speciaal" word="speciaal"/>
+                    <node begin="10" cat="pp" end="12" id="21" rel="mod">
+                      <node begin="10" end="11" id="22" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                      <node begin="11" end="12" getal="mv" graad="basis" id="23" lemma="vakantietocht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="tochten" word="vakantietochten"/>
+                    </node>
+                    <node begin="12" buiging="met-e" end="13" id="24" lemma="inrichten" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="ingericht" word="ingerichte" wvorm="vd"/>
+                  </node>
+                  <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="25" lemma="schip" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="schip" word="schip"/>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="15" buiging="zonder" end="16" id="26" lemma="beginnen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="begin" word="begonnen" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Waarschijnlijk zal in november met de kiellegging van dit speciaal voor vakantietochten ingerichte schip worden begonnen .</sentence>
+</alpino_ds>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="cp" end="7" id="1" rel="--">
+      <node begin="0" conjtype="onder" end="1" id="2" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+      <node begin="1" cat="ssub" end="7" id="3" rel="body">
+        <node begin="1" end="2" getal="mv" id="4" index="1" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+        <node begin="5" end="6" id="5" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" word="kunnen" wvorm="pv"/>
+        <node begin="1" cat="inf" end="7" id="6" rel="vc">
+          <node begin="1" end="2" id="7" index="1" rel="su"/>
+          <node begin="3" end="4" getal="ev" id="8" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="wat" status="vol" vwtype="onbep" word="wat"/>
+          <node begin="2" cat="pp" end="5" id="9" rel="pc">
+            <node begin="2" end="3" getal="getal" id="10" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+            <node begin="4" end="5" id="11" lemma="aan" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="aan" vztype="fin" word="aan"/>
+          </node>
+          <node begin="6" buiging="zonder" end="7" id="12" lemma="doen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="doe" word="doen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="..." pos="punct" postag="LET()" pt="let" rel="--" root="..." word="..."/>
+    <node begin="8" end="9" id="14" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>Als we er wat aan kunnen doen ... &quot;</sentence>
+</alpino_ds>

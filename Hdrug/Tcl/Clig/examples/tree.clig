@@ -1,0 +1,27 @@
+#
+# example: a tree Jan-4-96
+#
+# this example shows that nodes can be of different sizes,
+# and what a termnode and a suppressed tree is
+#
+# It also shows that some space is wasted because of the very simple
+# drawing algorithm.
+#
+
+clig {tree {smallbox {plain-text "Mother of Tree"}} 
+        {smallbox {plain-text smallbox}} 
+        {tree {bigbox {smallbox {plain-text bigbox}}} 
+            {smallbox {plain-text node3}} 
+            {underline {plain-text "another node"}} 
+            {smallbox {plain-text "n3"}}} 
+        {tree {smallbox {plain-text "n4"}} 
+              {smallbox {plain-text "n41"}}
+              {tree {plain-text "vp"} 
+                 {tree {plain-text "v"} 
+                       {plain-text "owns"}} 
+                 {tree {plain-text "NP"} 
+                    {tree {plain-text "DET"} 
+                    {plain-text "M"}}}}}
+        {termnode {smallbox {plain-text "Termnode"}} 
+                  {suptree {plain-text "Supressed Tree"}}}}
+

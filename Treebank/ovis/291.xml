@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" cat="pp" end="3" id="2" rel="dp">
+        <node begin="0" end="1" id="3" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="1" cat="mwu" end="3" id="4" rel="obj1">
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="koog" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="koog" word="koog"/>
+          <node begin="2" buiging="zonder" end="3" graad="basis" id="6" lemma="bloemwijk" pos="name" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="bloemwijk" word="bloemwijk"/>
+        </node>
+      </node>
+      <node begin="3" cat="pp" end="7" id="7" rel="dp">
+        <node begin="3" end="4" id="8" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+        <node begin="4" cat="mwu" end="7" id="9" rel="obj1">
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="zoetermeer" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Zoetermeer" word="zoetermeer"/>
+          <node begin="5" end="6" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+          <node begin="6" end="7" getal="mv" graad="basis" id="12" lemma="leyens" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="leyens" word="leyens"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>van koog bloemwijk naar zoetermeer de leyens</sentence>
+</alpino_ds>

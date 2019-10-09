@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="32" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="12" end="13" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="18" end="19" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="23" end="24" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="31" id="5" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="6" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" word="En"/>
+      <node begin="1" cat="smain" end="31" id="7" rel="nucl">
+        <node begin="1" end="2" getal="ev" id="8" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="2" end="3" id="9" lemma="willen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="wil" word="wilde" wvorm="pv"/>
+        <node begin="1" cat="inf" end="31" id="10" rel="vc">
+          <node begin="1" end="2" id="11" index="1" rel="su"/>
+          <node begin="5" buiging="zonder" end="6" id="12" lemma="afkomen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom" word="afkomen" wvorm="inf"/>
+          <node begin="3" cat="conj" end="31" id="13" rel="pc">
+            <node begin="3" cat="pp" end="5" id="14" rel="cnj">
+              <node begin="3" end="4" id="15" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="4" end="5" getal="ev" id="16" lemma="mezelf" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,nadr,1,ev)" pt="vnw" rel="obj1" root="mezelf" status="nadr" vwtype="pr" word="mezelf"/>
+            </node>
+            <node begin="7" cat="pp" end="12" id="17" rel="cnj">
+              <node begin="7" end="8" id="18" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="8" cat="conj" end="12" id="19" rel="obj1">
+                <node begin="8" cat="np" end="10" id="20" rel="cnj">
+                  <node begin="8" buiging="zonder" end="9" getal="ev" id="21" index="2" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+                  <node begin="9" end="10" getal="mv" graad="basis" id="22" lemma="twijfel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="twijfel" word="twijfels"/>
+                </node>
+                <node begin="10" conjtype="neven" end="11" id="23" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                <node begin="8" cat="np" end="12" id="24" rel="cnj">
+                  <node begin="8" end="9" id="25" index="2" rel="det"/>
+                  <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="26" lemma="verwarring" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verwarring" word="verwarring"/>
+                </node>
+              </node>
+            </node>
+            <node begin="13" conjtype="neven" end="14" id="27" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="14" cat="pp" end="31" id="28" rel="cnj">
+              <node begin="14" end="15" id="29" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="15" cat="np" end="31" id="30" rel="obj1">
+                <node begin="15" buiging="zonder" end="16" getal="ev" id="31" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+                <node begin="16" buiging="zonder" end="17" graad="basis" id="32" lemma="eigen" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="eigen" word="eigen"/>
+                <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="33" lemma="geloof" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geloof" word="geloof"/>
+                <node begin="19" cat="cp" end="31" id="34" rel="vc">
+                  <node begin="19" conjtype="onder" end="20" id="35" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+                  <node begin="20" cat="ssub" end="31" id="36" rel="body">
+                    <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="37" lemma="Jezus" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Jezus" word="Jezus"/>
+                    <node begin="22" end="23" id="38" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
+                    <node begin="21" cat="np" end="31" id="39" rel="obj1">
+                      <node begin="21" end="22" getal="ev" id="40" lemma="iets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" root="iets" status="vol" vwtype="onbep" word="iets"/>
+                      <node begin="24" cat="rel" end="31" id="41" rel="mod">
+                        <node begin="24" end="25" getal="ev" id="42" index="3" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
+                        <node begin="24" cat="ssub" end="31" id="43" rel="body">
+                          <node begin="25" end="26" getal="ev" id="44" index="4" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+                          <node begin="26" end="27" id="45" lemma="zelf" pos="adv" postag="BW()" pt="bw" rel="predm" root="zelf" word="zelf"/>
+                          <node begin="27" end="28" id="46" lemma="kunnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kan" word="kon" wvorm="pv"/>
+                          <node begin="24" cat="conj" end="31" id="47" rel="vc">
+                            <node begin="24" cat="inf" end="29" id="48" rel="cnj">
+                              <node begin="24" end="25" id="49" index="3" rel="obj1"/>
+                              <node begin="25" end="26" id="50" index="4" rel="su"/>
+                              <node begin="28" buiging="zonder" end="29" id="51" lemma="onderschrijven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="onderschrijf" word="onderschrijven" wvorm="inf"/>
+                            </node>
+                            <node begin="29" conjtype="neven" end="30" id="52" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                            <node begin="24" cat="inf" end="31" id="53" rel="cnj">
+                              <node begin="24" end="25" id="54" index="3" rel="obj1"/>
+                              <node begin="25" end="26" id="55" index="4" rel="su"/>
+                              <node begin="30" buiging="zonder" end="31" id="56" lemma="voelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voel" word="voelen" wvorm="inf"/>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="31" end="32" id="57" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>En ik wilde van mezelf afkomen , van mijn twijfels en verwarring , en van mijn eigen geloof , dat Jezus iets zei , dat ik zelf kon onderschrijven en voelen .</sentence>
+</alpino_ds>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" buiging="zonder" end="1" getal="ev" id="3" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="Mijn"/>
+        <node begin="1" cat="mwu" end="3" id="4" rel="hd">
+          <node begin="1" end="2" id="5" lemma="Internet" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Internet" spectype="deeleigen" word="Internet"/>
+          <node begin="2" end="3" id="6" lemma="Explorer" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Explorer" spectype="deeleigen" word="Explorer"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" lemma="reageren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="reageer" word="reageert" wvorm="pv"/>
+      <node begin="4" cat="advp" end="6" id="8" rel="mod">
+        <node begin="4" end="5" id="9" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="hd" root="niet" word="niet"/>
+        <node begin="5" buiging="zonder" end="6" graad="comp" id="10" lemma="meer" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vwtype="onbep" word="meer"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Mijn Internet Explorer reageert niet meer .</sentence>
+</alpino_ds>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="obj1">
+        <node begin="0" buiging="zonder" end="1" graad="comp" id="3" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,comp)" pt="vnw" rel="det" root="meer" vwtype="onbep" word="Meer"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="moeilijkheid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="moeilijkheid" word="moeilijkheden"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="geven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="geef" word="geeft" wvorm="pv"/>
+      <node begin="3" cat="np" end="6" id="6" rel="su">
+        <node begin="3" end="4" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="4" end="5" id="8" lemma="twee" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="tweede" word="tweede"/>
+        <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="punt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="punt" word="punt"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="10" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>Meer moeilijkheden geeft het tweede punt :</sentence>
+</alpino_ds>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="31" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="7" end="8" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="19" end="20" id="3" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="21" end="22" id="4" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="smain" end="30" id="5" rel="--">
+      <node begin="0" cat="pp" end="21" id="6" rel="mod">
+        <node begin="0" end="1" id="7" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="Na"/>
+        <node begin="1" cat="conj" end="21" id="8" rel="obj1">
+          <node begin="1" cat="np" end="10" id="9" rel="cnj">
+            <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="10" lemma="aftrek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aftrek" word="aftrek"/>
+            <node begin="2" cat="pp" end="7" id="11" rel="mod">
+              <node begin="2" end="3" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="3" cat="np" end="7" id="13" rel="obj1">
+                <node begin="3" cat="mwu" end="5" id="14" rel="hd">
+                  <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="15" lemma="flo" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="flo" word="flo"/>
+                  <node begin="4" end="5" id="16" lemma="685.000" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="685.000" word="685.000"/>
+                </node>
+                <node begin="6" end="7" id="17" lemma="453.000" pos="num" postag="SPEC(symb)" pt="spec" rel="mod" root="453.000" spectype="symb" word="453.000"/>
+              </node>
+            </node>
+            <node begin="8" cat="pp" end="10" id="18" rel="mod">
+              <node begin="8" end="9" id="19" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+              <node begin="9" end="10" getal="mv" graad="basis" id="20" lemma="afschrijving" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="afschrijving" word="afschrijvingen"/>
+            </node>
+          </node>
+          <node begin="10" conjtype="neven" end="11" id="21" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="11" cat="np" end="21" id="22" rel="cnj">
+            <node begin="11" end="12" id="23" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="12" buiging="zonder" end="13" graad="basis" id="24" lemma="nadelig" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="nadelig" word="nadelig"/>
+            <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="25" lemma="resultaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="resultaat" word="resultaat"/>
+            <node begin="14" cat="pp" end="16" id="26" rel="mod">
+              <node begin="14" end="15" id="27" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="15" end="16" getal="mv" graad="basis" id="28" lemma="belegging" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="belegging" word="beleggingen"/>
+            </node>
+            <node begin="16" cat="pp" end="21" id="29" rel="mod">
+              <node begin="16" end="17" id="30" lemma="ad" pos="prep" postag="SPEC(vreemd)" pt="spec" rel="hd" root="ad" spectype="vreemd" word="ad"/>
+              <node begin="17" cat="np" end="21" id="31" rel="obj1">
+                <node begin="17" cat="mwu" end="19" id="32" rel="hd">
+                  <node begin="17" end="18" id="33" lemma="flo" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="flo" spectype="vreemd" word="flo"/>
+                  <node begin="18" end="19" id="34" lemma="51.000" naamval="stan" numtype="hoofd" pos="noun" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="51.000" word="51.000"/>
+                </node>
+                <node begin="20" end="21" id="35" lemma="13.080" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mod" root="13.080" word="13.080"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="22" end="23" id="36" lemma="resteren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="resteer" word="resteert" wvorm="pv"/>
+      <node begin="23" end="24" id="37" lemma="echter" pos="adj" postag="BW()" pt="bw" rel="mod" root="echter" word="echter"/>
+      <node begin="24" cat="np" end="30" id="38" rel="su">
+        <node begin="24" end="25" id="39" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="25" end="26" genus="onz" getal="ev" graad="basis" id="40" lemma="verlies" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verlies" word="verlies"/>
+        <node begin="26" cat="pp" end="30" id="41" rel="mod">
+          <node begin="26" end="27" id="42" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="27" cat="np" end="30" id="43" rel="obj1">
+            <node begin="27" buiging="zonder" end="28" graad="basis" id="44" lemma="ruim" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ruim" word="ruim"/>
+            <node begin="28" end="29" id="45" lemma="7" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="7" word="7"/>
+            <node begin="29" end="30" genus="zijd" getal="ev" graad="basis" id="46" lemma="ton" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ton" word="ton"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="30" end="31" id="47" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Na aftrek van flo 685.000 ( 453.000 ) voor afschrijvingen en een nadelig resultaat van beleggingen ad flo 51.000 ( 13.080 ) resteert echter het verlies van ruim 7 ton .</sentence>
+</alpino_ds>

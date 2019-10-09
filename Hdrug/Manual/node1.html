@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-/W3C/DTD HTML 4.0 Transitional//EN"
+     "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>HDRUG Reference Manual</TITLE>
+<link rel=stylesheet href="http://www.let.rug.nl/~vannoord/doc.css" 
+      type="text/css">
+<link rel=next href="node2.html">
+</HEAD>
+<BODY>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node2.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+<H1>1. HDRUG: A Development Environment for Logic Grammars</H1>
+<P>Hdrug is an environment to develop grammars, parsers and generators
+for natural languages.  The system provides a number of visualisation
+tools, including visualisation of feature structures, syntax trees,
+type hierarchies, lexical hierarchies, feature structure trees,
+definite clause definitions, grammar rules, lexical entries, chart
+datastructures and graphs of statistical information e.g. concerning
+cputime requirements of different parsers.  Visualisation can be
+requested for various output formats, including ASCII text format, TK
+Canvas widget, LaTeX output, DOT output, and CLiG output.</P>
+<P>Extendibility and flexibility have been major concerns in the design
+of Hdrug.  The Hdrug system provides a small core system with a large
+library of auxiliary relations which can be included upon demand.
+Hdrug extends a given NLP system with a command interpreter, a
+graphical user interface and a number of visualisation tools.
+Applications using Hdrug typically add new features on top of the
+functionality provided by Hdrug.  The system is easily extendible
+because of the use of the Tcl/Tk scripting language, and the
+availability of a large set of libraries.  Flexibility is obtained by
+a large number of global flags which can be altered easily to change
+aspects of the system.  Furthermore, a number of hook predicates can
+be defined to adapt the system to the needs of a particular
+application.</P>
+<P>The flexibility is illustrated by the fact that Hdrug has been used
+both for the development of grammars and parsers for practical systems
+but also as a tool to experiment
+with new theoretical notions and alternative processing strategies.
+Furthermore, Hdrug has been used extensively
+both for batch processing of large text corpora, and also for
+demonstrating particular applications for audiences of non-experts.</P>
+<P>Hdrug is implemented in SICStus Prolog version 3, exploiting the
+built-in Tcl/Tk library. The Hdrug sources are available free of
+charge under the Gnu Public Licence copyright restrictions.</P>
+<H2>1.1 <a name="anc1"></a>Interface</H2>
+<P>Hdrug provides three ways of interacting with the underlying NLP
+system:</P>
+<UL><LI><P>Using an extendible command interpreter.</P>
+<LI><P>Using Prolog queries.</P>
+<LI><P>Using an extendible graphical user interface (based on Tcl/Tk).</P>
+</UL><P>The first two approaches are mutually exclusive: if the command
+interpreter is listening, then you cannot give ordinary Prolog
+commands and vice versa. In contrast, the graphical user interface
+(with mouse-driven menu's and buttons) can always be used. This
+feature is very important and sets Hdrug apart from competing systems.
+It implies that we can use at the same time the full power of the
+Prolog prompt (including tracing) and the graphical user interface.
+Using the command interpreter (with a history and alias mechanism) can
+be useful for experienced users, as it might be somewhat faster than
+using the mouse (but note that many menu options can be selected using
+accelerators). Furthermore, it is useful for situations in which the
+graphical user interface is not available (e.g. in the absence of an X
+workstation).  The availability of a command-line interface in
+combination with mouse-driven menu's and buttons illustrates the 
+<B>flexible</B> nature of the interface.</P>
+<P>An important and interesting property of both the command interpreter
+and the graphical user interface is <B>extendibility</B>. It is very
+easy to add further commands (and associated actions) to the command
+interpreter (using straightforward DCG syntax).  The graphical user
+interface can be extended by writing Tcl/Tk scripts, possibly in
+combination with some Prolog code. A number of examples will be given
+in the remainder of this paper.</P>
+<P>Finally note that it is also possible to run Hdrug without the
+graphical user interface present (simply give the <B>notk</B> option
+at startup). This is sometimes useful if no X workstation is available
+(e.g. if you connect to the system over a slow serial line), but also
+for batch processing.  At any point you can start or stop the
+graphical user interface by issuing a simple command.</P>
+<H2>1.2 <a name="anc2"></a>Visualisation</H2>
+<P>Hdrug supports the visualisation of a large collection of 
+data-structures into a number of different formats.</P>
+<P>These formats include (at the moment not all datastructures
+are supported for all formats. For example, plots of two dimensional
+data is only available for Tk):</P>
+<UL><LI><P>ASCII art</P>
+<LI><P>Tk Canvas</P>
+<LI><P>LaTeX</P>
+<LI><P>CLiG</P>
+<LI><P>DOT</P>
+</UL><P>The data-structures for which visualisation is provided
+are:</P>
+<UL><LI><P>Trees. Various tree definitions can exist in parallel. For example,
+the system supports the printing of syntax trees, derivation trees,
+type hierarchy trees, lexical hierarchies etc. Actions can be
+defined which are executed upon clicking on a node of a tree. New
+tree definitions can be added to the system by simple declarations.</P>
+<LI><P>Feature structures. Clicking on attributes of a feature-structure
+implode or explode the value of that attribute.  Such feature
+structures can be the feature structures associated with grammar
+rules, lexical entries, macro definitions and parse results.</P>
+<LI><P>Trees with feature structure nodes. Again, new tree definitions
+can be declared. An example is
+<TT><A HREF="dt.png">dt.png</A></TT></P>
+<LI><P>Graph (plots of two variable data), e.g. to display the
+(average) cputime or memory requirements of different parsers.</P>
+<LI><P>Tables.</P>
+<LI><P>Prolog clauses.</P>
+<LI><P>Definite clauses with feature structure arguments. This can be
+used e.g. to visualise macro definitions, lexical entries, and
+grammar rules (possibly with associated constraints).</P>
+</UL><H2>1.3 <a name="anc3"></a>Parser and Generator Management</H2>
+<P>Hdrug provides an interface for the definition of parsers and
+generators.  Hdrug manages the results of a parse or generation
+request. You can inspect these results later.  Multiple parsers and
+generators can co-exist. You can compare some of these parsers with
+respect to speed and memory usage on a single example sentence, or on
+sets of pre-defined example sentences. Furthermore, actions can be
+defined which are executed right before parsing (generation) starts,
+or right after the construction of each parse result (generation
+result), or right after parsing is completed.</P>
+<H2>1.4 <a name="anc4"></a>Useful Libraries</H2>
+<P>Most of the visualisation tools are available through libraries as
+well. In addition, the Hdrug library contains mechanisms to translate
+Prolog terms into feature structures and vice versa (on the basis of a
+number of declarations). Furthermore, a library is provided for the
+creation of `Mellish' Prolog terms on the basis of boolean expressions
+over finite domains. The reverse translation is provided too. Such
+terms can be used as values of feature structures to implement a
+limited form of disjunction and negation by unification.</P>
+<P>A number of smaller utilities is provided in the library as well, such
+as the management of global variables, and an extendible on-line help
+system.</P>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node2.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+
+
+</BODY></HTML>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="genus" getal="ev" graad="basis" id="4" lemma="Statenvertaling" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Statenvertaling" word="Statenvertaling"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="blijven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="blijf" word="blijft" wvorm="pv"/>
+      <node begin="3" cat="pp" end="7" id="6" rel="ld">
+        <node begin="3" end="4" getal="getal" id="7" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="noun" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="hier" status="vol" vwtype="aanw" word="hier"/>
+        <node begin="4" cat="advp" end="6" id="8" rel="mod">
+          <node begin="4" end="5" getal="ev" id="9" lemma="iets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="me" root="iets" status="vol" vwtype="onbep" word="iets"/>
+          <node begin="5" buiging="zonder" end="6" graad="comp" id="10" lemma="dichter" pos="adv" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="dichter" word="dichter"/>
+        </node>
+        <node begin="6" end="7" id="11" lemma="bij" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="bij" vztype="fin" word="bij"/>
+      </node>
+      <node begin="7" end="8" id="12" lemma="met" pos="pp" postag="VZ(init)" pt="vz" rel="mod" root="met" vztype="init" word="met"/>
+    </node>
+    <node begin="8" end="9" id="13" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>De Statenvertaling blijft hier iets dichter bij met :</sentence>
+</alpino_ds>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="3" id="2" rel="--">
+      <node begin="0" buiging="zonder" end="1" id="3" lemma="inrukken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="nucl" root="ruk" word="Ingerukt" wvorm="vd"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="4" lemma="mars" naamval="stan" ntype="soort" pos="tag" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="tag" root="mars" word="mars"/>
+    </node>
+    <node begin="3" end="4" id="5" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>Ingerukt , mars !</sentence>
+</alpino_ds>

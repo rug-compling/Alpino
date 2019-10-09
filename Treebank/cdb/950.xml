@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="33" id="0" rel="top">
+    <node begin="0" cat="smain" end="32" id="1" rel="--">
+      <node begin="0" cat="conj" end="5" id="2" index="1" rel="su">
+        <node begin="1" conjtype="neven" end="2" id="3" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="0" cat="np" end="5" id="4" rel="cnj">
+          <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="5" lemma="politie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="politie" word="Politie"/>
+          <node begin="3" cat="pp" end="5" id="6" index="2" rel="mod">
+            <node begin="3" end="4" id="7" lemma="te" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="te" vztype="init" word="te"/>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="8" lemma="Middelburg" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Middelburg" word="Middelburg"/>
+          </node>
+        </node>
+        <node begin="2" cat="np" end="5" id="9" rel="cnj">
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="10" lemma="justitie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="justitie" word="justitie"/>
+          <node begin="3" end="5" id="11" index="2" rel="mod"/>
+        </node>
+      </node>
+      <node begin="5" end="6" id="12" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="32" id="13" rel="vc">
+        <node begin="0" end="5" id="14" index="1" rel="su"/>
+        <node begin="8" buiging="zonder" end="9" id="15" lemma="inroepen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="roep" word="ingeroepen" wvorm="vd"/>
+        <node begin="6" cat="np" end="12" id="16" rel="obj1">
+          <node begin="6" end="7" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="18" lemma="assistentie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="assistentie" word="assistentie"/>
+          <node begin="9" cat="pp" end="12" id="19" rel="mod">
+            <node begin="9" end="10" id="20" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="10" cat="np" end="12" id="21" rel="obj1">
+              <node begin="10" buiging="met-e" end="11" graad="basis" id="22" lemma="Haags" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Haags" word="Haagse"/>
+              <node begin="11" end="12" getal="mv" graad="basis" id="23" lemma="opsporingsspecialist" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="specialist" word="opsporingsspecialisten"/>
+            </node>
+          </node>
+        </node>
+        <node begin="12" cat="pp" end="32" id="24" rel="mod">
+          <node begin="12" end="13" id="25" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+          <node begin="13" cat="np" end="32" id="26" rel="obj1">
+            <node begin="13" end="14" id="27" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="28" lemma="onderzoek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="onderzoek" word="onderzoek"/>
+            <node begin="15" cat="pp" end="32" id="29" rel="mod">
+              <node begin="15" end="16" id="30" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+              <node begin="16" cat="np" end="32" id="31" rel="obj1">
+                <node begin="16" end="17" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="33" lemma="oorzaak" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oorzaak" word="oorzaak"/>
+                <node begin="18" cat="pp" end="32" id="34" rel="mod">
+                  <node begin="18" end="19" id="35" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="19" cat="np" end="32" id="36" rel="obj1">
+                    <node begin="19" end="20" id="37" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="38" lemma="brand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="brand" word="brand"/>
+                    <node begin="21" cat="rel" end="32" id="39" rel="mod">
+                      <node begin="21" end="22" getal="getal" id="40" index="3" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+                      <node begin="21" cat="ssub" end="32" id="41" rel="body">
+                        <node begin="21" end="22" id="42" index="3" rel="su"/>
+                        <node begin="22" end="23" id="43" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
+                        <node begin="23" cat="np" end="30" id="44" rel="obj1">
+                          <node begin="23" end="24" id="45" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                          <node begin="24" buiging="zonder" end="25" graad="basis" id="46" lemma="groot" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="groot" word="groot"/>
+                          <node begin="25" end="26" genus="onz" getal="ev" graad="basis" id="47" lemma="deel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="deel" word="deel"/>
+                          <node begin="26" cat="pp" end="30" id="48" rel="mod">
+                            <node begin="26" end="27" id="49" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                            <node begin="27" cat="np" end="30" id="50" rel="obj1">
+                              <node begin="27" end="28" id="51" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                              <node begin="28" buiging="met-e" end="29" graad="basis" id="52" lemma="middelburgs" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Middelburgse" word="Middelburgse"/>
+                              <node begin="29" end="30" genus="onz" getal="ev" graad="basis" id="53" lemma="gerechtsgebouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebouw" word="gerechtsgebouw"/>
+                            </node>
+                          </node>
+                        </node>
+                        <node begin="30" buiging="zonder" end="31" graad="basis" id="54" lemma="inwendig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="inwendig" word="inwendig"/>
+                        <node begin="31" end="32" id="55" lemma="verwoesten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verwoest" word="verwoestte" wvorm="pv"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="32" end="33" id="56" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Politie en justitie te Middelburg hebben de assistentie ingeroepen van Haagse opsporingsspecialisten bij het onderzoek naar de oorzaak van de brand die gisteren een groot deel van het Middelburgse gerechtsgebouw inwendig verwoestte .</sentence>
+</alpino_ds>

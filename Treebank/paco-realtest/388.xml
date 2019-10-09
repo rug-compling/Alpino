@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="30" id="0" rel="top">
+    <node begin="17" end="18" id="1" pos="punct" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="29" id="2" rel="--">
+      <node begin="5" end="6" id="3" infl="sg" pos="verb" rel="hd" root="zal" sc="aux(inf)" tense="past" word="zou"/>
+      <node begin="6" end="7" id="4" index="1" infl="het" pos="det" rel="su" root="dat" wh="nwh" word="dat"/>
+      <node begin="0" cat="inf" end="29" id="5" rel="vc">
+        <node begin="6" end="7" id="6" index="1" rel="su"/>
+        <node begin="7" end="8" id="7" infl="inf" pos="verb" rel="hd" root="heb" sc="aux_psp_hebben" word="hebben"/>
+        <node begin="0" cat="ppart" end="29" id="8" rel="vc">
+          <node begin="0" cat="cp" end="5" id="9" rel="mod">
+            <node begin="0" end="1" id="10" pos="comp" rel="cmp" root="als" sc="als" word="Als"/>
+            <node begin="1" cat="ssub" end="5" id="11" rel="body">
+              <node begin="1" end="2" id="12" index="2" infl="het" pos="det" rel="su" root="dit" wh="nwh" word="dit"/>
+              <node begin="3" end="4" id="13" infl="sg" pos="verb" rel="hd" root="ben" sc="passive" tense="past" word="was"/>
+              <node begin="1" cat="ppart" end="5" id="14" rel="vc">
+                <node begin="1" end="2" id="15" index="2" rel="obj1"/>
+                <node begin="2" end="3" id="16" pos="adv" rel="mod" root="niet" word="niet"/>
+                <node begin="4" end="5" id="17" infl="psp" pos="verb" rel="hd" root="pak_aan" sc="part_transitive(aan)" word="aangepakt"/>
+              </node>
+            </node>
+          </node>
+          <node begin="6" end="7" id="18" index="1" rel="su"/>
+          <node begin="8" end="9" id="19" infl="psp" pos="verb" rel="hd" root="draag_bij" sc="part_pc_pp(bij,tot)" word="bijgedragen"/>
+          <node begin="9" cat="pp" end="29" id="20" rel="pc">
+            <node begin="9" end="10" id="21" pos="prep" rel="hd" root="tot" word="tot"/>
+            <node begin="10" cat="np" end="29" id="22" rel="obj1">
+              <node begin="10" end="11" id="23" infl="een" pos="det" rel="det" root="een" word="een"/>
+              <node aform="base" begin="11" end="12" id="24" infl="no_e" pos="adj" rel="mod" root="vaag" vform="adj" word="vaag"/>
+              <node begin="12" end="13" gen="het" id="25" num="sg" pos="noun" rel="hd" root="klimaat" word="klimaat"/>
+              <node begin="13" cat="pp" end="17" id="26" rel="mod">
+                <node begin="13" end="14" id="27" pos="prep" rel="hd" root="van" word="van"/>
+                <node begin="14" cat="conj" end="17" id="28" rel="obj1">
+                  <node begin="14" end="15" gen="het" id="29" num="sg" pos="noun" rel="cnj" root="wantrouwen" word="wantrouwen"/>
+                  <node begin="15" end="16" id="30" pos="vg" rel="crd" root="en" word="en"/>
+                  <node begin="16" end="17" gen="both" id="31" num="both" pos="noun" rel="cnj" root="ontworteling" word="ontworteling"/>
+                </node>
+              </node>
+              <node begin="18" cat="rel" end="29" id="32" rel="mod">
+                <node begin="18" case="no_obl" end="19" gen="het" id="33" index="3" pos="pron" rel="rhd" root="dat" wh="rel" word="dat"/>
+                <node begin="18" cat="ssub" end="29" id="34" rel="body">
+                  <node begin="18" end="19" id="35" index="3" rel="su"/>
+                  <node begin="21" end="22" id="36" infl="sg" pos="verb" rel="hd" root="zal" sc="aux(inf)" tense="past" word="zou"/>
+                  <node begin="18" cat="inf" end="29" id="37" rel="vc">
+                    <node begin="18" end="19" id="38" index="3" rel="su"/>
+                    <node begin="19" end="20" id="39" pos="adv" rel="mod" root="dan" special="tmp" word="dan"/>
+                    <node begin="20" end="21" id="40" pos="adv" rel="mod" root="weer" word="weer"/>
+                    <node begin="22" end="23" id="41" infl="inf" pos="verb" rel="hd" root="leid" sc="pc_pp(tot)" word="leiden"/>
+                    <node begin="23" cat="pp" end="29" id="42" rel="pc">
+                      <node begin="23" end="24" id="43" pos="prep" rel="hd" root="tot" word="tot"/>
+                      <node begin="24" cat="np" end="29" id="44" rel="obj1">
+                        <node begin="24" end="25" gen="de" id="45" num="sg" pos="noun" rel="hd" root="ondermijning" word="ondermijning"/>
+                        <node begin="25" cat="pp" end="29" id="46" rel="mod">
+                          <node begin="25" end="26" id="47" pos="prep" rel="hd" root="van" word="van"/>
+                          <node begin="26" cat="np" end="29" id="48" rel="obj1">
+                            <node begin="26" end="27" id="49" infl="de" pos="det" rel="det" root="de" word="de"/>
+                            <node begin="27" cat="mwu" end="29" id="50" mwu_root="post_conflict_wederopbouw" mwu_sense="post_conflict_wederopbouw" rel="hd">
+                              <node begin="27" end="28" gen="de" id="51" num="sg" pos="noun" rel="mwp" root="postconflict" word="postconflict"/>
+                              <node begin="28" end="29" gen="de" id="52" num="sg" pos="noun" rel="mwp" root="wederopbouw" word="wederopbouw"/>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="29" end="30" id="53" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Als dit niet was aangepakt zou dat hebben bijgedragen tot een vaag klimaat van wantrouwen en ontworteling , dat dan weer zou leiden tot ondermijning van de postconflict wederopbouw .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

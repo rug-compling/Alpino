@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="cp" end="9" id="1" rel="--">
+      <node begin="0" cat="mwu" end="3" id="2" rel="cmp">
+        <node begin="0" end="1" id="3" lemma="voor" pos="comp" postag="VZ(init)" pt="vz" rel="mwp" root="voor" vztype="init" word="voor"/>
+        <node begin="1" end="2" id="4" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="comp" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="geval" naamval="stan" ntype="soort" pos="comp" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="geval" word="geval"/>
+      </node>
+      <node begin="3" cat="conj" end="9" id="6" rel="body">
+        <node begin="3" cat="ssub" end="7" id="7" rel="cnj">
+          <node begin="4" end="5" getal="ev" id="8" index="1" lemma="iemand" naamval="stan" pdtype="pron" persoon="3p" pos="noun" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="su" root="iemand" status="vol" vwtype="onbep" word="iemand"/>
+          <node begin="5" end="6" id="9" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+          <node begin="3" cat="ppart" end="7" id="10" rel="vc">
+            <node begin="3" end="4" getal="getal" id="11" index="2" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+            <node begin="4" end="5" id="12" index="1" rel="obj1"/>
+            <node begin="6" buiging="zonder" end="7" id="13" lemma="pakken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="pak" word="gepakt" wvorm="vd"/>
+          </node>
+        </node>
+        <node begin="7" conjtype="neven" end="8" id="14" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+        <node begin="3" cat="ssub" end="9" id="15" rel="cnj">
+          <node begin="3" end="4" id="16" index="2" rel="mod"/>
+          <node begin="4" end="5" id="17" index="1" rel="su"/>
+          <node begin="8" end="9" id="18" lemma="doorslaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sla_door" word="doorslaat" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>voor het geval er iemand wordt gepakt of doorslaat</sentence>
+</alpino_ds>

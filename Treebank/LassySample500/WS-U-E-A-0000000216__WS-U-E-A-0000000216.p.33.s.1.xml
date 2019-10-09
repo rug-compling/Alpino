@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" word="werden" wvorm="pv"/>
+      <node begin="3" cat="np" end="7" id="3" index="1" rel="su">
+        <node begin="3" cat="np" end="5" id="4" rel="det">
+          <node begin="3" end="4" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="6" lemma="paar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="paar" word="paar"/>
+        </node>
+        <node begin="5" buiging="met-e" end="6" graad="basis" id="7" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+        <node begin="6" end="7" getal="mv" graad="basis" id="8" lemma="vissoort" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vis_soort" word="vissoorten"/>
+      </node>
+      <node begin="0" cat="ppart" end="8" id="9" rel="vc">
+        <node begin="0" end="1" getal="getal" id="10" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+        <node begin="2" end="3" id="11" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+        <node begin="3" end="7" id="12" index="1" rel="obj1"/>
+        <node begin="7" buiging="zonder" end="8" id="13" lemma="ontdekken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ontdek" word="ontdekt" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Er werden ook een paar nieuwe vissoorten ontdekt .</sentence>
+</alpino_ds>

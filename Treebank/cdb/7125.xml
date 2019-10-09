@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="conj" end="4" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="cnj">
+        <node begin="0" end="1" id="3" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="bomalarm" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bomalarm" word="bomalarm"/>
+      </node>
+      <node begin="2" conjtype="neven" end="3" id="5" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="3" end="4" getal="mv" graad="basis" id="6" lemma="demonstratie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="demonstratie" word="demonstraties"/>
+    </node>
+    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een bomalarm en demonstraties .</sentence>
+</alpino_ds>

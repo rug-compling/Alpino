@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="du" end="12" id="1" rel="--">
+      <node begin="0" cat="pp" end="3" id="2" rel="dp">
+        <node begin="0" end="1" frame="preposition(bij,[vandaan])" id="3" lcat="pp" pos="prep" rel="hd" root="bij" sense="bij" word="Bij"/>
+        <node begin="1" cat="np" end="3" id="4" rel="obj1">
+          <node begin="1" end="2" frame="determiner(elke,nwh,mod)" id="5" infl="elke" lcat="detp" pos="det" rel="det" root="elk" sense="elk" wh="nwh" word="elke"/>
+          <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="6" lcat="np" num="sg" pos="noun" rel="hd" root="correctie_post" sense="correctie_post" word="correctiepost"/>
+        </node>
+      </node>
+      <node begin="3" cat="sv1" end="12" id="7" rel="dp">
+        <node begin="3" end="4" frame="verb('hebben/zijn',sg,modifier(aux(inf)))" id="8" infl="sg" lcat="sv1" pos="verb" rel="hd" root="moet" sc="modifier(aux(inf))" sense="moet" tense="present" word="moet"/>
+        <node begin="4" cat="inf" end="12" id="9" rel="vc">
+          <node begin="4" end="5" frame="verb(unacc,inf,passive)" id="10" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+          <node begin="5" cat="ppart" end="12" id="11" rel="vc">
+            <node begin="5" end="6" frame="verb(hebben,psp,transitive)" id="12" infl="psp" lcat="ppart" pos="verb" rel="hd" root="specificeer" sc="transitive" sense="specificeer" word="gespecificeerd"/>
+            <node begin="6" cat="whrel" end="12" id="13" rel="mod">
+              <node begin="6" cat="pp" end="9" id="14" index="1" rel="rhd">
+                <node begin="6" end="7" frame="preposition(op,[af,na])" id="15" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+                <node begin="7" cat="np" end="9" id="16" rel="obj1">
+                  <node begin="7" end="8" frame="determiner(welke,rwh,nmod,pro,yparg)" id="17" infl="welke" lcat="detp" pos="det" rel="det" root="welk" sense="welk" wh="rwh" word="welke"/>
+                  <node begin="8" end="9" frame="noun(de,count,sg)" gen="de" id="18" lcat="np" num="sg" pos="noun" rel="hd" root="rubriek" sense="rubriek" word="rubriek"/>
+                </node>
+              </node>
+              <node begin="6" cat="ssub" end="12" id="19" rel="body">
+                <node begin="6" end="9" id="20" index="1" rel="pc"/>
+                <node begin="9" case="nom" def="def" end="10" frame="pronoun(nwh,thi,sg,de,nom,def)" gen="de" id="21" lcat="np" num="sg" per="thi" pos="pron" rel="su" root="hij" sense="hij" wh="nwh" word="hij"/>
+                <node begin="10" end="11" frame="fixed_part([betrekking])" id="22" lcat="fixed" pos="fixed" rel="svp" root="betrekking" sense="betrekking" word="betrekking"/>
+                <node begin="11" end="12" frame="verb(hebben,sg_heeft,fixed([{[[betrekking],pc(op)]}],no_passive))" id="23" infl="sg_heeft" lcat="ssub" pos="verb" rel="hd" root="heb" sc="fixed([{[[betrekking],pc(op)]}],no_passive)" sense="betrekking-heb-op" tense="present" word="heeft"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" frame="punct(punt)" id="24" lcat="--" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Bij elke correctiepost moet worden gespecificeerd op welke rubriek hij betrekking heeft .</sentence>
+  <comments>
+    <comment>Q#373|Bij elke correctiepost moet worden gespecificeerd op welke rubriek hij betrekking heeft .|1|2|-5.023905989134831</comment>
+  </comments>
+</alpino_ds>

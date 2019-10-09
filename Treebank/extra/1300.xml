@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" cat="pp" end="3" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+        <node begin="1" cat="np" end="3" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="volksmond" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="volksmond" word="volksmond"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" infl="sg3" lemma="zeggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zeg" sc="transitive" stype="declarative" tense="present" word="zegt" wvorm="pv"/>
+      <node begin="4" case="nom" def="def" end="5" gen="de" genus="masc" getal="ev" id="8" lemma="men" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" rnum="sg" root="men" status="red" vwtype="pers" wh="nwh" word="men"/>
+      <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="9" infl="no_e" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="vaak" vform="adj" word="vaak"/>
+      <node begin="6" end="7" genus="genus" getal="ev" graad="basis" id="10" lemma="ISP" naamval="stan" neclass="MISC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" rnum="sg" root="ISP" word="ISP"/>
+      <node begin="7" cat="cp" end="12" id="11" rel="mod">
+        <node begin="7" conjtype="onder" end="8" id="12" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="als"/>
+        <node begin="8" cat="ssub" end="12" id="13" rel="body">
+          <node begin="8" case="nom" def="def" end="9" gen="de" genus="masc" getal="ev" id="14" lemma="men" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" rnum="sg" root="men" status="red" vwtype="pers" wh="nwh" word="men"/>
+          <node begin="9" cat="np" end="11" id="15" rel="obj1">
+            <node begin="9" end="10" getal="ev" graad="basis" id="16" infl="pron" lemma="Access" naamval="gen" neclass="PER" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Access" special="name" word="Access"/>
+            <node begin="10" end="11" gen="de" genus="zijd" getal="ev" graad="basis" id="17" lemma="provider" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="provider" word="Provider"/>
+          </node>
+          <node begin="11" end="12" id="18" infl="sg3" lemma="bedoelen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="bedoel" sc="transitive" tense="present" word="bedoelt" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>In de volksmond zegt men vaak ISP als men Access Provider bedoelt .</sentence>
+</alpino_ds>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" cat="pp" end="6" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="Voor"/>
+        <node begin="1" cat="mwu" end="6" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" lemma="Van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Van" spectype="deeleigen" word="Van"/>
+          <node begin="2" end="3" id="6" lemma="der" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="der" spectype="deeleigen" word="der"/>
+          <node begin="3" end="4" id="7" lemma="Giessen" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Giessen" spectype="deeleigen" word="Giessen"/>
+          <node begin="4" end="5" id="8" lemma="De" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
+          <node begin="5" end="6" id="9" lemma="Noord" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Noord" spectype="deeleigen" word="Noord"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="7" end="8" getal="getal" id="11" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+      <node begin="8" buiging="zonder" end="9" graad="basis" id="12" lemma="voorlopig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="voorlopig" word="voorlopig"/>
+      <node begin="9" cat="np" end="12" id="13" rel="su">
+        <node begin="9" end="10" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="num" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="10" buiging="met-e" end="11" graad="basis" id="15" lemma="schraal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="schraal" word="schrale"/>
+        <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="16" lemma="troost" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="troost" word="troost"/>
+      </node>
+    </node>
+    <node begin="12" end="13" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Voor Van der Giessen De Noord is er voorlopig een schrale troost .</sentence>
+</alpino_ds>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" cat="np" end="3" id="1" rel="--">
+      <node begin="0" end="1" frame="noun(het,count,sg)" gen="het" id="2" lcat="np" num="sg" pos="noun" rel="hd" root="rapport" sense="rapport" word="Rapport"/>
+      <node begin="1" cat="pp" end="3" id="3" rel="mod">
+        <node begin="1" end="2" frame="preposition(inzake,[])" id="4" lcat="pp" pos="prep" rel="hd" root="inzake" sense="inzake" word="inzake"/>
+        <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="5" lcat="np" num="sg" pos="noun" rel="obj1" root="inventaris_wijziging" sense="inventaris_wijziging" word="inventariswijziging"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Rapport inzake inventariswijziging</sentence>
+  <comments>
+    <comment>Q#347|Rapport inzake inventariswijziging|1|1|1.1257184025234874</comment>
+  </comments>
+</alpino_ds>

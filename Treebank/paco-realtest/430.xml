@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="smain" end="17" id="1" rel="--">
+      <node begin="0" cat="pp" end="4" id="2" rel="mod">
+        <node begin="0" cat="mwu" end="3" id="3" mwu_root="met_betrekking_tot" mwu_sense="met_betrekking_tot" rel="hd">
+          <node begin="0" end="1" id="4" pos="prep" rel="mwp" root="Met" word="Met"/>
+          <node begin="1" end="2" id="5" pos="prep" rel="mwp" root="betrekking" word="betrekking"/>
+          <node begin="2" end="3" id="6" pos="prep" rel="mwp" root="tot" word="tot"/>
+        </node>
+        <node begin="3" end="4" gen="de" id="7" num="sg" pos="noun" rel="obj1" root="voedsel_hulp" word="voedselhulp"/>
+      </node>
+      <node begin="4" end="5" id="8" infl="sg" pos="verb" rel="hd" root="moedig_aan" sc="part_np_pc_pp(aan,tot)" tense="past" word="moedigde"/>
+      <node begin="5" cat="np" end="8" id="9" rel="su">
+        <node begin="5" end="6" id="10" infl="de" pos="det" rel="det" root="de" word="de"/>
+        <node aform="base" begin="6" end="7" id="11" infl="e" pos="adj" rel="mod" root="Belgisch" vform="adj" word="Belgische"/>
+        <node begin="7" end="8" gen="de" id="12" num="sg" pos="noun" rel="hd" root="administratie" word="administratie"/>
+      </node>
+      <node begin="8" cat="np" end="10" id="13" rel="obj1">
+        <node begin="8" end="9" id="14" infl="het" pos="det" rel="det" root="het" wh="nwh" word="het"/>
+        <node begin="9" end="10" id="15" neclass="ORG" num="both" pos="name" rel="hd" root="WVP" word="WVP"/>
+      </node>
+      <node begin="10" end="11" id="16" pos="part" rel="svp" root="aan" word="aan"/>
+      <node begin="11" cat="pp" end="17" id="17" rel="pc">
+        <node begin="11" end="12" id="18" pos="prep" rel="hd" root="tot" word="tot"/>
+        <node begin="12" cat="np" end="17" id="19" rel="obj1">
+          <node begin="12" end="13" id="20" infl="de" pos="det" rel="det" root="de" word="de"/>
+          <node aform="base" begin="13" end="14" id="21" infl="e" pos="adj" rel="mod" root="lokaal" vform="adj" word="lokale"/>
+          <node begin="14" end="15" gen="de" id="22" num="sg" pos="noun" rel="hd" root="aankoop" word="aankoop"/>
+          <node begin="15" cat="pp" end="17" id="23" rel="mod">
+            <node begin="15" end="16" id="24" pos="prep" rel="hd" root="van" word="van"/>
+            <node begin="16" end="17" gen="het" id="25" num="pl" pos="noun" rel="obj1" root="leven_middel" word="levensmiddelen"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="26" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Met betrekking tot voedselhulp moedigde de Belgische administratie het WVP aan tot de lokale aankoop van levensmiddelen .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

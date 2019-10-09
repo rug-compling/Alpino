@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" graad="dim" id="2" lemma="taxirit" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="su" root="Taxiritje" word="Taxiritje"/>
+      <node begin="1" end="2" id="3" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="4" lemma="chauffeur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj2" root="chauffeur" word="chauffeur"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="5" lemma="duur" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="duur" word="duur"/>
+      <node begin="4" cat="ti" end="6" id="6" rel="svp">
+        <node begin="4" end="5" id="7" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="5" buiging="zonder" end="6" id="8" lemma="staan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="sta" word="staan" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Taxiritje komt chauffeur duur te staan .</sentence>
+</alpino_ds>

@@ -1,0 +1,41 @@
+#!/usr/bin/perl
+# © Gertjan van Noord, 2004.
+# mailto:vannoord@let.rug.nl
+
+$previous="";
+while (<>) {
+
+  if (/^[%]/) {
+      if ($previous) { 
+	  print "$previous\n"; 
+	  $previous = "";
+      }
+      print $_;
+      next;
+  }
+  if (/^key\|/) {
+      if ($previous) { 
+	  print "$previous\n"; 
+          $previous = "";
+      }
+      print $_;
+      next;
+  }
+  chomp;
+  $current = $_;
+  if ($previous =~ / [a-z][a-z][a-z]*$/ &&
+      $current =~ /^[a-z][a-z]/) {
+      $previous = "$previous $current";
+  } else {
+      if ($previous) { 
+	  print "$previous\n"; 
+	  $previous = "";
+      }
+      $previous = $current;
+  }
+
+}
+
+if ($previous) { 
+    print "$previous\n"; 
+}

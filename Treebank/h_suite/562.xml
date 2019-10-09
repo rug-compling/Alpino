@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="np" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="3" lemma="tv" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tv" word="TV"/>
+      <node begin="2" cat="pp" end="7" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="3" cat="ap" end="7" id="6" rel="obj1">
+          <node begin="3" cat="advp" end="6" id="7" rel="mod">
+            <node begin="3" cat="np" end="5" id="8" rel="me">
+              <node begin="3" end="4" id="9" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
+              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="keer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="keer" word="keer"/>
+            </node>
+            <node begin="5" end="6" id="11" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="hd" root="zo" word="zo"/>
+          </node>
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="duur" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="duur" word="duur"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Een TV van twee keer zo duur</sentence>
+</alpino_ds>

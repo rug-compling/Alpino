@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" index="1" rel="su">
+        <node begin="0" cat="detp" end="2" id="3" rel="det">
+          <node begin="0" end="1" id="4" lemma="zoveel" numtype="hoofd" pos="det" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="hd" root="zoveel" word="zoveel"/>
+          <node begin="1" buiging="zonder" end="2" graad="basis" id="5" lemma="mogelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="obcomp" root="mogelijk" word="mogelijk"/>
+        </node>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="6" lemma="fruit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="fruit" word="fruit"/>
+      </node>
+      <node begin="3" end="4" id="7" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="5" id="8" rel="vc">
+        <node begin="0" end="3" id="9" index="1" rel="obj1"/>
+        <node begin="4" buiging="zonder" end="5" id="10" lemma="bewaren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bewaar" word="bewaard" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>zoveel mogelijk fruit werd bewaard</sentence>
+</alpino_ds>

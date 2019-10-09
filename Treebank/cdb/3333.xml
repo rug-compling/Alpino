@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="0" cat="cp" end="24" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="namelijk" pos="comp" postag="BW()" pt="bw" rel="cmp" root="namelijk" word="namelijk"/>
+      <node begin="1" cat="np" end="24" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="beleid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="beleid" word="beleid"/>
+        <node begin="3" cat="rel" end="24" id="6" rel="mod">
+          <node begin="3" end="4" getal="ev" id="7" index="1" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
+          <node begin="3" cat="ssub" end="24" id="8" rel="body">
+            <node begin="3" end="4" id="9" index="1" rel="su"/>
+            <node begin="6" end="7" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+            <node begin="4" cat="ppart" end="24" id="11" rel="predc">
+              <node begin="5" buiging="zonder" end="6" id="12" lemma="richten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gericht" word="gericht" wvorm="vd"/>
+              <node begin="4" cat="pp" end="24" id="13" rel="pc">
+                <node begin="4" end="5" id="14" lemma="erop" pos="pp" postag="BW()" pt="bw" rel="hd" root="erop" word="erop"/>
+                <node begin="7" cat="ti" end="24" id="15" rel="vc">
+                  <node begin="22" end="23" id="16" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+                  <node begin="7" cat="inf" end="24" id="17" rel="body">
+                    <node begin="7" cat="np" end="12" id="18" rel="obj1">
+                      <node begin="7" end="8" id="19" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                      <node begin="8" cat="conj" end="11" id="20" rel="mod">
+                        <node begin="8" buiging="met-e" end="9" graad="basis" id="21" lemma="technisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="technisch" word="technische"/>
+                        <node begin="9" conjtype="neven" end="10" id="22" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                        <node begin="10" buiging="met-e" end="11" graad="basis" id="23" lemma="commerciel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="commercieel" word="commerciele"/>
+                      </node>
+                      <node begin="11" end="12" getal="mv" graad="basis" id="24" lemma="verandering" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verandering" word="veranderingen"/>
+                    </node>
+                    <node begin="12" cat="conj" end="20" id="25" rel="mod">
+                      <node begin="12" buiging="zonder" end="13" graad="basis" id="26" lemma="tijdig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="tijdig" word="tijdig"/>
+                      <node begin="13" conjtype="neven" end="14" id="27" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                      <node begin="14" cat="pp" end="20" id="28" rel="cnj">
+                        <node begin="14" end="15" id="29" lemma="zonder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="zonder" vztype="init" word="zonder"/>
+                        <node begin="15" cat="np" end="20" id="30" rel="obj1">
+                          <node begin="15" cat="ap" end="18" id="31" rel="mod">
+                            <node begin="15" cat="advp" end="17" id="32" rel="mod">
+                              <node begin="15" end="16" id="33" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+                              <node begin="16" end="17" id="34" lemma="te" pos="adv" postag="BW()" pt="bw" rel="hd" root="te" word="te"/>
+                            </node>
+                            <node begin="17" buiging="met-e" end="18" graad="basis" id="35" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="groot" word="grote"/>
+                          </node>
+                          <node begin="18" buiging="met-e" end="19" graad="basis" id="36" lemma="sociaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="sociaal" word="sociale"/>
+                          <node begin="19" end="20" getal="mv" graad="basis" id="37" lemma="kleerscheuren" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="scheur" word="kleerscheuren"/>
+                        </node>
+                      </node>
+                    </node>
+                    <node begin="20" cat="mwu" end="22" id="38" rel="svp">
+                      <node begin="20" end="21" id="39" lemma="tot" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="tot" vztype="init" word="tot"/>
+                      <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="40" lemma="stand" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="stand" word="stand"/>
+                    </node>
+                    <node begin="23" buiging="zonder" end="24" id="41" lemma="brengen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breng" word="brengen" wvorm="inf"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="42" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>namelijk een beleid dat erop gericht is de technische en commerciele veranderingen tijdig en zonder al te grote sociale kleerscheuren tot stand te brengen .</sentence>
+</alpino_ds>

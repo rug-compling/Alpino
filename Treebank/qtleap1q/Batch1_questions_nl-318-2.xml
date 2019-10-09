@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="sv1" end="11" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="Kan" wvorm="pv"/>
+      <node begin="1" end="2" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      <node begin="1" cat="inf" end="11" id="4" rel="vc">
+        <node begin="1" end="2" id="5" index="1" rel="su"/>
+        <node begin="2" buiging="met-e" end="3" getal-n="zonder-n" id="6" lemma="deze" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(aanw,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="obj1" root="deze" vwtype="aanw" word="deze"/>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="vervangen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vervang" word="vervangen" wvorm="inf"/>
+        <node begin="4" cat="pp" end="11" id="8" rel="pc">
+          <node begin="4" end="5" id="9" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+          <node begin="5" cat="np" end="11" id="10" rel="obj1">
+            <node begin="5" end="6" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="6" cat="mwu" end="8" id="12" rel="hd">
+              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="SD" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="SD" word="SD"/>
+              <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="14" lemma="kaart" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="kaart" word="kaart"/>
+            </node>
+            <node begin="8" cat="pp" end="11" id="15" rel="mod">
+              <node begin="8" end="9" id="16" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+              <node begin="9" cat="np" end="11" id="17" rel="obj1">
+                <node begin="9" buiging="zonder" end="10" graad="comp" id="18" lemma="meer" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,comp)" pt="vnw" rel="det" root="meer" vwtype="onbep" word="meer"/>
+                <node begin="10" end="11" getal="mv" graad="basis" id="19" lemma="opslag_mogelijkheid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="opslag_mogelijkheid" word="opslagmogelijkheden"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="20" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Kan ik deze vervangen door een SD kaart met meer opslagmogelijkheden ?</sentence>
+</alpino_ds>

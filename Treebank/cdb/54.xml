@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="48" id="0" rel="top">
+    <node begin="9" end="10" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="36" end="37" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="47" id="3" rel="--">
+      <node begin="0" cat="np" end="4" id="4" rel="su">
+        <node begin="0" cat="mwu" end="2" id="5" rel="hd">
+          <node begin="0" end="1" id="6" lemma="Popke" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Popke" spectype="deeleigen" word="Popke"/>
+          <node begin="1" end="2" id="7" lemma="Oosterhof" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Oosterhof" spectype="deeleigen" word="Oosterhof"/>
+        </node>
+        <node begin="2" cat="pp" end="4" id="8" rel="mod">
+          <node begin="2" end="3" id="9" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="10" lemma="Eelde" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Eelde" word="Eelde"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="11" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="5" cat="pp" end="36" id="12" rel="mod">
+        <node begin="5" end="6" id="13" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="6" cat="np" end="36" id="14" rel="obj1">
+          <node begin="6" cat="mwu" end="9" id="15" rel="hd">
+            <node begin="6" end="7" id="16" lemma="La" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="La" spectype="deeleigen" word="La"/>
+            <node begin="7" end="8" id="17" lemma="Ferte" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ferte" spectype="deeleigen" word="Ferte"/>
+            <node begin="8" end="9" id="18" lemma="Mace" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Mace" spectype="deeleigen" word="Mace"/>
+          </node>
+          <node begin="10" cat="conj" end="36" id="19" rel="mod">
+            <node begin="10" cat="rel" end="27" id="20" rel="cnj">
+              <node begin="10" end="11" getal="getal" id="21" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" status="vol" vwtype="vb" word="waar"/>
+              <node begin="10" cat="ssub" end="27" id="22" rel="body">
+                <node begin="10" end="11" id="23" index="1" rel="mod"/>
+                <node begin="11" end="12" genus="masc" getal="ev" id="24" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+                <node begin="12" cat="np" end="20" id="25" rel="obj1">
+                  <node begin="12" end="13" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="13" end="14" id="27" lemma="één" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="eerste" word="eerste"/>
+                  <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="28" lemma="etappe" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="etappe" word="etappe"/>
+                  <node begin="15" cat="pp" end="20" id="29" rel="mod">
+                    <node begin="15" end="16" id="30" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                    <node begin="16" cat="np" end="20" id="31" rel="obj1">
+                      <node begin="16" end="17" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                      <node begin="17" cat="mwu" end="20" id="33" rel="hd">
+                        <node begin="17" end="18" id="34" lemma="Tour" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Tour" spectype="deeleigen" word="Tour"/>
+                        <node begin="18" end="19" id="35" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+                        <node begin="19" end="20" id="36" lemma="l&apos;Avenir" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="l&apos;Avenir" spectype="deeleigen" word="l&apos;Avenir"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node begin="20" cat="pp" end="26" id="37" rel="mod">
+                  <node begin="20" end="21" id="38" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
+                  <node begin="21" cat="np" end="26" id="39" rel="obj1">
+                    <node begin="21" end="22" id="40" lemma="93,5" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="93,5" word="93,5"/>
+                    <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="41" lemma="km" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="km" word="km"/>
+                    <node begin="23" cat="pp" end="26" id="42" rel="mod">
+                      <node begin="23" end="24" id="43" lemma="vanuit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="vanuit" vztype="init" word="vanuit"/>
+                      <node begin="24" cat="mwu" end="26" id="44" rel="obj1">
+                        <node begin="24" end="25" id="45" lemma="Le" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Le" spectype="deeleigen" word="Le"/>
+                        <node begin="25" end="26" id="46" lemma="Mans" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Mans" spectype="deeleigen" word="Mans"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node begin="26" end="27" id="47" lemma="eindigen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="eindig" word="eindigde" wvorm="pv"/>
+              </node>
+            </node>
+            <node begin="27" conjtype="neven" end="28" id="48" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="28" cat="rel" end="36" id="49" rel="cnj">
+              <node begin="28" end="29" getal="getal" id="50" index="2" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" status="vol" vwtype="vb" word="waar"/>
+              <node begin="28" cat="ssub" end="36" id="51" rel="body">
+                <node begin="28" end="29" id="52" index="2" rel="mod"/>
+                <node begin="29" cat="mwu" end="31" id="53" rel="su">
+                  <node begin="29" end="30" id="54" lemma="Gosta" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Gosta" spectype="deeleigen" word="Gosta"/>
+                  <node begin="30" end="31" id="55" lemma="Petterson" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Petterson" spectype="deeleigen" word="Petterson"/>
+                </node>
+                <node begin="31" cat="np" end="33" id="56" rel="obj1">
+                  <node begin="31" end="32" id="57" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="32" end="33" genus="zijd" getal="ev" graad="basis" id="58" lemma="leiderstrui" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="trui" word="leiderstrui"/>
+                </node>
+                <node begin="33" cat="pp" end="35" id="59" rel="predc">
+                  <node begin="33" end="34" id="60" lemma="in" pos="fixed" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                  <node begin="34" end="35" getal="mv" graad="basis" id="61" lemma="hand" ntype="soort" pos="fixed" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="handen" word="handen"/>
+                </node>
+                <node begin="35" end="36" id="62" lemma="houden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="houd" word="hield" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="37" end="38" id="63" lemma="misschien" pos="adv" postag="BW()" pt="bw" rel="mod" root="misschien" word="misschien"/>
+      <node begin="38" end="39" id="64" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+      <node begin="39" cat="np" end="47" id="65" rel="predc">
+        <node begin="39" end="40" id="66" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="40" cat="ap" end="42" id="67" rel="mod">
+          <node begin="40" buiging="zonder" end="41" graad="sup" id="68" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,sup)" pt="vnw" rel="mod" root="meest" vwtype="onbep" word="meest"/>
+          <node begin="41" buiging="met-e" end="42" graad="basis" id="69" lemma="teleurstellen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="teleurgesteld" word="teleurgestelde"/>
+        </node>
+        <node begin="42" end="43" genus="zijd" getal="ev" graad="basis" id="70" lemma="coureur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="coureur" word="coureur"/>
+        <node begin="43" cat="pp" end="47" id="71" rel="mod">
+          <node begin="43" end="44" id="72" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="44" cat="np" end="47" id="73" rel="obj1">
+            <node begin="44" end="45" id="74" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="45" buiging="met-e" end="46" graad="basis" id="75" lemma="geheel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="geheel" word="gehele"/>
+            <node begin="46" end="47" genus="onz" getal="ev" graad="basis" id="76" lemma="deelnemersveld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="veld" word="deelnemersveld"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="47" end="48" id="77" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Popke Oosterhof uit Eelde was in La Ferte Mace , waar hij de eerste etappe in de Tour de l&apos;Avenir na 93,5 km vanuit Le Mans eindigde en waar Gosta Petterson de leiderstrui in handen hield , misschien wel de meest teleurgestelde coureur van het gehele deelnemersveld .</sentence>
+</alpino_ds>

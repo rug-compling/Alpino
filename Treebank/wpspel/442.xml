@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="6" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="predc"/>
+        <node begin="1" end="2" id="5" lemma="heten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heet" word="heet" wvorm="pv"/>
+        <node begin="2" cat="np" end="6" id="6" rel="su">
+          <node begin="2" end="3" getal="ev" id="7" lemma="iemand" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="hd" root="iemand" status="vol" vwtype="onbep" word="iemand"/>
+          <node begin="3" cat="rel" end="6" id="8" rel="mod">
+            <node begin="3" end="4" getal="getal" id="9" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="3" cat="ssub" end="6" id="10" rel="body">
+              <node begin="3" end="4" id="11" index="2" rel="su"/>
+              <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="12" lemma="bedrog" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="bedrog" word="bedrog"/>
+              <node begin="5" end="6" id="13" lemma="plegen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="pleeg" word="pleegt" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="14" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe heet iemand die bedrog pleegt ?</sentence>
+</alpino_ds>

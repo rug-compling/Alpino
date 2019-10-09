@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" buiging="zonder" end="3" graad="basis" id="4" lemma="waarschijnlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="waarschijnlijk" word="waarschijnlijk"/>
+      <node begin="3" cat="np" end="8" id="5" rel="su">
+        <node begin="3" end="4" id="6" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="7" lemma="probleem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="probleem" word="probleem"/>
+        <node begin="5" cat="pp" end="8" id="8" rel="mod">
+          <node begin="5" end="6" id="9" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="6" cat="np" end="8" id="10" rel="obj1">
+            <node begin="6" end="7" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="12" lemma="netwerk_kabel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="netwerk_kabel" word="netwerkkabel"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Er is waarschijnlijk een probleem met de netwerkkabel .</sentence>
+</alpino_ds>

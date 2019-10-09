@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="29" id="0" rel="top">
+    <node begin="11" end="12" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="15" end="16" frame="punct(komma)" id="2" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="conj" end="28" id="3" rel="--">
+      <node begin="0" cat="smain" end="15" id="4" rel="cnj">
+        <node begin="0" cat="pp" end="5" id="5" index="1" rel="mod">
+          <node begin="0" cat="mwu" end="3" id="6" mwu_root="door_middel_van" mwu_sense="door_middel_van" rel="hd">
+            <node begin="0" end="1" frame="preposition([door,middel,van],[])" id="7" lcat="pp" pos="prep" rel="mwp" root="Door" sense="Door" word="Door"/>
+            <node begin="1" end="2" frame="preposition([door,middel,van],[])" id="8" lcat="pp" pos="prep" rel="mwp" root="middel" sense="middel" word="middel"/>
+            <node begin="2" end="3" frame="preposition([door,middel,van],[])" id="9" lcat="pp" pos="prep" rel="mwp" root="van" sense="van" word="van"/>
+          </node>
+          <node begin="3" cat="np" end="5" id="10" rel="obj1">
+            <node begin="3" end="4" frame="determiner(de)" id="11" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="4" end="5" frame="noun(de,count,sg)" gen="de" id="12" lcat="np" num="sg" pos="noun" rel="hd" root="dialoog" sense="dialoog" word="dialoog"/>
+          </node>
+        </node>
+        <node begin="5" end="6" frame="verb(hebben,pl,part_intransitive(bij))" id="13" infl="pl" lcat="smain" pos="verb" rel="hd" root="draag_bij" sc="part_intransitive(bij)" sense="draag_bij" tense="present" word="dragen"/>
+        <node begin="6" cat="np" end="8" id="14" rel="su">
+          <node begin="6" end="7" frame="determiner(de)" id="15" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="7" end="8" frame="tmp_noun(de,count,pl)" gen="de" id="16" lcat="np" num="pl" pos="noun" rel="hd" root="partij" sense="partij" special="tmp" word="partijen"/>
+        </node>
+        <node begin="8" end="9" frame="particle(bij)" id="17" lcat="part" pos="part" rel="svp" root="bij" sense="bij" word="bij"/>
+        <node begin="9" cat="pp" end="15" id="18" rel="mod">
+          <node begin="9" end="10" frame="preposition(tot,[toe,[aan,toe]])" id="19" lcat="pp" pos="prep" rel="hd" root="tot" sense="tot" word="tot"/>
+          <node begin="10" cat="conj" end="15" id="20" rel="obj1">
+            <node begin="10" end="11" frame="noun(de,count,sg)" gen="de" id="21" lcat="np" num="sg" pos="noun" rel="cnj" root="vrede" sense="vrede" word="vrede"/>
+            <node begin="12" end="13" frame="noun(de,count,sg)" gen="de" id="22" lcat="np" num="sg" pos="noun" rel="cnj" root="veiligheid" sense="veiligheid" word="veiligheid"/>
+            <node begin="13" end="14" frame="conj(en)" id="23" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+            <node begin="14" end="15" frame="noun(de,mass,sg)" gen="de" id="24" lcat="np" num="sg" pos="noun" rel="cnj" root="stabiliteit" sense="stabiliteit" word="stabiliteit"/>
+          </node>
+        </node>
+      </node>
+      <node begin="16" end="17" frame="conj(en)" id="25" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="0" cat="smain" end="28" id="26" rel="cnj">
+        <node begin="0" end="5" id="27" index="1" rel="mod"/>
+        <node begin="17" end="18" frame="verb(hebben,pl,transitive)" id="28" infl="pl" lcat="smain" pos="verb" rel="hd" root="bevorder" sc="transitive" sense="bevorder" tense="present" word="bevorderen"/>
+        <node begin="18" case="nom" def="def" end="19" frame="pronoun(nwh,thi,both,de,nom,def)" gen="de" id="29" lcat="np" num="both" per="thi" pos="pron" rel="su" root="zij" sense="zij" wh="nwh" word="zij"/>
+        <node begin="19" cat="np" end="28" id="30" rel="obj1">
+          <node begin="19" end="20" frame="determiner(de)" id="31" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="20" end="21" frame="noun(de,mass,sg)" gen="de" id="32" lcat="np" num="sg" pos="noun" rel="hd" root="totstandkoming" sense="totstandkoming" word="totstandkoming"/>
+          <node begin="21" cat="pp" end="28" id="33" rel="mod">
+            <node begin="21" end="22" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="34" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="22" cat="np" end="28" id="35" rel="obj1">
+              <node begin="22" end="23" frame="determiner(een)" id="36" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+              <node begin="23" cat="conj" end="26" id="37" rel="mod">
+                <node aform="base" begin="23" end="24" frame="adjective(no_e(adv))" id="38" infl="no_e" lcat="ap" pos="adj" rel="cnj" root="stabiel" sense="stabiel" vform="adj" word="stabiel"/>
+                <node begin="24" end="25" frame="conj(en)" id="39" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                <node aform="base" begin="25" end="26" frame="adjective(no_e(adv))" id="40" infl="no_e" lcat="ap" pos="adj" rel="cnj" root="democratisch" sense="democratisch" vform="adj" word="democratisch"/>
+              </node>
+              <node aform="base" begin="26" end="27" frame="adjective(no_e(adv))" id="41" infl="no_e" lcat="ap" pos="adj" rel="mod" root="politiek" sense="politiek" vform="adj" word="politiek"/>
+              <node begin="27" end="28" frame="noun(het,count,sg)" gen="het" id="42" lcat="np" num="sg" pos="noun" rel="hd" root="klimaat" sense="klimaat" word="klimaat"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="28" end="29" frame="punct(punt)" id="43" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Door middel van de dialoog dragen de partijen bij tot vrede , veiligheid en stabiliteit , en bevorderen zij de totstandkoming van een stabiel en democratisch politiek klimaat .</sentence>
+  <comments>
+    <comment>Q#521|Door middel van de dialoog dragen de partijen bij tot vrede , veiligheid en stabiliteit , en bevorderen zij de totstandkoming van een stabiel en democratisch politiek klimaat .|1|1|-2.780565239131904</comment>
+  </comments>
+</alpino_ds>

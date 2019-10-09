@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+      <node begin="1" end="2" id="3" lemma="krijgen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="krijg" word="krijgt" wvorm="pv"/>
+      <node begin="0" cat="ti" end="6" id="4" rel="vc">
+        <node begin="4" end="5" id="5" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="0" cat="inf" end="6" id="6" rel="body">
+          <node begin="0" end="1" id="7" index="1" rel="su"/>
+          <node begin="2" cat="np" end="4" id="8" rel="obj1">
+            <node begin="2" end="3" id="9" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="drie" word="drie"/>
+            <node begin="3" end="4" getal="mv" graad="dim" id="10" lemma="neef" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" root="neefje" word="neefjes"/>
+          </node>
+          <node begin="5" buiging="zonder" end="6" id="11" lemma="logeren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="logeer" word="logeren" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>hij krijgt drie neefjes te logeren</sentence>
+</alpino_ds>

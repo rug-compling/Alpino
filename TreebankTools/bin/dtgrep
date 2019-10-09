@@ -1,0 +1,121 @@
+#!/usr/bin/env python
+
+# dtgrep -- greppen op de files in een compact corpus
+
+# gebruikt Perl-compatible regexes
+
+# doet aan directories, recursie etc. zoals bij dtsearch
+
+
+# Bugfix: 2009-03-31 
+# GJB fixed empty xmldata bug in do_grep
+
+# Created: 2006-01-04 
+# Author:  GJK
+
+# $Id: dtgrep,v 1.2 2006/12/06 10:29:23 geertk Exp $
+
+
+import sys
+import os
+from optparse import OptionParser
+import re
+
+# pad naar de lokale modules zetten
+ALPINO_HOME = os.getenv("ALPINO_HOME")
+if not ALPINO_HOME:
+    sys.stderr.write("dtgrep: Error: please set your ALPINO_HOME variable\n")
+    sys.exit(1)
+
+sys.path.insert(0, os.path.join(ALPINO_HOME, "TreebankTools/python-lib"))
+
+from actlib import process_arguments, msg
+
+
+def do_grep(xmldata, filename, pattern=None):
+    """simuleer grep op XMLDATA
+
+    FILENAME is de filenaam die we voor de uitvoer gebruiken.
+
+    PATTERN - de reguliere expressie (reeds gecompileerd)
+
+    """
+    for line in xmldata.strip().split("\n"):
+        if pattern.search(line):
+            print ':'.join((filename,line))
+
+
+def main():
+    global options
+
+    parser = OptionParser("usage: %prog [options] arguments", conflict_handler="resolve")
+    parser.add_option("--regexp", "-e", dest="pattern",
+                      help="use PATTERN as a regular expression")
+
+    parser.add_option("--ignore-case", "-i", action="store_true", dest="ignore_case",
+                      help="ignore case distinctions")
+
+    parser.add_option("--invert-match", "-v", action="store_true", dest="invert_match",
+                      help="select non-matching lines")
+
+    parser.add_option("--files-with-matches", "-l", action="store_true", dest="files_with_matches",
+                      help="only print FILE names containing matches")
+
+    parser.add_option("--no-filename", "-h", action="store_true", dest="no_filename",
+                      help="suppress the prefixing filename on output")
+
+    parser.add_option("--stdin",  action="store_true", dest="stdin",
+                      help="read file arguments from stdin.  Any non-option arguments on the commandline will be ignored.")
+
+    (options, args) = parser.parse_args()
+
+    if options.pattern == None:
+        if not args:
+            msg("Error: no pattern specified")
+            sys.exit(1)
+        options.pattern = args.pop(0)
+
+
+
+    # kijken of het patroon kunnen compileren
+    flags = 0
+    if options.ignore_case:
+        flags |= re.IGNORECASE
+
+    # kunnen we hier ook een fatsoenlijke foutmelding uit terugkrijgen?
+    pattern = re.compile(options.pattern, flags)
+
+
+    # niet-geimplementeerde opties afvangen
+    if options.invert_match or options.files_with_matches or options.no_filename:
+        msg("ERROR: --invert-match, --files_with_matches, --no-filename not yet implemented")
+        sys.exit(1)
+
+    if not (args or options.stdin):
+        msg("Error: No arguments to process.  Exiting....")
+        sys.exit(1)
+
+
+    
+    process_arguments(args,
+                      do_grep,
+                      options.stdin,
+                      1,            # we willen altijd recursief aan de gang
+                      True,
+                      pattern=pattern,
+                      )
+
+
+#----------------------------------------------------------------------
+
+# usage = "Usage: " + os.path.basename(sys.argv[0]) + " OPTIONS <arguments>\n"
+
+
+# ENTRY POINT
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit(1)
+

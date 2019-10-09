@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" status="vol" vwtype="aanw" word="hier"/>
+      <node begin="1" end="2" id="3" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="4" rel="su">
+        <node begin="2" end="3" id="5" lemma="7,6" naamval="stan" numtype="hoofd" pos="det" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="7,6" word="7,6"/>
+        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="6" lemma="procent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="procent" word="procent"/>
+      </node>
+      <node begin="4" end="5" id="7" lemma="voort" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="voort" vztype="fin" word="voort"/>
+      <node begin="5" cat="pp" end="8" id="8" rel="pc">
+        <node begin="5" end="6" id="9" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+        <node begin="6" cat="np" end="8" id="10" rel="obj1">
+          <node begin="6" end="7" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="12" lemma="arbeidersklasse" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="arbeidersklasse" word="arbeidersklasse"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>hier komt 7,6 procent voort uit de arbeidersklasse .</sentence>
+</alpino_ds>

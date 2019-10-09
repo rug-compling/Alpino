@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="veldwachter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="veldwachter" word="veldwachter"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="7" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="su"/>
+        <node begin="3" end="4" genus="onz" getal="ev" id="8" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+        <node begin="4" cat="pp" end="6" id="9" rel="pc">
+          <node begin="4" end="5" id="10" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="5" end="6" getal="ev" id="11" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj1" root="mij" status="vol" vwtype="pr" word="mij"/>
+        </node>
+        <node begin="6" buiging="zonder" end="7" id="12" lemma="munten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="munt" word="gemunt" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>de veldwachter had het op mij gemunt</sentence>
+</alpino_ds>

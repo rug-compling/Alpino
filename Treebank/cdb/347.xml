@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="ben" wvorm="pv"/>
+      <node begin="2" cat="advp" end="4" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
+        <node begin="3" end="4" id="6" lemma="langzamerhand" pos="adv" postag="BW()" pt="bw" rel="hd" root="langzamerhand" word="langzamerhand"/>
+      </node>
+      <node begin="4" cat="ap" end="8" id="7" rel="predc">
+        <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="doodmoe" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="doodmoe" word="doodmoe"/>
+        <node begin="5" cat="pp" end="8" id="9" rel="pc">
+          <node begin="5" end="6" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="6" cat="np" end="8" id="11" rel="obj1">
+            <node begin="6" buiging="zonder" end="7" id="12" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="dat"/>
+            <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="13" lemma="hotelleven" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="leven" word="hotelleven"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>ik ben zo langzamerhand doodmoe van dat hotelleven .</sentence>
+</alpino_ds>

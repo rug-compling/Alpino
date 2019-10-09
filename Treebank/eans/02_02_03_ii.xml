@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="2" lemma="asfalt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="su" root="asfalt" word="Asfalt"/>
+      <node begin="1" end="2" id="3" lemma="fietsen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="fiets" word="fietst" wvorm="pv"/>
+      <node begin="2" cat="ap" end="5" id="4" rel="mod">
+        <node begin="2" buiging="zonder" end="3" graad="comp" id="5" lemma="prettig" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="prettig" word="prettiger"/>
+        <node begin="3" cat="cp" end="5" id="6" rel="obcomp">
+          <node begin="3" conjtype="onder" end="4" id="7" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="8" lemma="grind" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="body" root="grind" word="grind"/>
+        </node>
+      </node>
+    </node>
+    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Asfalt fietst prettiger dan grind .</sentence>
+</alpino_ds>

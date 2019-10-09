@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="7" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="mod"/>
+        <node begin="1" end="2" id="5" lemma="wijzigen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wijzig" word="wijzig" wvorm="pv"/>
+        <node begin="2" end="3" getal="ev" id="6" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="3" cat="np" end="5" id="7" rel="obj1">
+          <node begin="3" end="4" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="9" lemma="letter_type" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="letter_type" word="lettertype"/>
+        </node>
+        <node begin="5" cat="pp" end="7" id="10" rel="mod">
+          <node begin="5" end="6" id="11" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="6" end="7" genus="genus" getal="ev" graad="basis" id="12" lemma="Safari" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Safari" word="Safari"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hoe wijzig ik het lettertype in Safari .</sentence>
+</alpino_ds>

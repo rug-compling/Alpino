@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="Vermeulen" pos="name" rel="su" root="Vermeulen" word="Vermeulen"/>
+      <node begin="1" end="2" id="3" lemma="wil" pos="verb" rel="hd" root="wil" word="wil"/>
+      <node begin="0" cat="inf" end="7" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" end="3" id="6" lemma="daarom" pos="pp" rel="mod" root="daarom" word="daarom"/>
+        <node begin="3" cat="np" end="6" id="7" rel="obj1">
+          <node begin="3" end="4" id="8" lemma="het" pos="det" rel="det" root="het" word="het"/>
+          <node begin="4" end="5" id="9" lemma="aantal" pos="noun" rel="hd" root="aantal" word="aantal"/>
+          <node begin="5" end="6" id="10" lemma="observatie_post" pos="noun" rel="mod" root="observatie_post" word="observatieposten"/>
+        </node>
+        <node begin="6" end="7" id="11" lemma="breid_uit" pos="verb" rel="hd" root="breid_uit" word="uitbreiden"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" rel="--" root="." word="."/>
+  </node>
+  <sentence>Vermeulen wil daarom het aantal observatieposten uitbreiden .</sentence>
+</alpino_ds>

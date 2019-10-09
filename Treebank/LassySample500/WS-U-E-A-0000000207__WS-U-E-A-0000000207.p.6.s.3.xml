@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="....." pos="punct" postag="LET()" pt="let" rel="--" root="....." word="....."/>
+    <node begin="8" end="9" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="1" cat="smain" end="14" id="3" rel="--">
+      <node begin="1" cat="np" end="4" id="4" rel="su">
+        <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="2" buiging="met-e" end="3" graad="sup" id="6" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="groot" word="grootste"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="brand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="brand" word="brand"/>
+      </node>
+      <node begin="4" end="5" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="5" cat="pp" end="8" id="9" rel="mod">
+        <node begin="5" end="6" id="10" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="6" cat="np" end="8" id="11" rel="obj1">
+          <node begin="6" end="7" id="12" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="13" lemma="zuiden" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="zuiden" word="zuiden"/>
+        </node>
+      </node>
+      <node begin="9" cat="pp" end="14" id="14" rel="ld">
+        <node begin="9" end="10" id="15" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="10" cat="np" end="14" id="16" rel="obj1">
+          <node begin="10" end="11" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="18" lemma="buurt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="buurt" word="buurt"/>
+          <node begin="12" cat="pp" end="14" id="19" rel="mod">
+            <node begin="12" end="13" id="20" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="21" lemma="Faro" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Faro" word="Faro"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>..... De grootste brand is in het zuiden , in de buurt van Faro .</sentence>
+</alpino_ds>

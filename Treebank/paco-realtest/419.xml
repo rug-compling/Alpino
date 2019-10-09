@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="de" pos="det" rel="det" root="de" word="De"/>
+        <node aform="base" begin="1" end="2" id="4" infl="e" pos="adj" rel="mod" root="indirect" vform="adj" word="indirecte"/>
+        <node begin="2" end="3" gen="het" id="5" num="pl" pos="noun" rel="hd" root="kanaal" word="kanalen"/>
+      </node>
+      <node begin="3" end="4" id="6" infl="pl" pos="verb" rel="hd" root="blijf" sc="copula" tense="present" word="blijven"/>
+      <node begin="4" cat="conj" end="13" id="7" rel="predc">
+        <node begin="5" end="6" id="8" pos="vg" rel="crd" root="en" word="en"/>
+        <node begin="4" cat="ap" end="13" id="9" rel="cnj">
+          <node aform="compar" begin="4" end="5" id="10" infl="no_e" pos="adj" rel="hd" root="kwetsbaar" vform="adj" word="kwetsbaarder"/>
+          <node begin="8" cat="cp" end="13" id="11" index="1" rel="obcomp">
+            <node begin="8" end="9" id="12" pos="comparative" rel="cmp" root="dan" word="dan"/>
+            <node begin="9" cat="np" end="13" id="13" rel="body">
+              <node begin="9" end="10" id="14" infl="de" pos="det" rel="det" root="de" word="de"/>
+              <node aform="base" begin="10" end="11" id="15" infl="e" pos="adj" rel="mod" root="direct" vform="adj" word="directe"/>
+              <node aform="base" begin="11" end="12" id="16" infl="e" pos="adj" rel="mod" root="bilateraal" vform="adj" word="bilaterale"/>
+              <node begin="12" end="13" gen="de" id="17" num="sg" pos="noun" rel="hd" root="ontwikkeling_samenwerking" word="ontwikkelingssamenwerking"/>
+            </node>
+          </node>
+        </node>
+        <node begin="6" cat="ppart" end="13" id="18" rel="cnj">
+          <node aform="base" begin="7" end="8" id="19" infl="no_e" pos="adj" rel="hd" root="on_beschut" vform="psp" word="onbeschut"/>
+          <node begin="6" cat="ap" end="13" id="20" rel="mod">
+            <node aform="compar" begin="6" end="7" id="21" infl="meer" pos="adj" rel="hd" root="meer" vform="adj" word="meer"/>
+            <node begin="8" end="13" id="22" index="1" rel="obcomp"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="23" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>De indirecte kanalen blijven kwetsbaarder en meer onbeschut dan de directe bilaterale ontwikkelingssamenwerking .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

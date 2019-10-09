@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" case="both" def="def" end="1" frame="pronoun(nwh,thi,both,de,both,def,wkpro)" gen="de" genus="fem" getal="ev" id="2" index="1" lcat="np" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" root="ze" sense="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="Ze"/>
+      <node begin="1" end="2" frame="verb(unacc,sg_heeft,aux_psp_zijn)" id="3" infl="sg_heeft" lcat="smain" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="aux_psp_zijn" sense="ben" tense="present" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="13" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" cat="ap" end="5" id="6" rel="predc">
+          <node begin="2" cat="mwu" end="4" id="7" mwu_root="meest" mwu_sense="meest" rel="mod">
+            <node aform="super" begin="2" end="3" frame="adjective(het_st(adv))" id="8" infl="pred" lcat="ap" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="adj" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" sense="het" vform="adj" word="het"/>
+            <node aform="super" begin="3" buiging="zonder" end="4" frame="adjective(het_st(adv))" graad="sup" id="9" infl="pred" lcat="ap" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,sup)" pt="vnw" rel="mwp" root="meest" sense="meest" vform="adj" vwtype="onbep" word="meest"/>
+          </node>
+          <node aform="base" begin="4" buiging="zonder" end="5" frame="adjective(postn_no_e(adv))" graad="basis" id="10" infl="no_e" lcat="ap" lemma="bekend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="bekend" sense="bekend" vform="adj" word="bekend"/>
+        </node>
+        <node begin="5" buiging="zonder" end="6" frame="verb(unacc,psp,pred_pc_pp(door))" id="11" infl="psp" lcat="ppart" lemma="geworden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="word" sc="pred_pc_pp(door)" sense="word-door" word="geworden" wvorm="vd"/>
+        <node begin="6" cat="pp" end="13" id="12" rel="pc">
+          <node begin="6" end="7" frame="preposition(door,[heen])" id="13" lcat="pp" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" sense="door" vztype="init" word="door"/>
+          <node begin="7" cat="np" end="13" id="14" rel="obj1">
+            <node begin="7" buiging="zonder" end="8" frame="determiner(pron)" getal="ev" id="15" infl="pron" lcat="detp" lemma="haar" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="haar" sense="haar" status="vol" vwtype="bez" word="haar"/>
+            <node begin="8" end="9" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="16" lcat="np" lemma="rol" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="rol" sense="rol" word="rollen"/>
+            <node begin="9" cat="pp" end="13" id="17" rel="mod">
+              <node begin="9" end="10" frame="preposition(in,[])" id="18" lcat="pp" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" sense="in" vztype="init" word="in"/>
+              <node begin="10" cat="np" end="13" id="19" rel="obj1">
+                <node begin="10" end="11" frame="determiner(de)" id="20" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+                <node begin="11" end="12" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="21" lcat="np" lemma="comedyshow" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="comedy_show" sense="comedy_show" word="comedyshow"/>
+                <node begin="12" end="13" frame="proper_name(both,'PER')" id="22" lcat="np" lemma="MADtv" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="app" root="MADtv" sense="MADtv" spectype="deeleigen" word="MADtv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" frame="punct(punt)" id="23" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Ze is het meest bekend geworden door haar rollen in de comedyshow MADtv .</sentence>
+  <comments>
+    <comment>Q#1646304-2-2|Ze is het meest bekend geworden door haar rollen in de comedyshow MADtv .|1|1|-0.08679635633432495</comment>
+  </comments>
+</alpino_ds>

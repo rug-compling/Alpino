@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="cp" end="8" id="1" rel="--">
+      <node begin="0" conjtype="onder" end="1" id="2" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="Omdat"/>
+      <node begin="1" cat="ssub" end="8" id="3" rel="body">
+        <node begin="1" end="2" genus="masc" getal="ev" id="4" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+        <node begin="6" end="7" id="5" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+        <node begin="1" cat="ppart" end="8" id="6" rel="vc">
+          <node begin="1" end="2" id="7" index="1" rel="su"/>
+          <node begin="2" cat="np" end="4" id="8" rel="ld">
+            <node begin="2" end="3" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="10" lemma="bos" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bos" word="bos"/>
+          </node>
+          <node begin="4" end="5" id="11" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="5" end="6" id="12" lemma="in" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="in" vztype="fin" word="in"/>
+          <node begin="7" buiging="zonder" end="8" id="13" lemma="rijden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="rij_in" word="gereden" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Omdat hij het bos niet in komt gereden</sentence>
+</alpino_ds>

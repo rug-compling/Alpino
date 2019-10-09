@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" end="1" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="3" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="Het"/>
+        <node aform="base" begin="1" end="2" frame="adjective(ge_e)" id="4" infl="e" lcat="ppart" pos="adj" rel="mod" root="ingevoerd" sense="ingevoerd" vform="psp" word="ingevoerde"/>
+        <node begin="2" end="3" frame="noun(het,count,sg)" gen="het" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="bedrag" sense="bedrag" word="bedrag"/>
+      </node>
+      <node begin="3" end="4" frame="verb(unacc,sg_heeft,copula)" id="6" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="is"/>
+      <node begin="4" cat="ap" end="8" id="7" rel="predc">
+        <node aform="compar" begin="4" end="5" frame="adjective(er(adv))" id="8" infl="no_e" lcat="ap" pos="adj" rel="hd" root="groot" sense="groot" vform="adj" word="groter"/>
+        <node begin="5" cat="cp" end="8" id="9" rel="obcomp">
+          <node begin="5" end="6" frame="comparative(dan)" id="10" lcat="comparative" pos="comparative" rel="cmp" root="dan" sense="dan" word="dan"/>
+          <node begin="6" cat="np" end="8" id="11" rel="body">
+            <node begin="6" end="7" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="12" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+            <node begin="7" end="8" frame="noun(het,count,sg)" gen="het" id="13" lcat="np" num="sg" pos="noun" rel="hd" root="kas_bedrag" sense="kas_bedrag" word="kasbedrag"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" frame="punct(punt)" id="14" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Het ingevoerde bedrag is groter dan het kasbedrag .</sentence>
+  <comments>
+    <comment>Q#196|Het ingevoerde bedrag is groter dan het kasbedrag .|1|1|-3.155136863997605</comment>
+  </comments>
+</alpino_ds>

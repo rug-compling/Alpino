@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="36" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="12" end="13" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="20" end="21" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="23" end="24" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="31" end="32" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="35" id="6" rel="--">
+      <node begin="0" cat="np" end="12" id="7" index="1" rel="su">
+        <node begin="0" buiging="met-e" end="1" graad="basis" id="8" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="Andere"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="9" lemma="werkgroep" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="werkgroep" word="werkgroepen"/>
+        <node begin="3" cat="rel" end="12" id="10" rel="mod">
+          <node begin="3" end="4" id="11" index="2" lemma="waarvoor" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarvoor" word="waarvoor"/>
+          <node begin="3" cat="ssub" end="12" id="12" rel="body">
+            <node begin="3" end="4" id="13" index="2" rel="mod"/>
+            <node begin="4" cat="np" end="7" id="14" rel="su">
+              <node begin="4" end="5" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="5" buiging="met-e" end="6" id="16" lemma="vraag" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="gevraagd" word="gevraagde" wvorm="vd"/>
+              <node begin="6" end="7" getal="mv" graad="basis" id="17" lemma="vrijwilliger" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vrijwilliger" word="vrijwilligers"/>
+            </node>
+            <node begin="7" end="8" getal="getal" id="18" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+            <node begin="8" end="9" id="19" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
+            <node begin="9" cat="ppres" end="11" id="20" rel="mod">
+              <node begin="9" end="10" id="21" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="mod" root="zeer" word="zeer"/>
+              <node begin="10" buiging="zonder" end="11" id="22" lemma="aarzelen" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="hd" root="aarzelend" word="aarzelend" wvorm="od"/>
+            </node>
+            <node begin="11" end="12" id="23" lemma="aanmelden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="meld" word="aanmeldden" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+      <node begin="13" end="14" id="24" lemma="zullen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zal" word="zullen" wvorm="pv"/>
+      <node begin="0" cat="inf" end="35" id="25" rel="vc">
+        <node begin="0" end="12" id="26" index="1" rel="su"/>
+        <node begin="14" cat="np" end="16" id="27" rel="obj1">
+          <node begin="14" buiging="zonder" end="15" getal="mv" id="28" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+          <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="29" lemma="activiteit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="activiteit" word="activiteit"/>
+        </node>
+        <node begin="16" buiging="zonder" end="17" id="30" lemma="richten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="richt" word="richten" wvorm="inf"/>
+        <node begin="17" cat="pp" end="35" id="31" rel="pc">
+          <node begin="17" end="18" id="32" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="18" cat="conj" end="35" id="33" rel="obj1">
+            <node begin="18" cat="np" end="20" id="34" rel="cnj">
+              <node begin="18" end="19" id="35" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="36" lemma="overheidsbeleid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="overheidsbeleid" word="overheidsbeleid"/>
+            </node>
+            <node begin="21" cat="np" end="23" id="37" rel="cnj">
+              <node begin="21" end="22" id="38" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="22" end="23" getal="mv" graad="basis" id="39" lemma="conservatorium" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="conservatorium" word="conservatoria"/>
+            </node>
+            <node begin="24" cat="np" end="26" id="40" rel="cnj">
+              <node begin="24" end="25" id="41" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="42" lemma="concertpraktijk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="praktijk" word="concertpraktijk"/>
+            </node>
+            <node begin="26" conjtype="neven" end="27" id="43" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="27" cat="np" end="35" id="44" rel="cnj">
+              <node begin="27" end="28" id="45" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="28" end="29" getal="mv" graad="basis" id="46" lemma="distributiemedia" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="medium" word="distributiemedia"/>
+              <node begin="29" cat="cp" end="35" id="47" rel="mod">
+                <node begin="29" end="30" id="48" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+                <node begin="30" cat="conj" end="35" id="49" rel="body">
+                  <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="50" lemma="radio" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="radio" word="radio"/>
+                  <node begin="32" end="33" genus="zijd" getal="ev" graad="basis" id="51" lemma="tv" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="TV" word="TV"/>
+                  <node begin="33" conjtype="neven" end="34" id="52" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                  <node begin="34" end="35" genus="zijd" getal="ev" graad="basis" id="53" lemma="grammofoonplaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="grammofoonplaat" word="grammofoonplaat"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="35" end="36" id="54" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Andere werkgroepen , waarvoor de gevraagde vrijwilligers zich maar zeer aarzelend aanmeldden , zullen hun activiteit richten op het overheidsbeleid , de conservatoria , de concertpraktijk en de distributiemedia als radio , TV en grammofoonplaat .</sentence>
+</alpino_ds>

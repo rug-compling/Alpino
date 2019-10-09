@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" cat="np" end="7" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="kastelenroute" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kasteel_route" word="kastelenroute"/>
+        <node begin="2" cat="pp" end="7" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="rond" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="rond" vztype="init" word="rond"/>
+          <node begin="3" cat="np" end="7" id="7" rel="obj1">
+            <node begin="3" end="4" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="4" buiging="met-e" end="5" graad="basis" id="9" lemma="overijssels" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Overijssels" word="Overijsselse"/>
+            <node begin="5" end="6" genus="onz" getal="ev" graad="dim" id="10" lemma="plaats" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="plaatsje" word="plaatsje"/>
+            <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="11" lemma="diepenheim" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="app" root="Diepenheim" word="Diepenheim"/>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="12" lemma="kennen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ken" word="kent" wvorm="pv"/>
+      <node begin="8" cat="np" end="11" id="13" rel="obj1">
+        <node begin="8" end="9" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="15" lemma="aantal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aantal" word="aantal"/>
+        <node begin="10" end="11" getal="mv" graad="basis" id="16" lemma="attractie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="attractie" word="attracties"/>
+      </node>
+    </node>
+    <node begin="11" end="12" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De kastelenroute rond het Overijsselse plaatsje Diepenheim kent een aantal attracties .</sentence>
+</alpino_ds>

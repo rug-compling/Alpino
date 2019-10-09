@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="13" id="2" rel="--">
+      <node begin="0" cat="smain" end="4" id="3" rel="cnj">
+        <node begin="0" end="1" id="4" lemma="daarna" pos="adv" postag="BW()" pt="bw" rel="mod" root="daarna" word="Daarna"/>
+        <node begin="1" end="2" id="5" lemma="gaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ga" word="ging" wvorm="pv"/>
+        <node begin="2" end="3" genus="onz" getal="ev" id="6" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+        <node begin="3" buiging="zonder" end="4" graad="comp" id="7" lemma="minder" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="minder" vwtype="onbep" word="minder"/>
+      </node>
+      <node begin="5" conjtype="neven" end="6" id="8" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+      <node begin="6" cat="smain" end="13" id="9" rel="cnj">
+        <node begin="6" end="7" getal="ev" id="10" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
+        <node begin="7" end="8" id="11" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        <node begin="8" buiging="zonder" end="9" graad="basis" id="12" lemma="normaal" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="normaal" word="normaal"/>
+        <node begin="9" cat="pp" end="13" id="13" rel="mod">
+          <node begin="9" end="10" id="14" lemma="gezien" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="gezien" vztype="init" word="gezien"/>
+          <node begin="10" cat="np" end="13" id="15" rel="obj1">
+            <node begin="10" end="11" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="11" buiging="met-e" end="12" graad="comp" id="17" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="groot" word="grotere"/>
+            <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="18" lemma="weerstand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="weerstand" word="weerstand"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Daarna ging het minder , maar dat was normaal gezien de grotere weerstand .</sentence>
+</alpino_ds>

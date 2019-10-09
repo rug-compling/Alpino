@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="6" end="7" id="1" pos="punct" rel="--" root="&apos;" special="aanhaal_both" word="&apos;"/>
+    <node begin="15" end="16" id="2" pos="punct" rel="--" root="&apos;" special="aanhaal_both" word="&apos;"/>
+    <node begin="0" cat="du" end="22" id="3" rel="--">
+      <node begin="0" cat="pp" end="6" id="4" rel="dp">
+        <node begin="0" end="1" id="5" pos="prep" rel="hd" root="over" word="Over"/>
+        <node begin="1" cat="np" end="6" id="6" rel="obj1">
+          <node begin="1" end="2" id="7" infl="de" pos="det" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" gen="de" id="8" num="sg" pos="noun" rel="hd" root="hoogte" word="hoogte"/>
+          <node begin="3" cat="pp" end="6" id="9" rel="mod">
+            <node begin="3" end="4" id="10" pos="prep" rel="hd" root="van" word="van"/>
+            <node begin="4" cat="np" end="6" id="11" rel="obj1">
+              <node begin="4" end="5" id="12" infl="de" pos="det" rel="det" root="de" word="de"/>
+              <node begin="5" end="6" id="13" neclass="ORG" num="both" pos="name" rel="hd" root="CO2-emissienorm" word="CO2-emissienorm"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="7" cat="smain" end="22" id="14" rel="dp">
+        <node begin="7" cat="np" end="15" id="15" rel="mod">
+          <node begin="7" end="8" id="16" infl="pl_num" pos="num" rel="det" root="130" special="hoofd" word="130"/>
+          <node begin="8" end="9" gen="both" id="17" num="meas" pos="noun" rel="hd" root="gram" sc="measure" special="meas_mod" word="gram"/>
+          <node begin="9" cat="np" end="15" id="18" rel="mod">
+            <node begin="9" end="10" gen="de" id="19" num="meas" pos="noun" rel="hd" root="CO2_kilo_meter" special="meas_mod" word="CO2/km"/>
+            <node begin="10" cat="cp" end="15" id="20" rel="mod">
+              <node begin="10" end="11" id="21" pos="comp" rel="cmp" root="zoals" sc="zoals" word="zoals"/>
+              <node begin="11" cat="ppart" end="15" id="22" rel="body">
+                <node begin="11" end="12" id="23" infl="psp" pos="verb" rel="hd" root="stel_voor" sc="part_sbar(voor)" word="voorgesteld"/>
+                <node begin="12" cat="pp" end="15" id="24" rel="mod">
+                  <node begin="12" end="13" id="25" pos="prep" rel="hd" root="door" word="door"/>
+                  <node begin="13" cat="np" end="15" id="26" rel="obj1">
+                    <node begin="13" end="14" id="27" infl="de" pos="det" rel="det" root="de" word="de"/>
+                    <node begin="14" end="15" id="28" neclass="ORG" num="both" pos="name" rel="hd" root="Commissie" word="Commissie"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="16" end="17" id="29" infl="sg3" pos="verb" rel="hd" root="besta" sc="intransitive" tense="present" word="bestaat"/>
+        <node begin="17" end="18" id="30" pos="adv" rel="mod" root="er" special="er" word="er"/>
+        <node begin="18" end="19" id="31" pos="adv" rel="mod" root="nu" special="tmp" word="nu"/>
+        <node aform="base" begin="19" end="20" id="32" infl="no_e" pos="adj" rel="mod" root="redelijk" vform="adj" word="redelijk"/>
+        <node begin="20" cat="np" end="22" id="33" rel="su">
+          <node begin="20" end="21" id="34" infl="wat" pos="det" rel="det" root="wat" wh="nwh" word="wat"/>
+          <node begin="21" end="22" gen="de" id="35" num="sg" pos="noun" rel="hd" root="eensgezindheid" word="eensgezindheid"/>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="36" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Over de hoogte van de CO2-emissienorm &apos; 130 gram CO2/km zoals voorgesteld door de Commissie &apos; bestaat er nu redelijk wat eensgezindheid .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

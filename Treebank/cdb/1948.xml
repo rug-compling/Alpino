@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="22" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="liever" pos="adv" postag="BW()" pt="bw" rel="mod" root="liever" word="Liever"/>
+      <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="5" rel="su">
+        <node begin="2" buiging="zonder" end="3" id="6" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="dat"/>
+        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="ondernemerschap" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="schap" word="ondernemerschap"/>
+      </node>
+      <node begin="4" end="5" id="8" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+      <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="blijkbaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="blijkbaar" word="blijkbaar"/>
+      <node begin="6" cat="np" end="22" id="10" rel="predc">
+        <node begin="6" end="7" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="12" lemma="verweving" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verweving" word="verweving"/>
+        <node begin="8" cat="pp" end="11" id="13" rel="mod">
+          <node begin="8" end="9" id="14" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="9" cat="np" end="11" id="15" rel="obj1">
+            <node begin="9" buiging="met-e" end="10" graad="basis" id="16" lemma="buitenlands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="buitenlands" word="buitenlandse"/>
+            <node begin="10" end="11" getal="mv" graad="basis" id="17" lemma="onderneming" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="onderneming" word="ondernemingen"/>
+          </node>
+        </node>
+        <node begin="12" cat="rel" end="22" id="18" rel="mod">
+          <node begin="12" end="13" id="19" index="1" lemma="waarbij" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarbij" word="waarbij"/>
+          <node begin="12" cat="ssub" end="22" id="20" rel="body">
+            <node begin="13" cat="np" end="15" id="21" index="2" rel="su">
+              <node begin="13" end="14" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="23" lemma="zeggenschap" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zeggenschap" word="zeggenschap"/>
+            </node>
+            <node begin="12" cat="ppart" end="21" id="24" rel="vc">
+              <node begin="12" end="13" id="25" index="1" rel="mod"/>
+              <node begin="13" end="15" id="26" index="2" rel="obj1"/>
+              <node begin="15" cat="pp" end="20" id="27" rel="ld">
+                <node begin="15" end="16" id="28" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+                <node begin="16" cat="np" end="20" id="29" rel="obj1">
+                  <node begin="16" end="17" getal="mv" graad="basis" id="30" lemma="centrum" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="centrum" word="centra"/>
+                  <node begin="17" cat="pp" end="20" id="31" rel="mod">
+                    <node begin="17" end="18" id="32" lemma="buiten" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="buiten" vztype="init" word="buiten"/>
+                    <node begin="18" cat="np" end="20" id="33" rel="obj1">
+                      <node begin="18" buiging="zonder" end="19" getal="mv" id="34" lemma="ons" naamval="stan" npagr="evon" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,zonder,evon)" pt="vnw" rel="det" root="ons" status="vol" vwtype="bez" word="ons"/>
+                      <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="35" lemma="land" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="land" word="land"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="20" buiging="zonder" end="21" id="36" lemma="verleggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verleg" word="verlegd" wvorm="vd"/>
+            </node>
+            <node begin="21" end="22" id="37" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="38" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Liever is dat ondernemerschap dan blijkbaar een verweving met buitenlandse ondernemingen , waarbij de zeggenschap naar centra buiten ons land verlegd wordt .</sentence>
+</alpino_ds>

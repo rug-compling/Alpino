@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="6" end="7" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="8" end="9" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="10" end="11" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="12" end="13" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="14" end="15" id="6" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="16" id="7" rel="--">
+      <node begin="0" end="1" getal="ev" id="8" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="9" lemma="wonen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="woon" word="woon" wvorm="pv"/>
+      <node begin="2" cat="pp" end="16" id="10" rel="ld">
+        <node begin="2" end="3" id="11" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="3" cat="np" end="16" id="12" rel="obj1">
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="13" lemma="Culemborg" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Culemborg" word="Culemborg"/>
+          <node begin="5" cat="np" end="16" id="14" rel="mod">
+            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="15" lemma="Gelderland" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Gelderland" word="Gelderland"/>
+            <node begin="7" cat="np" end="16" id="16" rel="mod">
+              <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="17" lemma="Nederland" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Nederland" word="Nederland"/>
+              <node begin="9" cat="np" end="16" id="18" rel="mod">
+                <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="19" lemma="Europa" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Europa" word="Europa"/>
+                <node begin="11" cat="np" end="16" id="20" rel="mod">
+                  <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="21" lemma="Aarde" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Aarde" word="Aarde"/>
+                  <node begin="13" cat="np" end="16" id="22" rel="mod">
+                    <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="melkweg" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="Melkweg" word="Melkweg"/>
+                    <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="24" lemma="heelal" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mod" root="Heelal" word="Heelal"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Ik woon in Culemborg , Gelderland , Nederland , Europa , Aarde , Melkweg , Heelal</sentence>
+</alpino_ds>

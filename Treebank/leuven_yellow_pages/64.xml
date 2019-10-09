@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="Roosevelt" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Roosevelt" word="Roosevelt"/>
+        <node begin="1" end="2" id="4" lemma="bijvoorbeeld" pos="adv" postag="BW()" pt="bw" rel="mod" root="bijvoorbeeld" word="bijvoorbeeld"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zitten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zit" word="zat" wvorm="pv"/>
+      <node begin="3" cat="pp" end="6" id="6" rel="ld">
+        <node begin="3" end="4" id="7" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="4" cat="np" end="6" id="8" rel="obj1">
+          <node begin="4" end="5" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="rolstoel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rolstoel" word="rolstoel"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Roosevelt bijvoorbeeld zat in een rolstoel</sentence>
+</alpino_ds>

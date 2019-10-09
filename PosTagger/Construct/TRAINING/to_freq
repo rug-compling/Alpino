@@ -1,0 +1,27 @@
+#!/usr/bin/perl -w
+
+
+%tagmap=();
+
+open(TAG_MAP,shift @ARGV) or die "error opening tag_map: $!\n";
+while (<TAG_MAP>) {
+  chomp;
+  ($tag,$class) = split/\|/;
+  $tagmap{$tag}=$class;
+}
+close(TAG_MAP);
+
+
+while (<>) {
+  if (/^FRAME#.*\|.*/) { # alpino info negeren, alsmede lege regels (?)
+      s/^FRAME#//;
+      ($word,$tag) = split(/\|/);
+      if (exists $tagmap{$tag}) {
+	  $class=$tagmap{$tag};
+      } else {
+	  print STDERR "not in tagmap: $tag\n";
+	  $class=$tag;
+      }
+      print "$word|$class\n";
+  }
+}

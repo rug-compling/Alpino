@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="2" lemma="Amsterdam" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Amsterdam" word="Amsterdam"/>
+      <node begin="1" end="2" id="3" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+      <node begin="2" cat="np" end="6" id="4" rel="predc">
+        <node begin="2" end="3" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="3" cat="mwu" end="6" id="6" rel="hd">
+          <node begin="3" end="4" id="7" lemma="two" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="two" spectype="vreemd" word="two"/>
+          <node begin="4" end="5" id="8" lemma="paper" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="paper" spectype="vreemd" word="paper"/>
+          <node begin="5" end="6" id="9" lemma="city" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="city" spectype="vreemd" word="city"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="10" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Amsterdam wordt een two paper city ?</sentence>
+</alpino_ds>

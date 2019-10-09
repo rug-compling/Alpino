@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="30" id="0" rel="top">
+    <node begin="26" end="27" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="29" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" index="1" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="4" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" end="2" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="5" lcat="np" lemma="lidstaat" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="lidstaat" sense="lidstaat" word="Lidstaten"/>
+      </node>
+      <node begin="2" end="3" frame="verb(hebben,pl,vp)" id="6" infl="pl" lcat="smain" lemma="dienen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="dien" sc="vp" sense="dien" tense="present" word="dienen" wvorm="pv"/>
+      <node begin="0" cat="ti" end="29" id="7" rel="vc">
+        <node begin="4" end="5" frame="complementizer(te)" id="8" lcat="cp" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" sense="te" vztype="init" word="te"/>
+        <node begin="0" cat="inf" end="29" id="9" rel="body">
+          <node begin="0" end="2" id="10" index="1" rel="su"/>
+          <node begin="5" buiging="zonder" end="6" frame="verb(hebben,inf,er_pp_sbar(voor))" id="11" infl="inf" lcat="inf" lemma="zorgen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zorg" sc="er_pp_sbar(voor)" sense="zorg-voor" word="zorgen" wvorm="inf"/>
+          <node begin="3" cat="pp" end="29" id="12" rel="pc">
+            <node begin="3" end="4" frame="er_adverb(voor)" id="13" lcat="pp" lemma="ervoor" pos="pp" postag="BW()" pt="bw" rel="hd" root="ervoor" sense="ervoor" special="er" word="ervoor"/>
+            <node begin="6" cat="cp" end="29" id="14" rel="vc">
+              <node begin="6" conjtype="onder" end="7" frame="complementizer(dat)" id="15" lcat="cp" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" sense="dat" word="dat"/>
+              <node begin="7" cat="ssub" end="29" id="16" rel="body">
+                <node begin="7" cat="conj" end="26" id="17" index="2" rel="su">
+                  <node begin="9" conjtype="neven" end="10" frame="conj(of)" id="18" lcat="vg" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" sense="of" word="of"/>
+                  <node begin="7" cat="np" end="26" id="19" rel="cnj">
+                    <node begin="7" buiging="met-e" end="8" frame="determiner(alle,nwh,mod,pro,nparg)" id="20" index="3" infl="alle" lcat="detp" lemma="alle" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" sense="alle" vwtype="onbep" wh="nwh" word="alle"/>
+                    <node begin="8" end="9" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="21" lcat="np" lemma="voorwaarde" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="voorwaarde" sense="voorwaarde" word="voorwaarden"/>
+                    <node begin="11" cat="pp" end="26" id="22" index="4" rel="mod">
+                      <node begin="11" cat="mwu" end="14" id="23" mwu_root="met_betrekking_tot" mwu_sense="met_betrekking_tot" rel="hd">
+                        <node begin="11" end="12" frame="preposition([met,betrekking,tot],[])" id="24" lcat="pp" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="met" sense="met" vztype="init" word="met"/>
+                        <node begin="12" end="13" frame="preposition([met,betrekking,tot],[])" genus="zijd" getal="ev" graad="basis" id="25" lcat="pp" lemma="betrekking" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="betrekking" sense="betrekking" word="betrekking"/>
+                        <node begin="13" end="14" frame="preposition([met,betrekking,tot],[])" id="26" lcat="pp" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="tot" sense="tot" vztype="init" word="tot"/>
+                      </node>
+                      <node begin="14" cat="np" end="26" id="27" rel="obj1">
+                        <node begin="14" end="15" frame="determiner(een)" id="28" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+                        <node begin="15" cat="conj" end="18" id="29" rel="mod">
+                          <node aform="base" begin="15" buiging="zonder" end="16" frame="adjective(no_e(adv))" graad="basis" id="30" infl="no_e" lcat="ap" lemma="veilig" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="cnj" root="veilig" sense="veilig" vform="adj" word="veilig"/>
+                          <node begin="16" conjtype="neven" end="17" frame="conj(en)" id="31" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+                          <node aform="base" begin="17" buiging="zonder" end="18" frame="adjective(no_e(adv))" graad="basis" id="32" infl="no_e" lcat="ap" lemma="doeltreffend" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="cnj" root="doeltreffend" sense="doeltreffend" vform="adj" word="doeltreffend"/>
+                        </node>
+                        <node begin="18" end="19" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="33" lcat="np" lemma="gebruik" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebruik" sense="gebruik" word="gebruik"/>
+                        <node begin="19" cat="pp" end="26" id="34" rel="mod">
+                          <node begin="19" end="20" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="35" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+                          <node begin="20" cat="np" end="26" id="36" rel="obj1">
+                            <node begin="20" end="21" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="37" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                            <node begin="21" end="22" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="38" lcat="np" lemma="geneesmiddel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="genees_middel" sense="genees_middel" word="geneesmiddel"/>
+                            <node begin="22" cat="cp" end="26" id="39" rel="mod">
+                              <node begin="22" conjtype="onder" end="23" frame="complementizer(zoals)" id="40" lcat="cp" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" sc="zoals" sense="zoals" word="zoals"/>
+                              <node begin="23" cat="ssub" end="26" id="41" rel="body">
+                                <node begin="23" cat="ppart" end="25" id="42" rel="vc">
+                                  <node begin="23" end="24" frame="er_adverb(onder)" id="43" lcat="pp" lemma="hieronder" pos="pp" postag="BW()" pt="bw" rel="mod" root="hieronder" sense="hieronder" special="er" word="hieronder"/>
+                                  <node begin="24" buiging="zonder" end="25" frame="verb(hebben,psp,transitive)" id="44" infl="psp" lcat="ppart" lemma="beschrijven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="beschrijf" sc="transitive" sense="beschrijf" word="beschreven" wvorm="vd"/>
+                                </node>
+                                <node begin="25" end="26" frame="verb(hebben,sg3,norm_passive)" id="45" infl="sg3" lcat="ssub" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" sc="norm_passive" sense="sta" tense="present" word="staat" wvorm="pv"/>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node begin="7" cat="np" end="26" id="46" rel="cnj">
+                    <node begin="7" end="8" id="47" index="3" rel="det"/>
+                    <node begin="10" end="11" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="48" lcat="np" lemma="beperking" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="beperking" sense="beperking" word="beperkingen"/>
+                    <node begin="11" end="26" id="49" index="4" rel="mod"/>
+                  </node>
+                </node>
+                <node begin="7" cat="ppart" end="28" id="50" rel="vc">
+                  <node begin="7" end="26" id="51" index="2" rel="obj1"/>
+                  <node begin="27" buiging="zonder" end="28" frame="verb(hebben,psp,transitive)" id="52" infl="psp" lcat="ppart" lemma="implementeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="implementeer" sc="transitive" sense="implementeer" word="geïmplementeerd" wvorm="vd"/>
+                </node>
+                <node begin="28" buiging="zonder" end="29" frame="verb(unacc,pl,passive)" id="53" infl="pl" lcat="ssub" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" sc="passive" sense="word" tense="present" word="worden" wvorm="inf"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="29" end="30" frame="punct(dubb_punt)" id="54" lcat="punct" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+  </node>
+  <sentence>De Lidstaten dienen ervoor te zorgen dat alle voorwaarden of beperkingen met betrekking tot een veilig en doeltreffend gebruik van het geneesmiddel zoals hieronder beschreven staat , geïmplementeerd worden :</sentence>
+  <comments>
+    <comment>Q#humandocs_PDFs_EPAR_PhotoBarr_H-493-IV-nl-s4.1|De Lidstaten dienen ervoor te zorgen dat alle voorwaarden of beperkingen met betrekking tot een veilig en doeltreffend gebruik van het geneesmiddel zoals hieronder beschreven staat , geïmplementeerd worden :|1|1|-0.1501297211292739</comment>
+  </comments>
+</alpino_ds>

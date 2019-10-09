@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="smain" end="15" id="1" rel="--">
+      <node begin="7" end="8" id="2" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+      <node begin="8" cat="np" end="14" id="3" index="1" rel="su">
+        <node begin="8" end="9" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="5" lemma="middag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="middag" word="middag"/>
+        <node begin="10" cat="pp" end="14" id="6" rel="mod">
+          <node begin="10" end="11" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="11" cat="mwu" end="14" id="8" rel="obj1">
+            <node begin="11" end="12" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+            <node begin="12" end="13" id="10" lemma="14" naamval="stan" numtype="rang" pos="noun" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mwp" root="14e" word="14e"/>
+            <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="11" lemma="augustus" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="augustus" word="augustus"/>
+          </node>
+        </node>
+      </node>
+      <node begin="0" cat="inf" end="15" id="12" rel="vc">
+        <node begin="0" cat="conj" end="7" id="13" rel="obj2">
+          <node begin="2" conjtype="neven" end="3" id="14" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="0" cat="np" end="7" id="15" rel="cnj">
+            <node begin="0" end="1" id="16" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+            <node begin="1" end="2" genus="onz" getal="ev" graad="dim" id="17" lemma="meisje" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="meisje" word="meisje"/>
+            <node begin="5" cat="pp" end="7" id="18" index="2" rel="mod">
+              <node begin="5" end="6" id="19" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+              <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="20" lemma="Rotterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Rotterdam" word="Rotterdam"/>
+            </node>
+          </node>
+          <node begin="3" cat="np" end="7" id="21" rel="cnj">
+            <node begin="3" end="4" id="22" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="23" lemma="jongen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="jongen" word="jongen"/>
+            <node begin="5" end="7" id="24" index="2" rel="mod"/>
+          </node>
+        </node>
+        <node begin="8" end="14" id="25" index="1" rel="su"/>
+        <node begin="14" buiging="zonder" end="15" id="26" lemma="heugen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heug" word="heugen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="15" end="16" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een meisje en een jongen uit Rotterdam zal de middag van de 14e augustus heugen .</sentence>
+</alpino_ds>

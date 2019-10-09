@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="1" cat="mwu" end="4" id="4" rel="hd">
+          <node begin="1" end="2" id="5" lemma="School" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="School" spectype="deeleigen" word="School"/>
+          <node begin="2" end="3" id="6" lemma="Advies" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Advies" spectype="deeleigen" word="Advies"/>
+          <node begin="3" end="4" id="7" lemma="Dienst" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Dienst" spectype="deeleigen" word="Dienst"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="8" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+      <node begin="0" cat="inf" end="8" id="9" rel="vc">
+        <node begin="0" end="4" id="10" index="1" rel="su"/>
+        <node begin="5" cat="np" end="7" id="11" rel="obj1">
+          <node begin="5" buiging="met-e" end="6" graad="basis" id="12" lemma="goed" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="goed" word="goede"/>
+          <node begin="6" end="7" getal="mv" graad="basis" id="13" lemma="besluit" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="besluit" word="besluiten"/>
+        </node>
+        <node begin="7" buiging="zonder" end="8" id="14" lemma="nemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem" word="nemen" wvorm="inf"/>
+      </node>
+    </node>
+  </node>
+  <sentence>een School Advies Dienst moet goede besluiten nemen</sentence>
+</alpino_ds>

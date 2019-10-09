@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="5" end="6" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="8" id="3" rel="--">
+      <node begin="0" cat="np" end="5" id="4" index="1" rel="su">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="5" lemma="Jan" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Jan" word="Jan"/>
+        <node begin="2" cat="np" end="5" id="6" rel="app">
+          <node begin="2" buiging="zonder" end="3" graad="basis" id="7" lemma="jarenlang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="jarenlang" word="jarenlang"/>
+          <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="4" buiging="met-e" end="5" getal-n="zonder-n" graad="sup" id="9" lemma="snel" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,sup,met-e,zonder-n,stan)" pt="adj" rel="hd" root="snel" word="snelste"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="10" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="8" id="11" rel="vc">
+        <node begin="0" end="5" id="12" index="1" rel="obj1"/>
+        <node begin="7" buiging="zonder" end="8" id="13" lemma="verslag" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="versla" word="verslagen" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Jan , jarenlang de snelste , werd verslagen</sentence>
+</alpino_ds>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="Dit"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="effect" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="effect" word="effect"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="3" end="4" id="6" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
+      <node begin="4" cat="ap" end="7" id="7" rel="predc">
+        <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="bezig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="bezig" word="bezig"/>
+        <node begin="5" cat="ti" end="7" id="9" rel="vc">
+          <node begin="5" end="6" id="10" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="6" buiging="zonder" end="7" id="11" lemma="verdwijnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="verdwijn" word="verdwijnen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dit effect is nu bezig te verdwijnen .</sentence>
+</alpino_ds>

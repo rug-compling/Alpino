@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="0" cat="du" end="9" id="2" rel="--">
+      <node begin="0" cat="smain" end="4" id="3" rel="nucl">
+        <node begin="0" end="1" genus="onz" getal="ev" id="4" index="1" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+        <node begin="1" end="2" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+        <node begin="0" cat="ppart" end="4" id="6" rel="vc">
+          <node begin="0" end="1" id="7" index="1" rel="su"/>
+          <node begin="2" end="3" id="8" lemma="vannacht" pos="adv" postag="BW()" pt="bw" rel="mod" root="vannacht" word="vannacht"/>
+          <node begin="3" buiging="zonder" end="4" id="9" lemma="regenen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="regen" word="geregend" wvorm="vd"/>
+        </node>
+      </node>
+      <node begin="5" cat="smain" end="9" id="10" rel="sat">
+        <node begin="5" cat="np" end="7" id="11" rel="su">
+          <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="straat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="straat" word="straat"/>
+        </node>
+        <node begin="7" end="8" id="14" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="8" buiging="zonder" end="9" graad="basis" id="15" lemma="nat" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="nat" word="nat"/>
+      </node>
+    </node>
+    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het heeft vannacht geregend : de straat is nat .</sentence>
+</alpino_ds>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="mod">
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="volgen" pos="adj" positie="prenom" postag="WW(od,prenom,zonder)" pt="ww" rel="mod" root="volgend" word="Volgend" wvorm="od"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="3" end="4" genus="onz" getal="ev" id="6" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="4" cat="mwu" end="6" id="7" rel="svp">
+        <node begin="4" end="5" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="fixed" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="beurt" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="beurt" word="beurt"/>
+      </node>
+      <node begin="6" cat="pp" end="9" id="10" rel="pc">
+        <node begin="6" end="7" id="11" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+        <node begin="7" cat="np" end="9" id="12" rel="obj1">
+          <node begin="7" end="8" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="14" lemma="KUL" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="KUL" word="KUL"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Volgend jaar is het de beurt aan de KUL</sentence>
+</alpino_ds>

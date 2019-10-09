@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="32" id="0" rel="top">
+    <node begin="15" end="16" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="31" id="2" rel="--">
+      <node begin="0" cat="du" end="15" id="3" rel="dp">
+        <node begin="0" end="1" id="4" lemma="enerzijds" pos="adv" postag="BW()" pt="bw" rel="dp" root="enerzijds" word="Enerzijds"/>
+        <node begin="1" cat="conj" end="15" id="5" rel="dp">
+          <node begin="1" cat="inf" end="10" id="6" rel="cnj">
+            <node begin="1" cat="pp" end="4" id="7" rel="mod">
+              <node begin="1" end="2" id="8" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+              <node begin="2" cat="np" end="4" id="9" rel="obj1">
+                <node begin="2" buiging="zonder" end="3" graad="basis" id="10" lemma="individueel" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="individueel" word="individueel"/>
+                <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="11" lemma="niveau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="niveau" word="niveau"/>
+              </node>
+            </node>
+            <node begin="4" buiging="zonder" end="5" graad="basis" id="12" lemma="tijdig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="tijdig" word="tijdig"/>
+            <node begin="5" cat="np" end="9" id="13" rel="obj1">
+              <node begin="5" end="6" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="6" cat="ppres" end="8" id="15" rel="mod">
+                <node begin="6" buiging="zonder" end="7" graad="basis" id="16" lemma="niet-normaal" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="niet_normaal" word="niet-normaal"/>
+                <node begin="7" buiging="met-e" end="8" id="17" lemma="verlopen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="verloop" word="verlopende" wvorm="od"/>
+              </node>
+              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="18" lemma="ontwikkeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ontwikkeling" word="ontwikkeling"/>
+            </node>
+            <node begin="9" buiging="zonder" end="10" id="19" lemma="signaleren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="signaleer" word="signaleren" wvorm="inf"/>
+          </node>
+          <node begin="10" conjtype="neven" end="11" id="20" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="11" cat="inf" end="15" id="21" rel="cnj">
+            <node begin="11" cat="mwu" end="14" id="22" rel="mod">
+              <node begin="11" end="12" id="23" lemma="op" pos="pp" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+              <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="24" lemma="basis" naamval="stan" ntype="soort" pos="pp" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="basis" word="basis"/>
+              <node begin="13" end="14" id="25" lemma="daarvan" pos="pp" postag="BW()" pt="bw" rel="mwp" root="daarvan" word="daarvan"/>
+            </node>
+            <node begin="14" buiging="zonder" end="15" id="26" lemma="interveniëren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="intervenieer" word="interveniëren" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+      <node begin="16" cat="du" end="31" id="27" rel="dp">
+        <node begin="16" end="17" id="28" lemma="anderzijds" pos="adv" postag="BW()" pt="bw" rel="dp" root="anderzijds" word="anderzijds"/>
+        <node begin="17" cat="inf" end="31" id="29" rel="dp">
+          <node begin="17" cat="pp" end="21" id="30" rel="mod">
+            <node begin="17" end="18" id="31" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="18" cat="conj" end="21" id="32" rel="obj1">
+              <node begin="18" end="19" id="33" lemma="doelgroep-" pos="prefix" postag="SPEC(afgebr)" pt="spec" rel="cnj" root="doelgroep" spectype="afgebr" word="doelgroep-"/>
+              <node begin="19" conjtype="neven" end="20" id="34" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+              <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="35" lemma="populatieniveau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="populatieniveau" word="populatieniveau"/>
+            </node>
+          </node>
+          <node begin="21" end="22" getal="mv" graad="basis" id="36" lemma="gezondheidsprofiel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="gezondheidsprofielen" word="gezondheidsprofielen"/>
+          <node begin="22" buiging="zonder" end="23" id="37" lemma="opstellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel_op" word="opstellen" wvorm="inf"/>
+          <node begin="23" cat="cp" end="31" id="38" rel="mod">
+            <node begin="23" conjtype="onder" end="24" id="39" lemma="zodat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zodat" word="zodat"/>
+            <node begin="24" cat="ssub" end="31" id="40" rel="body">
+              <node begin="27" end="28" genus="onz" getal="ev" graad="basis" id="41" index="1" lemma="gezondheidsbeleid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="su" root="gezondheid_beleid" word="gezondheidsbeleid"/>
+              <node begin="28" end="29" id="42" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+              <node begin="24" cat="inf" end="31" id="43" rel="vc">
+                <node begin="27" end="28" id="44" index="1" rel="su"/>
+                <node begin="29" buiging="zonder" end="30" id="45" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+                <node begin="24" cat="ppart" end="31" id="46" rel="vc">
+                  <node begin="24" cat="mwu" end="27" id="47" rel="mod">
+                    <node begin="24" end="25" id="48" lemma="op" pos="pp" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+                    <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="49" lemma="grond" naamval="stan" ntype="soort" pos="pp" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="grond" word="grond"/>
+                    <node begin="26" end="27" id="50" lemma="daarvan" pos="pp" postag="BW()" pt="bw" rel="mwp" root="daarvan" word="daarvan"/>
+                  </node>
+                  <node begin="27" end="28" id="51" index="1" rel="obj1"/>
+                  <node begin="30" buiging="zonder" end="31" id="52" lemma="ontwikkelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ontwikkel" word="ontwikkeld" wvorm="vd"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="31" end="32" id="53" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Enerzijds op individueel niveau tijdig een niet-normaal verlopende ontwikkeling signaleren en op basis daarvan interveniëren , anderzijds op doelgroep- of populatieniveau gezondheidsprofielen opstellen zodat op grond daarvan gezondheidsbeleid kan worden ontwikkeld .</sentence>
+</alpino_ds>

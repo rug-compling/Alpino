@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+# © Gertjan van Noord, 1998.
+# mailto:vannoord@let.rug.nl
+
+$subcounter=0;
+$key='';
+while (<> )  {
+  if (/^key\|/) {
+      chomp;
+      (undef,$key)=split('\|');
+      $subcounter=0;
+      next;
+  }
+  $subcounter++;
+  @words=split;
+  if ($key) {
+      print "$key-$subcounter|$_" if @words;
+  } else {
+      print "$subcounter|$_" if @words;
+  }
+}

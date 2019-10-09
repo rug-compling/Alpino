@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="1" cat="smain" end="7" id="2" rel="--">
+      <node begin="1" end="2" id="3" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="Zo"/>
+      <node begin="2" end="3" id="4" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="3" cat="np" end="5" id="5" rel="su">
+        <node begin="3" end="4" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="7" lemma="spelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="spelling" word="spelling"/>
+      </node>
+      <node begin="5" cat="mwu" end="7" id="8" rel="mod">
+        <node begin="5" end="6" id="9" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mwp" root="nu" word="nu"/>
+        <node begin="6" end="7" id="10" lemma="eenmaal" pos="adv" postag="BW()" pt="bw" rel="mwp" root="eenmaal" word="eenmaal"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&quot; Zo is de spelling nu eenmaal .</sentence>
+</alpino_ds>

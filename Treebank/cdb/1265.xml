@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="7" end="8" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="24" id="3" rel="--">
+      <node begin="4" cat="smain" end="7" id="4" rel="tag">
+        <node begin="4" end="5" id="5" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
+        <node begin="5" end="6" id="6" lemma="vraag" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="vraag" word="vroegen" wvorm="pv"/>
+        <node begin="6" end="7" getal="mv" id="7" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
+      </node>
+      <node begin="0" cat="sv1" end="24" id="8" rel="nucl">
+        <node begin="0" end="1" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="is" word="Is" wvorm="pv"/>
+        <node begin="1" end="2" genus="onz" getal="ev" id="10" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="het"/>
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="11" lemma="waar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="waar" word="waar"/>
+        <node begin="8" cat="cp" end="24" id="12" rel="su">
+          <node begin="8" conjtype="onder" end="9" id="13" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="9" cat="ssub" end="24" id="14" rel="body">
+            <node begin="9" cat="np" end="12" id="15" index="1" rel="su">
+              <node begin="9" end="10" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="17" lemma="heer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="heer" word="heer"/>
+              <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="18" lemma="Lennon" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Lennon" word="Lennon"/>
+            </node>
+            <node begin="19" end="20" id="19" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+            <node begin="9" cat="ppart" end="24" id="20" rel="vc">
+              <node begin="9" end="12" id="21" index="1" rel="su"/>
+              <node begin="12" cat="pp" end="15" id="22" rel="mod">
+                <node begin="12" end="13" id="23" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                <node begin="13" cat="np" end="15" id="24" rel="obj1">
+                  <node begin="13" buiging="zonder" end="14" getal="ev" id="25" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+                  <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="26" lemma="grow-your-hair-actie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="actie" word="grow-your-hair-actie"/>
+                </node>
+              </node>
+              <node begin="20" buiging="zonder" end="21" id="27" lemma="uitoefenen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="oefen" word="uitgeoefend" wvorm="vd"/>
+              <node begin="15" cat="np" end="24" id="28" rel="obj1">
+                <node begin="15" end="16" id="29" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="16" cat="ap" end="18" id="30" rel="mod">
+                  <node begin="16" end="17" id="31" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="mod" root="zeer" word="zeer"/>
+                  <node begin="17" buiging="met-e" end="18" graad="basis" id="32" lemma="nadelig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="nadelig" word="nadelige"/>
+                </node>
+                <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="33" lemma="invloed" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="invloed" word="invloed"/>
+                <node begin="21" cat="pp" end="24" id="34" rel="mod">
+                  <node begin="21" end="22" id="35" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                  <node begin="22" cat="np" end="24" id="36" rel="obj1">
+                    <node begin="22" buiging="zonder" end="23" getal="getal" id="37" lemma="uw" naamval="stan" npagr="agr" pdtype="det" persoon="2" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)" pt="vnw" rel="det" root="uw" status="vol" vwtype="bez" word="uw"/>
+                    <node begin="23" end="24" getal="mv" graad="basis" id="38" lemma="bedrijfsresultaat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bedrijfsresultaat" word="bedrijfsresultaten"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="39" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Is het waar , zo vroegen wij , dat de heer Lennon met zijn grow-your-hair-actie een zeer nadelige invloed heeft uitgeoefend op uw bedrijfsresultaten ?</sentence>
+</alpino_ds>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" word="werden" wvorm="pv"/>
+      <node begin="5" cat="np" end="8" id="3" index="1" rel="su">
+        <node begin="5" cat="detp" end="7" id="4" rel="det">
+          <node begin="5" buiging="zonder" end="6" graad="basis" id="5" lemma="heel" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="heel" word="heel"/>
+          <node begin="6" end="7" getal="ev" id="6" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" root="wat" status="vol" vwtype="onbep" word="wat"/>
+        </node>
+        <node begin="7" end="8" getal="mv" graad="basis" id="7" lemma="hand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="hand" word="handen"/>
+      </node>
+      <node begin="0" cat="ppart" end="9" id="8" rel="vc">
+        <node begin="0" end="1" getal="getal" id="9" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+        <node begin="2" cat="pp" end="5" id="10" rel="mod">
+          <node begin="2" end="3" id="11" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="3" cat="np" end="5" id="12" rel="obj1">
+            <node begin="3" buiging="zonder" end="4" id="13" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="14" lemma="receptie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="receptie" word="receptie"/>
+          </node>
+        </node>
+        <node begin="5" end="8" id="15" index="1" rel="obj1"/>
+        <node begin="8" buiging="zonder" end="9" id="16" lemma="schudden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schud" word="geschud" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="9" end="10" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Er werden op die receptie heel wat handen geschud .</sentence>
+</alpino_ds>

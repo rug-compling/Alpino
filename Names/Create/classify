@@ -1,0 +1,154 @@
+#!/usr/bin/env python
+
+"""Example of using estimate to build MaxEnt classifiers."""
+
+__author__ = "Rob Malouf <rmalouf@mail.sdsu.edu>"
+__date__ = "12 February 2004"
+__version__ = "$Revision: 1.2 $"
+
+import sys
+import os
+import optparse
+from maxent import *
+import cPickle
+
+try:
+    import psyco
+    psyco.full()
+except:
+    pass
+
+# process options
+
+parser = optparse.OptionParser()
+parser.add_option("-p", "--prior", type="float", default=0,
+                  help="use Gaussion prior with variance VAR",
+                  metavar="VAR")
+parser.add_option("-l", "--lasso", type="float", default=0,
+                  help="use least absolute smoothing with variance VAR",
+                  metavar="VAR")
+parser.add_option("-a", "--algorithm", choices=['MaxEnt','NaiveBayes'],
+                  default='MaxEnt',
+                  help="use learning algoritm ALG (MaxEnt (def), NaiveBayes)",
+                  metavar="ALG")
+parser.add_option("-d", "--data-format", choices=['C45','Sparse','Rainbow'],
+                  default='C45',
+                  help="use data format FORM (C45 (def), Sparse, Rainbow)",
+                  metavar="FORM")
+parser.add_option("-s", "--smooth", type="float", default=0,
+                  help="add EPS to all counts",
+                  metavar="EPS")
+parser.add_option("-m", "--model", action="store", default='',
+                  help="use model FILE",
+                  metavar="FILE")
+parser.add_option("-f", "--train", action="store", default='',
+                  help="read training data from FILE",
+                  metavar="FILE")
+parser.add_option("-t", "--test", action="store", default='',
+                  help="read test data from FILE",
+                  metavar="FILE")
+parser.add_option("-q", "--quiet", action="store_true", default=False,
+                  help="be quiet")
+parser.add_option("-b", "--no-baseline", action="store_true", default=False,
+                  help="don't use a baseline category")
+parser.add_option("-c", "--confusion", action="store_true", default=False,
+                  help="print confusion matrix")
+parser.add_option("-w", "--write", action="store_true", default=False,
+                  help="write each class")
+parser.add_option("-y", "--display-parameters", action="store_true", default=False,
+                  help="display all parameters")
+
+
+(options, args) = parser.parse_args()
+
+if (not options.quiet):
+    print >> sys.stderr
+    print >> sys.stderr, 'Bayesian classifier'
+    print >> sys.stderr
+
+# Construct model
+
+if (options.train == ''):
+    # no training file, so check model file
+    if (options.model != ''):
+        if (not options.quiet):
+            print >> sys.stderr, 'Reading model from',options.model
+        file = open(options.model,'r')
+        cat = cPickle.load(file)
+        file.close()
+    else:
+        raise Exception
+else:
+    if (options.data_format == 'Rainbow'):
+        if (not options.quiet):
+            print >> sys.stderr, 'Reading Rainbow training data from', \
+                  options.train
+        source = RainbowSource(options.train,binary=True)
+    elif (options.data_format == 'C45'):
+        if (not options.quiet):
+            print >> sys.stderr, 'Reading C4.5 training data from', \
+                  options.train
+        source = C4_5Source(options.train)
+    elif (options.data_format == 'Sparse'):
+        if (not options.quiet):
+            print >> sys.stderr, 'Reading Sparse Binary training data from', \
+                  options.train
+        source = SparseSource(options.train)
+    else:
+        raise Exception
+
+    if options.algorithm == 'MaxEnt':
+        print >>sys.stderr, 'Building MaxEnt model'
+        cat = MaxEntInducer().train(source, \
+                                    quiet=options.quiet, \
+                                    eps=options.smooth, \
+                                    var=options.prior, \
+                                    lasso=options.lasso, \
+                                    use_baseline=not options.no_baseline)
+    elif options.algorithm == 'NaiveBayes':
+        print >>sys.stderr, 'Building naive Bayes model'
+        cat =  NaiveBayesInducer().train(source, \
+                                         quiet=options.quiet, \
+                                         eps=options.smooth)
+
+# write model (if desired)
+
+if (options.train != '') and (options.model != ''):
+    if (not options.quiet):
+        print >> sys.stderr, 'Writing model to',options.model
+    file = open(options.model,'w')
+    cPickle.dump(cat,file,True)
+    file.close()
+
+# evaluate model
+
+if (options.test != ''):
+    if (options.data_format == 'Rainbow'):
+        if (not options.quiet):
+            print >> sys.stderr, 'Reading Rainbow test data from', \
+                  options.test
+        source = RainbowSource(options.test,binary=True)
+    elif (options.data_format == 'C45'):
+        if (not options.quiet):
+            print >> sys.stderr, 'Reading C4.5 test data from', \
+                  options.test
+        source = C4_5Source(options.test)
+    elif (options.data_format == 'Sparse'):
+        if (not options.quiet):
+            print >> sys.stderr, 'Reading Sparse Binary test data from', \
+                  options.test
+        source = SparseSource(options.test)
+    else:
+        raise Exception
+
+    acc = AccuracySink()
+    cat.apply(source,acc,options.write)
+
+    if (not options.write):
+        print 'Accuracy =', acc.score() * 100.0
+
+    if options.confusion:
+        acc.confusion()
+
+if (options.display_parameters):
+    cat.dump()

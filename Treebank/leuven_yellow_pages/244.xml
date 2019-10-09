@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="np" end="6" id="1" rel="--">
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="2" lemma="ervaring" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ervaring" word="ervaring"/>
+      <node begin="0" cat="detp" end="6" id="3" rel="det">
+        <node begin="0" end="1" getal="ev" id="4" lemma="iets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="me" root="iets" status="vol" vwtype="onbep" word="iets"/>
+        <node begin="1" buiging="zonder" end="2" graad="comp" id="5" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,comp)" pt="vnw" rel="hd" root="meer" vwtype="onbep" word="meer"/>
+        <node begin="3" cat="cp" end="6" id="6" rel="obcomp">
+          <node begin="3" conjtype="onder" end="4" id="7" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+          <node begin="4" cat="pp" end="6" id="8" rel="body">
+            <node begin="4" end="5" id="9" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+            <node begin="5" end="6" getal="mv" id="10" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj1" root="ons" status="vol" vwtype="pr" word="ons"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>iets meer ervaring dan bij ons</sentence>
+</alpino_ds>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="14" end="15" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="25" id="2" rel="--">
+      <node begin="5" end="6" id="3" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+      <node begin="6" cat="np" end="8" id="4" index="1" rel="su">
+        <node begin="6" end="7" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="6" lemma="borgtocht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="borgtocht" word="borgtocht"/>
+      </node>
+      <node begin="0" cat="inf" end="25" id="7" rel="vc">
+        <node begin="6" end="8" id="8" index="1" rel="su"/>
+        <node begin="23" buiging="zonder" end="24" id="9" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+        <node begin="0" cat="ppart" end="25" id="10" rel="vc">
+          <node begin="0" cat="pp" end="5" id="11" rel="mod">
+            <node begin="0" buiging="zonder" end="1" graad="basis" id="12" lemma="overeenkomstig" pos="prep" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="overeenkomstig" word="Overeenkomstig"/>
+            <node begin="1" cat="conj" end="5" id="13" rel="obj1">
+              <node begin="1" cat="np" end="3" id="14" rel="cnj">
+                <node begin="1" end="2" id="15" index="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="2" end="3" id="16" lemma="wets-" pos="prefix" postag="SPEC(afgebr)" pt="spec" rel="hd" root="wets" spectype="afgebr" word="wets-"/>
+              </node>
+              <node begin="3" conjtype="neven" end="4" id="17" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="1" cat="np" end="5" id="18" rel="cnj">
+                <node begin="1" end="2" id="19" index="2" rel="det"/>
+                <node begin="4" end="5" getal="mv" graad="basis" id="20" lemma="reglementsbepaling" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="reglement_bepaling" word="reglementsbepalingen"/>
+              </node>
+            </node>
+          </node>
+          <node begin="6" end="8" id="21" index="1" rel="obj1"/>
+          <node begin="8" cat="conj" end="23" id="22" rel="ld">
+            <node begin="8" conjtype="neven" end="9" id="23" lemma="hetzij" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="hetzij" word="hetzij"/>
+            <node begin="9" cat="pp" end="14" id="24" rel="cnj">
+              <node begin="9" end="10" id="25" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="10" cat="conj" end="14" id="26" rel="obj1">
+                <node begin="10" end="11" getal="mv" graad="basis" id="27" lemma="specie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="speciën" word="speciën"/>
+                <node begin="11" conjtype="neven" end="12" id="28" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+                <node begin="12" cat="np" end="14" id="29" rel="cnj">
+                  <node begin="12" buiging="met-e" end="13" graad="basis" id="30" lemma="publiek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="publiek" word="publieke"/>
+                  <node begin="13" end="14" getal="mv" graad="basis" id="31" lemma="fonds" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="fonds" word="fondsen"/>
+                </node>
+              </node>
+            </node>
+            <node begin="15" conjtype="neven" end="16" id="32" lemma="hetzij" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="hetzij" word="hetzij"/>
+            <node begin="16" cat="pp" end="23" id="33" rel="cnj">
+              <node begin="16" end="17" id="34" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="17" cat="np" end="23" id="35" rel="obj1">
+                <node begin="17" end="18" id="36" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="37" lemma="vorm" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vorm" word="vorm"/>
+                <node begin="19" cat="pp" end="23" id="38" rel="mod">
+                  <node begin="19" end="20" id="39" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="20" cat="np" end="23" id="40" rel="obj1">
+                    <node begin="20" end="21" id="41" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                    <node begin="21" buiging="met-e" end="22" graad="basis" id="42" lemma="gezamenlijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gezamenlijk" word="gezamenlijke"/>
+                    <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="43" lemma="borgtochtstelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="borgtocht_stelling" word="borgtochtstelling"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="24" buiging="zonder" end="25" id="44" lemma="stellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="gesteld" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="25" end="26" id="45" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Overeenkomstig de wets- en reglementsbepalingen kan de borgtocht hetzij in speciën of publieke fondsen , hetzij in de vorm van een gezamenlijke borgtochtstelling worden gesteld .</sentence>
+</alpino_ds>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="du" end="15" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" word="En"/>
+      <node begin="1" cat="smain" end="15" id="3" rel="nucl">
+        <node begin="2" end="3" id="4" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+        <node begin="3" end="4" getal="ev" id="5" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="1" cat="inf" end="15" id="6" rel="vc">
+          <node begin="1" end="2" id="7" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+          <node begin="3" end="4" id="8" index="1" rel="su"/>
+          <node begin="4" cat="np" end="6" id="9" rel="obj2">
+            <node begin="4" end="5" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="5" end="6" getal="mv" graad="basis" id="11" lemma="nieuwkomer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="nieuwkomer" word="nieuwkomers"/>
+          </node>
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="gelijk" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="gelijk" word="gelijk"/>
+          <node begin="7" buiging="zonder" end="8" id="13" lemma="geven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="geef" word="geven" wvorm="inf"/>
+          <node begin="8" cat="cp" end="15" id="14" rel="vc">
+            <node begin="8" conjtype="onder" end="9" id="15" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+            <node begin="9" cat="ssub" end="15" id="16" rel="body">
+              <node begin="9" end="10" getal="mv" id="17" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
+              <node begin="10" end="11" getal="ev" id="18" index="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" word="dat"/>
+              <node begin="13" end="14" id="19" lemma="vinden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="vind" word="vinden" wvorm="pv"/>
+              <node begin="10" cat="inf" end="15" id="20" rel="vc">
+                <node begin="10" end="11" id="21" index="2" rel="su"/>
+                <node begin="11" cat="ap" end="13" id="22" rel="predc">
+                  <node begin="11" end="12" id="23" lemma="te" pos="fixed" postag="BW()" pt="bw" rel="mod" root="te" word="te"/>
+                  <node begin="12" buiging="zonder" end="13" graad="basis" id="24" lemma="ver" pos="fixed" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="ver" word="ver"/>
+                </node>
+                <node begin="14" buiging="zonder" end="15" id="25" lemma="gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="gaan" wvorm="inf"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="26" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>En dan kan ik de nieuwkomers gelijk geven dat zij dat te ver vinden gaan .</sentence>
+</alpino_ds>

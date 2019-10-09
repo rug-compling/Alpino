@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      <node begin="1" end="2" id="3" lemma="vraag" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vraag" word="vroeg" wvorm="pv"/>
+      <node begin="2" cat="whsub" end="9" id="4" rel="vc">
+        <node begin="2" cat="conj" end="7" id="5" index="1" rel="whd">
+          <node begin="2" cat="ap" end="4" id="6" rel="cnj">
+            <node begin="2" end="3" id="7" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="mod" root="hoe" word="hoe"/>
+            <node begin="3" buiging="zonder" end="4" graad="basis" id="8" lemma="warm" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="warm" word="warm"/>
+          </node>
+          <node begin="4" conjtype="neven" end="5" id="9" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="5" cat="ap" end="7" id="10" rel="cnj">
+            <node begin="5" end="6" id="11" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="mod" root="hoe" word="hoe"/>
+            <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="ver" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="ver" word="ver"/>
+          </node>
+        </node>
+        <node begin="2" cat="ssub" end="9" id="13" rel="body">
+          <node begin="2" end="7" id="14" index="1" rel="predc"/>
+          <node begin="7" end="8" genus="onz" getal="ev" id="15" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+          <node begin="8" end="9" id="16" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>ik vroeg hoe warm en hoe ver het was</sentence>
+</alpino_ds>

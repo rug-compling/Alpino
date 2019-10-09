@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="11" end="12" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="13" end="14" frame="punct(komma)" id="2" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="15" end="16" frame="punct(komma)" id="3" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="np" end="23" id="4" rel="--">
+      <node aform="base" begin="0" end="1" frame="adjective(e)" id="5" infl="e" lcat="ap" pos="adj" rel="mod" root="afzonderlijk" sense="afzonderlijk" vform="adj" word="Afzonderlijke"/>
+      <node begin="1" end="2" frame="noun(de,count,pl)" gen="de" id="6" lcat="np" num="pl" pos="noun" rel="hd" root="installatie" sense="installatie" word="installaties"/>
+      <node begin="2" cat="rel" end="23" id="7" rel="mod">
+        <node begin="2" case="no_obl" end="3" frame="rel_pronoun(de,no_obl)" gen="de" id="8" index="1" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+        <node begin="2" cat="ssub" end="23" id="9" rel="body">
+          <node begin="2" end="3" id="10" index="1" rel="su"/>
+          <node begin="3" end="4" frame="adverb" id="11" lcat="advp" pos="adv" rel="mod" root="normaliter" sense="normaliter" word="normaliter"/>
+          <node begin="6" end="7" frame="verb(unacc,pl,copula)" id="12" infl="pl" lcat="ssub" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="zijn"/>
+          <node begin="4" cat="ppart" end="23" id="13" rel="predc">
+            <node begin="4" end="5" frame="adverb" id="14" lcat="advp" pos="adv" rel="mod" root="niet" sense="niet" word="niet"/>
+            <node aform="base" begin="5" end="6" frame="adjective(ge_both(adv),pp(met))" id="15" infl="both" lcat="ppart" pos="adj" rel="hd" root="verbonden" sc="pp(met)" sense="verbonden-met" vform="psp" word="verbonden"/>
+            <node begin="7" cat="conj" end="23" id="16" rel="pc">
+              <node begin="7" cat="pp" end="20" id="17" rel="cnj">
+                <node begin="7" end="8" frame="preposition(met,[mee,[en,al]])" id="18" lcat="pp" pos="prep" rel="hd" root="met" sense="met" word="met"/>
+                <node begin="8" cat="conj" end="20" id="19" rel="obj1">
+                  <node begin="8" cat="np" end="11" id="20" rel="cnj">
+                    <node begin="8" end="9" frame="noun(de,count,pl)" gen="de" id="21" lcat="np" num="pl" pos="noun" rel="hd" root="installatie" sense="installatie" word="installaties"/>
+                    <node begin="9" cat="pp" end="11" id="22" rel="mod">
+                      <node begin="9" end="10" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="23" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+                      <node begin="10" end="11" frame="noun(de,mass,sg)" gen="de" id="24" lcat="np" num="sg" pos="noun" rel="obj1" root="verrijking" sense="verrijking" word="verrijking"/>
+                    </node>
+                  </node>
+                  <node begin="12" end="13" frame="noun(de,count,sg)" gen="de" id="25" lcat="np" num="sg" pos="noun" rel="cnj" root="omzetting" sense="omzetting" word="omzetting"/>
+                  <node begin="14" end="15" frame="noun(de,mass,sg)" gen="de" id="26" lcat="np" num="sg" pos="noun" rel="cnj" root="fabricage" sense="fabricage" word="fabricage"/>
+                  <node begin="16" cat="np" end="18" id="27" rel="cnj">
+                    <node aform="base" begin="16" end="17" frame="adjective(e)" id="28" infl="e" lcat="ap" pos="adj" rel="mod" root="chemisch" sense="chemisch" vform="adj" word="chemische"/>
+                    <node begin="17" end="18" frame="noun(de,mass,sg)" gen="de" id="29" lcat="np" num="sg" pos="noun" rel="hd" root="opwerking" sense="opwerking" word="opwerking"/>
+                  </node>
+                  <node begin="18" end="19" frame="conj(en)" id="30" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                  <node begin="19" end="20" frame="noun(de,count,sg)" gen="de" id="31" lcat="np" num="sg" pos="noun" rel="cnj" root="terug_winning" sense="terug_winning" word="terugwinning"/>
+                </node>
+              </node>
+              <node begin="20" end="21" frame="conj(of)" id="32" lcat="vg" pos="vg" rel="crd" root="of" sense="of" word="of"/>
+              <node begin="21" cat="pp" end="23" id="33" rel="cnj">
+                <node begin="21" end="22" frame="preposition(met,[mee,[en,al]])" id="34" lcat="pp" pos="prep" rel="hd" root="met" sense="met" word="met"/>
+                <node begin="22" end="23" frame="noun(de,count,pl)" gen="de" id="35" lcat="np" num="pl" pos="noun" rel="obj1" root="reactor" sense="reactor" word="reactoren"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" frame="punct(punt)" id="36" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Afzonderlijke installaties die normaliter niet verbonden zijn met installaties voor verrijking , omzetting , fabricage , chemische opwerking en terugwinning of met reactoren .</sentence>
+  <comments>
+    <comment>Q#436|Afzonderlijke installaties die normaliter niet verbonden zijn met installaties voor verrijking , omzetting , fabricage , chemische opwerking en terugwinning of met reactoren .|1|1|6.212142411984746</comment>
+  </comments>
+</alpino_ds>

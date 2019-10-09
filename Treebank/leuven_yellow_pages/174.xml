@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="Dit"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="medicijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="medicijn" word="medicijn"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="3" end="4" getal="mv" graad="basis" id="6" lemma="stuiptrekking" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="stuiptrekking" word="stuiptrekkingen"/>
+      <node begin="4" cat="cp" end="6" id="7" rel="predc">
+        <node begin="4" end="5" id="8" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+        <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="neveneffect" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="body" root="neveneffect" word="neveneffect"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Dit medicijn heeft stuiptrekkingen als neveneffect</sentence>
+</alpino_ds>

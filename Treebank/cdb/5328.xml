@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="35" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="8" end="9" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="22" end="23" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="1" cat="smain" end="33" id="4" rel="--">
+      <node begin="1" cat="np" end="5" id="5" index="1" rel="su">
+        <node begin="1" end="2" id="6" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="7" lemma="ander" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="ander" word="ander"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="8" lemma="groot" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="groot" word="groot"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="visionair" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="visionair" word="visionair"/>
+      </node>
+      <node begin="5" end="6" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="1" cat="ppart" end="33" id="11" rel="vc">
+        <node begin="1" end="5" id="12" index="1" rel="su"/>
+        <node begin="7" buiging="zonder" end="8" id="13" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" word="geweest" wvorm="vd"/>
+        <node begin="6" cat="np" end="33" id="14" rel="predc">
+          <node begin="6" end="7" genus="genus" getal="ev" graad="basis" id="15" lemma="Gericault" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Gericault" word="Gericault"/>
+          <node begin="9" cat="rel" end="33" id="16" rel="mod">
+            <node begin="9" cat="pp" end="11" id="17" index="2" rel="rhd">
+              <node begin="9" end="10" id="18" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="10" end="11" getal="getal" id="19" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="noun" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="obj1" root="wie" status="vol" vwtype="vb" word="wie"/>
+            </node>
+            <node begin="9" cat="ssub" end="33" id="20" rel="body">
+              <node begin="11" cat="np" end="22" id="21" index="3" rel="su">
+                <node begin="11" end="12" id="22" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="12" buiging="met-e" end="13" graad="basis" id="23" lemma="prachtig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="prachtig" word="prachtige"/>
+                <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="24" lemma="schilderij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="schilderij" word="schilderij"/>
+                <node begin="14" cat="mwu" end="22" id="25" rel="app">
+                  <node begin="14" end="15" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="De" word="De"/>
+                  <node begin="15" buiging="met-e" end="16" graad="basis" id="27" lemma="waanzinnig" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Waanzinnige" word="Waanzinnige"/>
+                  <node begin="16" end="17" id="28" lemma="," pos="punct" postag="LET()" pt="let" rel="mwp" root="," word=","/>
+                  <node begin="17" buiging="zonder" end="18" graad="basis" id="29" lemma="bezeten" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="bezeten" word="bezeten"/>
+                  <node begin="18" end="19" id="30" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+                  <node begin="19" end="20" id="31" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+                  <node begin="20" buiging="met-e" end="21" graad="basis" id="32" lemma="militair" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="militair" word="militaire"/>
+                  <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="33" lemma="commando" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="commando" word="commando"/>
+                </node>
+              </node>
+              <node begin="31" end="32" id="34" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+              <node begin="9" cat="ppart" end="33" id="35" rel="vc">
+                <node begin="9" end="11" id="36" index="2" rel="mod"/>
+                <node begin="11" end="22" id="37" index="3" rel="su"/>
+                <node begin="23" buiging="zonder" end="24" graad="basis" id="38" lemma="terecht" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="terecht" word="terecht"/>
+                <node begin="24" cat="np" end="27" id="39" rel="obj1">
+                  <node begin="24" end="25" id="40" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="25" buiging="met-e" end="26" graad="basis" id="41" lemma="belangrijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="belangrijk" word="belangrijke"/>
+                  <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="42" lemma="plaats" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="plaats" word="plaats"/>
+                </node>
+                <node begin="27" cat="pp" end="31" id="43" rel="mod">
+                  <node begin="27" end="28" id="44" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                  <node begin="28" cat="np" end="31" id="45" rel="obj1">
+                    <node begin="28" end="29" id="46" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="29" buiging="met-e" end="30" graad="basis" id="47" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="grote"/>
+                    <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="48" lemma="galerie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="galerie" word="galerie"/>
+                  </node>
+                </node>
+                <node begin="32" buiging="zonder" end="33" id="49" lemma="krijgen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="krijg" word="gekregen" wvorm="vd"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="33" end="34" id="50" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="34" end="35" id="51" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>&quot; Een ander groot visionair is Gericault geweest , van wie het prachtige schilderij De Waanzinnige , bezeten van het militaire commando , terecht een belangrijke plaats in de grote galerie heeft gekregen . &quot;</sentence>
+</alpino_ds>

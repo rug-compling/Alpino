@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="29" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="21" end="22" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="28" id="3" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="4" index="1" lemma="Schiphol" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Schiphol" word="Schiphol"/>
+      <node begin="1" end="2" id="5" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+      <node begin="0" cat="inf" end="28" id="6" rel="vc">
+        <node begin="0" end="1" id="7" index="1" rel="su"/>
+        <node begin="2" end="3" id="8" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+        <node begin="3" cat="pp" end="9" id="9" rel="mod">
+          <node begin="3" end="4" id="10" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+          <node begin="4" cat="conj" end="9" id="11" rel="obj1">
+            <node begin="4" end="5" id="12" lemma="1980" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="cnj" root="1980" word="1980"/>
+            <node begin="5" conjtype="neven" end="6" id="13" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+            <node begin="6" cat="np" end="9" id="14" rel="cnj">
+              <node begin="6" buiging="met-e" end="7" id="15" lemma="enig" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enig" vwtype="onbep" word="enige"/>
+              <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="16" lemma="tijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tijd" word="tijd"/>
+              <node begin="8" end="9" id="17" lemma="daarna" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarna" word="daarna"/>
+            </node>
+          </node>
+        </node>
+        <node begin="9" cat="pp" end="21" id="18" rel="mod">
+          <node begin="9" end="10" id="19" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+          <node begin="10" cat="np" end="21" id="20" rel="obj1">
+            <node begin="10" end="11" getal="mv" graad="basis" id="21" lemma="uitbreiding" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="uitbreiding" word="uitbreidingen"/>
+            <node begin="12" cat="pp" end="21" id="22" rel="mod">
+              <node begin="12" end="13" id="23" lemma="o.a." pos="adv" postag="SPEC(afk)" pt="spec" rel="mod" root="onder_andere" spectype="afk" word="o.a."/>
+              <node begin="13" end="14" id="24" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+              <node begin="14" cat="conj" end="21" id="25" rel="obj1">
+                <node begin="14" cat="np" end="17" id="26" rel="cnj">
+                  <node begin="14" end="15" id="27" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="15" end="16" id="28" lemma="vijf" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="vijfde" word="vijfde"/>
+                  <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="29" lemma="baan" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="baan" word="baan"/>
+                </node>
+                <node begin="17" conjtype="neven" end="18" id="30" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                <node begin="18" cat="np" end="21" id="31" rel="cnj">
+                  <node begin="18" end="19" id="32" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="19" end="20" id="33" lemma="twee" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="tweede" word="tweede"/>
+                  <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="34" lemma="stationsgebouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gebouw" word="stationsgebouw"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="22" cat="np" end="27" id="35" rel="obj1">
+          <node begin="22" end="23" id="36" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="37" lemma="jumbo-ontwikkeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ontwikkeling" word="Jumbo-ontwikkeling"/>
+          <node begin="24" cat="pp" end="27" id="38" rel="mod">
+            <node begin="24" end="25" id="39" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="25" cat="np" end="27" id="40" rel="obj1">
+              <node begin="25" end="26" id="41" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="26" end="27" genus="onz" getal="ev" graad="basis" id="42" lemma="luchtverkeer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verkeer" word="luchtverkeer"/>
+            </node>
+          </node>
+        </node>
+        <node begin="27" buiging="zonder" end="28" id="43" lemma="bijhouden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="houd" word="bijhouden" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="28" end="29" id="44" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" word=";"/>
+  </node>
+  <sentence>Schiphol kan nog tot 1980 of enige tijd daarna door uitbreidingen , o.a. met een vijfde baan en een tweede stationsgebouw , de Jumbo-ontwikkeling van het luchtverkeer bijhouden ;</sentence>
+</alpino_ds>

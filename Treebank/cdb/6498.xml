@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="conj" end="17" id="1" rel="--">
+      <node begin="0" cat="smain" end="7" id="2" rel="cnj">
+        <node begin="3" end="4" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="4" cat="np" end="6" id="4" index="1" rel="su">
+          <node begin="4" buiging="met-e" end="5" graad="basis" id="5" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="grote"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="6" lemma="bezorgdheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bezorgdheid" word="bezorgdheid"/>
+        </node>
+        <node begin="0" cat="ppart" end="7" id="7" rel="vc">
+          <node begin="0" cat="pp" end="3" id="8" rel="mod">
+            <node begin="0" end="1" id="9" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="Onder"/>
+            <node begin="1" cat="np" end="3" id="10" rel="obj1">
+              <node begin="1" end="2" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="2" end="3" getal="mv" graad="basis" id="12" lemma="bewoner" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bewoner" word="bewoners"/>
+            </node>
+          </node>
+          <node begin="4" end="6" id="13" index="1" rel="su"/>
+          <node begin="6" buiging="zonder" end="7" id="14" lemma="ontstaan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ontsta" word="ontstaan" wvorm="vd"/>
+        </node>
+      </node>
+      <node begin="7" conjtype="neven" end="8" id="15" lemma="want" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="want" word="want"/>
+      <node begin="8" cat="smain" end="17" id="16" rel="cnj">
+        <node begin="11" end="12" id="17" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+        <node begin="13" cat="np" end="16" id="18" index="2" rel="su">
+          <node begin="13" end="14" id="19" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="14" buiging="zonder" end="15" graad="basis" id="20" lemma="dergelijk" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="dergelijk" word="dergelijk"/>
+          <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="21" lemma="geval" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geval" word="geval"/>
+        </node>
+        <node begin="8" cat="ppart" end="17" id="22" rel="vc">
+          <node begin="8" cat="np" end="11" id="23" rel="mod">
+            <node begin="8" end="9" id="24" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+            <node begin="9" buiging="zonder" end="10" graad="basis" id="25" lemma="verleden" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="verleden" word="verleden"/>
+            <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="26" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
+          </node>
+          <node begin="12" end="13" getal="getal" id="27" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+          <node begin="13" end="16" id="28" index="2" rel="su"/>
+          <node begin="16" buiging="zonder" end="17" id="29" lemma="voordoen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="doe" word="voorgedaan" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="30" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Onder de bewoners is grote bezorgdheid ontstaan want ook verleden jaar heeft zich een dergelijk geval voorgedaan .</sentence>
+</alpino_ds>

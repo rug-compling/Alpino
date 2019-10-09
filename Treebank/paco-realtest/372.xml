@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="13" end="14" id="1" pos="punct" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="23" id="2" rel="--">
+      <node begin="0" end="1" gen="de" id="3" num="pl" pos="noun" rel="su" root="luchtvaart_maatschappij" word="Luchtvaartmaatschappijen"/>
+      <node begin="1" end="2" id="4" infl="pl" pos="verb" rel="hd" root="lever_af" sc="part_transitive(af)" tense="present" word="leveren"/>
+      <node begin="2" cat="pp" end="5" id="5" rel="mod">
+        <node begin="2" end="3" id="6" pos="prep" rel="hd" root="in" word="in"/>
+        <node begin="3" cat="np" end="5" id="7" rel="obj1">
+          <node begin="3" end="4" id="8" infl="de" pos="det" rel="det" root="de" word="de"/>
+          <node begin="4" end="5" id="9" neclass="LOC" num="both" pos="name" rel="hd" root="VS" word="VS"/>
+        </node>
+      </node>
+      <node aform="base" begin="5" end="6" id="10" infl="no_e" pos="adj" rel="mod" root="jaarlijks" vform="adj" word="jaarlijks"/>
+      <node begin="6" cat="np" end="12" id="11" rel="obj1">
+        <node begin="6" cat="detp" end="9" id="12" rel="det">
+          <node begin="6" cat="mwu" end="8" id="13" mwu_root="meer_dan" mwu_sense="meer_dan" rel="mod">
+            <node begin="6" end="7" id="14" infl="both" pos="det" rel="mwp" root="meer" special="pre_num_adv" word="meer"/>
+            <node begin="7" end="8" id="15" infl="both" pos="det" rel="mwp" root="dan" special="pre_num_adv" word="dan"/>
+          </node>
+          <node begin="8" end="9" id="16" infl="pl_num" pos="num" rel="hd" root="10" special="hoofd" word="10"/>
+        </node>
+        <node begin="9" end="10" gen="both" id="17" num="meas" pos="noun" rel="hd" root="miljard" sc="measure" special="meas_mod" word="miljard"/>
+        <node begin="10" cat="np" end="12" id="18" rel="mod">
+          <node begin="10" end="11" gen="de" id="19" num="meas" pos="noun" rel="hd" root="kilo" sc="measure" special="meas_mod" word="kilo"/>
+          <node begin="11" end="12" gen="de" id="20" num="sg" pos="noun" rel="mod" root="vracht" word="vracht"/>
+        </node>
+      </node>
+      <node begin="12" end="13" id="21" pos="part" rel="svp" root="af" word="af"/>
+      <node begin="14" cat="whrel" end="23" id="22" rel="mod">
+        <node begin="14" end="15" id="23" index="1" pos="pp" rel="rhd" root="waarvan" special="waar" word="waarvan"/>
+        <node begin="14" cat="ssub" end="23" id="24" rel="body">
+          <node begin="15" cat="np" end="18" id="25" index="2" rel="su">
+            <node begin="15" end="16" id="26" pos="adv" rel="mod" root="ongeveer" sc="noun_prep" word="ongeveer"/>
+            <node begin="16" end="17" id="27" infl="een" pos="det" rel="det" root="een" word="een"/>
+            <node begin="17" end="18" id="28" pos="num" rel="hd" root="vierde" special="rang" word="vierde"/>
+          </node>
+          <node begin="18" end="19" id="29" infl="sg3" pos="verb" rel="hd" root="word" sc="passive" tense="present" word="wordt"/>
+          <node begin="14" cat="ppart" end="23" id="30" rel="vc">
+            <node begin="14" end="15" id="31" index="1" rel="mod"/>
+            <node begin="15" end="18" id="32" index="2" rel="obj1"/>
+            <node begin="19" end="20" id="33" infl="psp" pos="verb" rel="hd" root="vervoer" sc="transitive" word="vervoerd"/>
+            <node begin="20" cat="pp" end="23" id="34" rel="mod">
+              <node begin="20" end="21" id="35" pos="prep" rel="hd" root="via" word="via"/>
+              <node begin="21" cat="np" end="23" id="36" rel="obj1">
+                <node begin="21" end="22" id="37" infl="de" pos="det" rel="det" root="de" word="de"/>
+                <node begin="22" end="23" gen="de" id="38" num="sg" pos="noun" rel="hd" root="burger_luchtvaart" word="burgerluchtvaart"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="39" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Luchtvaartmaatschappijen leveren in de VS jaarlijks meer dan 10 miljard kilo vracht af , waarvan ongeveer een vierde wordt vervoerd via de burgerluchtvaart .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

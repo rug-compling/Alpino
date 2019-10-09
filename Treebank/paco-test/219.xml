@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" cat="sv1" end="3" id="1" rel="--">
+      <node begin="0" end="1" frame="verb(hebben,sg1,transitive)" id="2" infl="sg1" lcat="sv1" pos="verb" rel="hd" root="bevestig" sc="transitive" sense="bevestig" tense="present" word="Bevestig"/>
+      <node begin="1" cat="np" end="3" id="3" rel="obj1">
+        <node begin="1" end="2" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="4" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+        <node begin="2" end="3" frame="noun(het,count,sg)" gen="het" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="wacht_woord" sense="wacht_woord" word="wachtwoord"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Bevestig het wachtwoord</sentence>
+  <comments>
+    <comment>Q#219|Bevestig het wachtwoord|1|1|1.5316596329520795</comment>
+  </comments>
+</alpino_ds>

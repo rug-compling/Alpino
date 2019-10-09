@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="sv1" end="4" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="wijzen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="Wees" wvorm="pv"/>
+      <node begin="1" end="2" id="3" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
+      <node begin="2" end="3" id="4" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="5" lemma="bang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="bang" word="bang"/>
+    </node>
+    <node begin="4" end="5" id="6" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Wees maar niet bang .</sentence>
+</alpino_ds>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="smain" end="15" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="3" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" end="2" frame="noun(de,count,pl)" gen="de" id="4" lcat="np" num="pl" pos="noun" rel="hd" root="lidstaat" sense="lidstaat" word="lidstaten"/>
+      </node>
+      <node begin="2" end="3" frame="verb('hebben/zijn',pl,aux(inf))" id="5" infl="pl" lcat="smain" pos="verb" rel="hd" root="kan" sc="aux(inf)" sense="kan" tense="present" word="kunnen"/>
+      <node begin="0" cat="inf" end="15" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="su"/>
+        <node begin="3" cat="np" end="9" id="8" rel="obj1">
+          <node begin="3" end="4" frame="determiner(de)" id="9" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="4" cat="ppart" end="8" id="10" rel="mod">
+            <node begin="4" cat="pp" end="7" id="11" rel="mod">
+              <node begin="4" end="5" frame="preposition(in,[])" id="12" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+              <node begin="5" cat="np" end="7" id="13" rel="obj1">
+                <node begin="5" end="6" frame="noun(het,count,sg,app_measure)" gen="het" id="14" lcat="np" num="sg" pos="noun" rel="hd" root="lid" sc="app_measure" sense="lid" word="lid"/>
+                <node begin="6" end="7" frame="noun(de,count,sg)" gen="de" id="15" lcat="np" num="sg" pos="noun" rel="app" root="1" sense="1" word="1"/>
+              </node>
+            </node>
+            <node aform="base" begin="7" end="8" frame="adjective(ge_e)" id="16" infl="e" lcat="ppart" pos="adj" rel="hd" root="gesteld" sense="gesteld" vform="psp" word="gestelde"/>
+          </node>
+          <node begin="8" end="9" frame="noun(de,count,sg)" gen="de" id="17" lcat="np" num="sg" pos="noun" rel="hd" root="begrenzing" sense="begrenzing" word="begrenzing"/>
+        </node>
+        <node begin="9" end="10" frame="verb(hebben,inf,transitive)" id="18" infl="inf" lcat="inf" pos="verb" rel="hd" root="verhoog" sc="transitive" sense="verhoog" word="verhogen"/>
+        <node begin="10" cat="pp" end="15" id="19" rel="mod">
+          <node begin="10" end="11" frame="preposition(tot,[toe,[aan,toe]])" id="20" lcat="pp" pos="prep" rel="hd" root="tot" sense="tot" word="tot"/>
+          <node begin="11" cat="np" end="15" id="21" rel="obj1">
+            <node begin="11" cat="mwu" end="13" id="22" mwu_root="ten_hoogste" mwu_sense="ten_hoogste" rel="mod">
+              <node begin="11" end="12" frame="modal_adverb(noun_prep)" id="23" lcat="advp" pos="adv" rel="mwp" root="ten" sc="noun_prep" sense="ten" word="ten"/>
+              <node begin="12" end="13" frame="modal_adverb(noun_prep)" id="24" lcat="advp" pos="adv" rel="mwp" root="hoogste" sc="noun_prep" sense="hoogste" word="hoogste"/>
+            </node>
+            <node begin="13" end="14" frame="number(hoofd(pl_num))" id="25" infl="pl_num" lcat="detp" pos="num" rel="det" root="10" sense="10" special="hoofd" word="10"/>
+            <node begin="14" end="15" frame="meas_mod_noun(both,count,meas)" gen="both" id="26" lcat="np" num="meas" pos="noun" rel="hd" root="procent" sense="procent" special="meas_mod" word="%"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" frame="punct(punt)" id="27" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De lidstaten kunnen de in lid 1 gestelde begrenzing verhogen tot ten hoogste 10 % .</sentence>
+  <comments>
+    <comment>Q#476|De lidstaten kunnen de in lid 1 gestelde begrenzing verhogen tot ten hoogste 10 % .|1|1|5.758895419355095</comment>
+  </comments>
+</alpino_ds>

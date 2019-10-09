@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="np" end="5" id="1" rel="--">
+      <node begin="0" cat="mwu" end="3" id="2" rel="hd">
+        <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="3" lemma="kwart" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="kwart" word="kwart"/>
+        <node begin="1" end="2" id="4" lemma="over" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="over" vztype="init" word="over"/>
+        <node begin="2" end="3" id="5" lemma="zes" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="zes" word="zes"/>
+      </node>
+      <node begin="3" cat="mwu" end="5" id="6" rel="mod">
+        <node begin="3" end="4" id="7" lemma="&apos;s" lwtype="bep" naamval="gen" npagr="evmo" pos="adv" postag="LID(bep,gen,evmo)" pt="lid" rel="mwp" root="&apos;s" word="&apos;s"/>
+        <node begin="4" end="5" getal="ev" graad="basis" id="8" lemma="ochtends" naamval="gen" ntype="soort" pos="adv" postag="N(soort,ev,basis,gen)" pt="n" rel="mwp" root="ochtends" word="ochtends"/>
+      </node>
+    </node>
+  </node>
+  <sentence>kwart over zes &apos;s ochtends</sentence>
+</alpino_ds>

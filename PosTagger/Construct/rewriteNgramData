@@ -1,0 +1,181 @@
+#!/usr/bin/perl -w
+
+use Getopt::Std;
+
+#######################################################################
+# rewrite data to allow for lexicon changes, without re-parsing
+#######################################################################
+
+$frames=0;
+$keys=0;
+while(<>){
+
+  next if !/.*\|.*/;
+
+  chomp();	
+
+  if ( /^KEY#/ ) {
+      print "$_\n";
+      next;
+  }
+
+  if (/^TAG#/) {
+      $frames=0;
+      $keys=1;
+      ($p0,$p1,$word,$thirdTag) = split(/\|/);
+
+  } else {
+      $keys=0;
+      $frames=1;
+
+      # get word, tag, sentence key, context, root
+      ($word,$thirdTag,$sentenceKey,$u1,$u2,$u3,$newContext,$root) = split(/\|/);
+
+  }
+
+  # if ( ( $word eq "onze" || $word eq "Onze" || $word eq "ONZE" )
+  #      && $thirdTag eq "determiner(de)" 
+  #    ) {
+  #     $thirdTag = "determiner(onze)";
+  # }
+
+  # if ( $word eq "gepraat" && $thirdTag eq "noun(het,sg,[])" ) {
+  #     $thirdTag = "ge_v_noun(intransitive)";
+  # }
+
+  # if ( $word eq "geproest" && $thirdTag eq "noun(het,sg,[])" ) {
+  #     $thirdTag = "ge_v_noun(intransitive)";
+  # }
+
+  # if (  $word eq "hele" && $thirdTag eq "intensifier") {
+  #     $thirdTag = "intensifier(e)";
+  # }
+			
+  # if (  $word eq "diep" && $thirdTag eq "np_me_adjective(no_e(adv))" ) {
+  #     $thirdTag = "np_me_adjective(no_e(locadv))";
+  # }
+
+  # if (  $word eq "diep" && $thirdTag eq "adjective(no_e(adv))" ) {
+  #     $thirdTag = "adjective(no_e(locadv))";
+  # }
+
+  # if (  $word eq "dieper" && $thirdTag eq "adjective(er(adv))" ) {
+  #     $thirdTag = "adjective(er(locadv))";
+  # }
+
+  # if (  $word eq "diepst" && $thirdTag eq "adjective(st(adv))" ) {
+  #     $thirdTag = "adjective(st(locadv))";
+  # }
+
+  # if (  $word eq "ondiep" && $thirdTag eq "adjective(no_e(nonadv))" ) {
+  #     $thirdTag = "adjective(no_e(locadv))";
+  # }
+
+  # if (  $word eq "ondieper" && $thirdTag eq "adjective(er(nonadv))" ) {
+  #     $thirdTag = "adjective(er(locadv))";
+  # }
+
+  # if (  $word eq "ondiepst" && $thirdTag eq "adjective(st(nonadv))" ) {
+  #     $thirdTag = "adjective(st(locadv))";
+  # }
+
+  # if ( ( $word eq "samen" || $word eq "Samen" )
+  #      && 
+  #      $thirdTag eq "adjective(pred(padv))"
+  #      ) {
+  #     $thirdTag = "adjective(postn_pred(padv))";
+  # }
+
+  # if ( ( $word eq "samen" || $word eq "Samen" )
+  #      && 
+  #      $thirdTag eq "adjective(pred(padv),pp(met))"
+  #      ) {
+  #     $thirdTag = "adjective(postn_pred(padv),pp(met))";
+  # }
+
+  # if ( ( $word eq "samen" || $word eq "Samen" )
+  #      && 
+  #      $thirdTag eq "postnp_adverb"
+  #      ) {
+  #     $thirdTag = "adjective(postn_pred(padv))";
+  # }
+
+  # if ( ( $word eq "zover" || $word eq "Zover" )
+  #      && 
+  #      $thirdTag eq "loc_adverb"
+  #      ) {
+  #     $thirdTag = "adjective(pred(locadv))";
+  # }
+
+  # if ( ( $word eq "heel" || $word eq "Heel" )
+  #      && 
+  #      $thirdTag eq "modal_adverb(noun)"
+  #      ) {
+  #     $thirdTag = "modal_adverb(adv_noun_prep)";
+  # }
+
+  # if ( ( $word eq "thuis" || $word eq "Thuis" )
+  #      && 
+  #      $thirdTag eq "postnp_adverb"
+  #      ) {
+  #     $thirdTag = "postn_adverb";
+  # }
+
+  # if ( ( $word eq "wel" || $word eq "Wel" )
+  #      && 
+  #      (  $thirdTag eq "adverb" || $thirdTag eq "adjective(pred(nonadv))" )
+  #      ) {
+  #     $thirdTag = "adjective(pred(adv))";
+  # }
+
+  # if ( ( $word eq "wel" || $word eq "Wel" )
+  #      && 
+  #      $thirdTag eq "tag" 
+  #      ) {
+  #     $thirdTag = "adv_tag";
+  # }
+
+  # if ( ( $word eq "waard" || $word eq "Waard" )
+  #      && 
+  #      $thirdTag eq "pred_np_me_adjective(nonadv)" 
+  #      ) {
+  #     $thirdTag = "np_adjective";
+  # }
+
+
+  # if ( ( $word eq "waard" || $word eq "Waard" )
+  #      && 
+  #      $thirdTag eq "subject_sbar_pred_np_me_adjective" 
+  #      ) {
+  #     $thirdTag = "subject_sbar_pred_np_adjective";
+  # }
+
+
+  # if ( ( $word eq "waard" || $word eq "Waard" )
+  #      && 
+  #      $thirdTag eq "subject_vp_pred_np_me_adjective" 
+  #      ) {
+  #     $thirdTag = "subject_vp_pred_np_adjective";
+  # }
+
+  # if ((  $word eq "helemaal" || $word eq "Helemaal")
+  #     && 
+  #        $thirdTag eq "modal_adverb(adv_prep)"
+  #    ) {
+  #     $thirdTag = "modal_adverb(adv_comp_prep)"
+  # }
+
+
+  if ($. % 1000000==0) 
+    { $m= $./1000000;
+      print STDERR "read $m million lines\n";}
+
+
+  if ($frames) {
+      print "$word|$thirdTag|$sentenceKey|$u1|$u2|$u3|$newContext|$root\n";
+  }
+
+  if ($keys) {
+      print "$p0|$p1|$word|$thirdTag\n";
+  }
+}

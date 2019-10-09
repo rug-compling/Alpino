@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="np" end="9" id="1" rel="--">
+      <node begin="0" end="1" gen="de" id="2" num="sg" pos="noun" rel="hd" root="strategie" word="Strategie"/>
+      <node begin="1" cat="pp" end="9" id="3" rel="mod">
+        <node begin="1" end="2" id="4" pos="prep" rel="hd" root="voor" word="voor"/>
+        <node begin="2" cat="np" end="9" id="5" rel="obj1">
+          <node begin="2" end="3" id="6" infl="een" pos="det" rel="det" root="een" word="een"/>
+          <node aform="compar" begin="3" end="4" id="7" infl="e" pos="adj" rel="mod" root="goed" vform="adj" word="betere"/>
+          <node begin="4" end="5" gen="de" id="8" num="sg" pos="noun" rel="hd" root="toegankelijkheid" word="toegankelijkheid"/>
+          <node begin="5" cat="pp" end="9" id="9" rel="mod">
+            <node begin="5" end="6" id="10" pos="prep" rel="hd" root="van" word="van"/>
+            <node begin="6" cat="np" end="9" id="11" rel="obj1">
+              <node begin="6" end="7" id="12" infl="de" pos="det" rel="det" root="de" word="de"/>
+              <node aform="base" begin="7" end="8" id="13" infl="e" pos="adj" rel="mod" root="Antwerps" vform="adj" word="Antwerpse"/>
+              <node begin="8" end="9" gen="de" id="14" num="sg" pos="noun" rel="hd" root="haven" word="haven"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Strategie voor een betere toegankelijkheid van de Antwerpse haven</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

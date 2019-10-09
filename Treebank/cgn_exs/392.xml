@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="8" id="2" rel="--">
+      <node begin="0" cat="smain" end="6" id="3" rel="nucl">
+        <node begin="0" end="1" genus="onz" getal="ev" id="4" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="&apos;t"/>
+        <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        <node begin="2" end="3" id="6" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
+        <node begin="3" end="4" id="7" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
+        <node begin="4" cat="ap" end="6" id="8" rel="predc">
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="9" lemma="ouderwets" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ouderwets" word="ouderwets"/>
+          <node begin="5" buiging="zonder" end="6" graad="basis" id="10" lemma="gezellig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="gezellig" word="gezellig"/>
+        </node>
+      </node>
+      <node begin="7" end="8" id="11" lemma="hè" pos="tag" postag="BW()" pt="bw" rel="tag" root="hè" word="hè"/>
+    </node>
+  </node>
+  <sentence>&apos;t was gisteren weer ouderwets gezellig , hè</sentence>
+</alpino_ds>

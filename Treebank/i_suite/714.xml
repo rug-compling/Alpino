@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="9" end="10" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="15" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" rel="su">
+        <node begin="0" buiging="zonder" end="1" id="4" infl="een" lemma="zo&apos;n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="zo&apos;n" vwtype="aanw" word="Zo&apos;n"/>
+        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="5" lemma="kooi" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="kooi" word="kooi"/>
+      </node>
+      <node begin="2" end="3" id="6" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="3" cat="ap" end="9" id="7" rel="predc">
+        <node begin="3" cat="np" end="5" id="8" rel="mod">
+          <node begin="3" end="4" id="9" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="4" end="5" gen="het" genus="onz" getal="ev" graad="dim" id="10" lemma="beet" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" rnum="sg" root="beet_DIM" special="mod" word="beetje"/>
+        </node>
+        <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="11" infl="no_e" lemma="sneu" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="sneu" vform="adj" word="sneu"/>
+        <node begin="6" cat="pp" end="9" id="12" rel="mod">
+          <node begin="6" end="7" id="13" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+          <node begin="7" cat="np" end="9" id="14" rel="obj1">
+            <node begin="7" end="8" id="15" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="8" end="9" gen="de" getal="mv" graad="basis" id="16" lemma="vogel" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="vogel" word="vogels"/>
+          </node>
+        </node>
+      </node>
+      <node begin="10" cat="cp" end="15" id="17" rel="mod">
+        <node begin="10" cat="mwu" end="12" his="normal" his_1="normal" id="18" mwu_root="zij het" mwu_sense="zij het" rel="cmp">
+          <node begin="10" end="11" id="19" lemma="zij" pos="comp" postag="WW(pv,conj,ev)" pt="ww" pvagr="ev" pvtijd="conj" rel="mwp" root="zij" sc="np" word="zij" wvorm="pv"/>
+          <node begin="11" end="12" genus="onz" getal="ev" id="20" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="comp" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="mwp" root="het" sc="np" status="red" vwtype="pers" word="het"/>
+        </node>
+        <node begin="12" end="13" id="21" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" special="tmp" word="dan"/>
+        <node begin="13" cat="np" end="15" id="22" rel="body">
+          <node begin="13" end="14" id="23" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node aform="base" begin="14" buiging="met-e" end="15" getal-n="zonder-n" graad="basis" id="24" infl="e" lemma="ruim" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,zonder-n,stan)" pt="adj" rel="hd" rnum="sg" root="ruim" vform="adj" word="ruime"/>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Zo&apos;n kooi is een beetje sneu voor de vogels , zij het dan een ruime .</sentence>
+</alpino_ds>

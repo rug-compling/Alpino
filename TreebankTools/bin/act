@@ -1,0 +1,287 @@
+#!/usr/bin/env python
+
+# $Id: act,v 1.47 2006-10-16 15:32:16 geertk Exp $
+
+# Alpino Corpus Tool
+
+# Alpino Corpus Tool (ACT) is een stuk gereedschap om de Alpino corpora te
+# benaderen.  ACT maakt o.a. de functionaliteit van xmlmatch
+# beschikbaar voor corpora opgeslagen in een compact formaat.
+
+# ACT probeert slim om te gaan met de meegeven argumenten.  Zowel
+# losse bestanden, directories, als compacte corpora (waarover later
+# meer) kunnen als argument worden meegeven.
+#
+# Een voorbeeld: "cdb/12.xml" specificeert een file die zowel normaal
+# in een directory in het bestandssysteem kan staan, maar ook een
+# file die in het compacte corpora "cdb" kan zitten.
+# Compacte corpora hebben voorrang boven directories.
+
+# COMPACTE CORPORA
+#
+# De compacte corpora van ACT zijn op het moment bestanden gebaseerd
+# op het dictzip(1) formaat.  ACT voorziet in commandos om deze
+# corpora te creeeren of uit te pakken en dergelijke:
+#
+#   --create  <directories>
+#   --extract <corpus files>
+#   --list    <corpus files>
+#
+# Met de --create optie wordt voor iedere directory die als argment is
+# meegeven in de huidige directory een compact corpus gecreerd.  De
+# naam van het corpusbestand wordt gebaseerd op de naam van de
+# meegegeven directory.  Een doel-directory anders dan de huidige
+# directory kan geworden gekozen met de `--targetdir' vlag.
+#
+# We genereren:
+#
+#   <corpusnaam>.data.dz
+#   <corpusnaam>.index
+#
+# We gaan er vanuit dat de directory geen subdirectories bevat
+# met corpora.  Alleen de .xml files van de directories belanden in
+# het compacte corpus.
+#
+# <corpusnaam>.data.dz is een bestand dat gecomprimeerd is met
+# dictzip(1).  Een dictzip file is grofweg een gzip file waaraan in de header
+# extra informatie over de offsets van de gecomprimeerde data is
+# toegevoegd.   <corpusnaam>.index is bestand dat op basis van offset
+# en filegrootte iedere filenaam aan de bijbehorende gegevens in
+# <corpusnaam>.data.dz koppelt.
+# Deze bestanden vormen samen een methode om de corpora zeer sterk te
+# comprimeren maar waarbij (semi-)random access tot de bestanden
+# mogelijk blijft.
+#
+# Losse compacte corpora kunnen aan ACT meegegeven worden als:
+#
+#   [pad/]<corpusnaam>
+#   [pad/]<corpusnaam>.data.dz
+#   [pad/]<corpusnaam>.index
+#
+# Met de --list optie kan de inhoud van een compact corpus bekeken
+# worden.  De uitvoer is meer verwant met "find" dan met "ls" omdat
+# het meegeven pad ook wordt geprint.
+#
+# Ter illustratie, "act --list cdb" (of "act --list cdb.index" etc.)
+# geeft uitvoer als: 
+#
+#   cdb/0.xml
+#   cdb/1.xml
+#   cdb/2.xml
+#   cdb/3.xml
+#   cdb/4.xml
+#   cdb/5.xml
+#
+#
+# En "act --list ./cdb":
+# 
+#   ./cdb/0.xml
+#   ./cdb/1.xml
+#   ./cdb/2.xml
+#   ./cdb/3.xml
+#   ./cdb/4.xml
+#   ./cdb/5.xml
+#   
+# Merk op dat bij het creeeren van een corpus de bestanden op
+# *numerieke* volgorde in het corpus geplaatst worden.
+#
+# Compacte corpora kunnen geextraheerd worden met de "--extract"
+# optie.  Deze optie zal in de huidige directory of in de directory
+# gespecificeerd met `--targetdir' een subdirectory <corpusnaam>
+# creeeren met de bijbehorende bestanden.  Bestaande directories
+# worden alleen overschreven indien de `--force' vlag wordt
+# meegegeven.
+
+# ZOEKEN IN XML BESTANDEN MET ALPINO CORPUS TOOL
+#
+# Alpino Corpus Tool biedt de basisfunctionaliteit van xmlmatch(1).
+#
+# Er kan gezocht worden met een XPath-expressie en aangepaste uitvoer
+# kan worden gerealiseerd met behulp van stylesheets.  Als er geen
+# stylesheet wordt gespecificeerd wordt voor de matchende bestanden
+# enkel de filenaam geprint.
+#
+# De syntax luidt in dit geval:
+#
+#    act --query XPATH_EXPRESSIE [--stylesheet STYLESHEET] ARG1 [ARGS]
+#
+# Zoals hierboven vermeld kunnen de argumenten zowel directories,
+# compacte corpora, of losse bestanden zijn (al dan niet in een compact
+# corpus).
+#
+# De `--help' optie geeft een samenvatting van de mogelijke opties.
+#
+# Met `--stdin' worden de file argumenten uit stdin gelezen.  File
+# argumenten op de commandline worden genegeerd.
+
+import sys
+import os
+from optparse import OptionParser
+
+# pad naar de lokale modules zetten
+ALPINO_HOME = os.getenv("ALPINO_HOME")
+if not ALPINO_HOME:
+    sys.stderr.write("act: Error: please set your ALPINO_HOME variable\n")
+    sys.exit(1)
+
+sys.path.insert(0, os.path.join(ALPINO_HOME, "TreebankTools/python-lib"))
+
+from actlib import *
+
+
+#----------------------------------------------------------------------
+
+argv0 = "act"
+usage = "Usage: " + argv0 + " OPTIONS <arguments>\n"
+
+#----------------------------------------------------------------------
+
+
+# ENTRY POINT
+
+if __name__ == '__main__':
+
+    parser = OptionParser("%prog [OPTIONS] arguments")
+
+    parser.add_option("-c", "--create", action="store_true", dest="create",
+                      help="create compact archive.  arguments should be directories.")
+
+    parser.add_option("--update", action="store_true", dest="update",
+                      help="Add files to an existing compact corpus")
+
+    parser.add_option("-x", "--extract", 
+                      action="store_true", dest="extract",
+                      help="extract compact archive(s).")
+
+    parser.add_option("-l", "--list", action="store_true", dest="list",
+                      help="list compact archive(s).")
+
+    parser.add_option("-d", "--targetdir", dest="targetdir",
+                      default = os.getcwd(),
+                      help="target directory for --extract, --create, --update")
+
+    parser.add_option("-r", "--recursive", action="store_true", dest="recursive",
+                      help="Recursively create or update archives")
+
+    parser.add_option("-f", "--force", action="store_true", dest="force",
+                      help="force overwriting directories or compact corpora")
+
+    parser.add_option("--only-newer", action="store_true", dest="only_newer",
+                      help="only overwrite an existing corpus file when the source directory is newer")
+
+    parser.add_option("--remove", action="store_true", dest="remove",
+                      help="Remove source files after creating compact corpus")
+
+    parser.add_option("--stdin",  action="store_true", dest="stdin",
+                      help="Read file arguments from stdin.  Any non-option arguments on the commandline will be ignored.")
+
+    parser.add_option("--get-data",  action="store_true", dest="get_data",
+                      help="print the xmldata from arg to stdout")
+
+    parser.add_option("-q", "--query", "-e", "--expr", dest="query",
+                      help="XPath expression to search for")
+
+    parser.add_option("--stylesheet", dest="stylesheet",
+                      help="stylesheet to use for output")
+
+
+    # Hoe kan ik/zal ik XSLT-parameters meegeven?  xsltproc gebruikt
+    # "--param param value", twee argumenten per vlag.  
+    # Is dat haalbaar?    ==> te doen met optparse
+    # Is dat slim?
+    # Hoe doet Saxon dat? ==> param=value argumenten
+
+
+    (options, args) = parser.parse_args()
+
+
+    if not (options.create or
+            options.extract or
+            options.list or
+            options.update or
+            options.query or
+            options.get_data):
+        sys.stderr.write(usage)
+        sys.exit(1)
+
+    # FIXME: deze controle moet voor alle onmogelijke optie-combinaties, toch?
+    #        hoe kunnen we dat op een elegante manier oplossen?
+    if options.create and options.update:
+        msg("Error: can't use --create and --update together")
+        sys.exit(1)
+
+    if not (args or options.stdin):
+        msg("Error: No arguments to process.  Exiting....")
+        sys.exit(1)
+
+    # stylesheet alvast parsen indien nodig
+    stylesheet = None
+    styledoc = None
+
+    params = {}
+
+    # A quick hack to use queries with accented characters (latin1 input assumed)
+    #if options.query:
+    #    options.query = options.query.decode('latin1').encode('utf8')
+
+    if options.stylesheet:
+
+        # De stringparam "expr" moet gequote worden
+        params["expr"] = xslt_quote_string(options.query)
+
+        # We moeten het stylesheet compileren
+        styledoc = libxml2.parseFile(options.stylesheet)
+        stylesheet = libxslt.parseStylesheetDoc(styledoc)
+
+    # argumenten uit stdin lezen indien nodig
+    # voor de archief-onderhoudsacties lezen we eerst alle argumenten in
+    if options.stdin and (options.create or options.update or options.extract or options.list):
+        args = get_arglist_from_stdin()
+
+    # de actie-opties bijlangs
+
+    if options.recursive and (options.create or options.update):
+        for arg in args:
+            recursive_create_archive(arg,
+                                     options.targetdir,
+                                     options.update,
+                                     options.only_newer,
+                                     options.remove,
+                                     options.force)
+
+    elif options.create:
+        create_archives(args, options.targetdir, options.force, options.only_newer, options.remove)
+
+    elif options.update:
+        update_archives(args, options.targetdir, options.only_newer, options.remove)
+
+    elif options.extract:
+        if options.recursive:
+            raise('recursive behaviour not yet implemented for this method')
+        extract_archives(args, options.targetdir, options.force)
+
+    elif options.list:
+        if options.recursive:
+            raise('recursive behaviour not yet implemented for this method')
+        list_archives(args)
+
+    elif options.query:
+        
+        process_arguments(args,
+                          xmlmatch_from_mem,
+                          options.stdin,
+                          options.recursive,
+                          True,
+                          params=params,
+                          query=options.query,
+                          stylesheet=stylesheet)
+
+    elif options.get_data:
+        process_arguments(args, print_xmldata, options.stdin,
+            options.recursive, True)
+
+    # eind van de actie-opties
+
+    # Geheugen vrijgeven van het stylesheet indien nodig
+    if stylesheet:
+        stylesheet.freeStylesheet()          # pakt styledoc ook gelijk

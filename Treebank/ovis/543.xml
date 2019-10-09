@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" buiging="zonder" end="1" id="1" lemma="&lt;@&gt;" pos="--" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="--" root="&lt;@&gt;" word="&lt;@&gt;" wvorm="inf"/>
+    <node begin="1" cat="conj" end="7" id="2" rel="--">
+      <node begin="1" end="2" id="3" lemma="nee" pos="tag" postag="TSW()" pt="tsw" rel="cnj" root="nee" word="nee"/>
+      <node begin="2" conjtype="neven" end="3" id="4" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+      <node begin="3" cat="smain" end="7" id="5" rel="cnj">
+        <node begin="3" end="4" getal="ev" id="6" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="4" end="5" id="7" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+        <node begin="3" cat="inf" end="7" id="8" rel="vc">
+          <node begin="3" end="4" id="9" index="1" rel="su"/>
+          <node begin="5" end="6" id="10" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="6" buiging="zonder" end="7" id="11" lemma="overstappen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stap_over" word="overstappen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>&lt;@&gt; nee maar ik wil niet overstappen</sentence>
+</alpino_ds>

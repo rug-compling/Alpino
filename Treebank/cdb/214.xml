@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="12" end="13" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="24" id="3" rel="--">
+      <node begin="0" cat="np" end="6" id="4" rel="su">
+        <node begin="0" cat="mwu" end="2" id="5" rel="hd">
+          <node begin="0" end="1" id="6" lemma="Peter" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Peter" spectype="deeleigen" word="Peter"/>
+          <node begin="1" end="2" id="7" lemma="Post" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Post" spectype="deeleigen" word="Post"/>
+        </node>
+        <node begin="3" cat="np" end="6" id="8" rel="app">
+          <node begin="3" end="4" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="4" buiging="met-e" end="5" graad="basis" id="10" lemma="Amstelveens" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Amstelveense" word="Amstelveense"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="zesdaagse-keizer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="keizer" word="zesdaagse-keizer"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="12" lemma="keren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="keer" word="keerde" wvorm="pv"/>
+      <node begin="7" cat="np" end="9" id="13" rel="mod">
+        <node begin="7" buiging="zonder" end="8" id="14" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+        <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="15" lemma="weekeinde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="weekeinde" word="weekeinde"/>
+      </node>
+      <node begin="9" end="10" id="16" lemma="terug" pos="part" postag="BW()" pt="bw" rel="svp" root="terug" word="terug"/>
+      <node begin="10" cat="pp" end="12" id="17" rel="ld">
+        <node begin="10" end="11" id="18" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+        <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="19" lemma="Berlijn" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Berlijn" word="Berlijn"/>
+      </node>
+      <node begin="13" cat="ap" end="24" id="20" rel="mod">
+        <node begin="13" end="14" id="21" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
+        <node begin="14" end="15" id="22" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
+        <node begin="15" buiging="zonder" end="16" graad="comp" id="23" lemma="vroeger" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="vroeger" word="vroeger"/>
+        <node begin="16" cat="cp" end="24" id="24" rel="obcomp">
+          <node begin="16" conjtype="onder" end="17" id="25" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+          <node begin="17" cat="ssub" end="24" id="26" rel="body">
+            <node begin="17" cat="conj" end="22" id="27" index="1" rel="su">
+              <node begin="17" cat="np" end="19" id="28" rel="cnj">
+                <node begin="17" end="18" genus="masc" getal="ev" id="29" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="hd" root="hij" status="vol" vwtype="pers" word="hij"/>
+                <node begin="18" end="19" id="30" lemma="zelf" pos="adv" postag="BW()" pt="bw" rel="mod" root="zelf" word="zelf"/>
+              </node>
+              <node begin="19" conjtype="neven" end="20" id="31" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="20" cat="np" end="22" id="32" rel="cnj">
+                <node begin="20" end="21" id="33" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="21" end="22" getal="mv" graad="basis" id="34" lemma="dokter" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dokter" word="doktoren"/>
+              </node>
+            </node>
+            <node begin="22" end="23" id="35" lemma="hebben" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="heb" word="hadden" wvorm="pv"/>
+            <node begin="17" cat="ppart" end="24" id="36" rel="vc">
+              <node begin="17" end="22" id="37" index="1" rel="su"/>
+              <node begin="23" buiging="zonder" end="24" id="38" lemma="verwachten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verwacht" word="verwacht" wvorm="vd"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="39" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Peter Post , de Amstelveense zesdaagse-keizer keerde dit weekeinde terug uit Berlijn , toch weer vroeger dan hij zelf en de doktoren hadden verwacht .</sentence>
+</alpino_ds>

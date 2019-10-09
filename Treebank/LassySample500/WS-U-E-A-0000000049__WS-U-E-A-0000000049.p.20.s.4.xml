@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" genus="fem" getal="ev" id="2" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="Ze"/>
+      <node begin="1" end="2" id="3" lemma="lopen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="loop_op" word="loopt" wvorm="pv"/>
+      <node begin="2" cat="conj" end="7" id="4" rel="obj1">
+        <node begin="2" cat="np" end="4" id="5" rel="cnj">
+          <node begin="2" end="3" id="6" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="vergiftiging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vergiftiging" word="vergiftiging"/>
+        </node>
+        <node begin="4" conjtype="neven" end="5" id="8" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="5" cat="np" end="7" id="9" rel="cnj">
+          <node begin="5" end="6" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="maagzweer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="maagzweer" word="maagzweer"/>
+        </node>
+      </node>
+      <node begin="7" end="8" id="12" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ze loopt een vergiftiging en een maagzweer op .</sentence>
+</alpino_ds>

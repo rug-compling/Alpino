@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="werk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="werk" word="werk"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="6" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="obj1"/>
+        <node begin="3" cat="pp" end="5" id="8" rel="obj2">
+          <node begin="3" end="4" id="9" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+          <node begin="4" end="5" genus="masc" getal="ev" id="10" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="vol" vwtype="pers" word="hem"/>
+        </node>
+        <node begin="5" buiging="zonder" end="6" id="11" lemma="dragen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="draag" word="opgedragen" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het werk is aan hem opgedragen .</sentence>
+</alpino_ds>

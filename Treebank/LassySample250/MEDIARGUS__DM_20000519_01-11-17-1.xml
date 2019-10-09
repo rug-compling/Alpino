@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="14" end="15" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="19" id="2" rel="--">
+      <node begin="0" cat="np" end="14" id="3" rel="su">
+        <node begin="0" end="1" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="4" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="Het"/>
+        <node begin="1" end="2" frame="noun(both,count,sg)" gen="both" genus="onz" getal="ev" graad="basis" id="5" lcat="np" lemma="gamma" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gamma" sense="gamma" word="gamma"/>
+        <node begin="2" cat="rel" end="14" id="6" rel="mod">
+          <node begin="2" case="no_obl" end="3" frame="rel_pronoun(het,no_obl)" gen="het" getal="ev" id="7" index="1" lcat="np" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" sense="dat" status="vol" vwtype="betr" wh="rel" word="dat"/>
+          <node begin="2" cat="ssub" end="14" id="8" rel="body">
+            <node begin="2" end="3" id="9" index="1" rel="su"/>
+            <node begin="12" end="13" frame="verb(unacc,sg3,passive)" id="10" infl="sg3" lcat="ssub" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt" wvorm="pv"/>
+            <node begin="2" cat="ppart" end="14" id="11" rel="vc">
+              <node begin="2" end="3" id="12" index="1" rel="obj1"/>
+              <node begin="3" cat="pp" end="6" id="13" rel="mod">
+                <node begin="3" end="4" frame="preposition(sinds,[])" id="14" lcat="pp" lemma="sinds" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="sinds" sense="sinds" vztype="init" word="sinds"/>
+                <node begin="4" cat="np" end="6" id="15" rel="obj1">
+                  <node aform="base" begin="4" buiging="met-e" end="5" frame="adjective(e)" graad="basis" id="16" infl="e" lcat="ap" lemma="vorig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vorig" sense="vorig" vform="adj" word="vorige"/>
+                  <node begin="5" end="6" frame="tmp_noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="17" lcat="np" lemma="week" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="week" sense="week" special="tmp" word="week"/>
+                </node>
+              </node>
+              <node begin="6" cat="pp" end="12" id="18" rel="mod">
+                <node begin="6" end="7" frame="preposition(door,[heen])" id="19" lcat="pp" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" sense="door" vztype="init" word="door"/>
+                <node begin="7" cat="np" end="12" id="20" rel="obj1">
+                  <node begin="7" end="8" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="21" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                  <node begin="8" end="9" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="22" lcat="np" lemma="distributienet" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="distributie_net" sense="distributie_net" word="distributienet"/>
+                  <node begin="9" cat="pp" end="12" id="23" rel="mod">
+                    <node begin="9" end="10" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="24" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+                    <node begin="10" cat="np" end="12" id="25" rel="obj1">
+                      <node begin="10" end="11" frame="determiner(de)" id="26" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+                      <node begin="11" end="12" frame="noun(both,both,both)" gen="both" genus="zijd" getal="ev" graad="basis" id="27" lcat="np" lemma="constructeur" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="constructeur" sense="constructeur" word="constructeur"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="13" buiging="zonder" end="14" frame="verb(hebben,psp,ninv(transitive,part_transitive(aan)))" id="28" infl="psp" lcat="ppart" lemma="aanbieden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bied_aan" sc="part_transitive(aan)" sense="bied_aan" word="aangeboden" wvorm="vd"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="15" end="16" frame="verb(hebben,sg3,transitive)" id="29" infl="sg3" lcat="smain" lemma="tellen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="tel" sc="transitive" sense="tel" tense="present" word="telt" wvorm="pv"/>
+      <node aform="base" begin="16" buiging="zonder" end="17" frame="adjective(no_e(adv))" graad="basis" id="30" infl="no_e" lcat="ap" lemma="voorlopig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="voorlopig" sense="voorlopig" vform="adj" word="voorlopig"/>
+      <node begin="17" cat="np" end="19" id="31" rel="obj1">
+        <node begin="17" end="18" frame="number(hoofd(pl_num))" id="32" infl="pl_num" lcat="detp" lemma="vier" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="vier" sense="vier" special="hoofd" word="vier"/>
+        <node begin="18" end="19" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="33" lcat="np" lemma="motor" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="motor" sense="motor" word="motoren"/>
+      </node>
+    </node>
+    <node begin="19" end="20" frame="punct(punt)" id="34" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Het gamma dat sinds vorige week door het distributienet van de constructeur wordt aangeboden , telt voorlopig vier motoren .</sentence>
+  <comments>
+    <comment>Q#DM_20000519_01-11-17-1|Het gamma dat sinds vorige week door het distributienet van de constructeur wordt aangeboden , telt voorlopig vier motoren .|1|1|-0.19283488160645343</comment>
+  </comments>
+</alpino_ds>

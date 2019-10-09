@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" end="3" getal="getal" id="4" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+      <node begin="3" cat="pp" end="6" id="5" rel="mod">
+        <node begin="3" end="4" id="6" lemma="sedert" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="sedert" vztype="init" word="sedert"/>
+        <node begin="4" cat="np" end="6" id="7" rel="obj1">
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="8" lemma="begin" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="begin" word="begin"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="februari" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="februari" word="februari"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hij is er sedert begin februari .</sentence>
+</alpino_ds>

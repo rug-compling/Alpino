@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="whq" end="8" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="wanneer" pos="adv" postag="BW()" pt="bw" rel="whd" root="wanneer" word="Wanneer"/>
+      <node begin="0" cat="sv1" end="8" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" index="2" lemma="Weimar" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Weimar" word="Weimar"/>
+        <node begin="0" cat="inf" end="8" id="6" rel="vc">
+          <node begin="0" end="1" id="7" index="1" rel="mod"/>
+          <node begin="2" end="3" id="8" index="2" rel="su"/>
+          <node begin="3" cat="np" end="7" id="9" rel="predc">
+            <node begin="3" buiging="zonder" end="4" graad="basis" id="10" lemma="cultureel" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="cultureel" word="cultureel"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="hoofdstad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hoofdstad" word="hoofdstad"/>
+            <node begin="5" cat="pp" end="7" id="12" rel="mod">
+              <node begin="5" end="6" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="14" lemma="Europa" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Europa" word="Europa"/>
+            </node>
+          </node>
+          <node begin="7" buiging="zonder" end="8" id="15" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="16" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wanneer zal Weimar cultureel hoofdstad van Europa zijn ?</sentence>
+</alpino_ds>

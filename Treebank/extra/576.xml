@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="3" end="4" id="2" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ti" end="7" id="3" rel="vc">
+        <node begin="1" end="2" id="4" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="0" cat="inf" end="7" id="5" rel="body">
+          <node begin="0" end="1" id="6" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="Aan"/>
+          <node begin="2" buiging="zonder" end="3" id="7" lemma="aan_raden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="raad_aan" word="raden" wvorm="inf"/>
+          <node begin="4" end="5" id="8" lemma="echter" pos="adv" postag="BW()" pt="bw" rel="mod" root="echter" word="echter"/>
+          <node begin="5" cat="np" end="7" id="9" index="1" rel="obj1">
+            <node begin="5" end="6" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="stal_houderij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stal_houderij" word="stalhouderij"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="7" id="12" index="1" rel="su"/>
+    </node>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Aan te raden is echter een stalhouderij .</sentence>
+</alpino_ds>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="vervelen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verveel" word="verveelde" wvorm="pv"/>
+      <node begin="2" end="3" getal="getal" id="4" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+      <node begin="3" cat="pp" end="5" id="5" rel="mod">
+        <node begin="3" end="4" id="6" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+        <node begin="4" end="5" genus="genus" getal="ev" graad="basis" id="7" lemma="Group" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Group" word="Group"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Hij verveelde zich bij Group</sentence>
+</alpino_ds>

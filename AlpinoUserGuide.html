@@ -1,0 +1,1897 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.6" />
+<title>Alpino User Guide</title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+tt {
+  font-family: monospace;
+  font-size: inherit;
+  color: navy;
+}
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+.monospaced {
+  font-family: monospace;
+  font-size: inherit;
+  color: navy;
+}
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([2-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<h1>Alpino User Guide</h1>
+<span id="author">Gertjan van Noord</span><br />
+<span id="email"><tt>&lt;<a href="mailto:g.j.m.van.noord@rug.nl">g.j.m.van.noord@rug.nl</a>&gt;</tt></span><br />
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>Alpino is a collection of tools and programs for parsing Dutch
+sentences into dependency structures.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_downloading_and_installing">Downloading and Installing</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The binary distribution is available only for some platforms
+(specific requirements are listed below). Installing involves the following
+steps:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Download the relevant file for your architecture at
+<a href="http://www.let.rug.nl/~vannoord/alp/Alpino/binary/versions">Alpino download site</a>.
+</p>
+</li>
+<li>
+<p>
+Extract the contents of that file in a place of your liking, e.g.,
+   in your home-directory, and do the following:
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>tar xzf Alpino-bla-bla-19327.tar.gz</tt></pre>
+</div></div>
+</li>
+</ol></div>
+<div class="paragraph"><p>The binary file depends on the Tcl/Tk libraries as well as a number of
+system libraries. The specific dependencies of the current release are
+as follows (subject to change):</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>        linux-vdso.so.1
+        libstdc++.so.6
+        libz.so.1
+        libtk8.4.so.0
+        libtcl8.4.so.0
+        libSM.so.6
+        libICE.so.6
+        libX11.so.6
+        libdl.so.2
+        libm.so.6
+        libpthread.so.0
+        libgcc_s.so.1
+        libc.so.6
+        /lib64/ld-linux-x86-64.so.2
+        libuuid.so.1
+        libxcb.so.1
+        libXau.so.6
+        libXdmcp.so.6</tt></pre>
+</div></div>
+<div class="paragraph"><p>In addition, some of the tools and programs that are shipped with
+Alpino require additional packages. Here is the beginning of a
+list. Typically you need a recent version ;-)</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+tcl/tk
+</p>
+</li>
+<li>
+<p>
+libxml2
+</p>
+</li>
+<li>
+<p>
+libxslt
+</p>
+</li>
+<li>
+<p>
+python2
+</p>
+</li>
+<li>
+<p>
+python2 library libxml2
+</p>
+</li>
+<li>
+<p>
+python2 library libxslt
+</p>
+</li>
+<li>
+<p>
+dictzip (sometimes packaged with dictd)
+</p>
+</li>
+<li>
+<p>
+libpopt
+</p>
+</li>
+<li>
+<p>
+libz
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_running_alpino">Running Alpino</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>In other that you can use Alpino and the related tools, you need to
+define your ALPINO_HOME environment variable. This variable should
+point to the directory that containts the Alpino stuff. A typical way
+tot do this, is to add the following lines to the file .bashrc in your
+home directory, assuming you use bash, and assuming you extracted the
+Alpino stuff in a directory called Alpino in your home directory:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>export ALPINO_HOME=$HOME/Alpino
+export PATH=$PATH:$ALPINO_HOME/bin</tt></pre>
+</div></div>
+<div class="sect2">
+<h3 id="_basic_usage">Basic Usage</h3>
+<div class="paragraph"><p>The various usages of Alpino can be summarized as follows:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>Alpino [Options]
+Alpino [Options] -parse
+Alpino [Options] -parse W1 .. Wn</tt></pre>
+</div></div>
+<div class="paragraph"><p>In the first form, the system will work in interactive mode. By
+default, it will start the graphical user interface. Use the options
+-tk or -notk to enable/disable the gui explicitly.</p></div>
+<div class="paragraph"><p>In interactive mode, you are in effect using the Hdrug command
+interpreter and (optionally) the Hdrug graphical user interface. Refer
+to the Hdrug documentation for more information.</p></div>
+<div class="paragraph"><p>In the second form, the system will read lines from standard
+input. Each line is then parsed, and various output is produced (the
+actual output depends on the various options that are set). For those with less
+experience with Unix, this form allows you to parse larger collections of
+sentences using input redirection:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>cat MySentences.txt | Alpino -parse</tt></pre>
+</div></div>
+<div class="paragraph"><p>Finally, in the third form, the system will parse the single sentence
+given on the command line, provide output (again, depending on the
+options), and quit. In this form, the input sentence is given as a
+sequence of tokens W1 .. Wn on the command line.</p></div>
+<div class="sect3">
+<h4 id="_options">Options</h4>
+<div class="paragraph"><p>There are a whole bunch of options which affect the way in which the
+system runs. For most options, there is documentation available from
+the graphical user interface. In order to have access to this, run:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>Alpino</tt></pre>
+</div></div>
+<div class="paragraph"><p>Some frequently used options are given here.</p></div>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+Flag=Value
+</dt>
+<dd>
+<p>
+      Assigns Value to global variable Flag. See below for a list of
+      flags with suggested values.
+</p>
+</dd>
+</dl></div>
+<div class="paragraph"><p>The remaining options all start with a dash:</p></div>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+-flag Flag Value
+</dt>
+<dd>
+<p>
+      Similar to the above. The difference is that in the Flag=Value
+      syntax, the Value is parsed as a Prolog term. In the -flag Flag
+      Value syntax, on the other hand, the Value is parsed as a Prolog
+      atom. In many cases this does not make a difference. Remember:
+      for path names, you need the second format.
+</p>
+</dd>
+<dt class="hdlist1">
+-tk
+</dt>
+<dd>
+<p>
+      Use the graphical user interface. Only makes sense for interactive operation.
+</p>
+</dd>
+<dt class="hdlist1">
+-notk
+</dt>
+<dd>
+<p>
+      Do not use the graphical user interface.
+</p>
+</dd>
+<dt class="hdlist1">
+-cmd Goal
+</dt>
+<dd>
+<p>
+      Evaluates Prolog Goal; Goal is parsed as Prolog term.
+</p>
+</dd>
+<dt class="hdlist1">
+-l File
+</dt>
+<dd>
+<p>
+      Loads the Prolog file, using the Prolog goal use_module(File).
+</p>
+</dd>
+<dt class="hdlist1">
+-slow 
+</dt>
+<dd>
+<p>
+      The alternative to the <em>veryfast</em>-option. The system will find all possible
+      parses for the input. No part-of-speech pre-processor is
+      applied. No beams are used in search. The parser does not enforce
+      the "guides" technique.
+</p>
+</dd>
+<dt class="hdlist1">
+-veryfast 
+</dt>
+<dd>
+<p>
+      This option uses a set of options to improve the speed of the
+      parser. In this mode, the parser only delivers the first (best)
+      analysis. The part-of-speech pre-processor is applied. Guided parsing
+      is applied. Several heuristics apply to limit the search space.
+</p>
+</dd>
+</dl></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_flags_global_variables">Flags (global variables)</h3>
+<div class="paragraph"><p>There are (way too) many global variables (called flags) which will
+alter the behavior of Alpino. These flags typically already have a
+default value. The value can be changed using command line
+options. The values can also be changed in interactive mode using
+either the command interpreter or the graphical user interface. In the
+graphical user interface, documentation for each option is
+provided. Boolean flags have one of the values "on" or "off".
+The following options appear most relevant:</p></div>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+debug
+</dt>
+<dd>
+<p>
+      Integer (typically 0, 1 or 2) which determines the number and
+      detail of debug and continuation messages.
+</p>
+</dd>
+<dt class="hdlist1">
+demo
+</dt>
+<dd>
+<p>
+      Boolean flag which determines if a visual impression of the
+      parse is produced (either to standard output, or the graphical
+      interface if it is running).
+</p>
+</dd>
+<dt class="hdlist1">
+disambiguation_beam
+</dt>
+<dd>
+<p>
+      Integer which determines during unpacking the how many best
+      analyses are kept for each &#8216;maximal projection&#8217;. A larger value
+      will imply slower and more accurate processing. The value 0 is
+      special: in that case the system performs a full search (hence
+      maximal accuracy and minimal speed). The value of this flag is
+      ignored in case unpack_bestfirst=off.
+</p>
+</dd>
+<dt class="hdlist1">
+disambiguation_candidates_beam
+</dt>
+<dd>
+<p>
+      Integer which determines during parsing how many parses are
+      produced for any given maximal projection. From these, only the
+      best are kept for further processing later (using the
+      disambiguation_beam flag). This flag can be used to limit the
+      number of parses that are computed in the first place. A value
+      of 0 means that all parses are produced. If the value is N&gt;0,
+      then only the first N parses are computed.
+</p>
+</dd>
+<dt class="hdlist1">
+end_hook
+</dt>
+<dd>
+<p>
+      Perhaps the most important flag is the end_hook flag which
+      determines what the system should do with a parse that it has
+      found. Typically this involves printing certain information
+      concerning the parse to standard error, standard output or a
+      file. Various examples are provided below.
+</p>
+</dd>
+<dt class="hdlist1">
+first_line_no
+</dt>
+<dd>
+<p>
+      Integer which you can use to enforce that Alpino first ignores a
+      number of lines, and then starts parsing after that many
+      lines. Normally, the value of this flag will be 0 (parse all
+      lines), but in some cases it is useful to ignore the first part
+      of an input file (because perhaps those lines already were
+      parsed in an earlier session).
+</p>
+</dd>
+<dt class="hdlist1">
+min_sentence_length
+</dt>
+<dd>
+<p>
+      Integer which determines minimum sentence length. Sentences with less words are ignored.
+      This flag is undefined by default.
+</p>
+</dd>
+<dt class="hdlist1">
+max_sentence_length
+</dt>
+<dd>
+<p>
+      Integer which determines maximum sentence length. Sentences with more words are ignored.
+      This flag is undefined by default.
+</p>
+</dd>
+<dt class="hdlist1">
+number_analyses
+</dt>
+<dd>
+<p>
+      This flag determines the number of analyses that is passed on by
+      the robustness / disambiguation component. If the value is 0,
+      then the system simply finds all solutions.
+</p>
+</dd>
+<dt class="hdlist1">
+parse_candidates_beam
+</dt>
+<dd>
+<p>
+      Integer which determines during parsing (first phase) how many
+      sub-parses are produced for any given sub-goal. A value of 0
+      means that no limit on this number is enforced.
+</p>
+</dd>
+<dt class="hdlist1">
+pos_tagger
+</dt>
+<dd>
+<p>
+      Boolean flag to determine whether to use a POS-tagger to filter
+      the result of lexical lookup. The POS-tagger is based on
+      unigram, bigram and trigram frequencies. This filter can be made
+      more or less strict using the pos_tagger_n flag.
+</p>
+</dd>
+<dt class="hdlist1">
+pos_tagger_n, pos_tagger_p, pos_tagger_m
+</dt>
+<dd>
+<p>
+      These flags take numerical values which determines how and how much
+      filtering should be done by the POS-tagger which filters the
+      result of lexical lookup (if pos_tagger=on). Refer to the source
+      code for details. Default values should give good performance.
+</p>
+</dd>
+<dt class="hdlist1">
+user_max
+</dt>
+<dd>
+<p>
+      This flag takes a numberical value which is then used as the
+      maximum number of milliseconds that the system is given for each
+      sentence. So, if the value is set to 60000, then if a parse for
+      a given sentence requires more than a minute of CPU-time, that
+      parse is aborted. Because the system can sometimes spend a very
+      long time on a single (long, very ambiguous) sentence, it is
+      often a good idea to use this time-out.
+</p>
+</dd>
+<dt class="hdlist1">
+xml_format_frame
+</dt>
+<dd>
+<p>
+      Boolean flag that indicates whether the system should produce
+      verbose xml output (containing various detailed lexical
+      features).
+</p>
+</dd>
+</dl></div>
+</div>
+<div class="sect2">
+<h3 id="_examples_with_end_hook">Examples with end_hook</h3>
+<div class="sect3">
+<h4 id="_xml">xml</h4>
+<div class="paragraph"><p>Suppose you want to save the dependency structure of the best
+parse of each sentence as xml. In that case, the following
+command might be what you want:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>Alpino -flag treebank $HOME/tmp end_hook=xml -parse</tt></pre>
+</div></div>
+<div class="paragraph"><p>For each sentence read from standard input, an xml file will be
+created in the directory $HOME/tmp containing the dependency
+structure. The files are named 1.xml, 2.xml, &#8230; etc (if you want to
+start counting from N+1, then you can use the current_ref=N flag to
+initialize the counter at N).</p></div>
+<div class="paragraph"><p>For browsing and querying such xml files, check out the scripts that
+come with the Alpino Treebank.</p></div>
+</div>
+<div class="sect3">
+<h4 id="_dependency_triples">dependency triples</h4>
+<div class="paragraph"><p>Rather than a full dependency structure for each sentence, it might be
+that you only care for the dependency triples (two words, and the
+name of the dependency relation). For this, you might try:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>Alpino end_hook=triples -parse</tt></pre>
+</div></div>
+<div class="paragraph"><p>For an input consisting of the three lines:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>ik houd van spruitjes
+ik ben gek op spruitjes
+Mijn minimal brain dysfunction speelt weer op</tt></pre>
+</div></div>
+<div class="paragraph"><p>this writes out:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>houd/[1,2]|su|ik/[0,1]|1
+houd/[1,2]|pc|van/[2,3]|1
+van/[2,3]|obj1|spruitje/[3,4]|1
+ben/[1,2]|su|ik/[0,1]|2
+ben/[1,2]|predc|gek/[2,3]|2
+gek/[2,3]|pc|op/[3,4]|2
+op/[3,4]|obj1|spruitje/[4,5]|2
+speel_op/[4,5]|su|minimal brain dysfunction/[1,4]|3
+minimal brain dysfunction/[1,4]|det|mijn/[0,1]|3
+speel_op/[4,5]|mod|weer/[5,6]|3
+speel_op/[4,5]|svp|op/[6,7]|3</tt></pre>
+</div></div>
+<div class="paragraph"><p>Each line is a single dependency triple. The line contains four fields
+separated by the | character. The first field is the head word,
+the second field is the dependency name, the third field is the
+dependent word, and the fourth field is the sentence number. The
+words are representend as Stem/[Start,End] where Stem is the
+stem of the word, and Start and End are string positions. If you
+also want two additional fields with the POS-tags of each word,
+then use the end_hook=triples_with_frames option. Typical output
+then looks like:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>houd/[1,2]|verb|mod|niet/[2,3]|adv|1
+houd/[1,2]|verb|pc|van/[3,4]|prep|1
+houd/[1,2]|verb|su|ik/[0,1]|pron|1
+van/[3,4]|prep|obj1|smurfen/[4,5]|noun|1</tt></pre>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_syntactic_structure">syntactic structure</h4>
+<div class="paragraph"><p>Perhaps your interest lies in the syntactic structure assigned by
+Alpino. The following writes out the syntactic structure for each
+parse that Alpino finds:</p></div>
+<div class="paragraph"><p>Alpino number_analyses=1000 end_hook=syntax -parse</p></div>
+<div class="paragraph"><p>Each parse is written as a bracketed string, where each opening
+bracket is followed by the category (preceded by the ampersand). For
+the phrase</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>de leuke en vervelende kinderen</tt></pre>
+</div></div>
+<div class="paragraph"><p>the (rather verbose) output is, where each line starts with the
+sentence number, the separation character | and the annotated
+sentence:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>1| [ @top_cat [ @start [ @max [ @np [ @det de ] [ @n [ @a [ @a leuke ] [ @clist
+  [ @optpunct ] [ @conj en ] [ @a vervelende ] ] ] [ @n kinderen ] ] ]
+  ] ] [ @optpunct ] ]
+1| [ @top_cat [ @start [ @max [ @np [ @det de ] [ @n [ @n [ @a leuke ] ] [ @clist
+  [ @optpunct ] [ @conj en ] [ @n [ @a vervelende ] [ @n kinderen ] ] ] ] ]
+  ] ] [ @optpunct ] ]
+1| [ @top_cat [ @start [ @max [ @np [ @np [ @det de ] [ @n [ @a leuke ] ] ]
+  [ @clist [ @optpunct ] [ @conj en ] [ @np [ @n [ @a vervelende ] [ @n
+  kinderen ] ] ] ] ] ] ] [ @optpunct ] ]</tt></pre>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_pos_tags">POS-tags</h4>
+<div class="paragraph"><p>If you only care for the part-of-speech tags that Alpino used to
+derive the best parse, then you can use the following command:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>Alpino end_hook=frames -parse</tt></pre>
+</div></div>
+<div class="paragraph"><p>In that case, the system prints lines like the following to standard error (!).
+For historical reasons, the output goes to standard error, not to standard
+output.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>ik|pronoun(nwh,fir,sg,de,nom,def)|1|0|1|normal|pre
+vertrek|verb(zijn,sg1,intransitive)|1|1|2|normal|post
+houdt|verb(hebben,sg3,pc_pp(van))|2|1|2|normal|post
+van|preposition(van,[af,uit,vandaan,[af,aan]])|2|2|3|normal|post
+Marietje|proper_name(both)|2|3|4|name(not_begin)|post</tt></pre>
+</div></div>
+<div class="paragraph"><p>Each line represents the information of a word. The information is
+contained in various fields separated by the | character. The fileds
+represent from left to right: the word, the part-of-speech tag, the
+sentence number, the begin position of the word, the end position of
+the word, and two further fields that you probably want to ignore.</p></div>
+<div class="paragraph"><p>It is fairly easy to define further output formats. Please contact the
+author if you have specific requests.</p></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_if_something_goes_wrong">If something goes wrong</h3>
+<div class="paragraph"><p>If for some reason Alpino does not work, the first thing you should
+try is to alter in the Alpino initialization script the line</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>debug=0</tt></pre>
+</div></div>
+<div class="paragraph"><p>into</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>debug=1</tt></pre>
+</div></div>
+<div class="paragraph"><p>If you are lucky this implies that you get told what is going wrong.</p></div>
+<div class="paragraph"><p>If this doesn&#8217;t help, send a bug-report to the author. Please.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_tokenization">Tokenization</h3>
+<div class="paragraph"><p>The sentences that you give to Alpino are assumed to be already
+tokenized: a single sentence on a line, and each token (word)
+separated by a single space. Refer to the section Alpino Tokenizer
+below for a sentence splitting and tokenization tool.
+Alpino supports the UTF-8
+encoding. Here are some properly tokenized sentences:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Dat is nog niet duidelijk . '
+We zien hier niet het breken van tandenstokers .
+Dodelijke wapens worden gesloopt . '
+Slechts enkele nieuwe documenten zijn aan het licht gekomen . '
+Er is nog geen bewijs van verboden activiteiten gevonden .</tt></pre>
+</div></div>
+<div class="paragraph"><p>If you want to assign an identifier for each sentence, then you write
+the identifier in front of the sentence, with a | separation
+character. For instance:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>volkskrant20030308_12|Dat is nog niet duidelijk . '
+volkskrant20030308_14|We zien hier niet het breken van tandenstokers .
+volkskrant20030308_15|Dodelijke wapens worden gesloopt . '
+volkskrant20030308_17|Slechts enkele nieuwe documenten zijn aan het licht gekomen . '
+volkskrant20030308_20|Er is nog geen bewijs van verboden activiteiten gevonden . '</tt></pre>
+</div></div>
+<div class="paragraph"><p>It follows that the vertical bar is a special character that is
+supposed to be not part of the sentence in case there is not an
+identifier.</p></div>
+<div class="paragraph"><p>Lines which start with a percentage sign are ignored: the percentage
+sign is used to introduce comments:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>volkskrant20030308_12|Dat is nog niet duidelijk . '
+volkskrant20030308_14|We zien hier niet het breken van tandenstokers .
+%% the next sentence is easy:
+volkskrant20030308_15|Dodelijke wapens worden gesloopt . '
+volkskrant20030308_17|Slechts enkele nieuwe documenten zijn aan het licht gekomen . '
+volkskrant20030308_20|Er is nog geen bewijs van verboden activiteiten gevonden . '</tt></pre>
+</div></div>
+<div class="paragraph"><p>If you have corpus material that has not been tokenized yet, then you
+can also use Alpino to tokenize your input. Use the flag
+<em>assume_input_is_tokenized</em> for this purpose. If the value is <em>on</em>,
+then Alpino won&#8217;t try to tokenize the input. If the value is <em>off</em>, it
+will tokenize the input. It will not do any sentence splitting.</p></div>
+<div class="paragraph"><p><strong><strong>However, note that if you use the built-in Alpino tokenizer, then
+  you cannot use the meta-notation introduced below in section
+  *Bracketed Input</strong> </strong>*</p></div>
+<div class="sect3">
+<h4 id="_sentence_identifiers">Sentence identifiers</h4>
+<div class="paragraph"><p>The output of Alpino uses identifiers. For instance, if the
+end_hook=xml option has been set, the names of the XML files are
+constructed out of these identifiers. The sentence identifier is
+either defined explicitly as part of the input sentence, or it is set
+implicitly by Alpino (simply counting the sentences of a specific
+session starting from 1). If there are multiple outputs for a given
+sentence, for instance if you have defined the option
+number_analyses=10, then each of the results is indexed with the rank
+of the analysis. The resulting identifier then consists of the
+sentence identifier and the rank of the analysis, separated by a
+dash. Example:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>echo "example1|de mannen kussen de vrouwen" |\
+Alpino -notk number_analyses=0 end_hook=frames -parse</tt></pre>
+</div></div>
+<div class="paragraph"><p>This yields:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>de|determiner(de)|example1|0|1|normal(normal)|pre|de|0|1
+mannen|meas_mod_noun(de,count,pl)|example1|1|2|normal(normal)|pre|man|0|1
+kussen|verb(hebben,pl,transitive)|example1|2|3|normal(normal)|post|kus|0|1
+de|determiner(de)|example1|3|4|normal(normal)|post|de|0|1
+vrouwen|noun(de,count,pl)|example1|4|5|normal(normal)|post|vrouw|0|1
+de|determiner(de)|example1-2|0|1|normal(normal)|pre|de|0|1
+mannen|meas_mod_noun(de,count,pl)|example1-2|1|2|normal(normal)|pre|man|0|1
+kussen|verb(hebben,pl,transitive)|example1-2|2|3|normal(normal)|post|kus|0|1
+de|determiner(de)|example1-2|3|4|normal(normal)|post|de|0|1
+vrouwen|noun(de,count,pl)|example1-2|4|5|normal(normal)|post|vrouw|0|1
+de|determiner(de)|example1-3|0|1|normal(normal)|pre|de|0|1
+mannen|meas_mod_noun(de,count,pl)|example1-3|1|2|normal(normal)|pre|man|0|1
+kussen|verb(hebben,pl,intransitive)|example1-3|2|3|normal(normal)|post|kus|0|1
+de|determiner(de)|example1-3|3|4|normal(normal)|post|de|0|1
+vrouwen|noun(de,count,pl)|example1-3|4|5|normal(normal)|post|vrouw|0|1</tt></pre>
+</div></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_special_symbols_in_the_input">Special symbols in the input</h3>
+<div class="paragraph"><p>The following symbols which might occur in input lines are special for
+Alpino:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>| [ ] % ^P</tt></pre>
+</div></div>
+<div class="paragraph"><p>The vertical bar | is used to separate the sentence key from the
+sentence. Only the first occurrence of a vertical bar on a given line
+is special.</p></div>
+<div class="paragraph"><p>The square brackets are used for annotating sentences with
+syntactic information. This is described below.</p></div>
+<div class="paragraph"><p>The percentage sign is only special if it is the first character of a
+line. In that case the line is treated as a comment, and is ignored.</p></div>
+<div class="paragraph"><p>A line only consisting of ^P (control-P) is treated as an instruction
+to escape to the Prolog command-line interface. This is probably only
+useful for interactive usage. Typing "halt." to the Prolog
+command-line reader will return to the state before control-P was typed.</p></div>
+<div class="paragraph"><p>If you need to parse a line starting with a %-sign, then the easiest
+solution is to use a key (for interactive usage, perhaps use the empty key):</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>3|% is een procentteken
+|% is een procentteken</tt></pre>
+</div></div>
+<div class="paragraph"><p>The same trick can be used to interpret the vertical bar literally:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>4|ik bereken P(x|y)
+|ik bereken P(x|y)</tt></pre>
+</div></div>
+<div class="paragraph"><p>Note that it is currently not possible to use keys that start with the
+symbol % or |.</p></div>
+<div class="paragraph"><p>If you have square brackets in your input, you need to escape
+these using the backslash.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_bracketed_input">Bracketed input</h3>
+<div class="paragraph"><p>Alpino supports brackets in the input to indicate:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+syntactic structure
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+@cat
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+lexical assignment
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+@postag
+</p>
+</li>
+<li>
+<p>
+@posflt
+</p>
+</li>
+<li>
+<p>
+@add_lex
+</p>
+</li>
+<li>
+<p>
+@mwu
+</p>
+</li>
+<li>
+<p>
+@folia
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+requirement to skip words
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+@skip
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+include phantom words
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+@phantom
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+pass on identifier of words
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Warning: bracketed input is not supported in case Alpino tokenizes the
+input sentences on the fly.</p></div>
+<div class="paragraph"><p>A large part of the computational time is spent on finding the correct
+constituents. For interactive annotation, it is possible to give hints
+to Alpino about the correct constituent structure by putting straight
+brackets around constituents (both brackets should be surrounded by a
+single space on both sides otherwise the POS-tagging will give
+problems, regarding a space as a word). The ability to indicate
+syntactic structure is a nice feature especially for attaching
+modifiers at the correct location, enumerations and complex nestings.
+Brackets are normally associated with a category name, using the
+@-operator. Normal syntactic symbols can be used here as @np, @pp
+etc. Examples:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Hij fietst [ @pp op zijn gemakje ] [ door de straten van De Baarsjes ] .
+FNB zet teksten van [ [ kranten en tijdschriften ] , boeken , [
+  studie- en vaklectuur ] , bladmuziek , folders , brochures ] om in
+  gesproken vorm .
+[ @np De conferentie die betrekking heeft op ondersteunende
+  technologie voor gehandicapten in het algemeen ] , bood [ @np een goed
+  platform [ om duidelijk te maken hoe uitgevers zelf toegankelijke
+  structuren in hun informatie kunnen aanbrengen ] ] .</tt></pre>
+</div></div>
+<div class="paragraph"><p>You can also force a lexical assingment to a token or a series of
+tokens, if the Alpino lexicon does not contain the proper assignment.
+A @postag followed by an Alpino lexical category will force the
+assignment of the corresonding lexical category to the words contained
+in the brackets. This comes in handy when a part of the sentence is
+written in a foreign language or a spelling mistake has occurred. Of
+course, the resulting dependency structure may need adjusting with the editor afterwards.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Hij heeft een beetje [ @postag adjective(both(nonadv)) curly ] haar .
+Op een [ @postag adjective(e) mgooie ] dag gingen ze fietsen .
+Mijn [ @postag proper_name(sg,'MISC') body mass index ] laat te wensen over .</tt></pre>
+</div></div>
+<div class="paragraph"><p>As a variant of the @postag annotation, you can also use the @posflt
+annotation. In this case, only the functor of the POS-tag is given,
+and Alpino will allow any lexical assignments which have the same
+functor. Example:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>ik wil [ @posflt preposition naar ] huis
+ik voel me [ @posflt adjective naar ]</tt></pre>
+</div></div>
+<div class="paragraph"><p>Note that the @postag annotation differs from the @posflt annotation,
+in that in the first case, a lexical category is assigned without
+consultation of the dictionary. In the latter case, a subset of the
+lexical categories assigned by Alpino is allowed (this subset can be
+empty).</p></div>
+<div class="paragraph"><p>The @add_lex meta annotation can be used to tell the parser to treat
+a given word in the input with the lexical categories associated with
+another word. Example:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>ik wil [ @add_lex naar naa ] huis
+ik voel me [ @add_lex goed gooooooeeeeed ]</tt></pre>
+</div></div>
+<div class="paragraph"><p>In this case, the word <em>naa</em> in the input will be treated in
+lexical lookup as if the word <em>naar</em> was given. Similarly, the
+lexical categories associated with <em>gooooooeeeeed</em> are those
+of the word <em>goed</em>.</p></div>
+<div class="paragraph"><p>A further meta-label for lexical assignment is the @mwu label. This
+indicates that the bracketed sequence of words should be regarded as a
+single lexical category. The effect is, that lexical assignments that
+do not respect this bracketing are removed. In case there is no
+lexical assignment for the words marked @mwu, then it is assumed that
+this sequence should be analysed as a name.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Dat was de periode van het [ @mwu Derde Rijk ]
+Op [ @mwu 1 januari 2001 ]</tt></pre>
+</div></div>
+<div class="paragraph"><p>Skips. If the annotator can predict that a certain token or series of
+tokens will make the annotation a mess, it can be skipped by
+@skip. In such a case, the sentence is parsed as if the word(s) that
+are marked with <tt>skip</tt> where not there, except that the numbering of
+the words in the resulting dependency structure is still correct.
+Clearly, in many cases an additional editing phase is required to
+obtain the fully correct analysis, but this method might reduce
+efforts considerably.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Ik wil [ @skip ??? ] naar huis
+Ten opzichte [ @skip echter ] van deze bezwaren willen wij ....</tt></pre>
+</div></div>
+<div class="paragraph"><p>A related trick that is useful in particular cases, is to add a word
+to the sentence in order to ensure that the parse can succeed, but
+instruct Alpino that this word should not be part of the resulting
+dependency structures. Such words are labeled @phantom as follows:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Ik aanbad [ @phantom hem ] dagelijks in de kerk
+Ik kocht boeken en Piet [ @phantom kocht ] platen
+Ik heb [ @phantom meer ] boeken gezien dan hem</tt></pre>
+</div></div>
+<div class="paragraph"><p>Limitations: a phantom bracketed string can only contain a single
+word. The technique does not work yet for words that are part of a
+multi-word unit.</p></div>
+<div class="paragraph"><p>Warning: the resulting dependency structure is most likely not well-formed
+and often needs manual editing.</p></div>
+<div class="paragraph"><p>The @folia meta-notation can be used to inform Alpino about the
+lemma and postag of the given word. Note that in this case, Alpino
+will <strong>not</strong> attempt to create an analysis that is consistent with
+the given lemma and postag, but it will simply pass on the given
+postag and lemma values to the @postag and @lemma XML attributes
+of the corresponding node in the XML output. Examples:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>[ @folia subtiel ADJ(vrij,basis,zonder) Subtiel ]
+[ @folia zijn WW(pv,tgw,mv) Zijn ] [ @folia cafévriend N(soort,mv,basis) cafévrienden ] [ @folia bekijken WW(pv,tgw,mv) bekijken ] [ @folia hem VNW(pers,pron,obl,vol,3,ev,masc) hem ] [ @folia argwanend ADJ(vrij,basis,zonder) argwanend ] [ @folia . LET() . ]</tt></pre>
+</div></div>
+<div class="paragraph"><p>There also is the @id meta-notation. This notation can be used to
+add a wordid attribute in the XML output of a particular word. In order
+that this meta-notation can be used in combination with other, the
+notation <strong>precedes</strong> the word for which it is meant.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>[ @id w1 ] ik [ @id w2 ] besta
+[ @id w1 ] [ @folia subtiel ADJ(vrij,basis,zonder) Subtiel ] was het niet</tt></pre>
+</div></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_alpino_hooks">Alpino Hooks</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Note that Alpino currently is not really implemented as a Prolog
+library. Yet, you might find it useful to know that you can call the
+Alpino parser from Prolog using the following two predicates:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>alpino_parse_line(Ref,String)
+alpino_parse_tokens(Ref,Tokens)</tt></pre>
+</div></div>
+<div class="paragraph"><p>Here, Ref is an atomic identifier which is used for administrative
+purposes, so that results for different sentences can be easily
+distinguished. In the first case, the input is a string which may need
+to be tokenized (see discussion above). In the second case, Tokens is
+a list of atoms where each atom is a token (word, punctuation mark) of
+the sentence. Here are some examples of the use of these predicates:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>?- alpino_parse_line(s2323,"ik besta").
+
+?- alpino_parse_tokens(s2324,[ik,besta]).</tt></pre>
+</div></div>
+<div class="paragraph"><p>If you want to extend the functionality of Alpino, you may be
+interested to learn about the following (Prolog-) hooks.</p></div>
+<div class="paragraph"><p>The hook predicate</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>alpino_start_hook(Key,Sentence)</tt></pre>
+</div></div>
+<div class="paragraph"><p>is called before the parse of each sentence. Key is instantiated as
+the atomic identifier of the sentence. Such identifiers are set using
+the current_ref Hdrug flag.</p></div>
+<div class="paragraph"><p>The hook predicate</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>alpino_result_hook(Key,Sentence,No,Result)</tt></pre>
+</div></div>
+<div class="paragraph"><p>is called for each parse. Key and Sentence are as before, No is an
+integer indicating the number of the parse (parses for a given
+sentence are numbered from 1 to n), and Result is an internal
+representation of the full parse itself.</p></div>
+<div class="paragraph"><p>The hook predicate</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>alpino_end_hook(Key,Sentence,Status,NumberOfSolutions)</tt></pre>
+</div></div>
+<div class="paragraph"><p>is called after the parser has found all solutions. NumberOfSolutions
+is an integer indicating the number of solutions. Status is an atom
+indicating whether parsing was successful, or not. Possible values
+are the following - their meaning is supposed to be evident:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>success
+failure
+time_out
+out_of_memory</tt></pre>
+</div></div>
+<div class="paragraph"><p>Other values describe more exotic possibilities, please consult the
+hdrug_status flag in Hdrug for further details.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_alpino_tokenizer">Alpino Tokenizer</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The Alpino distribution contains a directory Tokenization with various
+tools that you can use to tokenize your input into the required format
+for Alpino.</p></div>
+<div class="paragraph"><p>The script "tokenize.sh" does the tokenization.  It uses "tok", which
+is a C program created by the FSA Utilities that does most of the tokenization.
+This is much more efficient than an equivalent Perl script using
+regular expressions. In addition there are a number of scripts that do
+some more difficult stuff that requires more global information (for
+which no sequential transducer can be defined).</p></div>
+<div class="paragraph"><p>In the input, every paragraph of text is supposed to be given on a single line.
+If your input is not like that, cf the script paragraph_per_line.</p></div>
+<div class="sect2">
+<h3 id="_example_1">Example 1</h3>
+<div class="paragraph"><p>For an example text, cf the text file t1.txt which contains the following:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Het PIONIER project Algorithms for Linguistic Processing van Gertjan
+van Noord is een onderzoeksproject op het gebied van de computationele
+taalkunde.
+
+Een van de taken van de taalkunde is het opstellen van modellen voor
+natuurlijke talen. Het model (grammatica) beschrijft bijvoorbeeld de
+mogelijke uitingen van het Nederlands en hun bijbehorende
+betekenis. Zo'n model beschrijft dus (onder andere) de relatie tussen
+vorm en betekenis. Een belangrijke vraag in de computationele
+taalkunde is vervolgens hoe je deze relatie algoritmisch kunt
+bepalen. Hoe kun je voor een gegeven uiting van het Nederlands de
+bijbehorende betekenis berekenen?
+
+Het PIONIER onderzoek richt zich hierbij op twee fundamentele
+problemen: ambiguiteit en efficientie. Het probleem van ambiguiteit
+doet zich voor in zelfs de meest onschuldige zinnetjes:
+
+    Mijn vader zagen we niet meer
+
+Het is bijzonder lastig (voor een computer) om te voorkomen dat in dit
+zinnetje `zagen' wordt begrepen als `zagen met een zaag', terwijl door
+mensen deze zin normaal gesproken niet als meerduidig wordt ervaren.
+
+Het tweede probleem behelst de efficientie van de verwerking. Voor de
+modellen die tot nu toe worden opgesteld kan worden aangetoond dat de
+verwerkingstijd polynomiaal (soms zelfs exponentieel) zou moeten
+toenemen bij het toenemen van de lengte van de uiting. Dit is echter
+in tegenspraak met de geobserveerde efficientie van het menselijk
+taalvermogen.
+
+Het PIONIER project zal de hypothese onderzoeken (die teruggaat op het
+werk van Chomsky in het begin van de zestiger jaren) dat
+taalverwerking kan worden gemodelleerd door automaten van een zeer
+eenvoudig type (``finite-state automaten'') die een gegeven model van
+de taal slechts benaderen. Zo'n aanpak zou onder andere verklaren
+waarom uitingen met `center-embedding' en `cross-serial dependencies'
+snel onbegrijpelijk worden, maar wel als grammaticaal moeten worden
+beschouwd.
+
+Een volledige beschrijving van het voorgestelde onderzoek is
+beschikbaar op het Internet www.let.rug.nl/~vannoord/alp/index.html.</tt></pre>
+</div></div>
+<div class="paragraph"><p>In order to tokenize your text, you would first ensure that each line contains a paragraph of
+text with the paragraph_per_line script (this essentially removes single newlines from the
+input), and then pipe the result to the tokenizer:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>./paragraph_per_line t1.txt | ./tokenize.sh</tt></pre>
+</div></div>
+<div class="paragraph"><p>This results in a file where each line contains a single tokenized sentence.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_example_2_identifiers">Example 2: identifiers</h3>
+<div class="paragraph"><p>Often it is desirable to have identifiers which indicate the paragraph number
+and the sentence number in that paragraph. For this purpose, we need the
+two scripts ./add_key and ./number_sents.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>./paragraph_per_line t1.txt | ./add_key | ./tokenize.sh | ./number_sents</tt></pre>
+</div></div>
+<div class="paragraph"><p>Each line is now prefixed with an identifier X-Y where X is the paragraph number
+and Y is the sentence number. The first few lines of the result are listed here:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>1-1|Het PIONIER project Algorithms for Linguistic Processing van Gertjan van Noord is een onderzoeksproject op het gebied van de computationele taalkunde .
+2-1|Een van de taken van de taalkunde is het opstellen van modellen voor natuurlijke talen .
+2-2|Het model ( grammatica ) beschrijft bijvoorbeeld de mogelijke uitingen van het Nederlands en hun bijbehorende betekenis .
+2-3|Zo'n model beschrijft dus ( onder andere ) de relatie tussen vorm en betekenis .
+2-4|Een belangrijke vraag in de computationele taalkunde is vervolgens hoe je deze relatie algoritmisch kunt bepalen .
+2-5|Hoe kun je voor een gegeven uiting van het Nederlands de bijbehorende betekenis berekenen ?
+3-1|Het PIONIER onderzoek richt zich hierbij op twee fundamentele problemen : ambiguiteit en efficientie .
+3-2|Het probleem van ambiguiteit doet zich voor in zelfs de meest onschuldige zinnetjes :</tt></pre>
+</div></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tools_for_error_mining">Tools for Error Mining</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>TODO</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_running_alpino_as_a_server">Running Alpino as a Server</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>As of march 2011, there is experimental support for running Alpino as
+a server program. The server is started using the Prolog command</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>alpino_server</tt></pre>
+</div></div>
+<div class="paragraph"><p>Communication with a client proceeds through the use of internet
+sockets. There are options to set the domain-name and the port number.
+There is a makefile Makefile.start_server which can be used to
+simplify starting up an Alpino server. For every request that the
+server receives, a new client process is started which takes care of
+that request. An Alpino server only runs under Linux.</p></div>
+<div class="paragraph"><p>The advantage of using a server is, that the Alpino functionality can
+be made available to machines on which Alpino does not run.</p></div>
+<div class="paragraph"><p>Using the Alpino server to parse a sentence is much faster than
+initializing a separate Alpino process for that purpose.</p></div>
+<div class="paragraph"><p>Implementing an Alpino client is straightforward in most programming
+languages. For instance, the following defines a simple
+Alpino client in Python:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>import socket
+
+def alpino_parse(sent, host='vingolf.let.rug.nl', port=42424):
+    s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    s.connect((host,port))
+    sent = sent + "\n\n"
+    s.sendall(sent.encode())
+    total_xml=[]
+    while True:
+        xml = s.recv(8192)
+        if not xml:
+            break
+        total_xml.append(str(xml,encoding='utf8'))
+
+    return "".join(total_xml)
+
+
+
+def main():
+    sentence=input("Geef de zin die Alpino moet analyseren: ")
+    xml=alpino_parse(sentence)
+    print(xml)
+
+
+if __name__ == '__main__':
+    main()</tt></pre>
+</div></div>
+<div class="paragraph"><p>The Alpino Server is experimental, and the interface may change in
+future versions.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_known_issues">Known Issues</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Alpino assumes that your input is in UTF8. There is a problem if you
+run Alpino with the graphical user interface, and you attempt to parse
+sentences through the command interpreter (either the Hdrug/Alpino
+command interpreter, or the standard Prolog command interpreter). In
+this situation, certain non-ASCII characters are not treated
+appropriately, due to a bug in the combination of tcl/tk and Sicstus3.
+Typing in sentences through the parse widget works without any problems
+though. Typing in sentences through the command interpreter also works
+without any problems if you did not start the graphical user interface.</p></div>
+<div class="paragraph"><p>This is the feedback from SICS:</p></div>
+<div class="paragraph"><p>This is what happens</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+You have an UTF-8 locale (invoke the locale command to verify this).
+</p>
+</li>
+<li>
+<p>
+Inititializing Tcl/Tk will change the process locale from the
+   default "C" locale to whatever locale is inherited from the
+   environment. I.e. when Tcl/Tk is initialized the process locale
+   becomes the UTF-8 locale in (1). Loading library(tcltk) will
+   initialize Tcl/Tk.
+</p>
+</li>
+<li>
+<p>
+The SICStus tokenizer classifies non-Latin1 characters using locale
+   sensitive functions (iswpunct(), &#8230;). So when the process locale
+   is UTF-8 the U+2018 and U+2019 in l.pl are classified as symbol
+   characters which, rightfully, gives a syntax error.
+</p>
+</li>
+<li>
+<p>
+When library(tcltk) is not loaded then the process will ignore the
+   locale from the environment and use the "C" locale where all code
+   points above 255 are treated as lower case. In this case the U+2018
+   and U+2019 characters are just treated as any other lower case
+   characters and they are parsed as part of the longer atoms.
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p>So, the SICStus bug is that character classification is affected by
+the process locale. The Tcl/Tk bug/misfeature is that initializing
+Tcl/Tk affects the global process locale.</p></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2015-11-04 13:25:03 CET
+</div>
+</div>
+</body>
+</html>

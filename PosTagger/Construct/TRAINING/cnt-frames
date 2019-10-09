@@ -1,0 +1,42 @@
+#!/usr/bin/perl -w
+
+$threshold=500;  #should be option
+
+$started=0;
+$previous="";
+$count=0;
+
+%frames=();
+while(<>) {
+    chomp;
+#    (undef,$word,$frame) = split('\|');
+    /^([^|]*)\|(.*)\|([^|]*)\|([^|]*)$/o;
+    if (defined $1 && defined $2 && defined $3 && defined $4) {
+        $word=$2;
+        $frame=$3;
+        $incr=$4;
+        if($started && $word ne $previous) {
+            if ($count > $threshold) {
+                foreach $frame (keys %frames){
+                    $count++ if ($frames{$frame}==$count);
+		    $p = -log($frames{$frame}/$count);
+                    print "$previous|$frame|$p\n";
+                }
+            }
+            %frames=();
+            $count=0;
+        } 
+        $count+=$incr;
+        $frames{$frame}+=$incr;
+        $previous=$word;
+        $started=1;
+    }
+}
+
+if ($started && $count > $threshold) {
+    foreach $frame (keys %frames){
+	$count++ if ($frames{$frame}==$count);
+        $p = -log($frames{$frame}/$count);
+        print "$previous|$frame|$p\n";
+    }
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="19" id="2" rel="--">
+      <node begin="9" end="10" id="3" lemma="lijken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="lijk" word="lijken" wvorm="pv"/>
+      <node begin="10" cat="np" end="15" id="4" index="1" rel="su">
+        <node begin="10" end="11" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="11" end="12" getal="mv" graad="basis" id="6" lemma="probleem" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="probleem" word="problemen"/>
+        <node begin="12" cat="pp" end="15" id="7" rel="mod">
+          <node begin="12" end="13" id="8" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="13" cat="np" end="15" id="9" rel="obj1">
+            <node begin="13" end="14" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="11" lemma="studentenwereld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wereld" word="studentenwereld"/>
+          </node>
+        </node>
+      </node>
+      <node begin="0" cat="ti" end="19" id="12" rel="vc">
+        <node begin="17" end="18" id="13" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="0" cat="inf" end="19" id="14" rel="body">
+          <node begin="0" cat="cp" end="8" id="15" rel="mod">
+            <node begin="0" conjtype="onder" end="1" id="16" lemma="naarmate" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="naarmate" word="Naarmate"/>
+            <node begin="1" cat="ssub" end="8" id="17" rel="body">
+              <node begin="1" cat="np" end="7" id="18" rel="su">
+                <node begin="1" end="2" id="19" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="2" end="3" getal="mv" graad="basis" id="20" lemma="verkiezing" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verkiezing" word="verkiezingen"/>
+                <node begin="3" cat="pp" end="7" id="21" rel="mod">
+                  <node begin="3" end="4" id="22" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="4" cat="np" end="7" id="23" rel="obj1">
+                    <node begin="4" end="5" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="5" cat="mwu" end="7" id="25" rel="hd">
+                      <node begin="5" buiging="met-e" end="6" graad="basis" id="26" lemma="Delfts" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Delftse" word="Delftse"/>
+                      <node begin="6" end="7" id="27" lemma="Studentenraad" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Studentenraad" spectype="deeleigen" word="Studentenraad"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="7" end="8" id="28" lemma="naderen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="nader" word="naderen" wvorm="pv"/>
+            </node>
+          </node>
+          <node begin="10" end="15" id="29" index="1" rel="su"/>
+          <node begin="15" end="16" getal="getal" id="30" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+          <node begin="16" end="17" id="31" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
+          <node begin="18" buiging="zonder" end="19" id="32" lemma="stapelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stapel" word="stapelen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="33" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Naarmate de verkiezingen van de Delftse Studentenraad naderen , lijken de problemen in de studentenwereld zich op te stapelen .</sentence>
+</alpino_ds>

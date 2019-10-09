@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" getal="mv" id="2" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="Wij"/>
+      <node begin="1" end="2" id="3" lemma="zwemmen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zwem" word="zwemmen" wvorm="pv"/>
+      <node begin="2" cat="ap" end="6" id="4" rel="mod">
+        <node begin="3" end="4" id="5" lemma="graag" pos="adj" postag="BW()" pt="bw" rel="hd" root="graag" word="graag"/>
+        <node begin="2" cat="advp" end="6" id="6" rel="mod">
+          <node begin="2" end="3" id="7" lemma="even" pos="adv" postag="BW()" pt="bw" rel="hd" root="even" word="even"/>
+          <node begin="4" cat="cp" end="6" id="8" rel="obcomp">
+            <node begin="4" conjtype="onder" end="5" id="9" lemma="als" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="Ida" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="body" root="Ida" word="Ida"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Wij zwemmen even graag als Ida</sentence>
+</alpino_ds>

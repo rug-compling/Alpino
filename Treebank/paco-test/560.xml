@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="0" cat="smain" end="25" id="1" rel="--">
+      <node begin="1" end="2" frame="verb(unacc,sg3,passive)" id="2" infl="sg3" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt"/>
+      <node begin="2" cat="np" end="15" id="3" index="1" rel="su">
+        <node begin="2" end="3" frame="determiner(de)" id="4" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node begin="3" end="4" frame="tmp_noun(de,count,sg)" gen="de" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="periode" sense="periode" special="tmp" word="periode"/>
+        <node begin="4" cat="pp" end="15" id="6" rel="mod">
+          <node begin="4" end="5" frame="preposition(tot,[toe,[aan,toe]])" id="7" lcat="pp" pos="prep" rel="hd" root="tot" sense="tot" word="tot"/>
+          <node begin="5" cat="np" end="15" id="8" rel="obj1">
+            <node begin="5" end="6" frame="determiner(de)" id="9" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="6" end="7" frame="noun(de,mass,sg)" gen="de" id="10" lcat="np" num="sg" pos="noun" rel="hd" root="aanvang" sense="aanvang" word="aanvang"/>
+            <node begin="7" cat="pp" end="15" id="11" rel="mod">
+              <node begin="7" end="8" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="12" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+              <node begin="8" cat="np" end="15" id="13" rel="obj1">
+                <node begin="8" end="9" frame="determiner(de)" id="14" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                <node aform="base" begin="9" end="10" frame="adjective(e)" id="15" infl="e" lcat="ap" pos="adj" rel="mod" root="formeel" sense="formeel" vform="adj" word="formele"/>
+                <node begin="10" end="11" frame="noun(de,count,pl)" gen="de" id="16" lcat="np" num="pl" pos="noun" rel="hd" root="onderhandeling" sense="onderhandeling" word="onderhandelingen"/>
+                <node begin="11" cat="pp" end="15" id="17" rel="mod">
+                  <node begin="11" end="12" frame="preposition(over,[heen])" id="18" lcat="pp" pos="prep" rel="hd" root="over" sense="over" word="over"/>
+                  <node begin="12" cat="np" end="15" id="19" rel="obj1">
+                    <node begin="12" end="13" frame="determiner(de)" id="20" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                    <node aform="base" begin="13" end="14" frame="adjective(e)" id="21" infl="e" lcat="ap" pos="adj" rel="mod" root="nieuw" sense="nieuw" vform="adj" word="nieuwe"/>
+                    <node begin="14" end="15" frame="noun(de,count,pl)" gen="de" id="22" lcat="np" num="pl" pos="noun" rel="hd" root="handel_regeling" sense="handel_regeling" word="handelsregelingen"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="0" cat="ppart" end="25" id="23" rel="vc">
+        <node begin="0" end="1" frame="er_adverb(tot)" id="24" lcat="pp" pos="pp" rel="mod" root="daartoe" sense="daartoe" special="er" word="Daartoe"/>
+        <node begin="2" end="15" id="25" index="1" rel="obj1"/>
+        <node aform="base" begin="15" end="16" frame="adjective(no_e(adv))" id="26" infl="no_e" lcat="ap" pos="adj" rel="mod" root="actief" sense="actief" vform="adj" word="actief"/>
+        <node begin="16" end="17" frame="verb(hebben,psp,transitive)" id="27" infl="psp" lcat="ppart" pos="verb" rel="hd" root="gebruik" sc="transitive" sense="gebruik" word="gebruikt"/>
+        <node begin="17" cat="oti" end="25" id="28" rel="mod">
+          <node begin="17" end="18" frame="complementizer(om)" id="29" lcat="oti" pos="comp" rel="cmp" root="om" sc="om" sense="om" word="om"/>
+          <node begin="18" cat="ti" end="25" id="30" rel="body">
+            <node begin="23" end="24" frame="complementizer(te)" id="31" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+            <node begin="18" cat="inf" end="25" id="32" rel="body">
+              <node begin="18" cat="np" end="23" id="33" rel="obj1">
+                <node begin="18" end="19" frame="number(rang)" id="34" lcat="ap" pos="num" rel="mod" root="eerste" sense="eerste" special="rang" word="eerste"/>
+                <node begin="19" end="20" frame="noun(de,count,pl)" gen="de" id="35" lcat="np" num="pl" pos="noun" rel="hd" root="voorbereiding" sense="voorbereiding" word="voorbereidingen"/>
+                <node begin="20" cat="pp" end="23" id="36" rel="mod">
+                  <node begin="20" end="21" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="37" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+                  <node begin="21" cat="np" end="23" id="38" rel="obj1">
+                    <node begin="21" end="22" frame="determiner(de,nwh,nmod,pro,nparg)" id="39" infl="de" lcat="detp" pos="det" rel="det" root="deze" sense="deze" wh="nwh" word="deze"/>
+                    <node begin="22" end="23" frame="noun(de,count,pl)" gen="de" id="40" lcat="np" num="pl" pos="noun" rel="hd" root="onderhandeling" sense="onderhandeling" word="onderhandelingen"/>
+                  </node>
+                </node>
+              </node>
+              <node begin="24" end="25" frame="verb(hebben,inf,transitive)" id="41" infl="inf" lcat="inf" pos="verb" rel="hd" root="tref" sc="transitive" sense="tref" word="treffen"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="25" end="26" frame="punct(punt)" id="42" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Daartoe wordt de periode tot de aanvang van de formele onderhandelingen over de nieuwe handelsregelingen actief gebruikt om eerste voorbereidingen voor deze onderhandelingen te treffen .</sentence>
+  <comments>
+    <comment>Q#560|Daartoe wordt de periode tot de aanvang van de formele onderhandelingen over de nieuwe handelsregelingen actief gebruikt om eerste voorbereidingen voor deze onderhandelingen te treffen .|1|1|-12.10682156141611</comment>
+  </comments>
+</alpino_ds>

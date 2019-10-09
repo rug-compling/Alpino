@@ -1,0 +1,36 @@
+#!/usr/bin/perl -w
+# trigram
+# every line is assumed to contain a separate utterance
+# $x___x $x__x $x_x are prefixed and $y_y $y__y $y___y are suffixed
+
+$x___x = "x___x";
+$x__x = "x__x";
+$x_x = "x_x";
+$y___y = "y___y";
+$y__y = "y__y";
+$y_y = "y_y";
+
+while (<>)
+{
+    tr/A-Za-z\-\<\>\@\_/ /cs;
+    @line=($x___x,$x__x,$x_x,split(' '),$y___y,$y__y,$y_y);
+    $i=0;
+    while ($i+1 < $#line) {
+	$w1=$line[$i];
+	$w2=$line[$i+1];
+	$w3=$line[$i+2];
+	$bigrams{"$w2 $w3"}++;
+	$trigrams{"$w1 $w2 $w3"}++;
+	++$i;
+    }
+}
+
+foreach $w (sort keys(%trigrams)) {
+  $nr=$trigrams{$w};
+  ($wa,$wb,$wc)=split(/ /,$w);
+  $noemer=$bigrams{"$wa $wb"};
+  if ($noemer) {
+    $p = $nr/$noemer;
+    print "$wa|$wb|$wc|$p\n";
+  }
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="20" id="2" rel="--">
+      <node begin="1" end="2" id="3" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="20" id="4" rel="vc">
+        <node begin="0" end="1" id="5" lemma="daarin" pos="adv" postag="BW()" pt="bw" rel="mod" root="daarin" word="Daarin"/>
+        <node begin="2" buiging="zonder" end="3" id="6" lemma="zeggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zeg" word="gezegd" wvorm="vd"/>
+        <node begin="4" cat="cp" end="20" id="7" rel="vc">
+          <node begin="4" conjtype="onder" end="5" id="8" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="5" cat="ssub" end="20" id="9" rel="body">
+            <node begin="5" cat="np" end="7" id="10" index="1" rel="su">
+              <node begin="5" end="6" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="6" end="7" genus="genus" getal="ev" graad="basis" id="12" lemma="NVP" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="NVP" word="NVP"/>
+            </node>
+            <node begin="18" end="19" id="13" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+            <node begin="5" cat="ppart" end="20" id="14" rel="vc">
+              <node begin="5" end="7" id="15" index="1" rel="su"/>
+              <node begin="7" end="8" id="16" lemma="reeds" pos="adv" postag="BW()" pt="bw" rel="mod" root="reeds" word="reeds"/>
+              <node begin="8" cat="pp" end="15" id="17" rel="mod">
+                <node begin="8" end="9" id="18" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+                <node begin="9" cat="np" end="15" id="19" rel="obj1">
+                  <node begin="9" end="10" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="21" lemma="benoeming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="benoeming" word="benoeming"/>
+                  <node begin="11" cat="pp" end="15" id="22" rel="mod">
+                    <node begin="11" end="12" id="23" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                    <node begin="12" cat="np" end="15" id="24" rel="obj1">
+                      <node begin="12" end="13" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                      <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="26" lemma="heer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="heer" word="heer"/>
+                      <node begin="14" end="15" genus="genus" getal="ev" graad="basis" id="27" lemma="Jonckheer" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Jonckheer" word="Jonckheer"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="15" cat="np" end="17" id="28" rel="obj1">
+                <node begin="15" buiging="zonder" end="16" getal="ev" id="29" lemma="haar" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="haar" status="vol" vwtype="bez" word="haar"/>
+                <node begin="16" end="17" getal="mv" graad="basis" id="30" lemma="bezwaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bezwaar" word="bezwaren"/>
+              </node>
+              <node begin="17" buiging="zonder" end="18" graad="basis" id="31" lemma="kenbaar" pos="fixed" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="kenbaar" word="kenbaar"/>
+              <node begin="19" buiging="zonder" end="20" id="32" lemma="maken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="maak" word="gemaakt" wvorm="vd"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="33" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Daarin wordt gezegd , dat de NVP reeds bij de benoeming van de heer Jonckheer haar bezwaren kenbaar heeft gemaakt .</sentence>
+</alpino_ds>

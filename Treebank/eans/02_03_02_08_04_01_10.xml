@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" word="Maar"/>
+      <node begin="1" cat="smain" end="7" id="3" rel="nucl">
+        <node begin="2" end="3" id="4" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        <node begin="3" cat="np" end="5" id="5" index="1" rel="su">
+          <node begin="3" end="4" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="7" lemma="kwaad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kwaad" word="kwaad"/>
+        </node>
+        <node begin="1" cat="ppart" end="7" id="8" rel="vc">
+          <node begin="1" end="2" id="9" lemma="toen" pos="adv" postag="BW()" pt="bw" rel="mod" root="toen" word="toen"/>
+          <node begin="3" end="5" id="10" index="1" rel="su"/>
+          <node begin="5" end="6" id="11" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+          <node begin="6" buiging="zonder" end="7" id="12" lemma="geschieden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geschied" word="geschied" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Maar toen was het kwaad al geschied .</sentence>
+</alpino_ds>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="9" end="10" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="20" id="2" rel="--">
+      <node begin="0" cat="ap" end="5" id="3" rel="predm">
+        <node aform="base" begin="0" end="1" frame="adjective(postn_pred(padv),pp(met))" id="4" infl="pred" lcat="ap" pos="adj" rel="hd" root="samen" sc="pp(met)" sense="samen-met" vform="adj" word="Samen"/>
+        <node begin="1" cat="pp" end="5" id="5" rel="pc">
+          <node begin="1" end="2" frame="preposition(met,[mee,[en,al]])" id="6" lcat="pp" pos="prep" rel="hd" root="met" sense="met" word="met"/>
+          <node begin="2" cat="conj" end="5" id="7" rel="obj1">
+            <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="8" lcat="np" num="sg" pos="noun" rel="cnj" root="producent" sense="producent" word="producent"/>
+            <node begin="3" end="4" frame="conj(en)" id="9" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+            <node begin="4" end="5" frame="noun(de,count,sg)" gen="de" id="10" lcat="np" num="sg" pos="noun" rel="cnj" root="consument" sense="consument" word="consument"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" frame="verb(hebben,pl,pc_pp(naar))" id="11" infl="pl" lcat="smain" pos="verb" rel="hd" root="zoek" sc="pc_pp(naar)" sense="zoek-naar" tense="present" word="zoeken"/>
+      <node begin="6" cat="pp" end="8" id="12" rel="pc">
+        <node begin="6" end="7" frame="preposition(naar,[toe])" id="13" lcat="pp" pos="prep" rel="hd" root="naar" sense="naar" word="naar"/>
+        <node aform="base" begin="7" end="8" frame="adjective(e)" id="14" infl="e" lcat="np" pos="adj" rel="obj1" root="bruikbaar" sense="bruikbaar" vform="adj" word="bruikbare"/>
+      </node>
+      <node begin="8" cat="np" end="20" id="15" rel="su">
+        <node begin="8" end="9" frame="noun(de,count,pl)" gen="de" id="16" lcat="np" num="pl" pos="noun" rel="hd" root="innovatie" sense="innovatie" word="innovaties"/>
+        <node begin="10" cat="rel" end="20" id="17" rel="mod">
+          <node begin="10" case="no_obl" end="11" frame="rel_pronoun(de,no_obl)" gen="de" id="18" index="1" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+          <node begin="10" cat="ssub" end="20" id="19" rel="body">
+            <node begin="10" end="11" id="20" index="1" rel="su"/>
+            <node begin="11" cat="np" end="19" id="21" rel="obj1">
+              <node begin="11" end="12" frame="determiner(de)" id="22" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="12" end="13" frame="noun(de,both,sg)" gen="de" id="23" lcat="np" num="sg" pos="noun" rel="hd" root="invloed" sense="invloed" word="invloed"/>
+              <node begin="13" cat="pp" end="19" id="24" rel="mod">
+                <node begin="13" end="14" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="25" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                <node begin="14" cat="np" end="19" id="26" rel="obj1">
+                  <node begin="14" end="15" frame="determiner(het)" id="27" infl="het" lcat="detp" pos="det" rel="det" root="ons" sense="ons" word="ons"/>
+                  <node begin="15" end="16" frame="noun(het,mass,sg)" gen="het" id="28" lcat="np" num="sg" pos="noun" rel="hd" root="consumptie_gedrag" sense="consumptie_gedrag" word="consumptiegedrag"/>
+                  <node begin="16" cat="pp" end="19" id="29" rel="mod">
+                    <node begin="16" end="17" frame="preposition(op,[af,na])" id="30" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+                    <node begin="17" cat="np" end="19" id="31" rel="obj1">
+                      <node begin="17" end="18" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="32" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                      <node begin="18" end="19" frame="noun(het,count,sg)" gen="het" id="33" lcat="np" num="sg" pos="noun" rel="hd" root="milieu" sense="milieu" word="milieu"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="19" end="20" frame="verb(hebben,pl,transitive)" id="34" infl="pl" lcat="ssub" pos="verb" rel="hd" root="verklein" sc="transitive" sense="verklein" tense="present" word="verkleinen"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" frame="punct(punt)" id="35" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Samen met producent en consument zoeken naar bruikbare innovaties , die de invloed van ons consumptiegedrag op het milieu verkleinen .</sentence>
+  <comments>
+    <comment>Q#10|Samen met producent en consument zoeken naar bruikbare innovaties , die de invloed van ons consumptiegedrag op het milieu verkleinen .|1|1|5.119335035212475</comment>
+  </comments>
+</alpino_ds>

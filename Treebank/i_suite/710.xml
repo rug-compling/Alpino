@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="16" id="2" rel="--">
+      <node begin="0" buiging="met-e" case="both" def="indef" end="1" gen="de" getal-n="mv-n" graad="basis" id="3" lemma="beide" naamval="stan" num="pl" pdtype="grad" per="thi" pos="pron" positie="nom" postag="VNW(onbep,grad,stan,nom,met-e,mv-n,basis)" pt="vnw" rel="su" rnum="pl" root="beide" vwtype="onbep" wh="nwh" word="Beiden"/>
+      <node begin="1" end="2" id="4" infl="pl" lemma="strijden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="strijd" sc="pc_pp(tegen)" stype="declarative" tense="present" word="strijden" wvorm="pv"/>
+      <node begin="2" cat="pp" end="4" id="5" rel="pc">
+        <node begin="2" end="3" id="6" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
+        <node begin="3" end="4" gen="de" getal="mv" graad="basis" id="7" lemma="wind_molen" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" rnum="pl" root="wind_molen" word="windmolens"/>
+      </node>
+      <node begin="5" cat="cp" end="16" id="8" rel="mod">
+        <node begin="5" cat="mwu" end="7" his="normal" his_1="normal" id="9" mwu_root="zij het" mwu_sense="zij het" rel="cmp">
+          <node begin="5" end="6" id="10" lemma="zij" pos="comp" postag="WW(pv,conj,ev)" pt="ww" pvagr="ev" pvtijd="conj" rel="mwp" root="zij" sc="sbar" word="zij" wvorm="pv"/>
+          <node begin="6" end="7" genus="onz" getal="ev" id="11" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="comp" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="mwp" root="het" sc="sbar" status="red" vwtype="pers" word="het"/>
+        </node>
+        <node begin="7" end="8" id="12" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" special="tmp" word="dan"/>
+        <node begin="8" cat="cp" end="16" id="13" rel="body">
+          <node begin="8" conjtype="onder" end="9" id="14" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+          <node begin="9" cat="ssub" end="16" id="15" rel="body">
+            <node begin="9" case="both" def="def" end="10" gen="de" getal="mv" id="16" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" rnum="pl" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="ze"/>
+            <node begin="10" end="11" id="17" lemma="daarvoor" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarvoor" special="er" word="daarvoor"/>
+            <node begin="11" buiging="zonder" end="12" id="18" lemma="elk" naamval="stan" pdtype="det" pos="adv" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="predm" root="elk" special="predm" vwtype="onbep" word="elk"/>
+            <node begin="12" cat="np" end="15" id="19" rel="obj1">
+              <node begin="12" buiging="zonder" end="13" getal="mv" id="20" infl="pron" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+              <node aform="base" begin="13" buiging="zonder" end="14" graad="basis" id="21" infl="both" lemma="eigen" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="eigen" vform="adj" word="eigen"/>
+              <node begin="14" end="15" gen="het" getal="mv" graad="basis" id="22" lemma="motief" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="motief" word="motieven"/>
+            </node>
+            <node begin="15" end="16" id="23" infl="pl" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" sc="transitive_ndev" tense="present" word="hebben" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Beiden strijden tegen windmolens , zij het dan dat ze daarvoor elk hun eigen motieven hebben .</sentence>
+</alpino_ds>

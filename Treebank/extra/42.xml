@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" cat="np" end="6" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="met-e" end="2" graad="comp" id="4" lemma="laat" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="laat" word="latere"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="minister" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="minister" word="minister"/>
+        <node begin="3" cat="pp" end="5" id="6" rel="mod">
+          <node begin="3" end="4" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="justitie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="justitie" word="justitie"/>
+        </node>
+        <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="donker" pos="name" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="app" root="Donker" word="Donker"/>
+      </node>
+      <node begin="6" end="7" id="10" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="7" cat="np" end="13" id="11" rel="predc">
+        <node begin="7" end="8" id="12" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="8" buiging="zonder" end="9" graad="basis" id="13" lemma="groot" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="groot" word="groot"/>
+        <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="14" lemma="voorstander" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorstander" word="voorstander"/>
+        <node begin="10" cat="pp" end="13" id="15" rel="mod">
+          <node begin="10" end="11" id="16" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="11" cat="np" end="13" id="17" rel="obj1">
+            <node begin="11" buiging="met-e" end="12" id="18" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+            <node begin="12" end="13" getal="mv" graad="basis" id="19" lemma="werkkamp" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="werkkamp" word="werkkampen"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De latere minister van justitie Donker was een groot voorstander van deze werkkampen .</sentence>
+</alpino_ds>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="22" id="2" rel="--">
+      <node begin="0" cat="cp" end="7" id="3" rel="sat">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+        <node begin="1" cat="ssub" end="7" id="5" rel="body">
+          <node begin="1" end="2" genus="onz" getal="ev" id="6" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+          <node begin="2" cat="np" end="6" id="7" rel="predc">
+            <node begin="2" end="3" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="3" cat="ap" end="5" id="9" rel="mod">
+              <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="10" lemma="USB" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="USB" word="USB"/>
+              <node begin="4" buiging="zonder" end="5" id="11" lemma="aangesloten" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="hd" root="aangesloten" word="aangesloten" wvorm="vd"/>
+            </node>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="muis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="muis" word="muis"/>
+          </node>
+          <node begin="6" end="7" id="13" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="8" cat="conj" end="22" id="14" rel="nucl">
+        <node begin="8" cat="sv1" end="13" id="15" rel="cnj">
+          <node begin="8" end="9" id="16" lemma="ontkoppelen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ontkoppel" word="ontkoppel" wvorm="pv"/>
+          <node begin="9" cat="np" end="13" id="17" rel="obj1">
+            <node begin="9" buiging="met-e" end="10" getal-n="zonder-n" id="18" lemma="deze" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(aanw,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="hd" root="deze" vwtype="aanw" word="deze"/>
+            <node begin="10" cat="pp" end="13" id="19" rel="mod">
+              <node begin="10" end="11" id="20" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="11" cat="np" end="13" id="21" rel="obj1">
+                <node begin="11" buiging="zonder" end="12" getal="ev" id="22" lemma="je" naamval="stan" npagr="agr" pdtype="det" persoon="2v" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="je" status="red" vwtype="bez" word="je"/>
+                <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="23" lemma="computer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="computer" word="computer"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="13" conjtype="neven" end="14" id="24" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="14" cat="sv1" end="22" id="25" rel="cnj">
+          <node begin="14" end="15" id="26" lemma="aan_sluiten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="sluit_aan" word="sluit" wvorm="pv"/>
+          <node begin="15" buiging="met-e" end="16" getal-n="zonder-n" id="27" lemma="deze" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(aanw,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="obj1" root="deze" vwtype="aanw" word="deze"/>
+          <node begin="16" end="17" id="28" lemma="opnieuw" pos="adv" postag="BW()" pt="bw" rel="mod" root="opnieuw" word="opnieuw"/>
+          <node begin="17" end="18" id="29" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
+          <node begin="18" cat="pp" end="22" id="30" rel="mod">
+            <node begin="18" end="19" id="31" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="19" cat="np" end="22" id="32" rel="obj1">
+              <node begin="19" end="20" id="33" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="34" lemma="USB" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="USB" word="USB"/>
+              <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="35" lemma="aansluiting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aansluiting" word="aansluiting"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als het een USB aangesloten muis is , ontkoppel deze van je computer en sluit deze opnieuw aan in de USB aansluiting .</sentence>
+</alpino_ds>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="15" end="16" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="19" id="3" rel="--">
+      <node begin="7" end="8" id="4" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+      <node begin="0" cat="oti" end="9" id="5" rel="vc">
+        <node begin="0" end="1" id="6" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="Om"/>
+        <node begin="1" cat="ti" end="9" id="7" rel="body">
+          <node begin="3" end="4" id="8" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="1" cat="inf" end="9" id="9" rel="body">
+            <node begin="4" buiging="zonder" end="5" id="10" lemma="kunnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kan" word="kunnen" wvorm="inf"/>
+            <node begin="1" cat="inf" end="9" id="11" rel="vc">
+              <node begin="1" cat="np" end="3" id="12" rel="obj1">
+                <node begin="1" end="2" genus="genus" getal="ev" graad="basis" id="13" lemma="pdf" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mod" root="pdf" word="PDF"/>
+                <node begin="2" end="3" getal="mv" graad="basis" id="14" lemma="bestand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bestand" word="bestanden"/>
+              </node>
+              <node begin="5" buiging="zonder" end="6" id="15" lemma="wijzigen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="wijzig" word="wijzigen" wvorm="inf"/>
+              <node begin="8" end="9" getal="ev" id="16" index="1" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+            </node>
+            <node begin="8" end="9" id="17" index="1" rel="su"/>
+          </node>
+        </node>
+      </node>
+      <node begin="8" end="9" id="18" index="1" rel="su"/>
+      <node begin="11" buiging="zonder" end="12" graad="basis" id="19" lemma="nodig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="nodig" word="nodig"/>
+      <node begin="9" cat="np" end="19" id="20" rel="me">
+        <node begin="9" end="10" genus="genus" getal="ev" graad="basis" id="21" lemma="pdf" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mod" root="pdf" word="PDF"/>
+        <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="22" lemma="software" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="software" word="software"/>
+        <node begin="12" cat="rel" end="15" id="23" rel="mod">
+          <node begin="12" end="13" getal="getal" id="24" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+          <node begin="12" cat="ssub" end="15" id="25" rel="body">
+            <node begin="12" end="13" id="26" index="2" rel="su"/>
+            <node begin="13" end="14" getal="ev" id="27" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dit" status="vol" vwtype="aanw" word="dit"/>
+            <node begin="14" end="15" id="28" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+          </node>
+        </node>
+        <node begin="16" cat="cp" end="19" id="29" rel="mod">
+          <node begin="16" conjtype="onder" end="17" id="30" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="zoals"/>
+          <node begin="17" cat="mwu" end="19" id="31" rel="body">
+            <node begin="17" end="18" id="32" lemma="Acrobat" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Acrobat" spectype="deeleigen" word="Acrobat"/>
+            <node begin="18" end="19" id="33" lemma="XL" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="XL" spectype="deeleigen" word="XL"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="34" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Om PDF bestanden te kunnen wijzigen , heb je PDF software nodig die dit kan , zoals Acrobat XL .</sentence>
+</alpino_ds>

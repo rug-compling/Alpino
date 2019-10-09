@@ -1,0 +1,86 @@
+ifndef ALPINO_HOME
+       ALPINO_HOME:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+endif
+
+ifndef PROLOG
+       PROLOG=sicstus
+endif
+
+ifndef HDRUG
+       HDRUG=$(ALPINO_HOME)/Hdrug/hdrug
+endif
+
+ifeq "$(shell if [ -r $(ALPINO_HOME)/Makefile.defs ]; then echo yes; fi)" "yes"
+include $(ALPINO_HOME)/Makefile.defs
+endif
+
+ifndef ALPINO
+       ALPINO=$(ALPINO_HOME)/src/Alpino
+endif
+
+ifeq ($(PLATFORM),darwin)
+        DYLD_LIBRARY_PATH=$(ALPINO_HOME)/fadd:$(ALPINO_HOME)/Treebank/libdzcorpus:$(ALPINO_HOME)/PosTagger
+	export DYLD_LIBRARY_PATH
+	DYLIBEXT=.dylib
+	MODULEEXT=.bundle
+	ifeq ($(PROLOG),swipl)
+		MODULEEXT=.dylib
+	endif
+	PYMODULEEXT=.so
+else
+	ifeq ($(PLATFORM),windows)
+		DYLIBEXT=.dll
+		MODULEEXT=.dll
+		PYMODULEEXT=.dll
+	else
+		DYLIBEXT=.so
+		MODULEEXT=.so
+		PYMODULEEXT=.so
+	endif
+endif
+
+ifndef SPLFR
+       SPLFR=splfr
+endif
+
+ifndef PREFIX
+       PREFIX=$(ALPINO_HOME)
+endif
+
+ifndef BINDIR
+       BINDIR=$(PREFIX)/bin
+endif
+
+ifndef MANDIR
+       MANDIR=$(PREFIX)/man
+endif
+
+ifndef SUITE
+       SUITE=Suites/g_suite
+endif
+
+ifndef S_FSA_MORPH_SCRIPT
+       S_FSA_MORPH_SCRIPT=morph_data.pl
+endif
+
+ifndef S_FSA_BUILD
+       S_FSA_BUILD=fsa_build
+endif
+
+ifndef TRED_EXECUTABLE
+       TRED_EXECUTABLE=echo TrEd not available on this machine?
+endif
+
+LIBCORPUS_PATH=$(ALPINO_HOME)/TreebankTools/IndexedCorpus
+LIBCORPUS_DYLIB=$(LIBCORPUS_PATH)/libcorpus$(DYLIBEXT)
+LIBCORPUS_STATIC=$(LIBCORPUS_PATH)/libcorpus.a
+
+ifndef BOOST_HOME
+	BOOST_HOME=/usr
+endif
+
+BOOST_INCLUDE_PATH=$(BOOST_HOME)/include
+BOOST_LIBRARY_PATH=$(BOOST_HOME)/lib
+
+.PHONY: all clean realclean install
+

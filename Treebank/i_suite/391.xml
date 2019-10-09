@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="6" id="2" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="triest" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="dp" root="triest" word="Triest"/>
+      <node begin="2" cat="smain" end="6" id="4" rel="dp">
+        <node begin="2" end="3" genus="fem" getal="ev" id="5" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+        <node begin="3" end="4" id="6" lemma="doen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="doe" word="doet" wvorm="pv"/>
+        <node begin="4" end="5" genus="onz" getal="ev" id="7" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+        <node begin="5" end="6" id="8" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Triest , ze doet het niet</sentence>
+</alpino_ds>

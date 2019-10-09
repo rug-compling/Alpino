@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="mwu" end="4" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="Dormez" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Dormez" spectype="vreemd" word="Dormez"/>
+      <node begin="1" end="2" id="3" lemma="je" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="je" spectype="vreemd" word="je"/>
+      <node begin="2" end="3" id="4" lemma="le" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="le" spectype="vreemd" word="le"/>
+      <node begin="3" end="4" id="5" lemma="veux" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="veux" spectype="vreemd" word="veux"/>
+    </node>
+    <node begin="4" end="5" id="6" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>Dormez je le veux !</sentence>
+</alpino_ds>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="np" end="4" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="zes" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="zes" word="zes"/>
+      <node begin="1" end="2" getal="mv" graad="basis" id="3" lemma="graad" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="graden" word="graden"/>
+      <node begin="2" cat="pp" end="4" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
+        <node begin="3" end="4" id="6" lemma="nul" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="nul" word="nul"/>
+      </node>
+    </node>
+    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>zes graden onder nul .</sentence>
+  <comments>
+    <comment>CGN geeft zes graden als bepaling bij onder nul!</comment>
+  </comments>
+</alpino_ds>

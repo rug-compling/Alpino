@@ -1,0 +1,23 @@
+#!/usr/bin/perl -w
+
+system("echo \"&control n = 5000, 
+                events_in='$ARGV[0]',
+                params_out='$ARGV[2]'
+              /\" \| ~/maxent/iis");
+
+open IN, "$ARGV[2]";
+open OUT, ">$ARGV[1]";
+
+while (<IN>) {
+  chomp;
+  s/^\s*//;
+  my ($f,$w) = split /\s+/;
+  print OUT "weight($f,$w).\n";
+}
+
+unlink("$ARGV[0]");
+unlink("$ARGV[2]");
+
+
+close(IN);
+close(OUT);

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="du" end="4" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="dp">
+        <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="3" lemma="product" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="product" word="PRODUCT"/>
+        <node begin="1" end="2" id="4" lemma="U1.2.4" pos="name" postag="SPEC(symb)" pt="spec" rel="app" root="U1.2.4" spectype="symb" word="U1.2.4"/>
+      </node>
+      <node begin="2" cat="np" end="4" id="5" rel="dp">
+        <node begin="2" end="3" genus="genus" getal="ev" graad="basis" id="6" lemma="FYSIEK" naamval="stan" ntype="eigen" pos="adj" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mod" root="fysiek" word="FYSIEK"/>
+        <node begin="3" end="4" genus="genus" getal="ev" graad="basis" id="7" lemma="MILIEU" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="milieu" word="MILIEU"/>
+      </node>
+    </node>
+  </node>
+  <sentence>PRODUCT U1.2.4 FYSIEK MILIEU</sentence>
+</alpino_ds>

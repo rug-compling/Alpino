@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="inf" end="5" id="1" rel="--">
+      <node begin="0" cat="pp" end="4" id="2" rel="mod">
+        <node begin="0" end="1" frame="modal_adverb" id="3" lcat="advp" lemma="alleen" pos="adv" postag="BW()" pt="bw" rel="mod" root="alleen" sc="modal" sense="alleen" word="Alleen"/>
+        <node begin="1" end="2" frame="preposition(bij,[vandaan])" id="4" lcat="pp" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" sense="bij" vztype="init" word="bij"/>
+        <node begin="2" cat="np" end="4" id="5" rel="obj1">
+          <node aform="base" begin="2" buiging="met-e" end="3" frame="adjective(e)" graad="basis" id="6" infl="e" lcat="ap" lemma="gezond" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gezond" sense="gezond" vform="adj" word="gezonde"/>
+          <node begin="3" end="4" frame="noun(het,count,pl)" gen="het" getal="mv" graad="basis" id="7" lcat="np" lemma="dier" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dier" sense="dier" word="dieren"/>
+        </node>
+      </node>
+      <node begin="4" buiging="zonder" end="5" frame="verb(hebben,inf,intransitive)" id="8" infl="inf" lcat="inf" lemma="gebruiken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="gebruik" sc="intransitive" sense="gebruik" word="gebruiken" wvorm="inf"/>
+    </node>
+    <node begin="5" end="6" frame="punct(punt)" id="9" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Alleen bij gezonde dieren gebruiken .</sentence>
+  <comments>
+    <comment>Q#vetdocs_PDFs_EPAR_PurevaxRCPFeLV_V-089-PI-nl-s26.1|Alleen bij gezonde dieren gebruiken .|1|1|0.09738235074814859</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="48" id="0" rel="top">
+    <node begin="12" end="13" frame="punct(haak_open)" id="1" lcat="punct" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" sense="(" special="haak_open" word="("/>
+    <node begin="15" end="16" frame="punct(haak_sluit)" id="2" lcat="punct" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+    <node begin="16" end="17" frame="punct(komma)" id="3" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="21" end="22" frame="punct(haak_open)" id="4" lcat="punct" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" sense="(" special="haak_open" word="("/>
+    <node begin="24" end="25" frame="punct(komma)" id="5" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="27" end="28" frame="punct(komma)" id="6" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="33" end="34" frame="punct(haak_sluit)" id="7" lcat="punct" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+    <node begin="43" end="44" frame="punct(haak_open)" id="8" lcat="punct" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" sense="(" special="haak_open" word="("/>
+    <node begin="0" cat="smain" end="46" id="9" rel="--">
+      <node begin="0" end="1" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" genus="onz" getal="ev" id="10" infl="het" lcat="np" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" sense="het" status="red" vwtype="pers" wh="nwh" word="Het"/>
+      <node begin="1" end="2" frame="verb(unacc,sg_heeft,copula)" id="11" infl="sg_heeft" lcat="smain" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="is" wvorm="pv"/>
+      <node begin="2" cat="ap" end="46" id="12" rel="predc">
+        <node aform="base" begin="2" buiging="zonder" end="3" frame="adjective(postn_no_e(nonadv))" graad="basis" id="13" infl="no_e" lcat="ap" lemma="verkrijgbaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="verkrijgbaar" sense="verkrijgbaar" vform="adj" word="verkrijgbaar"/>
+        <node begin="3" cat="conj" end="46" id="14" rel="mod">
+          <node begin="3" cat="cp" end="15" id="15" rel="cnj">
+            <node begin="3" end="4" frame="complementizer(als)" id="16" lcat="cp" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" sc="als" sense="als" vztype="init" word="als"/>
+            <node begin="4" cat="np" end="15" id="17" rel="body">
+              <node begin="4" end="5" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="18" lcat="np" lemma="oplossing" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oplossing" sense="oplossing" word="oplossing"/>
+              <node begin="5" cat="pp" end="15" id="19" rel="mod">
+                <node begin="5" end="6" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="20" lcat="pp" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" sense="voor" vztype="init" word="voor"/>
+                <node begin="6" cat="np" end="15" id="21" rel="obj1">
+                  <node aform="base" begin="6" buiging="met-e" end="7" frame="adjective(e)" graad="basis" id="22" infl="e" lcat="ap" lemma="oraal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="oraal" sense="oraal" vform="adj" word="orale"/>
+                  <node begin="7" end="8" frame="noun(de,both,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="23" lcat="np" lemma="toediening" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="toediening" sense="toediening" word="toediening"/>
+                  <node begin="8" cat="pp" end="15" id="24" rel="mod">
+                    <node begin="8" end="9" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="25" lcat="pp" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" sense="voor" vztype="init" word="voor"/>
+                    <node begin="9" cat="conj" end="15" id="26" rel="obj1">
+                      <node begin="10" conjtype="neven" end="11" frame="conj(en)" id="27" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+                      <node begin="9" cat="np" end="15" id="28" rel="cnj">
+                        <node begin="9" end="10" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="29" lcat="np" lemma="kip" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kip" sense="kip" word="kippen"/>
+                        <node begin="13" cat="np" end="15" id="30" index="1" rel="mod">
+                          <node begin="13" end="14" frame="number(hoofd(pl_num))" id="31" infl="pl_num" lcat="detp" lemma="100" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="100" sense="100" special="hoofd" word="100"/>
+                          <node begin="14" end="15" frame="meas_mod_noun(both,count,meas)" gen="both" genus="zijd" getal="ev" graad="basis" id="32" lcat="np" lemma="mg/ml" naamval="stan" ntype="soort" num="meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="mg/ml" sense="mg/ml" special="meas_mod" word="mg/ml"/>
+                        </node>
+                      </node>
+                      <node begin="11" cat="np" end="15" id="33" rel="cnj">
+                        <node begin="11" end="12" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="34" lcat="np" lemma="kalkoen" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kalkoen" sense="kalkoen" word="kalkoenen"/>
+                        <node begin="13" end="15" id="35" index="1" rel="mod"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="17" cat="cp" end="33" id="36" rel="cnj">
+            <node begin="17" conjtype="onder" end="18" frame="complementizer(als)" id="37" lcat="cp" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" sense="als" word="als"/>
+            <node begin="18" cat="np" end="33" id="38" rel="body">
+              <node begin="18" end="19" frame="noun(both,count,pl)" gen="both" getal="mv" graad="basis" id="39" lcat="np" lemma="tablet" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="tablet" sense="tablet" word="tabletten"/>
+              <node begin="19" cat="pp" end="33" id="40" rel="mod">
+                <node begin="19" end="20" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="41" lcat="pp" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" sense="voor" vztype="init" word="voor"/>
+                <node begin="20" cat="np" end="33" id="42" rel="obj1">
+                  <node begin="20" end="21" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="43" lcat="np" lemma="hond" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="hond" sense="hond" word="honden"/>
+                  <node begin="22" cat="conj" end="33" id="44" rel="mod">
+                    <node begin="22" cat="np" end="24" id="45" rel="cnj">
+                      <node begin="22" end="23" frame="number(hoofd(pl_num))" id="46" infl="pl_num" lcat="detp" lemma="15" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="det" root="15" sense="15" special="hoofd" word="15"/>
+                      <node begin="23" end="24" frame="meas_mod_noun(both,count,meas)" gen="both" genus="zijd" getal="ev" graad="basis" id="47" lcat="np" lemma="mg" naamval="stan" ntype="soort" num="meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="milli_gram" sense="milli_gram" special="meas_mod" word="mg"/>
+                    </node>
+                    <node begin="25" cat="np" end="27" id="48" rel="cnj">
+                      <node begin="25" end="26" frame="number(hoofd(pl_num))" id="49" infl="pl_num" lcat="detp" lemma="50" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="50" sense="50" special="hoofd" word="50"/>
+                      <node begin="26" end="27" frame="meas_mod_noun(both,count,meas)" gen="both" genus="zijd" getal="ev" graad="basis" id="50" lcat="np" lemma="mg" naamval="stan" ntype="soort" num="meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="milli_gram" sense="milli_gram" special="meas_mod" word="mg"/>
+                    </node>
+                    <node begin="28" cat="np" end="30" id="51" rel="cnj">
+                      <node begin="28" end="29" frame="number(hoofd(pl_num))" id="52" infl="pl_num" lcat="detp" lemma="100" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="100" sense="100" special="hoofd" word="100"/>
+                      <node begin="29" end="30" frame="meas_mod_noun(both,count,meas)" gen="both" genus="zijd" getal="ev" graad="basis" id="53" lcat="np" lemma="mg" naamval="stan" ntype="soort" num="meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="milli_gram" sense="milli_gram" special="meas_mod" word="mg"/>
+                    </node>
+                    <node begin="30" conjtype="neven" end="31" frame="conj(en)" id="54" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+                    <node begin="31" cat="np" end="33" id="55" rel="cnj">
+                      <node begin="31" end="32" frame="number(hoofd(pl_num))" id="56" infl="pl_num" lcat="detp" lemma="150" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="150" sense="150" special="hoofd" word="150"/>
+                      <node begin="32" end="33" frame="meas_mod_noun(both,count,meas)" gen="both" genus="zijd" getal="ev" graad="basis" id="57" lcat="np" lemma="mg" naamval="stan" ntype="soort" num="meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="milli_gram" sense="milli_gram" special="meas_mod" word="mg"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="34" conjtype="neven" end="35" frame="conj(en)" id="58" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+          <node begin="35" cat="cp" end="46" id="59" rel="cnj">
+            <node begin="35" end="36" frame="complementizer(als)" id="60" lcat="cp" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" sc="als" sense="als" vztype="init" word="als"/>
+            <node begin="36" cat="np" end="46" id="61" rel="body">
+              <node begin="36" end="37" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="62" lcat="np" lemma="oplossing" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oplossing" sense="oplossing" word="oplossing"/>
+              <node begin="37" cat="pp" end="46" id="63" rel="mod">
+                <node begin="37" end="38" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="64" lcat="pp" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" sense="voor" vztype="init" word="voor"/>
+                <node begin="38" cat="np" end="46" id="65" rel="obj1">
+                  <node begin="38" end="39" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="66" lcat="np" lemma="injectie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="injectie" sense="injectie" word="injectie"/>
+                  <node begin="39" cat="pp" end="46" id="67" rel="mod">
+                    <node begin="39" end="40" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="68" lcat="pp" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" sense="voor" vztype="init" word="voor"/>
+                    <node begin="40" cat="conj" end="46" id="69" rel="obj1">
+                      <node begin="41" conjtype="neven" end="42" frame="conj(en)" id="70" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+                      <node begin="40" cat="np" end="46" id="71" rel="cnj">
+                        <node begin="40" end="41" frame="noun(het,mass,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="72" lcat="np" lemma="rundvee" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="rund_vee" sense="rund_vee" word="rundvee"/>
+                        <node begin="44" cat="np" end="46" id="73" index="2" rel="mod">
+                          <node begin="44" end="45" frame="number(hoofd(pl_num))" id="74" infl="pl_num" lcat="detp" lemma="50" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="50" sense="50" special="hoofd" word="50"/>
+                          <node begin="45" end="46" frame="meas_mod_noun(both,count,meas)" gen="both" genus="zijd" getal="ev" graad="basis" id="75" lcat="np" lemma="mg/ml" naamval="stan" ntype="soort" num="meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="mg/ml" sense="mg/ml" special="meas_mod" word="mg/ml"/>
+                        </node>
+                      </node>
+                      <node begin="42" cat="np" end="46" id="76" rel="cnj">
+                        <node begin="42" end="43" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="77" lcat="np" lemma="hond" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="hond" sense="hond" word="honden"/>
+                        <node begin="44" end="46" id="78" index="2" rel="mod"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="46" end="47" frame="punct(haak_sluit)" id="79" lcat="punct" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+    <node begin="47" end="48" frame="punct(punt)" id="80" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Het is verkrijgbaar als oplossing voor orale toediening voor kippen en kalkoenen ( 100 mg/ml ) , als tabletten voor honden ( 15 mg , 50 mg , 100 mg en 150 mg ) en als oplossing voor injectie voor rundvee en honden ( 50 mg/ml ) .</sentence>
+  <comments>
+    <comment>Q#vetdocs_PDFs_EPAR_dicural_V-031-nl1-s7.3|Het is verkrijgbaar als oplossing voor orale toediening voor kippen en kalkoenen ( 100 mg/ml ) , als tabletten voor honden ( 15 mg , 50 mg , 100 mg en 150 mg ) en als oplossing voor injectie voor rundvee en honden ( 50 mg/ml ) .|1|1|-0.2534795745971443</comment>
+  </comments>
+</alpino_ds>

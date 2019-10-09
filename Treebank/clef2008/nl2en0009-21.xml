@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="whq" end="6" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="4" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welke"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="componist" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="componist" word="componist"/>
+      </node>
+      <node begin="0" cat="sv1" end="6" id="6" rel="body">
+        <node begin="0" end="2" id="7" index="1" rel="su"/>
+        <node begin="2" end="3" id="8" lemma="schrijven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="schrijf" word="schreef" wvorm="pv"/>
+        <node begin="4" cat="mwu" end="6" id="9" rel="obj1">
+          <node begin="4" end="5" id="10" lemma="Pacific" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Pacific" spectype="deeleigen" word="Pacific"/>
+          <node begin="5" end="6" id="11" lemma="231" numtype="hoofd" pos="name" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="231" word="231"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="7" end="8" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke componist schreef &quot; Pacific 231 &quot; ?</sentence>
+</alpino_ds>

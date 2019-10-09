@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="sv1" end="7" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="7" id="3" rel="vc">
+        <node begin="0" end="1" getal="getal" id="4" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+        <node begin="2" buiging="zonder" end="3" id="5" lemma="zeggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zeg" word="gezegd" wvorm="vd"/>
+        <node begin="3" cat="cp" end="7" id="6" rel="vc">
+          <node begin="3" conjtype="onder" end="4" id="7" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="4" cat="ssub" end="7" id="8" rel="body">
+            <node begin="4" end="5" genus="masc" getal="ev" id="9" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+            <node begin="5" buiging="zonder" end="6" graad="basis" id="10" lemma="dood" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="dood" word="dood"/>
+            <node begin="6" end="7" id="11" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Er wordt gezegd dat hij dood is</sentence>
+</alpino_ds>

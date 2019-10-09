@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="0" cat="smain" end="25" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="4" lemma="iepers" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Ieperse" word="Ieperse"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="rechtbank" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rechtbank" word="rechtbank"/>
+      </node>
+      <node begin="3" end="4" id="6" lemma="veroordelen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="veroordeel" word="veroordeelde" wvorm="pv"/>
+      <node begin="4" end="5" genus="fem" getal="getal" id="7" lemma="haar" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,getal,fem)" pt="vnw" rel="obj1" root="haar" status="vol" vwtype="pers" word="haar"/>
+      <node begin="5" end="6" id="8" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
+      <node begin="6" end="7" id="9" lemma="opnieuw" pos="adv" postag="BW()" pt="bw" rel="mod" root="opnieuw" word="opnieuw"/>
+      <node begin="7" cat="pp" end="13" id="10" rel="pc">
+        <node begin="7" end="8" id="11" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+        <node begin="8" cat="conj" end="13" id="12" rel="obj1">
+          <node begin="8" cat="np" end="10" id="13" rel="cnj">
+            <node begin="8" end="9" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="15" lemma="boete" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="boete" word="boete"/>
+          </node>
+          <node begin="10" conjtype="neven" end="11" id="16" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="11" cat="np" end="13" id="17" rel="cnj">
+            <node begin="11" end="12" id="18" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="19" lemma="schadevergoeding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schadevergoeding" word="schadevergoeding"/>
+          </node>
+        </node>
+      </node>
+      <node begin="13" cat="pp" end="25" id="20" rel="mod">
+        <node begin="13" end="14" id="21" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+        <node begin="14" cat="np" end="25" id="22" rel="obj1">
+          <node begin="14" end="15" id="23" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="15" buiging="zonder" end="16" getal-n="zonder-n" id="24" lemma="overgooien" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="overgooien" word="overgooien" wvorm="inf"/>
+          <node begin="16" cat="pp" end="18" id="25" rel="mod">
+            <node begin="16" end="17" id="26" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="17" end="18" getal="mv" graad="basis" id="27" lemma="voorwerp" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="voorwerp" word="voorwerpen"/>
+          </node>
+          <node begin="18" cat="pp" end="25" id="28" rel="mod">
+            <node begin="18" end="19" id="29" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="19" cat="np" end="25" id="30" rel="obj1">
+              <node begin="19" end="20" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="32" lemma="tuin" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tuin" word="tuin"/>
+              <node begin="21" cat="pp" end="25" id="33" rel="mod">
+                <node begin="21" end="22" id="34" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="22" cat="np" end="25" id="35" rel="obj1">
+                  <node begin="22" buiging="zonder" end="23" getal="ev" id="36" lemma="haar" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="haar" status="vol" vwtype="bez" word="haar"/>
+                  <node begin="23" buiging="met-e" end="24" graad="basis" id="37" lemma="bejaard" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="bejaard" word="bejaarde"/>
+                  <node begin="24" end="25" getal="mv" graad="basis" id="38" lemma="buur" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="buur" word="buren"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="25" end="26" id="39" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De Ieperse rechtbank veroordeelde haar gisteren opnieuw tot een boete en een schadevergoeding voor het overgooien van voorwerpen in de tuin van haar bejaarde buren .</sentence>
+</alpino_ds>

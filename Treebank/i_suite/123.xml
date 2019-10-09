@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" cat="pp" end="6" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="Met"/>
+        <node begin="1" cat="conj" end="6" id="4" rel="obj1">
+          <node begin="1" cat="np" end="3" id="5" rel="cnj">
+            <node begin="1" end="2" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="2" end="3" id="7" lemma="linker-" pos="prefix" postag="SPEC(afgebr)" pt="spec" rel="hd" root="linker" spectype="afgebr" word="linker-"/>
+          </node>
+          <node begin="3" conjtype="neven" end="4" id="8" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="4" cat="np" end="6" id="9" rel="cnj">
+            <node begin="4" end="5" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="rechtervoet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rechter_voet" word="rechtervoet"/>
+          </node>
+        </node>
+      </node>
+      <node begin="6" end="7" id="12" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="7" cat="mwu" end="10" id="13" rel="su">
+        <node begin="7" end="8" id="14" lemma="Van" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Van" spectype="deeleigen" word="Van"/>
+        <node begin="8" end="9" id="15" lemma="der" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="der" spectype="deeleigen" word="der"/>
+        <node begin="9" end="10" id="16" lemma="Kuylen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kuylen" spectype="deeleigen" word="Kuylen"/>
+      </node>
+      <node begin="10" cat="np" end="12" id="17" rel="predc">
+        <node begin="10" end="11" id="18" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="meester" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="meester" word="meester"/>
+      </node>
+    </node>
+    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Met de linker- en de rechtervoet was Van der Kuylen een meester .</sentence>
+</alpino_ds>

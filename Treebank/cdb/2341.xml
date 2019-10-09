@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" cat="pp" end="5" id="2" rel="ld">
+        <node begin="0" end="1" id="3" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="Op"/>
+        <node begin="1" cat="np" end="5" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="kanaal" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kanaal" word="kanalen"/>
+          <node begin="3" cat="pp" end="5" id="7" rel="mod">
+            <node begin="3" end="4" id="8" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="9" lemma="Noord-Holland" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Noord-Holland" word="Noord-Holland"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" id="10" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+      <node begin="6" end="7" id="11" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
+      <node begin="7" end="8" id="12" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+      <node begin="8" end="9" id="13" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
+      <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="14" lemma="ijs" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="su" root="ijs" word="ijs"/>
+      <node begin="10" end="11" id="15" lemma="voor" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="voor" vztype="fin" word="voor"/>
+    </node>
+    <node begin="11" end="12" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Op de kanalen in Noord-Holland komt nu ook weer ijs voor .</sentence>
+</alpino_ds>

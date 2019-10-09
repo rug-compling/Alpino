@@ -1,0 +1,267 @@
+%           -*-Mode: prolog;-*-
+
+:- module(grammar, [ lex/3,
+		     grammar_rule/3,
+		     top_category/1,
+		     head/2,
+		     sem_filter/2
+		   ]).
+
+:- use_module(hdrug_util,hdrug_util,all).
+
+% the original files as I got them from John Carroll:
+:- prolog_flag(single_var_warnings,Old,off),
+    ensure_loaded('Anlt2/lexicon'),
+    ensure_loaded('Anlt2/grammar'),
+   prolog_flag(single_var_warnings,_,Old).
+
+grammar_rule(Name,M,Ds) :-
+	syn(Name,_,[M0|Ds0]),
+	Name \== group,       % cyclic x_54:X -> x_54:X rule.
+	Name \== premod,      % useless cyclic x_55 -> x_55 rule
+	simplify_cat(M0,M),
+	simplify_cats(Ds0,Ds).
+
+reset_glexno :- 
+	(  flag(glexno(W)),
+	   flag(glexno(W),_,undefined),
+	   fail
+	;  true
+	).
+
+id(Id0,W,Id) :-
+	functor(Id,W,2),
+	arg(1,Id,No),
+	arg(2,Id,Id0),
+	flag(glexno(W),No0),
+	(  No0 = undefined
+	-> No = 1
+	;  No is No0+1
+	),
+	flag(glexno(W),_,No).
+
+lex(Id,Cat,Word) :-
+	reset_glexno,
+	anlt_lex(Word,Id0,List),
+	lists:member(Cat0,List),
+	simplify_cat(Cat0,Cat),
+	id(Id0,Word,Id).
+
+top_category(sigma).
+
+simplify_cats([],[]).
+simplify_cats([H0|T0],[H|T]) :-
+	simplify_cat(H0,H),
+	simplify_cats(T0,T).
+
+simplify_cat(C0,C) :-
+	(  simplify_cat0(C0,C)
+	-> true
+	;  format(user_error,"error: ~w ~n",[C0]),
+	   fail
+	).
+
+simplify_cat0(Var,Term) :-
+	var(Var),!,
+	Term=Var.
+simplify_cat0(F:List0,Term) :-
+	remove_features(F,List0,List1),
+	!,
+	simplify_att_val_list(List1,List),
+	Term =.. [F|List].
+simplify_cat0(F:List0,Term) :-
+	!, 
+	write(F),nl,
+	simplify_att_val_list(List0,List),
+	Term =.. [F|List].
+simplify_cat0(X,X).
+
+simplify_att_val_list([],[]).
+simplify_att_val_list([_Att=Val0|Tail0],[Val|Tail]) :-
+	simplify_cat0(Val0,Val),
+	simplify_att_val_list(Tail0,Tail).
+
+
+% based on anlt2.log, discovered by MJ Nederhof's parser-generator.
+remove_features( x_1,[_,_,_,_,A,B,_|Rest],
+                     [A,B|Rest]).
+remove_features(x_10,[_,A,B,_,C,D,_,_,_|Rest],
+                     [A,B,C,D|Rest]).
+remove_features(x_12,[_,_,_,_,A,B,_|Rest],
+                     [A,B|Rest]).
+remove_features(x_14,[A],
+		     [A]).
+remove_features(x_15,[_,_,_,A,_,B,C,D,E,_,F,_,G,H,_,I,J,K],
+		     [A,B,C,D,E,F,G,H,I,J,K]).
+remove_features(x_16,[_,_,_,A,B,C,D,E,F,G,H,I,J,_,K],
+		     [A,B,C,D,E,F,G,H,I,J,K]).
+remove_features(x_17,[_],
+		     []).
+remove_features(x_18,[_,_,_,_,_,A,_,_,B,C,D,E,F,_,G],
+                     [A,B,C,D,E,F,G]).
+remove_features(x_19,[_,_,_,_,_,A,_,_,B,C,D,E,F],
+                     [A,B,C,D,E,F]).
+remove_features(x_20,[_,_,_,A,B,C,D,_,E,F,G,H],
+		     [A,B,C,D,E,F,G,H]).
+remove_features(x_21,[_,_,_,A,B,C,D,E,F,_,_,G,H,_,I,J,K],
+		     [A,B,C,D,E,F,G,H,I,J,K]).
+remove_features(x_22,[_,_,_,A,_,B,C,D,E,_,_,F,G,_,H,I,J,K],
+		     [A,B,C,D,E,F,G,H,I,J,K]).
+remove_features(x_23,[A],
+		     [A]).
+remove_features(x_24,[_,_,_,A,_,B,C,D,E,_,_,F,G,_,H,I,J,K],
+		     [A,B,C,D,E,F,G,H,I,J,K]).
+remove_features(x_25,[_,_,_,A,_,B,C,D,E,_,_,F,G,_,H,I,J,K,L],
+		     [A,B,C,D,E,F,G,H,I,J,K,L]).
+remove_features(x_26,[_,_,_,A,_,B,C,D,E,_,_,F,G,_,H,I,J,K],
+		     [A,B,C,D,E,F,G,H,I,J,K]).
+remove_features(x_27,[_,_,_,_,_,_,_,_,A,B,C,D,_,E,F,_,G,_,H,_],
+		     [A,B,C,D,E,F,G,H]).
+remove_features(x_28,[_,_,_,A,_,B,C,D,E,_,_,F,G,_,H,I,J,_,K],
+		     [A,B,C,D,E,F,G,H,I,J,K]).
+remove_features(x_29,[A,B],
+		     [A,B]).
+remove_features(x_3, [_,_,_,_,_,_,_,_,A,B,C,D,_,E,F,_,_,_,_,G,H,_,_],
+		     [A,B,C,D,E,F,G,H]).
+remove_features(x_30,[_,_,_,_,_,A,B,C,D,_,_,E,F,_|Rest],
+		     [A,B,C,D,E,F|Rest]).
+remove_features(x_31,[A,B,_],
+		     [A,B]).
+remove_features(x_32,[_,_,_,_,_,A,B,C,D,E,F,_,_,G,H,I,J,K,L,M,N,O,P,_,Q,R],
+		     [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R]).
+remove_features(x_33,[_,_,_,A,B,C,D,E,F,G,H,_,I,J,K,_|Rest],
+		     [A,B,C,D,E,F,G,H,I,J,K|Rest]).
+remove_features(x_34,[_,_|Rest],
+		     Rest).
+remove_features(x_36,[_,_,_,_,_,_,A,B,C,D,E,F,_,G,H,_,I,J,_,K,L,M],
+		     [A,B,C,D,E,F,G,H,I,J,K,L,M]).
+remove_features(x_37,[_],
+		     []).
+remove_features(x_38,[_,_,_,A,B,C,D,E,F,G,H,_,_|Rest],
+		     [A,B,C,D,E,F,G,H|Rest]).
+remove_features(x_39,[_,_,_,_,_,A,B,C,D,E,F,_,_,G,H,_|Rest],
+		     [A,B,C,D,E,F,G,H|Rest]).
+remove_features(x_4, [_,_,_|Rest],
+		     Rest).
+remove_features(x_40,[_,_,_,A,_,B,C,D,E,F,G,_,_,H,I,J,_|Rest],
+		     [A,B,C,D,E,F,G,H,I,J|Rest]).
+remove_features(x_41,[_,_,_|Rest],
+		     Rest).
+remove_features(x_42,[_,_,_|Rest],
+		     Rest).
+remove_features(x_43,[_,_,_,_,_,A,_,B,_,C,D,E,F,G,H,_,_,_,_,I,J,K,L],
+		     [A,B,C,D,E,F,G,H,I,J,K,L]).
+remove_features(x_44,[_,_,_,_,_,A,B,C,D,E,F,G,H,I,J,_,_,K,L,M],
+		     [A,B,C,D,E,F,G,H,I,J,K,L,M]).
+remove_features(x_45,[_,_,_,A,_,_|Rest],
+		     [A|Rest]).
+remove_features(x_46,[_,_,_,_,_,_,A,B,C,D,E,F,G,H,I,J,_,_|Rest],
+		     [A,B,C,D,E,F,G,H,I,J|Rest]).
+remove_features(x_47,[_|Rest],
+		     Rest).
+remove_features(x_48,[A,_,B|Rest],
+		     [A,B|Rest]).
+remove_features(x_49,R,R).
+remove_features(x_50,R,R).
+remove_features(x_51,R,R).
+remove_features(x_52,[A,_],[A]).
+remove_features(x_53,[_,_,_,_,_,A,_,_,_,_|Rest],
+		     [A|Rest]).
+remove_features(x_54,[_,_,_,_,_,A,_,_,_,B,C|_],
+		     [A,B,C]).
+remove_features(x_55,[_,_,_,A,_,B,_,_,C,D,E,_,_,F,_,_,_,_,_,_,_,G],
+		     [A,B,C,D,E,F,G]).
+%remove_features(x_56,[_,_,_,_,_,A,_,_,_,_,B,_,_,_,_,_,_,_,C,D,_,_],
+%		     [A,B,C,D]).
+%remove_features(x_57,[_,_,_,_,_,A,_,_,_,_,B,_,_,_,_,_,_,_,_,C,D,_,_],
+%		     [A,B,C,D]).
+remove_features(x_7, [_,_,_|Rest],
+		     Rest).
+remove_features(x_8, [_,_,_|Rest],
+		     Rest).
+remove_features(x_9, [_,A,B,_,C,D,E,F,_,G,H,I,J,_],
+		     [A,B,C,D,E,F,G,H,I,J]).
+
+
+
+remove_features(x_11,X,X).
+remove_features(x_13,X,X).
+remove_features(x_35,X,X).
+remove_features(x_56,X,X).   % alleen in lexicon!
+remove_features(x_57,X,X).   % alleen in lexicon!
+
+remove_features(x_2,X,X).
+remove_features(x_5,X,X).
+
+
+:- (  flag(head,left)
+   -> abolish(grammar:(head/2)),
+      assertz(head(_,1))
+   ;  use_module('anlt2.head')
+   ).
+
+
+sem_filter([],x_14(_)).
+sem_filter([FIN,PAST],x_15(_,_,FIN,PAST,_,_,_,_,_,_,_)).
+sem_filter([],x_17).
+sem_filter([],x_18(_,_,_,_,_,_,_)).
+sem_filter([],x_19(_,_,_,_,_,_)).
+sem_filter([],x_20(_,_,_,_,_,_,_)).
+sem_filter([FIN,PAST,AGR],x_21(_,_,_,FIN,PAST,_,_,_,_,_,AGR)).
+sem_filter([FIN,PAST,AGR],x_22(_,_,FIN,PAST,_,_,_,_,_,_,AGR)).
+sem_filter([],x_23(_)).
+sem_filter([FIN,PAST,AGR],x_24(_,_,FIN,PAST,_,_,_,_,_,_,AGR)).
+sem_filter([FIN,PAST,AGR],x_25(_,_,FIN,PAST,_,_,_,_,_,_,_,AGR)).
+sem_filter([FIN,PAST,AGR],x_26(_,_,FIN,PAST,_,_,_,_,_,_,AGR)).
+sem_filter([FIN,PAST,AGR],x_30(_,FIN,PAST,_,_,_,_,_,_,_,AGR)).
+sem_filter([],x_31(_,_)).
+sem_filter([],x_32(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_)).
+sem_filter([],x_34(_,_,_,_,_,_,_)).
+sem_filter([],x_36(_,_,_,_,_,_,_,_,_,_,_,_,_)).
+sem_filter([],x_37).
+sem_filter([],x_38(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_)).
+sem_filter([],x_40(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_)).
+sem_filter([],x_41(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_)).
+sem_filter([],x_45(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_)).
+sem_filter([],x_47(_,_,_,_,_)).
+sem_filter([],x_50(_)).
+sem_filter([],x_52(_)).
+sem_filter([],x_53(_,_,_,_)).
+sem_filter([],x_54(_,_,_)).
+sem_filter([],x_7(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_)).
+sem_filter([],x_8(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_)).
+sem_filter([],x_9(_,_,_,_,_,_,_,_,_,_)).
+
+
+
+% x_1   S
+% x_4   NP
+% x_7   PP
+% x_8   ADVP
+% x_12  VP ?
+% x_15  V0 (aux?)
+% x_17  NOT
+% x_18  COMP+WH
+% x_19  P0+PP
+% x_20  P0
+% x_21  V0
+% x_22  V0
+% x_23  P0
+% x_24  V0
+% x_25  V0
+% x_26  V0
+% x_27  VP
+% x_30  V0
+% x_31  either/neither
+% x_32  rel pronoun?
+% x_34  pronoun?
+% x_36  proper noun
+% x_37  of
+% x_38  N0
+% x_39  DOES NOT EXIST IN LHS!!!
+% x_40  N0
+% x_41  ADJ
+% x_45  ADJ
+% x_47  that,more,very
+% x_50  a
+% x_52  conj

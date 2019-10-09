@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="sv1" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="Kan" wvorm="pv"/>
+      <node begin="1" end="2" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      <node begin="1" cat="inf" end="6" id="4" rel="vc">
+        <node begin="1" end="2" id="5" index="1" rel="su"/>
+        <node begin="2" cat="np" end="5" id="6" rel="obj1">
+          <node begin="2" end="3" id="7" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="3" end="4" genus="genus" getal="ev" graad="basis" id="8" lemma="Windows" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mod" root="Windows" word="Windows"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="update" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="update" word="update"/>
+        </node>
+        <node begin="5" buiging="zonder" end="6" id="10" lemma="uit_voeren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voer_uit" word="uitvoeren" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Kan ik een Windows update uitvoeren ?</sentence>
+</alpino_ds>

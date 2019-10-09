@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="whq" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="5" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="mod"/>
+        <node begin="1" end="2" id="5" lemma="verwijderen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="verwijder" word="verwijder" wvorm="pv"/>
+        <node begin="2" end="3" getal="ev" id="6" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="3" cat="np" end="5" id="7" rel="obj1">
+          <node begin="3" end="4" genus="genus" getal="ev" graad="basis" id="8" lemma="Outlook" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mod" root="Outlook" word="Outlook"/>
+          <node begin="4" end="5" getal="mv" graad="basis" id="9" lemma="email" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="email" word="emails"/>
+        </node>
+      </node>
+    </node>
+    <node begin="5" end="6" id="10" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe verwijder ik Outlook emails ?</sentence>
+</alpino_ds>

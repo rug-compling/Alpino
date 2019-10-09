@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="31" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="5" end="6" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="14" end="15" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="20" end="21" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="30" id="5" rel="--">
+      <node begin="0" end="1" getal="ev" id="6" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="Dat"/>
+      <node begin="1" end="2" id="7" lemma="houden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="houdt" word="houdt" wvorm="pv"/>
+      <node begin="2" end="3" id="8" lemma="in" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="in" vztype="fin" word="in"/>
+      <node begin="4" cat="cp" end="30" id="9" rel="vc">
+        <node begin="4" conjtype="onder" end="5" id="10" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="6" cat="ssub" end="30" id="11" rel="body">
+          <node begin="6" cat="cp" end="20" id="12" rel="mod">
+            <node begin="6" conjtype="onder" end="7" id="13" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+            <node begin="7" cat="ssub" end="20" id="14" rel="body">
+              <node begin="7" end="8" id="15" lemma="tenminste" pos="adv" postag="BW()" pt="bw" rel="mod" root="tenminste" word="tenminste"/>
+              <node begin="8" cat="np" end="10" id="16" rel="su">
+                <node begin="8" end="9" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="9" end="10" getal="mv" graad="basis" id="18" lemma="Duitser" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Duitser" word="Duitsers"/>
+              </node>
+              <node begin="10" cat="np" end="13" id="19" rel="obj1">
+                <node begin="10" end="11" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="11" cat="mwu" end="13" id="21" rel="hd">
+                  <node begin="11" buiging="met-e" end="12" graad="basis" id="22" lemma="Europees" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Europese" word="Europese"/>
+                  <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="23" lemma="commissie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Commissie" word="Commissie"/>
+                </node>
+              </node>
+              <node begin="13" end="14" id="24" lemma="gehoorzamen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="gehoorzaam" word="gehoorzamen" wvorm="pv"/>
+              <node begin="15" cat="whrel" end="20" id="25" rel="mod">
+                <node begin="15" end="16" id="26" index="1" lemma="waartoe" pos="adv" postag="BW()" pt="bw" rel="rhd" root="waartoe" word="waartoe"/>
+                <node begin="15" cat="ssub" end="20" id="27" rel="body">
+                  <node begin="16" end="17" getal="mv" id="28" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
+                  <node begin="15" cat="ppart" end="19" id="29" rel="predc">
+                    <node begin="15" end="16" id="30" index="1" rel="pc"/>
+                    <node begin="17" buiging="zonder" end="18" graad="basis" id="31" lemma="juridisch" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="juridisch" word="juridisch"/>
+                    <node begin="18" buiging="zonder" end="19" id="32" lemma="verplichten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verplicht" word="verplicht" wvorm="vd"/>
+                  </node>
+                  <node begin="19" end="20" id="33" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="21" cat="pp" end="25" id="34" rel="mod">
+            <node begin="21" end="22" id="35" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+            <node begin="22" cat="np" end="25" id="36" rel="obj1">
+              <node begin="22" buiging="met-e" end="23" id="37" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" vwtype="onbep" word="alle"/>
+              <node begin="23" buiging="met-e" end="24" graad="basis" id="38" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="andere" word="andere"/>
+              <node begin="24" end="25" getal="mv" graad="basis" id="39" lemma="landbouwprodukt" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="landbouwprodukten" word="landbouwprodukten"/>
+            </node>
+          </node>
+          <node begin="25" cat="np" end="27" id="40" rel="su">
+            <node begin="25" end="26" id="41" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="26" end="27" getal="mv" graad="basis" id="42" lemma="grens" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="grenzen" word="grenzen"/>
+          </node>
+          <node begin="27" cat="ap" end="29" id="43" rel="predc">
+            <node begin="27" buiging="zonder" end="28" graad="basis" id="44" lemma="volledig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="volledig" word="volledig"/>
+            <node begin="28" buiging="zonder" end="29" graad="basis" id="45" lemma="open" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="open" word="open"/>
+          </node>
+          <node begin="29" end="30" id="46" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" word="moeten" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="30" end="31" id="47" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dat houdt in , dat , als tenminste de Duitsers de Europese Commissie gehoorzamen , waartoe zij juridisch verplicht zijn , voor alle andere landbouwprodukten de grenzen volledig open moeten .</sentence>
+</alpino_ds>

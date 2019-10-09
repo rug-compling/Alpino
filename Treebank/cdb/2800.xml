@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="42" id="0" rel="top">
+    <node begin="12" end="13" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="14" end="15" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="22" end="23" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="29" end="30" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="41" id="5" rel="--">
+      <node begin="30" end="31" id="6" lemma="mogen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="mag" word="mocht" wvorm="pv"/>
+      <node begin="31" cat="np" end="33" id="7" index="1" rel="su">
+        <node begin="31" end="32" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="32" end="33" genus="zijd" getal="ev" graad="basis" id="9" lemma="machine" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="machine" word="machine"/>
+      </node>
+      <node begin="0" cat="inf" end="41" id="10" rel="vc">
+        <node begin="0" cat="pp" end="29" id="11" rel="mod">
+          <node begin="0" end="1" id="12" lemma="wegens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="wegens" vztype="init" word="Wegens"/>
+          <node begin="1" cat="np" end="29" id="13" rel="obj1">
+            <node begin="1" end="2" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="2" buiging="met-e" end="3" graad="basis" id="15" lemma="enorm" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="enorm" word="enorme"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="16" lemma="stuwkracht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stuwkracht" word="stuwkracht"/>
+            <node begin="4" cat="pp" end="29" id="17" rel="mod">
+              <node begin="4" end="5" id="18" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="5" cat="np" end="29" id="19" rel="obj1">
+                <node begin="5" end="6" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="6" end="7" id="21" lemma="vier" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="vier" word="vier"/>
+                <node begin="7" end="8" getal="mv" graad="basis" id="22" lemma="motor" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="motor" word="motoren"/>
+                <node begin="8" cat="rel" end="29" id="23" rel="mod">
+                  <node begin="8" end="9" getal="getal" id="24" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+                  <node begin="8" cat="ssub" end="29" id="25" rel="body">
+                    <node begin="8" end="9" id="26" index="2" rel="su"/>
+                    <node begin="15" end="16" id="27" lemma="geven" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="geef" word="geven" wvorm="pv"/>
+                    <node begin="9" cat="np" end="29" id="28" rel="obj1">
+                      <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="29" lemma="power" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="power" word="power"/>
+                      <node begin="9" cat="detp" end="22" id="30" rel="det">
+                        <node begin="11" buiging="zonder" end="12" graad="basis" id="31" lemma="veel" naamval="stan" pdtype="grad" pos="det" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="hd" root="veel" vwtype="onbep" word="veel"/>
+                        <node begin="9" cat="advp" end="22" id="32" rel="mod">
+                          <node begin="9" end="10" id="33" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="me" root="eens" word="eens"/>
+                          <node begin="10" end="11" id="34" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="hd" root="zo" word="zo"/>
+                          <node begin="16" cat="cp" end="22" id="35" rel="obcomp">
+                            <node begin="16" conjtype="onder" end="17" id="36" lemma="als" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+                            <node begin="17" cat="np" end="22" id="37" rel="body">
+                              <node begin="17" end="18" id="38" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                              <node begin="18" end="19" getal="mv" graad="basis" id="39" lemma="motor" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="motor" word="motoren"/>
+                              <node begin="19" cat="pp" end="22" id="40" rel="mod">
+                                <node begin="19" end="20" id="41" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                                <node begin="20" cat="np" end="22" id="42" rel="obj1">
+                                  <node begin="20" end="21" id="43" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                                  <node begin="21" end="22" id="44" lemma="DC-8" pos="noun" postag="SPEC(symb)" pt="spec" rel="hd" root="DC-8" spectype="symb" word="DC-8"/>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node begin="23" cat="cp" end="29" id="45" rel="mod">
+                        <node begin="23" end="24" id="46" lemma="namelijk" pos="comp" postag="BW()" pt="bw" rel="cmp" root="namelijk" word="namelijk"/>
+                        <node begin="24" cat="np" end="29" id="47" rel="body">
+                          <node begin="24" end="25" id="48" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="drie" word="drie"/>
+                          <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="49" lemma="ton" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ton" word="ton"/>
+                          <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="50" lemma="lucht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="lucht" word="lucht"/>
+                          <node begin="27" cat="pp" end="29" id="51" rel="mod">
+                            <node begin="27" end="28" id="52" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
+                            <node begin="28" end="29" genus="zijd" getal="ev" graad="basis" id="53" lemma="seconde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="seconde" word="seconde"/>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="31" end="33" id="54" index="1" rel="su"/>
+        <node begin="33" end="34" id="55" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+        <node begin="34" cat="pp" end="37" id="56" rel="mod">
+          <node begin="34" end="35" id="57" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="35" cat="np" end="37" id="58" rel="obj1">
+            <node begin="35" buiging="zonder" end="36" graad="basis" id="59" lemma="eigen" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="eigen" word="eigen"/>
+            <node begin="36" end="37" genus="zijd" getal="ev" graad="basis" id="60" lemma="kracht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kracht" word="kracht"/>
+          </node>
+        </node>
+        <node begin="37" cat="pp" end="40" id="61" rel="ld">
+          <node begin="37" end="38" id="62" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="38" cat="np" end="40" id="63" rel="obj1">
+            <node begin="38" end="39" id="64" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="39" end="40" genus="zijd" getal="ev" graad="basis" id="65" lemma="pier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pier" word="pier"/>
+          </node>
+        </node>
+        <node begin="40" buiging="zonder" end="41" id="66" lemma="wegdraaien" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="draai" word="wegdraaien" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="41" end="42" id="67" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Wegens de enorme stuwkracht van de vier motoren die eens zo veel &quot; power &quot; geven als de motoren van een DC-8 , namelijk drie ton lucht per seconde , mocht de machine niet op eigen kracht van de pier wegdraaien .</sentence>
+</alpino_ds>

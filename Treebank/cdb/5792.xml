@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="smain" end="15" id="1" rel="--">
+      <node begin="0" cat="ap" end="3" id="2" rel="predc">
+        <node begin="0" end="1" id="3" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="Niet"/>
+        <node begin="1" buiging="zonder" end="2" graad="comp" id="4" lemma="minder" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="minder" vwtype="onbep" word="minder"/>
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="begrijpelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="begrijpelijk" word="begrijpelijk"/>
+      </node>
+      <node begin="3" end="4" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="4" end="5" id="7" lemma="echter" pos="adv" postag="BW()" pt="bw" rel="mod" root="echter" word="echter"/>
+      <node begin="5" cat="cp" end="15" id="8" rel="su">
+        <node begin="5" conjtype="onder" end="6" id="9" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="6" cat="ssub" end="15" id="10" rel="body">
+          <node begin="6" cat="mwu" end="8" id="11" rel="su">
+            <node begin="6" end="7" id="12" lemma="prof." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="prof." spectype="deeleigen" word="prof."/>
+            <node begin="7" end="8" id="13" lemma="Snijders" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Snijders" spectype="deeleigen" word="Snijders"/>
+          </node>
+          <node begin="8" end="9" id="14" lemma="opkomen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="opkomt" wvorm="pv"/>
+          <node begin="9" cat="pp" end="15" id="15" rel="pc">
+            <node begin="9" end="10" id="16" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+            <node begin="10" cat="whrel" end="15" id="17" rel="obj1">
+              <node begin="10" end="11" getal="ev" id="18" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="wat"/>
+              <node begin="10" cat="ssub" end="15" id="19" rel="body">
+                <node begin="10" end="11" id="20" index="1" rel="su"/>
+                <node begin="10" cat="ppart" end="14" id="21" rel="vc">
+                  <node begin="10" end="11" id="22" index="1" rel="obj1"/>
+                  <node begin="11" cat="pp" end="13" id="23" rel="mod">
+                    <node begin="11" end="12" id="24" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                    <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="25" lemma="Groningen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Groningen" word="Groningen"/>
+                  </node>
+                  <node begin="13" buiging="zonder" end="14" id="26" lemma="bereiken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bereik" word="bereikt" wvorm="vd"/>
+                </node>
+                <node begin="14" end="15" id="27" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="28" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>Niet minder begrijpelijk is echter dat prof. Snijders opkomt voor wat in Groningen bereikt is :</sentence>
+</alpino_ds>

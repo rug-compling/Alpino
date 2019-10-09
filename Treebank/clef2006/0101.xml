@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="whq" end="10" id="2" rel="--">
+      <node begin="0" end="1" id="3" index="1" lemma="waarover" pos="pp" postag="BW()" pt="bw" rel="whd" root="waarover" word="Waarover"/>
+      <node begin="0" cat="sv1" end="10" id="4" rel="body">
+        <node begin="0" end="1" id="5" index="1" rel="pc"/>
+        <node begin="1" end="2" id="6" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+        <node begin="2" cat="np" end="10" id="7" rel="su">
+          <node begin="2" cat="mwu" end="4" id="8" rel="det">
+            <node begin="2" end="3" id="9" lemma="Herman" pos="det" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Herman" spectype="deeleigen" word="Herman"/>
+            <node begin="3" end="4" id="10" lemma="Brusselmans&apos;" pos="det" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Brusselmans" spectype="deeleigen" word="Brusselmans&apos;"/>
+          </node>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="roman" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="roman" word="roman"/>
+          <node begin="6" cat="mwu" end="10" id="12" rel="app">
+            <node begin="6" end="7" getal="mv" graad="basis" id="13" lemma="vrouw" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Vrouwen" word="Vrouwen"/>
+            <node begin="7" end="8" id="14" lemma="met" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="met" vztype="init" word="met"/>
+            <node begin="8" end="9" id="15" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="name" postag="LID(onbep,stan,agr)" pt="lid" rel="mwp" root="een" word="een"/>
+            <node begin="9" end="10" id="16" lemma="IQ" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="IQ" spectype="deeleigen" word="IQ"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="10" end="11" id="17" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="11" end="12" id="18" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Waarover gaat Herman Brusselmans&apos; roman &quot; Vrouwen met een IQ &quot; ?</sentence>
+</alpino_ds>

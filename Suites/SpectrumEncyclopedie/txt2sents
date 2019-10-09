@@ -1,0 +1,78 @@
+#!/usr/bin/perl -w
+
+$key = 0 ;
+$start = 0 ;
+$lemma = "";
+$sentence_boundary = '\n';
+
+# lemma's contain hard returns wihtin sentences, 
+# first concat lemma, then tokenize and split
+while (<>) {
+#    chomp;
+    y/\cM//d;   # get rid of DOS <CR>
+    s/\<\^\>([0-9]+)\s*\<D\>/$1/;
+    s/\<[bB][iI]\>(.*)\<[dD]\>\s*$/`$1'\n/;  #`
+    s/\<[nN]\>/ /g;
+    s/\<F128\>\<198\>\<F255\>/°/g;
+    s/\<F128\>É\<F255\>/°/g;
+    s/\<F128\>ö\<F255\>/x/g;
+    s/\<F128\>\<196\>\<F255\>/-/g;
+    s/\<F128\>-\<F255\>/-/g;
+    s/\<F128\>m\<F255\>/µ/g;
+    s/\<196\>/-/g;
+    s/\<198\>/°/g;
+    s/\<981\>/°/g;
+    s/\<F128\>\<196\>\<F255\>/-/g;
+    s/\<176\>/ã/g;
+    s/\<164\>/ñ/g;
+    if (/INGANGNR:(.*)/ ) {
+	$key = $1 ;
+	$linecounter = 1 ;
+    }
+    elsif (/INGANG:(.*)/ ) {
+	$ingang = $1 ;
+    }  
+    elsif (/START/ ) {
+	$start = 1 ;
+    }  
+    elsif( /EIND/ ) {
+	$lemma =~ s/^\s*([(]([^()]|[(][^)(]+[)])+[)])(?![.:,;])/$1\n/;
+	$lemma =~ s/^\s*(\<[iI]\>\s*[(]([^()]|[(][^)(]+[)])+[)]\<[dD]\>\s)/$1\n/;
+	$lemma =~ s/\<([Ii]|[bB][iI]|[bB]|[mM][iI])\>/\` /g;
+	$lemma =~ s/\<[dD]\>/ \'/g;
+        $lemma =~ s/\<\/[iI]\>/\`/g;
+	$lines = sentence_per_line($lemma,$key,$ingang);
+	$lines =~ y/ / /s;
+	print $lines ;
+	$start = 0 ;
+	$lemma = "" ;
+    }
+    elsif ($start and /\w/) {
+	$lemma = $lemma." ".$_ ;
+    }
+}
+
+sub sentence_per_line {
+    ($_,$key,$ingang) = @_;
+    $remainder="";
+    $zinnen="";
+    $remainder = $remainder . $_;
+    while ($remainder =~ /$sentence_boundary/g) {   # found end-of-sentence
+	$zin = $` . $&;
+	$remainder=$';   # '
+	$zin =~ tr/\n/ /;
+	$zin =~ s/^\s+//g;
+	$zin =~ s/\s+$//g;
+	$zinnen .= "$zin\n";
+	$linecounter++;
+    }
+
+    if ($remainder) {
+	$remainder =~ tr/\n/ /;
+	$remainder =~ s/^\s+//g;
+	$remainder =~ s/\s+$//g;
+	$zinnen .= "$remainder\n";
+	$linecounter++;
+    }
+    return "$zinnen";
+}

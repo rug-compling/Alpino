@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="14" end="15" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="17" end="18" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="24" id="3" rel="--">
+      <node begin="0" end="1" getal="mv" graad="basis" id="4" index="1" lemma="kunstschuimen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="Kunstschuimen" word="Kunstschuimen"/>
+      <node begin="1" end="2" id="5" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="24" id="6" rel="vc">
+        <node begin="0" end="1" id="7" index="1" rel="obj1"/>
+        <node begin="2" buiging="zonder" end="3" id="8" lemma="gebruiken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gebruik" word="gebruikt" wvorm="vd"/>
+        <node begin="3" cat="conj" end="24" id="9" rel="mod">
+          <node begin="3" cat="pp" end="14" id="10" rel="cnj">
+            <node begin="3" end="4" id="11" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="4" cat="np" end="14" id="12" rel="obj1">
+              <node begin="4" end="5" getal="mv" graad="basis" id="13" lemma="auto" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="auto" word="auto&apos;s"/>
+              <node begin="5" cat="pp" end="14" id="14" rel="mod">
+                <node begin="5" end="6" id="15" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                <node begin="6" cat="conj" end="14" id="16" rel="obj1">
+                  <node begin="6" cat="np" end="8" id="17" rel="cnj">
+                    <node begin="6" end="7" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="19" lemma="bekleding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bekleding" word="bekleding"/>
+                  </node>
+                  <node begin="8" conjtype="neven" end="9" id="20" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                  <node begin="9" cat="np" end="14" id="21" rel="cnj">
+                    <node begin="9" end="10" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="23" lemma="isolering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="isolering" word="isolering"/>
+                    <node begin="11" cat="pp" end="14" id="24" rel="mod">
+                      <node begin="11" end="12" id="25" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                      <node begin="12" cat="np" end="14" id="26" rel="obj1">
+                        <node begin="12" end="13" id="27" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                        <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="28" lemma="motor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="motor" word="motor"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="15" cat="pp" end="17" id="29" rel="cnj">
+            <node begin="15" end="16" id="30" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="16" end="17" getal="mv" graad="basis" id="31" lemma="ijskast" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="ijskast" word="ijskasten"/>
+          </node>
+          <node begin="18" cat="pp" end="20" id="32" rel="cnj">
+            <node begin="18" end="19" id="33" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="19" end="20" getal="mv" graad="basis" id="34" lemma="koelwagen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="wagens" word="koelwagens"/>
+          </node>
+          <node begin="20" conjtype="neven" end="21" id="35" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="21" cat="pp" end="24" id="36" rel="cnj">
+            <node begin="21" end="22" id="37" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="22" cat="np" end="24" id="38" rel="obj1">
+              <node begin="22" end="23" id="39" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="40" lemma="woningbouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="woningbouw" word="woningbouw"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="41" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Kunstschuimen worden gebruikt in auto&apos;s voor de bekleding en de isolering van de motor , in ijskasten , in koelwagens en in de woningbouw .</sentence>
+</alpino_ds>

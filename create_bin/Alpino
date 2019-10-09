@@ -1,0 +1,38 @@
+#!/bin/bash
+
+export ALPINO_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$ALPINO_HOME/util
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$ALPINO_HOME/fadd
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$ALPINO_HOME/TreebankTools/IndexedCorpus
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$ALPINO_HOME/create_bin
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$ALPINO_HOME/util
+export LD_LIBRARY_PATH
+
+export SP_CSETLEN=212
+export SP_CTYPE=utf8
+
+if ( ldd $ALPINO_HOME/create_bin/Alpino.bin | grep -q -E '(libtcl|libtk).*not found' )
+then
+    LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ALPINO_HOME/create_bin/extralibs
+    export TCL_LIBRARY=$ALPINO_HOME/create_bin/extralibs/tcl8.6
+    export TK_LIBRARY=$ALPINO_HOME/create_bin/extralibs/tk8.6
+fi
+
+$ALPINO_HOME/create_bin/Alpino.bin\
+   debug=undefined\
+   -flag tcl_dir $ALPINO_HOME/src\
+   -flag hdrug_library $ALPINO_HOME/Hdrug/Tcl\
+   -flag tex_library $ALPINO_HOME/Hdrug/Tex\
+   -flag suite $ALPINO_HOME/Suites/cdb\
+   end_hook=triples\
+   display_quality=on\
+   display_main_parts=on\
+   -veryfast\
+   penalties=undefined\
+   syntax_features=undefined\
+   suite=undefined\
+   fluency_feature_weights=undefined\
+   generation_suite=undefined\
+   demo=on\
+   -cmd "asserta(library_directory('$ALPINO_HOME/hdrug'))" "$@"

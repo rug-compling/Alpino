@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="0" cat="smain" end="27" id="1" rel="--">
+      <node begin="0" cat="conj" end="6" id="2" rel="su">
+        <node begin="0" cat="np" end="3" id="3" rel="cnj">
+          <node begin="0" end="1" id="4" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+          <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="zogenaamd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="zogenaamd" word="zogenaamde"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="moeraskever" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kever" word="moeraskever"/>
+        </node>
+        <node begin="3" conjtype="neven" end="4" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="4" cat="np" end="6" id="8" rel="cnj">
+          <node begin="4" buiging="met-e" end="5" id="9" lemma="enkele" naamval="stan" npagr="rest" pdtype="det" pos="num" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enkele" vwtype="onbep" word="enkele"/>
+          <node begin="5" end="6" getal="mv" graad="basis" id="10" lemma="dragline" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="draglines" word="draglines"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="11" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="7" buiging="zonder" end="8" graad="basis" id="12" lemma="momenteel" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="momenteel" word="momenteel"/>
+      <node begin="8" cat="pp" end="12" id="13" rel="mod">
+        <node begin="8" cat="mwu" end="11" id="14" rel="hd">
+          <node begin="8" end="9" id="15" lemma="te" pos="prep" postag="VZ(versm)" pt="vz" rel="mwp" root="ten" vztype="versm" word="ten"/>
+          <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="16" lemma="westen" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="westen" word="westen"/>
+          <node begin="10" end="11" id="17" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+        </node>
+        <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="18" lemma="Burum" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Burum" word="Burum"/>
+      </node>
+      <node begin="12" cat="pp" end="16" id="19" rel="mod">
+        <node begin="12" end="13" id="20" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="13" cat="np" end="16" id="21" rel="obj1">
+          <node begin="13" end="14" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="23" lemma="gemeente" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gemeente" word="gemeente"/>
+          <node begin="15" end="16" genus="genus" getal="ev" graad="basis" id="24" lemma="Kollumerland" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Kollumerland" word="Kollumerland"/>
+        </node>
+      </node>
+      <node begin="16" cat="mwu" end="18" id="25" rel="predc">
+        <node begin="16" end="17" id="26" lemma="in" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+        <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="27" lemma="gebruik" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="gebruik" word="gebruik"/>
+      </node>
+      <node begin="18" cat="pp" end="27" id="28" rel="mod">
+        <node begin="18" end="19" id="29" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+        <node begin="19" cat="np" end="27" id="30" rel="obj1">
+          <node begin="19" end="20" id="31" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="32" lemma="grondwerk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="werk" word="grondwerk"/>
+          <node begin="21" cat="pp" end="27" id="33" rel="mod">
+            <node begin="21" end="22" id="34" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+            <node begin="22" cat="np" end="27" id="35" rel="obj1">
+              <node begin="22" end="23" id="36" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="37" lemma="satellietontvangststation" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="station" word="satellietontvangststation"/>
+              <node begin="24" cat="pp" end="27" id="38" rel="mod">
+                <node begin="24" end="25" id="39" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="25" cat="np" end="27" id="40" rel="obj1">
+                  <node begin="25" end="26" id="41" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="42" lemma="PTT" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="PTT" word="PTT"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="27" end="28" id="43" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een zogenaamde moeraskever en enkele draglines zijn momenteel ten westen van Burum in de gemeente Kollumerland in gebruik voor het grondwerk voor het satellietontvangststation van de PTT .</sentence>
+</alpino_ds>

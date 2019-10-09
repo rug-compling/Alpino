@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="13" end="14" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="15" end="16" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="smain" end="18" id="3" rel="--">
+      <node begin="0" cat="pp" end="9" id="4" rel="mod">
+        <node begin="0" end="1" id="5" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="Op"/>
+        <node begin="1" cat="np" end="9" id="6" rel="obj1">
+          <node begin="1" end="2" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" id="8" lemma="drie" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="derde" word="derde"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="dag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dag" word="dag"/>
+          <node begin="4" cat="pp" end="9" id="10" rel="mod">
+            <node begin="4" end="5" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="5" cat="np" end="9" id="12" rel="obj1">
+              <node begin="5" end="6" id="13" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="14" lemma="treblinkaproces" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="proces" word="Treblinkaproces"/>
+              <node begin="7" cat="pp" end="9" id="15" rel="mod">
+                <node begin="7" end="8" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="17" lemma="Dusseldorf" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Dusseldorf" word="Dusseldorf"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="9" end="10" id="18" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="10" cat="np" end="15" id="19" rel="su">
+        <node begin="10" buiging="met-e" end="11" getal-n="zonder-n" id="20" lemma="verdenken" pos="noun" positie="nom" postag="WW(vd,nom,met-e,zonder-n)" pt="ww" rel="hd" root="verdachte" word="verdachte" wvorm="vd"/>
+        <node begin="11" cat="mwu" end="13" id="21" rel="app">
+          <node begin="11" end="12" id="22" lemma="Franz" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Franz" spectype="deeleigen" word="Franz"/>
+          <node begin="12" end="13" id="23" lemma="Stangl" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Stangl" spectype="deeleigen" word="Stangl"/>
+        </node>
+        <node begin="14" end="15" id="24" lemma="62" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="62" word="62"/>
+      </node>
+      <node begin="16" end="17" genus="onz" getal="ev" id="25" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="17" buiging="zonder" end="18" graad="basis" id="26" lemma="moeilijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="moeilijk" word="moeilijk"/>
+    </node>
+    <node begin="18" end="19" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Op de derde dag van het Treblinkaproces in Dusseldorf heeft verdachte Franz Stangl ( 62 ) het moeilijk .</sentence>
+</alpino_ds>

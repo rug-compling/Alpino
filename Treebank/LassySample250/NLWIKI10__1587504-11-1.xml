@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="np" end="4" id="1" rel="--">
+      <node begin="0" end="1" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="2" lcat="np" lemma="beschrijving" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beschrijving" sense="beschrijving" word="Beschrijving"/>
+      <node begin="1" cat="pp" end="4" id="3" rel="mod">
+        <node begin="1" end="2" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="4" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+        <node begin="2" cat="np" end="4" id="5" rel="obj1">
+          <node begin="2" end="3" frame="determiner(de)" id="6" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+          <node begin="3" end="4" frame="meas_mod_noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="7" lcat="np" lemma="slag" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="slag" sense="slag" special="meas_mod" word="slag"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Beschrijving van de slag</sentence>
+  <comments>
+    <comment>Q#1587504-11-1|Beschrijving van de slag|1|1|0.0875240858201766</comment>
+  </comments>
+</alpino_ds>

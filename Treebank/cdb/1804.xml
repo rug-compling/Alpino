@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="du" end="8" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" word="En"/>
+      <node begin="1" cat="smain" end="8" id="3" rel="nucl">
+        <node begin="1" cat="np" end="4" id="4" rel="mod">
+          <node begin="1" end="2" id="5" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+          <node begin="2" buiging="zonder" end="3" id="6" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
+        </node>
+        <node begin="4" end="5" id="8" lemma="vrezen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vrees" word="vreesde" wvorm="pv"/>
+        <node begin="5" end="6" genus="masc" getal="ev" id="9" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="men"/>
+        <node begin="6" cat="np" end="8" id="10" rel="obj1">
+          <node begin="6" end="7" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="7" buiging="met-e" end="8" getal-n="zonder-n" graad="sup" id="12" lemma="erg" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,sup,met-e,zonder-n,stan)" pt="adj" rel="hd" root="erg" word="ergste"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>En ook dit jaar vreesde men het ergste .</sentence>
+</alpino_ds>

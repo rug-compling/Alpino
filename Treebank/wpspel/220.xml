@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="27" id="0" rel="top">
+    <node begin="0" cat="whq" end="20" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="20" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="predc"/>
+        <node begin="1" end="2" id="5" lemma="noemen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="noem" word="noemt" wvorm="pv"/>
+        <node begin="2" end="3" genus="masc" getal="ev" id="6" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="men"/>
+        <node begin="3" cat="np" end="20" id="7" rel="obj1">
+          <node begin="3" end="4" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="4" buiging="met-e" end="5" graad="basis" id="9" lemma="bosloos" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="loos" word="bosloze"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="10" lemma="gebied" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebied" word="gebied"/>
+          <node begin="6" cat="pp" end="10" id="11" rel="mod">
+            <node begin="6" end="7" id="12" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="7" cat="np" end="10" id="13" rel="obj1">
+              <node begin="7" end="8" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="8" buiging="zonder" end="9" graad="basis" id="15" lemma="noordelijk" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="noordelijk" word="noordelijk"/>
+              <node begin="9" end="10" getal="mv" graad="basis" id="16" lemma="poolstreek" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="streek" word="poolstreken"/>
+            </node>
+          </node>
+          <node begin="10" cat="pp" end="20" id="17" rel="mod">
+            <node begin="10" end="11" id="18" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="11" cat="np" end="20" id="19" rel="obj1">
+              <node begin="11" end="12" id="20" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="21" lemma="ondergrond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ondergrond" word="ondergrond"/>
+              <node begin="13" cat="rel" end="20" id="22" rel="mod">
+                <node begin="13" end="14" getal="getal" id="23" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+                <node begin="13" cat="ssub" end="20" id="24" rel="body">
+                  <node begin="13" end="14" id="25" index="2" rel="su"/>
+                  <node begin="14" cat="ppart" end="19" id="26" rel="predc">
+                    <node begin="14" cat="pp" end="18" id="27" rel="mod">
+                      <node begin="14" cat="np" end="17" id="28" rel="obj1">
+                        <node begin="14" end="15" id="29" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                        <node begin="15" buiging="met-e" end="16" graad="basis" id="30" lemma="geheel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="geheel" word="gehele"/>
+                        <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="31" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
+                      </node>
+                      <node begin="17" end="18" id="32" lemma="door" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="door" vztype="fin" word="door"/>
+                    </node>
+                    <node begin="18" buiging="zonder" end="19" id="33" lemma="bevriezen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bevroren" word="bevroren" wvorm="vd"/>
+                  </node>
+                  <node begin="19" end="20" id="34" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="35" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="21" conjtype="neven" end="22" id="36" lemma="en" pos="tag" postag="VG(neven)" pt="vg" rel="--" root="en" word="en"/>
+    <node begin="22" end="23" getal="getal" id="37" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="noun" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="--" root="waar" status="vol" vwtype="vb" word="waar"/>
+    <node begin="23" end="24" id="38" lemma="alleen" pos="adv" postag="BW()" pt="bw" rel="--" root="alleen" word="alleen"/>
+    <node begin="24" end="25" id="39" lemma="in" pos="fixed" postag="VZ(init)" pt="vz" rel="--" root="in" vztype="init" word="in"/>
+    <node begin="25" end="26" id="40" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="--" root="de" word="de"/>
+    <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="41" lemma="ko" naamval="stan" ntype="soort" pos="--" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="--" root="ko" word="ko"/>
+  </node>
+  <sentence>Hoe noemt men het bosloze gebied in de noordelijk poolstreken op een ondergrond die het gehele jaar door bevroren is , en waar alleen in de ko</sentence>
+  <comments>
+    <comment>grammatical error: noordelijk-&gt;noordelijke; also premature sentence end</comment>
+  </comments>
+</alpino_ds>

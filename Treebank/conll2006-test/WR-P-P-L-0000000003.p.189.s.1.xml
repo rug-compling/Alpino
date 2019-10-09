@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="*" pos="tag" postag="LET()" pt="let" rel="--" root="*" word="*"/>
+    <node begin="1" end="2" id="2" lemma="*" pos="tag" postag="LET()" pt="let" rel="--" root="*" word="*"/>
+    <node begin="3" end="4" id="3" lemma="=" pos="punct" postag="SPEC(symb)" pt="spec" rel="--" root="=" spectype="symb" word="="/>
+    <node begin="2" cat="du" end="7" id="4" rel="--">
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="BCG" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="dp" root="BCG" word="BCG"/>
+      <node begin="4" cat="mwu" end="7" id="6" rel="dp">
+        <node begin="4" end="5" id="7" lemma="Bacillus" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bacillus" spectype="deeleigen" word="Bacillus"/>
+        <node begin="5" end="6" id="8" lemma="Calmette" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Calmette" spectype="deeleigen" word="Calmette"/>
+        <node begin="6" end="7" id="9" lemma="Guérin" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Guérin" spectype="deeleigen" word="Guérin"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>* * BCG = Bacillus Calmette Guérin .</sentence>
+</alpino_ds>

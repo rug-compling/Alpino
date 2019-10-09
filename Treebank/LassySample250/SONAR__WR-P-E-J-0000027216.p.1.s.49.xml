@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="5" end="6" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="15" end="16" frame="punct(ligg_streep)" id="2" lcat="punct" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" sense="-" special="ligg_streep" word="-"/>
+    <node begin="23" end="24" frame="punct(komma)" id="3" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="du" end="27" id="4" rel="--">
+      <node begin="0" cat="conj" end="15" id="5" rel="dp">
+        <node begin="0" cat="smain" end="5" id="6" rel="cnj">
+          <node begin="0" cat="np" end="2" id="7" index="1" rel="su">
+            <node begin="0" buiging="met-e" end="1" frame="determiner(de,nwh,nmod,pro,nparg)" id="8" infl="de" lcat="detp" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" sense="deze" vwtype="aanw" wh="nwh" word="Deze"/>
+            <node begin="1" end="2" frame="noun(het,count,pl)" gen="het" getal="mv" graad="basis" id="9" lcat="np" lemma="cijfer" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="cijfer" sense="cijfer" word="cijfers"/>
+          </node>
+          <node begin="2" end="3" frame="verb(unacc,pl,passive)" id="10" infl="pl" lcat="smain" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="passive" sense="ben" tense="present" word="zijn" wvorm="pv"/>
+          <node begin="0" cat="ppart" end="5" id="11" rel="vc">
+            <node begin="0" end="2" id="12" index="1" rel="obj1"/>
+            <node aform="base" begin="3" buiging="zonder" end="4" frame="adjective(no_e(adv))" graad="basis" id="13" infl="no_e" lcat="ap" lemma="waarschijnlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="waarschijnlijk" sense="waarschijnlijk" vform="adj" word="waarschijnlijk"/>
+            <node begin="4" buiging="zonder" end="5" frame="verb(hebben,psp,transitive)" graad="basis" id="14" infl="psp" lcat="ppart" lemma="overdreven" pos="verb" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="overdrijf" sc="transitive" sense="overdrijf" word="overdreven"/>
+          </node>
+        </node>
+        <node begin="6" conjtype="neven" end="7" frame="conj(maar)" id="15" lcat="vg" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" sense="maar" word="maar"/>
+        <node begin="7" cat="smain" end="15" id="16" rel="cnj">
+          <node aform="base" begin="7" buiging="zonder" end="8" frame="adjective(no_e(adv),subject_sbar_no_het)" graad="basis" id="17" infl="no_e" lcat="ap" lemma="zeker" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="zeker" sc="subject_sbar_no_het" sense="zeker" vform="adj" word="zeker"/>
+          <node begin="8" end="9" frame="verb(hebben,sg3,copula_sbar)" id="18" infl="sg3" lcat="smain" lemma="lijken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lijk" sc="copula_sbar" sense="lijk" tense="present" word="lijkt" wvorm="pv"/>
+          <node begin="9" cat="cp" end="15" id="19" rel="su">
+            <node begin="9" end="10" frame="complementizer(dat)" getal="ev" id="20" lcat="cp" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="comp" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="cmp" root="dat" sc="dat" sense="dat" status="vol" vwtype="aanw" word="dat"/>
+            <node begin="10" cat="ssub" end="15" id="21" rel="body">
+              <node begin="10" end="11" frame="er_vp_adverb" getal="getal" id="22" lcat="advp" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" sense="er" special="er" status="red" vwtype="aanw" word="er"/>
+              <node begin="11" cat="np" end="14" id="23" rel="su">
+                <node begin="11" cat="ap" end="13" id="24" rel="det">
+                  <node begin="11" end="12" frame="adverb" id="25" lcat="advp" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="mod" root="zeer" sense="zeer" word="zeer"/>
+                  <node aform="base" begin="12" buiging="zonder" end="13" frame="adjective(no_e(odet_adv))" graad="basis" id="26" infl="no_e" lcat="ap" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="hd" root="veel" sense="veel" vform="adj" vwtype="onbep" word="veel"/>
+                </node>
+                <node begin="13" end="14" frame="noun(het,mass,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="27" lcat="np" lemma="bloed" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bloed" sense="bloed" word="bloed"/>
+              </node>
+              <node begin="14" end="15" frame="verb('hebben/zijn',past(sg),intransitive)" id="28" infl="sg" lcat="ssub" lemma="vloeien" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vloei" sc="intransitive" sense="vloei" tense="past" word="vloeide" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="16" cat="ppart" end="27" id="29" rel="dp">
+        <node begin="16" end="17" frame="adverb" id="30" lcat="advp" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" sense="nog" word="nog"/>
+        <node aform="base" begin="17" buiging="zonder" end="18" frame="adjective(ge_both(adv),pp(van))" id="31" infl="both" lcat="ppart" lemma="afzien" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="afgezien" sc="pp(van)" sense="afgezien-van" vform="psp" word="afgezien" wvorm="vd"/>
+        <node begin="18" cat="pp" end="27" id="32" rel="pc">
+          <node begin="18" end="19" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="33" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+          <node begin="19" cat="np" end="27" id="34" rel="obj1">
+            <node begin="19" end="20" frame="determiner(de)" id="35" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+            <node begin="20" end="21" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="36" lcat="np" lemma="schade" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schade" sense="schade" word="schade"/>
+            <node begin="21" cat="pp" end="27" id="37" rel="mod">
+              <node begin="21" end="22" frame="preposition(aan,[vooraf])" id="38" lcat="pp" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" sense="aan" vztype="init" word="aan"/>
+              <node begin="22" cat="conj" end="27" id="39" rel="obj1">
+                <node begin="22" end="23" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="40" lcat="np" lemma="stad" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="stad" sense="stad" word="steden"/>
+                <node begin="24" end="25" frame="noun(het,count,pl)" gen="het" getal="mv" graad="basis" id="41" lcat="np" lemma="huis" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="huis" sense="huis" word="huizen"/>
+                <node begin="25" conjtype="neven" end="26" frame="conj(en)" id="42" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+                <node begin="26" end="27" frame="noun(het,count,pl)" gen="het" getal="mv" graad="basis" id="43" lcat="np" lemma="irrigatiewerken" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="irrigatie_werk" sense="irrigatie_werk" word="irrigatiewerken"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="27" end="28" frame="punct(punt)" id="44" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Deze cijfers zijn waarschijnlijk overdreven , maar zeker lijkt dat er zeer veel bloed vloeide - nog afgezien van de schade aan steden , huizen en irrigatiewerken .</sentence>
+  <comments>
+    <comment>Q#WR-P-E-J-0000027216.p.1.s.49|Deze cijfers zijn waarschijnlijk overdreven , maar zeker lijkt dat er zeer veel bloed vloeide - nog afgezien van de schade aan steden , huizen en irrigatiewerken .|1|1|-0.2575006765271598</comment>
+  </comments>
+</alpino_ds>

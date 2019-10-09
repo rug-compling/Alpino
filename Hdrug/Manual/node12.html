@@ -1,0 +1,330 @@
+<!DOCTYPE HTML PUBLIC "-/W3C/DTD HTML 4.0 Transitional//EN"
+     "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>HDRUG Reference Manual</TITLE>
+<link rel=stylesheet href="http://www.let.rug.nl/~vannoord/doc.css" 
+      type="text/css">
+<link rel=next href="node13.html">
+</HEAD>
+<BODY>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node13.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+<H1>12. hdrug_feature: The Hdrug Feature Library</H1>
+<P> The feature library provides extensive possibilities to compile
+feature equations into Prolog terms, and to view such compiled Prolog
+terms as feature-structures.  The motivation for such an approach
+might be that you want feature structures for readability on the one
+hand, but Prolog terms and Prolog unification of such terms for
+effiency reasons internally. The package is heavily influenced by the
+work of Chris Mellish.</P>
+<P>Types</P>
+<P>Before feature structures can be compiled into terms, a number of type
+declarations need to be specified. The declarations that need to be
+defined are top/1, type/3 and at/1. These three definitions define a
+type hierarchy. This hierarchy has the shape of a tree. The top/1
+definition defines the daughter nodes of the root of the tree. This
+root is always called `top'.</P>
+<P>Attributes can be attached to a single type in the type hierarchy. If
+a type is associated with an attribute then this attribute is
+inherited by all of its subtypes. The top node of the type hierarchy
+can be seen as a variable. You can not specify any attributes for this
+type. The type/3 predicate defines for a given type (first argument) a
+list of subtypes (second argument) and a list of attributes (third
+argument).</P>
+<P>The at/1 definitions define terminals of the tree that do not
+introduce attributes. It is an abbreviation of a type/3 definition in
+which the second and third argument are both the empty list.</P>
+<P>As an example, consider the following type tree definition:</P>
+<BLOCKQUOTE>top([boolean,sign,cat]).<BR>
+ type(boolean,[+,-],[]).<BR>
+  at(+).<BR>
+  at(-).<BR>
+ type(sign,[],[cat,phon,sem]).<BR>
+ type(cat,[noun,verb],[agr]).<BR>
+ type(noun,[],[pro]).<BR>
+ type(verb,[],[aux,inv,subj]).</BLOCKQUOTE>
+<P>If this type definition is consulted by Hdrug, and if the directive:</P>
+<BLOCKQUOTE>:- type_compiler.</BLOCKQUOTE>
+<P>is called, then it is possible to view the type definition by choosing
+the `view type tk' menu. This gives rise to a tree on the
+canvas as <TT><A HREF="type.png">type.png</A></TT></P>
+<P>The meaning of such a type tree can be understood as follows. The class
+of objects is divided in three mutually exclusive subclasses, called
+boolean, sign and cat. Objects of type boolean can be further
+subdivided into classes + or -. Objects of type sign can be further
+specified for a cat, phon or sem attribute.</P>
+<P>The meaning of this type tree can also be understood by looking at the
+way in which objects of a certain type are represented as Prolog
+terms. This is illustrated as
+<TT><A HREF="tree.png">tree.png</A></TT></P>
+<P>Equational constraints</P>
+<P>If the type definition is compiled, then the following predicates can
+be used: &lt;=&gt;/2, =&gt;/2, ==&gt;/2.  The first predicate equates two <B>paths</B>,
+the second predicate assigns a type to a path, and the third predicate
+assigns an arbitrary Prolog term to a path.</P>
+<P>A path is a Prolog term followed by a sequence of attributes,
+seperated by a colon (:). Therefore, given the previous example of a
+type tree, we can have the following equational constraint:</P>
+<BLOCKQUOTE>X:cat =&gt; noun.<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;X = sign(_H,cat(noun(_G,_F),_E,_D),_C,_B,_A)<BR>
+Y:cat:agr &lt;=&gt; Y:cat:subj:cat:agr.<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;Y = sign(_O,cat(verb(_N,_M,_L,sign(_K,cat(_J,_E,_I),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_H,_G,_F)),_E,_D),_C,_B,_A)<BR>
+Z:phon ==&gt; [jan,kust,marie].<BR>
+   sign(_D,_C,[jan,kust,marie],_B,_A)</BLOCKQUOTE>
+<P>Lists</P>
+<P>You can add (ordinary Prolog) lists to your type tree by the simple
+definition:</P>
+<BLOCKQUOTE>list_type(HeadAtt,TailAtt).</BLOCKQUOTE>
+<P>This will allow the use of attributes HeadAtt and TailAtt for
+referring to parts of lists. Furthermore, lists of typed objects will
+be shown appropriately. For example:</P>
+<BLOCKQUOTE>[-user].<BR>
+| list_type(h,t).<BR>
+| {user consulted, 20 msec 48 bytes}<BR>
+^D<BR>
+yes<BR>
+| ?- X:t:h:cat =&gt; verb.</BLOCKQUOTE>
+<BLOCKQUOTE>X = [_A,sign(_K,cat(verb(_J,_I,_H,_G),_F,_E),_D,_C,_B)|_L] ?</BLOCKQUOTE>
+<BLOCKQUOTE>yes<BR>
+| ?- X:t:h:cat =&gt; verb, show(fs,latex,[value(X)]).<BR>
+....</BLOCKQUOTE>
+<BLOCKQUOTE>X = [_A,sign(_K,cat(verb(_J,_I,_H,_G),_F,_E),_D,_C,_B)|_L] ?</BLOCKQUOTE>
+<P>Extensionality</P>
+<P>Direct subtypes of type `top' are represented using an extra variable
+position. This is to make sure that objects are only identical if they
+have been unified. For some types this does not make much sense. Types
+that you want to consider as `extensional' in this way are to be
+declared with the predicate extensional/1.  Boolean types (cf. below) are
+extensional by default. Providing an intentional/1 definition makes a
+boolean type intensional.</P>
+<P>The following example illustrates the difference. Without the
+extensional predicate we have:</P>
+<BLOCKQUOTE>X:inv =&gt; -, X:aux =&gt; -, tty_fs(X).<BR>
+ {verb}<BR>
+ |aux &lt;B&gt; {-}<BR>
+ |inv &lt;B&gt;.</BLOCKQUOTE>
+<P>After declaring that boolean and `-' be extensional types (and recompiling
+the type tree), we get:</P>
+<BLOCKQUOTE>X:inv =&gt; -, X:aux =&gt; -, tty_fs(X).<BR>
+ {verb}<BR>
+ |aux {-}<BR>
+ |inv {-}.</BLOCKQUOTE>
+<P>The difference is that Hdrug does not show explicitly that the values
+of aux and inv are the same in the second example. This is redundant
+information because objects of extensional types always are the same
+if they have the same information content.</P>
+<P>Unify_except</P>
+<P>The library provides the predicates unify_except/3, unify_except_l/3
+and overwrite/4. The first argument takes two feature terms and a
+path. The first and second argument are unified <B>except</B> for the value
+at the path}.</P>
+<P>As an example (assuming the simple type system given above), we
+might have:</P>
+<BLOCKQUOTE>| ?- unify_except(X,Y,cat:agr).</BLOCKQUOTE>
+<BLOCKQUOTE>X = sign(_G,cat(_F,_E,_D),_C,_B,_A),<BR>
+Y = sign(_G,cat(_F,_H,_D),_C,_B,_A) ?</BLOCKQUOTE>
+<P>The predicate unify_except_l is similar, except it takes a list of
+paths rather than a single path as its third argument.  Finally, the
+predicate overwrite/4 can be understood by looking at its definition:</P>
+<BLOCKQUOTE>overwrite(FS,FS2,Path,Type) :-<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unify_except(FS2,FS,Path),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FS2:Path =&gt; Type.</BLOCKQUOTE>
+<P>Find_type</P>
+<P>The meta-logical predicates find_type/2 and find_type/3 can be used to
+get the most specific type of a feature term. The first argument is
+the feature term, the second argument is a list of most specific types
+(for simple usage just consider the first element of this list). The
+optional third argument is a list of attributes that are appropriate
+for this type.  For example:</P>
+<BLOCKQUOTE>| ?- X:agr &lt;=&gt; X:subj:agr, find_type(X,[Y|_]).</BLOCKQUOTE>
+<BLOCKQUOTE>X = cat(verb(_G,_F,_E,cat(_D,_B,_C)),_B,_A),<BR>
+Y = verb ?</BLOCKQUOTE>
+<P>It is clear that find_type/2,3 are meta-logical predicates by looking
+at the following example, where the conjuncts are swapped:</P>
+<BLOCKQUOTE>| ?- find_type(X,[Y|_]), X:agr &lt;=&gt; X:subj:agr.</BLOCKQUOTE>
+<BLOCKQUOTE>X = cat(verb(_G,_F,_E,cat(_D,_B,_C)),_B,_A),<BR>
+Y = top ? ;</BLOCKQUOTE>
+<P>Disjunction and Negation over Atomic Values</P>
+<P>A special mechanism is provided for atomic values to allow for
+disjunction and negation over such atomic values. These atomic values
+are not declared in the type-system as shown above, but rather they
+are introduced by the predicate boolean_type/2. The first argument of
+this predicate is an identifier, the second argument of this predicate
+is a list of lists that is understood as a set product.  For example,
+agreement features could be defined as:</P>
+<BLOCKQUOTE>boolean_type(agr,[[1,2,3],[sg,pl],[mas,fem,neut]])</BLOCKQUOTE>
+<P>So valid and fully specified values for agreement consist of an
+element from each of the three lists. The syntax for type-assignment
+is extended to include disjunction (';'), conjunction ('&amp;') and
+negation ('~') of types. For example, to express that X has either
+singular masculine or not-second person agreement, we simply state:</P>
+<BLOCKQUOTE>X =&gt; ( sg &amp; mas ; ~2 ).</BLOCKQUOTE>
+<P>The following example illustrates the use of this package:</P>
+<BLOCKQUOTE>| ?- [-user].<BR>
+| boolean_type(agr,[[1,2,3],[sg,pl],[mas,fem,neut]]).<BR>
+| {user consulted, 10 msec 368 bytes}</BLOCKQUOTE>
+<BLOCKQUOTE>yes<BR>
+| ?- type_compiler.</BLOCKQUOTE>
+<BLOCKQUOTE>yes<BR>
+| ?- X =&gt; ( sg &amp; mas ; ~2 ).</BLOCKQUOTE>
+<BLOCKQUOTE>X = agr(0,_L,_K,_J,_I,_H,_G,_G,_G,_G,_G,_F,_F,_E,_D,_C,_B,_A,1) ?</BLOCKQUOTE>
+<P>The example shows how complex terms are created for such boolean
+types. This is useful because disjunction and negation can be handled
+by ordinary unification in this way. Luckily the pretty printing
+routines will turn such complex turns back into something more
+readible:</P>
+<BLOCKQUOTE>| ?- X: agr =&gt; (sg &amp; mas ; ~2 &amp; neut), show(fs,latex,[value(X)]).</BLOCKQUOTE>
+<H2>12.1. <a name="anc1"></a>Hook Predicates</H2>
+<P>This section lists the hook predicates used by the hdrug_feature
+library.</P>
+<H3>12.1.1. <a name="anc2"></a>top(Subtypes)</H3>
+<P>Defines all sub-types of top as a list of atoms.</P>
+<H3>12.1.2. <a name="anc3"></a>type(Type,Subtypes,Attributes)</H3>
+<P>Defines a Type with Subtypes and Attributes. In general, Subtypes is
+a list of list of types. If a list of types [T0..Tn] is given, then
+this is automatically converted to [[T0..Tn]].</P>
+<H3>12.1.3. <a name="anc4"></a>at(Type)</H3>
+<P>Type is an atomic type, i.e. without any sub-types and without any
+attributes.</P>
+<H3>12.1.4. <a name="anc5"></a>list_type(Head,Tail)</H3>
+<P>Declares Head and Tail to be the attributes to refer to the head and
+the tail of objects of type `list'.</P>
+<H3>12.1.5. <a name="anc6"></a>extensional(Type)</H3>
+<P>Declares Type to be an extensional type, i.e. no extra variable is
+added to objects of this type; extensional objects are identical if
+they have the same value for each of their attributes. Intensional
+objects are identical only if they have been unified.</P>
+<H3>12.1.6. <a name="anc7"></a>boolean_type(Type,Model)</H3>
+<P>Declares Type to be a boolean type with Model as its model (list of
+list of atoms). For instance, boolean_type(agr, [[1,2,3], [sg,pl],
+[mas,fem,neut]]) defines that agr is such a boolean type.</P>
+<H3>12.1.7. <a name="anc8"></a>intensional(Type)</H3>
+<P>Type must be a boolean type. Boolean types are extensional by
+default, unless this predicate is defined for them.</P>
+<H2>12.2. <a name="anc9"></a>Predicates</H2>
+<P>This section lists the predicates exported by the hdrug_feature
+library.</P>
+<H3>12.2.1. <a name="anc10"></a>hdrug_feature:pretty_type(Type)</H3>
+<P>pretty prints information on Type. Types should have been compiled
+with hdrug_feature:type_compiler.</P>
+<H3>12.2.2. <a name="anc11"></a>hdrug_feature:find_type(?Term,-Types[,-Atts])</H3>
+<P>Types will be bound to the list of most informatives sub-types of
+Term; Atts will be bound to the list of all attributes of
+Term. Meta-logical. Types should have been compiled with
+hdrug_feature:type_compiler.</P>
+<H3>12.2.3. <a name="anc12"></a>hdrug_feature:unify_except(T1,T2,Path)</H3>
+<P>T1 and T2 are Prolog terms. Path is a sequence of attributes
+separated by colons. The predicate evaluates T1:Path and T2:Path (in
+order to ensure that Path is consistent with both
+objects. Furthermore, T1 and T2 are unified except for the values at
+T1:Path and T2:Path. Types should have been compiled with
+hdrug_feature:type_compiler.</P>
+<H3>12.2.4. <a name="anc13"></a>hdrug_feature:unify_except_l(T1,T2,ListOfPaths)</H3>
+<P>Similar to unify_except, except that the third argument now is a list
+of paths. T1 and T2 are Prolog terms. Each path in ListOfPaths is a
+sequence of attributes separated by colons. The predicate evaluates
+for each Path, T1:Path and T2:Path (in order to ensure that Path is
+consistent with both objects. Furthermore, T1 and T2 are unified
+except for all values at T1:Path and T2:Path for Path in
+ListOfPaths. Types should have been compiled with
+hdrug_feature:type_compiler.</P>
+<H3>12.2.5. <a name="anc14"></a>hdrug_feature:overwrite(T1,T2,Path,Type)</H3>
+<P>Abbreviation for unify_except(T1,T2,Path), T2:Path =&gt; Type; i.e. T1
+and T2 are identical, except that T2:Path is of type Type. Types
+should have been compiled with hdrug_feature:type_compiler.</P>
+<H3>12.2.6. <a name="anc15"></a>hdrug_feature:(ObjPath =&gt; Type)</H3>
+<P>This predicate evaluates ObjPath, and assigns Type to the result
+(i.e. the result is unified with the Prolog term representation of
+Type). ObjPath is a Prolog term followed by a (possibly empty) list of
+attributes separated by the colon :. A path such as X:syn:head:cat
+refers to the cat attribute of the head attribute of the syn attribute
+of X. Type must be a type (Prolog atom) or a boolean expression of
+boolean types. Types should have been compiled with
+hdrug_feature:type_compiler.</P>
+<H3>12.2.7. <a name="anc16"></a>hdrug_feature:(ObjPath /=&gt; Type)</H3>
+<P>This predicate evaluates ObjPath, and ensures that it is not of type
+Type (i.e. the result is not allowed to subsume the Prolog term
+representation of Type). ObjPath is a Prolog term followed by a
+(possibly empty) list of attributes separated by the colon :. A path
+such as X:syn:head:cat refers to the cat attribute of the head
+attribute of the syn attribute of X. Type must be a type (Prolog atom)
+or a boolean expression of boolean types. Types should have been
+compiled with hdrug_feature:type_compiler. The implementation of this
+construct uses delayed evaluation.</P>
+<H3>12.2.8. <a name="anc17"></a>hdrug_feature:(ObjPath ==&gt; Term)</H3>
+<P>This predicate evaluates ObjPath, and unifies Term with the
+result. ObjPath is a Prolog term followed by a (possibly empty) list
+of attributes separated by the colon :. A path such as X:syn:head:cat
+refers to the cat attribute of the head attribute of the syn attribute
+of X. Term is an arbitrary Prolog term. This predicate is often used
+to include arbitrary Prolog terms inside feature structures. You can
+define a hook predicate catch_print_error/3 in order to define pretty
+printing for such terms. Types should have been compiled with
+hdrug_feature:type_compiler.</P>
+<H3>12.2.9. <a name="anc18"></a>hdrug_feature:(ObjPathA &lt;=&gt; ObjPathB)</H3>
+<P>This predicate evaluates PathA and PathB, and unifies the
+results. ObjPathA and ObjPathB each is a Prolog term followed by a
+(possibly empty) list of attributes separated by the colon :. A path
+such as X:syn:head:cat refers to the cat attribute of the head
+attribute of the syn attribute of X. Types should have been compiled
+with hdrug_feature:type_compiler.</P>
+<H3>12.2.10. <a name="anc19"></a>hdrug_feature:(PathA &lt;?=?&gt; PathB)</H3>
+<P>This predicate uses the if_defined/2 construct in order to unify two
+paths, provided each of the two paths is defined. It is defined by:</P>
+<BLOCKQUOTE>A &lt;?=?&gt; B :-<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if_defined(A,Val), <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if_defined(B,Val).</BLOCKQUOTE>
+<H3>12.2.11. <a name="anc20"></a>hdrug_feature:is_defined(Path,Bool)</H3>
+<P>This predicate evaluates Path. If this is possible (i.e. the attributes
+are all appropriate) then Bool=yes. Otherwise Bool=no.</P>
+<H3>12.2.12. <a name="anc21"></a>hdrug_feature:if_defined(Path,Val[,Default])</H3>
+<P>This predicate evaluates Path, and unifies the result with Val. If
+the path cannot be evaluated (for instance because a feature is used
+which is not appropriate for the given type) then the predicate
+succeeds (in the binary case) or unifies Val with Default (in the
+ternary case). For example:</P>
+<BLOCKQUOTE>if_defined(X:head:subcat,List,[]),</BLOCKQUOTE>
+<P>could be used as part of the definition of a valence principle, in
+order to obtain the list value of the subcat attribute. However, for
+categories which have no subcat attribute, List is instantiated to
+[].</P>
+<H3>12.2.13. <a name="anc22"></a>hdrug_feature:type_compiler[(Module)]</H3>
+<P>Compiles type declarations
+(loaded in Module or user) into definitions for the predicates =&gt;/2,
+&lt;=&gt;/2, ==&gt;/2, unify_except/3, overwrite/4. The type declarations
+consist of definitions for the hook predicates top/1, at/1, type/3,
+list_type/2, extensional/1, boolean_type/2, intensional/1. The top/1
+declaration is required.</P>
+<P>top(Subtypes) is an abbreviation for type(top,[Subtypes],[]).</P>
+<P>at(Type) is an abbreviation for type(Type,[],[]).</P>
+<P>type(Type,[T0,..,Tn],Atts), where each Ti is atomic, is an abbrevation for 
+type(Type,[[T0,..,Tn]],Atts).</P>
+<P>Each type is specified by a list (conjunction) of lists (exclusive
+disjunctions) of subtypes and a list of attributes.</P>
+<P>Objects of type
+type(Type,[[A1..An],[B1..Bn],...,[Z1..Zn]],[Att1..Attn]) will be
+represented by the Prolog term Type(Ai',Bi',..,Zi',Att1',..,Attn',_)</P>
+<P>For example, the declaration</P>
+<BLOCKQUOTE>type(sign,[[basic,complex],[nominal,verbal]],[mor,sem])</BLOCKQUOTE>
+<P>implies that everything of type sign is represented with a term sign(BorC,NorV,Mor,Sem,_) where the first argument represents the first sub-type (basic or complex and any associated information with these subtypes), the second argument represents the second subtype (nominal or verbal), the third argument represents the value of the `mor' attribute, and the fourth argument represents the value of the `sem' attribute. The fifth argument is introduced in order that such objects are `intensional': objects are identical only if they have been unified.</P>
+<P>Assumptions:</P>
+<P>`top' has no appropriate features, will always be denoted with Variable bottom has no appropriate features, will not be denoted -&gt; failure hence top is only specified along one `dimension' (use top/1).</P>
+<P>Other types can be further specified along several dimensions, hence can have more than one subtype, at the same time. Subtypes of a type are mutually exclusive (in the example above, you cannot be both nominal and verbal).</P>
+<P>All types describe intensional objects (as in PATR II). For this purpose, during compilation an extra argument position is added to which you cannot refer. You can use extensional/1 for a specific type in order that this extra position is not added.</P>
+<P>Boolean types.</P>
+<P>The technique discussed in Chris Mellish' paper in Computational Linguistics is available to be able to express boolean combinations of simple types. First, boolean types are declared using the hook predicate boolean_type(Type,ListOfLists). For example, the declaration</P>
+<BLOCKQUOTE>boolean_type(agr,[[1,2,3],[sg,pl],[mas,fem,neut]])</BLOCKQUOTE>
+<P>declares that objects of type `agr' are elements of the cross-product of {1,2,3} x {sg,pl} x {mas,fem,neut}. Instead of simple types, boolean combinations are now allows, using the operators &amp; for conjunction, ~ for negation and ; for disjunction.</P>
+<BLOCKQUOTE>?- X =&gt; (sg &amp; ~fem ; pl).</BLOCKQUOTE>
+<BLOCKQUOTE>X = agr(0,_A,_B,_C,_C,_D,_E,_F,_G,_H,_H,_I,_J,_K,_L,_M,_M,_N,1) ?</BLOCKQUOTE>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node13.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+
+
+</BODY></HTML>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="20" id="2" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="3" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="4" lemma="delen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="deel" word="deelde" wvorm="pv"/>
+      <node begin="3" end="4" id="5" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
+      <node begin="2" cat="np" end="20" id="6" rel="obj1">
+        <node begin="2" end="3" getal="mv" graad="basis" id="7" lemma="stempel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="stempel" word="stempels"/>
+        <node begin="5" cat="rel" end="20" id="8" rel="mod">
+          <node begin="5" end="6" getal="getal" id="9" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+          <node begin="5" cat="ssub" end="20" id="10" rel="body">
+            <node begin="5" end="6" id="11" index="1" rel="su"/>
+            <node begin="6" cat="np" end="9" id="12" rel="obj1">
+              <node begin="6" buiging="zonder" end="7" getal="mv" id="13" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+              <node begin="7" buiging="met-e" end="8" id="14" lemma="beschermen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="beschermend" word="beschermende" wvorm="od"/>
+              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="kracht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kracht" word="kracht"/>
+            </node>
+            <node begin="9" buiging="zonder" end="10" graad="basis" id="16" lemma="totaal" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="totaal" word="totaal"/>
+            <node begin="10" end="11" id="17" lemma="verliezen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="verlies" word="verloren" wvorm="pv"/>
+            <node begin="11" cat="cp" end="20" id="18" rel="mod">
+              <node begin="11" conjtype="onder" end="12" id="19" lemma="zodra" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zodra" word="zodra"/>
+              <node begin="12" cat="ssub" end="20" id="20" rel="body">
+                <node begin="12" end="13" genus="masc" getal="ev" id="21" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="men"/>
+                <node begin="13" cat="np" end="16" id="22" rel="obj1">
+                  <node begin="13" end="14" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="14" buiging="zonder" end="15" graad="basis" id="24" lemma="eigen" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="eigen" word="eigen"/>
+                  <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="25" lemma="huisdeur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="huisdeur" word="huisdeur"/>
+                </node>
+                <node begin="16" buiging="zonder" end="17" graad="basis" id="26" lemma="definitief" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="definitief" word="definitief"/>
+                <node begin="17" cat="pp" end="19" id="27" rel="mod">
+                  <node begin="17" end="18" id="28" lemma="achter" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="achter" vztype="init" word="achter"/>
+                  <node begin="18" end="19" getal="getal" id="29" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="zich" status="red" vwtype="refl" word="zich"/>
+                </node>
+                <node begin="19" end="20" id="30" lemma="sluiten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="sluit" word="sloot" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="31" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hij deelde stempels uit , die hun beschermende kracht totaal verloren zodra men de eigen huisdeur definitief achter zich sloot .</sentence>
+</alpino_ds>

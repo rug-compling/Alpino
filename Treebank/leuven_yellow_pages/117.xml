@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="denken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="denk" word="denk" wvorm="pv"/>
+      <node begin="2" end="3" genus="onz" getal="ev" id="4" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="3" end="4" id="5" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+    </node>
+  </node>
+  <sentence>Ik denk het wel</sentence>
+</alpino_ds>

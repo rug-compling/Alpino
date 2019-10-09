@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="3" end="4" id="2" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" word="kunnen" wvorm="pv"/>
+      <node begin="4" end="5" getal="mv" id="3" index="1" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+      <node begin="0" cat="inf" end="9" id="4" rel="vc">
+        <node begin="0" cat="np" end="3" id="5" rel="obj1">
+          <node begin="0" end="1" getal="ev" id="6" lemma="iemand" naamval="stan" pdtype="pron" persoon="3p" pos="noun" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="hd" root="iemand" status="vol" vwtype="onbep" word="Iemand"/>
+          <node begin="1" cat="cp" end="3" id="7" rel="mod">
+            <node begin="1" end="2" id="8" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+            <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="9" lemma="Bram" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="body" root="Bram" word="Bram"/>
+          </node>
+        </node>
+        <node begin="4" end="5" id="10" index="1" rel="su"/>
+        <node begin="5" end="6" getal="getal" id="11" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" status="vol" vwtype="aanw" word="hier"/>
+        <node begin="6" buiging="zonder" end="7" id="12" lemma="missen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="mis" word="missen" wvorm="inf"/>
+        <node begin="7" cat="cp" end="9" id="13" rel="mod">
+          <node begin="7" end="8" id="14" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="kiespijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="kiespijn" word="kiespijn"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Iemand als Bram kunnen we hier missen als kiespijn</sentence>
+</alpino_ds>

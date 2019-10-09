@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="12" end="13" id="1" pos="punct" rel="--" root="(" special="haak_open" word="("/>
+    <node begin="14" end="15" id="2" pos="punct" rel="--" root=")" special="haak_sluit" word=")"/>
+    <node begin="0" cat="smain" end="18" id="3" rel="--">
+      <node begin="0" cat="np" end="4" id="4" index="1" rel="su">
+        <node begin="0" end="1" gen="de" id="5" num="pl" pos="noun" rel="hd" root="functie" word="Functies"/>
+        <node begin="1" cat="pp" end="4" id="6" rel="mod">
+          <node begin="1" end="2" id="7" pos="prep" rel="hd" root="van" word="van"/>
+          <node begin="2" cat="np" end="4" id="8" rel="obj1">
+            <node begin="2" end="3" id="9" infl="de" pos="det" rel="det" root="de" word="de"/>
+            <node begin="3" end="4" gen="de" id="10" num="pl" pos="noun" rel="hd" root="pijl_DIM_toets" word="pijltjestoetsen"/>
+          </node>
+        </node>
+      </node>
+      <node begin="4" end="5" id="11" infl="pl" pos="verb" rel="hd" root="kan" sc="aux(inf)" tense="present" word="kunnen"/>
+      <node begin="0" cat="inf" end="18" id="12" rel="vc">
+        <node begin="0" end="4" id="13" index="1" rel="su"/>
+        <node begin="6" end="7" id="14" infl="inf" pos="verb" rel="hd" root="word" sc="passive" word="worden"/>
+        <node begin="0" cat="ppart" end="18" id="15" rel="vc">
+          <node begin="0" end="4" id="16" index="1" rel="obj1"/>
+          <node begin="5" end="6" id="17" pos="adv" rel="mod" root="nu" special="tmp" word="nu"/>
+          <node begin="7" end="8" id="18" infl="psp" pos="verb" rel="hd" root="stel_in" sc="part_transitive(in)" word="ingesteld"/>
+          <node begin="8" cat="pp" end="14" id="19" rel="mod">
+            <node begin="8" end="9" id="20" pos="prep" rel="hd" root="via" word="via"/>
+            <node begin="9" cat="np" end="14" id="21" rel="obj1">
+              <node begin="9" end="10" id="22" infl="de" pos="det" rel="det" root="de" word="de"/>
+              <node begin="10" end="11" gen="de" id="23" num="sg" pos="noun" rel="hd" root="optie" word="optie"/>
+              <node begin="11" end="12" id="24" neclass="PER" num="both" pos="name" rel="app" root="BUTTON/DIAL" word="BUTTON/DIAL"/>
+              <node begin="13" end="14" id="25" neclass="LOC" num="both" pos="name" rel="mod" root="KNOP/AFSTEMMEN" word="KNOP/AFSTEMMEN"/>
+            </node>
+          </node>
+          <node begin="15" cat="pp" end="18" id="26" rel="mod">
+            <node begin="15" end="16" id="27" pos="prep" rel="hd" root="onder" word="onder"/>
+            <node begin="16" cat="np" end="18" id="28" rel="obj1">
+              <node begin="16" end="17" gen="both" id="29" num="sg" pos="noun" rel="hd" root="in_stel_menu" word="instelmenu"/>
+              <node begin="17" end="18" id="30" infl="sg_num" pos="num" rel="app" root="1" special="hoofd" word="1"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="31" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Functies van de pijltjestoetsen kunnen nu worden ingesteld via de optie BUTTON/DIAL ( KNOP/AFSTEMMEN ) onder instelmenu 1 .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

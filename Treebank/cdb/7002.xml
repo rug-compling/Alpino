@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="0" cat="smain" end="21" id="1" rel="--">
+      <node begin="0" cat="cp" end="5" id="2" rel="mod">
+        <node begin="0" cat="mwu" end="2" id="3" rel="cmp">
+          <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="4" lemma="inplaats" naamval="stan" ntype="soort" pos="comp" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Inplaats" word="Inplaats"/>
+          <node begin="1" end="2" id="5" lemma="van" pos="comp" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+        </node>
+        <node begin="2" cat="ti" end="5" id="6" rel="body">
+          <node begin="3" end="4" id="7" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="2" cat="inf" end="5" id="8" rel="body">
+            <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="9" lemma="les" naamval="stan" ntype="soort" pos="part" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="svp" root="les" word="les"/>
+            <node begin="4" buiging="zonder" end="5" id="10" lemma="geven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="geef" word="geven" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" id="11" lemma="discussieren" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="discussieer" word="discussieren" wvorm="pv"/>
+      <node begin="6" cat="np" end="8" id="12" rel="su">
+        <node begin="6" end="7" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="7" end="8" getal="mv" graad="basis" id="14" lemma="leraar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="leraar" word="leraren"/>
+      </node>
+      <node begin="8" buiging="zonder" end="9" graad="basis" id="15" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="vaak" word="vaak"/>
+      <node begin="9" cat="pp" end="12" id="16" rel="mod">
+        <node begin="9" end="10" id="17" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+        <node begin="10" cat="np" end="12" id="18" rel="obj1">
+          <node begin="10" end="11" id="19" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="11" end="12" getal="mv" graad="basis" id="20" lemma="leerling" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="leerling" word="leerlingen"/>
+        </node>
+      </node>
+      <node begin="12" cat="pp" end="21" id="21" rel="pc">
+        <node begin="12" end="13" id="22" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+        <node begin="13" cat="conj" end="21" id="23" rel="obj1">
+          <node begin="13" cat="np" end="15" id="24" rel="cnj">
+            <node begin="13" end="14" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="26" lemma="mammoetwet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wet" word="mammoetwet"/>
+          </node>
+          <node begin="15" conjtype="neven" end="16" id="27" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="16" cat="np" end="21" id="28" rel="cnj">
+            <node begin="16" end="17" id="29" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="30" lemma="democratisering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="democratisering" word="democratisering"/>
+            <node begin="18" cat="pp" end="21" id="31" rel="mod">
+              <node begin="18" end="19" id="32" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="19" cat="np" end="21" id="33" rel="obj1">
+                <node begin="19" end="20" id="34" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="35" lemma="onderwijs" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="onderwijs" word="onderwijs"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Inplaats van les te geven discussieren de leraren vaak met de leerlingen over de mammoetwet en de democratisering van het onderwijs .</sentence>
+</alpino_ds>

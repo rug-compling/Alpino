@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="ploeg" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="ploeg" word="ploeg"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="sg3" lemma="spelen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="speel" sc="transitive" stype="declarative" tense="present" word="speelt" wvorm="pv"/>
+      <node begin="3" end="4" getal="getal" id="6" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="daar" special="er_loc" status="vol" vwtype="aanw" word="daar"/>
+      <node begin="4" cat="np" end="12" id="7" rel="obj1">
+        <node begin="4" end="5" id="8" infl="pl_num" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="drie" special="hoofd" word="drie"/>
+        <node begin="5" end="6" gen="de" getal="mv" graad="basis" id="9" lemma="oefen_wedstrijd" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="oefen_wedstrijd" special="tmp" word="oefenwedstrijden"/>
+        <node begin="6" cat="rel" end="12" id="10" rel="mod">
+          <node begin="6" end="7" id="11" lemma="waarvan" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarvan" special="waar" word="waarvan"/>
+          <node begin="7" cat="du" end="12" id="12" rel="body">
+            <node begin="7" case="both" def="indef" end="8" gen="both" id="13" lemma="één" num="sg" numtype="hoofd" per="thi" pos="pron" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="dp" rnum="sg" root="één" special="strpro" wh="nwh" word="een"/>
+            <node begin="8" cat="pp" end="12" id="14" rel="dp">
+              <node begin="8" end="9" id="15" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
+              <node begin="9" cat="np" end="12" id="16" rel="obj1">
+                <node begin="9" end="10" id="17" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+                <node aform="base" begin="10" buiging="met-e" end="11" graad="basis" id="18" infl="e" lemma="nationaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nationaal" vform="adj" word="nationale"/>
+                <node begin="11" end="12" gen="het" genus="onz" getal="ev" graad="basis" id="19" lemma="elftal" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="elftal" word="elftal"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>De ploeg speelt daar drie oefenwedstrijden waarvan een tegen het nationale elftal .</sentence>
+</alpino_ds>

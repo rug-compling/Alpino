@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="whq" end="10" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="10" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="predc"/>
+        <node begin="1" end="2" id="5" lemma="noemen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="noem" word="noemt" wvorm="pv"/>
+        <node begin="2" end="3" genus="masc" getal="ev" id="6" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="men"/>
+        <node begin="3" cat="np" end="10" id="7" rel="obj1">
+          <node begin="3" end="4" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="redenering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="redenering" word="redenering"/>
+          <node begin="5" cat="rel" end="10" id="10" rel="mod">
+            <node begin="5" end="6" getal="getal" id="11" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="5" cat="ssub" end="10" id="12" rel="body">
+              <node begin="5" end="6" id="13" index="2" rel="su"/>
+              <node begin="6" cat="pp" end="9" id="14" rel="ld">
+                <node begin="6" end="7" id="15" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+                <node begin="7" cat="np" end="9" id="16" rel="obj1">
+                  <node begin="7" end="8" id="17" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                  <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="18" lemma="uitgangspunt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="uitgangspunt" word="uitgangspunt"/>
+                </node>
+              </node>
+              <node begin="9" end="10" id="19" lemma="terugvoeren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="voer_terug" word="terugvoert" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="10" end="11" id="20" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe noemt men een redenering die tot het uitgangspunt terugvoert ?</sentence>
+</alpino_ds>

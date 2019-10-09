@@ -1,0 +1,53 @@
+#!/usr/bin/perl
+# © Gertjan van Noord, 1998.
+# mailto:vannoord@let.rug.nl
+
+use Getopt::Std;
+
+getopts('m:p:o:uc:x:');
+
+$opt_p ||= 5000;
+$opt_m ||= 1000;
+$opt_c ||= "gzip";
+$opt_o ||= "output";
+$opt_x ||= "sents";
+
+if ($opt_u){
+    %seen=();
+}
+
+$ofile = $opt_o."_part00001.".$opt_x;
+
+
+open(OUTPUT,"|$opt_c >$ofile") || 
+  die "cannot write to |$opt_c >$ofile: $!\n";
+$part=2;
+$counter=0;
+while (<> )  {
+  if (/^[%]/) {
+    print OUTPUT $_;
+    next;
+  }
+  if ($opt_u){
+      if ($seen{$_}) {
+	  next;
+      }
+      else {
+	  $seen{$_}++;
+      }
+  }
+
+  $counter++;
+  @words=split;
+  if (@words < $opt_m) {
+    print OUTPUT "$_";
+  }
+  if ($counter >= $opt_p) {
+    $counter=0;
+    close OUTPUT;
+    $ofile = sprintf "%s_part%05d.%s",$opt_o,$part,$opt_x;
+    open(OUTPUT,"|$opt_c >$ofile") || 
+      die "cannot write to $opt_c >$ofile: $!\n";
+    $part++;
+  }
+}

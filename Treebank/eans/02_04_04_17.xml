@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="sv1" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="worden" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="word" word="Word" wvorm="pv"/>
+      <node begin="1" cat="ppart" end="7" id="3" rel="vc">
+        <node begin="1" end="2" id="4" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
+        <node begin="2" end="3" id="5" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="mod" root="eens" word="eens"/>
+        <node begin="3" buiging="zonder" end="4" id="6" lemma="bestelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="besteel" word="bestolen" wvorm="vd"/>
+        <node begin="4" cat="pp" end="7" id="7" rel="mod">
+          <node begin="4" end="5" id="8" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="5" cat="np" end="7" id="9" rel="obj1">
+            <node begin="5" end="6" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="11" lemma="buitenland" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="buitenland" word="buitenland"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Word maar eens bestolen in het buitenland</sentence>
+</alpino_ds>

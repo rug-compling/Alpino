@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="np" end="12" id="1" rel="--">
+      <node begin="0" end="1" frame="determiner(een)" id="2" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="Een"/>
+      <node aform="base" begin="1" end="2" frame="adjective(e)" id="3" infl="e" lcat="ap" pos="adj" rel="mod" root="zelfstandig" sense="zelfstandig" vform="adj" word="zelfstandige"/>
+      <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="4" lcat="np" num="sg" pos="noun" rel="hd" root="rapportage_functie" sense="rapportage_functie" word="rapportagefunctie"/>
+      <node begin="3" cat="pp" end="12" id="5" rel="mod">
+        <node begin="3" end="4" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="6" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+        <node begin="4" cat="conj" end="12" id="7" rel="obj1">
+          <node begin="5" end="6" frame="conj(en)" id="8" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+          <node begin="4" cat="np" end="12" id="9" rel="cnj">
+            <node begin="4" end="5" frame="noun(de,count,sg)" gen="de" id="10" lcat="np" num="sg" pos="noun" rel="hd" root="uur_registratie" sense="uur_registratie" word="urenregistratie"/>
+            <node begin="7" cat="rel" end="12" id="11" index="1" rel="mod">
+              <node begin="7" case="no_obl" end="8" frame="rel_pronoun(de,no_obl)" gen="de" id="12" index="2" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+              <node begin="7" cat="ssub" end="12" id="13" rel="body">
+                <node begin="7" end="8" id="14" index="2" rel="su"/>
+                <node begin="8" end="9" frame="verb(unacc,sg_heeft,aux_psp_zijn)" id="15" infl="sg_heeft" lcat="ssub" pos="verb" rel="hd" root="ben" sc="aux_psp_zijn" sense="ben" tense="present" word="is"/>
+                <node begin="7" cat="ppart" end="12" id="16" rel="vc">
+                  <node begin="7" end="8" id="17" index="2" rel="su"/>
+                  <node begin="9" end="10" frame="verb(zijn,psp,intransitive)" id="18" infl="psp" lcat="ppart" pos="verb" rel="hd" root="integreer" sc="intransitive" sense="integreer" word="geïntegreerd"/>
+                  <node begin="10" cat="pp" end="12" id="19" rel="mod">
+                    <node begin="10" end="11" frame="preposition(in,[])" id="20" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                    <node begin="11" end="12" frame="proper_name(both,'LOC')" id="21" lcat="np" neclass="LOC" num="both" pos="name" rel="obj1" root="Projectadministratie" sense="Projectadministratie" word="Projectadministratie"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="6" cat="np" end="12" id="22" rel="cnj">
+            <node begin="6" end="7" frame="noun(de,count,pl)" gen="de" id="23" lcat="np" num="pl" pos="noun" rel="hd" root="uitgave" sense="uitgave" word="uitgaven"/>
+            <node begin="7" end="12" id="24" index="1" rel="mod"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" frame="punct(punt)" id="25" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Een zelfstandige rapportagefunctie voor urenregistratie en uitgaven die is geïntegreerd in Projectadministratie .</sentence>
+  <comments>
+    <comment>Q#181|Een zelfstandige rapportagefunctie voor urenregistratie en uitgaven die is geïntegreerd in Projectadministratie .|1|1|-2.8660197996218546</comment>
+  </comments>
+</alpino_ds>

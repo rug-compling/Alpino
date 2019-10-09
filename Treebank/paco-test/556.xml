@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="52" id="0" rel="top">
+    <node begin="21" end="22" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="30" end="31" frame="punct(komma)" id="2" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="conj" end="51" id="3" rel="--">
+      <node begin="0" cat="smain" end="37" id="4" rel="cnj">
+        <node begin="0" cat="np" end="5" id="5" index="1" rel="su">
+          <node begin="0" end="1" frame="determiner(de)" id="6" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+          <node begin="1" cat="conj" end="4" id="7" rel="mod">
+            <node aform="base" begin="1" end="2" frame="adjective(e)" id="8" infl="e" lcat="ap" pos="adj" rel="cnj" root="economisch" sense="economisch" vform="adj" word="economische"/>
+            <node begin="2" end="3" frame="conj(en)" id="9" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+            <node aform="base" begin="3" end="4" frame="adjective(e)" id="10" infl="e" lcat="ap" pos="adj" rel="cnj" root="commercieel" sense="commercieel" vform="adj" word="commerciële"/>
+          </node>
+          <node begin="4" end="5" frame="noun(de,mass,sg)" gen="de" id="11" lcat="np" num="sg" pos="noun" rel="hd" root="samenwerking" sense="samenwerking" word="samenwerking"/>
+        </node>
+        <node begin="5" end="6" frame="verb(hebben,sg_heeft,fixed([[ten,doel],vp],no_passive))" id="12" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="heb" sc="fixed([[ten,doel],vp],no_passive)" sense="ten-doel-heb" tense="present" word="heeft"/>
+        <node begin="6" cat="mwu" end="8" id="13" mwu_root="ten_doel" mwu_sense="ten_doel" rel="svp">
+          <node begin="6" end="7" frame="fixed_part([ten,doel])" id="14" lcat="fixed" pos="fixed" rel="mwp" root="ten" sense="ten" word="ten"/>
+          <node begin="7" end="8" frame="fixed_part([ten,doel])" id="15" lcat="fixed" pos="fixed" rel="mwp" root="doel" sense="doel" word="doel"/>
+        </node>
+        <node begin="0" cat="ti" end="30" id="16" rel="vc">
+          <node begin="19" end="20" frame="complementizer(te)" id="17" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+          <node begin="0" cat="inf" end="30" id="18" rel="body">
+            <node begin="0" end="5" id="19" index="1" rel="su"/>
+            <node begin="8" cat="conj" end="19" id="20" rel="obj1">
+              <node begin="8" cat="np" end="10" id="21" rel="cnj">
+                <node begin="8" end="9" frame="determiner(de)" id="22" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                <node aform="base" begin="9" end="10" frame="adjective(e)" id="23" infl="e" lcat="np" pos="adj" rel="hd" root="soepel" sense="soepel" vform="adj" word="soepele"/>
+              </node>
+              <node begin="10" end="11" frame="conj(en)" id="24" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+              <node begin="11" cat="np" end="19" id="25" rel="cnj">
+                <node aform="base" begin="11" end="12" frame="adjective(e)" id="26" infl="e" lcat="ap" pos="adj" rel="mod" root="geleidelijk" sense="geleidelijk" vform="adj" word="geleidelijke"/>
+                <node begin="12" end="13" frame="noun(de,count,sg)" gen="de" id="27" lcat="np" num="sg" pos="noun" rel="hd" root="integratie" sense="integratie" word="integratie"/>
+                <node begin="13" cat="pp" end="19" id="28" rel="mod">
+                  <node begin="13" end="14" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="29" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                  <node begin="14" cat="np" end="19" id="30" rel="obj1">
+                    <node begin="14" end="15" frame="determiner(de)" id="31" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                    <node begin="15" end="16" frame="noun(de,count,pl)" gen="de" id="32" lcat="np" num="pl" pos="noun" rel="hd" root="ACS_staat" sense="ACS_staat" word="ACS-staten"/>
+                    <node begin="16" cat="pp" end="19" id="33" rel="mod">
+                      <node begin="16" end="17" frame="preposition(in,[])" id="34" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                      <node begin="17" cat="np" end="19" id="35" rel="obj1">
+                        <node begin="17" end="18" frame="determiner(de)" id="36" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                        <node begin="18" end="19" frame="noun(de,mass,sg)" gen="de" id="37" lcat="np" num="sg" pos="noun" rel="hd" root="wereld_economie" sense="wereld_economie" word="wereldeconomie"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="20" end="21" frame="verb(hebben,inf,transitive)" id="38" infl="inf" lcat="inf" pos="verb" rel="hd" root="bevorder" sc="transitive" sense="bevorder" word="bevorderen"/>
+            <node begin="22" cat="pp" end="30" id="39" rel="mod">
+              <node begin="22" cat="mwu" end="25" id="40" mwu_root="met_inachtneming_van" mwu_sense="met_inachtneming_van" rel="hd">
+                <node begin="22" end="23" frame="preposition([met,inachtneming,van],[])" id="41" lcat="pp" pos="prep" rel="mwp" root="met" sense="met" word="met"/>
+                <node begin="23" end="24" frame="preposition([met,inachtneming,van],[])" id="42" lcat="pp" pos="prep" rel="mwp" root="inachtneming" sense="inachtneming" word="inachtneming"/>
+                <node begin="24" end="25" frame="preposition([met,inachtneming,van],[])" id="43" lcat="pp" pos="prep" rel="mwp" root="van" sense="van" word="van"/>
+              </node>
+              <node begin="25" cat="conj" end="30" id="44" rel="obj1">
+                <node begin="25" cat="np" end="28" id="45" rel="cnj">
+                  <node begin="25" end="26" frame="determiner(pron)" id="46" index="2" infl="pron" lcat="detp" pos="det" rel="det" root="hun" sense="hun" word="hun"/>
+                  <node aform="base" begin="26" end="27" frame="adjective(e)" id="47" index="3" infl="e" lcat="ap" pos="adj" rel="mod" root="politiek" sense="politiek" vform="adj" word="politieke"/>
+                  <node begin="27" end="28" frame="noun(de,count,pl)" gen="de" id="48" lcat="np" num="pl" pos="noun" rel="hd" root="keuze" sense="keuze" word="keuzen"/>
+                </node>
+                <node begin="28" end="29" frame="conj(en)" id="49" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                <node begin="25" cat="np" end="30" id="50" rel="cnj">
+                  <node begin="25" end="26" id="51" index="2" rel="det"/>
+                  <node begin="26" end="27" id="52" index="3" rel="mod"/>
+                  <node begin="29" end="30" frame="noun(de,count,pl)" gen="de" id="53" lcat="np" num="pl" pos="noun" rel="hd" root="ontwikkeling_prioriteit" sense="ontwikkeling_prioriteit" word="ontwikkelingsprioriteiten"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="31" cat="cp" end="37" id="54" rel="mod">
+          <node begin="31" end="32" frame="complementizer" id="55" lcat="cp" pos="comp" rel="cmp" root="zodat" sense="zodat" word="zodat"/>
+          <node begin="32" cat="ssub" end="37" id="56" rel="body">
+            <node begin="32" cat="np" end="35" id="57" index="4" rel="su">
+              <node begin="32" end="33" frame="determiner(pron)" id="58" infl="pron" lcat="detp" pos="det" rel="det" root="hun" sense="hun" word="hun"/>
+              <node aform="base" begin="33" end="34" frame="adjective(e)" id="59" infl="e" lcat="ap" pos="adj" rel="mod" root="duurzaam" sense="duurzaam" vform="adj" word="duurzame"/>
+              <node begin="34" end="35" frame="noun(de,count,sg)" gen="de" id="60" lcat="np" num="sg" pos="noun" rel="hd" root="ontwikkeling" sense="ontwikkeling" word="ontwikkeling"/>
+            </node>
+            <node begin="35" end="36" frame="verb(unacc,sg3,passive)" id="61" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt"/>
+            <node begin="32" cat="ppart" end="37" id="62" rel="vc">
+              <node begin="32" end="35" id="63" index="4" rel="obj1"/>
+              <node begin="36" end="37" frame="verb(hebben,psp,transitive)" id="64" infl="psp" lcat="ppart" pos="verb" rel="hd" root="stimuleer" sc="transitive" sense="stimuleer" word="gestimuleerd"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="37" end="38" frame="conj(en)" id="65" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="0" cat="smain" end="51" id="66" rel="cnj">
+        <node begin="0" end="5" id="67" index="1" rel="su"/>
+        <node begin="38" end="39" frame="verb(unacc,sg3,passive)" id="68" infl="sg3" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt"/>
+        <node begin="0" cat="ppart" end="51" id="69" rel="vc">
+          <node begin="0" end="5" id="70" index="1" rel="obj1"/>
+          <node begin="39" end="40" frame="verb(hebben,psp,ninv(np_pc_pp(aan),part_np_pc_pp(bij,aan)))" id="71" infl="psp" lcat="ppart" pos="verb" rel="hd" root="draag_bij" sc="part_np_pc_pp(bij,aan)" sense="draag_bij-aan" word="bijgedragen"/>
+          <node begin="40" cat="pp" end="51" id="72" rel="pc">
+            <node begin="40" end="41" frame="preposition(aan,[vooraf])" id="73" lcat="pp" pos="prep" rel="hd" root="aan" sense="aan" word="aan"/>
+            <node begin="41" cat="np" end="51" id="74" rel="obj1">
+              <node begin="41" end="42" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="75" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+              <node begin="42" cat="np" end="44" id="76" rel="obj1">
+                <node begin="42" end="43" frame="determiner(een)" id="77" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+                <node begin="43" end="44" frame="tmp_noun(het,count,sg)" gen="het" id="78" lcat="np" num="sg" pos="noun" rel="hd" root="eind" sense="eind" special="tmp" word="eind"/>
+              </node>
+              <node begin="44" end="45" frame="v_noun(fixed([{[acc(eind),pc(aan)]}],norm_passive))" id="79" lcat="np" pos="verb" rel="hd" root="maak" sc="fixed([{[acc(eind),pc(aan)]}],norm_passive)" sense="eind-maak-aan" special="v_noun" word="maken"/>
+              <node begin="45" cat="pp" end="51" id="80" rel="pc">
+                <node begin="45" end="46" frame="preposition(aan,[vooraf])" id="81" lcat="pp" pos="prep" rel="hd" root="aan" sense="aan" word="aan"/>
+                <node begin="46" cat="np" end="51" id="82" rel="obj1">
+                  <node begin="46" end="47" frame="determiner(de)" id="83" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="47" end="48" frame="noun(de,mass,sg)" gen="de" id="84" lcat="np" num="sg" pos="noun" rel="hd" root="armoede" sense="armoede" word="armoede"/>
+                  <node begin="48" cat="pp" end="51" id="85" rel="mod">
+                    <node begin="48" end="49" frame="preposition(in,[])" id="86" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                    <node begin="49" cat="np" end="51" id="87" rel="obj1">
+                      <node begin="49" end="50" frame="determiner(de)" id="88" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                      <node begin="50" end="51" frame="noun(het,count,pl)" gen="het" id="89" lcat="np" num="pl" pos="noun" rel="hd" root="ACS_land" sense="ACS_land" word="ACS-landen"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="51" end="52" frame="punct(punt)" id="90" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De economische en commerciële samenwerking heeft ten doel de soepele en geleidelijke integratie van de ACS-staten in de wereldeconomie te bevorderen , met inachtneming van hun politieke keuzen en ontwikkelingsprioriteiten , zodat hun duurzame ontwikkeling wordt gestimuleerd en wordt bijgedragen aan het een eind maken aan de armoede in de ACS-landen .</sentence>
+  <comments>
+    <comment>Q#556|De economische en commerciële samenwerking heeft ten doel de soepele en geleidelijke integratie van de ACS-staten in de wereldeconomie te bevorderen , met inachtneming van hun politieke keuzen en ontwikkelingsprioriteiten , zodat hun duurzame ontwikkeling wordt gestimuleerd en wordt bijgedragen aan het een eind maken aan de armoede in de ACS-landen .|1|1|-5.448411012228442</comment>
+  </comments>
+</alpino_ds>

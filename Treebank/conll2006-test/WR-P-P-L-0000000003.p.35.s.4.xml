@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="14" end="15" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="17" end="18" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="23" id="4" rel="--">
+      <node begin="0" cat="np" end="2" id="5" rel="su">
+        <node begin="0" end="1" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="7" lemma="team" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="team" word="team"/>
+      </node>
+      <node begin="2" end="3" id="8" lemma="bestaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="besta" word="bestaat" wvorm="pv"/>
+      <node begin="3" cat="pp" end="23" id="9" rel="pc">
+        <node begin="3" end="4" id="10" lemma="uit" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="uit" vztype="fin" word="uit"/>
+        <node begin="4" cat="conj" end="23" id="11" rel="obj1">
+          <node begin="4" cat="np" end="10" id="12" rel="cnj">
+            <node begin="4" end="5" id="13" index="1" lemma="bijvoorbeeld" pos="adv" postag="BW()" pt="bw" rel="mod" root="bijvoorbeeld" word="bijvoorbeeld"/>
+            <node begin="5" end="6" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="6" buiging="met-e" end="7" getal-n="zonder-n" graad="basis" id="15" lemma="verpleegkundig" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,zonder-n,stan)" pt="adj" rel="hd" root="verpleegkundig" word="verpleegkundige"/>
+            <node begin="7" cat="pp" end="10" id="16" rel="mod">
+              <node begin="7" end="8" id="17" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="8" cat="np" end="10" id="18" rel="obj1">
+                <node begin="8" end="9" id="19" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="20" lemma="consultatiebureau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="consultatiebureau" word="consultatiebureau"/>
+              </node>
+            </node>
+          </node>
+          <node begin="4" cat="np" end="14" id="21" rel="cnj">
+            <node begin="4" end="5" id="22" index="1" rel="mod"/>
+            <node begin="11" end="12" id="23" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="12" buiging="zonder" end="13" graad="basis" id="24" lemma="maatschappelijk" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="maatschappelijk" word="maatschappelijk"/>
+            <node begin="13" buiging="met-e" end="14" getal-n="zonder-n" id="25" lemma="werken" pos="adj" positie="nom" postag="WW(od,nom,met-e,zonder-n)" pt="ww" rel="hd" root="werk" word="werkende" wvorm="od"/>
+          </node>
+          <node begin="4" cat="np" end="17" id="26" rel="cnj">
+            <node begin="4" end="5" id="27" index="1" rel="mod"/>
+            <node begin="15" end="16" id="28" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="29" lemma="logopedist" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="logopedist" word="logopedist"/>
+          </node>
+          <node begin="4" cat="np" end="20" id="30" rel="cnj">
+            <node begin="4" end="5" id="31" index="1" rel="mod"/>
+            <node begin="18" end="19" id="32" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="33" lemma="fysiotherapeut" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="fysiotherapeut" word="fysiotherapeut"/>
+          </node>
+          <node begin="20" conjtype="neven" end="21" id="34" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="4" cat="np" end="23" id="35" rel="cnj">
+            <node begin="4" end="5" id="36" index="1" rel="mod"/>
+            <node begin="21" end="22" id="37" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="38" lemma="pedagoog" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pedagoog" word="pedagoog"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="39" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het team bestaat uit bijvoorbeeld een verpleegkundige van het consultatiebureau , een maatschappelijk werkende , een logopedist , een fysiotherapeut en een pedagoog .</sentence>
+</alpino_ds>

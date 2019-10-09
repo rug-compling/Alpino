@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="34" id="0" rel="top">
+    <node begin="0" cat="conj" end="33" id="1" rel="--">
+      <node begin="0" cat="smain" end="9" id="2" rel="cnj">
+        <node begin="0" cat="pp" end="2" id="3" index="1" rel="mod">
+          <node begin="0" end="1" frame="preposition(aan,[vooraf])" id="4" lcat="pp" pos="prep" rel="hd" root="aan" sense="aan" word="Aan"/>
+          <node begin="1" end="2" frame="proper_name(both,'ORG')" id="5" lcat="np" neclass="ORG" num="both" pos="name" rel="obj1" root="Gemeenschapszijde" sense="Gemeenschapszijde" word="Gemeenschapszijde"/>
+        </node>
+        <node begin="2" end="3" frame="verb(hebben,sg3,part_pc_pp(voort,op))" id="6" infl="sg3" lcat="smain" pos="verb" rel="hd" root="bouw_voort" sc="part_pc_pp(voort,op)" sense="bouw_voort-op" tense="present" word="bouwt"/>
+        <node begin="3" cat="np" end="5" id="7" rel="su">
+          <node begin="3" end="4" frame="determiner(de)" id="8" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="4" end="5" frame="noun(both,both,both)" gen="both" id="9" lcat="np" num="both" pos="noun" rel="hd" root="handelsliberalisatie" sense="handelsliberalisatie" word="handelsliberalisatie"/>
+        </node>
+        <node begin="5" end="6" frame="particle(voort)" id="10" lcat="part" pos="part" rel="svp" root="voort" sense="voort" word="voort"/>
+        <node begin="6" cat="pp" end="9" id="11" rel="pc">
+          <node begin="6" end="7" frame="preposition(op,[af,na])" id="12" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+          <node begin="7" cat="np" end="9" id="13" rel="obj1">
+            <node begin="7" end="8" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="14" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+            <node begin="8" end="9" frame="noun(both,both,both)" gen="both" id="15" lcat="np" num="both" pos="noun" rel="hd" root="acquis" sense="acquis" word="acquis"/>
+          </node>
+        </node>
+      </node>
+      <node begin="9" end="10" frame="conj(en)" id="16" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="0" cat="smain" end="33" id="17" rel="cnj">
+        <node begin="0" end="2" id="18" index="1" rel="mod"/>
+        <node begin="10" end="11" frame="verb(hebben,sg_heeft,transitive_ndev)" id="19" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="heb" sc="transitive_ndev" sense="heb" tense="present" word="heeft"/>
+        <node begin="11" case="nom" def="def" end="12" frame="pronoun(nwh,thi,both,de,nom,def)" gen="de" id="20" lcat="np" num="both" per="thi" pos="pron" rel="su" root="zij" sense="zij" wh="nwh" word="zij"/>
+        <node begin="12" cat="np" end="23" id="21" rel="obj1">
+          <node begin="12" end="13" frame="determiner(de)" id="22" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="13" end="14" frame="noun(de,count,sg)" gen="de" id="23" lcat="np" num="sg" pos="noun" rel="hd" root="verbetering" sense="verbetering" word="verbetering"/>
+          <node begin="14" cat="pp" end="23" id="24" rel="mod">
+            <node begin="14" end="15" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="25" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="15" cat="np" end="23" id="26" rel="obj1">
+              <node begin="15" end="16" frame="determiner(de)" id="27" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node aform="base" begin="16" end="17" frame="adjective(e)" id="28" infl="e" lcat="ap" pos="adj" rel="mod" root="huidig" sense="huidig" vform="adj" word="huidige"/>
+              <node begin="17" end="18" frame="noun(de,count,sg)" gen="de" id="29" lcat="np" num="sg" pos="noun" rel="hd" root="markt_toegang" sense="markt_toegang" word="markttoegang"/>
+              <node begin="18" cat="pp" end="23" id="30" rel="mod">
+                <node begin="18" end="19" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="31" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+                <node begin="19" cat="np" end="23" id="32" rel="obj1">
+                  <node begin="19" end="20" frame="determiner(de)" id="33" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="20" end="21" frame="noun(het,count,pl)" gen="het" id="34" lcat="np" num="pl" pos="noun" rel="hd" root="ACS_land" sense="ACS_land" word="ACS-landen"/>
+                  <node begin="21" cat="pp" end="23" id="35" rel="mod">
+                    <node begin="21" end="22" frame="preposition(ten,[],nodet)" id="36" lcat="pp" pos="prep" rel="hd" root="ten" sc="nodet" sense="ten" word="ten"/>
+                    <node begin="22" end="23" frame="noun(het,count,sg)" gen="het" id="37" lcat="np" num="sg" pos="noun" rel="obj1" root="doel" sense="doel" word="doel"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="23" cat="pp" end="33" id="38" rel="mod">
+          <node begin="23" end="24" frame="preposition(via,[])" id="39" lcat="pp" pos="prep" rel="hd" root="via" sense="via" word="via"/>
+          <node begin="24" cat="np" end="33" id="40" rel="obj1">
+            <node begin="24" cat="mwu" end="26" id="41" mwu_root="onder_meer" mwu_sense="onder_meer" rel="mod">
+              <node begin="24" end="25" frame="modal_adverb" id="42" lcat="advp" pos="adv" rel="mwp" root="onder" sc="modal" sense="onder" word="onder"/>
+              <node begin="25" end="26" frame="modal_adverb" id="43" lcat="advp" pos="adv" rel="mwp" root="meer" sc="modal" sense="meer" word="meer"/>
+            </node>
+            <node begin="26" end="27" frame="determiner(een)" id="44" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+            <node begin="27" end="28" frame="noun(de,count,sg)" gen="de" id="45" lcat="np" num="sg" pos="noun" rel="hd" root="herziening" sense="herziening" word="herziening"/>
+            <node begin="28" cat="pp" end="33" id="46" rel="mod">
+              <node begin="28" end="29" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="47" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+              <node begin="29" cat="np" end="33" id="48" rel="obj1">
+                <node begin="29" end="30" frame="determiner(de)" id="49" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                <node begin="30" end="31" frame="noun(de,count,pl)" gen="de" id="50" lcat="np" num="pl" pos="noun" rel="hd" root="regel" sense="regel" word="regels"/>
+                <node begin="31" cat="pp" end="33" id="51" rel="mod">
+                  <node begin="31" end="32" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="52" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                  <node begin="32" end="33" frame="noun(de,count,sg)" gen="de" id="53" lcat="np" num="sg" pos="noun" rel="obj1" root="oorsprong" sense="oorsprong" word="oorsprong"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="33" end="34" frame="punct(punt)" id="54" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Aan Gemeenschapszijde bouwt de handelsliberalisatie voort op het acquis en heeft zij de verbetering van de huidige markttoegang voor de ACS-landen ten doel via onder meer een herziening van de regels van oorsprong .</sentence>
+  <comments>
+    <comment>Q#562|Aan Gemeenschapszijde bouwt de handelsliberalisatie voort op het acquis en heeft zij de verbetering van de huidige markttoegang voor de ACS-landen ten doel via onder meer een herziening van de regels van oorsprong .|1|1|2.12401962312078</comment>
+  </comments>
+</alpino_ds>

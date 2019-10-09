@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ "$1" = "" ] 
+then
+   exit 0
+else
+	cp verbatim.bgn $1.tex
+	
+	expand $1.pl >> $1.tex
+	cat verbatim.end >> $1.tex
+fi

@@ -1,0 +1,89 @@
+Alpino on the DutchGrid
+=======================
+Daniel de Kok <me@danieldk.eu>
+
+Introduction
+------------
+
+This document contains notes about using Alpino on EGEE/DutchGrid. Sample
+files are included in the same directory. To run Alpino on the grid, the
+following is required:
+
+* A certificate the authenticate to the grid.
+* Membership of a virtual organization (VO).
+* A build of Alpino Red Hat Enterprise Linux.
+
+As of speaking, most grid nodes run Red Hat Enterprise Linux 4 or
+derivatives such as CentOS or Scientific Linux. Since these distributions
+have an old glibc/libstdc++, Debian-built Alpino versions normally
+do not work.
+
+Making corpora available
+------------------------
+
+To make a corpus available for parsing on the grid, it is unfeasible to
+copy sentences directly into the job sandbox. Instead, the procedure is
+to copy the data to a storage element, and assign a logical file name
+(LFN) to it. Individual jobs can then download their data from the
+storage element using lcg-cp. To keep things clean, we currently use
+the following LFN prefix:
+
+lfn:/grid/ncf/rugai/<username>/corpus/<corpusname>
+
+Data is copied to a storage element with lcg-cr. Suppose that we have
+input files [0..99].txt, they can be copied with:
+
+ for i in `seq 0 99`; do
+   lcg-cr --vo ncf \
+     -l lfn:/grid/ncf/rugai/dekok/corpus/twnc1999/inputs/${i}.txt \
+     -d se.grid.rug.nl file://$(pwd)/${i}.txt
+ done
+
+Simple jobs
+-----------
+
+Jobs are specified using the job description language (JDL). For
+example, consider alpino_simple.jdl:
+
+ [
+ JobType = "Parametric";
+ Executable = "/bin/sh";
+ Arguments = "run_alpino_simple.sh twnc1999 _PARAM_";
+ Parameters=100;
+ ParameterStart=0;
+ StdOutput = "alpino._PARAM_.out";
+ StdError = "alpino._PARAM_.err";
+ InputSandbox = {"run_alpino_simple.sh"};
+ OutputSandbox = {"alpino._PARAM_.out","alpino._PARAM_.err"};
+ RetryCount = 7;
+
+ Requirements = ( other.GlueHostOperatingSystemName  == "CentOS" ||
+                  other.GlueHostOperatingSystemName  == "RedHatEnterpriseAS"  ||
+                  other.GlueHostOperatingSystemName  == "ScientificSL" ||
+                  other.GlueHostOperatingSystemName  == "ScientificCERNSLC" ||
+                  other.GlueHostOperatingSystemName  == "Scientific Linux"
+                ) &&
+                ( 
+                 other.GlueHostOperatingSystemRelease >= 4.0
+                ) &&
+ 		(other.GlueHostMainMemoryRAMSize > 3500) &&
+		(RegExp("rug.*long", other.GlueCEUniqueId));
+ ]
+
+This job is parametric, meaning that N jobs are started (N = 100),
+where every job gets a parameter ParameterStart + (N - 1). Here,
+the script run_alpino_simple.sh is started with the name of a corpus
+and the parameter as its arguments.
+
+Also interesting is the list of requirements: we require a machine
+running Red Hat Enterprise Linux (or a compatible system) with at least
+operating system version 4.0 and a minimum of 3500MB of RAM. We also
+restrict submission to a queue containing the phrases "rug" and "long"
+(submission of long-running jobs at RUG).
+
+The script run_alpino_simple.sh performs the following tasks:
+
+* Fetch a chunk of the corpus, based on the parameter.
+* Parse the chunk with Alpino, outputting trees in XML format.
+* Archive the resulting trees, and storing the trees on a storage element.
+* Some cleaning.

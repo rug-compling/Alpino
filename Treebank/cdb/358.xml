@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="np" end="7" id="1" rel="--">
+      <node begin="0" end="1" getal="mv" graad="basis" id="2" lemma="ding" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="ding" word="Dingen"/>
+      <node begin="1" cat="rel" end="7" id="3" rel="mod">
+        <node begin="1" end="2" getal="getal" id="4" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+        <node begin="1" cat="ssub" end="7" id="5" rel="body">
+          <node begin="2" end="3" getal="ev" id="6" index="2" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="noun" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+          <node begin="4" end="5" id="7" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
+          <node begin="1" cat="inf" end="7" id="8" rel="vc">
+            <node begin="2" end="3" id="9" index="2" rel="su"/>
+            <node begin="5" buiging="zonder" end="6" id="10" lemma="moeten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="moet" word="moeten" wvorm="inf"/>
+            <node begin="1" cat="inf" end="7" id="11" rel="vc">
+              <node begin="1" end="2" id="12" index="1" rel="obj1"/>
+              <node begin="2" end="3" id="13" index="2" rel="su"/>
+              <node begin="3" end="4" id="14" lemma="anders" pos="adj" postag="BW()" pt="bw" rel="mod" root="anders" word="anders"/>
+              <node begin="6" buiging="zonder" end="7" id="15" lemma="doen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="doe" word="doen" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="16" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" word=";"/>
+  </node>
+  <sentence>Dingen die je anders had moeten doen ;</sentence>
+</alpino_ds>

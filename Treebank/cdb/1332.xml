@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="19" id="2" rel="--">
+      <node begin="0" cat="pp" end="6" id="3" rel="mod">
+        <node begin="0" end="1" id="4" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+        <node begin="1" cat="np" end="6" id="5" rel="obj1">
+          <node begin="1" end="2" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="7" lemma="communique" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="communiqué" word="communique"/>
+          <node begin="3" cat="pp" end="6" id="8" rel="mod">
+            <node begin="3" end="4" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="4" cat="np" end="6" id="10" rel="obj1">
+              <node begin="4" end="5" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="12" lemma="bestuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bestuur" word="bestuur"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="6" end="7" id="13" lemma="heten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heet" word="heet" wvorm="pv"/>
+      <node begin="7" end="8" genus="onz" getal="ev" id="14" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="9" cat="cp" end="19" id="15" rel="su">
+        <node begin="9" conjtype="onder" end="10" id="16" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="10" cat="ssub" end="19" id="17" rel="body">
+          <node begin="10" cat="np" end="12" id="18" index="1" rel="su">
+            <node begin="10" buiging="met-e" end="11" id="19" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+            <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="20" lemma="brief" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="brief" word="brief"/>
+          </node>
+          <node begin="12" end="13" id="21" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+          <node begin="10" cat="ppart" end="19" id="22" rel="vc">
+            <node begin="10" end="12" id="23" index="1" rel="obj1"/>
+            <node begin="13" buiging="zonder" end="14" id="24" lemma="opstellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="opgesteld" wvorm="vd"/>
+            <node begin="14" cat="pp" end="19" id="25" rel="mod">
+              <node begin="14" end="15" id="26" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+              <node begin="15" cat="conj" end="19" id="27" rel="obj1">
+                <node begin="16" conjtype="neven" end="17" id="28" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                <node begin="15" cat="np" end="19" id="29" rel="cnj">
+                  <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="30" lemma="bestuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bestuur" word="bestuur"/>
+                  <node begin="18" end="19" id="31" index="2" lemma="samen" pos="adv" postag="BW()" pt="bw" rel="mod" root="samen" word="samen"/>
+                </node>
+                <node begin="17" cat="np" end="19" id="32" rel="cnj">
+                  <node begin="17" end="18" getal="mv" graad="basis" id="33" lemma="student" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="student" word="studenten"/>
+                  <node begin="18" end="19" id="34" index="2" rel="mod"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>In het communique van het bestuur heet het , dat deze brief werd opgesteld door bestuur en studenten samen .</sentence>
+</alpino_ds>

@@ -1,0 +1,30 @@
+#!/usr/bin/perl -w
+
+$opt_o="dep[0-9]";
+
+while(<>) {
+  next if /^[%\#]/;
+  next if !/\|/;
+  chomp;
+  if ($. % 25000==0) 
+    { print STDERR "read $. lines\n";}
+  ($key,$length,$scoretriple,$pairs) = split/\#/;
+  print "$key#$length#$scoretriple#";
+  format_line($pairs);
+  print "\n";
+}
+
+
+sub format_line {
+  ($pairs) = @_;
+  @lpairs = split/\|/,$pairs;
+  $first="";
+  foreach $lpair (@lpairs) {
+    ($ln,$lfeat) = split/\@/,$lpair;
+    if ($lfeat =~ $opt_o) {
+	print("$first$ln\@$lfeat");
+	$first="|";
+    }
+  }
+}
+

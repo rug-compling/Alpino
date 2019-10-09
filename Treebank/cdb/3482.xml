@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" end="2" genus="genus" getal="ev" graad="basis" id="4" lemma="Bouwcentrumrapport" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="rapport" word="Bouwcentrumrapport"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="doen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="doet" word="doet" wvorm="pv"/>
+      <node begin="3" cat="inf" end="5" id="6" rel="vc">
+        <node begin="3" end="4" id="7" lemma="daaraan" pos="pp" postag="BW()" pt="bw" rel="pc" root="daaraan" word="daaraan"/>
+        <node begin="4" buiging="zonder" end="5" id="8" lemma="twijfelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="twijfel" word="twijfelen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het Bouwcentrumrapport doet daaraan twijfelen .</sentence>
+</alpino_ds>

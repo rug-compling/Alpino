@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="39" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="20" end="21" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="38" id="3" rel="--">
+      <node begin="0" cat="np" end="20" id="4" index="1" rel="su">
+        <node begin="0" end="1" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="6" lemma="heer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="heer" word="heer"/>
+        <node begin="2" cat="mwu" end="4" id="7" rel="app">
+          <node begin="2" end="3" id="8" lemma="F." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="F." spectype="deeleigen" word="F."/>
+          <node begin="3" end="4" id="9" lemma="Becker" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Becker" spectype="deeleigen" word="Becker"/>
+        </node>
+        <node begin="4" cat="pp" end="6" id="10" rel="mod">
+          <node begin="4" end="5" id="11" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="12" lemma="Groningen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Groningen" word="Groningen"/>
+        </node>
+        <node begin="7" cat="ap" end="20" id="13" rel="mod">
+          <node begin="7" buiging="zonder" end="8" graad="basis" id="14" lemma="werkzaam" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="werkzaam" word="werkzaam"/>
+          <node begin="8" cat="pp" end="20" id="15" rel="mod">
+            <node begin="8" end="9" id="16" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+            <node begin="9" cat="np" end="20" id="17" rel="obj1">
+              <node begin="9" end="10" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="10" cat="mwu" end="18" id="19" rel="hd">
+                <node begin="10" end="11" id="20" lemma="N.V." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="N.V." spectype="deeleigen" word="N.V."/>
+                <node begin="11" end="12" id="21" lemma="Lettergieterij" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lettergieterij" spectype="deeleigen" word="Lettergieterij"/>
+                <node begin="12" end="13" id="22" lemma="en" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="en" spectype="deeleigen" word="en"/>
+                <node begin="13" end="14" id="23" lemma="Machinehandel" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Machinehandel" spectype="deeleigen" word="Machinehandel"/>
+                <node begin="14" end="15" id="24" lemma="v-h" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="v-h" spectype="deeleigen" word="v-h"/>
+                <node begin="15" end="16" id="25" lemma="N." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="N." spectype="deeleigen" word="N."/>
+                <node begin="16" end="17" id="26" lemma="Tetterode" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Tetterode" spectype="deeleigen" word="Tetterode"/>
+                <node begin="17" end="18" id="27" lemma="Nederland" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nederland" spectype="deeleigen" word="Nederland"/>
+              </node>
+              <node begin="18" cat="pp" end="20" id="28" rel="mod">
+                <node begin="18" end="19" id="29" lemma="te" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="te" vztype="init" word="te"/>
+                <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="30" lemma="Amsterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Amsterdam" word="Amsterdam"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="21" end="22" id="31" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="38" id="32" rel="vc">
+        <node begin="0" end="20" id="33" index="1" rel="obj1"/>
+        <node begin="22" cat="pp" end="26" id="34" rel="mod">
+          <node begin="22" end="23" id="35" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+          <node begin="23" cat="mwu" end="26" id="36" rel="obj1">
+            <node begin="23" end="24" id="37" lemma="H.M." pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="H.M." spectype="symb" word="H.M."/>
+            <node begin="24" end="25" id="38" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+            <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="39" lemma="koningin" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Koningin" word="Koningin"/>
+          </node>
+        </node>
+        <node begin="26" buiging="zonder" end="27" id="40" lemma="onderscheiden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="onderscheid" word="onderscheiden" wvorm="vd"/>
+        <node begin="27" cat="pp" end="38" id="41" rel="pc">
+          <node begin="27" end="28" id="42" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="28" cat="np" end="38" id="43" rel="obj1">
+            <node begin="28" end="29" id="44" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="29" buiging="zonder" end="30" graad="basis" id="45" lemma="gouden" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="gouden" word="gouden"/>
+            <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="46" lemma="ere-medaille" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="medaille" word="ere-medaille"/>
+            <node begin="31" cat="ppart" end="38" id="47" rel="mod">
+              <node begin="31" buiging="zonder" end="32" id="48" lemma="verbinden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verbonden" word="verbonden" wvorm="vd"/>
+              <node begin="32" cat="pp" end="38" id="49" rel="pc">
+                <node begin="32" end="33" id="50" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+                <node begin="33" cat="np" end="38" id="51" rel="obj1">
+                  <node begin="33" end="34" id="52" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="34" cat="mwu" end="38" id="53" rel="hd">
+                    <node begin="34" end="35" genus="zijd" getal="ev" graad="basis" id="54" lemma="orde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Orde" word="Orde"/>
+                    <node begin="35" end="36" id="55" lemma="van" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+                    <node begin="36" end="37" id="56" lemma="Oranje" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Oranje" spectype="deeleigen" word="Oranje"/>
+                    <node begin="37" end="38" id="57" lemma="Nassau" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nassau" spectype="deeleigen" word="Nassau"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="38" end="39" id="58" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De heer F. Becker uit Groningen , werkzaam bij de N.V. Lettergieterij en Machinehandel v-h N. Tetterode Nederland te Amsterdam , is door H.M. de Koningin onderscheiden met de gouden ere-medaille verbonden aan de Orde van Oranje Nassau .</sentence>
+</alpino_ds>

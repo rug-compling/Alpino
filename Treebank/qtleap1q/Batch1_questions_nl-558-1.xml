@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="zonder" end="1" getal="ev" id="3" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="Mijn"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="laptop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="laptop" word="laptop"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="werken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="werk" word="werkt" wvorm="pv"/>
+      <node begin="3" end="4" id="6" lemma="alleen" pos="adj" postag="BW()" pt="bw" rel="mod" root="alleen" word="alleen"/>
+      <node begin="4" cat="pp" end="8" id="7" rel="pc">
+        <node begin="4" end="5" id="8" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+        <node begin="5" cat="np" end="8" id="9" rel="obj1">
+          <node begin="5" end="6" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="6" buiging="met-e" end="7" graad="basis" id="11" lemma="extern" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="extern" word="externe"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="12" lemma="monitor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="monitor" word="monitor"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Mijn laptop werkt alleen met een externe monitor .</sentence>
+</alpino_ds>

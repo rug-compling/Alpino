@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="42" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="12" end="13" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="17" end="18" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="30" end="31" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="33" end="34" id="5" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="35" end="36" id="6" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="smain" end="41" id="7" rel="--">
+      <node begin="0" cat="cp" end="4" id="8" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="9" lemma="evenals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="evenals" word="Evenals"/>
+        <node begin="1" cat="pp" end="4" id="10" rel="body">
+          <node begin="1" end="2" id="11" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+          <node begin="2" cat="np" end="4" id="12" rel="obj1">
+            <node begin="2" end="3" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="3" end="4" getal="mv" graad="basis" id="14" lemma="dame" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dame" word="dames"/>
+          </node>
+        </node>
+      </node>
+      <node begin="4" end="5" id="15" lemma="nemen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="neem" word="namen" wvorm="pv"/>
+      <node begin="5" cat="np" end="7" id="16" rel="su">
+        <node begin="5" end="6" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="6" end="7" getal="mv" graad="basis" id="18" lemma="oostduitser" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Oostduitsers" word="Oostduitsers"/>
+      </node>
+      <node begin="7" cat="np" end="12" id="19" rel="obj1">
+        <node begin="7" end="8" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="9" cat="mwu" end="12" id="21" rel="hd">
+          <node begin="9" end="10" id="22" lemma="Coppa" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Coppa" spectype="deeleigen" word="Coppa"/>
+          <node begin="10" end="11" id="23" lemma="Bruno" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bruno" spectype="deeleigen" word="Bruno"/>
+          <node begin="11" end="12" id="24" lemma="Zauli" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Zauli" spectype="deeleigen" word="Zauli"/>
+        </node>
+      </node>
+      <node begin="13" end="14" id="25" lemma="over" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="over" vztype="fin" word="over"/>
+      <node begin="14" cat="pp" end="41" id="26" rel="pc">
+        <node begin="14" end="15" id="27" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="15" cat="np" end="41" id="28" rel="obj1">
+          <node begin="15" end="16" id="29" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="16" end="17" getal="mv" graad="basis" id="30" lemma="Rus" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Rus" word="Russen"/>
+          <node begin="18" cat="rel" end="41" id="31" rel="mod">
+            <node begin="18" end="19" getal="getal" id="32" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="18" cat="ssub" end="41" id="33" rel="body">
+              <node begin="18" end="19" id="34" index="1" rel="su"/>
+              <node begin="19" cat="pp" end="30" id="35" rel="mod">
+                <node begin="19" end="20" id="36" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="20" cat="np" end="30" id="37" rel="obj1">
+                  <node begin="20" end="21" id="38" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                  <node begin="21" cat="ppres" end="24" id="39" rel="mod">
+                    <node begin="21" cat="pp" end="23" id="40" rel="mod">
+                      <node begin="21" end="22" id="41" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+                      <node begin="22" end="23" id="42" lemma="1912" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1912" word="1912"/>
+                    </node>
+                    <node begin="23" buiging="met-e" end="24" id="43" lemma="dateren" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="daterend" word="daterende" wvorm="od"/>
+                  </node>
+                  <node begin="24" buiging="met-e" end="25" graad="basis" id="44" lemma="Olympisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="olympische" word="Olympische"/>
+                  <node begin="25" end="26" genus="onz" getal="ev" graad="basis" id="45" lemma="stadion" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stadion" word="stadion"/>
+                  <node begin="26" cat="pp" end="30" id="46" rel="mod">
+                    <node begin="26" end="27" id="47" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                    <node begin="27" cat="np" end="30" id="48" rel="obj1">
+                      <node begin="27" end="28" id="49" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                      <node begin="28" buiging="met-e" end="29" graad="basis" id="50" lemma="Zweeds" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Zweeds" word="Zweedse"/>
+                      <node begin="29" end="30" genus="zijd" getal="ev" graad="basis" id="51" lemma="hoofdstad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hoofdstad" word="hoofdstad"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="31" cat="pp" end="37" id="52" rel="mod">
+                <node begin="31" end="32" id="53" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                <node begin="32" cat="np" end="37" id="54" rel="obj1">
+                  <node begin="32" end="33" id="55" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="34" buiging="met-e" end="35" graad="basis" id="56" lemma="bejaard" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="bejaard" word="bejaarde"/>
+                  <node begin="36" end="37" genus="zijd" getal="ev" graad="basis" id="57" lemma="ploeg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ploeg" word="ploeg"/>
+                </node>
+              </node>
+              <node begin="37" cat="pp" end="40" id="58" rel="ld">
+                <node begin="37" end="38" id="59" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+                <node begin="38" cat="np" end="40" id="60" rel="obj1">
+                  <node begin="38" end="39" id="61" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="39" end="40" genus="zijd" getal="ev" graad="basis" id="62" lemma="start" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="start" word="start"/>
+                </node>
+              </node>
+              <node begin="40" end="41" id="63" lemma="komen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kom" word="kwamen" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="41" end="42" id="64" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Evenals bij de dames namen de Oostduitsers de &quot; Coppa Bruno Zauli &quot; over van de Russen , die in het uit 1912 daterende Olympische stadion van de Zweedse hoofdstad , met een &quot; bejaarde &quot; ploeg aan de start kwamen .</sentence>
+</alpino_ds>

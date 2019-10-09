@@ -1,0 +1,128 @@
+\begin{verbatim}
+
+%% this is a parser for constraint-based grammars in which a cfg is used
+%% to produce an approximation of the parse forest. The actual derivations 
+%% are constructed by checking for each cf derivation, whether there is a
+%% corresponding derivation using the  actual grammar.
+
+:- dynamic item/4, index_item/6.
+
+:- ensure_loaded(cf_grammar).
+
+parse(Sentence) :-
+        retractall(item(_,_,_,_)), 
+        retractall(index_item(_,_,_,_,_,_)),
+        statistics(runtime,_),
+        scan(Sentence,0,End),
+        write('recovering..'), ttyflush,
+        recover(End),
+        statistics(runtime,[_,Time]),
+        nl, nl, write(Time), write(' msecs').
+        
+recover(End) :-
+        startsymbol(Sign),
+        recover(t(Sign,Ds),_,0,End),
+        display_tree(t(Sign,Ds),0),
+        display_semantics(Sign),
+        ttyflush,
+        fail.
+recover(_).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% cf parsing part %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%      A bottom-up chart parser for cfg with wf substring table and packing
+%%      Grammar may only contain binary rules !
+
+scan([],N,N) :- !.
+scan([te,Word|Rest],N,End) :-           %% hack for `te' as verbal prefix 
+        N1 is N + 1,
+        lex_lookup([te,Word],N,N1),
+        scan(Rest,N1,End).
+scan([Word|Rest],N,End) :- 
+        N1 is N + 1,
+        lex_lookup(Word,N,N1),
+        scan(Rest,N1,End).
+        
+lex_lookup(Word,N,N1) :-
+        cf_lex(Word,Cat),
+        add_item(word,Cat,Word,N,N1),
+        fail.
+lex_lookup(Word,N,N1) :-
+        ( item(_,_,N,N1) -> true
+        ; format('unknown word : ~w~n',[Word])
+        ).
+
+closure(Index2,Cat2,Mid,End) :-         % completion with compiled rules
+        cf_rule(Name,LHS,[Cat1,Cat2]),
+        item(Index1,Cat1,Begin,Mid),
+        add_item(Name,LHS,[Index1,Index2],Begin,End),
+        fail.
+closure(_,_,_,_).
+        
+add_item(Name,LHS,Parsed,B,E) :-
+        ( index_item(_,Name,LHS,Parsed,B,E) -> true             
+        ; item(OldIndex,LHS,B,E) ->                             
+          asserta(index_item(OldIndex,Name,LHS,Parsed,B,E))     % packing
+        ; gen_index_sym(Index), 
+          asserta(index_item(Index,Name,LHS,Parsed,B,E)),
+          asserta(item(Index,LHS,B,E)),
+          closure(Index,LHS,B,E)
+        ).
+        
+gen_index_sym(Index) :-
+        (  item(Index0,_,_,_)
+        -> Index is Index0 + 1
+        ;  Index = 1
+        ).
+
+%%%%%%%%%%%%%%%%% recovery of full parse trees %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+recover(t(Sign,w(Word)),Index,Begin,End) :-       
+        index_item(Index,word,_Cat,Word,Begin,End),
+        lex(Word,Sign). 
+recover(t(Sign,[t(D1,Ds1),t(D2,Ds2)]),Index,Begin,End) :-
+        index_item(Index,Rule,_Cat,[I1,I2],Begin,End),
+        rule0(Rule,Sign,[D1,D2],Head),
+        ( Head = 1 ->                           % recovery is head-driven
+          recover(t(D1,Ds1),I1,Begin,Mid),
+          recover(t(D2,Ds2),I2,Mid,End)
+        ; recover(t(D2,Ds2),I2,Mid,End),
+          recover(t(D1,Ds1),I1,Begin,Mid)
+        ).
+
+
+%% debugging
+count_cf(End,Analyses) :-
+        findall(Ns,(index_item(Index,_,_,_,0,End),
+                    recover_cf_tree(Index,_) ),
+                Ns),
+        length(Ns,Analyses).
+
+cf_trees(End) :-
+        index_item(Index,_,_,_,0,End),
+        recover_cf_tree(Index,Tree),
+        display_cf_tree(Tree,0),
+        fail.
+cf_trees(_).
+
+recover_cf_tree(Index,t(Cat,w(Word))) :-
+        index_item(Index,word,Cat,Word,_,_), !.
+recover_cf_tree(Index,t(Cat,[T1,T2])) :-
+        index_item(Index,_Rule,Cat,[I1,I2],_,_),
+        recover_cf_tree(I1,T1),
+        recover_cf_tree(I2,T2).
+        
+display_cf_tree(t(Cat,w(Word)),Indent) :-
+        nl, tab(Indent), write(Cat), write(' -- '), write(Word).
+display_cf_tree(t(Cat,[D|Ds]),Indent) :-
+        nl, tab(Indent), write(Cat), 
+        NewIndent is Indent + 3,
+        display_cf_ds([D|Ds],NewIndent).
+
+display_cf_ds([],_).
+display_cf_ds([D|Ds],Indent) :-
+        display_cf_tree(D,Indent),
+        display_cf_ds(Ds,Indent).
+
+
+\end{verbatim}

@@ -1,0 +1,29 @@
+#!/usr/bin/perl -w
+use Getopt::Std;
+getopts('n:');
+
+
+$opt_n ||=3;
+
+while (<>) {
+    chomp;
+    @all = split/\|/;
+
+    shift @all;           #key
+    $goal = shift @all;
+
+    ## add n-2 additional left-contexts, to ensure window is wide enough
+    for($i=1;$i<=$opt_n-2;$i++) {
+        unshift(@all,'#');
+    }
+    push(@all,'finish');
+
+    while (@all >= $opt_n) {
+        print "$goal";
+        for($i=0;$i<$opt_n;$i++) {
+            print "|$all[$i]"
+        }
+        print "\n";
+        shift @all;
+    }
+}

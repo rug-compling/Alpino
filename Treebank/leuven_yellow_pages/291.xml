@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="np" end="9" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+      <node begin="1" end="2" getal="mv" graad="basis" id="3" lemma="bedrijf" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bedrijf" word="bedrijven"/>
+      <node begin="2" cat="rel" end="9" id="4" rel="mod">
+        <node begin="2" end="3" id="5" index="1" lemma="waarvan" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarvan" word="waarvan"/>
+        <node begin="2" cat="ssub" end="9" id="6" rel="body">
+          <node begin="2" end="3" id="7" index="1" rel="mod"/>
+          <node begin="3" end="4" getal="ev" id="8" lemma="iedereen" naamval="stan" pdtype="pron" persoon="3p" pos="noun" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="su" root="iedereen" status="vol" vwtype="onbep" word="iedereen"/>
+          <node begin="4" end="5" id="9" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+          <node begin="5" cat="cp" end="9" id="10" rel="vc">
+            <node begin="5" conjtype="onder" end="6" id="11" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+            <node begin="6" cat="ssub" end="9" id="12" rel="body">
+              <node begin="6" end="7" getal="mv" id="13" index="2" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+              <node begin="6" cat="ppart" end="8" id="14" rel="vc">
+                <node begin="6" end="7" id="15" index="2" rel="obj1"/>
+                <node begin="7" buiging="zonder" end="8" id="16" lemma="behouden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="behoud" word="behouden" wvorm="vd"/>
+              </node>
+              <node begin="8" end="9" id="17" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>de bedrijven waarvan iedereen wil dat ze behouden worden</sentence>
+</alpino_ds>

@@ -1,0 +1,121 @@
+#!/usr/bin/perl -w
+
+$opt_i=0;
+use Getopt::Std;
+getopts('i');
+
+($suite,$f1,$f2) = @ARGV;
+
+if ($opt_i) {
+    $trust_order=0;
+} else {
+    $trust_order=1;
+}
+
+$index=0;
+
+open F1, $f1;
+@f1=();
+$i=0;
+while (<F1>) {
+    chomp;
+    ($key,$acc,$parses) = split;
+    if ($trust_order) { $index=$i } else { $index=$key }
+    $f1[$index] = "$key|$acc|$parses";
+    $i++;
+}
+
+open F2, $f2;
+@f2=();
+$i=0;
+while (<F2>) {
+    chomp;
+    ($key,$acc,$parses) = split;
+    if ($trust_order) { $index=$i } else { $index=$key }
+    $f2[$index] = "$key|$acc|$parses";
+    $i++;
+}
+
+#
+$max=int @f1;
+$expected= int @f2;
+
+if ($max < @f2) {
+    @f2=@f2[0..$max-1];
+}
+$max=$max-1;
+
+
+for($i=0;$i<=$max;$i++) {
+
+
+  if ($f1[$i] && $f2[$i]) {
+    ($key,$fa,$fb)=split /\|/,$f1[$i];
+    ($keyb,$ga,$gb)=split /\|/,$f2[$i];
+    ($key eq $keyb) or die("Out of sync...\n");
+    $key =~ s/$suite//;
+    $f_a_sum+=$fa;
+    $f_p_sum+=$fb;
+    $f_n++;
+    $g_a_sum+=$ga;
+    $g_p_sum+=$gb;
+    $g_n++;
+    if ($f1[$i] ne $f2[$i]) {
+      $mark = "";
+      $mark = "!!!" if $fa>$ga;
+      $mark = "???" if $ga>$fa;
+      $mark2 = "";
+      $mark2 = "+" if $fb>$gb;
+      $mark2 = "-" if $gb>$fb;
+      write;
+    }
+  }
+  elsif ($f1[$i]) {
+    ($key,$fa,$fb)=split /\|/,$f1[$i];
+    $key =~ s/$suite//;
+    $f_a_sum+=$fa;
+    $f_p_sum+=$fb;
+    $f_n++;
+    $ga=""; $gb="";
+    $mark="new";
+    $mark2="";
+    write;
+  }
+  elsif ($f2[$i]) {
+    ($key,$ga,$gb)=split /\|/,$f2[$i];
+    $key =~ s/$suite//;
+    $g_a_sum+=$ga;
+    $g_p_sum+=$gb;
+    $g_n++;
+    $fa=""; $fb="";
+    $mark="lost";
+    $mark2="";
+    write;
+  }
+}
+
+$last=$key;
+$key="mean";
+$fa=sprintf "%.2f",$f_a_sum/$f_n if $f_n;
+$fb=sprintf "%.1f",$f_p_sum/$f_n if $f_n;
+$ga=sprintf "%.2f",$g_a_sum/$g_n if $g_n;
+$gb=sprintf "%.1f",$g_p_sum/$g_n if $g_n;
+
+
+$mark="";
+$mark2="";
+write;
+
+if ($i == $expected) {
+    print "last key: $last (after all items) $suite\n";
+} else {
+    print "last key: $last (after $i items; $expected expected) $suite\n";
+}
+
+format STDOUT = 
+^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> @>>>>>> @>>>>>>@||||@>>>>>>>>> @>>>>>>>>>@< @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+$key,           $fa,    $ga,   $mark,$fb,      $gb,      $mark2,   $suite
+~^<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+$key,
+.
+

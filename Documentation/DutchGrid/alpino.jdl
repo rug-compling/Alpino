@@ -1,0 +1,24 @@
+[
+JobType = "Parametric";
+Executable = "/bin/sh";
+Arguments = "run_alpino.sh twnc1999 _PARAM_";
+Parameters=2;
+ParameterStart=0;
+StdOutput = "alpino._PARAM_.out";
+StdError = "alpino._PARAM_.err";
+InputSandbox = {"run_alpino.sh"};
+OutputSandbox = {"alpino._PARAM_.out","alpino._PARAM_.err"};
+RetryCount = 7;
+
+Requirements = ( other.GlueHostOperatingSystemName  == "CentOS" ||
+                 other.GlueHostOperatingSystemName  == "RedHatEnterpriseAS"  ||
+                 other.GlueHostOperatingSystemName  == "ScientificSL" ||
+                 other.GlueHostOperatingSystemName  == "ScientificCERNSLC" ||
+                 other.GlueHostOperatingSystemName  == "Scientific Linux"
+               ) &&
+               ( 
+                other.GlueHostOperatingSystemRelease >= 4.0
+               ) &&
+		(other.GlueHostMainMemoryRAMSize > 3500) &&
+		RegExp("long", other.GlueCEUniqueID);
+]

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+corpus=clef_sents_stem;
+pattern=$1;
+mode=$2;
+shift;
+shift;
+
+echo "$pattern"         |\
+	mgquery $corpus |\
+        grep '^[<][^>]*[>]$' |\
+        tr -d '<>' |\
+        awk -F- '{ printf "clef/%s/%s.xml\n",$1,$0}' |\
+        xargs Alpino debug=0 -u -l patterns.pl analyse_triples_mode=$mode debug=1 -analyse_triples | sed -e 's/clef[/][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][/]//' -e 's/[.]xml//' | uniq
+

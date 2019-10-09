@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="29" id="0" rel="top">
+    <node begin="0" cat="smain" end="28" id="1" rel="--">
+      <node begin="0" cat="conj" end="8" id="2" rel="su">
+        <node begin="0" cat="np" end="2" id="3" rel="cnj">
+          <node begin="0" end="1" frame="determiner(de)" id="4" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+          <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="wet" sense="wet" word="wet"/>
+        </node>
+        <node begin="2" end="3" frame="conj(of)" id="6" lcat="vg" pos="vg" rel="crd" root="of" sense="of" word="of"/>
+        <node begin="3" cat="np" end="8" id="7" rel="cnj">
+          <node begin="3" end="4" frame="determiner(de)" id="8" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="4" end="5" frame="noun(het,count,pl)" gen="het" id="9" lcat="np" num="pl" pos="noun" rel="hd" root="statuut" sense="statuut" word="statuten"/>
+          <node begin="5" cat="pp" end="8" id="10" rel="mod">
+            <node begin="5" end="6" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="11" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="6" cat="np" end="8" id="12" rel="obj1">
+              <node begin="6" end="7" frame="determiner(de)" id="13" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="7" end="8" frame="noun(de,count,sg)" gen="de" id="14" lcat="np" num="sg" pos="noun" rel="hd" root="belegging_maatschappij" sense="belegging_maatschappij" word="beleggingsmaatschappij"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="8" end="9" frame="verb(hebben,pl,sbar)" id="15" infl="pl" lcat="smain" pos="verb" rel="hd" root="bepaal" sc="sbar" sense="bepaal" tense="present" word="bepalen"/>
+      <node begin="9" cat="conj" end="28" id="16" rel="vc">
+        <node begin="9" cat="whsub" end="16" id="17" rel="cnj">
+          <node begin="9" cat="pp" end="12" id="18" index="1" rel="whd">
+            <node begin="9" end="10" frame="preposition(onder,[door,vandaan])" id="19" lcat="pp" pos="prep" rel="hd" root="onder" sense="onder" word="onder"/>
+            <node begin="10" cat="np" end="12" id="20" rel="obj1">
+              <node begin="10" end="11" frame="determiner(welke,rwh,nmod,pro,yparg)" id="21" infl="welke" lcat="detp" pos="det" rel="det" root="welk" sense="welk" wh="rwh" word="welke"/>
+              <node begin="11" end="12" frame="noun(de,count,pl)" gen="de" id="22" lcat="np" num="pl" pos="noun" rel="hd" root="voorwaarde" sense="voorwaarde" word="voorwaarden"/>
+            </node>
+          </node>
+          <node begin="9" cat="ssub" end="16" id="23" rel="body">
+            <node begin="12" cat="np" end="14" id="24" index="2" rel="su">
+              <node begin="12" end="13" frame="determiner(de)" id="25" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="13" end="14" frame="noun(de,count,sg)" gen="de" id="26" lcat="np" num="sg" pos="noun" rel="hd" root="bewaarder" sense="bewaarder" word="bewaarder"/>
+            </node>
+            <node begin="14" end="15" frame="verb(unacc,sg3,passive)" id="27" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt"/>
+            <node begin="9" cat="ppart" end="16" id="28" rel="vc">
+              <node begin="9" end="12" id="29" index="1" rel="mod"/>
+              <node begin="12" end="14" id="30" index="2" rel="obj1"/>
+              <node begin="15" end="16" frame="verb(hebben,psp,transitive)" id="31" infl="psp" lcat="ppart" pos="verb" rel="hd" root="vervang" sc="transitive" sense="vervang" word="vervangen"/>
+            </node>
+          </node>
+        </node>
+        <node begin="16" end="17" frame="conj(en)" id="32" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+        <node begin="17" cat="whsub" end="28" id="33" rel="cnj">
+          <node begin="17" cat="np" end="24" id="34" index="3" rel="whd">
+            <node begin="17" end="18" frame="determiner(welke,rwh,nmod,pro,yparg)" id="35" infl="welke" lcat="detp" pos="det" rel="det" root="welk" sense="welk" wh="rwh" word="welke"/>
+            <node begin="18" end="19" frame="noun(de,count,pl)" gen="de" id="36" lcat="np" num="pl" pos="noun" rel="hd" root="regel" sense="regel" word="regels"/>
+            <node begin="19" cat="pp" end="24" id="37" rel="mod">
+              <node begin="19" end="20" frame="preposition(ter,[],nodet)" id="38" lcat="pp" pos="prep" rel="hd" root="ter" sc="nodet" sense="ter" word="ter"/>
+              <node begin="20" cat="np" end="24" id="39" rel="obj1">
+                <node begin="20" end="21" frame="noun(de,count,sg)" gen="de" id="40" lcat="np" num="sg" pos="noun" rel="hd" root="bescherming" sense="bescherming" word="bescherming"/>
+                <node begin="21" cat="pp" end="24" id="41" rel="mod">
+                  <node begin="21" end="22" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="42" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                  <node begin="22" cat="np" end="24" id="43" rel="obj1">
+                    <node begin="22" end="23" frame="determiner(de)" id="44" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                    <node begin="23" end="24" frame="noun(de,count,pl)" gen="de" id="45" lcat="np" num="pl" pos="noun" rel="hd" root="deelnemer" sense="deelnemer" word="deelnemers"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="17" cat="ssub" end="28" id="46" rel="body">
+            <node begin="17" end="24" id="47" index="3" rel="su"/>
+            <node begin="24" cat="pp" end="27" id="48" rel="mod">
+              <node begin="24" end="25" frame="preposition(bij,[vandaan])" id="49" lcat="pp" pos="prep" rel="hd" root="bij" sense="bij" word="bij"/>
+              <node begin="25" cat="np" end="27" id="50" rel="obj1">
+                <node begin="25" end="26" frame="determiner(de,nwh,nmod,pro,nparg)" id="51" infl="de" lcat="detp" pos="det" rel="det" root="deze" sense="deze" wh="nwh" word="deze"/>
+                <node begin="26" end="27" frame="noun(de,count,sg)" gen="de" id="52" lcat="np" num="sg" pos="noun" rel="hd" root="vervanging" sense="vervanging" word="vervanging"/>
+              </node>
+            </node>
+            <node begin="27" end="28" frame="verb(hebben,pl,intransitive)" id="53" infl="pl" lcat="ssub" pos="verb" rel="hd" root="geld" sc="intransitive" sense="geld" tense="present" word="gelden"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="28" end="29" frame="punct(punt)" id="54" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De wet of de statuten van de beleggingsmaatschappij bepalen onder welke voorwaarden de bewaarder wordt vervangen en welke regels ter bescherming van de deelnemers bij deze vervanging gelden .</sentence>
+  <comments>
+    <comment>Q#473|De wet of de statuten van de beleggingsmaatschappij bepalen onder welke voorwaarden de bewaarder wordt vervangen en welke regels ter bescherming van de deelnemers bij deze vervanging gelden .|1|1|2.5010598045090924</comment>
+  </comments>
+</alpino_ds>

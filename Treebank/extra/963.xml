@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" index="1" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+      <node begin="1" end="2" id="3" infl="sg" lemma="moeten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="moet" sc="modifier(aux(inf))" stype="declarative" tense="past" word="moest" wvorm="pv"/>
+      <node begin="0" cat="inf" end="13" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node aform="base" begin="2" buiging="zonder" end="3" graad="basis" id="6" infl="no_e" lemma="uiteindelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="uiteindelijk" vform="adj" word="uiteindelijk"/>
+        <node begin="3" buiging="zonder" end="4" id="7" infl="inf" lemma="los_laten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="laat_los" sc="part_intransitive(los)" word="loslaten" wvorm="inf"/>
+        <node begin="4" cat="cp" end="13" id="8" rel="mod">
+          <node begin="4" conjtype="onder" end="5" id="9" lemma="toen" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="toen" word="toen"/>
+          <node begin="5" cat="ssub" end="13" id="10" rel="body">
+            <node begin="5" case="nom" def="def" end="6" gen="de" genus="masc" getal="ev" id="11" index="2" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+            <node begin="6" end="7" id="12" lemma="zelf" pos="adv" postag="BW()" pt="bw" rel="predm" root="zelf" special="predm" word="zelf"/>
+            <node begin="10" end="11" id="13" infl="sg" lemma="dreigen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="dreig" sc="aux(te)" tense="past" word="dreigde" wvorm="pv"/>
+            <node begin="5" cat="ti" end="13" id="14" rel="vc">
+              <node begin="11" end="12" id="15" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+              <node begin="5" cat="inf" end="13" id="16" rel="body">
+                <node begin="5" end="6" id="17" index="2" rel="su"/>
+                <node begin="7" end="8" id="18" lemma="mee" pos="adv" postag="BW()" pt="bw" rel="mod" root="mee" special="loc" word="mee"/>
+                <node begin="8" cat="mwu" end="10" his="normal" his_1="normal" id="19" mwu_root="ten onder" mwu_sense="ten onder" rel="svp">
+                  <node begin="8" end="9" id="20" lemma="ten" pos="part" postag="VZ(versm)" pt="vz" rel="mwp" root="ten" vztype="versm" word="ten"/>
+                  <node begin="9" end="10" id="21" lemma="onder" pos="part" postag="VZ(fin)" pt="vz" rel="mwp" root="onder" vztype="fin" word="onder"/>
+                </node>
+                <node begin="12" buiging="zonder" end="13" id="22" infl="inf(no_e)" lemma="ten_onder_gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga_ten_onder" sc="part_intransitive(ten onder)" word="gaan" wvorm="inf"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Hij moest uiteindelijk loslaten toen hij zelf mee ten onder dreigde te gaan .</sentence>
+</alpino_ds>

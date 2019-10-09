@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="9" id="2" rel="--">
+      <node begin="0" cat="cp" end="5" id="3" rel="sat">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+        <node begin="1" cat="ssub" end="5" id="5" rel="body">
+          <node begin="1" end="2" getal="ev" id="6" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
+          <node begin="2" cat="np" end="4" id="7" rel="predc">
+            <node begin="2" end="3" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="geval" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geval" word="geval"/>
+          </node>
+          <node begin="4" end="5" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="6" cat="sv1" end="9" id="11" rel="nucl">
+        <node begin="6" end="7" id="12" lemma="vervangen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="vervang" word="vervang" wvorm="pv"/>
+        <node begin="7" cat="np" end="9" id="13" rel="obj1">
+          <node begin="7" end="8" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="accu" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="accu" word="accu"/>
+        </node>
+      </node>
+    </node>
+    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als dat het geval is , vervang de accu .</sentence>
+</alpino_ds>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="12" end="13" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="27" id="2" rel="--">
+      <node begin="0" cat="np" end="4" id="3" rel="su">
+        <node begin="0" end="1" frame="meas_mod_noun(het,mass,sg)" gen="het" id="4" lcat="np" num="sg" pos="noun" rel="hd" root="niets" sense="niets" special="meas_mod" word="Niets"/>
+        <node begin="1" cat="pp" end="4" id="5" rel="mod">
+          <node begin="1" end="2" frame="preposition(in,[])" id="6" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+          <node begin="2" cat="np" end="4" id="7" rel="obj1">
+            <node begin="2" end="3" frame="determiner(de,nwh,nmod,pro,nparg)" id="8" infl="de" lcat="detp" pos="det" rel="det" root="deze" sense="deze" wh="nwh" word="deze"/>
+            <node begin="3" end="4" frame="noun(de,count,sg)" gen="de" id="9" lcat="np" num="sg" pos="noun" rel="hd" root="overeenkomst" sense="overeenkomst" word="overeenkomst"/>
+          </node>
+        </node>
+      </node>
+      <node begin="4" end="5" frame="verb(hebben,sg3,np_pc_pp(aan))" id="10" infl="sg3" lcat="smain" pos="verb" rel="hd" root="doe" sc="np_pc_pp(aan)" sense="doe-aan" tense="present" word="doet"/>
+      <node begin="5" end="6" frame="noun(de,mass,sg)" gen="de" id="11" lcat="np" num="sg" pos="noun" rel="obj1" root="afbreuk" sense="afbreuk" word="afbreuk"/>
+      <node begin="6" cat="pp" end="27" id="12" rel="pc">
+        <node begin="6" end="7" frame="preposition(aan,[vooraf])" id="13" lcat="pp" pos="prep" rel="hd" root="aan" sense="aan" word="aan"/>
+        <node begin="7" cat="np" end="27" id="14" rel="obj1">
+          <node begin="7" end="8" frame="determiner(de)" id="15" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="8" end="9" frame="noun(het,count,pl)" gen="het" id="16" lcat="np" num="pl" pos="noun" rel="hd" root="recht" sense="recht" word="rechten"/>
+          <node begin="9" cat="rel" end="27" id="17" rel="mod">
+            <node begin="9" case="no_obl" end="10" frame="rel_pronoun(de,no_obl)" gen="de" id="18" index="1" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+            <node begin="9" cat="ssub" end="27" id="19" rel="body">
+              <node begin="9" end="10" id="20" index="1" rel="obj1"/>
+              <node begin="10" cat="conj" end="20" id="21" rel="su">
+                <node begin="10" cat="np" end="12" id="22" rel="cnj">
+                  <node begin="10" end="11" frame="determiner(een)" id="23" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+                  <node begin="11" end="12" frame="noun(de,count,sg)" gen="de" id="24" lcat="np" num="sg" pos="noun" rel="hd" root="leverancier" sense="leverancier" word="leverancier"/>
+                </node>
+                <node begin="13" cat="np" end="15" id="25" rel="cnj">
+                  <node begin="13" end="14" frame="determiner(pron)" id="26" infl="pron" lcat="detp" pos="det" rel="det" root="diens" sense="diens" word="diens"/>
+                  <node begin="14" end="15" frame="noun(de,count,sg)" gen="de" id="27" lcat="np" num="sg" pos="noun" rel="hd" root="vertegenwoordiger" sense="vertegenwoordiger" word="vertegenwoordiger"/>
+                </node>
+                <node begin="15" end="16" frame="conj(of)" id="28" lcat="vg" pos="vg" rel="crd" root="of" sense="of" word="of"/>
+                <node begin="16" cat="np" end="20" id="29" rel="cnj">
+                  <node begin="16" end="17" frame="determiner(een)" id="30" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+                  <node aform="compar" begin="17" end="18" frame="adjective(ere)" id="31" infl="e" lcat="ap" pos="adj" rel="mod" root="ander" sense="ander" vform="adj" word="andere"/>
+                  <node aform="base" begin="18" end="19" frame="adjective(ende(nonadv))" id="32" infl="e" lcat="ppres" pos="adj" rel="mod" root="belanghebbend" sense="belanghebbend" vform="gerund" word="belanghebbende"/>
+                  <node begin="19" end="20" frame="tmp_noun(de,count,sg)" gen="de" id="33" lcat="np" num="sg" pos="noun" rel="hd" root="partij" sense="partij" special="tmp" word="partij"/>
+                </node>
+              </node>
+              <node begin="20" cat="pp" end="26" id="34" rel="mod">
+                <node begin="20" cat="mwu" end="23" id="35" mwu_root="op_grond_van" mwu_sense="op_grond_van" rel="hd">
+                  <node begin="20" end="21" frame="preposition([op,grond,van],[])" id="36" lcat="pp" pos="prep" rel="mwp" root="op" sense="op" word="op"/>
+                  <node begin="21" end="22" frame="preposition([op,grond,van],[])" id="37" lcat="pp" pos="prep" rel="mwp" root="grond" sense="grond" word="grond"/>
+                  <node begin="22" end="23" frame="preposition([op,grond,van],[])" id="38" lcat="pp" pos="prep" rel="mwp" root="van" sense="van" word="van"/>
+                </node>
+                <node begin="23" cat="np" end="26" id="39" rel="obj1">
+                  <node begin="23" end="24" frame="determiner(de)" id="40" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node aform="base" begin="24" end="25" frame="adjective(e)" id="41" infl="e" lcat="ap" pos="adj" rel="mod" root="Canadees" sense="Canadees" vform="adj" word="Canadese"/>
+                  <node begin="25" end="26" frame="noun(de,count,sg)" gen="de" id="42" lcat="np" num="sg" pos="noun" rel="hd" root="regelgeving" sense="regelgeving" word="regelgeving"/>
+                </node>
+              </node>
+              <node begin="26" end="27" frame="verb(hebben,sg_heeft,transitive_ndev)" id="43" infl="sg_heeft" lcat="ssub" pos="verb" rel="hd" root="heb" sc="transitive_ndev" sense="heb" tense="present" word="heeft"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="27" end="28" frame="punct(punt)" id="44" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Niets in deze overeenkomst doet afbreuk aan de rechten die een leverancier , diens vertegenwoordiger of een andere belanghebbende partij op grond van de Canadese regelgeving heeft .</sentence>
+  <comments>
+    <comment>Q#339|Niets in deze overeenkomst doet afbreuk aan de rechten die een leverancier , diens vertegenwoordiger of een andere belanghebbende partij op grond van de Canadese regelgeving heeft .|1|1|0.4297434907523102</comment>
+  </comments>
+</alpino_ds>

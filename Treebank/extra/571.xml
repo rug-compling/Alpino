@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="cp" end="8" id="1" rel="--">
+      <node begin="0" cat="mwu" end="2" id="2" rel="cmp">
+        <node begin="0" conjtype="onder" end="1" id="3" lemma="Tot" pos="comp" postag="VG(onder)" pt="vg" rel="mwp" root="Tot" word="Tot"/>
+        <node begin="1" conjtype="onder" end="2" id="4" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="mwp" root="dat" word="dat"/>
+      </node>
+      <node begin="2" cat="ssub" end="8" id="5" rel="body">
+        <node begin="2" end="3" genus="masc" getal="ev" id="6" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+        <node begin="3" end="4" id="7" lemma="bijna" pos="adv" postag="BW()" pt="bw" rel="mod" root="bijna" word="bijna"/>
+        <node begin="4" cat="pp" end="7" id="8" rel="ld">
+          <node begin="4" end="5" id="9" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
+          <node begin="5" cat="np" end="7" id="10" rel="obj1">
+            <node begin="5" end="6" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="12" lemma="statief" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="statief" word="statief"/>
+          </node>
+        </node>
+        <node begin="7" end="8" id="13" lemma="botsen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="bots" word="botst" wvorm="pv"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Tot dat hij bijna tegen het statief botst .</sentence>
+</alpino_ds>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="du" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="dp">
+        <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="3" lemma="product" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="product" word="PRODUCT"/>
+        <node begin="1" end="2" id="4" lemma="M2.2.1" pos="name" postag="SPEC(symb)" pt="spec" rel="app" root="M2.2.1" spectype="symb" word="M2.2.1"/>
+      </node>
+      <node begin="2" cat="np" end="5" id="5" rel="dp">
+        <node begin="2" cat="ppart" end="4" id="6" rel="mod">
+          <node begin="2" end="3" genus="genus" getal="ev" graad="basis" id="7" lemma="RISICOGROEP" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="RISICOGROEP" word="RISICOGROEP"/>
+          <node begin="3" buiging="met-e" end="4" id="8" lemma="GERICHTE" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="GERICHTE" word="GERICHTE" wvorm="vd"/>
+        </node>
+        <node begin="4" buiging="zonder" end="5" graad="basis" id="9" lemma="zorg" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="zorg" word="ZORG"/>
+      </node>
+    </node>
+  </node>
+  <sentence>PRODUCT M2.2.1 RISICOGROEP GERICHTE ZORG</sentence>
+</alpino_ds>

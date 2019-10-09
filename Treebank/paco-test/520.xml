@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="10" end="11" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="16" end="17" frame="punct(komma)" id="2" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="18" end="19" frame="punct(komma)" id="3" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="23" id="4" rel="--">
+      <node begin="0" cat="np" end="2" id="5" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="6" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" id="7" lcat="np" num="sg" pos="noun" rel="hd" root="dialoog" sense="dialoog" word="dialoog"/>
+      </node>
+      <node begin="2" end="3" frame="verb(hebben,sg_heeft,fixed([{[[betrekking],pc(op)]}],no_passive))" id="8" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="heb" sc="fixed([{[[betrekking],pc(op)]}],no_passive)" sense="betrekking-heb-op" tense="present" word="heeft"/>
+      <node begin="3" end="4" frame="fixed_part([betrekking])" id="9" lcat="fixed" pos="fixed" rel="svp" root="betrekking" sense="betrekking" word="betrekking"/>
+      <node begin="4" cat="pp" end="23" id="10" rel="pc">
+        <node begin="4" end="5" frame="preposition(op,[af,na])" id="11" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+        <node begin="5" cat="np" end="23" id="12" rel="obj1">
+          <node begin="5" end="6" frame="determiner(alle,nwh,mod,pro,nparg)" id="13" infl="alle" lcat="detp" pos="det" rel="det" root="alle" sense="alle" wh="nwh" word="alle"/>
+          <node begin="6" end="7" frame="noun(de,count,pl)" gen="de" id="14" lcat="np" num="pl" pos="noun" rel="hd" root="doelstelling" sense="doelstelling" word="doelstellingen"/>
+          <node begin="7" cat="pp" end="23" id="15" rel="mod">
+            <node begin="7" end="8" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="16" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="8" cat="conj" end="23" id="17" rel="obj1">
+              <node begin="8" cat="np" end="10" id="18" rel="cnj">
+                <node begin="8" end="9" frame="determiner(de)" id="19" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                <node begin="9" end="10" frame="proper_name(both,'LOC')" id="20" lcat="np" neclass="LOC" num="both" pos="name" rel="hd" root="Overeenkomst" sense="Overeenkomst" word="Overeenkomst"/>
+              </node>
+              <node begin="11" end="12" frame="conj(maar)" id="21" lcat="vg" pos="vg" rel="crd" root="alsmede" sense="alsmede" word="alsmede"/>
+              <node begin="12" cat="np" end="23" id="22" rel="cnj">
+                <node begin="12" end="13" frame="determiner(alle,nwh,mod,pro,nparg)" id="23" infl="alle" lcat="detp" pos="det" rel="det" root="alle" sense="alle" wh="nwh" word="alle"/>
+                <node begin="13" end="14" frame="noun(het,count,pl)" gen="het" id="24" lcat="np" num="pl" pos="noun" rel="hd" root="vraagstuk" sense="vraagstuk" word="vraagstukken"/>
+                <node begin="14" cat="pp" end="23" id="25" rel="mod">
+                  <node begin="14" end="15" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="26" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                  <node begin="15" cat="np" end="23" id="27" rel="obj1">
+                    <node begin="15" cat="conj" end="22" id="28" rel="mod">
+                      <node aform="base" begin="15" end="16" frame="adjective(postn_no_e(adv))" id="29" infl="no_e" lcat="ap" pos="adj" rel="cnj" root="gemeenschappelijk" sense="gemeenschappelijk" vform="adj" word="gemeenschappelijk"/>
+                      <node aform="base" begin="17" end="18" frame="adjective(no_e(adv))" id="30" infl="no_e" lcat="ap" pos="adj" rel="cnj" root="algemeen" sense="algemeen" vform="adj" word="algemeen"/>
+                      <node aform="base" begin="19" end="20" frame="adjective(no_e(adv))" id="31" infl="no_e" lcat="ap" pos="adj" rel="cnj" root="regionaal" sense="regionaal" vform="adj" word="regionaal"/>
+                      <node begin="20" end="21" frame="conj(of)" id="32" lcat="vg" pos="vg" rel="crd" root="of" sense="of" word="of"/>
+                      <node aform="base" begin="21" end="22" frame="adjective(no_e(adv))" id="33" infl="no_e" lcat="ap" pos="adj" rel="cnj" root="sub_regionaal" sense="sub_regionaal" vform="adj" word="subregionaal"/>
+                    </node>
+                    <node begin="22" end="23" frame="noun(het,count,sg)" gen="het" id="34" lcat="np" num="sg" pos="noun" rel="hd" root="belang" sense="belang" word="belang"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" frame="punct(punt)" id="35" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De dialoog heeft betrekking op alle doelstellingen van de Overeenkomst , alsmede alle vraagstukken van gemeenschappelijk , algemeen , regionaal of subregionaal belang .</sentence>
+  <comments>
+    <comment>Q#520|De dialoog heeft betrekking op alle doelstellingen van de Overeenkomst , alsmede alle vraagstukken van gemeenschappelijk , algemeen , regionaal of subregionaal belang .|1|1|-0.3477180928676483</comment>
+  </comments>
+</alpino_ds>

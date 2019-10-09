@@ -1,0 +1,98 @@
+% anlt2.suite
+% -no sem_filter
+% -no removal of redundant features
+% -recognition only: no mixtus
+
+%      225610         100      lcr              2256         107         726864
+%      259130         100      hcr              2591         123         744496
+%      293540       10897   lc_mixtus           2935         139       15077024
+%      296180       10897   hc_mixtus/lc        2961         141       15094656
+%     1326350       10897      bu              13263         631       24774832
+%     3689160       10897    inact_p           36891        1756       21898112
+% act2: out of memory for 87nd sentence (after more than an hour of working..)
+
+% -removal of redundant features
+%      296630       10897   lc_mixtus           2966         141       15041776
+
+
+% -better lexical lookup
+%      203170         100      lcr              2031          96         744016%      255170       10897   lc_mixtus           2551         121       15081296
+
+Wed Dec 11 15:55:24 MET 1996
+%      195700         100      lcr              1957          93         744016
+%      253170       10897   lc_mixtus           2531         120       15081296
+%      264060       10897   hc_mixtus/lm        2640         125       15098928
+
+% -collapsing lexical entries:
+%      167160         100      lcr              1671          79         702736
+%      197030       10897   lc_mixtus           1970          93       10955040
+%      212700       10897   hc_mixtus/lm        2127         101       10968768
+
+% anlt.suite
+%       22740         211     act2               176          26        1004848
+%       25750         211   lc_mixtus            199          29         151264
+%       28520         211   hc_mixtus            221          33         154128
+%       32960         211      bu                255          38         919360
+%       96350         211   hc_mixtus/lm         746         111         169536
+%       96990         211    inact_p             751         112         182032
+
+Wed Dec 11 22:41:32 MET 1996
+%      163970         100      lcr              1639          78         702736
+%      186280         100      hcr/lm           1862          88         734096
+%      195810       10897   lc_mixtus           1958          93       10955040
+%      212050       10897   hc_mixtus/lm        2120         100       10968768
+%     3066930       10897   hc_mixtus          30669        1460        7915968
+%     1234370       10897      bu              12343         587       18232448
+%     3567520       10897    inact_p           35675        1698       16936304
+Thu Dec 12 01:15:44 MET 1996
+
+removed x_54 -> x_54 and x_55 -> x_55 rules.
+
+
+Sat Dec 14 13:39:43 MET 1996
+%XX    163530         100      lcr              1635          77         702736
+%XX    183890         100      hcr              1838          87         734096
+%XX    195850       10897   lc_mixtus           1958          93       10955040
+%XX    216180       10897   hc_mixtus/lm        2161         102       10968768
+%XX   3053910       10897   hc_mixtus          30539        1454        7915968
+%XX   1219120       10897      bu              12191         580       18232144
+%XX   3578370       10897    inact_p           35783        1703       16936000
+Mon Apr  7 13:18:50 METDST 1997
+%   TotalTime   TotalObjs    Parser       Time/Input TimePerWord       MaxSpace
+%XX    115650         100      lcr              1156          55         702736
+%   TotalTime   TotalObjs    Parser       Time/Input TimePerWord       MaxSpace
+%XX    128590         100      hcr              1285          61         734096
+%   TotalTime   TotalObjs    Parser       Time/Input TimePerWord       MaxSpace
+%XX    139620       10897   lc_mixtus           1396          66       10955040
+%   TotalTime   TotalObjs    Parser       Time/Input TimePerWord       MaxSpace
+%XX    149880       10897   hc_mixtus           1498          71       10968768
+%   TotalTime   TotalObjs    Parser       Time/Input TimePerWord       MaxSpace
+%XX   2107290       10897   hc_mixtus          21072        1003        7915968
+%   TotalTime   TotalObjs    Parser       Time/Input TimePerWord       MaxSpace
+%XX   1000150       10897      bu              10001         476       18232144
+%   TotalTime   TotalObjs    Parser       Time/Input TimePerWord       MaxSpace
+%XX   2838610       10897    inact_p           28386        1351       16936000
+%   TotalTime   TotalObjs    Parser       Time/Input TimePerWord       MaxSpace
+%XX   5259170       10897     act2             52591        2504       68042768
+Mon Apr  7 20:10:46 METDST 1997
+Sat Nov  7 01:55:31 MET 1998
+Sat Nov  7 01:56:31 MET 1998
+Sat Nov  7 01:56:47 MET 1998
+Sat Nov  7 02:01:15 MET 1998
+Sat Nov  7 02:04:27 MET 1998
+Sat Nov  7 02:15:49 MET 1998
+%       Time   #Objs     Parser     Time/Input Time/Word   MaxSpace ProcessSize
+%     (msec)                            (msec)    (msec)            (megabytes)
+%XX   219340   10897       lc             2193       104   10963904          15
+Sat Nov  7 02:19:55 MET 1998
+Sat Nov  7 02:37:05 MET 1998
+%       Time   #Objs     Parser     Time/Input Time/Word   MaxSpace ProcessSize
+%     (msec)                            (msec)    (msec)            (megabytes)
+%XX   221040   10897       lc             2210       105   10963904          15
+%       Time   #Objs     Parser     Time/Input Time/Word   MaxSpace ProcessSize
+%     (msec)                            (msec)    (msec)            (megabytes)
+%XX  3047980   10897       hc            30479      1451    7919520          13
+%       Time   #Objs     Parser     Time/Input Time/Word   MaxSpace ProcessSize
+%     (msec)                            (msec)    (msec)            (megabytes)
+%XX   256540   10897       hc             2565       122   10978216          15
+Sat Nov  7 03:36:40 MET 1998

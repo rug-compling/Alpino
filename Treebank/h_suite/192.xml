@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="7" end="8" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="12" id="3" rel="--">
+      <node begin="5" cat="sv1" end="7" id="4" rel="tag">
+        <node begin="5" end="6" id="5" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="6" lemma="Piet" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Piet" word="Piet"/>
+      </node>
+      <node begin="0" cat="conj" end="12" id="7" rel="nucl">
+        <node begin="0" cat="smain" end="4" id="8" rel="cnj">
+          <node begin="0" end="1" getal="mv" id="9" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="We"/>
+          <node begin="1" end="2" id="10" lemma="gaan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ga" word="gaan" wvorm="pv"/>
+          <node begin="2" cat="pp" end="4" id="11" rel="ld">
+            <node begin="2" end="3" id="12" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="13" lemma="huis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="huis" word="huis"/>
+          </node>
+        </node>
+        <node begin="8" conjtype="neven" end="9" id="14" lemma="want" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="want" word="want"/>
+        <node begin="9" cat="smain" end="12" id="15" rel="cnj">
+          <node begin="9" end="10" getal="ev" id="16" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+          <node begin="10" end="11" id="17" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="ben" wvorm="pv"/>
+          <node begin="11" buiging="zonder" end="12" graad="basis" id="18" lemma="moe" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="moe" word="moe"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>We gaan naar huis , zei Piet , want ik ben moe</sentence>
+</alpino_ds>

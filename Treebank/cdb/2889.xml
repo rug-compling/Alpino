@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="du" end="8" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" word="En"/>
+      <node begin="1" cat="smain" end="8" id="3" rel="nucl">
+        <node begin="1" cat="np" end="3" id="4" index="1" rel="su">
+          <node begin="1" end="2" id="5" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+          <node begin="2" end="3" getal="ev" id="6" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" root="dat" status="vol" vwtype="aanw" word="dat"/>
+        </node>
+        <node begin="3" end="4" id="7" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+        <node begin="1" cat="inf" end="8" id="8" rel="vc">
+          <node begin="1" end="3" id="9" index="1" rel="su"/>
+          <node begin="1" cat="ppart" end="7" id="10" rel="vc">
+            <node begin="1" end="3" id="11" index="1" rel="obj1"/>
+            <node begin="4" cat="pp" end="6" id="12" rel="mod">
+              <node begin="4" end="5" id="13" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+              <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="14" lemma="Kralingen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Kralingen" word="Kralingen"/>
+            </node>
+            <node begin="6" buiging="zonder" end="7" id="15" lemma="verklaren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verklaar" word="verklaard" wvorm="vd"/>
+          </node>
+          <node begin="7" buiging="zonder" end="8" id="16" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>En ook dat kan uit Kralingen verklaard worden .</sentence>
+</alpino_ds>

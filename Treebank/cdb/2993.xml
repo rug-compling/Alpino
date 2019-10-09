@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="telefoon" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="telefoon" word="telefoons"/>
+        <node begin="2" cat="pp" end="4" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+          <node begin="3" end="4" getal="mv" id="7" lemma="hen" naamval="obl" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,obl,vol,3p,mv)" pt="vnw" rel="obj1" root="hen" status="vol" vwtype="pers" word="hen"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="permanent" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="permanent" word="permanent"/>
+      <node begin="6" cat="mwu" end="8" id="10" rel="predc">
+        <node begin="6" end="7" id="11" lemma="in" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+        <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="12" lemma="gebruik" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="gebruik" word="gebruik"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De telefoons voor hen zijn permanent in gebruik .</sentence>
+</alpino_ds>

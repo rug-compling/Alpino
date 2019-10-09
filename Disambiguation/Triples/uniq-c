@@ -1,0 +1,17 @@
+#!/usr/bin/perl -w
+
+$started=0;
+$previous="";
+$count=0;
+while(<>) {
+    chomp;
+    if($started && $_ eq $previous) {
+        $count++;
+    } else {
+        print "1|$previous|$count\n" if $started;
+        $previous=$_;
+        $count=1;
+    }
+    $started=1;
+}
+print "1|$previous|$count\n" if $started;

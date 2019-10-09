@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" buiging="zonder" end="1" getal="getal" id="3" lemma="uw" naamval="stan" npagr="agr" pdtype="det" persoon="2" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)" pt="vnw" rel="det" root="uw" status="vol" vwtype="bez" word="Uw"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="naam" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="naam" word="naam"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="worden" pos="verb" postag="WW(pv,conj,ev)" pt="ww" pvagr="ev" pvtijd="conj" rel="hd" root="word" word="worde" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="4" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="obj1"/>
+        <node begin="3" buiging="zonder" end="4" id="8" lemma="heiligen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="heilig" word="geheiligd" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="4" end="5" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Uw naam worde geheiligd .</sentence>
+</alpino_ds>

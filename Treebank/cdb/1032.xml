@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="0" cat="smain" end="22" id="1" rel="--">
+      <node begin="6" end="7" id="2" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ti" end="22" id="3" rel="vc">
+        <node begin="10" end="11" id="4" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="0" cat="inf" end="22" id="5" rel="body">
+          <node begin="0" cat="pp" end="6" id="6" rel="mod">
+            <node begin="0" end="1" id="7" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="Onder"/>
+            <node begin="1" cat="np" end="6" id="8" rel="obj1">
+              <node begin="1" end="2" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="10" lemma="hoofd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="hoofd" word="hoofd"/>
+              <node begin="3" cat="conj" end="6" id="11" rel="app">
+                <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="12" lemma="literatuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="literatuur" word="literatuur"/>
+                <node begin="4" conjtype="neven" end="5" id="13" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="14" lemma="transcendentie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="transcendentie" word="transcendentie"/>
+              </node>
+            </node>
+          </node>
+          <node begin="11" buiging="zonder" end="12" id="15" lemma="vinden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vind" word="vinden" wvorm="inf"/>
+          <node begin="7" cat="np" end="22" id="16" index="1" rel="obj1">
+            <node begin="7" end="8" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="8" buiging="met-e" end="9" graad="basis" id="18" lemma="interessant" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="interessant" word="interessante"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="19" lemma="beschouwing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beschouwing" word="beschouwing"/>
+            <node begin="12" cat="pp" end="22" id="20" rel="mod">
+              <node begin="12" end="13" id="21" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+              <node begin="13" cat="conj" end="22" id="22" rel="obj1">
+                <node begin="13" cat="mwu" end="15" id="23" rel="cnj">
+                  <node begin="13" end="14" id="24" lemma="Graham" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Graham" spectype="deeleigen" word="Graham"/>
+                  <node begin="14" end="15" id="25" lemma="Greene" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Greene" spectype="deeleigen" word="Greene"/>
+                </node>
+                <node begin="15" conjtype="neven" end="16" id="26" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                <node begin="16" cat="np" end="22" id="27" rel="cnj">
+                  <node begin="16" end="17" id="28" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="29" lemma="emancipatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="emancipatie" word="emancipatie"/>
+                  <node begin="18" cat="pp" end="22" id="30" rel="mod">
+                    <node begin="18" end="19" id="31" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                    <node begin="19" cat="np" end="22" id="32" rel="obj1">
+                      <node begin="19" end="20" id="33" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                      <node begin="20" buiging="met-e" end="21" graad="basis" id="34" lemma="katholiek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="katholiek" word="katholieke"/>
+                      <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="35" lemma="roman" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="roman" word="roman"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="22" id="36" index="1" rel="su"/>
+    </node>
+    <node begin="22" end="23" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Onder het hoofd literatuur en transcendentie is een interessante beschouwing te vinden over Graham Greene en de emancipatie van de katholieke roman .</sentence>
+</alpino_ds>

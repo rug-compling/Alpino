@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="29" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="16" end="17" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="28" id="3" rel="--">
+      <node begin="0" cat="cp" end="8" id="4" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="5" lemma="alhoewel" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="alhoewel" word="Alhoewel"/>
+        <node begin="1" cat="ssub" end="8" id="6" rel="body">
+          <node begin="1" buiging="zonder" end="2" graad="basis" id="7" lemma="voorlopig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="voorlopig" word="voorlopig"/>
+          <node begin="2" cat="np" end="6" id="8" rel="su">
+            <node begin="2" end="3" id="9" lemma="alleen" pos="adv" postag="BW()" pt="bw" rel="mod" root="alleen" word="alleen"/>
+            <node begin="3" end="4" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="4" buiging="zonder" end="5" graad="basis" id="11" lemma="tweedeurs" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="tweedeurs" word="tweedeurs"/>
+            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="12" lemma="model" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="model" word="model"/>
+          </node>
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="13" lemma="leverbaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="leverbaar" word="leverbaar"/>
+          <node begin="7" end="8" id="14" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="9" end="10" id="15" lemma="liggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lig" word="ligt" wvorm="pv"/>
+      <node begin="10" end="11" genus="onz" getal="ev" id="16" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="11" cat="mwu" end="16" id="17" rel="svp">
+        <node begin="11" end="12" id="18" lemma="in" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+        <node begin="12" end="13" id="19" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="fixed" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+        <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="20" lemma="lijn" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="lijn" word="lijn"/>
+        <node begin="14" end="15" id="21" lemma="de" lwtype="bep" naamval="gen" npagr="rest3" pos="fixed" postag="LID(bep,gen,rest3)" pt="lid" rel="mwp" root="der" word="der"/>
+        <node begin="15" end="16" getal="mv" graad="basis" id="22" lemma="verwachting" ntype="soort" pos="fixed" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="verwachtingen" word="verwachtingen"/>
+      </node>
+      <node begin="17" cat="cp" end="28" id="23" rel="su">
+        <node begin="17" conjtype="onder" end="18" id="24" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="18" cat="ssub" end="28" id="25" rel="body">
+          <node begin="21" cat="np" end="25" id="26" index="1" rel="su">
+            <node begin="21" end="22" id="27" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+            <node begin="22" end="23" id="28" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="23" buiging="zonder" end="24" graad="basis" id="29" lemma="vierdeurs" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="vierdeurs" word="vierdeurs"/>
+            <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="30" lemma="type" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="type" word="type"/>
+          </node>
+          <node begin="25" end="26" id="31" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+          <node begin="18" cat="inf" end="28" id="32" rel="vc">
+            <node begin="21" end="25" id="33" index="1" rel="su"/>
+            <node begin="26" buiging="zonder" end="27" id="34" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+            <node begin="18" cat="ppart" end="28" id="35" rel="vc">
+              <node begin="18" cat="mwu" end="21" id="36" rel="mod">
+                <node begin="18" end="19" id="37" lemma="op" pos="adv" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+                <node begin="19" end="20" id="38" lemma="den" lwtype="bep" naamval="dat" npagr="evmo" pos="adv" postag="LID(bep,dat,evmo)" pt="lid" rel="mwp" root="den" word="den"/>
+                <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="39" lemma="duur" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="duur" word="duur"/>
+              </node>
+              <node begin="21" end="25" id="40" index="1" rel="obj1"/>
+              <node begin="27" buiging="zonder" end="28" id="41" lemma="uitbrengen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="breng" word="uitgebracht" wvorm="vd"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="28" end="29" id="42" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Alhoewel voorlopig alleen een tweedeurs model leverbaar is , ligt het in de lijn der verwachtingen , dat op den duur ook een vierdeurs type zal worden uitgebracht .</sentence>
+</alpino_ds>

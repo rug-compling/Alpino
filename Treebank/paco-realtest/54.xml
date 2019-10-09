@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="6" end="7" id="1" pos="punct" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="ppart" end="14" id="2" rel="--">
+      <node begin="0" end="1" gen="de" id="3" num="pl" pos="noun" rel="obj1" root="sector" word="Sectoren"/>
+      <node begin="1" end="2" id="4" infl="psp" pos="verb" rel="hd" root="selecteer" sc="transitive" word="geselecteerd"/>
+      <node begin="2" cat="pp" end="14" id="5" rel="mod">
+        <node begin="2" end="3" id="6" pos="prep" rel="hd" root="voor" word="voor"/>
+        <node begin="3" cat="np" end="14" id="7" rel="obj1">
+          <node begin="3" end="4" gen="het" id="8" num="sg" pos="noun" rel="hd" root="onderzoek" word="onderzoek"/>
+          <node begin="4" cat="pp" end="8" id="9" rel="mod">
+            <node begin="4" end="5" id="10" pos="prep" rel="hd" root="volgens" word="volgens"/>
+            <node begin="5" cat="np" end="8" id="11" rel="obj1">
+              <node begin="5" end="6" gen="de" id="12" num="pl" pos="noun" rel="hd" root="referentie_term" word="referentietermen"/>
+              <node aform="base" begin="7" end="8" id="13" infl="no_e" pos="adj" rel="mod" root="gerangschikt" vform="psp" word="gerangschikt"/>
+            </node>
+          </node>
+          <node begin="8" cat="pp" end="14" id="14" rel="mod">
+            <node begin="8" end="9" id="15" pos="prep" rel="hd" root="in" word="in"/>
+            <node begin="9" cat="np" end="14" id="16" rel="obj1">
+              <node begin="9" end="10" gen="de" id="17" num="sg" pos="noun" rel="hd" root="volgorde" word="volgorde"/>
+              <node begin="10" cat="pp" end="14" id="18" rel="mod">
+                <node begin="10" end="11" id="19" pos="prep" rel="hd" root="van" word="van"/>
+                <node begin="11" cat="np" end="14" id="20" rel="obj1">
+                  <node begin="11" end="12" id="21" infl="pron" pos="det" rel="det" root="hun" word="hun"/>
+                  <node aform="base" begin="12" end="13" id="22" infl="e" pos="adj" rel="mod" root="totaal" vform="adj" word="totale"/>
+                  <node begin="13" end="14" gen="de" id="23" num="pl" pos="noun" rel="hd" root="uitgave" word="uitgaven"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Sectoren geselecteerd voor onderzoek volgens referentietermen , gerangschikt in volgorde van hun totale uitgaven</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

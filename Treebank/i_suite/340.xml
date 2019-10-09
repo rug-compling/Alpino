@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" getal="mv" id="2" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="We"/>
+      <node begin="1" end="2" id="3" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" word="moeten" wvorm="pv"/>
+      <node begin="2" cat="mwu" end="4" id="4" mwu_root="&apos;s avonds" mwu_sense="&apos;s avonds" rel="mod">
+        <node begin="2" end="3" id="5" lemma="&amp;apos;s" pos="adv" postag="BW()" pt="bw" rel="mwp" root="&apos;s" word="&apos;s"/>
+        <node begin="3" end="4" getal="ev" graad="basis" id="6" lemma="avonds" naamval="gen" ntype="soort" pos="adv" postag="N(soort,ev,basis,gen)" pt="n" rel="mwp" root="avonds" word="Avonds"/>
+      </node>
+      <node begin="4" cat="pp" end="6" id="7" rel="ld">
+        <node begin="4" end="5" id="8" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+        <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="huis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="huis" word="huis"/>
+      </node>
+    </node>
+  </node>
+  <sentence>We moeten &apos;s Avonds naar huis</sentence>
+</alpino_ds>

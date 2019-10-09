@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="2" end="3" id="2" lemma="doen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="doe" word="deed" wvorm="pv"/>
+      <node begin="3" end="4" getal="getal" id="3" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+      <node begin="4" end="5" id="4" lemma="voor" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="voor" vztype="fin" word="voor"/>
+      <node begin="0" cat="np" end="9" id="5" rel="su">
+        <node begin="0" end="1" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="7" lemma="probleem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="probleem" word="probleem"/>
+        <node begin="5" cat="cp" end="9" id="8" rel="vc">
+          <node begin="5" conjtype="onder" end="6" id="9" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="6" cat="ssub" end="9" id="10" rel="body">
+            <node begin="6" end="7" genus="masc" getal="ev" id="11" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+            <node begin="7" buiging="zonder" end="8" graad="basis" id="12" lemma="afwezig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="afwezig" word="afwezig"/>
+            <node begin="8" end="9" id="13" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Het probleem deed zich voor dat hij afwezig was</sentence>
+</alpino_ds>

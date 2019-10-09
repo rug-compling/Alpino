@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="2" index="1" lemma="Bulgarije" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Bulgarije" word="Bulgarije"/>
+      <node begin="1" end="2" id="3" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+      <node begin="0" cat="inf" end="4" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="president" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="president" word="president"/>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="afzetten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zet_af" word="afzetten" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="4" end="5" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Bulgarije gaat president afzetten .</sentence>
+</alpino_ds>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="sv1" end="4" id="1" rel="--">
+      <node begin="0" end="1" frame="verb(hebben,sg1,part_transitive(op))" id="2" infl="sg1" lcat="sv1" pos="verb" rel="hd" root="zoek_op" sc="part_transitive(op)" sense="zoek_op" tense="present" word="Zoek"/>
+      <node begin="1" cat="np" end="3" id="3" rel="obj1">
+        <node aform="base" begin="1" end="2" frame="adjective(ende(padv))" id="4" infl="e" lcat="ppres" pos="adj" rel="mod" root="vul_aan" sense="vul_aan" vform="gerund" word="aanvullende"/>
+        <node begin="2" end="3" frame="noun(de,count,pl)" gen="de" id="5" lcat="np" num="pl" pos="noun" rel="hd" root="product_installatie" sense="product_installatie" word="productinstallaties"/>
+      </node>
+      <node begin="3" end="4" frame="particle(op)" id="6" lcat="part" pos="part" rel="svp" root="op" sense="op" word="op"/>
+    </node>
+    <node begin="4" end="5" frame="punct(dubb_punt)" id="7" lcat="punct" pos="punct" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+  </node>
+  <sentence>Zoek aanvullende productinstallaties op :</sentence>
+  <comments>
+    <comment>Q#282|Zoek aanvullende productinstallaties op :|1|1|0.3750321042700899</comment>
+  </comments>
+</alpino_ds>

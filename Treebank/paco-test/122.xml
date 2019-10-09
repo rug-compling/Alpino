@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="0" cat="conj" end="21" id="1" rel="--">
+      <node begin="0" cat="smain" end="8" id="2" rel="cnj">
+        <node begin="0" case="nom" def="def" end="1" frame="pronoun(nwh,fir,pl,de,nom,def,wkpro)" gen="de" id="3" index="1" lcat="np" num="pl" per="fir" pos="pron" rel="su" root="we" sense="we" special="wkpro" wh="nwh" word="We"/>
+        <node begin="1" end="2" frame="verb(zijn,pl,pc_pp(over))" id="4" infl="pl" lcat="smain" pos="verb" rel="hd" root="ga" sc="pc_pp(over)" sense="ga-over" tense="present" word="gaan"/>
+        <node begin="2" end="3" frame="er_adverb(bij)" id="5" lcat="pp" pos="pp" rel="mod" root="hierbij" sense="hierbij" special="er" word="hierbij"/>
+        <node begin="3" end="4" frame="adverb" id="6" lcat="advp" pos="adv" rel="mod" root="niet" sense="niet" word="niet"/>
+        <node begin="4" cat="pp" end="8" id="7" rel="pc">
+          <node begin="4" end="5" frame="preposition(over,[heen])" id="8" lcat="pp" pos="prep" rel="hd" root="over" sense="over" word="over"/>
+          <node begin="5" cat="np" end="8" id="9" rel="obj1">
+            <node begin="5" end="6" frame="number(hoofd(sg_num))" id="10" infl="sg_num" lcat="detp" pos="num" rel="det" root="één" sense="één" special="hoofd" word="één"/>
+            <node begin="6" end="7" frame="tmp_noun(de,count,sg,measure)" gen="de" id="11" lcat="np" num="sg" pos="noun" rel="hd" root="nacht" sc="measure" sense="nacht-MEAS" special="tmp" word="nacht"/>
+            <node begin="7" end="8" frame="noun(het,mass,sg)" gen="het" id="12" lcat="np" num="sg" pos="noun" rel="mod" root="ijs" sense="ijs" word="ijs"/>
+          </node>
+        </node>
+      </node>
+      <node begin="8" end="9" frame="conj(en)" id="13" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="0" cat="smain" end="21" id="14" rel="cnj">
+        <node begin="0" end="1" id="15" index="1" rel="su"/>
+        <node begin="9" end="10" frame="verb(hebben,pl,sbar)" id="16" infl="pl" lcat="smain" pos="verb" rel="hd" root="besef" sc="sbar" sense="besef" tense="present" word="beseffen"/>
+        <node begin="10" cat="mwu" end="12" id="17" mwu_root="ten_volle" mwu_sense="ten_volle" rel="mod">
+          <node begin="10" end="11" frame="adverb" id="18" lcat="advp" pos="adv" rel="mwp" root="ten" sense="ten" word="ten"/>
+          <node begin="11" end="12" frame="adverb" id="19" lcat="advp" pos="adv" rel="mwp" root="volle" sense="volle" word="volle"/>
+        </node>
+        <node begin="12" cat="cp" end="21" id="20" rel="vc">
+          <node begin="12" end="13" frame="complementizer(dat)" id="21" lcat="cp" pos="comp" rel="cmp" root="dat" sc="dat" sense="dat" word="dat"/>
+          <node begin="13" cat="ssub" end="21" id="22" rel="body">
+            <node begin="13" case="nom" def="def" end="14" frame="pronoun(nwh,fir,pl,de,nom,def,wkpro)" gen="de" id="23" index="2" lcat="np" num="pl" per="fir" pos="pron" rel="su" root="we" sense="we" special="wkpro" wh="nwh" word="we"/>
+            <node begin="14" end="15" frame="adverb" id="24" lcat="advp" pos="adv" rel="mod" root="nog" sense="nog" word="nog"/>
+            <node begin="13" cat="ti" end="20" id="25" rel="vc">
+              <node begin="18" end="19" frame="complementizer(te)" id="26" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+              <node begin="13" cat="inf" end="20" id="27" rel="body">
+                <node begin="13" end="14" id="28" index="2" rel="su"/>
+                <node begin="15" cat="np" end="18" id="29" rel="obj1">
+                  <node begin="15" end="16" frame="determiner(een)" id="30" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+                  <node aform="base" begin="16" end="17" frame="adjective(no_e(adv))" id="31" infl="no_e" lcat="ap" pos="adj" rel="mod" root="flink" sense="flink" vform="adj" word="flink"/>
+                  <node begin="17" end="18" frame="tmp_noun(het,count,sg)" gen="het" id="32" lcat="np" num="sg" pos="noun" rel="hd" root="eind" sense="eind" special="tmp" word="eind"/>
+                </node>
+                <node begin="19" end="20" frame="verb(zijn,inf(no_e),transitive_ndev_ndev)" id="33" infl="inf(no_e)" lcat="inf" pos="verb" rel="hd" root="ga" sc="transitive_ndev_ndev" sense="ga" word="gaan"/>
+              </node>
+            </node>
+            <node begin="20" end="21" frame="verb(hebben,pl,subj_control(pass_te))" id="34" infl="pl" lcat="ssub" pos="verb" rel="hd" root="heb" sc="subj_control(pass_te)" sense="heb" tense="present" word="hebben"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" frame="punct(punt)" id="35" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>We gaan hierbij niet over één nacht ijs en beseffen ten volle dat we nog een flink eind te gaan hebben .</sentence>
+  <comments>
+    <comment>Q#122|We gaan hierbij niet over één nacht ijs en beseffen ten volle dat we nog een flink eind te gaan hebben .|1|1|-8.536884199956326</comment>
+  </comments>
+</alpino_ds>

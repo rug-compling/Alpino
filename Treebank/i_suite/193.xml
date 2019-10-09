@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="verkeren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verkeer" word="verkeerde" wvorm="pv"/>
+      <node begin="2" cat="pp" end="9" id="4" rel="predc">
+        <node begin="2" end="3" id="5" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="3" cat="np" end="9" id="6" rel="obj1">
+          <node begin="3" end="4" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="hoop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hoop" word="hoop"/>
+          <node begin="5" cat="ti" end="9" id="9" rel="vc">
+            <node begin="7" end="8" id="10" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="5" cat="inf" end="9" id="11" rel="body">
+              <node begin="5" cat="np" end="7" id="12" rel="obj1">
+                <node begin="5" end="6" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="afstand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="afstand" word="afstand"/>
+              </node>
+              <node begin="8" buiging="zonder" end="9" id="15" lemma="volbrengen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="volbreng" word="volbrengen" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Hij verkeerde in de hoop de afstand te volbrengen</sentence>
+</alpino_ds>

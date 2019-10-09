@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="30" id="0" rel="top">
+    <node begin="0" cat="smain" end="29" id="1" rel="--">
+      <node begin="0" cat="mwu" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="Yehudi" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Yehudi" spectype="deeleigen" word="Yehudi"/>
+        <node begin="1" end="2" id="4" lemma="Menuhin" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Menuhin" spectype="deeleigen" word="Menuhin"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="3" cat="np" end="17" id="6" rel="predc">
+        <node begin="3" end="4" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="trekpleister" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pleister" word="trekpleister"/>
+        <node begin="5" cat="pp" end="17" id="9" rel="mod">
+          <node begin="5" end="6" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="6" cat="np" end="17" id="11" rel="obj1">
+            <node begin="6" end="7" id="12" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="7" cat="mwu" end="9" id="13" rel="hd">
+              <node begin="7" end="8" id="14" lemma="Holland" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Holland" spectype="deeleigen" word="Holland"/>
+              <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="15" lemma="festival-concert" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Festival-concert" word="Festival-concert"/>
+            </node>
+            <node begin="9" cat="rel" end="17" id="16" rel="mod">
+              <node begin="9" end="10" getal="ev" id="17" index="1" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
+              <node begin="9" cat="ssub" end="17" id="18" rel="body">
+                <node begin="9" end="10" id="19" index="1" rel="obj1"/>
+                <node begin="10" cat="np" end="12" id="20" rel="su">
+                  <node begin="10" end="11" id="21" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                  <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="22" lemma="Concertgebouworkest" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="orkest" word="Concertgebouworkest"/>
+                </node>
+                <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="23" lemma="woensdagavond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="woensdagavond" word="woensdagavond"/>
+                <node begin="13" cat="pp" end="16" id="24" rel="mod">
+                  <node begin="13" end="14" id="25" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                  <node begin="14" cat="np" end="16" id="26" rel="obj1">
+                    <node begin="14" end="15" id="27" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                    <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="28" lemma="concertgebouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="concertgebouw" word="Concertgebouw"/>
+                  </node>
+                </node>
+                <node begin="16" end="17" id="29" lemma="geven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="geef" word="gaf" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="17" cat="pp" end="29" id="30" rel="mod">
+        <node begin="17" end="18" id="31" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+        <node begin="18" cat="np" end="29" id="32" rel="obj1">
+          <node begin="18" end="19" id="33" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="34" lemma="programma" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="programma" word="programma"/>
+          <node begin="20" cat="rel" end="29" id="35" rel="mod">
+            <node begin="20" end="21" getal="ev" id="36" index="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
+            <node begin="20" cat="ssub" end="29" id="37" rel="body">
+              <node begin="20" end="21" id="38" index="2" rel="su"/>
+              <node begin="26" end="27" id="39" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
+              <node begin="20" cat="inf" end="29" id="40" rel="vc">
+                <node begin="20" end="21" id="41" index="2" rel="su"/>
+                <node begin="27" buiging="zonder" end="28" id="42" lemma="kunnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kan" word="kunnen" wvorm="inf"/>
+                <node begin="20" cat="inf" end="29" id="43" rel="vc">
+                  <node begin="20" end="21" id="44" index="2" rel="su"/>
+                  <node begin="20" cat="ppart" end="26" id="45" rel="vc">
+                    <node begin="20" end="21" id="46" index="2" rel="obj1"/>
+                    <node begin="21" end="22" id="47" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
+                    <node begin="22" cat="pp" end="25" id="48" rel="ld">
+                      <node begin="22" end="23" id="49" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                      <node begin="23" cat="np" end="25" id="50" rel="obj1">
+                        <node begin="23" end="24" id="51" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                        <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="52" lemma="abonnementsserie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="serie" word="abonnementsserie"/>
+                      </node>
+                    </node>
+                    <node begin="25" buiging="zonder" end="26" id="53" lemma="plaatsen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="plaats" word="geplaatst" wvorm="vd"/>
+                  </node>
+                  <node begin="28" buiging="zonder" end="29" id="54" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="29" end="30" id="55" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Yehudi Menuhin was de trekpleister van het Holland Festival-concert dat het Concertgebouworkest woensdagavond in het Concertgebouw gaf met een programma dat zo in een abonnementsserie geplaatst had kunnen worden .</sentence>
+</alpino_ds>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="whq" end="11" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welke" vwtype="vb" word="Welke"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="4" lemma="Brits" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Brits" word="Britse"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="admiraal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="admiraal" word="admiraal"/>
+      </node>
+      <node begin="0" cat="sv1" end="11" id="6" rel="body">
+        <node begin="0" end="3" id="7" index="1" rel="su"/>
+        <node begin="3" end="4" id="8" lemma="ontwikkelen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ontwikkel" word="ontwikkelde" wvorm="pv"/>
+        <node begin="4" cat="np" end="6" id="9" rel="obj1">
+          <node begin="4" end="5" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="schaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schaal" word="schaal"/>
+        </node>
+        <node begin="6" cat="oti" end="11" id="12" rel="mod">
+          <node begin="6" end="7" id="13" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+          <node begin="7" cat="ti" end="11" id="14" rel="body">
+            <node begin="9" end="10" id="15" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="7" cat="inf" end="11" id="16" rel="body">
+              <node begin="7" cat="np" end="9" id="17" rel="obj1">
+                <node begin="7" end="8" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="19" lemma="windsterkte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sterkte" word="windsterkte"/>
+              </node>
+              <node begin="10" buiging="zonder" end="11" id="20" lemma="beschrijven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="beschrijf" word="beschrijven" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="21" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke Britse admiraal ontwikkelde een schaal om de windsterkte te beschrijven ?</sentence>
+</alpino_ds>

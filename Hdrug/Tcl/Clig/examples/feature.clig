@@ -1,0 +1,21 @@
+#
+# example: feature structure 4-Jan-96
+#
+# fs is the main command to build a feature structure. It simply
+# orders its arguments in a stack.
+#
+# the command feature is used to create the attribute-value-pairs. 
+
+
+clig {fs {bold-text "word"}
+         {feature "PHON" {slant-text <she>}}
+         {feature "SYNSEM" 
+           {fs {bold-text synsem}
+               {feature "LOCAL"
+                {fs {bold-text local}
+                  {feature "CATEGORY" 
+                    {fs {bold-text head}
+                        {feature "HEAD" 
+                           {fs {feature "CASE" {plain-text nom}}}}
+                        {feature  "SUBCAT" {plain-text <>}}}}
+                  {feature "CONTENT" {fs {bold-text "ppro"}}}}}}}}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="6" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="gerucht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gerucht" word="geruchten"/>
+        <node begin="2" cat="cp" end="6" id="5" rel="mod">
+          <node begin="2" conjtype="onder" end="3" id="6" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+          <node begin="3" cat="sv1" end="6" id="7" rel="body">
+            <node begin="3" end="4" id="8" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+            <node begin="4" end="5" genus="masc" getal="ev" id="9" index="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+            <node begin="4" cat="inf" end="6" id="10" rel="vc">
+              <node begin="4" end="5" id="11" index="2" rel="su"/>
+              <node begin="5" buiging="zonder" end="6" id="12" lemma="aftreden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="treed_af" word="aftreden" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="6" end="7" id="13" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" word="werden" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="8" id="14" rel="vc">
+        <node begin="0" end="6" id="15" index="1" rel="obj1"/>
+        <node begin="7" buiging="zonder" end="8" id="16" lemma="negeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="negeer" word="genegeerd" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>De geruchten als zou hij aftreden werden genegeerd</sentence>
+</alpino_ds>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="29" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="24" end="25" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="1" cat="du" end="28" id="3" rel="--">
+      <node begin="1" conjtype="neven" end="2" id="4" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" word="Maar"/>
+      <node begin="2" cat="smain" end="28" id="5" rel="nucl">
+        <node begin="2" cat="cp" end="24" id="6" rel="mod">
+          <node begin="2" conjtype="onder" end="3" id="7" lemma="wanneer" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="wanneer" word="wanneer"/>
+          <node begin="3" cat="ssub" end="24" id="8" rel="body">
+            <node begin="3" cat="conj" end="10" id="9" index="1" rel="su">
+              <node begin="3" cat="np" end="6" id="10" rel="cnj">
+                <node begin="3" end="4" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="4" cat="mwu" end="6" id="12" rel="hd">
+                  <node begin="4" end="5" id="13" lemma="Ger" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ger" spectype="deeleigen" word="Ger"/>
+                  <node begin="5" end="6" id="14" lemma="Langendijk" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Langendijk" spectype="deeleigen" word="Langendijk"/>
+                </node>
+              </node>
+              <node begin="6" conjtype="neven" end="7" id="15" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="7" cat="np" end="10" id="16" rel="cnj">
+                <node begin="7" end="8" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="8" cat="mwu" end="10" id="18" rel="hd">
+                  <node begin="8" end="9" id="19" lemma="Ger" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ger" spectype="deeleigen" word="Ger"/>
+                  <node begin="9" end="10" id="20" lemma="Bakkes" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bakkes" spectype="deeleigen" word="Bakkes"/>
+                </node>
+              </node>
+            </node>
+            <node begin="10" end="11" id="21" lemma="blijven" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="blijf" word="blijven" wvorm="pv"/>
+            <node begin="3" cat="inf" end="24" id="22" rel="vc">
+              <node begin="3" end="10" id="23" index="1" rel="su"/>
+              <node begin="11" buiging="zonder" end="12" id="24" lemma="lopen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="loop" word="lopen" wvorm="inf"/>
+              <node begin="12" cat="pp" end="15" id="25" rel="mod">
+                <node begin="12" end="13" id="26" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                <node begin="13" cat="np" end="15" id="27" rel="obj1">
+                  <node begin="13" end="14" id="28" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="29" lemma="bal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bal" word="bal"/>
+                </node>
+              </node>
+              <node begin="15" cat="oti" end="24" id="30" rel="mod">
+                <node begin="15" end="16" id="31" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+                <node begin="16" cat="ti" end="24" id="32" rel="body">
+                  <node begin="22" end="23" id="33" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+                  <node begin="16" cat="inf" end="24" id="34" rel="body">
+                    <node begin="16" cat="np" end="21" id="35" rel="obj1">
+                      <node begin="16" end="17" id="36" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                      <node begin="17" cat="ap" end="20" id="37" rel="mod">
+                        <node begin="18" buiging="zonder" end="19" graad="basis" id="38" lemma="fraai" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="fraai" word="fraai"/>
+                        <node begin="17" cat="advp" end="20" id="39" rel="mod">
+                          <node begin="17" end="18" id="40" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="hd" root="zo" word="zo"/>
+                          <node begin="19" buiging="met-e" end="20" graad="basis" id="41" lemma="mogelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="obcomp" root="mogelijk" word="mogelijke"/>
+                        </node>
+                      </node>
+                      <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="42" lemma="pass" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pass" word="pass"/>
+                    </node>
+                    <node begin="21" end="22" id="43" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="af" vztype="fin" word="af"/>
+                    <node begin="23" buiging="zonder" end="24" id="44" lemma="leveren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="lever" word="leveren" wvorm="inf"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="25" end="26" id="45" lemma="verzwakken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="verzwak" word="verzwak" wvorm="pv"/>
+        <node begin="26" end="27" getal="ev" id="46" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="noun" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+        <node begin="27" end="28" id="47" lemma="vanzelf" pos="adv" postag="BW()" pt="bw" rel="mod" root="vanzelf" word="vanzelf"/>
+      </node>
+    </node>
+    <node begin="28" end="29" id="48" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&quot; Maar wanneer een Ger Langendijk en een Ger Bakkes blijven lopen met de bal om een zo fraai mogelijke pass af te leveren , verzwak je vanzelf .</sentence>
+</alpino_ds>

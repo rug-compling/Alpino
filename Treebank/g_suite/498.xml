@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="cp" end="7" id="1" rel="--">
+      <node begin="0" conjtype="onder" end="1" id="2" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+      <node begin="1" cat="ssub" end="7" id="3" rel="body">
+        <node begin="1" end="2" getal="mv" id="4" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+        <node begin="2" cat="ap" end="6" id="5" rel="predc">
+          <node begin="2" cat="pp" end="4" id="6" rel="pc">
+            <node begin="2" end="3" id="7" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="Jolanda" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Jolanda" word="Jolanda"/>
+          </node>
+          <node begin="4" cat="mwu" end="6" id="9" rel="hd">
+            <node begin="4" end="5" id="10" lemma="op" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="zoek" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="zoek" word="zoek"/>
+          </node>
+        </node>
+        <node begin="6" end="7" id="12" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      </node>
+    </node>
+  </node>
+  <sentence>dat we naar Jolanda op zoek zijn</sentence>
+</alpino_ds>

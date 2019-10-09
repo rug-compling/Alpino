@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="10" end="11" frame="punct(dubb_punt)" id="1" lcat="punct" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+    <node begin="15" end="16" frame="punct(komma)" id="2" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="20" id="3" rel="--">
+      <node begin="4" end="5" frame="verb(unacc,past(sg),passive)" id="4" infl="sg" lcat="smain" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" sc="passive" sense="word" tense="past" word="werd" wvorm="pv"/>
+      <node begin="5" cat="np" end="19" id="5" index="1" rel="su">
+        <node begin="5" end="6" frame="determiner(de)" id="6" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+        <node begin="6" end="7" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="7" lcat="np" lemma="website" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="web_site" sense="web_site" word="website"/>
+        <node begin="7" cat="mwu" end="10" id="8" rel="app">
+          <node begin="7" end="8" frame="proper_name(both,'ORG')" id="9" lcat="np" lemma="Coin" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Coin" sense="Coin" spectype="deeleigen" word="Coin"/>
+          <node begin="8" end="9" frame="proper_name(both,'ORG')" id="10" lcat="np" lemma="&amp;" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="&amp;" sense="&amp;" spectype="deeleigen" word="&amp;"/>
+          <node begin="9" end="10" frame="proper_name(both,'ORG')" id="11" lcat="np" lemma="Conscience" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Conscience" sense="Conscience" spectype="deeleigen" word="Conscience"/>
+        </node>
+        <node begin="11" cat="conj" end="19" id="12" rel="app">
+          <node begin="11" cat="mwu" end="15" id="13" rel="cnj">
+            <node begin="11" end="12" frame="proper_name(both,'PER')" id="14" lcat="np" lemma="Popular" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Popular" sense="Popular" spectype="deeleigen" word="Popular"/>
+            <node begin="12" end="13" frame="proper_name(both,'PER')" id="15" lcat="np" lemma="Views" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Views" sense="Views" spectype="deeleigen" word="Views"/>
+            <node begin="13" conjtype="neven" end="14" frame="proper_name(both,'PER')" id="16" lcat="np" lemma="of" neclass="PER" num="both" pos="name" postag="VG(neven)" pt="vg" rel="mwp" root="of" sense="of" word="of"/>
+            <node begin="14" end="15" frame="proper_name(both,'PER')" id="17" lcat="np" lemma="money" neclass="PER" num="both" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Money" sense="Money" spectype="vreemd" word="Money"/>
+          </node>
+          <node begin="16" cat="mwu" end="19" id="18" rel="cnj">
+            <node begin="16" end="17" frame="proper_name(both,'ORG')" id="19" lcat="np" lemma="credit" neclass="ORG" num="both" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Credit" sense="Credit" spectype="vreemd" word="Credit"/>
+            <node begin="17" end="18" frame="proper_name(both,'ORG')" id="20" lcat="np" lemma="and" neclass="ORG" num="both" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="and" sense="and" spectype="vreemd" word="and"/>
+            <node begin="18" end="19" frame="proper_name(both,'ORG')" id="21" lcat="np" lemma="speculation" neclass="ORG" num="both" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Speculation" sense="Speculation" spectype="vreemd" word="Speculation"/>
+          </node>
+        </node>
+      </node>
+      <node begin="0" cat="ppart" end="20" id="22" rel="vc">
+        <node begin="0" cat="mwu" end="4" id="23" rel="mod">
+          <node begin="0" end="1" frame="er_adverb([aan,de,hand,van])" id="24" lcat="pp" lemma="aan" pos="pp" postag="VZ(init)" pt="vz" rel="mwp" root="aan" sense="aan" special="er" vztype="init" word="Aan"/>
+          <node begin="1" end="2" frame="er_adverb([aan,de,hand,van])" id="25" lcat="pp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="pp" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" sense="de" special="er" word="de"/>
+          <node begin="2" end="3" frame="er_adverb([aan,de,hand,van])" genus="zijd" getal="ev" graad="basis" id="26" lcat="pp" lemma="hand" naamval="stan" ntype="soort" pos="pp" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="hand" sense="hand" special="er" word="hand"/>
+          <node begin="3" end="4" frame="er_adverb([aan,de,hand,van])" id="27" lcat="pp" lemma="daarvan" pos="pp" postag="BW()" pt="bw" rel="mwp" root="van" sense="van" special="er" word="daarvan"/>
+        </node>
+        <node begin="5" end="19" id="28" index="1" rel="obj1"/>
+        <node begin="19" buiging="zonder" end="20" frame="verb(hebben,psp,transitive)" id="29" infl="psp" lcat="ppart" lemma="maken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="maak" sc="transitive" sense="maak" word="gemaakt" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="20" end="21" frame="punct(punt)" id="30" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Aan de hand daarvan werd de website Coin &amp; Conscience : Popular Views of Money , Credit and Speculation gemaakt .</sentence>
+  <comments>
+    <comment>Q#DM_20061223_01-159-3-11|Aan de hand daarvan werd de website Coin &amp; Conscience : Popular Views of Money , Credit and Speculation gemaakt .|1|1|-0.05463562386166822</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="smain" end="20" id="1" rel="--">
+      <node begin="3" end="4" id="2" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+      <node begin="4" end="5" genus="masc" getal="ev" id="3" index="1" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="men"/>
+      <node begin="0" cat="inf" end="20" id="4" rel="vc">
+        <node begin="0" cat="pp" end="3" id="5" rel="mod">
+          <node begin="0" end="1" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+          <node begin="1" cat="np" end="3" id="7" rel="obj1">
+            <node begin="1" end="2" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="2" buiging="zonder" end="3" getal-n="zonder-n" graad="basis" id="9" lemma="algemeen" pos="noun" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="hd" root="algemeen" word="algemeen"/>
+          </node>
+        </node>
+        <node begin="4" end="5" id="10" index="1" rel="su"/>
+        <node begin="5" buiging="zonder" end="6" id="11" lemma="stellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel" word="stellen" wvorm="inf"/>
+        <node begin="6" cat="cp" end="20" id="12" rel="vc">
+          <node begin="6" conjtype="onder" end="7" id="13" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="7" cat="ssub" end="20" id="14" rel="body">
+            <node begin="7" cat="mwu" end="9" id="15" rel="su">
+              <node begin="7" end="8" id="16" lemma="Star" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Star" spectype="deeleigen" word="Star"/>
+              <node begin="8" end="9" id="17" lemma="Trek" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Trek" spectype="deeleigen" word="Trek"/>
+            </node>
+            <node begin="11" end="12" id="18" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+            <node begin="9" cat="np" end="20" id="19" rel="predc">
+              <node begin="9" end="10" id="20" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="21" lemma="weerspiegeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="weerspiegeling" word="weerspiegeling"/>
+              <node begin="12" cat="pp" end="20" id="22" rel="mod">
+                <node begin="12" end="13" id="23" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="13" cat="np" end="20" id="24" rel="obj1">
+                  <node begin="13" end="14" id="25" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                  <node begin="14" buiging="met-e" end="15" id="26" lemma="bestaan" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="besta" word="bestaande" wvorm="od"/>
+                  <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="27" lemma="wereldbeeld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="wereld_beeld" word="wereldbeeld"/>
+                  <node begin="16" cat="pp" end="20" id="28" rel="mod">
+                    <node begin="16" end="17" id="29" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                    <node begin="17" cat="np" end="20" id="30" rel="obj1">
+                      <node begin="17" end="18" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                      <node begin="18" cat="mwu" end="20" id="32" rel="hd">
+                        <node begin="18" buiging="met-e" end="19" id="33" lemma="verenigen" pos="name" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mwp" root="Verenigde" word="Verenigde" wvorm="vd"/>
+                        <node begin="19" end="20" getal="mv" graad="basis" id="34" lemma="staat" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Staten" word="Staten"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>In het algemeen kan men stellen dat Star Trek een weerspiegeling is van het bestaande wereldbeeld in de Verenigde Staten .</sentence>
+</alpino_ds>

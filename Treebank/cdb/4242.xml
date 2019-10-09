@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="1" cat="smain" end="6" id="2" rel="--">
+      <node begin="1" cat="np" end="3" id="3" rel="su">
+        <node begin="1" end="2" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="5" lemma="bewijs" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bewijs" word="bewijzen"/>
+      </node>
+      <node begin="3" end="4" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="4" end="5" getal="getal" id="7" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+      <node begin="5" end="6" id="8" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+    </node>
+    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&quot; De bewijzen zijn er ook .</sentence>
+</alpino_ds>

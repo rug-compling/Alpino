@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="inf" end="8" id="1" rel="--">
+      <node begin="2" buiging="zonder" end="3" id="2" lemma="doen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="doe" word="doen" wvorm="inf"/>
+      <node begin="0" cat="np" end="8" id="3" rel="obj1">
+        <node begin="0" end="1" getal="ev" id="4" lemma="niks" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" root="niks" status="vol" vwtype="onbep" word="Niks"/>
+        <node begin="1" cat="ap" end="8" id="5" rel="mod">
+          <node begin="1" buiging="met-s" end="2" graad="basis" id="6" lemma="anders" pos="adj" positie="postnom" postag="ADJ(postnom,basis,met-s)" pt="adj" rel="hd" root="anders" word="anders"/>
+          <node begin="3" cat="cp" end="8" id="7" rel="obcomp">
+            <node begin="3" conjtype="onder" end="4" id="8" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+            <node begin="4" cat="inf" end="8" id="9" rel="body">
+              <node begin="4" end="5" id="10" lemma="almaar" pos="adv" postag="BW()" pt="bw" rel="mod" root="almaar" word="almaar"/>
+              <node begin="5" cat="np" end="7" id="11" rel="obj1">
+                <node begin="5" buiging="zonder" end="6" graad="basis" id="12" lemma="ruw" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="ruw" word="ruw"/>
+                <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="13" lemma="materiaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="materiaal" word="materiaal"/>
+              </node>
+              <node begin="7" buiging="zonder" end="8" id="14" lemma="verzamelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verzamel" word="verzamelen" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Niks anders doen dan almaar ruw materiaal verzamelen .</sentence>
+</alpino_ds>

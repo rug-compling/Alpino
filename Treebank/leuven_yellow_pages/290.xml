@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="Men"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" cat="ap" end="6" id="4" rel="predc">
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="5" lemma="druk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="druk" word="druk"/>
+        <node begin="2" cat="pp" end="5" id="6" rel="pc">
+          <node begin="2" end="3" getal="getal" id="7" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="noun" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="daar" status="vol" vwtype="aanw" word="daar"/>
+          <node begin="4" end="5" id="8" lemma="mee" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="mee" vztype="fin" word="mee"/>
+        </node>
+        <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="bezig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="bezig" word="bezig"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Men is daar druk mee bezig</sentence>
+</alpino_ds>

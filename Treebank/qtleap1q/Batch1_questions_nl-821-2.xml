@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welke"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="gegeven" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gegeven" word="gegevens"/>
+      </node>
+      <node begin="0" cat="sv1" end="7" id="5" rel="body">
+        <node begin="0" end="2" id="6" index="1" rel="obj1"/>
+        <node begin="2" end="3" id="7" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+        <node begin="3" end="4" getal="ev" id="8" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="4" cat="ap" end="7" id="9" rel="predc">
+          <node begin="4" cat="pp" end="6" id="10" rel="pc">
+            <node begin="4" end="5" getal="getal" id="11" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="daar" status="vol" vwtype="aanw" word="daar"/>
+            <node begin="5" end="6" id="12" lemma="voor" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="voor" vztype="fin" word="voor"/>
+          </node>
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="13" lemma="nodig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="nodig" word="nodig"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="14" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke gegevens heb ik daar voor nodig ?</sentence>
+</alpino_ds>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="Dat"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" cat="ap" end="6" id="4" rel="predc">
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="aantrekkelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="aantrekkelijk" word="aantrekkelijk"/>
+        <node begin="3" cat="pp" end="6" id="6" rel="pc">
+          <node begin="3" end="4" id="7" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+          <node begin="4" cat="np" end="6" id="8" rel="obj1">
+            <node begin="4" end="5" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="10" lemma="publiek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="publiek" word="publiek"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dat is aantrekkelijk voor het publiek .</sentence>
+</alpino_ds>

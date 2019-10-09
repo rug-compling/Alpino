@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="9" end="10" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="sv1" end="11" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="gebruiken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="gebruik" word="Gebruik" wvorm="pv"/>
+      <node begin="1" cat="np" end="11" id="4" rel="obj1">
+        <node begin="2" end="3" getal="mv" graad="basis" id="5" lemma="inlog_gegeven" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="inlog_gegeven" word="inloggegevens"/>
+        <node begin="1" cat="detp" end="11" id="6" rel="det">
+          <node begin="1" buiging="zonder" end="2" graad="basis" id="7" lemma="dezelfde" pos="det" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="hd" root="dezelfde" word="dezelfde"/>
+          <node begin="3" cat="cp" end="11" id="8" rel="obcomp">
+            <node begin="3" conjtype="onder" end="4" id="9" lemma="als" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+            <node begin="4" cat="pp" end="11" id="10" rel="body">
+              <node begin="4" end="5" id="11" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+              <node begin="5" cat="np" end="11" id="12" rel="obj1">
+                <node begin="5" end="6" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="6" cat="mwu" end="8" id="14" rel="mod">
+                  <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="15" lemma="PT" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="PT" word="PT"/>
+                  <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="16" lemma="cliënt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="cliënt" word="cliënt"/>
+                </node>
+                <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="17" lemma="omgeving" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="omgeving" word="omgeving"/>
+                <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="18" lemma="gebruiker_omgeving" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="gebruiker_omgeving" word="gebruikersomgeving"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="19" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Gebruik dezelfde inloggegevens als bij de PT cliënt omgeving ( gebruikersomgeving ) .</sentence>
+</alpino_ds>

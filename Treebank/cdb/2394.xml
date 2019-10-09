@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" cat="pp" end="4" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+        <node begin="1" cat="np" end="4" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" buiging="met-e" end="3" graad="basis" id="6" lemma="westelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="westelijk" word="westelijke"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="provincie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="provincie" word="provincies"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="8" lemma="vallen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="val" word="vielen" wvorm="pv"/>
+      <node begin="5" cat="pp" end="8" id="9" rel="mod">
+        <node begin="5" end="6" id="10" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="6" cat="np" end="8" id="11" rel="obj1">
+          <node begin="6" end="7" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="7" end="8" getal="mv" graad="basis" id="13" lemma="morgenuur" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="uren" word="morgenuren"/>
+        </node>
+      </node>
+      <node begin="8" end="9" id="14" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+      <node begin="9" cat="np" end="11" id="15" rel="su">
+        <node begin="9" buiging="met-e" end="10" graad="basis" id="16" lemma="zwaar" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="zwaar" word="zware"/>
+        <node begin="10" end="11" getal="mv" graad="basis" id="17" lemma="sneeuwbui" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="buien" word="sneeuwbuien"/>
+      </node>
+    </node>
+    <node begin="11" end="12" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>In de westelijke provincies vielen in de morgenuren al zware sneeuwbuien .</sentence>
+</alpino_ds>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="whq" end="5" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="whd" root="waar" status="vol" vwtype="vb" word="Waar"/>
+      <node begin="0" cat="sv1" end="5" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="ld"/>
+        <node begin="1" end="2" id="5" lemma="vinden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="vind_plaats" word="vindt" wvorm="pv"/>
+        <node begin="2" cat="np" end="4" id="6" rel="su">
+          <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="documenta" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="Documenta" word="documenta"/>
+        </node>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="plaats" naamval="stan" ntype="soort" pos="part" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="svp" root="plaats" word="plaats"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="10" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Waar vindt de documenta plaats ?</sentence>
+</alpino_ds>

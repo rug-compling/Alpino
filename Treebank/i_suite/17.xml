@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="7" id="2" rel="--">
+      <node begin="0" end="1" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="4" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+      <node begin="0" cat="inf" end="5" id="5" rel="vc">
+        <node begin="0" end="1" id="6" index="1" rel="su"/>
+        <node begin="2" end="3" genus="onz" getal="ev" id="7" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="8" lemma="onzinnig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="onzinnig" word="onzinnig"/>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="vinden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vind" word="vinden" wvorm="inf"/>
+      </node>
+      <node begin="6" end="7" id="10" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="predm" root="allemaal" word="allemaal"/>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ik zou het onzinnig vinden , allemaal .</sentence>
+</alpino_ds>

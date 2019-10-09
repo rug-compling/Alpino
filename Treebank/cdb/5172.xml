@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="12" end="13" id="2" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="0" cat="du" end="20" id="3" rel="--">
+      <node begin="0" cat="smain" end="4" id="4" rel="dp">
+        <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="5" lemma="Zuid" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Zuid" word="Zuid"/>
+        <node begin="1" end="2" id="6" lemma="trekken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="trek" word="trok" wvorm="pv"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="klaver" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="klaver" word="klaver"/>
+        <node begin="3" end="4" id="8" lemma="na" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="na" vztype="fin" word="na"/>
+      </node>
+      <node begin="5" cat="conj" end="12" id="9" rel="dp">
+        <node begin="5" cat="smain" end="8" id="10" rel="cnj">
+          <node begin="5" buiging="zonder" end="6" graad="basis" id="11" index="1" lemma="west" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="su" root="west" word="west"/>
+          <node begin="6" end="7" id="12" lemma="pakken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="pak" word="pakte" wvorm="pv"/>
+          <node begin="7" buiging="zonder" end="8" graad="basis" id="13" lemma="klaveraas" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="obj1" root="aas" word="klaveraas"/>
+        </node>
+        <node begin="8" conjtype="neven" end="9" id="14" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="5" cat="smain" end="12" id="15" rel="cnj">
+          <node begin="5" end="6" id="16" index="1" rel="su"/>
+          <node begin="9" end="10" id="17" lemma="vervolgen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vervolg" word="vervolgde" wvorm="pv"/>
+          <node begin="10" cat="pp" end="12" id="18" rel="pc">
+            <node begin="10" end="11" id="19" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="11" buiging="zonder" end="12" getal-n="zonder-n" id="20" lemma="schoppen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="obj1" root="schop" word="schoppen" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+      <node begin="13" cat="conj" end="20" id="21" rel="dp">
+        <node begin="13" cat="smain" end="15" id="22" rel="cnj">
+          <node begin="13" buiging="zonder" end="14" graad="basis" id="23" index="2" lemma="oost" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="su" root="oost" word="oost"/>
+          <node begin="14" end="15" id="24" lemma="winnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="win" word="won" wvorm="pv"/>
+        </node>
+        <node begin="15" conjtype="neven" end="16" id="25" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="13" cat="smain" end="20" id="26" rel="cnj">
+          <node begin="13" end="14" id="27" index="2" rel="su"/>
+          <node begin="16" end="17" id="28" lemma="spelen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="speel" word="speelde" wvorm="pv"/>
+          <node begin="17" cat="np" end="19" id="29" rel="obj1">
+            <node begin="17" end="18" id="30" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="31" lemma="kleur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kleur" word="kleur"/>
+          </node>
+          <node begin="19" end="20" id="32" lemma="door" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="door" vztype="fin" word="door"/>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="33" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Zuid trok klaver na , west pakte klaveraas en vervolgde met schoppen - oost won en speelde de kleur door .</sentence>
+</alpino_ds>

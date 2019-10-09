@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" end="1" frame="punct(aanhaal_links)" id="1" lcat="punct" lemma="«" pos="punct" postag="LET()" pt="let" rel="--" root="«" sense="«" special="aanhaal_links" word="«"/>
+    <node begin="4" end="5" frame="punct(aanhaal_rechts)" id="2" lcat="punct" lemma="»" pos="punct" postag="LET()" pt="let" rel="--" root="»" sense="»" special="aanhaal_rechts" word="»"/>
+    <node begin="5" end="6" frame="punct(haak_open)" id="3" lcat="punct" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" sense="(" special="haak_open" word="("/>
+    <node begin="1" cat="np" end="7" id="4" rel="--">
+      <node begin="1" cat="mwu" end="4" id="5" mwu_root="Nate_and_Hayes" mwu_sense="Nate_and_Hayes" rel="hd">
+        <node begin="1" end="2" frame="proper_name(both)" id="6" lcat="np" lemma="nate" num="both" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Nate" sense="Nate" spectype="vreemd" word="Nate"/>
+        <node begin="2" end="3" frame="proper_name(both)" id="7" lcat="np" lemma="and" num="both" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="and" sense="and" spectype="vreemd" word="and"/>
+        <node begin="3" end="4" frame="proper_name(both)" id="8" lcat="np" lemma="Hayes" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hayes" sense="Hayes" spectype="deeleigen" word="Hayes"/>
+      </node>
+      <node begin="6" end="7" frame="np(year)" id="9" lcat="np" lemma="1983" neclass="year" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="1983" sense="1983" word="1983"/>
+    </node>
+    <node begin="7" end="8" frame="punct(haak_sluit)" id="10" lcat="punct" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+  </node>
+  <sentence>« Nate and Hayes » ( 1983 )</sentence>
+  <comments>
+    <comment>Q#1804653-8-12|« Nate and Hayes » ( 1983 )|1|1|0.08304713493575039</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="1" lemma="&lt;@m&gt;" naamval="stan" ntype="soort" pos="--" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="--" root="&lt;@m&gt;" word="&lt;@m&gt;"/>
+    <node begin="1" cat="du" end="5" id="2" rel="--">
+      <node begin="1" cat="mwu" end="3" id="3" rel="dp">
+        <node begin="1" dial="dial" end="2" id="4" lemma="den" lwtype="bep" pos="det" postag="LID(bep,dial)" pt="lid" rel="mwp" root="den" word="den"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="haag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="haag" word="haag"/>
+      </node>
+      <node begin="3" cat="pp" end="5" id="6" rel="dp">
+        <node begin="3" end="4" id="7" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="8" lemma="amsterdam" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="amsterdam" word="amsterdam"/>
+      </node>
+    </node>
+  </node>
+  <sentence>&lt;@m&gt; den haag naar amsterdam</sentence>
+</alpino_ds>

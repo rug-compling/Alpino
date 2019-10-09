@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="conj" end="17" id="1" rel="--">
+      <node begin="0" cat="smain" end="5" id="2" rel="cnj">
+        <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="3" lemma="Heerenveen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Heerenveen" word="Heerenveen"/>
+        <node begin="1" end="2" id="4" lemma="gaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ga" word="ging" wvorm="pv"/>
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="veelbelovend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="veelbelovend" word="veelbelovend"/>
+        <node begin="3" cat="mwu" end="5" id="6" rel="svp">
+          <node begin="3" end="4" id="7" lemma="van" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="start" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="start" word="start"/>
+        </node>
+      </node>
+      <node begin="5" conjtype="neven" end="6" id="9" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="6" cat="smain" end="17" id="10" rel="cnj">
+        <node begin="6" cat="pp" end="11" id="11" rel="mod">
+          <node begin="6" end="7" id="12" lemma="reeds" pos="adv" postag="BW()" pt="bw" rel="mod" root="reeds" word="reeds"/>
+          <node begin="7" end="8" id="13" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="8" cat="np" end="11" id="14" rel="obj1">
+            <node begin="8" end="9" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="9" end="10" id="16" lemma="zeven" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="zevende" word="zevende"/>
+            <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="17" lemma="minuut" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="minuut" word="minuut"/>
+          </node>
+        </node>
+        <node begin="11" end="12" id="18" lemma="komen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kom" word="kwamen" wvorm="pv"/>
+        <node begin="12" cat="np" end="14" id="19" rel="su">
+          <node begin="12" end="13" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="13" end="14" getal="mv" graad="basis" id="21" lemma="Fries" ntype="eigen" pos="noun" postag="N(eigen,mv,basis)" pt="n" rel="hd" root="Fries" word="Friezen"/>
+        </node>
+        <node begin="14" cat="mwu" end="17" id="22" rel="svp">
+          <node begin="14" end="15" id="23" lemma="aan" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="aan" vztype="init" word="aan"/>
+          <node begin="15" end="16" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="fixed" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+          <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="25" lemma="leiding" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="leiding" word="leiding"/>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="26" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Heerenveen ging veelbelovend van start en reeds in de zevende minuut kwamen de Friezen aan de leiding .</sentence>
+</alpino_ds>

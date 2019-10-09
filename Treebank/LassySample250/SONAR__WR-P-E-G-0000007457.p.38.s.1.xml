@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="8" end="9" frame="punct(dubb_punt)" id="1" lcat="punct" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+    <node begin="0" cat="smain" end="11" id="2" rel="--">
+      <node begin="0" case="nom" def="def" end="1" frame="pronoun(nwh,fir,sg,de,nom,def)" gen="de" getal="ev" id="3" lcat="np" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" sense="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
+      <node begin="1" end="2" frame="verb(hebben,sg1,np_np)" id="4" infl="sg1" lcat="smain" lemma="wensen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wens" sc="np_np" sense="wens" tense="present" word="wens" wvorm="pv"/>
+      <node begin="2" case="both" def="def" end="3" frame="pronoun(nwh,je,sg,de,both,def,wkpro)" gen="de" getal="ev" id="5" lcat="np" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="obj2" root="je" sense="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="je"/>
+      <node begin="3" cat="np" end="11" id="6" rel="obj1">
+        <node aform="base" begin="3" buiging="zonder" end="4" frame="adjective(no_e(odet_adv))" graad="basis" id="7" infl="no_e" lcat="ap" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="det" root="veel" sense="veel" vform="adj" vwtype="onbep" word="veel"/>
+        <node begin="4" end="5" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="8" lcat="np" lemma="succes" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="succes" sense="succes" word="succes"/>
+        <node begin="5" cat="pp" end="11" id="9" rel="mod">
+          <node begin="5" end="6" frame="preposition(tegen,[aan,in,op])" id="10" lcat="pp" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" sense="tegen" vztype="init" word="tegen"/>
+          <node begin="6" cat="np" end="11" id="11" rel="obj1">
+            <node begin="6" buiging="met-e" end="7" frame="determiner(de,nwh,nmod,pro,nparg)" id="12" infl="de" lcat="detp" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" sense="deze" vwtype="aanw" wh="nwh" word="deze"/>
+            <node begin="7" end="8" frame="noun(de,count,bare_meas)" gen="de" genus="zijd" getal="ev" graad="basis" id="13" lcat="np" lemma="man" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="man" sense="man" word="man"/>
+            <node begin="9" cat="mwu" end="11" id="14" mwu_root="Roeland_Kloek" mwu_sense="Roeland_Kloek" rel="app">
+              <node begin="9" end="10" frame="proper_name(both,'PER')" id="15" lcat="np" lemma="Roeland" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Roeland" sense="Roeland" spectype="deeleigen" word="Roeland"/>
+              <node begin="10" end="11" frame="proper_name(both,'PER')" id="16" lcat="np" lemma="Kloek" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kloek" sense="Kloek" spectype="deeleigen" word="Kloek"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" frame="punct(punt)" id="17" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Ik wens je veel succes tegen deze man : Roeland Kloek .</sentence>
+  <comments>
+    <comment>Q#WR-P-E-G-0000007457.p.38.s.1|Ik wens je veel succes tegen deze man : Roeland Kloek .|1|1|-0.07271683202538873</comment>
+  </comments>
+</alpino_ds>

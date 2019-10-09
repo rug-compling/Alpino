@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="vraag" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vraag" word="vroeg" wvorm="pv"/>
+      <node begin="2" cat="whsub" end="7" id="4" rel="vc">
+        <node begin="2" end="3" getal="getal" id="5" index="1" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="whd" root="wie" status="vol" vwtype="vb" word="wie"/>
+        <node begin="2" cat="cp" end="7" id="6" rel="body">
+          <node begin="3" conjtype="onder" end="4" id="7" lemma="of" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="of" word="of"/>
+          <node begin="2" cat="ssub" end="7" id="8" rel="body">
+            <node begin="2" end="3" id="9" index="1" rel="su"/>
+            <node begin="5" end="6" id="10" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+            <node begin="2" cat="inf" end="7" id="11" rel="vc">
+              <node begin="2" end="3" id="12" index="1" rel="su"/>
+              <node begin="4" end="5" getal="getal" id="13" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+              <node begin="6" buiging="zonder" end="7" id="14" lemma="komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom" word="komen" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Ik vroeg wie of er zou komen</sentence>
+</alpino_ds>

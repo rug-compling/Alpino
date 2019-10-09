@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="8" end="9" id="1" pos="punct" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="16" id="2" rel="--">
+      <node begin="0" cat="np" end="3" id="3" rel="su">
+        <node begin="0" end="1" id="4" infl="de" pos="det" rel="det" root="de" word="De"/>
+        <node aform="base" begin="1" end="2" id="5" infl="e" pos="adj" rel="mod" root="licht" vform="adj" word="lichte"/>
+        <node begin="2" end="3" gen="de" id="6" num="sg" pos="noun" rel="hd" root="sluier" word="sluier"/>
+      </node>
+      <node begin="3" end="4" id="7" infl="sg3" pos="verb" rel="hd" root="voeg_toe" sc="part_np_pc_pp(toe,aan)" tense="present" word="voegt"/>
+      <node begin="4" cat="np" end="7" id="8" rel="obj1">
+        <node begin="4" end="5" id="9" infl="een" pos="det" rel="det" root="een" word="een"/>
+        <node aform="base" begin="5" end="6" id="10" infl="e" pos="adj" rel="mod" root="mysterieus" vform="adj" word="mysterieuze"/>
+        <node begin="6" end="7" gen="de" id="11" num="sg" pos="noun" rel="hd" root="toets" word="toets"/>
+      </node>
+      <node begin="7" end="8" id="12" pos="part" rel="svp" root="toe" word="toe"/>
+      <node begin="9" cat="cp" end="13" id="13" rel="mod">
+        <node begin="9" end="10" id="14" pos="comp" rel="cmp" root="zonder" sc="inf" word="zonder"/>
+        <node begin="10" cat="ti" end="13" id="15" rel="body">
+          <node begin="11" end="12" id="16" pos="comp" rel="cmp" root="te" sc="te" word="te"/>
+          <node begin="10" cat="inf" end="13" id="17" rel="body">
+            <node begin="10" end="11" gen="de" id="18" num="sg" pos="noun" rel="obj1" root="afbreuk" word="afbreuk"/>
+            <node begin="12" end="13" id="19" infl="inf(no_e)" pos="verb" rel="hd" root="doe" sc="transitive_ndev" word="doen"/>
+          </node>
+        </node>
+      </node>
+      <node begin="13" cat="pp" end="16" id="20" rel="pc">
+        <node begin="13" end="14" id="21" pos="prep" rel="hd" root="aan" word="aan"/>
+        <node begin="14" cat="np" end="16" id="22" rel="obj1">
+          <node aform="base" begin="14" end="15" id="23" infl="e" pos="adj" rel="mod" root="sprekend" vform="gerund" word="sprekende"/>
+          <node begin="15" end="16" gen="het" id="24" num="pl" pos="noun" rel="hd" root="detail" word="details"/>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="25" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>De lichte sluier voegt een mysterieuze toets toe , zonder afbreuk te doen aan sprekende details .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

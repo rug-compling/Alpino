@@ -1,0 +1,45 @@
+
+
+these instructions are most probably out of date
+
+
+
+
+
+Alpino win32 binary usage instructions
+--------------------------------------
+
+This port is *very much experimental!!!!* 
+
+installation instruction:
+
+- install Tcl/Tk 8.4.19 (get it from somewhere)
+- cd c:\
+- unzip the Alpino zip file (available in current directory) 
+- cd c:\Alpino            
+- bin\alpino
+
+some differences with Unix version of Alpino:
+
+- no support for reading XML files from compact corpora
+- if the GUI is running, you cannot use the Prolog command interpreter,
+  nor the Hdrug command interpreter (due to limitations of SICStus on
+  the windows platform)
+- there most probably are further limitations (timeout?? memory-out??)
+
+Feedback to G.J.M.van.Noord@rug.nl and D.J.A.de.Kok@rug.nl
+
+Compilation
+-----------
+
+You don't really want to go here, but if you are really courageous,
+the optimal build configuration is:
+
+- Windows 2000, updated to the most recent service pack.
+- Visual Studio 2005 (preferred over g++ for correct linkage).
+- Cygwin (including Alpino build dependencies).
+
+Getting all paths set correctly is a bit annoying. For instance, you'll
+want to use 'link' from Visual Studio (rather than Cygwin), but the
+Cygwin sort command. Putting the Cygwin path first, renaming Cygwin's
+link.exe should do the trick.

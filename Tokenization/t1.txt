@@ -1,0 +1,45 @@
+Het PIONIER project Algorithms for Linguistic Processing van Gertjan
+van Noord is een onderzoeksproject op het gebied van de computationele
+taalkunde.
+
+Een van de taken van de taalkunde is het opstellen van modellen voor
+natuurlijke talen. Het model (grammatica) beschrijft bijvoorbeeld de
+mogelijke uitingen van het Nederlands en hun bijbehorende
+betekenis. Zo'n model beschrijft dus (onder andere) de relatie tussen
+vorm en betekenis. Een belangrijke vraag in de computationele
+taalkunde is vervolgens hoe je deze relatie algoritmisch kunt
+bepalen. Hoe kun je voor een gegeven uiting van het Nederlands de
+bijbehorende betekenis berekenen?
+
+Het PIONIER onderzoek richt zich hierbij op twee fundamentele
+problemen: ambiguiteit en efficientie. Het probleem van ambiguiteit
+doet zich voor in zelfs de meest onschuldige zinnetjes:
+
+    Mijn vader zagen we niet meer
+
+Het is bijzonder lastig (voor een computer) om te voorkomen dat in dit
+zinnetje `zagen' wordt begrepen als `zagen met een zaag', terwijl door
+mensen deze zin normaal gesproken niet als meerduidig wordt ervaren.
+
+Het tweede probleem behelst de efficientie van de verwerking. Voor de
+modellen die tot nu toe worden opgesteld kan worden aangetoond dat de
+verwerkingstijd polynomiaal (soms zelfs exponentieel) zou moeten
+toenemen bij het toenemen van de lengte van de uiting. Dit is echter
+in tegenspraak met de geobserveerde efficientie van het menselijk
+taalvermogen.
+
+
+
+
+Het PIONIER project zal de hypothese onderzoeken (die teruggaat op het
+werk van Chomsky in het begin van de zestiger jaren) dat
+taalverwerking kan worden gemodelleerd door automaten van een zeer
+eenvoudig type (``finite-state automaten'') die een gegeven model van
+de taal slechts benaderen. Zo'n aanpak zou onder andere verklaren
+waarom uitingen met `center-embedding' en `cross-serial dependencies'
+snel onbegrijpelijk worden, maar wel als grammaticaal moeten worden
+beschouwd.
+
+Een volledige beschrijving van het voorgestelde onderzoek is
+beschikbaar op het Internet www.let.rug.nl/~vannoord/alp/index.html.
+

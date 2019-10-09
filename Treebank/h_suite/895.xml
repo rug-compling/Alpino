@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="norm" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="norm" word="normen"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="werden/worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="werden_word" word="werden/worden" wvorm="pv"/>
+      <node begin="3" cat="ap" end="5" id="6" rel="predc">
+        <node begin="3" end="4" id="7" lemma="steeds" pos="adv" postag="BW()" pt="bw" rel="mod" root="steeds" word="steeds"/>
+        <node begin="4" buiging="zonder" end="5" graad="comp" id="8" lemma="vaag" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="vaag" word="vager"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De normen werden/worden steeds vager .</sentence>
+</alpino_ds>

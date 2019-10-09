@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="Robbert" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Robbert" word="Robbert"/>
+      <node begin="1" end="2" id="3" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
+      <node begin="2" cat="cp" end="7" id="4" rel="vc">
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="3" cat="ssub" end="7" id="6" rel="body">
+          <node begin="3" cat="np" end="5" id="7" index="1" rel="su">
+            <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="trein" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="trein" word="trein"/>
+          </node>
+          <node begin="5" end="6" id="10" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+          <node begin="3" cat="ppart" end="7" id="11" rel="vc">
+            <node begin="3" end="5" id="12" index="1" rel="obj1"/>
+            <node begin="6" buiging="zonder" end="7" id="13" lemma="missen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="mis" word="gemist" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Robbert zei dat de trein wordt gemist</sentence>
+</alpino_ds>

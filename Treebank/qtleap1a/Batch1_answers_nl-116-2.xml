@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="13" end="14" id="2" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="du" end="17" id="3" rel="--">
+      <node begin="0" cat="cp" end="5" id="4" rel="sat">
+        <node begin="0" conjtype="onder" end="1" id="5" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+        <node begin="1" cat="ssub" end="5" id="6" rel="body">
+          <node begin="1" cat="np" end="3" id="7" index="1" rel="su">
+            <node begin="1" end="2" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="9" lemma="probleem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="probleem" word="probleem"/>
+          </node>
+          <node begin="3" end="4" id="10" lemma="blijven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="blijf" word="blijft" wvorm="pv"/>
+          <node begin="1" cat="inf" end="5" id="11" rel="vc">
+            <node begin="1" end="3" id="12" index="1" rel="su"/>
+            <node begin="4" buiging="zonder" end="5" id="13" lemma="bestaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="besta" word="bestaan" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+      <node begin="6" cat="sv1" end="17" id="14" rel="nucl">
+        <node begin="6" end="7" id="15" lemma="in_voeren" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="voer_in" word="voer" wvorm="pv"/>
+        <node begin="7" end="8" id="16" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+        <node begin="8" cat="np" end="12" id="17" rel="obj1">
+          <node begin="8" end="9" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="19" lemma="dns" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dns" word="DNS"/>
+          <node begin="10" cat="pp" end="12" id="20" rel="mod">
+            <node begin="10" end="11" id="21" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="22" lemma="Google" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Google" word="Google"/>
+          </node>
+        </node>
+        <node begin="12" end="13" id="23" lemma="in" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="in" vztype="fin" word="in"/>
+        <node begin="14" cat="conj" end="17" id="24" rel="mod">
+          <node begin="14" end="15" id="25" lemma="8.8.8.8" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="cnj" root="8.8.8.8" word="8.8.8.8"/>
+          <node begin="15" conjtype="neven" end="16" id="26" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="16" end="17" id="27" lemma="8.8.4.4" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="cnj" root="8.8.4.4" word="8.8.4.4"/>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="28" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+  </node>
+  <sentence>Als het probleem blijft bestaan , voer dan de DNS van Google in ( 8.8.8.8 en 8.8.4.4 )</sentence>
+</alpino_ds>

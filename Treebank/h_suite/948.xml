@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" getal="mv" id="2" index="1" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="Wij"/>
+      <node begin="1" end="2" id="3" lemma="proberen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="probeer" word="proberen" wvorm="pv"/>
+      <node begin="0" cat="ti" end="6" id="4" rel="vc">
+        <node begin="4" end="5" id="5" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="0" cat="inf" end="6" id="6" rel="body">
+          <node begin="0" end="1" id="7" index="1" rel="su"/>
+          <node begin="2" cat="np" end="4" id="8" rel="obj1">
+            <node begin="2" end="3" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="10" lemma="tegenstander" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tegenstander" word="tegenstander"/>
+          </node>
+          <node begin="5" buiging="zonder" end="6" id="11" lemma="veslaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="versla" word="veslaan" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Wij proberen de tegenstander te veslaan</sentence>
+</alpino_ds>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="sv1" end="22" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="menen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="meen" word="Meen" wvorm="pv"/>
+      <node begin="1" end="2" id="4" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      <node begin="3" cat="cp" end="22" id="5" rel="vc">
+        <node begin="3" conjtype="onder" end="4" id="6" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="4" cat="conj" end="22" id="7" rel="body">
+          <node begin="4" cat="ssub" end="15" id="8" rel="cnj">
+            <node begin="4" cat="mwu" end="7" id="9" index="1" rel="su">
+              <node begin="4" end="5" id="10" lemma="Judith" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Judith" spectype="deeleigen" word="Judith"/>
+              <node begin="5" end="6" id="11" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+              <node begin="6" end="7" id="12" lemma="Nijs" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nijs" spectype="deeleigen" word="Nijs"/>
+            </node>
+            <node begin="7" end="8" id="13" lemma="simpelweg" pos="adv" postag="BW()" pt="bw" rel="mod" root="simpelweg" word="simpelweg"/>
+            <node begin="8" cat="pp" end="12" id="14" rel="mod">
+              <node begin="8" end="9" id="15" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+              <node begin="9" cat="mwu" end="12" id="16" rel="obj1">
+                <node begin="9" end="10" id="17" lemma="Cap" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Cap" spectype="deeleigen" word="Cap"/>
+                <node begin="10" end="11" id="18" lemma="Gris" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Gris" spectype="deeleigen" word="Gris"/>
+                <node begin="11" end="12" id="19" lemma="Nez" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nez" spectype="deeleigen" word="Nez"/>
+              </node>
+            </node>
+            <node begin="12" cat="pp" end="14" id="20" rel="ld">
+              <node begin="12" end="13" id="21" lemma="te" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="te" vztype="init" word="te"/>
+              <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="22" lemma="water" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="water" word="water"/>
+            </node>
+            <node begin="14" end="15" id="23" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+          </node>
+          <node begin="15" conjtype="neven" end="16" id="24" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="4" cat="ssub" end="22" id="25" rel="cnj">
+            <node begin="4" end="7" id="26" index="1" rel="su"/>
+            <node begin="16" end="17" id="27" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+            <node begin="17" cat="mwu" end="19" id="28" rel="mod">
+              <node begin="17" end="18" id="29" lemma="linea" pos="adv" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="linea" spectype="vreemd" word="linea"/>
+              <node begin="18" end="19" id="30" lemma="recta" pos="adv" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="recta" spectype="vreemd" word="recta"/>
+            </node>
+            <node begin="19" cat="pp" end="21" id="31" rel="ld">
+              <node begin="19" end="20" id="32" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+              <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="33" lemma="Dover" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Dover" word="Dover"/>
+            </node>
+            <node begin="21" end="22" id="34" lemma="zwemmen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zwem" word="zwemt" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Meen niet , dat Judith de Nijs simpelweg bij Cap Gris Nez te water gaat en dan linea recta naar Dover zwemt .</sentence>
+</alpino_ds>

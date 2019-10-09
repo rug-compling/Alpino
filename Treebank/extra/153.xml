@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="np" end="6" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="500" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="500" word="500"/>
+      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="gram" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gram" word="gram"/>
+      <node begin="2" end="3" getal="mv" graad="basis" id="5" lemma="aardappel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="aardappel" word="aardappelen"/>
+      <node begin="4" cat="ppart" end="6" id="6" rel="mod">
+        <node begin="4" buiging="zonder" end="5" id="7" lemma="schillen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="mod" root="geschild" word="geschild" wvorm="vd"/>
+        <node begin="5" buiging="zonder" end="6" id="8" lemma="wegen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gewogen" word="gewogen" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="9" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+  </node>
+  <sentence>500 gram aardappelen ( geschild gewogen )</sentence>
+</alpino_ds>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" frame="determiner(het,nwh,nmod,pro,nparg)" id="2" infl="het" lcat="np" pos="det" rel="su" root="dit" sense="dit" wh="nwh" word="Dit"/>
+      <node begin="1" end="2" frame="verb(unacc,sg_heeft,copula)" id="3" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="is"/>
+      <node begin="2" cat="np" end="7" id="4" rel="predc">
+        <node begin="2" end="3" frame="determiner(geen,nwh,mod,pro,yparg,nwkpro,geen)" id="5" infl="geen" lcat="detp" pos="det" rel="det" root="geen" sense="geen" wh="nwh" word="geen"/>
+        <node aform="base" begin="3" end="4" frame="adjective(e)" id="6" infl="e" lcat="ap" pos="adj" rel="mod" root="compatibele" sense="compatibele" vform="adj" word="compatibele"/>
+        <node begin="4" end="5" frame="noun(de,count,sg)" gen="de" id="7" lcat="np" num="sg" pos="noun" rel="hd" root="versie" sense="versie" word="versie"/>
+        <node begin="5" cat="pp" end="7" id="8" rel="mod">
+          <node begin="5" end="6" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="9" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+          <node begin="6" end="7" frame="proper_name(both,'LOC')" id="10" lcat="np" neclass="LOC" num="both" pos="name" rel="obj1" root="Kasboek" sense="Kasboek" word="Kasboek"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Dit is geen compatibele versie van Kasboek</sentence>
+  <comments>
+    <comment>Q#239|Dit is geen compatibele versie van Kasboek|1|1|-2.282954614719821</comment>
+  </comments>
+</alpino_ds>

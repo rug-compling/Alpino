@@ -1,0 +1,14 @@
+PORT=42424
+TIMEOUT=20000
+MEMLIMIT=800M
+
+## this one is for parsing
+start_server:
+	PROLOGMAXSIZE=$(MEMLIMIT) Alpino -notk -veryfast user_max=$(TIMEOUT)\
+            server_kind=parse\
+            server_port=$(PORT)\
+            assume_input_is_tokenized=off\
+            debug=1\
+	    -init_dict_p\
+            batch_command=alpino_server\
+                    2> $(TMPDIR)/alpino_server.log &

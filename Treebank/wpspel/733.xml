@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="whq" end="16" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="16" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+        <node begin="6" cat="np" end="15" id="5" index="2" rel="su">
+          <node begin="6" end="7" id="6" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="7" buiging="met-e" end="8" graad="basis" id="7" lemma="oudchristelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="oud_christelijk" word="oudchristelijke"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="8" lemma="kerk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kerk" word="kerk"/>
+          <node begin="9" cat="pp" end="15" id="9" rel="mod">
+            <node begin="9" end="10" id="10" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="10" cat="conj" end="15" id="11" rel="obj1">
+              <node begin="10" cat="np" end="12" id="12" rel="cnj">
+                <node begin="10" end="11" id="13" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="14" lemma="absis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="absis" word="absis"/>
+              </node>
+              <node begin="12" conjtype="neven" end="13" id="15" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="13" cat="np" end="15" id="16" rel="cnj">
+                <node begin="13" end="14" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="18" lemma="middenschip" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="midden_schip" word="middenschip"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="0" cat="ppart" end="16" id="19" rel="vc">
+          <node begin="0" end="1" id="20" index="1" rel="predc"/>
+          <node begin="2" cat="pp" end="6" id="21" rel="mod">
+            <node begin="2" end="3" id="22" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="3" cat="np" end="6" id="23" rel="obj1">
+              <node begin="3" end="4" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="4" buiging="met-e" end="5" graad="basis" id="25" lemma="romeins" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Romeins" word="Romeinse"/>
+              <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="26" lemma="architectuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="architectuur" word="architectuur"/>
+            </node>
+          </node>
+          <node begin="6" end="15" id="27" index="2" rel="obj1"/>
+          <node begin="15" buiging="zonder" end="16" id="28" lemma="noemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="noem" word="genoemd" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="29" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe wordt in de Romeinse architectuur een oudchristelijke kerk met een absis en een middenschip genoemd ?</sentence>
+</alpino_ds>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="37" id="0" rel="top">
+    <node begin="12" end="13" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="36" id="2" rel="--">
+      <node begin="0" cat="cp" end="12" id="3" rel="mod">
+        <node begin="0" end="1" frame="complementizer" id="4" lcat="cp" pos="comp" rel="cmp" root="zodra" sense="zodra" word="Zodra"/>
+        <node begin="1" cat="ssub" end="12" id="5" rel="body">
+          <node begin="2" cat="np" end="10" id="6" index="1" rel="su">
+            <node begin="2" end="3" frame="determiner(een)" id="7" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+            <node begin="3" end="4" frame="noun(het,count,sg)" gen="het" id="8" lcat="np" num="sg" pos="noun" rel="hd" root="dossier" sense="dossier" word="dossier"/>
+            <node begin="4" cat="pp" end="10" id="9" rel="mod">
+              <node begin="4" cat="mwu" end="7" id="10" mwu_root="in_verband_met" mwu_sense="in_verband_met" rel="hd">
+                <node begin="4" end="5" frame="preposition([in,verband,met],[])" id="11" lcat="pp" pos="prep" rel="mwp" root="in" sense="in" word="in"/>
+                <node begin="5" end="6" frame="preposition([in,verband,met],[])" id="12" lcat="pp" pos="prep" rel="mwp" root="verband" sense="verband" word="verband"/>
+                <node begin="6" end="7" frame="preposition([in,verband,met],[])" id="13" lcat="pp" pos="prep" rel="mwp" root="met" sense="met" word="met"/>
+              </node>
+              <node begin="7" cat="np" end="10" id="14" rel="obj1">
+                <node begin="7" end="8" frame="determiner(een)" id="15" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+                <node aform="base" begin="8" end="9" frame="adjective(ge_e)" id="16" infl="e" lcat="ppart" pos="adj" rel="mod" root="verontreinigd" sense="verontreinigd" vform="psp" word="verontreinigde"/>
+                <node begin="9" end="10" frame="noun(de,count,sg)" gen="de" id="17" lcat="np" num="sg" pos="noun" rel="hd" root="grond" sense="grond" word="grond"/>
+              </node>
+            </node>
+          </node>
+          <node begin="10" end="11" frame="verb(unacc,sg3,passive)" id="18" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt"/>
+          <node begin="1" cat="ppart" end="12" id="19" rel="vc">
+            <node begin="1" end="2" frame="er_vp_adverb" id="20" lcat="advp" pos="adv" rel="mod" root="er" sense="er" special="er" word="er"/>
+            <node begin="2" end="10" id="21" index="1" rel="obj1"/>
+            <node begin="11" end="12" frame="verb(hebben,psp,ninv(transitive,part_transitive(aan)))" id="22" infl="psp" lcat="ppart" pos="verb" rel="hd" root="leg_aan" sc="part_transitive(aan)" sense="leg_aan" word="aangelegd"/>
+          </node>
+        </node>
+      </node>
+      <node begin="13" end="14" frame="verb(hebben,sg3,np_ld_pp)" id="23" infl="sg3" lcat="smain" pos="verb" rel="hd" root="bezorg" sc="np_ld_pp" sense="bezorg" tense="present" word="bezorgt"/>
+      <node begin="14" cat="np" end="16" id="24" rel="su">
+        <node begin="14" end="15" frame="determiner(de)" id="25" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node begin="15" end="16" frame="proper_name(both,'ORG')" id="26" lcat="np" neclass="ORG" num="both" pos="name" rel="hd" root="OVAM" sense="OVAM" word="OVAM"/>
+      </node>
+      <node begin="16" end="17" frame="adverb" id="27" lcat="advp" pos="adv" rel="mod" root="meteen" sense="meteen" word="meteen"/>
+      <node begin="17" cat="np" end="19" id="28" rel="obj1">
+        <node begin="17" end="18" frame="determiner(een)" id="29" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+        <node begin="18" end="19" frame="noun(both,both,both)" gen="both" id="30" lcat="np" num="both" pos="noun" rel="hd" root="attest" sense="attest" word="attest"/>
+      </node>
+      <node begin="19" cat="conj" end="36" id="31" rel="ld">
+        <node begin="19" cat="pp" end="28" id="32" rel="cnj">
+          <node begin="19" end="20" frame="preposition(aan,[vooraf])" id="33" lcat="pp" pos="prep" rel="hd" root="aan" sense="aan" word="aan"/>
+          <node begin="20" cat="conj" end="28" id="34" rel="obj1">
+            <node begin="20" cat="np" end="22" id="35" rel="cnj">
+              <node begin="20" end="21" frame="determiner(de)" id="36" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="21" end="22" frame="noun(de,count,sg)" gen="de" id="37" lcat="np" num="sg" pos="noun" rel="hd" root="eigenaar" sense="eigenaar" word="eigenaar"/>
+            </node>
+            <node begin="22" end="23" frame="conj(en)" id="38" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+            <node begin="23" cat="np" end="28" id="39" rel="cnj">
+              <node begin="23" end="24" frame="determiner(de)" id="40" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="24" end="25" frame="noun(de,count,sg)" gen="de" id="41" lcat="np" num="sg" pos="noun" rel="hd" root="gebruiker" sense="gebruiker" word="gebruiker"/>
+              <node begin="25" cat="pp" end="28" id="42" rel="mod">
+                <node begin="25" end="26" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="43" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                <node begin="26" cat="np" end="28" id="44" rel="obj1">
+                  <node begin="26" end="27" frame="determiner(de)" id="45" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="27" end="28" frame="noun(de,count,sg)" gen="de" id="46" lcat="np" num="sg" pos="noun" rel="hd" root="grond" sense="grond" word="grond"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="28" end="29" frame="conj(en)" id="47" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+        <node begin="29" cat="pp" end="36" id="48" rel="cnj">
+          <node begin="29" end="30" frame="preposition(aan,[vooraf])" id="49" lcat="pp" pos="prep" rel="hd" root="aan" sense="aan" word="aan"/>
+          <node begin="30" cat="np" end="36" id="50" rel="obj1">
+            <node begin="30" end="31" frame="determiner(de)" id="51" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="31" end="32" frame="noun(de,count,sg)" gen="de" id="52" lcat="np" num="sg" pos="noun" rel="hd" root="gemeente" sense="gemeente" word="gemeente"/>
+            <node begin="32" cat="rel" end="36" id="53" rel="mod">
+              <node begin="32" end="33" frame="er_wh_loc_adverb" id="54" index="2" lcat="advp" pos="adv" rel="rhd" root="waar" sense="waar" special="er_loc" wh="ywh" word="waar"/>
+              <node begin="32" cat="ssub" end="36" id="55" rel="body">
+                <node begin="32" end="33" id="56" index="2" rel="ld"/>
+                <node begin="33" cat="np" end="35" id="57" rel="su">
+                  <node begin="33" end="34" frame="determiner(de)" id="58" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="34" end="35" frame="noun(de,count,sg)" gen="de" id="59" lcat="np" num="sg" pos="noun" rel="hd" root="grond" sense="grond" word="grond"/>
+                </node>
+                <node begin="35" end="36" frame="verb('hebben/zijn',sg3,ld_adv)" id="60" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="lig" sc="ld_adv" sense="lig" tense="present" word="ligt"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="36" end="37" frame="punct(punt)" id="61" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Zodra er een dossier in verband met een verontreinigde grond wordt aangelegd , bezorgt de OVAM meteen een attest aan de eigenaar en de gebruiker van de grond en aan de gemeente waar de grond ligt .</sentence>
+  <comments>
+    <comment>Q#113|Zodra er een dossier in verband met een verontreinigde grond wordt aangelegd , bezorgt de OVAM meteen een attest aan de eigenaar en de gebruiker van de grond en aan de gemeente waar de grond ligt .|1|1|-9.529752315461144</comment>
+  </comments>
+</alpino_ds>

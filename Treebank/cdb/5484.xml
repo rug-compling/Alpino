@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" cat="np" end="7" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="bomontploffing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ontploffing" word="bomontploffing"/>
+        <node begin="2" cat="pp" end="7" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="3" cat="np" end="7" id="7" rel="obj1">
+            <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="landbouwbank" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="Landbouwbank" word="Landbouwbank"/>
+            <node begin="5" cat="pp" end="7" id="10" rel="mod">
+              <node begin="5" end="6" id="11" lemma="te" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="te" vztype="init" word="te"/>
+              <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="12" lemma="Milaan" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Milaan" word="Milaan"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="13" lemma="gebeuren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="gebeur" word="gebeurde" wvorm="pv"/>
+      <node begin="8" cat="pp" end="12" id="14" rel="mod">
+        <node begin="8" end="9" id="15" lemma="om" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="om" vztype="init" word="om"/>
+        <node begin="9" cat="np" end="12" id="16" rel="obj1">
+          <node begin="9" cat="mwu" end="11" id="17" rel="hd">
+            <node begin="9" buiging="zonder" end="10" graad="basis" id="18" lemma="half" pos="noun" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="half" word="half"/>
+            <node begin="10" end="11" id="19" lemma="5" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="5" word="5"/>
+          </node>
+          <node begin="11" buiging="zonder" end="12" graad="basis" id="20" lemma="precies" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="precies" word="precies"/>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De bomontploffing in de Landbouwbank te Milaan gebeurde om half 5 precies .</sentence>
+</alpino_ds>

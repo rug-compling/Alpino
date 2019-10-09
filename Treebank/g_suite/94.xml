@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="3" index="1" lemma="Robbert" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Robbert" word="Robbert"/>
+      <node begin="0" cat="ppart" end="4" id="4" rel="vc">
+        <node begin="0" end="1" id="5" lemma="vandaag" pos="adv" postag="BW()" pt="bw" rel="mod" root="vandaag" word="vandaag"/>
+        <node begin="2" end="3" id="6" index="1" rel="obj1"/>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="terugbellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bel" word="teruggebeld" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>vandaag wordt Robbert teruggebeld</sentence>
+</alpino_ds>

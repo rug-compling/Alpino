@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" cat="np" end="5" id="2" rel="su">
+        <node begin="0" end="1" getal="mv" graad="basis" id="3" lemma="wagen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="wagens" word="Wagens"/>
+        <node begin="1" cat="pp" end="5" id="4" rel="mod">
+          <node begin="1" end="2" id="5" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="2" cat="np" end="5" id="6" rel="obj1">
+            <node begin="2" buiging="zonder" end="3" graad="basis" id="7" lemma="precies" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="precies" word="precies"/>
+            <node begin="3" buiging="zonder" end="4" graad="basis" id="8" lemma="dezelfde" pos="det" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="det" root="dezelfde" word="dezelfde"/>
+            <node begin="4" end="5" getal="mv" graad="basis" id="9" lemma="motor" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="motor" word="motoren"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" id="10" lemma="maken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="maak" word="maken" wvorm="pv"/>
+      <node begin="6" cat="np" end="14" id="11" rel="obj1">
+        <node begin="6" end="7" getal="mv" graad="basis" id="12" lemma="snelheid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="snelheid" word="snelheden"/>
+        <node begin="7" cat="rel" end="14" id="13" rel="mod">
+          <node begin="7" end="8" getal="getal" id="14" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+          <node begin="7" cat="ssub" end="14" id="15" rel="body">
+            <node begin="7" end="8" id="16" index="1" rel="su"/>
+            <node begin="12" end="13" id="17" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" word="kunnen" wvorm="pv"/>
+            <node begin="7" cat="inf" end="14" id="18" rel="vc">
+              <node begin="7" end="8" id="19" index="1" rel="su"/>
+              <node begin="8" cat="np" end="12" id="20" rel="mod">
+                <node begin="8" end="9" id="21" lemma="50" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="50" word="50"/>
+                <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="22" lemma="km" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="km" word="km"/>
+                <node begin="10" cat="pp" end="12" id="23" rel="mod">
+                  <node begin="10" end="11" id="24" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
+                  <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="25" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="uur" word="uur"/>
+                </node>
+              </node>
+              <node begin="13" buiging="zonder" end="14" id="26" lemma="verschillen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verschillen" word="verschillen" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Wagens met precies dezelfde motoren maken snelheden die 50 km per uur kunnen verschillen .</sentence>
+</alpino_ds>

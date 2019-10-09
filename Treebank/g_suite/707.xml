@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="np" end="7" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+      <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="lid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="lid" word="leden"/>
+      <node begin="3" cat="rel" end="7" id="5" rel="mod">
+        <node begin="3" cat="pp" end="5" id="6" rel="rhd">
+          <node begin="3" end="4" id="7" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
+          <node begin="4" end="5" getal="getal" id="8" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="noun" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="obj1" root="wie" status="vol" vwtype="vb" word="wie"/>
+        </node>
+        <node begin="5" cat="np" end="7" id="9" rel="body">
+          <node begin="5" end="6" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="voorzitter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzitter" word="voorzitter"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>de leden , onder wie de voorzitter</sentence>
+</alpino_ds>

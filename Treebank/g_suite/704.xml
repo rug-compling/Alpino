@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="8" id="3" rel="vc">
+        <node begin="3" buiging="zonder" end="4" id="4" lemma="gedacht" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="denk" word="gedacht" wvorm="vd"/>
+        <node begin="0" cat="pp" end="8" id="5" rel="pc">
+          <node begin="0" end="1" getal="getal" id="6" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="pobj1" root="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="2" end="3" id="7" lemma="aan" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="aan" vztype="fin" word="aan"/>
+          <node begin="4" cat="ti" end="8" id="8" rel="vc">
+            <node begin="6" end="7" id="9" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="4" cat="inf" end="8" id="10" rel="body">
+              <node begin="4" cat="np" end="6" id="11" rel="obj1">
+                <node begin="4" end="5" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="13" lemma="voorzitter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzitter" word="voorzitter"/>
+              </node>
+              <node begin="7" buiging="zonder" end="8" id="14" lemma="bedanken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bedank" word="bedanken" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>er werd aan gedacht de voorzitter te bedanken</sentence>
+</alpino_ds>

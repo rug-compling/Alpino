@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="8" end="9" id="1" pos="punct" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="18" id="2" rel="--">
+      <node begin="0" cat="cp" end="8" id="3" rel="mod">
+        <node begin="0" end="1" id="4" pos="comp" rel="cmp" root="terwijl" word="Terwijl"/>
+        <node begin="1" cat="ssub" end="8" id="5" rel="body">
+          <node begin="1" end="2" id="6" neclass="LOC" num="both" pos="name" rel="su" root="België" word="België"/>
+          <node begin="2" cat="pp" end="4" id="7" rel="mod">
+            <node begin="2" end="3" id="8" pos="prep" rel="hd" root="sinds" word="sinds"/>
+            <node begin="3" end="4" id="9" neclass="year" pos="noun" rel="obj1" root="2004" word="2004"/>
+          </node>
+          <node begin="4" end="5" gen="de" id="10" num="sg" pos="noun" rel="obj1" root="blok_financiering" word="blokfinanciering"/>
+          <node begin="5" end="6" id="11" infl="sg3" pos="verb" rel="hd" root="stel_voor" sc="part_pred_np(voor)" tense="present" word="voorstelt"/>
+          <node begin="6" cat="cp" end="8" id="12" rel="predc">
+            <node begin="6" end="7" id="13" pos="comp" rel="cmp" root="als" sc="als" word="als"/>
+            <node begin="7" end="8" gen="de" id="14" num="sg" pos="noun" rel="body" root="sector_ondersteuning" word="sectorondersteuning"/>
+          </node>
+        </node>
+      </node>
+      <node begin="9" end="10" id="15" infl="pl" pos="verb" rel="hd" root="stroom_door" sc="part_pc_pp(door,naar)" tense="present" word="stromen"/>
+      <node begin="10" cat="np" end="12" id="16" rel="su">
+        <node begin="10" end="11" id="17" infl="de" pos="det" rel="det" root="de" word="de"/>
+        <node begin="11" end="12" gen="het" id="18" num="pl" pos="noun" rel="hd" root="middel" word="middelen"/>
+      </node>
+      <node begin="12" cat="advp" end="14" id="19" rel="mod">
+        <node begin="12" end="13" id="20" pos="adv" rel="mod" root="nog" sc="modal" word="nog"/>
+        <node begin="13" end="14" id="21" pos="adv" rel="hd" root="steeds" word="steeds"/>
+      </node>
+      <node begin="14" end="15" id="22" pos="part" rel="svp" root="door" word="door"/>
+      <node begin="15" cat="pp" end="18" id="23" rel="pc">
+        <node begin="15" end="16" id="24" pos="prep" rel="hd" root="naar" word="naar"/>
+        <node begin="16" cat="np" end="18" id="25" rel="obj1">
+          <node begin="16" end="17" id="26" infl="de" pos="det" rel="det" root="de" word="de"/>
+          <node begin="17" end="18" gen="het" id="27" num="pl" pos="noun" rel="hd" root="project" word="projecten"/>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="28" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Terwijl België sinds 2004 blokfinanciering voorstelt als sectorondersteuning , stromen de middelen nog steeds door naar de projecten .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

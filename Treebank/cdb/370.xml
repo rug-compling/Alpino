@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="13" end="14" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="24" id="2" rel="--">
+      <node begin="0" cat="cp" end="13" id="3" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="wanneer" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="wanneer" word="Wanneer"/>
+        <node begin="1" cat="conj" end="13" id="5" rel="body">
+          <node begin="1" cat="ssub" end="6" id="6" rel="cnj">
+            <node begin="1" end="2" genus="masc" getal="ev" id="7" index="1" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="men"/>
+            <node begin="4" end="5" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+            <node begin="1" cat="ppart" end="6" id="9" rel="vc">
+              <node begin="1" end="2" id="10" index="1" rel="su"/>
+              <node begin="2" cat="np" end="4" id="11" rel="obj1">
+                <node begin="2" end="3" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="3" end="4" id="13" lemma="65" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="hd" root="65" word="65"/>
+              </node>
+              <node begin="5" buiging="zonder" end="6" id="14" lemma="passeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="passeer" word="gepasseerd" wvorm="vd"/>
+            </node>
+          </node>
+          <node begin="6" conjtype="neven" end="7" id="15" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="1" cat="ssub" end="13" id="16" rel="cnj">
+            <node begin="1" end="2" id="17" index="1" rel="su"/>
+            <node begin="11" end="12" id="18" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+            <node begin="1" cat="inf" end="13" id="19" rel="vc">
+              <node begin="1" end="2" id="20" index="1" rel="su"/>
+              <node begin="7" end="8" genus="onz" getal="ev" id="21" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+              <node begin="8" cat="ap" end="11" id="22" rel="mod">
+                <node begin="8" end="9" getal="ev" id="23" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="adv" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="mod" root="wat" status="vol" vwtype="onbep" word="wat"/>
+                <node begin="9" cat="mwu" end="11" id="24" rel="hd">
+                  <node begin="9" buiging="zonder" end="10" graad="comp" id="25" lemma="kalm" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mwp" root="kalmer" word="kalmer"/>
+                  <node begin="10" end="11" id="26" lemma="aan" pos="adj" postag="VZ(fin)" pt="vz" rel="mwp" root="aan" vztype="fin" word="aan"/>
+                </node>
+              </node>
+              <node begin="12" buiging="zonder" end="13" id="27" lemma="doen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="doe" word="doen" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="14" end="15" id="28" lemma="blijven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="blijf" word="blijft" wvorm="pv"/>
+      <node begin="15" cat="np" end="17" id="29" rel="su">
+        <node begin="15" buiging="met-e" end="16" graad="basis" id="30" lemma="juist" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="juist" word="juiste"/>
+        <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="31" lemma="voeding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voeding" word="voeding"/>
+      </node>
+      <node begin="17" cat="np" end="24" id="32" rel="predc">
+        <node begin="17" end="18" id="33" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="18" buiging="met-e" end="19" graad="basis" id="34" lemma="belangrijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="belangrijk" word="belangrijke"/>
+        <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="35" lemma="bijdrage" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bijdrage" word="bijdrage"/>
+        <node begin="20" cat="pp" end="24" id="36" rel="mod">
+          <node begin="20" end="21" id="37" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+          <node begin="21" cat="conj" end="24" id="38" rel="obj1">
+            <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="39" lemma="gezondheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="gezondheid" word="gezondheid"/>
+            <node begin="22" conjtype="neven" end="23" id="40" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="41" lemma="levensvreugde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="levensvreugde" word="levensvreugde"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="42" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Wanneer men de 65 is gepasseerd en het wat kalmer aan gaat doen , blijft juiste voeding een belangrijke bijdrage tot gezondheid en levensvreugde .</sentence>
+</alpino_ds>

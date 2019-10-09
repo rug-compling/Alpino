@@ -1,0 +1,18 @@
+#
+# example: a colored drs "John owns dog" 4-Jan-96
+#
+# 
+
+clig {drs {SEQ {color red {plain-text "a"}}
+               {color blue {plain-text "x"}}} 
+        {seq {plain-text "dog("}
+             {color red {plain-text "a"}}
+             {plain-text ")"}}
+        {seq {plain-text "Jones("} 
+             {color blue {plain-text x}}
+             {plain-text ")"}}
+        {seq {plain-text "owns("}
+             {color blue {plain-text x}}
+             {plain-text ","}
+             {color red {plain-text "a"}}
+             {plain-text ")"}}}

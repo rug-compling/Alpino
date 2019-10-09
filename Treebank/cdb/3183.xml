@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="8" end="9" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="14" id="3" rel="--">
+      <node begin="0" cat="np" end="8" id="4" rel="su">
+        <node begin="0" buiging="met-e" end="1" getal="mv" graad="basis" id="5" lemma="beide" naamval="stan" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,mv,basis)" pt="vnw" rel="det" root="beide" vwtype="onbep" word="Beide"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="6" lemma="onderneming" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="onderneming" word="ondernemingen"/>
+        <node begin="3" cat="rel" end="8" id="7" rel="mod">
+          <node begin="3" end="4" getal="getal" id="8" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+          <node begin="3" cat="ssub" end="8" id="9" rel="body">
+            <node begin="3" end="4" id="10" index="1" rel="su"/>
+            <node begin="4" cat="np" end="7" id="11" rel="obj1">
+              <node begin="4" end="5" id="12" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="5" buiging="zonder" end="6" graad="basis" id="13" lemma="complementair" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="complementair" word="complementair"/>
+              <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="14" lemma="werkterrein" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="werkterrein" word="werkterrein"/>
+            </node>
+            <node begin="7" end="8" id="15" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+      <node begin="9" end="10" id="16" lemma="zetten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zet" word="zetten" wvorm="pv"/>
+      <node begin="10" cat="np" end="12" id="17" rel="obj1">
+        <node begin="10" buiging="zonder" end="11" getal="mv" id="18" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+        <node begin="11" end="12" getal="mv" graad="basis" id="19" lemma="werkzaamheden" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="werkzaamheid" word="werkzaamheden"/>
+      </node>
+      <node begin="12" buiging="zonder" end="13" graad="basis" id="20" lemma="zelfstandig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="zelfstandig" word="zelfstandig"/>
+      <node begin="13" end="14" id="21" lemma="voort" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="voort" vztype="fin" word="voort"/>
+    </node>
+    <node begin="14" end="15" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Beide ondernemingen , die een complementair werkterrein hebben , zetten hun werkzaamheden zelfstandig voort .</sentence>
+</alpino_ds>

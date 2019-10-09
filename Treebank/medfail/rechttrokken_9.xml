@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="9" end="10" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="15" id="2" rel="--">
+      <node begin="0" cat="cp" end="9" id="3" rel="su">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="Dat"/>
+        <node begin="1" cat="ssub" end="9" id="5" rel="body">
+          <node begin="1" end="2" getal="mv" id="6" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
+          <node begin="2" end="3" genus="onz" getal="ev" id="7" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+          <node begin="3" cat="pp" end="7" id="8" rel="mod">
+            <node begin="3" end="4" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="4" cat="np" end="7" id="10" rel="obj1">
+              <node begin="4" end="5" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="5" end="6" id="12" lemma="vier" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="vierde" word="vierde"/>
+              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="set" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="set" word="set"/>
+            </node>
+          </node>
+          <node begin="7" end="8" id="14" lemma="opnieuw" pos="adv" postag="BW()" pt="bw" rel="mod" root="opnieuw" word="opnieuw"/>
+          <node begin="8" end="9" id="15" lemma="rechttrekken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="trek_recht" word="rechttrokken" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="10" end="11" id="16" lemma="pleiten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="pleit" word="pleit" wvorm="pv"/>
+      <node begin="11" cat="pp" end="15" id="17" rel="pc">
+        <node begin="11" end="12" id="18" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+        <node begin="12" cat="np" end="15" id="19" rel="obj1">
+          <node begin="12" buiging="met-e" end="13" getal="mv" id="20" lemma="ons" naamval="stan" npagr="rest" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" pt="vnw" rel="det" root="ons" status="vol" vwtype="bez" word="onze"/>
+          <node begin="13" buiging="met-e" end="14" graad="basis" id="21" lemma="huidig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="huidig" word="huidige"/>
+          <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="22" lemma="conditie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="conditie" word="conditie"/>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dat wij het in de vierde set opnieuw rechttrokken , pleit voor onze huidige conditie .</sentence>
+</alpino_ds>

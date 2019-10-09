@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" cat="pp" end="3" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="Na"/>
+        <node begin="1" cat="np" end="3" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="uitbloei" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="uitbloei" word="uitbloei"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" lemma="snijden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="snijd_weg" word="snijden" wvorm="pv"/>
+      <node begin="4" end="5" getal="mv" id="8" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+      <node begin="5" cat="np" end="7" id="9" rel="obj1">
+        <node begin="5" end="6" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="bloemstengel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bloem_stengel" word="bloemstengel"/>
+      </node>
+      <node begin="7" cat="ap" end="10" id="12" rel="mod">
+        <node begin="8" buiging="zonder" end="9" graad="basis" id="13" lemma="diep" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="diep" word="diep"/>
+        <node begin="7" cat="advp" end="10" id="14" rel="mod">
+          <node begin="7" end="8" id="15" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="hd" root="zo" word="zo"/>
+          <node begin="9" buiging="zonder" end="10" graad="basis" id="16" lemma="mogelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="obcomp" root="mogelijk" word="mogelijk"/>
+        </node>
+      </node>
+      <node begin="10" end="11" id="17" lemma="weg" pos="part" postag="BW()" pt="bw" rel="vc" root="weg" word="weg"/>
+    </node>
+    <node begin="11" end="12" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Na de uitbloei snijden we de bloemstengel zo diep mogelijk weg .</sentence>
+</alpino_ds>

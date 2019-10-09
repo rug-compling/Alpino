@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="0" cat="whq" end="18" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="18" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="predc"/>
+        <node begin="1" end="2" id="5" lemma="heten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heet" word="heet" wvorm="pv"/>
+        <node begin="2" cat="np" end="18" id="6" rel="su">
+          <node begin="2" end="3" id="7" lemma="een" numtype="hoofd" pos="pron" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="hd" root="een" word="een"/>
+          <node begin="3" cat="pp" end="9" id="8" rel="mod">
+            <node begin="3" end="4" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="4" cat="np" end="9" id="10" rel="obj1">
+              <node begin="4" end="5" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="5" buiging="met-e" end="6" graad="sup" id="12" lemma="bekend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="bekend" word="bekendste"/>
+              <node begin="6" end="7" getal="mv" graad="basis" id="13" lemma="werk" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="werk" word="werken"/>
+              <node begin="7" cat="pp" end="9" id="14" rel="mod">
+                <node begin="7" end="8" id="15" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="16" lemma="Picasso" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Picasso" word="Picasso"/>
+              </node>
+            </node>
+          </node>
+          <node begin="9" cat="rel" end="18" id="17" rel="mod">
+            <node begin="9" end="10" getal="ev" id="18" index="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
+            <node begin="9" cat="ssub" end="18" id="19" rel="body">
+              <node begin="9" end="10" id="20" index="2" rel="su"/>
+              <node begin="12" end="13" id="21" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+              <node begin="9" cat="ti" end="18" id="22" rel="vc">
+                <node begin="10" end="11" id="23" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+                <node begin="9" cat="inf" end="18" id="24" rel="body">
+                  <node begin="9" end="10" id="25" index="2" rel="obj1"/>
+                  <node begin="11" buiging="zonder" end="12" id="26" lemma="vinden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vind" word="vinden" wvorm="inf"/>
+                  <node begin="13" cat="pp" end="18" id="27" rel="ld">
+                    <node begin="13" end="14" id="28" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                    <node begin="14" cat="np" end="18" id="29" rel="obj1">
+                      <node begin="14" end="15" id="30" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                      <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="31" lemma="Prado" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Prado" word="Prado"/>
+                      <node begin="16" cat="pp" end="18" id="32" rel="mod">
+                        <node begin="16" end="17" id="33" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                        <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="34" lemma="Madrid" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Madrid" word="Madrid"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="35" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe heet een van de bekendste werken van Picasso dat te vinden is in het Prado in Madrid ?</sentence>
+</alpino_ds>

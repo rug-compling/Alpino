@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="sv1" end="4" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="Was" wvorm="pv"/>
+      <node begin="1" end="2" genus="masc" getal="ev" id="3" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+      <node begin="1" cat="ppart" end="4" id="4" rel="vc">
+        <node begin="1" end="2" id="5" index="1" rel="su"/>
+        <node begin="2" end="3" id="6" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="komen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kom" word="gekomen" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="4" end="5" id="8" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>Was hij maar gekomen !</sentence>
+</alpino_ds>

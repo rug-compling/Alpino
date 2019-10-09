@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="1" cat="mwu" end="11" id="2" rel="--">
+      <node begin="1" end="2" id="3" lemma="Eichmann" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Eichmann" spectype="deeleigen" word="Eichmann"/>
+      <node begin="2" end="3" id="4" lemma="in" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+      <node begin="3" end="4" id="5" lemma="Jerusalem" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jerusalem" spectype="deeleigen" word="Jerusalem"/>
+      <node begin="4" end="5" id="6" lemma="A" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="A" spectype="symb" word="A"/>
+      <node begin="5" end="6" id="7" lemma="Report" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Report" spectype="deeleigen" word="Report"/>
+      <node begin="6" end="7" id="8" lemma="on" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="on" spectype="vreemd" word="on"/>
+      <node begin="7" end="8" id="9" lemma="the" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="the" spectype="vreemd" word="the"/>
+      <node begin="8" end="9" id="10" lemma="Banality" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Banality" spectype="vreemd" word="Banality"/>
+      <node begin="9" end="10" id="11" lemma="of" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="of" spectype="vreemd" word="of"/>
+      <node begin="10" end="11" id="12" lemma="Evil" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Evil" spectype="deeleigen" word="Evil"/>
+    </node>
+    <node begin="11" end="12" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="12" end="13" id="14" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>&quot; Eichmann in Jerusalem A Report on the Banality of Evil . &quot;</sentence>
+</alpino_ds>

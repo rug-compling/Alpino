@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="np" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+      <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="3" lemma="feit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="feit" word="feit"/>
+      <node begin="2" cat="cp" end="7" id="4" rel="vc">
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="3" cat="ssub" end="7" id="6" rel="body">
+          <node begin="3" end="4" genus="fem" getal="ev" id="7" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+          <node begin="4" cat="np" end="6" id="8" rel="obj1">
+            <node begin="4" end="5" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="5" buiging="zonder" end="6" graad="basis" id="10" lemma="onvoldoende" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="onvoldoende" word="onvoldoende"/>
+          </node>
+          <node begin="6" end="7" id="11" lemma="halen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="haal" word="haalde" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>het feit dat ze een onvoldoende haalde</sentence>
+</alpino_ds>

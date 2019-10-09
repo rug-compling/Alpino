@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="smain" end="15" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="3" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" end="2" frame="tmp_noun(de,count,pl)" gen="de" id="4" lcat="np" num="pl" pos="noun" rel="hd" root="partij" sense="partij" special="tmp" word="partijen"/>
+      </node>
+      <node begin="2" end="3" frame="verb(hebben,pl,pc_pp(naar))" id="5" infl="pl" lcat="smain" pos="verb" rel="hd" root="verwijs" sc="pc_pp(naar)" sense="verwijs-naar" tense="present" word="verwijzen"/>
+      <node begin="3" cat="pp" end="15" id="6" rel="pc">
+        <node begin="3" end="4" frame="preposition(naar,[toe])" id="7" lcat="pp" pos="prep" rel="hd" root="naar" sense="naar" word="naar"/>
+        <node begin="4" cat="conj" end="15" id="8" rel="obj1">
+          <node begin="7" end="8" frame="conj(en)" id="9" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+          <node begin="4" cat="np" end="15" id="10" rel="cnj">
+            <node begin="4" end="5" frame="determiner(pron)" id="11" index="1" infl="pron" lcat="detp" pos="det" rel="det" root="hun" sense="hun" word="hun"/>
+            <node aform="base" begin="5" end="6" frame="adjective(e)" id="12" index="2" infl="e" lcat="ap" pos="adj" rel="mod" root="internationaal" sense="internationaal" vform="adj" word="internationale"/>
+            <node begin="6" end="7" frame="noun(de,count,pl)" gen="de" id="13" lcat="np" num="pl" pos="noun" rel="hd" root="verplichting" sense="verplichting" word="verplichtingen"/>
+            <node begin="9" cat="pp" end="15" id="14" index="3" rel="mod">
+              <node begin="9" end="10" frame="preposition(betreffende,[])" id="15" lcat="pp" pos="prep" rel="hd" root="betreffende" sense="betreffende" word="betreffende"/>
+              <node begin="10" cat="np" end="15" id="16" rel="obj1">
+                <node begin="10" end="11" frame="determiner(de)" id="17" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                <node begin="11" end="12" frame="noun(de,mass,sg)" gen="de" id="18" lcat="np" num="sg" pos="noun" rel="hd" root="eerbiediging" sense="eerbiediging" word="eerbiediging"/>
+                <node begin="12" cat="pp" end="15" id="19" rel="mod">
+                  <node begin="12" end="13" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="20" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                  <node begin="13" cat="np" end="15" id="21" rel="obj1">
+                    <node begin="13" end="14" frame="determiner(de)" id="22" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                    <node begin="14" end="15" frame="noun(de,count,pl)" gen="de" id="23" lcat="np" num="pl" pos="noun" rel="hd" root="mensenrechten" sense="mensenrechten" word="mensenrechten"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="4" cat="np" end="15" id="24" rel="cnj">
+            <node begin="4" end="5" id="25" index="1" rel="det"/>
+            <node begin="5" end="6" id="26" index="2" rel="mod"/>
+            <node begin="8" end="9" frame="noun(de,count,pl)" gen="de" id="27" lcat="np" num="pl" pos="noun" rel="hd" root="verbintenis" sense="verbintenis" word="verbintenissen"/>
+            <node begin="9" end="15" id="28" index="3" rel="mod"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" frame="punct(punt)" id="29" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De partijen verwijzen naar hun internationale verplichtingen en verbintenissen betreffende de eerbiediging van de mensenrechten .</sentence>
+  <comments>
+    <comment>Q#526|De partijen verwijzen naar hun internationale verplichtingen en verbintenissen betreffende de eerbiediging van de mensenrechten .|1|1|0.3841344407844961</comment>
+  </comments>
+</alpino_ds>

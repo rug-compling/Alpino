@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="alleen" pos="adv" postag="BW()" pt="bw" rel="predm" root="alleen" word="Alleen"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="2" end="3" genus="fem" getal="ev" id="4" index="1" lemma="zij" naamval="nomin" pdtype="pron" persoon="3v" pos="noun" postag="VNW(pers,pron,nomin,vol,3v,ev,fem)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
+      <node begin="2" cat="ppart" end="14" id="5" rel="vc">
+        <node begin="2" end="3" id="6" index="1" rel="su"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="dagenlang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="dagenlang" word="dagenlang"/>
+        <node begin="4" buiging="zonder" end="5" id="8" lemma="knokken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="knok" word="geknokt" wvorm="vd"/>
+        <node begin="5" cat="oti" end="14" id="9" rel="mod">
+          <node begin="5" end="6" id="10" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+          <node begin="6" cat="ti" end="14" id="11" rel="body">
+            <node begin="11" end="12" id="12" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="6" cat="inf" end="14" id="13" rel="body">
+              <node begin="12" buiging="zonder" end="13" id="14" lemma="kunnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kan" word="kunnen" wvorm="inf"/>
+              <node begin="6" cat="inf" end="14" id="15" rel="vc">
+                <node begin="6" end="7" getal="getal" id="16" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+                <node begin="7" cat="pp" end="11" id="17" rel="mod">
+                  <node begin="7" end="8" id="18" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+                  <node begin="8" cat="np" end="11" id="19" rel="obj1">
+                    <node begin="8" end="9" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="9" buiging="met-e" end="10" graad="basis" id="21" lemma="succesvol" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="succesvol" word="succesvolle"/>
+                    <node begin="10" end="11" getal="mv" graad="basis" id="22" lemma="atlete" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="atletes" word="atletes"/>
+                  </node>
+                </node>
+                <node begin="13" buiging="zonder" end="14" id="23" lemma="manifesteren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="manifesteer" word="manifesteren" wvorm="inf"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Alleen heeft zij dagenlang geknokt om zich bij de succesvolle atletes te kunnen manifesteren .</sentence>
+</alpino_ds>

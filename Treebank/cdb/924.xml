@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="13" end="14" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="23" id="2" rel="--">
+      <node begin="0" cat="np" end="13" id="3" index="1" rel="su">
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="5" lemma="richtlijn" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="richtlijn" word="richtlijnen"/>
+        <node begin="2" cat="pp" end="5" id="6" rel="mod">
+          <node begin="2" end="3" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="3" cat="np" end="5" id="8" rel="obj1">
+            <node begin="3" end="4" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="ministerraad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ministerraad" word="Ministerraad"/>
+          </node>
+        </node>
+        <node begin="5" cat="rel" end="13" id="11" rel="mod">
+          <node begin="5" end="6" id="12" index="2" lemma="waarvan" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarvan" word="waarvan"/>
+          <node begin="5" cat="ssub" end="13" id="13" rel="body">
+            <node begin="6" cat="np" end="8" id="14" index="3" rel="su">
+              <node begin="6" end="7" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="16" lemma="commissie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="commissie" word="Commissie"/>
+            </node>
+            <node begin="11" end="12" id="17" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+            <node begin="5" cat="inf" end="13" id="18" rel="vc">
+              <node begin="5" end="6" id="19" index="2" rel="pc"/>
+              <node begin="6" end="8" id="20" index="3" rel="su"/>
+              <node begin="8" cat="pp" end="11" id="21" rel="mod">
+                <node begin="8" end="9" id="22" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+                <node begin="9" cat="np" end="11" id="23" rel="obj1">
+                  <node begin="9" end="10" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="10" end="11" getal="mv" graad="basis" id="25" lemma="onderhandeling" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="onderhandeling" word="onderhandelingen"/>
+                </node>
+              </node>
+              <node begin="12" buiging="zonder" end="13" id="26" lemma="uitgaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="uitgaan" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="14" end="15" id="27" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" word="kunnen" wvorm="pv"/>
+      <node begin="0" cat="inf" end="23" id="28" rel="vc">
+        <node begin="0" end="13" id="29" index="1" rel="su"/>
+        <node begin="21" buiging="zonder" end="22" id="30" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+        <node begin="0" cat="ppart" end="23" id="31" rel="vc">
+          <node begin="0" end="13" id="32" index="1" rel="obj1"/>
+          <node begin="15" cat="pp" end="18" id="33" rel="mod">
+            <node begin="15" end="16" id="34" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+            <node begin="16" cat="np" end="18" id="35" rel="obj1">
+              <node begin="16" end="17" id="36" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="37" lemma="raad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="raad" word="Raad"/>
+            </node>
+          </node>
+          <node begin="18" cat="pp" end="21" id="38" rel="mod">
+            <node begin="18" end="19" id="39" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+            <node begin="19" cat="np" end="21" id="40" rel="obj1">
+              <node begin="19" buiging="met-e" end="20" graad="basis" id="41" lemma="eenvoudig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="eenvoudig" word="eenvoudige"/>
+              <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="42" lemma="meerderheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="meerderheid" word="meerderheid"/>
+            </node>
+          </node>
+          <node begin="22" buiging="zonder" end="23" id="43" lemma="vaststellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="vastgesteld" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="44" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>de richtlijnen van de Ministerraad waarvan de Commissie bij de onderhandelingen moet uitgaan , kunnen door de Raad bij eenvoudige meerderheid worden vastgesteld .</sentence>
+</alpino_ds>

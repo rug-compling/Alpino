@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="0" cat="smain" end="18" id="1" rel="--">
+      <node begin="0" cat="pp" end="12" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+        <node begin="1" cat="np" end="12" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" cat="ap" end="8" id="6" rel="mod">
+            <node begin="2" cat="pp" end="5" id="7" rel="mod">
+              <node begin="2" end="3" id="8" lemma="tijdens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tijdens" vztype="init" word="tijdens"/>
+              <node begin="3" cat="np" end="5" id="9" rel="obj1">
+                <node begin="3" end="4" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="jaarwisseling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="jaarwisseling" word="jaarwisseling"/>
+              </node>
+            </node>
+            <node begin="5" end="6" id="12" lemma="anders" pos="adj" postag="BW()" pt="bw" rel="mod" root="anders" word="anders"/>
+            <node begin="6" end="7" id="13" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
+            <node begin="7" buiging="met-e" end="8" graad="basis" id="14" lemma="rumoerig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="rumoerig" word="rumoerige"/>
+          </node>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="wijk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wijk" word="wijk"/>
+          <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="16" lemma="Helpman" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Helpman" word="Helpman"/>
+          <node begin="10" cat="pp" end="12" id="17" rel="mod">
+            <node begin="10" end="11" id="18" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="19" lemma="GRONINGEN" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="GRONINGEN" word="GRONINGEN"/>
+          </node>
+        </node>
+      </node>
+      <node begin="12" end="13" id="20" lemma="blijven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="blijf" word="bleef" wvorm="pv"/>
+      <node begin="13" end="14" genus="onz" getal="ev" id="21" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="14" cat="np" end="17" id="22" rel="mod">
+        <node begin="14" end="15" id="23" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+        <node begin="15" buiging="zonder" end="16" id="24" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+        <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="25" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
+      </node>
+      <node begin="17" buiging="zonder" end="18" graad="basis" id="26" lemma="rustig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="rustig" word="rustig"/>
+    </node>
+    <node begin="18" end="19" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>In de tijdens de jaarwisseling anders zo rumoerige wijk Helpman in GRONINGEN bleef het ook dit jaar rustig .</sentence>
+</alpino_ds>

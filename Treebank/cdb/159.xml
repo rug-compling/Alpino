@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="7" end="8" id="2" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="0" cat="smain" end="18" id="3" rel="--">
+      <node begin="0" cat="np" end="7" id="4" rel="su">
+        <node begin="0" buiging="met-e" end="1" graad="basis" id="5" lemma="verschillend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="verschillend" word="verschillende"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="6" lemma="partij" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="partij" word="partijen"/>
+        <node begin="3" cat="np" end="7" id="7" rel="mod">
+          <node begin="3" cat="mwu" end="5" id="8" rel="mod">
+            <node begin="3" end="4" id="9" lemma="met" pos="adv" postag="VZ(init)" pt="vz" rel="mwp" root="met" vztype="init" word="met"/>
+            <node begin="4" end="5" getal="ev" graad="basis" id="10" lemma="naam" naamval="dat" ntype="soort" pos="adv" postag="N(soort,ev,basis,dat)" pt="n" rel="mwp" root="name" word="name"/>
+          </node>
+          <node begin="5" end="6" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="Pvda" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Pvda" word="Pvda"/>
+        </node>
+      </node>
+      <node begin="8" end="9" id="13" lemma="maken" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="maak" word="maakten" wvorm="pv"/>
+      <node begin="9" end="10" getal="getal" id="14" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+      <node begin="10" cat="np" end="12" id="15" rel="obj1">
+        <node begin="10" buiging="met-e" end="11" graad="basis" id="16" lemma="ernstig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ernstig" word="ernstige"/>
+        <node begin="11" end="12" getal="mv" graad="basis" id="17" lemma="zorg" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="zorg" word="zorgen"/>
+      </node>
+      <node begin="12" cat="pp" end="18" id="18" rel="pc">
+        <node begin="12" end="13" id="19" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+        <node begin="13" cat="np" end="18" id="20" rel="obj1">
+          <node begin="13" end="14" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="22" lemma="toestand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="toestand" word="toestand"/>
+          <node begin="15" cat="pp" end="18" id="23" rel="mod">
+            <node begin="15" end="16" id="24" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="16" cat="np" end="18" id="25" rel="obj1">
+              <node begin="16" end="17" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="17" end="18" getal="mv" graad="basis" id="27" lemma="gemeentefinancien" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gemeentefinancien" word="gemeentefinancien"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="28" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>verschillende partijen - met name de Pvda - maakten zich ernstige zorgen over de toestand van de gemeentefinancien .</sentence>
+</alpino_ds>

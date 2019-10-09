@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="7" end="8" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="24" id="3" rel="--">
+      <node begin="0" cat="np" end="7" id="4" index="1" rel="su">
+        <node begin="0" end="1" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="6" lemma="democratisering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="democratisering" word="democratisering"/>
+        <node begin="3" cat="ap" end="7" id="7" rel="mod">
+          <node begin="3" cat="mwu" end="6" id="8" rel="mod">
+            <node begin="3" end="4" id="9" lemma="min" pos="adv" postag="BW()" pt="bw" rel="mwp" root="min" word="min"/>
+            <node begin="4" conjtype="neven" end="5" id="10" lemma="of" pos="adv" postag="VG(neven)" pt="vg" rel="mwp" root="of" word="of"/>
+            <node begin="5" buiging="zonder" end="6" graad="comp" id="11" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adv" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,comp)" pt="vnw" rel="mwp" root="meer" vwtype="onbep" word="meer"/>
+          </node>
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="radicaal" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="radicaal" word="radicaal"/>
+        </node>
+      </node>
+      <node begin="8" end="9" id="13" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="24" id="14" rel="vc">
+        <node begin="0" end="7" id="15" index="1" rel="obj1"/>
+        <node begin="9" cat="pp" end="12" id="16" rel="mod">
+          <node begin="9" end="10" id="17" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="10" cat="np" end="12" id="18" rel="obj1">
+            <node begin="10" buiging="met-e" end="11" id="19" lemma="sommig" naamval="stan" npagr="rest" pdtype="det" pos="num" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="sommige" vwtype="onbep" word="sommige"/>
+            <node begin="11" end="12" getal="mv" graad="basis" id="20" lemma="instituut" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="instituut" word="instituten"/>
+          </node>
+        </node>
+        <node begin="12" end="13" id="21" lemma="zelfs" pos="adv" postag="BW()" pt="bw" rel="mod" root="zelfs" word="zelfs"/>
+        <node begin="13" end="14" id="22" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+        <node begin="14" buiging="zonder" end="15" id="23" lemma="voltooien" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voltooi" word="voltooid" wvorm="vd"/>
+        <node begin="15" cat="cp" end="24" id="24" rel="mod">
+          <node begin="15" end="16" id="25" lemma="zonder" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="zonder" vztype="init" word="zonder"/>
+          <node begin="16" cat="ti" end="24" id="26" rel="body">
+            <node begin="22" end="23" id="27" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="16" cat="inf" end="24" id="28" rel="body">
+              <node begin="16" cat="ppart" end="22" id="29" rel="vc">
+                <node begin="16" cat="np" end="21" id="30" rel="obj1">
+                  <node begin="16" end="17" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="32" lemma="zegen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zegen" word="zegen"/>
+                  <node begin="18" cat="pp" end="21" id="33" rel="mod">
+                    <node begin="18" end="19" id="34" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                    <node begin="19" cat="np" end="21" id="35" rel="obj1">
+                      <node begin="19" end="20" id="36" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                      <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="37" lemma="wetgever" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wetgever" word="wetgever"/>
+                    </node>
+                  </node>
+                </node>
+                <node begin="21" buiging="zonder" end="22" id="38" lemma="ontvangen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ontvang" word="ontvangen" wvorm="vd"/>
+              </node>
+              <node begin="23" buiging="zonder" end="24" id="39" lemma="hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb" word="hebben" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De democratisering , min of meer radicaal , is in sommige instituten zelfs al voltooid zonder de zegen van de wetgever ontvangen te hebben .</sentence>
+</alpino_ds>

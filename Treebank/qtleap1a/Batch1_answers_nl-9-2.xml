@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="12" end="13" id="2" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="14" end="15" id="3" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="0" cat="smain" end="16" id="4" rel="--">
+      <node begin="0" cat="cp" end="5" id="5" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="6" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+        <node begin="1" cat="ssub" end="5" id="7" rel="body">
+          <node begin="1" end="2" getal="ev" id="8" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+          <node begin="2" cat="mwu" end="4" id="9" rel="obj1">
+            <node begin="2" end="3" id="10" lemma="Windows" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Windows" spectype="deeleigen" word="Windows"/>
+            <node begin="3" end="4" id="11" lemma="8" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="8" spectype="deeleigen" word="8"/>
+          </node>
+          <node begin="4" end="5" id="12" lemma="gebruiken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="gebruik" word="gebruikt" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="13" lemma="typen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="typ" word="typ" wvorm="pv"/>
+      <node begin="7" end="8" getal="ev" id="14" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+      <node begin="8" cat="np" end="10" id="15" rel="obj1">
+        <node begin="8" buiging="zonder" end="9" graad="basis" id="16" lemma="dezelfde" pos="det" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="det" root="dezelfde" word="dezelfde"/>
+        <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="17" lemma="instructie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="instructie" word="instructie"/>
+      </node>
+      <node begin="10" cat="pp" end="16" id="18" rel="mod">
+        <node begin="10" end="11" id="19" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="11" cat="np" end="16" id="20" rel="obj1">
+          <node begin="11" end="12" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="13" end="14" genus="genus" getal="ev" graad="basis" id="22" lemma="ZOEK" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mod" root="ZOEK" word="ZOEK"/>
+          <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="23" lemma="functie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="functie" word="functie"/>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als je Windows 8 gebruikt , typ je dezelfde instructie in de &apos; ZOEK &apos; functie .</sentence>
+</alpino_ds>

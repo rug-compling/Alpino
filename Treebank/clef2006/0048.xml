@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="whq" end="12" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" index="1" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="whd" root="wie" status="vol" vwtype="vb" word="Wie"/>
+      <node begin="0" cat="sv1" end="12" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="su"/>
+        <node begin="1" end="2" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+        <node begin="0" cat="conj" end="12" id="6" rel="vc">
+          <node begin="0" cat="ppart" end="9" id="7" rel="cnj">
+            <node begin="0" end="1" id="8" index="1" rel="su"/>
+            <node begin="2" cat="np" end="4" id="9" index="2" rel="obj1">
+              <node begin="2" end="3" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="11" lemma="prijs" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="prijs" word="prijs"/>
+            </node>
+            <node begin="4" cat="pp" end="8" id="12" rel="pc">
+              <node begin="4" end="5" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="5" cat="np" end="8" id="14" rel="obj1">
+                <node begin="5" end="6" id="15" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="6" cat="mwu" end="8" id="16" rel="hd">
+                  <node begin="6" end="7" id="17" lemma="Goethe" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Goethe" spectype="deeleigen" word="Goethe"/>
+                  <node begin="7" end="8" id="18" lemma="Instituut" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Instituut" spectype="deeleigen" word="Instituut"/>
+                </node>
+              </node>
+            </node>
+            <node begin="8" buiging="zonder" end="9" id="19" lemma="krijgen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="krijg" word="gekregen" wvorm="vd"/>
+          </node>
+          <node begin="9" conjtype="neven" end="10" id="20" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+          <node begin="0" cat="ppart" end="12" id="21" rel="cnj">
+            <node begin="0" end="1" id="22" index="1" rel="su"/>
+            <node begin="2" end="4" id="23" index="2" rel="obj1"/>
+            <node begin="10" end="11" id="24" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+            <node begin="11" buiging="zonder" end="12" id="25" lemma="accepteren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="accepteer" word="geaccepteerd" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="26" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wie heeft een prijs van het Goethe Instituut gekregen maar niet geaccepteerd ?</sentence>
+</alpino_ds>

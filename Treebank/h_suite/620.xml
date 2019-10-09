@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="np" end="8" id="1" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="notawisseling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="nota_wisseling" word="Notawisseling"/>
+      <node begin="1" cat="ppres" end="8" id="3" rel="mod">
+        <node begin="1" buiging="zonder" end="2" id="4" lemma="bevatten" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="hd" root="bevat" word="bevattende" wvorm="od"/>
+        <node begin="2" cat="np" end="8" id="5" rel="obj1">
+          <node begin="2" end="3" id="6" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="verdrag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verdrag" word="verdrag"/>
+          <node begin="4" cat="pp" end="8" id="8" rel="mod">
+            <node begin="4" end="5" id="9" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>
+            <node begin="5" cat="conj" end="8" id="10" rel="obj1">
+              <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="Nederland" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Nederland" word="Nederland"/>
+              <node begin="6" conjtype="neven" end="7" id="12" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="13" lemma="Noorwegen" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Noorwegen" word="Noorwegen"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Notawisseling bevattende een verdrag tussen Nederland en Noorwegen</sentence>
+</alpino_ds>

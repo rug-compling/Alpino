@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="7" end="8" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="pp" end="13" id="3" rel="--">
+      <node begin="0" end="1" id="4" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="Met"/>
+      <node begin="1" cat="conj" end="13" id="5" rel="obj1">
+        <node begin="1" cat="np" end="4" id="6" rel="cnj">
+          <node begin="1" end="2" id="7" index="1" lemma="o.a." pos="adv" postag="SPEC(afk)" pt="spec" rel="mod" root="onder_andere" spectype="afk" word="o.a."/>
+          <node begin="2" cat="mwu" end="4" id="8" rel="hd">
+            <node begin="2" end="3" id="9" lemma="Dean" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Dean" spectype="deeleigen" word="Dean"/>
+            <node begin="3" end="4" id="10" lemma="Jones" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jones" spectype="deeleigen" word="Jones"/>
+          </node>
+        </node>
+        <node begin="1" cat="np" end="7" id="11" rel="cnj">
+          <node begin="1" end="2" id="12" index="1" rel="mod"/>
+          <node begin="5" cat="mwu" end="7" id="13" rel="hd">
+            <node begin="5" end="6" id="14" lemma="David" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="David" spectype="deeleigen" word="David"/>
+            <node begin="6" end="7" id="15" lemma="Tomlinson" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Tomlinson" spectype="deeleigen" word="Tomlinson"/>
+          </node>
+        </node>
+        <node begin="1" cat="np" end="10" id="16" rel="cnj">
+          <node begin="1" end="2" id="17" index="1" rel="mod"/>
+          <node begin="8" cat="mwu" end="10" id="18" rel="hd">
+            <node begin="8" end="9" id="19" lemma="Buddy" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Buddy" spectype="deeleigen" word="Buddy"/>
+            <node begin="9" end="10" id="20" lemma="Hackett" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hackett" spectype="deeleigen" word="Hackett"/>
+          </node>
+        </node>
+        <node begin="10" conjtype="neven" end="11" id="21" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="1" cat="np" end="13" id="22" rel="cnj">
+          <node begin="1" end="2" id="23" index="1" rel="mod"/>
+          <node begin="11" cat="mwu" end="13" id="24" rel="hd">
+            <node begin="11" end="12" id="25" lemma="Michele" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Michele" spectype="deeleigen" word="Michele"/>
+            <node begin="12" end="13" id="26" lemma="Lee" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lee" spectype="deeleigen" word="Lee"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Met o.a. Dean Jones , David Tomlinson , Buddy Hackett en Michele Lee .</sentence>
+</alpino_ds>

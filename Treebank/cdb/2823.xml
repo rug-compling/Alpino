@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="34" id="0" rel="top">
+    <node begin="9" end="10" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="33" id="2" rel="--">
+      <node begin="0" cat="smain" end="17" id="3" rel="cnj">
+        <node begin="0" cat="cp" end="9" id="4" rel="mod">
+          <node begin="0" cat="mwu" end="3" id="5" rel="cmp">
+            <node begin="0" end="1" id="6" lemma="in" pos="comp" postag="VZ(init)" pt="vz" rel="mwp" root="In" vztype="init" word="In"/>
+            <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="plaats" naamval="stan" ntype="soort" pos="comp" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="plaats" word="plaats"/>
+            <node begin="2" end="3" id="8" lemma="van" pos="comp" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+          </node>
+          <node begin="3" cat="ti" end="9" id="9" rel="body">
+            <node begin="6" end="7" id="10" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="3" cat="inf" end="9" id="11" rel="body">
+              <node begin="7" buiging="zonder" end="8" id="12" lemma="blijven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="blijf" word="blijven" wvorm="inf"/>
+              <node begin="3" cat="inf" end="9" id="13" rel="vc">
+                <node begin="3" cat="np" end="6" id="14" rel="obj1">
+                  <node begin="3" buiging="zonder" end="4" getal="mv" id="15" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+                  <node begin="4" buiging="met-e" end="5" graad="basis" id="16" lemma="normaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="normaal" word="normale"/>
+                  <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="17" lemma="spel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="spel" word="spel"/>
+                </node>
+                <node begin="8" buiging="zonder" end="9" id="18" lemma="spelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="speel" word="spelen" wvorm="inf"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="10" end="11" id="19" lemma="leggen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="leg" word="legden" wvorm="pv"/>
+        <node begin="11" end="12" getal="mv" id="20" index="1" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
+        <node begin="12" cat="np" end="14" id="21" rel="obj1">
+          <node begin="12" end="13" id="22" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="23" lemma="accent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="accent" word="accent"/>
+        </node>
+        <node begin="14" cat="pp" end="17" id="24" rel="ld">
+          <node begin="14" end="15" id="25" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="15" cat="np" end="17" id="26" rel="obj1">
+            <node begin="15" end="16" id="27" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="28" lemma="verdediging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verdediging" word="verdediging"/>
+          </node>
+        </node>
+      </node>
+      <node begin="17" conjtype="neven" end="18" id="29" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="11" cat="smain" end="33" id="30" rel="cnj">
+        <node begin="11" end="12" id="31" index="1" rel="su"/>
+        <node begin="18" end="19" id="32" lemma="geven" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="geef" word="gaven" wvorm="pv"/>
+        <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="33" lemma="Heerenveen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj2" root="Heerenveen" word="Heerenveen"/>
+        <node begin="20" end="21" id="34" lemma="hierdoor" pos="pp" postag="BW()" pt="bw" rel="mod" root="hierdoor" word="hierdoor"/>
+        <node begin="21" cat="np" end="33" id="35" rel="obj1">
+          <node begin="21" end="22" id="36" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="37" lemma="kans" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kans" word="kans"/>
+          <node begin="23" cat="ti" end="33" id="38" rel="vc">
+            <node begin="31" end="32" id="39" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="23" cat="inf" end="33" id="40" rel="body">
+              <node begin="23" cat="pp" end="26" id="41" rel="mod">
+                <node begin="23" end="24" id="42" lemma="via" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="via" vztype="init" word="via"/>
+                <node begin="24" cat="np" end="26" id="43" rel="obj1">
+                  <node begin="24" buiging="met-e" end="25" graad="basis" id="44" lemma="snel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="snel" word="snelle"/>
+                  <node begin="25" end="26" getal="mv" graad="basis" id="45" lemma="doorbraak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="doorbraak" word="doorbraken"/>
+                </node>
+              </node>
+              <node begin="26" end="27" id="46" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
+              <node begin="27" end="28" id="47" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+              <node begin="28" cat="pp" end="31" id="48" rel="pc">
+                <node begin="28" end="29" id="49" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                <node begin="29" cat="np" end="31" id="50" rel="obj1">
+                  <node begin="29" buiging="met-e" end="30" graad="basis" id="51" lemma="gevaarlijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gevaarlijk" word="gevaarlijke"/>
+                  <node begin="30" buiging="zonder" end="31" id="52" lemma="tegenstoten" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stoot" word="tegenstoten" wvorm="inf"/>
+                </node>
+              </node>
+              <node begin="32" buiging="zonder" end="33" id="53" lemma="zorgen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zorg" word="zorgen" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="33" end="34" id="54" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>In plaats van hun normale spel te blijven spelen , legden zij het accent op de verdediging en gaven Heerenveen hierdoor de kans via snelle doorbraken toch nog voor gevaarlijke tegenstoten te zorgen .</sentence>
+</alpino_ds>

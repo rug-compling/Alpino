@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" index="1" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="whd" root="wie" status="vol" vwtype="vb" word="Wie"/>
+      <node begin="0" cat="sv1" end="6" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="su"/>
+        <node begin="1" end="2" id="5" lemma="winnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="win" word="won" wvorm="pv"/>
+        <node begin="2" cat="np" end="4" id="6" rel="obj1">
+          <node begin="2" end="3" id="7" lemma="the" pos="det" postag="SPEC(vreemd)" pt="spec" rel="det" root="de" spectype="vreemd" word="the"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="8" lemma="parlementsverkiezing" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="parlementsverkiezing" word="parlementsverkiezingen"/>
+        </node>
+        <node begin="4" cat="pp" end="6" id="9" rel="mod">
+          <node begin="4" end="5" id="10" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="Hongarije" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Hongarije" word="Hongarije"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wie won the parlementsverkiezingen in Hongarije ?</sentence>
+  <comments>
+    <comment>spelling &quot;the&quot; &quot;de&quot;</comment>
+  </comments>
+</alpino_ds>

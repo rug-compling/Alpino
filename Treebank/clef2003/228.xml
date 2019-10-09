@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="whq" end="13" id="2" rel="--">
+      <node begin="0" end="1" getal="getal" id="3" index="1" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="whd" root="wie" status="vol" vwtype="vb" word="Wie"/>
+      <node begin="0" cat="sv1" end="13" id="4" rel="body">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="1" end="2" id="6" lemma="vergoeden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vergoed" word="vergoedde" wvorm="pv"/>
+        <node begin="2" cat="np" end="13" id="7" rel="obj1">
+          <node begin="2" end="3" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="schade" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schade" word="schade"/>
+          <node begin="4" cat="pp" end="13" id="10" rel="mod">
+            <node begin="4" end="5" id="11" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+            <node begin="5" cat="np" end="13" id="12" rel="obj1">
+              <node begin="5" end="6" id="13" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="14" lemma="ongeval" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="ongeval" word="ongeval"/>
+              <node begin="7" cat="pp" end="13" id="15" rel="mod">
+                <node begin="7" end="8" id="16" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                <node begin="8" cat="np" end="13" id="17" rel="obj1">
+                  <node begin="8" end="9" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="19" lemma="olietanker" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="olietanker" word="olietanker"/>
+                  <node begin="11" cat="mwu" end="13" id="20" rel="app">
+                    <node begin="11" end="12" id="21" lemma="Egeïsche" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Egeïsche" spectype="deeleigen" word="Egeïsche"/>
+                    <node begin="12" end="13" id="22" lemma="Zee" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Zee" spectype="deeleigen" word="Zee"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="23" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="14" end="15" id="24" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wie vergoedde de schade door het ongeval met de olietanker &quot; Egeïsche Zee &quot; ?</sentence>
+</alpino_ds>

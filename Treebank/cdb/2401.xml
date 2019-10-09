@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="39" id="0" rel="top">
+    <node begin="14" end="15" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="17" end="18" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="20" end="21" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="29" end="30" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="38" id="5" rel="--">
+      <node begin="0" cat="conj" end="9" id="6" rel="su">
+        <node begin="0" cat="np" end="4" id="7" rel="cnj">
+          <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="8" lemma="bondskanselier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bondskanselier" word="Bondskanselier"/>
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="9" lemma="Brandt" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Brandt" word="Brandt"/>
+          <node begin="2" cat="pp" end="4" id="10" rel="mod">
+            <node begin="2" end="3" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="12" lemma="West-Duitsland" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="West-Duitsland" word="West-Duitsland"/>
+          </node>
+        </node>
+        <node begin="4" conjtype="neven" end="5" id="13" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="5" cat="np" end="9" id="14" rel="cnj">
+          <node begin="5" end="6" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" buiging="met-e" end="7" graad="basis" id="16" lemma="Oost-Duits" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Oostduitse" word="Oostduitse"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="17" lemma="minister-president" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="minister-president" word="minister-president"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="18" lemma="Stoph" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Stoph" word="Stoph"/>
+        </node>
+      </node>
+      <node begin="9" end="10" id="19" lemma="ontmoeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ontmoet" word="ontmoeten" wvorm="pv"/>
+      <node begin="10" end="11" getal="mv" id="20" lemma="elkaar" naamval="obl" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="obj1" root="elkaar" status="vol" vwtype="recip" word="elkaar"/>
+      <node begin="11" cat="np" end="17" id="21" rel="mod">
+        <node begin="11" buiging="met-e" end="12" id="22" lemma="volgen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="volgend" word="volgende" wvorm="od"/>
+        <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="23" lemma="week" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="week" word="week"/>
+        <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="24" lemma="donderdag" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="donderdag" word="donderdag"/>
+        <node begin="15" cat="mwu" end="17" id="25" rel="app">
+          <node begin="15" end="16" id="26" lemma="19" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="19" word="19"/>
+          <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="27" lemma="maart" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="maart" word="maart"/>
+        </node>
+      </node>
+      <node begin="18" cat="pp" end="38" id="28" rel="mod">
+        <node begin="18" end="19" id="29" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="19" cat="np" end="38" id="30" rel="obj1">
+          <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="31" lemma="Erfurt" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Erfurt" word="Erfurt"/>
+          <node begin="21" cat="np" end="38" id="32" rel="app">
+            <node begin="21" end="22" id="33" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="22" cat="ppres" end="25" id="34" rel="mod">
+              <node begin="22" cat="np" end="24" id="35" rel="me">
+                <node begin="22" end="23" id="36" lemma="200.000" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="200.000" word="200.000"/>
+                <node begin="23" end="24" getal="mv" graad="basis" id="37" lemma="inwoner" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="inwoner" word="inwoners"/>
+              </node>
+              <node begin="24" buiging="met-e" end="25" id="38" lemma="tellen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="tellend" word="tellende" wvorm="od"/>
+            </node>
+            <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="39" lemma="stad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stad" word="stad"/>
+            <node begin="26" cat="pp" end="29" id="40" rel="mod">
+              <node begin="26" end="27" id="41" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="27" cat="np" end="29" id="42" rel="obj1">
+                <node begin="27" end="28" id="43" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="28" end="29" genus="zijd" getal="ev" graad="basis" id="44" lemma="DDR" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="DDR" word="DDR"/>
+              </node>
+            </node>
+            <node begin="30" cat="rel" end="38" id="45" rel="mod">
+              <node begin="30" end="31" getal="getal" id="46" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+              <node begin="30" cat="ssub" end="38" id="47" rel="body">
+                <node begin="30" end="31" id="48" index="1" rel="su"/>
+                <node begin="31" cat="pp" end="37" id="49" rel="ld">
+                  <node begin="31" buiging="zonder" end="32" graad="basis" id="50" lemma="praktisch" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="practisch" word="praktisch"/>
+                  <node begin="32" end="33" id="51" lemma="midden" pos="adv" postag="BW()" pt="bw" rel="mod" root="midden" word="midden"/>
+                  <node begin="33" end="34" id="52" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>
+                  <node begin="34" cat="conj" end="37" id="53" rel="obj1">
+                    <node begin="34" end="35" genus="onz" getal="ev" graad="basis" id="54" lemma="Bonn" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Bonn" word="Bonn"/>
+                    <node begin="35" conjtype="neven" end="36" id="55" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                    <node begin="36" end="37" genus="onz" getal="ev" graad="basis" id="56" lemma="Oost-Berlijn" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Oost-Berlijn" word="Oost-Berlijn"/>
+                  </node>
+                </node>
+                <node begin="37" end="38" id="57" lemma="liggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lig" word="ligt" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="38" end="39" id="58" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Bondskanselier Brandt van West-Duitsland en de Oostduitse minister-president Stoph ontmoeten elkaar volgende week donderdag , 19 maart , in Erfurt , een 200.000 inwoners tellende stad in de DDR , die praktisch midden tussen Bonn en Oost-Berlijn ligt .</sentence>
+</alpino_ds>

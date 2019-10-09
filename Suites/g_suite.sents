@@ -1,0 +1,1276 @@
+%% NB: ALWAYS ADD NEW SENTENCES TO THE END OF THIS FILE:
+%% otherwise the numbering of the corresponding treebank is incorrect!
+%%
+%%
+%% agreement in the noun phrase
+de goede adviezen
+de goede informatie
+de goede afstanden
+de goede antwoorden
+de goede gulden
+de goede guldens
+de fancy adviezen
+de fancy informatie
+de fancy afstand
+de fancy afstanden
+de fancy antwoorden
+de fancy gulden
+de fancy guldens
+het goede advies
+het goede antwoord
+het goede water
+het fancy advies
+het fancy antwoord
+het fancy water
+een goed advies
+een goed antwoord
+een goed water
+een goede afstand
+een goede gulden
+een fancy advies
+een fancy afstand
+een fancy antwoord
+een fancy water
+een fancy gulden
+goed advies
+goed water
+goede adviezen
+goede informatie
+goede afstanden
+goede antwoorden
+goede guldens
+fancy advies
+fancy adviezen
+fancy informatie
+fancy afstanden
+fancy antwoorden
+fancy water
+fancy guldens
+%%
+%%
+%% -tje is always het:
+een mooie achteruitkijkspiegel
+een mooi achteruitkijkspiegeltje
+%%
+%%
+%% verbs selecting sub-ordinate clauses
+Robbert zei dat Arie de trein mist
+Robbert zei dat Arie de trein heeft gemist
+Robbert zei dat Arie de trein heeft willen missen
+Robbert zei dat Arie de trein niet hoeft te missen
+Robbert zei dat Arie de trein niet hoeft te willen missen
+Robbert zei dat de trein is gemist
+Robbert zei dat de trein wordt gemist
+Robbert zei dat de trein niet hoeft te zullen worden gemist
+%%
+%%
+%% main clause syntax
+ik mis de trein
+ik heb de trein gemist
+ik wil de trein niet missen
+ik heb de trein niet willen missen
+ik wil de trein niet hebben gemist
+de trein mis ik
+de trein heb ik gemist
+de trein wil ik niet missen
+de trein heb ik niet willen missen
+de trein wil ik niet hebben gemist
+vandaag mis ik de trein
+vandaag heb ik de trein gemist
+vandaag wil ik de trein niet missen
+vandaag heb ik de trein niet willen missen
+vandaag wil ik de trein niet hebben gemist
+de trein wordt gemist
+ik word gemist
+vandaag wordt de trein gemist
+vandaag word ik gemist
+vandaag zal de trein worden gemist
+vandaag wil ik worden gemist
+%%
+%% particles
+ik bel Robbert terug
+ik heb Robbert teruggebeld
+ik wil Robbert niet terugbellen
+ik heb Robbert niet willen terugbellen
+ik heb Robbert niet terug willen bellen
+ik wil Robbert niet hebben teruggebeld
+ik wil Robbert niet terug hebben gebeld
+Robbert bel ik terug
+Robbert heb ik teruggebeld
+Robbert wil ik niet terugbellen
+Robbert heb ik niet willen terugbellen
+Robbert wil ik niet hebben teruggebeld
+vandaag bel ik Robbert terug
+vandaag heb ik Robbert teruggebeld
+vandaag wil ik Robbert niet terugbellen
+vandaag heb ik Robbert niet willen terugbellen
+vandaag wil ik Robbert niet hebben teruggebeld
+Robbert wordt teruggebeld
+ik word teruggebeld
+vandaag wordt Robbert teruggebeld
+vandaag word ik teruggebeld
+vandaag zal Robbert worden teruggebeld
+vandaag wil ik worden teruggebeld
+%%
+%% pre+post met..mee
+ik wil met de trein mee
+vandaag wil ik met de trein mee reizen
+vandaag heb ik met de trein mee willen reizen
+met de trein mee wil ik vandaag
+%%
+%% embedded questions
+ik wil weten wat ik vandaag mis
+ik wil weten wie mij vandaag mist
+%%
+%% unbounded dependencies
+de trein zegt Arie dat ik mis
+%% non-wh long distance extraction of subjects is treated as ungrammatical
+-- ik zegt Arie dat de trein mis
+wie zegt Arie dat Robbert vindt dat ik moet bedanken
+Robbert heeft niet willen zeggen dat Arie de trein niet heeft willen terugbellen
+%%
+%% extrapositie (arg + comp), control
+ik heb beloofd te vertrekken
+Arie zei dat ik niet heb hoeven te beloven met de trein mee te gaan
+Arie zei dat ik hem niet heb hoeven te beloven met de trein mee te gaan
+hij zei te zullen beloven de trein te willen missen
+hij zei ons te zullen beloven de trein te willen missen
+ik heb beloofd om te vertrekken
+Arie zei dat ik niet heb hoeven te beloven om met de trein mee te gaan
+Arie zei dat ik hem niet heb hoeven te beloven om met de trein mee te gaan
+hij zei te zullen beloven om de trein te willen missen
+hij zei ons te zullen beloven om de trein te willen missen
+ik heb Robbert beloofd te vertrekken
+ik heb Robbert gevraagd te vertrekken
+Arie zei dat ik hem niet heb hoeven te vragen met de trein mee te gaan
+hij zei ons te zullen vragen de trein te willen missen
+Arie zei dat ik hem niet heb hoeven te vragen om met de trein mee te gaan
+hij zei ons te zullen vragen om de trein te willen missen
+ik ben vertrokken om de trein niet te missen
+om de trein niet te missen ben ik eerder vertrokken
+ik ben aardig
+ik ben een trein
+aardig ben ik niet
+ik blijf niet aardig
+ik lijk wel aardig
+% pp predc not recognized
+het leek me leuk
+%%
+%% rel
+de trein die ik heb gemist vertrekt
+de trein die mij mist vertrekt
+de treinen die ik heb gemist vertrekken
+de treinen die mij missen vertrekken
+treinen die ik heb gemist vertrekken
+treinen die mij missen vertrekken
+het doel dat ik heb gemist vertrekt
+het doel dat mij mist vertrekt
+de doelen die ik heb gemist vertrekken
+de doelen die mij missen vertrekken
+doelen die ik heb gemist vertrekken
+doelen die mij missen vertrekken
+de informatie die ik heb gemist vertrekt
+de informatie die mij mist vertrekt
+informatie die ik heb gemist vertrekt
+informatie die mij mist vertrekt
+het water dat ik heb gemist vertrekt
+het water dat mij mist vertrekt
+water dat ik heb gemist vertrekt
+water dat mij mist vertrekt
+de man wiens trein vertrekt
+de man met wiens trein ik vertrek
+de trein waarmee ik vertrek
+%%
+%% how to rule out:
+%%
+%% de man met welke trein ik arriveer
+hij vroeg wie vandaag wil vertrekken
+hij vroeg wat ik vandaag wil missen
+hij vroeg welke trein ik vandaag wil missen
+hij vroeg met welke trein ik vandaag wil arriveren in Groningen
+hij vroeg met wiens trein ik vandaag wil arriveren in Groningen
+hij vroeg hoe de trein vandaag zal arriveren in Groningen
+het water vertrekt .
+het water , dat mij mist , vertrekt .
+het water dat mij mist , vertrekt .
+het water , dat mij mist vertrekt .
+ik zei :
+ik wil maandag vertrekken
+ik wil op maandag vertrekken
+ik wil de laatste maandag van het jaar vertrekken
+ik wil op maandagen vertrekken
+ik wil dit weekend vertrekken
+ik wil deze vrijdag nog vertrekken
+%%
+%% participle inversion
+ik heb de trein teruggebeld
+ik wil de trein teruggebeld hebben
+ik wil de trein hebben teruggebeld
+ik wil de trein terug hebben gebeld
+ik zou de trein gemist willen hebben
+ik zou de trein willen hebben gemist
+%%
+%% extraction out of vp
+%% we no longer want to allow such parses, these are treated as
+%% ungrammatical
+-- die trein heb ik Arie beloofd om te missen
+%%
+%% aci
+dat ik Arie de trein zie missen
+dat Cecilia de oppasser de nijlpaarden ziet voeren
+dat Hans Cecilia de oppasser de nijlpaarden ziet helpen voeren
+ik zei dat Hans de oppasser hoort zeggen dat de nijlpaarden worden gevoerd
+%%
+%% imp pass
+er wordt gedanst
+in de trein wordt veel gedanst
+de trein wordt gemist door Arie
+er wordt geprobeerd de trein te halen
+er wordt gezegd dat er in de trein veel gedanst wordt
+om half tien wordt er in de trein gedanst
+in de trein is te dansen
+er is te dansen
+de trein is te missen
+de man zou op zijn te bellen
+de man zou zijn op te bellen
+dat de man zou zijn op te bellen
+dat de man zou op zijn te bellen
+dat de man op te bellen zou zijn
+%%
+%% er / indef
+er staat een paard in de gang
+% er sup...
+vandaag staat er een paard in de gang
+%%
+%% n --> adj
+er staat een rode auto in de garage en de groene rijdt weg
+hij geeft zich bloot
+hij schaamt zich voor de problemen
+de veranderingen kondigen zich aan
+een School Advies Dienst moet goede besluiten nemen
+het Ajax van Cruijff speelde beter dan het Ajax van 2000
+het invetten van de schoenen is de taak van de hulptrainer
+ik heb Cruiff gedreigd met harde maatregelen
+ik reageer me af op het meubilair
+de zoon aardt naar zijn vader
+dat ik aan haar denk
+dat ik met haar mee ga
+ik vind hem eng
+dat ik hem opdroeg te vertrekken
+wij voelden ons goed
+dat ik naga of alles uitstekend werd voorbereid
+ik vraag me wel af of ze komt
+het klopt dat hij intelligent is
+het verbaast me dat hij komt
+ik heb hem gezegd dat Italie niet is te kloppen
+de laatste doet het licht uit , aldus de nieuwslezer
+we sluiten af met gezang
+en we maken Cruijff gek
+de man op wie ik reken
+de man met wie ik zal verschijnen
+de bal waarmee we spelen
+ik vroeg wie er in de gang staat
+ik zag wie het gedaan had
+ik vroeg waarmee we moeten spelen
+ik vroeg met wie we moeten spelen
+ik zag waarmee we moesten spelen
+ik zag met wie we moesten spelen
+%%
+%% extraction out of pp
+waar denk je aan
+waar heb je nooit aan gedacht
+de oplossing waar ik op heb gewacht
+%%
+%% waar inspireert mij dit toe   IMPOSSIBLE: order of arg's! pronominals are
+%%
+%%                                           more liberal (than our grammar)
+waar inspireert dit mij toe
+waar worstelt hij mee
+%%
+%% impersonal passive (without subject)
+er wordt gevoetbald
+in Amsterdam wordt gevoetbald
+%%
+%% ter, per: prep's that select n instead of np
+Wij sturen u dit toe per post ter attentie van de heer Dijkhuis
+Per email duurt dit een minuut maar per post duurt het een week
+%%
+%% iets ADJ+S
+Ik wil vandaag iets heel bijzonders eten
+% 'sup' er nog recognized
+Geef dan maar iets vegetarisch als er niets lekkerders is
+%%
+%% ??ook:  aan het druiven plukken
+%%
+%% ??ook:  aan het schaatsen geweest zijn
+dr. Gertjan van Noord is meestal aan het luieren
+Wij zijn de kinderen aan het plagen
+De hulptrainer is eindelijk de schoenen aan het invetten
+dhr. Bouma moet aan het schaatsen zijn geweest
+terwijl Kees Jansma de kinderen aan het vervelen is
+dat Jan aan het knikkeren zou zijn
+Ik vond hem zowel aardig als een uitslover
+Ik vond hem niet alleen vervelend maar ook een eikel
+Ik kom hetzij om twaalf uur , hetzij om kwart over twaalf
+Ik denk , zei Jan , dat ik niet kom
+Ik denk , zo sprak Jan , dat ik niet kan komen
+Maar er zijn , volgens mij , meer mogelijkheden
+Ik vind jou geweldig , aardig , mooi , aantrekkelijk , en een stuk
+Ik vind jou geweldig , aardig , mooi , aantrekkelijk en een stuk
+Ik vind jou geweldig , aardig , mooi , aantrekkelijk , een stuk
+Ik vind jou zowel geweldig , aardig , mooi , aantrekkelijk , als een stuk
+Ik vind jou zowel geweldig , aardig , mooi , aantrekkelijk als een stuk
+Ik heb de man ontmoet die je versierde en die je vervolgens verliet
+Ik kom om twaalf uur of om half een
+Hij komt zonder enige twijfel , en met zijn knecht
+Ik kom om twaalf uur en dan krijg je wat je verdient
+Ik kwam , ik zag en ik overwon
+Dat is een lieve , aardige en mooie meid
+ik heb platen , boeken , cdroms etc. in deze kast
+Ik heb zowel Arie als Kees gezien
+Ik heb zowel Arie , Kees , Klaas als Piet ontvangen
+Ik heb noch de boeken noch de platen gekocht
+%%
+%%  R-pronouns!
+ik heb daar helemaal niet aan gedacht
+ik heb daarop gerekend
+ik heb daar niet op willen rekenen
+ik heb daar de president niet mee willen achtervolgen
+%this ordering is not possible yet:
+%ik heb de president daar niet mee willen achtervolgen
+ik heb de auteur daarvan niet ontmoet
+het meisje is bang daarvoor
+bang daarvoor is zij niet
+%%
+%% aci with optional object:
+dat is het boek waarover ik hoorde spreken
+%%
+%% hoe+Adj
+hoe lief vind jij dat meisje
+de vraag hoe lief ik haar vind werd niet gesteld
+hoe hard slaat zij haar man
+ik vroeg hoe warm en hoe ver het was
+%%
+%% wat voor (een) wh-determiner
+hij vroeg met wat voor kinderen dat lukt
+hij vroeg met wat voor een kinderen dat lukt
+ik weet wat voor aardige dingen de gemeente doet
+%%
+%% SENT , zei ik
+ik wil niet , zei ze boos
+%%
+%% diacritics
+het enige échte kapitaal waarop de Nederlandse ambtenaren gewacht hebben
+ik geef substantiële financiële steun
+ik heb wapens geexporteerd
+%%
+%% tags
+ja , dat is een probleem
+verrek , daar heb ik niet aan gedacht
+shit , heb ik mijn sleutels vergeten ...
+dat is geen probleem , hoor
+dat kan , zeker
+dat kan , ja hoor
+%%
+%% nucl-sat
+mocht ik later komen , dan moeten jullie alvast beginnen
+spruitjes , daar houd ik helemaal niet van
+%%
+%% adjectives
+een van spruitjes afkerig kind is heel normaal
+ieder kind is afkerig van spruitjes
+de man is bang dat hij naar huis moet
+hij is bang voor muizen
+hij is banger voor muizen
+hij is bang om te verliezen
+hij is banger om te verliezen
+het lijkt waarschijnlijk dat hij komt
+dat hij komt lijkt waarschijnlijk
+het lijkt bespottelijk om te verliezen
+om te verliezen lijkt bespottelijk
+waar is hij klaar voor
+hij is er klaar voor
+muizen , daar is hij het meest bang voor
+het meest bange kind
+het meer bange kind
+hij is het bangst
+hij is het bangste
+hij is het meest bang
+hij is het meest bang om te verliezen
+hij is meer bang om te verliezen
+hij heeft het hardst gelopen
+hij heeft het hardste gelopen
+%%
+%% within the AP
+hij is groter dan ik
+% extraposition (?)
+hij is liever in Groningen dan in Assen
+hij is witter dan wit
+% extraposition (?)
+hij komt liever morgen dan vandaag
+hij is groter dan ik veronderstelde
+hij is groter dan ik veronderstelde dat Piet zei
+hij is groter dan dat ik veronderstelde
+hij is groter dan dat ik veronderstelde dat Piet zei
+%%
+%% used as a modifier:
+hij komt vaker dan jij
+%%
+%% coordination of sbar:
+hij vroeg of hij kon komen en of hij iemand mee kon brengen
+hij zei dat hij iets later komt en dat hij zich daarvoor excuseert
+wie op tijd is en wie wil mag mee naar de dierentuin
+wie denk je dat ik kuste en dat hij ook had gekust
+we gaan naar huis omdat het al laat is en omdat we nog bezoek krijgen
+%%
+%% te-passive subj control
+hij heeft maar te komen
+hij zou nog zes boeken te lezen hebben
+% ?
+hij zou nog zes boeken hebben te lezen
+hij heeft zes boeken te lezen gehad
+hij krijgt zes boeken te lezen
+hij zou zes boeken te lezen krijgen
+% ?
+hij zou zes boeken krijgen te lezen
+hij heeft zes boeken te lezen gekregen
+%%
+%% te-passive obj2 control
+hij geeft ons de boeken te lezen
+hij heeft ons de boeken te lezen gegeven
+uit de statistieken bleek de opleving
+uit de statistieken bleek dat Feyenoord kampioen wordt
+het bleek uit de statistieken dat Feyenoord kampioen wordt
+dat Feyenoord kampioen wordt bleek uit de statistieken
+nu blijkt dat Feyenoord kampioen wordt
+het blijkt dat Feyenoord kampioen wordt
+daar komt bij dat Feyenoord kampioen wordt
+het kampioenschap van Feyenoord lijkt me leuk
+het lijkt me waarschijnlijk dat hij komt
+dat hij komt lijkt me waarschijnlijk
+het lijkt me bespottelijk om te verliezen
+om te verliezen lijkt me bespottelijk
+ik vind het leuk dat hij komt
+dat hij komt vind ik leuk
+ik vind het bespottelijk om te verliezen
+om te verliezen vind ik bespottelijk
+zoals ik heb afgesproken kom ik na de maaltijd
+zoals afgesproken kom ik na de maaltijd
+zoals ons beloofd willen wij de korting
+we hebben de materialen van voor de oorlog gezien
+we blijven hier tot na de vakantie
+we rijden door tot halverwege de route
+we rijden door tot halverwege
+hij beschreef een baan van links naar rechts
+het is vanaf nu nog drie dagen
+vanaf morgen of overmorgen is dat verboden
+hij vroeg sinds wanneer de bar geopend was
+sinds wanneer open jij de vergadering ?
+hij vroeg van waar de kogels kwamen
+hij kwam van boven vandaan
+hij kwam naar boven toe
+de vraag of je komt verbaasde mij
+de beslissing wie het mocht doen werd genomen
+de detectives vonden het bewijs dat jan schuldig was
+daar heb ik naar toe gebeld
+daar heb ik heen gebeld
+de boeken kosten twintig gulden
+de vergadering duurde uren
+de boeken kosten ons een klein fortuin
+ik ga naar huis al is dat verboden
+al is de waarheid nog zo snel , de leugen achterhaalt hem wel
+het sneeuwde al uren
+ik ga naar huis om te slapen en uit te rusten
+ik probeerde te slapen en de hele bende te vergeten
+%%
+%% VC topicalization [ too slow..... ]
+%%
+%% active
+aan het zwemmen waren ze in ieder geval niet
+op te bellen probeerde ik haar
+zwemmen wil Jan alleen in de zomer
+gedacht werd de operatie te voltooien
+aangekondigd werd dat de vakantie voorbij was
+gevoetbald wordt er niet
+te voetballen viel er niet
+op te bellen viel er niet veel
+kussen wou ik haar in geen geval
+gebleken is dat het sneeuwde
+voeren ziet Cecilia de oppasser de nijlpaarden
+gezegd werd mij dat zo'n oplossing bestaat
+geven wil ik de kinderen de platen
+zien voeren wil zij de oppasser de nijlpaarden
+%%
+%% accepted:  * zwemmen heeft Jan willen
+%%
+%% extraposition 
+%%
+%% comparatives
+%%
+%% introduced by compar adjectives
+%%
+%% realized in vp
+dat hij groter is dan ik
+dat hij een groter man is dan ik
+dat hij een later gemaakt voorstel indiende dan ik
+%%
+%% realized in np
+dat hij een later gemaakt voorstel dan ik indiende
+langer dan ik werkt niemand hier
+een langer persoon dan ik werkt hier niet
+ik heb dieper en langer geslapen dan gisteren
+ik heb even lang geslapen als gisteren
+hij is even dom als ik
+dat hij het zelfde idee heeft geopperd als ik
+dat hij dezelfde ideeen had als ik
+hoeveel harder dan ik sla je
+%%
+%% todo: hoeveel harder sla je dan ik
+ik heb iets mooiers gekregen dan jij
+%%
+%% extraposition of relative clauses
+ik heb de boeken gelezen die ik had gekocht
+ik heb de man gezien die de vrouw heeft gezien die hier werkt
+ik heb de vrouwen willen ontmoeten die hier wonen
+ik wil vrouwen met kinderen ontmoeten die hier wonen
+ik wil vrouwen met kinderen ontmoeten die hier spelen
+ik wil kinderen van buitenlandse werknemers ontmoeten die hier werken
+ik wil kinderen van buitenlandse werknemers ontmoeten die hier spelen
+ik wil meer vrouwen ontmoeten dan de man die slaapt
+%%
+%% ok: ik wil meer vrouwen dan de man ontmoeten die slaapt 
+ik heb de zak aardappelen verplaatst die in de weg stond
+ik heb de zak aardappelen weggegooid die verrot was
+ik heb iets lekkers gekocht dat jullie na het eten krijgen
+ik heb de leraar en de kinderen gezien die naar het sportveld fietsten
+%%
+%%ik heb op mijn vrouw en op mijn kinderen gerekend die mij altijd steunden
+de leraar en de kinderen heb ik gezien die naar het sportveld fietsten
+een mooiere vrouw heb ik gekust dan ik ooit durfde te dromen
+twee kinderen heb ik gezien die naar het sportveld fietsten
+de kinderen zou ik gezien hebben die naar het sportveld fietsten
+de kinderen zou ik hebben gezien die naar het sportveld fietsten
+leukere kinderen zou ik gekregen willen hebben dan jullie
+leukere kinderen zou ik willen hebben gekregen dan jullie
+% also from topicalized modifiers (?):
+in betere omstandigheden hebben wij gevoetbald dan jullie
+in omstandigheden hebben wij moeten voetballen die niet te beschrijven zijn
+% evenals, zoals
+zoals verwacht werd is Feyenoord kampioen geworden
+evenals in 1970 won Feyenoord de Europacup
+zoals Feyenoord de beker won in 1970 , won Feyenoord de beker in 2002
+zoals verwacht is Feyenoord kampioen geworden
+% extraposition of sbar and vp complements of nouns and adjectives
+ik ben bezig geweest het pand te verkopen
+bezig ben ik geweest te vertrekken
+ik ben blij geweest dat het pand werd verkocht
+blij ben ik wel geweest dat het pand werd verkocht
+we hebben de aankondiging gehoord dat we vertrekken
+de aankondiging werd vernomen dat we vertrekken
+ik was de afspraak vergeten niets te zeggen
+de afspraak werd gemaakt niets te zeggen
+die oplossing komt er natuurlijk op neer , dat we worden opgeheven
+die oplossing komt erop neer , dat we worden opgeheven
+hij slaagt er vandaag niet in om te slapen
+hij slaagt er vandaag niet in te slapen
+hij slaagt erin om te slapen
+hij slaagt erin te slapen
+dat hangt er van af wat je daarmee bedoelt
+dat hangt ervan af wat je daarmee bedoelt
+dat hangt er van af of je komt
+dat hangt ervan af of je komt
+hij heeft zich er steeds van verzekerd dat het bestuur hem steunt
+hij had ons er van overtuigd dat het bestuur hem steunde
+het is een geheim dat hij vertrekt
+dat hij vertrekt is nog een geheim
+het is me een raadsel of hij vertrekt
+het is me een raadsel wanneer hij vertrekt
+of hij vertrekt is me een raadsel
+wanneer hij vertrekt is me een raadsel
+een raadsel is dat hij vertrekt
+een raadsel is het dat hij vertrekt
+vreemd is dat hij vertrekt
+vreemd is het niet dat hij vertrekt
+een goed idee is om nu te gaan slapen
+een goed idee is het niet om nu te gaan slapen
+onplezierig is om nu te vertrekken
+onplezierig is het om nu te vertrekken
+leuk vind ik het niet dat hij komt
+leuk vind ik dat hij komt
+bespottelijk is om te verliezen
+bespottelijk is het om te verliezen
+het wordt niet leuk gevonden dat hij komt
+leuk wordt het niet gevonden dat hij komt
+%%
+%% leuk wordt gevonden dat hij komt     supposed to be ungrammatical (?)
+dat hij komt wordt niet leuk gevonden
+%%
+%% otherwise unused (?) rules:
+ik vertrok zonder dat zij het wist
+ik heb al uren gewacht , op die vervelende kinderen
+ik ben geworden wat jij had voorspeld
+ik ben geworden , wat jij had voorspeld
+ik ga naar huis met mijn kinderen , maar zonder mijn vrouw
+wat je zegt ben je ook
+ik heb vandaag gegeten wat ze vorige week niet hadden
+ik heb vandaag gegeten , wat ze vorige week niet hadden
+wat je zegt , ben je ook
+we gaan , vooral omdat we moe zijn
+dat is het huis waar we wonen
+hij vertelde ons waar hij woont
+we kwamen van achter vandaan
+de keizer kwam , zag en overwon
+we gaan met de kinderen en zonder vrouw
+hij zei dat we vertrekken en dat we haast hebben
+we gaan naar school om iets te leren , en vrienden te ontmoeten
+%%
+%% fixed
+dat we op zoek zijn naar Jolanda
+dat we naar Jolanda op zoek zijn
+dat we daar naar op zoek zijn
+ik ben nog steeds op zoek
+dat ik van mening ben dat Ajax moet verliezen
+dat brengt met zich mee dat we vroeg moeten vertrekken
+dat brengt moeilijkheden met zich mee
+dat hij de moeilijkheden ter sprake bracht
+dat wij zeer slordig te werk zijn gegaan
+Ajax gaat ten onder aan drank , sex en vrouwen
+dat hij de boel overhoop haalt
+dat hij nog een verrassing in petto had
+we houden rekening met vertraging
+we houden daar rekening mee
+we houden daarmee rekening
+we houden er rekening mee dat je komt
+dat de problemen ter sprake komen
+dat de kleuren niet goed uit de verf komen
+deze manifestatie staat in het teken van de vrede
+dat hij twee boeken beschikbaar stelde
+dat hij ons twee boeken beschikbaar stelde
+de man werd in de rede gevallen
+ik stelde hem in staat een boek te lezen
+een lichte twijfel maakte zich van hem meester
+de politie nam daar poolshoogte
+de politie nam poolshoogte in Amsterdam
+je ziet er goed uit
+je ziet er uit als een zwerver
+we zijn het er eindelijk over eens dat de politie moet optreden
+we zijn het er eindelijk over eens om hard op te treden
+we zijn het er natuurlijk mee eens dat de politie moet optreden
+we zijn het er natuurlijk mee eens om hard op te treden
+hij hield zich de kapers van het lijf
+hij maakte zich meester van de cockpit
+ik beschouw hem als geniaal
+het zag er als nieuw uit
+ze beschouwen de auto als nieuw
+%%
+%% coordination of vp, vpx (subj/e_deps distinction)
+ik probeer om te slapen en om goed uit te rusten
+ik probeer te slapen en goed uit te rusten
+hij zei dat ik sliep maar zij wakker was
+laten we hem wakker maken !
+hij is gek genoeg blijven slapen 
+hij krijgt drie neefjes te logeren
+hij krijgt alles toegestuurd
+hij heeft alles toegestuurd gekregen
+hij zei dat hij alles toegestuurd zou krijgen
+hij zei dat hij alles toegestuurd zou hebben gekregen
+ik wil alles toegestuurd krijgen
+toegestuurd wil ik alles niet krijgen
+ik heb hem lof toegezwaaid
+%%
+%% ungrammatical: hij zei dat hij alles zou heb gekregen toegestuurd
+%%
+%% ungrammatical: hij zei dat hij alles zou heb krijgen toegestuurd
+%%
+%% pronouns now allow post-modifiers [rel,pp]
+hij die zonder zonden leeft werpt de eerste steen
+wij die dat toch gewend zijn schrokken hier erg van
+ik vind dat alles wat je ziet in de wasmachine moet
+ik vind dat datgene in de wasmachine moet dat vuil is
+iedereen die nadenkt weet dat dat beter is
+ik vond dat van jou niet best
+wij als warenhuis vinden kwaliteit belangrijk
+de stijging is gelijk aan die tijdens het kabinet Cals
+ga je schamen !
+niemand anders dan Bin Laden kan dat gedaan hebben
+dat kan niemand anders gedaan hebben dan Bin Laden
+ik wil nergens anders wonen dan in Aduard
+nergens anders wil ik wonen dan in Aduard
+waar anders kan ik zulke oliebollen kopen ?
+%%
+%%
+%% wat anders hadden we moeten doen ?
+ik geloof niet dat je bang moet zijn voor muizen
+ik geloof dat je banger bent voor muizen dan ik
+ik geloof dat je banger bent dan ik voor die kleine muisjes
+ik ben het gezeur beu
+ze moet het al lang beu zijn dat je nooit meer komt
+ze moet het beu zijn om altijd jouw spullen op te ruimen
+ze vertonen dezelfde als gisteren 
+Ida heeft zo snel gezwommen dat ze naar de finale gaat
+Ida heeft dusdanig gezwommen dat ze naar de finale gaat
+De resultaten waren dusdanig dat ze naar de finale gaat
+Ida heeft evenveel boeken gelezen als Rik
+Ida heeft evenveel hard gelopen als Rik
+Er doet zich echter een probleem voor
+Er schijnen zich echter problemen voor te doen
+Het probleem deed zich voor dat hij afwezig was
+Wij zagen de problemen zich voordoen
+Vandaag gaan er veel mensen naar toe
+Vandaag zouden er veel mensen naar toe gaan
+%%
+%% inherently reflexive pp's
+Hij heeft de problemen voor zich gehouden
+Hij nam het zonder commentaar tot zich
+%%
+%% with_dt: complex lexical entries with pre-determined dt
+Een paar kinderen vroegen om een ijsje
+Ik heb een beetje geaarzeld
+Ik werd een beetje misselijk
+Ik ben een klein beetje verliefd
+Juist een klein beetje ben ik verliefd
+Een paar hebben dat toen gedaan
+Een aantal van hen hebben inderdaad de web-site bezocht
+%%
+%% adverbial ld complement
+De beurs gaat omhoog
+We hebben de boel omlaag gedonderd
+We begaven ons omlaag
+Omlaag donderden we die troep toen onmiddellijk
+%%
+%% postposition phrases as ld complement
+We zijn het bos uit gelopen
+Hij ging de huizen langs
+Hij ging de huizen toen langs
+Haye heeft de bal het dak op geschopt
+Dus begaf Alie zich het dak op
+We gaan naar huis ongeacht of je klaar bent
+We gaan naar huis ongeacht wie er nog komt
+Ik was toen een beetje in de war
+Menige joint venture had drie jaar na dato weinig geld versus geen geld
+%%
+%% pobj + vc
+Wij betwijfelen het of hij komt
+Of hij blijft betwijfelen wij ten zeerste
+Het wordt alom betreurd dat hij komt
+Of hij komt wordt alom betwijfeld
+%%
+%% clefts and cleft lookalikes
+Het zijn schurken
+Schurken zijn het zeker !
+-- Het is op een oude liefde dat zij jaren heeft gewacht
+-- Het is in Amsterdam dat hij woont
+%%
+%% todo: echte modifier...
+%%
+%% het is in Amsterdam dat de wedstrijd wordt gespeeld
+Het zijn schurken die dat doen
+Het is geen buitenlander die dat gedaan heeft
+Het is schandalig wat zij doen
+Het is onzin wat je daar zegt
+%%
+%% sdat_subj new fixed el
+Het laat me siberisch of hij blijft
+Of hij blijft laat me koud
+%%
+%% er_pp_sbar_adjecive/er_pp_vp_adjective
+Ik ben er bang voor dat hij blijft
+Ik ben er trots op dit te mogen doen
+Ik vond hem er verantwoordelijk voor de deuren tijdig te sluiten
+%%
+%% sinf_subj as a new fixed el
+Het is nu aan ons om de wedstrijd te winnen
+%%
+%% "modal inversion"
+Dat ik de wedstrijd winnen wil
+Dat ik de wedstrijd nooit opgeven zal
+Dat ik de wedstrijd nooit op geven zal
+%%
+%% te-V as adjective (tst_head.pl)
+de te verwachten maatregelen
+de te nemen strafschop
+het te formuleren beleid
+% new treatment of agreement in rel (using wh feature)
+De auteur wiens boeken gelezen worden is in de stad
+% tmp_app_noun
+Ik wil begin volgende week naar Amsterdam
+Ik wil begin januari 2003 het boek uitgeven
+% comp_number_dat
+We gaan er zoveel van verwachten dat het wel moet teleurstellen
+%%
+%% part-te-V as adjective (tst_head.pl)
+De uit te voeren opdrachten
+%%
+%% naar_complementizer (consumes slashed sbar arg)
+Naar ik begrepen heb blijft hij
+Naar nu blijkt blijft hij
+Naar verluidt blijft hij
+%%
+%% word order variation ld/np
+omdat wij onze bedrijven altijd in de Randstad concentreren
+omdat wij in de Randstad onze bedrijven concentreren
+%%
+%% word order variation pc/np
+omdat wij dat niet op kennis baseerden
+omdat wij op kennis vele belangrijke beslissingen hebben gebaseerd
+%%
+%% aan-obj2/obj1
+omdat ik aan hem de winst beloofde
+omdat ik de winst nooit aan hem beloofde
+%%
+%% obj1/obj2 (preference is obj2<obj; pronominals vary)
+omdat ik het de kinderen geef
+omdat ik de kinderen een boek geef
+%%
+%% adv + rel
+overal waar de meisjes zijn is het menens
+vanavond wanneer ik slaap slaap ik
+overal van waar de vijand ons kan raken worden stellingen opgebouwd
+overal in Rotterdam werd geprotesteerd tegen Pim Fortuyn
+%%
+%% also allows extraposition
+ik wil overal wonen waar een voetbalclub is
+ik wil wonen waar een voetbalclub is
+Ze zijn naar Rotterdam gekomen waar ik toen logeerde
+Ik heb de kapotte opgespoord die het probleem veroorzaakte
+Met Fortuyn dronken wordt dit moeilijk
+Met Fortuyn de baas wordt dit moeilijk
+Met parallel hieraan een mooie versiering
+Zij droeg een jurk met daaronder een legging
+Met één ronde te gaan bedroeg zijn voorsprong drie seconde
+Ik weet hoe weinig ik weet
+Ik weet met hoe weinig moeite hij de wedstrijd wint
+Hoe is de pasta ?
+Ik vroeg me af hoe jij de pasta vindt .
+Het laat zich raden dat ik slaap .
+Dat ik slaap laat zich raden .
+Ik aanvaardde en begroette de nieuwe voorzitter
+Ik zou en moest de wedstrijd zien
+Ik wilde haar zien en horen
+Ik wilde haar zien of opbellen
+Ik heb haar zien slapen en horen hoesten
+dat ik gezien en gehoord word
+dat ik op gebeld en ondervraagd werd
+dat ik opgebeld en beschimpt werd
+het is drie weken geleden dat je kwam
+dat hij zijn examen haalde is drie weken geleden
+ik lees het boek vandaag zelf
+zij tellen allebei de boeken alle zevenhonderd zelf
+mij staat voor ogen om de organisatie te reorganiseren
+mij staat niet meer voor ogen wie de dader was
+mij staat niet meer voor ogen of de dader gepakt werd
+laten we naar de stad gaan
+laten we de boeken lezen
+ik kies de zo snel mogelijke verbinding
+ik kies een zo snel mogelijke goedkope verbinding
+ik kies een zo goedkoop mogelijk boek
+ik rijd zo hard mogelijk
+zo min mogelijk fruit werd weggegooid
+zo weinig mogelijk fruit werd weggegooid
+zo veel mogelijk fruit werd bewaard
+zoveel mogelijk fruit werd bewaard
+ik wil vannacht zoveel mogelijk slapen
+% gosse, leonoor: ungrammatical
+% ik ben er zo attent mogelijk op dat de opdrachten worden gemaakt
+% wij zijn zo attent mogelijk op misbruik van de voorzieningen
+ik heb drie kinderen , namelijk Rik , Ida en Kris .
+hij is als zijn vader
+het was zover , dat we een taxi bestelden
+het kost een fortuin om de schade te vergoeden
+het kost me een fortuin om de schade te vergoeden
+het kost een fortuin dat ons huis verbouwd moet worden
+het kost ons een fortuin dat ons huis verbouwd moet worden
+om alle schade te vergoeden kost een klein fortuin
+om alle schade te vergoeden kost ons een klein fortuin
+dat ons huis verbouwd moet worden kost een klein fortuin
+dat ons huis verbouwd moet worden kost ons een klein fortuin
+ik dank het aan jou dat ik leef
+hij waagde het de minister aan te vallen
+we hebben een of andere idioot ontmoet
+we hebben één of andere idioot ontmoet
+we stellen het op prijs dat je komt
+dat je komt stellen we op prijs
+er wordt op gerekend dat je komt
+er werd aan gedacht de voorzitter te bedanken
+problemen daargelaten verwachten we morgenavond te arriveren
+de functionele troepen , waaronder de marine
+de leden , onder wie de voorzitter
+de hoger opgeleiden sliepen
+de talrijke hoger opgeleiden sliepen
+de pas afgestudeerden vertrokken
+de hoger opgeleiden en pas afgestudeerden vertrokken
+de talrijke hoger opgeleiden en pas afgestudeerden vertrokken
+ik heb niemand om mee te spelen
+omdat ik niemand ken om te vragen
+zij is dat leuke , aardige meisje
+allebei de prijzen werden door ons gewonnen
+we hebben ettelijke prijzen gewonnen
+meer dan jullie hebben wij uitgegeven
+hetzelfde als jullie hebben wij gegeten
+hetzelfde voedsel als jullie hebben wij gegeten
+er werd tien kilo verkocht
+er werd tien kilo vlees verkocht
+er werden tien kilo's verkocht
+er werden tien kilo's vlees verkocht
+het is vervelend genoeg dat hij komt
+ik vind het leuker dan gisteren dat hij komt
+zij maakten het zo leuk mogelijk om te komen
+het leuke is dat hij bij zijn zoon slaapt
+een der aanwezigen kwam naar voren
+het leukst is dat hij bij zijn zoon slaapt
+het liefst voor de kinderen ben ik
+de problemen welke ik had verwacht
+de problemen zijn moeilijk hetgeen ik had verwacht
+Jantje , nog haatdragender dan anders , maakte voortdurend vervelende opmerkingen
+Jantje ( nog haatdragender dan anders ) maakte voortdurend vervelende opmerkingen
+Jantje - nog haatdragender dan anders - maakte voortdurend vervelende opmerkingen
+We maken het vrouwen moeilijk .
+We maken het vrouwen mogelijk om succes te hebben .
+Het is de moeite waard hier bij stil te staan
+Het is de moeite waard dat we hier bij stil staan
+Dat is de moeite waard
+%%
+%% wel lelijk:
+We maken het de buitenlanders mogelijk dat ze integreren
+Ik heb genoeg geld om een ijsje te kopen
+Ik ben voldoende dom om een ijsje te kopen
+Ik ben dom genoeg om een ijsje te kopen
+De man zoals ik die ken
+Volgende week vrijdag vertrek ik
+Ik vertrek voor volgende week vrijdag
+Ik vertrek half mei
+Ik vertrek voor half mei
+Ik vertrek met als gevolg dat de kinderen alleen achterblijven
+Gisteravond laat vertrok hij naar Assen
+Geen smoesjes meer
+Ik word onrustig van haar gezeur
+Ik word er onrustig van naar jou te moeten luisteren
+Ik word er onrustig van dat je niet ophoudt
+Ik beschouw hem als ongeschikt
+Ik beschouw het als ongepast om te vertrekken
+Ik beschouw het als ongepast dat je vertrekt
+Meer dan de helft van de apen hangen in de boom
+Meer dan de helft van de apen hangt in de boom
+De meer dan drie meisjes kus ik
+Wij ontmoetten de zwemmers , waaronder de kampioen : Ida !
+Na de 2-0 overwinning van vorige week won Feyenoord opnieuw ( 4-1 )
+Meer dan voorheen haat hij het meisje
+Wij kneden meer explosieven dan voorheen
+Wij kneden twee explosieven meer dan voorheen
+Wij zwemmen even graag als Ida
+Ik bestel nu drie dozen meer
+Het ontbreekt ons aan lef
+Wij komen in aanraking met drugs
+Wij rekenen het tot onze taak kinderen tegen drugs te waarschuwen
+Wij houden het er maar op dat drugs slecht zijn
+Het doet ons deugd dat roken verboden is
+Het ligt aan de maatschappij dat drugs gebruikt worden
+Het ligt voor de hand dat alcohol slecht is
+Maar alcoholisten houden zich van de domme
+Het heeft de regering behaagd roken te verbieden
+Roken oogt vaak een beetje smerig
+Wij laten roken achterwege
+De problemen kwamen slecht uit
+De problemen kwamen ons slecht uit
+Het kwam slecht uit dat het regende
+Het kwam ons slecht uit dat het regende
+Het berokkent ons schade dat het blijft regenen
+Het berokkent schade dat het blijft regenen
+Het regende kansen voor Feyenoord
+Drie procent meer winst behaalden wij het jaar daarop
+Genoeg geld om snoep te kopen hadden wij die dag niet
+Het gaat te ver om deze handelswijze bedrog te noemen
+Jij gaat te ver
+We zijn te ver van het pad af gedwaald
+Aldus geschiedde
+%%
+%% np complement
+Omdat ik alle boeken wilde lezen van Chomsky
+Omdat ik de uitgever van alle boeken ken van Chomsky
+%%
+%% pred complement
+Omdat ik de uitgever ben van alle boeken
+Omdat ik de uitgever van alle boeken ben van Chomsky
+%% DIP
+Wie heeft , denk je , de boeken gelezen ?
+Wie heeft , zo vroeg hij , de boeken gelezen ?
+Ik heb , zo verklaarde hij , het niet geweten
+Ik heb het , zo verklaarde hij , niet geweten
+Ik heb het niet , zo verklaarde hij , geweten
+Ik heb , zei hij , het niet geweten
+Ik heb het , zei hij , niet geweten
+Ik heb het niet , zei hij , geweten
+Hij zei : ik stop !
+Hij zei : wie heeft dat gedaan ?
+Hij zei : van onderen !
+Dat komt door jullie , zei hij .
+Dat komt door jullie , zo verklaarde hij .
+Dat komt door jullie , zo verklaarde , dacht ik , de minister
+Wie zou er , denk ik , niet komen ?
+Toen hij , dacht ik , sliep .
+Is het waar , zo vroegen wij , dat hij komt ?
+Is het waar , vroeg ik , dat hij komt ?
+Verwachten we , vroeg ik , de klanten vanmiddag ?
+We vertrekken , al moeten we , denk ik , uitkijken !
+Hij verklaarde : ik wist het niet !
+Hij vroeg ons : wie heeft het gedaan ?
+Hij keek me aan alsof hij wilde zeggen : flauwekul !
+Omdat hij me toen vroeg : wie heeft het gedaan ?
+Alle projecten , stelt de commissie voor , duren drie jaar .
+Alle projecten , zo stelt de commissie voor , duren drie jaar .
+%% 
+Omdat ik alle brieven wilde lezen van de lezers en de lezeressen die hebben gereageerd
+%% 
+We moeten , aldus Balkenende , zuinig zijn .
+%%
+De gisteren gevonden exemplaren
+De daar gelegerde troepen
+De vorig jaar afgestudeerden
+De dichter en schrijver Jan Wolkers
+Dat is Jan Wolkers , een groot schrijver en dichter .
+De jongen en het meisje , kampioenen van Groningen , kwamen naar voren .
+%% 
+Aduard , Aduard , Aduard , Aduard , Aduard , Aduard
+Aduard , Aduard , Aduard , Aduard , Aduard en Aduard
+Aduard , Aduard , Aduard , Aduard , Aduard , en Aduard
+zowel Aduard , Aduard , Aduard , Aduard , Aduard als Aduard
+zowel Aduard , Aduard , Aduard , Aduard , Aduard , als Aduard
+%% AP, dat; VANDAAR dat
+Logisch , dat je dan verliest
+Logisch dat je dan verliest
+Vandaar dat hij komt .
+%% short indirect questions
+Ik vroeg hem waarom .
+Hij vertelde me ook wat voor problemen .
+Hij vroeg me ook met wie .
+De vraag is waarom .
+%% WH dan ook
+Handel in welke vorm dan ook was verboden
+Je belde de prefect of welke functionaris dan ook
+We hebben geen respect voor hoger geplaatsten , hoe hoog dan ook
+%% PREDicative PP
+Het is van het grootste belang , dat hij komt
+Het is van groot belang , Marcel Wouda uit te nodigen
+Het weerloze is van een grote waarde
+%% 
+Ik neem het de zwemmer kwalijk dat hij niet komt
+Dat hij niet komt neem ik de zwemmer kwalijk
+%% 
+Ik reken het tot een belangrijke taak om normen en waarden af te leren
+Normen en waarden af te leren reken ik tot een belangrijke taak
+%% 
+Dat is een voorbeeld van hoe het moet
+%% 
+Zo niet , dan krijgen we problemen
+Zo niet de Nederlanders .
+%% 
+Jammer dat hij niet komt .
+%% 
+Dat zijn schurken !
+Vorig jaar waren dit nog de winnaars .
+%% 
+Gisteren werd duidelijk dat hij problemen krijgt .
+%% 
+Om er onmiddellijk aan toe te voegen : maar ik kom niet !
+%% dp: PREDM MAX
+Allemaal flauwekul !
+Allemaal om ons te intimideren .
+Alle drie in het rose .
+Allebei met hun echtgenoot .
+%% 
+Wij komen net als jullie allebei
+%% dp: ADV : MAX
+Kortom : een rare geschiedenis
+Bovendien : op zaterdag kunnen we niet
+%% ADV + mod
+Waar in Groningen heb je gewoond ?
+Steeds als ik je bel neem je niet op
+Gisteren toen ik thuis kwam was ze vertrokken
+%% 
+Dus vandaar mijn vraag
+%% sprake ..
+Er is sprake van verwarring
+Er is sprake van dat Marcel Wouda komt
+%% 
+Het leek me niet te kunnen
+Het leek me dat hij zou komen
+%% te-passive
+Het viel te verwachten dat hij zou komen
+Het is niet te voorspellen of hij komt
+Het is niet te voorspellen wanneer hij komt
+Dat hij komt viel te verwachten
+Of hij komt valt niet te voorspellen
+Wanneer hij komt valt niet te voorspellen
+Het zou niet te voorspellen zijn of hij komt
+Het viel hem niet duidelijk te maken dat ik kom
+%% plural names
+de Verenigde Staten zijn boos
+Vooral met Wouter de baas vrees ik het ergste
+%% X_ en Y
+De lees- en weethonger in binnen- en buitenlandse gezinnen gaan we aan- en afvoeren
+%% ADV coord NP[tmp]
+Vandaag of vrijdag moet de beslissing vallen
+%% PN : DIP
+Balkenende : " We moeten eerst de zaak inhoudelijk bekijken "
+%% IPP/te interaction
+Hij heeft weer zitten zeuren
+Hij heeft niet hoeven aarzelen
+Hij heeft niet hoeven te aarzelen
+Ik heb geaarzeld vandaag
+Ik heb geaarzeld begin dit jaar
+Ik heb geaarzeld halverwege
+%% short questions
+Waarom jij ?
+Waarom in München ?
+Waarom groen ?
+Waarom vandaag ?
+Waarom niets nieuws geprobeerd !
+Waarom niets nieuws proberen !
+Hoe een invaller te vinden ?
+Wat te zeggen van deze uitslag ?
+%% top-Num
+Ida staat in de top-100 !
+%% alsof pred
+Wij doen maar alsof .
+We deden alsof we dat heel erg vonden .
+Het lijkt alsof hij komt .
+Dat gerecht smaakte alsof er een engeltje over je tong piest
+Dat voelde aan alsof het gevroren had
+%% X-, Y- en Z
+Dit is een huis- , tuin- en keukenoplossing
+%% ap+refl(+sbar su)
+Hij komt me bekend voor
+Het komt me overdreven voor om nu te vertrekken
+Het komt me onwaarschijnlijk voor dat hij vertrekt
+%% modifier preceding second conjunct
+Hij slaapt om uit te rusten en zelden om te dromen
+Hij verkocht twee of om zeker te zijn drie boeken
+Hij sliep binnen en later buiten
+Zijn gezicht werd blauw en later een schilderij
+Hij sliep in de voorkamer en later in de achterkamer
+Hij dacht dat hij sliep en later dat hij niet wilde komen
+%% iedere/elke NUM N
+Hij komt iedere twee weken
+Het kampioenschap wordt elke vier jaar georganiseerd
+%% plural tmp_nouns
+De race werd twintig minuten uitgesteld
+%% app_measure nouns:
+Van het woord vergeving hebben velen suikergoed gemaakt
+%% sc_meas_tmp_noun(measure)
+Na twee jaar ploeteren kunnen we in het jaar 2005 uitrusten
+%% frames
+Ik heb aan hem gevraagd om te vertrekken
+Ik sta aan hem toe om te vertrekken
+%%
+De laatste ( ? ) wedstrijd verloor Cruyff met 8-0
+%% 
+Dat waren de kinderen die hij trainde en begeleidde
+%% 
+Lachend : " Het was geen wervende film . "
+%% te + obcomp
+Hij was te aardig om te klagen
+Dat waren veel te aardige mensen om daarover te klagen
+Hij heeft te lang getreuzeld om de trein te kunnen halen
+%% 'van niet' and 'van wel' can be used as sbar
+Ik denk van niet
+Hij was bang van wel
+%% 'niet eens'
+Ze weten nog niet eens wat voetballen is
+%% zo: vp_adverb
+Ze was zo aardig weg te gaan
+%% topicalized particle
+%% topicalized particle written as one word
+Vaststaat nu wel dat hij komt
+Vast staat nu wel dat hij komt
+Vast zou staan dat hij komt
+%% su_ap_pred_sbar and su_ap_pred_vp frames
+Het stemt me tevreden dat hij komt
+Dat hij komt stemt me tevreden
+Tevreden stemt me dat hij komt
+Tevreden stemt het me dat hij komt
+Het maakt me depressief om zo behandeld te worden
+Het maakt me depressief zo behandeld te worden
+Om zo behandeld te worden maakt me depressief
+Zo behandeld te worden maakt me depressief
+Depressief maakt het me om zo behandeld te worden
+Depressief maakt het me zo behandeld te worden
+Depressief maakt me om zo behandeld te worden
+Depressief maakt me zo behandeld te worden
+%% subject_vp/sbar_pred_np_me_adjective with secondary object
+Het is hun veel geld waard om de frequentie te verkrijgen
+Het is hun veel geld waard dat de frequentie wordt verkregen
+%% complex pre-np determiners:
+Alle vier de kinderen hebben hun patat op
+%% --ste does *not* behave like -e adjectives:
+Belangrijkste bezwaar was dat de patat koud was
+%% PP : ROOT 
+In ieder geval : we gaan niet
+%% relatives and indirect questions: modifiers thru slash, hence long-dist
+Dat is het bed waarin Piet zei dat we moesten slapen
+Ik wist hoe lang Piet dacht dat de wedstrijd zou worden uitgesteld
+%% relatives with additional dat/of (spoken language)
+Ik vroeg of dat hij sliep
+Ik vroeg wie of er zou komen
+Ik vroeg wie dat er zou komen
+Ik vroeg wie of dat er zou komen
+%% dat < subject
+vandaag komen ons de problemen belachelijk voor
+dan komt uit Londen het verlossende bericht
+%% imparative tag-nucl:
+Geloof me , ze komt niet
+Kijk , daar komen de schutters
+We verdienen meer dan in dezelfde periode vorig jaar
+Het saldo trok 8 1/2 punt aan
+Het saldo steeg twaalfduizend driehonderdtweeëntachtig punten
+We bespreken nu het punt dat de wedstrijden te weinig boeien
+Feyenoord heeft veertien punten voorsprong
+We gaan de ochtend van de 14e augustus naar huis
+%% preps... ld/no_ld r/no_r
+De politie was ter plaatse
+De politie bevond zich temidden van de demonstranten
+Ik bevond me temidden daarvan
+Met de kinderen in huis kun je niet werken
+Wij liepen rond het park
+Meneer de voorzitter heeft het woord
+Hij zei van ik kom niet
+Hij zei van niet
+Ik had toen zoiets van ik kom nooit
+%% ld nps with particle incorporated by verb
+Ik ben de berg opgegaan
+Ik heb hem de berg opgebracht
+Hij moest zich de trap ophaasten
+De beurs is drie punten omhoog gegaan
+De NS zet bussen in
+De NS zetten bussen in
+Vandaar natuurlijk dat hij niet komt
+Oftewel : grote problemen
+%% ld_pp_meas, no prep
+Het aandeel daalde een procent naar twee euro
+%%
+Om twee uur 's nachts vertrok het convooi
+%% ld-adv in absolute-met
+Mooi weer met hier en daar een bui
+Met haar vriend elders heeft zij het hoogste woord
+Allemaal leuk en aardig
+Jullie allebei worden verwacht om twee uur 's middags
+Van elke duizend werknemers onderzoeken wij honderd werknemers
+Hij is te zien geweest in Assen
+Hij zou te zien zijn geweest in Assen
+De bezuinigingen vielen ons rauw op het dak
+Zij vielen elkaar opgelucht in de armen
+%% we cannot treat: hij zou te zien geweest zijn in Assen (double psp fr)
+%% we cannot forbid: hij is geweest te zien in Assen
+%% 
+%% Dat was om wanhopig van te worden
+%%
+%%
+%%
+%%
+%%
+%% never have empty lines in this file
+%%
+%% 
+%%
+%% NB: ALWAYS ADD NEW SENTENCES TO THE END OF THIS FILE:
+%%
+%% otherwise the numbering of the corresponding treebank is incorrect!

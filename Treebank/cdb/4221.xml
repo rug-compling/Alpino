@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="0" cat="conj" end="20" id="1" rel="--">
+      <node begin="0" cat="smain" end="4" id="2" rel="cnj">
+        <node begin="0" end="1" id="3" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="Nu"/>
+        <node begin="1" end="2" id="4" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+        <node begin="2" end="3" genus="onz" getal="ev" id="5" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+        <node begin="3" buiging="zonder" end="4" graad="comp" id="6" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="predc" root="beter" word="beter"/>
+      </node>
+      <node begin="4" conjtype="neven" end="5" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="5" cat="smain" end="20" id="8" rel="cnj">
+        <node begin="5" end="6" getal="ev" id="9" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
+        <node begin="6" end="7" id="10" lemma="bewijzen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="bewijs" word="bewijst" wvorm="pv"/>
+        <node begin="7" cat="cp" end="20" id="11" rel="vc">
+          <node begin="7" conjtype="onder" end="8" id="12" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="8" cat="ssub" end="20" id="13" rel="body">
+            <node begin="8" end="9" getal="getal" id="14" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+            <node begin="11" end="12" id="15" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+            <node begin="9" cat="np" end="20" id="16" rel="su">
+              <node begin="9" buiging="met-e" end="10" graad="basis" id="17" lemma="bepalen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="bepaald" word="bepaalde"/>
+              <node begin="10" end="11" getal="mv" graad="basis" id="18" lemma="conditie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="conditie" word="condities"/>
+              <node begin="12" cat="rel" end="20" id="19" rel="mod">
+                <node begin="12" end="13" id="20" index="1" lemma="waarop" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarop" word="waarop"/>
+                <node begin="12" cat="ssub" end="20" id="21" rel="body">
+                  <node begin="13" cat="np" end="15" id="22" index="2" rel="su">
+                    <node begin="13" buiging="zonder" end="14" id="23" lemma="betalen" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="mod" root="betaald" word="betaald" wvorm="vd"/>
+                    <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="24" lemma="voetbal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="voetbal" word="voetbal"/>
+                  </node>
+                  <node begin="18" end="19" id="25" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+                  <node begin="12" cat="inf" end="20" id="26" rel="vc">
+                    <node begin="12" end="13" id="27" index="1" rel="mod"/>
+                    <node begin="13" end="15" id="28" index="2" rel="su"/>
+                    <node begin="15" cat="pp" end="17" id="29" rel="mod">
+                      <node begin="15" end="16" id="30" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                      <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="31" lemma="Maastricht" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Maastricht" word="Maastricht"/>
+                    </node>
+                    <node begin="17" end="18" id="32" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+                    <node begin="19" buiging="zonder" end="20" id="33" lemma="gedijen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="gedij" word="gedijen" wvorm="inf"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="34" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="21" end="22" id="35" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>Nu gaat het beter en dat bewijst dat er bepaalde condities zijn waarop betaald voetbal in Maastricht wel kan gedijen . &quot;</sentence>
+</alpino_ds>

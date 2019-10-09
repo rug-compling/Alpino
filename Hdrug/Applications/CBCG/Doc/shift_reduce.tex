@@ -1,0 +1,43 @@
+\begin{verbatim}
+:- op(500,xfy,==>).
+:- multifile '==>'/2.
+:- dynamic '==>'/2.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Parser %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% simple shift reduce parser
+%%%% no empty categories, binary rules only
+%%%% grammar file must define check_and_display_result/1.
+
+parse(WordList) :-
+        check_words(WordList),
+        parse(WordList,[],Result),
+        check_and_display_result(Result),
+        fail.
+
+parse([],[t(Sign,Ds)],t(Sign,Ds)).
+parse(Words,Stack,Tree) :-
+        reduce(Stack,NewStack),
+        parse(Words,NewStack,Tree).
+parse(Words,Stack,Tree) :-
+        shift(Words,Words0,Sign),
+        parse(Words0,[Sign|Stack],Tree).
+
+shift([Word|Words],Words,t(Sign,w(Word))) :-
+        lex(Word,Sign).
+shift([Word1,Word2|Words],Words,t(Sign,w([Word1,Word2]))) :-
+        lex([Word1,Word2],Sign).
+        
+reduce( [t(RDghtr,RDtree),t(LDghtr,LDtree)|Stack],
+        [t(M,[t(LDghtr,LDtree),t(RDghtr,RDtree)])|Stack]) :-
+        M ==> [LDghtr0, RDghtr0],
+        fvt_unify(LDghtr,LDghtr0),
+        fvt_unify(RDghtr,RDghtr0).
+
+check_words([]).
+check_words([Word|Words]) :-
+        ( lex(Word,_) -> true
+        ; morphological_prefix(Word) -> true
+        ; nl, write('unkown: '), write(Word)
+        ), 
+        check_words(Words).
+\end{verbatim}

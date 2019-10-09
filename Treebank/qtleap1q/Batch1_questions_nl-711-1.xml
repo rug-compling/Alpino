@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="whq" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="5" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="mod"/>
+        <node begin="1" end="2" id="5" lemma="werken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="werk" word="werkt" wvorm="pv"/>
+        <node begin="2" cat="np" end="5" id="6" rel="su">
+          <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="Dropbox" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="Dropbox" word="Dropbox"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="historie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="historie" word="historie"/>
+        </node>
+      </node>
+    </node>
+    <node begin="5" end="6" id="10" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe werkt de Dropbox historie ?</sentence>
+</alpino_ds>

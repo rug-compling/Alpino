@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="np" end="4" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" getal-n="zonder-n" id="2" lemma="aan_melden" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="meld_aan" word="Aanmelden" wvorm="inf"/>
+      <node begin="1" cat="pp" end="4" id="3" rel="mod">
+        <node begin="1" end="2" id="4" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+        <node begin="2" cat="mwu" end="4" id="5" rel="obj1">
+          <node begin="2" end="3" id="6" lemma="ZON" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="ZON" spectype="deeleigen" word="ZON"/>
+          <node begin="3" end="4" id="7" lemma="fon" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="fon" spectype="deeleigen" word="fon"/>
+        </node>
+      </node>
+    </node>
+    <node begin="4" end="5" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Aanmelden bij ZON fon .</sentence>
+</alpino_ds>

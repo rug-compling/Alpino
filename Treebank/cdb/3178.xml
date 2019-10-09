@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="9" end="10" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="22" id="3" rel="--">
+      <node begin="0" end="1" getal="mv" graad="basis" id="4" lemma="topscorer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="topscorer" word="Topscorers"/>
+      <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+      <node begin="2" cat="conj" end="22" id="6" rel="predc">
+        <node begin="15" conjtype="neven" end="16" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="2" cat="np" end="22" id="8" rel="cnj">
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="9" lemma="Bakker" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Bakker" word="Bakker"/>
+          <node begin="3" cat="pp" end="22" id="10" rel="mod">
+            <node begin="3" end="4" id="11" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="4" cat="np" end="22" id="12" rel="obj1">
+              <node begin="4" end="5" id="13" lemma="40" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="40" word="40"/>
+              <node begin="21" end="22" getal="mv" graad="basis" id="14" index="1" lemma="run" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="runs" word="runs"/>
+            </node>
+          </node>
+        </node>
+        <node begin="6" cat="np" end="22" id="15" rel="cnj">
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="16" lemma="Lindeboom" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Lindeboom" word="Lindeboom"/>
+          <node begin="7" cat="pp" end="22" id="17" rel="mod">
+            <node begin="7" end="8" id="18" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="8" cat="np" end="22" id="19" rel="obj1">
+              <node begin="8" end="9" id="20" lemma="35" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="35" word="35"/>
+              <node begin="21" end="22" id="21" index="1" rel="hd"/>
+            </node>
+          </node>
+        </node>
+        <node begin="10" cat="np" end="22" id="22" rel="cnj">
+          <node begin="10" cat="mwu" end="13" id="23" rel="hd">
+            <node begin="10" end="11" id="24" lemma="Van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Van" spectype="deeleigen" word="Van"/>
+            <node begin="11" end="12" id="25" lemma="der" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="der" spectype="deeleigen" word="der"/>
+            <node begin="12" end="13" id="26" lemma="Kooy" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kooy" spectype="deeleigen" word="Kooy"/>
+          </node>
+          <node begin="13" cat="pp" end="22" id="27" rel="mod">
+            <node begin="13" end="14" id="28" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="14" cat="np" end="22" id="29" rel="obj1">
+              <node begin="14" end="15" id="30" lemma="27" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="27" word="27"/>
+              <node begin="21" end="22" id="31" index="1" rel="hd"/>
+            </node>
+          </node>
+        </node>
+        <node begin="16" cat="np" end="22" id="32" rel="cnj">
+          <node begin="16" cat="mwu" end="19" id="33" rel="hd">
+            <node begin="16" end="17" id="34" lemma="Van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Van" spectype="deeleigen" word="Van"/>
+            <node begin="17" end="18" id="35" lemma="der" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="der" spectype="deeleigen" word="der"/>
+            <node begin="18" end="19" id="36" lemma="Bregge" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bregge" spectype="deeleigen" word="Bregge"/>
+          </node>
+          <node begin="19" cat="pp" end="22" id="37" rel="mod">
+            <node begin="19" end="20" id="38" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="20" cat="np" end="22" id="39" rel="obj1">
+              <node begin="20" end="21" id="40" lemma="20" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="20" word="20"/>
+              <node begin="21" end="22" id="41" index="1" rel="hd"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="42" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Topscorers waren Bakker met 40 , Lindeboom met 35 , Van der Kooy met 27 en Van der Bregge met 20 runs .</sentence>
+</alpino_ds>

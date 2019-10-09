@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="30" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="11" end="12" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="22" end="23" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="29" id="4" rel="--">
+      <node begin="12" end="13" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="29" id="6" rel="vc">
+        <node begin="0" cat="ap" end="11" id="7" rel="mod">
+          <node begin="0" buiging="zonder" end="1" graad="basis" id="8" lemma="internationaal" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="internationaal" word="Internationaal"/>
+          <node begin="2" cat="pp" end="11" id="9" rel="mod">
+            <node begin="2" end="3" id="10" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="11" lemma="Frankrijk" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Frankrijk" word="Frankrijk"/>
+            <node begin="4" end="5" id="12" lemma="uiteraard" pos="adv" postag="BW()" pt="bw" rel="mod" root="uiteraard" word="uiteraard"/>
+            <node begin="5" cat="cp" end="11" id="13" rel="predc">
+              <node begin="5" end="6" id="14" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+              <node begin="6" cat="np" end="11" id="15" rel="body">
+                <node begin="6" end="7" getal-n="zonder-n" graad="basis" id="16" lemma="een" numtype="hoofd" pos="num" positie="nom" postag="TW(hoofd,nom,zonder-n,basis)" pt="tw" rel="hd" root="een" word="een"/>
+                <node begin="7" cat="pp" end="11" id="17" rel="mod">
+                  <node begin="7" end="8" id="18" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="8" cat="np" end="11" id="19" rel="obj1">
+                    <node begin="8" end="9" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="9" buiging="met-e" end="10" graad="sup" id="21" lemma="belangrijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="belangrijk" word="belangrijkste"/>
+                    <node begin="10" buiging="met-e" end="11" getal-n="mv-n" id="22" lemma="betrekken" pos="noun" positie="nom" postag="WW(vd,nom,met-e,mv-n)" pt="ww" rel="hd" root="betrokkene" word="betrokkenen" wvorm="vd"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="21" buiging="zonder" end="22" id="23" lemma="uitstippelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stippel" word="uitgestippeld" wvorm="vd"/>
+        <node begin="13" cat="np" end="29" id="24" index="1" rel="obj1">
+          <node begin="13" end="14" id="25" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="26" lemma="route" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="route" word="route"/>
+          <node begin="15" cat="pp" end="21" id="27" rel="mod">
+            <node begin="15" end="16" id="28" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+            <node begin="16" cat="np" end="21" id="29" rel="obj1">
+              <node begin="16" end="17" id="30" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="31" lemma="vaart" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vaart" word="vaart"/>
+              <node begin="18" cat="pp" end="21" id="32" rel="mod">
+                <node begin="18" end="19" id="33" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="19" cat="np" end="21" id="34" rel="obj1">
+                  <node begin="19" buiging="met-e" end="20" graad="basis" id="35" lemma="noordelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="noordelijk" word="noordelijke"/>
+                  <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="36" lemma="richting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="richting" word="richting"/>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="23" cat="rel" end="29" id="37" rel="mod">
+            <node begin="23" end="24" getal="getal" id="38" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="23" cat="ssub" end="29" id="39" rel="body">
+              <node begin="23" end="24" id="40" index="2" rel="su"/>
+              <node begin="24" cat="pp" end="28" id="41" rel="ld">
+                <node begin="24" buiging="zonder" end="25" graad="basis" id="42" lemma="dwars" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="dwars" word="dwars"/>
+                <node begin="25" end="26" id="43" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+                <node begin="26" cat="np" end="28" id="44" rel="obj1">
+                  <node begin="26" end="27" id="45" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="46" lemma="twaalfmijlszone" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zone" word="twaalfmijlszone"/>
+                </node>
+              </node>
+              <node begin="28" end="29" id="47" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="13" end="29" id="48" index="1" rel="su"/>
+    </node>
+    <node begin="29" end="30" id="49" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Internationaal ( met Frankrijk uiteraard als een van de belangrijkste betrokkenen ) is een route voor de vaart in noordelijke richting uitgestippeld , die dwars door de twaalfmijlszone gaat .</sentence>
+</alpino_ds>

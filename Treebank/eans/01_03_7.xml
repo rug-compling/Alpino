@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="3" end="4" id="2" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="6" end="7" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="11" id="4" rel="--">
+      <node begin="0" cat="np" end="6" id="5" index="1" rel="su">
+        <node begin="0" buiging="zonder" end="1" id="6" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="Dat"/>
+        <node begin="2" end="3" id="7" lemma="van" pos="name" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="4" cat="advp" end="6" id="8" rel="mod">
+          <node begin="4" end="5" id="9" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="mod" root="altijd" word="altijd"/>
+          <node begin="5" end="6" id="10" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="hd" root="weer" word="weer"/>
+        </node>
+      </node>
+      <node begin="7" end="8" id="11" lemma="beginnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="begin" word="begint" wvorm="pv"/>
+      <node begin="0" cat="ti" end="11" id="12" rel="vc">
+        <node begin="9" end="10" id="13" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="0" cat="inf" end="11" id="14" rel="body">
+          <node begin="0" end="6" id="15" index="1" rel="su"/>
+          <node begin="8" end="9" getal="ev" id="16" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj2" root="me" status="red" vwtype="pr" word="me"/>
+          <node begin="10" buiging="zonder" end="11" id="17" lemma="vervelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verveel" word="vervelen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dat &apos; van &apos; altijd weer , begint me te vervelen .</sentence>
+</alpino_ds>

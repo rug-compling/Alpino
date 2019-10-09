@@ -1,0 +1,30 @@
+#!/usr/bin/perl -w
+
+$word = shift(@ARGV);
+
+$word or die "No key given!\n";
+
+while (<>) {
+    chomp;
+    while (/\b($word)\b/g) {
+        $lcont=$`;
+	$match=$1;
+        $rcont=$';  ###$'
+	$match =~ s/ /|/;
+        $lcont=~ s/[\[] [A-Z]* //g;
+	$lcont=~ s/ [\]]//g;
+        $rcont=~ s/[\[] [A-Z]* //g;
+	$rcont=~ s/ [\]]//g;
+	@lwords=split(' ',$lcont);
+	$lword1 = pop @lwords;
+	$lword2 = pop @lwords;
+	@rwords=split(' ',$rcont);
+	$rword1 = shift @rwords;
+	$rword2 = shift @rwords;
+	$lword1 ||="";
+	$rword1 ||="";
+	$lword2 ||="";
+	$rword2 ||="";
+        print "$match|$lword2|$lword1|$rword1|$rword2\n";
+    }
+}

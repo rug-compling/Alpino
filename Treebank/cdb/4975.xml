@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="12" end="13" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="21" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" rel="su">
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="AVRO" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="AVRO" word="AVRO"/>
+      </node>
+      <node begin="2" end="3" id="6" lemma="vertonen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vertoon" word="vertoonde" wvorm="pv"/>
+      <node begin="3" cat="np" end="21" id="7" rel="obj1">
+        <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="4" end="5" id="9" lemma="drie" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="derde" word="derde"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="aflevering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aflevering" word="aflevering"/>
+        <node begin="6" cat="pp" end="12" id="11" rel="mod">
+          <node begin="6" end="7" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="7" cat="np" end="12" id="13" rel="obj1">
+            <node begin="7" end="8" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="15" lemma="toekomst-programma" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="programma" word="toekomst-programma"/>
+            <node begin="9" cat="mwu" end="12" id="16" rel="app">
+              <node begin="9" end="10" id="17" lemma="vandaag" pos="noun" postag="BW()" pt="bw" rel="mwp" root="Vandaag" word="Vandaag"/>
+              <node begin="10" conjtype="neven" end="11" id="18" lemma="of" pos="noun" postag="VG(neven)" pt="vg" rel="mwp" root="of" word="of"/>
+              <node begin="11" end="12" id="19" lemma="morgen" pos="noun" postag="BW()" pt="bw" rel="mwp" root="Morgen" word="Morgen"/>
+            </node>
+          </node>
+        </node>
+        <node begin="13" cat="ppart" end="21" id="20" rel="mod">
+          <node begin="13" buiging="zonder" end="14" id="21" lemma="wijden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gewijd" word="gewijd" wvorm="vd"/>
+          <node begin="14" cat="pp" end="21" id="22" rel="obj2">
+            <node begin="14" end="15" id="23" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+            <node begin="15" cat="np" end="21" id="24" rel="obj1">
+              <node begin="15" end="16" id="25" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="26" lemma="vraagstuk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="vraagstuk" word="vraagstuk"/>
+              <node begin="17" cat="pp" end="21" id="27" rel="mod">
+                <node begin="17" end="18" id="28" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="18" cat="conj" end="21" id="29" rel="obj1">
+                  <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="30" lemma="oorlog" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="oorlog" word="oorlog"/>
+                  <node begin="19" conjtype="neven" end="20" id="31" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                  <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="32" lemma="vrede" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="vrede" word="vrede"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="33" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De AVRO vertoonde de derde aflevering van het toekomst-programma Vandaag of Morgen , gewijd aan het vraagstuk van oorlog en vrede .</sentence>
+</alpino_ds>

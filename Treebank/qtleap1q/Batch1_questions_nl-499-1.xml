@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+      <node begin="2" cat="mwu" end="4" id="4" rel="obj1">
+        <node begin="2" end="3" id="5" lemma="Windows" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Windows" spectype="deeleigen" word="Windows"/>
+        <node begin="3" end="4" id="6" lemma="7" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="7" spectype="deeleigen" word="7"/>
+      </node>
+    </node>
+    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ik heb Windows 7 .</sentence>
+</alpino_ds>

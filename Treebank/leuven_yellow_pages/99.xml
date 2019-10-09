@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="aanvankelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="aanvankelijk" word="Aanvankelijk"/>
+      <node begin="1" end="2" id="3" lemma="klinken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="klink" word="klonk" wvorm="pv"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="4" lemma="zerotolerance" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="zerotolerance" word="zerotolerance"/>
+      <node begin="3" cat="conj" end="7" id="5" rel="mod">
+        <node begin="3" cat="ap" end="5" id="6" rel="cnj">
+          <node begin="3" end="4" id="7" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="mod" root="zeer" word="zeer"/>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="hard" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="hard" word="hard"/>
+        </node>
+        <node begin="5" cat="ap" end="7" id="9" rel="cnj">
+          <node begin="5" end="6" id="10" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="mod" root="zeer" word="zeer"/>
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="11" lemma="repressief" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="repressief" word="repressief"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Aanvankelijk klonk zerotolerance zeer hard zeer repressief</sentence>
+</alpino_ds>

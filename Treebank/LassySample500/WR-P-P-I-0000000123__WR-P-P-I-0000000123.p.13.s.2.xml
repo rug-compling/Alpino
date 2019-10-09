@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="0" cat="smain" end="19" id="1" rel="--">
+      <node begin="0" cat="pp" end="4" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="rond" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="rond" vztype="init" word="Rond"/>
+        <node begin="1" cat="np" end="4" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" id="6" lemma="12" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="12de" word="12de"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="eeuw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="eeuw" word="eeuw"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="8" lemma="ontstaan" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ontsta" word="ontstonden" wvorm="pv"/>
+      <node begin="5" cat="pp" end="8" id="9" rel="mod">
+        <node begin="5" end="6" id="10" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+        <node begin="6" cat="np" end="8" id="11" rel="obj1">
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="heel" pos="adv" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="heel" word="heel"/>
+          <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="13" lemma="Europa" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Europa" word="Europa"/>
+        </node>
+      </node>
+      <node begin="8" cat="np" end="19" id="14" rel="su">
+        <node begin="8" buiging="met-e" end="9" graad="basis" id="15" lemma="interregionaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="interregionaal" word="interregionale"/>
+        <node begin="9" end="10" getal="mv" graad="basis" id="16" lemma="jaarmarkt" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="jaar_markt" word="jaarmarkten"/>
+        <node begin="10" cat="rel" end="19" id="17" rel="mod">
+          <node begin="10" end="11" getal="getal" id="18" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+          <node begin="10" cat="ssub" end="19" id="19" rel="body">
+            <node begin="10" end="11" id="20" index="1" rel="su"/>
+            <node begin="11" cat="conj" end="18" id="21" rel="obj1">
+              <node begin="12" conjtype="neven" end="13" id="22" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="11" cat="np" end="18" id="23" rel="cnj">
+                <node begin="11" end="12" getal="mv" graad="basis" id="24" lemma="product" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="product" word="producten"/>
+                <node begin="14" cat="mwu" end="18" id="25" index="2" rel="mod">
+                  <node begin="14" end="15" id="26" lemma="van" pos="pp" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+                  <node begin="15" end="16" id="27" lemma="heinde" pos="pp" postag="BW()" pt="bw" rel="mwp" root="heinde" word="heinde"/>
+                  <node begin="16" conjtype="neven" end="17" id="28" lemma="en" pos="pp" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
+                  <node begin="17" buiging="zonder" end="18" graad="basis" id="29" lemma="ver" pos="pp" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="verre" word="ver"/>
+                </node>
+              </node>
+              <node begin="13" cat="np" end="18" id="30" rel="cnj">
+                <node begin="13" end="14" getal="mv" graad="basis" id="31" lemma="bezoeker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bezoeker" word="bezoekers"/>
+                <node begin="14" end="18" id="32" index="2" rel="mod"/>
+              </node>
+            </node>
+            <node begin="18" end="19" id="33" lemma="aantrekken" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="trek_aan" word="aantrokken" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="34" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Rond de 12de eeuw ontstonden over heel Europa interregionale jaarmarkten die producten en bezoekers van heinde en ver aantrokken .</sentence>
+</alpino_ds>

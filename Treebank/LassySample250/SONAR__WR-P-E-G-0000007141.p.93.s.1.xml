@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" frame="cleft_het_noun" getal="ev" id="2" lcat="np" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" sense="dat" special="cleft_het" status="vol" vwtype="aanw" word="Dat"/>
+      <node begin="1" end="2" frame="verb(unacc,past(pl),cleft)" id="3" infl="pl" lcat="smain" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" sc="cleft" sense="ben" tense="past" word="waren" wvorm="pv"/>
+      <node begin="2" cat="np" end="6" id="4" rel="predc">
+        <node begin="2" end="3" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="5" lcat="np" lemma="vergadering" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vergadering" sense="vergadering" word="vergaderingen"/>
+        <node begin="3" cat="rel" end="6" id="6" rel="mod">
+          <node begin="3" end="4" frame="waar_adverb(op)" id="7" index="1" lcat="pp" lemma="waarop" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarop" sense="waarop" special="waar" word="waarop"/>
+          <node begin="3" cat="ssub" end="6" id="8" rel="body">
+            <node begin="3" end="4" id="9" index="1" rel="mod"/>
+            <node begin="4" end="5" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="10" lcat="np" lemma="homo" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="homo" sense="homo" word="homo&apos;s"/>
+            <node begin="5" end="6" frame="verb(zijn,past(pl),ninv(intransitive,part_intransitive(samen)))" id="11" infl="pl" lcat="ssub" lemma="samenkomen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kom_samen" sc="part_intransitive(samen)" sense="kom_samen" tense="past" word="samenkwamen" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" frame="punct(punt)" id="12" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Dat waren vergaderingen waarop homo&apos;s samenkwamen .</sentence>
+  <comments>
+    <comment>Q#WR-P-E-G-0000007141.p.93.s.1|Dat waren vergaderingen waarop homo&apos;s samenkwamen .|1|1|-0.07599409648520429</comment>
+  </comments>
+</alpino_ds>

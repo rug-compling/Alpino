@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="conj" end="6" id="1" rel="--">
+      <node begin="0" cat="whq" end="4" id="2" rel="cnj">
+        <node begin="0" cat="np" end="2" id="3" index="1" rel="whd">
+          <node begin="0" end="1" frame="determiner(welke,rwh,nmod,pro,yparg)" id="4" infl="welke" lcat="detp" pos="det" rel="det" root="welk" sense="welk" wh="rwh" word="welke"/>
+          <node begin="1" end="2" frame="noun(het,count,pl)" gen="het" id="5" lcat="np" num="pl" pos="noun" rel="hd" root="product" sense="product" word="producten"/>
+        </node>
+        <node begin="0" cat="sv1" end="4" id="6" rel="body">
+          <node begin="0" end="2" id="7" index="1" rel="su"/>
+          <node begin="2" end="3" frame="verb(unacc,pl,copula)" id="8" infl="pl" lcat="sv1" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="zijn"/>
+          <node aform="base" begin="3" end="4" frame="adjective(ge_no_e(adv))" id="9" infl="no_e" lcat="ppart" pos="adj" rel="predc" root="milieu_verantwoord" sense="milieu_verantwoord" vform="psp" word="milieuverantwoord"/>
+        </node>
+      </node>
+      <node begin="4" end="5" frame="conj(en)" id="10" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="5" end="6" frame="waar_adverb(om)" id="11" lcat="whq" pos="pp" rel="cnj" root="waarom" sense="waarom" special="waar" word="waarom"/>
+    </node>
+    <node begin="6" end="7" frame="punct(vraag)" id="12" lcat="punct" pos="punct" rel="--" root="?" sense="?" special="vraag" word="?"/>
+  </node>
+  <sentence>welke producten zijn milieuverantwoord en waarom ?</sentence>
+  <comments>
+    <comment>Q#20|welke producten zijn milieuverantwoord en waarom ?|1|1|0.031920953295066445</comment>
+  </comments>
+</alpino_ds>

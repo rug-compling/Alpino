@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="conj" end="12" id="1" rel="--">
+      <node begin="0" cat="smain" end="3" id="2" rel="cnj">
+        <node begin="0" end="1" getal="ev" id="3" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+        <node begin="1" end="2" id="4" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="Vista" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Vista" word="Vista"/>
+      </node>
+      <node begin="3" conjtype="neven" end="4" id="6" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="4" cat="smain" end="12" id="7" rel="cnj">
+        <node begin="4" cat="np" end="6" id="8" rel="su">
+          <node begin="4" buiging="zonder" end="5" getal="ev" id="9" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="10" lemma="dvd_station" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="dvd_station" word="dvd-station"/>
+        </node>
+        <node begin="6" end="7" id="11" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="7" cat="mwu" end="10" id="12" rel="mod">
+          <node begin="7" end="8" id="13" lemma="af" pos="adv" postag="VZ(fin)" pt="vz" rel="mwp" root="af" vztype="fin" word="af"/>
+          <node begin="8" conjtype="neven" end="9" id="14" lemma="en" pos="adv" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
+          <node begin="9" end="10" id="15" lemma="toe" pos="adv" postag="VZ(fin)" pt="vz" rel="mwp" root="toe" vztype="fin" word="toe"/>
+        </node>
+        <node begin="10" end="11" id="16" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+        <node begin="11" buiging="zonder" end="12" graad="basis" id="17" lemma="zichtbaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="zichtbaar" word="zichtbaar"/>
+      </node>
+    </node>
+    <node begin="12" end="13" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ik heb Vista en mijn dvd-station is af en toe niet zichtbaar .</sentence>
+</alpino_ds>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="du" end="4" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="dp">
+        <node begin="0" end="1" getal="mv" graad="basis" id="3" lemma="tiental" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="tientallen" word="Tientallen"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="jaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="jaar" word="jaren"/>
+      </node>
+      <node begin="2" cat="np" end="4" id="5" rel="dp">
+        <node begin="2" end="3" id="6" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="begrip" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="begrip" word="begrip"/>
+      </node>
+    </node>
+    <node begin="4" end="5" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Tientallen jaren een begrip .</sentence>
+</alpino_ds>

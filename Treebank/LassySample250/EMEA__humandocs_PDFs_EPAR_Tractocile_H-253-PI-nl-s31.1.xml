@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="smain" end="10" id="1" rel="--">
+      <node begin="0" end="1" frame="proper_name(both,'ORG')" id="2" index="1" lcat="np" lemma="TRACTOCILE" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="su" root="TRACTOCILE" sense="TRACTOCILE" spectype="deeleigen" word="TRACTOCILE"/>
+      <node begin="1" end="2" frame="verb(hebben,sg,modifier(aux(inf)))" id="3" infl="sg" lcat="smain" lemma="mogen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="mag" sc="modifier(aux(inf))" sense="mag" tense="present" word="mag" wvorm="pv"/>
+      <node begin="0" cat="inf" end="10" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="8" buiging="zonder" end="9" frame="verb(unacc,inf,passive)" id="6" infl="inf" lcat="inf" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" sc="passive" sense="word" word="worden" wvorm="inf"/>
+        <node begin="0" cat="ppart" end="10" id="7" rel="vc">
+          <node begin="0" end="1" id="8" index="1" rel="obj1"/>
+          <node begin="2" cat="pp" end="7" id="9" rel="mod">
+            <node begin="2" end="3" frame="preposition(in,[])" id="10" lcat="pp" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" sense="in" vztype="init" word="in"/>
+            <node begin="3" cat="np" end="7" id="11" rel="obj1">
+              <node begin="3" end="4" frame="determiner(de)" id="12" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+              <node begin="4" cat="ppres" end="6" id="13" rel="mod">
+                <node begin="4" end="5" frame="tmp_adverb" id="14" lcat="advp" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" sense="nu" special="tmp" word="nu"/>
+                <node aform="base" begin="5" buiging="met-e" end="6" frame="adjective(ende(padv))" id="15" infl="e" lcat="ppres" lemma="volgen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="volg" sense="volg" vform="gerund" word="volgende" wvorm="od"/>
+              </node>
+              <node begin="6" end="7" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="16" lcat="np" lemma="situatie" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="situatie" sense="situatie" word="situaties"/>
+            </node>
+          </node>
+          <node begin="7" end="8" frame="adverb" id="17" lcat="advp" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" sense="niet" word="niet"/>
+          <node begin="9" buiging="zonder" end="10" frame="verb(hebben,psp,transitive)" id="18" infl="psp" lcat="ppart" lemma="gebruiken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gebruik" sc="transitive" sense="gebruik" word="gebruikt" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="10" end="11" frame="punct(dubb_punt)" id="19" lcat="punct" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+  </node>
+  <sentence>TRACTOCILE mag in de nu volgende situaties niet worden gebruikt :</sentence>
+  <comments>
+    <comment>Q#humandocs_PDFs_EPAR_Tractocile_H-253-PI-nl-s31.1|TRACTOCILE mag in de nu volgende situaties niet worden gebruikt :|1|1|-0.1656247263206937</comment>
+  </comments>
+</alpino_ds>

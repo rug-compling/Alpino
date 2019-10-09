@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" cat="ap" end="4" id="2" rel="predc">
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="belangrijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="belangrijk" word="Belangrijk"/>
+        <node begin="1" cat="oti" end="4" id="4" rel="vc">
+          <node begin="1" end="2" id="5" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+          <node begin="2" cat="ti" end="4" id="6" rel="body">
+            <node begin="2" end="3" id="7" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="3" buiging="zonder" end="4" id="8" lemma="weten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="weet" word="weten" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+      <node begin="4" end="5" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="5" cat="cp" end="12" id="10" rel="su">
+        <node begin="5" conjtype="onder" end="6" id="11" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="6" cat="ssub" end="12" id="12" rel="body">
+          <node begin="6" cat="np" end="8" id="13" rel="su">
+            <node begin="6" end="7" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="15" lemma="huid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="huid" word="huid"/>
+          </node>
+          <node begin="8" end="9" id="16" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+          <node begin="9" cat="np" end="11" id="17" rel="predc">
+            <node begin="9" end="10" id="18" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="19" lemma="orgaan" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="orgaan" word="orgaan"/>
+          </node>
+          <node begin="11" end="12" id="20" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Belangrijk om te weten is dat de huid ook een orgaan is .</sentence>
+</alpino_ds>

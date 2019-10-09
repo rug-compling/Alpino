@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="4" end="5" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="np" end="8" id="2" rel="--">
+      <node begin="0" end="1" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="3" lcat="np" lemma="operatie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="operatie" sense="operatie" word="operatie"/>
+      <node begin="1" cat="pp" end="8" id="4" rel="mod">
+        <node begin="1" end="2" frame="preposition(aan,[vooraf])" id="5" lcat="pp" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" sense="aan" vztype="init" word="aan"/>
+        <node begin="2" cat="conj" end="8" id="6" rel="obj1">
+          <node begin="2" cat="np" end="4" id="7" rel="cnj">
+            <node begin="2" end="3" frame="determiner(de)" id="8" index="1" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+            <node begin="3" end="4" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="9" lcat="np" lemma="hersenen" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="hersenen" sense="hersenen" word="hersenen"/>
+          </node>
+          <node begin="2" cat="np" end="6" id="10" rel="cnj">
+            <node begin="2" end="3" id="11" index="1" rel="det"/>
+            <node begin="5" end="6" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="12" lcat="np" lemma="wervelkolom" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wervelkolom" sense="wervelkolom" word="wervelkolom"/>
+          </node>
+          <node begin="6" conjtype="neven" end="7" frame="conj(of)" id="13" lcat="vg" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" sense="of" word="of"/>
+          <node begin="2" cat="np" end="8" id="14" rel="cnj">
+            <node begin="2" end="3" id="15" index="1" rel="det"/>
+            <node begin="7" end="8" frame="noun(het,count,pl)" gen="het" getal="mv" graad="basis" id="16" lcat="np" lemma="oog" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="oog" sense="oog" word="ogen"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>operatie aan de hersenen , wervelkolom of ogen</sentence>
+  <comments>
+    <comment>Q#humandocs_PDFs_EPAR_arixtra_H-403-PI-nl-s1255.1|operatie aan de hersenen , wervelkolom of ogen|1|1|0.12710165924849565</comment>
+  </comments>
+</alpino_ds>

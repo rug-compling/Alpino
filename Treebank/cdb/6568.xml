@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="35" id="0" rel="top">
+    <node begin="19" end="20" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="26" end="27" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="31" end="32" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="smain" end="34" id="4" rel="--">
+      <node begin="0" cat="np" end="2" id="5" rel="su">
+        <node begin="0" end="1" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="ambassade" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ambassade" word="ambassade"/>
+      </node>
+      <node begin="2" end="3" id="8" lemma="spreken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="spreek" word="spreekt" wvorm="pv"/>
+      <node begin="4" cat="np" end="6" id="9" rel="obj1">
+        <node begin="4" buiging="zonder" end="5" getal="ev" id="10" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="verbazing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verbazing" word="verbazing"/>
+      </node>
+      <node begin="7" end="8" id="12" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
+      <node begin="3" cat="pp" end="19" id="13" rel="pc">
+        <node begin="3" end="4" getal="getal" id="14" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="pobj1" root="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="6" end="7" id="15" lemma="over" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="over" vztype="fin" word="over"/>
+        <node begin="8" cat="cp" end="19" id="16" rel="vc">
+          <node begin="8" conjtype="onder" end="9" id="17" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="9" cat="ssub" end="19" id="18" rel="body">
+            <node begin="12" cat="np" end="14" id="19" index="1" rel="su">
+              <node begin="12" end="13" id="20" lemma="zoveel" naamval="stan" numtype="hoofd" pos="det" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="zoveel" word="zoveel"/>
+              <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="21" lemma="aandacht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aandacht" word="aandacht"/>
+            </node>
+            <node begin="14" end="15" id="22" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+            <node begin="9" cat="ppart" end="19" id="23" rel="vc">
+              <node begin="9" cat="pp" end="12" id="24" rel="mod">
+                <node begin="9" end="10" id="25" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="10" cat="np" end="12" id="26" rel="obj1">
+                  <node begin="10" buiging="met-e" end="11" graad="basis" id="27" lemma="Nederlands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Nederlands" word="Nederlandse"/>
+                  <node begin="11" end="12" getal="mv" graad="basis" id="28" lemma="krant" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="krant" word="kranten"/>
+                </node>
+              </node>
+              <node begin="12" end="14" id="29" index="1" rel="obj1"/>
+              <node begin="15" buiging="zonder" end="16" id="30" lemma="schenken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schenk" word="geschonken" wvorm="vd"/>
+              <node begin="16" cat="pp" end="19" id="31" rel="obj2">
+                <node begin="16" end="17" id="32" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+                <node begin="17" cat="np" end="19" id="33" rel="obj1">
+                  <node begin="17" end="18" id="34" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                  <node begin="18" buiging="met-e" end="19" getal-n="zonder-n" id="35" lemma="gebeuren" pos="noun" positie="nom" postag="WW(vd,nom,met-e,zonder-n)" pt="ww" rel="hd" root="gebeurde" word="gebeurde" wvorm="vd"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="20" cat="cp" end="34" id="36" rel="mod">
+        <node begin="20" end="21" id="37" lemma="vooral" pos="adv" postag="BW()" pt="bw" rel="mod" root="vooral" word="vooral"/>
+        <node begin="21" conjtype="onder" end="22" id="38" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="omdat"/>
+        <node begin="22" cat="ssub" end="34" id="39" rel="body">
+          <node begin="22" cat="np" end="25" id="40" index="2" rel="su">
+            <node begin="22" end="23" id="41" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="42" lemma="deel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="deel" word="deel"/>
+            <node begin="24" end="25" id="43" lemma="ervan" pos="pp" postag="BW()" pt="bw" rel="mod" root="ervan" word="ervan"/>
+          </node>
+          <node begin="32" end="33" id="44" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+          <node begin="22" cat="ppart" end="34" id="45" rel="vc">
+            <node begin="22" end="25" id="46" index="2" rel="obj1"/>
+            <node begin="25" cat="cp" end="31" id="47" rel="predc">
+              <node begin="25" conjtype="onder" end="26" id="48" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+              <node begin="27" cat="mwu" end="31" id="49" rel="body">
+                <node begin="27" end="28" id="50" lemma="uit" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="uit" vztype="init" word="uit"/>
+                <node begin="28" end="29" id="51" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+                <node begin="29" end="30" genus="zijd" getal="ev" graad="basis" id="52" lemma="lug" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="lug" word="lug"/>
+                <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="53" lemma="gegrypen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="gegryp" word="gegryp"/>
+              </node>
+            </node>
+            <node begin="33" buiging="zonder" end="34" id="54" lemma="beschouwen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="beschouw" word="beschouwd" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="34" end="35" id="55" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De ambassade spreekt er zijn verbazing over uit dat in Nederlandse kranten zoveel aandacht is geschonken aan het gebeurde , vooral omdat een deel ervan als &quot; uit de lug gegryp &quot; wordt beschouwd .</sentence>
+</alpino_ds>

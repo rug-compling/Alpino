@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="advp" end="3" id="2" rel="mod">
+        <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="3" lemma="eind" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="eind" word="Eind"/>
+        <node begin="1" cat="np" end="3" id="4" rel="mod">
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="juli" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="juli" word="juli"/>
+          <node begin="2" end="3" id="6" lemma="1969" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="1969" word="1969"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" lemma="verongelukken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verongeluk" word="verongelukte" wvorm="pv"/>
+      <node begin="4" cat="np" end="8" id="8" rel="su">
+        <node begin="4" end="5" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="5" buiging="met-e" end="6" graad="basis" id="10" lemma="Duits" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Duits" word="Duitse"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="zangeres" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zangeres" word="zangeres"/>
+        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="12" lemma="Alexandra" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Alexandra" word="Alexandra"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Eind juli 1969 verongelukte de Duitse zangeres Alexandra .</sentence>
+</alpino_ds>

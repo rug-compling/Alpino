@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="mwu" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="Jan" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jan" spectype="deeleigen" word="Jan"/>
+        <node begin="1" end="2" id="4" lemma="Wolkers" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wolkers" spectype="deeleigen" word="Wolkers"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="3" cat="ap" end="8" id="6" rel="predc">
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="solidair" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="solidair" word="solidair"/>
+        <node begin="4" cat="pp" end="8" id="8" rel="pc">
+          <node begin="4" end="5" id="9" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="5" cat="np" end="8" id="10" rel="obj1">
+            <node begin="5" end="6" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="6" buiging="met-e" end="7" graad="basis" id="12" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+            <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="13" lemma="provotariaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="provotariaat" word="provotariaat"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Jan Wolkers is solidair met het nieuwe provotariaat .</sentence>
+</alpino_ds>

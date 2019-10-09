@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" cat="np" end="5" id="2" index="1" rel="su">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="enkele" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enkel" vwtype="onbep" word="Enkele"/>
+        <node begin="1" end="2" getal-n="mv-n" graad="basis" id="4" lemma="honderd" numtype="hoofd" pos="noun" positie="nom" postag="TW(hoofd,nom,mv-n,basis)" pt="tw" rel="hd" root="honderd" word="honderden"/>
+        <node begin="2" cat="pp" end="5" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="3" cat="np" end="5" id="7" rel="obj1">
+            <node begin="3" buiging="met-e" end="4" id="8" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+            <node begin="4" end="5" getal="mv" graad="dim" id="9" lemma="mand" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" root="mandje" word="mandjes"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" id="10" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="14" id="11" rel="vc">
+        <node begin="0" end="5" id="12" index="1" rel="obj1"/>
+        <node begin="6" buiging="zonder" end="7" graad="comp" id="13" lemma="laat" pos="adv" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="later" word="later"/>
+        <node begin="7" end="8" id="14" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+        <node begin="8" cat="pp" end="13" id="15" rel="ld">
+          <node begin="8" end="9" id="16" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="9" cat="np" end="13" id="17" rel="obj1">
+            <node begin="9" buiging="met-e" end="10" graad="basis" id="18" lemma="verschillend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="verschillend" word="verschillende"/>
+            <node begin="10" end="11" getal="mv" graad="basis" id="19" lemma="adres" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="adres" word="adressen"/>
+            <node begin="11" cat="pp" end="13" id="20" rel="mod">
+              <node begin="11" end="12" id="21" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="12" buiging="met-e" end="13" getal-n="mv-n" graad="basis" id="22" lemma="bejaard" pos="noun" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="obj1" root="bejaarde" word="bejaarden"/>
+            </node>
+          </node>
+        </node>
+        <node begin="13" buiging="zonder" end="14" id="23" lemma="bezorgd" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bezorg" word="bezorgd" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="14" end="15" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Enkele honderden van deze mandjes waren later nog op verschillende adressen van bejaarden bezorgd .</sentence>
+</alpino_ds>

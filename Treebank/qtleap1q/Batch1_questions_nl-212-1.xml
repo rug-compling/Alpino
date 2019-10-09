@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="15" id="2" rel="--">
+      <node begin="0" cat="cp" end="6" id="3" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="telkens" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="telkens" word="Telkens"/>
+        <node begin="1" cat="ssub" end="6" id="5" rel="body">
+          <node begin="1" end="2" getal="ev" id="6" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+          <node begin="2" cat="np" end="5" id="7" rel="obj1">
+            <node begin="2" end="3" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="3" buiging="zonder" end="4" graad="basis" id="9" lemma="internet" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="internet" word="internet"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="web_pagina" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="web_pagina" word="webpagina"/>
+          </node>
+          <node begin="5" end="6" id="11" lemma="openen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="open" word="open" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="7" end="8" id="12" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+      <node begin="8" cat="pp" end="15" id="13" rel="pc">
+        <node begin="8" end="9" id="14" lemma="erop" pos="pp" postag="BW()" pt="bw" rel="hd" root="erop" word="erop"/>
+        <node begin="9" cat="cp" end="15" id="15" rel="vc">
+          <node begin="9" conjtype="onder" end="10" id="16" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="10" cat="ssub" end="15" id="17" rel="body">
+            <node begin="10" cat="np" end="12" id="18" rel="su">
+              <node begin="10" end="11" id="19" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="20" lemma="server_certificaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="server_certificaat" word="servercertificaat"/>
+            </node>
+            <node begin="12" end="13" id="21" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+            <node begin="13" buiging="zonder" end="14" graad="basis" id="22" lemma="beschikbaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="beschikbaar" word="beschikbaar"/>
+            <node begin="14" end="15" id="23" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Telkens ik een internet webpagina open , komt erop dat het servercertificaat niet beschikbaar is .</sentence>
+</alpino_ds>

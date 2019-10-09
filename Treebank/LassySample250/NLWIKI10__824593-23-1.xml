@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" frame="pronoun(nwh,thi,sg,de,nom,def)" gen="de" genus="masc" getal="ev" id="2" lcat="np" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" sense="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+      <node begin="1" end="2" frame="verb(hebben,past(sg),transitive)" id="3" infl="sg" lcat="smain" lemma="bezitten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="bezit" sc="transitive" sense="bezit" tense="past" word="bezat" wvorm="pv"/>
+      <node begin="2" end="3" frame="adverb" id="4" lcat="advp" lemma="eveneens" pos="adv" postag="BW()" pt="bw" rel="mod" root="eveneens" sense="eveneens" word="eveneens"/>
+      <node begin="3" cat="np" end="8" id="5" rel="obj1">
+        <node begin="3" end="4" frame="determiner(een)" id="6" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+        <node aform="base" begin="4" buiging="met-e" end="5" frame="adjective(e)" graad="basis" id="7" infl="e" lcat="ap" lemma="schitterend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="schitterend" sense="schitterend" vform="adj" word="schitterende"/>
+        <node begin="5" end="6" frame="noun(de,count,sg,measure)" gen="de" genus="zijd" getal="ev" graad="basis" id="8" lcat="np" lemma="collectie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="collectie" sc="measure" sense="collectie-MEAS" word="collectie"/>
+        <node begin="6" cat="np" end="8" id="9" rel="mod">
+          <node aform="base" begin="6" buiging="met-e" end="7" frame="adjective(e)" graad="basis" id="10" infl="e" lcat="ap" lemma="indische" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Indisch" sense="Indisch" vform="adj" word="Indische"/>
+          <node begin="7" end="8" frame="noun(het,count,pl)" gen="het" getal="mv" graad="basis" id="11" lcat="np" lemma="voorwerp" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="voorwerp" sense="voorwerp" word="voorwerpen"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" frame="punct(punt)" id="12" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Hij bezat eveneens een schitterende collectie Indische voorwerpen .</sentence>
+  <comments>
+    <comment>Q#824593-23-1|Hij bezat eveneens een schitterende collectie Indische voorwerpen .|1|1|-0.14155112032918848</comment>
+  </comments>
+</alpino_ds>

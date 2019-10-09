@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="29" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="11" end="12" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="14" end="15" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="28" id="4" rel="--">
+      <node begin="0" cat="smain" end="4" id="5" rel="cnj">
+        <node begin="0" end="1" genus="masc" getal="ev" id="6" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+        <node begin="1" end="2" id="7" lemma="werken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="werk" word="werkte" wvorm="pv"/>
+        <node begin="2" end="3" id="8" lemma="toen" pos="adv" postag="BW()" pt="bw" rel="mod" root="toen" word="toen"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="9" lemma="figuratief" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="figuratief" word="figuratief"/>
+      </node>
+      <node begin="0" cat="smain" end="11" id="10" rel="cnj">
+        <node begin="0" end="1" id="11" index="1" rel="su"/>
+        <node begin="5" end="6" id="12" lemma="voeren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="voer" word="voerde" wvorm="pv"/>
+        <node begin="6" cat="np" end="8" id="13" rel="obj1">
+          <node begin="6" buiging="met-e" end="7" graad="basis" id="14" lemma="verscheidene" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="verscheiden" word="verscheidene"/>
+          <node begin="7" end="8" getal="mv" graad="basis" id="15" lemma="opdracht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="opdracht" word="opdrachten"/>
+        </node>
+        <node begin="8" end="9" id="16" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
+        <node begin="9" cat="pp" end="11" id="17" rel="mod">
+          <node begin="9" end="10" id="18" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="19" lemma="monumentenzorg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Monumentenzorg" word="Monumentenzorg"/>
+        </node>
+      </node>
+      <node begin="0" cat="smain" end="14" id="20" rel="cnj">
+        <node begin="0" end="1" id="21" index="1" rel="su"/>
+        <node begin="12" end="13" id="22" lemma="maken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="maak" word="maakte" wvorm="pv"/>
+        <node begin="13" end="14" getal="mv" graad="basis" id="23" lemma="oorlogsmonument" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="monument" word="oorlogsmonumenten"/>
+      </node>
+      <node begin="0" cat="smain" end="28" id="24" rel="cnj">
+        <node begin="0" end="1" id="25" index="1" rel="su"/>
+        <node begin="15" end="16" id="26" lemma="werken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="werk" word="werkte" wvorm="pv"/>
+        <node begin="16" end="17" id="27" lemma="mee" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="mee" vztype="fin" word="mee"/>
+        <node begin="17" cat="pp" end="28" id="28" rel="pc">
+          <node begin="17" end="18" id="29" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+          <node begin="18" cat="np" end="28" id="30" rel="obj1">
+            <node begin="18" end="19" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="19" end="20" getal="mv" graad="basis" id="32" lemma="relief" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="relief" word="reliefs"/>
+            <node begin="20" cat="pp" end="23" id="33" rel="mod">
+              <node begin="20" end="21" id="34" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+              <node begin="21" cat="np" end="23" id="35" rel="obj1">
+                <node begin="21" end="22" id="36" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="37" lemma="binnenplaats" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="binnenplaats" word="binnenplaats"/>
+              </node>
+            </node>
+            <node begin="23" cat="pp" end="28" id="38" rel="mod">
+              <node begin="23" end="24" id="39" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+              <node begin="24" cat="np" end="28" id="40" rel="obj1">
+                <node begin="24" end="25" id="41" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="25" end="26" genus="genus" getal="ev" graad="basis" id="42" lemma="Provinciehuis" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="provinciehuis" word="Provinciehuis"/>
+                <node begin="26" cat="pp" end="28" id="43" rel="mod">
+                  <node begin="26" end="27" id="44" lemma="te" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="te" vztype="init" word="te"/>
+                  <node begin="27" end="28" genus="onz" getal="ev" graad="basis" id="45" lemma="Arnhem" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Arnhem" word="Arnhem"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="28" end="29" id="46" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hij werkte toen figuratief , voerde verscheidene opdrachten uit voor Monumentenzorg , maakte oorlogsmonumenten , werkte mee aan de reliefs op de binnenplaats voor het Provinciehuis te Arnhem .</sentence>
+</alpino_ds>

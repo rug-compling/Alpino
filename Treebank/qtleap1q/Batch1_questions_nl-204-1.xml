@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="4" lemma="hulp" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="me" root="hulp" word="hulp"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="5" lemma="nodig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="nodig" word="nodig"/>
+      <node begin="0" cat="oti" end="8" id="6" rel="vc">
+        <node begin="4" end="5" id="7" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+        <node begin="0" cat="ti" end="8" id="8" rel="body">
+          <node begin="6" end="7" id="9" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="0" cat="inf" end="8" id="10" rel="body">
+            <node begin="0" end="1" id="11" index="1" rel="su"/>
+            <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="12" lemma="Skype" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Skype" word="Skype"/>
+            <node begin="7" buiging="zonder" end="8" id="13" lemma="installeren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="installeer" word="installeren" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ik heb hulp nodig om Skype te installeren .</sentence>
+</alpino_ds>

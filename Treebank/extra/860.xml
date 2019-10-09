@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="0" cat="smain" end="18" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="generatie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="generatie" word="generaties"/>
+        <node begin="2" cat="pp" end="4" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="3" end="4" id="7" lemma="vandaag" pos="adv" postag="BW()" pt="bw" rel="obj1" root="vandaag" word="vandaag"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="8" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="5" cat="ppart" end="7" id="9" rel="mod">
+        <node begin="5" buiging="zonder" end="6" graad="basis" id="10" lemma="eerlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="eerlijk" word="eerlijk"/>
+        <node begin="6" buiging="zonder" end="7" id="11" lemma="gezegd" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gezegd" word="gezegd" wvorm="vd"/>
+      </node>
+      <node begin="7" cat="np" end="18" id="12" rel="obj1">
+        <node begin="8" end="9" getal="mv" graad="basis" id="13" lemma="kans" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kans" word="kansen"/>
+        <node begin="7" cat="ap" end="18" id="14" rel="det">
+          <node begin="7" buiging="zonder" end="8" graad="comp" id="15" lemma="minder" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,comp)" pt="vnw" rel="hd" root="minder" vwtype="onbep" word="minder"/>
+          <node begin="9" cat="cp" end="18" id="16" rel="obcomp">
+            <node begin="9" conjtype="onder" end="10" id="17" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+            <node begin="10" cat="ssub" end="18" id="18" rel="body">
+              <node begin="10" cat="np" end="16" id="19" rel="su">
+                <node begin="10" end="11" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="11" buiging="met-e" end="12" getal-n="mv-n" graad="sup" id="21" lemma="meest" naamval="stan" pdtype="grad" pos="adj" positie="nom" postag="VNW(onbep,grad,stan,nom,met-e,mv-n,sup)" pt="vnw" rel="hd" root="meest" vwtype="onbep" word="meesten"/>
+                <node begin="12" cat="pp" end="16" id="22" rel="mod">
+                  <node begin="12" end="13" id="23" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="13" cat="np" end="16" id="24" rel="obj1">
+                    <node begin="13" end="14" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="14" end="15" getal="getal" id="26" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" status="vol" vwtype="aanw" word="hier"/>
+                    <node begin="15" buiging="met-e" end="16" getal-n="mv-n" graad="basis" id="27" lemma="aanwezig" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" root="aanwezig" word="aanwezigen"/>
+                  </node>
+                </node>
+              </node>
+              <node begin="16" end="17" id="28" lemma="destijds" pos="adv" postag="BW()" pt="bw" rel="mod" root="destijds" word="destijds"/>
+              <node begin="17" end="18" id="29" lemma="hebben" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="heb" word="hadden" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="30" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De generaties van vandaag hebben eerlijk gezegd minder kansen dan de meesten van de hier aanwezigen destijds hadden .</sentence>
+</alpino_ds>

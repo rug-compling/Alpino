@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="9" id="2" rel="--">
+      <node begin="5" end="6" id="3" lemma="mogen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="mag" word="mag" wvorm="pv"/>
+      <node begin="6" end="7" getal="ev" id="4" index="1" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="noun" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+      <node begin="0" cat="inf" end="9" id="5" rel="vc">
+        <node begin="0" cat="cp" end="4" id="6" rel="mod">
+          <node begin="0" conjtype="onder" end="1" id="7" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+          <node begin="1" cat="ssub" end="4" id="8" rel="body">
+            <node begin="1" end="2" getal="ev" id="9" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="noun" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+            <node begin="2" end="3" genus="onz" getal="ev" id="10" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+            <node begin="3" end="4" id="11" lemma="weten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="weet" word="weet" wvorm="pv"/>
+          </node>
+        </node>
+        <node begin="6" end="7" id="12" index="1" rel="su"/>
+        <node begin="7" end="8" genus="onz" getal="ev" id="13" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+        <node begin="8" buiging="zonder" end="9" id="14" lemma="zeggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zeg" word="zeggen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="9" end="10" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>als je het weet , mag je het zeggen .</sentence>
+</alpino_ds>

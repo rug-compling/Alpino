@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj2" root="me" status="red" vwtype="pr" word="Me"/>
+      <node begin="1" end="2" id="3" lemma="dunken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="dunk" word="dunkt" wvorm="pv"/>
+      <node begin="2" cat="cp" end="8" id="4" rel="su">
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="3" cat="ssub" end="8" id="6" rel="body">
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" index="1" lemma="respect" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="su" root="respect" word="respect"/>
+          <node begin="6" end="7" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          <node begin="3" cat="ppart" end="8" id="9" rel="vc">
+            <node begin="3" end="4" id="10" index="1" rel="obj1"/>
+            <node begin="4" end="5" getal="getal" id="11" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" status="vol" vwtype="aanw" word="hier"/>
+            <node begin="5" end="6" id="12" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+            <node begin="7" buiging="zonder" end="8" id="13" lemma="vereisen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vereis" word="vereist" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Me dunkt dat respect hier wel is vereist</sentence>
+</alpino_ds>

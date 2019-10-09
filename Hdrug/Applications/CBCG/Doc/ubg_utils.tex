@@ -1,0 +1,88 @@
+\begin{verbatim}
+:- op(500,xfy,\).
+:- op(600, xfx, <=> ).
+
+
+%%%%%%%%%%%%%%%%%%%%% Feature Unification %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+fvt_unify(A,A).
+
+%%%% fvt unification macros
+
+X <=> Y:- 
+        denotes(X, Term), 
+        denotes(Y, Term).
+
+denotes(Var, FVT) :- 
+        var(Var), !, 
+        Var = FVT.
+denotes(A/B,sign(nil,A1,right,B1,_Sem,_Mor,_Gap,_Rel,_Phrase,_Rphrase)) :-
+        !,
+        denotes(A,A1),
+        denotes(B,B1).
+denotes(B\A,sign(nil,A1,left,B1,_Sem,_Mor,_Gap,_Rel,_Phrase,_Rphrase)) :-
+        !,
+        denotes(A,A1),
+        denotes(B,B1).
+denotes(Dag:Path, Value):-
+        !,
+        pathval(Dag, Path, Value).       
+denotes(Temp,FVT) :- 
+        temp(Temp,FVT).
+denotes(Any, Any) :- 
+        \+ temp(Any,_).
+        
+pathval(sign(Cat,_Val,_Dir,_Arg,_Sem,_Mor,_Phrase,_Rphrase,_Rel,_Gap),cat,Cat).
+pathval(sign(_Cat,Val,_Dir,_Arg,_Sem,_Mor,_Phrase,_Rphrase,_Rel,_Gap),val,Val).
+pathval(sign(_Cat,_Val,Dir,_Arg,_Sem,_Mor,_Phrase,_Rphrase,_Rel,_Gap),dir,Dir).
+pathval(sign(_Cat,_Val,_Dir,Arg,_Sem,_Mor,_Phrase,_Rphrase,_Rel,_Gap),arg,Arg).
+pathval(sign(_Cat,_Val,_Dir,_Arg,Sem,_Mor,_Phrase,_Rphrase,_Rel,_Gap),sem,Sem).
+pathval(sign(_Cat,_Val,_Dir,_Arg,_Sem,Mor,_Phrase,_Rphrase,_Rel,_Gap),mor,Mor).
+pathval(sign(_Cat,_Val,_Dir,_Arg,_Sem,_Mor,Phrase,_Rphrase,_Rel,_Gap),phrase,Phrase).
+pathval(sign(_Cat,_Val,_Dir,_Arg,_Sem,_Mor,_Phrase,Rphrase,_Rel,_Gap),rphrase,Rphrase).
+pathval(sign(_Cat,_Val,_Dir,_Arg,_Sem,_Mor,_Phrase,_Rphrase,Rel,_Gap),rel,Rel).
+pathval(sign(_Cat,_Val,_Dir,_Arg,_Sem,_Mor,_Phrase,_Rphrase,_Rel,Gap),gap,Gap).
+
+
+pathval(mor(Case,_Form,_Agr,_Det,_Def),case,Case).
+pathval(mor(_Case,Form,_Agr,_Det,_Def),form,Form).
+pathval(mor(_Case,_Form,Agr,_Det,_Def),agr,Agr).
+pathval(mor(_Case,_Form,_Agr,Det,_Def),det,Det).
+pathval(mor(_Case,_Form,_Agr,_Det,Def),def,Def).
+
+pathval(rel(Mor,_Index),rmor,Mor).
+pathval(rel(_Mor,Index),index,Index).
+
+pathval(sign(_Cat,Val,_Dir,_Arg,_Sem,_Mor,_Phrase,_Rphrase,_Rel,_Gap),val:Path,Value) :-
+        pathval(Val,Path,Value).
+pathval(sign(_Cat,_Val,_Dir,Arg,_Sem,_Mor,_Phrase,_Rphrase,_Rel,_Gap),arg:Path,Value) :-
+        pathval(Arg,Path,Value).
+pathval(sign(_Cat,_Val,_Dir,_Arg,_Sem,Mor,_Phrase,_Rphrase,_Rel,_Gap),mor:Path,Value) :-
+        pathval(Mor,Path,Value).
+pathval(sign(_Cat,_Val,_Dir,_Arg,_Sem,_Mor,_Phrase,_Rphrase,Rel,_Gap),rel:Path,Value) :-
+        pathval(Rel,Path,Value).
+pathval(sign(_Cat,_Val,_Dir,_Arg,_Sem,_Mor,_Phrase,_Rphrase,_Rel,Gap),gap:Path,Value) :-
+        pathval(Gap,Path,Value).
+
+pathval(rel(Mor,_Index),rmor:Path,Value) :-
+        pathval(Mor,Path,Value).
+        
+%%%%%%%%%%%%%%%%%%%%%%%%%% defaulty stuff %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% add hoc solution for this grammar only
+
+unify_except(sign(Cat,Val,Dir,Arg,Sem,Mor,_,RP,Rel,Gap),
+             sign(Cat,Val,Dir,Arg,Sem,Mor,_,RP,Rel,Gap),[phrase]).
+unify_except(sign(Cat,Val,Dir,Arg,Sem,Mor,P,_,Rel,Gap),
+             sign(Cat,Val,Dir,Arg,Sem,Mor,P,_,Rel,Gap),[rphrase]).
+             
+        
+%%% lexical defaults 
+
+apply_default(Default) :-               
+        ( call(Default), !
+        ; true
+        ).
+
+        
+\end{verbatim}

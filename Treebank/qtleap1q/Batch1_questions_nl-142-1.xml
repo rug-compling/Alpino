@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="np" end="8" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" getal-n="zonder-n" id="2" lemma="activeren" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="activeer" word="Activeren" wvorm="inf"/>
+      <node begin="1" cat="pp" end="8" id="3" rel="mod">
+        <node begin="1" end="2" id="4" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="2" cat="np" end="8" id="5" rel="obj1">
+          <node begin="2" end="3" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" cat="mwu" end="5" id="7" rel="hd">
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="slaapstand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="slaapstand" word="slaapstand"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="modus" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="modus" word="modus"/>
+          </node>
+          <node begin="5" cat="pp" end="8" id="10" rel="mod">
+            <node begin="5" end="6" id="11" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="6" cat="mwu" end="8" id="12" rel="obj1">
+              <node begin="6" end="7" id="13" lemma="Windows" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Windows" spectype="deeleigen" word="Windows"/>
+              <node begin="7" end="8" id="14" lemma="XP" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="XP" spectype="deeleigen" word="XP"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Activeren van de slaapstand modus in Windows XP</sentence>
+</alpino_ds>

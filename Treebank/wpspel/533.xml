@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="whq" end="11" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="11" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="predc"/>
+        <node begin="1" end="2" id="5" lemma="noemen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="noem" word="noemt" wvorm="pv"/>
+        <node begin="2" end="3" genus="masc" getal="ev" id="6" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="men"/>
+        <node begin="3" cat="np" end="11" id="7" rel="obj1">
+          <node begin="3" end="4" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="4" cat="conj" end="7" id="9" rel="mod">
+            <node begin="4" buiging="met-e" end="5" graad="basis" id="10" lemma="hoekig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="hoekig" word="hoekige"/>
+            <node begin="5" conjtype="neven" end="6" id="11" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+            <node begin="6" buiging="met-e" end="7" graad="basis" id="12" lemma="rond" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="rond" word="ronde"/>
+          </node>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="13" lemma="uitbouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="uitbouw" word="uitbouw"/>
+          <node begin="8" cat="pp" end="11" id="14" rel="mod">
+            <node begin="8" end="9" id="15" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+            <node begin="9" cat="np" end="11" id="16" rel="obj1">
+              <node begin="9" end="10" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="18" lemma="gevel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gevel" word="gevel"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="19" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe noemt men een hoekige of ronde uitbouw aan een gevel ?</sentence>
+</alpino_ds>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="24" id="2" rel="--">
+      <node begin="0" cat="np" end="3" id="3" rel="su">
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="best" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="best" word="beste"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="configuratie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="configuratie" word="configuratie"/>
+      </node>
+      <node begin="3" end="4" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="4" cat="np" end="24" id="8" rel="predc">
+        <node begin="4" end="5" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="computer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="computer" word="computer"/>
+        <node begin="6" cat="pp" end="24" id="11" rel="mod">
+          <node begin="6" end="7" id="12" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="7" cat="conj" end="24" id="13" rel="predc">
+            <node begin="7" cat="np" end="10" id="14" rel="cnj">
+              <node begin="7" end="8" id="15" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="16" lemma="i7" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="i7" word="i7"/>
+              <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="17" lemma="processor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="processor" word="processor"/>
+            </node>
+            <node begin="11" cat="np" end="14" id="18" rel="cnj">
+              <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="8Gb" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="det" root="8Gb" word="8Gb"/>
+              <node begin="12" buiging="zonder" end="13" graad="basis" id="20" lemma="intern" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="intern" word="intern"/>
+              <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="21" lemma="geheugen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geheugen" word="geheugen"/>
+            </node>
+            <node begin="14" conjtype="neven" end="15" id="22" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="15" cat="np" end="24" id="23" rel="cnj">
+              <node begin="15" end="16" id="24" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="16" buiging="met-e" end="17" graad="basis" id="25" lemma="specifiek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="specifiek" word="specifieke"/>
+              <node begin="17" buiging="met-e" end="18" graad="basis" id="26" lemma="grafisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="grafisch" word="grafische"/>
+              <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="27" lemma="kaart" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kaart" word="kaart"/>
+              <node begin="19" cat="pp" end="24" id="28" rel="mod">
+                <node begin="19" end="20" id="29" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                <node begin="20" cat="np" end="24" id="30" rel="obj1">
+                  <node begin="20" buiging="zonder" end="21" graad="basis" id="31" lemma="minimaal" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="minimaal" word="minimaal"/>
+                  <node begin="21" end="22" id="32" lemma="2" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="2" word="2"/>
+                  <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="33" lemma="giga_byte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="giga_byte" word="Gb"/>
+                  <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="34" lemma="ram" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="ram" word="RAM"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De beste configuratie is een computer met een i7 processor , 8Gb intern geheugen en een specifieke grafische kaart met minimaal 2 Gb RAM .</sentence>
+</alpino_ds>

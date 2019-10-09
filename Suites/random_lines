@@ -1,0 +1,17 @@
+#!/usr/bin/perl -w
+# © Gertjan van Noord, 1997.
+# mailto:vannoord@let.rug.nl
+
+use strict;
+use vars qw($opt_p);
+use Getopt::Std;
+$opt_p=0.1;
+
+# OPTIONS
+getopts('p:');
+
+while(<>) {
+    if (rand() < $opt_p) {
+	print;
+    }
+}

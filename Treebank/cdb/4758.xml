@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="0" cat="conj" end="23" id="1" rel="--">
+      <node begin="0" cat="smain" end="14" id="2" rel="cnj">
+        <node begin="0" cat="np" end="5" id="3" index="1" rel="su">
+          <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+          <node begin="1" buiging="met-e" end="2" getal="mv" graad="basis" id="5" lemma="beide" naamval="stan" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,mv,basis)" pt="vnw" rel="det" root="beide" vwtype="onbep" word="beide"/>
+          <node begin="2" buiging="met-e" end="3" graad="basis" id="6" lemma="officieel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="officieel" word="officiele"/>
+          <node begin="3" buiging="met-e" end="4" graad="basis" id="7" lemma="unionistisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Unionistische" word="Unionistische"/>
+          <node begin="4" end="5" getal="mv" graad="basis" id="8" lemma="kandidaat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kandidaat" word="kandidaten"/>
+        </node>
+        <node begin="5" end="6" id="9" lemma="heten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heet" word="heten" wvorm="pv"/>
+        <node begin="0" cat="ti" end="14" id="10" rel="vc">
+          <node begin="12" end="13" id="11" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="0" cat="inf" end="14" id="12" rel="body">
+            <node begin="0" end="5" id="13" index="1" rel="su"/>
+            <node begin="6" end="7" id="14" lemma="immers" pos="adv" postag="BW()" pt="bw" rel="mod" root="immers" word="immers"/>
+            <node begin="7" cat="pp" end="11" id="15" rel="mod">
+              <node begin="7" end="8" id="16" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+              <node begin="8" cat="np" end="11" id="17" rel="obj1">
+                <node begin="8" end="9" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="9" buiging="met-e" end="10" graad="basis" id="19" lemma="heel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="heel" word="hele"/>
+                <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="20" lemma="partij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="partij" word="partij"/>
+              </node>
+            </node>
+            <node begin="11" buiging="zonder" end="12" graad="basis" id="21" lemma="aanvaardbaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="aanvaardbaar" word="aanvaardbaar"/>
+            <node begin="13" buiging="zonder" end="14" id="22" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+      <node begin="14" conjtype="neven" end="15" id="23" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="15" cat="smain" end="23" id="24" rel="cnj">
+        <node begin="15" cat="np" end="17" id="25" rel="su">
+          <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="26" lemma="oud-minister" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oud-minister" word="oud-minister"/>
+          <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="27" lemma="Morgan" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Morgan" word="Morgan"/>
+        </node>
+        <node begin="17" end="18" id="28" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
+        <node begin="18" end="19" getal="getal" id="29" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" status="vol" vwtype="aanw" word="hier"/>
+        <node begin="19" cat="pp" end="23" id="30" rel="ld">
+          <node begin="19" end="20" id="31" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+          <node begin="20" cat="np" end="23" id="32" rel="obj1">
+            <node begin="20" end="21" id="33" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="21" buiging="met-e" end="22" graad="basis" id="34" lemma="rechts" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="rechts" word="rechtse"/>
+            <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="35" lemma="kant" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kant" word="kant"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De beide officiele Unionistische kandidaten heten immers voor de hele partij aanvaardbaar te zijn en oud-minister Morgan staat hier aan de rechtse kant .</sentence>
+</alpino_ds>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="smain" end="20" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" buiging="met-e" end="1" frame="determiner(pl_num,nwh,nmod,pro,yparg)" id="3" infl="pl_num" lcat="detp" lemma="sommige" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="sommige" sense="sommige" vwtype="onbep" wh="nwh" word="Sommige"/>
+        <node begin="1" end="2" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="4" lcat="np" lemma="patiënt" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="patiënt" sense="patiënt" word="patiënten"/>
+      </node>
+      <node begin="2" end="3" frame="verb(hebben,pl,aux_psp_hebben)" id="5" infl="pl" lcat="smain" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" sense="heb" tense="present" word="hebben" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="20" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="su"/>
+        <node begin="3" cat="np" end="7" id="8" rel="obj1">
+          <node begin="3" end="4" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lcat="np" lemma="last" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="last" sense="last" word="last"/>
+          <node begin="4" cat="pp" end="7" id="10" rel="mod">
+            <node begin="4" end="5" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="11" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+            <node begin="5" cat="np" end="7" id="12" rel="obj1">
+              <node begin="5" end="6" frame="determiner(de)" id="13" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+              <node begin="6" end="7" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="14" lcat="np" lemma="maag" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="maag" sense="maag" word="maag"/>
+            </node>
+          </node>
+        </node>
+        <node begin="7" buiging="zonder" end="8" frame="verb(hebben,psp,transitive)" id="15" infl="psp" lcat="ppart" lemma="krijgen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="krijg" sc="transitive" sense="krijg" word="gekregen" wvorm="vd"/>
+        <node begin="8" cat="cp" end="20" id="16" rel="mod">
+          <node begin="8" conjtype="onder" end="9" frame="complementizer" id="17" lcat="cp" lemma="toen" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="toen" sense="toen" word="toen"/>
+          <node begin="9" cat="ssub" end="20" id="18" rel="body">
+            <node begin="9" case="both" def="def" end="10" frame="pronoun(nwh,thi,both,de,both,def,wkpro)" gen="de" getal="mv" id="19" index="2" lcat="np" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" sense="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="ze"/>
+            <node begin="10" end="11" frame="verb(unacc,past(pl),aux_psp_zijn)" id="20" infl="pl" lcat="ssub" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" sc="aux_psp_zijn" sense="ben" tense="past" word="waren" wvorm="pv"/>
+            <node begin="9" cat="ppart" end="20" id="21" rel="vc">
+              <node begin="9" end="10" id="22" index="2" rel="su"/>
+              <node begin="11" buiging="zonder" end="12" frame="verb(zijn,psp,pc_pp(met))" id="23" infl="psp" lcat="ppart" lemma="beginnen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="begin" sc="pc_pp(met)" sense="begin-met" word="begonnen" wvorm="vd"/>
+              <node begin="12" cat="pp" end="20" id="24" rel="pc">
+                <node begin="12" end="13" frame="preposition(met,[mee,[en,al]])" id="25" lcat="pp" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" sense="met" vztype="init" word="met"/>
+                <node begin="13" cat="np" end="20" id="26" rel="obj1">
+                  <node begin="13" end="14" frame="determiner(een)" id="27" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+                  <node begin="14" end="15" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="28" lcat="np" lemma="combinatie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="combinatie" sense="combinatie" word="combinatie"/>
+                  <node begin="15" cat="pp" end="20" id="29" rel="mod">
+                    <node begin="15" end="16" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="30" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+                    <node begin="16" cat="conj" end="20" id="31" rel="obj1">
+                      <node begin="17" conjtype="neven" end="18" frame="conj(en)" id="32" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+                      <node begin="16" cat="np" end="20" id="33" rel="cnj">
+                        <node begin="16" end="17" frame="noun(both,both,both)" gen="both" genus="zijd" getal="ev" graad="basis" id="34" lcat="np" lemma="sitagliptine" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sitagliptine" sense="sitagliptine" word="sitagliptine"/>
+                        <node aform="base" begin="19" end="20" frame="adjective(postn_pred(padv))" id="35" index="3" infl="pred" lcat="ap" lemma="samen" pos="adj" postag="BW()" pt="bw" rel="mod" root="samen" sense="samen" vform="adj" word="samen"/>
+                      </node>
+                      <node begin="18" cat="np" end="20" id="36" rel="cnj">
+                        <node begin="18" end="19" frame="noun(both,both,both)" gen="both" genus="zijd" getal="ev" graad="basis" id="37" lcat="np" lemma="metformine" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="metformine" sense="metformine" word="metformine"/>
+                        <node begin="19" end="20" id="38" index="3" rel="mod"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" frame="punct(punt)" id="39" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Sommige patiënten hebben last van de maag gekregen toen ze waren begonnen met een combinatie van sitagliptine en metformine samen .</sentence>
+  <comments>
+    <comment>Q#humandocs_PDFs_EPAR_tesavel_H-910-PI-nl-s1016.1|Sommige patiënten hebben last van de maag gekregen toen ze waren begonnen met een combinatie van sitagliptine en metformine samen .|1|1|-0.2387054068055985</comment>
+  </comments>
+</alpino_ds>

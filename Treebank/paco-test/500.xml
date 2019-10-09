@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="ppres" end="14" id="1" rel="--">
+      <node aform="base" begin="0" end="1" frame="adjective(ende(padv),object_sbar)" id="2" infl="e" lcat="ppres" pos="adj" rel="hd" root="erken" sc="object_sbar" sense="erken" vform="gerund" word="ERKENNENDE"/>
+      <node begin="1" cat="cp" end="14" id="3" rel="vc">
+        <node begin="1" end="2" frame="complementizer(dat)" id="4" lcat="cp" pos="comp" rel="cmp" root="dat" sc="dat" sense="dat" word="dat"/>
+        <node begin="2" cat="ssub" end="14" id="5" rel="body">
+          <node begin="2" cat="np" end="8" id="6" rel="su">
+            <node begin="2" end="3" frame="determiner(een)" id="7" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+            <node begin="3" cat="conj" end="6" id="8" rel="mod">
+              <node aform="base" begin="3" end="4" frame="adjective(no_e(adv))" id="9" infl="no_e" lcat="ap" pos="adj" rel="cnj" root="gezond" sense="gezond" vform="adj" word="gezond"/>
+              <node begin="4" end="5" frame="conj(en)" id="10" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+              <node aform="base" begin="5" end="6" frame="adjective(no_e(adv))" id="11" infl="no_e" lcat="ap" pos="adj" rel="cnj" root="duurzaam" sense="duurzaam" vform="adj" word="duurzaam"/>
+            </node>
+            <node aform="base" begin="6" end="7" frame="adjective(no_e(adv))" id="12" infl="no_e" lcat="ap" pos="adj" rel="mod" root="economisch" sense="economisch" vform="adj" word="economisch"/>
+            <node begin="7" end="8" frame="noun(het,mass,sg)" gen="het" id="13" lcat="np" num="sg" pos="noun" rel="hd" root="beleid" sense="beleid" word="beleid"/>
+          </node>
+          <node begin="11" end="12" frame="verb(unacc,sg_heeft,copula)" id="14" infl="sg_heeft" lcat="ssub" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="is"/>
+          <node begin="8" cat="np" end="14" id="15" rel="predc">
+            <node begin="8" end="9" frame="determiner(een)" id="16" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+            <node aform="base" begin="9" end="10" frame="adjective(e)" id="17" infl="e" lcat="ap" pos="adj" rel="mod" root="essentieel" sense="essentieel" vform="adj" word="essentiële"/>
+            <node begin="10" end="11" frame="noun(de,count,sg)" gen="de" id="18" lcat="np" num="sg" pos="noun" rel="hd" root="voorwaarde" sense="voorwaarde" word="voorwaarde"/>
+            <node begin="12" cat="pp" end="14" id="19" rel="mod">
+              <node begin="12" end="13" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="20" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+              <node begin="13" end="14" frame="noun(de,count,sg)" gen="de" id="21" lcat="np" num="sg" pos="noun" rel="obj1" root="ontwikkeling" sense="ontwikkeling" word="ontwikkeling"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" frame="punct(punt_komma)" id="22" lcat="punct" pos="punct" rel="--" root=";" sense=";" special="punt_komma" word=";"/>
+  </node>
+  <sentence>ERKENNENDE dat een gezond en duurzaam economisch beleid een essentiële voorwaarde is voor ontwikkeling ;</sentence>
+  <comments>
+    <comment>Q#500|ERKENNENDE dat een gezond en duurzaam economisch beleid een essentiële voorwaarde is voor ontwikkeling ;|1|1|-6.0668426855453355</comment>
+  </comments>
+</alpino_ds>

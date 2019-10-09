@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="0" cat="smain" end="19" id="1" rel="--">
+      <node begin="9" end="10" id="2" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="10" cat="np" end="12" id="3" index="1" rel="su">
+        <node begin="10" end="11" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="5" lemma="rijkspolitie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rijkspolitie" word="rijkspolitie"/>
+      </node>
+      <node begin="0" cat="ppart" end="19" id="6" rel="vc">
+        <node begin="0" cat="pp" end="9" id="7" rel="mod">
+          <node begin="0" cat="mwu" end="3" id="8" rel="hd">
+            <node begin="0" end="1" id="9" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="Op"/>
+            <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="10" lemma="verzoek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="verzoek" word="verzoek"/>
+            <node begin="2" end="3" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+          </node>
+          <node begin="3" cat="np" end="9" id="12" rel="obj1">
+            <node begin="3" end="4" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="14" lemma="procureur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="procureur" word="procureur"/>
+            <node begin="5" cat="np" end="7" id="15" rel="mod">
+              <node begin="5" end="6" id="16" lemma="des" lwtype="bep" naamval="gen" npagr="evmo" pos="det" postag="LID(bep,gen,evmo)" pt="lid" rel="det" root="des" word="des"/>
+              <node begin="6" end="7" getal="ev" graad="basis" id="17" lemma="koning" naamval="gen" ntype="soort" pos="noun" postag="N(soort,ev,basis,gen)" pt="n" rel="hd" root="konings" word="konings"/>
+            </node>
+            <node begin="7" cat="pp" end="9" id="18" rel="mod">
+              <node begin="7" end="8" id="19" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="20" lemma="Antwerpen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Antwerpen" word="Antwerpen"/>
+            </node>
+          </node>
+        </node>
+        <node begin="10" end="12" id="21" index="1" rel="su"/>
+        <node begin="12" cat="pp" end="14" id="22" rel="mod">
+          <node begin="12" end="13" id="23" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="24" lemma="Oudenbosch" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Oudenbosch" word="Oudenbosch"/>
+        </node>
+        <node begin="14" cat="np" end="18" id="25" rel="obj1">
+          <node begin="14" end="15" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="15" buiging="met-e" end="16" graad="basis" id="27" lemma="21-jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="21-jarige"/>
+          <node begin="16" cat="mwu" end="18" id="28" rel="hd">
+            <node begin="16" end="17" id="29" lemma="C." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="C." spectype="deeleigen" word="C."/>
+            <node begin="17" end="18" id="30" lemma="M." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="M." spectype="deeleigen" word="M."/>
+          </node>
+        </node>
+        <node begin="18" buiging="zonder" end="19" id="31" lemma="aanhouden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="houd" word="aangehouden" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="19" end="20" id="32" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Op verzoek van de procureur des konings in Antwerpen heeft de rijkspolitie in Oudenbosch de 21-jarige C. M. aangehouden .</sentence>
+</alpino_ds>

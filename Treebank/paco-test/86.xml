@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="du" end="3" id="1" rel="--">
+      <node begin="0" end="1" frame="tag" id="2" lcat="advp" pos="tag" rel="tag" root="*" sense="*" word="*"/>
+      <node begin="1" cat="ppart" end="3" id="3" rel="nucl">
+        <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" id="4" lcat="np" num="sg" pos="noun" rel="obj1" root="prijs_wijziging" sense="prijs_wijziging" word="Prijswijziging"/>
+        <node begin="2" end="3" frame="verb(hebben,psp,ninv(transitive,part_transitive(voor)))" id="5" infl="psp" lcat="ppart" pos="verb" rel="hd" root="behoud_voor" sc="part_transitive(voor)" sense="behoud_voor" word="voorbehouden"/>
+      </node>
+    </node>
+    <node begin="3" end="4" frame="punct(punt)" id="6" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>* Prijswijziging voorbehouden .</sentence>
+  <comments>
+    <comment>Q#86|* Prijswijziging voorbehouden .|1|1|5.765692402455083</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="0" cat="smain" end="24" id="1" rel="--">
+      <node begin="4" end="5" id="2" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="5" cat="np" end="13" id="3" index="1" rel="su">
+        <node begin="5" end="6" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="6" buiging="met-e" end="7" graad="basis" id="5" lemma="Frans" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Frans" word="Franse"/>
+        <node begin="7" cat="mwu" end="10" id="6" rel="hd">
+          <node begin="7" end="8" id="7" lemma="Sans" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Sans" spectype="vreemd" word="Sans"/>
+          <node begin="8" end="9" id="8" lemma="Coeur" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Coeur" spectype="vreemd" word="Coeur"/>
+          <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="9" lemma="h" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="H" word="H"/>
+        </node>
+        <node begin="10" cat="pp" end="13" id="10" rel="mod">
+          <node begin="10" end="11" id="11" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="11" cat="mwu" end="13" id="12" rel="obj1">
+            <node begin="11" end="12" id="13" lemma="Appie" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Appie" spectype="deeleigen" word="Appie"/>
+            <node begin="12" end="13" id="14" lemma="Hof" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hof" spectype="deeleigen" word="Hof"/>
+          </node>
+        </node>
+      </node>
+      <node begin="0" cat="ppart" end="24" id="15" rel="vc">
+        <node begin="0" cat="pp" end="4" id="16" rel="mod">
+          <node begin="0" end="1" id="17" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="Na"/>
+          <node begin="1" cat="np" end="4" id="18" rel="obj1">
+            <node begin="1" end="2" id="19" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="2" buiging="met-e" end="3" graad="basis" id="20" lemma="fel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="fel" word="felle"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="21" lemma="strijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="strijd" word="strijd"/>
+          </node>
+        </node>
+        <node begin="5" end="13" id="22" index="1" rel="su"/>
+        <node begin="13" end="14" id="23" lemma="opnieuw" pos="adv" postag="BW()" pt="bw" rel="mod" root="opnieuw" word="opnieuw"/>
+        <node begin="14" cat="np" end="23" id="24" rel="obj1">
+          <node begin="14" end="15" id="25" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="26" lemma="hoofdnummer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="nummer" word="hoofdnummer"/>
+          <node begin="16" cat="pp" end="23" id="27" rel="mod">
+            <node begin="16" end="17" id="28" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="17" cat="np" end="23" id="29" rel="obj1">
+              <node begin="17" end="18" id="30" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="18" cat="ppart" end="20" id="31" rel="mod">
+                <node begin="18" buiging="zonder" end="19" graad="basis" id="32" lemma="druk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="druk" word="druk"/>
+                <node begin="19" buiging="met-e" end="20" id="33" lemma="bezoeken" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="bezocht" word="bezochte" wvorm="vd"/>
+              </node>
+              <node begin="20" end="21" getal="mv" graad="basis" id="34" lemma="avondkoers" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="koers" word="avondkoersen"/>
+              <node begin="21" cat="pp" end="23" id="35" rel="mod">
+                <node begin="21" end="22" id="36" lemma="te" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="te" vztype="init" word="te"/>
+                <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="37" lemma="Wolvega" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Wolvega" word="Wolvega"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="23" buiging="zonder" end="24" id="38" lemma="winnen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="win" word="gewonnen" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="24" end="25" id="39" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Na een felle strijd heeft de Franse Sans Coeur H met Appie Hof opnieuw het hoofdnummer van de druk bezochte avondkoersen te Wolvega gewonnen .</sentence>
+</alpino_ds>

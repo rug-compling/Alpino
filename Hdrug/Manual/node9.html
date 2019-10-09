@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-/W3C/DTD HTML 4.0 Transitional//EN"
+     "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>HDRUG Reference Manual</TITLE>
+<link rel=stylesheet href="http://www.let.rug.nl/~vannoord/doc.css" 
+      type="text/css">
+<link rel=next href="node10.html">
+</HEAD>
+<BODY>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node10.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+<H1>9. hdrug_call_tree: Displaying Lexical Hierarchies</H1>
+<P>This library is intended to be used to display lexical hierarchies in
+tree format. The relevant predicates all take a unary predicate
+Pred. The predicates then pretty print in a tree format the hierarchy
+related to the predicate Fuctor/1 as follows. Pred dominates all
+predicates that call Pred in their body.</P>
+<P>If the optional Functor argument is absent, then the
+user:call_default/1 hook predicate is used to obtain Functor.</P>
+<BLOCKQUOTE>transitive(X) :- verb(X).</BLOCKQUOTE>
+<BLOCKQUOTE>verb(X) :- lex(X).</BLOCKQUOTE>
+<BLOCKQUOTE>noun(X) :- lex(X).</BLOCKQUOTE>
+<P>gives the tree: lex(verb(transitive),noun)</P>
+<P>Other calls in the body are attached to the label, as a poor man's way
+to illustrate multiple inheritance:</P>
+<BLOCKQUOTE>transitive(X) :- verb(X).</BLOCKQUOTE>
+<BLOCKQUOTE>verb(X) :- lex(X).</BLOCKQUOTE>
+<BLOCKQUOTE>noun(X) :- lex(X),other(X).</BLOCKQUOTE>
+<P>gives: lex(verb(transitive),noun[other])</P>
+<P>Leaves of the tree can be defined by the user (e.g. to stop the tree
+at interesting point, and to give interesting info in the label, use
+the hook predicate user:call_leaf(Call,Label). And yes, don't forget
+the obvious: it is assumed that the predicates are not recursive.</P>
+<H2>9.1. <a name="anc1"></a>Hook Predicates</H2>
+<P>This section lists the hook predicates for the hdrug_call_tree
+library.</P>
+<H3>9.1.1. <a name="anc2"></a>user:call_default(Functor)</H3>
+<P>Indicates
+that Functor is the default predicate for the various call_tree
+predicates.</P>
+<H3>9.1.2. <a name="anc3"></a>user:call_clause(Head,Body)</H3>
+<H3>9.1.3. <a name="anc4"></a>user:call_leaf(Leaf)</H3>
+<H3>9.1.4. <a name="anc5"></a>user:call_build_lab(F,Fs,L)</H3>
+<H3>9.1.5. <a name="anc6"></a>user:call_ignore_clause(F/A)</H3>
+<H2>9.2. <a name="anc7"></a>Predicates</H2>
+<P>This section lists the predicates exported by the hdrug_call_tree
+library.</P>
+<H3>9.2.1. <a name="anc8"></a>
+hdrug_call_tree:call_tree_bu[_tk/_clig/_latex][(Functor)]</H3>
+<P>pretty prints in a tree format the hierarchy related to the predicate
+Fuctor/1. If the optional Functor argument is absent, then the
+user:call_default/1 hook predicate is used to obtain Functor. The _tk
+_clig and _latex suffices indicate that a different output medium
+should be chosen (instead of the console).</P>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node10.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+
+
+</BODY></HTML>

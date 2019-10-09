@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="11" end="12" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="19" id="3" rel="--">
+      <node begin="0" cat="np" end="2" id="4" index="1" rel="su">
+        <node begin="0" end="1" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="6" lemma="miljoenennota" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="nota" word="miljoenennota"/>
+      </node>
+      <node begin="2" end="3" id="7" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+      <node begin="0" cat="inf" end="19" id="8" rel="vc">
+        <node begin="0" end="2" id="9" index="1" rel="su"/>
+        <node begin="17" buiging="zonder" end="18" id="10" lemma="moeten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="moet" word="moeten" wvorm="inf"/>
+        <node begin="0" cat="inf" end="19" id="11" rel="vc">
+          <node begin="0" end="2" id="12" index="1" rel="su"/>
+          <node begin="5" cat="cp" end="11" id="13" rel="mod">
+            <node begin="5" conjtype="onder" end="6" id="14" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+            <node begin="6" cat="ssub" end="11" id="15" rel="body">
+              <node begin="6" end="7" genus="onz" getal="ev" id="16" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+              <node begin="7" cat="np" end="9" id="17" rel="obj2">
+                <node begin="7" buiging="met-e" end="8" id="18" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+                <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="19" lemma="regering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="regering" word="regering"/>
+              </node>
+              <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="20" lemma="ernst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="predc" root="ernst" word="ernst"/>
+              <node begin="10" end="11" id="21" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+            </node>
+          </node>
+          <node begin="3" cat="np" end="17" id="22" rel="obj1">
+            <node begin="12" end="13" id="23" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="13" cat="mwu" end="16" id="24" rel="hd">
+              <node begin="13" end="14" id="25" lemma="een" naamval="stan" numtype="hoofd" pos="noun" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="een" word="een"/>
+              <node begin="14" conjtype="neven" end="15" id="26" lemma="en" pos="noun" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
+              <node begin="15" buiging="zonder" end="16" getal-n="zonder-n" graad="basis" id="27" lemma="ander" pos="noun" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="mwp" root="ander" word="ander"/>
+            </node>
+            <node begin="3" cat="pp" end="17" id="28" rel="mod">
+              <node begin="3" end="4" getal="getal" id="29" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
+              <node begin="16" end="17" id="30" lemma="van" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="van" vztype="fin" word="van"/>
+            </node>
+          </node>
+          <node begin="18" buiging="zonder" end="19" id="31" lemma="onthullen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="onthul" word="onthullen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="32" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De miljoenennota zal er , als het deze regering ernst is , het een en ander van moeten onthullen .</sentence>
+</alpino_ds>

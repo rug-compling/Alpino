@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="2" end="3" frame="punct(ligg_streep)" id="1" lcat="punct" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" sense="-" special="ligg_streep" word="-"/>
+    <node begin="0" cat="du" end="4" id="2" rel="--">
+      <node begin="0" cat="smain" end="2" id="3" rel="dp">
+        <node begin="0" end="1" frame="proper_name(both,'PER')" id="4" lcat="np" lemma="Mücka" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="su" root="Mücka" sense="Mücka" spectype="deeleigen" word="Mücka"/>
+        <node begin="1" end="2" frame="verb(hebben,sg3,intransitive)" id="5" infl="sg3" lcat="smain" lemma="tellen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="tel" sc="intransitive" sense="tel" tense="present" word="telt" wvorm="pv"/>
+      </node>
+      <node begin="3" end="4" frame="noun(both,both,both)" gen="both" id="6" lcat="np" lemma="inwoners-" num="both" pos="noun" postag="SPEC(afgebr)" pt="spec" rel="dp" root="inwoners-" sense="inwoners-" spectype="afgebr" word="inwoners-"/>
+    </node>
+    <node begin="4" end="5" frame="punct(punt)" id="7" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Mücka telt - inwoners- .</sentence>
+  <comments>
+    <comment>Q#724564-2-2|Mücka telt - inwoners- .|1|1|0.09724424953839954</comment>
+  </comments>
+</alpino_ds>

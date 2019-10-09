@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="sv1" end="8" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="controleren" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="controleer" word="Controleer" wvorm="pv"/>
+      <node begin="1" cat="cp" end="8" id="3" rel="vc">
+        <node begin="1" conjtype="onder" end="2" id="4" lemma="of" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="of" word="of"/>
+        <node begin="2" cat="ssub" end="8" id="5" rel="body">
+          <node begin="2" cat="np" end="4" id="6" index="1" rel="su">
+            <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="mail_account" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="mail_account" word="mailaccount"/>
+          </node>
+          <node begin="4" end="5" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          <node begin="2" cat="ppart" end="8" id="10" rel="vc">
+            <node begin="2" end="4" id="11" index="1" rel="obj1"/>
+            <node begin="5" buiging="zonder" end="6" id="12" lemma="in_stellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel_in" word="ingesteld" wvorm="vd"/>
+            <node begin="6" cat="pp" end="8" id="13" rel="pc">
+              <node begin="6" end="7" id="14" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+              <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="15" lemma="imap" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="imap" word="IMAP"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Controleer of de mailaccount is ingesteld op IMAP .</sentence>
+</alpino_ds>

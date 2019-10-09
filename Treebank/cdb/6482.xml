@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="vervolgens" pos="adv" postag="BW()" pt="bw" rel="mod" root="vervolgens" word="Vervolgens"/>
+      <node begin="1" end="2" id="3" lemma="vinden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vind" word="vond" wvorm="pv"/>
+      <node begin="2" end="3" genus="masc" getal="ev" id="4" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="men"/>
+      <node begin="3" end="4" genus="onz" getal="ev" id="5" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="pobj1" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="4" buiging="zonder" end="5" graad="basis" id="6" lemma="ondemocratisch" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="ondemocratisch" word="ondemocratisch"/>
+      <node begin="5" cat="ti" end="14" id="7" rel="vc">
+        <node begin="12" end="13" id="8" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="5" cat="inf" end="14" id="9" rel="body">
+          <node begin="5" cat="cp" end="8" id="10" rel="predm">
+            <node begin="5" end="6" id="11" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+            <node begin="6" cat="np" end="8" id="12" rel="body">
+              <node begin="6" buiging="met-e" end="7" graad="sup" id="13" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="groot" word="grootste"/>
+              <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="14" lemma="partij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="partij" word="partij"/>
+            </node>
+          </node>
+          <node begin="8" cat="ppart" end="12" id="15" rel="vc">
+            <node begin="8" cat="pp" end="11" id="16" rel="ld">
+              <node begin="8" end="9" id="17" lemma="buiten" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="buiten" vztype="init" word="buiten"/>
+              <node begin="9" cat="np" end="11" id="18" rel="obj1">
+                <node begin="9" end="10" id="19" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="20" lemma="regering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="regering" word="regering"/>
+              </node>
+            </node>
+            <node begin="11" buiging="zonder" end="12" id="21" lemma="houden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="houd" word="gehouden" wvorm="vd"/>
+          </node>
+          <node begin="13" buiging="zonder" end="14" id="22" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Vervolgens vond men het ondemocratisch als grootste partij buiten de regering gehouden te worden .</sentence>
+</alpino_ds>

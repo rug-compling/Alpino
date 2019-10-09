@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" index="1" lemma="Zondag" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Zondag" word="Zondag"/>
+      <node begin="1" end="2" id="3" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="14" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="obj1"/>
+        <node begin="2" cat="conj" end="13" id="6" rel="mod">
+          <node begin="2" cat="pp" end="6" id="7" rel="cnj">
+            <node begin="2" end="3" id="8" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="3" cat="np" end="6" id="9" rel="obj1">
+              <node begin="3" end="4" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="hoofdstad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hoofdstad" word="hoofdstad"/>
+              <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="12" lemma="Seoul" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Seoul" word="Seoul"/>
+            </node>
+          </node>
+          <node begin="6" conjtype="neven" end="7" id="13" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="7" cat="pp" end="13" id="14" rel="cnj">
+            <node begin="7" end="8" id="15" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="8" cat="np" end="13" id="16" rel="obj1">
+              <node begin="8" end="9" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="9" end="10" getal="mv" graad="basis" id="18" lemma="stad" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="stad" word="steden"/>
+              <node begin="10" cat="conj" end="13" id="19" rel="app">
+                <node begin="10" end="11" genus="genus" getal="ev" graad="basis" id="20" lemma="Pusan" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="cnj" root="Pusan" word="Pusan"/>
+                <node begin="11" conjtype="neven" end="12" id="21" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="22" lemma="Ulsan" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Ulsan" word="Ulsan"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="13" buiging="zonder" end="14" id="23" lemma="demonstreren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="demonstreer" word="gedemonstreerd" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="14" end="15" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Zondag werd in de hoofdstad Seoul en in de steden Pusan en Ulsan gedemonstreerd .</sentence>
+</alpino_ds>

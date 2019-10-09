@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="33" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="9" end="10" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="28" end="29" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="32" id="4" rel="--">
+      <node begin="0" cat="np" end="9" id="5" rel="su">
+        <node begin="0" cat="mwu" end="2" id="6" rel="hd">
+          <node begin="0" end="1" id="7" lemma="Loic" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Loic" spectype="deeleigen" word="Loic"/>
+          <node begin="1" end="2" id="8" lemma="Costeur" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Costeur" spectype="deeleigen" word="Costeur"/>
+        </node>
+        <node begin="3" cat="ppart" end="9" id="9" rel="mod">
+          <node begin="3" buiging="zonder" end="4" id="10" lemma="verbinden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verbonden" word="verbonden" wvorm="vd"/>
+          <node begin="4" cat="pp" end="9" id="11" rel="pc">
+            <node begin="4" end="5" id="12" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+            <node begin="5" cat="np" end="9" id="13" rel="obj1">
+              <node begin="5" end="6" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="15" lemma="universiteit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="universiteit" word="universiteit"/>
+              <node begin="7" cat="pp" end="9" id="16" rel="mod">
+                <node begin="7" end="8" id="17" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="18" lemma="Nantes" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Nantes" word="Nantes"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="10" end="11" id="19" lemma="botsen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="bots" word="botste" wvorm="pv"/>
+      <node begin="11" cat="pp" end="16" id="20" rel="ld">
+        <node begin="11" end="12" id="21" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="12" cat="np" end="16" id="22" rel="obj1">
+          <node begin="12" end="13" id="23" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="24" lemma="spoor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="spoor" word="spoor"/>
+          <node begin="14" cat="pp" end="16" id="25" rel="mod">
+            <node begin="14" end="15" id="26" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="15" end="16" getal="mv" graad="basis" id="27" lemma="schram" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="schram" word="schrammen"/>
+          </node>
+        </node>
+      </node>
+      <node begin="16" cat="pp" end="32" id="28" rel="mod">
+        <node begin="16" end="17" id="29" lemma="tijdens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tijdens" vztype="init" word="tijdens"/>
+        <node begin="17" cat="np" end="32" id="30" rel="obj1">
+          <node begin="17" end="18" id="31" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="18" buiging="zonder" end="19" getal-n="zonder-n" id="32" lemma="bestuderen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="bestudeer" word="bestuderen" wvorm="inf"/>
+          <node begin="19" cat="pp" end="32" id="33" rel="mod">
+            <node begin="19" end="20" id="34" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="20" cat="np" end="32" id="35" rel="obj1">
+              <node begin="20" end="21" getal="mv" graad="basis" id="36" lemma="sediment" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="sedimenten" word="sedimenten"/>
+              <node begin="21" cat="pp" end="32" id="37" rel="mod">
+                <node begin="21" end="22" id="38" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="22" cat="np" end="32" id="39" rel="obj1">
+                  <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="40" lemma="zandsteen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="zand_steen" word="zandsteen"/>
+                  <node begin="23" cat="pp" end="32" id="41" rel="mod">
+                    <node begin="23" end="24" id="42" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                    <node begin="24" cat="np" end="32" id="43" rel="obj1">
+                      <node begin="24" end="25" id="44" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                      <node begin="25" end="26" genus="onz" getal="ev" graad="basis" id="45" lemma="Camerosbassin" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Camerosbassin" word="Camerosbassin"/>
+                      <node begin="26" cat="pp" end="28" id="46" rel="mod">
+                        <node begin="26" end="27" id="47" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                        <node begin="27" end="28" genus="onz" getal="ev" graad="basis" id="48" lemma="Noord-Spanje" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Noord-Spanje" word="Noord-Spanje"/>
+                      </node>
+                      <node begin="29" cat="np" end="32" id="49" rel="app">
+                        <node begin="29" end="30" id="50" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                        <node begin="30" buiging="met-e" end="31" graad="basis" id="51" lemma="bekend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="bekend" word="bekende"/>
+                        <node begin="31" end="32" genus="zijd" getal="ev" graad="basis" id="52" lemma="dinosaurussite" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dinosaurus_site" word="dinosaurussite"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="32" end="33" id="53" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Loic Costeur , verbonden aan de universiteit van Nantes , botste op een spoor van schrammen tijdens het bestuderen van sedimenten in zandsteen in het Camerosbassin van Noord-Spanje , een bekende dinosaurussite .</sentence>
+</alpino_ds>

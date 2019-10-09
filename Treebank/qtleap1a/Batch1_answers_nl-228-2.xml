@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="16" id="2" rel="--">
+      <node begin="0" cat="cp" end="5" id="3" rel="sat">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="indien" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="indien" word="Indien"/>
+        <node begin="1" cat="ssub" end="5" id="5" rel="body">
+          <node begin="1" cat="np" end="3" id="6" index="1" rel="su">
+            <node begin="1" end="2" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="8" lemma="probleem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="probleem" word="probleem"/>
+          </node>
+          <node begin="3" end="4" id="9" lemma="blijven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="blijf" word="blijft" wvorm="pv"/>
+          <node begin="1" cat="inf" end="5" id="10" rel="vc">
+            <node begin="1" end="3" id="11" index="1" rel="su"/>
+            <node begin="4" buiging="zonder" end="5" id="12" lemma="bestaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="besta" word="bestaan" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+      <node begin="6" cat="conj" end="16" id="13" rel="nucl">
+        <node begin="6" cat="sv1" end="12" id="14" rel="cnj">
+          <node begin="6" end="7" id="15" lemma="proberen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="probeer" word="probeer" wvorm="pv"/>
+          <node begin="7" end="8" id="16" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+          <node begin="8" cat="ti" end="12" id="17" rel="vc">
+            <node begin="10" end="11" id="18" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="8" cat="inf" end="12" id="19" rel="body">
+              <node begin="8" cat="mwu" end="10" id="20" rel="obj1">
+                <node begin="8" end="9" id="21" lemma="Google" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Google" spectype="deeleigen" word="Google"/>
+                <node begin="9" end="10" id="22" lemma="Chrome" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Chrome" spectype="deeleigen" word="Chrome"/>
+              </node>
+              <node begin="11" buiging="zonder" end="12" id="23" lemma="deïnstalleren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="deïnstalleren" word="deïnstalleren" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+        <node begin="12" conjtype="neven" end="13" id="24" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="13" cat="sv1" end="16" id="25" rel="cnj">
+          <node begin="13" end="14" id="26" lemma="installeren" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="installeer" word="installeer" wvorm="pv"/>
+          <node begin="14" end="15" genus="onz" getal="ev" id="27" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+          <node begin="15" end="16" id="28" lemma="opnieuw" pos="adv" postag="BW()" pt="bw" rel="mod" root="opnieuw" word="opnieuw"/>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="29" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Indien het probleem blijft bestaan , probeer dan Google Chrome te deïnstalleren en installeer het opnieuw .</sentence>
+</alpino_ds>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="du" end="4" id="1" rel="--">
+      <node begin="0" cat="pp" end="2" id="2" rel="dp">
+        <node begin="0" end="1" id="3" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="a" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="A" word="A"/>
+      </node>
+      <node begin="2" cat="pp" end="4" id="5" rel="dp">
+        <node begin="2" end="3" id="6" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="Z" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Z" word="Z"/>
+      </node>
+    </node>
+  </node>
+  <sentence>van A tot Z</sentence>
+</alpino_ds>

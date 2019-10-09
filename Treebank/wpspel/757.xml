@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="whq" end="14" id="1" rel="--">
+      <node begin="0" cat="np" end="6" id="2" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welke"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="drank" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="drank" word="drank"/>
+        <node begin="2" cat="pp" end="6" id="5" rel="mod">
+          <node begin="2" cat="mwu" end="5" id="6" rel="hd">
+            <node begin="2" end="3" id="7" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="basis" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="basis" word="basis"/>
+            <node begin="4" end="5" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+          </node>
+          <node begin="5" end="6" getal="mv" graad="basis" id="10" lemma="colanoot" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="cola_noot" word="colanoten"/>
+        </node>
+      </node>
+      <node begin="0" cat="sv1" end="14" id="11" rel="body">
+        <node begin="0" end="6" id="12" index="1" rel="su"/>
+        <node begin="6" end="7" id="13" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="0" cat="ppart" end="14" id="14" rel="vc">
+          <node begin="0" end="6" id="15" index="1" rel="obj1"/>
+          <node begin="7" buiging="zonder" end="8" id="16" lemma="uitvinden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vind_uit" word="uitgevonden" wvorm="vd"/>
+          <node begin="8" cat="pp" end="14" id="17" rel="mod">
+            <node begin="8" end="9" id="18" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+            <node begin="9" cat="np" end="14" id="19" rel="obj1">
+              <node begin="9" end="10" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="21" lemma="farmaceut" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="farmaceut" word="farmaceut"/>
+              <node begin="11" cat="mwu" end="14" id="22" rel="app">
+                <node begin="11" end="12" id="23" lemma="John" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="John" spectype="deeleigen" word="John"/>
+                <node begin="12" end="13" id="24" lemma="S." pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="S." spectype="deeleigen" word="S."/>
+                <node begin="13" end="14" id="25" lemma="Pemberton" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Pemberton" spectype="deeleigen" word="Pemberton"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="26" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke drank op basis van colanoten is uitgevonden door de farmaceut John S. Pemberton ?</sentence>
+</alpino_ds>

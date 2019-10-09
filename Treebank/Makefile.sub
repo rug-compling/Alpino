@@ -1,0 +1,107 @@
+default: 
+	@echo "make doc"
+	@echo "target implies that a pdf file for each tree is"
+	@echo "generated. This can take a long time if there are many trees"
+	@echo "using make -j will speed up, of course"
+
+thisdir=$(ALPINO_HOME)/Treebank
+ttdir=$(ALPINO_HOME)/TreebankTools
+
+texcommand=xsltproc $(ttdir)/stylesheets/dt2latex.xsl
+
+%.tex : %.xml
+	$(texcommand) $< >$@
+
+DEMO=5
+
+%.svg : %.xml
+	xsltproc $(ttdir)/stylesheets/dt2tree$(DEMO).xsl $< >$@
+
+# %.pdf : %.svg
+# 	inkscape $(INKSCAPE) --export-pdf=$*.pdf.uncrop $<
+# 	pdfcrop $*.pdf.uncrop $*.pdf
+
+# %.pdf : %.svg
+# 	java -jar ~/src/batik-1.7/batik-rasterizer.jar -m application/pdf -d uncrop $<
+#	pdfcrop uncrop/$*.pdf $*.pdf
+
+
+# we have to go thru postscript, otherwise many problems
+# including error "PDF inclusion: multiple pdfs with page group included in a single page"
+# and chaotic output
+%.pdf : %.svg
+	rsvg-convert -f pdf -o $*.pdf $*.svg
+	pdf2ps $*.pdf
+	ps2pdf $*.ps
+	rm $*.ps
+
+%.png : %.svg
+	inkscape $(INKSCAPE) --export-png=$*.png $<
+
+css=http://www.let.rug.nl/~vannoord/vn.css
+
+%.epsi : %.tex
+	latex -interaction=batchmode $*
+	latex -interaction=batchmode $*
+	dvips -E -o $@ $*
+	rm -f $*.{aux,log,dvi}
+
+%.pdf : %.epsi
+	epstopdf $<
+
+files:=${basename ${shell ls -v *.xml}}
+
+
+clean:
+	/bin/rm -f index.aux index.log index.tex
+	/bin/rm -f $(files:%=%.aux) 
+	/bin/rm -f $(files:%=%.log) 
+	/bin/rm -f $(files:%=%.epsi) 
+	/bin/rm -f $(files:%=%.dvi) 
+	/bin/rm -f $(files:%=%.out) 
+	/bin/rm -f $(files:%=%.tex) 
+	/bin/rm -f $(files:%=%.svg) 
+
+realclean: clean
+	/bin/rm -f $(files) 
+	/bin/rm -f index.html index.pdf
+	/bin/rm -f $(files:%=%.pdf)
+	/bin/rm -f $(files:%=%.html)
+	/bin/rm -f xmls.tar.gz
+
+suite=${shell basename `pwd`}
+
+doc: index.pdf index.html
+
+PDFLATEX=pdflatex
+
+index.pdf: index.tex
+	$(PDFLATEX) -interaction nonstopmode index.tex
+
+index.tex:  $(files:%=%.pdf)
+	dtxslt --stylesheet $(ttdir)/stylesheets/dt2sent_with_file.xsl $(files:%=%.xml)\
+              | grep [.]| sed -e 's/[.]xml//g' |\
+         $(thisdir)/create_tex -s $(suite) > index.tex
+
+xmls.tar.gz: $(files:%=%.xml)
+	tar czf xmls.tar.gz -h $(files:%=%.xml)
+
+index.html: $(files:%=%.xml) $(files:%=%.svg) $(files:%=%.pdf) xmls.tar.gz $(thisdir)/create_html index.pdf
+	dtxslt --stylesheet $(ttdir)/stylesheets/dt2sent_with_file.xsl $(files:%=%.xml)\
+              | grep [.]| sed -e 's/[.]xml//g' |\
+         $(thisdir)/create_html -s $(suite) -c $(css) > index.html
+
+prefix="./"
+
+data=$(wildcard *.data.dz)
+htmls=$(data:%.dz=%.html)
+
+htmls:$(htmls)
+
+%.data.html: %.data.dz $(thisdir)/create_act_html $(ttdir)/stylesheets/dt2sent_with_file.xsl
+	dtxslt --stylesheet $(ttdir)/stylesheets/dt2sent_with_file.xsl $< | grep [.]|\
+          sed -e 's/[.]xml//g' | $(thisdir)/create_act_html -p $(prefix) -s $< -c $(css) > $@
+
+
+%.dact: %.data.dz %.index
+	alpinocorpus-act -c $@ $*.data.dz

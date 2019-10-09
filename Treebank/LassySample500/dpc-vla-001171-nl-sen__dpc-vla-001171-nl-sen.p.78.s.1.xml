@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="8" end="9" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="10" end="11" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="12" end="13" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="15" id="5" rel="--">
+      <node begin="0" cat="np" end="3" id="6" rel="su">
+        <node begin="0" end="1" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="8" lemma="internationaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="internationaal" word="internationale"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="9" lemma="instelling" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="instelling" word="instellingen"/>
+      </node>
+      <node begin="3" end="4" id="10" lemma="trekken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="trek_aan" word="trekken" wvorm="pv"/>
+      <node begin="4" end="5" id="11" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+      <node begin="5" cat="conj" end="14" id="12" rel="obj1">
+        <node begin="5" end="6" getal="mv" graad="basis" id="13" lemma="advocatenkantoor" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="advocatenkantoor" word="advocatenkantoren"/>
+        <node begin="7" end="8" getal="mv" graad="basis" id="14" lemma="adviesbureau" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="adviesbureau" word="adviesbureaus"/>
+        <node begin="9" end="10" getal="mv" graad="basis" id="15" lemma="lobbyist" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="lobbyist" word="lobbyisten"/>
+        <node begin="11" end="12" getal="mv" graad="basis" id="16" lemma="reclameman" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="reclamemens" word="reclamemensen"/>
+        <node begin="13" end="14" getal="mv" graad="basis" id="17" lemma="journalist" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="journalist" word="journalisten"/>
+      </node>
+      <node begin="14" end="15" id="18" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
+    </node>
+    <node begin="15" end="16" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De internationale instellingen trekken ook advocatenkantoren , adviesbureaus , lobbyisten , reclamemensen , journalisten aan .</sentence>
+</alpino_ds>

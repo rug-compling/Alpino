@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="3" end="4" id="2" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="7" cat="np" end="12" id="3" index="1" rel="su">
+        <node begin="7" end="8" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="8" buiging="met-e" end="9" graad="basis" id="5" lemma="54-jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="54-jarige"/>
+        <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="6" lemma="beeldhouwer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beeldhouwer" word="beeldhouwer"/>
+        <node begin="10" cat="mwu" end="12" id="7" rel="app">
+          <node begin="10" end="11" id="8" lemma="John" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="John" spectype="deeleigen" word="John"/>
+          <node begin="11" end="12" id="9" lemma="Grosman" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Grosman" spectype="deeleigen" word="Grosman"/>
+        </node>
+      </node>
+      <node begin="0" cat="ppart" end="13" id="10" rel="vc">
+        <node begin="0" cat="pp" end="3" id="11" rel="mod">
+          <node begin="0" end="1" id="12" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="Bij"/>
+          <node begin="1" cat="np" end="3" id="13" rel="obj1">
+            <node begin="1" end="2" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="15" lemma="auto-ongeluk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="auto-ongeluk" word="auto-ongeluk"/>
+          </node>
+        </node>
+        <node begin="4" end="5" id="16" lemma="gisteravond" pos="noun" postag="BW()" pt="bw" rel="mod" root="gisteravond" word="gisteravond"/>
+        <node begin="5" cat="pp" end="7" id="17" rel="mod">
+          <node begin="5" end="6" id="18" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="19" lemma="Zwolle" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Zwolle" word="Zwolle"/>
+        </node>
+        <node begin="7" end="12" id="20" index="1" rel="su"/>
+        <node begin="12" buiging="zonder" end="13" id="21" lemma="omkomen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kom" word="omgekomen" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="13" end="14" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Bij een auto-ongeluk is gisteravond in Zwolle de 54-jarige beeldhouwer John Grosman omgekomen .</sentence>
+</alpino_ds>

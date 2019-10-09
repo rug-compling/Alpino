@@ -1,0 +1,31 @@
+1. get Jan Daciuk's s_fsa and fadd tools, and install those
+
+s_fsa:
+http://www.eti.pg.gda.pl/~jandac/fsa.html
+
+in the s_fsa/Makefile, you need to comment out the following
+options from the definition of CPPFLAGS:
+
+-DSORT_ON_FREQ
+-DNEXTBIT
+-DDUMP_ALL
+-DGENERALIZE
+
+this enforces that fsa_build creates a perfect hash key for words, which
+is order preserving (to check alphabet ordering of words, it suffices
+to compare the perfect hash keys (which are integers)). This is assumed
+by the suffix array implementation, for obvious reasons of efficiency.
+
+
+
+fadd:
+http://www.eti.pg.gda.pl/~jandac/fadd.html
+
+2. edit the FADD variable in the Makefile, check the other parts of the
+Makefile
+
+3. run 'make'
+
+4. there are Examples/
+
+

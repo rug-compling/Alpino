@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="ti" end="6" id="1" rel="--">
+      <node begin="4" end="5" id="2" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+      <node begin="0" cat="inf" end="6" id="3" rel="body">
+        <node begin="0" cat="np" end="2" id="4" rel="obj1">
+          <node begin="0" buiging="zonder" end="1" id="5" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="Geen"/>
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="6" lemma="touw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="touw" word="touw"/>
+        </node>
+        <node begin="2" end="3" id="7" lemma="aan" pos="prep" postag="VZ(fin)" pt="vz" rel="pc" root="aan" vztype="fin" word="aan"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="8" lemma="vast" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="vast" word="vast"/>
+        <node begin="5" buiging="zonder" end="6" id="9" lemma="knopen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="knoop_vast" word="knopen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="10" lemma="..." pos="punct" postag="LET()" pt="let" rel="--" root="..." word="..."/>
+  </node>
+  <sentence>Geen touw aan vast te knopen ...</sentence>
+</alpino_ds>

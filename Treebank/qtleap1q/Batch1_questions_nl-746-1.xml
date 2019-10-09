@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="9" end="10" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="17" id="2" rel="--">
+      <node begin="0" cat="sv1" end="9" id="3" rel="cnj">
+        <node begin="0" end="1" id="4" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="Kan" wvorm="pv"/>
+        <node begin="1" end="2" getal="ev" id="5" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="1" cat="inf" end="9" id="6" rel="vc">
+          <node begin="1" end="2" id="7" index="1" rel="su"/>
+          <node begin="2" cat="np" end="4" id="8" rel="obj1">
+            <node begin="2" end="3" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="10" lemma="computer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="computer" word="computer"/>
+          </node>
+          <node begin="4" buiging="zonder" end="5" id="11" lemma="verplaatsen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verplaats" word="verplaatsen" wvorm="inf"/>
+          <node begin="5" cat="cp" end="9" id="12" rel="mod">
+            <node begin="5" conjtype="onder" end="6" id="13" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+            <node begin="6" cat="ssub" end="9" id="14" rel="body">
+              <node begin="6" buiging="met-e" end="7" getal-n="zonder-n" id="15" index="2" lemma="deze" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(aanw,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="su" root="deze" vwtype="aanw" word="deze"/>
+              <node begin="7" end="8" id="16" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+              <node begin="6" cat="ppart" end="9" id="17" rel="vc">
+                <node begin="6" end="7" id="18" index="2" rel="obj1"/>
+                <node begin="8" buiging="zonder" end="9" id="19" lemma="in_schakelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schakel_in" word="ingeschakeld" wvorm="vd"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="10" conjtype="neven" end="11" id="20" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+      <node begin="11" cat="sv1" end="17" id="21" rel="cnj">
+        <node begin="11" end="12" id="22" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+        <node begin="12" cat="np" end="15" id="23" index="3" rel="su">
+          <node begin="12" end="13" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="13" buiging="met-e" end="14" graad="basis" id="25" lemma="hard" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="hard" word="harde"/>
+          <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="26" lemma="schijf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schijf" word="schijf"/>
+        </node>
+        <node begin="12" cat="inf" end="17" id="27" rel="vc">
+          <node begin="12" end="15" id="28" index="3" rel="su"/>
+          <node begin="15" buiging="zonder" end="16" graad="basis" id="29" lemma="kapot" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="kapot" word="kapot"/>
+          <node begin="16" buiging="zonder" end="17" id="30" lemma="gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="gaan" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="31" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Kan ik de computer verplaatsen als deze is ingeschakeld , of zal de harde schijf kapot gaan ?</sentence>
+</alpino_ds>

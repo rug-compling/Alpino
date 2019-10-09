@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="41" id="0" rel="top">
+    <node begin="0" cat="smain" end="40" id="1" rel="--">
+      <node begin="0" cat="pp" end="3" id="2" rel="mod">
+        <node begin="0" end="1" frame="preposition(in,[])" id="3" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="In"/>
+        <node begin="1" cat="np" end="3" id="4" rel="obj1">
+          <node begin="1" end="2" frame="determiner(het,nwh,nmod,pro,nparg)" id="5" infl="het" lcat="detp" pos="det" rel="det" root="dit" sense="dit" wh="nwh" word="dit"/>
+          <node begin="2" end="3" frame="noun(het,count,sg)" gen="het" id="6" lcat="np" num="sg" pos="noun" rel="hd" root="verband" sense="verband" word="verband"/>
+        </node>
+      </node>
+      <node begin="3" end="4" frame="verb(zijn,pl,part_vp(overeen))" id="7" infl="pl" lcat="smain" pos="verb" rel="hd" root="kom_overeen" sc="part_vp(overeen)" sense="kom_overeen" tense="present" word="komen"/>
+      <node begin="4" cat="np" end="6" id="8" index="1" rel="su">
+        <node begin="4" end="5" frame="determiner(de)" id="9" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node begin="5" end="6" frame="noun(de,count,pl)" gen="de" id="10" lcat="np" num="pl" pos="noun" rel="hd" root="partij" sense="partij" word="partijen"/>
+      </node>
+      <node begin="6" cat="mwu" end="8" id="11" mwu_root="met_name" mwu_sense="met_name" rel="mod">
+        <node begin="6" end="7" frame="adverb" id="12" lcat="advp" pos="adv" rel="mwp" root="met" sense="met" word="met"/>
+        <node begin="7" end="8" frame="adverb" id="13" lcat="advp" pos="adv" rel="mwp" root="name" sense="name" word="name"/>
+      </node>
+      <node begin="8" end="9" frame="particle(overeen)" id="14" lcat="part" pos="part" rel="svp" root="overeen" sense="overeen" word="overeen"/>
+      <node begin="4" cat="ti" end="40" id="15" rel="vc">
+        <node begin="11" end="12" frame="complementizer(te)" id="16" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+        <node begin="4" cat="inf" end="40" id="17" rel="body">
+          <node begin="4" end="6" id="18" index="1" rel="su"/>
+          <node begin="10" end="11" frame="particle(toe)" id="19" lcat="part" pos="part" rel="svp" root="toe" sense="toe" word="toe"/>
+          <node begin="12" end="13" frame="verb(hebben,inf(no_e),part_er_pp_sbar(toe,op))" id="20" infl="inf(no_e)" lcat="inf" pos="verb" rel="hd" root="zie_toe" sc="part_er_pp_sbar(toe,op)" sense="zie_toe-op" word="zien"/>
+          <node begin="9" cat="pp" end="40" id="21" rel="pc">
+            <node begin="9" end="10" frame="er_adverb(op)" id="22" lcat="pp" pos="pp" rel="hd" root="erop" sense="erop" special="er" word="erop"/>
+            <node begin="13" cat="cp" end="40" id="23" rel="vc">
+              <node begin="13" end="14" frame="complementizer(dat)" id="24" lcat="cp" pos="comp" rel="cmp" root="dat" sc="dat" sense="dat" word="dat"/>
+              <node begin="14" cat="ssub" end="40" id="25" rel="body">
+                <node begin="30" cat="conj" end="38" id="26" index="2" rel="su">
+                  <node begin="30" cat="np" end="32" id="27" rel="cnj">
+                    <node begin="30" end="31" frame="determiner(de)" id="28" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                    <node begin="31" end="32" frame="noun(het,count,pl)" gen="het" id="29" lcat="np" num="pl" pos="noun" rel="hd" root="recht" sense="recht" word="rechten"/>
+                  </node>
+                  <node begin="32" end="33" frame="conj(en)" id="30" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                  <node begin="33" cat="np" end="38" id="31" rel="cnj">
+                    <node begin="33" end="34" frame="determiner(de)" id="32" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                    <node begin="34" end="35" frame="noun(de,count,sg)" gen="de" id="33" lcat="np" num="sg" pos="noun" rel="hd" root="waardigheid" sense="waardigheid" word="waardigheid"/>
+                    <node begin="35" cat="pp" end="38" id="34" rel="mod">
+                      <node begin="35" end="36" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="35" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                      <node begin="36" cat="np" end="38" id="36" rel="obj1">
+                        <node begin="36" end="37" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="37" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                        <node begin="37" end="38" frame="noun(both,count,sg)" gen="both" id="38" lcat="np" num="sg" pos="noun" rel="hd" root="individu" sense="individu" word="individu"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node begin="38" end="39" frame="verb(unacc,pl,passive)" id="39" infl="pl" lcat="ssub" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="worden"/>
+                <node begin="14" cat="ppart" end="40" id="40" rel="vc">
+                  <node begin="14" cat="pp" end="30" id="41" rel="mod">
+                    <node begin="14" cat="mwu" end="18" id="42" mwu_root="in_het_kader_van" mwu_sense="in_het_kader_van" rel="hd">
+                      <node begin="14" end="15" frame="preposition([in,het,kader,van],[])" id="43" lcat="pp" pos="prep" rel="mwp" root="in" sense="in" word="in"/>
+                      <node begin="15" end="16" frame="preposition([in,het,kader,van],[])" id="44" lcat="pp" pos="prep" rel="mwp" root="het" sense="het" word="het"/>
+                      <node begin="16" end="17" frame="preposition([in,het,kader,van],[])" id="45" lcat="pp" pos="prep" rel="mwp" root="kader" sense="kader" word="kader"/>
+                      <node begin="17" end="18" frame="preposition([in,het,kader,van],[])" id="46" lcat="pp" pos="prep" rel="mwp" root="van" sense="van" word="van"/>
+                    </node>
+                    <node begin="18" cat="np" end="30" id="47" rel="obj1">
+                      <node begin="18" end="19" frame="determiner(alle,nwh,mod,pro,nparg)" id="48" infl="alle" lcat="detp" pos="det" rel="det" root="alle" sense="alle" wh="nwh" word="alle"/>
+                      <node begin="19" end="20" frame="noun(de,count,pl)" gen="de" id="49" lcat="np" num="pl" pos="noun" rel="hd" root="procedure" sense="procedure" word="procedures"/>
+                      <node begin="20" cat="pp" end="30" id="50" rel="mod">
+                        <node begin="20" end="21" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="51" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+                        <node begin="21" cat="np" end="30" id="52" rel="obj1">
+                          <node begin="21" end="22" frame="noun(de,mass,sg)" gen="de" id="53" lcat="np" num="sg" pos="noun" rel="hd" root="terugkeer" sense="terugkeer" word="terugkeer"/>
+                          <node begin="22" cat="pp" end="30" id="54" rel="mod">
+                            <node begin="22" end="23" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="55" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                            <node begin="23" cat="np" end="30" id="56" rel="obj1">
+                              <node aform="base" begin="23" end="24" frame="adjective(e)" id="57" infl="e" lcat="ap" pos="adj" rel="mod" root="illegaal" sense="illegaal" vform="adj" word="illegale"/>
+                              <node begin="24" end="25" frame="noun(de,count,pl)" gen="de" id="58" lcat="np" num="pl" pos="noun" rel="hd" root="immigrant" sense="immigrant" word="immigranten"/>
+                              <node begin="25" cat="pp" end="30" id="59" rel="mod">
+                                <node begin="25" end="26" frame="preposition(naar,[toe])" id="60" lcat="pp" pos="prep" rel="hd" root="naar" sense="naar" word="naar"/>
+                                <node begin="26" cat="np" end="30" id="61" rel="obj1">
+                                  <node begin="26" end="27" frame="determiner(pron)" id="62" infl="pron" lcat="detp" pos="det" rel="det" root="hun" sense="hun" word="hun"/>
+                                  <node begin="27" end="28" frame="noun(het,count,sg)" gen="het" id="63" lcat="np" num="sg" pos="noun" rel="hd" root="land" sense="land" word="land"/>
+                                  <node begin="28" cat="pp" end="30" id="64" rel="mod">
+                                    <node begin="28" end="29" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="65" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                                    <node begin="29" end="30" frame="noun(de,mass,sg)" gen="de" id="66" lcat="np" num="sg" pos="noun" rel="obj1" root="herkomst" sense="herkomst" word="herkomst"/>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node begin="30" end="38" id="67" index="2" rel="obj1"/>
+                  <node begin="39" end="40" frame="verb(hebben,psp,transitive)" id="68" infl="psp" lcat="ppart" pos="verb" rel="hd" root="respecteer" sc="transitive" sense="respecteer" word="gerespecteerd"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="40" end="41" frame="punct(punt)" id="69" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>In dit verband komen de partijen met name overeen erop toe te zien dat in het kader van alle procedures voor terugkeer van illegale immigranten naar hun land van herkomst de rechten en de waardigheid van het individu worden gerespecteerd .</sentence>
+  <comments>
+    <comment>Q#534|In dit verband komen de partijen met name overeen erop toe te zien dat in het kader van alle procedures voor terugkeer van illegale immigranten naar hun land van herkomst de rechten en de waardigheid van het individu worden gerespecteerd .|1|1|-15.059928188336958</comment>
+  </comments>
+</alpino_ds>

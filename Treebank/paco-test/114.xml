@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="smain" end="10" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="3" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" id="4" lcat="np" num="sg" pos="noun" rel="hd" root="gemeente" sense="gemeente" word="gemeente"/>
+      </node>
+      <node begin="2" end="3" frame="verb(hebben,sg3,transitive)" id="5" infl="sg3" lcat="smain" pos="verb" rel="hd" root="leg" sc="transitive" sense="leg" tense="present" word="legt"/>
+      <node begin="3" cat="np" end="6" id="6" rel="obj1">
+        <node begin="3" end="4" frame="determiner(de)" id="7" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node aform="base" begin="4" end="5" frame="adjective(ge_both(adv))" id="8" infl="both" lcat="ppart" pos="adj" rel="mod" root="ontvangen" sense="ontvangen" vform="psp" word="ontvangen"/>
+        <node begin="5" end="6" frame="noun(both,both,both)" gen="both" id="9" lcat="np" num="both" pos="noun" rel="hd" root="attesten" sense="attesten" word="attesten"/>
+      </node>
+      <node begin="6" cat="pp" end="10" id="10" rel="mod">
+        <node begin="6" end="7" frame="preposition(ter,[],nodet)" id="11" lcat="pp" pos="prep" rel="hd" root="ter" sc="nodet" sense="ter" word="ter"/>
+        <node begin="7" cat="np" end="10" id="12" rel="obj1">
+          <node begin="7" end="8" frame="noun(de,mass,sg)" gen="de" id="13" lcat="np" num="sg" pos="noun" rel="hd" root="inzage" sense="inzage" word="inzage"/>
+          <node begin="8" cat="pp" end="10" id="14" rel="mod">
+            <node begin="8" end="9" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="15" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="9" end="10" frame="noun(de,count,pl)" gen="de" id="16" lcat="np" num="pl" pos="noun" rel="obj1" root="belangstellende" sense="belangstellende" word="belangstellenden"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="10" end="11" frame="punct(punt)" id="17" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De gemeente legt de ontvangen attesten ter inzage van belangstellenden .</sentence>
+  <comments>
+    <comment>Q#114|De gemeente legt de ontvangen attesten ter inzage van belangstellenden .|1|1|7.851510712841332</comment>
+  </comments>
+</alpino_ds>

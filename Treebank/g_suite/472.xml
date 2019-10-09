@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="onplezierig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="onplezierig" word="onplezierig"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" end="3" genus="onz" getal="ev" id="4" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="3" cat="oti" end="7" id="5" rel="su">
+        <node begin="3" end="4" id="6" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+        <node begin="4" cat="ti" end="7" id="7" rel="body">
+          <node begin="5" end="6" id="8" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="4" cat="inf" end="7" id="9" rel="body">
+            <node begin="4" end="5" id="10" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
+            <node begin="6" buiging="zonder" end="7" id="11" lemma="vertrekken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vertrek" word="vertrekken" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>onplezierig is het om nu te vertrekken</sentence>
+</alpino_ds>

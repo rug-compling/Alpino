@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="np" end="7" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="slap" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="slap" word="Slap"/>
+      <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="3" lemma="aftreksel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aftreksel" word="aftreksel"/>
+      <node begin="2" cat="pp" end="7" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="3" cat="np" end="7" id="6" rel="obj1">
+          <node begin="3" end="4" getal="ev" graad="basis" id="7" lemma="Hitchcock" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Hitchcock" word="Hitchcocks"/>
+          <node begin="4" cat="mwu" end="7" id="8" rel="hd">
+            <node begin="4" end="5" id="9" lemma="Strangers" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Strangers" spectype="deeleigen" word="Strangers"/>
+            <node begin="5" end="6" id="10" lemma="on" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="on" spectype="vreemd" word="on"/>
+            <node begin="6" end="7" id="11" lemma="trainen" pos="name" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="mwp" root="train" word="train" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Slap aftreksel van Hitchcocks Strangers on train .</sentence>
+</alpino_ds>

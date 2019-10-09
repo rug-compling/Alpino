@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="het" pos="det" rel="det" root="het" wh="nwh" word="Het"/>
+        <node begin="1" end="2" id="4" neclass="LOC" num="both" pos="name" rel="hd" root="Grootstedenbeleid" word="Grootstedenbeleid"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="sg3" pos="verb" rel="hd" root="geef" sc="so_pp_np" tense="present" word="geeft"/>
+      <node begin="3" end="4" gen="het" id="6" num="sg" pos="noun" rel="obj1" root="werk" word="werk"/>
+      <node begin="4" cat="pp" end="8" id="7" rel="obj2">
+        <node begin="4" end="5" id="8" pos="prep" rel="hd" root="aan" word="aan"/>
+        <node begin="5" cat="np" end="8" id="9" rel="obj1">
+          <node begin="5" end="6" id="10" pos="adv" rel="mod" root="zowat" sc="adv_noun_prep" word="zowat"/>
+          <node begin="6" end="7" id="11" infl="pl_num" pos="num" rel="det" root="900" special="hoofd" word="900"/>
+          <node begin="7" end="8" gen="both" id="12" num="pl" pos="noun" rel="hd" root="mens" word="mensen"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Het Grootstedenbeleid geeft werk aan zowat 900 mensen .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

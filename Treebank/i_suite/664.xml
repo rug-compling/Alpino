@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="du" end="8" id="1" rel="--">
+      <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="2" infl="no_e" lemma="plotseling" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="dp" root="plotseling" vform="adj" word="Plotseling"/>
+      <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="3" lemma="gejoel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="dp" rnum="sg" root="gejoel" sc="intransitive" special="ge_v_noun" word="gejoel"/>
+      <node begin="2" cat="cp" end="8" id="4" rel="dp">
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="omdat"/>
+        <node begin="3" cat="ssub" end="8" id="6" rel="body">
+          <node begin="3" cat="mwu" end="5" his="normal" his_1="names_dictionary" id="7" mwu_root="Zwarte Piet" mwu_sense="Zwarte Piet" rel="su">
+            <node begin="3" end="4" id="8" lemma="Zwarte" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Zwarte" spectype="deeleigen" word="Zwarte"/>
+            <node begin="4" end="5" id="9" lemma="Piet" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Piet" spectype="deeleigen" word="Piet"/>
+          </node>
+          <node begin="5" cat="pp" end="7" id="10" rel="ld">
+            <node begin="5" end="6" id="11" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" sc="loc_adv" vztype="init" word="naar"/>
+            <node begin="6" end="7" id="12" lemma="buiten" pos="adv" postag="VZ(fin)" pt="vz" rel="obj1" root="buiten" special="loc" vztype="fin" word="buiten"/>
+          </node>
+          <node begin="7" end="8" id="13" infl="sg3" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" sc="ld_pp" tense="present" word="komt" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Plotseling gejoel omdat Zwarte Piet naar buiten komt</sentence>
+</alpino_ds>

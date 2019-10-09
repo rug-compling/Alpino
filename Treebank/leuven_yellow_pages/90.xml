@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="Die"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="lijst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="lijst" word="lijst"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="3" cat="ap" end="8" id="6" rel="predc">
+        <node begin="4" buiging="zonder" end="5" graad="basis" id="7" lemma="up-to-date" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="up-to-date" word="up-to-date"/>
+        <node begin="3" cat="advp" end="8" id="8" rel="mod">
+          <node begin="3" buiging="zonder" end="4" graad="comp" id="9" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="hd" root="meer" vwtype="onbep" word="meer"/>
+          <node begin="5" cat="cp" end="8" id="10" rel="obcomp">
+            <node begin="5" conjtype="onder" end="6" id="11" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+            <node begin="6" cat="np" end="8" id="12" rel="body">
+              <node begin="6" end="7" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="7" buiging="met-e" end="8" getal-n="zonder-n" graad="basis" id="14" lemma="vorig" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,zonder-n,stan)" pt="adj" rel="hd" root="vorig" word="vorige"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Die lijst is meer up-to-date dan de vorige</sentence>
+</alpino_ds>

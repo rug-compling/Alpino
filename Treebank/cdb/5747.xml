@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="19" id="2" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="3" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="19" id="5" rel="vc">
+        <node begin="0" end="1" id="6" index="1" rel="su"/>
+        <node begin="2" end="3" id="7" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="mod" root="altijd" word="altijd"/>
+        <node begin="7" buiging="zonder" end="8" id="8" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" word="geweest" wvorm="vd"/>
+        <node begin="3" cat="np" end="19" id="9" rel="predc">
+          <node begin="3" end="4" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="4" cat="ap" end="6" id="11" rel="mod">
+            <node begin="4" end="5" id="12" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="mod" root="zeer" word="zeer"/>
+            <node begin="5" buiging="zonder" end="6" graad="basis" id="13" lemma="bewegelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="bewegelijk" word="bewegelijk"/>
+          </node>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="kunstenaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kunstenaar" word="kunstenaar"/>
+          <node begin="9" cat="rel" end="19" id="15" rel="mod">
+            <node begin="9" end="10" getal="getal" id="16" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="9" cat="ssub" end="19" id="17" rel="body">
+              <node begin="9" end="10" id="18" index="2" rel="su"/>
+              <node begin="10" cat="np" end="16" id="19" rel="obj1">
+                <node begin="10" end="11" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="11" buiging="met-e" end="12" graad="basis" id="21" lemma="bekend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="bekend" word="bekende"/>
+                <node begin="12" end="13" getal="mv" graad="basis" id="22" lemma="pad" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="pad" word="paden"/>
+                <node begin="13" cat="pp" end="16" id="23" rel="mod">
+                  <node begin="13" end="14" id="24" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="14" cat="np" end="16" id="25" rel="obj1">
+                    <node begin="14" end="15" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="27" lemma="beeldhouwkunst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kunst" word="beeldhouwkunst"/>
+                  </node>
+                </node>
+              </node>
+              <node begin="16" cat="ap" end="18" id="28" rel="mod">
+                <node begin="16" end="17" id="29" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+                <node begin="17" buiging="zonder" end="18" graad="basis" id="30" lemma="vroeg" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="vroeg" word="vroeg"/>
+              </node>
+              <node begin="18" end="19" id="31" lemma="verlaten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verlaat" word="verliet" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="32" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hij is altijd een zeer bewegelijk kunstenaar geweest , die de bekende paden van de beeldhouwkunst al vroeg verliet .</sentence>
+</alpino_ds>

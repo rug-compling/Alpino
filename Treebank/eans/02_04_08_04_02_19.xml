@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="conj" end="7" id="1" rel="--">
+      <node begin="0" cat="smain" end="3" id="2" rel="cnj">
+        <node begin="0" end="1" genus="onz" getal="ev" graad="dim" id="3" index="1" lemma="Kareltje" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,dim,onz,stan)" pt="n" rel="su" root="Kareltje" word="Kareltje"/>
+        <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="stout" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="stout" word="stout"/>
+      </node>
+      <node begin="3" conjtype="neven" end="4" id="6" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="0" cat="smain" end="7" id="7" rel="cnj">
+        <node begin="0" end="1" id="8" index="1" rel="su"/>
+        <node begin="4" end="5" id="9" lemma="krijgen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="krijg" word="kreeg" wvorm="pv"/>
+        <node begin="5" cat="np" end="7" id="10" rel="obj1">
+          <node begin="5" end="6" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="6" end="7" genus="onz" getal="ev" graad="dim" id="12" lemma="stand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="standje" word="standje"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Kareltje was stout en kreeg een standje .</sentence>
+</alpino_ds>

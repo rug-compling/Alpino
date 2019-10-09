@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="np" end="4" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&apos;n"/>
+      <node begin="1" cat="ap" end="3" id="3" rel="mod">
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="4" lemma="heel" naamval="stan" pos="adv" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="heel" word="hele"/>
+        <node begin="2" buiging="met-e" end="3" graad="basis" id="5" lemma="goeie" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="goed" word="goeie"/>
+      </node>
+      <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="kop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kop" word="kop"/>
+    </node>
+    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&apos;n hele goeie kop .</sentence>
+</alpino_ds>

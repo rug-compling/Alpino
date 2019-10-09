@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="17" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="ja" pos="tag" postag="TSW()" pt="tsw" rel="tag" root="ja" word="Ja"/>
+      <node begin="2" cat="sv1" end="17" id="4" rel="nucl">
+        <node begin="2" end="3" id="5" lemma="gebruiken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="gebruik" word="gebruik" wvorm="pv"/>
+        <node begin="3" cat="conj" end="17" id="6" rel="obj1">
+          <node begin="5" conjtype="neven" end="6" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="3" cat="np" end="17" id="8" rel="cnj">
+            <node begin="3" end="4" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="netwerk_naam" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="netwerk_naam" word="netwerknaam"/>
+            <node begin="8" cat="cp" end="17" id="11" index="1" rel="mod">
+              <node begin="8" conjtype="onder" end="9" id="12" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="zoals"/>
+              <node begin="9" cat="ssub" end="17" id="13" rel="body">
+                <node begin="9" end="10" getal="getal" id="14" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="su" root="die" status="vol" vwtype="aanw" word="die"/>
+                <node begin="10" cat="pp" end="16" id="15" rel="ld">
+                  <node begin="10" end="11" id="16" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                  <node begin="11" cat="np" end="16" id="17" rel="obj1">
+                    <node begin="11" end="12" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="19" lemma="onderkant" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="onderkant" word="onderkant"/>
+                    <node begin="13" cat="pp" end="16" id="20" rel="mod">
+                      <node begin="13" end="14" id="21" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                      <node begin="14" cat="np" end="16" id="22" rel="obj1">
+                        <node begin="14" end="15" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                        <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="24" lemma="router" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="router" word="router"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node begin="16" end="17" id="25" lemma="staan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="sta" word="staan" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+          <node begin="6" cat="np" end="17" id="26" rel="cnj">
+            <node begin="6" end="7" id="27" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="28" lemma="wacht_woord" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="wacht_woord" word="wachtwoord"/>
+            <node begin="8" end="17" id="29" index="1" rel="mod"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="30" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ja , gebruik de netwerknaam en het wachtwoord zoals die op de onderkant van de router staan .</sentence>
+</alpino_ds>

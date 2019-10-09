@@ -1,0 +1,46 @@
+h_suite/./164.xml	//node[@wvorm="pv" and not(../@cat="smain" or ../@cat="ssub" or ../@cat="sv1" or ../@cat="mwu" or ../@cat="top" or ../@cat="du") ]	unexpected finite verb?
+h_suite/./166.xml	//node[@wvorm="pv" and not(../@cat="smain" or ../@cat="ssub" or ../@cat="sv1" or ../@cat="mwu" or ../@cat="top" or ../@cat="du") ]	unexpected finite verb?
+h_suite/./203.xml	//node[ @cat and @rel="predc" and not(@cat="np") and not(@cat="ap") and not(@cat="ppart") and not(@cat="ppres") and not(@cat="cp") and not(@cat="pp") and not(@cat="conj") and not(@cat="mwu") and not(@cat="whrel") and not(@cat="oti")]	unexpected predc-category.   Expected cats: np ap ppart ppres cp pp conj mwu whrel oti
+h_suite/./258.xml	//node[node[@rel="hd" and @pt and not(@pt="ww")] and node[@rel="su"]]	subject without a verb?
+h_suite/./258.xml	//node[@cat="inf" and node[@rel="hd" and @pt and not(@wvorm="inf")]]	inf cat without inf hd?
+h_suite/./266.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+h_suite/./267.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+h_suite/./268.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+h_suite/./269.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+h_suite/./271.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+h_suite/./314.xml	//node[not(@cat="svan") and node[@cat="smain" and @rel="body"]]	smain as the body????
+h_suite/./315.xml	//node[not(@cat="svan") and node[@cat="smain" and @rel="body"]]	smain as the body????
+h_suite/./334.xml	//node[@cat="inf" and node[@rel="su" and not(@cat="cp" or @cat="oti" or @cat="ti" or @cat="whsub") and not(@index or ../node[@rel="sup"])]]	subject in infinitive clause?
+h_suite/./343.xml	//node[ @cat and @rel="body" and not(@cat="ssub") and not(@cat="ti") and not(@cat="sv1") and not(@cat="inf") and not(@cat="np") and not(@cat="conj") and not(@cat="pp") and not(@cat="cp") and not(@cat="mwu") and not(@cat="du") and not(@cat="ppart") and not(@cat="smain") and not(@cat="whrel") and not(@cat="ap") and not(@cat="ppart") and not(@cat="ppres")]	unexpected body-category.   Expected cats: ssub ti sv1 inf np conj pp cp mwu du ppart smain whrel ap ppart ppres
+h_suite/./372.xml	//node[ @cat and @rel="svp" and not(@cat="pp") and not(@cat="mwu") and not(@cat="ti") and not(@cat="ahi") and not(@cat="inf")]	unexpected svp-category.   Expected cats: pp mwu ti ahi inf
+h_suite/./508.xml	//node[ ../@cat="whrel" and not(@rel="body") and not(@rel="rhd")]	unexpected whrel-daughter.   Expected rels: body rhd
+h_suite/./508.xml	//node[../node[@rel="rhd"] and not(@rel="body") and not(@rel="rhd")]	unexpected rhd-sister.   Expected rels: body rhd
+h_suite/./542.xml	//node[ @cat and @rel="predm" and not(@cat="advp") and not(@cat="np") and not(@cat="ap") and not(@cat="ppart") and not(@cat="ppres") and not(@cat="cp") and not(@cat="pp") and not(@cat="conj") and not(@cat="mwu") and not(@cat="whrel")]	unexpected predm-category.   Expected cats: advp np ap ppart ppres cp pp conj mwu whrel
+h_suite/./543.xml	//node[ @cat and @rel="predm" and not(@cat="advp") and not(@cat="np") and not(@cat="ap") and not(@cat="ppart") and not(@cat="ppres") and not(@cat="cp") and not(@cat="pp") and not(@cat="conj") and not(@cat="mwu") and not(@cat="whrel")]	unexpected predm-category.   Expected cats: advp np ap ppart ppres cp pp conj mwu whrel
+h_suite/./544.xml	//node[ @cat and @rel="predm" and not(@cat="advp") and not(@cat="np") and not(@cat="ap") and not(@cat="ppart") and not(@cat="ppres") and not(@cat="cp") and not(@cat="pp") and not(@cat="conj") and not(@cat="mwu") and not(@cat="whrel")]	unexpected predm-category.   Expected cats: advp np ap ppart ppres cp pp conj mwu whrel
+h_suite/./545.xml	//node[ @cat and @rel="predm" and not(@cat="advp") and not(@cat="np") and not(@cat="ap") and not(@cat="ppart") and not(@cat="ppres") and not(@cat="cp") and not(@cat="pp") and not(@cat="conj") and not(@cat="mwu") and not(@cat="whrel")]	unexpected predm-category.   Expected cats: advp np ap ppart ppres cp pp conj mwu whrel
+h_suite/./586.xml	//node[@rel="whd" and not(@index)]	whd without index?
+h_suite/./687.xml	//node[@cat="np" and node[@rel="hd" and @genus="onz" and not(@root="jaar" or @root="paar" or @root="miljoen" or @root="uur" or @root="procent" or @root="miljard" or @root="nummer")] and node[@rel="det" and (@root="de" or @root="die" or @root="deze")]]	de-determiner combines with zijd noun?
+h_suite/./749.xml	//node[@wvorm="pv" and not(../@cat="smain" or ../@cat="ssub" or ../@cat="sv1" or ../@cat="mwu" or ../@cat="top" or ../@cat="du") ]	unexpected finite verb?
+h_suite/./750.xml	//node[@wvorm="pv" and not(../@cat="smain" or ../@cat="ssub" or ../@cat="sv1" or ../@cat="mwu" or ../@cat="top" or ../@cat="du") ]	unexpected finite verb?
+h_suite/./794.xml	//node[ @cat and @rel="svp" and not(@cat="pp") and not(@cat="mwu") and not(@cat="ti") and not(@cat="ahi") and not(@cat="inf")]	unexpected svp-category.   Expected cats: pp mwu ti ahi inf
+h_suite/./947.xml	//node[ @cat and @rel="obj1" and not(@cat="np") and not(@cat="conj") and not(@cat="mwu") and not(@cat="whrel") and not(@cat="pp") and not(@cat="cp") and not(@cat="ap") and not((@cat="advp" or @cat="whsub") and ../@cat="pp")]	unexpected obj1-category...
+h_suite/./959.xml	//node[@rel="whd" and not(@index)]	whd without index?
+h_suite/./960.xml	//node[@rel="whd" and not(@index)]	whd without index?
+h_suite/./961.xml	//node[@rel="whd" and not(@index)]	whd without index?
+h_suite/./962.xml	//node[@rel="whd" and not(@index)]	whd without index?
+AlpinoTreebank/h_suite/./876.xml	//node[node[@rel="hd" and @pt and not(@pt="ww")] and node[@rel="su"]]	subject without a verb?
+AlpinoTreebank/h_suite/./876.xml	//node[(@cat="sv1" or @cat="smain" or @cat="ssub") and node[@rel="hd" and @pt and not(@wvorm="pv")]]	s without pv?
+h_suite/./876.xml	//node[node[@rel="hd" and @pt and not(@pt="ww")] and node[@rel="su"]]	subject without a verb?
+h_suite/./876.xml	//node[(@cat="sv1" or @cat="smain" or @cat="ssub") and node[@rel="hd" and @pt and not(@wvorm="pv")]]	s without pv?
+h_suite/./807.xml	//node[@lemma="als" and (../@rel="predc" or ../@rel="predm" ) and not(@rel="crd") and ../node[@cat="np" or @pt="n"] and not(@postag="VZ(init)") and not ( @begin = //node[@lemma="net"]/@end) ]	als is perhaps VZ(init) here
+h_suite/./808.xml	//node[@lemma="als" and (../@rel="predc" or ../@rel="predm" ) and not(@rel="crd") and ../node[@cat="np" or @pt="n"] and not(@postag="VZ(init)") and not ( @begin = //node[@lemma="net"]/@end) ]	als is perhaps VZ(init) here
+h_suite/./258.xml	//node[@cat="inf" and node[@rel="hd" and @pt and ( not(@wvorm="inf") or @postag="WW(inf,nom,zonder,zonder-n)")]]	inf cat without inf hd?
+h_suite/./247.xml	//node[@cat="inf" and node[@rel="hd" and @pt and not(@postag="WW(inf,vrij,zonder)")]]	inf cat without inf hd?
+h_suite/./258.xml	//node[@cat="inf" and node[@rel="hd" and @pt and not(@postag="WW(inf,vrij,zonder)")]]	inf cat without inf hd?
+h_suite/./331.xml	//node[ @naamval="gen" and @pt="n" and not(@rel="det" or @rel="mwp" or @rel="hd") ]	Genitive noun, but not determiner?
+h_suite/./332.xml	//node[ @naamval="gen" and @pt="n" and not(@rel="det" or @rel="mwp" or @rel="hd") ]	Genitive noun, but not determiner?
+h_suite/./75.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
+h_suite/./817.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
+h_suite/./687.xml	//node[@cat="np" and node[@rel="hd" and @genus="onz" and not(@root="jaar" or @root="paar" or @root="miljoen" or @root="uur" or @root="procent" or @root="miljard" or @root="nummer")] and node[@rel="det" and (@root="de" or @root="die" or @root="deze")]]	de-determiner combines with onz noun?
+h_suite/./421.xml	//node[@cat="ppart" and node[@rel="hd" and @postag and not(@pt="ww" and @wvorm="vd")]]	ppart without participle

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" buiging="zonder" end="3" id="4" lemma="afwachten" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="predc" root="wacht_af" word="afwachten" wvorm="inf"/>
+      <node begin="3" cat="cp" end="7" id="5" rel="su">
+        <node begin="3" conjtype="onder" end="4" id="6" lemma="of" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="of" word="of"/>
+        <node begin="4" cat="ssub" end="7" id="7" rel="body">
+          <node begin="4" end="5" genus="masc" getal="ev" id="8" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+          <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="echt" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="echt" word="echt"/>
+          <node begin="6" end="7" id="10" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het is afwachten of hij echt komt .</sentence>
+</alpino_ds>

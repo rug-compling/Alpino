@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="np" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+      <node begin="1" cat="detp" end="4" id="3" rel="det">
+        <node begin="1" cat="cp" end="3" id="4" rel="mod">
+          <node begin="1" end="2" id="5" lemma="naar" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="naar" vztype="init" word="naar"/>
+          <node begin="2" end="3" id="6" lemma="verluiden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="body" root="verluid" word="verluidt" wvorm="pv"/>
+        </node>
+        <node begin="3" end="4" id="7" lemma="achtduizend" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="achtduizend" word="achtduizend"/>
+      </node>
+      <node begin="4" end="5" getal="mv" graad="basis" id="8" lemma="demonstrant" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="demonstrant" word="demonstranten"/>
+    </node>
+  </node>
+  <sentence>De naar verluidt achtduizend demonstranten</sentence>
+</alpino_ds>

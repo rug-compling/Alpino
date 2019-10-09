@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" end="1" getal-n="zonder-n" graad="basis" id="3" lemma="één" numtype="hoofd" pos="noun" positie="nom" postag="TW(hoofd,nom,zonder-n,basis)" pt="tw" rel="hd" root="een" word="een"/>
+        <node begin="1" cat="np" end="3" id="4" rel="mod">
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="gen" npagr="rest3" pos="det" postag="LID(bep,gen,rest3)" pt="lid" rel="det" root="der" word="der"/>
+          <node begin="2" buiging="met-e" end="3" getal-n="mv-n" graad="basis" id="6" lemma="aanwezig" pos="noun" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" root="aanwezige" word="aanwezigen"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
+      <node begin="4" cat="pp" end="6" id="8" rel="ld">
+        <node begin="4" end="5" id="9" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+        <node begin="5" end="6" id="10" lemma="voren" pos="adv" postag="BW()" pt="bw" rel="obj1" root="voren" word="voren"/>
+      </node>
+    </node>
+  </node>
+  <sentence>een der aanwezigen kwam naar voren</sentence>
+</alpino_ds>

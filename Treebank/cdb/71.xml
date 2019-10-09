@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="8" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="obj1"/>
+        <node begin="2" buiging="zonder" end="3" id="6" lemma="opnemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="neem" word="opgenomen" wvorm="vd"/>
+        <node begin="3" cat="pp" end="8" id="7" rel="ld">
+          <node begin="3" end="4" id="8" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="4" cat="np" end="8" id="9" rel="obj1">
+            <node begin="4" end="5" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="marinehospitaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="hospitaal" word="marinehospitaal"/>
+            <node begin="6" cat="pp" end="8" id="12" rel="mod">
+              <node begin="6" end="7" id="13" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="14" lemma="Overveen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Overveen" word="Overveen"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hij is opgenomen in het marinehospitaal in Overveen .</sentence>
+</alpino_ds>

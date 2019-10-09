@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="whd">
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="welk" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welk"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="medicijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="medicijn" word="medicijn"/>
+      </node>
+      <node begin="0" cat="sv1" end="6" id="5" rel="body">
+        <node begin="0" end="2" id="6" index="1" rel="su"/>
+        <node begin="2" end="3" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="0" cat="ppart" end="6" id="8" rel="vc">
+          <node begin="0" end="2" id="9" index="1" rel="obj1"/>
+          <node begin="3" buiging="zonder" end="4" id="10" lemma="vernoemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vernoem" word="vernoemd" wvorm="vd"/>
+          <node begin="4" cat="pp" end="6" id="11" rel="pc">
+            <node begin="4" end="5" id="12" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+            <node begin="5" end="6" genus="masc" getal="ev" id="13" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="vol" vwtype="pers" word="hem"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Welk medicijn is vernoemd naar hem</sentence>
+</alpino_ds>

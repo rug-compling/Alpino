@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="18" end="19" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="np" end="27" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="stelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stelling" word="stelling"/>
+      <node begin="2" cat="rel" end="27" id="5" rel="mod">
+        <node begin="2" end="3" getal="getal" id="6" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+        <node begin="2" cat="conj" end="27" id="7" rel="body">
+          <node begin="2" cat="ssub" end="18" id="8" rel="cnj">
+            <node begin="2" end="3" id="9" index="1" rel="su"/>
+            <node begin="3" cat="pp" end="7" id="10" rel="mod">
+              <node begin="3" end="4" id="11" lemma="buiten" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="buiten" vztype="init" word="buiten"/>
+              <node begin="4" cat="np" end="7" id="12" rel="obj1">
+                <node begin="4" end="5" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="5" cat="mwu" end="7" id="14" rel="hd">
+                  <node begin="5" end="6" id="15" lemma="Verenigde" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Verenigde" spectype="deeleigen" word="Verenigde"/>
+                  <node begin="6" end="7" id="16" lemma="Staten" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Staten" spectype="deeleigen" word="Staten"/>
+                </node>
+              </node>
+            </node>
+            <node begin="7" cat="pp" end="15" id="17" rel="mod">
+              <node begin="7" end="8" id="18" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="8" cat="np" end="15" id="19" rel="obj1">
+                <node begin="8" cat="ppres" end="10" id="20" rel="mod">
+                  <node begin="8" end="9" getal="mv" id="21" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj1" root="ons" status="vol" vwtype="pr" word="ons"/>
+                  <node begin="9" buiging="met-e" end="10" id="22" lemma="omringen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="omringend" word="omringende" wvorm="od"/>
+                </node>
+                <node begin="10" end="11" getal="mv" graad="basis" id="23" lemma="land" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="land" word="landen"/>
+                <node begin="11" cat="cp" end="15" id="24" rel="mod">
+                  <node begin="11" end="12" id="25" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+                  <node begin="12" cat="conj" end="15" id="26" rel="body">
+                    <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="27" lemma="Frankrijk" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Frankrijk" word="Frankrijk"/>
+                    <node begin="13" conjtype="neven" end="14" id="28" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                    <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="29" lemma="West-Duitsland" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="West-Duitsland" word="West-Duitsland"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="15" end="16" id="30" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+            <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="31" lemma="werkelijkheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="predc" root="werkelijkheid" word="werkelijkheid"/>
+            <node begin="17" end="18" id="32" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+          </node>
+          <node begin="19" conjtype="neven" end="20" id="33" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+          <node begin="2" cat="ssub" end="27" id="34" rel="cnj">
+            <node begin="2" end="3" id="35" index="1" rel="su"/>
+            <node begin="25" end="26" id="36" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+            <node begin="2" cat="ppart" end="27" id="37" rel="vc">
+              <node begin="2" end="3" id="38" index="1" rel="su"/>
+              <node begin="20" cat="pp" end="22" id="39" rel="mod">
+                <node begin="20" end="21" id="40" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="41" lemma="Nederland" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Nederland" word="Nederland"/>
+              </node>
+              <node begin="22" end="23" id="42" lemma="vooralsnog" pos="adv" postag="BW()" pt="bw" rel="mod" root="vooralsnog" word="vooralsnog"/>
+              <node begin="23" cat="np" end="25" id="43" rel="predc">
+                <node begin="23" end="24" id="44" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="45" lemma="profetie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="profetie" word="profetie"/>
+              </node>
+              <node begin="26" buiging="zonder" end="27" id="46" lemma="blijven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="blijf" word="gebleven" wvorm="vd"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="27" end="28" id="47" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een stelling die buiten de Verenigde Staten in ons omringende landen als Frankrijk en West-Duitsland al werkelijkheid werd , maar in Nederland vooralsnog een profetie is gebleven .</sentence>
+</alpino_ds>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="conj" end="3" id="2" rel="predm">
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="opluchten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="cnj" root="opgelucht" word="Opgelucht" wvorm="vd"/>
+        <node begin="1" conjtype="neven" end="2" id="4" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="ontspannen" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="ontspannen" word="ontspannen"/>
+      </node>
+      <node begin="3" end="4" id="6" lemma="vertellen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="vertel" word="vertelt" wvorm="pv"/>
+      <node begin="4" end="5" genus="masc" getal="ev" id="7" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+      <node begin="5" cat="np" end="7" id="8" rel="obj1">
+        <node begin="5" end="6" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="10" lemma="verhaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verhaal" word="verhaal"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Opgelucht en ontspannen vertelt hij het verhaal .</sentence>
+</alpino_ds>

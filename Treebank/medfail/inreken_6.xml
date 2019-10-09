@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="3" end="4" id="2" lemma="kunnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kan" word="kon" wvorm="pv"/>
+      <node begin="4" cat="np" end="6" id="3" index="1" rel="su">
+        <node begin="4" end="5" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="5" lemma="politieploeg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="politie_ploeg" word="politieploeg"/>
+      </node>
+      <node begin="0" cat="inf" end="14" id="6" rel="vc">
+        <node begin="0" cat="pp" end="3" id="7" rel="mod">
+          <node begin="0" end="1" id="8" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="Na"/>
+          <node begin="1" cat="np" end="3" id="9" rel="obj1">
+            <node begin="1" end="2" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="11" lemma="achtervolging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="achtervolging" word="achtervolging"/>
+          </node>
+        </node>
+        <node begin="4" end="6" id="12" index="1" rel="su"/>
+        <node begin="6" cat="np" end="9" id="13" rel="obj1">
+          <node begin="6" end="7" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="7" end="8" id="15" lemma="twee" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="tweede" word="tweede"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="16" lemma="dader" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dader" word="dader"/>
+        </node>
+        <node begin="9" cat="pp" end="13" id="17" rel="mod">
+          <node begin="9" end="10" id="18" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="10" cat="np" end="13" id="19" rel="obj1">
+            <node begin="10" end="11" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="11" buiging="met-e" end="12" graad="basis" id="21" lemma="onmiddellijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="onmiddellijk" word="onmiddellijke"/>
+            <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="nabijheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="nabijheid" word="nabijheid"/>
+          </node>
+        </node>
+        <node begin="13" buiging="zonder" end="14" id="23" lemma="inrekenen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="inreken" word="inreken" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="14" end="15" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Na een achtervolging kon de politieploeg een tweede dader in de onmiddellijke nabijheid inreken .</sentence>
+</alpino_ds>

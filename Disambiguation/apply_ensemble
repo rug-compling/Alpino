@@ -1,0 +1,89 @@
+#!/usr/bin/perl -w
+
+use Getopt::Std;
+getopts('e');
+
+# -e: reports entropy
+$opt_e ||= 0;
+
+@ws=();
+while (@ARGV) {
+    $w = shift @ARGV;
+    %$w=();
+    open(WEIGHTS,"$w") or die "Can't find weights file $w: $!\n";
+    while (<WEIGHTS>) {
+	chomp;
+	($key,$weight) = split/\|/;
+	$$w{$key} = $weight;
+    }
+    close WEIGHTS;
+    $sum{$w}=0;
+    @$w=();
+    $entropy{$w}=0;
+    push @ws,$w;
+}
+
+sub weight {
+  ($wf,$lpairs) = @_;
+  @lpairs = split/\|/,$lpairs;
+  $lweight=0;
+  foreach $lpair (@lpairs) {
+    ($ln,$lfeat) = split/\@/,$lpair;
+    if ($$wf{$lfeat}) {
+      $lweight += $ln*$$wf{$lfeat}
+    }
+  }
+  return $lweight;
+}
+
+$prevkey=0;
+$prevlength=0;
+@triples=();
+while(<>) {
+  next if /^[%\#]/;
+  next if !/\|/;
+  chomp;
+  ($key,$length,$triple,$pairs) = split/\#/;
+  if ($key ne $prevkey){
+      for($i=0;$i<@triples;$i++) {
+	  $summed=0;
+	  foreach $w (@ws) {
+	      $p=$$w[$i]/$sum{$w};
+	      $summed=$summed+$p;
+	      $entropy{$w}=$entropy{$w} + $p * -log($p);
+	  }
+	  print "$prevkey#0#$triples[$i]#$summed\n";
+      }
+      print "entropy|$prevkey|$entropy{$w}\n" if $opt_e && @triples;
+      print "length|$prevkey|$prevlength\n" if $opt_e && @triples;
+      print "readings|$prevkey|",scalar @triples,"\n" if $opt_e && @triples;
+
+      @triples=();
+      foreach $w (@ws) {
+	  @$w=();
+	  $sum{$w}=0;
+	  $entropy{$w}=0;
+      }
+  }
+  push @triples,$triple;
+  foreach $w (@ws) {
+      $this_weight=exp(weight($w,$pairs));
+      $sum{$w}=$sum{$w}+$this_weight;   
+      push @$w,$this_weight;
+  }
+  $prevkey=$key;
+  $prevlength=$length;
+}
+
+for($i=0;$i<@triples;$i++) {
+    $summed=0;
+    foreach $w (@ws) {
+	$p=$$w[$i]/$sum{$w};
+	$summed=$summed+$p;
+	$entropy{$w}=$entropy{$w} + $p * -log($p);
+    }
+    print "$prevkey#0#$triples[$i]#$summed\n";
+}
+print "entropy|$prevkey|$entropy{$w}\n" if $opt_e && @triples;
+print "length|$prevkey|$prevlength\n" if $opt_e && @triples;
+print "readings|$prevkey|",scalar @triples,"\n" if $opt_e && @triples;

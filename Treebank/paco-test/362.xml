@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="smain" end="20" id="1" rel="--">
+      <node begin="3" end="4" frame="verb(hebben,pl,aux(te))" id="2" infl="pl" lcat="smain" pos="verb" rel="hd" root="dien" sc="aux(te)" sense="dien" tense="present" word="dienen"/>
+      <node begin="5" cat="conj" end="13" id="3" index="1" rel="su">
+        <node begin="7" end="8" frame="conj(en)" id="4" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+        <node begin="5" cat="np" end="13" id="5" rel="cnj">
+          <node begin="5" end="6" frame="determiner(de)" id="6" index="2" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="6" end="7" frame="noun(de,count,pl)" gen="de" id="7" lcat="np" num="pl" pos="noun" rel="hd" root="persoon" sense="persoon" word="personen"/>
+          <node begin="9" cat="ppart" end="13" id="8" index="3" rel="mod">
+            <node aform="base" begin="9" end="10" frame="adjective(ge_no_e(padv))" id="9" infl="no_e" lcat="ppart" pos="adj" rel="hd" root="bedoeld" sense="bedoeld" vform="psp" word="bedoeld"/>
+            <node begin="10" cat="pp" end="13" id="10" rel="mod">
+              <node begin="10" end="11" frame="preposition(in,[])" id="11" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+              <node begin="11" cat="np" end="13" id="12" rel="obj1">
+                <node begin="11" end="12" frame="noun(het,count,sg)" gen="het" id="13" lcat="np" num="sg" pos="noun" rel="hd" root="artikel" sense="artikel" word="artikel"/>
+                <node begin="12" end="13" frame="number(hoofd(pl_num))" id="14" infl="pl_num" lcat="detp" pos="num" rel="app" root="26" sense="26" special="hoofd" word="26"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="5" cat="np" end="13" id="15" rel="cnj">
+          <node begin="5" end="6" id="16" index="2" rel="det"/>
+          <node begin="8" end="9" frame="noun(de,count,pl)" gen="de" id="17" lcat="np" num="pl" pos="noun" rel="hd" root="onderneming" sense="onderneming" word="ondernemingen"/>
+          <node begin="9" end="13" id="18" index="3" rel="mod"/>
+        </node>
+      </node>
+      <node begin="0" cat="ti" end="20" id="19" rel="vc">
+        <node begin="18" end="19" frame="complementizer(te)" id="20" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+        <node begin="0" cat="inf" end="20" id="21" rel="body">
+          <node begin="0" cat="pp" end="3" id="22" rel="mod">
+            <node begin="0" end="1" frame="preposition(in,[])" id="23" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="In"/>
+            <node begin="1" cat="np" end="3" id="24" rel="obj1">
+              <node begin="1" end="2" frame="determiner(de,nwh,mod,pro,yparg)" id="25" infl="de" lcat="detp" pos="det" rel="det" root="dezelfde" sense="dezelfde" wh="nwh" word="dezelfde"/>
+              <node begin="2" end="3" frame="noun(de,count,pl)" gen="de" id="26" lcat="np" num="pl" pos="noun" rel="hd" root="omstandigheid" sense="omstandigheid" word="omstandigheden"/>
+            </node>
+          </node>
+          <node begin="4" end="5" frame="sentence_adverb" id="27" lcat="advp" pos="adv" rel="mod" root="ook" sense="ook" special="sentence" word="ook"/>
+          <node begin="5" end="13" id="28" index="1" rel="su"/>
+          <node begin="13" cat="np" end="15" id="29" rel="obj1">
+            <node begin="13" end="14" frame="determiner(de)" id="30" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="14" end="15" frame="proper_name(both,'ORG')" id="31" lcat="np" neclass="ORG" num="both" pos="name" rel="hd" root="Commissie" sense="Commissie" word="Commissie"/>
+          </node>
+          <node begin="15" cat="mwu" end="18" id="32" mwu_root="op_de_hoogte" mwu_sense="op_de_hoogte" rel="predc">
+            <node aform="base" begin="15" end="16" frame="adjective(pred(padv))" id="33" infl="pred" lcat="ap" pos="adj" rel="mwp" root="op" sense="op" vform="adj" word="op"/>
+            <node aform="base" begin="16" end="17" frame="adjective(pred(padv))" id="34" infl="pred" lcat="ap" pos="adj" rel="mwp" root="de" sense="de" vform="adj" word="de"/>
+            <node aform="base" begin="17" end="18" frame="adjective(pred(padv))" id="35" infl="pred" lcat="ap" pos="adj" rel="mwp" root="hoogte" sense="hoogte" vform="adj" word="hoogte"/>
+          </node>
+          <node begin="19" end="20" frame="verb(hebben,inf,fixed([ap_pred('op de hoogte'),acc],norm_passive))" id="36" infl="inf" lcat="inf" pos="verb" rel="hd" root="breng" sc="fixed([ap_pred(op de hoogte),acc],norm_passive)" sense="op de hoogte-breng" word="brengen"/>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" frame="punct(punt)" id="37" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>In dezelfde omstandigheden dienen ook de personen en ondernemingen bedoeld in artikel 26 de Commissie op de hoogte te brengen .</sentence>
+  <comments>
+    <comment>Q#362|In dezelfde omstandigheden dienen ook de personen en ondernemingen bedoeld in artikel 26 de Commissie op de hoogte te brengen .|1|1|2.7090715918585295</comment>
+  </comments>
+</alpino_ds>

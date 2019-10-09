@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="13" end="14" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="23" id="2" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="3" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="4" lemma="vinden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="vind" word="vindt" wvorm="pv"/>
+      <node begin="2" cat="np" end="10" id="5" rel="obj1">
+        <node begin="2" end="3" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="bocht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bocht" word="bochten"/>
+        <node begin="4" cat="pp" end="10" id="8" rel="mod">
+          <node begin="4" end="5" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="5" cat="np" end="10" id="10" rel="obj1">
+            <node begin="5" end="6" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="6" buiging="met-e" end="7" graad="basis" id="12" lemma="Brabants" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Brabants" word="Brabantse"/>
+            <node begin="7" cat="np" end="9" id="13" rel="mod">
+              <node begin="7" end="8" id="14" lemma="145" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="145" word="145"/>
+              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="meter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="meter" word="meter"/>
+            </node>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="16" lemma="baan" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="baan" word="baan"/>
+          </node>
+        </node>
+      </node>
+      <node begin="10" cat="ap" end="13" id="17" rel="predc">
+        <node begin="10" end="11" getal="ev" id="18" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="adv" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="mod" root="wat" status="vol" vwtype="onbep" word="wat"/>
+        <node begin="11" end="12" id="19" lemma="te" pos="adv" postag="BW()" pt="bw" rel="mod" root="te" word="te"/>
+        <node begin="12" buiging="zonder" end="13" graad="basis" id="20" lemma="klein" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="klein" word="klein"/>
+      </node>
+      <node begin="14" cat="whrel" end="23" id="21" rel="mod">
+        <node begin="14" end="15" id="22" index="1" lemma="waardoor" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waardoor" word="waardoor"/>
+        <node begin="14" cat="ssub" end="23" id="23" rel="body">
+          <node begin="15" end="16" genus="masc" getal="ev" id="24" index="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+          <node begin="21" end="22" id="25" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+          <node begin="14" cat="ppart" end="23" id="26" rel="vc">
+            <node begin="14" end="15" id="27" index="1" rel="mod"/>
+            <node begin="15" end="16" id="28" index="2" rel="su"/>
+            <node begin="16" cat="advp" end="18" id="29" rel="mod">
+              <node begin="16" end="17" id="30" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+              <node begin="17" end="18" id="31" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="hd" root="niet" word="niet"/>
+            </node>
+            <node begin="18" cat="np" end="21" id="32" rel="obj1">
+              <node begin="18" end="19" id="33" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="19" buiging="met-e" end="20" graad="basis" id="34" lemma="juist" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="juist" word="juiste"/>
+              <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="35" lemma="cadans" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="cadans" word="cadans"/>
+            </node>
+            <node begin="22" buiging="zonder" end="23" id="36" lemma="vinden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vind" word="gevonden" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hij vindt de bochten van de Brabantse 145 meter baan wat te klein , waardoor hij nog niet de juiste cadans heeft gevonden .</sentence>
+</alpino_ds>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="41" id="0" rel="top">
+    <node begin="9" end="10" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="11" end="12" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="smain" end="40" id="3" rel="--">
+      <node begin="0" cat="np" end="17" id="4" index="1" rel="su">
+        <node begin="0" end="1" id="5" lemma="vijf" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="vijf" word="Vijf"/>
+        <node begin="1" buiging="met-e" end="2" id="6" lemma="verontrusten" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="verontrust" word="verontruste" wvorm="vd"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="7" lemma="moeder" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="moeder" word="moeders"/>
+        <node begin="3" cat="pp" end="17" id="8" rel="mod">
+          <node begin="3" end="4" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="4" cat="np" end="17" id="10" rel="obj1">
+            <node begin="4" end="5" getal="mv" graad="basis" id="11" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kind" word="kinderen"/>
+            <node begin="5" cat="pp" end="17" id="12" rel="mod">
+              <node begin="5" end="6" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="6" cat="np" end="17" id="14" rel="obj1">
+                <node begin="6" end="7" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="7" cat="mwu" end="9" id="16" rel="hd">
+                  <node begin="7" end="8" id="17" lemma="Albert" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Albert" spectype="deeleigen" word="Albert"/>
+                  <node begin="8" end="9" id="18" lemma="Schweitzerschool" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Schweitzerschool" spectype="deeleigen" word="Schweitzerschool"/>
+                </node>
+                <node begin="10" end="11" id="19" lemma="openluchtschool" pos="noun" postag="SPEC(symb)" pt="spec" rel="mod" root="school" spectype="symb" word="openluchtschool"/>
+                <node begin="12" cat="pp" end="15" id="20" rel="mod">
+                  <node begin="12" end="13" id="21" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                  <node begin="13" cat="np" end="15" id="22" rel="obj1">
+                    <node begin="13" buiging="met-e" end="14" graad="basis" id="23" lemma="ziekelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ziekelijk" word="ziekelijke"/>
+                    <node begin="14" end="15" getal="mv" graad="basis" id="24" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kind" word="kinderen"/>
+                  </node>
+                </node>
+                <node begin="15" cat="pp" end="17" id="25" rel="mod">
+                  <node begin="15" end="16" id="26" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                  <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="27" lemma="Haarlem" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Haarlem" word="Haarlem"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="17" end="18" id="28" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="40" id="29" rel="vc">
+        <node begin="0" end="17" id="30" index="1" rel="su"/>
+        <node begin="18" cat="pp" end="26" id="31" rel="mod">
+          <node begin="18" end="19" id="32" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="19" cat="np" end="26" id="33" rel="obj1">
+            <node begin="19" end="20" id="34" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="20" buiging="zonder" end="21" id="35" lemma="uitbreiden" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="mod" root="uitgebreid" word="uitgebreid" wvorm="vd"/>
+            <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="36" lemma="rapport" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="rapport" word="rapport"/>
+            <node begin="22" cat="pp" end="26" id="37" rel="mod">
+              <node begin="22" end="23" id="38" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+              <node begin="23" cat="np" end="26" id="39" rel="obj1">
+                <node begin="23" end="24" id="40" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="24" buiging="met-e" end="25" graad="basis" id="41" lemma="gemeentelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gemeentelijk" word="gemeentelijke"/>
+                <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="42" lemma="onderwijsinspectie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="inspectie" word="onderwijsinspectie"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="27" buiging="zonder" end="28" id="43" lemma="indienen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="dien" word="ingediend" wvorm="vd"/>
+        <node begin="26" cat="np" end="40" id="44" rel="obj1">
+          <node begin="26" end="27" getal="mv" graad="basis" id="45" lemma="klacht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="klacht" word="klachten"/>
+          <node begin="28" cat="pp" end="40" id="46" rel="mod">
+            <node begin="28" end="29" id="47" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+            <node begin="29" cat="np" end="40" id="48" rel="obj1">
+              <node begin="29" end="30" id="49" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="50" lemma="behandeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="behandeling" word="behandeling"/>
+              <node begin="31" cat="pp" end="37" id="51" rel="mod">
+                <node begin="31" end="32" id="52" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="32" cat="conj" end="37" id="53" rel="obj1">
+                  <node begin="34" conjtype="neven" end="35" id="54" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                  <node begin="32" cat="np" end="37" id="55" rel="cnj">
+                    <node begin="32" buiging="zonder" end="33" getal="mv" id="56" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+                    <node begin="33" buiging="zonder" end="34" graad="basis" id="57" lemma="eigen" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="eigen" word="eigen"/>
+                    <node begin="36" end="37" getal="mv" graad="basis" id="58" index="2" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kind" word="kinderen"/>
+                  </node>
+                  <node begin="35" cat="np" end="37" id="59" rel="cnj">
+                    <node begin="35" buiging="met-e" end="36" graad="basis" id="60" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
+                    <node begin="36" end="37" id="61" index="2" rel="hd"/>
+                  </node>
+                </node>
+              </node>
+              <node begin="37" cat="pp" end="40" id="62" rel="mod">
+                <node begin="37" end="38" id="63" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                <node begin="38" cat="np" end="40" id="64" rel="obj1">
+                  <node begin="38" end="39" id="65" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="39" end="40" genus="zijd" getal="ev" graad="basis" id="66" lemma="school" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="school" word="school"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="40" end="41" id="67" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Vijf verontruste moeders van kinderen van de Albert Schweitzerschool ( openluchtschool ) voor ziekelijke kinderen in Haarlem hebben in een uitgebreid rapport aan de gemeentelijke onderwijsinspectie klachten ingediend over de behandeling van hun eigen en andere kinderen op de school .</sentence>
+</alpino_ds>

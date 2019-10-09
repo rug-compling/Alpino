@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="Dit"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="icoon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="icoon" word="icoon"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="verschijnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="verschijn" word="verschijnt" wvorm="pv"/>
+      <node begin="3" cat="cp" end="11" id="6" rel="mod">
+        <node begin="3" conjtype="onder" end="4" id="7" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+        <node begin="4" cat="ssub" end="11" id="8" rel="body">
+          <node begin="4" end="5" getal="ev" id="9" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+          <node begin="7" end="8" id="10" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="hebt" wvorm="pv"/>
+          <node begin="5" cat="np" end="11" id="11" rel="obj1">
+            <node begin="5" buiging="zonder" end="6" id="12" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="verbinding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verbinding" word="verbinding"/>
+            <node begin="8" cat="pp" end="11" id="14" rel="mod">
+              <node begin="8" end="9" id="15" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+              <node begin="9" cat="np" end="11" id="16" rel="obj1">
+                <node begin="9" end="10" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="18" lemma="netwerk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="netwerk" word="netwerk"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dit icoon verschijnt als je geen verbinding hebt met een netwerk .</sentence>
+</alpino_ds>

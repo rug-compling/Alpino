@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="smain" end="15" id="1" rel="--">
+      <node begin="0" cat="np" end="7" id="2" rel="su">
+        <node begin="0" cat="np" end="2" id="3" rel="det">
+          <node begin="0" end="1" frame="determiner(pl_num)" id="4" infl="pl_num" lcat="detp" pos="det" rel="det" root="een" sense="een" word="Een"/>
+          <node begin="1" end="2" frame="noun(both,both,sg)" gen="both" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="aantal" sense="aantal" word="aantal"/>
+        </node>
+        <node begin="2" end="3" frame="noun(het,count,pl)" gen="het" id="6" lcat="np" num="pl" pos="noun" rel="hd" root="onderdeel" sense="onderdeel" word="onderdelen"/>
+        <node begin="3" cat="pp" end="7" id="7" rel="mod">
+          <node begin="3" end="4" frame="preposition(uit,[vandaan])" id="8" lcat="pp" pos="prep" rel="hd" root="uit" sense="uit" word="uit"/>
+          <node begin="4" cat="np" end="7" id="9" rel="obj1">
+            <node begin="4" end="5" frame="determiner(de)" id="10" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node aform="base" begin="5" end="6" frame="adjective(e)" id="11" infl="e" lcat="ap" pos="adj" rel="mod" root="oud" sense="oud" vform="adj" word="oude"/>
+            <node begin="6" end="7" frame="noun(de,count,sg)" gen="de" id="12" lcat="np" num="sg" pos="noun" rel="hd" root="reeks" sense="reeks" word="reeks"/>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" frame="verb(unacc,pl,copula)" id="13" infl="pl" lcat="smain" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="zijn"/>
+      <node begin="8" cat="pp" end="12" id="14" rel="mod">
+        <node begin="8" end="9" frame="preposition(in,[])" id="15" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+        <node begin="9" cat="np" end="12" id="16" rel="obj1">
+          <node begin="9" end="10" frame="determiner(de)" id="17" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node aform="base" begin="10" end="11" frame="adjective(e)" id="18" infl="e" lcat="ap" pos="adj" rel="mod" root="nieuw" sense="nieuw" vform="adj" word="nieuwe"/>
+          <node begin="11" end="12" frame="noun(de,count,pl)" gen="de" id="19" lcat="np" num="pl" pos="noun" rel="hd" root="schakelaar" sense="schakelaar" word="schakelaars"/>
+        </node>
+      </node>
+      <node begin="12" cat="advp" end="14" id="20" rel="mod">
+        <node begin="12" end="13" frame="adverb" id="21" lcat="advp" pos="adv" rel="hd" root="niet" sense="niet" word="niet"/>
+        <node begin="13" end="14" frame="postadv_adverb" id="22" lcat="advp" pos="adv" rel="mod" root="meer" sense="meer" special="postadv" word="meer"/>
+      </node>
+      <node aform="base" begin="14" end="15" frame="adjective(no_e(padv))" id="23" infl="no_e" lcat="ap" pos="adj" rel="predc" root="aanwezig" sense="aanwezig" vform="adj" word="aanwezig"/>
+    </node>
+    <node begin="15" end="16" frame="punct(punt)" id="24" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Een aantal onderdelen uit de oude reeks zijn in de nieuwe schakelaars niet meer aanwezig .</sentence>
+  <comments>
+    <comment>Q#164|Een aantal onderdelen uit de oude reeks zijn in de nieuwe schakelaars niet meer aanwezig .|1|1|0.20326655942738703</comment>
+  </comments>
+</alpino_ds>

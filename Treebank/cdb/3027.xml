@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="36" id="0" rel="top">
+    <node begin="18" end="19" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="22" end="23" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="25" end="26" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="28" end="29" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="35" id="5" rel="--">
+      <node begin="0" cat="pp" end="8" id="6" rel="pc">
+        <node begin="0" end="1" id="7" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="Tegen"/>
+        <node begin="1" cat="np" end="8" id="8" rel="obj1">
+          <node begin="1" end="2" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="10" lemma="discriminatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="discriminatie" word="discriminatie"/>
+          <node begin="3" cat="pp" end="8" id="11" rel="mod">
+            <node begin="3" end="4" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="4" cat="np" end="8" id="13" rel="obj1">
+              <node begin="4" end="5" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="5" buiging="met-e" end="6" graad="basis" id="15" lemma="15-jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="15-jarige"/>
+              <node begin="6" buiging="met-e" end="7" graad="basis" id="16" lemma="huishoudelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="huishoudelijk" word="huishoudelijke"/>
+              <node begin="7" end="8" getal="mv" graad="basis" id="17" lemma="hulp" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="hulp" word="hulpen"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="8" end="9" id="18" lemma="protesteren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="protesteer" word="protesteerde" wvorm="pv"/>
+      <node begin="9" cat="np" end="13" id="19" rel="su">
+        <node begin="9" end="10" id="20" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="10" buiging="zonder" end="11" graad="basis" id="21" lemma="groot" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="groot" word="groot"/>
+        <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="22" lemma="aantal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aantal" word="aantal"/>
+        <node begin="12" end="13" getal="mv" graad="basis" id="23" lemma="groepering" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="groepering" word="groeperingen"/>
+      </node>
+      <node begin="13" cat="cp" end="35" id="24" rel="mod">
+        <node begin="13" conjtype="onder" end="14" id="25" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+        <node begin="14" cat="conj" end="35" id="26" rel="body">
+          <node begin="14" cat="np" end="18" id="27" rel="cnj">
+            <node begin="14" end="15" id="28" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="15" cat="mwu" end="18" id="29" rel="hd">
+              <node begin="15" buiging="zonder" end="16" graad="basis" id="30" lemma="nvv" pos="noun" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="NVV" word="NVV"/>
+              <node begin="16" buiging="met-e" end="17" getal-n="mv-n" graad="comp" id="31" lemma="jong" pos="noun" positie="nom" postag="ADJ(nom,comp,met-e,mv-n)" pt="adj" rel="mwp" root="Jongeren" word="Jongeren"/>
+              <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="32" lemma="contact" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Contact" word="Contact"/>
+            </node>
+          </node>
+          <node begin="19" cat="mwu" end="22" id="33" rel="cnj">
+            <node begin="19" buiging="met-e" end="20" graad="basis" id="34" lemma="katholiek" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Katholieke" word="Katholieke"/>
+            <node begin="20" buiging="met-e" end="21" graad="basis" id="35" lemma="werkend" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Werkende" word="Werkende"/>
+            <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="36" lemma="jeugd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Jeugd" word="Jeugd"/>
+          </node>
+          <node begin="23" cat="mwu" end="25" id="37" rel="cnj">
+            <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="38" lemma="vrouwenbeweging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Vrouwenbeweging" word="Vrouwenbeweging"/>
+            <node begin="24" end="25" id="39" lemma="NKV" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="NKV" spectype="deeleigen" word="NKV"/>
+          </node>
+          <node begin="26" cat="mwu" end="28" id="40" rel="cnj">
+            <node begin="26" end="27" id="41" lemma="Oranje" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Oranje" spectype="deeleigen" word="Oranje"/>
+            <node begin="27" end="28" id="42" lemma="Vrijstraat" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Vrijstraat" spectype="deeleigen" word="Vrijstraat"/>
+          </node>
+          <node begin="29" cat="mwu" end="32" id="43" rel="cnj">
+            <node begin="29" end="30" id="44" lemma="Man" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Man" spectype="deeleigen" word="Man"/>
+            <node begin="30" end="31" id="45" lemma="Vrouw" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Vrouw" spectype="deeleigen" word="Vrouw"/>
+            <node begin="31" end="32" genus="zijd" getal="ev" graad="basis" id="46" lemma="maatschappij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Maatschappij" word="Maatschappij"/>
+          </node>
+          <node begin="32" conjtype="neven" end="33" id="47" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="33" cat="mwu" end="35" id="48" rel="cnj">
+            <node begin="33" end="34" id="49" lemma="Dolle" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Dolle" spectype="deeleigen" word="Dolle"/>
+            <node begin="34" end="35" id="50" lemma="Mina" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Mina" spectype="deeleigen" word="Mina"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="35" end="36" id="51" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Tegen de discriminatie van de 15-jarige huishoudelijke hulpen protesteerde een groot aantal groeperingen als het NVV Jongeren Contact , Katholieke Werkende Jeugd , Vrouwenbeweging NKV , Oranje Vrijstraat , Man Vrouw Maatschappij en Dolle Mina .</sentence>
+</alpino_ds>

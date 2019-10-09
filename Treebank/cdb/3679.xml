@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="16" end="17" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="20" id="3" rel="--">
+      <node begin="0" cat="du" end="16" id="4" rel="nucl">
+        <node begin="0" conjtype="neven" end="1" id="5" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" word="En"/>
+        <node begin="1" cat="du" end="16" id="6" rel="nucl">
+          <node begin="1" cat="cp" end="8" id="7" rel="sat">
+            <node begin="1" conjtype="onder" end="2" id="8" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+            <node begin="2" cat="ssub" end="8" id="9" rel="body">
+              <node begin="6" end="7" id="10" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+              <node begin="2" cat="inf" end="8" id="11" rel="vc">
+                <node begin="2" cat="ppart" end="6" id="12" rel="vc">
+                  <node begin="2" end="3" getal="getal" id="13" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+                  <node begin="3" end="4" id="14" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+                  <node begin="4" buiging="zonder" end="5" id="15" lemma="beslissen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="mod" root="beslist" word="beslist" wvorm="vd"/>
+                  <node begin="5" buiging="zonder" end="6" id="16" lemma="voorlichten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voorgelicht" word="voorgelicht" wvorm="vd"/>
+                </node>
+                <node begin="7" buiging="zonder" end="8" id="17" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+              </node>
+            </node>
+          </node>
+          <node begin="9" cat="du" end="16" id="18" rel="nucl">
+            <node begin="9" end="10" id="19" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="dp" root="dan" word="dan"/>
+            <node begin="10" cat="ap" end="16" id="20" rel="dp">
+              <node begin="10" end="11" id="21" lemma="liever" pos="adj" postag="BW()" pt="bw" rel="hd" root="liever" word="liever"/>
+              <node begin="11" cat="pp" end="13" id="22" rel="mod">
+                <node begin="11" end="12" id="23" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                <node begin="12" end="13" getal="mv" graad="dim" id="24" lemma="boek" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="obj1" root="boekje" word="boekjes"/>
+              </node>
+              <node begin="13" cat="cp" end="16" id="25" rel="obcomp">
+                <node begin="13" conjtype="onder" end="14" id="26" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+                <node begin="14" cat="pp" end="16" id="27" rel="body">
+                  <node begin="14" end="15" id="28" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                  <node begin="15" end="16" getal="mv" graad="basis" id="29" lemma="lezing" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="lezing" word="lezingen"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="17" cat="sv1" end="20" id="30" rel="tag">
+        <node begin="17" end="18" id="31" lemma="vinden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="vind" word="vindt" wvorm="pv"/>
+        <node begin="18" cat="mwu" end="20" id="32" rel="su">
+          <node begin="18" end="19" id="33" lemma="Komsomolskaya" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Komsomolskaya" spectype="deeleigen" word="Komsomolskaya"/>
+          <node begin="19" end="20" id="34" lemma="Prawda" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Prawda" spectype="deeleigen" word="Prawda"/>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>En als er dan beslist voorgelicht moet worden , dan liever met boekjes dan in lezingen , vindt Komsomolskaya Prawda .</sentence>
+  <comments>
+    <comment>pffff</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="24" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" index="1" rel="su">
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="5" lemma="mijnwerker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mijnwerker" word="mijnwerkers"/>
+      </node>
+      <node begin="2" end="3" id="6" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="24" id="7" rel="vc">
+        <node begin="0" end="2" id="8" index="1" rel="su"/>
+        <node begin="3" cat="pp" end="7" id="9" rel="mod">
+          <node begin="3" end="4" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="4" cat="np" end="7" id="11" rel="obj1">
+            <node begin="4" end="5" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="5" buiging="met-e" end="6" graad="basis" id="13" lemma="nationaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nationaal" word="nationale"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="kolenraad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="raad" word="kolenraad"/>
+          </node>
+        </node>
+        <node begin="10" buiging="zonder" end="11" id="15" lemma="ontvangen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ontvang" word="ontvangen" wvorm="vd"/>
+        <node begin="7" cat="np" end="24" id="16" rel="obj1">
+          <node begin="7" end="8" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="8" buiging="zonder" end="9" graad="basis" id="18" lemma="nieuw" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="nieuw" word="nieuw"/>
+          <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="19" lemma="loonvoorstel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="voorstel" word="loonvoorstel"/>
+          <node begin="12" cat="rel" end="24" id="20" rel="mod">
+            <node begin="12" end="13" getal="ev" id="21" index="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
+            <node begin="12" cat="ssub" end="24" id="22" rel="body">
+              <node begin="12" end="13" id="23" index="2" rel="su"/>
+              <node begin="13" end="14" id="24" lemma="voorzien" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="voorzie" word="voorziet" wvorm="pv"/>
+              <node begin="14" cat="pp" end="24" id="25" rel="pc">
+                <node begin="14" end="15" id="26" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="15" cat="np" end="24" id="27" rel="obj1">
+                  <node begin="15" end="16" id="28" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="29" lemma="salarisverhoging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="salarisverhoging" word="salarisverhoging"/>
+                  <node begin="17" cat="pp" end="20" id="30" rel="mod">
+                    <node begin="17" end="18" id="31" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
+                    <node begin="18" cat="np" end="20" id="32" rel="obj1">
+                      <node begin="18" buiging="met-e" end="19" graad="basis" id="33" lemma="veertigurig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="veertigurige" word="veertigurige"/>
+                      <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="34" lemma="werkweek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="werkweek" word="werkweek"/>
+                    </node>
+                  </node>
+                  <node begin="20" cat="pp" end="24" id="35" rel="mod">
+                    <node begin="20" end="21" id="36" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                    <node begin="21" cat="np" end="24" id="37" rel="obj1">
+                      <node begin="21" cat="detp" end="23" id="38" rel="det">
+                        <node begin="21" buiging="zonder" end="22" graad="basis" id="39" lemma="ruim" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ruim" word="ruim"/>
+                        <node begin="22" end="23" id="40" lemma="elf" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="elf" word="elf"/>
+                      </node>
+                      <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="41" lemma="gulden" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gulden" word="gulden"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="42" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De mijnwerkers hebben van de nationale kolenraad een nieuw loonvoorstel ontvangen , dat voorziet in een salarisverhoging per veertigurige werkweek van ruim elf gulden .</sentence>
+</alpino_ds>

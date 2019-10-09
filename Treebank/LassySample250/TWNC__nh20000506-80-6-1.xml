@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="smain" end="17" id="1" rel="--">
+      <node begin="0" cat="conj" end="3" id="2" index="1" rel="su">
+        <node begin="0" end="1" frame="proper_name(both,'PER')" id="3" lcat="np" lemma="Ewald" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="cnj" root="Ewald" sense="Ewald" spectype="deeleigen" word="Ewald"/>
+        <node begin="1" conjtype="neven" end="2" frame="conj(en)" id="4" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+        <node begin="2" end="3" frame="proper_name(both,'PER')" id="5" lcat="np" lemma="Höppner" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="cnj" root="Höppner" sense="Höppner" spectype="deeleigen" word="Höppner"/>
+      </node>
+      <node begin="3" end="4" frame="verb(unacc,pl,passive)" id="6" infl="pl" lcat="smain" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" sc="passive" sense="word" tense="present" word="worden" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="17" id="7" rel="vc">
+        <node begin="0" end="3" id="8" index="1" rel="obj1"/>
+        <node begin="5" buiging="zonder" end="6" frame="verb(hebben,psp,obj_np_er_pp_vp(van))" id="9" infl="psp" lcat="ppart" lemma="verdenken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verdenk" sc="obj_np_er_pp_vp(van)" sense="verdenk-van" word="verdacht" wvorm="vd"/>
+        <node begin="0" cat="pp" end="17" id="10" rel="pc">
+          <node begin="4" end="5" frame="er_adverb(van)" id="11" lcat="pp" lemma="ervan" pos="pp" postag="BW()" pt="bw" rel="hd" root="ervan" sense="ervan" special="er" word="ervan"/>
+          <node begin="0" cat="ti" end="17" id="12" rel="vc">
+            <node begin="9" end="10" frame="complementizer(te)" id="13" lcat="cp" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" sense="te" vztype="init" word="te"/>
+            <node begin="0" cat="inf" end="17" id="14" rel="body">
+              <node begin="0" end="3" id="15" index="1" rel="su"/>
+              <node begin="10" buiging="zonder" end="11" frame="verb(hebben,inf,aux_psp_hebben)" id="16" infl="inf" lcat="inf" lemma="hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb" sc="aux_psp_hebben" sense="heb" word="hebben" wvorm="inf"/>
+              <node begin="0" cat="ppart" end="17" id="17" rel="vc">
+                <node begin="0" end="3" id="18" index="1" rel="su"/>
+                <node begin="6" cat="np" end="9" id="19" rel="obj1">
+                  <node begin="6" end="7" frame="determiner(een)" id="20" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+                  <node aform="base" begin="7" buiging="met-e" end="8" frame="adjective(e)" graad="basis" id="21" infl="e" lcat="ap" lemma="belangrijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="belangrijk" sense="belangrijk" vform="adj" word="belangrijke"/>
+                  <node begin="8" end="9" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="22" lcat="np" lemma="rol" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rol" sense="rol" word="rol"/>
+                </node>
+                <node begin="11" buiging="zonder" end="12" frame="verb(hebben,psp,transitive)" id="23" infl="psp" lcat="ppart" lemma="spelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="speel" sc="transitive" sense="speel" word="gespeeld" wvorm="vd"/>
+                <node begin="12" cat="pp" end="17" id="24" rel="mod">
+                  <node begin="12" end="13" frame="preposition(in,[])" id="25" lcat="pp" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" sense="in" vztype="init" word="in"/>
+                  <node begin="13" cat="np" end="17" id="26" rel="obj1">
+                    <node begin="13" end="14" frame="determiner(de)" id="27" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+                    <node begin="14" end="15" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="28" lcat="np" lemma="dopinggeschiedenis" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="doping_geschiedenis" sense="doping_geschiedenis" word="dopinggeschiedenis"/>
+                    <node begin="15" cat="pp" end="17" id="29" rel="mod">
+                      <node begin="15" end="16" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="30" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+                      <node begin="16" end="17" frame="proper_name(both,'LOC')" id="31" lcat="np" lemma="Oost-Duitsland" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="obj1" root="Oost-Duitsland" sense="Oost-Duitsland" spectype="deeleigen" word="Oost-Duitsland"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" frame="punct(punt)" id="32" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Ewald en Höppner worden ervan verdacht een belangrijke rol te hebben gespeeld in de dopinggeschiedenis van Oost-Duitsland .</sentence>
+  <comments>
+    <comment>Q#nh20000506-80-6-1|Ewald en Höppner worden ervan verdacht een belangrijke rol te hebben gespeeld in de dopinggeschiedenis van Oost-Duitsland .|1|1|-0.4688184045303389</comment>
+  </comments>
+</alpino_ds>

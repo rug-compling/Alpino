@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="0" cat="smain" end="24" id="1" rel="--">
+      <node begin="0" cat="np" end="7" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="4" lemma="succesvol" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="succesvol" word="succesvolle"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="landhervorming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="land_hervorming" word="landhervorming"/>
+        <node begin="3" cat="pp" end="7" id="6" rel="mod">
+          <node begin="3" end="4" id="7" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="4" cat="np" end="7" id="8" rel="obj1">
+            <node begin="4" end="5" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="5" end="6" getal="mv" graad="basis" id="10" lemma="jaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="jaar" word="jaren"/>
+            <node begin="6" end="7" id="11" lemma="tachtig" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="app" root="tachtig" word="tachtig"/>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="12" lemma="maken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="maak" word="maakte" wvorm="pv"/>
+      <node begin="8" end="9" genus="onz" getal="ev" id="13" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="pobj1" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="9" end="10" id="14" lemma="zelfs" pos="adv" postag="BW()" pt="bw" rel="mod" root="zelfs" word="zelfs"/>
+      <node begin="10" buiging="zonder" end="11" graad="basis" id="15" lemma="mogelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="mogelijk" word="mogelijk"/>
+      <node begin="11" cat="cp" end="24" id="16" rel="vc">
+        <node begin="11" conjtype="onder" end="12" id="17" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="12" cat="ssub" end="24" id="18" rel="body">
+          <node begin="12" cat="np" end="14" id="19" rel="su">
+            <node begin="12" end="13" id="20" lemma="70.000" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="70.000" word="70.000"/>
+            <node begin="13" end="14" getal="mv" graad="basis" id="21" lemma="gezin" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gezin" word="gezinnen"/>
+          </node>
+          <node begin="14" end="15" getal="getal" id="22" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="zich" status="red" vwtype="refl" word="zich"/>
+          <node begin="15" end="16" id="23" lemma="installeren" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="installeer" word="installeerden" wvorm="pv"/>
+          <node begin="16" cat="pp" end="18" id="24" rel="mod">
+            <node begin="16" end="17" id="25" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="26" lemma="landbouwgrond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="landbouwgrond" word="landbouwgrond"/>
+          </node>
+          <node begin="18" cat="pp" end="24" id="27" rel="mod">
+            <node begin="18" end="19" id="28" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="19" cat="np" end="24" id="29" rel="obj1">
+              <node begin="19" end="20" getal="mv" graad="basis" id="30" lemma="donorfonds" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="donor_fonds" word="donorfondsen"/>
+              <node begin="20" cat="ppart" end="24" id="31" rel="mod">
+                <node begin="20" buiging="zonder" end="21" id="32" lemma="kopen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="koop" word="gekocht" wvorm="vd"/>
+                <node begin="21" cat="pp" end="24" id="33" rel="mod">
+                  <node begin="21" end="22" id="34" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="22" cat="np" end="24" id="35" rel="obj1">
+                    <node begin="22" buiging="met-e" end="23" graad="basis" id="36" lemma="gewillig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gewillig" word="gewillige"/>
+                    <node begin="23" end="24" getal="mv" graad="basis" id="37" lemma="verkoper" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verkoper" word="verkopers"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="38" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een succesvolle landhervorming in de jaren tachtig maakte het zelfs mogelijk dat 70.000 gezinnen zich installeerden op landbouwgrond met donorfondsen gekocht van gewillige verkopers .</sentence>
+</alpino_ds>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="3" end="4" id="2" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="4" end="5" getal="mv" id="3" index="1" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
+      <node begin="0" cat="ppart" end="8" id="4" rel="vc">
+        <node begin="4" end="5" id="5" index="1" rel="su"/>
+        <node begin="5" buiging="zonder" end="6" id="6" lemma="voetballen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voetbal" word="gevoetbald" wvorm="vd"/>
+        <node begin="0" cat="pp" end="8" id="7" rel="mod">
+          <node begin="0" end="1" id="8" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="1" cat="np" end="8" id="9" rel="obj1">
+            <node begin="2" end="3" getal="mv" graad="basis" id="10" lemma="omstandigheid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="omstandigheid" word="omstandigheden"/>
+            <node begin="1" cat="ap" end="8" id="11" rel="mod">
+              <node begin="1" buiging="met-e" end="2" graad="comp" id="12" lemma="goed" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="hd" root="goed" word="betere"/>
+              <node begin="6" cat="cp" end="8" id="13" rel="obcomp">
+                <node begin="6" conjtype="onder" end="7" id="14" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+                <node begin="7" end="8" getal="mv" id="15" lemma="jullie" naamval="stan" pdtype="pron" persoon="2v" pos="noun" postag="VNW(pers,pron,stan,nadr,2v,mv)" pt="vnw" rel="body" root="jullie" status="nadr" vwtype="pers" word="jullie"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>in betere omstandigheden hebben wij gevoetbald dan jullie</sentence>
+</alpino_ds>

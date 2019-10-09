@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="pp" end="4" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="Met"/>
+        <node begin="1" cat="np" end="4" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="2" buiging="met-e" end="3" graad="basis" id="6" lemma="Haarlems" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Haarlemse" word="Haarlemse"/>
+          <node begin="3" end="4" genus="genus" getal="ev" graad="basis" id="7" lemma="HVS" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="HVS" word="HVS"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="8" lemma="promoveren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="promoveer" word="promoveert" wvorm="pv"/>
+      <node begin="5" cat="np" end="8" id="9" rel="su">
+        <node begin="5" end="6" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="6" buiging="met-e" end="7" graad="basis" id="11" lemma="Eindhovens" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Eindhovense" word="Eindhovense"/>
+        <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="12" lemma="EVV" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="EVV" word="EVV"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Met het Haarlemse HVS promoveert het Eindhovense EVV .</sentence>
+</alpino_ds>

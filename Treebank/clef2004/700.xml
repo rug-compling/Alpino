@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="whq" end="10" id="2" rel="--">
+      <node begin="0" end="1" getal="getal" id="3" index="1" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="whd" root="wie" status="vol" vwtype="vb" word="Wie"/>
+      <node begin="0" cat="sv1" end="10" id="4" rel="body">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="1" end="2" id="6" lemma="winnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="win" word="won" wvorm="pv"/>
+        <node begin="2" cat="np" end="10" id="7" rel="obj1">
+          <node begin="2" end="3" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="3" end="4" id="9" lemma="vier" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="vierde" word="Vierde"/>
+          <node begin="4" buiging="met-e" end="5" graad="basis" id="10" lemma="internationaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="internationaal" word="Internationale"/>
+          <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="11" lemma="Schaaktoernooi" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Schaaktoernooi" word="Schaaktoernooi"/>
+          <node begin="7" cat="mwu" end="10" id="12" rel="app">
+            <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="13" lemma="ciudad" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Ciudad" word="Ciudad"/>
+            <node begin="8" end="9" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+            <node begin="9" end="10" id="15" lemma="Pamplona" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Pamplona" spectype="deeleigen" word="Pamplona"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="10" end="11" id="16" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="11" end="12" id="17" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wie won het Vierde Internationale Schaaktoernooi &quot; Ciudad de Pamplona &quot; ?</sentence>
+</alpino_ds>

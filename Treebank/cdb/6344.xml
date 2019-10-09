@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="smain" end="15" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" cat="mwu" end="3" id="4" rel="hd">
+          <node begin="1" end="2" id="5" lemma="Nederlandse" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nederlandse" spectype="deeleigen" word="Nederlandse"/>
+          <node begin="2" end="3" id="6" lemma="Spoorwegen" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Spoorwegen" spectype="deeleigen" word="Spoorwegen"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="15" id="8" rel="vc">
+        <node begin="0" end="3" id="9" index="1" rel="su"/>
+        <node begin="4" end="5" id="10" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
+        <node begin="5" cat="pp" end="8" id="11" rel="mod">
+          <node begin="5" end="6" id="12" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+          <node begin="6" cat="np" end="8" id="13" rel="obj1">
+            <node begin="6" buiging="met-e" end="7" graad="basis" id="14" lemma="omvangrijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="omvangrijk" word="omvangrijke"/>
+            <node begin="7" end="8" getal="mv" graad="basis" id="15" lemma="treinvertraging" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vertraging" word="treinvertragingen"/>
+          </node>
+        </node>
+        <node begin="8" cat="np" end="10" id="16" rel="obj2">
+          <node begin="8" end="9" getal-n="mv-n" graad="basis" id="17" lemma="duizend" numtype="hoofd" pos="noun" positie="nom" postag="TW(hoofd,nom,mv-n,basis)" pt="tw" rel="hd" root="duizend" word="duizenden"/>
+          <node begin="9" end="10" getal="mv" graad="basis" id="18" lemma="reiziger" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="reiziger" word="reizigers"/>
+        </node>
+        <node begin="10" buiging="zonder" end="11" graad="basis" id="19" lemma="noodgedwongen" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="noodgedwongen" word="noodgedwongen"/>
+        <node begin="11" cat="np" end="14" id="20" rel="obj1">
+          <node begin="11" end="12" id="21" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="12" buiging="met-e" end="13" graad="comp" id="22" lemma="lang" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="langer" word="langere"/>
+          <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="reisduur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="duur" word="reisduur"/>
+        </node>
+        <node begin="14" buiging="zonder" end="15" id="24" lemma="bezorgen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bezorg" word="bezorgd" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="15" end="16" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De Nederlandse Spoorwegen hebben gisteren door omvangrijke treinvertragingen duizenden reizigers noodgedwongen een langere reisduur bezorgd .</sentence>
+</alpino_ds>

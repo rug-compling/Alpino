@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="11" id="2" rel="--">
+      <node begin="0" cat="smain" end="4" id="3" rel="nucl">
+        <node begin="0" end="1" getal="ev" id="4" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="Dat"/>
+        <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        <node begin="2" end="3" genus="masc" getal="ev" id="6" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,obl,red,3,ev,masc)" pt="vnw" rel="predc" root="hem" status="red" vwtype="pers" word="&apos;m"/>
+        <node begin="3" end="4" id="7" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+      </node>
+      <node begin="5" cat="np" end="11" id="8" rel="sat">
+        <node begin="5" end="6" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="6" end="7" genus="genus" getal="ev" graad="basis" id="10" lemma="Puskas" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Puskas" word="Puskas"/>
+        <node begin="7" cat="pp" end="11" id="11" rel="mod">
+          <node begin="7" end="8" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="8" cat="np" end="11" id="13" rel="obj1">
+            <node begin="8" end="9" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="9" buiging="met-e" end="10" graad="basis" id="15" lemma="Pools" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Pools" word="Poolse"/>
+            <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="16" lemma="voetbal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="voetbal" word="voetbal"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="17" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>Dat was &apos;m dan , de Puskas van het Poolse voetbal :</sentence>
+</alpino_ds>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="39" id="0" rel="top">
+    <node begin="15" end="16" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="31" end="32" frame="punct(komma)" id="2" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="du" end="38" id="3" rel="--">
+      <node begin="0" cat="pp" end="8" id="4" rel="dp">
+        <node begin="0" cat="mwu" end="3" id="5" mwu_root="na_verloop_van" mwu_sense="na_verloop_van" rel="hd">
+          <node begin="0" end="1" frame="preposition([na,verloop,van],[])" id="6" lcat="pp" pos="prep" rel="mwp" root="Na" sense="Na" word="Na"/>
+          <node begin="1" end="2" frame="preposition([na,verloop,van],[])" id="7" lcat="pp" pos="prep" rel="mwp" root="verloop" sense="verloop" word="verloop"/>
+          <node begin="2" end="3" frame="preposition([na,verloop,van],[])" id="8" lcat="pp" pos="prep" rel="mwp" root="van" sense="van" word="van"/>
+        </node>
+        <node begin="3" cat="np" end="8" id="9" rel="obj1">
+          <node begin="3" end="4" frame="determiner(een)" id="10" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+          <node begin="4" end="5" frame="tmp_noun(de,count,sg)" gen="de" id="11" lcat="np" num="sg" pos="noun" rel="hd" root="termijn" sense="termijn" special="tmp" word="termijn"/>
+          <node begin="5" cat="pp" end="8" id="12" rel="mod">
+            <node begin="5" end="6" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="13" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="6" cat="np" end="8" id="14" rel="obj1">
+              <node begin="6" end="7" frame="number(hoofd(pl_num))" id="15" infl="pl_num" lcat="detp" pos="num" rel="det" root="vijf" sense="vijf" special="hoofd" word="vijf"/>
+              <node begin="7" end="8" frame="tmp_noun(het,count,meas)" gen="het" id="16" lcat="np" num="meas" pos="noun" rel="hd" root="jaar" sense="jaar" special="tmp" word="jaar"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="8" cat="smain" end="38" id="17" rel="dp">
+        <node begin="8" cat="cp" end="15" id="18" rel="mod">
+          <node begin="8" end="9" frame="complementizer" id="19" lcat="cp" pos="comp" rel="cmp" root="nadat" sense="nadat" word="nadat"/>
+          <node begin="9" cat="ssub" end="15" id="20" rel="body">
+            <node begin="9" cat="np" end="11" id="21" index="1" rel="su">
+              <node begin="9" end="10" frame="determiner(de,nwh,nmod,pro,nparg)" id="22" infl="de" lcat="detp" pos="det" rel="det" root="deze" sense="deze" wh="nwh" word="deze"/>
+              <node begin="10" end="11" frame="noun(de,count,sg)" gen="de" id="23" lcat="np" num="sg" pos="noun" rel="hd" root="richtlijn" sense="richtlijn" word="richtlijn"/>
+            </node>
+            <node begin="13" end="14" frame="verb(unacc,sg_heeft,passive)" id="24" infl="sg_heeft" lcat="ssub" pos="verb" rel="hd" root="ben" sc="passive" sense="ben" tense="present" word="is"/>
+            <node begin="9" cat="ppart" end="15" id="25" rel="vc">
+              <node begin="9" end="11" id="26" index="1" rel="obj1"/>
+              <node begin="11" cat="mwu" end="13" id="27" mwu_root="ten_uitvoer" mwu_sense="ten_uitvoer" rel="svp">
+                <node begin="11" end="12" frame="fixed_part([ten,uitvoer])" id="28" lcat="fixed" pos="fixed" rel="mwp" root="ten" sense="ten" word="ten"/>
+                <node begin="12" end="13" frame="fixed_part([ten,uitvoer])" id="29" lcat="fixed" pos="fixed" rel="mwp" root="uitvoer" sense="uitvoer" word="uitvoer"/>
+              </node>
+              <node begin="14" end="15" frame="verb(hebben,psp,fixed([[ten,uitvoer],acc],norm_passive))" id="30" infl="psp" lcat="ppart" pos="verb" rel="hd" root="leg" sc="fixed([[ten,uitvoer],acc],norm_passive)" sense="ten-uitvoer-leg" word="gelegd"/>
+            </node>
+          </node>
+        </node>
+        <node begin="16" end="17" frame="verb(hebben,sg3,part_transitive(in))" id="31" infl="sg3" lcat="smain" pos="verb" rel="hd" root="dien_in" sc="part_transitive(in)" sense="dien_in" tense="present" word="dient"/>
+        <node begin="17" cat="np" end="19" id="32" rel="su">
+          <node begin="17" end="18" frame="determiner(de)" id="33" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="18" end="19" frame="proper_name(both,'ORG')" id="34" lcat="np" neclass="ORG" num="both" pos="name" rel="hd" root="Commissie" sense="Commissie" word="Commissie"/>
+        </node>
+        <node begin="19" cat="pp" end="22" id="35" rel="mod">
+          <node begin="19" end="20" frame="preposition(bij,[vandaan])" id="36" lcat="pp" pos="prep" rel="hd" root="bij" sense="bij" word="bij"/>
+          <node begin="20" cat="np" end="22" id="37" rel="obj1">
+            <node begin="20" end="21" frame="determiner(de)" id="38" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="21" end="22" frame="proper_name(both,'ORG')" id="39" lcat="np" neclass="ORG" num="both" pos="name" rel="hd" root="Raad" sense="Raad" word="Raad"/>
+          </node>
+        </node>
+        <node begin="24" end="25" frame="particle(in)" id="40" lcat="part" pos="part" rel="svp" root="in" sense="in" word="in"/>
+        <node begin="22" cat="np" end="38" id="41" rel="obj1">
+          <node begin="22" end="23" frame="determiner(een)" id="42" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+          <node begin="23" end="24" frame="noun(het,count,sg)" gen="het" id="43" lcat="np" num="sg" pos="noun" rel="hd" root="verslag" sense="verslag" word="verslag"/>
+          <node begin="25" cat="pp" end="38" id="44" rel="mod">
+            <node begin="25" end="26" frame="preposition(over,[heen])" id="45" lcat="pp" pos="prep" rel="hd" root="over" sense="over" word="over"/>
+            <node begin="26" cat="conj" end="38" id="46" rel="obj1">
+              <node begin="26" cat="np" end="31" id="47" rel="cnj">
+                <node begin="26" end="27" frame="determiner(de)" id="48" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                <node begin="27" end="28" frame="noun(de,count,sg)" gen="de" id="49" lcat="np" num="sg" pos="noun" rel="hd" root="toepassing" sense="toepassing" word="toepassing"/>
+                <node begin="28" cat="pp" end="31" id="50" rel="mod">
+                  <node begin="28" end="29" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="51" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                  <node begin="29" cat="np" end="31" id="52" rel="obj1">
+                    <node begin="29" end="30" frame="noun(het,count,sg,app_measure)" gen="het" id="53" lcat="np" num="sg" pos="noun" rel="hd" root="lid" sc="app_measure" sense="lid" word="lid"/>
+                    <node begin="30" end="31" frame="noun(de,count,sg)" gen="de" id="54" lcat="np" num="sg" pos="noun" rel="app" root="1" sense="1" word="1"/>
+                  </node>
+                </node>
+              </node>
+              <node begin="32" end="33" frame="conj(en)" id="55" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+              <node begin="33" cat="np" end="38" id="56" rel="cnj">
+                <node begin="33" cat="mwu" end="35" id="57" mwu_root="met_name" mwu_sense="met_name" rel="mod">
+                  <node begin="33" end="34" frame="adverb" id="58" lcat="advp" pos="adv" rel="mwp" root="met" sense="met" word="met"/>
+                  <node begin="34" end="35" frame="adverb" id="59" lcat="advp" pos="adv" rel="mwp" root="name" sense="name" word="name"/>
+                </node>
+                <node begin="35" end="36" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="60" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                <node begin="36" end="37" frame="number(rang)" id="61" lcat="ap" pos="num" rel="mod" root="vierde" sense="vierde" special="rang" word="vierde"/>
+                <node begin="37" end="38" frame="noun(het,count,sg)" gen="het" id="62" lcat="np" num="sg" pos="noun" rel="hd" root="streep_DIM" sense="streep_DIM" word="streepje"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="38" end="39" frame="punct(punt)" id="63" lcat="--" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Na verloop van een termijn van vijf jaar nadat deze richtlijn ten uitvoer is gelegd , dient de Commissie bij de Raad een verslag in over de toepassing van lid 1 , en met name het vierde streepje .</sentence>
+  <comments>
+    <comment>Q#456|Na verloop van een termijn van vijf jaar nadat deze richtlijn ten uitvoer is gelegd , dient de Commissie bij de Raad een verslag in over de toepassing van lid 1 , en met name het vierde streepje .|1|2|-9.995265741934151</comment>
+  </comments>
+</alpino_ds>

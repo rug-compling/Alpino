@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="13" end="14" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="19" end="20" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="21" id="3" rel="--">
+      <node begin="0" cat="np" end="7" id="4" rel="obj1">
+        <node begin="0" buiging="zonder" end="1" getal="ev" id="5" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="Zijn"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="6" lemma="bezwaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bezwaar" word="bezwaren"/>
+        <node begin="2" cat="pp" end="7" id="7" rel="mod">
+          <node begin="2" end="3" id="8" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
+          <node begin="3" cat="np" end="7" id="9" rel="obj1">
+            <node begin="3" end="4" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="11" lemma="verzekeringsbedrijf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bedrijf" word="verzekeringsbedrijf"/>
+            <node begin="5" cat="cp" end="7" id="12" rel="mod">
+              <node begin="5" conjtype="onder" end="6" id="13" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="spaarbank" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="spaarbank" word="spaarbank"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="15" lemma="uiten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="uit" word="uit" wvorm="pv"/>
+      <node begin="8" cat="np" end="11" id="16" rel="su">
+        <node begin="8" end="9" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="heer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="heer" word="heer"/>
+        <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="19" lemma="Fortuin" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Fortuin" word="Fortuin"/>
+      </node>
+      <node begin="11" cat="pp" end="21" id="20" rel="mod">
+        <node begin="11" end="12" id="21" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="12" cat="np" end="21" id="22" rel="obj1">
+          <node begin="12" buiging="met-e" end="13" graad="basis" id="23" lemma="duidelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="duidelijk" word="duidelijke"/>
+          <node begin="14" cat="ap" end="19" id="24" rel="mod">
+            <node begin="14" cat="pp" end="18" id="25" rel="mod">
+              <node begin="14" end="15" id="26" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+              <node begin="15" cat="np" end="18" id="27" rel="obj1">
+                <node begin="15" buiging="met-e" end="16" id="28" lemma="ieder" naamval="stan" npagr="evz" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="det" root="iedere" vwtype="onbep" word="iedere"/>
+                <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="29" lemma="interesseren" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="geïnteresseerd" word="geinteresseerde"/>
+                <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="30" lemma="leek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="leek" word="leek"/>
+              </node>
+            </node>
+            <node begin="18" buiging="met-e" end="19" graad="basis" id="31" lemma="verstaanbaar" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="verstaanbaar" word="verstaanbare"/>
+          </node>
+          <node begin="20" end="21" getal="mv" graad="basis" id="32" lemma="term" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="term" word="termen"/>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="33" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Zijn bezwaren tegen het verzekeringsbedrijf als spaarbank uit de heer Fortuin in duidelijke , voor iedere geinteresseerde leek verstaanbare , termen .</sentence>
+</alpino_ds>

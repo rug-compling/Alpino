@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="ppart" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="obj1">
+        <node begin="0" buiging="met-e" end="1" graad="basis" id="3" lemma="afhakken" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="afgehakt" word="Afgehakte"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="hand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hand" word="hand"/>
+      </node>
+      <node begin="2" cat="pp" end="4" id="5" rel="ld">
+        <node begin="2" end="3" id="6" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="pub" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="pub" word="pub"/>
+      </node>
+      <node begin="4" buiging="zonder" end="5" id="8" lemma="stelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="steel" word="gestolen" wvorm="vd"/>
+    </node>
+    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Afgehakte hand uit pub gestolen .</sentence>
+</alpino_ds>

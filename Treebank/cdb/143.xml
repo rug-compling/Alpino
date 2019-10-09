@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="33" id="0" rel="top">
+    <node begin="20" end="21" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="smain" end="31" id="2" rel="--">
+      <node begin="0" cat="np" end="3" id="3" index="1" rel="su">
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="met-e" end="2" getal="mv" graad="basis" id="5" lemma="beide" naamval="stan" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,mv,basis)" pt="vnw" rel="det" root="beide" vwtype="onbep" word="beide"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="econoom" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="econoom" word="economen"/>
+      </node>
+      <node begin="3" end="4" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="31" id="8" rel="vc">
+        <node begin="0" end="3" id="9" index="1" rel="obj1"/>
+        <node begin="4" buiging="zonder" end="5" id="10" lemma="kiezen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kies" word="gekozen" wvorm="vd"/>
+        <node begin="5" cat="pp" end="11" id="11" rel="pc">
+          <node begin="5" end="6" id="12" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+          <node begin="6" cat="np" end="11" id="13" rel="obj1">
+            <node begin="6" end="7" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="15" lemma="groep" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="groep" word="groep"/>
+            <node begin="8" cat="pp" end="11" id="16" rel="mod">
+              <node begin="8" end="9" id="17" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="9" cat="np" end="11" id="18" rel="obj1">
+                <node begin="9" end="10" id="19" lemma="200" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="200" word="200"/>
+                <node begin="10" end="11" getal="mv" graad="basis" id="20" lemma="kandidaat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kandidaat" word="kandidaten"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="11" cat="pp" end="31" id="21" rel="mod">
+          <node begin="11" end="12" id="22" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+          <node begin="12" cat="np" end="31" id="23" rel="obj1">
+            <node begin="12" buiging="zonder" end="13" getal="mv" id="24" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+            <node begin="13" buiging="zonder" end="14" graad="basis" id="25" lemma="baanbrekend" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="baanbrekend" word="baanbrekend"/>
+            <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="26" lemma="werk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="werk" word="werk"/>
+            <node begin="15" cat="pp" end="31" id="27" rel="mod">
+              <node begin="15" cat="mwu" end="19" id="28" rel="hd">
+                <node begin="15" end="16" id="29" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+                <node begin="16" end="17" id="30" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="prep" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+                <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="31" lemma="gebied" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="gebied" word="gebied"/>
+                <node begin="18" end="19" id="32" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+              </node>
+              <node begin="19" cat="np" end="31" id="33" rel="obj1">
+                <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="34" lemma="econometrie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="econometrie" word="econometrie"/>
+                <node begin="21" cat="np" end="31" id="35" rel="mod">
+                  <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="36" lemma="toepassing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="toepassing" word="toepassing"/>
+                  <node begin="22" cat="pp" end="25" id="37" rel="mod">
+                    <node begin="22" end="23" id="38" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                    <node begin="23" cat="np" end="25" id="39" rel="obj1">
+                      <node begin="23" buiging="met-e" end="24" graad="basis" id="40" lemma="economisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="economisch" word="economische"/>
+                      <node begin="24" end="25" getal="mv" graad="basis" id="41" lemma="model" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="model" word="modellen"/>
+                    </node>
+                  </node>
+                  <node begin="25" cat="pp" end="31" id="42" rel="mod">
+                    <node begin="25" end="26" id="43" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+                    <node begin="26" cat="np" end="31" id="44" rel="obj1">
+                      <node begin="26" end="27" id="45" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                      <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="46" lemma="analyse" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="analyse" word="analyse"/>
+                      <node begin="28" cat="pp" end="31" id="47" rel="mod">
+                        <node begin="28" end="29" id="48" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                        <node begin="29" cat="np" end="31" id="49" rel="obj1">
+                          <node begin="29" buiging="met-e" end="30" graad="basis" id="50" lemma="economisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="economisch" word="economische"/>
+                          <node begin="30" end="31" getal="mv" graad="basis" id="51" lemma="probleem" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="probleem" word="problemen"/>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="31" end="32" id="52" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="32" end="33" id="53" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De beide economen zijn gekozen uit een groep van 200 kandidaten voor hun baanbrekend werk op het gebied van econometrie ( toepassing van economische modellen bij de analyse van economische problemen ) .</sentence>
+</alpino_ds>

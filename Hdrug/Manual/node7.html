@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-/W3C/DTD HTML 4.0 Transitional//EN"
+     "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>HDRUG Reference Manual</TITLE>
+<link rel=stylesheet href="http://www.let.rug.nl/~vannoord/doc.css" 
+      type="text/css">
+<link rel=next href="node8.html">
+</HEAD>
+<BODY>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node8.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+<H1>7. Command-line Options</H1>
+<P>When Hdrug is started, it first interprets the command-line
+options. Command-line options are interpreted from left to right. The
+following section lists the command-line options which are
+standard. Each application possibly extends this list: this is defined
+below.</P>
+<P>Note that command-line options are interpreted <B>before</B>
+application-specific initialization is performed. This is to allow
+command-line options to have an effect on this initialization. Refer
+to the hook predicate <B>hdrug_initialization</B> for application-specific
+initialization.</P>
+<P>Hdrug applications can extend the list of possible startup options by
+adding definitions to the multifile predicate option/3. Short usage
+information for such options can be defined with further definitions
+for the multifile predicate usage_option/3. An an example, the
+following definitions ensure that an option -rc File will reconsult
+the file File:</P>
+<BLOCKQUOTE>:- multifile option/3, usage_option/3.</BLOCKQUOTE>
+<BLOCKQUOTE>option(rc) --&gt; [File], { reconsult(File) }.<BR>
+usage_option(rc,&quot;rc File&quot;,&quot;File is reconsulted.&quot;).</BLOCKQUOTE>
+<H2>7.1. <a name="anc1"></a>-flag Att Val</H2>
+<P>Sets global variable Att to Val; Val is read as an atom. Consider
+using the Flag=Val option if you want to assign arbitrary Prolog terms
+to Att.</P>
+<H2>7.2. <a name="anc2"></a>-iflag Att Val</H2>
+<P>Sets global variable Att to Val; Val is read as an
+integer. Equivalent to Flag=Val where Val is an integer.</P>
+<H2>7.3. <a name="anc3"></a>-pflag Att Val</H2>
+<P>Sets prolog_flag(Att) to Val; Val is read as an atom. This is an
+interface to the SICStus Prolog built-in predicate prolog_flag/3.</P>
+<H2>7.4. <a name="anc4"></a>-flag Att Val</H2>
+<P>Sets global variable Att to Val; Val is read as an atom. Consider
+using the Flag=Val option if you want to assign arbitrary Prolog terms
+to Att.</P>
+<H2>7.5. <a name="anc5"></a>-cmd Goal</H2>
+<P>evaluates Prolog Goal; Goal is parsed as
+Prolog term. Example:</P>
+<BLOCKQUOTE>hdrug -notk -cmd 'listing(library_directory)' -quit</BLOCKQUOTE>
+<H2>7.6. <a name="anc6"></a>-tk</H2>
+<P>Indicates that the graphical user interface should be started when
+hdrug starts. Equivalent to tcltk=on. This is the default.</P>
+<H2>7.7. <a name="anc7"></a>-notk</H2>
+<P>Indicates that the graphical user interface should not be started
+when hdrug starts. Equivalent to tcltk=off. The default is to start
+the graphical user interface.</P>
+<H2>7.8. <a name="anc8"></a>-dir Dir</H2>
+<P>This options ensures that Dir is added to the list of library
+directories.</P>
+<H2>7.9. <a name="anc9"></a>-help</H2>
+<P>This display usage information and terminates.</P>
+<H2>7.10. <a name="anc10"></a>-l File</H2>
+<P>Loads the file File (containing Prolog), using the goal
+use_module(File).</P>
+<H2>7.11. <a name="anc11"></a>-parser Parser on/off</H2>
+<P>This option indicates that the parser Parser is set to on
+(off). Parsers which are on will take part in parser comparison
+runs.</P>
+<H2>7.12. <a name="anc12"></a>-generator Generator on/off</H2>
+<P>This option indicates that the generator Generator is set to on
+(off). Generators which are on will take part in generator comparison
+runs.</P>
+<H2>7.13. <a name="anc13"></a>-quit</H2>
+<P>Terminates Hdrug. Useful in combination
+with the -cmd Goal option.</P>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node8.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+
+
+</BODY></HTML>

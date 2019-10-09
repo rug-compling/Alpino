@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="12" end="13" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="19" end="20" id="3" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="22" end="23" id="4" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="23" end="24" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="27" id="6" rel="--">
+      <node begin="0" cat="np" end="2" id="7" rel="obj1">
+        <node begin="0" buiging="met-e" end="1" id="8" lemma="opvallen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="opvallende" word="Opvallende" wvorm="od"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="9" lemma="koerswinst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="winst" word="koerswinst"/>
+      </node>
+      <node begin="2" end="3" id="10" lemma="maken" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="maak" word="maakten" wvorm="pv"/>
+      <node begin="3" cat="conj" end="22" id="11" rel="su">
+        <node begin="3" cat="np" end="12" id="12" rel="cnj">
+          <node begin="3" cat="mwu" end="5" id="13" rel="hd">
+            <node begin="3" end="4" id="14" lemma="Eastman" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Eastman" spectype="deeleigen" word="Eastman"/>
+            <node begin="4" end="5" id="15" lemma="Kodak" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kodak" spectype="deeleigen" word="Kodak"/>
+          </node>
+          <node begin="5" cat="pp" end="12" id="16" rel="mod">
+            <node begin="5" end="6" id="17" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="6" cat="np" end="12" id="18" rel="obj1">
+              <node begin="6" cat="mwu" end="8" id="19" rel="hd">
+                <node begin="6" end="7" id="20" lemma="82" pos="num" postag="SPEC(symb)" pt="spec" rel="mwp" root="82" spectype="symb" word="82"/>
+                <node begin="7" end="8" id="21" lemma="5/8" pos="num" postag="SPEC(symb)" pt="spec" rel="mwp" root="5/8" spectype="symb" word="5/8"/>
+              </node>
+              <node begin="9" cat="mwu" end="12" id="22" rel="mod">
+                <node begin="9" end="10" id="23" lemma="-" pos="num" postag="LET()" pt="let" rel="mwp" root="-" word="-"/>
+                <node begin="10" end="11" id="24" lemma="2" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="2" word="2"/>
+                <node begin="11" end="12" id="25" lemma="5/8" pos="num" postag="SPEC(symb)" pt="spec" rel="mwp" root="5/8" spectype="symb" word="5/8"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="13" conjtype="neven" end="14" id="26" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="14" cat="np" end="22" id="27" rel="cnj">
+          <node begin="14" cat="mwu" end="17" id="28" rel="hd">
+            <node begin="14" end="15" id="29" lemma="Twent" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Twent" spectype="deeleigen" word="Twent"/>
+            <node begin="15" end="16" id="30" lemma="Century" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Century" spectype="deeleigen" word="Century"/>
+            <node begin="16" end="17" id="31" lemma="Fox" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Fox" spectype="deeleigen" word="Fox"/>
+          </node>
+          <node begin="17" cat="pp" end="22" id="32" rel="mod">
+            <node begin="17" end="18" id="33" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="18" cat="np" end="22" id="34" rel="obj1">
+              <node begin="18" end="19" id="35" lemma="17,5" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="hd" root="17,5" word="17,5"/>
+              <node begin="20" cat="mwu" end="22" id="36" rel="mod">
+                <node begin="20" end="21" id="37" lemma="-" pos="num" postag="LET()" pt="let" rel="mwp" root="-" word="-"/>
+                <node begin="21" end="22" id="38" lemma="2" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="2" word="2"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="24" cat="pp" end="27" id="39" rel="mod">
+        <node begin="24" end="25" id="40" lemma="zonder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="zonder" vztype="init" word="zonder"/>
+        <node begin="25" cat="np" end="27" id="41" rel="obj1">
+          <node begin="25" buiging="met-e" end="26" graad="basis" id="42" lemma="aanwijsbaar" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="aanwijsbaar" word="aanwijsbare"/>
+          <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="43" lemma="reden" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="reden" word="reden"/>
+        </node>
+      </node>
+    </node>
+    <node begin="27" end="28" id="44" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Opvallende koerswinst maakten Eastman Kodak op 82 5/8 ( - 2 5/8 ) en Twent Century Fox op 17,5 ( - 2 ) , zonder aanwijsbare reden .</sentence>
+</alpino_ds>

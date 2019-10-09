@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="cp" end="3" id="2" rel="su">
+        <node begin="0" conjtype="onder" end="1" id="3" lemma="of" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="of" word="of"/>
+        <node begin="1" cat="ssub" end="3" id="4" rel="body">
+          <node begin="1" end="2" genus="masc" getal="ev" id="5" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+          <node begin="2" end="3" id="6" lemma="vertrekken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="vertrek" word="vertrekt" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="4" end="5" getal="ev" id="8" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj2" root="me" status="red" vwtype="pr" word="me"/>
+      <node begin="5" cat="np" end="7" id="9" rel="predc">
+        <node begin="5" end="6" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="11" lemma="raadsel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="raadsel" word="raadsel"/>
+      </node>
+    </node>
+  </node>
+  <sentence>of hij vertrekt is me een raadsel</sentence>
+</alpino_ds>

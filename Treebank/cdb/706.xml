@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="6" end="7" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="18" end="19" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="19" end="20" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="24" id="5" rel="--">
+      <node begin="1" end="2" id="6" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+      <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="7" index="1" lemma="uiting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="uiting" word="uiting"/>
+      <node begin="0" cat="ppart" end="24" id="8" rel="vc">
+        <node begin="0" end="1" id="9" lemma="daaraan" pos="pp" postag="BW()" pt="bw" rel="pc" root="daaraan" word="Daaraan"/>
+        <node begin="2" cat="pp" end="18" id="10" rel="mod">
+          <node begin="2" end="3" id="11" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="3" cat="np" end="18" id="12" rel="obj1">
+            <node begin="3" end="4" id="13" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="14" lemma="lied" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="lied" word="lied"/>
+            <node begin="7" cat="mwu" end="18" id="15" rel="app">
+              <node begin="7" end="8" id="16" lemma="o" pos="noun" postag="TSW()" pt="tsw" rel="mwp" root="O" word="O"/>
+              <node begin="8" end="9" id="17" lemma="," pos="noun" postag="LET()" pt="let" rel="mwp" root="," word=","/>
+              <node begin="9" end="10" id="18" lemma="Dick" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Dick" spectype="deeleigen" word="Dick"/>
+              <node begin="10" end="11" id="19" lemma="van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+              <node begin="11" end="12" id="20" lemma="Dijk" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Dijk" spectype="deeleigen" word="Dijk"/>
+              <node begin="12" end="13" id="21" lemma="," pos="noun" postag="LET()" pt="let" rel="mwp" root="," word=","/>
+              <node begin="13" end="14" getal="ev" id="22" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="mwp" root="wat" status="vol" vwtype="vb" word="wat"/>
+              <node begin="14" end="15" id="23" lemma="zijn" pos="noun" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="mwp" root="ben" word="ben" wvorm="pv"/>
+              <node begin="15" end="16" getal="getal" id="24" lemma="je" naamval="obl" pdtype="pron" persoon="2v" pos="noun" postag="VNW(pr,pron,obl,red,2v,getal)" pt="vnw" rel="mwp" root="je" status="red" vwtype="pr" word="je"/>
+              <node begin="16" buiging="zonder" end="17" graad="basis" id="25" lemma="diep" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="diep" word="diep"/>
+              <node begin="17" buiging="zonder" end="18" id="26" lemma="zinken" pos="noun" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="mwp" root="gezonken" word="gezonken" wvorm="vd"/>
+            </node>
+          </node>
+        </node>
+        <node begin="20" end="21" id="27" lemma="trouwens" pos="adv" postag="BW()" pt="bw" rel="mod" root="trouwens" word="trouwens"/>
+        <node begin="21" buiging="zonder" end="22" graad="basis" id="28" lemma="duidelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="duidelijk" word="duidelijk"/>
+        <node begin="22" end="23" id="29" index="1" rel="obj1"/>
+        <node begin="23" buiging="zonder" end="24" id="30" lemma="geven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geef" word="gegeven" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="24" end="25" id="31" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Daaraan werd met het lied : &quot; O , Dick van Dijk , wat ben je diep gezonken &quot; , trouwens duidelijk uiting gegeven .</sentence>
+</alpino_ds>

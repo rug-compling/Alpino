@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="27" id="0" rel="top">
+    <node begin="5" end="6" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="13" end="14" frame="punct(komma)" id="2" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="26" id="3" rel="--">
+      <node begin="0" cat="np" end="13" id="4" index="1" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="5" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" end="2" frame="number(rang)" id="6" lcat="ap" lemma="eerste" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="eerste" sense="eerste" special="rang" word="eerste"/>
+        <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="7" lcat="np" lemma="Degen" num="sg" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="hd" root="degen" sense="degen" spectype="deeleigen" word="Degen"/>
+        <node begin="3" cat="mwu" end="5" id="8" mwu_root="des_Konings" mwu_sense="des_Konings" rel="app">
+          <node begin="3" end="4" frame="proper_name(both,'PER')" id="9" lcat="np" lemma="de" lwtype="bep" naamval="gen" neclass="PER" npagr="evmo" num="both" pos="name" postag="LID(bep,gen,evmo)" pt="lid" rel="mwp" root="des" sense="des" word="des"/>
+          <node begin="4" end="5" frame="proper_name(both,'PER')" getal="ev" graad="basis" id="10" lcat="np" lemma="koning" naamval="gen" neclass="PER" ntype="soort" num="both" pos="name" postag="N(soort,ev,basis,gen)" pt="n" rel="mwp" root="Konings" sense="Konings" word="Konings"/>
+        </node>
+        <node begin="6" cat="np" end="13" id="11" rel="app">
+          <node begin="6" end="7" frame="determiner(een)" id="12" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+          <node aform="base" begin="7" buiging="met-e" end="8" frame="adjective(e)" graad="basis" id="13" infl="e" lcat="ap" lemma="speciaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="speciaal" sense="speciaal" vform="adj" word="speciale"/>
+          <node begin="8" end="9" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="14" lcat="np" lemma="prijs" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="prijs" sense="prijs" word="prijs"/>
+          <node begin="9" cat="ppart" end="13" id="15" rel="mod">
+            <node aform="base" begin="9" buiging="zonder" end="10" frame="adjective(ge_both(adv))" id="16" infl="both" lcat="ppart" lemma="schenken" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geschonken" sense="geschonken" vform="psp" word="geschonken" wvorm="vd"/>
+            <node begin="10" cat="pp" end="13" id="17" rel="mod">
+              <node begin="10" end="11" frame="preposition(door,[heen])" id="18" lcat="pp" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" sense="door" vztype="init" word="door"/>
+              <node begin="11" cat="np" end="13" id="19" rel="obj1">
+                <node begin="11" end="12" frame="determiner(de)" id="20" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+                <node begin="12" end="13" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="21" lcat="np" lemma="vorst" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vorst" sense="vorst" word="vorst"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="14" end="15" frame="verb(unacc,past(sg),passive)" id="22" infl="sg" lcat="smain" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" sc="passive" sense="word" tense="past" word="werd" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="26" id="23" rel="vc">
+        <node begin="0" end="13" id="24" index="1" rel="obj1"/>
+        <node begin="15" cat="pp" end="17" id="25" rel="mod">
+          <node begin="15" end="16" frame="preposition(in,[])" id="26" lcat="pp" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" sense="in" vztype="init" word="in"/>
+          <node begin="16" end="17" frame="np(year)" id="27" lcat="np" lemma="1937" neclass="year" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1937" sense="1937" word="1937"/>
+        </node>
+        <node begin="17" buiging="zonder" end="18" frame="verb(hebben,psp,ninv(so_pp_np,part_so_pp_np(toe)))" id="28" infl="psp" lcat="ppart" lemma="toekennen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ken_toe" sc="part_so_pp_np(toe)" sense="ken_toe" word="toegekend" wvorm="vd"/>
+        <node begin="18" cat="pp" end="26" id="29" rel="obj2">
+          <node begin="18" end="19" frame="preposition(aan,[vooraf])" id="30" lcat="pp" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" sense="aan" vztype="init" word="aan"/>
+          <node begin="19" cat="np" end="26" id="31" rel="obj1">
+            <node begin="19" end="20" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="32" lcat="np" lemma="onderluitenant" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="onder_luitenant" sense="onder_luitenant" word="onderluitenant"/>
+            <node begin="20" end="21" frame="proper_name(both,'LOC')" id="33" lcat="np" lemma="Loosen" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="app" root="Loosen" sense="Loosen" spectype="deeleigen" word="Loosen"/>
+            <node begin="21" cat="pp" end="26" id="34" rel="mod">
+              <node begin="21" end="22" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="35" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+              <node begin="22" cat="np" end="26" id="36" rel="obj1">
+                <node begin="22" end="23" frame="determiner(de)" id="37" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+                <node begin="23" end="24" frame="number(rang)" id="38" lcat="ap" lemma="81" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="81e" sense="81e" special="rang" word="81e"/>
+                <node begin="24" end="25" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="39" lcat="np" lemma="promotie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="promotie" sense="promotie" word="promotie"/>
+                <node begin="25" end="26" frame="proper_name(both,'ORG')" id="40" lcat="np" lemma="IC" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="app" root="IC" sense="IC" spectype="deeleigen" word="IC"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="26" end="27" frame="punct(punt)" id="41" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De eerste Degen des Konings , een speciale prijs geschonken door de vorst , werd in 1937 toegekend aan onderluitenant Loosen van de 81e promotie IC .</sentence>
+  <comments>
+    <comment>Q#128124-44-1|De eerste Degen des Konings , een speciale prijs geschonken door de vorst , werd in 1937 toegekend aan onderluitenant Loosen van de 81e promotie IC .|1|1|0.04567717708005756</comment>
+  </comments>
+</alpino_ds>

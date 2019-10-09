@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="6" end="7" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="9" id="3" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="4" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" word="Maar"/>
+      <node begin="1" cat="smain" end="9" id="5" rel="nucl">
+        <node begin="1" end="2" getal="getal" id="6" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="2" end="3" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+        <node begin="4" cat="pp" end="6" id="8" rel="mod">
+          <node begin="4" end="5" id="9" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="volgens"/>
+          <node begin="5" end="6" getal="ev" id="10" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj1" root="mij" status="vol" vwtype="pr" word="mij"/>
+        </node>
+        <node begin="7" cat="np" end="9" id="11" rel="su">
+          <node begin="7" buiging="zonder" end="8" graad="comp" id="12" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,comp)" pt="vnw" rel="det" root="meer" vwtype="onbep" word="meer"/>
+          <node begin="8" end="9" getal="mv" graad="basis" id="13" lemma="mogelijkheid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mogelijkheid" word="mogelijkheden"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Maar er zijn , volgens mij , meer mogelijkheden</sentence>
+</alpino_ds>

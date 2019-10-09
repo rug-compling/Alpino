@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="np" end="6" id="1" rel="--">
+      <node begin="0" cat="detp" end="5" id="2" rel="det">
+        <node begin="0" cat="mwu" end="3" id="3" rel="mod">
+          <node begin="0" end="1" id="4" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="adv" postag="LID(onbep,stan,agr)" pt="lid" rel="mwp" root="Een" word="Een"/>
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="stuk" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="stuk" word="stuk"/>
+          <node begin="2" conjtype="neven" end="3" id="6" lemma="of" pos="adv" postag="VG(neven)" pt="vg" rel="mwp" root="of" word="of"/>
+        </node>
+        <node begin="3" cat="mwu" end="5" id="7" rel="hd">
+          <node begin="3" end="4" id="8" lemma="honderd" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="honderd" word="honderd"/>
+          <node begin="4" end="5" id="9" lemma="duizend" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="duizend" word="duizend"/>
+        </node>
+      </node>
+      <node begin="5" end="6" getal="mv" graad="basis" id="10" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kind" word="kinderen"/>
+    </node>
+  </node>
+  <sentence>Een stuk of honderd duizend kinderen</sentence>
+</alpino_ds>

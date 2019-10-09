@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="3" end="4" id="1" pos="punct" rel="--" root="," special="komma" word=","/>
+    <node begin="6" end="7" id="2" pos="punct" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="9" id="3" rel="--">
+      <node begin="0" cat="np" end="2" id="4" index="1" rel="su">
+        <node begin="0" end="1" id="5" infl="de" pos="det" rel="det" root="deze" wh="nwh" word="Deze"/>
+        <node begin="1" end="2" gen="de" id="6" num="sg" pos="noun" rel="hd" root="overeenkomst" word="overeenkomst"/>
+      </node>
+      <node begin="2" end="3" id="7" infl="sg3" pos="verb" rel="hd" root="word" sc="passive" tense="present" word="wordt"/>
+      <node begin="0" cat="ppart" end="9" id="8" rel="vc">
+        <node begin="0" end="2" id="9" index="1" rel="obj1"/>
+        <node begin="4" cat="cp" end="6" id="10" rel="mod">
+          <node begin="4" end="5" id="11" pos="comp" rel="cmp" root="indien" sc="a" word="indien"/>
+          <node aform="base" begin="5" end="6" id="12" infl="no_e" pos="adj" rel="body" root="nodig" vform="adj" word="nodig"/>
+        </node>
+        <node aform="base" begin="7" end="8" id="13" infl="no_e" pos="adj" rel="mod" root="regelmatig" vform="adj" word="regelmatig"/>
+        <node begin="8" end="9" id="14" infl="psp" pos="verb" rel="hd" root="herzie" sc="transitive" word="herzien"/>
+      </node>
+    </node>
+    <node begin="9" end="10" id="15" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Deze overeenkomst wordt , indien nodig , regelmatig herzien .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

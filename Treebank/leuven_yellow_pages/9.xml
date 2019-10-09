@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="np" end="5" id="1" rel="--">
+      <node begin="0" cat="mwu" end="2" id="2" rel="hd">
+        <node begin="0" end="1" id="3" lemma="Marc" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Marc" spectype="deeleigen" word="Marc"/>
+        <node begin="1" end="2" id="4" lemma="Verwilghen" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Verwilghen" spectype="deeleigen" word="Verwilghen"/>
+      </node>
+      <node begin="2" cat="np" end="5" id="5" rel="app">
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="minister" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="minister" word="minister"/>
+        <node begin="3" cat="pp" end="5" id="7" rel="mod">
+          <node begin="3" end="4" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="justitie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Justitie" word="Justitie"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Marc Verwilghen minister van Justitie</sentence>
+</alpino_ds>

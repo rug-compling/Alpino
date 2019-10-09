@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="0" cat="smain" end="21" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="4" lemma="geheel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="geheel" word="gehele"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="ect-uitbreiding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="uitbreiding" word="ECT-uitbreiding"/>
+      </node>
+      <node begin="3" end="4" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="21" id="7" rel="vc">
+        <node begin="0" end="3" id="8" index="1" rel="obj1"/>
+        <node begin="4" cat="pp" end="9" id="9" rel="mod">
+          <node begin="4" end="5" id="10" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
+          <node begin="5" cat="np" end="9" id="11" rel="obj1">
+            <node begin="5" end="6" id="12" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="6" cat="ppres" end="8" id="13" rel="mod">
+              <node begin="6" buiging="zonder" end="7" graad="basis" id="14" lemma="lang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="lang" word="lang"/>
+              <node begin="7" buiging="met-e" end="8" id="15" lemma="lopen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="lopend" word="lopende" wvorm="od"/>
+            </node>
+            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="16" lemma="overeenkomst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="overeenkomst" word="overeenkomst"/>
+          </node>
+        </node>
+        <node begin="11" buiging="zonder" end="12" id="17" lemma="stellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="gesteld" wvorm="vd"/>
+        <node begin="9" cat="ap" end="21" id="18" rel="predc">
+          <node begin="9" cat="mwu" end="11" id="19" rel="hd">
+            <node begin="9" end="10" id="20" lemma="te" pos="adj" postag="VZ(versm)" pt="vz" rel="mwp" root="ter" vztype="versm" word="ter"/>
+            <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="21" lemma="beschikking" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="beschikking" word="beschikking"/>
+          </node>
+          <node begin="12" cat="pp" end="21" id="22" rel="pc">
+            <node begin="12" end="13" id="23" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="13" cat="np" end="21" id="24" rel="obj1">
+              <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="25" lemma="Sealand" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Sealand" word="Sealand"/>
+              <node begin="14" cat="np" end="21" id="26" rel="app">
+                <node begin="14" cat="pp" end="17" id="27" rel="mod">
+                  <node begin="14" end="15" id="28" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                  <node begin="15" cat="np" end="17" id="29" rel="obj1">
+                    <node begin="15" buiging="zonder" end="16" id="30" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+                    <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="31" lemma="moment" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="moment" word="moment"/>
+                  </node>
+                </node>
+                <node begin="17" cat="mwu" end="19" id="32" rel="det">
+                  <node begin="17" end="18" id="33" lemma="de" lwtype="bep" naamval="gen" npagr="evmo" pos="det" postag="LID(bep,gen,evmo)" pt="lid" rel="mwp" root="&apos;s" word="&apos;s"/>
+                  <node begin="18" end="19" getal="ev" graad="basis" id="34" lemma="werelds" naamval="gen" ntype="soort" pos="det" postag="N(soort,ev,basis,gen)" pt="n" rel="mwp" root="werelds" word="werelds"/>
+                </node>
+                <node begin="19" buiging="met-e" end="20" graad="sup" id="35" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="groot" word="grootste"/>
+                <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="36" lemma="containerrederij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rederij" word="containerrederij"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De gehele ECT-uitbreiding is onder een lang lopende overeenkomst ter beschikking gesteld van Sealand op dit moment &apos;s werelds grootste containerrederij .</sentence>
+</alpino_ds>

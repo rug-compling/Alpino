@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="4" end="5" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="6" end="7" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="9" end="10" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="1" cat="conj" end="11" id="5" rel="--">
+      <node begin="1" cat="conj" end="4" id="6" rel="cnj">
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="sport" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="sport" word="sport"/>
+        <node begin="2" conjtype="neven" end="3" id="8" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="spel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="spel" word="spel"/>
+      </node>
+      <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="lichaamsbeweging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="lichaam_beweging" word="lichaamsbeweging"/>
+      <node begin="7" cat="np" end="9" id="11" rel="cnj">
+        <node begin="7" buiging="met-e" end="8" graad="basis" id="12" lemma="lichamelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="lichamelijk" word="lichamelijke"/>
+        <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="13" lemma="beheersing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beheersing" word="beheersing"/>
+      </node>
+      <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="14" lemma="zwemvaardigheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="zwem_vaardigheid" word="zwemvaardigheid"/>
+    </node>
+  </node>
+  <sentence>- sport en spel , lichaamsbeweging , lichamelijke beheersing , zwemvaardigheid</sentence>
+</alpino_ds>

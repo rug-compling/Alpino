@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="smain" end="20" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" index="1" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="3" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node aform="base" begin="1" end="2" frame="adjective(e)" id="4" infl="e" lcat="ap" pos="adj" rel="mod" root="desbetreffend" sense="desbetreffend" vform="adj" word="desbetreffende"/>
+        <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="materiaal_boekhouding" sense="materiaal_boekhouding" word="materiaalboekhouding"/>
+      </node>
+      <node begin="3" end="4" frame="verb(unacc,sg3,passive)" id="6" infl="sg3" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt"/>
+      <node begin="0" cat="ppart" end="20" id="7" rel="vc">
+        <node begin="0" end="3" id="8" index="1" rel="obj1"/>
+        <node begin="4" end="5" frame="verb(hebben,psp,ninv(transitive,part_transitive(bij)))" id="9" infl="psp" lcat="ppart" pos="verb" rel="hd" root="houd_bij" sc="part_transitive(bij)" sense="houd_bij" word="bijgehouden"/>
+        <node begin="5" cat="conj" end="20" id="10" rel="mod">
+          <node begin="5" cat="pp" end="16" id="11" rel="cnj">
+            <node begin="5" end="6" frame="preposition(in,[])" id="12" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+            <node begin="6" cat="np" end="16" id="13" rel="obj1">
+              <node begin="6" end="7" frame="determiner(de)" id="14" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="7" end="8" frame="noun(de,count,pl)" gen="de" id="15" lcat="np" num="pl" pos="noun" rel="hd" root="eenheid" sense="eenheid" word="eenheden"/>
+              <node begin="8" cat="ppart" end="16" id="16" rel="mod">
+                <node aform="base" begin="8" end="9" frame="adjective(ge_no_e(adv))" id="17" infl="no_e" lcat="ppart" pos="adj" rel="hd" root="genoemd" sense="genoemd" vform="psp" word="genoemd"/>
+                <node begin="9" cat="pp" end="16" id="18" rel="mod">
+                  <node begin="9" end="10" frame="preposition(in,[])" id="19" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                  <node begin="10" cat="np" end="16" id="20" rel="obj1">
+                    <node begin="10" end="11" frame="noun(het,count,sg)" gen="het" id="21" lcat="np" num="sg" pos="noun" rel="hd" root="lid" sense="lid" word="lid"/>
+                    <node begin="11" cat="mwu" end="13" id="22" mwu_root="a_)" mwu_sense="a_)" rel="app">
+                      <node begin="11" end="12" frame="enumeration" id="23" lcat="np" pos="num" rel="mwp" root="a" sense="a" special="enumeration" word="a"/>
+                      <node begin="12" end="13" frame="enumeration" id="24" lcat="np" pos="num" rel="mwp" root=")" sense=")" special="enumeration" word=")"/>
+                    </node>
+                    <node begin="13" cat="pp" end="16" id="25" rel="mod">
+                      <node begin="13" end="14" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="26" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                      <node begin="14" cat="np" end="16" id="27" rel="obj1">
+                        <node begin="14" end="15" frame="determiner(het,nwh,nmod,pro,nparg)" id="28" infl="het" lcat="detp" pos="det" rel="det" root="dit" sense="dit" wh="nwh" word="dit"/>
+                        <node begin="15" end="16" frame="noun(het,count,sg)" gen="het" id="29" lcat="np" num="sg" pos="noun" rel="hd" root="artikel" sense="artikel" word="artikel"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="16" end="17" frame="conj(of)" id="30" lcat="vg" pos="vg" rel="crd" root="of" sense="of" word="of"/>
+          <node begin="17" cat="pp" end="20" id="31" rel="cnj">
+            <node begin="17" end="18" frame="preposition(in,[])" id="32" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+            <node begin="18" cat="np" end="20" id="33" rel="obj1">
+              <node aform="compar" begin="18" end="19" frame="adjective(ere)" id="34" infl="e" lcat="ap" pos="adj" rel="mod" root="laag" sense="laag" vform="adj" word="lagere"/>
+              <node begin="19" end="20" frame="noun(de,count,pl)" gen="de" id="35" lcat="np" num="pl" pos="noun" rel="hd" root="eenheid" sense="eenheid" word="eenheden"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" frame="punct(punt)" id="36" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De desbetreffende materiaalboekhouding wordt bijgehouden in de eenheden genoemd in lid a ) van dit artikel of in lagere eenheden .</sentence>
+  <comments>
+    <comment>Q#437|De desbetreffende materiaalboekhouding wordt bijgehouden in de eenheden genoemd in lid a ) van dit artikel of in lagere eenheden .|1|1|10.494084542911462</comment>
+  </comments>
+</alpino_ds>

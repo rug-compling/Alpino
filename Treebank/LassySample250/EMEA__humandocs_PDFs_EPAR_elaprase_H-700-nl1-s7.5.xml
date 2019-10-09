@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" rel="su">
+        <node begin="0" end="1" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="3" lcat="np" lemma="patiënt" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="patiënt" sense="patiënt" word="Patiënten"/>
+        <node begin="1" cat="pp" end="4" id="4" rel="mod">
+          <node begin="1" end="2" frame="preposition(met,[mee,[en,al]])" id="5" lcat="pp" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" sense="met" vztype="init" word="met"/>
+          <node begin="2" cat="np" end="4" id="6" rel="obj1">
+            <node begin="2" end="3" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="7" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+            <node begin="3" end="4" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="8" lcat="np" lemma="hunter-syndroom" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="Hunter_syndroom" sense="Hunter_syndroom" word="Hunter-syndroom"/>
+          </node>
+        </node>
+      </node>
+      <node begin="4" buiging="zonder" end="5" frame="verb(hebben,pl,transitive)" id="9" infl="pl" lcat="smain" lemma="produceren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="produceer" sc="transitive" sense="produceer" tense="present" word="produceren" wvorm="inf"/>
+      <node begin="5" cat="np" end="8" id="10" rel="obj1">
+        <node begin="5" end="6" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="11" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+        <node begin="6" end="7" frame="noun(het,count,sg,app_measure)" gen="het" genus="onz" getal="ev" graad="basis" id="12" lcat="np" lemma="enzym" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="enzym" sc="app_measure" sense="enzym" word="enzym"/>
+        <node begin="7" end="8" frame="noun(both,both,both)" gen="both" id="13" lcat="np" lemma="iduronaat-2-sulfatase" num="both" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="app" root="iduronaat-2-sulfatase" sense="iduronaat-2-sulfatase" spectype="deeleigen" word="iduronaat-2-sulfatase"/>
+      </node>
+      <node begin="8" end="9" frame="adverb" id="14" lcat="advp" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" sense="niet" word="niet"/>
+    </node>
+    <node begin="9" end="10" frame="punct(punt)" id="15" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Patiënten met het Hunter-syndroom produceren het enzym iduronaat-2-sulfatase niet .</sentence>
+  <comments>
+    <comment>Q#humandocs_PDFs_EPAR_elaprase_H-700-nl1-s7.5|Patiënten met het Hunter-syndroom produceren het enzym iduronaat-2-sulfatase niet .|1|1|0.07728132506694037</comment>
+  </comments>
+</alpino_ds>

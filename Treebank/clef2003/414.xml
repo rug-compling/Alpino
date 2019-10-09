@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="whq" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="wanneer" pos="adv" postag="BW()" pt="bw" rel="whd" root="wanneer" word="Wanneer"/>
+      <node begin="0" cat="sv1" end="5" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" index="2" lemma="China" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="China" word="China"/>
+        <node begin="0" cat="inf" end="5" id="6" rel="vc">
+          <node begin="0" end="1" id="7" index="1" rel="mod"/>
+          <node begin="2" end="3" id="8" index="2" rel="su"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="Hongkong" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Hongkong" word="Hongkong"/>
+          <node begin="4" buiging="zonder" end="5" id="10" lemma="overnemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem_over" word="overnemen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="5" end="6" id="11" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wanneer zal China Hongkong overnemen ?</sentence>
+</alpino_ds>

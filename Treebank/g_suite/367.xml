@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" cat="pp" end="4" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="vanaf" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="vanaf" vztype="init" word="vanaf"/>
+        <node begin="3" end="4" id="6" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="obj1" root="nu" word="nu"/>
+      </node>
+      <node begin="4" end="5" id="7" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+      <node begin="5" cat="np" end="7" id="8" rel="mod">
+        <node begin="5" end="6" id="9" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="drie" word="drie"/>
+        <node begin="6" end="7" getal="mv" graad="basis" id="10" lemma="dag" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dag" word="dagen"/>
+      </node>
+    </node>
+  </node>
+  <sentence>het is vanaf nu nog drie dagen</sentence>
+</alpino_ds>

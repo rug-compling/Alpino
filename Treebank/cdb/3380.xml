@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" cat="np" end="7" id="2" index="1" rel="su">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="directeur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="directeur" word="Directeur"/>
+        <node begin="1" cat="mwu" end="4" id="4" rel="app">
+          <node begin="1" end="2" id="5" lemma="Van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Van" spectype="deeleigen" word="Van"/>
+          <node begin="2" end="3" id="6" lemma="der" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="der" spectype="deeleigen" word="der"/>
+          <node begin="3" end="4" id="7" lemma="Kreeft" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kreeft" spectype="deeleigen" word="Kreeft"/>
+        </node>
+        <node begin="4" cat="pp" end="7" id="8" rel="mod">
+          <node begin="4" end="5" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="5" cat="mwu" end="7" id="10" rel="obj1">
+            <node begin="5" end="6" id="11" lemma="Flat" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Flat" spectype="deeleigen" word="Flat"/>
+            <node begin="6" end="7" id="12" lemma="Car" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Car" spectype="deeleigen" word="Car"/>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="13" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="13" id="14" rel="vc">
+        <node begin="0" end="7" id="15" index="1" rel="su"/>
+        <node begin="8" end="9" id="16" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
+        <node begin="9" cat="np" end="12" id="17" rel="obj1">
+          <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="surseance" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="surseance" word="surseance"/>
+          <node begin="10" cat="pp" end="12" id="19" rel="mod">
+            <node begin="10" end="11" id="20" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="21" lemma="betaling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="betaling" word="betaling"/>
+          </node>
+        </node>
+        <node begin="12" buiging="zonder" end="13" id="22" lemma="vraag" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vraag" word="gevraagd" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="13" end="14" id="23" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>Directeur Van der Kreeft van Flat Car heeft nu surseance van betaling gevraagd :</sentence>
+</alpino_ds>

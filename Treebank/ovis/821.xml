@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="voorburg" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="dp" root="voorburg" word="voorburg"/>
+      <node begin="1" buiging="zonder" end="2" id="3" lemma="groning" pos="name" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="dp" root="groningen" word="groningen" wvorm="vd"/>
+      <node begin="2" end="3" id="4" lemma="morgen" pos="noun" postag="BW()" pt="bw" rel="dp" root="morgen" word="morgen"/>
+      <node begin="3" cat="inf" end="7" id="5" rel="dp">
+        <node begin="3" cat="pp" end="6" id="6" rel="mod">
+          <node begin="3" end="4" id="7" lemma="om" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="om" vztype="init" word="om"/>
+          <node begin="4" cat="mwu" end="6" id="8" rel="obj1">
+            <node begin="4" end="5" id="9" lemma="tien" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="tien" word="tien"/>
+            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="10" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="uur" word="uur"/>
+          </node>
+        </node>
+        <node begin="6" buiging="zonder" end="7" id="11" lemma="aankomen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom_aan" word="aankomen" wvorm="inf"/>
+      </node>
+    </node>
+  </node>
+  <sentence>voorburg groningen morgen om tien uur aankomen</sentence>
+</alpino_ds>

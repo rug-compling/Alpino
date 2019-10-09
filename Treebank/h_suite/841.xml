@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="np" end="6" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" id="2" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="Dit"/>
+      <node begin="1" cat="ppres" end="5" id="3" rel="mod">
+        <node begin="1" end="2" id="4" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="mod" root="altijd" word="altijd"/>
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="goed" word="goed"/>
+        <node begin="3" buiging="zonder" end="4" id="6" lemma="functioneren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="vc" root="functioneer" word="gefunctioneerd" wvorm="vd"/>
+        <node begin="4" buiging="met-e" end="5" id="7" lemma="hebben" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="heb" word="hebbende" wvorm="od"/>
+      </node>
+      <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="8" lemma="systeem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="systeem" word="systeem"/>
+    </node>
+  </node>
+  <sentence>Dit altijd goed gefunctioneerd hebbende systeem</sentence>
+</alpino_ds>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="su" root="die" status="vol" vwtype="aanw" word="Die"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="2" buiging="zonder" end="3" graad="basis" id="4" lemma="repressief" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="repressief" word="repressief"/>
+      <node begin="3" cat="pp" end="7" id="5" rel="mod">
+        <node begin="3" end="4" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="4" cat="np" end="7" id="7" rel="obj1">
+          <node begin="4" buiging="zonder" end="5" getal="mv" id="8" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+          <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="muzikaal" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="muzikaal" word="muzikaal"/>
+          <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="10" lemma="materiaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="materiaal" word="materiaal"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Die zijn repressief in hun muzikaal materiaal .</sentence>
+</alpino_ds>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="5" end="6" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="15" id="2" rel="--">
+      <node begin="6" end="7" frame="verb('hebben/zijn',past(pl),aux(inf))" id="3" infl="pl" lcat="smain" pos="verb" rel="hd" root="kan" sc="aux(inf)" sense="kan" tense="past" word="konden"/>
+      <node begin="7" cat="np" end="10" id="4" index="1" rel="su">
+        <node aform="compar" begin="7" end="8" frame="adjective(meer)" id="5" infl="meer" lcat="ap" pos="adj" rel="det" root="meer" sense="meer" vform="adj" word="meer"/>
+        <node aform="base" begin="8" end="9" frame="adjective(ende(padv))" id="6" infl="e" lcat="ppres" pos="adj" rel="mod" root="verschil" sense="verschil" vform="gerund" word="verschillende"/>
+        <node begin="9" end="10" frame="noun(het,count,pl)" gen="het" id="7" lcat="np" num="pl" pos="noun" rel="hd" root="product" sense="product" word="producten"/>
+      </node>
+      <node begin="0" cat="inf" end="15" id="8" rel="vc">
+        <node begin="7" end="10" id="9" index="1" rel="su"/>
+        <node begin="0" cat="ppart" end="14" id="10" rel="vc">
+          <node begin="0" cat="cp" end="5" id="11" rel="mod">
+            <node begin="0" end="1" frame="complementizer(inf)" id="12" lcat="cp" pos="comp" rel="cmp" root="door" sc="inf" sense="door" word="Door"/>
+            <node begin="1" cat="ti" end="5" id="13" rel="body">
+              <node begin="3" end="4" frame="complementizer(te)" id="14" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+              <node begin="1" cat="inf" end="5" id="15" rel="body">
+                <node begin="1" cat="np" end="3" id="16" rel="obj1">
+                  <node aform="compar" begin="1" end="2" frame="adjective(meer)" id="17" infl="meer" lcat="ap" pos="adj" rel="det" root="meer" sense="meer" vform="adj" word="meer"/>
+                  <node begin="2" end="3" frame="noun(both,both,both)" gen="both" id="18" lcat="np" num="both" pos="noun" rel="hd" root="modulair" sense="modulair" word="modulair"/>
+                </node>
+                <node begin="4" end="5" frame="verb(hebben,inf,transitive)" id="19" infl="inf" lcat="inf" pos="verb" rel="hd" root="ontwerp" sc="transitive" sense="ontwerp" word="ontwerpen"/>
+              </node>
+            </node>
+          </node>
+          <node begin="7" end="10" id="20" index="1" rel="obj1"/>
+          <node begin="10" cat="pp" end="13" id="21" rel="pc">
+            <node begin="10" end="11" frame="preposition(uit,[vandaan])" id="22" lcat="pp" pos="prep" rel="hd" root="uit" sense="uit" word="uit"/>
+            <node begin="11" cat="np" end="13" id="23" rel="obj1">
+              <node begin="11" end="12" frame="determiner(de,nwh,mod,pro,yparg)" id="24" infl="de" lcat="detp" pos="det" rel="det" root="dezelfde" sense="dezelfde" wh="nwh" word="dezelfde"/>
+              <node begin="12" end="13" frame="noun(het,count,pl)" gen="het" id="25" lcat="np" num="pl" pos="noun" rel="hd" root="onderdeel" sense="onderdeel" word="onderdelen"/>
+            </node>
+          </node>
+          <node begin="13" end="14" frame="verb(hebben,psp,ninv(np_pc_pp(uit),part_np_pc_pp(samen,uit)))" id="26" infl="psp" lcat="ppart" pos="verb" rel="hd" root="stel_samen" sc="part_np_pc_pp(samen,uit)" sense="stel_samen-uit" word="samengesteld"/>
+        </node>
+        <node begin="14" end="15" frame="verb(unacc,inf,passive)" id="27" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+      </node>
+    </node>
+    <node begin="15" end="16" frame="punct(punt)" id="28" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Door meer modulair te ontwerpen , konden meer verschillende producten uit dezelfde onderdelen samengesteld worden .</sentence>
+  <comments>
+    <comment>Q#168|Door meer modulair te ontwerpen , konden meer verschillende producten uit dezelfde onderdelen samengesteld worden .|1|1|-11.10062103660777</comment>
+  </comments>
+</alpino_ds>

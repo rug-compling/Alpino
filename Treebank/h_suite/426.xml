@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="4" end="5" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="smain" end="6" id="3" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="4" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="3" cat="ap" end="6" id="6" rel="predc">
+        <node begin="3" end="4" id="7" lemma="te" pos="adv" postag="BW()" pt="bw" rel="mod" root="te" word="te"/>
+        <node begin="5" buiging="zonder" end="6" graad="basis" id="8" lemma="klein" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="klein" word="klein"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Hij is ( te ) klein</sentence>
+</alpino_ds>

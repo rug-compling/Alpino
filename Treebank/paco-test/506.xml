@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="29" id="0" rel="top">
+    <node begin="14" end="15" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="23" end="24" frame="punct(komma)" id="2" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="28" id="3" rel="--">
+      <node begin="0" cat="np" end="23" id="4" index="1" rel="su">
+        <node begin="0" cat="conj" end="3" id="5" rel="mod">
+          <node aform="base" begin="0" end="1" frame="adjective(e)" id="6" infl="e" lcat="ap" pos="adj" rel="cnj" root="regionaal" sense="regionaal" vform="adj" word="Regionale"/>
+          <node begin="1" end="2" frame="conj(en)" id="7" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+          <node aform="base" begin="2" end="3" frame="adjective(e)" id="8" infl="e" lcat="ap" pos="adj" rel="cnj" root="sub_regionaal" sense="sub_regionaal" vform="adj" word="subregionale"/>
+        </node>
+        <node begin="3" end="4" frame="noun(het,count,pl)" gen="het" id="9" lcat="np" num="pl" pos="noun" rel="hd" root="integratie_proces" sense="integratie_proces" word="integratieprocessen"/>
+        <node begin="4" cat="rel" end="23" id="10" rel="mod">
+          <node begin="4" case="no_obl" end="5" frame="rel_pronoun(de,no_obl)" gen="de" id="11" index="2" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+          <node begin="4" cat="ssub" end="23" id="12" rel="body">
+            <node begin="4" end="5" id="13" index="2" rel="su"/>
+            <node begin="5" cat="np" end="13" id="14" rel="obj1">
+              <node begin="5" end="6" frame="determiner(de)" id="15" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="6" end="7" frame="noun(de,count,sg)" gen="de" id="16" lcat="np" num="sg" pos="noun" rel="hd" root="integratie" sense="integratie" word="integratie"/>
+              <node begin="7" cat="pp" end="13" id="17" rel="mod">
+                <node begin="7" end="8" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="18" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                <node begin="8" cat="np" end="13" id="19" rel="obj1">
+                  <node begin="8" end="9" frame="determiner(de)" id="20" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="9" end="10" frame="noun(het,count,pl)" gen="het" id="21" lcat="np" num="pl" pos="noun" rel="hd" root="ACS_land" sense="ACS_land" word="ACS-landen"/>
+                  <node begin="10" cat="pp" end="13" id="22" rel="mod">
+                    <node begin="10" end="11" frame="preposition(in,[])" id="23" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                    <node begin="11" cat="np" end="13" id="24" rel="obj1">
+                      <node begin="11" end="12" frame="determiner(de)" id="25" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                      <node begin="12" end="13" frame="noun(de,mass,sg)" gen="de" id="26" lcat="np" num="sg" pos="noun" rel="hd" root="wereld_economie" sense="wereld_economie" word="wereldeconomie"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="13" end="14" frame="verb(hebben,pl,transitive)" id="27" infl="pl" lcat="ssub" pos="verb" rel="hd" root="bevorder" sc="transitive" sense="bevorder" tense="present" word="bevorderen"/>
+            <node begin="15" end="16" frame="adverb" id="28" lcat="advp" pos="adv" rel="mod" root="zowel" sense="zowel" word="zowel"/>
+            <node begin="16" cat="whrel" end="23" id="29" rel="mod">
+              <node begin="16" case="both" def="indef" end="17" frame="pronoun(ywh,thi,sg,het,both,indef,nparg)" gen="het" id="30" index="3" lcat="np" num="sg" per="thi" pos="pron" rel="rhd" root="wat" sense="wat" special="nparg" wh="ywh" word="wat"/>
+              <node begin="16" cat="ssub" end="23" id="31" rel="body">
+                <node begin="16" end="17" id="32" index="3" rel="su"/>
+                <node begin="17" end="18" frame="noun(both,count,sg)" gen="both" id="33" lcat="np" num="sg" pos="noun" rel="obj1" root="handel" sense="handel" word="handel"/>
+                <node begin="18" cat="cp" end="22" id="34" rel="predm">
+                  <node begin="18" end="19" frame="complementizer(als)" id="35" lcat="cp" pos="comp" rel="cmp" root="als" sc="als" sense="als" word="als"/>
+                  <node begin="19" cat="np" end="22" id="36" rel="body">
+                    <node begin="19" end="20" frame="determiner(wat,nwh,mod,pro,nparg,ntopicpro)" id="37" infl="wat" lcat="detp" pos="det" rel="det" root="wat" sense="wat" wh="nwh" word="wat"/>
+                    <node aform="base" begin="20" end="21" frame="adjective(e)" id="38" infl="e" lcat="ap" pos="adj" rel="mod" root="particulier" sense="particulier" vform="adj" word="particuliere"/>
+                    <node begin="21" end="22" frame="noun(de,count,pl)" gen="de" id="39" lcat="np" num="pl" pos="noun" rel="hd" root="investering" sense="investering" word="investeringen"/>
+                  </node>
+                </node>
+                <node begin="22" end="23" frame="verb(hebben,sg3,transitive)" id="40" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="betref" sc="transitive" sense="betref" tense="present" word="betreft"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="24" end="25" frame="verb(unacc,pl,passive)" id="41" infl="pl" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="worden"/>
+      <node begin="0" cat="conj" end="28" id="42" rel="vc">
+        <node begin="0" cat="ppart" end="26" id="43" rel="cnj">
+          <node begin="0" end="23" id="44" index="1" rel="obj1"/>
+          <node begin="25" end="26" frame="verb(hebben,psp,ninv(transitive,part_transitive(aan)))" id="45" infl="psp" lcat="ppart" pos="verb" rel="hd" root="moedig_aan" sc="part_transitive(aan)" sense="moedig_aan" word="aangemoedigd"/>
+        </node>
+        <node begin="26" end="27" frame="conj(en)" id="46" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+        <node begin="0" cat="ppart" end="28" id="47" rel="cnj">
+          <node begin="0" end="23" id="48" index="1" rel="obj1"/>
+          <node begin="27" end="28" frame="verb(hebben,psp,transitive)" id="49" infl="psp" lcat="ppart" pos="verb" rel="hd" root="steun" sc="transitive" sense="steun" word="gesteund"/>
+        </node>
+      </node>
+    </node>
+    <node begin="28" end="29" frame="punct(punt)" id="50" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Regionale en subregionale integratieprocessen die de integratie van de ACS-landen in de wereldeconomie bevorderen , zowel wat handel als wat particuliere investeringen betreft , worden aangemoedigd en gesteund .</sentence>
+  <comments>
+    <comment>Q#506|Regionale en subregionale integratieprocessen die de integratie van de ACS-landen in de wereldeconomie bevorderen , zowel wat handel als wat particuliere investeringen betreft , worden aangemoedigd en gesteund .|1|1|-2.377306875182195</comment>
+  </comments>
+</alpino_ds>

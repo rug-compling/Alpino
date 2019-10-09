@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="ben" wvorm="pv"/>
+      <node begin="0" cat="ti" end="7" id="4" rel="vc">
+        <node begin="5" end="6" id="5" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="0" cat="inf" end="7" id="6" rel="body">
+          <node begin="0" end="1" id="7" index="1" rel="obj1"/>
+          <node begin="3" end="4" id="8" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+          <node begin="2" cat="pp" end="5" id="9" rel="mod">
+            <node begin="2" end="3" getal="getal" id="10" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="daar" status="vol" vwtype="aanw" word="daar"/>
+            <node begin="4" end="5" id="11" lemma="door" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="door" vztype="fin" word="door"/>
+          </node>
+          <node begin="6" buiging="zonder" end="7" id="12" lemma="raken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="raak" word="raken" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Ik ben daar wel door te raken</sentence>
+</alpino_ds>

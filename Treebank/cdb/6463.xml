@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="47" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="8" end="9" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="19" end="20" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="24" end="25" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="27" end="28" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="30" end="31" id="6" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="33" end="34" id="7" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="36" end="37" id="8" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="46" id="9" rel="--">
+      <node begin="0" cat="pp" end="2" id="10" rel="mod">
+        <node begin="0" end="1" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="Van"/>
+        <node begin="1" end="2" genus="masc" getal="ev" id="12" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="vol" vwtype="pers" word="hem"/>
+      </node>
+      <node begin="2" end="3" id="13" lemma="verschijnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verschijn" word="verscheen" wvorm="pv"/>
+      <node begin="4" cat="cp" end="8" id="14" rel="mod">
+        <node begin="4" conjtype="onder" end="5" id="15" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+        <node begin="5" cat="mwu" end="8" id="16" rel="body">
+          <node begin="5" end="6" id="17" lemma="Swing" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Swing" spectype="vreemd" word="Swing"/>
+          <node begin="6" end="7" id="18" lemma="Classics" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Classics" spectype="vreemd" word="Classics"/>
+          <node begin="7" end="8" id="19" lemma="3" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="3" word="3"/>
+        </node>
+      </node>
+      <node begin="9" cat="np" end="46" id="20" rel="su">
+        <node begin="9" end="10" id="21" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="22" lemma="tiental" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="tiental" word="tiental"/>
+        <node begin="11" cat="np" end="46" id="23" rel="mod">
+          <node begin="11" cat="ppres" end="14" id="24" rel="mod">
+            <node begin="11" cat="pp" end="13" id="25" rel="mod">
+              <node begin="11" end="12" id="26" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+              <node begin="12" end="13" id="27" lemma="1955" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1955" word="1955"/>
+            </node>
+            <node begin="13" buiging="met-e" end="14" id="28" lemma="dateren" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="daterend" word="daterende" wvorm="od"/>
+          </node>
+          <node begin="14" end="15" getal="mv" graad="basis" id="29" lemma="opname" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="opname" word="opnamen"/>
+          <node begin="15" cat="pp" end="46" id="30" rel="mod">
+            <node begin="15" end="16" id="31" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="16" cat="np" end="46" id="32" rel="obj1">
+              <node begin="16" buiging="zonder" end="17" getal="ev" id="33" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+              <node begin="17" buiging="zonder" end="18" graad="basis" id="34" lemma="toenmalig" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="toenmalig" word="toenmalig"/>
+              <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="35" lemma="octet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="octet" word="octet"/>
+              <node begin="20" cat="rel" end="46" id="36" rel="mod">
+                <node begin="20" end="21" id="37" index="1" lemma="waarin" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarin" word="waarin"/>
+                <node begin="20" cat="ssub" end="46" id="38" rel="body">
+                  <node begin="21" end="22" genus="masc" getal="ev" id="39" index="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+                  <node begin="44" end="45" id="40" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
+                  <node begin="20" cat="ppart" end="46" id="41" rel="vc">
+                    <node begin="20" end="21" id="42" index="1" rel="mod"/>
+                    <node begin="21" end="22" id="43" index="2" rel="su"/>
+                    <node begin="22" cat="conj" end="42" id="44" rel="obj1">
+                      <node begin="22" cat="mwu" end="24" id="45" rel="cnj">
+                        <node begin="22" end="23" id="46" lemma="Teddy" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Teddy" spectype="deeleigen" word="Teddy"/>
+                        <node begin="23" end="24" id="47" lemma="Wilson" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wilson" spectype="deeleigen" word="Wilson"/>
+                      </node>
+                      <node begin="25" cat="mwu" end="27" id="48" rel="cnj">
+                        <node begin="25" end="26" id="49" lemma="Urbie" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Urbie" spectype="deeleigen" word="Urbie"/>
+                        <node begin="26" end="27" id="50" lemma="Green" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Green" spectype="deeleigen" word="Green"/>
+                      </node>
+                      <node begin="28" cat="mwu" end="30" id="51" rel="cnj">
+                        <node begin="28" end="29" id="52" lemma="Bobby" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bobby" spectype="deeleigen" word="Bobby"/>
+                        <node begin="29" end="30" id="53" lemma="Donaldson" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Donaldson" spectype="deeleigen" word="Donaldson"/>
+                      </node>
+                      <node begin="31" cat="mwu" end="33" id="54" rel="cnj">
+                        <node begin="31" end="32" id="55" lemma="Ruby" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ruby" spectype="deeleigen" word="Ruby"/>
+                        <node begin="32" end="33" id="56" lemma="Braff" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Braff" spectype="deeleigen" word="Braff"/>
+                      </node>
+                      <node begin="34" cat="mwu" end="36" id="57" rel="cnj">
+                        <node begin="34" end="35" id="58" lemma="Perry" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Perry" spectype="deeleigen" word="Perry"/>
+                        <node begin="35" end="36" id="59" lemma="Lopez" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lopez" spectype="deeleigen" word="Lopez"/>
+                      </node>
+                      <node begin="37" cat="mwu" end="39" id="60" rel="cnj">
+                        <node begin="37" end="38" id="61" lemma="Milt" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Milt" spectype="deeleigen" word="Milt"/>
+                        <node begin="38" end="39" id="62" lemma="Hinton" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hinton" spectype="deeleigen" word="Hinton"/>
+                      </node>
+                      <node begin="39" conjtype="neven" end="40" id="63" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                      <node begin="40" cat="mwu" end="42" id="64" rel="cnj">
+                        <node begin="40" end="41" id="65" lemma="Paul" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Paul" spectype="deeleigen" word="Paul"/>
+                        <node begin="41" end="42" id="66" lemma="Quinichette" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Quinichette" spectype="deeleigen" word="Quinichette"/>
+                      </node>
+                    </node>
+                    <node begin="42" cat="pp" end="44" id="67" rel="mod">
+                      <node begin="42" end="43" id="68" lemma="rondom" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="rondom" vztype="init" word="rondom"/>
+                      <node begin="43" end="44" getal="getal" id="69" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="zich" status="red" vwtype="refl" word="zich"/>
+                    </node>
+                    <node begin="45" buiging="zonder" end="46" id="70" lemma="verzamelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verzamel" word="verzameld" wvorm="vd"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="46" end="47" id="71" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Van hem verscheen , als Swing Classics 3 , een tiental uit 1955 daterende opnamen van zijn toenmalig octet , waarin hij Teddy Wilson , Urbie Green , Bobby Donaldson , Ruby Braff , Perry Lopez , Milt Hinton en Paul Quinichette rondom zich had verzameld .</sentence>
+</alpino_ds>

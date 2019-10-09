@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="8" id="2" rel="--">
+      <node begin="0" cat="whrel" end="3" id="3" index="1" rel="su">
+        <node begin="0" end="1" getal="ev" id="4" index="2" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="Wat"/>
+        <node begin="0" cat="ssub" end="3" id="5" rel="body">
+          <node begin="0" end="1" id="6" index="2" rel="su"/>
+          <node begin="1" end="2" getal="getal" id="7" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="ld" root="daar" status="vol" vwtype="aanw" word="daar"/>
+          <node begin="2" end="3" id="8" lemma="tussenliggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lig_tussen" word="tussenligt" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="9" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+      <node begin="0" cat="inf" end="8" id="10" rel="vc">
+        <node begin="0" end="3" id="11" index="1" rel="su"/>
+        <node begin="0" cat="ppart" end="7" id="12" rel="vc">
+          <node begin="0" end="3" id="13" index="1" rel="obj1"/>
+          <node begin="5" end="6" id="14" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+          <node begin="6" buiging="zonder" end="7" id="15" lemma="beslissen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="beslis" word="beslist" wvorm="vd"/>
+        </node>
+        <node begin="7" buiging="zonder" end="8" id="16" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Wat daar tussenligt , moet nog beslist worden .</sentence>
+</alpino_ds>

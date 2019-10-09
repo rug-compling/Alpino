@@ -1,0 +1,697 @@
+%%           -*-Mode: prolog;-*- 
+
+%% inherit feature library
+:- use_module(hdrug(hdrug_feature)).
+
+%% load grammar files
+:- ensure_loaded('rules.gram').			
+
+unify_mods(X) :-
+    alpino_data:unify_mods(X).
+
+%% declarations
+
+top_category(Top) :-
+    Top => top_cat,
+    unify_mods(Top).
+
+robust_top_category(Top) :-
+    Top => max,
+    Top:max_type => ~t_part,
+    unify_mods(Top).
+
+%% the parsers expect two diferent definitions:
+%% weaken(Goal,WeakenedGoal)
+%% weaken(Goal,WeakenedGoal,Constraint)
+%% for each goal, at most one predicate should be applicable,
+%% if no predicate is applicable, then it is assumed that weakening
+%% is defined by:
+%% weaken(Goal,Weakened) :-
+%%        functor(Goal,F,A),
+%%        functor(Weakened,F,A).
+%% Constraint is an arbitrary Prolog goal which will be called during
+%% parsing; make sure that this doesn't use any predicates from the
+%% grammar module which might not be available. 
+
+weaken(Clist0,Clist) :-
+    Clist0 => clist,
+    Clist => clist,
+    Clist0:cat <=> Cat0,
+    Clist:cat <=> Cat,
+    
+    %% will be fired during rule compilation:
+    when(nonvar(Cat0),
+	 (   functor(Cat0,F,Ar),
+	     functor(Cat,F,Ar),
+	     (	 weaken(Cat0,Cat)
+	     ->	 true
+	     ;	 true
+	     )
+	 )
+        ).
+
+weaken(V0,V1) :-
+    V0 => sbar,
+    V1 => sbar,
+    V0:slash <=> V0slash,
+    V1:slash <=> V1slash,
+    weaken_goal(V0slash,V1slash).
+
+weaken(V0,V1) :-
+    V0 => vp,
+    V1 => vp,
+    V0:slash <=> V0slash,
+    V1:slash <=> V1slash,
+    V0:vform <=> V1:vform,
+    weaken_goal(V0slash,V1slash).
+
+weaken(V0,V1) :-
+    V0 => vproj,
+    V1 => vproj,
+    V0:slash <=> V0slash,
+    V1:slash <=> V1slash,
+    V0:vform  <=> V1:vform,
+    V0:vslash <=> V0vslash,
+    V1:vslash <=> V1vslash,
+    weaken_goal(V0slash,V1slash,V0vslash,V1vslash).
+
+weaken(V0,V1) :-
+    V0 => vpx,
+    V1 => vpx,
+    V0:slash <=> V0slash,
+    V1:slash <=> V1slash,
+    V0:vform  <=> V1:vform,
+    V0:vslash <=> V0vslash,
+    V1:vslash <=> V1vslash,
+    weaken_goal(V0slash,V1slash,V0vslash,V1vslash).
+
+weaken(V0,V1) :- 
+    V0 => sv1,
+    V1 => sv1,
+    V0:slash <=> V0slash,
+    V1:slash <=> V1slash,
+    V0:sv1_mod <=> V1:sv1_mod,
+    weaken_goal(V0slash,V1slash).
+
+weaken(X0,X) :-
+    X0 => pp,
+    X => pp,
+    X0:slash <=> X:slash.
+
+weaken(X0,X) :-
+    X0 => a,
+    X => a,
+    X0:slash <=> X:slash.
+
+weaken(X0,X) :-
+    X0 => pred,
+    X => pred,
+    X0:slash <=> X:slash.
+
+
+weaken_goal(Slash0,Slash) :-
+    when(nonvar(Slash0),alpino_data:weaken_slash_list(Slash0,Slash)).
+
+weaken_goal(Slash0,Slash,VSlash0,VSlash) :-
+    when(nonvar(Slash0),alpino_data:weaken_slash_list(Slash0,Slash)),
+    when(nonvar(VSlash0),alpino_data:weaken_vslash(VSlash0,VSlash)).
+
+%% lesson: categories that allow coordination should be memo-ed!
+
+no_memo(Cat) :-
+    Cat => aan_het_comp.
+
+no_memo(Cat) :-
+    Cat => abs_p.
+
+no_memo(Cat) :-
+    Cat => app_n.
+
+no_memo(Cat) :-
+    Cat => app_n_app.
+
+no_memo(Cat) :-
+    Cat => app_np_mod.
+
+no_memo(Cat) :-
+    Cat => app_np.
+
+no_memo(Cat) :-
+    Cat => start_app_n_app.
+
+no_memo(Cat) :-
+    Cat => comparative.
+
+no_memo(Cat) :-
+    Cat => comp.
+
+no_memo(Cat) :-
+    Cat => complex_etc.
+
+no_memo(Cat) :-
+    Cat => conj.
+
+no_memo(Cat) :-
+    Cat => denk_ik.
+
+no_memo(Cat) :-
+    Cat => dip_adv.
+
+no_memo(Cat) :-
+    Cat => ecomp.
+
+no_memo(Cat) :-
+    Cat => enumeration.
+
+no_memo(Cat) :-
+    Cat => etc.
+
+no_memo(Cat) :-
+    Cat => etopic.
+
+no_memo(Cat) :-
+    Cat => fixed_part.
+
+no_memo(Cat) :-
+    Cat => gen_det.
+
+no_memo(Cat) :-
+    Cat => iets_adv.
+
+no_memo(Cat) :-
+    Cat => iets_n.
+
+no_memo(Cat) :-
+    Cat => int_adv.
+
+no_memo(Cat) :-
+    Cat => lconj.
+
+no_memo(Cat) :-
+    Cat => num_na.
+
+no_memo(Cat) :-
+    Cat => op_comp.
+
+no_memo(Cat) :-
+    Cat => optpunct.
+
+no_memo(Cat) :-
+    Cat => part.
+
+no_memo(Cat) :-
+    Cat => post_adj_adv.
+
+no_memo(Cat) :-
+    Cat => post_adv_adv.
+
+no_memo(Cat) :-
+    Cat => post_n_n.
+
+no_memo(Cat) :-
+    Cat => post_n_adv.
+
+no_memo(Cat) :-
+    Cat => post_np_adv.
+
+no_memo(Cat) :-
+    Cat => post_p_adv.
+
+no_memo(Cat) :-
+    Cat => post_p.
+
+no_memo(Cat) :-
+    Cat => post_pp.
+
+no_memo(Cat) :-
+    Cat => post_wh_adv.
+
+no_memo(Cat) :-
+    Cat => pre_det_quant.
+
+no_memo(Cat) :-
+    Cat => pre_num_adv.
+
+no_memo(Cat) :-
+    Cat => predm_adv.
+
+no_memo(Cat) :-
+    Cat => pron.
+
+no_memo(Cat) :-
+    Cat => punct.
+
+no_memo(Cat) :-
+    Cat => score_cat.
+
+no_memo(Cat) :-
+    Cat => rootbar.
+
+no_memo(Cat) :-
+    Cat => tag.
+
+no_memo(Cat) :-
+    Cat => te_comp.
+
+no_memo(Cat) :-
+    Cat => tmp_app_n.
+
+no_memo(Cat) :-
+    Cat => tmp_det.
+
+no_memo(Cat) :-
+    Cat => uit_comp.
+
+no_memo(Cat) :-
+    Cat => v.
+
+no_memo(Cat) :-
+    Cat => vandaar_adv.
+
+no_memo(Cat) :-
+    Cat => v_noun.
+
+no_memo(Cat) :-
+    Cat => v2_vp.
+
+no_memo(Cat) :-
+    Cat => vb.
+
+no_memo(Cat) :-
+    Cat => vc.
+
+no_memo(Cat) :-
+    Cat => within_word_conjunct.
+
+no_memo(Cat) :-
+    Cat => zo_van_adv.
+
+no_memo(Cat) :-
+    Cat => zom_adv.
+
+no_memo(Cat) :-
+    Cat => zom_a.
+
+weaken_link_cat(A,B) :-
+    A => a,
+    B => a,
+    A:aform <=> B:aform.
+
+weaken_link_cat(A,B) :-
+    A => adv,
+    B => adv,
+    A:adj_can_postv <=> B:adj_can_postv.
+
+weaken_link_cat(A,B) :-
+    A => app_n_app,
+    B => app_n_app,
+    A:agr <=> B:agr,
+    A:amount <=> B:amount,
+    A:bmeas <=> B:bmeas,
+    A:can_mod <=> B:can_mod,
+    A:e_agr <=> B:e_agr,
+    A:meas <=> B:meas,
+    A:nform <=> B:nform.
+
+weaken_link_cat(A,B) :-
+    A => call,
+    B => call,
+    A:goal <=> B:goal.
+
+weaken_link_cat(A,B) :-
+    A => clist,
+    B => clist,
+    A:cat <=> B:cat,
+    A:cform <=> B:cform,
+    A:conj <=> B:conj,
+    A:enzlast <=> B:enzlast,
+    A:etc <=> B:etc,
+    A:last <=> B:last,
+    A:left_conj <=> B:left_conj.
+
+weaken_link_cat(A,B) :-
+    A => comp,
+    B => comp,
+    A:ctype <=> B:ctype,
+    A:e_deps <=> B:e_deps,
+    A:hstem <=> B:hstem,
+    A:sc <=> B:sc,
+    A:slash <=> B:slash,
+    A:tags <=> B:tags,
+    A:wh <=> B:wh,
+    A:wh_reltmploc <=> B:wh_reltmploc.
+
+weaken_link_cat(A,B) :-
+    A => comparativep,
+    B => comparativep,
+    A:compar_form <=> B:compar_form.
+
+weaken_link_cat(A,B) :-
+    A => complex_etc,
+    B => complex_etc.
+
+weaken_link_cat(A,B) :-
+    A => conj,
+    B => conj,
+    A:cform <=> B:cform,
+    A:left_conj <=> B:left_conj.
+
+weaken_link_cat(A,B) :-
+    A => det,
+    B => det,
+    A:sc <=> B:sc.
+
+weaken_link_cat(A,B) :-
+    A => dip,
+    B => dip.
+
+weaken_link_cat(A,B) :-
+    A => enumeration,
+    B => enumeration.
+
+weaken_link_cat(A,B) :-
+    A => etc,
+    B => etc.
+
+weaken_link_cat(A,B) :-
+    A => gen_det,
+    B => gen_det,
+    A:agr <=> B:agr.
+
+weaken_link_cat(A,B) :-
+    A => imp,
+    B => imp.
+
+weaken_link_cat(A,B) :-
+    A => int_adv,
+    B => int_adv,
+    A:agr <=> B:agr,
+    A:exs <=> B:exs,
+    A:sc <=> B:sc.
+
+weaken_link_cat(A,B) :-
+    A => max,
+    B => max,
+    A:puncttype <=> B:puncttype.
+
+weaken_link_cat(A,B) :-
+    A => modifier,
+    B => modifier,
+    A:exs <=> B:exs,
+    A:mcat <=> B:mcat,
+    A:mexs <=> B:mexs,
+    A:sel <=> B:sel,
+    A:wh <=> B:wh.
+
+weaken_link_cat(A,B) :-
+    A => n,
+    B => n,
+    A:case <=> B:case,
+    A:subn <=> B:subn.
+
+weaken_link_cat(A,B) :-
+    A => np,
+    B => np,
+    A:prs <=> B:prs.
+
+weaken_link_cat(A,B) :-
+    A => num,
+    B => num.
+
+weaken_link_cat(A,B) :-
+    A => optpunct,
+    B => optpunct,
+    A:cat <=> B:cat,
+    A:realized <=> B:realized.
+
+weaken_link_cat(A,B) :-
+    A => p,
+    B => p,
+    A:ld_pc <=> B:ld_pc,
+    A:wh <=> B:wh.
+
+weaken_link_cat(A,B) :-
+    A => part,
+    B => part,
+    A:cj <=> B:cj,
+    A:part <=> B:part.
+
+weaken_link_cat(A,B) :-
+    A => pn,
+    B => pn,
+    A:neclass <=> B:neclass.
+
+weaken_link_cat(A,B) :-
+    A => post_adj_adv,
+    B => post_adj_adv,
+    A:exs <=> B:exs.
+
+weaken_link_cat(A,B) :-
+    A => post_adv_adv,
+    B => post_adv_adv.
+
+weaken_link_cat(A,B) :-
+    A => post_n_adv,
+    B => post_n_adv,
+    A:cj <=> B:cj.
+
+weaken_link_cat(A,B) :-
+    A => post_n_n,
+    B => post_n_n.
+
+weaken_link_cat(A,B) :-
+    A => post_np_adv,
+    B => post_np_adv.
+
+weaken_link_cat(A,B) :-
+    A => post_p,
+    B => post_p,
+    A:sc <=> B:sc.
+
+weaken_link_cat(A,B) :-
+    A => post_p_adv,
+    B => post_p_adv.
+
+weaken_link_cat(A,B) :-
+    A => post_wh_adv,
+    B => post_wh_adv.
+
+weaken_link_cat(A,B) :-
+    A => pp,
+    B => pp.
+
+weaken_link_cat(A,B) :-
+    A => pred,
+    B => pred,
+    A:pcat <=> B:pcat.
+
+weaken_link_cat(A,B) :-
+    A => predm_adv,
+    B => predm_adv.
+
+weaken_link_cat(A,B) :-
+    A => punct,
+    B => punct,
+    A:puncttype <=> B:puncttype.
+
+weaken_link_cat(A,B) :-
+    A => redrel,
+    B => redrel,
+    A:agr <=> B:agr,
+    A:sub_wh <=> B:sub_wh,
+    A:tmploc <=> B:tmploc.
+
+weaken_link_cat(A,B) :-
+    A => rel,
+    B => rel,
+    A:relform <=> B:relform,
+    A:tmploc <=> B:tmploc.
+
+weaken_link_cat(A,B) :-
+    A => root,
+    B => root,
+    A:needs_dip <=> B:needs_dip.
+
+weaken_link_cat(A,B) :-
+    A => rootbar,
+    B => rootbar.
+
+weaken_link_cat(A,B) :-
+    A => sbar,
+    B => sbar,
+    A:ctype <=> B:ctype,
+    A:slash <=> B:slash,
+    A:tags <=> B:tags.
+
+weaken_link_cat(A,B) :-
+    A => start,
+    B => start.
+
+weaken_link_cat(A,B) :-
+    A => sv1,
+    B => sv1,
+    A:cj <=> B:cj,
+    A:iexs <=> B:iexs,
+    A:imexs <=> B:imexs,
+    A:slash <=> B:slash,
+    A:sv1_mod <=> B:sv1_mod,
+    A:tags <=> B:tags.
+
+weaken_link_cat(A,B) :-
+    A => tag,
+    B => tag,
+    A:adv <=> B:adv.
+
+weaken_link_cat(A,B) :-
+    A => tmp_app_n,
+    B => tmp_app_n,
+    A:agr <=> B:agr.
+
+weaken_link_cat(A,B) :-
+    A => top_cat,
+    B => top_cat.
+
+weaken_link_cat(A,B) :-
+    A => v,
+    B => v,
+    A:cj <=> B:cj,
+    A:cleft <=> B:cleft,
+    A:e_deps <=> B:e_deps,
+    A:eps1 <=> B:eps1,
+    A:eps2 <=> B:eps2,
+    A:eps3 <=> B:eps3,
+    A:exs <=> B:exs,
+    A:hebben_zijn <=> B:hebben_zijn,
+    A:hstem <=> B:hstem,
+    A:inv <=> B:inv,
+    A:mexs <=> B:mexs,
+    A:parts <=> B:parts,
+    A:passive <=> B:passive,
+    A:pro_deps <=> B:pro_deps,
+    A:psprule <=> B:psprule,
+    A:sc <=> B:sc,
+    A:slash <=> B:slash,
+    A:subj <=> B:subj,
+    A:sv1_mod <=> B:sv1_mod,
+    A:tpart <=> B:tpart,
+    A:vform <=> B:vform,
+    A:vframe <=> B:vframe,
+    A:vslash <=> B:vslash.
+
+weaken_link_cat(A,B) :-
+    A => v2_vp,
+    B => v2_vp,
+    A:haswh <=> B:haswh,
+    A:slash <=> B:slash,
+    A:subj <=> B:subj,
+    A:tags <=> B:tags,
+    A:vslash <=> B:vslash.
+weaken_link_cat(A,B) :-
+    A => v_noun,
+    B => v_noun,
+    A:hstem <=> B:hstem,
+    A:parts <=> B:parts,
+    A:subn <=> B:subn.
+
+weaken_link_cat(A,B) :-
+    A => vb,
+    B => vb,
+    A:cleft <=> B:cleft,
+    A:e_deps <=> B:e_deps,
+    A:eps1 <=> B:eps1,
+    A:eps2 <=> B:eps2,
+    A:eps3 <=> B:eps3,
+    A:exs <=> B:exs,
+    A:hebben_zijn <=> B:hebben_zijn,
+    A:hstem <=> B:hstem,
+    A:inv <=> B:inv,
+    A:mexs <=> B:mexs,
+    A:parts <=> B:parts,
+    A:passive <=> B:passive,
+    A:pro_deps <=> B:pro_deps,
+    A:sc <=> B:sc,
+    A:slash <=> B:slash,
+    A:subj <=> B:subj,
+    A:tpart <=> B:tpart,
+    A:vbc <=> B:vbc,
+    A:vform <=> B:vform,
+    A:vframe <=> B:vframe,
+    A:vslash <=> B:vslash.
+
+weaken_link_cat(A,B) :-
+    A => vc,
+    B => vc,
+    A:cj <=> B:cj,
+    A:cleft <=> B:cleft,
+    A:e_deps <=> B:e_deps,
+    A:eps1 <=> B:eps1,
+    A:eps2 <=> B:eps2,
+    A:eps3 <=> B:eps3,
+    A:exs <=> B:exs,
+    A:hebben_zijn <=> B:hebben_zijn,
+    A:hstem <=> B:hstem,
+    A:parts <=> B:parts,
+    A:passive <=> B:passive,
+    A:pro_deps <=> B:pro_deps,
+    A:pspslash <=> B:pspslash,
+    A:sc <=> B:sc,
+    A:sel <=> B:sel,
+    A:slash <=> B:slash,
+    A:subj <=> B:subj,
+    A:tpart <=> B:tpart,
+    A:vbc <=> B:vbc,
+    A:vform <=> B:vform,
+    A:vframe <=> B:vframe,
+    A:vslash <=> B:vslash.
+
+weaken_link_cat(A,B) :-
+    A => vc_noun,
+    B => vc_noun,
+    A:subn <=> B:subn.
+
+weaken_link_cat(A,B) :-
+    A => vp,
+    B => vp,
+    A:cj <=> B:cj,
+    A:cleft <=> B:cleft,
+    A:ctype <=> B:ctype,
+    A:e_deps <=> B:e_deps,
+    A:pro_deps <=> B:pro_deps,
+    A:sel <=> B:sel,
+    A:slash <=> B:slash,
+    A:vform <=> B:vform.
+
+weaken_link_cat(A,B) :-
+    A => vproj,
+    B => vproj,
+    A:cleft <=> B:cleft,
+    A:e_deps <=> B:e_deps,
+    A:pro_deps <=> B:pro_deps,
+    A:slash <=> B:slash,
+    A:tags <=> B:tags,
+    A:vform <=> B:vform,
+    A:vslash <=> B:vslash.
+
+weaken_link_cat(A,B) :-
+    A => vpx,
+    B => vpx,
+    A:cj <=> B:cj,
+    A:cleft <=> B:cleft,
+    A:e_deps <=> B:e_deps,
+    A:pro_deps <=> B:pro_deps,
+    A:slash <=> B:slash,
+    A:tags <=> B:tags,
+    A:vform <=> B:vform,
+    A:vslash <=> B:vslash.
+
+weaken_link_cat(A,B) :-
+    A => within_word_conjunct,
+    B => within_word_conjunct.
+
+weaken_link_cat(A,B) :-
+    A => zom_a,
+    B => zom_a,
+    A:aform <=> B:aform,
+    A:agr <=> B:agr,
+    A:cform <=> B:cform.
+

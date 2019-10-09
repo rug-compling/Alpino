@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" getal="mv" id="2" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="We"/>
+      <node begin="1" end="2" id="3" infl="pl" lemma="nemen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="neem" sc="transitive" stype="declarative" tense="present" word="nemen" wvorm="pv"/>
+      <node begin="2" cat="np" end="14" id="4" rel="obj1">
+        <node begin="2" end="3" gen="het" genus="onz" getal="ev" graad="basis" id="5" lemma="afscheid" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="afscheid" word="afscheid"/>
+        <node begin="3" cat="pp" end="14" id="6" rel="mod">
+          <node begin="3" end="4" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="4" cat="np" end="14" id="8" rel="obj1">
+            <node begin="4" cat="mwu" end="6" his="name" his_1="not_begin" id="9" mwu_root="Eddy Verheyden" mwu_sense="Eddy Verheyden" rel="hd">
+              <node begin="4" end="5" id="10" lemma="Eddy" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Eddy" spectype="deeleigen" word="Eddy"/>
+              <node begin="5" end="6" id="11" lemma="Verheyden" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Verheyden" spectype="deeleigen" word="Verheyden"/>
+            </node>
+            <node begin="6" cat="rel" end="14" id="12" rel="mod">
+              <node begin="6" case="no_obl" end="7" gen="de" getal="getal" id="13" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" rnum="sg" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+              <node begin="6" cat="ssub" end="14" id="14" rel="body">
+                <node begin="6" end="7" id="15" index="1" rel="su"/>
+                <node begin="8" cat="np" end="11" id="16" rel="mod">
+                  <node begin="8" cat="np" end="10" his="normal" his_1="normal" id="17" rel="det">
+                    <node begin="8" end="9" id="18" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                    <node begin="9" end="10" gen="both" genus="genus" getal="ev" graad="basis" id="19" lemma="paar" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,genus,stan)" pt="n" rel="hd" root="paar" word="paar"/>
+                  </node>
+                  <node begin="10" end="11" gen="het" genus="onz" getal="ev" graad="basis" id="20" lemma="jaar" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="pl" root="jaar" special="tmp" word="jaar"/>
+                </node>
+                <node begin="7" cat="pp" end="13" id="21" rel="ld">
+                  <node begin="7" end="8" getal="getal" id="22" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" special="er" status="red" vwtype="aanw" word="er"/>
+                  <node begin="11" cat="mwu" end="13" his="normal" his_1="normal" id="23" mwu_root="van tussenuit" mwu_sense="van tussenuit" rel="hd">
+                    <node begin="11" end="12" id="24" lemma="van" pos="prep" postag="VZ(fin)" pt="vz" rel="mwp" root="van" sc="extracted_np" vztype="fin" word="van"/>
+                    <node begin="12" end="13" id="25" lemma="tussenuit" pos="prep" postag="VZ(fin)" pt="vz" rel="mwp" root="tussenuit" sc="extracted_np" vztype="fin" word="tussenuit"/>
+                  </node>
+                </node>
+                <node begin="13" end="14" id="26" infl="sg3" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" sc="ld_pp" tense="present" word="gaat" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>We nemen afscheid van Eddy Verheyden die er een paar jaar van tussenuit gaat .</sentence>
+</alpino_ds>

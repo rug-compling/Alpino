@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="ppres" end="4" id="2" rel="predm">
+        <node begin="0" cat="ppart" end="3" id="3" rel="vc">
+          <node begin="0" cat="np" end="2" id="4" rel="obj1">
+            <node begin="0" buiging="zonder" end="1" id="5" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="Dit"/>
+            <node begin="1" end="2" getal="ev" id="6" lemma="alles" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" root="alles" status="vol" vwtype="onbep" word="alles"/>
+          </node>
+          <node begin="2" buiging="zonder" end="3" id="7" lemma="zien" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zie" word="gezien" wvorm="vd"/>
+        </node>
+        <node begin="3" buiging="zonder" end="4" id="8" lemma="hebben" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="hd" root="heb" word="hebbende" wvorm="od"/>
+      </node>
+      <node begin="4" end="5" id="9" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+      <node begin="5" cat="np" end="7" id="10" index="1" rel="su">
+        <node begin="5" end="6" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="bezoeker" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bezoeker" word="bezoeker"/>
+      </node>
+      <node begin="5" cat="inf" end="8" id="13" rel="vc">
+        <node begin="5" end="7" id="14" index="1" rel="su"/>
+        <node begin="7" buiging="zonder" end="8" id="15" lemma="wegsluipen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="weg_sluip" word="wegsluipen" wvorm="inf"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Dit alles gezien hebbende wil de bezoeker wegsluipen</sentence>
+</alpino_ds>

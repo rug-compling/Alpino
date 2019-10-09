@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="0" cat="smain" end="23" id="1" rel="--">
+      <node begin="5" end="6" id="2" lemma="willen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="wil" word="willen" wvorm="pv"/>
+      <node begin="6" cat="conj" end="11" id="3" index="1" rel="su">
+        <node begin="6" cat="np" end="8" id="4" rel="cnj">
+          <node begin="6" end="7" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="6" lemma="ARP" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="ARP" word="ARP"/>
+        </node>
+        <node begin="8" conjtype="neven" end="9" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="9" cat="np" end="11" id="8" rel="cnj">
+          <node begin="9" end="10" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="10" lemma="CHU" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="CHU" word="CHU"/>
+        </node>
+      </node>
+      <node begin="0" cat="inf" end="23" id="11" rel="vc">
+        <node begin="0" cat="cp" end="5" id="12" rel="mod">
+          <node begin="0" conjtype="onder" end="1" id="13" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="Zoals"/>
+          <node begin="1" cat="ssub" end="5" id="14" rel="body">
+            <node begin="1" end="2" getal="mv" id="15" index="2" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
+            <node begin="3" end="4" id="16" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+            <node begin="1" cat="ppart" end="5" id="17" rel="vc">
+              <node begin="1" end="2" id="18" index="2" rel="su"/>
+              <node begin="2" end="3" id="19" lemma="reeds" pos="adv" postag="BW()" pt="bw" rel="mod" root="reeds" word="reeds"/>
+              <node begin="4" buiging="zonder" end="5" id="20" lemma="melden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="meld" word="gemeld" wvorm="vd"/>
+            </node>
+          </node>
+        </node>
+        <node begin="6" end="11" id="21" index="1" rel="su"/>
+        <node begin="11" cat="pp" end="13" id="22" rel="mod">
+          <node begin="11" end="12" id="23" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="24" lemma="Rotterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Rotterdam" word="Rotterdam"/>
+        </node>
+        <node begin="13" cat="pp" end="17" id="25" rel="pc">
+          <node begin="13" end="14" id="26" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="14" cat="np" end="17" id="27" rel="obj1">
+            <node begin="14" end="15" id="28" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="15" buiging="met-e" end="16" graad="basis" id="29" lemma="gecombineerd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gecombineerd" word="gecombineerde"/>
+            <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="30" lemma="lijst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="lijst" word="lijst"/>
+          </node>
+        </node>
+        <node begin="17" buiging="zonder" end="18" id="31" lemma="uitkomen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom" word="uitkomen" wvorm="inf"/>
+        <node begin="18" cat="pp" end="23" id="32" rel="mod">
+          <node begin="18" end="19" id="33" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
+          <node begin="19" cat="np" end="23" id="34" rel="obj1">
+            <node begin="19" end="20" id="35" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="36" lemma="naam" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="naam" word="naam"/>
+            <node begin="21" cat="mwu" end="23" id="37" rel="app">
+              <node begin="21" buiging="met-e" end="22" graad="basis" id="38" lemma="protestants-christelijk" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Protestants-christelijke" word="Protestants-christelijke"/>
+              <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="39" lemma="groepering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="groepering" word="groepering"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Zoals wij reeds hebben gemeld willen de ARP en de CHU in Rotterdam met een gecombineerde lijst uitkomen onder de naam Protestants-christelijke groepering .</sentence>
+</alpino_ds>

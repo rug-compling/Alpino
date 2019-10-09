@@ -1,0 +1,66 @@
+#!/usr/bin/perl -w
+
+$max=100000;
+$step=100;
+
+($score,$time) = @ARGV;
+
+open SCORE, $score;
+%scores=();
+while (<SCORE>) {
+    chomp;
+    if (/BEST SCORE: ([0-9]*[.][0-9][0-9]) ov: [0-9]* corr: [0-9]* sys: [0-9]* .item ([^;]*)/) {
+        $scores{$2}=$1;
+    }
+}
+close SCORE;
+
+open TIME, $time;
+%times=();
+while (<TIME>) {
+    chomp;
+    if (/^T[\#]/) {
+        ($key,undef,undef,$time,undef,undef) = split('\|');
+        $key =~ s/T\#//;
+        $times{$key}=$time;
+    }
+}
+close TIME;
+
+for($out=$step;$out<$max;$out=$out+$step) {
+    $n=0;
+    $sum=0;
+    foreach $key (keys %scores) {
+
+        if ($times{$key} > $out) {
+            $acc=0;
+        } else {
+            $acc=$scores{$key};
+        }
+
+        $sum=$sum+$acc;
+        $n++;
+    } 
+    $acc = $sum/$n;
+    print "$out $acc\n";
+}
+
+
+# vergelijken T2 TGuides:
+
+# shell
+#  cat T2/cdb_part?/score > s
+#  cat T2/cdb_part?/time > t
+#  T2/score_time s t > st
+#  cat TGuides/cdb_part?/score > s2
+#  cat TGuides/cdb_part?/time > t2
+#  T2/score_time s2 t2 > st2
+
+
+# R
+#  st <- read.table("st")
+#  st2 <- read.table("st2")
+#  ma <- cbind(st$V1,st2$V1)
+#  mb <- cbind(st$V2,st2$V2)
+#  matplot(ma,mb,type="l",col=1,xlab="CPU time-out msec",ylab="CA%",lty=c(1,2))
+

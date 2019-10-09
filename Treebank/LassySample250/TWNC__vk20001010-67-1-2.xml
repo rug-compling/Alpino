@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="7" end="8" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="15" end="16" frame="punct(komma)" id="2" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="16" conjtype="neven" end="17" frame="conj(en)" id="3" lcat="--" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="--" root="en" sense="en" word="en"/>
+    <node begin="0" cat="du" end="19" id="4" rel="--">
+      <node begin="0" cat="conj" end="15" id="5" rel="dp">
+        <node begin="0" cat="smain" end="7" id="6" rel="cnj">
+          <node begin="0" cat="np" end="2" id="7" rel="su">
+            <node begin="0" end="1" frame="determiner(de)" id="8" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="De"/>
+            <node begin="1" end="2" frame="proper_name(both,'ORG')" id="9" lcat="np" lemma="VARA" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="hd" root="VARA" sense="VARA" spectype="deeleigen" word="VARA"/>
+          </node>
+          <node begin="2" end="3" frame="verb(hebben,sg3,intransitive)" id="10" infl="sg3" lcat="smain" lemma="bestaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="besta" sc="intransitive" sense="besta" tense="present" word="bestaat" wvorm="pv"/>
+          <node begin="3" cat="advp" end="5" id="11" rel="mod">
+            <node begin="3" end="4" frame="tmp_app_noun" genus="onz" getal="ev" graad="basis" id="12" lcat="advp" lemma="begin" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="begin" sense="begin" special="tmp_app" word="begin"/>
+            <node begin="4" end="5" frame="tmp_noun(de,count,sg)" gen="de" id="13" lcat="np" lemma="november" num="sg" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mod" root="november" sense="november" special="tmp" spectype="deeleigen" word="november"/>
+          </node>
+          <node begin="5" cat="np" end="7" id="14" rel="mod">
+            <node begin="5" end="6" frame="number(hoofd(pl_num))" id="15" infl="pl_num" lcat="detp" lemma="75" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="75" sense="75" special="hoofd" word="75"/>
+            <node begin="6" end="7" frame="tmp_noun(het,count,meas)" gen="het" genus="onz" getal="ev" graad="basis" id="16" lcat="np" lemma="jaar" naamval="stan" ntype="soort" num="meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" sense="jaar" special="tmp" word="jaar"/>
+          </node>
+        </node>
+        <node begin="8" conjtype="neven" end="9" frame="conj(en)" id="17" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+        <node begin="9" cat="smain" end="15" id="18" rel="cnj">
+          <node begin="10" end="11" frame="verb(hebben,pl,aux_psp_hebben)" id="19" infl="pl" lcat="smain" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" sense="heb" tense="present" word="hebben" wvorm="pv"/>
+          <node begin="11" case="both" def="def" end="12" frame="pronoun(nwh,thi,both,de,both,def,wkpro)" gen="de" getal="mv" id="20" index="1" lcat="np" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" sense="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="ze"/>
+          <node begin="9" cat="ppart" end="15" id="21" rel="vc">
+            <node begin="9" end="10" frame="tmp_adverb" id="22" lcat="advp" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" sense="nu" special="tmp" word="nu"/>
+            <node begin="11" end="12" id="23" index="1" rel="su"/>
+            <node begin="12" cat="np" end="14" id="24" rel="obj1">
+              <node begin="12" end="13" frame="determiner(een)" id="25" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+              <node begin="13" end="14" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="26" lcat="np" lemma="jubileumlied" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jubileum_lied" sense="jubileum_lied" word="jubileumlied"/>
+            </node>
+            <node begin="14" buiging="zonder" end="15" frame="verb(hebben,psp,transitive)" id="27" infl="psp" lcat="ppart" lemma="maken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="maak" sc="transitive" sense="maak" word="gemaakt" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+      <node begin="17" cat="np" end="19" id="28" rel="dp">
+        <node begin="17" end="18" frame="determiner(een)" id="29" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+        <node begin="18" end="19" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="30" lcat="np" lemma="jubileumclip" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="jubileum_clip" sense="jubileum_clip" word="jubileumclip"/>
+      </node>
+    </node>
+    <node begin="19" end="20" frame="punct(punt)" id="31" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De VARA bestaat begin november 75 jaar , en nu hebben ze een jubileumlied gemaakt , en een jubileumclip .</sentence>
+  <comments>
+    <comment>Q#vk20001010-67-1-2|De VARA bestaat begin november 75 jaar , en nu hebben ze een jubileumlied gemaakt , en een jubileumclip .|1|3|-0.14176268188892038</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom_voor" word="komt" wvorm="pv"/>
+      <node begin="2" end="3" getal="ev" id="4" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj2" root="me" status="red" vwtype="pr" word="me"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="5" lemma="onwaarschijnlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="onwaarschijnlijk" word="onwaarschijnlijk"/>
+      <node begin="4" end="5" id="6" lemma="voor" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="voor" vztype="fin" word="voor"/>
+      <node begin="5" cat="cp" end="8" id="7" rel="su">
+        <node begin="5" conjtype="onder" end="6" id="8" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="6" cat="ssub" end="8" id="9" rel="body">
+          <node begin="6" end="7" genus="masc" getal="ev" id="10" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+          <node begin="7" end="8" id="11" lemma="vertrekken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="vertrek" word="vertrekt" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Het komt me onwaarschijnlijk voor dat hij vertrekt</sentence>
+</alpino_ds>

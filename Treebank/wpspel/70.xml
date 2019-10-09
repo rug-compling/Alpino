@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="0" cat="whq" end="18" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="18" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+        <node begin="0" cat="ppart" end="18" id="5" rel="vc">
+          <node begin="0" end="1" id="6" index="1" rel="predc"/>
+          <node begin="3" buiging="zonder" end="4" id="7" lemma="noemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="noem" word="genoemd" wvorm="vd"/>
+          <node begin="2" cat="np" end="18" id="8" index="2" rel="obj1">
+            <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="9" lemma="dierenvoer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="voer" word="dierenvoer"/>
+            <node begin="4" cat="rel" end="18" id="10" rel="mod">
+              <node begin="4" end="5" getal="ev" id="11" index="3" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
+              <node begin="4" cat="ssub" end="18" id="12" rel="body">
+                <node begin="4" end="5" id="13" index="3" rel="su"/>
+                <node begin="6" end="7" id="14" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+                <node begin="4" cat="ppart" end="18" id="15" rel="vc">
+                  <node begin="4" end="5" id="16" index="3" rel="obj1"/>
+                  <node begin="5" buiging="zonder" end="6" id="17" lemma="conserveren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="conserveer" word="geconserveerd" wvorm="vd"/>
+                  <node begin="7" cat="pp" end="18" id="18" rel="mod">
+                    <node begin="7" cat="mwu" end="10" id="19" rel="hd">
+                      <node begin="7" end="8" id="20" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="met" vztype="init" word="met"/>
+                      <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="21" lemma="behulp" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="behulp" word="behulp"/>
+                      <node begin="9" end="10" id="22" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+                    </node>
+                    <node begin="10" cat="np" end="18" id="23" rel="obj1">
+                      <node begin="10" buiging="met-e" end="11" id="24" lemma="melkzuuraanmaken" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="aanmakend" word="melkzuuraanmakende" wvorm="od"/>
+                      <node begin="11" end="12" getal="mv" graad="basis" id="25" lemma="bacterie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bacterie" word="bacteriën"/>
+                      <node begin="12" cat="rel" end="18" id="26" rel="mod">
+                        <node begin="12" end="13" getal="getal" id="27" index="4" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+                        <node begin="12" cat="ssub" end="18" id="28" rel="body">
+                          <node begin="12" end="13" id="29" index="4" rel="su"/>
+                          <node begin="15" end="16" id="30" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+                          <node begin="13" cat="np" end="18" id="31" rel="obj1">
+                            <node begin="13" buiging="zonder" end="14" id="32" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+                            <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="33" lemma="toegang" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="toegang" word="toegang"/>
+                            <node begin="16" cat="pp" end="18" id="34" rel="mod">
+                              <node begin="16" end="17" id="35" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+                              <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="36" lemma="zuurstof" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="zuurstof" word="zuurstof"/>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="2" end="18" id="37" index="2" rel="su"/>
+      </node>
+    </node>
+    <node begin="18" end="19" id="38" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe wordt dierenvoer genoemd dat geconserveerd wordt met behulp van melkzuuraanmakende bacteriën die geen toegang hebben tot zuurstof ?</sentence>
+</alpino_ds>

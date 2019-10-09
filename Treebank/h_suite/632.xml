@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="np" end="13" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="3" lemma="wijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wijn" word="wijn"/>
+      <node begin="2" cat="rel" end="13" id="4" rel="mod">
+        <node begin="2" end="3" getal="getal" id="5" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+        <node begin="2" cat="ssub" end="13" id="6" rel="body">
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" index="2" lemma="Elvis" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Elvis" word="Elvis"/>
+          <node begin="4" end="5" id="8" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+          <node begin="2" cat="inf" end="13" id="9" rel="vc">
+            <node begin="3" end="4" id="10" index="2" rel="su"/>
+            <node begin="5" buiging="zonder" end="6" id="11" lemma="hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb" word="hebben" wvorm="inf"/>
+            <node begin="2" cat="ppart" end="13" id="12" rel="vc">
+              <node begin="2" end="3" id="13" index="1" rel="obj1"/>
+              <node begin="3" end="4" id="14" index="2" rel="su"/>
+              <node begin="6" buiging="zonder" end="7" id="15" lemma="drinken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="drink" word="gedronken" wvorm="vd"/>
+              <node begin="7" cat="cp" end="13" id="16" rel="mod">
+                <node begin="7" conjtype="onder" end="8" id="17" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+                <node begin="8" cat="ssub" end="13" id="18" rel="body">
+                  <node begin="8" end="9" genus="masc" getal="ev" id="19" index="3" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+                  <node begin="10" end="11" id="20" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+                  <node begin="8" cat="inf" end="13" id="21" rel="vc">
+                    <node begin="8" end="9" id="22" index="3" rel="su"/>
+                    <node begin="11" buiging="zonder" end="12" id="23" lemma="hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb" word="hebben" wvorm="inf"/>
+                    <node begin="8" cat="ppart" end="13" id="24" rel="vc">
+                      <node begin="8" end="9" id="25" index="3" rel="su"/>
+                      <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="26" lemma="wijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="wijn" word="wijn"/>
+                      <node begin="12" buiging="zonder" end="13" id="27" lemma="drinken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="drink" word="gedronken" wvorm="vd"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="28" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>De wijn die Elvis zou hebben gedronken als hij wijn zou hebben gedronken !</sentence>
+</alpino_ds>

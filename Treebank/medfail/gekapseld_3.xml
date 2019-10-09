@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="4" end="5" id="2" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" word="werden" wvorm="pv"/>
+      <node begin="5" cat="np" end="8" id="3" index="1" rel="su">
+        <node begin="5" end="6" id="4" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
+        <node begin="6" buiging="met-e" end="7" graad="basis" id="5" lemma="klein" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="klein" word="kleine"/>
+        <node begin="7" end="8" getal="mv" graad="basis" id="6" lemma="tv-scherm" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="tv_scherm" word="tv-schermen"/>
+      </node>
+      <node begin="0" cat="ppart" end="9" id="7" rel="vc">
+        <node begin="0" cat="pp" end="4" id="8" rel="mod">
+          <node begin="0" end="1" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+          <node begin="1" cat="np" end="4" id="10" rel="obj1">
+            <node begin="1" end="2" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="2" end="3" genus="onz" getal="ev" graad="dim" id="12" lemma="muur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="muur_DIM" word="muurtje"/>
+            <node begin="3" end="4" id="13" lemma="verderop" pos="adj" postag="BW()" pt="bw" rel="mod" root="verderop" word="verderop"/>
+          </node>
+        </node>
+        <node begin="5" end="8" id="14" index="1" rel="obj1"/>
+        <node begin="8" buiging="zonder" end="9" id="15" lemma="kapselen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gekapseld" word="gekapseld" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>In een muurtje verderop werden twee kleine tv-schermen gekapseld .</sentence>
+</alpino_ds>

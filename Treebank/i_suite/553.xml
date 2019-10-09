@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="conj" end="4" id="1" rel="--">
+      <node begin="0" cat="pp" end="2" id="2" rel="cnj">
+        <node begin="0" end="1" id="3" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="Op"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="VMBO_school" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="VMBO_school" word="VMBO-scholen"/>
+      </node>
+      <node begin="2" conjtype="neven" end="3" id="5" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="3" end="4" id="6" lemma="daarbuiten" pos="pp" postag="BW()" pt="bw" rel="cnj" root="daarbuiten" word="daarbuiten"/>
+    </node>
+  </node>
+  <sentence>Op VMBO-scholen en daarbuiten</sentence>
+</alpino_ds>

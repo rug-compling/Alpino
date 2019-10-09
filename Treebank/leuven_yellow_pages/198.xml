@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" cat="np" end="3" id="1" rel="--">
+      <node begin="0" cat="detp" end="2" id="2" rel="det">
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="flink" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="flink" word="flink"/>
+        <node begin="1" end="2" getal="ev" id="4" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="num" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" root="wat" status="vol" vwtype="onbep" word="wat"/>
+      </node>
+      <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="zweet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="zweet" word="zweet"/>
+    </node>
+  </node>
+  <sentence>flink wat zweet</sentence>
+</alpino_ds>

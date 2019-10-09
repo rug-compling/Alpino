@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="du" end="4" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="dp">
+        <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="3" lemma="product" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="product" word="PRODUCT"/>
+        <node begin="1" end="2" id="4" lemma="U1.1.2" pos="name" postag="SPEC(symb)" pt="spec" rel="app" root="U1.1.2" spectype="symb" word="U1.1.2"/>
+      </node>
+      <node begin="2" cat="np" end="4" id="5" rel="dp">
+        <node begin="2" buiging="met-e" end="3" graad="basis" id="6" lemma="lichamelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="lichamelijk" word="LICHAMELIJKE"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="verschijning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verschijning" word="VERSCHIJNING"/>
+      </node>
+    </node>
+  </node>
+  <sentence>PRODUCT U1.1.2 LICHAMELIJKE VERSCHIJNING</sentence>
+</alpino_ds>

@@ -1,0 +1,58 @@
+# TRIPLES_TARGET=COMPACT
+
+# $(TRIPLES_TARGET).triples: $(TRIPLES_TARGET)
+# 	dtlist --recursive $(TRIPLES_TARGET) \
+#              | xargs Alpino -treebank_dep_features\
+#              | gzip > $(TRIPLES_TARGET).triples
+
+# $(TRIPLES_TARGET).sorted: $(TRIPLES_TARGET)
+# 	dtlist --recursive $(TRIPLES_TARGET) \
+#              | xargs Alpino -treebank_dep_features\
+#              |  LANG=POSIX LC_ALL=POSIX sort \
+#              | $(ALPINO_HOME)/Disambiguation/Triples/uniq-c\
+#              |  LANG=POSIX LC_ALL=POSIX sort\
+#              >  $(TRIPLES_TARGET).sorted
+
+%.sorted: %
+	dtlist --recursive $< \
+             | xargs Alpino -treebank_dep_features\
+             |  LANG=POSIX LC_ALL=POSIX sort \
+             | $(ALPINO_HOME)/Disambiguation/Triples/uniq-c\
+             |  LANG=POSIX LC_ALL=POSIX sort\
+             >  $*.sorted
+
+%.sorted: %.index
+	dtlist --recursive $< \
+             | xargs Alpino -treebank_dep_features\
+             |  LANG=POSIX LC_ALL=POSIX sort \
+             | $(ALPINO_HOME)/Disambiguation/Triples/uniq-c\
+             |  LANG=POSIX LC_ALL=POSIX sort\
+             >  $@
+
+indexfiles=$(shell find -name '*.index')
+sorted=$(indexfiles:%.index=%.sorted)
+
+all-sorted: $(sorted)
+	LANG=POSIX LC_ALL=POSIX sort -m $(sorted) \
+           | $(ALPINO_HOME)/SuffixArrays/merge_ngrams \
+           | awk -F\| '{ if (NF==3) \
+                             {printf "%s|%s|%s\n", $$1,$$2,$$3}}' \
+           > all-sorted
+	   rm $(sorted)
+
+sorted: $(sorted)
+
+$(pattern).all: $(pattern)/*.sorted
+	LANG=POSIX LC_ALL=POSIX sort -m $(pattern)/*.sorted \
+           | $(ALPINO_HOME)/SuffixArrays/merge_ngrams \
+           | awk -F\| '{ if (NF==3) \
+                             {printf "%s|%s|%s\n", $$1,$$2,$$3}}' \
+           > $(pattern).all
+
+all-total: *.all
+	LANG=POSIX LC_ALL=POSIX sort -m *.all \
+           | $(ALPINO_HOME)/SuffixArrays/merge_ngrams \
+           | awk -F\| '{ if (NF==3) \
+                             {printf "%s|%s|%s\n", $$1,$$2,$$3}}' \
+           > all-total
+

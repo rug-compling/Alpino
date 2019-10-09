@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="conj" end="15" id="1" rel="--">
+      <node begin="0" cat="inf" end="6" id="2" rel="cnj">
+        <node begin="0" cat="pp" end="4" id="3" rel="mod">
+          <node begin="0" end="1" id="4" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="Op"/>
+          <node begin="1" cat="np" end="4" id="5" rel="obj1">
+            <node begin="1" end="2" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="2" cat="mwu" end="4" id="7" rel="hd">
+              <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="8" lemma="email" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="email" word="email"/>
+              <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="applicatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="applicatie" word="applicatie"/>
+            </node>
+          </node>
+        </node>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="&gt;Instellingen&gt;Account" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="&gt;Instellingen&gt;Account" word="&gt;Instellingen&gt;Account"/>
+        <node begin="5" buiging="zonder" end="6" id="11" lemma="toe_voegen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voeg_toe" word="toevoegen" wvorm="inf"/>
+      </node>
+      <node begin="6" conjtype="neven" end="7" id="12" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="7" cat="sv1" end="15" id="13" rel="cnj">
+        <node begin="7" end="8" id="14" lemma="in_voeren" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="voer_in" word="voer" wvorm="pv"/>
+        <node begin="8" cat="np" end="14" id="15" rel="obj1">
+          <node begin="8" end="9" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="17" lemma="email" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="email" word="email"/>
+          <node begin="10" cat="pp" end="14" id="18" rel="mod">
+            <node begin="10" end="11" id="19" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="11" cat="np" end="14" id="20" rel="obj1">
+              <node begin="11" end="12" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="12" cat="mwu" end="14" id="22" rel="hd">
+                <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="23" lemma="email" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="email" word="email"/>
+                <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="24" lemma="provider" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="provider" word="provider"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="14" end="15" id="25" lemma="in" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="in" vztype="fin" word="in"/>
+      </node>
+    </node>
+    <node begin="15" end="16" id="26" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Op de email applicatie &gt;Instellingen&gt;Account toevoegen en voer de email van de email provider in .</sentence>
+</alpino_ds>

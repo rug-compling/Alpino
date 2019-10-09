@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="du" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="dp">
+        <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="3" lemma="product" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="product" word="PRODUCT"/>
+        <node begin="1" end="2" id="4" lemma="U4.1.1" pos="name" postag="SPEC(symb)" pt="spec" rel="app" root="U4.1.1" spectype="symb" word="U4.1.1"/>
+      </node>
+      <node begin="2" cat="np" end="5" id="5" rel="dp">
+        <node begin="2" cat="ppart" end="4" id="6" rel="mod">
+          <node begin="2" buiging="zonder" end="3" graad="basis" id="7" lemma="wettelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="wettelijk" word="WETTELIJK"/>
+          <node begin="3" buiging="met-e" end="4" id="8" lemma="verplicht" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="verplicht" word="VERPLICHTE" wvorm="vd"/>
+        </node>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="voorlichting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorlichting" word="VOORLICHTING"/>
+      </node>
+    </node>
+  </node>
+  <sentence>PRODUCT U4.1.1 WETTELIJK VERPLICHTE VOORLICHTING</sentence>
+</alpino_ds>

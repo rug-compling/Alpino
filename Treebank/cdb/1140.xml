@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" cat="pp" end="2" id="2" rel="dp">
+        <node begin="0" end="1" id="3" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="Tot"/>
+        <node begin="1" end="2" id="4" lemma="zover" pos="noun" postag="BW()" pt="bw" rel="obj1" root="zover" word="zover"/>
+      </node>
+      <node begin="2" cat="np" end="7" id="5" rel="dp">
+        <node begin="2" buiging="met-e" end="3" getal="mv" id="6" lemma="ons" naamval="stan" npagr="rest" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" pt="vnw" rel="det" root="onze" status="vol" vwtype="bez" word="onze"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="correspondent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="correspondent" word="correspondent"/>
+        <node begin="4" cat="pp" end="7" id="8" rel="mod">
+          <node begin="4" end="5" id="9" lemma="te" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="te" vztype="init" word="te"/>
+          <node begin="5" cat="mwu" end="7" id="10" rel="obj1">
+            <node begin="5" end="6" id="11" lemma="Tel" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Tel" spectype="deeleigen" word="Tel"/>
+            <node begin="6" end="7" id="12" lemma="Aviv" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Aviv" spectype="deeleigen" word="Aviv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Tot zover onze correspondent te Tel Aviv .</sentence>
+</alpino_ds>

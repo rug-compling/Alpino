@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="1" end="2" frame="punct(ligg_streep)" id="1" lcat="punct" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" sense="-" special="ligg_streep" word="-"/>
+    <node begin="3" end="4" frame="punct(komma)" id="2" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="du" end="9" id="3" rel="--">
+      <node begin="0" end="1" frame="proper_name(both,'LOC')" id="4" lcat="np" lemma="Düsseldorf" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="dp" root="Düsseldorf" sense="Düsseldorf" spectype="deeleigen" word="Düsseldorf"/>
+      <node begin="2" cat="np" end="9" id="5" rel="dp">
+        <node begin="2" end="3" frame="proper_name(both,'PER')" id="6" lcat="np" lemma="Solingen" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="hd" root="Solingen" sense="Solingen" spectype="deeleigen" word="Solingen"/>
+        <node begin="4" cat="np" end="9" id="7" rel="app">
+          <node begin="4" end="5" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="8" lcat="np" lemma="spoorlijn" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="spoor_lijn" sense="spoor_lijn" word="spoorlijn"/>
+          <node begin="5" cat="pp" end="9" id="9" rel="mod">
+            <node begin="5" end="6" frame="preposition(tussen,[door,in,vandaan])" id="10" lcat="pp" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" sense="tussen" vztype="init" word="tussen"/>
+            <node begin="6" cat="conj" end="9" id="11" rel="obj1">
+              <node begin="6" end="7" frame="proper_name(both,'LOC')" id="12" lcat="np" lemma="Düsseldorf" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="cnj" root="Düsseldorf" sense="Düsseldorf" spectype="deeleigen" word="Düsseldorf"/>
+              <node begin="7" conjtype="neven" end="8" frame="conj(en)" id="13" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+              <node begin="8" end="9" frame="proper_name(both,'LOC')" id="14" lcat="np" lemma="Solingen" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="cnj" root="Solingen" sense="Solingen" spectype="deeleigen" word="Solingen"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Düsseldorf - Solingen , spoorlijn tussen Düsseldorf en Solingen</sentence>
+  <comments>
+    <comment>Q#1561097-31-3|Düsseldorf - Solingen , spoorlijn tussen Düsseldorf en Solingen|1|1|0.04865576985354571</comment>
+  </comments>
+</alpino_ds>

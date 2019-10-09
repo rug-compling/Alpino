@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="0" cat="du" end="23" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" word="En"/>
+      <node begin="1" cat="smain" end="23" id="3" rel="nucl">
+        <node begin="1" end="2" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="2" end="3" id="5" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+        <node begin="1" cat="inf" end="23" id="6" rel="vc">
+          <node begin="1" end="2" id="7" index="1" rel="su"/>
+          <node begin="3" end="4" getal="ev" id="8" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="se" root="me" status="red" vwtype="pr" word="me"/>
+          <node begin="4" end="5" id="9" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
+          <node begin="5" buiging="zonder" end="6" id="10" lemma="voorstellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel" word="voorstellen" wvorm="inf"/>
+          <node begin="6" cat="cp" end="23" id="11" rel="vc">
+            <node begin="6" conjtype="onder" end="7" id="12" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+            <node begin="7" cat="ssub" end="23" id="13" rel="body">
+              <node begin="7" cat="mwu" end="9" id="14" index="2" rel="su">
+                <node begin="7" end="8" id="15" lemma="Bontique" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bontique" spectype="deeleigen" word="Bontique"/>
+                <node begin="8" end="9" id="16" lemma="Barbara" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Barbara" spectype="deeleigen" word="Barbara"/>
+              </node>
+              <node begin="21" end="22" id="17" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+              <node begin="7" cat="ppart" end="23" id="18" rel="vc">
+                <node begin="7" end="9" id="19" index="2" rel="su"/>
+                <node begin="9" cat="pp" end="17" id="20" rel="mod">
+                  <node begin="9" end="10" id="21" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+                  <node begin="10" cat="np" end="17" id="22" rel="obj1">
+                    <node begin="10" end="11" id="23" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                    <node begin="11" buiging="zonder" end="12" getal-n="zonder-n" id="24" lemma="voorbereiden" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="bereid" word="voorbereiden" wvorm="inf"/>
+                    <node begin="12" cat="pp" end="17" id="25" rel="mod">
+                      <node begin="12" end="13" id="26" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                      <node begin="13" cat="conj" end="17" id="27" rel="obj1">
+                        <node begin="13" cat="np" end="15" id="28" rel="cnj">
+                          <node begin="13" end="14" id="29" index="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                          <node begin="14" end="15" id="30" lemma="herfst-" pos="noun" postag="SPEC(afgebr)" pt="spec" rel="hd" root="herfst-" spectype="afgebr" word="herfst-"/>
+                        </node>
+                        <node begin="15" conjtype="neven" end="16" id="31" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                        <node begin="13" cat="np" end="17" id="32" rel="cnj">
+                          <node begin="13" end="14" id="33" index="3" rel="det"/>
+                          <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="34" lemma="wintercollectie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="collectie" word="wintercollectie"/>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node begin="17" cat="pp" end="19" id="35" rel="pc">
+                  <node begin="17" end="18" id="36" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+                  <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="37" lemma="inspiratie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="inspiratie" word="inspiratie"/>
+                </node>
+                <node begin="19" cat="np" end="21" id="38" rel="obj1">
+                  <node begin="19" buiging="zonder" end="20" id="39" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+                  <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="40" lemma="gebrek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebrek" word="gebrek"/>
+                </node>
+                <node begin="22" buiging="zonder" end="23" id="41" lemma="hebben" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="heb" word="gehad" wvorm="vd"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" id="42" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>En ik kan me zo voorstellen dat Bontique Barbara bij het voorbereiden van de herfst- en wintercollectie aan inspiratie geen gebrek heeft gehad .</sentence>
+</alpino_ds>

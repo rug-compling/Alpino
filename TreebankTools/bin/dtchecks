@@ -1,0 +1,35 @@
+#!/bin/sh
+
+if [ -z "$ALPINO_HOME" ]; then 
+    echo "dtchecks: Error: Please set your ALPINO_HOME environment variable" 1>&2
+    exit 1
+fi
+
+#if [ -z "$TMPDIR" ]; then
+#    TMPDIR=/tmp
+#fi
+
+
+#CHECKS=`mktemp /tmp/dtchecksXXXXXX`
+#
+#dtview -m -file-query-pairs < $CHECKS &
+
+for dir in $*
+do 
+( echo $dir 1>&2;
+  if [ -d $dir ]
+  then
+  cd $dir ;
+  if [ ! -r .checks.expected ]; then touch .checks.expected; fi
+  dtxslt -q 'true()' \
+    --stylesheet $ALPINO_HOME/TreebankTools/stylesheets/sanity-checks.xsl\
+    . |
+    sed -e "s|^|$dir/|" |
+    grep -v -F -f .checks.expected
+  $ALPINO_HOME/TreebankTools/bin/dtcheckstringpos . |
+   sed -e "s|^|$dir/|" |
+   grep -v -F -f .checks.expected
+  fi
+)
+done  | dtview -m -file-query-pairs 
+

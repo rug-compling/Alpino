@@ -1,0 +1,42 @@
+cgn_exs/./3.xml	//node[count(node[@rel="hd"]) > 1]/node[@rel="hd"]	rel "hd" occurs more than once
+cgn_exs/./3.xml	//node[count(node[@rel="su"]) > 1]/node[@rel="su"]	rel "su" occurs more than once
+cgn_exs/./3.xml	//node[node[@root="wil" or (@root="heb" and node[@rel="obj1" and not(@index)]) or @root="mag" or @root="zal" or @root="moet" or @root="hoef" or @root="kan" or @root="placht" or @root="begin" or @root="behoef" or @root="behoor" or @root="blijf" or @root="blijk" or @root="ben" or @root="word" or @root="dien" or @root="dreig" or @root="ga" or @root="heet" or @root="kom" or @root="lijk" or @root="mag" or @root="pleeg" or @root="schijn" ] and node[@rel="su" and not(@index)] and node[@rel="vc" and not(@cat="cp") and not(@cat="svan")]]	perhaps missing co-indexing??
+cgn_exs/./4.xml	//node[count(node[@rel="hd"]) > 1]/node[@rel="hd"]	rel "hd" occurs more than once
+cgn_exs/./4.xml	//node[count(node[@rel="su"]) > 1]/node[@rel="su"]	rel "su" occurs more than once
+cgn_exs/./143.xml	//node[node[@getal="mv" and @rel="hd"] and node[@rel="det" and (@root="het" or @root="een" or @root="dit" or @root="dat")]]	plural head noun with singular determiner?
+cgn_exs/./144.xml	//node[node[@getal="mv" and @rel="hd"] and node[@rel="det" and (@root="het" or @root="een" or @root="dit" or @root="dat")]]	plural head noun with singular determiner?
+cgn_exs/./159.xml	//node[@pos="comp" and @root="dat" and not(../@cat="cp")]	dat comp without cp
+cgn_exs/./160.xml	//node[@pos="comp" and @root="dat" and not(../@cat="cp")]	dat comp without cp
+cgn_exs/./242.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+cgn_exs/./245.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+cgn_exs/./246.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+cgn_exs/./249.xml	//node[count(node[@rel="tag"]) > 1]/node[@rel="tag"]	rel "tag" occurs more than once
+cgn_exs/./251.xml	//node[count(node[@rel="tag"]) > 1]/node[@rel="tag"]	rel "tag" occurs more than once
+cgn_exs/./258.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+cgn_exs/./278.xml	//node[@rel="det" and @pos and not(@pt="lid" or @pt="vnw" or @pt="tw" or (@pt="n" and @naamval="gen") or @pt="spec" or @pt="adj" or @root="genoeg" or (@pt="n" and @ntype="eigen"))]	unexpected postag for determiner
+cgn_exs/./279.xml	//node[@cat="np" and node[@rel="hd" and @genus="onz" and not(@root="jaar" or @root="paar" or @root="miljoen" or @root="uur" or @root="procent" or @root="miljard" or @root="nummer")] and node[@rel="det" and (@root="de" or @root="die" or @root="deze")]]	de-determiner combines with zijd noun?
+cgn_exs/./337.xml	//node[count(node[@rel="tag"]) > 1]/node[@rel="tag"]	rel "tag" occurs more than once
+cgn_exs/./344.xml	//node[ @cat and @rel="det" and not(@cat="detp") and not(@cat="mwu") and not(@cat="np") and not(@cat="conj") and not(@cat="ap") and not(@cat="pp")]	unexpected det-category.   Expected cats: detp mwu np conj ap pp
+cgn_exs/./411.xml	//node[count(node[@rel="hd"]) > 1]/node[@rel="hd"]	rel "hd" occurs more than once
+cgn_exs/./411.xml	//node[count(node[@rel="su"]) > 1]/node[@rel="su"]	rel "su" occurs more than once
+cgn_exs/./411.xml	//node[node[@root="wil" or (@root="heb" and node[@rel="obj1" and not(@index)]) or @root="mag" or @root="zal" or @root="moet" or @root="hoef" or @root="kan" or @root="placht" or @root="begin" or @root="behoef" or @root="behoor" or @root="blijf" or @root="blijk" or @root="ben" or @root="word" or @root="dien" or @root="dreig" or @root="ga" or @root="heet" or @root="kom" or @root="lijk" or @root="mag" or @root="pleeg" or @root="schijn" ] and node[@rel="su" and not(@index)] and node[@rel="vc" and not(@cat="cp") and not(@cat="svan")]]	perhaps missing co-indexing??
+cgn_exs/./412.xml	//node[count(node[@rel="hd"]) > 1]/node[@rel="hd"]	rel "hd" occurs more than once
+cgn_exs/./412.xml	//node[count(node[@rel="su"]) > 1]/node[@rel="su"]	rel "su" occurs more than once
+cgn_exs/./413.xml	//node[count(node[@rel="hd"]) > 1]/node[@rel="hd"]	rel "hd" occurs more than once
+cgn_exs/./413.xml	//node[count(node[@rel="su"]) > 1]/node[@rel="su"]	rel "su" occurs more than once
+cgn_exs/./414.xml	//node[count(node[@rel="hd"]) > 1]/node[@rel="hd"]	rel "hd" occurs more than once
+cgn_exs/./415.xml	//node[count(node[@rel="hd"]) > 1]/node[@rel="hd"]	rel "hd" occurs more than once
+cgn_exs/./416.xml	//node[ @cat and @rel="vc" and not(@cat="cp") and not(@cat="ti") and not(@cat="ppart") and not(@cat="inf") and not(@cat="oti") and not(@cat="conj") and not(@cat="whsub") and not(@cat="ahi") and not(@cat="svan") and not(@cat="smain")]	unexpected vc-category.   Expected cats: cp ti ppart inf oti conj whsub ahi svan smain
+cgn_exs/./416.xml	//node[@pos="comp" and @root="dat" and not(../@cat="cp")]	dat comp without cp
+cgn_exs/./418.xml	//node[ @cat and @rel="vc" and not(@cat="cp") and not(@cat="ti") and not(@cat="ppart") and not(@cat="inf") and not(@cat="oti") and not(@cat="conj") and not(@cat="whsub") and not(@cat="ahi") and not(@cat="svan") and not(@cat="smain")]	unexpected vc-category.   Expected cats: cp ti ppart inf oti conj whsub ahi svan smain
+cgn_exs/./418.xml	//node[@pos="comp" and @root="dat" and not(../@cat="cp")]	dat comp without cp
+cgn_exs/./420.xml	//node[count(node[@rel="hd"]) > 1]/node[@rel="hd"]	rel "hd" occurs more than once
+cgn_exs/./420.xml	//node[count(node[@rel="su"]) > 1]/node[@rel="su"]	rel "su" occurs more than once
+cgn_exs/./424.xml	//node[ @cat and @rel="vc" and not(@cat="cp") and not(@cat="ti") and not(@cat="ppart") and not(@cat="inf") and not(@cat="oti") and not(@cat="conj") and not(@cat="whsub") and not(@cat="ahi") and not(@cat="svan") and not(@cat="smain")]	unexpected vc-category.   Expected cats: cp ti ppart inf oti conj whsub ahi svan smain
+cgn_exs/./424.xml	//node[@vwtype="betr" and not(@rel="rhd" or ../@rel="rhd")]	relative not RHD?
+cgn_exs/./157.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
+cgn_exs/./158.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
+cgn_exs/./159.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
+cgn_exs/./160.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
+cgn_exs/./415.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
+cgn_exs/./279.xml	//node[@cat="np" and node[@rel="hd" and @genus="onz" and not(@root="jaar" or @root="paar" or @root="miljoen" or @root="uur" or @root="procent" or @root="miljard" or @root="nummer")] and node[@rel="det" and (@root="de" or @root="die" or @root="deze")]]	de-determiner combines with onz noun?

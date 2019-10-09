@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="whq" end="4" id="2" rel="--">
+      <node begin="0" end="1" getal="getal" id="3" index="1" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="whd" root="wie" status="vol" vwtype="vb" word="Wie"/>
+      <node begin="0" cat="sv1" end="4" id="4" rel="body">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="1" end="2" id="6" lemma="schrijven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="schrijf" word="schreef" wvorm="pv"/>
+        <node begin="3" end="4" genus="genus" getal="ev" graad="basis" id="7" lemma="Ulysses" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Ulysses" word="Ulysses"/>
+      </node>
+    </node>
+    <node begin="4" end="5" id="8" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="5" end="6" id="9" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wie schreef &quot; Ulysses &quot; ?</sentence>
+</alpino_ds>

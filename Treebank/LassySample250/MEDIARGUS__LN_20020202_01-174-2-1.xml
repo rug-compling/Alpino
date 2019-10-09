@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="1" end="2" frame="punct(dubb_punt)" id="1" lcat="punct" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+    <node begin="0" cat="np" end="6" id="2" rel="--">
+      <node begin="0" buiging="zonder" end="1" frame="v_noun(intransitive)" id="3" lcat="np" lemma="veldlopen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="veldlopen" sc="intransitive" sense="veldlopen" special="v_noun" word="Veldlopen" wvorm="inf"/>
+      <node begin="2" cat="np" end="6" id="4" rel="app">
+        <node begin="2" buiging="zonder" end="3" frame="determiner(het,nwh,nmod,pro,nparg)" id="5" infl="het" lcat="detp" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" sense="dit" vwtype="aanw" wh="nwh" word="dit"/>
+        <node begin="3" end="4" frame="tmp_noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="6" lcat="np" lemma="weekend" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="weekend" sense="weekend" special="tmp" word="weekend"/>
+        <node begin="4" cat="mwu" end="6" id="7" rel="app">
+          <node begin="4" end="5" frame="proper_name(both,'ORG')" id="8" lcat="np" lemma="Provinciaal" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Provinciaal" sense="Provinciaal" spectype="deeleigen" word="Provinciaal"/>
+          <node begin="5" end="6" frame="proper_name(both,'ORG')" id="9" lcat="np" lemma="Kampioenschap" neclass="ORG" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kampioenschap" sense="Kampioenschap" spectype="deeleigen" word="Kampioenschap"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Veldlopen : dit weekend Provinciaal Kampioenschap</sentence>
+  <comments>
+    <comment>Q#LN_20020202_01-174-2-1|Veldlopen : dit weekend Provinciaal Kampioenschap|1|1|0.043695020810803904</comment>
+  </comments>
+</alpino_ds>

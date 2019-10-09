@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="33" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="10" end="11" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="11" end="12" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="19" end="20" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="32" id="5" rel="--">
+      <node begin="0" cat="pp" end="19" id="6" rel="pc">
+        <node begin="0" end="1" id="7" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="Tot"/>
+        <node begin="1" cat="np" end="19" id="8" rel="obj1">
+          <node begin="1" end="2" getal-n="zonder-n" graad="basis" id="9" lemma="een" numtype="hoofd" pos="noun" positie="nom" postag="TW(hoofd,nom,zonder-n,basis)" pt="tw" rel="hd" root="een" word="een"/>
+          <node begin="2" cat="pp" end="19" id="10" rel="mod">
+            <node begin="2" end="3" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="3" cat="np" end="19" id="12" rel="obj1">
+              <node begin="3" end="4" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="4" buiging="met-e" end="5" graad="sup" id="14" lemma="belangrijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="belangrijk" word="belangrijkste"/>
+              <node begin="5" end="6" getal="mv" graad="basis" id="15" lemma="taak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="taak" word="taken"/>
+              <node begin="6" cat="pp" end="19" id="16" rel="mod">
+                <node begin="6" end="7" id="17" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="7" cat="np" end="19" id="18" rel="obj1">
+                  <node begin="7" end="8" id="19" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="9" end="10" getal="mv" graad="basis" id="20" lemma="barrevoeter" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="barrevoeters" word="barrevoeters"/>
+                  <node begin="12" cat="rel" end="19" id="21" rel="mod">
+                    <node begin="12" end="13" getal="getal" id="22" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+                    <node begin="12" cat="ssub" end="19" id="23" rel="body">
+                      <node begin="13" end="14" genus="masc" getal="ev" id="24" index="2" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="men"/>
+                      <node begin="16" end="17" id="25" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+                      <node begin="12" cat="inf" end="19" id="26" rel="vc">
+                        <node begin="13" end="14" id="27" index="2" rel="su"/>
+                        <node begin="17" buiging="zonder" end="18" id="28" lemma="kunnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kan" word="kunnen" wvorm="inf"/>
+                        <node begin="12" cat="inf" end="19" id="29" rel="vc">
+                          <node begin="12" end="13" id="30" index="1" rel="obj1"/>
+                          <node begin="13" end="14" id="31" index="2" rel="su"/>
+                          <node begin="14" cat="pp" end="16" id="32" rel="pc">
+                            <node begin="14" end="15" id="33" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                            <node begin="15" end="16" getal="mv" graad="basis" id="34" lemma="ziekenbroeder" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="broeder" word="ziekenbroeders"/>
+                          </node>
+                          <node begin="18" buiging="zonder" end="19" id="35" lemma="vergelijken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vergelijk" word="vergelijken" wvorm="inf"/>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="20" end="21" id="36" lemma="behoren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="behoor" word="behoort" wvorm="pv"/>
+      <node begin="21" cat="np" end="32" id="37" rel="su">
+        <node begin="21" end="22" id="38" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="39" lemma="propaganda" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="propaganda" word="propaganda"/>
+        <node begin="23" cat="conj" end="32" id="40" rel="mod">
+          <node begin="23" cat="pp" end="28" id="41" rel="cnj">
+            <node begin="23" end="24" id="42" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+            <node begin="24" cat="np" end="28" id="43" rel="obj1">
+              <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="44" lemma="geboortencontrole" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="controle" word="geboortencontrole"/>
+              <node begin="25" cat="pp" end="28" id="45" rel="mod">
+                <node begin="25" end="26" id="46" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
+                <node begin="26" cat="np" end="28" id="47" rel="obj1">
+                  <node begin="26" end="27" id="48" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="49" lemma="bevolking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bevolking" word="bevolking"/>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="28" conjtype="neven" end="29" id="50" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="29" cat="pp" end="32" id="51" rel="cnj">
+            <node begin="29" end="30" id="52" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="30" cat="np" end="32" id="53" rel="obj1">
+              <node begin="30" end="31" id="54" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="31" end="32" genus="onz" getal="ev" graad="basis" id="55" lemma="platteland" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="platteland" word="platteland"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="32" end="33" id="56" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Tot een van de belangrijkste taken van de &quot; barrevoeters &quot; , die men met ziekenbroeders zou kunnen vergelijken , behoort de propaganda voor geboortencontrole onder de bevolking en van het platteland .</sentence>
+</alpino_ds>

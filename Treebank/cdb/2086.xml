@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="27" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="16" end="17" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="26" id="3" rel="--">
+      <node begin="5" end="6" id="4" lemma="zullen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zal" word="zullen" wvorm="pv"/>
+      <node begin="0" cat="inf" end="26" id="5" rel="vc">
+        <node begin="0" cat="cp" end="5" id="6" rel="predc">
+          <node begin="0" conjtype="onder" end="1" id="7" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+          <node begin="1" cat="np" end="5" id="8" rel="body">
+            <node begin="1" end="2" getal="mv" graad="basis" id="9" lemma="solist" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="solist" word="solisten"/>
+            <node begin="2" cat="pp" end="5" id="10" rel="mod">
+              <node begin="2" end="3" id="11" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="3" cat="np" end="5" id="12" rel="obj1">
+                <node begin="3" buiging="met-e" end="4" id="13" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+                <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="14" lemma="opera" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="opera" word="opera"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="6" buiging="zonder" end="7" id="15" lemma="optreden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="treed" word="optreden" wvorm="inf"/>
+        <node begin="7" cat="conj" end="26" id="16" index="1" rel="su">
+          <node begin="7" cat="np" end="11" id="17" rel="cnj">
+            <node begin="7" end="8" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="19" lemma="bas" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bas" word="bas"/>
+            <node begin="9" cat="mwu" end="11" id="20" rel="app">
+              <node begin="9" end="10" id="21" lemma="Guus" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Guus" spectype="deeleigen" word="Guus"/>
+              <node begin="10" end="11" id="22" lemma="Hoekman" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hoekman" spectype="deeleigen" word="Hoekman"/>
+            </node>
+          </node>
+          <node begin="12" cat="np" end="16" id="23" rel="cnj">
+            <node begin="12" end="13" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="25" lemma="sopraan" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sopraan" word="sopraan"/>
+            <node begin="14" cat="mwu" end="16" id="26" rel="app">
+              <node begin="14" end="15" id="27" lemma="Germaine" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Germaine" spectype="deeleigen" word="Germaine"/>
+              <node begin="15" end="16" id="28" lemma="Stordiau" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Stordiau" spectype="deeleigen" word="Stordiau"/>
+            </node>
+          </node>
+          <node begin="17" cat="np" end="21" id="29" rel="cnj">
+            <node begin="17" end="18" id="30" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="31" lemma="tenor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tenor" word="tenor"/>
+            <node begin="19" cat="mwu" end="21" id="32" rel="app">
+              <node begin="19" end="20" id="33" lemma="Egbert" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Egbert" spectype="deeleigen" word="Egbert"/>
+              <node begin="20" end="21" id="34" lemma="Ravestein" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ravestein" spectype="deeleigen" word="Ravestein"/>
+            </node>
+          </node>
+          <node begin="21" conjtype="neven" end="22" id="35" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="22" cat="np" end="26" id="36" rel="cnj">
+            <node begin="22" end="23" id="37" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="38" lemma="bariton" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bariton" word="bariton"/>
+            <node begin="24" cat="mwu" end="26" id="39" rel="app">
+              <node begin="24" end="25" id="40" lemma="Jan" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jan" spectype="deeleigen" word="Jan"/>
+              <node begin="25" end="26" id="41" lemma="Alofs" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Alofs" spectype="deeleigen" word="Alofs"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="26" id="42" index="1" rel="su"/>
+    </node>
+    <node begin="26" end="27" id="43" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als solisten in deze opera zullen optreden de bas Guus Hoekman , de sopraan Germaine Stordiau , de tenor Egbert Ravestein en de bariton Jan Alofs .</sentence>
+</alpino_ds>

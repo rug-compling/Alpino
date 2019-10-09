@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="conj" end="5" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="zowel" pos="vg" postag="BW()" pt="bw" rel="crd" root="zowel" word="Zowel"/>
+        <node begin="1" cat="np" end="3" id="4" rel="cnj">
+          <node begin="1" end="2" id="5" index="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" id="6" lemma="voor-" pos="prefix" postag="SPEC(afgebr)" pt="spec" rel="hd" root="voor" spectype="afgebr" word="voor-"/>
+        </node>
+        <node begin="3" conjtype="onder" end="4" id="7" lemma="als" pos="vg" postag="VG(onder)" pt="vg" rel="crd" root="als" word="als"/>
+        <node begin="1" cat="np" end="5" id="8" rel="cnj">
+          <node begin="1" end="2" id="9" index="2" rel="det"/>
+          <node begin="4" end="5" getal="mv" graad="basis" id="10" lemma="nadeel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="nadeel" word="nadelen"/>
+        </node>
+      </node>
+      <node begin="5" end="6" id="11" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" word="werden" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="7" id="12" rel="vc">
+        <node begin="0" end="5" id="13" index="1" rel="obj1"/>
+        <node begin="6" buiging="zonder" end="7" id="14" lemma="aanpakken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="pak_aan" word="aangepakt" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Zowel de voor- als nadelen werden aangepakt</sentence>
+</alpino_ds>

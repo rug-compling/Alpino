@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="15" id="2" rel="--">
+      <node begin="0" cat="np" end="3" id="3" rel="su">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="4" lemma="pater" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pater" word="Pater"/>
+        <node begin="1" cat="mwu" end="3" id="5" rel="app">
+          <node begin="1" end="2" id="6" lemma="Van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Van" spectype="deeleigen" word="Van"/>
+          <node begin="2" end="3" id="7" lemma="Kilsdonk" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kilsdonk" spectype="deeleigen" word="Kilsdonk"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="8" lemma="zitten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zit" word="zat" wvorm="pv"/>
+      <node begin="4" cat="pp" end="8" id="9" rel="ld">
+        <node begin="4" end="5" id="10" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="5" cat="np" end="8" id="11" rel="obj1">
+          <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" end="7" id="13" lemma="één" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="eerste" word="eerste"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="14" lemma="rij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rij" word="rij"/>
+        </node>
+      </node>
+      <node begin="9" cat="ap" end="15" id="15" rel="predm">
+        <node begin="9" end="10" id="16" lemma="samen" pos="adj" postag="BW()" pt="bw" rel="hd" root="samen" word="samen"/>
+        <node begin="10" cat="pp" end="15" id="17" rel="pc">
+          <node begin="10" end="11" id="18" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="11" cat="np" end="15" id="19" rel="obj1">
+            <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="20" lemma="pastoor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pastoor" word="pastoor"/>
+            <node begin="12" end="13" genus="genus" getal="ev" graad="basis" id="21" lemma="Keet" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Keet" word="Keet"/>
+            <node begin="13" cat="pp" end="15" id="22" rel="mod">
+              <node begin="13" end="14" id="23" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+              <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="24" lemma="Osdorp" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Osdorp" word="Osdorp"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Pater Van Kilsdonk zat op de eerste rij , samen met pastoor Keet uit Osdorp .</sentence>
+</alpino_ds>

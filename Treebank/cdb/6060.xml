@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="Fransman" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Fransman" word="Fransman"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="Izier" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Izier" word="Izier"/>
+      </node>
+      <node begin="3" end="4" id="6" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+      <node begin="4" cat="np" end="9" id="7" rel="predc">
+        <node begin="4" end="5" getal-n="zonder-n" id="8" lemma="twee" numtype="rang" pos="noun" positie="nom" postag="TW(rang,nom,zonder-n)" pt="tw" rel="hd" root="tweede" word="tweede"/>
+        <node begin="5" cat="pp" end="9" id="9" rel="mod">
+          <node begin="5" end="6" id="10" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+          <node begin="6" cat="conj" end="9" id="11" rel="obj1">
+            <node begin="6" end="7" genus="genus" getal="ev" graad="basis" id="12" lemma="Polidori" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="cnj" root="Polidori" word="Polidori"/>
+            <node begin="7" conjtype="neven" end="8" id="13" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="8" end="9" genus="genus" getal="ev" graad="basis" id="14" lemma="Zilioli" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="cnj" root="Zilioli" word="Zilioli"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="9" end="10" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De Fransman Izier werd tweede voor Polidori en Zilioli .</sentence>
+</alpino_ds>

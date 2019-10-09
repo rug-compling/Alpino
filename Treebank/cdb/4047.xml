@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" cat="pp" end="6" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="Volgens"/>
+        <node begin="1" cat="conj" end="6" id="4" rel="obj1">
+          <node begin="1" cat="mwu" end="3" id="5" rel="cnj">
+            <node begin="1" end="2" id="6" lemma="dr." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="dr." spectype="deeleigen" word="dr."/>
+            <node begin="2" end="3" id="7" lemma="Oosterbaan" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Oosterbaan" spectype="deeleigen" word="Oosterbaan"/>
+          </node>
+          <node begin="3" conjtype="neven" end="4" id="8" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="4" cat="mwu" end="6" id="9" rel="cnj">
+            <node begin="4" end="5" id="10" lemma="dr." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="dr." spectype="deeleigen" word="dr."/>
+            <node begin="5" end="6" id="11" lemma="Knibbeler" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Knibbeler" spectype="deeleigen" word="Knibbeler"/>
+          </node>
+        </node>
+      </node>
+      <node begin="6" end="7" id="12" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="7" cat="np" end="9" id="13" rel="su">
+        <node begin="7" end="8" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="15" lemma="celibaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="celibaat" word="celibaat"/>
+      </node>
+      <node begin="10" buiging="zonder" end="11" graad="basis" id="16" lemma="direct" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="direct" word="direct"/>
+      <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="17" lemma="invloed" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="invloed" word="invloed"/>
+      <node begin="9" cat="pp" end="13" id="18" rel="pc">
+        <node begin="9" end="10" getal="getal" id="19" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="noun" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="daar" status="vol" vwtype="aanw" word="daar"/>
+        <node begin="12" end="13" id="20" lemma="op" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="op" vztype="fin" word="op"/>
+      </node>
+    </node>
+    <node begin="13" end="14" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Volgens dr. Oosterbaan en dr. Knibbeler heeft het celibaat daar direct invloed op .</sentence>
+</alpino_ds>

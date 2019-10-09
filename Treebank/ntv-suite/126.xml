@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="ppart" end="6" id="1" rel="--">
+      <node begin="0" cat="du" end="2" id="2" rel="obj1">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="soldaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="dp" root="soldaat" word="Soldaat"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="Israël" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="dp" root="Israel" word="Israel"/>
+      </node>
+      <node begin="2" buiging="zonder" end="3" id="5" lemma="straffen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="straf" word="gestraft" wvorm="vd"/>
+      <node begin="3" cat="pp" end="6" id="6" rel="pc">
+        <node begin="3" end="4" id="7" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+        <node begin="4" cat="du" end="6" id="8" rel="obj1">
+          <node begin="4" end="5" getal="mv" graad="basis" id="9" lemma="inrekenen" ntype="soort" pos="verb" postag="N(soort,mv,basis)" pt="n" rel="dp" root="reken_in" word="inrekenen"/>
+          <node begin="5" buiging="met-e" end="6" getal-n="zonder-n" graad="basis" id="10" lemma="Palestijns" naamval="stan" pos="noun" positie="nom" postag="ADJ(nom,basis,met-e,zonder-n,stan)" pt="adj" rel="dp" root="Palestijnse" word="Palestijnse"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Soldaat Israel gestraft voor inrekenen Palestijnse .</sentence>
+</alpino_ds>

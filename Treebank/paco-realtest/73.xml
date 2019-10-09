@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="pl_num" pos="det" rel="hd" root="sommige" wh="nwh" word="Sommige"/>
+        <node begin="1" cat="pp" end="4" id="4" rel="mod">
+          <node begin="1" end="2" id="5" pos="prep" rel="hd" root="van" word="van"/>
+          <node begin="2" cat="np" end="4" id="6" rel="obj1">
+            <node begin="2" end="3" id="7" infl="de" pos="det" rel="det" root="die" wh="nwh" word="die"/>
+            <node begin="3" end="4" gen="de" id="8" num="pl" pos="noun" rel="hd" root="boodschap" word="boodschappen"/>
+          </node>
+        </node>
+      </node>
+      <node begin="4" end="5" id="9" infl="pl" pos="verb" rel="hd" root="ben" sc="copula" tense="present" word="zijn"/>
+      <node begin="5" end="6" id="10" pos="adv" rel="mod" root="vandaag" special="tmp" word="vandaag"/>
+      <node begin="6" cat="ap" end="9" id="11" rel="predc">
+        <node begin="6" cat="advp" end="8" id="12" rel="mod">
+          <node begin="6" end="7" id="13" pos="adv" rel="mod" root="nog" sc="modal" word="nog"/>
+          <node begin="7" end="8" id="14" pos="adv" rel="hd" root="steeds" word="steeds"/>
+        </node>
+        <node aform="base" begin="8" end="9" id="15" infl="no_e" pos="adj" rel="hd" root="actueel" vform="adj" word="actueel"/>
+      </node>
+    </node>
+    <node begin="9" end="10" id="16" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Sommige van die boodschappen zijn vandaag nog steeds actueel .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

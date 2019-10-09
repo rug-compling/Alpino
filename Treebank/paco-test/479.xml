@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="38" id="0" rel="top">
+    <node begin="26" end="27" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="31" end="32" frame="punct(komma)" id="2" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="37" id="3" rel="--">
+      <node begin="0" cat="np" end="2" id="4" rel="su">
+        <node begin="0" end="1" frame="determiner(de,nwh,nmod,pro,nparg)" id="5" infl="de" lcat="detp" pos="det" rel="det" root="deze" sense="deze" wh="nwh" word="Deze"/>
+        <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" id="6" lcat="np" num="sg" pos="noun" rel="hd" root="afwijking" sense="afwijking" word="afwijking"/>
+      </node>
+      <node begin="2" end="3" frame="verb(unacc,sg_heeft,copula)" id="7" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="is"/>
+      <node begin="3" end="4" frame="sentence_adverb" id="8" lcat="advp" pos="adv" rel="mod" root="echter" sense="echter" special="sentence" word="echter"/>
+      <node begin="4" cat="ap" end="7" id="9" rel="predc">
+        <node begin="4" end="5" frame="adverb" id="10" lcat="advp" pos="adv" rel="mod" root="slechts" sense="slechts" word="slechts"/>
+        <node begin="5" cat="mwu" end="7" id="11" mwu_root="van_toepassing" mwu_sense="van_toepassing" rel="hd">
+          <node aform="base" begin="5" end="6" frame="adjective(pred(nonadv))" id="12" infl="pred" lcat="ap" pos="adj" rel="mwp" root="van" sense="van" vform="adj" word="van"/>
+          <node aform="base" begin="6" end="7" frame="adjective(pred(nonadv))" id="13" infl="pred" lcat="ap" pos="adj" rel="mwp" root="toepassing" sense="toepassing" vform="adj" word="toepassing"/>
+        </node>
+      </node>
+      <node begin="7" cat="cp" end="37" id="14" rel="mod">
+        <node begin="7" end="8" frame="complementizer" id="15" lcat="cp" pos="comp" rel="cmp" root="indien" sense="indien" word="indien"/>
+        <node begin="8" cat="ssub" end="37" id="16" rel="body">
+          <node begin="8" cat="np" end="17" id="17" rel="su">
+            <node begin="8" end="9" frame="determiner(de)" id="18" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="9" end="10" frame="noun(de,count,sg)" gen="de" id="19" lcat="np" num="sg" pos="noun" rel="hd" root="maatschappij" sense="maatschappij" word="maatschappij"/>
+            <node begin="10" cat="pp" end="17" id="20" rel="mod">
+              <node begin="10" end="11" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="21" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+              <node begin="11" cat="np" end="17" id="22" rel="obj1">
+                <node begin="11" end="12" frame="determiner(de)" id="23" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                <node begin="12" end="13" frame="number(rang)" id="24" lcat="ap" pos="num" rel="mod" root="derde" sense="derde" special="rang" word="derde"/>
+                <node begin="13" end="14" frame="proper_name(both,'ORG')" id="25" lcat="np" neclass="ORG" num="both" pos="name" rel="hd" root="Staat" sense="Staat" word="Staat"/>
+                <node begin="14" cat="pp" end="17" id="26" rel="mod">
+                  <node begin="14" end="15" frame="preposition(bij,[vandaan])" id="27" lcat="pp" pos="prep" rel="hd" root="bij" sense="bij" word="bij"/>
+                  <node begin="15" cat="np" end="17" id="28" rel="obj1">
+                    <node begin="15" end="16" frame="determiner(pron)" id="29" infl="pron" lcat="detp" pos="det" rel="det" root="haar" sense="haar" word="haar"/>
+                    <node begin="16" end="17" frame="noun(het,mass,sg)" gen="het" id="30" lcat="np" num="sg" pos="noun" rel="hd" root="belegging_beleid" sense="belegging_beleid" word="beleggingsbeleid"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="17" cat="np" end="34" id="31" rel="obj1">
+            <node begin="17" end="18" frame="determiner(de)" id="32" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="18" cat="ppart" end="33" id="33" rel="mod">
+              <node begin="18" cat="pp" end="31" id="34" rel="mod">
+                <node begin="18" end="19" frame="preposition(in,[])" id="35" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                <node begin="19" cat="conj" end="31" id="36" rel="obj1">
+                  <node begin="19" cat="np" end="23" id="37" rel="cnj">
+                    <node begin="19" end="20" frame="noun(het,count,pl)" gen="het" id="38" lcat="np" num="pl" pos="noun" rel="hd" root="artikel" sense="artikel" word="artikelen"/>
+                    <node begin="20" cat="conj" end="23" id="39" rel="app">
+                      <node begin="20" end="21" frame="number(hoofd(pl_num))" id="40" infl="pl_num" lcat="detp" pos="num" rel="cnj" root="22" sense="22" special="hoofd" word="22"/>
+                      <node begin="21" end="22" frame="conj(en)" id="41" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                      <node begin="22" end="23" frame="number(hoofd(pl_num))" id="42" infl="pl_num" lcat="detp" pos="num" rel="cnj" root="24" sense="24" special="hoofd" word="24"/>
+                    </node>
+                  </node>
+                  <node begin="23" end="24" frame="conj(en)" id="43" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                  <node begin="24" cat="np" end="31" id="44" rel="cnj">
+                    <node begin="24" end="25" frame="noun(het,count,sg)" gen="het" id="45" lcat="np" num="sg" pos="noun" rel="hd" root="artikel" sense="artikel" word="artikel"/>
+                    <node begin="25" end="26" frame="number(hoofd(pl_num))" id="46" infl="pl_num" lcat="detp" pos="num" rel="app" root="25" sense="25" special="hoofd" word="25"/>
+                    <node begin="27" cat="np" end="31" id="47" rel="app">
+                      <node begin="27" end="28" frame="noun(het,count,pl)" gen="het" id="48" lcat="np" num="pl" pos="noun" rel="hd" root="lid" sense="lid" word="leden"/>
+                      <node begin="28" cat="conj" end="31" id="49" rel="app">
+                        <node begin="28" end="29" frame="number(hoofd(sg_num))" id="50" infl="sg_num" lcat="detp" pos="num" rel="cnj" root="1" sense="1" special="hoofd" word="1"/>
+                        <node begin="29" end="30" frame="conj(en)" id="51" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                        <node begin="30" end="31" frame="number(hoofd(pl_num))" id="52" infl="pl_num" lcat="detp" pos="num" rel="cnj" root="2" sense="2" special="hoofd" word="2"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node aform="base" begin="32" end="33" frame="adjective(ge_e)" id="53" infl="e" lcat="ppart" pos="adj" rel="hd" root="gesteld" sense="gesteld" vform="psp" word="gestelde"/>
+            </node>
+            <node begin="33" end="34" frame="noun(de,count,pl)" gen="de" id="54" lcat="np" num="pl" pos="noun" rel="hd" root="begrenzing" sense="begrenzing" word="begrenzingen"/>
+          </node>
+          <node begin="34" cat="mwu" end="36" id="55" mwu_root="in_acht" mwu_sense="in_acht" rel="svp">
+            <node begin="34" end="35" frame="fixed_part([in,acht])" id="56" lcat="fixed" pos="fixed" rel="mwp" root="in" sense="in" word="in"/>
+            <node begin="35" end="36" frame="fixed_part([in,acht])" id="57" lcat="fixed" pos="fixed" rel="mwp" root="acht" sense="acht" word="acht"/>
+          </node>
+          <node begin="36" end="37" frame="verb(hebben,sg3,fixed([[in,acht],acc],norm_passive))" id="58" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="neem" sc="fixed([[in,acht],acc],norm_passive)" sense="in-acht-neem" tense="present" word="neemt"/>
+        </node>
+      </node>
+    </node>
+    <node begin="37" end="38" frame="punct(punt)" id="59" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Deze afwijking is echter slechts van toepassing indien de maatschappij van de derde Staat bij haar beleggingsbeleid de in artikelen 22 en 24 en artikel 25 , leden 1 en 2 , gestelde begrenzingen in acht neemt .</sentence>
+  <comments>
+    <comment>Q#479|Deze afwijking is echter slechts van toepassing indien de maatschappij van de derde Staat bij haar beleggingsbeleid de in artikelen 22 en 24 en artikel 25 , leden 1 en 2 , gestelde begrenzingen in acht neemt .|1|1|3.297690683976519</comment>
+  </comments>
+</alpino_ds>

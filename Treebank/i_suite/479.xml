@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" cat="du" end="2" id="2" rel="dp">
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="heerlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="nucl" root="heerlijk" word="Heerlijk"/>
+        <node begin="1" end="2" id="4" lemma="he" pos="tag" postag="TSW()" pt="tsw" rel="tag" root="he" word="he"/>
+      </node>
+      <node begin="2" cat="cp" end="7" id="5" rel="dp">
+        <node begin="2" conjtype="onder" end="3" id="6" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+        <node begin="3" cat="ssub" end="7" id="7" rel="body">
+          <node begin="3" cat="np" end="5" id="8" rel="su">
+            <node begin="3" end="4" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="zon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zon" word="zon"/>
+          </node>
+          <node begin="5" end="6" id="11" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
+          <node begin="6" end="7" id="12" lemma="schijnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="schijn" word="schijnt" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Heerlijk he als de zon weer schijnt</sentence>
+</alpino_ds>

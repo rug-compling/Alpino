@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="whq" end="12" id="2" rel="--">
+      <node begin="0" cat="np" end="3" id="3" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="4" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welke" vwtype="vb" word="Welke"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="koud" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="koud" word="koude"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="saus" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="saus" word="saus"/>
+      </node>
+      <node begin="0" cat="sv1" end="12" id="7" rel="body">
+        <node begin="0" end="3" id="8" index="1" rel="su"/>
+        <node begin="3" end="4" id="9" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+        <node begin="0" cat="ppart" end="12" id="10" rel="vc">
+          <node begin="0" end="3" id="11" index="1" rel="obj1"/>
+          <node begin="4" buiging="zonder" end="5" id="12" lemma="bereiden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bereid" word="bereid" wvorm="vd"/>
+          <node begin="5" cat="pp" end="12" id="13" rel="mod">
+            <node begin="5" end="6" id="14" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+            <node begin="6" cat="conj" end="12" id="15" rel="obj1">
+              <node begin="6" cat="np" end="8" id="16" rel="cnj">
+                <node begin="6" buiging="met-e" end="7" id="17" lemma="persen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="geperst" word="geperste" wvorm="vd"/>
+                <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="18" lemma="knoflook" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="knoflook" word="knoflook"/>
+              </node>
+              <node begin="9" buiging="zonder" end="10" getal-n="zonder-n" graad="basis" id="19" lemma="eigeel" pos="noun" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="cnj" root="eigeel" word="eigeel"/>
+              <node begin="10" conjtype="neven" end="11" id="20" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="21" lemma="olijfolie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="olijfolie" word="olijfolie"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="22" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke koude saus wordt bereid uit geperste knoflook , eigeel en olijfolie ?</sentence>
+</alpino_ds>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kind" word="kinderen"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" word="werden" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="7" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="obj1"/>
+        <node begin="0" cat="ahi" end="6" id="8" rel="vc">
+          <node begin="3" cat="mwu" end="5" id="9" rel="cmp">
+            <node begin="3" end="4" id="10" lemma="aan" pos="comp" postag="VZ(init)" pt="vz" rel="mwp" root="aan" vztype="init" word="aan"/>
+            <node begin="4" end="5" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="comp" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+          </node>
+          <node begin="0" cat="inf" end="6" id="12" rel="body">
+            <node begin="0" end="2" id="13" index="1" rel="su"/>
+            <node begin="5" buiging="zonder" end="6" id="14" lemma="huilen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="huil" word="huilen" wvorm="inf"/>
+          </node>
+        </node>
+        <node begin="6" buiging="zonder" end="7" id="15" lemma="brengen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="breng" word="gebracht" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>De kinderen werden aan het huilen gebracht</sentence>
+</alpino_ds>

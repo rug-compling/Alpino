@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="18" id="2" rel="--">
+      <node begin="0" cat="smain" end="10" id="3" rel="cnj">
+        <node begin="0" cat="np" end="2" id="4" index="1" rel="su">
+          <node begin="0" end="1" id="5" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="6" lemma="pvda-congres" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="PvdA_congres" word="PvdA-congres"/>
+        </node>
+        <node begin="2" end="3" id="7" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+        <node begin="0" cat="inf" end="10" id="8" rel="vc">
+          <node begin="0" end="2" id="9" index="1" rel="su"/>
+          <node begin="3" cat="advp" end="5" id="10" rel="mod">
+            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="11" lemma="eind" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="eind" word="eind"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="12" lemma="april" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="april" word="april"/>
+          </node>
+          <node begin="5" cat="np" end="9" id="13" rel="obj1">
+            <node begin="5" end="6" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="15" lemma="kandidatuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kandidatuur" word="kandidatuur"/>
+            <node begin="7" cat="pp" end="9" id="16" rel="mod">
+              <node begin="7" end="8" id="17" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="18" lemma="Cohen" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Cohen" word="Cohen"/>
+            </node>
+          </node>
+          <node begin="9" buiging="zonder" end="10" id="19" lemma="bekrachtigen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bekrachtig" word="bekrachtigen" wvorm="inf"/>
+        </node>
+      </node>
+      <node begin="11" conjtype="neven" end="12" id="20" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+      <node begin="12" cat="smain" end="18" id="21" rel="cnj">
+        <node begin="12" end="13" getal="ev" id="22" index="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
+        <node begin="13" end="14" id="23" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+        <node begin="12" cat="ppart" end="18" id="24" rel="vc">
+          <node begin="12" end="13" id="25" index="2" rel="obj1"/>
+          <node begin="14" buiging="zonder" end="15" id="26" lemma="zien" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zie" word="gezien" wvorm="vd"/>
+          <node begin="15" cat="cp" end="18" id="27" rel="predc">
+            <node begin="15" end="16" id="28" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+            <node begin="16" cat="np" end="18" id="29" rel="body">
+              <node begin="16" end="17" id="30" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="31" lemma="formaliteit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="formaliteit" word="formaliteit"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="32" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het PvdA-congres moet eind april de kandidatuur van Cohen bekrachtigen , maar dat wordt gezien als een formaliteit .</sentence>
+</alpino_ds>

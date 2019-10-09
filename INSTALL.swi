@@ -1,0 +1,65 @@
+1. You need the very latest version of SWI-Prolog 6, at least a 
+version of april 2010 or later.
+
+2. you must use an UTF8 locale setting.
+
+3. you need to set the ALPINO_HOME environment variable to the
+directory that contains the Alpino stuff
+
+4. you have to create a file Makefile.defs which should contain
+a few Makefile variable definitions. An example is available in
+the file Makefile.defs.swi
+
+5. you might need to install a number of other packages
+
+TODO: this list is incomplete
+
+* tcl/tk libraries
+* s_fsa utilities from Jan Daciuk
+  ** note: this is no longer required, if you are happy to use the
+     current *.fsa and *.tpl files. 
+* libxml2, libxslt for some of the additional tools
+* boost libraries
+
+for s_fsa you need non-default value for the variable CPPFLAGS
+in the Makefile!
+
+I have:
+CPPFLAGS=-O2 --pedantic -Wall \
+  -DFLEXIBLE  \
+  -DNUMBERS \
+  -DA_TERGO \
+  -DSHOW_FILLERS  \
+  -DSTOPBIT \
+  -DMORE_COMPR \
+  -DCASECONV \
+  -DRUNON_WORDS \
+  -DMORPH_INFIX \
+  -DPOOR_MORPH \
+  -DCHCLASS \
+  -DGUESS_LEXEMES -DGUESS_PREFIX \
+  -DGUESS_MMORPH \
+  -DLOOSING_RPM
+
+which means that I removed
+   -DSORT_ON_FREQ
+   -DNEXTBIT   
+   -DDUMP_ALL  
+   -DGENERALIZE
+
+
+6. you must ensure that the file swipl-lfr.pl from the SWI Prolog distribution is in
+your path. Typically, you need to
+    6.1 edit the first line of that file, so that the correct location of SWI prolog is found
+    6.2 move the file to a directory in your $PATH
+
+7. from $ALPINO_HOME you run
+
+make realclean
+make
+make install
+
+That should do it...
+
+
+

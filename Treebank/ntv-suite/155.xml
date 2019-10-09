@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" word=";"/>
+    <node begin="0" cat="du" end="17" id="2" rel="--">
+      <node begin="0" cat="smain" end="8" id="3" rel="dp">
+        <node begin="0" cat="np" end="2" id="4" rel="su">
+          <node begin="0" end="1" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="6" lemma="taxibestuurder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="taxi_bestuurder" word="taxibestuurder"/>
+        </node>
+        <node begin="2" end="3" id="7" lemma="krijgen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="krijg" word="kreeg" wvorm="pv"/>
+        <node begin="3" cat="np" end="8" id="8" rel="obj1">
+          <node begin="3" end="4" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="boete" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="boete" word="boete"/>
+          <node begin="5" cat="pp" end="8" id="11" rel="mod">
+            <node begin="5" end="6" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="6" cat="np" end="8" id="13" rel="obj1">
+              <node begin="6" end="7" id="14" lemma="992" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="992" word="992"/>
+              <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="15" lemma="euro" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="euro" word="euro"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="9" cat="smain" end="17" id="16" rel="dp">
+        <node begin="10" end="11" id="17" lemma="mogen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="mag" word="mag" wvorm="pv"/>
+        <node begin="11" end="12" genus="masc" getal="ev" id="18" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+        <node begin="9" cat="inf" end="17" id="19" rel="vc">
+          <node begin="9" end="10" id="20" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+          <node begin="11" end="12" id="21" index="1" rel="su"/>
+          <node begin="12" cat="np" end="14" id="22" rel="obj1">
+            <node begin="12" buiging="zonder" end="13" getal="ev" id="23" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+            <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="24" lemma="werk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="werk" word="werk"/>
+          </node>
+          <node begin="14" cat="advp" end="16" id="25" rel="mod">
+            <node begin="14" end="15" id="26" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="hd" root="niet" word="niet"/>
+            <node begin="15" buiging="zonder" end="16" graad="comp" id="27" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vwtype="onbep" word="meer"/>
+          </node>
+          <node begin="16" buiging="zonder" end="17" id="28" lemma="doen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="doe" word="doen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="29" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De taxibestuurder kreeg een boete van 992 euro ; ook mag hij zijn werk niet meer doen .</sentence>
+</alpino_ds>

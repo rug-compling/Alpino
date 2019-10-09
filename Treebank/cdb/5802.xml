@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="15" end="16" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="25" id="3" rel="--">
+      <node begin="0" cat="np" end="15" id="4" index="1" rel="su">
+        <node begin="0" end="1" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="met-e" end="2" graad="sup" id="6" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="groot" word="grootste"/>
+        <node begin="2" buiging="met-e" end="3" graad="basis" id="7" lemma="katholiek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="katholiek" word="katholieke"/>
+        <node begin="3" buiging="met-e" end="4" graad="basis" id="8" lemma="kerkelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="kerkelijk" word="kerkelijke"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="bibliotheek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bibliotheek" word="bibliotheek"/>
+        <node begin="6" cat="np" end="15" id="10" rel="app">
+          <node begin="6" end="7" getal="getal" id="11" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="hd" root="die" status="vol" vwtype="aanw" word="die"/>
+          <node begin="7" cat="pp" end="15" id="12" rel="mod">
+            <node begin="7" end="8" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="8" cat="np" end="15" id="14" rel="obj1">
+              <node begin="8" end="9" id="15" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="16" lemma="carisianum" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="Carisianum" word="Carisianum"/>
+              <node begin="10" cat="pp" end="15" id="17" rel="mod">
+                <node begin="10" end="11" id="18" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="11" cat="np" end="15" id="19" rel="obj1">
+                  <node begin="11" end="12" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="12" end="13" getal="mv" graad="basis" id="21" lemma="jezuiet" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Jezuieten" word="Jezuieten"/>
+                  <node begin="13" cat="pp" end="15" id="22" rel="mod">
+                    <node begin="13" end="14" id="23" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                    <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="24" lemma="Maastricht" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Maastricht" word="Maastricht"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="16" end="17" id="25" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="25" id="26" rel="vc">
+        <node begin="0" end="15" id="27" index="1" rel="su"/>
+        <node begin="17" cat="pp" end="24" id="28" rel="ld">
+          <node begin="17" end="18" id="29" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+          <node begin="18" cat="np" end="24" id="30" rel="obj1">
+            <node begin="18" end="19" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="19" buiging="met-e" end="20" graad="basis" id="32" lemma="katholiek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="katholiek" word="katholieke"/>
+            <node begin="20" buiging="met-e" end="21" graad="basis" id="33" lemma="theologisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="theologisch" word="theologische"/>
+            <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="34" lemma="hogeschool" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hogeschool" word="hogeschool"/>
+            <node begin="22" cat="pp" end="24" id="35" rel="mod">
+              <node begin="22" end="23" id="36" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="37" lemma="Amsterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Amsterdam" word="Amsterdam"/>
+            </node>
+          </node>
+        </node>
+        <node begin="24" buiging="zonder" end="25" id="38" lemma="gaan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ga" word="gegaan" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="25" end="26" id="39" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De grootste katholieke kerkelijke bibliotheek , die van het Carisianum van de Jezuieten in Maastricht , is naar de katholieke theologische hogeschool in Amsterdam gegaan .</sentence>
+</alpino_ds>

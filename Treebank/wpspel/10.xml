@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="whq" end="20" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="20" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+        <node begin="0" cat="ppart" end="20" id="5" rel="vc">
+          <node begin="0" end="1" id="6" index="1" rel="predc"/>
+          <node begin="5" buiging="zonder" end="6" id="7" lemma="noemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="noem" word="genoemd" wvorm="vd"/>
+          <node begin="2" cat="np" end="20" id="8" index="2" rel="obj1">
+            <node begin="2" end="3" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="10" lemma="groep" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="groep" word="groep"/>
+            <node begin="4" cat="np" end="20" id="11" rel="mod">
+              <node begin="4" end="5" getal="mv" graad="basis" id="12" lemma="organisme" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="organisme" word="organismen"/>
+              <node begin="6" cat="rel" end="20" id="13" rel="mod">
+                <node begin="6" end="7" getal="getal" id="14" index="3" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+                <node begin="6" cat="ssub" end="20" id="15" rel="body">
+                  <node begin="6" end="7" id="16" index="3" rel="su"/>
+                  <node begin="8" end="9" id="17" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="worden" word="worden" wvorm="pv"/>
+                  <node begin="6" cat="ppart" end="20" id="18" rel="vc">
+                    <node begin="6" end="7" id="19" index="3" rel="obj1"/>
+                    <node begin="7" buiging="zonder" end="8" id="20" lemma="vormen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vorm" word="gevormd" wvorm="vd"/>
+                    <node begin="9" cat="pp" end="20" id="21" rel="mod">
+                      <node begin="9" end="10" id="22" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+                      <node begin="10" cat="np" end="20" id="23" rel="obj1">
+                        <node begin="10" end="11" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                        <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="25" lemma="symbiose" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="symbiose" word="symbiose"/>
+                        <node begin="12" cat="pp" end="15" id="26" rel="mod">
+                          <node begin="12" end="13" id="27" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                          <node begin="13" cat="np" end="15" id="28" rel="obj1">
+                            <node begin="13" end="14" id="29" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                            <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="30" lemma="schimmel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schimmel" word="schimmel"/>
+                          </node>
+                        </node>
+                        <node begin="15" cat="pp" end="20" id="31" rel="mod">
+                          <node begin="15" end="16" id="32" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                          <node begin="16" cat="conj" end="20" id="33" rel="obj1">
+                            <node begin="16" cat="np" end="18" id="34" rel="cnj">
+                              <node begin="16" end="17" id="35" index="4" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                              <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="36" lemma="wier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wier" word="wier"/>
+                            </node>
+                            <node begin="18" conjtype="neven" end="19" id="37" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+                            <node begin="16" cat="np" end="20" id="38" rel="cnj">
+                              <node begin="16" end="17" id="39" index="4" rel="det"/>
+                              <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="40" lemma="cyanobacterie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bacterie" word="cyanobacterie"/>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="2" end="20" id="41" index="2" rel="su"/>
+      </node>
+    </node>
+    <node begin="20" end="21" id="42" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe wordt de groep organismen genoemd die gevormd worden door de symbiose van een schimmel met een wier of cyanobacterie ?</sentence>
+</alpino_ds>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="conj" end="6" id="1" rel="--">
+      <node begin="0" cat="smain" end="3" id="2" rel="cnj">
+        <node begin="0" case="nom" def="def" end="1" frame="pronoun(nwh,fir,pl,de,nom,def,wkpro)" gen="de" id="3" index="1" lcat="np" num="pl" per="fir" pos="pron" rel="su" root="we" sense="we" special="wkpro" wh="nwh" word="We"/>
+        <node begin="1" end="2" frame="verb(hebben,pl,transitive)" id="4" infl="pl" lcat="smain" pos="verb" rel="hd" root="stimuleer" sc="transitive" sense="stimuleer" tense="present" word="stimuleren"/>
+        <node begin="2" end="3" frame="noun(het,count,sg)" gen="het" id="5" lcat="np" num="sg" pos="noun" rel="obj1" root="product_her_gebruik" sense="product_her_gebruik" word="producthergebruik"/>
+      </node>
+      <node begin="3" end="4" frame="conj(en)" id="6" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="0" cat="smain" end="6" id="7" rel="cnj">
+        <node begin="0" end="1" id="8" index="1" rel="su"/>
+        <node begin="4" end="5" frame="verb(hebben,pl,transitive)" id="9" infl="pl" lcat="smain" pos="verb" rel="hd" root="ondersteun" sc="transitive" sense="ondersteun" tense="present" word="ondersteunen"/>
+        <node begin="5" end="6" frame="noun(het,count,pl)" gen="het" id="10" lcat="np" num="pl" pos="noun" rel="obj1" root="kringloop_centrum" sense="kringloop_centrum" word="kringloopcentra"/>
+      </node>
+    </node>
+  </node>
+  <sentence>We stimuleren producthergebruik en ondersteunen kringloopcentra</sentence>
+  <comments>
+    <comment>Q#150|We stimuleren producthergebruik en ondersteunen kringloopcentra|1|1|-3.110351798676683</comment>
+  </comments>
+</alpino_ds>

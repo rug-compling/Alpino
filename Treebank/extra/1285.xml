@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" lemma="men" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" rnum="sg" root="men" status="red" vwtype="pers" wh="nwh" word="Men"/>
+      <node begin="1" end="2" id="3" infl="sg3" lemma="gebruiken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="gebruik" sc="transitive" stype="declarative" tense="present" word="gebruikt" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="4" rel="obj1">
+        <node begin="2" buiging="zonder" end="3" id="5" infl="het" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" wh="nwh" word="dit"/>
+        <node begin="3" end="4" gen="het" genus="onz" getal="ev" graad="basis" id="6" lemma="effect" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="effect" word="effect"/>
+      </node>
+      <node begin="4" cat="pp" end="8" id="7" rel="mod">
+        <node begin="4" end="5" id="8" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="5" cat="conj" end="8" id="9" rel="obj1">
+          <node begin="5" end="6" gen="both" genus="zijd" getal="ev" graad="basis" id="10" lemma="bak_poeder" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" rnum="sg" root="bak_poeder" word="bakpoeder"/>
+          <node begin="6" conjtype="neven" end="7" id="11" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+          <node begin="7" end="8" gen="het" genus="onz" getal="ev" graad="basis" id="12" lemma="cake_meel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" rnum="sg" root="cake_meel" word="cakemeel"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Men gebruikt dit effect in bakpoeder of cakemeel</sentence>
+</alpino_ds>

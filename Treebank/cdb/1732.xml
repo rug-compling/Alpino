@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
+      <node begin="2" end="3" genus="masc" getal="ev" id="3" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+      <node begin="0" cat="ppart" end="11" id="4" rel="vc">
+        <node begin="0" end="1" id="5" lemma="tevoren" pos="pp" postag="BW()" pt="bw" rel="mod" root="tevoren" word="Tevoren"/>
+        <node begin="2" end="3" id="6" index="1" rel="su"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="okker" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj2" root="Okker" word="Okker"/>
+        <node begin="4" cat="ap" end="7" id="8" rel="mod">
+          <node begin="4" cat="np" end="6" id="9" rel="me">
+            <node begin="4" end="5" id="10" lemma="negentig" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="negentig" word="negentig"/>
+            <node begin="5" end="6" getal="mv" graad="basis" id="11" lemma="minuut" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="minuut" word="minuten"/>
+          </node>
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="12" lemma="lang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="lang" word="lang"/>
+        </node>
+        <node begin="7" cat="ap" end="9" id="13" rel="mod">
+          <node begin="7" buiging="zonder" end="8" graad="basis" id="14" lemma="bijzonder" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="bijzonder" word="bijzonder"/>
+          <node begin="8" buiging="zonder" end="9" graad="basis" id="15" lemma="sterk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="sterk" word="sterk"/>
+        </node>
+        <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="16" lemma="partij" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="svp" root="partij" word="partij"/>
+        <node begin="10" buiging="zonder" end="11" id="17" lemma="geven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geef" word="gegeven" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="11" end="12" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Tevoren had hij Okker negentig minuten lang bijzonder sterk partij gegeven .</sentence>
+</alpino_ds>

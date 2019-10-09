@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="9" end="10" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="25" id="2" rel="--">
+      <node begin="0" cat="smain" end="9" id="3" rel="cnj">
+        <node begin="0" end="1" id="4" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="mod" root="eens" word="EENS"/>
+        <node begin="1" end="2" id="5" lemma="vormen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="vorm" word="VORMDEN" wvorm="pv"/>
+        <node begin="2" cat="conj" end="7" id="6" rel="su">
+          <node begin="2" cat="np" end="5" id="7" rel="cnj">
+            <node begin="2" cat="advp" end="4" id="8" index="1" rel="mod">
+              <node begin="2" end="3" id="9" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+              <node begin="3" end="4" id="10" lemma="alleen" pos="adv" postag="BW()" pt="bw" rel="hd" root="alleen" word="alleen"/>
+            </node>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="11" lemma="Europa" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Europa" word="Europa"/>
+          </node>
+          <node begin="5" conjtype="neven" end="6" id="12" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="2" cat="np" end="7" id="13" rel="cnj">
+            <node begin="2" end="4" id="14" index="1" rel="mod"/>
+            <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="15" lemma="Amerika" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Amerika" word="Amerika"/>
+          </node>
+        </node>
+        <node begin="7" cat="np" end="9" id="16" rel="obj1">
+          <node begin="7" end="8" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="18" lemma="continent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="continent" word="continent"/>
+        </node>
+      </node>
+      <node begin="10" conjtype="neven" end="11" id="19" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+      <node begin="11" cat="smain" end="25" id="20" rel="cnj">
+        <node begin="11" cat="conj" end="15" id="21" rel="su">
+          <node begin="11" cat="np" end="13" id="22" rel="cnj">
+            <node begin="11" end="12" id="23" index="2" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+            <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="24" lemma="Afrika" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Afrika" word="Afrika"/>
+          </node>
+          <node begin="13" conjtype="neven" end="14" id="25" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="11" cat="np" end="15" id="26" rel="cnj">
+            <node begin="11" end="12" id="27" index="2" rel="mod"/>
+            <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="28" lemma="Arabie" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Arabie" word="Arabie"/>
+          </node>
+        </node>
+        <node begin="15" end="16" id="29" lemma="vormen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="vorm" word="vormden" wvorm="pv"/>
+        <node begin="16" cat="ap" end="23" id="30" rel="mod">
+          <node begin="16" cat="np" end="22" id="31" rel="me">
+            <node begin="16" end="17" id="32" lemma="ongeveer" pos="adv" postag="BW()" pt="bw" rel="mod" root="ongeveer" word="ongeveer"/>
+            <node begin="17" cat="conj" end="20" id="33" rel="det">
+              <node begin="17" end="18" id="34" lemma="zestig" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="cnj" root="zestig" word="zestig"/>
+              <node begin="18" end="19" id="35" lemma="tot" pos="vg" postag="VZ(init)" pt="vz" rel="crd" root="tot" vztype="init" word="tot"/>
+              <node begin="19" end="20" id="36" lemma="zeventig" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="cnj" root="zeventig" word="zeventig"/>
+            </node>
+            <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="37" lemma="miljoen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="miljoen" word="miljoen"/>
+            <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="38" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mod" root="jaar" word="jaar"/>
+          </node>
+          <node begin="22" end="23" id="39" lemma="geleden" pos="adj" postag="BW()" pt="bw" rel="hd" root="geleden" word="geleden"/>
+        </node>
+        <node begin="23" cat="np" end="25" id="40" rel="obj1">
+          <node begin="23" end="24" id="41" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="42" lemma="land" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="land" word="land"/>
+        </node>
+      </node>
+    </node>
+    <node begin="25" end="26" id="43" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>EENS VORMDEN niet alleen Europa en Amerika een continent , maar ook Afrika en Arabie vormden ongeveer zestig tot zeventig miljoen jaar geleden een land .</sentence>
+</alpino_ds>

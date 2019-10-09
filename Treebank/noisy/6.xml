@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="Nijmegen" pos="name" rel="su" root="Nijmegen" word="Nijmegen"/>
+      <node begin="1" end="2" id="3" lemma="ben" pos="verb" rel="hd" root="ben" word="is"/>
+      <node begin="2" cat="np" end="11" id="4" rel="predc">
+        <node begin="2" end="3" id="5" lemma="een" pos="det" rel="det" root="een" word="een"/>
+        <node begin="3" end="4" id="6" lemma="voorbeeld" pos="noun" rel="hd" root="voorbeeld" word="voorbeeld"/>
+        <node begin="4" cat="pp" end="11" id="7" rel="mod">
+          <node begin="4" end="5" id="8" lemma="van" pos="prep" rel="hd" root="van" word="van"/>
+          <node begin="5" cat="np" end="11" id="9" rel="obj1">
+            <node begin="5" end="6" id="10" lemma="een" pos="det" rel="det" root="een" word="een"/>
+            <node begin="6" end="7" id="11" lemma="gemeente" pos="noun" rel="hd" root="gemeente" word="gemeente"/>
+            <node begin="7" cat="rel" end="11" id="12" rel="mod">
+              <node begin="7" end="8" id="13" index="1" lemma="die" pos="pron" rel="rhd" root="die" word="die"/>
+              <node begin="7" cat="ssub" end="11" id="14" rel="body">
+                <node begin="7" end="8" id="15" index="1" rel="su"/>
+                <node begin="8" cat="np" end="10" id="16" rel="obj1">
+                  <node begin="8" end="9" id="17" lemma="dit" pos="det" rel="det" root="dit" word="dit"/>
+                  <node begin="9" end="10" id="18" lemma="systeem" pos="noun" rel="hd" root="systeem" word="systeem"/>
+                </node>
+                <node begin="10" end="11" id="19" lemma="pas_toe" pos="verb" rel="hd" root="pas_toe" word="toepast"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="20" lemma="." pos="punct" rel="--" root="." word="."/>
+  </node>
+  <sentence>Nijmegen is een voorbeeld van een gemeente die dit systeem toepast .</sentence>
+</alpino_ds>

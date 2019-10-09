@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="whq" end="12" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="12" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+        <node begin="2" end="3" getal="ev" id="5" index="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="0" cat="inf" end="12" id="6" rel="vc">
+          <node begin="0" end="1" id="7" index="1" rel="mod"/>
+          <node begin="2" end="3" id="8" index="2" rel="su"/>
+          <node begin="5" buiging="zonder" end="6" id="9" lemma="benaderen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="benader" word="benaderen" wvorm="inf"/>
+          <node begin="3" cat="np" end="12" id="10" rel="obj1">
+            <node begin="3" buiging="met-e" end="4" graad="basis" id="11" lemma="buitenlands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="buitenlands" word="buitenlandse"/>
+            <node begin="4" end="5" getal="mv" graad="basis" id="12" lemma="web_site" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="web_site" word="websites"/>
+            <node begin="6" cat="rel" end="12" id="13" rel="mod">
+              <node begin="6" end="7" getal="getal" id="14" index="3" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+              <node begin="6" cat="ssub" end="12" id="15" rel="body">
+                <node begin="6" end="7" id="16" index="3" rel="su"/>
+                <node begin="10" end="11" id="17" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+                <node begin="6" cat="ppart" end="12" id="18" rel="vc">
+                  <node begin="6" end="7" id="19" index="3" rel="obj1"/>
+                  <node begin="7" cat="pp" end="10" id="20" rel="mod">
+                    <node begin="7" end="8" id="21" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                    <node begin="8" cat="np" end="10" id="22" rel="obj1">
+                      <node begin="8" buiging="zonder" end="9" getal="ev" id="23" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+                      <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="24" lemma="land" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="land" word="land"/>
+                    </node>
+                  </node>
+                  <node begin="11" buiging="zonder" end="12" id="25" lemma="blokkeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="blokkeer" word="geblokkeerd" wvorm="vd"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="26" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe kan ik buitenlandse websites benaderen die in mijn land zijn geblokkeerd ?</sentence>
+</alpino_ds>

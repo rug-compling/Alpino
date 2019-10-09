@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="7" end="8" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="0" cat="smain" end="24" id="3" rel="--">
+      <node begin="0" cat="pp" end="11" id="4" rel="mod">
+        <node begin="0" end="1" id="5" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="Volgens"/>
+        <node begin="1" cat="np" end="11" id="6" rel="obj1">
+          <node begin="1" end="2" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" getal="mv" graad="basis" id="8" lemma="cijfer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="cijfer" word="cijfers"/>
+          <node begin="3" cat="pp" end="11" id="9" rel="mod">
+            <node begin="3" end="4" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="4" cat="np" end="11" id="11" rel="obj1">
+              <node begin="4" end="5" getal="mv" graad="basis" id="12" lemma="autoverkoop" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verkoop" word="autoverkopen"/>
+              <node begin="6" end="7" getal="mv" graad="basis" id="13" lemma="importwagen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="wagen" word="importwagens"/>
+              <node begin="8" cat="pp" end="11" id="14" rel="mod">
+                <node begin="8" end="9" id="15" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="9" cat="np" end="11" id="16" rel="obj1">
+                  <node begin="9" end="10" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="18" lemma="VS" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="VS" word="VS"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="11" end="12" id="19" lemma="doen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="doe" word="doen" wvorm="pv"/>
+      <node begin="12" cat="np" end="15" id="20" rel="su">
+        <node begin="12" end="13" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="13" buiging="met-e" end="14" graad="basis" id="22" lemma="Europees" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Europees" word="Europese"/>
+        <node begin="14" end="15" getal="mv" graad="basis" id="23" lemma="fords" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="ford" word="Fords"/>
+      </node>
+      <node begin="15" end="16" genus="onz" getal="ev" id="24" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="16" cat="pp" end="21" id="25" rel="mod">
+        <node begin="16" end="17" id="26" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="17" cat="np" end="21" id="27" rel="obj1">
+          <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="28" lemma="verhouding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verhouding" word="verhouding"/>
+          <node begin="18" cat="pp" end="21" id="29" rel="mod">
+            <node begin="18" end="19" id="30" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="19" cat="np" end="21" id="31" rel="obj1">
+              <node begin="19" buiging="met-e" end="20" graad="basis" id="32" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
+              <node begin="20" end="21" getal="mv" graad="basis" id="33" lemma="merk" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="merk" word="merken"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="21" cat="ap" end="24" id="34" rel="predc">
+        <node begin="21" end="22" id="35" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+        <node begin="22" end="23" id="36" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
+        <node begin="23" buiging="zonder" end="24" graad="sup" id="37" lemma="best" pos="adj" positie="vrij" postag="ADJ(vrij,sup,zonder)" pt="adj" rel="hd" root="goed" word="best"/>
+      </node>
+    </node>
+    <node begin="24" end="25" id="38" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Volgens de cijfers van autoverkopen ( importwagens ) in de VS doen de Europese Fords het in verhouding met andere merken niet zo best .</sentence>
+</alpino_ds>

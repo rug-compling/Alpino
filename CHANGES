@@ -1,0 +1,634 @@
+* bug fixed: interaction of with_dt with skips
+
+* the binary version no longer requires boost (note that
+some of the other binaries in bin still need boost)
+
+* the binary version now is compiled with tcltk 8.6
+
+* we now also have <parser skips= cats=> for automatically produced parses
+
+* automatic correction of some spell mistakes is now recorded in the history value, so these
+are now recognizable
+
+* dtview dttred now also maintain metadata and sentid; similarly for
+the dtcanonicalize.py script
+
+* options changed 
+
+-xml_canonical File
+
+writes canonical version of xml from File to standard output
+
+-xml_canonical_overwrite File1 File2 .. Filen
+
+overwrites canonical version of xml in each file
+
+* metadata is now maintained in xml_canonical and xml_canonical_overwrite; likewise for sentid attribute
+
+* meta notation  [ @wordid Id ] removed again; not thought to be useful
+
+* Derivbank is removed from Alpino, at least for now, due to
+  segmentation violations
+
+* bug where ] is directly followed by [ in meta
+
+* @sentid output in <sentence>, value of flag current_ref; only used in output, not read in;
+only used if xml_format_frame=on. 
+
+* new meta notation [ @add_lex Word W ] can be used to treat word W as if it was written as Word
+
+* [ @phantom ] in interaction with converse_unary, should now no longer produce unary branching
+
+* [ @folia Lemma Postag W ] meta-notation: assign given Lemma and Postag to W. Note that this
+mechanism only ensures that the given postag and lemma notation ends up in the resulting XML,
+but no effort is made to ensure that the Alpino analysis is actually consistent with those
+assignments.
+
+* bug report of Andreas van Cranenburgh "geen omkijken hebben naar" is now corrected
+
+* for Vincent: no longer open(bracket) etc in xml output
+
+* for Ineke/Liesbeth: no longer _DIM in lemma; lemma van meisje=meisje
+
+* for QtLeap:
+  -generate
+  will read ADT in XML from stdin (one XML per line!)
+
+* for QtLeap:
+  end_hook=print_generated_sentence 
+  will print the generated sentence to stdout
+
+* for QtLeap development:
+  end_hook=adt_xml_dump
+  will print ADT XML to stdout (one XML per line)
+
+* generator: no longer produces permutations of various list-valued dependency labels
+such as mod, cnj, crd, app
+
+* as a result, you should not use the canonical representation for building adt: order_canonical_dt=off
+
+* for Kilian: end_hook=postags  and end_hook=pts will produce long (short) form of CGN-style part-of-speech labels
+
+* generator: repaired several bugs that were introduced lately.
+Also: generate punctuation (end of sentence), as well as a
+capital at the beginning of a sentence.
+
+* if you want to compile Alpino from sources, you no longer need
+Jan Daciuk's s_fsa package: the .fsa and .tpl packages are part
+of the source distribution, for ease of installation.
+
+* xml output now also contains lemma attribute
+
+* pos-tagger now returns/reports -log probabilities, normalized per position
+in the string
+
+* much improved CGN/D-COI/LASSY-like part-of-speech tags. Postags should
+now be assigned to all words in the input. 
+
+end_hook=compare_cgn
+
+can be used to evaluate the postag output with respect to the postags
+given in the Treebank.
+
+command 
+|: t_cgn 
+gives the list of postags for the current sentence as
+provided in the Treebank. Similar for
+|: t_cgn Key
+for the sentence with that key.
+
+the command
+|: cgn
+provides the part-of-speech tags of the current parsed object. Similarly,
+|: cgn ObjNo
+gives the part-of-speech tags for that specific object.
+
+* now provides CGN/D-COI/LASSY-like part-of-speech tags. If you want a
+tagger, use "end_hook=postags". Also note the command "postags Obj" on
+the command line interface, to see the postags of object number
+Obj. The postags are available in XML-output as the value of the
+attribute "postag". As in Lassy, the information in the postag is
+broken up in smaller pieces, redundantly, in separate XML-attributes
+as well.  For some cases, the postag output may still be missing
+(e.g., "fixed parts" don't get postags assigned).
+
+* fluency and parse-disambiguation model are now "multi-domain" 
+  models. The flag "application_type" can be used to inform the
+  models which domain is current. Default: "news". Other known
+  domains are "qa" for questions, "ovis" for Ovis data.
+
+* skips: do not count the number of skipped tokens, but the number
+of skips (multi-word-skips only count as a single skip)
+
+* many minor changes in lexical lookup, to be more robust against very
+long gargage inputs
+
+* boost library is now a new dependent of Alpino - earlier, the relevant Boost 
+files were part of the Alpino distribution itself. Thus, you may need to install
+Boost first, if you want to use Alpino!
+
+* "of" now also is alsof_complementizer and modifier-complementizer
+
+* improved efficiency of longest match checking. In one (very rare) case,
+this reduced parsing time from 3 minutes to 4 seconds.
+
+* new options:
+
+  -init_dict    initialize all dictionaries
+  -init_dict_p   ,,                          for parsing
+  -init_dict_g   ,,                          for generation
+
+* support for threads (SWI)
+
+* support for fork (SWI + SICStus)
+cf. Makefile.start_server and webdemo.py for examples.
+
+=====================================================================================
+
+* grammar:
+  don't allow extraposition of VP via exs from attributive adjectives
+
+* grammar:
+  pp's of adjectives are now selected with extraposition, to allow for
+  inherited pp's as in 'gepaard gaande met'
+
+  extraposition of AP out of NP, only if there is a comma to reduce
+  increase of search space
+  "de enige producten waarvoor een prijs geldt , uitgedrukt in Europese rekeneenheden"
+
+* renamed many module names, so that most names are readily understood
+  to be part of Alpino:
+
+  hdrug_...
+  alpino_...
+
+  remaining modules without such a prefix:
+
+  derivbank
+  corpusreader
+  pro_fadd
+  zlib
+
+===========================================================================
+
+* Alpino/Hdrug can now be loaded as a library in whatever "master" module,
+and everything (including GUI) should still work!
+
+===========================================================================
+
+* UTF8 encoding used and expected throughout! 
+
+===========================================================================
+
+* port for SWI PROLOG! with help from Jan Wielemakers.
+
+===========================================================================
+
+* new XML attribute for MWU nodes: mwu_root which represents the root
+  of the mwu. Useful to treat "ter zake" and "terzake" identical, etc. Also
+  useful (and motivated by) generation.
+
+* triples output will, by default, first undo MWU.
+  If you don't want this, use triples_undo_mwu=off
+
+* much improved version of generator. Still with limitations.
+
+* initial version of generator. Unusable still.
+
+* construction of derivation tree of PP's is now fully monotonic (in particular
+for cases where NP is not obj1, but pobj1 or se) (to facilitate generation)
+
+* changed treatment of mexs and imexs, so that MODS are properly [] if
+there are none (to facilitate generation)
+
+* there now is a Windows version
+
+* the perl script for named entity classification is no longer required
+(to facilitate the Windows port of Daniel de Kok)
+
+* CVS ==> SVN
+
+* coordination root-whq
+
+* voor-PP as obj2
+
+* short questions with modifier
+  "wanneer niet"
+
+* dp dp dp "dit allemaal omdat"
+
+* locative adverbs now always can act as postnp adverbs
+
+* many Flemish words/expressions (after some initial error mining of
+Mediargus data)
+
+* added treatment of OP-infinitives 
+  "de dijk staat op doorbreken"
+
+* changed treatment of UIT-infinitives: back to CGN analysis (VC)
+  "uit vissen"
+
+* treatment of pre-CP modifiers "een uur voordat de wedstrijd begon"
+
+* treatment of pre-PP modifiers "een uur voor de wedstrijd"
+
+* "(niet) meer/minder dan/als" NUM now treated as MWU modifier
+
+* preposition(mod_sbar)
+  "van toen ik drie jaar oud was"
+  "voor als ik jarig ben"
+
+* coordinations such as "zowel de linker- als de rechteroever
+
+* wh-questions allow wh "in situ" "ik wil weten wie waarvoor verantwoordelijk
+is"
+
+* short relatives: "drie mensen raakten gewond [van wie drie ernstig]
+
+* better feature selection: better and smaller disambiguation model; perhaps
+not better for cdb
+
+* mod_postposition does no longer require case=obl ("ikzelf uitgezonderd")
+
+* nominalized comparatives can take ME
+
+* complementizer(np) can modify nouns
+
+* adjective "waard" takes obj1, not me.
+
+* some verbs which were both refl and transitive, now only are
+  transitive
+
+* year's are now n rather than np
+  'een mooi 1999' 'in 1998 , hij was toen elf , ...'
+
+* predm + wh. "met z'n hoevelen komen jullie?
+              "als welk personage wilt u terugkomen na uw dood?"
+
+  also allow als+NP +wh
+
+* "PP thuis" no longer annotated as "thuis" being a modifier of PP, but of
+  NP. "bij ons boven" "bij ons in de buurt"
+
+   added various locatives as postn_adverbs...
+
+* meta notation [ @mwu ... ] to indicate that a sequence of words is a
+multi-word-unit. The effect is, that any competing lexical categories are
+removed. If Alpino does not recognize the sequence of words as a lexical 
+category, then nothing happens (perhaps use the @postag notation in that
+case).
+
+* -veryfast: uses prefix filter. Now is the default for the
+binary version. Should be a pleasant surprise for most users
+that the parser now is much faster!!
+
+* -veryfast: uses fourgram-guides, and parse_candidates_beam=500.
+Comparison with -fast: drop in accuracy of 1% (90% -> 89%), but
+four times faster. Is very sensitive to changes in grammar, though,
+but this should only matter for me ;-)
+
+* lexical analysis: redo lexical analysis with larger pos_tagg_n
+  value in case of words that lose all their categories; 
+
+* guides now based on four years training data and fourgrams; 
+no longer use filter_frames_aggressively
+
+* allow more comma's/dashes in coordination
+
+* allow short question as conjunct "wie komt er en wie niet"
+
+* allow short question with vp[psp]
+
+* allow adv_predm as well to the right of verb-cluster
+
+* topic-drop: only if nform=norm
+
+* allow PPs and CPs that have : instead of complement (for Wikipedia)
+
+* now treats DP [NP, omdat ...]
+
+* now treats wees/weest with subject "weest u maar blij"...
+
+* now treats "hoe het zover *is* kunnen komen"
+
+* now treats first-person subjunctive "ik moge u erop wijzen" (for
+Europarl)
+
+* now treats extraposed PREDM
+
+* now treats "ik wil beginnen met te zeggen ..." (for Europarl)
+
+* verb-second is now treated by using a global-variable mechanism. Motivated
+  by the desire to treat coordinations of vgapped VPs. So these are
+  now allowed.
+
+* rules max_wh_adv_* generalized to allow non-adv first daughters
+
+* Barbara found a mistake in the T2/Makefile for computing
+  CA-score. Is now ok.
+
+* parse_candidates_beam default value for -fast has changed from 1000
+  to 3000 because of increased efficiency. So we trade some of that efficiency 
+  for increased accuracy.
+
+* end_hooks frames and leftcorners are now written to standard error
+  output, rather than standard output, because of incomprehensible
+  problem because of which standard output sometimes unexpectedly
+  stopped producing output (after parser timed out)
+
+* end_coord(pp_loc_adverb,conj) rule is removed, because "in A en
+  elders" is now PP coordination because:
+
+* treat semi-er pronoun "elders". Is a saturated preposition now,
+  which selects post-p "vandaan".
+
+* only allow certain frames for aux_simple (zijn) arguments. Similarly for
+  aci_simple (hebben).
+
+* forbid indefinite nominalizations as objects for verbs that (in
+  other frame) select infinitival vc/vp.
+
+* for multiple orderings in subcat lists, only allow non-default ordering
+in case objects are not topicalized and passivized.
+
+* forbid cleft-vp's in contexts where subject is ignored. Similarly, often
+  forbid special nforms for such subjects.
+
+* added sentences to extra. "Dat/dit heeft het ministerie vandaag bevestigd" 
+in the hope that parser picks up on the intended reading.
+
+* treebank: removed UNKNOWN pos-values, and some other mistakes found by
+  dtchecks
+
+* many speed improvements - due to changes in argument_realization &tc, 
+  where we employ more delayed evaluation. Also, changed inheritance of
+  complements of raising and ACI verbs, by allowing certain elements 
+  (refl, er, compl-pp) to be skipped. Same as for subject. Quite elegant!
+
+  so we can now analyze 'omdat wij daarop de kinderen niet laten wachten'
+
+  average parse times on cdb drops from 40 to less than 20 sec/sents.
+
+* only do er-inheritance in sentences with variant of er
+
+* wappend: counter counts back rather than up
+
+* vp arguments etc: keep track of +/- cleft. Also, often require 
+  that (unexpressed) subject has nform=norm. *Hij slaapt om te regenen
+
+* lex_types: het_subj_or_topicalize delay choice of opt_het vs. obl_het
+
+* change analysis of "gelegen liggen" and "gelegen zijn"
+
+* more disjunctions in fixed subcat frames with special rules, to reduce
+  spurious ambiguities
+
+* repaired bug in mouse button <2> press in parse widget
+
+* special passive frame for pseudo passive verbs such as 
+  "staan, zitten, ..." which do not allow impersonal passive
+
+* nonp_pred frame for adjectives
+
+* rules: new rule for DP[ADV ADV]
+
+* filter_tag: check that there is potential te-verb with appr HZ
+
+* unknowns: make sure all-capital word forms receive correct surface form
+
+* unknowns: recognize more verbs in context of "te"
+
+* removed "trick" in lc.pl to reduce spurious ambiguities, because it 
+  does not always work. Result: more spurious ambiguities :-(
+
+* pos_tagger: added "offline" mode for Yan's experiments
+
+* hdrug: added default output / medium
+
+* removed obsolete code (probably no longer working anyway) cgn_tag, 
+  universal_tag, thistle, ldplayer, dtrestore, dtedit
+
+* much faster -veryfast option. Accuracy drops a bit further. To give you
+  some idea, on the cdb corpus, the normal mode of operation (-fast) would
+  require about 40 seconds per sentence, for an accuracy of over 89%.  With
+  -veryfast, accuracy drops to about 85%. However, parsing takes only about
+  4 seconds per sentence.
+
+* treatment of er_nouns has changed, they now always start out as loc_adverbs,
+  except for er which starts as er_vp_adverb
+
+* speed improvements (no_memo for v2_vp, better linking, particles not always
+  surviving; me arguments of comparatives of restricted subn...)
+
+* in xml dump, new attribute 'sense' which combines some aspects of root
+  and subcat
+
+* new feature (auxiliary distribution technique) to improve accuracy somewhat,
+  z_f2
+
+* modified topicalized verb-clusters, now also allow some other vforms
+  "Helemaal uitsluiten wil ik het niet" "Niet ontkend kan worden dat ..."
+
+* allow questions with topic-drop. "Vindt u niet erg?"
+
+* allow more tags in slash-compounds
+
+* efficiency: don't even consider verbs with particles/fixed that do not
+  occur in the input string
+
+* nucl-sat structure where sat is a question "als ik vraag of je komt, kom
+  je dan?"
+
+* further sub-type of strong/weak pronouns, to allow for certain weak
+  pronouns to occur as predc "was het wat? het was me wat. wordt het wat?
+  hij denkt dat hij heel wat is"
+
+* nominalizations: allow passive nominalizations as in 
+  "uitgeschakeld worden is een ramp". Note these require inverted
+  word order
+
+* much improved/changed unknowns.pl. Sequences of unknown/foreign words now
+  are treated as proper-names, rather than nouns. Listed a number of such
+  frequent terms as proper names in Lexicon/misc.pl
+
+* allow right-node-raising in PP, as in "het analyseren van en varieren op NP"
+
+* enig(e) is ambiguous det/num and mod/adj
+  
+  enige "er is er maar 1" => adj/mod   "als enige"   "de enige"
+  enige "leuke"           => adj/mod   "een enige plaat!"
+  enige "some"            => num/det   "enige bezwaren"
+
+* hstem now also for nominalizations. Eg:
+  "we hebben er geen omkijken meer naar"
+
+* "uit eten gaan" "uit vissen zijn". According to CGN, these are VC 
+complements. We disagree, and assign LD role. Clearly, the "uit V" phrase
+is not a verbal complement. It occurs where directional LD complements
+can occur, and it can be passivized.
+
+Ik stuur hem uit eten
+Hij werd uit eten/bedelen gestuurd
+
+* DIFFERENT CODING feature "rightx"
+  to disallow extraposition from TAG to the right of NUCL in cases such as:
+   "Hij vertelde_i ons : ik ga niet vanavond_i"
+
+* DIFFERENT CODING separate rule for adjectives selecting NP depending
+if the NP is OBJX or ME. In the latter case, no modification is allowed
+between ME and HD.
+
+* NEW CONSTRUCTION comparative-phrase without comparative 
+  "zo snel ik kan"
+  "zoveel je wilt"
+
+also allows extraposition of such modifiers
+  "ik heb gerend zo hard (als) ik kon"
+
+analysis of "zoveel" as a relative has now been removed
+
+* ANNOTATION in questions, most "Wat is NP?" is now analysed in a way that establishes
+that "Wat" is the predc. In contrast, "Wie is NP?" is mostly analysed with
+the "Wie" as su.
+
+* NEW CONSTRUCTION allow sbar complementizers with measure/tmp NPs
+"twee dagen voordat ..."
+"elke keer als ..."
+
+* NEW CONSTRUCTION allow more TAG in between DP DP
+   Jammer hè , dat hij niet komt
+   Geweldig hè , hij komt !
+   Mooi hè , dat wereldrecord
+   Ik vertrok hè , het was al laat
+
+* ANNOTATION "als" and "zoals" now always are treated as complementizers projecting a
+cmp/body structure. This is in accordance with ANS.
+This also includes cases formely treated as PC (==> PREDC)
+
+* BUG FIX new treatment of skippables (cf below) leads to bugs in parser, if
+subsumption check is used for equivalent items. Now the subsumption
+check is replaced by variant check. This is correct, but slower.
+The incorrect version sometimes lead to a situation where the parser
+did not produce a parse at all!
+
+* NEW CONSTRUCTION sv1 modifier with sbar complement
+   We moeten opschieten , willen we dat we op tijd komen
+
+* NEW CONSTRUCTION now names are allowed as APPOS of other names, as long as they have the 
+same NE-class. NE-class is used only for names that are listed in the
+dictionary
+
+* NEW CONSTRUCTION R-PP with modal_adverb
+    er pal tegenover ...
+
+* DIFFERENT CODING treatment of (optional) het in sbar-subj construction has changed, to
+limit spurious ambiguities
+
+* ANNOTATION "geen .. meer" in NP is no longer treated with "meer" modifiying "geen".
+In most cases, "meer" is analyzed as a VP modifier. Cf. 
+        *geen geld meer heb ik
+
+* MAJOR DIFFERENCE treatment of quotes and other skippables. Skips are only allowed for
+histories if no history is possible without that number of skips. Therefore,
+expected skippables (brackets, quotes) are now more often introduced by
+rule.
+
+* NEW CONSTRUCTION Flemish inversion in v-cluster
+    In Vlaanderen zou je kunnen opgebeld worden 
+    In Vlaanderen zou hij kunnen te vinden zijn
+    In Vlaanderen zou hij kunnen aan het zwerven zijn
+
+* various minor changes to reduce spurious ambiguities
+
+(summer 2007)
+
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+
+(begin of D-COI)
+
+dependency structures
+---------------------
+
+DONE - all words have a node (also those nodes not taking part in analysis) as in CGN
+DONE - now also assigns DLINK relation as in CGN
+DONE - id for each node
+DONE - version for each tree
+DONE - "rangtelwoorden" are now mod as in CGN
+DONE - no more mwu, begin=end+1 as in CGN
+DONE - analysis of 'te-V' as in CGN
+DONE - top element is now called 'alpino_ds' rather than 'top'
+
+- cat for each (?) node (at least NP's, PP's, ADVP's and AP's)
+
+- add option to construct more elaborated features (for cat, as for pos),
+  e.g. agreement on NP-nodes.
+
+Motivatie voor resterende verschillen tussen CGN en D-COI
+---------------------------------------------------------
+
+1. wat betreft obj1/vc:
+
+* in CGN worden alle "groepsvormende" vp complementen VC. OK.   
+* daarnaast worden aan werkwoorden zoals "dwingen" die een (om)-te
+  complement nemen, maar niet groepsvormend zijn, en wel een NP obj1
+  hebben de VC rol toegekend.
+* Voor andere werkwoorden die niet groepsvormend zijn maar wel een (om)-te
+  complement nemen, wordt label OBJ1 gebruikt.
+
+Dit vind ik "minder geslaagd". Want:
+- werkwoorden die soms wel/soms niet groepsvormend zijn zoals "proberen"
+  moeten dan soms OBJ1/soms VC toekennen. Maar je kunt niet altijd aan
+  de syntax zien of er groepsvorming optreedt:
+
+     .. omdat hij probeert te slapen
+
+  dit introduceert dus flauwe ambiguiteiten.
+
+- werkwooren die soms wel/soms niet OBJ1-NP nemen worden op vergelijkbare
+  manier hybride:
+
+     .. omdat wij jullie helpen [ VC de straat schoon te houden ]
+     .. omdat wij        helpen [ OBJ1 de straat schoon te houden ]
+
+  terwijl je toch zou verwachten dat in beide gevallen de rol van de VP
+  dezelfde is?
+Om deze problemen te vermijden luidt het voorstel: VP complementen krijgen
+ALTIJD de relatie VC en nooit de relatie OBJ1.
+
+
+
+Voor finiete zinscomplementen is een vergelijkbare redenering op te zetten,
+die wellicht iets minder overtuigend is. Ook bij finiete zinscomplementen
+(die dus in CGN altijd OBJ1 worden) lijkt het soms mogelijk een "echte"
+NP OBJ1 te hebben, die ook weer optioneel kan zijn:
+
+
+ik bel wel even of hij komt
+ik bel hem wel even of hij komt
+ik werd gebeld of ik kwam
+
+(idem voor "mailen", "verzoeken" (in hedendaags NL), "vragen", "waarschuwen")
+Het voorstel is dan ook om ook finiete zinscomplementen het label VC toe te
+kennen.
+
+Merk op dat een transformatie van "oude" naar "nieuwe" representaties
+betrekkelijk eenvoudig is: alle OBJ1 die oti, ti, smain zijn worden voortaan
+VC.
+
+Een verder argument om finiete en niet-finiete complementen dezelfde rol 
+toe te kennen ligt in de observatie dat een hoofd vaak een zinsdeel-achtig
+complement vereist, maar dat dit complement zowel een finiete als een 
+niet-finiete zin kan zijn.
+
+===
+
+TODO: annotatie guidelines voor geschreven tekst
+
+- voetnoeten
+- bladzijde nummering

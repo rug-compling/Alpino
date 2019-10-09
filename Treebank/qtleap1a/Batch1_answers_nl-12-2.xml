@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" buiging="met-e" end="1" getal-n="zonder-n" id="2" lemma="deze" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(aanw,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="su" root="deze" vwtype="aanw" word="Deze"/>
+      <node begin="1" end="2" id="3" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
+      <node begin="2" buiging="zonder" end="3" graad="basis" id="4" lemma="rechts" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="rechts" word="rechts"/>
+      <node begin="3" cat="pp" end="6" id="5" rel="ld">
+        <node begin="3" end="4" id="6" lemma="onderin" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onderin" vztype="init" word="onderin"/>
+        <node begin="4" cat="np" end="6" id="7" rel="obj1">
+          <node begin="4" buiging="zonder" end="5" getal="ev" id="8" lemma="je" naamval="stan" npagr="agr" pdtype="det" persoon="2v" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="je" status="red" vwtype="bez" word="je"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="bureau_blad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bureau_blad" word="bureaublad"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Deze staat rechts onderin je bureaublad .</sentence>
+</alpino_ds>

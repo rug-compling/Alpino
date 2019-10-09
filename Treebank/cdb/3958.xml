@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="4" end="5" id="2" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="5" buiging="met-e" end="6" getal-n="mv-n" graad="basis" id="3" index="1" lemma="veel" naamval="stan" pdtype="grad" pos="noun" positie="nom" postag="VNW(onbep,grad,stan,nom,met-e,mv-n,basis)" pt="vnw" rel="su" root="veel" vwtype="onbep" word="velen"/>
+      <node begin="0" cat="ppart" end="8" id="4" rel="vc">
+        <node begin="0" cat="pp" end="4" id="5" rel="pc">
+          <node begin="0" end="1" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="Van"/>
+          <node begin="1" cat="np" end="4" id="7" rel="obj1">
+            <node begin="1" end="2" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="9" lemma="woord" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="woord" word="woord"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="10" lemma="vergeving" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="app" root="vergeving" word="vergeving"/>
+          </node>
+        </node>
+        <node begin="5" end="6" id="11" index="1" rel="su"/>
+        <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="12" lemma="suikergoed" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="suikergoed" word="suikergoed"/>
+        <node begin="7" buiging="zonder" end="8" id="13" lemma="maken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="maak" word="gemaakt" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Van het woord vergeving hebben velen suikergoed gemaakt .</sentence>
+</alpino_ds>

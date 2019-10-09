@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="31" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="4" end="5" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="5" end="6" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="30" id="4" rel="--">
+      <node begin="0" cat="conj" end="16" id="5" index="1" rel="su">
+        <node begin="0" cat="np" end="4" id="6" rel="cnj">
+          <node begin="0" cat="mwu" end="2" id="7" rel="hd">
+            <node begin="0" end="1" id="8" lemma="Albert" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Albert" spectype="deeleigen" word="Albert"/>
+            <node begin="1" end="2" getal="ev" id="9" lemma="niks" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="mwp" root="Niks" status="vol" vwtype="onbep" word="Niks"/>
+          </node>
+          <node begin="3" end="4" id="10" lemma="27" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="27" word="27"/>
+        </node>
+        <node begin="6" cat="np" end="9" id="11" rel="cnj">
+          <node begin="6" buiging="zonder" end="7" getal="ev" id="12" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="13" lemma="vrouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vrouw" word="vrouw"/>
+          <node begin="8" end="9" genus="genus" getal="ev" graad="basis" id="14" lemma="Theresa" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Theresa" word="Theresa"/>
+        </node>
+        <node begin="9" conjtype="neven" end="10" id="15" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="10" cat="np" end="16" id="16" rel="cnj">
+          <node begin="10" buiging="zonder" end="11" getal="mv" id="17" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+          <node begin="11" end="12" genus="onz" getal="ev" graad="dim" id="18" lemma="dochter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="dochtertje" word="dochtertje"/>
+          <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="19" lemma="Tracy" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Tracy" word="Tracy"/>
+          <node begin="13" cat="pp" end="16" id="20" rel="mod">
+            <node begin="13" end="14" id="21" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="14" cat="np" end="16" id="22" rel="obj1">
+              <node begin="14" end="15" id="23" lemma="15" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="15" word="15"/>
+              <node begin="15" end="16" getal="mv" graad="basis" id="24" lemma="maanden" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="maand" word="maanden"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="16" end="17" id="25" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="30" id="26" rel="vc">
+        <node begin="0" end="16" id="27" index="1" rel="su"/>
+        <node begin="17" cat="pp" end="25" id="28" rel="mod">
+          <node begin="17" end="18" id="29" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+          <node begin="18" cat="np" end="25" id="30" rel="obj1">
+            <node begin="18" end="19" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="32" lemma="hel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hel" word="hel"/>
+            <node begin="20" cat="pp" end="25" id="33" rel="mod">
+              <node begin="20" end="21" id="34" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="21" cat="np" end="25" id="35" rel="obj1">
+                <node begin="21" end="22" id="36" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="22" buiging="met-e" end="23" graad="basis" id="37" lemma="Noord-Iers" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Noordierse" word="Noordierse"/>
+                <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="38" lemma="plaats" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="plaats" word="plaats"/>
+                <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="39" lemma="Belfast" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Belfast" word="Belfast"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="25" cat="pp" end="29" id="40" rel="ld">
+          <node begin="25" end="26" id="41" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+          <node begin="26" cat="np" end="29" id="42" rel="obj1">
+            <node begin="26" end="27" id="43" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="27" buiging="met-e" end="28" graad="basis" id="44" lemma="rustig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="rustig" word="rustige"/>
+            <node begin="28" end="29" genus="onz" getal="ev" graad="basis" id="45" lemma="Dedemsvaart" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Dedemsvaart" word="Dedemsvaart"/>
+          </node>
+        </node>
+        <node begin="29" buiging="zonder" end="30" id="46" lemma="vluchten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vlucht" word="gevlucht" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="30" end="31" id="47" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Albert Niks ( 27 ) , zijn vrouw Theresa en hun dochtertje Tracy van 15 maanden zijn uit de hel van de Noordierse plaats Belfast naar het rustige Dedemsvaart gevlucht .</sentence>
+</alpino_ds>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="Dit"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="onderzoek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="onderzoek" word="onderzoek"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="7" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="obj1"/>
+        <node begin="3" cat="ap" end="6" id="8" rel="mod">
+          <node begin="3" cat="np" end="5" id="9" rel="me">
+            <node begin="3" buiging="met-e" end="4" id="10" lemma="enig" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enig" vwtype="onbep" word="enige"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="tijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tijd" word="tijd"/>
+          </node>
+          <node begin="5" end="6" id="12" lemma="geleden" pos="adj" postag="BW()" pt="bw" rel="hd" root="geleden" word="geleden"/>
+        </node>
+        <node begin="6" buiging="zonder" end="7" id="13" lemma="afsluiten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="sluit" word="afgesloten" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dit onderzoek is enige tijd geleden afgesloten .</sentence>
+</alpino_ds>

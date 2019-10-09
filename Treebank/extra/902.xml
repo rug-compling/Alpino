@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+      <node begin="0" cat="inf" end="14" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" end="3" getal="getal" id="6" lemma="u" naamval="nomin" pdtype="pron" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="obj1" root="u" status="vol" vwtype="pers" word="u"/>
+        <node begin="4" cat="mwu" end="6" id="7" mwu_root="in kennis" mwu_sense="in kennis" rel="svp">
+          <node begin="4" end="5" id="8" lemma="in" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="kennis" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="kennis" word="kennis"/>
+        </node>
+        <node begin="6" buiging="zonder" end="7" id="10" lemma="stellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel" word="stellen" wvorm="inf"/>
+        <node begin="3" cat="pp" end="14" id="11" rel="pc">
+          <node begin="3" end="4" id="12" lemma="ervan" pos="pp" postag="BW()" pt="bw" rel="hd" root="ervan" word="ervan"/>
+          <node begin="7" cat="cp" end="14" id="13" rel="vc">
+            <node begin="7" conjtype="onder" end="8" id="14" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+            <node begin="8" cat="ssub" end="14" id="15" rel="body">
+              <node begin="8" cat="np" end="10" id="16" index="2" rel="su">
+                <node begin="8" end="9" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="PPE-DE-Fractie" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="PPE-DE-Fractie" word="PPE-DE-Fractie"/>
+              </node>
+              <node begin="12" end="13" id="19" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+              <node begin="8" cat="ppart" end="14" id="20" rel="vc">
+                <node begin="8" end="10" id="21" index="2" rel="su"/>
+                <node begin="10" cat="np" end="12" id="22" rel="obj1">
+                  <node begin="10" buiging="zonder" end="11" getal="ev" id="23" lemma="haar" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="haar" status="vol" vwtype="bez" word="haar"/>
+                  <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="24" lemma="ontwerp_resolutie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ontwerp_resolutie" word="ontwerpresolutie"/>
+                </node>
+                <node begin="13" buiging="zonder" end="14" id="25" lemma="in_trekken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="trek_in" word="ingetrokken" wvorm="vd"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="26" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ik wil u ervan in kennis stellen dat de PPE-DE-Fractie haar ontwerpresolutie heeft ingetrokken .</sentence>
+</alpino_ds>

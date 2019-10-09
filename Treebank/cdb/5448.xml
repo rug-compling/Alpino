@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="9" end="10" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="16" id="3" rel="--">
+      <node begin="2" end="3" id="4" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="3" end="4" getal="mv" id="5" index="1" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+      <node begin="0" cat="inf" end="16" id="6" rel="vc">
+        <node begin="3" end="4" id="7" index="1" rel="su"/>
+        <node begin="14" buiging="zonder" end="15" id="8" lemma="laten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="laat" word="laten" wvorm="inf"/>
+        <node begin="0" cat="inf" end="16" id="9" rel="vc">
+          <node begin="0" cat="np" end="2" id="10" rel="obj1">
+            <node begin="0" buiging="zonder" end="1" id="11" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="Die"/>
+            <node begin="1" end="2" getal="mv" graad="basis" id="12" lemma="film" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="film" word="films"/>
+          </node>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="13" lemma="regelmatig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="regelmatig" word="regelmatig"/>
+          <node begin="6" cat="advp" end="9" id="14" rel="mod">
+            <node begin="6" end="7" id="15" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="hd" root="eens" word="eens"/>
+            <node begin="7" cat="pp" end="9" id="16" rel="mod">
+              <node begin="7" end="8" id="17" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
+              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="18" lemma="week" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="week" word="week"/>
+            </node>
+          </node>
+          <node begin="10" cat="pp" end="13" id="19" rel="mod">
+            <node begin="10" end="11" id="20" lemma="gedurende" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="gedurende" vztype="init" word="gedurende"/>
+            <node begin="11" cat="np" end="13" id="21" rel="obj1">
+              <node begin="11" buiging="met-e" end="12" id="22" lemma="enkele" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enkel" vwtype="onbep" word="enkele"/>
+              <node begin="12" end="13" getal="mv" graad="basis" id="23" lemma="maanden" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="maand" word="maanden"/>
+            </node>
+          </node>
+          <node begin="13" end="14" id="24" lemma="thuis" pos="adv" postag="BW()" pt="bw" rel="mod" root="thuis" word="thuis"/>
+          <node begin="15" buiging="zonder" end="16" id="25" lemma="afdraaien" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="draai" word="afdraaien" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="26" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Die films hebben we regelmatig , eens per week , gedurende enkele maanden thuis laten afdraaien .</sentence>
+</alpino_ds>

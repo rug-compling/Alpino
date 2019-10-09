@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="Dan"/>
+      <node begin="1" end="2" id="3" lemma="vallen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="val" word="valt" wvorm="pv"/>
+      <node begin="2" end="3" genus="fem" getal="ev" id="4" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+      <node begin="3" end="4" getal="getal" id="5" lemma="zichzelf" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,nadr,3,getal)" pt="vnw" rel="obj1" root="zichzelf" status="nadr" vwtype="refl" word="zichzelf"/>
+      <node begin="4" buiging="zonder" end="5" id="6" lemma="irriteren" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="mod" root="geirriteerd" word="geirriteerd" wvorm="vd"/>
+      <node begin="5" cat="mwu" end="8" id="7" rel="svp">
+        <node begin="5" end="6" id="8" lemma="in" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+        <node begin="6" end="7" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="fixed" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="10" lemma="rede" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="rede" word="rede"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dan valt ze zichzelf geirriteerd in de rede .</sentence>
+</alpino_ds>

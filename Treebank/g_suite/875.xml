@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" index="1" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="lijken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="lijk" word="leek" wvorm="pv"/>
+      <node begin="2" end="3" getal="ev" id="4" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj2" root="me" status="red" vwtype="pr" word="me"/>
+      <node begin="0" cat="ti" end="6" id="5" rel="vc">
+        <node begin="4" end="5" id="6" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="0" cat="inf" end="6" id="7" rel="body">
+          <node begin="0" end="1" id="8" index="1" rel="su"/>
+          <node begin="3" end="4" id="9" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="5" buiging="zonder" end="6" id="10" lemma="kunnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kan" word="kunnen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Het leek me niet te kunnen</sentence>
+</alpino_ds>

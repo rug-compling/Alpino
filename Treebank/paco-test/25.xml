@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="1" end="2" frame="verb(unacc,sg3,passive)" id="2" infl="sg3" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt"/>
+      <node begin="4" cat="np" end="8" id="3" index="1" rel="su">
+        <node begin="4" end="5" frame="modal_adverb(noun_prep)" id="4" lcat="advp" pos="adv" rel="mod" root="ongeveer" sc="noun_prep" sense="ongeveer" word="ongeveer"/>
+        <node begin="5" end="6" frame="number(hoofd(pl_num))" id="5" infl="pl_num" lcat="detp" pos="num" rel="det" root="50.000" sense="50.000" special="hoofd" word="50.000"/>
+        <node begin="6" end="7" frame="meas_mod_noun(de,count,meas,measure)" gen="de" id="6" lcat="np" num="meas" pos="noun" rel="hd" root="ton" sc="measure" sense="ton-MEAS" special="meas_mod" word="ton"/>
+        <node begin="7" end="8" frame="noun(het,count,sg)" gen="het" id="7" lcat="np" num="sg" pos="noun" rel="mod" root="snoei_hout" sense="snoei_hout" word="snoeihout"/>
+      </node>
+      <node begin="0" cat="ppart" end="11" id="8" rel="vc">
+        <node begin="0" end="1" frame="er_adverb(naast)" id="9" lcat="pp" pos="pp" rel="mod" root="daarnaast" sense="daarnaast" special="er" word="Daarnaast"/>
+        <node begin="2" cat="np" end="4" id="10" rel="mod">
+          <node begin="2" end="3" frame="determiner(het,nwh,mod,pro,yparg)" id="11" infl="het" lcat="detp" pos="det" rel="det" root="elk" sense="elk" wh="nwh" word="elk"/>
+          <node begin="3" end="4" frame="tmp_noun(het,count,meas)" gen="het" id="12" lcat="np" num="meas" pos="noun" rel="hd" root="jaar" sense="jaar" special="tmp" word="jaar"/>
+        </node>
+        <node begin="4" end="8" id="13" index="1" rel="obj1"/>
+        <node begin="8" end="9" frame="verb(hebben,psp,transitive)" id="14" infl="psp" lcat="ppart" pos="verb" rel="hd" root="verwerk" sc="transitive" sense="verwerk" word="verwerkt"/>
+        <node begin="9" cat="pp" end="11" id="15" rel="mod">
+          <node begin="9" end="10" frame="preposition(tot,[toe,[aan,toe]])" id="16" lcat="pp" pos="prep" rel="hd" root="tot" sense="tot" word="tot"/>
+          <node begin="10" end="11" frame="noun(both,both,both)" gen="both" id="17" lcat="np" num="both" pos="noun" rel="obj1" root="mulchmateriaal" sense="mulchmateriaal" word="mulchmateriaal"/>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" frame="punct(punt)" id="18" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Daarnaast wordt elk jaar ongeveer 50.000 ton snoeihout verwerkt tot mulchmateriaal .</sentence>
+  <comments>
+    <comment>Q#25|Daarnaast wordt elk jaar ongeveer 50.000 ton snoeihout verwerkt tot mulchmateriaal .|1|1|-6.933200460264735</comment>
+  </comments>
+</alpino_ds>

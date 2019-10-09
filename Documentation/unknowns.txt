@@ -1,0 +1,222 @@
+treatment of unknown words
+--------------------------
+--------------------------
+
+
+Lexical Analysis
+----------------
+
+1. a. Lexical_analysis adds lexical categories for all words and word
+sequences that are listed in the lexicon (including the lists of
+proper names).  
+
+   b. If the word is at the beginning of a sentence, and
+contains capitals, then all lexical categories of the decapitalized
+variant of the word are also added. A word is at the beginning of the
+sentence if it is the first non-punctuation token of the input, or
+the first non-punctuation token after a question mark or a colon.
+
+2. Lexical analysis adds lexical categories for all words and word
+sequences that could be names. A sequence of words is never guessed to
+be a proper name if it is a subsequence of a lexical category
+introduced in step 1. The rules how names can be constructed will be
+given below.
+
+3. Sequences of words 
+
+     X / Y 
+     X & Y
+     X + Y
+     X x Y
+
+where X and Y share a lexical category Z are analysed as Z. For
+example, the sequence "lengte x breedte" is analysed as a mwu of
+three tokens with category noun(..).
+
+4. Some categories introduced in step 1-3 require longest match and/or
+unique match.
+
+5. All tokens for which no lexical category is added in step 1 is
+treated as a unknown word. A variety of heuristics is attempted to
+assign further lexical categories for unknown words (possibly for word
+sequences including this unknown word). These heuristics are listed
+below.
+
+6. Sequences of words within quotes are also analysed as potential
+names. The maximum length of sequences of tokens analysed in this way
+is determined by the quoted_name_length_max flag.
+
+7. Certain tokens can potentially be ignored (certain punctuation
+marks, hesitations etc). These tokens are assigned the special 'skip'
+lexical category.
+
+8. In addition, certain pairs of tokens can be treated as a single
+token (only if allow_skips_repeats=on; typically only for spoken input).
+
+9. After that, many lexical categories are removed because of
+
+   a. the requirements listed in filter_tag.pl are not fulfilled
+   b. the HMM tagger
+
+
+Unknown Word Heuristics
+-----------------------
+
+The assignment of lexical categories to unknown word proceeds in two
+steps. In the first step, the various heuristics listed below are
+applied. In the second step, sequences of unknown words are assigned
+an additional nominal lexical category by assuming these sequences (using a
+longest match criterion) constitute a single mwu (unless this sequence
+already is analysed as a name, or as a nominal category by other
+heuristics).
+
+heuristics
+
+a. "the" --> IGNORE
+
+tokens for which ignore_unknown(X) holds are not assigned a lexical
+category at all. This typically includes frequent words from other
+languages. 
+
+b. dat_is1, dat_is2
+
+"da 's" --> "dat is"
+"Da 's" --> "dat is"
+
+the sequences "da 's" and "Da 's" are treated as notational variants
+of "dat is". No other heuristics apply to "da" and "Da".
+
+c. part_verb_conjunct
+
+"op- en aflopen" --> "oplopen en aflopen"
+
+if the unknown token is the concatenation of a particle and the
+dash sign, and followed by a conjunction and a verb form with an
+incorporated particle, for instance "op- en aflopen", then "op-" is
+assigned the same category as the verb form ("aflopen" in the
+example). 
+
+d. additional_space
+
+"Nieuw- Zeelandse" --> "Nieuw-Zeelandse"
+
+if the unknown token consists of string X and a dash, and is followed
+by Y, and X-Y is in the dictionary, then all lexical categories of "X-Y"
+are added to "X- Y".
+
+e. within_word_conjunct
+
+"X-" --> within_word_conjunct
+
+If the unknown token ends in a dash, then the lexical category
+"within_word_conjuct" is assigned. No further heuristics apply.
+
+f. decap_not_begin
+
+"Huis" --> "huis"
+
+If the word is capitalized, and the decapitalized variant is in the
+dictionary, then the lexical categories of the decapitalized variant
+are added.
+
+g. w_dia
+
+"géén" --> "geen"
+
+If the word is accented, and occurs in the dictionary without
+diacritics, then those categories are used.
+
+h. decap_w_dia
+
+"Géén" --> "geen"
+
+i. wo_dia
+
+"ruine" --> "ruïne"
+
+if a variant of the word with further diacritics added occurs in
+the dictionary, then those categories are used.
+
+j. decap_wo_dia
+
+"Ruine" --> "ruïne"
+
+k. compound
+
+"botervloot" --> "vloot"
+
+a word is treated as a compound if:
+
+- it can be decomposed in X-Y or X/Y where X and Y are in dictionary.
+
+- it can be decomposed into a sequence of words which all occur in the
+dictionary. Only sequences with the shortest number of words are taken
+into account. Certain words are not allowed to occur in the sequence:
+
+   * if it contains certain special characters such as - / and numbers
+   * one of its categories is proper_name
+   * words for which never_compound_part/1 holds (ach,al,at,bet,ca,...)
+
+l. left_headed_compound
+
+"motie-Goudzwaard" --> "motie"
+
+m. left_headed_double_compound
+
+"motie-Van Dam" --> "motie"
+
+n. double_compound
+
+"science fiction-schrijver" --> "schrijver"
+
+o. nom_adj
+
+"zwarteren" --> plural noun
+
+p. suffix
+
+"surseance" --> "seance"
+
+this heuristic does not apply if decap(not_begin) or compound have
+produced results.
+
+q. form_of_suffix(P)
+
+collection of heuristics of type 
+ - words ending in "dom" are mass nounds
+ - words ending in "igste" are number(rang)
+ - words ending in "erwijs" are adverb
+ - words ending in "aire" are adjective(e,adv)
+
+etc
+
+this set of heuristics does not apply if decap(not_begin) was
+succesful or if the same category was already added by an alternative
+heuristic. 
+
+r. subjunctive
+
+"leve" --> "leven"+subjunctive
+
+If the word ends in "e" and there exists a verb infinitive if an "n"
+is concatenated, then the word is treated as a subjunctive form of
+that verb. 
+
+s. te-V
+
+"te interessseren" --> verb(te,intransitive)
+                       verb(te,transitive)
+
+If the word ends in "en" and is preceded by "te", then it is a
+transitive or intransitive verb with vform "te".
+
+t. default
+
+X --> noun
+
+the word is a noun. 
+
+This heuristic does not apply if it word is a 
+name, or if any of the decap(_), compound, w_dia, wo_dia, decap_w_dia,
+decap_wo_dia, suffix (nouns), form_of_suffix (nouns), nom_adj
+heuristics applied.

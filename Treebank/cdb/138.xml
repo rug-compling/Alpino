@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="smain" end="16" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="comp" id="2" lemma="laat" pos="adv" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="later" word="Later"/>
+      <node begin="1" end="2" id="3" lemma="gaan" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ga" word="gingen" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="4" rel="su">
+        <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="6" lemma="prijs" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="prijs" word="prijzen"/>
+      </node>
+      <node begin="4" cat="pp" end="9" id="7" rel="mod">
+        <node begin="4" end="5" id="8" lemma="mede" pos="adv" postag="BW()" pt="bw" rel="mod" root="mede" word="mede"/>
+        <node begin="5" cat="mwu" end="8" id="9" rel="hd">
+          <node begin="5" end="6" id="10" lemma="als" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="als" vztype="init" word="als"/>
+          <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="11" lemma="gevolg" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="gevolg" word="gevolg"/>
+          <node begin="7" end="8" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+        </node>
+        <node begin="8" end="9" getal="mv" graad="basis" id="13" lemma="winstneming" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="winstnemingen" word="winstnemingen"/>
+      </node>
+      <node begin="9" end="10" getal="ev" id="14" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="adv" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="mod" root="wat" status="vol" vwtype="vb" word="wat"/>
+      <node begin="10" end="11" id="15" lemma="achteruit" pos="adv" postag="BW()" pt="bw" rel="ld" root="achteruit" word="achteruit"/>
+      <node begin="11" cat="pp" end="16" id="16" rel="mod">
+        <node begin="11" end="12" id="17" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+        <node begin="12" cat="conj" end="16" id="18" rel="obj1">
+          <node begin="12" buiging="zonder" end="13" graad="basis" id="19" lemma="respectievelijk" pos="vg" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="crd" root="respectievelijk" word="respectievelijk"/>
+          <node begin="13" end="14" id="20" lemma="101" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="cnj" root="101" word="101"/>
+          <node begin="14" conjtype="neven" end="15" id="21" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="15" end="16" id="22" lemma="98,60" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="cnj" root="98,60" word="98,60"/>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Later gingen de prijzen mede als gevolg van winstnemingen wat achteruit tot respectievelijk 101 en 98,60 .</sentence>
+</alpino_ds>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="1" cat="smain" end="11" id="2" rel="--">
+      <node begin="2" end="3" id="3" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+      <node begin="1" cat="ppart" end="11" id="4" rel="vc">
+        <node begin="1" end="2" getal="getal" id="5" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" status="vol" vwtype="aanw" word="Hier"/>
+        <node begin="3" buiging="zonder" end="4" id="6" lemma="spelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="speel" word="gespeeld" wvorm="vd"/>
+        <node begin="4" cat="pp" end="11" id="7" rel="pc">
+          <node begin="4" end="5" id="8" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="5" cat="conj" end="11" id="9" rel="obj1">
+            <node begin="6" conjtype="neven" end="7" id="10" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="5" cat="np" end="11" id="11" rel="cnj">
+              <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="12" lemma="leven" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="leven" word="leven"/>
+              <node begin="8" cat="pp" end="11" id="13" index="1" rel="mod">
+                <node begin="8" end="9" id="14" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="9" cat="np" end="11" id="15" rel="obj1">
+                  <node begin="9" buiging="met-e" end="10" graad="basis" id="16" lemma="jong" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jong" word="jonge"/>
+                  <node begin="10" end="11" getal="mv" graad="basis" id="17" lemma="medemens" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="medemens" word="medemensen"/>
+                </node>
+              </node>
+            </node>
+            <node begin="7" cat="np" end="11" id="18" rel="cnj">
+              <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="19" lemma="dood" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dood" word="dood"/>
+              <node begin="8" end="11" id="20" index="1" rel="mod"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="12" end="13" id="22" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>&quot; Hier wordt gespeeld met leven en dood van jonge medemensen . &quot;</sentence>
+</alpino_ds>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="lijken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lijk" word="lijkt" wvorm="pv"/>
+      <node begin="2" buiging="zonder" end="3" graad="basis" id="4" lemma="natuurlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="natuurlijk" word="natuurlijk"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="5" lemma="leuk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="leuk" word="leuk"/>
+      <node begin="4" cat="pp" end="6" id="6" rel="mod">
+        <node begin="4" end="5" id="7" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="5" end="6" getal="mv" graad="dim" id="8" lemma="schets" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="obj1" root="schetsjes" word="schetsjes"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het lijkt natuurlijk leuk op schetsjes .</sentence>
+</alpino_ds>

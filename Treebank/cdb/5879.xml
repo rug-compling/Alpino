@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="conj" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="cnj">
+        <node begin="0" buiging="met-e" end="1" graad="basis" id="3" lemma="levenslang" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="levenslang" word="levenslange"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="schorsing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schorsing" word="schorsing"/>
+      </node>
+      <node begin="2" conjtype="neven" end="3" id="5" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="3" cat="np" end="7" id="6" rel="cnj">
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="intrekking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="intrekking" word="intrekking"/>
+        <node begin="4" cat="pp" end="7" id="8" rel="mod">
+          <node begin="4" end="5" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="5" cat="np" end="7" id="10" rel="obj1">
+            <node begin="5" end="6" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="licentie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="licentie" word="licentie"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>levenslange schorsing en intrekking van de licentie .</sentence>
+</alpino_ds>

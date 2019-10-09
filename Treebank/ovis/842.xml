@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" cat="pp" end="3" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+      <node begin="1" cat="mwu" end="3" id="3" rel="obj1">
+        <node begin="1" end="2" id="4" lemma="eenentwintig" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="eenentwintig" word="eenentwintig"/>
+        <node begin="2" end="3" id="5" lemma="april" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="april" spectype="deeleigen" word="april"/>
+      </node>
+    </node>
+  </node>
+  <sentence>op eenentwintig april</sentence>
+</alpino_ds>

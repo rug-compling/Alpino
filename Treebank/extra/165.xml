@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="cp" end="7" id="1" rel="--">
+      <node begin="0" conjtype="onder" end="1" id="2" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="Dat"/>
+      <node begin="1" cat="ssub" end="7" id="3" rel="body">
+        <node begin="1" cat="np" end="3" id="4" rel="su">
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="misgewaad" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mis_gewaad" word="misgewaden"/>
+        </node>
+        <node begin="3" end="4" id="7" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+        <node begin="4" cat="np" end="6" id="8" rel="me">
+          <node begin="4" end="5" id="9" lemma="vijftien" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="vijftien" word="vijftien"/>
+          <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="10" lemma="kilo" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,genus,stan)" pt="n" rel="hd" root="kilo" word="kilo"/>
+        </node>
+        <node begin="6" end="7" id="11" lemma="wegen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="weeg" word="wegen" wvorm="pv"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dat de misgewaden wel vijftien kilo wegen .</sentence>
+</alpino_ds>

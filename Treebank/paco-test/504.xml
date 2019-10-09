@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="27" id="0" rel="top">
+    <node begin="8" end="9" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="14" end="15" frame="punct(komma)" id="2" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="26" id="3" rel="--">
+      <node begin="0" cat="np" end="4" id="4" rel="predc">
+        <node begin="0" end="1" frame="noun(het,count,pl)" gen="het" id="5" lcat="np" num="pl" pos="noun" rel="hd" root="element" sense="element" word="Elementen"/>
+        <node begin="1" cat="pp" end="4" id="6" rel="mod">
+          <node begin="1" end="2" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="7" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+          <node begin="2" cat="np" end="4" id="8" rel="obj1">
+            <node begin="2" end="3" frame="determiner(het,nwh,nmod,pro,nparg)" id="9" infl="het" lcat="detp" pos="det" rel="det" root="dit" sense="dit" wh="nwh" word="dit"/>
+            <node begin="3" end="4" frame="noun(both,count,sg)" gen="both" id="10" lcat="np" num="sg" pos="noun" rel="hd" root="kader" sense="kader" word="kader"/>
+          </node>
+        </node>
+      </node>
+      <node begin="4" end="5" frame="verb(unacc,pl,copula)" id="11" infl="pl" lcat="smain" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="zijn"/>
+      <node begin="5" cat="conj" end="26" id="12" rel="su">
+        <node begin="19" end="20" frame="conj(en)" id="13" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+        <node begin="5" cat="np" end="26" id="14" rel="cnj">
+          <node aform="base" begin="5" end="6" frame="adjective(e)" id="15" infl="e" lcat="ap" pos="adj" rel="mod" root="duurzaam" sense="duurzaam" vform="adj" word="duurzame"/>
+          <node aform="base" begin="6" end="7" frame="adjective(e)" id="16" infl="e" lcat="ap" pos="adj" rel="mod" root="economisch" sense="economisch" vform="adj" word="economische"/>
+          <node begin="7" end="8" frame="noun(de,mass,sg)" gen="de" id="17" lcat="np" num="sg" pos="noun" rel="hd" root="groei" sense="groei" word="groei"/>
+          <node begin="21" cat="pp" end="26" id="18" index="1" rel="mod">
+            <node begin="21" end="22" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="19" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="22" cat="np" end="26" id="20" rel="obj1">
+              <node begin="22" end="23" frame="determiner(de)" id="21" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="23" end="24" frame="noun(de,count,sg)" gen="de" id="22" lcat="np" num="sg" pos="noun" rel="hd" root="toegang" sense="toegang" word="toegang"/>
+              <node begin="24" cat="pp" end="26" id="23" rel="mod">
+                <node begin="24" end="25" frame="preposition(tot,[toe,[aan,toe]])" id="24" lcat="pp" pos="prep" rel="hd" root="tot" sense="tot" word="tot"/>
+                <node begin="25" end="26" frame="noun(het,count,pl)" gen="het" id="25" lcat="np" num="pl" pos="noun" rel="obj1" root="productie_middel" sense="productie_middel" word="productiemiddelen"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="9" cat="np" end="26" id="26" rel="cnj">
+          <node begin="9" end="10" frame="noun(de,count,sg)" gen="de" id="27" lcat="np" num="sg" pos="noun" rel="hd" root="ontwikkeling" sense="ontwikkeling" word="ontwikkeling"/>
+          <node begin="10" cat="pp" end="14" id="28" rel="mod">
+            <node begin="10" end="11" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="29" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="11" cat="np" end="14" id="30" rel="obj1">
+              <node begin="11" end="12" frame="determiner(de)" id="31" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node aform="base" begin="12" end="13" frame="adjective(e)" id="32" infl="e" lcat="ap" pos="adj" rel="mod" root="particulier" sense="particulier" vform="adj" word="particuliere"/>
+              <node begin="13" end="14" frame="noun(de,count,sg)" gen="de" id="33" lcat="np" num="sg" pos="noun" rel="hd" root="sector" sense="sector" word="sector"/>
+            </node>
+          </node>
+          <node begin="21" end="26" id="34" index="1" rel="mod"/>
+        </node>
+        <node begin="15" cat="np" end="26" id="35" rel="cnj">
+          <node begin="15" end="16" frame="noun(de,both,sg)" gen="de" id="36" lcat="np" num="sg" pos="noun" rel="hd" root="stimulering" sense="stimulering" word="stimulering"/>
+          <node begin="16" cat="pp" end="19" id="37" rel="mod">
+            <node begin="16" end="17" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="38" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="17" cat="np" end="19" id="39" rel="obj1">
+              <node begin="17" end="18" frame="determiner(de)" id="40" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="18" end="19" frame="noun(de,mass,sg)" gen="de" id="41" lcat="np" num="sg" pos="noun" rel="hd" root="werkgelegenheid" sense="werkgelegenheid" word="werkgelegenheid"/>
+            </node>
+          </node>
+          <node begin="21" end="26" id="42" index="1" rel="mod"/>
+        </node>
+        <node begin="20" cat="np" end="26" id="43" rel="cnj">
+          <node begin="20" end="21" frame="noun(de,count,sg)" gen="de" id="44" lcat="np" num="sg" pos="noun" rel="hd" root="verbetering" sense="verbetering" word="verbetering"/>
+          <node begin="21" end="26" id="45" index="1" rel="mod"/>
+        </node>
+      </node>
+    </node>
+    <node begin="26" end="27" frame="punct(punt)" id="46" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Elementen van dit kader zijn duurzame economische groei , ontwikkeling van de particuliere sector , stimulering van de werkgelegenheid en verbetering van de toegang tot productiemiddelen .</sentence>
+  <comments>
+    <comment>Q#504|Elementen van dit kader zijn duurzame economische groei , ontwikkeling van de particuliere sector , stimulering van de werkgelegenheid en verbetering van de toegang tot productiemiddelen .|1|1|0.12029603419046841</comment>
+  </comments>
+</alpino_ds>

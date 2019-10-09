@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="conj" end="17" id="1" rel="--">
+      <node begin="0" cat="smain" end="7" id="2" rel="cnj">
+        <node begin="0" end="1" genus="masc" getal="ev" id="3" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+        <node begin="1" end="2" id="4" lemma="houden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="houd" word="hield" wvorm="pv"/>
+        <node begin="2" cat="np" end="4" id="5" rel="obj1">
+          <node begin="2" end="3" id="6" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="pistool" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="pistool" word="pistool"/>
+        </node>
+        <node begin="4" cat="ppart" end="7" id="8" rel="predc">
+          <node begin="4" cat="pp" end="6" id="9" rel="pc">
+            <node begin="4" end="5" id="10" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="5" end="6" getal="mv" id="11" lemma="hen" naamval="obl" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,obl,vol,3p,mv)" pt="vnw" rel="obj1" root="hen" status="vol" vwtype="pers" word="hen"/>
+          </node>
+          <node begin="6" buiging="zonder" end="7" id="12" lemma="richten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gericht" word="gericht" wvorm="vd"/>
+        </node>
+      </node>
+      <node begin="7" conjtype="neven" end="8" id="13" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="8" cat="smain" end="17" id="14" rel="cnj">
+        <node begin="8" end="9" genus="masc" getal="ev" id="15" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+        <node begin="9" end="10" id="16" lemma="kijken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kijk" word="keek" wvorm="pv"/>
+        <node begin="10" cat="cp" end="17" id="17" rel="mod">
+          <node begin="10" conjtype="onder" end="11" id="18" lemma="alsof" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="alsof" word="alsof"/>
+          <node begin="11" cat="ssub" end="17" id="19" rel="body">
+            <node begin="11" end="12" genus="masc" getal="ev" id="20" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+            <node begin="13" end="14" id="21" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+            <node begin="11" cat="inf" end="17" id="22" rel="vc">
+              <node begin="11" end="12" id="23" index="1" rel="su"/>
+              <node begin="12" end="13" id="24" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+              <node begin="14" buiging="zonder" end="15" id="25" lemma="aarzelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="aarzel" word="aarzelen" wvorm="inf"/>
+              <node begin="11" cat="ti" end="17" id="26" rel="vc">
+                <node begin="15" end="16" id="27" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+                <node begin="11" cat="inf" end="17" id="28" rel="body">
+                  <node begin="11" end="12" id="29" index="1" rel="su"/>
+                  <node begin="16" buiging="zonder" end="17" id="30" lemma="schieten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="schiet" word="schieten" wvorm="inf"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="31" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hij hield een pistool op hen gericht en hij keek alsof hij niet zou aarzelen te schieten .</sentence>
+</alpino_ds>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="3" end="4" id="2" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="4" end="5" getal="mv" id="3" index="1" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+      <node begin="0" cat="inf" end="8" id="4" rel="vc">
+        <node begin="4" end="5" id="5" index="1" rel="su"/>
+        <node begin="6" buiging="zonder" end="7" id="6" lemma="kunnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kan" word="kunnen" wvorm="inf"/>
+        <node begin="0" cat="inf" end="8" id="7" rel="vc">
+          <node begin="0" cat="pp" end="3" id="8" rel="mod">
+            <node begin="0" end="1" id="9" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="Door"/>
+            <node begin="1" cat="np" end="3" id="10" rel="obj1">
+              <node begin="1" end="2" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="12" lemma="gladheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gladheid" word="gladheid"/>
+            </node>
+          </node>
+          <node begin="4" end="5" id="13" index="1" rel="su"/>
+          <node begin="5" end="6" id="14" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="7" buiging="zonder" end="8" id="15" lemma="komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom" word="komen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Door de gladheid hebben ze niet kunnen komen .</sentence>
+</alpino_ds>

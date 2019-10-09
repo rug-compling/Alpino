@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="20" id="2" rel="--">
+      <node begin="7" end="8" id="3" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+      <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="4" index="1" lemma="AKZO" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="AKZO" word="AKZO"/>
+      <node begin="0" cat="inf" end="20" id="5" rel="vc">
+        <node begin="0" cat="cp" end="6" id="6" rel="mod">
+          <node begin="0" conjtype="onder" end="1" id="7" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+          <node begin="1" cat="ssub" end="6" id="8" rel="body">
+            <node begin="1" cat="np" end="3" id="9" rel="su">
+              <node begin="1" end="2" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="11" lemma="transactie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="transactie" word="transactie"/>
+            </node>
+            <node begin="3" cat="mwu" end="5" id="12" rel="svp">
+              <node begin="3" end="4" id="13" lemma="tot" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="tot" vztype="init" word="tot"/>
+              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="14" lemma="stand" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="stand" word="stand"/>
+            </node>
+            <node begin="5" end="6" id="15" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+          </node>
+        </node>
+        <node begin="8" end="9" id="16" index="1" rel="su"/>
+        <node begin="9" cat="np" end="12" id="17" rel="obj1">
+          <node begin="9" end="10" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="10" end="11" getal="mv" graad="basis" id="19" lemma="aandeel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="aandeel" word="aandelen"/>
+          <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="20" lemma="zwanenberg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="app" root="Zwanenberg" word="Zwanenberg"/>
+        </node>
+        <node begin="12" buiging="zonder" end="13" id="21" lemma="overdragen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="draag" word="overdragen" wvorm="inf"/>
+        <node begin="13" cat="pp" end="15" id="22" rel="obj2">
+          <node begin="13" end="14" id="23" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+          <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="24" lemma="Unilever" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Unilever" word="Unilever"/>
+        </node>
+        <node begin="15" cat="pp" end="20" id="25" rel="mod">
+          <node begin="15" end="16" id="26" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
+          <node begin="16" cat="np" end="20" id="27" rel="obj1">
+            <node begin="16" end="17" id="28" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="29" lemma="betaling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="betaling" word="betaling"/>
+            <node begin="18" cat="pp" end="20" id="30" rel="mod">
+              <node begin="18" end="19" id="31" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="19" end="20" getal="mv" graad="basis" id="32" lemma="contanten" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="contanten" word="contanten"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="33" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als de transactie tot stand komt , zal AKZO de aandelen Zwanenberg overdragen aan Unilever tegen een betaling in contanten .</sentence>
+</alpino_ds>

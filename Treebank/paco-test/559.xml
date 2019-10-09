@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="18" end="19" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="21" id="2" rel="--">
+      <node begin="0" cat="np" end="18" id="3" index="1" rel="su">
+        <node begin="0" end="1" frame="determiner(alle,nwh,mod,pro,nparg)" id="4" infl="alle" lcat="detp" pos="det" rel="det" root="alle" sense="alle" wh="nwh" word="Alle"/>
+        <node begin="1" end="2" frame="noun(de,count,pl)" gen="de" id="5" lcat="np" num="pl" pos="noun" rel="hd" root="maatregel" sense="maatregel" word="maatregelen"/>
+        <node begin="2" cat="rel" end="18" id="6" rel="mod">
+          <node begin="2" case="no_obl" end="3" frame="rel_pronoun(de,no_obl)" gen="de" id="7" index="2" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+          <node begin="2" cat="ssub" end="18" id="8" rel="body">
+            <node begin="2" end="3" id="9" index="2" rel="su"/>
+            <node begin="4" end="5" frame="verb(unacc,pl,copula)" id="10" infl="pl" lcat="ssub" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="zijn"/>
+            <node begin="3" cat="ap" end="18" id="11" rel="predc">
+              <node aform="base" begin="3" end="4" frame="adjective(no_e(padv),object_vp)" id="12" infl="no_e" lcat="ap" pos="adj" rel="hd" root="nodig" sc="object_vp" sense="nodig" vform="adj" word="nodig"/>
+              <node begin="5" cat="oti" end="18" id="13" rel="vc">
+                <node begin="5" end="6" frame="complementizer(om)" id="14" lcat="oti" pos="comp" rel="cmp" root="om" sc="om" sense="om" word="om"/>
+                <node begin="6" cat="ti" end="18" id="15" rel="body">
+                  <node begin="6" end="7" frame="complementizer(te)" id="16" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+                  <node begin="7" cat="inf" end="18" id="17" rel="body">
+                    <node begin="7" end="8" frame="verb(hebben,inf,sbar)" id="18" infl="inf" lcat="inf" pos="verb" rel="hd" root="verzeker" sc="sbar" sense="verzeker" word="verzekeren"/>
+                    <node begin="8" cat="cp" end="18" id="19" rel="vc">
+                      <node begin="8" end="9" frame="complementizer(dat)" id="20" lcat="cp" pos="comp" rel="cmp" root="dat" sc="dat" sense="dat" word="dat"/>
+                      <node begin="9" cat="ssub" end="18" id="21" rel="body">
+                        <node begin="9" cat="np" end="14" id="22" index="3" rel="su">
+                          <node begin="9" end="10" frame="determiner(de)" id="23" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                          <node begin="10" end="11" frame="noun(de,count,pl)" gen="de" id="24" lcat="np" num="pl" pos="noun" rel="hd" root="onderhandeling" sense="onderhandeling" word="onderhandelingen"/>
+                          <node begin="11" cat="pp" end="14" id="25" rel="mod">
+                            <node begin="11" end="12" frame="preposition(binnen,[])" id="26" lcat="pp" pos="prep" rel="hd" root="binnen" sense="binnen" word="binnen"/>
+                            <node begin="12" cat="np" end="14" id="27" rel="obj1">
+                              <node begin="12" end="13" frame="determiner(de)" id="28" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                              <node begin="13" end="14" frame="tmp_noun(de,count,sg)" gen="de" id="29" lcat="np" num="sg" pos="noun" rel="hd" root="voorbereiding_periode" sense="voorbereiding_periode" special="tmp" word="voorbereidingsperiode"/>
+                            </node>
+                          </node>
+                        </node>
+                        <node begin="16" end="17" frame="verb(unacc,pl,passive)" id="30" infl="pl" lcat="ssub" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="worden"/>
+                        <node begin="9" cat="ppart" end="18" id="31" rel="vc">
+                          <node begin="9" end="14" id="32" index="3" rel="obj1"/>
+                          <node begin="14" cat="pp" end="16" id="33" rel="mod">
+                            <node begin="14" end="15" frame="preposition(met,[mee,[en,al]])" id="34" lcat="pp" pos="prep" rel="hd" root="met" sense="met" word="met"/>
+                            <node begin="15" end="16" frame="noun(het,count,sg)" gen="het" id="35" lcat="np" num="sg" pos="noun" rel="obj1" root="succes" sense="succes" word="succes"/>
+                          </node>
+                          <node begin="17" end="18" frame="verb(hebben,psp,ninv(transitive,part_transitive(af)))" id="36" infl="psp" lcat="ppart" pos="verb" rel="hd" root="rond_af" sc="part_transitive(af)" sense="rond_af" word="afgerond"/>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="19" end="20" frame="verb(unacc,pl,passive)" id="37" infl="pl" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="worden"/>
+      <node begin="0" cat="ppart" end="21" id="38" rel="vc">
+        <node begin="0" end="18" id="39" index="1" rel="obj1"/>
+        <node begin="20" end="21" frame="verb(hebben,psp,transitive)" id="40" infl="psp" lcat="ppart" pos="verb" rel="hd" root="tref" sc="transitive" sense="tref" word="getroffen"/>
+      </node>
+    </node>
+    <node begin="21" end="22" frame="punct(punt)" id="41" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Alle maatregelen die nodig zijn om te verzekeren dat de onderhandelingen binnen de voorbereidingsperiode met succes worden afgerond , worden getroffen .</sentence>
+  <comments>
+    <comment>Q#559|Alle maatregelen die nodig zijn om te verzekeren dat de onderhandelingen binnen de voorbereidingsperiode met succes worden afgerond , worden getroffen .|1|1|-22.712640161470155</comment>
+  </comments>
+</alpino_ds>

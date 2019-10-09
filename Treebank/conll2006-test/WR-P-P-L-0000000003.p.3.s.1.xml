@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="9" end="10" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="22" id="2" rel="--">
+      <node begin="0" cat="np" end="6" id="3" rel="predc">
+        <node begin="0" end="1" id="4" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+        <node begin="1" buiging="met-e" end="2" id="5" lemma="dragen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="draag" word="dragende" wvorm="od"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="factor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="factor" word="factor"/>
+        <node begin="3" cat="pp" end="6" id="7" rel="mod">
+          <node begin="3" end="4" id="8" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="4" cat="np" end="6" id="9" rel="obj1">
+            <node begin="4" end="5" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="JGZ" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="JGZ" word="JGZ"/>
+          </node>
+        </node>
+      </node>
+      <node begin="6" end="7" id="12" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="7" cat="np" end="22" id="13" rel="su">
+        <node begin="7" end="8" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="15" lemma="basistakenpakket" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="basis_takenpakket" word="basistakenpakket"/>
+        <node begin="10" cat="rel" end="22" id="16" rel="mod">
+          <node begin="10" end="11" getal="ev" id="17" index="1" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
+          <node begin="10" cat="ssub" end="22" id="18" rel="body">
+            <node begin="10" end="11" id="19" index="1" rel="su"/>
+            <node begin="11" buiging="zonder" end="12" graad="basis" id="20" lemma="wezenlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="wezenlijk" word="wezenlijk"/>
+            <node begin="12" end="13" id="21" lemma="bijdragen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="draag_bij" word="bijdraagt" wvorm="pv"/>
+            <node begin="13" cat="pp" end="22" id="22" rel="pc">
+              <node begin="13" end="14" id="23" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+              <node begin="14" cat="np" end="22" id="24" rel="obj1">
+                <node begin="14" end="15" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="26" lemma="verbetering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verbetering" word="verbetering"/>
+                <node begin="16" cat="pp" end="22" id="27" rel="mod">
+                  <node begin="16" end="17" id="28" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="17" cat="np" end="22" id="29" rel="obj1">
+                    <node begin="17" end="18" id="30" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="31" lemma="kwaliteit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kwaliteit" word="kwaliteit"/>
+                    <node begin="19" cat="pp" end="22" id="32" rel="mod">
+                      <node begin="19" end="20" id="33" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                      <node begin="20" cat="np" end="22" id="34" rel="obj1">
+                        <node begin="20" end="21" id="35" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                        <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="36" lemma="JGZ" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="JGZ" word="JGZ"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een dragende factor in de JGZ is het basistakenpakket , dat wezenlijk bijdraagt aan de verbetering van de kwaliteit van de JGZ .</sentence>
+</alpino_ds>

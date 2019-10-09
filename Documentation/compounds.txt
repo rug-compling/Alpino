@@ -1,0 +1,32 @@
+
+How do we represent the root of morphological complex words?
+
+* flat
+
+compounds
+---------
+
+- "normal" compounds where the rightmost morpheme is the head
+(right-hand-head-rule).
+
+each morpheme boundary is indicated by '_'
+
+botervloot			boter_vloot
+trainer/coach			trainer_coach
+boter-vloot			boter_vloot
+science fiction-schrijver	science_fiction_schrijver
+
+
+- "left-headed" compounds
+
+motie-Goudzwaard	motie_Goudzwaard
+motie-Van Dam		motie_Van_Dam
+
+particle verbs
+--------------
+
+verb_particle: particle is written after verb
+
+opbel, opbelt, opbellen, opgebeld, opbelde, opbelden,
+bel op, belt op, belde op belden op ===> bel_op
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="2" end="3" id="2" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="7" id="3" rel="vc">
+        <node begin="3" buiging="zonder" end="4" id="4" lemma="maken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="maak" word="gemaakt" wvorm="vd"/>
+        <node begin="0" cat="np" end="7" id="5" index="1" rel="obj1">
+          <node begin="0" end="1" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="afspraak" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="afspraak" word="afspraak"/>
+          <node begin="4" cat="ti" end="7" id="8" rel="vc">
+            <node begin="5" end="6" id="9" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="4" cat="inf" end="7" id="10" rel="body">
+              <node begin="4" end="5" getal="ev" id="11" lemma="niets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="niets" status="vol" vwtype="onbep" word="niets"/>
+              <node begin="6" buiging="zonder" end="7" id="12" lemma="zeggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zeg" word="zeggen" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="0" end="7" id="13" index="1" rel="su"/>
+    </node>
+  </node>
+  <sentence>de afspraak werd gemaakt niets te zeggen</sentence>
+</alpino_ds>

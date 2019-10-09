@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="du" end="4" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="dus" pos="comp" postag="BW()" pt="bw" rel="dlink" root="dus" word="dus"/>
+      <node begin="1" cat="sv1" end="4" id="3" rel="nucl">
+        <node begin="1" end="2" id="4" lemma="zwijgen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zwijg" word="zwijg" wvorm="pv"/>
+        <node begin="2" end="3" getal="ev" id="5" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj2" root="me" status="red" vwtype="pr" word="me"/>
+        <node begin="3" end="4" id="6" lemma="ervan" pos="pp" postag="BW()" pt="bw" rel="pc" root="ervan" word="ervan"/>
+      </node>
+    </node>
+    <node begin="4" end="5" id="7" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>dus zwijg me ervan !</sentence>
+</alpino_ds>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" buiging="zonder" end="1" graad="comp" id="3" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,comp)" pt="vnw" rel="det" root="meer" vwtype="onbep" word="Meer"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="personeel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="personeel" word="personeel"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+      <node begin="0" cat="inf" end="5" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="su"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="8" lemma="wenselijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="wenselijk" word="wenselijk"/>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Meer personeel zou wenselijk zijn</sentence>
+</alpino_ds>

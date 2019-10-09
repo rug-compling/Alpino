@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="53" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="16" end="17" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="26" end="27" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="conj" end="51" id="4" rel="--">
+      <node begin="0" cat="smain" end="16" id="5" rel="cnj">
+        <node begin="0" end="1" id="6" index="1" lemma="daarin" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarin" word="Daarin"/>
+        <node begin="1" end="2" id="7" lemma="nodigen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="nodig" word="nodigt" wvorm="pv"/>
+        <node begin="2" cat="np" end="4" id="8" rel="su">
+          <node begin="2" end="3" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="10" lemma="paus" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="Paus" word="Paus"/>
+        </node>
+        <node begin="4" end="5" id="11" lemma="immers" pos="adv" postag="BW()" pt="bw" rel="mod" root="immers" word="immers"/>
+        <node begin="5" cat="np" end="8" id="12" rel="obj1">
+          <node begin="5" end="6" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" buiging="met-e" end="7" graad="basis" id="14" lemma="Nederlands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Nederlands" word="Nederlandse"/>
+          <node begin="7" end="8" getal="mv" graad="basis" id="15" lemma="bisschop" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bisschop" word="bisschoppen"/>
+        </node>
+        <node begin="8" end="9" id="16" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
+        <node begin="9" cat="pp" end="16" id="17" rel="mod">
+          <node begin="9" end="10" id="18" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+          <node begin="11" cat="np" end="16" id="19" rel="obj1">
+            <node begin="11" end="12" id="20" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="12" cat="conj" end="15" id="21" rel="mod">
+              <node begin="12" buiging="zonder" end="13" graad="basis" id="22" lemma="vertrouwelijk" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="cnj" root="vertrouwelijk" word="vertrouwelijk"/>
+              <node begin="13" conjtype="neven" end="14" id="23" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="14" buiging="zonder" end="15" graad="basis" id="24" lemma="broederlijk" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="cnj" root="broederlijk" word="broederlijk"/>
+            </node>
+            <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="25" lemma="contact" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="contact" word="contact"/>
+          </node>
+        </node>
+      </node>
+      <node begin="17" conjtype="neven" end="18" id="26" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="0" cat="smain" end="51" id="27" rel="cnj">
+        <node begin="0" end="1" id="28" index="1" rel="mod"/>
+        <node begin="18" end="19" id="29" lemma="spreken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="spreek" word="spreekt" wvorm="pv"/>
+        <node begin="19" end="20" genus="masc" getal="ev" id="30" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+        <node begin="22" end="23" id="31" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
+        <node begin="20" cat="np" end="51" id="32" rel="obj1">
+          <node begin="20" end="21" id="33" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="34" lemma="verlangen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verlangen" word="verlangen"/>
+          <node begin="23" cat="ti" end="51" id="35" rel="vc">
+            <node begin="29" end="30" id="36" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="23" cat="inf" end="51" id="37" rel="body">
+              <node begin="23" cat="pp" end="25" id="38" rel="mod">
+                <node begin="23" end="24" id="39" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                <node begin="24" end="25" getal="mv" id="40" lemma="hen" naamval="obl" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,obl,vol,3p,mv)" pt="vnw" rel="obj1" root="hen" status="vol" vwtype="pers" word="hen"/>
+              </node>
+              <node begin="30" buiging="zonder" end="31" id="41" lemma="zoeken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zoek" word="zoeken" wvorm="inf"/>
+              <node begin="25" cat="pp" end="51" id="42" rel="pc">
+                <node begin="25" end="26" id="43" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+                <node begin="27" cat="np" end="51" id="44" rel="obj1">
+                  <node begin="27" end="28" id="45" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="28" end="29" getal="mv" graad="basis" id="46" lemma="middel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="middel" word="middelen"/>
+                  <node begin="31" cat="oti" end="51" id="47" rel="vc">
+                    <node begin="31" end="32" id="48" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+                    <node begin="32" cat="ti" end="51" id="49" rel="body">
+                      <node begin="39" end="40" id="50" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+                      <node begin="32" cat="inf" end="51" id="51" rel="body">
+                        <node begin="32" cat="np" end="34" id="52" rel="obj1">
+                          <node begin="32" buiging="zonder" end="33" getal="mv" id="53" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+                          <node begin="33" end="34" getal="mv" graad="basis" id="54" lemma="probleem" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="probleem" word="problemen"/>
+                        </node>
+                        <node begin="34" cat="pp" end="38" id="55" rel="mod">
+                          <node begin="34" end="35" id="56" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                          <node begin="35" cat="np" end="38" id="57" rel="obj1">
+                            <node begin="35" end="36" id="58" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                            <node begin="36" buiging="met-e" end="37" id="59" lemma="passen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="passend" word="passende" wvorm="vd"/>
+                            <node begin="37" end="38" genus="zijd" getal="ev" graad="basis" id="60" lemma="wijze" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wijze" word="wijze"/>
+                          </node>
+                        </node>
+                        <node begin="38" end="39" id="61" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
+                        <node begin="40" buiging="zonder" end="41" id="62" lemma="lossen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="los" word="lossen" wvorm="inf"/>
+                        <node begin="41" cat="pp" end="51" id="63" rel="mod">
+                          <node begin="41" end="42" id="64" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                          <node begin="42" cat="np" end="51" id="65" rel="obj1">
+                            <node begin="42" buiging="zonder" end="43" graad="basis" id="66" lemma="eenzelfde" pos="det" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="det" root="eenzelfde" word="eenzelfde"/>
+                            <node begin="43" end="44" genus="zijd" getal="ev" graad="basis" id="67" lemma="zorg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zorg" word="zorg"/>
+                            <node begin="44" cat="pp" end="51" id="68" rel="mod">
+                              <node begin="44" end="45" id="69" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                              <node begin="45" cat="np" end="51" id="70" rel="obj1">
+                                <node begin="45" end="46" id="71" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                                <node begin="46" end="47" genus="onz" getal="ev" graad="basis" id="72" lemma="welzijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="welzijn" word="welzijn"/>
+                                <node begin="47" cat="pp" end="51" id="73" rel="mod">
+                                  <node begin="47" end="48" id="74" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                                  <node begin="48" cat="np" end="51" id="75" rel="obj1">
+                                    <node begin="48" buiging="zonder" end="49" graad="basis" id="76" lemma="heel" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="heel" word="heel"/>
+                                    <node begin="49" end="50" id="77" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                                    <node begin="50" end="51" genus="zijd" getal="ev" graad="basis" id="78" lemma="kerk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kerk" word="kerk"/>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="51" end="52" id="79" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="52" end="53" id="80" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>Daarin nodigt de Paus immers de Nederlandse bisschoppen uit tot &quot; een vertrouwelijk en broederlijk contact &quot; en spreekt hij het verlangen uit met hen naar &quot; de middelen te zoeken om hun problemen op een passende wijze op te lossen in eenzelfde zorg voor het welzijn van heel de kerk . &quot;</sentence>
+</alpino_ds>

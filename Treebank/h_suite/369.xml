@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="np" end="4" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+      <node begin="1" cat="ppres" end="3" id="3" rel="mod">
+        <node begin="1" end="2" getal="getal" id="4" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="2" buiging="met-e" end="3" id="5" lemma="logeren" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="logeer" word="logerende" wvorm="od"/>
+      </node>
+      <node begin="3" end="4" getal="mv" graad="basis" id="6" lemma="beroemdheid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="beroemdheid" word="beroemdheden"/>
+    </node>
+  </node>
+  <sentence>de er logerende beroemdheden</sentence>
+</alpino_ds>

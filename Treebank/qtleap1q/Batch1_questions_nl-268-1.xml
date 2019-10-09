@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+      <node begin="0" cat="inf" end="7" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" cat="np" end="4" id="6" rel="obj1">
+          <node begin="2" buiging="zonder" end="3" id="7" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="noun" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geem"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="8" lemma="emails" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="emails" word="emails"/>
+        </node>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="openen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="open" word="openen" wvorm="inf"/>
+        <node begin="5" cat="pp" end="7" id="10" rel="mod">
+          <node begin="5" end="6" id="11" lemma="vanuit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="vanuit" vztype="init" word="vanuit"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="IE" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="IE" word="IE"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Ik kan geem emails openen vanuit IE</sentence>
+</alpino_ds>

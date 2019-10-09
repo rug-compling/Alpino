@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="27" id="0" rel="top">
+    <node begin="9" end="10" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="22" end="23" id="2" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="smain" end="25" id="3" rel="--">
+      <node begin="0" cat="cp" end="9" id="4" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="5" lemma="indien" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="indien" word="Indien"/>
+        <node begin="1" cat="ssub" end="9" id="6" rel="body">
+          <node begin="1" end="2" getal="ev" id="7" index="1" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+          <node begin="7" end="8" id="8" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="hebt" wvorm="pv"/>
+          <node begin="1" cat="ppart" end="9" id="9" rel="vc">
+            <node begin="1" end="2" id="10" index="1" rel="su"/>
+            <node begin="2" cat="np" end="7" id="11" rel="obj1">
+              <node begin="2" end="3" id="12" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="13" lemma="wacht_woord" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="wacht_woord" word="wachtwoord"/>
+              <node begin="4" cat="pp" end="7" id="14" rel="mod">
+                <node begin="4" end="5" id="15" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="5" cat="np" end="7" id="16" rel="obj1">
+                  <node begin="5" buiging="zonder" end="6" getal="ev" id="17" lemma="je" naamval="stan" npagr="agr" pdtype="det" persoon="2v" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="je" status="red" vwtype="bez" word="je"/>
+                  <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="18" lemma="router" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="router" word="router"/>
+                </node>
+              </node>
+            </node>
+            <node begin="8" buiging="zonder" end="9" id="19" lemma="aan_passen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="pas_aan" word="aangepast" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+      <node begin="10" end="11" id="20" lemma="aan_raden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="raad_aan" word="raden" wvorm="pv"/>
+      <node begin="11" end="12" getal="mv" id="21" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+      <node begin="12" end="13" getal="getal" id="22" index="2" lemma="je" naamval="obl" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pr,pron,obl,red,2v,getal)" pt="vnw" rel="obj2" root="je" status="red" vwtype="pr" word="je"/>
+      <node begin="13" end="14" id="23" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
+      <node begin="12" cat="ti" end="25" id="24" rel="vc">
+        <node begin="17" end="18" id="25" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="12" cat="inf" end="25" id="26" rel="body">
+          <node begin="12" end="13" id="27" index="2" rel="su"/>
+          <node begin="14" cat="np" end="16" id="28" rel="obj1">
+            <node begin="14" end="15" id="29" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="30" lemma="router" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="router" word="router"/>
+          </node>
+          <node begin="16" end="17" id="31" lemma="terug" pos="part" postag="BW()" pt="bw" rel="svp" root="terug" word="terug"/>
+          <node begin="18" buiging="zonder" end="19" id="32" lemma="terug_zetten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zet_terug" word="zetten" wvorm="inf"/>
+          <node begin="19" cat="pp" end="25" id="33" rel="ld">
+            <node begin="19" end="20" id="34" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+            <node begin="20" cat="np" end="25" id="35" rel="obj1">
+              <node begin="20" end="21" id="36" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="21" end="22" getal="mv" graad="basis" id="37" lemma="fabriek_instelling" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="fabriek_instelling" word="fabrieksinstellingen"/>
+              <node begin="23" cat="sv1" end="25" id="38" rel="mod">
+                <node begin="23" end="24" id="39" lemma="resetten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="reset" word="reset" wvorm="pv"/>
+                <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="40" lemma="router" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="router" word="router"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="25" end="26" id="41" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="26" end="27" id="42" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Indien je het wachtwoord van je router hebt aangepast , raden we je aan de router terug te zetten naar de fabrieksinstellingen ( reset router ) .</sentence>
+</alpino_ds>

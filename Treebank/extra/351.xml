@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" index="1" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,conj,ev)" pt="ww" pvagr="ev" pvtijd="conj" rel="hd" root="ben" word="zij" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="13" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="pobj1"/>
+        <node begin="2" end="3" getal="ev" id="6" index="2" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj2" root="mij" status="vol" vwtype="pr" word="mij"/>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="vergunnen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vergun" word="vergund" wvorm="vd"/>
+        <node begin="2" cat="ti" end="13" id="8" rel="vc">
+          <node begin="5" end="6" id="9" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="2" cat="inf" end="13" id="10" rel="body">
+            <node begin="2" end="3" id="11" index="2" rel="su"/>
+            <node begin="4" end="5" id="12" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="af" vztype="fin" word="af"/>
+            <node begin="6" buiging="zonder" end="7" id="13" lemma="sluiten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="sluit_af" word="sluiten" wvorm="inf"/>
+            <node begin="7" cat="pp" end="13" id="14" rel="pc">
+              <node begin="7" end="8" id="15" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+              <node begin="8" cat="np" end="13" id="16" rel="obj1">
+                <node begin="8" end="9" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="18" lemma="citaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="citaat" word="citaat"/>
+                <node begin="10" cat="pp" end="13" id="19" rel="mod">
+                  <node begin="10" end="11" id="20" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="11" cat="mwu" end="13" id="21" rel="obj1">
+                    <node begin="11" end="12" id="22" lemma="Albert" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Albert" spectype="deeleigen" word="Albert"/>
+                    <node begin="12" end="13" id="23" lemma="Einstein" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Einstein" spectype="deeleigen" word="Einstein"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Het zij mij vergund af te sluiten met een citaat van Albert Einstein</sentence>
+</alpino_ds>

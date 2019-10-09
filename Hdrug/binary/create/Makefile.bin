@@ -1,0 +1,21 @@
+## edit these!
+##
+## if you have the blt library, use
+## BLT=blt
+BLT=noblt
+BLTLIB=/usr/local/lib/libBLT24.so
+
+
+PWD:=${shell pwd}
+
+all: 
+	echo "#!/bin/sh" > hdrug.sh
+	echo $(PWD)/hdrug.exe \
+              -flag hdrug_library $(PWD)/Tcl\
+              -flag tex_library $(PWD)/Tex\
+             -cmd "\"asserta(library_directory('$(PWD)/Tcl'))\""\
+              blt=$(BLT) -flag blt_library $(BLTLIB)\
+              tkconsol=on\
+              '"$$@"'            >>hdrug.sh
+	chmod +x hdrug.sh
+

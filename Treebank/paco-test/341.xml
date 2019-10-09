@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="27" id="0" rel="top">
+    <node begin="8" end="9" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="24" end="25" frame="punct(komma)" id="2" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="26" id="3" rel="--">
+      <node begin="9" end="10" frame="verb(unacc,pl,passive)" id="4" infl="pl" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="worden"/>
+      <node begin="10" cat="np" end="24" id="5" index="1" rel="su">
+        <node begin="10" end="11" frame="determiner(de)" id="6" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node aform="base" begin="11" end="12" frame="adjective(e)" id="7" infl="e" lcat="ap" pos="adj" rel="mod" root="belangrijk" sense="belangrijk" vform="adj" word="belangrijke"/>
+        <node begin="12" end="13" frame="noun(de,count,pl)" gen="de" id="8" lcat="np" num="pl" pos="noun" rel="hd" root="verandering" sense="verandering" word="veranderingen"/>
+        <node begin="13" cat="pp" end="24" id="9" rel="mod">
+          <node begin="13" end="14" frame="preposition(in,[])" id="10" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+          <node begin="14" cat="np" end="24" id="11" rel="obj1">
+            <node begin="14" end="15" frame="determiner(de)" id="12" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node aform="base" begin="15" end="16" frame="adjective(e)" id="13" infl="e" lcat="ap" pos="adj" rel="mod" root="fundamenteel" sense="fundamenteel" vform="adj" word="fundamentele"/>
+            <node aform="base" begin="16" end="17" frame="adjective(e)" id="14" infl="e" lcat="ap" pos="adj" rel="mod" root="technisch" sense="technisch" vform="adj" word="technische"/>
+            <node begin="17" end="18" frame="noun(het,count,pl)" gen="het" id="15" lcat="np" num="pl" pos="noun" rel="hd" root="kenmerk" sense="kenmerk" word="kenmerken"/>
+            <node begin="18" cat="rel" end="24" id="16" rel="mod">
+              <node begin="18" end="19" frame="waar_adverb(voor)" id="17" index="2" lcat="pp" pos="pp" rel="rhd" root="waarvoor" sense="waarvoor" special="waar" word="waarvoor"/>
+              <node begin="18" cat="ssub" end="24" id="18" rel="body">
+                <node begin="19" cat="np" end="22" id="19" index="3" rel="su">
+                  <node begin="19" end="20" frame="determiner(een)" id="20" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+                  <node aform="base" begin="20" end="21" frame="adjective(ende(adv))" id="21" infl="e" lcat="ppres" pos="adj" rel="mod" root="voorafgaand" sense="voorafgaand" vform="gerund" word="voorafgaande"/>
+                  <node begin="21" end="22" frame="noun(de,count,sg)" gen="de" id="22" lcat="np" num="sg" pos="noun" rel="hd" root="kennisgeving" sense="kennisgeving" word="kennisgeving"/>
+                </node>
+                <node begin="18" cat="ppart" end="23" id="23" rel="vc">
+                  <node begin="18" end="19" id="24" index="2" rel="mod"/>
+                  <node begin="19" end="22" id="25" index="3" rel="obj1"/>
+                  <node begin="22" end="23" frame="verb(hebben,psp,transitive)" id="26" infl="psp" lcat="ppart" pos="verb" rel="hd" root="vereis" sc="transitive" sense="vereis" word="vereist"/>
+                </node>
+                <node begin="23" end="24" frame="verb(unacc,sg_heeft,passive)" id="27" infl="sg_heeft" lcat="ssub" pos="verb" rel="hd" root="ben" sc="passive" sense="ben" tense="present" word="is"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="0" cat="ppart" end="26" id="28" rel="vc">
+        <node begin="0" cat="pp" end="8" id="29" rel="mod">
+          <node begin="0" end="1" frame="preposition(in,[])" id="30" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="In"/>
+          <node begin="1" cat="np" end="8" id="31" rel="obj1">
+            <node begin="1" end="2" frame="determiner(de)" id="32" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="2" cat="ppart" end="6" id="33" rel="mod">
+              <node begin="2" cat="pp" end="5" id="34" rel="mod">
+                <node begin="2" end="3" frame="preposition(in,[])" id="35" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                <node begin="3" cat="np" end="5" id="36" rel="obj1">
+                  <node begin="3" end="4" frame="noun(het,count,sg)" gen="het" id="37" lcat="np" num="sg" pos="noun" rel="hd" root="artikel" sense="artikel" word="artikel"/>
+                  <node begin="4" end="5" frame="number(hoofd(pl_num))" id="38" infl="pl_num" lcat="detp" pos="num" rel="app" root="7" sense="7" special="hoofd" word="7"/>
+                </node>
+              </node>
+              <node aform="base" begin="5" end="6" frame="adjective(ge_e)" id="39" infl="e" lcat="ppart" pos="adj" rel="hd" root="bedoeld" sense="bedoeld" vform="psp" word="bedoelde"/>
+            </node>
+            <node begin="6" cat="mwu" end="8" id="40" mwu_root="Bijzondere_Controlebepalingen" mwu_sense="Bijzondere_Controlebepalingen" rel="hd">
+              <node begin="6" end="7" frame="proper_name(both,'PER')" id="41" lcat="np" neclass="PER" num="both" pos="name" rel="mwp" root="Bijzondere" sense="Bijzondere" word="Bijzondere"/>
+              <node begin="7" end="8" frame="proper_name(both,'PER')" id="42" lcat="np" neclass="PER" num="both" pos="name" rel="mwp" root="Controlebepalingen" sense="Controlebepalingen" word="Controlebepalingen"/>
+            </node>
+          </node>
+        </node>
+        <node begin="10" end="24" id="43" index="1" rel="obj1"/>
+        <node begin="25" end="26" frame="verb(hebben,psp,ninv(transitive,part_transitive(vast)))" id="44" infl="psp" lcat="ppart" pos="verb" rel="hd" root="stel_vast" sc="part_transitive(vast)" sense="stel_vast" word="vastgesteld"/>
+      </node>
+    </node>
+    <node begin="26" end="27" frame="punct(punt)" id="45" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>In de in artikel 7 bedoelde Bijzondere Controlebepalingen , worden de belangrijke veranderingen in de fundamentele technische kenmerken waarvoor een voorafgaande kennisgeving vereist is , vastgesteld .</sentence>
+  <comments>
+    <comment>Q#341|In de in artikel 7 bedoelde Bijzondere Controlebepalingen , worden de belangrijke veranderingen in de fundamentele technische kenmerken waarvoor een voorafgaande kennisgeving vereist is , vastgesteld .|1|1|-9.44877640272827</comment>
+  </comments>
+</alpino_ds>

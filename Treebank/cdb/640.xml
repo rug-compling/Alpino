@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="12" end="13" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="15" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" rel="su">
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="issels-methode" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="methode" word="Issels-methode"/>
+      </node>
+      <node begin="2" end="3" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="eigenlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="eigenlijk" word="eigenlijk"/>
+      <node begin="5" cat="np" end="7" id="8" rel="predc">
+        <node begin="5" end="6" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="10" lemma="filosofie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="filosofie" word="filosofie"/>
+      </node>
+      <node begin="4" cat="advp" end="15" id="11" rel="mod">
+        <node begin="4" buiging="zonder" end="5" graad="comp" id="12" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="hd" root="meer" vwtype="onbep" word="meer"/>
+        <node begin="7" cat="cp" end="15" id="13" rel="obcomp">
+          <node begin="7" conjtype="onder" end="8" id="14" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+          <node begin="8" cat="np" end="15" id="15" rel="body">
+            <node begin="8" end="9" id="16" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="9" cat="ap" end="12" id="17" rel="mod">
+              <node begin="9" buiging="zonder" end="10" graad="basis" id="18" lemma="wetenschappelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="wetenschappelijk" word="wetenschappelijk"/>
+              <node begin="10" buiging="zonder" end="11" graad="basis" id="19" lemma="volledig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="volledig" word="volledig"/>
+              <node begin="11" buiging="met-e" end="12" graad="basis" id="20" lemma="omschrijfbaar" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="omschrijfbare" word="omschrijfbare"/>
+            </node>
+            <node begin="13" buiging="met-e" end="14" graad="basis" id="21" lemma="analyseerbaar" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="analyseerbare" word="analyseerbare"/>
+            <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="22" lemma="therapie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="therapie" word="therapie"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De Issels-methode is eigenlijk meer een filosofie dan een wetenschappelijk volledig omschrijfbare , analyseerbare therapie .</sentence>
+</alpino_ds>

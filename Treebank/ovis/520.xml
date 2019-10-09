@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="du" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="nee" pos="tag" postag="TSW()" pt="tsw" rel="tag" root="nee" word="nee"/>
+      <node begin="1" cat="smain" end="6" id="3" rel="nucl">
+        <node begin="1" end="2" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="2" end="3" id="5" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+        <node begin="1" cat="inf" end="6" id="6" rel="vc">
+          <node begin="1" end="2" id="7" index="1" rel="su"/>
+          <node begin="3" cat="pp" end="5" id="8" rel="ld">
+            <node begin="3" end="4" id="9" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="voorhout" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="voorhout" word="voorhout"/>
+          </node>
+          <node begin="5" buiging="zonder" end="6" getal-n="zonder-n" id="11" lemma="reizen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="reis" word="reizen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>nee ik wil naar voorhout reizen</sentence>
+</alpino_ds>

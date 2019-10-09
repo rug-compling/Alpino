@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="np" end="8" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="mooi" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="mooi" word="mooi"/>
+      <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="3" lemma="weer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="weer" word="weer"/>
+      <node begin="2" cat="pp" end="8" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+        <node begin="3" cat="conj" end="6" id="6" rel="mod">
+          <node begin="3" end="4" getal="getal" id="7" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="cnj" root="hier" status="vol" vwtype="aanw" word="hier"/>
+          <node begin="4" conjtype="neven" end="5" id="8" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="5" end="6" getal="getal" id="9" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="cnj" root="daar" status="vol" vwtype="aanw" word="daar"/>
+        </node>
+        <node begin="6" cat="np" end="8" id="10" rel="obj1">
+          <node begin="6" end="7" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="12" lemma="bui" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bui" word="bui"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>mooi weer met hier en daar een bui</sentence>
+</alpino_ds>

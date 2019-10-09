@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="ap" end="7" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="lekker" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="lekker" word="Lekker"/>
+      <node begin="1" buiging="zonder" end="2" graad="basis" id="3" lemma="fris" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="fris" word="fris"/>
+      <node begin="2" cat="pp" end="7" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+        <node begin="3" cat="np" end="7" id="6" rel="obj1">
+          <node begin="3" end="4" id="7" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="4" buiging="met-e" end="5" graad="basis" id="8" lemma="lang" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="lang" word="lange"/>
+          <node begin="5" buiging="met-e" end="6" graad="basis" id="9" lemma="heet" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="heet" word="hete"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="10" lemma="zomer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zomer" word="zomer"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Lekker fris voor een lange hete zomer .</sentence>
+</alpino_ds>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dit" status="vol" vwtype="aanw" word="Dit"/>
+      <node begin="1" end="2" id="3" lemma="maken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="maak" word="maakte" wvorm="pv"/>
+      <node begin="2" cat="np" end="5" id="4" rel="su">
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="premier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="premier" word="premier"/>
+        <node begin="3" cat="mwu" end="5" id="6" rel="app">
+          <node begin="3" end="4" id="7" lemma="Harold" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Harold" spectype="deeleigen" word="Harold"/>
+          <node begin="4" end="5" id="8" lemma="Wilson" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wilson" spectype="deeleigen" word="Wilson"/>
+        </node>
+      </node>
+      <node begin="5" end="6" id="9" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
+      <node begin="6" buiging="zonder" end="7" graad="basis" id="10" lemma="duidelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="duidelijk" word="duidelijk"/>
+      <node begin="7" cat="pp" end="11" id="11" rel="mod">
+        <node begin="7" end="8" id="12" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="8" cat="np" end="11" id="13" rel="obj1">
+          <node begin="8" end="9" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="9" buiging="met-e" end="10" graad="basis" id="15" lemma="Brits" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Brits" word="Britse"/>
+          <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="16" lemma="Lagerhuis" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Lagerhuis" word="Lagerhuis"/>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dit maakte premier Harold Wilson gisteren duidelijk in het Britse Lagerhuis .</sentence>
+</alpino_ds>

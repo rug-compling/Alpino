@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="6" end="7" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="13" id="2" rel="--">
+      <node begin="0" end="1" frame="er_adverb(door)" id="3" lcat="pp" pos="pp" rel="mod" root="hierdoor" sense="hierdoor" special="er" word="Hierdoor"/>
+      <node begin="1" end="2" frame="verb(hebben,pl,transitive)" id="4" infl="pl" lcat="smain" pos="verb" rel="hd" root="bekom" sc="transitive" sense="bekom" tense="present" word="bekomen"/>
+      <node begin="2" case="nom" def="def" end="3" frame="pronoun(nwh,fir,pl,de,nom,def,wkpro)" gen="de" id="5" lcat="np" num="pl" per="fir" pos="pron" rel="su" root="we" sense="we" special="wkpro" wh="nwh" word="we"/>
+      <node begin="3" cat="np" end="13" id="6" rel="obj1">
+        <node begin="3" end="4" frame="determiner(een)" id="7" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+        <node aform="base" begin="4" end="5" frame="adjective(no_e(adv))" id="8" infl="no_e" lcat="ap" pos="adj" rel="mod" root="realistisch" sense="realistisch" vform="adj" word="realistisch"/>
+        <node begin="5" end="6" frame="noun(het,count,sg)" gen="het" id="9" lcat="np" num="sg" pos="noun" rel="hd" root="plan" sense="plan" word="plan"/>
+        <node begin="7" cat="rel" end="13" id="10" rel="mod">
+          <node begin="7" case="no_obl" end="8" frame="rel_pronoun(het,no_obl)" gen="het" id="11" index="1" lcat="np" pos="pron" rel="rhd" root="dat" sense="dat" wh="rel" word="dat"/>
+          <node begin="7" cat="ssub" end="13" id="12" rel="body">
+            <node begin="7" end="8" id="13" index="1" rel="su"/>
+            <node begin="7" cat="ppart" end="12" id="14" rel="vc">
+              <node begin="7" end="8" id="15" index="1" rel="obj1"/>
+              <node begin="8" cat="pp" end="11" id="16" rel="mod">
+                <node begin="8" end="9" frame="preposition(door,[heen])" id="17" lcat="pp" pos="prep" rel="hd" root="door" sense="door" word="door"/>
+                <node begin="9" cat="np" end="11" id="18" rel="obj1">
+                  <node begin="9" end="10" frame="determiner(alle,nwh,mod,pro,nparg)" id="19" infl="alle" lcat="detp" pos="det" rel="det" root="alle" sense="alle" wh="nwh" word="alle"/>
+                  <node aform="base" begin="10" end="11" frame="nominalized_adjective" id="20" lcat="np" num="pl" pos="adj" rel="hd" root="betrokken" sense="betrokken" special="a_noun" word="betrokkenen"/>
+                </node>
+              </node>
+              <node begin="11" end="12" frame="verb(hebben,psp,transitive)" id="21" infl="psp" lcat="ppart" pos="verb" rel="hd" root="draag" sc="transitive" sense="draag" word="gedragen"/>
+            </node>
+            <node begin="12" end="13" frame="verb(unacc,sg3,passive)" id="22" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" frame="punct(punt)" id="23" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Hierdoor bekomen we een realistisch plan , dat door alle betrokkenen gedragen wordt .</sentence>
+  <comments>
+    <comment>Q#162|Hierdoor bekomen we een realistisch plan , dat door alle betrokkenen gedragen wordt .|1|1|-7.021496679081156</comment>
+  </comments>
+</alpino_ds>

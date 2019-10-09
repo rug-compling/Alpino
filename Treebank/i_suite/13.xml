@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="waarom" pos="pp" postag="BW()" pt="bw" rel="whd" root="waarom" word="Waarom"/>
+      <node begin="0" cat="conj" end="6" id="3" rel="body">
+        <node begin="0" cat="ppart" end="2" id="4" rel="cnj">
+          <node begin="0" end="1" id="5" index="1" rel="mod"/>
+          <node begin="1" buiging="zonder" end="2" id="6" lemma="liegen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="lieg" word="gelogen" wvorm="vd"/>
+        </node>
+        <node begin="2" conjtype="neven" end="3" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="0" cat="ppart" end="6" id="8" rel="cnj">
+          <node begin="0" end="1" id="9" index="1" rel="mod"/>
+          <node begin="3" end="4" getal="ev" id="10" lemma="zulk" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="zulk" status="vol" vwtype="aanw" word="zulks"/>
+          <node begin="4" end="5" id="11" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="5" buiging="zonder" end="6" id="12" lemma="vermelden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vermeld" word="vermeld" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Waarom gelogen en zulks niet vermeld ?</sentence>
+</alpino_ds>

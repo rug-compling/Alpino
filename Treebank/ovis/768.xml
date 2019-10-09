@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="--" root="naar" vztype="init" word="naar"/>
+    <node begin="0" cat="du" end="5" id="2" rel="--">
+      <node begin="0" cat="pp" end="2" id="3" rel="dp">
+        <node begin="0" end="1" id="4" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="sevenum" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="sevenum" word="sevenum"/>
+      </node>
+      <node begin="3" cat="pp" end="5" id="6" rel="dp">
+        <node begin="3" end="4" id="7" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="bijlmer" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="bijlmer" word="bijlmer"/>
+      </node>
+    </node>
+  </node>
+  <sentence>van sevenum naar naar bijlmer</sentence>
+</alpino_ds>

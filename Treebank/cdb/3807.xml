@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="zo" pos="adj" postag="BW()" pt="bw" rel="predc" root="zo" word="Zo"/>
+      <node begin="1" end="2" id="3" lemma="heten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heet" word="heet" wvorm="pv"/>
+      <node begin="2" end="3" id="4" lemma="tenminste" pos="adv" postag="BW()" pt="bw" rel="mod" root="tenminste" word="tenminste"/>
+      <node begin="3" cat="np" end="6" id="5" rel="su">
+        <node begin="3" buiging="zonder" end="4" getal="mv" id="6" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+        <node begin="4" buiging="met-e" end="5" graad="basis" id="7" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="8" lemma="elpee" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="elpee" word="elpee"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="9" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>Zo heet tenminste hun nieuwe elpee :</sentence>
+</alpino_ds>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="6" end="7" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="8" id="3" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="4" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="5" lemma="vallen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="val_op" word="viel" wvorm="pv"/>
+      <node begin="2" end="3" id="6" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
+      <node begin="3" cat="pp" end="8" id="7" rel="mod">
+        <node begin="3" end="4" id="8" lemma="door" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="door" vztype="fin" word="door"/>
+        <node begin="5" cat="np" end="8" id="9" rel="obj1">
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="jawel" naamval="stan" ntype="soort" pos="tag" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="jawel" word="jawel"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="11" lemma="eigenzinnigheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="eigenzinnig_heid" word="eigenzinnigheid"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Hij viel op door , jawel , eigenzinnigheid</sentence>
+</alpino_ds>

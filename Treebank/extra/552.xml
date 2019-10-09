@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="du" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="hopelijk" pos="adv" postag="BW()" pt="bw" rel="dp" root="hopelijk" word="Hopelijk"/>
+      <node begin="1" cat="cp" end="6" id="3" rel="dp">
+        <node begin="1" conjtype="onder" end="2" id="4" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="2" cat="ssub" end="6" id="5" rel="body">
+          <node begin="2" cat="np" end="4" id="6" rel="su">
+            <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="winter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="winter" word="winter"/>
+          </node>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="9" lemma="voorbij" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="voorbij" word="voorbij"/>
+          <node begin="5" end="6" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
+  </node>
+  <sentence>Hopelijk dat de winter voorbij is !</sentence>
+</alpino_ds>

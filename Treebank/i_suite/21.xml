@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="4" end="5" id="2" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="0" cat="cp" end="6" id="3" rel="--">
+      <node begin="0" conjtype="onder" end="1" id="4" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="Omdat"/>
+      <node begin="1" cat="ssub" end="6" id="5" rel="body">
+        <node begin="1" end="2" getal="mv" id="6" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="allebei" naamval="stan" pdtype="det" pos="adv" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="predm" root="allebei" vwtype="onbep" word="allebei"/>
+        <node begin="5" end="6" id="8" lemma="vertrekken" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="vertrek" word="vertrokken" wvorm="pv"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Omdat we - allebei - vertrokken</sentence>
+</alpino_ds>

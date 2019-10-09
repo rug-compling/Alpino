@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="12" end="13" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="20" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" index="1" rel="su">
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="match" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="match" word="match"/>
+      </node>
+      <node begin="2" end="3" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="20" id="7" rel="vc">
+        <node begin="0" end="2" id="8" index="1" rel="obj1"/>
+        <node begin="5" buiging="zonder" end="6" id="9" lemma="karakteriseren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="karakteriseer" word="gekarakteriseerd" wvorm="vd"/>
+        <node begin="6" cat="cp" end="12" id="10" rel="mod">
+          <node begin="6" end="7" id="11" lemma="door" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="door" vztype="init" word="door"/>
+          <node begin="7" cat="ti" end="12" id="12" rel="body">
+            <node begin="7" end="8" id="13" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="8" cat="inf" end="12" id="14" rel="body">
+              <node begin="8" buiging="zonder" end="9" id="15" lemma="zeggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zeg" word="zeggen" wvorm="inf"/>
+              <node begin="9" cat="cp" end="12" id="16" rel="vc">
+                <node begin="9" conjtype="onder" end="10" id="17" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+                <node begin="10" cat="ssub" end="12" id="18" rel="body">
+                  <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="19" lemma="Koeperman" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Koeperman" word="Koeperman"/>
+                  <node begin="11" end="12" id="20" lemma="verliezen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verlies" word="verloor" wvorm="pv"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="3" cat="ap" end="20" id="21" rel="mod">
+          <node begin="3" buiging="zonder" end="4" graad="basis" id="22" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="mod" root="veel" vwtype="onbep" word="veel"/>
+          <node begin="4" buiging="zonder" end="5" graad="comp" id="23" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="beter" word="beter"/>
+          <node begin="13" cat="cp" end="20" id="24" rel="obcomp">
+            <node begin="13" conjtype="onder" end="14" id="25" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+            <node begin="14" cat="cp" end="20" id="26" rel="body">
+              <node begin="14" end="15" id="27" lemma="door" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="door" vztype="init" word="door"/>
+              <node begin="15" cat="ti" end="20" id="28" rel="body">
+                <node begin="15" end="16" id="29" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+                <node begin="16" cat="inf" end="20" id="30" rel="body">
+                  <node begin="16" buiging="zonder" end="17" id="31" lemma="stellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel" word="stellen" wvorm="inf"/>
+                  <node begin="17" cat="cp" end="20" id="32" rel="vc">
+                    <node begin="17" conjtype="onder" end="18" id="33" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+                    <node begin="18" cat="ssub" end="20" id="34" rel="body">
+                      <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="35" lemma="Andreiko" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Andreiko" word="Andreiko"/>
+                      <node begin="19" end="20" id="36" lemma="winnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="win" word="won" wvorm="pv"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De match is veel beter gekarakteriseerd door te zeggen dat Koeperman verloor , dan door te stellen dat Andreiko won .</sentence>
+</alpino_ds>

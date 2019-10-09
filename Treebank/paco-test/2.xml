@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="14" end="15" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="21" id="2" rel="--">
+      <node begin="0" end="1" frame="adverb" id="3" lcat="advp" pos="adv" rel="mod" root="toch" sense="toch" word="Toch"/>
+      <node begin="1" end="2" frame="verb(hebben,pl,part_sbar(vast))" id="4" infl="pl" lcat="smain" pos="verb" rel="hd" root="stel_vast" sc="part_sbar(vast)" sense="stel_vast" tense="present" word="stellen"/>
+      <node begin="2" case="nom" def="def" end="3" frame="pronoun(nwh,fir,pl,de,nom,def,wkpro)" gen="de" id="5" lcat="np" num="pl" per="fir" pos="pron" rel="su" root="we" sense="we" special="wkpro" wh="nwh" word="we"/>
+      <node begin="3" end="4" frame="particle(vast)" id="6" lcat="part" pos="part" rel="svp" root="vast" sense="vast" word="vast"/>
+      <node begin="4" cat="cp" end="21" id="7" rel="vc">
+        <node begin="4" end="5" frame="complementizer(dat)" id="8" lcat="cp" pos="comp" rel="cmp" root="dat" sc="dat" sense="dat" word="dat"/>
+        <node begin="5" cat="conj" end="21" id="9" rel="body">
+          <node begin="5" cat="ssub" end="14" id="10" rel="cnj">
+            <node begin="5" cat="np" end="9" id="11" index="1" rel="su">
+              <node begin="5" end="6" frame="determiner(de)" id="12" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node aform="base" begin="6" end="7" frame="adjective(e)" id="13" infl="e" lcat="ap" pos="adj" rel="mod" root="totaal" sense="totaal" vform="adj" word="totale"/>
+              <node begin="7" end="8" frame="noun(de,count,sg,measure)" gen="de" id="14" lcat="np" num="sg" pos="noun" rel="hd" root="hoeveelheid" sc="measure" sense="hoeveelheid-MEAS" word="hoeveelheid"/>
+              <node begin="8" end="9" frame="noun(both,mass,sg)" gen="both" id="15" lcat="np" num="sg" pos="noun" rel="mod" root="afval" sense="afval" word="afval"/>
+            </node>
+            <node begin="9" end="10" frame="sentence_adverb" id="16" lcat="advp" pos="adv" rel="mod" root="ook" sense="ook" special="sentence" word="ook"/>
+            <node begin="10" cat="pp" end="12" id="17" rel="mod">
+              <node begin="10" end="11" frame="preposition(in,[])" id="18" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+              <node begin="11" end="12" frame="proper_name(both,'LOC')" id="19" lcat="np" neclass="LOC" num="both" pos="name" rel="obj1" root="Vlaanderen" sense="Vlaanderen" word="Vlaanderen"/>
+            </node>
+            <node begin="12" end="13" frame="adverb" id="20" lcat="advp" pos="adv" rel="mod" root="niet" sense="niet" word="niet"/>
+            <node begin="13" end="14" frame="verb(zijn,sg3,ninv(intransitive,part_intransitive(af)))" id="21" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="neem_af" sc="part_intransitive(af)" sense="neem_af" tense="present" word="afneemt"/>
+          </node>
+          <node begin="5" cat="ssub" end="18" id="22" rel="cnj">
+            <node begin="5" end="9" id="23" index="1" rel="su"/>
+            <node begin="15" end="16" frame="adverb" id="24" lcat="advp" pos="adv" rel="mod" root="maar" sense="maar" word="maar"/>
+            <node aform="base" begin="16" end="17" frame="adjective(postn_no_e(adv))" id="25" infl="no_e" lcat="ap" pos="adj" rel="predc" root="gelijk" sense="gelijk" vform="adj" word="gelijk"/>
+            <node begin="17" end="18" frame="verb(unacc,sg3,copula)" id="26" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="blijf" sc="copula" sense="blijf" tense="present" word="blijft"/>
+          </node>
+          <node begin="18" end="19" frame="conj(en)" id="27" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+          <node begin="5" cat="ssub" end="21" id="28" rel="cnj">
+            <node begin="5" end="9" id="29" index="1" rel="su"/>
+            <node begin="19" end="20" frame="adverb" id="30" lcat="advp" pos="adv" rel="mod" root="zelfs" sense="zelfs" word="zelfs"/>
+            <node begin="20" end="21" frame="verb(zijn,sg3,ninv(intransitive,part_intransitive(toe)))" id="31" infl="sg3" lcat="ssub" pos="verb" rel="hd" root="neem_toe" sc="part_intransitive(toe)" sense="neem_toe" tense="present" word="toeneemt"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" frame="punct(punt)" id="32" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Toch stellen we vast dat de totale hoeveelheid afval ook in Vlaanderen niet afneemt , maar gelijk blijft en zelfs toeneemt .</sentence>
+  <comments>
+    <comment>Q#2|Toch stellen we vast dat de totale hoeveelheid afval ook in Vlaanderen niet afneemt , maar gelijk blijft en zelfs toeneemt .|1|1|-10.959912559741598</comment>
+  </comments>
+</alpino_ds>

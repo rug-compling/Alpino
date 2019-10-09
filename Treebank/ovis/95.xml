@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="du" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="nee" pos="tag" postag="TSW()" pt="tsw" rel="tag" root="nee" word="nee"/>
+      <node begin="1" cat="pp" end="5" id="3" rel="nucl">
+        <node begin="1" end="2" id="4" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="2" cat="np" end="5" id="5" rel="obj1">
+          <node begin="2" end="3" id="6" lemma="vrijdag" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="hd" root="vrijdag" spectype="deeleigen" word="vrijdag"/>
+          <node begin="3" cat="mwu" end="5" id="7" rel="mod">
+            <node begin="3" end="4" id="8" lemma="elf" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="elf" word="elf"/>
+            <node begin="4" end="5" id="9" lemma="april" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="april" spectype="deeleigen" word="april"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>nee op vrijdag elf april</sentence>
+</alpino_ds>

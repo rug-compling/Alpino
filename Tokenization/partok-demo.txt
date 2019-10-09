@@ -1,0 +1,61 @@
+% Dit is een commentaar.
+
+Dit is een test. Met commentaren
+en labels.
+
+Demo van:
+ 1. paragrafen
+ 2. labels
+ 3. commentaren
+
+% Dit is geen label omdat er een | binnenin zit:
+Dit is | geen label|
+
+ % Dit is geen commentaar!
+
+% Dit is metadata:
+##META text warnings = none
+
+knmi.meta|
+Vandaag & morgen
+
+Zonnig zomerweer
+
+% Dit is ook een commentaar.
+
+knmi.main |
+##META int mintemp = 14
+##META int maxtemp = 26
+Het is vandaag een mooie zomerdag. Het is zonnig en droog en de maxima
+lopen uiteen van 22°C op de Wadden tot lokaal 26°C in het zuiden van het
+land. Vanavond verschijnen er in Limburg enkele wolkenvelden, de kans op
+neerslag blijft klein. De noordoostelijke wind is zwak tot matig.
+% Een commentaar begint ook een nieuwe paragraaf!
+Komende nacht is het helder, maar in het noordoosten kunnen er opnieuw
+enkele mistbanken ontstaan. De minimumtemperatuur loopt uiteen van 10
+graden in het noordoosten tot 14 graden in het zuiden. Er staat een
+zwakke wind uit oost tot noordoost.
+% Metadata begint ook een nieuwe paragraaf!
+##META int mintemp = 
+##META int maxtemp = 28
+Morgen overdag is het aanvankelijk zonnig en droog. In de loop van de
+middag komt er van het zuiden uit meer bewolking opzetten en neemt
+vooral in het zuiden de kans op een bui toe. In de avond trekt een
+gebied met wat buiige regen van het zuidwesten uit het land binnen. De
+maximumtemperatuur ligt tussen 24 graden in het noorden tot lokaal 28
+graden in het zuidoosten van het land. De zwakke tot matige wind is
+eerst oost maar draait in de loop van de middag naar zuid en wordt dan
+in het zuidwesten geleidelijk veranderlijk. (bron: KNMI)
+
+% Wanneer een label herhaalt wordt tellen paragrafen door van
+% de laatste keer dat het label werd gebruikt.
+knmi.meta|
+Toon minder van het weerbericht
+
+% Een leeg label:
+
+    |
+
+Dat was het!
+
+% Einde bestand.

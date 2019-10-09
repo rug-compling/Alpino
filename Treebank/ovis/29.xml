@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" cat="pp" end="3" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="vanaf" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="vanaf" vztype="init" word="vanaf"/>
+      <node begin="1" cat="np" end="3" id="3" rel="obj1">
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="station" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="station" word="station"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="5" lemma="nijmegen" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="app" root="Nijmegen" word="nijmegen"/>
+      </node>
+    </node>
+  </node>
+  <sentence>vanaf station nijmegen</sentence>
+</alpino_ds>

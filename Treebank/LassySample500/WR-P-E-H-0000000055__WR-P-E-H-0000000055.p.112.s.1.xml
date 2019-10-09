@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" cat="du" end="3" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="2.3" pos="num" postag="SPEC(symb)" pt="spec" rel="tag" root="2.3" spectype="symb" word="2.3"/>
+      <node begin="1" cat="np" end="3" id="3" rel="nucl">
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="4" lemma="demografisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="demografisch" word="Demografische"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="5" lemma="gegeven" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gegeven" word="gegevens"/>
+      </node>
+    </node>
+  </node>
+  <sentence>2.3 Demografische gegevens</sentence>
+</alpino_ds>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" cat="cp" end="2" id="2" rel="predm">
+        <node begin="0" end="1" id="3" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="Als"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="Engelsman" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="body" root="Engelsman" word="Engelsman"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+      <node begin="3" end="4" getal="ev" id="6" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      <node begin="5" end="6" id="7" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      <node begin="4" cat="pp" end="12" id="8" rel="pc">
+        <node begin="4" end="5" getal="getal" id="9" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="pobj1" root="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="6" end="7" id="10" lemma="bij" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="bij" vztype="fin" word="bij"/>
+        <node begin="7" cat="cp" end="12" id="11" rel="vc">
+          <node begin="7" conjtype="onder" end="8" id="12" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="8" cat="ssub" end="12" id="13" rel="body">
+            <node begin="8" end="9" getal="mv" graad="basis" id="14" lemma="mens" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="mens" word="mensen"/>
+            <node begin="9" cat="np" end="11" id="15" rel="obj1">
+              <node begin="9" buiging="zonder" end="10" getal="mv" id="16" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+              <node begin="10" end="11" getal="mv" graad="basis" id="17" lemma="paard" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="paard" word="paarden"/>
+            </node>
+            <node begin="11" end="12" id="18" lemma="op_eten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="eet_op" word="opeten" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als Engelsman kan ik er niet bij dat mensen hun paarden opeten .</sentence>
+</alpino_ds>

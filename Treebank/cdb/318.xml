@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="0" cat="smain" end="22" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="linksachter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="linksachter" word="Linksachter"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="Blaauw" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Blaauw" word="Blaauw"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="raken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="raak" word="raakte" wvorm="pv"/>
+      <node begin="3" cat="np" end="5" id="6" rel="obj1">
+        <node begin="3" end="4" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="bal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bal" word="bal"/>
+      </node>
+      <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="kwijt" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="kwijt" word="kwijt"/>
+      <node begin="6" cat="pp" end="22" id="10" rel="obj2">
+        <node begin="6" end="7" id="11" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+        <node begin="7" cat="np" end="22" id="12" rel="obj1">
+          <node begin="7" end="8" genus="genus" getal="ev" graad="basis" id="13" lemma="Roode" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Roode" word="Roode"/>
+          <node begin="8" cat="rel" end="22" id="14" rel="mod">
+            <node begin="8" cat="np" end="10" id="15" index="1" rel="rhd">
+              <node begin="8" end="9" getal="ev" id="16" lemma="wie" naamval="gen" pdtype="pron" persoon="3m" pos="det" postag="VNW(vb,pron,gen,vol,3m,ev)" pt="vnw" rel="det" root="wiens" status="vol" vwtype="vb" word="wiens"/>
+              <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="17" lemma="voorzet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzet" word="voorzet"/>
+            </node>
+            <node begin="8" cat="ssub" end="22" id="18" rel="body">
+              <node begin="8" end="10" id="19" index="1" rel="su"/>
+              <node begin="20" end="21" id="20" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+              <node begin="8" cat="ppart" end="22" id="21" rel="vc">
+                <node begin="8" end="10" id="22" index="1" rel="obj1"/>
+                <node begin="10" cat="pp" end="13" id="23" rel="mod">
+                  <node begin="10" end="11" id="24" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+                  <node begin="11" cat="mwu" end="13" id="25" rel="obj1">
+                    <node begin="11" end="12" id="26" lemma="De" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
+                    <node begin="12" end="13" id="27" lemma="Jong" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jong" spectype="deeleigen" word="Jong"/>
+                  </node>
+                </node>
+                <node begin="13" cat="pp" end="20" id="28" rel="mod">
+                  <node begin="13" end="14" id="29" lemma="vlak" pos="adv" postag="BW()" pt="bw" rel="mod" root="vlak" word="vlak"/>
+                  <node begin="14" end="15" id="30" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                  <node begin="15" cat="np" end="20" id="31" rel="obj1">
+                    <node begin="15" end="16" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="16" buiging="met-e" end="17" id="33" lemma="graaien" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="graaiend" word="graaiende" wvorm="od"/>
+                    <node begin="17" end="18" getal="mv" graad="basis" id="34" lemma="hand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="hand" word="handen"/>
+                    <node begin="18" cat="pp" end="20" id="35" rel="mod">
+                      <node begin="18" end="19" id="36" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                      <node begin="19" end="20" genus="genus" getal="ev" graad="basis" id="37" lemma="Lelieveld" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Lelieveld" word="Lelieveld"/>
+                    </node>
+                  </node>
+                </node>
+                <node begin="21" buiging="zonder" end="22" id="38" lemma="inkoppen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gekopt" word="ingekopt" wvorm="vd"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="22" end="23" id="39" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Linksachter Blaauw raakte de bal kwijt aan Roode wiens voorzet door De Jong vlak voor de graaiende handen van Lelieveld werd ingekopt .</sentence>
+</alpino_ds>

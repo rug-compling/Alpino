@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="7" end="8" id="1" pos="punct" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="18" id="2" rel="--">
+      <node begin="0" end="1" gen="de" id="3" index="1" num="pl" pos="noun" rel="su" root="wetenschapper" word="Wetenschappers"/>
+      <node begin="1" end="2" id="4" infl="pl" pos="verb" rel="hd" root="kan" sc="aux(inf)" tense="present" word="kunnen"/>
+      <node begin="0" cat="inf" end="18" id="5" rel="vc">
+        <node begin="0" end="1" id="6" index="1" rel="su"/>
+        <node begin="2" end="3" id="7" pos="adv" rel="mod" root="er" special="er" word="er"/>
+        <node begin="6" end="7" id="8" infl="inf" pos="verb" rel="hd" root="voer_uit" sc="part_transitive(uit)" word="uitvoeren"/>
+        <node begin="3" cat="conj" end="18" id="9" rel="obj1">
+          <node begin="4" end="5" id="10" pos="vg" rel="crd" root="en" word="en"/>
+          <node begin="3" cat="np" end="18" id="11" rel="cnj">
+            <node begin="3" end="4" gen="de" id="12" num="pl" pos="noun" rel="hd" root="studie" word="studies"/>
+            <node begin="8" cat="rel" end="18" id="13" index="2" rel="mod">
+              <node begin="8" end="9" id="14" index="3" pos="pp" rel="rhd" root="waarbij" special="waar" word="waarbij"/>
+              <node begin="8" cat="ssub" end="18" id="15" rel="body">
+                <node begin="8" end="9" id="16" index="3" rel="mod"/>
+                <node begin="9" case="both" def="def" end="10" gen="de" id="17" num="both" per="thi" pos="pron" rel="su" root="ze" special="wkpro" wh="nwh" word="ze"/>
+                <node begin="10" end="11" id="18" infl="pl" pos="verb" rel="hd" root="profiteer" sc="pc_pp(van)" tense="present" word="profiteren"/>
+                <node begin="11" cat="pp" end="18" id="19" rel="pc">
+                  <node begin="11" end="12" id="20" pos="prep" rel="hd" root="van" word="van"/>
+                  <node begin="12" cat="np" end="18" id="21" rel="obj1">
+                    <node begin="12" end="13" id="22" infl="de" pos="det" rel="det" root="de" word="de"/>
+                    <node aform="base" begin="13" end="14" id="23" infl="e" pos="adj" rel="mod" root="uniek" vform="adj" word="unieke"/>
+                    <node begin="14" end="15" gen="de" id="24" num="pl" pos="noun" rel="hd" root="omstandigheid" word="omstandigheden"/>
+                    <node begin="15" cat="pp" end="18" id="25" rel="mod">
+                      <node begin="15" end="16" id="26" pos="prep" rel="hd" root="in" word="in"/>
+                      <node begin="16" cat="np" end="18" id="27" rel="obj1">
+                        <node begin="16" end="17" id="28" infl="de" pos="det" rel="det" root="de" word="de"/>
+                        <node begin="17" end="18" gen="de" id="29" num="sg" pos="noun" rel="hd" root="ruimte" word="ruimte"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="5" cat="np" end="18" id="30" rel="cnj">
+            <node begin="5" end="6" gen="de" id="31" num="pl" pos="noun" rel="hd" root="proef" word="proeven"/>
+            <node begin="8" end="18" id="32" index="2" rel="mod"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="33" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Wetenschappers kunnen er studies en proeven uitvoeren , waarbij ze profiteren van de unieke omstandigheden in de ruimte .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

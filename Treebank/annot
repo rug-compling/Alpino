@@ -1,0 +1,14 @@
+#!/bin/sh
+$ALPINO_HOME/src/Alpino\
+          -notk cmdint=off\
+          -fast\
+          user_max=600000 debug=1\
+          xml_format_frame=on\
+          xml_format_failed_parse=on\
+          display_main_parts=off\
+          parse_unannotated_only=on\
+          -flag suite undefined\
+          -flag treebank .\
+          demo=off\
+          end_hook=xml $extra -parse
+

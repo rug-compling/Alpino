@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="conj" end="6" id="1" rel="--">
+      <node begin="0" cat="sv1" end="2" id="2" rel="cnj">
+        <node begin="0" end="1" id="3" lemma="houden" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="houd_op" word="Hou" wvorm="pv"/>
+        <node begin="1" end="2" id="4" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
+      </node>
+      <node begin="2" conjtype="onder" end="3" id="5" lemma="of" pos="vg" postag="VG(onder)" pt="vg" rel="crd" root="of" word="of"/>
+      <node begin="3" cat="smain" end="6" id="6" rel="cnj">
+        <node begin="3" end="4" getal="ev" id="7" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="4" end="5" id="8" lemma="gaan" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ga" word="ga" wvorm="pv"/>
+        <node begin="3" cat="inf" end="6" id="9" rel="vc">
+          <node begin="3" end="4" id="10" index="1" rel="su"/>
+          <node begin="5" buiging="zonder" end="6" id="11" lemma="gillen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="gil" word="gillen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hou op of ik ga gillen .</sentence>
+</alpino_ds>

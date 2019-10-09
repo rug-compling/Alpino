@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" cat="np" end="3" id="1" rel="--">
+      <node begin="0" cat="detp" end="2" id="2" rel="det">
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="bijzonder" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="bijzonder" word="bijzonder"/>
+        <node begin="1" buiging="zonder" end="2" graad="basis" id="4" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="hd" root="veel" vwtype="onbep" word="veel"/>
+      </node>
+      <node begin="2" end="3" getal="mv" graad="basis" id="5" lemma="dier" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dier" word="dieren"/>
+    </node>
+  </node>
+  <sentence>bijzonder veel dieren</sentence>
+</alpino_ds>

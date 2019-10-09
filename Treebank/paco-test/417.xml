@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="12" end="13" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="16" id="2" rel="--">
+      <node begin="0" cat="np" end="12" id="3" index="1" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="4" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" id="5" lcat="np" num="sg" pos="noun" rel="hd" root="grondslag" sense="grondslag" word="grondslag"/>
+        <node begin="2" cat="rel" end="12" id="6" rel="mod">
+          <node begin="2" end="3" frame="waar_adverb(op)" id="7" index="2" lcat="pp" pos="pp" rel="rhd" root="waarop" sense="waarop" special="waar" word="waarop"/>
+          <node begin="2" cat="ssub" end="12" id="8" rel="body">
+            <node begin="3" cat="np" end="7" id="9" index="3" rel="su">
+              <node begin="3" end="4" frame="determiner(de)" id="10" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="4" end="5" frame="noun(de,count,sg,measure)" gen="de" id="11" lcat="np" num="sg" pos="noun" rel="hd" root="hoeveelheid" sc="measure" sense="hoeveelheid-MEAS" word="hoeveelheid"/>
+              <node begin="5" cat="np" end="7" id="12" rel="mod">
+                <node aform="base" begin="5" end="6" frame="adjective(no_e(adv))" id="13" infl="no_e" lcat="ap" pos="adj" rel="mod" root="kern_technisch" sense="kern_technisch" vform="adj" word="kerntechnisch"/>
+                <node begin="6" end="7" frame="noun(het,count,sg)" gen="het" id="14" lcat="np" num="sg" pos="noun" rel="hd" root="materiaal" sense="materiaal" word="materiaal"/>
+              </node>
+            </node>
+            <node begin="10" end="11" frame="verb(unacc,sg_heeft,passive)" id="15" infl="sg_heeft" lcat="ssub" pos="verb" rel="hd" root="ben" sc="passive" sense="ben" tense="present" word="is"/>
+            <node begin="2" cat="ppart" end="12" id="16" rel="vc">
+              <node begin="2" end="3" id="17" index="2" rel="pc"/>
+              <node begin="3" end="7" id="18" index="3" rel="obj1"/>
+              <node begin="7" cat="pp" end="10" id="19" rel="mod">
+                <node begin="7" end="8" frame="preposition(in,[])" id="20" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                <node begin="8" cat="np" end="10" id="21" rel="obj1">
+                  <node begin="8" end="9" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="22" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                  <node begin="9" end="10" frame="noun(het,count,sg)" gen="het" id="23" lcat="np" num="sg" pos="noun" rel="hd" root="rapport" sense="rapport" word="rapport"/>
+                </node>
+              </node>
+              <node begin="11" end="12" frame="verb(hebben,psp,ninv(np_pc_pp(op),part_np_pc_pp(vast,op)))" id="24" infl="psp" lcat="ppart" pos="verb" rel="hd" root="stel_vast" sc="part_np_pc_pp(vast,op)" sense="stel_vast-op" word="vastgesteld"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="13" end="14" frame="verb('hebben/zijn',sg,modifier(aux(inf)))" id="25" infl="sg" lcat="smain" pos="verb" rel="hd" root="moet" sc="modifier(aux(inf))" sense="moet" tense="present" word="moet"/>
+      <node begin="0" cat="inf" end="16" id="26" rel="vc">
+        <node begin="0" end="12" id="27" index="1" rel="su"/>
+        <node begin="14" end="15" frame="verb(unacc,inf,passive)" id="28" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+        <node begin="0" cat="ppart" end="16" id="29" rel="vc">
+          <node begin="0" end="12" id="30" index="1" rel="obj1"/>
+          <node begin="15" end="16" frame="verb(hebben,psp,transitive)" id="31" infl="psp" lcat="ppart" pos="verb" rel="hd" root="vermeld" sc="transitive" sense="vermeld" word="vermeld"/>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" frame="punct(punt)" id="32" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De grondslag waarop de hoeveelheid kerntechnisch materiaal in het rapport is vastgesteld , moet worden vermeld .</sentence>
+  <comments>
+    <comment>Q#417|De grondslag waarop de hoeveelheid kerntechnisch materiaal in het rapport is vastgesteld , moet worden vermeld .|1|1|-7.751183147075109</comment>
+  </comments>
+</alpino_ds>

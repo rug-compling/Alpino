@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="pp" end="4" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="Niet"/>
+        <node begin="1" end="2" id="4" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+        <node begin="2" cat="np" end="4" id="5" rel="obj1">
+          <node begin="2" buiging="met-e" end="3" id="6" lemma="ieder" naamval="stan" npagr="evz" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="det" root="ieder" vwtype="onbep" word="iedere"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="hoog_school" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hoog_school" word="hogeschool"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="8" lemma="vallen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="val" word="valt" wvorm="pv"/>
+      <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="9" lemma="Biotechnologie" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="su" root="Biotechnologie" word="Biotechnologie"/>
+      <node begin="6" cat="pp" end="9" id="10" rel="ld">
+        <node begin="6" end="7" id="11" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
+        <node begin="7" cat="mwu" end="9" id="12" mwu_root="Biomedisch Laboratoriumonderzoek" mwu_sense="Biomedisch Laboratoriumonderzoek" rel="obj1">
+          <node begin="7" end="8" id="13" lemma="Biomedisch" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Biomedisch" spectype="deeleigen" word="Biomedisch"/>
+          <node begin="8" end="9" id="14" lemma="Laboratoriumonderzoek" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Laboratoriumonderzoek" spectype="deeleigen" word="Laboratoriumonderzoek"/>
+        </node>
+      </node>
+    </node>
+    <node begin="9" end="10" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Niet bij iedere hogeschool valt Biotechnologie onder Biomedisch Laboratoriumonderzoek .</sentence>
+</alpino_ds>

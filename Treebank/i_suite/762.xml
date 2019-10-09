@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="1" end="2" id="2" infl="sg" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" sc="passive" stype="declarative" tense="past" word="werd" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="9" id="3" rel="vc">
+        <node begin="0" end="1" getal="getal" id="4" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" special="er" status="red" vwtype="aanw" word="Er"/>
+        <node begin="5" buiging="zonder" end="6" id="5" infl="psp" lemma="dansen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="dans" sc="intransitive" word="gedanst" wvorm="vd"/>
+        <node begin="2" cat="ap" end="9" id="6" rel="mod">
+          <node begin="2" cat="np" end="4" id="7" rel="me">
+            <node begin="2" end="3" id="8" infl="pl_num" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" special="hoofd" word="twee"/>
+            <node begin="3" end="4" gen="de" genus="genus" getal="ev" graad="basis" id="9" lemma="keer" naamval="stan" ntype="soort" num="meas" pos="noun" postag="N(soort,ev,basis,genus,stan)" pt="n" rel="hd" rnum="pl" root="keer" special="tmp" word="keer"/>
+          </node>
+          <node aform="base" begin="4" end="5" id="10" infl="no_e" lemma="zoveel" naamval="stan" numtype="hoofd" pos="adj" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="zoveel" sc="als" vform="adj" word="zoveel"/>
+          <node begin="6" cat="cp" end="9" id="11" rel="obcomp">
+            <node begin="6" conjtype="onder" end="7" id="12" lemma="als" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+            <node begin="7" cat="np" end="9" id="13" rel="body">
+              <node aform="base" begin="7" buiging="zonder" end="8" graad="basis" id="14" infl="no_e" lemma="vorig" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="vorig" vform="adj" word="vorig"/>
+              <node begin="8" end="9" gen="het" genus="onz" getal="ev" graad="basis" id="15" lemma="jaar" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="jaar" special="tmp" word="jaar"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Er werd twee keer zoveel gedanst als vorig jaar</sentence>
+</alpino_ds>

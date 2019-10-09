@@ -1,0 +1,148 @@
+\documentclass[12pt]{article}
+\bibliographystyle{plain}
+\usepackage{a4}
+
+\begin{document}
+
+\title{Annotation differences between CGN and the Alpino Treebank}
+
+\author{Leonoor van der Beek, Gosse Bouma, Gertjan van Noord}
+
+\maketitle
+
+The Alpino Treebank uses CGN Dependency Structures, as defined in the
+CGN annotation guidelines \cite{cgn-annot} and exemplified in the
+Leuven Yellow Pages \cite{leuven-yellow-pages}. However, the Alpino
+Treebank differs with respect to this annotation convention in a
+number of ways. The differences are listed here.
+
+We make a distinction between minor and major differences. We regard a
+difference as minor if it appears to be possible to implement a filter
+which would transform one representation into the other automatically.
+Note that such a filter has not actually been implemented.
+
+\subsection*{Major Differences}
+
+\begin{itemize}
+  
+\item In the Alpino Treebank obligatory control relations are
+  represented explicitly. This affects the treatment of auxiliaries,
+  modals, control verbs, passives, etc. Motivation: such control
+  relations are not always predictable from lexical specifications.
+  
+\item In the Alpino Treebank, modifiers in sentences with auxiliaries
+  are generally annotated such that the modifier is attached to the
+  main verb, not the finite auxiliary verb. Note that in other
+  constructions, if the correct attachment is hard to determine, the
+  modifier is attached high.
+  
+\item In the Alpino Treebank, partitives are not treated special.
+  Instead, in the Alpino Treebank a noun phrase such as {\tt \'e\'en
+    van de drie} is analysed by taking {\tt \'e\'en} as the head,
+  which is modified by a {\em PP}. Thus, the dependency relation {\em
+    part} is not used in the Alpino Treebank.
+  
+\item In the Alpino Treebank, all cases of {\em prt} are treated as
+  {\em mod}. They are typically not grouped together, either. If they
+  are grouped together, then a head-modifier structure results. Thus, 
+  the dependency relation {\em prt} is not used in the Alpino Treebank.
+
+\item As in CGN, leaf nodes contain a part of speech label. However,
+  the inventory of part of speech labels is much smaller in the Alpino
+  Treebank. In addition, the annotation of part of speech labels
+  contains many inconsistencies and should be regarded poor quality. 
+
+\item Leaf nodes in the Alpino Treebank contain pointers into the
+  string (this is equivalent to CGN), but in addition also contain a
+  canonical form of the word(s) --- typically the stem of the
+  word. Note however, that the annotation of canonical word forms
+  still contains many inconsistencies and should be regarded poor
+  quality. 
+
+\item We never use complex heads. If a word-group has the {\em hd}
+  relation, then it must be a leaf.
+
+\item Sbar complements are never assigned the {\em obj1} relation; they
+  get the {\em vc} relation. As a consequence, there is never a need
+  to have multiple {\em obj1} relations for a given head.
+
+\item Idiomatic phrases are assigned the {\em svp} relation, as in
+  CGN. However, unlike CGN idiomatic phrases are not analyzed. As a
+  consequence, if a word-group has the {\em svp} relation, it must be
+  a leaf. \footnote{This was probably not a good decision.}
+
+\end{itemize}
+
+\subsection*{Minor differences}
+
+\begin{itemize}
+
+\item Secondary edges are represented by means of co-indexing in the
+  Alpino Treebank.
+  
+\item In CGN, multi-word-units are represented by a flat tree (for
+  each word a node), in the Alpino Treebank represented by a single
+  node. NB. There are of course also non-minor differences w.r.t. the
+  decision when something is regarded a multi-word-unit or not. As a
+  consequence, in the Alpino Treebank you can {\bf never} have
+  discontinuous multi-word-units. \footnote{This seems right:
+    discontinuous multi-word-units are weird.}
+  
+\item Root sentences introduced by words such as {\tt want, en, maar}
+  get a {\em dlink, nucl} representation in CGN. In the Alpino
+  Treebank, these are treated as complementizers, so they receive {\em
+    cmp, body} representation. The {\em dlink} label is not used in
+  the Alpino Treebank.
+  
+\item In CGN {\tt te} in a {\em te-infinitive} is treated as a
+  complementizer. In the Alpino Treebank, a {\em te-infinitive} is
+  treated as a single (multi-word) unit; {\tt te} is treated as
+  inflection.
+
+\item In IPP constructions, we use the {\em ppart} category, whereas
+  CGN uses {\em inf}.
+  
+\item In CGN coordination without an explicit coordinator are {\em
+    lists} where every conjunct gets the {\em lp} relation. In the
+  Alpino Treebank coordinations with or without explicit coordinator
+  are treated the same. In the Alpino Treebank, the {\em lp} relation
+  is never used; and the {\em list} category is never used.
+  
+\item In CGN interjections (hesitations, disfluencies) are represented
+  as a node without a relation name ({\tt --}). We do not represent
+  these parts of the input at all.
+
+\item The category label {\em compp} is not used in the Alpino
+  Treebank. Instead, we use category labels such as {\em advp, ap} for
+  word groups that are {\em obcomp} with respectively an adverbial or
+  adjectival head etc. Apparantly, this is now the case in CGN too.
+
+\item {\em Rangtelwoorden} such as `eerste' and `tweede' are assigned
+  the {\em det} role in the Alpino Treebank, but {\em mod} in CGN.
+
+\item In noun phrases such as {\em de rode auto is duurder dan {\bf de
+      groene}} CGN would use {\em auto} as the head. In Alpino, we
+      treat {\em groene} as a nominalized adjective, and it is treated
+      as the head of the noun phrase.
+
+\item In constructions consisting of the word {\em als} followed by a
+  noun phrase, CGN treats {\em als} as a complementizer (if it can be
+  re-phrased as {\em zoals}), with cmp and body, whereas Alpino always
+  assumes {\em als} is a preposition (with hd and obj1).
+
+\item In coordinations, there often is a modifier in front of the
+  second conjunct. In Alpino, these modifiers are modifiers of the
+  head of this conjunct. In CGN, there typically is a dp-dp structure
+  consisting of this modifier and the second conjunct.
+
+\end{itemize}
+
+This list is incomplete.
+
+\bibliography{references}
+
+\end{document}
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="19" id="2" rel="--">
+      <node begin="0" cat="smain" end="5" id="3" rel="cnj">
+        <node begin="0" cat="np" end="2" id="4" rel="obj1">
+          <node begin="0" end="1" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="6" lemma="ding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="ding" word="ding"/>
+        </node>
+        <node begin="2" end="3" id="7" lemma="weten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="weet" word="weet" wvorm="pv"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="Mary" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Mary" word="Mary"/>
+        <node begin="4" end="5" id="9" lemma="namelijk" pos="adv" postag="BW()" pt="bw" rel="mod" root="namelijk" word="namelijk"/>
+      </node>
+      <node begin="6" conjtype="neven" end="7" id="10" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="7" cat="smain" end="13" id="11" rel="cnj">
+        <node begin="7" end="8" getal="ev" id="12" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
+        <node begin="8" end="9" id="13" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="9" cat="whrel" end="13" id="14" rel="predc">
+          <node begin="9" end="10" getal="getal" id="15" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="noun" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" status="vol" vwtype="vb" word="waar"/>
+          <node begin="9" cat="ssub" end="13" id="16" rel="body">
+            <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="17" lemma="Fred" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Fred" word="Fred"/>
+            <node begin="9" cat="pp" end="12" id="18" rel="ld">
+              <node begin="9" end="10" id="19" index="1" rel="obj1"/>
+              <node begin="11" end="12" id="20" lemma="heen" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="heen" vztype="fin" word="heen"/>
+            </node>
+            <node begin="12" end="13" id="21" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+      <node begin="13" conjtype="neven" end="14" id="22" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="14" cat="smain" end="19" id="23" rel="cnj">
+        <node begin="14" end="15" getal="ev" id="24" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" word="dat"/>
+        <node begin="15" end="16" id="25" lemma="vertellen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="vertel" word="vertelt" wvorm="pv"/>
+        <node begin="16" end="17" genus="fem" getal="ev" id="26" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+        <node begin="17" end="18" genus="masc" getal="ev" id="27" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj2" root="hem" status="vol" vwtype="pers" word="hem"/>
+        <node begin="18" end="19" id="28" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+      </node>
+    </node>
+    <node begin="19" end="20" id="29" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een ding weet Mary namelijk , en dat is waar Fred heen wil en dat vertelt ze hem ook .</sentence>
+</alpino_ds>

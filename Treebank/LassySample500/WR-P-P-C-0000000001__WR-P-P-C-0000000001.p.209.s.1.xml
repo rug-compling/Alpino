@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="23" id="0" rel="top">
+    <node begin="19" end="20" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="smain" end="21" id="2" rel="--">
+      <node begin="8" end="9" id="3" lemma="kunnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kan" word="kunt" wvorm="pv"/>
+      <node begin="9" end="10" getal="getal" id="4" index="1" lemma="u" naamval="nomin" pdtype="pron" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" root="u" status="vol" vwtype="pers" word="u"/>
+      <node begin="0" cat="conj" end="21" id="5" rel="vc">
+        <node begin="11" conjtype="neven" end="12" id="6" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+        <node begin="0" cat="inf" end="21" id="7" rel="cnj">
+          <node begin="0" cat="cp" end="8" id="8" index="2" rel="mod">
+            <node begin="0" conjtype="onder" end="1" id="9" lemma="indien" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="indien" word="Indien"/>
+            <node begin="1" cat="ssub" end="8" id="10" rel="body">
+              <node begin="1" end="2" getal="getal" id="11" lemma="u" naamval="nomin" pdtype="pron" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" root="u" status="vol" vwtype="pers" word="u"/>
+              <node begin="3" end="4" id="12" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+              <node begin="2" cat="np" end="8" id="13" rel="obj1">
+                <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="14" lemma="behoefte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="behoefte" word="behoefte"/>
+                <node begin="4" cat="pp" end="8" id="15" rel="mod">
+                  <node begin="4" end="5" id="16" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+                  <node begin="5" cat="np" end="8" id="17" rel="obj1">
+                    <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="18" lemma="contact" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="contact" word="contact"/>
+                    <node begin="6" cat="pp" end="8" id="19" rel="mod">
+                      <node begin="6" end="7" id="20" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                      <node begin="7" end="8" getal="mv" graad="basis" id="21" lemma="lotgenoot" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="lot_genoot" word="lotgenoten"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="9" end="10" id="22" index="1" rel="su"/>
+          <node begin="10" buiging="zonder" end="11" id="23" lemma="bellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bel" word="bellen" wvorm="inf"/>
+          <node begin="13" cat="pp" end="21" id="24" index="3" rel="mod">
+            <node begin="13" end="14" id="25" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+            <node begin="14" cat="np" end="21" id="26" rel="obj1">
+              <node begin="14" end="15" id="27" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="15" cat="mwu" end="19" id="28" rel="hd">
+                <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="29" lemma="vereniging" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Vereniging" word="Vereniging"/>
+                <node begin="16" end="17" getal="mv" graad="basis" id="30" lemma="achterblijver" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Achterblijvers" word="Achterblijvers"/>
+                <node begin="17" end="18" id="31" lemma="na" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="na" vztype="init" word="na"/>
+                <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="32" lemma="vermissing" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Vermissing" word="Vermissing"/>
+              </node>
+              <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="33" lemma="VAV" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="VAV" word="VAV"/>
+            </node>
+          </node>
+        </node>
+        <node begin="0" cat="inf" end="21" id="34" rel="cnj">
+          <node begin="0" end="8" id="35" index="2" rel="mod"/>
+          <node begin="9" end="10" id="36" index="1" rel="su"/>
+          <node begin="12" buiging="zonder" end="13" id="37" lemma="schrijven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="schrijf" word="schrijven" wvorm="inf"/>
+          <node begin="13" end="21" id="38" index="3" rel="mod"/>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="39" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="22" end="23" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Indien u behoefte heeft aan contact met lotgenoten kunt u bellen of schrijven naar de Vereniging Achterblijvers na Vermissing ( VAV ) .</sentence>
+</alpino_ds>

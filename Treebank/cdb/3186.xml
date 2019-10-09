@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="31" id="0" rel="top">
+    <node begin="0" cat="smain" end="30" id="1" rel="--">
+      <node begin="14" end="15" id="2" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="3" index="1" lemma="overeenstemming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="overeenstemming" word="overeenstemming"/>
+      <node begin="0" cat="ppart" end="30" id="4" rel="vc">
+        <node begin="0" cat="cp" end="14" id="5" rel="mod">
+          <node begin="0" conjtype="onder" end="1" id="6" lemma="voorzover" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="voorzover" word="Voorzover"/>
+          <node begin="1" cat="ssub" end="14" id="7" rel="body">
+            <node begin="1" end="2" getal="ev" id="8" index="2" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dit" status="vol" vwtype="aanw" word="dit"/>
+            <node begin="2" end="3" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+            <node begin="1" cat="ppart" end="14" id="10" rel="vc">
+              <node begin="1" end="2" id="11" index="2" rel="su"/>
+              <node begin="3" buiging="zonder" end="4" id="12" lemma="geschieden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geschied" word="geschied" wvorm="vd"/>
+              <node begin="4" cat="pp" end="14" id="13" rel="mod">
+                <node begin="4" end="5" id="14" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+                <node begin="5" cat="np" end="14" id="15" rel="obj1">
+                  <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="16" lemma="omwisseling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wisseling" word="omwisseling"/>
+                  <node begin="6" cat="pp" end="11" id="17" rel="mod">
+                    <node begin="6" end="7" id="18" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                    <node begin="7" cat="np" end="11" id="19" rel="obj1">
+                      <node begin="7" end="8" getal="mv" graad="basis" id="20" lemma="aandeel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="aandeel" word="aandelen"/>
+                      <node begin="8" cat="mwu" end="11" id="21" rel="app">
+                        <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="22" lemma="zomer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Zomer" word="Zomer"/>
+                        <node begin="9" conjtype="neven" end="10" id="23" lemma="en" pos="noun" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
+                        <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="24" lemma="keuning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Keuning" word="Keuning"/>
+                      </node>
+                    </node>
+                  </node>
+                  <node begin="11" cat="pp" end="14" id="25" rel="mod">
+                    <node begin="11" end="12" id="26" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                    <node begin="12" cat="np" end="14" id="27" rel="obj1">
+                      <node begin="12" end="13" getal="mv" graad="basis" id="28" lemma="aandeel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="aandeel" word="aandelen"/>
+                      <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="29" lemma="Kluwer" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Kluwer" word="Kluwer"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="15" end="16" id="30" index="1" rel="obj1"/>
+        <node begin="16" buiging="zonder" end="17" id="31" lemma="bereiken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bereik" word="bereikt" wvorm="vd"/>
+        <node begin="17" cat="pp" end="30" id="32" rel="mod">
+          <node begin="17" end="18" id="33" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+          <node begin="18" cat="np" end="30" id="34" rel="obj1">
+            <node begin="18" end="19" getal="mv" graad="basis" id="35" lemma="voorziening" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="voorziening" word="voorzieningen"/>
+            <node begin="19" cat="rel" end="30" id="36" rel="mod">
+              <node begin="19" end="20" getal="getal" id="37" index="3" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+              <node begin="19" cat="ssub" end="30" id="38" rel="body">
+                <node begin="19" end="20" id="39" index="3" rel="su"/>
+                <node begin="20" end="21" id="40" lemma="beogen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="beoog" word="beogen" wvorm="pv"/>
+                <node begin="19" cat="ti" end="30" id="41" rel="vc">
+                  <node begin="28" end="29" id="42" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+                  <node begin="19" cat="inf" end="30" id="43" rel="body">
+                    <node begin="19" end="20" id="44" index="3" rel="su"/>
+                    <node begin="21" cat="np" end="28" id="45" rel="obj1">
+                      <node begin="21" end="22" id="46" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                      <node begin="22" buiging="met-e" end="23" id="47" lemma="koersdrukken" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="drukkend" word="koersdrukkende" wvorm="od"/>
+                      <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="48" lemma="werking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="werking" word="werking"/>
+                      <node begin="24" cat="pp" end="28" id="49" rel="mod">
+                        <node begin="24" end="25" id="50" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                        <node begin="25" cat="np" end="28" id="51" rel="obj1">
+                          <node begin="25" end="26" id="52" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                          <node begin="26" end="27" getal="mv" graad="basis" id="53" lemma="aandeel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="aandeel" word="aandelen"/>
+                          <node begin="27" end="28" genus="onz" getal="ev" graad="basis" id="54" lemma="Kluwer" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Kluwer" word="Kluwer"/>
+                        </node>
+                      </node>
+                    </node>
+                    <node begin="29" buiging="zonder" end="30" id="55" lemma="voorkomen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voorkom" word="voorkomen" wvorm="inf"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="30" end="31" id="56" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Voorzover dit is geschied door omwisseling van aandelen Zomer en Keuning in aandelen Kluwer is overeenstemming bereikt over voorzieningen die beogen een koersdrukkende werking op de aandelen Kluwer te voorkomen .</sentence>
+</alpino_ds>

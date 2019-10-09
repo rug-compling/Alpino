@@ -1,0 +1,12 @@
+%.pl : %.sents
+	echo ":- module(suite,[ sentence/2 ])." > $*.pl
+	echo >> $*.pl
+	cat $*.sents | grep .|\
+	sed -e "s/| /|/" \
+            -e "s/  *$$//" \
+            -e "s/\\\\/\\\\\\\\/g" \
+            -e "s/'/\\\\'/g" \
+            -e "s/ /','/g" |\
+        awk -F\| ' !/^(%|--)/ {\
+        printf("sentence(%c%s%c,[%c%s%c]).\n",39,$$1,39,39,$$2,39); N++;}' |\
+            Alpino -u -notk -l $(ALPINO_HOME)/Suites/echo >>$*.pl

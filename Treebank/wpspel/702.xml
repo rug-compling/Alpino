@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="whq" end="11" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="11" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="predc"/>
+        <node begin="1" end="2" id="5" lemma="noemen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="noem" word="noemt" wvorm="pv"/>
+        <node begin="2" end="3" genus="masc" getal="ev" id="6" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="men"/>
+        <node begin="3" cat="np" end="11" id="7" rel="obj1">
+          <node begin="3" end="4" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="9" lemma="dun" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="dun" word="dun"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="dim" id="10" lemma="schijf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="schijfje" word="schijfje"/>
+          <node begin="6" cat="pp" end="11" id="11" rel="mod">
+            <node begin="6" end="7" id="12" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="7" cat="np" end="11" id="13" rel="obj1">
+              <node begin="7" end="8" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="8" buiging="zonder" end="9" graad="basis" id="15" lemma="magnetiseerbaar" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="magnetiseerbaar" word="magnetiseerbaar"/>
+              <node begin="9" end="10" genus="onz" getal="ev" graad="dim" id="16" lemma="laagje" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="laagje" word="laagje"/>
+              <node begin="10" buiging="zonder" end="11" graad="comp" id="17" lemma="metaalpoeder" pos="noun" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="metaal_poeder" word="metaalpoeder"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="18" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe noemt men een dun schijfje met een magnetiseerbaar laagje metaalpoeder ?</sentence>
+</alpino_ds>

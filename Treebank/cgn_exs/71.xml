@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="winnaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="winnaar" word="winnaar"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="7" id="6" rel="vc">
+        <node begin="0" end="2" id="7" index="1" rel="obj1"/>
+        <node begin="3" buiging="zonder" end="4" id="8" lemma="kussen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kus" word="gekust" wvorm="vd"/>
+        <node begin="4" cat="pp" end="7" id="9" rel="mod">
+          <node begin="4" end="5" id="10" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+          <node begin="5" cat="np" end="7" id="11" rel="obj1">
+            <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="rondemiss" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ronde_miss" word="rondemiss"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>de winnaar werd gekust door de rondemiss</sentence>
+</alpino_ds>

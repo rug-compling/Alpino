@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" getal="mv" id="2" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="Wij"/>
+      <node begin="1" end="2" id="3" lemma="gaan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ga" word="gaan" wvorm="pv"/>
+      <node begin="2" cat="advp" end="4" id="4" rel="mod">
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="mod" root="veel" vwtype="onbep" word="veel"/>
+        <node begin="3" buiging="zonder" end="4" graad="comp" id="6" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="hd" root="meer" vwtype="onbep" word="meer"/>
+      </node>
+      <node begin="4" cat="pp" end="7" id="7" rel="ld">
+        <node begin="4" end="5" id="8" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+        <node begin="5" cat="np" end="7" id="9" rel="obj1">
+          <node begin="5" end="6" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="bioscoop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bioscoop" word="bioscoop"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Wij gaan veel meer naar de bioscoop</sentence>
+</alpino_ds>

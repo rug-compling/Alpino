@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" index="1" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+      <node begin="1" end="2" id="3" infl="sg_heeft" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" word="heeft" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="8" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="3" buiging="zonder" end="4" id="6" infl="psp" lemma="behalen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="behaal" sc="transitive" word="behaald" wvorm="vd"/>
+        <node begin="2" cat="np" end="8" id="7" rel="obj1">
+          <node begin="2" end="3" gen="de" getal="mv" graad="basis" id="8" lemma="overwinning" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="overwinning" word="overwinningen"/>
+          <node begin="4" cat="rel" end="8" id="9" rel="mod">
+            <node begin="4" end="5" id="10" lemma="waarvan" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarvan" special="waar" word="waarvan"/>
+            <node begin="5" cat="du" end="8" id="11" rel="body">
+              <node aform="base" begin="5" buiging="met-e" end="6" graad="basis" id="12" infl="e" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,agr,basis)" pt="vnw" rel="dp" rnum="sg" root="veel" vform="adj" vwtype="onbep" word="vele"/>
+              <node begin="6" cat="pp" end="8" id="13" rel="dp">
+                <node begin="6" end="7" id="14" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                <node begin="7" end="8" gen="het" genus="onz" getal="ev" graad="basis" id="15" lemma="geluk" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="geluk" word="geluk"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Hij heeft overwinningen behaald waarvan vele met geluk</sentence>
+</alpino_ds>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="smain" end="10" id="1" rel="--">
+      <node begin="0" cat="np" end="5" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="werkgevers-organisatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="werkgevers_organisatie" word="werkgevers-organisatie"/>
+        <node begin="2" cat="mwu" end="5" id="5" rel="app">
+          <node begin="2" buiging="met-e" end="3" graad="basis" id="6" lemma="koninklijk" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Koninklijke" word="Koninklijke"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="horeca" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Horeca" word="Horeca"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="8" lemma="Nederland" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mwp" root="Nederland" word="Nederland"/>
+        </node>
+      </node>
+      <node begin="5" end="6" id="9" lemma="onderhandelen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="onderhandel" word="onderhandelt" wvorm="pv"/>
+      <node begin="6" end="7" id="10" lemma="daarover" pos="pp" postag="BW()" pt="bw" rel="pc" root="daarover" word="daarover"/>
+      <node begin="7" cat="pp" end="10" id="11" rel="mod">
+        <node begin="7" end="8" id="12" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+        <node begin="8" cat="np" end="10" id="13" rel="obj1">
+          <node begin="8" end="9" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="9" end="10" getal="mv" graad="basis" id="15" lemma="vakbond" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vakbond" word="vakbonden"/>
+        </node>
+      </node>
+    </node>
+    <node begin="10" end="11" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De werkgevers-organisatie Koninklijke Horeca Nederland onderhandelt daarover met de vakbonden .</sentence>
+</alpino_ds>

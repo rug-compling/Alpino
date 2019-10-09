@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="smain" end="16" id="1" rel="--">
+      <node begin="5" end="6" id="2" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+      <node begin="6" cat="np" end="8" id="3" index="1" rel="su">
+        <node begin="6" end="7" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="5" lemma="maatschappij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="maatschappij" word="maatschappij"/>
+      </node>
+      <node begin="0" cat="inf" end="16" id="6" rel="vc">
+        <node begin="0" cat="oti" end="5" id="7" rel="mod">
+          <node begin="0" end="1" id="8" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="Om"/>
+          <node begin="1" cat="ti" end="5" id="9" rel="body">
+            <node begin="3" end="4" id="10" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="1" cat="inf" end="5" id="11" rel="body">
+              <node begin="1" cat="np" end="3" id="12" rel="obj1">
+                <node begin="1" end="2" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="2" end="3" getal="mv" graad="basis" id="14" lemma="investering" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="investering" word="investeringen"/>
+              </node>
+              <node begin="4" buiging="zonder" end="5" id="15" lemma="financieren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="financier" word="financieren" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+        <node begin="6" end="8" id="16" index="1" rel="su"/>
+        <node begin="8" end="9" id="17" lemma="voortaan" pos="adv" postag="BW()" pt="bw" rel="mod" root="voortaan" word="voortaan"/>
+        <node begin="9" cat="np" end="12" id="18" rel="obj1">
+          <node begin="9" end="10" id="19" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="10" buiging="zonder" end="11" graad="comp" id="20" lemma="ruim" pos="adj" positie="prenom" postag="ADJ(prenom,comp,zonder)" pt="adj" rel="mod" root="ruim" word="ruimer"/>
+          <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="21" lemma="beroep" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="beroep" word="beroep"/>
+        </node>
+        <node begin="12" buiging="zonder" end="13" id="22" lemma="doen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="doe" word="doen" wvorm="inf"/>
+        <node begin="13" cat="pp" end="16" id="23" rel="pc">
+          <node begin="13" end="14" id="24" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="14" cat="np" end="16" id="25" rel="obj1">
+            <node begin="14" end="15" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="27" lemma="kapitaalmarkt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kapitaalmarkt" word="kapitaalmarkt"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="28" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Om de investeringen te financieren zal de maatschappij voortaan een ruimer beroep doen op de kapitaalmarkt .</sentence>
+</alpino_ds>

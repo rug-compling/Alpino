@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" case="both" def="def" end="1" frame="pronoun(nwh,u,sg,de,both,def)" gen="de" id="2" index="1" lcat="np" num="sg" per="u" pos="pron" rel="su" root="u" sense="u" wh="nwh" word="U"/>
+      <node begin="1" end="2" frame="verb(hebben,sg_hebt,aux_psp_hebben)" id="3" infl="sg_hebt" lcat="smain" pos="verb" rel="hd" root="heb" sc="aux_psp_hebben" sense="heb" tense="present" word="hebt"/>
+      <node begin="0" cat="ppart" end="11" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" end="3" frame="adverb" id="6" lcat="advp" pos="adv" rel="mod" root="niet" sense="niet" word="niet"/>
+        <node begin="3" end="4" frame="verb(hebben,psp,pc_pp(op))" id="7" infl="psp" lcat="ppart" pos="verb" rel="hd" root="reageer" sc="pc_pp(op)" sense="reageer-op" word="gereageerd"/>
+        <node begin="4" cat="pp" end="11" id="8" rel="pc">
+          <node begin="4" end="5" frame="preposition(op,[af,na])" id="9" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+          <node begin="5" cat="np" end="11" id="10" rel="obj1">
+            <node begin="5" end="6" frame="determiner(onze)" id="11" infl="onze" lcat="detp" pos="det" rel="det" root="ons" sense="ons" word="onze"/>
+            <node begin="6" end="7" frame="noun(de,count,sg)" gen="de" id="12" lcat="np" num="sg" pos="noun" rel="hd" root="brief" sense="brief" word="brief"/>
+            <node begin="7" cat="pp" end="11" id="13" rel="mod">
+              <node begin="7" end="8" frame="preposition(aangaande,[])" id="14" lcat="pp" pos="prep" rel="hd" root="aangaande" sense="aangaande" word="aangaande"/>
+              <node begin="8" cat="np" end="11" id="15" rel="obj1">
+                <node begin="8" end="9" frame="determiner(pron)" id="16" infl="pron" lcat="detp" pos="det" rel="det" root="u" sense="u" word="uw"/>
+                <node aform="base" begin="9" end="10" frame="adjective(e)" id="17" infl="e" lcat="ap" pos="adj" rel="mod" root="achterstallig" sense="achterstallig" vform="adj" word="achterstallige"/>
+                <node begin="10" end="11" frame="noun(de,count,sg)" gen="de" id="18" lcat="np" num="sg" pos="noun" rel="hd" root="rekening" sense="rekening" word="rekening"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>U hebt niet gereageerd op onze brief aangaande uw achterstallige rekening</sentence>
+  <comments>
+    <comment>Q#254|U hebt niet gereageerd op onze brief aangaande uw achterstallige rekening|1|1|-5.663500487567996</comment>
+  </comments>
+</alpino_ds>

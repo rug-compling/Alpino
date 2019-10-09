@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="2" end="3" frame="punct(dubb_punt)" id="1" lcat="punct" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+    <node begin="4" end="5" frame="punct(aanhaal_both)" id="2" lcat="punct" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" sense="&apos;" special="aanhaal_both" word="&apos;"/>
+    <node begin="5" end="6" frame="punct(komma)" id="3" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="6" end="7" frame="punct(aanhaal_both)" id="4" lcat="punct" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" sense="&apos;" special="aanhaal_both" word="&apos;"/>
+    <node begin="8" end="9" frame="punct(aanhaal_both)" id="5" lcat="punct" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" sense="&apos;" special="aanhaal_both" word="&apos;"/>
+    <node begin="9" end="10" frame="punct(haak_sluit)" id="6" lcat="punct" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+    <node begin="10" end="11" frame="punct(is_gelijk)" id="7" lcat="punct" lemma="=" pos="punct" postag="SPEC(symb)" pt="spec" rel="--" root="=" sense="=" special="is_gelijk" spectype="symb" word="="/>
+    <node begin="11" end="12" frame="punct(aanhaal_both)" id="8" lcat="punct" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" sense="&apos;" special="aanhaal_both" word="&apos;"/>
+    <node begin="13" end="14" frame="punct(aanhaal_both)" id="9" lcat="punct" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" sense="&apos;" special="aanhaal_both" word="&apos;"/>
+    <node begin="14" end="15" frame="punct(haak_open)" id="10" lcat="punct" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" sense="(" special="haak_open" word="("/>
+    <node begin="0" cat="du" end="17" id="11" rel="--">
+      <node begin="0" cat="np" end="2" id="12" rel="tag">
+        <node begin="0" end="1" frame="number(rang)" id="13" lcat="ap" lemma="eerste" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="eerste" sense="eerste" special="rang" word="eerste"/>
+        <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" id="14" lcat="np" lemma="bv." num="sg" pos="noun" postag="SPEC(afk)" pt="spec" rel="hd" root="bv" sense="bv" spectype="afk" word="bv."/>
+      </node>
+      <node begin="3" cat="du" end="17" id="15" rel="nucl">
+        <node begin="3" cat="np" end="8" id="16" rel="dp">
+          <node begin="3" end="4" frame="noun(both,both,both)" gen="both" genus="zijd" getal="ev" graad="basis" id="17" lcat="np" lemma="first(&apos;miles&apos;,&apos;monken" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="first(&apos;miles&apos;,&apos;monk" sense="first(&apos;miles&apos;,&apos;monk" word="first(&apos;miles&apos;,&apos;monk"/>
+          <node begin="7" end="8" frame="proper_name(both)" genus="zijd" getal="ev" graad="basis" id="18" lcat="np" lemma="mingus" naamval="stan" ntype="soort" num="both" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="app" root="mingus" sense="mingus" word="mingus"/>
+        </node>
+        <node begin="12" cat="np" end="17" id="19" rel="dp">
+          <node begin="12" end="13" frame="proper_name(both)" id="20" lcat="np" lemma="miles" num="both" pos="name" postag="SPEC(vreemd)" pt="spec" rel="hd" root="miles" sense="miles" spectype="vreemd" word="miles"/>
+          <node begin="15" cat="np" end="17" id="21" rel="mod">
+            <node begin="15" end="16" frame="determiner(de)" id="22" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+            <node begin="16" end="17" frame="noun(both,both,both)" gen="both" genus="zijd" getal="ev" graad="basis" id="23" lcat="np" lemma="eerstvoorkomen" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="eerstvoorkomende" sense="eerstvoorkomende" word="eerstvoorkomende"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" frame="punct(haak_sluit)" id="24" lcat="punct" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+  </node>
+  <sentence>eerste bv. : first(&apos;miles&apos;,&apos;monk &apos; , &apos; mingus &apos; ) = &apos; miles &apos; ( de eerstvoorkomende )</sentence>
+  <comments>
+    <comment>Q#WR-P-E-J-0000095739.p.5.s.1|eerste bv. : first(&apos;miles&apos;,&apos;monk &apos; , &apos; mingus &apos; ) = &apos; miles &apos; ( de eerstvoorkomende )|1|1|0.06479903906890744</comment>
+  </comments>
+</alpino_ds>

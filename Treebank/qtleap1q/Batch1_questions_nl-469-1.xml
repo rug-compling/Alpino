@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="6" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="mod"/>
+        <node begin="1" end="2" id="5" lemma="synchroniseren" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="synchroniseer" word="synchroniseer" wvorm="pv"/>
+        <node begin="2" end="3" getal="ev" id="6" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="foto’s" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="foto’s" word="foto’s"/>
+        <node begin="4" cat="pp" end="6" id="8" rel="mod">
+          <node begin="4" end="5" id="9" lemma="via" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="via" vztype="init" word="via"/>
+          <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="10" lemma="iTunes" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="iTunes" word="iTunes"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe synchroniseer ik foto’s via iTunes ?</sentence>
+</alpino_ds>

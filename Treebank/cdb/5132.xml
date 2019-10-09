@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="1" cat="smain" end="21" id="2" rel="--">
+      <node begin="1" end="2" getal="mv" id="3" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="We"/>
+      <node begin="2" end="3" id="4" lemma="hebben" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="heb" word="hadden" wvorm="pv"/>
+      <node begin="3" cat="pp" end="5" id="5" rel="mod">
+        <node begin="3" end="4" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="7" lemma="Sydney" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Sydney" word="Sydney"/>
+      </node>
+      <node begin="5" buiging="zonder" end="6" graad="basis" id="8" lemma="gewoon" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="gewoon" word="gewoon"/>
+      <node begin="6" end="7" id="9" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      <node begin="7" cat="np" end="21" id="10" rel="obj1">
+        <node begin="8" end="9" getal="mv" graad="basis" id="11" lemma="mens" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mens" word="mensen"/>
+        <node begin="7" cat="detp" end="21" id="12" rel="det">
+          <node begin="7" end="8" id="13" lemma="genoeg" pos="num" postag="BW()" pt="bw" rel="hd" root="genoeg" word="genoeg"/>
+          <node begin="9" cat="oti" end="21" id="14" rel="obcomp">
+            <node begin="9" end="10" id="15" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+            <node begin="10" cat="ti" end="21" id="16" rel="body">
+              <node begin="18" end="19" id="17" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+              <node begin="10" cat="inf" end="21" id="18" rel="body">
+                <node begin="19" buiging="zonder" end="20" id="19" lemma="kunnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kan" word="kunnen" wvorm="inf"/>
+                <node begin="10" cat="inf" end="21" id="20" rel="vc">
+                  <node begin="10" cat="pp" end="18" id="21" rel="pc">
+                    <node begin="10" end="11" id="22" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                    <node begin="11" cat="np" end="18" id="23" rel="obj1">
+                      <node begin="11" buiging="met-e" end="12" id="24" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" vwtype="onbep" word="alle"/>
+                      <node begin="12" end="13" getal="mv" graad="basis" id="25" lemma="invitatie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="invitatie" word="invitaties"/>
+                      <node begin="13" cat="pp" end="18" id="26" rel="mod">
+                        <node begin="13" end="14" id="27" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                        <node begin="14" cat="conj" end="18" id="28" rel="obj1">
+                          <node begin="14" cat="np" end="16" id="29" rel="cnj">
+                            <node begin="14" end="15" getal="mv" graad="basis" id="30" lemma="bezoek" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bezoek" word="bezoeken"/>
+                            <node begin="15" end="16" id="31" lemma="thuis" pos="adv" postag="BW()" pt="bw" rel="mod" root="thuis" word="thuis"/>
+                          </node>
+                          <node begin="16" conjtype="neven" end="17" id="32" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                          <node begin="17" end="18" getal="mv" graad="basis" id="33" lemma="excursie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="excursie" word="excursies"/>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node begin="20" buiging="zonder" end="21" id="34" lemma="ingaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="ingaan" wvorm="inf"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="21" end="22" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&quot; We hadden in Sydney gewoon niet genoeg mensen om op alle invitaties voor bezoeken thuis en excursies te kunnen ingaan .</sentence>
+</alpino_ds>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="39" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="7" end="8" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="10" end="11" id="3" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="12" end="13" id="4" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="13" end="14" id="5" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="22" end="23" id="6" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="23" end="24" id="7" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="35" end="36" id="8" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="du" end="37" id="9" rel="--">
+      <node begin="0" cat="smain" end="22" id="10" rel="nucl">
+        <node begin="0" cat="pp" end="12" id="11" rel="mod">
+          <node begin="0" end="1" id="12" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="Volgens"/>
+          <node begin="1" cat="np" end="12" id="13" rel="obj1">
+            <node begin="1" end="2" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="2" end="3" getal="mv" graad="basis" id="15" lemma="minister" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="minister" word="ministers"/>
+            <node begin="3" cat="conj" end="12" id="16" rel="app">
+              <node begin="3" cat="np" end="7" id="17" rel="cnj">
+                <node begin="3" cat="mwu" end="5" id="18" rel="hd">
+                  <node begin="3" end="4" id="19" lemma="Den" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Den" spectype="deeleigen" word="Den"/>
+                  <node begin="4" end="5" id="20" lemma="Toom" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Toom" spectype="deeleigen" word="Toom"/>
+                </node>
+                <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="21" lemma="defensie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="defensie" word="Defensie"/>
+              </node>
+              <node begin="8" conjtype="neven" end="9" id="22" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="9" cat="np" end="12" id="23" rel="cnj">
+                <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="24" lemma="Polak" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Polak" word="Polak"/>
+                <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="25" lemma="justitie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="justitie" word="Justitie"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="14" end="15" id="26" lemma="stroken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="strook" word="strookte" wvorm="pv"/>
+        <node begin="15" cat="np" end="17" id="27" rel="su">
+          <node begin="15" buiging="zonder" end="16" getal="mv" id="28" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+          <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="29" lemma="executie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="executie" word="executie"/>
+        </node>
+        <node begin="17" end="18" id="30" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+        <node begin="18" cat="pp" end="22" id="31" rel="pc">
+          <node begin="18" end="19" id="32" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="19" cat="np" end="22" id="33" rel="obj1">
+            <node begin="19" end="20" id="34" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="20" buiging="met-e" end="21" graad="basis" id="35" lemma="militair" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="militair" word="militaire"/>
+            <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="36" lemma="strafprocesrecht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="strafprocesrecht" word="strafprocesrecht"/>
+          </node>
+        </node>
+      </node>
+      <node begin="24" cat="smain" end="37" id="37" rel="tag">
+        <node begin="24" end="25" id="38" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="vc" root="zo" word="zo"/>
+        <node begin="25" end="26" id="39" lemma="delen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="deel" word="delen" wvorm="pv"/>
+        <node begin="26" end="27" getal="mv" id="40" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
+        <node begin="27" end="28" id="41" lemma="mee" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="mee" vztype="fin" word="mee"/>
+        <node begin="28" cat="pp" end="37" id="42" rel="mod">
+          <node begin="28" end="29" id="43" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="29" cat="np" end="37" id="44" rel="obj1">
+            <node begin="29" end="30" getal="mv" graad="basis" id="45" lemma="vraag" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vraag" word="vragen"/>
+            <node begin="30" cat="pp" end="37" id="46" rel="mod">
+              <node begin="30" end="31" id="47" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="31" cat="np" end="37" id="48" rel="obj1">
+                <node begin="31" end="32" id="49" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="32" end="33" genus="onz" getal="ev" graad="basis" id="50" lemma="kamerlid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kamerlid" word="Kamerlid"/>
+                <node begin="33" cat="mwu" end="35" id="51" rel="app">
+                  <node begin="33" end="34" id="52" lemma="drs." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="drs." spectype="deeleigen" word="drs."/>
+                  <node begin="34" end="35" id="53" lemma="Lems" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lems" spectype="deeleigen" word="Lems"/>
+                </node>
+                <node begin="36" end="37" genus="onz" getal="ev" graad="basis" id="54" lemma="PvdA" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mod" root="PvdA" word="PvdA"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="37" end="38" id="55" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="38" end="39" id="56" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Volgens de ministers Den Toom ( Defensie ) en Polak ( Justitie ) &quot; strookte hun executie niet met het militaire strafprocesrecht &quot; , zo delen zij mee op vragen van het Kamerlid drs. Lems ( PvdA ) .</sentence>
+</alpino_ds>

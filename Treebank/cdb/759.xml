@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="smain" end="20" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="dientengevolge" pos="adv" postag="BW()" pt="bw" rel="mod" root="dientengevolge" word="Dientengevolge"/>
+      <node begin="1" end="2" id="3" lemma="vormen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="vorm" word="vormt" wvorm="pv"/>
+      <node begin="2" cat="np" end="8" id="4" rel="su">
+        <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" cat="conj" end="6" id="6" rel="mod">
+          <node begin="3" buiging="met-e" end="4" graad="basis" id="7" lemma="humanistisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="humanistisch" word="humanistische"/>
+          <node begin="4" conjtype="neven" end="5" id="8" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="5" buiging="met-e" end="6" graad="basis" id="9" lemma="socialistisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="socialistisch" word="socialistische"/>
+        </node>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="10" lemma="idealist" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="idealist" word="idealist"/>
+        <node begin="7" end="8" genus="genus" getal="ev" graad="basis" id="11" lemma="Jungk" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Jungk" word="Jungk"/>
+      </node>
+      <node begin="8" end="9" id="12" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
+      <node begin="9" end="10" id="13" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+      <node begin="10" cat="np" end="20" id="14" rel="obj1">
+        <node begin="10" end="11" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="11" buiging="met-e" end="12" graad="basis" id="16" lemma="regelrecht" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="regelrecht" word="regelrechte"/>
+        <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="17" lemma="antipode" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="antipode" word="antipode"/>
+        <node begin="13" cat="pp" end="20" id="18" rel="mod">
+          <node begin="13" end="14" id="19" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="14" cat="np" end="20" id="20" rel="obj1">
+            <node begin="14" end="15" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="15" cat="conj" end="18" id="22" rel="mod">
+              <node begin="15" buiging="met-e" end="16" graad="basis" id="23" lemma="realistisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="realistisch" word="realistische"/>
+              <node begin="16" conjtype="neven" end="17" id="24" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="17" buiging="met-e" end="18" graad="basis" id="25" lemma="pragmatisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="pragmatisch" word="pragmatische"/>
+            </node>
+            <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="26" lemma="toekomstdenker" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="denker" word="toekomstdenker"/>
+            <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="27" lemma="Kahn" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Kahn" word="Kahn"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="28" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dientengevolge vormt de humanistische en socialistische idealist Jungk nu wel de regelrechte antipode van de realistische en pragmatische toekomstdenker Kahn .</sentence>
+</alpino_ds>

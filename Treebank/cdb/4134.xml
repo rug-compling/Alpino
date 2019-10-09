@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="enig" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enige" vwtype="onbep" word="Enige"/>
+        <node begin="1" end="2" getal-n="mv-n" graad="basis" id="4" lemma="honderd" numtype="hoofd" pos="noun" positie="nom" postag="TW(hoofd,nom,mv-n,basis)" pt="tw" rel="hd" root="honderd" word="honderden"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="5" lemma="aanvoerder" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="aanvoerder" word="aanvoerders"/>
+      </node>
+      <node begin="3" end="4" id="6" lemma="hebben" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="heb" word="hadden" wvorm="pv"/>
+      <node begin="4" cat="np" end="9" id="7" rel="obj1">
+        <node begin="4" end="5" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="jaaromzet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="omzet" word="jaaromzet"/>
+        <node begin="6" cat="pp" end="9" id="10" rel="mod">
+          <node begin="6" end="7" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="7" cat="np" end="9" id="12" rel="obj1">
+            <node begin="7" end="8" id="13" lemma="100.000" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="100.000" word="100.000"/>
+            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="14" lemma="gulden" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gulden" word="gulden"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="9" end="10" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Enige honderden aanvoerders hadden een jaaromzet van 100.000 gulden .</sentence>
+</alpino_ds>

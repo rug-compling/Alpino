@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="whq" end="4" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" root="wat" status="vol" vwtype="vb" word="Wat"/>
+      <node begin="0" cat="sv1" end="4" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="su"/>
+        <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="2" end="3" getal="getal" id="6" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" status="vol" vwtype="aanw" word="hier"/>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="gaan" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="predc" root="ga" word="gaande" wvorm="od"/>
+      </node>
+    </node>
+    <node begin="4" end="5" id="8" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wat is hier gaande ?</sentence>
+</alpino_ds>

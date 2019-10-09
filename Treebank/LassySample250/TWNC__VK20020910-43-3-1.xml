@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" cat="np" end="9" id="2" rel="su">
+        <node begin="0" buiging="zonder" end="1" frame="v_noun(pc_pp(met))" id="3" lcat="np" lemma="spelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="speel" sc="pc_pp(met)" sense="speel-met" special="v_noun" word="Spelen" wvorm="inf"/>
+        <node begin="1" cat="pp" end="9" id="4" rel="pc">
+          <node begin="1" end="2" frame="preposition(met,[mee,[en,al]])" id="5" lcat="pp" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" sense="met" vztype="init" word="met"/>
+          <node begin="2" cat="np" end="9" id="6" rel="obj1">
+            <node begin="2" end="3" frame="determiner(de)" id="7" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+            <node aform="compar" begin="3" buiging="met-e" end="4" frame="adjective(ere)" graad="basis" id="8" infl="e" lcat="ap" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" sense="ander" vform="adj" word="andere"/>
+            <node begin="4" end="5" frame="number(hoofd(pl_num))" id="9" infl="pl_num" lcat="detp" lemma="acht" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="acht" sense="acht" special="hoofd" word="acht"/>
+            <node begin="5" end="6" frame="noun(het,count,pl)" gen="het" getal="mv" graad="dim" id="10" lcat="np" lemma="leeftijdgenoot" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" root="leeftijd_genoot_DIM" sense="leeftijd_genoot_DIM" word="leeftijdgenootjes"/>
+            <node begin="6" cat="pp" end="9" id="11" rel="mod">
+              <node begin="6" end="7" frame="preposition(in,[])" id="12" lcat="pp" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" sense="in" vztype="init" word="in"/>
+              <node begin="7" cat="np" end="9" id="13" rel="obj1">
+                <node begin="7" end="8" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="14" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                <node begin="8" end="9" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="15" lcat="np" lemma="tehuis" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="tehuis" sense="tehuis" word="tehuis"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="9" end="10" frame="verb(hebben,sg3,transitive_ndev)" id="16" infl="sg3" lcat="smain" lemma="doen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="doe" sc="transitive_ndev" sense="doe" tense="present" word="doet" wvorm="pv"/>
+      <node begin="10" end="11" frame="proper_name(both,'PER')" id="17" lcat="np" lemma="Luca" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="obj1" root="Luca" sense="Luca" spectype="deeleigen" word="Luca"/>
+      <node begin="11" end="12" frame="adverb" id="18" lcat="advp" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" sense="niet" word="niet"/>
+      <node aform="base" begin="12" buiging="zonder" end="13" frame="adjective(no_e(adv))" graad="basis" id="19" infl="no_e" lcat="ap" lemma="echt" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="echt" sense="echt" vform="adj" word="echt"/>
+    </node>
+    <node begin="13" end="14" frame="punct(punt)" id="20" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Spelen met de andere acht leeftijdgenootjes in het tehuis doet Luca niet echt .</sentence>
+  <comments>
+    <comment>Q#VK20020910-43-3-1|Spelen met de andere acht leeftijdgenootjes in het tehuis doet Luca niet echt .|1|1|0.0964770598369448</comment>
+  </comments>
+</alpino_ds>

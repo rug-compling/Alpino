@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="de" pos="det" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" gen="de" id="4" num="sg" pos="noun" rel="hd" root="camera" word="camera"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="sg3" pos="verb" rel="hd" root="bedien" sc="transitive" tense="present" word="bedient"/>
+      <node begin="3" cat="np" end="5" id="6" rel="obj1">
+        <node begin="3" end="4" id="7" infl="de" pos="det" rel="det" root="de" word="de"/>
+        <node begin="4" end="5" gen="both" id="8" num="both" pos="noun" rel="hd" root="flitser" word="flitser"/>
+      </node>
+      <node begin="5" cat="pp" end="8" id="9" rel="mod">
+        <node begin="5" end="6" id="10" pos="prep" rel="hd" root="via" word="via"/>
+        <node begin="6" cat="np" end="8" id="11" rel="obj1">
+          <node aform="base" begin="6" end="7" id="12" infl="e" pos="adj" rel="mod" root="optisch" vform="adj" word="optische"/>
+          <node begin="7" end="8" gen="de" id="13" num="sg" pos="noun" rel="hd" root="gegeven_opdracht" word="gegevensopdracht"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="14" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>De camera bedient de flitser via optische gegevensopdracht .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

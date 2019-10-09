@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="0" cat="np" end="19" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+      <node begin="1" buiging="met-e" end="2" graad="basis" id="3" lemma="eigenaardig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="eigenaardig" word="eigenaardige"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="4" lemma="gewoonte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gewoonte" word="gewoonte"/>
+      <node begin="3" cat="rel" end="19" id="5" rel="mod">
+        <node begin="3" end="4" getal="getal" id="6" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+        <node begin="3" cat="ssub" end="19" id="7" rel="body">
+          <node begin="3" end="4" id="8" index="1" rel="su"/>
+          <node begin="4" end="5" id="9" lemma="doen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="doe" word="doet" wvorm="pv"/>
+          <node begin="5" cat="inf" end="19" id="10" rel="vc">
+            <node begin="5" buiging="zonder" end="6" id="11" lemma="denken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="denk" word="denken" wvorm="inf"/>
+            <node begin="6" cat="pp" end="19" id="12" rel="pc">
+              <node begin="6" end="7" id="13" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+              <node begin="7" cat="np" end="19" id="14" rel="obj1">
+                <node begin="7" end="8" id="15" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="16" lemma="verhaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verhaal" word="verhaal"/>
+                <node begin="9" cat="pp" end="19" id="17" rel="mod">
+                  <node begin="9" end="10" id="18" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="10" cat="np" end="19" id="19" rel="obj1">
+                    <node begin="10" end="11" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="21" lemma="ouvreuse" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ouvreuse" word="ouvreuse"/>
+                    <node begin="12" cat="pp" end="19" id="22" rel="mod">
+                      <node begin="12" end="13" id="23" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                      <node begin="13" cat="np" end="19" id="24" rel="obj1">
+                        <node begin="13" end="14" id="25" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                        <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="26" lemma="bioscoop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bioscoop" word="bioscoop"/>
+                        <node begin="15" cat="rel" end="19" id="27" rel="mod">
+                          <node begin="15" end="16" getal="getal" id="28" index="2" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" status="vol" vwtype="vb" word="waar"/>
+                          <node begin="15" cat="ssub" end="19" id="29" rel="body">
+                            <node begin="15" end="16" id="30" index="2" rel="mod"/>
+                            <node begin="16" cat="np" end="18" id="31" rel="su">
+                              <node begin="16" end="17" id="32" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                              <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="33" lemma="thriller" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="thriller" word="thriller"/>
+                            </node>
+                            <node begin="18" end="19" id="34" lemma="gaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ga" word="ging" wvorm="pv"/>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een eigenaardige gewoonte die doet denken aan het verhaal van de ouvreuse in een bioscoop waar een thriller ging .</sentence>
+</alpino_ds>

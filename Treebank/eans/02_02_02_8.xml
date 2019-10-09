@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" index="1" lemma="Erika" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Erika" word="Erika"/>
+      <node begin="1" end="2" id="3" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+      <node begin="0" cat="inf" end="8" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="5" buiging="zonder" end="6" id="6" lemma="hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb" word="hebben" wvorm="inf"/>
+        <node begin="0" cat="inf" end="8" id="7" rel="vc">
+          <node begin="0" end="1" id="8" index="1" rel="su"/>
+          <node begin="6" buiging="zonder" end="7" id="9" lemma="willen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="wil" word="willen" wvorm="inf"/>
+          <node begin="0" cat="inf" end="8" id="10" rel="vc">
+            <node begin="0" end="1" id="11" index="1" rel="su"/>
+            <node begin="2" cat="np" end="4" id="12" rel="obj1">
+              <node begin="2" buiging="zonder" end="3" id="13" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="dat"/>
+              <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="14" lemma="artikel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="artikel" word="artikel"/>
+            </node>
+            <node begin="4" end="5" id="15" lemma="graag" pos="adj" postag="BW()" pt="bw" rel="mod" root="graag" word="graag"/>
+            <node begin="7" buiging="zonder" end="8" id="16" lemma="lezen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="lees" word="lezen" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Erika zou dat artikel graag hebben willen lezen .</sentence>
+</alpino_ds>

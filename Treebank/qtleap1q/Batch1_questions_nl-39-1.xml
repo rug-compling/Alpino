@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="9" id="2" rel="--">
+      <node begin="0" cat="cp" end="4" id="3" rel="sat">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+        <node begin="1" cat="ssub" end="4" id="5" rel="body">
+          <node begin="1" end="2" getal="ev" id="6" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+          <node begin="2" end="3" getal="mv" graad="basis" id="7" lemma="film" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="film" word="films"/>
+          <node begin="3" end="4" id="8" lemma="kijken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kijk" word="kijk" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="5" cat="smain" end="9" id="9" rel="nucl">
+        <node begin="5" end="6" id="10" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+        <node begin="6" end="7" id="11" lemma="haperen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="haper" word="haperen" wvorm="pv"/>
+        <node begin="7" end="8" getal="mv" id="12" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+        <node begin="8" buiging="zonder" end="9" graad="basis" id="13" lemma="regelmatig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="regelmatig" word="regelmatig"/>
+      </node>
+    </node>
+    <node begin="9" end="10" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als ik films kijk , dan haperen ze regelmatig .</sentence>
+</alpino_ds>

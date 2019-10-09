@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="9" end="10" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="conj" end="13" id="2" rel="--">
+      <node begin="0" cat="smain" end="9" id="3" rel="cnj">
+        <node begin="0" end="1" getal="ev" id="4" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="Dat"/>
+        <node begin="1" end="2" id="5" lemma="samen_werken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="werk_samen" word="werkt" wvorm="pv"/>
+        <node begin="2" end="3" id="6" lemma="soms" pos="adv" postag="BW()" pt="bw" rel="mod" root="soms" word="soms"/>
+        <node begin="3" end="4" id="7" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+        <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="lekker" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="lekker" word="lekker"/>
+        <node begin="5" end="6" id="9" lemma="samen" pos="part" postag="BW()" pt="bw" rel="svp" root="samen" word="samen"/>
+        <node begin="6" cat="pp" end="9" id="10" rel="pc">
+          <node begin="6" end="7" id="11" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="7" cat="np" end="9" id="12" rel="obj1">
+            <node begin="7" buiging="met-e" end="8" graad="comp" id="13" lemma="oud" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="oud" word="oudere"/>
+            <node begin="8" end="9" getal="mv" graad="basis" id="14" lemma="server" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="server" word="servers"/>
+          </node>
+        </node>
+      </node>
+      <node begin="10" conjtype="neven" end="11" id="15" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="11" cat="mwu" end="13" id="16" mwu_root="vice versa" mwu_sense="vice versa" rel="cnj">
+        <node begin="11" end="12" id="17" lemma="vice" pos="adv" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="vice" spectype="vreemd" word="vice"/>
+        <node begin="12" end="13" id="18" lemma="versa" pos="adv" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="versa" spectype="vreemd" word="versa"/>
+      </node>
+    </node>
+    <node begin="13" end="14" id="19" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="14" end="15" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dat werkt soms niet lekker samen met oudere servers ( en vice versa ) .</sentence>
+</alpino_ds>

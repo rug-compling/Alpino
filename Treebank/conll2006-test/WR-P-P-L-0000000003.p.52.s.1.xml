@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="4" end="5" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="1" cat="conj" end="8" id="3" rel="--">
+      <node begin="1" cat="conj" end="4" id="4" rel="cnj">
+        <node begin="1" buiging="zonder" end="2" getal-n="zonder-n" id="5" lemma="eten" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="cnj" root="eten" word="eten" wvorm="inf"/>
+        <node begin="2" conjtype="neven" end="3" id="6" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="eetgedrag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="eetgedrag" word="eetgedrag"/>
+      </node>
+      <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="8" lemma="spijsvertering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="spijsvertering" word="spijsvertering"/>
+      <node begin="6" conjtype="neven" end="7" id="9" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="10" lemma="uitscheiding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="uit_scheiding" word="uitscheiding"/>
+    </node>
+  </node>
+  <sentence>- eten en eetgedrag , spijsvertering en uitscheiding</sentence>
+</alpino_ds>

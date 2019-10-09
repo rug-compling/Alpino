@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [ $# -lt 1 ]; then
+    echo "Usage: dtcopydz archive(s)" 1>&2
+    exit 1
+fi
+
+for dir in $*
+do
+(  if [ -r $dir.index ]
+   then
+   act --extract --targetdir=/dev/shm $dir
+   ( cd /dev/shm/$dir ; find -name '*.xml' -exec xmllint --copy --encode UTF-8 {} --output {} \; )
+   act --force --create --remove --targetdir=. /dev/shm/$dir
+   fi
+)
+done
+

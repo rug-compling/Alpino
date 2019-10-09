@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="Gisteren"/>
+      <node begin="1" end="2" id="3" lemma="lopen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="loop" word="liep" wvorm="pv"/>
+      <node begin="2" end="3" genus="fem" getal="ev" id="4" lemma="zij" naamval="nomin" pdtype="pron" persoon="3v" pos="pron" postag="VNW(pers,pron,nomin,vol,3v,ev,fem)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
+      <node begin="3" end="4" id="5" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+      <node begin="4" cat="pp" end="6" id="6" rel="mod">
+        <node begin="4" end="5" id="7" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="5" end="6" getal="mv" graad="basis" id="8" lemma="kruk" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="kruk" word="krukken"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Gisteren liep zij nog op krukken .</sentence>
+</alpino_ds>

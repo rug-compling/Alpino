@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="met-e" end="2" getal-n="mv-n" graad="basis" id="4" lemma="alleenstaand" pos="noun" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" root="alleenstaanden" word="alleenstaanden"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="3" end="4" id="6" lemma="nauwelijks" pos="adv" postag="BW()" pt="bw" rel="mod" root="nauwelijks" word="nauwelijks"/>
+      <node begin="4" end="5" getal="mv" graad="basis" id="7" lemma="recht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="recht" word="rechten"/>
+    </node>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="6" end="7" id="9" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+  </node>
+  <sentence>De alleenstaanden hebben nauwelijks rechten . &quot;</sentence>
+</alpino_ds>

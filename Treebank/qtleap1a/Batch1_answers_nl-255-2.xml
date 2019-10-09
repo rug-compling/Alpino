@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="15" id="2" rel="--">
+      <node begin="7" end="8" id="3" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+      <node begin="8" end="9" getal="ev" id="4" index="1" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+      <node begin="0" cat="inf" end="15" id="5" rel="vc">
+        <node begin="0" cat="cp" end="6" id="6" rel="mod">
+          <node begin="0" conjtype="onder" end="1" id="7" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+          <node begin="1" cat="ssub" end="6" id="8" rel="body">
+            <node begin="1" end="2" getal="ev" id="9" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dit" status="vol" vwtype="aanw" word="dit"/>
+            <node begin="2" end="3" id="10" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+            <node begin="3" cat="np" end="5" id="11" rel="predc">
+              <node begin="3" end="4" id="12" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="13" lemma="geval" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geval" word="geval"/>
+            </node>
+            <node begin="5" end="6" id="14" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          </node>
+        </node>
+        <node begin="8" end="9" id="15" index="1" rel="su"/>
+        <node begin="9" buiging="met-e" end="10" getal-n="zonder-n" id="16" lemma="deze" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(aanw,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="obj1" root="deze" vwtype="aanw" word="deze"/>
+        <node begin="10" cat="mwu" end="12" id="17" rel="mod">
+          <node begin="10" end="11" id="18" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="adj" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+          <node begin="11" buiging="zonder" end="12" graad="sup" id="19" lemma="best" pos="adj" positie="vrij" postag="ADJ(vrij,sup,zonder)" pt="adj" rel="mwp" root="best" word="best"/>
+        </node>
+        <node begin="12" buiging="zonder" end="13" id="20" lemma="in_stellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel_in" word="instellen" wvorm="inf"/>
+        <node begin="13" cat="pp" end="15" id="21" rel="pc">
+          <node begin="13" end="14" id="22" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="23" lemma="imap" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="imap" word="IMAP"/>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als dit niet het geval is , kan je deze het best instellen op IMAP .</sentence>
+</alpino_ds>

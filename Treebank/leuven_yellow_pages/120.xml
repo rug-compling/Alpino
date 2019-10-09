@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="doen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="doe" word="doe" wvorm="pv"/>
+      <node begin="2" end="3" getal="mv" id="4" index="1" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="obj1" root="ze" status="red" vwtype="pers" word="ze"/>
+      <node begin="2" cat="inf" end="6" id="5" rel="vc">
+        <node begin="2" end="3" id="6" index="1" rel="su"/>
+        <node begin="3" buiging="zonder" end="4" id="7" lemma="werken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="werk" word="werken" wvorm="inf"/>
+        <node begin="4" cat="cp" end="6" id="8" rel="mod">
+          <node begin="4" end="5" id="9" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+          <node begin="5" end="6" getal="mv" graad="basis" id="10" lemma="beest" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="body" root="beest" word="beesten"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Ik doe ze werken als beesten</sentence>
+</alpino_ds>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="0" cat="smain" end="18" id="1" rel="--">
+      <node begin="0" cat="np" end="13" id="2" index="1" rel="su">
+        <node begin="0" end="1" getal="ev" id="3" lemma="iets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" root="iets" status="vol" vwtype="onbep" word="Iets"/>
+        <node begin="1" cat="pp" end="13" id="4" rel="mod">
+          <node begin="1" end="2" id="5" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="2" cat="conj" end="13" id="6" rel="obj1">
+            <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="bewogenheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="bewogenheid" word="bewogenheid"/>
+            <node begin="3" conjtype="neven" end="4" id="8" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="4" cat="np" end="8" id="9" rel="cnj">
+              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="solidariteit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="solidariteit" word="solidariteit"/>
+              <node begin="5" cat="pp" end="8" id="11" rel="mod">
+                <node begin="5" end="6" id="12" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                <node begin="6" cat="np" end="8" id="13" rel="obj1">
+                  <node begin="6" end="7" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="7" buiging="met-e" end="8" getal-n="zonder-n" graad="comp" id="15" lemma="jongere" naamval="stan" pos="noun" positie="nom" postag="ADJ(nom,comp,met-e,zonder-n,stan)" pt="adj" rel="hd" root="jongere" word="jongere"/>
+                </node>
+              </node>
+            </node>
+            <node begin="8" conjtype="neven" end="9" id="16" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="9" cat="np" end="13" id="17" rel="cnj">
+              <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="benadering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="benadering" word="benadering"/>
+              <node begin="10" cat="pp" end="13" id="19" rel="mod">
+                <node begin="10" end="11" id="20" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                <node begin="11" cat="np" end="13" id="21" rel="obj1">
+                  <node begin="11" buiging="zonder" end="12" graad="basis" id="22" lemma="gelijk" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="gelijk" word="gelijk"/>
+                  <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="23" lemma="niveau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="niveau" word="niveau"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="13" end="14" id="24" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+      <node begin="0" cat="inf" end="18" id="25" rel="vc">
+        <node begin="0" end="13" id="26" index="1" rel="su"/>
+        <node begin="14" cat="np" end="17" id="27" rel="obj1">
+          <node begin="14" end="15" id="28" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="15" buiging="met-e" end="16" graad="basis" id="29" lemma="geheel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="geheel" word="gehele"/>
+          <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="30" lemma="hulpverlening" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hulpverlening" word="hulpverlening"/>
+        </node>
+        <node begin="17" buiging="zonder" end="18" id="31" lemma="doorbreken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breek" word="doorbreken" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="18" end="19" id="32" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Iets van bewogenheid en solidariteit met de jongere en benadering op gelijk niveau moet de gehele hulpverlening doorbreken .</sentence>
+</alpino_ds>

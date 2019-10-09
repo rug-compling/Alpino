@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="welke" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welke"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="4" lemma="olympisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="olympisch" word="olympische"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="sportster" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sport_ster" word="sportster"/>
+      </node>
+      <node begin="0" cat="sv1" end="6" id="6" rel="body">
+        <node begin="0" end="3" id="7" index="1" rel="su"/>
+        <node begin="3" end="4" id="8" lemma="wonen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="woon" word="woont" wvorm="pv"/>
+        <node begin="4" cat="pp" end="6" id="9" rel="ld">
+          <node begin="4" end="5" id="10" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="Groningen" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Groningen" word="Groningen"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke olympische sportster woont in Groningen ?</sentence>
+</alpino_ds>

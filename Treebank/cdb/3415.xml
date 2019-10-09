@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="3" end="4" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="1" cat="smain" end="14" id="3" rel="--">
+      <node begin="1" cat="mwu" end="3" id="4" rel="su">
+        <node begin="1" end="2" id="5" lemma="Le" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Le" spectype="deeleigen" word="Le"/>
+        <node begin="2" end="3" id="6" lemma="Monde" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Monde" spectype="deeleigen" word="Monde"/>
+      </node>
+      <node begin="4" end="5" id="7" lemma="leren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="leer" word="leert" wvorm="pv"/>
+      <node begin="5" end="6" getal="mv" id="8" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj2" root="ons" status="vol" vwtype="pr" word="ons"/>
+      <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="9" lemma="vrijdagavond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="vrijdagavond" word="vrijdagavond"/>
+      <node begin="7" cat="whsub" end="14" id="10" rel="vc">
+        <node begin="7" end="8" id="11" index="1" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="whd" root="hoe" word="hoe"/>
+        <node begin="7" cat="ssub" end="14" id="12" rel="body">
+          <node begin="7" end="8" id="13" index="1" rel="mod"/>
+          <node begin="8" cat="np" end="10" id="14" rel="su">
+            <node begin="8" buiging="met-e" end="9" graad="basis" id="15" lemma="Frans" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Frans" word="Franse"/>
+            <node begin="9" end="10" getal="mv" graad="basis" id="16" lemma="werkgever" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="werkgever" word="werkgevers"/>
+          </node>
+          <node begin="10" end="11" id="17" lemma="omspringen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="spring" word="omspringen" wvorm="pv"/>
+          <node begin="11" cat="pp" end="14" id="18" rel="pc">
+            <node begin="11" end="12" id="19" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="12" cat="np" end="14" id="20" rel="obj1">
+              <node begin="12" buiging="zonder" end="13" getal="mv" id="21" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+              <node begin="13" end="14" getal="mv" graad="basis" id="22" lemma="gastarbeider" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gastarbeider" word="gastarbeiders"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&quot; Le Monde &quot; leert ons vrijdagavond hoe Franse werkgevers omspringen met hun gastarbeiders .</sentence>
+</alpino_ds>

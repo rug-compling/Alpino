@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" cat="smain" end="3" id="1" rel="--">
+      <node begin="0" end="1" getal="mv" graad="basis" id="2" lemma="vrouw" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="vrouw" word="vrouwen"/>
+      <node begin="1" end="2" id="3" lemma="haten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="haat" word="haten" wvorm="pv"/>
+      <node begin="2" end="3" getal="mv" graad="basis" id="4" lemma="vrouw" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="vrouw" word="vrouwen"/>
+    </node>
+  </node>
+  <sentence>vrouwen haten vrouwen</sentence>
+</alpino_ds>

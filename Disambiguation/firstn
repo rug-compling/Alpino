@@ -1,0 +1,32 @@
+#!/usr/bin/perl -w
+
+use Getopt::Std;
+
+# OPTIONS
+getopts('n:');
+
+$opt_n ||= 1000000;
+
+$prevkey=-1;
+$numberofparses=0;
+while(<>) {
+  if (substr($_,0,1) ne '%') {
+    if (! ($. % 25000)) { 
+	print STDERR "read $. lines\n";
+    }
+    ($key,undef,undef) = split/\#/;
+
+    if ($key eq $prevkey) {
+      if ($numberofparses < $opt_n) {
+	  print;
+	$numberofparses++;
+      }
+    }
+    else {
+      $prevkey=$key;
+      print;
+      $numberofparses=1;
+    }
+  }
+}
+

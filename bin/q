@@ -1,0 +1,57 @@
+#!/usr/bin/perl -w
+
+use Getopt::Std;
+use vars qw($opt_a $opt_m $opt_o $opt_c $opt_k);
+getopts('amockwx');
+$total=0;
+$ok=0;
+
+## $opt_a  -a    print all
+## $opt_m  -m    print mistakes
+## $opt_o  -o    print oks
+## $opt_c  -c    print coverage
+## $opt_k  -k    print key
+
+while(<>) {
+    if (/^Q\#/) {
+	chomp;
+	# catch fields, but allow for | inside sentence field (sigh...)
+	/^Q\#([^|]*)\|(.*)\|([^|]*)\|([^|]*)\|([^|]*)$/o;
+	if ( defined $1 && defined $2 && defined $3 && defined $4 && defined $5 ) {
+	    $key=$1;
+	    $sent=$2;
+	    $status=$3;
+	    $oksent=$4;
+	    if ($oksent == 0) { $oksent=1 }
+	    # $score=$5; not used
+	    $total++;
+	    
+	    if ($status ne 1) {
+		$status{$status}++;
+	    } 
+	    
+	    if ( $opt_a             ||
+		 ($opt_o && $oksent == 1 && $status eq 1) ||
+		 ($opt_m && $oksent != 1 && ( $status eq 1 || $status eq "failure" ) )  
+		 ) {
+		if ($opt_k) { 
+		    $key =~ s/^Q#//;
+		    print "$key|$sent\n"; 
+		} else {
+		    print "@ $sent\n";
+		}
+	    } 
+	    $ok=$ok+($oksent==1);
+	}
+    }
+}
+
+if ($opt_c) {
+    print STDERR "total:    $total\n";
+    print STDERR "ok:       $ok\n";
+    if ($total) { print STDERR "coverage: ",$ok/$total,"\n"; }
+    if ($total && $status{'time_out'}) { print STDERR "coverage: ",$ok/($total-$status{'time_out'})," (ignoring time_out)\n"; }
+    foreach $status (keys %status) {
+	print STDERR "$status:   $status{$status}\n";
+    }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="5" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="tentoonstelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tentoonstelling" word="tentoonstelling"/>
+        <node begin="2" cat="mwu" end="5" id="5" rel="app">
+          <node begin="2" end="3" id="6" lemma="Artistes" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Artistes" spectype="deeleigen" word="Artistes"/>
+          <node begin="3" end="4" id="7" lemma="Palestiniens" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Palestiniens" spectype="deeleigen" word="Palestiniens"/>
+          <node begin="4" end="5" id="8" lemma="contemporains" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="contemporains" spectype="deeleigen" word="contemporains"/>
+        </node>
+      </node>
+      <node begin="5" end="6" id="9" lemma="duren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="duur" word="duurt" wvorm="pv"/>
+      <node begin="6" cat="pp" end="9" id="10" rel="mod">
+        <node begin="6" end="7" id="11" lemma="t/m" pos="prep" postag="SPEC(afk)" pt="spec" rel="hd" root="tot_en_met" spectype="afk" word="t/m"/>
+        <node begin="7" cat="mwu" end="9" id="12" rel="obj1">
+          <node begin="7" end="8" id="13" lemma="25" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="25" word="25"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="14" lemma="mei" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="mei" word="mei"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>De tentoonstelling Artistes Palestiniens contemporains duurt t/m 25 mei</sentence>
+</alpino_ds>

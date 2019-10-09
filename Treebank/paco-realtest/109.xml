@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="0" cat="smain" end="18" id="1" rel="--">
+      <node begin="0" cat="np" end="13" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" infl="het" pos="det" rel="det" root="het" wh="nwh" word="Het"/>
+        <node aform="base" begin="1" end="2" id="4" infl="e" pos="adj" rel="mod" root="klassiek" vform="adj" word="klassieke"/>
+        <node begin="2" end="3" gen="both" id="5" num="both" pos="noun" rel="hd" root="vooruitgangsdenken" word="vooruitgangsdenken"/>
+        <node begin="3" cat="pp" end="13" id="6" rel="mod">
+          <node begin="3" end="4" id="7" pos="prep" rel="hd" root="over" word="over"/>
+          <node begin="4" cat="np" end="13" id="8" rel="obj1">
+            <node begin="4" end="5" gen="de" id="9" num="sg" pos="noun" rel="hd" root="wetenschap" word="wetenschap"/>
+            <node begin="5" cat="cp" end="13" id="10" rel="mod">
+              <node begin="5" end="6" id="11" pos="comp" rel="cmp" root="als" sc="als" word="als"/>
+              <node begin="6" cat="np" end="13" id="12" rel="body">
+                <node begin="6" end="7" id="13" infl="een" pos="det" rel="det" root="een" word="een"/>
+                <node begin="7" cat="conj" end="11" id="14" rel="mod">
+                  <node aform="base" begin="7" end="8" id="15" infl="e" pos="adj" rel="cnj" root="neutraal" vform="adj" word="neutrale"/>
+                  <node begin="8" end="9" id="16" pos="vg" rel="crd" root="en" word="en"/>
+                  <node begin="9" cat="ppres" end="11" id="17" rel="cnj">
+                    <node begin="9" end="10" id="18" pos="adv" rel="mod" root="steeds" word="steeds"/>
+                    <node aform="base" begin="10" end="11" id="19" infl="e" pos="adj" rel="hd" root="groei" vform="gerund" word="groeiende"/>
+                  </node>
+                </node>
+                <node begin="11" end="12" gen="de" id="20" num="sg" pos="noun" rel="hd" root="verzameling" sc="measure" word="verzameling"/>
+                <node begin="12" end="13" gen="de" id="21" num="sg" pos="noun" rel="mod" root="kennis" word="kennis"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="13" end="14" id="22" infl="sg_heeft" pos="verb" rel="hd" root="ben" sc="passive" tense="present" word="is"/>
+      <node begin="0" cat="ppart" end="18" id="23" rel="vc">
+        <node begin="0" end="13" id="24" index="1" rel="obj1"/>
+        <node begin="14" end="15" id="25" pos="adv" rel="mod" root="ondertussen" special="sentence" word="ondertussen"/>
+        <node begin="15" cat="ap" end="17" id="26" rel="mod">
+          <node begin="15" end="16" id="27" pos="adv" rel="mod" root="al" word="al"/>
+          <node aform="base" begin="16" end="17" id="28" infl="no_e" pos="adj" rel="hd" root="lang" vform="adj" word="lang"/>
+        </node>
+        <node begin="17" end="18" id="29" infl="psp" pos="verb" rel="hd" root="achterhaal" sc="transitive" word="achterhaald"/>
+      </node>
+    </node>
+    <node begin="18" end="19" id="30" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Het klassieke vooruitgangsdenken over wetenschap als een neutrale en steeds groeiende verzameling kennis is ondertussen al lang achterhaald .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

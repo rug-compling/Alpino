@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="27" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="13" end="14" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="18" end="19" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="24" end="25" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="smain" end="26" id="5" rel="--">
+      <node begin="0" cat="np" end="3" id="6" index="1" rel="su">
+        <node begin="0" end="1" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="8" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="9" lemma="Sun" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Sun" word="Sun"/>
+      </node>
+      <node begin="3" end="4" id="10" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="26" id="11" rel="vc">
+        <node begin="0" end="3" id="12" index="1" rel="obj1"/>
+        <node begin="4" buiging="zonder" end="5" id="13" lemma="maken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="maak" word="gemaakt" wvorm="vd"/>
+        <node begin="5" cat="pp" end="26" id="14" rel="mod">
+          <node begin="5" end="6" id="15" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+          <node begin="6" cat="np" end="26" id="16" rel="obj1">
+            <node begin="6" end="7" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="7" buiging="met-e" end="8" graad="basis" id="18" lemma="Australisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Australisch" word="Australische"/>
+            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="19" lemma="krantenmagnaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="krantenmagnaat" word="krantenmagnaat"/>
+            <node begin="9" cat="mwu" end="11" id="20" rel="app">
+              <node begin="9" end="10" id="21" lemma="Rupert" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Rupert" spectype="deeleigen" word="Rupert"/>
+              <node begin="10" end="11" id="22" lemma="Murdoch" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Murdoch" spectype="deeleigen" word="Murdoch"/>
+            </node>
+            <node begin="12" end="13" id="23" lemma="38" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="38" word="38"/>
+            <node begin="14" cat="rel" end="26" id="24" rel="mod">
+              <node begin="14" end="15" getal="getal" id="25" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+              <node begin="14" cat="ssub" end="26" id="26" rel="body">
+                <node begin="14" end="15" id="27" index="2" rel="su"/>
+                <node begin="15" cat="pp" end="17" id="28" rel="mod">
+                  <node begin="15" end="16" id="29" lemma="sinds" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="sinds" vztype="init" word="sinds"/>
+                  <node begin="16" buiging="zonder" end="17" graad="basis" id="30" lemma="kort" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="obj1" root="kort" word="kort"/>
+                </node>
+                <node begin="17" end="18" id="31" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+                <node begin="19" cat="mwu" end="24" id="32" rel="obj1">
+                  <node begin="19" end="20" id="33" lemma="The" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="The" spectype="deeleigen" word="The"/>
+                  <node begin="20" end="21" id="34" lemma="News" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="News" spectype="deeleigen" word="News"/>
+                  <node begin="21" end="22" id="35" lemma="of" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="of" spectype="deeleigen" word="of"/>
+                  <node begin="22" end="23" id="36" lemma="the" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="the" spectype="deeleigen" word="the"/>
+                  <node begin="23" end="24" id="37" lemma="World" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="World" spectype="deeleigen" word="World"/>
+                </node>
+                <node begin="25" end="26" id="38" lemma="bezitten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="bezit" word="bezit" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="26" end="27" id="39" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De nieuwe Sun wordt gemaakt door de Australische krantenmagnaat Rupert Murdoch ( 38 ) die sinds kort ook &quot; The News of the World &quot; bezit .</sentence>
+</alpino_ds>

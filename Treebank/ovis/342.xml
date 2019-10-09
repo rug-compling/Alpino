@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="du" end="5" id="1" rel="--">
+      <node begin="0" cat="mwu" end="2" id="2" rel="dp">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="santpoort" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="santpoort" word="santpoort"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="noord" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="noord" word="noord"/>
+      </node>
+      <node begin="2" cat="pp" end="5" id="5" rel="dp">
+        <node begin="2" end="3" id="6" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+        <node begin="3" cat="mwu" end="5" id="7" rel="obj1">
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="8" lemma="amsterdam" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="amsterdam" word="amsterdam"/>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="9" lemma="sloterdijk" pos="name" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="sloterdijk" word="sloterdijk"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>santpoort noord naar amsterdam sloterdijk</sentence>
+</alpino_ds>

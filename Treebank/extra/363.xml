@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="«" pos="punct" postag="LET()" pt="let" rel="--" root="«" word="«"/>
+    <node begin="3" end="4" id="2" lemma="»" pos="punct" postag="LET()" pt="let" rel="--" root="»" word="»"/>
+    <node begin="4" end="5" id="3" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="np" end="7" id="4" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="5" lemma="geslacht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geslacht" word="Geslacht"/>
+      <node begin="2" end="3" genus="genus" getal="ev" graad="basis" id="6" lemma="Lepus" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Lepus" word="Lepus"/>
+      <node begin="5" cat="np" end="7" id="7" rel="mod">
+        <node begin="5" buiging="met-e" end="6" graad="basis" id="8" lemma="echt" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="echt" word="Echte"/>
+        <node begin="6" end="7" getal="mv" graad="basis" id="9" lemma="haas" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="haas" word="hazen"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="10" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+  </node>
+  <sentence>Geslacht « Lepus » ( Echte hazen )</sentence>
+</alpino_ds>

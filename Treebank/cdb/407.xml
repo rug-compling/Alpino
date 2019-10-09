@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="5" end="6" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="smain" end="14" id="3" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="4" lemma="sprakeloos" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predm" root="sprakeloos" word="Sprakeloos"/>
+      <node begin="1" end="2" id="5" lemma="horen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="hoor" word="hoorde" wvorm="pv"/>
+      <node begin="3" cat="mwu" end="5" id="6" rel="su">
+        <node begin="3" end="4" id="7" lemma="Oude" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Oude" spectype="deeleigen" word="Oude"/>
+        <node begin="4" end="5" id="8" lemma="Nol" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nol" spectype="deeleigen" word="Nol"/>
+      </node>
+      <node begin="6" end="7" id="9" lemma="gistermorgen" pos="adv" postag="BW()" pt="bw" rel="mod" root="morgen" word="gistermorgen"/>
+      <node begin="7" cat="np" end="13" id="10" rel="obj1">
+        <node begin="7" end="8" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="12" lemma="arrest" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="arrest" word="arrest"/>
+        <node begin="9" cat="pp" end="13" id="13" rel="mod">
+          <node begin="9" end="10" id="14" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="10" cat="np" end="13" id="15" rel="obj1">
+            <node begin="10" end="11" id="16" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="11" buiging="met-e" end="12" graad="basis" id="17" lemma="Amsterdams" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Amsterdams" word="Amsterdamse"/>
+            <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="18" lemma="Hof" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Hof" word="Hof"/>
+          </node>
+        </node>
+      </node>
+      <node begin="13" end="14" id="19" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
+    </node>
+    <node begin="14" end="15" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Sprakeloos hoorde &quot; Oude Nol &quot; gistermorgen het arrest van het Amsterdamse Hof aan .</sentence>
+</alpino_ds>

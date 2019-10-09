@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="conj" end="8" id="1" rel="--">
+      <node begin="0" cat="smain" end="5" id="2" rel="cnj">
+        <node begin="0" cat="np" end="3" id="3" rel="su">
+          <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+          <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="oud" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="oud" word="oude"/>
+          <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="stuk" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="stuk" word="stukken"/>
+        </node>
+        <node begin="3" end="4" id="7" index="1" lemma="doen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="doe" word="deden" wvorm="pv"/>
+        <node begin="4" end="5" id="8" lemma="96.50" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="96.50" word="96.50"/>
+      </node>
+      <node begin="3" cat="smain" end="8" id="9" rel="cnj">
+        <node begin="3" end="4" id="10" index="1" rel="hd"/>
+        <node begin="5" cat="np" end="7" id="11" rel="su">
+          <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" buiging="met-e" end="7" getal-n="zonder-n" graad="basis" id="13" lemma="nieuw" naamval="stan" pos="noun" positie="nom" postag="ADJ(nom,basis,met-e,zonder-n,stan)" pt="adj" rel="hd" root="nieuw" word="nieuwe"/>
+        </node>
+        <node begin="7" end="8" id="14" lemma="55.30" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="55.30" word="55.30"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De oude stukken deden 96.50 de nieuwe 55.30 .</sentence>
+</alpino_ds>

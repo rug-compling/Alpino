@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="momenteel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="momenteel" word="Momenteel"/>
+      <node begin="1" end="2" id="3" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="4" rel="su">
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="dezelfde" pos="det" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="det" root="dezelfde" word="dezelfde"/>
+        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="6" lemma="golf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="golf" word="golf"/>
+      </node>
+      <node begin="4" cat="pp" end="8" id="7" rel="ld">
+        <node begin="4" end="5" id="8" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+        <node begin="5" cat="np" end="8" id="9" rel="obj1">
+          <node begin="5" end="6" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="6" buiging="zonder" end="7" graad="comp" id="11" lemma="hoog" pos="adj" positie="prenom" postag="ADJ(prenom,comp,zonder)" pt="adj" rel="mod" root="hoog" word="hoger"/>
+          <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="12" lemma="beroepsonderwijs" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="beroepsonderwijs" word="beroepsonderwijs"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Momenteel gaat dezelfde golf door het hoger beroepsonderwijs .</sentence>
+</alpino_ds>

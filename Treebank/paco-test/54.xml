@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="np" end="5" id="1" rel="--">
+      <node begin="0" end="1" frame="v_noun(intransitive)" id="2" lcat="np" pos="verb" rel="hd" root="kracht_lijn" sc="intransitive" sense="kracht_lijn" special="v_noun" word="Krachtlijnen"/>
+      <node begin="1" cat="pp" end="5" id="3" rel="mod">
+        <node begin="1" end="2" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="4" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+        <node begin="2" cat="np" end="5" id="5" rel="obj1">
+          <node begin="2" end="3" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="6" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+          <node begin="3" end="4" frame="noun(het,count,sg,app_measure)" gen="het" id="7" lcat="np" num="sg" pos="noun" rel="hd" root="actie_programma" sc="app_measure" sense="actie_programma" word="actieprogramma"/>
+          <node begin="4" end="5" frame="noun(de,mass,sg)" gen="de" id="8" lcat="np" num="sg" pos="noun" rel="app" root="eind_verwerking" sense="eind_verwerking" word="eindverwerking"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Krachtlijnen van het actieprogramma eindverwerking</sentence>
+  <comments>
+    <comment>Q#54|Krachtlijnen van het actieprogramma eindverwerking|1|1|0.7373363202929183</comment>
+  </comments>
+</alpino_ds>

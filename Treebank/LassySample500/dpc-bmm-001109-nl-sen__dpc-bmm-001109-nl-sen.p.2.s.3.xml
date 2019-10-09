@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="smain" end="16" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" cat="np" end="7" id="4" rel="su">
+        <node begin="2" end="3" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="3" buiging="met-e" end="4" id="6" lemma="groeien" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="groei" word="groeiende" wvorm="od"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="7" lemma="interesse" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="interesse" word="interesse"/>
+        <node begin="5" cat="pp" end="7" id="8" rel="mod">
+          <node begin="5" end="6" id="9" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+          <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="10" lemma="zeezand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="zee_zand" word="zeezand"/>
+        </node>
+      </node>
+      <node begin="7" cat="cp" end="16" id="11" rel="mod">
+        <node begin="7" buiging="zonder" end="8" graad="basis" id="12" lemma="voornamelijk" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="voornamelijk" word="voornamelijk"/>
+        <node begin="8" conjtype="onder" end="9" id="13" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="omdat"/>
+        <node begin="9" cat="ssub" end="16" id="14" rel="body">
+          <node begin="9" cat="np" end="14" id="15" rel="su">
+            <node begin="9" end="10" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="10" buiging="met-e" end="11" id="17" lemma="bestaan" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="besta" word="bestaande" wvorm="od"/>
+            <node begin="11" end="12" getal="mv" graad="basis" id="18" lemma="zandgroef" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="zand_groef" word="zandgroeven"/>
+            <node begin="12" cat="pp" end="14" id="19" rel="mod">
+              <node begin="12" end="13" id="20" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+              <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="21" lemma="land" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="land" word="land"/>
+            </node>
+          </node>
+          <node begin="14" buiging="zonder" end="15" id="22" lemma="uitputten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="predc" root="uitgeput" word="uitgeput" wvorm="vd"/>
+          <node begin="15" end="16" id="23" lemma="raken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="raak" word="raken" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Er is een groeiende interesse voor zeezand voornamelijk omdat de bestaande zandgroeven op land uitgeput raken .</sentence>
+</alpino_ds>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="2" end="3" id="2" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="5" end="6" id="3" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="1" cat="smain" end="15" id="4" rel="--">
+      <node begin="1" cat="np" end="5" id="5" rel="su">
+        <node begin="1" end="2" genus="masc" getal="ev" id="6" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="hd" root="hij" status="vol" vwtype="pers" word="Hij"/>
+        <node begin="3" cat="mwu" end="5" id="7" rel="mod">
+          <node begin="3" end="4" id="8" lemma="Van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Van" spectype="deeleigen" word="Van"/>
+          <node begin="4" end="5" id="9" lemma="Duyn" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Duyn" spectype="deeleigen" word="Duyn"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="7" end="8" getal="getal" id="11" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="ld" root="hier" status="vol" vwtype="aanw" word="hier"/>
+      <node begin="8" cat="oti" end="15" id="12" rel="mod">
+        <node begin="8" end="9" id="13" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+        <node begin="9" cat="ti" end="15" id="14" rel="body">
+          <node begin="13" end="14" id="15" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="9" cat="inf" end="15" id="16" rel="body">
+            <node begin="9" end="10" getal="mv" id="17" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj1" root="ons" status="vol" vwtype="pr" word="ons"/>
+            <node begin="10" cat="mwu" end="13" id="18" rel="svp">
+              <node begin="10" end="11" id="19" lemma="op" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+              <node begin="11" end="12" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="fixed" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+              <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="21" lemma="kast" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="kast" word="kast"/>
+            </node>
+            <node begin="14" buiging="zonder" end="15" id="22" lemma="jagen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="jaag" word="jagen" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&quot; Hij ( Van Duyn ) is hier om ons op de kast te jagen .</sentence>
+</alpino_ds>

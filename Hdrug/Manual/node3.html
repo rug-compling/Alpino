@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-/W3C/DTD HTML 4.0 Transitional//EN"
+     "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>HDRUG Reference Manual</TITLE>
+<link rel=stylesheet href="http://www.let.rug.nl/~vannoord/doc.css" 
+      type="text/css">
+<link rel=next href="node4.html">
+</HEAD>
+<BODY>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node4.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+<H1>3. Command Interpreter</H1>
+<P>In principle there are three ways to interact with Hdrug:</P>
+<UL><LI><P>SICStus Prolog Top-level</P>
+<LI><P>Command Interpreter</P>
+<LI><P>Graphical User Interface</P>
+</UL><P>The first two items are mutually exclusive: if the command interpreter
+is listening, then you cannot give ordinary SICStus Prolog commands
+and vice versa. The graphical user interface can be used in
+combination with both the SICStus Prolog Top-level or the command
+interpreter.</P>
+<P>Prolog queries are given as ordinary Sicstus commands. This way of
+interacting with Hdrug can be useful for low level debugging etc.
+Using the command interpreter can be useful for experienced users, as
+it might be somewhat faster than using the graphical user interface.</P>
+<P>The command-interpreter features a history and an alias mechanism. It
+includes a facility to escape to Unix, and is easily extendible by an
+application.</P>
+<P>The command interpreter is started by the Prolog predicate r/0 The
+command interpreter command <B>p</B> halts the command interpreter (but
+Hdrug continues).</P>
+<P>Commands for the command interpreter always constitute one line of
+user input. Such a line of input is tokenized into a number of *words
+using spaces and tabs as separation symbols. The first <B>word</B> is taken
+as the command; optional further words are taken as arguments to the
+command. Each command will define certain restrictions on the number
+and type of arguments it accepts.</P>
+<P>Each word is treated as a Prolog atomic (either atom or integer, using
+name/2).  In order to pass a non-atomic Prolog term as an argument to
+a command, you need to enclose the word in the meta-characters {
+and }. For example, the flag command can be used to set a global
+variable. For example:</P>
+<BLOCKQUOTE>16 |: flag foo bar</BLOCKQUOTE>
+<P>sets the flag <B>foo</B> to the value <B>bar</B>. As an other example,</P>
+<BLOCKQUOTE>17 |: flag foo bar(1,2,3)</BLOCKQUOTE>
+<P>sets the flag <B>foo</B> to the Prolog atom 'bar(1,2,3)'. Finally,</P>
+<BLOCKQUOTE>17 |: flag foo {bar(1,2,3)}</BLOCKQUOTE>
+<P>sets the flag <B>foo</B> to the complex Prolog term bar(1,2,3),
+i.e. a term with functor bar/3 and arguments 1, 2 and 3.</P>
+<P>Also note that in case the {,} meta-characters are used, then the
+variables occurring in words take scope over the full
+command-line. For instance, the parse command normally takes a
+sequences of words:</P>
+<BLOCKQUOTE>18 |: parse John kisses Mary</BLOCKQUOTE>
+<P>In other to apply the parser on a sequence of three variables, where
+the first and third variable are identical, you give the command:</P>
+<BLOCKQUOTE>19 |: parse {A} {B} {A}</BLOCKQUOTE>
+<P>The special meaning of the {,} meta-characters can be switched off 
+by putting a backslash in front of them. For example:</P>
+<BLOCKQUOTE>53 |: tcl set jan { piet klaas }<BR>
+=&gt;  piet klaas</BLOCKQUOTE>
+<BLOCKQUOTE>54 |: tcl puts jan<BR>
+jan</BLOCKQUOTE>
+<P>The following meta-devices apply: All occurences of $word are
+replaced by the definition of the alias <B>word</B>.  The alias command
+itself can be used to define aliases:</P>
+<BLOCKQUOTE>19 |: alias hallo ! cat hallo<BR>
+20 |: $hallo</BLOCKQUOTE>
+<P>so command number 20 will have the same effect as typing</P>
+<BLOCKQUOTE>33 |: ! cat hallo</BLOCKQUOTE>
+<P>and if this command had been typed as command number 33 then
+typing</P>
+<BLOCKQUOTE>35 |: $33</BLOCKQUOTE>
+<P>gives also the same result.</P>
+<P>Moreover, if no alias has been defined, then it will apply the last
+command that started with the name of the alias:</P>
+<BLOCKQUOTE>66 |: parse john kisses mary<BR>
+67 |: $parse</BLOCKQUOTE>
+<P>Both commands will do the same task.</P>
+<P>It is possible to add commands to the command interpreter. The idea is
+that you can define further clauses for the multifile predicate
+hdrug_command/3.  The first argument is the first word of the command.
+The second argument will be the resulting Prolog goal, whereas the
+third argument is a list of the remaining words of the command (the
+arguments to the command).</P>
+<BLOCKQUOTE>:- multifile hdrug_command/3.</BLOCKQUOTE>
+<BLOCKQUOTE>hdrug_command(plus,(X is A+B, format('~w~n',[X])),[A,B]).</BLOCKQUOTE>
+<P>Relevant help information for such a command should be defined using
+the multifile predicate hdrug_command_help/3. The first argument of
+this predicate should be the same as the first argument of
+hdrug_command. The second and third arguments are strings (list of
+character codes). They indicate respectively usage information, and a
+short explanation.</P>
+<BLOCKQUOTE>:- multifile hdrug_command_help/3.<BR>
+hdrug_command_help(plus,&quot;plus A B&quot;,&quot;Prints the sum of A and B&quot;).</BLOCKQUOTE>
+<P>For example, consider the case where we want the
+command <B>rx</B> to restart the Tcl/Tk interface. Furthermore, an
+optional argument of `on' or `off' indicates whether the TkConsol feature 
+should be used. This could be defined as follows:</P>
+<BLOCKQUOTE>hdrug_command(rx,restart_x,L):-<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;rxarg(L).</BLOCKQUOTE>
+<BLOCKQUOTE>rxarg([on])  :- set_flag(tkconsol,on).<BR>
+rxarg([off]) :- set_flag(tkconsol,off).<BR>
+rxarg([]).</BLOCKQUOTE>
+<BLOCKQUOTE>hdrug_command_help(rx,&quot;rx [on,off]&quot;,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;(re)starts graphical user interface with/without TkConsol&quot;).</BLOCKQUOTE>
+<H2>3.1. <a name="anc1"></a>flag Flag [Val]</H2>
+<P>without Val displays value of Flag; with Val sets Flag to Val</P>
+<H2>3.2. <a name="anc2"></a>flag Flag [Val]</H2>
+<P>without Val displays value of Flag; with Val sets Flag to Val</P>
+<H2>3.3. <a name="anc3"></a>% Words</H2>
+<P>ignores Words (comment). Note that there needs to be a space after %.</P>
+<H2>3.4. <a name="anc4"></a>fc Files</H2>
+<P>fcompiles(Files).</P>
+<H2>3.5. <a name="anc5"></a>um Files</H2>
+<P>use_module(Files).</P>
+<H2>3.6. <a name="anc6"></a>el Files</H2>
+<P>ensure_loaded(Files).</P>
+<H2>3.7. <a name="anc7"></a>c Files</H2>
+<P>compile(Files).</P>
+<H2>3.8. <a name="anc8"></a>rc Files</H2>
+<P>reconsult(Files).</P>
+<H2>3.9. <a name="anc9"></a>ld Files</H2>
+<P>load(Files).</P>
+<H2>3.10. <a name="anc10"></a>libum Files</H2>
+<P>for each File, use_module(library(File)).</P>
+<H2>3.11. <a name="anc11"></a>librc Files</H2>
+<P>for each File, reconsult(library(File)).</P>
+<H2>3.12. <a name="anc12"></a>libc Files</H2>
+<P>for each File, compile(library(File)).</P>
+<H2>3.13. <a name="anc13"></a>libel Files</H2>
+<P>for each File, ensure_loaded(library(File)).</P>
+<H2>3.14. <a name="anc14"></a>libld Files</H2>
+<P>for each File, load(library(File)).</P>
+<H2>3.15. <a name="anc15"></a>version</H2>
+<P>displays version information.</P>
+<H2>3.16. <a name="anc16"></a>quit|exit|halt|q|stop</H2>
+<P>quits Hdrug.</P>
+<H2>3.17. <a name="anc17"></a>b</H2>
+<P>break; enters Prolog prompt at next break level.</P>
+<H2>3.18. <a name="anc18"></a>d</H2>
+<P>debug/0.</P>
+<H2>3.19. <a name="anc19"></a>nd</H2>
+<P>nodebug/0.</P>
+<H2>3.20. <a name="anc20"></a>p [Goal]</H2>
+<P>without Goal: quits command interpreter -- falls back to Prolog
+prompt with Goal: calls Goal. Normally you will need {} around the
+Goal. For example:</P>
+<BLOCKQUOTE>p { member(X,[a,b,c]), write(X), nl }</BLOCKQUOTE>
+<H2>3.21. <a name="anc21"></a>! Command</H2>
+<P>Command is executed by the shell. Note that the space between ! and Command is required.</P>
+<H2>3.22. <a name="anc22"></a>alias [Name [Val]]</H2>
+<P>No args: lists all aliases; one arg: displays alias Name; two args:
+defines an alias Name with meaning Val.</P>
+<H2>3.23. <a name="anc23"></a>help [command|flag|pred|hook] [Arg]</H2>
+<P>displays help on command Arg or flag Arg or predicate Arg or hook Arg;
+without Arg prints list of available commands, flags, predicates, or hooks.</P>
+<H2>3.24. <a name="anc24"></a>? [command|flag|pred|hook] [Arg]</H2>
+<P>displays help on command Arg or flag Arg or predicate Arg or hook Arg;
+without Arg prints list of available commands, flags, predicates, or hooks.</P>
+<H2>3.25. <a name="anc25"></a>listhelp [command|flag|pred|hook]</H2>
+<P>displays listing of all commands, flags, predicates or hooks respectively;
+without Class displays all help for all classes.</P>
+<H2>3.26. <a name="anc26"></a>spy [Module] Pred</H2>
+<P>set spypoint on Module:Pred; Pred can either be Fun or Fun/Ar.</P>
+<H2>3.27. <a name="anc27"></a>cd [Dir]</H2>
+<P>change working directory to Dir; without argument cd to home
+directory.</P>
+<H2>3.28. <a name="anc28"></a>pwd</H2>
+<P>print working directory.</P>
+<H2>3.29. <a name="anc29"></a>ls</H2>
+<P>listing of directory contents</P>
+<H2>3.30. <a name="anc30"></a>lt [tk/clig/latex] [Type]</H2>
+<P>prints lexical hierarchy for Type; without Type, prints
+lexical hierarchy for top</P>
+<H2>3.31. <a name="anc31"></a>x</H2>
+<P>(re)starts graphical user interface</P>
+<H2>3.32. <a name="anc32"></a>nox</H2>
+<P>halts graphical user interface</P>
+<H2>3.33. <a name="anc33"></a>tcl Cmd</H2>
+<P>calls tcl command Cmd; what is returned by the tcl command will be
+printed on the screen after the =&gt; arrow.</P>
+<BLOCKQUOTE>75 |: tcl expr 3 * [ expr 5 + 4 ]<BR>
+=&gt; 27</BLOCKQUOTE>
+<P>Remember that { and } need to be prefixed with backlash since
+otherwise the Hdrug shell treats them. For instance</P>
+<BLOCKQUOTE>63 |: tcl expr 3+4<BR>
+=&gt; 7</BLOCKQUOTE>
+<H2>3.34. <a name="anc34"></a>source File</H2>
+<P>sources Tcl source File</P>
+<H2>3.35. <a name="anc35"></a>s [Format] [Output] Values</H2>
+<P>displays Objects with specified Format and Output; cf help on
+s_format, s_output and s_value respectively.</P>
+<H2>3.36. <a name="anc36"></a>i/j/s/w/f [Path]/T</H2>
+<P>Specifies the Format of the s command.</P>
+<P>i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;write/1;</P>
+<P>j&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print/1 (default);</P>
+<P>s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;semantics (third argument of o/3 object terms)</P>
+<P>w&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;words (second argument of o/3 object terms)</P>
+<P>f Path&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display as a feature structure; the optional path is
+a sequence of attributes separated by colons (it selects the value at
+that path). The prefix of the path can be a sequence of integers
+seperated by / in order to select a specific node in the tree: this is
+only possible of the category is a tree datastructure with functor
+tree/3 where tree labels are specified in the first argument and lists
+of daughters are specified in the third argument.</P>
+<P>T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T is a tree-format, display as a tree with that
+format. Tree-formats are specified with the hook predicates
+graphic_path, graphic_label and graphic_daughter.</P>
+<H2>3.37. <a name="anc37"></a>user/latex/tk/clig/dot</H2>
+<P>Specifies the Output of the s command.</P>
+<P>user&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as text to standard output (default);</P>
+<P>latex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LaTeX; ghostview is used to display result;</P>
+<P>tk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in the canvas of the graphical user interface;</P>
+<P>dot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;used DOT</P>
+<P>clig&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uses Clig</P>
+<H2>3.38. <a name="anc38"></a>ObjSpec/DefSpec/ValSpec</H2>
+<P>Specifies the Objects to be shown form the s command.</P>
+<P>ObjSpec will select a number objects (parser/generator results):</P>
+<P>s 2 5 8&nbsp;&nbsp;&nbsp;&nbsp;specifies the objects numbered 2, 5 and 8</P>
+<P>s 4 +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;specifies the objects number 4 and above</P>
+<P>s 3 -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;specifies all objects up to number 3</P>
+<P>s 5 to 12  specifies all objects between 5 and 12</P>
+<P>DefSpec will select a user_clause definition:</P>
+<P>s l Fun/Ar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;specifies a listing of the Fun/Ar predicate.</P>
+<P>ValSpec will specify a goal, and select an argument of that goal:</P>
+<P>s [Module:]Fun/Ar [Pos]</P>
+<P>The Module prefix is optional (user module is assumed if not
+specified); the optional Pos argument selects a specific argument to
+be printed. If no Pos argument is specified then the full goal is
+printed. For example, if you have the following predicate defined:</P>
+<BLOCKQUOTE>x23(f(16),g(17),h).</BLOCKQUOTE>
+<P>then the following commands are possible:</P>
+<BLOCKQUOTE>|: s x23/3</BLOCKQUOTE>
+<BLOCKQUOTE>x23(f(16),g(17),h)</BLOCKQUOTE>
+<BLOCKQUOTE>|: s x23/3 1</BLOCKQUOTE>
+<BLOCKQUOTE>h</BLOCKQUOTE>
+<BLOCKQUOTE>|: s user:x23/3 2</BLOCKQUOTE>
+<BLOCKQUOTE>g17</BLOCKQUOTE>
+<H2>3.39. <a name="anc39"></a>type [t/x/tk/clig/dot] [Type]</H2>
+<P>displays type t=tree x=latex tree, tk=tk tree, clig=clig tree,
+dot=dot tree, none=textual information. No Type implies that top is used.</P>
+<H2>3.40. <a name="anc40"></a>ps [Keys]</H2>
+<P>compares parsers on each sentence with key in Keys; without Keys,
+compares parsers on all availables sentences;</P>
+<H2>3.41. <a name="anc41"></a>psint I J</H2>
+<P>compares parsers on each sentence with key between I and J</P>
+<H2>3.42. <a name="anc42"></a>gs [Keys]</H2>
+<P>compares generators on each lf with key in Keys; without Keys,
+compares generators on all available lfs;</P>
+<H2>3.43. <a name="anc43"></a>gsint I J</H2>
+<P>compares generators on each lf with key between I and J</P>
+<H2>3.44. <a name="anc44"></a>rt [Parser/Generator]</H2>
+<P>reset tables for parser/generator comparison for parser Parser or
+generator Generator; without argument reset tables for all parsers and
+generators</P>
+<H2>3.45. <a name="anc45"></a>sentences</H2>
+<P>lists all sentences</P>
+<H2>3.46. <a name="anc46"></a>lfs</H2>
+<P>lists all logical forms</P>
+<H2>3.47. <a name="anc47"></a>pt</H2>
+<P>print parser comparison overview</P>
+<H2>3.48. <a name="anc48"></a>ptt</H2>
+<P>print parser comparison tables in detail</P>
+<H2>3.49. <a name="anc49"></a>pc Sentence</H2>
+<P>compares parsers on Sentences</P>
+<H2>3.50. <a name="anc50"></a>gc LF</H2>
+<P>compares generators on LF</P>
+<H2>3.51. <a name="anc51"></a>gco ObjNo</H2>
+<P>compares generators on LF of object ObjNo</P>
+<H2>3.52. <a name="anc52"></a>* Sentence</H2>
+<P>parses Sentence</P>
+<H2>3.53. <a name="anc53"></a>parse Sentence</H2>
+<P>parses Sentence</P>
+<H2>3.54. <a name="anc54"></a>- Term</H2>
+<P>if Term is an integer ObjNo, then generate from LF of object ObjNo;
+otherwise Term is a semantic representation that is generated from</P>
+<H2>3.55. <a name="anc55"></a>generate Term</H2>
+<P>if Term is an integer ObjNo, then generate from LF of object ObjNo;
+otherwise Term is a semantic representation that is generated from</P>
+<H2>3.56. <a name="anc56"></a>lg [File]</H2>
+<P>with File, compile_grammar_file(File); without File,
+compile_grammar.</P>
+<H2>3.57. <a name="anc57"></a>rcg [File]</H2>
+<P>with File, reconsult_grammar_file(File); without File,
+reconsult_grammar.</P>
+<H2>3.58. <a name="anc58"></a>tkconsol</H2>
+<P>(re)starts graphical user interface with TkConsol feature</P>
+<H2>3.59. <a name="anc59"></a>av</H2>
+<P>shows activity status of parsers and generator</P>
+<H2>3.60. <a name="anc60"></a>no [gm] List</H2>
+<P>with gm, List is a list of generators which are set to inactive
+status; without gm, List is a list of parsers which are set to
+inactive status</P>
+<H2>3.61. <a name="anc61"></a>yes [gm] List</H2>
+<P>with gm, List is a list of generators which are set to inactive
+status; without gm, List is a list of parsers which are set to
+inactive status</P>
+<H2>3.62. <a name="anc62"></a>only [gm] List</H2>
+<P>with gm, List is a list of the only remaining active generators;
+without gm, List is a list of the only remaining active parsers;</P>
+<H2>3.63. <a name="anc63"></a>sts [Parsers]</H2>
+<P>graphically displays statistics for Parsers; without Parsers displays
+statistics for all parsers</P>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node4.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+
+
+</BODY></HTML>

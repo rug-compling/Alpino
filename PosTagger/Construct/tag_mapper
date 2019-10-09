@@ -1,0 +1,7 @@
+#!/usr/bin/perl -w
+
+%tags = ();
+while (<>) {
+##  if ($tags{$_}++ == 0) { print "tag($_).\n"; }
+    if ($tags{$_}++ == 0) { print "$_"; }
+}

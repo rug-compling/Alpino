@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="oti" end="3" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+        <node begin="1" cat="ti" end="3" id="4" rel="body">
+          <node begin="1" end="2" id="5" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="2" buiging="zonder" end="3" id="6" lemma="verliezen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="verlies" word="verliezen" wvorm="inf"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" lemma="lijken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lijk" word="lijkt" wvorm="pv"/>
+      <node begin="4" end="5" getal="ev" id="8" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj2" root="me" status="red" vwtype="pr" word="me"/>
+      <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="bespottelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="bespottelijk" word="bespottelijk"/>
+    </node>
+  </node>
+  <sentence>om te verliezen lijkt me bespottelijk</sentence>
+</alpino_ds>

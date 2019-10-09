@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="3" end="4" id="2" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="passive" stype="declarative" tense="past" word="was" wvorm="pv"/>
+      <node begin="4" cat="mwu" end="6" his="name" his_1="not_begin" id="3" index="1" mwu_root="Sweet Coffee" mwu_sense="Sweet Coffee" rel="su">
+        <node begin="4" end="5" id="4" lemma="Sweet" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Sweet" spectype="deeleigen" word="Sweet"/>
+        <node begin="5" end="6" id="5" lemma="Coffee" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Coffee" spectype="deeleigen" word="Coffee"/>
+      </node>
+      <node begin="0" cat="ppart" end="7" id="6" rel="vc">
+        <node begin="0" cat="ap" end="3" id="7" rel="mod">
+          <node begin="0" cat="mwu" end="2" his="normal" his_1="decap" his_1_1="normal" id="8" mwu_root="een weinig" mwu_sense="een weinig" rel="mod">
+            <node begin="0" end="1" id="9" lemma="een" pos="adv" postag="BW()" pt="bw" rel="mwp" root="een" word="Een"/>
+            <node begin="1" end="2" id="10" lemma="weinig" pos="adv" postag="BW()" pt="bw" rel="mwp" root="weinig" word="weinig"/>
+          </node>
+          <node aform="compar" begin="2" buiging="zonder" end="3" graad="comp" id="11" infl="no_e" lemma="laat" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="laat" vform="adj" word="later"/>
+        </node>
+        <node begin="4" end="6" id="12" index="1" rel="obj1"/>
+        <node begin="6" buiging="zonder" end="7" id="13" infl="psp" lemma="geboren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geboren" sc="transitive" word="geboren" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Een weinig later was Sweet Coffee geboren .</sentence>
+</alpino_ds>

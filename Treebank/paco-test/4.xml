@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="7" end="8" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="13" id="2" rel="--">
+      <node begin="0" cat="oti" end="7" id="3" rel="mod">
+        <node begin="0" end="1" frame="complementizer(om)" id="4" lcat="oti" pos="comp" rel="cmp" root="om" sc="om" sense="om" word="Om"/>
+        <node begin="1" cat="ti" end="7" id="5" rel="body">
+          <node begin="1" end="2" frame="complementizer(te)" id="6" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+          <node begin="2" cat="inf" end="7" id="7" rel="body">
+            <node begin="2" end="3" frame="verb('hebben/zijn',inf,aux(inf))" id="8" infl="inf" lcat="inf" pos="verb" rel="hd" root="kan" sc="aux(inf)" sense="kan" word="kunnen"/>
+            <node begin="3" cat="inf" end="7" id="9" rel="vc">
+              <node begin="3" end="4" frame="verb(hebben,inf,ninv(pc_pp(op),part_pc_pp(in,op)))" id="10" infl="inf" lcat="inf" pos="verb" rel="hd" root="speel_in" sc="part_pc_pp(in,op)" sense="speel_in-op" word="inspelen"/>
+              <node begin="4" cat="pp" end="7" id="11" rel="pc">
+                <node begin="4" end="5" frame="preposition(op,[af,na])" id="12" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+                <node begin="5" cat="np" end="7" id="13" rel="obj1">
+                  <node begin="5" end="6" frame="determiner(pron)" id="14" infl="pron" lcat="detp" pos="det" rel="det" root="hun" sense="hun" word="hun"/>
+                  <node begin="6" end="7" frame="noun(de,mass,sg)" gen="de" id="15" lcat="np" num="sg" pos="noun" rel="hd" root="dynamiek" sense="dynamiek" word="dynamiek"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="8" end="9" frame="verb(unacc,sg_heeft,copula)" id="16" infl="sg_heeft" lcat="smain" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="is"/>
+      <node begin="9" cat="np" end="12" id="17" rel="su">
+        <node begin="9" end="10" frame="determiner(een)" id="18" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+        <node aform="base" begin="10" end="11" frame="adjective(e)" id="19" infl="e" lcat="ap" pos="adj" rel="mod" root="nieuw" sense="nieuw" vform="adj" word="nieuwe"/>
+        <node begin="11" end="12" frame="noun(de,mass,sg)" gen="de" id="20" lcat="np" num="sg" pos="noun" rel="hd" root="aanpak" sense="aanpak" word="aanpak"/>
+      </node>
+      <node aform="base" begin="12" end="13" frame="adjective(no_e(adv))" id="21" infl="no_e" lcat="ap" pos="adj" rel="predc" root="nodig" sense="nodig" vform="adj" word="nodig"/>
+    </node>
+    <node begin="13" end="14" frame="punct(punt)" id="22" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Om te kunnen inspelen op hun dynamiek , is een nieuwe aanpak nodig .</sentence>
+  <comments>
+    <comment>Q#4|Om te kunnen inspelen op hun dynamiek , is een nieuwe aanpak nodig .|1|1|-8.28854297761366</comment>
+  </comments>
+</alpino_ds>

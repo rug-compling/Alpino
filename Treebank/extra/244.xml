@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="3" index="1" rel="su">
+        <node begin="2" end="3" id="4" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="5" lemma="chemieconcern" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="chemie_concern" word="chemieconcern"/>
+      </node>
+      <node begin="0" cat="ppart" end="8" id="6" rel="vc">
+        <node begin="0" end="1" getal="ev" id="7" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" word="Dat"/>
+        <node begin="2" end="4" id="8" index="1" rel="su"/>
+        <node begin="4" cat="pp" end="7" id="9" rel="pc">
+          <node begin="4" end="5" id="10" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="5" cat="np" end="7" id="11" rel="obj1">
+            <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="6" end="7" getal="mv" graad="basis" id="13" lemma="vakbond" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vakbond" word="vakbonden"/>
+          </node>
+        </node>
+        <node begin="7" buiging="zonder" end="8" id="14" lemma="afspreken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="spreek_af" word="afgesproken" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dat heeft het chemieconcern met de vakbonden afgesproken .</sentence>
+</alpino_ds>

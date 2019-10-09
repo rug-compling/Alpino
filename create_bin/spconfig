@@ -1,0 +1,127 @@
+# spld.config.in: process with configure to produce spld.config ([PM] not exactly true in 3.9)
+
+DEF_PREFIX=/net/aps/64/opt/sicstus3.12.11
+SP_DIRNAME=sicstus-3.12.11
+
+# A run-time system foo.exe in directory DIR excpects the sicstus
+# specific files to be found in sub directory DIR/SP_RTSYS_DIRNAME
+# Traditionally this was DIR/lib but on Win32 and MacOS X version
+# specific names are used. Changing this only makes sense on SysV
+# unices when spld --moveable is used.
+SP_RTSYS_DIRNAME=sp-3.12.11
+
+# Keep this list sorted.
+BDBLIB=
+BDB_PATH=
+CC=gcc
+CC_NOLIBPATH=
+CFLAGS= -g -O2 -pipe -fno-common -D_REENTRANT -D_GNU_SOURCE
+CHARMAINOBJ=charmain.o intrpt.o 
+SPAUXOBJ=spaux.o
+CHMOD=chmod
+CODETYPE=
+CP=cp
+CYGPATH=echo
+DBLIB=
+DSMAINOBJ=main.o
+ENABLE_STATLIB=yes
+ENABLE_SP_DISPATCH_API=@ENABLE_SP_DISPATCH_API@
+EXEEXT=
+GCC_PROG_NAME_LD=ld
+HAVE_SYSV_ORIGIN=yes
+FLI_FILE=fli_dl.c
+ENABLE_PTRSPFUNC=yes
+EXPFILE_SYMBOL_PREFIX=
+IMPLIB=
+INCR_CFLAGS=-fPIC
+JAVAC=
+JAVAEXEC=
+JAVAH=
+JAVALIB=
+JAVA_CLASSPATH=
+JAVA_EXECOPTS=
+# [PM] 3.11.2 not used JAVA_NOBUILD_TARGETS=@JAVA_NOBUILD_TARGETS@
+JDK_PATH=
+JDK_RPATH=
+JASPER_MODULE=
+TCL_LIBRARY=/net/aps/64/lib/tcl8.6
+TK_LIBRARY=/net/aps/64/lib/tk8.6
+TCLTK_MODULE=tcltk.po
+TCLTK_PATH=/net/aps/64
+TCL_PATH=/net/aps/64
+TK_PATH=/net/aps/64
+LD=ld
+SPLD_EXE_LDFLAGS=
+### SPLD_EXE_LIBS=-ldl -lm -lpthread
+SPLD_EXE_LIBS=-lcorpus -lfadd -ldl -lz -lstdc++ -lm -lpthread
+SPLD_JNI_LIBS=
+SPLFR_SHLD_LASTARG=
+SPLD_OPT_WRAPPER_DEFAULT=no
+SPLD_OPT_MOVEABLE_NEEDS_WRAPPER=no
+# SPRM 7579
+SPLD_OPT_MORE_MEMORY_NEEDS_LC_ALL_C=yes
+LD_R=ld -r
+CC_ROPT=-Wl,-rpath,
+SPLD_SHLD_JNILIB_FLAGS=
+SPLD_SHLD_ROPT=-Wl,-rpath,
+SPLFR_SHLD_ROPT=-Wl,-rpath,
+LD_LIBRARY_PATH_name=LD_LIBRARY_PATH
+LD_BUILDS_RPATH_FROM_L=no
+SPLFR_LD_r_FLAGS=
+LN=ln -s
+M4=
+MV=mv
+NMEDIT=
+NOLINK_OPT=-c
+NOLINK_OUTPUT_OPT=-o 
+SHLD_OUTPUT_OPT=-o 
+OBJEXT=o
+OLDSICSTUS=
+# OPTIONS=@OPTIONS@
+OUTPUT_OPT=-o 
+# PARMAKE=
+PATHSEP=:
+PERL=/usr/bin/perl
+PLFLAGS=
+QUOTECHAR="
+RANLIB=ranlib
+RESGEN_TYPE=cc
+RM=rm
+RTKERNEL=libsprt312
+KERNEL_STATLIB=libsprt312.a
+SPLFR_SHLD=gcc
+SPLFR_SHLDFLAGS=-shared   
+# 3.9.1
+SPLFR_SHLD_EXPORT_ARG=-Wl,--version-script=@SP_MAP_FILE@
+SPLFR_LD_EXPORT_ARG=
+# 3.9.1
+SPLFR_SHLD_POST_PROCESS=
+SPLFR_SHLD_POST_PROCESS_EXPFILE_OPT=
+SPLFR_SHLD_POST_PROCESS_LIB_OPT=
+# 3.9.1
+SPLFR_LD_R_POST_PROCESS=
+SPLFR_LD_R_POST_PROCESS_EXPFILE_OPT=
+SPLFR_LD_R_POST_PROCESS_LIB_OPT=
+#
+SHSFX=so
+FLI_SHSFX=so
+FLI_SHARED_PRELINKS=yes
+# resource compiler used by spld to compile data resources on Win32
+RCEXE=rc
+SICSTUS_MAJOR_VERSION=3
+SICSTUS_MINOR_VERSION=12
+SICSTUS_REVISION_VERSION=11
+SICSTUS_BETA_VERSION=0
+SICSTUS_VERSION_STRING=3.12.11
+SOCKETLIB=
+SPVER=312
+STSFX=s.o
+SYSTEMLIB=
+TCLLIB=-L/net/aps/64/lib  -ltk8.6 -ltcl8.6   -lSM -lICE -lX11  
+# WHICH=@WHICH@
+WIN32_EXTRAOBJS=
+WIN32_SPLD_SHLD_SPECIAL=
+WIN32_SPLD_CC_SPECIAL=
+WINMAINOBJ=
+VERBOSE_FLAG=-v
+NOVERBOSE_FLAG=

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="39" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="17" end="18" id="2" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="22" end="23" id="3" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="23" end="24" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="38" id="5" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="6" lemma="want" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="want" word="Want"/>
+      <node begin="1" cat="du" end="38" id="7" rel="nucl">
+        <node begin="1" cat="cp" end="32" id="8" rel="sat">
+          <node begin="1" conjtype="onder" end="2" id="9" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+          <node begin="2" cat="ssub" end="32" id="10" rel="body">
+            <node begin="2" cat="np" end="6" id="11" index="1" rel="su">
+              <node begin="2" end="3" id="12" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="13" lemma="bedrijf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bedrijf" word="bedrijf"/>
+              <node begin="4" cat="pp" end="6" id="14" rel="mod">
+                <node begin="4" end="5" id="15" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="16" lemma="Nederland" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Nederland" word="Nederland"/>
+              </node>
+            </node>
+            <node begin="30" end="31" id="17" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+            <node begin="2" cat="inf" end="32" id="18" rel="vc">
+              <node begin="2" end="6" id="19" index="1" rel="su"/>
+              <node begin="7" cat="pp" end="22" id="20" rel="mod">
+                <node begin="7" end="8" id="21" lemma="ondanks" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="ondanks" vztype="init" word="ondanks"/>
+                <node begin="8" cat="np" end="22" id="22" rel="obj1">
+                  <node begin="8" end="9" id="23" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="24" lemma="rentevergoeding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vergoeding" word="rentevergoeding"/>
+                  <node begin="10" cat="pp" end="14" id="25" rel="mod">
+                    <node begin="10" end="11" id="26" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                    <node begin="11" cat="np" end="14" id="27" rel="obj1">
+                      <node begin="11" cat="mwu" end="13" id="28" rel="det">
+                        <node begin="11" end="12" id="29" lemma="3" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="3" word="3"/>
+                        <node begin="12" end="13" id="30" lemma="1/2" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="1/2" word="1/2"/>
+                      </node>
+                      <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="31" lemma="procent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="procent" word="procent"/>
+                    </node>
+                  </node>
+                  <node begin="14" cat="pp" end="22" id="32" rel="mod">
+                    <node begin="14" end="15" id="33" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                    <node begin="15" cat="np" end="22" id="34" rel="obj1">
+                      <node begin="15" cat="mwu" end="17" id="35" rel="hd">
+                        <node begin="15" end="16" getal="mv" graad="basis" id="36" lemma="rekening" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="rekeningen" word="rekeningen"/>
+                        <node begin="16" buiging="zonder" end="17" graad="basis" id="37" lemma="courant" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="courant" word="courant"/>
+                      </node>
+                      <node begin="18" cat="np" end="22" id="38" rel="mod">
+                        <node begin="18" end="19" getal="mv" graad="basis" id="39" lemma="girorekening" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="rekeningen" word="girorekeningen"/>
+                        <node begin="19" cat="pp" end="22" id="40" rel="mod">
+                          <node begin="19" end="20" id="41" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                          <node begin="20" cat="np" end="22" id="42" rel="obj1">
+                            <node begin="20" buiging="zonder" end="21" id="43" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+                            <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="44" lemma="geval" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geval" word="geval"/>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="24" cat="pp" end="27" id="45" rel="mod">
+                <node begin="24" end="25" id="46" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="25" cat="np" end="27" id="47" rel="obj1">
+                  <node begin="25" end="26" id="48" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="49" lemma="geldsector" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sector" word="geldsector"/>
+                </node>
+              </node>
+              <node begin="27" cat="pp" end="29" id="50" rel="mod">
+                <node begin="27" end="28" id="51" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                <node begin="28" end="29" genus="onz" getal="ev" graad="basis" id="52" lemma="gemak" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="gemak" word="gemak"/>
+              </node>
+              <node begin="29" end="30" genus="zijd" getal="ev" graad="basis" id="53" lemma="winst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="winst" word="winst"/>
+              <node begin="31" buiging="zonder" end="32" id="54" lemma="maken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="maak" word="maken" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+        <node begin="32" cat="smain" end="38" id="55" rel="nucl">
+          <node begin="32" end="33" id="56" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+          <node begin="33" end="34" id="57" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          <node begin="34" end="35" genus="onz" getal="ev" id="58" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+          <node begin="35" cat="np" end="37" id="59" rel="predc">
+            <node begin="35" end="36" id="60" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="36" end="37" id="61" lemma="giro" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="hd" root="giro" spectype="vreemd" word="giro"/>
+          </node>
+          <node begin="37" end="38" id="62" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+        </node>
+      </node>
+    </node>
+    <node begin="38" end="39" id="63" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Want als een bedrijf in Nederland , ondanks een rentevergoeding van 3 1/2 procent op rekeningen courant ( girorekeningen in dit geval ) , in de geldsector met gemak winst kan maken dan is het de giro wel .</sentence>
+</alpino_ds>

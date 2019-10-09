@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="39" id="0" rel="top">
+    <node begin="28" end="29" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="38" id="2" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="opmerkelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="opmerkelijk" word="Opmerkelijk"/>
+      <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" cat="pp" end="5" id="5" rel="mod">
+        <node begin="2" end="3" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="3" cat="np" end="5" id="7" rel="obj1">
+          <node begin="3" buiging="zonder" end="4" id="8" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="9" lemma="verband" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verband" word="verband"/>
+        </node>
+      </node>
+      <node begin="5" cat="np" end="38" id="10" rel="su">
+        <node begin="5" end="6" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="6" cat="ppart" end="10" id="12" rel="mod">
+          <node begin="6" cat="ap" end="9" id="13" rel="mod">
+            <node begin="6" buiging="zonder" end="7" graad="basis" id="14" lemma="blijkbaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="blijkbaar" word="blijkbaar"/>
+            <node begin="7" cat="pp" end="9" id="15" rel="mod">
+              <node begin="7" end="8" id="16" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+              <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="17" lemma="Peking" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Peking" word="Peking"/>
+            </node>
+          </node>
+          <node begin="9" buiging="zonder" end="10" id="18" lemma="inspireren" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geïnspireerd" word="geinspireerd" wvorm="vd"/>
+        </node>
+        <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="19" lemma="artikel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="artikel" word="artikel"/>
+        <node begin="11" cat="pp" end="19" id="20" rel="mod">
+          <node begin="11" end="12" id="21" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="12" cat="np" end="19" id="22" rel="obj1">
+            <node begin="12" end="13" id="23" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="13" buiging="met-e" end="14" graad="basis" id="24" lemma="hongkongs" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Hongkongse" word="Hongkongse"/>
+            <node begin="14" buiging="met-e" end="15" graad="basis" id="25" lemma="communistisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="communistisch" word="communistische"/>
+            <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="26" lemma="blad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="blad" word="blad"/>
+            <node begin="16" cat="mwu" end="19" id="27" rel="app">
+              <node begin="16" end="17" id="28" lemma="Ta" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ta" spectype="deeleigen" word="Ta"/>
+              <node begin="17" end="18" id="29" lemma="Koeng" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Koeng" spectype="deeleigen" word="Koeng"/>
+              <node begin="18" end="19" id="30" lemma="Pao" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Pao" spectype="deeleigen" word="Pao"/>
+            </node>
+          </node>
+        </node>
+        <node begin="19" cat="rel" end="38" id="31" rel="mod">
+          <node begin="19" end="20" id="32" index="1" lemma="waarin" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarin" word="waarin"/>
+          <node begin="19" cat="ssub" end="38" id="33" rel="body">
+            <node begin="19" end="20" id="34" index="1" rel="ld"/>
+            <node begin="20" end="21" id="35" lemma="staan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="sta" word="stond" wvorm="pv"/>
+            <node begin="21" cat="cp" end="38" id="36" rel="su">
+              <node begin="21" conjtype="onder" end="22" id="37" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+              <node begin="22" cat="ssub" end="38" id="38" rel="body">
+                <node begin="22" cat="np" end="26" id="39" index="2" rel="su">
+                  <node begin="22" end="23" id="40" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+                  <node begin="23" buiging="zonder" end="24" id="41" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+                  <node begin="24" buiging="met-e" end="25" id="42" lemma="enkele" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enkel" vwtype="onbep" word="enkele"/>
+                  <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="43" lemma="voortgang" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voortgang" word="voortgang"/>
+                </node>
+                <node begin="26" end="27" id="44" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+                <node begin="22" cat="ppart" end="38" id="45" rel="vc">
+                  <node begin="22" end="26" id="46" index="2" rel="obj1"/>
+                  <node begin="27" buiging="zonder" end="28" id="47" lemma="bereiken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bereik" word="bereikt" wvorm="vd"/>
+                  <node begin="29" cat="rel" end="38" id="48" rel="mod">
+                    <node begin="29" buiging="zonder" end="30" getal-n="zonder-n" id="49" index="3" lemma="hetgeen" naamval="stan" pdtype="det" pos="noun" positie="nom" postag="VNW(betr,det,stan,nom,zonder,zonder-n)" pt="vnw" rel="rhd" root="hetgeen" vwtype="betr" word="hetgeen"/>
+                    <node begin="29" cat="ssub" end="38" id="50" rel="body">
+                      <node begin="29" end="30" id="51" index="3" rel="su"/>
+                      <node begin="30" end="31" id="52" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+                      <node begin="29" cat="ppart" end="38" id="53" rel="vc">
+                        <node begin="29" end="30" id="54" index="3" rel="obj1"/>
+                        <node begin="31" buiging="zonder" end="32" id="55" lemma="toeschrijven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schrijf" word="toegeschreven" wvorm="vd"/>
+                        <node begin="32" cat="pp" end="38" id="56" rel="obj2">
+                          <node begin="32" end="33" id="57" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+                          <node begin="33" cat="np" end="38" id="58" rel="obj1">
+                            <node begin="33" end="34" id="59" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                            <node begin="34" buiging="met-e" end="35" graad="basis" id="60" lemma="halsstarrig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="halsstarrig" word="halsstarrige"/>
+                            <node begin="35" end="36" genus="zijd" getal="ev" graad="basis" id="61" lemma="houding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="houding" word="houding"/>
+                            <node begin="36" cat="pp" end="38" id="62" rel="mod">
+                              <node begin="36" end="37" id="63" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                              <node begin="37" end="38" genus="onz" getal="ev" graad="basis" id="64" lemma="Moskou" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Moskou" word="Moskou"/>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="38" end="39" id="65" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Opmerkelijk is in dit verband een blijkbaar door Peking geinspireerd artikel in het Hongkongse communistische blad Ta Koeng Pao waarin stond dat nog geen enkele voortgang is bereikt , hetgeen werd toegeschreven aan de halsstarrige houding van Moskou .</sentence>
+</alpino_ds>

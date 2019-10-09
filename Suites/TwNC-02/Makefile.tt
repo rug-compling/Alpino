@@ -1,0 +1,120 @@
+DB=/opt_local/opt/corpora/TwNC-0.2/database
+TOK=$(ALPINO_HOME)/Tokenization
+
+FIND=find $(DB) -name '$(pattern)*.xml' -print 
+
+FILTER= grep . |\
+        $(TOK)/recognize_enumerations |\
+        sed -e 's/[&]lsquor;/é/g'\
+            -e 's/[&]ldquor;/ä/g'\
+            -e 's/[&]Aacute;/Á/g'\
+            -e 's/[&]Eacute;/É/g'\
+            -e 's/[&]Iacute;/Í/g'\
+            -e 's/[&]Oacute;/Ó/g'\
+            -e 's/[&]Uacute;/Ú/g'\
+            -e 's/[&]aacute;/á/g'\
+            -e 's/[&]eacute;/é/g'\
+            -e 's/[&]iacute;/í/g'\
+            -e 's/[&]oacute;/ó/g'\
+            -e 's/[&]uacute;/ú/g'\
+            -e 's/[&]Agrave;/À/g'\
+            -e 's/[&]Egrave;/È/g'\
+            -e 's/[&]Igrave;/Ì/g'\
+            -e 's/[&]Ograve;/Ò/g'\
+            -e 's/[&]Ugrave;/Ù/g'\
+            -e 's/[&]agrave;/à/g'\
+            -e 's/[&]egrave;/è/g'\
+            -e 's/[&]igrave;/ì/g'\
+            -e 's/[&]ograve;/ò/g'\
+            -e 's/[&]ugrave;/ù/g'\
+            -e 's/[&]Auml;/Ä/g'\
+            -e 's/[&]Euml;/Ë/g'\
+            -e 's/[&]Iuml;/Ï/g'\
+            -e 's/[&]Ouml;/Ö/g'\
+            -e 's/[&]Uuml;/Ü/g'\
+            -e 's/[&]auml;/ä/g'\
+            -e 's/[&]euml;/ë/g'\
+            -e 's/[&]iuml;/ï/g'\
+            -e 's/[&]ouml;/ö/g'\
+            -e 's/[&]uuml;/ü/g'\
+            -e 's/[&]circ;/ê/g'\
+            -e 's/[&]Icirc;/Î/g'\
+            -e 's/[&]caron;//g'\
+            -e 's/[&]zcaron;/z/g'\
+            -e 's/[&][;]/\&/g' |\
+        $(TOK)/tok |\
+        sed -e "s/ ' \([a-zA-Z][a-zA-Z]*'-\)/ '\1/g"|\
+        sed -e "s/( \([a-zA-Z][a-zA-Z]*)\)/(\1/g"|\
+        $(TOK)/normalize_enumerations |\
+        ./filter_headers |\
+        grep -v '[|]' |\
+        $(TOK)/streepjes |\
+        ../split_in_parts -u -p 5000 -o $(pattern)
+
+## &; --> ; for trouw1999 where & is (was?) represented by &amp;;
+
+## we now ignore all sentences with | symbol, since we use it internally ...
+
+QUERY= xmlmatch -s tt.xsl --stdin -q '//teletekst'
+
+pattern=ttnova2002
+
+year:
+	$(MAKE) sents pattern=$(pattern)
+	rm -rf $(pattern)
+	mkdir $(pattern)
+	mv $(pattern)*.sents $(pattern)
+	( cd $(pattern) ; gzip *.sents )
+
+all:
+	for pattern in $(PATTERNS);\
+        do $(MAKE) -s year pattern=$$pattern; done
+
+## nrc1994 ad1994 nrc1995 ad1995 (in CLEF too)
+## parool1998 nrc1998 
+PATTERNS=volkskrant1999 parool1999 ad1999 trouw1999 nrc1999 trouw2000 volkskrant2000 parool2000 nrc2000 ad2000 volkskrant2001 nrc2001 ad2001 parool2001 trouw2001 volkskrant2002 nrc2002 ad2002 parool2002 trouw2002 nrc1994 ad1994 nrc1995 ad1995 parool1998 nrc1998
+
+sents:
+	$(FIND) | $(QUERY) | $(FILTER)
+
+%.fsa: 
+	zcat $*/*.sents.gz |\
+        tr -s '\012\011 ' '\012' |\
+        grep .|\
+        LANG=POSIX LC_ALL=POSIX sort -u |\
+        fsa_build -N -o $@
+
+%.ngram: %.fsa
+	zcat $*/*.sents.gz |\
+	tr -s '\012\011 ' '\012' |\
+        $(ALPINO_HOME)/SuffixArrays/suffix_array -e -d $*.fsa -w -G\| -n 20 -f 1 -u -v -N > $@
+
+.PRECIOUS : %.fsa %.ngram
+
+ALL_NGRAMS=parool1998.ngram ad1994.ngram ad1995.ngram ad1999.ngram ad2000.ngram ad2001.ngram ad2002.ngram nrc1994.ngram nrc1995.ngram nrc1998.ngram nrc1999.ngram nrc2000.ngram nrc2001.ngram nrc2002.ngram parool1999.ngram parool2000.ngram parool2001.ngram parool2002.ngram trouw1999.ngram trouw2000.ngram trouw2001.ngram trouw2002.ngram volkskrant1997.ngram volkskrant1999.ngram volkskrant2000.ngram volkskrant2001.ngram volkskrant2002.ngram
+
+twnc.ngram: $(ALL_NGRAMS)
+	for nn in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20;\
+            do make nngram nn=$$nn;\
+            done
+	rm -f twnc.ngram
+	for nn in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20;\
+            do cat twnc.ngram.$$nn >> twnc.ngram;\
+            done
+
+nngram:
+	cat $(ALL_NGRAMS) |\
+        grep '^$(nn)|' |\
+        LANG=POSIX LC_ALL=POSIX sort $(SORTTMP) -t\| -k1,1n -k2,2 |\
+        $(ALPINO_HOME)/SuffixArrays/merge_ngrams\
+        > twnc.ngram.$(nn)
+
+#FREQFILTER=cat
+FREQFILTER=awk -F\| '{ if($$3>3) print $$0 }'
+twnc.colc: twnc.ngram
+	cat twnc.ngram | $(FREQFILTER) | ../colc -t 0.001 |\
+         ../remove_smaller | sort -k1,1nr -k2,2nr > twnc.colc
+
+# merging with multiple keys does not seem to work???
+#	LANG=POSIX LC_ALL=POSIX sort -m -t\| -k1,1n -k2,2 $(ALL_NGRAMS) |\
+#          $(ALPINO_HOME)/SuffixArrays/merge_ngrams > twnc.ngram

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="3" end="4" id="2" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="du" end="8" id="3" rel="--">
+      <node begin="0" end="1" id="4" lemma="2002" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="dp" root="2002" word="2002"/>
+      <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="Rome" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="dp" root="Rome" word="Rome"/>
+      <node begin="4" cat="np" end="8" id="6" rel="dp">
+        <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="7" lemma="verlies" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verlies" word="verlies"/>
+        <node begin="5" cat="pp" end="8" id="8" rel="mod">
+          <node begin="5" end="6" id="9" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
+          <node begin="6" cat="mwu" end="8" id="10" rel="obj1">
+            <node begin="6" end="7" id="11" lemma="Serena" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Serena" spectype="deeleigen" word="Serena"/>
+            <node begin="7" end="8" id="12" lemma="Williams" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Williams" spectype="deeleigen" word="Williams"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+  </node>
+  <sentence>2002 : Rome ( verlies tegen Serena Williams )</sentence>
+</alpino_ds>

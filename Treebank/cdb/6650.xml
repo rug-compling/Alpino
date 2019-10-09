@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="30" id="0" rel="top">
+    <node begin="12" end="13" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="18" end="19" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="29" id="3" rel="--">
+      <node begin="3" end="4" id="4" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+      <node begin="0" cat="inf" end="29" id="5" rel="vc">
+        <node begin="0" cat="pp" end="3" id="6" rel="ld">
+          <node begin="0" end="1" id="7" lemma="naast" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naast" vztype="init" word="Naast"/>
+          <node begin="1" cat="np" end="3" id="8" rel="obj1">
+            <node begin="1" end="2" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="10" lemma="Martinihal" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Martinihal" word="Martinihal"/>
+          </node>
+        </node>
+        <node begin="11" buiging="zonder" end="12" id="11" lemma="staan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="sta" word="staan" wvorm="inf"/>
+        <node begin="4" cat="np" end="29" id="12" index="1" rel="su">
+          <node begin="4" end="5" id="13" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="14" lemma="tent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tent" word="tent"/>
+          <node begin="6" cat="pp" end="11" id="15" rel="mod">
+            <node begin="6" end="7" id="16" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="7" cat="np" end="11" id="17" rel="obj1">
+              <node begin="7" cat="mwu" end="10" id="18" rel="det">
+                <node begin="7" end="8" id="19" lemma="40" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="40" word="40"/>
+                <node begin="8" end="9" id="20" lemma="x" pos="num" postag="SPEC(symb)" pt="spec" rel="mwp" root="x" spectype="symb" word="x"/>
+                <node begin="9" end="10" id="21" lemma="15" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="15" word="15"/>
+              </node>
+              <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="22" lemma="meter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="meter" word="meter"/>
+            </node>
+          </node>
+          <node begin="13" cat="rel" end="29" id="23" rel="mod">
+            <node begin="13" end="14" id="24" index="2" lemma="waarin" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarin" word="waarin"/>
+            <node begin="13" cat="ssub" end="29" id="25" rel="body">
+              <node begin="16" end="17" id="26" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
+              <node begin="13" cat="ppart" end="29" id="27" rel="vc">
+                <node begin="13" end="14" id="28" index="2" rel="mod"/>
+                <node begin="17" buiging="zonder" end="18" id="29" lemma="opstellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="opgesteld" wvorm="vd"/>
+                <node begin="14" cat="np" end="29" id="30" index="3" rel="obj1">
+                  <node begin="14" end="15" id="31" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                  <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="32" lemma="decor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="decor" word="decor"/>
+                  <node begin="19" cat="rel" end="29" id="33" rel="mod">
+                    <node begin="19" end="20" getal="ev" id="34" index="4" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
+                    <node begin="19" cat="ssub" end="29" id="35" rel="body">
+                      <node begin="19" end="20" id="36" index="4" rel="su"/>
+                      <node begin="20" end="21" id="37" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+                      <node begin="19" cat="ppart" end="29" id="38" rel="vc">
+                        <node begin="19" end="20" id="39" index="4" rel="obj1"/>
+                        <node begin="21" buiging="zonder" end="22" id="40" lemma="gebruiken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gebruik" word="gebruikt" wvorm="vd"/>
+                        <node begin="22" cat="pp" end="29" id="41" rel="mod">
+                          <node begin="22" end="23" id="42" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+                          <node begin="23" cat="np" end="29" id="43" rel="obj1">
+                            <node begin="23" end="24" id="44" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                            <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="45" lemma="verfilming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verfilming" word="verfilming"/>
+                            <node begin="25" cat="pp" end="29" id="46" rel="mod">
+                              <node begin="25" end="26" id="47" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                              <node begin="26" cat="mwu" end="29" id="48" rel="obj1">
+                                <node begin="26" end="27" getal="mv" graad="basis" id="49" lemma="onkruidzaaier" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Onkruidzaaiers" word="Onkruidzaaiers"/>
+                                <node begin="27" end="28" id="50" lemma="in" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+                                <node begin="28" end="29" id="51" lemma="Fabeltjesland" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Fabeltjesland" spectype="deeleigen" word="Fabeltjesland"/>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node begin="14" end="29" id="52" index="3" rel="su"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="4" end="29" id="53" index="1" rel="su"/>
+    </node>
+    <node begin="29" end="30" id="54" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Naast de Martinihal zal een tent van 40 x 15 meter staan , waarin het decor staat opgesteld , dat is gebruikt bij de verfilming van Onkruidzaaiers in Fabeltjesland .</sentence>
+</alpino_ds>

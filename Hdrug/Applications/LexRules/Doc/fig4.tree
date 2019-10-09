@@ -1,0 +1,23 @@
+% Inputfile for use with TeX / LaTeX             %
+% made by 'Treemaker' Version 1.232 as of 30.8.92 %
+% (c)1992 University of Paderborn                 %
+% Call from your document via \input{fig4.tree} %
+\message{including picture made by 'Treemaker' V1.232 (c)1992 University of Paderborn}
+%      nodedist: 15.856pt
+% extradistdist: 0.000pt
+%      nodeskip: 30.000pt
+%      edgeskip: 0.362 * 30.000 = 10.861
+\leavevmode
+\unitlength1pt
+\picture(56.57,64.28)
+\catcode`\@=11
+ \put(18.44,48.00){\hbox{\sc adj}}
+ \put(26.75,42.00){\hbox{}}
+ \put(24.4999,45.0000){\lineseg(-3,-4){14.1458}}
+ \put(0.00,18.00){\hbox{\sc att}}
+ \put(8.64,12.00){\hbox{}}
+ \put(28.9999,45.0000){\lineseg(3,-4){14.1458}}
+ \put(33.14,18.00){\hbox{\sc pred}}
+ \put(44.86,12.00){\hbox{}}
+ \put(36.30,-15.00){\hbox{}}
+\endpicture

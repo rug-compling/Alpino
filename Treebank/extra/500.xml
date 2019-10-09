@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="alle" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" vwtype="onbep" word="Alle"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="verslag" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verslag" word="verslagen"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="stellen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="stel_voor" word="stellen" wvorm="pv"/>
+      <node begin="3" end="4" id="6" lemma="voor" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="voor" vztype="fin" word="voor"/>
+      <node begin="4" cat="ti" end="7" id="7" rel="vc">
+        <node begin="5" end="6" id="8" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="4" cat="inf" end="7" id="9" rel="body">
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="kwijting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="kwijting" word="kwijting"/>
+          <node begin="6" buiging="zonder" end="7" id="11" lemma="verlenen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verleen" word="verlenen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Alle verslagen stellen voor kwijting te verlenen .</sentence>
+</alpino_ds>

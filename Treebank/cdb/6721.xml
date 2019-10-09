@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="10" end="11" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="18" end="19" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="24" id="4" rel="--">
+      <node begin="0" cat="smain" end="10" id="5" rel="dp">
+        <node begin="0" cat="conj" end="5" id="6" rel="su">
+          <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="7" lemma="grontmij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Grontmij" word="Grontmij"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="8" lemma="heidemij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Heidemij" word="Heidemij"/>
+          <node begin="3" conjtype="neven" end="4" id="9" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="4" end="5" genus="genus" getal="ev" graad="basis" id="10" lemma="VAM" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="cnj" root="VAM" word="VAM"/>
+        </node>
+        <node begin="5" end="6" id="11" lemma="dokteren" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="dokter" word="dokteren" wvorm="pv"/>
+        <node begin="6" end="7" id="12" lemma="samen" pos="adv" postag="BW()" pt="bw" rel="predm" root="samen" word="samen"/>
+        <node begin="7" cat="pp" end="10" id="13" rel="pc">
+          <node begin="7" end="8" id="14" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+          <node begin="8" cat="np" end="10" id="15" rel="obj1">
+            <node begin="8" buiging="met-e" end="9" id="16" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="17" lemma="reuzenterpvorming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vorming" word="reuzenterpvorming"/>
+          </node>
+        </node>
+      </node>
+      <node begin="11" cat="conj" end="24" id="18" rel="dp">
+        <node begin="11" cat="smain" end="18" id="19" rel="cnj">
+          <node begin="11" cat="np" end="13" id="20" rel="su">
+            <node begin="11" end="12" id="21" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="22" lemma="idee" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="idee" word="idee"/>
+          </node>
+          <node begin="13" end="14" id="23" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          <node begin="14" end="15" id="24" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="15" buiging="zonder" end="16" graad="basis" id="25" lemma="nieuw" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="nieuw" word="nieuw"/>
+          <node begin="16" cat="pp" end="18" id="26" rel="mod">
+            <node begin="16" end="17" id="27" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+            <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="28" lemma="Groningen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Groningen" word="Groningen"/>
+          </node>
+        </node>
+        <node begin="19" end="20" id="29" lemma="dus" pos="vg" postag="BW()" pt="bw" rel="crd" root="dus" word="dus"/>
+        <node begin="20" cat="smain" end="24" id="30" rel="cnj">
+          <node begin="20" end="21" getal="ev" id="31" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
+          <node begin="21" end="22" id="32" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          <node begin="22" cat="np" end="24" id="33" rel="predc">
+            <node begin="22" buiging="zonder" end="23" id="34" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+            <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="35" lemma="probleem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="probleem" word="probleem"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Grontmij , Heidemij en VAM dokteren samen aan deze reuzenterpvorming , het idee is niet nieuw voor Groningen , dus dat is geen probleem .</sentence>
+</alpino_ds>

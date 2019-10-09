@@ -1,0 +1,6 @@
+#
+# example: a logical formula 4-Jan-96
+#
+
+clig {imp {seq {sign exists} {plain-text "x(f(x)"}
+          {sign disj} {plain-text "v(x))"}} {neg {plain-text "f(x)"}}}

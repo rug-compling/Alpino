@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="30" id="0" rel="top">
+    <node begin="0" cat="smain" end="29" id="1" rel="--">
+      <node begin="0" cat="np" end="23" id="2" index="1" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="3" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" end="2" frame="noun(de,count,pl)" gen="de" id="4" lcat="np" num="pl" pos="noun" rel="hd" root="wijziging" sense="wijziging" word="wijzigingen"/>
+        <node begin="2" cat="pp" end="23" id="5" rel="mod">
+          <node begin="2" end="3" frame="preposition(in,[])" id="6" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+          <node begin="3" cat="np" end="23" id="7" rel="obj1">
+            <node begin="3" end="4" frame="determiner(de)" id="8" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="4" end="5" frame="noun(het,count,pl)" gen="het" id="9" lcat="np" num="pl" pos="noun" rel="hd" root="programma" sense="programma" word="programma&apos;s"/>
+            <node begin="5" cat="pp" end="18" id="10" rel="mod">
+              <node begin="5" end="6" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="11" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+              <node begin="6" cat="np" end="18" id="12" rel="obj1">
+                <node begin="6" end="7" frame="determiner(de)" id="13" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                <node begin="7" end="8" frame="noun(de,count,sg)" gen="de" id="14" lcat="np" num="sg" pos="noun" rel="hd" root="opstelling" sense="opstelling" word="opstelling"/>
+                <node begin="8" cat="conj" end="18" id="15" rel="mod">
+                  <node begin="8" cat="pp" end="12" id="16" rel="cnj">
+                    <node begin="8" end="9" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="17" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                    <node begin="9" cat="np" end="12" id="18" rel="obj1">
+                      <node begin="9" end="10" frame="determiner(de)" id="19" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                      <node aform="base" begin="10" end="11" frame="adjective(e)" id="20" infl="e" lcat="ap" pos="adj" rel="mod" root="actueel" sense="actueel" vform="adj" word="actuele"/>
+                      <node begin="11" end="12" frame="noun(de,count,pl)" gen="de" id="21" lcat="np" num="pl" pos="noun" rel="hd" root="inventaris" sense="inventaris" word="inventarissen"/>
+                    </node>
+                  </node>
+                  <node begin="12" end="13" frame="conj(en)" id="22" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                  <node begin="13" cat="pp" end="18" id="23" rel="cnj">
+                    <node begin="13" end="14" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="24" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                    <node begin="14" cat="np" end="18" id="25" rel="obj1">
+                      <node begin="14" end="15" frame="determiner(de)" id="26" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                      <node begin="15" end="16" frame="noun(het,count,pl)" gen="het" id="27" lcat="np" num="pl" pos="noun" rel="hd" root="programma" sense="programma" word="programma&apos;s"/>
+                      <node begin="16" cat="pp" end="18" id="28" rel="mod">
+                        <node begin="16" end="17" frame="preposition(inzake,[])" id="29" lcat="pp" pos="prep" rel="hd" root="inzake" sense="inzake" word="inzake"/>
+                        <node begin="17" end="18" frame="noun(de,count,sg)" gen="de" id="30" lcat="np" num="sg" pos="noun" rel="obj1" root="stopzetting" sense="stopzetting" word="stopzetting"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="18" cat="pp" end="23" id="31" rel="mod">
+              <node begin="18" end="19" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="32" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+              <node begin="19" cat="np" end="23" id="33" rel="obj1">
+                <node begin="19" end="20" frame="noun(de,count,sg)" gen="de" id="34" lcat="np" num="sg" pos="noun" rel="hd" root="her_lading" sense="her_lading" word="herlading"/>
+                <node begin="20" cat="pp" end="23" id="35" rel="mod">
+                  <node begin="20" end="21" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="36" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                  <node begin="21" cat="np" end="23" id="37" rel="obj1">
+                    <node begin="21" end="22" frame="determiner(de)" id="38" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                    <node begin="22" end="23" frame="noun(de,count,pl)" gen="de" id="39" lcat="np" num="pl" pos="noun" rel="hd" root="reactor" sense="reactor" word="reactoren"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="23" end="24" frame="verb(unacc,pl,passive)" id="40" infl="pl" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="worden"/>
+      <node begin="0" cat="ppart" end="29" id="41" rel="vc">
+        <node begin="0" end="23" id="42" index="1" rel="obj1"/>
+        <node aform="base" begin="24" end="25" frame="adjective(no_e(adv))" id="43" infl="no_e" lcat="ap" pos="adj" rel="mod" root="onverwijld" sense="onverwijld" vform="adj" word="onverwijld"/>
+        <node begin="25" cat="pp" end="28" id="44" rel="obj2">
+          <node begin="25" end="26" frame="preposition(aan,[vooraf])" id="45" lcat="pp" pos="prep" rel="hd" root="aan" sense="aan" word="aan"/>
+          <node begin="26" cat="np" end="28" id="46" rel="obj1">
+            <node begin="26" end="27" frame="determiner(de)" id="47" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="27" end="28" frame="proper_name(both,'ORG')" id="48" lcat="np" neclass="ORG" num="both" pos="name" rel="hd" root="Commissie" sense="Commissie" word="Commissie"/>
+          </node>
+        </node>
+        <node begin="28" end="29" frame="verb(hebben,psp,ninv(so_pp_np,part_so_pp_np(mede)))" id="49" infl="psp" lcat="ppart" pos="verb" rel="hd" root="deel_mede" sc="part_so_pp_np(mede)" sense="deel_mede" word="medegedeeld"/>
+      </node>
+    </node>
+    <node begin="29" end="30" frame="punct(punt)" id="50" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De wijzigingen in de programma&apos;s voor de opstelling van de actuele inventarissen en van de programma&apos;s inzake stopzetting voor herlading van de reactoren worden onverwijld aan de Commissie medegedeeld .</sentence>
+  <comments>
+    <comment>Q#342|De wijzigingen in de programma&apos;s voor de opstelling van de actuele inventarissen en van de programma&apos;s inzake stopzetting voor herlading van de reactoren worden onverwijld aan de Commissie medegedeeld .|1|1|3.0820679291975996</comment>
+  </comments>
+</alpino_ds>

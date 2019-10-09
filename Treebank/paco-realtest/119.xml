@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="5" end="6" id="1" pos="punct" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="16" id="2" rel="--">
+      <node begin="0" end="1" gen="de" id="3" num="sg" pos="noun" rel="su" root="immigratie" word="Immigratie"/>
+      <node begin="1" end="2" id="4" infl="sg_heeft" pos="verb" rel="hd" root="ben" sc="copula" tense="present" word="is"/>
+      <node begin="2" end="3" id="5" pos="adv" rel="mod" root="eveneens" word="eveneens"/>
+      <node begin="3" cat="np" end="16" id="6" rel="predc">
+        <node begin="3" end="4" id="7" infl="een" pos="det" rel="det" root="een" word="een"/>
+        <node begin="4" end="5" gen="de" id="8" num="sg" pos="noun" rel="hd" root="top_prioriteit" word="topprioriteit"/>
+        <node begin="6" cat="np" end="16" id="9" rel="app">
+          <node begin="6" cat="pp" end="9" id="10" rel="mod">
+            <node begin="6" end="7" id="11" pos="prep" rel="hd" root="in" word="in"/>
+            <node begin="7" cat="np" end="9" id="12" rel="obj1">
+              <node begin="7" end="8" id="13" infl="het" pos="det" rel="det" root="het" wh="nwh" word="het"/>
+              <node aform="base" begin="8" end="9" id="14" infl="no_e" pos="adj" rel="hd" root="bijzonder" vform="adj" word="bijzonder"/>
+            </node>
+          </node>
+          <node begin="9" end="10" id="15" infl="het" pos="det" rel="det" root="het" wh="nwh" word="het"/>
+          <node aform="base" begin="10" end="11" id="16" infl="no_e" pos="adj" rel="mod" root="Europees" vform="adj" word="Europees"/>
+          <node begin="11" end="12" gen="het" id="17" num="sg" pos="noun" rel="hd" root="pact" word="pact"/>
+          <node begin="12" cat="pp" end="16" id="18" rel="mod">
+            <node begin="12" end="13" id="19" pos="prep" rel="hd" root="inzake" word="inzake"/>
+            <node begin="13" cat="conj" end="16" id="20" rel="obj1">
+              <node begin="13" end="14" gen="de" id="21" num="sg" pos="noun" rel="cnj" root="migratie" word="migratie"/>
+              <node begin="14" end="15" id="22" pos="vg" rel="crd" root="en" word="en"/>
+              <node begin="15" end="16" gen="het" id="23" num="sg" pos="noun" rel="cnj" root="asiel" word="asiel"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="24" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Immigratie is eveneens een topprioriteit , in het bijzonder het Europees pact inzake migratie en asiel .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="19" end="20" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="25" id="2" rel="--">
+      <node begin="0" cat="conj" end="19" id="3" index="1" rel="su">
+        <node begin="0" cat="np" end="3" id="4" rel="cnj">
+          <node begin="0" end="1" frame="determiner(de)" id="5" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+          <node aform="base" begin="1" end="2" frame="adjective(e)" id="6" infl="e" lcat="ap" pos="adj" rel="mod" root="bijzonder" sense="bijzonder" vform="adj" word="bijzondere"/>
+          <node begin="2" end="3" frame="noun(het,count,pl)" gen="het" id="7" lcat="np" num="pl" pos="noun" rel="hd" root="rapport" sense="rapport" word="rapporten"/>
+        </node>
+        <node begin="3" end="4" frame="conj(en)" id="8" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+        <node begin="4" cat="conj" end="19" id="9" rel="cnj">
+          <node begin="6" end="7" frame="conj(of)" id="10" lcat="vg" pos="vg" rel="crd" root="of" sense="of" word="of"/>
+          <node begin="4" cat="np" end="19" id="11" rel="cnj">
+            <node begin="4" end="5" frame="determiner(alle,nwh,mod,pro,nparg)" id="12" index="2" infl="alle" lcat="detp" pos="det" rel="det" root="alle" sense="alle" wh="nwh" word="alle"/>
+            <node begin="5" end="6" frame="noun(de,count,pl)" gen="de" id="13" lcat="np" num="pl" pos="noun" rel="hd" root="bijzonderheid" sense="bijzonderheid" word="bijzonderheden"/>
+            <node begin="9" cat="pp" end="19" id="14" index="3" rel="mod">
+              <node begin="9" end="10" frame="preposition(over,[heen])" id="15" lcat="pp" pos="prep" rel="hd" root="over" sense="over" word="over"/>
+              <node begin="10" cat="np" end="19" id="16" rel="obj1">
+                <node begin="10" end="11" frame="determiner(de,nwh,nmod,pro,nparg)" id="17" infl="de" lcat="detp" pos="det" rel="det" root="deze" sense="deze" wh="nwh" word="deze"/>
+                <node begin="11" end="12" frame="noun(het,count,pl)" gen="het" id="18" lcat="np" num="pl" pos="noun" rel="hd" root="rapport" sense="rapport" word="rapporten"/>
+                <node begin="12" cat="rel" end="19" id="19" rel="mod">
+                  <node begin="12" end="13" frame="waar_adverb(om)" id="20" index="4" lcat="pp" pos="pp" rel="rhd" root="waarom" sense="waarom" special="waar" word="waarom"/>
+                  <node begin="12" cat="ssub" end="19" id="21" rel="body">
+                    <node begin="12" cat="ppart" end="18" id="22" rel="vc">
+                      <node begin="12" end="13" id="23" index="4" rel="pc"/>
+                      <node aform="base" begin="13" end="14" frame="adjective(no_e(adv))" id="24" infl="no_e" lcat="ap" pos="adj" rel="mod" root="eventueel" sense="eventueel" vform="adj" word="eventueel"/>
+                      <node begin="14" cat="pp" end="17" id="25" rel="mod">
+                        <node begin="14" end="15" frame="preposition(door,[heen])" id="26" lcat="pp" pos="prep" rel="hd" root="door" sense="door" word="door"/>
+                        <node begin="15" cat="np" end="17" id="27" rel="obj1">
+                          <node begin="15" end="16" frame="determiner(de)" id="28" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                          <node begin="16" end="17" frame="proper_name(both,'ORG')" id="29" lcat="np" neclass="ORG" num="both" pos="name" rel="hd" root="Commissie" sense="Commissie" word="Commissie"/>
+                        </node>
+                      </node>
+                      <node begin="17" end="18" frame="verb(hebben,psp,pc_pp(om))" id="30" infl="psp" lcat="ppart" pos="verb" rel="hd" root="vraag" sc="pc_pp(om)" sense="vraag-om" word="gevraagd"/>
+                    </node>
+                    <node begin="18" end="19" frame="verb(unacc,sg_heeft,passive)" id="31" infl="sg_heeft" lcat="ssub" pos="verb" rel="hd" root="ben" sc="passive" sense="ben" tense="present" word="is"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="4" cat="np" end="19" id="32" rel="cnj">
+            <node begin="4" end="5" id="33" index="2" rel="det"/>
+            <node aform="compar" begin="7" end="8" frame="adjective(ere)" id="34" infl="e" lcat="ap" pos="adj" rel="mod" root="nader" sense="nader" vform="adj" word="nadere"/>
+            <node begin="8" end="9" frame="noun(de,mass,sg)" gen="de" id="35" lcat="np" num="sg" pos="noun" rel="hd" root="uitleg" sense="uitleg" word="uitleg"/>
+            <node begin="9" end="19" id="36" index="3" rel="mod"/>
+          </node>
+        </node>
+      </node>
+      <node begin="20" end="21" frame="verb(hebben,pl,vp)" id="37" infl="pl" lcat="smain" pos="verb" rel="hd" root="dien" sc="vp" sense="dien" tense="present" word="dienen"/>
+      <node aform="base" begin="21" end="22" frame="adjective(no_e(adv))" id="38" infl="no_e" lcat="ap" pos="adj" rel="mod" root="onverwijld" sense="onverwijld" vform="adj" word="onverwijld"/>
+      <node begin="0" cat="ti" end="25" id="39" rel="vc">
+        <node begin="22" end="23" frame="complementizer(te)" id="40" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+        <node begin="0" cat="inf" end="25" id="41" rel="body">
+          <node begin="0" end="19" id="42" index="1" rel="su"/>
+          <node begin="23" end="24" frame="verb(unacc,inf,passive)" id="43" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+          <node begin="0" cat="ppart" end="25" id="44" rel="vc">
+            <node begin="0" end="19" id="45" index="1" rel="obj1"/>
+            <node begin="24" end="25" frame="verb(hebben,psp,ninv(transitive,part_transitive(toe)))" id="46" infl="psp" lcat="ppart" pos="verb" rel="hd" root="zend_toe" sc="part_transitive(toe)" sense="zend_toe" word="toegezonden"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="25" end="26" frame="punct(punt)" id="47" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De bijzondere rapporten en alle bijzonderheden of nadere uitleg over deze rapporten waarom eventueel door de Commissie gevraagd is , dienen onverwijld te worden toegezonden .</sentence>
+  <comments>
+    <comment>Q#349|De bijzondere rapporten en alle bijzonderheden of nadere uitleg over deze rapporten waarom eventueel door de Commissie gevraagd is , dienen onverwijld te worden toegezonden .|1|1|4.82047335466433</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="3" end="4" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="14" id="3" rel="--">
+      <node begin="0" cat="conj" end="9" id="4" rel="su">
+        <node begin="0" end="1" genus="genus" getal="ev" graad="basis" id="5" lemma="Caledonian" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="cnj" root="Caledonian" word="Caledonian"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="6" lemma="Atlantis" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Atlantis" word="Atlantis"/>
+        <node begin="4" cat="mwu" end="6" id="7" rel="cnj">
+          <node begin="4" end="5" id="8" lemma="Capitol" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Capitol" spectype="deeleigen" word="Capitol"/>
+          <node begin="5" end="6" id="9" lemma="International" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="International" spectype="deeleigen" word="International"/>
+        </node>
+        <node begin="6" conjtype="neven" end="7" id="10" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="7" cat="mwu" end="9" id="11" rel="cnj">
+          <node begin="7" end="8" id="12" lemma="Overseas" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Overseas" spectype="deeleigen" word="Overseas"/>
+          <node begin="8" end="9" id="13" lemma="National" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="National" spectype="deeleigen" word="National"/>
+        </node>
+      </node>
+      <node begin="9" end="10" id="14" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="10" cat="np" end="14" id="15" rel="predc">
+        <node begin="10" buiging="met-e" end="11" graad="basis" id="16" lemma="vast" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vast" word="vaste"/>
+        <node begin="11" end="12" getal="mv" graad="basis" id="17" lemma="klant" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="klant" word="klanten"/>
+        <node begin="12" cat="pp" end="14" id="18" rel="mod">
+          <node begin="12" end="13" id="19" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="20" lemma="Schiphol" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Schiphol" word="Schiphol"/>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Caledonian , Atlantis , Capitol International en Overseas National zijn vaste klanten van Schiphol .</sentence>
+</alpino_ds>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="Dit"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="project" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="project" word="project"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="krijgen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="krijg" word="krijgt" wvorm="pv"/>
+      <node begin="3" cat="cp" end="5" id="6" rel="predm">
+        <node begin="3" end="4" id="7" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="titel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="titel" word="titel"/>
+      </node>
+      <node begin="5" cat="mwu" end="8" id="9" rel="obj1">
+        <node begin="5" end="6" id="10" lemma="te" pos="name" postag="VZ(versm)" pt="vz" rel="mwp" root="Ten" vztype="versm" word="Ten"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="oorlog" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Oorlog" word="Oorlog"/>
+        <node begin="7" end="8" id="12" lemma="!" pos="name" postag="LET()" pt="let" rel="mwp" root="!" word="!"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Dit project krijgt als titel Ten Oorlog ! .</sentence>
+</alpino_ds>

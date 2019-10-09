@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="smain" end="10" id="1" rel="--">
+      <node aform="base" begin="0" end="1" id="2" infl="pred" pos="adj" rel="mod" root="onderweg" vform="adj" word="Onderweg"/>
+      <node begin="1" end="2" id="3" infl="pl" pos="verb" rel="hd" root="laat_achter" sc="part_transitive(achter)" tense="present" word="laten"/>
+      <node begin="2" case="both" def="def" end="3" gen="de" id="4" num="both" per="thi" pos="pron" rel="su" root="ze" special="wkpro" wh="nwh" word="ze"/>
+      <node begin="3" cat="np" end="5" id="5" rel="obj1">
+        <node begin="3" end="4" id="6" infl="een" pos="det" rel="det" root="een" word="een"/>
+        <node begin="4" end="5" gen="het" id="7" num="sg" pos="noun" rel="hd" root="geur_spoor" word="geurspoor"/>
+      </node>
+      <node begin="5" end="6" id="8" pos="part" rel="svp" root="achter" word="achter"/>
+      <node begin="6" cat="pp" end="10" id="9" rel="mod">
+        <node begin="6" cat="mwu" end="9" id="10" mwu_root="op_basis_van" mwu_sense="op_basis_van" rel="hd">
+          <node begin="6" end="7" id="11" pos="prep" rel="mwp" root="op" word="op"/>
+          <node begin="7" end="8" id="12" pos="prep" rel="mwp" root="basis" word="basis"/>
+          <node begin="8" end="9" id="13" pos="prep" rel="mwp" root="van" word="van"/>
+        </node>
+        <node begin="9" end="10" gen="both" id="14" num="both" pos="noun" rel="obj1" root="feromonen" word="feromonen"/>
+      </node>
+    </node>
+    <node begin="10" end="11" id="15" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Onderweg laten ze een geurspoor achter op basis van feromonen .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

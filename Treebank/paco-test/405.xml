@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="3" end="4" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="np" end="7" id="2" rel="--">
+      <node begin="0" end="1" frame="noun(de,count,pl)" gen="de" id="3" lcat="np" num="pl" pos="noun" rel="hd" root="methode" sense="methode" word="Methodes"/>
+      <node begin="1" cat="pp" end="7" id="4" rel="mod">
+        <node begin="1" end="2" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="5" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+        <node begin="2" cat="conj" end="7" id="6" rel="obj1">
+          <node begin="2" end="3" frame="noun(de,count,sg)" gen="de" id="7" lcat="np" num="sg" pos="noun" rel="cnj" root="meting" sense="meting" word="meting"/>
+          <node begin="4" end="5" frame="noun(both,both,both)" gen="both" id="8" lcat="np" num="both" pos="noun" rel="cnj" root="bemonstering" sense="bemonstering" word="bemonstering"/>
+          <node begin="5" end="6" frame="conj(en)" id="9" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+          <node begin="6" end="7" frame="noun(de,count,sg)" gen="de" id="10" lcat="np" num="sg" pos="noun" rel="cnj" root="analyse" sense="analyse" word="analyse"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Methodes voor meting , bemonstering en analyse</sentence>
+  <comments>
+    <comment>Q#405|Methodes voor meting , bemonstering en analyse|1|1|0.33360811741115937</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="dlink" root="en" word="En"/>
+      <node begin="1" cat="inf" end="7" id="3" rel="nucl">
+        <node begin="1" end="2" id="4" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+        <node begin="2" buiging="zonder" end="3" id="5" lemma="zien" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zie" word="zien" wvorm="inf"/>
+        <node begin="3" cat="whsub" end="7" id="6" rel="vc">
+          <node begin="3" end="4" getal="ev" id="7" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" root="wat" status="vol" vwtype="vb" word="wat"/>
+          <node begin="3" cat="ssub" end="7" id="8" rel="body">
+            <node begin="3" end="4" id="9" index="1" rel="predc"/>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="Holland" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Holland" word="Holland"/>
+            <node begin="5" buiging="zonder" end="6" graad="basis" id="11" lemma="eigenlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="eigenlijk" word="eigenlijk"/>
+            <node begin="6" end="7" id="12" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>En ook zien wat Holland eigenlijk is :</sentence>
+</alpino_ds>

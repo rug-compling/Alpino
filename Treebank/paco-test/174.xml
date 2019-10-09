@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="4" end="5" frame="verb(hebben,pl,modifier(aux(inf)))" id="2" infl="pl" lcat="smain" pos="verb" rel="hd" root="wil" sc="modifier(aux(inf))" sense="wil" tense="present" word="willen"/>
+      <node begin="5" case="nom" def="def" end="6" frame="pronoun(nwh,fir,pl,de,nom,def,wkpro)" gen="de" id="3" index="1" lcat="np" num="pl" per="fir" pos="pron" rel="su" root="we" sense="we" special="wkpro" wh="nwh" word="we"/>
+      <node begin="0" cat="inf" end="13" id="4" rel="vc">
+        <node begin="0" cat="pp" end="4" id="5" rel="mod">
+          <node begin="0" end="1" frame="preposition(met,[mee,[en,al]])" id="6" lcat="pp" pos="prep" rel="hd" root="met" sense="met" word="Met"/>
+          <node begin="1" cat="np" end="4" id="7" rel="obj1">
+            <node begin="1" cat="ppart" end="3" id="8" rel="mod">
+              <node aform="base" begin="1" end="2" frame="adjective(no_e(adv))" id="9" infl="no_e" lcat="ap" pos="adj" rel="mod" root="zorgvuldig" sense="zorgvuldig" vform="adj" word="zorgvuldig"/>
+              <node aform="base" begin="2" end="3" frame="adjective(ge_e)" id="10" infl="e" lcat="ppart" pos="adj" rel="hd" root="opgezet" sense="opgezet" vform="psp" word="opgezette"/>
+            </node>
+            <node begin="3" end="4" frame="noun(het,count,pl)" gen="het" id="11" lcat="np" num="pl" pos="noun" rel="hd" root="proef_project" sense="proef_project" word="proefprojecten"/>
+          </node>
+        </node>
+        <node begin="5" end="6" id="12" index="1" rel="su"/>
+        <node begin="6" cat="np" end="9" id="13" rel="obj1">
+          <node begin="6" end="7" frame="determiner(de)" id="14" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node aform="base" begin="7" end="8" frame="adjective(ge_e)" id="15" infl="e" lcat="ppart" pos="adj" rel="mod" root="beoogd" sense="beoogd" vform="psp" word="beoogde"/>
+          <node begin="8" end="9" frame="noun(de,mass,sg)" gen="de" id="16" lcat="np" num="sg" pos="noun" rel="hd" root="samenwerking" sense="samenwerking" word="samenwerking"/>
+        </node>
+        <node begin="9" cat="pp" end="12" id="17" rel="mod">
+          <node begin="9" end="10" frame="preposition(in,[])" id="18" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+          <node begin="10" cat="np" end="12" id="19" rel="obj1">
+            <node begin="10" end="11" frame="determiner(de)" id="20" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="11" end="12" frame="noun(de,count,sg)" gen="de" id="21" lcat="np" num="sg" pos="noun" rel="hd" root="praktijk" sense="praktijk" word="praktijk"/>
+          </node>
+        </node>
+        <node begin="12" end="13" frame="verb(hebben,inf,transitive)" id="22" infl="inf" lcat="inf" pos="verb" rel="hd" root="organiseer" sc="transitive" sense="organiseer" word="organiseren"/>
+      </node>
+    </node>
+    <node begin="13" end="14" frame="punct(punt)" id="23" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Met zorgvuldig opgezette proefprojecten willen we de beoogde samenwerking in de praktijk organiseren .</sentence>
+  <comments>
+    <comment>Q#174|Met zorgvuldig opgezette proefprojecten willen we de beoogde samenwerking in de praktijk organiseren .|1|1|-2.8197309983443506</comment>
+  </comments>
+</alpino_ds>

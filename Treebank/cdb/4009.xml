@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="0" cat="du" end="20" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="want" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="want" word="Want"/>
+      <node begin="1" cat="smain" end="20" id="3" rel="nucl">
+        <node begin="1" cat="cp" end="12" id="4" rel="su">
+          <node begin="1" conjtype="onder" end="2" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+          <node begin="2" cat="ssub" end="12" id="6" rel="body">
+            <node begin="2" cat="conj" end="5" id="7" index="1" rel="su">
+              <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="8" lemma="vultink" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Vultink" word="Vultink"/>
+              <node begin="3" conjtype="neven" end="4" id="9" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="scholte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Scholte" word="Scholte"/>
+            </node>
+            <node begin="10" end="11" id="11" lemma="zullen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zal" word="zullen" wvorm="pv"/>
+            <node begin="2" cat="inf" end="12" id="12" rel="vc">
+              <node begin="2" end="5" id="13" index="1" rel="su"/>
+              <node begin="5" cat="ap" end="10" id="14" rel="mod">
+                <node begin="5" cat="mwu" end="7" id="15" rel="hd">
+                  <node begin="5" end="6" id="16" lemma="op" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+                  <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="17" lemma="weg" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="weg" word="weg"/>
+                </node>
+                <node begin="7" cat="pp" end="10" id="18" rel="mod">
+                  <node begin="7" end="8" id="19" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+                  <node begin="8" cat="np" end="10" id="20" rel="obj1">
+                    <node begin="8" end="9" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="22" lemma="finale" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="finale" word="finale"/>
+                  </node>
+                </node>
+              </node>
+              <node begin="11" buiging="zonder" end="12" id="23" lemma="struikelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="struikel" word="struikelen" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+        <node begin="12" end="13" id="24" lemma="lijken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lijk" word="lijkt" wvorm="pv"/>
+        <node begin="13" end="14" id="25" lemma="nauwelijks" pos="adv" postag="BW()" pt="bw" rel="mod" root="nauwelijks" word="nauwelijks"/>
+        <node begin="14" buiging="zonder" end="15" graad="basis" id="26" lemma="aannemelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="aannemelijk" word="aannemelijk"/>
+        <node begin="15" cat="pp" end="20" id="27" rel="mod">
+          <node begin="15" end="16" id="28" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="16" cat="np" end="20" id="29" rel="obj1">
+            <node begin="16" buiging="zonder" end="17" id="30" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+            <node begin="17" cat="ap" end="19" id="31" rel="mod">
+              <node begin="17" buiging="met-e" end="18" graad="basis" id="32" lemma="vrij" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vrij" word="vrije"/>
+              <node begin="18" buiging="met-e" end="19" graad="basis" id="33" lemma="zwak" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="zwak" word="zwakke"/>
+            </node>
+            <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="34" lemma="veld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="veld" word="veld"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Want dat Vultink of Scholte op weg naar de finale zullen struikelen lijkt nauwelijks aannemelijk in dit vrije zwakke veld .</sentence>
+  <comments>
+    <comment>nb: &apos;vrije&apos; is treated as a mistake, should have been &apos;vrij&apos;</comment>
+  </comments>
+</alpino_ds>

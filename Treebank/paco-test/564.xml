@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="24" id="0" rel="top">
+    <node begin="0" cat="smain" end="23" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" frame="pronoun(nwh,thi,both,de,nom,def)" gen="de" id="2" lcat="np" num="both" per="thi" pos="pron" rel="su" root="zij" sense="zij" wh="nwh" word="Zij"/>
+      <node begin="1" end="2" frame="verb(unacc,pl,copula)" id="3" infl="pl" lcat="smain" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="zijn"/>
+      <node begin="2" cat="ap" end="5" id="4" rel="predc">
+        <node begin="2" end="3" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="5" infl="het" lcat="np" pos="det" rel="obj1" root="het" sense="het" wh="nwh" word="het"/>
+        <node begin="3" end="4" frame="adverb" id="6" lcat="advp" pos="adv" rel="mod" root="voorts" sense="voorts" word="voorts"/>
+        <node begin="4" end="5" frame="np_adjective" id="7" lcat="ap" pos="adj" rel="hd" root="eens" sense="eens" special="np" word="eens"/>
+      </node>
+      <node begin="5" cat="pp" end="23" id="8" rel="mod">
+        <node begin="5" end="6" frame="preposition(over,[heen])" id="9" lcat="pp" pos="prep" rel="hd" root="over" sense="over" word="over"/>
+        <node begin="6" cat="np" end="23" id="10" rel="obj1">
+          <node begin="6" end="7" frame="determiner(de)" id="11" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node begin="7" end="8" frame="noun(de,mass,sg,vp)" gen="de" id="12" lcat="np" num="sg" pos="noun" rel="hd" root="noodzaak" sc="vp" sense="noodzaak" word="noodzaak"/>
+          <node begin="8" cat="pp" end="11" id="13" rel="mod">
+            <node begin="8" end="9" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="14" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="9" cat="np" end="11" id="15" rel="obj1">
+              <node aform="base" begin="9" end="10" frame="adjective(e)" id="16" infl="e" lcat="ap" pos="adj" rel="mod" root="technisch" sense="technisch" vform="adj" word="technische"/>
+              <node begin="10" end="11" frame="noun(de,mass,sg)" gen="de" id="17" lcat="np" num="sg" pos="noun" rel="hd" root="bijstand" sense="bijstand" word="bijstand"/>
+            </node>
+          </node>
+          <node begin="11" cat="oti" end="23" id="18" rel="vc">
+            <node begin="11" end="12" frame="complementizer(om)" id="19" lcat="oti" pos="comp" rel="cmp" root="om" sc="om" sense="om" word="om"/>
+            <node begin="12" cat="ti" end="23" id="20" rel="body">
+              <node begin="16" end="17" frame="complementizer(te)" id="21" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+              <node begin="12" cat="inf" end="23" id="22" rel="body">
+                <node begin="12" cat="np" end="14" id="23" rel="obj1">
+                  <node begin="12" end="13" frame="determiner(de)" id="24" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="13" end="14" frame="noun(het,count,pl)" gen="het" id="25" lcat="np" num="pl" pos="noun" rel="hd" root="ACS_land" sense="ACS_land" word="ACS-landen"/>
+                </node>
+                <node begin="17" end="18" frame="verb(hebben,inf,pred_np)" id="26" infl="inf" lcat="inf" pos="verb" rel="hd" root="stel" sc="pred_np" sense="stel" word="stellen"/>
+                <node begin="14" cat="ap" end="23" id="27" rel="predc">
+                  <node begin="14" cat="mwu" end="16" id="28" mwu_root="in_staat" mwu_sense="in_staat" rel="hd">
+                    <node aform="base" begin="14" end="15" frame="adjective(pred(padv),object_vp)" id="29" infl="pred" lcat="ap" pos="adj" rel="mwp" root="in" sc="object_vp" sense="in" vform="adj" word="in"/>
+                    <node aform="base" begin="15" end="16" frame="adjective(pred(padv),object_vp)" id="30" infl="pred" lcat="ap" pos="adj" rel="mwp" root="staat" sc="object_vp" sense="staat" vform="adj" word="staat"/>
+                  </node>
+                  <node begin="18" cat="ti" end="23" id="31" rel="vc">
+                    <node begin="21" end="22" frame="complementizer(te)" id="32" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+                    <node begin="18" cat="inf" end="23" id="33" rel="body">
+                      <node begin="18" cat="np" end="20" id="34" rel="obj1">
+                        <node begin="18" end="19" frame="determiner(pron)" id="35" infl="pron" lcat="detp" pos="det" rel="det" root="hun" sense="hun" word="hun"/>
+                        <node begin="19" end="20" frame="noun(de,count,pl)" gen="de" id="36" lcat="np" num="pl" pos="noun" rel="hd" root="verbintenis" sense="verbintenis" word="verbintenissen"/>
+                      </node>
+                      <node begin="20" end="21" frame="particle(na)" id="37" lcat="part" pos="part" rel="svp" root="na" sense="na" word="na"/>
+                      <node begin="22" end="23" frame="verb(zijn,inf,part_transitive(na))" id="38" infl="inf" lcat="inf" pos="verb" rel="hd" root="kom_na" sc="part_transitive(na)" sense="kom_na" word="komen"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="23" end="24" frame="punct(punt)" id="39" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Zij zijn het voorts eens over de noodzaak van technische bijstand om de ACS-landen in staat te stellen hun verbintenissen na te komen .</sentence>
+  <comments>
+    <comment>Q#564|Zij zijn het voorts eens over de noodzaak van technische bijstand om de ACS-landen in staat te stellen hun verbintenissen na te komen .|1|1|-6.155482503478183</comment>
+  </comments>
+</alpino_ds>

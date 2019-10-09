@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Alpino Dependency Structures DTD -->
+
+<!--
+Versie 1.10, per 12 juni 2019, aangepaste representatie van UD
+
+Versie 1.9, per 21 november 2018, met compacte representatie van UD
+
+versie 1.8, per 11 oktober 2018, met UD
+
+alpino_ds.dtd versie 1.7, per 17 mei 2017
+
+all additions beyond version 1.3 are optional
+
+version 1.3: added mwu_root attribute for mwu nodes
+version 1.4: metadata
+version 1.5: sentid
+version 1.6: parser tag for number of categories and skips; attribute 'his' for words
+version 1.7: dscsense dscmanual attributes
+version 1.8: universal dependencies
+version 1.9: meer universal dependencies
+-->
+
+<!ENTITY % nodeattr "
+buiging		(zonder|met-e|met-s)							#IMPLIED
+conjtype	(neven|onder)								#IMPLIED
+dial		(dial)									#IMPLIED
+genus		(genus|zijd|masc|fem|onz)						#IMPLIED
+getal		(getal|ev|mv)								#IMPLIED
+getal-n		(zonder-n|mv-n)								#IMPLIED
+graad		(basis|comp|sup|dim)							#IMPLIED
+lwtype		(bep|onbep)								#IMPLIED
+naamval		(stan|nomin|obl|bijz|gen|dat)						#IMPLIED
+npagr		(agr|evon|rest|evz|mv|agr3|evmo|rest3|evf)				#IMPLIED
+ntype		(soort|eigen)								#IMPLIED
+numtype		(hoofd|rang)								#IMPLIED
+pdtype		(pron|adv-pron|det|grad)						#IMPLIED
+persoon		(persoon|1|2|2v|2b|3|3p|3m|3v|3o)					#IMPLIED
+positie		(prenom|nom|postnom|vrij)						#IMPLIED
+pt		(let|spec|bw|vg|lid|vnw|tw|ww|adj|n|tsw|vz|na)				#IMPLIED
+pvagr		(ev|mv|met-t)								#IMPLIED
+pvtijd		(tgw|verl|conj)								#IMPLIED
+spectype	(afgebr|onverst|vreemd|deeleigen|meta|comment|achter|afk|symb|enof)	#IMPLIED
+status		(vol|red|nadr)								#IMPLIED
+vwtype		(pr|pers|refl|recip|bez|vb|vrag|betr|excl|aanw|onbep)			#IMPLIED
+vztype		(init|versm|fin)							#IMPLIED
+wvorm		(pv|inf|od|vd)								#IMPLIED
+" >
+
+<!-- mogelijke waardes voor Gender: 'Com' 'Neut' 'Com,Neut' dus CDATA dan maar... -->
+<!ENTITY % feats "
+Abbr		(Yes)				#IMPLIED
+Case		(Nom|Acc|Gen|Dat)		#IMPLIED
+Definite	(Def|Ind)			#IMPLIED
+Degree		(Pos|Cmp|Sup)			#IMPLIED
+Foreign		(Yes)				#IMPLIED
+Gender		CDATA			        #IMPLIED
+Number		(Sing|Plur)			#IMPLIED
+Person		(1|2|3)				#IMPLIED
+PronType	(Prs|Rcp|Int|Dem|Ind|Rel)	#IMPLIED
+Reflex		(Yes)				#IMPLIED
+Tense		(Past|Pres)			#IMPLIED
+VerbForm	(Fin|Inf|Part)			#IMPLIED
+" >
+
+<!ENTITY % upos "
+upos (ADJ|ADP|ADV|AUX|CCONJ|DET|INTJ|NOUN|NUM|PART|PRON|PROPN|PUNCT|SCONJ|SYM|VERB|X) #REQUIRED
+" >
+
+<!-- relaties van dependencies, ZONDER root -->
+<!ENTITY % rels "acl|advcl|advmod|amod|appos|aux|case|cc|ccomp|clf|compound|conj|cop|csubj|det|discourse|dislocated|expl|fixed|flat|goeswith|iobj|list|mark|nmod|nsubj|nummod|obj|obl|parataxis|punct|reparandum|vocative|xcomp" >
+
+<!-- extra relaties die alleen bij standaard dependencies voorkomen -->
+<!ENTITY % srels "orphan" >
+
+<!-- extra relaties die alleen bij enhanced dependencies voorkomen -->
+<!ENTITY % erels "ref" >
+
+<!ENTITY % udep "(%rels;|%srels;|%erels;)*" >
+
+<!ENTITY % udattr "
+ud		(basic|enhanced)	#REQUIRED
+id		NMTOKEN			#REQUIRED
+form		CDATA			#REQUIRED
+lemma		CDATA			#REQUIRED
+%upos;
+head		NMTOKEN			#REQUIRED
+deprel		CDATA			#REQUIRED
+deprel_aux	CDATA			#IMPLIED
+recursion_limit CDATA			#IMPLIED
+%feats;
+%nodeattr;
+" >
+
+<!--
+  We hebben het toplevel element
+
+	alpino_ds
+
+  Daaronder komen voor:
+
+	sentence (PCDATA)
+
+	comments
+
+	node
+
+	parser
+
+	metadata
+
+	root
+
+	conllu
+
+  Ik kan niet zeggen dat ik ze allemaal 1x wil zien, maar dat de
+  volgorde niet uitmaakt.  Zie o.a.
+  http://www.xml.com/pub/a/98/07/dtd/.
+
+  Het kan wel in SGML (de "ampersand connector") en met RELAX NG.
+
+  We moeten hier kiezen voor of een te ruime optie of we moeten de
+  volgorde vastleggen:
+
+  <!ELEMENT alpino_ds ( (node | sentence | comments | metadata | parser | root | conllu)+ )>
+
+  of
+
+  <!ELEMENT alpino_ds (metadata?, parser?, node, sentence, comments?, root*, conllu?)>
+
+  We kiezen voor de stricte variant.
+
+-->
+
+
+<!--			Alpino Dependency Structure			-->
+<!ELEMENT alpino_ds	(metadata?, parser?, node, sentence, comments?, root*, conllu?)			 >
+<!ATTLIST alpino_ds
+	  version	NMTOKEN		#IMPLIED>
+
+<!--
+	meta-data zoals voorgesteld door P. Kleiweg voor PaQu project
+
+	attribuut "type", verplicht, geldige waardes: "text", "int",
+	"float", "date", "datetime"
+	attribuut "name", verplicht
+	"name" hoeft niet uniek te zijn, maar als het vaker voorkomt moet die
+	metadata van hetzelfde type zijn.
+	Hetzelfde geldt voor een heel corpus in PaQu.
+	attribuut "value", verplicht, formaat afhankelijk van "type":
+	type="int"
+		waarde in decimale notatie die een 32-bits signed integer
+		representeert, waarbij de maximumwaarde is gereserveerd binnen
+		PaQu. Blijft over: -2147483648 t/m 2147483646
+	type="float"
+		waarde die een 32-bits float representeert, gebruikelijke
+		notaties: decimaal, met/zonder punt, met/zonder exponent
+	type="date"
+		Datum zonder tijdzone in bereik "1000-01-01" t/m "9999-12-31",
+		in dit formaat
+	type="datetime"
+		Datum (zelfde bereik) plus tijd zonder tijdzone, zoals
+		"2015-01-31 01:59" of, met seconden zoals "2015-01-31 01:59:59"
+
+-->
+<!ELEMENT metadata	(meta*) >
+<!-- meta is an elemnent with only attributes, how to define it? -->
+
+<!ELEMENT meta		EMPTY >
+<!ATTLIST meta
+	  type		(text|int|float|date|datetime)	#REQUIRED
+	  name		CDATA				#REQUIRED
+	  value		CDATA				#REQUIRED
+>
+
+<!ELEMENT parser	EMPTY >
+<!ATTLIST parser
+	  build		CDATA				#IMPLIED
+	  date		CDATA				#IMPLIED
+	  cats		CDATA				#REQUIRED
+	  skips		CDATA				#REQUIRED
+>
+
+<!--			Node						-->
+<!--			een knoop van een dependency tree		-->
+<!ELEMENT  node		(node*|ud)					>
+<!--
+	rel		de dependency relatie van de knoop
+	cat		de categorie van de knoop
+	pos		de part of speech tag van de knoop ALPINO-stijl
+	postag		de part of speech tag van de knoop CGN/DCOI/LASSY-stijl
+	lemma		de lemma van de knoop CGN/DCOI/LASSY-stijl
+	begin		de beginpositie van de bijbehorende woordgroep in de gehele zin
+	end		de eindpositie van de bijbehorende woordgroep in de gehele zin
+	root		de stam van het woord ALPINO-stijl
+	word		het woord zoals het in de zin voorkomt
+	index		een co-index om gedeelde structuren mogelijk te maken
+	id		een per zin uniek nummer om de knopen te kunnen identificeren
+
+
+
+	case		naamval van nomina (nom,acc,dat,..)
+	comparative	type complement van comparatives (dan,als,dat,..)
+	def		definitietheid van nomina (def,indef,..)
+	frame		volledige Alpino POS-tag
+	gen		gender van nomina (de,het,..)
+	infl		inflection van adjectieven, determiners
+	neclass		classificatie van namen (org, loc, per, misc)
+	num		getalinformatie van nomina (sg,pl,..)
+	per		persoonsinformatie van nomina (fir,thi,..)
+	refl		reflexiviteit van pronomina (refl)
+	sc		subcategorizatie frame
+	special		vergaarbak voor andere speciale features
+	wh		geeft vraagwoordinformatie voor pronomina (ywh,nwh,rwh)
+
+
+	misschien dat er meerdere #REQUIRED zijn, of dat in sommige
+	NMTOKEN beter gebruikt kan worden ipv. CDATA.
+
+	Het is ook mogelijk een opsomming van de mogelijke waarden te
+	geven.	Voor sommige attributen is dat misschien wenselijk.
+-->
+
+<!-- value "part" for cat is not really allowed, but sometimes is produced
+	for modified particles in conjunction, "hij ademde in en hard uit" -->
+
+
+<!ATTLIST node
+	  rel	(hdf|hd|cmp|sup|su|obj1|pobj1|obj2|se|pc|vc|svp|predc|ld|me|
+		 predm|obcomp|mod|body|det|app|whd|rhd|cnj|crd|nucl|sat|tag|
+		 dp|top|mwp|dlink|--)
+		#REQUIRED
+
+
+	  cat	(smain|np|ppart|ppres|pp|ssub|inf|cp|du|ap|advp|ti|rel|whrel|
+		 whsub|conj|whq|oti|ahi|detp|sv1|svan|mwu|top|cat|part)
+		#IMPLIED
+	  pos		CDATA	#IMPLIED
+	  postag	CDATA	#IMPLIED
+	  lemma		CDATA	#IMPLIED
+	  begin		CDATA	#IMPLIED
+	  end		CDATA	#IMPLIED
+	  root		CDATA	#IMPLIED
+	  word		CDATA	#IMPLIED
+	  index		CDATA	#IMPLIED
+	  id		CDATA	#IMPLIED
+
+	  %nodeattr;
+
+	  mwu_root	CDATA	#IMPLIED
+	  mwu_sense	CDATA	#IMPLIED
+
+	  sense		CDATA	#IMPLIED
+	  lcat		CDATA	#IMPLIED
+	  tense		CDATA	#IMPLIED
+	  aform		CDATA	#IMPLIED
+	  vform		CDATA	#IMPLIED
+	  wk		(yes)	#IMPLIED
+
+	  case		CDATA	#IMPLIED
+	  comparative	CDATA	#IMPLIED
+	  def		CDATA	#IMPLIED
+	  frame		CDATA	#IMPLIED
+	  gen		CDATA	#IMPLIED
+	  infl		CDATA	#IMPLIED
+	  neclass	CDATA	#IMPLIED
+	  num		CDATA	#IMPLIED
+	  per		CDATA	#IMPLIED
+	  refl		CDATA	#IMPLIED
+	  sc		CDATA	#IMPLIED
+	  special	CDATA	#IMPLIED
+	  wh		CDATA	#IMPLIED
+	  iets		CDATA	#IMPLIED
+	  pron		CDATA	#IMPLIED
+	  personalized	CDATA	#IMPLIED
+	  rnum		CDATA	#IMPLIED
+	  stype		CDATA	#IMPLIED
+
+	  pb
+	  (Arg0|Arg1|Arg2|Arg3|Arg4|Arg5|ArgM-ADV|ArgM-CAU|ArgM-DIR|ArgM-DIS|
+		ArgM-EXT|ArgM-LOC|ArgM-MNR|ArgM-MOD|ArgM-NEG|ArgM-PNC|ArgM-PRD|
+		ArgM-REC|ArgM-STR|ArgM-TMP|rel|SYNT)
+	  #IMPLIED
+
+	  his		CDATA	#IMPLIED
+	  his_1		CDATA	#IMPLIED
+	  his_2		CDATA	#IMPLIED
+	  his_1_1	CDATA	#IMPLIED
+	  his_1_2	CDATA	#IMPLIED
+	  his_2_1	CDATA	#IMPLIED
+	  his_2_2	CDATA	#IMPLIED
+	  his_1_1_1	CDATA	#IMPLIED
+	  his_1_1_2	CDATA	#IMPLIED
+	  his_1_2_1	CDATA	#IMPLIED
+	  his_1_2_2	CDATA	#IMPLIED
+	  his_2_1_1	CDATA	#IMPLIED
+	  his_2_1_2	CDATA	#IMPLIED
+	  his_2_2_1	CDATA	#IMPLIED
+	  his_2_2_2	CDATA	#IMPLIED
+	  his_1_1_1_1	CDATA	#IMPLIED
+	  his_1_1_1_2	CDATA	#IMPLIED
+	  his_1_1_2_1	CDATA	#IMPLIED
+	  his_1_1_2_2	CDATA	#IMPLIED
+	  his_1_2_1_1	CDATA	#IMPLIED
+	  his_1_2_1_2	CDATA	#IMPLIED
+	  his_1_2_2_1	CDATA	#IMPLIED
+	  his_1_2_2_2	CDATA	#IMPLIED
+	  his_2_1_1_1	CDATA	#IMPLIED
+	  his_2_1_1_2	CDATA	#IMPLIED
+	  his_2_1_2_1	CDATA	#IMPLIED
+	  his_2_1_2_2	CDATA	#IMPLIED
+	  his_2_2_1_1	CDATA	#IMPLIED
+	  his_2_2_1_2	CDATA	#IMPLIED
+	  his_2_2_2_1	CDATA	#IMPLIED
+	  his_2_2_2_2	CDATA	#IMPLIED
+
+	  dscsense	CDATA	#IMPLIED
+	  dscmanual	(true|false) #IMPLIED
+
+>
+
+<!-- pb - propbank role op verzoek van Universiteit Utrecht -->
+
+<!-- his* - voor woorden om te zien welke heuristiek is gebruikt	-->
+
+<!-- dscsense, dscmanual: word senses extracted from Dutch SemCor	-->
+
+
+
+<!--			Sentence					-->
+<!--			de tekst van de gehele zin			-->
+<!ELEMENT  sentence	(#PCDATA)					>
+
+<!ATTLIST  sentence
+		sentid	CDATA		#IMPLIED
+>
+
+
+<!--			Comments					-->
+<!--			een of meerdere comment elementen		-->
+<!ELEMENT  comments	(comment+)					>
+
+
+<!--			Comment						-->
+<!--			een commentaar entry				-->
+<!ELEMENT  comment	(#PCDATA)					>
+
+<!--
+
+Universal Dependencies
+
+See: http://universaldependencies.org/format.html
+
+Columns:
+
+ 1. ID: Word index, integer starting at 1 for each new sentence; may be a range for multiword tokens; may be a decimal number for empty nodes.
+ 2. FORM: Word form or punctuation symbol.
+ 3. LEMMA: Lemma or stem of word form.
+ 4. UPOS: Universal part-of-speech tag.
+ 5. XPOS: Language-specific part-of-speech tag; underscore if not available.
+ 6. FEATS: List of morphological features from the universal feature inventory or from a defined language-specific extension; underscore if not available.
+ 7. HEAD: Head of the current word, which is either a value of ID or zero (0).
+ 8. DEPREL: Universal dependency relation to the HEAD (root iff HEAD = 0) or a defined language-specific subtype of one.
+ 9. DEPS: Enhanced dependency graph in the form of a list of head-deprel pairs.
+10. MISC: Any other annotation.
+
+Values of only an underscore are omitted.
+Values for column 6 FEATS are split into individual features.
+Values for column 9 DEPS are split into sub-elements <dep>.
+
+MISC is not used.
+
+-->
+
+<!ELEMENT  ud		(dep*)						>
+<!ATTLIST  ud
+
+	   id		NMTOKEN			#REQUIRED
+	   form		CDATA			#REQUIRED
+	   lemma	CDATA			#REQUIRED
+	   %upos;
+	   xpos		CDATA			#IMPLIED
+	   head		NMTOKEN			#REQUIRED
+	   deprel	CDATA			#REQUIRED
+	   deprel_main	(root|%rels;|%srels;)	#REQUIRED
+	   deprel_aux	CDATA			#IMPLIED
+	   %feats;
+>
+
+<!ELEMENT  dep	 EMPTY						>
+<!ATTLIST  dep
+	   id		NMTOKEN			#REQUIRED
+	   head		NMTOKEN			#REQUIRED
+	   deprel	CDATA			#REQUIRED
+	   deprel_main	(root|%rels;|%erels;)	#REQUIRED
+	   deprel_aux	CDATA			#IMPLIED
+	   elided	(true|1)		#IMPLIED
+>
+
+<!ELEMENT root		%udep; >	<!ATTLIST root		%udattr; >
+
+<!ELEMENT acl		%udep; >	<!ATTLIST acl		%udattr; >
+<!ELEMENT advcl		%udep; >	<!ATTLIST advcl		%udattr; >
+<!ELEMENT advmod	%udep; >	<!ATTLIST advmod	%udattr; >
+<!ELEMENT amod		%udep; >	<!ATTLIST amod		%udattr; >
+<!ELEMENT appos		%udep; >	<!ATTLIST appos		%udattr; >
+<!ELEMENT aux		%udep; >	<!ATTLIST aux		%udattr; >
+<!ELEMENT case		%udep; >	<!ATTLIST case		%udattr; >
+<!ELEMENT cc		%udep; >	<!ATTLIST cc		%udattr; >
+<!ELEMENT ccomp		%udep; >	<!ATTLIST ccomp		%udattr; >
+<!ELEMENT clf		%udep; >	<!ATTLIST clf		%udattr; >
+<!ELEMENT compound	%udep; >	<!ATTLIST compound	%udattr; >
+<!ELEMENT conj		%udep; >	<!ATTLIST conj		%udattr; >
+<!ELEMENT cop		%udep; >	<!ATTLIST cop		%udattr; >
+<!ELEMENT csubj		%udep; >	<!ATTLIST csubj		%udattr; >
+<!ELEMENT det		%udep; >	<!ATTLIST det		%udattr; >
+<!ELEMENT discourse	%udep; >	<!ATTLIST discourse	%udattr; >
+<!ELEMENT dislocated	%udep; >	<!ATTLIST dislocated	%udattr; >
+<!ELEMENT expl		%udep; >	<!ATTLIST expl		%udattr; >
+<!ELEMENT fixed		%udep; >	<!ATTLIST fixed		%udattr; >
+<!ELEMENT flat		%udep; >	<!ATTLIST flat		%udattr; >
+<!ELEMENT goeswith	%udep; >	<!ATTLIST goeswith	%udattr; >
+<!ELEMENT iobj		%udep; >	<!ATTLIST iobj		%udattr; >
+<!ELEMENT list		%udep; >	<!ATTLIST list		%udattr; >
+<!ELEMENT mark		%udep; >	<!ATTLIST mark		%udattr; >
+<!ELEMENT nmod		%udep; >	<!ATTLIST nmod		%udattr; >
+<!ELEMENT nsubj		%udep; >	<!ATTLIST nsubj		%udattr; >
+<!ELEMENT nummod	%udep; >	<!ATTLIST nummod	%udattr; >
+<!ELEMENT obj		%udep; >	<!ATTLIST obj		%udattr; >
+<!ELEMENT obl		%udep; >	<!ATTLIST obl		%udattr; >
+<!ELEMENT orphan	%udep; >	<!ATTLIST orphan	%udattr; >
+<!ELEMENT parataxis	%udep; >	<!ATTLIST parataxis	%udattr; >
+<!ELEMENT punct		%udep; >	<!ATTLIST punct		%udattr; >
+<!ELEMENT ref		%udep; >	<!ATTLIST ref		%udattr; >
+<!ELEMENT reparandum	%udep; >	<!ATTLIST reparandum	%udattr; >
+<!ELEMENT vocative	%udep; >	<!ATTLIST vocative	%udattr; >
+<!ELEMENT xcomp		%udep; >	<!ATTLIST xcomp		%udattr; >
+
+
+<!--
+Possible value for 'status' if not 'OK' is currently only 'error',
+but may change to distinguish between error types.
+-->
+<!ELEMENT  conllu	(#PCDATA)					>
+<!ATTLIST  conllu
+
+	   status	(OK|error)	#REQUIRED
+	   error	CDATA		#IMPLIED
+	   auto		CDATA		#IMPLIED
+>

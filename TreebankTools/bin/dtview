@@ -1,0 +1,1078 @@
+#!/bin/sh
+# the next line restarts using wish \
+exec wish "$0" -- "$@"
+
+#----------------------------------------------------------------------
+### CONFIG
+
+set cligdir "$env(ALPINO_HOME)/Hdrug/Tcl/Clig"
+set env(CLIG_DIR) $cligdir
+set stylesheetdir $env(ALPINO_HOME)/TreebankTools/stylesheets
+set cligsheet "$stylesheetdir/dt2clig1.xsl"
+set sentencesheet "$stylesheetdir/dt2sent.xsl"
+set sentidsheet "$stylesheetdir/dt2sentid.xsl"
+set metasheet "$stylesheetdir/dt2meta.xsl"
+set parsersheet "$stylesheetdir/dt2parser.xsl"
+set initial_width  1024
+set initial_height  786
+set listbox_width 150
+set extended_attributes 0
+
+#----------------------------------------------------------------------
+### PROCS
+
+proc maximize {} {
+    wm geometry . [join [wm maxsize .] x]
+}
+
+proc selectcurrentfile {} {
+    return [lindex $filelist $current]
+}
+
+proc show {obj} { ;# destroys graphical top and displays obj
+    global background_color _calcsize_memo clig_globals main_object \
+                      graph_scale clig_canvas
+
+    set main_object $obj
+
+    # waiting clock display
+    . configure -cursor watch
+    update idletasks
+
+    ## puts [time {set size [execobj $obj 0 0 .graphics {}]} 1]
+
+    # delete all objects (all have tag cmg)
+    .graphics delete cmg
+
+    # GJK: clear memoization (this is the correct place to do this?)
+    unset _calcsize_memo
+
+    set size [execobj $obj 0 0 .graphics {"cmg"}]
+
+    ## cmg is the tag all objects MUST have !!!
+
+    # scaling
+    set scaling [scale-graph $graph_scale .graphics]
+
+    # fit canvas to size
+    
+    set width  [expr [lindex $size 0]*$scaling+1]
+    set height [expr [lindex $size 1]*$scaling+1]
+
+    .graphics configure -width $width
+    .graphics configure -height $height
+    .graphics configure -scrollregion [list 0 0 $width $height]
+    
+    # switch on cursor change        
+    . configure -cursor {}      
+    update idletasks
+}
+
+
+
+proc setup-clig-canvas {parent} {
+    global background_color main_background_color clig_globals
+    global initial_width initial_height
+
+    # zorgen dat we geen ".." window paden krijgen 
+    if {$parent == "."} {
+        set parent ""
+    }
+
+    # setup canvas and scrollbars
+    scrollbar $parent.ygraph -command ".graphics yview" -width 10
+    scrollbar $parent.xgraph -command ".graphics xview" -width 10 -orient horizontal
+    
+    # de zoom procedures gaan er vanuit dat het canvas ".graphics" heet
+    canvas .graphics -bg $background_color -borderwidth 0 \
+        -highlightthickness 0 \
+        -scrollregion {0 0 10000 10000} \
+        -yscrollcommand "$parent.ygraph set" \
+        -xscrollcommand "$parent.xgraph set"
+
+
+    pack $parent.ygraph -side right -fill y
+    pack $parent.xgraph -fill x -side bottom
+
+    # zorgen dat er geen leeg pad meegegeven wordt
+    if {$parent == ""} {
+        set parent "."
+    }
+    pack .graphics -padx 3 -pady 1 -in $parent
+
+    # GvN: experimental support for selection of text-items
+    # copied partly from /usr/lib/tk8.3/demos/ctext.tcl
+
+    .graphics bind big-plain-text <1> "textB1Press .graphics %x %y"
+    .graphics bind big-plain-text <Double-1> "textDB1Press .graphics %x %y"
+    .graphics bind big-plain-text <B1-Motion> ".graphics select to current @%x,%y"
+
+    zoom-initialize
+}
+
+# taken from http://wiki.tcl.tk/16317
+proc setBalloonHelp {w msg args} {
+     array set opt [concat {
+         -tag ""
+     } $args]
+     if {$msg ne ""} then {
+         set toolTipScript\
+             [list showBalloonHelp %W [string map {% %%} $msg]]
+         set enterScript [list after 1000 $toolTipScript]
+         set leaveScript [list after cancel $toolTipScript]
+         append leaveScript \n [list after 200 [list destroy .balloonHelp]]
+     } else {
+         set enterScript {}
+         set leaveScript {}
+     }
+     if {$opt(-tag) ne ""} then {
+         switch -- [winfo class $w] {
+             Text {
+                 $w tag bind $opt(-tag) <Enter> $enterScript
+                 $w tag bind $opt(-tag) <Leave> $leaveScript
+             }
+             Canvas {
+                 $w bind $opt(-tag) <Enter> $enterScript
+                 $w bind $opt(-tag) <Leave> $leaveScript
+             }
+             default {
+                 bind $w <Enter> $enterScript
+                 bind $w <Leave> $leaveScript
+             }
+         }
+     } else {
+         bind $w <Enter> $enterScript
+         bind $w <Leave> $leaveScript
+     }
+ }
+
+ proc showBalloonHelp {w msg} {
+     set t .balloonHelp
+     catch {destroy $t}
+     toplevel $t -bg black
+     wm overrideredirect $t yes
+     if {$::tcl_platform(platform) == "macintosh"} {
+         unsupported1 style $t floating sideTitlebar
+     }
+     pack [label $t.l -text [subst $msg] -bg yellow -font {-size 9}]\
+         -padx 1\
+         -pady 1
+     set width [expr {[winfo reqwidth $t.l] + 2}]
+     set height [expr {[winfo reqheight $t.l] + 2}]
+     set xMax [expr {[winfo screenwidth $w] - $width}]
+     set yMax [expr {[winfo screenheight $w] - $height}]
+     set x [winfo pointerx $w]
+     set y [expr {[winfo pointery $w] + 20}]
+     if {$x > $xMax} then {
+         set x $xMax
+     }
+     if {$y > $yMax} then {
+         set y $yMax
+     }
+     wm geometry $t +$x+$y
+     set destroyScript [list destroy .balloonHelp]
+     bind $t <Enter> [list after cancel $destroyScript]
+     bind $t <Leave> $destroyScript
+ }
+
+
+
+proc build_gui {} {
+
+    # Al die globale variabelen is lelijk, maar 't is niet anders...
+    #
+    # We zouden dit misschien kunnen verbeteren door:
+    #
+    #  - een array var voor globale variabelen met gui elementen
+    #  - een array var voor configuratie opties
+    #
+    global background_color main_background_color \
+        initial_width initial_height \
+        clig_globals topframe exprframe butframe descriptionlist \
+        graph_scale clig_canvas filelist current filelistbox  \
+        extended_attributes opts
+    
+
+    # GUI defaults zetten
+    . configure -bg $main_background_color
+    wm minsize . 1 1 ;# top-window is resizable
+
+    # setup the initial window size
+    set width  $initial_width
+    set height $initial_height
+
+    set screenwidth [winfo screenwidth .]
+    if [expr $width > $screenwidth ] {
+        set width $screenwidth
+    }
+
+    set screenheight [winfo screenheight .]
+    if [expr $height > $screenheight ] {
+        set height $screenheight
+    }
+
+    wm geometry .  "${width}x${height}"
+
+    # we gebruiken de defaults van Hdrug voor de spacing
+    set clig_globals(tree_hspace)  5 ;# horizontal space in trees
+    set clig_globals(tree_vspace) 20 ;# vertical space in trees
+
+    # Een entry bovenin maken
+    set topframe  [frame .topFrame]
+    set exprframe [frame $topframe.exprFrame]
+
+    label $exprframe.label -text "Highlight: "
+    entry $exprframe.entry -width 20 -textvariable expr
+
+    set butframe [frame $topframe.butFrame]
+
+    button .apply -text "Apply"    -command show-tree
+    button .togglefilelist  -text "Filelist" -command toggle-filelist
+    setBalloonHelp .togglefilelist {Toggles display of the list of file names (t)}
+    
+    button .toggle-extd-attrs -text "Attributes" \
+        -relief [lindex {raised sunken} $extended_attributes] \
+        -command toggle-extd-attrs
+    setBalloonHelp .toggle-extd-attrs {Toggles display of all attributes of lexical nodes (a)}
+
+
+    button .prev  -text "<--" -command previous-file  -state disabled
+    setBalloonHelp .prev {Go to previous file (n)}
+
+    button .next  -text "-->" -command next-file      -state disabled
+    setBalloonHelp .next {Go to next file (p)}
+
+    button .smaller -text "<" \
+        -command { 
+            if ($graph_scale>2) {
+                unscale $graph_scale .graphics
+                set graph_scale [expr $graph_scale-2]
+                set scaling [scale-graph $graph_scale .graphics]
+                fit-to-scale $scaling .graphics
+            }
+        }
+    setBalloonHelp .smaller {Smaller font}
+
+    button .bigger -text ">" \
+        -command { 
+            if ($graph_scale<32) {
+                unscale $graph_scale .graphics
+                set graph_scale [expr $graph_scale+2]
+                set scaling [scale-graph $graph_scale .graphics]
+                fit-to-scale $scaling .graphics
+            }
+        }
+    setBalloonHelp .bigger {Bigger font}
+
+    button .normal -text "<>" \
+        -command { 
+            set graph_scale [expr $clig_globals(fontsize)]
+            show $main_object
+        }
+    setBalloonHelp .normal {Normal font}
+
+#     button .thistle -text "Thistle" \
+#         -command { puts "executing dtedit [file rootname [lindex $filelist $current]]"
+#             exec sh -c "dtedit [shellquote [file rootname [lindex $filelist $current]]]"
+#             show-tree
+#         }
+
+    # We need to redirect stderr because TrEd always spits out messages to
+    # stderr.  By default exec(n) treats stderr messages as an error.
+    button .tred -text "TrEd" \
+        -command { puts "executing Tred  [lindex $filelist $current]"
+            exec sh -c "Tred [shellquote [lindex $filelist $current]]" 2>@ stderr
+            show-tree
+        }
+    setBalloonHelp .tred {Edit file with TrEd (t)}
+
+
+    button .emacs -text "Emacs" \
+        -command { puts "executing emacs [lindex $filelist $current] "
+            exec sh -c "emacs [shellquote [lindex $filelist $current]]"
+            show-tree
+        }
+    setBalloonHelp .emacs {Edit file with Emacs (e)}
+
+    button .ignore -text "Ignore" \
+        -command {
+            set checksfile [file dirname [lindex $filelist $current]]/.checks.expected
+            set fhandle [open $checksfile a]
+            puts $fhandle "[lindex $filelist $current]\t[lindex $querylist $current]\t[lindex $descriptionlist $current]"
+            close $fhandle
+            next-file
+        }
+    setBalloonHelp .ignore {Ignore this warning in future (white-listed in .checks.expected)}
+    
+
+    button .converse -text "Converse" \
+        -command { puts "executing Alpino  -xml_converse [lindex $filelist $current] "
+            exec sh -c "Alpino   -xml_converse [shellquote [lindex $filelist $current]]" 2>@ stderr
+            show-tree
+        }
+    setBalloonHelp .converse {Change file with Alpino -xml_converse (c)}
+
+#     button .empty -text "Empty" \
+#         -command { puts "executing empty [lindex $filelist $current] "
+#             exec sh -c "dtempty [shellquote [lindex $filelist $current]]" 2>@ stderr
+#             show-tree
+#         }
+
+#    button .remove -text "Remove" \
+#        -command {
+#           exec sh -c "rm [shellquote [lindex $filelist $current]]"
+#           next-file
+#        }
+#    setBalloonHelp .remove {Remove file from disk}
+
+#    button .move -text "Move" \
+#        -command { puts "executing mv [lindex $filelist $current] $targetdir/"
+#           exec sh -c "mv [shellquote [lindex $filelist $current]] $targetdir/"
+#           next-file
+#       }
+
+    button .set -text "Set Sel"\
+        -command {
+            selection handle . selectcurrentfile
+        }
+    setBalloonHelp .set {Set X11 selection to the current file name}
+
+
+    button .open -text "Open Sel"\
+        -command {
+            set newfile [selection get]
+            if {[catch {exec dtget $newfile > /dev/null 2> /dev/null}]} {
+                tk_messageBox -type ok -icon error \
+                    -message "Error: could not get data for selection \"$newfile\""
+            } else {
+                lappend filelist $newfile
+                set current [expr [llength $filelist] - 1]
+                update-query-field
+                show-tree
+                set-button-activity
+                update-filelist-selection
+            }
+        }
+    setBalloonHelp .open {Open file name that is in the current X11 selection}
+
+    button .quit -text "Quit" \
+        -command exit
+    setBalloonHelp .quit {Go for coffee (^q)}
+
+
+    # We toekennen aan "." kan ook, met workaround voor entries e.d.
+    # # globale keybindings toekennen:
+    # foreach item {.apply .togglefilelist .toggle-extd-attrs
+    #     .prev .next .smaller .bigger .normal .thistle
+    #     .emacs .move .quit} {
+    #     do_global_bindings $item
+    # }
+    do_global_bindings .
+    bind all <Control-q> exit
+
+
+    # expr frame klaarzetten
+    pack $exprframe.label -side left -padx 2
+    pack $exprframe.entry -side left -padx 2 -fill x -expand yes
+    pack .apply -side left -padx 2 -in $exprframe
+
+    bind $exprframe.entry <Return> show-tree
+
+    # don't do the root window bindings (.)
+    bindtags $exprframe.entry  "$exprframe.entry Entry all"
+
+    # button frame klaarzetten
+    pack .togglefilelist .toggle-extd-attrs .prev .next \
+        .smaller .bigger .normal .tred .emacs .ignore .converse\
+        -side left -padx 2 -in $butframe
+
+#    if {![string equal $opts(-d) ""]} {
+#        pack .move -side left -padx 2 -in $butframe
+#    }
+    pack .set -side left -padx 2 -in $butframe
+    pack .open -side left -padx 2 -in $butframe
+    pack .quit -side left -padx 2 -in $butframe
+
+
+    pack $exprframe -side top -fill x -pady 2 -expand yes
+    pack $butframe  -fill x -pady 2
+    pack $topframe  -side top -fill x -pady 2
+
+    label .sentencelabel -bg white -justify left -relief groove
+    pack .sentencelabel -fill x -in $topframe
+    bind .sentencelabel <Configure> {.sentencelabel configure -wraplength %w}
+
+    label .metalabel -bg white -justify left -relief groove
+    # pack .metalabel -fill x -expand yes -in $topframe
+    bind .metalabel <Configure> {.metalabel configure -wraplength %w}
+
+    label .parserlabel -bg white -justify left -relief groove
+    # pack .parserlabel -fill x -expand yes -in $topframe
+    bind .parserlabel <Configure> {.parserlabel configure -wraplength %w}
+
+    # het canvas en de listbox plaatsen 
+    panedwindow .pane
+    pack .pane -side top -expand yes -fill both
+
+    # listbox klaarzetten
+    frame .pane.listboxframe
+    maak_listbox .pane.listboxframe
+    set filelistbox .pane.listboxframe.listbox
+    $filelistbox configure -listvariable filelist
+
+    bind $filelistbox <Double-1> {
+        set current [$filelistbox curselection]
+
+        update-query-field
+        show-tree
+        set-button-activity
+    }
+
+    # canvas klaarzetten
+    frame .pane.canvasframe -bg $background_color
+    setup-clig-canvas .pane.canvasframe
+
+    # canvas plaatsen, listbox plaatsen gaat via button
+    .pane add .pane.canvasframe
+
+    if $opts(-m) {
+        maximize 
+    }
+
+
+
+}
+
+
+proc do_global_bindings {window} {
+
+    bind $window <Up>    {.graphics yview scroll -1 units}
+    bind $window <Down>  {.graphics yview scroll  1 units}
+    bind $window <Left>  {.graphics xview scroll -1 units}
+    bind $window <Right> {.graphics xview scroll  1 units}
+
+    bind $window <Prior> previous-file
+    bind $window <Next>  next-file
+
+    bind $window n next-file
+    bind $window p previous-file
+
+    bind $window a toggle-extd-attrs
+    bind $window f toggle-filelist
+
+    bind $window e {.emacs invoke}
+
+    bind $window i {.ignore invoke}
+
+    bind $window c {.converse invoke}
+
+    # bind $window t              {.thistle invoke}
+    bind $window t              {.tred invoke}
+
+    bind $window <KP_Add>       {.bigger  invoke}
+    bind $window <KP_Subtract>  {.smaller invoke}
+    bind $window <KP_Multiply>  {.normal  invoke}
+
+    bind $window <Control-q> exit
+}
+
+
+
+proc maak_listbox {parent} {
+    # maak in frame PARENT een listbox met scrollbars
+
+    if {$parent == "."} {
+        set parent ""
+    }
+    set scrollx  $parent.scrollx
+    set scrolly  $parent.scrolly
+    set listbox  $parent.listbox
+
+    listbox   $listbox  -yscrollcommand "$scrolly set" -xscrollcommand "$scrollx set" 
+    scrollbar $scrollx  -command "$listbox xview" -orient horizontal 
+    scrollbar $scrolly  -command "$listbox yview"
+
+    pack $scrollx -side bottom -fill x 
+    pack $scrolly -side right  -fill y
+    pack $listbox -expand yes  -fill both
+}
+
+
+
+proc textB1Press {w x y} {
+    $w icursor current @$x,$y
+    $w focus current
+    focus $w
+    $w select from current @$x,$y
+}
+
+proc textDB1Press {w x y} {
+    $w icursor current @$x,$y
+    $w focus current
+    focus $w
+    $w select from current 0
+    $w select to current end
+}
+
+
+# we definieren 'm hier zonder obj-stack
+proc clig {obj} {
+    show $obj
+}
+
+
+# dtxslt "--stringparam" "expr='//node\[@rel = \"cnj\"]'"
+#          -s "showmatch3.xsl" "/mnt/devel/Alpino/Treebank/cdb/33.xml 
+
+proc show-tree-old {} {
+    global dtget cligsheet filelist current expr extended_attributes
+    # laat de boom uit FILELIST op positie CURRENT zien mbv CLIGSHEET en EXPR
+
+    # de boomstructuur op het canvas toveren
+
+    set arglist dtxslt
+    lappend arglist --stylesheet $cligsheet
+
+    if {[expr [string length $expr] > 0]} {
+        lappend arglist "--stringparam" "expr=$expr"
+    }
+    lappend arglist --param extended-attributes=$extended_attributes
+    lappend arglist [lindex $filelist $current]
+
+    eval [eval exec $arglist]
+
+    # FIXME, hoort hier eigenlijk niet (toch?)
+    show-sentence
+
+    update-window-title
+}
+
+proc shellquote {s} {
+    if {[regexp {[^\w._\-/]} $s]} {
+        regsub -all {'} $s {'\''} s
+        set s "'$s'"
+        regsub  {^''} $s {} s
+        regsub  {''$} $s {} s
+        return $s
+    } else {
+        return $s
+    }
+}
+
+proc show-tree {} {
+    global dtget cligsheet env filelist current expr extended_attributes
+    # laat de boom uit FILELIST op positie CURRENT zien mbv CLIGSHEET en EXPR
+
+    # de boomstructuur op het canvas toveren
+
+    set commandline "env ALPINO_HOME=$env(ALPINO_HOME) dtxslt --stylesheet $cligsheet"
+
+    if {[expr [string length $expr] > 0]} {
+        append commandline " --stringparam "  expr=[shellquote $expr]
+    }
+    append commandline " --param extended-attributes=$extended_attributes "
+    append commandline [shellquote [lindex $filelist $current]]
+
+    set output [exec sh -c $commandline]
+    eval $output
+
+    # FIXME, hoort hier eigenlijk niet (toch?)
+    show-sentence
+
+    update-window-title
+}
+
+
+
+# FIXME: De window title bevat informatie die eigenlijk in een
+# status-bar thuishoort.  
+#
+# Omdat het wijzigen van de window title (blijkbaar!) een betrekkelijk
+# dure operatie is (zie "window_title_update_timer" en "stdin_handler"
+# hieronder) is het wenselijk dit aan te passsen.
+#
+proc update-window-title {} {
+    global argv0 filelist current still_getting_files
+
+    if {$still_getting_files} {
+        set gf {, still getting files...}
+    } else {
+        set gf "" 
+    }
+    
+    # dtview <filenaam> (number of total)
+    wm title . "[file tail $argv0] [lindex $filelist $current] \
+                ([expr $current + 1] of [llength $filelist]$gf)"
+
+}
+
+
+
+proc show-sentence {} {
+    # update het sentence label
+    global dtget env sentencesheet sentidsheet metasheet parsersheet filelist current topframe
+    
+    # de sentence op het scherm toveren
+
+    set arglist "env ALPINO_HOME=$env(ALPINO_HOME) dtxslt"
+    lappend arglist --stylesheet $sentidsheet
+    lappend arglist [shellquote [lindex $filelist $current]]
+
+    set sentid [exec sh -c [join $arglist " "]]
+
+    if { "$sentid" != "" } {
+	set sentid "$sentid: "
+    }
+
+    set arglist "env ALPINO_HOME=$env(ALPINO_HOME) dtxslt"
+    lappend arglist --stylesheet $sentencesheet
+    lappend arglist [shellquote [lindex $filelist $current]]
+
+    set sentence [exec sh -c [join $arglist " "]]
+
+    .sentencelabel configure -text "$sentid$sentence"
+
+    set arglist "env ALPINO_HOME=$env(ALPINO_HOME) dtxslt"
+    lappend arglist --stylesheet $metasheet
+    lappend arglist [shellquote [lindex $filelist $current]]
+
+    set meta [exec sh -c [join $arglist " "]]
+
+    pack forget .metalabel
+    if { "$meta" != "" } {
+	pack .metalabel -fill x -expand yes -in $topframe
+        .metalabel configure -text $meta
+    }
+
+    set arglist "env ALPINO_HOME=$env(ALPINO_HOME) dtxslt"
+    lappend arglist --stylesheet $parsersheet
+    lappend arglist [shellquote [lindex $filelist $current]]
+
+    set parser [exec sh -c [join $arglist " "]]
+
+    pack forget .parserlabel
+    if { "$parser" != "" } {
+	pack .parserlabel -fill x -expand yes -in $topframe
+        .parserlabel configure -text $parser
+    }
+
+}
+
+
+proc next-file {} {
+    global current filelist
+    global still_getting_files
+    if {[expr $current < ([llength $filelist] - 1) ]} {
+        incr current
+
+        update-query-field             ;# moeten deze in een aparte functie
+        show-tree                      ;# gebundeld worden?
+        set-button-activity
+        update-filelist-selection
+    } else {
+        if {!$still_getting_files} {
+            exit
+        } 
+    }
+}
+
+
+proc previous-file {} {
+    global current
+    if {[expr $current > 0 ]} {
+        set current [expr $current - 1]
+
+        update-query-field
+        show-tree
+        set-button-activity
+        update-filelist-selection
+    }
+}
+
+
+# maak de prev/next buttons active/inactive indien nodig
+proc set-button-activity {} {
+    global current filelist opts
+    
+    # prev
+    if {$current > 0} {
+        .prev configure -state normal
+    } else { 
+        .prev configure -state disabled
+    }
+
+    # next
+    if {[expr $current == ([llength $filelist] - 1)]} {
+        .next configure -state disabled
+    } else {
+        .next configure -state normal
+    }
+
+    # thistle/emacs: alleen bij normale files actief
+
+    if {[file exists [lindex $filelist $current]]} {
+#        .thistle configure -state normal
+        .tred    configure -state normal
+        .emacs   configure -state normal
+        .converse   configure -state normal
+#        .remove   configure -state normal
+    } else {
+#        .thistle configure -state disabled
+        .tred    configure -state disabled
+        .emacs   configure -state disabled
+        .converse   configure -state disabled
+#        .remove   configure -state disabled
+    }
+    if {$opts(-file-query-pairs)} {
+        .ignore configure -state normal
+    } else {
+        .ignore configure -state disabled
+    }
+
+}
+
+
+proc update-filelist-selection {} {
+    global current
+    .pane.listboxframe.listbox selection clear 0 end
+    .pane.listboxframe.listbox selection set $current
+}
+
+
+proc Pop {varname {nth 0}} {
+     upvar $varname argv
+     set r [lindex $argv $nth]
+     set argv [lreplace $argv $nth $nth]
+     return $r
+}
+
+
+
+# Het invoer-formaat voor --file-query-pairs:
+#
+# filenaam <TAB> query; Een andere lage ascii waarde i.p.v. TAB is met
+# XSLT (helaas) niet mogelijk.  Zie XML standaard v1.0 paragraaf 2.2.
+# (http://www.w3.org/TR/2000/REC-xml-20001006#charsets)
+
+#
+# fileevent handler voor het lezen van bestandsnamen uit stdin
+#
+proc stdin_handler {use_file_query_pairs} {
+    global filelist querylist descriptionlist \
+        stream_contains_filenames still_getting_files 
+
+    gets stdin line
+
+    # zijn we klaar?
+    if {[eof stdin]} {
+        close stdin
+        set still_getting_files 0
+
+        remove_stop_button
+
+        # gaan klagen als we geen files gevonden hebben
+        if {!$stream_contains_filenames} {
+#            tk_messageBox -type ok -icon error \
+                -message "Error: no files found in stream"
+            exit
+        }
+
+        # de titel aanpassen dat alles binnen is
+        update-window-title
+
+    } elseif {![fblocked stdin]} {
+
+
+        if {$use_file_query_pairs} {
+            set pair [split $line "\t"]
+            lappend filelist [lindex  $pair 0]
+            lappend querylist [lindex  $pair 1]
+
+            # We pakken ook gelijk een "description" veld
+            lappend descriptionlist [lindex  $pair 2]
+        } else {
+            expand_and_add_to_filelist $line
+        }
+
+
+        # De wm title updaten voor elke file is wanneer de invoer vlot
+        # beschikbaar is teveel van het goede: de X-server en de
+        # window manager schieten dan in de stress.  We lossen dit op
+        # met een timer die om de zoveel tijd een update doet
+                
+        set-button-activity
+
+        # Alleen voor de eerste file die binnen is moeten we
+        # wat op het scherm toveren
+        if {!$stream_contains_filenames} {
+            set stream_contains_filenames 1
+            
+            update-query-field
+            update-filelist-selection
+            show-tree
+        }
+    }
+}
+
+
+#
+# Update de window title zolang er nog vanuit stdin filenames gelezen
+# worden
+#
+proc window_title_update_timer {timeout} {
+    global still_getting_files
+
+    update-window-title
+
+    if {$still_getting_files} {
+        after $timeout [list window_title_update_timer $timeout]
+    }
+}
+
+
+#
+# Voeg een button toe aan de gui om de te kunnen stoppen met het lezen
+# uit stdin.  
+#
+proc add_stop_button {} {
+    global butframe
+
+    button .stop -text "Stop" -command stop_handler \
+        -fg red -activeforeground red 
+    pack .stop -in $butframe -side right
+    focus .stop
+    setBalloonHelp .stop {Stop getting further files...}
+}
+
+#
+# Verwijder de stop button
+#
+proc remove_stop_button {} {
+    .stop configure -state disabled
+#    destroy .stop
+}
+
+
+#
+# Stop met lezen uit stdin
+#
+proc stop_handler {} {
+    global still_getting_files
+    
+    close stdin
+    set still_getting_files 0
+    update-window-title
+    remove_stop_button
+}
+
+
+#
+# update het query-veld (en gelijk ook maar het comment-
+# en het description-veld)
+#
+proc update-query-field {} {
+    global expr current querylist opts
+    
+    if {$opts(-file-query-pairs)} {
+        set expr [lindex $querylist $current]
+        setdescription
+    }
+}
+
+
+proc setdescription {} {
+    global descriptionframe topframe \
+        description opts descriptionlist current butframe
+
+    # maak en vul frame indien nodig 
+    if {[expr ! [info exists descriptionframe]]} {
+        set descriptionframe [frame $topframe.descrframe]
+        
+        set descrlabel [label $descriptionframe.descrlabel \
+                            -text "Query description: "]
+        
+        set descrentry [entry $descriptionframe.descrlentry \
+                            -textvariable description]
+
+        # don't do the root window (".") bindings 
+        bindtags $descrentry { $descrentry Entry all }
+
+        pack $descrlabel -side left -padx 2
+        pack $descrentry -side left -padx 2 -fill x -expand yes
+
+    }
+
+
+    # haal description op en maak frame actief indien nodig
+    if {$opts(-file-query-pairs)} {
+        set description [lindex $descriptionlist $current]
+        
+        if {[string length $description]} {
+            pack $descriptionframe -after $butframe  -fill x -pady 2 -expand yes
+        } else {
+            pack forget $descriptionframe
+        }
+    }
+}
+
+
+proc toggle-filelist {} {
+    global listbox_width
+    set is_shown  [expr [lsearch [.pane panes] .pane.listboxframe] >= 0]
+    
+    if $is_shown {
+        # -width opvragen werkt op de een of andere manier niet
+        # we zetten daarom de sash positie
+        set listbox_width [lindex [.pane sash coord 0] 0]
+        .pane forget .pane.listboxframe
+        .togglefilelist configure -relief raised
+    } else {
+        .pane add .pane.listboxframe -before .pane.canvasframe
+        .pane sash place 0 $listbox_width 0
+        .togglefilelist configure -relief sunken
+    }
+}
+
+proc toggle-extd-attrs {} {
+    global extended_attributes
+    
+    set extended_attributes [expr ! $extended_attributes]
+    .toggle-extd-attrs configure \
+        -relief [lindex {raised sunken} $extended_attributes]
+    show-tree
+}
+
+proc expand_and_add_to_filelist {arg} {
+    global filelist
+
+    if {[string match *.xml $arg]} {
+        lappend filelist $arg
+    } elseif {[string match *.data.dz $arg] || [string match *.index $arg]
+        || [file isdirectory $arg] 
+        || [file exists $arg.index] } {
+        
+        set fh [open "|dtlist $arg" r]
+
+        while {[gets $fh line] != -1} {
+
+            lappend filelist $line
+        }
+        close $fh
+    } else {
+        lappend filelist $arg
+    }
+}
+
+#----------------------------------------------------------------------
+### ENTRY POINT
+
+set current 0
+set filelist {}
+set querylist {}
+set descriptionlist {}
+
+set usage "Usage: dtview \[OPTIONS] <files, directories, compact corpora>
+
+OPTIONS:
+-q, --query, --expr EXPR        The XPath expression for highlighting
+-s, --stdin                     Read the filenames from stdin
+-m, --maximize                  window is maximized
+--file-query-pairs              Read the filename, expression for
+                                highlighting, and description from 
+                                stdin, all separated by tabs.
+-d, --targetdir TARGETDIR       The destination directory for Move operations
+-h, --help                      This message
+"
+
+array set opts {-q "" -s 0 -file-query-pairs 0 -d "" -h 0 -m 0}
+
+while {[string match -* [lindex $argv 0]]} {
+    switch -regexp -- [lindex $argv 0] {
+        ^(-q|--?query|--?expr)$ { set opts(-q) [Pop argv 1] }
+        ^(-s|--?stdin)$         { set opts(-s) 1;}
+        ^(-m|--?maximize)$      { set opts(-m) 1;}
+        ^(-h|--?help)$          { set opts(-h) 1;}
+        ^--?file-query-pairs$   { set opts(-file-query-pairs) 1;}
+        ^--$                    { Pop argv ; break }
+        default {
+            set o [join [lsort [array names opts -*]] ", "]
+            return -code error "bad option [lindex $argv 0]: \
+                     must be one of $o"
+        }
+    }
+    Pop argv
+}
+
+if $opts(-h) {
+    puts $usage
+    exit 0
+}
+
+set expr $opts(-q)
+
+#set targetdir $opts(-d)
+
+if {!($opts(-s) || $opts(-file-query-pairs))} {
+
+    # OK, we lezen dus *niet* uit stdin
+
+    foreach arg $argv {
+        expand_and_add_to_filelist $arg
+    }
+    set still_getting_files 0
+
+#    if [expr ! [llength $filelist] > 0] {
+#        puts stderr "[file tail $argv0]: Error: No files to process\n\n$usage"
+#        exit 1
+#    }
+
+    # we bouwen de GUI alleen op als het nodig is
+
+    source $cligdir/cliglib.tcl
+    source $cligdir/zoom.tcl
+
+    build_gui
+
+    # starten met de eerste file
+    if [expr [llength $filelist] > 0] {
+        set-button-activity
+        update-query-field
+        update-filelist-selection
+        show-tree
+    }
+} else {
+
+    # OK, we lezen dus files uit stdin.
+    #
+    # We moeten een fileevent handler gebruiken om de gui
+    # "responsive" te houden.   Een gewone data driven loop, ookal zit
+    # er een "update" tussen is niet goed genoeg.  Extra gui updates
+    # schedulen met after werkt ook niet omdat wanneer op invoer
+    # gewacht wordt het gehele proces blokkeert.
+
+    # GUI opbouwen
+
+    source $cligdir/cliglib.tcl
+    source $cligdir/zoom.tcl
+
+    build_gui
+
+    add_stop_button
+
+    # de fileevent handler op z'n plek zetten
+    fconfigure stdin -blocking 0 -buffering line
+
+    set stream_contains_filenames 0
+    set still_getting_files 1
+
+    window_title_update_timer 1000
+
+    fileevent stdin readable [list stdin_handler $opts(-file-query-pairs)]
+
+}
+
+# EOF
+
+# Local Variables:
+# mode: tcl
+# End:

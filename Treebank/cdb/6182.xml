@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="15" id="2" rel="--">
+      <node begin="0" cat="mwu" end="2" id="3" rel="su">
+        <node begin="0" end="1" id="4" lemma="Plaza" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Plaza" spectype="deeleigen" word="Plaza"/>
+        <node begin="1" end="2" id="5" lemma="Tejerina" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Tejerina" spectype="deeleigen" word="Tejerina"/>
+      </node>
+      <node begin="2" end="3" id="6" lemma="verzwijgen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="verzwijg" word="verzwijgt" wvorm="pv"/>
+      <node begin="3" cat="pp" end="5" id="7" rel="mod">
+        <node begin="3" end="4" id="8" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+        <node begin="4" end="5" getal="ev" id="9" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj1" root="mij" status="vol" vwtype="pr" word="mij"/>
+      </node>
+      <node begin="6" cat="cp" end="15" id="10" rel="vc">
+        <node begin="6" conjtype="onder" end="7" id="11" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="7" cat="ssub" end="15" id="12" rel="body">
+          <node begin="7" cat="np" end="11" id="13" rel="su">
+            <node begin="7" end="8" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="8" buiging="zonder" end="9" getal-n="zonder-n" id="15" lemma="reizen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="reis" word="reizen" wvorm="inf"/>
+            <node begin="9" cat="pp" end="11" id="16" rel="mod">
+              <node begin="9" end="10" id="17" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
+              <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="18" lemma="trein" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="trein" word="trein"/>
+            </node>
+          </node>
+          <node begin="11" end="12" genus="masc" getal="ev" id="19" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj2" root="hem" status="vol" vwtype="pers" word="hem"/>
+          <node begin="12" cat="np" end="14" id="20" rel="obj1">
+            <node begin="12" buiging="zonder" end="13" graad="comp" id="21" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,comp)" pt="vnw" rel="det" root="meer" vwtype="onbep" word="meer"/>
+            <node begin="13" end="14" getal="mv" graad="basis" id="22" lemma="vakantiedag" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dag" word="vakantiedagen"/>
+          </node>
+          <node begin="14" end="15" id="23" lemma="opleveren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lever" word="oplevert" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Plaza Tejerina verzwijgt voor mij , dat het reizen per trein hem meer vakantiedagen oplevert .</sentence>
+</alpino_ds>

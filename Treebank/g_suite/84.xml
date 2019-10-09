@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+      <node begin="2" end="3" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      <node begin="0" cat="inf" end="5" id="4" rel="vc">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="5" lemma="Robbert" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Robbert" word="Robbert"/>
+        <node begin="2" end="3" id="6" index="1" rel="su"/>
+        <node begin="3" end="4" id="7" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+        <node begin="4" buiging="zonder" end="5" id="8" lemma="terugbellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bel" word="terugbellen" wvorm="inf"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Robbert wil ik niet terugbellen</sentence>
+</alpino_ds>

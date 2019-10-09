@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="smain" end="15" id="1" rel="--">
+      <node begin="0" cat="np" end="5" id="2" index="1" rel="su">
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="zo&apos;n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="zo&apos;n" vwtype="aanw" word="Zo&apos;n"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="orde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="orde" word="orde"/>
+        <node begin="2" cat="pp" end="4" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="prioriteit" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="prioriteiten" word="prioriteiten"/>
+        </node>
+        <node begin="4" end="5" id="8" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
+      </node>
+      <node begin="5" end="6" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="0" cat="ti" end="15" id="10" rel="vc">
+        <node begin="7" end="8" id="11" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+        <node begin="0" cat="inf" end="15" id="12" rel="body">
+          <node begin="0" end="5" id="13" index="1" rel="obj1"/>
+          <node begin="6" end="7" id="14" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="8" buiging="zonder" end="9" id="15" lemma="vinden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vind" word="vinden" wvorm="inf"/>
+          <node begin="9" cat="pp" end="15" id="16" rel="ld">
+            <node begin="9" end="10" id="17" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="10" cat="np" end="15" id="18" rel="obj1">
+              <node begin="10" end="11" getal="ev" graad="basis" id="19" lemma="Idenburg" naamval="gen" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Idenburg" word="Idenburgs"/>
+              <node begin="11" buiging="zonder" end="12" graad="basis" id="20" lemma="buitenlands" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="buitenlands" word="buitenlands"/>
+              <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="21" lemma="beleid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="beleid" word="beleid"/>
+              <node begin="13" cat="np" end="15" id="22" rel="mod">
+                <node begin="13" buiging="met-e" end="14" graad="basis" id="23" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+                <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="24" lemma="stijl" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stijl" word="stijl"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Zo&apos;n orde van prioriteiten nu is niet te vinden in Idenburgs buitenlands beleid nieuwe stijl .</sentence>
+</alpino_ds>

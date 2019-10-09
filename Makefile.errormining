@@ -1,0 +1,175 @@
+#N=100
+N=10
+f=3
+SADIR=$(ALPINO_HOME)/SuffixArrays
+QOPTS=
+#QOPTS=-w
+Q=$(ALPINO_HOME)/bin/q $(QOPTS)
+UNIQ=LANG=POSIX LC_ALL=POSIX sort -u
+COUNT=LANG=POSIX LC_ALL=POSIX sort|uniq -c|LANG=POSIX LC_ALL=POSIX sort -nr
+WORD_PER_LINE=tr -s '\012\011 ' '\012' 
+
+default:
+
+%.ok : %.m_ngram %.a_ngram
+	$(SADIR)/parsability_table.with-binom-test $*.m_ngram $*.a_ngram\
+                 > $*.ok
+
+%.ok_nor : %.m_ngram %.a_ngram
+	$(SADIR)/parsability_table $*.m_ngram $*.a_ngram \
+        | LANG=POSIX LC_ALL=POSIX sort  -k 1,1n -k2,2rn > $*.ok_nor
+
+
+%.m_ngram: %.m_fsa
+	zcat $*.q | $(Q) -m |\
+        $(UNIQ) |\
+	$(WORD_PER_LINE) |\
+        $(SADIR)/suffix_array -N -e -d $*.m_fsa -n $(N) -w -G\| -f $(f) -u\
+             | grep -v ' @ ' > $*.m_ngram
+
+%.a_ngram: %.a_fsa
+	zcat $*.q | $(Q) -a |\
+        $(UNIQ) |\
+	$(WORD_PER_LINE) |\
+        $(SADIR)/suffix_array -N -e -d $*.a_fsa -n $(N) -w -G\|  -f $(f) -u\
+              | grep -v ' @ ' > $*.a_ngram
+
+## grep -v ' @ '
+## because we are not interested in ngrams that cross sentence boundaries
+
+%.a_fsa: %.q
+	zcat $*.q | $(Q) -a |\
+	$(WORD_PER_LINE) |\
+        LANG=POSIX LC_ALL=POSIX sort -u |\
+        fsa_build -N -o $*.a_fsa
+
+%.m_fsa: %.q
+	zcat $*.q | $(Q) -m |\
+	$(WORD_PER_LINE) |\
+        LANG=POSIX LC_ALL=POSIX sort -u |\
+        fsa_build -N -o $*.m_fsa
+
+.PRECIOUS : %.m_ngram %.m_fsa %.a_ngram %.a_fsa %.fsa %.ngram %.txt0
+
+%.ngram : %.txt %.fsa
+	cat $*.txt | $(UNIQ) | $(WORD_PER_LINE) |\
+            $(SADIR)/suffix_array -e -d $*.fsa -n $(N) -w -G\| \
+                                  -f $(f) -u -v -N\
+              | grep -v ' @ ' > $*.ngram
+
+## grep -v ' @ '
+## because we are not interested in ngrams that cross sentence boundaries
+
+%.colc : %.ngram
+	cat $*.ngram | $(ALPINO_HOME)/Suites/colc -t 0.001 |\
+         $(ALPINO_HOME)/Suites/remove_smaller |\
+         LANG=POSIX LC_ALL=POSIX sort -k1,1nr -k2,2nr > $*.colc
+
+
+%.fsa : %.txt
+	cat $*.txt | $(WORD_PER_LINE) |\
+        LANG=POSIX LC_ALL=POSIX sort -u |\
+        grep .|\
+        fsa_build -N -o $*.fsa
+
+## for speed only in kw
+%.mistakes: %.q
+	zcat $*.q | $(Q) -k -m > $*.mistakes
+
+LOGS=*.log
+
+cat=cat
+
+e:
+	-@$(cat) $(LOGS) | \
+         grep -v  -e '^unknown|'\
+                  -e '^guessing|'\
+                  -e '^parse: '\
+                  -e '^FRAME# '\
+                  -e 'no default postag'\
+                  -e 'no cgn tag'\
+                  -e '^warning: UNKNOWN'\
+                  -e '^english compound' |\
+         grep -iw  -e killed\
+                   -e warning\
+                   -e error\
+                   -e segmentation\
+                   -e failure|\
+         grep -vi -e 'filter_tags removed last tag|'\
+                  -e '^Q#'
+
+logs:
+	-$(cat) $(LOGS) | $(Q) -c
+
+unknowns:
+	-$(cat) $(LOGS) | grep '^unknown|' | awk -F\| '{ if (NF==4) print $$2 }' |\
+          $(COUNT)
+
+word=word
+u:
+	-$(cat) $(LOGS) | grep '^unknown|$(word)|' | awk -F\| '{ print $$4 }' |\
+           $(ALPINO_HOME)/Suites/kwic '$(word)'
+
+u.txt0:
+	$(cat) $(LOGS) | grep '^unknown|' |\
+           $(UNIQ) > u.txt0
+
+u.txt: u.txt0
+	cat u.txt0 | awk -F\| '{ print $$4 }' > u.txt
+
+FRAMES=*.frames
+
+assigned_unknowns:
+	$(MAKE) assigned FILTER="grep -v -e '|normal(' -e '|decap_w_dia|' -e '|w_dia|' -e '|skip|' -e '|robust_skip|' $(assigned)"
+
+assigned_unknowns_with_heur:
+	$(MAKE) assigned_with_heur FILTER="grep -v -e '|normal(' -e '|decap_w_dia|' -e '|w_dia|' -e '|skip|' -e '|robust_skip|' $(assigned)"
+
+FILTER=cat
+assigned:
+	@zcat $(FRAMES) |\
+	$(FILTER) |\
+	awk -F\| '{ printf "%s|%s\n",$$1,$$2 }' |\
+        $(COUNT) |\
+	$(ALPINO_HOME)/bin/analyse_unknowns
+
+
+assigned_with_heur:
+	@zcat $(FRAMES) |\
+	$(FILTER) |\
+	awk -F\| '{ printf "%s|%s|%s\n",$$1,$$2,$$6 }' |\
+        $(COUNT) |\
+	$(ALPINO_HOME)/bin/analyse_unknowns
+
+progress:
+	@$(cat) $(LOGS) | $(Q) -c
+
+last_tags:
+	@$(cat) $(LOGS) | grep 'warning: filter_tags removed last tag for'|\
+           sed -e 's/warning: filter_tags removed last tag for //' 
+
+## make tmp log=LOGFILE
+## reports statistics based on the log file
+log=${shell ls *.log | head -n1}
+tmp:
+	@echo LOG: $(log)
+	-@grep -i -w -e error -e warning -e ' 0 solution' $(log) | sort | uniq -c
+	@if grep 'timed out after' $(log)>/dev/null; then echo `grep -c 'timed out after' $(log)` time-outs; fi
+	@if grep 'out of memory' $(log)>/dev/null; then echo `grep -c 'out of memory' $(log)` times out-of-memory; fi
+	@grep 'cputime total' $(log) |\
+          awk '    { N = N+$$3; P = P+1 }\
+               END { printf "%20s %10.2f after %8.d items\n","total",N/P,P  }'
+
+	@grep 'Lexical analysis: ' $(log) |\
+          awk '    { N = N+$$17; P = P+1 }\
+               END { printf "%20s %10.2f after %8.d items\n",\
+                      "lexical analysis",N/P,P  }'
+	@grep 'Parsed' $(log) | tr -d '()' |\
+          awk '    { N = N+$$2; P = P+1 }\
+               END { printf "%20s %10.2f after %8.d items\n",\
+                      "parser",N/P,P  }'
+	@grep 'Found best path:' $(log) | tr -d '()' |\
+          awk '    { N = N+$$4; P = P+1 }\
+               END { printf "%20s %10.2f after %8.d items\n",\
+                      "disambiguator",N/P,P  }'
+

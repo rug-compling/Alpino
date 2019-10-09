@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="ap" end="5" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="weinig" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="mod" root="weinig" vwtype="onbep" word="weinig"/>
+      <node begin="1" buiging="zonder" end="2" graad="basis" id="3" lemma="populair" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="populair" word="populair"/>
+      <node begin="2" cat="pp" end="5" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="3" cat="np" end="5" id="6" rel="obj1">
+          <node begin="3" buiging="zonder" end="4" getal="mv" id="7" lemma="ons" naamval="stan" npagr="evon" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,zonder,evon)" pt="vnw" rel="det" root="ons" status="vol" vwtype="bez" word="ons"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="8" lemma="land" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="land" word="land"/>
+        </node>
+      </node>
+    </node>
+    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>weinig populair in ons land .</sentence>
+</alpino_ds>

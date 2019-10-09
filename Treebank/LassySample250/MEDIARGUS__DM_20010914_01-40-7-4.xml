@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="3" end="4" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="7" end="8" frame="punct(komma)" id="2" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="conj" end="15" id="3" rel="--">
+      <node begin="0" cat="smain" end="7" id="4" rel="cnj">
+        <node begin="0" case="nom" def="def" end="1" frame="pronoun(nwh,fir,pl,de,nom,def,wkpro)" gen="de" getal="mv" id="5" index="1" lcat="np" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" sense="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="We"/>
+        <node begin="1" end="2" frame="verb(hebben,pl,aux(inf))" id="6" infl="pl" lcat="smain" lemma="zullen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zal" sc="aux(inf)" sense="zal" tense="present" word="zullen" wvorm="pv"/>
+        <node begin="0" cat="conj" end="7" id="7" rel="vc">
+          <node begin="0" cat="inf" end="3" id="8" rel="cnj">
+            <node begin="0" end="1" id="9" index="1" rel="su"/>
+            <node begin="2" buiging="zonder" end="3" frame="verb(hebben,inf,intransitive)" id="10" infl="inf" lcat="inf" lemma="slapen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="slaap" sc="intransitive" sense="slaap" word="slapen" wvorm="inf"/>
+          </node>
+          <node begin="0" cat="inf" end="5" id="11" rel="cnj">
+            <node begin="0" end="1" id="12" index="1" rel="su"/>
+            <node begin="4" buiging="zonder" end="5" frame="verb(hebben,inf,intransitive)" id="13" infl="inf" lcat="inf" lemma="eten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="eet" sc="intransitive" sense="eet" word="eten" wvorm="inf"/>
+          </node>
+          <node begin="5" conjtype="neven" end="6" frame="conj(en)" id="14" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+          <node begin="0" cat="inf" end="7" id="15" rel="cnj">
+            <node begin="0" end="1" id="16" index="1" rel="su"/>
+            <node begin="6" buiging="zonder" end="7" frame="verb(hebben,inf,intransitive)" id="17" infl="inf" lcat="inf" lemma="werken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="werk" sc="intransitive" sense="werk" word="werken" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+      <node begin="8" conjtype="neven" end="9" frame="conj(maar)" id="18" lcat="vg" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" sense="maar" word="maar"/>
+      <node begin="9" cat="smain" end="15" id="19" rel="cnj">
+        <node begin="10" end="11" frame="verb(hebben,pl,aux(inf))" id="20" infl="pl" lcat="smain" lemma="zullen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zal" sc="aux(inf)" sense="zal" tense="present" word="zullen" wvorm="pv"/>
+        <node begin="11" case="nom" def="def" end="12" frame="pronoun(nwh,fir,pl,de,nom,def,wkpro)" gen="de" getal="mv" id="21" index="2" lcat="np" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" sense="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
+        <node begin="9" cat="inf" end="15" id="22" rel="vc">
+          <node aform="base" begin="9" buiging="zonder" end="10" frame="adjective(no_e(tmpadv))" graad="basis" id="23" infl="no_e" lcat="ap" lemma="wekenlang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="week_lang" sense="week_lang" vform="adj" word="wekenlang"/>
+          <node begin="11" end="12" id="24" index="2" rel="su"/>
+          <node begin="12" end="13" frame="reflexive(fir,pl)" getal="mv" id="25" lcat="np" lemma="ons" naamval="obl" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" refl="refl" rel="se" root="ons" sense="ons" status="vol" vwtype="pr" word="ons"/>
+          <node aform="compar" begin="13" end="14" frame="adjective(anders)" id="26" infl="anders" lcat="ap" lemma="anders" pos="adj" postag="BW()" pt="bw" rel="predc" root="anders" sense="anders" vform="adj" word="anders"/>
+          <node begin="14" buiging="zonder" end="15" frame="verb(hebben,inf,nonp_pred_refl)" id="27" infl="inf" lcat="inf" lemma="gedragen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gedraag" sc="nonp_pred_refl" sense="zich-gedraag" word="gedragen" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" frame="punct(punt)" id="28" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>We zullen slapen , eten en werken , maar wekenlang zullen we ons anders gedragen .</sentence>
+  <comments>
+    <comment>Q#DM_20010914_01-40-7-4|We zullen slapen , eten en werken , maar wekenlang zullen we ons anders gedragen .|1|1|-0.6780274138160644</comment>
+  </comments>
+</alpino_ds>

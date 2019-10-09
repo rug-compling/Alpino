@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="np" end="4" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+      <node begin="1" buiging="met-e" end="2" graad="basis" id="3" lemma="dubbel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="dubbel" word="dubbele"/>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="4" lemma="telling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="telling" word="telling"/>
+      <node begin="3" end="4" id="5" lemma="dus" pos="adv" postag="BW()" pt="bw" rel="mod" root="dus" word="dus"/>
+    </node>
+    <node begin="4" end="5" id="6" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een dubbele telling dus .</sentence>
+</alpino_ds>

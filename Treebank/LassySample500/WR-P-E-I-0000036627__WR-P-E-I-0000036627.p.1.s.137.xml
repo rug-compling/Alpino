@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="3" end="4" id="2" lemma="mogen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="mag" word="mocht" wvorm="pv"/>
+      <node begin="4" end="5" genus="genus" getal="ev" graad="basis" id="3" index="1" lemma="Metropolitan" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="su" root="Metropolitan" word="Metropolitan"/>
+      <node begin="0" cat="inf" end="6" id="4" rel="vc">
+        <node begin="0" cat="np" end="3" id="5" rel="obj1">
+          <node begin="0" buiging="met-e" end="1" id="6" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" vwtype="onbep" word="Alle"/>
+          <node begin="1" end="2" getal-n="zonder-n" graad="basis" id="7" lemma="50" numtype="hoofd" pos="num" positie="nom" postag="TW(hoofd,nom,zonder-n,basis)" pt="tw" rel="hd" root="50" word="50"/>
+          <node begin="2" buiging="zonder" end="3" graad="basis" id="8" lemma="extra" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="extra" word="extra"/>
+        </node>
+        <node begin="4" end="5" id="9" index="1" rel="su"/>
+        <node begin="5" buiging="zonder" end="6" id="10" lemma="maken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="maak" word="maken" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Alle 50 extra mocht Metropolitan maken .</sentence>
+</alpino_ds>

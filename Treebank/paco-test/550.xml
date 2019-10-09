@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="50" id="0" rel="top">
+    <node begin="23" end="24" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="43" end="44" frame="punct(komma)" id="2" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="du" end="49" id="3" rel="--">
+      <node begin="0" cat="smain" end="43" id="4" rel="nucl">
+        <node begin="6" end="7" frame="verb(unacc,sg3,passive)" id="5" infl="sg3" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="present" word="wordt"/>
+        <node begin="0" cat="ppart" end="43" id="6" rel="vc">
+          <node begin="0" cat="pp" end="6" id="7" rel="mod">
+            <node begin="0" cat="mwu" end="4" id="8" mwu_root="in_het_kader_van" mwu_sense="in_het_kader_van" rel="hd">
+              <node begin="0" end="1" frame="preposition([in,het,kader,van],[])" id="9" lcat="pp" pos="prep" rel="mwp" root="In" sense="In" word="In"/>
+              <node begin="1" end="2" frame="preposition([in,het,kader,van],[])" id="10" lcat="pp" pos="prep" rel="mwp" root="het" sense="het" word="het"/>
+              <node begin="2" end="3" frame="preposition([in,het,kader,van],[])" id="11" lcat="pp" pos="prep" rel="mwp" root="kader" sense="kader" word="kader"/>
+              <node begin="3" end="4" frame="preposition([in,het,kader,van],[])" id="12" lcat="pp" pos="prep" rel="mwp" root="van" sense="van" word="van"/>
+            </node>
+            <node begin="4" cat="np" end="6" id="13" rel="obj1">
+              <node begin="4" end="5" frame="determiner(de)" id="14" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="5" end="6" frame="noun(de,mass,sg)" gen="de" id="15" lcat="np" num="sg" pos="noun" rel="hd" root="samenwerking" sense="samenwerking" word="samenwerking"/>
+            </node>
+          </node>
+          <node begin="8" end="9" frame="verb(hebben,psp,transitive)" id="16" infl="psp" lcat="ppart" pos="verb" rel="hd" root="verleen" sc="transitive" sense="verleen" word="verleend"/>
+          <node begin="7" cat="np" end="43" id="17" index="1" rel="obj1">
+            <node begin="7" end="8" frame="noun(de,count,sg)" gen="de" id="18" lcat="np" num="sg" pos="noun" rel="hd" root="steun" sense="steun" word="steun"/>
+            <node begin="9" cat="pp" end="43" id="19" rel="mod">
+              <node begin="9" end="10" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="20" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+              <node begin="10" cat="conj" end="43" id="21" rel="obj1">
+                <node begin="16" end="17" frame="conj(en)" id="22" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                <node begin="10" cat="conj" end="43" id="23" rel="cnj">
+                  <node begin="13" end="14" frame="conj(en)" id="24" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                  <node begin="10" cat="np" end="43" id="25" rel="cnj">
+                    <node begin="10" end="11" frame="determiner(de)" id="26" index="2" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                    <node aform="base" begin="11" end="12" frame="adjective(e)" id="27" infl="e" lcat="ap" pos="adj" rel="mod" root="noodzakelijk" sense="noodzakelijk" vform="adj" word="noodzakelijke"/>
+                    <node aform="base" begin="12" end="13" frame="adjective(e)" id="28" infl="e" lcat="np" pos="adj" rel="hd" root="economisch" sense="economisch" vform="adj" word="economische"/>
+                    <node begin="24" cat="rel" end="43" id="29" index="3" rel="mod">
+                      <node begin="24" case="no_obl" end="25" frame="rel_pronoun(de,no_obl)" gen="de" id="30" index="4" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+                      <node begin="24" cat="ssub" end="43" id="31" rel="body">
+                        <node begin="24" end="25" id="32" index="4" rel="su"/>
+                        <node begin="26" end="27" frame="verb(unacc,pl,copula)" id="33" infl="pl" lcat="ssub" pos="verb" rel="hd" root="ben" sc="copula" sense="ben" tense="present" word="zijn"/>
+                        <node begin="25" cat="ppart" end="43" id="34" rel="predc">
+                          <node aform="base" begin="25" end="26" frame="adjective(ge_no_e(adv),pp(op))" id="35" infl="no_e" lcat="ppart" pos="adj" rel="hd" root="gericht" sc="pp(op)" sense="gericht-op" vform="psp" word="gericht"/>
+                          <node begin="27" cat="pp" end="43" id="36" rel="pc">
+                            <node begin="27" end="28" frame="preposition(op,[af,na])" id="37" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+                            <node begin="28" cat="conj" end="43" id="38" rel="obj1">
+                              <node begin="28" cat="np" end="37" id="39" rel="cnj">
+                                <node begin="28" end="29" frame="determiner(de)" id="40" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                                <node begin="29" end="30" frame="noun(de,mass,sg)" gen="de" id="41" lcat="np" num="sg" pos="noun" rel="hd" root="totstandbrenging" sense="totstandbrenging" word="totstandbrenging"/>
+                                <node begin="30" cat="pp" end="37" id="42" rel="mod">
+                                  <node begin="30" end="31" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="43" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                                  <node begin="31" cat="np" end="37" id="44" rel="obj1">
+                                    <node begin="31" end="32" frame="determiner(een)" id="45" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+                                    <node aform="base" begin="32" end="33" frame="adjective(no_e(adv))" id="46" infl="no_e" lcat="ap" pos="adj" rel="mod" root="gunstig" sense="gunstig" vform="adj" word="gunstig"/>
+                                    <node begin="33" end="34" frame="noun(het,count,sg)" gen="het" id="47" lcat="np" num="sg" pos="noun" rel="hd" root="klimaat" sense="klimaat" word="klimaat"/>
+                                    <node begin="34" cat="pp" end="37" id="48" rel="mod">
+                                      <node begin="34" end="35" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="49" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+                                      <node begin="35" cat="np" end="37" id="50" rel="obj1">
+                                        <node aform="base" begin="35" end="36" frame="adjective(e)" id="51" infl="e" lcat="ap" pos="adj" rel="mod" root="particulier" sense="particulier" vform="adj" word="particuliere"/>
+                                        <node begin="36" end="37" frame="noun(de,count,pl)" gen="de" id="52" lcat="np" num="pl" pos="noun" rel="hd" root="investering" sense="investering" word="investeringen"/>
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                              <node begin="37" end="38" frame="conj(en)" id="53" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                              <node begin="38" cat="np" end="43" id="54" rel="cnj">
+                                <node begin="38" end="39" frame="determiner(de)" id="55" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                                <node begin="39" end="40" frame="noun(de,count,sg)" gen="de" id="56" lcat="np" num="sg" pos="noun" rel="hd" root="ontwikkeling" sense="ontwikkeling" word="ontwikkeling"/>
+                                <node begin="40" cat="pp" end="43" id="57" rel="mod">
+                                  <node begin="40" end="41" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="58" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                                  <node begin="41" cat="np" end="43" id="59" rel="obj1">
+                                    <node begin="41" end="42" frame="determiner(een)" id="60" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+                                    <node aform="base" begin="42" end="43" frame="adjective(e)" id="61" infl="e" lcat="np" pos="adj" rel="hd" root="dynamisch" sense="dynamisch" vform="adj" word="dynamische"/>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node begin="10" cat="np" end="43" id="62" rel="cnj">
+                    <node begin="10" end="11" id="63" index="2" rel="det"/>
+                    <node aform="base" begin="14" end="15" frame="adjective(e)" id="64" infl="e" lcat="ap" pos="adj" rel="mod" root="institutioneel" sense="institutioneel" vform="adj" word="institutionele"/>
+                    <node begin="15" end="16" frame="noun(de,count,pl)" gen="de" id="65" lcat="np" num="pl" pos="noun" rel="hd" root="hervorming" sense="hervorming" word="hervormingen"/>
+                    <node begin="24" end="43" id="66" index="3" rel="mod"/>
+                  </node>
+                </node>
+                <node begin="17" cat="np" end="43" id="67" rel="cnj">
+                  <node begin="17" end="18" frame="noun(de,count,pl)" gen="de" id="68" lcat="np" num="pl" pos="noun" rel="hd" root="beleid_lijn" sense="beleid_lijn" word="beleidslijnen"/>
+                  <node begin="18" cat="pp" end="23" id="69" rel="mod">
+                    <node begin="18" end="19" frame="preposition(op,[af,na])" id="70" lcat="pp" pos="prep" rel="hd" root="op" sense="op" word="op"/>
+                    <node begin="19" cat="np" end="23" id="71" rel="obj1">
+                      <node begin="19" cat="conj" end="22" id="72" rel="mod">
+                        <node aform="base" begin="19" end="20" frame="adjective(no_e(adv))" id="73" infl="no_e" lcat="ap" pos="adj" rel="cnj" root="nationaal" sense="nationaal" vform="adj" word="nationaal"/>
+                        <node begin="20" end="21" frame="conj('en/of')" id="74" lcat="vg" pos="vg" rel="crd" root="en/of" sense="en/of" word="en/of"/>
+                        <node aform="base" begin="21" end="22" frame="adjective(no_e(adv))" id="75" infl="no_e" lcat="ap" pos="adj" rel="cnj" root="regionaal" sense="regionaal" vform="adj" word="regionaal"/>
+                      </node>
+                      <node begin="22" end="23" frame="noun(het,count,sg)" gen="het" id="76" lcat="np" num="sg" pos="noun" rel="hd" root="niveau" sense="niveau" word="niveau"/>
+                    </node>
+                  </node>
+                  <node begin="24" end="43" id="77" index="3" rel="mod"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="7" end="43" id="78" index="1" rel="su"/>
+      </node>
+      <node begin="44" cat="np" end="49" id="79" rel="sat">
+        <node begin="44" cat="conj" end="47" id="80" rel="mod">
+          <node aform="base" begin="44" end="45" frame="adjective(e)" id="81" infl="e" lcat="ap" pos="adj" rel="cnj" root="levensvatbaar" sense="levensvatbaar" vform="adj" word="levensvatbare"/>
+          <node begin="45" end="46" frame="conj(en)" id="82" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+          <node aform="base" begin="46" end="47" frame="adjective(ende(padv))" id="83" infl="e" lcat="ppres" pos="adj" rel="cnj" root="concurrerend" sense="concurrerend" vform="gerund" word="concurrerende"/>
+        </node>
+        <node aform="base" begin="47" end="48" frame="adjective(e)" id="84" infl="e" lcat="ap" pos="adj" rel="mod" root="particulier" sense="particulier" vform="adj" word="particuliere"/>
+        <node begin="48" end="49" frame="noun(de,count,sg)" gen="de" id="85" lcat="np" num="sg" pos="noun" rel="hd" root="sector" sense="sector" word="sector"/>
+      </node>
+    </node>
+    <node begin="49" end="50" frame="punct(punt)" id="86" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>In het kader van de samenwerking wordt steun verleend voor de noodzakelijke economische en institutionele hervormingen en beleidslijnen op nationaal en/of regionaal niveau , die gericht zijn op de totstandbrenging van een gunstig klimaat voor particuliere investeringen en de ontwikkeling van een dynamische , levensvatbare en concurrerende particuliere sector .</sentence>
+  <comments>
+    <comment>Q#550|In het kader van de samenwerking wordt steun verleend voor de noodzakelijke economische en institutionele hervormingen en beleidslijnen op nationaal en/of regionaal niveau , die gericht zijn op de totstandbrenging van een gunstig klimaat voor particuliere investeringen en de ontwikkeling van een dynamische , levensvatbare en concurrerende particuliere sector .|1|1|1.2544087163485296</comment>
+  </comments>
+</alpino_ds>

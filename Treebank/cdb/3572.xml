@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="31" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="23" end="24" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="30" id="3" rel="--">
+      <node begin="0" cat="np" end="2" id="4" rel="su">
+        <node begin="0" end="1" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="6" lemma="luidsprekerwagen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wagen" word="luidsprekerwagen"/>
+      </node>
+      <node begin="2" end="3" id="7" lemma="kondigen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kondig" word="kondigde" wvorm="pv"/>
+      <node begin="3" cat="pp" end="23" id="8" rel="mod">
+        <node begin="3" end="4" id="9" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+        <node begin="4" end="5" id="10" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+        <node begin="5" cat="np" end="23" id="11" rel="obj1">
+          <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="aanvang" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aanvang" word="aanvang"/>
+          <node begin="7" cat="pp" end="23" id="14" rel="mod">
+            <node begin="7" end="8" id="15" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="8" cat="np" end="23" id="16" rel="obj1">
+              <node begin="8" end="9" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="raadsvergadering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vergadering" word="raadsvergadering"/>
+              <node begin="11" cat="ppart" end="23" id="19" rel="mod">
+                <node begin="11" buiging="zonder" end="12" graad="basis" id="20" lemma="speciaal" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="speciaal" word="speciaal"/>
+                <node begin="12" buiging="zonder" end="13" id="21" lemma="beleggen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="belegd" word="belegd" wvorm="vd"/>
+                <node begin="13" cat="oti" end="23" id="22" rel="mod">
+                  <node begin="13" end="14" id="23" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+                  <node begin="14" cat="ti" end="23" id="24" rel="body">
+                    <node begin="21" end="22" id="25" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+                    <node begin="14" cat="inf" end="23" id="26" rel="body">
+                      <node begin="14" cat="np" end="21" id="27" rel="obj1">
+                        <node begin="14" end="15" id="28" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                        <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="29" lemma="structuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="structuur" word="structuur"/>
+                        <node begin="16" cat="pp" end="21" id="30" rel="mod">
+                          <node begin="16" end="17" id="31" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                          <node begin="17" cat="np" end="21" id="32" rel="obj1">
+                            <node begin="17" end="18" id="33" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                            <node begin="18" buiging="zonder" end="19" graad="basis" id="34" lemma="openbaar" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="openbaar" word="openbaar"/>
+                            <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="35" lemma="lichaam" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="lichaam" word="lichaam"/>
+                            <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="36" lemma="Rijnmond" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Rijnmond" word="Rijnmond"/>
+                          </node>
+                        </node>
+                      </node>
+                      <node begin="22" buiging="zonder" end="23" id="37" lemma="bespreken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bespreek" word="bespreken" wvorm="inf"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="24" cat="np" end="29" id="38" rel="obj1">
+        <node begin="24" end="25" id="39" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="40" lemma="betoging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="betoging" word="betoging"/>
+        <node begin="26" cat="pp" end="29" id="41" rel="mod">
+          <node begin="26" end="27" id="42" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+          <node begin="27" cat="np" end="29" id="43" rel="obj1">
+            <node begin="27" end="28" id="44" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="28" end="29" genus="onz" getal="ev" graad="basis" id="45" lemma="stadhuis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stadhuis" word="stadhuis"/>
+          </node>
+        </node>
+      </node>
+      <node begin="29" end="30" id="46" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
+    </node>
+    <node begin="30" end="31" id="47" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een luidsprekerwagen kondigde al voor de aanvang van de raadsvergadering , speciaal belegd om de structuur van het openbaar lichaam Rijnmond te bespreken , een betoging voor het stadhuis aan .</sentence>
+</alpino_ds>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="np" end="4" id="1" rel="--">
+      <node begin="0" buiging="zonder" end="1" getal-n="zonder-n" id="2" lemma="openen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="open" word="Openen" wvorm="inf"/>
+      <node begin="1" cat="pp" end="4" id="3" rel="mod">
+        <node begin="1" end="2" id="4" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="2" cat="np" end="4" id="5" rel="obj1">
+          <node begin="2" end="3" genus="genus" getal="ev" graad="basis" id="6" lemma="aspx" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mod" root="aspx" word="aspx"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="bestand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bestand" word="bestanden"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Openen van aspx bestanden</sentence>
+</alpino_ds>

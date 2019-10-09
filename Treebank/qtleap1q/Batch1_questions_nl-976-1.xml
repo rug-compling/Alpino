@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="5" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="menu" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="menu" word="menu"/>
+        <node begin="2" cat="pp" end="5" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="3" cat="mwu" end="5" id="7" rel="obj1">
+            <node begin="3" end="4" id="8" lemma="Word" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Word" spectype="deeleigen" word="Word"/>
+            <node begin="4" end="5" id="9" lemma="2013" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="2013" spectype="deeleigen" word="2013"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" id="10" lemma="verdwijnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="verdwijn" word="verdwijnt" wvorm="pv"/>
+      <node begin="6" buiging="zonder" end="7" graad="basis" id="11" lemma="automatisch" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="automatisch" word="automatisch"/>
+    </node>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het menu in Word 2013 verdwijnt automatisch .</sentence>
+</alpino_ds>

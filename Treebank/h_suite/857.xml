@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="15" end="16" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="0" cat="cp" end="18" id="2" rel="--">
+      <node begin="0" conjtype="onder" end="1" id="3" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="Omdat"/>
+      <node begin="1" cat="ssub" end="18" id="4" rel="body">
+        <node begin="1" cat="np" end="3" id="5" index="1" rel="su">
+          <node begin="1" buiging="zonder" end="2" getal="ev" id="6" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="vader" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vader" word="vader"/>
+        </node>
+        <node begin="6" end="7" id="8" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+        <node begin="1" cat="ppart" end="18" id="9" rel="vc">
+          <node begin="1" end="3" id="10" index="1" rel="su"/>
+          <node begin="3" cat="pp" end="6" id="11" rel="mod">
+            <node begin="3" end="4" id="12" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="4" cat="mwu" end="6" id="13" rel="obj1">
+              <node begin="4" end="5" id="14" lemma="Lage" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lage" spectype="deeleigen" word="Lage"/>
+              <node begin="5" end="6" id="15" lemma="Vuursche" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Vuursche" spectype="deeleigen" word="Vuursche"/>
+            </node>
+          </node>
+          <node begin="7" buiging="zonder" end="8" id="16" lemma="onderdokken" pos="part" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="svp" root="ondergedoken" word="ondergedoken" wvorm="vd"/>
+          <node begin="8" buiging="zonder" end="9" id="17" lemma="zitten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zit_ondergedoken" word="gezeten" wvorm="vd"/>
+          <node begin="9" cat="pp" end="18" id="18" rel="mod">
+            <node begin="9" end="10" id="19" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="10" cat="np" end="18" id="20" rel="obj1">
+              <node begin="10" end="11" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="11" buiging="met-e" end="12" graad="comp" id="22" lemma="laat" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="laat" word="latere"/>
+              <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="23" lemma="bisschop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bisschop" word="bisschop"/>
+              <node begin="13" cat="pp" end="18" id="24" rel="mod">
+                <node begin="13" end="14" id="25" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="14" cat="np" end="18" id="26" rel="obj1">
+                  <node begin="14" end="15" genus="genus" getal="ev" graad="basis" id="27" lemma="Jayapura" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Jayapura" word="Jayapura"/>
+                  <node begin="16" cat="mwu" end="18" id="28" rel="mod">
+                    <node begin="16" end="17" id="29" lemma="Nieuw" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nieuw" spectype="deeleigen" word="Nieuw"/>
+                    <node begin="17" end="18" id="30" lemma="Guinea" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Guinea" spectype="deeleigen" word="Guinea"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="31" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+  </node>
+  <sentence>Omdat mijn vader in Lage Vuursche heeft ondergedoken gezeten met de latere bisschop van Jayapura ( Nieuw Guinea )</sentence>
+</alpino_ds>

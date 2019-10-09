@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="11" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" end="3" id="6" lemma="toen" pos="adv" postag="BW()" pt="bw" rel="mod" root="toen" word="toen"/>
+        <node begin="5" buiging="zonder" end="6" id="7" lemma="presteren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="presteer" word="gepresteerd" wvorm="vd"/>
+        <node begin="3" cat="ap" end="11" id="8" rel="mod">
+          <node begin="3" buiging="zonder" end="4" graad="basis" id="9" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="mod" root="veel" vwtype="onbep" word="veel"/>
+          <node begin="4" buiging="zonder" end="5" graad="comp" id="10" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="goed" word="beter"/>
+          <node begin="6" cat="cp" end="11" id="11" rel="obcomp">
+            <node begin="6" conjtype="onder" end="7" id="12" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+            <node begin="7" cat="du" end="11" id="13" rel="body">
+              <node begin="7" end="8" id="14" lemma="destijds" pos="adv" postag="BW()" pt="bw" rel="dp" root="destijds" word="destijds"/>
+              <node begin="8" cat="pp" end="11" id="15" rel="dp">
+                <node begin="8" end="9" id="16" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+                <node begin="9" cat="mwu" end="11" id="17" rel="obj1">
+                  <node begin="9" end="10" id="18" lemma="FC" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="FC" spectype="deeleigen" word="FC"/>
+                  <node begin="10" end="11" id="19" lemma="Groningen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Groningen" spectype="deeleigen" word="Groningen"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Hij heeft toen veel beter gepresteerd dan destijds bij FC Groningen</sentence>
+</alpino_ds>

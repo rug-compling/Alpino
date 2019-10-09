@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" genus="genus" getal="ev" graad="basis" id="2" lemma="Oranje" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="su" root="Oranje" word="Oranje"/>
+      <node begin="1" end="2" id="3" lemma="beginnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="begin" word="begon" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="4" rel="obj1">
+        <node begin="2" end="3" id="5" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="3" buiging="zonder" end="4" getal-n="zonder-n" id="6" lemma="treffen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="tref" word="treffen" wvorm="inf"/>
+      </node>
+      <node begin="4" cat="pp" end="7" id="7" rel="mod">
+        <node begin="4" end="5" id="8" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="5" cat="np" end="7" id="9" rel="obj1">
+          <node begin="5" buiging="met-e" end="6" graad="basis" id="10" lemma="acceptabel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="acceptabel" word="acceptabele"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="wijze" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wijze" word="wijze"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Oranje begon het treffen op acceptabele wijze .</sentence>
+</alpino_ds>

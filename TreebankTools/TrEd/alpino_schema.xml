@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pml_schema xmlns="http://ufal.mff.cuni.cz/pdt/pml/schema/" version="1.1">
+  <revision>0.0.2</revision>
+  <description>Alpino DS 1.5</description>
+
+  <root name="alpino_ds_pml" type="alpino_ds.type"/>
+
+  <type name="alpino_ds.type">
+    <structure>
+      <member name="version"><cdata format="any"/></member>
+      <member name="metadata">
+        <sequence content_pattern="meta*">
+          <element name="meta" type="meta.type"/>
+        </sequence>
+      </member>
+      <member name="sentence" type="sentence.type"/>
+      <member name="sentid"><cdata format="any"/></member>
+      <member name="comments">
+        <sequence content_pattern="comment*">
+          <element name="comment" type="comment.type"/>
+        </sequence>
+      </member>
+      <member name="trees" role="#TREES">
+        <sequence content_pattern="node">
+          <element name="node" type="node.type"/>
+        </sequence>
+      </member>
+    </structure>
+  </type>
+
+  <type name="meta.type">
+    <structure>
+      <member name="type" type="meta.type.type"/>
+      <member name="name"><cdata format="any"/></member>
+      <member name="value"><cdata format="any"/></member>
+    </structure>
+  </type>
+
+  <type name="node.type">
+    <container role="#NODE">
+      <attribute name="rel" type="rel.type" required="1"/>
+      <attribute name="pos" type="pos.type"/>
+      <attribute name="cat" type="cat.type"/>
+      <attribute name="index"><cdata format="nonNegativeInteger"/></attribute>
+      <attribute name="root"><cdata format="normalizedString"/></attribute>
+      <attribute name="postag"><cdata format="normalizedString"/></attribute>
+      <attribute name="lemma"><cdata format="normalizedString"/></attribute>
+      <attribute name="word"><cdata format="normalizedString"/></attribute>
+      <!-- START: attributes added since version 1.1 -->
+      <!-- not needed:
+           buiging
+           conjtype
+           dial
+           genus
+           getal
+           getal-n
+           graad
+           lwtype
+           naamval
+           npagr
+           ntype
+           numtype
+           pdtype
+           persoon
+           positie
+           pt
+           pvagr
+           pvtijd
+           spectype
+           status
+           vwtype
+           vztype
+           wvorm
+      -->
+      <!--
+      <attribute name="aform"><cdata format="normalizedString"/></attribute>
+      <attribute name="case"><cdata format="normalizedString"/></attribute>
+      <attribute name="comparative"><cdata format="normalizedString"/></attribute>
+      <attribute name="def"><cdata format="normalizedString"/></attribute>
+      <attribute name="frame"><cdata format="normalizedString"/></attribute>
+      <attribute name="gen"><cdata format="normalizedString"/></attribute>
+      <attribute name="iets"><cdata format="normalizedString"/></attribute>
+      <attribute name="infl"><cdata format="normalizedString"/></attribute>
+      <attribute name="lcat"><cdata format="normalizedString"/></attribute>
+      <attribute name="mwu_root"><cdata format="normalizedString"/></attribute>
+      <attribute name="mwu_sense"><cdata format="normalizedString"/></attribute>
+      <attribute name="neclass"><cdata format="normalizedString"/></attribute>
+      <attribute name="num"><cdata format="normalizedString"/></attribute>
+      <attribute name="pb" type="pb.type"/>
+      <attribute name="per"><cdata format="normalizedString"/></attribute>
+      <attribute name="personalized"><cdata format="normalizedString"/></attribute>
+      <attribute name="pron"><cdata format="normalizedString"/></attribute>
+      <attribute name="refl"><cdata format="normalizedString"/></attribute>
+      <attribute name="rnum"><cdata format="normalizedString"/></attribute>
+      <attribute name="sc"><cdata format="normalizedString"/></attribute>
+      -->
+      <attribute name="sense"><cdata format="normalizedString"/></attribute>
+      <!--
+      <attribute name="special"><cdata format="normalizedString"/></attribute>
+      <attribute name="stype"><cdata format="normalizedString"/></attribute>
+      <attribute name="tense"><cdata format="normalizedString"/></attribute>
+      <attribute name="vform"><cdata format="normalizedString"/></attribute>
+      <attribute name="wh"><cdata format="normalizedString"/></attribute>
+      <attribute name="wk" type="wk.type"/>
+      -->
+      <!-- END: attributes added since version 1.1 -->
+      <attribute name="wordno"><cdata format="nonNegativeInteger"/></attribute>
+      <!-- <attribute name="begin"><cdata format="nonNegativeInteger"/></attribute> -->
+      <!-- <attribute name="end"><cdata format="nonNegativeInteger"/></attribute> -->
+      <!-- <attribute name="id"><cdata format="nonNegativeInteger"/></attribute> -->
+      <sequence role="#CHILDNODES" content_pattern="node*">
+        <element name="node" type="node.type"/>
+      </sequence>
+    </container>
+  </type>
+
+  <type name="sentence.type">
+    <cdata format="any"/>
+  </type>
+
+  <type name="comment.type">
+    <cdata format="any"/>
+  </type>
+
+  <type name="meta.type.type">
+    <choice>
+      <value>text</value>
+      <value>int</value>
+      <value>float</value>
+      <value>date</value>
+      <value>datetime</value>
+    </choice>
+  </type>
+
+  <type name="rel.type">
+    <choice>
+      <value>--</value>
+      <value>app</value>
+      <value>body</value>
+      <value>cmp</value>
+      <value>cnj</value>
+      <value>crd</value>
+      <value>det</value>
+      <value>dlink</value>
+      <value>dp</value>
+      <value>hd</value>
+      <value>hdf</value>
+      <value>ld</value>
+      <value>me</value>
+      <value>mod</value>
+      <value>mwp</value>
+      <value>nucl</value>
+      <value>obcomp</value>
+      <value>obj1</value>
+      <value>obj2</value>
+      <value>pc</value>
+      <value>pobj1</value>
+      <value>predc</value>
+      <value>predm</value>
+      <value>rhd</value>
+      <value>sat</value>
+      <value>se</value>
+      <value>su</value>
+      <value>sup</value>
+      <value>svp</value>
+      <value>tag</value>
+      <value>top</value>
+      <value>vc</value>
+      <value>whd</value>
+    </choice>
+  </type>
+
+  <type name="cat.type">
+    <choice>
+      <value>advp</value>
+      <value>ahi</value>
+      <value>ap</value>
+      <value>conj</value>
+      <value>cp</value>
+      <value>detp</value>
+      <value>du</value>
+      <value>inf</value>
+      <value>mwu</value>
+      <value>np</value>
+      <value>oti</value>
+      <value>pp</value>
+      <value>ppart</value>
+      <value>ppres</value>
+      <value>rel</value>
+      <value>smain</value>
+      <value>ssub</value>
+      <value>sv1</value>
+      <value>svan</value>
+      <value>ti</value>
+      <value>whq</value>
+      <value>whrel</value>
+      <value>whsub</value>
+      <value>top</value>
+    </choice>
+  </type>
+
+  <type name="pos.type">
+    <choice>
+      <value>adj</value>
+      <value>adv</value>
+      <value>ahi</value>
+      <value>comp</value>
+      <value>comparative</value>
+      <value>det</value>
+      <value>fixed</value>
+      <value>name</value>
+      <value>noun</value>
+      <value>num</value>
+      <value>part</value>
+      <value>pp</value>
+      <value>prefix</value>
+      <value>prep</value>
+      <value>pron</value>
+      <value>punct</value>
+      <value>tag</value>
+      <value>te</value>
+      <value>verb</value>
+      <value>vg</value>
+      <value>--</value>
+    </choice>
+  </type>
+
+  <type name="pb.type">
+    <choice>
+      <value>Arg0</value>
+      <value>Arg1</value>
+      <value>Arg2</value>
+      <value>Arg3</value>
+      <value>Arg4</value>
+      <value>Arg5</value>
+      <value>ArgM-ADV</value>
+      <value>ArgM-CAU</value>
+      <value>ArgM-DIR</value>
+      <value>ArgM-DIS</value>
+      <value>ArgM-EXT</value>
+      <value>ArgM-LOC</value>
+      <value>ArgM-MNR</value>
+      <value>ArgM-MOD</value>
+      <value>ArgM-NEG</value>
+      <value>ArgM-PNC</value>
+      <value>ArgM-PRD</value>
+      <value>ArgM-REC</value>
+      <value>ArgM-STR</value>
+      <value>ArgM-TMP</value>
+      <value>rel</value>
+      <value>SYNT</value>
+    </choice>
+  </type>
+
+  <type name="wk.type">
+    <choice>
+      <value>yes</value>
+    </choice>
+  </type>
+
+
+</pml_schema>

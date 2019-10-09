@@ -1,0 +1,101 @@
+\begin{verbatim}
+%%% use examples/0 to view examples, parse_ex/1 to parse examples
+
+examples :-
+        write('no analyses sentence'),
+        format_example(1).
+        
+format_example(N) :-
+        ( example(N,Ana,Sentence) ->
+          format('~n~d~3+~d~8+',[N,Ana]),
+          pprint_sent(Sentence),
+          N1 is N + 1,
+          format_example(N1)
+        ; true
+        ).
+
+pprint_sent([W]) :- format('~a.',[W]).
+pprint_sent([W|R]) :- format('~a ',[W]), pprint_sent(R).
+        
+parse_ex(N) :-
+        example(N,_,Sentence),
+        nl, pprint_sent(Sentence), nl,
+        parse(Sentence).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% example set %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% example(No,Analyses,Sentence).
+
+%% basics (main and subordinate clauses, relatives, questions)
+
+example(1, 1, [jan,slaapt]).
+example(2, 1, [de,mannen,uit,groningen,slapen]).
+example(3, 2, [jan,kust,marie]).
+example(4, 2, [de,man,die,slaapt,kust,marie]).
+example(5, 1, [de,man,van,wie,marie,houdt,slaapt]).
+example(6, 1, [de,vrouw,wiens,broer,ik,ken,slaapt]).
+example(7, 2, [wie,denk,ik,dat,marie,kust]).
+
+%% vraising, extraposition, and partial extraposition
+%% subordinate clauses (probeert is ambiguous)
+
+example(8, 1, [ik,denk,dat,hij,marie,wil,kussen]).
+example(9, 0, [ik,denk,dat,hij,wil,marie,kussen]).
+example(10, 1, [ik,denk,dat,hij,jan,marie,ziet,kussen]).
+
+example(11, 1, [ik,denk,dat,hij,marie,vraagt,het,boek,te,lezen]).
+example(12, 0, [ik,denk,dat,hij,marie,het,boek,vraagt,te,lezen]).
+example(13, 1, [ik,denk,dat,hij,verzuimt,marie,te,kussen]).
+example(14, 1, [ik,denk,dat,hij,marie,verzuimt,te,kussen]).
+example(15, 1, [ik,denk,dat,hij,probeert,marie,te,kussen]).
+example(16, 2, [ik,denk,dat,hij,marie,probeert,te,kussen]).
+
+%% phrasal and subphrasal constituents
+
+example(17, 1, [ik,denk,dat,hij,marie,heeft,willen,kussen]).
+example(18, 1, [ik,denk,dat,hij,marie,schijnt,op,te,bellen]).
+example(19, 1, [ik,denk,dat,hij,marie,heeft,willen,op,bellen]).
+example(20, 1, [ik,denk,dat,hij,marie,heeft,op,willen,bellen]).
+example(21, 1, [ik,denk,dat,hij,marie,op,heeft,willen,bellen]).
+example(22, 1, [ik,denk,dat,hij,marie,heeft,gevraagd,het,boek,te,lezen]).
+example(23, 1, [ik,denk,dat,hij,marie,heeft,geprobeerd,te,kussen]).
+example(24, 1, [ik,denk,dat,hij,marie,heeft,proberen,te,kussen]).
+
+%% participle inversion 
+
+example(25, 1, [ik,denk,dat,hij,marie,heeft,gekust]).
+example(26, 1, [ik,denk,dat,hij,marie,gekust,heeft]).
+example(27, 1, [ik,denk,dat,hij,van,marie,gehouden,moet,hebben]).
+example(28, 0, [ik,denk,dat,hij,van,marie,moet,gehouden,hebben]).
+
+%% oke with extraposition, but not with vr verbs
+
+example(29, 1, [ik,denk,dat,jan,hem,gevraagd,heeft,marie,op,te,bellen]).
+example(30, 0, [ik,denk,dat,hij,marie,willen,heeft,op,bellen]).
+
+%% modal inversion, only with finite modals, complement must be -vr
+
+example(31, 1, [ik,denk,dat,hij,marie,kussen,wil]).
+example(32, 0, [ik,denk,dat,hij,marie,kussen,heeft,willen]).
+example(33, 1, [ik,denk,dat,jan,hem,vragen,wil,marie,te,kussen]).
+example(34, 0, [ik,denk,dat,hij,marie,hebben,wil,gekust]).
+
+%% the scope of adjuncts
+
+example(35, 2, [ik,denk,dat,jan,marie,mogelijk,kussen,wil]).
+example(36, 2, [ik,denk,dat,jan,altijd,een,meisje,kussen,wil]).
+example(37, 1, [ik,denk,dat,altijd,een,jongen,haar,kussen,wil]).
+
+%% adjunct topicalization (spurious ambiguities arising from interaction of
+%% extraction-lr, add-adjuncts rule, and division)
+
+example(38, 7, [nooit,hoor,ik,marie,zingen]).
+
+%% vp topicalization (spurious ambiguities arising from interaction of 
+%% v1/v2 and inversion)
+
+example(39, 2, [kussen,wil,jan,marie]).
+example(40, 2, [marie,kussen,wil,jan]).
+example(41, 1, [willen,kussen,heeft,jan,marie]).
+example(42, 0, [willen,heeft,jan,marie,kussen]).
+\end{verbatim}

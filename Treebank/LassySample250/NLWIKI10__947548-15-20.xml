@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="0" cat="conj" end="19" id="1" rel="--">
+      <node begin="0" cat="smain" end="6" id="2" rel="cnj">
+        <node begin="0" cat="pp" end="3" id="3" rel="mod">
+          <node begin="0" end="1" frame="preposition(na,[])" id="4" lcat="pp" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" sense="na" vztype="init" word="Na"/>
+          <node begin="1" cat="np" end="3" id="5" rel="obj1">
+            <node begin="1" end="2" frame="determiner(pron)" getal="ev" id="6" infl="pron" lcat="detp" lemma="die" naamval="gen" pdtype="pron" persoon="3m" pos="det" postag="VNW(aanw,pron,gen,vol,3m,ev)" pt="vnw" rel="det" root="diens" sense="diens" status="vol" vwtype="aanw" word="diens"/>
+            <node begin="2" buiging="zonder" end="3" frame="noun(de,count,sg)" gen="de" graad="basis" id="7" lcat="np" lemma="dood" num="sg" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="dood" sense="dood" word="dood"/>
+          </node>
+        </node>
+        <node begin="3" end="4" frame="verb(unacc,sg3,copula)" id="8" infl="sg3" lcat="smain" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" sc="copula" sense="word" tense="present" word="wordt" wvorm="pv"/>
+        <node begin="4" case="nom" def="def" end="5" frame="pronoun(nwh,thi,sg,de,nom,def)" gen="de" genus="masc" getal="ev" id="9" index="1" lcat="np" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" sense="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+        <node aform="base" begin="5" buiging="zonder" end="6" frame="adjective(no_e(adv))" graad="basis" id="10" infl="no_e" lcat="ap" lemma="stil" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="stil" sense="stil" vform="adj" word="stil"/>
+      </node>
+      <node begin="6" conjtype="neven" end="7" frame="conj(en)" id="11" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="4" cat="smain" end="19" id="12" rel="cnj">
+        <node begin="4" end="5" id="13" index="1" rel="su"/>
+        <node begin="7" end="8" frame="verb(hebben,sg,vp)" id="14" infl="sg" lcat="smain" lemma="trachten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="tracht" sc="vp" sense="tracht" tense="present" word="tracht" wvorm="pv"/>
+        <node begin="4" cat="ti" end="19" id="15" rel="vc">
+          <node begin="8" end="9" frame="complementizer(te)" id="16" lcat="cp" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" sense="te" vztype="init" word="te"/>
+          <node begin="4" cat="inf" end="19" id="17" rel="body">
+            <node begin="4" end="5" id="18" index="1" rel="su"/>
+            <node begin="9" buiging="zonder" end="10" frame="verb(zijn,inf,intransitive)" id="19" infl="inf" lcat="inf" lemma="ontsnappen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ontsnap" sc="intransitive" sense="ontsnap" word="ontsnappen" wvorm="inf"/>
+            <node begin="10" cat="conj" end="19" id="20" rel="mod">
+              <node begin="10" cat="cp" end="14" id="21" rel="cnj">
+                <node begin="10" end="11" frame="complementizer(inf)" id="22" lcat="cp" lemma="door" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="door" sc="inf" sense="door" vztype="init" word="door"/>
+                <node begin="11" cat="ti" end="14" id="23" rel="body">
+                  <node begin="12" end="13" frame="complementizer(te)" id="24" lcat="cp" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" sense="te" vztype="init" word="te"/>
+                  <node begin="11" cat="inf" end="14" id="25" rel="body">
+                    <node begin="11" end="12" frame="loc_adverb" genus="zijd" getal="ev" graad="basis" id="26" lcat="advp" lemma="weg" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="ld" root="weg" sense="weg" special="loc" word="weg"/>
+                    <node begin="13" buiging="zonder" end="14" frame="verb('hebben/zijn',inf,ld_adv)" id="27" infl="inf" lcat="inf" lemma="lopen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="loop" sc="ld_adv" sense="loop" word="lopen" wvorm="inf"/>
+                  </node>
+                </node>
+              </node>
+              <node begin="14" conjtype="neven" end="15" frame="conj(en)" id="28" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+              <node begin="15" cat="pp" end="19" id="29" rel="cnj">
+                <node aform="compar" begin="15" buiging="zonder" end="16" frame="adjective(er(tmpadv))" graad="comp" id="30" infl="no_e" lcat="ap" lemma="later" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="laat" sense="laat" vform="adj" word="later"/>
+                <node begin="16" end="17" frame="preposition(via,[])" id="31" lcat="pp" lemma="via" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="via" sense="via" vztype="init" word="via"/>
+                <node begin="17" cat="np" end="19" id="32" rel="obj1">
+                  <node begin="17" end="18" frame="determiner(een)" id="33" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+                  <node begin="18" end="19" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="34" lcat="np" lemma="zelfmoordpoging" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zelfmoord_poging" sense="zelfmoord_poging" word="zelfmoordpoging"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" frame="punct(punt_komma)" id="35" lcat="punct" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" sense=";" special="punt_komma" word=";"/>
+  </node>
+  <sentence>Na diens dood wordt hij stil en tracht te ontsnappen door weg te lopen en later via een zelfmoordpoging ;</sentence>
+  <comments>
+    <comment>Q#947548-15-20|Na diens dood wordt hij stil en tracht te ontsnappen door weg te lopen en later via een zelfmoordpoging ;|1|1|-0.2429800533077405</comment>
+  </comments>
+</alpino_ds>

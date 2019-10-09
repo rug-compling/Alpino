@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="cp" end="14" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="hoezeer" pos="comp" postag="BW()" pt="bw" rel="cmp" root="hoezeer" word="Hoezeer"/>
+      <node begin="1" cat="ssub" end="14" id="3" rel="body">
+        <node begin="1" cat="np" end="5" id="4" rel="su">
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="tal" naamval="stan" ntype="soort" pos="det" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="tal" word="tal"/>
+          <node begin="2" cat="pp" end="5" id="6" rel="mod">
+            <node begin="2" end="3" id="7" lemma="van" pos="det" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="3" cat="np" end="5" id="8" rel="obj1">
+              <node begin="3" buiging="met-e" end="4" graad="basis" id="9" lemma="individueel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="individueel" word="individuele"/>
+              <node begin="4" end="5" getal="mv" graad="basis" id="10" lemma="advocaat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="advocaat" word="advocaten"/>
+            </node>
+          </node>
+        </node>
+        <node begin="5" end="6" getal="getal" id="11" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
+        <node begin="6" end="7" id="12" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+        <node begin="7" cat="pp" end="11" id="13" rel="mod">
+          <node begin="7" end="8" id="14" lemma="buiten" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="buiten" vztype="init" word="buiten"/>
+          <node begin="8" cat="np" end="11" id="15" rel="obj1">
+            <node begin="8" buiging="zonder" end="9" getal="mv" id="16" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+            <node begin="9" buiging="met-e" end="10" graad="basis" id="17" lemma="strikt" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="strikt" word="strikte"/>
+            <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="18" lemma="werkkring" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="werkkring" word="werkkring"/>
+          </node>
+        </node>
+        <node begin="11" cat="ap" end="13" id="19" rel="predc">
+          <node begin="11" buiging="zonder" end="12" graad="basis" id="20" lemma="maatschappelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="maatschappelijk" word="maatschappelijk"/>
+          <node begin="12" buiging="zonder" end="13" graad="basis" id="21" lemma="verdienstelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="verdienstelijk" word="verdienstelijk"/>
+        </node>
+        <node begin="13" end="14" id="22" lemma="maken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="maak" word="maken" wvorm="pv"/>
+      </node>
+    </node>
+    <node begin="14" end="15" id="23" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" word=";"/>
+  </node>
+  <sentence>Hoezeer tal van individuele advocaten zich ook buiten hun strikte werkkring maatschappelijk verdienstelijk maken ;</sentence>
+</alpino_ds>

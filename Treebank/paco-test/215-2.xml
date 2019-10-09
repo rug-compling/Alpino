@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" infl="het" pos="det" rel="det" root="het" wh="nwh" word="Het"/>
+        <node begin="1" cat="mwu" end="3" id="4" mwu_root="boekingsjournaal_kasontvangsten" mwu_sense="boekingsjournaal_kasontvangsten" rel="hd">
+          <node begin="1" end="2" id="5" num="both" pos="name" rel="mwp" root="boekingsjournaal" word="boekingsjournaal"/>
+          <node begin="2" end="3" id="6" num="both" pos="name" rel="mwp" root="kasontvangsten" word="kasontvangsten"/>
+        </node>
+      </node>
+      <node begin="3" end="4" id="7" infl="sg3" pos="verb" rel="hd" root="word" sc="passive" tense="present" word="wordt"/>
+      <node begin="0" cat="ppart" end="6" id="8" rel="vc">
+        <node begin="0" end="3" id="9" index="1" rel="obj1"/>
+        <node begin="4" end="5" id="10" pos="adv" rel="mod" root="nog" word="nog"/>
+        <node begin="5" end="6" id="11" infl="psp" pos="verb" rel="hd" root="druk_af" sc="part_transitive(af)" word="afgedrukt"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Het boekingsjournaal kasontvangsten wordt nog afgedrukt .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

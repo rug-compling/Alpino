@@ -1,0 +1,31 @@
+#!/usr/bin/perl -w
+# bigram
+# every line is assumed to contain a separate utterance
+# $x___x $x__x $x_x are prefixed and $y_y $y__y $y___y are suffixed
+
+$x__x = "x__x";
+$x_x = "x_x";
+$y__y = "y__y";
+$y_y = "y_y";
+
+
+
+while (<>)
+{
+  # simple word-boundary detector:
+  tr/A-Za-z\-\<\>\@\_/ /cs;
+  @line=($x__x,$x_x,split(' '),$y__y,$y_y);
+  $i=0;
+  while ($i < $#line) {
+    $w1=$line[$i];
+    $w2=$line[$i+1];
+    $words{"$w1 $w2"}++;
+    ++$i;
+  }
+}
+
+foreach $w (sort keys(%words)) {
+  $nr=$words{$w};
+  ($wa,$wb)=split(/ /,$w);
+  print "$wa|$wb|$nr\n";
+}

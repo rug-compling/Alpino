@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="3" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" id="4" lcat="np" num="sg" pos="noun" rel="hd" root="overheid" sense="overheid" word="overheid"/>
+      </node>
+      <node begin="2" end="3" frame="verb(hebben,sg3,transitive)" id="5" infl="sg3" lcat="smain" pos="verb" rel="hd" root="geef" sc="transitive" sense="geef" tense="present" word="geeft"/>
+      <node begin="3" cat="np" end="6" id="6" rel="obj1">
+        <node begin="3" end="4" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="7" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+        <node aform="base" begin="4" end="5" frame="adjective(e)" id="8" infl="e" lcat="ap" pos="adj" rel="mod" root="goed" sense="goed" vform="adj" word="goede"/>
+        <node begin="5" end="6" frame="noun(het,count,sg)" gen="het" id="9" lcat="np" num="sg" pos="noun" rel="hd" root="voorbeeld" sense="voorbeeld" word="voorbeeld"/>
+      </node>
+    </node>
+    <node begin="6" end="7" frame="punct(dubb_punt)" id="10" lcat="punct" pos="punct" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+  </node>
+  <sentence>De overheid geeft het goede voorbeeld :</sentence>
+  <comments>
+    <comment>Q#147|De overheid geeft het goede voorbeeld :|1|1|0.6933656416291655</comment>
+  </comments>
+</alpino_ds>

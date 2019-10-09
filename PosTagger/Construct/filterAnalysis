@@ -1,0 +1,47 @@
+#!/usr/bin/perl -w
+
+##################
+# filterAnalysis #
+##################
+
+# usage: filterAnalysis -l <old_la_file> -n <new_la_file> [ FrameFiles ... ]
+
+# This script will take a lexical analysis file and a frames file
+# and produces a new lexical analysis file in which all sentences 
+# have been removed that where not also in the frames file.
+
+use Getopt::Std;
+use vars qw($opt_l $opt_n);
+getopts('l:n:');
+
+$oldLaFile  = $opt_l;
+$newLaFile  = $opt_n;
+
+open(OLDLA,$oldLaFile)    or die 'error opening old lexical analysis file';
+open(NEWLA,">$newLaFile") or die 'error opening new lexical analysis file';
+
+# collect all keys from FRAMES
+while(<>){
+  if (/.*\|.*/) { # alpino info negeren, alsmede lege regels (?)
+    chomp;
+    (undef,undef,$key) = split(/\|/);
+    $keyhash{$key} = 1;
+  }
+}
+
+# copy from OLDLA to NEWLA using stored keys
+$writing = 0;
+while(<OLDLA>){
+	if(/^KEY/){
+	    $writing = 0;
+	    (undef,$keyAndSentence) = split(/\#/);
+	    ($spottedKey,undef)     = split(/\|/,$keyAndSentence);
+	    if($keyhash{$spottedKey}) { $writing=1 };
+	}	
+	if($writing){
+	    print NEWLA;
+	}
+}
+
+close(OLDLA);
+close(NEWLA);

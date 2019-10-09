@@ -1,0 +1,172 @@
+#!/bin/sh
+# the next line restarts using wish \
+exec wish -f "$0" "$@"
+
+#
+# This TCL-TK script generates a simple file selector box and
+# returns the selected file as string
+#
+# Programmer: Rainer Kowallik
+# Version:    1.3
+#
+
+#
+#
+## modifications for Clig by karsten konrad
+#
+
+
+canvas .c1
+pack .c1 -side top
+label .labeldir -text "Directory:"
+button .parent -text "Parent" -command { cdto ".." ; ChDir}
+button .home -text "Home" -command { cdto "HOME" ; ChDir }
+button .root -text "Root" -command { cdto "/" ; ChDir }
+button .lastdir -text "Last" -command {GotoLast}
+pack .labeldir .parent .home .root .lastdir\
+         -side left -in .c1 -padx 2m -pady 2m
+
+entry .dirname -width 40 -relief sunken -bd 2 -textvariable DirName
+pack  .dirname -side top -after .c1 -fill x -padx 1m -pady 2m
+
+entry .filename -width 40 -relief sunken -bd 2 \
+                 -textvariable FileName 
+pack  .filename -side bottom -fill x -padx 1m -pady 2m
+
+canvas .c3
+pack .c3 -side bottom -before .filename
+label .lpatt -text "show:"
+entry .pattern -width 10  -relief sunken -bd 2 -textvariable Pattern
+button .ok -text "OK" -command AcceptSelection
+button .cancel -text "Cancel" -command exit
+pack .lpatt .pattern .ok .cancel -side left -in .c3 -padx 3m -pady 2m
+
+listbox .dirs -relief raised -borderwidth 2 \
+		-yscrollcommand ".scrolldir set" \
+                -setgrid 1
+pack .dirs -side left -expand 1 -fill both
+scrollbar .scrolldir -command ".dirs yview"
+pack .scrolldir -side left -after .dirs -fill y
+
+listbox .files -relief raised -borderwidth 2 \
+		-yscrollcommand ".scrollfile set" \
+                -setgrid 1
+pack .files -side right -expand 1 -fill both
+scrollbar .scrollfile -command ".files yview"
+pack .scrollfile -side right -before .files -fill y
+
+bind .filename <Return> AcceptSelection
+bind .filename <Left> {EntryCursor .filename -1}
+bind .filename <Right> {EntryCursor .filename 1}
+bind .filename <2> {.filename insert insert "[GetXSelect]"}
+bind .dirname <Return> ChDir
+bind .dirname <Left> {EntryCursor .dirname -1}
+bind .dirname <Right> {EntryCursor .dirname 1}
+bind .dirname <2> {.dirname insert insert "[GetXSelect]"}
+bind .files <Double-Button-1> {
+    AcceptSelection
+    }
+bind .pattern <Return> ChDir
+# bind .dirs <Double-Button-1> DirSelection
+
+proc EntryCursor {w dir} {
+   set x [$w index insert]
+   set x [expr $x + $dir]
+   $w icursor $x
+}
+
+proc GetXSelect { } {
+
+   set s ""   
+   catch {set s [selection get STRING]}
+   return "$s"
+}
+
+proc ChDir { } {
+        global DirName Pattern
+        cd $DirName
+        .dirs delete 0 end
+        .files delete 0 end
+        .dirs insert end ".."
+        if {[catch {set allfiles [glob *]}]} {return}
+        foreach i [lsort $allfiles] {
+           if { [file isdirectory $i] } {
+              .dirs insert end $i
+           } else {
+	      if {[string match $Pattern $i]} {.files insert end $i}
+           }
+        }
+}
+
+proc AcceptSelection { } {
+        global DirName FileName
+        set s $DirName
+        set l [string length $s]
+        if {$l > 0} {set s ${s}/}
+        puts ${s}${FileName}
+        set f [open "~/.lastdir" w]
+        puts $f $s
+        close $f
+        exit
+}
+
+proc FileSelection { } {
+        global DirName FileName
+        set f [selection get]
+        set FileName $f
+}
+
+proc DirSelection { } {
+        global DirName FileName
+        set f [selection get]
+        cd $f
+        set DirName [pwd]
+        ChDir
+}
+
+proc GotoLast { } {
+
+   set f [open "~/.lastdir" r]
+   gets $f dir
+   cdto "$dir" ; ChDir
+}
+
+proc cdto dir { 
+        global DirName FileName
+        if { $dir == "HOME" } { cd } else { cd $dir }
+        set DirName [pwd]
+        ChDir
+}
+
+set i [lsearch $argv "-patt"]
+if {$i >= 0} {
+   incr i
+   set Pattern [lindex $argv $i]
+} else {
+   set Pattern "*"  
+}
+
+set i [lsearch $argv "-dir"]
+if {$i >= 0} {
+   incr i
+   cdto [lindex $argv $i]
+} else {
+   set DirName [pwd]
+   ChDir
+}
+
+focus .filename
+
+set DoExecute ""
+
+while { 1 == 1} {
+   after 50
+   update
+   set w [selection own]
+   switch $w {
+      .dirs {DirSelection; selection clear .dirs}
+      .files {FileSelection; selection clear .files}
+   }
+}
+
+

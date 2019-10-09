@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="5" end="6" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="15" end="16" frame="punct(komma)" id="2" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="17" id="3" rel="--">
+      <node begin="0" cat="np" end="2" id="4" rel="obj1">
+        <node aform="base" begin="0" buiging="zonder" end="1" frame="adjective(ge_both(adv))" id="5" infl="both" lcat="ppart" lemma="winnen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="mod" root="gewonnen" sense="gewonnen" vform="psp" word="Gewonnen" wvorm="vd"/>
+        <node begin="1" end="2" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="6" lcat="np" lemma="spel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="spel" sense="spel" word="spel"/>
+      </node>
+      <node begin="2" end="3" frame="verb(hebben,past(pl),transitive_ndev)" id="7" infl="pl" lcat="smain" lemma="hebben" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="heb" sc="transitive_ndev" sense="heb" tense="past" word="hadden" wvorm="pv"/>
+      <node begin="3" cat="np" end="15" id="8" rel="su">
+        <node begin="3" end="4" frame="determiner(de)" id="9" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+        <node begin="4" end="5" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="10" lcat="np" lemma="koploper" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="koploper" sense="koploper" word="koplopers"/>
+        <node begin="6" cat="rel" end="15" id="11" rel="mod">
+          <node begin="6" end="7" frame="waar_adverb(uit)" id="12" index="1" lcat="pp" lemma="waaruit" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waaruit" sense="waaruit" special="waar" word="waaruit"/>
+          <node begin="6" cat="ssub" end="15" id="13" rel="body">
+            <node begin="7" cat="mwu" end="9" id="14" index="2" rel="su">
+              <node begin="7" end="8" frame="proper_name(both,'PER')" id="15" lcat="np" lemma="Wesley" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wesley" sense="Wesley" spectype="deeleigen" word="Wesley"/>
+              <node begin="8" end="9" frame="proper_name(both,'PER')" id="16" lcat="np" lemma="Balcaen" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Balcaen" sense="Balcaen" spectype="deeleigen" word="Balcaen"/>
+            </node>
+            <node begin="13" end="14" frame="verb(unacc,past(sg),passive)" id="17" infl="sg" lcat="ssub" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" sc="passive" sense="word" tense="past" word="werd" wvorm="pv"/>
+            <node begin="6" cat="ppart" end="15" id="18" rel="vc">
+              <node begin="6" end="7" id="19" index="1" rel="mod"/>
+              <node begin="7" end="9" id="20" index="2" rel="obj1"/>
+              <node begin="9" cat="ap" end="11" id="21" rel="mod">
+                <node begin="9" end="10" frame="adverb" id="22" lcat="advp" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" sense="al" word="al"/>
+                <node aform="base" begin="10" buiging="zonder" end="11" frame="adjective(no_e(adv))" graad="basis" id="23" infl="no_e" lcat="ap" lemma="snel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="snel" sense="snel" vform="adj" word="snel"/>
+              </node>
+              <node begin="11" cat="pp" end="13" id="24" rel="mod">
+                <node begin="11" end="12" frame="preposition(door,[heen])" id="25" lcat="pp" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" sense="door" vztype="init" word="door"/>
+                <node begin="12" end="13" frame="noun(both,both,both)" gen="both" genus="zijd" getal="ev" graad="basis" id="26" lcat="np" lemma="zadelberuk" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="zadelberuk" sense="zadelberuk" word="zadelberuk"/>
+              </node>
+              <node begin="14" buiging="zonder" end="15" frame="verb(hebben,psp,ninv(transitive,part_transitive(terug)))" id="27" infl="psp" lcat="ppart" lemma="terugslaan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="sla_terug" sc="part_transitive(terug)" sense="sla_terug" word="teruggeslagen" wvorm="vd"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="16" end="17" frame="adverb" id="28" lcat="advp" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" sense="niet" word="niet"/>
+    </node>
+    <node begin="17" end="18" frame="punct(punt)" id="29" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Gewonnen spel hadden de koplopers , waaruit Wesley Balcaen al snel door zadelberuk werd teruggeslagen , niet .</sentence>
+  <comments>
+    <comment>Q#LN_19990809_01-1-2-24|Gewonnen spel hadden de koplopers , waaruit Wesley Balcaen al snel door zadelberuk werd teruggeslagen , niet .|1|1|-0.1522596829759216</comment>
+  </comments>
+</alpino_ds>

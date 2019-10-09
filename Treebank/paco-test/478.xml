@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="30" id="0" rel="top">
+    <node begin="0" cat="smain" end="29" id="1" rel="--">
+      <node begin="4" end="5" frame="verb('hebben/zijn',pl,modifier(aux(inf)))" id="2" infl="pl" lcat="smain" pos="verb" rel="hd" root="moet" sc="modifier(aux(inf))" sense="moet" tense="present" word="moeten"/>
+      <node begin="5" cat="np" end="7" id="3" index="1" rel="su">
+        <node begin="5" end="6" frame="determiner(de)" id="4" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node begin="6" end="7" frame="noun(de,count,pl)" gen="de" id="5" lcat="np" num="pl" pos="noun" rel="hd" root="lidstaat" sense="lidstaat" word="lidstaten"/>
+      </node>
+      <node begin="0" cat="inf" end="29" id="6" rel="vc">
+        <node begin="0" cat="pp" end="4" id="7" rel="mod">
+          <node begin="0" end="1" frame="preposition(tot,[toe,[aan,toe]])" id="8" lcat="pp" pos="prep" rel="hd" root="tot" sense="tot" word="Tot"/>
+          <node begin="1" cat="np" end="4" id="9" rel="obj1">
+            <node begin="1" end="2" frame="determiner(een)" id="10" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+            <node aform="compar" begin="2" end="3" frame="adjective(ere)" id="11" infl="e" lcat="ap" pos="adj" rel="mod" root="laat" sense="laat" vform="adj" word="latere"/>
+            <node begin="3" end="4" frame="noun(de,count,sg)" gen="de" id="12" lcat="np" num="sg" pos="noun" rel="hd" root="coördinatie" sense="coördinatie" word="coördinatie"/>
+          </node>
+        </node>
+        <node begin="5" end="7" id="13" index="1" rel="su"/>
+        <node begin="7" end="8" frame="noun(de,count,sg)" gen="de" id="14" lcat="np" num="sg" pos="noun" rel="obj1" root="rekening" sense="rekening" word="rekening"/>
+        <node begin="8" end="9" frame="verb(hebben,inf,fixed([{[acc(rekening),pc(met)]}],norm_passive))" id="15" infl="inf" lcat="inf" pos="verb" rel="hd" root="houd" sc="fixed([{[acc(rekening),pc(met)]}],norm_passive)" sense="rekening-houd-met" word="houden"/>
+        <node begin="9" cat="pp" end="29" id="16" rel="pc">
+          <node begin="9" end="10" frame="preposition(met,[mee,[en,al]])" id="17" lcat="pp" pos="prep" rel="hd" root="met" sense="met" word="met"/>
+          <node begin="10" cat="np" end="29" id="18" rel="obj1">
+            <node begin="10" end="11" frame="determiner(de)" id="19" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+            <node begin="11" cat="ppres" end="19" id="20" rel="mod">
+              <node begin="11" cat="pp" end="18" id="21" rel="mod">
+                <node begin="11" end="12" frame="preposition(in,[])" id="22" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                <node begin="12" cat="np" end="18" id="23" rel="obj1">
+                  <node begin="12" end="13" frame="determiner(de)" id="24" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="13" end="14" frame="noun(de,count,pl)" gen="de" id="25" lcat="np" num="pl" pos="noun" rel="hd" root="wetgeving" sense="wetgeving" word="wetgevingen"/>
+                  <node begin="14" cat="pp" end="18" id="26" rel="mod">
+                    <node begin="14" end="15" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="27" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                    <node begin="15" cat="np" end="18" id="28" rel="obj1">
+                      <node begin="15" end="16" frame="determiner(de)" id="29" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                      <node aform="compar" begin="16" end="17" frame="adjective(ere)" id="30" infl="e" lcat="ap" pos="adj" rel="mod" root="ander" sense="ander" vform="adj" word="andere"/>
+                      <node begin="17" end="18" frame="noun(de,count,pl)" gen="de" id="31" lcat="np" num="pl" pos="noun" rel="hd" root="lidstaat" sense="lidstaat" word="lidstaten"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node aform="base" begin="18" end="19" frame="adjective(ende(padv))" id="32" infl="e" lcat="ppres" pos="adj" rel="hd" root="besta" sense="besta" vform="gerund" word="bestaande"/>
+            </node>
+            <node begin="19" end="20" frame="noun(het,count,pl)" gen="het" id="33" lcat="np" num="pl" pos="noun" rel="hd" root="voorschrift" sense="voorschrift" word="voorschriften"/>
+            <node begin="20" cat="rel" end="29" id="34" rel="mod">
+              <node begin="20" end="21" frame="waar_adverb(in)" id="35" index="2" lcat="pp" pos="pp" rel="rhd" root="waarin" sense="waarin" special="waar" word="waarin"/>
+              <node begin="20" cat="ssub" end="29" id="36" rel="body">
+                <node begin="21" cat="np" end="27" id="37" index="3" rel="su">
+                  <node begin="21" end="22" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="38" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                  <node begin="22" cat="ppart" end="26" id="39" rel="mod">
+                    <node begin="22" cat="pp" end="25" id="40" rel="mod">
+                      <node begin="22" end="23" frame="preposition(in,[])" id="41" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                      <node begin="23" cat="np" end="25" id="42" rel="obj1">
+                        <node begin="23" end="24" frame="noun(het,count,sg,app_measure)" gen="het" id="43" lcat="np" num="sg" pos="noun" rel="hd" root="lid" sc="app_measure" sense="lid" word="lid"/>
+                        <node begin="24" end="25" frame="noun(de,count,sg)" gen="de" id="44" lcat="np" num="sg" pos="noun" rel="app" root="1" sense="1" word="1"/>
+                      </node>
+                    </node>
+                    <node aform="base" begin="25" end="26" frame="adjective(ge_e)" id="45" infl="e" lcat="ppart" pos="adj" rel="hd" root="bedoeld" sense="bedoeld" vform="psp" word="bedoelde"/>
+                  </node>
+                  <node begin="26" end="27" frame="noun(het,count,sg)" gen="het" id="46" lcat="np" num="sg" pos="noun" rel="hd" root="beginsel" sense="beginsel" word="beginsel"/>
+                </node>
+                <node begin="27" end="28" frame="verb(unacc,sg_heeft,passive)" id="47" infl="sg_heeft" lcat="ssub" pos="verb" rel="hd" root="ben" sc="passive" sense="ben" tense="present" word="is"/>
+                <node begin="20" cat="ppart" end="29" id="48" rel="vc">
+                  <node begin="20" end="21" id="49" index="2" rel="mod"/>
+                  <node begin="21" end="27" id="50" index="3" rel="obj1"/>
+                  <node begin="28" end="29" frame="verb(hebben,psp,transitive)" id="51" infl="psp" lcat="ppart" pos="verb" rel="hd" root="omschrijf" sc="transitive" sense="omschrijf" word="omschreven"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="29" end="30" frame="punct(punt)" id="52" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Tot een latere coördinatie moeten de lidstaten rekening houden met de in de wetgevingen van de andere lidstaten bestaande voorschriften waarin het in lid 1 bedoelde beginsel is omschreven .</sentence>
+  <comments>
+    <comment>Q#478|Tot een latere coördinatie moeten de lidstaten rekening houden met de in de wetgevingen van de andere lidstaten bestaande voorschriften waarin het in lid 1 bedoelde beginsel is omschreven .|1|1|-5.111876950969837</comment>
+  </comments>
+</alpino_ds>

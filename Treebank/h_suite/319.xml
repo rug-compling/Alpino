@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="6" id="3" rel="vc">
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="4" lemma="flink" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="flink" word="flink"/>
+        <node begin="0" cat="pp" end="5" id="5" rel="pc">
+          <node begin="0" end="1" getal="getal" id="6" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="Er"/>
+          <node begin="3" cat="mwu" end="5" id="7" rel="hd">
+            <node begin="3" end="4" id="8" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
+            <node begin="4" buiging="zonder" end="5" graad="basis" id="9" lemma="los" pos="prep" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="los" word="los"/>
+          </node>
+        </node>
+        <node begin="5" buiging="zonder" end="6" id="10" lemma="gehakt" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="hak" word="gehakt" wvorm="vd"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Er werd flink op los gehakt</sentence>
+</alpino_ds>

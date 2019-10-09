@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="34" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="21" end="22" id="2" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="1" cat="smain" end="33" id="3" rel="--">
+      <node begin="1" cat="whrel" end="9" id="4" rel="predc">
+        <node begin="1" end="2" getal="ev" id="5" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="Wat"/>
+        <node begin="1" cat="ssub" end="9" id="6" rel="body">
+          <node begin="1" end="2" id="7" index="1" rel="su"/>
+          <node begin="1" cat="ti" end="8" id="8" rel="vc">
+            <node begin="6" end="7" id="9" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+            <node begin="1" cat="inf" end="8" id="10" rel="body">
+              <node begin="1" end="2" id="11" index="1" rel="obj1"/>
+              <node begin="2" cat="ap" end="4" id="12" rel="mod">
+                <node begin="2" end="3" id="13" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
+                <node begin="3" buiging="zonder" end="4" graad="basis" id="14" lemma="bijzonder" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="bijzonder" word="bijzonder"/>
+              </node>
+              <node begin="4" cat="pp" end="6" id="15" rel="pc">
+                <node begin="4" end="5" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="5" end="6" genus="masc" getal="ev" id="17" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="vol" vwtype="pers" word="hem"/>
+              </node>
+              <node begin="7" buiging="zonder" end="8" id="18" lemma="waarderen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="waardeer" word="waarderen" wvorm="inf"/>
+            </node>
+          </node>
+          <node begin="8" end="9" id="19" lemma="vallen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="val" word="valt" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="9" cat="ppres" end="21" id="20" rel="mod">
+        <node begin="9" end="10" id="21" lemma="vooral" pos="adv" postag="BW()" pt="bw" rel="mod" root="vooral" word="vooral"/>
+        <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="22" lemma="rekening" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="rekening" word="rekening"/>
+        <node begin="11" buiging="zonder" end="12" id="23" lemma="houden" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="hd" root="houdend" word="houdend" wvorm="od"/>
+        <node begin="12" cat="pp" end="21" id="24" rel="pc">
+          <node begin="12" end="13" id="25" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="13" cat="np" end="21" id="26" rel="obj1">
+            <node begin="13" end="14" id="27" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="28" lemma="feit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="feit" word="feit"/>
+            <node begin="15" cat="cp" end="21" id="29" rel="vc">
+              <node begin="15" conjtype="onder" end="16" id="30" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+              <node begin="16" cat="ssub" end="21" id="31" rel="body">
+                <node begin="16" end="17" getal="mv" id="32" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
+                <node begin="17" cat="pp" end="20" id="33" rel="pc">
+                  <node begin="17" end="18" id="34" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+                  <node begin="18" cat="np" end="20" id="35" rel="obj1">
+                    <node begin="18" buiging="met-e" end="19" graad="basis" id="36" lemma="verschillend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="verschillend" word="verschillende"/>
+                    <node begin="19" end="20" getal="mv" graad="basis" id="37" lemma="partij" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="partij" word="partijen"/>
+                  </node>
+                </node>
+                <node begin="20" end="21" id="38" lemma="behoren" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="behoor" word="behoren" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="22" end="23" id="39" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="23" cat="cp" end="33" id="40" rel="su">
+        <node begin="23" conjtype="onder" end="24" id="41" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="24" cat="ssub" end="33" id="42" rel="body">
+          <node begin="24" end="25" genus="masc" getal="ev" id="43" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+          <node begin="25" cat="np" end="29" id="44" rel="obj1">
+            <node begin="25" buiging="zonder" end="26" getal="ev" id="45" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+            <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="46" lemma="voorganger" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorganger" word="voorganger"/>
+            <node begin="27" cat="mwu" end="29" id="47" rel="app">
+              <node begin="27" end="28" id="48" lemma="Lyndon" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lyndon" spectype="deeleigen" word="Lyndon"/>
+              <node begin="28" end="29" id="49" lemma="Johnson" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Johnson" spectype="deeleigen" word="Johnson"/>
+            </node>
+          </node>
+          <node begin="29" cat="ap" end="32" id="50" rel="mod">
+            <node begin="29" end="30" id="51" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
+            <node begin="30" end="31" id="52" lemma="uitermate" pos="adv" postag="BW()" pt="bw" rel="mod" root="uitermate" word="uitermate"/>
+            <node begin="31" buiging="zonder" end="32" graad="basis" id="53" lemma="hoffelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="hoffelijk" word="hoffelijk"/>
+          </node>
+          <node begin="32" end="33" id="54" lemma="behandelen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="behandel" word="behandelt" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="33" end="34" id="55" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&quot; Wat zo bijzonder in hem te waarderen valt vooral rekening houdend met het feit dat zij tot verschillende partijen behoren - is dat hij zijn voorganger Lyndon Johnson zo uitermate hoffelijk behandelt .</sentence>
+</alpino_ds>

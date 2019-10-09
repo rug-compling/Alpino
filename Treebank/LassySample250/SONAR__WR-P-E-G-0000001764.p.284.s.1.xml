@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="du" end="7" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" frame="complementizer(root)" id="2" lcat="du" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" sc="root" sense="maar" word="Maar"/>
+      <node begin="1" cat="smain" end="7" id="3" rel="nucl">
+        <node begin="1" case="nom" def="def" end="2" frame="pronoun(nwh,thi,sg,de,nom,def)" gen="de" genus="masc" getal="ev" id="4" lcat="np" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" sense="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+        <node begin="2" end="3" frame="verb(unacc,sg_heeft,pc_pp(van))" id="5" infl="sg_heeft" lcat="smain" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="pc_pp(van)" sense="ben-van" tense="present" word="is" wvorm="pv"/>
+        <node begin="3" end="4" frame="adverb" id="6" lcat="advp" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" sense="niet" word="niet"/>
+        <node begin="4" cat="pp" end="7" id="7" rel="pc">
+          <node begin="4" end="5" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="8" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+          <node begin="5" cat="np" end="7" id="9" rel="obj1">
+            <node begin="5" end="6" frame="determiner(de)" id="10" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+            <node begin="6" end="7" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lcat="np" lemma="streek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="streek" sense="streek" word="streek"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" frame="punct(punt)" id="12" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Maar hij is niet van de streek .</sentence>
+  <comments>
+    <comment>Q#WR-P-E-G-0000001764.p.284.s.1|Maar hij is niet van de streek .|1|1|-0.097736361848828</comment>
+  </comments>
+</alpino_ds>

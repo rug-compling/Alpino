@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" buiging="zonder" end="1" id="1" lemma="&lt;@&gt;" pos="--" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="--" root="&lt;@&gt;" word="&lt;@&gt;" wvorm="inf"/>
+    <node begin="1" cat="du" end="6" id="2" rel="--">
+      <node begin="1" end="2" id="3" lemma="ja" pos="tag" postag="TSW()" pt="tsw" rel="tag" root="ja" word="ja"/>
+      <node begin="2" cat="smain" end="6" id="4" rel="nucl">
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="natuurlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="natuurlijk" word="natuurlijk"/>
+        <node begin="3" end="4" id="6" lemma="krijgen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="krijg" word="krijg" wvorm="pv"/>
+        <node begin="4" end="5" getal="ev" id="7" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="5" end="6" getal="ev" id="8" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" word="dat"/>
+      </node>
+    </node>
+  </node>
+  <sentence>&lt;@&gt; ja natuurlijk krijg ik dat</sentence>
+</alpino_ds>

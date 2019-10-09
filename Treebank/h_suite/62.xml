@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="zonder" end="2" graad="basis" id="4" lemma="direct" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="direct" word="direct"/>
+        <node begin="2" buiging="met-e" end="3" getal-n="mv-n" id="5" lemma="betrekken" pos="adj" positie="nom" postag="WW(vd,nom,met-e,mv-n)" pt="ww" rel="hd" root="betrokken" word="betrokkenen" wvorm="vd"/>
+      </node>
+      <node begin="3" end="4" id="6" lemma="vraag" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="vraag" word="vroegen" wvorm="pv"/>
+      <node begin="4" cat="pp" end="6" id="7" rel="pc">
+        <node begin="4" end="5" id="8" lemma="om" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="om" vztype="init" word="om"/>
+        <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="uitstel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="uitstel" word="uitstel"/>
+      </node>
+    </node>
+  </node>
+  <sentence>De direct betrokkenen vroegen om uitstel</sentence>
+</alpino_ds>

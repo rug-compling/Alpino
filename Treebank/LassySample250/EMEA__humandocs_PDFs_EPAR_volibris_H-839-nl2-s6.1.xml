@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="6" end="7" frame="punct(haak_open)" id="1" lcat="punct" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" sense="(" special="haak_open" word="("/>
+    <node begin="8" end="9" frame="punct(haak_sluit)" id="2" lcat="punct" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+    <node begin="14" end="15" frame="punct(haak_open)" id="3" lcat="punct" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" sense="(" special="haak_open" word="("/>
+    <node begin="0" cat="du" end="16" id="4" rel="--">
+      <node begin="0" cat="np" end="8" id="5" rel="dp">
+        <node begin="0" cat="mwu" end="6" id="6" mwu_root="Verpakking_Blister_(_PVC/PVdC/Alu_)_Blister" mwu_sense="Verpakking_Blister_(_PVC/PVdC/Alu_)_Blister" rel="hd">
+          <node begin="0" end="1" frame="proper_name(both)" genus="zijd" getal="ev" graad="basis" id="7" lcat="np" lemma="verpakking" naamval="stan" ntype="soort" num="both" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Verpakking" sense="Verpakking" word="Verpakking"/>
+          <node begin="1" end="2" frame="proper_name(both)" id="8" lcat="np" lemma="Blister" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Blister" sense="Blister" spectype="deeleigen" word="Blister"/>
+          <node begin="2" end="3" frame="proper_name(both)" id="9" lcat="np" lemma="(" num="both" pos="name" postag="LET()" pt="let" rel="mwp" root="(" sense="(" word="("/>
+          <node begin="3" end="4" frame="proper_name(both)" id="10" lcat="np" lemma="PVC/PVdC/Alu" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="PVC/PVdC/Alu" sense="PVC/PVdC/Alu" spectype="deeleigen" word="PVC/PVdC/Alu"/>
+          <node begin="4" end="5" frame="proper_name(both)" id="11" lcat="np" lemma=")" num="both" pos="name" postag="LET()" pt="let" rel="mwp" root=")" sense=")" word=")"/>
+          <node begin="5" end="6" frame="proper_name(both)" genus="zijd" getal="ev" graad="basis" id="12" lcat="np" lemma="blister" naamval="stan" ntype="soort" num="both" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Blister" sense="Blister" word="Blister"/>
+        </node>
+        <node begin="7" end="8" frame="proper_name(both,'LOC')" id="13" lcat="np" lemma="PVC/PVdC/Alu" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mod" root="PVC/PVdC/Alu" sense="PVC/PVdC/Alu" spectype="deeleigen" word="PVC/PVdC/Alu"/>
+      </node>
+      <node begin="9" cat="np" end="16" id="14" rel="dp">
+        <node begin="9" cat="mwu" end="14" id="15" mwu_root="Blister_(_PVC/PVdC/Alu_)_Blister" mwu_sense="Blister_(_PVC/PVdC/Alu_)_Blister" rel="hd">
+          <node begin="9" end="10" frame="proper_name(both)" genus="zijd" getal="ev" graad="basis" id="16" lcat="np" lemma="blister" naamval="stan" ntype="soort" num="both" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Blister" sense="Blister" word="Blister"/>
+          <node begin="10" end="11" frame="proper_name(both)" id="17" lcat="np" lemma="(" num="both" pos="name" postag="LET()" pt="let" rel="mwp" root="(" sense="(" word="("/>
+          <node begin="11" end="12" frame="proper_name(both)" id="18" lcat="np" lemma="PVC/PVdC/Alu" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="PVC/PVdC/Alu" sense="PVC/PVdC/Alu" spectype="deeleigen" word="PVC/PVdC/Alu"/>
+          <node begin="12" end="13" frame="proper_name(both)" id="19" lcat="np" lemma=")" num="both" pos="name" postag="LET()" pt="let" rel="mwp" root=")" sense=")" word=")"/>
+          <node begin="13" end="14" frame="proper_name(both)" genus="zijd" getal="ev" graad="basis" id="20" lcat="np" lemma="blister" naamval="stan" ntype="soort" num="both" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Blister" sense="Blister" word="Blister"/>
+        </node>
+        <node begin="15" end="16" frame="proper_name(both,'LOC')" id="21" lcat="np" lemma="PVC/PVdC/Alu" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mod" root="PVC/PVdC/Alu" sense="PVC/PVdC/Alu" spectype="deeleigen" word="PVC/PVdC/Alu"/>
+      </node>
+    </node>
+    <node begin="16" end="17" frame="punct(haak_sluit)" id="22" lcat="punct" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+  </node>
+  <sentence>Verpakking Blister ( PVC/PVdC/Alu ) Blister ( PVC/PVdC/Alu ) Blister ( PVC/PVdC/Alu ) Blister ( PVC/PVdC/Alu )</sentence>
+  <comments>
+    <comment>Q#humandocs_PDFs_EPAR_volibris_H-839-nl2-s6.1|Verpakking Blister ( PVC/PVdC/Alu ) Blister ( PVC/PVdC/Alu ) Blister ( PVC/PVdC/Alu ) Blister ( PVC/PVdC/Alu )|1|1|0.10822923400000001</comment>
+  </comments>
+</alpino_ds>

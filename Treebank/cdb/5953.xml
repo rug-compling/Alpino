@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="0" cat="conj" end="19" id="1" rel="--">
+      <node begin="0" cat="smain" end="3" id="2" rel="cnj">
+        <node begin="0" cat="np" end="2" id="3" rel="su">
+          <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="tijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tijd" word="tijd"/>
+        </node>
+        <node begin="2" end="3" id="6" lemma="verstrijken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="verstrijk" word="verstrijkt" wvorm="pv"/>
+      </node>
+      <node begin="3" conjtype="neven" end="4" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="4" cat="smain" end="19" id="8" rel="cnj">
+        <node begin="4" buiging="zonder" end="5" graad="basis" id="9" lemma="langzaam" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="langzaam" word="langzaam"/>
+        <node begin="5" end="6" id="10" lemma="bloeien" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="bloei" word="bloeit" wvorm="pv"/>
+        <node begin="6" end="7" getal="getal" id="11" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="9" end="10" id="12" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
+        <node begin="7" cat="np" end="19" id="13" rel="su">
+          <node begin="7" end="8" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="romance" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="romance" word="romance"/>
+          <node begin="10" cat="rel" end="19" id="16" rel="mod">
+            <node begin="10" end="11" getal="getal" id="17" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+            <node begin="10" cat="ssub" end="19" id="18" rel="body">
+              <node begin="10" end="11" id="19" index="1" rel="su"/>
+              <node begin="10" cat="ppart" end="18" id="20" rel="vc">
+                <node begin="10" end="11" id="21" index="1" rel="obj1"/>
+                <node begin="11" end="12" id="22" lemma="echter" pos="adv" postag="BW()" pt="bw" rel="mod" root="echter" word="echter"/>
+                <node begin="12" buiging="zonder" end="13" graad="basis" id="23" lemma="genadeloos" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="genadeloos" word="genadeloos"/>
+                <node begin="13" cat="pp" end="15" id="24" rel="mod">
+                  <node begin="13" end="14" id="25" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+                  <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="26" lemma="Mary" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Mary" word="Mary"/>
+                </node>
+                <node begin="15" cat="mwu" end="17" id="27" rel="svp">
+                  <node begin="15" end="16" id="28" lemma="in" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+                  <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="29" lemma="toom" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="toom" word="toom"/>
+                </node>
+                <node begin="17" buiging="zonder" end="18" id="30" lemma="houden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="houd" word="gehouden" wvorm="vd"/>
+              </node>
+              <node begin="18" end="19" id="31" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="19" end="20" id="32" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De tijd verstrijkt en langzaam bloeit er een romance op die echter genadeloos door Mary in toom gehouden wordt .</sentence>
+</alpino_ds>

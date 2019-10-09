@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="9" end="10" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="15" end="16" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="whq" end="20" id="4" rel="--">
+      <node begin="0" cat="np" end="9" id="5" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="6" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welke" vwtype="vb" word="Welke"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="soort" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="soort" word="soort"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="8" lemma="brandewijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="brandewijn" word="brandewijn"/>
+        <node begin="4" cat="rel" end="9" id="9" rel="mod">
+          <node begin="4" end="5" getal="getal" id="10" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+          <node begin="4" cat="ssub" end="9" id="11" rel="body">
+            <node begin="4" end="5" id="12" index="2" rel="su"/>
+            <node begin="5" buiging="zonder" end="6" graad="basis" id="13" lemma="sterk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="sterk" word="sterk"/>
+            <node begin="6" cat="pp" end="8" id="14" rel="pc">
+              <node begin="6" end="7" id="15" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+              <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="16" lemma="cognac" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="cognac" word="cognac"/>
+            </node>
+            <node begin="8" end="9" id="17" lemma="lijken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lijk" word="lijkt" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+      <node begin="0" cat="sv1" end="20" id="18" rel="body">
+        <node begin="0" end="9" id="19" index="1" rel="su"/>
+        <node begin="10" end="11" id="20" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+        <node begin="0" cat="ppart" end="20" id="21" rel="vc">
+          <node begin="0" end="9" id="22" index="1" rel="obj1"/>
+          <node begin="11" cat="np" end="14" id="23" rel="mod">
+            <node begin="11" end="12" id="24" lemma="slechts" pos="adv" postag="BW()" pt="bw" rel="mod" root="slechts" word="slechts"/>
+            <node begin="12" end="13" id="25" lemma="één" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="één" word="één"/>
+            <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="26" lemma="keer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="keer" word="keer"/>
+          </node>
+          <node begin="14" buiging="zonder" end="15" id="27" lemma="destilleren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="destilleer" word="gedestilleerd" wvorm="vd"/>
+          <node begin="16" cat="pp" end="20" id="28" rel="mod">
+            <node begin="16" cat="mwu" end="19" id="29" rel="hd">
+              <node begin="16" end="17" id="30" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+              <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="31" lemma="tegenstelling" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="tegenstelling" word="tegenstelling"/>
+              <node begin="18" end="19" id="32" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="tot" vztype="init" word="tot"/>
+            </node>
+            <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="33" lemma="cognac" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="cognac" word="cognac"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="34" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke soort brandewijn , die sterk op cognac lijkt , wordt slechts één keer gedestilleerd , in tegenstelling tot cognac ?</sentence>
+</alpino_ds>

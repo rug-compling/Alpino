@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" end="1" frame="er_adverb(tot)" id="2" lcat="pp" pos="pp" rel="mod" root="daartoe" sense="daartoe" special="er" word="Daartoe"/>
+      <node begin="1" end="2" frame="verb(hebben,pl,part_intransitive(plaats))" id="3" infl="pl" lcat="smain" pos="verb" rel="hd" root="vind_plaats" sc="part_intransitive(plaats)" sense="vind_plaats" tense="present" word="vinden"/>
+      <node begin="2" cat="pp" end="7" id="4" rel="mod">
+        <node begin="2" cat="mwu" end="5" id="5" mwu_root="op_verzoek_van" mwu_sense="op_verzoek_van" rel="hd">
+          <node begin="2" end="3" frame="preposition([op,verzoek,van],[])" id="6" lcat="pp" pos="prep" rel="mwp" root="op" sense="op" word="op"/>
+          <node begin="3" end="4" frame="preposition([op,verzoek,van],[])" id="7" lcat="pp" pos="prep" rel="mwp" root="verzoek" sense="verzoek" word="verzoek"/>
+          <node begin="4" end="5" frame="preposition([op,verzoek,van],[])" id="8" lcat="pp" pos="prep" rel="mwp" root="van" sense="van" word="van"/>
+        </node>
+        <node begin="5" cat="np" end="7" id="9" rel="obj1">
+          <node begin="5" end="6" frame="determiner(een)" id="10" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+          <node begin="6" end="7" frame="tmp_noun(de,count,sg)" gen="de" id="11" lcat="np" num="sg" pos="noun" rel="hd" root="partij" sense="partij" special="tmp" word="partij"/>
+        </node>
+      </node>
+      <node begin="7" end="8" frame="noun(de,count,pl)" gen="de" id="12" lcat="np" num="pl" pos="noun" rel="su" root="gedachtewisseling" sense="gedachtewisseling" word="gedachtewisselingen"/>
+      <node begin="8" end="9" frame="particle(plaats)" id="13" lcat="part" pos="part" rel="svp" root="plaats" sense="plaats" word="plaats"/>
+    </node>
+    <node begin="9" end="10" frame="punct(dubb_punt)" id="14" lcat="punct" pos="punct" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+  </node>
+  <sentence>Daartoe vinden op verzoek van een partij gedachtewisselingen plaats :</sentence>
+  <comments>
+    <comment>Q#565|Daartoe vinden op verzoek van een partij gedachtewisselingen plaats :|1|1|-1.8644787371020208</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="sv1" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="zien" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zie" word="Zie" wvorm="pv"/>
+      <node begin="1" end="2" id="3" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+      <node begin="2" cat="np" end="5" id="4" rel="obj1">
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="product" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="product" word="product"/>
+        <node begin="3" end="4" id="6" lemma="U1.2.1.2" pos="name" postag="SPEC(symb)" pt="spec" rel="app" root="U1.2.1.2" spectype="symb" word="U1.2.1.2"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="7" lemma="vaccinatiegraad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="app" root="Vaccinatiegraad" word="Vaccinatiegraad"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Zie ook product U1.2.1.2 Vaccinatiegraad .</sentence>
+</alpino_ds>

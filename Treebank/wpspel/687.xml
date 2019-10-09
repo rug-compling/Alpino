@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="6" end="7" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="whq" end="13" id="3" rel="--">
+      <node begin="0" cat="np" end="2" id="4" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="5" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welke"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="6" lemma="Rhônewijn" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="Rhônewijn" word="Rhônewijn"/>
+      </node>
+      <node begin="0" cat="sv1" end="13" id="7" rel="body">
+        <node begin="0" end="2" id="8" index="1" rel="su"/>
+        <node begin="2" end="3" id="9" lemma="heten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heet" word="heet" wvorm="pv"/>
+        <node begin="4" cat="ppart" end="6" id="10" rel="predm">
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="11" lemma="letterlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="letterlijk" word="letterlijk"/>
+          <node begin="5" buiging="zonder" end="6" id="12" lemma="vertalen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vertaald" word="vertaald" wvorm="vd"/>
+        </node>
+        <node begin="7" cat="np" end="13" id="13" rel="predc">
+          <node begin="7" end="8" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="8" buiging="met-e" end="9" graad="basis" id="15" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
+          <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="16" lemma="kasteel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kasteel" word="kasteel"/>
+          <node begin="10" cat="pp" end="13" id="17" rel="mod">
+            <node begin="10" end="11" id="18" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="11" cat="np" end="13" id="19" rel="obj1">
+              <node begin="11" end="12" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="21" lemma="paus" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="paus" word="paus"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="22" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke Rhônewijn heet , letterlijk vertaald , het nieuwe kasteel van de paus ?</sentence>
+</alpino_ds>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="26" id="0" rel="top">
+    <node begin="14" end="15" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="25" id="2" rel="--">
+      <node begin="0" cat="smain" end="14" id="3" rel="cnj">
+        <node begin="0" cat="pp" end="5" id="4" rel="mod">
+          <node begin="0" end="1" id="5" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+          <node begin="1" cat="np" end="4" id="6" rel="obj1">
+            <node begin="1" end="2" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="2" end="3" id="8" lemma="twee" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="tweede" word="tweede"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="helft" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="helft" word="helft"/>
+          </node>
+          <node begin="4" end="5" id="10" lemma="echter" pos="adj" postag="BW()" pt="bw" rel="mod" root="echter" word="echter"/>
+        </node>
+        <node begin="5" end="6" id="11" lemma="komen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kom" word="kwamen" wvorm="pv"/>
+        <node begin="6" cat="np" end="8" id="12" rel="su">
+          <node begin="6" end="7" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="7" end="8" getal="mv" graad="basis" id="14" lemma="gast" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gast" word="gasten"/>
+        </node>
+        <node begin="8" cat="pp" end="12" id="15" rel="mod">
+          <node begin="8" end="9" id="16" lemma="via" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="via" vztype="init" word="via"/>
+          <node begin="9" cat="np" end="12" id="17" rel="obj1">
+            <node begin="9" buiging="met-e" end="10" id="18" lemma="enkele" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enkel" vwtype="onbep" word="enkele"/>
+            <node begin="10" buiging="met-e" end="11" graad="basis" id="19" lemma="uitstekend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="uitstekend" word="uitstekende"/>
+            <node begin="11" end="12" getal="mv" graad="basis" id="20" lemma="manche-bieding" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="manche-biedingen" word="manche-biedingen"/>
+          </node>
+        </node>
+        <node begin="12" buiging="zonder" end="13" graad="basis" id="21" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="goed" word="goed"/>
+        <node begin="13" end="14" id="22" lemma="terug" pos="part" postag="BW()" pt="bw" rel="svp" root="terug" word="terug"/>
+      </node>
+      <node begin="15" conjtype="neven" end="16" id="23" lemma="doch" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="doch" word="doch"/>
+      <node begin="16" cat="smain" end="25" id="24" rel="cnj">
+        <node begin="16" end="17" id="25" lemma="niettemin" pos="adv" postag="BW()" pt="bw" rel="mod" root="niettemin" word="niettemin"/>
+        <node begin="17" end="18" id="26" lemma="trekken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="trek" word="trok" wvorm="pv"/>
+        <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="27" lemma="Eindhoven" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Eindhoven" word="Eindhoven"/>
+        <node begin="19" cat="pp" end="21" id="28" rel="mod">
+          <node begin="19" end="20" id="29" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="20" end="21" id="30" lemma="4-2" pos="num" postag="SPEC(symb)" pt="spec" rel="obj1" root="4-2" spectype="symb" word="4-2"/>
+        </node>
+        <node begin="21" cat="pp" end="25" id="31" rel="pc">
+          <node begin="21" end="22" id="32" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+          <node begin="22" cat="np" end="25" id="33" rel="obj1">
+            <node begin="22" end="23" id="34" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="23" buiging="met-e" end="24" graad="sup" id="35" lemma="lang" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="lang" word="langste"/>
+            <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="36" lemma="eind" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="eind" word="eind"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="25" end="26" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>In de tweede helft echter kwamen de gasten via enkele uitstekende manche-biedingen goed terug , doch niettemin trok Eindhoven met 4-2 aan het langste eind .</sentence>
+</alpino_ds>

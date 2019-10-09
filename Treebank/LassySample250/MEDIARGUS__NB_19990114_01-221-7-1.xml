@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="20" id="0" rel="top">
+    <node begin="0" cat="conj" end="19" id="1" rel="--">
+      <node begin="0" cat="smain" end="6" id="2" rel="cnj">
+        <node begin="0" cat="np" end="2" id="3" rel="su">
+          <node begin="0" buiging="met-e" end="1" frame="adj_number(pl_num)" getal="mv" graad="basis" id="4" infl="pl_num" lcat="detp" lemma="beide" naamval="stan" pdtype="grad" pos="det" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,mv,basis)" pt="vnw" rel="det" root="beide" sense="beide" special="adj_number" vwtype="onbep" word="Beide"/>
+          <node begin="1" end="2" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="5" lcat="np" lemma="standwerker" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="stand_werker" sense="stand_werker" word="standwerkers"/>
+        </node>
+        <node begin="2" end="3" frame="verb(hebben,pl,intransitive)" id="6" infl="pl" lcat="smain" lemma="verkopen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="verkoop" sc="intransitive" sense="verkoop" tense="present" word="verkopen" wvorm="pv"/>
+        <node begin="3" cat="pp" end="6" id="7" rel="mod">
+          <node begin="3" end="4" frame="preposition(onder,[door,vandaan])" id="8" lcat="pp" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" sense="onder" vztype="init" word="onder"/>
+          <node begin="4" cat="np" end="6" id="9" rel="obj1">
+            <node aform="compar" begin="4" buiging="zonder" end="5" frame="adjective(meer)" graad="comp" id="10" infl="meer" lcat="ap" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,comp)" pt="vnw" rel="det" root="meer" sense="meer" vform="adj" vwtype="onbep" word="meer"/>
+            <node begin="5" end="6" frame="noun(both,mass,sg)" gen="both" genus="zijd" getal="ev" graad="basis" id="11" lcat="np" lemma="textiel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="textiel" sense="textiel" word="textiel"/>
+          </node>
+        </node>
+      </node>
+      <node begin="6" conjtype="neven" end="7" frame="conj(en)" id="12" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+      <node begin="7" cat="smain" end="19" id="13" rel="cnj">
+        <node begin="7" end="8" frame="determiner(het,nwh,nmod,pro,nparg)" getal="ev" id="14" infl="het" lcat="np" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" sense="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
+        <node begin="8" end="9" frame="verb(hebben,sg3,so_np)" id="15" infl="sg3" lcat="smain" lemma="zinnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zin" sc="so_np" sense="zin" tense="present" word="zint" wvorm="pv"/>
+        <node begin="9" cat="np" end="18" id="16" rel="obj2">
+          <node begin="9" end="10" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="17" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+          <node begin="10" end="11" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="18" lcat="np" lemma="schepencollege" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="schepen_college" sense="schepen_college" word="schepencollege"/>
+          <node begin="11" cat="pp" end="18" id="19" rel="mod">
+            <node begin="11" end="12" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="20" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+            <node begin="12" cat="conj" end="18" id="21" rel="obj1">
+              <node begin="12" end="13" frame="proper_name(both,'LOC')" id="22" lcat="np" lemma="Beringen" neclass="LOC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="cnj" root="Beringen" sense="Beringen" spectype="deeleigen" word="Beringen"/>
+              <node begin="13" conjtype="neven" end="14" frame="conj(en)" id="23" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+              <node begin="14" cat="np" end="18" id="24" rel="cnj">
+                <node begin="14" end="15" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="25" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                <node begin="15" end="16" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="26" lcat="np" lemma="bestuur" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bestuur" sense="bestuur" word="bestuur"/>
+                <node begin="16" cat="pp" end="18" id="27" rel="mod">
+                  <node begin="16" end="17" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="28" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+                  <node begin="17" end="18" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="29" lcat="np" lemma="marktkramer" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="markt_kramer" sense="markt_kramer" word="marktkramers"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="18" end="19" frame="adverb" id="30" lcat="advp" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" sense="niet" word="niet"/>
+      </node>
+    </node>
+    <node begin="19" end="20" frame="punct(punt)" id="31" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Beide standwerkers verkopen onder meer textiel en dat zint het schepencollege van Beringen en het bestuur van marktkramers niet .</sentence>
+  <comments>
+    <comment>Q#NB_19990114_01-221-7-1|Beide standwerkers verkopen onder meer textiel en dat zint het schepencollege van Beringen en het bestuur van marktkramers niet .|1|1|0.17809490956355026</comment>
+  </comments>
+</alpino_ds>

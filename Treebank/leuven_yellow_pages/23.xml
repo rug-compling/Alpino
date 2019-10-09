@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="Dat"/>
+      <node begin="1" end="2" id="3" lemma="geven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="geef" word="geeft" wvorm="pv"/>
+      <node begin="2" cat="np" end="5" id="4" rel="obj1">
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="aanleiding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aanleiding" word="aanleiding"/>
+        <node begin="3" cat="pp" end="5" id="6" rel="mod">
+          <node begin="3" end="4" id="7" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+          <node begin="4" end="5" getal="mv" graad="basis" id="8" lemma="rel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="rel" word="rellen"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Dat geeft aanleiding tot rellen</sentence>
+</alpino_ds>

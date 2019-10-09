@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="30" id="0" rel="top">
+    <node begin="14" end="15" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="19" end="20" frame="punct(haak_open)" id="2" lcat="punct" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" sense="(" special="haak_open" word="("/>
+    <node begin="21" end="22" frame="punct(haak_sluit)" id="3" lcat="punct" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+    <node begin="26" end="27" frame="punct(haak_open)" id="4" lcat="punct" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" sense="(" special="haak_open" word="("/>
+    <node begin="0" cat="smain" end="28" id="5" rel="--">
+      <node begin="0" case="both" def="def" end="1" frame="pronoun(nwh,u,sg,de,both,def)" gen="de" getal="getal" id="6" lcat="np" lemma="u" naamval="nomin" num="sg" pdtype="pron" per="u" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" root="u" sense="u" status="vol" vwtype="pers" wh="nwh" word="U"/>
+      <node begin="1" end="2" frame="verb(unacc,sg3,intransitive)" id="7" infl="sg3" lcat="smain" lemma="blijven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="blijf" sc="intransitive" sense="blijf" tense="present" word="blijft" wvorm="pv"/>
+      <node begin="2" end="3" frame="sentence_adverb" id="8" lcat="advp" lemma="dus" pos="adv" postag="BW()" pt="bw" rel="mod" root="dus" sense="dus" special="sentence" word="dus"/>
+      <node begin="3" cat="ap" end="6" id="9" rel="mod">
+        <node aform="compar" begin="3" buiging="zonder" end="4" frame="adjective(er(adv))" graad="comp" id="10" infl="no_e" lcat="ap" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="goed" sense="goed" vform="adj" word="beter"/>
+        <node begin="4" cat="mwu" end="6" id="11" mwu_root="ver_weg" mwu_sense="ver_weg" rel="hd">
+          <node aform="base" begin="4" buiging="zonder" end="5" frame="adjective(pred(locadv))" graad="basis" id="12" infl="pred" lcat="ap" lemma="ver" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="ver" sense="ver" vform="adj" word="ver"/>
+          <node aform="base" begin="5" end="6" frame="adjective(pred(locadv))" id="13" infl="pred" lcat="ap" lemma="weg" pos="adj" postag="BW()" pt="bw" rel="mwp" root="weg" sense="weg" vform="adj" word="weg"/>
+        </node>
+      </node>
+      <node begin="6" cat="pp" end="28" id="14" rel="mod">
+        <node begin="6" end="7" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="15" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+        <node begin="7" cat="np" end="28" id="16" rel="obj1">
+          <node begin="7" end="8" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="17" lcat="np" lemma="munt" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="munt" sense="munt" word="munten"/>
+          <node begin="8" cat="rel" end="28" id="18" rel="mod">
+            <node begin="8" case="no_obl" end="9" frame="rel_pronoun(de,no_obl)" gen="de" getal="getal" id="19" index="1" lcat="np" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" sense="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+            <node begin="8" cat="ssub" end="28" id="20" rel="body">
+              <node begin="8" end="9" id="21" index="1" rel="su"/>
+              <node begin="9" end="10" frame="tmp_adverb" id="22" lcat="advp" lemma="onlangs" pos="adv" postag="BW()" pt="bw" rel="mod" root="onlangs" sense="onlangs" special="tmp" word="onlangs"/>
+              <node begin="10" cat="pp" end="13" id="23" rel="ld">
+                <node begin="10" end="11" frame="preposition(in,[])" id="24" lcat="pp" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" sense="in" vztype="init" word="in"/>
+                <node begin="11" cat="np" end="13" id="25" rel="obj1">
+                  <node begin="11" end="12" frame="determiner(de)" id="26" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="12" end="13" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="27" lcat="np" lemma="schijnwerper" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="schijnwerper" sense="schijnwerper" word="schijnwerpers"/>
+                </node>
+              </node>
+              <node begin="13" end="14" frame="verb(hebben,past(pl),ld_pp)" id="28" infl="pl" lcat="ssub" lemma="staan" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="sta" sc="ld_pp" sense="sta" tense="past" word="stonden" wvorm="pv"/>
+              <node begin="15" cat="cp" end="28" id="29" rel="mod">
+                <node begin="15" conjtype="onder" end="16" frame="complementizer(zoals)" id="30" lcat="cp" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" sc="zoals" sense="zoals" word="zoals"/>
+                <node begin="16" cat="conj" end="28" id="31" rel="body">
+                  <node begin="16" cat="np" end="21" id="32" rel="cnj">
+                    <node begin="16" end="17" frame="determiner(de)" id="33" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+                    <node aform="base" begin="17" buiging="met-e" end="18" frame="adjective(e)" graad="basis" id="34" infl="e" lcat="ap" lemma="grieks" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Grieks" sense="Grieks" vform="adj" word="Griekse"/>
+                    <node begin="18" end="19" frame="meas_mod_noun(de,count,meas)" gen="de" genus="zijd" getal="ev" graad="basis" id="35" lcat="np" lemma="drachme" naamval="stan" ntype="soort" num="meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="drachme" sense="drachme" special="meas_mod" word="drachme"/>
+                    <node begin="20" end="21" frame="noun(both,both,both)" gen="both" id="36" lcat="np" lemma="GRD" num="both" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mod" root="grd" sense="grd" spectype="deeleigen" word="GRD"/>
+                  </node>
+                  <node begin="22" conjtype="neven" end="23" frame="conj(en)" id="37" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+                  <node begin="23" cat="np" end="28" id="38" rel="cnj">
+                    <node begin="23" end="24" frame="determiner(de)" id="39" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+                    <node aform="base" begin="24" buiging="met-e" end="25" frame="adjective(e)" graad="basis" id="40" infl="e" lcat="ap" lemma="pools" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Pools" sense="Pools" vform="adj" word="Poolse"/>
+                    <node begin="25" end="26" frame="noun(both,both,both)" gen="both" genus="zijd" getal="ev" graad="basis" id="41" lcat="np" lemma="zloty" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zloty" sense="zloty" word="zloty"/>
+                    <node begin="27" end="28" frame="noun(both,both,both)" gen="both" id="42" lcat="np" lemma="PLZ" num="both" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mod" root="plz" sense="plz" spectype="deeleigen" word="PLZ"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="28" end="29" frame="punct(haak_sluit)" id="43" lcat="punct" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" sense=")" special="haak_sluit" word=")"/>
+    <node begin="29" end="30" frame="punct(punt)" id="44" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>U blijft dus beter ver weg van munten die onlangs in de schijnwerpers stonden , zoals de Griekse drachme ( GRD ) en de Poolse zloty ( PLZ ) .</sentence>
+  <comments>
+    <comment>Q#WR-P-P-H-0000051906.p.15.s.4|U blijft dus beter ver weg van munten die onlangs in de schijnwerpers stonden , zoals de Griekse drachme ( GRD ) en de Poolse zloty ( PLZ ) .|1|1|-0.12315448491110303</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="`" pos="punct" postag="LET()" pt="let" rel="--" root="`" word="`"/>
+    <node begin="6" end="7" id="2" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="7" end="8" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="whq" end="18" id="4" rel="--">
+      <node begin="0" cat="np" end="2" id="5" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="6" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welke" vwtype="vb" word="Welke"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="auteur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="auteur" word="auteur"/>
+      </node>
+      <node begin="0" cat="sv1" end="18" id="8" rel="body">
+        <node begin="0" end="2" id="9" index="1" rel="su"/>
+        <node begin="2" end="3" id="10" lemma="schrijven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="schrijf" word="schreef" wvorm="pv"/>
+        <node begin="4" cat="np" end="18" id="11" rel="obj1">
+          <node begin="4" cat="mwu" end="6" id="12" rel="hd">
+            <node begin="4" end="5" id="13" lemma="Lord" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lord" spectype="deeleigen" word="Lord"/>
+            <node begin="5" end="6" id="14" lemma="Jim" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jim" spectype="deeleigen" word="Jim"/>
+          </node>
+          <node begin="8" cat="rel" end="18" id="15" rel="mod">
+            <node begin="8" end="9" id="16" index="2" lemma="waarin" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarin" word="waarin"/>
+            <node begin="8" cat="ssub" end="18" id="17" rel="body">
+              <node begin="8" end="9" id="18" index="2" rel="mod"/>
+              <node begin="9" end="10" genus="masc" getal="ev" id="19" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+              <node begin="10" end="11" id="20" lemma="constateren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="constateer" word="constateerde" wvorm="pv"/>
+              <node begin="11" cat="cp" end="18" id="21" rel="vc">
+                <node begin="11" conjtype="onder" end="12" id="22" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+                <node begin="12" cat="ssub" end="18" id="23" rel="body">
+                  <node begin="12" cat="np" end="14" id="24" rel="su">
+                    <node begin="12" end="13" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="26" lemma="mens" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="mens" word="mens"/>
+                  </node>
+                  <node begin="14" buiging="zonder" end="15" id="27" lemma="bepalen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="mod" root="bepaald" word="bepaald" wvorm="vd"/>
+                  <node begin="15" cat="np" end="17" id="28" rel="predc">
+                    <node begin="15" buiging="zonder" end="16" id="29" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+                    <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="30" lemma="kunstwerk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kunstwerk" word="kunstwerk"/>
+                  </node>
+                  <node begin="17" end="18" id="31" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="32" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke auteur schreef ` Lord Jim &apos; , waarin hij constateerde dat de mens bepaald geen kunstwerk is ?</sentence>
+</alpino_ds>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="33" id="0" rel="top">
+    <node begin="14" end="15" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="24" end="25" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="32" id="3" rel="--">
+      <node begin="0" cat="np" end="5" id="4" index="1" rel="su">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="5" lemma="manager" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="manager" word="Manager"/>
+        <node begin="1" cat="mwu" end="3" id="6" rel="app">
+          <node begin="1" end="2" id="7" lemma="Guus" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Guus" spectype="deeleigen" word="Guus"/>
+          <node begin="2" end="3" id="8" lemma="Brox" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Brox" spectype="deeleigen" word="Brox"/>
+        </node>
+        <node begin="3" cat="pp" end="5" id="9" rel="mod">
+          <node begin="3" end="4" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="11" lemma="Feijenoord" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Feijenoord" word="Feijenoord"/>
+        </node>
+      </node>
+      <node begin="5" end="6" id="12" lemma="kunnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kan" word="kon" wvorm="pv"/>
+      <node begin="0" cat="inf" end="32" id="13" rel="vc">
+        <node begin="0" end="5" id="14" index="1" rel="su"/>
+        <node begin="6" end="7" id="15" lemma="gistermiddag" pos="noun" postag="BW()" pt="bw" rel="mod" root="gistermiddag" word="gistermiddag"/>
+        <node begin="7" end="8" id="16" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+        <node begin="8" end="9" id="17" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+        <node begin="9" buiging="zonder" end="10" id="18" lemma="zeggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zeg" word="zeggen" wvorm="inf"/>
+        <node begin="10" cat="cp" end="32" id="19" rel="vc">
+          <node begin="10" conjtype="onder" end="11" id="20" lemma="of" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="of" word="of"/>
+          <node begin="11" cat="ssub" end="32" id="21" rel="body">
+            <node begin="11" cat="np" end="24" id="22" index="2" rel="su">
+              <node begin="11" cat="mwu" end="14" id="23" rel="hd">
+                <node begin="11" end="12" id="24" lemma="Wim" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wim" spectype="deeleigen" word="Wim"/>
+                <node begin="12" end="13" id="25" lemma="van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+                <node begin="13" end="14" id="26" lemma="Hanegem" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hanegem" spectype="deeleigen" word="Hanegem"/>
+              </node>
+              <node begin="15" cat="ppart" end="24" id="27" rel="mod">
+                <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="28" lemma="zaterdag" naamval="stan" ntype="eigen" pos="adv" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="zaterdag" word="zaterdag"/>
+                <node begin="16" cat="pp" end="22" id="29" rel="mod">
+                  <node begin="16" end="17" id="30" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                  <node begin="17" cat="np" end="22" id="31" rel="obj1">
+                    <node begin="17" end="18" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="33" lemma="competitiewedstrijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="competitiewedstrijd" word="competitiewedstrijd"/>
+                    <node begin="19" cat="pp" end="22" id="34" rel="mod">
+                      <node begin="19" end="20" id="35" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
+                      <node begin="20" cat="mwu" end="22" id="36" rel="obj1">
+                        <node begin="20" end="21" id="37" lemma="Holland" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Holland" spectype="deeleigen" word="Holland"/>
+                        <node begin="21" end="22" id="38" lemma="Sport" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Sport" spectype="deeleigen" word="Sport"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node begin="22" buiging="zonder" end="23" graad="basis" id="39" lemma="licht" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="licht" word="licht"/>
+                <node begin="23" buiging="zonder" end="24" id="40" lemma="blesseren" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geblesseerd" word="geblesseerd" wvorm="vd"/>
+              </node>
+            </node>
+            <node begin="29" end="30" id="41" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+            <node begin="11" cat="inf" end="32" id="42" rel="vc">
+              <node begin="11" end="24" id="43" index="2" rel="su"/>
+              <node begin="30" buiging="zonder" end="31" id="44" lemma="kunnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kan" word="kunnen" wvorm="inf"/>
+              <node begin="11" cat="inf" end="32" id="45" rel="vc">
+                <node begin="11" end="24" id="46" index="2" rel="su"/>
+                <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="47" lemma="woensdagavond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="woensdagavond" word="woensdagavond"/>
+                <node begin="26" cat="pp" end="29" id="48" rel="pc">
+                  <node begin="26" end="27" id="49" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
+                  <node begin="27" cat="mwu" end="29" id="50" rel="obj1">
+                    <node begin="27" end="28" id="51" lemma="AC" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="AC" spectype="deeleigen" word="AC"/>
+                    <node begin="28" end="29" id="52" lemma="Milan" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Milan" spectype="deeleigen" word="Milan"/>
+                  </node>
+                </node>
+                <node begin="31" buiging="zonder" end="32" id="53" lemma="meespelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="speel" word="meespelen" wvorm="inf"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="32" end="33" id="54" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Manager Guus Brox van Feijenoord kon gistermiddag nog niet zeggen of Wim van Hanegem , zaterdag in de competitiewedstrijd tegen Holland Sport licht geblesseerd , woensdagavond tegen AC Milan zal kunnen meespelen .</sentence>
+</alpino_ds>

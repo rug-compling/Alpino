@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="2" end="3" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="12" end="13" frame="punct(aanhaal_both)" id="2" lcat="punct" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" sense="&quot;" special="aanhaal_both" word="&quot;"/>
+    <node begin="14" end="15" frame="punct(aanhaal_both)" id="3" lcat="punct" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" sense="&quot;" special="aanhaal_both" word="&quot;"/>
+    <node begin="0" cat="smain" end="20" id="4" rel="--">
+      <node begin="5" end="6" frame="verb(hebben,pl,aux_psp_hebben)" id="5" infl="pl" lcat="smain" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" sense="heb" tense="present" word="hebben" wvorm="pv"/>
+      <node begin="6" cat="np" end="8" id="6" index="1" rel="su">
+        <node aform="base" begin="6" buiging="zonder" end="7" frame="adjective(no_e(odet_adv))" graad="basis" id="7" infl="no_e" lcat="ap" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="det" root="veel" sense="veel" vform="adj" vwtype="onbep" word="veel"/>
+        <node begin="7" end="8" frame="noun(both,count,pl)" gen="both" getal="mv" graad="basis" id="8" lcat="np" lemma="mensen" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mens" sense="mens" word="mensen"/>
+      </node>
+      <node begin="0" cat="ppart" end="20" id="9" rel="vc">
+        <node begin="0" cat="conj" end="5" id="10" rel="mod">
+          <node begin="0" cat="ap" end="2" id="11" rel="cnj">
+            <node begin="0" end="1" frame="adverb" id="12" lcat="advp" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" sense="niet" word="Niet"/>
+            <node aform="base" begin="1" buiging="zonder" end="2" frame="adjective(no_e(adv))" graad="basis" id="13" infl="no_e" lcat="ap" lemma="onterecht" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="onterecht" sense="onterecht" vform="adj" word="onterecht"/>
+          </node>
+          <node begin="3" conjtype="neven" end="4" frame="conj(want)" id="14" lcat="vg" lemma="want" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="want" sense="want" word="want"/>
+          <node aform="base" begin="4" buiging="zonder" end="5" frame="adjective(no_e(adv))" graad="basis" id="15" infl="no_e" lcat="ap" lemma="blijkbaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="blijkbaar" sense="blijkbaar" vform="adj" word="blijkbaar"/>
+        </node>
+        <node begin="6" end="8" id="16" index="1" rel="su"/>
+        <node begin="8" cat="pp" end="11" id="17" rel="mod">
+          <node begin="8" end="9" frame="preposition(dankzij,[])" id="18" lcat="pp" lemma="dankzij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="dankzij" sense="dankzij" vztype="init" word="dankzij"/>
+          <node begin="9" cat="np" end="11" id="19" rel="obj1">
+            <node begin="9" end="10" frame="determiner(de)" id="20" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+            <node begin="10" end="11" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="21" lcat="np" lemma="dvd" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dvd" sense="dvd" word="dvd"/>
+          </node>
+        </node>
+        <node begin="11" end="12" frame="adverb" id="22" lcat="advp" lemma="opnieuw" pos="adv" postag="BW()" pt="bw" rel="mod" root="opnieuw" sense="opnieuw" word="opnieuw"/>
+        <node begin="13" buiging="zonder" end="14" frame="verb(hebben,psp,vp)" id="23" infl="psp" lcat="ppart" lemma="leren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leer" sc="vp" sense="leer" word="geleerd" wvorm="vd"/>
+        <node begin="6" cat="oti" end="20" id="24" rel="vc">
+          <node begin="15" end="16" frame="complementizer(om)" id="25" lcat="oti" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" sc="om" sense="om" vztype="init" word="om"/>
+          <node begin="6" cat="ti" end="20" id="26" rel="body">
+            <node begin="18" end="19" frame="complementizer(te)" id="27" lcat="cp" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" sense="te" vztype="init" word="te"/>
+            <node begin="6" cat="inf" end="20" id="28" rel="body">
+              <node begin="6" end="8" id="29" index="1" rel="su"/>
+              <node begin="16" cat="pp" end="18" id="30" rel="ld">
+                <node begin="16" end="17" frame="preposition(naar,[toe])" id="31" lcat="pp" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" sense="naar" vztype="init" word="naar"/>
+                <node begin="17" end="18" frame="noun(de,count,pl)" gen="de" getal="mv" graad="basis" id="32" lcat="np" lemma="film" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="film" sense="film" word="films"/>
+              </node>
+              <node begin="19" buiging="zonder" end="20" frame="verb(hebben,inf,ld_pp)" id="33" infl="inf" lcat="inf" lemma="kijken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kijk" sc="ld_pp" sense="kijk" word="kijken" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" frame="punct(punt)" id="34" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Niet onterecht , want blijkbaar hebben veel mensen dankzij de dvd opnieuw &quot; geleerd &quot; om naar films te kijken .</sentence>
+  <comments>
+    <comment>Q#DS_20020925_01-122-12-2|Niet onterecht , want blijkbaar hebben veel mensen dankzij de dvd opnieuw &quot; geleerd &quot; om naar films te kijken .|1|1|-0.3235126003878418</comment>
+  </comments>
+</alpino_ds>

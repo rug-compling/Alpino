@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="smain" end="15" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="een" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="hd" root="een" word="Een"/>
+        <node begin="1" cat="pp" end="4" id="4" rel="mod">
+          <node begin="1" end="2" id="5" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="2" cat="np" end="4" id="6" rel="obj1">
+            <node begin="2" end="3" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="8" lemma="viertal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="viertal" word="viertal"/>
+          </node>
+        </node>
+      </node>
+      <node begin="4" end="5" id="9" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="5" end="6" id="10" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+      <node begin="6" cat="np" end="15" id="11" rel="obj1">
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="ervaring" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ervaring" word="ervaring"/>
+        <node begin="7" cat="pp" end="15" id="13" rel="mod">
+          <node begin="7" end="8" id="14" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="8" cat="conj" end="15" id="15" rel="obj1">
+            <node begin="10" conjtype="neven" end="11" id="16" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="8" cat="np" end="15" id="17" rel="cnj">
+              <node begin="8" end="9" id="18" index="1" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="9" buiging="zonder" end="10" getal-n="zonder-n" id="19" lemma="organiseren" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="organiseer" word="organiseren" wvorm="inf"/>
+              <node begin="12" cat="pp" end="15" id="20" index="2" rel="mod">
+                <node begin="12" end="13" id="21" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="13" cat="np" end="15" id="22" rel="obj1">
+                  <node begin="13" buiging="met-e" end="14" graad="basis" id="23" lemma="dergelijke" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gelijke" word="dergelijke"/>
+                  <node begin="14" end="15" getal="mv" graad="basis" id="24" lemma="stunt" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="stunt" word="stunts"/>
+                </node>
+              </node>
+            </node>
+            <node begin="8" cat="np" end="15" id="25" rel="cnj">
+              <node begin="8" end="9" id="26" index="1" rel="det"/>
+              <node begin="11" buiging="zonder" end="12" id="27" lemma="uitvoeren" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voer" word="uitvoeren" wvorm="inf"/>
+              <node begin="12" end="15" id="28" index="2" rel="mod"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="29" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een van het viertal heeft al ervaring met het organiseren en uitvoeren van dergelijke stunts .</sentence>
+</alpino_ds>

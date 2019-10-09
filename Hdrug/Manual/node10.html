@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-/W3C/DTD HTML 4.0 Transitional//EN"
+     "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>HDRUG Reference Manual</TITLE>
+<link rel=stylesheet href="http://www.let.rug.nl/~vannoord/doc.css" 
+      type="text/css">
+<link rel=next href="node11.html">
+</HEAD>
+<BODY>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node11.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+<H1>10. hdrug_chart: Displaying Charts</H1>
+<P>The module hdrug_chart is intended to be used to display chart-like
+data-structures (on a Tcl/Tk canvas).</P>
+<H2>10.1. <a name="anc1"></a>Global Variables</H2>
+<P>This section lists the global variables maintained by the
+hdrug_chart library.</P>
+<H3>10.1.1. <a name="anc2"></a>user:chart_xdist</H3>
+<P>This flag determines the horizontal distance between nodes of the
+chart.</P>
+<H3>10.1.2. <a name="anc3"></a>user:chart_ydist</H3>
+<P>This flag determines the distance between edges over the same
+range.</P>
+<H2>10.2. <a name="anc4"></a>Hook Predicates</H2>
+<P>This section lists the hook predicates for the hdrug_chart
+library.</P>
+<H3>10.2.1. <a name="anc5"></a>user:pp_chart_show_node_help(Atom)</H3>
+<P>Short atom to be displayed in the help-line upon entering nodes of
+the chart. This is typically used to indicate the corresponding
+actions of mouse clicks on the nodes.</P>
+<H3>10.2.2. <a name="anc6"></a>user:pp_chart_item[23](Ident)</H3>
+<P>Used by hdrug_chart. This predicate can be used to define an action
+to be executed upon clicking the label of an edge of the chart. 
+This variant is for edges above the horizontal axis. The
+argument Ident refers to the fourth argument of the relevant edge that
+was one of the elements in the list passed on as the second argument
+of the pp_chart/3 predicate. The variants with a 2 or 3 suffix are
+used to define an action for the second or third mouse button.</P>
+<H3>10.2.3. <a name="anc7"></a>user:pp_chart_item_b[23](Ident)</H3>
+<P>Used by hdrug_chart. This predicate can be used to define an action
+to be executed upon clicking the label of an edge of the chart. 
+This variant is for edges below the horizontal axis. The
+argument Ident refers to the fourth argument of the relevant edge that
+was one of the elements in the list passed on as the third argument of
+the pp_chart/3 predicate. The variants with a 2 or 3 suffix are used
+to define an action for the second or third mouse button.</P>
+<H2>10.3. <a name="anc8"></a>Predicates</H2>
+<P>This section lists the predicates exported by the hdrug_chart
+library.</P>
+<H3>10.3.1. <a name="anc9"></a>pp_chart(Nodes,Edges,Bedges)</H3>
+<P>Pretty-printing routine (on the Tk widget) for chart-like
+datastructures. Nodes is a list of integers, indicating the nodes of
+the chart (the string positions). Edges is a list of edges. Each edge
+is a term edge(P,Q,Cat,Ident) where P and Q are chart nodes, Cat is
+some atom used as the label of the edge, and Ident is some atom used
+to identify the edge. This identifier is passed on to the hook
+predicates pp_chart_item and pp_chart_item_b which can be used to
+define an action for clicking the label of a chart item. Bedges is
+also a list of edges; these edges are placed on and below the nodes of
+the chart (this can be used, for instance, to display the words of the
+chart). Example:</P>
+<BLOCKQUOTE>?- pp_chart([0,1,2],[edge(0,1,np,1),edge(1,2,vp,2),edge(0,2,s,3)],<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[edge(0,1,jan,4), edge(1,2,slaapt,5)]).</BLOCKQUOTE>
+<P><a href="index.html"><IMG WIDTH=65 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="contents" SRC="contents_motif.png"></a>
+<a href="node15.html"><IMG WIDTH=43 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="index" SRC="index_motif.png"></a>
+<a href="node11.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM BORDER=0 ALT="next" SRC="next_motif.png"></a>
+<br><br>
+
+
+</BODY></HTML>

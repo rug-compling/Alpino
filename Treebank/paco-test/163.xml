@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="33" id="0" rel="top">
+    <node begin="14" end="15" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="32" id="2" rel="--">
+      <node begin="1" end="2" frame="verb(unacc,pl,aux_psp_zijn)" id="3" infl="pl" lcat="smain" pos="verb" rel="hd" root="ben" sc="aux_psp_zijn" sense="ben" tense="present" word="zijn"/>
+      <node begin="2" cat="np" end="14" id="4" index="1" rel="su">
+        <node begin="2" end="3" frame="determiner(de)" id="5" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+        <node begin="3" end="4" frame="noun(het,count,pl)" gen="het" id="6" lcat="np" num="pl" pos="noun" rel="hd" root="middel" sense="middel" word="middelen"/>
+        <node begin="4" cat="rel" end="14" id="7" rel="mod">
+          <node begin="4" case="no_obl" end="5" frame="rel_pronoun(de,no_obl)" gen="de" id="8" index="2" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+          <node begin="4" cat="ssub" end="14" id="9" rel="body">
+            <node begin="4" end="5" id="10" index="2" rel="su"/>
+            <node begin="12" end="13" frame="verb(hebben,pl,aux(inf))" id="11" infl="pl" lcat="ssub" pos="verb" rel="hd" root="zal" sc="aux(inf)" sense="zal" tense="present" word="zullen"/>
+            <node begin="4" cat="inf" end="14" id="12" rel="vc">
+              <node begin="4" end="5" id="13" index="2" rel="su"/>
+              <node begin="4" cat="ppart" end="12" id="14" rel="vc">
+                <node begin="4" end="5" id="15" index="2" rel="obj1"/>
+                <node begin="5" cat="pp" end="11" id="16" rel="mod">
+                  <node begin="5" end="6" frame="preposition(via,[])" id="17" lcat="pp" pos="prep" rel="hd" root="via" sense="via" word="via"/>
+                  <node begin="6" cat="conj" end="11" id="18" rel="obj1">
+                    <node begin="6" cat="np" end="8" id="19" rel="cnj">
+                      <node begin="6" end="7" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="20" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                      <node begin="7" end="8" frame="noun(het,count,sg)" gen="het" id="21" lcat="np" num="sg" pos="noun" rel="hd" root="subsidie_besluit" sense="subsidie_besluit" word="subsidiebesluit"/>
+                    </node>
+                    <node begin="8" end="9" frame="conj(en)" id="22" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                    <node begin="9" cat="np" end="11" id="23" rel="cnj">
+                      <node begin="9" end="10" frame="determiner(de)" id="24" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                      <node begin="10" end="11" frame="proper_name(both,'LOC')" id="25" lcat="np" neclass="LOC" num="both" pos="name" rel="hd" root="Samenwerkingsovereenkomst" sense="Samenwerkingsovereenkomst" word="Samenwerkingsovereenkomst"/>
+                    </node>
+                  </node>
+                </node>
+                <node begin="11" end="12" frame="verb(hebben,psp,ninv(transitive,part_transitive(in)))" id="26" infl="psp" lcat="ppart" pos="verb" rel="hd" root="zet_in" sc="part_transitive(in)" sense="zet_in" word="ingezet"/>
+              </node>
+              <node begin="13" end="14" frame="verb(unacc,inf,passive)" id="27" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="0" cat="ppart" end="32" id="28" rel="vc">
+        <node begin="0" end="1" frame="er_adverb(bij)" id="29" lcat="pp" pos="pp" rel="mod" root="hierbij" sense="hierbij" special="er" word="Hierbij"/>
+        <node begin="2" end="14" id="30" index="1" rel="su"/>
+        <node begin="15" end="16" frame="adverb" id="31" lcat="advp" pos="adv" rel="mod" root="nog" sense="nog" word="nog"/>
+        <node begin="16" end="17" frame="adverb" id="32" lcat="advp" pos="adv" rel="mod" root="niet" sense="niet" word="niet"/>
+        <node begin="17" end="18" frame="verb(zijn,psp,intransitive)" id="33" infl="psp" lcat="ppart" pos="verb" rel="hd" root="inbegrepen" sc="intransitive" sense="inbegrepen" word="inbegrepen"/>
+        <node begin="18" cat="cp" end="32" id="34" rel="mod">
+          <node begin="18" end="19" frame="complementizer" id="35" lcat="cp" pos="comp" rel="cmp" root="omdat" sense="omdat" word="omdat"/>
+          <node begin="19" cat="ssub" end="32" id="36" rel="body">
+            <node begin="19" end="20" frame="het_noun" id="37" lcat="np" pos="noun" rel="sup" root="het" sense="het" special="het" word="het"/>
+            <node begin="20" end="21" frame="adverb" id="38" lcat="advp" pos="adv" rel="mod" root="nog" sense="nog" word="nog"/>
+            <node begin="21" cat="ap" end="23" id="39" rel="predc">
+              <node begin="21" end="22" frame="adverb" id="40" lcat="advp" pos="adv" rel="mod" root="niet" sense="niet" word="niet"/>
+              <node aform="base" begin="22" end="23" frame="adjective(no_e(adv),subject_sbar_no_het)" id="41" infl="no_e" lcat="ap" pos="adj" rel="hd" root="duidelijk" sc="subject_sbar_no_het" sense="duidelijk" vform="adj" word="duidelijk"/>
+            </node>
+            <node begin="23" end="24" frame="verb(unacc,sg_heeft,copula_sbar)" id="42" infl="sg_heeft" lcat="ssub" pos="verb" rel="hd" root="ben" sc="copula_sbar" sense="ben" tense="present" word="is"/>
+            <node begin="24" cat="whsub" end="32" id="43" rel="su">
+              <node begin="24" cat="np" end="26" id="44" index="3" rel="whd">
+                <node begin="24" end="25" frame="determiner(welke,rwh,nmod,pro,yparg)" id="45" infl="welke" lcat="detp" pos="det" rel="det" root="welk" sense="welk" wh="rwh" word="welke"/>
+                <node begin="25" end="26" frame="noun(de,count,sg)" gen="de" id="46" lcat="np" num="sg" pos="noun" rel="hd" root="kost" sense="kost" word="kost"/>
+              </node>
+              <node begin="24" cat="ssub" end="32" id="47" rel="body">
+                <node begin="24" end="26" id="48" index="3" rel="obj1"/>
+                <node begin="26" case="nom" def="def" end="27" frame="pronoun(nwh,thi,both,de,nom,def)" gen="de" id="49" lcat="np" num="both" per="thi" pos="pron" rel="su" root="zij" sense="zij" wh="nwh" word="zij"/>
+                <node begin="27" cat="pp" end="31" id="50" rel="mod">
+                  <node begin="27" end="28" frame="preposition(gedurende,[])" id="51" lcat="pp" pos="prep" rel="hd" root="gedurende" sense="gedurende" word="gedurende"/>
+                  <node begin="28" cat="np" end="31" id="52" rel="obj1">
+                    <node begin="28" end="29" frame="determiner(de)" id="53" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                    <node aform="base" begin="29" end="30" frame="adjective(e)" id="54" infl="e" lcat="ap" pos="adj" rel="mod" root="volledig" sense="volledig" vform="adj" word="volledige"/>
+                    <node begin="30" end="31" frame="tmp_noun(de,count,sg)" gen="de" id="55" lcat="np" num="sg" pos="noun" rel="hd" root="plan_periode" sense="plan_periode" special="tmp" word="planperiode"/>
+                  </node>
+                </node>
+                <node begin="31" end="32" frame="verb(hebben,pl,transitive)" id="56" infl="pl" lcat="ssub" pos="verb" rel="hd" root="beteken" sc="transitive" sense="beteken" tense="present" word="betekenen"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="32" end="33" frame="punct(punt)" id="57" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Hierbij zijn de middelen die via het subsidiebesluit en de Samenwerkingsovereenkomst ingezet zullen worden , nog niet inbegrepen omdat het nog niet duidelijk is welke kost zij gedurende de volledige planperiode betekenen .</sentence>
+  <comments>
+    <comment>Q#163|Hierbij zijn de middelen die via het subsidiebesluit en de Samenwerkingsovereenkomst ingezet zullen worden , nog niet inbegrepen omdat het nog niet duidelijk is welke kost zij gedurende de volledige planperiode betekenen .|1|1|-18.15775119698663</comment>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="0" cat="smain" end="9" id="1" rel="--">
+      <node begin="0" cat="np" end="6" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" cat="ppart" end="5" id="4" rel="mod">
+          <node begin="1" cat="pp" end="4" id="5" rel="mod">
+            <node begin="1" end="2" id="6" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="2" cat="np" end="4" id="7" rel="obj1">
+              <node begin="2" buiging="zonder" end="3" id="8" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
+              <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="punt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="punt" word="punt"/>
+            </node>
+          </node>
+          <node begin="4" buiging="zonder" end="5" id="10" lemma="ondernemen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ondernomen" word="ondernomen" wvorm="vd"/>
+        </node>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="steekproef" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="steekproef" word="steekproef"/>
+      </node>
+      <node begin="6" end="7" id="12" lemma="overtuigen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="overtuig" word="overtuigt" wvorm="pv"/>
+      <node begin="7" end="8" getal="ev" id="13" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj1" root="me" status="red" vwtype="pr" word="me"/>
+      <node begin="8" end="9" id="14" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+    </node>
+    <node begin="9" end="10" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De op dit punt ondernomen steekproef overtuigt me niet .</sentence>
+</alpino_ds>

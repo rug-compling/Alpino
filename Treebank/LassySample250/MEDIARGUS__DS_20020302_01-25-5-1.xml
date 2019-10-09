@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="6" end="7" frame="punct(aanhaal_both)" id="1" lcat="punct" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" sense="&quot;" special="aanhaal_both" word="&quot;"/>
+    <node begin="7" end="8" frame="punct(komma)" id="2" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="du" end="10" id="3" rel="--">
+      <node begin="0" cat="smain" end="6" id="4" rel="nucl">
+        <node begin="0" case="both" def="def" end="1" frame="pronoun(nwh,thi,both,de,both,def,wkpro)" gen="de" genus="onz" getal="ev" graad="basis" id="5" lcat="np" lemma="ze" naamval="stan" ntype="soort" num="both" per="thi" pos="pron" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="su" root="ze" sense="ze" special="wkpro" wh="nwh" word="ZE"/>
+        <node begin="1" buiging="zonder" end="2" frame="verb(hebben,pl,pc_pp(met))" id="6" infl="pl" lcat="smain" lemma="leuren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="leur" sc="pc_pp(met)" sense="leur-met" tense="present" word="leuren" wvorm="inf"/>
+        <node begin="2" conjtype="neven" end="3" frame="adverb" id="7" lcat="advp" lemma="maar" pos="adv" postag="VG(neven)" pt="vg" rel="mod" root="maar" sense="maar" word="maar"/>
+        <node begin="3" end="4" frame="adverb" getal="ev" id="8" lcat="advp" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="adv" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="mod" root="wat" sense="wat" status="vol" vwtype="vb" word="wat"/>
+        <node begin="4" cat="pp" end="6" id="9" rel="pc">
+          <node begin="4" end="5" frame="preposition(met,[mee,[en,al]])" id="10" lcat="pp" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" sense="met" vztype="init" word="met"/>
+          <node begin="5" case="dat_acc" def="def" end="6" frame="pronoun(nwh,fir,pl,de,dat_acc,def)" gen="de" getal="mv" id="11" lcat="np" lemma="ons" naamval="obl" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj1" root="ons" sense="ons" status="vol" vwtype="pr" wh="nwh" word="ons"/>
+        </node>
+      </node>
+      <node begin="8" cat="sv1" end="10" id="12" rel="tag">
+        <node begin="8" end="9" frame="verb(hebben,sg3,sbar)" id="13" infl="sg3" lcat="sv1" lemma="menen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="meen" sc="sbar" sense="meen" tense="present" word="meent" wvorm="pv"/>
+        <node begin="9" end="10" frame="proper_name(both,'PER')" id="14" lcat="np" lemma="Osinga" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="su" root="Osinga" sense="Osinga" spectype="deeleigen" word="Osinga"/>
+      </node>
+    </node>
+    <node begin="10" end="11" frame="punct(punt)" id="15" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>ZE leuren maar wat met ons &quot; , meent Osinga .</sentence>
+  <comments>
+    <comment>Q#DS_20020302_01-25-5-1|ZE leuren maar wat met ons &quot; , meent Osinga .|1|1|-0.02884529388853606</comment>
+  </comments>
+</alpino_ds>

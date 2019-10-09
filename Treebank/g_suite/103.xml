@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      <node begin="1" end="2" id="3" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+      <node begin="0" cat="inf" end="7" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" buiging="zonder" end="3" id="6" lemma="weten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="weet" word="weten" wvorm="inf"/>
+        <node begin="3" cat="whsub" end="7" id="7" rel="vc">
+          <node begin="3" end="4" getal="getal" id="8" index="2" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="noun" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="whd" root="wie" status="vol" vwtype="vb" word="wie"/>
+          <node begin="3" cat="ssub" end="7" id="9" rel="body">
+            <node begin="3" end="4" id="10" index="2" rel="su"/>
+            <node begin="4" end="5" getal="ev" id="11" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj1" root="mij" status="vol" vwtype="pr" word="mij"/>
+            <node begin="5" end="6" id="12" lemma="vandaag" pos="adv" postag="BW()" pt="bw" rel="mod" root="vandaag" word="vandaag"/>
+            <node begin="6" end="7" id="13" lemma="missen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="mis" word="mist" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>ik wil weten wie mij vandaag mist</sentence>
+</alpino_ds>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="moeder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="moeder" word="moeder"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="tonen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="toon" word="toont" wvorm="pv"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="6" lemma="trots" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predm" root="trots" word="trots"/>
+      <node begin="4" cat="np" end="8" id="7" rel="obj1">
+        <node begin="4" end="5" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="5" cat="ppart" end="7" id="9" rel="mod">
+          <node begin="5" buiging="zonder" end="6" graad="basis" id="10" lemma="leuk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="leuk" word="leuk"/>
+          <node begin="6" buiging="met-e" end="7" id="11" lemma="inrichten" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="ingericht" word="ingerichte" wvorm="vd"/>
+        </node>
+        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="12" lemma="babykamer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="baby_kamer" word="babykamer"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De moeder toont trots de leuk ingerichte babykamer .</sentence>
+</alpino_ds>

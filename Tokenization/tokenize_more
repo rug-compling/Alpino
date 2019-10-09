@@ -1,0 +1,77 @@
+#!/usr/bin/perl -w
+# © Gertjan van Noord, 2003
+# mailto:vannoord@let.rug.nl
+
+# todo: integrate with normal tokenizer (also in TWNC)
+# can be fsa 
+
+require 5.004;
+use open qw(:std :utf8);
+use utf8;
+
+use Getopt::Std;
+$opt_n="";
+
+getopts('n');
+# -n: do not introduce line breaks
+
+while (<>) {
+
+    ## ' tuut'-vorm    --> 'tuut'-vorm
+    s/(['`’"]) (\p{L}+\g1-)/$1$2/g;  
+
+    ## ( buiten)gewoon --> (buitengewoon)
+    s/[(] (\p{L}+-?[)])/($1/g;
+
+    ## remove markers introduced by recognize_enumerations
+    s/([0-9]+)\#/$1\./g;
+
+
+    if(!$opt_n) {
+    
+	## special cases for newspaper first lines: AMSTERDAM - De ....
+	## we introduce sentence boundary after the AMSTERDAM - bit
+	## AMSTERDAM - De ....
+	## AMSTERDAM, 3 JAN. De ....
+	## ASTERDAM De ...
+	## ( REUTER )
+	if      (/\p{Lu}\p{Lu}[\p{Lu}() \/,0-9.-]* --* (?=\p{Lu}\p{Ll})/o) {
+	    $_=$`. $& . "\n" . $';  #'
+	} elsif (/^Foto : \p{Lu}\p{Lu}[\p{Lu}() \/,0-9.-]* - ?/o) {
+	    $_=$`. $& . "\n" . $';  #'
+	} elsif (/^[(] Van een (medewerker|verslaggeefster|verslaggever) [)] \p{Lu}\p{Lu}[\p{Lu}() \/,0-9.-]* - ?/o) {
+	    $_=$`. $& . "\n" . $';  #'
+	} elsif (/^[(] Van onze (buitenlandredactie|kunstredactie|politieke redactie|redactie buitenland|redactie economie|sportredactie|verslaggeefster|verslaggever|verslaggeefsters|verslaggevers) [)] \p{Lu}\p{Lu}[\p{Lu}() \/,0-9.-]* - ?/o) {
+	    $_=$`. $& . "\n" . $';  #'
+	    
+	} elsif (/^(NEW( )?YORK|AMSTERDAM|NIEUWEGEIN|HEESCH|ZEIST|AMERSFOORT|REGIO|VEENENDAAL|LEUSDEN|IJSSELSTEIN|VIANEN|SOESTERBERG|SOEST|ROTTERDAM|NAIROBI|MAARTENSDIJK|MAARSSEN|MAASTRICHT|MEXICO CITY|LONDEN|HOUTEN|DRIEBERGEN|WOERDEN|DOORN|UTRECHT|BREUKELEN|WARSCHAU|DE BILT|LOS ANGELES|SAO PAULO|MAN BIJT HOND|HET ROZE RIJK|DUBLIN|JERUZALEM|DEN BSOCH|NETWERK|2VANDAAG|VANDAAG|ONTBIJT TV|HEERLEN|SALXBURG|EINDHOVEN|BARCELONA|CANNES|TROS TV SHOW|NOVA|TAIPEI|GRONINGEN|MIDDAGEDITIE|NOORDERLICHT|DORDRECHT|ZWIJNDRECHT|WENEN|ZEMBLA|OVT|SYDNEY|BERLIJN|ROME|CHICAGO|OSLO|KOPENHAGEN|WASHINGTON|HONGKONG|FRANKFURT|BANGKOK|VANCOUVER|WELLINGTON|ROME|MOSKOU|PEKING|BRUSSEL|DALLAS|CAÏRO|ANKARA|TILBURG|ADUARD|TORONTO|SINGAPORE|ATHENE|CAIRO|PRAAG|SPORTJOURNAAL|DOKWERK|PARIJS|KRUISPUNT|LONDON|KAAPSTAD|ISTANBUL|LIVERPPOL|MAINZ|KOPSPIJKERS|LILLE|MILAAN|WOLVEGA|BUENOS AIRES|WEST PALM BEACH|TOK[IY]O) (?=\p{Lu}\p{Ll})/o) {
+	    $_=$`. $& . "\n" . $'  # '
+	} elsif (/^(\p{Lu}[^ ]*|Luz-Ardiden|Noordwijk aan Zee|Berkel en Roderijs|New York \/ Rotterdam|Los Angeles|Sint Petersburg|La Coruna|Las Vegas|Beverly Hills|Hollandsche Rading|Addis Abeba|Les Deux Alpes|Torre San Patrizio|Hendrik Ido Ambacht|Den Bosch|Nederland [123]|Duitsland [123]|Net5|V8|Capelle aan den IJssel|New Delhi|Alphen aan den Rijn|Rio de Janeiro|San Francisco|Sao Paulo|Mission Viejo|Monte Carlo|Kansas City|Los Gatos|Mar del Plata|Palma de Mallorca|Wijk aan Zee|Baselga di Pinè|Bergen op Zoom|Nederhorst den Berg|Noordwijk aan Zee|Isle of Wight|Jerez de la Frontera|Alphen aan den Rijn|Alphen aan de Rijn|Krimpen aan de Lek|Ouderkerk aan de Amstel|Frimley Green|De Bilt|Hoek van Holland|Buenos Aires|Den Helder|Den Haag|New York|'s-GRAVENDEEL|'s-HEERENBERG|'s-Hertogenbosch|'s-Gravenpolder|'s-Heerenberg|BAQA'A|Boulogne-sur-Mer|'s-GRAVELAND|Monte Carlo) - *(?=\p{Lu}\p{Ll}* \p{Ll})/o) {
+	    $_=$`. $& . "\n" . $'  # '
+		## ( Dat is een feit ) Ik ...
+        } elsif (/^[(][^)]*[)] (?=\p{Lu})/o) {
+	    $_= $` . $& . "\n" . $'; #'
+        }
+
+    }
+    
+    ## attempts to distinguish various use of -
+    ## "huis- tuin- en keuken"  should be left alone
+    ## "ik ga -zoals gezegd- naar huis" will be rewritten into
+    ## "ik ga - zoals gezegd - naar huis"
+    if(/[ ][-]([^ ][^-]*[^ ])[-][ ]/) {
+	$prefix=$`;
+	$middle=$1;
+	$suffix=$';   # '
+	if ($prefix !~ /(en |of )$/ &&
+            $suffix !~ /^(en |of )/) {
+	    $_ = "$prefix - $middle - $suffix";
+        }
+    }
+
+    ## remove spaces at end of line
+    s/ (?=\n)//g;
+
+    print;
+
+}

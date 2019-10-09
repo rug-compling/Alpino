@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="conj" end="6" id="1" rel="--">
+      <node begin="0" cat="inf" end="3" id="2" rel="cnj">
+        <node begin="0" cat="np" end="2" id="3" index="1" rel="obj1">
+          <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="roodbaarsfilet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rood_baar_filet" word="roodbaarsfilets"/>
+        </node>
+        <node begin="2" buiging="zonder" end="3" id="6" lemma="afkruiden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="afkruiden" word="afkruiden" wvorm="inf"/>
+      </node>
+      <node begin="3" conjtype="neven" end="4" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="0" cat="inf" end="6" id="8" rel="cnj">
+        <node begin="0" end="2" id="9" index="1" rel="obj1"/>
+        <node begin="4" buiging="zonder" end="5" graad="basis" id="10" lemma="gaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="gaar" word="gaar"/>
+        <node begin="5" buiging="zonder" end="6" id="11" lemma="stomen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stoom" word="stomen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De roodbaarsfilets afkruiden en gaar stomen .</sentence>
+</alpino_ds>

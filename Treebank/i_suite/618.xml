@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="4" end="5" id="2" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
+      <node begin="5" cat="np" end="7" id="3" index="1" rel="su">
+        <node begin="5" end="6" id="4" lemma="evenveel" naamval="stan" numtype="hoofd" pos="det" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="evenveel" word="evenveel"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="5" lemma="aandacht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aandacht" word="aandacht"/>
+      </node>
+      <node begin="0" cat="ppart" end="8" id="6" rel="vc">
+        <node begin="0" cat="pp" end="4" id="7" rel="pc">
+          <node begin="0" end="1" id="8" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="Niet"/>
+          <node begin="1" end="2" id="9" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+          <node begin="2" cat="np" end="4" id="10" rel="obj1">
+            <node begin="2" buiging="met-e" end="3" id="11" lemma="ieder" naamval="stan" npagr="evz" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="det" root="ieder" vwtype="onbep" word="iedere"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="12" lemma="doelstelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="doelstelling" word="doelstelling"/>
+          </node>
+        </node>
+        <node begin="5" end="7" id="13" index="1" rel="obj1"/>
+        <node begin="7" buiging="zonder" end="8" id="14" lemma="besteden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="besteed" word="besteed" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Niet aan iedere doelstelling wordt evenveel aandacht besteed .</sentence>
+</alpino_ds>

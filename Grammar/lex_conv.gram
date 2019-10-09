@@ -1,0 +1,1747 @@
+%%           -*-Mode: prolog;-*-
+:- expects_dialect(sicstus).
+
+:- discontiguous
+    a_lex/2,
+    a_lex/4.
+
+%% inherit feature library
+:- use_module('../Hdrug/Prolog/hdrug_feature').
+
+%% loads file with further definitions of the various lexical classes
+:- ensure_loaded('lex_types.gram').
+
+unify_mods(X) :-
+    alpino_data:unify_mods(X).
+
+lex(Sign,Tag,Word,Constraints) :-
+    copy_term(Tag,Copy),
+    numbervars(Copy,0,_),
+    call_lex(Copy,Sign,Tag,Word,Constraints).
+
+%% lex/4 is the interface.
+%% lex(Sign,Tag,Word)
+%% this is for (multi-word)-units with a complex dependency structure:
+call_lex(with_dt(TagCopy,_),Sign,with_dt(Tag,Deriv),Word,Constraints) :-
+    !,
+    a_lex(Tag,Sign0,Word,Constraints),
+    unify_except(Sign0,Sign,dt),
+    Sign0:dt <=> Dt0,
+    Dt0 => dt,
+    Dt0:fwrd ==> Word,
+    Sign:dt <=> Dt,
+    Dt => dt,
+    Dt:fwrd ==> Word,
+    construct_dt(Deriv,Sign,Word,TagCopy,Dt0).
+
+%% default case
+call_lex(TagCopy,Sign,Tag,Word,Constraints) :-
+    Dt => dt,
+    Dt:hwrd ==> Word,
+    Dt:fwrd <=> Dt:hwrd,
+    Dt:frame ==> TagCopy,
+    a_lex(Tag,Sign,Word,Constraints),
+    Sign:dt <?=?> Dt.
+
+a_lex(Tag,Sign,_,[]) :-
+    a_lex(Tag,Sign).
+
+a_lex(Tag,Sign,Word,[]) :-
+    a_lex(Tag,Sign,Word).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% various lexical categories %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% a_lex(+Tag,?Sign)
+a_lex(particle(W),Sign) :-
+    particle(W,Sign).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% nominals %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% special cases from misc.pl
+
+%% "aflevering" in "nieuwsbulletin aflevering zes"
+a_lex(post_n_n,Sign) :-
+    post_n_n(Sign).
+
+a_lex(enumeration,Sign) :-
+    enumeration(Sign).
+
+%% "niets" in "niets dan ellende"
+a_lex(comp_noun(De,MC,Num,Type),Sign) :-
+    comp_noun(Sign,Type),
+    hstem(Sign),
+    noun_features(De,MC,Num,Sign).
+
+%% 5 februari
+a_lex(tmp_np,Sign) :-
+    tmp_np(Sign),
+    hstem(Sign).
+
+%% e.g. chess moves
+a_lex(np,Sign) :-
+    np(Sign),
+    hstem(Sign).
+
+%% 1999
+a_lex(np(year),Sign) :-
+    hstem(Sign),
+    year_np(Sign).
+
+%% "begin" in "begin deze week"
+a_lex(tmp_app_noun,Sign) :-
+    tmp_app_noun(Sign).
+
+%% noun(Word,{de,het,both},{mass,count,both},{sg,pl})
+%% noun(Word)
+a_lex(noun(De,MC,Num),Sign) :-
+    a_lex_noun(De,MC,Num,Sign).
+
+a_lex_noun(De,MC,Num,Sign) :-
+    noun(Sign),
+    hstem(Sign),
+    noun_features(De,MC,Num,Sign).
+
+a_lex(noun(De,MC,Num,SUBCAT),Sign) :-
+    a_lex_noun(De,MC,Num,SUBCAT,Sign).
+
+a_lex_noun(De,MC,Num,SUBCAT,Sign) :-
+    SUBCAT =.. [Fun0|Args0],
+    hdrug_util:concat_all([Fun0,noun],Fun,'_'),
+    lists:append(Args0,[Sign],Args),
+    Call =.. [Fun|Args],
+    call(Call),
+    hstem(Sign),
+    noun_features(De,MC,Num,Sign).
+
+a_lex(tmp_noun(De,MC,Num),Sign) :-
+    a_lex_noun(De,MC,Num,Sign0),
+    unify_except(Sign0,Sign,nform),    
+    Sign:nform => (norm;temp),
+    Sign:can_mod => yes.
+
+a_lex(tmp_noun(De,MC,Num,SUBCAT),Sign) :-
+    a_lex_noun(De,MC,Num,SUBCAT,Sign0),
+    unify_except(Sign0,Sign,nform),    
+    Sign:can_mod => yes,
+    Sign:nform => (norm;temp).
+
+a_lex(meas_mod_noun(De,MC,Num),Sign) :-
+    a_lex_noun(De,MC,Num,Sign0),
+    unify_except(Sign0,Sign,nform),
+    Sign:can_mod => yes,
+    Sign:nform => (norm;meas_mod).
+
+a_lex(meas_mod_noun(De,MC,Num,SUBCAT),Sign) :-
+    a_lex_noun(De,MC,Num,SUBCAT,Sign0),
+    unify_except(Sign0,Sign,nform),    
+    Sign:can_mod => yes,
+    Sign:nform => (norm;meas_mod).
+
+a_lex(amount_meas_mod_noun(De,MC,Num),Sign) :-
+    a_lex(meas_mod_noun(De,MC,Num),Sign0),
+    overwrite(Sign0,Sign,amount,yes),
+    Sign:can_mod => yes.
+
+a_lex(amount_meas_mod_noun(De,MC,Num,SUBCAT),Sign) :-
+    a_lex(meas_mod_noun(De,MC,Num,SUBCAT),Sign0),
+    overwrite(Sign0,Sign,amount,yes),
+    Sign:can_mod => yes.
+
+a_lex(mod_noun(De,MC,Num),Sign) :-
+    a_lex_noun(De,MC,Num,Sign0),
+    unify_except(Sign0,Sign,nform),    
+    Sign:nform => (norm;temp_meas_mod),
+    Sign:can_mod => yes.
+
+a_lex(mod_noun(De,MC,Num,SUBCAT),Sign) :-
+    a_lex_noun(De,MC,Num,SUBCAT,Sign0),
+    unify_except(Sign0,Sign,nform),    
+    Sign:nform => (norm;temp_meas_mod),
+    Sign:can_mod => yes.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% pronouns etc %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+a_lex(reflexive(P,N),Sign) :-
+    refl_pronoun(Sign),
+    features_number(N,Sign),
+    features_refl_person(P,Sign),
+    Sign:case => (dat;acc;obl).
+
+a_lex(rel_pronoun(Det,Case),Sign) :-
+    rel_pronoun(Sign),
+    features_rel_de(Det,Sign),
+    features_rel_case(Case,Sign).
+
+a_lex(proper_name(Number),Sign,Word) :-
+    a_lex(proper_name(Number,'MISC'),Sign,Word).
+
+a_lex(proper_name(Number,Type),Sign,_Word) :-
+    proper_name(Type,Sign),
+    features_number(Number,Sign),
+    (   Type == 'PER'
+    ->  Sign:agr => ~(sg&het)
+    ;   true
+    ).
+
+
+a_lex(wh_adjective,Sign) :-
+    wh_adjective(Sign),
+    hstem(Sign).
+
+a_lex(wh_me_adjective,Sign) :-
+    wh_adjective(Sign0),
+    unify_except(Sign0,Sign,tmploc),
+    hstem(Sign),
+    Sign:tmploc => (tmp;me).
+    
+%% adjective(Word,{e,no_e,both}).
+a_lex(adjective(Suffix), Sign) :-
+    adjective_features(Suffix,Sign),
+    adjective(Sign),
+    hstem(Sign),
+    Sign:aform => ~iets.
+
+a_lex(me_adjective(Suffix), Sign) :-
+    adjective_features(Suffix,Sign),
+    me_adjective(Sign),
+    hstem(Sign),
+    Sign:aform => ~iets.
+
+a_lex(vp_om_me_adjective(Suffix), Sign) :-
+    adjective_features(Suffix,Sign),
+    vp_om_me_adjective(Sign),
+    hstem(Sign),
+    Sign:aform => ~iets.
+
+a_lex(als_adjective(Suffix),Sign) :-
+    adjective_features(Suffix,Sign),
+    als_adjective(Sign),
+    hstem(Sign),
+    Sign:aform => ~iets.
+
+a_lex(e_als_adjective(Suffix),Sign) :-
+    adjective_features(Suffix,Sign),
+    e_als_adjective(Sign),
+    hstem(Sign),
+    Sign:aform => ~iets.
+
+a_lex(sbar_adjective(Suffix),Sign) :-
+    adjective_features(Suffix,Sign),
+    sbar_adjective(Sign),
+    hstem(Sign),
+    Sign:aform => ~iets.
+
+a_lex(sbar_pred_adjective(Adv),Sign) :-
+    sbar_adjective(Sign),
+    features_adjective_adv(Adv,Sign),
+    Sign:can_nominalize => no,
+    Sign:can_marked_attr => no,
+    Sign:can_postn => no,
+    Sign:avform => avform_ap,
+    Sign:aform => nattr,
+    Sign:cform => base.
+
+a_lex(vp_pred_adjective(Adv),Sign) :-
+    vp_adjective(Sign),
+    features_adjective_adv(Adv,Sign),
+    Sign:can_nominalize => no,
+    Sign:can_marked_attr => no,
+    Sign:can_postn => no,
+    Sign:avform => avform_ap,
+    Sign:aform => nattr,
+    Sign:cform => base.
+
+%% 'leuks' in: 'iets leuks'
+a_lex(post_adjective(Suffix),Sign) :-
+    post_adjective_features(Suffix,Sign),
+    adjective(Sign),
+    hstem(Sign),
+    Sign:adv => nadv.
+
+%% 'leuks' in: 'iets leuks'
+a_lex(post_adjective(Suffix,SC),Sign) :-
+    post_adjective_features(Suffix,Sign),
+    adjective_sc(SC,Sign),
+    hstem(Sign),
+    Sign:adv => nadv.
+
+%% 'anders' in: 'ergens/iemand anders'
+a_lex(post_adjective_anders(er),Sign) :-
+    adjective(Sign),
+    hstem(Sign),
+    Sign:cform => compar,
+    Sign:can_nominalize => no,
+    Sign:can_marked_attr => no,
+    Sign:can_postn => no,
+    Sign:avform => avform_ap,
+    Sign:aform => anders,
+    Sign:adv => nadv.
+
+%% 'iets' in: 'iets leuks'
+a_lex(iets_noun,Sign) :-
+    iets_noun(Sign).
+
+a_lex(iets_anders_noun,Sign) :-
+    iets_anders_noun(Sign).
+
+a_lex(wh_iets_noun,Sign) :-
+    wh_iets_noun(Sign).
+
+a_lex(wh_iets_anders_noun,Sign) :-
+    wh_iets_anders_noun(Sign).
+
+a_lex(adjective(Suffix0,SC),Sign) :-
+    adapt_infl_subcat(SC,Suffix0,Suffix),
+    adjective_features(Suffix,Sign),
+    adjective_sc(SC,Sign),
+    hstem(Sign).
+
+a_lex(np_adjective,Sign) :-
+    adjective_features(no_e(padv),Sign),
+    np_adjective(Sign),
+    hstem(Sign).
+
+a_lex(het_np_adjective,Sign) :-
+    adjective_features(no_e(padv),Sign),
+    het_np_adjective(Sign),
+    hstem(Sign).
+
+a_lex(clause_np_adjective,Sign) :-
+    adjective_features(no_e(padv),Sign),
+    clause_np_adjective(Sign),
+    hstem(Sign).
+
+a_lex(np_adjective(Sc),Sign) :-
+    adjective_features(no_e(padv),Sign0),
+    adjective_sc(Sc,Sign0),
+    np_adjective(Sign0,Sign),
+    hstem(Sign).
+
+a_lex(clause_np_adjective(Sc),Sign) :-
+    adjective_features(no_e(padv),Sign0),
+    adjective_sc(Sc,Sign0),
+    clause_np_adjective(Sign0,Sign),
+    hstem(Sign).
+
+a_lex(het_np_adjective(Sc),Sign) :-
+    adjective_features(no_e(padv),Sign0),
+    adjective_sc(Sc,Sign0),
+    het_np_adjective(Sign0,Sign).
+
+a_lex(np_me_adjective(E),Sign) :-
+    adjective_features(E,Sign),
+    Sign:slash => [],
+    np_me_adjective(Sign),
+    hstem(Sign).
+
+a_lex(np_me_adjective(Sc,E),Sign) :-
+    adjective_features(E,Sign),
+    Sign:slash => [],
+    adjective_sc(Sc,Sign0),
+    np_me_adjective(Sign0,Sign),
+    hstem(Sign).
+
+a_lex(pred_np_me_adjective(A),Sign) :-
+    features_adjective_adv(A,Sign),
+    np_me_adjective(Sign),
+    hstem(Sign),
+    Sign:can_nominalize => no,
+    Sign:can_marked_attr => no,
+    Sign:can_postn => no,
+    Sign:avform => avform_ap,
+    Sign:aform => nattr,
+    Sign:cform => base.
+
+a_lex(subject_sbar_pred_np_me_adjective,Sign) :-
+    subject_sbar_np_me_adjective(Sign),
+    hstem(Sign),
+    Sign:adv => nadv,
+    Sign:can_nominalize => no,
+    Sign:can_marked_attr => no,
+    Sign:avform => avform_ap,
+    Sign:can_postn => no,
+    Sign:aform => nattr,
+    Sign:cform => base.
+
+a_lex(subject_sbar_pred_np_adjective,Sign) :-
+    subject_sbar_np_adjective(Sign),
+    hstem(Sign),
+    Sign:adv => nadv,
+    Sign:can_nominalize => no,
+    Sign:can_marked_attr => no,
+    Sign:avform => avform_ap,
+    Sign:can_postn => no,
+    Sign:aform => nattr,
+    Sign:cform => base.
+
+a_lex(subject_vp_pred_np_adjective,Sign) :-
+    subject_vp_np_adjective(Sign),
+    hstem(Sign),
+    Sign:adv => nadv,
+    Sign:can_nominalize => no,
+    Sign:avform => avform_ap,
+    Sign:can_marked_attr => no,
+    Sign:can_postn => no,
+    Sign:aform => nattr,
+    Sign:cform => base.
+
+%% `het' not obligatory in: `een goed man' `een befaamd gitarist'
+%% another mystery: `een mindere behoefte' vs. `minder behoefte'
+%%                  `heel veel moeite'
+%% solution: 'veel' and 'minder' are numerals; and there is a rule
+%% num -> adv num (also required for 'bijna drie jaar' etc.
+
+a_lex(intensifier,Sign) :-
+    intensifier(Sign).
+
+a_lex(intensifier(Sub),Sign) :-
+    intensifier(Sub,Sign).
+
+a_lex(vp_om_intensifier,Sign) :-
+    vp_om_intensifier(Sign).
+
+a_lex(me_intensifier,Sign) :-
+    me_intensifier(Sign).
+
+a_lex(als_me_intensifier,Sign) :-
+    als_me_intensifier(Sign).
+
+a_lex(vp_om_me_intensifier,Sign) :-
+    vp_om_me_intensifier(Sign).
+
+a_lex(adverb,Sign) :-
+    adverb(Sign),
+    hstem(Sign).
+
+a_lex(sentence_adverb,Sign) :-
+    sentence_adverb(Sign),
+    hstem(Sign).
+
+a_lex(er_vp_adverb,Sign) :-
+    er_vp_adverb(Sign),
+    hstem(Sign).
+
+a_lex(er_loc_adverb,Sign) :-
+    er_loc_adverb(Sign),
+    hstem(Sign).
+
+a_lex(iets_adverb,Sign) :-
+    iets_adverb(Sign),
+    hstem(Sign).
+
+a_lex(wh_iets_adverb,Sign) :-
+    wh_iets_adverb(Sign),
+    hstem(Sign).
+
+a_lex(loc_adverb,Sign) :-
+    loc_adverb(Sign),
+    hstem(Sign).
+
+a_lex(dir_adverb,Sign) :-
+    dir_adverb(Sign),
+    hstem(Sign).
+
+a_lex(tmp_adverb,Sign) :-
+    tmp_adverb(Sign),
+    hstem(Sign).
+
+a_lex(wk_tmp_adverb,Sign) :-
+    wk_tmp_adverb(Sign),
+    hstem(Sign).
+
+a_lex(wh_loc_adverb,Sign) :-
+    wh_loc_adverb(Sign).
+
+a_lex(er_wh_loc_adverb,Sign) :-
+    er_wh_loc_adverb(Sign).
+
+a_lex(rwh_loc_adverb,Sign) :-
+    rwh_loc_adverb(Sign).
+
+a_lex(wh_tmp_adverb,Sign) :-
+    wh_tmp_adverb(Sign).
+
+a_lex(wh_adverb,Sign) :-
+    wh_adverb(Sign).
+
+a_lex(wh_adjective(A),Sign) :-
+    unify_except(Sign0,Sign,adv),
+    wh_adjective(Sign0),
+    features_adjective_adv(A,Sign),
+    hstem(Sign).
+
+a_lex(waar_adverb(Prep),Sign) :-
+    waar_adverb(Prep,Sign).
+
+a_lex(er_adverb(Prep),Sign) :-
+    er_adverb(Prep,Sign).
+
+a_lex(modal_adverb,Sign) :-
+    modal_adverb(Sign).
+
+a_lex(modal_adverb(Sub),Sign) :-
+    modal_adverb(Sign),
+    modal_adv_arg(Sub,Sign).
+
+a_lex(predm_adverb,Sign) :-
+    predm_adverb(Sign).
+
+a_lex(eenmaal_adverb,Sign) :-
+    eenmaal_adverb(Sign).
+
+a_lex(num_predm_adverb,Sign) :-
+    predm_adverb_num(Sign).
+
+a_lex(num_na,Sign) :-
+    num_na(Sign).
+
+a_lex(postnp_adverb,Sign) :-
+    postnp_adverb(Sign).
+
+a_lex(pre_num_adv(Agr),Sign) :-
+    pre_num_adv(Sign),
+    pre_num_adv_agr(Agr,Sign).
+
+a_lex(postn_adverb,Sign) :-
+    postn_adverb(Sign).
+
+a_lex(postp_adverb,Sign) :-
+    postp_adverb(Sign).
+
+a_lex(post_wh_adverb,Sign) :-
+    post_wh_adverb(Sign).
+
+a_lex(pre_wh_adverb,Sign) :-
+    pre_wh_adverb(Sign).
+
+a_lex(postadv_adverb,Sign) :-
+    postadv_adverb(Sign).
+
+a_lex(postadj_adverb,Sign) :-
+    postadj_adverb(Sign).
+
+a_lex(post_loc_adv_adv,Sign) :-
+     post_loc_adv_adv(Sign).
+
+a_lex(om_postadj_adverb,Sign) :-
+    om_postadj_adverb(Sign).
+
+a_lex(tmp_determiner,Sign) :-
+    tmp_determiner(Sign).
+
+a_lex(determiner(Det),Sign) :-
+    determiner(Sign),
+    determiner_features(Det,Sign),
+    determiner_npro_features(Det,Sign),
+    Sign:pro => no,
+    Sign:modf => no.
+
+a_lex(determiner(Det,nwh,nmod,pro,Parg),Sign) :-
+    determiner(Sign),
+    determiner_features(Det,Sign),
+    features_parg(Parg,Sign),
+    Sign:pro => yes,
+    Sign:modf => no,
+    Sign:wkpro => normpro.
+
+a_lex(determiner(Det,nwh,nmod,pro,Parg,wkpro),Sign) :-
+    determiner(Sign),
+    determiner_features(Det,Sign),
+    features_parg(Parg,Sign),
+    Sign:pro => yes,
+    Sign:modf => no,
+    Sign:wkpro => weakpro.
+
+a_lex(determiner(Det,nwh,mod,pro,Parg,wkpro),Sign) :-
+    determiner(Sign),
+    determiner_features(Det,Sign),
+    features_parg(Parg,Sign),
+    Sign:pro => yes,
+    Sign:modf => yes,
+    Sign:wkpro => weakpro.
+
+a_lex(determiner(Det,nwh,mod,pro,Parg,ntopicpro),Sign) :-
+    determiner(Sign),
+    determiner_features(Det,Sign),
+    features_parg(Parg,Sign),
+    Sign:pro => yes,
+    Sign:modf => yes,
+    Sign:wkpro => ntopicpro.
+
+a_lex(determiner(Det,nwh,mod),Sign) :-
+    determiner(Sign),
+    determiner_features(Det,Sign),
+    Sign:pro => no,
+    Sign:modf => yes.
+
+a_lex(determiner(Det,nwh,mod,pro,Parg),Sign) :-
+    determiner(Sign),
+    determiner_features(Det,Sign),
+    features_parg(Parg,Sign),
+    Sign:pro => yes,
+    Sign:modf => yes,
+    Sign:wkpro => normpro.
+
+a_lex(determiner(Det,nwh,mod,pro,yparg,nwkpro,geen),Sign) :-
+    geen_determiner(Sign),
+    determiner_features(Det,Sign),
+    Sign:pro => yes,
+    Sign:modf => yes,
+    Sign:wkpro => normpro.
+
+a_lex(comp_determiner(Det,Type),Sign) :-
+    comp_determiner(Sign,Type),
+    determiner_features(Det,Sign),
+    Sign:pro => yes,
+    Sign:modf => yes,
+    Sign:wkpro => normpro.
+
+a_lex(determiner(Det,wh),Sign) :-
+    wh_determiner(Sign),
+    determiner_features(Det,Sign),
+    Sign:pro => no,
+    Sign:modf => no.
+
+a_lex(determiner(Det,wh,nmod,pro,yparg),Sign) :-
+    wh_determiner(Sign),
+    determiner_features(Det,Sign),
+    Sign:pro => yes,
+    Sign:modf => no,
+    Sign:wkpro => normpro.
+
+a_lex(determiner(Det,rwh,nmod,pro,yparg),Sign) :-
+    wh_rel_determiner(Sign),
+    determiner_features(Det,Sign),
+    Sign:pro => yes,
+    Sign:modf => no,
+    Sign:wkpro => normpro.
+
+a_lex(determiner(Det,wh_noq,nmod,pro,yparg),Sign) :-
+    wh_noq_determiner(Sign),
+    determiner_features(Det,Sign),
+    Sign:pro => yes,
+    Sign:modf => no,
+    Sign:wkpro => normpro.
+
+a_lex(determiner(Det,rwh),Sign) :-
+    wh_rel_determiner(Sign),
+    determiner_features(Det,Sign),
+    Sign:pro => no,
+    Sign:modf => no.
+
+a_lex(name_determiner(Det),Sign) :-
+    name_determiner(Sign),
+    determiner_features(Det,Sign),
+    Sign:pro => no,
+    Sign:modf => no.
+
+a_lex(name_determiner(Det,Class),Sign) :-
+    name_determiner(Class,Sign),
+    determiner_features(Det,Sign),
+    Sign:pro => no,
+    Sign:modf => no.
+
+a_lex(pre_det_quant(Det),Sign) :-
+    pre_det_quant(Sign),
+    determiner_features(Det,Sign).
+
+a_lex(gen_determiner(Number),Sign) :-
+    gen_determiner(Sign),
+    features_number(Number,Sign).
+
+a_lex(pronoun(Wh,Person,Number,Gender,Case,Def),Sign) :-
+    pronoun(Sign),
+    hstem(Sign),
+    pronoun_features(Wh,Person,Number,Gender,Case,Def,Sign),
+    Sign:wkpro => normpro.
+
+a_lex(pronoun(Wh,Person,Number,Gender,Case,Def,nparg),Sign) :-
+    pronoun(Sign),
+    hstem(Sign),
+    pronoun_features(Wh,Person,Number,Gender,Case,Def,Sign),
+    Sign:case => ~dat, % volgens Gosse...
+    Sign:parg => no,
+    Sign:wkpro => normpro.
+
+a_lex(pronoun(Wh,Person,Number,Gender,Case,Def,wkpro),Sign) :-
+    pronoun(Sign),
+    hstem(Sign),
+    pronoun_features(Wh,Person,Number,Gender,Case,Def,Sign),    
+    Sign:wkpro => weakpro.
+
+a_lex(pronoun(Wh,Person,Number,Gender,Case,Def,strpro),Sign) :-
+    pronoun(Sign),
+    hstem(Sign),
+    pronoun_features(Wh,Person,Number,Gender,Case,Def,Sign),    
+    Sign:wkpro => strongpro.
+
+a_lex(complementizer,Sign) :-
+    complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(datti),Sign) :-
+    datti_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(vp),Sign) :-
+    vp_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(sbar),Sign) :-
+    sbar_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(of),Sign) :-
+    of_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(alsof),Sign) :-
+    alsof_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(dat),Sign) :-
+    dat_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(te),Sign) :-
+    te_complementizer(Sign).
+
+a_lex(complementizer(al),Sign) :-
+    al_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(van),Sign) :-
+    van_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(zoals),Sign) :-
+    zoals_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(als),Sign) :-
+    als_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(pp),Sign) :-
+    pp_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(a),Sign) :-
+    a_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(np),Sign) :-
+    np_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(adv),Sign) :-
+    adv_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(naar),Sign) :-
+    naar_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(root),Sign) :-
+    root_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(inf),Sign) :-
+    inf_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(complementizer(om),Sign) :-
+    om_complementizer(Sign).
+%    hstem(Sign).  % not here, because of relative-like om-phrases
+%                  % een boek om in te bladeren
+
+a_lex(complementizer(start),Sign) :-
+    start_complementizer(Sign),
+    hstem(Sign).
+
+a_lex(verb(HebbenZijn,Infl,ninv(Sc0,Sc)),Sign,_,Cs) :-
+    !,
+    Sign => vb,
+    sc(Sc,Sc1),
+    Sign:vframe ==> Sc1,
+    unify_v_vb(Sign0,Sign1),
+    hstem(Sign),
+    unify_except(Sign1,Sign,sc),
+    features_verb_infl(Infl,Sign0),
+    verbal_entry(HebbenZijn,Sc0,Sign0,Cs),
+    ipp(Infl,Sign1,Sign).
+
+a_lex(verb(HebbenZijn,Infl,Sc),Sign,_,Cs) :-
+    Sign => v,
+    sc(Sc,Sc1),
+    Sign:vframe ==> Sc1,
+    hstem(Sign),
+    unify_except(Sign0,Sign,sc),
+    features_verb_infl(Infl,Sign0),
+    verbal_entry(HebbenZijn,Sc,Sign0,Cs),
+    ipp(Infl,Sign0,Sign).
+
+sc(fixed_dep(Sc0),Sc) :-
+    !,
+    Sc0 = Sc.
+sc(part_fixed_dep(Part,Sc0),Sc) :-
+    !,
+    Sc0 =.. [F0|Args],
+    atom_concat(part_,F0,F),
+    Sc =.. [F,Part|Args].
+sc(X,X).
+
+ipp(inf(_),Sign0,Sign) :-
+    !,
+    ipp_assign_inf(Sign0,Sign).
+ipp(inf,Sign0,Sign) :-
+    !,
+    ipp_assign_inf(Sign0,Sign).
+ipp(psp,Sign0,Sign) :-
+    !,
+    Sign0=Sign,
+    ipp_assign_psp(Sign).
+ipp(_,Sign,Sign).
+
+a_lex(post_p(_),Sign) :-
+    post_p(Sign).
+
+a_lex(v_noun(Frame),Sign,_,Cs) :-
+    hstem(Sign),
+    deverbal_noun(V,Sign),
+    verbal_entry('hebben/zijn',Frame,V,Cs).
+a_lex(ge_v_noun(Frame),Sign,_,Cs) :-
+    hstem(Sign),
+    ge_deverbal_noun(V,Sign),
+    verbal_entry('hebben/zijn',Frame,V,Cs).
+a_lex(preposition(_,_,sbar),Sign) :-
+    preposition_sbar(Sign).
+a_lex(preposition(_,_,mod_sbar),Sign) :-
+    preposition_mod_sbar(Sign).
+a_lex(preposition(_,_,of_sbar),Sign) :-
+    preposition_of_sbar(Sign).
+a_lex(preposition(Word,_,redrel),Sign) :-
+    preposition_redrel(Word,Sign).
+a_lex(preposition(Word,[],voor_pred),Sign) :-
+    voor_pred_preposition(Word,Sign).
+a_lex(preposition(Prep,[],nodet),Sign) :-
+    nodet_preposition(Sign,Prep).
+a_lex(preposition(Word,List),Sign) :-
+    preposition(Word,Sign,List).
+a_lex(preposition(Word,List,loc_adv),Sign) :-
+    preposition_loc_adv(Word,Sign,List).
+a_lex(preposition(Word,List,tmp_adv),Sign) :-
+    preposition_tmp_adv(Word,Sign,List).
+a_lex(preposition(Word,List,pp),Sign) :-
+    preposition_pp(Word,Sign,List).
+a_lex(preposition(Word,List,pc_adv),Sign) :-
+    preposition_adv(Word,Sign,List).
+a_lex(preposition(Word,[],pc_vp),Sign) :-
+    preposition_pc_vp(Word,Sign).
+a_lex(preposition(Word,List,extracted_np),Sign) :-
+    preposition_with_extracted_np(Word,Sign,List).
+a_lex(preposition(Word,List,adj),Sign) :-
+    preposition_adj(Word,Sign,List).
+a_lex(preposition(Word,List,me_adj),Sign) :-
+    preposition_me_adj(Word,Sign,List).
+
+a_lex(number(hoofd(Det)),Sign) :-
+    number_features(Det,Sign),
+    hoofd_num(Sign).
+
+a_lex(adj_number(Det),Sign) :-
+    determiner_features(Det,Sign),
+    adj_number(Sign).
+
+%% de drie tweede plaatsen
+a_lex(number(rang),Sign) :-
+    rang_num(Sign).
+
+%% hoeveelste
+a_lex(wh_number(rang),Sign) :-
+    wh_rang_num(Sign),
+    hstem(Sign).
+
+a_lex(etc,Sign) :-
+    etc(Sign).
+
+a_lex(complex_etc,Sign) :-
+    complex_etc(Sign).
+
+a_lex(punct(aanhaal_both),Sign) :-
+    !,
+    punct(Sign),
+    Sign:puncttype => (aanhaal_links;aanhaal_rechts).
+a_lex(punct(Type),Sign) :-
+    punct(Sign),
+    Sign:puncttype => Type.
+
+a_lex(conj(W),Sign) :-
+    conjunction(Sign,W).
+
+a_lex(het_noun,Sign) :-
+    het_noun(Sign).
+
+a_lex(cleft_het_noun,Sign) :-
+    cleft_het_noun(Sign).
+
+a_lex(left_conj(Right),Sign) :-
+    left_conj(Sign,Right).
+
+a_lex(right_conj(Right),Sign) :-
+    right_conj(Sign,Right).
+
+a_lex(tag,Sign) :-
+    tag(Sign).
+
+a_lex(adv_tag,Sign) :-
+    adv_tag(Sign).
+
+a_lex(complementizer(aan_het),Sign) :-
+    aan_het_comp(Sign).
+
+a_lex(complementizer(uit),Sign) :-
+    uit_comp(Sign).
+
+a_lex(complementizer(op),Sign) :-
+    op_comp(Sign).
+
+a_lex(comparative(W),Sign) :-
+    comparative(W,Sign).
+
+a_lex(pp(Prep),Sign) :-
+    pp(Prep,Sign).
+
+a_lex(pp,Sign) :-
+    pp(none,Sign).
+
+a_lex(comp_adverb(Sub),Sign) :-
+    comp_adverb(Sub,Sign).
+	   
+a_lex(comp_adverb,Sign) :-
+    comp_adverb(_Sub,Sign).
+
+a_lex(fixed_part(Ws),Sign) :-
+    fixed_part(Ws,Sign).
+
+a_lex(vp_adverb,Sign) :-
+    vp_adverb(Sign).
+
+a_lex(vp_om_adverb,Sign) :-
+    vp_om_adverb(Sign).
+
+a_lex(vandaar_adverb,Sign) :-
+    vandaar_adverb(Sign).
+
+a_lex(zo_van_adverb,Sign) :-
+    zo_van_adverb(Sign).
+
+a_lex(dip_sbar_adverb,Sign) :-
+    dip_sbar_adverb(Sign).
+
+a_lex(preposition(_,_,absolute),Sign) :-
+    absolute_preposition(Sign).
+
+a_lex(zo_mogelijk_zo,Sign) :-
+    zo_mogelijk_zo(Sign).
+
+a_lex(zo_mogelijk_mogelijk(E),Sign) :-
+    zo_mogelijk_mogelijk(Sign),
+    mogelijk_features(E,Sign).
+
+a_lex(nominalized_adjective,Sign) :-
+    nominalized_adjective_pl(Sign).
+
+a_lex(nominalized_adjective_sg,Sign) :-
+    nominalized_adjective_sg(Sign).
+
+a_lex(nominalized_compar_adjective,Sign) :-
+    nominalized_compar_adjective_pl(Sign).
+
+a_lex(nominalized_compar_adjective_sg,Sign) :-
+    nominalized_compar_adjective_sg(Sign).
+
+a_lex(nominalized_super_adjective,Sign) :-
+    nominalized_super_adjective_pl(Sign).
+
+a_lex(nominalized_super_adjective_sg,Sign) :-
+    nominalized_super_adjective_sg(Sign).
+
+a_lex(nominalized_adjective(Sc),Sign) :-
+    adjective_sc(Sc,Sign0),
+    nominalized_adjective(Sign0,Sign).
+
+a_lex(score_cat,Sign) :-
+    score_cat(Sign).
+
+a_lex(pre_np_adverb,Sign) :-
+    pre_np_adverb(Sign).
+
+a_lex(sbar,Sign) :-
+    compp_mod(Sign).
+
+a_lex(within_word_conjunct,Sign) :-
+    within_word_conjunct(Sign).
+
+a_lex(hoe_adv,Sign) :-
+    hoe_adv(Sign).
+
+a_lex(max,Sign) :-
+    max(Sign).
+
+a_lex(denk_ik,Sign) :-
+    Sign => denk_ik,
+    sign(Sign,sv1),
+    unify_mods(Sign).
+
+a_lex(denk_ik_dip,Sign) :-
+    Sign => dip,
+    sign(Sign,sv1),
+    unify_mods(Sign).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% AUXILIARY PREDICATES %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+hstem(Sign) :-
+    Sign:dt => dt,
+    Sign:dt:fwrd:lexical <=> Lexical,
+    Lexical <?=?> Sign:hstem.
+
+noun_features(De,MC,Num,Sign) :-
+    features_de(De,Sign),
+    features_mass_count(MC,Sign),
+    features_number(Num,Sign).
+
+features_rel_case(both,Sign) :-
+    Sign:case => ~gen.
+features_rel_case(obl,Sign) :-
+    Sign:case => obl.
+features_rel_case(no_obl,Sign) :-
+    Sign:case => ~gen & ~obl.
+
+features_case(both,Sign) :-
+    Sign:case => ~gen.
+features_case(dat_acc,Sign) :-
+    Sign:case => (dat;acc;obl).
+features_case(nom,Sign) :-
+    Sign:case => nom.
+features_case(nom_acc,Sign) :-
+    Sign:case => (nom;acc).
+features_case(gen,Sign) :-
+    Sign:case => gen.
+features_case(dat,Sign) :-
+    Sign:case => (obl;dat).
+
+features_refl_person(u,Sign) :-
+    !,
+    Sign:prs => (u;invje).  % vergis(t) u niet!  Schaam u!
+features_refl_person(Val,Sign) :-
+    features_person(Val,Sign).
+
+features_person(both,_).
+features_person(fir,Sign) :-
+    Sign:prs => fir.
+features_person(inv,Sign) :-   % Komt de (gij) ook?
+    Sign:prs => (invje;u).  % to do: inversion required!
+features_person(je,Sign) :-
+    Sign:prs => (ninvje;invje).
+features_person(u,Sign) :-
+    Sign:prs => u.
+features_person(thi,Sign) :-
+    Sign:prs => thi.
+features_person(u_thi,Sign) :-
+    Sign:prs => (u;thi).
+
+features_de(both,_Noun).
+features_de(de,Noun) :-
+    Noun:agr => de.
+features_de(het,Noun) :-
+    Noun:agr => het.
+
+features_rel_de(both,_).
+features_rel_de(de,Sign) :-
+    Sign:agr => (pl;sg&de).
+features_rel_de(het,Sign) :-
+    Sign:agr => sg&het.
+
+features_mass_count(both,_).
+features_mass_count(mass,_).
+features_mass_count(count,_).
+
+features_number(Val,Sign) :-
+    Sign:dt:num => agr, % ensure that it is not var, so dt_extract_attribute knows
+				% this is a part where agreement is usually relevant
+    features_number0(Val,Sign).
+
+features_number0(both,Sign) :-
+    Sign:agr <?=?> Sign:e_agr,
+    Sign:dt:num <?=?> Sign:agr,
+    Sign:meas =?> no.
+features_number0(sg,Sign) :-
+    Sign:agr <?=?> Sign:e_agr,
+    Sign:dt:num <?=?> Sign:agr,
+    Sign:meas =?> no,
+    Sign:agr => sg.
+features_number0(pl,Sign) :-
+    Sign:agr <?=?> Sign:e_agr,
+    Sign:dt:num <?=?> Sign:agr,
+    Sign:meas =?> no,
+    Sign:agr => pl.
+features_number0(meas,Sign) :-        %maal, keer, jaar, ons
+    Sign:dt:num <?=?> Sign:e_agr,
+    Sign:bmeas =?> yes,   
+    Sign:meas =?> yes.    % not sg or pl: die zes jaar was/waren heerlijk
+                            % also: make sure that 'zes' does not *make* it plural either
+features_number0(bare_meas,Sign) :-   %driemaal
+    Sign:dt:num <?=?> Sign:e_agr,
+    Sign:meas =?> yes.
+
+% features_wh(both,_).
+features_wh(ywh,Sign) :-
+    Sign:wh_reltmploc => non_adv,
+    Sign:wh => ywh,
+    Sign:wh:relagr <=> Sign:agr.
+features_wh(nwh,Sign) :-
+    Sign:wh => nwh.
+
+features_def(def,Sign) :-
+    Sign:subn => sub_def_pron,
+    Sign:agr => def.
+features_def(indef,Sign) :-
+    Sign:subn => sub_indef_pron,
+    Sign:agr => indef.
+features_def(both,_).
+
+features_parg(yparg,Sign) :-
+    Sign:parg => yes.
+features_parg(nparg,Sign) :-
+    Sign:parg => no.
+
+post_adjective_features(no_e,Sign) :-
+    Sign:cform => base,
+    Sign:can_nominalize => no,
+    Sign:can_marked_attr => no,
+    Sign:can_postn => no,
+    Sign:avform => avform_ap,
+    Sign:aform => iets.
+post_adjective_features(er,Sign) :-
+    Sign:cform => compar,
+    Sign:can_nominalize => no,
+    Sign:can_marked_attr => no,
+    Sign:can_postn => no,
+    Sign:avform => avform_ap,
+    Sign:aform => iets.
+
+adjective_sc(Frame,Sign) :-
+    Frame =.. [Fun|Args],
+    atom_concat(Fun,'_adjective',NewFun),
+    lists:append(Args,[Sign],NewArgs),
+    Goal =.. [NewFun|NewArgs],
+    call(Goal).
+
+features_adjective_adv(both,V) :-
+    V:tmploc => ntmploc,
+    V:adv => yboth,
+    V:adv => (yadv;padv).
+features_adjective_adv(adv,V) :-
+    V:tmploc => ntmploc,
+    V:adv => yadv.
+features_adjective_adv(sentadv,V) :-
+%    V:tmploc => (ntmploc;sent), %spur amb mod1/mod1a
+    V:tmploc => sent,
+    V:adv => yadv.
+features_adjective_adv(diradv,V) :-
+    V:tmploc => (ntmploc;ld_dir),
+    V:adv => yadv.
+features_adjective_adv(locadv,V) :-
+    V:tmploc => loc,
+    V:adv => yadv.
+features_adjective_adv(dir_locadv,V) :-
+    V:tmploc => (loc;ld_dir),
+    V:adv => yadv.
+features_adjective_adv(tmpadv,V) :-
+    V:tmploc => (tmp;me),
+    V:adv => yadv.
+features_adjective_adv(nonadv,V) :-
+    V:tmploc => ntmploc,
+    V:adv => nadv.
+features_adjective_adv(padv,V) :-
+    V:tmploc => ntmploc,
+    V:adv => padv.
+features_adjective_adv(oadv,V) :-
+    V:tmploc => ntmploc,
+    V:adv => oadv.
+features_adjective_adv(odet_adv,V) :-
+    V:tmploc => ntmploc,
+    V:adv => (oadv;detadv).
+features_adjective_adv(osentadv,V) :-
+    V:tmploc => sent,
+    V:adv => oadv.
+
+adjective_features(pred(ADV),Sign) :-
+    features_adjective_adv(ADV,Sign),
+    Sign:can_postn => no,
+    Sign:avform => avform_ap,
+    Sign:cform => base,
+    Sign:aform => nattr.
+adjective_features(pred_er(ADV),Sign) :-
+    features_adjective_adv(ADV,Sign),
+    Sign:can_postn => no,
+    Sign:avform => avform_ap,
+    Sign:cform => compar,
+    Sign:aform => nattr.
+adjective_features(postn_pred(ADV),Sign) :-
+    features_adjective_adv(ADV,Sign),
+    Sign:can_postn => yes,
+    Sign:can_nominalize => no,
+    Sign:can_marked_attr => no,
+    Sign:avform => avform_ap,
+    Sign:cform => base,
+    Sign:aform => nattr.
+%% adverb like, but can take its own compar
+%% and can be predicate
+adjective_features(anders,Sign) :-
+    Sign:can_postn => no,
+    Sign:can_postn_with_cform => no,
+    Sign:tmploc => ntmploc,
+    Sign:avform => avform_ap,
+    Sign:adv => yadv,
+    Sign:cform => compar,
+    Sign:aform => nattr.
+adjective_features(both(ADV),Sign) :-
+    features_adjective_adv(ADV,Sign),
+    Sign:avform => avform_ap,
+    Sign:can_postn => no,
+    Sign:can_nominalize => no,
+    Sign:can_marked_attr => no,
+    Sign:cform => base. 
+adjective_features(ge_both(ADV),Sign) :-
+    features_adjective_adv(ADV,Sign),
+    Sign:avform => avform_ppart,
+    Sign:can_postn => yes,
+    Sign:can_nominalize => no,
+    Sign:can_marked_attr => no,
+    Sign:cform => base. 
+adjective_features(postn_both(ADV),Sign) :-
+    features_adjective_adv(ADV,Sign),
+    Sign:can_postn => yes,
+    Sign:avform => avform_ap,
+    Sign:can_nominalize => no,
+    Sign:can_marked_attr => no,
+    Sign:cform => base. 
+adjective_features(stof,Sign) :-
+    Sign:adv => ~oadv & ~detadv,
+    Sign:can_postn => no,
+    Sign:can_nominalize => yes,  % only in ellipsis...
+    Sign:can_marked_attr => no,
+    Sign:avform => avform_ap,
+    Sign:aform => attr,
+    Sign:cform => base. 
+adjective_features(prefix,Sign) :-
+    Sign:cj => yes, % to prevent conjunction of prefix adj...
+    Sign:adv => ~oadv & ~detadv,
+    Sign:can_postn => no,
+    Sign:can_nominalize => no,
+    Sign:avform => avform_ap,
+    Sign:can_marked_attr => no,
+    Sign:aform => attr,
+    Sign:cform => base. 
+adjective_features(e,Sign) :-
+    Sign:adv => ~oadv & ~detadv,
+    Sign:can_postn => no,
+    Sign:aform => attr,
+    Sign:avform => avform_ap,
+    Sign:can_nominalize => yes,
+    Sign:agr => ~(het & indef & sg),
+    Sign:cform => base.
+adjective_features(ge_e,Sign) :-
+    Sign:adv => ~oadv & ~detadv,
+    Sign:can_postn => no,
+    Sign:aform => attr,
+    Sign:avform => avform_ppart,
+    Sign:can_nominalize => yes,
+    Sign:agr => ~(het & indef & sg),
+    Sign:cform => base.
+adjective_features(no_e(ADV),Sign) :-
+    Sign:can_postn => no,
+    features_adjective_adv(ADV,Sign),
+    Sign:agr => indef & sg & het,
+    Sign:avform => avform_ap,
+    Sign:can_marked_attr => yes,
+    Sign:cform => base.
+adjective_features(ge_no_e(ADV),Sign) :-
+    Sign:can_postn => yes,
+    features_adjective_adv(ADV,Sign),
+    Sign:agr => indef & sg & het,
+    Sign:avform => avform_ppart,
+    Sign:can_marked_attr => yes,
+    Sign:cform => base.
+adjective_features(postn_no_e(ADV),Sign) :-
+    Sign:can_postn => yes,
+    features_adjective_adv(ADV,Sign),
+    Sign:agr => indef & sg & het,
+    Sign:avform => avform_ap,
+    Sign:can_marked_attr => yes,
+    Sign:cform => base.
+adjective_features(meer,Sign):-
+    Sign:can_postn => no,
+    Sign:tmploc => ntmploc,
+    Sign:avform => avform_ap,
+    Sign:adv => (oadv;detadv),
+    Sign:can_nominalize => no,
+    Sign:cform => compar.
+adjective_features(er(ADV),Sign) :-
+%%  can postn only if there is a local compar; cf rule 
+    Sign:can_postn => no,
+    features_adjective_adv(ADV,Sign),
+    Sign:avform => avform_ap,
+    Sign:can_nominalize => no,
+    Sign:can_marked_attr => yes,
+    %% Sign:agr => indef & sg & het,  % very often not required:
+				% in vroeger tijden
+				% naar veiliger oorden
+				% in hoger sferen
+    Sign:agr => (indef & sg & het ; pl ),   % indef?  "de wat gematigder leden; de veel talrijker leden"
+    Sign:cform => compar.
+adjective_features(ere,Sign) :-
+    Sign:adv => ~oadv & ~detadv,
+    Sign:can_postn => no,
+    Sign:avform => avform_ap,
+    Sign:can_nominalize => yes,
+    Sign:aform => attr,
+    Sign:agr => ~(het & indef & sg),
+    Sign:cform => compar.
+adjective_features(ste,Sign) :-
+    Sign:adv => ~oadv & ~detadv,
+    Sign:can_postn => no,
+    Sign:can_nominalize => yes,
+    Sign:avform => avform_ap,
+    Sign:can_marked_attr => no,
+    Sign:aform => attr,
+    %% Sign:agr =>  ~(het & indef & sg),   % belangrijkste bezwaar was ...
+   Sign:cform => super.
+adjective_features(st(_ADV),Sign) :-
+    Sign:hstem ==> Hstem,
+    adapt_adv_st(Hstem,Sign),
+    Sign:can_postn => no,
+    features_adjective_adv(oadv,Sign),   % *hij is snelst
+                                         % *hij is meest
+    Sign:avform => avform_ap,
+    Sign:agr =>  het & indef & sg,
+    Sign:cform => super.
+adjective_features(het_st(ADV),Sign) :-
+    Sign:can_postn => no,
+    features_adjective_adv(ADV,Sign),
+    Sign:aform => nattr,
+    Sign:avform => avform_ap,
+    Sign:cform => super.
+adjective_features(end(ADV),Sign) :-
+    Sign:can_postn => yes,
+    features_adjective_adv(ADV,Sign),
+    Sign:avform => avform_ppres,
+    Sign:agr => indef & sg & het,
+    Sign:can_marked_attr => yes,
+    Sign:cform => base.    
+adjective_features(ende(ADV),Sign) :-
+    Sign:can_postn => yes,
+    features_adjective_adv(ADV,Sign),
+    Sign:can_nominalize => yes,
+    Sign:avform => avform_ppres,
+    Sign:agr => ~(het & indef & sg),
+    Sign:cform => base.
+
+%%  *ik heb hardst gelopen
+%%  *zij is liefst
+adapt_adv_st(meest,_). 
+adapt_adv_st(belabberd,_). 
+adapt_adv_st(Hstem,Sign) :-
+    dif(Hstem,meest),
+    dif(Hstem,belabberd),
+    Sign:modifies_v => no.
+
+modal_adv_arg(adv_noun_prep,Sign) :-
+    Sign:modal_adv_arg => (adv_adv;adv_prep;adv_noun).
+modal_adv_arg(noun_prep,Sign) :-
+    Sign:modal_adv_arg => (adv_prep;adv_noun).
+modal_adv_arg(adv_prep,Sign) :-
+    Sign:modal_adv_arg => (adv_adv; adv_prep).
+modal_adv_arg(adv_comp_prep,Sign) :-
+    Sign:modal_adv_arg => (adv_comp; adv_prep; adv_adv).
+modal_adv_arg(comp_prep,Sign) :-
+    Sign:modal_adv_arg => (adv_comp; adv_prep).
+modal_adv_arg(comp_prep_verb,Sign) :-
+    Sign:modal_adv_arg => (adv_comp; adv_prep; adv_verb).
+modal_adv_arg(adv_noun,Sign) :-
+    Sign:modal_adv_arg => (adv_adv; adv_noun).
+modal_adv_arg(noun,Sign) :-
+    Sign:modal_adv_arg => adv_noun.
+modal_adv_arg(prep,Sign) :-
+    Sign:modal_adv_arg => adv_prep.
+modal_adv_arg(comp,Sign) :-
+    Sign:modal_adv_arg => adv_comp.
+modal_adv_arg(verb,Sign) :-
+    Sign:modal_adv_arg => adv_verb.
+
+pre_num_adv_agr(both,_Sign).
+pre_num_adv_agr(pl,Sign) :-
+    Sign:agr => pl.
+pre_num_adv_agr(pl_indef,Sign) :-
+    Sign:agr => pl&indef.
+
+determiner_features(den,Sign):-
+    Sign:agr => def & de & sg,
+    Sign:case =?> ~gen.
+determiner_features(der,Sign):-
+    Sign:agr => def & (pl ; de),
+    Sign:case =?> gen.
+determiner_features(des,Sign):-
+    Sign:agr => def,
+    Sign:case =?> gen.
+determiner_features(ener,Sign):-
+    Sign:agr => sg & indef,
+    Sign:case =?> gen.
+determiner_features(wiens,Sign) :-
+    Sign:case =?> ~gen.
+determiner_features(allebei,Sign) :-
+    Sign:case =?> ~gen,
+    Sign:agr => def & pl.
+determiner_features(alle,Sign) :-
+    %Sign:agr => def,	        % toen werd alle wijn opgedronken
+				% toen werden alle flessen opgedronken
+				% zodat er alle gelegenheid was
+    Sign:nsubn => ~sub_def_verb & ~sub_indef_verb & ~sub_tmp,
+    Sign:case =?> ~gen.
+determiner_features(al,Sign) :-
+    Sign:agr => def,
+    Sign:case =?> ~gen.
+determiner_features(de,Sign) :-
+    Sign:agr => def & (pl ; de),
+    Sign:case =?> ~gen.
+determiner_features(onze,Sign) :-
+    Sign:agr => def & (pl ; de),
+    Sign:case =?> ~gen.
+determiner_features(het,Sign) :-
+    Sign:agr => def & het & sg,
+    Sign:case =?> ~gen.
+determiner_features(een,Sign) :-
+    Sign:agr => sg & indef,
+    Sign:case =?> ~gen.
+determiner_features(elke,Sign) :-
+    Sign:agr => sg & def & de,
+    Sign:case =?> ~gen.
+determiner_features(geen,Sign) :-
+    Sign:agr => indef,
+    Sign:case =?> ~gen.
+determiner_features(wat,Sign) :-
+    Sign:agr => indef,
+    Sign:case =?> ~gen,
+    Sign:nsubn => ~sub_num & ~sub_def_verb & ~sub_indef_verb & ~sub_veel &
+                  ~sub_name & ~sub_def_pron & ~sub_indef_pron & ~sub_det & ~sub_tmp.
+determiner_features(welk,Sign) :-
+    Sign:agr => sg & het & indef,
+    Sign:case =?> ~gen.
+determiner_features(welke,Sign) :-
+    Sign:agr => ( pl & indef ; sg & de & indef),
+    Sign:case =?> ~gen.
+%determiner_features(sg,Sign) :-
+%    Sign:agr => pl,
+%    Sign:case =?> ~gen.
+determiner_features(pl,Sign) :-
+    Sign:agr => pl,
+    Sign:case =?> ~gen.
+determiner_features(enkel,Sign)  :-
+    Sign:agr => sg & indef & het,   % combines with een/geen
+    Sign:case =?> ~gen.
+determiner_features(sg_num,Sign) :-
+    Sign:agr => sg,
+    Sign:case =?> ~gen.
+determiner_features(pl_num,Sign) :-
+    Sign:agr => pl,
+    Sign:case =?> ~gen.
+determiner_features(both,_).
+determiner_features(enkele,Sign) :-
+    Sign:agr => ~(sg & het & indef),
+    Sign:case =?> ~gen.
+%% zulke goede informatie
+%% zulk  goed water
+%% zulke goede boeken
+%% zulke goede mensen
+%% ?een zulk  goed mens
+%% ?een zulk  goed boek
+determiner_features(zulk,Sign) :-
+    Sign:agr =>  sg &  het,
+    Sign:case =?> ~gen.
+determiner_features(zulke,Sign) :-
+    Sign:agr =>  ~(sg &  het),
+    Sign:case =?> ~gen.
+determiner_features(pron,Sign) :-
+    Sign:agr => def,   %???added GvN 2010-11-04
+    Sign:case =?> ~gen.
+
+determiner_npro_features(Det,Sign) :-
+    (   (  Det = de
+        ;  Det = den
+        ;  Det = der
+        ;  Det = des
+        ;  Det = ener
+        ;  Det = wat
+        ;  Det = welk
+        ;  Det = welke
+        ;  Det = zulk
+        )
+    ->  Sign:wkpro => weakpro  % no coord
+    ;   true
+    ).
+
+number_features(sg_num,Sign) :-
+    %Sign:agr => indef, % één mooi boek; * één mooie boek
+    %                   %% TODO: onder de 1 euro
+    %                   %%       rond de 1 procent
+    Sign:agr => sg.
+number_features(pl_num,Sign) :-
+    Sign:agr => pl.
+number_features(both,_).
+
+pronoun_features(Wh,Person,Number,Gender,Case,Def,Sign) :-
+    features_person(Person,Sign),
+    features_number(Number,Sign),
+    features_case(Case,Sign),
+    features_wh(Wh,Sign),
+    features_def(Def,Sign),
+    features_de(Gender,Sign).
+
+verbal_entry(HebbenZijn,Frame,Sign,Cs) :-
+    Frame =.. [Fun,Part|Args],
+    atom_concat(part_,Fun0,Fun),
+    !,
+    Frame0 =.. [Fun0|Args],
+    add_part(Part,Sign0,Sign),
+    verbal_entry1(HebbenZijn,Frame0,Sign0,Cs).
+verbal_entry(HebbenZijn,Frame,Sign,Cs) :-
+    verbal_entry1(HebbenZijn,Frame,Sign,Cs).
+
+verbal_entry1(HebbenZijn,Sc,Sign,Cs):-
+    features_hz(HebbenZijn,Sign),
+    features_verb_subcat(Sc,Sign,Cs).
+
+%% op/3 is built-in :-(
+features_verb_subcat(op,Sign,Cs) :-
+    !,
+    op_frame(Sign,Cs,Cs1),
+    argument_realization(Sign,Cs1,[]).
+
+features_verb_subcat(Subcat,Sign,Cs) :-
+    Subcat =.. [F|Args],
+    lists:append(Args,[Sign,Cs,Cs1],Args1),
+    Goal =.. [F|Args1],
+    call(Goal),
+    argument_realization(Sign,Cs1,[]).
+
+add_part(PartForm,V0,V) :-
+    V0 => v, V1 => v, V => v,
+    unify_except(V0,V1,parts),
+    V1:parts <=> [Particle],
+    Particle => part,
+    add_svp(V1,V,Particle),
+    unify_mods(Particle),
+    Particle:part ==> PartForm.
+
+features_verb_infl(past(pl),Sign) :-
+    Sign:tense => past,
+    Sign:vform => fin,
+    Sign:ccat0 ==> ssub,
+    subject_verb_agreement(Sign,pl).
+
+features_verb_infl(past(sg),Sign) :-
+    Sign:tense => past,
+    Sign:vform => fin,
+    Sign:ccat0 ==> ssub,
+    subject_verb_agreement(Sign,sg).
+
+%% ik/jij/zij zet
+features_verb_infl(sg,Sign) :-
+    Sign:tense => present,
+    Sign:ccat0 ==> ssub,
+    Sign:vform => fin,
+    subject_verb_agreement(Sign,sg).
+%% ik kom / kom je
+features_verb_infl(sg1,Sign) :-
+    Sign:tense => present,
+    Sign:vform => fin,
+    Sign:ccat0 ==> ssub,
+    subject_verb_agreement(Sign,sg,(fir; invje)).
+%% hij heeft/heb je
+features_verb_infl(sg_heeft,Sign) :-
+    Sign:tense => present,
+    Sign:vform => fin,
+    Sign:ccat0 ==> ssub,
+    subject_verb_agreement(Sign,sg,(thi;u)).
+%% je hebt/u hebt/hebt u  / bent
+features_verb_infl(sg_hebt,Sign) :-
+    Sign:tense => present,
+    Sign:vform => fin,
+    Sign:ccat0 ==> ssub,
+    subject_verb_agreement(Sign,sg,(ninvje ; u)).
+%% je/u/hij geeft
+features_verb_infl(sg3,Sign) :-
+    Sign:tense => present,
+    Sign:vform => fin,
+    Sign:ccat0 ==> ssub,
+    subject_verb_agreement(Sign,sg,(ninvje ; u ; thi)).
+%% u/je kunt
+features_verb_infl(modal_u,Sign) :-
+    Sign:tense => present,
+    Sign:vform => fin,
+    Sign:ccat0 ==> ssub,
+    subject_verb_agreement(Sign,sg,(u; ninvje)).
+%% ik/jij/zij wil , maar u wilt
+%% changed: in Flemish this form can be used with u too.
+features_verb_infl(modal_not_u,Sign) :-
+    Sign:tense => present,
+    Sign:vform => fin,
+    Sign:ccat0 ==> ssub,
+    subject_verb_agreement(Sign,sg).
+%% kun jij
+features_verb_infl(modal_inv, Sign) :-
+    Sign:tense => present,
+    Sign:vform => fin,
+    Sign:ccat0 ==> ssub,
+    subject_verb_agreement(Sign,sg,invje).
+
+features_verb_infl(pl,Sign) :-
+    Sign:tense => present,
+    Sign:vform => fin,
+    Sign:ccat0 ==> ssub,
+    subject_verb_agreement(Sign,pl).
+
+%% wees(t) niet bezorgd
+features_verb_infl(imp(_),Sign) :-
+    Sign:tense => present,
+    Sign:vform => fin,
+    Sign:ccat0 ==> ssub,
+    Sign:imper => yes,
+    Sign:inv => yes.
+
+%% wees jij maar niet bang
+%% weest u maar niet bang
+features_verb_infl(imp(INFL),Sign) :-
+    features_verb_infl(INFL,Sign),
+    Sign:tense => present,
+    Sign:vform => fin,
+    Sign:ccat0 ==> ssub,
+    Sign:imper => no,
+    Sign:inv => yes,
+    Sign:slash => [].
+
+features_verb_infl(subjunctive,Sign) :-
+    Sign:tense => subjunctive,
+    Sign:ccat0 ==> ssub,
+    Sign:vform => fin,  % no constraints on number?
+    Sign:subj => np.
+%%%    Sign:subj:prs => ~fir.   % "ik ga" is not ambiguous...
+                        % cf "men ga dit na"
+    %%% wrong: Ik moge erop wijzen dat ...
+
+features_verb_infl(psp,Sign) :-
+    Sign:ccat0 ==> ppart,
+    Sign:vform => psp.
+
+features_verb_infl(inf, Sign) :-
+    Sign:ccat0 ==> inf,
+    Sign:vform => (inf;psp).
+features_verb_infl(inf(no_e), Sign) :-
+    Sign:ccat0 ==> inf,
+    Sign:vform => (inf;psp),
+    Sign:adj_agr => indef & sg & het.
+features_verb_infl(inf(e), Sign) :-
+    Sign:ccat0 ==> inf,
+    Sign:vform => (inf;psp),
+    Sign:adj_agr => ~(indef & sg & het).
+features_verb_infl(inf_ipp, Sign) :-
+    Sign:ccat0 ==> inf,
+    Sign:vform => psp.
+
+%% adds agreement
+subject_verb_agreement(Sign,Agr) :-
+    Sign:subj => np,
+    Sign:subj:e_agr => Agr.
+
+%% adds agreement
+subject_verb_agreement(Sign,Agr,Person) :-
+    Sign:subj => np,
+    Sign:subj:prs => Person,
+    subject_verb_agreement(Sign,Agr).
+
+features_hz('hebben/zijn',_).
+features_hz(hebben,Sign) :-
+    Sign:hebben_zijn => hebben.
+features_hz(zijn,Sign) :-
+    Sign:hebben_zijn => zijn.
+features_hz(unacc,Sign) :-
+    Sign:hebben_zijn => unacc.
+
+unify_v_vb(Sign0,Sign) :-
+    Sign => vb,
+    Sign0 => v,
+    alpino_types:type(vb,_,Atts),
+    unify_each(Atts,Sign,Sign0).
+
+unify_each([],_,_).
+unify_each([Att|Atts],Sign0,Sign) :-
+    Sign0:Att <?=?> Sign:Att,
+    unify_each(Atts,Sign0,Sign).
+
+mogelijk_features(e,Sign) :-
+    Sign:agr => ~(het & indef & sg),
+    Sign:aform => attr,
+    Sign:cform => base.
+mogelijk_features(no_e,Sign) :-
+    Sign:agr => indef & sg & het,
+    Sign:cform => base.    
+
+%% why? the tagger gets confused if "zeker" is almost always
+%% adv, and sometimes padv
+adapt_infl_subcat(object_vp,Infl0,Infl) :-
+    !,
+    adapt_adv(Infl0,Infl).
+adapt_infl_subcat(object_sbar,Infl0,Infl) :-
+    !,
+    adapt_adv(Infl0,Infl).
+adapt_infl_subcat(_,Infl,Infl).
+
+adapt_adv(Infl0,Infl) :-
+    combine_infl_adv(Fun,ADV0,Infl0),
+    adapt_adv0(ADV0,ADV),
+    combine_infl_adv(Fun,ADV,Infl).
+
+adapt_adv0(adv,padv) :- !.
+adapt_adv0(A,A).
+
+combine_infl_adv(stof,   _,   stof       ).
+combine_infl_adv(prefix, _,   prefix     ).
+combine_infl_adv(e,      _,   e          ).
+combine_infl_adv(ge_e,   _,   ge_e       ).
+combine_infl_adv(ere,    _,   ere        ).
+combine_infl_adv(ste,    _,   ste        ).
+
+combine_infl_adv(pred,      ADV, pred(ADV)              ).
+combine_infl_adv(pred_er,   ADV, pred_er(ADV)           ).
+combine_infl_adv(both,      ADV, both(ADV)              ).
+combine_infl_adv(ge_both,   ADV, ge_both(ADV)           ).
+combine_infl_adv(postn_both,ADV, postn_both(ADV)        ).
+combine_infl_adv(postn_pred,ADV, postn_pred(ADV)        ).
+combine_infl_adv(no_e,      ADV, no_e(ADV)              ).
+combine_infl_adv(ge_no_e,   ADV, ge_no_e(ADV)           ).
+combine_infl_adv(postn_no_e,ADV, postn_no_e(ADV)        ).
+combine_infl_adv(er,        ADV, er(ADV)                ).
+combine_infl_adv(het_st,    ADV, het_st(ADV)            ).
+combine_infl_adv(st,        ADV, st(ADV)                ).
+combine_infl_adv(ende,      ADV, ende(ADV)              ).
+combine_infl_adv(end,       ADV, end(ADV)               ).

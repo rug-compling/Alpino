@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="15" id="2" rel="--">
+      <node begin="0" cat="np" end="8" id="3" rel="su">
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="ongeoorloofd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ongeoorloofd" word="ongeoorloofde"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="vliegstunt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vlieg_stunt" word="vliegstunt"/>
+        <node begin="3" cat="rel" end="8" id="7" rel="mod">
+          <node begin="3" end="4" getal="getal" id="8" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+          <node begin="3" cat="ssub" end="8" id="9" rel="body">
+            <node begin="3" end="4" id="10" index="1" rel="obj1"/>
+            <node begin="4" cat="np" end="6" id="11" rel="su">
+              <node begin="4" end="5" id="12" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
+              <node begin="5" end="6" getal="mv" graad="basis" id="13" lemma="instructeur" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="instructeur" word="instructeurs"/>
+            </node>
+            <node begin="6" end="7" getal="getal" id="14" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="ld" root="daar" status="vol" vwtype="aanw" word="daar"/>
+            <node begin="7" end="8" id="15" lemma="uithalen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="haal_uit" word="uithaalden" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+      <node begin="9" end="10" id="16" lemma="kosten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kost" word="kostte" wvorm="pv"/>
+      <node begin="10" cat="pp" end="13" id="17" rel="obj2">
+        <node begin="10" end="11" id="18" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+        <node begin="11" cat="np" end="13" id="19" rel="obj1">
+          <node begin="11" end="12" id="20" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="drie" word="drie"/>
+          <node begin="12" end="13" getal="mv" graad="basis" id="21" lemma="mensen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mens" word="mensen"/>
+        </node>
+      </node>
+      <node begin="13" cat="np" end="15" id="22" rel="me">
+        <node begin="13" end="14" id="23" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+        <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="24" lemma="leven" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="leven" word="leven"/>
+      </node>
+    </node>
+    <node begin="15" end="16" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De ongeoorloofde vliegstunt die twee instructeurs daar uithaalden , kostte aan drie mensen het leven .</sentence>
+</alpino_ds>

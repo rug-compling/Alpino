@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="np" end="4" id="1" rel="--">
+      <node begin="0" cat="mwu" end="2" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="onder" pos="adv" postag="VZ(init)" pt="vz" rel="mwp" root="onder" vztype="init" word="onder"/>
+        <node begin="1" buiging="zonder" end="2" graad="comp" id="4" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="meer" vwtype="onbep" word="meer"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+      <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="wapenwedloop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wedloop" word="wapenwedloop"/>
+    </node>
+  </node>
+  <sentence>onder meer de wapenwedloop</sentence>
+</alpino_ds>

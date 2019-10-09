@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="9" end="10" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="14" id="2" rel="--">
+      <node begin="0" cat="np" end="3" id="3" rel="su">
+        <node begin="0" end="1" frame="modal_adverb" id="4" lcat="advp" pos="adv" rel="mod" root="zelfs" sc="modal" sense="zelfs" word="Zelfs"/>
+        <node aform="base" begin="1" end="2" frame="adjective(e)" id="5" infl="e" lcat="ap" pos="adj" rel="mod" root="goed" sense="goed" vform="adj" word="goede"/>
+        <node begin="2" end="3" frame="noun(de,count,pl)" gen="de" id="6" lcat="np" num="pl" pos="noun" rel="hd" root="klant" sense="klant" word="klanten"/>
+      </node>
+      <node begin="3" end="4" frame="verb(hebben,pl,transitive)" id="7" infl="pl" lcat="smain" pos="verb" rel="hd" root="krijg" sc="transitive" sense="krijg" tense="present" word="krijgen"/>
+      <node begin="4" cat="mwu" end="7" id="8" mwu_root="af_en_toe" mwu_sense="af_en_toe" rel="mod">
+        <node begin="4" end="5" frame="sentence_adverb" id="9" lcat="advp" pos="adv" rel="mwp" root="af" sense="af" special="sentence" word="af"/>
+        <node begin="5" end="6" frame="sentence_adverb" id="10" lcat="advp" pos="adv" rel="mwp" root="en" sense="en" special="sentence" word="en"/>
+        <node begin="6" end="7" frame="sentence_adverb" id="11" lcat="advp" pos="adv" rel="mwp" root="toe" sense="toe" special="sentence" word="toe"/>
+      </node>
+      <node begin="7" cat="np" end="14" id="12" rel="obj1">
+        <node begin="7" end="8" frame="determiner(een)" id="13" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+        <node begin="8" end="9" frame="noun(de,count,sg)" gen="de" id="14" lcat="np" num="sg" pos="noun" rel="hd" root="aanmaning" sense="aanmaning" word="aanmaning"/>
+        <node begin="10" cat="np" end="14" id="15" rel="app">
+          <node begin="10" end="11" frame="sentence_adverb" id="16" lcat="advp" pos="adv" rel="mod" root="soms" sense="soms" special="sentence" word="soms"/>
+          <node begin="11" end="12" frame="modal_adverb" id="17" lcat="advp" pos="adv" rel="mod" root="zelfs" sc="modal" sense="zelfs" word="zelfs"/>
+          <node begin="12" end="13" frame="determiner(een)" id="18" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+          <node begin="13" end="14" frame="number(rang)" id="19" lcat="np" pos="num" rel="hd" root="tweede" sense="tweede" special="rang" word="tweede"/>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" frame="punct(komma)" id="20" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+  </node>
+  <sentence>Zelfs goede klanten krijgen af en toe een aanmaning , soms zelfs een tweede ,</sentence>
+  <comments>
+    <comment>Q#253|Zelfs goede klanten krijgen af en toe een aanmaning , soms zelfs een tweede ,|1|1|3.0428881219948565</comment>
+  </comments>
+</alpino_ds>

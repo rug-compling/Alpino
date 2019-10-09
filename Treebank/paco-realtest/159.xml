@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="het" pos="det" rel="det" root="het" wh="nwh" word="Het"/>
+        <node begin="1" end="2" gen="het" id="4" num="sg" pos="noun" rel="hd" root="moreel" word="moreel"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="sg3" pos="verb" rel="hd" root="bereik" sc="transitive" tense="present" word="bereikt"/>
+      <node begin="3" cat="np" end="6" id="6" rel="obj1">
+        <node begin="3" end="4" id="7" infl="een" pos="det" rel="det" root="een" word="een"/>
+        <node aform="base" begin="4" end="5" id="8" infl="no_e" pos="adj" rel="mod" root="absoluut" vform="adj" word="absoluut"/>
+        <node begin="5" end="6" gen="het" id="9" num="sg" pos="noun" rel="hd" root="dieptepunt" word="dieptepunt"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="10" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Het moreel bereikt een absoluut dieptepunt .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

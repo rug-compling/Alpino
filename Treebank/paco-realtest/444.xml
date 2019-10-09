@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="0" cat="smain" end="16" id="1" rel="--">
+      <node begin="1" end="2" id="2" infl="sg" pos="verb" rel="hd" root="moet" sc="modifier(aux(inf))" tense="present" word="moet"/>
+      <node begin="0" cat="inf" end="16" id="3" rel="vc">
+        <node begin="2" end="3" id="4" infl="inf" pos="verb" rel="hd" root="word" sc="passive" word="worden"/>
+        <node begin="0" cat="ppart" end="16" id="5" rel="vc">
+          <node begin="0" end="1" id="6" pos="adv" rel="mod" root="toch" word="Toch"/>
+          <node begin="3" end="4" id="7" infl="psp" pos="verb" rel="hd" root="merk_op" sc="part_sbar(op)" word="opgemerkt"/>
+          <node begin="4" cat="cp" end="16" id="8" rel="vc">
+            <node begin="4" end="5" id="9" pos="comp" rel="cmp" root="dat" sc="dat" word="dat"/>
+            <node begin="5" cat="ssub" end="16" id="10" rel="body">
+              <node begin="5" cat="np" end="14" id="11" rel="su">
+                <node begin="5" end="6" id="12" infl="de" pos="det" rel="det" root="de" word="de"/>
+                <node begin="6" end="7" gen="de" id="13" num="sg" pos="noun" rel="hd" root="beoordeling" word="beoordeling"/>
+                <node begin="7" cat="pp" end="14" id="14" rel="mod">
+                  <node begin="7" end="8" id="15" pos="prep" rel="hd" root="van" word="van"/>
+                  <node begin="8" cat="np" end="14" id="16" rel="obj1">
+                    <node begin="8" end="9" id="17" infl="de" pos="det" rel="det" root="de" word="de"/>
+                    <node begin="9" end="10" gen="het" id="18" num="pl" pos="noun" rel="hd" root="resultaat" word="resultaten"/>
+                    <node begin="10" cat="pp" end="14" id="19" rel="mod">
+                      <node begin="10" end="11" id="20" pos="prep" rel="hd" root="voor" word="voor"/>
+                      <node begin="11" cat="np" end="14" id="21" rel="obj1">
+                        <node begin="11" end="12" id="22" infl="de" pos="det" rel="det" root="de" word="de"/>
+                        <node aform="super" begin="12" end="13" id="23" infl="e" pos="adj" rel="mod" root="meest" vform="adj" word="meeste"/>
+                        <node begin="13" end="14" gen="het" id="24" num="pl" pos="noun" rel="hd" root="project" word="projecten"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node aform="base" begin="14" end="15" id="25" infl="no_e" pos="adj" rel="predc" root="moeilijk" vform="adj" word="moeilijk"/>
+              <node begin="15" end="16" id="26" infl="sg" pos="verb" rel="hd" root="lig" sc="nonp_copula" tense="past" word="lag"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="27" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Toch moet worden opgemerkt dat de beoordeling van de resultaten voor de meeste projecten moeilijk lag .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

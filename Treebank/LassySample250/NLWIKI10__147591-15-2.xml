@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" end="1" frame="punct(ligg_streep)" id="1" lcat="punct" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" sense="-" special="ligg_streep" word="-"/>
+    <node begin="6" end="7" frame="punct(dubb_punt)" id="2" lcat="punct" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" sense=":" special="dubb_punt" word=":"/>
+    <node begin="8" end="9" frame="punct(komma)" id="3" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="11" end="12" frame="punct(komma)" id="4" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="15" end="16" frame="punct(ligg_streep)" id="5" lcat="punct" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" sense="-" special="ligg_streep" word="-"/>
+    <node begin="1" cat="np" end="18" id="6" rel="--">
+      <node begin="1" cat="du" end="15" id="7" rel="mod">
+        <node begin="1" cat="np" end="6" id="8" rel="tag">
+          <node begin="1" end="2" frame="noun(het,count,pl)" gen="het" getal="mv" graad="basis" id="9" lcat="np" lemma="werk" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="werk" sense="werk" word="Werken"/>
+          <node begin="2" cat="pp" end="6" id="10" rel="mod">
+            <node begin="2" end="3" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="11" lcat="pp" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" sense="van" vztype="init" word="van"/>
+            <node begin="3" cat="mwu" end="6" id="12" mwu_root="Isidorus_van_Sevilla" mwu_sense="Isidorus_van_Sevilla" rel="obj1">
+              <node begin="3" end="4" frame="proper_name(both,'PER')" id="13" lcat="np" lemma="Isidorus" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Isidorus" sense="Isidorus" spectype="deeleigen" word="Isidorus"/>
+              <node begin="4" end="5" frame="proper_name(both,'PER')" id="14" lcat="np" lemma="van" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" sense="van" spectype="deeleigen" word="van"/>
+              <node begin="5" end="6" frame="proper_name(both,'PER')" id="15" lcat="np" lemma="Sevilla" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Sevilla" sense="Sevilla" spectype="deeleigen" word="Sevilla"/>
+            </node>
+          </node>
+        </node>
+        <node begin="7" cat="np" end="15" id="16" rel="nucl">
+          <node begin="7" end="8" frame="proper_name(both,'PER')" id="17" lcat="np" lemma="Etymologiae" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="hd" root="Etymologiae" sense="Etymologiae" spectype="deeleigen" word="Etymologiae"/>
+          <node begin="9" cat="np" end="15" id="18" rel="mod">
+            <node begin="9" cat="mwu" end="11" id="19" mwu_root="Sententiarum_libri" mwu_sense="Sententiarum_libri" rel="hd">
+              <node begin="9" end="10" frame="proper_name(both,'PER')" id="20" lcat="np" lemma="Sententiarum" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Sententiarum" sense="Sententiarum" spectype="deeleigen" word="Sententiarum"/>
+              <node begin="10" end="11" frame="proper_name(both,'PER')" id="21" lcat="np" lemma="libri" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="libri" sense="libri" spectype="deeleigen" word="libri"/>
+            </node>
+            <node begin="12" cat="np" end="15" id="22" rel="app">
+              <node begin="12" end="13" frame="determiner(de)" id="23" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="De"/>
+              <node begin="13" cat="mwu" end="15" id="24" mwu_root="rerum_natura" mwu_sense="rerum_natura" rel="hd">
+                <node begin="13" end="14" frame="noun(de,mass,sg)" gen="de" id="25" lcat="np" lemma="rerum" num="sg" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="rerum" sense="rerum" spectype="vreemd" word="rerum"/>
+                <node begin="14" end="15" frame="noun(de,mass,sg)" gen="de" id="26" lcat="np" lemma="natura" num="sg" pos="noun" postag="BW()" pt="bw" rel="mwp" root="natura" sense="natura" word="natura"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="16" cat="mwu" end="18" id="27" mwu_root="Bibliotheca_Augustana" mwu_sense="Bibliotheca_Augustana" rel="hd">
+        <node begin="16" end="17" frame="proper_name(both,'PER')" id="28" lcat="np" lemma="Bibliotheca" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bibliotheca" sense="Bibliotheca" spectype="deeleigen" word="Bibliotheca"/>
+        <node begin="17" end="18" frame="proper_name(both,'PER')" id="29" lcat="np" lemma="Augustana" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Augustana" sense="Augustana" spectype="deeleigen" word="Augustana"/>
+      </node>
+    </node>
+  </node>
+  <sentence>- Werken van Isidorus van Sevilla : Etymologiae , Sententiarum libri , De rerum natura - Bibliotheca Augustana</sentence>
+  <comments>
+    <comment>Q#147591-15-2|- Werken van Isidorus van Sevilla : Etymologiae , Sententiarum libri , De rerum natura - Bibliotheca Augustana|1|1|0.23589167029235958</comment>
+  </comments>
+</alpino_ds>

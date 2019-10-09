@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" cat="np" end="5" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" cat="ap" end="3" id="4" rel="mod">
+          <node begin="1" end="2" id="5" lemma="pas" pos="adv" postag="BW()" pt="bw" rel="mod" root="pas" word="pas"/>
+          <node begin="2" buiging="met-e" end="3" graad="basis" id="6" lemma="18-jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="jarig" word="18-jarige"/>
+        </node>
+        <node begin="3" buiging="met-e" end="4" graad="basis" id="7" lemma="Helmonds" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Helmondse" word="Helmondse"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="8" lemma="broer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="broer" word="broers"/>
+      </node>
+      <node begin="5" end="6" id="9" lemma="konden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kan" word="konden" wvorm="pv"/>
+      <node begin="6" end="7" genus="onz" getal="ev" id="10" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+      <node begin="7" cat="conj" end="11" id="11" rel="mod">
+        <node begin="7" end="8" id="12" lemma="zowel" pos="vg" postag="BW()" pt="bw" rel="crd" root="zowel" word="zowel"/>
+        <node begin="8" buiging="zonder" end="9" graad="basis" id="13" lemma="psychisch" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="psychisch" word="psychisch"/>
+        <node begin="9" conjtype="onder" end="10" id="14" lemma="als" pos="vg" postag="VG(onder)" pt="vg" rel="crd" root="als" word="als"/>
+        <node begin="10" buiging="zonder" end="11" graad="basis" id="15" lemma="fysiek" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="fysiek" word="fysiek"/>
+      </node>
+      <node begin="11" end="12" id="16" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      <node begin="12" end="13" id="17" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
+    </node>
+    <node begin="13" end="14" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De pas 18-jarige Helmondse broers konden het zowel psychisch als fysiek niet aan .</sentence>
+</alpino_ds>

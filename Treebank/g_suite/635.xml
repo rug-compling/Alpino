@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="cp" end="7" id="1" rel="--">
+      <node begin="0" conjtype="onder" end="1" id="2" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="omdat"/>
+      <node begin="1" cat="ssub" end="7" id="3" rel="body">
+        <node begin="1" end="2" getal="mv" id="4" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
+        <node begin="2" end="3" getal="ev" id="5" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" word="dat"/>
+        <node begin="3" end="4" id="6" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+        <node begin="4" cat="pp" end="6" id="7" rel="pc">
+          <node begin="4" end="5" id="8" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="kennis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="kennis" word="kennis"/>
+        </node>
+        <node begin="6" end="7" id="10" lemma="baseren" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="baseer" word="baseerden" wvorm="pv"/>
+      </node>
+    </node>
+  </node>
+  <sentence>omdat wij dat niet op kennis baseerden</sentence>
+</alpino_ds>

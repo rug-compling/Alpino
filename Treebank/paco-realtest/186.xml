@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" cat="np" end="8" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="de" pos="det" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" gen="de" id="4" num="sg" pos="noun" rel="hd" root="samenstelling" word="samenstelling"/>
+        <node begin="2" cat="pp" end="8" id="5" rel="mod">
+          <node begin="2" end="3" id="6" pos="prep" rel="hd" root="van" word="van"/>
+          <node begin="3" cat="np" end="8" id="7" rel="obj1">
+            <node begin="3" end="4" id="8" infl="de" pos="det" rel="det" root="de" word="de"/>
+            <node aform="base" begin="4" end="5" id="9" infl="e" pos="adj" rel="mod" root="verschil" vform="gerund" word="verschillende"/>
+            <node begin="5" end="6" gen="het" id="10" num="pl" pos="noun" rel="hd" root="type" word="types"/>
+            <node begin="6" cat="pp" end="8" id="11" rel="mod">
+              <node begin="6" end="7" id="12" pos="prep" rel="hd" root="van" word="van"/>
+              <node begin="7" end="8" gen="het" id="13" num="pl" pos="noun" rel="obj1" root="middel" word="middelen"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="8" end="9" id="14" infl="sg3" pos="verb" rel="hd" root="verschil" sc="pc_pp(van)" tense="present" word="verschilt"/>
+      <node begin="9" end="10" id="15" pos="adv" rel="mod" root="echter" special="sentence" word="echter"/>
+      <node begin="10" cat="pp" end="14" id="16" rel="pc">
+        <node begin="10" end="11" id="17" pos="prep" rel="hd" root="van" word="van"/>
+        <node begin="11" cat="np" end="14" id="18" rel="obj1">
+          <node begin="11" end="12" gen="het" id="19" num="sg" pos="noun" rel="hd" root="bedrijf" word="bedrijf"/>
+          <node begin="12" cat="pp" end="14" id="20" rel="mod">
+            <node begin="12" end="13" id="21" pos="prep" rel="hd" root="tot" word="tot"/>
+            <node begin="13" end="14" gen="het" id="22" num="sg" pos="noun" rel="obj1" root="bedrijf" word="bedrijf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="23" pos="punct" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>De samenstelling van de verschillende types van middelen verschilt echter van bedrijf tot bedrijf .</sentence>
+  <comments>
+  </comments>
+</alpino_ds>

@@ -1,0 +1,21 @@
+The application-defaults file Hdrug.ad in this directory is 
+always loaded at startup. If you want to change certain defaults
+system-wide, change them here. Defaults on a per-user basis can
+be defined in a file called Hdrug in a standard place, as determined by
+the environment variables XUSERFILESEARCHPATH XAPPLRESDIR XFILESEARCHPATH
+and the directories $HOME/lib/X11/app-defaults, 
+/usr/local/lib/X11/-app-defaults and /usr/lib/X11/app-defaults. 
+These need only contain those options that differ from the ones defined 
+in ./Hdrug.ad
+
+Finally you can also have special defaults for different applications
+constructed with Hdrug, depending on the value of the Tcl/Tk variable
+HDRUG. For example you could define an application-defaults file
+HdrugDemo in which all fonts have very large size. A certain
+application will use these if at startup the Tcl variable is set to
+HdrugDemo (the same variable determines title of the root window and
+the iconname). The Tcl/Tk variable is automatically set if the
+Prolog flag application_name is set.
+
+
+ 

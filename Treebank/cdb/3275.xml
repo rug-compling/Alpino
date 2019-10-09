@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="43" id="0" rel="top">
+    <node begin="15" end="16" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="24" end="25" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="34" end="35" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="36" end="37" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="38" end="39" id="5" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="smain" end="42" id="6" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="7" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="8" lemma="voegen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="voeg" word="voegde" wvorm="pv"/>
+      <node begin="2" cat="pp" end="4" id="9" rel="pc">
+        <node begin="2" end="3" getal="getal" id="10" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="noun" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="obj1" root="hier" status="vol" vwtype="aanw" word="hier"/>
+        <node begin="3" end="4" id="11" lemma="aan" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="aan" vztype="fin" word="aan"/>
+      </node>
+      <node begin="4" end="5" id="12" lemma="toe" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="toe" vztype="fin" word="toe"/>
+      <node begin="5" cat="cp" end="42" id="13" rel="vc">
+        <node begin="5" conjtype="onder" end="6" id="14" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="6" cat="ssub" end="42" id="15" rel="body">
+          <node begin="6" cat="np" end="34" id="16" index="1" rel="su">
+            <node begin="6" end="7" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="18" lemma="consequentie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="consequentie" word="consequentie"/>
+            <node begin="8" cat="pp" end="34" id="19" rel="mod">
+              <node begin="8" end="9" id="20" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+              <node begin="9" cat="np" end="34" id="21" rel="obj1">
+                <node begin="9" end="10" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="10" cat="ppart" end="14" id="23" rel="mod">
+                  <node begin="10" end="11" id="24" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+                  <node begin="11" cat="pp" end="13" id="25" rel="pc">
+                    <node begin="11" end="12" id="26" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+                    <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="27" lemma="Duitsland" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Duitsland" word="Duitsland"/>
+                  </node>
+                  <node begin="13" buiging="met-e" end="14" id="28" lemma="bezetten" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="bezet" word="bezette" wvorm="vd"/>
+                </node>
+                <node begin="14" end="15" getal="mv" graad="basis" id="29" lemma="gebied" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gebied" word="gebieden"/>
+                <node begin="16" cat="pp" end="34" id="30" rel="mod">
+                  <node begin="16" end="17" id="31" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                  <node begin="17" cat="np" end="34" id="32" rel="obj1">
+                    <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="33" lemma="inbegrip" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="inbegrip" word="inbegrip"/>
+                    <node begin="18" cat="pp" end="34" id="34" rel="mod">
+                      <node begin="18" end="19" id="35" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                      <node begin="19" cat="np" end="34" id="36" rel="obj1">
+                        <node begin="19" end="20" id="37" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                        <node begin="20" end="21" getal="mv" graad="basis" id="38" lemma="provincie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="provincie" word="provincies"/>
+                        <node begin="21" cat="pp" end="24" id="39" rel="mod">
+                          <node begin="21" end="22" id="40" lemma="benoorden" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="benoorden" vztype="init" word="benoorden"/>
+                          <node begin="22" cat="np" end="24" id="41" rel="obj1">
+                            <node begin="22" end="23" id="42" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                            <node begin="23" end="24" getal="mv" graad="basis" id="43" lemma="rivier" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="rivier" word="rivieren"/>
+                          </node>
+                        </node>
+                        <node begin="25" cat="rel" end="34" id="44" rel="mod">
+                          <node begin="25" end="26" getal="getal" id="45" index="2" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" status="vol" vwtype="vb" word="waar"/>
+                          <node begin="25" cat="ssub" end="34" id="46" rel="body">
+                            <node begin="25" end="26" id="47" index="2" rel="mod"/>
+                            <node begin="26" cat="conj" end="29" id="48" rel="su">
+                              <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="49" lemma="honger" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="honger" word="honger"/>
+                              <node begin="27" conjtype="neven" end="28" id="50" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                              <node begin="28" end="29" genus="zijd" getal="ev" graad="basis" id="51" lemma="koude" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="koude" word="koude"/>
+                            </node>
+                            <node begin="29" end="30" id="52" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
+                            <node begin="30" end="31" id="53" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+                            <node begin="31" cat="np" end="33" id="54" rel="obj1">
+                              <node begin="31" end="32" getal-n="mv-n" graad="basis" id="55" lemma="duizend" numtype="hoofd" pos="noun" positie="nom" postag="TW(hoofd,nom,mv-n,basis)" pt="tw" rel="hd" root="duizend" word="duizenden"/>
+                              <node begin="32" end="33" getal="mv" graad="basis" id="56" lemma="mensenleven" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="mensenleven" word="mensenlevens"/>
+                            </node>
+                            <node begin="33" end="34" id="57" lemma="vergen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="verg" word="vergden" wvorm="pv"/>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="39" end="40" id="58" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
+          <node begin="6" cat="inf" end="42" id="59" rel="vc">
+            <node begin="6" end="34" id="60" index="1" rel="su"/>
+            <node begin="40" buiging="zonder" end="41" id="61" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
+            <node begin="6" cat="ppart" end="42" id="62" rel="vc">
+              <node begin="6" end="34" id="63" index="1" rel="su"/>
+              <node begin="35" cat="ap" end="38" id="64" rel="predc">
+                <node begin="35" buiging="zonder" end="36" graad="basis" id="65" lemma="waarlijk" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="waarlijk" word="waarlijk"/>
+                <node begin="37" buiging="zonder" end="38" graad="basis" id="66" lemma="onafzienbaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="onafzienbaar" word="onafzienbaar"/>
+              </node>
+              <node begin="41" buiging="zonder" end="42" id="67" lemma="worden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="word" word="geworden" wvorm="vd"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="42" end="43" id="68" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hij voegde hier aan toe dat de consequentie voor de nog door Duitsland bezette gebieden , met inbegrip van de provincies benoorden de rivieren , waar honger en koude toch nog duizenden mensenlevens vergden , waarlijk &quot; onafzienbaar &quot; zou zijn geworden .</sentence>
+</alpino_ds>

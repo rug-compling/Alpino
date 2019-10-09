@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      <node begin="1" end="2" id="3" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+      <node begin="0" cat="inf" end="8" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="3" buiging="zonder" end="4" id="6" lemma="wonen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="woon" word="wonen" wvorm="inf"/>
+        <node begin="2" cat="advp" end="8" id="7" rel="ld">
+          <node begin="2" end="3" getal="getal" id="8" lemma="overal" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(onbep,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="hd" root="overal" status="vol" vwtype="onbep" word="overal"/>
+          <node begin="4" cat="rel" end="8" id="9" rel="mod">
+            <node begin="4" end="5" getal="getal" id="10" index="2" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="rhd" root="waar" status="vol" vwtype="vb" word="waar"/>
+            <node begin="4" cat="ssub" end="8" id="11" rel="body">
+              <node begin="4" end="5" id="12" index="2" rel="mod"/>
+              <node begin="5" cat="np" end="7" id="13" rel="su">
+                <node begin="5" end="6" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="15" lemma="voetbalclub" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voetbalclub" word="voetbalclub"/>
+              </node>
+              <node begin="7" end="8" id="16" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>ik wil overal wonen waar een voetbalclub is</sentence>
+</alpino_ds>

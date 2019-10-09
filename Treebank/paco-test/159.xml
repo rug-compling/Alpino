@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="9" end="10" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="16" id="2" rel="--">
+      <node begin="4" end="5" frame="verb(unacc,past(sg),passive)" id="3" infl="sg" lcat="smain" pos="verb" rel="hd" root="word" sc="passive" sense="word" tense="past" word="werd"/>
+      <node begin="5" case="both" def="def" end="6" frame="pronoun(nwh,thi,sg,de,both,def,strpro)" gen="de" id="4" index="1" lcat="np" num="sg" per="thi" pos="pron" rel="su" root="iedereen" sense="iedereen" special="strpro" wh="nwh" word="iedereen"/>
+      <node begin="0" cat="ppart" end="16" id="5" rel="vc">
+        <node begin="0" cat="pp" end="4" id="6" rel="mod">
+          <node begin="0" end="1" frame="preposition(via,[])" id="7" lcat="pp" pos="prep" rel="hd" root="via" sense="via" word="Via"/>
+          <node begin="1" cat="np" end="4" id="8" rel="obj1">
+            <node begin="1" end="2" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="9" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+            <node aform="base" begin="2" end="3" frame="adjective(no_e(adv))" id="10" infl="no_e" lcat="ap" pos="adj" rel="mod" root="openbaar" sense="openbaar" vform="adj" word="openbaar"/>
+            <node begin="3" end="4" frame="noun(het,count,sg)" gen="het" id="11" lcat="np" num="sg" pos="noun" rel="hd" root="onderzoek" sense="onderzoek" word="onderzoek"/>
+          </node>
+        </node>
+        <node begin="5" end="6" id="12" index="1" rel="obj1"/>
+        <node begin="6" end="7" frame="verb(hebben,psp,ninv(np_vp_obj1,part_np_vp_obj1(aan)))" id="13" infl="psp" lcat="ppart" pos="verb" rel="hd" root="moedig_aan" sc="part_np_vp_obj1(aan)" sense="moedig_aan" word="aangemoedigd"/>
+        <node begin="5" cat="oti" end="16" id="14" rel="vc">
+          <node begin="7" end="8" frame="complementizer(om)" id="15" lcat="oti" pos="comp" rel="cmp" root="om" sc="om" sense="om" word="om"/>
+          <node begin="5" cat="ti" end="16" id="16" rel="body">
+            <node begin="14" end="15" frame="complementizer(te)" id="17" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+            <node begin="5" cat="inf" end="16" id="18" rel="body">
+              <node begin="5" end="6" id="19" index="1" rel="su"/>
+              <node begin="8" cat="conj" end="13" id="20" rel="obj1">
+                <node begin="8" end="9" frame="noun(de,count,pl)" gen="de" id="21" lcat="np" num="pl" pos="noun" rel="cnj" root="wijziging" sense="wijziging" word="wijzigingen"/>
+                <node begin="10" end="11" frame="noun(de,count,pl)" gen="de" id="22" lcat="np" num="pl" pos="noun" rel="cnj" root="suggestie" sense="suggestie" word="suggesties"/>
+                <node begin="11" end="12" frame="conj(en)" id="23" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+                <node begin="12" end="13" frame="noun(het,count,pl)" gen="het" id="24" lcat="np" num="pl" pos="noun" rel="cnj" root="voorstel" sense="voorstel" word="voorstellen"/>
+              </node>
+              <node begin="13" end="14" frame="particle(aan)" id="25" lcat="part" pos="part" rel="svp" root="aan" sense="aan" word="aan"/>
+              <node begin="15" end="16" frame="verb(hebben,inf,part_transitive(aan))" id="26" infl="inf" lcat="inf" pos="verb" rel="hd" root="reik_aan" sc="part_transitive(aan)" sense="reik_aan" word="reiken"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" frame="punct(punt)" id="27" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Via het openbaar onderzoek werd iedereen aangemoedigd om wijzigingen , suggesties en voorstellen aan te reiken .</sentence>
+  <comments>
+    <comment>Q#159|Via het openbaar onderzoek werd iedereen aangemoedigd om wijzigingen , suggesties en voorstellen aan te reiken .|1|1|-8.133620926564774</comment>
+  </comments>
+</alpino_ds>

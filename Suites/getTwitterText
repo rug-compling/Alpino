@@ -1,0 +1,28 @@
+#!/usr/bin/perl -w
+# getText: extract user and message from twitter dump in json format
+# usage: getText < file
+# 20101218 erikt(at)xs4all.nl
+#  adapted GvN, not printing user name
+#               simplify
+#               try/catch around JSON decode to be robust against input errors
+
+use lib '/storage/gosse/perl5/lib/perl5'; # for JSON libraries
+use encoding 'utf8';
+use JSON; 
+
+# create new JSON object
+my $json = JSON->new->allow_nonref;
+
+while (<>) {
+   # store tweet in hash
+   eval { 
+       %tweet = %{$json->decode($_)};
+       # get text from hash %tweet
+       if (defined $tweet{"text"}) {
+	   print $tweet{"text"} . "\n";
+       }
+       1;
+   } or warn $@;
+}
+
+

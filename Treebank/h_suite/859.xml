@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="willen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="wil" word="wilde" wvorm="pv"/>
+      <node begin="2" end="3" id="4" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      <node begin="0" cat="ahi" end="7" id="5" rel="vc">
+        <node begin="5" end="6" id="6" lemma="uit" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="uit" vztype="init" word="uit"/>
+        <node begin="0" cat="inf" end="7" id="7" rel="body">
+          <node begin="0" end="1" id="8" index="1" rel="su"/>
+          <node begin="3" cat="pp" end="5" id="9" rel="mod">
+            <node begin="3" end="4" id="10" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="4" end="5" genus="fem" getal="getal" id="11" lemma="haar" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,getal,fem)" pt="vnw" rel="obj1" root="haar" status="vol" vwtype="pers" word="haar"/>
+          </node>
+          <node begin="6" buiging="zonder" end="7" id="12" lemma="eten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="eet" word="eten" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Ik wilde niet met haar uit eten</sentence>
+</alpino_ds>

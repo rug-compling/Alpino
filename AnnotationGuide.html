@@ -1,0 +1,2085 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 7.0.5" />
+<style type="text/css">
+/* Debug borders */
+p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
+/*
+  border: 1px solid red;
+*/
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a { color: blue; }
+a:visited { color: fuchsia; }
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+tt {
+  color: navy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  font-family: sans-serif;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  border-bottom: 2px solid silver;
+  padding-top: 0.5em;
+}
+
+div.sectionbody {
+  font-family: serif;
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+span#author {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+span#email {
+}
+span#revision {
+  font-family: sans-serif;
+}
+
+div#footer {
+  font-family: sans-serif;
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+div#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+div#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+div#preamble,
+div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-right: 10%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock > div.content {
+  padding-left: 2.0em;
+}
+
+div.attribution {
+  text-align: right;
+}
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 2px solid silver;
+}
+
+div.exampleblock > div.content {
+  border-left: 2px solid silver;
+  padding: 0.5em;
+}
+
+div.verseblock div.content {
+  white-space: pre;
+}
+
+div.imageblock div.content { padding-left: 0; }
+div.imageblock img { border: 1px solid silver; }
+span.image img { border-style: none; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: italic;
+}
+dd > *:first-child {
+  margin-top: 0;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.olist2 {
+  list-style-type: lower-alpha;
+}
+
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+tfoot {
+  font-weight: bold;
+}
+
+div.hlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+td.hlist1 {
+  vertical-align: top;
+  font-style: italic;
+  padding-right: 0.8em;
+}
+td.hlist2 {
+  vertical-align: top;
+}
+
+@media print {
+  div#footer-badges { display: none; }
+}
+/* Workarounds for IE6's broken and incomplete CSS2. */
+
+div.sidebar-content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+div.sidebar-title, div.image-title {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 0.0em;
+  margin-bottom: 0.5em;
+}
+
+div.listingblock div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock-content {
+  padding-left: 2.0em;
+}
+
+div.exampleblock-content {
+  border-left: 2px solid silver;
+  padding-left: 0.5em;
+}
+</style>
+<title>Manual for syntactic annotators</title>
+</head>
+<body>
+<div id="header">
+<h1>Manual for syntactic annotators</h1>
+</div>
+<h3>Authors</h3>
+<p>Bart Cramer &lt;B.Cramer@student.rug.nl&gt;</p>
+<p>Gertjan van Noord &lt;vannoord@let.rug.nl&gt;</p>
+<h2>Introduction</h2>
+<div class="sectionbody">
+<p>This document gives an overview of the Alpino system and related
+software. Together, these programs can be used to annotate a corpus of
+Dutch sentences syntactically. We will not discuss the specific rules
+of syntactic annotation itself; for this we refer to the CGN
+document. Alpino itself is a parser which uses linguistic knowledge
+and various heuristics to construct appropriate linguistic structures
+of Dutch sentences.</p>
+<h3>Starting Alpino</h3>
+<p>Alpino is the tool that we use for interactive annotation.
+Before using Alpino, make sure that Alpino is properly installed on
+your machine. Please consult a local wizard for this. The Alpino
+program itself can be started with the command:</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Alpino</tt></pre>
+</div></div>
+<p>The command can take very many options. However, for annotation, there
+is a specialized script, called Annotate, that we normally use for the
+specific purpose of annotating. It requires an argument which
+indicates which suite (a named collection of sentences) you want to
+annotate.</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Annotate NameOfSuite</tt></pre>
+</div></div>
+<p>Annotate can take all the options that Alpino knows about, but these
+options are placed <strong>after</strong> the name of the suite.</p>
+<p>The Annotate script has some particular assumptions about the
+directory structure that you are working in. You are advised to
+construct a new directory for the purpose of annotation. Perhaps this
+directory is called <tt>DCOI</tt> or <tt>LASSY</tt> or <tt>ALPINO</tt> or some such. In
+this directory, there ought to be two sub-directories called <tt>Suites</tt>
+and <tt>Treebank</tt> respectively. In the <tt>Suites</tt>-directory you will
+collect the files (called <tt>suites</tt>) that you need to annotate. The
+annotations will be placed in the directory <tt>Treebank</tt>. The <tt>Annotate</tt>
+script will create a sub-directory in <tt>Treebank</tt> for each suite that
+you annotate.</p>
+<h3>File format of suites</h3>
+<p>In the directory <tt>Suites</tt> you need to place the sets of sentences that
+are to be annotated. Each such a set is called a suite. Such a set of
+sentences is placed in a file ending with the extension <tt>.sents</tt>.
+Although one is free to use any name for the suites, there should be
+no dots in the filenames (e.g. <tt>1.1.1.2.Thesis.txt.tok.pl</tt>), as these
+will confuse Alpino.  For instance, you might create the file
+my_corpus.sents containing the following lines:</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>1|De zon komt op boven de stortplaats van het stadje Merlijn .
+2|Er klinkt een zacht geluid .
+3|Lila het vosje spitst de oren .
+4|Ze probeert erachter te komen waar het geluid vandaan komt .
+5|Nee , het is geen vogel .</tt></pre>
+</div></div>
+<p>Every line contains a key, a vertical bar, and the tokens of the
+sentence, separated by space. Note that the sentences are assumed to
+be tokenized here already: punctuation symbols are treated as separate
+tokens and therefore seperated by spaces as well. There are various
+tools in the Alpino software suite for tokenizing texts into this
+format, but here we assume that you have been given files such as
+those already.</p>
+<p>The keys (whatever is placed to the left of the vertical bar | on each
+line) can be arbitrary strings, and are used to identify each
+sentence. Later, the file name containing the annotation of each
+sentence will use this key.</p>
+<p>If you have the correct <tt>Makefile</tt> in the Suites directory, you can give
+compile the corpus into a format readable by Alpino. We use the <tt>make'
+program to create the compiled corpus. The `make' program requires a
+file called `Makefile</tt> which should contain the following definition:</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>%.pl : %.sents
+        echo ":- module(suite,[ sentence/2 ])." &gt; $*.pl
+        echo &gt;&gt; $*.pl
+        cat $*.sents | grep .|\
+        sed -e "s/| /|/" \
+            -e "s/  *$$//" \
+            -e "s/\\\\/\\\\\\\\/g" \
+            -e "s/'/\\\\'/g" \
+            -e "s/ /','/g" |\
+        awk -F\| ' !/^(%|--)/ {\
+        printf("sentence(%c%s%c,[%c%s%c]).\n",39,$$1,39,39,$$2,39); N++;}' |\
+            sicstus -l $(ALPINO_HOME)/Suites/echo &gt;&gt;$*.pl</tt></pre>
+</div></div>
+<p>Don't worry about the details of this unreadable definition. It is
+meant to treat white space, quotes etc, in a way so as not to confuse
+Prolog (Alpino is implemented in Prolog). You can copy a file with
+this definition from the Alpino distribution:</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>cp $ALPINO_HOME/Makefile.suite Makefile</tt></pre>
+</div></div>
+<p>You can now use this Makefile in order to create the Prolog version of
+the suite:</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>make my_corpus.pl</tt></pre>
+</div></div>
+<p>If all goes well, you now have the file my_corpus.pl which looks as
+follows:</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>:- module(suite,[ sentence/2 ]).
+
+sentence('1',['De',zon,komt,op,boven,de,stortplaats,van,het,stadje,'Merlijn','.']).
+sentence('2',['Er',klinkt,een,zacht,geluid,'.']).
+sentence('3',['Lila',het,vosje,spitst,de,oren,'.']).
+sentence('4',['Ze',probeert,erachter,te,komen,waar,het,geluid,vandaan,komt,'.']).
+sentence('5',['Nee',',',het,is,geen,vogel,'.']).</tt></pre>
+</div></div>
+<p>If you need to change the <tt>suites</tt> file, then you should repeat the
+<tt>make</tt> compilation step, in order that the changes are also propagated
+to the compiled version of the suite.</p>
+<h3>File format of annotations</h3>
+<p>The annotations are placed in the Treebank subdirectory. Because each
+sentence gets its own file, a new subdirectory is needed for each
+suite. In there, the annotation of a sentence is saved as an xml-file,
+example <tt>Treebank/my_corpus/2.xml</tt> (Of course, if you haven't done any
+annotations yet, then there will not be any .xml files in your
+directory). This file could look as follows:</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
+&lt;alpino_ds version="1.0"&gt;
+  &lt;node id="0" rel="top" cat="top" begin="0" end="6"&gt;
+    &lt;node id="1" rel="--" cat="smain" begin="0" end="5"&gt;
+      &lt;node id="2" rel="mod" pos="adv" begin="0" end="1" root="er" word="Er"/&gt;
+      &lt;node id="3" rel="hd" pos="verb" begin="1" end="2" root="klink" word="klinkt"/&gt;
+      &lt;node id="4" rel="su" cat="np" begin="2" end="5"&gt;
+        &lt;node id="5" rel="det" pos="det" begin="2" end="3" root="een" word="een"/&gt;
+        &lt;node id="6" rel="mod" pos="adj" begin="3" end="4" root="zacht" word="zacht"/&gt;
+        &lt;node id="7" rel="hd" pos="noun" begin="4" end="5" root="geluid" word="geluid"/&gt;
+      &lt;/node&gt;
+    &lt;/node&gt;
+    &lt;node id="8" rel="--" pos="punct" begin="5" end="6" root="." word="."/&gt;
+  &lt;/node&gt;
+  &lt;sentence&gt;Er klinkt een zacht geluid .&lt;/sentence&gt;
+&lt;/alpino_ds&gt;</tt></pre>
+</div></div>
+<p>There are various programs closely related to treebanks: <tt>dtview</tt>, <tt>dtedit</tt> (also
+known as Thistle), <tt>dtchecks</tt>, <tt>dtsearch</tt> and <tt>dttred</tt>.</p>
+<p>You can use dtview to display annotated sentences graphically. The
+<tt>dtview</tt> program has a rather intuitive interface, but there are a few
+short keyboard command that makes going through treebank a bit less
+damaging for your wrist: Page Up and Page Down for going to the next
+and previous tree, and the arrow keys for navigating in trees that
+don't fit on the screen. The <em>t</em> key triggers the same response as the
+<em>TrEd</em> button on the top, namely opening <tt>dttred</tt> for that
+particular tree. Here, you can edit the tree.</p>
+<p><tt>dtchecks</tt> is used for a superficial check on a treebank. Its syntax is
+<tt>dtchecks directory</tt>, to be run from the Treebank directory, and it is able to
+recognize errors like a node with only one child and incompatible
+sisters/children/parents. Annotators produce these flaws rather often, so
+before rounding off a corpus, you must use it. However, note that the dtchecks
+program might also complain about valid annotations.</p>
+<p><tt>dtsearch</tt> is a program that permits the user to search for trees in the
+treebank with certain criteria. By standard, it does it recursively in all
+subdirectories. After having retrieved the correct XML files, <tt>dtsearch</tt> will
+show them in dtview (if you use the -v option). For example, if you would like
+to find all trees in which <em>zoals</em> occurs as a preposition, you can issue the
+command:</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>dtsearch -v '//node[@word="zoals" and @pos="prep"]' .</tt></pre>
+</div></div>
+<p>The dtsearch program has a very powerful query language (known as
+XPATH), that is documented elsewhere.</p>
+<h3>A simple example of the annotation process</h3>
+<p>To see the system at work, let's try to see the procedure from the
+start until the end. First, make a Suite and a Treebank directory, and
+create or copy an example suite in your Suite directory, and compile
+that suite into Prolog format. Let's assume the suite is called <tt>my_corpus</tt>.
+Then, issue the command</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Annotate my_corpus</tt></pre>
+</div></div>
+<p>from your current directory (that should now contain the Suites and
+Treebank sub-directories).</p>
+<p>Alpino starts up its graphical environment. On the top you will see a
+series of menu buttons, which we will ignore for now (although it is
+perhaps useful to know that you can stop the system by selecting the
+File menu, and clicking the Halt item in that menu).</p>
+<p>Below the menu buttons you see the <tt>Parse</tt> button on the left, with an
+empty long space to its right, followed by a shorter space at the
+right hand side. Once we have selected a sentence, the sentence will
+appear in this space, with its key displayed further to the right. You can try
+parsing a sentence by selecting it from the list box below the
+<tt>Parse</tt>-button, followed by pressing that <tt>Parse</tt>-button.</p>
+<p>Before Alpino really starts parsing the sentence, it presents a new
+widget with the lexical analysis of the sentence. At this point, you
+can influence the lexical analysis phase of Alpino, but for now we
+simply click the Parse button (left below) on this new widget, to
+really get going. Below, the lexical analysis phase is explained in
+more detail (you can also swith off the interactive lexical assignment
+using the option <tt>interactive_lexical_analysis=off</tt>).</p>
+<p>Alpino will now (finally!) parse the sentence syntactically, and it
+will show you the most probable analysis in the left
+pane. For each analysis, a green button with the number of the
+analysis is constructed as well.
+As a short-cut, clicking on such a numbered analysis button with your
+right mouse button will immediately display the corresponding
+dependency structure of that analysis.  A left-click on the number
+will give you a menu, with which you can, for example, save your parse. If you
+select <em>XML</em> -&gt; <em>Save</em>, Alpino will automatically create the needed
+file in the corresponding subdirectory of the Treebank folder. If the
+correct annotation is not available, you can select <em>XML</em> -&gt; <em>Save and
+Edit</em>, to start the editor for this annotation. There are many more
+options, some of which are useful. Please experiment.</p>
+<h3>Options</h3>
+<p>In Alpino, there are a lot of options available. Some options have a
+quality/computational time trade-off. The following are the most
+important:</p>
+<ul>
+<li>
+<p>
+number_analyses. This sets the maximum number of analyses the parser will
+produce. The <tt>-fast</tt> option at start-up sets this option to 1. Unless dealing
+with very complex sentences, it is recommended to set this option to some
+small integer. If you increase this number, you should also increase the value
+of the `disambiguation_beam' flag to the same number. The special
+value <em>0</em> indicates that <strong>all</strong> analyses are produced.
+</p>
+</li>
+<li>
+<p>
+interactive_lexical_analysis. If turned on, it gives the user the
+possibility to adjust the suggested POS-tagging. When manually annotating, it
+is highly recommended to keep this on.
+</p>
+</li>
+<li>
+<p>
+fast. Using this option has a number of consequences. First of all,
+the POS-tagger is switched on the reduce lexical
+ambiguities. Furthermore, an efficient search algorithm is used to
+select the best parse. In this case, only the best parse is
+produced.
+</p>
+</li>
+<li>
+<p>
+slow. This is the alternative to <tt>fast</tt> (you guessed!). The
+POS-tagger is switched off, and all possible analyses are produced. This
+is only useful for shorter sentences.
+</p>
+</li>
+</ul>
+<h3>Tips and tricks</h3>
+<p>Next to the general way of parsing sentences, there are a number of manual
+tricks available, which can help a great deal in improving the quality of the
+parses or in speeding up the parsing process.</p>
+<ul>
+<li>
+<p>
+A large part of the computational time is spent on finding the correct
+constituents. The annotator can give hints to Alpino about this by putting
+straight brackets around constituents. Both brackets should be surrounded by a
+single space on both sides otherwise the POS-tagging will give problems,
+regarding a space as a word. This is a nice feature especially for attaching
+modifiers at the correct location, enumerations and complex nestings in syntactic
+structures. Brackets are normally associated with a category name, using
+the @-operator. Normal syntactic symbols can be used here as @np, @pp
+etc. Examples:
+</p>
+</li>
+</ul>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Hij fietst [ @pp op zijn gemakje ] [ door de straten van De Baarsjes ] .
+FNB zet teksten van [ [ kranten en tijdschriften ] , boeken , [ studie- en vaklectuur ] , bladmuziek , folders , brochures ] om in gesproken vorm .
+[ @np De conferentie die betrekking heeft op ondersteunende technologie voor gehandicapten in het algemeen ] , bood [ @np een goed platform [ om duidelijk te maken hoe uitgevers zelf toegankelijke structuren in hun informatie kunnen aanbrengen ] ] .</tt></pre>
+</div></div>
+<ul>
+<li>
+<p>
+You can also force a lexical assingment to a token or a series of
+tokens, if the Alpino lexicon does not contain the proper assignment.
+A @postag followed by an Alpino lexical category will force the
+assignment of the corresonding lexical category to the words contained
+in the brackets. This comes in handy when a part of the sentence is
+written in a foreign language or a spelling mistake has occurred. Of
+course, it may need adjusting with the editor afterwards.
+</p>
+</li>
+</ul>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Hij heeft een beetje [ @postag adjective(no_e(adv)) curly ] haar .
+Op een [ @postag adjective(e) mgooie ] dag gingen ze fietsen .
+Mijn [ @postag noun(de,count,sg) body mass index ] laat te wensen over .</tt></pre>
+</div></div>
+<ul>
+<li>
+<p>
+Also, if the annotator can predict that a certain token or series of
+tokens will make the annotation a mess, it can be skipped by
+@skip. In such a case, the sentence is parsed as if the word(s) that
+are marked with <tt>skip</tt> where not there, except that the numbering of
+the words in the resulting dependency structure is still correct.
+Clearly, in many cases an additional editing phase is required to
+obtain the fully correct analysis, but this method might reduce
+efforts considerably.
+</p>
+</li>
+</ul>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Ik wil [ @skip ??? ] naar huis
+Ten opzichte [ @skip echter ] van deze bezwaren willen wij ....</tt></pre>
+</div></div>
+<ul>
+<li>
+<p>
+A related trick that is useful in particular cases, is to add a word
+to the sentence in order to ensure that the parse can succeed, but
+instruct Alpino that this word should not be part of the resulting
+dependency structures. Such words are labeled phantom as follows:
+</p>
+</li>
+</ul>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Ik aanbad [ @phantom hem ] dagelijks in de kerk
+Ik kocht boeken en Piet [ @phantom kocht ] platen
+Ik heb [ @phantom meer ] boeken gezien dan hem</tt></pre>
+</div></div>
+<p>Limitations: a phantom bracketed string can only contain a single
+word. The technique does not work yet for words that are part of a
+multi-word unit.</p>
+<p>Warning: the resulting dependency structure is most likely not well-formed
+and often needs manual editing.</p>
+<ul>
+<li>
+<p>
+After annotating a sentence, it might turn out that you used
+insufficient or incorrect brackets to get to the right annotation. In
+this case, you may not want to re-do the interactive lexical
+assignment. Middle-clicking <em>Parse</em> will parse the sentence, using the
+lexical assigment of the previous try.
+</p>
+</li>
+<li>
+<p>
+In the right bottom of the Alpino screen, there are two extra
+buttons. <em>Annotate shortest</em> is particularly useful for beginning annotators:
+this button will start to annotate the shortest yet unparsed sentence in the
+corpus. <em>Annotate next</em> does what the name suggests it does: it annotates the
+first sentence in the corpus that is still unparsed. This is a nice feature to
+check whether you didn't forget a sentence in the corpus. As a
+short-cut, clicking the now familiar <tt>Parse</tt> button with your
+rightmost mouse-button has a similar effect by selecting the next
+sentence to be annotated.
+</p>
+</li>
+<li>
+<p>
+Sometimes you would like to check if a sentence is already done, or you would
+like to look back at previous sentences to ensure coherence between
+sentences. For this, you can use the <em>Treebank</em> button; this will activate the
+<tt>dtview</tt> program on the analysis of the current sentence.
+</p>
+</li>
+<li>
+<p>
+There is a small bug in Alpino: when it is being used for a long time, the
+canvas for drawing the trees is full, and these drawings will render the newly
+generated trees unreadable. You can clear the canvas by clicking
+on it with the rightmost mouse button.
+</p>
+</li>
+<li>
+<p>
+Although most work is done in the graphical interface, some things can only
+be done in the Prolog interpreter screen (the terminal). One of the most used
+options is to quickly check the possible POS-tags of a word form. This can be
+done with the command <em>mlex word</em>. Quickly retrieving the parse of one
+sentence can be done as well, using the <em>*</em> command. Quitting from the
+terminal mode is done with the command <em>quit</em> (without a period, as is
+expected in a Prolog environment). Also, <tt>sen 1130</tt> retrieves sentence 1130
+from the corpus.
+</p>
+</li>
+</ul>
+<div class="listingblock">
+<div class="content">
+<pre><tt>1 |: mlex dreun
+stem           string         his                 cat
+dreun          [dreun]        normal              noun(de,count,sg)
+dreun          [dreun]        normal              verb(hebben,sg1,intransitive)
+dreun          [dreun]        normal              verb(hebben,sg1,sbar)
+dreun_na       [dreun]        normal              verb(hebben,sg1,part_intransitive(na))
+dreun_op       [dreun]        normal              verb(hebben,sg1,part_sbar(op))
+dreun_op       [dreun]        normal              verb(hebben,sg1,part_transitive(op))
+2 |: * De beer is los
+top_features=grammar
+parse: De beer is los
+Lexical analysis: 4 words, 243 -&gt; 8 -&gt; 8 -&gt; 8 tags, 42 signs, 170 msec
+Parsed (70 msec)
+created object: 1
+[De beer is los]
+Q#undefined|De beer is los|1|1|-0.05113238180000002
+created object: 2
+[De beer is los]
+Q#undefined-2|De beer is los|1|1|-0.02903353880000002
+cputime total 260 msec
+Found 2 solution(s)
+32 history items
+             top=top
+                |
+            -- =smain
+        _____________________
+       |           |        |
+     su=np      hd=verb predc=adj
+    ________
+   |       |       |        |
+det=det hd=noun   ben      los
+   |       |
+  de     beer
+3 |: quit
+cramer@rana:~&gt;</tt></pre>
+</div></div>
+<ul>
+<li>
+<p>
+Rather than using the [ @postag ] technique described above, it
+might be that a certain corpus has multiple occurrences of a word
+that Alpino does not know about. In that case, you can add the word to the
+lexicon interactively (it remains in the lexicon for this particular
+session of Alpino only). Using the command interpreter, the command:
+</p>
+</li>
+</ul>
+<div class="listingblock">
+<div class="content">
+<pre><tt>add_lex curly mooi</tt></pre>
+</div></div>
+<p>tells the Alpino lexicon that the word <tt>curly</tt> has the same lexical
+categories as the word <tt>mooi</tt>. It also works for multiple word units:</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>add_lex body mass index index</tt></pre>
+</div></div>
+</div>
+<h2>POS-tagging</h2>
+<div class="sectionbody">
+<p>One very important step in syntactic annotation is POS-tagging: determining
+which word group a word belongs to. Having precise knowledge about these
+categories can speed up the annotation process considerably, because then you
+are able to prune large parts of the search space manually.</p>
+<p>Almost all words have several POS-tags. A word can be ambiguous
+because it belongs to different main categories (<em>werk</em> can be either
+a verb or a noun), but also because they differ in details (<em>geven</em>
+can be either intransitive, transitive or ditransitive, some words
+have other complements as verb phrases, etc.).</p>
+<p>In this documents, the main categories and the most frequently used
+options will be reviewed, as these are most important for the normal
+user. The very details of some exotic words will thus be left out.</p>
+<h3>Verbs</h3>
+<p>The tag of verbs takes at least three arguments:</p>
+<ul>
+<li>
+<p>
+The auxiliary verb, when the verb is inflected to a participium (<em>hebben</em> or <em>zijn</em>);
+</p>
+</li>
+<li>
+<p>
+The tense and congruent information (<em>sg1</em>, <em>sg3</em>, <em>pl</em>, <em>past(sg)</em>,
+  <em>past(pl)</em>, <em>psp</em>, <em>inf</em>);
+</p>
+</li>
+<li>
+<p>
+The possible complements.
+</p>
+</li>
+</ul>
+<p>For the latter, there is a large variety of possibilities. These are the basic ones:</p>
+<div class="tableblock">
+<table rules="all"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<caption class="title">Table: Verb's fourth argument, single forms</caption>
+<col width="548" />
+<col width="502" />
+<thead>
+  <tr>
+    <th align="left">
+    Tag
+    </th>
+    <th align="left">
+    Example
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    intransitive
+    </td>
+    <td align="left">
+    Ik <em>schrijf</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    transitive
+    </td>
+    <td align="left">
+    Ik <em>schrijf</em> een brief
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    np_np
+    </td>
+    <td align="left">
+    Ik <em>schrijf</em> mijn moeder een brief
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    so_pp_np
+    </td>
+    <td align="left">
+    Ik <em>schrijf</em> een brief aan mijn moeder
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    so_np
+    </td>
+    <td align="left">
+    Ik <em>schrijf</em> mijn moeder
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    refl
+    </td>
+    <td align="left">
+    Ik <em>schaam</em> me
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    copula
+    </td>
+    <td align="left">
+    Ik <em>ben</em> een echte fietser
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    pred_np
+    </td>
+    <td align="left">
+    Ik <em>vind</em> dat leuk
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    pc_pp(over)
+    </td>
+    <td align="left">
+    Ik <em>schrijf</em> over de ramp
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    ld_pp
+    </td>
+    <td align="left">
+    Ik <em>zwaai</em> naar mijn moeder
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    er_er
+    </td>
+    <td align="left">
+    Er <em>zijn</em> er die voetballen leuk vinden
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    part_intransitive(mee)
+    </td>
+    <td align="left">
+    Ik <em>schrijf</em> mee
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    fixed([svp_pp(op,naam),acc],norm_passive)
+    </td>
+    <td align="left">
+    Ik <em>schrijf</em> die overwinning op mijn naam
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    vp
+    </td>
+    <td align="left">
+    Ik <em>speel</em> om te winnen
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    sbar
+    </td>
+    <td align="left">
+    Ik <em>schrijf</em> dat ik huil
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    cleft
+    </td>
+    <td align="left">
+    Het <em>was</em> op Piet dat hij een uur moest wachten
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    aan_het
+    </td>
+    <td align="left">
+    Ik <em>ben</em> aan het lopen
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    aci
+    </td>
+    <td align="left">
+    Ik <em>laat</em> hem fietsen
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    aux_psp_hebben
+    </td>
+    <td align="left">
+    Ik <em>heb</em> gefietst
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    aux_psp_zijn
+    </td>
+    <td align="left">
+    Ik <em>ben</em> nog een uurtje gebleven
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    aux(inf)
+    </td>
+    <td align="left">
+    Ik <em>zal</em> fietsen
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    aux(te)
+    </td>
+    <td align="left">
+    Ik <em>blijk</em> te blozen
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    passive
+    </td>
+    <td align="left">
+    Ik <em>word/ben</em> door mijn moeder uitgezwaaid
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    te_passive
+    </td>
+    <td align="left">
+    Ik <em>ben</em> te vinden in de kelder
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    dip_sbar_subj
+    </td>
+    <td align="left">
+    Ik <em>denk</em> , zei Piet , dat hij komt
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<p>With a bit of creativity one can easily see the meaning of related
+POS-tags. A few examples are:</p>
+<div class="tableblock">
+<table rules="all"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<caption class="title">Table: Verb's fourth argument, combined forms</caption>
+<col width="548" />
+<col width="502" />
+<thead>
+  <tr>
+    <th align="left">
+    Tag
+    </th>
+    <th align="left">
+    Example
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    ld_adv
+    </td>
+    <td align="left">
+    Ik <em>ben</em> daar
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    ld_dir
+    </td>
+    <td align="left">
+    Ik <em>loop</em> huiswaarts
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    
+    </td>
+    <td align="left">
+    Ik <em>loop</em> het bos in
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    np_ld_pp
+    </td>
+    <td align="left">
+    Ik <em>schop</em> de bal naar het doel
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    np_ld_dir
+    </td>
+    <td align="left">
+    Ik <em>duw</em> hem huiswaarts
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    
+    </td>
+    <td align="left">
+    Ik <em>stuur</em> hem het bos in
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    sbar_subj
+    </td>
+    <td align="left">
+    Het <em>lijkt</em> dat je geschikt bent
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    sbar_subj_so_np
+    </td>
+    <td align="left">
+    Het <em>lijkt</em> mij dat je geschikt bent
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    refl_sbar
+    </td>
+    <td align="left">
+    Ik <em>schaam</em> me dat ik dat gedaan heb
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    copula_sbar
+    </td>
+    <td align="left">
+    Het <em>is</em> leuk dat je fietst
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    copula_vp
+    </td>
+    <td align="left">
+    Het <em>is</em> leuk om te fietsen
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    so_copula
+    </td>
+    <td align="left">
+    Ik <em>ben</em> hem trouw
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    np_aan_het
+    </td>
+    <td align="left">
+    Ik <em>heb</em> de motor aan het lopen
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    np_sbar
+    </td>
+    <td align="left">
+    Ik <em>schrijf</em> mijn moeder dat ik huil
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    er_pp_sbar(achter)
+    </td>
+    <td align="left">
+    Ik <em>ben</em> erachter dat je me bedriegt
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    pred_np_sbar
+    </td>
+    <td align="left">
+    Ik <em>vind</em> het leuk dat je bloost
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    pred_np_vp
+    </td>
+    <td align="left">
+    Ik <em>vind</em> het leuk om te blozen
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    pred_pc_pp(van)
+    </td>
+    <td align="left">
+    Ik <em>word</em> verlegen van jouw aandacht
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    part_transitive(aan)
+    </td>
+    <td align="left">
+    Ik <em>schrijf</em> een fonds aan
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    part_np_np(voor)
+    </td>
+    <td align="left">
+    Ik <em>schrijf</em> hem een medicijn voor
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    fixed([[het,apezuur],refl],no_passive)
+    </td>
+    <td align="left">
+    Ik <em>schrijf</em> me het apezuur
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    fixed([{[acc(gesprek),pc(met)]}],no_passive)
+    </td>
+    <td align="left">
+    Ik <em>heb</em> een gesprek met de rector
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    aux_modifier(inf)
+    </td>
+    <td align="left">
+    Het moet raar lopen , <em>wil</em> hij komen
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<h3>Particles</h3>
+<p>There are no attributes related to particles (separable verb
+prefixes). They are just as they are.  Particles are used as separable
+verb prefixes as <tt>op</tt> in <tt>Hij belde ons op</tt>, and also as a
+post-position in a prepositional phrase, such as <tt>af</tt> in <tt>van het
+begin af had ik twijfels</tt>.</p>
+<h3>Fixed</h3>
+<p>The category <em>fixed</em> is used for the frozen part of verbal
+idioms. Examples of these are <em>ter dood</em>, <em>in de koude kleren</em> and <em>uit het oog</em>.</p>
+<h3>Nouns and related tags</h3>
+<p>Just as verbs, all noun tags have three compulsory arguments:</p>
+<ul>
+<li>
+<p>
+Its determiner (<em>de</em>,<em>het</em>,<em>both</em>);
+</p>
+</li>
+<li>
+<p>
+Whether it is countable (<em>count</em>, <em>mass</em>);
+</p>
+</li>
+<li>
+<p>
+The number of the noun (<em>sg</em>, <em>pl</em>, <em>both</em>, <em>meas</em>).
+</p>
+</li>
+</ul>
+<p>The special value <tt>meas</tt> is used for singular measure nouns that combine
+nonetheless with plural numbers (<tt>dertien jaar</tt>, <tt>twintig meter</tt>).</p>
+<p>The optional fourth attribute of nouns shows which complement(s) the noun takes:</p>
+<div class="tableblock">
+<table rules="all"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<caption class="title">Table: Noun's fourth argument</caption>
+<col width="548" />
+<col width="502" />
+<thead>
+  <tr>
+    <th align="left">
+    Tag
+    </th>
+    <th align="left">
+    Example
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    start_app_measure
+    </td>
+    <td align="left">
+    onder het <em>motto</em> : we zullen wel zien
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    app_measure
+    </td>
+    <td align="left">
+    de stof <em>insuline</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    np_app_measure
+    </td>
+    <td align="left">
+    op <em>camping</em> de Mokerhei
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    measure
+    </td>
+    <td align="left">
+    een <em>plakje</em> words
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    sbar
+    </td>
+    <td align="left">
+    het idee dat je kunt vliegen
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    vp
+    </td>
+    <td align="left">
+    het idee om te gaan vliegen
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    subject_sbar
+    </td>
+    <td align="left">
+    het is een <em>feit</em> dat hij komt
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    subject_vp
+    </td>
+    <td align="left">
+    het is een <em>drama</em> om te moeten wachten
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    pred_pp(van)
+    </td>
+    <td align="left">
+    dat is van groot <em>belang</em>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<p>Some of these distinctions are somewhat subtle. The label <tt>app_measure</tt> is used
+if the following noun is understood somewhat like a name. In many cases, you
+can add the word <em>genaamd</em> (entitled): <em>een stof genaamd insuline</em>. On the
+other hand, the <tt>measure</tt> category is used for words such as <em>plakje</em>, <em>kopje</em>,
+<em>hoeveelheid</em> which often indicate a quantity. The <tt>np_app_measure</tt> is used for
+words that take a full NP modifier (typically including a determiner), often
+headed by a proper name.</p>
+<p>The category <tt>pred_pp(Prep)</tt> is used for nouns which, if combined with the
+specified preposition Prep, form a predicative PP complement.</p>
+<p>The <tt>subject_sbar</tt> and and <tt>subject_vp</tt> tags indicate that the noun
+occurs as a predicative complement with a sentential subject (sbar or
+vp).</p>
+<h3>Verbal nouns</h3>
+<p>Verbal nouns are verbs that have the syntactical function of a noun
+(nominalizations). An example is: <em>Ik heb het fietsen nog niet
+afgeleerd</em>. They have the same complements as their corresponding verb
+entries in the lexicon. An example of this is: <em>Het in Utrecht wonen
+bevalt hem</em> where <em>in Utrecht</em> is an LD complement of <em>wonen</em>.</p>
+<h3>Determiner</h3>
+<p>Determiners are divided in different categories: gen_determiner,
+comp_determiner, name_determiners, tmp_determiner and regular determiners.</p>
+<p>Regular determiners can be divided in a few categories, and they all take a
+different set of arguments. The type of the determiner is expressed in the
+first argument. An overview of all types can be found in the table. Besides
+the first argument, determiners can have up to five additional arguments,
+depending on the type of the determiner:</p>
+<ul>
+<li>
+<p>
+nwh/wh: this indicates whether or not a wh-question can be formed with this
+word
+</p>
+</li>
+<li>
+<p>
+nmod/mod: this indicates whether or not the determiner can be modified. An
+example of such modification is <em>geen</em> in <em>bijna geen</em>.
+</p>
+</li>
+<li>
+<p>
+pro: this indicates that the determiner can function as a pronoun.
+</p>
+</li>
+<li>
+<p>
+yparg/nparg: this binary feature indicates whether the determiner, if used
+as a pronoun, can occur as a complement of a preposition. This distinction
+captures <em>met dit</em> / <em>hiermee</em> pattern.
+</p>
+</li>
+<li>
+<p>
+wkpro/nwkpro. This indicates whether the determiner, if it is used as a
+pronoun, is a weak pronoun or not. There are several constraints on the
+syntactic behaviour of weak pronouns (they cannot take modifiers/complements,
+they cannot occur in topic, etc.). This feature indicates that the determiner
+can combine with the post-np adverb <em>meer</em> in sentences <em>geen boeken meer</em>
+<em>weinig - voorraad meer</em>.
+</p>
+</li>
+</ul>
+<div class="tableblock">
+<table rules="all"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<caption class="title">Table: Minor determiner types</caption>
+<col width="548" />
+<col width="502" />
+<thead>
+  <tr>
+    <th align="left">
+    Tag
+    </th>
+    <th align="left">
+    Example
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    determiner(de)
+    </td>
+    <td align="left">
+    <em>De</em> jongen is flink
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    determiner(deze,nwh,nmod,pro,yparg)
+    </td>
+    <td align="left">
+    <em>Deze</em> jongen is flink
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    determiner(alle,nwh,mod,pro,nparg)
+    </td>
+    <td align="left">
+    <em>Alle</em> jongens zijn flink
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    determiner(geen,nwh,mod,pro,yparg,nwkpro,geen)
+    </td>
+    <td align="left">
+    <em>Geeneen</em> jongen is flink
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    determiner(wat)
+    </td>
+    <td align="left">
+    <em>Tal van</em> jongens zijn flink
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    determiner(wat,nwh,mod,pro,yparg)
+    </td>
+    <td align="left">
+    <em>Genoeg</em> jongens zijn flink
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    determiner(elke,nwh,mod)
+    </td>
+    <td align="left">
+    <em>Iedere</em> jongen is flink
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    determiner(pron)
+    </td>
+    <td align="left">
+    <em>Jouw</em> jongens zijn flink
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    determiner(sg_num)
+    </td>
+    <td align="left">
+    <em>Menig</em> jongen is flink
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    determiner(pl_num,nwh,nmod,pro,yparg)
+    </td>
+    <td align="left">
+    <em>Meerdere</em> jongens zijn flink
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    determiner(welke)
+    </td>
+    <td align="left">
+    <em>Enige</em> jongens zijn flink
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    determiner(zulke)
+    </td>
+    <td align="left">
+    <em>Zulke</em> jongens zijn flink
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<h3>Pronouns</h3>
+<p>Pronouns have a lot of arguments in Alpino. Because most of the
+pronouns are not ambiguous, this is only needed for the engine
+underneath, and is therefore less important for the back-end user of
+the system. Still, we would like to show a few types of pronouns in
+their usual contexts.</p>
+<div class="tableblock">
+<table rules="all"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<caption class="title">Table: Pronoun types</caption>
+<col width="548" />
+<col width="502" />
+<thead>
+  <tr>
+    <th align="left">
+    Tag
+    </th>
+    <th align="left">
+    Example
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    pronoun(nwh,thi,pl,de,both,indef)
+    </td>
+    <td align="left">
+    <em>Beide</em> gingen naar school
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    pronoun(ywh,thi,both,de,both,indef)
+    </td>
+    <td align="left">
+    <em>Wie</em> is dat ?
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    rel_pronoun(de,no_obl)
+    </td>
+    <td align="left">
+    De jongen <em>die</em> ik bekeek , keek naar me
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    reflexive(je,both)
+    </td>
+    <td align="left">
+    Waar houd je <em>je</em> mee bezig ?
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<h3>Adjectives</h3>
+<p>The first argument shows a list in which forms an adjective can occur:</p>
+<div class="tableblock">
+<table rules="all"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<caption class="title">Table: Adjective's first argument</caption>
+<col width="548" />
+<col width="502" />
+<thead>
+  <tr>
+    <th align="left">
+    Tag
+    </th>
+    <th align="left">
+    Example
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    no_e
+    </td>
+    <td align="left">
+    de auto is <em>mooi</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    e
+    </td>
+    <td align="left">
+    de <em>mooie</em> auto
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    both
+    </td>
+    <td align="left">
+    het <em>malafide</em> bedrijf; het bedrijf is <em>malafide</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    pred (only functions as predicative)
+    </td>
+    <td align="left">
+    de kast staat <em>ondersteboven</em>, but not: de <em>onderstebovene</em> kast
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    er, ere, st, ste (comparative forms)
+    </td>
+    <td align="left">
+    <em>mooier</em>, <em>mooiere</em>, <em>mooist</em>, <em>mooiste</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    ende/end (gerund with/without e)
+    </td>
+    <td align="left">
+    een auto <em>komende</em> uit de richting Assen
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    postn
+    </td>
+    <td align="left">
+    de jongen <em>afkomstig</em> uit Palestina
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<p>The second argument shows whether the adjective can behave as an adverb as well:</p>
+<div class="tableblock">
+<table rules="all"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<caption class="title">Table: Adjective's further attributes</caption>
+<col width="548" />
+<col width="502" />
+<thead>
+  <tr>
+    <th align="left">
+    Tag
+    </th>
+    <th align="left">
+    Example
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    adv    (can be used as vp modifier)
+    </td>
+    <td align="left">
+    De jongen loopt <em>mooi</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    nonadv (cannot be used as vp mod)
+    </td>
+    <td align="left">
+    *De jongen loopt <em>nederlandstalig</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    padv   (can be used as predm, but not vp mod)
+    </td>
+    <td align="left">
+    Hij loopt <em>herkenbaar</em> over straat
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    both   (can be used both as predm and vp mod)
+    </td>
+    <td align="left">
+    Gek van vreugde liep hij rustig weg
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    
+    </td>
+    <td align="left">
+    Hij heeft deze zaken gek aangepakt
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    locadv (can be used as locative vp mod)
+    </td>
+    <td align="left">
+    De jongen loopt <em>ver</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    tmpadv (can be used as temporal vp mod)
+    </td>
+    <td align="left">
+    Hij heeft <em>kort</em> geaarzeld
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<p>A further (optional) argument shows which complements the adjective
+can have. These are very similar to the complements for verbs.</p>
+<h3>Prepositions</h3>
+<p>The preposition tag typically has one argument, which is a list (often
+the empty list). The list containts potential post-positions, with
+which the current preposition can combine to form a hd/obj1/hdf
+triples.</p>
+<p>In some cases there is a further second argument for prepositions
+which indicate more specialized uses, as documented in this table:</p>
+<div class="tableblock">
+<table rules="all"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<caption class="title">Table: Types of prepositions</caption>
+<col width="548" />
+<col width="502" />
+<thead>
+  <tr>
+    <th align="left">
+    Tag
+    </th>
+    <th align="left">
+    Example
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    preposition(over,[])
+    </td>
+    <td align="left">
+    Het leven gaat niet <em>over</em> rozen
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    preposition(achter,[aan,door,langs,om,uit])
+    </td>
+    <td align="left">
+    <em>achter</em> de dief aan
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    preposition(op,[],pc_adv)
+    </td>
+    <td align="left">
+    Ik rekende <em>op</em> vanmiddag
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    preposition(ondanks,[],sbar)
+    </td>
+    <td align="left">
+    Ik kom <em>ondanks</em> dat ik me slecht voelde
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    preposition(ongeacht,[],of_sbar)
+    </td>
+    <td align="left">
+    Ik kom <em>ongeacht</em> of ik me slecht voel
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    preposition(van,[],pp)
+    </td>
+    <td align="left">
+    Een boek <em>van</em> voor de oorlog
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    preposition(van,[],loc_adv)
+    </td>
+    <td align="left">
+    Ik kom <em>van</em> boven
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    preposition(sinds,[],tmp_adv)
+    </td>
+    <td align="left">
+    Hij woont hier <em>sinds</em> gisteren
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    preposition(tegenin,[],extracted_np)
+    </td>
+    <td align="left">
+    Hij gaat er niet <em>tegenin</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    preposition(te,[],nodet)
+    </td>
+    <td align="left">
+    Hij woont <em>te</em> Assen
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    preposition(als,[],pred)
+    </td>
+    <td align="left">
+    Dat beschouw ik <em>als</em> ongepast
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    preposition(voor,[],voor_pred)
+    </td>
+    <td align="left">
+    Ik houd het <em>voor</em> onmogelijk dat je komt
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    preposition(met,[],absolute)
+    </td>
+    <td align="left">
+    Met Piet achter het stuur zijn we verloren
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<h3>Adverbs</h3>
+<div class="tableblock">
+<table rules="all"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<caption class="title">Table: Types of adverbs</caption>
+<col width="548" />
+<col width="502" />
+<thead>
+  <tr>
+    <th align="left">
+    Tag
+    </th>
+    <th align="left">
+    Example
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    adverb(reeds)
+    </td>
+    <td align="left">
+    Op woensdag wist zij dat <em>reeds</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    modal_adverb(reeds)
+    </td>
+    <td align="left">
+    <em>Reeds</em> op woensdag wist de minister dat
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    postnp_adverb(reeds)
+    </td>
+    <td align="left">
+    Deze weeks <em>reeds</em> wist de minister dat
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    postadv_adverb(reeds)
+    </td>
+    <td align="left">
+    Gisteren <em>reeds</em> wist de minister dat
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    post_wh_adverb([dan,ook])
+    </td>
+    <td align="left">
+    Zij kunnen waar <em>dan ook</em> over de wetenschap praten
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    wh_adverb(hoezo)
+    </td>
+    <td align="left">
+    <em>Hoezo</em> wist de minister dat al ?
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    waar_adverb(waarover, over)
+    </td>
+    <td align="left">
+    <em>Waarover</em> praten jullie ? (<em>Waarover</em> becomes a pc)
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    er_adverb(daarmee, met)
+    </td>
+    <td align="left">
+    Hou daarmee op ! (<em>Daarmee</em> -&gt; pc)
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    sentence_adverb(bovendien)
+    </td>
+    <td align="left">
+    <em>Bovendien</em> is de rente weer op een acceptabel niveau
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    loc_adverb(onderaan)
+    </td>
+    <td align="left">
+    Groningen bungelt <em>onderaan</em> (<em>onderaan</em> -&gt; ld)
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    dir_adverb(bergop)
+    </td>
+    <td align="left">
+    De trend van de laatste jaren is duidelijk <em>bergop</em> (<em>bergop</em> -&gt; ld)
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    tmp_adverb(gisteren)
+    </td>
+    <td align="left">
+    <em>Gisteren</em> wist de minister dat al
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    predm_adverb([en,masse])
+    </td>
+    <td align="left">
+    Ze gingen <em>en masse</em> Berlusconi stemmen
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<p>The difference between a sentence_adverb and an ordinary adverb is,
+that the distribution of sentence_adverbs is more limited.</p>
+<h3>Complementizers</h3>
+<div class="tableblock">
+<table rules="all"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<caption class="title">Table: Types of complementizers</caption>
+<col width="548" />
+<col width="502" />
+<thead>
+  <tr>
+    <th align="left">
+    Tag
+    </th>
+    <th align="left">
+    Example
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    complementizer       (will become comp)
+    </td>
+    <td align="left">
+    <em>Omdat</em> de fresco's mooi waren viel het bezoek niet tegen
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    complementizer(sat)  (will become comp)
+    </td>
+    <td align="left">
+    <em>Behalve</em> dat de fresco's mooi waren , was er niet veel te zien
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    
+    </td>
+    <td align="left">
+    <em>Behalve</em> de mooie fresco's was er niet veel te zien
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    complementizer(root) (will become dlink)
+    </td>
+    <td align="left">
+    <em>Maar</em> het bezoek viel tegen
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    
+    </td>
+    <td align="left">
+    <em>Maar</em> omdat het bezoek tegenviel &#8230;
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<h3>Conjunctions</h3>
+<div class="tableblock">
+<table rules="all"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<caption class="title">Table: Types of conjunctions</caption>
+<col width="548" />
+<col width="502" />
+<thead>
+  <tr>
+    <th align="left">
+    Tag
+    </th>
+    <th align="left">
+    Example
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    conj(en)
+    </td>
+    <td align="left">
+    Ik zag hem <em>en</em> groette hem
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    conj(alias)
+    </td>
+    <td align="left">
+    Ik ontmoette Johan V. <em>alias</em> de Hakkelaar
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    left_conj(maar_ook), right_conj(maar_ook)
+    </td>
+    <td align="left">
+    <em>Niet alleen</em> de motoren <em>maar ook</em> de auto's gingen op de bon
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<h3>UNKNOWN words</h3>
+<p>UNKNOWN words are wordt that cannot be placed in any context, and will be
+entirely disregarded in the parsing process. This typically occurs
+only for parts of multi-word-units.</p>
+<h3>Proper names</h3>
+<p>Alpino contains long lists of names, as well as a number of heuristics
+to recognize names. The tag <tt>proper_name</tt> is used for these cases. The
+sub-features include agreemnt (often left unspecified), and a further
+named entity class such as PER (person names), LOC (geographical
+names) and ORG (organization names). For annotation purposes you can
+safely ignore this distinction.</p>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 15-Jan-2007 10:55:07 CEST
+</div>
+</div>
+</body>
+</html>

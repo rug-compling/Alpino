@@ -1,0 +1,18 @@
+We gaan proberen een wrapper voor saxon te maken zodat saxon bestanden
+serieel verwerkt.
+
+We beginnen met een quick 'n dirty aanpak waarbij we voor ieder
+bestand als het ware de main-functie van saxon aanroepen.
+
+saxon-wrap xquery.xq bestandsnaam1 bestandsnaam2
+
+gaan we conceptueel doorgeven als
+
+saxon xquery.xq -s bestandsnaam1
+saxon xquery.xq -s bestandsnaam2
+
+
+Het saxon-script van gosse (zonder de memory opties):
+
+java -cp /users1/gosse/src/saxon8-8/saxon8.jar net.sf.saxon.Query "$@"
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="du" end="17" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" word="Maar"/>
+      <node begin="1" cat="smain" end="17" id="3" rel="nucl">
+        <node begin="1" cat="cp" end="14" id="4" rel="vc">
+          <node begin="1" conjtype="onder" end="2" id="5" lemma="of" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="of" word="of"/>
+          <node begin="2" cat="ssub" end="14" id="6" rel="body">
+            <node begin="2" end="3" genus="onz" getal="ev" id="7" index="1" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
+            <node begin="5" end="6" id="8" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" word="zal" wvorm="pv"/>
+            <node begin="2" cat="inf" end="14" id="9" rel="vc">
+              <node begin="2" end="3" id="10" index="1" rel="sup"/>
+              <node begin="3" cat="ap" end="5" id="11" rel="mod">
+                <node begin="3" end="4" id="12" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
+                <node begin="4" buiging="zonder" end="5" graad="basis" id="13" lemma="gemakkelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="gemakkelijk" word="gemakkelijk"/>
+              </node>
+              <node begin="6" buiging="zonder" end="7" id="14" lemma="lukken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="luk" word="lukken" wvorm="inf"/>
+              <node begin="7" cat="oti" end="14" id="15" rel="su">
+                <node begin="7" end="8" id="16" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
+                <node begin="8" cat="ti" end="14" id="17" rel="body">
+                  <node begin="9" end="10" id="18" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+                  <node begin="8" cat="inf" end="14" id="19" rel="body">
+                    <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="20" lemma="aansluiting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="aansluiting" word="aansluiting"/>
+                    <node begin="10" buiging="zonder" end="11" id="21" lemma="vinden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vind" word="vinden" wvorm="inf"/>
+                    <node begin="11" cat="pp" end="14" id="22" rel="mod">
+                      <node begin="11" end="12" id="23" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                      <node begin="12" cat="np" end="14" id="24" rel="obj1">
+                        <node begin="12" buiging="met-e" end="13" graad="basis" id="25" lemma="buitenparlementair" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="buitenparlementair" word="buitenparlementaire"/>
+                        <node begin="13" end="14" getal="mv" graad="basis" id="26" lemma="groep" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="groep" word="groepen"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="14" end="15" id="27" lemma="weten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="weet" word="weet" wvorm="pv"/>
+        <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="28" lemma="Winters" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Winters" word="Winters"/>
+        <node begin="16" end="17" id="29" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      </node>
+    </node>
+    <node begin="17" end="18" id="30" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Maar of het zo gemakkelijk zal lukken om aansluiting te vinden met buitenparlementaire groepen weet Winters niet .</sentence>
+</alpino_ds>

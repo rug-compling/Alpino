@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="whq" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="waarom" pos="pp" postag="BW()" pt="bw" rel="whd" root="waarom" word="Waarom"/>
+      <node begin="0" cat="sv1" end="5" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="mod"/>
+        <node begin="1" end="2" id="5" lemma="raken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="raak" word="raakt" wvorm="pv"/>
+        <node begin="2" cat="np" end="4" id="6" rel="su">
+          <node begin="2" buiging="zonder" end="3" getal="ev" id="7" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="laptop" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="laptop" word="laptop"/>
+        </node>
+        <node begin="4" buiging="zonder" end="5" graad="basis" id="9" lemma="oververhit" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="oververhit" word="oververhit"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="10" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Waarom raakt mijn laptop oververhit ?</sentence>
+</alpino_ds>

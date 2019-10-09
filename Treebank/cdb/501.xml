@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="36" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="8" end="9" id="2" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="10" end="11" id="3" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="15" end="16" id="4" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
+    <node begin="17" end="18" id="5" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="18" end="19" id="6" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="35" id="7" rel="--">
+      <node begin="0" cat="np" end="17" id="8" index="1" rel="su">
+        <node begin="0" end="1" id="9" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="Twee"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="10" lemma="voetgangster" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="voetgangster" word="voetgangsters"/>
+        <node begin="3" cat="conj" end="17" id="11" rel="app">
+          <node begin="3" cat="np" end="10" id="12" rel="cnj">
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="13" lemma="mevrouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="mevrouw" word="mevrouw"/>
+            <node begin="4" cat="mwu" end="8" id="14" rel="app">
+              <node begin="4" end="5" id="15" lemma="P." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="P." spectype="deeleigen" word="P."/>
+              <node begin="5" end="6" id="16" lemma="van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+              <node begin="6" end="7" id="17" lemma="der" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="der" spectype="deeleigen" word="der"/>
+              <node begin="7" end="8" id="18" lemma="Velde" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Velde" spectype="deeleigen" word="Velde"/>
+            </node>
+            <node begin="9" end="10" id="19" lemma="81" pos="num" postag="SPEC(symb)" pt="spec" rel="mod" root="81" spectype="symb" word="81"/>
+          </node>
+          <node begin="11" conjtype="neven" end="12" id="20" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="12" cat="np" end="17" id="21" rel="cnj">
+            <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="mevrouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="mevrouw" word="mevrouw"/>
+            <node begin="13" cat="mwu" end="15" id="23" rel="app">
+              <node begin="13" end="14" id="24" lemma="E." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="E." spectype="deeleigen" word="E."/>
+              <node begin="14" end="15" id="25" lemma="Gooijer" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Gooijer" spectype="deeleigen" word="Gooijer"/>
+            </node>
+            <node begin="16" end="17" id="26" lemma="61" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="61" word="61"/>
+          </node>
+        </node>
+      </node>
+      <node begin="19" end="20" id="27" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" word="werden" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="35" id="28" rel="vc">
+        <node begin="0" end="17" id="29" index="1" rel="obj1"/>
+        <node begin="20" end="21" id="30" lemma="gistermiddag" pos="noun" postag="BW()" pt="bw" rel="mod" root="gistermiddag" word="gistermiddag"/>
+        <node begin="21" cat="pp" end="29" id="31" rel="mod">
+          <node begin="21" end="22" id="32" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="22" cat="np" end="29" id="33" rel="obj1">
+            <node begin="22" end="23" id="34" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="35" lemma="vluchtheuvel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="heuvel" word="vluchtheuvel"/>
+            <node begin="24" cat="pp" end="29" id="36" rel="mod">
+              <node begin="24" end="25" id="37" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+              <node begin="25" cat="np" end="29" id="38" rel="obj1">
+                <node begin="25" end="26" id="39" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="26" end="27" genus="genus" getal="ev" graad="basis" id="40" lemma="Hoofdweg" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Hoofdweg" word="Hoofdweg"/>
+                <node begin="27" cat="pp" end="29" id="41" rel="mod">
+                  <node begin="27" end="28" id="42" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                  <node begin="28" end="29" genus="onz" getal="ev" graad="basis" id="43" lemma="Amsterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Amsterdam" word="Amsterdam"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="29" buiging="zonder" end="30" id="44" lemma="aanrijden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="rijd" word="aangereden" wvorm="vd"/>
+        <node begin="30" cat="pp" end="35" id="45" rel="mod">
+          <node begin="30" end="31" id="46" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+          <node begin="31" cat="np" end="35" id="47" rel="obj1">
+            <node begin="31" end="32" id="48" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="32" cat="ap" end="34" id="49" rel="mod">
+              <node begin="32" end="33" id="50" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+              <node begin="33" buiging="met-e" end="34" graad="basis" id="51" lemma="onbekend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="onbekend" word="onbekende"/>
+            </node>
+            <node begin="34" end="35" genus="zijd" getal="ev" graad="basis" id="52" lemma="automobilist" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="automobilist" word="automobilist"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="35" end="36" id="53" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Twee voetgangsters , mevrouw P. van der Velde ( 81 ) en mevrouw E. Gooijer ( 61 ) , werden gistermiddag op een vluchtheuvel bij de Hoofdweg in Amsterdam aangereden door een nog onbekende automobilist .</sentence>
+</alpino_ds>

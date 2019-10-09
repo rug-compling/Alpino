@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="smain" end="17" id="1" rel="--">
+      <node begin="0" end="1" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="maken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="maak" word="maakte" wvorm="pv"/>
+      <node begin="2" cat="cp" end="5" id="4" rel="predm">
+        <node begin="2" end="3" id="5" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+        <node begin="3" cat="np" end="5" id="6" rel="body">
+          <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="protestants" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="protestants" word="protestants"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="predikant" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="predikant" word="predikant"/>
+        </node>
+      </node>
+      <node begin="5" cat="np" end="17" id="9" rel="obj1">
+        <node begin="5" end="6" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="6" buiging="zonder" end="7" graad="basis" id="11" lemma="ruim" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="ruim" word="ruim"/>
+        <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="12" lemma="gebaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebaar" word="gebaar"/>
+        <node begin="8" cat="pp" end="17" id="13" rel="mod">
+          <node begin="8" end="9" id="14" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+          <node begin="9" cat="np" end="17" id="15" rel="obj1">
+            <node begin="9" end="10" getal="ev" id="16" lemma="iets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" root="iets" status="vol" vwtype="onbep" word="iets"/>
+            <node begin="10" cat="rel" end="17" id="17" rel="mod">
+              <node begin="10" end="11" getal="ev" id="18" index="1" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
+              <node begin="10" cat="ssub" end="17" id="19" rel="body">
+                <node begin="10" end="11" id="20" index="1" rel="su"/>
+                <node begin="10" cat="ppart" end="16" id="21" rel="vc">
+                  <node begin="10" end="11" id="22" index="1" rel="su"/>
+                  <node begin="11" cat="pp" end="15" id="23" rel="mod">
+                    <node begin="11" end="12" id="24" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                    <node begin="12" cat="np" end="15" id="25" rel="obj1">
+                      <node begin="12" end="13" id="26" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                      <node begin="13" buiging="met-e" end="14" graad="basis" id="27" lemma="katholiek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="katholiek" word="katholieke"/>
+                      <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="28" lemma="kerk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kerk" word="kerk"/>
+                    </node>
+                  </node>
+                  <node begin="15" buiging="zonder" end="16" id="29" lemma="gebeuren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gebeur" word="gebeurd" wvorm="vd"/>
+                </node>
+                <node begin="16" end="17" id="30" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="31" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Hij maakte als protestants predikant een ruim gebaar over iets dat in een katholieke kerk gebeurd was .</sentence>
+</alpino_ds>

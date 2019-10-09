@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="du" end="13" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" word="Maar"/>
+      <node begin="1" cat="smain" end="13" id="3" rel="nucl">
+        <node begin="1" cat="np" end="4" id="4" index="1" rel="su">
+          <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="2" end="3" id="6" lemma="zes" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="zes" word="zes"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="regering" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="regering" word="regeringen"/>
+        </node>
+        <node begin="4" end="5" id="8" lemma="willen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="wil" word="willen" wvorm="pv"/>
+        <node begin="1" cat="inf" end="13" id="9" rel="vc">
+          <node begin="1" end="4" id="10" index="1" rel="su"/>
+          <node begin="5" end="6" id="11" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="7" buiging="zonder" end="8" id="12" lemma="springen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="spring" word="springen" wvorm="inf"/>
+          <node begin="6" cat="ap" end="13" id="13" rel="mod">
+            <node begin="6" buiging="zonder" end="7" graad="comp" id="14" lemma="verder" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="verder" word="verder"/>
+            <node begin="8" cat="cp" end="13" id="15" rel="obcomp">
+              <node begin="8" conjtype="onder" end="9" id="16" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+              <node begin="9" cat="ssub" end="13" id="17" rel="body">
+                <node begin="9" cat="np" end="11" id="18" rel="su">
+                  <node begin="9" buiging="zonder" end="10" getal="mv" id="19" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+                  <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="20" lemma="polsstok" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stok" word="polsstok"/>
+                </node>
+                <node begin="11" buiging="zonder" end="12" graad="basis" id="21" lemma="lang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="lang" word="lang"/>
+                <node begin="12" end="13" id="22" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Maar de zes regeringen willen niet verder springen dan hun polsstok lang is .</sentence>
+</alpino_ds>

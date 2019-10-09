@@ -1,0 +1,164 @@
+.TH maketuple 1 "Mar. 9th, 2001"
+.SH NAME
+maketuple - prepare data structures to represent a tuple
+.SH SYNOPSIS
+.B maketuple
+[
+.I param_or_option
+=
+.I value
+]...
+.I table_file 
+[
+.I dict_file
+]...
+.SH DESCRIPTION
+.B maketuple
+reads lines from the file
+.I table_file.
+The lines are organized in columns, which and separated with a
+separator. The separator can be defined as a parameter to the script.
+The first columns should contain words or strings, the last one should
+contain interger numbers.
+Unless dictionary names
+.I dict_file
+are specified with a plus sign prepended to them, strings from
+non-numeral columns are sorted, put onto a list, duplicates are
+removed, and an automaton is constructed from them using
+.I fsa_build,
+part of the fsa package available at http://www.pg.gda.pl/~jandac/fsa.html.
+The automaton contains numbering information. Each word in a column
+receives a unique number. Those numbers are then obtained using
+.I fsa_hash
+program from the fsa package. The final tuple is obtained by
+representing both word numbers, and the numbers from numerical
+columns, on as few bytes as possible. The tuple can be read by
+routines from fadd package. Finite-state automata that are
+dictionaries for columns must be kept, as they translate word numbers
+to words.
+
+If strings in different columns overlap, it may be more efficient to
+have one dictionary (finite-state auutomaton) for them. If all columns
+have words from the same vocabulary then put an equal sign instead of
+.I dict_file.
+The name for the column will be chosen automatically as tplwd0,
+resulting in the perfect hashing automaton being named tplwd0.fsa. If
+you want your own name (e.g. to avoid conflict with other tuples),
+give that name after the equal sign with no intervening space. If you
+specify a number of names for some initial columns, and then set the
+name of the next column as an equal sign, words that column and all
+subsequent columns will be merged with words from the previous column
+to provide a perfect hashing automaton for all of them. You can also
+specify that one automaton should be built for a number of columns by
+setting a name for the first of them, and then specifying that name
+preceded with an equal sign for the rest of them.
+
+This can also be done manually. Strings from
+those columns should be extracted, sorted, duplicates removed, and the
+resulting list should be fed into
+
+.B fsa_build \-N \-i 
+.I list 
+.B \-o 
+.I list.fsa
+
+where
+.I list
+is the name of the file containing sorted strings. The name
+.I list
+should then be specified prepended with a plus character for each
+column, for which it is a dictionary.
+
+A special case is when words_are_numbers option in set to "y". Then,
+it assumed that the input file already contains hash keys (numbers) of
+words instead of words themselves.
+.SH NAMED PARAMETERS
+.TP
+.B total
+specifies the total number of columns in the tuple. This must be specified.
+.TP
+.B words
+specifies the number of non-numerical columns. This must be
+specified. The number of words cannot exceed the total number of
+columns in the tuple.
+.SH NAMED OPTIONS
+.TP
+.B ver
+specifies a version of the tuple format. The only sensible values here
+are 3 and 4, otherwise 
+.I maketuple
+will produce version 0. Version 0 is a flat table (fast
+construction), while versions 3 and 4 are a tree. The difference
+between versions 3 and 4 is that in version 4, relative pointers are
+used -- the index of the next element is the value of the appropriate
+pointer plus the index of the current value.
+.TP
+.B ms
+mantissa size. If not specified, it will be calculated separately for
+each column on the basis of textual representation of real numbers in
+input data.
+.TP
+.B rprec
+(relative) precision of real numbers. Defaults to 0.5. It has effect
+only when 
+.I ms
+option is not specified. It is used in calculating mantissa sizes. The
+values stored as real numbers should not differ from their printed
+representation (as seen in input) by rprec times a unit of the last
+digit of a printed representation. For exmaple, if rprec is 0.5, and
+the number on the input is 3.1415, then the number stored in the tuple
+must have a valuev such that 3.14145 < v < 3.14155.
+.TP
+.B sep 
+specifies a separator in form of a perl regular expression (beware of
+shell expansion). The default separator is a sequence of white space
+(space or tabulation characters).
+.TP
+.B out
+specifies the name of the resulting tuple. The default name is 
+.I table_name
+with ".tpl" suffix.
+.TP
+.B rest
+is the name of a temporary file for storing numberical columns.
+.TP
+.B del1
+makes the hash keys not be dropped from the first column in a tree
+(version 3 or 4) if it is set to 0.
+.TP
+.B words_are_numbers
+expects that all all words are already hash keys of actual words if
+set to "y".
+.SH PARAMETERS
+.TP 
+.B table_file
+is the name of the input file.
+.TP
+.B dict_file
+is the name of file containg a list of strings taken from the
+corresponding column. The first
+.I dict_file
+corresponds to the first column, the second file name to the second
+column, and so on. More importantly, 
+.I dict_name
+is used to construct the name of the automaton (dictionary) for that
+column. The name consists of
+.I dict_name
+with the suffix ".fsa". If the name has a prepended plus character,
+then the automaton is not constructed. The script assumes that the
+corresponding file with ".fsa" suffix already exists and holds a
+dictionary for that column.
+.SH SEE ALSO
+.I fsa_accent(1),
+.I fsa_build(1)
+.I fsa_guess(1),
+.I fsa_guess(5),
+.I fsa_hash(1),
+.I fsa_morph(1),
+.I fsa_morph(5),
+.I fsa_prefix(1),
+.I fsa_spell(1),
+.I fsa_ubuild(1),
+.I fsa_visual(1).
+.SH BUGS
+Send bug reports to the author: Jan Daciuk, jandac@eti.pg.gda.pl.

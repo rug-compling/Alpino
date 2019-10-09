@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="55" id="0" rel="top">
+    <node begin="19" end="20" frame="punct(komma)" id="1" lcat="punct" pos="punct" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="54" id="2" rel="--">
+      <node begin="0" cat="np" end="2" id="3" index="1" rel="su">
+        <node begin="0" end="1" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="4" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="Het"/>
+        <node begin="1" end="2" frame="noun(both,both,both)" gen="both" id="5" lcat="np" num="both" pos="noun" rel="hd" root="annulatieberoep" sense="annulatieberoep" word="annulatieberoep"/>
+      </node>
+      <node begin="2" end="3" frame="verb('hebben/zijn',sg,modifier(aux(inf)))" id="6" infl="sg" lcat="smain" pos="verb" rel="hd" root="moet" sc="modifier(aux(inf))" sense="moet" tense="present" word="moet"/>
+      <node begin="0" cat="inf" end="54" id="7" rel="vc">
+        <node begin="0" end="2" id="8" index="1" rel="su"/>
+        <node begin="3" end="4" frame="verb(unacc,inf,passive)" id="9" infl="inf" lcat="inf" pos="verb" rel="hd" root="word" sc="passive" sense="word" word="worden"/>
+        <node begin="0" cat="ppart" end="54" id="10" rel="vc">
+          <node begin="0" end="2" id="11" index="1" rel="obj1"/>
+          <node begin="4" end="5" frame="verb(hebben,psp,ninv(np_ld_pp,part_np_ld_pp(in)))" id="12" infl="psp" lcat="ppart" pos="verb" rel="hd" root="dien_in" sc="part_np_ld_pp(in)" sense="dien_in" word="ingediend"/>
+          <node begin="5" cat="pp" end="8" id="13" rel="mod">
+            <node begin="5" end="6" frame="preposition(binnen,[])" id="14" lcat="pp" pos="prep" rel="hd" root="binnen" sense="binnen" word="binnen"/>
+            <node begin="6" cat="np" end="8" id="15" rel="obj1">
+              <node begin="6" end="7" frame="determiner(een)" id="16" infl="een" lcat="detp" pos="det" rel="det" root="een" sense="een" word="een"/>
+              <node begin="7" end="8" frame="tmp_noun(de,count,sg)" gen="de" id="17" lcat="np" num="sg" pos="noun" rel="hd" root="termijn" sense="termijn" special="tmp" word="termijn"/>
+            </node>
+          </node>
+          <node begin="8" cat="pp" end="19" id="18" rel="mod">
+            <node begin="8" end="9" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="19" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+            <node begin="9" cat="np" end="19" id="20" rel="obj1">
+              <node begin="9" end="10" frame="number(hoofd(pl_num))" id="21" infl="pl_num" lcat="np" pos="num" rel="hd" root="zestig" sense="zestig" special="hoofd" word="zestig"/>
+              <node begin="10" cat="pp" end="19" id="22" rel="mod">
+                <node begin="10" cat="np" end="14" id="23" rel="mod">
+                  <node begin="10" end="11" frame="tmp_noun(de,count,pl)" gen="de" id="24" lcat="np" num="pl" pos="noun" rel="hd" root="dag" sense="dag" special="tmp" word="dagen"/>
+                  <node begin="11" cat="pp" end="14" id="25" rel="mod">
+                    <node begin="11" end="12" frame="preposition(vanaf,[])" id="26" lcat="pp" pos="prep" rel="hd" root="vanaf" sense="vanaf" word="vanaf"/>
+                    <node begin="12" cat="np" end="14" id="27" rel="obj1">
+                      <node begin="12" end="13" frame="determiner(de)" id="28" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                      <node begin="13" end="14" frame="tmp_noun(de,count,sg)" gen="de" id="29" lcat="np" num="sg" pos="noun" rel="hd" root="datum" sense="datum" special="tmp" word="datum"/>
+                    </node>
+                  </node>
+                </node>
+                <node begin="14" end="15" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="30" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                <node begin="15" cat="np" end="19" id="31" rel="obj1">
+                  <node begin="15" end="16" frame="noun(both,both,both)" gen="both" id="32" lcat="np" num="both" pos="noun" rel="hd" root="betekening" sense="betekening" word="betekening"/>
+                  <node begin="16" cat="pp" end="19" id="33" rel="mod">
+                    <node begin="16" end="17" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="34" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                    <node begin="17" cat="np" end="19" id="35" rel="obj1">
+                      <node begin="17" end="18" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="36" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                      <node begin="18" end="19" frame="noun(het,count,sg)" gen="het" id="37" lcat="np" num="sg" pos="noun" rel="hd" root="besluit" sense="besluit" word="besluit"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="20" cat="pp" end="40" id="38" rel="mod">
+            <node begin="20" end="21" frame="preposition(volgens,[])" id="39" lcat="pp" pos="prep" rel="hd" root="volgens" sense="volgens" word="volgens"/>
+            <node begin="21" cat="np" end="40" id="40" rel="obj1">
+              <node begin="21" end="22" frame="determiner(de)" id="41" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="22" end="23" frame="noun(het,count,pl)" gen="het" id="42" lcat="np" num="pl" pos="noun" rel="hd" root="voorschrift" sense="voorschrift" word="voorschriften"/>
+              <node begin="23" cat="rel" end="40" id="43" rel="mod">
+                <node begin="23" case="no_obl" end="24" frame="rel_pronoun(de,no_obl)" gen="de" id="44" index="2" lcat="np" pos="pron" rel="rhd" root="die" sense="die" wh="rel" word="die"/>
+                <node begin="23" cat="ssub" end="40" id="45" rel="body">
+                  <node begin="23" end="24" id="46" index="2" rel="su"/>
+                  <node begin="24" end="25" frame="verb(unacc,pl,passive)" id="47" infl="pl" lcat="ssub" pos="verb" rel="hd" root="ben" sc="passive" sense="ben" tense="present" word="zijn"/>
+                  <node begin="23" cat="ppart" end="40" id="48" rel="vc">
+                    <node begin="23" end="24" id="49" index="2" rel="obj1"/>
+                    <node begin="25" end="26" frame="verb(hebben,psp,ninv(transitive,part_transitive(vast)))" id="50" infl="psp" lcat="ppart" pos="verb" rel="hd" root="stel_vast" sc="part_transitive(vast)" sense="stel_vast" word="vastgesteld"/>
+                    <node begin="26" cat="pp" end="40" id="51" rel="mod">
+                      <node begin="26" end="27" frame="preposition(in,[])" id="52" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+                      <node begin="27" cat="np" end="40" id="53" rel="obj1">
+                        <node begin="27" end="28" frame="noun(het,count,pl)" gen="het" id="54" lcat="np" num="pl" pos="noun" rel="hd" root="artikel" sense="artikel" word="artikels"/>
+                        <node begin="28" cat="conj" end="33" id="55" rel="app">
+                          <node begin="28" end="29" frame="number(hoofd(sg_num))" id="56" infl="sg_num" lcat="detp" pos="num" rel="cnj" root="1" sense="1" special="hoofd" word="1"/>
+                          <node begin="29" cat="mwu" end="32" id="57" mwu_root="tot_en_met" mwu_sense="tot_en_met" rel="crd">
+                            <node begin="29" end="30" frame="conj('tot en met')" id="58" lcat="vg" pos="vg" rel="mwp" root="tot" sense="tot" word="tot"/>
+                            <node begin="30" end="31" frame="conj('tot en met')" id="59" lcat="vg" pos="vg" rel="mwp" root="en" sense="en" word="en"/>
+                            <node begin="31" end="32" frame="conj('tot en met')" id="60" lcat="vg" pos="vg" rel="mwp" root="met" sense="met" word="met"/>
+                          </node>
+                          <node begin="32" end="33" frame="number(hoofd(pl_num))" id="61" infl="pl_num" lcat="detp" pos="num" rel="cnj" root="4" sense="4" special="hoofd" word="4"/>
+                        </node>
+                        <node begin="33" cat="pp" end="40" id="62" rel="mod">
+                          <node begin="33" end="34" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="63" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                          <node begin="34" cat="np" end="40" id="64" rel="obj1">
+                            <node begin="34" end="35" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="65" infl="het" lcat="detp" pos="det" rel="det" root="het" sense="het" wh="nwh" word="het"/>
+                            <node begin="35" end="36" frame="noun(het,count,sg)" gen="het" id="66" lcat="np" num="sg" pos="noun" rel="hd" root="regent_besluit" sense="regent_besluit" word="regentsbesluit"/>
+                            <node begin="36" cat="pp" end="40" id="67" rel="mod">
+                              <node begin="36" end="37" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="68" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                              <node begin="37" cat="mwu" end="40" id="69" mwu_root="23_mei_1948" mwu_sense="23_mei_1948" rel="obj1">
+                                <node begin="37" end="38" frame="tmp_np" id="70" lcat="np" pos="noun" rel="mwp" root="23" sense="23" special="tmp" word="23"/>
+                                <node begin="38" end="39" frame="tmp_np" id="71" lcat="np" pos="noun" rel="mwp" root="mei" sense="mei" special="tmp" word="mei"/>
+                                <node begin="39" end="40" frame="tmp_np" id="72" lcat="np" pos="noun" rel="mwp" root="1948" sense="1948" special="tmp" word="1948"/>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="40" cat="pp" end="45" id="73" rel="mod">
+            <node begin="40" end="41" frame="preposition(tot,[toe,[aan,toe]])" id="74" lcat="pp" pos="prep" rel="hd" root="tot" sense="tot" word="tot"/>
+            <node begin="41" cat="np" end="45" id="75" rel="obj1">
+              <node begin="41" end="42" frame="noun(de,count,sg)" gen="de" id="76" lcat="np" num="sg" pos="noun" rel="hd" root="regeling" sense="regeling" word="regeling"/>
+              <node begin="42" cat="pp" end="45" id="77" rel="mod">
+                <node begin="42" end="43" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="78" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                <node begin="43" cat="np" end="45" id="79" rel="obj1">
+                  <node begin="43" end="44" frame="determiner(de)" id="80" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="44" end="45" frame="noun(de,mass,sg)" gen="de" id="81" lcat="np" num="sg" pos="noun" rel="hd" root="rechtspleging" sense="rechtspleging" word="rechtspleging"/>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="45" cat="pp" end="54" id="82" rel="ld">
+            <node begin="45" end="46" frame="preposition(in,[])" id="83" lcat="pp" pos="prep" rel="hd" root="in" sense="in" word="in"/>
+            <node begin="46" cat="np" end="54" id="84" rel="obj1">
+              <node begin="46" end="47" frame="determiner(de)" id="85" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+              <node begin="47" end="48" frame="noun(de,count,sg,app_measure)" gen="de" id="86" lcat="np" num="sg" pos="noun" rel="hd" root="afdeling" sc="app_measure" sense="afdeling" word="afdeling"/>
+              <node begin="48" end="49" frame="noun(de,count,sg)" gen="de" id="87" lcat="np" num="sg" pos="noun" rel="app" root="administratie" sense="administratie" word="administratie"/>
+              <node begin="49" cat="pp" end="54" id="88" rel="mod">
+                <node begin="49" end="50" frame="preposition(van,[af,uit,vandaan,[af,aan]])" id="89" lcat="pp" pos="prep" rel="hd" root="van" sense="van" word="van"/>
+                <node begin="50" cat="np" end="54" id="90" rel="obj1">
+                  <node begin="50" end="51" frame="determiner(de)" id="91" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="51" cat="mwu" end="54" id="92" mwu_root="Raad_van_State" mwu_sense="Raad_van_State" rel="hd">
+                    <node begin="51" end="52" frame="proper_name(both,'ORG')" id="93" lcat="np" neclass="ORG" num="both" pos="name" rel="mwp" root="Raad" sense="Raad" word="Raad"/>
+                    <node begin="52" end="53" frame="proper_name(both,'ORG')" id="94" lcat="np" neclass="ORG" num="both" pos="name" rel="mwp" root="van" sense="van" word="van"/>
+                    <node begin="53" end="54" frame="proper_name(both,'ORG')" id="95" lcat="np" neclass="ORG" num="both" pos="name" rel="mwp" root="State" sense="State" word="State"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="54" end="55" frame="punct(punt)" id="96" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Het annulatieberoep moet worden ingediend binnen een termijn van zestig dagen vanaf de datum van betekening van het besluit , volgens de voorschriften die zijn vastgesteld in artikels 1 tot en met 4 van het regentsbesluit van 23 mei 1948 tot regeling van de rechtspleging in de afdeling administratie van de Raad van State .</sentence>
+  <comments>
+    <comment>Q#87|Het annulatieberoep moet worden ingediend binnen een termijn van zestig dagen vanaf de datum van betekening van het besluit , volgens de voorschriften die zijn vastgesteld in artikels 1 tot en met 4 van het regentsbesluit van 23 mei 1948 tot regeling van de rechtspleging in de afdeling administratie van de Raad van State .|1|1|0.6406725916583524</comment>
+  </comments>
+</alpino_ds>

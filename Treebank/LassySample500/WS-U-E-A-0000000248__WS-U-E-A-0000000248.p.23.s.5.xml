@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="ooit" pos="adv" postag="BW()" pt="bw" rel="mod" root="ooit" word="Ooit"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="2" cat="np" end="5" id="4" rel="su">
+        <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" buiging="met-e" end="4" graad="basis" id="6" lemma="gemeenschappelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gemeenschappelijk" word="gemeenschappelijke"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="7" lemma="noemer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="noemer" word="noemer"/>
+      </node>
+      <node begin="5" cat="mwu" end="8" id="8" rel="predc">
+        <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="klip" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="klip" word="klip"/>
+        <node begin="6" conjtype="neven" end="7" id="10" lemma="en" pos="adj" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
+        <node begin="7" buiging="zonder" end="8" graad="basis" id="11" lemma="klaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="klaar" word="klaar"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ooit was de gemeenschappelijke noemer klip en klaar .</sentence>
+</alpino_ds>

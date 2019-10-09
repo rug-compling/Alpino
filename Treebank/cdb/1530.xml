@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+      <node begin="1" end="2" id="3" lemma="gaan" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ga" word="gingen" wvorm="pv"/>
+      <node begin="2" cat="pp" end="6" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="3" cat="conj" end="6" id="6" rel="obj1">
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="zaterdag" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" root="zaterdag" word="zaterdag"/>
+          <node begin="4" conjtype="neven" end="5" id="8" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="zondag" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" root="zondag" word="zondag"/>
+        </node>
+      </node>
+      <node begin="6" cat="np" end="9" id="10" rel="su">
+        <node begin="6" cat="detp" end="8" id="11" rel="det">
+          <node begin="6" end="7" id="12" lemma="rond" pos="adj" postag="VZ(init)" pt="vz" rel="mod" root="rond" vztype="init" word="rond"/>
+          <node begin="7" end="8" id="13" lemma="3000" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="3000" word="3000"/>
+        </node>
+        <node begin="8" end="9" getal="mv" graad="basis" id="14" lemma="auto" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="auto" word="auto&apos;s"/>
+      </node>
+      <node begin="9" cat="pp" end="12" id="15" rel="ld">
+        <node begin="9" end="10" id="16" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+        <node begin="10" cat="np" end="12" id="17" rel="obj1">
+          <node begin="10" buiging="zonder" end="11" id="18" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="dat"/>
+          <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="19" lemma="bospad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bospad" word="bospad"/>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>er gingen op zaterdag en zondag rond 3000 auto&apos;s over dat bospad .</sentence>
+</alpino_ds>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="35" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="34" id="2" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="3" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" word="Maar"/>
+      <node begin="1" cat="smain" end="34" id="4" rel="nucl">
+        <node begin="1" end="2" id="5" lemma="intussen" pos="adv" postag="BW()" pt="bw" rel="mod" root="intussen" word="intussen"/>
+        <node begin="2" end="3" id="6" lemma="breiden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="breid" word="breidt" wvorm="pv"/>
+        <node begin="3" cat="np" end="7" id="7" rel="su">
+          <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="4" cat="ppart" end="6" id="9" rel="mod">
+            <node begin="4" end="5" id="10" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
+            <node begin="5" buiging="zonder" end="6" id="11" lemma="beginnen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="begonnen" word="begonnen" wvorm="vd"/>
+          </node>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="metrostaking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="staking" word="metrostaking"/>
+        </node>
+        <node begin="7" end="8" getal="getal" id="13" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="zich" status="red" vwtype="refl" word="zich"/>
+        <node begin="8" end="9" id="14" lemma="verder" pos="adj" postag="BW()" pt="bw" rel="mod" root="verder" word="verder"/>
+        <node begin="9" end="10" id="15" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
+        <node begin="11" cat="pp" end="34" id="16" rel="mod">
+          <node begin="11" end="12" id="17" lemma="ondanks" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="ondanks" vztype="init" word="ondanks"/>
+          <node begin="12" cat="np" end="34" id="18" rel="obj1">
+            <node begin="12" end="13" id="19" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="20" lemma="week" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="week" word="week"/>
+            <node begin="14" cat="np" end="16" id="21" rel="mod">
+              <node begin="14" buiging="zonder" end="15" graad="basis" id="22" lemma="extra" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="extra" word="extra"/>
+              <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="23" lemma="vakantie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vakantie" word="vakantie"/>
+            </node>
+            <node begin="16" cat="rel" end="34" id="24" rel="mod">
+              <node begin="16" end="17" id="25" index="1" lemma="waarmee" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarmee" word="waarmee"/>
+              <node begin="16" cat="ssub" end="34" id="26" rel="body">
+                <node begin="16" end="17" id="27" index="1" rel="pc"/>
+                <node begin="17" cat="np" end="22" id="28" rel="su">
+                  <node begin="17" end="18" id="29" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="30" lemma="directie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="directie" word="directie"/>
+                  <node begin="19" cat="pp" end="22" id="31" rel="mod">
+                    <node begin="19" end="20" id="32" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                    <node begin="20" cat="np" end="22" id="33" rel="obj1">
+                      <node begin="20" end="21" id="34" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                      <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="35" lemma="ondergrondse" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ondergrondse" word="ondergrondse"/>
+                    </node>
+                  </node>
+                </node>
+                <node begin="22" end="23" id="36" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
+                <node begin="23" end="24" id="37" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+                <node begin="24" cat="pp" end="30" id="38" rel="mod">
+                  <node begin="24" end="25" id="39" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+                  <node begin="25" cat="np" end="30" id="40" rel="obj1">
+                    <node begin="25" end="26" id="41" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                    <node begin="26" end="27" genus="onz" getal="ev" graad="basis" id="42" lemma="begin" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="begin" word="begin"/>
+                    <node begin="27" cat="pp" end="30" id="43" rel="mod">
+                      <node begin="27" end="28" id="44" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                      <node begin="28" cat="np" end="30" id="45" rel="obj1">
+                        <node begin="28" end="29" id="46" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                        <node begin="29" end="30" getal="mv" graad="basis" id="47" lemma="onderhandeling" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="onderhandeling" word="onderhandelingen"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node begin="30" cat="mwu" end="33" id="48" rel="svp">
+                  <node begin="30" end="31" id="49" lemma="over" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="over" vztype="init" word="over"/>
+                  <node begin="31" end="32" id="50" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="fixed" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+                  <node begin="32" end="33" genus="zijd" getal="ev" graad="basis" id="51" lemma="brug" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="brug" word="brug"/>
+                </node>
+                <node begin="33" end="34" id="52" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="34" end="35" id="53" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Maar intussen breidt de gisteren begonnen metrostaking zich verder uit , ondanks een week extra vakantie waarmee de directie van de ondergrondse gisteren al bij het begin van de onderhandelingen over de brug kwam .</sentence>
+</alpino_ds>

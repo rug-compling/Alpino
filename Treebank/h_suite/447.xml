@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="0" cat="np" end="7" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
+      <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="vel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="vel" word="vel"/>
+      <node begin="2" cat="pp" end="7" id="5" rel="mod">
+        <node begin="2" end="3" id="6" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+        <node begin="3" end="4" id="7" lemma="daarop" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarop" word="daarop"/>
+        <node begin="5" cat="np" end="7" id="8" rel="obj1">
+          <node begin="5" buiging="met-e" end="6" graad="basis" id="9" lemma="prachtig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="prachtig" word="prachtige"/>
+          <node begin="6" end="7" getal="mv" graad="basis" id="10" lemma="tekening" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="tekening" word="tekeningen"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Een vel met daarop : prachtige tekeningen .</sentence>
+</alpino_ds>

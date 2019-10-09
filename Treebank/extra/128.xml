@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="2" end="3" id="2" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="3" cat="np" end="5" id="3" index="1" rel="su">
+        <node begin="3" end="4" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="5" lemma="ondernemer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="ondernemer" word="ondernemers"/>
+      </node>
+      <node begin="0" cat="ppart" end="13" id="6" rel="vc">
+        <node begin="0" cat="pp" end="2" id="7" rel="mod">
+          <node begin="0" end="1" id="8" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="Volgens"/>
+          <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="9" lemma="Holthuis" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Holthuis" word="Holthuis"/>
+        </node>
+        <node begin="3" end="5" id="10" index="1" rel="obj1"/>
+        <node begin="5" buiging="zonder" end="6" graad="basis" id="11" lemma="bang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="bang" word="bang"/>
+        <node begin="6" buiging="zonder" end="7" id="12" lemma="maken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="maak" word="gemaakt" wvorm="vd"/>
+        <node begin="7" cat="pp" end="13" id="13" rel="mod">
+          <node begin="7" end="8" id="14" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+          <node begin="8" cat="conj" end="13" id="15" rel="obj1">
+            <node begin="8" cat="np" end="10" id="16" rel="cnj">
+              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="17" lemma="burgemeester" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="burgemeester" word="burgemeester"/>
+              <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="Bleeker" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Bleeker" word="Bleeker"/>
+            </node>
+            <node begin="10" conjtype="neven" end="11" id="19" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="11" cat="np" end="13" id="20" rel="cnj">
+              <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="21" lemma="wethouder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wethouder" word="wethouder"/>
+              <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="22" lemma="Zeeman" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Zeeman" word="Zeeman"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Volgens Holthuis zijn de ondernemers bang gemaakt door burgemeester Bleeker en wethouder Zeeman .</sentence>
+</alpino_ds>

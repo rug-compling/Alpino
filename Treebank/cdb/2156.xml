@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="18" id="2" rel="--">
+      <node begin="0" cat="du" end="11" id="3" rel="cnj">
+        <node begin="0" cat="conj" end="7" id="4" rel="dp">
+          <node begin="0" cat="np" end="2" id="5" rel="cnj">
+            <node begin="0" end="1" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="zuidoosthoek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hoek" word="zuidoosthoek"/>
+          </node>
+          <node begin="2" end="3" id="8" lemma="annex" pos="vg" postag="VZ(init)" pt="vz" rel="crd" root="annex" vztype="init" word="annex"/>
+          <node begin="3" cat="np" end="7" id="9" rel="cnj">
+            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="10" lemma="deel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="deel" word="deel"/>
+            <node begin="4" cat="pp" end="7" id="11" rel="mod">
+              <node begin="4" end="5" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="5" cat="np" end="7" id="13" rel="obj1">
+                <node begin="5" end="6" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="15" lemma="merengebied" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebied" word="Merengebied"/>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="7" cat="pp" end="11" id="16" rel="dp">
+          <node begin="7" end="8" id="17" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="8" cat="conj" end="11" id="18" rel="obj1">
+            <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="19" lemma="wild" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="wild" word="wild"/>
+            <node begin="9" conjtype="neven" end="10" id="20" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="21" lemma="gevogelte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="gevogelte" word="gevogelte"/>
+          </node>
+        </node>
+      </node>
+      <node begin="12" cat="du" end="18" id="22" rel="cnj">
+        <node begin="12" cat="np" end="14" id="23" rel="dp">
+          <node begin="12" end="13" id="24" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="25" lemma="weidegebied" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebied" word="weidegebied"/>
+        </node>
+        <node begin="14" cat="pp" end="18" id="26" rel="dp">
+          <node begin="14" end="15" id="27" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="15" cat="np" end="18" id="28" rel="obj1">
+            <node begin="15" end="16" id="29" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="16" buiging="met-e" end="17" graad="basis" id="30" lemma="speciaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="speciaal" word="speciale"/>
+            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="31" lemma="vleesschotel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schotel" word="vleesschotel"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="32" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" word=";"/>
+  </node>
+  <sentence>de zuidoosthoek annex deel van het Merengebied met wild en gevogelte , het weidegebied met een speciale vleesschotel ;</sentence>
+</alpino_ds>

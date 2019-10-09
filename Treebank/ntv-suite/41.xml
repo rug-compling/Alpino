@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="np" end="6" id="1" rel="--">
+      <node begin="0" end="1" genus="genus" getal="ev" graad="basis" id="2" lemma="Paay" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Paay" word="Paay"/>
+      <node begin="1" cat="pp" end="6" id="3" rel="mod">
+        <node begin="1" end="2" id="4" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="2" cat="mwu" end="6" id="5" rel="obj1">
+          <node begin="2" end="3" id="6" lemma="Guinness" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Guinness" spectype="vreemd" word="Guinness"/>
+          <node begin="3" end="4" id="7" lemma="Book" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Book" spectype="vreemd" word="Book"/>
+          <node begin="4" end="5" id="8" lemma="of" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="of" spectype="vreemd" word="of"/>
+          <node begin="5" end="6" id="9" lemma="Records" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Records" spectype="vreemd" word="Records"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Paay in Guinness Book of Records .</sentence>
+</alpino_ds>

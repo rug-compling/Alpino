@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="28" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="12" end="13" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="27" id="3" rel="--">
+      <node begin="0" cat="np" end="2" id="4" rel="su">
+        <node begin="0" end="1" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="6" lemma="Palestijn" ntype="eigen" pos="noun" postag="N(eigen,mv,basis)" pt="n" rel="hd" root="Palestijnen" word="Palestijnen"/>
+      </node>
+      <node begin="2" end="3" id="7" lemma="willen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="wil" word="willen" wvorm="pv"/>
+      <node begin="3" cat="cp" end="27" id="8" rel="vc">
+        <node begin="3" conjtype="onder" end="4" id="9" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="5" cat="ssub" end="27" id="10" rel="body">
+          <node begin="5" cat="ppart" end="12" id="11" rel="mod">
+            <node begin="5" buiging="zonder" end="6" id="12" lemma="afzien" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="afgezien" word="afgezien" wvorm="vd"/>
+            <node begin="6" cat="pp" end="12" id="13" rel="pc">
+              <node begin="6" end="7" id="14" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="7" cat="np" end="12" id="15" rel="obj1">
+                <node begin="7" buiging="zonder" end="8" getal="mv" id="16" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+                <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="17" lemma="akkoord" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="akkoord" word="akkoord"/>
+                <node begin="9" cat="pp" end="12" id="18" rel="mod">
+                  <node begin="9" end="10" id="19" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+                  <node begin="10" cat="np" end="12" id="20" rel="obj1">
+                    <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="21" lemma="koning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="koning" word="koning"/>
+                    <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="22" lemma="Hoessein" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Hoessein" word="Hoessein"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node begin="13" cat="np" end="16" id="23" rel="su">
+            <node begin="13" end="14" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="14" buiging="met-e" end="15" graad="basis" id="25" lemma="Arabisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Arabisch" word="Arabische"/>
+            <node begin="15" end="16" getal="mv" graad="basis" id="26" lemma="regering" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="regering" word="regeringen"/>
+          </node>
+          <node begin="16" cat="np" end="19" id="27" rel="obj1">
+            <node begin="16" buiging="zonder" end="17" getal="mv" id="28" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+            <node begin="17" buiging="met-e" end="18" graad="basis" id="29" lemma="juridisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="juridisch" word="juridische"/>
+            <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="30" lemma="bestaan" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bestaan" word="bestaan"/>
+          </node>
+          <node begin="19" end="20" id="31" lemma="erkennen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="erken" word="erkennen" wvorm="pv"/>
+          <node begin="20" cat="cp" end="27" id="32" rel="predc">
+            <node begin="20" end="21" id="33" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+            <node begin="21" cat="np" end="27" id="34" rel="body">
+              <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="35" lemma="strijdkracht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kracht" word="strijdkracht"/>
+              <node begin="22" cat="pp" end="27" id="36" rel="mod">
+                <node begin="22" end="23" id="37" lemma="namens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="namens" vztype="init" word="namens"/>
+                <node begin="23" cat="np" end="27" id="38" rel="obj1">
+                  <node begin="23" end="24" getal="getal" id="39" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="hd" root="die" status="vol" vwtype="aanw" word="die"/>
+                  <node begin="24" cat="pp" end="27" id="40" rel="mod">
+                    <node begin="24" end="25" id="41" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                    <node begin="25" cat="np" end="27" id="42" rel="obj1">
+                      <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="43" lemma="koning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="koning" word="koning"/>
+                      <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="44" lemma="Hoessein" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Hoessein" word="Hoessein"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="27" end="28" id="45" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De Palestijnen willen dat , afgezien van hun akkoord met koning Hoessein , de Arabische regeringen hun juridische bestaan erkennen als strijdkracht namens die van koning Hoessein .</sentence>
+</alpino_ds>

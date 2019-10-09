@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="smain" end="15" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node aform="base" begin="0" end="1" frame="adjective(e)" id="3" infl="e" lcat="ap" pos="adj" rel="mod" root="onderstaand" sense="onderstaand" vform="adj" word="Onderstaande"/>
+        <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" id="4" lcat="np" num="sg" pos="noun" rel="hd" root="tabel" sense="tabel" word="tabel"/>
+      </node>
+      <node begin="2" end="3" frame="verb(hebben,sg3,transitive)" id="5" infl="sg3" lcat="smain" pos="verb" rel="hd" root="geef" sc="transitive" sense="geef" tense="present" word="geeft"/>
+      <node begin="3" cat="conj" end="11" id="6" rel="obj1">
+        <node begin="3" cat="np" end="9" id="7" rel="cnj">
+          <node begin="3" end="4" frame="determiner(de)" id="8" index="1" infl="de" lcat="detp" pos="det" rel="det" root="de" sense="de" word="de"/>
+          <node aform="base" begin="4" end="5" frame="adjective(both(nonadv))" id="9" index="2" infl="both" lcat="ap" pos="adj" rel="mod" root="minimum" sense="minimum" vform="adj" word="minimum"/>
+          <node begin="5" cat="ti" end="8" id="10" index="3" rel="mod">
+            <node begin="6" end="7" frame="complementizer(te)" id="11" lcat="cp" pos="comp" rel="cmp" root="te" sc="te" sense="te" word="te"/>
+            <node begin="5" cat="inf" end="8" id="12" rel="body">
+              <node begin="5" end="6" frame="particle(in)" id="13" lcat="part" pos="part" rel="svp" root="in" sense="in" word="in"/>
+              <node begin="7" end="8" frame="verb(hebben,inf,part_transitive(in))" id="14" infl="inf" lcat="inf" pos="verb" rel="hd" root="zamel_in" sc="part_transitive(in)" sense="zamel_in" word="zamelen"/>
+            </node>
+          </node>
+          <node begin="8" end="9" frame="tmp_noun(de,count,pl)" gen="de" id="15" lcat="np" num="pl" pos="noun" rel="hd" root="fractie" sense="fractie" special="tmp" word="fracties"/>
+        </node>
+        <node begin="9" end="10" frame="conj(en)" id="16" lcat="vg" pos="vg" rel="crd" root="en" sense="en" word="en"/>
+        <node begin="3" cat="np" end="11" id="17" rel="cnj">
+          <node begin="3" end="4" id="18" index="1" rel="det"/>
+          <node begin="4" end="5" id="19" index="2" rel="mod"/>
+          <node begin="5" end="8" id="20" index="3" rel="mod"/>
+          <node begin="10" end="11" frame="noun(both,both,both)" gen="both" id="21" lcat="np" num="both" pos="noun" rel="hd" root="inzamelwijzen" sense="inzamelwijzen" word="inzamelwijzen"/>
+        </node>
+      </node>
+      <node begin="11" end="12" frame="adverb" id="22" lcat="advp" pos="adv" rel="mod" root="weer" sense="weer" word="weer"/>
+      <node begin="12" cat="pp" end="15" id="23" rel="mod">
+        <node begin="12" end="13" frame="preposition(voor,[aan,door,uit,[in,de,plaats]])" id="24" lcat="pp" pos="prep" rel="hd" root="voor" sense="voor" word="voor"/>
+        <node begin="13" cat="np" end="15" id="25" rel="obj1">
+          <node aform="base" begin="13" end="14" frame="adjective(no_e(nonadv))" id="26" infl="no_e" lcat="ap" pos="adj" rel="mod" root="huishoudelijk" sense="huishoudelijk" vform="adj" word="huishoudelijk"/>
+          <node begin="14" end="15" frame="noun(both,mass,sg)" gen="both" id="27" lcat="np" num="sg" pos="noun" rel="hd" root="afval" sense="afval" word="afval"/>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" frame="punct(punt)" id="28" lcat="punct" pos="punct" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Onderstaande tabel geeft de minimum in te zamelen fracties en inzamelwijzen weer voor huishoudelijk afval .</sentence>
+  <comments>
+    <comment>Q#39|Onderstaande tabel geeft de minimum in te zamelen fracties en inzamelwijzen weer voor huishoudelijk afval .|1|1|-0.8456672691716718</comment>
+  </comments>
+</alpino_ds>

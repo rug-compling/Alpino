@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="zes" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="zes" word="Zes"/>
+        <node begin="1" buiging="met-e" end="2" getal-n="mv-n" graad="basis" id="4" lemma="ander" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" root="ander" word="anderen"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="raken" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="raak" word="raakten" wvorm="pv"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="6" lemma="gewond" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="gewond" word="gewond"/>
+    </node>
+    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Zes anderen raakten gewond .</sentence>
+</alpino_ds>

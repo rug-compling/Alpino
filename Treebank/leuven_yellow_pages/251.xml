@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="14" id="2" rel="--">
+      <node begin="0" cat="sv1" end="5" id="3" rel="sat">
+        <node begin="0" end="1" id="4" lemma="geven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="geef" word="Geeft" wvorm="pv"/>
+        <node begin="1" cat="mwu" end="3" id="5" rel="su">
+          <node begin="1" end="2" id="6" lemma="Tony" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Tony" spectype="deeleigen" word="Tony"/>
+          <node begin="2" end="3" id="7" lemma="Blair" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Blair" spectype="deeleigen" word="Blair"/>
+        </node>
+        <node begin="3" cat="np" end="5" id="8" rel="obj1">
+          <node begin="3" end="4" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="dim" id="10" lemma="feest" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="feestje" word="feestje"/>
+        </node>
+      </node>
+      <node begin="6" cat="smain" end="14" id="11" rel="nucl">
+        <node begin="7" end="8" id="12" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+        <node begin="8" cat="np" end="12" id="13" index="1" rel="su">
+          <node begin="8" end="9" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="9" cat="mwu" end="12" id="15" rel="hd">
+            <node begin="9" end="10" id="16" lemma="Prince" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Prince" spectype="deeleigen" word="Prince"/>
+            <node begin="10" conjtype="neven" end="11" id="17" lemma="of" pos="noun" postag="VG(neven)" pt="vg" rel="mwp" root="of" word="of"/>
+            <node begin="11" end="12" id="18" lemma="Wales" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wales" spectype="deeleigen" word="Wales"/>
+          </node>
+        </node>
+        <node begin="6" cat="inf" end="14" id="19" rel="vc">
+          <node begin="6" end="7" id="20" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+          <node begin="8" end="12" id="21" index="1" rel="su"/>
+          <node begin="12" end="13" id="22" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="13" buiging="zonder" end="14" id="23" lemma="opdagen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="daag" word="opdagen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Geeft Tony Blair een feestje , dan komt de Prince of Wales niet opdagen</sentence>
+</alpino_ds>

@@ -1,0 +1,123 @@
+DISK=/dev/shm
+MAKEFLAGS=--no-print-directory
+
+QPROLOGMAXSIZE=20000
+
+jobname=$(shell echo $(suite)|sed -e 's/nlcow_part/nlc/'\
+                                  -e 's/part//'\
+                                  -e 's/volkskrant/v/'\
+                                  -e 's/trouw/t/'\
+                                  -e 's/nrc/n/'\
+                                  -e 's/nlcow_/n/'\
+                                  -e 's/0000000/f/'\
+                                  -e 's/000000/e/'\
+                                  -e 's/parool/p/' | tr -d '-' | cut -c 1-10)
+
+
+def:
+	@echo make: no target specified
+
+q=nodes
+job:
+	(  \
+   echo "#!/bin/sh" ;\
+   echo "#SBATCH --nodes=1" ;\
+   echo "#SBATCH --ntasks=1" ;\
+   echo "#SBATCH --mem=$(QPROLOGMAXSIZE)" ;\
+   echo "#SBATCH --time=24:00:00" ;\
+   echo "#SBATCH --constraint=centos7" ;\
+   echo "export PROLOGMAXSIZE=$(QPROLOGMAXSIZE)M";\
+   echo "hostname -f " ;\
+   echo "echo $(suite) " ;\
+   echo "cd `pwd`";\
+   echo "$(MAKE) -s $(HPCTARGET) suite=$(suite) cdb_part=$(cdb_part)";\
+       ) | sbatch --job-name=$(suite)
+
+command:
+	(  \
+   echo "#!/bin/sh" ;\
+   echo "#SBATCH --nodes=1" ;\
+   echo "#SBATCH --ntasks=1" ;\
+   echo "#SBATCH --mem=$(QPROLOGMAXSIZE)" ;\
+   echo "#SBATCH --time=24:00:00" ;\
+   echo "#SBATCH --constraint=centos7" ;\
+   echo "export PROLOGMAXSIZE=$(QPROLOGMAXSIZE)M";\
+   echo "hostname -f " ;\
+   echo "echo $(suite) " ;\
+   echo "cd `pwd`";\
+   echo "$(COMMAND)" ;\
+       ) | sbatch 
+
+longjob:
+	(  \
+   echo "#!/bin/sh" ;\
+   echo "#SBATCH --nodes=1" ;\
+   echo "#SBATCH --ntasks=1" ;\
+   echo "#SBATCH --mem=$(QPROLOGMAXSIZE)" ;\
+   echo "#SBATCH --time=240:00:00" ;\
+   echo "#SBATCH --constraint=centos7" ;\
+   echo "export PROLOGMAXSIZE=$(QPROLOGMAXSIZE)M";\
+   echo "hostname -f " ;\
+   echo "echo $(suite) " ;\
+   echo "cd `pwd`";\
+   echo "$(MAKE) -s $(HPCTARGET) suite=$(suite) cdb_part=$(cdb_part)";\
+       ) | sbatch --job-name=$(suite)
+
+shortjob:
+	(  \
+   echo "#!/bin/sh" ;\
+   echo "#SBATCH --nodes=1" ;\
+   echo "#SBATCH --ntasks=1" ;\
+   echo "#SBATCH --mem=$(QPROLOGMAXSIZE)" ;\
+   echo "#SBATCH --constraint=centos7" ;\
+   echo "export PROLOGMAXSIZE=$(QPROLOGMAXSIZE)M";\
+   echo "hostname -f" ;\
+   echo "echo $(suite) " ;\
+   echo "cd `pwd`";\
+   echo "$(MAKE) -s $(HPCTARGET) suite=$(suite) cdb_part=$(cdb_part)";\
+       ) | sbatch --partition=short --job-name=$(suite)
+
+
+hmjob:
+	(  \
+   echo "#!/bin/sh" ;\
+   echo "#SBATCH --nodes=1" ;\
+   echo "#SBATCH --ntasks=1" ;\
+   echo "#SBATCH --time=24:00:00" ;\
+   echo "#SBATCH --constraint=centos7" ;\
+   echo "hostname -f" ;\
+   echo "echo $(suite) " ;\
+   echo "cd `pwd`";\
+   echo "$(MAKE) -s $(HPCTARGET) suite=$(suite) cdb_part=$(cdb_part)";\
+       ) | sbatch --partition=himem --job-name=$(suite)
+
+
+SUITES=$(ALPINO_HOME)/Suites/Machine
+PATTERN=none
+FILES=${sort ${basename ${basename ${notdir ${wildcard $(SUITES)/$(PATTERN)*.sents.gz}}}}}
+
+files:
+	@echo $(FILES)
+	
+jobs:
+	for suite in $(FILES);\
+        do echo $$suite $$jobname; $(MAKE) -s job suite=$$suite; sleep 0.02;\
+        done
+
+jobnames:
+	for suite in $(FILES);\
+        do echo $$suite; $(MAKE) -s jobname suite=$$suite; \
+        done
+
+jobname:
+	echo $(jobname)
+
+files:=$(shell find -maxdepth 1 -name '*.index' -o -name '*.errors' -o -name '*.data.dz' -o -name '*.log.gz'  )
+
+s:
+	echo $(files)
+
+copy:
+	@rsync -avz $(files) zardoz.service.rug.nl:z/Alpino/LASSYNEW/
+	@rm $(files)
+

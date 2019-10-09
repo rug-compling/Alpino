@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="smain" end="10" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" index="1" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+      <node begin="0" cat="conj" end="10" id="4" rel="vc">
+        <node begin="0" cat="ppart" end="4" id="5" rel="cnj">
+          <node begin="0" end="1" id="6" index="1" rel="obj1"/>
+          <node begin="2" end="3" id="7" lemma="helemaal" pos="adv" postag="BW()" pt="bw" rel="mod" root="helemaal" word="helemaal"/>
+          <node begin="3" buiging="zonder" end="4" id="8" lemma="evacueren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geëvacueerd" word="geevacueerd" wvorm="vd"/>
+        </node>
+        <node begin="4" conjtype="neven" end="5" id="9" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="0" cat="ppart" end="10" id="10" rel="cnj">
+          <node begin="0" end="1" id="11" index="1" rel="su"/>
+          <node begin="0" cat="ppart" end="9" id="12" rel="vc">
+            <node begin="0" end="1" id="13" index="1" rel="obj1"/>
+            <node begin="5" cat="pp" end="8" id="14" rel="mod">
+              <node begin="5" end="6" id="15" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+              <node begin="6" cat="np" end="8" id="16" rel="obj1">
+                <node begin="6" end="7" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="18" lemma="politie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="politie" word="politie"/>
+              </node>
+            </node>
+            <node begin="8" buiging="zonder" end="9" id="19" lemma="bezetten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bezet" word="bezet" wvorm="vd"/>
+          </node>
+          <node begin="9" buiging="zonder" end="10" id="20" lemma="worden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="word" word="geworden" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="10" end="11" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het was helemaal geevacueerd en door de politie bezet geworden .</sentence>
+</alpino_ds>

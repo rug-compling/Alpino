@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="2" end="3" frame="punct(komma)" id="1" lcat="punct" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," sense="," special="komma" word=","/>
+    <node begin="0" cat="du" end="13" id="2" rel="--">
+      <node begin="0" cat="mwu" end="2" id="3" rel="tag">
+        <node begin="0" end="1" frame="tag" id="4" lcat="advp" lemma="nou" pos="tag" postag="BW()" pt="bw" rel="mwp" root="Nou" sense="Nou" word="Nou"/>
+        <node begin="1" end="2" frame="tag" id="5" lcat="advp" lemma="ja" pos="tag" postag="TSW()" pt="tsw" rel="mwp" root="ja" sense="ja" word="ja"/>
+      </node>
+      <node begin="3" cat="smain" end="13" id="6" rel="nucl">
+        <node begin="3" case="both" def="indef" end="4" frame="pronoun(nwh,thi,sg,het,both,indef,strpro)" gen="het" getal="ev" id="7" lcat="np" lemma="zoiets" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="zoiets" sense="zoiets" special="strpro" status="vol" vwtype="onbep" wh="nwh" word="zoiets"/>
+        <node begin="4" buiging="zonder" end="5" frame="verb(hebben,pl,transitive)" id="8" infl="pl" lcat="smain" lemma="drinken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="drink" sc="transitive" sense="drink" tense="present" word="drinken" wvorm="inf"/>
+        <node begin="5" case="nom" def="def" end="6" frame="pronoun(nwh,fir,pl,de,nom,def,wkpro)" gen="de" getal="mv" id="9" lcat="np" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" sense="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
+        <node begin="6" end="7" frame="tmp_adverb" id="10" lcat="advp" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" sense="dan" special="tmp" word="dan"/>
+        <node aform="base" begin="7" buiging="zonder" end="8" frame="adjective(end(both))" id="11" infl="no_e" lcat="ppres" lemma="lachen" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="mod" root="lach" sense="lach" vform="gerund" word="lachend" wvorm="od"/>
+        <node begin="8" end="9" frame="loc_adverb" id="12" lcat="advp" lemma="weg" pos="adv" postag="BW()" pt="bw" rel="mod" root="weg" sense="weg" special="loc" word="weg"/>
+        <node begin="9" cat="pp" end="13" id="13" rel="mod">
+          <node begin="9" end="10" frame="preposition(met,[mee,[en,al]])" id="14" lcat="pp" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" sense="met" vztype="init" word="met"/>
+          <node begin="10" cat="np" end="13" id="15" rel="obj1">
+            <node begin="10" end="11" frame="determiner(een)" id="16" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+            <node aform="base" begin="11" buiging="met-e" end="12" frame="adjective(e)" graad="basis" id="17" infl="e" lcat="ap" lemma="heerlijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="heerlijk" sense="heerlijk" vform="adj" word="heerlijke"/>
+            <node begin="12" end="13" frame="proper_name(both,'ORG')" genus="zijd" getal="ev" graad="basis" id="18" lcat="np" lemma="cosmopolitan" naamval="stan" neclass="ORG" ntype="soort" num="both" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="Cosmopolitan" sense="Cosmopolitan" word="Cosmopolitan"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" frame="punct(punt)" id="19" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Nou ja , zoiets drinken we dan lachend weg met een heerlijke Cosmopolitan .</sentence>
+  <comments>
+    <comment>Q#AD20031108-7-11-11|Nou ja , zoiets drinken we dan lachend weg met een heerlijke Cosmopolitan .|1|1|0.06906561445008746</comment>
+  </comments>
+</alpino_ds>

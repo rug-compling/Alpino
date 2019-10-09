@@ -1,0 +1,1429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.5.2" />
+<title>An overview of the Alpino Treebank tools</title>
+<style type="text/css">
+/* Debug borders */
+p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
+/*
+  border: 1px solid red;
+*/
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+tt {
+  color: navy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  font-family: sans-serif;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+
+div.sectionbody {
+  font-family: serif;
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+span#author {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+span#email {
+}
+span#revnumber, span#revdate, span#revremark {
+  font-family: sans-serif;
+}
+
+div#footer {
+  font-family: sans-serif;
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+div#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+div#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+div#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #dddddd;
+  color: #777777;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > div.content {
+  white-space: pre;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+
+@media print {
+  div#footer-badges { display: none; }
+}
+
+div#toc {
+  margin-bottom: 2.5em;
+}
+
+div#toctitle {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+/* Workarounds for IE6's broken and incomplete CSS2. */
+
+div.sidebar-content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+div.sidebar-title, div.image-title {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 0.0em;
+  margin-bottom: 0.5em;
+}
+
+div.listingblock div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock-attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock-content {
+  white-space: pre;
+}
+div.verseblock-attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+
+div.exampleblock-content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+/* IE6 sets dynamically generated links as visited. */
+div#toc a:visited { color: blue; }
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+window.onload = function(){asciidoc.footnotes();}
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([2-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  var cont = document.getElementById("content");
+  var noteholder = document.getElementById("footnotes");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      // Use [\s\S] in place of . so multi-line matches work.
+      // Because JavaScript has no s (dotall) regex flag.
+      note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      spans[i].innerHTML =
+        "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+        "' title='View footnote' class='footnote'>" + n + "</a>]";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+}
+
+}
+/*]]>*/
+</script>
+</head>
+<body>
+<div id="header">
+<h1>An overview of the Alpino Treebank tools</h1>
+<span id="author">Geert Kloosterman</span><br />
+<span id="email"><tt>&lt;<a href="mailto:G.J.Kloosterman@rug.nl">G.J.Kloosterman@rug.nl</a>&gt;</tt></span><br />
+</div>
+<div id="content">
+<h2 id="_introduction">Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>In this document the various tools of the Alpino Treebank will be
+discussed. These tools include:</p></div>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+dtsearch
+</dt>
+<dd>
+<p>
+   find dependency structures using XPath queries
+</p>
+</dd>
+<dt class="hdlist1">
+dtview
+</dt>
+<dd>
+<p>
+   display dependency structures
+</p>
+</dd>
+<dt class="hdlist1">
+dtedit
+</dt>
+<dd>
+<p>
+   edit dependency structures with Thistle (obsolete)
+</p>
+</dd>
+<dt class="hdlist1">
+dttred
+</dt>
+<dd>
+<p>
+   edit dependency structures with TrEd
+</p>
+</dd>
+<dt class="hdlist1">
+dtxslt
+</dt>
+<dd>
+<p>
+   apply style sheet to dependency structures
+</p>
+</dd>
+</dl></div>
+<div class="paragraph"><p>Most of the Alpino Treebank tools support two types of annotated corpora. In
+the simple case, each dependency structure is represented by a single
+XML file. In addition, the tools support so-called <em>compact</em> annotated
+corpora, in which collections of XML files are concatenated and
+compressed. The following tools are relevant for compact corpora in particular:</p></div>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+act
+</dt>
+<dd>
+<p>
+    construct/extract compact annotated corpora
+</p>
+</dd>
+<dt class="hdlist1">
+dtlist
+</dt>
+<dd>
+<p>
+    list file names of dependency structures
+</p>
+</dd>
+<dt class="hdlist1">
+dtgrep
+</dt>
+<dd>
+<p>
+    search in dependency structures with grep
+</p>
+</dd>
+<dt class="hdlist1">
+dtget
+</dt>
+<dd>
+<p>
+    write the specified dependency structure to standard output
+</p>
+</dd>
+</dl></div>
+<div class="paragraph"><p>Some tools are not yet documented:</p></div>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+mg_m_search
+</dt>
+<dd>
+<p>
+    use dtsearch on set of dependency structures returned by
+    an MG query
+</p>
+</dd>
+<dt class="hdlist1">
+wrappers and libraries for xquery
+</dt>
+<dd>
+<p>
+    tools to apply Xquery to Alpino dependency structures (normal and
+    compact)
+</p>
+</dd>
+</dl></div>
+</div>
+<h2 id="_dtsearch_find_dependency_structures_using_xpath_queries">DTSearch: find dependency structures using XPath queries</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Use dtsearch to search the corpus.  dtsearch uses XPath expressions
+for querying.</p></div>
+<div class="paragraph"><p>A basic example is:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ dtsearch -v '//node[@cat="pp"]' /path/to/corpus</tt></pre>
+</div></div>
+<div class="paragraph"><p>By using the <tt>-v</tt> option dtsearch will display the files that match
+the query using <a href="#dtview"><tt>dtview</tt></a>. In this case, the XPath
+expression matches with any dependency structure which contains a
+node with category <em>pp</em>.</p></div>
+<div class="paragraph"><p>DTSearch will process directories recursively.</p></div>
+<div class="paragraph"><p>The usage information lists the possible output methods:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>usage: dtsearch [options] &lt;[-q] QUERY&gt; &lt;files, directories, ...&gt;
+
+options:
+  -qQUERY, -eQUERY, --query=QUERY, --expr=QUERY
+                        XPath expression to search for
+  -l, --statistics      print stats for values of rel,cat,pos labels in
+                        matching nodes
+  -r, --root-labels     print stats for values of root label in matching nodes
+  -s, --bracketed-sentence
+                        show sentences with matching phrases
+  -c, --matching-constituents
+                        show matching constituents only, not the full sentence.
+  -d, -v, --dtview      show matches using dtview.
+  --stdin               read file arguments from stdin.  Any non-option
+                        arguments on the commandline will be ignored.
+  -h, --help            show this help message and exit</tt></pre>
+</div></div>
+<div class="paragraph"><p>When no output method is selected dtsearch will print the filename.</p></div>
+<h3 id="_examples_of_using_dtsearch">Examples of using dtsearch</h3><div style="clear:left"></div>
+<div class="paragraph"><p>In order to be able to specify relevant XPath queries, it is
+neccessary to know a little bit about the way in which dependency
+structures are encoded in XML. This encoding is rather
+straightforward. Nodes in the dependency structure are encoded by a
+recursive XML element <em>node</em>. Nodes contain a variety of
+attributes. The most important attributes are:</p></div>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+cat
+</dt>
+<dd>
+<p>
+   The category of the node (only for non-leaves)
+</p>
+</dd>
+<dt class="hdlist1">
+pos
+</dt>
+<dd>
+<p>
+   The POS-tag of the node (only for leaves)
+</p>
+</dd>
+<dt class="hdlist1">
+begin
+</dt>
+<dd>
+<p>
+   The begin position of the node
+</p>
+</dd>
+<dt class="hdlist1">
+end
+</dt>
+<dd>
+<p>
+   The end position of the node
+</p>
+</dd>
+<dt class="hdlist1">
+rel
+</dt>
+<dd>
+<p>
+   The dependency relation
+</p>
+</dd>
+<dt class="hdlist1">
+root
+</dt>
+<dd>
+<p>
+   The root form of the node (leaves)
+</p>
+</dd>
+<dt class="hdlist1">
+word
+</dt>
+<dd>
+<p>
+   The surface form of the node (leaves)
+</p>
+</dd>
+<dt class="hdlist1">
+index
+</dt>
+<dd>
+<p>
+   The index of the node (for <em>secondary edges</em> or reentrancies)
+</p>
+</dd>
+</dl></div>
+<div class="paragraph"><p>There are more attributes, but these are the most important ones.</p></div>
+<div class="paragraph"><p>The following query lists all dependency structures which contain a
+subject node which itself contains a node with the root form
+<em>man</em>. Because of the -s option, all matching sentences are displayed,
+where the matched part of the sentence is given in square brackets.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ dtsearch -s '//node[@rel="su" and node[@root="man"]]' g_suite
+
+g_suite/192.xml [de man] zou op zijn te bellen
+g_suite/193.xml [de man] zou zijn op te bellen
+g_suite/194.xml dat [de man] zou zijn op te bellen
+g_suite/195.xml dat [de man] zou op zijn te bellen
+g_suite/196.xml dat [de man] op te bellen zou zijn
+g_suite/298.xml [de man] is bang dat hij naar huis moet
+g_suite/518.xml [de man] werd in de rede gevallen</tt></pre>
+</div></div>
+<div class="paragraph"><p>Further examples are perhaps hard to understand without some knowledge
+of XPath.  There are various tutorials and reference manuals for XPath
+available on the web.  See for example:
+<a href="http://en.wikipedia.org/wiki/XPath">What is XPath?</a></p></div>
+<div class="paragraph"><p>List all sentences containing a "krijgen-passive" in the h_suite treebank:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ dtsearch -s '//node[ node[@rel="hd" and @root="krijg"] and \
+    node[@rel="su"]/@index=node[@rel="vc"]/node[@rel="obj2"]/@index ]' h_suite
+
+h_suite/277.xml Ik krijg doorbetaald
+h_suite/296.xml hij krijgt een microfoon onder de neus geduwd
+h_suite/300.xml De ontslagen medewerkers krijgen tot 1 januari 2004 doorbetaald
+h_suite/301.xml De ontslagen medewerkers krijgen hun salaris tot 1 januari 2004 doorbetaald
+h_suite/306.xml Hij krijgt betaald voor zijn adviezen
+h_suite/307.xml Hij krijgt een fortuin betaald voor zijn adviezen
+h_suite/556.xml Je kreeg met de paplepel ingegoten dat je beleefd moest zijn</tt></pre>
+</div></div>
+<div class="paragraph"><p>Sometimes it is convenient to get the matched portion of the sentence
+and nothing more. This is accomplished with the <tt>-c</tt> option. For
+instance, the following finds determiner phrases which contain an
+adverb as a daughter node.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ dtsearch -c '//node[@cat="detp" and node[@pos="adv"]]' leuven_yellow_pages
+leuven_yellow_pages/244.xml     iets meer dan bij ons
+leuven_yellow_pages/275.xml     wat meer
+leuven_yellow_pages/276.xml     zoveel meer</tt></pre>
+</div></div>
+<div class="paragraph"><p>Quantitative information can be obtained with the <tt>-l</tt> option. For
+instance, this query finds which relations occur as sisters to the
+<em>tag</em> relation:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ dtsearch -l '//node[ ../node[ @rel="tag"]]' cdb
+rel:
+     295 tag
+     291 nucl
+cat:
+     228 smain
+     104 sv1
+      56 pp
+      40 du
+      30 conj
+      27 ssub
+      12 mwu
+      10 np
+       4 whq
+       1 inf
+       1 detp
+       1 cp
+       1 ap
+pos:
+      28 adv
+      20 tag
+       8 noun
+       8 adj
+       3 verb
+       3 num
+       1 comp</tt></pre>
+</div></div>
+<div class="paragraph"><p>More examples, for the interested reader to try out:</p></div>
+<div class="paragraph"><p>Find topicalized secondary objects with category NP:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ dtsearch -v '//node[../@cat="smain" and @rel="obj2" and \
+                 not(@cat="pp") and @begin = ../@begin]' .</tt></pre>
+</div></div>
+<div class="paragraph"><p>Find occurrences of extraposition of comparatives out of topicicalized
+constituents:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ dtsearch -v '//node[@cat="smain" and node[node[@rel="obcomp"]/@end\
+                &gt; ../node[@rel="hd"]/@begin]/@begin = @begin]' .</tt></pre>
+</div></div>
+<div class="paragraph"><p>It is also possible to search in the text of the sentence. To do this
+efficiently, we have developed mg_m_search, that should be used in
+such cases for very large treebanks. Searching for text can be done as
+follows:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ dtsearch -v 'contains(//sentence,"tot zo")' .</tt></pre>
+</div></div>
+<div class="paragraph"><p>This works, because there is atmost one sentence element - the string
+value of a node set in XPath is defined as the string value of the
+first element of that node set.</p></div>
+<div class="paragraph"><p>In addition to "contains()" there are various other XPATH functions
+that are useful in this context, such as "starts-with()" and
+"matches()". The latter is used for regular expression matching in
+XPath 2 (currently not supported).</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ dtsearch  '(//comment[. = "time_out" ] or //comment[. ="out_of_memory" ]' .</tt></pre>
+</div></div>
+<div class="paragraph"><p>In this case, the query will also match in case there are multiple
+comments (these are indeed allowed).</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="http://www.methods.co.nz/asciidoc/images/icons/important.png" alt="Important" />
+</td>
+<td class="content">
+<div class="title">Beware of shell quoting</div>
+<div class="paragraph"><p>Make sure you keep the shell (your command interpreter) from
+interpreting any special characters in the query.  Use any of the
+following schemes:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>dtsearch '//node[@cat="pp"]'  ...
+dtsearch "//node[@cat='pp']"  ...
+dtsearch "//node[@cat=\"pp\"]"  ...</tt></pre>
+</div></div>
+<div class="paragraph"><p>The first two are the most convenient ones to type.</p></div>
+</td>
+</tr></table>
+</div>
+</div>
+<h2 id="dtview">DTView: graphical display of dependency structures</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Use dtview to visualize Alpino Dependency structures on your screen.</p></div>
+<div class="paragraph"><div class="title">Screenshot of DTView</div><p><span class="image">
+<img src="http://www.let.rug.nl/~vannoord/alp/Alpino/dtview.png" alt="Screenshot of DTView" />
+</span></p></div>
+<h3 id="_basic_functionality">Basic Functionality</h3><div style="clear:left"></div>
+<div class="paragraph"><p>DTView can visualize dependency structures and highlight nodes that
+match an XPath expression.  This expression can be specified on the
+commandline or in the text entry at the top of the window.</p></div>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+Apply
+</dt>
+<dd>
+<p>
+    Apply the XPath expression for highlighting to the current tree.
+    (This can also be achieved by pressing Enter in the text field)
+</p>
+</dd>
+<dt class="hdlist1">
+Filelist
+</dt>
+<dd>
+<p>
+    Toggle the visibility of the file list
+</p>
+</dd>
+<dt class="hdlist1">
+Ext&#8217;d Attrs
+</dt>
+<dd>
+<p>
+    Toggle the visibility of any extended attributes that might be
+    present.  In general trees that are not hand-corrected contain
+    extra attributes.
+</p>
+</dd>
+<dt class="hdlist1">
+Previous, Next
+</dt>
+<dd>
+<p>
+    Go to the previous or next file in the file list.
+</p>
+</dd>
+<dt class="hdlist1">
+Smaller, Bigger, Normal
+</dt>
+<dd>
+<p>
+    Change the size of the displayed tree.
+</p>
+</dd>
+<dt class="hdlist1">
+TrEd
+</dt>
+<dd>
+<p>
+    Run the TrEd tree editor on the current file.
+</p>
+</dd>
+<dt class="hdlist1">
+Thistle
+</dt>
+<dd>
+<p>
+    Run the Thistle tree editor on the current file.
+    (Obsolete, use TrEd instead)
+</p>
+</dd>
+<dt class="hdlist1">
+Emacs
+</dt>
+<dd>
+<p>
+    Run the Emacs text editor on the current file.
+</p>
+</dd>
+<dt class="hdlist1">
+Open Selection
+</dt>
+<dd>
+<p>
+    Your current X-selection is supposed to contain a file name. This
+    file name is opened.
+</p>
+</dd>
+<dt class="hdlist1">
+Quit
+</dt>
+<dd>
+<p>
+    Exit the viewer
+</p>
+</dd>
+</dl></div>
+<h3 id="_keyboard_navigation">Keyboard navigation</h3><div style="clear:left"></div>
+<div class="tableblock">
+<table rules="all"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<caption class="title">TableKeyboard shortcuts for DTView</caption>
+<col width="182" />
+<col width="194" />
+<thead>
+  <tr>
+    <th align="left">
+    Key(s)
+    </th>
+    <th align="left">
+    Description
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    Control-q
+    </td>
+    <td align="left">
+    exit
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    n, Page Down
+    </td>
+    <td align="left">
+    next file
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    p, Page Up
+    </td>
+    <td align="left">
+    previous file
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    Up
+    </td>
+    <td align="left">
+    scroll canvas
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    Down
+    </td>
+    <td align="left">
+    scroll canvas
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    Left
+    </td>
+    <td align="left">
+    scroll canvas
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    Right
+    </td>
+    <td align="left">
+    scroll canvas
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    e
+    </td>
+    <td align="left">
+    toggle Extended Attributes
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    f
+    </td>
+    <td align="left">
+    toggle Filelist
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    t
+    </td>
+    <td align="left">
+    invoke TrEd editor
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    Keypad_Add
+    </td>
+    <td align="left">
+    zoom in
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    Keypad_Subtract
+    </td>
+    <td align="left">
+    zoom out
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    Keypad_Multiply
+    </td>
+    <td align="left">
+    revert to original size
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+<h2 id="_dtxslt_running_stylesheets_on_a_corpus">DTXslt: Running stylesheets on a corpus</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The dtxslt tool can be used in a similar fashion as programs such as
+<em>xsltproc</em> to apply a stylesheet to dependency structures.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Usage: dtxslt [options] &lt;files, directories, ...&gt;
+  -s, --stylesheet=STYLESHEET      The styleheet to use for output.
+  -q, --query=QUERY                XPath-expression to be used as query.  The
+                                   expression should evaluate to a node set or
+                                   a boolean.  With this option the stylesheet
+                                   is only applied to documents matching QUERY.
+  --param=&lt;name&gt;=&lt;value&gt;           Normal parameter for stylesheet
+  --stringparam=&lt;name&gt;=&lt;value&gt;     String-parameter for stylesheet
+  --stdin                          Read the arguments from standard input, one
+                                   argument per line.  When this option is
+                                   used, any files or directories specified on
+                                   the command line will be discarded.
+  -r, --recursive                  Process the directory tree recursively
+
+Help options:
+  -?, --help                       Show this help message
+  --usage                          Display brief usage message</tt></pre>
+</div></div>
+<div class="paragraph"><p>An example:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ dtxslt -r -s stylesheets/print-sentence.xsl Machine/clef</tt></pre>
+</div></div>
+<div class="paragraph"><p>This example applies the <tt>print-sentence.xsl</tt> stylesheet to every .xml
+file under <tt>Machine/clef</tt>.  The <tt>-r</tt> flag ensures <tt>dtxslt</tt> will
+recursively walk through the directory structure looking for .xml
+files and compact corpora.</p></div>
+<div class="paragraph"><p>Look for examples of stylesheets in <tt>Alpino/TreebankTools/stylesheets</tt>.
+Another place that shows the use of stylesheets in the Alpino Treebank
+is the <tt>create-sanity-check-stylesheet.py</tt> script in the
+<tt>misc-scripts</tt> directory.</p></div>
+</div>
+<h2 id="_dttred_editing_dependency_structures_with_tred">DTTred: Editing dependency structures with TrEd</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The <tt>dttred</tt> program is a simple script which starts the TrEd tree
+editor, with the appropriate settings for Alpino dependency
+structures. The program normally takes one or more arguments: the file
+names you want to edit.</p></div>
+<div class="paragraph"><p>Alpino-specific functionality can be found under the
+User-defined&#8594;Alpino menu.</p></div>
+<div class="paragraph"><p><a href="http://ufal.mff.cuni.cz/~pajas/tred/">Documentation for TrEd</a></p></div>
+</div>
+<h2 id="_dtedit_editing_dependency_structures_with_thistle">DTEdit: Editing dependency structures with Thistle</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The <tt>dtedit</tt> program is a simple script which starts the Thistle editor,
+with the appropriate settings for Alpino dependency structures. The
+program normally takes one or more arguments: the file names you want
+to edit.</p></div>
+<div class="paragraph"><p>Please use the documentation of Thistle in the local installation
+directory of Thistle on your machine.</p></div>
+<div class="paragraph"><p>DTEdit is now obsolete. Please use <tt>dttred</tt> instead.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="http://www.methods.co.nz/asciidoc/images/icons/important.png" alt="Important" />
+</td>
+<td class="content">
+<div class="title">Compact annotated corpora are not supported by dtedit and dttred</div>
+<div class="paragraph"><p>If you want to edit a dependency structure from a compact annotated
+corpus, you must first extract the file (using ACT), use dtedit or
+dttred, and then pack the file back into the archive (again using
+ACT).</p></div>
+</td>
+</tr></table>
+</div>
+</div>
+<h2 id="_act_managing_compact_corpora">ACT: Managing Compact Corpora</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The Alpino corpora can be stored in what we call "Compact Corpora".
+They consist of two files per corpus: one file with the compressed
+data and a seperate file with the filename information.  Together
+they&#8217;re in a way similar to .zip files, but their compression ratio
+(because they typically consist of a lot of small files) is much
+better.  The compression method is based on <tt>dictzip</tt> (see
+<a href="http://www.dict.org">www.dict.org</a>).</p></div>
+<div class="paragraph"><p>All of our tools work transparently on files in a normal directory
+structure and those in a compact corpus.</p></div>
+<h3 id="_creating_compact_corpora">Creating compact corpora</h3><div style="clear:left"></div>
+<div class="paragraph"><p>The tool to manage compact corpora is called <tt>act</tt>, which stands for
+Alpino Corpus Tool.  From the <tt>act</tt> point of view, a corpus is a
+directory that contains .xml files.</p></div>
+<h4 id="_compressing_a_single_directory">Compressing a single directory</h4>
+<div class="paragraph"><p>Let&#8217;s assume we have the following directory structure:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>corpus_directory
+|-- cdb
+|   |-- 0.xml
+|   |-- 1.xml
+|   |-- 1.xml~
+|   |-- 10.xml
+|   |-- 100.xml
+|   |-- 1000.xml
+... ...
+|   |-- 997.xml
+|   |-- 998.xml
+|   |-- 999.xml
+|   |-- CVS
+|   |   |-- Entries
+|   |   |-- Repository
+|   |   `-- Root
+|   `-- Makefile
+`-- compact_corpora</tt></pre>
+</div></div>
+<div class="paragraph"><p>We want to create a compact corpus for <tt>cdb</tt> in the <tt>compact_corpora</tt>
+directory.  Here are two ways to do this:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ cd compact_corpora
+$ act --create ../cdb</tt></pre>
+</div></div>
+<div class="paragraph"><p>The same can be accomplished with:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ act --create --targetdir=compact_corpora cdb</tt></pre>
+</div></div>
+<div class="paragraph"><p>Both methods will put two new files in the <tt>compact_corpora</tt>
+subdirectory:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>`-- compact_corpora
+    |-- cdb.data.dz
+    `-- cdb.index</tt></pre>
+</div></div>
+<div class="paragraph"><p>Compact corpora will only contain .xml files.  In our example above,
+<tt>1.xml~</tt>, the <tt>CVS</tt> directory structure, and <tt>Makefile</tt> are all
+ignored.</p></div>
+<h4 id="_compressing_a_directory_tree_recursively">Compressing a directory tree recursively</h4>
+<div class="paragraph"><p>Consider the following directory structure (only directories shown):</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>corpus_directory
+|-- cdb
+|   `-- CVS
+|-- Machine
+|   `-- clef
+|       |-- AD19940103
+|       |-- AD19940104
+|       |-- AD19940105
+|       |-- AD19940106
+|       |-- AD19940107
+|       `-- AD19940108
+`-- compact_corpora</tt></pre>
+</div></div>
+<div class="paragraph"><p>Assume only <tt>cdb</tt> and the directories starting with &#8220;AD&#8221; contain
+.xml files.</p></div>
+<div class="paragraph"><p>The following will create a compact version of the <tt>Machine</tt> directory
+structure under <tt>compact_corpora/Machine</tt>:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ act --create --recursive --targetdir=compact_corpora/Machine Machine/</tt></pre>
+</div></div>
+<div class="paragraph"><p>The target-directory will be created if necessary.</p></div>
+<div class="paragraph"><p>The default for <tt>\--targetdir</tt> is the current directory, so the
+following yields the same result as the previous example:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ mkdir -p compact_corpora/Machine
+$ cd compact_corpora/Machine
+$ act --recursive ../../Machine</tt></pre>
+</div></div>
+<div class="paragraph"><p>To replace the <tt>Machine</tt> subdirectory with a compact equivalent use
+the following:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ cd Machine
+$ act --remove --create --recursive .</tt></pre>
+</div></div>
+<div class="paragraph"><p>The <tt>\--remove</tt> option will cause the source files to be removed after
+creating the compact corpus.</p></div>
+<div class="paragraph"><p>When using recursion to create compact corpora, the directories
+specified <strong>should not</strong> contain any xml files, i.e. they should (only)
+contain other directories.</p></div>
+<h3 id="_updating_compact_corpora">Updating compact corpora</h3><div style="clear:left"></div>
+<div class="paragraph"><p>Scenario: there&#8217;s a compact corpus and there are several files that
+have updates.  Say, a couple of sentences have been reparsed.</p></div>
+<div class="paragraph"><p>Updating will work on a sparse directory structure, i.e. the directory
+structure only needs to contain the reparsed files.  These files will
+be merged with the existing compact corpus or compact corpora.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>act --recursive --update --targetdir clef newly_parsed_clef</tt></pre>
+</div></div>
+<h4 id="_asymmetry_of_the_tt_targetdir_tt_option">Asymmetry of the <tt>\--targetdir</tt> option</h4>
+<div class="paragraph"><p>When using <tt>\--recursive</tt>, the <tt>\--targetdir</tt> option provides a
+straight directory to directory mapping.  With regular corpus
+directories (directories that contain xml files) however this is not
+possible, because when converting to a compact corpus the name of the
+last directory component has to map to a <em>filename</em>.</p></div>
+<div class="paragraph"><p>Let&#8217;s illustrate this with two examples.  The <tt>cdb</tt> directory is a
+regular corpus directory and (therefore) contains <tt>.xml</tt> files.
+The <tt>cdb</tt> compact corpus will be created/updated <em>below</em> the
+<tt>compact_corpora</tt> directory:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>act --update cdb --targetdir=compact_corpora</tt></pre>
+</div></div>
+<div class="paragraph"><p>The <tt>clef</tt> directory does not contain any <tt>.xml</tt> files, it contains
+other directories that contain the <tt>.xml</tt> files.
+In this case we have a direct mapping from directory to directory:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>act --recursive --update clef --targetdir=compact_corpora/clef</tt></pre>
+</div></div>
+<div class="paragraph"><p>Therefore the directory arguments given to <tt>act \--recursive</tt>
+should not contain any <tt>.xml</tt> files, otherwise the compact corpora
+may end up in places not intended.</p></div>
+<h3 id="_extracting_compact_corpora">Extracting compact corpora</h3><div style="clear:left"></div>
+<div class="paragraph"><p>To extract a compact corpus use the <tt>\--extract</tt> flag.
+At the moment of writing extracting only works non-recursively.</p></div>
+<div class="paragraph"><p>Extracting creates a new directory with <tt>.xml</tt> files for every compact
+corpus specified on the commandline.  For example, the following
+extracts a collection of compact corpora to a specific directory
+(current directory is the default):</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ act --targetdir /lots/of/space/Machine/clef --extract Machine/clef/*.index</tt></pre>
+</div></div>
+<div class="paragraph"><p>Use <tt>\--force</tt> to have <tt>act</tt> overwrite existing directories.</p></div>
+</div>
+<h2 id="_dtlist_listing_the_contents_of_a_compact_corpus">DTList: Listing the contents of a compact corpus</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>To show the contents of a compact corpus use &#8216;``dtlist<tt>&#8217;'.
+The compact corpus `cdb</tt> can be specified as <tt>cdb</tt>, as <tt>cdb.index</tt> or
+as <tt>cdb.data.dz</tt>.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ dtlist compact/corpora/cdb.index
+compact_corpora/cdb/0.xml
+compact_corpora/cdb/1.xml
+compact_corpora/cdb/2.xml
+compact_corpora/cdb/3.xml
+compact_corpora/cdb/4.xml
+compact_corpora/cdb/5.xml
+...</tt></pre>
+</div></div>
+<div class="paragraph"><p>Note the complete path in the output and the numerical sorting.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="http://www.methods.co.nz/asciidoc/images/icons/important.png" alt="Important" />
+</td>
+<td class="content">
+<div class="title">Watch out with wildcards and compact corpora</div>
+<div class="paragraph"><p>The following will give <strong>two</strong> listings!
+One for <tt>cdb.data.dz</tt>, and one for <tt>cdb.index</tt>:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>$ dtlist compact_corpora/cdb*</tt></pre>
+</div></div>
+</td>
+</tr></table>
+</div>
+</div>
+<h2 id="_dtgrep_grep_in_dependency_structures">DTGrep: grep in dependency structures</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>DTGrep can be used to search in dependency structures with regular
+expressions.  The <tt>dtgrep</tt> program basically is a stripped down
+<tt>grep</tt> program that knows about Compact Corpora.  DTGrep uses
+Perl-compatible regular expressions.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>usage: dtgrep [options] arguments
+
+options:
+  --help                show this help message and exit
+  -ePATTERN, --regexp=PATTERN
+                        use PATTERN as a regular expression
+  -i, --ignore-case     ignore case distinctions
+  -v, --invert-match    select non-matching lines
+  -l, --files-with-matches
+                        only print FILE names containing matches
+  -h, --no-filename     suppress the prefixing filename on output
+  --stdin               read file arguments from stdin.  Any non-option
+                        arguments on the commandline will be ignored.</tt></pre>
+</div></div>
+</div>
+<h2 id="_dtget_write_dependency_structure_to_standard_output">DTGet: Write dependency structure to standard output</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The <tt>dtget</tt> tool simply takes a sequence of one or more filenames, and
+prints the corresponding dependency structures to standard
+output.</p></div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2009-12-19 20:39:55 CEST
+</div>
+</div>
+</body>
+</html>

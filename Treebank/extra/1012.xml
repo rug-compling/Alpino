@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="8" id="2" rel="--">
+      <node begin="0" cat="cp" end="3" id="3" rel="mod">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="Als"/>
+        <node begin="1" cat="ssub" end="3" id="5" rel="body">
+          <node begin="1" end="2" genus="onz" getal="ev" id="6" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
+          <node begin="2" end="3" id="7" infl="sg3" lemma="mislukken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="misluk" sc="intransitive" tense="present" word="mislukt" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="8" infl="sg1" lemma="tenonder_gaan" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ga_tenonder" sc="part_intransitive(tenonder)" stype="declarative" tense="present" word="ga" wvorm="pv"/>
+      <node begin="5" case="nom" def="def" end="6" gen="de" getal="ev" id="9" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+      <node begin="6" end="7" id="10" lemma="mee" pos="adv" postag="BW()" pt="bw" rel="mod" root="mee" special="loc" word="mee"/>
+      <node begin="7" end="8" id="11" lemma="tenonder" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="tenonder" vztype="fin" word="tenonder"/>
+    </node>
+  </node>
+  <sentence>Als het mislukt , ga ik mee tenonder</sentence>
+</alpino_ds>

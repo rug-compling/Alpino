@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="whq" end="13" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="13" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+        <node begin="2" end="3" getal="ev" id="5" index="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="0" cat="conj" end="13" id="6" rel="vc">
+          <node begin="7" conjtype="neven" end="8" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="0" cat="inf" end="13" id="8" rel="cnj">
+            <node begin="0" end="1" id="9" index="1" rel="mod"/>
+            <node begin="2" end="3" id="10" index="2" rel="su"/>
+            <node begin="3" cat="np" end="6" id="11" index="3" rel="obj1">
+              <node begin="3" cat="np" end="5" id="12" rel="mod">
+                <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="13" lemma="Vcard" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="Vcard" word="Vcard"/>
+                <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="14" lemma="formaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="formaat" word="formaat"/>
+              </node>
+              <node begin="5" end="6" getal="mv" graad="basis" id="15" lemma="contacten" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="contacten" word="contacten"/>
+            </node>
+            <node begin="6" buiging="zonder" end="7" id="16" lemma="exporteren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="exporteer" word="exporteren" wvorm="inf"/>
+            <node begin="9" cat="pp" end="13" id="17" index="4" rel="ld">
+              <node begin="9" end="10" id="18" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+              <node begin="10" cat="np" end="13" id="19" rel="obj1">
+                <node begin="10" buiging="zonder" end="11" getal="ev" id="20" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+                <node begin="11" buiging="met-e" end="12" graad="basis" id="21" lemma="mobiel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="mobiel" word="mobiele"/>
+                <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="telefoon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="telefoon" word="telefoon"/>
+              </node>
+            </node>
+          </node>
+          <node begin="0" cat="inf" end="13" id="23" rel="cnj">
+            <node begin="0" end="1" id="24" index="1" rel="mod"/>
+            <node begin="2" end="3" id="25" index="2" rel="su"/>
+            <node begin="3" end="6" id="26" index="3" rel="obj1"/>
+            <node begin="8" buiging="zonder" end="9" id="27" lemma="importeren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="importeer" word="importeren" wvorm="inf"/>
+            <node begin="9" end="13" id="28" index="4" rel="ld"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="29" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe kan ik Vcard formaat contacten exporteren en importeren naar mijn mobiele telefoon ?</sentence>
+</alpino_ds>

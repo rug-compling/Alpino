@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="whd">
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="welk" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welk"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="bedrijf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bedrijf" word="bedrijf"/>
+      </node>
+      <node begin="0" cat="sv1" end="6" id="5" rel="body">
+        <node begin="0" end="2" id="6" index="1" rel="su"/>
+        <node begin="2" end="3" id="7" lemma="kopen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="koop" word="kocht" wvorm="pv"/>
+        <node begin="3" cat="mwu" end="6" id="8" rel="obj1">
+          <node begin="3" end="4" id="9" lemma="Studer" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Studer" spectype="deeleigen" word="Studer"/>
+          <node begin="4" end="5" id="10" lemma="Revox" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Revox" spectype="deeleigen" word="Revox"/>
+          <node begin="5" end="6" id="11" lemma="AG" pos="name" postag="SPEC(symb)" pt="spec" rel="mwp" root="AG" spectype="symb" word="AG"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welk bedrijf kocht Studer Revox AG ?</sentence>
+</alpino_ds>

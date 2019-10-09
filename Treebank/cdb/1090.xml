@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="33" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="10" end="11" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="19" end="20" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="32" id="4" rel="--">
+      <node begin="20" end="21" id="5" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+      <node begin="21" end="22" genus="masc" getal="ev" id="6" index="1" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="men"/>
+      <node begin="0" cat="inf" end="32" id="7" rel="vc">
+        <node begin="0" cat="cp" end="19" id="8" rel="mod">
+          <node begin="0" conjtype="onder" end="1" id="9" lemma="tenzij" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="tenzij" word="Tenzij"/>
+          <node begin="1" cat="conj" end="19" id="10" rel="body">
+            <node begin="8" conjtype="neven" end="9" id="11" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="1" cat="ssub" end="19" id="12" rel="cnj">
+              <node begin="1" cat="np" end="4" id="13" index="2" rel="su">
+                <node begin="1" end="2" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                <node begin="2" buiging="met-e" end="3" id="15" lemma="enkele" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enkel" vwtype="onbep" word="enkele"/>
+                <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="16" lemma="ontwikkelingsmaatschappij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="maatschappij" word="ontwikkelingsmaatschappij"/>
+              </node>
+              <node begin="4" end="5" getal="ev" id="17" index="3" lemma="alles" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="alles" status="vol" vwtype="onbep" word="alles"/>
+              <node begin="5" end="6" id="18" lemma="maken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="maak" word="maakt" wvorm="pv"/>
+              <node begin="11" cat="cp" end="19" id="19" index="4" rel="mod">
+                <node begin="11" conjtype="onder" end="12" id="20" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="zoals"/>
+                <node begin="12" cat="pp" end="19" id="21" rel="body">
+                  <node begin="12" end="13" id="22" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+                  <node begin="13" cat="np" end="19" id="23" rel="obj1">
+                    <node begin="13" end="14" id="24" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+                    <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="25" lemma="plan" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="plan" word="plan"/>
+                    <node begin="15" cat="mwu" end="17" id="26" rel="app">
+                      <node begin="15" end="16" id="27" lemma="Hoog" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hoog" spectype="deeleigen" word="Hoog"/>
+                      <node begin="16" end="17" id="28" lemma="Catharijne" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Catharijne" spectype="deeleigen" word="Catharijne"/>
+                    </node>
+                    <node begin="17" cat="pp" end="19" id="29" rel="mod">
+                      <node begin="17" end="18" id="30" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                      <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="31" lemma="Utrecht" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Utrecht" word="Utrecht"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node begin="1" cat="ssub" end="19" id="32" rel="cnj">
+              <node begin="1" end="4" id="33" index="2" rel="su"/>
+              <node begin="4" end="5" id="34" index="3" rel="obj1"/>
+              <node begin="7" end="8" id="35" lemma="betalen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="betaal" word="betaalt" wvorm="pv"/>
+              <node begin="11" end="19" id="36" index="4" rel="mod"/>
+            </node>
+            <node begin="1" cat="ssub" end="19" id="37" rel="cnj">
+              <node begin="1" end="4" id="38" index="2" rel="su"/>
+              <node begin="4" end="5" id="39" index="3" rel="obj1"/>
+              <node begin="9" end="10" id="40" lemma="exploiteren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="exploiteer" word="exploiteert" wvorm="pv"/>
+              <node begin="11" end="19" id="41" index="4" rel="mod"/>
+            </node>
+          </node>
+        </node>
+        <node begin="21" end="22" id="42" index="1" rel="su"/>
+        <node begin="22" cat="np" end="25" id="43" rel="obj1">
+          <node begin="22" buiging="met-e" end="23" graad="basis" id="44" lemma="ambitieus" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ambitieus" word="ambitieuze"/>
+          <node begin="23" buiging="met-e" end="24" graad="basis" id="45" lemma="stedebouwkundig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="stedebouwkundig" word="stedebouwkundige"/>
+          <node begin="24" end="25" getal="mv" graad="basis" id="46" lemma="centrumplan" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="plannen" word="centrumplannen"/>
+        </node>
+        <node begin="25" end="26" id="47" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="mod" root="altijd" word="altijd"/>
+        <node begin="26" cat="pp" end="31" id="48" rel="mod">
+          <node begin="26" end="27" id="49" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="27" cat="np" end="31" id="50" rel="obj1">
+            <node begin="27" cat="detp" end="29" id="51" rel="det">
+              <node begin="27" end="28" id="52" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="mod" root="zeer" word="zeer"/>
+              <node begin="28" buiging="zonder" end="29" graad="basis" id="53" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="hd" root="veel" vwtype="onbep" word="veel"/>
+            </node>
+            <node begin="29" end="30" getal="mv" graad="basis" id="54" lemma="korrel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="korrel" word="korrels"/>
+            <node begin="30" buiging="zonder" end="31" graad="basis" id="55" lemma="zout" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="zout" word="zout"/>
+          </node>
+        </node>
+        <node begin="31" buiging="zonder" end="32" id="56" lemma="nemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem" word="nemen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="32" end="33" id="57" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Tenzij een enkele ontwikkelingsmaatschappij alles maakt , betaalt en exploiteert , zoals bij het plan Hoog Catharijne in Utrecht , moet men ambitieuze stedebouwkundige centrumplannen altijd met zeer veel korrels zout nemen .</sentence>
+</alpino_ds>

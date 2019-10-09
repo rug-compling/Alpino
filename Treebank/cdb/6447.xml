@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="Deze"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="reportage" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="reportage" word="reportage"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="verschijnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verschijn" word="verscheen" wvorm="pv"/>
+      <node begin="3" cat="pp" end="6" id="6" rel="mod">
+        <node begin="3" end="4" id="7" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="4" cat="np" end="6" id="8" rel="obj1">
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="mei" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="mei" word="mei"/>
+          <node begin="5" end="6" id="10" lemma="1963" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="1963" word="1963"/>
+        </node>
+      </node>
+      <node begin="6" cat="pp" end="8" id="11" rel="mod">
+        <node begin="6" end="7" id="12" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="13" lemma="boekvorm" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="boekvorm" word="boekvorm"/>
+      </node>
+      <node begin="8" cat="pp" end="11" id="14" rel="mod">
+        <node begin="8" end="9" id="15" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
+        <node begin="9" cat="np" end="11" id="16" rel="obj1">
+          <node begin="9" buiging="zonder" end="10" graad="basis" id="17" lemma="dezelfde" pos="det" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="det" root="dezelfde" word="dezelfde"/>
+          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="18" lemma="titel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="titel" word="titel"/>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="19" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+  </node>
+  <sentence>Deze reportage verscheen in mei 1963 in boekvorm onder dezelfde titel :</sentence>
+</alpino_ds>

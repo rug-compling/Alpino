@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="0" cat="smain" end="24" id="1" rel="--">
+      <node begin="0" cat="np" end="13" id="2" index="1" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" cat="ppart" end="9" id="4" rel="mod">
+          <node begin="1" cat="pp" end="4" id="5" rel="mod">
+            <node begin="1" end="2" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="2" cat="np" end="4" id="7" rel="obj1">
+              <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="8" lemma="augustus" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="augustus" word="augustus"/>
+              <node begin="3" end="4" id="9" lemma="1969" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="1969" word="1969"/>
+            </node>
+          </node>
+          <node begin="4" cat="pp" end="8" id="10" rel="mod">
+            <node begin="4" end="5" id="11" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+            <node begin="5" cat="mwu" end="8" id="12" rel="obj1">
+              <node begin="5" end="6" id="13" lemma="Van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Van" spectype="deeleigen" word="Van"/>
+              <node begin="6" end="7" id="14" lemma="der" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="der" spectype="deeleigen" word="der"/>
+              <node begin="7" end="8" id="15" lemma="Grinten" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Grinten" spectype="deeleigen" word="Grinten"/>
+            </node>
+          </node>
+          <node begin="8" buiging="zonder" end="9" id="16" lemma="overnemen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="overgenomen" word="overgenomen" wvorm="vd"/>
+        </node>
+        <node begin="9" buiging="met-e" end="10" graad="basis" id="17" lemma="Italiaans" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Italiaans" word="Italiaanse"/>
+        <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="18" lemma="onderneming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="onderneming" word="onderneming"/>
+        <node begin="11" cat="mwu" end="13" id="19" rel="app">
+          <node begin="11" end="12" id="20" lemma="Sipi" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Sipi" spectype="deeleigen" word="Sipi"/>
+          <node begin="12" end="13" id="21" lemma="Segrate" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Segrate" spectype="deeleigen" word="Segrate"/>
+        </node>
+      </node>
+      <node begin="13" end="14" id="22" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="24" id="23" rel="vc">
+        <node begin="0" end="13" id="24" index="1" rel="su"/>
+        <node begin="14" end="15" id="25" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
+        <node begin="15" cat="np" end="23" id="26" rel="obj1">
+          <node begin="15" end="16" id="27" lemma="90" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="90" word="90"/>
+          <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="28" lemma="procent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="procent" word="procent"/>
+          <node begin="17" cat="pp" end="23" id="29" rel="mod">
+            <node begin="17" end="18" id="30" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="18" cat="np" end="23" id="31" rel="obj1">
+              <node begin="18" end="19" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="19" end="20" getal="mv" graad="basis" id="33" lemma="aandeel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="aandeel" word="aandelen"/>
+              <node begin="20" cat="pp" end="23" id="34" rel="mod">
+                <node begin="20" end="21" id="35" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                <node begin="21" cat="mwu" end="23" id="36" rel="obj1">
+                  <node begin="21" end="22" id="37" lemma="Xiat" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Xiat" spectype="deeleigen" word="Xiat"/>
+                  <node begin="22" end="23" id="38" lemma="S.P.A." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="S.P.A." spectype="deeleigen" word="S.P.A."/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="23" buiging="zonder" end="24" id="39" lemma="verwerven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verwerf" word="verworven" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="24" end="25" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De in augustus 1969 door Van der Grinten overgenomen Italiaanse onderneming Sipi Segrate heeft nu 90 procent van de aandelen van Xiat S.P.A. verworven .</sentence>
+</alpino_ds>

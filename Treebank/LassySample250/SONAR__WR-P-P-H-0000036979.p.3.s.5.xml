@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" frame="determiner(de)" id="3" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="De"/>
+        <node begin="1" end="2" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lcat="np" lemma="filmindustrie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="film_industrie" sense="film_industrie" word="filmindustrie"/>
+      </node>
+      <node begin="2" end="3" frame="verb(hebben,past(sg),part_intransitive(terug))" id="5" infl="sg" lcat="smain" lemma="slaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="sla_terug" sc="part_intransitive(terug)" sense="sla_terug" tense="past" word="sloeg" wvorm="pv"/>
+      <node begin="3" end="4" frame="particle(terug)" id="6" lcat="part" lemma="terug" pos="part" postag="BW()" pt="bw" rel="svp" root="terug" sense="terug" word="terug"/>
+      <node begin="4" cat="cp" end="12" id="7" rel="mod">
+        <node begin="4" end="5" frame="complementizer(inf)" id="8" lcat="cp" lemma="door" pos="comp" postag="VZ(fin)" pt="vz" rel="cmp" root="door" sc="inf" sense="door" vztype="fin" word="door"/>
+        <node begin="5" cat="ti" end="12" id="9" rel="body">
+          <node begin="5" end="6" frame="complementizer(te)" id="10" lcat="cp" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" sense="te" vztype="init" word="te"/>
+          <node begin="6" cat="inf" end="12" id="11" rel="body">
+            <node begin="6" buiging="zonder" end="7" frame="verb(hebben,inf,tr_sbar)" id="12" infl="inf" lcat="inf" lemma="beweren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="beweer" sc="tr_sbar" sense="beweer" word="beweren" wvorm="inf"/>
+            <node begin="7" cat="cp" end="12" id="13" rel="vc">
+              <node begin="7" conjtype="onder" end="8" frame="complementizer(dat)" id="14" lcat="cp" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" sense="dat" word="dat"/>
+              <node begin="8" cat="ssub" end="12" id="15" rel="body">
+                <node begin="8" end="9" frame="proper_name(both,'PER')" id="16" lcat="np" lemma="Roy" neclass="PER" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="su" root="Roy" sense="Roy" spectype="deeleigen" word="Roy"/>
+                <node begin="9" end="10" frame="verb(hebben,past(sg),ninv(pc_pp(tot),part_pc_pp(op,tot)))" id="17" infl="sg" lcat="ssub" lemma="oproepen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="roep_op" sc="part_pc_pp(op,tot)" sense="roep_op-tot" tense="past" word="opriep" wvorm="pv"/>
+                <node begin="10" cat="pp" end="12" id="18" rel="pc">
+                  <node begin="10" end="11" frame="preposition(tot,[toe,[aan,toe]])" id="19" lcat="pp" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" sense="tot" vztype="init" word="tot"/>
+                  <node begin="11" end="12" frame="noun(de,mass,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="20" lcat="np" lemma="censuur" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="censuur" sense="censuur" word="censuur"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" frame="punct(punt)" id="21" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>De filmindustrie sloeg terug door te beweren dat Roy opriep tot censuur .</sentence>
+  <comments>
+    <comment>Q#WR-P-P-H-0000036979.p.3.s.5|De filmindustrie sloeg terug door te beweren dat Roy opriep tot censuur .|1|1|-0.1927079077303984</comment>
+  </comments>
+</alpino_ds>

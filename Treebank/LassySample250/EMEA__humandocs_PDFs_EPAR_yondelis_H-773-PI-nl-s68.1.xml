@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="6" end="7" frame="verb('hebben/zijn',sg,modifier(aux(inf)))" id="2" infl="sg" lcat="smain" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" sc="modifier(aux(inf))" sense="moet" tense="present" word="moet" wvorm="pv"/>
+      <node begin="7" cat="np" end="9" id="3" index="1" rel="su">
+        <node begin="7" end="8" frame="determiner(de)" id="4" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+        <node begin="8" end="9" frame="noun(both,both,both)" gen="both" genus="zijd" getal="ev" graad="basis" id="5" lcat="np" lemma="creatinineklaring" naamval="stan" ntype="soort" num="both" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="creatinineklaring" sense="creatinineklaring" word="creatinineklaring"/>
+      </node>
+      <node begin="0" cat="inf" end="11" id="6" rel="vc">
+        <node begin="7" end="9" id="7" index="1" rel="su"/>
+        <node begin="9" buiging="zonder" end="10" frame="verb(unacc,inf,passive)" id="8" infl="inf" lcat="inf" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" sc="passive" sense="word" word="worden" wvorm="inf"/>
+        <node begin="0" cat="ppart" end="11" id="9" rel="vc">
+          <node begin="0" cat="ppres" end="6" id="10" rel="mod">
+            <node aform="base" begin="0" buiging="zonder" end="1" frame="adjective(end(adv))" id="11" infl="no_e" lcat="ppres" lemma="voorafgaan" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="hd" root="voorafgaand" sense="voorafgaand" vform="gerund" word="Voorafgaand" wvorm="od"/>
+            <node begin="1" cat="conj" end="6" id="12" rel="mod">
+              <node begin="2" conjtype="neven" end="3" frame="conj(en)" id="13" lcat="vg" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" sense="en" word="en"/>
+              <node begin="1" cat="pp" end="6" id="14" rel="cnj">
+                <node begin="1" end="2" frame="preposition(aan,[vooraf])" id="15" lcat="pp" lemma="aan" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="aan" sense="aan" vztype="fin" word="aan"/>
+                <node begin="4" cat="np" end="6" id="16" index="2" rel="obj1">
+                  <node begin="4" end="5" frame="determiner(de)" id="17" infl="de" lcat="detp" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" sense="de" word="de"/>
+                  <node begin="5" end="6" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="18" lcat="np" lemma="behandeling" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="behandeling" sense="behandeling" word="behandeling"/>
+                </node>
+              </node>
+              <node begin="3" cat="pp" end="6" id="19" rel="cnj">
+                <node begin="3" end="4" frame="preposition(tijdens,[])" id="20" lcat="pp" lemma="tijdens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tijdens" sense="tijdens" vztype="init" word="tijdens"/>
+                <node begin="4" end="6" id="21" index="2" rel="obj1"/>
+              </node>
+            </node>
+          </node>
+          <node begin="7" end="9" id="22" index="1" rel="obj1"/>
+          <node begin="10" buiging="zonder" end="11" frame="verb(hebben,psp,transitive)" id="23" infl="psp" lcat="ppart" lemma="bewaken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bewaak" sc="transitive" sense="bewaak" word="bewaakt" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" frame="punct(punt)" id="24" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+  </node>
+  <sentence>Voorafgaand aan en tijdens de behandeling moet de creatinineklaring worden bewaakt .</sentence>
+  <comments>
+    <comment>Q#humandocs_PDFs_EPAR_yondelis_H-773-PI-nl-s68.1|Voorafgaand aan en tijdens de behandeling moet de creatinineklaring worden bewaakt .|1|1|-0.1509701965922325</comment>
+  </comments>
+</alpino_ds>

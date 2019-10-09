@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="cp" end="8" id="1" rel="--">
+      <node begin="0" conjtype="onder" end="1" id="2" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="omdat"/>
+      <node begin="1" cat="ssub" end="8" id="3" rel="body">
+        <node begin="1" end="2" getal="ev" id="4" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="2" cat="np" end="4" id="5" rel="obj1">
+          <node begin="2" end="3" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="winst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="winst" word="winst"/>
+        </node>
+        <node begin="4" end="5" id="8" lemma="nooit" pos="adv" postag="BW()" pt="bw" rel="mod" root="nooit" word="nooit"/>
+        <node begin="5" cat="pp" end="7" id="9" rel="obj2">
+          <node begin="5" end="6" id="10" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+          <node begin="6" end="7" genus="masc" getal="ev" id="11" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="vol" vwtype="pers" word="hem"/>
+        </node>
+        <node begin="7" end="8" id="12" lemma="beloven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="beloof" word="beloofde" wvorm="pv"/>
+      </node>
+    </node>
+  </node>
+  <sentence>omdat ik de winst nooit aan hem beloofde</sentence>
+</alpino_ds>

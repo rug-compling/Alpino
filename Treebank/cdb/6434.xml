@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="3" index="1" rel="su">
+        <node begin="2" buiging="met-e" end="3" id="4" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="num" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" vwtype="onbep" word="alle"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="5" lemma="post" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="post" word="post"/>
+      </node>
+      <node begin="0" cat="ppart" end="6" id="6" rel="vc">
+        <node begin="0" end="1" id="7" lemma="daarbij" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarbij" word="Daarbij"/>
+        <node begin="2" end="4" id="8" index="1" rel="su"/>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="verliezen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="predc" root="verloren" word="verloren" wvorm="vd"/>
+        <node begin="5" buiging="zonder" end="6" id="10" lemma="gaan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ga" word="gegaan" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Daarbij is alle post verloren gegaan .</sentence>
+</alpino_ds>

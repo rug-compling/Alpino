@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="16" id="2" rel="--">
+      <node begin="0" cat="np" end="10" id="3" rel="su">
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="5" lemma="militair" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="militair" word="militairen"/>
+        <node begin="2" cat="ppres" end="10" id="6" rel="mod">
+          <node begin="2" buiging="zonder" end="3" id="7" lemma="behoren" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="hd" root="behorend" word="behorende" wvorm="od"/>
+          <node begin="3" cat="pp" end="10" id="8" rel="mod">
+            <node begin="3" end="4" id="9" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+            <node begin="4" cat="np" end="10" id="10" rel="obj1">
+              <node begin="4" end="5" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="5" end="6" id="12" lemma="43" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="43" word="43"/>
+              <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="13" lemma="tankbataljon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bataljon" word="tankbataljon"/>
+              <node begin="7" cat="pp" end="10" id="14" rel="mod">
+                <node begin="7" end="8" id="15" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="8" cat="mwu" end="10" id="16" rel="obj1">
+                  <node begin="8" end="9" id="17" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="noun" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="&apos;t" word="&apos;t"/>
+                  <node begin="9" buiging="met-e" end="10" graad="basis" id="18" lemma="hard" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Harde" word="Harde"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="11" end="12" id="19" lemma="konden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kan" word="konden" wvorm="pv"/>
+      <node begin="12" end="13" id="20" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
+      <node begin="13" end="14" id="21" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+      <node begin="14" cat="pp" end="16" id="22" rel="pc">
+        <node begin="14" end="15" id="23" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+        <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="24" lemma="weekendverlof" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="verlof" word="weekendverlof"/>
+      </node>
+    </node>
+    <node begin="16" end="17" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De militairen behorende tot het 43 tankbataljon in &apos;t Harde , konden gisteren niet met weekendverlof .</sentence>
+</alpino_ds>

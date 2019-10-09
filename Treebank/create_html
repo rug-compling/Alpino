@@ -1,0 +1,37 @@
+#!/usr/bin/perl -w
+
+$opt_c="";
+
+use Getopt::Std;
+getopts('s:c:');
+
+print "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\">\n";
+print "<HTML><HEAD><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n";
+print "<TITLE>$opt_s</TITLE>\n";
+print "<LINK rel=stylesheet href=\"$opt_c\" type=\"text/css\">\n";
+print "</HEAD><BODY><div class=\"box\">\n";
+print "<H1>$opt_s</H1><p>\n";
+print "<H2>Last updated: ". `date +"%B %d, %Y"` . "</H2>\n";
+print "
+<p>The dependency structures are given in three formats. The xml format is the 
+source format. For visualization, we provide two additional formats. In order to
+be able to view the pdf format, you might need to install Acrobat Reader from Adobe.
+The svg format (packaged here in an xhtml file) is supported by decent browsers such 
+as Firefox. It is not supported by Internet Explorer.
+";
+print "<p><a href=\"index.pdf\">Single pdf file with all dependency structures</a><p>\n";
+print "<p><a href=\"xmls.tar.gz\">Single tar file with all xml files</a><p>\n";
+print "<p><a href=\"../$opt_s.dact\">Dact file for this corpus</a><p>\n";
+
+while (<>) {
+  chomp;
+  ($file,@words) = split;
+  $sent = join(' ',@words);
+
+  print "<p><b>$file</b>   $sent<br>\n";
+  print "[<a href=$file.svg>svg</a>,<a href=$file.xml>xml</a>,<a href=$file.pdf>pdf</a>]</p>\n";
+
+
+}
+
+print "</div></body></html>\n";

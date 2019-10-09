@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="0" cat="du" end="4" id="2" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="3" lemma="Vlindercryptogram" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="nucl" root="vlinder_cryptogram" word="Vlindercryptogram"/>
+      <node begin="2" cat="np" end="4" id="4" rel="sat">
+        <node begin="2" buiging="met-e" end="3" graad="basis" id="5" lemma="sluw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="sluw" word="sluwe"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="schoenlapper" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schoenlapper" word="schoenlapper"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Vlindercryptogram : sluwe schoenlapper</sentence>
+</alpino_ds>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="10" end="11" id="1" lemma="‘" pos="punct" postag="LET()" pt="let" rel="--" root="‘" word="‘"/>
+    <node begin="0" cat="sv1" end="13" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="controleren" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="controleer" word="Controleer" wvorm="pv"/>
+      <node begin="1" cat="np" end="13" id="4" rel="obj1">
+        <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="instelling" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="instelling" word="instellingen"/>
+        <node begin="3" cat="pp" end="7" id="7" rel="mod">
+          <node begin="3" end="4" id="8" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="4" cat="np" end="7" id="9" rel="obj1">
+            <node begin="4" end="5" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="11" lemma="Internet" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mod" root="Internet" word="Internet"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="router" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="router" word="router"/>
+          </node>
+        </node>
+        <node begin="7" cat="pp" end="13" id="13" rel="mod">
+          <node begin="7" end="8" id="14" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
+          <node begin="8" cat="np" end="13" id="15" rel="obj1">
+            <node begin="8" end="9" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="17" lemma="optie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="optie" word="optie"/>
+            <node begin="11" cat="mwu" end="13" id="18" rel="app">
+              <node begin="11" end="12" id="19" lemma="port" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="port" spectype="deeleigen" word="port"/>
+              <node begin="12" end="13" id="20" lemma="forwarding" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="forwarding" spectype="deeleigen" word="forwarding"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="21" lemma="’" pos="punct" postag="LET()" pt="let" rel="--" root="’" word="’"/>
+    <node begin="14" end="15" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Controleer de instellingen in de Internet router bij de optie ‘ port forwarding ’ .</sentence>
+</alpino_ds>

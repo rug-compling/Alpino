@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="cp" end="9" id="1" rel="--">
+      <node begin="0" conjtype="onder" end="1" id="2" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="Omdat"/>
+      <node begin="1" cat="ssub" end="9" id="3" rel="body">
+        <node begin="1" end="2" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="1" cat="ahi" end="8" id="5" rel="vc">
+          <node begin="5" cat="mwu" end="7" id="6" rel="cmp">
+            <node begin="5" end="6" id="7" lemma="aan" pos="comp" postag="VZ(init)" pt="vz" rel="mwp" root="aan" vztype="init" word="aan"/>
+            <node begin="6" end="7" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="comp" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+          </node>
+          <node begin="1" cat="inf" end="8" id="9" rel="body">
+            <node begin="1" end="2" id="10" index="1" rel="su"/>
+            <node begin="2" cat="np" end="4" id="11" rel="obj1">
+              <node begin="2" end="3" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="3" end="4" getal="mv" graad="basis" id="13" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kind" word="kinderen"/>
+            </node>
+            <node begin="4" end="5" id="14" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
+            <node begin="7" buiging="zonder" end="8" id="15" lemma="bellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bel_op" word="bellen" wvorm="inf"/>
+          </node>
+        </node>
+        <node begin="8" end="9" id="16" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="ben" wvorm="pv"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Omdat ik de kinderen op aan het bellen ben</sentence>
+</alpino_ds>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="zaak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="zaak" word="zaken"/>
+        <node begin="2" buiging="zonder" end="3" getal-n="zonder-n" id="5" lemma="doen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="doe" word="doen" wvorm="inf"/>
+      </node>
+      <node begin="3" end="4" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+      <node begin="4" cat="np" end="6" id="7" rel="predc">
+        <node begin="4" end="5" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="blunder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="blunder" word="blunder"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Het zaken doen is een blunder</sentence>
+</alpino_ds>

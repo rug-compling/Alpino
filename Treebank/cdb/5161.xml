@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="14" end="15" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="20" end="21" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="conj" end="24" id="3" rel="--">
+      <node begin="0" cat="smain" end="7" id="4" rel="cnj">
+        <node begin="0" cat="pp" end="3" id="5" rel="mod">
+          <node begin="0" end="1" id="6" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="Na"/>
+          <node begin="1" cat="np" end="3" id="7" rel="obj1">
+            <node begin="1" end="2" id="8" lemma="twaalf" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twaalf" word="twaalf"/>
+            <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="9" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="uur" word="uur"/>
+          </node>
+        </node>
+        <node begin="3" end="4" id="10" lemma="geven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="geef" word="gaf" wvorm="pv"/>
+        <node begin="4" end="5" genus="genus" getal="ev" graad="basis" id="11" index="1" lemma="Ongania" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="su" root="Ongania" word="Ongania"/>
+        <node begin="5" end="6" genus="onz" getal="ev" id="12" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
+        <node begin="6" end="7" id="13" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
+      </node>
+      <node begin="7" conjtype="neven" end="8" id="14" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="4" cat="smain" end="24" id="15" rel="cnj">
+        <node begin="4" end="5" id="16" index="1" rel="su"/>
+        <node begin="8" end="9" id="17" lemma="rijden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="rijd" word="reed" wvorm="pv"/>
+        <node begin="9" cat="pp" end="24" id="18" rel="ld">
+          <node begin="9" end="10" id="19" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+          <node begin="10" cat="np" end="24" id="20" rel="obj1">
+            <node begin="10" end="11" id="21" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="22" lemma="ministerie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="ministerie" word="ministerie"/>
+            <node begin="12" cat="pp" end="14" id="23" rel="mod">
+              <node begin="12" end="13" id="24" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="25" lemma="defensie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Defensie" word="Defensie"/>
+            </node>
+            <node begin="15" cat="rel" end="24" id="26" rel="mod">
+              <node begin="15" end="16" id="27" index="2" lemma="waarin" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarin" word="waarin"/>
+              <node begin="15" cat="ssub" end="24" id="28" rel="body">
+                <node begin="15" end="16" id="29" index="2" rel="mod"/>
+                <node begin="16" end="17" genus="masc" getal="ev" id="30" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+                <node begin="19" end="20" id="31" lemma="tekenen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="teken" word="tekende" wvorm="pv"/>
+                <node begin="17" cat="np" end="24" id="32" rel="obj1">
+                  <node begin="17" end="18" id="33" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                  <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="34" lemma="verklaring" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verklaring" word="verklaring"/>
+                  <node begin="21" cat="cp" end="24" id="35" rel="vc">
+                    <node begin="21" conjtype="onder" end="22" id="36" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+                    <node begin="22" cat="ssub" end="24" id="37" rel="body">
+                      <node begin="22" end="23" genus="masc" getal="ev" id="38" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+                      <node begin="23" end="24" id="39" lemma="aftreden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="treed" word="aftrad" wvorm="pv"/>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Na twaalf uur gaf Ongania het op en reed naar het ministerie van Defensie , waarin hij een verklaring tekende , dat hij aftrad .</sentence>
+</alpino_ds>

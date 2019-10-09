@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" index="1" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="8" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="sup"/>
+        <node begin="2" cat="np" end="4" id="6" rel="obj2">
+          <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="regering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="regering" word="regering"/>
+        </node>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="behagen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="behaag" word="behaagd" wvorm="vd"/>
+        <node begin="5" cat="ti" end="8" id="10" rel="su">
+          <node begin="6" end="7" id="11" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
+          <node begin="5" cat="inf" end="8" id="12" rel="body">
+            <node begin="5" buiging="zonder" end="6" getal-n="zonder-n" id="13" lemma="roken" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="obj1" root="rook" word="roken" wvorm="inf"/>
+            <node begin="7" buiging="zonder" end="8" id="14" lemma="verbieden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verbied" word="verbieden" wvorm="inf"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Het heeft de regering behaagd roken te verbieden</sentence>
+</alpino_ds>

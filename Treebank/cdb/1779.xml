@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="0" cat="conj" end="24" id="1" rel="--">
+      <node begin="0" cat="smain" end="8" id="2" rel="cnj">
+        <node begin="0" cat="conj" end="4" id="3" rel="su">
+          <node begin="1" conjtype="neven" end="2" id="4" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="0" cat="np" end="4" id="5" rel="cnj">
+            <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="6" lemma="Washington" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Washington" word="Washington"/>
+            <node begin="3" end="4" id="7" index="1" lemma="immers" pos="adv" postag="BW()" pt="bw" rel="mod" root="immers" word="immers"/>
+          </node>
+          <node begin="2" cat="np" end="4" id="8" rel="cnj">
+            <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="9" lemma="Moskou" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Moskou" word="Moskou"/>
+            <node begin="3" end="4" id="10" index="1" rel="mod"/>
+          </node>
+        </node>
+        <node begin="4" end="5" id="11" lemma="spelen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="speel" word="spelen" wvorm="pv"/>
+        <node begin="5" cat="np" end="8" id="12" rel="obj1">
+          <node begin="5" end="6" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" buiging="met-e" end="7" graad="basis" id="14" lemma="doorslaggevend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="doorslaggevend" word="doorslaggevende"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="15" lemma="rol" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rol" word="rol"/>
+        </node>
+      </node>
+      <node begin="8" conjtype="neven" end="9" id="16" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="9" cat="smain" end="24" id="17" rel="cnj">
+        <node begin="9" cat="conj" end="12" id="18" index="2" rel="su">
+          <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="19" lemma="London" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="London" word="London"/>
+          <node begin="10" conjtype="neven" end="11" id="20" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+          <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="21" lemma="Parijs" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Parijs" word="Parijs"/>
+        </node>
+        <node begin="12" end="13" id="22" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" word="kunnen" wvorm="pv"/>
+        <node begin="9" cat="inf" end="24" id="23" rel="vc">
+          <node begin="9" end="12" id="24" index="2" rel="su"/>
+          <node begin="13" cat="pp" end="16" id="25" rel="mod">
+            <node begin="13" end="14" id="26" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+            <node begin="14" cat="np" end="16" id="27" rel="obj1">
+              <node begin="14" end="15" id="28" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="29" lemma="conferentietafel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tafel" word="conferentietafel"/>
+            </node>
+          </node>
+          <node begin="16" cat="np" end="19" id="30" rel="obj1">
+            <node begin="16" buiging="zonder" end="17" id="31" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+            <node begin="17" buiging="zonder" end="18" graad="basis" id="32" lemma="groot" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="groot" word="groot"/>
+            <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="33" lemma="gewicht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gewicht" word="gewicht"/>
+          </node>
+          <node begin="19" buiging="zonder" end="20" graad="comp" id="34" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vwtype="onbep" word="meer"/>
+          <node begin="20" cat="pp" end="23" id="35" rel="svp">
+            <node begin="20" end="21" id="36" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="21" cat="np" end="23" id="37" rel="obj1">
+              <node begin="21" end="22" id="38" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="39" lemma="schaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schaal" word="schaal"/>
+            </node>
+          </node>
+          <node begin="23" buiging="zonder" end="24" id="40" lemma="leggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="leg" word="leggen" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="41" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Washington en Moskou immers spelen de doorslaggevende rol en London en Parijs kunnen aan de conferentietafel geen groot gewicht meer in de schaal leggen .</sentence>
+</alpino_ds>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.6">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="zonder" end="1" getal="ev" id="3" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="Mijn"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="computer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="computer" word="computer"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="uit_zetten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zet_uit" word="zet" wvorm="pv"/>
+      <node begin="3" end="4" getal="getal" id="6" lemma="zichzelf" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(refl,pron,obl,nadr,3,getal)" pt="vnw" rel="obj1" root="zichzelf" status="nadr" vwtype="refl" word="zichzelf"/>
+      <node begin="4" end="5" id="7" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
+    </node>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Mijn computer zet zichzelf uit .</sentence>
+</alpino_ds>

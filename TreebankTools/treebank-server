@@ -1,0 +1,250 @@
+#!/usr/bin/env python
+
+# Een forkende treebank server.
+
+# De client moet in transactie met een geforkte request handler.
+# Zie TreebankRequestHandler voor het protocol.
+
+# De server verwacht paden relatief aan CORPUSDIR,
+# e.g. cdb/1.xml, waar `cdb' kan zowel een directory als een compact
+# corpus kan zijn.
+
+# De server start by default op de buiten-interface.
+
+import os,sys
+
+### DEFAULTS
+
+DEFAULTPORT = 44444
+
+### MODULES
+
+ALPINO_HOME = os.getenv("ALPINO_HOME")
+if not ALPINO_HOME:
+    sys.stderr.write("treebank-server: Error: please set your ALPINO_HOME variable\n")
+    sys.exit(1)
+
+CORPUSDIR = os.path.join(ALPINO_HOME, "Treebank")
+
+sys.path.insert(0, os.path.join(ALPINO_HOME, "TreebankTools/python-lib"))
+
+from optparse import OptionParser
+from indexedcorpus import CorpusReader
+import socket
+
+import SocketServer
+
+
+### FUNCTIONS
+
+def msg(str):
+    sys.stderr.write(os.path.basename(sys.argv[0]) + ": " + str + "\n")
+
+
+class MessageLogger:
+    """Intended to write flexible debug messages"""
+    def __init__(self,prog=os.path.basename(sys.argv[0])):
+        self.prog = prog
+        self.pid = os.getpid()
+
+    def msg(self,str):
+        sys.stderr.write("%s(%d): %s\n" % (self.prog, self.pid, str))
+   
+
+class VerboseFileReader(CorpusReader):
+    """CorpusReader met minder fatale consquenties door fouten"""
+
+    def __init__(self,MessageLogger=MessageLogger):
+        CorpusReader.__init__(self)
+        self.messagelogger = MessageLogger()
+
+    def data(self, name):
+        try:
+            return CorpusReader.data(self, name)
+        except RuntimeError, err:
+            self.msg(str(err))
+
+        return ""
+
+    # zorgen dat het pid ook geprint wordt
+    def msg(self,msg):
+        self.messagelogger.msg(msg)
+
+# OK...  We leiden niet af van SocketServer.StreamRequestHandler maar
+# van BaseRequestHandler zodat we zelf de buffering kunnen bepalen.
+# Dan kunnen we zelf bepalen dat we geen flush() willen na het
+# schrijven van de grootte.
+class TreebankRequestHandler(SocketServer.BaseRequestHandler):
+    """Implementeert het treebank protocol
+
+    - De client vraagt om een bestand
+
+    - De server probeert deze op te halen
+
+    - De server zegt hoe groot het bestand is
+
+    - De server schrijft het bestand
+
+    - De client leest het juiste aantal bytes
+
+    - De server leest een nieuw request
+
+    - etc.
+
+    """
+
+    # we laten de buffering op de system default
+    rbufsize = -1
+    wbufsize = -1
+    verbose = 0
+    corpusdir = ""
+
+    def setup(self):
+        self.connection = self.request
+        self.rfile = self.connection.makefile('rb', self.rbufsize)
+        self.wfile = self.connection.makefile('wb', self.wbufsize)
+
+        # we willen gedetailleerde uitvoer
+        self.cachingfilereader = VerboseFileReader()
+
+        # zorgen dat we hier ook de fancy messages beschikbaar hebben
+        self.msg = self.cachingfilereader.msg
+
+    def finish(self):
+        if not self.wfile.closed:
+            self.wfile.flush()
+        self.wfile.close()
+        self.rfile.close()
+
+
+    def handle_one_request(self):
+        """Handle one request"""
+
+        self.parse_request()
+        
+        if self.close_connection:
+            return
+
+        # haal het bestand op (probeer het bestand op te halen...)
+
+        if self.verbose:
+            self.msg("handling '%s'..." % (self.requestfile))
+
+        # alleen paden relatief aan de treebank directory accepteren
+        # (os.path.join zorgt dat /a//b/c ==> /b/c)
+        path = os.path.normpath(os.path.join(self.corpusdir, self.requestfile))
+                                    
+        if not path.startswith(self.corpusdir):
+            # FIXME: hier zou een error status geretourneerd kunnen
+            # worden
+            self.cachingfilereader.msg("Error: absolute path '%s' is outside corpus dir" % (path))
+            data = ""
+        else:
+            data = self.cachingfilereader.data(path)
+
+
+        # geef aan hoe groot de data is
+        self.wfile.write("%d\n" % len(data))
+
+        # en knal het over de lijn
+        self.wfile.write(data)
+        self.wfile.flush()
+
+
+    def parse_request(self):
+        """Parse a request (internal).
+        
+        Vooralsnog bestaat een request uit enkel de bestandsnaam.
+
+        Dit kunnen we later veranderen door meerdere soorten requests
+        toe te staan, bv. GET, LIST
+
+        We slaan de request op in self.requestfile
+        """
+
+        # filename lezen
+        line = self.rfile.readline()
+        if not line:
+            self.close_connection = 1
+        self.requestfile = line.rstrip()
+        
+
+    def handle(self):
+        "handle multiple requests if necessary"
+        self.close_connection = 0
+
+        # self.handle_one_request()
+        while(1):
+            # hier moet een check op close van een socket()
+            if self.close_connection:
+                return
+            self.handle_one_request()
+
+
+
+class TreebankServer(SocketServer.ForkingTCPServer):
+    # Jobs on the cluster can cause many simultaneous
+    # connections
+    max_children = 20                  # default 40
+    
+    # om makkelijk te kunnen herstarten?
+    # ==> werkt nog niet omdat de kinderen ook blijven
+    #     luisteren op de een of andere manier
+    allow_reuse_address = True
+
+
+
+### ENTRY POINT
+
+if __name__ == '__main__':
+
+
+    import signal
+    signal.signal(signal.SIGPIPE, signal.SIG_DFL)
+
+
+    parser = OptionParser("usage: %prog [options]")
+
+    parser.add_option("-p", "--port", action="store", type="int", dest="port",
+                      default = DEFAULTPORT,
+                      help="the port to listen on (default: %d)" % (DEFAULTPORT))
+
+    parser.add_option("-c", "--corpus-root", action="store", dest="corpusdir",
+                      default = CORPUSDIR,
+                      help="file location (default: %s)" % (CORPUSDIR))
+
+    parser.add_option("-l", "--localhost", action="store_true", dest="localhost",
+                      help="use localhost (loopback) interface")
+
+    parser.add_option("-v", "--verbose", action="store_true", dest="verbose",
+                      help="use (more) verbose logging")
+
+
+    # parse de command line opties
+    options, args = parser.parse_args()
+
+
+    # default is de "buiten-interface"
+    if options.localhost:
+        HOST = 'localhost'
+    else:
+        HOST = socket.gethostname()
+
+    msg("HOST: %s" % (HOST))
+    msg("PORT: %d" % (options.port))
+    msg("CORPUSROOT: %s" % (options.corpusdir))
+    msg("PID: %d" % (os.getpid()))
+
+
+    # de corpusdir moet absoluut zijn
+    options.corpusdir = os.path.abspath(options.corpusdir)
+
+    handlerclass = TreebankRequestHandler
+    handlerclass.corpusdir = options.corpusdir
+
+    if options.verbose:
+        handlerclass.verbose = 1
+
+    server = TreebankServer((HOST,options.port), handlerclass)
+
+    server.serve_forever()

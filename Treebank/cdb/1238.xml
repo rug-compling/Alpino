@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="0" cat="smain" end="24" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" cat="ppart" end="3" id="4" rel="mod">
+          <node begin="1" end="2" id="5" lemma="erbij" pos="pp" postag="BW()" pt="bw" rel="mod" root="erbij" word="erbij"/>
+          <node begin="2" buiging="met-e" end="3" id="6" lemma="halen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="gehaald" word="gehaalde" wvorm="vd"/>
+        </node>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="politie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="politie" word="politie"/>
+      </node>
+      <node begin="4" end="5" id="8" lemma="stellen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="stel" word="stelde" wvorm="pv"/>
+      <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="vast" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="vast" word="vast"/>
+      <node begin="6" cat="cp" end="24" id="10" rel="vc">
+        <node begin="6" conjtype="onder" end="7" id="11" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
+        <node begin="7" cat="ssub" end="24" id="12" rel="body">
+          <node begin="7" cat="conj" end="12" id="13" index="1" rel="su">
+            <node begin="7" cat="np" end="9" id="14" rel="cnj">
+              <node begin="7" end="8" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="8" end="9" getal="mv" graad="basis" id="16" lemma="meubel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="meubel" word="meubels"/>
+            </node>
+            <node begin="9" conjtype="neven" end="10" id="17" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+            <node begin="10" cat="np" end="12" id="18" rel="cnj">
+              <node begin="10" end="11" id="19" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="20" lemma="muziekinstrument" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="muziekinstrument" word="muziekinstrument"/>
+            </node>
+          </node>
+          <node begin="21" end="22" id="21" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" word="moeten" wvorm="pv"/>
+          <node begin="7" cat="inf" end="24" id="22" rel="vc">
+            <node begin="7" end="12" id="23" index="1" rel="su"/>
+            <node begin="22" buiging="zonder" end="23" id="24" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
+            <node begin="7" cat="ppart" end="24" id="25" rel="vc">
+              <node begin="7" end="12" id="26" index="1" rel="obj1"/>
+              <node begin="12" cat="pp" end="21" id="27" rel="mod">
+                <node begin="12" end="13" id="28" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+                <node begin="13" cat="conj" end="21" id="29" rel="obj1">
+                  <node begin="13" cat="np" end="18" id="30" rel="cnj">
+                    <node begin="13" end="14" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="14" buiging="met-e" end="15" graad="basis" id="32" lemma="20-jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="20-jarige"/>
+                    <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="33" lemma="zoon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zoon" word="zoon"/>
+                    <node begin="16" cat="np" end="18" id="34" rel="mod">
+                      <node begin="16" end="17" id="35" lemma="des" lwtype="bep" naamval="gen" npagr="evmo" pos="det" postag="LID(bep,gen,evmo)" pt="lid" rel="det" root="des" word="des"/>
+                      <node begin="17" end="18" getal="ev" graad="basis" id="36" lemma="huis" naamval="gen" ntype="soort" pos="noun" postag="N(soort,ev,basis,gen)" pt="n" rel="hd" root="huizes" word="huizes"/>
+                    </node>
+                  </node>
+                  <node begin="18" conjtype="neven" end="19" id="37" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                  <node begin="19" cat="np" end="21" id="38" rel="cnj">
+                    <node begin="19" end="20" id="39" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                    <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="40" lemma="vriend" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vriend" word="vriend"/>
+                  </node>
+                </node>
+              </node>
+              <node begin="23" buiging="zonder" end="24" id="41" lemma="weghalen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="haal" word="weggehaald" wvorm="vd"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="42" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De erbij gehaalde politie stelde vast dat de meubels en het muziekinstrument door de 20-jarige zoon des huizes en een vriend moeten zijn weggehaald .</sentence>
+</alpino_ds>

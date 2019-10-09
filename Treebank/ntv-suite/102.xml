@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="0" cat="du" end="8" id="2" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="3" lemma="D66" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="tag" root="D66" word="D66"/>
+      <node begin="2" cat="du" end="8" id="4" rel="nucl">
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="AOW" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="dp" root="AOW" word="AOW"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="6" lemma="stapsgewijs" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="dp" root="stapsgewijs" word="stapsgewijs"/>
+        <node begin="4" cat="pp" end="6" id="7" rel="dp">
+          <node begin="4" end="5" id="8" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="5" end="6" id="9" lemma="2024" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="2024" word="2024"/>
+        </node>
+        <node begin="6" cat="pp" end="8" id="10" rel="dp">
+          <node begin="6" end="7" id="11" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+          <node begin="7" end="8" id="12" lemma="67" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="67" word="67"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>D66 : AOW stapsgewijs in 2024 naar 67</sentence>
+</alpino_ds>
