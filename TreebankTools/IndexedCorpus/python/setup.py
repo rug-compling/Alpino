@@ -23,6 +23,6 @@ m1 = Extension('indexedcorpus',
 setup(name = 'IndexedCorpus',
 	version = '1.0',
 	description = 'IndexedCorpus Python bindings',
-	author = 'Daniël de Ko',
+	author = 'Daniël de Kok',
 	author_email = 'me@danieldk.eu',
 	ext_modules = [m1])
