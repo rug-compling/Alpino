@@ -1,6 +1,6 @@
 # spld.config.in: process with configure to produce spld.config ([PM] not exactly true in 3.9)
 
-DEF_PREFIX=/net/aps/64/opt/sicstus3.12.11
+DEF_PREFIX=/net/aps/haytabo/opt/sicstus3.12.11
 SP_DIRNAME=sicstus-3.12.11
 
 # A run-time system foo.exe in directory DIR excpects the sicstus
@@ -44,16 +44,15 @@ JAVA_EXECOPTS=
 JDK_PATH=
 JDK_RPATH=
 JASPER_MODULE=
-TCL_LIBRARY=/net/aps/64/lib/tcl8.6
-TK_LIBRARY=/net/aps/64/lib/tk8.6
+TCL_LIBRARY=/usr/lib/tcl8.6
+TK_LIBRARY=/usr/lib/tk8.6
 TCLTK_MODULE=tcltk.po
-TCLTK_PATH=/net/aps/64
-TCL_PATH=/net/aps/64
-TK_PATH=/net/aps/64
+TCLTK_PATH=/usr
+TCL_PATH=/usr
+TK_PATH=/usr
 LD=ld
 SPLD_EXE_LDFLAGS=
-### SPLD_EXE_LIBS=-ldl -lm -lpthread
-SPLD_EXE_LIBS=-lcorpus -lfadd -ldl -lz -lstdc++ -lm -lpthread
+SPLD_EXE_LIBS=-lcorpus -lboost_system -lboost_filesystem -lfadd -ldl -lz -lstdc++ -lm -lpthread
 SPLD_JNI_LIBS=
 SPLFR_SHLD_LASTARG=
 SPLD_OPT_WRAPPER_DEFAULT=no
@@ -117,7 +116,7 @@ SOCKETLIB=
 SPVER=312
 STSFX=s.o
 SYSTEMLIB=
-TCLLIB=-L/net/aps/64/lib  -ltk8.6 -ltcl8.6   -lSM -lICE -lX11  
+TCLLIB=-L/usr/lib  -ltk8.6 -ltcl8.6   -lSM -lICE -lX11  
 # WHICH=@WHICH@
 WIN32_EXTRAOBJS=
 WIN32_SPLD_SHLD_SPECIAL=

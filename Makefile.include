@@ -75,12 +75,5 @@ LIBCORPUS_PATH=$(ALPINO_HOME)/TreebankTools/IndexedCorpus
 LIBCORPUS_DYLIB=$(LIBCORPUS_PATH)/libcorpus$(DYLIBEXT)
 LIBCORPUS_STATIC=$(LIBCORPUS_PATH)/libcorpus.a
 
-ifndef BOOST_HOME
-	BOOST_HOME=/usr
-endif
-
-BOOST_INCLUDE_PATH=$(BOOST_HOME)/include
-BOOST_LIBRARY_PATH=$(BOOST_HOME)/lib
-
 .PHONY: all clean realclean install
 

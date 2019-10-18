@@ -97,6 +97,7 @@ alpino_result_hook(_,_,_,_).
 alpino_end_hook(_,_,_,_).
 
 alpino_suite:sentence(_,_).
+alpino_suite:my_sentence(_,_).
 
 alpino_guides:check_predict(_,_).
 alpino_guides:check_connect(_,_).
@@ -196,6 +197,9 @@ alpino_unknowns:noclp_assertz(_).
 alpino_util_tmp:noclp_assertz(_).
 alpino_lc_in:noclp_assertz(_).
 alpino_table_item:noclp_assertz(_).
+alpino_paraphrase:noclp_assertz(_).
+
+apply_adt_transformations(_,_).
 
 alpino_user_transformation:user_transformation(_,_,_,_,_,_,_,_).
 

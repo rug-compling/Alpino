@@ -28,18 +28,17 @@ Alpino.bin: ../src/Alpino.sav
         --respath=../src:../fadd:../TreebankTools/IndexedCorpus/prolog:../Tokenization:../PosTagger:../Generation/fluency:../unix\
         -o Alpino.bin \
         --resources=../src/Alpino.sav=/alpino.sav \
-        -LD -Wall -lstdc++ -lz -L../TreebankTools/IndexedCorpus -lcorpus -L$(BOOST_LIBRARY_PATH)  \
-         -L../fadd -lfadd
+        -LD -Wall  -L../TreebankTools/IndexedCorpus   \
+         -L../fadd  
 
 ## I had to add a couple of libraries to spconfig
 ## cp the spconfig file from the distribution 
 ## cp .../opt/sicstus/bin/spconfig-3.12.11 spconfig
 ## change the variable SP_EXE_LIBS so that it reads:
-## SPLD_EXE_LIBS=-lcorpus -lfadd -ldl -lz -lstdc++ -lm -lpthread
-##
-##
+## SPLD_EXE_LIBS=-lcorpus -lboost_system -lboost_filesystem -lfadd -ldl -lz -lstdc++ -lm -lpthread
+## DO THIS AGAIN IF SICSTUS IS INSTALLED IN DIFFERENT LOCATION
 
-
+## this has worked years ago
 Alpino.exe: ../src/Alpino.sav
 	cp ../fadd/pro_fadd.lib .
 	cp ../PosTagger/alpino_pos.lib .

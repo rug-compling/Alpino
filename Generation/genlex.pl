@@ -1604,7 +1604,7 @@ add_morphology(noun(_,_,pl),Root,Surf) :-
 add_morphology(noun(_,_,pl),Root,Surf) :-
     atom_concat(Pref,Suf,Root),
     en(Suf,Suf2),!,
-    atoM_concat(Pref,Suf2,Surf).
+    atom_concat(Pref,Suf2,Surf).
 add_morphology(noun(_,_,pl),Root,Surf) :-
     atom_concat(_,Suf,Root),
     en(Suf),!,

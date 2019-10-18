@@ -6899,7 +6899,10 @@ n([sg(chipknip),pl(chipknippen),
 n([sg(chipper),pl(chippers)],de,[]).
 
 n([pl(chirurgen),sg(chirurg)],de,[],
-  [hart]).
+  [boom,		     % GvN: dat wilde ik worden toen ik 16 was
+   kaak,
+   hart,
+   neuro]).
 
 n([mass(chirurgie)],de,[],[hart]).
 
@@ -7301,12 +7304,15 @@ n([pl(commiezen),sg(commies)],de,[]).
 n([pl(commissariaten),sg(commissariaat)],het,[]).
 
 n([pl(commissarissen),sg(commissaris)],de,[],
-  [landbouw,
+  [hoofd,
+   landbouw,
+   politie,
    h(president),
    h(rechter),
    f(rechter),
    'Euro',euro,
    h('EU'),
+   s(rijk),
    sport
   ]).
 
@@ -14702,8 +14708,6 @@ n([pl(hoofden),sg(hoofd)],het,[app_measure],
 
 n([pl(hoofdbrekens)],both,[]).
 
-n([pl(hoofdcommissarissen),sg(hoofdcommissaris)],de,[]).
-
 n([pl(hoofddeksels),sg(hoofddeksel)],het,[]).
 
 n([sg(hoofddocent),pl(hoofddocenten)],de,
@@ -18453,7 +18457,7 @@ n([pl(kundigheden),sg(kundigheid)],de,[sbar,vp]).
 
 n([mass([kung,fu])],de,[]).
 
-n([pl(kunsten),sg(kunst)],de,[sbar,vp],
+n([pl(kunsten),sg(kunst),ignore(m(kunst,noun(de,count,sg),kunst))],de,[sbar,vp],
   [dim(kunstje)]).
 
 n([mass(kunst)],de,[],
@@ -26428,8 +26432,6 @@ n([mass(politie)],de,[],
    i(vreemdeling,vreemdelingen),
    i(zede,zeden)]).
 
-n([pl(politiecommissarissen),sg(politiecommissaris)],de,[]).
-
 n([mass(politiek)],de,[],
   [s(bezetting),
    gemeente,
@@ -27987,8 +27989,6 @@ n([pl(rechters),sg(rechter)],de,[],
    i(kind,kinder),
    opper]).
 
-n([pl('rechter-commissarissen'),sg('rechter-commissaris')],de,[]).
-
 n([pl(rechterkanten),sg(rechterkant)],de,[]).
 
 n([pl(rechtervleugels),sg(rechtervleugel)],de,[]).
@@ -28821,8 +28821,6 @@ n([pl(rijksarchieven),sg(rijksarchief)],het,[]).
 n([pl(rijksbegrotingen),sg(rijksbegroting)],de,[]).
 
 n([pl(rijksbijdragen),sg(rijksbijdrage)],de,[]).
-
-n([pl(rijkscommissarissen),sg(rijkscommissaris)],de,[]).
 
 n([pl(rijksdaalders),sg(rijksdaalder)],de,[]).
 

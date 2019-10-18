@@ -406,3 +406,7 @@ root_of_pair(v_root(Root0,_Lemma),Root) :-
     !,
     Root0=Root.
 root_of_pair(Root,Root).
+
+show_node(adt,Tree,Medium) :-
+    show(fs,Medium,[value(Tree)]).
+

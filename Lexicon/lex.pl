@@ -681,7 +681,7 @@ determiner_from_name(proper_name(_),name_determiner(pron)).
 determiner_from_name(proper_name(_,TYPE),name_determiner(pron,TYPE)).
 
 plural_from_name(proper_name(_),proper_name(pl)).
-plural_from_name(proper_name(_,TYPE),proper_name(pl,TYPE)).
+plural_from_name(proper_name(_,'PER'),proper_name(pl,'PER')).
    
 add_type('MISC',Tag,Tag) :-
     !.

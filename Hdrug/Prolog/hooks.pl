@@ -101,6 +101,7 @@ hdrug_feature:e(_,_,_).
 hdrug_feature:not_e(_,_).
 hdrug_feature:btype(_,_,_,_).
 hdrug_feature:xtype(_,_,_,_).
+hdrug_feature:eval_atom(_,_).
 
 :- public system:setenv/2, system:c_setenv/3, system:sp_win32_times/3,system:signal/2,
     system:handle_signal/1,system:sp_signal/3.

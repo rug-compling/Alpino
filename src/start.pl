@@ -3153,8 +3153,9 @@ paraphrase(Ref,Tokens,Chars) :-
     alpino_adt:dt_to_adt(Dt,Adt0),
     
     save_additional_lexical_entries(Cat),
-    
-    debug_call(1,show(tree(adt),user,[value(Adt0)])),
+
+    if_gui(Output=clig,Output=user),
+    debug_call(1,show(tree(adt),Output,[value(Adt0)])),
     
     apply_adt_transformations(Adt0,Adt),
     
@@ -3166,14 +3167,15 @@ paraphrase(Ref,Tokens,Chars) :-
 	Adt0 == Adt
     ->  format("ignored~n",[]),
 	format(user_error,"copy_input_if_no_transformation=ignore: ignore input~n",[])
-    ;   debug_call(1,show(tree(adt),user,[value(Adt)])),
+    ;   if_gui(Output=clig,Output=user),
+	debug_call(1,show(tree(adt),Output,[value(Adt)])),
 	set_flag(robustness,off),
 	flag(copy_input_if_paraphrase_failed,Off),
 	(   Off == off
 	->  true
 	;   set_flag(copy_input_if_paraphrase_failed,on(Chars,Tokens))
 	),
-	generate_or_split(Adt,GenTokens),
+	generate_or_split(Adt,GenTokens,[]),
 	hdrug_util:concat_all(GenTokens,Res,' '),
 	format("~s~n",Res)
     ).
@@ -3258,18 +3260,18 @@ save_frame(frame(_P0,_P,_Q0,_Q,Stem0,Frame,Surf,His)):-
 	alpino_paraphrase:noclp_assertz(add_lex(Stem,Surf,Frame))
     ).
 
-generate_or_split(tree(r(top,p(top)),Ds),Toks) :-
-    generate(tree(r(top,p(top)),Ds),Toks,[]).
+generate_or_split(tree(r(split,p(split)),Ds0),Toks0,Toks) :-
+    !,
+    generate_list(Ds0,Toks0,Toks).
 
-generate_or_split(tree(r(split,p(split)),Ds0),Toks) :-
-    alpino_dt:dt_canonical_dt_indices_collect(tree(r(split,p(split)),Ds0),Inds),
-    recover_indices_ds(Ds0,Ds,Inds),
-    generate_list(Ds,Toks,[]).
+generate_or_split(Tree,Toks0,Toks) :-
+    generate(Tree,Toks0,Toks).
 
 generate_list([],Toks,Toks).
 generate_list([H|T],Toks0,Toks) :-
-    debug_call(1,show(tree(adt),user,[value(H)])),
-    generate(H,Toks0,Toks1),
+    if_gui(Output=clig,Output=user),	
+    debug_call(1,show(tree(adt),Output,[value(H)])),
+    generate_or_split(H,Toks0,Toks1),
     generate_list(T,Toks1,Toks).
 
 generate(H,Toks0,Toks) :-
@@ -3277,37 +3279,5 @@ generate(H,Toks0,Toks) :-
     (  object(1,o(_,Ts,_))
     -> lists:append(Ts,Toks,Toks0)
     ;  Toks0 = Toks
-    ).
-
-recover_indices_ds([],[],_).
-recover_indices_ds([H0|T0],[H|T],Inds) :-
-    recover_indices(H0,H,Inds,[],_),
-    recover_indices_ds(T0,T,Inds).
-
-recover_indices(tree(r(Rel,Cat0),Ds0),tree(r(Rel,Cat),Ds),Is,Mine0,Mine) :-
-    recover_ind(Cat0,Cat,Ds0,Ds1,Is,Mine0,Mine1),
-    recover_ind_ds(Ds1,Ds,Is,Mine1,Mine).
-
-recover_ind(p(Cat),p(Cat),Ds,Ds,_,M,M).
-recover_ind(adt_lex(A,B,C,D,E),adt_lex(A,B,C,D,E),Ds,Ds,_,M,M).
-recover_ind(i(A),i(A),Ds,Ds,_Is,M,M):-
-    member(A,M).
-recover_ind(i(A),i(A,Struct),[],Ds,Is,M0,M):-
-    \+ member(A,M0),
-    member(A=s(Struct,Ds),Is),!,
-    member_or_add(M0,A,M).
-recover_ind(i(A,Struct),i(A,Struct),Ds,Ds,_,M0,M):-
-    member_or_add(M0,A,M).
-
-recover_ind_ds([],[],_,Is,Is).
-recover_ind_ds([H|T],[H1|T1],M,Inds0,Inds):-
-    recover_indices(H,H1,M,Inds0,Inds1),
-    recover_ind_ds(T,T1,M,Inds1,Inds).
-
-member_or_add([],El,[El]).
-member_or_add([H|T],El,[H|NT]) :-
-    (	H=El
-    ->	NT=T
-    ;	member_or_add(T,El,NT)
     ).
 

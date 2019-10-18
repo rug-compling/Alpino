@@ -241,14 +241,3 @@ t_s_r(aux(X),aux(X)).
 
 t_s_r(inverted_aux(X),inverted_aux(X)).
 
-finite(past(_)).
-finite(sg).
-finite(sg1).
-finite(sg3).
-finite(sg_heeft).
-finite(sg_hebt).
-finite(modal_u).
-finite(modal_not_u).
-finite(modal_inv).
-finite(pl).
-finite(subjunctive).
