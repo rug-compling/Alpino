@@ -48,9 +48,6 @@ tar:
 	( cd .. ; tar czf $(TAR)\
                   --exclude=.svn\
                   --exclude=.git\
-                  --exclude=TG\
-                  --exclude=T2\
-                  --exclude=TGuides\
                   --exclude=*~\
                   --exclude=.#*\
                   --exclude=.nfs*\
@@ -59,7 +56,7 @@ tar:
                   --exclude=*.po\
                   --exclude=*.sav\
                   --exclude=*.mapfile\
-                  --exclude=Test\
+                  --exclude=Test?\
                   --exclude=Derivbank\
                   --exclude=src/Alpino.bak\
                   --exclude=zlib\
@@ -82,6 +79,12 @@ tar:
                   --exclude=Treebank/Machin*\
                   --exclude=Treebank/eans\
                   --exclude=Treebank/lassy\
+                  --exclude=Treebank/medfail\
+                  --exclude=Treebank/noisy\
+                  --exclude=Treebank/paco-realtest\
+                  --exclude=Treebank/paco-test\
+                  --exclude=Treebank/qtleap1a\
+                  --exclude=Treebank/qtleap1q\
                   --exclude=Treebank/webdemo\
                   --exclude=Treebank/tt2014\
                   --exclude=Treebank/tt2015\
@@ -100,20 +103,25 @@ tar:
                   --exclude=Names/Build\
                   --exclude=LocalMachine\
                   --exclude=src/guides_data.c\
+                  --exclude=src/gadata.pl\
                   --exclude=log\
                   --exclude=*_glue_*.c\
                   --exclude=spldgen_s_*\
                   --exclude=nohup.out\
-                  --exclude=Suites/wikipedia\
+                  --exclude=Suites/qtleap\
+                  --exclude=Suites/Conll\
+                  --exclude=Suites/ChildesDutch\
                   --exclude=Suites/europarl\
                   --exclude=Suites/Eindhoven\
-                  --exclude=RSTCode\
+                  --exclude=Suites/RSTCode\
                   --exclude=Suites/eans\
                   --exclude=Suites/CLEF2003\
                   --exclude=Suites/PAROLE\
                   --exclude=Suites/Spectrum*\
                   --exclude=Suites/volkskrant1997\
                   --exclude=Suites/TwNC-02\
+                  --exclude=Suites/tt.pl\
+                  --exclude=Suites/tu.pl\
                   --exclude=Suites/lassy.*\
                   Alpino )
 	sync

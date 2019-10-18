@@ -580,6 +580,7 @@ full_matches_loc(Name0) :-
 loc(airport).
 loc(avenue).
 loc(basiliek).
+loc(beach).
 loc(berg).
 loc(berg).
 loc(center).
@@ -662,6 +663,8 @@ misc(conferentie).
 misc(disease).
 misc(disorder).
 misc(festival).
+misc(memorial).
+misc(monument).
 misc(pact).
 misc(prijs).
 misc(prijzen).

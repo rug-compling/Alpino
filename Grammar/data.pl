@@ -71,8 +71,8 @@ cat(Cat) ::-
 %% dt_features(?ListOfAttributes,?ListOfAttributes)
 %% first list are the attributes to refer to arguments
 %% second list are the attributes to refer to lists of arguments
-dt_features([body,cmp,dlink,hdf,ld,me,nucl,obcomp,obj1,obj2,pc,pobj1,
-	     predc,rhd,sat,se,su,sup,tag,vc,whd],
+dt_features([rhd,whd,body,cmp,dlink,hdf,ld,me,nucl,obcomp,obj1,obj2,pc,pobj1,
+	     predc,sat,se,su,sup,tag,vc],
 	    [app,cnj,crd,det,dp,mod,predm,svp,mwp]).
 
 dt_ds([],_,Ds,Ds).

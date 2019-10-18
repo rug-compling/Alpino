@@ -149,7 +149,7 @@ passive_transformation(r(Rel,Cat),Ds0,
     Hd = tree(r(hd,adt_lex(LexCat,word,word,verb,Feats)),[]),
     Vc = tree(r(vc,p(ppart)),VcDs0),
 
-    lists:select(Su,Ds0,Ds1),  \+ empty(Su), \+ men(Su), 
+    lists:select(Su,Ds0,Ds1),  \+ men(Su),   % \+ empty(Su),   ??? removed because of relatives
     lists:select(Hd,Ds1,Ds2),  
     lists:select(Vc,Ds2,DsRest), 
 
@@ -222,7 +222,7 @@ passive_transformation(r(Rel,Cat),Ds0,
     Hd = tree(r(hd,adt_lex(_,ben,ben,verb,Feats)),[]),
     Vc = tree(r(vc,p(ppart)),VcDs0),
 
-    lists:select(Su,Ds0,Ds1),  \+ empty(Su), \+ men(Su),
+    lists:select(Su,Ds0,Ds1),  \+ men(Su), % \+ empty(Su),  removed because of e.g. relatives
     lists:select(Hd,Ds1,Ds2),  
     lists:select(Vc,Ds2,DsRest), 
 

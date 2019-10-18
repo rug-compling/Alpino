@@ -34,7 +34,9 @@ macro(tokenize_after_breaks,
 	       r2_3:dq
 	      })
          o
-     hellip
+       hellip
+         o
+     replace('...':['.','.','.'])
          o
      replace([sep+]:sep)
          o

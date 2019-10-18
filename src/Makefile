@@ -21,7 +21,7 @@ DISK=$$ALPINO_HOME/src
 endif
 
 all: $(GUIDES)
-	$(MAKE) Alpino state
+	$(MAKE) Alpino state gadata.pl
 
 install: 
 	install -D Alpino $(BINDIR)
@@ -132,3 +132,6 @@ guides_data.c: guides_data.c.$(PROLOG)
 
 guides_data.o: guides_data.c
 	gcc -c $< -o $@
+
+gadata.pl: gadata.txt
+	cat gadata.txt  | Alpino -notk -l gadata2pl > gadata.pl

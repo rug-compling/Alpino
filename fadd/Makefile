@@ -65,7 +65,7 @@ CPPFLAGS=-O2 -Wall \
   -DPOOR_MORPH \
   -DLOOSING_RPM \
   -DMULTICOLUMN \
-  -I../util -I$(BOOST_INCLUDE_PATH)
+  -I../util 
   # -DDEBUG
   # -DOLD_COMPILER
   # -DINTERPOLATED 
@@ -74,9 +74,9 @@ CPPFLAGS=-O2 -Wall \
 
 # Normally empty
 #LDFLAGS=-L/usr/local/lib -ldmallocxx
-LDFLAGS=-L$(BOOST_LIBRARY_PATH) -lboost_thread -lboost_system
+LDFLAGS=-lboost_thread -lboost_system
 ifeq ($(PLATFORM),darwin)
-	LDFLAGS=-L$(BOOST_LIBRARY_PATH) -lboost_thread-mt -lboost_system-mt
+	LDFLAGS=-lboost_thread-mt -lboost_system-mt
 endif
 
 

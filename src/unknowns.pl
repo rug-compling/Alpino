@@ -2099,6 +2099,7 @@ function('Australiër').
 function('Autocoureur').
 function('Automatiseerder').
 function('Ayatollah').
+function('Beklaagde').
 function('Belg').
 function('Bestuurder').
 function('Bestuurslid').

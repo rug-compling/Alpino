@@ -39,7 +39,9 @@ macro(tokenize_before_breaks,
    replace([]:sep,[sep,'-'],'"')           % AD200[345]:  Tbilisi -"Ik ben er trots op dat g...
       o
    replace([]:sep,[word,komma],word)
-      o
+     o
+   replace(word('...'):'...')
+     o
    replace([[]:escape_left,sepchar - ';',[]:escape_right],{word,num,'-','+'},{word,num,'-','+'})
       o
    replace([[]:escape_left,'.',[]:escape_right],sep,{word,num})

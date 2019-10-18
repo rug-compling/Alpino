@@ -309,9 +309,8 @@ int new_t_accepts(wchar_t *in,wchar_t **out,int *max) {
   i=0;
   c=in[i];
   myout[0]='\0';
-  outl=0;
-  outl+=wcslen(ini_out);
-  if (outl > *max && !resize_buf(outl,max,&myout)) { *out = myout; return 2; }
+  outl=wcslen(ini_out);
+  if (outl >= *max && !resize_buf(outl,max,&myout)) { *out = myout; return 2; }
   wcscat(myout,ini_out);
   while (c != '\0') {
     line=trans[line].next;
@@ -331,14 +330,14 @@ int new_t_accepts(wchar_t *in,wchar_t **out,int *max) {
         }
       }
     }
-    if (outl+wcslen(trans[line].out) > *max && !resize_buf(outl+wcslen(trans[line].out),max,&myout)) { *out = myout; return 2; }
+    if (outl+wcslen(trans[line].out) >= *max && !resize_buf(outl+wcslen(trans[line].out),max,&myout)) { *out = myout; return 2; }
     wcscat(&myout[outl],trans[line].out);
     replace_from_queue(&q,&myout[outl]);
     outl+=wcslen(trans[line].out);
     i++;
     c=in[i];
   }
-  if (outl+wcslen(trans[line].final_out) > *max && !resize_buf(outl+wcslen(trans[line].final_out),max,&myout)) { *out = myout; return 2; }
+  if (outl+wcslen(trans[line].final_out) >= *max && !resize_buf(outl+wcslen(trans[line].final_out),max,&myout)) { *out = myout; return 2; }
   wcscat(&myout[outl],trans[line].final_out);
   replace_from_queue(&q,&myout[outl]);
   *out = myout;
