@@ -8,7 +8,7 @@ endif
 
 DYLIBLINKFLAGS=-fPIC -shared -lz
 WARN=-Wno-unused-local-typedefs
-CXXFLAGS=-O3 -Wall -I. -fPIC  -I$(BOOST_INCLUDE_PATH) $(WARN)
+CXXFLAGS=-O3 -Wall -I. -fPIC   $(WARN)
 
 SOURCES=\
 	src/ActCorpusReader/ActCorpusReader.cpp \
@@ -39,12 +39,13 @@ all: libcorpus$(DYLIBEXT) libcorpus.a $(PROLOGLIBS) $(PYTHONLIBS)
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 libcorpus.so: $(OBJECTS)
-	g++ $(DYLIBLINKFLAGS) -Wl,-rpath,$(BOOST_LIBRARY_PATH) \
-		-L$(BOOST_LIBRARY_PATH) -o $@ $(OBJECTS)
+	g++ $(DYLIBLINKFLAGS) \
+		-o $@ $(OBJECTS) \
+                -lboost_filesystem -lboost_system 
 
 libcorpus.dylib: $(OBJECTS)
-	g++ $(DYLIBLINKFLAGS) -Wl,-rpath,$(BOOST_LIBRARY_PATH) \
-		-L$(BOOST_LIBRARY_PATH) -lboost_filesystem-mt -lboost_system-mt \
+	g++ $(DYLIBLINKFLAGS) \
+		-lboost_filesystem-mt -lboost_system-mt \
 		-o $@ $(OBJECTS)
 	install_name_tool -change libalpino.dylib @rpath/libalpino.dylib \
 		$@
@@ -55,9 +56,9 @@ libcorpus.a: $(OBJECTS)
 prolog/corpusreader.so: prolog/corpusreader.pl prolog/corpusreader.cpp libcorpus$(DYLIBEXT)
 	$(SPLFR) prolog/corpusreader.pl prolog/corpusreader.cpp \
 		--cflag="$(CXXFLAGS)" -O2 -LD -Wall \
-		-Wl,-rpath,$(PWD) -Wl,-rpath,$(BOOST_LIBRARY_PATH) \
-		-L. -L$(BOOST_LIBRARY_PATH) -lcorpus -lboost_system \
-		-lboost_filesystem -lboost_thread -lstdc++ -lz
+		-Wl,-rpath,$(PWD) \
+		-L. -lcorpus -lboost_filesystem \
+		-lboost_system -lstdc++ -lz
 ifeq "$(PROLOG)" "sicstus"
 	mv corpusreader.so $@
 endif
@@ -65,8 +66,8 @@ endif
 prolog/corpusreader.bundle prolog/corpusreader.dylib: prolog/corpusreader.pl prolog/corpusreader.cpp libcorpus$(DYLIBEXT)
 	$(SPLFR) prolog/corpusreader.pl prolog/corpusreader.cpp \
 		--cflag="$(CXXFLAGS)" -O2 -LD -Wall \
-		-Wl,-rpath,$(PWD) -Wl,-rpath,$(BOOST_LIBRARY_PATH) \
-		-L. -L$(BOOST_LIBRARY_PATH) -lcorpus -lboost_system-mt \
+		-Wl,-rpath,$(PWD) \
+		-L. -lcorpus -lboost_system-mt \
 		-lboost_filesystem-mt -lboost_thread-mt -lstdc++ -lz
 ifeq "$(PROLOG)" "sicstus"
 	mv corpusreader.bundle $@
@@ -79,23 +80,22 @@ endif
 prolog/corpusreader.s.o: prolog/corpusreader.pl prolog/corpusreader.cpp libcorpus$(DYLIBEXT)
 	splfr prolog/corpusreader.pl prolog/corpusreader.cpp \
 		 --static --cflag="$(CXXFLAGS)" -O2 -LD -Wall \
-		-Wl,-rpath,$(PWD) -Wl,-rpath,$(BOOST_LIBRARY_PATH) \
-		-L. -L$(BOOST_LIBRARY_PATH) -lcorpus -lboost_system \
-		-lboost_filesystem -lboost_thread -lstdc++ -lz
+		-Wl,-rpath,$(PWD)  \
+		-L.  -lcorpus \
+		-lboost_filesystem -lboost_system -lstdc++ -lz
 	mv corpusreader.s.o $@
 
 python/indexedcorpus$(PYMODULEEXT): python/indexedcorpus.cpp libcorpus.a
 	rm -f python/indexedcorpus$(PYMODULEEXT)
 	rm -rf python/build
 	if [ -x ${PLATFORM} = "darwin" ] ; then \
-		( cd python ; ARCHFLAGS="-arch i386 -arch x86_64" BOOST_HOME=$(BOOST_HOME) python setup.py install --install-platlib=. ) \
+		( cd python ; ARCHFLAGS="-arch i386 -arch x86_64" BOOST_HOME=/usr python setup.py install --install-platlib=. ) \
 	else \
-		( cd python ; BOOST_HOME=$(BOOST_HOME) python setup.py install --install-platlib=. ) \
+		( cd python ; BOOST_HOME=/usr python setup.py install --install-platlib=. ) \
 	fi
 
 test/test: libcorpus.a test/test.cpp
-	g++ $(CXXFLAGS) -Wl,-rpath,$(BOOST_LIBRARY_PATH) -L$(BOOST_LIBRARY_PATH) \
-		-Wall -pedantic -I. -lz -o $@ test/test.cpp libcorpus.a
+	g++ $(CXXFLAGS) -Wall -pedantic -I. -lz -o $@ test/test.cpp libcorpus.a
 
 test: test/test
 	( cd test ; ./test )
@@ -115,4 +115,4 @@ install: dtnext
 	cp dtnext dtprev ../../bin
 
 dtnext: dtnext.cc 
-	g++  $(CXXFLAGS) -o dtnext dtnext.cc -L. -lcorpus -Wl,-rpath,$(PWD) -Wl,-rpath,$(BOOST_LIBRARY_PATH) -lboost_system -lboost_filesystem -L$(BOOST_LIBRARY_PATH) -lz
+	g++  $(CXXFLAGS) -o dtnext dtnext.cc -L. -lcorpus -Wl,-rpath,$(PWD) -lboost_system -lboost_filesystem -lz

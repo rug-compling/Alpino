@@ -6,8 +6,7 @@ include $(ALPINO_HOME)/Makefile.include
 endif
 endif
 
-CXXFLAGS=-Wall -pedantic -Wno-long-long -O3 -I. -I$(LIBCORPUS_PATH) \
-	-I$(BOOST_INCLUDE_PATH)
+CXXFLAGS=-Wall -pedantic -Wno-long-long -O3 -I. -I$(LIBCORPUS_PATH) 
 
 SOURCES=ProgramOptions/ProgramOptions.cpp miniact.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
@@ -27,9 +26,7 @@ install:
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 miniact: $(OBJECTS) $(LIBCORPUS_STATIC)
-	$(CXX) -O3 -o $@ $(OBJECTS) $(LIBCORPUS_STATIC) \
-		-L$(BOOST_LIBRARY_PATH) -Wl,-rpath,$(BOOST_LIBRARY_PATH) \
-		$(BOOST_LIBRARIES) -lz
+	$(CXX) -O3 -o $@ $(OBJECTS) $(LIBCORPUS_STATIC) $(BOOST_LIBRARIES) -lz
 
 clean:
 	find . -name '*.o' -exec rm -f {} \;

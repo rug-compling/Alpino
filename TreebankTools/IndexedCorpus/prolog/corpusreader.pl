@@ -4,8 +4,8 @@
 
 foreign_resource(corpusreader, [ file_to_codes_f,
 				 get_data_f,
-				 pathname_before_f,
-				 pathname_after_f,
+				% pathname_before_f,
+				% pathname_after_f,
 				 init(init_func),
 				 deinit(deinit_func) ]).
 
@@ -13,8 +13,9 @@ foreign_resource(corpusreader, [ file_to_codes_f,
 
 foreign(file_to_codes_f,c,file_to_codes_f(+string,[-term])).
 foreign(get_data_f,c,get_data_f(+string,[-term])).
-foreign(pathname_before_f,c,pathname_before_f(+string,[-string])).
-foreign(pathname_after_f,c,pathname_after_f(+string,[-string])).
+
+%foreign(pathname_before_f,c,pathname_before_f(+string,[-string])).
+%foreign(pathname_after_f,c,pathname_after_f(+string,[-string])).
 
 :- load_foreign_resource(corpusreader).
 
@@ -26,13 +27,13 @@ get_data(File0,Term) :-
     absolute_file_name(File0,File),
     get_data_f(File,Term).
 
-pathname_before(FileIn0,File) :-
-    absolute_file_name(FileIn0,FileIn),
-    pathname_before_f(FileIn,File).
-
-pathname_after(FileIn0,File) :-
-    absolute_file_name(FileIn0,FileIn),
-    pathname_after_f(FileIn,File).
+%pathname_before(FileIn0,File) :-
+%    absolute_file_name(FileIn0,FileIn),
+%    pathname_before_f(FileIn,File).
+%
+%pathname_after(FileIn0,File) :-
+%    absolute_file_name(FileIn0,FileIn),
+%    pathname_after_f(FileIn,File).
 
 
 /*
