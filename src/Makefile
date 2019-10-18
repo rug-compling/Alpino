@@ -134,4 +134,4 @@ guides_data.o: guides_data.c
 	gcc -c $< -o $@
 
 gadata.pl: gadata.txt
-	cat gadata.txt  | Alpino -notk -l gadata2pl > gadata.pl
+	cat gadata.txt  | ./Alpino -notk -l gadata2pl > gadata.pl
