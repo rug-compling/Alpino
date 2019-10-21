@@ -11,12 +11,11 @@ DIRS= TreebankTools fadd unix SuffixArrays PosTagger\
 
 export ALPINO_HOME
 
-all:
-	( cd Hdrug ; $(MAKE) hdrug state )
-	( cd src ; $(MAKE) guides$(MODULEEXT) )
-	for dir in $(DIRS); do ( if [ -d $$dir ]; \
-                                 then cd $$dir ; $(MAKE);\
-                                 fi ); done
+build:
+	$(MAKE) all
+	( cd Lexicon/Build; $(MAKE) ; $(MAKE) install )
+	( cd Names/Build; $(MAKE) ; $(MAKE) install )
+	$(MAKE) all
 
 quick:
 	( cd Hdrug ; $(MAKE) hdrug state )
@@ -25,18 +24,13 @@ quick:
                                  then cd $$dir ; $(MAKE);\
                                  fi ); done
 
-build:
-	$(MAKE) all
-	( cd Lexicon/Build; $(MAKE) ; $(MAKE) install )
-	( cd Names/Build; $(MAKE) ; $(MAKE) install )
-	( cd Treebank ; $(MAKE) all )
-	$(MAKE) all
-
 rebuild:
 	( cd Lexicon/Build; $(MAKE) ; $(MAKE) install )
 	( cd Names/Build; $(MAKE) ; $(MAKE) install )
-	( cd Treebank ; $(MAKE) all )
 	$(MAKE) all
+
+treebank:
+	( cd Treebank ; $(MAKE) all )
 
 install:
 	-for dir in $(DIRS); do ( if [ -d $$dir ]; \
