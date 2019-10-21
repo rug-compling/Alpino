@@ -92,6 +92,7 @@ clean:
 	rm -f *.o *.obj *.lib *.manifest *.pdb *.idb
 
 install:
+	cp tagger ../bin
 	cp tagger $(BINDIR)/
 
 realclean: clean
