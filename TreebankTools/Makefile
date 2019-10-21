@@ -13,6 +13,8 @@ endif
 
 install: 
 	cp bin/act bin/dtchecks bin/dtget bin/dtgrep bin/dtlist \
+		bin/dtsearch bin/dtview bin/dtxslt ../bin/
+	cp bin/act bin/dtchecks bin/dtget bin/dtgrep bin/dtlist \
 		bin/dtsearch bin/dtview bin/dtxslt $(BINDIR)
 	for d in $(DIRS); do ( cd $$d ; $(MAKE) install ); done
 

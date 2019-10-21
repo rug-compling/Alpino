@@ -24,6 +24,7 @@ all: $(GUIDES)
 	$(MAKE) Alpino state gadata.pl
 
 install: 
+	install -D Alpino ../bin/
 	install -D Alpino $(BINDIR)
 	install -D Alpino.man $(MANDIR)/man1/Alpino.1
 
