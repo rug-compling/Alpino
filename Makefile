@@ -11,10 +11,6 @@ DIRS= TreebankTools fadd unix SuffixArrays PosTagger\
 
 export ALPINO_HOME
 
-default:
-	echo '"make quick" for most users'
-	echo '"make rebuild" if you have all relevant tools'
-
 quick:
 	( cd Hdrug ; $(MAKE) hdrug state )
 	( cd src ; $(MAKE) guides$(MODULEEXT) )
