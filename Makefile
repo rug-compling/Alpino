@@ -11,11 +11,9 @@ DIRS= TreebankTools fadd unix SuffixArrays PosTagger\
 
 export ALPINO_HOME
 
-build:
-	$(MAKE) all
-	( cd Lexicon/Build; $(MAKE) ; $(MAKE) install )
-	( cd Names/Build; $(MAKE) ; $(MAKE) install )
-	$(MAKE) all
+default:
+	echo '"make quick" for most users'
+	echo '"make rebuild" if you have all relevant tools'
 
 quick:
 	( cd Hdrug ; $(MAKE) hdrug state )
@@ -27,7 +25,7 @@ quick:
 rebuild:
 	( cd Lexicon/Build; $(MAKE) ; $(MAKE) install )
 	( cd Names/Build; $(MAKE) ; $(MAKE) install )
-	$(MAKE) all
+	$(MAKE) quick
 
 treebank:
 	( cd Treebank ; $(MAKE) all )
