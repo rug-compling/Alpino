@@ -10,3 +10,7 @@ Normally, something like this should suffice:
     git lfs install
 
 
+In order to build the Tokenization/partok tool, you need Go, and Peter Kleiweg's utilities:
+
+    go get github.com/pebbe/util
+
