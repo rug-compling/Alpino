@@ -110,6 +110,7 @@ realclean: clean
 	rm -f python/indexedcorpus$(DYLIBEXT) python/IndexedCorpus-1.0.egg-info
 	rm -f libcorpus.a
 	rm -f test/test
+	rm -f ../python-lib/indexedcorpus$(PYMODULEEXT)
 
 install: dtnext
 	cp dtnext dtprev ../../bin
