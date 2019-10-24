@@ -3,7 +3,9 @@ to_suite(Key) :-
     read_line(Chars),
     (   Chars == end_of_file
     ->  !
-    ;	(   chars2line(Key,Chars,Count)
+    ;	(   ignore_prefix(Chars)
+	->  true
+	;   chars2line(Key,Chars,Count)
 	->  true
 	;   format(user_error,"error: ~s~n",[Chars]),
 	    fail
@@ -12,7 +14,6 @@ to_suite(Key) :-
     ).
 
 chars2line(Key,Chars,Count) :-
-    \+ ignore_prefix(Chars),
     key(Key,Chars,Count,Chars1,Id),
     alpino_util:codes_to_words(Chars1,Words),
     format("my_sentence(~q,~q).~n",[Id,Words]).
