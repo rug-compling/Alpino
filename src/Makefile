@@ -52,7 +52,9 @@ ifeq "$(PROLOG)" "sicstus"
 PLATFORM=${shell echo "prolog_flag(host_type,X), write(X), nl, fail."\
      | sicstus 2>/dev/null}
 
+ifeq "$(shell if [ -r ../Hdrug/Makefile.hdrug ]; then echo yes; fi)" "yes"
 include ../Hdrug/Makefile.hdrug
+endif
 
 state:
 	-echo "Alpino-$(PLATFORM)-$(shell svnversion)-$(PROLOG)" > ../version
