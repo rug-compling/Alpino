@@ -133,6 +133,12 @@ tu: extra.sents
 	mv tu_part*.sents.gz Machine/
 	gzip -c extra.sents > Machine/extra.sents.gz
 	touch tu
+else
+
+tt:
+
+tu:
+
 endif
 
 u: nl_lassysmall-ud-dev.pl nl_lassysmall-ud-test.pl nl_lassysmall-ud-train.pl
