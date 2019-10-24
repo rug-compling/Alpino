@@ -154,7 +154,7 @@ clean:
 
 realclean: clean
 	rm -f $(SHAREDLIB) $(PRO_FADDLIB) test_fadd $(SCRIPTS) *.dll\
-              test_fadd.exe
+              test_fadd.exe pro_fadd_swi_glue.c
 
 
 ## to test sicstus interface:

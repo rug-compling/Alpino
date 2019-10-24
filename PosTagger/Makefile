@@ -96,7 +96,7 @@ install:
 	cp tagger $(BINDIR)/
 
 realclean: clean
-	/bin/rm -f $(SHAREDLIB) tagger *.dll
+	/bin/rm -f $(SHAREDLIB) tagger *.dll alpino_pos_swi_glue.c
 
 TAGGER=./tagger
 

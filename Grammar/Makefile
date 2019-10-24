@@ -36,7 +36,7 @@ checks:
 clean:
 
 realclean: clean
-	/bin/rm -f penalty_weights.pl grammar_lc.pl *.po
+	/bin/rm -f penalty_weights.pl grammar_lc.pl *.po $(EXTRA:%.t=%.pl) $(EXTRA:%.t=%.po)
 
 install:
 

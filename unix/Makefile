@@ -31,6 +31,6 @@ unix.s.o: unix.c unix.pl
 clean:
 
 realclean: clean
-	rm -f $(PRO_unix) *.s.o
+	rm -f $(PRO_unix) *.s.o unix_swi_glue.c
 
 install:

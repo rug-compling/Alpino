@@ -41,6 +41,7 @@ realclean:
 	-for dir in Hdrug $(DIRS); do ( if [ -d $$dir ]; \
                                   then cd $$dir ; $(MAKE) realclean;\
                                   fi ); done
+	rm -f version
 
 xref:
 	@spxref -i xref.pl -w - Hdrug/Prolog/hdrug_main Hdrug/Prolog/hooks\

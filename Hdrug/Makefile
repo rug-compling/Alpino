@@ -103,7 +103,7 @@ clean :
          done
 
 realclean :
-	/bin/rm -f Prolog/hdrug.sav hdrug Prolog/hdrug
+	/bin/rm -f Prolog/hdrug.sav hdrug Prolog/hdrug Makefile.hdrug
 	-for dir in $(APPL_DIRS); do \
            if [ -d $$dir ];\
            then ( cd $$dir ;\
