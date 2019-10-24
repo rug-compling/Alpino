@@ -198,7 +198,7 @@ reconsult_test_suite(File) :-
 %% used in suites
 :- multifile user:term_expansion/2.
 user:term_expansion(expand_sentences,List) :-
-    hdrug_util:flag(suite_shortest_first,YesNo),
+    hdrug_util:hdrug_flag(suite_shortest_first,YesNo),
     expand_sentences(YesNo,List).
 
 expand_sentences(undefined,List) :-
