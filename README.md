@@ -9,6 +9,16 @@ Normally, something like this should suffice:
     sudo apt-get install git-lfs
     git lfs install
 
+## Installation
+
+cp Makefile.defs.in to Makefile.defs and edit the file appropriately. After that,
+run make
+
+    cd Alpino
+    cp Makefile.defs.in Makefile.defs
+    vi Makefile.defs
+    make
+    make install
 
 In order to build the Tokenization/partok tool, you need Go, and Peter Kleiweg's utilities:
 
