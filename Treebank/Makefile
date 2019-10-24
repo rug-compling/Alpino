@@ -30,7 +30,7 @@ clean:
 
 install: 
 
-realclean: clean
+realclean: clean trees_realclean
 
 HDRUGDIR=$(ALPINO_HOME)/Hdrug/Tcl
 
