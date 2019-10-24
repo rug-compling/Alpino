@@ -12,11 +12,12 @@ Normally, something like this should suffice:
 ## Installation
 
 cp Makefile.defs.in to Makefile.defs and edit the file appropriately. After that,
-run make
+ensure that the environment variable ALPINO_HOME points to the right directory, and run make
 
     cd Alpino
     cp Makefile.defs.in Makefile.defs
     vi Makefile.defs
+    export ALPINO_HOME=`pwd`
     make
     make install
 
