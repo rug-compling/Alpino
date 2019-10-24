@@ -18,8 +18,7 @@ install:
 clean:
 
 realclean:
-	/bin/rm -f $(suites:%=%.pl) 
-
+	/bin/rm -f $(suites:%=%.pl) tt tu tt.sents tu.sents
 
 init=1
 keyprefix=""
