@@ -67,7 +67,7 @@ clean:
 	/bin/rm -f *.o *.obj *.lib *.manifest *.pdb *.idb
 
 realclean: clean
-	/bin/rm -f $(SHAREDLIB) $(TOK) $(STATICLIB)
+	/bin/rm -f $(SHAREDLIB) $(TOK) $(STATICLIB) tokenize_swi_glue.c
 
 install:
 

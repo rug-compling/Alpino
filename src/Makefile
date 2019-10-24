@@ -117,7 +117,7 @@ clean:
 
 realclean: clean
 	/bin/rm -f Alpino $(DISK)/Alpino.sav guides${MODULEEXT}\
-                   guides.s.o guides_data.c
+                   guides.s.o guides_data.c gadata.pl guides_swi_glue.c Alpino.bak
 
 guides$(MODULEEXT): guides.pl guides.c guides_data.o
 	$(SPLFR) guides.pl guides.c guides_data.o \

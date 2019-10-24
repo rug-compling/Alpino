@@ -106,8 +106,8 @@ clean:
 
 realclean: clean
 	rm -f libcorpus$(DYLIBEXT)
-	rm -f prolog/corpusreader$(MODULEEXT)
-	rm -f python/indexedcorpus$(DYLIBEXT)
+	rm -f prolog/corpusreader$(MODULEEXT) prolog/corpusreader_swi_glue.c
+	rm -f python/indexedcorpus$(DYLIBEXT) python/IndexedCorpus-1.0.egg-info
 	rm -f libcorpus.a
 	rm -f test/test
 

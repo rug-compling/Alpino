@@ -88,7 +88,7 @@ clean:
 	rm -f *.o
 
 realclean: clean
-	rm -f *.so *.dll $(PRO_LM_LIB) $(POS) $(PLS)
+	rm -f *.so *.dll $(PRO_LM_LIB) $(POS) $(PLS) pro_lm_swi_glue.c
 
 install:
 
