@@ -8414,6 +8414,7 @@ term([human,interest]).
 term([incompatibilité,'d\'humeur']).
 term([incrowd]).
 term([inner,circle]).
+term([insta,love]).
 term([insuline,lispro]).
 term([jalousie,de,métier]).
 term([jeune,homme]).

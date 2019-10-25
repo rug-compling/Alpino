@@ -5613,6 +5613,7 @@ n([pl(boodschappers),sg(boodschapper)],de,[]).
 
 n([pl(bogen),sg(boog)],de,[],
   [rond,
+   s(spanning),
    dim(boogje)]).
 
 n([mass([boogie,woogie])],both,[]).
@@ -7043,6 +7044,8 @@ n([pl(clichés),
 n([mass(clientèle),
    mass(cliëntèle)],de,[]).
 
+n([sg(cliffhanger),pl(cliffhangers)],de,[]).
+
 n([pl(climaxen),sg(climax)],de,[]).
 
 n([mass(clinch)],de,[pred_pp(in)]).
@@ -7085,6 +7088,7 @@ n([pl(clubs),sg(club)],de,[np_app_measure],
    handbal,
    hockey,
    honkbal,
+   lees,
    motor,
    nacht,
    prof,
@@ -8324,6 +8328,7 @@ n([pl(debuten),sg(debuut)],het,
   [film,
    regie,
    speelfilm,
+   thriller,
    toneel]).
 
 n([pl(debâcles),sg(debâcle),pl(debacles),sg(debacle)],both,[]).
@@ -10430,7 +10435,10 @@ n([pl(erupties),sg(eruptie)],de,[]).
 
 n([pl(ervaringen),sg(ervaring)],de,[sbar,vp,subject_sbar,subject_vp],[]).
 
-n([pl(ervaringen),sg(ervaring)],de,[],[werk]).
+n([pl(ervaringen),sg(ervaring)],de,[],
+  [lees,
+   luister,
+   werk]).
 
 n([pl(erwten),sg(erwt)],de,[]).
 
@@ -11156,6 +11164,8 @@ n([pl(flappen),sg(flap)],de,[],[dim(flapje)]).
 
 n([pl(flarden),sg(flard)],de,[measure,
 			      pred_pp_pl(aan)]).
+
+n([sg(flashback),pl(flashbacks)],de,[]).
 
 n([pl(flats),sg(flat)],de,[],
   [service,
@@ -24987,6 +24997,8 @@ n([pl(paddestoelen),sg(paddestoel)],de,[],[dim(paddestoeltje)]).
 
 n([pl(padvinders),sg(padvinder)],de,[]).
 
+n([sg(pageturner),pl(pageturners)],de,[]).
+
 % vele pagina's tekst
 n([pl('pagina\'s'),sg(pagina)],de,[measure],
   [dim(paginaatje)]).
@@ -31587,6 +31599,8 @@ n([pl(spoelen),sg(spoel)],de,[],[dim(spoeltje)]).
 
 n([pl(spoetniks),sg(spoetnik)],de,[]).
 
+n([sg(spoiler),pl(spoilers)],de,[]).
+
 n([pl(spokerijen),sg(spokerij)],de,[]).
 
 n([pl(sponsen),pl(sponzen),sg(spons)],de,[]).
@@ -32332,6 +32346,7 @@ n([pl(stijlen),sg(stijl)],de,[],
    s(leven),
    muziek,
    rij,
+   schrijf,
    speel,
    dim(stijltje)]).
 
@@ -32812,6 +32827,7 @@ n([pl(stukken),sg(stuk),
   [],
   [hamer,
    post,
+   puzzel,
    staart,
    theater,
    top,
@@ -33506,7 +33522,8 @@ n([pl(teksten),sg(tekst)],de,
    np_app_measure,
    start_app_measure,
    sbar],
-  [lied,
+  [flap,
+   lied,
    ontwerp]).
 
 n([pl(tekstschrijvers),sg(tekstschrijver)],de,[]).
@@ -33729,7 +33746,7 @@ n([pl(terroristen),sg(terrorist)],de,[],
 
 n([pl(terugbetalingen),sg(terugbetaling)],de,[]).
 
-n([mass(terugblik)],de,[]).
+n([mass(terugblik),pl(terugblikken)],de,[]).
 
 n([mass(terugdringing)],de,[]).
 
@@ -36041,6 +36058,7 @@ n([pl(verhalen),sg(verhaal)],het,
   [beeld,
    bijbel,
    kerst,
+   s(liefde),
    dim(verhaaltje)]).
 
 n([pl(verhalen),sg(verhaal)],het,
@@ -37967,7 +37985,8 @@ n([pl(vormen),sg(vorm)],de,
 
 n([pl(vormen),sg(vorm)],de,
   [pred_pp(in)],
-  [poeder]).
+  [f([ik]),h(ik),
+   poeder]).
 
 n([pl(vormen),sg(vorm)],de,[],
   [s(beleid),

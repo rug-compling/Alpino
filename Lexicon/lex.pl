@@ -17,9 +17,9 @@
     spelling_variant31/4,
     inv_spelling_variant31/4,
     context_spelling_variant_context/6,
-    lexicon_fallback_/6,
+    lexicon_fallback_/7,
     lexicon_/6,
-    lexicon__/6.
+    lexicon__/7.
 
 
 :- use_module(alpino('src/latin1')).
@@ -94,18 +94,18 @@ lexicon_fallback(Cat,Label,Ws0,Ws,His,LC) :-
     combine_his(Variant,His0,His),
     (   long_punct_start(Word,Ws1,_,_,_,_,_)
     ->  fail
-    ;   lexicon_fallback_(Word,Cat,Label,Ws1,Ws,His0)
+    ;   lexicon_fallback_(Word,Cat,Label,Ws1,Ws,His0,LC)
     ).
 
 %% zwemmenden
 %% W inf       --> W+den nom_adjective // \+ W
-lexicon_fallback_(Word,nominalized_adjective,Label,Ws,Ws,'V-den') :-
+lexicon_fallback_(Word,nominalized_adjective,Label,Ws,Ws,'V-den',_) :-
     atom(Word),
     atom_concat(Inf,den,Word),
     xl(Inf,verb(_,InfVal,_Frame),Label,[],[]),
     inf(InfVal).
 
-lexicon_fallback_(Word,nominalized_adjective,Label,Ws,Ws,'part-V-den') :-
+lexicon_fallback_(Word,nominalized_adjective,Label,Ws,Ws,'part-V-den',_) :-
     atom(Word),
     atom_concat(PartInf,den,Word),
     particle_form(PartInf,Part,Inf),
@@ -117,18 +117,18 @@ lexicon_fallback_(Word,nominalized_adjective,Label,Ws,Ws,'part-V-den') :-
     arg(1,Sc,Part),
     concat_part_to_root(Label0,Part,Label).
 
-lexicon_fallback_(Word,nominalized_adjective,Label,Ws,Ws,'A-n') :-
+lexicon_fallback_(Word,nominalized_adjective,Label,Ws,Ws,'A-n',_) :-
     atom(Word),
     atom_concat(Adj,n,Word),
     xl(Adj,adjective(E),Label,[],[]),
     adj_e(E).
 
-lexicon_fallback_(Word,nominalized_compar_adjective,Label,Ws,Ws,'A-n') :-
+lexicon_fallback_(Word,nominalized_compar_adjective,Label,Ws,Ws,'A-n',_) :-
     atom(Word),
     atom_concat(Adj,n,Word),
     xl(Adj,adjective(ere),Label,[],[]).
 
-lexicon_fallback_(Word,nominalized_super_adjective,Label,Ws,Ws,'A-n') :-
+lexicon_fallback_(Word,nominalized_super_adjective,Label,Ws,Ws,'A-n',_) :-
     atom(Word),
     atom_concat(Adj,n,Word),
     xl(Adj,adjective(ste),Label,[],[]).
@@ -142,14 +142,14 @@ adj_e(ge_e).
 %% v-noun, because adverbs can be used as pre-modifiers:
 %% "na enig heen en weer gepraat"
 %% is this really true???
-lexicon_fallback_(Word,ge_v_noun(intransitive),Word,Ws,Ws,'ge-') :-
+lexicon_fallback_(Word,ge_v_noun(intransitive),Word,Ws,Ws,'ge-',_) :-
     atom(Word),
     atom_concat(ge,Stem,Word),
     sg1(Sg),
     xl(Stem,verb(_,Sg,_Frame),_Label,[],[]).
 
 %% ADJ-heid de-noun
-lexicon_fallback_(Word,noun(de,count,sg),LiefHeidStem,Ws,Ws,'-heid') :-
+lexicon_fallback_(Word,noun(de,count,sg),LiefHeidStem,Ws,Ws,'-heid',_) :-
     atom(Word),
     atom_concat(Lief,heid,Word),
     xl(Lief,adjective(NOE),LiefStem,[],[]),
@@ -157,7 +157,7 @@ lexicon_fallback_(Word,noun(de,count,sg),LiefHeidStem,Ws,Ws,'-heid') :-
     concat_stems([LiefStem,heid],LiefHeidStem,'_').
 
 %% ADJ-heden de-noun
-lexicon_fallback_(Word,noun(de,count,pl),LiefHeidStem,Ws,Ws,'-heden') :-
+lexicon_fallback_(Word,noun(de,count,pl),LiefHeidStem,Ws,Ws,'-heden',_) :-
     atom(Word),
     atom_concat(Lief,heden,Word),
     xl(Lief,adjective(NOE),LiefStem,[],[]),
@@ -594,8 +594,8 @@ lexicon_(Word,Cat,Label,Ws1,Ws,His,LC) :-
 	concat_stems(StemL0,Label,' ')
     ).
 
-lexicon_(Word,Cat,Label,Ws1,Ws,His,_LC) :-
-    lexicon__(Word,Cat,Label,Ws1,Ws,His).
+lexicon_(Word,Cat,Label,Ws1,Ws,His,LC) :-
+    lexicon__(Word,Cat,Label,Ws1,Ws,His,LC).
 
 lexicon_(Word,Cat,Name,Ws1,Ws,His,_LC) :-
     in_names_dictionary(Cat,Word,Name,Ws1,Ws,His).
@@ -926,29 +926,29 @@ plural_suffix(warhols).
 plural_suffix(waterboys).
 plural_suffix(wizards).
 
-lexicon__(Word,Cat,Label,Ws0,Ws,His) :-
+lexicon__(Word,Cat,Label,Ws0,Ws,His,_) :-
     lexicon___(Word,Cat,Label,Ws0,Ws,His).
 
 %% W adjective --->  W+s post_adjective
-lexicon__(Word0,Tag,Label,Ws,Ws,'Adj-s') :-
+lexicon__(Word0,Tag,Label,Ws,Ws,'Adj-s',_) :-
     remove_s(Word0,Word),
     adj_s_lexicon(Word,Tag,Label).
 
-lexicon__(op,fixed_part(op_een_v),Label,Ws0,Ws,op_een_v) :-
+lexicon__(op,fixed_part(op_een_v),Label,Ws0,Ws,op_een_v,_) :-
     next_word(een,Ws0,Ws1,_),
     next_word(Inf,Ws1,Ws,_),
     lexicon___(Inf,verb(_,InfVal,intransitive),LabelV,Ws,Ws,_),
     inf(InfVal),
     concat_stems([op,een,LabelV],Label,' ').
 
-lexicon__(Imp,verb(HZ,imp(InfVal),fixed([[ze]],no_passive)),Label,Ws0,Ws,v_ze) :-
+lexicon__(Imp,verb(HZ,imp(InfVal),fixed([[ze]],no_passive)),Label,Ws0,Ws,v_ze,_) :-
     word_form(ze),
     lexicon___(Imp,verb(HZ,InfVal,intransitive),Label,Ws0,Ws,_),
     sg1(InfVal).
 
 %% zwemmend
 %% W inf       ---> W+d adjective // \+ W adj
-lexicon__(Word,Cat,Label,Ws,Ws,'V-d'(His)) :-
+lexicon__(Word,Cat,Label,Ws,Ws,'V-d'(His),_) :-
     atom(Word),
     atom_concat(Inf,d,Word),
     lexicon___(Inf,verb(_,InfVal,Frame),Label,Ws,Ws,His),
@@ -958,7 +958,7 @@ lexicon__(Word,Cat,Label,Ws,Ws,'V-d'(His)) :-
 
 %% zwemmende
 %% W inf       --> W+de adjective // \+ W adj
-lexicon__(Word,Cat,Label,Ws,Ws,'V-de'(His)) :-
+lexicon__(Word,Cat,Label,Ws,Ws,'V-de'(His),_) :-
     atom(Word),
     atom_concat(Inf,de,Word),
     lexicon___(Inf,verb(_,InfVal,Frame),Label,Ws,Ws,His),
@@ -968,7 +968,7 @@ lexicon__(Word,Cat,Label,Ws,Ws,'V-de'(His)) :-
 
 %% W inf       --> tot W+s toe adj
 %% tot vervelens toe; tot bloedens toe
-lexicon__(tot,sentence_adverb,Label,Ws0,Ws,'tot V-s toe') :-
+lexicon__(tot,sentence_adverb,Label,Ws0,Ws,'tot V-s toe',_) :-
     next_word(VerbInfS,Ws0,Ws1,_),
     atom(VerbInfS),
     next_word(toe,Ws1,Ws,_),
@@ -980,7 +980,7 @@ lexicon__(tot,sentence_adverb,Label,Ws0,Ws,'tot V-s toe') :-
 
 %% W inf       --> tot W+s aan toe adj
 %% tot bloedens aan toe
-lexicon__(tot,adverb,Label,Ws0,Ws,'tot V-s aan toe') :-
+lexicon__(tot,adverb,Label,Ws0,Ws,'tot V-s aan toe',_) :-
     next_word(VerbInfS,Ws0,Ws1,_),
     atom(VerbInfS),
     next_word(aan,Ws1,Ws2,_),
@@ -990,32 +990,32 @@ lexicon__(tot,adverb,Label,Ws0,Ws,'tot V-s aan toe') :-
     inf(InfVal),
     hdrug_util:concat_all([tot,VerbInfS,aan,toe],Label,' ').
 
-lexicon__(AllerXst,Adj,Label,Ws,Ws,'aller-Asuper'(His)) :-
+lexicon__(AllerXst,Adj,Label,Ws,Ws,'aller-Asuper'(His),LC) :-
     atom(AllerXst),
     atom_concat(aller,Xst,AllerXst),
-    lexicon__(Xst,Adj,Label,Ws,Ws,His),
+    lexicon__(Xst,Adj,Label,Ws,Ws,His,LC),
     aller(Adj).
 
-lexicon__(aller,Adj,Label,Ws0,Ws,'aller-Asuper'(His)) :-
+lexicon__(aller,Adj,Label,Ws0,Ws,'aller-Asuper'(His),LC) :-
     aller_path(Ws0,Ws1),
     next_word(Xst,Ws1,Ws2,_),
-    lexicon__(Xst,Adj,Label,Ws2,Ws,His),
+    lexicon__(Xst,Adj,Label,Ws2,Ws,His,LC),
     aller(Adj).
 
-lexicon__('aller-',Adj,Label,Ws0,Ws,'aller-Asuper'(His)) :-
+lexicon__('aller-',Adj,Label,Ws0,Ws,'aller-Asuper'(His),LC) :-
     aller_path(Ws0,Ws1),
     next_word(Xst,Ws1,Ws2,_),
-    lexicon__(Xst,Adj,Label,Ws2,Ws,His),
+    lexicon__(Xst,Adj,Label,Ws2,Ws,His,LC),
     aller(Adj).
 
-lexicon__(op,pp,Label1,Ws0,Ws,'op zijn Belgisch'(His)) :-
+lexicon__(op,pp,Label1,Ws0,Ws,'op zijn Belgisch'(His),LC) :-
     lists:member(W/L,[zijn/zijn,
 		      'z\'n'/zijn
 		      ]),
     next_word(W,Ws0,Ws1,_),
     next_word(Belgisch,Ws1,Ws2,_),
     alpino_unknowns:starts_with_capital(Belgisch),
-    lexicon__(Belgisch,adjective(no_e(_)),Label,Ws2,Ws,His),
+    lexicon__(Belgisch,adjective(no_e(_)),Label,Ws2,Ws,His,[op,W|LC]),
     hdrug_util:concat_all([op,L,Label],Label1,' ').
     
 %% op zijn hoogst / op zijn zachtst (gezegd) / ..
@@ -1023,7 +1023,7 @@ lexicon__(op,pp,Label1,Ws0,Ws,'op zijn Belgisch'(His)) :-
 %%       jij speelde op je best
 %% TODO: op zijn Argentijns
 %% TODO: make this reversible (by moving into lexicon files)
-lexicon__(op,adjective(het_st(adv)),Label1,Ws0,Ws,'op zijn Asuper'(His)) :-
+lexicon__(op,adjective(het_st(adv)),Label1,Ws0,Ws,'op zijn Asuper'(His),LC) :-
     lists:member(W/L,[zijn/  zijn,
 		      'z\'n'/zijn,
 		      haar/  haar,
@@ -1036,7 +1036,7 @@ lexicon__(op,adjective(het_st(adv)),Label1,Ws0,Ws,'op zijn Asuper'(His)) :-
 		      je/    je]),
     next_word(W,Ws0,Ws1,_),
     next_word(Word,Ws1,Ws2,_),
-    (   lexicon__(Word,adjective(st(_A)),Label,Ws2,Ws,His)
+    (   lexicon__(Word,adjective(st(_A)),Label,Ws2,Ws,His,[op,W|LC])
     ;   Word = elfendertigst,
 	Label = elfendertigst,
 	Ws2 = Ws,
@@ -1045,55 +1045,55 @@ lexicon__(op,adjective(het_st(adv)),Label1,Ws0,Ws,'op zijn Asuper'(His)) :-
     hdrug_util:concat_all([op,L,Label],Label1,' ').
 
 %% VLAAMS: om ter snelst; om ter hardst
-lexicon__(om,adjective(het_st(adv)),Label1,Ws0,Ws,'om ter Asuper'(His)) :-
+lexicon__(om,adjective(het_st(adv)),Label1,Ws0,Ws,'om ter Asuper'(His),LC) :-
     next_word(ter,Ws0,Ws1,_),
     next_word(Word,Ws1,Ws2,_),
-    lexicon__(Word,adjective(st(_A)),Label,Ws2,Ws,His),
+    lexicon__(Word,adjective(st(_A)),Label,Ws2,Ws,His,[om,ter|LC]),
     hdrug_util:concat_all([om,ter,Label],Label1,' ').    
 
 %% zij is het aardigst(e) ---> ambiguous between complex adj and [@np det adj]
 %% zij zwemt het hardst(e)
 %% zij is het leukste, always analysed as NP
 %% since indeed you can add relative clause
-lexicon__(het,Adj,Label,[STE|Ws],Ws,'het Asuper'(His)) :-
+lexicon__(het,Adj,Label,[STE|Ws],Ws,'het Asuper'(His),_) :-
     het_ste_tag(Adj,Label,STE,His).
-lexicon__('\'t',Adj,Label,[STE|Ws],Ws,'het Asuper'(His)) :-
+lexicon__('\'t',Adj,Label,[STE|Ws],Ws,'het Asuper'(His),_) :-
     het_ste_tag(Adj,Label,STE,His).
-lexicon__('`t',Adj,Label,[STE|Ws],Ws,'het Asuper'(His)) :-
+lexicon__('`t',Adj,Label,[STE|Ws],Ws,'het Asuper'(His),_) :-
     het_ste_tag(Adj,Label,STE,His).
 
-lexicon__(om,adverb,Label,[het,STE|Ws],Ws,'om het Asuper'(His)) :-
+lexicon__(om,adverb,Label,[het,STE|Ws],Ws,'om het Asuper'(His),_) :-
     het_ste_tag(_Adj,Label0,STE,His),
     atom_concat('om ',Label0,Label).
-lexicon__(om,adverb,Label,['\'t',STE|Ws],Ws,'om het Asuper'(His)) :-
+lexicon__(om,adverb,Label,['\'t',STE|Ws],Ws,'om het Asuper'(His),_) :-
     het_ste_tag(_Adj,Label0,STE,His),
     atom_concat('om ',Label0,Label).
-lexicon__(om,adverb,Label,['`t',STE|Ws],Ws,'om het Asuper'(His)) :-
+lexicon__(om,adverb,Label,['`t',STE|Ws],Ws,'om het Asuper'(His),_) :-
     het_ste_tag(_Adj,Label0,STE,His),
     atom_concat('om ',Label0,Label).
 
-lexicon__(Word0,Tag,Label,Ws1,Ws,abbreviation(His)) :-
+lexicon__(Word0,Tag,Label,Ws1,Ws,abbreviation(His),LC) :-
     abbreviation(Word0,Abb,Ws1,Ws),
     atom(Abb),
-    lexicon__(Abb,Tag,Label,[],[],His).
+    lexicon__(Abb,Tag,Label,[],[],His,LC).
 
-lexicon__(Word0,Tag,Label,Ws1,Ws,abbreviation(His)) :-
+lexicon__(Word0,Tag,Label,Ws1,Ws,abbreviation(His),LC) :-
     abbreviation(Word0,[Word|Words],Ws1,Ws),
-    lexicon__(Word,Tag0,Label,Words,[],His),
+    lexicon__(Word,Tag0,Label,Words,[],His,LC),
     (   Tag0 = with_dt(Tag,_)
     ->  true
     ;   Tag0 = Tag
     ).
     % otherwise positions in with_dt don't make sense
 
-lexicon__(Word,Cat,Label,Ws0,Ws,variant) :-
+lexicon__(Word,Cat,Label,Ws0,Ws,variant,LC) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
-    parse_only_lex(Word,Label,Cat,Ws0,Ws).
+    parse_only_lex(Word,Label,Cat,Ws0,Ws,LC).
 
-lexicon__(Word,Cat,Label,Ws,Ws,variant(His)) :-
+lexicon__(Word,Cat,Label,Ws,Ws,variant(His),LC) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     parse_only_variant(Word,Word1,Cat),
-    lexicon__(Word1,Cat,Label,Ws,Ws,His).
+    lexicon__(Word1,Cat,Label,Ws,Ws,His,LC).
 
 %% special stuff for verbs
 %% dat hij daar tegen inbracht dat ...
@@ -3078,10 +3078,33 @@ parse_only_lex(tov,'ten opzichte van',preposition([ten,opzichte,van],[]),L0,L) :
 parse_only_lex(ivm,'in verband met',preposition([in,verband,met],[]),L0,L) :-
     next_word(met,L0,L,_).
 
-%% earlier in misc.pl:
-parse_only_lex(Word,Root,Tag,Ws,Ws) :-
+%% 6
+parse_only_lex(proloog,proloog,noun(het,count,sg),Ws,Ws,['Het'|_]).
+parse_only_lex(boek,boek,noun(de,count,sg),Ws,Ws,[de|_]).
+parse_only_lex(vervolg,vervolg,noun(de,count,sg),Ws,Ws,[de|_]).
+
+parse_only_lex(Abbr,Label,Tag,['.'|Ws],Ws,LC):-
+    abbreviation(Abbr,Word),
+    atom(Word),
+    lexicon__(Word,Tag,Label,[],[],_His,LC).
+
+parse_only_lex(Abbr,Label,Tag,['.'|Ws],Ws,LC):-
+    abbreviation(Abbr,Word),
+    Word = [H|T],
+    lexicon__(H,Tag0,Label,T,[],_His,LC),
+    (   Tag0 = with_dt(Tag,_)
+    ->  true
+    ;   Tag0 = Tag
+    ).
+    % otherwise positions in with_dt don't make sense
+
+parse_only_lex(Word,Root,Tag,Ws,Ws,_LC) :-
     parse_only_lex(Word,Root,Tag).
 
+parse_only_lex(Word,Root,Tag,Ws0,Ws,_LC) :-
+    parse_only_lex(Word,Root,Tag,Ws0,Ws).
+
+%% 5
 parse_only_lex(de,     hoeveel,wh_adjective(odet_adv),                  [hoeveel|X],X).
 
 parse_only_lex(de,     gij,    pronoun(nwh,inv,sg,both,both,def),       [gij|X],   X).
@@ -3272,22 +3295,6 @@ parse_only_lex(des, Root, Tag,[Avonds],[]) :-
     avonds(Avonds,Tag,Root).
 
 parse_only_lex(de, welk, determiner(welke,rwh,nmod,pro,yparg),[welke],[]).
-
-parse_only_lex(Abbr,Label,Tag,['.'|Ws],Ws):-
-    abbreviation(Abbr,Word),
-    atom(Word),
-    lexicon__(Word,Tag,Label,[],[],_His).
-
-parse_only_lex(Abbr,Label,Tag,['.'|Ws],Ws):-
-    abbreviation(Abbr,Word),
-    Word = [H|T],
-    lexicon__(H,Tag0,Label,T,[],_His),
-    (   Tag0 = with_dt(Tag,_)
-    ->  true
-    ;   Tag0 = Tag
-    ).
-    % otherwise positions in with_dt don't make sense
-
 
 avonds(Avonds,Tag,Root) :-
     lexicon_('\'s',Tag,Root,[Avonds],[],_,[]).
@@ -4362,12 +4369,12 @@ infinitive_of_root(Root,Infinitive) :-
 %% only one solution
 is_infinitive_of_root(Root,Infinitive) :- 
     inv_lex(Root,Infinitive),
-    lexicon__(Infinitive,verb(_,Inf,_),Root,[],[],'part-V'),
+    lexicon__(Infinitive,verb(_,Inf,_),Root,[],[],'part-V',[]),
     inf(Inf),
     !.
 is_infinitive_of_root(Root,Infinitive) :-
     inv_lex(Root,Infinitive),
-    lexicon__(Infinitive,verb(_,Inf,_),Root,[],[],normal),
+    lexicon__(Infinitive,verb(_,Inf,_),Root,[],[],normal,[]),
     inf(Inf),
     !.
 

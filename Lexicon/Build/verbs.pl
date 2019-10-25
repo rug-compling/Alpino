@@ -12806,6 +12806,7 @@ v(lees,leest,lezen,gelezen,las,lazen,
 	intransitive,
 	sbar,
 	transitive,
+	mod_pp(doorheen),          % een boek waar je gretig doorheen leest
 	part_np_er_pc_pp(af,aan),  % dat lees je er niet aan af
 	part_pp_sbar(af,aan),      % je leest er niet aan af dat ..
 	part_pp_sbar(af,van),      

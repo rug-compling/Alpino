@@ -2151,9 +2151,18 @@ alternative_to_het_sg_noun(P1,P) :-
     ),
     tag(P,_,_,_,_,_,_,adjective(_,pred)).
 
+alternative_to_de_sg_noun(P1,P) :-
+    tag(P1,P,_,_,_,_,_,Tag),
+    Tag \= noun(de,_,sg),
+    Tag \= noun(de,_,sg,_).
+
 probably_wrong_tag(P1,P) :-
     search_tag_stem(de,tag(_,P1,_,_,de,_,_,determiner(de))),
     \+ alternative_to_het_sg_noun(P1,P).
+
+probably_wrong_tag(P1,P) :-
+    search_tag_stem(het,tag(_,P1,_,_,het,'Het',_,determiner(het,nwh,nmod,pro,nparg,wkpro))),
+    \+ alternative_to_de_sg_noun(P1,P).
 
 probably_wrong_tag(P1,P) :-
     search_tag_stem(te,tag(_,P1,_,_,_,_,_,_)),
