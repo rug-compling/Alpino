@@ -3,7 +3,7 @@
 
 :- ensure_loaded(eacl99).
 
-macro(eos,    {'!',escape(?),'.'}).
+macro(eos,    {'!',escape(?),'.',''}).
 macro(komma,  ',').
 macro(sepchar,{',',openhaak,sluithaak,':',';','*',quotes,'&',eos,
 	       '°','/','♥','♡','☹','☺',word('•'),'...',word('…'),word('–'),word('—'),word('ʬ') }).
@@ -16,8 +16,8 @@ macro(quotes, {dq,sq,lq,rq,tlq,tldq,trq,trdq,tdq}).
 macro(dq,     '"'). % "	
 macro(sq,     '\'').
 macro(backquote,'`').
-macro(lq,     {'‘',backquote,'«','„','“','‚'}).
-macro(rq,     {'»','’','”','“','’'}).
+macro(lq,     {'‘',backquote,'«','„','“','‚','',''}).
+macro(rq,     {'»','’','”','“','’','',''}).
 
 % quotes are temporarily "bracketed" once we know
 % the types. But we keep the original characters
