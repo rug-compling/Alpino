@@ -379,6 +379,8 @@ punct('‚',aanhaal_links). %
 punct('„',aanhaal_links).
 punct('“',aanhaal_links).
 punct('„',aanhaal_links).
+punct('',aanhaal_links).
+punct('',aanhaal_links).
 punct('&#8221;',aanhaal_rechts). % idem rechts
 punct('”',aanhaal_rechts). % idem rechts
 punct('’',aanhaal_rechts).
@@ -395,6 +397,8 @@ punct(']',haak_sluit).
 punct('«',aanhaal_links).
 %punct('»',haak_sluit).
 punct('»',aanhaal_rechts).
+punct('',aanhaal_rechts).
+punct('',aanhaal_rechts).
 
 punct('<',haak_open).
 punct('>',haak_sluit).
@@ -490,6 +494,7 @@ punct('__',ligg_streep).  % ad2001...
 punct('~',ligg_streep).   % twitter
 punct('–',ligg_streep).
 punct('.',punt).
+punct('',punt).
 punct(;,punt_komma).
 punct('/',schuin_streep).
 punct('//',schuin_streep).

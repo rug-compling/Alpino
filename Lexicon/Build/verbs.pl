@@ -2083,6 +2083,7 @@ v(begin,begint,beginnen,begonnen,begon,begonnen,
 	mod_pp(in),    % hij is er net in begonnen (het nieuwe boek?)
 	mod_pp(tegen), % hij begint tegen winnaar Verkerk
 	pc_pp(om),     % daar was het om begonnen
+	mod_pp(in),    % over boeken. Je kunt niet meer stoppen als je er in begint !
 	fixed([pc(om),dat],no_passive),  % daar was het ons om begonnen
         acc_np_dip_sbar, % zo begon hij zijn verhaal
 	er_pp_sbar(met)  % het begon er mee dat ...
@@ -13776,6 +13777,7 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
 	ap_copula,        % liefde maakt blind
 	refl_np,          % zich zorgen/illusies maken 
 	sbar,
+	sbar_obj,         % anglicisme? De illustraties van Sarah Horne maken het dat de personages tot leven komen
 	so_pred_sbar,
 	so_pred_vp,
         pp_so_pred_np,   % ik maak aan jullie de beslissing duidelijk
@@ -15584,7 +15586,9 @@ v(ontraadsel,ontraadselt,ontraadselen,ontraadseld,ontraadselde,ontraadselden,
     [h([transitive])]).
 
 v(ontrafel,ontrafelt,ontrafelen,ontrafeld,ontrafelde,ontrafelden,
-    [h([transitive])]).
+  [h([transitive,
+      refl % word order
+     ])]).
 
 v(ontregel,ontregelt,ontregelen,ontregeld,ontregelde,ontregelden,
     [h([sbar_subj_np,
