@@ -11,14 +11,14 @@ IndexedCorpusReader::IndexedCorpusReader(IstreamPtr dataStream,
 		istringstream iss(line);
 		
 		string name;
-		iss >> name;
+		std::getline(iss, name, '\t');
 		
 		string offset64;
-		iss >> offset64;
+		std::getline(iss, offset64, '\t');
 		size_t offset = b64_decode<size_t>(offset64);
 
 		string size64;
-		iss >> size64;
+		std::getline(iss, size64);
 		size_t size = b64_decode<size_t>(size64);
 
 		IndexItemPtr item(new IndexItem(name, offset, size));
