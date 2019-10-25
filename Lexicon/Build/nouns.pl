@@ -7525,7 +7525,8 @@ n([sg(conclaaf),pl(conclaven)],het,[]).
 n([pl(conclusies),sg(conclusie)],de,
   [sbar,
    vp,
-   subject_sbar]).
+   subject_sbar],
+  [eind]).
 
 n([pl(concoursen),sg(concours)],both,[]).
 

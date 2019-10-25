@@ -527,6 +527,8 @@ punct('||',staand_streep).
 punct('|||',staand_streep).
 punct('||||',staand_streep).
 punct('|||||',staand_streep).
+punct('',aanhaal_rechts).
+punct('',aanhaal_links).
 
 punct(Atom,Type) :-
     atom(Atom),
@@ -1948,6 +1950,7 @@ l_requires3(er).
 l_requires3(het).
 l_requires3(dat).
 l_requires3(dit).
+l_requires3(die).
 l_requires3(u).
 l_requires3('Hij').
 l_requires3('Men').
@@ -2554,6 +2557,7 @@ spelling_variant(basseerde,   baseerde).
 spelling_variant(basseerden,  baseerden).
 spelling_variant(belangrijkse,belangrijkste).
 spelling_variant(benieuw,     benieuwd).
+spelling_variant(betaamd,     betaamt).
 spelling_variant(beteken,     betekenen).
 spelling_variant(bezighoud,   bezighoudt).
 spelling_variant(biezonder,   bijzonder).
@@ -3079,9 +3083,12 @@ parse_only_lex(ivm,'in verband met',preposition([in,verband,met],[]),L0,L) :-
     next_word(met,L0,L,_).
 
 %% 6
-parse_only_lex(proloog,proloog,noun(het,count,sg),Ws,Ws,['Het'|_]).
-parse_only_lex(boek,boek,noun(de,count,sg),Ws,Ws,[de|_]).
-parse_only_lex(vervolg,vervolg,noun(de,count,sg),Ws,Ws,[de|_]).
+
+parse_only_lex(Word,Word,noun(het,count,sg),Ws,Ws,['Het'|_]) :-
+    de_word_used_as_het(Word).
+
+parse_only_lex(Word,Word,noun(de,count,sg),Ws,Ws,[de|_]) :-
+    het_word_used_as_de(Word).
 
 parse_only_lex(Abbr,Label,Tag,['.'|Ws],Ws,LC):-
     abbreviation(Abbr,Word),
@@ -3302,6 +3309,13 @@ avonds(Avonds,Tag,Root) :-
 avonds(Avonds0,Tag,Root) :-
     alpino_unknowns:decap_first(Avonds0,Avonds),
     lexicon_('\'s',Tag,Root,[Avonds],[],_,[]).
+
+de_word_used_as_het(cover).
+de_word_used_as_het(epiloog).
+de_word_used_as_het(proloog).
+
+het_word_used_as_de(boek).
+het_word_used_as_de(vervolg).
 
 
 
