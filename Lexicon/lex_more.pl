@@ -4099,7 +4099,7 @@ ends_with_dot_seq1 -->
 
 ends_with_dot(Atom,Atom1) :-
     atom_concat(Atom1,'.',Atom),
-    \+ alpino_lex:lexicon__(Atom,_,_,[],[],_).
+    \+ alpino_lex:lexicon__(Atom,_,_,[],[],_,[]).
 
 url_codes(Codes) :-
     alpino_util:split_string(Codes,"/",[Domain|_]),
