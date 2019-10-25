@@ -21557,6 +21557,9 @@ a([e(lange),
    i(week,weken)
    ]).  % hm, not tmp in that case!
 
+a([e(langdradige),
+   no_e(langdradig)],adv,[],[]).
+
 a([e(langdurige),
    er(langduriger),
    ere(langdurigere),
