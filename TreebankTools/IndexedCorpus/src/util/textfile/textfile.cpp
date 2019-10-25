@@ -8,7 +8,7 @@ vector<unsigned char> indexedcorpus::readFile(string const &filename)
 
 	vector<unsigned char> data;
 
-	ifstream dataStream(filename.c_str());
+	std::ifstream dataStream(filename.c_str());
 	if (!dataStream)
           throw runtime_error(string("File could not be read: '") + filename);
 

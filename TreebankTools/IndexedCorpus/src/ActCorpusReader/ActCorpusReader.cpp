@@ -117,7 +117,7 @@ vector<string> ActCorpusReader::entriesCorpus(path const &corpusPath)
 	if (!is_regular_file(indexPath))
 		throw runtime_error(string("Index file is not a regular file: ") + indexFilename);
 	
-	boost::shared_ptr<ifstream> indexStream(new ifstream(indexFilename.c_str()));
+	boost::shared_ptr<std::ifstream> indexStream(new std::ifstream(indexFilename.c_str()));
 	if (!*indexStream)
 		throw runtime_error(string("Could not open corpus index file for reading: ") + indexFilename);
 	
@@ -202,7 +202,7 @@ string ActCorpusReader::pathNameCorpus(path const &corpus,
 	if (!is_regular_file(indexPath))
 		throw runtime_error(string("Index file is not a regular file: ") + indexFilename);
 	
-	boost::shared_ptr<ifstream> indexStream(new ifstream(indexFilename.c_str()));
+	boost::shared_ptr<std::ifstream> indexStream(new std::ifstream(indexFilename.c_str()));
 	if (!*indexStream)
 		throw runtime_error(string("Could not open corpus index file for reading: ") + indexFilename);
 	
@@ -276,7 +276,7 @@ vector<unsigned char> ActCorpusReader::readFromCorpus(path const &corpus,
 	if (!is_regular_file(indexPath))
 		throw runtime_error(string("Index file is not a regular file: ") + indexFilename);
 
-	boost::shared_ptr<ifstream> indexStream(new ifstream(indexFilename.c_str()));
+	boost::shared_ptr<std::ifstream> indexStream(new std::ifstream(indexFilename.c_str()));
 	if (!*indexStream)
 		throw runtime_error(string("Could not open corpus index file for reading: ") + indexFilename);
 	
