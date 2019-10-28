@@ -54,7 +54,7 @@ tag-tuples:
 	$(MAKE) $(DISK)/tag-unigrams.tpl $(DISK)/tag-bigrams.tpl $(DISK)/tag-trigrams.tpl
 
 train_ngram_model: train_ngram_model.cpp
-	g++ $(CXXFLAGS) -o $@ $< 
+	g++ $(CXXFLAGS) -std=c++11 -o $@ $<
 
 $(DISK)/unigrams: $(DISK)/corpus
 	$(CURRENT)/train_ngram_model $(DISK)/corpus 0 $(DISK)/unigrams $(DISK)/bigrams $(DISK)/trigrams
