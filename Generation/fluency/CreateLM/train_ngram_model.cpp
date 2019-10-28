@@ -3,12 +3,12 @@
 #include <fstream>
 #include <iostream>
 #include <iterator>
+#include <memory>
 #include <sstream>
 #include <string>
+#include <unordered_map>
 #include <vector>
 
-#include <tr1/memory>
-#include <tr1/unordered_map>
 
 #include <boost/algorithm/string/case_conv.hpp>
 #include <boost/algorithm/string/replace.hpp>
@@ -16,7 +16,6 @@
 #include "train_ngram_model.h"
 
 using namespace std;
-using namespace std::tr1;
 
 typedef unordered_map<vector<string>, size_t, VectorHash<string> > NgramFreqs;
 typedef unordered_map<vector<string>, size_t, VectorHash<string> > NgramProbs;
