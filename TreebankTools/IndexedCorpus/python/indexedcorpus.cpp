@@ -2,10 +2,9 @@
 
 #include <fstream>
 #include <iostream>
+#include <memory>
 #include <string>
 #include <vector>
-
-#include <boost/smart_ptr/shared_ptr.hpp>
 
 #include <IndexedCorpus/ActCorpusReader.hh>
 #include <IndexedCorpus/DzIstream.hh>
@@ -45,7 +44,7 @@ static PyObject *IndexedCorpusReader_new(PyTypeObject *type, PyObject *args,
 	if (self == NULL)
 		return NULL;
 
-	boost::shared_ptr<std::istream> dataStream;
+	std::shared_ptr<std::istream> dataStream;
 	try {
 		dataStream.reset(new indexedcorpus::DzIstream(dataFilename));
 	} catch (std::exception &e) {
@@ -59,7 +58,7 @@ static PyObject *IndexedCorpusReader_new(PyTypeObject *type, PyObject *args,
 		return NULL;
 	}
 
-	boost::shared_ptr<std::istream> indexStream(new std::ifstream(indexFilename));
+	std::shared_ptr<std::istream> indexStream(new std::ifstream(indexFilename));
 	if (!*indexStream) {
 		raise_exception("Could not open index file!");
 		return NULL;
@@ -192,7 +191,7 @@ static PyObject *IndexedCorpusWriter_new(PyTypeObject *type, PyObject *args,
 	if (self == NULL)
 		return NULL;
 
-	boost::shared_ptr<std::ostream> dataStream;
+	std::shared_ptr<std::ostream> dataStream;
 	try {
 		dataStream.reset(new indexedcorpus::DzOstream(dataFilename));
 	} catch (std::exception &e) {
@@ -206,7 +205,7 @@ static PyObject *IndexedCorpusWriter_new(PyTypeObject *type, PyObject *args,
 		return NULL;
 	}
 
-	boost::shared_ptr<std::ostream> indexStream(new std::ofstream(indexFilename));
+	std::shared_ptr<std::ostream> indexStream(new std::ofstream(indexFilename));
 	if (!*indexStream) {
 		raise_exception("Could not open index file!");
 		return NULL;

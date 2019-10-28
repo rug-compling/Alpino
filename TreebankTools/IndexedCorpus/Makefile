@@ -8,7 +8,7 @@ endif
 
 DYLIBLINKFLAGS=-fPIC -shared -lz
 WARN=-Wno-unused-local-typedefs
-CXXFLAGS=-O3 -Wall -I. -fPIC   $(WARN)
+CXXFLAGS=-O3 -Wall -std=c++11 -I. -fPIC   $(WARN)
 
 SOURCES=\
 	src/ActCorpusReader/ActCorpusReader.cpp \
