@@ -2,9 +2,9 @@
 #define CORPUSWRITER_HH
 
 #include <iostream>
-#include <memory>
 
 #include <boost/config.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
 
 #if defined(BOOST_HAS_THREADS)
 #include <boost/thread.hpp>
@@ -15,7 +15,7 @@
 namespace indexedcorpus
 {
 
-typedef std::shared_ptr<std::ostream> ostreamPtr;
+typedef boost::shared_ptr<std::ostream> ostreamPtr;
 
 class IndexedCorpusWriter
 {

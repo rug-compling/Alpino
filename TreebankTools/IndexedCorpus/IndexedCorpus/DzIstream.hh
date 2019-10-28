@@ -2,8 +2,9 @@
 #define DZ_ISTREAM_HH
 
 #include <iostream>
-#include <memory>
 #include <string>
+
+#include <boost/smart_ptr/shared_ptr.hpp>
 
 #include "DzIstreamBuf.hh"
 
@@ -15,7 +16,7 @@ public:
 	DzIstream(char const *filename); // Let's stick to the standards... :/
 	virtual ~DzIstream() {}
 private:
-	std::shared_ptr<DzIstreamBuf> d_streamBuf;
+	boost::shared_ptr<DzIstreamBuf> d_streamBuf;
 };
 
 }

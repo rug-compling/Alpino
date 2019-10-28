@@ -10,11 +10,12 @@
 #include <fstream>
 #include <iostream>
 #include <iterator>
-#include <memory>
 #include <sstream>
 #include <stdexcept>
 #include <string>
 #include <vector>
+
+#include <boost/smart_ptr/shared_ptr.hpp>
 
 #include <glob.h>
 #include <libgen.h>
@@ -214,13 +215,13 @@ void compactDirs(vector<string> const &dirs)
 		
 
 		string dataFilename = dirName + ".data.dz";
-		std::shared_ptr<indexedcorpus::DzOstream> dataStream(
+		boost::shared_ptr<indexedcorpus::DzOstream> dataStream(
 			new indexedcorpus::DzOstream(dataFilename.c_str()));
 		if (!*dataStream)
 			throw runtime_error("Could not open corpus data file for writing!");
 
 		string indexFilename = dirName + ".index";
-		std::shared_ptr<ofstream> indexStream(new ofstream(indexFilename.c_str()));
+		boost::shared_ptr<ofstream> indexStream(new ofstream(indexFilename.c_str()));
 		if (!*indexStream)
 			throw runtime_error("Could not open corpus index file for writing!");
 		
@@ -245,12 +246,12 @@ void extractCorpus(vector<string> const &args, bool useStdout)
 
 	string dataFilename = corpusName + ".data.dz";
 	indexedcorpus::DzIstreamBuf dzStreamBuf(dataFilename.c_str());
-	std::shared_ptr<istream> dataStream(new istream(&dzStreamBuf));
+	boost::shared_ptr<istream> dataStream(new istream(&dzStreamBuf));
 	if (!*dataStream)
 		throw runtime_error("Could not open corpus data file for reading!");
 
 	string indexFilename = corpusName + ".index";
-	std::shared_ptr<ifstream> indexStream(new ifstream(indexFilename.c_str()));
+	boost::shared_ptr<ifstream> indexStream(new ifstream(indexFilename.c_str()));
 	if (!*indexStream)
 		throw runtime_error("Could not open corpus index file for reading!");
 
@@ -306,12 +307,12 @@ void listCorpora(vector<string> const &dirs)
 			dirName.erase(dirName.size() - 1);
 			
 		string dataFilename = dirName + ".data.dz";
-		std::shared_ptr<ifstream> dataStream(new ifstream(dataFilename.c_str()));
+		boost::shared_ptr<ifstream> dataStream(new ifstream(dataFilename.c_str()));
 		if (!*dataStream)
 			throw runtime_error("Could not open corpus data file for reading!");
 
 		string indexFilename = dirName + ".index";
-		std::shared_ptr<ifstream> indexStream(new ifstream(indexFilename.c_str()));
+		boost::shared_ptr<ifstream> indexStream(new ifstream(indexFilename.c_str()));
 		if (!*indexStream)
 			throw runtime_error("Could not open corpus index file for reading!");
 			

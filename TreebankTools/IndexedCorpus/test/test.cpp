@@ -1,8 +1,8 @@
 #include <algorithm>
 #include <iterator>
-#include <memory>
 #include <sstream>
 #include <string>
+#include <boost/shared_ptr.hpp>
 
 #include <IndexedCorpus/ActCorpusReader.hh>
 #include <IndexedCorpus/DzOstream.hh>
@@ -15,7 +15,7 @@ using namespace indexedcorpus;
 void test_dzostream_crash()
 {
 	string dataFilename("/tmp/doesnotexist/asdf.data.dz");
-	std::shared_ptr<indexedcorpus::DzOstream> dataStream(
+	boost::shared_ptr<indexedcorpus::DzOstream> dataStream(
 	new indexedcorpus::DzOstream(dataFilename.c_str()));
 }
 

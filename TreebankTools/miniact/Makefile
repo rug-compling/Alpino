@@ -6,7 +6,7 @@ include $(ALPINO_HOME)/Makefile.include
 endif
 endif
 
-CXXFLAGS=-Wall -pedantic -std=c++11 -Wno-long-long -O3 -I. -I$(LIBCORPUS_PATH)
+CXXFLAGS=-Wall -pedantic -Wno-long-long -O3 -I. -I$(LIBCORPUS_PATH) 
 
 SOURCES=ProgramOptions/ProgramOptions.cpp miniact.cpp
 OBJECTS=$(SOURCES:.cpp=.o)

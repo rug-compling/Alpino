@@ -5,7 +5,6 @@
 #include <fstream>
 #include <iostream>
 #include <iterator>
-#include <memory>
 #include <stdexcept>
 #include <string>
 #include <vector>
@@ -16,6 +15,7 @@
 
 #include <boost/config.hpp>
 #include <boost/filesystem.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
 
 #if defined(BOOST_HAS_THREADS)
 #include <boost/thread.hpp>

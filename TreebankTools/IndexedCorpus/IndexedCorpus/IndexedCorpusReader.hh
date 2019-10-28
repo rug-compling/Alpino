@@ -3,11 +3,11 @@
 
 #include <iostream>
 #include <map>
-#include <memory>
 #include <string>
 #include <vector>
 
 #include <boost/config.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
 
 #if defined(BOOST_HAS_THREADS)
 #include <boost/thread/thread.hpp>
@@ -27,12 +27,12 @@ struct IndexItem
 	size_t size;
 };
 
-typedef std::shared_ptr<IndexItem> IndexItemPtr;
+typedef boost::shared_ptr<IndexItem> IndexItemPtr;
 
 typedef std::map<std::string, IndexItemPtr> IndexMap;
 typedef std::vector<IndexItemPtr> IndexPtrVec;
 
-typedef std::shared_ptr<std::istream> IstreamPtr;
+typedef boost::shared_ptr<std::istream> IstreamPtr;
 
 class IndexedCorpusReader
 {
