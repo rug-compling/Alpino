@@ -108,7 +108,7 @@ vector<string> ActCorpusReader::entriesCorpus(path const &corpusPath)
 	if (!is_regular_file(dataPath))
 		throw runtime_error(string("Data file is not a regular file: ") + dataFilename);
 	
-	boost::shared_ptr<istream> dataStream(new DzIstream(dataFilename.c_str()));
+	std::shared_ptr<istream> dataStream(new DzIstream(dataFilename.c_str()));
 	if (!*dataStream)
 		throw runtime_error(string("Could not open corpus data file for reading: ") + dataFilename);
 
@@ -117,7 +117,7 @@ vector<string> ActCorpusReader::entriesCorpus(path const &corpusPath)
 	if (!is_regular_file(indexPath))
 		throw runtime_error(string("Index file is not a regular file: ") + indexFilename);
 	
-	boost::shared_ptr<std::ifstream> indexStream(new std::ifstream(indexFilename.c_str()));
+	std::shared_ptr<std::ifstream> indexStream(new std::ifstream(indexFilename.c_str()));
 	if (!*indexStream)
 		throw runtime_error(string("Could not open corpus index file for reading: ") + indexFilename);
 	
@@ -193,7 +193,7 @@ string ActCorpusReader::pathNameCorpus(path const &corpus,
 	if (!is_regular_file(dataPath))
 		throw runtime_error(string("ActCorpusReader::pathNameCorpus: data file is not a regular file: ") + dataFilename);
 	
-	boost::shared_ptr<istream> dataStream(new DzIstream(dataFilename.c_str()));
+	std::shared_ptr<istream> dataStream(new DzIstream(dataFilename.c_str()));
 	if (!*dataStream)
 		throw runtime_error(string("Could not open corpus data file for reading: ") + dataFilename);
 
@@ -202,7 +202,7 @@ string ActCorpusReader::pathNameCorpus(path const &corpus,
 	if (!is_regular_file(indexPath))
 		throw runtime_error(string("Index file is not a regular file: ") + indexFilename);
 	
-	boost::shared_ptr<std::ifstream> indexStream(new std::ifstream(indexFilename.c_str()));
+	std::shared_ptr<std::ifstream> indexStream(new std::ifstream(indexFilename.c_str()));
 	if (!*indexStream)
 		throw runtime_error(string("Could not open corpus index file for reading: ") + indexFilename);
 	
@@ -267,7 +267,7 @@ vector<unsigned char> ActCorpusReader::readFromCorpus(path const &corpus,
 	if (!is_regular_file(dataPath))
 		throw runtime_error(string("Data file is not a regular file: ") + dataFilename);
 
-	boost::shared_ptr<istream> dataStream(new DzIstream(dataFilename.c_str()));
+	std::shared_ptr<istream> dataStream(new DzIstream(dataFilename.c_str()));
 	if (!*dataStream)
 		throw runtime_error(string("Could not open corpus data file for reading: ") + dataFilename);
 
@@ -276,7 +276,7 @@ vector<unsigned char> ActCorpusReader::readFromCorpus(path const &corpus,
 	if (!is_regular_file(indexPath))
 		throw runtime_error(string("Index file is not a regular file: ") + indexFilename);
 
-	boost::shared_ptr<std::ifstream> indexStream(new std::ifstream(indexFilename.c_str()));
+	std::shared_ptr<std::ifstream> indexStream(new std::ifstream(indexFilename.c_str()));
 	if (!*indexStream)
 		throw runtime_error(string("Could not open corpus index file for reading: ") + indexFilename);
 	
