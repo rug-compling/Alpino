@@ -21,3 +21,4 @@ extra/./957.xml	//node[ @cat and @rel="svp" and not(@cat="pp") and not(@cat="mwu
 extra/./1147.xml	//node[@wvorm="pv" and not(../@cat="smain" or ../@cat="ssub" or ../@cat="sv1" or ../@cat="mwu" or ../@cat="top" or ../@cat="du") ]	unexpected finite verb?
 extra/./1156.xml	//node[ ../@cat="detp" and not(@rel="hd") and not(@rel="obcomp") and not(@rel="mod") and not(@rel="me")]	unexpected detp-daughter.   Expected rels: hd obcomp mod me
 extra/./1247.xml	//node[ @cat and @rel="svp" and not(@cat="pp") and not(@cat="mwu") and not(@cat="ti") and not(@cat="ahi") and not(@cat="inf")]	unexpected svp-category.   Expected cats: pp mwu ti ahi inf
+extra/./1247.xml	//node[@rel="hd" and ../@cat="np" and @pt and not(@pt="n" or @pt="tw" or @pt="spec" or @pt="adj" or @pt="ww" or @pt="vnw" or @pt="bw")]	unexpected postag for head of np
