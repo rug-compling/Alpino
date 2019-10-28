@@ -4998,7 +4998,7 @@ m(mede,             modal_adverb(comp_prep_verb), mede).
 
 m(hoe,              hoe_adv,hoe).
 m('des te',         hoe_adv,[des,te]).
-
+m('zo te',          hoe_adv,[zo,te]).   % Vlaams? Zo te verder je in het boek komt , zo te meer verhalen erbij komen .
 
 %% adverb +Wh
 m(hoe,              wh_adjective,hoe).

@@ -4211,6 +4211,7 @@ lemma_root(door_ontruimen,ontruim_door) .
 lemma_root(door_ontsmetten,ontsmet_door) .
 lemma_root(door_ontsnappen,ontsnap_door) .
 lemma_root(door_ontspannen,ontspan_door) .
+lemma_root(door_ontspinnen,ontspin_door) .
 lemma_root(door_ontsporen,ontspoor_door) .
 lemma_root(door_ontspringen,ontspring_door) .
 lemma_root(door_ontspruiten,ontspruit_door) .
@@ -11629,6 +11630,7 @@ lemma_root(raak_ontruimen,ontruim_raak) .
 lemma_root(raak_ontsmetten,ontsmet_raak) .
 lemma_root(raak_ontsnappen,ontsnap_raak) .
 lemma_root(raak_ontspannen,ontspan_raak) .
+lemma_root(raak_ontspinnen,ontspin_raak) .
 lemma_root(raak_ontsporen,ontspoor_raak) .
 lemma_root(raak_ontspringen,ontspring_raak) .
 lemma_root(raak_ontspruiten,ontspruit_raak) .
@@ -16139,6 +16141,7 @@ lemma_root(uit_happen,hap_uit) .
 lemma_root(uit_harken,hark_uit) .
 lemma_root(uit_harmoniëren,harmonieer_uit) .
 lemma_root(uit_harsen,hars_uit) .
+lemma_root(uit_hebben,heb_uit) .
 lemma_root(uit_hechten,hecht_uit) .
 lemma_root(uit_heersen,heers_uit) .
 lemma_root(uit_heffen,hef_uit) .
@@ -16664,6 +16667,7 @@ lemma_root(uit_ontrollen,ontrol_uit) .
 lemma_root(uit_ontruimen,ontruim_uit) .
 lemma_root(uit_ontsmetten,ontsmet_uit) .
 lemma_root(uit_ontsnappen,ontsnap_uit) .
+lemma_root(uit_ontspinnen,ontspin_uit) .
 lemma_root(uit_ontstemmen,ontstem_uit) .
 lemma_root(uit_ontvangen,ontvang_uit) .
 lemma_root(uit_ontvreemden,ontvreemd_uit) .
@@ -21431,6 +21435,7 @@ lemma_root(voort_ontruimen,ontruim_voort) .
 lemma_root(voort_ontsmetten,ontsmet_voort) .
 lemma_root(voort_ontsnappen,ontsnap_voort) .
 lemma_root(voort_ontspannen,ontspan_voort) .
+lemma_root(voort_ontspinnen,ontspin_voort) .
 lemma_root(voort_ontsporen,ontspoor_voort) .
 lemma_root(voort_ontspringen,ontspring_voort) .
 lemma_root(voort_ontspruiten,ontspruit_voort) .
