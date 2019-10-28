@@ -10009,6 +10009,8 @@ a([postn_both(extra)],adv,[],[]).
 
 a([postn_both([extra,vergine])],nonadv,[],[]).
 
+a([both([extra,vierge])],nonadv,[],[]).
+
 a([e(extramurale),
    no_e(extramuraal)],adv,[],[]).
 

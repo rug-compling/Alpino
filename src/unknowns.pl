@@ -190,6 +190,16 @@ guess_eng_compounds_position([Word2|_],Word,P0,P1,R0,R1) :-
     ;   true
     ).
 
+a_eng_compound(Wouw,Effect,P0,P,R0,R,tag(P0,P,R0,R,Label,wouw_compound(normal),Tag)) :-
+    \+ tag(P0,P,R0,R,_,_,_,_),
+    atom(Wouw),atom(Effect),
+    wouw(Wouw),
+    alpino_lex:lexicon(Tag,EffectLabel,[Effect],[],normal),
+    atom_concat(Wouw,'_',Wouw1),
+    atom_concat(Wouw1,EffectLabel,Label),
+    noun_tag_plus(Tag),
+    debug_message(1,"wouw compound|~w ~w|~w~n",[Wouw,Effect,Tag]).
+
 a_eng_compound(Word,Word2,P0,P,R0,R,tag(P0,P,R0,R,Label,english_compound(normal),Tag)) :-
     \+ tag(P0,P,R0,R,_,_,_,_),
     atom(Word),atom(Word2),
@@ -201,6 +211,9 @@ a_eng_compound(Word,Word2,P0,P,R0,R,tag(P0,P,R0,R,Label,english_compound(normal)
     NOTDIM \= 'DIM',
     noun_tag_plus(Tag),
     debug_message(1,"mis-spelled compound|~w ~w|~w~n",[Word,Word2,Tag]).
+
+wouw(wouw).
+wouw(wow).
 
 %% guess_names/1
 guess_names(Words) :-

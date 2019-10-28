@@ -865,7 +865,7 @@ n([sg('Roemeen'),pl('Roemenen')],de,[]).
 
 n([mass('Roemeens')],het,[]).
 
-n([pl('Roma')],de,[]).
+n([pl('Roma'),pl('Roma\'s')],de,[]).
 
 n([pl('Romeinen'),sg('Romein')],de,[]).
 
@@ -2822,7 +2822,7 @@ n([mass(astrologie)],de,[]).
 
 n([pl(astrologen),sg(astroloog)],de,[]).
 
-n([pl(astronauten),sg(astronaut)],de,[]).
+n([pl(astronauten),sg(astronaut)],de,[],[dim(astronautje)]).
 
 n([mass(astronomie)],de,[]).
 

@@ -512,7 +512,8 @@ m(v_root(heb,hebben),
                                        % SU can be dev: 'vissen heeft voordelen'
 	nonp_pred_np_ndev,             % klaar, af, gereed, nodig
 			               % beschikbaar, gemeenschappelijk
-	                               % iets hebben als vervanging
+				% iets hebben als vervanging
+	part_transitive_ndev(uit),  % omdat ik het boek uitheb
         fixed([ap_pred(nodig),adv_meas],no_passive),
                                 % ik had niet lang nodig
         fixed([ap_pred(nodig),adv_meas,vp],no_passive),
@@ -15658,7 +15659,8 @@ v(ontspan,ontspant,ontspannen,ontspannen,ontspande,ontspanden,
 	transitive])]).
 
 v(ontspin,ontspint,ontspinnen,ontsponnen,ontspon,ontsponnen,
-    [h([refl])]).
+  [h([refl,
+      intransitive])]).
 
 v(ontspoor,ontspoort,ontsporen,ontspoord,ontspoorde,ontspoorden,
     [unacc([intransitive])]).

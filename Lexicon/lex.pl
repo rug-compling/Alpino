@@ -2369,6 +2369,7 @@ spelling_variant(enzovoort,enzovoorts).
 spelling_variant(honderste,honderdste).
 spelling_variant(hondertal,honderdtal).
 spelling_variant(laaste,   laatste).
+spelling_variant(meerde,   meerdere).
 spelling_variant(moelijk,  moeilijk).
 spelling_variant(moelijke, moeilijke).
 spelling_variant(opeenvolgde,opeenvolgende).
@@ -3088,6 +3089,15 @@ parse_only_lex(Word,Word,noun(het,count,sg),Ws,Ws,['Het'|_]) :-
     de_word_used_as_het(Word).
 
 parse_only_lex(Word,Word,noun(de,count,sg),Ws,Ws,[de|_]) :-
+    het_word_used_as_de(Word).
+
+parse_only_lex(Word,Word,noun(de,count,sg),Ws,Ws,['De'|_]) :-
+    het_word_used_as_de(Word).
+
+parse_only_lex(Word,Word,noun(de,count,sg),Ws,Ws,[deze|_]) :-
+    het_word_used_as_de(Word).
+
+parse_only_lex(Word,Word,noun(de,count,sg),Ws,Ws,['Deze'|_]) :-
     het_word_used_as_de(Word).
 
 parse_only_lex(Abbr,Label,Tag,['.'|Ws],Ws,LC):-
