@@ -195,9 +195,10 @@ a_eng_compound(Wouw,Effect,P0,P,R0,R,tag(P0,P,R0,R,Label,wouw_compound(normal),T
     atom(Wouw),atom(Effect),
     wouw(Wouw),
     alpino_lex:lexicon(Tag,EffectLabel,[Effect],[],normal),
+    noun_tag_plus(Tag),
+    atom(EffectLabel),
     atom_concat(Wouw,'_',Wouw1),
     atom_concat(Wouw1,EffectLabel,Label),
-    noun_tag_plus(Tag),
     debug_message(1,"wouw compound|~w ~w|~w~n",[Wouw,Effect,Tag]).
 
 a_eng_compound(Word,Word2,P0,P,R0,R,tag(P0,P,R0,R,Label,english_compound(normal),Tag)) :-
@@ -212,7 +213,7 @@ a_eng_compound(Word,Word2,P0,P,R0,R,tag(P0,P,R0,R,Label,english_compound(normal)
     noun_tag_plus(Tag),
     debug_message(1,"mis-spelled compound|~w ~w|~w~n",[Word,Word2,Tag]).
 
-wouw(wouw).
+wouw(wauw).
 wouw(wow).
 
 %% guess_names/1
