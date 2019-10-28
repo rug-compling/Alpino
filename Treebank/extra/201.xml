@@ -17,7 +17,7 @@
           <node begin="5" buiging="met-e" end="6" graad="basis" id="12" lemma="vol" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vol" word="volle"/>
           <node begin="6" end="7" getal="mv" graad="basis" id="13" lemma="weg" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="weg" word="wegen"/>
           <node begin="8" cat="pp" end="13" id="14" rel="mod">
-            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="richting" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="richting" word="richting"/>
+            <node begin="8" end="9" id="15" lemma="richting" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="richting" vztype="init" word="richting"/>
             <node begin="9" cat="conj" end="13" id="16" rel="obj1">
               <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="17" lemma="kust" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="kust" word="kust"/>
               <node begin="10" conjtype="neven" end="11" id="18" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>

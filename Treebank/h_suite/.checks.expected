@@ -44,3 +44,6 @@ h_suite/./75.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@i
 h_suite/./817.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
 h_suite/./687.xml	//node[@cat="np" and node[@rel="hd" and @genus="onz" and not(@root="jaar" or @root="paar" or @root="miljoen" or @root="uur" or @root="procent" or @root="miljard" or @root="nummer")] and node[@rel="det" and (@root="de" or @root="die" or @root="deze")]]	de-determiner combines with onz noun?
 h_suite/./421.xml	//node[@cat="ppart" and node[@rel="hd" and @postag and not(@pt="ww" and @wvorm="vd")]]	ppart without participle
+h_suite/./273.xml	//node[@rel="hd" and ../@cat="advp" and @pt and not(@pt="bw" or @pt="n" or @pt="adj" or @pt="vnw" or @pt="tw")]	unexpected postag for head of advp
+h_suite/./876.xml	//node[@rel="hd" and (../@cat="ssub" or ../@cat="smain" or ../@cat="sv1") and @pt and not(@pt="ww")]	unexpected pt for head of finite sentence
+h_suite/./876.xml	//node[@rel="hd" and (../@cat="ssub" or ../@cat="smain" or ../@cat="sv1") and @pt and not(@pt="ww")]	unexpected pt for head of finite sentence

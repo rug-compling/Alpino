@@ -18,3 +18,4 @@ g_suite/./887.xml	//node[@cat="inf" and node[@rel="hd" and @pt and not(@postag="
 g_suite/./960.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
 g_suite/./961.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
 g_suite/./962.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
+g_suite/./916.xml	//node[@rel="hd" and ../@cat="advp" and @pt and not(@pt="bw" or @pt="n" or @pt="adj" or @pt="vnw" or @pt="tw")]	unexpected postag for head of advp

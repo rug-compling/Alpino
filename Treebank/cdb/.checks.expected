@@ -120,3 +120,6 @@ cdb/./5150.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@ind
 cdb/./1697.xml	//node[@wvorm="pv" and not(../@cat="smain" or ../@cat="ssub" or ../@cat="sv1" or ../@cat="mwu" or ../@cat="top" or ../@cat="du") ]	unexpected finite verb?
 cdb/./6591.xml	//node[@cat="ssub" and not(node[@rel="su"]) and node[@rel="obj1"]]	no subject in ssub?
 cdb/./6842.xml	//node[@wvorm="pv" and not(../@cat="smain" or ../@cat="ssub" or ../@cat="sv1" or ../@cat="mwu" or ../@cat="top" or ../@cat="du") ]	unexpected finite verb?
+cdb/./5173.xml	//node[@rel="hd" and ../@cat="ap" and @pt and not(@pt="vz" or @pt="tw" or @pt="bw" or @pt="vnw" or @pt="adj")]	unexpected postag for head of ap
+cdb/./6794.xml	//node[@rel="hd" and ../@cat="advp" and @pt and not(@pt="bw" or @pt="n" or @pt="adj" or @pt="vnw" or @pt="tw")]	unexpected postag for head of advp
+cdb/./6937.xml	//node[@rel="hd" and ../@cat="advp" and @pt and not(@pt="bw" or @pt="n" or @pt="adj" or @pt="vnw" or @pt="tw")]	unexpected postag for head of advp
