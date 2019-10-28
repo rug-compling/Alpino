@@ -3658,6 +3658,21 @@ grammar_rule(mod1b, Mod, [ Adv ] ) :-
 %% PPs
 grammar_rule(mod2, Mod, [ Pp ] ) :-
     Mod => modifier, Pp => pp,
+    Pp:pp_er => no,
+    Mod:mcat => mcat_pp,
+    Mod:eps => no,
+    Pp:cj => ncj, % diy
+    Pp:e_deps => [],    % otherwise spurious ambiguities
+    Pp:nnform => ~refl, % id.
+    Pp:ld_pc => (mod_pp;pred_pp),
+    Pp:pp_role => pp_obj1,
+    Pp:vc => yes,
+    hd_structure(Pp,Mod ).
+
+grammar_rule(mod2a, Mod, [ Pp ] ) :-
+    Mod => modifier, Pp => pp,
+    Pp:pp_er => yes,
+    Mod:sel => ~to_right,
     Mod:mcat => mcat_pp,
     Mod:eps => no,
     Pp:cj => ncj, % diy
@@ -6277,6 +6292,7 @@ abs_p_structure(Met,ARG1,ARG2,PP) :-
     PP:nnform => ~refl,
     PP:prep ==> absolute,
     PP:veps:in <=> PP:veps:out,
+    PP:pp_er => no,
     hd_comp2_structure(Met,ARG1,ARG2,PP). 
 
 abs_p_mod_structure(Met,NP,MOD,PP) :-
@@ -6292,6 +6308,7 @@ abs_p_mod_structure(Met,NP,MOD,PP) :-
     PP:nnform => ~refl,
     PP:prep ==> absolute,
     PP:veps:in <=> PP:veps:out,
+    PP:pp_er => no,
     hd_comp_structure(Met,NP,PP0),
     hd_mod_structure(PP0,MOD,PP).
 
