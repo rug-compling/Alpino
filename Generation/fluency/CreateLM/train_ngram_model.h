@@ -2,7 +2,7 @@
 #include <vector>
 #include <stdexcept>
 
-#include <tr1/functional>
+#include <functional>
 
 struct Lambdas
 {
@@ -19,7 +19,7 @@ struct VectorHash : public std::unary_function<std::vector<T>, size_t>
 {
   std::size_t operator()(std::vector<T> const &vec) const
   {
-    std::tr1::hash<T> tHash;
+    std::hash<T> tHash;
     size_t seed = 0;
 
     for (typename std::vector<T>::const_iterator iter = vec.begin();
