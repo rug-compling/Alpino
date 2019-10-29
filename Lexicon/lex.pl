@@ -1816,6 +1816,7 @@ spelling_variant21(terug,reis,    terugreis).
 spelling_variant21(terug,weg,     terugweg).
 spelling_variant21(tot,dat,       totdat).
 spelling_variant21(tot,standkoming,totstandkoming).
+spelling_variant21(tussen,door,   tussendoor).
 spelling_variant21(tussen,tijd,   tussentijd).
 spelling_variant21(twee,derde,    tweederde).
 spelling_variant21(verhaal,lijn,  verhaallijn).

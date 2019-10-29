@@ -3974,7 +3974,7 @@ v(blijf,blijft,blijven,gebleven,bleef,bleven,
                                    % overblijven = resten
 	part_sbar_subj_so_np(bij), % het is me bijgebleven dat...
 	part_sbar_subj_no_het(over),  % blijft over dat we gaan
-	part_transitive(bij),
+%	part_transitive(bij),
 	part_transitive(voor),
 	pc_pp(bij),		% het blijft bij woorden
 	aux(inf),
