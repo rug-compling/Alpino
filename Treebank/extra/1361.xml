@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="0" cat="smain" end="17" id="1" rel="--">
+      <node begin="0" cat="whrel" end="7" id="2" rel="predc">
+        <node begin="0" case="both" def="indef" end="1" gen="het" getal="ev" id="3" index="1" lemma="wat" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" rnum="sg" root="wat" special="nparg" status="vol" vwtype="vb" wh="ywh" word="Wat"/>
+        <node begin="0" cat="ssub" end="7" id="4" rel="body">
+          <node begin="0" end="1" id="5" index="1" rel="su"/>
+          <node begin="1" cat="ap" end="3" id="6" rel="predc">
+            <node aform="base" begin="1" buiging="zonder" end="2" graad="basis" id="7" infl="no_e" lemma="erg" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="erg" vform="adj" word="erg"/>
+            <node aform="base" begin="2" buiging="zonder" end="3" graad="basis" id="8" infl="no_e" lemma="leuk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="leuk" vform="adj" word="leuk"/>
+          </node>
+          <node begin="3" end="4" id="9" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" tense="present" word="is" wvorm="pv"/>
+          <node begin="4" cat="pp" end="7" id="10" rel="mod">
+            <node begin="4" end="5" id="11" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+            <node begin="5" cat="np" end="7" id="12" rel="obj1">
+              <node begin="5" end="6" id="13" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+              <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="14" lemma="boek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="boek" word="boek"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="15" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula_sbar" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="8" cat="cp" end="17" id="16" rel="su">
+        <node begin="8" conjtype="onder" end="9" id="17" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="9" cat="ssub" end="17" id="18" rel="body">
+          <node begin="10" cat="np" end="14" id="19" rel="su">
+            <node begin="10" end="11" id="20" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="11" end="12" gen="de" genus="zijd" getal="ev" graad="basis" id="21" lemma="allochtoon" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="allochtoon" word="allochtoon"/>
+            <node begin="12" cat="pp" end="14" id="22" rel="mod">
+              <node begin="12" end="13" id="23" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
+              <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="24" lemma="Nederland" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="Nederland" word="Nederland"/>
+            </node>
+          </node>
+          <node begin="9" cat="pp" end="15" id="25" rel="ld">
+            <node begin="9" end="10" getal="getal" id="26" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" special="er" status="red" vwtype="aanw" word="er"/>
+            <node begin="14" end="15" id="27" lemma="in" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="in" vztype="fin" word="in"/>
+          </node>
+          <node begin="15" end="16" id="28" lemma="voor" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="voor" vztype="fin" word="voor"/>
+          <node begin="16" end="17" id="29" infl="sg3" lemma="voor_komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom_voor" sc="part_ld_pp(voor)" tense="present" word="komt" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="30" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Wat erg leuk is aan het boek is dat er een allochtoon uit Nederland in voor komt .</sentence>
+</alpino_ds>

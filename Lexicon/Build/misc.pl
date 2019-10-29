@@ -2656,6 +2656,7 @@ preposition(tot,[toe,[aan,toe]]).
 preposition(tussen,[door,in,vandaan]).
 preposition(uit,[vandaan]).
 preposition(van,[af,uit,vandaan,[af,aan]]).
+preposition(vanaf,[[af,aan]]).   % VL vanaf het begin af aan
 preposition(vanonder,[vandaan]).   % alsof hij vanonder de douche vandaan komt
 preposition(vanop).  % vlaams
 preposition(vlakbij).
@@ -5953,6 +5954,7 @@ tmp_adverb([te,eniger,tijd]).
 tmp_adverb(toen).
 tmp_adverb(toenmaals).
 tmp_adverb(toentertijd).
+tmp_adverb(tussendoor).
 tmp_adverb(vanavond).
 tmp_adverb(vandaag).
 tmp_adverb(vanmiddag).
