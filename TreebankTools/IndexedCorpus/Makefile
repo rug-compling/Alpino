@@ -89,9 +89,9 @@ python/indexedcorpus$(PYMODULEEXT): python/indexedcorpus.cpp libcorpus.a
 	rm -f python/indexedcorpus$(PYMODULEEXT)
 	rm -rf python/build
 	if [ -x ${PLATFORM} = "darwin" ] ; then \
-		( cd python ; ARCHFLAGS="-arch i386 -arch x86_64" BOOST_HOME=/usr python setup.py install --install-platlib=. ) \
+		( cd python ; CFLAGS="$(CXXFLAGS)" ARCHFLAGS="-arch i386 -arch x86_64" BOOST_HOME=/usr python setup.py install --install-platlib=. ) \
 	else \
-		( cd python ; BOOST_HOME=/usr python setup.py install --install-platlib=. ) \
+		( cd python ; CFLAGS="$(CXXFLAGS)" BOOST_HOME=/usr python setup.py install --install-platlib=. ) \
 	fi
 
 test/test: libcorpus.a test/test.cpp
