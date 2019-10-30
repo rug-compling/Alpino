@@ -13,15 +13,11 @@
 #ifndef ACT_CORPUS_READER
 #define ACT_CORPUS_READER
 
+#include <mutex>
 #include <string>
 #include <vector>
 
-#include <boost/config.hpp>
 #include <boost/filesystem.hpp>
-
-#if defined(BOOST_HAS_THREADS)
-#include <boost/thread.hpp>
-#endif
 
 #include "IndexNamePair.hh"
 #include "IndexedCorpusReader.hh"
@@ -58,9 +54,7 @@ private:
 	std::string d_lastCorpusPath;
 	IndexedCorpusReader d_lastCorpusReader;
 
-#if defined(BOOST_HAS_THREADS)
-	boost::mutex d_readMutex;
-#endif
+	std::mutex d_readMutex;
 };
 
 inline ActCorpusReader::ActCorpusReader(ActCorpusReader const &other)

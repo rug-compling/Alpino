@@ -1,10 +1,5 @@
+#include <mutex>
 #include <string>
-
-#include <boost/config.hpp>
-
-#if defined(BOOST_HAS_THREADS)
-#include <boost/thread.hpp>
-#endif
 
 #include <IndexedCorpus/util/base64.hh>
 
