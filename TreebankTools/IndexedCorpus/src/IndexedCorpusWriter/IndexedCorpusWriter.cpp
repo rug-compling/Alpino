@@ -9,9 +9,7 @@ void IndexedCorpusWriter::copy(IndexedCorpusWriter const &other)
 
 void IndexedCorpusWriter::write(std::string const &name, std::string const &data)
 {
-#if defined(BOOST_HAS_THREADS)
-  boost::mutex::scoped_lock lock(d_writeMutex);
-#endif
+	lock_guard<mutex> lock(d_writeMutex);
 
 	*d_dataStream << data;
 	*d_indexStream << name << "\t" << b64_encode(d_offset) << "\t" <<
@@ -21,9 +19,7 @@ void IndexedCorpusWriter::write(std::string const &name, std::string const &data
 
 void IndexedCorpusWriter::write(std::string const &name, char const *buf, size_t len)
 {
-#if defined(BOOST_HAS_THREADS)
-  boost::mutex::scoped_lock lock(d_writeMutex);
-#endif
+	lock_guard<mutex> lock(d_writeMutex);
 
 	d_dataStream->write(buf, len);
 	*d_indexStream << name << "\t" << b64_encode(d_offset) << "\t" <<

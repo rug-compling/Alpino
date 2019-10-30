@@ -14,9 +14,9 @@ OBJECTS=$(SOURCES:.cpp=.o)
 all: miniact
 
 
-BOOST_LIBRARIES=-lboost_system -lboost_thread
+BOOST_LIBRARIES=-lboost_system
 ifeq ($(PLATFORM),darwin)
-	BOOST_LIBRARIES=-lboost_system-mt -lboost_thread-mt
+	BOOST_LIBRARIES=-lboost_system-mt
 endif
 
 install:

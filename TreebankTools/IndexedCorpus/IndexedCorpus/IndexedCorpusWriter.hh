@@ -3,12 +3,7 @@
 
 #include <iostream>
 #include <memory>
-
-#include <boost/config.hpp>
-
-#if defined(BOOST_HAS_THREADS)
-#include <boost/thread.hpp>
-#endif
+#include <mutex>
 
 #include "NullStream.hh"
 
@@ -33,10 +28,7 @@ private:
 	ostreamPtr d_dataStream;
 	ostreamPtr d_indexStream;
 	size_t d_offset;
-
-#if defined(BOOST_HAS_THREADS)
-	boost::mutex d_writeMutex;
-#endif
+	std::mutex d_writeMutex;
 };
 
 inline IndexedCorpusWriter::IndexedCorpusWriter(IndexedCorpusWriter const &other)
