@@ -3281,3 +3281,22 @@ generate(H,Toks0,Toks) :-
     ;  Toks0 = Toks
     ).
 
+hdrug_command(hasrule,has_rule(Rule),[Rule]).
+hdrug_command(has_rule,has_rule(Rule),[Rule]).
+
+%% prints object id of each object that has been built
+%% using rule Rule
+has_rule(Rule) :-
+    (   object(No,o(Result,_,_)),
+	alpino_data:result_term(_,_,_,Tree,_,Result),
+	tree_has_rule(Tree,Rule),
+	format("~w~n",[No]),
+	fail
+    ;   true
+    ).
+
+tree_has_rule(tree(_,Rule,_,_),Rule).
+tree_has_rule(tree(_,_,Ds,_),Rule) :-
+    lists:member(D,Ds),
+    tree_has_rule(D,Rule).
+
