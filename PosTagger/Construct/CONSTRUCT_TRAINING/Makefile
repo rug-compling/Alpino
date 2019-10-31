@@ -72,6 +72,13 @@ tts:
 	$(MAKE) frames suite=tt_part00023 &
 	$(MAKE) frames suite=tt_part00024 &
 	$(MAKE) frames suite=tt_part00025 &
+	$(MAKE) frames suite=tu_part00001 &
+	$(MAKE) frames suite=tu_part00002 &
+	$(MAKE) frames suite=tu_part00003 &
+	$(MAKE) frames suite=tu_part00004 &
+	$(MAKE) frames suite=tu_part00005 &
+	$(MAKE) frames suite=tu_part00006 &
+	$(MAKE) frames suite=tu_part00007 &
 
 extra:
 	$(MAKE) frames suite=extra \
