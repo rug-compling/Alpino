@@ -37,16 +37,18 @@ HPCTARGET=left_corners
 
 left_corners:
 	zcat ../Suites/Machine/$(suite).sents.gz | \
-        $(ALPINO) $(extra) -flag suite undefined -parse 2> $(DISK)/$(suite)-spec.log
+        $(ALPINO) -flag suite undefined -parse 2> $(DISK)/$(suite)-spec.log | gzip > $(DISK)/$(suite).lc 
 	gzip $(DISK)/$(suite)-spec.log
 	mv $(DISK)/$(suite)-spec.log.gz $(suite).log.gz
+	mv $(DISK)/$(suite).lc .
 	$(MAKE) $(suite).ps
 
 nleft_corners:
 	echo "parser_comparisons." | \
-        $(ALPINO) -flag suite ../Suites/$(suite) $(extra) 2> $(DISK)/$(suite)-spec.log
+        $(ALPINO) -flag suite ../Suites/$(suite) 2> $(DISK)/$(suite)-spec.log | gzip > $(DISK)/$(suite).lc 
 	gzip $(DISK)/$(suite)-spec.log
 	mv $(DISK)/$(suite)-spec.log.gz $(suite).log.gz
+	mv $(DISK)/$(suite).lc .
 
 #%.left_corners:%.log.gz
 #	zcat $< |\
@@ -54,7 +56,7 @@ nleft_corners:
 #       | sed -e 's/^LEFTCORNER#//'\
 #        | gzip > $@
 
-%.ps: %.log.gz ../src/guides.pl
+%.ps: %.lc ../src/guides.pl
 	zcat $< \
         | grep '^LEFTCORNER#' \
         | sed -e 's/^LEFTCORNER#//'\
@@ -62,11 +64,12 @@ nleft_corners:
         | ./generate_prefixes \
         | sort -u > $@
 
-%.log.gz:../Suites/Machine/%.sents.gz
+%.lc:../Suites/Machine/%.sents.gz
 	zcat $< | \
-        $(ALPINO) $(extra) -flag suite undefined -parse 2> $(DISK)/$*-spec.log
+        $(ALPINO)  -flag suite undefined -parse 2> $(DISK)/$*-spec.log | gzip > $(DISK)/$*.lc
 	gzip $(DISK)/$*-spec.log
 	mv $(DISK)/$*-spec.log.gz $*.log.gz
+	mv $(DISK)/$*.lc .
 
 include $(ALPINO_HOME)/Makefile.errormining
 
@@ -93,39 +96,10 @@ guides_data.c: guides.txt make_guide_vector
 install: guides_data.c
 	cp guides_data.c ../src/guides_data.c.$(PROLOG)
 
+TTS=tt_part00001.lc tt_part00002.lc tt_part00003.lc tt_part00004.lc tt_part00005.lc tt_part00006.lc tt_part00007.lc tt_part00008.lc tt_part00009.lc tt_part00010.lc tt_part00011.lc tt_part00012.lc tt_part00013.lc tt_part00014.lc tt_part00015.lc tt_part00016.lc tt_part00017.lc tt_part00018.lc tt_part00019.lc tt_part00020.lc tt_part00021.lc tt_part00022.lc tt_part00023.lc tt_part00024.lc tt_part00025.lc tu_part00001.lc tu_part00002.lc tu_part00003.lc tu_part00004.lc tu_part00005.lc tu_part00006.lc tu_part00007.lc
+
 tts:
-	$(MAKE) left_corners suite=tt_part00001 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00002 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00003 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00004 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00005 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00006 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00007 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00008 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00009 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00010 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00011 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00012 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00013 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00014 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00015 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00016 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00017 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00018 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00019 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00020 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00021 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00022 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00023 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00024 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tt_part00025 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tu_part00001 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tu_part00002 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tu_part00003 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tu_part00004 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tu_part00005 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tu_part00006 EXTRA=pos_tagger_m=5 &
-	$(MAKE) left_corners suite=tu_part00007 EXTRA=pos_tagger_m=5 &
+	$(MAKE) -j $(J) $(TTS) EXTRA=pos_tagger_m=5
 
 rules:
 	cat *.ps | grep finish |awk -F\| '{ printf "%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n",$$2,$$3,$$4,$$5,$$6,$$7,$$8,$$9,$$10,$$11,$$12,$$13,$$14,$$15,$$16,$$17,$$18,$$19 }' | grep -v 'lex(' | grep -v finish | grep . | sort | uniq -c | sort -nr | awk '{ printf "frequent_rule(%s,%s).\n",$$2,$$1 }' > rules
