@@ -293,18 +293,18 @@ format_new_left_corners_of_result(Result,Key) :-
 
 format_left_corners([],_).
 format_left_corners([H|T],Key) :-
-    format(user_error,"LEFTCORNER#",[]),
+    format("LEFTCORNER#",[]),
     format_left_corner(H,Key),
     format_left_corners(T,Key).
 
 format_left_corner(lc(Goal,LC,His),Key) :-
-    format(user_error,"~w|~q",[Key,Goal]),
+    format("~w|~q",[Key,Goal]),
     format_left_corner_his([LC|His]).
 
 format_left_corner_his([]) :-
-    format(user_error,"~n",[]).
+    format("~n",[]).
 format_left_corner_his([H|T]) :-
-    format(user_error,"|~q",[H]),
+    format("|~q",[H]),
     format_left_corner_his(T).
 
 tree_to_new_left_corners(Tree,LCS) :-
