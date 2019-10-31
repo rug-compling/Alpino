@@ -6,6 +6,7 @@
 #include <iostream>
 #include <iterator>
 #include <memory>
+#include <mutex>
 #include <stdexcept>
 #include <string>
 #include <vector>
@@ -14,12 +15,7 @@
 #include <libgen.h>
 #include <sys/stat.h>
 
-#include <boost/config.hpp>
 #include <boost/filesystem.hpp>
-
-#if defined(BOOST_HAS_THREADS)
-#include <boost/thread.hpp>
-#endif
 
 #include <IndexedCorpus/ActCorpusReader.hh>
 #include <IndexedCorpus/DzIstream.hh>
@@ -31,10 +27,6 @@ using namespace std;
 using namespace indexedcorpus;
 
 using namespace boost::filesystem;
-
-#if defined(BOOST_HAS_THREADS)
-using boost::mutex;
-#endif
 
 char const * const ACT_INDEX_EXT = ".index";
 char const * const ACT_DATA_EXT = ".data.dz";
