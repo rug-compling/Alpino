@@ -2502,6 +2502,9 @@ topicalized_predm_structure(Ques,PREDM,ROOT,CAT) :-
     ROOT:needs_dip => no,
     ROOT:dt:stype => declarative,
 
+    if_defined(PREDM:hstem,Hstem,none),
+    ROOT:topic_hstem <=> Hstem,
+
     is_defined(PREDM:exs,Bool1),
     (   Bool1 == yes
     ->  unify_except(PREDM,PREDM1,exs),
@@ -2529,11 +2532,8 @@ topic_principle(_Ques,Topic,ROOT,OPTCOMMA) :-
     Topic:tags =?> [],
     Topic:wkpro =?> ~ntopicpro,
     ROOT => root,
-    (  Topic => modifier,
-       ROOT:topic_hstem <?=?> Topic:hstem
-    ;  Topic /=> modifier,
-       ROOT:topic_hstem ==?> none
-    ),
+    if_defined(Topic:hstem,Hstem,none),
+    ROOT:topic_hstem <=> Hstem,
     ROOT:needs_dip => no,
     Topic:slash =?> [].
 
@@ -2551,6 +2551,7 @@ grammar_rule(vast_staat,ROOT,
              [VastVmain,call(put_val(IDENTIFIER,VSLASH)),VP]) :-
     imp_structure(Sv1,Vmain,VP,IDENTIFIER,VSLASH),
     ROOT:dt:stype => declarative,
+    ROOT:topic_hstem ==> none,
     VastVmain => vb,
     VastVmain:tpart => yes,
     Vmain => v,
@@ -6842,14 +6843,32 @@ root_nucl_sat_tag_structure(Dan,Max,TAG,ROOT) :-
     Max:e_deps =?> [],
     nucl_sat_tag_structure(Dan,Max,TAG,ROOT).
 
-%% Piet , dat is een vervelende vent
+%% Piet , ik vind hem een vervelende vent
 grammar_rule(sat_nucl(np),ROOT,[Max, COMMA, Dan]) :-
-    COMMA => punct, COMMA:puncttype => komma,
+    comma(COMMA),
     max_np(Max1),
     Max:subn => ~sub_det,
     unify_except(Max1,Max,wh), %% welke minister , dat wist hij niet
     Max:redrel => no,
     root_nucl_sat_structure(Dan,Max,ROOT).
+
+%% aanloop
+%% Piet die mag ik niet
+%% informeel en gesproken taalgebruik
+grammar_rule(sat_nucl(aanloop),ROOT,[Max, Dan]) :-
+    max_np(Max1),
+    Max:subn => ~sub_det,
+    unify_except(Max1,Max,wh), %% welke minister , dat wist hij niet
+    Max:redrel => no,
+    root_nucl_sat_structure(Dan,Max,ROOT),
+%    Dan:subj => np,
+%    Dan:subj:sel => to_topic,
+%    Dan:subj:nform => ~none,
+%    Dan:subj:allows_drop => no,
+%    Dan:subj:cj => ncj,
+				%    Dan:subj:hstem <=> STEM,
+    Dan:topic_hstem <=> STEM,
+    alpino_wappend:wwmember(STEM,[die,dat,daar]).
 
 grammar_rule(sat_tag_nucl(np),ROOT,[Max, OPTCOMMA, TAG, COMMA, Dan]) :-
     COMMA => punct, COMMA:puncttype => komma,
@@ -9168,6 +9187,8 @@ start_coord_name_en_structure(Name,M,XP,Clist) :-
     start_coord_structure(Name,ConjDt,M,XP, [XPdt|Dts], Clist),
     XP:dt <=> XPdt.
 
+
+
 %% vervolgens vertrok hij, en liep naar huis
 %% todo: also allow DIP here
 %% todo: across the board of topicalized constituent?
@@ -9286,7 +9307,8 @@ grammar_rule(start_coord(root_modifier,en),M,[XP,ModList]) :-
     RootList:cform <=> ModList:cform,
     Root => root,
     Root:question => no,
-    Root:dt <=> Mod:dt.
+    Root:dt <=> Mod:dt,
+    unify_subj(M,XP).
  
 %% Wie heb je gesproken en wie niet?
 grammar_rule(start_coord(quest_short,en),M,[XP,ShortList]) :-
@@ -9316,18 +9338,34 @@ grammar_rule(start_coord(quest_short,en),M,[XP,ShortList]) :-
     ShortList:last:ctype => c_of_short,
     Short:slash => [],
     Short:tags => [],
-    Root:dt <=> Short:dt.
+    Root:dt <=> Short:dt,
+    unify_subj(M,XP).
 
 %% zou kunnen maar dat is dan wel een uitzondering
 grammar_rule(start_coord(topic_drop_root,en),M,[Drop,ShortList]) :-
     start_coord_name_en_structure(root,M,XP,ShortList),
+    M:topic_hstem ==> none,
     ShortList:within_word => no,
     Drop => max,
     Drop:sv1 => yes,
     Drop:max_type => t_topic_drop,
     Drop:cj => ncj,
     XP => root,
-    unify_dt(XP,Drop).
+    unify_dt(XP,Drop),
+    unify_subj(M,Drop).
+
+unify_subj(M,XP) :-
+    (   XP => root,
+	XP:subj <=> Subj,
+	XP:topic_hstem <=> Topic
+    ;   XP /=> root,
+	Subj => np,
+	Subj:nform => none,
+	Topic ==> none
+    ),
+    M:topic_hstem <=> Topic,
+    M:subj <?=?> Subj.
+
 
 grammar_rule(start_coord(Name,zowel_als),M,[ConjL, XP, Clist]) :-
     zowel_als_start_structure(Name,M,CrdType,ConjL,XP,Clist),
@@ -9829,14 +9867,19 @@ one_daughter_unifications(Cat0,Cat) :-
            can_nominalize,can_marked_attr,can_postv,deverbal,redrel,
 	   can_postn,wh_reltmploc,cform,meas,tags,hstem,eps,avform],
     unify_paths(Paths,Cat0,Cat),
-    (  (  Cat => sv1
-       ;  Cat => vpx
-       ;  Cat => vproj
-       )
-    ;  Cat /=> sv1,
-       Cat /=> vpx,
-       Cat /=> vproj,
-       Cat0:ccat0 <=> Cat:ccat0
+    (   Cat => sv1,
+        Cat0:subj <?=?> Cat:subj
+    ;   Cat => vpx
+    ;   Cat => vproj
+    ;   Cat => root,
+	Cat0:subj <?=?> Cat:subj,
+	Cat0:topic_hstem <?=?> Cat:topic_hstem,
+	Cat0:ccat0 <=> Cat:ccat0
+    ;   Cat /=> root,
+	Cat /=> sv1,
+        Cat /=> vpx,
+        Cat /=> vproj,
+        Cat0:ccat0 <=> Cat:ccat0
     ).
 
 coord_daughter_paths(L,M) :-

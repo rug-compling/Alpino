@@ -619,6 +619,7 @@ pre_np_adverb(Sign) :-
 adjective(A) :-
     A0 => a,
     sign(A0,CAT),
+    hstem(A0),
     A0:e_deps => [],
     A0:slash => [],
     A0:wh => nwh,

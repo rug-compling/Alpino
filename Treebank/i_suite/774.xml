@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="du" end="9" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="2" lemma="Aduard" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="sat" rnum="sg" root="Aduard" word="Aduard"/>
+      <node begin="1" cat="smain" end="9" id="3" rel="nucl">
+        <node begin="1" end="2" getal="ev" id="4" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
+        <node begin="2" end="3" id="5" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" word="is" wvorm="pv"/>
+        <node begin="3" cat="np" end="9" id="6" rel="predc">
+          <node begin="3" end="4" id="7" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="8" infl="no_e" lemma="klein" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="klein" vform="adj" word="klein"/>
+          <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="dim" id="9" lemma="dorp" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" rnum="sg" root="dorp_DIM" word="dorpje"/>
+          <node begin="6" cat="pp" end="9" id="10" rel="mod">
+            <node begin="6" end="7" id="11" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="7" cat="np" end="9" id="12" rel="obj1">
+              <node begin="7" end="8" id="13" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+              <node begin="8" end="9" gen="het" genus="onz" getal="ev" graad="basis" id="14" lemma="Westerkwartier" naamval="stan" ntype="eigen" num="sg" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="Westerkwartier" special="tmp" word="Westerkwartier"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Aduard dat is een klein dorpje in het Westerkwartier</sentence>
+</alpino_ds>

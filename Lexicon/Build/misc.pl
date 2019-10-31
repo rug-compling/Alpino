@@ -2570,7 +2570,7 @@ preposition(wijlens).
 preposition([tot,en,met]).
 preposition([t,/,m]).
 preposition(vanachter).
-preposition(vanaf).
+%preposition(vanaf).
 preposition(vanonder).
 preposition(vanop).   % vlaams?
 preposition(vanuit).
