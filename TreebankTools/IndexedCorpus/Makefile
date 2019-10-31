@@ -68,7 +68,7 @@ prolog/corpusreader.bundle prolog/corpusreader.dylib: prolog/corpusreader.pl pro
 		--cflag="$(CXXFLAGS)" -O2 -LD -Wall \
 		-Wl,-rpath,$(PWD) \
 		-L. -lcorpus -lboost_system-mt \
-		-lboost_filesystem-mt -lboost_thread-mt -lstdc++ -lz
+		-lboost_filesystem-mt -lstdc++ -lz
 ifeq "$(PROLOG)" "sicstus"
 	mv corpusreader.bundle $@
 endif

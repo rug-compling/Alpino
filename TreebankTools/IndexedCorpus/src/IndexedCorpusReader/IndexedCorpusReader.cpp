@@ -71,9 +71,7 @@ vector<unsigned char> IndexedCorpusReader::read(string const &filename)
 
 	vector<unsigned char> data(iter->second->size);
 	{
-#if defined(BOOST_HAS_THREADS)
-		boost::mutex::scoped_lock lock(d_readMutex);
-#endif
+	 	lock_guard<mutex> lock(d_readMutex);
 		
 		// Read data. We rely on the fact that vector elements have to
 		// be consecutive according to the 2003 standard update.
