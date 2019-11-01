@@ -46,39 +46,17 @@ install_test:
 
 include $(ALPINO_HOME)/Makefile.errormining
 
+
+TTS=tt_part00001 tt_part00002 tt_part00003 tt_part00004 tt_part00005 tt_part00006 tt_part00007 tt_part00008 tt_part00009 tt_part00010 tt_part00011 tt_part00012 tt_part00013 tt_part00014 tt_part00015 tt_part00016 tt_part00017 tt_part00018 tt_part00019 tt_part00020 tt_part00021 tt_part00022 tt_part00023 tt_part00024 tt_part00025
+
 tts:
-	$(MAKE) frames suite=tt_part00001 &
-	$(MAKE) frames suite=tt_part00002 &
-	$(MAKE) frames suite=tt_part00003 &
-	$(MAKE) frames suite=tt_part00004 &
-	$(MAKE) frames suite=tt_part00005 &
-	$(MAKE) frames suite=tt_part00006 &
-	$(MAKE) frames suite=tt_part00007 &
-	$(MAKE) frames suite=tt_part00008 &
-	$(MAKE) frames suite=tt_part00009 &
-	$(MAKE) frames suite=tt_part00010 &
-	$(MAKE) frames suite=tt_part00011 &
-	$(MAKE) frames suite=tt_part00012 &
-	$(MAKE) frames suite=tt_part00013 &
-	$(MAKE) frames suite=tt_part00014 &
-	$(MAKE) frames suite=tt_part00015 &
-	$(MAKE) frames suite=tt_part00016 &
-	$(MAKE) frames suite=tt_part00017 &
-	$(MAKE) frames suite=tt_part00018 &
-	$(MAKE) frames suite=tt_part00019 &
-	$(MAKE) frames suite=tt_part00020 &
-	$(MAKE) frames suite=tt_part00021 &
-	$(MAKE) frames suite=tt_part00022 &
-	$(MAKE) frames suite=tt_part00023 &
-	$(MAKE) frames suite=tt_part00024 &
-	$(MAKE) frames suite=tt_part00025 &
-	$(MAKE) frames suite=tu_part00001 &
-	$(MAKE) frames suite=tu_part00002 &
-	$(MAKE) frames suite=tu_part00003 &
-	$(MAKE) frames suite=tu_part00004 &
-	$(MAKE) frames suite=tu_part00005 &
-	$(MAKE) frames suite=tu_part00006 &
-	$(MAKE) frames suite=tu_part00007 &
+	$(MAKE) -j $(J) $(TTS:%=%.log.gz) 
+
+
+
+%.log.gz: ../../../Suites/Machine/%.sents.gz
+	$(MAKE) frames suite=$*
+
 
 extra:
 	$(MAKE) frames suite=extra \
