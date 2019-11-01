@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="du" end="6" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" sc="root" word="maar"/>
+      <node begin="1" cat="du" end="6" id="3" rel="nucl">
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="Kristel" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="sat" rnum="sg" root="Kristel" word="Kristel"/>
+        <node begin="2" cat="smain" end="6" id="5" rel="nucl">
+          <node begin="2" end="3" getal="getal" id="6" infl="de" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="su" rnum="sg" root="die" status="vol" vwtype="aanw" wh="nwh" word="die"/>
+          <node begin="3" end="4" id="7" infl="sg3" lemma="slapen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="slaap" sc="intransitive" stype="declarative" tense="present" word="slaapt" wvorm="pv"/>
+          <node begin="4" end="5" getal="getal" id="8" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" special="er_loc" status="vol" vwtype="aanw" word="hier"/>
+          <node begin="5" end="6" id="9" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="mod" root="altijd" special="sentence" word="altijd"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>maar Kristel die slaapt hier altijd</sentence>
+</alpino_ds>

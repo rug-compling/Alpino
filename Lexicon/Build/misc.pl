@@ -854,6 +854,10 @@ tag([god,o,god]).
 tag([god,oh,god]).
 tag([god,',',o,god]).
 tag([god,',',oh,god]).
+tag([god,o,'God']).
+tag([god,oh,'God']).
+tag([god,',',o,'God']).
+tag([god,',',oh,'God']).
 tag(godsallemachtig).
 tag(goedenavond).
 tag(goedendag).
@@ -1018,6 +1022,7 @@ tag(maja).
 tag(mang).
 tag(merci).
 tag([mijn,god]).
+tag([mijn,'God']).
 tag('Miljaarde').
 tag(mispoes).
 tag([mis,poes]).
@@ -1058,6 +1063,7 @@ tag([nu,ja]).
 tag(o).
 tag([o,boy]).
 tag([o,god]).
+tag([o,'God']).
 tag([o,hemel]).
 tag([o,ja]).
 tag([o,jee]).
@@ -1066,6 +1072,8 @@ tag([o,my,god]).
 tag([o,',',my,god]).
 tag([o,mijn,god]).
 tag([o,',',mijn,god]).
+tag([o,mijn,'God']).
+tag([o,',',mijn,'God']).
 tag([o,nee]).
 tag([o,wee]).
 tag(och).
@@ -1079,6 +1087,11 @@ tag(oh).
 tag(ohh).
 tag([oh,boy]).
 tag([oh,god]).
+tag([oh,'God']).
+tag([oh,god,',',oh,god]).
+tag([oh,'God',oh,'God']).
+tag([oh,god,oh,god]).
+tag([oh,'God',',',oh,'God']).
 tag([oh,hemel]).
 tag([oh,ja]).
 tag(ohja).
@@ -1088,6 +1101,8 @@ tag([oh,my,god]).
 tag([oh,',',my,god]).
 tag([oh,mijn,god]).
 tag([oh,',',mijn,god]).
+tag([oh,mijn,'God']).
+tag([oh,',',mijn,'God']).
 tag([oh,nee]).
 tag([oh,wee]).
 tag(oi).
