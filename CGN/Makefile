@@ -7,3 +7,6 @@ all: $(files)
 
 %.plk.gz:
 	zcat $(DIR)/$@ | recode latin1 | python3 convert_plk_alpino.py $(notdir $*) > $*.named_sents
+
+realclean:
+	find -name '*.named_sents' | xargs rm
