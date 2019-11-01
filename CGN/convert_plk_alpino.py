@@ -5,17 +5,18 @@ def output_current(id,sent):
     if sent:
         print("{}|{}".format(id,sent))
 
-def main():
+def main(argv):
+    mid=argv[1]
     pattern = re.compile('<au id="(.*)" s=".*" tb=".*">')
     sent = ""
-    id = 0
+    id = mid + "__" + "0"
     
     for line in sys.stdin:
         match = pattern.match(line)
         if match:
             output_current(id,sent)
             sent = ""
-            id = match.group(1)
+            id = mid + "__" + match.group(1)
         else:
             fields = line.split()
             word = fields[0]
@@ -28,4 +29,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv)
