@@ -4443,6 +4443,9 @@ m(zover,            sbar_pred_adjective(adv),[zo,ver]).
 m(zover,            vp_pred_adjective(nonadv),zover).
 m(zover,            vp_pred_adjective(nonadv),[zo,ver]).
 
+%% VL het is daarom dat ik kom
+m(daarom,           adjective(no_e(nonadv),subject_sbar), daarom ).
+
 nattr(both(_)).
 nattr(no_e(_)).
 

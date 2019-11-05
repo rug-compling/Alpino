@@ -1883,6 +1883,7 @@ hesitation1(Atom) :-
 hesitation1(Atom) :-
     atom(Atom),
     atom_concat(mmmm,_,Atom).
+hesitation1(huh).
 hesitation1(hu).
 hesitation1(hum).
 hesitation1('mm-hm').

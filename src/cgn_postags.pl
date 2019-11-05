@@ -590,6 +590,7 @@ exceptional_stem_tag(blauw, noun(het,mass,sg),                       'ADJ(nom,ba
 exceptional_stem_tag(boven,loc_adverb,                              'VZ(fin)').
 exceptional_stem_tag(buiten,loc_adverb,                             'VZ(fin)').
 exceptional_stem_tag(conform,preposition(_,_),                      'ADJ(vrij,basis,zonder)').
+exceptional_stem_tag(daarom, _,                                     'BW()').
 %exceptional_stem_tag(deel,particle(_),                              'N(soort,ev,basis,onz,stan)').
 exceptional_stem_tag(deels,adverb,                                  'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(degeen,pronoun(nwh,thi,sg,de,both,def,strpro), 'VNW(aanw,det,stan,nom,met-e,zonder-n)').
