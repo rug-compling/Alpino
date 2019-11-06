@@ -10,18 +10,29 @@ user_transformation(r(Rel,i(X,Cat)),A,B,
     user_transformation(r(Rel,Cat),A,B,
                         r(Rel2,Cat2),C,D,E,F).
 
+user_transformation(r(REL,l(read_from_treebank(Az,Lem,'WW(od,vrij,zonder'),Cat,W/[P0,P])),B,[],
+		    r(REL,l(read_from_treebank(Az,Lem,'WW(od,vrij,zonder)'),Cat,W/[P0,P])),B,[],_,_).
 
-user_transformation(r(Rel,Cat),A,Ds0,
-		    r(Rel,Cat),A,[VR|Ds],String,_) :-
-    Vlaamse = tree(r(mod,l(V0,V1,'Vlaams'/[P0,P1])),V3,[]),
-    Regering = tree(r(hd,l(R0,R1,'regering'/[P1,P2])),R3,[]),
-    VR = tree(r(hd,p(mwu)),_,[tree(r(mwp,l(V0,V1,'Vlaams'/[P0,P1])),V3,[]),
-			      tree(r(mwp,l(R0,R1,'regering'/[P1,P2])),R3,[])]),
-    lists:select(Vlaamse,Ds0,Ds1), 
-    alpino_treebank:get_root(P0,P1,String,'Vlaamse'),
-    lists:select(Regering,Ds1,Ds),
-    alpino_treebank:get_root(P1,P2,String,'Regering').
 
+/*
+user_transformation(r(REL,p(pp)),A,[Als0|Volgt],
+		    r(REL,p(ppres)),A,[Als|Volgt],_,_) :-
+    Als0   = tree(r(hd,l(read_from_treebank(Az,betreffende,'VZ(init)'),       pp,   Ws)),I,[]),
+    Als    = tree(r(hd,l(read_from_treebank(Az,betreffen,'WW(od,vrij,zonder)'),ppres,Ws)),I,[]).
+*/
+
+
+
+/*
+user_transformation(r(REL,p(mwu)),A,[Als0,Volgt0],
+		    r(REL,p(mwu)),A,[Als,Volgt],String,_) :-
+    Als0   = tree(r(mwp,l(read_from_treebank(Az,_,         _),               Cat,_        /[P0a,P0b])),I,[]),
+    Als    = tree(r(mwp,l(read_from_treebank(Az,'Vlaamse','SPEC(deeleigen)'),Cat,'Vlaamse'/[P0a,P0b])),I,[]),
+    alpino_treebank:get_root(P0a,P0b,String,'Vlaamse'),
+    Volgt0 = tree(r(mwp,l(read_from_treebank(Bz,_,         _),                Cat2,_         /[Pa,Pb])),J,[]),
+    Volgt  = tree(r(mwp,l(read_from_treebank(Bz,'Regering','SPEC(deeleigen)'),Cat2,'Regering'/[Pa,Pb])),J,[]),
+    alpino_treebank:get_root(Pa,Pb,String,'Regering').
+*/
 /*
 user_transformation(r(predc,p(predc)),A,Ds,
 		    r(predc,p(pp)),A,Ds,_,_).
