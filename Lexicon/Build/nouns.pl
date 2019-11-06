@@ -21601,7 +21601,7 @@ n([mass(minderwaardigheid)],de,[]).
 
 n([pl(minderwaardigheidscomplexen),sg(minderwaardigheidscomplex)],het,[]).
 
-n([pl(mineralen),sg(mineraal)],het,[]).
+n([pl(mineralen),sg(mineraal)],het,[app_measure]).
 
 n([pl(mineraalwateren),pl(mineraalwaters),sg(mineraalwater)],het,[]).
 
