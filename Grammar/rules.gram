@@ -3629,51 +3629,55 @@ grammar_rule(adj_genoeg,Adj,[Gek,Genoeg]) :-
 
 %% ADVERBs
 grammar_rule(mod1, Mod, [ Adv ] ) :-
-    Mod => modifier, Adv => adv, Mod:sel => (to_left;to_topic),
+    Mod => modifier, Adv => adv,
+    
+    Mod:sel => (to_left;to_topic),
+    Adv:tmploc => (ntmploc;wk_er),
+
     Mod:mcat => mcat_adv,
     Adv:cj => ncj, % diy
-    Adv:tmploc => (ntmploc;wk_er),
     Adv:redrel => no,
     hd_structure(Adv,Mod).
 
 grammar_rule(mod1a, Mod, [ Adv ] ) :-
-    Mod => modifier, Adv => adv, 
+    Mod => modifier, Adv => adv,
+    
     Mod:eps => no,
+    Adv:tmploc => (tmp;tmp_n;meas_n;loc;sent;me;postp),
+
     Mod:mcat => mcat_adv,
     Adv:cj => ncj, % diy
-    Adv:tmploc => (tmp;tmp_n;meas_n;loc;sent;me;postp),
     Adv:redrel => no,
     hd_structure(Adv,Mod).
 
 grammar_rule(mod1b, Mod, [ Adv ] ) :-
     Mod => modifier, Adv => adv, 
-    Mod:eps => no,
-    Mod:mcat => mcat_adv,
+
     Mod:sel => to_right,
-    Adv:cj => ncj, % diy
+    Mod:eps => no,
     Adv:can_postv => yes,
-    Adv:redrel => no,
     Adv:exs => [], % diy
+
+    Mod:mcat => mcat_adv,
+    Adv:cj => ncj, % diy
+    Adv:redrel => no,
     hd_structure(Adv,Mod).
 
 %% PPs
 grammar_rule(mod2, Mod, [ Pp ] ) :-
     Mod => modifier, Pp => pp,
-    Pp:pp_er => no,
-    Mod:mcat => mcat_pp,
-    Mod:eps => no,
-    Pp:cj => ncj, % diy
-    Pp:e_deps => [],    % otherwise spurious ambiguities
-    Pp:nnform => ~refl, % id.
-    Pp:ld_pc => (mod_pp;pred_pp),
-    Pp:pp_role => pp_obj1,
-    Pp:vc => yes,
-    hd_structure(Pp,Mod ).
 
-grammar_rule(mod2a, Mod, [ Pp ] ) :-
-    Mod => modifier, Pp => pp,
-    Pp:pp_er => yes,
-    Mod:sel => ~to_right,
+    No => no,
+    Yes => yes,
+    Pp:pp_er <=> ER,
+    Mod:sel <=> Sel,
+    NotRight => ~to_right,
+
+    when(nonvar(ER),
+	 (  ER = No
+	 ;  ER = Yes, Sel = NotRight
+	 )),
+    
     Mod:mcat => mcat_pp,
     Mod:eps => no,
     Pp:cj => ncj, % diy
