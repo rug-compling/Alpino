@@ -6860,17 +6860,10 @@ grammar_rule(sat_nucl(np),ROOT,[Max, COMMA, Dan]) :-
 %% Piet die mag ik niet
 %% informeel en gesproken taalgebruik
 grammar_rule(sat_nucl(aanloop),ROOT,[Max, Dan]) :-
-    max_np(Max1),
+    max_np(Max),
     Max:subn => ~sub_det,
-    unify_except(Max1,Max,wh), %% welke minister , dat wist hij niet
     Max:redrel => no,
     root_nucl_sat_structure(Dan,Max,ROOT),
-%    Dan:subj => np,
-%    Dan:subj:sel => to_topic,
-%    Dan:subj:nform => ~none,
-%    Dan:subj:allows_drop => no,
-%    Dan:subj:cj => ncj,
-				%    Dan:subj:hstem <=> STEM,
     Dan:topic_hstem <=> STEM,
     alpino_wappend:wwmember(STEM,[die,dat,daar]).
 
