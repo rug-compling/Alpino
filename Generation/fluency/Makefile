@@ -16,7 +16,12 @@ endif
 FADD=$(ALPINO_HOME)/fadd
 
 CXXFLAGS=-O2 -Wall -pedantic -std=c++11 -I$(FADD)
-EXTRACXXFLAGS=-std=c++11
+
+ifeq "$(PROLOG)" "swipl"
+EXTRACXXFLAGS=-cc-options,-std=c++11
+else
+EXTRACXXFLAGS=
+endif
 
 PLS=maxent_feature_weights.pl maxent_feature_weights_d.pl maxent_feature_weights_p.pl maxent_feature_weights_c.pl maxent_feature_weights_x.pl maxent_feature_weights_w.pl maxent_feature_weights_i.pl
 POS=maxent_feature_weights.po
@@ -34,13 +39,13 @@ lm.o: lm.cpp lm.h
 
 pro_lm.so: pro_lm.cpp pro_lm.pl lm.o lm.h
 	$(SPLFR) pro_lm.pl pro_lm.cpp lm.o --cflag="${CXXFLAGS}" \
-                -cc-options,"${EXTRACXXFLAGS}"\
+                ${EXTRACXXFLAGS}\
                 -LD -Wall -lstdc++ -Wl,-rpath,$(ALPINO_HOME)/fadd \
 		-L$(FADD) -lfadd
 
 pro_lm.bundle pro_lm.dylib: pro_lm.cpp pro_lm.pl lm.o lm.h
 	$(SPLFR) pro_lm.pl pro_lm.cpp lm.o --cflag="${CXXFLAGS}" \
-                -cc-options,"${EXTRACXXFLAGS}" \
+                ${EXTRACXXFLAGS} \
                 ${CXXFLAGS} \
 		-LD -Wall -lstdc++ -Wl,-rpath,$(ALPINO_HOME)/fadd \
 		-L$(FADD) -lfadd

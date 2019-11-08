@@ -1670,6 +1670,7 @@ skip_pair(Surf,Surf,Surf) :-
 skip_pair('\'k',ik,ik).
 skip_pair(ik,'\'k',ik).
 skip_pair('De',de,de).
+skip_pair(dat,da,dat).
 
 skip_words_tags([],P,P,R,R).
 skip_words_tags([W|Ws],P0,P,R0,R) :-
