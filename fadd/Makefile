@@ -65,7 +65,7 @@ CPPFLAGS=-O2 -Wall \
   -DPOOR_MORPH \
   -DLOOSING_RPM \
   -DMULTICOLUMN \
-  -I../util 
+  -I../util
   # -DDEBUG
   # -DOLD_COMPILER
   # -DINTERPOLATED 
@@ -100,11 +100,11 @@ print_tuple.pl: print_tuple.pl.in
 	chmod +x print_tuple.pl
 
 pro_fadd.so: $(SHAREDLIB) fadd.h fsa.h pro_fadd.cc pro_fadd.pl
-	$(SPLFR) pro_fadd.pl pro_fadd.cc --cflag="${CPPFLAGS}"\
+	$(SPLFR) pro_fadd.pl pro_fadd.cc --cflag="${CPPFLAGS}" \
              -LD  -Wl,-rpath,$(PWD) -L. -lfadd $(LDFLAGS) -lstdc++
 
 pro_fadd.bundle pro_fadd.dylib: $(SHAREDLIB) fadd.h fsa.h pro_fadd.cc pro_fadd.pl
-	$(SPLFR) pro_fadd.pl pro_fadd.cc --cflag="${CPPFLAGS}"\
+	$(SPLFR) pro_fadd.pl pro_fadd.cc --cflag="${CPPFLAGS}" \
              -LD  -Wl,-rpath,$(PWD) -L. -lfadd $(LDFLAGS) -lstdc++
 	install_name_tool -change libfadd.dylib @rpath/libfadd.dylib $@
 

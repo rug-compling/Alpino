@@ -13,9 +13,10 @@ else
 	PRO_LM_STATIC=pro_lm.s.o
 endif
 
-CXXFLAGS=-O2 -Wall -pedantic -std=c++11
-
 FADD=$(ALPINO_HOME)/fadd
+
+CXXFLAGS=-O2 -Wall -pedantic -std=c++11 -I$(FADD)
+EXTRACXXFLAGS=-std=c++11
 
 PLS=maxent_feature_weights.pl maxent_feature_weights_d.pl maxent_feature_weights_p.pl maxent_feature_weights_c.pl maxent_feature_weights_x.pl maxent_feature_weights_w.pl maxent_feature_weights_i.pl
 POS=maxent_feature_weights.po
@@ -32,12 +33,15 @@ lm.o: lm.cpp lm.h
 	g++ -fPIC ${CXXFLAGS} -c $< -o $@
 
 pro_lm.so: pro_lm.cpp pro_lm.pl lm.o lm.h
-	$(SPLFR) pro_lm.pl pro_lm.cpp lm.o --cflag="${CXXFLAGS} -I$(FADD)" \
-		-LD -Wall -lstdc++ -Wl,-rpath,$(ALPINO_HOME)/fadd \
+	$(SPLFR) pro_lm.pl pro_lm.cpp lm.o --cflag="${CXXFLAGS}" \
+                -cc-options,"${EXTRACXXFLAGS}"\
+                -LD -Wall -lstdc++ -Wl,-rpath,$(ALPINO_HOME)/fadd \
 		-L$(FADD) -lfadd
 
 pro_lm.bundle pro_lm.dylib: pro_lm.cpp pro_lm.pl lm.o lm.h
-	$(SPLFR) pro_lm.pl pro_lm.cpp lm.o --cflag="${CXXFLAGS} -I$(FADD)" \
+	$(SPLFR) pro_lm.pl pro_lm.cpp lm.o --cflag="${CXXFLAGS}" \
+                -cc-options,"${EXTRACXXFLAGS}" \
+                ${CXXFLAGS} \
 		-LD -Wall -lstdc++ -Wl,-rpath,$(ALPINO_HOME)/fadd \
 		-L$(FADD) -lfadd
 	install_name_tool -change libfadd.dylib @rpath/libfadd.dylib $@
