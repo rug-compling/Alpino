@@ -9,7 +9,12 @@ endif
 DYLIBLINKFLAGS=-fPIC -shared -lz
 WARN=-Wno-unused-local-typedefs
 CXXFLAGS=-O3 -Wall -std=c++11 -I. -fPIC   $(WARN)
-EXTRACXXFLAGS=-std=c++11
+
+ifeq "$(PROLOG)" "swipl"
+EXTRACXXFLAGS=-cc-options,-std=c++11
+else
+EXTRACXXFLAGS=
+endif
 
 SOURCES=\
 	src/ActCorpusReader/ActCorpusReader.cpp \
@@ -57,7 +62,7 @@ libcorpus.a: $(OBJECTS)
 prolog/corpusreader.so: prolog/corpusreader.pl prolog/corpusreader.cpp libcorpus$(DYLIBEXT)
 	$(SPLFR) prolog/corpusreader.pl prolog/corpusreader.cpp \
 		--cflag="$(CXXFLAGS)" -O2 -LD -Wall \
-                -cc-options,"$(EXTRACXXFLAGS)" \
+                $(EXTRACXXFLAGS) \
 		-Wl,-rpath,$(PWD) \
 		-L. -lcorpus -lboost_filesystem \
 		-lboost_system -lstdc++ -lz
@@ -68,7 +73,7 @@ endif
 prolog/corpusreader.bundle prolog/corpusreader.dylib: prolog/corpusreader.pl prolog/corpusreader.cpp libcorpus$(DYLIBEXT)
 	$(SPLFR) prolog/corpusreader.pl prolog/corpusreader.cpp \
 		--cflag="$(CXXFLAGS)" -O2 -LD -Wall \
-                -cc-options,"$(EXTRACXXFLAGS)" \
+                $(EXTRACXXFLAGS) \
 		-Wl,-rpath,$(PWD) \
 		-L. -lcorpus -lboost_system-mt \
 		-lboost_filesystem-mt -lstdc++ -lz
