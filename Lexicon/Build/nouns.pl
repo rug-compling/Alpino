@@ -28279,7 +28279,7 @@ n([pl(regenjassen),sg(regenjas)],de,[]).
 
 n([pl(regenten),sg(regent)],de,[]).
 
-n([sg(regentaat),pl(regentaten)],de,[]).
+n([sg(regentaat),pl(regentaten)],both,[]).
 
 n([mass(regenwater)],het,[]).
 

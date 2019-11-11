@@ -2057,6 +2057,7 @@ with_dt_all(ook,[zelf]).
 with_dt_all(opnieuw,[steeds]).
 with_dt_all(opnieuw,[telkens]).
 with_dt_all(op,[vandaag]).
+with_dt_all(op,[zich]).
 with_dt_all(oudsher,[van]).
 with_dt_all(oud,[stijl]).
 with_dt_all(overal,[werkelijk]).
@@ -3069,6 +3070,7 @@ with_dt_root(zevenen).
 with_dt_root(zevental).
 with_dt_root(zeventig).
 with_dt_root(zeventigtal).
+with_dt_root(zich).
 with_dt_root(zie).
 with_dt_root(zij).
 with_dt_root(zijn).
