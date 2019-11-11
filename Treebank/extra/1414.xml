@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="du" end="9" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="kortom" pos="tag" postag="BW()" pt="bw" rel="tag" root="kortom" word="Kortom"/>
+      <node begin="2" cat="np" end="9" id="4" rel="nucl">
+        <node begin="2" cat="pp" end="4" his="normal" his_1="normal" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+          <node begin="3" case="dat_acc" def="def" end="4" gen="de" getal="getal" id="7" lemma="zich" naamval="obl" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="zich" special="wkpro" status="red" vwtype="refl" wh="nwh" word="zich"/>
+        </node>
+        <node begin="4" end="5" id="8" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="9" infl="no_e" lemma="sympathiek" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="sympathiek" vform="adj" word="sympathiek"/>
+        <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="10" lemma="initiatief" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="initiatief" word="initiatief"/>
+        <node begin="7" cat="pp" end="9" id="11" rel="mod">
+          <node begin="7" end="8" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="13" lemma="Bomhoff" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="Bomhoff" word="Bomhoff"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Kortom , op zich een sympathiek initiatief van Bomhoff</sentence>
+</alpino_ds>

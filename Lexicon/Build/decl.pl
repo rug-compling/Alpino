@@ -505,7 +505,7 @@ postposition(vandaan,elders).
 create_part_verb([],A,B,Root0,INVLEX,LEMMA) :-
     (   (   Root0 = v_root(Root1,Inf)
 	->  format(LEMMA,"~q .~n",[lemma_root(Inf,Root1)])
-	;   Root0 = Root1
+	;   true
 	),
         one_frame(B,Frame),
 	adapt_part_label(Frame,Part,Root0,Root2),

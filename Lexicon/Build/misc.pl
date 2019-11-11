@@ -3583,6 +3583,7 @@ m(en,               complementizer(root),en).
 m(immers,           complementizer(root),immers).  % only root (+punctuation)
 m(maar,             complementizer(root),maar).
 m(noch,             complementizer(root),noch).
+m(nochtans,         complementizer(root),nochtans).  % VL?
 m(of,               complementizer(root),of).
 m(ofwel,            complementizer(root),ofwel).
 m(oftewel,          complementizer(root),oftewel).
@@ -7738,7 +7739,12 @@ m('niemand minder dan', modal_adverb(noun),[niemand,minder,dan]).
 m('niets minder als', modal_adverb(noun),[niets,minder,als]).
 m('niemand minder als', modal_adverb(noun),[niemand,minder,als]).
 
-
+%% op zich 't idee vind ik wel leuk
+with_dt([op,zich],
+	modal_adverb(noun),
+	dt(pp,[hd=l(op,preposition(op,[af,na]),pp,0,1),
+	       obj1=l(zich,pronoun(nwh,thi,both,de,dat_acc,def,wkpro),np,1,2)
+	      ])).
 
 %% 'dit keer' should be impossible, since 'keer' is 'de'-word!
 with_dt([dit,keer],
