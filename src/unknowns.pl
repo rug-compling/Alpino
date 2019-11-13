@@ -3877,6 +3877,8 @@ exceptional_not_subsumed_by_dict(His,C,_) :-
     \+ alpino_lex:xl(C,_,_,[],[]).
 exceptional_not_subsumed_by_dict(gen(names_dictionary),_,C) :-
     C \= name_determiner(pron).
+exceptional_not_subsumed_by_dict(variant(_,gen(names_dictionary)),_,C) :-
+    C \= name_determiner(pron).
 exceptional_not_subsumed_by_dict(enumeration,_,C) :-
     C \= proper_name(_).
 exceptional_not_subsumed_by_dict(decap('Adj-s'),_,_).
@@ -3906,6 +3908,7 @@ ends_with_genitive_marker(List0,List) :-
     atom_concat(Gen,Subtract,Gen0).
 
 genitive_marker('\'s','\'s').
+genitive_marker('’s','’s').  % thanks gosse
 genitive_marker('s\'','\'').
 genitive_marker('sch\'','\'').
 genitive_marker('x\'','\'').
