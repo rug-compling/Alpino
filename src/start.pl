@@ -3281,6 +3281,7 @@ generate(H,Toks0,Toks) :-
     ;  Toks0 = Toks
     ).
 
+:- public has_rule/1.
 hdrug_command(hasrule,has_rule(Rule),[Rule]).
 hdrug_command(has_rule,has_rule(Rule),[Rule]).
 
