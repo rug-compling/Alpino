@@ -10,6 +10,7 @@
 			    wcheck_els/2,
 			    wcheck_els_svp/2,
 			    skip_subject_list/2,
+			    skip_embedded_subject_list/2,
 			    add_at_end_list/3,
 			    add_at_end/3
 			  ]).
@@ -75,7 +76,7 @@ wappend(L0,L1,L,N) :-
 	    )
     ).
 
-:- initialize_flag(wappend_max,100).
+:- initialize_flag(wappend_max,10).
 
 %:- block wappend0(-,-,-,?).
 wappend0(L0,L1,L,N) :-
@@ -176,6 +177,12 @@ add_at_end(El,[H|T],[H|List],N) :-
     N1 is N-1, N1 > 0,
     when(nonvar(T),add_at_end(El,T,List,N1)).
 
+add_at_end_embedded(El,List,[El|List],_) :-
+    skip_embedded_subject_list(List,El).
+add_at_end_embedded(El,[H|T],[H|List],N) :-
+    N1 is N-1, N1 > 0,
+    when(nonvar(T),add_at_end_embedded(El,T,List,N1)).
+
 add_at_end_list(A,B,C,D) :-
     when((nonvar(A),nonvar(B)),
 	 add_at_end_list_(A,B,C,D)
@@ -193,7 +200,7 @@ add_at_end_list_(Add,List0,List,N) :-
 add_at_end_list1([],List,List,_).
 add_at_end_list1([H|T],List0,List,N) :-
     N1 is N-1, N1 > 0, 
-    when(nonvar(List0),add_at_end(H,List0,List1,N1)),
+    when(nonvar(List0),add_at_end_embedded(H,List0,List1,N1)),
     when((nonvar(T),nonvar(List1)),
 	 add_at_end_list(T,List1,List,N1)).
 
@@ -210,6 +217,14 @@ skip_subject_list_([],_).
 skip_subject_list_([H|T],El) :-
     alpino_data:precedes_subject_cat(H,El),
     when(nonvar(T),skip_subject_list_(T,El)).
+
+skip_embedded_subject_list(L,El) :-
+    when(nonvar(L),skip_embedded_subject_list_(L,El)).
+
+skip_embedded_subject_list_([],_).
+skip_embedded_subject_list_([H|T],El) :-
+    alpino_data:precedes_embedded_subject_cat(H,El),
+    when(nonvar(T),skip_embedded_subject_list_(T,El)).
 
 %% every member of Guess must be from Given,
 %% and vv

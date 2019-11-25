@@ -530,7 +530,7 @@ precedes_subject_cat(Arg,Dep) ::-
                                % indef_pron: omdat zich niemand daarvoor schaamt
     Arg:nform => (refl;er).
 
-%% datives
+%% datives 
 precedes_subject_cat(Arg,Dep) ::-
     Arg => np,
     Arg:sel => to_left, % reduce spur amb
@@ -560,6 +560,25 @@ precedes_subject_cat(Arg,Dep) ::-
     Dep:prs => ~invje,
     Dep:subn => ~sub_def_pron. % sub_det ok: omdat hem dat/dit/het in de weg zit
                                %             omdat hem niemand in de weg zit
+
+
+precedes_embedded_subject_cat(Arg,Dep) ::-
+    precedes_subject_cat(Arg,Dep).
+
+%% pronoun acc
+%% ik zie het hem doen
+%% ik zie het Piet doen
+%% ik zie dat Piet nooit doen
+precedes_embedded_subject_cat(Arg,Dep) ::-
+    Arg => np,
+    Arg:sel => to_left, % reduce spur amb
+    Dep:sel => to_left, % reduce spur amb
+    Arg:subn => sub_det, % ik zie het hem doen
+    Dep:prs => ~invje,
+    Arg:case => acc,
+    Arg:nform => ~refl & ~er.
+
+
 
 % Derivation tree structure
 deriv_tree_struct(Id,Fs,Daughters,Struct) ::-

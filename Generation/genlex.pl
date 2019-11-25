@@ -1515,6 +1515,17 @@ unknown_root_heuristic(num,Root,_,[],number(hoofd(pl_num)),[Root]) :-
 	   atom_concat('_',_Part,Rest)
        ).
 
+%% op een INF (hij zet het op een lopen)
+unknown_root_heuristic(fixed,Root,Root,[],fixed_part(op_een_v),FinalSurfs) :-
+    atom_concat('op een ',Loop,Root),
+    pos2frames(Loop,Loop,verb,[],Frames),
+    findall(Surfs0,lists:member(verb(_,inf,_)-Surfs0,Frames), SurfsList0),
+    sort(SurfsList0,SurfsList1),
+    findall(FinalSurf, (   member(Surfs,SurfsList1),
+			   member(Surf,Surfs),
+			   concat_all([op,een,Surf], FinalSurf,' ')
+		       ),FinalSurfs).
+
 unknown_root_heuristic(Pos,Root,_,Attr,Frame,Surfs) :-
     exc_pos2frames_aux(Root,Pos,Attr,Frame,Surfs).
 

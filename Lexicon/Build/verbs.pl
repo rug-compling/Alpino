@@ -1706,7 +1706,7 @@ v(bak,bakt,bakken,gebakken,bakte,bakten,
 	ap_pred_np,    % gaar, goudbruin
 	mod_pp(in),    % olie of boter om in te bakken
 	np_mod_pp(in), % olie of boter om oliebollen in te bakken
-        fixed([mod_pp(in),ap_pred,acc],norm_passive),
+        fixed([mod_pp(in),ap_pred,acc],norm_passive), % iets bruin bakken in de olie
 	np_np,       % iemand een poets bakken
 	np_pc_pp(van)]),
      b([intransitive])]).
@@ -1897,7 +1897,8 @@ v(bedenk,bedenkt,bedenken,bedacht,bedacht,bedachten,
 	refl_sbar, % we moeten ons bedenken dat ...
 	transitive,
 	np_pc_pp(bij),
-	np_er_pp_sbar(bij),
+	refl_er_pp_sbar(bij), % we moeten ons daar wel bij bedenken dat
+	er_pp_sbar(bij),      % we moeten er wel bij bedenken dat
         np_pc_pp(op),  % we moeten daar nog iets op bedenken
 	part_np_np(toe),
         np_mod_pp(voor)])]).
@@ -3147,7 +3148,7 @@ v(bestendig,bestendigt,bestendigen,bestendigd,bestendigde,bestendigden,
 v(besterf,besterft,besterven,bestorven,bestierf,bestierven,
   [unacc([intransitive,
 	  fixed([het_obj1],no_passive),
-	  np_pc_pp(van)])]).
+	  fixed([pc(van),het_obj1],no_passive)])]).
 
 v(bestier,bestiert,bestieren,bestierd,bestierde,bestierden,
     [h([transitive])]).
@@ -3242,7 +3243,8 @@ v(betaal,betaalt,betalen,betaald,betaalde,betaalden,
 v(betaam,betaamt,betamen,betaamd,betaamde,betaamden,
     [h([intransitive,
 	transitive,      %% mis(?)-used in 'zoals het hem betaamt'
-	sbar_subj_so_np])]).
+	sbar_subj_so_np
+       ])]).
 
 v(betast,betast,betasten,betast,betastte,betastten,
     [h([transitive])]).
@@ -6012,7 +6014,7 @@ v(doe,doet,inflected(doen,doene),gedaan,deed,deden,
 	part_fixed(uit,[[de,deur],acc],norm_passive),
 	fixed([[de,ronde]],no_passive),
         fixed([[gestand],acc],norm_passive),
-	fixed([{[acc(mededelingen),pc(over)]}],imp_passive),
+	fixed([{[acc(mededeling),pc(over)]}],imp_passive),
 	fixed([{[acc(melding),pc(over)]}],imp_passive),
 	fixed([{[acc(melding),pc(van)]}],imp_passive),
 	fixed([{[ap_pred,pc(over)]}],imp_passive), % hij doet moeilijk over..
@@ -11247,13 +11249,9 @@ v(knal,knalt,knallen,geknald,knalde,knalden,
      b([ld_pp,
         np_ld_pp,
         ap_copula('uit elkaar'),
-        fixed([ap_pred('uit elkaar'),pc(in)],no_passive),
         ap_copula('in elkaar'),
-        fixed([ap_pred('in elkaar'),pc(in)],no_passive),
         ap_copula('uit mekaar'),
-        fixed([ap_pred('uit mekaar'),pc(in)],no_passive),
         ap_copula('in mekaar'),
-        fixed([ap_pred('in mekaar'),pc(in)],no_passive),
 	intransitive])]).
 
 v(knap,knapt,knappen,geknapt,knapte,knapten,
@@ -13848,7 +13846,7 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
         fixed([{[er_pp(van,C),acc(geheim)]},extra_sbar(C)],norm_passive),
         fixed([{[er_pp(van,C),acc(geheim)]},extra_vp(C)],norm_passive),
         fixed([{[[komaf],pc(met)]}],imp_passive),
-	fixed([het_obj1,er_pp(naar)],no_passive),
+	fixed([er_pp(naar),het_obj1],no_passive),
 	fixed([{[acc(verwijt),dat]}],norm_passive),
 	part_refl(gereed),
 	part_refl(klaar),
@@ -17478,10 +17476,6 @@ v(raak,raakt,raken,geraakt,raakte,raakten,
 	    nonp_copula,
 	    copula_np,
 	    nonp_copula_np,
-            pp_copula(in,ban),
-            pp_copula(in,trek),
-	    pp_copula(in,verlegenheid),
-	    pp_copula(op,drift),
 	    ld_pp,
 	    ld_adv,
             pc_pp(aan),   % aan de drank/diarree/...
@@ -21197,7 +21191,11 @@ v(sta,staat,inflected(staan,stane),gestaan,stond,stonden,
 	part_sbar_subj(voorop),
 	part_so_np(aan),
 	part_so_np(bij),
-        part_np_sbar(bij),
+	part_sbar_subj_so_np(bij), % het staat me bij dat ...
+	%% er staat me iets van bij dat ...
+	%% er staat me niets meer bij van deze vergadering
+	part_fixed(bij,[{[mod_pp(van),dat]}],no_passive),
+	part_fixed(bij,[{[mod_pp(van),dat,sbar]}],no_passive),
 	part_so_np(tegen),
 	part_so_np(voor),
 	part_transitive(af),
@@ -21230,7 +21228,6 @@ v(sta,staat,inflected(staan,stane),gestaan,stond,stonden,
 	fixed([{[[onder,invloed],pc(van)]}],no_passive),
 	fixed([{[[onder,leiding],pc(van)]}],no_passive),
 	fixed([{[[onder,voorzitterschap],pc(van)]}],no_passive),
-	fixed([[op,springen]],no_passive),
 	fixed([[op,wacht]],no_passive),
 	fixed([[blank]],no_passive),
 	fixed([[gereed]],no_passive),
@@ -24469,7 +24466,7 @@ v(verkas,verkast,verkassen,verkast,verkaste,verkasten,
 
 v(verkeer,verkeert,verkeren,verkeerd,verkeerde,verkeerden,
     [h([ld_pp,
-        ap_copula('onder de indruk'),
+        ap_copula('onder de indruk'),  % vanwege "erg onder de indruk"
         ap_copula('in staat'),
         pp_copula,
 	sbar_subj, % zo kan het verkeren dat ...
@@ -27895,7 +27892,7 @@ v(zeg,zegt,zeggen,gezegd,zei,zeiden,zegge,
 	part_np_np(na),
 	part_transitive(na),
 	part_np_vp_obj,
-	np_pc_pp(op),
+	%% np_pc_pp(op),  ??
 	part_transitive(op),
 	part_intransitive(op),  % zeg op , of ik knal je kop er af
 	part_np_np(op),  % we zeggen hem de vriendschap op

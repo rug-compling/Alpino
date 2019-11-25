@@ -1231,6 +1231,7 @@ cgn_postag_c(complementizer(naar),            'VZ(init)').
 cgn_postag_c(complementizer(np),              'VG(onder)').
 cgn_postag_c(complementizer(of),              'VG(onder)').
 cgn_postag_c(complementizer(om),              'VZ(init)').
+cgn_postag_c(complementizer(op),              'VZ(init)').
 cgn_postag_c(complementizer(pp),              'VG(onder)').
 cgn_postag_c(complementizer(root),            'VG(neven)').
 cgn_postag_c(complementizer(sbar),            'VG(onder)').
