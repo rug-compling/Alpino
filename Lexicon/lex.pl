@@ -4168,6 +4168,10 @@ impossible_subcat_infl_combination(HetSubj,Infl) :-
     check_third_person_sg_sc(HetSubj),
     non_3sg(Infl).
 
+impossible_subcat_infl_combination(HetSubj,Infl) :-
+    check_third_person_sc(HetSubj),
+    non_3(Infl).
+
 impossible_subcat_infl_combination(fixed_dep(_),Fin) :-
     finite(Fin).
 impossible_subcat_infl_combination(part_fixed_dep(_,_),Fin) :-
@@ -4198,6 +4202,10 @@ non_3sg(sg_hebt).
 non_3sg(pl).
 non_3sg(past(pl)).
 non_3sg(modal_inv).
+
+non_3(sg1).
+non_3(modal_inv).
+non_3(sg_hebt).
 
 finite(past(_)).
 finite(sg).
@@ -4295,7 +4303,27 @@ third_person_sg_sc_el(naar_sbar_subj_no_het).
 third_person_sg_sc_el(short_sbar_subj).
 third_person_sg_sc_el(vp_subj).
 third_person_sg_sc_el(vp_subj_no_het).
+third_person_sg_sc_el(subj(sprake)).
 
+third_person_sg_sc_el({List}) :-
+    lists:member(El,List),
+    third_person_sg_sc_el(El).
+
+check_third_person_sc(Frame0) :-
+    strip_part(Frame0,Frame),
+    third_person_sc(Frame).
+
+third_person_sc(ninv(Sc,_)):-
+    third_person_sc(Sc).
+
+third_person_sc(fixed(L,_)) :-
+    lists:member(El,L),
+    third_person_sc_el(El).
+
+third_person_sc_el(subj(_)).
+third_person_sc_el({List}) :-
+    lists:member(El,List),
+    third_person_sc_el(El).
 
 :- hdrug_util:initialize_flag(check_word_form,on).
 

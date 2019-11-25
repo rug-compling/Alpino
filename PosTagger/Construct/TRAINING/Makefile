@@ -31,7 +31,6 @@ frames.pl: $(freqframes)
       | ./cnt-frames\
       | Alpino debug=0 cmdint=off -u -notk -l frames2pl  >> frames.pl
 
-
 counts:
 	for file in $(FRAMES:%.frames=%);\
         do echo $$file \
@@ -81,3 +80,12 @@ realclean:
 	rm getNGD getNGD2 getngd getngd2 getngdpre getngdpost
 
 .PRECIOUS : %.fr %.tmi %.tmo %.sfr
+
+
+allframes:
+	zcat *.log.gz | grep FRAME  | grep 'normal(normal)' | sed -e 's/FRAME#//' | awk -F\| '{ printf "%s\t%s\t%s\n", $$1,$$2,$$8 }' | sort -u > allframes
+
+allframes.pl:allframes
+	cat allframes | Alpino debug=0 cmdint=off -u -notk -l allframes2pl > allframes.pl
+
+

@@ -395,7 +395,7 @@ SCORES=cdb_part?/score
 TIMES=cdb_part?/time
 
 overview:
-	$(MAKE) -s overviewall overviewc overviewa overviewd overviewp overviewu overvieww overviewi
+	$(MAKE) -s overviewc overviewa overviewd overviewp overviewu overvieww overviewi overviewcgn
 
 
 overviewcgn:
@@ -405,11 +405,6 @@ overviewcgn:
 	@$(MAKE) -s overview0 SCORES="f[n]??????/score" TIMES="f[n]??????/time"
 	@echo VL CGN:
 	@$(MAKE) -s overview0 SCORES="f[v]??????/score" TIMES="f[v]??????/time"
-
-overviewall:
-	@echo "Alpino Treebank ++"
-	@$(MAKE) -s overview0 SCORES="cdb_part?/score WSU/score dpc-ind/score PPH/score WIKI/score PPI/score WSU/score"\
-                              TIMES="cdb_part?/time WSU/time dpc-ind/time PPH/time WIKI/time PPI/time WSU/time"
 
 overviewc:
 	@echo "cdb"
