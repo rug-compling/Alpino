@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="conj" end="13" id="1" rel="--">
+      <node begin="0" cat="smain" end="9" id="2" rel="cnj">
+        <node begin="0" cat="mwu" end="2" his="normal" his_1="names_dictionary" id="3" index="1" mwu_root="Renate Groenewold" mwu_sense="Renate Groenewold" rel="su">
+          <node begin="0" end="1" id="4" lemma="Renate" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Renate" spectype="deeleigen" word="Renate"/>
+          <node begin="1" end="2" id="5" lemma="Groenewold" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Groenewold" spectype="deeleigen" word="Groenewold"/>
+        </node>
+        <node begin="2" end="3" id="6" infl="sg" lemma="moeten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="moet" sc="modifier(aux(inf))" tense="past" word="moest" wvorm="pv"/>
+        <node begin="0" cat="inf" end="9" id="7" rel="vc">
+          <node begin="0" end="2" id="8" index="1" rel="su"/>
+          <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="9" infl="no_e" lemma="uiteindelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="uiteindelijk" vform="adj" word="uiteindelijk"/>
+          <node begin="4" end="5" id="10" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
+          <node begin="5" end="6" id="11" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" special="sentence" word="ook"/>
+          <node begin="6" cat="mwu" end="8" his="normal" his_1="names_dictionary" id="12" mwu_root="Claudia Pechstein" mwu_sense="Claudia Pechstein" rel="obj1">
+            <node begin="6" end="7" id="13" lemma="Claudia" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Claudia" spectype="deeleigen" word="Claudia"/>
+            <node begin="7" end="8" id="14" lemma="Pechstein" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Pechstein" spectype="deeleigen" word="Pechstein"/>
+          </node>
+          <node begin="8" buiging="zonder" end="9" id="15" infl="inf" lemma="voor_laten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="laat_voor" sc="part_transitive_ndev_ndev(voor)" word="voorlaten" wvorm="inf"/>
+        </node>
+      </node>
+      <node begin="9" conjtype="neven" end="10" id="16" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="0" cat="smain" end="13" id="17" rel="cnj">
+        <node begin="0" end="2" id="18" index="1" rel="su"/>
+        <node begin="10" end="11" id="19" infl="sg" lemma="eindigen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="eindig" sc="intransitive" tense="past" word="eindigde" wvorm="pv"/>
+        <node begin="11" cat="cp" end="13" id="20" rel="predm">
+          <node begin="11" end="12" id="21" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" sc="als" vztype="init" word="als"/>
+          <node begin="12" end="13" getal-n="zonder-n" id="22" lemma="derde" numtype="rang" pos="num" positie="nom" postag="TW(rang,nom,zonder-n)" pt="tw" rel="body" rnum="sg" root="derde" special="rang" word="derde"/>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Renate Groenewold moest uiteindelijk toch ook Claudia Pechstein voorlaten en eindigde als derde .</sentence>
+</alpino_ds>

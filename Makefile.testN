@@ -221,7 +221,7 @@ hpctests:
 	$(MAKE) job HPCTARGET=testN suite=dpc-rou
 	$(MAKE) job HPCTARGET=testN suite=wpspel_annot
 
-tests: t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 t16
+tests: t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 t16 t17
 
 t1:
 	$(MAKE) testN suite=i_suite
@@ -255,6 +255,8 @@ t15:
 	$(MAKE) testN suite=LassySmall
 t16:
 	$(MAKE) testN suite=lassy
+t17:
+	$(MAKE) testN suite=WSU
 
 bf:
 	@echo "        BEST-CA          #PARSES        SUITE"
@@ -273,7 +275,7 @@ bf0:
 	for file in `echo $(shell ls $(ORDERED) */*/bests 2>/dev/null)`; do \
         suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
         times=`echo $$file | sed -e 's/bests/times/'`;\
-        echo `grep 'BEST: ca-score' $$file | awk '{ print $$3 }' `"	"`if [ -f $$suite/best ]; then grep 'BEST: ca-score' $$suite/best | tail -n 2 | head -n 1 | awk '{ print $$3 }'; fi`"	"`grep readings/sentence $$file | awk '{ print $$1 }'`"	"`if [ -f $$suite/best ]; then grep 'readings/sentence' $$suite/best | tail -n 2 |head -n 1 | awk '{ print $$1 }'; fi`"	"$$suite"	"`grep extra= $$times|sed -e 's/extra=//'`;\
+        echo `grep 'BEST: ca-score' $$file | awk '{ print $$3 }' `"	"`if [ -f $$suite/best ]; then grep 'BEST: ca-score' $$suite/best | tail -n 2 | head -n 1 | awk '{ print $$3 }'; fi`"	"`grep readings/sentence $$file | awk '{ print $$1 }'`"	"`if [ -f $$suite/best ]; then grep 'readings/sentence' $$suite/best | tail -n 2 |head -n 1 | awk '{ print $$1 }'; fi`"	"$$suite"	"`grep extra= $$times|sed -e 's/extra=//' | tr ' ' ',' `;\
         done
 
 upd_all:

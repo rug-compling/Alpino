@@ -216,6 +216,8 @@ t_s_r(fixed([vc(_,inf,_)|_],_),
                              aux(inf)).
 t_s_r(fixed([vc(_,te,_)|_],_),
                              aux(te)).
+t_s_r(fixed([vc(_,pass_te,_)|_],_),
+                             aux(te)).
 
 t_s_r(aux(psp(_)),           aux(psp)).
 t_s_r(aux_psp_hebben,        aux(psp)).

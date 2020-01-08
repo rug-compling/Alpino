@@ -2889,6 +2889,7 @@ lemma_root(dood_vriezen,vries_dood) .
 lemma_root(dood_zwijgen,zwijg_dood) .
 lemma_root(dooien,dooi) .
 lemma_root(door_aaien,aai_door) .
+lemma_root(door_aanvaarden,aanvaard_door) .
 lemma_root(door_aarden,aard_door) .
 lemma_root(door_aarzelen,aarzel_door) .
 lemma_root(door_aborteren,aborteer_door) .
@@ -10373,6 +10374,7 @@ lemma_root(putten,put) .
 lemma_root(puzzelen,puzzel) .
 lemma_root(raadplegen,raadpleeg) .
 lemma_root(raak_aaien,aai_raak) .
+lemma_root(raak_aanvaarden,aanvaard_raak) .
 lemma_root(raak_aarden,aard_raak) .
 lemma_root(raak_aarzelen,aarzel_raak) .
 lemma_root(raak_aborteren,aborteer_raak) .
@@ -15472,6 +15474,7 @@ lemma_root(twitteren,twitter) .
 lemma_root(typen,typ) .
 lemma_root(typeren,typeer) .
 lemma_root(uit_aaien,aai_uit) .
+lemma_root(uit_aanvaarden,aanvaard_uit) .
 lemma_root(uit_aarden,aard_uit) .
 lemma_root(uit_aarzelen,aarzel_uit) .
 lemma_root(uit_aborteren,aborteer_uit) .
@@ -20177,6 +20180,7 @@ lemma_root(voor_staan,sta_voor) .
 lemma_root(voor_stellen,stel_voor) .
 lemma_root(voor_stemmen,stem_voor) .
 lemma_root(voort_aaien,aai_voort) .
+lemma_root(voort_aanvaarden,aanvaard_voort) .
 lemma_root(voort_aarden,aard_voort) .
 lemma_root(voort_aarzelen,aarzel_voort) .
 lemma_root(voort_aborteren,aborteer_voort) .

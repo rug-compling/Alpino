@@ -1175,7 +1175,7 @@ grammar_rule(v2_vp_vproj,VP,[V]) :-
     V:e_deps => [],
     VP:mf <=> V:mf,
     V:vform => fin,
-    hd_structure(V,VP). 
+    hd_structure(V,VP).
 
 grammar_rule(v2_vp_dubb_vproj,VP,[OPT,V]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
@@ -1724,7 +1724,7 @@ grammar_rule(vp_mod_v, VP, [ Mod, COMMA, V ] ) :-
 grammar_rule(vp_c_mod_c_v, VP, [ CommaL, Mod, CommaR, V ] ) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     comma(CommaL),
-    comma(CommaR),
+    optcomma(CommaR),
     vp_mod_v_structure(VP,Mod,V).
 
 %% cdbl 4646

@@ -529,6 +529,10 @@ gen_determiner(D) :-
     sign(D,detp).
 
 geen_determiner(D) :-
+    %%    D:nsubn => ~sub_indef_verb & ~sub_def_verb,
+    %% dat is geen doen
+    %% we hebben er geen omkijken naar
+    %% dat is toch geen hardlopen wat hij doet
     determiner(D).
 
 comp_determiner(D,als) :-
