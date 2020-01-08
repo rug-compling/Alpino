@@ -13737,6 +13737,9 @@ a([e(gemeenschappelijke),
 a([e(gemeentelijke),
    no_e(gemeentelijk)],nonadv,[],[]).
 
+a([e(gemeenzame),
+   no_e(gemeenzaam)],adv,[],[]).
+
 a([ge_e(gemeerde),
    ge_no_e(gemeerd)],adv,[],[]).
 
@@ -15543,7 +15546,7 @@ a([ge_e(gesorteerde),
    ge_no_e(gesorteerd)],adv,[],[]).
 
 a([ge_e(gespaarde),
-   ge_no_e(gespaard)],adv,[],[]).
+   ge_no_e(gespaard)],adv,[pp(van)],[]).
 
 a([ge_both(gespannen),
    er(gespannener),
@@ -18429,6 +18432,9 @@ a([ge_e(hervormde),
 a([e(hervormingsgezinde),
    no_e(hervormingsgezind)],nonadv,[],[]).
 
+a([ge_e(herwerkte),
+   ge_no_e(herwerkt)],adv,[],[]).
+
 a([ge_both(herwonnen)],adv,[],[]).
 
 a([ge_no_e(herzien),
@@ -20093,7 +20099,9 @@ a([e(interne),
    no_e(intern)],adv,[],[s(bedrijf)]).
 
 a([e(internationale),
-   no_e(internationaal)],adv,[],[]).
+   no_e(internationaal),
+   er(internationaler),
+   ere(internationalere)],adv,[],[]).
 
 a([e(interplanetaire),
    no_e(interplanetair)],nonadv,[],[]).
@@ -22257,7 +22265,7 @@ a([ge_e(losgeknoopte),
 a([ge_both(losgekomen)],adv,[],[]).
 
 a([ge_e(losgekoppelde),
-   ge_no_e(losgekoppeld)],adv,[],[]).
+   ge_no_e(losgekoppeld)],adv,[pp(van)],[]).
 
 a([ge_both(losgelaten)],adv,[],[]).
 
@@ -25136,14 +25144,14 @@ a([e(onbeschrijfelijke),
    ere(onbeschrijfelijkere),
    no_e(onbeschrijfelijk),
    st(onbeschrijfelijkst),
-   ste(onbeschrijfelijkste)],adv,[],[]).
+   ste(onbeschrijfelijkste)],adv,[subject_sbar,subject_vp],[]).
 
 a([e(onbeschrijflijke),
    er(onbeschrijflijker),
    ere(onbeschrijflijkere),
    no_e(onbeschrijflijk),
    st(onbeschrijflijkst),
-   ste(onbeschrijflijkste)],adv,[],[]).
+   ste(onbeschrijflijkste)],adv,[subject_sbar,subject_vp],[]).
 
 a([e(onbesliste),
    no_e(onbeslist)],adv,[],[]).
@@ -25795,7 +25803,7 @@ a([e(ongecompliceerde),
 a([e(ongecontroleerde),
    e(ongekontroleerde),
    no_e(ongecontroleerd),
-   no_e(ongekontroleerd)],padv,[],[]).
+   no_e(ongekontroleerd)],both,[],[]).
 
 a([e(ongedane),
    no_e(ongedaan)],nonadv,[],[]).
@@ -33297,6 +33305,8 @@ a([e(strenge),
    st(strengst),
    ste(strengste)],adv,
   [pp(voor)],[]).
+
+a([postn_both([stricto,sensu])],adv,[],[]).
 
 a([e(strijdbare),
    er(strijdbaarder),

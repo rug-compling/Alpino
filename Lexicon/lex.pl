@@ -884,6 +884,7 @@ plural_suffix(postmen).
 plural_suffix(pretenders).
 plural_suffix(pumpkins).
 plural_suffix(puritans).
+plural_suffix(raden).
 plural_suffix(ramblers).
 plural_suffix(ramones).
 plural_suffix(rangers).
@@ -3052,10 +3053,13 @@ parse_only_variant(kkr,kanker,intensifier).
 parse_only_variant(vraagde, vroeg,verb(_,_,_)).
 parse_only_variant(vraagden,vroegen,verb(_,_,_)).
 
-parse_only_variant(ware,    was,  verb(_,_,_)).
-parse_only_variant(waart,   was,  verb(_,_,_)).
+parse_only_variant(ware,    was,    verb(_,_,_)).
+parse_only_variant(waart,   was,    verb(_,_,_)).
 
 parse_only_variant(zoja,    'zo ja',sbar).
+
+parse_only_lex(ie,      hij,    pronoun(nwh,thi,sg,de,nom,def,wkpro)).
+parse_only_lex('-ie',   hij,    pronoun(nwh,thi,sg,de,nom,def,wkpro)).
 
 % qtleap: login op de website
 % ipv     log in op de website

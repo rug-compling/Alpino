@@ -3046,6 +3046,7 @@ form_of_suffix_rule(der,der,adjective(no_e(adv)),[beheerder,
 form_of_suffix_rule(oir,oir,adjective(no_e(adv)),[]).
 form_of_suffix_rule(gewijs,gewijs,adjective(no_e(adv)),[]).
 form_of_suffix_rule(loos,loos,adjective(no_e(padv)),[]).
+form_of_suffix_rule(zaam,zaam,adjective(no_e(adv)),[]).
 
 
 form_of_suffix_rule(tigste,  tig,     number(rang),[vergeetachtigste]).
@@ -3095,6 +3096,7 @@ form_of_suffix_rule(ïde,     ïde,     adjective(both(adv)),[]).
 form_of_suffix_rule(oire,    oir,     adjective(e),[]).
 form_of_suffix_rule(gewijze, gewijs,  adjective(e),[]).
 form_of_suffix_rule(loze,    loos,    adjective(e),[]).
+form_of_suffix_rule(zame,    zaam,    adjective(e),[]).
 
 form_of_suffix_rule(iger,    ig,      adjective(er(adv)),[verdediger]).
 form_of_suffix_rule(ischer,  isch,    adjective(er(adv)),[]).

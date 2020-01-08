@@ -1502,7 +1502,6 @@ with_dt([in,vuur,en,vlam],
                              cnj=l(vlam,noun(de,count,sg),np,3,4)
                              ])])).
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%% ADVERBS %%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -5007,7 +5006,8 @@ m(hoog,             modal_adverb(prep),hoog).     % hoog boven de wolken
 m(laag,             modal_adverb(prep),laag).     % hoog boven de wolken
 m(midden,           modal_adverb(prep),midden).   % midden in
 m(pal,              modal_adverb(prep),pal).      % pal naast/achter/..
-m(recht,            modal_adverb(prep),recht).    % pal naast/achter/..
+m(recht,            modal_adverb(prep),recht).    % recht tegenover ..
+m(recht,            modal_adverb(prep),recht).    % lijnrecht tegenover ..
 m(redelijk,         modal_adverb(prep),redelijk). % redelijk op tijd
 m(volkomen,         modal_adverb(prep),volkomen). % with pp (predicative?)
 				% 'volkomen tegen mijn wil' / in de war
@@ -6593,8 +6593,6 @@ m(hetgeen,      pronoun(ywh,thi,sg,het,both,def),hetgeen).
 m(hetgeen,      pronoun(nwh,thi,sg,het,both,def,strpro),hetgene).
 m(hetwelk,      pronoun(ywh,thi,sg,het,both,def),hetwelk).
 m(hij,          pronoun(nwh,thi,sg,de,nom,def),hij).
-m(hij,          pronoun(nwh,thi,sg,de,nom,def,wkpro),ie).
-m(hij,          pronoun(nwh,thi,sg,de,nom,def,wkpro),'-ie').
 m('hij_zij',    pronoun(nwh,thi,sg,de,nom,def),'hij/zij').
 m('hij_zij',    pronoun(nwh,thi,sg,de,nom,def),[hij,'/',zij]).
 m(hijzelf,      pronoun(nwh,thi,sg,de,nom,def),hijzelf).

@@ -1539,6 +1539,29 @@ isa_number_([H|T]) :-
     \+ [H] = "(",
     isa_number__(T).
 
+isa_number_(Codes) :-
+    atom_codes(W0,Codes),
+    atom_concat(Twee,EnEenHalfDuizend,W0),
+    atom_concat(EnEenHalf,Duizend,EnEenHalfDuizend),
+    duizend_na_half(Duizend),
+    eneenhalf(EnEenHalf),
+    parse_number(Twee,_Agr).
+
+eneenhalf(eneenalf).
+eneenhalf('en-een-half').
+eneenhalf('-en-een-half').
+eneenhalf('en-half').
+eneenhalf('-en-half').
+eneenhalf(enhalf).
+eneenhalf(ëneenhalf).
+eneenhalf(ënhalf).
+
+duizend_na_half(duizend).
+duizend_na_half(miljoen).
+duizend_na_half(miljard).
+duizend_na_half(biljoen).
+duizend_na_half('').
+
 isa_number__(List) :-
     length(List,Len), Len < 25,
     atom_codes(U,List), 

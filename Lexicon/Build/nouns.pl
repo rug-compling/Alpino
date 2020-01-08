@@ -1367,7 +1367,7 @@ n([pl(aanvallers),sg(aanvaller)],de,[]).
 
 n([mass(aanvang)],de,[]).
 
-n([pl(aanvaringen),sg(aanvaring)],de,[]).
+n([pl(aanvaringen),sg(aanvaring)],de,[pred_pp(in)]).
 
 n([pl(aanvechtingen),sg(aanvechting)],de,[vp]).
 
@@ -2749,6 +2749,7 @@ n([pl(artsen),sg(arts)],de,[],
    s(keuring),
    i(kind,kinder),
    lijf,
+   natuur,
    oog,
    oor,
    ploeg,
@@ -13459,6 +13460,9 @@ n([mass(grint)],het,[]).
 n([mass(grip)],de,[]).
 
 n([pl(groeven),sg(groef)],de,[],[dim(groefje)]).
+
+n([mass(groei)],de,[pred_pp(in)],
+  []).
 
 n([mass(groei)],de,[],
   [i(baan,banen),
@@ -25052,7 +25056,7 @@ n([pl(palmbomen),sg(palmboom)],de,[]).
 
 n([pl(pamfletten),sg(pamflet)],het,[],[dim(pamfletje)]).
 
-n([pl(pannen),sg(pan)],de,[measure],
+n([pl(pannen),sg(pan)],de,[measure,pred_pp_pl(onder)],
   [dim(pannetje)]).				      % een pan soep
 n([pl(pannen),sg(pan)],de,[],
   [stoom,
@@ -35131,7 +35135,11 @@ n([pl(uitkijken),sg(uitkijk)],de,[]).
 
 n([pl(uitkijkposten),sg(uitkijkpost)],de,[]).
 
-n([pl(uitkomsten),sg(uitkomst)],de,[sbar,vp,subject_sbar]).
+n([pl(uitkomsten),sg(uitkomst)],de,
+  [sbar,
+   vp,
+   subject_vp,
+   subject_sbar]).
 
 n([sg(uitkoop)],de,[]).
 

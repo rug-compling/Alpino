@@ -161,7 +161,7 @@ m(v_root(vraag,vragen),
   verb(vroeg,hebben,past(sg),[ninv(part_incorporated_subj_topic(af,refl_sbar),
 			      incorporated_subj_topic(refl_sbar))])).
 
-%% "kom er net achter dat hij .."
+%% "kom/kwam er net achter dat hij .."
 m(v_root(kom,komen),
   verb(kom,hebben,sg1,[ninv(incorporated_subj_topic(er_pp_sbar(achter)),
 			    incorporated_subj_topic(er_pp_sbar(achter)))])).
@@ -1301,7 +1301,10 @@ v(aanschouw,aanschouwt,aanschouwen,aanschouwd,aanschouwde,aanschouwden,
 v(aanvaard,aanvaardt,aanvaarden,aanvaard,aanvaardde,aanvaardden,
     [h([als_pred_np,
 	sbar,
-	transitive])]).
+	vp,
+	transitive,
+	intransitive
+       ])]).
 
 v(aanzie,aanziet,aanzien,aanzien,aanzag,aanzagen,
     [h([transitive,
@@ -4526,8 +4529,6 @@ v(breng,brengt,brengen,gebracht,bracht,brachten,
 	transitive,
 	pp_pred_np, % ik breng hem in gevaar / onder controle etc
         pp_copula(aan,kook),  % recepten: breng aan de kook en ...
-        pp_copula(in,ban),
-        pp_copula(in,balans),
         fixed([ap_pred('op de hoogte'),acc],norm_passive),
         fixed([ap_pred('in orde'),acc],norm_passive),
 	fixed([ap_pred('van de wijs'),acc],norm_passive),
@@ -4601,8 +4602,7 @@ v(breng,brengt,brengen,gebracht,bracht,brachten,
 	fixed([[aan,de,man],acc],norm_passive),
 	part_np_pc_pp(op,voor),  % waardering, begrip
 	part_np_er_pp_sbar(op,voor), % ,,
-	fixed([[in,beeld],acc],norm_passive),
-	fixed([[in,beeld],sbar],norm_passive),  % in beeld brengen hoe ...
+	fixed([pp_pred(in,beeld),sbar],norm_passive),  % in beeld brengen hoe ...
 	fixed([[in,kaart],acc],norm_passive),
 	fixed([[in,kaart],sbar],imp_passive),  % in kaart brengen hoe ...
 	fixed([[in,omloop],acc],norm_passive),
@@ -8637,6 +8637,7 @@ v(graaf,graaft,graven,gegraven,groef,groeven,
 	transitive,
 	part_intransitive(af),
 	ld_pp,
+	refl_ld_pp,
 	ld_adv,
 %	part_refl(in),
 	part_transitive(af),
@@ -8834,10 +8835,11 @@ v(gum,gumt,gummen,gegumd,gumde,gumden,
         part_transitive(weg)])]).
 
 v(gun,gunt,gunnen,gegund,gunde,gunden,
-    [h([np_np,
-	transitive,
-	so_np_sbar_obj,
-	so_np_vp_obj])]).
+  [h([np_np,
+      so_pp_np,
+      transitive,
+      so_np_sbar_obj,
+      so_np_vp_obj])]).
 
 v(guts,gutst,gutsen,gegutst,gutste,gutsten,
     [z([ld_pp]),
@@ -11507,7 +11509,15 @@ v(koloniseer,koloniseert,koloniseren,gekoloniseerd,koloniseerde,koloniseerden,
 
 v(kom,komt,komen,gekomen,kwam,kwamen,
   [z([part_so_np_pass(tegemoet),
-      part_so_pp(tegemoet)]),
+      part_so_pp(tegemoet),
+      part_intransitive(overeen),
+      part_transitive(overeen),
+      part_pc_pp(overeen,in),
+      part_pc_pp(overeen,met),
+      part_np_pc_pp(overeen,met),
+      part_sbar(overeen),
+      part_vp(overeen)
+      ]),
    unacc([intransitive,			% ik kom!
 	  ld_adv,			% ik kwam thuis
 	  ld_dir,			% ik kwam het huis in
@@ -11616,13 +11626,6 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
 	  part_ap_copula_sbar(over), % het komt raar over dat ...
 	  part_sbar_subj(over),	     % het komt op mij over dat ...
 	  part_ld_pp(over),
-	  part_intransitive(overeen),
-	  part_transitive(overeen),
-	  part_pc_pp(overeen,in),
-	  part_pc_pp(overeen,met),
-	  part_np_pc_pp(overeen,met),
-	  part_sbar(overeen),
-	  part_vp(overeen),
 	  pc_pp(overheen),	% ik kom er wel overheen
 	  er_pp_sbar(overheen),	% ik kom er wel weer overheen dat ...
 	  part_intransitive(rond),
@@ -11848,6 +11851,7 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
           fixed([[van,pas]],no_passive),
           fixed([[van,pas],dat],no_passive),
           fixed([[voor,de,dag],ap_pred],no_passive),
+          fixed([subj(vraag),pc(naar)],no_passive),
           %% we zijn dat te weten gekomen
           fixed([[te,weten],acc],no_passive),
           fixed([[te,weten],mod_pp(over),acc],no_passive),
@@ -11877,6 +11881,7 @@ v(kook,kookt,koken,gekookt,kookte,kookten,
       ap_pred_np,
       transitive,
       pc_pp(op),
+      np_mod_pp(in),  % het water waar ze de aardappelen in koken
       part_transitive(door),
       part_transitive(in),
       part_transitive(mee),
@@ -15680,6 +15685,7 @@ v(ontspruit,ontspruit,ontspruiten,ontsproten,ontsproot,ontsproten,
 v(ontsta,ontstaat,inflected(ontstaan,ontstane),ontstaan,ontstond,ontstonden,
   [unacc([intransitive,
 	  fixed([subj(weerstand),pc(tegen)],no_passive),
+	  fixed([subj(vraag),pc(naar)],no_passive),
 	  pc_pp(uit),
 	  pc_pp(over)]          % ruzie/rumoer/stampei/...
         )]).
@@ -16836,6 +16842,7 @@ v(pluk,plukt,plukken,geplukt,plukte,plukten,
     [h([ap_pred_np,
 	transitive,
 %	np_pc_pp(van), LD
+	fixed([{[acc(vruch),pc(van)]}],norm_passive),
 	np_ld_pp,
 	pc_pp(aan)])]).
 
@@ -26217,6 +26224,8 @@ v(vind,vindt,vinden,gevonden,vond,vonden,
 	fixed([{[[geen,graten],er_pp(in,C)]},extra_vp(C)],no_passive),  % VL
 	% VL de uitbaatster vond er niet beter op dan de brandweer op te trommelen
 	fixed([er_pp(op),compar],no_passive),
+	np_mod_pp(over),  % ik vond daar niets over
+	part_np_mod_pp(terug,over),  % ik vond daar niets over terug
 	np_mod_pp(voor),  % ik vond daar geen oplossing voor
         part_transitive(goed),
         part_sbar(goed),
@@ -27884,8 +27893,8 @@ v(zeg,zegt,zeggen,gezegd,zei,zeiden,zegge,
 	part_intransitive(af),
 	part_transitive(af),
         part_transitive(dank),
-	np_pc_pp(bij),		% dat vertelde hij er niet bij
-	pp_sbar(bij),   % hij vertelde er niet bij dat ...
+	np_pc_pp(bij),		% dat zei hij er niet bij
+	pp_sbar(bij),   % hij zei er niet bij dat ...
 	pp_sbar(met),   % hij wilde daar mee zeggen dat ..
 	np_pc_pp(met),  % hij wilde daar verder niets mee zeggen
         np_pc_pp(in),   % je hebt er niets in te zeggen
@@ -27896,10 +27905,10 @@ v(zeg,zegt,zeggen,gezegd,zei,zeiden,zegge,
 	part_transitive(op),
 	part_intransitive(op),  % zeg op , of ik knal je kop er af
 	part_np_np(op),  % we zeggen hem de vriendschap op
-	np_pc_pp(over),
-	pp_sbar(over),
-	mod_pp(van),    % daar heeft hij nooit iets van gezegd
-	np_mod_pp(van), % daar heeft hij mij nooit iets van gezegd
+	np_mod_pp(over), % daar heeft hij nooit iets over gezegd
+	np_np_mod_pp(over), % daar heeft hij mij nooit iets over gezegd
+	np_mod_pp(van),    % daar heeft hij nooit iets van gezegd
+	np_np_mod_pp(van), % daar heeft hij mij nooit iets van gezegd
 	fixed([er_pp(op),[donder]],imp_passive),
 	fixed([er_pp(op,X),[donder],extra_sbar(X)],imp_passive),
 	fixed([er_pp(bij),sbar],imp_passive),
