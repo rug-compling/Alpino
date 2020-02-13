@@ -10425,6 +10425,8 @@ a([e(fluwelige),
    st(fluweligst),
    ste(fluweligste)],nonadv,[],[]).
 
+a([e(fobogene),no_e(fobogeen)],adv,[],[]).
+
 a([e(foetale),
    no_e(foetaal)],nonadv,[],[]).
 
@@ -19204,8 +19206,6 @@ a([pred([in,mekaar])],nonadv,[],[]).
 
 a([pred([in,gebruik])],padv,[],[]).
 
-a([pred([in,productie])],nonadv,[],[]).
-
 a([pred([in,de,weer])],padv,
   [object_vp],[]).
 
@@ -19219,6 +19219,9 @@ a([pred([in,het,spel])],nonadv,[],[]).
 a([pred([in,kannen,en,kruiken])],nonadv,[],[]).
 
 a([pred([in,orde])],nonadv,[],[]).
+
+a([pred([in,reactie])],adv,
+  [pp(op)],[]).
 
 a([pred([in,staat])],padv,
   [object_vp,
@@ -25491,6 +25494,9 @@ a([e(onderkoelde),
 
 a([e(onderlegde),
    no_e(onderlegd)],padv,[],[]).
+
+a([ge_e(onderlijnde),
+   ge_no_e(onderlijnd)],adv,[],[]).
 
 a([e(onderlinge),
    postn_no_e(onderling)],adv,

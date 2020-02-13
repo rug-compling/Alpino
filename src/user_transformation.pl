@@ -33,6 +33,7 @@ user_transformation(r(REL,p(mwu)),A,[Als0,Volgt0],
     Volgt  = tree(r(mwp,l(read_from_treebank(Bz,'Regering','SPEC(deeleigen)'),Cat2,'Regering'/[Pa,Pb])),J,[]),
     alpino_treebank:get_root(Pa,Pb,String,'Regering').
 */
+
 /*
 user_transformation(r(predc,p(predc)),A,Ds,
 		    r(predc,p(pp)),A,Ds,_,_).
@@ -87,6 +88,35 @@ user_transformation(r(Rel,p(rel)),A,Ds0,
     NPD  = tree(r(hd,LEX),_,LEXDS),
     BODY = tree(r(body,LEX),_,LEXDS),  % for mwu LEXDS is non empty
     MOD  = tree(r(mod,i(X)),_,[]).
+*/
+/*
+user_transformation(r(REL,l(read_from_treebank(Az,'Frans','ADJ(nom,basis,met-e,mv-n)'),Cat,W/[P0,P])),B,[],
+		    r(REL,l(read_from_treebank(Az,'Fransen', 'N(eigen,mv,basis)'),Cat,W/[P0,P])),B,[],_,_).
+user_transformation(r(REL,l(read_from_treebank(Az,'Franse','ADJ(nom,basis,met-e,mv-n)'),Cat,W/[P0,P])),B,[],
+		    r(REL,l(read_from_treebank(Az,'Fransen', 'N(eigen,mv,basis)'),Cat,W/[P0,P])),B,[],_,_).
+user_transformation(r(REL,l(read_from_treebank(Az,'Fransman','ADJ(nom,basis,met-e,mv-n)'),Cat,W/[P0,P])),B,[],
+		    r(REL,l(read_from_treebank(Az,'Fransen', 'N(eigen,mv,basis)'),Cat,W/[P0,P])),B,[],_,_).
+user_transformation(r(REL,l(read_from_treebank(Az,'Frans','N(eigen,mv,basis)'),Cat,W/[P0,P])),B,[],
+		    r(REL,l(read_from_treebank(Az,'Fransen', 'N(eigen,mv,basis)'),Cat,W/[P0,P])),B,[],_,_).
+user_transformation(r(REL,l(read_from_treebank(Az,'Franse','N(eigen,mv,basis)'),Cat,W/[P0,P])),B,[],
+		    r(REL,l(read_from_treebank(Az,'Fransen', 'N(eigen,mv,basis)'),Cat,W/[P0,P])),B,[],_,_).
+user_transformation(r(REL,l(read_from_treebank(Az,'Fransman','N(eigen,mv,basis)'),Cat,W/[P0,P])),B,[],
+		    r(REL,l(read_from_treebank(Az,'Fransen', 'N(eigen,mv,basis)'),Cat,W/[P0,P])),B,[],_,_).
+
+
+user_transformation(r(REL,l(read_from_treebank(Az,engelsen,'N(soort,mv,basis)'),Cat,W/[P0,P])),B,[],
+		    r(REL,l(read_from_treebank(Az,'Engelsen', 'N(eigen,mv,basis)'),Cat,W/[P0,P])),B,[],_,_).
+
+user_transformation(r(REL,l(read_from_treebank(Az,'Engelsman','N(eigen,mv,basis)'),Cat,W/[P0,P])),B,[],
+		    r(REL,l(read_from_treebank(Az,'Engelsen', 'N(eigen,mv,basis)'),Cat,W/[P0,P])),B,[],_,_).
+
+user_transformation(r(REL,l(read_from_treebank(Az,'Engels','ADJ(nom,basis,met-e,mv-n)'),Cat,W/[P0,P])),B,[],
+		    r(REL,l(read_from_treebank(Az,'Engelsen', 'N(eigen,mv,basis)'),Cat,W/[P0,P])),B,[],_,_).
+
+user_transformation(r(REL,l(read_from_treebank(Az,'Engels','ADJ(nom,basis,zonder,mv-n)'),Cat,W/[P0,P])),B,[],
+		    r(REL,l(read_from_treebank(Az,'Engelsen', 'N(eigen,mv,basis)'),Cat,W/[P0,P])),B,[],_,_).
+
+
 */
 
 /*

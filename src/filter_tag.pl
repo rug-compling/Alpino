@@ -539,6 +539,7 @@ valid_sc(np_mod_pp(Prep),             [prep(Prep)]).
 valid_sc(np_np_mod_pp(Prep),          [prep(Prep)]).
 valid_sc(refl_er_pc_pp(Prep),         [check_refl,er_prep(Prep)]).
 valid_sc(refl_pc_pp(Prep),            [prep(Prep),check_refl]).
+valid_sc(np_refl_pc_pp(Prep),         [prep(Prep),check_refl]).
 valid_sc(refl_aan_pc_pp,              [prep(aan),check_refl]).
 valid_sc(mod_pp(Prep),                [prep(Prep)]).
 valid_sc(pc_pp(Prep),                 [prep(Prep)]).
@@ -847,6 +848,7 @@ check_fixed_el(dat_pp(Prep),          [prep(Prep)|Cs],Cs).
 check_fixed_el(vp,                    [check_vform(te)|Cs],Cs).
 check_fixed_el(vp_no_control,         [check_vform(te)|Cs],Cs).
 check_fixed_el(extra_vp(_),           [check_vform(te)|Cs],Cs).
+check_fixed_el(extra_vp_no_control(_),[check_vform(te)|Cs],Cs).
 check_fixed_el(extra_obj_vp(_,_),     [check_vform(te)|Cs],Cs).
 check_fixed_el(obj_vp(_),             [check_vform(te)|Cs],Cs).
 check_fixed_el(het_obj1,              [check_het|Cs],Cs).
