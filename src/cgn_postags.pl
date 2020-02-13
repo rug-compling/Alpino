@@ -152,7 +152,7 @@ guess_tag_list([H|T],Q0,Q) -->
 guess_tags(Q0,Q,Frame,Stem,L0,L) :-
     (   Q is Q0 + 1
     ->  guess_tag(Stem,Q0,Q,L0,L)
-    ;   guess_stags(Q0,Q,Frame,L0,L)
+    ;   guess_stags(Q0,Q,Frame,Stem,L0,L)
     ).
 
 guess_tag(Stem,Q0,Q) -->
@@ -169,14 +169,18 @@ guess_tag(_,Q0,Q) -->
     { Q is Q0 + 1 },
     [cgn_postag(Q0,Q,'NA()')].
 
-guess_stags(Q0,Q,Tag,L0,L) :-
+guess_stags(Q0,Q,Tag,St,L0,L) :-
     (   Q > Q0
     ->  Q1 is Q0 + 1,
+	St = [Stem|Stems],
 	(   Tag=fixed_part([H|T])
 	->  guess_tag(H,Q0,Q1,L0,L1),
-	    guess_stags(Q1,Q,fixed_part(T),L1,L)
+	    guess_stags(Q1,Q,fixed_part(T),Stems,L1,L)
+	;   lassy(Stem,POSTAG)
+	->  L0 = [cgn_postag(Q0,Q1,POSTAG)|L1],
+	    guess_stags(Q1,Q,Tag,Stems,L1,L)
 	;   L0 = [cgn_postag(Q0,Q1,'NA()')|L1],
-	    guess_stags(Q1,Q,Tag,L1,L)
+	    guess_stags(Q1,Q,Tag,Stems,L1,L)
 	)
     ;   L0 = L
     ).
