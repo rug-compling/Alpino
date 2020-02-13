@@ -1869,6 +1869,7 @@ m('iets van',        pre_num_adv(pl),           [iets,van]).
 m('nog geen',        pre_num_adv(pl),           [nog,geen]).
 m('over de',         pre_num_adv(pl),           [over,de]).
 m('rond de',         pre_num_adv(pl_indef),     [rond,de]).
+m('tegen de',        pre_num_adv(pl_indef),     [tegen,de]).
 m('zo\'n',           pre_num_adv(pl_indef),     'zo\'n').
 m('zo\'n kleine',    pre_num_adv(pl_indef),     ['zo\'n',kleine]).
 m('zo\'n slordige',  pre_num_adv(pl_indef),     ['zo\'n',slordige]).
@@ -2874,6 +2875,25 @@ collocational_preposition([uit,protest,tegen]).
 collocational_preposition([uit,respect,voor]).
 collocational_preposition([uit,vrees,voor]).
 collocational_preposition([voor,rekening,van]).
+
+%% added by Jack Hoeksema
+
+collocational_preposition([buiten,medeweten,van]).
+collocational_preposition([met,medeweten,van]).
+collocational_preposition([in,naam,van]).
+%collocational_preposition([in,overeenstemming,met]).
+%collocational_preposition([in,de,richting,van]).
+%collocational_preposition([in,strijd,met]).
+%collocational_preposition([met,behoud,van]).
+%collocational_preposition([met,toestemming,van]).
+collocational_preposition([onder,verwijzing,naar]).
+collocational_preposition([op,vertoon,van]).
+collocational_preposition([tegen,betaling,van]).
+collocational_preposition([uit,kracht,van]).
+collocational_preposition([van,de,kant,van]).
+
+
+
 
 with_dt([zonder,blikken,of,blozen],
 	pp(zonder),
@@ -4929,6 +4949,7 @@ m(plusminus,        modal_adverb(noun_prep),plusminus).
 m(ruwweg,           modal_adverb(noun_prep),ruwweg).
 m('ten hoogste',    modal_adverb(noun_prep),[ten,hoogste]).
 m(tenminste,        modal_adverb(noun_prep),tenminste).
+m(uiterlijk,        modal_adverb(noun_prep),uiterlijk).
 m(ver,              modal_adverb(noun_prep),ver).
 m(verreweg,         modal_adverb(noun_prep),verreweg).  % with superlative
 				% verreweg in de meeste gevallen
@@ -8620,6 +8641,7 @@ term([slip,of,the,pen]).
 term([slip,of,the,tongue]).
 term([small,cap],[small,caps]).
 term([soul,jazz]).
+term([soft,skill],[soft,skills]).
 term([so,far,so,good]).
 term([so,far,',',so,good]).
 term([special,issue]).

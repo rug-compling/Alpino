@@ -598,6 +598,7 @@ lemma_root(aan_wakkeren,wakker_aan) .
 lemma_root(aan_wandelen,wandel_aan) .
 lemma_root(aan_wankelen,wankel_aan) .
 lemma_root(aan_waren,waar_aan) .
+lemma_root(aan_wassen,was_aan) .
 lemma_root(aan_weerkaatsen,weerkaats_aan) .
 lemma_root(aan_wellen,wel_aan) .
 lemma_root(aan_wenden,wend_aan) .
@@ -6442,6 +6443,7 @@ lemma_root(heen_walsen,wals_heen) .
 lemma_root(heen_wandelen,wandel_heen) .
 lemma_root(heen_wankelen,wankel_heen) .
 lemma_root(heen_waren,waar_heen) .
+lemma_root(heen_wassen,was_heen) .
 lemma_root(heen_weerkaatsen,weerkaats_heen) .
 lemma_root(heen_wellen,wel_heen) .
 lemma_root(heen_wenden,wend_heen) .
@@ -7334,6 +7336,7 @@ lemma_root(in_waggelen,waggel_in) .
 lemma_root(in_wandelen,wandel_in) .
 lemma_root(in_wankelen,wankel_in) .
 lemma_root(in_waren,waar_in) .
+lemma_root(in_wassen,was_in) .
 lemma_root(in_weerkaatsen,weerkaats_in) .
 lemma_root(in_wellen,wel_in) .
 lemma_root(in_wenden,wend_in) .
@@ -8268,6 +8271,7 @@ lemma_root(langs_waggelen,waggel_langs) .
 lemma_root(langs_wandelen,wandel_langs) .
 lemma_root(langs_wankelen,wankel_langs) .
 lemma_root(langs_waren,waar_langs) .
+lemma_root(langs_wassen,was_langs) .
 lemma_root(langs_weerkaatsen,weerkaats_langs) .
 lemma_root(langs_wellen,wel_langs) .
 lemma_root(langs_wenden,wend_langs) .
@@ -8484,6 +8488,7 @@ lemma_root(mede_delen,deel_mede) .
 lemma_root(mediteren,mediteer) .
 lemma_root(mee_beslissen,beslis_mee) .
 lemma_root(mee_betalen,betaal_mee) .
+lemma_root(mee_blazen,blaas_mee) .
 lemma_root(mee_brengen,breng_mee) .
 lemma_root(mee_brullen,brul_mee) .
 lemma_root(mee_delen,deel_mee) .
@@ -14765,6 +14770,7 @@ lemma_root(toe_wandelen,wandel_toe) .
 lemma_root(toe_wankelen,wankel_toe) .
 lemma_root(toe_wapperen,wapper_toe) .
 lemma_root(toe_waren,waar_toe) .
+lemma_root(toe_wassen,was_toe) .
 lemma_root(toe_weerkaatsen,weerkaats_toe) .
 lemma_root(toe_wellen,wel_toe) .
 lemma_root(toe_wenden,wend_toe) .
@@ -15413,6 +15419,7 @@ lemma_root(tussen_waggelen,waggel_tussen) .
 lemma_root(tussen_wandelen,wandel_tussen) .
 lemma_root(tussen_wankelen,wankel_tussen) .
 lemma_root(tussen_waren,waar_tussen) .
+lemma_root(tussen_wassen,was_tussen) .
 lemma_root(tussen_weerkaatsen,weerkaats_tussen) .
 lemma_root(tussen_wellen,wel_tussen) .
 lemma_root(tussen_wenden,wend_tussen) .
@@ -18288,6 +18295,7 @@ lemma_root(vanaf_waggelen,waggel_vanaf) .
 lemma_root(vanaf_wandelen,wandel_vanaf) .
 lemma_root(vanaf_wankelen,wankel_vanaf) .
 lemma_root(vanaf_waren,waar_vanaf) .
+lemma_root(vanaf_wassen,was_vanaf) .
 lemma_root(vanaf_weerkaatsen,weerkaats_vanaf) .
 lemma_root(vanaf_wellen,wel_vanaf) .
 lemma_root(vanaf_wenden,wend_vanaf) .
@@ -18870,6 +18878,7 @@ lemma_root(vandaan_waggelen,waggel_vandaan) .
 lemma_root(vandaan_wandelen,wandel_vandaan) .
 lemma_root(vandaan_wankelen,wankel_vandaan) .
 lemma_root(vandaan_waren,waar_vandaan) .
+lemma_root(vandaan_wassen,was_vandaan) .
 lemma_root(vandaan_weerkaatsen,weerkaats_vandaan) .
 lemma_root(vandaan_wellen,wel_vandaan) .
 lemma_root(vandaan_wenden,wend_vandaan) .
@@ -19449,6 +19458,7 @@ lemma_root(vandoor_waggelen,waggel_vandoor) .
 lemma_root(vandoor_wandelen,wandel_vandoor) .
 lemma_root(vandoor_wankelen,wankel_vandoor) .
 lemma_root(vandoor_waren,waar_vandoor) .
+lemma_root(vandoor_wassen,was_vandoor) .
 lemma_root(vandoor_weerkaatsen,weerkaats_vandoor) .
 lemma_root(vandoor_wellen,wel_vandoor) .
 lemma_root(vandoor_wenden,wend_vandoor) .

@@ -8097,7 +8097,7 @@ n([mass(cyanide)],both,[]).
 
 n([sg(cycloon),pl(cyclonen)],de,[]).
 
-n([pl(cycli),pl(cyclussen),sg(cyclus)],de,[]).
+n([pl(cycli),pl(cyclussen),sg(cyclus)],de,[app_measure]).
 
 n([pl(cylinders),sg(cylinder)],de,[]).
 
@@ -8750,6 +8750,7 @@ n([pl(dienders),sg(diender)],de,[]).
 
 n([pl(diensten),sg(dienst)],de,
   [pred_pp(in),
+   pred_pp(van),  % we zijn u graag van dienst
    app_measure],
   [s(overheid),
    s(rijk)]).
@@ -9738,7 +9739,7 @@ n([pl(duikers),sg(duiker)],de,[],[dim(duikertje)]).
 
 n([pl(duimen),sg(duim)],de,[measure],[dim(duimpje)]).
 
-n([sg(duimbreed)],both,[]).
+n([sg(duimbreed)],both,[mod]).
 
 n([sg(duimschroef),pl(duimschroeven)],de,[]).
 
@@ -10931,7 +10932,8 @@ n([pl(feesten),sg(feest)],het,
    subject_vp]).
 
 n([pl(feesten),sg(feest)],het,[],
-  [eeuw,
+  [dans, % en niet dan_feest
+   eeuw,
    familie,
    s(kampioen),
    kerst,
@@ -11507,7 +11509,8 @@ n([pl(fregatten),sg(fregat)],het,[np_app_measure]).
 
 n([pl(frequenties),sg(frequentie),
    pl(frekwenties),sg(frekwentie)],de,[],
-  [radio]).
+  [puls,  % en niet pul_frequentie
+   radio]).
 
 n([pl('fresco\'s'),sg(fresco)],both,[]).
 
@@ -30794,7 +30797,9 @@ n([pl(slangen),sg(slang)],de,[],
 
 n([mass(slapeloosheid)],de,[]).
 
-n([pl(slapers),sg(slaper)],de,[]).
+n([pl(slapers),sg(slaper)],de,[],
+  ['Dam'  % en niet Dam_sla_pers
+  ]).
 
 n([pl(slappelingen),sg(slappeling)],de,[]).
 
@@ -30876,7 +30881,9 @@ n([pl(slokdarmen),sg(slokdarm)],de,[]).
 
 n([sg(sloof),pl(sloven)],de,[]).
 
-n([mass(sloop),pl(slopen),sg(sloop)],de,[]).
+n([mass(sloop),pl(slopen),sg(sloop)],de,[],
+  [kussen % en niet kus_sloop
+  ]).
 
 n([pl(sloten),sg(sloot)],de,[measure],
   []).
@@ -31964,7 +31971,7 @@ n([pl(stamhoofden),sg(stamhoofd)],het,[]).
 
 n([sg(stamp),pl(stampen)],de,[]). % Vlaams
 
-n([sg(stamper),pl(stamper)],de,[]).
+n([sg(stamper),pl(stampers)],de,[]).
 
 n([pl(standen),sg(stand)],de,
   [vp,
@@ -33951,6 +33958,7 @@ n([sg(tijd),pl(tijden)],de,
    blessure,
    bloei,
    broed,
+   brons, % en niet bron_tijd
    dienst,
    eind,
    s(eten),
@@ -35084,6 +35092,8 @@ n([pl(uitgaven),sg(uitgave)],de,[],
    s(overheid)]).
 
 n([pl(uitgebreidheden),sg(uitgebreidheid)],de,[]).
+
+n([sg(uitgeefster),pl(uitgeefsters)],de,[]).
 
 n([pl(uitgestrektheden),sg(uitgestrektheid)],de,[]).
 
@@ -37398,7 +37408,7 @@ n([pl(voertuigen),sg(voertuig)],het,[],
 n([meas(voet)],de,[meas_mod,
                    measure]).
 
-n([pl(voeten),sg(voet)],de,[pred_pp_pl(op)]).  % op vrije voeten
+n([pl(voeten),sg(voet)],de,[pred_pp_pl(op), pred_pp(op)]).  % op vrije voeten/op goede voet
 
 n([pl(voeten),sg(voet)],de,[],
   [linker,
@@ -38611,7 +38621,11 @@ n([pl(webben),sg(web)],het,[]).
 
 n([sg(webcam),pl(webcams)],de,[]).
 
-n([sg(weblog),pl(weblogs)],both,[]).
+n([sg(weblog),pl(weblogs)],both,[app_measure]).
+
+n([sg(website),pl(websites)],both,[app_measure]).
+
+n([sg(webstek),pl(webstekken)],both,[app_measure]).
 
 n([pl(wedden),sg(wedde)],de,[]).
 
@@ -39906,7 +39920,8 @@ n([sg(zaakvoerder),pl(zaakvoerders)],de,[]).
 n([sg(zaakvoerster),pl(zaakvoersters)],de,[]).
 
 n([pl(zalen),sg(zaal)],de,[np_app_measure],
-  [feest,
+  [dans,  % en geen dan_zaal
+   feest,
    fuif,
    gym,
    muziek,

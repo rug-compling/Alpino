@@ -5260,6 +5260,7 @@ n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr) :-
     N:has_app => yes, % ,,
     NP:has_app => no, % ,,
     NP:subn => ~sub_indef_adj,
+    NP:wkpro => ~weakpro, % ?? 29 jan 2020
     optcomma(OPTCr),
     Cl => punct, 
     Cl:puncttype => komma.
@@ -5773,7 +5774,7 @@ grammar_rule(a_pp_comp_a, AP, [ PP, A]) :-
     AP => a, A => a, PP => pp,
     haspreyes(A),
     A:aform => (nattr;attr), 
-    PP:wh => nwh,
+%%    PP:wh => nwh,  % hij vroeg wie waarvoor verantwoordelijk was
     PP:sel => to_left,
 %%    PP:slash => [],	% * dat hij daar_i altijd [ voor_i erg bang ] is
                         %   dat hij daar_i druk [ mee_i bezig ] is

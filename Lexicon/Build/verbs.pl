@@ -445,7 +445,7 @@ m(v_root(ben,zijn),
 %	    fixed([{[pc(van),np_pred(voorbode)]}],no_passive),
 %	    fixed([{[pc(van),np_pred(voorstander)]}],no_passive),
 	    fixed([{[er_pp(van,C),np_pred(voorstander)]},extra_sbar(C)],no_passive),
-	    fixed([{[er_pp(van,C),np_pred(voorstander)]},extra_vp(C)],no_passive),
+	    fixed([{[er_pp(van,C),np_pred(voorstander)]},extra_vp_no_control(C)],no_passive),
 %	    fixed([{[pc(van),np_pred(voorbeeld)]}],no_passive),
 %	    fixed([{[pc(van),np_pred(schoolvoorbeeld)]}],no_passive),
 	    fixed([pc(van),subj(voorbeeld)],no_passive),
@@ -3880,12 +3880,14 @@ v(blaas,blaast,blazen,geblazen,blies,bliezen,
 	transitive,
 	np_ld_pp,  % de wind blies hem in de sloot / hij werd de sloot in geblazen
 	np_ld_dir,
-        ap_pred_np, % blies zijn wangen bol
+        ap_pred_np,		% blies zijn wangen bol
+	part_intransitive(mee),
 	part_intransitive(uit),
 %	part_sbar_subj_so_np(in), ??
 	part_transitive(aan),
 	part_transitive(af),
 	part_transitive(in),
+	part_transitive(mee),   % Candy Dulfer blaast een nummertje mee
 	part_transitive(op),
 	part_transitive(uit),
 	part_transitive(weg),
@@ -6368,7 +6370,7 @@ v(draag,draagt,dragen,gedragen,droeg,droegen,
 	part_er_pp_sbar(bij,aan),
 	part_pc_pp(bij,tot),
 	part_er_pp_sbar(bij,tot),
-	part_er_pp_vp(bij,tot),
+	part_er_pp_vp_no_control(bij,tot),
 	part_pc_pp(zorg,voor),
 	part_er_pp_sbar(zorg,voor),   % dat hij er zorg voor draagt
 	                              % cannot be particle in that order
@@ -7635,6 +7637,7 @@ v(ga,gaat,inflected(gaan,gane),gegaan,ging,gingen,ga,
 	pp_copula(aan,slag),
 	pp_copula(aan,werk),
 	pp_copula(in,ballingschap),
+	pp_copula(in,dienst),
 	pp_copula(in,gesprek),
 	pp_copula(in,première),
 	pp_copula(in,productie),
@@ -8261,7 +8264,7 @@ v(geld,geldt,gelden,gegolden,gold,golden,
 	so_np,
         als_copula,
 	pc_pp(voor),
-	pp_sbar_subj(voor)
+	pp_sbar_subj_no_het(voor)
        ])]).
 
 v(geleid,geleidt,geleiden,geleid,geleidde,geleidden,
@@ -9346,7 +9349,7 @@ v(herinner,herinnert,herinneren,herinnerd,herinnerde,herinnerden,
 	refl_vp,
 	refl_sbar,
 	refl,             % als ik me goed herinner, ...
-	refl_pc_pp(van),  % daar herinner ik me niets van
+	np_refl_pc_pp(van),  % daar herinner ik me niets/nog enkele details/weinig van
 	sbar,
 	transitive,       % hij wordt herinnerd vanwege/door/als ...
 	np_er_pp_sbar(aan),
@@ -12552,8 +12555,9 @@ v(laat,laat,laten,gelaten,liet,lieten,
         fixed([vc(zie_aan,inf,part_intransitive(aan)),refl,naar_sbar_subj],no_passive), % het laat zich aanzien dat hij komt
         fixed([vc(vaar,inf,intransitive),acc],no_passive),
         fixed([vc(piepel,inf,intransitive),refl],no_passive),
-	ap_pred_np,             % dat laat me koud
-        pp_pred_np,             % ik liet dat in goede staat
+	pred_np,             % dat laat me koud
+        pred_np,             % ik liet dat in goede staat
+	                     % hij liet de boel de boel
 	np_np,			% wij lieten hem geen keus
 	np_ld_dir,              % ik liet hem de deur uit
 	so_pp_np,		% ik laat het aan hem
@@ -17223,6 +17227,7 @@ v(probeer,probeert,proberen,geprobeerd,probeerde,probeerden,
 	vp,
 	sbar, % of
 	np_pc_pp(met),
+	np_er_pp_vp(aan), % ik probeerde er alles aan om ...
 	part_sbar(uit),
 	part_transitive(uit),
 	subj_control(te),
@@ -23697,6 +23702,7 @@ v(verberg,verbergt,verbergen,verborgen,verborg,verborgen,
     [h([sbar,
 	transitive,
 	vp,
+	refl,
 	refl_ld_pp,
 	refl_ld_adv,  % also refl, since refl < su: daarachter verbergen zich de X
 	np_ld_pp,
@@ -26722,7 +26728,9 @@ v(vraag,vraagt,vragen,gevraagd,vroeg,vroegen,
 	acc_np_sbar, % ik werd gevraagd of ik wilde komen
 	np_vp_obj,   % mij werd gevraagd te komen
 	np_vp_obj1,  % ik werd gevraagd te komen
-	so_vp_obj,  % +aan
+	so_vp_obj,   % +aan
+	fixed([{[pc(van),vp]}],imp_passive),
+		     % van mij werd gevraagd om .. (lijkt wel een obj2)
 	             % ik werd te eten gevraagd =/= ik werd gevraagd te eten
 	fixed([vc(eet,pass_te,intransitive),acc],norm_passive),
 	sbar,
@@ -27044,7 +27052,8 @@ v(warm,warmt,warmen,gewarmd,warmde,warmden,
 	part_transitive(op)])]).
 
 v(was,wast,wassen,gewassen,waste,wasten,
-    [h([ap_pred_np,
+  [h([ap_pred_np,
+      np_ld_pp, % ik moet de schimmel van mijn stramme voeten wassen
 	np_np,
 	transitive,
 	intransitive,
@@ -27632,10 +27641,10 @@ v(word,wordt,worden,geworden,werd,werden,
 
 				% dat werd me toen toch een bende!
 				% Dat zal me een vertoning worden .  --> 
-            fixed([pred,[me]],no_passive),
+	  fixed([pred,[me]],no_passive),
 				% hij werd me toch kwaad
 				% het werd me daar een bende
-            %% should be mod (?), and is productive
+				% should be mod (?), and is productive
 	    
 	    copula_sbar,
 	    copula_vp,

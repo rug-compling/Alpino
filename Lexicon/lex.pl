@@ -1250,7 +1250,6 @@ gerund_frame_map(vp,                   object_vp   ).
 gerund_frame_map(ap_pred_refl,	       pred_refl   ).
 gerund_frame_map(pred_refl,	       pred_refl   ).
 gerund_frame_map(pred_np,	       pred_np     ).
-gerund_frame_map(ap_pred_np,	       pred_np     ).
 gerund_frame_map(fixed(List,_),	       fixed(List) ) :-
     \+ non_adj_fixed_list(List).
 gerund_frame_map(so_np,                so_np       ).

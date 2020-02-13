@@ -1860,6 +1860,9 @@ frame2sense(Root,Frame,Sense) :-
     append(Prefixes,[Root|Suffixes],List0),
     all_atoms(List0,List),
     concat_all(List,Sense,'-').
+frame2sense(_,read_from_treebank(_,Lemma0,_),Lemma) :-
+    !,
+    Lemma0=Lemma.
 frame2sense(Root,_,Root).
 
 f2s(verb(_,_,Frame),Prefix,Suf,Fix0,Fix) :-

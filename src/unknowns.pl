@@ -2065,7 +2065,8 @@ decap_only(Atom) :-
     atom_concat(Prefix,Suffix,Atom),
     (   \+ never_compound_part(Prefix),
 	decap_only_suffix(Suffix)
-    ;   cap_first(Suffix,Function),
+    ;   SuffixLen > 4,
+	cap_first(Suffix,Function),
 	function(Function),
 	alpino_lex:lexicon(Tag,_,[Prefix],[],_),
 	proper_name_tag(Tag)
@@ -2104,6 +2105,7 @@ function('Analiste').
 function('Architect').
 function('Argentijn').
 function('Armeniër').
+function('Arts').
 function('Assistent').
 function('Assistente').
 function('Astronaut').
@@ -2151,6 +2153,7 @@ function('Doelman').
 function('Docent').
 function('Docente').
 function('Dochter').
+function('Dokter').
 function('Dominee').
 function('Duitser').
 function('Econoom').
@@ -2321,7 +2324,7 @@ function(ExFun) :-
 
 decap_only_suffix('\'er').  % de PvdA'er Jansen
 decap_only_suffix('\'ers').  % de PvdA'ers Jansen en Jansen
-decap_only_suffix(DashNoun) :-
+decap_only_suffix(DashNoun) :-  % Feyenoord-verdediger
     atom(DashNoun),
     atom_concat('-',Noun,DashNoun),
     \+ never_final_compound_part(Noun),
