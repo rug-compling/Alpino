@@ -10,11 +10,11 @@
           <node begin="3" end="4" id="7" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
           <node begin="4" cat="conj" end="12" id="8" rel="obj1">
             <node begin="4" cat="np" end="8" id="9" rel="cnj">
-              <node begin="4" cat="mwu" end="6" id="10" index="1" mwu_root="onder meer" mwu_sense="onder meer" rel="mod">
+              <node begin="4" cat="mwu" end="6" id="10" index="1" rel="mod">
                 <node begin="4" end="5" id="11" lemma="onder" pos="adv" postag="VZ(init)" pt="vz" rel="mwp" root="onder" vztype="init" word="onder"/>
-                <node begin="5" buiging="zonder" end="6" graad="comp" id="12" lemma="meer" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="meer" vwtype="onbep" word="meer"/>
+                <node begin="5" buiging="zonder" end="6" graad="comp" id="12" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mwp" root="meer" vwtype="onbep" word="meer"/>
               </node>
-              <node begin="6" cat="mwu" end="8" id="13" mwu_root="Rob Stenders" mwu_sense="Rob Stenders" rel="hd">
+              <node begin="6" cat="mwu" end="8" id="13" rel="hd">
                 <node begin="6" end="7" id="14" lemma="Rob" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Rob" spectype="deeleigen" word="Rob"/>
                 <node begin="7" end="8" id="15" lemma="Stenders" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Stenders" spectype="deeleigen" word="Stenders"/>
               </node>
@@ -22,7 +22,7 @@
             <node begin="8" conjtype="neven" end="9" id="16" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="4" cat="np" end="12" id="17" rel="cnj">
               <node begin="4" end="6" id="18" index="1" rel="mod"/>
-              <node begin="9" cat="mwu" end="12" id="19" mwu_root="Ruud de Wild" mwu_sense="Ruud de Wild" rel="hd">
+              <node begin="9" cat="mwu" end="12" id="19" rel="hd">
                 <node begin="9" end="10" id="20" lemma="Ruud" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ruud" spectype="deeleigen" word="Ruud"/>
                 <node begin="10" end="11" id="21" lemma="de" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
                 <node begin="11" end="12" id="22" lemma="Wild" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wild" spectype="deeleigen" word="Wild"/>

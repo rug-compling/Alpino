@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+      <node begin="1" end="2" id="3" infl="sg" lemma="vertellen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vertel" sc="sbar" stype="declarative" tense="past" word="vertelde" wvorm="pv"/>
+      <node begin="2" cat="cp" end="12" id="4" rel="vc">
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="3" cat="ssub" end="12" id="6" rel="body">
+          <node begin="3" case="nom" def="def" end="4" gen="de" genus="masc" getal="ev" id="7" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+          <node begin="4" end="5" getal="getal" id="8" lemma="zich" naamval="obl" num="both" pdtype="pron" per="u_thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" refl="refl" rel="se" rnum="sg" root="zich" status="red" vwtype="refl" word="zich"/>
+          <node begin="5" end="6" id="9" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+          <node begin="6" cat="np" end="8" id="10" rel="obj1">
+            <node begin="6" buiging="met-e" end="7" id="11" infl="enkele" lemma="enkel" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enkel" special="adj_number" vwtype="onbep" word="enkele"/>
+            <node begin="7" end="8" gen="het" getal="mv" graad="basis" id="12" lemma="detail" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="detail" word="details"/>
+          </node>
+          <node begin="8" cat="pp" end="11" id="13" rel="pc">
+            <node begin="8" end="9" id="14" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="9" cat="np" end="11" id="15" rel="obj1">
+              <node begin="9" buiging="zonder" end="10" getal="ev" id="16" infl="pron" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+              <node begin="10" end="11" gen="het" genus="onz" getal="ev" graad="basis" id="17" lemma="afscheid" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="afscheid" word="afscheid"/>
+            </node>
+          </node>
+          <node begin="11" end="12" id="18" infl="sg" lemma="herinneren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="herinner" sc="np_refl_pc_pp(van)" tense="past" word="herinnerde" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Hij vertelde dat hij zich nog enkele details van zijn afscheid herinnerde</sentence>
+</alpino_ds>

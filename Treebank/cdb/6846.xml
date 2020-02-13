@@ -73,12 +73,14 @@
                             <node begin="32" buiging="met-e" end="33" id="59" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" vwtype="onbep" word="alle"/>
                             <node begin="33" buiging="met-e" end="34" graad="basis" id="60" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
                             <node begin="34" end="35" getal="mv" graad="basis" id="61" lemma="huisvrouw" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="huisvrouw" word="huisvrouwen"/>
-                            <node begin="35" cat="pp" end="39" id="62" rel="mod">
-                              <node begin="35" end="36" getal="getal" id="63" lemma="overal" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(onbep,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="overal" status="vol" vwtype="onbep" word="overal"/>
-                              <node begin="36" end="37" id="64" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
-                              <node begin="37" cat="np" end="39" id="65" rel="obj1">
-                                <node begin="37" end="38" id="66" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                                <node begin="38" end="39" genus="zijd" getal="ev" graad="basis" id="67" lemma="wereld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wereld" word="wereld"/>
+                            <node begin="35" cat="advp" end="39" id="62" rel="mod">
+                              <node begin="35" end="36" getal="getal" id="63" lemma="overal" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(onbep,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="hd" root="overal" status="vol" vwtype="onbep" word="overal"/>
+                              <node begin="36" cat="pp" end="39" id="64" rel="mod">
+                                <node begin="36" end="37" id="65" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                                <node begin="37" cat="np" end="39" id="66" rel="obj1">
+                                  <node begin="37" end="38" id="67" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                                  <node begin="38" end="39" genus="zijd" getal="ev" graad="basis" id="68" lemma="wereld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wereld" word="wereld"/>
+                                </node>
                               </node>
                             </node>
                           </node>
@@ -93,7 +95,7 @@
         </node>
       </node>
     </node>
-    <node begin="39" end="40" id="68" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="39" end="40" id="69" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Dit vertelde onlangs Mamie Eisenhouwer , de weduwe van de 34e president van de Verenigde Staten , die in haar periode in het Witte Huis dezelfde moeilijkheden gehad schijnt te hebben als alle andere huisvrouwen overal op de wereld .</sentence>
 </alpino_ds>
