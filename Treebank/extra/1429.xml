@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="0" cat="du" end="11" id="2" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="Bizz" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="tag" root="Bizz" word="Bizz"/>
+      <node begin="2" cat="sv1" end="11" id="4" rel="nucl">
+        <node begin="2" end="3" id="5" lemma="op_leveren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lever_op" word="Levert" wvorm="pv"/>
+        <node begin="3" end="4" getal="getal" id="6" lemma="u" naamval="nomin" pdtype="pron" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="obj2" root="u" status="vol" vwtype="pers" word="u"/>
+        <node begin="4" end="5" getal="ev" id="7" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="dat"/>
+        <node begin="5" end="6" id="8" lemma="soms" pos="adv" postag="BW()" pt="bw" rel="mod" root="soms" word="soms"/>
+        <node begin="6" cat="np" end="10" id="9" rel="obj1">
+          <node begin="6" buiging="zonder" end="7" id="10" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+          <node begin="7" end="8" getal="mv" graad="basis" id="11" lemma="probleem" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="probleem" word="problemen"/>
+          <node begin="8" cat="pp" end="10" id="12" rel="mod">
+            <node begin="8" end="9" id="13" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="14" lemma="onduidelijkheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="onduidelijkheid" word="onduidelijkheid"/>
+          </node>
+        </node>
+        <node begin="10" end="11" id="15" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
+      </node>
+    </node>
+    <node begin="11" end="12" id="16" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Bizz : Levert u dat soms geen problemen met onduidelijkheid op ?</sentence>
+</alpino_ds>
