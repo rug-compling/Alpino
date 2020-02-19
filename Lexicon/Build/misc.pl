@@ -2891,7 +2891,7 @@ collocational_preposition([op,vertoon,van]).
 collocational_preposition([tegen,betaling,van]).
 collocational_preposition([uit,kracht,van]).
 collocational_preposition([van,de,kant,van]).
-
+collocational_preposition([door,toedoen,van]).
 
 
 
