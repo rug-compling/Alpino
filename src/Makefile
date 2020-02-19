@@ -56,8 +56,10 @@ ifeq "$(shell if [ -r ../Hdrug/Makefile.hdrug ]; then echo yes; fi)" "yes"
 include ../Hdrug/Makefile.hdrug
 endif
 
+gitversion=$(shell git log --oneline | wc -l)
+
 state:
-	-echo "Alpino-$(PLATFORM)-$(shell svnversion)-$(PROLOG)" > ../version
+	-echo "Alpino-$(PLATFORM)-git$(gitversion)-$(PROLOG)" > ../version
 	-echo "use_module('../Hdrug/Prolog/hdrug_main'),\
                use_module(start),\
    version('Alpino (development), `cat ../version` $(shell date "+%Y-%m-%dT%H:%M%z")'),\
