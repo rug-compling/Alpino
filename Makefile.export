@@ -14,8 +14,8 @@ KERNEL=$(shell uname -s)
 GLIBC=$(shell getconf GNU_LIBC_VERSION)
 PLATFORM=$(shell echo "$(HARDWARE) $(KERNEL) $(GLIBC)" | tr ' ' '-' )
 
-##REV=${shell svn info Makefile.export | awk '/Revision:/ { print $$2 }' }
-TAR=Alpino-$(PLATFORM)-$(shell svnversion)-$(PROLOG).tar.gz 
+gitversion=$(shell git log --oneline | wc -l)
+TAR=Alpino-$(PLATFORM)-git$(gitversion)-$(PROLOG).tar.gz 
 
 
 
