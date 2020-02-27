@@ -205,7 +205,12 @@ extract_one(first(P0,P),Pen,[Tree|Ds],Ds,[Cat|Fs],Fs,Ws,Ws1,Frs):-
     append(Ws0,Ws1,Ws).
 
 create_skip_tree(P0,P,W,tree(skip,robust_skips(W),lex(W),_),
-		 frame(P0,P,P0,P,W,robust_skip,W,robust_skip)).
+		 frame(P0,P,R0,R,W,robust_skip,W,robust_skip)) :-
+    %%% hack
+    (   alpino_lexical_analysis:tag(P0,P,R0,R,_,_,_,_)
+    ->  true
+    ;   P0=R0, P=R	  % wrong, but has worked for years until 2020
+    ).
 
 %%%%%%%%%%%%%%%%%%%%
 %% initialization %%
