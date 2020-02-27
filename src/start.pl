@@ -2476,7 +2476,8 @@ compressed_sentence([_-remove|T],NewT) :-
 
 %% TODO: take threads into account here
 after_timeout_options(alpino_lc:parse(_)) :-
-    hdrug_flag(current_input_sentence,Sentence),
+    hdrug_flag(current_input_sentence,Sentence0),
+    ignore_brackets(Sentence0,Sentence),
     concat_all(Sentence,StringAtom,' '),
     format(user_error,"timeout|~w~n",[StringAtom]),
     hdrug_flag(after_timeout_options,on),
