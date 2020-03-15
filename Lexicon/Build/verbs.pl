@@ -26087,6 +26087,7 @@ v(verzoek,verzoekt,verzoeken,verzocht,verzocht,verzochten,
     [h([np_vp_obj,   % hen wordt verzocht te komen
 	np_vp_obj1,  % zij worden verzocht te komen
 	transitive,  % so_np?  dat is de goden verzoeken
+	intransitive, % tenzij de partners anders verzoeken
 	vp_no_control,
 	sbar,
 	acc_np_sbar,

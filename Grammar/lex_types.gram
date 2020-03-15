@@ -6330,6 +6330,8 @@ map_dep(extra_vp(Cat),extra,Cat,V):-
     subj_control_vp_arg(Cat,V).
 map_dep(extra_vp_no_control(Cat),extra,Cat,_V):-
     Cat:slash => [],
+    vp_arg(Cat),
+    Cat:control => control_none,
     Cat:sel => ~to_topic.
 map_dep(extra_obj_vp(Cat,Obj),extra,Cat,_V):-
     Cat:sel => ~to_topic,

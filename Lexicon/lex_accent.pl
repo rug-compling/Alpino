@@ -1065,6 +1065,8 @@ accent(poetisch,poëtisch).
 accent(poetischte,poëtischte).
 accent(poetischt,poëtischt).
 accent(poezie,poëzie).
+accent(politieactien,politieactiën).
+accent(politieaktien,politieaktiën).
 accent(politieserien,politieseriën).
 accent(poolcoordinaat,poolcoördinaat).
 accent(poolcoordinaten,poolcoördinaten).
@@ -1111,6 +1113,7 @@ accent(prozaisch,prozaïsch).
 accent(psychotherapieen,psychotherapieën).
 accent(rabies,rabiës).
 accent(rais,raïs).
+accent(realityserien,realityseriën).
 accent(rebellieen,rebellieën).
 accent(receptien,receptiën).
 accent(rechterknieen,rechterknieën).

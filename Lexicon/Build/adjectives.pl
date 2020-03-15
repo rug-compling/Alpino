@@ -3970,7 +3970,7 @@ a([ge_e(bedotte),
    no_no_e(bedot)],adv,[],[]).
 
 a([ge_e(bedreigde),
-   ge_no_e(bedreigd)],adv,[],[mod_pp(door)]).
+   ge_no_e(bedreigd)],adv,[mod_pp(door)],[on]).
 
 a([ende(bedreigende),
    end(bedreigdend),

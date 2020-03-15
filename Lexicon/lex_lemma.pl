@@ -5256,6 +5256,7 @@ lemma_root(door_verzieken,verziek_door) .
 lemma_root(door_verzilten,verzilt_door) .
 lemma_root(door_verzinken,verzink_door) .
 lemma_root(door_verzitten,verzit_door) .
+lemma_root(door_verzoeken,verzoek_door) .
 lemma_root(door_verzoenen,verzoen_door) .
 lemma_root(door_verzorgen,verzorg_door) .
 lemma_root(door_verzuchten,verzucht_door) .
@@ -12616,6 +12617,7 @@ lemma_root(raak_verzieken,verziek_raak) .
 lemma_root(raak_verzilten,verzilt_raak) .
 lemma_root(raak_verzinken,verzink_raak) .
 lemma_root(raak_verzitten,verzit_raak) .
+lemma_root(raak_verzoeken,verzoek_raak) .
 lemma_root(raak_verzoenen,verzoen_raak) .
 lemma_root(raak_verzorgen,verzorg_raak) .
 lemma_root(raak_verzuchten,verzucht_raak) .
@@ -17535,6 +17537,7 @@ lemma_root(uit_verzelfstandigen,verzelfstandig_uit) .
 lemma_root(uit_verzenden,verzend_uit) .
 lemma_root(uit_verzinken,verzink_uit) .
 lemma_root(uit_verzitten,verzit_uit) .
+lemma_root(uit_verzoeken,verzoek_uit) .
 lemma_root(uit_verzoenen,verzoen_uit) .
 lemma_root(uit_verzorgen,verzorg_uit) .
 lemma_root(uit_verzuchten,verzucht_uit) .
@@ -22431,6 +22434,7 @@ lemma_root(voort_verzieken,verziek_voort) .
 lemma_root(voort_verzilten,verzilt_voort) .
 lemma_root(voort_verzinken,verzink_voort) .
 lemma_root(voort_verzitten,verzit_voort) .
+lemma_root(voort_verzoeken,verzoek_voort) .
 lemma_root(voort_verzoenen,verzoen_voort) .
 lemma_root(voort_verzorgen,verzorg_voort) .
 lemma_root(voort_verzuchten,verzucht_voort) .
