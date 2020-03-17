@@ -82,19 +82,20 @@ cat=cat
 
 e:
 	-@$(cat) $(LOGS) | \
-         grep -v  -e '^unknown|'\
-                  -e '^guessing|'\
+         grep -v  -e '^unknown[|]'\
+                  -e '^guessing[|]'\
                   -e '^parse: '\
                   -e '^FRAME#'\
+		  -e '^timeout[|]'\
                   -e 'no default postag'\
                   -e 'no cgn tag'\
                   -e '^warning: UNKNOWN'\
                   -e '^english compound' |\
-         grep -iw  -e killed\
-                   -e warning\
-                   -e error\
-                   -e segmentation\
-                   -e failure|\
+         grep -iw -e killed\
+                  -e warning\
+                  -e error\
+                  -e segmentation\
+                  -e failure    |\
          grep -vi -e 'filter_tags removed last tag|'\
                   -e '^Q#'
 
