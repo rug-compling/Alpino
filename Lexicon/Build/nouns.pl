@@ -1359,7 +1359,8 @@ n([pl(aanvaardingen),sg(aanvaarding)],de,[]).
 n([pl(aanvallen),sg(aanval)],de,[sbar]).
 
 n([pl(aanvallen),sg(aanval)],de,[],
-  [h('NAVO'),
+  [cyber,
+   h('NAVO'),
    raket,
    tegen]).
 
@@ -2150,6 +2151,7 @@ n([sg(accoord),pl(akkoorden),sg(akkoord),pl(accoorden)],het,[],
    concept,
    s(handel),
    kader,
+   klimaat,
    loon,
    s(najaar),
    h(principe),
@@ -2324,7 +2326,8 @@ n([pl(ambtenaars),pl(ambtenaren),sg(ambtenaar)],de,[app_measure],
 
 n([mass(ambtenarij)],de,[]).
 
-n([pl(ambulancen),pl(ambulances),sg(ambulance)],de,[]).
+n([pl(ambulancen),pl(ambulances),sg(ambulance)],de,[],
+  [i(dier,dieren)]).
 
 n([mass(amen)],het,[]).  % je mag alleen ja en amen zeggen
 
@@ -3292,7 +3295,8 @@ n([pl(banden),sg(band)],de,[],
 n([sg(bande),pl(bandes)],de,[]).
 
 n([sg(band),pl(bands)],de,[],
-  [rock,
+  [boy,
+   rock,
    brass,
    marching,
    dim(bandje)]).
@@ -3655,6 +3659,7 @@ n([pl(bedrijven),sg(bedrijf)],het,[],
    supermarkt,
    i(taal_technologie,taaltechnologie),
    taxi,
+   tech,
    technologie,
    telecom,
    telecommunicatie,
@@ -3882,6 +3887,7 @@ n([pl(beheerders),sg(beheerder)],de,[],
   [fonds,
    korps,
    net,
+   spoor,
    s(vermogen)]).
 
 n([mass(beheersing)],de,[],
@@ -3974,6 +3980,7 @@ n([pl(bekwaamheden),sg(bekwaamheid)],de,[]).
 n([pl(bellen),sg(bel)],de,[],
   [alarm,
    fiets,
+   slot, % beurs
    dim(belletje)]).
 
 n([pl(belagers),sg(belager)],de,[]).
@@ -5412,6 +5419,7 @@ n([pl(boeken),sg(boek)],het,
    leer,
    i(lijst_DIM,lijstjes),
    notitie,
+   order,
    i(prent,prenten),i(prent,prente),
    programma,
    school,
@@ -5678,7 +5686,8 @@ n([sg(boost)],de,[]).
 n([sg(booswicht),pl(booswichten)],de,[]).
 
 n([pl(boten),sg(boot)],de,[np_app_measure],
-  [kanonneer,
+  [s(huwelijk),
+   kanonneer,
    speed,
    woon,
    dim(bootje)]).
@@ -5986,6 +5995,8 @@ n([pl(breuken),sg(breuk)],de,[],
 
 n([pl(brevetten),sg(brevet)],het,[]).
 
+n([sg(brexit)],de,[]).
+
 n([mass(bridge)],het,[]).
 
 n([sg(bridger),pl(bridgers)],de,[]).
@@ -6033,6 +6044,7 @@ n([pl(brijen),sg(brij)],de,[]).
 n([pl(brillen),sg(bril)],de,[],
   [eclips,  % alleen in augustus 1999
    ski,
+   wh([virtual,reality]),
    dim(brilletje)]).
 
 n([sg(briljant),pl(briljanten)],both,[]).
@@ -6362,6 +6374,7 @@ n([sg([burn,out]),pl([burn,outs]),
 
 n([pl(bussen),sg(bus)],de,[measure],
   [auto,
+   bestel,
    s(dubbeldek),
    s(stad),
    streek,
@@ -6669,6 +6682,8 @@ n([pl(caterings),sg(catering)],de,[]).
 
 n([pl(catharses),pl(catharsissen),sg(catharsis)],de,[]).
 
+n([sg(catwalk),pl(catwalks)],de,[]).
+
 n([mass(causaliteit)],de,[]).
 
 n([mass(cavalerie)],de,[]).
@@ -6748,6 +6763,7 @@ n([pl(centrales),sg(centrale)],de,[],
    electriciteit,s(electriciteit),
    elektriciteit,s(elektriciteit),
    kern,
+   i(kool,kolen),
    mest,
    taxi,
    telefoon,
@@ -6980,7 +6996,8 @@ n([pl(cijfers),sg(cijfer)],het,[app_measure],
   [dim(cijfertje)]).
 
 n([pl(cijfers),sg(cijfer)],het,[],
-  [geboorte,
+  [s(bedrijf),
+   geboorte,
    groei,
    i(half_jaar,halfjaar),
    inflatie,
@@ -7168,7 +7185,7 @@ n([pl(cocktails),sg(cocktail)],de,[measure]).
 
 n([pl(cocktails),sg(cocktail)],de,[measure],[molotov]).
 
-n([pl(codes),sg(code)],de,[sbar]).
+n([pl(codes),sg(code)],de,[sbar,measure]).  % code rood, code oranje
 
 n([pl(codes),sg(code)],de,[],
   [s(activering),
@@ -7513,6 +7530,7 @@ n([pl(concerns),sg(concern)],het,[],
    olie,
    staal,
    supermarkt,
+   technologie,
    telecom,h(telecom),
    transport,
    s(uitgever),
@@ -8153,7 +8171,8 @@ n([sg(dag),pl(dagen)],de,
   [measure,
    temp_mod,
    sbar],
-  [beurs,
+  [wh(['1000',soorten]),
+   beurs,
    s(bevrijding),
    feest,
    geboorte,
@@ -9371,11 +9390,15 @@ n([pl(doornen),pl(doorns),sg(doorn)],de,[],
 
 n([pl(doornstruiken),sg(doornstruik)],de,[]).
 
+n([sg(doorpas),pl(doorpassen)],de,[]).  % iets met modeshows
+
 n([pl(doorreizen),sg(doorreis)],de,[]).
 
 n([pl(doorslagen),sg(doorslag)],de,[]).
 
 n([pl(doorsneden),sg(doorsnede),pl(doorsneeën),sg(doorsnee)],de,[measure]).
+
+n([sg(doorstap),pl(doorstappen)],de,[]).
 
 n([sg(doorstart),pl(doorstarten)],de,[]).
 
@@ -10075,7 +10098,8 @@ n([pl(eeuwwisselingen),sg(eeuwwisseling)],de,[]).
 n([mass(efedrine)],de,[]).
 
 n([pl(effecten),sg(effect),
-   pl(effekten),sg(effekt)],het,[sbar,subject_sbar]).
+   pl(effekten),sg(effekt)],het,[sbar,subject_sbar],
+  [i(wissel_koers,wisselkoers)]).
 
 n([mass(effectbejag)],het,[]).
 
@@ -11022,6 +11046,7 @@ n([pl(festivals),sg(festival)],het,[],
    s(dichter),
    film,
    metal,
+   muziek,
    pop,
    rock,
    song,
@@ -11325,9 +11350,6 @@ n([mass(folter)],de,[]).
 n([pl(folteringen),sg(foltering)],de,[]).
 
 n([pl(fondsen),sg(fonds)],het,[app_measure],
-  [nood]).
-
-n([pl(fondsen),sg(fonds)],het,[],
   [h('AEX'),
    i(aandeel,aandelen),
    s(belegging),
@@ -11339,6 +11361,8 @@ n([pl(fondsen),sg(fonds)],het,[],
    hoofd,
    hightech,[high,tech],wh([high,tech]),
    internet,
+   s(investering),
+   nood,
    olie,
    pensioen,
    piramide,
@@ -11443,6 +11467,8 @@ n([pl(fotokopieën),sg(fotokopie)],de,[]).
 n([pl(fotomodellen),sg(fotomodel)],het,[]).
 
 n([sg(foton),pl(fotonen)],both,[]).
+
+n([sg(fotoshoot),pl(fotoshoots)],de,[]).
 
 n([sg([founding,father]),pl([founding,fathers])],de,[]).
 
@@ -11566,7 +11592,7 @@ n([pl(frisdranken),sg(frisdrank)],de,[]).
 
 n([mass(frisheid)],de,[pred_pp(van)]).
 
-n([sg(frituur)],de,[]).
+n([sg(frituur),pl(frituren)],de,[]).  % Chinezen nemen de frituren over (Wablieft)
 
 n([pl(fronsen),pl(fronzen),sg(frons)],de,[],[dim(fronsje)]).
 
@@ -14081,6 +14107,8 @@ n([pl(hartstochten),sg(hartstocht)],de,[]).
 
 n([mass(hartstreek)],de,[]).
 
+n([sg(hashtag),pl(hashtags)],de,[]).
+
 n([mass(hasj),mass(hasjiesj)],de,[]).
 
 n([sg(hatchback),pl(hatchbacks)],de,[]).
@@ -15404,6 +15432,8 @@ n([pl(inboorlingen),sg(inboorling)],de,[]).
 
 n([mass(inbouw)],de,[]).
 
+n([sg(inbox)],de,[]).
+
 n([pl(inbraken),sg(inbraak)],de,[],[dim(inbraakje)]).
 
 n([pl(inbrekers),sg(inbreker)],de,[]).
@@ -16090,6 +16120,9 @@ n([sg(ion),pl(ionen)],both,[]).
 
 n([sg(iPad),pl(iPads),
    sg(ipad),pl(ipads)],de,[]).
+
+n([sg([iPad,mini]),pl([iPads,mini]),
+   sg([ipad,mini]),pl([ipads,mini])],de,[]).
 
 n([sg(iPhone),pl(iPhones),
    sg(iphone),pl(iphones)],de,[]).
@@ -17456,6 +17489,7 @@ n([pl(klassen),sg(klasse)],de,
    h(b),h('B'),
    s(boeking),
    hoofd,
+   s(koning),
    onder,
    s(overgang),
    promotie,
@@ -17613,7 +17647,7 @@ n([sg(klingel),pl(klingels)],de,[]).
 
 n([pl(klinieken),sg(kliniek)],de,[],
   [abortus,
-   afkick,
+   i(kick_af,afkick),
    privé,h(privé),
    h(tbs),i(tbs,'TBS-')]).
 
@@ -17850,6 +17884,7 @@ n([pl(koersen),sg(koers)],de,[],
    jaar,
    obligatie,
    i(punt,punten),
+   i(rit,ritten),
    slot,
    tussen,
    uitgifte,
@@ -18179,7 +18214,9 @@ n([pl(kosten)],de,[],
    telefoon,
    verzend,
    i(voor_rij,voorrij),
-   ziekte]).
+   ziekte,
+   zorg
+  ]).
 
 n([pl([kosten,koper]),pl('k.k.')],both,[]).
 
@@ -19080,6 +19117,8 @@ n([mass(lef)],both,[vp]).
 
 n([mass(leg)],de,[pred_pp(aan),pred_pp(van)]).
 
+n([sg(leg),pl(legs)],de,[]).  % dart
+
 n([pl(legaten),sg(legaat)],het,[]).
 
 n([pl(legaliseringen),sg(legalisering)],de,[]).
@@ -19762,6 +19801,7 @@ n([pl(lijnen),sg(lijn)],de,
   [s(beleid),
    s(begroting),
    s(bestand),
+   bodem,
    s(gedrag),
    hoofd,
    i(kader_richt,kaderricht)]).
@@ -19851,6 +19891,8 @@ n([pl(lijsttreksters),sg(lijsttrekster)],de,[],
 n([sg(lijsttrekkerschap),pl(lijsttrekkerschappen)],het,[]).
 
 n([pl(likken),sg(lik)],de,[measure],[dim(likje)]).
+
+n([sg(like),pl(likes)],de,[]).
 
 n([pl(likeuren),sg(likeur)],de,[],[dim(likeurtje)]).
 
@@ -20551,6 +20593,8 @@ n([sg(mail),pl(mails)],de,[sbar],
   [f([hate]),
    dim(mailtje)]).
 
+n([sg(mailbox)],de,[]).
+
 n([sg(maillot),pl(maillots)],de,[]).
 
 n([mass(mais)],de,[]).
@@ -20656,6 +20700,7 @@ n([bare_meas(man),pl(mannen)],de,[measure]).
 
 n([sg(man),pl(mannen),ignore(m(man,noun(de,count,sg),man))],de,[],
   [buur,
+   front,
    overbuur,
    hoek,
    kerst,i(kerst,'Kerst'),
@@ -25009,7 +25054,9 @@ n([meas(paar),pl(paren)],het,[meas_mod,measure]).
 n([sg(paar),pl(paren),
    ignore_stem(paar)],het,[],
   [homo,
-   jeugd]).
+   jeugd,
+   s(koning)
+  ]).
 
 n([pl(paarden),sg(paard)],het,[],
   [hobbel,
@@ -25129,10 +25176,9 @@ n([pl(pannen),sg(pan)],de,[],
 
 n([sg([panchen,lama])],de,[]).  % boeddhisme...
 
-n([pl(panden),sg(pand)],de,[]).
-
 n([pl(panden),sg(pand)],het,[np_app_measure],
-  [drugs,
+  [s(bedrijf),
+   drugs,
    kraak]).
 
 n([pl('panda\'s'),sg(panda)],de,[]).
@@ -25717,6 +25763,7 @@ n([sg(periode),pl(perioden),pl(periodes)],de,
    s(rijping),
    rust,
    sub,
+   transfer,
    vakantie,
    vergader,
    verslag,
@@ -25928,6 +25975,8 @@ n([pl(pilaren),sg(pilaar)],de,[],[dim(pilaartje)]).
 n([pl(piloten),sg(piloot)],de,[],
   [co,
    zelfmoord]).
+
+n([sg(pilot),pl(pilots)],de,[]).
 
 n([mass(pils)],both,[],[dim(pilsje)]).
 
@@ -27151,7 +27200,8 @@ n([meas(procent),meas('%'),
 n([pl(processen),sg(proces)],het,
   [sbar,
    vp],
-  [s(arbeid),
+  [['8',december],  % van Bouterse
+   s(arbeid),
    s(beleid),
    s(besluitvorming),
    s(communicatie),
@@ -28586,6 +28636,9 @@ n([pl(renbanen),sg(renbaan)],de,[]).
 
 n([pl(rendementen),sg(rendement)],het,[sbar,vp]).
 
+n([pl(rendementen),sg(rendement)],het,[],
+  [dividend]).
+
 n([pl('rendez-vous'),sg('rendez-vous')],het,[],[dim('rendez-voustje')]).
 
 n([pl(rendieren),sg(rendier)],het,[]).
@@ -28606,7 +28659,9 @@ n([pl(renten),pl(rentes),sg(rente)],de,[],
    i(geld_markt,geldmarkt),
    hypotheek,
    i(kapitaal_markt,kapitaalmarkt),
-   lijf]).
+   lijf,
+   spaar
+  ]).
 
 n([pl(rentelasten)],both,[]).
 
@@ -29298,6 +29353,8 @@ n([mass(rouw)],de,[pred_pp(in)]).
 
 n([pl(rovers),sg(rover)],de,[],[dim(rovertje)]).
 
+n([sg(royal),pl(royals)],de,[]).
+
 n([pl(royementen),sg(royement)],het,[]).
 
 n([mass(roze)],het,[]).
@@ -29773,6 +29830,7 @@ n([pl(schandalen),sg(schandaal)],het,[],
    beurs,
    boekhoud,
    corruptie,
+   diesel,
    doping,
    'Enron',
    omkoop]).
@@ -30450,11 +30508,15 @@ n([pl(selecties),sg(selectie),
    pl(selekties),sg(selektie)],de,[],
   [h('A'),
    h('B'),
-   markt]).
+   markt,
+   wedstrijd
+  ]).
 
 n([sg(selfie),pl(selfies)],de,[]).
 
 n([sg(semester),pl(semesters)],het,[]).
+
+n([sg(seminar),pl(seminars)],both,[]).
 
 n([pl(seminaries),sg(seminarie)],het,[]).
 
@@ -30503,6 +30565,7 @@ n([pl(series),pl(seriën),sg(serie)],de,[],
    documentaire,
    drama,
    foto,
+   hit,
    politie,
    reality,
    soap,
@@ -30606,7 +30669,9 @@ n([pl(shots),sg(shot)],both,[measure],[dim(shotje)]).
 
 n([pl(shows),sg(show)],de,[],
   [auto,
+   middag,
    mode,
+   ochtend,
    televisie,tv,h(tv),f([tv]),i(tv,'TV-'),
    f([ver,van,mijn,bed]),
    f([ver,van,'m\'n',bed]),
@@ -30787,6 +30852,10 @@ n([sg(skiff),pl(skiffs)],de,[]).
 n([sg(skinhead),pl(skinheads)],de,[]).
 
 n([pl(skiërs),sg(skiër)],de,[]).
+
+n([sg(skip),pl(skips)],de,[]).  % iets van aanvoerder bij curling
+
+n([sg(skipper),pl(skippers)],de,[]).  % iets van aanvoerder bij curling
 
 n([pl(skisters),sg(skister)],de,[]).
 
@@ -31047,9 +31116,15 @@ n([sg([smart,card]),pl([smart,cards])],de,[]).
 
 n([sg(smartphone),pl(smartphones),
    sg('smart-phone'),pl('smart-phones'),
-   sg([smart,phone]),pl([smart,phone])],de,[]).
+   sg([smart,phone]),pl([smart,phones])],de,[]).
 
-n([sg([smart,shop]),pl([smart,shops])],de,[]).
+n([sg(smartshop),pl(smartshops),
+   sg('smart-shop'), pl('smart-shops'),
+   sg([smart,shop]),pl([smart,shops])],de,[]).
+
+n([sg(smartwatch),pl(smartwatches),
+   sg('smart-watch'),pl('smart-watches'),
+   sg([smart,watch]),pl([smart,watches])],de,[]).
 
 n([sg(smartlap),pl(smartlappen)],de,[]).
 
@@ -31206,12 +31281,16 @@ n([mass(soberheid)],de,[]).
 n([pl('sociaal-democraten'),sg('sociaal-democraat'),
    pl([sociaal,democraten]),sg([sociaal,democraat]),
    pl('sociaal-demokraten'),sg('sociaal-demokraat'),
-   pl([sociaal,demokraten]),sg([sociaal,demokraat])],de,[]).
+   pl([sociaal,demokraten]),sg([sociaal,demokraat]),
+   pl(sociaaldemocraten),sg(sociaaldemocraat),
+   pl(sociaaldemokraten),sg(sociaaldemokraat)],de,[]).
 
 n([mass('sociaal-democratie'),
    mass([sociaal,democratie]),
    mass('sociaal-demokratie'),
-   mass([sociaal,demokratie])],de,[]).
+   mass([sociaal,demokratie]),
+   mass(sociaaldemocratie),
+   mass(sociaaldemokratie)],de,[]).
 
 n([pl('sociaal-psychologen'),sg('sociaal-psycholoog'),
    pl([sociaal,psychologen]),sg([sociaal,psycholoog])],de,[]).
@@ -34647,6 +34726,8 @@ n([pl(transformaties),sg(transformatie)],de,[]).
 
 n([sg(transformator),pl(transformatoren)],de,[]).
 
+n([sg(transgender),pl(transgenders)],de,[]).
+
 n([pl(transistors),sg(transistor)],de,[]).
 
 n([mass(transmissie)],de,[]).
@@ -35428,6 +35509,8 @@ n([pl(uitzonderingen),sg(uitzondering)],de,[sbar,vp]).
 
 n([pl(ultimatums),sg(ultimatum)],het,[sbar,vp]).
 
+n([sg(ultimo)],de,[]).  % iets met beurskoersen
+
 n([mass(ultramarijn)],het,[]).
 
 n([mass(ultraviolet)],het,[]).
@@ -35915,6 +35998,7 @@ n([pl(verboden),sg(verbod)],het,[],
    fok,
    import,
    inhaal,
+   inreis,
    reclame,
    reis,
    rij,
@@ -36092,6 +36176,7 @@ n([pl(vergaderingen),sg(vergadering)],de,
   [temp_mod,
    app_measure],
   [s(aandeelhouder),
+   s(beleid),
    s(bestuur),
    commissie,
    fractie,
@@ -36348,7 +36433,9 @@ n([pl(verkopen),sg(verkoop)],de,[],
    i(detail_handel,detailhandel),
    i(detail_handel,detailhandels),
    koppel,
-   wapen]).
+   wapen,
+   winkel
+  ]).
 
 n([pl(verkooppunten),sg(verkooppunt)],het,[]).
 
@@ -37600,6 +37687,8 @@ n([sg([voice,over]),sg('voice-over')],de,[]).
 
 n([sg([voice,recorder]),pl([voice,recorders])],de,[]).
 
+n([sg(volatiliteit),pl(volatiliteiten)],de,[]).
+
 n([sg(volbloed),pl(volbloeden),pl(volbloeds)],de,[]).
 
 n([pl(voldoendes),sg(voldoende)],de,[]).
@@ -38139,6 +38228,9 @@ n([pl(vormingen),sg(vorming)],de,[],
    s(gezin),
    kartel,
    regio]).
+
+n([sg(vorser),pl(vorsers)],de,[],
+  [markt]).
 
 n([pl(vorsten),sg(vorst)],de,[],
   [groot,
@@ -38820,6 +38912,7 @@ n([pl(weegschalen),sg(weegschaal)],de,[]).
 
 n([sg(week),pl(weken)],de,[temp_mod,sbar,measure],
   [les,
+   s(handel),
    school,
    dim(weekje)]).
 
@@ -39193,6 +39286,7 @@ n([pl(werkers),sg(werker)],de,[],
    deeltijd,
    flex,
    haven,
+   hoog,
    opbouw,
    s(redding),
    thuis,

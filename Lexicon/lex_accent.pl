@@ -483,6 +483,7 @@ accent(geensceneerd,geënsceneerd).
 accent(geente,geënte).
 accent(geenterde,geënterde).
 accent(geenterd,geënterd).
+accent(geentertaind,geëntertaind).
 accent(geent,geënt).
 accent(geenthousiasmeerd,geënthousiasmeerd).
 accent(geerfde,geërfde).
@@ -747,6 +748,7 @@ accent(hierarchischte,hiërarchischte).
 accent(hierarchischt,hiërarchischt).
 accent(hindoeisme,hindoeïsme).
 accent(historien,historiën).
+accent(hitserien,hitseriën).
 accent(hoofdideeen,hoofdideeën).
 accent(hostien,hostiën).
 accent(hulpactien,hulpactiën).
@@ -917,6 +919,7 @@ accent(materiele,materiële).
 accent(materieler,materiëler).
 accent(materien,materiën).
 accent(meditatien,meditatiën).
+accent(meediscussieren,meediscussiëren).
 accent(megamoskeeen,megamoskeeën).
 accent(melodieen,melodieën).
 accent(menage,ménage).
