@@ -2587,7 +2587,8 @@ preposition([t,/,m]).
 preposition(vanachter).
 %preposition(vanaf).
 preposition(vanonder).
-preposition(vanop).   % vlaams?
+preposition(vanop).		% vlaams?
+preposition(vanover).		% vlaams
 preposition(vanuit).
 preposition(vanwege).
 preposition([vanwege,van]).
@@ -8321,6 +8322,7 @@ anom_org(bedrijf).
     term/2.
 
 term([accident,de,parcours],     [accidents,de,parcours]).
+term([accumulate]).
 term([air,support]).
 term([alive,and,kicking]).
 term([all,in,the,game]).
@@ -8367,6 +8369,7 @@ term([business,as,usual]).
 term([business,class]).
 term([business,to,business]).
 term([business,manager],[business,managers]).
+term([buy]).
 term([carpe,diem]).
 term([carte,blanche]).
 term([cause,célèbre]).
@@ -8445,6 +8448,7 @@ term(['gentleman\'s',agreement]).
 term([glitter,and,glamour]).
 term([global,village]).
 term([golden,parachute],[golden,parachutes]).
+term([golden,score]).
 term([good,governance]).
 term([ground,zero]).
 term([haasje,over]).   % otherwise we get the parse "[[haasje] [over spelen]]"
@@ -8458,6 +8462,7 @@ term(heartbeating).
 term([hell,of,a,job]).
 term([himmelhoch,jauchzend]).
 term([hit,and,run]).
+term([hold]).
 term([hot,news]).
 term([hot,stuff]).
 term([human,interest]).
@@ -8569,6 +8574,7 @@ term([raison,'d\'être']).
 term([rank,and,file]).
 term([real,audio]).
 term([reculer,pour,mieux,sauter]).
+term([reduce]).
 term([remedial,teaching]).
 term([res,publica]).
 term([rigor,mortis]).

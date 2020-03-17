@@ -2294,6 +2294,9 @@ a([e(actieve),
    pp(binnen),
    pp(in)],[]).
 
+a([e(activistische),
+   no_e(activistisch)],adv,[]).
+
 a([e(actuele),
    e(aktuele),
    er(actueler),
@@ -2378,7 +2381,8 @@ a([both(afdoende),
    subject_vp],[]).
 
 a([e(afdwingbare),
-   no_e(afdwingaar)],
+   no_e(afdwingbaar)],
+  adv,
   [subject_sbar,
    subject_vp],[]).
 
@@ -10535,6 +10539,8 @@ a([e(fraudegevoelige),
 a([e(frauduleuze),
    no_e(frauduleus)],adv,[],[]).
 
+a([both(freaky)],adv,[],[]).
+
 a([both('free-lance'),
    both(freelance)],adv,[],[]).
 
@@ -15861,6 +15867,9 @@ a([ge_e(gestrafte),
 a([ge_e(gestrande),
    ge_no_e(gestrand)],adv,[],[]).
 
+a([ge_e(gestreamde),
+   ge_no_(gestreamd)],adv,[],[]).
+
 a([ge_both(gestreden)],adv,[],[]).
 
 a([ge_e(gestreelde),
@@ -18982,6 +18991,9 @@ a([e(hysterische),
    no_e(hysterisch),
    st(hysterischt),
    ste(hysterischte)],adv,[],[]).
+
+a([e(iconische),
+   no_e(iconisch)],adv,[],[]).
 
 a([e(ideale),
    er(idealer),
@@ -30100,6 +30112,8 @@ a([e(premature),
    no_e(prematuur)],nonadv,
   [subject_vp,
    subject_sbar],[]).
+
+a([both(premium)],adv,[],[]).
 
 a([e(prenatale),
    no_e(prenataal)],adv,

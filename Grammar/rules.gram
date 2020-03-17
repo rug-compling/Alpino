@@ -9860,7 +9860,8 @@ nonstart_nonfinal_coord_daughter_unifications(_,L,_M) :-
 %%
 %% passive: voor het geval er iemand wordt gepakt of doorslaat
 one_daughter_unifications(Cat0,Cat) :-
-    Paths=[ccat,subn,adv,prep,part,sv1_mod,vframe,ctype,tmploc,pcat,mcat,sel,
+    Paths=[case,
+	   ccat,subn,adv,prep,part,sv1_mod,vframe,ctype,tmploc,pcat,mcat,sel,
            pro,parg,hebben_zijn,neclass,passive,question,subadv,pp_er,
            can_nominalize,can_marked_attr,can_postv,deverbal,redrel,
 	   can_postn,wh_reltmploc,cform,meas,tags,hstem,eps,avform],
@@ -9887,7 +9888,8 @@ coord_daughter_paths(L,M) :-
     %% removed tmploc: 'overal en altijd'
     %% ccat0 is not right either: 'niet of te weinig'
     %% removed redrel: "Dat zal afhangen van wat je gebruikt en de behoeften van de gebruiker"
-    Paths = [vform,case,aform,nform,wh,app,tpart,amount,exs,cleft,
+    %% removed case: voor mijn vrouw en ik
+    Paths = [vform,aform,nform,wh,app,tpart,amount,exs,cleft,
              compar_form,vslash,relform,ld_pc,me_adj,adj_can_postv,
              modifies_a,slash,sc,parts,pro_deps,e_deps,pred,
              % question,

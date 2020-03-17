@@ -616,7 +616,7 @@ phrasal_entry(noun(de,count,sg),numberdeurs) -->
     n_word(NumberTal),
     { numbersuffix(NumberTal,drs) }.
 
-phrasal_entry(noun(het,count,sg),numbercilinder) -->
+phrasal_entry(noun(both,count,sg),numbercilinder) -->
     { hdrug_util:debug_message(4,"numbercilinder~n",[]) },
     n_word(NumberTal),
     { numbersuffix(NumberTal,cilinder) }.

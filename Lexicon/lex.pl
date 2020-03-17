@@ -777,7 +777,6 @@ plural_suffix(beatles).
 plural_suffix(bees).
 plural_suffix(blowfish).
 plural_suffix(boys).
-plural_suffix(boys).
 plural_suffix(breeders).
 plural_suffix(brigades).
 plural_suffix(brothers).
@@ -918,6 +917,7 @@ plural_suffix(streets).
 plural_suffix(stripes).
 plural_suffix(strokes).
 plural_suffix(supremes).
+plural_suffix(swingers).
 plural_suffix(thunderbugs).
 plural_suffix(tijgers).
 plural_suffix(trammps).
@@ -926,7 +926,7 @@ plural_suffix(underwolves).
 plural_suffix(viewers).
 plural_suffix(walkabouts).
 plural_suffix(warhols).
-plural_suffix(waterboys).
+plural_suffix(warriers).
 plural_suffix(wizards).
 
 lexicon__(Word,Cat,Label,Ws0,Ws,His,_) :-
