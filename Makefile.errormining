@@ -85,6 +85,9 @@ e:
          grep -v  -e '^unknown[|]'\
                   -e '^guessing[|]'\
                   -e '^parse: '\
+		  -e '^Lexical analysis: '\
+		  -e '^[*][*][*][*] parsing'\
+		  -e '^[*][*][*][*] parsed'\
                   -e '^FRAME#'\
 		  -e '^timeout[|]'\
                   -e 'no default postag'\
