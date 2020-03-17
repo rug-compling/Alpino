@@ -85,7 +85,7 @@ e:
          grep -v  -e '^unknown|'\
                   -e '^guessing|'\
                   -e '^parse: '\
-                  -e '^FRAME# '\
+                  -e '^FRAME#'\
                   -e 'no default postag'\
                   -e 'no cgn tag'\
                   -e '^warning: UNKNOWN'\
