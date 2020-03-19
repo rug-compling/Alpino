@@ -5466,6 +5466,7 @@ lemma_root(door_zwabberen,zwabber_door) .
 lemma_root(door_zwalken,zwalk_door) .
 lemma_root(door_zwalpen,zwalp_door) .
 lemma_root(door_zwammen,zwam_door) .
+lemma_root(door_zwanendriften,zwanendriften_door) .
 lemma_root(door_zwartepieten,zwartepieten_door) .
 lemma_root(door_zwartrijden,zwartrijden_door) .
 lemma_root(door_zwartwerken,zwartwerken_door) .
@@ -12820,6 +12821,7 @@ lemma_root(raak_zwabberen,zwabber_raak) .
 lemma_root(raak_zwalken,zwalk_raak) .
 lemma_root(raak_zwalpen,zwalp_raak) .
 lemma_root(raak_zwammen,zwam_raak) .
+lemma_root(raak_zwanendriften,zwanendriften_raak) .
 lemma_root(raak_zwartepieten,zwartepieten_raak) .
 lemma_root(raak_zwartrijden,zwartrijden_raak) .
 lemma_root(raak_zwartwerken,zwartwerken_raak) .
@@ -19610,6 +19612,7 @@ lemma_root(verblinden,verblind) .
 lemma_root(verbloemen,verbloem) .
 lemma_root(verblozen,verbloos) .
 lemma_root(verbluffen,verbluf) .
+lemma_root(verborgen_houden,houd_verborgen) .
 lemma_root(verbouwen,verbouw) .
 lemma_root(verbranden,verbrand) .
 lemma_root(verbrassen,verbras) .
@@ -22652,6 +22655,7 @@ lemma_root(voort_zwabberen,zwabber_voort) .
 lemma_root(voort_zwalken,zwalk_voort) .
 lemma_root(voort_zwalpen,zwalp_voort) .
 lemma_root(voort_zwammen,zwam_voort) .
+lemma_root(voort_zwanendriften,zwanendriften_voort) .
 lemma_root(voort_zwartepieten,zwartepieten_voort) .
 lemma_root(voort_zwartrijden,zwartrijden_voort) .
 lemma_root(voort_zwartwerken,zwartwerken_voort) .
@@ -23035,6 +23039,7 @@ lemma_root(zwakken,zwak) .
 lemma_root(zwalken,zwalk) .
 lemma_root(zwalpen,zwalp) .
 lemma_root(zwammen,zwam) .
+lemma_root(zwanendriften,zwanendriften) .
 lemma_root(zwartepieten,zwartepieten) .
 lemma_root(zwart_maken,maak_zwart) .
 lemma_root(zwartrijden,zwartrijden) .

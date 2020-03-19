@@ -1239,6 +1239,7 @@ inf_only_sport(zakenbankieren).
 inf_only_sport(zakkenrollen).
 inf_only_sport(zandsurfen).
 inf_only_sport(zeezeilen).
+inf_only_sport(zwanendriften).
 inf_only_sport(zwartepieten).
 inf_only_sport(zwartrijden).
 inf_only_sport(zwartwerken).
@@ -3776,15 +3777,19 @@ v(bied,biedt,bieden,geboden,bood,boden,
 	intransitive,
 	sbar_subj_np,		% het biedt voordelen dat
 	sbar_subj_np_np,	% het biedt ons voordelen dat
-                                % * het biedt ons dat 
+                                % * het biedt ons dat
 	so_pp_np,
 	transitive,
 	part_np_np(aan),
-	part_np_vp_obj(aan),
 %	part_refl(aan),
 	part_so_pp_np(aan),
 	part_transitive(aan),
+	part_sbar(aan),
+	part_so_pp_sbar(aan),
+	part_np_sbar(aan),
 	part_vp(aan),
+	part_so_pp_vp(aan),
+	part_np_vp_subj(aan),
 	fixed([[uitkomst]],imp_passive),
 	fixed([{[acc(bescherming),pc(tegen)]}],norm_passive),
 	fixed([{[acc(ruimte),pc(tot)]}],norm_passive),
@@ -9804,6 +9809,8 @@ v([houd,hou],houdt,houden,gehouden,hield,hielden,
 	fixed([[schrap],refl],no_passive),
 	part_refl(schuil),
 	part_transitive(schuil),  % hij houdt de kinderen schuil
+	part_refl(verborgen),     % daar houden zich Joden verborgen
+	part_transitive(verborgen),  % hij houdt de papieren verborgen
 	part_sbar_obj(stil),
 	part_sbar_obj(tegen),
 	part_sbar(tegen),  % we moeten tegenhouden dat ...
@@ -17204,8 +17211,6 @@ v(prijs,prijst,prijzen,geprezen,prees,prezen,
     [h([als_pred_np,
 	transitive,
 	sbar,
-	part_transitive(af),
-	part_transitive(om),  % naar euro's
 	pp_sbar(in), % het valt in hem te prijzen dat ...
 	np_ld_dir,  % ik prijs hem de hemel in
         fixed([[gelukkig],acc,sbar],no_passive),
@@ -17216,7 +17221,10 @@ v(prijs,prijst,prijzen,geprezen,prees,prezen,
         part_als_pred_np_vp(aan)])]).
 
 v(prijs,prijst,prijzen,geprijsd,prijsde,prijsden,
-    [h([transitive])]).
+  [h([transitive,
+      part_transitive(af),
+      part_transitive(om)	% naar euro's
+     ])]).
 
 v(prik,prikt,prikken,geprikt,prikte,prikten,
     [h([ap_pred_np,
@@ -17913,6 +17921,7 @@ v(reis,reist,reizen,gereisd,reisde,reisden,
 	part_intransitive(aan),
 	part_intransitive(mee),
 	part_pc_pp(mee,met),
+	part_intransitive(om),
 	part_intransitive(rond),
 	part_intransitive(terug),
 	part_ld_pp(terug)]),
@@ -19512,6 +19521,7 @@ v(schrijf,schrijft,schrijven,geschreven,schreef,schreven,
 	part_so_pp_np(toe),
 	part_so_pp_np(voor),
 	part_transitive(aan),
+	part_intransitive(af),
 	part_transitive(af),
 	part_transitive(bij),
 	part_transitive(in),
@@ -22997,6 +23007,7 @@ v(trap,trapt,trappen,getrapt,trapte,trapten,
 	part_transitive(uit),
 	part_transitive(plat),
 	np_ld_pp,
+	part_pc_pp(in,op),  % er werd hard op hem in getrapt
 	part_transitive(in)])]).
 
 v(trappel,trappelt,trappelen,getrappeld,trappelde,trappelden,
@@ -25850,6 +25861,7 @@ v(verwacht,verwacht,verwachten,verwacht,verwachtte,verwachtten,
 	transitive,
 	intransitive, % ik had niet anders verwacht
         refl_pc_pp(aan), % VL: zich verwachten aan
+	fixed([{[acc(duidelijkheid),pc(over)]}],no_passive),
 	vp,
         fixed([{[pc(in),acc(verandering)]}],norm_passive),
 	np_pc_pp(van)])]).

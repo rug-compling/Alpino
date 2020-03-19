@@ -138,6 +138,7 @@ accent(blert,blèrt).
 accent(bobsleeen,bobsleeën).
 accent('Bosnier','Bosniër').
 accent('Bosniers','Bosniërs').
+accent('Brentolien','Brentoliën').
 accent(buhne,bühne).
 accent('Burundier','Burundiër').
 accent('Burundiers','Burundiërs').

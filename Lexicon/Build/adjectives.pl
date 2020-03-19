@@ -16840,7 +16840,9 @@ a([ge_e(gezegende),
    ge_no_e(gezegend),
    st(gezegendst),
    ste(gezegendste)],adv,
-  [pp(met)],[]).
+  [pp(met),
+   object_sbar  % ik voel me gezegend dat ...
+  ],[]).
 
 a([ge_e(gezeilde),
    ge_no_e(gezeild)],adv,[],[]).

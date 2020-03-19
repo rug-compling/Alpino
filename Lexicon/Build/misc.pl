@@ -1033,6 +1033,7 @@ tag(mja).
 tag(moh).
 tag(mvg).
 tag(mwa).
+tag(mwah).
 tag(nah).
 tag(naja).
 tag(nee).
@@ -6664,6 +6665,7 @@ m('what the fuck', pronoun(ywh,thi,sg,het,both,def),    [what,the,fuck]).
 m('what the fock', pronoun(ywh,thi,sg,het,both,def),    [what,the,fock]).
 m('who the fuck',  pronoun(ywh,thi,both,de,both,indef), [who,the,fuck]).
 m('who the fock',  pronoun(ywh,thi,both,de,both,indef), [who,the,fock]).
+m('wie de fuck',   pronoun(ywh,thi,both,de,both,indef), [wie,de,fuck]).
 m('who the hell',  pronoun(ywh,thi,both,de,both,indef), [who,the,hell]).
 m(wie,          pronoun(ywh,thi,both,de,both,indef),wie).
 m('wie o wie',          pronoun(ywh,thi,both,de,both,indef),[wie,o,wie]).
