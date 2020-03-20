@@ -7185,7 +7185,10 @@ n([pl(cocktails),sg(cocktail)],de,[measure]).
 
 n([pl(cocktails),sg(cocktail)],de,[measure],[molotov]).
 
-n([pl(codes),sg(code)],de,[sbar,measure]).  % code rood, code oranje
+n([pl(codes),sg(code)],de,[sbar],[]).
+
+n([pl(codes),sg(code)],de,[app_measure], % code rood, code oranje
+  [dress]).
 
 n([pl(codes),sg(code)],de,[],
   [s(activering),
@@ -15052,7 +15055,7 @@ n([pl(houtskolen),sg(houtskool)],both,[]).
 
 n([pl(houtvesters),sg(houtvester)],de,[]).
 
-n([pl(houvasten),sg(houvast)],het,[sbar,subject_sbar]).
+n([pl(houvasten),sg(houvast)],both,[sbar,subject_sbar]).
 
 n([sg(houw),pl(houwen)],de,[]). % van een zwaard
 
@@ -17039,7 +17042,8 @@ n([pl(kasseien),sg(kassei)],de,[],[dim(kasseitje)]).
 n([pl(kassiers),sg(kassier)],de,[]).
 
 n([pl(kasten),sg(kast)],de,[],
-  [dashboard,
+  [archief,
+   dashboard,
    flipper,
    i(glas,glazen),
    gok,
@@ -19052,7 +19056,9 @@ n([pl(leefregels),sg(leefregel)],de,[sbar,vp]).
 
 n([pl(leeftijden),sg(leeftijd)],de,[sbar]).
 
-n([pl(leeftijden),sg(leeftijd)],de,[],[pensioen]).
+n([pl(leeftijden),sg(leeftijd)],de,[],
+  [h('AOW'),
+   pensioen]).
 
 n([pl(leeftijdscategorieën),sg(leeftijdscategorie)],de,[]).
 
@@ -22898,7 +22904,8 @@ n([pl(nieuwkomers),sg(nieuwkomer)],de,[]).
 n([mass(nieuwlichterij)],de,[]).
 
 n([mass(nieuws)],het,[subject_sbar,sbar],
-  [voorpagina,
+  [nep,
+   voorpagina,
    wereld]).
 
 n([mass(nieuws)],het,[],

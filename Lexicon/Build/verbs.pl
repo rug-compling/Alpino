@@ -3826,6 +3826,7 @@ v(bijt,bijt,bijten,gebeten,beet,beten,
         fixed([[stuk],acc(tand),refl],no_passive),
         fixed([[stuk],acc(tand)],no_passive),
                                 % hij beet zich de tanden stuk
+	part_transitive(dood),
 	part_transitive(door),
 	part_intransitive(door),
 	part_intransitive(uit),
@@ -3985,6 +3986,7 @@ v(blijf,blijft,blijven,gebleven,bleef,bleven,
         fixed([vc(lig,psp,intransitive),extra_sbar(A),er_pp(aan,A),dat],no_passive),
 	part_intransitive(aan),
 	part_intransitive(achter),
+	part_intransitive(binnen),
 	part_intransitive(bij),
 	part_intransitive(op),
 	part_intransitive(open),
@@ -6426,6 +6428,7 @@ v(draai,draait,draaien,gedraaid,draaide,draaiden,
 	part_np_np(om),
         part_fixed(om,[[de,nek],acc],norm_passive), % iemand/iets de nek omdraaien
 	part_intransitive(open),
+	part_intransitive(proef),
 	%part_refl(om),
         part_intransitive(mee),
 	part_transitive(aan),
@@ -6678,6 +6681,7 @@ v(druk,drukt,drukken,gedrukt,drukte,drukten,
 	part_transitive(achterover),
 	part_transitive(af),
 	part_transitive(bij),
+	part_transitive(dood),
 	part_transitive(door),
 	part_transitive(in),
 	part_transitive(neer),
@@ -7204,6 +7208,10 @@ v(fabriceer,fabriceert,fabriceren,gefabriceerd,fabriceerde,fabriceerden,
     [h([sbar,
 	transitive])]).
 
+v(faciliteer,faciliteert,faciliteren,gefaciliteerd,faciliteerde,faciliteerden,
+    [h([transitive,
+	intransitive])]).
+
 v(fake,faket,faken,gefaket,fakete,faketen,
     [h([transitive,  % orgasme
 	intransitive])]).
@@ -7253,7 +7261,9 @@ v(fiets,fietst,fietsen,gefietst,fietste,fietsten,
      h([part_intransitive(rond),
 	part_intransitive(aan),
 	part_transitive(aan), % de motoren moeten worden aangefietst
-	transitive]),
+	transitive,
+	np_ld_pp              % ik fiets jullie er wel even heen
+       ]),
      b([ld_pp,
         part_intransitive(langs),
 	part_intransitive(verder),  % HACK VL: ik ben op mijn elan blijven verder fietsen
@@ -8612,6 +8622,10 @@ v(goochel,goochelt,goochelen,gegoocheld,goochelde,goochelden,
     [h([intransitive,
 	pc_pp(met)])]).
 
+v([google,googel],[googlet,googelt],[googleën,googelen],[gegoogled,gegoogeld],[googlede,googelde],[googleden],[googelden],
+  [h([intransitive,
+      transitive])]).
+
 v(gooi,gooit,gooien,gegooid,gooide,gooiden,
     [h([np_np,
         nonp_pred_np, % ik gooi alles overhoop / in de war / stuk / kapot ...
@@ -9254,6 +9268,7 @@ v(help,helpt,helpen,geholpen,hielp,hielpen,
 	np_mod_pp(met),
         part_intransitive(mee),
         part_transitive(mee),
+        part_transitive(vooruit),
 	part_vp(mee),
 	pc_pp(aan),
 	pc_pp(tegen),
@@ -9283,8 +9298,10 @@ v(hemel,hemelt,hemelen,gehemeld,hemelde,hemelden,
     [h([part_transitive(op)])]).
 
 v(hengel,hengelt,hengelen,gehengeld,hengelde,hengelden,
-    [h([intransitive,
-	pc_pp(naar)])]).
+  [h([intransitive,
+      np_ld_pp,
+      np_ld_adv,
+      pc_pp(naar)])]).
 
 v(heradem,herademt,herademen,herademd,herademde,herademden,
     [h([intransitive])]).
@@ -9300,6 +9317,11 @@ v(herbekijk,herbekijkt,herbekijken,herbekeken,herbekeek,herbekeken,
 
 v(herbeleef,herbeleeft,herbeleven,herbeleefd,herbeleefde,herbeleefden,
     [h([transitive])]).
+
+v(herbenoem,herbenoemt,herbenoemen,herbenoemd,herbenoemde,herbenoemden,
+    [h([transitive,
+        als_pred_np,
+	np_pc_pp(tot)])]).
 
 v(herberg,herbergt,herbergen,geherbergd,herbergde,herbergden,
     [h([transitive])]).
@@ -10848,7 +10870,8 @@ v(kijk,kijkt,kijken,gekeken,keek,keken,
 	part_sbar(toe),
 	part_sbar(uit),
 	part_vp(uit),
-	part_intransitive(aan),  % kijk eens aan ,
+	part_intransitive(aan),	% kijk eens aan ,
+	part_intransitive(weg),
 	part_transitive(aan),
 	part_transitive(af),
 	part_transitive(in),
@@ -11254,6 +11277,7 @@ v(knabbel,knabbelt,knabbelen,geknabbeld,knabbelde,knabbelden,
     [h([intransitive,
 	transitive,
         part_transitive(af),
+	part_np_pc_pp(af,van),
 	ld_pp,
 	ld_adv])]).
 
@@ -12118,7 +12142,8 @@ v(krijg,krijgt,krijgen,gekregen,kreeg,kregen,
         pc_pp(met),  % met de wapenstok
 	pc_pp(op),  % op mijn donder/flikker/...
         fixed([svp_er_pp(door),acc],no_passive),  % we moeten die veranderingen erdoor krijgen
-	fixed([svp_er_pp(bij),acc],no_passive),   % we krijgen er een kindje / 10 procent / .. bij
+	fixed([svp_er_pp(bij),acc],no_passive),	% we krijgen er een kindje / 10 procent / .. bij
+	part_np_pc_er_transitive(bij), % we hebben er een ton bijgekregen
 	fixed([als_pred,vp],no_passive),          % ik kreeg als opdracht om ..
 	fixed([als_pred,sbar],no_passive),        % ik krijg als opdracht dat ..
 	part_fixed(mee,[als_pred,vp],no_passive),          % ik kreeg als opdracht mee om ..
@@ -12865,6 +12890,8 @@ v(lees,leest,lezen,gelezen,las,lazen,
         part_intransitive(na),
 	part_transitive(op),
 	part_np_pc_pp(na,op),
+	part_intransitive(terug),
+	part_transitive(terug),
 	part_transitive(uit),
 	np_mod_pp(van),
 	pc_pp(over),
@@ -12916,6 +12943,7 @@ v(leg,legt,leggen,gelegd,legde,legden,
 	part_transitive(op),
         part_transitive(opzij),
 	part_transitive(over),
+	part_transitive(plat),
 	part_transitive(stil),
 	part_transitive(terug),
 	part_transitive(toe),
@@ -13028,6 +13056,8 @@ v(leid,leidt,leiden,geleid,leidde,leidden,
 	part_intransitive(op),
 	part_transitive(rond),
 	part_transitive(uit),
+	part_transitive(weg),
+	part_np_ld_pp(weg),
 	part_np_ld_pp(rond),
 	part_transitive(voor),
 	part_np_ld_pp(voor),
@@ -13423,7 +13453,7 @@ v(lik,likt,likken,gelikt,likte,likten,
 	pc_pp(aan)])]).
 
 %% kan ik in X een foto liken?
-v(like,liket,liken,geliked,likete,liketen,
+v(like,liket,liken,geliket,likete,liketen,
     [h([transitive])]).
 
 v(likkebaard,likkebaardt,likkebaarden,gellikebaard,likkebaarde,likkebaarden,
@@ -14804,6 +14834,8 @@ v(neem,neemt,nemen,genomen,nam,namen,neme,
 	fixed([{[acc(nota),pc(van)]}],norm_passive),
 	fixed([{[acc(kennis),pc(van)]}],norm_passive),
 	fixed([{[acc(kennis),er_pp(van,X)]},extra_sbar(X)],norm_passive),
+	part_pc_pp(kennis,van),
+	part_er_pp_sbar(kennis,van),
 	fixed([{[acc(nota),er_pp(van,X)]},extra_sbar(X)],norm_passive),
 	fixed([{[acc(maatregel),pc(tegen)]}],norm_passive),
 	fixed([{[[poolshoogte],ld_pp]}],no_passive),
@@ -15490,6 +15522,7 @@ v([onthoud,onthou],onthoudt,onthouden,onthouden,onthield,onthielden,
 
 v(onthul,onthult,onthullen,onthuld,onthulde,onthulden,
   [h([sbar,
+      vp,
       np_mod_pp(van),
       transitive])]).
 
@@ -16965,7 +16998,8 @@ v(pomp,pompt,pompen,gepompt,pompte,pompten,
 	part_transitive(door),
 	part_np_ld_pp(door),
 	part_transitive(in),
-	part_np_np(in),  % hij krijgt lucht ingepompt
+	part_np_np(in),		% hij krijgt lucht ingepompt
+	part_transitive(leeg),
 	part_transitive(op),
 	part_transitive(over),
 	part_transitive(rond),
@@ -17210,6 +17244,7 @@ v(prijk,prijkt,prijken,geprijkt,prijkte,prijkten,
 v(prijs,prijst,prijzen,geprezen,prees,prezen,
     [h([als_pred_np,
 	transitive,
+	part_transitive(in),
 	sbar,
 	pp_sbar(in), % het valt in hem te prijzen dat ...
 	np_ld_dir,  % ik prijs hem de hemel in
@@ -17604,14 +17639,17 @@ v(race,racet,racen,geracet,racete,raceten,
      h([intransitive
        ])]).
 
+v(radicaliseer,radicaliseert,radicaliseren,geradicaliseerd,radicaliseerde,radicaliseerden,
+  [b([intransitive])]).
+
 v(rafel,rafelt,rafelen,gerafeld,rafelde,rafelden,
-    [h([transitive]),
-     b([intransitive])]).
+  [h([transitive]),
+   b([intransitive])]).
 
 v(raffel,raffelt,raffelen,geraffeld,raffelde,raffelden,
-    [h([part_transitive(af),
-        ld_pp,
-        intransitive])]).
+  [h([part_transitive(af),
+      ld_pp,
+      intransitive])]).
 
 v(raffineer,raffineert,raffineren,geraffineerd,raffineerde,raffineerden,
     [h([transitive])]).
@@ -18821,6 +18859,7 @@ v(schaak,schaakt,schaken,geschaakt,schaakte,schaakten,
 v(schaal,schaalt,schalen,geschaald,schaalde,schaalden,
     [h([transitive,
         part_transitive(in),
+	part_intransitive(op),
         part_transitive(op),
 	part_pc_pp(in,in)])]).
 
@@ -20746,6 +20785,7 @@ v(speel,speelt,spelen,gespeeld,speelde,speelden,
 	part_transitive(vol),  % we spelen de tijd vol
 	part_transitive(voor),
         part_transitive(vooruit),
+        part_transitive(vrij),
 	part_transitive(weg), % Feyenoord heeft Ajax helemaal weggespeeld
         fixed([[in,de,kaart],dat],no_passive),
         fixed([[in,de,kaart],pc(van)],no_passive),
@@ -21055,6 +21095,7 @@ v(spring,springt,springen,gesprongen,sprong,sprongen,
 	part_intransitive(open),
 	part_intransitive(over),
 	part_intransitive(uit),
+	part_intransitive(weg),
 	part_ld_pp(in),
 	part_ld_pp(op),
 	part_ld_pp(over),
@@ -22489,6 +22530,7 @@ v(tak,takt,takken,getakt,takte,takten,
 v(takel,takelt,takelen,getakeld,takelde,takelden,
     [h([part_transitive(op),
 	part_transitive(toe),
+	part_transitive(weg),
 	np_ld_pp,
 	np_ld_dir,
 	transitive]),
@@ -23166,6 +23208,7 @@ v(trek,trekt,trekken,getrokken,trok,trokken,
 	part_transitive(af),
 	part_transitive(dicht),
 	part_transitive(door),
+	part_transitive(gelijk),
 	part_transitive(mee),
 	part_transitive(na),
 	part_transitive(om),
@@ -23207,6 +23250,9 @@ v(treur,treurt,treuren,getreurd,treurde,treurden,
 v(treuzel,treuzelt,treuzelen,getreuzeld,treuzelde,treuzelden,
     [h([intransitive,
 	pc_pp(met)])]).
+
+v(trigger,triggert,triggeren,getriggerd,triggerde,triggerden,
+    [h([transitive])]).
 
 v(tril,trilt,trillen,getrild,trilde,trilden,
     [h([intransitive,
@@ -24564,6 +24610,7 @@ v(verklaar,verklaart,verklaren,verklaard,verklaarde,verklaarden,
 	sbar,
 	so_pp_sbar,
 	transitive,
+	part_transitive(dood),
         intransitive,
 	vp,
         so_pp_vp,
@@ -26437,6 +26484,9 @@ v(vloek,vloekt,vloeken,gevloekt,vloekte,vloekten,
 v(vloer,vloert,vloeren,gevloerd,vloerde,vloerden,
     [h([transitive])]).
 
+v(vlog,vlogt,vloggen,gevolgd,vlogde,vlogden,
+    [h([intransitive])]).
+
 v(vlooi,vlooit,vlooien,gevlooid,vlooide,vlooiden,
     [h([intransitive,
 	transitive, % de apen vlooien elkaar
@@ -26588,6 +26638,7 @@ v(voer,voert,voeren,gevoerd,voerde,voerden,
         part_fixed(aan,[als_pred,sbar],imp_passive),
 	part_transitive(af),
         part_np_ld_pp(af),
+	part_transitive(bij),  % wel/niet in de Oostvaardersplassen
 	part_transitive(door),
 	part_transitive(in),
 	part_transitive(mee),
@@ -27054,16 +27105,17 @@ v(wals,walst,walsen,gewalst,walste,walsten,
 	pc_pp(over)])]).
 
 v(wandel,wandelt,wandelen,gewandeld,wandelde,wandelden,
-    [h([intransitive,
-        part_transitive(in) % VL
-       ]),
-     b([part_intransitive(rond),
-	part_intransitive(aan),  % komen
-	part_ld_pp(rond),
-	part_intransitive(weg),
-	ld_adv,
-	ld_pp,
-	ld_dir])]).
+  [h([intransitive,
+      transitive, % route zus en zo
+      part_transitive(in)	% VL
+     ]),
+   b([part_intransitive(rond),
+      part_intransitive(aan),	% komen
+      part_ld_pp(rond),
+      part_intransitive(weg),
+      ld_adv,
+      ld_pp,
+      ld_dir])]).
 
 v(wanhoop,wanhoopt,wanhopen,gewanhoopt,wanhoopte,wanhoopten,
     [h([intransitive,
@@ -28096,8 +28148,9 @@ v(zet,zet,zetten,gezet,zette,zetten,
 	part_transitive(neer),
         part_np_ld_pp(neer),
 	part_transitive(om),
-	part_transitive(op),
+ 	part_transitive(op),
 	part_transitive(open),
+	part_transitive(opzij),
 	part_transitive(over),
 	part_transitive(recht),
 	part_transitive(stil),
@@ -28697,6 +28750,7 @@ v(zweer,zweert,zweren,gezworen,[zweerde,zwoer,zwoor],[zweerden,zwoeren,zworen],
 	transitive,
 	vp,
 	part_transitive(af),
+	part_transitive(in),
 	pc_pp(bij),
 	pc_pp(op)])]).
 

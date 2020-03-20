@@ -698,6 +698,7 @@ accent(gezinstherapieen,gezinstherapieën).
 accent(gijzelingsactien,gijzelingsactiën).
 accent(gijzelingsaktien,gijzelingsaktiën).
 accent(glorien,gloriën).
+accent(googleen,googleën).
 accent(gratien,gratiën).
 accent(griepepidemieen,griepepidemieën).
 accent(groepstherapieen,groepstherapieën).
