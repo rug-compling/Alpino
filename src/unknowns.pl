@@ -5015,7 +5015,9 @@ potential_name_fsa(2,P0,[',',Word|Words],Ws,[',',Word|Prefix],[end_firma|His]) :
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[number|His]) :-
     name_number(Word),!,
     P is P0 + 1,
-    potential_name_fsa(5,P,Words,Ws,Prefix,His).
+    (  potential_name_fsa(5,P,Words,Ws,Prefix,His)
+    ;  potential_name_fsa(8,P,Words,Ws,Prefix,His)
+    ).
 
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[unknown|His]) :-
     name_unknown(Word,P0),
