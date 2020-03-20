@@ -3349,7 +3349,7 @@ ld_er_transitive(V,C0,C) :-
     V:passive => no_passive.   % * er wordt de verkeerde kant opgegaan
 
 %% for 'omdat er iets afstraalt'
-%%     'zijn we er toch ingetuind' (Herman Kuiphof)
+%%     'zijn we er toch weer ingetuind' (Herman Kuiphof)
 pc_er_transitive(V,C,C) :-
     main_v(V),
     r_np_arg(Obj),

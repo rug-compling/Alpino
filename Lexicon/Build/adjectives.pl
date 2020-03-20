@@ -5915,6 +5915,9 @@ a([ge_both(bijgevallen)],adv,[],[]).
 a([ge_e(bijgevoegde),
    ge_no_e(bijgevoegd)],adv,[],[]).
 
+a([ge_e(bijgevoerde),
+   ge_no_e(bijgevoerd)],adv,[],[]).
+
 a([ge_e(bijgevulde),
    ge_no_e(bijgevuld)],adv,[],[]).
 
@@ -8420,8 +8423,13 @@ a([e(doodeenvoudige),
    st(doodeenvoudigst),
    ste(doodeenvoudigste)],adv,[],[]).
 
+a([ge_both(doodgebeten)],adv,[],[]).
+
 a([ge_e(doodgegane),
    ge_no_e(doodgegaan)],adv,[],[]).
+
+a([ge_e(doodgedrukte),
+   ge_no_e(doodgedrukt)],adv,[],[]).
 
 a([ge_both(doodgelopen)],adv,[],[]).
 
@@ -8510,6 +8518,9 @@ a([e(doodstille),
    no_e(doodstil),
    st(doodstilst),
    ste(doodstilste)],padv,[],[]).
+
+a([ge_e(doodverklaarde),
+   ge_no_e(doodverklaard)],adv,[],[]).
 
 a([e(doodzieke),
    er(doodzieker),
@@ -13469,6 +13480,8 @@ a([ge_e(gelijkgestelde),
 a([ge_e(gelijkgestemde),
    ge_no_e(gelijkgestemd)],adv,[],[]).
 
+a([ge_both(gelijkgetrokken)],adv,[],[]).
+
 a([ende(gelijkluidende),
    end(gelijkluidend)],adv,[],[]).
 
@@ -14591,6 +14604,9 @@ a([ge_e(geraapte),
    ge_no_e(geraapt)],adv,[],[]).
 
 a([ge_both(geraden)],adv,[],[]).
+
+a([ge_e(geradicaliseerde),
+   ge_no_e(geradicaliseerd)],adv,[],[]).
 
 a([ge_e(gerafelde),
    ge_no_e(gerafeld)],adv,[],[]).
@@ -16151,6 +16167,9 @@ a([ge_both(getreden)],adv,[pp_pred(in,werking),
 
 a([ge_e(getreiterde),
    ge_no_e(getreiterd)],adv,[],[]).
+
+a([ge_e(getriggerde),
+   ge_no_e(getriggerd)],adv,[],[]).
 
 a([ge_e(getrimde),
    ge_no_e(getrimd)],padv,[],[]).
@@ -18311,6 +18330,9 @@ a([e(hemelwaartse),
 
 a([ge_both(herbegonnen)],adv,[],[]).
 
+a([ge_e(herbenoemde),
+   ge_no_e(herbenoemd)],adv,[],[]).
+
 a([ge_e(herbevestigde),
    ge_no_e(herbevestigd)],adv,[],[]).
 
@@ -19887,6 +19909,9 @@ a([ge_both(ingezogen)],nonadv,[],[]).
 
 a([ge_both(ingezonden)],adv,
   [pp(door)],[]).
+
+a([ge_both(ingezworen)],adv,
+  [],[]).
 
 a([ge_e(ingeënte),
    ge_no_e(ingeënt)],adv,[],[]).
@@ -21730,8 +21755,14 @@ a([ge_e(leeggegooide),
 
 a([ge_both(leeggelopen)],adv,[],[]).
 
+a([ge_e(leeggemaakte),
+   ge_no_e(leeggemaakt)],padv,[],[]).
+
 a([ge_e(leeggeroofde),
    ge_no_e(leeggeroofd)],padv,[],[]).
+
+a([ge_e(leeggepompte),
+   ge_no_e(leeggepompt)],padv,[],[]).
 
 a([e(lepe),
    er(leper),
@@ -28838,6 +28869,9 @@ a([e(opzienbarende),
   [subject_sbar,
    subject_vp],[]).
 
+a([ge_e(opzijgezette),
+   ge_no_e(opzijgezet)],adv,[],[]).
+
 a([e(orale),
    no_e(oraal)],adv,[],[]).
 
@@ -29777,6 +29811,9 @@ a([e(platte),
 
 a([ge_e(platgedrukte),
    ge_no_e(platgedrukt)],adv,[],[]).
+
+a([ge_e(platgelegde),
+   ge_no_e(platgelegd)],adv,[],[]).
 
 a([ge_e(platgetrapte),
    ge_no_e(platgetrapt)],adv,[],[]).
@@ -39046,6 +39083,9 @@ a([ge_e(vrijgemaakte),
 a([ge_e(vrijgepleite),
    ge_no_e(vrijgepleit)],adv,[],[]).
 
+a([ge_e(vrijgespeelde),
+   ge_no_e(vrijgespeeld)],adv,[],[]).
+
 a([ge_both(vrijgesproken)],adv,[],[]).
 
 a([ge_e(vrijgestelde),
@@ -39541,6 +39581,9 @@ a([ge_e(weggekwijnde),
 
 a([ge_both(weggelaten)],adv,[],[]).
 
+a([ge_e(weggeleide),
+   ge_no_e(weggeleid)],adv,[],[]).
+
 a([ge_e(weggelegde),
    ge_no_e(weggelegd)],adv,[],[]).
 
@@ -39584,6 +39627,8 @@ a([ge_e(weggespeelde),
 a([ge_e(weggespoelde),
    ge_no_e(weggespoeld)],adv,[],[]).
 
+a([ge_both(weggesprongen)],adv,[],[]).
+
 a([ge_e(weggestemde),
    ge_no_e(weggestemd)],padv,[],[]).
 
@@ -39594,6 +39639,9 @@ a([ge_both(weggestorven)],adv,[],[]).
 
 a([ge_e(weggestuurde),
    ge_no_e(weggestuurd)],adv,[],[]).
+
+a([ge_e(weggetakelde),
+   ge_no_e(weggetakeld)],adv,[],[]).
 
 a([ge_both(weggetrokken)],adv,[],[]).
 
