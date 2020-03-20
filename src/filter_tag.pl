@@ -355,11 +355,21 @@ valid_adj_sc(tr_object_vp,            [check_vform(te)]).
 valid_adj_sc(object_sbar,             [check_of_dat_whsub_sbar_right]).
 valid_adj_sc(van_sbar,                [check_tag(complementizer(van))]).
 valid_adj_sc(subject_sbar,            [check_of_dat_whsub_sbar]). % no copula required: pred_sbar_dp rule
-valid_adj_sc(subject_sbar_no_het,     [check_of_dat_whsub_sbar]). % idem
+valid_adj_sc(subject_sbar_no_het,     [or([check_tag(dip_sbar_adverb),
+					   check_of_dat_whsub_sbar
+					  ])
+				      ]).
 valid_adj_sc(pp_subject_sbar(Prep),   [prep(Prep),check_of_dat_whsub_sbar]).
-valid_adj_sc(pp_subject_sbar_no_het(Prep),   [prep(Prep),check_of_dat_whsub_sbar]).
+valid_adj_sc(pp_subject_sbar_no_het(Prep),
+	                              [prep(Prep),
+	                               or([check_tag(dip_sbar_adverb),
+			                   check_of_dat_whsub_sbar
+			              ])]).
 valid_adj_sc(so_pp_subject_sbar(Prep),[prep(Prep),check_of_dat_whsub_sbar]).
-valid_adj_sc(so_pp_subject_sbar_no_het(Prep),[prep(Prep),check_of_dat_whsub_sbar]).
+valid_adj_sc(so_pp_subject_sbar_no_het(Prep),
+                                      [prep(Prep),
+                                       or([check_tag(dip_sbar_adverb),
+                                           check_of_dat_whsub_sbar])]).
 valid_adj_sc(so_np_subject_sbar,      [check_of_dat_whsub_sbar]).
 valid_adj_sc(so_np_subject_vp,        [check_vform(te)]).
 valid_adj_sc(transitive,              []).
