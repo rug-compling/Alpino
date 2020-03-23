@@ -298,10 +298,7 @@ filter_tag_rule(right_conj(A),          [check_tag(left_conj(A))]).
 filter_tag_rule(preposition(_,_,sbar),  [check_tag(complementizer(dat)),
 					 check_vform(fin)]).
 filter_tag_rule(preposition(_,_,loc_adv),[check_loc_adv]).
-filter_tag_rule(preposition(_,[],voor_pred),
-		[or([check_verb_sc(voor_pred_np),
-		     check_verb_sc(voor_pred_np_sbar),
-		     check_verb_sc(voor_pred_np_vp)])]).
+filter_tag_rule(preposition(_,[],voor_pred),[check_voor]).
 filter_tag_rule(preposition(_,_,tmp_adv),[check_tmp_adv]).
 filter_tag_rule(iets_noun,            [or([check_tag(post_adjective(_)),
 					   check_tag(post_adjective(_,_)),
@@ -820,6 +817,9 @@ check_fixed_el(np_pred,               Cs,Cs).
 check_fixed_el(nonp_pred,             [check_nonp_copula|Cs],Cs).
 check_fixed_el(no_subj,               Cs,Cs).
 check_fixed_el(als_pred,              [check_tag(complementizer(als))|Cs],Cs).
+check_fixed_el(voor_pred,             [check_tag(preposition(_,_,voor_pred))|Cs],Cs).
+check_fixed_el(voor_pred(A),          [check_tag(preposition(_,_,voor_pred)),
+				       check_stem(A)|Cs],Cs).
 check_fixed_el(svp_pp(V,R),           [prep(V),check_stem(R)|Cs],Cs).
 check_fixed_el(ap_pred(Stem),         [check_stem(Stem)|Cs],Cs).
 check_fixed_el(ap_svp(Stem),          [check_stem(Stem)|Cs],Cs).
@@ -936,6 +936,21 @@ check_op(P0,P) :-
 check_op(P0,P) :-
     check_verb_sc(fixed(List,_),P0,P),
     member(vc(_,op,_),List).
+
+check_voor(P0,P) :-
+    check_verb_sc(voor_pred_np,P0,P).
+check_voor(P0,P) :-
+    check_verb_sc(voor_pred_np_sbar,P0,P).
+check_voor(P0,P) :-
+    check_verb_sc(voor_pred_np_vp,P0,P).
+check_voor(P0,P) :-
+    check_verb_sc(voor_pred_np_sbar,P0,P).
+check_voor(P0,P) :-
+    check_verb_sc(fixed(List,_),P0,P),
+    member(voor_pred,List).
+check_voor(P0,P) :-
+    check_verb_sc(fixed(List,_),P0,P),
+    member(voor_pred(_),List).
 
 check_verb_sc(Sc,P0,P) :-
     check_verb_sc(Sc,_,P0,P).
