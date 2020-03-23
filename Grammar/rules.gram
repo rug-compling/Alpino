@@ -4545,7 +4545,7 @@ n_n_app_structure(NP,N,PN) :-
     haspreno(NP),  %%%    NP:haspre => no, % for generation we can't have this
     NP:nform => ~meas_mod & ~temp & ~temp_meas_mod,
     N:rightm => no,
-    N:subn => sub_noun, 
+    N:subn => (sub_noun;sub_adj_pl),  % Real miste de geblesseerden Gareth Bale en Toni Kroos
     N:cj => ~no_crd,    % Gerlof: de dichter en schrijver Jan Wolkers
     hd_app_structure(N,PN,NP).
 
