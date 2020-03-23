@@ -1021,6 +1021,7 @@ m(v_root(zal,zullen),
   verb_modal(zal,zul,zult,zullen,_,zou,zouden,hebben,
              [intransitive,     % dat zal wel
               aux(inf),         % je zult wel moeten
+	      sbar_subj,	% het zal toch niet dat ...
               fixed([[best],sbar_subj],no_passive)  % het zal best dat ..
               ])).     
 
@@ -24617,7 +24618,9 @@ v(verklaar,verklaart,verklaren,verklaard,verklaarde,verklaarden,
 	np_pc_pp(tot),	      % iemand tot ongewenst persoon verklaren
 	refl_pc_pp(tegen),
 	refl_pc_pp(voor),
-	voor_pred_np, % ik verklaar de zitting voor geopend
+	voor_pred_np,		% ik verklaar de zitting voor geopend
+	fixed([voor_pred(gek),acc,sbar],norm_passive),   %de mensen verklaarden me voor gek dat ...
+	
         fixed([vc(ben,te,passive),acc],no_passive) % only for Europarl:
                      % wij verklaren de zitting te zijn geopend
        ]),

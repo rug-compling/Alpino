@@ -1760,10 +1760,16 @@ n([pl(adverteerders),sg(adverteerder)],de,[]).
 
 n([pl(advertenties),sg(advertentie)],de,[],[s(personeel)]).
 
-n([pl(adviezen),sg(advies)],het,[sbar,vp,np_app_measure],
+n([pl(adviezen),sg(advies)],het,
+  [sbar,
+   vp,
+   app_measure,
+   np_app_measure],
   [studie]).
 
-n([pl(adviezen),sg(advies)],het,[np_app_measure],
+n([pl(adviezen),sg(advies)],het,
+  [app_measure,
+   np_app_measure],
   [s(belegging),
    koop,
    reis,
@@ -2179,7 +2185,9 @@ n([sg(alarm)],het,[],                          % not mass: het tiende alarm
 
 n([pl(albatrossen),sg(albatros)],de,[]).
 
-n([pl(albums),sg(album)],het,[np_app_measure],
+n([pl(albums),sg(album)],het,
+  [np_app_measure,
+   app_measure],
   [debuut,
    foto,
    studio,f([studio]),
@@ -2732,6 +2740,7 @@ n([pl(artiesten),sg(artiest),sg(artieste)],de,[]).
 
 n([pl(artikelen),pl(artikels),sg(artikel)],het,
   [start_app_measure,
+   app_measure,
    np_app_measure],
   [hoofd,
    kantoor,
@@ -3212,7 +3221,7 @@ n([pl(bakkers),sg(bakker)],de,[]).
 
 n([pl(bakkerijen),sg(bakkerij)],de,[],[dim(bakkerijtje)]).
 
-n([pl(bakstenen),sg(baksteen)],de,[]).
+n([pl(bakstenen),sg(baksteen)],both,[]).
 
 n([pl(ballen),sg(bal)],de,[measure],  % een bal gehakt; mokkaijs cdb/3422
   [dim(balletje)]).
@@ -5404,7 +5413,8 @@ n([pl(boegen),sg(boeg)],de,[]).
 n([pl(boeien),sg(boei)],de,[]).
 
 n([pl(boeken),sg(boek)],het,
-  [np_app_measure],
+  [app_measure,
+   np_app_measure],
   [adres,
    dag,
    foto,
@@ -29121,6 +29131,7 @@ n([sg(rochel),pl(rochels)],de,[]).
 n([mass(rock)],de,[]).
 
 n([mass([rock,and,roll]),
+   mass([rock,'’',n,roll]),
    mass([rock,'&',roll]),
    mass([rock,'\'n',roll]),
    mass([rock,`,n,roll]),
@@ -32320,7 +32331,7 @@ n([pl(stenen),sg(steen)],both,[],
    natuur]).
 
 n([sg([steen,des,aanstoots]),
-   pl([stenen,des,aanstoots])],de,[]).
+   pl([stenen,des,aanstoots])],de,[subject_sbar]).
 
 n([pl(steenhouwers),sg(steenhouwer)],de,[]).
 
@@ -32520,7 +32531,32 @@ n([pl(stichtingen),sg(stichting)],de,
 
 n([sg(stick),pl(sticks)],de,[]).
 
-n([pl(stickers),sg(sticker)],de,[]).
+n([pl(stickers),sg(sticker)],de,[],
+  [h('ja-ja'),
+   ['ja-ja'],
+   h('Ja-Ja'),
+   ['Ja-ja'],
+   [ja,ja],
+   ['Ja','Ja'],
+   h('nee-nee'),
+   ['nee-nee'],
+   h('Nee-Nee'),
+   ['Nee-nee'],
+   [nee,nee],
+   ['Nee','Nee'],
+   h('ja-nee'),
+   ['ja-nee'],
+   h('Ja-Nee'),
+   ['Ja-nee'],
+   [ja,nee],
+   ['Ja','Nee'],
+   h('nee-ja'),
+   ['nee-ja'],
+   h('Nee-Ja'),
+   ['Nee-ja'],
+   [nee,ja],
+   ['Nee','Ja']
+  ]).
 
 n([sg([sticky,tape,syndrome])],het,[]).
 

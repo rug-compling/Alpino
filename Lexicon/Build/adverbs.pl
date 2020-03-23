@@ -283,6 +283,7 @@ adverb(languit).
 adverb(langzaamaan).
 adverb([last,but,not,least]).
 adverb([linea,recta]).
+adverb(linksom).
 adverb(logischerwijs).
 adverb(logischerwijze).
 adverb(luide).
@@ -381,6 +382,7 @@ adverb([pro,rata]).
 adverb([quod,non]).
 adverb(rakelings).
 adverb(rechtens).
+adverb(rechtsom).
 adverb([rechttoe,rechtaan]).
 adverb([recht,toe,recht,aan]).
 adverb([recht,toe,',',recht,aan]).

@@ -3023,6 +3023,8 @@ a([e(akelige),
 a([e(akoestische),
    no_e(akoestisch)],adv,[],[]).
 
+a([both([al,dente])],adv,[],[]).
+
 a([e(alcolholhoudende),
    no_e(alcoholhoudend),
    e(alkolholhoudende),
@@ -13658,6 +13660,7 @@ a([ge_e(gemaakte),
    ge_no_e(gemaakt)],adv,
   [pp(door),
    pp(in),
+   pred,  % de onklaar gemaakte wapens
    fixed([[te,gelde]])],[]).
 
 a([ge_no_e(gemaald),

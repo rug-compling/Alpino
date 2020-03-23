@@ -3196,6 +3196,12 @@ pred_arg(PRED) :-
 %    PRED:dt => dt,
     unify_mods(PRED).
 
+voor_pred_arg(PRED) :-
+    PRED => pred,
+    PRED:pcat => voor_pred,
+    PRED:dt => dt,
+    unify_mods(PRED).
+
 me_adv_arg(ADV) :-
     ADV => adv,
     unify_mods(ADV),
@@ -6189,6 +6195,13 @@ map_dep(nonp_pred,predc,Pred,_) :-
 map_dep(np_pred,predc,Pred,_) :-
     pred_arg(Pred),
     Pred:pcat => np_pred,
+    Pred:e_deps => [].
+map_dep(voor_pred,predc,Pred,_) :-
+    voor_pred_arg(Pred),
+    Pred:e_deps => [].
+map_dep(voor_pred(Nstem),predc,Pred,_) :-
+    voor_pred_arg(Pred),
+    Pred:nhstem ==> Nstem,
     Pred:e_deps => [].
 map_dep(als_pred,predc,Pred,_) :-
     pred_arg(Pred),

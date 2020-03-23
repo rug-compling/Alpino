@@ -8506,6 +8506,7 @@ term([management,by,speech]).
 term([mea,culpa]).
 term([memento,mori]).
 term([ménage,à,trois]).
+term([meet,and,greet],[meet,and,greets]).
 term([method,acting]).
 term([middle,class]).
 term([middle,of,the,road]).
