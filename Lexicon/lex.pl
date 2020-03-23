@@ -2227,8 +2227,10 @@ context_spelling_variant(Wilde,We,_,Wilden):-
     lexicon___(Wilden,verb(_,past(pl),_),Root,[],[],_).
 
 %% te plaatsten --> te plaatsen
+context_spelling_variant(aankondigde,de,_,aangekondigde).
 context_spelling_variant(anderen,een,_,andere).
 context_spelling_variant(bevind,zich,_,bevindt).
+context_spelling_variant(bijeenkomt,de,_,bijeenkomst).
 context_spelling_variant(vin,Ik,_,vind) :-
     l_requires1(Ik).
 context_spelling_variant(ben,jij,_,bent).
@@ -2276,7 +2278,10 @@ context_spelling_variant(weining,te,_,weinig).
 context_spelling_variant(bezuinigingen,te,_,bezuinigen).
 context_spelling_variant(teruggeven,worden,_,teruggegeven).
 context_spelling_variant(bezuinigen,de,_,bezuinigingen).
+context_spelling_variant(uitkomt,de,_,uitkomst).
 context_spelling_variant(verwachtte,de,_,verwachte).
+context_spelling_variant(plaatsten,sommige,[op|_],plaatsen).
+context_spelling_variant(plaatsten,het,_,plaatsen).
 context_spelling_variant(waarschijnlijk,alle,[naar|_],waarschijnlijkheid).
 context_spelling_variant(waarschijnlijk,alle,['Naar'|_],waarschijnlijkheid).
 context_spelling_variant(zijde,beide,_,zijden).
