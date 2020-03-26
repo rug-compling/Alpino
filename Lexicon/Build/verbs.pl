@@ -25346,12 +25346,19 @@ v(verschijn,verschijnt,verschijnen,verschenen,verscheen,verschenen,
 v(verschil,verschilt,verschillen,verschild,verschilde,verschilden,
     [h([intransitive,
 	meas,
-	sbar_subj, % hoe je dit moet oplossen, verschilt per situatie
-	pc_pp(in),
+	sbar_subj,  % hoe je dit moet oplossen, verschilt per situatie
+	fixed([svp_pp(van,mening)],no_passive),
+	fixed([{[mod_pp(over),svp_pp(van,mening)]}],no_passive),
+	fixed([svp_pp(van,inzicht)],no_passive),
+	fixed([{[mod_pp(over),svp_pp(van,inzicht)]}],no_passive),
+	fixed([svp_pp(van,opvatting)],no_passive),
+	fixed([{[mod_pp(over),svp_pp(van,opvatting)]}],no_passive),
+%	pc_pp(in),
 	pc_pp(met),
-	pc_pp(over),  % daar verschillen de meningen/inzichten over
-	pc_pp(per),
-	pc_pp(van)])]).
+%	pc_pp(over),  % daar verschillen de meningen/inzichten over
+%	pc_pp(per),
+	pc_pp(van)
+       ])]).
 
 v(verschoon,verschoont,verschonen,verschoond,verschoonde,verschoonden,
     [h([transitive,
