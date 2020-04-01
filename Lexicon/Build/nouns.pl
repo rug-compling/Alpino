@@ -12439,7 +12439,7 @@ n([pl(gemiddelden),pl(gemiddeldes),sg(gemiddelde)],het,[],
    koers,
    uur]).
 
-n([mass(gemis)],het,[]).
+n([mass(gemis)],het,[subject_sbar, subject_vp]).
 
 n([pl(gemoederen),sg(gemoed)],het,[]).
 
@@ -25041,7 +25041,10 @@ n([mass(overwicht)],het,[],[veld]).
 n([pl(overwinnaars),pl(overwinnaren),sg(overwinnaar)],de,[]).
 
 n([pl(overwinningen),sg(overwinning)],de,
-  [sbar,vp]).
+  [sbar,
+   vp,
+   subject_sbar
+  ]).
 
 n([pl(overwinningen),sg(overwinning)],de,[],
   [eind,
@@ -25298,6 +25301,8 @@ n([pl(paradijzen),sg(paradijs)],het,[],[belasting]).
 n([pl(paradoksen),sg(paradoks)],de,[sbar]).
 
 n([pl(paradoxen),sg(paradox)],de,[sbar]).
+
+n([pl(parafernalia)],de,[]).
 
 n([pl(parafrasen),pl(parafrases),sg(parafrase)],de,[sbar]).
 
@@ -25828,6 +25833,8 @@ n([pl(personages),sg(personage)],both,[],
 n([sg([personal,coach]),pl([personal,coaches])],de,[]).
 
 n([sg([personal,computer]),pl([personal,computers])],de,[]).
+
+n([pl(personalia)],de,[]).
 
 n([mass(personeel)],het,[],
   [ambulance,
@@ -27200,7 +27207,12 @@ n([mass(probleemstelling)],de,[]).
 
 n([mass(problematiek)],de,[]).
 
-n([pl(procedures),sg(procedure)],de,[vp]).
+n([pl(procedures),sg(procedure)],de,
+  [vp,
+   sbar,
+   subject_vp,
+   subject_sbar],
+  [standaard]).
 
 n([pl(procedures),sg(procedure)],de,[],
   [s(aanbesteding),
@@ -27736,6 +27748,8 @@ n([sg(quark),pl(quarks)],both,[]).
 n([sg([qui,vive])],both,[pred_pp(op)]).
 
 n([pl(quinten),sg(quint)],de,[]).
+
+n([bare_meas(quintiljoen),pl(quintiljoenen)],both,[meas_mod,measure]).
 
 n([sg(quiz)],de,[],
   [televisie]).
@@ -28334,11 +28348,11 @@ n([pl(redenen),sg(reden)],de,
    subject_sbar,
    subject_vp,
    vp],
-  [hoofd]).
+  [drog,
+   hoofd]).
 
 n([pl(redenen),sg(reden)],de,[],
-  [drog,
-   s(gezondheid),
+  [s(gezondheid),
    s(veiligheid)]).
 
 n([pl(redenaars),sg(redenaar)],de,[]).
@@ -34852,9 +34866,9 @@ n([pl(trechters),sg(trechter)],de,[],[dim(trechtertje)]).
 
 n([pl(treden),sg(tred)],de,[]).
 
-n([pl(treden),sg(trede)],de,[]).
+n([pl(treden),sg(trede)],de,[meas_mod]).  % hij zakt een trede
 
-n([pl(treeën),sg(tree)],de,[],[dim(treetje)]).
+n([pl(treeën),sg(tree)],de,[meas_mod],[dim(treetje)]).  % zakt een treetje
 
 n([pl(treeplanken),sg(treeplank)],de,[]).
 
@@ -40939,6 +40953,9 @@ measure_noun(dm2).
 measure_noun('dm²').
 measure_noun('dm³').
 measure_noun(dm3).
+
+measure_noun(mAh).
+measure_noun('m-Ah').
 
 measure_noun(mHz).
 

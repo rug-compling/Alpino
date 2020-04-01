@@ -763,6 +763,8 @@ m(v_root(heb,hebben),
 	fixed([[te,baas],acc],no_passive), % VL
         fixed([{[[de,hand],pc(in)]}],no_passive),
         fixed([{[[de,hand],er_pp(in,A)]},extra_sbar(A)],no_passive),
+        pc_pp(tot),  % ze hebben tot vrijdag
+        fixed([pc(tot), vp],no_passive),  % ze hebben tot vrijdag om ...
 	fixed([[de,tijd],me],imp_passive),
 	fixed([[de,tijd],me,vp],imp_passive),
 	fixed([[de,tijd]],imp_passive),
@@ -4564,7 +4566,6 @@ v(breng,brengt,brengen,gebracht,bracht,brachten,
 	part_np_np(toe),
 	part_so_pp_np(toe),
 	part_so_pp_np(over),
-	part_np_np(uit),
 	part_np_sbar(bij),
 	part_np_sbar(over),
 	part_sbar_subj_np(op),
@@ -4598,7 +4599,11 @@ v(breng,brengt,brengen,gebracht,bracht,brachten,
 	part_transitive(thuis),
 	part_transitive(toe),
 	part_transitive(uit),
-	part_np_pc_pp(uit,op),   % stem / plaat
+	part_np_np(uit),
+	part_so_pp_np(uit),
+	part_np_mod_pp(uit,over),   % verslag, rapport, ..
+	part_np_np_mod_pp(uit,over),   % verslag, rapport, ..
+	part_np_pc_pp(uit,op),   % stem / plaat / bod
 	part_transitive(voort),
 	part_transitive(weg),
 	part_transitive(zoek),
@@ -4687,13 +4692,6 @@ v(breng,brengt,brengen,gebracht,bracht,brachten,
 	fixed([svp_pp(in,herinnering),sbar],norm_passive),
 	fixed([svp_pp(in,herinnering),{[acc,dat]}],norm_passive),
 	fixed([svp_pp(in,herinnering),dat,sbar],norm_passive),
-        part_fixed(uit,[{[acc(bod),pc(op)]}],imp_passive),
-	part_fixed(uit,[{[acc(verslag),pc(over)]}],imp_passive),
-	part_fixed(uit,[{[acc(verslag),pc(over)]}],imp_passive),
-	part_fixed(uit,[{[acc(verslag),pc(over)]}, dat],imp_passive),
-	part_fixed(uit,[{[acc(verslag),pc(over),dat_pp(aan)]}],imp_passive),
-	part_fixed(uit,[acc(verslag), dat],imp_passive),
-	part_fixed(uit,[{[acc(verslag),dat_pp(aan)]}],imp_passive),
 	fixed([{[acc(verbetering),pc(in)]}],imp_passive),
         fixed([{[[voor,rekening],pc(van),acc]}],norm_passive),
 	part_np_ld_pp(aan),
@@ -8025,6 +8023,11 @@ v(geef,geeft,geven,gegeven,gaf,gaven,
 	so_pp_np,
 %% 	so_np,  ??
 	transitive,
+	so_np_pc_pp(tot),	% ik geef jullie tot vrijdag
+	fixed([pc(tot),vp_no_control],no_passive),
+	                        % ik geef tot vrijdag om ...
+	fixed([{[i(dat,I),pc(tot)]},obj_vp(I)],no_passive),
+	                        % ik geef jullie tot vrijdag om ...
         so_control(pass_te),  % hij geeft ons dat te doen
         part_so_control(mee,pass_te),  % hij geeft ons dat boek mee te lezen / te lezen mee
 	np_pc_pp(op),  % ik geef hem op zijn donder/flikker/...
@@ -14522,7 +14525,9 @@ v(misvorm,misvormt,misvormen,misvormd,misvormde,misvormden,
     [h([transitive])]).
 
 v(mix,mixt,mixen,gemixt,mixte,mixten,
-    [h([transitive])]).
+  [h([transitive,
+      intransitive, % Els van Nieuw Zeer
+      part_transitive(in)])]).
 
 v(mobiliseer,mobiliseert,mobiliseren,gemobiliseerd,mobiliseerde,mobiliseerden,
     [h([transitive])]).
@@ -14670,6 +14675,8 @@ v(morrel,morrelt,morrelen,gemorreld,morrelde,morrelden,
 v(mors,morst,morsen,gemorst,morste,morsten,
     [h([intransitive,
 	transitive,
+	mod_pp(over),
+	np_mod_pp(over),
 	pc_pp(met)])]).
 
 v(mot,mot,motten,gemot,motte,motten,
@@ -17958,11 +17965,13 @@ v(reis,reist,reizen,gereisd,reisde,reisden,
 	part_intransitive(af),
 	part_ld_pp(af),
 	part_intransitive(aan),
+	part_intransitive(in),
 	part_intransitive(mee),
 	part_pc_pp(mee,met),
 	part_intransitive(om),
 	part_intransitive(rond),
 	part_intransitive(terug),
+	part_intransitive(uit),
 	part_ld_pp(terug)]),
      h([intransitive]),
      b([part_ld_pp(rond),
