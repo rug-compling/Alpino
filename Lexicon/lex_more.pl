@@ -3235,7 +3235,7 @@ een_of_number_with_words(P0,MOD,dt(conj,
     { Q0 is P+1 },    
     number_with_words(Num2,Q0,Q).
 
-een_of_number_with_words(P0,MOD,dt(detp,[hd=l(wat,determiner(wat,nwh,mod,pro,nparg),P0,P),
+een_of_number_with_words(P0,MOD,dt(detp,[hd=l(wat,determiner(wat,nwh,mod,pro,nparg,ntopicpro),P0,P),
 					 mod=MOD])) -->
     n_word(wat),
     { P is P0+1 }.
@@ -3253,7 +3253,7 @@ phrasal_entry(with_dt(number(hoofd(pl_num)),
 
 %% een stuk of wat
 phrasal_entry(with_dt(number(hoofd(pl_num)),
-		      dt(detp,[hd=l(wat,determiner(wat,nwh,mod,pro,nparg),3,4),
+		      dt(detp,[hd=l(wat,determiner(wat,nwh,mod,pro,nparg,ntopicpro),3,4),
 			       mod=l('een stuk of',adverb,advp,0,3)])
 		     ),een_stuk_of_NUM) -->
     { hdrug_util:debug_message(4,"een stuk of wat~n",[]) },
