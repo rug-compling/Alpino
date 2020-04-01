@@ -47,6 +47,9 @@ phrasal_entry(number(hoofd(pl_num)),number_sequence) -->
     { hdrug_util:debug_message(4,"number_sequence~n",[]) },
     number_sequence.
 
+phrasal_entry(mod_noun(both,count,bare_meas),number_tiende) -->
+    number_expression_breuk_tiende.
+
 %% met vier nul
 %% Boeing zeven zes zeven
 phrasal_entry(number(hoofd(both)),number_sequence) -->
@@ -1186,6 +1189,23 @@ number_expression_breuk -->
       atom_concat(Een,Derde,Eenderde),
       number_expression_tien_ne_or_een([Een],[])
     }.
+
+%% hij finishte een tiende achter de winnaar
+number_expression_breuk_tiende -->
+    number_expression_tien_ne_or_een,
+    n_word(Derde),
+    { word_rang(Derde) }.
+
+%% hij finishte drietiende achter de winnaar
+number_expression_breuk_tiende -->
+    n_word(Eenderde),
+    { atom(Eenderde),
+      atom_concat(Een,Derde,Eenderde),
+      word_rang(Derde),
+      number_expression_tien_ne_or_een([Een],[])
+    }.
+
+
 
 number_expression_tien_ne_or_een --> 
     [een].
@@ -3350,6 +3370,12 @@ num_meter_loper_entry(noun(A,B,C),MStem,[Number1,NumberMeterLoper|L],L,Sep) :-
 
 meter_loper_meter(letter,letter).  % een drie letterwoord; een vijf lettercode
 meter_loper_meter(punten,punt).
+meter_loper_meter(pixel,pixel).
+meter_loper_meter(megapixel,mega_pixel).
+meter_loper_meter('letter-',letter).  % een drie letterwoord; een vijf lettercode
+meter_loper_meter('punten-',punt).
+meter_loper_meter('pixel-',pixel).
+meter_loper_meter('megapixel-',mega_pixel).
 
 meter_loper_meter(Word,Stem) :-
     measure_tag(MeasureTag),

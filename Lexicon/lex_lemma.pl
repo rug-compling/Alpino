@@ -4130,6 +4130,7 @@ lemma_root(door_misleiden,misleid_door) .
 lemma_root(door_mislukken,misluk_door) .
 lemma_root(door_missen,mis_door) .
 lemma_root(door_misstaan,missta_door) .
+lemma_root(door_mixen,mix_door) .
 lemma_root(door_modderen,modder_door) .
 lemma_root(door_modderworstelen,modderworstelen_door) .
 lemma_root(door_moderniseren,moderniseer_door) .
@@ -7013,6 +7014,7 @@ lemma_root(in_mengen,meng_in) .
 lemma_root(in_meppen,mep_in) .
 lemma_root(in_migreren,migreer_in) .
 lemma_root(in_mikken,mik_in) .
+lemma_root(in_mixen,mix_in) .
 lemma_root(in_moeten,moet_in) .
 lemma_root(in_moffelen,moffel_in) .
 lemma_root(in_mogen,mag_in) .
@@ -11588,6 +11590,7 @@ lemma_root(raak_misleiden,misleid_raak) .
 lemma_root(raak_mislukken,misluk_raak) .
 lemma_root(raak_missen,mis_raak) .
 lemma_root(raak_misstaan,missta_raak) .
+lemma_root(raak_mixen,mix_raak) .
 lemma_root(raak_modderen,modder_raak) .
 lemma_root(raak_modderworstelen,modderworstelen_raak) .
 lemma_root(raak_moderniseren,moderniseer_raak) .
@@ -16657,6 +16660,7 @@ lemma_root(uit_mishagen,mishaag_uit) .
 lemma_root(uit_misleiden,misleid_uit) .
 lemma_root(uit_missen,mis_uit) .
 lemma_root(uit_misstaan,missta_uit) .
+lemma_root(uit_mixen,mix_uit) .
 lemma_root(uit_modderen,modder_uit) .
 lemma_root(uit_moderniseren,moderniseer_uit) .
 lemma_root(uit_moeten,moet_uit) .
@@ -21435,6 +21439,7 @@ lemma_root(voort_misleiden,misleid_voort) .
 lemma_root(voort_mislukken,misluk_voort) .
 lemma_root(voort_missen,mis_voort) .
 lemma_root(voort_misstaan,missta_voort) .
+lemma_root(voort_mixen,mix_voort) .
 lemma_root(voort_modderen,modder_voort) .
 lemma_root(voort_modderworstelen,modderworstelen_voort) .
 lemma_root(voort_moderniseren,moderniseer_voort) .

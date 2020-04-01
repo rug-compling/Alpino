@@ -16373,7 +16373,7 @@ a([ge_e(gevlamde),
    ge_no_e(gevlamd)],adv,[],[]).
 
 a([ge_e(gevleide),
-   ge_no_e(gevleid)],padv,[],[]).
+   ge_no_e(gevleid)],padv,[object_sbar],[]).
 
 a([e(gevlekte),
    no_e(gevlekt)],nonadv,[],[]).

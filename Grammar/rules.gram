@@ -5868,6 +5868,7 @@ grammar_rule(a_pred_a, AP, [ PRED, A]) :-
     haspreyes(A),
     A:wh => nwh,		% * np hoe beter
     PRED => pred,
+    PRED:subn => ~sub_indef_verb,
     hd_comp_structure(A,PRED,AP).
 
 grammar_rule(a_predm_a, AP, [ PRED, A]) :-
@@ -7152,7 +7153,8 @@ pred_sbar_dp_structure(MAX,ADJ,SBAR) :-
     MAX:max_type => t_xp,
     ADJ => pred,
     ADJ:redrel => no,
-    ADJ:pcat => (np_pred;ap_pred),
+%%%    ADJ:pcat => (np_pred;ap_pred),   % np_pred?
+    ADJ:pcat => ap_pred,
     ADJ:slash => [],
     ADJ:exs => [],
     ADJ:wh => nwh,
