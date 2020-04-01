@@ -2196,8 +2196,10 @@ mwu_postag('losjes aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
 mwu_postag('stilletjes aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
 mwu_postag('zachtjes aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
 
+mwu_postag('weet je',['WW(pv,tgw,ev)','VNW(pers,pron,nomin,red,2v,ev)']).
+mwu_postag('je noem wat',['VNW(vb,pron,stan,vol,3o,ev)','VNW(pers,pron,nomin,red,2v,ev)','WW(pv,tgw,met-t)']).
 
-
+mwu_postag('hard om',['VZ(init)','LID(bep,stan,evon)','ADJ(vrij,sup,zonder)']).
 
 mwu_postag(Stem,['SPEC(deeleigen)','SPEC(deeleigen)']):-
     name2(Stem).
