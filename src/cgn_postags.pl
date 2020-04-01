@@ -1060,6 +1060,7 @@ cgn_postag_c(determiner(pl_num),'LID(onbep,stan,agr)').
 cgn_postag_c(determiner(pl_num,nwh,nmod,pro,yparg),'VNW(onbep,det,stan,prenom,met-e,rest)').
 cgn_postag_c(determiner(wat),'ADJ(prenom,basis,zonder)').
 cgn_postag_c(determiner(wat,nwh,mod,pro,nparg,ntopicpro),'VNW(onbep,pron,stan,vol,3o,ev)').
+cgn_postag_c(determiner(wat,nwh,mod,pro,nparg),'VNW(onbep,pron,stan,vol,3o,ev)').
 cgn_postag_c(determiner(welke),'VNW(onbep,det,stan,prenom,met-e,rest)').
 cgn_postag_c(determiner(welke,rwh,nmod,pro,yparg),'VNW(vb,det,stan,prenom,met-e,rest)').
 cgn_postag_c(determiner(alle,nwh,mod,pro,nparg),'VNW(onbep,det,stan,prenom,met-e,agr)').
