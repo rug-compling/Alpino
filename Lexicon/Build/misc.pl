@@ -3407,7 +3407,7 @@ with_dt([heel,in,Het,Adj],
 with_dt([om,Het,Adj],
 	  pp(om),
 	  dt(pp,[hd=l(om,preposition(om,[]),0,1),
-		 obj1=l(Stem,adjective(no_e(adv)),ap,1,3)
+		 obj1=l(Stem,adjective(het_st(adv)),ap,1,3)
 		])) :-
     om_het_adj_pp(Adj,Stem),
     het(Het).
