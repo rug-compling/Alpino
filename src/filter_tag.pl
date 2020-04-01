@@ -1382,6 +1382,7 @@ check_subject_pred_sbar(P0,P) :-
     check_of_dat_whsub_sbar(P0,P),
     (   check_adj_subject_pred_sbar(P0,P)
     ;   check_noun_sc(subject_sbar,P0,P)
+    ;   check_noun_sc(subject_sbar_no_het,P0,P)
     ;	check_noun_sc(pred_pp(_,subject_sbar),P0,P)
     ;	check_noun_sc(pred_pp_pl(_,subject_sbar),P0,P)
     ;	check_noun_sc(pred_pp(_,subject_sbar_no_het),P0,P)
