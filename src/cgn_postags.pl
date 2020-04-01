@@ -2402,27 +2402,36 @@ with_dt_tags(Tree,Q0,L0,L) :-
 	L0 = L
     ).
 
+with_dt_tags_l_l(Stem,Frame,R0,R,Q0) -->
+    [cgn_postag(S0,S,Tag)],
+    {  integer(R0),
+       integer(R),
+       R is R0 + 1,
+       !,
+       S0 is Q0 + R0,
+       S is Q0 + R,
+       cgn_postag_l(Stem,Frame,Tag)
+    }.
+with_dt_tags_l_l(Stem,Tag,R0,R,Q0) -->
+    { R - R0 > 1 },
+    !,
+    { alpino_util:split_atom(Stem," ",Words),
+      S0 is Q0 + R0,
+      S  is Q0 + R
+    },
+    guess_tags(S0,S,Tag,Words).
+    
+
 with_dt_tags_(dt(_,List),Q0) -->
     with_dt_tags_list(List,Q0).
 with_dt_tags_(ix(_,DT),Q0) -->
     with_dt_tags_(DT,Q0).
 with_dt_tags_(ix(_),_Q0) --> [].
 with_dt_tags_(l(Stem,Frame,R0,R),Q0) -->
-    [cgn_postag(S0,S,Tag)],
-    {  integer(R0),
-       integer(R),
-       S0 is Q0 + R0,
-       S is Q0 + R,
-       cgn_postag_l(Stem,Frame,Tag)
-    }.
+    with_dt_tags_l_l(Stem,Frame,R0,R,Q0).
 with_dt_tags_(l(Stem,Frame,_Cat,R0,R),Q0) -->
-    [cgn_postag(S0,S,Tag)],
-    {  integer(R0),
-       integer(R),
-       S0 is Q0 + R0,
-       S is Q0 + R,
-       cgn_postag_l(Stem,Frame,Tag)
-    }.
+    with_dt_tags_l_l(Stem,Frame,R0,R,Q0).
+
 with_dt_tags_(orig(_),_) --> [].
 
 with_dt_tags_list([],_) --> [].
