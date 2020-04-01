@@ -179,9 +179,11 @@ guess_stags(Q0,Q,Tag,St,L0,L) :-
 	    lassy(Stem,POSTAG)
 	->  L0 = [cgn_postag(Q0,Q1,POSTAG)|L1],
 	    guess_stags(Q1,Q,Tag,Stems,L1,L)
-	;   St = [Stem|Stems],
-	    L0 = [cgn_postag(Q0,Q1,'NA()')|L1],
+	;   St = [Stem|Stems]
+	->  L0 = [cgn_postag(Q0,Q1,'NA()')|L1],
 	    guess_stags(Q1,Q,Tag,Stems,L1,L)
+	;   L0 = [cgn_postag(Q0,Q1,'NA()')|L1],    % if St is not a list
+	    guess_stags(Q1,Q,Tag,St,L1,L)
 	)
     ;   L0 = L
     ).
@@ -1673,6 +1675,9 @@ mwu_postag_frame_surf(score_cat,Stem,[ATag,'LET()',BTag]) :-
     alpino_util:codes_to_words(Codes,[A,'-',B]),
     num_postag(A,ATag),
     num_postag(B,BTag).
+
+mwu_postag_frame_surf(fixed_part(op_een_v),_,
+       ['VZ(init)','LID(onbep,stan,agr)','WW(inf,nom,zonder,zonder-n)']).
 
 mwu_postag_frame_stem(with_dt(adverb,_),'des te meer',['BW()','BW()','VNW(onbep,grad,stan,vrij,zonder,comp)']).
 
