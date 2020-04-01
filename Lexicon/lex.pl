@@ -2699,6 +2699,7 @@ spelling_variant(mistte,      miste).
 spelling_variant(mistten,     misten).
 spelling_variant(moeit,       moeite).
 spelling_variant('Nederlandsers','Nederlanders').
+spelling_variant(nietemin,    niettemin).
 spelling_variant(niewe,       nieuwe).
 spelling_variant(officeel,    officieel).
 spelling_variant(omgeveer,    ongeveer).

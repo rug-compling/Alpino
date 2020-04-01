@@ -18743,7 +18743,9 @@ a([e(hoogmoedige),
    ere(hoogmoedigere),
    no_e(hoogmoedig),
    st(hoogmoedigst),
-   ste(hoogmoedigste)],adv,[],[]).
+   ste(hoogmoedigste)],adv,
+  [subject_vp,
+   subject_sbar],[]).
 
 a([e(hoogmogende),
    no_e(hoogmogend)],nonadv,[],[]).
@@ -26807,22 +26809,26 @@ a([e(onschuldige),
    no_e(onschuldig),
    st(onschuldigst),
    ste(onschuldigste)],padv,
-  [object_sbar,
-   object_vp],[]).
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(onsmakelijke),
    er(onsmakelijker),
    ere(onsmakelijkere),
    no_e(onsmakelijk),
    st(onsmakelijkst),
-   ste(onsmakelijkste)],adv,[],[]).
+   ste(onsmakelijkste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(onsportieve),
    er(onsportiever),
    ere(onsportievere),
    no_e(onsportief),
    st(onsportiefst),
-   ste(onsportiefste)],adv,[],[]).
+   ste(onsportiefste)],adv,
+  [subject_vp,
+   subject_sbar],[]).
 
 a([e(onsterfelijke),
    er(onsterfelijker),
@@ -26859,7 +26865,10 @@ a([e(onsympathieke),
    st(onsympathiekst),
    st(onsympatiekst),
    ste(onsympathiekste),
-   ste(onsympatiekste)],adv,[],[]).
+   ste(onsympatiekste)],adv,
+  [subject_sbar,
+   subject_vp
+  ],[]).
 
 a([ge_e(ontaarde),
    ge_no_e(ontaard)],adv,
@@ -32900,7 +32909,9 @@ a([e(sportieve),
    ere(sportievere),
    no_e(sportief),
    st(sportiefst),
-   ste(sportiefste)],adv,[],[]).
+   ste(sportiefste)],adv,
+  [subject_vp,
+   subject_sbar],[]).
 
 a([e(spraakmakende),
    no_e(spraakmakend)],nonadv,[],[]).
