@@ -438,6 +438,7 @@ cmd_skip_word([Word|Tail]) :-
     noclp_assertz(add_skip_word(Word,Tail)).
 
 assert_tag(P0,P,R0,R,Label,History,Tag) :-
+    interval_not_bracket(P0,P),
     thread_flag(current_input_sentence,Input),
     surface_form(Input,P0,P,UsedInput),
     assert_tag(P0,P,R0,R,Label,UsedInput,History,Tag).
@@ -2743,4 +2744,12 @@ warn_unexpected_missing_fs(Tag,Used) :-
     prettyvars(Tag),
     format(user_error,"warning: no features structure for ~w (~w)~n",[Tag,Used]).
 
+
+interval_not_bracket(P0,P) :-
+    \+ (   between(P0,P,P1),
+	   P1 > P0,
+	   (  alpino_lexical_analysis:open_bracket(_,P1,_)
+	   ;  alpino_lexical_analysis:close_bracket(_,P1,_)
+	   )
+       ).
 
