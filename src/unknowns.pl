@@ -282,7 +282,7 @@ lexical_analysis_name_(Words,P0,R0,All,Len,String,Args,Tag,Least) :-
     lexical_analysis_name__(Names,P0,P,History,R0,All,Len,String,Args,Tag,Least).
 
 lexical_analysis_name__(Names,P0,P,History,R0,All,Len,"name|~p|~p~n",
-		       [Stem,NewTag],tag(P0,P,R0,R,Stem,name(Start),NewTag),Least) :-
+			[Stem,NewTag],tag(P0,P,R0,R,Stem,name(Start),NewTag),Least) :-
     \+ subsumed_by_dict(P0,P,Names,proper_name(both)),
     (	nonvar(Least)
     ->	P > Least
@@ -777,6 +777,7 @@ unknown_word_heuristic(P1,R1,W,_Ws,"compound(~p)|~p|~p|~p~n",
 
 unknown_word_heuristic(P1,R1,W,_Ws,"dt|~p|~p~n",[W,Tags],_,_) :-
     debug_message(3,"trying heuristic dt~n",[]),
+    atom(W),
     atom_concat(Pref,t,W),
     atom_concat(Pref,d,Alt),
     \+ \+ alpino_lex:lexicon___(Alt,_Tag,_,[],[],_),
@@ -999,6 +1000,7 @@ unknown_word_heuristic(P1,R1,W,_Ws,"similar_ending|~p|~p|~p~n",
 unknown_word_heuristic(P0,R0,W0,_,"subjunctive|~p|~p~n",[W,Stems],_,len(1)) :-
     debug_message(3,"trying heuristic subjunctive~n",[]),
     decap(W0,W),
+    atom(W),
     atom_concat(_,e,W),
     atom_concat(W,n,Inf),
     P is P0+1, R is R0+1,
@@ -1012,6 +1014,7 @@ unknown_word_heuristic(P0,R0,W0,_,"subjunctive|~p|~p~n",[W,Stems],_,len(1)) :-
 unknown_word_heuristic(P0,R0,W0,_,"drop_n|~p|~p~n",[W,Stems],_,len(1)) :-
     debug_message(3,"trying heuristic drop_n~n",[]),
     decap(W0,W),
+    atom(W),
     atom_concat(_,e,W),
     atom_concat(W,n,Inf),
     P is P0+1, R is R0+1,
@@ -1025,6 +1028,7 @@ unknown_word_heuristic(P0,R0,W0,_,"drop_n|~p|~p~n",[W,Stems],_,len(1)) :-
 unknown_word_heuristic(P0,R0,W0,_,"end_d_t|~p|~p~n",[W,Stems],_,len(1)) :-
     debug_message(3,"trying heuristic end_d_t~n",[]),
     decap(W0,W),
+    atom(W),
     atom_concat(Prefix,d,W),
     atom_concat(Prefix,t,Alt),
     P is P0+1, R is R0+1,
@@ -1089,6 +1093,7 @@ unknown_word_heuristic(P1,R1,W,_,"te-Adj|~p~n",[W],_,len(1)) :-
     \+ starts_with_capital(W),
     te_int_context(P1,R1),
     P is P1 + 1, R is R1 + 1,
+    atom(W),
     \+ atom_concat(_,en,W),
     assert_tag(P1,P,R1,R,W,te_adj,adjective(no_e(adv))).
 
@@ -2310,15 +2315,18 @@ function('Zweed').
 function('Zwitser').
 
 function(InterimPremier) :-
+    atom(InterimPremier),
     atom_concat(interim,_,InterimPremier).
-
 function(ExFun) :-
+    atom(ExFun),
     atom_concat('Ex-',Fun,ExFun),
     function(Fun).
 function(ExFun) :-
+    atom(ExFun),
     atom_concat('Oud-',Fun,ExFun),
     function(Fun).
 function(ExFun) :-
+    atom(ExFun),
     atom_concat('Vice-',Fun,ExFun),
     function(Fun).
 
@@ -2553,6 +2561,7 @@ compound_part(first,W,Stem) :-
 compound_part(first,W,W) :-
     compound_part(W).
 compound_part(first,WD,W) :-
+    atom(WD),
     atom_concat(W,'-',WD),
     compound_part(W).
 
@@ -5867,12 +5876,14 @@ not_a_second_name_word('Volksgezondheid').
 not_a_second_name_word('Zuid-Holland').
 
 verb_ster(W,W,noun(de,count,sg)):-
+    atom(W),
     atom_concat(Verb,ster,W),
     \+ \+ (  alpino_lex:lexicon(verb(_,Sg,_),_,[Verb],[],_),
 	      lists:member(Sg,[sg1,sg])
 	  ).
 
 verb_ster(W,W,noun(de,count,pl)):-
+    atom(W),
     atom_concat(Verb,sters,W),
     \+ \+ (   alpino_lex:lexicon(verb(_,Sg,_),_,[Verb],[],_),
 	      lists:member(Sg,[sg1,sg])
@@ -5886,6 +5897,7 @@ diminutive(W,Stam,Tag) :-
     add_dim_tag(Tag0,Agr0,Tag,Agr).
 
 parts_diminutive(W,Stam,sg) :-
+    atom(W),
     atom_concat(_,je,W),
     parts_diminutive(W,Stam).
 
@@ -6212,14 +6224,14 @@ replace_part(Root0,Root,Part0,Part) :-
     replace_root(Root0,Root,Part0,Part).
 
 replace_root(Root0,Root,Part0,Part) :-
-    atomic(Root0),
-    atomic(Part0),
+    atom(Root0),
+    atom(Part0),
     atom_concat(Prefix,Part0,Root0),
     atom_concat(Prefix,Part,Root).
 
 replace_lemma(Lemma0,Lemma,Part0,Part):-
-    atomic(Lemma0),
-    atomic(Part0),
+    atom(Lemma0),
+    atom(Part0),
     atom_concat(Part0,Suffix,Lemma0),
     atom_concat(Part,Suffix,Lemma).
 
@@ -6227,21 +6239,25 @@ hellip('...').
 hellip('..').
 
 psp_variant(Geprobeert,verb(HZ,psp,Sc),Stem) :-
+    atom(Geprobeert),
     atom_concat(Geprobeer,t,Geprobeert),
     atom_concat(Geprobeer,d,Geprobeerd),
     alpino_lex:lexicon___(Geprobeerd,verb(HZ,psp,Sc),Stem,[],[],_).
 
 psp_variant(Geprobeerdt,verb(HZ,psp,Sc),Stem) :-
+    atom(Geprobeerdt),
     atom_concat(Geprobeer,dt,Geprobeerdt),
     atom_concat(Geprobeer,d,Geprobeerd),
     alpino_lex:lexicon___(Geprobeerd,verb(HZ,psp,Sc),Stem,[],[],_).
 
 psp_variant(Gefeesd,verb(HZ,psp,Sc),Stem) :-
+    atom(Gefeesd),
     atom_concat(Gefees,d,Gefeesd),
     atom_concat(Gefees,t,Gefeest),
     alpino_lex:lexicon___(Gefeest,verb(HZ,psp,Sc),Stem,[],[],_).
 
 psp_variant(Gefeesdt,verb(HZ,psp,Sc),Stem) :-
+    atom(Gefeesdt),
     atom_concat(Gefees,dt,Gefeesdt),
     atom_concat(Gefees,t,Gefeest),
     alpino_lex:lexicon___(Gefeest,verb(HZ,psp,Sc),Stem,[],[],_).
@@ -6270,6 +6286,8 @@ adapt_with_dt_l([Rel=DT0|L0],[Rel=DT|L]):-
     adapt_with_dt_l(L0,L).
 
 remove_ge_if_psp(verb(_,psp,_),Stem0,Stem) :-
+    atom(Stem0),
     atom_concat(ge,Stem,Stem0),
     !.
 remove_ge_if_psp(_,Stem,Stem).
+
