@@ -4147,6 +4147,7 @@ ends_with_dot_seq1 -->
     ends_with_dot_seq.
 
 ends_with_dot(Atom,Atom1) :-
+    atom(Atom),
     atom_concat(Atom1,'.',Atom),
     \+ alpino_lex:lexicon__(Atom,_,_,[],[],_,[]).
 
