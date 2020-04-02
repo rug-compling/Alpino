@@ -7025,7 +7025,9 @@ a([e(collegiale),
    st(collegiaalst),
    st(kollegiaalst),
    ste(collegiaalste),
-   ste(kollegiaalste)],adv,[],[]).
+   ste(kollegiaalste)],adv,
+  [subject_sbar,
+   subject_vp],[on]).
 
 a([e(comfortabele),
    e(komfortabele),
@@ -20304,7 +20306,7 @@ a([no_e(jammer),
    e(jammere)],nonadv,
   [subject_sbar,
    subject_vp,
-   pp(van)],[]).
+   pp(van)],[dood]).
 
 a([e(jammerlijke),
    er(jammerlijker),

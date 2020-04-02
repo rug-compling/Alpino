@@ -4002,7 +4002,8 @@ n([pl(belangen),sg(belang)],het,
    pred_pp(van,subject_vp),
    pred_pp(in),
    pred_pp(in,subject_sbar),
-   pred_pp(in,subject_vp)],
+   pred_pp(in,subject_vp),
+   subject_sbar],
   []).
 
 n([pl(belangen),sg(belang)],het,
