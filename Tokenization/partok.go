@@ -79,7 +79,7 @@ Opties:
   -c        : behandel commentaren als gewone tekst
   -d string : beginwaarde voor %%D
                 default: gelijk aan waarde van %%B
-  -e        : behandel Alpino-escapecodes als gewone tekst
+  -e        : tekens die voor Alpino speciaal zijn worden niet ge-escaped
   -i string : reguliere expresie waarmee item in een lijst wordt herkend,
                 default: %s
   -l        : behandel labels als gewone tekst
