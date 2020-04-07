@@ -1361,7 +1361,7 @@ with_dt_all(dertiental,[een]).
 with_dt_all(dertig,[en,tussen,twintig]).
 with_dt_all(dertig,[en,tussen,veertig]).
 with_dt_all(dertigtal,[een]).
-with_dt_all(des,[te,meer]).
+with_dt_all(des,[te,veel]).
 with_dt_all(de,[tijd]).
 with_dt_all(de,[vaderland]).
 with_dt_all(de,[veld]).
@@ -1867,7 +1867,6 @@ with_dt_all(majesteit,[zijn]).
 with_dt_all(mam,[ons]).
 with_dt_all(ma,[ons]).
 with_dt_all(meerdere,[of,één]).
-with_dt_all(meer,[of,één]).
 with_dt_all(men,[zie]).
 with_dt_all(meteen,[vrijwel]).
 with_dt_all(met,[negenen,ons]).
@@ -2021,6 +2020,7 @@ with_dt_all('\'n',[stelletje]).
 with_dt_all(nummer,[positie,één]).
 with_dt_all(nu,[waarom,weer]).
 with_dt_all(of,[omgekeerd]).
+with_dt_all(of,[veel,één]).
 with_dt_all(of,[vice,versa]).
 with_dt_all(of,[wat,wie]).
 with_dt_all(of,[wel]).
