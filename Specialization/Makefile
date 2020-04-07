@@ -97,7 +97,7 @@ guides_data.c: guides.txt make_guide_vector
 install: guides_data.c
 	cp guides_data.c ../src/guides_data.c.$(PROLOG)
 
-TTS=tt_part00001.ps tt_part00002.ps tt_part00003.ps tt_part00004.ps tt_part00005.ps tt_part00006.ps tt_part00007.ps tt_part00008.ps tt_part00009.ps tt_part00010.ps tt_part00011.ps tt_part00012.ps tt_part00013.ps tt_part00014.ps tt_part00015.ps tt_part00016.ps tt_part00017.ps tt_part00018.ps tt_part00019.ps tt_part00020.ps tt_part00021.ps tt_part00022.ps tt_part00023.ps tt_part00024.ps tt_part00025.ps tu_part00001.ps tu_part00002.ps tu_part00003.ps tu_part00004.ps tu_part00005.ps tu_part00006.ps tu_part00007.ps
+TTS=tt_part00001.ps tt_part00002.ps tt_part00003.ps tt_part00004.ps tt_part00005.ps tt_part00006.ps tt_part00007.ps tt_part00008.ps tt_part00009.ps tt_part00010.ps tt_part00011.ps tt_part00012.ps tt_part00013.ps tt_part00014.ps tt_part00015.ps tt_part00016.ps tt_part00017.ps tt_part00018.ps tt_part00019.ps tt_part00020.ps tt_part00021.ps tt_part00022.ps tt_part00023.ps tt_part00024.ps tt_part00025.ps tu_part00001.ps tu_part00002.ps tu_part00003.ps tu_part00004.ps tu_part00005.ps tu_part00006.ps tu_part00007.ps tu_part00008.ps
 
 tts:
 	$(MAKE) -j $(J) $(TTS) EXTRA=pos_tagger_m=5
