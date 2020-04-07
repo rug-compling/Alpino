@@ -2549,6 +2549,7 @@ preposition(inzake).
 preposition(jegens).
 preposition(kortweg).   % doelman Joaquim Silva , kortweg Quim , ..
 preposition(krachtens).
+preposition(lopende).
 preposition(luidens).  % juridisch? luidens die en die wet
 preposition(middels).
 preposition(middenin).
@@ -2989,6 +2990,8 @@ m(met,   preposition(met,[],pc_vp),met).
 
 m('van heinde en verre',pp(van), [van,heinde,en,verre]).
 m('van heinde en verre',pp(van), [van,heinde,en,ver]).
+
+m(terplekke,pp(ter),terplekke).
 
 with_dt([P,Paard],
 	pp(P),
@@ -5021,6 +5024,7 @@ m(telkens,          modal_adverb(comp), telkens). % wanneer als indien
 m(temeer,           modal_adverb(comp), temeer).  % temeer daar/omdat
 m(temeer,           modal_adverb(comp), [te,meer]).  % temeer daar/omdat
 
+
 m(desnoods,         modal_adverb(prep),desnoods).
 m(dicht,            modal_adverb(prep),dicht).    % dicht tegen zich aan ; dicht bij de macht?
 m(dwars,            modal_adverb(prep),dwars).    % dwars door
@@ -5036,6 +5040,7 @@ m(volkomen,         modal_adverb(prep),volkomen). % with pp (predicative?)
 				% 'volkomen tegen mijn wil' / in de war
 
 %% mede dankzij hem; mede omdat; mede om ..
+m(deels,            modal_adverb(comp_prep_verb), deels).
 m(mede,             modal_adverb(comp_prep_verb), mede).
 
 
@@ -5727,7 +5732,8 @@ loc_adverb(bovenaan).
 loc_adverb(bovenaf).
 loc_adverb(bovenin). 
 loc_adverb(bovenop). 
-loc_adverb(bovenuit). 
+loc_adverb(bovenuit).
+loc_adverb(breed).     % hij speelde breed; een balletje breed
 loc_adverb(buitenboord).
 loc_adverb(buiten).
 loc_adverb(buitenaf).
@@ -6594,6 +6600,7 @@ m(deze,         pronoun(nwh,thi,both,both,gen,def),dezes).
 m(diegene,      pronoun(nwh,thi,sg,de,both,def,strpro),diegene).
 m(diegene,      pronoun(nwh,thi,pl,de,both,def,strpro),diegenen).
 m(één,          pronoun(nwh,thi,sg,both,both,indef,strpro),een).
+m(één,          pronoun(nwh,thi,sg,both,both,indef,strpro),één).
 m(eenieder,     pronoun(nwh,thi,sg,de,both,def,strpro),[Een,ieder]) :- een(Een).
 m(eenieder,     pronoun(nwh,thi,sg,de,both,def,strpro),eenieder).
 m(eentje,       pronoun(nwh,thi,sg,de,both,indef,strpro),eentje).

@@ -181,10 +181,12 @@ a_lex(rel_pronoun(Det,Case),Sign) :-
 a_lex(proper_name(Number),Sign,Word) :-
     a_lex(proper_name(Number,'MISC'),Sign,Word).
 
-a_lex(proper_name(Number,Type),Sign,_Word) :-
+a_lex(proper_name(Number,Type),Sign,Word) :-
     proper_name(Type,Sign),
     features_number(Number,Sign),
-    (   Type == 'PER'
+    Word:his <=> His,
+    (   Type == 'PER',
+	His == normal(names_dictionary)  % otherwise too many mistakes
     ->  Sign:agr => ~(sg&het)
     ;   true
     ).

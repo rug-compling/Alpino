@@ -3064,10 +3064,11 @@ np_me_arg(NP) :-
     %%     Wat wegen die appels? (but "wegen" is transitive too)
     %%    *Wat duurt een wedstrijd?
     NP:subn => (sub_noun;sub_tmp;sub_num;sub_indef_pron;
-                   sub_det;sub_veel;sub_def_adj).
+                   sub_det;sub_veel;sub_def_adj;sub_name).
 				% flo X is a num now too
                                 % sub_adj: dit kost "het dubbele"
 				% sub_indef_pron: wat kost een ...
+				% sub_name: dit kost me de Spelen / de Tour
 
 adj_np_me_arg(NP) :-
     np_me_arg(NP),

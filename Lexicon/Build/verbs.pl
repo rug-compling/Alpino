@@ -1161,6 +1161,7 @@ m(v_root(Inf,Inf),verb(Inf,hebben,inf,[intransitive])) :-
 inf_only_sport(allroundschaatsen).
 inf_only_sport(alpineskiën).
 inf_only_sport(baanwielrennen).
+inf_only_sport(backpacken).
 inf_only_sport(ballonvaren).
 inf_only_sport(berglopen).
 inf_only_sport(boekhouden).
@@ -2288,7 +2289,8 @@ v(beker,bekert,bekeren,gebekerd,bekerde,bekerden,
     [h([intransitive])]).
 
 v(bekeur,bekeurt,bekeuren,bekeurd,bekeurde,bekeurden,
-    [h([transitive])]).
+  [h([transitive,
+      intransitive])]).
 
 v(bekijk,bekijkt,bekijken,bekeken,bekeek,bekeken,
     [h([sbar,
@@ -4266,7 +4268,8 @@ v(boen,boent,boenen,geboend,boende,boenden,
 	transitive])]).
 
 v(boer,boert,boeren,geboerd,boerde,boerden,
-    [h([intransitive])]).
+  [z([ld_dir]),
+   h([intransitive])]).
 
 v(boet,boet,boeten,geboet,boette,boetten,
     [h([intransitive,
@@ -9115,6 +9118,7 @@ v(hang,hangt,hangen,gehangen,hing,hingen,
 	part_fixed(uit,[[de,beest]],no_passive),
 	part_fixed(uit,[[de,keel],dat],no_passive),
 	part_fixed(uit,[sbar_subj,[de,keel],dat],no_passive),
+	fixed([svp(aan,klok),sbar],no_passive),
 	part_er_pp_sbar(af,van),
 	part_ld_pp(rond),
 	part_np_ld_pp(op),
@@ -12149,7 +12153,7 @@ v(krijg,krijgt,krijgen,gekregen,kreeg,kregen,
 	fixed([svp_er_pp(bij),acc],no_passive),	% we krijgen er een kindje / 10 procent / .. bij
 	part_np_pc_er_transitive(bij), % we hebben er een ton bijgekregen
 	fixed([als_pred,vp],no_passive),          % ik kreeg als opdracht om ..
-	fixed([als_pred,sbar],no_passive),        % ik krijg als opdracht dat ..
+	fixed([als_pred,sbar],no_passive), % ik krijg als opdracht dat ..
 	part_fixed(mee,[als_pred,vp],no_passive),          % ik kreeg als opdracht mee om ..
 	part_fixed(mee,[als_pred,sbar],no_passive),        % ik krijg als opdracht mee dat ..
 	np_pc_pp(van),
@@ -12164,7 +12168,9 @@ v(krijg,krijgt,krijgen,gekregen,kreeg,kregen,
 	part_transitive(binnen),
 	part_transitive(door),
 	part_transitive(los),
+	part_sbar(mee),  % hij heeft meegekregen dat ...
 	part_transitive(mee), % NB dat ik de spullen mee naar huis krijg
+	part_pp_sbar(mee,van), % hij heeft daarvan meegekregen dat ..
 	part_np_pc_pp(mee,van), % daar krijg je iets van mee
         part_transitive(rond),
 	part_transitive(terug),
@@ -13080,6 +13086,7 @@ v(lek,lekt,lekken,gelekt,lekte,lekten,
 	  part_mod_pp(uit,over),
 	  part_pc_pp(uit,naar)]),
    h([intransitive,
+      sbar,
       transitive]),
    b([ld_pp,
       part_intransitive(weg)])]).
@@ -19072,6 +19079,7 @@ v(schenk,schenkt,schenken,geschonken,schonk,schonken,
     [h([np_np,
         so_pp_np,
 	transitive,
+	intransitive,  % je mag belastingvrij schenken tot 100000 euro
 	np_ld_pp,
         part_intransitive(door),
 	part_transitive(uit),
@@ -19821,7 +19829,13 @@ v(shop,shopt,shoppen,geshopt,shopte,shopten,
        ])]).
 
 v(show,showt,showen,geshowd,showde,showden,
-    [h([transitive])]).
+  [h([transitive,
+      np_np,
+      so_pp_np,
+      np_sbar,
+      so_pp_sbar,
+      sbar
+     ])]).
 
 v(sidder,siddert,sidderen,gesidderd,sidderde,sidderden,
     [h([intransitive,
@@ -22488,6 +22502,9 @@ v(swing,swingt,swingen,geswingd,swingde,swingden,
     [h([intransitive,
         part_fixed(uit,[[de,pan]],no_passive)])
     ]).
+
+v(swipe,swipet,swipen,geswipet,swipete,swipeten,
+    [h([intransitive])]).
 
 v(switch,switcht,switchen,geswitcht,switchte,switchten,
     [b([intransitive])]).

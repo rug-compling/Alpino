@@ -6893,7 +6893,8 @@ a([both(chique),
    st(chicst),
    st(sjiekst),
    ste(chicste),
-   ste(sjiekste)],adv,[],[]).
+   ste(sjiekste)],adv,[subject_vp,
+		       subject_sbar],[]).
 
 %% Ida: vet chill!
 a([e(chille),
@@ -18217,7 +18218,8 @@ a([e(heftige),
    ere(heftigere),
    no_e(heftig),
    st(heftigst),
-   ste(heftigste)],adv,[],[]).
+   ste(heftigste)],adv,[subject_vp,
+			subject_sbar],[]).
 
 a([e(heidense),
    er(heidenser),
@@ -22191,7 +22193,7 @@ a([e(linkse),
 
 a([stof(linnen)],nonadv,[],[]).
 
-a([both(liquide)],nonadv,[],[]).
+a([both(liquide)],adv,[],[]).
 
 a([e(listige),
    er(listiger),
@@ -23518,7 +23520,7 @@ a([e(mollige),
    ste(molligste)],nonadv,[],[]).
 
 a([e(momentele),
-   no_e(momenteel)],adv,[],[]).
+   no_e(momenteel)],tmpadv,[],[]).
 
 a([e(mondaine),
    er(mondainer),
@@ -33423,7 +33425,7 @@ a([e(stringente),
    ere(stringentere),
    er(stringenter),
    st(stringentst),
-   ste(stringentste)],nonadv,[],[]).
+   ste(stringentste)],adv,[],[]).
 
 a([stof(strobalen)],nonadv,[],[]).
 
@@ -38181,7 +38183,11 @@ a([prefix('vierde-klas'),
    prefix(['4e',klas])],nonadv,[],[]).
 
 a([e(vierkante),
-   no_e(vierkant)],adv,[],[]).
+   no_e(vierkant),
+   ere(vierkantere),    % hoe kun je nu vierkanter zijn? Je bent vierkant of niet...
+   er(vierkanter),
+   st(vierkantst),
+   ste(vierkantste)],adv,[],[]).
 
 a([e(vieze),
    er(viezer),
