@@ -10,9 +10,10 @@ user_transformation(r(Rel,i(X,Cat)),A,B,
     user_transformation(r(Rel,Cat),A,B,
                         r(Rel2,Cat2),C,D,E,F).
 
+/*
 user_transformation(r(REL,l(read_from_treebank(Az,Lem,'WW(od,vrij,zonder'),Cat,W/[P0,P])),B,[],
 		    r(REL,l(read_from_treebank(Az,Lem,'WW(od,vrij,zonder)'),Cat,W/[P0,P])),B,[],_,_).
-
+*/
 
 /*
 user_transformation(r(REL,p(pp)),A,[Als0|Volgt],
@@ -1496,7 +1497,13 @@ user_transformation(r(REL,l(read_from_treebank(Az,Bz1,TAG1),Cat,Root/[P0,P])),B,
     alpino_treebank:get_root(P0,P,String,J),
     correct_postag_lemma(J,Bz1,Bz2,TAG1,TAG2).
 
+correct_postag_lemma(_,minder,weinig,'VNW(onbep,grad,stan,vrij,zonder,comp)','VNW(onbep,grad,stan,vrij,zonder,comp)').
+correct_postag_lemma(_,minder,weinig,'VNW(onbep,grad,stan,prenom,zonder,agr,comp)','VNW(onbep,grad,stan,prenom,zonder,agr,comp)').
+correct_postag_lemma(_,meer,veel,'VNW(onbep,grad,stan,vrij,zonder,comp)','VNW(onbep,grad,stan,vrij,zonder,comp)').
+correct_postag_lemma(_,meer,veel,'VNW(onbep,grad,stan,prenom,zonder,agr,comp)','VNW(onbep,grad,stan,prenom,zonder,agr,comp)').
+*/
 
+/*
 user_transformation(r(REL,l(read_from_treebank(Az,Bz1,TAG),Cat,Root/[P0,P])),B,[],
 		    r(REL,l(read_from_treebank(Az,Bz2,TAG),Cat,Root/[P0,P])),B,[],_,_) :-
     correct_lemma(TAG,Bz1,Bz2).
