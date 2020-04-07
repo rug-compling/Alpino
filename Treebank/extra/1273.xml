@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="17" id="0" rel="top">
-    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="16" id="2" rel="--">
-      <node begin="0" end="1" id="3" lemma="hierdoor" pos="pp" postag="BW()" pt="bw" rel="mod" root="hierdoor" special="er" word="Hierdoor"/>
-      <node begin="1" end="2" id="4" infl="pl" lemma="vormen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="vorm" sc="transitive" stype="declarative" tense="present" word="vormen" wvorm="pv"/>
+      <node begin="0" end="1" id="3" lemma="hierdoor" pos="pp" postag="BW()" pt="bw" rel="mod" root="hierdoor" word="Hierdoor"/>
+      <node begin="1" end="2" id="4" lemma="vormen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="vorm" word="vormen" wvorm="pv"/>
       <node begin="2" cat="np" end="4" id="5" rel="su">
-        <node begin="2" end="3" id="6" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="3" end="4" gen="de" getal="mv" graad="basis" id="7" lemma="knol" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="knol" word="knollen"/>
+        <node begin="2" end="3" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="knol" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="knol" word="knollen"/>
       </node>
       <node begin="4" cat="np" end="7" id="8" rel="obj1">
-        <node begin="4" end="5" id="9" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node aform="compar" begin="5" buiging="met-e" end="6" graad="comp" id="10" infl="e" lemma="stevig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="stevig" vform="adj" word="stevigere"/>
-        <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lemma="schil" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="schil" word="schil"/>
+        <node begin="4" end="5" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="5" buiging="met-e" end="6" graad="comp" id="10" lemma="stevig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="stevig" word="stevigere"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="schil" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schil" word="schil"/>
       </node>
       <node begin="8" cat="whrel" end="16" id="12" rel="mod">
-        <node begin="8" end="9" id="13" index="1" lemma="waardoor" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waardoor" special="waar" word="waardoor"/>
+        <node begin="8" end="9" id="13" index="1" lemma="waardoor" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waardoor" word="waardoor"/>
         <node begin="8" cat="ssub" end="16" id="14" rel="body">
           <node begin="8" end="9" id="15" index="1" rel="mod"/>
-          <node begin="9" case="nom" def="def" end="10" gen="de" genus="masc" getal="ev" id="16" lemma="men" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" rnum="sg" root="men" status="red" vwtype="pers" wh="nwh" word="men"/>
-          <node begin="10" case="both" def="def" end="11" gen="de" getal="mv" id="17" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="obj1" rnum="pl" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="ze"/>
+          <node begin="9" end="10" genus="masc" getal="ev" id="16" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="men"/>
+          <node begin="10" end="11" getal="mv" id="17" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="obj1" root="ze" status="red" vwtype="pers" word="ze"/>
           <node begin="11" cat="pp" end="14" id="18" rel="mod">
             <node begin="11" end="12" id="19" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
             <node begin="12" cat="np" end="14" id="20" rel="obj1">
-              <node begin="12" end="13" id="21" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
-              <node begin="13" buiging="zonder" end="14" getal-n="zonder-n" id="22" lemma="rooien" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" rnum="sg" root="rooi" sc="intransitive" special="v_noun" word="rooien" wvorm="inf"/>
+              <node begin="12" end="13" id="21" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="13" buiging="zonder" end="14" getal-n="zonder-n" id="22" lemma="rooien" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="rooi" word="rooien" wvorm="inf"/>
             </node>
           </node>
-          <node aform="compar" begin="14" buiging="zonder" end="15" graad="comp" id="23" infl="meer" lemma="minder" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="minder" vform="adj" vwtype="onbep" word="minder"/>
-          <node begin="15" end="16" id="24" infl="sg3" lemma="beschadigen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="beschadig" sc="transitive" tense="present" word="beschadigt" wvorm="pv"/>
+          <node begin="14" buiging="zonder" end="15" graad="comp" id="23" lemma="weinig" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="minder" vwtype="onbep" word="minder"/>
+          <node begin="15" end="16" id="24" lemma="beschadigen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="beschadig" word="beschadigt" wvorm="pv"/>
         </node>
       </node>
     </node>
-    <node begin="16" end="17" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="16" end="17" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Hierdoor vormen de knollen een stevigere schil , waardoor men ze bij het rooien minder beschadigt .</sentence>
 </alpino_ds>
