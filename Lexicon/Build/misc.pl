@@ -1711,23 +1711,23 @@ m(enkel,    adj_number(enkel),  enkel).   % een enkel, geen enkel
 m(enkel,    adj_number(enkele), enkele).
 m(ettelijk, adj_number(pl_num), ettelijke).
 
-m('meer als',         intensifier, [meer,als]).
-m('meer dan',         intensifier, [meer,dan]).
-m('minder als',       intensifier, [minder,als]).
-m('minder dan',       intensifier, [minder,dan]).
-m('niet meer als',    intensifier, [niet,meer,als]).
-m('niet meer dan',    intensifier, [niet,meer,dan]).
-m('niet minder als',  intensifier, [niet,minder,als]).
-m('niet minder dan',  intensifier, [niet,minder,dan]).
+m('veel als',         intensifier, [meer,als]).
+m('veel dan',         intensifier, [meer,dan]).
+m('weinig als',       intensifier, [minder,als]).
+m('weinig dan',       intensifier, [minder,dan]).
+m('niet veel als',    intensifier, [niet,meer,als]).
+m('niet veel dan',    intensifier, [niet,meer,dan]).
+m('niet weinig als',  intensifier, [niet,minder,als]).
+m('niet weinig dan',  intensifier, [niet,minder,dan]).
 
-m('meer als',         pre_num_adv(both), [meer,als]).
-m('meer dan',         pre_num_adv(both), [meer,dan]).
-m('minder als',       pre_num_adv(both), [minder,als]).
-m('minder dan',       pre_num_adv(both), [minder,dan]).
-m('niet meer als',    pre_num_adv(both), [niet,meer,als]).
-m('niet meer dan',    pre_num_adv(both), [niet,meer,dan]).
-m('niet minder als',  pre_num_adv(both), [niet,minder,als]).
-m('niet minder dan',  pre_num_adv(both), [niet,minder,dan]).
+m('veel als',         pre_num_adv(both), [meer,als]).
+m('veel dan',         pre_num_adv(both), [meer,dan]).
+m('weinig als',       pre_num_adv(both), [minder,als]).
+m('weinig dan',       pre_num_adv(both), [minder,dan]).
+m('niet veel als',    pre_num_adv(both), [niet,meer,als]).
+m('niet veel dan',    pre_num_adv(both), [niet,meer,dan]).
+m('niet weinig als',  pre_num_adv(both), [niet,minder,als]).
+m('niet weinig dan',  pre_num_adv(both), [niet,minder,dan]).
 
 %% pre_det_quant
 %% quantifiers that may precede determiner in NP
@@ -2251,12 +2251,12 @@ m(zulk,          comp_determiner(een,dat),   [zulk,een]).
 with_dt([des,te,meer],
 	determiner(wat),
 	dt(detp,[mod=l('des te',intensifier,advp,0,2),
-		 hd=l(meer,determiner(wat),2,3)])).
+		 hd=l(veel,determiner(wat),2,3)])).
 
 with_dt([des,te,meer],
 	adverb,
 	dt(detp,[mod=l('des te',intensifier,advp,0,2),
-		 hd=l(meer,determiner(wat),2,3)])).
+		 hd=l(veel,determiner(wat),2,3)])).
 
 m(destemeer,determiner(wat),destemeer).
 m(destemeer,adverb,destemeer).
@@ -6202,7 +6202,7 @@ m(alweer,           postadv_adverb,alweer).  % twee jaar geleden alweer
 m(ineens,           postadv_adverb,ineens).  % toen ineens
 m(laat,             postadv_adverb,laat).    % gisteravond laat
 m(maar,             postadv_adverb,maar).    % eventjes maar
-m(meer,             postadv_adverb,meer).    % niet meer ; nooit meer
+m(veel,             postadv_adverb,meer).    % niet meer ; nooit meer
 m(ook,              postadv_adverb,ook).
 m(ongeveer,         postadv_adverb,ongeveer).
 m(opeens,           postadv_adverb,opeens).  % dan opeens; nu opeens
@@ -7237,7 +7237,7 @@ with_dt([Een,of,meer],
 	determiner(pl_num,nwh,nmod,pro,yparg),
 	dt(conj,[cnj=l(één,number(hoofd(sg_num)),detp,0,1),
 		 crd=l(of,conj(of),vg,1,2),
-		 cnj=l(meer,adjective(meer),ap,2,3)
+		 cnj=l(veel,adjective(meer),ap,2,3)
 		])) :-
     een(Een).
 
@@ -7763,10 +7763,10 @@ m(niets,comp_noun(het,mass,sg,dan),niks).
 %			  hd=l(min,adjective(er(adv)),ap,1,2)])])).
 
 
-m('niets minder dan', modal_adverb(noun),[niets,minder,dan]).
-m('niemand minder dan', modal_adverb(noun),[niemand,minder,dan]).
-m('niets minder als', modal_adverb(noun),[niets,minder,als]).
-m('niemand minder als', modal_adverb(noun),[niemand,minder,als]).
+m('niets weinig dan', modal_adverb(noun),[niets,minder,dan]).
+m('niemand weinig dan', modal_adverb(noun),[niemand,minder,dan]).
+m('niets weinig als', modal_adverb(noun),[niets,minder,als]).
+m('niemand weinig als', modal_adverb(noun),[niemand,minder,als]).
 
 %% op zich 't idee vind ik wel leuk
 with_dt([op,zich],
