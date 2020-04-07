@@ -1588,12 +1588,14 @@ ignore_current_ref :-
 
 create_empty_object(o(Result,String,_)) :-
     hdrug_flag(current_ref,Key),
-    alpino_data:result_term(p(0.0,[]),String,robust([]),tree(robust,robust,[],_),[],Result),
-    a_sentence(Key,String).
+    alpino_data:result_term(p(0.0,[]),String,robust([]),tree(robust,robust,[],_),Frames,Result),
+    a_sentence(Key,String),
+    default_frames(String,Frames).
 
 ignore_current_ref(Key,String,Comments) :-
     xml_filename(File,Key),
-    alpino_data:result_term(p(0.0,[]),String,robust([]),tree(robust,robust,[],_),[],Result),
+    alpino_data:result_term(p(0.0,[]),String,robust([]),tree(robust,robust,[],_),Frames,Result),
+    default_frames(String,Frames),
     (	system:file_exists(File)
     ->	(   user_confirmation(
 			"File ~w exists. Do you want to overwrite? ",[File])
@@ -1604,7 +1606,8 @@ ignore_current_ref(Key,String,Comments) :-
     ).
 
 ignore_current_ref_dump(_Key,String,Comments) :-
-    alpino_data:result_term(p(0.0,[]),String,robust([]),tree(robust,robust,[],_),[],Result),
+    default_frames(String,Frames),
+    alpino_data:result_term(p(0.0,[]),String,robust([]),tree(robust,robust,[],_),Frames,Result),
     alpino_treebank:xml_save(Result,String,Comments,stream(user_output),ignore).
 
 hdrug_command(dt,compile_grammar_dt,[]).
