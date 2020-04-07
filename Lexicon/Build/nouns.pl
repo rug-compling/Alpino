@@ -6317,7 +6317,7 @@ n([pl(bunkers),sg(bunker)],de,[]).
 n([pl(burchten),sg(burcht)],de,[]).
 
 n([pl(bureaus),pl('bureau\'s'),sg(bureau),sg(buro),pl('buro\'s')],both,
-  [app_measure],
+  [np_app_measure],
   [s(accountant),
    advies,
    s(arbeid),
@@ -9697,7 +9697,7 @@ n([mass(drop)],de,[],[dim(dropje)]).
 n([pl([drop,outs]),pl('drop-outs'),
    sg([drop,out]),sg('drop-out')],de,[]).
 
-n([pl(drugs),sg(drug)],de,[],[smart]).
+n([pl(drugs),sg(drug),mass(drugs)],de,[],[smart]).
 
 n([pl(druiven),sg(druif)],de,[],[dim(druifje)]).
 
@@ -11000,7 +11000,7 @@ n([pl(federaties),sg(federatie)],de,[],
 
 n([pl(feeën),sg(fee)],de,[],[dim(feetje)]).
 
-n([sg(feedback)],de,[]).
+n([sg(feedback)],de,[sbar]).
 
 n([pl(feeksen),sg(feeks)],de,[]).
 
@@ -11058,7 +11058,7 @@ n([mass(fenomenologie)],de,[]).
 
 n([sg(festijn),pl(festijen)],het,[]).
 
-n([pl(festivals),sg(festival)],het,[],
+n([pl(festivals),sg(festival)],het,[start_app_measure],
   [s(bevrijding),
    s(dichter),
    film,
@@ -19524,7 +19524,9 @@ n([pl(lezers),sg(lezer)],de,[],[dim(lezertje)]).
 
 n([pl(lezeressen),sg(lezeres)],de,[]).
 
-n([pl(lezingen),sg(lezing)],de,[sbar,vp],[dim(lezinkje)]).
+n([pl(lezingen),sg(lezing)],de,[sbar,vp],
+  [['5',mei],
+   dim(lezinkje)]).
 
 n([pl(lezingen),sg(lezing)],de,[],
   [her,
@@ -21381,7 +21383,8 @@ n([sg(merci)],de,[]).
 
 n([pl(merels),sg(merel)],de,[],[dim(mereltje)]).
 
-n([mass(merendeel)],het,[]).
+%% mod: hij woont het merendeel van het jaar in Turkije
+n([mass(merendeel)],het,[mod]).
 
 n([mass(merg)],het,[],[l(rug,ruggen)]).
 
@@ -27335,6 +27338,7 @@ n([pl(proeven),sg(proef),sg(proeve)],de,[]).
 n([pl(proeven),sg(proef)],de,[],
   [atoom,
    dier,
+   door,
    geur,
    kern,
    vuur]).
@@ -27974,7 +27978,7 @@ n([pl(raps),sg(rap)],de,[]).
 
 n([pl(rappers),sg(rapper)],de,[]).
 
-n([pl(rapporten),sg(rapport)],het,[],
+n([pl(rapporten),sg(rapport)],het,[np_app_measure],
   [i(baan,banen),
    eind,
    jury,
@@ -29386,7 +29390,7 @@ n([mass(roulatie)],de,[]).
 
 n([pl(roulettes),sg(roulette)],de,[]).
 
-n([pl(routen),pl(routes),sg(route)],de,[],
+n([pl(routen),pl(routes),sg(route)],de,[np_app_measure],
   [fiets,
    wandel]).
 
@@ -30702,7 +30706,10 @@ n([pl(shirts),sg(shirt)],both,[],
 
 n([mass(shit)],de,[]).
 
-n([pl(shocks),sg(shock)],de,[]).
+n([pl(shocks),sg(shock)],de,
+  [pred_pp(in),
+   pred_pp(in,subject_sbar)
+  ]).
 
 n([sg(shocktoestand),pl(shocktoestanden)],de,[]).
 
@@ -34018,7 +34025,7 @@ n([mass(terugdringing)],de,[]).
 
 n([mass(teruggang)],de,[]).
 
-n([sg(teruggave)],de,[]).
+n([sg(teruggave),pl(teruggaven)],de,[]).
 
 n([mass(terughoudendheid)],de,[]).
 
@@ -34080,7 +34087,7 @@ n([pl(texturen),sg(textuur)],de,[]).
 
 n([sg(tgv)],de,[]).
 
-n([pl(theaters),sg(theater)],het,[],
+n([pl(theaters),sg(theater)],het,[np_app_measure],
   [amfi,
    muziek,
    straat]).

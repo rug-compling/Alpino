@@ -778,8 +778,9 @@ unknown_word_heuristic(P1,R1,W,_Ws,"compound(~p)|~p|~p|~p~n",
 unknown_word_heuristic(P1,R1,W,_Ws,"dt|~p|~p~n",[W,Tags],_,_) :-
     debug_message(3,"trying heuristic dt~n",[]),
     atom(W),
-    atom_concat(Pref,t,W),
-    atom_concat(Pref,d,Alt),
+    typical_spelling_mistake_suffixes(T,D),
+    atom_concat(Pref,T,W),
+    atom_concat(Pref,D,Alt),
     \+ \+ alpino_lex:lexicon___(Alt,_Tag,_,[],[],_),
     P is P1 +1,
     R is R1 +1,
@@ -2410,6 +2411,7 @@ guess_left_headed_compound(W,Ws,Wmin,Stem,Surf,SurfLength) :-
 guess_prefix_compound(W,Wfirst,WLast) :-
     atom(W),
     once(atom_split(W,'-',Wfirst,WLast)),
+    \+ Wfirst = 'Sint',  % Sint-X is often not a PER but a LOC or ORG
     (   %% oost-Frankrijk; ex-Ajax
         compound_part(Wfirst)
     ;   %% Ajax-Feyenoord
@@ -6291,3 +6293,12 @@ remove_ge_if_psp(verb(_,psp,_),Stem0,Stem) :-
     !.
 remove_ge_if_psp(_,Stem,Stem).
 
+%% typical_spelling_mistake_suffixes(T,D)
+%% Word-T does not exist,
+%% Word-D does exist
+typical_spelling_mistake_suffixes(t,d).      % ondervont -> ondervond
+typical_spelling_mistake_suffixes(dt,t).     % bemindt   -> bemint
+typical_spelling_mistake_suffixes(tte,te).   % wenstte   -> wenste
+typical_spelling_mistake_suffixes(tten,ten). % wenstten  -> wensten
+typical_spelling_mistake_suffixes(dde,de).   % bloosdde  -> bloosde
+typical_spelling_mistake_suffixes(dden,den). % bloosdden -> bloosden

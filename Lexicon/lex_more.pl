@@ -50,6 +50,10 @@ phrasal_entry(number(hoofd(pl_num)),number_sequence) -->
 phrasal_entry(mod_noun(both,count,bare_meas),number_tiende) -->
     number_expression_breuk_tiende.
 
+phrasal_entry(mod_noun(both,count,bare_meas),number_procent) -->
+    number_expression_procent.
+
+
 %% met vier nul
 %% Boeing zeven zes zeven
 phrasal_entry(number(hoofd(both)),number_sequence) -->
@@ -79,7 +83,12 @@ phrasal_entry(number(hoofd(pl_num)),number_tiende) -->
       number_codes_silent(_,Num1Codes)
     }.
 
-
+number_expression_procent -->
+    n_word(VierProcent),
+    {  atom(VierProcent),
+       atom_concat(Vier,'%',VierProcent),
+       isa_number(_,[Vier],[])
+    }.
 
 number_sequence -->
     first_number,
@@ -808,6 +817,7 @@ persoons(deurs).
 persoons(drs).  % 3drs voor driedeurs etc
 persoons(draads).
 persoons(jaars).
+persoons(karaats).
 persoons(kleps).
 persoons(lijns).
 persoons(mans).

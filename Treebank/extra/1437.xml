@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="omzet" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="omzet" word="omzet"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="sg" lemma="gaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ga" sc="ld_dir" stype="declarative" tense="past" word="ging" wvorm="pv"/>
+      <node begin="3" end="4" id="6" lemma="daarbij" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarbij" special="er" word="daarbij"/>
+      <node begin="4" cat="mwu" end="6" his="normal" his_1="number_tiende" id="7" mwu_root="een derde" mwu_sense="een derde" rel="mod">
+        <node begin="4" end="5" gen="both" genus="zijd" getal="ev" graad="basis" id="8" lemma="een" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" rnum="sg" root="een" special="mod" word="een"/>
+        <node begin="5" end="6" gen="both" genus="zijd" getal="ev" graad="basis" id="9" lemma="derde" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" rnum="sg" root="derde" special="mod" word="derde"/>
+      </node>
+      <node begin="6" end="7" id="10" lemma="omhoog" pos="adv" postag="BW()" pt="bw" rel="ld" root="omhoog" special="dir" word="omhoog"/>
+      <node begin="7" cat="pp" end="11" id="11" rel="mod">
+        <node begin="7" end="8" id="12" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+        <node begin="8" cat="np" end="11" id="13" rel="obj1">
+          <node begin="8" end="9" id="14" infl="both" lemma="8,6" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="8,6" special="hoofd" word="8,6"/>
+          <node begin="9" end="10" gen="both" genus="zijd" getal="ev" graad="basis" id="15" lemma="miljard" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="pl" root="miljard" sc="measure" special="meas_mod" word="miljard"/>
+          <node begin="10" end="11" gen="de" genus="zijd" getal="ev" graad="basis" id="16" lemma="euro" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" rnum="sg" root="euro" special="meas_mod" word="euro"/>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>De omzet ging daarbij een derde omhoog tot 8,6 miljard euro .</sentence>
+</alpino_ds>
