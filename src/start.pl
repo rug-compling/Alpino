@@ -445,6 +445,10 @@ slow_options :-
 %% NB: veryfast is now the default!
 :- veryfast_options.
 
+no_heur_options:-
+    set_flag(pos_tagger,off),
+    set_flag(use_guides,off).
+
 testN_options :-
     set_flag(after_timeout_options,off),
     set_flag(end_hook,best_score),
@@ -462,10 +466,15 @@ testN_options :-
 hdrug_command(test1,test1_options,[]).
 hdrug_command(testN,testN_options,[]).
 hdrug_command(veryfast,veryfast_options,[]).
+hdrug_command(vf,veryfast_options,[]).
 hdrug_command(very_fast,veryfast_options,[]).
 hdrug_command(disamb,disamb_options,[]).
 hdrug_command(fast,fast_options,[]).
 hdrug_command(slow,slow_options,[]).
+hdrug_command(nh,no_heur_options,[]).
+hdrug_command(no_heur,no_heur_options,[]).
+hdrug_command(noheur,no_heur_options,[]).
+
 
 :- public parse_single_or_loop/1.  % option
 parse_single_or_loop([]) :-
