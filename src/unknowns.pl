@@ -5446,7 +5446,9 @@ longpunct(W) :-
 name_capital(W,P0) :-
     atom(W),
     (   is_decap_only(W)
-    ->  tag(P0,_,_,_,W,_,normal(names_dictionary),_)
+    ->  (   tag(P0,_,_,_,W,_,normal(names_dictionary),_)
+	;   W == 'TV'
+	)
     ;   true
     ),
     atom_codes(W,[F|T]),

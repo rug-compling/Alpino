@@ -7344,7 +7344,8 @@ n([pl(commandeurs),sg(commandeur)],de,[]).
 
 n([pl('commando\'s'),sg(commando)],de,[],[moord]).
 
-n([pl('commando\'s'),sg(commando)],het,[sbar,vp]).
+n([pl('commando\'s'),sg(commando)],het,[start_app_measure,
+					sbar,vp]).
 
 n([sg([commedia,'dell\'arte'])],both,[]).
 
@@ -40998,6 +40999,9 @@ measure_noun('mg/g').
 measure_noun('mg/ml').
 
 measure_noun(mA).
+
+measure_noun('MHz').
+measure_noun('Mhz').
 
 measure_noun(mm2).
 measure_noun('mm²').

@@ -7153,8 +7153,7 @@ pred_sbar_dp_structure(MAX,ADJ,SBAR) :-
     MAX:max_type => t_xp,
     ADJ => pred,
     ADJ:redrel => no,
-%%%    ADJ:pcat => (np_pred;ap_pred),   % np_pred?
-    ADJ:pcat => ap_pred,
+    ADJ:pcat => (np_pred;ap_pred),   % np_pred: hoogste tijd dat hij komt; een schande dat hij niet kwam
     ADJ:slash => [],
     ADJ:exs => [],
     ADJ:wh => nwh,
