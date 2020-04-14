@@ -736,6 +736,7 @@ lemma_root(achterna_hippen,hip_achterna) .
 lemma_root(achterna_hobbelen,hobbel_achterna) .
 lemma_root(achterna_hoeven,hoef_achterna) .
 lemma_root(achterna_hollen,hol_achterna) .
+lemma_root(achterna_houden,houd_achterna) .
 lemma_root(achterna_huppelen,huppel_achterna) .
 lemma_root(achterna_jagen,jaag_achterna) .
 lemma_root(achterna_kachelen,kachel_achterna) .
@@ -8945,6 +8946,7 @@ lemma_root(om_hobbelen,hobbel_om) .
 lemma_root(om_hoeven,hoef_om) .
 lemma_root(om_hollen,hol_om) .
 lemma_root(omhoog_schieten,schiet_omhoog) .
+lemma_root(om_houden,houd_om) .
 lemma_root(omhullen,omhul) .
 lemma_root(om_huppelen,huppel_om) .
 lemma_root(om_jagen,jaag_om) .
@@ -13119,6 +13121,7 @@ lemma_root(rond_hippen,hip_rond) .
 lemma_root(rond_hobbelen,hobbel_rond) .
 lemma_root(rond_hoeven,hoef_rond) .
 lemma_root(rond_hollen,hol_rond) .
+lemma_root(rond_houden,houd_rond) .
 lemma_root(rond_huppelen,huppel_rond) .
 lemma_root(rond_jagen,jaag_rond) .
 lemma_root(rond_kachelen,kachel_rond) .
@@ -13902,6 +13905,7 @@ lemma_root(tegemoet_hippen,hip_tegemoet) .
 lemma_root(tegemoet_hobbelen,hobbel_tegemoet) .
 lemma_root(tegemoet_hoeven,hoef_tegemoet) .
 lemma_root(tegemoet_hollen,hol_tegemoet) .
+lemma_root(tegemoet_houden,houd_tegemoet) .
 lemma_root(tegemoet_huppelen,huppel_tegemoet) .
 lemma_root(tegemoet_jagen,jaag_tegemoet) .
 lemma_root(tegemoet_kachelen,kachel_tegemoet) .

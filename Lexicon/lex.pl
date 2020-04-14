@@ -780,6 +780,7 @@ plural_suffix(boys).
 plural_suffix(breeders).
 plural_suffix(brigades).
 plural_suffix(brothers).
+plural_suffix(bulls).
 plural_suffix(busters).
 plural_suffix(byrds).
 plural_suffix(cardigans).
@@ -1792,6 +1793,7 @@ spelling_variant21(hoogst,persoonlijk,hoogstpersoonlijk).
 spelling_variant21(hoogst,waarschijnlijk,hoogstwaarschijnlijk).
 spelling_variant21(hoofd,rol,     hoofdrol).
 spelling_variant21(in,zover,      inzover).
+spelling_variant21(in,zake,       inzake).
 spelling_variant21(kijk,plezier,  kijkplezier).
 spelling_variant21(langs,daar,    daarlangs).  % VL
 spelling_variant21(langzaam,aan,  langzaamaan).

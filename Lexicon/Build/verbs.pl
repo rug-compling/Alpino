@@ -6015,9 +6015,8 @@ v(doe,doet,inflected(doen,doene),gedaan,deed,deden,
 	pc_pp(tegen),
 	alsof_sbar,                   % omdat hij deed alsof ...
 	                              % omdat hij deed alsof .
-	fixed([[aangifte]],imp_passive),
-	fixed([{[[aangifte],pc(van)]}],imp_passive),
-	fixed([{[[aangifte],er_pp(van,A)]},extra_sbar(A)],imp_passive),
+	fixed([{[acc(aangifte),pc(van)]}],imp_passive),
+	fixed([{[acc(aangifte),er_pp(van,A)]},extra_sbar(A)],imp_passive),
 	fixed([{[acc(aanval),pc(op)]}],norm_passive),
 	fixed([{[acc(afstand),pc(van)]}],imp_passive),
 	fixed([{[acc(beklag),pc(over)]}],norm_passive),
@@ -9118,7 +9117,8 @@ v(hang,hangt,hangen,gehangen,hing,hingen,
 	part_fixed(uit,[[de,beest]],no_passive),
 	part_fixed(uit,[[de,keel],dat],no_passive),
 	part_fixed(uit,[sbar_subj,[de,keel],dat],no_passive),
-	fixed([svp(aan,klok),sbar],no_passive),
+	fixed([svp_pp(aan,klok),sbar],no_passive),
+	fixed([svp_pp(aan,klok),acc],no_passive),
 	part_er_pp_sbar(af,van),
 	part_ld_pp(rond),
 	part_np_ld_pp(op),
@@ -9814,6 +9814,7 @@ v([houd,hou],houdt,houden,gehouden,hield,hielden,
 	intransitive,  % ik moet nog zien of de lijm houdt
 	np_ld_pp,
 	np_ld_adv,
+	np_ld_dir,  % we houden de beker omhoog
 	np_pc_pp_refl(voor),
 	np_pc_pp(aan),
 	part_np_np(voor),
@@ -11639,6 +11640,8 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
 	  part_sbar(af),	% Vlaams; Kom nu niet af dat ...
 	  part_pc_pp(af,op),
 	  part_pc_pp(af,van),   % we komen niet van hem af
+	  part_num_pred(voor),	% we komen 3-0 voor
+	  part_num_pred(achter),
 	  part_intransitive(achter), % omdat we toen heel vlug zijn achtergekomen
 	  part_intransitive(af),
 	  part_intransitive(bij),
@@ -15539,7 +15542,10 @@ v(onthul,onthult,onthullen,onthuld,onthulde,onthulden,
   [h([sbar,
       vp,
       np_mod_pp(van),
-      transitive])]).
+      transitive,
+      np_np,
+      so_pp_np
+     ])]).
 
 v(onthuts,onthutst,onthutsen,onthutst,onthutste,onthutsten,
     [h([sbar_subj_so_np,
@@ -23781,6 +23787,7 @@ v(verantwoord,verantwoordt,verantwoorden,verantwoord,verantwoordde,verantwoordde
     [h([% refl,
 	transitive,
 	sbar_obj,
+	sbar,
         so_pp_np,
         np_np,
 	np_pc_pp(tegenover),
@@ -28560,6 +28567,9 @@ v(zit,zit,zitten,gezeten,zat,zaten,
 	% omdat het er dik inzit dat hij komt
         part_fixed(in,[sbar_subj,{[[dik],svp_er]}],no_passive),
 
+	% het zat er aan te komen dat hij komt
+	fixed([vc(kom,te,intransitive),sbar_subj,er_pp(aan)],no_passive),
+	
 	fixed([svp_er_pp(op)],no_passive),  % het zit er weer op = it is finished
 	fixed([svp_er_pp(op),[bovenarms]],no_passive), % VLAAMS ruzie maken?
 	part_fixed(op,[[bovenarms],svp_er],no_passive), % idem
