@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" buiging="met-e" case="both" def="indef" end="1" gen="de" getal-n="mv-n" graad="basis" id="2" lemma="beide" naamval="stan" num="pl" pdtype="grad" per="thi" pos="pron" positie="nom" postag="VNW(onbep,grad,stan,nom,met-e,mv-n,basis)" pt="vnw" rel="su" rnum="pl" root="beide" vwtype="onbep" wh="nwh" word="Beide"/>
+      <node begin="1" end="2" id="3" infl="pl" lemma="zien" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="zie" sc="aci" stype="declarative" tense="past" word="zagen" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="4" index="1" rel="obj1">
+        <node begin="2" end="3" id="5" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="3" end="4" gen="de" getal="mv" graad="basis" id="6" lemma="verkoop" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="verkoop" word="verkopen"/>
+      </node>
+      <node begin="2" cat="inf" end="8" id="7" rel="vc">
+        <node begin="2" end="4" id="8" index="1" rel="su"/>
+        <node begin="4" cat="np" end="7" id="9" rel="mod">
+          <node begin="4" end="5" id="10" lemma="circa" pos="adv" postag="BW()" pt="bw" rel="mod" root="circa" sc="noun_prep" word="circa"/>
+          <node begin="5" cat="mwu" end="7" his="normal" his_1="number_tiende" id="11" mwu_root="een vijfde" mwu_sense="een vijfde" rel="hd">
+            <node begin="5" end="6" gen="both" genus="zijd" getal="ev" graad="basis" id="12" lemma="een" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" rnum="sg" root="een" special="mod" word="een"/>
+            <node begin="6" end="7" gen="both" genus="zijd" getal="ev" graad="basis" id="13" lemma="vijfde" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" rnum="sg" root="vijfde" special="mod" word="vijfde"/>
+          </node>
+        </node>
+        <node begin="7" buiging="zonder" end="8" id="14" infl="inf" lemma="toe_nemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem_toe" sc="part_intransitive(toe)" word="toenemen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Beide zagen de verkopen circa een vijfde toenemen .</sentence>
+</alpino_ds>

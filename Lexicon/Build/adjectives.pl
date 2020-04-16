@@ -635,6 +635,9 @@ a([e('Colombiaanse'),
 a([e('Congolese'),
    no_e('Congolees')],nonadv,[],[]).
 
+a([e(['Costa','Ricaanse']),
+   no_e(['Costa','Ricaans'])],nonadv,[],[]).
+
 a([e('Cubaanse'),
    no_e('Cubaans')],nonadv,[],[]).
 
@@ -37216,6 +37219,9 @@ a([ge_e(verplichte),
 a([ge_e(verpotte),
    ge_no_e(verpot)],adv,[],[]).
 
+a([ge_e(verprutste),
+   ge_no_e(verprutst)],adv,[],[]).
+
 a([ge_e(verpulverde),
    ge_no_e(verpulverd)],adv,[],[]).
 
@@ -40824,7 +40830,7 @@ a([e(zure),
    ere(zuurdere),
    no_e(zuur),
    st(zuurst),
-   ste(zuurste)],adv,[],[]).
+   ste(zuurste)],adv,[subject_sbar],[]).
 
 a([e(zware),
    er(zwaarder),

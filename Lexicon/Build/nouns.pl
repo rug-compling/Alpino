@@ -8348,8 +8348,13 @@ n([pl(dateringen),sg(datering)],de,[]).
 
 n([pl(datjes),sg(datje)],het,[]).
 
+%% informatie
+n([sg(data),pl(data)],de,[]).
+
+%% tijdstip
 n([pl(data),pl(datums),sg(datum)],de,[temp_mod,sbar]).
 
+%% tijdsip
 n([pl(data),pl(datums),sg(datum),
    ignore_stem(datum)],de,[],
   [s(houdbaarheid),

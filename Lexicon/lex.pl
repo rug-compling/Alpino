@@ -733,6 +733,7 @@ number_both(['Mujahedeen']).
 number_both(['NS']).
 number_both(['Nederlanden']).
 number_both(['Pinkstergemeenten']).
+number_both(['PS']).  % provinciale staten?
 number_both(['Pyreneeen']).
 number_both(['Staten','Generaal']).
 number_both(['Staten-Generaal']).
@@ -3159,6 +3160,12 @@ parse_only_lex(s,      '\'s middags',   tmp_adverb, [middags|X],   X).
 parse_only_lex(s,      '\'s morgens',   tmp_adverb, [morgens|X],   X).
 parse_only_lex(s,      '\'s nachts',    tmp_adverb, [nachts|X],    X).
 parse_only_lex(s,      '\'s ochtends',  tmp_adverb, [ochtends|X],  X).
+
+parse_only_lex(s,      '\'s avonds',    tmp_adverb, ['Avonds'|X],    X).
+parse_only_lex(s,      '\'s middags',   tmp_adverb, ['Middags'|X],   X).
+parse_only_lex(s,      '\'s morgens',   tmp_adverb, ['Morgens'|X],   X).
+parse_only_lex(s,      '\'s nachts',    tmp_adverb, ['Nachts'|X],    X).
+parse_only_lex(s,      '\'s ochtends',  tmp_adverb, ['Ochtends'|X],  X).
 
 parse_only_lex('\'',  '\'s avonds',    tmp_adverb, [savonds|X],    X).
 parse_only_lex('\'',  '\'s middags',   tmp_adverb, [smiddags|X],   X).

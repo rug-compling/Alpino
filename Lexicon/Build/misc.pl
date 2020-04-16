@@ -4922,6 +4922,13 @@ with_dt([in,totaal],
 	       obj1=l(totaal,noun(het,count,sg),np,1,2)
 	      ])).
 
+with_dt([in,ieder,geval],
+	modal_adverb(noun_prep),
+	dt(pp,[hd=l(in,preposition(in,[]),pp,0,1),
+	       obj1=dt(np,[det=l(ieder,determiner(het,nwh,mod),detp,1,2),
+			   hd=l(geval,noun(both,count,sg),np,2,3)])
+	      ])).
+
 m(amper,            modal_adverb(noun_prep),amper).
 m(circa,            modal_adverb(noun_prep),circa).
 m(geheel,           modal_adverb(noun_prep),geheel). % met geheel uw hart, geheel in de stijl van ..
@@ -8420,6 +8427,7 @@ term([dolce,far,niente]).
 term([drag,and,drop]).
 term([drag,'&',drop]).
 term([dramatis,personae]).
+term([drive,through,penalty],[drive,through,penalties]).
 term([droit,de,regard]).
 term([droit,de,suite]).
 term([easy,listening]).

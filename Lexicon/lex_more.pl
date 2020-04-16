@@ -3387,6 +3387,21 @@ meter_loper_meter('punten-',punt).
 meter_loper_meter('pixel-',pixel).
 meter_loper_meter('megapixel-',mega_pixel).
 
+meter_loper_meter(December,December) :-
+    date_month(December).
+meter_loper_meter(December,Dec) :-
+    alpino_unknowns:decap(December,Dec),
+    date_month(Dec).
+meter_loper_meter(December0,December) :-
+    atom(December0),
+    atom_concat(December,'-',December0),
+    date_month(December).
+meter_loper_meter(December,Dec) :-
+    atom(December0),
+    atom_concat(December,'-',December0),
+    alpino_unknowns:decap(December,Dec),
+    date_month(Dec).
+
 meter_loper_meter(Word,Stem) :-
     measure_tag(MeasureTag),
     xl(Word,MeasureTag,Stem,[],[]).
