@@ -287,8 +287,9 @@ m(v_root(ben,zijn),
 	    so_copula_sbar,     % het is me duidelijk dat ..
 	    so_copula_vp,       % het is me teveel om ../ het is me een genoegen ...
 	    sbar_subj_te_passive, % het is niet te vermijden dat ..
-	    sbar_subj_het,      % het is dat ik je vader ben
-                                % *dat ik je vader ben is.
+	    sbar_subj_het,	  % het is dat ik je vader ben
+                                  % *dat ik je vader ben is.
+	    
 	    alsof_sbar_subj,    % het is alsof je naast me staat
 	    ld_pp,              % ik ben in Assen
 	    ld_dir,		% ik ben het huis uit, etc
@@ -458,7 +459,8 @@ m(v_root(ben,zijn),
 %	    fixed([{[pc(van),np_pred(voorzitter)]}],no_passive),
 	    fixed([subj(vraag),pc(naar)],no_passive),
 	    fixed([subj(zicht),pc(op)],no_passive),
-	    pp_vp_subj(aan), % het is aan ons om...
+	    pp_vp_subj(aan),	% het is aan ons om...
+	    pp_sbar_subj(aan),  % hoe mensen reageren is niet aan ons
 	    fixed([pc(aan),[de,beurt]],no_passive),
                                 % nu is het de beurt aan ..
 	    fixed([no_subj,pc(aan),[de,beurt]],no_passive),
@@ -1911,6 +1913,7 @@ v(bedelf,bedelft,bedelven,bedolven,bedolf,bedolven,
 v(bedenk,bedenkt,bedenken,bedacht,bedacht,bedachten,
     [h([refl,
 	sbar,
+	refl_np,   % de grootste eer die ik me kan bedenken
 	refl_sbar, % we moeten ons bedenken dat ...
 	transitive,
 	np_pc_pp(bij),
@@ -2725,8 +2728,9 @@ v(beplant,beplant,beplanten,beplant,beplantte,beplantten,
 	np_mod_pp(met)])]).
 
 v(bepleit,bepleit,bepleiten,bepleit,bepleitte,bepleitten,
-    [h([sbar,
-	transitive])]).
+  [h([sbar,
+      vp,
+      transitive])]).
 
 v(bepraat,bepraat,bepraten,bepraat,bepraatte,bepraatten,
     [h([transitive])]).
@@ -5504,7 +5508,9 @@ v(deer,deert,deren,gedeerd,deerde,deerden,
 	vp_subj_so_np])]).
 
 v(definieer,definieert,definiëren,gedefinieerd,definieerde,definieerden,
-    [h([transitive])]).
+  [h([transitive,
+      sbar
+     ])]).
 
 v(degenereer,degenereert,degenereren,gedegenereerd,degenereerde,degenereerden,
     [z([intransitive])]).
@@ -8109,6 +8115,7 @@ v(geef,geeft,geven,gegeven,gaf,gaven,
 	part_transitive(terug),
 	part_transitive(toe),
 	part_transitive(uit),
+	part_intransitive(uit),  % Drentenaren geven het minst uit
 	part_als_pred_refl(uit), % zich uitgeven als iemand anders
 	part_ld_pp(uit),         % VL de weg geeft uit in de Gildenstraat
 	part_transitive(voor),
@@ -10871,6 +10878,7 @@ v(kijk,kijkt,kijken,gekeken,keek,keken,
 	part_intransitive(op),
 	part_intransitive(rond),
 	part_intransitive(terug),
+	part_transitive(terug),  % we kijken de opnames terug
 	part_intransitive(toe),
         part_intransitive(vooruit),
 	part_ld_pp(in),
@@ -13789,6 +13797,7 @@ v(luister,luistert,luisteren,geluisterd,luisterde,luisterden,
         part_intransitive(mee),
         part_intransitive(toe),
 	part_transitive(af),
+	part_intransitive(af),
 	part_transitive(op),
 	pc_pp(naar),
 	part_pc_pp(mee,naar),
@@ -14485,7 +14494,9 @@ v(misbruik,misbruikt,misbruiken,misbruikt,misbruikte,misbruikten,
 
 v(misdoe,misdoet,inflected(misdoen,misdoene),misdaan,misdeed,misdeden,
     [h([intransitive,
-	transitive])]).
+	transitive,
+	np_np  % wat heeft hij ons misdaan?
+       ])]).
 
 v(misgun,misgunt,misgunnen,misgund,misgunde,misgunden,
     [h([np_np])]).
@@ -16845,6 +16856,7 @@ v(pleister,pleistert,pleisteren,gepleisterd,pleisterde,pleisterden,
 v(pleit,pleit,pleiten,gepleit,pleitte,pleitten,
     [h([intransitive,
 	sbar,
+	vp,
 	transitive,
         part_transitive(vrij),
 	er_pp_sbar(voor),
@@ -17883,9 +17895,10 @@ v(refereer,refereert,refereren,gerefereerd,refereerde,refereerden,
        ])]).
 
 v(reflecteer,reflecteert,reflecteren,gereflecteerd,reflecteerde,reflecteerden,
-    [h([intransitive,
-	transitive,
-	pc_pp(op)])]).
+  [h([intransitive,
+      dip_sbar,
+      transitive,
+      pc_pp(op)])]).
 
 v(reformeer,reformeert,reformeren,gereformeerd,reformeerde,reformeerden,
     [h([transitive])]).
@@ -18900,9 +18913,9 @@ v(schaam,schaamt,schamen,geschaamd,schaamde,schaamden,
 	fixed([[rot],refl],no_passive)])]).
 
 v(schaar,schaart,scharen,geschaard,schaarde,schaarden,
-    [h([intransitive,
-	refl_ld_pp,  % onder hen schaarde zich de sopraan X
-	np_ld_pp])]).
+  [b([intransive]),		% de vrachtwagen was geschaard
+   h([refl_ld_pp,		% onder hen schaarde zich de sopraan X
+      np_ld_pp])]).
 
 v(schaats,schaatst,schaatsen,geschaatst,schaatste,schaatsten,
     [b([ld_pp,
@@ -21312,6 +21325,7 @@ v(sta,staat,inflected(staan,stane),gestaan,stond,stonden,
 	part_sbar_subj_no_het_tpart(vast),
 	part_sbar_subj_no_het_tpart(voorop),
 	part_sbar(toe),
+	fixed([[overeind],sbar_subj_no_het],no_passive),
 	part_sbar_subj(vast),
 	part_sbar_subj(voorop),
 	part_so_np(aan),
@@ -22942,6 +22956,7 @@ v(toon,toont,tonen,getoond,toonde,toonden,
 	sbar,
 	fixed([{[acc(belangstelling),pc(voor)]}],no_passive),
 	fixed([{[acc(interesse),pc(voor)]}],no_passive),
+	fixed([{[acc(interesse),pc(in)]}],no_passive),
 	so_pp_np,
 	so_pp_sbar,
 	transitive,
@@ -28495,6 +28510,7 @@ v(zit,zit,zitten,gezeten,zat,zaten,
 
         so_np_ld_pp,     % het is me in de genen gaan zitten
         
+	part_intransitive(dwars),  % dat kan dwars zitten
 	part_transitive(dwars),  % hij wordt dwars gezeten
 	part_fixed(dwars,[dat,sbar_subj],no_passive),
 	part_sbar_subj_np(dwars),
@@ -28855,6 +28871,17 @@ v(zwerm,zwermt,zwermen,gezwermd,zwermde,zwermden,
 	part_ld_adv(uit),
 	ld_adv,
 	ld_pp])]).
+
+v(zwets,zwetst,zwetsen,gezwetst,zwetste,zwetsten,
+    [h([intransitive,
+	part_intransitive(af),
+	part_intransitive(bij),
+	part_transitive(na),
+        part_pc_pp(aan,tegen),
+	np_ld_pp,
+	np_ld_adv,
+	mod_pp(met),
+	pc_pp(over)])]).
 
 v(zwicht,zwicht,zwichten,gezwicht,zwichtte,zwichtten,
     [unacc([intransitive,

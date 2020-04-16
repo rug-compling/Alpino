@@ -472,13 +472,31 @@ unknown_word_heuristic(P1,R1,W,Ws,"cap|~p|~p|~p~n",[W,Wmin,[Th|Tt]],_,none) :-
 %% DONE? spurious analyses for different capitalized prefixes where
 %% such prefixes are not used at all
 %% DONE? this is extremely slow for long capitalized sequences too
-unknown_word_heuristic(P1,R1,W,Ws0,Mess,Args,Rest,none) :-
+unknown_word_heuristic(P1,R1,W,Ws0,Mess,Args,Rest,None) :-
     only_capitals(W,W1),
     !,
-    \+ tag(P1,_,_,_,_,_,special(decap(_)),_),
-    only_capitals_prefix(Ws0,Ws,P1,P,0,4),
-    Len is 1+P-P1,
-    unknown_word_heuristic(P1,R1,W1,Ws,Mess,Args,Rest,len(Len)).
+    (   \+ tag(P1,_,_,_,_,_,special(decap(_)),_),
+	only_capitals_prefix(Ws0,Ws,P1,P,0,4),
+	Len is 1+P-P1,
+	None = none,
+	unknown_word_heuristic(P1,R1,W1,Ws,Mess,Args,Rest,len(Len))
+    ;		   % this is a copy of the heuristic prefix_name below
+	           % for cases such as ESA-ESTEC
+	Mess = "prefix_name|~p|~p|~p~n",
+	Args = [W,Wmin,[Th|Tt]],
+	None = len(1),
+	    debug_message(3,"trying heuristic prefix_name~n",[]),
+	\+ tag(P1,_,_,_,_,_,decap(_),_),
+	\+ tag(P1,_,_,_,_,_,special(decap(_)),_),
+	findall(Wfirst-Wmin,guess_prefix_compound(W,Wfirst,Wmin),Wmins0),
+	sort(Wmins0,Wmins),
+	member(Wfirst-Wmin,Wmins),
+	findall(Tag,
+		alternative_proper_name(Wfirst,Wmin,P1,R1,prefix_name,Tag),
+		[Th|Tt])
+    ).
+
+
 
 unknown_word_heuristic(P1,R1,W,Ws,"strip_diacritics|~p|~p|~p~n",
 		       [W,Wmin,[Th|Tt]],_,HIS) :-
@@ -814,7 +832,7 @@ unknown_word_heuristic(P1,R1,W,_Ws,"ninv_dt|~p|~p~n",[W,Tags],_,_) :-
 	    Tags
 	   ).
 
-unknown_word_heuristic(P1,R1,W,_Ws,"prefix_name|~p|~p|~p~n",
+unknown_word_heuristic(P1,R1,W,_,"prefix_name|~p|~p|~p~n",
 		       [W,Wmin,[Th|Tt]],_,len(1)) :-
     debug_message(3,"trying heuristic prefix_name~n",[]),
     \+ tag(P1,_,_,_,_,_,decap(_),_),
@@ -2234,6 +2252,7 @@ function('Oppositieleider').
 function('Oppositieleidster').
 function('Oprichter').
 function('Oprichtster').
+function('Organisatie').
 function('Organisator').
 function('Organisatrice').
 function('Outsider').
@@ -3208,11 +3227,16 @@ form_of_suffix_rule('\'s','',determiner(pron),capital).
 
 
 guess_using_suffix0(Word,Prefix,Suffix,MinLengthPrefix,MinLengthSuffix) :-
+    \+ guess_using_suffix_exception(Word),
     atom(Word),
     between(MinLengthSuffix,8,SuffixLength,'-'),
     sub_atom(Word,_,SuffixLength,0,Suffix),
     atom_concat(Prefix,Suffix,Word),
     atom_length(Prefix,A), A>MinLengthPrefix.
+
+guess_using_suffix_exception(Word) :-
+    atom(Word),
+    atom_concat(_,mogelijkheden,Word).
 
 strip_accents(Word0,Word) :-
     atom(Word0),

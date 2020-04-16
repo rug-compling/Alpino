@@ -1633,6 +1633,7 @@ with_dt_all(geloof,[ik]).
 with_dt_all(geloof,[niet,te]).
 with_dt_all(gemeentewege,[van]).
 with_dt_all(genoeg,[jammer]).
+with_dt_all(geval,[ieder,in]).
 with_dt_all(ginder,[langs]).
 with_dt_all(gisteravond,[later]).
 with_dt_all(gisterenavond,[later]).
@@ -2631,6 +2632,7 @@ with_dt_root(gelijk).
 with_dt_root(geloof).
 with_dt_root(gemeentewege).
 with_dt_root(genoeg).
+with_dt_root(geval).
 with_dt_root(giet).
 with_dt_root(ginder).
 with_dt_root(gisteravond).
@@ -2694,6 +2696,7 @@ with_dt_root(hoor).
 with_dt_root(huize).
 with_dt_root(huizen).
 with_dt_root(hun).
+with_dt_root(ieder).
 with_dt_root(iedere).
 with_dt_root(iedereen).
 with_dt_root(iemand).

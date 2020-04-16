@@ -653,6 +653,7 @@ lemma_root(aan_zwengelen,zwengel_aan) .
 lemma_root(aan_zwenken,zwenk_aan) .
 lemma_root(aan_zwermen,zwerm_aan) .
 lemma_root(aan_zwerven,zwerf_aan) .
+lemma_root(aan_zwetsen,zwets_aan) .
 lemma_root(aan_zweven,zweef_aan) .
 lemma_root(aan_zwiepen,zwiep_aan) .
 lemma_root(aan_zwieren,zwier_aan) .
@@ -1695,6 +1696,7 @@ lemma_root(af_zwenken,zwenk_af) .
 lemma_root(af_zweren,zweer_af) .
 lemma_root(af_zwermen,zwerm_af) .
 lemma_root(af_zwerven,zwerf_af) .
+lemma_root(af_zwetsen,zwets_af) .
 lemma_root(af_zweven,zweef_af) .
 lemma_root(af_zwiepen,zwiep_af) .
 lemma_root(af_zwieren,zwier_af) .
@@ -2235,6 +2237,7 @@ lemma_root(bij_werken,werk_bij) .
 lemma_root(bij_winnen,win_bij) .
 lemma_root(bij_wonen,woon_bij) .
 lemma_root(bij_zetten,zet_bij) .
+lemma_root(bij_zwetsen,zwets_bij) .
 lemma_root(biljarten,biljart) .
 lemma_root(billijken,billijk) .
 lemma_root(binden,bind) .
@@ -5503,6 +5506,7 @@ lemma_root(door_zweren,zweer_door) .
 lemma_root(door_zwermen,zwerm_door) .
 lemma_root(door_zwerven,zwerf_door) .
 lemma_root(door_zweten,zweet_door) .
+lemma_root(door_zwetsen,zwets_door) .
 lemma_root(door_zweven,zweef_door) .
 lemma_root(door_zwichten,zwicht_door) .
 lemma_root(door_zwiepen,zwiep_door) .
@@ -6526,6 +6530,7 @@ lemma_root(heen_zwemmen,zwem_heen) .
 lemma_root(heen_zwenken,zwenk_heen) .
 lemma_root(heen_zwermen,zwerm_heen) .
 lemma_root(heen_zwerven,zwerf_heen) .
+lemma_root(heen_zwetsen,zwets_heen) .
 lemma_root(heen_zweven,zweef_heen) .
 lemma_root(heen_zwiepen,zwiep_heen) .
 lemma_root(heen_zwieren,zwier_heen) .
@@ -7437,6 +7442,7 @@ lemma_root(in_zwenken,zwenk_in) .
 lemma_root(in_zweren,zweer_in) .
 lemma_root(in_zwermen,zwerm_in) .
 lemma_root(in_zwerven,zwerf_in) .
+lemma_root(in_zwetsen,zwets_in) .
 lemma_root(in_zweven,zweef_in) .
 lemma_root(in_zwiepen,zwiep_in) .
 lemma_root(in_zwieren,zwier_in) .
@@ -8364,6 +8370,7 @@ lemma_root(langs_zwemmen,zwem_langs) .
 lemma_root(langs_zwenken,zwenk_langs) .
 lemma_root(langs_zwermen,zwerm_langs) .
 lemma_root(langs_zwerven,zwerf_langs) .
+lemma_root(langs_zwetsen,zwets_langs) .
 lemma_root(langs_zweven,zweef_langs) .
 lemma_root(langs_zwiepen,zwiep_langs) .
 lemma_root(langs_zwieren,zwier_langs) .
@@ -8792,6 +8799,7 @@ lemma_root(na_wijzen,wijs_na) .
 lemma_root(na_zeggen,zeg_na) .
 lemma_root(na_zinderen,zinder_na) .
 lemma_root(na_zwaaien,zwaai_na) .
+lemma_root(na_zwetsen,zwets_na) .
 lemma_root(neer_buigen,buig_neer) .
 lemma_root(neer_dalen,daal_neer) .
 lemma_root(neer_drukken,druk_neer) .
@@ -12036,7 +12044,6 @@ lemma_root(raak_schaken,schaak_raak) .
 lemma_root(raak_schallen,schal_raak) .
 lemma_root(raak_schampen,schamp_raak) .
 lemma_root(raak_schamperen,schamper_raak) .
-lemma_root(raak_scharen,schaar_raak) .
 lemma_root(raak_scharnieren,scharnier_raak) .
 lemma_root(raak_scharrelen,scharrel_raak) .
 lemma_root(raak_schateren,schater_raak) .
@@ -12886,6 +12893,7 @@ lemma_root(raak_zweren,zweer_raak) .
 lemma_root(raak_zwermen,zwerm_raak) .
 lemma_root(raak_zwerven,zwerf_raak) .
 lemma_root(raak_zweten,zweet_raak) .
+lemma_root(raak_zwetsen,zwets_raak) .
 lemma_root(raak_zweven,zweef_raak) .
 lemma_root(raak_zwichten,zwicht_raak) .
 lemma_root(raak_zwiepen,zwiep_raak) .
@@ -14903,6 +14911,7 @@ lemma_root(toe_zwemmen,zwem_toe) .
 lemma_root(toe_zwenken,zwenk_toe) .
 lemma_root(toe_zwermen,zwerm_toe) .
 lemma_root(toe_zwerven,zwerf_toe) .
+lemma_root(toe_zwetsen,zwets_toe) .
 lemma_root(toe_zweven,zweef_toe) .
 lemma_root(toe_zwiepen,zwiep_toe) .
 lemma_root(toe_zwieren,zwier_toe) .
@@ -15551,6 +15560,7 @@ lemma_root(tussen_zwemmen,zwem_tussen) .
 lemma_root(tussen_zwenken,zwenk_tussen) .
 lemma_root(tussen_zwermen,zwerm_tussen) .
 lemma_root(tussen_zwerven,zwerf_tussen) .
+lemma_root(tussen_zwetsen,zwets_tussen) .
 lemma_root(tussen_zweven,zweef_tussen) .
 lemma_root(tussen_zwiepen,zwiep_tussen) .
 lemma_root(tussen_zwieren,zwier_tussen) .
@@ -17827,6 +17837,7 @@ lemma_root(uit_zweren,zweer_uit) .
 lemma_root(uit_zwermen,zwerm_uit) .
 lemma_root(uit_zwerven,zwerf_uit) .
 lemma_root(uit_zweten,zweet_uit) .
+lemma_root(uit_zwetsen,zwets_uit) .
 lemma_root(uit_zweven,zweef_uit) .
 lemma_root(uit_zwiepen,zwiep_uit) .
 lemma_root(uit_zwieren,zwier_uit) .
@@ -18445,6 +18456,7 @@ lemma_root(vanaf_zwemmen,zwem_vanaf) .
 lemma_root(vanaf_zwenken,zwenk_vanaf) .
 lemma_root(vanaf_zwermen,zwerm_vanaf) .
 lemma_root(vanaf_zwerven,zwerf_vanaf) .
+lemma_root(vanaf_zwetsen,zwets_vanaf) .
 lemma_root(vanaf_zweven,zweef_vanaf) .
 lemma_root(vanaf_zwiepen,zwiep_vanaf) .
 lemma_root(vanaf_zwieren,zwier_vanaf) .
@@ -19027,6 +19039,7 @@ lemma_root(vandaan_zwemmen,zwem_vandaan) .
 lemma_root(vandaan_zwenken,zwenk_vandaan) .
 lemma_root(vandaan_zwermen,zwerm_vandaan) .
 lemma_root(vandaan_zwerven,zwerf_vandaan) .
+lemma_root(vandaan_zwetsen,zwets_vandaan) .
 lemma_root(vandaan_zweven,zweef_vandaan) .
 lemma_root(vandaan_zwiepen,zwiep_vandaan) .
 lemma_root(vandaan_zwieren,zwier_vandaan) .
@@ -19608,6 +19621,7 @@ lemma_root(vandoor_zwemmen,zwem_vandoor) .
 lemma_root(vandoor_zwenken,zwenk_vandoor) .
 lemma_root(vandoor_zwermen,zwerm_vandoor) .
 lemma_root(vandoor_zwerven,zwerf_vandoor) .
+lemma_root(vandoor_zwetsen,zwets_vandoor) .
 lemma_root(vandoor_zweven,zweef_vandoor) .
 lemma_root(vandoor_zwiepen,zwiep_vandoor) .
 lemma_root(vandoor_zwieren,zwier_vandoor) .
@@ -21899,7 +21913,6 @@ lemma_root(voort_schaken,schaak_voort) .
 lemma_root(voort_schallen,schal_voort) .
 lemma_root(voort_schampen,schamp_voort) .
 lemma_root(voort_schamperen,schamper_voort) .
-lemma_root(voort_scharen,schaar_voort) .
 lemma_root(voort_scharnieren,scharnier_voort) .
 lemma_root(voort_scharrelen,scharrel_voort) .
 lemma_root(voort_schateren,schater_voort) .
@@ -22751,6 +22764,7 @@ lemma_root(voort_zweren,zweer_voort) .
 lemma_root(voort_zwermen,zwerm_voort) .
 lemma_root(voort_zwerven,zwerf_voort) .
 lemma_root(voort_zweten,zweet_voort) .
+lemma_root(voort_zwetsen,zwets_voort) .
 lemma_root(voort_zweven,zweef_voort) .
 lemma_root(voort_zwichten,zwicht_voort) .
 lemma_root(voort_zwiepen,zwiep_voort) .
@@ -23143,6 +23157,7 @@ lemma_root(zweren,zweer) .
 lemma_root(zwermen,zwerm) .
 lemma_root(zwerven,zwerf) .
 lemma_root(zweten,zweet) .
+lemma_root(zwetsen,zwets) .
 lemma_root(zweven,zweef) .
 lemma_root(zwichten,zwicht) .
 lemma_root(zwiepen,zwiep) .
