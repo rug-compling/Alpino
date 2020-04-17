@@ -1159,6 +1159,16 @@ end_hook(generate,_A,_B,_C) :-
 %% hdrug_hook
 %% goal: replace numbers by atoms
 
+extern_phon([],L) :-
+    !,
+    format(user_error,"sentence: ",[]),
+    ttyflush,    
+    read_line(Codes),
+    alpino_util:codes_to_words(Codes,Words),
+    (   Words == []
+    ->  raise_exception(alpino_error('Cowardly refusing to parse an empty sentence'))
+    ;   extern_phon(Words,L)
+    ).
 extern_phon(L0,L) :-
     nonvar(L0),
     replace_numbers_by_atoms(L0,L1),  % also removes spaces
