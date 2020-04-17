@@ -29929,6 +29929,9 @@ a([e(plotsklapse),
 a([stof(pluche),
    stof(pluchen)],nonadv,[],[]).
 
+a([prefix(plugin),
+   prefix('plug-in')],nonadv,[],[]).
+
 a([pred(pluis)],nonadv,[],[]).
 
 a([e(pluizige),

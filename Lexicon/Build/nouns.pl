@@ -13699,6 +13699,8 @@ n([pl(grootten),pl(groottes),sg(grootte)],de,[],
 
 n([pl(grootvaders),sg(grootvader)],de,[]).
 
+n([sg(grootverdiener),pl(grootverdieners)],de,[]).
+
 n([sg(gros),pl(grossen)],het,[meas_mod,measure]).
 
 n([pl(grossen),sg(grosse)],de,[]).
@@ -37604,9 +37606,10 @@ n([pl(vlotten),sg(vlot)],het,[],[dim(vlotje)]).
 
 n([sg(vlotter),pl(vlotters)],de,[]).
 
-n([pl(vluchten),sg(vlucht)],de,[measure,pred_pp(op)],[]).  % regenwulpen
+n([pl(vluchten),sg(vlucht)],de,[measure,
+				pred_pp(op)],[]). % regenwulpen
 
-n([pl(vluchten),sg(vlucht)],de,[],
+n([pl(vluchten),sg(vlucht)],de,[temp_mod],
   [f([award]),
    avond,
    belasting,
@@ -40471,7 +40474,9 @@ n([pl(zetten),sg(zet)],de,[],
    tussen,
    dim(zetje)]).
 
-n([pl(zetels),sg(zetel)],de,[measure],
+n([pl(zetels),sg(zetel)],de,[measure,
+			     meas_mod  % dalen twee zetels in de peiling
+			    ],
   [hoofd,
    kamer,'Kamer',
    s(parlement),

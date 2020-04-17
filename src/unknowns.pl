@@ -2274,6 +2274,7 @@ function('President').
 function('Producent').
 function('Producente').
 function('Raadsman').
+function('Rapper').
 function('Rapporteur').  % europarl
 function('Rechter').
 function('Regisseur').
