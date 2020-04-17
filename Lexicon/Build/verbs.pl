@@ -1161,6 +1161,7 @@ m(v_root(Inf,Inf),verb(Inf,hebben,inf,[intransitive])) :-
 % ik wil weer gaan skispringen
 
 inf_only_sport(allroundschaatsen).
+inf_only_sport(allrounden).
 inf_only_sport(alpineskiën).
 inf_only_sport(baanwielrennen).
 inf_only_sport(backpacken).
@@ -1215,6 +1216,7 @@ inf_only_sport(nachtvliegen).
 inf_only_sport(oppositievoeren).
 inf_only_sport(paalzitten).
 inf_only_sport(parachutespringen).
+inf_only_sport(pleasen).
 inf_only_sport(polsstokhoogspringen).
 inf_only_sport(prijsschieten).
 inf_only_sport(profwielrennen).
@@ -3303,7 +3305,8 @@ v(betitel,betitelt,betitelen,betiteld,betitelde,betitelden,
 	np_pc_pp(met)])]).
 
 v(betoog,betoogt,betogen,betoogd,betoogde,betoogden,
-    [h([sbar,
+  [h([sbar,
+      vp,
 	transitive,
 	intransitive,  % VL: demonstreert/protesteert
 	pc_pp(tegen),
@@ -12366,6 +12369,7 @@ v(kruisig,kruisigt,kruisigen,gekruisigd,kruisigde,kruisigden,
 v(krul,krult,krullen,gekruld,krulde,krulden,
     [h([intransitive,
 	transitive,
+	ld_dir,  % haar mondhoeken krullen omhoog
 	refl_pc_pp(om)])]).
 
 v(kuch,kucht,kuchen,gekucht,kuchte,kuchten,
@@ -16422,6 +16426,7 @@ v(parkeer,parkeert,parkeren,geparkeerd,parkeerde,parkeerden,
     [h([intransitive,
 	transitive,
 	part_intransitive(in),
+	part_transitive(in), % de auto kan zichzelf inparkeren
 	ld_pp,
 	ld_adv,
 	np_ld_pp,
@@ -18405,6 +18410,7 @@ v(rijt,rijt,rijten,gereten,reet,reten,
     [h([np_np,
 	np_pc_pp(aan),
         part_transitive(uiteen),
+	np_ld_pp,  % uit elkaar rijten
 	part_sbar_subj_so_np(open),
 	part_transitive(open)])]).
 
