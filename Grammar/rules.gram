@@ -2877,6 +2877,7 @@ grammar_rule(deverbal_v_inv_v_v,VP, [Psp, V] ) :-
 grammar_rule(dip_sv1,DIPP,[DIP]) :-
     DIPP => dip,
     DIP => sv1,
+    DIP:subj:allows_drop => no,
     DIP:can_be_max => yes,
     DIP:slash <=> [SbarArg],
     DIP:iexs => [],
@@ -3237,7 +3238,7 @@ grammar_rule(start_max_denk_ik,START,[NUCL,TAG]) :-
     NUCL => start,
     TAG => denk_ik,
     nucl_tag_structure(NUCL,TAG,START).
-	     
+
 %% Hij is gek ! , riep ik
 grammar_rule(start_max_dip,START,[NUCL,OPTPUNCT,COMMA,TAG]) :-
     START => max,

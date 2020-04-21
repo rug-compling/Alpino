@@ -133,6 +133,7 @@ add_new_subcat_frame(er_pp_vp(Prep),part_er_vp(Prep),Orig) :-
 
 add_new_subcat_frame(intransitive,part_intransitive(Voort),_Orig) :-
     productive_particle(Voort).
+add_new_subcat_frame(het_subj,part_het_subj(door),_Orig).   % het sneeuwt/regent maar door
 
 %% eropuit = er op uit
 add_new_subcat_frame(part_pc_pp(uit,op),pc_pp(uit_op),_).
