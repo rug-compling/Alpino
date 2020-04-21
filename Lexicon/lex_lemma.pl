@@ -12077,6 +12077,7 @@ lemma_root(raak_schaken,schaak_raak) .
 lemma_root(raak_schallen,schal_raak) .
 lemma_root(raak_schampen,schamp_raak) .
 lemma_root(raak_schamperen,schamper_raak) .
+lemma_root(raak_scharen,schaar_raak) .
 lemma_root(raak_scharnieren,scharnier_raak) .
 lemma_root(raak_scharrelen,scharrel_raak) .
 lemma_root(raak_schateren,schater_raak) .
@@ -21957,6 +21958,7 @@ lemma_root(voort_schaken,schaak_voort) .
 lemma_root(voort_schallen,schal_voort) .
 lemma_root(voort_schampen,schamp_voort) .
 lemma_root(voort_schamperen,schamper_voort) .
+lemma_root(voort_scharen,schaar_voort) .
 lemma_root(voort_scharnieren,scharnier_voort) .
 lemma_root(voort_scharrelen,scharrel_voort) .
 lemma_root(voort_schateren,schater_voort) .
