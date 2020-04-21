@@ -3209,7 +3209,7 @@ a([e(ambtelijke),
 a([both(ambtshalve)],adv,[],[]).
 
 a([e(ambulante),
-   no_e(ambulant)],nonadv,[],[]).
+   no_e(ambulant)],adv,[],[]).
 
 a([e(amechtige),
    no_e(amechtig)],adv,[],[]).
@@ -7398,7 +7398,11 @@ a([e(converteerbare),
   [pp(naar)],[]).
 
 a([e(coole),
-   no_e(cool)],adv,[],[]).
+   no_e(cool),
+   er(cooler),
+   ere(coolere),
+   st(coolst),
+   ste(coolste)],adv,[],[]).
 
 a([e(coöperatieve),
    e(koöperatieve),

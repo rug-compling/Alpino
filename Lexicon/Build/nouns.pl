@@ -27182,6 +27182,9 @@ n([pl('privé-levens'),sg('privé-leven'),
 
 n([pl('pro\'s'),sg(pro)],de,[]).
 
+n([sg([pro,forma]),pl([pro,'forma\'s']),
+   sg('pro-forma'),pl('pro-forma\'s')],de,[]).
+
 n([sg([pro,formazaak]),pl([pro,formazaken])],de,[]).
 
 n([sg([pro,formazitting]),pl([pro,formazittingen])],de,[]).
@@ -27711,6 +27714,8 @@ n([sg(punt),pl(punten),
 n([sg(punter),pl(punters)],de,[]).
 
 n([pl(pups),sg(pup)],de,[]).
+
+n([pl(puppies),sg(puppy),sg(puppie)],de,[]).
 
 n([pl(pupillen),sg(pupil)],de,[]).
 

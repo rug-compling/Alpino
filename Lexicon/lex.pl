@@ -847,6 +847,7 @@ plural_suffix(jumpers).
 plural_suffix(kids).
 plural_suffix(kinks).
 plural_suffix(lemonheads).
+plural_suffix(lions).
 plural_suffix(lips).
 plural_suffix(llamas).
 plural_suffix(lovers).

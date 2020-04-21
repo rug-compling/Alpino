@@ -5034,6 +5034,7 @@ m(temeer,           modal_adverb(comp), [te,meer]).  % temeer daar/omdat
 
 m(desnoods,         modal_adverb(prep),desnoods).
 m(dicht,            modal_adverb(prep),dicht).    % dicht tegen zich aan ; dicht bij de macht?
+m(diep,             modal_adverb(prep),diep).     % diep in blessuretijd
 m(dwars,            modal_adverb(prep),dwars).    % dwars door
 m(elders,           modal_adverb(prep),elders).   % kerken elders in Nederland
 m(hoog,             modal_adverb(prep),hoog).     % hoog boven de wolken

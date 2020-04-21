@@ -3043,6 +3043,7 @@ lemma_root(door_belanden,beland_door) .
 lemma_root(door_beleggen,beleg_door) .
 lemma_root(door_belemmeren,belemmer_door) .
 lemma_root(door_belenen,beleen_door) .
+lemma_root(door_believen,belief_door) .
 lemma_root(door_belijden,belijd_door) .
 lemma_root(door_bellen,bel_door) .
 lemma_root(door_beloven,beloof_door) .
@@ -3367,6 +3368,7 @@ lemma_root(door_dompelen,dompel_door) .
 lemma_root(door_donderen,donder_door) .
 lemma_root(door_doneren,doneer_door) .
 lemma_root(door_doodslaan,doodslaan_door) .
+lemma_root(door_dooien,dooi_door) .
 lemma_root(door_doorlezen,doorlees_door) .
 lemma_root(door_doppen,dop_door) .
 lemma_root(door_doseren,doseer_door) .
@@ -3638,6 +3640,7 @@ lemma_root(door_gutsen,guts_door) .
 lemma_root(door_gymen,gym_door) .
 lemma_root(door_haasten,haast_door) .
 lemma_root(door_hacken,hack_door) .
+lemma_root(door_hagelen,hagel_door) .
 lemma_root(door_haken,haak_door) .
 lemma_root(door_hakkelen,hakkel_door) .
 lemma_root(door_hakken,hak_door) .
@@ -3743,6 +3746,7 @@ lemma_root(door_hypnotiseren,hypnotiseer_door) .
 lemma_root(door_ijlen,ijl_door) .
 lemma_root(door_ijsberen,ijsbeer_door) .
 lemma_root(door_ijshockeyen,ijshockey_door) .
+lemma_root(door_ijzelen,ijzel_door) .
 lemma_root(door_illustreren,illustreer_door) .
 lemma_root(door_imiteren,imiteer_door) .
 lemma_root(door_imponeren,imponeer_door) .
@@ -4134,6 +4138,7 @@ lemma_root(door_miauwen,miauw_door) .
 lemma_root(door_middelen,middel_door) .
 lemma_root(door_mieren,mier_door) .
 lemma_root(door_mierenneuken,mierenneuken_door) .
+lemma_root(door_miezeren,miezer_door) .
 lemma_root(door_migreren,migreer_door) .
 lemma_root(door_mijmeren,mijmer_door) .
 lemma_root(door_mikken,mik_door) .
@@ -4147,6 +4152,7 @@ lemma_root(door_misleiden,misleid_door) .
 lemma_root(door_mislukken,misluk_door) .
 lemma_root(door_missen,mis_door) .
 lemma_root(door_misstaan,missta_door) .
+lemma_root(door_misten,mist_door) .
 lemma_root(door_mixen,mix_door) .
 lemma_root(door_modderen,modder_door) .
 lemma_root(door_modderworstelen,modderworstelen_door) .
@@ -4170,6 +4176,7 @@ lemma_root(door_morsen,mors_door) .
 lemma_root(door_motiveren,motiveer_door) .
 lemma_root(door_motorcrossen,motorcrossen_door) .
 lemma_root(door_motorrijden,motorrijden_door) .
+lemma_root(door_motregenen,motregen_door) .
 lemma_root(door_mousseren,mousseer_door) .
 lemma_root(door_mummelen,mummel_door) .
 lemma_root(door_murmelen,murmel_door) .
@@ -4266,6 +4273,7 @@ lemma_root(door_ontwerpen,ontwerp_door) .
 lemma_root(door_ontwikkelen,ontwikkel_door) .
 lemma_root(door_ontwortelen,ontwortel_door) .
 lemma_root(door_ontwrichten,ontwricht_door) .
+lemma_root(door_onweren,onweer_door) .
 lemma_root(door_oogsten,oogst_door) .
 lemma_root(door_oordelen,oordeel_door) .
 lemma_root(door_oormerken,oormerk_door) .
@@ -4751,6 +4759,7 @@ lemma_root(door_snakken,snak_door) .
 lemma_root(door_snappen,snap_door) .
 lemma_root(door_snateren,snater_door) .
 lemma_root(door_snauwen,snauw_door) .
+lemma_root(door_sneeuwen,sneeuw_door) .
 lemma_root(door_snellen,snel_door) .
 lemma_root(door_snelwandelen,snelwandel_door) .
 lemma_root(door_sneren,sneer_door) .
@@ -4889,6 +4898,7 @@ lemma_root(door_stoppen,stop_door) .
 lemma_root(door_storen,stoor_door) .
 lemma_root(door_stormen,storm_door) .
 lemma_root(door_storten,stort_door) .
+lemma_root(door_stortregenen,stortregen_door) .
 lemma_root(door_stoten,stoot_door) .
 lemma_root(door_stotteren,stotter_door) .
 lemma_root(door_stouwen,stouw_door) .
@@ -5387,6 +5397,7 @@ lemma_root(door_weeklagen,weeklaag_door) .
 lemma_root(door_weergalmen,weergalm_door) .
 lemma_root(door_weerkaatsen,weerkaats_door) .
 lemma_root(door_weerklinken,weerklink_door) .
+lemma_root(door_weerlichten,weerlicht_door) .
 lemma_root(door_wegen,weeg_door) .
 lemma_root(door_weiden,weid_door) .
 lemma_root(door_weifelen,weifel_door) .
@@ -5424,6 +5435,7 @@ lemma_root(door_wimpelen,wimpel_door) .
 lemma_root(door_winden,wind_door) .
 lemma_root(door_winkelen,winkel_door) .
 lemma_root(door_winnen,win_door) .
+lemma_root(door_winteren,winter_door) .
 lemma_root(door_wippen,wip_door) .
 lemma_root(door_wisselen,wissel_door) .
 lemma_root(door_witten,wit_door) .
@@ -5485,6 +5497,7 @@ lemma_root(door_zoenen,zoen_door) .
 lemma_root(door_zoeten,zoet_door) .
 lemma_root(door_zoeven,zoef_door) .
 lemma_root(door_zogen,zoog_door) .
+lemma_root(door_zomeren,zomer_door) .
 lemma_root(door_zondigen,zondig_door) .
 lemma_root(door_zonnebaden,zonnebaad_door) .
 lemma_root(door_zonnen,zon_door) .
