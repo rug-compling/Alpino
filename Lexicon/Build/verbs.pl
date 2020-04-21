@@ -18918,7 +18918,7 @@ v(schaam,schaamt,schamen,geschaamd,schaamde,schaamden,
 	fixed([[rot],refl],no_passive)])]).
 
 v(schaar,schaart,scharen,geschaard,schaarde,schaarden,
-  [b([intransive]),		% de vrachtwagen was geschaard
+  [b([intransitive]),		% de vrachtwagen was geschaard
    h([refl_ld_pp,		% onder hen schaarde zich de sopraan X
       np_ld_pp])]).
 
