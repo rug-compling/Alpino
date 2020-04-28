@@ -1361,7 +1361,7 @@ with_dt_all(dertiental,[een]).
 with_dt_all(dertig,[en,tussen,twintig]).
 with_dt_all(dertig,[en,tussen,veertig]).
 with_dt_all(dertigtal,[een]).
-with_dt_all(des,[te,meer]).
+with_dt_all(des,[te,veel]).
 with_dt_all(de,[tijd]).
 with_dt_all(de,[vaderland]).
 with_dt_all(de,[veld]).
@@ -1633,6 +1633,7 @@ with_dt_all(geloof,[ik]).
 with_dt_all(geloof,[niet,te]).
 with_dt_all(gemeentewege,[van]).
 with_dt_all(genoeg,[jammer]).
+with_dt_all(geval,[ieder,in]).
 with_dt_all(ginder,[langs]).
 with_dt_all(gisteravond,[later]).
 with_dt_all(gisterenavond,[later]).
@@ -1867,7 +1868,6 @@ with_dt_all(majesteit,[zijn]).
 with_dt_all(mam,[ons]).
 with_dt_all(ma,[ons]).
 with_dt_all(meerdere,[of,één]).
-with_dt_all(meer,[of,één]).
 with_dt_all(men,[zie]).
 with_dt_all(meteen,[vrijwel]).
 with_dt_all(met,[negenen,ons]).
@@ -2021,6 +2021,7 @@ with_dt_all('\'n',[stelletje]).
 with_dt_all(nummer,[positie,één]).
 with_dt_all(nu,[waarom,weer]).
 with_dt_all(of,[omgekeerd]).
+with_dt_all(of,[veel,één]).
 with_dt_all(of,[vice,versa]).
 with_dt_all(of,[wat,wie]).
 with_dt_all(of,[wel]).
@@ -2631,6 +2632,7 @@ with_dt_root(gelijk).
 with_dt_root(geloof).
 with_dt_root(gemeentewege).
 with_dt_root(genoeg).
+with_dt_root(geval).
 with_dt_root(giet).
 with_dt_root(ginder).
 with_dt_root(gisteravond).
@@ -2694,6 +2696,7 @@ with_dt_root(hoor).
 with_dt_root(huize).
 with_dt_root(huizen).
 with_dt_root(hun).
+with_dt_root(ieder).
 with_dt_root(iedere).
 with_dt_root(iedereen).
 with_dt_root(iemand).

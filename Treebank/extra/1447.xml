@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="0" cat="smain" end="14" id="1" rel="--">
+      <node begin="0" cat="cp" end="10" id="2" rel="su">
+        <node begin="0" conjtype="onder" end="1" id="3" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="Dat"/>
+        <node begin="1" cat="ssub" end="10" id="4" rel="body">
+          <node begin="1" end="2" genus="onz" getal="ev" id="5" index="1" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
+          <node begin="5" end="6" id="6" infl="sg" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" sc="aux(inf)" tense="past" word="zou" wvorm="pv"/>
+          <node begin="1" cat="inf" end="10" id="7" rel="vc">
+            <node begin="1" end="2" id="8" index="1" rel="su"/>
+            <node begin="2" cat="np" end="4" id="9" rel="mod">
+              <node begin="2" end="3" id="10" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node begin="3" end="4" gen="de" genus="genus" getal="ev" graad="basis" id="11" lemma="keer" naamval="stan" ntype="soort" num="meas" pos="noun" postag="N(soort,ev,basis,genus,stan)" pt="n" rel="hd" rnum="sg" root="keer" special="tmp" word="keer"/>
+            </node>
+            <node begin="4" end="5" id="12" lemma="fout" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="fout" vztype="fin" word="fout"/>
+            <node begin="6" buiging="zonder" end="7" id="13" infl="inf(no_e)" lemma="fout_gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga_fout" sc="part_intransitive(fout)" word="gaan" wvorm="inf"/>
+            <node begin="7" cat="pp" end="10" id="14" rel="mod">
+              <node begin="7" end="8" id="15" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>
+              <node begin="8" cat="np" end="10" id="16" rel="obj1">
+                <node begin="8" buiging="met-e" end="9" getal="mv" graad="basis" id="17" infl="pl_num" lemma="beide" naamval="stan" pdtype="grad" pos="det" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,mv,basis)" pt="vnw" rel="det" root="beide" special="adj_number" vwtype="onbep" word="beide"/>
+                <node begin="9" end="10" gen="het" getal="mv" graad="basis" id="18" lemma="land" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="land" word="landen"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="10" end="11" id="19" infl="sg" lemma="zitten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zit" sc="fixed([vc(kom,te,intransitive),sbar_subj,er_pp(aan)],no_passive)" stype="declarative" tense="past" word="zat" wvorm="pv"/>
+      <node begin="11" end="12" id="20" lemma="eraan" pos="pp" postag="BW()" pt="bw" rel="pc" root="eraan" special="er" word="eraan"/>
+      <node begin="12" cat="ti" end="14" id="21" rel="svp">
+        <node begin="12" end="13" id="22" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+        <node begin="13" buiging="zonder" end="14" id="23" infl="inf" lemma="komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="kom" sc="intransitive" word="komen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="14" end="15" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Dat het een keer fout zou gaan tussen beide landen zat eraan te komen .</sentence>
+</alpino_ds>

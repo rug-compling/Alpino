@@ -733,6 +733,7 @@ number_both(['Mujahedeen']).
 number_both(['NS']).
 number_both(['Nederlanden']).
 number_both(['Pinkstergemeenten']).
+number_both(['PS']).  % provinciale staten?
 number_both(['Pyreneeen']).
 number_both(['Staten','Generaal']).
 number_both(['Staten-Generaal']).
@@ -777,10 +778,10 @@ plural_suffix(beatles).
 plural_suffix(bees).
 plural_suffix(blowfish).
 plural_suffix(boys).
-plural_suffix(boys).
 plural_suffix(breeders).
 plural_suffix(brigades).
 plural_suffix(brothers).
+plural_suffix(bulls).
 plural_suffix(busters).
 plural_suffix(byrds).
 plural_suffix(cardigans).
@@ -846,6 +847,7 @@ plural_suffix(jumpers).
 plural_suffix(kids).
 plural_suffix(kinks).
 plural_suffix(lemonheads).
+plural_suffix(lions).
 plural_suffix(lips).
 plural_suffix(llamas).
 plural_suffix(lovers).
@@ -918,6 +920,7 @@ plural_suffix(streets).
 plural_suffix(stripes).
 plural_suffix(strokes).
 plural_suffix(supremes).
+plural_suffix(swingers).
 plural_suffix(thunderbugs).
 plural_suffix(tijgers).
 plural_suffix(trammps).
@@ -926,7 +929,7 @@ plural_suffix(underwolves).
 plural_suffix(viewers).
 plural_suffix(walkabouts).
 plural_suffix(warhols).
-plural_suffix(waterboys).
+plural_suffix(warriers).
 plural_suffix(wizards).
 
 lexicon__(Word,Cat,Label,Ws0,Ws,His,_) :-
@@ -1792,6 +1795,7 @@ spelling_variant21(hoogst,persoonlijk,hoogstpersoonlijk).
 spelling_variant21(hoogst,waarschijnlijk,hoogstwaarschijnlijk).
 spelling_variant21(hoofd,rol,     hoofdrol).
 spelling_variant21(in,zover,      inzover).
+spelling_variant21(in,zake,       inzake).
 spelling_variant21(kijk,plezier,  kijkplezier).
 spelling_variant21(langs,daar,    daarlangs).  % VL
 spelling_variant21(langzaam,aan,  langzaamaan).
@@ -2227,8 +2231,10 @@ context_spelling_variant(Wilde,We,_,Wilden):-
     lexicon___(Wilden,verb(_,past(pl),_),Root,[],[],_).
 
 %% te plaatsten --> te plaatsen
+context_spelling_variant(aankondigde,de,_,aangekondigde).
 context_spelling_variant(anderen,een,_,andere).
 context_spelling_variant(bevind,zich,_,bevindt).
+context_spelling_variant(bijeenkomt,de,_,bijeenkomst).
 context_spelling_variant(vin,Ik,_,vind) :-
     l_requires1(Ik).
 context_spelling_variant(ben,jij,_,bent).
@@ -2276,7 +2282,10 @@ context_spelling_variant(weining,te,_,weinig).
 context_spelling_variant(bezuinigingen,te,_,bezuinigen).
 context_spelling_variant(teruggeven,worden,_,teruggegeven).
 context_spelling_variant(bezuinigen,de,_,bezuinigingen).
+context_spelling_variant(uitkomt,de,_,uitkomst).
 context_spelling_variant(verwachtte,de,_,verwachte).
+context_spelling_variant(plaatsten,sommige,[op|_],plaatsen).
+context_spelling_variant(plaatsten,het,_,plaatsen).
 context_spelling_variant(waarschijnlijk,alle,[naar|_],waarschijnlijkheid).
 context_spelling_variant(waarschijnlijk,alle,['Naar'|_],waarschijnlijkheid).
 context_spelling_variant(zijde,beide,_,zijden).
@@ -2694,6 +2703,7 @@ spelling_variant(mistte,      miste).
 spelling_variant(mistten,     misten).
 spelling_variant(moeit,       moeite).
 spelling_variant('Nederlandsers','Nederlanders').
+spelling_variant(nietemin,    niettemin).
 spelling_variant(niewe,       nieuwe).
 spelling_variant(officeel,    officieel).
 spelling_variant(omgeveer,    ongeveer).
@@ -3151,6 +3161,12 @@ parse_only_lex(s,      '\'s middags',   tmp_adverb, [middags|X],   X).
 parse_only_lex(s,      '\'s morgens',   tmp_adverb, [morgens|X],   X).
 parse_only_lex(s,      '\'s nachts',    tmp_adverb, [nachts|X],    X).
 parse_only_lex(s,      '\'s ochtends',  tmp_adverb, [ochtends|X],  X).
+
+parse_only_lex(s,      '\'s avonds',    tmp_adverb, ['Avonds'|X],    X).
+parse_only_lex(s,      '\'s middags',   tmp_adverb, ['Middags'|X],   X).
+parse_only_lex(s,      '\'s morgens',   tmp_adverb, ['Morgens'|X],   X).
+parse_only_lex(s,      '\'s nachts',    tmp_adverb, ['Nachts'|X],    X).
+parse_only_lex(s,      '\'s ochtends',  tmp_adverb, ['Ochtends'|X],  X).
 
 parse_only_lex('\'',  '\'s avonds',    tmp_adverb, [savonds|X],    X).
 parse_only_lex('\'',  '\'s middags',   tmp_adverb, [smiddags|X],   X).

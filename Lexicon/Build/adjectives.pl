@@ -635,6 +635,9 @@ a([e('Colombiaanse'),
 a([e('Congolese'),
    no_e('Congolees')],nonadv,[],[]).
 
+a([e(['Costa','Ricaanse']),
+   no_e(['Costa','Ricaans'])],nonadv,[],[]).
+
 a([e('Cubaanse'),
    no_e('Cubaans')],nonadv,[],[]).
 
@@ -2294,6 +2297,9 @@ a([e(actieve),
    pp(binnen),
    pp(in)],[]).
 
+a([e(activistische),
+   no_e(activistisch)],adv,[]).
+
 a([e(actuele),
    e(aktuele),
    er(actueler),
@@ -2378,7 +2384,8 @@ a([both(afdoende),
    subject_vp],[]).
 
 a([e(afdwingbare),
-   no_e(afdwingaar)],
+   no_e(afdwingbaar)],
+  adv,
   [subject_sbar,
    subject_vp],[]).
 
@@ -3019,6 +3026,8 @@ a([e(akelige),
 a([e(akoestische),
    no_e(akoestisch)],adv,[],[]).
 
+a([both([al,dente])],adv,[],[]).
+
 a([e(alcolholhoudende),
    no_e(alcoholhoudend),
    e(alkolholhoudende),
@@ -3200,7 +3209,7 @@ a([e(ambtelijke),
 a([both(ambtshalve)],adv,[],[]).
 
 a([e(ambulante),
-   no_e(ambulant)],nonadv,[],[]).
+   no_e(ambulant)],adv,[],[]).
 
 a([e(amechtige),
    no_e(amechtig)],adv,[],[]).
@@ -3970,7 +3979,7 @@ a([ge_e(bedotte),
    no_no_e(bedot)],adv,[],[]).
 
 a([ge_e(bedreigde),
-   ge_no_e(bedreigd)],adv,[],[mod_pp(door)]).
+   ge_no_e(bedreigd)],adv,[mod_pp(door)],[on]).
 
 a([ende(bedreigende),
    end(bedreigdend),
@@ -5911,6 +5920,9 @@ a([ge_both(bijgevallen)],adv,[],[]).
 a([ge_e(bijgevoegde),
    ge_no_e(bijgevoegd)],adv,[],[]).
 
+a([ge_e(bijgevoerde),
+   ge_no_e(bijgevoerd)],adv,[],[]).
+
 a([ge_e(bijgevulde),
    ge_no_e(bijgevuld)],adv,[],[]).
 
@@ -6884,7 +6896,8 @@ a([both(chique),
    st(chicst),
    st(sjiekst),
    ste(chicste),
-   ste(sjiekste)],adv,[],[]).
+   ste(sjiekste)],adv,[subject_vp,
+		       subject_sbar],[]).
 
 %% Ida: vet chill!
 a([e(chille),
@@ -7016,7 +7029,9 @@ a([e(collegiale),
    st(collegiaalst),
    st(kollegiaalst),
    ste(collegiaalste),
-   ste(kollegiaalste)],adv,[],[]).
+   ste(kollegiaalste)],adv,
+  [subject_sbar,
+   subject_vp],[on]).
 
 a([e(comfortabele),
    e(komfortabele),
@@ -7383,7 +7398,11 @@ a([e(converteerbare),
   [pp(naar)],[]).
 
 a([e(coole),
-   no_e(cool)],adv,[],[]).
+   no_e(cool),
+   er(cooler),
+   ere(coolere),
+   st(coolst),
+   ste(coolste)],adv,[],[]).
 
 a([e(coöperatieve),
    e(koöperatieve),
@@ -8416,8 +8435,13 @@ a([e(doodeenvoudige),
    st(doodeenvoudigst),
    ste(doodeenvoudigste)],adv,[],[]).
 
+a([ge_both(doodgebeten)],adv,[],[]).
+
 a([ge_e(doodgegane),
    ge_no_e(doodgegaan)],adv,[],[]).
+
+a([ge_e(doodgedrukte),
+   ge_no_e(doodgedrukt)],adv,[],[]).
 
 a([ge_both(doodgelopen)],adv,[],[]).
 
@@ -8506,6 +8530,9 @@ a([e(doodstille),
    no_e(doodstil),
    st(doodstilst),
    ste(doodstilste)],padv,[],[]).
+
+a([ge_e(doodverklaarde),
+   ge_no_e(doodverklaard)],adv,[],[]).
 
 a([e(doodzieke),
    er(doodzieker),
@@ -10534,6 +10561,8 @@ a([e(fraudegevoelige),
 
 a([e(frauduleuze),
    no_e(frauduleus)],adv,[],[]).
+
+a([both(freaky)],adv,[],[]).
 
 a([both('free-lance'),
    both(freelance)],adv,[],[]).
@@ -13463,6 +13492,8 @@ a([ge_e(gelijkgestelde),
 a([ge_e(gelijkgestemde),
    ge_no_e(gelijkgestemd)],adv,[],[]).
 
+a([ge_both(gelijkgetrokken)],adv,[],[]).
+
 a([ende(gelijkluidende),
    end(gelijkluidend)],adv,[],[]).
 
@@ -13639,6 +13670,7 @@ a([ge_e(gemaakte),
    ge_no_e(gemaakt)],adv,
   [pp(door),
    pp(in),
+   pred,  % de onklaar gemaakte wapens
    fixed([[te,gelde]])],[]).
 
 a([ge_no_e(gemaald),
@@ -14585,6 +14617,9 @@ a([ge_e(geraapte),
    ge_no_e(geraapt)],adv,[],[]).
 
 a([ge_both(geraden)],adv,[],[]).
+
+a([ge_e(geradicaliseerde),
+   ge_no_e(geradicaliseerd)],adv,[],[]).
 
 a([ge_e(gerafelde),
    ge_no_e(gerafeld)],adv,[],[]).
@@ -15861,6 +15896,9 @@ a([ge_e(gestrafte),
 a([ge_e(gestrande),
    ge_no_e(gestrand)],adv,[],[]).
 
+a([ge_e(gestreamde),
+   ge_no_(gestreamd)],adv,[],[]).
+
 a([ge_both(gestreden)],adv,[],[]).
 
 a([ge_e(gestreelde),
@@ -16143,6 +16181,9 @@ a([ge_both(getreden)],adv,[pp_pred(in,werking),
 a([ge_e(getreiterde),
    ge_no_e(getreiterd)],adv,[],[]).
 
+a([ge_e(getriggerde),
+   ge_no_e(getriggerd)],adv,[],[]).
+
 a([ge_e(getrimde),
    ge_no_e(getrimd)],padv,[],[]).
 
@@ -16342,7 +16383,7 @@ a([ge_e(gevlamde),
    ge_no_e(gevlamd)],adv,[],[]).
 
 a([ge_e(gevleide),
-   ge_no_e(gevleid)],padv,[],[]).
+   ge_no_e(gevleid)],padv,[object_sbar],[]).
 
 a([e(gevlekte),
    no_e(gevlekt)],nonadv,[],[]).
@@ -16831,7 +16872,9 @@ a([ge_e(gezegende),
    ge_no_e(gezegend),
    st(gezegendst),
    ste(gezegendste)],adv,
-  [pp(met)],[]).
+  [pp(met),
+   object_sbar  % ik voel me gezegend dat ...
+  ],[]).
 
 a([ge_e(gezeilde),
    ge_no_e(gezeild)],adv,[],[]).
@@ -18182,7 +18225,8 @@ a([e(heftige),
    ere(heftigere),
    no_e(heftig),
    st(heftigst),
-   ste(heftigste)],adv,[],[]).
+   ste(heftigste)],adv,[subject_vp,
+			subject_sbar],[]).
 
 a([e(heidense),
    er(heidenser),
@@ -18299,6 +18343,9 @@ a([e(hemelwaartse),
    postn_no_e(hemelwaarts)],diradv,[],[]).
 
 a([ge_both(herbegonnen)],adv,[],[]).
+
+a([ge_e(herbenoemde),
+   ge_no_e(herbenoemd)],adv,[],[]).
 
 a([ge_e(herbevestigde),
    ge_no_e(herbevestigd)],adv,[],[]).
@@ -18707,7 +18754,9 @@ a([e(hoogmoedige),
    ere(hoogmoedigere),
    no_e(hoogmoedig),
    st(hoogmoedigst),
-   ste(hoogmoedigste)],adv,[],[]).
+   ste(hoogmoedigste)],adv,
+  [subject_vp,
+   subject_sbar],[]).
 
 a([e(hoogmogende),
    no_e(hoogmogend)],nonadv,[],[]).
@@ -18982,6 +19031,9 @@ a([e(hysterische),
    no_e(hysterisch),
    st(hysterischt),
    ste(hysterischte)],adv,[],[]).
+
+a([e(iconische),
+   no_e(iconisch)],adv,[],[]).
 
 a([e(ideale),
    er(idealer),
@@ -19874,6 +19926,9 @@ a([ge_both(ingezogen)],nonadv,[],[]).
 a([ge_both(ingezonden)],adv,
   [pp(door)],[]).
 
+a([ge_both(ingezworen)],adv,
+  [],[]).
+
 a([ge_e(ingeënte),
    ge_no_e(ingeënt)],adv,[],[]).
 
@@ -20260,7 +20315,7 @@ a([no_e(jammer),
    e(jammere)],nonadv,
   [subject_sbar,
    subject_vp,
-   pp(van)],[]).
+   pp(van)],[dood]).
 
 a([e(jammerlijke),
    er(jammerlijker),
@@ -21716,8 +21771,14 @@ a([ge_e(leeggegooide),
 
 a([ge_both(leeggelopen)],adv,[],[]).
 
+a([ge_e(leeggemaakte),
+   ge_no_e(leeggemaakt)],padv,[],[]).
+
 a([ge_e(leeggeroofde),
    ge_no_e(leeggeroofd)],padv,[],[]).
+
+a([ge_e(leeggepompte),
+   ge_no_e(leeggepompt)],padv,[],[]).
 
 a([e(lepe),
    er(leper),
@@ -22139,7 +22200,7 @@ a([e(linkse),
 
 a([stof(linnen)],nonadv,[],[]).
 
-a([both(liquide)],nonadv,[],[]).
+a([both(liquide)],adv,[],[]).
 
 a([e(listige),
    er(listiger),
@@ -23466,7 +23527,7 @@ a([e(mollige),
    ste(molligste)],nonadv,[],[]).
 
 a([e(momentele),
-   no_e(momenteel)],adv,[],[]).
+   no_e(momenteel)],tmpadv,[],[]).
 
 a([e(mondaine),
    er(mondainer),
@@ -26759,22 +26820,26 @@ a([e(onschuldige),
    no_e(onschuldig),
    st(onschuldigst),
    ste(onschuldigste)],padv,
-  [object_sbar,
-   object_vp],[]).
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(onsmakelijke),
    er(onsmakelijker),
    ere(onsmakelijkere),
    no_e(onsmakelijk),
    st(onsmakelijkst),
-   ste(onsmakelijkste)],adv,[],[]).
+   ste(onsmakelijkste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(onsportieve),
    er(onsportiever),
    ere(onsportievere),
    no_e(onsportief),
    st(onsportiefst),
-   ste(onsportiefste)],adv,[],[]).
+   ste(onsportiefste)],adv,
+  [subject_vp,
+   subject_sbar],[]).
 
 a([e(onsterfelijke),
    er(onsterfelijker),
@@ -26811,7 +26876,10 @@ a([e(onsympathieke),
    st(onsympathiekst),
    st(onsympatiekst),
    ste(onsympathiekste),
-   ste(onsympatiekste)],adv,[],[]).
+   ste(onsympatiekste)],adv,
+  [subject_sbar,
+   subject_vp
+  ],[]).
 
 a([ge_e(ontaarde),
    ge_no_e(ontaard)],adv,
@@ -28824,6 +28892,9 @@ a([e(opzienbarende),
   [subject_sbar,
    subject_vp],[]).
 
+a([ge_e(opzijgezette),
+   ge_no_e(opzijgezet)],adv,[],[]).
+
 a([e(orale),
    no_e(oraal)],adv,[],[]).
 
@@ -29764,6 +29835,9 @@ a([e(platte),
 a([ge_e(platgedrukte),
    ge_no_e(platgedrukt)],adv,[],[]).
 
+a([ge_e(platgelegde),
+   ge_no_e(platgelegd)],adv,[],[]).
+
 a([ge_e(platgetrapte),
    ge_no_e(platgetrapt)],adv,[],[]).
 
@@ -29858,6 +29932,9 @@ a([e(plotsklapse),
 
 a([stof(pluche),
    stof(pluchen)],nonadv,[],[]).
+
+a([prefix(plugin),
+   prefix('plug-in')],nonadv,[],[]).
 
 a([pred(pluis)],nonadv,[],[]).
 
@@ -30100,6 +30177,8 @@ a([e(premature),
    no_e(prematuur)],nonadv,
   [subject_vp,
    subject_sbar],[]).
+
+a([both(premium)],adv,[],[]).
 
 a([e(prenatale),
    no_e(prenataal)],adv,
@@ -32844,7 +32923,9 @@ a([e(sportieve),
    ere(sportievere),
    no_e(sportief),
    st(sportiefst),
-   ste(sportiefste)],adv,[],[]).
+   ste(sportiefste)],adv,
+  [subject_vp,
+   subject_sbar],[]).
 
 a([e(spraakmakende),
    no_e(spraakmakend)],nonadv,[],[]).
@@ -33354,7 +33435,7 @@ a([e(stringente),
    ere(stringentere),
    er(stringenter),
    st(stringentst),
-   ste(stringentste)],nonadv,[],[]).
+   ste(stringentste)],adv,[],[]).
 
 a([stof(strobalen)],nonadv,[],[]).
 
@@ -37145,6 +37226,9 @@ a([ge_e(verplichte),
 a([ge_e(verpotte),
    ge_no_e(verpot)],adv,[],[]).
 
+a([ge_e(verprutste),
+   ge_no_e(verprutst)],adv,[],[]).
+
 a([ge_e(verpulverde),
    ge_no_e(verpulverd)],adv,[],[]).
 
@@ -38112,7 +38196,11 @@ a([prefix('vierde-klas'),
    prefix(['4e',klas])],nonadv,[],[]).
 
 a([e(vierkante),
-   no_e(vierkant)],adv,[],[]).
+   no_e(vierkant),
+   ere(vierkantere),    % hoe kun je nu vierkanter zijn? Je bent vierkant of niet...
+   er(vierkanter),
+   st(vierkantst),
+   ste(vierkantste)],adv,[],[]).
 
 a([e(vieze),
    er(viezer),
@@ -39030,6 +39118,9 @@ a([ge_e(vrijgemaakte),
 a([ge_e(vrijgepleite),
    ge_no_e(vrijgepleit)],adv,[],[]).
 
+a([ge_e(vrijgespeelde),
+   ge_no_e(vrijgespeeld)],adv,[],[]).
+
 a([ge_both(vrijgesproken)],adv,[],[]).
 
 a([ge_e(vrijgestelde),
@@ -39525,6 +39616,9 @@ a([ge_e(weggekwijnde),
 
 a([ge_both(weggelaten)],adv,[],[]).
 
+a([ge_e(weggeleide),
+   ge_no_e(weggeleid)],adv,[],[]).
+
 a([ge_e(weggelegde),
    ge_no_e(weggelegd)],adv,[],[]).
 
@@ -39568,6 +39662,8 @@ a([ge_e(weggespeelde),
 a([ge_e(weggespoelde),
    ge_no_e(weggespoeld)],adv,[],[]).
 
+a([ge_both(weggesprongen)],adv,[],[]).
+
 a([ge_e(weggestemde),
    ge_no_e(weggestemd)],padv,[],[]).
 
@@ -39578,6 +39674,9 @@ a([ge_both(weggestorven)],adv,[],[]).
 
 a([ge_e(weggestuurde),
    ge_no_e(weggestuurd)],adv,[],[]).
+
+a([ge_e(weggetakelde),
+   ge_no_e(weggetakeld)],adv,[],[]).
 
 a([ge_both(weggetrokken)],adv,[],[]).
 
@@ -40738,7 +40837,7 @@ a([e(zure),
    ere(zuurdere),
    no_e(zuur),
    st(zuurst),
-   ste(zuurste)],adv,[],[]).
+   ste(zuurste)],adv,[subject_sbar],[]).
 
 a([e(zware),
    er(zwaarder),

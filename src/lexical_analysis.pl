@@ -3,6 +3,7 @@
 				     tag_all/0, tag_all_keys/0,
 				     do_one/2,
 				     do_one/3,
+				     default_frames/2,
 				     remove_brackets/2
 				   ]).
 
@@ -235,8 +236,7 @@ lexical_analysis([],P,P,R,R,[],BracketCounter,_LC) :-
     (	BracketCounter =:= 0
     ->	true
     ;   Balanced == on
-    ->	format(user_error,"error: brackets not balanced~n",[]),
-	fail
+    ->	format(user_error,"error: brackets not balanced~n",[])
     ;   true
     ).
 lexical_analysis([Word|Rest],P0,P,R0,R,Input,BC0,LC0):-
@@ -256,8 +256,7 @@ lexical_analysis_or_bracket(bracket(close),Rest,Rest1,P0,P,R,R,I,I,BC0,BC,LC,LC)
 	)
     ->	BC is BC0-1,
 	close_bracket_type(Rest,Rest1,P0,P)
-    ;	format(user_error,"error: brackets not balanced~n",[]),
-	fail
+    ;	format(user_error,"error: brackets not balanced~n",[])
 	% raise_exception(alpino_error(unbalanced_brackets))
     ).
 lexical_analysis_or_bracket(W,Rest,Rest,P0,P,R0,R,[W|I],I,BC,BC,LC,[W|LC]) :-
@@ -358,6 +357,13 @@ in_lexicon(Tag,Label,[Word|Input0],Input,His,LC) :-
 :- public add_lex/1, add_tag/1, add_sc/1, cmd_skip_word/1, % add_universal/1,
           tags/0, tr_tags/0.
 
+scored_tag(A,B,C,D,E,F,G,H,Score) :-
+    clause(tag(A,B,C,D,E,F,G,H),_,Ref),
+    (   alpino_score_ref:score_ref(Ref,Score)
+    ->  true
+    ;   Score = 0
+    ).
+
 %% list all tags, ordered
 tags :-
     findall(tag(A,B,C,D,E,F,G,H)-Ref,clause(tag(A,B,C,D,E,F,G,H),_,Ref),Tags0),
@@ -438,6 +444,7 @@ cmd_skip_word([Word|Tail]) :-
     noclp_assertz(add_skip_word(Word,Tail)).
 
 assert_tag(P0,P,R0,R,Label,History,Tag) :-
+    interval_not_bracket(P0,P),
     thread_flag(current_input_sentence,Input),
     surface_form(Input,P0,P,UsedInput),
     assert_tag(P0,P,R0,R,Label,UsedInput,History,Tag).
@@ -2744,3 +2751,69 @@ warn_unexpected_missing_fs(Tag,Used) :-
     format(user_error,"warning: no features structure for ~w (~w)~n",[Tag,Used]).
 
 
+interval_not_bracket(P0,P) :-
+    \+ (   between(P0,P,P1),
+	   P1 > P0,
+	   (  alpino_lexical_analysis:open_bracket(_,P1,_)
+	   ;  alpino_lexical_analysis:close_bracket(_,P1,_)
+	   )
+       ).
+
+%%% do a simple hill-climbing search over tags
+default_frames(String,Frames) :-
+    length(String,P),
+    search_default_frames(P,Frames),!.
+default_frames(_,[]).  % catch all in case anything weird has happendd
+
+%% path(Score,P,R,Frames).
+search_default_frames(FinalP,Frames) :-
+    findall(path(Score,P,R,[Frame]),scored_frame(0,P,0,R,Frame,Score),Frames0),
+    add_frames_agenda(Frames0,[],Agenda),
+    process_agenda(Agenda,FinalP,Frames).
+
+process_agenda([path(_,P0,_,Frames0)|_],P,Frames) :-
+    P0 == P, !,
+    lists:reverse(Frames0,Frames).
+
+process_agenda([path(Score0,P0,R0,Path)|Ag0],P,Frames) :-
+    extend_frames(Score0,P0,R0,Path,Paths),
+    add_frames_agenda(Paths,Ag0,Ag1),
+    process_agenda(Ag1,P,Frames).
+
+extend_frames(Score0,P0,R0,Frames0,Paths) :-
+    findall(Path,extend_frame(Score0,P0,R0,Frames0,Path),Paths).
+
+extend_frame(Score0,P0,R0,Frames0,path(Score,P,R,[Frame|Frames0])):-
+    scored_frame(P0,P,R0,R,Frame,Score1),
+    Score is Score0 + Score1.
+
+scored_frame(P0,P,R0,R,frame(P0,P,R0,R,Stem,Tag,Surf,His),Score) :-
+    scored_tag(P0,P,R0,R,Stem,Surf,His,Tag,Score).
+		   
+add_frames_agenda([],Agenda,Agenda).
+add_frames_agenda([Fr|Frs],Agenda0,Agenda) :-
+    add_frame_agenda(Agenda0,Fr,Agenda1),
+    add_frames_agenda(Frs,Agenda1,Agenda).
+
+add_frame_agenda([],Fr,[Fr]).
+add_frame_agenda([path(Score0,P,R,Path)|Ag0],path(Score1,P1,R1,Path1),Ag) :-
+    (   Score0 =< Score1
+    ->  (   P==P1, R==R1
+	->  Ag = [path(Score0,P,R,Path)|Ag0]
+	;   Ag = [path(Score0,P,R,Path)|Ag2],
+	    add_frame_agenda(Ag0,path(Score1,P1,R1,Path1),Ag2)
+	)
+    ; %% Score 1 is lower (better)
+	Ag = [path(Score1,P1,R1,Path1)|Ag2],
+	remove_worse([path(Score0,P,R,Path)|Ag0],P1,R1,Ag2)
+    ).
+
+remove_worse([],_,_,[]).
+remove_worse([path(Score,P,R,Path)|Ag0],P1,R1,Ag):-
+    (   P == P1,
+	R == R1
+    ->  remove_worse(Ag0,P1,R1,Ag)
+    ;   Ag = [path(Score,P,R,Path)|Ag1],
+	remove_worse(Ag0,P1,R1,Ag1)
+    ).
+		    

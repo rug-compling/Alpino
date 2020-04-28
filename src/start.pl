@@ -445,6 +445,10 @@ slow_options :-
 %% NB: veryfast is now the default!
 :- veryfast_options.
 
+no_heur_options:-
+    set_flag(pos_tagger,off),
+    set_flag(use_guides,off).
+
 testN_options :-
     set_flag(after_timeout_options,off),
     set_flag(end_hook,best_score),
@@ -462,10 +466,15 @@ testN_options :-
 hdrug_command(test1,test1_options,[]).
 hdrug_command(testN,testN_options,[]).
 hdrug_command(veryfast,veryfast_options,[]).
+hdrug_command(vf,veryfast_options,[]).
 hdrug_command(very_fast,veryfast_options,[]).
 hdrug_command(disamb,disamb_options,[]).
 hdrug_command(fast,fast_options,[]).
 hdrug_command(slow,slow_options,[]).
+hdrug_command(nh,no_heur_options,[]).
+hdrug_command(no_heur,no_heur_options,[]).
+hdrug_command(noheur,no_heur_options,[]).
+
 
 :- public parse_single_or_loop/1.  % option
 parse_single_or_loop([]) :-
@@ -1150,6 +1159,16 @@ end_hook(generate,_A,_B,_C) :-
 %% hdrug_hook
 %% goal: replace numbers by atoms
 
+extern_phon([],L) :-
+    !,
+    format(user_error,"sentence: ",[]),
+    ttyflush,    
+    read_line(Codes),
+    alpino_util:codes_to_words(Codes,Words),
+    (   Words == []
+    ->  raise_exception(alpino_error('Cowardly refusing to parse an empty sentence'))
+    ;   extern_phon(Words,L)
+    ).
 extern_phon(L0,L) :-
     nonvar(L0),
     replace_numbers_by_atoms(L0,L1),  % also removes spaces
@@ -1588,12 +1607,14 @@ ignore_current_ref :-
 
 create_empty_object(o(Result,String,_)) :-
     hdrug_flag(current_ref,Key),
-    alpino_data:result_term(p(0.0,[]),String,robust([]),tree(robust,robust,[],_),[],Result),
-    a_sentence(Key,String).
+    alpino_data:result_term(p(0.0,[]),String,robust([]),tree(robust,robust,[],_),Frames,Result),
+    a_sentence(Key,String),
+    default_frames(String,Frames).
 
 ignore_current_ref(Key,String,Comments) :-
     xml_filename(File,Key),
-    alpino_data:result_term(p(0.0,[]),String,robust([]),tree(robust,robust,[],_),[],Result),
+    alpino_data:result_term(p(0.0,[]),String,robust([]),tree(robust,robust,[],_),Frames,Result),
+    default_frames(String,Frames),
     (	system:file_exists(File)
     ->	(   user_confirmation(
 			"File ~w exists. Do you want to overwrite? ",[File])
@@ -1604,7 +1625,8 @@ ignore_current_ref(Key,String,Comments) :-
     ).
 
 ignore_current_ref_dump(_Key,String,Comments) :-
-    alpino_data:result_term(p(0.0,[]),String,robust([]),tree(robust,robust,[],_),[],Result),
+    default_frames(String,Frames),
+    alpino_data:result_term(p(0.0,[]),String,robust([]),tree(robust,robust,[],_),Frames,Result),
     alpino_treebank:xml_save(Result,String,Comments,stream(user_output),ignore).
 
 hdrug_command(dt,compile_grammar_dt,[]).

@@ -1033,6 +1033,7 @@ tag(mja).
 tag(moh).
 tag(mvg).
 tag(mwa).
+tag(mwah).
 tag(nah).
 tag(naja).
 tag(nee).
@@ -1710,23 +1711,23 @@ m(enkel,    adj_number(enkel),  enkel).   % een enkel, geen enkel
 m(enkel,    adj_number(enkele), enkele).
 m(ettelijk, adj_number(pl_num), ettelijke).
 
-m('meer als',         intensifier, [meer,als]).
-m('meer dan',         intensifier, [meer,dan]).
-m('minder als',       intensifier, [minder,als]).
-m('minder dan',       intensifier, [minder,dan]).
-m('niet meer als',    intensifier, [niet,meer,als]).
-m('niet meer dan',    intensifier, [niet,meer,dan]).
-m('niet minder als',  intensifier, [niet,minder,als]).
-m('niet minder dan',  intensifier, [niet,minder,dan]).
+m('veel als',         intensifier, [meer,als]).
+m('veel dan',         intensifier, [meer,dan]).
+m('weinig als',       intensifier, [minder,als]).
+m('weinig dan',       intensifier, [minder,dan]).
+m('niet veel als',    intensifier, [niet,meer,als]).
+m('niet veel dan',    intensifier, [niet,meer,dan]).
+m('niet weinig als',  intensifier, [niet,minder,als]).
+m('niet weinig dan',  intensifier, [niet,minder,dan]).
 
-m('meer als',         pre_num_adv(both), [meer,als]).
-m('meer dan',         pre_num_adv(both), [meer,dan]).
-m('minder als',       pre_num_adv(both), [minder,als]).
-m('minder dan',       pre_num_adv(both), [minder,dan]).
-m('niet meer als',    pre_num_adv(both), [niet,meer,als]).
-m('niet meer dan',    pre_num_adv(both), [niet,meer,dan]).
-m('niet minder als',  pre_num_adv(both), [niet,minder,als]).
-m('niet minder dan',  pre_num_adv(both), [niet,minder,dan]).
+m('veel als',         pre_num_adv(both), [meer,als]).
+m('veel dan',         pre_num_adv(both), [meer,dan]).
+m('weinig als',       pre_num_adv(both), [minder,als]).
+m('weinig dan',       pre_num_adv(both), [minder,dan]).
+m('niet veel als',    pre_num_adv(both), [niet,meer,als]).
+m('niet veel dan',    pre_num_adv(both), [niet,meer,dan]).
+m('niet weinig als',  pre_num_adv(both), [niet,minder,als]).
+m('niet weinig dan',  pre_num_adv(both), [niet,minder,dan]).
 
 %% pre_det_quant
 %% quantifiers that may precede determiner in NP
@@ -2250,12 +2251,12 @@ m(zulk,          comp_determiner(een,dat),   [zulk,een]).
 with_dt([des,te,meer],
 	determiner(wat),
 	dt(detp,[mod=l('des te',intensifier,advp,0,2),
-		 hd=l(meer,determiner(wat),2,3)])).
+		 hd=l(veel,determiner(wat),2,3)])).
 
 with_dt([des,te,meer],
 	adverb,
 	dt(detp,[mod=l('des te',intensifier,advp,0,2),
-		 hd=l(meer,determiner(wat),2,3)])).
+		 hd=l(veel,determiner(wat),2,3)])).
 
 m(destemeer,determiner(wat),destemeer).
 m(destemeer,adverb,destemeer).
@@ -2548,6 +2549,7 @@ preposition(inzake).
 preposition(jegens).
 preposition(kortweg).   % doelman Joaquim Silva , kortweg Quim , ..
 preposition(krachtens).
+preposition(lopende).
 preposition(luidens).  % juridisch? luidens die en die wet
 preposition(middels).
 preposition(middenin).
@@ -2587,7 +2589,8 @@ preposition([t,/,m]).
 preposition(vanachter).
 %preposition(vanaf).
 preposition(vanonder).
-preposition(vanop).   % vlaams?
+preposition(vanop).		% vlaams?
+preposition(vanover).		% vlaams
 preposition(vanuit).
 preposition(vanwege).
 preposition([vanwege,van]).
@@ -2987,6 +2990,8 @@ m(met,   preposition(met,[],pc_vp),met).
 
 m('van heinde en verre',pp(van), [van,heinde,en,verre]).
 m('van heinde en verre',pp(van), [van,heinde,en,ver]).
+
+m(terplekke,pp(ter),terplekke).
 
 with_dt([P,Paard],
 	pp(P),
@@ -3405,7 +3410,7 @@ with_dt([heel,in,Het,Adj],
 with_dt([om,Het,Adj],
 	  pp(om),
 	  dt(pp,[hd=l(om,preposition(om,[]),0,1),
-		 obj1=l(Stem,adjective(no_e(adv)),ap,1,3)
+		 obj1=l(Stem,adjective(het_st(adv)),ap,1,3)
 		])) :-
     om_het_adj_pp(Adj,Stem),
     het(Het).
@@ -4917,6 +4922,13 @@ with_dt([in,totaal],
 	       obj1=l(totaal,noun(het,count,sg),np,1,2)
 	      ])).
 
+with_dt([in,ieder,geval],
+	modal_adverb(noun_prep),
+	dt(pp,[hd=l(in,preposition(in,[]),pp,0,1),
+	       obj1=dt(np,[det=l(ieder,determiner(het,nwh,mod),detp,1,2),
+			   hd=l(geval,noun(both,count,sg),np,2,3)])
+	      ])).
+
 m(amper,            modal_adverb(noun_prep),amper).
 m(circa,            modal_adverb(noun_prep),circa).
 m(geheel,           modal_adverb(noun_prep),geheel). % met geheel uw hart, geheel in de stijl van ..
@@ -5019,8 +5031,10 @@ m(telkens,          modal_adverb(comp), telkens). % wanneer als indien
 m(temeer,           modal_adverb(comp), temeer).  % temeer daar/omdat
 m(temeer,           modal_adverb(comp), [te,meer]).  % temeer daar/omdat
 
+
 m(desnoods,         modal_adverb(prep),desnoods).
 m(dicht,            modal_adverb(prep),dicht).    % dicht tegen zich aan ; dicht bij de macht?
+m(diep,             modal_adverb(prep),diep).     % diep in blessuretijd
 m(dwars,            modal_adverb(prep),dwars).    % dwars door
 m(elders,           modal_adverb(prep),elders).   % kerken elders in Nederland
 m(hoog,             modal_adverb(prep),hoog).     % hoog boven de wolken
@@ -5034,6 +5048,7 @@ m(volkomen,         modal_adverb(prep),volkomen). % with pp (predicative?)
 				% 'volkomen tegen mijn wil' / in de war
 
 %% mede dankzij hem; mede omdat; mede om ..
+m(deels,            modal_adverb(comp_prep_verb), deels).
 m(mede,             modal_adverb(comp_prep_verb), mede).
 
 
@@ -5725,7 +5740,8 @@ loc_adverb(bovenaan).
 loc_adverb(bovenaf).
 loc_adverb(bovenin). 
 loc_adverb(bovenop). 
-loc_adverb(bovenuit). 
+loc_adverb(bovenuit).
+loc_adverb(breed).     % hij speelde breed; een balletje breed
 loc_adverb(buitenboord).
 loc_adverb(buiten).
 loc_adverb(buitenaf).
@@ -6194,7 +6210,7 @@ m(alweer,           postadv_adverb,alweer).  % twee jaar geleden alweer
 m(ineens,           postadv_adverb,ineens).  % toen ineens
 m(laat,             postadv_adverb,laat).    % gisteravond laat
 m(maar,             postadv_adverb,maar).    % eventjes maar
-m(meer,             postadv_adverb,meer).    % niet meer ; nooit meer
+m(veel,             postadv_adverb,meer).    % niet meer ; nooit meer
 m(ook,              postadv_adverb,ook).
 m(ongeveer,         postadv_adverb,ongeveer).
 m(opeens,           postadv_adverb,opeens).  % dan opeens; nu opeens
@@ -6592,6 +6608,7 @@ m(deze,         pronoun(nwh,thi,both,both,gen,def),dezes).
 m(diegene,      pronoun(nwh,thi,sg,de,both,def,strpro),diegene).
 m(diegene,      pronoun(nwh,thi,pl,de,both,def,strpro),diegenen).
 m(één,          pronoun(nwh,thi,sg,both,both,indef,strpro),een).
+m(één,          pronoun(nwh,thi,sg,both,both,indef,strpro),één).
 m(eenieder,     pronoun(nwh,thi,sg,de,both,def,strpro),[Een,ieder]) :- een(Een).
 m(eenieder,     pronoun(nwh,thi,sg,de,both,def,strpro),eenieder).
 m(eentje,       pronoun(nwh,thi,sg,de,both,indef,strpro),eentje).
@@ -6663,6 +6680,7 @@ m('what the fuck', pronoun(ywh,thi,sg,het,both,def),    [what,the,fuck]).
 m('what the fock', pronoun(ywh,thi,sg,het,both,def),    [what,the,fock]).
 m('who the fuck',  pronoun(ywh,thi,both,de,both,indef), [who,the,fuck]).
 m('who the fock',  pronoun(ywh,thi,both,de,both,indef), [who,the,fock]).
+m('wie de fuck',   pronoun(ywh,thi,both,de,both,indef), [wie,de,fuck]).
 m('who the hell',  pronoun(ywh,thi,both,de,both,indef), [who,the,hell]).
 m(wie,          pronoun(ywh,thi,both,de,both,indef),wie).
 m('wie o wie',          pronoun(ywh,thi,both,de,both,indef),[wie,o,wie]).
@@ -7227,7 +7245,7 @@ with_dt([Een,of,meer],
 	determiner(pl_num,nwh,nmod,pro,yparg),
 	dt(conj,[cnj=l(één,number(hoofd(sg_num)),detp,0,1),
 		 crd=l(of,conj(of),vg,1,2),
-		 cnj=l(meer,adjective(meer),ap,2,3)
+		 cnj=l(veel,adjective(meer),ap,2,3)
 		])) :-
     een(Een).
 
@@ -7753,10 +7771,10 @@ m(niets,comp_noun(het,mass,sg,dan),niks).
 %			  hd=l(min,adjective(er(adv)),ap,1,2)])])).
 
 
-m('niets minder dan', modal_adverb(noun),[niets,minder,dan]).
-m('niemand minder dan', modal_adverb(noun),[niemand,minder,dan]).
-m('niets minder als', modal_adverb(noun),[niets,minder,als]).
-m('niemand minder als', modal_adverb(noun),[niemand,minder,als]).
+m('niets weinig dan', modal_adverb(noun),[niets,minder,dan]).
+m('niemand weinig dan', modal_adverb(noun),[niemand,minder,dan]).
+m('niets weinig als', modal_adverb(noun),[niets,minder,als]).
+m('niemand weinig als', modal_adverb(noun),[niemand,minder,als]).
 
 %% op zich 't idee vind ik wel leuk
 with_dt([op,zich],
@@ -8321,6 +8339,7 @@ anom_org(bedrijf).
     term/2.
 
 term([accident,de,parcours],     [accidents,de,parcours]).
+term([accumulate]).
 term([air,support]).
 term([alive,and,kicking]).
 term([all,in,the,game]).
@@ -8367,6 +8386,7 @@ term([business,as,usual]).
 term([business,class]).
 term([business,to,business]).
 term([business,manager],[business,managers]).
+term([buy]).
 term([carpe,diem]).
 term([carte,blanche]).
 term([cause,célèbre]).
@@ -8408,6 +8428,7 @@ term([dolce,far,niente]).
 term([drag,and,drop]).
 term([drag,'&',drop]).
 term([dramatis,personae]).
+term([drive,through,penalty],[drive,through,penalties]).
 term([droit,de,regard]).
 term([droit,de,suite]).
 term([easy,listening]).
@@ -8445,6 +8466,7 @@ term(['gentleman\'s',agreement]).
 term([glitter,and,glamour]).
 term([global,village]).
 term([golden,parachute],[golden,parachutes]).
+term([golden,score]).
 term([good,governance]).
 term([ground,zero]).
 term([haasje,over]).   % otherwise we get the parse "[[haasje] [over spelen]]"
@@ -8458,6 +8480,7 @@ term(heartbeating).
 term([hell,of,a,job]).
 term([himmelhoch,jauchzend]).
 term([hit,and,run]).
+term([hold]).
 term([hot,news]).
 term([hot,stuff]).
 term([human,interest]).
@@ -8499,6 +8522,7 @@ term([management,by,speech]).
 term([mea,culpa]).
 term([memento,mori]).
 term([ménage,à,trois]).
+term([meet,and,greet],[meet,and,greets]).
 term([method,acting]).
 term([middle,class]).
 term([middle,of,the,road]).
@@ -8527,6 +8551,7 @@ term([off,shore]).
 term('off-shore').
 term([old,'boys-network']).
 term([oom,agent]).
+term([on,hold]).
 term([one,man,one,vote]).
 term([one,of,the,boys]).
 term([one,size,fits,all]).
@@ -8569,6 +8594,7 @@ term([raison,'d\'être']).
 term([rank,and,file]).
 term([real,audio]).
 term([reculer,pour,mieux,sauter]).
+term([reduce]).
 term([remedial,teaching]).
 term([res,publica]).
 term([rigor,mortis]).

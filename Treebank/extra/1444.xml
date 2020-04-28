@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" cat="smain" end="13" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" special="tmp" word="Nu"/>
+      <node begin="1" end="2" id="3" infl="sg3" lemma="toe_geven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="geef_toe" sc="part_sbar(toe)" stype="declarative" tense="present" word="geeft" wvorm="pv"/>
+      <node begin="2" case="both" def="def" end="3" gen="de" genus="fem" getal="ev" id="4" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" rnum="sg" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="ze"/>
+      <node begin="3" end="4" id="5" lemma="toe" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="toe" vztype="fin" word="toe"/>
+      <node begin="4" cat="cp" end="13" id="6" rel="vc">
+        <node begin="4" conjtype="onder" end="5" id="7" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="5" cat="ssub" end="13" id="8" rel="body">
+          <node begin="5" case="both" def="def" end="6" gen="de" genus="fem" getal="ev" id="9" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" rnum="sg" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="ze"/>
+          <node begin="6" cat="np" end="8" id="10" rel="obj1">
+            <node begin="6" buiging="zonder" end="7" id="11" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="die"/>
+            <node begin="7" end="8" gen="de" genus="zijd" getal="ev" graad="basis" id="12" lemma="opmerking" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="opmerking" word="opmerking"/>
+          </node>
+          <node begin="8" end="9" getal="getal" id="13" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="pc" root="er" special="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="9" cat="ap" end="12" id="14" rel="mod">
+            <node begin="9" cat="advp" end="11" id="15" rel="mod">
+              <node begin="9" end="10" gen="het" getal="ev" id="16" lemma="iets" naamval="stan" num="sg" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="me" rnum="sg" root="iets" special="meas_mod" status="vol" vwtype="onbep" word="iets"/>
+              <node begin="10" end="11" id="17" lemma="te" pos="adv" postag="BW()" pt="bw" rel="hd" root="te" special="me_intensifier" word="te"/>
+            </node>
+            <node aform="base" begin="11" buiging="zonder" end="12" graad="basis" id="18" infl="no_e" lemma="snel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="snel" vform="adj" word="snel"/>
+          </node>
+          <node begin="12" end="13" id="19" infl="sg" lemma="uit_flappen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="flap_uit" sc="part_np_pc_er_transitive(uit)" tense="past" word="uitflapte" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Nu geeft ze toe dat ze die opmerking er iets te snel uitflapte .</sentence>
+</alpino_ds>

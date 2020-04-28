@@ -69,23 +69,21 @@
                       <node begin="32" end="33" id="56" lemma="kunnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kan" word="kunnen" wvorm="pv"/>
                       <node begin="27" cat="inf" end="34" id="57" rel="vc">
                         <node begin="27" end="28" id="58" index="3" rel="su"/>
-                        <node begin="28" cat="ppres" end="32" id="59" rel="predc">
-                          <node begin="28" cat="pp" end="31" id="60" rel="pc">
-                            <node begin="28" end="29" id="61" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
-                            <node begin="29" cat="np" end="31" id="62" rel="obj1">
-                              <node begin="29" buiging="met-e" end="30" graad="basis" id="63" lemma="voorliggend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="lig_voor" word="voorliggende"/>
-                              <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="64" lemma="periode" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="periode" word="periode"/>
-                            </node>
+                        <node begin="28" cat="pp" end="31" id="59" rel="mod">
+                          <node begin="28" end="29" id="60" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
+                          <node begin="29" cat="np" end="31" id="61" rel="obj1">
+                            <node begin="29" buiging="met-e" end="30" graad="basis" id="62" lemma="voorliggend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="lig_voor" word="voorliggende"/>
+                            <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="63" lemma="periode" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="periode" word="periode"/>
                           </node>
-                          <node begin="31" buiging="zonder" end="32" graad="basis" id="65" lemma="verschillend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="verschil" word="verschillend"/>
                         </node>
-                        <node begin="33" buiging="zonder" end="34" id="66" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
+                        <node begin="31" buiging="zonder" end="32" graad="basis" id="64" lemma="verschillend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="verschil" word="verschillend"/>
+                        <node begin="33" buiging="zonder" end="34" id="65" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" word="zijn" wvorm="inf"/>
                       </node>
                     </node>
                   </node>
-                  <node begin="35" cat="np" end="37" id="67" rel="mod">
-                    <node begin="35" end="36" id="68" lemma="bijvoorbeeld" pos="adv" postag="BW()" pt="bw" rel="mod" root="bijvoorbeeld" word="bijvoorbeeld"/>
-                    <node begin="36" end="37" genus="zijd" getal="ev" graad="basis" id="69" lemma="ziekenhuisopname" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ziekenhuis_opname" word="ziekenhuisopname"/>
+                  <node begin="35" cat="np" end="37" id="66" rel="mod">
+                    <node begin="35" end="36" id="67" lemma="bijvoorbeeld" pos="adv" postag="BW()" pt="bw" rel="mod" root="bijvoorbeeld" word="bijvoorbeeld"/>
+                    <node begin="36" end="37" genus="zijd" getal="ev" graad="basis" id="68" lemma="ziekenhuisopname" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ziekenhuis_opname" word="ziekenhuisopname"/>
                   </node>
                 </node>
               </node>
@@ -94,8 +92,8 @@
         </node>
       </node>
     </node>
-    <node begin="37" end="38" id="70" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
-    <node begin="38" end="39" id="71" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="37" end="38" id="69" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
+    <node begin="38" end="39" id="70" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Bij voorgeschiedenis zou een duidelijk onderscheid gemaakt moeten worden in onveranderlijke gegevens die eenmalig bij het eerste contact geregistreerd moeten worden ( bijvoorbeeld zwangerschapsduur ) en gegevens die per voorliggende periode verschillend kunnen zijn ( bijvoorbeeld ziekenhuisopname ) .</sentence>
 </alpino_ds>

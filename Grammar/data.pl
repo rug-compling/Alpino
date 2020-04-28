@@ -540,6 +540,17 @@ precedes_subject_cat(Arg,Dep) ::-
     Arg:case => dat,
     Arg:nform => ~refl & ~er.
 
+%% omdat me dat niet boeit 
+precedes_subject_cat(Arg,Dep) ::-
+    Arg => np,
+    Arg:sel => to_left, % reduce spur amb
+    Dep:sel => to_left, % reduce spur amb
+    Dep:subn => (sub_det;sub_indef_pron), % 
+    Dep:prs => ~invje,
+    Arg:subn => sub_def_pron,
+    Arg:case => acc,
+    Arg:nform => ~refl & ~er.
+
 %% argument PP
 precedes_subject_cat(Arg,Dep) ::-
     Arg => pp,

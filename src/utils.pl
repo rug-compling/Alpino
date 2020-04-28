@@ -43,6 +43,8 @@
 
 			   split_string/3,
 
+			   split_atom/3,
+
 			   thread_flag/2, thread_flag/3, initialize_thread_flag/2, set_thread_flag/2
 			
 			]).
@@ -807,6 +809,20 @@ write_list0([H|T],Str):-
     tab(Str,1),
     write(Str,H), 
     write_list0(T,Str).
+
+%% split_atom(+Atom,+Sep,-List)
+%% Atom is an atom
+%% Sep is a list of character codes of length 1
+%% List is a list of atoms.
+split_atom(Atom,Sep,List) :-
+    atom_codes(Atom,Codes),
+    split_string(Codes,Sep,List0),
+    list_atoms(List0,List).
+
+list_atoms([],[]).
+list_atoms([Codes|T0],[Atom|T]) :-
+    atom_codes(Atom,Codes),
+    list_atoms(T0,T).
 
 %% split_string(+Chars,+Sep,-List)
 %% Chars is a list of character codes
