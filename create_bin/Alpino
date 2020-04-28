@@ -19,6 +19,11 @@ then
     export TK_LIBRARY=$ALPINO_HOME/create_bin/extralibs/tk8.6
 fi
 
+if ( ldd $ALPINO_HOME/create_bin/Alpino.bin | grep -q 'libboost.*not found' )
+then
+    LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ALPINO_HOME/create_bin/extralibs/boost
+fi
+
 $ALPINO_HOME/create_bin/Alpino.bin\
    debug=undefined\
    -flag tcl_dir $ALPINO_HOME/src\
