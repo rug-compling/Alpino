@@ -179,9 +179,11 @@ guess_stags(Q0,Q,Tag,St,L0,L) :-
 	    lassy(Stem,POSTAG)
 	->  L0 = [cgn_postag(Q0,Q1,POSTAG)|L1],
 	    guess_stags(Q1,Q,Tag,Stems,L1,L)
-	;   St = [Stem|Stems],
-	    L0 = [cgn_postag(Q0,Q1,'NA()')|L1],
+	;   St = [Stem|Stems]
+	->  L0 = [cgn_postag(Q0,Q1,'NA()')|L1],
 	    guess_stags(Q1,Q,Tag,Stems,L1,L)
+	;   L0 = [cgn_postag(Q0,Q1,'NA()')|L1],    % if St is not a list
+	    guess_stags(Q1,Q,Tag,St,L1,L)
 	)
     ;   L0 = L
     ).
@@ -1058,6 +1060,7 @@ cgn_postag_c(determiner(pl_num),'LID(onbep,stan,agr)').
 cgn_postag_c(determiner(pl_num,nwh,nmod,pro,yparg),'VNW(onbep,det,stan,prenom,met-e,rest)').
 cgn_postag_c(determiner(wat),'ADJ(prenom,basis,zonder)').
 cgn_postag_c(determiner(wat,nwh,mod,pro,nparg,ntopicpro),'VNW(onbep,pron,stan,vol,3o,ev)').
+cgn_postag_c(determiner(wat,nwh,mod,pro,nparg),'VNW(onbep,pron,stan,vol,3o,ev)').
 cgn_postag_c(determiner(welke),'VNW(onbep,det,stan,prenom,met-e,rest)').
 cgn_postag_c(determiner(welke,rwh,nmod,pro,yparg),'VNW(vb,det,stan,prenom,met-e,rest)').
 cgn_postag_c(determiner(alle,nwh,mod,pro,nparg),'VNW(onbep,det,stan,prenom,met-e,agr)').
@@ -1674,6 +1677,9 @@ mwu_postag_frame_surf(score_cat,Stem,[ATag,'LET()',BTag]) :-
     num_postag(A,ATag),
     num_postag(B,BTag).
 
+mwu_postag_frame_surf(fixed_part(op_een_v),_,
+       ['VZ(init)','LID(onbep,stan,agr)','WW(inf,nom,zonder,zonder-n)']).
+
 mwu_postag_frame_stem(with_dt(adverb,_),'des te meer',['BW()','BW()','VNW(onbep,grad,stan,vrij,zonder,comp)']).
 
 mwu_postag_frame_stem(with_dt(determiner(_),_),'des te meer',['BW()','BW()','VNW(onbep,grad,stan,prenom,zonder,agr,comp)']).
@@ -2190,8 +2196,10 @@ mwu_postag('losjes aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
 mwu_postag('stilletjes aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
 mwu_postag('zachtjes aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
 
+mwu_postag('weet je',['WW(pv,tgw,ev)','VNW(pers,pron,nomin,red,2v,ev)']).
+mwu_postag('je noem wat',['VNW(vb,pron,stan,vol,3o,ev)','VNW(pers,pron,nomin,red,2v,ev)','WW(pv,tgw,met-t)']).
 
-
+mwu_postag('hard om',['VZ(init)','LID(bep,stan,evon)','ADJ(vrij,sup,zonder)']).
 
 mwu_postag(Stem,['SPEC(deeleigen)','SPEC(deeleigen)']):-
     name2(Stem).
@@ -2397,27 +2405,36 @@ with_dt_tags(Tree,Q0,L0,L) :-
 	L0 = L
     ).
 
+with_dt_tags_l_l(Stem,Frame,R0,R,Q0) -->
+    [cgn_postag(S0,S,Tag)],
+    {  integer(R0),
+       integer(R),
+       R is R0 + 1,
+       !,
+       S0 is Q0 + R0,
+       S is Q0 + R,
+       cgn_postag_l(Stem,Frame,Tag)
+    }.
+with_dt_tags_l_l(Stem,Tag,R0,R,Q0) -->
+    { R - R0 > 1 },
+    !,
+    { alpino_util:split_atom(Stem," ",Words),
+      S0 is Q0 + R0,
+      S  is Q0 + R
+    },
+    guess_tags(S0,S,Tag,Words).
+    
+
 with_dt_tags_(dt(_,List),Q0) -->
     with_dt_tags_list(List,Q0).
 with_dt_tags_(ix(_,DT),Q0) -->
     with_dt_tags_(DT,Q0).
 with_dt_tags_(ix(_),_Q0) --> [].
 with_dt_tags_(l(Stem,Frame,R0,R),Q0) -->
-    [cgn_postag(S0,S,Tag)],
-    {  integer(R0),
-       integer(R),
-       S0 is Q0 + R0,
-       S is Q0 + R,
-       cgn_postag_l(Stem,Frame,Tag)
-    }.
+    with_dt_tags_l_l(Stem,Frame,R0,R,Q0).
 with_dt_tags_(l(Stem,Frame,_Cat,R0,R),Q0) -->
-    [cgn_postag(S0,S,Tag)],
-    {  integer(R0),
-       integer(R),
-       S0 is Q0 + R0,
-       S is Q0 + R,
-       cgn_postag_l(Stem,Frame,Tag)
-    }.
+    with_dt_tags_l_l(Stem,Frame,R0,R,Q0).
+
 with_dt_tags_(orig(_),_) --> [].
 
 with_dt_tags_list([],_) --> [].

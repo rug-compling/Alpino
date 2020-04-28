@@ -282,7 +282,7 @@ lexical_analysis_name_(Words,P0,R0,All,Len,String,Args,Tag,Least) :-
     lexical_analysis_name__(Names,P0,P,History,R0,All,Len,String,Args,Tag,Least).
 
 lexical_analysis_name__(Names,P0,P,History,R0,All,Len,"name|~p|~p~n",
-		       [Stem,NewTag],tag(P0,P,R0,R,Stem,name(Start),NewTag),Least) :-
+			[Stem,NewTag],tag(P0,P,R0,R,Stem,name(Start),NewTag),Least) :-
     \+ subsumed_by_dict(P0,P,Names,proper_name(both)),
     (	nonvar(Least)
     ->	P > Least
@@ -472,13 +472,31 @@ unknown_word_heuristic(P1,R1,W,Ws,"cap|~p|~p|~p~n",[W,Wmin,[Th|Tt]],_,none) :-
 %% DONE? spurious analyses for different capitalized prefixes where
 %% such prefixes are not used at all
 %% DONE? this is extremely slow for long capitalized sequences too
-unknown_word_heuristic(P1,R1,W,Ws0,Mess,Args,Rest,none) :-
+unknown_word_heuristic(P1,R1,W,Ws0,Mess,Args,Rest,None) :-
     only_capitals(W,W1),
     !,
-    \+ tag(P1,_,_,_,_,_,special(decap(_)),_),
-    only_capitals_prefix(Ws0,Ws,P1,P,0,4),
-    Len is 1+P-P1,
-    unknown_word_heuristic(P1,R1,W1,Ws,Mess,Args,Rest,len(Len)).
+    (   \+ tag(P1,_,_,_,_,_,special(decap(_)),_),
+	only_capitals_prefix(Ws0,Ws,P1,P,0,4),
+	Len is 1+P-P1,
+	None = none,
+	unknown_word_heuristic(P1,R1,W1,Ws,Mess,Args,Rest,len(Len))
+    ;		   % this is a copy of the heuristic prefix_name below
+	           % for cases such as ESA-ESTEC
+	Mess = "prefix_name|~p|~p|~p~n",
+	Args = [W,Wmin,[Th|Tt]],
+	None = len(1),
+	    debug_message(3,"trying heuristic prefix_name~n",[]),
+	\+ tag(P1,_,_,_,_,_,decap(_),_),
+	\+ tag(P1,_,_,_,_,_,special(decap(_)),_),
+	findall(Wfirst-Wmin,guess_prefix_compound(W,Wfirst,Wmin),Wmins0),
+	sort(Wmins0,Wmins),
+	member(Wfirst-Wmin,Wmins),
+	findall(Tag,
+		alternative_proper_name(Wfirst,Wmin,P1,R1,prefix_name,Tag),
+		[Th|Tt])
+    ).
+
+
 
 unknown_word_heuristic(P1,R1,W,Ws,"strip_diacritics|~p|~p|~p~n",
 		       [W,Wmin,[Th|Tt]],_,HIS) :-
@@ -777,8 +795,10 @@ unknown_word_heuristic(P1,R1,W,_Ws,"compound(~p)|~p|~p|~p~n",
 
 unknown_word_heuristic(P1,R1,W,_Ws,"dt|~p|~p~n",[W,Tags],_,_) :-
     debug_message(3,"trying heuristic dt~n",[]),
-    atom_concat(Pref,t,W),
-    atom_concat(Pref,d,Alt),
+    atom(W),
+    typical_spelling_mistake_suffixes(T,D),
+    atom_concat(Pref,T,W),
+    atom_concat(Pref,D,Alt),
     \+ \+ alpino_lex:lexicon___(Alt,_Tag,_,[],[],_),
     P is P1 +1,
     R is R1 +1,
@@ -812,7 +832,7 @@ unknown_word_heuristic(P1,R1,W,_Ws,"ninv_dt|~p|~p~n",[W,Tags],_,_) :-
 	    Tags
 	   ).
 
-unknown_word_heuristic(P1,R1,W,_Ws,"prefix_name|~p|~p|~p~n",
+unknown_word_heuristic(P1,R1,W,_,"prefix_name|~p|~p|~p~n",
 		       [W,Wmin,[Th|Tt]],_,len(1)) :-
     debug_message(3,"trying heuristic prefix_name~n",[]),
     \+ tag(P1,_,_,_,_,_,decap(_),_),
@@ -999,6 +1019,7 @@ unknown_word_heuristic(P1,R1,W,_Ws,"similar_ending|~p|~p|~p~n",
 unknown_word_heuristic(P0,R0,W0,_,"subjunctive|~p|~p~n",[W,Stems],_,len(1)) :-
     debug_message(3,"trying heuristic subjunctive~n",[]),
     decap(W0,W),
+    atom(W),
     atom_concat(_,e,W),
     atom_concat(W,n,Inf),
     P is P0+1, R is R0+1,
@@ -1012,6 +1033,7 @@ unknown_word_heuristic(P0,R0,W0,_,"subjunctive|~p|~p~n",[W,Stems],_,len(1)) :-
 unknown_word_heuristic(P0,R0,W0,_,"drop_n|~p|~p~n",[W,Stems],_,len(1)) :-
     debug_message(3,"trying heuristic drop_n~n",[]),
     decap(W0,W),
+    atom(W),
     atom_concat(_,e,W),
     atom_concat(W,n,Inf),
     P is P0+1, R is R0+1,
@@ -1025,6 +1047,7 @@ unknown_word_heuristic(P0,R0,W0,_,"drop_n|~p|~p~n",[W,Stems],_,len(1)) :-
 unknown_word_heuristic(P0,R0,W0,_,"end_d_t|~p|~p~n",[W,Stems],_,len(1)) :-
     debug_message(3,"trying heuristic end_d_t~n",[]),
     decap(W0,W),
+    atom(W),
     atom_concat(Prefix,d,W),
     atom_concat(Prefix,t,Alt),
     P is P0+1, R is R0+1,
@@ -1089,6 +1112,7 @@ unknown_word_heuristic(P1,R1,W,_,"te-Adj|~p~n",[W],_,len(1)) :-
     \+ starts_with_capital(W),
     te_int_context(P1,R1),
     P is P1 + 1, R is R1 + 1,
+    atom(W),
     \+ atom_concat(_,en,W),
     assert_tag(P1,P,R1,R,W,te_adj,adjective(no_e(adv))).
 
@@ -2228,6 +2252,7 @@ function('Oppositieleider').
 function('Oppositieleidster').
 function('Oprichter').
 function('Oprichtster').
+function('Organisatie').
 function('Organisator').
 function('Organisatrice').
 function('Outsider').
@@ -2249,6 +2274,7 @@ function('President').
 function('Producent').
 function('Producente').
 function('Raadsman').
+function('Rapper').
 function('Rapporteur').  % europarl
 function('Rechter').
 function('Regisseur').
@@ -2310,15 +2336,18 @@ function('Zweed').
 function('Zwitser').
 
 function(InterimPremier) :-
+    atom(InterimPremier),
     atom_concat(interim,_,InterimPremier).
-
 function(ExFun) :-
+    atom(ExFun),
     atom_concat('Ex-',Fun,ExFun),
     function(Fun).
 function(ExFun) :-
+    atom(ExFun),
     atom_concat('Oud-',Fun,ExFun),
     function(Fun).
 function(ExFun) :-
+    atom(ExFun),
     atom_concat('Vice-',Fun,ExFun),
     function(Fun).
 
@@ -2402,6 +2431,7 @@ guess_left_headed_compound(W,Ws,Wmin,Stem,Surf,SurfLength) :-
 guess_prefix_compound(W,Wfirst,WLast) :-
     atom(W),
     once(atom_split(W,'-',Wfirst,WLast)),
+    \+ Wfirst = 'Sint',  % Sint-X is often not a PER but a LOC or ORG
     (   %% oost-Frankrijk; ex-Ajax
         compound_part(Wfirst)
     ;   %% Ajax-Feyenoord
@@ -2553,6 +2583,7 @@ compound_part(first,W,Stem) :-
 compound_part(first,W,W) :-
     compound_part(W).
 compound_part(first,WD,W) :-
+    atom(WD),
     atom_concat(W,'-',WD),
     compound_part(W).
 
@@ -3197,11 +3228,16 @@ form_of_suffix_rule('\'s','',determiner(pron),capital).
 
 
 guess_using_suffix0(Word,Prefix,Suffix,MinLengthPrefix,MinLengthSuffix) :-
+    \+ guess_using_suffix_exception(Word),
     atom(Word),
     between(MinLengthSuffix,8,SuffixLength,'-'),
     sub_atom(Word,_,SuffixLength,0,Suffix),
     atom_concat(Prefix,Suffix,Word),
     atom_length(Prefix,A), A>MinLengthPrefix.
+
+guess_using_suffix_exception(Word) :-
+    atom(Word),
+    atom_concat(_,mogelijkheden,Word).
 
 strip_accents(Word0,Word) :-
     atom(Word0),
@@ -5015,7 +5051,9 @@ potential_name_fsa(2,P0,[',',Word|Words],Ws,[',',Word|Prefix],[end_firma|His]) :
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[number|His]) :-
     name_number(Word),!,
     P is P0 + 1,
-    potential_name_fsa(5,P,Words,Ws,Prefix,His).
+    (  potential_name_fsa(5,P,Words,Ws,Prefix,His)
+    ;  potential_name_fsa(8,P,Words,Ws,Prefix,His)
+    ).
 
 potential_name_fsa(2,P0,[Word|Words],Ws,[Word|Prefix],[unknown|His]) :-
     name_unknown(Word,P0),
@@ -5433,7 +5471,9 @@ longpunct(W) :-
 name_capital(W,P0) :-
     atom(W),
     (   is_decap_only(W)
-    ->  tag(P0,_,_,_,W,_,normal(names_dictionary),_)
+    ->  (   tag(P0,_,_,_,W,_,normal(names_dictionary),_)
+	;   W == 'TV'
+	)
     ;   true
     ),
     atom_codes(W,[F|T]),
@@ -5865,12 +5905,14 @@ not_a_second_name_word('Volksgezondheid').
 not_a_second_name_word('Zuid-Holland').
 
 verb_ster(W,W,noun(de,count,sg)):-
+    atom(W),
     atom_concat(Verb,ster,W),
     \+ \+ (  alpino_lex:lexicon(verb(_,Sg,_),_,[Verb],[],_),
 	      lists:member(Sg,[sg1,sg])
 	  ).
 
 verb_ster(W,W,noun(de,count,pl)):-
+    atom(W),
     atom_concat(Verb,sters,W),
     \+ \+ (   alpino_lex:lexicon(verb(_,Sg,_),_,[Verb],[],_),
 	      lists:member(Sg,[sg1,sg])
@@ -5884,6 +5926,7 @@ diminutive(W,Stam,Tag) :-
     add_dim_tag(Tag0,Agr0,Tag,Agr).
 
 parts_diminutive(W,Stam,sg) :-
+    atom(W),
     atom_concat(_,je,W),
     parts_diminutive(W,Stam).
 
@@ -6210,14 +6253,14 @@ replace_part(Root0,Root,Part0,Part) :-
     replace_root(Root0,Root,Part0,Part).
 
 replace_root(Root0,Root,Part0,Part) :-
-    atomic(Root0),
-    atomic(Part0),
+    atom(Root0),
+    atom(Part0),
     atom_concat(Prefix,Part0,Root0),
     atom_concat(Prefix,Part,Root).
 
 replace_lemma(Lemma0,Lemma,Part0,Part):-
-    atomic(Lemma0),
-    atomic(Part0),
+    atom(Lemma0),
+    atom(Part0),
     atom_concat(Part0,Suffix,Lemma0),
     atom_concat(Part,Suffix,Lemma).
 
@@ -6225,21 +6268,25 @@ hellip('...').
 hellip('..').
 
 psp_variant(Geprobeert,verb(HZ,psp,Sc),Stem) :-
+    atom(Geprobeert),
     atom_concat(Geprobeer,t,Geprobeert),
     atom_concat(Geprobeer,d,Geprobeerd),
     alpino_lex:lexicon___(Geprobeerd,verb(HZ,psp,Sc),Stem,[],[],_).
 
 psp_variant(Geprobeerdt,verb(HZ,psp,Sc),Stem) :-
+    atom(Geprobeerdt),
     atom_concat(Geprobeer,dt,Geprobeerdt),
     atom_concat(Geprobeer,d,Geprobeerd),
     alpino_lex:lexicon___(Geprobeerd,verb(HZ,psp,Sc),Stem,[],[],_).
 
 psp_variant(Gefeesd,verb(HZ,psp,Sc),Stem) :-
+    atom(Gefeesd),
     atom_concat(Gefees,d,Gefeesd),
     atom_concat(Gefees,t,Gefeest),
     alpino_lex:lexicon___(Gefeest,verb(HZ,psp,Sc),Stem,[],[],_).
 
 psp_variant(Gefeesdt,verb(HZ,psp,Sc),Stem) :-
+    atom(Gefeesdt),
     atom_concat(Gefees,dt,Gefeesdt),
     atom_concat(Gefees,t,Gefeest),
     alpino_lex:lexicon___(Gefeest,verb(HZ,psp,Sc),Stem,[],[],_).
@@ -6268,6 +6315,17 @@ adapt_with_dt_l([Rel=DT0|L0],[Rel=DT|L]):-
     adapt_with_dt_l(L0,L).
 
 remove_ge_if_psp(verb(_,psp,_),Stem0,Stem) :-
+    atom(Stem0),
     atom_concat(ge,Stem,Stem0),
     !.
 remove_ge_if_psp(_,Stem,Stem).
+
+%% typical_spelling_mistake_suffixes(T,D)
+%% Word-T does not exist,
+%% Word-D does exist
+typical_spelling_mistake_suffixes(t,d).      % ondervont -> ondervond
+typical_spelling_mistake_suffixes(dt,t).     % bemindt   -> bemint
+typical_spelling_mistake_suffixes(tte,te).   % wenstte   -> wenste
+typical_spelling_mistake_suffixes(tten,ten). % wenstten  -> wensten
+typical_spelling_mistake_suffixes(dde,de).   % bloosdde  -> bloosde
+typical_spelling_mistake_suffixes(dden,den). % bloosdden -> bloosden

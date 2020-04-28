@@ -51,7 +51,7 @@ macro(q2_2,   control(u)).
 
 macro(break, control(j)).
 
-macro(space,{' ',control(i),' ','﻿'}).
+macro(space,{' ',control(i),' ','﻿','​'}).
 /*  The third space character is:
 
 
@@ -93,6 +93,26 @@ Character code properties: customize what to show
   old-name: BYTE ORDER MARK
   general-category: Cf (Other, Format)
 */
+
+/* the fifth character
+
+             position: 1624 of 3188 (51%), column: 36
+            character: ​ (displayed as ​) (codepoint 8203, #o20013, #x200b)
+    preferred charset: unicode (Unicode (ISO10646))
+code point in charset: 0x200B
+               script: symbol
+               syntax:   	which means: whitespace
+             to input: type "C-x 8 RET HEX-CODEPOINT" or "C-x 8 RET NAME"
+          buffer code: #xE2 #x80 #x8B
+            file code: #xE2 #x80 #x8B (encoded by coding system utf-8-unix)
+              display: terminal code #xE2 #x80 #x8B
+
+Character code properties: customize what to show
+  name: ZERO WIDTH SPACE
+  general-category: Cf (Other, Format)
+  decomposition: (8203) ('​')
+*/
+
 
 macro(control(Letter), Atom ) :-
     atom_codes(Letter,[C|_]),

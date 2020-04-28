@@ -51,30 +51,26 @@ default:
 
 .PRECIOUS : %.m_ngram %.m_fsa %.a_ngram %.a_fsa %.fsa %.ngram %.txt0
 
-%.ngram : %.txt %.fsa
-	cat $*.txt | $(UNIQ) | $(WORD_PER_LINE) |\
-            $(SADIR)/suffix_array -e -d $*.fsa -n $(N) -w -G\| \
-                                  -f $(f) -u -v -N\
-              | grep -v ' @ ' > $*.ngram
+#%.ngram : %.txt %.fsa
+#	cat $*.txt | $(UNIQ) | $(WORD_PER_LINE) |\
+#            $(SADIR)/suffix_array -e -d $*.fsa -n $(N) -w -G\| \
+#                                  -f $(f) -u -v -N\
+#              | grep -v ' @ ' > $*.ngram
 
 ## grep -v ' @ '
 ## because we are not interested in ngrams that cross sentence boundaries
 
-%.colc : %.ngram
-	cat $*.ngram | $(ALPINO_HOME)/Suites/colc -t 0.001 |\
+%.colc : %.a_ngram
+	cat $*.a_ngram | $(ALPINO_HOME)/Suites/colc -t 0.001 |\
          $(ALPINO_HOME)/Suites/remove_smaller |\
          LANG=POSIX LC_ALL=POSIX sort -k1,1nr -k2,2nr > $*.colc
 
 
-%.fsa : %.txt
-	cat $*.txt | $(WORD_PER_LINE) |\
-        LANG=POSIX LC_ALL=POSIX sort -u |\
-        grep .|\
-        fsa_build -N -o $*.fsa
-
-## for speed only in kw
-%.mistakes: %.q
-	zcat $*.q | $(Q) -k -m > $*.mistakes
+#%.fsa : %.txt
+#	cat $*.txt | $(WORD_PER_LINE) |\
+#        LANG=POSIX LC_ALL=POSIX sort -u |\
+#        grep .|\
+#        fsa_build -N -o $*.fsa
 
 LOGS=*.log
 
@@ -82,19 +78,22 @@ cat=cat
 
 e:
 	-@$(cat) $(LOGS) | \
-         grep -v  -e '^unknown|'\
-                  -e '^guessing|'\
+         grep -v  -e '^unknown[|]'\
+                  -e '^guessing[|]'\
                   -e '^parse: '\
-                  -e '^FRAME# '\
-                  -e 'no default postag'\
+		  -e '^Lexical analysis: '\
+		  -e '^[*][*][*][*] parsing'\
+		  -e '^[*][*][*][*] parsed'\
+                  -e '^FRAME#'\
+		  -e '^timeout[|]'\
                   -e 'no cgn tag'\
                   -e '^warning: UNKNOWN'\
                   -e '^english compound' |\
-         grep -iw  -e killed\
-                   -e warning\
-                   -e error\
-                   -e segmentation\
-                   -e failure|\
+         grep -iw -e killed\
+                  -e warning\
+                  -e error\
+                  -e segmentation\
+                  -e failure    |\
          grep -vi -e 'filter_tags removed last tag|'\
                   -e '^Q#'
 

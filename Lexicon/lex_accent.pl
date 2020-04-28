@@ -138,6 +138,7 @@ accent(blert,blèrt).
 accent(bobsleeen,bobsleeën).
 accent('Bosnier','Bosniër').
 accent('Bosniers','Bosniërs').
+accent('Brentolien','Brentoliën').
 accent(buhne,bühne).
 accent('Burundier','Burundiër').
 accent('Burundiers','Burundiërs').
@@ -483,6 +484,7 @@ accent(geensceneerd,geënsceneerd).
 accent(geente,geënte).
 accent(geenterde,geënterde).
 accent(geenterd,geënterd).
+accent(geentertaind,geëntertaind).
 accent(geent,geënt).
 accent(geenthousiasmeerd,geënthousiasmeerd).
 accent(geerfde,geërfde).
@@ -696,6 +698,7 @@ accent(gezinstherapieen,gezinstherapieën).
 accent(gijzelingsactien,gijzelingsactiën).
 accent(gijzelingsaktien,gijzelingsaktiën).
 accent(glorien,gloriën).
+accent(googleen,googleën).
 accent(gratien,gratiën).
 accent(griepepidemieen,griepepidemieën).
 accent(groepstherapieen,groepstherapieën).
@@ -747,6 +750,7 @@ accent(hierarchischte,hiërarchischte).
 accent(hierarchischt,hiërarchischt).
 accent(hindoeisme,hindoeïsme).
 accent(historien,historiën).
+accent(hitserien,hitseriën).
 accent(hoofdideeen,hoofdideeën).
 accent(hostien,hostiën).
 accent(hulpactien,hulpactiën).
@@ -917,6 +921,7 @@ accent(materiele,materiële).
 accent(materieler,materiëler).
 accent(materien,materiën).
 accent(meditatien,meditatiën).
+accent(meediscussieren,meediscussiëren).
 accent(megamoskeeen,megamoskeeën).
 accent(melodieen,melodieën).
 accent(menage,ménage).
@@ -1065,6 +1070,8 @@ accent(poetisch,poëtisch).
 accent(poetischte,poëtischte).
 accent(poetischt,poëtischt).
 accent(poezie,poëzie).
+accent(politieactien,politieactiën).
+accent(politieaktien,politieaktiën).
 accent(politieserien,politieseriën).
 accent(poolcoordinaat,poolcoördinaat).
 accent(poolcoordinaten,poolcoördinaten).
@@ -1111,6 +1118,7 @@ accent(prozaisch,prozaïsch).
 accent(psychotherapieen,psychotherapieën).
 accent(rabies,rabiës).
 accent(rais,raïs).
+accent(realityserien,realityseriën).
 accent(rebellieen,rebellieën).
 accent(receptien,receptiën).
 accent(rechterknieen,rechterknieën).

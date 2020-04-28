@@ -47,6 +47,13 @@ phrasal_entry(number(hoofd(pl_num)),number_sequence) -->
     { hdrug_util:debug_message(4,"number_sequence~n",[]) },
     number_sequence.
 
+phrasal_entry(mod_noun(both,count,bare_meas),number_tiende) -->
+    number_expression_breuk_tiende.
+
+phrasal_entry(mod_noun(both,count,bare_meas),number_procent) -->
+    number_expression_procent.
+
+
 %% met vier nul
 %% Boeing zeven zes zeven
 phrasal_entry(number(hoofd(both)),number_sequence) -->
@@ -76,7 +83,12 @@ phrasal_entry(number(hoofd(pl_num)),number_tiende) -->
       number_codes_silent(_,Num1Codes)
     }.
 
-
+number_expression_procent -->
+    n_word(VierProcent),
+    {  atom(VierProcent),
+       atom_concat(Vier,'%',VierProcent),
+       isa_number(_,[Vier],[])
+    }.
 
 number_sequence -->
     first_number,
@@ -616,7 +628,7 @@ phrasal_entry(noun(de,count,sg),numberdeurs) -->
     n_word(NumberTal),
     { numbersuffix(NumberTal,drs) }.
 
-phrasal_entry(noun(het,count,sg),numbercilinder) -->
+phrasal_entry(noun(both,count,sg),numbercilinder) -->
     { hdrug_util:debug_message(4,"numbercilinder~n",[]) },
     n_word(NumberTal),
     { numbersuffix(NumberTal,cilinder) }.
@@ -805,6 +817,7 @@ persoons(deurs).
 persoons(drs).  % 3drs voor driedeurs etc
 persoons(draads).
 persoons(jaars).
+persoons(karaats).
 persoons(kleps).
 persoons(lijns).
 persoons(mans).
@@ -1186,6 +1199,23 @@ number_expression_breuk -->
       atom_concat(Een,Derde,Eenderde),
       number_expression_tien_ne_or_een([Een],[])
     }.
+
+%% hij finishte een tiende achter de winnaar
+number_expression_breuk_tiende -->
+    number_expression_tien_ne_or_een,
+    n_word(Derde),
+    { word_rang(Derde) }.
+
+%% hij finishte drietiende achter de winnaar
+number_expression_breuk_tiende -->
+    n_word(Eenderde),
+    { atom(Eenderde),
+      atom_concat(Een,Derde,Eenderde),
+      word_rang(Derde),
+      number_expression_tien_ne_or_een([Een],[])
+    }.
+
+
 
 number_expression_tien_ne_or_een --> 
     [een].
@@ -3215,7 +3245,7 @@ een_of_number_with_words(P0,MOD,dt(conj,
     { Q0 is P+1 },    
     number_with_words(Num2,Q0,Q).
 
-een_of_number_with_words(P0,MOD,dt(detp,[hd=l(wat,determiner(wat,nwh,mod,pro,nparg),P0,P),
+een_of_number_with_words(P0,MOD,dt(detp,[hd=l(wat,determiner(wat,nwh,mod,pro,nparg,ntopicpro),P0,P),
 					 mod=MOD])) -->
     n_word(wat),
     { P is P0+1 }.
@@ -3233,7 +3263,7 @@ phrasal_entry(with_dt(number(hoofd(pl_num)),
 
 %% een stuk of wat
 phrasal_entry(with_dt(number(hoofd(pl_num)),
-		      dt(detp,[hd=l(wat,determiner(wat,nwh,mod,pro,nparg),3,4),
+		      dt(detp,[hd=l(wat,determiner(wat,nwh,mod,pro,nparg,ntopicpro),3,4),
 			       mod=l('een stuk of',adverb,advp,0,3)])
 		     ),een_stuk_of_NUM) -->
     { hdrug_util:debug_message(4,"een stuk of wat~n",[]) },
@@ -3350,6 +3380,27 @@ num_meter_loper_entry(noun(A,B,C),MStem,[Number1,NumberMeterLoper|L],L,Sep) :-
 
 meter_loper_meter(letter,letter).  % een drie letterwoord; een vijf lettercode
 meter_loper_meter(punten,punt).
+meter_loper_meter(pixel,pixel).
+meter_loper_meter(megapixel,mega_pixel).
+meter_loper_meter('letter-',letter).  % een drie letterwoord; een vijf lettercode
+meter_loper_meter('punten-',punt).
+meter_loper_meter('pixel-',pixel).
+meter_loper_meter('megapixel-',mega_pixel).
+
+meter_loper_meter(December,December) :-
+    date_month(December).
+meter_loper_meter(December,Dec) :-
+    alpino_unknowns:decap(December,Dec),
+    date_month(Dec).
+meter_loper_meter(December0,December) :-
+    atom(December0),
+    atom_concat(December,'-',December0),
+    date_month(December).
+meter_loper_meter(December,Dec) :-
+    atom(December0),
+    atom_concat(December,'-',December0),
+    alpino_unknowns:decap(December,Dec),
+    date_month(Dec).
 
 meter_loper_meter(Word,Stem) :-
     measure_tag(MeasureTag),
@@ -4121,6 +4172,7 @@ ends_with_dot_seq1 -->
     ends_with_dot_seq.
 
 ends_with_dot(Atom,Atom1) :-
+    atom(Atom),
     atom_concat(Atom1,'.',Atom),
     \+ alpino_lex:lexicon__(Atom,_,_,[],[],_,[]).
 
