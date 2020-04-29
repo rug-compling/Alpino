@@ -47,6 +47,8 @@ AlpinoNS:
 ## undefined, so that yes/no batch will set debug to 0/1 resp.
 debugcmd='set_flag(debug,undefined),set_flag(demo,undefined)'
 
+gitversion=$(shell git log --oneline | wc -l)
+
 ifeq "$(PROLOG)" "sicstus"
 
 PLATFORM=${shell echo "prolog_flag(host_type,X), write(X), nl, fail."\
@@ -55,8 +57,6 @@ PLATFORM=${shell echo "prolog_flag(host_type,X), write(X), nl, fail."\
 ifeq "$(shell if [ -r ../Hdrug/Makefile.hdrug ]; then echo yes; fi)" "yes"
 include ../Hdrug/Makefile.hdrug
 endif
-
-gitversion=$(shell git log --oneline | wc -l)
 
 state:
 	-echo "Alpino-$(PLATFORM)-git$(gitversion)-$(PROLOG)" > ../version
@@ -89,7 +89,7 @@ PLATFORM=${shell echo "prolog_flag(version,X), write(X), nl, fail."\
      | $(PROLOG) 2>/dev/null}
 
 state:
-	-echo "Alpino-$(PLATFORM)-$(shell svnversion)-$(PROLOG)" > ../version
+	-echo "Alpino-$(PLATFORM)-git$(gitversion)-$(PROLOG)" > ../version
 	$(PROLOG) -o $(DISK)/Alpino.sav --goal=hdrug_main\
            -c ../Hdrug/Prolog/swi.pl start.pl
 
