@@ -648,13 +648,25 @@ deptree_meta_att(Att=String) -->
 
 deptree_xml_score(Cat) -->
     {
-       hdrug_flag(xml_format_frame,on),
-       alpino_data:result_term(_,_,_,tree(_,_,Trees,_),_,_,Cat), !,
-       count_cats_and_skips(Trees,0,Cats,0,Skips)
+     hdrug_flag(xml_format_frame,on),
+     alpino_data:result_term(_,_,_,tree(_,_,Trees,_),_,_,Cat), !,
+     user:application_version(Build),
+     system:datime(datime(Year,Month0,Day0,Hour0,Min0,_)),
+     add_z(Month0,Month),
+     add_z(Day0,Day),
+     add_z(Hour0,Hour),
+     add_z(Min0,Min),
+     count_cats_and_skips(Trees,0,Cats,0,Skips)
     },
-    format_to_chars('  <parser cats="~w" skips="~w" />~n',[Cats,Skips]).
+    format_to_chars('  <parser build="~s" date="~w-~s-~sT~s:~s" cats="~w" skips="~w" />~n',
+		    [Build,Year,Month,Day,Hour,Min,Cats,Skips]).
 deptree_xml_score(_Cat) --> [].
-    
+
+add_z(Num,Str) :-
+    (   Num < 10
+    ->  format_to_chars("0~w",Num,Str)
+    ;   format_to_chars("~w",Num,Str)
+    ).
 
 deptree_xml_sentence(Sentence) -->
     format_to_chars('  <sentence',[]),
