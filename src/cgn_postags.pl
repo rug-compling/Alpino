@@ -179,7 +179,7 @@ guess_stags(Q0,Q,Tag,St,L0,L) :-
 	    lassy(Stem,POSTAG)
 	->  L0 = [cgn_postag(Q0,Q1,POSTAG)|L1],
 	    guess_stags(Q1,Q,Tag,Stems,L1,L)
-	;   St = [Stem|Stems]
+	;   St = [_Stem|Stems]
 	->  L0 = [cgn_postag(Q0,Q1,'NA()')|L1],
 	    guess_stags(Q1,Q,Tag,Stems,L1,L)
 	;   L0 = [cgn_postag(Q0,Q1,'NA()')|L1],    % if St is not a list
