@@ -2874,14 +2874,29 @@ getchars(Stream,In,Out) :-
 
 :- initialize_flag(alpino_version, alpino(version)).
 application_version :-
+    application_version(String),
+    format(user_error,"~s~n",[String]).
+
+application_version(String) :-
     hdrug_flag(alpino_version,File0),
     (   File0 == undefined
-    ->  format(user_error,"No version information available~n",[])
+    ->  String = "No version information available"
     ;   absolute_file_name(File0,File),
 	open(File,read,Stream),
-	getchars(Stream,String,[]),
-	close(Stream),
-	format(user_error,"~s~n",[String])
+	getchars(Stream,String0,[]),
+	remove_nl(String0,String),
+	close(Stream)
+    ).
+
+remove_nl([],[]).
+remove_nl([C|Cs0],Cs) :-
+    remove_nlc(C,Cs,Cs1),
+    remove_nl(Cs0,Cs1).
+
+remove_nlc(C,Cs,Cs1) :-
+    (   C =:= 10
+    ->  Cs = Cs1
+    ;   Cs = [C|Cs1]
     ).
 
 :- public generate_adt_xmls/0.
