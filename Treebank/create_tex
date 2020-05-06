@@ -9,6 +9,8 @@ $opt_s =~ s/_/\\_/g;
 print "\\documentclass{article}\\usepackage{a4wide}\n";
 print "\\usepackage[utf8]{inputenc}\\usepackage{graphicx}\n";
 print "\\usepackage[T1]{fontenc}\n";
+print "\\usepackage{newunicodechar}\n";
+print "\\newunicodechar{°}{\\ensuremath{\\circ}}\n";
 print "\\title{$opt_s}\\author{The Alpino Team}\n";
 print "\\begin{document}\\maketitle\n";
 
