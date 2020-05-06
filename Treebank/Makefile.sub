@@ -76,7 +76,7 @@ doc: index.pdf index.html
 PDFLATEX=pdflatex
 
 index.pdf: index.tex
-	$(PDFLATEX) -interaction nonstopmode index.tex
+	-$(PDFLATEX) -interaction nonstopmode index.tex
 
 index.tex:  $(files:%=%.pdf)
 	dtxslt --stylesheet $(ttdir)/stylesheets/dt2sent_with_file.xsl $(files:%=%.xml)\
