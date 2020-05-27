@@ -10,6 +10,10 @@ user_transformation(r(Rel,i(X,Cat)),A,B,
     user_transformation(r(Rel,Cat),A,B,
                         r(Rel2,Cat2),C,D,E,F).
 
+
+user_transformation(r(REL,l(read_from_treebank(Az,voort,'VZ(fin)'),Cat,W/[P0,P])),B,[],
+		    r(REL,l(read_from_treebank(Az,voort,'BW()'),Cat,W/[P0,P])),B,[],_,_).
+
 /*
 user_transformation(r(REL,l(read_from_treebank(Az,Lem,'WW(od,vrij,zonder'),Cat,W/[P0,P])),B,[],
 		    r(REL,l(read_from_treebank(Az,Lem,'WW(od,vrij,zonder)'),Cat,W/[P0,P])),B,[],_,_).

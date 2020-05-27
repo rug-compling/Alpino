@@ -79,9 +79,11 @@ search_tag_stem(A,B) :-
     alpino_lexical_analysis:search_tag_stem(A,B).
 
 assert_tag(P0,P,R0,R,Label,History,Tag) :-
+    \+ alpino_lexical_analysis:tag(P0,P,R0,R,Label,_,_,Tag),
     alpino_lexical_analysis:assert_tag(P0,P,R0,R,Label,History,Tag).
 
 assert_tag(tag(P0,P,R0,R,Label,History,Tag)) :-
+    \+ alpino_lexical_analysis:tag(P0,P,R0,R,Label,_,_,Tag),
     alpino_lexical_analysis:assert_tag(P0,P,R0,R,Label,History,Tag).
 
 guess_unknown_words(Words,Ps) :-
@@ -5981,6 +5983,13 @@ parts_diminutive(W,Stam) :-
     ;   atom_concat(_,ou, Stam)
     ;   atom_concat(_,ei, Stam)
     ;   atom_concat(_,ij, Stam)
+    ;   atom_concat(_,aun, Stam)
+    ;   atom_concat(_,een, Stam)
+    ;   atom_concat(_,eun, Stam)
+    ;   atom_concat(_,oen, Stam)
+    ;   atom_concat(_,oun, Stam)
+    ;   atom_concat(_,ein, Stam)
+    ;   atom_concat(_,ijn, Stam)
     ).
 parts_diminutive(W,Stam) :-
     atom_concat(Stam,je,W),
