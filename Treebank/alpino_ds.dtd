@@ -3,6 +3,11 @@
 <!-- Alpino Dependency Structures DTD -->
 
 <!--
+Versie 1.11, per 27 mei 2020
+
+ - meta type="bool"
+ - nattr, rattr
+
 Versie 1.10, per 12 juni 2019, aangepaste representatie van UD
 
 Versie 1.9, per 21 november 2018, met compacte representatie van UD
@@ -143,7 +148,7 @@ recursion_limit CDATA			#IMPLIED
 	meta-data zoals voorgesteld door P. Kleiweg voor PaQu project
 
 	attribuut "type", verplicht, geldige waardes: "text", "int",
-	"float", "date", "datetime"
+	"float", "date", "datetime", "bool"
 	attribuut "name", verplicht
 	"name" hoeft niet uniek te zijn, maar als het vaker voorkomt moet die
 	metadata van hetzelfde type zijn.
@@ -162,6 +167,8 @@ recursion_limit CDATA			#IMPLIED
 	type="datetime"
 		Datum (zelfde bereik) plus tijd zonder tijdzone, zoals
 		"2015-01-31 01:59" of, met seconden zoals "2015-01-31 01:59:59"
+	type="bool"
+		waarde is "true" of "false"
 
 -->
 <!ELEMENT metadata	(meta*) >
@@ -169,9 +176,9 @@ recursion_limit CDATA			#IMPLIED
 
 <!ELEMENT meta		EMPTY >
 <!ATTLIST meta
-	  type		(text|int|float|date|datetime)	#REQUIRED
-	  name		CDATA				#REQUIRED
-	  value		CDATA				#REQUIRED
+	  type		(text|int|float|date|datetime|bool)	#REQUIRED
+	  name		CDATA					#REQUIRED
+	  value		CDATA					#REQUIRED
 >
 
 <!ELEMENT parser	EMPTY >
@@ -184,7 +191,7 @@ recursion_limit CDATA			#IMPLIED
 
 <!--			Node						-->
 <!--			een knoop van een dependency tree		-->
-<!ELEMENT  node		(node*|ud)					>
+<!ELEMENT  node		((nattr|rattr)*, (node*|ud))			>
 <!--
 	rel		de dependency relatie van de knoop
 	cat		de categorie van de knoop
@@ -326,6 +333,20 @@ recursion_limit CDATA			#IMPLIED
 
 <!-- dscsense, dscmanual: word senses extracted from Dutch SemCor	-->
 
+
+<!ELEMENT nattr		EMPTY >
+<!ATTLIST nattr
+	  type		(text|int|float|date|datetime|bool)	#REQUIRED
+	  name		CDATA					#REQUIRED
+	  value		CDATA					#REQUIRED
+>
+
+<!ELEMENT rattr		EMPTY >
+<!ATTLIST rattr
+	  type		(text|int|float|date|datetime|bool)	#REQUIRED
+	  name		CDATA					#REQUIRED
+	  value		CDATA					#REQUIRED
+>
 
 
 <!--			Sentence					-->
