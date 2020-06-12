@@ -227,6 +227,13 @@ recursion_limit CDATA			#IMPLIED
 
 	Het is ook mogelijk een opsomming van de mogelijke waarden te
 	geven.	Voor sommige attributen is dat misschien wenselijk.
+
+        Een tweede voorkomen van een node met een bepaalde index (in
+        een top-down left-right walk van de boom) mag alleen een rel
+        attribuut hebben, en geen ingebedde node, nattr of rattr 
+        elementen. Ook mag de node geen lexicale attributen hebben
+        zoals word, lemma, postag, etc.
+
 -->
 
 <!-- value "part" for cat is not really allowed, but sometimes is produced
@@ -337,6 +344,9 @@ recursion_limit CDATA			#IMPLIED
 
 Voor de attributen van nattr en rattr gelden dezelfde regels als voor
 de attributen van meta
+
+Verder geldt dat indien een node meerdere nattr (of rattr) elementen
+bevat de waarde van "name" voor elk van die elementen uniek moet zijn.
 
 -->
 
