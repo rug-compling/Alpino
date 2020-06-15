@@ -230,7 +230,7 @@ recursion_limit CDATA			#IMPLIED
 
         Een tweede voorkomen van een node met een bepaalde index (in
         een top-down left-right walk van de boom) mag alleen een rel
-        attribuut hebben, en geen ingebedde node, nattr of rattr 
+        attribuut hebben, en geen ingebedde node of nattr 
         elementen. Ook mag de node geen lexicale attributen hebben
         zoals word, lemma, postag, etc.
 
