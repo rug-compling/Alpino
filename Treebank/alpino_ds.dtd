@@ -3,10 +3,10 @@
 <!-- Alpino Dependency Structures DTD -->
 
 <!--
-Versie 1.11, per 27 mei 2020
+Versie 1.11, per 18 juni 2020
 
  - meta type="bool"
- - nattr, rattr
+ - data
 
 Versie 1.10, per 12 juni 2019, aangepaste representatie van UD
 
@@ -191,7 +191,7 @@ recursion_limit CDATA			#IMPLIED
 
 <!--			Node						-->
 <!--			een knoop van een dependency tree		-->
-<!ELEMENT  node		((nattr|rattr)*, (node*|ud))			>
+<!ELEMENT  node		(data*, (node*|ud))				>
 <!--
 	rel		de dependency relatie van de knoop
 	cat		de categorie van de knoop
@@ -227,13 +227,6 @@ recursion_limit CDATA			#IMPLIED
 
 	Het is ook mogelijk een opsomming van de mogelijke waarden te
 	geven.	Voor sommige attributen is dat misschien wenselijk.
-
-        Een tweede voorkomen van een node met een bepaalde index (in
-        een top-down left-right walk van de boom) mag alleen een rel
-        attribuut hebben, en geen ingebedde node of nattr 
-        elementen. Ook mag de node geen lexicale attributen hebben
-        zoals word, lemma, postag, etc.
-
 -->
 
 <!-- value "part" for cat is not really allowed, but sometimes is produced
@@ -340,21 +333,9 @@ recursion_limit CDATA			#IMPLIED
 
 <!-- dscsense, dscmanual: word senses extracted from Dutch SemCor	-->
 
-<!--
-
-Voor de attributen van nattr en rattr gelden dezelfde regels als voor
-de attributen van meta
-
-Verder geldt dat indien een node meerdere nattr (of rattr) elementen
-bevat de waarde van "name" voor elk van die elementen uniek moet zijn.
-
--->
-
-<!ELEMENT nattr		EMPTY >
-<!ATTLIST nattr
-	  type		(text|int|float|date|datetime|bool)	#REQUIRED
-	  name		CDATA					#REQUIRED
-	  value		CDATA					#REQUIRED
+<!ELEMENT data		(#PCDATA) >
+<!ATTLIST data
+	  name		CDATA					#IMPLIED
 >
 
 <!ELEMENT rattr		EMPTY >
