@@ -338,14 +338,6 @@ recursion_limit CDATA			#IMPLIED
 	  name		CDATA					#IMPLIED
 >
 
-<!ELEMENT rattr		EMPTY >
-<!ATTLIST rattr
-	  type		(text|int|float|date|datetime|bool)	#REQUIRED
-	  name		CDATA					#REQUIRED
-	  value		CDATA					#REQUIRED
->
-
-
 <!--			Sentence					-->
 <!--			de tekst van de gehele zin			-->
 <!ELEMENT  sentence	(#PCDATA)					>
