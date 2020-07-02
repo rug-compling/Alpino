@@ -20318,7 +20318,9 @@ n([pl(luiken),sg(luik)],het,[],
 
 n([sg(luilekkerland)],het,[]).
 
-n([pl(luipaarden),sg(luipaard)],both,[]).
+n([pl(luipaarden),sg(luipaard)],both,[],
+  [jacht  % met dank aan Vincent Vandeghinste, en niet jacht_lieden_paard
+  ]).
 
 n([pl(luizen),sg(luis)],de,[]).
 
