@@ -17,7 +17,7 @@
 
   <xsl:template match="/">
     <xsl:variable name="layoutTree">
-      <xsl:apply-templates select="/alpino_adt/node" mode="xml2layout"/>
+      <xsl:apply-templates select="/alpino_adt/node/node" mode="xml2layout"/>
     </xsl:variable>
     <xsl:call-template name="layout2svg">
       <xsl:with-param name="layout" select="exslt:node-set($layoutTree)"/>
@@ -52,15 +52,12 @@
     <xsl:param name="depth" select="1"/>
     <xsl:variable name="label">
       <xsl:choose>
-        <xsl:when test = "@pos = 'UNKNOWN'">
-          <xsl:text>capitalslong</xsl:text>
+        <xsl:when test = "string-length(@cat) &gt; string-length(@root) 
+          and string-length(@cat) &gt; string-length(@rel)">
+          <xsl:value-of select="@cat"/>
         </xsl:when>
-        <xsl:when test = "string-length(@root) &gt; string-length(@pos) 
-          and string-length(@root) &gt; string-length(@rel)">
+        <xsl:when test = "string-length(@root) &gt; string-length(@rel) ">
           <xsl:value-of select="@root"/>
-        </xsl:when>
-        <xsl:when test = "string-length(@pos) &gt; string-length(@rel) ">
-          <xsl:value-of select="@pos"/>
         </xsl:when>
         <xsl:otherwise>
           <xsl:value-of select="@rel"/>
@@ -101,7 +98,7 @@
     <xsl:variable name = "y" select = "@depth * 2 * $yunit"/>
     <!-- Draw label of node -->
     <svg:text x = "{$x}" y = "{$y - 30}" font-style="italic">
-      <xsl:if test ="@rel != 'top'">
+      <xsl:if test ="@rel != 'top' and @rel != '--'">
       <xsl:value-of select="@rel"/>
       </xsl:if>
     </svg:text>
@@ -110,23 +107,41 @@
       <svg:tspan font-weight="bold" fill="red">
       <xsl:value-of select="@index"/>
       </svg:tspan>
-      <xsl:if test = "@index and (@cat|@pos)">
+      <xsl:if test = "@index and @cat">
         <xsl:text>:</xsl:text>
       </xsl:if>
-      <xsl:value-of select="@cat|@pos"/>
+      <xsl:if test = "not(@root)">
+      <xsl:value-of select="@cat"/>
+      </xsl:if>
     </svg:text>
 
     <xsl:if test = "@root">
-      <svg:text x = "{$x}" y = "{$y + 10}">
+      <svg:text x = "{$x}" y = "{$y - 10}">
         <svg:tspan>
         <xsl:value-of select="@root"/>
         </svg:tspan>
-      <svg:tspan baseline-shift = "sub">
-        <xsl:value-of select="@begin"/>
-      </svg:tspan>
       </svg:text>
     </xsl:if>
 
+      <svg:text x = "{$x}" y = "{$y}" font-size="80%">
+	<xsl:for-each select="@*">
+	  <xsl:if test ="name() != 'id'
+			 and name() != 'sense'
+			 and name() != 'root'
+			 and name() != 'cat'
+			 and name() != 'index'
+			 and name() != 'rel'
+			 and name() != 'depth'
+			 and name() != 'mwu_sense'
+			 and name() != 'mwu_root'
+			 and name() != 'width'"
+		  >
+            <svg:tspan x = "{$x}" dy="8"><xsl:value-of select="."/></svg:tspan>
+	  </xsl:if>
+	</xsl:for-each>
+      </svg:text>
+
+    
     <!-- Draw connector lines to all sub-nodes -->
     <xsl:for-each select="node">
       <svg:line x1 = "{$x}" y1 = "{$y}"
