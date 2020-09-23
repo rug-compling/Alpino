@@ -3,6 +3,10 @@
 <!-- Alpino Dependency Structures DTD -->
 
 <!--
+Versie 1.12 per 16 september 2020
+
+ - sonar_ne_class, sonar_ne_begin, sonar_ne_end, sonar_ne
+
 Versie 1.11, per 18 juni 2020
 
  - meta type="bool"
@@ -325,6 +329,11 @@ recursion_limit CDATA			#IMPLIED
 	  dscsense	CDATA	#IMPLIED
 	  dscmanual	(true|false) #IMPLIED
 
+          sonar_ne_class CDATA #IMPLIED
+          sonar_ne_begin CDATA #IMPLIED
+          sonar_ne_end   CDATA #IMPLIED
+          sonar_ne       CDATA #IMPLIED
+
 >
 
 <!-- pb - propbank role op verzoek van Universiteit Utrecht -->
@@ -333,10 +342,31 @@ recursion_limit CDATA			#IMPLIED
 
 <!-- dscsense, dscmanual: word senses extracted from Dutch SemCor	-->
 
+<!-- sonar_* voor Lassy Klein, named entities uit SONAR 1.2
+
+'sonar_ne_class', 'sonar_ne_begin' en 'sonar_ne_end' alleen op terminals,
+voor alle named entities uit SONAR.
+   sonar_ne_class : de klasse van de named entity
+   sonar_ne_begin : gelijk aan attribuut 'begin' van het eerste woord
+   sonar_ne_end   : gelijk aan attribuut 'end' van het laatste woord
+Bestaat een named entity uit meerdere woorden, dan heb al die woorden
+deze drie attributen, met identieke waardes.
+
+'sonar_ne' bevat de klasse van de named entity op de node die de
+complete named entity omvat, maar niet meer dan dat. Voor named
+entities die maar uit één woord bestaan is dat de terminal node.
+Voor named entities die uit meerdere woorden bestaan is dat de parent
+node die alle woorden uit de named entity als dochters heeft, en geen
+enkele andere dochter heeft. Niet elke multi-word named entity heeft
+zo'n parent, en in dat geval ontbreekt het attibuut 'sonar_ne'.
+
+-->
+
 <!ELEMENT data		(#PCDATA) >
 <!ATTLIST data
 	  name		CDATA					#IMPLIED
 >
+
 
 <!--			Sentence					-->
 <!--			de tekst van de gehele zin			-->
