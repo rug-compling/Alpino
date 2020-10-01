@@ -2056,22 +2056,22 @@ with_dt([niet,eentje],
 	dt(detp,[mod=l(niet,adverb,advp,0,1),
 		 hd=l(eentje,pronoun(nwh,thi,sg,de,both,indef),1,2)])).
 
-m(koning, determiner(pron), ['\'s',konings]).
-m(koning, determiner(pron), ['\'s',keizers]).
-m(land,   determiner(pron), ['\'s',lands]).
-m(lezer,  determiner(pron), ['\'s',lezers]).
-m(liefde, determiner(pron), ['\'s',liefdes]).
-m(man,    determiner(pron), ['\'s',mans]).
-m(mens,   determiner(pron), ['\'s',mensen]).
-m(rijk,   determiner(pron), ['\'s',rijks]).
-m(wereld, determiner(pron), ['\'s',werelds]).
+m('\'s koning', determiner(pron), ['\'s',konings]).
+m('\'s koning', determiner(pron), ['\'s',keizers]).
+m('\'s land',   determiner(pron), ['\'s',lands]).
+m('\'s lezer',  determiner(pron), ['\'s',lezers]).
+m('\'s liefde', determiner(pron), ['\'s',liefdes]).
+m('\'s man',    determiner(pron), ['\'s',mans]).
+m('\'s mens',   determiner(pron), ['\'s',mensen]).
+m('\'s rijk',   determiner(pron), ['\'s',rijks]).
+m('\'s wereld', determiner(pron), ['\'s',werelds]).
 
 m(god,          determiner(pron), gods).
 m(god,          determiner(pron), 'Gods').
 m(grootmoeder,  determiner(pron), grootmoeders).
 m(grootvader,   determiner(pron), grootvaders).
 m(land,         determiner(pron), slands).
-m(land,         determiner(pron), ['\'',slands]).
+m('\'s land',   determiner(pron), ['\'',slands]).
 m(mam,          determiner(pron), mams).
 m(moeder,       determiner(pron), moeders).
 m(noord,        determiner(pron), noords).
@@ -2093,7 +2093,7 @@ m(mama,         determiner(pron), 'mamma\'s').
 m(papa,         determiner(pron), 'pappa\'s').
 
 m('Nederland',  name_determiner(pron,'LOC'),'Neerlands').
-m('Nederland',  name_determiner(pron,'LOC'),['\'s','Neerlands']).
+m('\'s Nederland',  name_determiner(pron,'LOC'),['\'s','Neerlands']).
 m('Prince',     name_determiner(pron,'PER'),'Prince\'').
 m('van Gogh',   name_determiner(pron,'PER'),[van,'Goghs']).
 m('Bin Laden',  name_determiner(pron,'PER'),['Bin','Ladens']).
@@ -6997,7 +6997,7 @@ m(god,            pronoun(nwh,thi,sg,de,gen,def),gods).
 m(god,            pronoun(nwh,thi,sg,de,gen,def),'Gods').
 
 %% 28 miljard mark 's jaars
-m(jaar,            pronoun(nwh,thi,sg,de,gen,def),['\'s',jaars]).
+m('\'s jaar',            pronoun(nwh,thi,sg,de,gen,def),['\'s',jaars]).
 
 with_dt([de,één],
 	pronoun(nwh,thi,sg,de,both,def),

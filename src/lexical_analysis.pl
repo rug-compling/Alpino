@@ -2577,7 +2577,7 @@ guess_english_compound(tag(P0,P,R0,R,Label,Used,normal(english_compound),Tag2)) 
     search_tag_r0(R1,tag(P1,P, R1,R, Label2,Used2,_His2,Tag2)),
     noun_tag(Tag2),
     second_part_english_compound(R1,R,Tag2),
-    alpino_lex:concat_stems([Label1,Label2],Label,'_'),
+    alpino_lex:concat_stems([Label1,Label2],Label,' '),
     concat_all([Used1,Used2],Used,' '),
     \+ search_tag_r0(R0,tag(P0,P,R0,R,_,_,_,_)),
     \+ (  tag(Z0,Z,_,_,_,_,_,_),

@@ -554,7 +554,7 @@ long_punct(Word,Ws0,Ws,StemL0,StemWord) :-
     (   next_word(Word,Ws0,Ws1,_)
     ->  StemL0=[StemWord|StemL1],
 	long_punct(Word,Ws1,Ws,StemL1,StemWord)
-    ;   StemL0 = [],
+    ;   StemL0 = [StemWord],
 	Ws0 = Ws
     ).
 
@@ -1062,21 +1062,24 @@ lexicon__(om,adjective(het_st(adv)),Label1,Ws0,Ws,'om ter Asuper'(His),LC) :-
 %% zij is het leukste, always analysed as NP
 %% since indeed you can add relative clause
 lexicon__(het,Adj,Label,[STE|Ws],Ws,'het Asuper'(His),_) :-
-    het_ste_tag(Adj,Label,STE,His).
+    het_ste_tag(Adj,Label0,STE,His),
+    hdrug_util:concat_all([het,Label0],Label,' ').
 lexicon__('\'t',Adj,Label,[STE|Ws],Ws,'het Asuper'(His),_) :-
-    het_ste_tag(Adj,Label,STE,His).
+    het_ste_tag(Adj,Label0,STE,His),
+    hdrug_util:concat_all([het,Label0],Label,' ').
 lexicon__('`t',Adj,Label,[STE|Ws],Ws,'het Asuper'(His),_) :-
-    het_ste_tag(Adj,Label,STE,His).
+    het_ste_tag(Adj,Label0,STE,His),
+    hdrug_util:concat_all([het,Label0],Label,' ').
 
 lexicon__(om,adverb,Label,[het,STE|Ws],Ws,'om het Asuper'(His),_) :-
     het_ste_tag(_Adj,Label0,STE,His),
-    atom_concat('om ',Label0,Label).
+    atom_concat('om het ',Label0,Label).
 lexicon__(om,adverb,Label,['\'t',STE|Ws],Ws,'om het Asuper'(His),_) :-
     het_ste_tag(_Adj,Label0,STE,His),
-    atom_concat('om ',Label0,Label).
+    atom_concat('om het ',Label0,Label).
 lexicon__(om,adverb,Label,['`t',STE|Ws],Ws,'om het Asuper'(His),_) :-
     het_ste_tag(_Adj,Label0,STE,His),
-    atom_concat('om ',Label0,Label).
+    atom_concat('om het ',Label0,Label).
 
 lexicon__(Word0,Tag,Label,Ws1,Ws,abbreviation(His),LC) :-
     abbreviation(Word0,Abb,Ws1,Ws),
@@ -1874,6 +1877,9 @@ spelling_variant21('in-en-in',triest,'in-en-in-triest').
 
 spelling_variant21(o,zoveel,      zoveel).
 spelling_variant21(oh,zoveel,     zoveel).
+
+spelling_variant21('New','Yorks', 'Newyorks').
+spelling_variant21('New','Yorkse', 'Newyorkse').
 
 /* too many spur amb, since in most contexts, the two words
 are analysed correctly if written separately

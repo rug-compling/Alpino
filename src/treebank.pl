@@ -726,15 +726,14 @@ deptree_xml_label_rest(p(C0),_,Key,[cat-C|Atts1],_Tags,HisList) :-
 
 deptree_xml_label_rest(l(FrameTerm,Cat,Root0/[P0,P]),String,_,
                        [begin-P0,end-P,lemma-Lemma,root-Root,word-Word|Atts1],Tags,HisList) :-
-    get_lemma(FrameTerm,Root0,Lemma),
-    get_root(Root0,Root),
-
     get_root(P0,P,String,Word),
-    hdrug_flag(xml_format_frame,On),
-    (   lists:member(cgn_postag(P0,P,Tag),Tags)
+    (   lists:member(cgn_postag(P0,P,Lemma0,Tag),Tags)
     ->  true
     ;   Tag = 'NA()'
     ),
+    get_lemma_or_word(Lemma0,Lemma,Word),
+    get_root(Root0,Root),    
+    hdrug_flag(xml_format_frame,On),
     (   On == on,
 	lists:member(his(P0,P,His),HisList)
     ->  encode_his(His,Atts1,Atts)
@@ -763,15 +762,29 @@ get_lemma(read_from_treebank(_,Lemma0,_),_,Lemma) :-
 get_lemma(_,Root,Lemma) :-
     get_lemma(Root,Lemma).
 
-get_lemma(v_root(_,Lemma0),Lemma) :-
+get_lemma_or_word(Var,Lemma,Word) :-
+    var(Var), !,
+    format(user_error,"warning: no lemma~n",[]),
+    Lemma = Word.
+get_lemma_or_word(Pos/Atom,Lemma,Word) :-
+    atom(Atom),
+    integer(Pos),!,
+    atom_codes(Atom,Codes),
+    alpino_util:split_string(Codes," ",SubList),	
+    (   lists:nth(Pos,SubList,LemmaCodes)
+    ->  atom_codes(Lemma,LemmaCodes)
+    ;   Lemma=Word,
+	format(user_error,"warning: no matching lemma ~w~n",[Pos/Atom])
+    ).	
+get_lemma_or_word(v_root(_,Lemma0),Lemma,Word) :-
     !,
-    get_lemma(Lemma0,Lemma).
-get_lemma(Lemma0,Lemma) :-
+    get_lemma_or_word(Lemma0,Lemma,Word).
+get_lemma_or_word(Lemma0,Lemma,_) :-
     atom(Lemma0),
     atom_concat(Lemma1,'_DIM',Lemma0),
     !,
     Lemma1=Lemma.
-get_lemma(L,L).
+get_lemma_or_word(L,L,_).
 
 get_root(v_root(Root0,_),Root) :-
     !,
@@ -1657,6 +1670,14 @@ best_score_end_parse_sub(Sub) :-
     ;	format_of_result(Sub,Result,Key)
     ).
 
+format_of_result(dump_xml,Result,_Key) :-
+    alpino_data:result_term(_,String,_,_,_,_,Result),
+    xml_save(Result,String,[],stream(user_output),normal).
+format_of_result(xml,Result,Key) :-
+    alpino_data:result_term(_,String,_,_,_,_,Result),
+    format_to_chars("~w.xml",[Key],Codes),
+    atom_codes(File,Codes),
+    xml_save(Result,String,[],File,normal).
 format_of_result(triples,Result,Key) :-
     alpino_dt:format_triples_without_postags_of_result(Result,Key).
 format_of_result(frames,Result,Key) :-

@@ -406,34 +406,35 @@ add_missing_postags_([],Str,N,PosTags) :-
 %    ), !,
 %    add_missing_postags_(Postags,Str,N,Result).
 
-add_missing_postags_([cgn_postag(P0,P1,Tag)|Tags0],[W|Words],N0,PosTags) :-
+add_missing_postags_([cgn_postag(P0,P1,Lemma,Tag)|Tags0],[W|Words],N0,PosTags) :-
     N1 is N0 + 1,
     (   P0 = N0
-    ->  PosTags=[cgn_postag(P0,P1,Tag)|PosTags1],
+    ->  PosTags=[cgn_postag(P0,P1,Lemma,Tag)|PosTags1],
 	add_missing_postags_(Tags0,Words,N1,PosTags1)
     ;   P0 > N0,
-	add_postag(W,TagN),
-	PosTags=[cgn_postag(N0,N1,TagN)|PosTags1],
-	add_missing_postags_([cgn_postag(P0,P1,Tag)|Tags0],Words,N1,PosTags1)
+	add_postag(W,TagN,LemmaN),
+	PosTags=[cgn_postag(N0,N1,LemmaN,TagN)|PosTags1],
+	add_missing_postags_([cgn_postag(P0,P1,Lemma,Tag)|Tags0],Words,N1,PosTags1)
     ).
 
 add_final_postags([],_,[]).
-add_final_postags([H|T],N,[cgn_postag(N,N1,Tag)|Tags]) :-
-    add_postag(H,Tag),
+add_final_postags([H|T],N,[cgn_postag(N,N1,Lemma,Tag)|Tags]) :-
+    add_postag(H,Tag,Lemma),
     N1 is N + 1,
     add_final_postags(T,N1,Tags).
 
 %% in case of timeout, this really should depend on the best frame sequence
 %% this is quick hack
-add_postag(H,Tag) :-
+add_postag(H,Tag,Lemma) :-
     (   alpino_cgn_postags:lassy(H,Tag)
-    ->  true
+    ->  Lemma = H
     ;   %% e.g. in case of timeout
 	alpino_lexical_analysis:tag(_,_,Q0,Q,Stem,H,His,Frame),
-	alpino_cgn_postags:cgn_postag(Frame,Stem,H,Q0,Q,n,His,[cgn_postag(_,_,Tag)],[])
+	alpino_cgn_postags:cgn_postag(Frame,Stem,H,Q0,Q,n,His,[cgn_postag(_,_,Lemma,Tag)],[])
     ->  true	
     ;   format(user_error,"warning: no default postag for ~w~n",[H]),
-	Tag = 'NA()'
+	Tag = 'NA()',
+	Lemma = H
     ).
 
 frames_to_postags_([],_,[]) --> [].
@@ -457,7 +458,7 @@ format_postags_of_result(Result) :-
 format_postags_of_result(Result,Key) :-
     result_to_frames(Result,Frames,_),
     frames_to_postags(Frames,Result,Words,PosTags),
-    format_cgn_postags(PosTags,Words,Key).
+    format_cgn_postags(PosTags,Words,Key,[]).
 
 format_pts_of_result(Result) :-
     result_to_frames(Result,Frames,_),
@@ -469,10 +470,10 @@ format_pts_of_result(Result,Key) :-
     result_to_frames(Result,Frames,_),
     frames_to_postags(Frames,Result,Words,PosTags),
     postags_to_pts(PosTags,Pts),
-    format_cgn_postags(Pts,Words,Key).
+    format_cgn_postags(Pts,Words,Key,[]).
 
 postags_to_pts([],[]).
-postags_to_pts([cgn_postag(P0,P,Tag0)|T0],[cgn_postag(P0,P,Tag)|T]) :-
+postags_to_pts([cgn_postag(P0,P,Lemma,Tag0)|T0],[cgn_postag(P0,P,Lemma,Tag)|T]) :-
     alpino_postags:lassy_postag_atts(Tag0,List,[]),
     lists:member(pt=Tag,List),
     postags_to_pts(T0,T).
@@ -670,13 +671,15 @@ not_new_left_corner([H|T],Goal,First) :-
     alpino_guides:check_connect(Goal,List).
 
 format_cgn_postags([],[]).
-format_cgn_postags([cgn_postag(P0,P,Tag)|T],[W|Words]) :-
-    format("~w~t~25+~w~t~5+~w~t~5+~w\n",[W,P0,P,Tag]),
+format_cgn_postags([cgn_postag(P0,P,Lemma0,Tag)|T],[W|Words]) :-
+    alpino_treebank:get_lemma_or_word(Lemma0,Lemma,W),
+    format("~w~t~25+~w~t~5+~w~t~5+~w~t~50+~w\n",[W,P0,P,Tag,Lemma]),
     format_cgn_postags(T,Words).
 
 format_cgn_postags([],[],_).
-format_cgn_postags([cgn_postag(P0,P,Tag)|T],[W|Words],Key) :-
-    format("~w|~w|~w|~w|~w\n",[Key,W,P0,P,Tag]),
+format_cgn_postags([cgn_postag(P0,P,Lemma0,Tag)|T],[W|Words],Key) :-
+    alpino_treebank:get_lemma_or_word(Lemma0,Lemma,W),
+    format("~w|~w|~w|~w|~w|~w\n",[Key,W,P0,P,Tag,Lemma]),
     format_cgn_postags(T,Words,Key).
 
 get_stem(v_root(A,_B),C) :-

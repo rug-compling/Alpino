@@ -2559,10 +2559,10 @@ collect_cgn_tags_of_label_rest(i(_)) --> [].
 collect_cgn_tags_of_label_rest(i(_,Rest)) -->
     collect_cgn_tags_of_label_rest(Rest).
 collect_cgn_tags_of_label_rest(p(_)) --> [].
-collect_cgn_tags_of_label_rest(l(read_from_treebank(_,_,CGN),_Cat,_Root/[P0,P])) -->
-    [cgn_postag(P0,P,CGN)].
-collect_cgn_tags_of_label_rest(l(read_from_treebank(_,_,_,CGN),_Cat,_Root/[P0,P])) -->
-    [cgn_postag(P0,P,CGN)].
+collect_cgn_tags_of_label_rest(l(read_from_treebank(_,Lemma,CGN),_Cat,_Root/[P0,P])) -->
+    [cgn_postag(P0,P,Lemma,CGN)].
+collect_cgn_tags_of_label_rest(l(read_from_treebank(_,_,Lemma,CGN),_Cat,_Root/[P0,P])) -->
+    [cgn_postag(P0,P,Lemma,CGN)].
 
 
 compare_treebank_cgn_result(File,Result,Identifier) :-
@@ -2586,7 +2586,7 @@ compare_treebank_cgn(File,_) :-
 compare_treebank_cgn_continue(File,SysTags,Ident) :-
     hdrug_flag(current_input_sentence,Words),
     collect_treebank_cgn(File,GoldTags),
-    format(user_error,"~w~t~25+~w~t~45+~w~n",[word,correct,wrong]),
+    format(user_error,"~w~t~40+~w~t~40+~w~t~40+ T    ~w~n",[word,treebank,parser,key]),
     length(GoldTags,Len),
     compare_cgn(GoldTags,SysTags,0,Words,0,Correct,Ident),
     format(user_error,"~w / ~w correct~n",[Correct,Len]),
@@ -2610,13 +2610,19 @@ reset_cgn_numbers :-
 
 %% sorted, so in order
 %% complete
+%% todo: compare lemma too?
 compare_cgn([],[],_,[],C,C,_).
-compare_cgn([cgn_postag(P0,P,H)|T],
-	    [cgn_postag(P0,P,H2)|T2],P0,[W|Words],C0,C,Ident) :-
+compare_cgn([cgn_postag(P0,P,LemmaA,H)|T],
+	    [cgn_postag(P0,P,LemmaB0,H2)|T2],P0,[W|Words],C0,C,Ident) :-
+    alpino_treebank:get_lemma_or_word(LemmaB0,LemmaB,W),
     (   H == H2
     ->  C1 is C0 + 1
-    ;   format(user_error,"~w~t~25+~w~t~45+~w #PT# ~w~n",[W,H,H2,Ident]),
+    ;   format(user_error,"~w~t~40+~w~t~40+~w~t~40+ #PT# ~w~n",[W,H,H2,Ident]),
 	C1 = C0
+    ),
+    (   LemmaA == LemmaB
+    ->  true
+    ;   format(user_error,"~w~t~40+~w~t~40+~w~t~40+ #LM# ~w~n",[W,LemmaA,LemmaB,Ident])
     ),
     compare_cgn(T,T2,P,Words,C1,C,Ident).
 

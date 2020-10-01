@@ -231,7 +231,6 @@ wrong_arity_goal(adverbs:adverb(_,_,_)).
 wrong_arity_goal(adverbs:adverb(_,_,_,_)).
 
 wrong_arity_goal(numbers:number(_)).
-wrong_arity_goal(numbers:number(_,_,_)).
 wrong_arity_goal(numbers:number(_,_,_,_)).
 wrong_arity_goal(numbers:number(_,_,_,_,_)).
 

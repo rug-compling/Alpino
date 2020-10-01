@@ -20,25 +20,25 @@ cgn_postag_c(with_dt(_,Tree),_Stem,_Surf,Q0,_,_,_) -->
     !,
     with_dt_tags(Tree,Q0).
 
-cgn_postag_c(Frame,_,Surf,Q0,Q,_Cat,_) -->
+cgn_postag_c(Frame,Stem,Surf,Q0,Q,_Cat,_) -->
     {  exceptional_word_tag(Surf,Frame,Tag) },
     !,
-    tags(Q0,Q,Tag).
+    tags(Q0,Q,Stem,Tag).
 
 cgn_postag_c(Frame,Stem,_,Q0,Q,_Cat,_) -->
     {  exceptional_stem_tag(Stem,Frame,Tag) },
     !,
-    tags(Q0,Q,Tag).
+    tags(Q0,Q,Stem,Tag).
 
 cgn_postag_c(particle(_),Stem,_,Q0,Q,_,_) -->
     {  particle_tag(Stem,Tag) },
     !,
-    tags(Q0,Q,Tag).
+    tags(Q0,Q,Stem,Tag).
 
-cgn_postag_c(robust_skip,_Stem,Word,Q0,Q,_Cat,_) -->
+cgn_postag_c(robust_skip,Stem,Word,Q0,Q,_Cat,_) -->
     {  lassy(Word,Tag) },
     !,
-    tags(Q0,Q,Tag).
+    tags(Q0,Q,Stem,Tag).
 
 cgn_postag_c(robust_skip,_Stem,Word,Q0,Q,Cat,_) -->
     {  alpino_lexical_analysis:tag(_,_,Q0,Q,Stem,Word,His,Frame) },
@@ -48,17 +48,17 @@ cgn_postag_c(robust_skip,_Stem,Word,Q0,Q,Cat,_) -->
 cgn_postag_c(Frame,Stem,_,Q0,Q,_Cat,_) -->
     {  stem_dependent_tag(Frame,Stem,Tag) },
     !,
-    tags(Q0,Q,Tag).
+    tags(Q0,Q,Stem,Tag).
 
 cgn_postag_c(Frame,Stem,_,Q0,Q,Cat,_) -->
     {  context_dependent_tag(Frame,Tag,Stem,Q0,Q,Cat) },
     !,
-    tags(Q0,Q,Tag).
+    tags(Q0,Q,Stem,Tag).
 
-cgn_postag_c(Frame,_Stem,_,Q0,Q,_Cat,_) -->
+cgn_postag_c(Frame,Stem,_,Q0,Q,_Cat,_) -->
     {  cgn_postag_c(Frame,Tag) },
     !,
-    tags(Q0,Q,Tag).
+    tags(Q0,Q,Stem,Tag).
 
 cgn_postag_c(robust_skip,Stem,_,Q0,Q,_,_) -->
     !,
@@ -76,25 +76,26 @@ cgn_postag_c(Frame,Stem,Surf,Q0,Q,_,_) -->
     {  format(user_error,"error: no cgn tag for ~w ~w ~w~n",[Surf,Stem,Frame]) },
     guess_tags(Q0,Q,Frame,Stem).
 
-tags(Q0,Q,Tag,L0,L):-
+tags(Q0,Q,Stem,Tag,L0,L):-
     hdrug_util:hdrug_flag(add_nodes_for_mwu,On),
-    tags(On,Q0,Q,Tag,L0,L).
+    tags(On,Q0,Q,Stem,Tag,L0,L).
 
-tags(off,Q0,Q,Tag,[cgn_postag(Q0,Q,Tag)|L],L).
+tags(off,Q0,Q,Stem,Tag,[cgn_postag(Q0,Q,Stem,Tag)|L],L).
 
-tags(on,Q0,Q,Tag,L0,L) :-
+tags(on,Q0,Q,Stem,Tag,L0,L) :-
     (   Q is Q0 + 1
-    ->  L0 = [cgn_postag(Q0,Q,Tag)|L]
-    ;   stags(Q0,Q,Tag,L0,L)
+    ->  L0 = [cgn_postag(Q0,Q,Stem,Tag)|L]
+    ;   stags(Q0,Q,Stem,Tag,1,L0,L)
     ).
 
-stags(Q0,Q,Tag,L0,L) :-
+stags(Q0,Q,Stem,Tag,Pos,L0,L) :-
     (   Q =< Q0
     ->  L0 = L
     ;   Q1 is Q0 + 1,
 	m_tag(Q1,Q,Tag,TagN),
-	L0 = [cgn_postag(Q0,Q1,TagN)|L1],
-	stags(Q1,Q,Tag,L1,L)
+	L0 = [cgn_postag(Q0,Q1,Pos/Stem,TagN)|L1],
+	Pos1 is Pos + 1,
+	stags(Q1,Q,Stem,Tag,Pos1,L1,L)
     ).
 
 m_tag(Q0,Q,Tag0,Tag) :-
@@ -114,27 +115,28 @@ history_tags(double_compound,Q0,Q,Surf,Frame,Result) -->
       starts_with_capital(Surf),
       Q1 is Q0 + 1,
       atom_codes(Surf,Codes),
-      alpino_util:split_string(Codes," ",[_,W2]),
+      alpino_util:split_string(Codes," ",[W1,W2]),
+      atom_codes(Surf1,W1),
       atom_codes(Surf2,W2)
     },
-    [ cgn_postag(Q0,Q1,'SPEC(deeleigen)')],
+    [ cgn_postag(Q0,Q1,Surf1,'SPEC(deeleigen)')],
     cgn_postag_c(Frame,Surf2,Surf2,Q1,Q,Result,no).
     
 history_tags(normal(abbreviation(normal)),Q0,Q,'\'t',determiner(het,nwh,nmod,pro,nparg,wkpro),_) -->
     { 1 is Q-Q0 }, 
-    [ cgn_postag(Q0,Q,'LID(bep,stan,evon)') ].
+    [ cgn_postag(Q0,Q,het,'LID(bep,stan,evon)') ].
 
-history_tags(normal(abbreviation(normal)),Q0,Q,_,_,_) -->
+history_tags(normal(abbreviation(normal)),Q0,Q,Surf,_,_) -->
     { 1 is Q-Q0 }, 
-    [ cgn_postag(Q0,Q,'SPEC(afk)') ].
+    [ cgn_postag(Q0,Q,Surf,'SPEC(afk)') ].
 
-history_tags(part_verb_conjunct,Q0,Q,_,_,_) -->
+history_tags(part_verb_conjunct,Q0,Q,Surf,_,_) -->
     { 1 is Q-Q0 }, 
-    [ cgn_postag(Q0,Q,'SPEC(afgebr)') ].
+    [ cgn_postag(Q0,Q,Surf,'SPEC(afgebr)') ].
 
-history_tags(normal(url),Q0,Q,_,_,_) -->
+history_tags(normal(url),Q0,Q,Surf,_,_) -->
     { 1 is Q-Q0 }, 
-    [ cgn_postag(Q0,Q,'SPEC(symb)') ].
+    [ cgn_postag(Q0,Q,Surf,'SPEC(symb)') ].
 
 history_tags(quoted_name(_,_),Q0,Q,Surf,_,_) -->
     {  atom_codes(Surf,Codes),
@@ -143,6 +145,22 @@ history_tags(quoted_name(_,_),Q0,Q,Surf,_,_) -->
        Len is Q - Q0
     },
     guess_tag_list(Words,Q0,Q).
+
+history_tags(normal(variant(variant21(_Lemma,L1,L2),His)),P0,P,Surf,Frame,Result) -->
+    { P1 is P0 + 1,
+      P is P1 + 1
+    },
+    cgn_postag_c(Frame,L1,Surf,P0,P1,Result,His),
+    cgn_postag_c(Frame,L2,Surf,P1,P,Result,His).
+
+history_tags(normal(variant(variant31(_Lemma,L1,L2,L3),His)),P0,P,Surf,Frame,Result) -->
+    { P1 is P0 + 1,
+      P2 is P1 + 1,
+      P is P2 + 1
+    },
+    cgn_postag_c(Frame,L1,Surf,P0,P1,Result,His),
+    cgn_postag_c(Frame,L2,Surf,P1,P2,Result,His),
+    cgn_postag_c(Frame,L3,Surf,P2,P,Result,His).
 
 guess_tag_list([],Q,Q) --> [].
 guess_tag_list([H|T],Q0,Q) -->
@@ -156,18 +174,18 @@ guess_tags(Q0,Q,Frame,Stem,L0,L) :-
     ).
 
 guess_tag(Stem,Q0,Q) -->
-    [cgn_postag(Q0,Q,Tag)],
+    [cgn_postag(Q0,Q,Stem,Tag)],
     { Q is Q0 + 1,
       lassy(Stem,Tag) },
     !.
 guess_tag(Stem,Q0,Q) -->
-    [cgn_postag(Q0,Q,Tag)],
+    [cgn_postag(Q0,Q,Stem,Tag)],
     { Q is Q0 + 1,
       guess_lex(Stem,Tag) },
     !.
-guess_tag(_,Q0,Q) -->
+guess_tag(Stem,Q0,Q) -->
     { Q is Q0 + 1 },
-    [cgn_postag(Q0,Q,'NA()')].
+    [cgn_postag(Q0,Q,Stem,'NA()')].
 
 guess_stags(Q0,Q,Tag,St,L0,L) :-
     (   Q > Q0
@@ -177,12 +195,12 @@ guess_stags(Q0,Q,Tag,St,L0,L) :-
 	    guess_stags(Q1,Q,fixed_part(T),_Stems,L1,L)
 	;   St = [Stem|Stems],
 	    lassy(Stem,POSTAG)
-	->  L0 = [cgn_postag(Q0,Q1,POSTAG)|L1],
+	->  L0 = [cgn_postag(Q0,Q1,Stem,POSTAG)|L1],
 	    guess_stags(Q1,Q,Tag,Stems,L1,L)
-	;   St = [_Stem|Stems]
-	->  L0 = [cgn_postag(Q0,Q1,'NA()')|L1],
+	;   St = [Stem|Stems]
+	->  L0 = [cgn_postag(Q0,Q1,Stem,'NA()')|L1],
 	    guess_stags(Q1,Q,Tag,Stems,L1,L)
-	;   L0 = [cgn_postag(Q0,Q1,'NA()')|L1],    % if St is not a list
+	;   L0 = [cgn_postag(Q0,Q1,St,'NA()')|L1],    % if St is not a list
 	    guess_stags(Q1,Q,Tag,St,L1,L)
 	)
     ;   L0 = L
@@ -1605,23 +1623,34 @@ subtree_path(tree(_,Rule,List,_),Q0,Q,Path0,Path) :-
     lists:nth(N,List,Tree),
     subtree_path(Tree,Q0,Q,[Rule/N|Path0],Path).
 
-mwu_postag(Frame,_Stem,Surf,Q0,Q,_Result) -->
+mwu_postag(Frame,Stem,Surf,Q0,Q,_Result) -->
     { mwu_postag_frame_surf(Frame,Surf,Tags) },
-    mwu_tags(Tags,Q0,Q).
+    mwu_tags(Tags,Stem,1,Q0,Q).
 
 mwu_postag(Frame,Stem,_Surf,Q0,Q,_Result) -->
     { mwu_postag_frame_stem(Frame,Stem,Tags) },
-    mwu_tags(Tags,Q0,Q).
+    mwu_tags(Tags,Stem,1,Q0,Q).
 
 mwu_postag(_Frame,Stem,_Surf,Q0,Q,_Result) -->
     { mwu_postag(Stem,Tags) },
-    mwu_tags(Tags,Q0,Q).
+    mwu_tags(Tags,Stem,1,Q0,Q).
 
-mwu_tags([],Q,Q) --> [].
-mwu_tags([H|T],Q0,Q) -->
-    [cgn_postag(Q0,Q1,H)],
+mwu_postag(_Frame,Stem,Surf,Q0,Q,_Result) -->
+    { mwu_postag(Stem,Surf,Tags,Stems) },
+    mwu_tags_stems(Tags,Stems,Q0,Q).
+
+mwu_tags_stems([],_,Q,Q) --> [].
+mwu_tags_stems([H|T],[Stem|Stems],Q0,Q) -->
+    [cgn_postag(Q0,Q1,Stem,H)],
     { Q1 is Q0 + 1 },
-    mwu_tags(T,Q1,Q).
+    mwu_tags_stems(T,Stems,Q1,Q).
+
+mwu_tags([],_,_,Q,Q) --> [].
+mwu_tags([H|T],Stem,Pos,Q0,Q) -->
+    [cgn_postag(Q0,Q1,Pos/Stem,H)],
+    { Q1 is Q0 + 1,
+      Pos1 is Pos + 1},
+    mwu_tags(T,Stem,Pos1,Q1,Q).
 
 mwu_postag_frame_surf(pre_np_adverb,Stem,['N(soort,ev,basis,onz,stan)','TW(hoofd,vrij)']):-
     atom(Stem),
@@ -1772,8 +1801,10 @@ num_postag(A,'TW(hoofd,vrij)') :-
 num_postag(A,'SPEC(symb)') :-
     alpino_lex:num_dot_num(_,A).
 
-mwu_postag('des te',['BW()','BW()']).
+mwu_postag(voorzover,'voor zover',['VZ(init)','BW()'],[voor,zover]).
 
+
+mwu_postag('des te',['BW()','BW()']).
 
 mwu_postag('1 februari',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)']).
 mwu_postag('1 januari 2003',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)','TW(hoofd,vrij)']).
@@ -2406,7 +2437,7 @@ with_dt_tags(Tree,Q0,L0,L) :-
     ).
 
 with_dt_tags_l_l(Stem,Frame,R0,R,Q0) -->
-    [cgn_postag(S0,S,Tag)],
+    [cgn_postag(S0,S,Stem,Tag)],
     {  integer(R0),
        integer(R),
        R is R0 + 1,
