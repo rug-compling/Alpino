@@ -5166,7 +5166,10 @@ n([sg(blamage),pl(blamages)],de,[]).
 
 n([mass(blank)],het,[]).
 
-n([mass(blauw)],het,[]).
+n([mass(blauw)],het,[],
+  [diep,
+   donker,
+   licht]).
 
 n([pl(blauwdrukken),sg(blauwdruk)],de,[]).
 
@@ -5905,6 +5908,8 @@ n([sg(braaklegging),pl(braakleggingen)],de,[]).
 
 n([mass(braaksel)],het,[]).
 
+n([sg(braille)],het,[]).
+
 n([sg(brainstorm)],de,[]).
 
 n([pl(bramen),sg(braam)],de,[]).
@@ -6186,7 +6191,10 @@ n([pl(bruiklenen),sg(bruikleen)],both,[]).
 
 n([pl(bruiloften),sg(bruiloft)],de,[]).
 
-n([mass(bruin)],het,[],[rood]).
+n([mass(bruin)],het,[],
+  [donker,
+   licht,
+   rood]).
 
 n([pl(bruinvissen),sg(bruinvis)],de,[]).
 
@@ -9318,16 +9326,6 @@ n([sg(dongle),pl(dongles)],de,[]).
 
 n([mass(donker)],het,[],[aarde]).
 
-n([mass(donkerblauw)],het,[]).
-
-n([mass(donkerbruin)],het,[]).
-
-n([mass(donkergrijs)],het,[]).
-
-n([mass(donkergroen)],het,[]).
-
-n([mass(donkerrood)],het,[]).
-
 n([mass(donkerte)],de,[]).
 
 n([pl('donna\'s'),sg(donna)],de,[]).
@@ -9839,7 +9837,7 @@ n([mass(duizeligheid)],de,[]).
 
 n([pl(duizelingen),sg(duizeling)],de,[]).
 
-n([pl(duizenden)],de,[measure]).
+n([stem(duizend),pl(duizenden)],de,[measure]).
 
 n([sg(dummy),pl('dummy\'s')],de,[]).
 
@@ -12133,7 +12131,7 @@ n([pl(gedrochten),sg(gedrocht)],het,[app_measure]).
 
 n([mass(geduld)],het,[]).
 
-n([mass(geel)],het,[]).
+n([mass(geel)],het,[],[licht]).
 
 n([mass(geelzucht)],de,[]).
 
@@ -13527,7 +13525,9 @@ n([pl(griffiers),sg(griffier)],de,[],
 
 n([pl(grijnzen),sg(grijns)],de,[]).
 
-n([mass(grijs),pl(grijzen)],het,[]).
+n([mass(grijs),pl(grijzen)],het,[],
+  [donker,
+   licht]).
 
 n([pl(grijsaards),sg(grijsaard)],de,[]).
 
@@ -13562,7 +13562,9 @@ n([pl(groeikernen),sg(groeikern)],de,[]).
 
 n([mass(groen)],het,[],
   [paars,h(paars),
-   rood,h(rood)]).
+   rood,h(rood),
+   donker,
+   licht]).
 
 n([pl(groenten),pl(groentes),sg(groente)],de,[]).
 
@@ -14780,7 +14782,7 @@ n([pl(honden),sg(hond)],de,[],
    speur,
    dim(hondje)]).
 
-n([pl(honderden)],de,[measure]). 
+n([stem(honderd),pl(honderden)],de,[measure]). 
 
 n([pl(honderdduizenden)],de,[measure]). 
 
@@ -16437,7 +16439,9 @@ n([pl(joden),sg(jood),pl('Joden'),sg('Jood')],de,[]).
 
 n([meas(joule),pl(joules)],de,[meas_mod,measure]).
 
-n([pl(journaals),pl(journalen),sg(journaal)],het,[],[jeugd]).
+n([pl(journaals),pl(journalen),sg(journaal)],het,[],
+  [h('acht-uur'),
+   jeugd]).
 
 n([pl(journalisten),sg(journalist)],de,[],
   [foto,
@@ -19588,16 +19592,6 @@ n([pl(lichten),sg(licht)],het,[],
    zwaai,
    dim(lichtje)]).
 
-n([mass(lichtblauw)],het,[]).
-
-n([mass(lichtbruin)],het,[]).
-
-n([mass(lichtgeel)],het,[]).
-
-n([mass(lichtgrijs)],het,[]).
-
-n([mass(lichtgroen)],het,[]).
-
 n([pl(lichtbronnen),sg(lichtbron)],de,[]).
 
 n([pl(lichtbundels),sg(lichtbundel)],de,[]).
@@ -22677,6 +22671,8 @@ n([pl(nazorgen),sg(nazorg)],de,[sbar,vp]).
 n([pl(naïviteiten),sg(naïviteit)],de,[]).
 
 n([sg([near,banker]),pl([near,bankers])],de,[]).
+
+n([sg([nectar])],de,[]).
 
 n([mass(nederigheid)],de,[]).
 
@@ -28313,6 +28309,8 @@ n([pl(recruten),sg(recruut)],de,[]).
 
 n([pl(rectificaties),sg(rectificatie)],de,[]).
 
+n([sg(rectiole),pl(rectiolen)],de,[]).
+
 n([pl(rectoren),pl(rectors),sg(rector)],de,[]).
 
 n([sg([rector,magnificus])],de,[]).
@@ -29328,7 +29326,10 @@ n([sg(rondzit)],de,[]).
 
 n([sg(ronselaar),pl(ronselaars)],de,[]).
 
-n([mass(rood)],het,[],[schaam]).
+n([mass(rood)],het,[],
+  [donker,
+   licht,
+   schaam]).
 
 n([mass('rood-groen')],het,[]).
 
@@ -30786,7 +30787,8 @@ n([pl(signaturen),sg(signatuur)],de,
    app_measure,
    pred_pp(van)]).
 
-n([sg(sikh),pl(sikhs)],de,[]).
+n([sg(sikh),pl(sikhs),
+   sg('Sikh'),pl('Sikhs')],de,[]).
 
 n([pl(sikken),sg(sik)],de,[]).
 

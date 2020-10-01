@@ -449,10 +449,10 @@ drie --> "vijf".
 drie --> "zes".
 drie --> "zeven".
 
-phrasal_entry(number(rang),number_rang) -->
+phrasal_entry(number(rang),Stem,number_rang) -->
     { hdrug_util:debug_message(4,"numbere~n",[]) },
     n_word(NumberE),
-    { numbere(NumberE) }.
+    { numbere(NumberE, Stem) }.
 
 %% twaalf miljoenste bezoeker
 phrasal_entry(number(rang),number_rang) -->
@@ -945,16 +945,19 @@ numberjarig(Jarig,no_e(adv),Root) :-
     concat_stems([R2,JarigWord],Root,'_').
 
 numbere(NumberE) :-
+    numbere(NumberE,_).
+
+numbere(NumberE,Number) :-
     atom(NumberE),
     atom_concat(Number,e,NumberE),
     isa_number(_,[Number],[]).
 
-numbere(NumberE) :-
+numbere(NumberE,Number) :-
     atom(NumberE),
     atom_concat(Number,de,NumberE),
     isa_number(_,[Number],[]).
 
-numbere(NumberE) :-
+numbere(NumberE,Number) :-
     atom(NumberE),
     atom_concat(Number,ste,NumberE),
     isa_number(_,[Number],[]).

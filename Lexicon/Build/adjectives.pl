@@ -1030,9 +1030,7 @@ a([e('Nepalese'),
 a([e('Newyorkse'),
    no_e('Newyorks'),
    e('New-Yorkse'),
-   no_e('New-Yorks'),
-   e(['New','Yorkse']),
-   no_e(['New','Yorks'])],nonadv,[],[]).
+   no_e('New-Yorks')],nonadv,[],[]).
 
 a([e('Nieuwzeelandse'),
    no_e('Nieuwzeelands'),
@@ -1388,6 +1386,8 @@ a([e('Wit-Russische'),
    no_e('Wit-Russisch'),
    e('Witrussische'),
    no_e('Witrussisch')],nonadv,[],[]).
+
+a([e('Wolderse'),no_e('Wolders')],nonadv,[],[]).
 
 a([e('Zaanse'),
    no_e('Zaans')],nonadv,[],[]).
@@ -6126,7 +6126,7 @@ a([e(blauwe),
    ere(blauwere),
    no_e(blauw),
    st(blauwst),
-   ste(blauwste)],nonadv,[],[]).
+   ste(blauwste)],nonadv,[],[donker,licht]).
 
 a([e(blauwachtige),
    er(blauwachtiger),
@@ -6624,7 +6624,10 @@ a([e(bruine),
    ere(bruinere),
    no_e(bruin),
    st(bruinst),
-   ste(bruinste)],adv,[],[rood]).
+   ste(bruinste)],adv,[],
+  [donker,
+   licht,
+   rood]).
 
 a([e(bruinachtige),
    er(bruinachtiger),
@@ -8373,47 +8376,12 @@ a([e(donkere),
    st(donkerst),
    ste(donkerste)],nonadv,[],[stik]).
 
-a([e(donkerblauwe),
-   er(donkerblauwer),
-   ere(donkerblauwere),
-   no_e(donkerblauw),
-   st(donkerblauwst),
-   ste(donkerblauwste)],nonadv,[],[]).
-
 a([e(donkerblonde),
    er(donkerblonder),
    ere(donkerblondere),
    no_e(donkerblond),
    st(donkerblondst),
    ste(donkerblondste)],nonadv,[],[]).
-
-a([e(donkerbruine),
-   er(donkerbruiner),
-   ere(donkerbruinere),
-   no_e(donkerbruin),
-   st(donkerbruinst),
-   ste(donkerbruinste)],nonadv,[],[]).
-
-a([e(donkergrijze),
-   er(donkergrijzer),
-   ere(donkergrijzere),
-   no_e(donkergrijs),
-   st(donkergrijst),
-   ste(donkergrijste)],nonadv,[],[]).
-
-a([e(donkergroene),
-   er(donkergroener),
-   ere(donkergroenere),
-   no_e(donkergroen),
-   st(donkergroenst),
-   ste(donkergroenste)],nonadv,[],[]).
-
-a([e(donkerrode),
-   er(donkerroder),
-   ere(donkerrodere),
-   no_e(donkerrood),
-   st(donkerroodst),
-   ste(donkerroodste)],nonadv,[],[]).
 
 a([stof(donzen)],nonadv,[],[]).
 
@@ -17680,7 +17648,9 @@ a([e(grijze),
    ere(grijzere),
    no_e(grijs),
    st(grijst),
-   ste(grijste)],nonadv,[],[]).
+   ste(grijste)],nonadv,[],
+  [donker,
+   licht]).
 
 a([e('grijs-blauwe'),
    e(grijsblauwe),
@@ -17730,6 +17700,8 @@ a([e(groene),
    st(groenst),
    ste(groenste)],nonadv,[],
   [brons,
+   donker,
+   licht,
    paars,h(paars),
    rood,h(rood)]).
 
@@ -21910,7 +21882,7 @@ a([ende(levende),
    end(levend),
    st(levendst),
    ste(levendste)],both,
-  [pp(in)],[]).
+  [pp(in)],[langst]).
 
 a([e(levendige),
    er(levendiger),
@@ -21991,20 +21963,6 @@ a([e(lichte),
    st(lichtst),
    ste(lichtste)],adv,[],[]).
 
-a([e(lichtblauwe),
-   er(lichtblauwer),
-   ere(lichtblauwere),
-   no_e(lichtblauw),
-   st(lichtblauwst),
-   ste(lichtblauwste)],nonadv,[],[]).
-
-a([e(lichtbruine),
-   er(lichtbruiner),
-   ere(lichtbruinere),
-   no_e(lichtbruin),
-   st(lichtbruinst),
-   ste(lichtbruinste)],adv,[],[]).
-
 a([e(lichtelijke),
    no_e(lichtelijk)],adv,[],[]).
 
@@ -22014,13 +21972,6 @@ a([e(lichtende),
    no_e(lichtend),
    st(lichtendst),
    ste(lichtendste)],adv,[],[]).
-
-a([e(lichtgele),
-   er(lichtgeler),
-   ere(lichtgelere),
-   no_e(lichtgeel),
-   st(lichtgeelst),
-   ste(lichtgeelste)],nonadv,[],[]).
 
 a([e(lichtgevende),
    er(lichtgevender),
@@ -22033,20 +21984,6 @@ a([both(lichtgewicht)],nonadv,[],[]).
 
 a([e(lichtgewonde),
    no_e(lichtgewond)],padv,[],[]).
-
-a([e(lichtgrijze),
-   er(lichtgrijzer),
-   ere(lichtgrijzere),
-   no_e(lichtgrijs),
-   st(lichtgrijst),
-   ste(lichtgrijste)],nonadv,[],[]).
-
-a([e(lichtgroene),
-   er(lichtgroener),
-   ere(lichtgroenere),
-   no_e(lichtgroen),
-   st(lichtgroenst),
-   ste(lichtgroenste)],nonadv,[],[]).
 
 a([pred(lichtjes)],adv,[],[]).
 
@@ -31401,7 +31338,9 @@ a([e(rode),
    ere(rodere),
    no_e(rood),
    st(roodst),
-   ste(roodste)],adv,[],[]).
+   ste(roodste)],adv,[],
+  [donker,
+   licht]).
 
 a([e('rood-groene'),
    no_e('rood-groen')],nonadv,[],[]).

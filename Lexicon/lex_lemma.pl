@@ -2713,6 +2713,7 @@ lemma_root(constitueren,constitueer) .
 lemma_root(construeren,construeer) .
 lemma_root(consulteren,consulteer) .
 lemma_root(consumeren,consumeer) .
+lemma_root(contacteren,contacteer) .
 lemma_root(continueren,continueer) .
 lemma_root(contracteren,contracteer) .
 lemma_root(contrasteren,contrasteer) .

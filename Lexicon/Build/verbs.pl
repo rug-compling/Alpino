@@ -5207,6 +5207,9 @@ v(continueer,continueert,continueren,gecontinueerd,continueerde,continueerden,
     [h([intransitive,
 	transitive])]).
 
+v(contacteer,contacteert,contacteren,gecontacteerd,contacteerde,contacteerden,
+    [h([transitive])]).
+
 v(contracteer,contracteert,contracteren,gecontracteerd,contracteerde,contracteerden,
     [h([transitive])]).
 
