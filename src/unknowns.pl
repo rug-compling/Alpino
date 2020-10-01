@@ -199,20 +199,20 @@ a_eng_compound(Wouw,Effect,P0,P,R0,R,tag(P0,P,R0,R,Label,wouw_compound(normal),T
     alpino_lex:lexicon(Tag,EffectLabel,[Effect],[],normal),
     noun_tag_plus(Tag),
     atom(EffectLabel),
-    atom_concat(Wouw,' ',Wouw1),
-    atom_concat(Wouw1,EffectLabel,Label),
+    hdrug_util:concat_all([Wouw,EffectLabel],Label,' '),
     debug_message(1,"wouw compound|~w ~w|~w~n",[Wouw,Effect,Tag]).
 
-a_eng_compound(Word,Word2,P0,P,R0,R,tag(P0,P,R0,R,Label,english_compound(normal),Tag)) :-
+a_eng_compound(Word,Word2,P0,P,R0,R,tag(P0,P,R0,R,NewLabel,english_compound(normal),Tag)) :-
     \+ tag(P0,P,R0,R,_,_,_,_),
     atom(Word),atom(Word2),
     atom_concat(Word,Word2,WordWord2),
     alpino_lex:lexicon(Tag,Label,[WordWord2],[],normal),
     atomic(Label), % only nouns anyway
     atom_concat(Word,UWord2,Label),
-    atom_concat(' ',NOTDIM,UWord2),
+    atom_concat('_',NOTDIM,UWord2),
     NOTDIM \= 'DIM',
     noun_tag_plus(Tag),
+    hdrug_util:concat_all([Word,NOTDIM],NewLabel,' '),
     debug_message(1,"mis-spelled compound|~w ~w|~w~n",[Word,Word2,Tag]).
 
 wouw(wauw).
