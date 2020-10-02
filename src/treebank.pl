@@ -764,17 +764,22 @@ get_lemma(_,Root,Lemma) :-
 
 get_lemma_or_word(Var,Lemma,Word) :-
     var(Var), !,
-    format(user_error,"warning: no lemma~n",[]),
+    debug_message(0,"error: variable lemma~n",[]),
     Lemma = Word.
-get_lemma_or_word(Pos/Atom,Lemma,Word) :-
+get_lemma_or_word(Pos/Atom,Lemma,_Word) :-
     atom(Atom),
     integer(Pos),!,
     atom_codes(Atom,Codes),
-    alpino_util:split_string(Codes," ",SubList),	
-    (   lists:nth(Pos,SubList,LemmaCodes)
+    alpino_util:split_string(Codes," ",SubList),
+    length(SubList,Len),
+    (   Pos =:= 1,
+	Len =:= 1
+    ->  Lemma = Pos/Atom,
+	debug_message(1,"warning: no matching lemma ~w~n",[Pos/Atom])
+    ;   lists:nth(Pos,SubList,LemmaCodes)
     ->  atom_codes(Lemma,LemmaCodes)
-    ;   Lemma=Word,
-	format(user_error,"warning: no matching lemma ~w~n",[Pos/Atom])
+    ;   Lemma=Pos/Atom,
+	debug_message(1,"warning: no matching lemma ~w~n",[Pos/Atom])
     ).	
 get_lemma_or_word(v_root(_,Lemma0),Lemma,Word) :-
     !,

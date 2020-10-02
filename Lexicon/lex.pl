@@ -607,9 +607,10 @@ lexicon_(Word,proper_name(X,'LOC'),Name,Ws1,Ws,His,_LC) :-
     loc_suffix(Ws2,Ws).
 
 lexicon_(Word,proper_name(X,'PER'),Name,Ws1,Ws,His,_LC) :-
-    in_names_dictionary(proper_name(X,'PER'),Word,Name,Ws1,Ws2,His),
+    in_names_dictionary(proper_name(X,'PER'),Word,Name0,Ws1,Ws2,His),
     n_word(Next,Ws2,Ws),
-    per_suffix(Next).
+    per_suffix(Next),
+    hdrug_util:concat_all([Name0,Next],Name,' ').
 
 %% one word genetive names
 lexicon_(Word,Cat,Stem,Ws,Ws,gen(His),_LC) :-
@@ -2838,6 +2839,46 @@ spelling_variant(zeveneneenhalf,zevenenhalf).
 spelling_variant(achteneenhalf,achtenhalf).
 spelling_variant(negeneneenhalf,negenenhalf).
 
+spelling_variant('d\'ruitziet',eruitziet).
+
+spelling_variant('d\'raan',eraan).
+spelling_variant('d\'rachter',erachter).
+spelling_variant('d\'rachteraan',erachteraan).
+spelling_variant('d\'raf',eraf).
+spelling_variant('d\'rbij',erbij).
+spelling_variant('d\'rboven',erboven).
+spelling_variant('d\'rbovenop',erbovenop).
+spelling_variant('d\'rbuiten',erbuiten).
+spelling_variant('d\'rdoor',erdoor).
+spelling_variant('d\'rdoorheen',erdoorheen).
+spelling_variant('d\'rheen',ernaar).
+spelling_variant('d\'rin',erin).
+spelling_variant('d\'rlangs',erlangs).
+spelling_variant('d\'rmee',ermee).
+spelling_variant('d\'rna',erna).
+spelling_variant('d\'rnaar',ernaar).
+spelling_variant('d\'rnaartoe',ernaartoe).
+spelling_variant('d\'rnaast',ernaast).
+spelling_variant('d\'rom',erom).
+spelling_variant('d\'romheen',eromheen).
+spelling_variant('d\'ronder',eronder).
+spelling_variant('d\'rop',erop).
+spelling_variant('d\'rover',erover).
+spelling_variant('d\'roverheen',eroverheen).
+spelling_variant('d\'rtegen',ertegen).
+spelling_variant('d\'rtegenaan',ertegenaan).
+spelling_variant('d\'rtegenover',ertegenover).
+spelling_variant('d\'rtoe',ertoe).
+spelling_variant('d\'rtussen',ertussen).
+spelling_variant('d\'rtussenuit',ertussenuit).
+spelling_variant('d\'ruit',eruit).
+spelling_variant('d\'rvan',ervan).
+spelling_variant('d\'rvanaf',ervanaf).
+spelling_variant('d\'rvandaan',ervandaan).
+spelling_variant('d\'rvandoor',ervandoor).
+spelling_variant('d\'rvoor',ervoor).
+
+
 spelling_variant41(doe,het,zelf,zaak,'doe-het-zelf-zaak').
 spelling_variant41(doe,het,zelf,zaken,'doe-het-zelf-zaken').
 spelling_variant41(doe,het,zelf,zaken,'doe-het-zelf-zaken').
@@ -3011,6 +3052,9 @@ spelling_variant(vind,    vindt) :-
 
 spelling_variant(kondt, kunt).
 
+parse_only_variant(notabene,'nota bene', modal_adverb).
+parse_only_variant(ondermeer,'onder meer', modal_adverb).
+
 parse_only_variant(opzoek, 'op zoek', adjective(pred(padv))).
 parse_only_variant(opzoek, 'op zoek', adjective(pred(padv),pp(naar))).
 
@@ -3150,7 +3194,7 @@ parse_only_lex(de,     jullie, pronoun(nwh,inv,both,de,nom,def),        [gulder|
 parse_only_lex(de,     één,    pronoun(nwh,thi,sg,both,both,def,strpro),[enen|X],  X).
 
 parse_only_lex(en,     'en/of',conj('en/of'),                           [of|X],    X).
-parse_only_lex(of,     of,     complementizer(of),                      [dat|X],   X).
+parse_only_lex(of,     'of dat',     complementizer(of),                      [dat|X],   X).
 
 parse_only_lex(hetgeen,waar,   er_wh_loc_adverb,                        [waar|X],  X).
 
@@ -3693,45 +3737,6 @@ abbreviation('v.a.',          [vanaf]).
 abbreviation('v.a.',          [vanaf]).
 abbreviation('z.i.',          [zijns,inziens]).
 
-abbreviation('d\'ruitziet',eruitziet).
-
-abbreviation('d\'raan',eraan).
-abbreviation('d\'rachter',erachter).
-abbreviation('d\'rachteraan',erachter).
-abbreviation('d\'raf',ervan).
-abbreviation('d\'rbij',erbij).
-abbreviation('d\'rboven',erboven).
-abbreviation('d\'rbovenop',erbovenop).
-abbreviation('d\'rbuiten',erbuiten).
-abbreviation('d\'rdoor',erdoor).
-abbreviation('d\'rdoorheen',erdoorheen).
-abbreviation('d\'rheen',ernaar).
-abbreviation('d\'rin',erin).
-abbreviation('d\'rlangs',erlangs).
-abbreviation('d\'rmee',ermee).
-abbreviation('d\'rna',erna).
-abbreviation('d\'rnaar',ernaar).
-abbreviation('d\'rnaartoe',ernaar).
-abbreviation('d\'rnaast',ernaast).
-abbreviation('d\'rom',erom).
-abbreviation('d\'romheen',erom).
-abbreviation('d\'romheen',eromheen).
-abbreviation('d\'ronder',eronder).
-abbreviation('d\'rop',erop).
-abbreviation('d\'rover',erover).
-abbreviation('d\'roverheen',eroverheen).
-abbreviation('d\'rtegen',ertegen).
-abbreviation('d\'rtegenaan',ertegenaan).
-abbreviation('d\'rtegenover',ertegenover).
-abbreviation('d\'rtoe',ertoe).
-abbreviation('d\'rtussen',ertussen).
-abbreviation('d\'rtussenuit',ertussenuit).
-abbreviation('d\'ruit',eruit).
-abbreviation('d\'rvan',ervan).
-abbreviation('d\'rvanaf',ervanaf).
-abbreviation('d\'rvandaan',ervan).
-abbreviation('d\'rvandoor',ervandoor).
-abbreviation('d\'rvoor',ervoor).
 
 abbreviation('d\'rdoor', erdoorheen,              [heen|Ws],Ws).
 abbreviation('d\'r',     erdoorheen,              [doorheen|Ws],Ws).

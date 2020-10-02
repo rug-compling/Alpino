@@ -202,7 +202,7 @@ a_eng_compound(Wouw,Effect,P0,P,R0,R,tag(P0,P,R0,R,Label,wouw_compound(normal),T
     hdrug_util:concat_all([Wouw,EffectLabel],Label,' '),
     debug_message(1,"wouw compound|~w ~w|~w~n",[Wouw,Effect,Tag]).
 
-a_eng_compound(Word,Word2,P0,P,R0,R,tag(P0,P,R0,R,NewLabel,english_compound(normal),Tag)) :-
+a_eng_compound(Word,Word2,P0,P,R0,R,tag(P0,P,R0,R,Label,english_compound(normal),Tag)) :-
     \+ tag(P0,P,R0,R,_,_,_,_),
     atom(Word),atom(Word2),
     atom_concat(Word,Word2,WordWord2),
@@ -212,7 +212,6 @@ a_eng_compound(Word,Word2,P0,P,R0,R,tag(P0,P,R0,R,NewLabel,english_compound(norm
     atom_concat('_',NOTDIM,UWord2),
     NOTDIM \= 'DIM',
     noun_tag_plus(Tag),
-    hdrug_util:concat_all([Word,NOTDIM],NewLabel,' '),
     debug_message(1,"mis-spelled compound|~w ~w|~w~n",[Word,Word2,Tag]).
 
 wouw(wauw).
@@ -3561,6 +3560,7 @@ lexical_analysis_add_space(Input,P0,R0,Name,Tag,len(Consumed)):-
 	Tag = with_dt(Fr,Ds)
     ;   Tag0 = Tag
     ),
+    \+ tag(P0,P,R0,R,_,_,english_compound(normal),_),
     assert_tag(P0,P,R0,R,Stem,Name,Tag).
 
 assert_tags([],_P0,_R0,_W,_Wmin).
