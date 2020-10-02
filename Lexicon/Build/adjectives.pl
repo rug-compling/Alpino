@@ -20,9 +20,9 @@ m(teveel,  vp_om_me_adjective(no_e(odet_adv)), teveel).
 
 m(zoveel,  adjective(meer), zoveel).
 
-m(meer,    adjective(meer),   meer).
+m(veel,    adjective(meer),   meer).
 
-m(minder,  adjective(meer),   minder).
+m(weinig,  adjective(meer),   minder).
 
 %% todo: een minder jaartje/resultaat
 
@@ -9647,7 +9647,8 @@ a([e(endocriene),
 a([e(endogene),
    no_e(endogeen)],adv,[],[]).
 
-a([e(ene)],nonadv,[],[]).
+a([stem(een),
+   e(ene)],nonadv,[],[]).
 
 a([e(energetische),
    no_e(energetisch)],adv,[],[]).
@@ -22913,7 +22914,8 @@ a([e(meeslepende),
    st(meeslependst),
    ste(meeslependste)],adv,[],[]).
 
-a([st(meest),
+a([stem(veel),
+   st(meest),
    ste(meeste)],adv,[],[]).
 
 a([e(meesterlijke),
@@ -23150,8 +23152,12 @@ a([e(militante),
    ste(militantste)],adv,[],[]).
 
 a([e(minne),
+   no_e(min)],adv,
+  [subject_sbar,
+   subject_vp],[]).
+
+a([stem(weinig),
    ere(mindere),
-   no_e(min),
    st(minst),
    ste(minste)],adv,[subject_sbar,
                      subject_vp],[]).

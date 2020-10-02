@@ -20,9 +20,9 @@ number(triljoenste,triljoen,rang).
 
 number(zoveelste,zoveel,rang).
 
-number(allerlaatste,aller_laatst,rang).      % we staan allerlaatste
-number(laatste,laatst,rang).		% we staan laatste
-number(voorlaatste,voor_laatst,rang).	% we staan voorlaatste
+number(allerlaatste,aller_laat,rang).      % we staan allerlaatste
+number(laatste,laat,rang).		% we staan laatste
+number(voorlaatste,voor_laat,rang).	% we staan voorlaatste
 
 number(anderhalve,anderhalf,hoofd(both)).
 

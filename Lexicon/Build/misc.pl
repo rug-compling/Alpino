@@ -714,6 +714,10 @@ m(Stem,adv_tag,PN) :-
     adv_tag(PN),
     stem_from_surf(PN,Stem).
 
+m(v_root(zeg,zeggen),adv_tag,zeg).
+m(v_root(kijk,kijken),adv_tag,kijk).
+m(v_root(kom,komen),adv_tag,kom).
+
 tag('√').
 tag('♪').  % in subtitles, to indicate that the rest of sentence is sung
 
@@ -1324,9 +1328,6 @@ adv_tag(nu).
 adv_tag(vooruit).
 adv_tag(wel).
 
-adv_tag(kijk).
-adv_tag(kom).
-adv_tag(zeg).
 
 adv_tag(althans).   % according to CGN annotations
 adv_tag(bovendien).
@@ -1894,9 +1895,9 @@ m('het eerste het beste',  determiner(het,nwh,nmod,pro,yparg),
 m('de ene na de andere',determiner(de,nwh,nmod,pro,yparg), [de,ene,na,de,andere]).
 m('de ene na de andere',determiner(de,nwh,nmod,pro,yparg), [de,een,na,de,andere]).
 
-m(alle,          determiner(alle,nwh,mod,pro,nparg), alle).
-m(alle,          determiner(der),                aller).
-m(alle,          determiner(pron),               aller).
+m(al,          determiner(alle,nwh,mod,pro,nparg), alle).
+m(al,          determiner(der),                aller).
+m(al,          determiner(pron),               aller).
 m(allerlei,      determiner(wat),                allerlei).
 m(andermans,     determiner(pron),               andermans).
 m(dat,           determiner(het,nwh,nmod,pro,nparg),      dat).
@@ -1987,7 +1988,7 @@ m(ons,           determiner(der),onzer).
 %m(ons,           determiner(pron),onzer).
 m('ons aller',   determiner(pron),[ons,aller]).
 m(onvoldoende,   determiner(wat,nwh,mod,pro,yparg),onvoldoende).
-m(sommige,       determiner(pl_num,nwh,nmod,pro,yparg),sommige).
+m(sommig,        determiner(pl_num,nwh,nmod,pro,yparg),sommige).
 %m(tal,           determiner(wat),tal).  % ja dat zeggen mensen echt
 %m('tal van',     determiner(wat),[tal,van]).
 m(tal,           determiner(wat,nwh,mod,pro,yparg),tal).
@@ -4121,7 +4122,7 @@ with_dt([en,zo],
 with_dt([en,verder],
 	complex_etc,
 	dt(conj,[crd=l(en,conj(en),vg,0,1),
-		 cnj=l(verder,dir_adverb,advp,1,2)])).
+		 cnj=l(ver,dir_adverb,advp,1,2)])).
 
 with_dt([of,andersom],
 	complex_etc,
@@ -5842,6 +5843,8 @@ m(Stem, dir_adverb, Surf) :-
     dir_adverb(Surf),
     stem_from_surf(Surf,Stem).
 
+m(ver,dir_adverb,verder).
+
 dir_adverb(achterdoor).
 dir_adverb(achterlangs).
 dir_adverb(achterover).
@@ -5880,7 +5883,6 @@ dir_adverb(retour).
 dir_adverb(terneer).
 dir_adverb(terug).
 dir_adverb(tevoorschijn).
-dir_adverb(verder).
 dir_adverb(vaneen).
 dir_adverb(voorlangs).
 dir_adverb(voorover).
@@ -6413,9 +6415,10 @@ m(Stem,predm_adverb,Surf) :-
     predm_adverb(Surf),
     stem_from_surf(Surf,Stem).
 
+m(al,predm_adverb,alle).
+
 % floating quantifiers and similar:
 predm_adverb(allebei).
-predm_adverb(alle).
 predm_adverb(alledrie).
 predm_adverb(allemaal).
 predm_adverb(allen).
@@ -6506,7 +6509,7 @@ m(eens,   eenmaal_adverb,eens).  % Vlaams
 
 % ze gingen alle zes naar huis
 % todo: geen van tweeen/drieen
-m(alle,               num_predm_adverb, alle).
+m(al,               num_predm_adverb, alle).
 
 %% vandaar SBAR dp/dp
 m(alleen,             vandaar_adverb,alleen).
@@ -7601,6 +7604,8 @@ m(Stem,iets_noun,Surf) :-
     iets_noun(Surf),
     stem_from_surf(Surf,Stem).
 
+m(veel,iets_noun,meer).
+
 m(Stem,iets_noun,Surf) :-
     iets_noun(Surf,Stem).
 
@@ -7671,7 +7676,6 @@ iets_noun(allerlei).
 iets_noun(ander).
 iets_noun(genoeg).
 iets_noun(iets).
-iets_noun(meer).
 iets_noun(niets).
 iets_noun(teveel).
 iets_noun(veel).
