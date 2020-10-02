@@ -4074,14 +4074,14 @@ phrasal_entry(Tag,'Nx') -->
 nx_tag(tmp_noun(both,count,bare_meas)).
 nx_tag(tmp_noun(both,count,bare_meas,measure)).
 
-phrasal_entry(Tag,spaced_letters) -->
+phrasal_entry(Tag,Label,spaced_letters) -->
     { hdrug_util:debug_message(4,"spaced letters~n",[]) },
     long_single_letter_sequence(Letters),
     {  (  capitals(Letters,Letters2)
        ;  Letters = Letters2
        ),
        hdrug_util:concat_all(Letters2,Atom,''),
-       lexicon_(Tag,_,[Atom],[],_,[])
+       lexicon_(Tag,Label,[Atom],[],_,[])
     }.
 
 capitals([],[]).

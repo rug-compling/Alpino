@@ -2246,7 +2246,7 @@ m('zo\'n',       comp_determiner(een,dat  ),[Een,'zo\'n']) :- een(Een).
 
 m(zulk,          comp_determiner(zulk,dat),  zulk).
 m(zulk,          comp_determiner(zulke,dat), zulke).
-m(zulk,          comp_determiner(een,dat),   [zulk,een]).
+m('zulk een',          comp_determiner(een,dat),   [zulk,een]).
 
 with_dt([des,te,meer],
 	determiner(wat),
@@ -3706,7 +3706,7 @@ m(opdat,            complementizer,opdat).
 m(sedert,           complementizer,sedert).
 m(sinds,            complementizer,sinds).
 m(sinds,            complementizer,sindsdat).
-m(sinds,            complementizer,[sinds,dat]).
+m('sinds dat',      complementizer,[sinds,dat]).
 m('tegen dat',      complementizer,[tegen,dat]).
 m(telkens,          complementizer,telkens). % Vlaams
 m(temeer,           complementizer,temeer). % VL temeer we op cruciale momenten zelf in de fout gingen .
@@ -3803,8 +3803,8 @@ m('te weten',       complementizer(pp),[te,weten]).
 m(waar,             complementizer(pp),waar).
 m(wanneer,          complementizer(pp),wanneer).
 m('zij het',        complementizer(pp),[zij,het]).
-m(zoniet,           complementizer(pp),[zo,niet]). % zo niet in Groningen
-m(zoniet,           complementizer(pp),zoniet).    % zoniet in Groningen
+m('zo niet',           complementizer(pp),[zo,niet]). % zo niet in Groningen
+m('zo niet',           complementizer(pp),zoniet).    % zoniet in Groningen
 m('zo ook',         complementizer(pp),[zo,ook]).
 m(zogenaamd,        complementizer(pp),zogenaamd).
 m('cf.',            complementizer(pp),'cf.').
@@ -3850,8 +3850,8 @@ m('laat staan',     complementizer(np),[laat,staan]).
 m(mits,             complementizer(np),mits).  % VLAAMS
 m(namelijk,         complementizer(np),namelijk).
 m('te weten',       complementizer(np),[te,weten]).
-m(zoniet,        complementizer(np),[zo,niet]). % zo niet de Nederlanders
-m(zoniet,        complementizer(np),zoniet). % zo niet de Nederlanders
+m('zo niet',        complementizer(np),[zo,niet]). % zo niet de Nederlanders
+m('zo niet',        complementizer(np),zoniet). % zo niet de Nederlanders
 m('zo ook',         complementizer(np),[zo,ook]).  
 m('zij het',        complementizer(np),[zij,het]).
 m('cfr',            complementizer(np),'cf.').
@@ -3888,8 +3888,8 @@ m(evenals,          complementizer(adv),evenals).
 m('laat staan',     complementizer(adv),[laat,staan]).
 m('maar dan',       complementizer(adv),[maar,dan]).
 m('te weten',       complementizer(adv),[te,weten]).
-m(zoniet,        complementizer(adv),[zo,niet]). % zo niet vandaag
-m(zoniet,        complementizer(adv),zoniet). % zo niet vandaag
+m('zo niet',        complementizer(adv),[zo,niet]). % zo niet vandaag
+m('zo niet',        complementizer(adv),zoniet). % zo niet vandaag
 m('zo ook',         complementizer(adv),[zo,ook]).  % zo niet vandaag
 m('cfr',            complementizer(adv),'cf.').
 m('cfr.',           complementizer(adv),'cfr.').
@@ -3968,7 +3968,7 @@ conj(annex,            annex).
 conj(cq,               cq).
 conj(cq,               'cq.').
 conj(cq,               'c.q.').
-conj(danwel,           [dan,wel], maar).
+conj('dan wel',           [dan,wel], maar).
 conj(danwel,           danwel,    maar).
 conj(doch,             doch).
 conj(dus,              dus).
@@ -3998,8 +3998,8 @@ conj('tot en met',     [t,/,m]).
 conj(versus,           versus).
 conj(want,             want).
 conj('met andere woorden',[met,andere,woorden]).
-conj(zoniet,             [zo,niet]).
-conj(zoniet,             zoniet).
+conj('zo niet',             [zo,niet]).
+conj('zo niet',             zoniet).
 conj('zowel als',        [zowel,als]).
 
 m(evenveel,              left_conj(als),evenveel).
@@ -4238,8 +4238,8 @@ zijn(hun).
 zijn(zijn).
 zijn('z\'n').
 
-m(eerst,     adjective(het_st(adv)),   [Het,eerst]) :- het(Het).
-m(eerst,     adjective(het_st(oadv)), [Het,eerste]) :- het(Het).
+m('het eerst',     adjective(het_st(adv)),   [Het,eerst]) :- het(Het).
+m('het eerst',     adjective(het_st(oadv)), [Het,eerste]) :- het(Het).
 
 %%%% TODO: netzomin/evenmin/evenveel XP als XP ... (conj?)
 m(evenmin,          als_adjective(both(adv)),evenmin).
@@ -4837,11 +4837,9 @@ modal_adverb(nauwelijks).
 modal_adverb(net).
 modal_adverb(nog).
 modal_adverb([nota,bene]).
-modal_adverb(notabene).
 modal_adverb([onder,andere]).
 modal_adverb([onder,anderen]).
 modal_adverb([onder,meer]).
-modal_adverb(ondermeer).
 modal_adverb(ook).
 modal_adverb(pas).
 modal_adverb(precies).
@@ -7851,8 +7849,8 @@ m('indien ja',   sbar,[indien,ja]).
 m('zo ja',   sbar,[zo,ja]).
 m('zo nee',  sbar,[zo,nee]).
 m('zo neen', sbar,[zo,neen]).
-m(zoniet, sbar,[zo,niet]).
-m(zoniet, sbar,zoniet).
+m('zo niet', sbar,[zo,niet]).
+m('zo niet', sbar,zoniet).
 
 m('op=op',max,'op=op').
 m('pecunia non olet',max,[pecunia,non,olet]).
