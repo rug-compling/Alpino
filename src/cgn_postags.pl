@@ -12,8 +12,8 @@ cgn_postag_c(Frame,Stem,Surf,Q0,Q,Result,_His) -->
     mwu_postag(Frame,Stem,Surf,Q0,Q,Result),
     !.
 
-cgn_postag_c(Frame,_Stem,Surf,Q0,Q,Result,His) -->
-    history_tags(His,Q0,Q,Surf,Frame,Result),
+cgn_postag_c(Frame,Stem,Surf,Q0,Q,Result,His) -->
+    history_tags(His,Q0,Q,Stem,Surf,Frame,Result),
     !.
 
 cgn_postag_c(with_dt(_,Tree),_Stem,_Surf,Q0,_,_,_) -->
@@ -110,57 +110,57 @@ m_tag(Q0,Q,Tag0,Tag) :-
 not_last_m_tag('N(eigen,ev,basis,gen)','SPEC(deeleigen)').
 not_last_m_tag('N(eigen,ev,dim,gen)',  'SPEC(deeleigen)').
 
-history_tags(double_compound,Q0,Q,Surf,Frame,Result) -->
+history_tags(double_compound,Q0,Q,Stem,_Surf,Frame,Result) -->
     { 2 is Q-Q0,
-      starts_with_capital(Surf),
+      starts_with_capital(Stem),
       Q1 is Q0 + 1,
-      atom_codes(Surf,Codes),
+      atom_codes(Stem,Codes),
       alpino_util:split_string(Codes," ",[W1,W2]),
-      atom_codes(Surf1,W1),
-      atom_codes(Surf2,W2)
+      atom_codes(Stem1,W1),
+      atom_codes(Stem2,W2)
     },
-    [ cgn_postag(Q0,Q1,Surf1,'SPEC(deeleigen)')],
-    cgn_postag_c(Frame,Surf2,Surf2,Q1,Q,Result,no).
+    [ cgn_postag(Q0,Q1,Stem1,'SPEC(deeleigen)')],
+    cgn_postag_c(Frame,Stem2,Stem2,Q1,Q,Result,no).
     
-history_tags(normal(abbreviation(normal)),Q0,Q,'\'t',determiner(het,nwh,nmod,pro,nparg,wkpro),_) -->
+history_tags(normal(abbreviation(normal)),Q0,Q,Stem,'\'t',determiner(het,nwh,nmod,pro,nparg,wkpro),_) -->
     { 1 is Q-Q0 }, 
-    [ cgn_postag(Q0,Q,het,'LID(bep,stan,evon)') ].
+    [ cgn_postag(Q0,Q,Stem,'LID(bep,stan,evon)') ].
 
-history_tags(normal(abbreviation(normal)),Q0,Q,Surf,_,_) -->
+history_tags(normal(abbreviation(normal)),Q0,Q,Stem,_,_,_) -->
     { 1 is Q-Q0 }, 
-    [ cgn_postag(Q0,Q,Surf,'SPEC(afk)') ].
+    [ cgn_postag(Q0,Q,Stem,'SPEC(afk)') ].
 
-history_tags(part_verb_conjunct,Q0,Q,Surf,_,_) -->
+history_tags(part_verb_conjunct,Q0,Q,Stem,_,_,_) -->
     { 1 is Q-Q0 }, 
-    [ cgn_postag(Q0,Q,Surf,'SPEC(afgebr)') ].
+    [ cgn_postag(Q0,Q,Stem,'SPEC(afgebr)') ].
 
-history_tags(normal(url),Q0,Q,Surf,_,_) -->
+history_tags(normal(url),Q0,Q,Stem,_,_,_) -->
     { 1 is Q-Q0 }, 
-    [ cgn_postag(Q0,Q,Surf,'SPEC(symb)') ].
+    [ cgn_postag(Q0,Q,Stem,'SPEC(symb)') ].
 
-history_tags(quoted_name(_,_),Q0,Q,Surf,_,_) -->
-    {  atom_codes(Surf,Codes),
+history_tags(quoted_name(_,_),Q0,Q,Stem,_,_,_) -->
+    {  atom_codes(Stem,Codes),
        alpino_util:codes_to_words(Codes,Words),
        length(Words,Len),
        Len is Q - Q0
     },
     guess_tag_list(Words,Q0,Q).
 
-history_tags(normal(variant(variant21(_Lemma,L1,L2),His)),P0,P,Surf,Frame,Result) -->
+history_tags(normal(variant(variant21(_Lemma,L1,L2),His)),P0,P,Stem,_,Frame,Result) -->
     { P1 is P0 + 1,
       P is P1 + 1
     },
-    cgn_postag_c(Frame,L1,Surf,P0,P1,Result,His),
-    cgn_postag_c(Frame,L2,Surf,P1,P,Result,His).
+    cgn_postag_c(Frame,L1,Stem,P0,P1,Result,His),
+    cgn_postag_c(Frame,L2,Stem,P1,P,Result,His).
 
-history_tags(normal(variant(variant31(_Lemma,L1,L2,L3),His)),P0,P,Surf,Frame,Result) -->
+history_tags(normal(variant(variant31(_Lemma,L1,L2,L3),His)),P0,P,Stem,_,Frame,Result) -->
     { P1 is P0 + 1,
       P2 is P1 + 1,
       P is P2 + 1
     },
-    cgn_postag_c(Frame,L1,Surf,P0,P1,Result,His),
-    cgn_postag_c(Frame,L2,Surf,P1,P2,Result,His),
-    cgn_postag_c(Frame,L3,Surf,P2,P,Result,His).
+    cgn_postag_c(Frame,L1,Stem,P0,P1,Result,His),
+    cgn_postag_c(Frame,L2,Stem,P1,P2,Result,His),
+    cgn_postag_c(Frame,L3,Stem,P2,P,Result,His).
 
 guess_tag_list([],Q,Q) --> [].
 guess_tag_list([H|T],Q0,Q) -->
@@ -1801,11 +1801,19 @@ num_postag(A,'TW(hoofd,vrij)') :-
 num_postag(A,'SPEC(symb)') :-
     alpino_lex:num_dot_num(_,A).
 
+%% mwu_postag(lemma,surf,tags,newlemma)
 mwu_postag(voorzover,'voor zover',['VZ(init)','BW()'],[voor,zover]).
+
+%% da 's
+mwu_postag(v_root(ben,zijn),'da \'s',
+	   ['VNW(aanw,pron,stan,vol,3o,ev)','WW(pv,tgw,ev)'],
+	   [dat,v_root(ben,zijn)]).
+mwu_postag('als het ware','als het ware',
+	   ['VG(onder)','VNW(pers,pron,stan,red,3,ev,onz)','WW(pv,conj,ev)'],
+	   [als,het,v_root(ben,zijn)]).
 
 
 mwu_postag('des te',['BW()','BW()']).
-
 mwu_postag('1 februari',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)']).
 mwu_postag('1 januari 2003',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)','TW(hoofd,vrij)']).
 mwu_postag('1 januari 2006',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)','TW(hoofd,vrij)']).
@@ -1873,7 +1881,6 @@ mwu_postag('al met al',['BW()','VZ(init)','BW()']).
 mwu_postag('alleen al',['BW()','BW()']).
 mwu_postag('alles bij elkaar',['VNW(onbep,pron,stan,vol,3o,ev)','VZ(init)','VNW(recip,pron,obl,vol,persoon,mv)']).
 mwu_postag('als gevolg van',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('als het ware',['VG(onder)','VNW(pers,pron,stan,red,3,ev,onz)','WW(pv,conj,ev)']).
 mwu_postag('als volgt',['VG(onder)','WW(pv,tgw,met-t)']).
 mwu_postag('andere onder',['ADJ(nom,basis,met-e,zonder-n,stan)','VZ(init)']).
 mwu_postag('bij elkaar',['VZ(init)','VNW(recip,pron,obl,vol,persoon,mv)']).

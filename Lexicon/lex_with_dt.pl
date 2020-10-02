@@ -1610,7 +1610,7 @@ with_dt_all(en,[tussen,vijf,vijftien]).
 with_dt_all(en,[tussen,vijf,zes]).
 with_dt_all(en,[tussen,vijf,zeven]).
 with_dt_all(en,[tussen,zes,zeven]).
-with_dt_all(en,[verder]).
+with_dt_all(en,[ver]).
 with_dt_all(en,[vice,versa]).
 with_dt_all(en,[wat,wie]).
 with_dt_all(en,[zo]).
@@ -2977,7 +2977,6 @@ with_dt_root(veertigtal).
 with_dt_root(veld).
 with_dt_root(velde).
 with_dt_root(ver).
-with_dt_root(verder).
 with_dt_root(vergeet).
 with_dt_root(verkeerd).
 with_dt_root(vermoed).
