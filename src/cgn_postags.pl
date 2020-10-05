@@ -76,6 +76,12 @@ cgn_postag_c(Frame,Stem,Surf,Q0,Q,_,_) -->
     {  format(user_error,"error: no cgn tag for ~w ~w ~w~n",[Surf,Stem,Frame]) },
     guess_tags(Q0,Q,Frame,Stem).
 
+add_tags([],Q,Q,_Tag) --> [].
+add_tags([Stem|Stems],Q0,Q,Tag) -->
+    [cgn_postag(Q0,Q1,Stem,Tag)],
+    {  Q1 is Q0 + 1 },
+    add_tags(Stems,Q1,Q,Tag).
+
 tags(Q0,Q,Stem,Tag,L0,L):-
     hdrug_util:hdrug_flag(add_nodes_for_mwu,On),
     tags(On,Q0,Q,Stem,Tag,L0,L).
@@ -109,6 +115,9 @@ m_tag(Q0,Q,Tag0,Tag) :-
 
 not_last_m_tag('N(eigen,ev,basis,gen)','SPEC(deeleigen)').
 not_last_m_tag('N(eigen,ev,dim,gen)',  'SPEC(deeleigen)').
+
+history_tags(normal(decap(X)),Q0,Q,Stem,Surf,Frame,Result) -->
+    history_tags(normal(X),Q0,Q,Stem,Surf,Frame,Result).
 
 history_tags(double_compound,Q0,Q,Stem,_Surf,Frame,Result) -->
     { 2 is Q-Q0,
@@ -146,21 +155,20 @@ history_tags(quoted_name(_,_),Q0,Q,Stem,_,_,_) -->
     },
     guess_tag_list(Words,Q0,Q).
 
-history_tags(normal(variant(variant21(_Lemma,L1,L2),His)),P0,P,Stem,_,Frame,Result) -->
-    { P1 is P0 + 1,
-      P is P1 + 1
-    },
-    cgn_postag_c(Frame,L1,Stem,P0,P1,Result,His),
-    cgn_postag_c(Frame,L2,Stem,P1,P,Result,His).
+history_tags(normal(variant(variant21(_Lemma,L1,L2),_His)),P0,P,_Stem,_,Frame,_Result) -->
+    { cgn_postag_c(Frame,Tag) },
+    add_tags([L1,L2],P0,P,Tag).
 
-history_tags(normal(variant(variant31(_Lemma,L1,L2,L3),His)),P0,P,Stem,_,Frame,Result) -->
-    { P1 is P0 + 1,
-      P2 is P1 + 1,
-      P is P2 + 1
+history_tags(normal(variant(variant31(_Lemma,L1,L2,L3),_His)),P0,P,_Stem,_,Frame,_Result) -->
+    { cgn_postag_c(Frame,Tag) },
+    add_tags([L1,L2,L3],P0,P,Tag).
+
+history_tags(english_compound(normal),P0,P,Stem,_Surf,Frame,_Result) -->
+    { atom(Stem),
+      alpino_util:split_atom(Stem,"_",Stems),
+      cgn_postag_c(Frame,Tag)
     },
-    cgn_postag_c(Frame,L1,Stem,P0,P1,Result,His),
-    cgn_postag_c(Frame,L2,Stem,P1,P2,Result,His),
-    cgn_postag_c(Frame,L3,Stem,P2,P,Result,His).
+    add_tags(Stems,P0,P,Tag).
 
 guess_tag_list([],Q,Q) --> [].
 guess_tag_list([H|T],Q0,Q) -->
