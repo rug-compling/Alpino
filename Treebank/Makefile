@@ -62,6 +62,12 @@ alpino.dact: $(DIRECTORIES:%=%.dact)
 	chmod 644 alpino.dact.new
 	mv alpino.dact.new alpino.dact
 
+gitversion=$(shell git log --oneline | wc -l)
+
+enhanced:
+	/net/corpora/LassyDevelopMod/lassymod -t -u Enhanced/cdb
+	$(MAKE) Enhanced/cdb.dact
+	( cd Enhanced ; tar czf cdb-$(gitversion).tar.gz cdb )
 
 dtchecks:
 	dtchecks $(DIRECTORIES)
