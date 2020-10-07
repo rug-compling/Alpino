@@ -2149,11 +2149,11 @@ n([pl(akkers),sg(akker)],de,[],[dim(akkertje)]).
 
 n([mass(akkerbouw)],de,[]).
 
-n([sg(accoord),pl(akkoorden),sg(akkoord),pl(accoorden)],het,
+n([pl(akkoorden),sg(akkoord)],het,
   [sbar,
    vp]).
 
-n([sg(accoord),pl(akkoorden),sg(akkoord),pl(accoorden)],het,[],
+n([pl(akkoorden),sg(akkoord)],het,[],
   [h(autonomie),
    concept,
    s(handel),
@@ -18227,7 +18227,8 @@ n([sg(kosmonaut),pl(kosmonauten),
 
 n([sg(kost)],de,[]).
 
-n([pl(kosten)],de,[],
+n([stem(kost),
+   pl(kosten)],de,[],
   [s(arbeid),
    auto,
    s(beheer),
@@ -40357,6 +40358,8 @@ n([pl(zegslieden),pl(zegslui),sg(zegsman)],de,[]).
 n([pl(zegswijzen),sg(zegswijze)],de,[sbar]).
 
 n([mass(zeik)],de,[pred_pp(over)]).
+
+n([sg(zeikerd),pl(zeikerds)],de,[]).
 
 n([pl(zeilen),sg(zeil)],het,[],[dim(zeiltje)]).
 

@@ -11878,7 +11878,6 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
           fixed([svp_pp(onder,vuur)],norm_passive),
           fixed([[op,gang]],no_passive),  % PP PREDC?
           fixed([[op,verhaal]],no_passive), % PP PREDC?
-          fixed([[op,vrije,voeten]],no_passive), % PP PREDC?
           fixed([svp_pp(op,naam)],no_passive),
           fixed([svp_pp(op,naam),pc(van)],no_passive),
           fixed([[over,de,brug]],no_passive),
@@ -21782,7 +21781,6 @@ v(stel,stelt,stellen,gesteld,stelde,stelden,
 	fixed([svp_pp(op,prijs),acc],norm_passive),
 	fixed([svp_pp(op,prijs),het_pobj1(sbar)],norm_passive),
 	fixed([svp_pp(op,prijs),het_pobj1(vp)],norm_passive),
-	fixed([[op,vrije,voeten],acc],norm_passive),
 	fixed([[orde,op,zaken]],imp_passive),
 	fixed([{[[paal,en,perk],pc(aan)]}],imp_passive),
 	fixed([{[[geen,paal,en,perk],pc(aan)]}],imp_passive),

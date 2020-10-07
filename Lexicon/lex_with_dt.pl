@@ -1506,8 +1506,8 @@ with_dt_all(eens,[niet]).
 with_dt_all(een,[soort]).
 with_dt_all(een,[stel]).
 with_dt_all(een,[stelletje]).
-with_dt_all(eens,[te,meer]).
 with_dt_all(eens,[temeer]).
+with_dt_all(eens,[te,veel]).
 with_dt_all(eens,[zo]).
 with_dt_all(een,[tachtigtal]).
 with_dt_all(een,[tiental]).
@@ -1845,7 +1845,6 @@ with_dt_all(laat,[we,zeg]).
 with_dt_all(lande,[te]).
 with_dt_all(lande,[ten]).
 with_dt_all(land,[te]).
-with_dt_all(langer,[niet]).
 with_dt_all(lang,[niet]).
 with_dt_all(lang,[niet,overal]).
 with_dt_all(laste,[mijnen,te]).
@@ -1986,6 +1985,7 @@ with_dt_all(niet,[overal,zeker]).
 with_dt_all(niet,[reden,zonder]).
 with_dt_all(niets,[voor]).
 with_dt_all(niet,[temeer]).
+with_dt_all(niet,[te,veel]).
 with_dt_all(niet,[te,vergeet]).
 with_dt_all(niet,[toch]).
 with_dt_all(niet,[vaak]).
@@ -2748,7 +2748,6 @@ with_dt_root(laatst).
 with_dt_root(land).
 with_dt_root(lande).
 with_dt_root(lang).
-with_dt_root(langer).
 with_dt_root(langs).
 with_dt_root(laste).
 with_dt_root(later).
