@@ -6,12 +6,12 @@
     <node begin="23" end="24" id="3" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
     <node begin="26" end="27" id="4" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
     <node begin="41" end="42" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="53" end="54" id="6" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="53" end="54" id="6" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="65" end="66" id="7" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="72" id="8" rel="--">
       <node begin="0" cat="np" end="10" id="9" index="1" rel="su">
         <node begin="0" end="1" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" getal="mv" graad="basis" id="11" lemma="PvdA-kamerlid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="lid" word="PvdA-Kamerleden"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="11" lemma="PvdA_kamerlid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="lid" word="PvdA-Kamerleden"/>
         <node begin="2" cat="conj" end="10" id="12" rel="app">
           <node begin="2" cat="mwu" end="6" id="13" rel="cnj">
             <node begin="2" end="3" id="14" lemma="drs." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="drs." spectype="deeleigen" word="drs."/>
@@ -71,14 +71,14 @@
                   <node begin="34" end="35" id="57" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
                   <node begin="35" cat="np" end="41" id="58" rel="obj1">
                     <node begin="35" end="36" id="59" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                    <node begin="36" end="37" getal="mv" graad="basis" id="60" lemma="reorganisatieplan" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="plan" word="reorganisatieplannen"/>
+                    <node begin="36" end="37" getal="mv" graad="basis" id="60" lemma="reorganisatie_plan" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="plan" word="reorganisatieplannen"/>
                     <node begin="37" cat="pp" end="41" id="61" rel="mod">
                       <node begin="37" cat="mwu" end="40" id="62" rel="hd">
                         <node begin="37" end="38" id="63" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="met" vztype="init" word="met"/>
                         <node begin="38" end="39" genus="zijd" getal="ev" graad="basis" id="64" lemma="betrekking" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="betrekking" word="betrekking"/>
                         <node begin="39" end="40" id="65" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="tot" vztype="init" word="tot"/>
                       </node>
-                      <node begin="40" end="41" genus="genus" getal="ev" graad="basis" id="66" lemma="Werkspoor-Amsterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Amsterdam" word="Werkspoor-Amsterdam"/>
+                      <node begin="40" end="41" genus="genus" getal="ev" graad="basis" id="66" lemma="Werkspoor_Amsterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Amsterdam" word="Werkspoor-Amsterdam"/>
                     </node>
                   </node>
                 </node>
@@ -92,7 +92,7 @@
                   <node begin="43" end="44" id="72" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                   <node begin="44" end="45" getal="mv" graad="basis" id="73" lemma="minister" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="minister" word="ministers"/>
                 </node>
-                <node begin="45" end="46" id="74" lemma="meedelen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="deel" word="meedeelden" wvorm="pv"/>
+                <node begin="45" end="46" id="74" lemma="mee_delen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="deel" word="meedeelden" wvorm="pv"/>
                 <node begin="46" cat="cp" end="72" id="75" rel="vc">
                   <node begin="46" conjtype="onder" end="47" id="76" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
                   <node begin="47" cat="ssub" end="72" id="77" rel="body">
@@ -104,7 +104,7 @@
                         <node begin="50" cat="np" end="53" id="83" rel="obj1">
                           <node begin="50" end="51" id="84" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                           <node begin="51" end="52" genus="onz" getal="ev" graad="basis" id="85" lemma="aantal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aantal" word="aantal"/>
-                          <node begin="52" end="53" getal="mv" graad="basis" id="86" lemma="arbeidsplaats" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="arbeidsplaats" word="arbeidsplaatsen"/>
+                          <node begin="52" end="53" getal="mv" graad="basis" id="86" lemma="arbeid_plaats" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="arbeidsplaats" word="arbeidsplaatsen"/>
                         </node>
                       </node>
                     </node>
@@ -159,8 +159,8 @@
         </node>
       </node>
     </node>
-    <node begin="72" end="73" id="119" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="72" end="73" id="119" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="73" end="74" id="120" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De PvdA-Kamerleden drs. Ed van Thijn en E. R. Wieldraaijer hebben minister Roolvink ( sociale zaken en volksgezondheid ) en minister De Block ( economische zaken ) herinnerd aan de beantwoording van de vragen over de reorganisatieplannen met betrekking tot Werkspoor-Amsterdam , waarin de ministers meedeelden dat de vermindering van het aantal arbeidsplaatsen &quot; wellicht geheel kan worden geeffectueerd door natuurlijk verloop en door overplaatsing , waardoor ontslag van werknemers wordt vermeden &quot; .</sentence>
+  <sentence>De PvdA-Kamerleden drs. Ed van Thijn en E. R. Wieldraaijer hebben minister Roolvink ( sociale zaken en volksgezondheid ) en minister De Block ( economische zaken ) herinnerd aan de beantwoording van de vragen over de reorganisatieplannen met betrekking tot Werkspoor-Amsterdam , waarin de ministers meedeelden dat de vermindering van het aantal arbeidsplaatsen &#34; wellicht geheel kan worden geeffectueerd door natuurlijk verloop en door overplaatsing , waardoor ontslag van werknemers wordt vermeden &#34; .</sentence>
 </alpino_ds>

@@ -33,7 +33,7 @@
         </node>
         <node begin="13" cat="np" end="34" id="25" rel="obj1">
           <node begin="13" end="14" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="27" lemma="competitiewedstrijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="competitiewedstrijd" word="competitiewedstrijd"/>
+          <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="27" lemma="competitie_wedstrijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="competitiewedstrijd" word="competitiewedstrijd"/>
           <node begin="15" cat="pp" end="34" id="28" rel="mod">
             <node begin="15" end="16" id="29" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>
             <node begin="16" cat="conj" end="34" id="30" rel="obj1">
@@ -60,7 +60,7 @@
                           </node>
                           <node begin="28" cat="pp" end="30" id="50" rel="mod">
                             <node begin="28" end="29" id="51" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-                            <node begin="29" end="30" getal="mv" graad="basis" id="52" lemma="bekerwinnaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="winnaar" word="bekerwinnaars"/>
+                            <node begin="29" end="30" getal="mv" graad="basis" id="52" lemma="beker_winnaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="winnaar" word="bekerwinnaars"/>
                           </node>
                         </node>
                       </node>
@@ -76,7 +76,7 @@
             </node>
           </node>
         </node>
-        <node begin="34" buiging="zonder" end="35" id="57" lemma="bijwonen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="woon" word="bijwonen" wvorm="inf"/>
+        <node begin="34" buiging="zonder" end="35" id="57" lemma="bij_wonen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="woon" word="bijwonen" wvorm="inf"/>
       </node>
     </node>
     <node begin="35" end="36" id="58" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

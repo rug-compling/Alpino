@@ -7,7 +7,7 @@
       <node begin="0" cat="np" end="14" id="4" rel="su">
         <node begin="0" end="1" id="5" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="Ook"/>
         <node begin="1" end="2" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="bagageaanvoer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aanvoer" word="bagageaanvoer"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="bagage_aanvoer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aanvoer" word="bagageaanvoer"/>
         <node begin="4" cat="rel" end="14" id="8" rel="mod">
           <node begin="4" end="5" getal="getal" id="9" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
           <node begin="4" cat="ssub" end="14" id="10" rel="body">
@@ -25,7 +25,7 @@
               <node begin="10" end="11" id="20" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
               <node begin="11" cat="np" end="13" id="21" rel="obj1">
                 <node begin="11" end="12" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="23" lemma="aankomsthal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hal" word="aankomsthal"/>
+                <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="23" lemma="aankomst_hal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hal" word="aankomsthal"/>
               </node>
             </node>
             <node begin="13" end="14" id="24" lemma="belanden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="beland" word="belandde" wvorm="pv"/>

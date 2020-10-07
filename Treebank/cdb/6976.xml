@@ -23,18 +23,18 @@
             <node begin="9" cat="pp" end="14" id="17" rel="mod">
               <node begin="9" end="10" id="18" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
               <node begin="10" cat="np" end="14" id="19" rel="obj1">
-                <node begin="10" buiging="zonder" end="11" getal-n="zonder-n" id="20" lemma="ingrijpen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="grijp" word="ingrijpen" wvorm="inf"/>
+                <node begin="10" buiging="zonder" end="11" getal-n="zonder-n" id="20" lemma="in_grijpen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="grijp" word="ingrijpen" wvorm="inf"/>
                 <node begin="11" cat="pp" end="14" id="21" rel="mod">
                   <node begin="11" end="12" id="22" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                   <node begin="12" cat="np" end="14" id="23" rel="obj1">
                     <node begin="12" buiging="met-e" end="13" graad="basis" id="24" lemma="afzonderlijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="afzonderlijk" word="afzonderlijke"/>
-                    <node begin="13" end="14" getal="mv" graad="basis" id="25" lemma="CAO" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="CAO&apos;s" word="CAO&apos;s"/>
+                    <node begin="13" end="14" getal="mv" graad="basis" id="25" lemma="CAO" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="CAO&#39;s" word="CAO&#39;s"/>
                   </node>
                 </node>
               </node>
             </node>
           </node>
-          <node begin="17" end="18" id="26" lemma="opleveren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lever" word="oplevert" wvorm="pv"/>
+          <node begin="17" end="18" id="26" lemma="op_leveren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lever" word="oplevert" wvorm="pv"/>
           <node begin="14" cat="np" end="23" id="27" rel="obj1">
             <node begin="14" end="15" id="28" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
             <node begin="15" buiging="met-e" end="16" graad="basis" id="29" lemma="onaanvaardbaar" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="onaanvaardbaar" word="onaanvaardbare"/>
@@ -43,7 +43,7 @@
               <node begin="18" end="19" id="32" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
               <node begin="19" cat="np" end="23" id="33" rel="obj1">
                 <node begin="19" end="20" id="34" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="35" lemma="inkomensvorming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vorming" word="inkomensvorming"/>
+                <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="35" lemma="inkomen_vorming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vorming" word="inkomensvorming"/>
                 <node begin="21" cat="pp" end="23" id="36" rel="mod">
                   <node begin="21" end="22" id="37" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                   <node begin="22" end="23" getal="mv" graad="basis" id="38" lemma="werknemer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="werknemer" word="werknemers"/>
@@ -56,5 +56,5 @@
     </node>
     <node begin="23" end="24" id="39" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>In een resolutie zegt de PvdA dat de mogelijkheid tot ingrijpen in afzonderlijke CAO&apos;s een onaanvaardbare inbreuk oplevert op de inkomensvorming van werknemers .</sentence>
+  <sentence>In een resolutie zegt de PvdA dat de mogelijkheid tot ingrijpen in afzonderlijke CAO&#39;s een onaanvaardbare inbreuk oplevert op de inkomensvorming van werknemers .</sentence>
 </alpino_ds>

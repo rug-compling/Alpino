@@ -7,7 +7,7 @@
     <node begin="0" cat="smain" end="29" id="4" rel="--">
       <node begin="0" cat="np" end="2" id="5" index="1" rel="su">
         <node begin="0" end="1" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" getal="mv" graad="basis" id="7" lemma="woningbouwcorporatie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="corporatie" word="woningbouwcorporaties"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="7" lemma="woningbouw_corporatie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="corporatie" word="woningbouwcorporaties"/>
       </node>
       <node begin="2" end="3" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
       <node begin="0" cat="ppart" end="29" id="9" rel="vc">
@@ -17,7 +17,7 @@
           <node begin="3" end="4" id="13" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
           <node begin="4" cat="np" end="29" id="14" rel="obj1">
             <node begin="4" end="5" id="15" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="5" buiging="met-e" end="6" graad="basis" id="16" lemma="drievoudig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="drievoudig" word="drievoudige"/>
+            <node begin="5" buiging="met-e" end="6" graad="basis" id="16" lemma="drie_voudig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="drievoudig" word="drievoudige"/>
             <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="17" lemma="controle" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="controle" word="controle"/>
             <node begin="9" cat="conj" end="19" id="18" rel="mod">
               <node begin="9" end="10" getal="mv" graad="basis" id="19" lemma="gemeente" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="gemeente" word="gemeenten"/>

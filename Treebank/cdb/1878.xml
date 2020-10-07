@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="39" id="0" rel="top">
-    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" end="1" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="6" end="7" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="23" end="24" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="1" cat="smain" end="38" id="4" rel="--">
@@ -52,7 +52,7 @@
             <node begin="7" cat="ssub" end="38" id="40" rel="cnj">
               <node begin="7" end="8" id="41" index="1" rel="su"/>
               <node begin="25" end="26" id="42" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
-              <node begin="30" end="31" id="43" lemma="tentoonspreiden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="spreid" word="tentoonspreidde" wvorm="pv"/>
+              <node begin="30" end="31" id="43" lemma="tentoon_spreiden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="spreid" word="tentoonspreidde" wvorm="pv"/>
               <node begin="26" cat="np" end="38" id="44" rel="obj1">
                 <node begin="26" end="27" id="45" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
                 <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="46" lemma="openheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="openheid" word="openheid"/>
@@ -87,5 +87,5 @@
     </node>
     <node begin="38" end="39" id="64" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>&quot; Het was een bijzondere man , die er nauwelijks tegen kon als een van zijn leerlingen het niet met hem eens was , maar toch een openheid van geest tentoonspreidde die grote indruk op mij heeft gemaakt .</sentence>
+  <sentence>&#34; Het was een bijzondere man , die er nauwelijks tegen kon als een van zijn leerlingen het niet met hem eens was , maar toch een openheid van geest tentoonspreidde die grote indruk op mij heeft gemaakt .</sentence>
 </alpino_ds>

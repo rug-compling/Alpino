@@ -3,14 +3,14 @@
   <node begin="0" cat="top" end="40" id="0" rel="top">
     <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="10" end="11" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="27" end="28" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="29" end="30" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="27" end="28" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="29" end="30" id="4" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="conj" end="39" id="5" rel="--">
       <node begin="0" cat="smain" end="16" id="6" rel="cnj">
         <node begin="11" end="12" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
         <node begin="12" cat="np" end="14" id="8" index="1" rel="su">
           <node begin="12" end="13" id="9" lemma="94" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="94" word="94"/>
-          <node begin="13" end="14" getal="mv" graad="basis" id="10" lemma="papoea" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Papoea" word="Papoea&apos;s"/>
+          <node begin="13" end="14" getal="mv" graad="basis" id="10" lemma="papoea" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Papoea" word="Papoea&#39;s"/>
         </node>
         <node begin="0" cat="ppart" end="16" id="11" rel="vc">
           <node begin="0" cat="pp" end="10" id="12" index="2" rel="mod">
@@ -34,7 +34,7 @@
           </node>
           <node begin="12" end="14" id="26" index="1" rel="obj1"/>
           <node begin="14" buiging="zonder" end="15" id="27" lemma="vangen" pos="part" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="svp" root="gevangen" word="gevangen" wvorm="vd"/>
-          <node begin="15" buiging="zonder" end="16" id="28" lemma="nemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="neem" word="genomen" wvorm="vd"/>
+          <node begin="15" buiging="zonder" end="16" id="28" lemma="gevangen_nemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="neem" word="genomen" wvorm="vd"/>
         </node>
       </node>
       <node begin="16" conjtype="neven" end="17" id="29" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
@@ -45,7 +45,7 @@
           <node begin="0" end="10" id="34" index="2" rel="mod"/>
           <node begin="18" end="19" id="35" index="3" rel="su"/>
           <node begin="19" end="20" getal="getal" id="36" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
-          <node begin="20" buiging="zonder" end="21" id="37" lemma="overgeven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geef" word="overgegeven" wvorm="vd"/>
+          <node begin="20" buiging="zonder" end="21" id="37" lemma="over_geven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geef" word="overgegeven" wvorm="vd"/>
           <node begin="21" cat="pp" end="39" id="38" rel="mod">
             <node begin="21" end="22" id="39" lemma="tijdens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tijdens" vztype="init" word="tijdens"/>
             <node begin="22" cat="whrel" end="39" id="40" rel="obj1">
@@ -54,7 +54,7 @@
                 <node begin="22" end="23" id="43" index="4" rel="obj1"/>
                 <node begin="23" cat="np" end="26" id="44" rel="su">
                   <node begin="23" end="24" id="45" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                  <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="46" lemma="persbureau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bureau" word="persbureau"/>
+                  <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="46" lemma="pers_bureau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bureau" word="persbureau"/>
                   <node begin="25" end="26" genus="genus" getal="ev" graad="basis" id="47" lemma="Antera" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Antera" word="Antera"/>
                 </node>
                 <node begin="26" end="27" id="48" lemma="noemen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="noem" word="noemt" wvorm="pv"/>
@@ -94,5 +94,5 @@
     </node>
     <node begin="39" end="40" id="69" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Op het eiland Biak , voor de kust van West-Irian , zijn 94 Papoea&apos;s gevangen genomen en hebben 295 zich overgegeven tijdens wat het persbureau Antera noemt &quot; opstanden &quot; die van 1 juni tot 20 juni hebben geduurd .</sentence>
+  <sentence>Op het eiland Biak , voor de kust van West-Irian , zijn 94 Papoea&#39;s gevangen genomen en hebben 295 zich overgegeven tijdens wat het persbureau Antera noemt &#34; opstanden &#34; die van 1 juni tot 20 juni hebben geduurd .</sentence>
 </alpino_ds>

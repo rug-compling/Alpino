@@ -10,7 +10,7 @@
           <node begin="1" end="2" id="7" index="1" rel="su"/>
           <node begin="3" end="4" getal="ev" id="8" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="se" root="me" status="red" vwtype="pr" word="me"/>
           <node begin="4" end="5" id="9" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
-          <node begin="5" buiging="zonder" end="6" id="10" lemma="voorstellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel" word="voorstellen" wvorm="inf"/>
+          <node begin="5" buiging="zonder" end="6" id="10" lemma="voor_stellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel" word="voorstellen" wvorm="inf"/>
           <node begin="6" cat="cp" end="23" id="11" rel="vc">
             <node begin="6" conjtype="onder" end="7" id="12" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
             <node begin="7" cat="ssub" end="23" id="13" rel="body">
@@ -25,7 +25,7 @@
                   <node begin="9" end="10" id="21" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
                   <node begin="10" cat="np" end="17" id="22" rel="obj1">
                     <node begin="10" end="11" id="23" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                    <node begin="11" buiging="zonder" end="12" getal-n="zonder-n" id="24" lemma="voorbereiden" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="bereid" word="voorbereiden" wvorm="inf"/>
+                    <node begin="11" buiging="zonder" end="12" getal-n="zonder-n" id="24" lemma="voor_bereiden" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="bereid" word="voorbereiden" wvorm="inf"/>
                     <node begin="12" cat="pp" end="17" id="25" rel="mod">
                       <node begin="12" end="13" id="26" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                       <node begin="13" cat="conj" end="17" id="27" rel="obj1">
@@ -36,7 +36,7 @@
                         <node begin="15" conjtype="neven" end="16" id="31" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                         <node begin="13" cat="np" end="17" id="32" rel="cnj">
                           <node begin="13" end="14" id="33" index="3" rel="det"/>
-                          <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="34" lemma="wintercollectie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="collectie" word="wintercollectie"/>
+                          <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="34" lemma="winter_collectie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="collectie" word="wintercollectie"/>
                         </node>
                       </node>
                     </node>

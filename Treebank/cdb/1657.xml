@@ -5,7 +5,7 @@
       <node begin="4" end="5" id="2" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
       <node begin="6" cat="np" end="9" id="3" index="1" rel="su">
         <node begin="6" end="7" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="5" lemma="sleutelmatch" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="match" word="sleutelmatch"/>
+        <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="5" lemma="sleutel_match" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="match" word="sleutelmatch"/>
         <node begin="8" end="9" genus="genus" getal="ev" graad="basis" id="6" lemma="VRAQuick" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="VRAQuick" word="VRAQuick"/>
       </node>
       <node begin="0" cat="ppart" end="12" id="7" rel="vc">
@@ -13,8 +13,8 @@
           <node begin="0" end="1" id="9" lemma="vanwege" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="vanwege" vztype="init" word="Vanwege"/>
           <node begin="1" cat="np" end="4" id="10" rel="obj1">
             <node begin="1" end="2" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="12" lemma="hockey-interland" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="interland" word="hockey-interland"/>
-            <node begin="3" end="4" genus="genus" getal="ev" graad="basis" id="13" lemma="Nederland-Engeland" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Nederland-Engeland" word="Nederland-Engeland"/>
+            <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="12" lemma="hockey_interland" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="interland" word="hockey-interland"/>
+            <node begin="3" end="4" genus="genus" getal="ev" graad="basis" id="13" lemma="Nederland_Engeland" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Nederland-Engeland" word="Nederland-Engeland"/>
           </node>
         </node>
         <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="14" lemma="zondag" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mod" root="zondag" word="zondag"/>

@@ -10,7 +10,7 @@
           <node begin="2" cat="inf" end="9" id="7" rel="body">
             <node begin="2" cat="np" end="7" id="8" rel="obj1">
               <node begin="2" end="3" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-              <node begin="3" buiging="zonder" end="4" getal-n="zonder-n" id="10" lemma="overmaken" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="maak" word="overmaken" wvorm="inf"/>
+              <node begin="3" buiging="zonder" end="4" getal-n="zonder-n" id="10" lemma="over_maken" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="maak" word="overmaken" wvorm="inf"/>
               <node begin="4" cat="pp" end="7" id="11" rel="mod">
                 <node begin="4" end="5" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                 <node begin="5" cat="np" end="7" id="13" rel="obj1">
@@ -28,6 +28,6 @@
   </node>
   <sentence>Dit om het overmaken van de premies te vergemakkelijken .</sentence>
   <comments>
-    <comment>perhaps a &apos;nucl&apos; + &apos;sat&apos; structure?</comment>
+    <comment>perhaps a &#39;nucl&#39; + &#39;sat&#39; structure?</comment>
   </comments>
 </alpino_ds>

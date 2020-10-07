@@ -24,7 +24,7 @@
           <node begin="8" conjtype="neven" end="9" id="17" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
           <node begin="6" cat="np" end="10" id="18" rel="cnj">
             <node begin="6" end="7" id="19" index="1" rel="det"/>
-            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="20" lemma="onteigenings-organisatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="organisatie" word="onteigenings-organisatie"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="20" lemma="ont_eigening_organisatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="organisatie" word="onteigenings-organisatie"/>
           </node>
         </node>
         <node begin="10" cat="ap" end="15" id="21" rel="predc">
@@ -34,7 +34,7 @@
             <node begin="11" cat="inf" end="15" id="25" rel="body">
               <node begin="11" cat="np" end="13" id="26" rel="obj1">
                 <node begin="11" end="12" id="27" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="28" lemma="kapitaalstructuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="structuur" word="kapitaalstructuur"/>
+                <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="28" lemma="kapitaal_structuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="structuur" word="kapitaalstructuur"/>
               </node>
               <node begin="14" buiging="zonder" end="15" id="29" lemma="veranderen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verander" word="veranderen" wvorm="inf"/>
             </node>
@@ -77,7 +77,7 @@
                     <node begin="28" cat="np" end="31" id="59" rel="obj1">
                       <node begin="28" end="29" id="60" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                       <node begin="29" buiging="met-e" end="30" graad="basis" id="61" lemma="Utrechts" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Utrechtse" word="Utrechtse"/>
-                      <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="62" lemma="binnenstad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="binnenstad" word="binnenstad"/>
+                      <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="62" lemma="binnen_stad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="binnenstad" word="binnenstad"/>
                     </node>
                   </node>
                 </node>
@@ -91,11 +91,11 @@
                     <node begin="37" end="38" id="69" lemma="nogal" pos="adv" postag="BW()" pt="bw" rel="mod" root="nogal" word="nogal"/>
                     <node begin="38" buiging="met-e" end="39" graad="basis" id="70" lemma="uniform" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="uniform" word="uniforme"/>
                   </node>
-                  <node begin="39" end="40" genus="zijd" getal="ev" graad="basis" id="71" lemma="band-gevel-architectuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="architectuur" word="band-gevel-architectuur"/>
+                  <node begin="39" end="40" genus="zijd" getal="ev" graad="basis" id="71" lemma="band_gevel_architectuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="architectuur" word="band-gevel-architectuur"/>
                   <node begin="40" cat="pp" end="43" id="72" rel="mod">
                     <node begin="40" end="41" id="73" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
                     <node begin="41" cat="np" end="43" id="74" rel="obj1">
-                      <node begin="41" end="42" getal="ev" graad="basis" id="75" lemma="Bredero" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Bredero" word="Bredero&apos;s"/>
+                      <node begin="41" end="42" getal="ev" graad="basis" id="75" lemma="Bredero" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Bredero" word="Bredero&#39;s"/>
                       <node begin="42" end="43" genus="zijd" getal="ev" graad="basis" id="76" lemma="dictatuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dictatuur" word="dictatuur"/>
                     </node>
                   </node>
@@ -108,5 +108,5 @@
     </node>
     <node begin="43" end="44" id="77" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Als een goed ge-oliede machine is de opkopers- en onteigenings-organisatie bezig de kapitaalstructuur te veranderen en onder totaal andere financiele consequenties zal nieuw leven in dat deel van de Utrechtse binnenstad gepompt moeten worden , bij een nogal uniforme band-gevel-architectuur onder Bredero&apos;s dictatuur .</sentence>
+  <sentence>Als een goed ge-oliede machine is de opkopers- en onteigenings-organisatie bezig de kapitaalstructuur te veranderen en onder totaal andere financiele consequenties zal nieuw leven in dat deel van de Utrechtse binnenstad gepompt moeten worden , bij een nogal uniforme band-gevel-architectuur onder Bredero&#39;s dictatuur .</sentence>
 </alpino_ds>

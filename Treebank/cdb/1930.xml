@@ -8,7 +8,7 @@
         <node begin="0" cat="np" end="3" id="5" index="1" rel="su">
           <node begin="0" end="1" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
           <node begin="1" buiging="met-e" end="2" graad="sup" id="7" lemma="eenvoudig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="eenvoudig" word="eenvoudigste"/>
-          <node begin="2" end="3" getal="mv" graad="basis" id="8" lemma="lcn-lid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="leden" word="LCN-leden"/>
+          <node begin="2" end="3" getal="mv" graad="basis" id="8" lemma="lcn_lid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="leden" word="LCN-leden"/>
         </node>
         <node begin="3" end="4" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
         <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="miljonair" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="predc" root="miljonair" word="miljonair"/>
@@ -33,7 +33,7 @@
                 <node begin="15" end="16" id="28" lemma="anders" pos="adv" postag="BW()" pt="bw" rel="mod" root="anders" word="anders"/>
                 <node begin="16" cat="pp" end="18" id="29" rel="mod">
                   <node begin="16" end="17" id="30" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-                  <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="31" lemma="belasting-ontduiking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="ontduiking" word="belasting-ontduiking"/>
+                  <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="31" lemma="belasting_ontduiking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="ontduiking" word="belasting-ontduiking"/>
                 </node>
                 <node begin="19" buiging="zonder" end="20" id="32" lemma="grijpen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="grijp" word="gegrepen" wvorm="vd"/>
               </node>

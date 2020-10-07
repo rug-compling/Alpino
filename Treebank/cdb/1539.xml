@@ -31,7 +31,7 @@
                   <node begin="13" cat="np" end="16" id="26" rel="obj1">
                     <node begin="13" end="14" id="27" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                     <node begin="14" buiging="met-e" end="15" graad="basis" id="28" lemma="vorig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vorig" word="vorige"/>
-                    <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="29" lemma="partijcongres" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="congres" word="partijcongres"/>
+                    <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="29" lemma="partij_congres" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="congres" word="partijcongres"/>
                   </node>
                 </node>
                 <node begin="16" end="17" id="30" lemma="treffen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="tref" word="trof" wvorm="pv"/>
@@ -40,7 +40,7 @@
           </node>
         </node>
       </node>
-      <node begin="18" end="19" id="31" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
+      <node begin="18" end="19" id="31" lemma="aan_komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
       <node begin="19" end="20" id="32" lemma="echter" pos="adv" postag="BW()" pt="bw" rel="mod" root="echter" word="echter"/>
       <node begin="22" end="23" id="33" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
       <node begin="20" cat="np" end="32" id="34" rel="su">
@@ -51,7 +51,7 @@
           <node begin="24" cat="ssub" end="32" id="39" rel="body">
             <node begin="25" cat="np" end="27" id="40" index="3" rel="su">
               <node begin="25" end="26" id="41" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="42" lemma="CDU-voorzitter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzitter" word="CDU-voorzitter"/>
+              <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="42" lemma="CDU_voorzitter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzitter" word="CDU-voorzitter"/>
             </node>
             <node begin="30" end="31" id="43" lemma="moeten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="moet" word="moest" wvorm="pv"/>
             <node begin="24" cat="inf" end="32" id="44" rel="vc">
@@ -61,7 +61,7 @@
                 <node begin="27" end="28" id="48" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                 <node begin="28" cat="np" end="30" id="49" rel="obj1">
                   <node begin="28" buiging="met-e" end="29" graad="basis" id="50" lemma="jong" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jong" word="jonge"/>
-                  <node begin="29" end="30" getal="mv" graad="basis" id="51" lemma="partijgenote" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="partijgenote" word="partijgenoten"/>
+                  <node begin="29" end="30" getal="mv" graad="basis" id="51" lemma="partij_genote" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="partijgenote" word="partijgenoten"/>
                 </node>
               </node>
               <node begin="31" buiging="zonder" end="32" id="52" lemma="incasseren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="incasseer" word="incasseren" wvorm="inf"/>

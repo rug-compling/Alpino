@@ -2,8 +2,8 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="57" id="0" rel="top">
     <node begin="17" end="18" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="21" end="22" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="27" end="28" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="21" end="22" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="27" end="28" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="28" end="29" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="33" end="34" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="46" end="47" id="6" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
@@ -11,7 +11,7 @@
     <node begin="0" cat="smain" end="56" id="8" rel="--">
       <node begin="0" cat="np" end="27" id="9" rel="su">
         <node begin="0" end="1" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="11" lemma="zomertentoonstelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tentoonstelling" word="zomertentoonstelling"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="11" lemma="zomer_tentoonstelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tentoonstelling" word="zomertentoonstelling"/>
         <node begin="2" cat="pp" end="5" id="12" rel="mod">
           <node begin="2" end="3" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="3" cat="np" end="5" id="14" rel="obj1">
@@ -58,7 +58,7 @@
           </node>
         </node>
       </node>
-      <node begin="29" end="30" id="46" lemma="maken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="maak" word="maakt" wvorm="pv"/>
+      <node begin="29" end="30" id="46" lemma="uit_maken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="maak" word="maakt" wvorm="pv"/>
       <node begin="30" cat="np" end="33" id="47" rel="obj1">
         <node begin="30" end="31" id="48" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
         <node begin="31" buiging="met-e" end="32" graad="basis" id="49" lemma="extatisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="extatisch" word="extatische"/>
@@ -114,5 +114,5 @@
     </node>
     <node begin="56" end="57" id="85" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De zomertentoonstelling van Belgische tekeningen in de voorlopige zalen van het Museum voor Moderne Kunst in Brussel , onder de titel &quot; het licht en het duister &quot; , maakt een extatische indruk , afgezien van een aantal neo-klassieke tekeningen uit het begin van de periode , 19e en 20e eeuw , die de expositie bestrijkt .</sentence>
+  <sentence>De zomertentoonstelling van Belgische tekeningen in de voorlopige zalen van het Museum voor Moderne Kunst in Brussel , onder de titel &#34; het licht en het duister &#34; , maakt een extatische indruk , afgezien van een aantal neo-klassieke tekeningen uit het begin van de periode , 19e en 20e eeuw , die de expositie bestrijkt .</sentence>
 </alpino_ds>

@@ -2,7 +2,7 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="31" id="0" rel="top">
     <node begin="17" end="18" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="24" end="25" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="24" end="25" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="29" id="3" rel="--">
       <node begin="4" end="5" id="4" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
       <node begin="5" cat="np" end="7" id="5" index="1" rel="su">
@@ -14,7 +14,7 @@
           <node begin="0" end="1" id="10" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="Volgens"/>
           <node begin="1" cat="np" end="4" id="11" rel="obj1">
             <node begin="1" end="2" id="12" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-            <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="13" lemma="persbureau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bureau" word="persbureau"/>
+            <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="13" lemma="pers_bureau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bureau" word="persbureau"/>
             <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="14" lemma="Reuter" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Reuter" word="Reuter"/>
           </node>
         </node>
@@ -66,7 +66,7 @@
       </node>
     </node>
     <node begin="29" end="30" id="49" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
-    <node begin="30" end="31" id="50" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="30" end="31" id="50" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
   </node>
-  <sentence>Volgens het persbureau Reuter heeft de familie inmiddels een brief ontvangen in het handschrift van mevrouw McKay , waarin zij haar man vraagt om &quot; spoedig iets te doen . &quot;</sentence>
+  <sentence>Volgens het persbureau Reuter heeft de familie inmiddels een brief ontvangen in het handschrift van mevrouw McKay , waarin zij haar man vraagt om &#34; spoedig iets te doen . &#34;</sentence>
 </alpino_ds>

@@ -53,13 +53,13 @@
               </node>
             </node>
             <node begin="22" cat="np" end="25" id="42" rel="cnj">
-              <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="43" lemma="loco-burgemeester" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="burgemeester" word="loco-burgemeester"/>
+              <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="43" lemma="loco_burgemeester" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="burgemeester" word="loco-burgemeester"/>
               <node begin="23" end="25" id="44" index="2" rel="mod"/>
             </node>
           </node>
           <node begin="25" conjtype="neven" end="26" id="45" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
           <node begin="26" cat="np" end="31" id="46" rel="cnj">
-            <node begin="26" end="27" genus="onz" getal="ev" graad="basis" id="47" lemma="oud-stuurman" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stuurman" word="oud-stuurman"/>
+            <node begin="26" end="27" genus="onz" getal="ev" graad="basis" id="47" lemma="oud_stuurman" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stuurman" word="oud-stuurman"/>
             <node begin="27" cat="pp" end="31" id="48" rel="mod">
               <node begin="27" end="28" id="49" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
               <node begin="28" cat="np" end="31" id="50" rel="obj1">
@@ -78,10 +78,10 @@
           <node begin="33" end="34" id="58" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
           <node begin="34" cat="np" end="36" id="59" rel="obj1">
             <node begin="34" end="35" id="60" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="35" end="36" genus="zijd" getal="ev" graad="basis" id="61" lemma="pvda-statenfractie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="fractie" word="PvdA-statenfractie"/>
+            <node begin="35" end="36" genus="zijd" getal="ev" graad="basis" id="61" lemma="pvda_statenfractie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="fractie" word="PvdA-statenfractie"/>
           </node>
         </node>
-        <node begin="36" buiging="zonder" end="37" id="62" lemma="aanwijzen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="wijs" word="aangewezen" wvorm="vd"/>
+        <node begin="36" buiging="zonder" end="37" id="62" lemma="aan_wijzen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="wijs" word="aangewezen" wvorm="vd"/>
         <node begin="37" cat="cp" end="54" id="63" rel="predc">
           <node begin="37" end="38" id="64" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
           <node begin="38" cat="np" end="54" id="65" rel="body">
@@ -91,7 +91,7 @@
               <node begin="40" cat="np" end="48" id="69" rel="obj1">
                 <node begin="40" end="41" id="70" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                 <node begin="41" end="42" id="71" lemma="twee" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="tweede" word="tweede"/>
-                <node begin="42" end="43" genus="zijd" getal="ev" graad="basis" id="72" lemma="gedeputeerden-zetel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zetel" word="gedeputeerden-zetel"/>
+                <node begin="42" end="43" genus="zijd" getal="ev" graad="basis" id="72" lemma="gedeputeerde_zetel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zetel" word="gedeputeerden-zetel"/>
                 <node begin="44" cat="pp" end="48" id="73" rel="mod">
                   <node begin="44" end="45" id="74" lemma="naast" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naast" vztype="init" word="naast"/>
                   <node begin="45" cat="np" end="48" id="75" rel="obj1">

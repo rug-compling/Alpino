@@ -32,14 +32,14 @@
             <node begin="15" buiging="zonder" end="16" id="25" lemma="bouwen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bouw" word="bouwen" wvorm="inf"/>
             <node begin="12" cat="np" end="23" id="26" rel="obj1">
               <node begin="12" end="13" id="27" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-              <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="28" lemma="rolstoel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rolstoel" word="rolstoel"/>
+              <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="28" lemma="rol_stoel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rolstoel" word="rolstoel"/>
               <node begin="17" cat="rel" end="23" id="29" rel="mod">
                 <node begin="17" end="18" id="30" index="3" lemma="waarop" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarop" word="waarop"/>
                 <node begin="17" cat="ssub" end="23" id="31" rel="body">
                   <node begin="18" cat="np" end="21" id="32" index="4" rel="su">
-                    <node begin="18" end="19" getal="ev" graad="basis" id="33" lemma="Butzi" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Butzi" word="Butzi&apos;s"/>
+                    <node begin="18" end="19" getal="ev" graad="basis" id="33" lemma="Butzi" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Butzi" word="Butzi&#39;s"/>
                     <node begin="19" buiging="met-e" end="20" graad="basis" id="34" lemma="verlamd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="verlamd" word="verlamde"/>
-                    <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="35" lemma="achterlijf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="lijf" word="achterlijf"/>
+                    <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="35" lemma="achter_lijf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="lijf" word="achterlijf"/>
                   </node>
                   <node begin="17" cat="inf" end="22" id="36" rel="vc">
                     <node begin="17" end="18" id="37" index="3" rel="mod"/>
@@ -56,5 +56,5 @@
     </node>
     <node begin="23" end="24" id="41" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Dr. Milkowicz heeft de gebroken ledematen genezen , en tevens heeft hij een rolstoel laten bouwen , waarop Butzi&apos;s verlamde achterlijf rusten kan .</sentence>
+  <sentence>Dr. Milkowicz heeft de gebroken ledematen genezen , en tevens heeft hij een rolstoel laten bouwen , waarop Butzi&#39;s verlamde achterlijf rusten kan .</sentence>
 </alpino_ds>

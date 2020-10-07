@@ -32,7 +32,7 @@
                   <node begin="15" cat="ssub" end="19" id="27" rel="body">
                     <node begin="15" cat="np" end="17" id="28" rel="su">
                       <node begin="15" end="16" id="29" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                      <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="30" lemma="kernoorlog" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oorlog" word="kernoorlog"/>
+                      <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="30" lemma="kern_oorlog" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oorlog" word="kernoorlog"/>
                     </node>
                     <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="31" lemma="zonde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="predc" root="zonde" word="zonde"/>
                     <node begin="18" end="19" id="32" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
@@ -52,7 +52,7 @@
                       <node begin="27" end="28" id="43" index="1" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="whd" root="hoe" word="hoe"/>
                       <node begin="27" cat="sv1" end="33" id="44" rel="body">
                         <node begin="27" end="28" id="45" index="1" rel="mod"/>
-                        <node begin="28" end="29" id="46" lemma="raken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="raak" word="raak" wvorm="pv"/>
+                        <node begin="28" end="29" id="46" lemma="kwijt_raken" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="raak" word="raak" wvorm="pv"/>
                         <node begin="29" end="30" getal="ev" id="47" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="noun" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
                         <node begin="30" cat="np" end="32" id="48" rel="obj1">
                           <node begin="30" buiging="zonder" end="31" id="49" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>

@@ -22,7 +22,7 @@
         <node begin="8" cat="np" end="11" id="16" rel="obj1">
           <node begin="8" end="9" id="17" lemma="bijna" pos="adv" postag="BW()" pt="bw" rel="mod" root="bijna" word="bijna"/>
           <node begin="9" end="10" id="18" lemma="1900" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="1900" word="1900"/>
-          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="19" lemma="kilometer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kilometer" word="kilometer"/>
+          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="19" lemma="kilo_meter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kilometer" word="kilometer"/>
         </node>
       </node>
       <node begin="11" cat="pp" end="14" id="20" rel="mod">
@@ -57,7 +57,7 @@
       <node begin="26" cat="pp" end="30" id="41" rel="ld">
         <node begin="26" end="27" id="42" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
         <node begin="27" cat="np" end="30" id="43" rel="obj1">
-          <node begin="27" end="28" getal="mv" graad="basis" id="44" lemma="finish-plaats" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="plaats" word="finish-plaats"/>
+          <node begin="27" end="28" getal="mv" graad="basis" id="44" lemma="finish_plaats" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="plaats" word="finish-plaats"/>
           <node begin="28" cat="mwu" end="30" id="45" rel="app">
             <node begin="28" end="29" id="46" lemma="Clermont" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Clermont" spectype="deeleigen" word="Clermont"/>
             <node begin="29" end="30" id="47" lemma="Ferrand" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ferrand" spectype="deeleigen" word="Ferrand"/>

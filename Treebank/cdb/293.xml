@@ -17,7 +17,7 @@
             <node begin="5" cat="ssub" end="15" id="13" rel="body">
               <node begin="8" cat="np" end="12" id="14" index="3" rel="su">
                 <node begin="8" end="9" id="15" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="16" lemma="bodemvoorziening" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorziening" word="bodemvoorziening"/>
+                <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="16" lemma="bodem_voorziening" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorziening" word="bodemvoorziening"/>
                 <node begin="10" cat="pp" end="12" id="17" rel="mod">
                   <node begin="10" end="11" id="18" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
                   <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="arbeidsongeschiktheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="geschiktheid" word="arbeidsongeschiktheid"/>
@@ -34,7 +34,7 @@
                     <node begin="7" buiging="met-e" end="8" getal-n="mv-n" graad="basis" id="28" lemma="zelfstandig" pos="noun" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="obj1" root="zelfstandige" word="zelfstandigen"/>
                   </node>
                   <node begin="8" end="12" id="29" index="3" rel="obj1"/>
-                  <node begin="14" buiging="zonder" end="15" id="30" lemma="invoeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voer" word="ingevoerd" wvorm="vd"/>
+                  <node begin="14" buiging="zonder" end="15" id="30" lemma="in_voeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voer" word="ingevoerd" wvorm="vd"/>
                 </node>
               </node>
             </node>
@@ -50,7 +50,7 @@
                   <node begin="19" end="20" id="39" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                   <node begin="20" cat="np" end="22" id="40" rel="obj1">
                     <node begin="20" end="21" id="41" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                    <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="42" lemma="kinderbijslagregeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="regeling" word="kinderbijslagregeling"/>
+                    <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="42" lemma="kind_bijslag_regeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="regeling" word="kinderbijslagregeling"/>
                   </node>
                 </node>
                 <node begin="22" cat="pp" end="26" id="43" rel="mod">
@@ -69,7 +69,7 @@
                 <node begin="16" cat="ppart" end="29" id="53" rel="vc">
                   <node begin="16" end="17" id="54" index="4" rel="mod"/>
                   <node begin="17" end="26" id="55" index="5" rel="obj1"/>
-                  <node begin="28" buiging="zonder" end="29" id="56" lemma="opheffen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="hef" word="opgeheven" wvorm="vd"/>
+                  <node begin="28" buiging="zonder" end="29" id="56" lemma="op_heffen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="hef" word="opgeheven" wvorm="vd"/>
                 </node>
               </node>
             </node>

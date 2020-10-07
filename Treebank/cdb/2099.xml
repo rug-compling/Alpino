@@ -20,7 +20,7 @@
         <node begin="7" cat="inf" end="16" id="15" rel="body">
           <node begin="7" cat="np" end="9" id="16" rel="obj1">
             <node begin="7" end="8" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="18" lemma="schenkingsact" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schenkingsacte" word="schenkingsacte"/>
+            <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="18" lemma="schenking_act" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schenkingsacte" word="schenkingsacte"/>
           </node>
           <node begin="9" cat="pp" end="14" id="19" rel="mod">
             <node begin="9" cat="mwu" end="12" id="20" rel="hd">
@@ -72,7 +72,7 @@
             <node begin="33" end="34" id="54" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
             <node begin="32" cat="ppart" end="41" id="55" rel="vc">
               <node begin="32" end="33" id="56" index="2" rel="obj1"/>
-              <node begin="34" buiging="zonder" end="35" id="57" lemma="uitkeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="keer" word="uitgekeerd" wvorm="vd"/>
+              <node begin="34" buiging="zonder" end="35" id="57" lemma="uit_keren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="keer" word="uitgekeerd" wvorm="vd"/>
               <node begin="35" cat="pp" end="41" id="58" rel="obj2">
                 <node begin="35" end="36" id="59" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
                 <node begin="36" cat="whrel" end="41" id="60" rel="obj1">

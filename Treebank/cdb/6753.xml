@@ -29,7 +29,7 @@
           <node begin="0" end="1" id="22" index="2" rel="mod"/>
           <node begin="2" end="3" id="23" index="1" rel="su"/>
           <node begin="11" end="12" getal="mv" id="24" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="se" root="ons" status="vol" vwtype="pr" word="ons"/>
-          <node begin="12" buiging="zonder" end="13" id="25" lemma="afvragen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vraag" word="afvragen" wvorm="inf"/>
+          <node begin="12" buiging="zonder" end="13" id="25" lemma="af_vragen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vraag" word="afvragen" wvorm="inf"/>
           <node begin="13" cat="whsub" end="32" id="26" rel="vc">
             <node begin="13" end="14" id="27" index="3" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="whd" root="hoe" word="hoe"/>
             <node begin="13" cat="ssub" end="32" id="28" rel="body">
@@ -53,7 +53,7 @@
                           <node begin="24" end="25" id="46" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                           <node begin="25" cat="mwu" end="27" id="47" rel="hd">
                             <node begin="25" buiging="met-e" end="26" graad="basis" id="48" lemma="dol" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Dolle" word="Dolle"/>
-                            <node begin="26" end="27" getal="mv" graad="basis" id="49" lemma="mina" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Mina&apos;s" word="Mina&apos;s"/>
+                            <node begin="26" end="27" getal="mv" graad="basis" id="49" lemma="mina" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Mina&#39;s" word="Mina&#39;s"/>
                           </node>
                         </node>
                         <node begin="27" cat="pp" end="30" id="50" rel="mod">
@@ -63,7 +63,7 @@
                             <node begin="29" end="30" genus="onz" getal="ev" graad="basis" id="54" lemma="ogenblik" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="ogenblik" word="ogenblik"/>
                           </node>
                         </node>
-                        <node begin="30" end="31" genus="onz" getal="ev" graad="basis" id="55" lemma="bestaansrecht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="bestaansrecht" word="bestaansrecht"/>
+                        <node begin="30" end="31" genus="onz" getal="ev" graad="basis" id="55" lemma="bestaan_recht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="bestaansrecht" word="bestaansrecht"/>
                         <node begin="31" end="32" id="56" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
                       </node>
                     </node>
@@ -75,8 +75,8 @@
         </node>
       </node>
     </node>
-    <node begin="32" end="33" id="57" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="32" end="33" id="57" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="33" end="34" id="58" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Misschien zouden wij de hand in eigen boezem moeten steken en ons afvragen hoe het komt , dat er uberhaupt nog omstandigheden zijn waardoor de Dolle Mina&apos;s op het ogenblik bestaansrecht hebben &quot; .</sentence>
+  <sentence>Misschien zouden wij de hand in eigen boezem moeten steken en ons afvragen hoe het komt , dat er uberhaupt nog omstandigheden zijn waardoor de Dolle Mina&#39;s op het ogenblik bestaansrecht hebben &#34; .</sentence>
 </alpino_ds>

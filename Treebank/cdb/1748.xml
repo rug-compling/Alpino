@@ -4,18 +4,18 @@
     <node begin="0" cat="smain" end="8" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
         <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="doodstraf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="doodstraf" word="doodstraf"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="dood_straf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="doodstraf" word="doodstraf"/>
       </node>
       <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="0" cat="ppart" end="8" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="obj1"/>
         <node begin="3" end="4" id="8" lemma="namelijk" pos="adv" postag="BW()" pt="bw" rel="mod" root="namelijk" word="namelijk"/>
-        <node begin="4" buiging="zonder" end="5" id="9" lemma="omzetten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zet" word="omgezet" wvorm="vd"/>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="om_zetten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zet" word="omgezet" wvorm="vd"/>
         <node begin="5" cat="pp" end="8" id="10" rel="pc">
           <node begin="5" end="6" id="11" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="6" cat="np" end="8" id="12" rel="obj1">
-            <node begin="6" buiging="met-e" end="7" graad="basis" id="13" lemma="levenslang" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="levenslang" word="levenslange"/>
-            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="14" lemma="gevangenisstraf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gevangenisstraf" word="gevangenisstraf"/>
+            <node begin="6" buiging="met-e" end="7" graad="basis" id="13" lemma="leven_lang" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="levenslang" word="levenslange"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="14" lemma="gevangenis_straf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gevangenisstraf" word="gevangenisstraf"/>
           </node>
         </node>
       </node>

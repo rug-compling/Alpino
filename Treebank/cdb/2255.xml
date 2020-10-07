@@ -21,12 +21,12 @@
           <node begin="9" end="10" id="17" index="2" lemma="waarin" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarin" word="waarin"/>
           <node begin="9" cat="ssub" end="29" id="18" rel="body">
             <node begin="21" cat="conj" end="27" id="19" index="3" rel="su">
-              <node begin="21" end="22" getal="mv" graad="basis" id="20" lemma="vergaderlokaal" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="lokaal" word="vergaderlokalen"/>
+              <node begin="21" end="22" getal="mv" graad="basis" id="20" lemma="vergader_lokaal" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="lokaal" word="vergaderlokalen"/>
               <node begin="23" end="24" getal="mv" graad="basis" id="21" lemma="bureau" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="bureau" word="bureaus"/>
               <node begin="24" conjtype="neven" end="25" id="22" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
               <node begin="25" cat="np" end="27" id="23" rel="cnj">
                 <node begin="25" end="26" id="24" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="25" lemma="kosterwoning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="woning" word="kosterwoning"/>
+                <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="25" lemma="koster_woning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="woning" word="kosterwoning"/>
               </node>
             </node>
             <node begin="27" end="28" id="26" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
@@ -37,7 +37,7 @@
                 <node begin="11" cat="np" end="21" id="31" rel="body">
                   <node begin="11" end="12" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                   <node begin="12" buiging="met-e" end="13" graad="basis" id="33" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="grote"/>
-                  <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="34" lemma="kerkzaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zaal" word="kerkzaal"/>
+                  <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="34" lemma="kerk_zaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zaal" word="kerkzaal"/>
                   <node begin="15" cat="rel" end="21" id="35" rel="mod">
                     <node begin="15" end="16" getal="getal" id="36" index="4" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
                     <node begin="15" cat="ssub" end="21" id="37" rel="body">
@@ -60,7 +60,7 @@
                 </node>
               </node>
               <node begin="21" end="27" id="49" index="3" rel="obj1"/>
-              <node begin="28" buiging="zonder" end="29" id="50" lemma="onderbrengen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="breng" word="ondergebracht" wvorm="vd"/>
+              <node begin="28" buiging="zonder" end="29" id="50" lemma="onder_brengen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="breng" word="ondergebracht" wvorm="vd"/>
             </node>
           </node>
         </node>

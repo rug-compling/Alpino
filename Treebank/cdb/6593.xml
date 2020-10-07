@@ -9,13 +9,13 @@
             <node begin="0" buiging="zonder" end="1" id="6" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="Die"/>
             <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="broek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="broek" word="broek"/>
           </node>
-          <node begin="2" end="3" id="8" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+          <node begin="2" end="3" id="8" lemma="terug_komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
           <node begin="3" end="4" id="9" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
           <node begin="4" end="5" id="10" lemma="terug" pos="part" postag="BW()" pt="bw" rel="svp" root="terug" word="terug"/>
           <node begin="5" cat="pp" end="8" id="11" rel="ld">
             <node begin="5" end="6" id="12" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
             <node begin="6" cat="np" end="8" id="13" rel="obj1">
-              <node begin="6" buiging="met-e" end="7" graad="basis" id="14" lemma="openvallen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="openvallend" word="openvallende"/>
+              <node begin="6" buiging="met-e" end="7" graad="basis" id="14" lemma="open_vallen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="openvallend" word="openvallende"/>
               <node begin="7" end="8" getal="mv" graad="basis" id="15" lemma="rok" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="rok" word="rokken"/>
             </node>
           </node>

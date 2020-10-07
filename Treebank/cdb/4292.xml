@@ -6,7 +6,7 @@
         <node begin="0" buiging="met-e" end="1" id="3" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="Deze"/>
         <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="stijging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stijging" word="stijging"/>
       </node>
-      <node begin="2" end="3" id="5" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="overeen_komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
       <node begin="3" end="4" id="6" lemma="overeen" pos="part" postag="BW()" pt="bw" rel="svp" root="overeen" word="overeen"/>
       <node begin="4" cat="pp" end="20" id="7" rel="pc">
         <node begin="4" end="5" id="8" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
@@ -35,7 +35,7 @@
                           <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="31" lemma="advies" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="advies" word="advies"/>
                           <node begin="16" cat="pp" end="18" id="32" rel="mod">
                             <node begin="16" end="17" id="33" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-                            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="34" lemma="ontwikkelingssamenwerking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="samenwerking" word="ontwikkelingssamenwerking"/>
+                            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="34" lemma="ontwikkeling_samenwerking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="samenwerking" word="ontwikkelingssamenwerking"/>
                           </node>
                         </node>
                       </node>

@@ -12,12 +12,12 @@
       <node begin="0" cat="ppart" end="19" id="8" rel="vc">
         <node begin="0" end="2" id="9" index="1" rel="obj1"/>
         <node begin="3" buiging="zonder" end="4" graad="basis" id="10" lemma="ver" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ver" word="ver"/>
-        <node begin="4" buiging="zonder" end="5" id="11" lemma="doorvoeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voer" word="doorgevoerd" wvorm="vd"/>
+        <node begin="4" buiging="zonder" end="5" id="11" lemma="door_voeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voer" word="doorgevoerd" wvorm="vd"/>
         <node begin="5" cat="pp" end="19" id="12" rel="mod">
           <node begin="5" end="6" id="13" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
           <node begin="6" cat="np" end="19" id="14" rel="obj1">
             <node begin="6" buiging="met-e" end="7" graad="basis" id="15" lemma="gemeentelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gemeentelijk" word="gemeentelijke"/>
-            <node begin="7" end="8" getal="mv" graad="basis" id="16" lemma="vervoerbedrijf" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bedrijf" word="vervoerbedrijven"/>
+            <node begin="7" end="8" getal="mv" graad="basis" id="16" lemma="vervoer_bedrijf" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bedrijf" word="vervoerbedrijven"/>
             <node begin="8" cat="pp" end="19" id="17" rel="mod">
               <node begin="8" end="9" id="18" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="9" cat="conj" end="19" id="19" rel="obj1">

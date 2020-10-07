@@ -19,7 +19,7 @@
           <node begin="5" end="6" id="15" lemma="voorbij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voorbij" vztype="init" word="voorbij"/>
           <node begin="6" cat="np" end="8" id="16" rel="obj1">
             <node begin="6" end="7" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="18" lemma="vrachtwagen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vrachtwagen" word="vrachtwagen"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="18" lemma="vracht_wagen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vrachtwagen" word="vrachtwagen"/>
           </node>
         </node>
       </node>
@@ -59,13 +59,13 @@
           <node begin="24" end="25" id="45" lemma="ondanks" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="ondanks" vztype="init" word="ondanks"/>
           <node begin="25" cat="np" end="30" id="46" rel="obj1">
             <node begin="25" end="26" id="47" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="26" buiging="met-e" end="27" graad="basis" id="48" lemma="tegemoetkomend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="tegemoetkomend" word="tegemoetkomende"/>
+            <node begin="26" buiging="met-e" end="27" graad="basis" id="48" lemma="tegemoet_komend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="tegemoetkomend" word="tegemoetkomende"/>
             <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="49" lemma="truck" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="truck" word="truck"/>
             <node begin="28" cat="rel" end="30" id="50" rel="mod">
               <node begin="28" end="29" getal="getal" id="51" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
               <node begin="28" cat="ssub" end="30" id="52" rel="body">
                 <node begin="28" end="29" id="53" index="2" rel="su"/>
-                <node begin="29" end="30" id="54" lemma="opdoemen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="doem" word="opdoemde" wvorm="pv"/>
+                <node begin="29" end="30" id="54" lemma="op_doemen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="doem" word="opdoemde" wvorm="pv"/>
               </node>
             </node>
           </node>
@@ -118,7 +118,7 @@
               <node begin="51" end="52" id="90" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
               <node begin="52" cat="np" end="55" id="91" rel="obj1">
                 <node begin="52" end="53" id="92" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="53" buiging="met-e" end="54" id="93" lemma="voorbijrijden" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="voorbijrijdend" word="voorbijrijdende" wvorm="od"/>
+                <node begin="53" buiging="met-e" end="54" id="93" lemma="voorbij_rijden" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="voorbijrijdend" word="voorbijrijdende" wvorm="od"/>
                 <node begin="54" end="55" genus="zijd" getal="ev" graad="basis" id="94" lemma="oplegger" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oplegger" word="oplegger"/>
               </node>
             </node>

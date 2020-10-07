@@ -21,7 +21,7 @@
           <node begin="9" end="10" getal="getal" id="16" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
           <node begin="9" cat="ssub" end="17" id="17" rel="body">
             <node begin="9" end="10" id="18" index="2" rel="su"/>
-            <node begin="10" buiging="zonder" end="11" graad="basis" id="19" lemma="jarenlang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="jarenlang" word="jarenlang"/>
+            <node begin="10" buiging="zonder" end="11" graad="basis" id="19" lemma="jaar_lang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="jarenlang" word="jarenlang"/>
             <node begin="11" cat="np" end="13" id="20" rel="obj1">
               <node begin="11" buiging="met-e" end="12" id="21" lemma="elk" naamval="stan" npagr="evz" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="det" root="elke" vwtype="onbep" word="elke"/>
               <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="wielerzesdaagse" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wielerzesdaagse" word="wielerzesdaagse"/>
@@ -54,7 +54,7 @@
           <node begin="25" buiging="zonder" end="26" id="41" lemma="misbruiken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="misbruik" word="misbruiken" wvorm="inf"/>
           <node begin="26" cat="cp" end="28" id="42" rel="predc">
             <node begin="26" end="27" id="43" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
-            <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="44" lemma="opiumkoerier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="koerier" word="opiumkoerier"/>
+            <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="44" lemma="opium_koerier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="koerier" word="opiumkoerier"/>
           </node>
         </node>
       </node>

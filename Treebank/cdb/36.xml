@@ -7,7 +7,7 @@
         <node begin="11" end="12" id="4" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         <node begin="14" cat="np" end="16" id="5" index="1" rel="su">
           <node begin="14" end="15" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="7" lemma="muziekwinter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="muziekwinter" word="muziekwinter"/>
+          <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="7" lemma="muziek_winter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="muziekwinter" word="muziekwinter"/>
         </node>
         <node begin="0" cat="ppart" end="17" id="8" rel="vc">
           <node begin="0" cat="pp" end="11" id="9" rel="mod">
@@ -40,7 +40,7 @@
             <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="29" lemma="Amsterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Amsterdam" word="Amsterdam"/>
           </node>
           <node begin="14" end="16" id="30" index="1" rel="su"/>
-          <node begin="16" buiging="zonder" end="17" id="31" lemma="aanbreken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="breek" word="aangebroken" wvorm="vd"/>
+          <node begin="16" buiging="zonder" end="17" id="31" lemma="aan_breken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="breek" word="aangebroken" wvorm="vd"/>
         </node>
       </node>
       <node begin="18" conjtype="neven" end="19" id="32" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
@@ -53,7 +53,7 @@
             <node begin="22" end="23" id="39" lemma="hiervan" pos="adv" postag="BW()" pt="bw" rel="mod" root="hiervan" word="hiervan"/>
           </node>
         </node>
-        <node begin="23" end="24" id="40" lemma="spelen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="speel" word="speelde" wvorm="pv"/>
+        <node begin="23" end="24" id="40" lemma="af_spelen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="speel" word="speelde" wvorm="pv"/>
         <node begin="24" cat="np" end="26" id="41" rel="su">
           <node begin="24" end="25" id="42" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="43" lemma="avond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="avond" word="avond"/>
@@ -84,6 +84,6 @@
   </node>
   <sentence>Met het concert van woensdag door het Concertgebouworkest onder Eugen Jochum is voor Amsterdam de muziekwinter aangebroken , en ter onderstreping eventueel hiervan speelde de avond zich af in een onaangenaam saai en bijzonder sfeerloos licht .</sentence>
   <comments>
-    <comment>where should &apos;eventueel&apos; go?</comment>
+    <comment>where should &#39;eventueel&#39; go?</comment>
   </comments>
 </alpino_ds>

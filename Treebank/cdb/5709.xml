@@ -6,7 +6,7 @@
         <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
         <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="EBU" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="EBU" word="EBU"/>
       </node>
-      <node begin="2" end="3" id="5" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="bijeen_komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
       <node begin="3" cat="np" end="5" id="6" rel="mod">
         <node begin="3" buiging="met-e" end="4" id="7" lemma="volgen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="volgend" word="volgende" wvorm="od"/>
         <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="maand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="maand" word="maand"/>
@@ -31,7 +31,7 @@
                   <node begin="14" end="15" id="25" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                   <node begin="15" cat="np" end="17" id="26" rel="obj1">
                     <node begin="15" end="16" id="27" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                    <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="28" lemma="songfestival" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="festival" word="songfestival"/>
+                    <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="28" lemma="song_festival" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="festival" word="songfestival"/>
                   </node>
                 </node>
               </node>

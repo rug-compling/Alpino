@@ -6,7 +6,7 @@
         <node begin="0" cat="np" end="3" id="3" index="1" rel="su">
           <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
           <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="Palestijns" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Palestijns" word="Palestijnse"/>
-          <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="commando-organisatie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="organisatie" word="commando-organisaties"/>
+          <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="commando_organisatie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="organisatie" word="commando-organisaties"/>
         </node>
         <node begin="3" end="4" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
         <node begin="4" cat="pp" end="6" id="8" rel="mod">
@@ -26,7 +26,7 @@
             <node begin="11" end="12" id="20" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
             <node begin="12" cat="np" end="14" id="21" rel="obj1">
               <node begin="12" buiging="zonder" end="13" getal="mv" id="22" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
-              <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="machtspositie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="machtspositie" word="machtspositie"/>
+              <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="macht_positie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="machtspositie" word="machtspositie"/>
             </node>
           </node>
         </node>

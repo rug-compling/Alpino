@@ -10,7 +10,7 @@
           <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="blik" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="blik" word="blik"/>
         </node>
       </node>
-      <node begin="4" end="5" id="8" lemma="kijken" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kijk" word="keken" wvorm="pv"/>
+      <node begin="4" end="5" id="8" lemma="rond_kijken" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kijk" word="keken" wvorm="pv"/>
       <node begin="5" end="6" getal="mv" id="9" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
       <node begin="6" end="7" id="10" lemma="rond" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="rond" vztype="fin" word="rond"/>
       <node begin="7" cat="pp" end="17" id="11" rel="ld">
@@ -19,7 +19,7 @@
           <node begin="10" conjtype="neven" end="11" id="14" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
           <node begin="8" cat="np" end="17" id="15" rel="cnj">
             <node begin="8" end="9" id="16" index="1" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="9" end="10" getal="mv" graad="basis" id="17" lemma="popart-versiering" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="versiering" word="popart-versieringen"/>
+            <node begin="9" end="10" getal="mv" graad="basis" id="17" lemma="popart_versiering" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="versiering" word="popart-versieringen"/>
             <node begin="12" cat="rel" end="17" id="18" index="2" rel="mod">
               <node begin="12" end="13" id="19" index="3" lemma="waarmee" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarmee" word="waarmee"/>
               <node begin="12" cat="ssub" end="17" id="20" rel="body">
@@ -31,7 +31,7 @@
                 <node begin="12" cat="ppart" end="17" id="25" rel="vc">
                   <node begin="12" end="13" id="26" index="3" rel="mod"/>
                   <node begin="13" end="15" id="27" index="4" rel="obj1"/>
-                  <node begin="16" buiging="zonder" end="17" id="28" lemma="toetakelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="takel" word="toegetakeld" wvorm="vd"/>
+                  <node begin="16" buiging="zonder" end="17" id="28" lemma="toe_takelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="takel" word="toegetakeld" wvorm="vd"/>
                 </node>
               </node>
             </node>

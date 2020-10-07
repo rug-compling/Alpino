@@ -11,7 +11,7 @@
           <node begin="2" end="3" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="3" cat="np" end="25" id="9" rel="obj1">
             <node begin="3" buiging="met-e" end="4" graad="basis" id="10" lemma="elektrisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="elektrisch" word="elektrische"/>
-            <node begin="4" end="5" getal="mv" graad="basis" id="11" lemma="auto" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="auto" word="auto&apos;s"/>
+            <node begin="4" end="5" getal="mv" graad="basis" id="11" lemma="auto" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="auto" word="auto&#39;s"/>
             <node begin="5" cat="rel" end="25" id="12" rel="mod">
               <node begin="5" end="6" getal="getal" id="13" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
               <node begin="5" cat="conj" end="25" id="14" rel="body">
@@ -46,7 +46,7 @@
                     <node begin="18" end="19" id="37" lemma="via" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="via" vztype="init" word="via"/>
                     <node begin="19" cat="np" end="25" id="38" rel="obj1">
                       <node begin="19" end="20" id="39" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                      <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="40" lemma="stroomafnemer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="afnemer" word="stroomafnemer"/>
+                      <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="40" lemma="stroom_afnemer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="afnemer" word="stroomafnemer"/>
                       <node begin="22" cat="cp" end="25" id="41" rel="mod">
                         <node begin="22" conjtype="onder" end="23" id="42" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="zoals"/>
                         <node begin="23" cat="np" end="25" id="43" rel="body">
@@ -78,5 +78,5 @@
     </node>
     <node begin="33" end="34" id="56" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De introductie van elektrische auto&apos;s die op straat op hun accu rijden en op de buitenwegen energie ontvangen via een stroomafnemer ( zoals de metro ) geven ze een kans van 33 procent .</sentence>
+  <sentence>De introductie van elektrische auto&#39;s die op straat op hun accu rijden en op de buitenwegen energie ontvangen via een stroomafnemer ( zoals de metro ) geven ze een kans van 33 procent .</sentence>
 </alpino_ds>

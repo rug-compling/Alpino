@@ -11,7 +11,7 @@
           <node begin="3" cat="pp" end="8" id="8" rel="mod">
             <node begin="3" end="4" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="4" cat="np" end="8" id="10" rel="obj1">
-              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="werfdirecteur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="directeur" word="werfdirecteur"/>
+              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="werf_directeur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="directeur" word="werfdirecteur"/>
               <node begin="5" cat="mwu" end="8" id="12" rel="app">
                 <node begin="5" end="6" id="13" lemma="J." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="J." spectype="deeleigen" word="J."/>
                 <node begin="6" end="7" id="14" lemma="U." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="U." spectype="deeleigen" word="U."/>
@@ -62,7 +62,7 @@
                       <node begin="26" end="27" id="49" lemma="één" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="eerste" word="eerste"/>
                       <node begin="27" end="28" genus="onz" getal="ev" graad="basis" id="50" lemma="schip" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="schip" word="schip"/>
                     </node>
-                    <node begin="29" buiging="zonder" end="30" id="51" lemma="opleveren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="lever" word="opleveren" wvorm="inf"/>
+                    <node begin="29" buiging="zonder" end="30" id="51" lemma="op_leveren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="lever" word="opleveren" wvorm="inf"/>
                   </node>
                 </node>
                 <node begin="30" conjtype="neven" end="31" id="52" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>

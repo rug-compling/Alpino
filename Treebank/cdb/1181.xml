@@ -19,13 +19,13 @@
             <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="15" lemma="tijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tijd" word="tijd"/>
             <node begin="5" end="6" id="16" lemma="tevoren" pos="pp" postag="BW()" pt="bw" rel="mod" root="tevoren" word="tevoren"/>
           </node>
-          <node begin="6" buiging="zonder" end="7" id="17" lemma="aankondigen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kondig" word="aangekondigd" wvorm="vd"/>
+          <node begin="6" buiging="zonder" end="7" id="17" lemma="aan_kondigen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kondig" word="aangekondigd" wvorm="vd"/>
           <node begin="8" cat="cp" end="18" id="18" rel="vc">
             <node begin="8" conjtype="onder" end="9" id="19" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
             <node begin="9" cat="ssub" end="18" id="20" rel="body">
               <node begin="12" cat="np" end="14" id="21" index="2" rel="su">
                 <node begin="12" end="13" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="ritzege" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zege" word="ritzege"/>
+                <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="rit_zege" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zege" word="ritzege"/>
               </node>
               <node begin="16" end="17" id="24" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
               <node begin="9" cat="inf" end="18" id="25" rel="vc">
@@ -88,7 +88,7 @@
                             <node begin="38" buiging="zonder" end="39" graad="basis" id="71" lemma="vaak" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="vaak" word="vaak"/>
                           </node>
                           <node begin="39" end="40" genus="onz" getal="ev" graad="basis" id="72" lemma="deel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="deel" word="deel"/>
-                          <node begin="40" end="41" id="73" lemma="uitmaken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="maak" word="uitmaakte" wvorm="pv"/>
+                          <node begin="40" end="41" id="73" lemma="uit_maken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="maak" word="uitmaakte" wvorm="pv"/>
                         </node>
                       </node>
                     </node>
@@ -104,7 +104,7 @@
             <node begin="46" end="47" genus="zijd" getal="ev" graad="basis" id="78" lemma="Spanjaard" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Spanjaard" word="Spanjaard"/>
           </node>
           <node begin="47" buiging="zonder" end="48" graad="comp" id="79" lemma="veel" naamval="stan" pdtype="grad" pos="adv" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vwtype="onbep" word="meer"/>
-          <node begin="48" buiging="zonder" end="49" id="80" lemma="tegenspreken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="spreek" word="tegengesproken" wvorm="vd"/>
+          <node begin="48" buiging="zonder" end="49" id="80" lemma="tegen_spreken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="spreek" word="tegengesproken" wvorm="vd"/>
           <node begin="49" cat="cp" end="61" id="81" rel="mod">
             <node begin="49" conjtype="onder" end="50" id="82" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
             <node begin="50" cat="ssub" end="61" id="83" rel="body">

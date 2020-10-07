@@ -19,10 +19,10 @@
           <node begin="6" cat="np" end="9" id="14" rel="obj2">
             <node begin="6" end="7" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="7" buiging="met-e" end="8" graad="sup" id="16" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,agr,sup)" pt="vnw" rel="mod" root="meest" vwtype="onbep" word="meeste"/>
-            <node begin="8" end="9" getal="mv" graad="basis" id="17" lemma="oud-mijnwerker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mijnwerker" word="oud-mijnwerkers"/>
+            <node begin="8" end="9" getal="mv" graad="basis" id="17" lemma="oud_mijnwerker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mijnwerker" word="oud-mijnwerkers"/>
           </node>
           <node begin="9" buiging="zonder" end="10" graad="basis" id="18" lemma="erg" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="erg" word="erg"/>
-          <node begin="10" buiging="zonder" end="11" id="19" lemma="meevallen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="val" word="meegevallen" wvorm="vd"/>
+          <node begin="10" buiging="zonder" end="11" id="19" lemma="mee_vallen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="val" word="meegevallen" wvorm="vd"/>
         </node>
       </node>
       <node begin="12" cat="np" end="36" id="20" rel="sat">
@@ -44,7 +44,7 @@
                 <node begin="21" end="22" id="35" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
                 <node begin="19" cat="ppart" end="36" id="36" rel="vc">
                   <node begin="19" end="20" id="37" index="2" rel="su"/>
-                  <node begin="20" buiging="zonder" end="21" id="38" lemma="meewerken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="werk" word="meegewerkt" wvorm="vd"/>
+                  <node begin="20" buiging="zonder" end="21" id="38" lemma="mee_werken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="werk" word="meegewerkt" wvorm="vd"/>
                   <node begin="22" cat="pp" end="36" id="39" rel="pc">
                     <node begin="22" end="23" id="40" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
                     <node begin="23" cat="np" end="36" id="41" rel="obj1">
@@ -64,7 +64,7 @@
                             <node begin="31" cat="np" end="36" id="54" rel="obj1">
                               <node begin="31" end="32" id="55" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                               <node begin="32" buiging="met-e" end="33" graad="basis" id="56" lemma="katholiek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="katholiek" word="katholieke"/>
-                              <node begin="33" end="34" genus="zijd" getal="ev" graad="basis" id="57" lemma="hogeschool" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hogeschool" word="hogeschool"/>
+                              <node begin="33" end="34" genus="zijd" getal="ev" graad="basis" id="57" lemma="hoge_school" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hogeschool" word="hogeschool"/>
                               <node begin="34" cat="pp" end="36" id="58" rel="mod">
                                 <node begin="34" end="35" id="59" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                                 <node begin="35" end="36" genus="onz" getal="ev" graad="basis" id="60" lemma="Tilburg" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Tilburg" word="Tilburg"/>

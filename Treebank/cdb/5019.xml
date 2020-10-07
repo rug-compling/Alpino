@@ -12,7 +12,7 @@
         <node begin="0" end="1" getal="getal" id="8" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" status="vol" vwtype="aanw" word="Hier"/>
         <node begin="2" end="4" id="9" index="1" rel="su"/>
         <node begin="4" buiging="zonder" end="5" graad="basis" id="10" lemma="verschrikkelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="verschrikkelijk" word="verschrikkelijk"/>
-        <node begin="5" buiging="zonder" end="6" id="11" lemma="huishouden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="houd" word="huisgehouden" wvorm="vd"/>
+        <node begin="5" buiging="zonder" end="6" id="11" lemma="huis_houden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="houd" word="huisgehouden" wvorm="vd"/>
         <node begin="7" cat="pp" end="23" id="12" rel="mod">
           <node begin="7" end="8" id="13" lemma="zonder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="zonder" vztype="init" word="zonder"/>
           <node begin="8" cat="cp" end="23" id="14" rel="vc">
@@ -26,14 +26,14 @@
                   <node begin="12" end="13" id="22" lemma="voor" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="voor" vztype="fin" word="voor"/>
                 </node>
                 <node begin="13" end="14" id="23" lemma="terug" pos="part" postag="BW()" pt="bw" rel="svp" root="terug" word="terug"/>
-                <node begin="14" end="15" id="24" lemma="krijgen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="krijg" word="kreeg" wvorm="pv"/>
+                <node begin="14" end="15" id="24" lemma="terug_krijgen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="krijg" word="kreeg" wvorm="pv"/>
               </node>
               <node begin="15" conjtype="onder" end="16" id="25" lemma="of" pos="vg" postag="VG(onder)" pt="vg" rel="crd" root="of" word="of"/>
               <node begin="9" cat="ssub" end="23" id="26" rel="cnj">
                 <node begin="9" end="10" id="27" index="2" rel="su"/>
                 <node begin="17" cat="np" end="19" id="28" rel="obj1">
                   <node begin="17" end="18" id="29" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                  <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="30" lemma="produktieproces" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="produktieproces" word="produktieproces"/>
+                  <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="30" lemma="produktie_proces" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="produktieproces" word="produktieproces"/>
                 </node>
                 <node begin="16" cat="pp" end="20" id="31" rel="mod">
                   <node begin="16" end="17" getal="getal" id="32" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>

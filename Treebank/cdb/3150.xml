@@ -23,7 +23,7 @@
         <node begin="10" cat="np" end="26" id="17" rel="obj1">
           <node begin="10" end="11" id="18" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
           <node begin="11" buiging="met-e" end="12" graad="basis" id="19" lemma="zogenaamd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="zogenaamd" word="zogenaamde"/>
-          <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="20" lemma="snuffelpaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="paal" word="snuffelpaal"/>
+          <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="20" lemma="snuffel_paal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="paal" word="snuffelpaal"/>
           <node begin="14" cat="rel" end="26" id="21" rel="mod">
             <node begin="14" end="15" getal="getal" id="22" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
             <node begin="14" cat="ssub" end="26" id="23" rel="body">
@@ -40,12 +40,12 @@
                   <node begin="18" end="19" id="33" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
                   <node begin="19" cat="np" end="24" id="34" rel="obj1">
                     <node begin="19" end="20" id="35" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                    <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="36" lemma="parkeerterrein" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="parkeerterrein" word="parkeerterrein"/>
+                    <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="36" lemma="parkeer_terrein" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="parkeerterrein" word="parkeerterrein"/>
                     <node begin="21" cat="pp" end="24" id="37" rel="mod">
                       <node begin="21" end="22" id="38" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
                       <node begin="22" cat="np" end="24" id="39" rel="obj1">
                         <node begin="22" end="23" id="40" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                        <node begin="23" end="24" genus="genus" getal="ev" graad="basis" id="41" lemma="Ahoyhallen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="hal" word="Ahoyhallen"/>
+                        <node begin="23" end="24" genus="genus" getal="ev" graad="basis" id="41" lemma="Ahoy_hal" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="hal" word="Ahoyhallen"/>
                       </node>
                     </node>
                   </node>

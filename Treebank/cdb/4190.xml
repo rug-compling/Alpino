@@ -47,11 +47,11 @@
                   <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="38" lemma="onrecht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="onrecht" word="onrecht"/>
                   <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="39" lemma="armoede" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="armoede" word="armoede"/>
                   <node begin="20" conjtype="neven" end="21" id="40" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-                  <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="41" lemma="machtswellust" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="wellust" word="machtswellust"/>
+                  <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="41" lemma="macht_wellust" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="wellust" word="machtswellust"/>
                 </node>
                 <node begin="22" cat="cp" end="24" id="42" rel="predm">
                   <node begin="22" end="23" id="43" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
-                  <node begin="23" end="24" getal="mv" graad="basis" id="44" lemma="kankergezwel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="body" root="gezwel" word="kankergezwellen"/>
+                  <node begin="23" end="24" getal="mv" graad="basis" id="44" lemma="kanker_gezwel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="body" root="gezwel" word="kankergezwellen"/>
                 </node>
                 <node begin="24" end="25" id="45" lemma="woekeren" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="woeker" word="woekerden" wvorm="pv"/>
               </node>
@@ -103,7 +103,7 @@
                   <node begin="47" conjtype="neven" end="48" id="81" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                   <node begin="48" cat="np" end="53" id="82" rel="cnj">
                     <node begin="48" buiging="met-e" end="49" graad="basis" id="83" lemma="volstrekt" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="volstrekt" word="volstrekte"/>
-                    <node begin="49" end="50" genus="zijd" getal="ev" graad="basis" id="84" lemma="onvrijheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="onvrijheid" word="onvrijheid"/>
+                    <node begin="49" end="50" genus="zijd" getal="ev" graad="basis" id="84" lemma="on_vrijheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="onvrijheid" word="onvrijheid"/>
                     <node begin="50" cat="pp" end="53" id="85" rel="mod">
                       <node begin="50" end="51" id="86" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                       <node begin="51" cat="np" end="53" id="87" rel="obj1">

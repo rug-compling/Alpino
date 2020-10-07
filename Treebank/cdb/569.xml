@@ -9,7 +9,7 @@
           <node begin="0" end="1" id="6" index="1" rel="sup"/>
           <node begin="2" end="3" getal="ev" id="7" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj2" root="mij" status="vol" vwtype="pr" word="mij"/>
           <node begin="3" cat="np" end="5" id="8" rel="predc">
-            <node begin="3" end="4" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&apos;n"/>
+            <node begin="3" end="4" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&#39;n"/>
             <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="zorg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zorg" word="zorg"/>
           </node>
           <node begin="5" buiging="zonder" end="6" id="11" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zijn" word="zijn" wvorm="inf"/>
@@ -18,7 +18,7 @@
             <node begin="7" cat="ssub" end="11" id="14" rel="body">
               <node begin="7" end="8" genus="masc" getal="ev" id="15" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,red,3,ev,masc)" pt="vnw" rel="su" root="hij" status="red" vwtype="pers" word="-ie"/>
               <node begin="8" cat="np" end="10" id="16" rel="obj1">
-                <node begin="8" end="9" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&apos;n"/>
+                <node begin="8" end="9" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&#39;n"/>
                 <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="sigaret" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sigaret" word="sigaret"/>
               </node>
               <node begin="10" end="11" id="19" lemma="roken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="rook" word="rookt" wvorm="pv"/>
@@ -34,5 +34,5 @@
     </node>
     <node begin="14" end="15" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Het zal mij &apos;n zorg zijn of -ie &apos;n sigaret rookt ja of nee .</sentence>
+  <sentence>Het zal mij &#39;n zorg zijn of -ie &#39;n sigaret rookt ja of nee .</sentence>
 </alpino_ds>

@@ -7,10 +7,10 @@
         <node begin="1" cat="np" end="4" id="4" rel="obj1">
           <node begin="1" end="2" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="2" buiging="met-e" end="3" getal="mv" graad="basis" id="6" lemma="beide" naamval="stan" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,mv,basis)" pt="vnw" rel="det" root="beide" vwtype="onbep" word="beide"/>
-          <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="bomaanslag" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bomaanslag" word="bomaanslagen"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="bom_aanslag" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bomaanslag" word="bomaanslagen"/>
         </node>
       </node>
-      <node begin="4" end="5" id="8" lemma="lopen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="loop" word="liep" wvorm="pv"/>
+      <node begin="4" end="5" id="8" lemma="op_lopen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="loop" word="liep" wvorm="pv"/>
       <node begin="5" end="6" getal="ev" id="9" lemma="niemand" naamval="stan" pdtype="pron" persoon="3p" pos="noun" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="su" root="niemand" status="vol" vwtype="onbep" word="niemand"/>
       <node begin="6" cat="np" end="9" id="10" rel="obj1">
         <node begin="6" buiging="zonder" end="7" id="11" lemma="enig" naamval="stan" npagr="evon" pdtype="det" pos="num" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="enig" vwtype="onbep" word="enig"/>

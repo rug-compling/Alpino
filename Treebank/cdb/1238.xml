@@ -23,7 +23,7 @@
             <node begin="9" conjtype="neven" end="10" id="17" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="10" cat="np" end="12" id="18" rel="cnj">
               <node begin="10" end="11" id="19" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-              <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="20" lemma="muziekinstrument" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="muziekinstrument" word="muziekinstrument"/>
+              <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="20" lemma="muziek_instrument" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="muziekinstrument" word="muziekinstrument"/>
             </node>
           </node>
           <node begin="21" end="22" id="21" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" word="moeten" wvorm="pv"/>
@@ -37,7 +37,7 @@
                 <node begin="13" cat="conj" end="21" id="29" rel="obj1">
                   <node begin="13" cat="np" end="18" id="30" rel="cnj">
                     <node begin="13" end="14" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                    <node begin="14" buiging="met-e" end="15" graad="basis" id="32" lemma="20-jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="20-jarige"/>
+                    <node begin="14" buiging="met-e" end="15" graad="basis" id="32" lemma="20_jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="20-jarige"/>
                     <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="33" lemma="zoon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zoon" word="zoon"/>
                     <node begin="16" cat="np" end="18" id="34" rel="mod">
                       <node begin="16" end="17" id="35" lemma="des" lwtype="bep" naamval="gen" npagr="evmo" pos="det" postag="LID(bep,gen,evmo)" pt="lid" rel="det" root="des" word="des"/>
@@ -51,7 +51,7 @@
                   </node>
                 </node>
               </node>
-              <node begin="23" buiging="zonder" end="24" id="41" lemma="weghalen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="haal" word="weggehaald" wvorm="vd"/>
+              <node begin="23" buiging="zonder" end="24" id="41" lemma="weg_halen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="haal" word="weggehaald" wvorm="vd"/>
             </node>
           </node>
         </node>

@@ -14,7 +14,7 @@
         <node begin="4" end="5" id="10" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
         <node begin="5" cat="np" end="20" id="11" rel="obj1">
           <node begin="5" end="6" id="12" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-          <node begin="6" buiging="zonder" end="7" getal-n="zonder-n" id="13" lemma="opmaken" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="maak" word="opmaken" wvorm="inf"/>
+          <node begin="6" buiging="zonder" end="7" getal-n="zonder-n" id="13" lemma="op_maken" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="maak" word="opmaken" wvorm="inf"/>
           <node begin="7" cat="pp" end="20" id="14" rel="mod">
             <node begin="7" end="8" id="15" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="8" cat="np" end="20" id="16" rel="obj1">
@@ -53,12 +53,12 @@
         <node begin="22" cat="ssub" end="35" id="38" rel="body">
           <node begin="22" cat="np" end="30" id="39" rel="su">
             <node begin="22" end="23" id="40" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="41" lemma="knokploeg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="knokploeg" word="knokploeg"/>
+            <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="41" lemma="knok_ploeg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="knokploeg" word="knokploeg"/>
             <node begin="24" cat="pp" end="30" id="42" rel="mod">
               <node begin="24" end="25" id="43" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="25" cat="np" end="30" id="44" rel="obj1">
                 <node begin="25" end="26" id="45" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="46" lemma="middenstandersbeweging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beweging" word="middenstandersbeweging"/>
+                <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="46" lemma="midden_stander_beweging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beweging" word="middenstandersbeweging"/>
                 <node begin="28" cat="np" end="30" id="47" rel="app">
                   <node begin="28" end="29" id="48" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                   <node begin="29" end="30" genus="genus" getal="ev" graad="basis" id="49" lemma="C.I.D." naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="C.I.D." word="C.I.D."/>
@@ -66,7 +66,7 @@
               </node>
             </node>
           </node>
-          <node begin="30" end="31" getal="mv" graad="basis" id="50" lemma="auto" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="auto" word="auto&apos;s"/>
+          <node begin="30" end="31" getal="mv" graad="basis" id="50" lemma="auto" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="auto" word="auto&#39;s"/>
           <node begin="31" cat="pp" end="34" id="51" rel="mod">
             <node begin="31" end="32" id="52" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
             <node begin="32" cat="np" end="34" id="53" rel="obj1">
@@ -74,11 +74,11 @@
               <node begin="33" end="34" genus="onz" getal="ev" graad="basis" id="55" lemma="kruispunt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kruispunt" word="kruispunt"/>
             </node>
           </node>
-          <node begin="34" end="35" id="56" lemma="stilzetten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zet" word="stilzet" wvorm="pv"/>
+          <node begin="34" end="35" id="56" lemma="stil_zetten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zet" word="stilzet" wvorm="pv"/>
         </node>
       </node>
     </node>
     <node begin="35" end="36" id="57" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Dit optreden bestaat voornamelijk uit het opmaken van processenverbaal wegens het in gevaar brengen van de veiligheid van het verkeer , zodra een knokploeg van de middenstandersbeweging , de C.I.D. auto&apos;s op een kruispunt stilzet .</sentence>
+  <sentence>Dit optreden bestaat voornamelijk uit het opmaken van processenverbaal wegens het in gevaar brengen van de veiligheid van het verkeer , zodra een knokploeg van de middenstandersbeweging , de C.I.D. auto&#39;s op een kruispunt stilzet .</sentence>
 </alpino_ds>

@@ -7,13 +7,13 @@
         <node begin="1" end="2" id="4" lemma="smijten" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="smijt" word="smeten" wvorm="pv"/>
         <node begin="2" cat="np" end="4" id="5" rel="obj1">
           <node begin="2" end="3" id="6" lemma="vijf" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="vijf" word="vijf"/>
-          <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="straatklinker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="klinker" word="straatklinkers"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="straat_klinker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="klinker" word="straatklinkers"/>
         </node>
         <node begin="4" cat="pp" end="7" id="8" rel="ld">
           <node begin="4" end="5" id="9" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
           <node begin="5" cat="np" end="7" id="10" rel="obj1">
             <node begin="5" end="6" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="etalageruit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ruit" word="etalageruit"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="etalage_ruit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ruit" word="etalageruit"/>
           </node>
         </node>
       </node>

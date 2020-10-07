@@ -10,7 +10,7 @@
           <node begin="2" end="3" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="3" cat="np" end="11" id="8" rel="obj1">
             <node begin="3" end="4" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="4" buiging="met-e" end="5" graad="basis" id="10" lemma="32-jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="32-jarige"/>
+            <node begin="4" buiging="met-e" end="5" graad="basis" id="10" lemma="32_jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="32-jarige"/>
             <node begin="5" buiging="met-e" end="6" graad="basis" id="11" lemma="ongehuwd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ongehuwd" word="ongehuwde"/>
             <node begin="6" cat="mwu" end="9" id="12" rel="hd">
               <node begin="6" end="7" id="13" lemma="Fred" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Fred" spectype="deeleigen" word="Fred"/>
@@ -39,12 +39,12 @@
             </node>
             <node begin="16" end="17" id="31" lemma="eerder" pos="adj" postag="BW()" pt="bw" rel="hd" root="eerder" word="eerder"/>
           </node>
-          <node begin="18" buiging="zonder" end="19" id="32" lemma="plaatsvinden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vind" word="plaatsvinden" wvorm="inf"/>
+          <node begin="18" buiging="zonder" end="19" id="32" lemma="plaats_vinden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vind" word="plaatsvinden" wvorm="inf"/>
           <node begin="20" cat="cp" end="38" id="33" rel="mod">
             <node begin="20" conjtype="onder" end="21" id="34" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
             <node begin="21" cat="ssub" end="38" id="35" rel="body">
               <node begin="21" cat="np" end="24" id="36" index="2" rel="su">
-                <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="37" lemma="veehouder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="veehouder" word="veehouder"/>
+                <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="37" lemma="vee_houder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="veehouder" word="veehouder"/>
                 <node begin="22" cat="mwu" end="24" id="38" rel="app">
                   <node begin="22" end="23" id="39" lemma="Piet" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Piet" spectype="deeleigen" word="Piet"/>
                   <node begin="23" end="24" id="40" lemma="B." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="B." spectype="deeleigen" word="B."/>
@@ -77,7 +77,7 @@
                     </node>
                   </node>
                 </node>
-                <node begin="37" buiging="zonder" end="38" id="62" lemma="uitspreken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="spreek" word="uitgesproken" wvorm="vd"/>
+                <node begin="37" buiging="zonder" end="38" id="62" lemma="uit_spreken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="spreek" word="uitgesproken" wvorm="vd"/>
               </node>
             </node>
           </node>

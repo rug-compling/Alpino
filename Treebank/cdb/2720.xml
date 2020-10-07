@@ -23,7 +23,7 @@
                 <node begin="9" conjtype="neven" end="10" id="19" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                 <node begin="7" cat="np" end="23" id="20" rel="cnj">
                   <node begin="7" buiging="met-e" end="8" graad="basis" id="21" index="1" lemma="zelfstandig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="zelfstandig" word="zelfstandige"/>
-                  <node begin="8" end="9" getal="mv" graad="basis" id="22" lemma="landbouwonderneming" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="onderneming" word="landbouwondernemingen"/>
+                  <node begin="8" end="9" getal="mv" graad="basis" id="22" lemma="landbouw_onderneming" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="onderneming" word="landbouwondernemingen"/>
                   <node begin="12" cat="rel" end="23" id="23" index="2" rel="mod">
                     <node begin="12" end="13" getal="getal" id="24" index="3" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
                     <node begin="12" cat="ssub" end="23" id="25" rel="body">
@@ -80,7 +80,7 @@
                 <node begin="32" end="33" id="61" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                 <node begin="33" buiging="met-e" end="34" graad="basis" id="62" lemma="zogenaamd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="zogenaamd" word="zogenaamde"/>
                 <node begin="34" buiging="met-e" end="35" graad="basis" id="63" lemma="modern" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="modern" word="moderne"/>
-                <node begin="35" end="36" getal="mv" graad="basis" id="64" lemma="landbouwonderneming" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="onderneming" word="landbouwondernemingen"/>
+                <node begin="35" end="36" getal="mv" graad="basis" id="64" lemma="landbouw_onderneming" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="onderneming" word="landbouwondernemingen"/>
                 <node begin="41" cat="rel" end="59" id="65" index="4" rel="mod">
                   <node begin="41" end="42" getal="getal" id="66" index="5" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
                   <node begin="41" cat="conj" end="59" id="67" rel="body">
@@ -134,11 +134,11 @@
                 </node>
               </node>
               <node begin="37" cat="np" end="59" id="103" rel="cnj">
-                <node begin="37" end="38" getal="mv" graad="basis" id="104" lemma="produktieeenheid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="eenheid" word="produktieeenheden"/>
+                <node begin="37" end="38" getal="mv" graad="basis" id="104" lemma="produktie_eenheid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="eenheid" word="produktieeenheden"/>
                 <node begin="41" end="59" id="105" index="4" rel="mod"/>
               </node>
               <node begin="39" cat="np" end="59" id="106" rel="cnj">
-                <node begin="39" end="40" getal="mv" graad="basis" id="107" lemma="producentengroepering" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="groepering" word="producentengroeperingen"/>
+                <node begin="39" end="40" getal="mv" graad="basis" id="107" lemma="producent_groepering" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="groepering" word="producentengroeperingen"/>
                 <node begin="41" end="59" id="108" index="4" rel="mod"/>
               </node>
             </node>

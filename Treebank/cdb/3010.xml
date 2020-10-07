@@ -6,7 +6,7 @@
     <node begin="18" end="19" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="23" id="4" rel="--">
       <node begin="0" cat="np" end="18" id="5" index="1" rel="su">
-        <node begin="0" end="1" getal="mv" graad="basis" id="6" lemma="druggebruiker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gebruiker" word="Druggebruikers"/>
+        <node begin="0" end="1" getal="mv" graad="basis" id="6" lemma="drug_gebruiker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gebruiker" word="Druggebruikers"/>
         <node begin="2" cat="rel" end="18" id="7" rel="mod">
           <node begin="2" end="3" getal="getal" id="8" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
           <node begin="2" cat="conj" end="18" id="9" rel="body">
@@ -53,7 +53,7 @@
         <node begin="0" cat="ppart" end="23" id="39" rel="vc">
           <node begin="0" end="18" id="40" index="1" rel="obj1"/>
           <node begin="20" buiging="zonder" end="21" graad="basis" id="41" lemma="deskundig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="deskundig" word="deskundig"/>
-          <node begin="22" buiging="zonder" end="23" id="42" lemma="opvangen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vang" word="opgevangen" wvorm="vd"/>
+          <node begin="22" buiging="zonder" end="23" id="42" lemma="op_vangen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vang" word="opgevangen" wvorm="vd"/>
         </node>
       </node>
     </node>

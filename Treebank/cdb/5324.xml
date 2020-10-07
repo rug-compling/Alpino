@@ -3,21 +3,21 @@
   <node begin="0" cat="top" end="60" id="0" rel="top">
     <node begin="12" end="13" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
     <node begin="19" end="20" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="31" end="32" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="35" end="36" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="31" end="32" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="35" end="36" id="4" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="36" end="37" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="51" end="52" id="6" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="54" end="55" id="7" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="51" end="52" id="6" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="54" end="55" id="7" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="58" id="8" rel="--">
       <node begin="0" cat="np" end="4" id="9" rel="obj1">
-        <node begin="0" buiging="zonder" end="1" id="10" lemma="zo&apos;n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="zo&apos;n" vwtype="aanw" word="zo&apos;n"/>
+        <node begin="0" buiging="zonder" end="1" id="10" lemma="zo&#39;n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="zo&#39;n" vwtype="aanw" word="zo&#39;n"/>
         <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="11" lemma="orde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="orde" word="orde"/>
         <node begin="2" cat="pp" end="4" id="12" rel="mod">
           <node begin="2" end="3" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="3" end="4" getal="mv" graad="basis" id="14" lemma="prioriteit" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="prioriteiten" word="prioriteiten"/>
         </node>
       </node>
-      <node begin="4" end="5" id="15" lemma="geven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="geef" word="geeft" wvorm="pv"/>
+      <node begin="4" end="5" id="15" lemma="aan_geven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="geef" word="geeft" wvorm="pv"/>
       <node begin="5" end="6" genus="masc" getal="ev" id="16" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
       <node begin="6" end="7" id="17" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
       <node begin="7" end="8" id="18" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
@@ -125,5 +125,5 @@
     <node begin="58" end="59" id="91" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
     <node begin="59" end="60" id="92" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>zo&apos;n orde van prioriteiten geeft hij wel aan in de Europese politiek ( hoewel ook hier niet erg scherp , want eerst geeft hij aan het streven naar grotere politieke samenwerking &quot; een eerste prioriteit &quot; , om even later te zeggen dat de bevordering van de democratie binnen de Gemeenschap &quot; hoogste prioriteit &quot; behoort te hebben ) .</sentence>
+  <sentence>zo&#39;n orde van prioriteiten geeft hij wel aan in de Europese politiek ( hoewel ook hier niet erg scherp , want eerst geeft hij aan het streven naar grotere politieke samenwerking &#34; een eerste prioriteit &#34; , om even later te zeggen dat de bevordering van de democratie binnen de Gemeenschap &#34; hoogste prioriteit &#34; behoort te hebben ) .</sentence>
 </alpino_ds>

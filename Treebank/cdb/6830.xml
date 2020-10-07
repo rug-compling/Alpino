@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="24" id="0" rel="top">
-    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" end="1" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="16" end="17" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="1" cat="conj" end="23" id="3" rel="--">
       <node begin="1" cat="smain" end="16" id="4" rel="cnj">
@@ -31,7 +31,7 @@
                 <node begin="14" end="15" id="25" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
                 <node begin="13" cat="inf" end="16" id="26" rel="body">
                   <node begin="13" end="14" id="27" lemma="weg" pos="part" postag="BW()" pt="bw" rel="svp" root="weg" word="weg"/>
-                  <node begin="15" buiging="zonder" end="16" id="28" lemma="gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="gaan" wvorm="inf"/>
+                  <node begin="15" buiging="zonder" end="16" id="28" lemma="weg_gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="gaan" wvorm="inf"/>
                 </node>
               </node>
             </node>
@@ -52,5 +52,5 @@
     </node>
     <node begin="23" end="24" id="38" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>&quot; Het vertrek van Kessler is voor mij een reden temeer geweest om weg te gaan , maar het is niet doorslaggevend geweest .</sentence>
+  <sentence>&#34; Het vertrek van Kessler is voor mij een reden temeer geweest om weg te gaan , maar het is niet doorslaggevend geweest .</sentence>
 </alpino_ds>

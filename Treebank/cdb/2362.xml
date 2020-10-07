@@ -27,7 +27,7 @@
             <node begin="10" end="11" id="20" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
             <node begin="11" cat="np" end="13" id="21" rel="obj1">
               <node begin="11" end="12" id="22" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-              <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="23" lemma="wereldrecord" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="wereldrecord" word="wereldrecord"/>
+              <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="23" lemma="wereld_record" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="wereldrecord" word="wereldrecord"/>
             </node>
           </node>
         </node>
@@ -41,7 +41,7 @@
                 <node begin="16" end="17" id="31" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
                 <node begin="17" cat="np" end="23" id="32" rel="obj1">
                   <node begin="17" end="18" id="33" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                  <node begin="18" buiging="zonder" end="19" getal-n="zonder-n" id="34" lemma="ingaan" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="ga" word="ingaan" wvorm="inf"/>
+                  <node begin="18" buiging="zonder" end="19" getal-n="zonder-n" id="34" lemma="in_gaan" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="ga" word="ingaan" wvorm="inf"/>
                   <node begin="19" cat="pp" end="23" id="35" rel="mod">
                     <node begin="19" end="20" id="36" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                     <node begin="20" cat="np" end="23" id="37" rel="obj1">
@@ -73,7 +73,7 @@
                 <node begin="14" end="15" id="55" index="2" rel="su"/>
                 <node begin="30" cat="np" end="32" id="56" rel="obj2">
                   <node begin="30" buiging="zonder" end="31" getal="mv" id="57" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
-                  <node begin="31" end="32" getal="mv" graad="basis" id="58" lemma="kampioenaspiratie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="aspiratie" word="kampioenaspiraties"/>
+                  <node begin="31" end="32" getal="mv" graad="basis" id="58" lemma="kampioen_aspiratie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="aspiratie" word="kampioenaspiraties"/>
                 </node>
                 <node begin="32" end="33" id="59" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
                 <node begin="33" end="34" genus="onz" getal="ev" graad="basis" id="60" lemma="vaarwel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="vaarwel" word="vaarwel"/>

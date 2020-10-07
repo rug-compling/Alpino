@@ -9,9 +9,9 @@
         <node begin="4" end="5" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
         <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="7" lemma="bureau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bureau" word="bureau"/>
         <node begin="6" cat="conj" end="9" id="8" rel="mod">
-          <node begin="6" buiging="zonder" end="7" graad="basis" id="9" lemma="onderwijsresearch" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="research" word="onderwijsresearch"/>
+          <node begin="6" buiging="zonder" end="7" graad="basis" id="9" lemma="onderwijs_research" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="research" word="onderwijsresearch"/>
           <node begin="7" conjtype="neven" end="8" id="10" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="11" lemma="studiestatistiek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="statistiek" word="studiestatistiek"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="11" lemma="studie_statistiek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="statistiek" word="studiestatistiek"/>
         </node>
         <node begin="9" cat="pp" end="13" id="12" rel="mod">
           <node begin="9" end="10" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
@@ -48,11 +48,11 @@
                     <node begin="20" end="21" id="39" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                     <node begin="21" cat="np" end="24" id="40" rel="obj1">
                       <node begin="21" end="22" id="41" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                      <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="42" lemma="studiejaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="studiejaar" word="studiejaar"/>
+                      <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="42" lemma="studie_jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="studiejaar" word="studiejaar"/>
                       <node begin="23" end="24" id="43" lemma="1967-1968" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="app" root="1967-1968" word="1967-1968"/>
                     </node>
                   </node>
-                  <node begin="25" buiging="zonder" end="26" id="44" lemma="instellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="ingesteld" wvorm="vd"/>
+                  <node begin="25" buiging="zonder" end="26" id="44" lemma="in_stellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="ingesteld" wvorm="vd"/>
                   <node begin="26" cat="pp" end="32" id="45" rel="pc">
                     <node begin="26" end="27" id="46" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
                     <node begin="27" cat="np" end="32" id="47" rel="obj1">
@@ -61,7 +61,7 @@
                       <node begin="29" end="30" getal="mv" graad="basis" id="50" lemma="relatie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="relatie" word="relaties"/>
                       <node begin="30" cat="pp" end="32" id="51" rel="mod">
                         <node begin="30" end="31" id="52" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-                        <node begin="31" end="32" getal="mv" graad="basis" id="53" lemma="eerstejaarsstudent" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="student" word="eerstejaarsstudenten"/>
+                        <node begin="31" end="32" getal="mv" graad="basis" id="53" lemma="eerste_jaar_student" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="student" word="eerstejaarsstudenten"/>
                       </node>
                     </node>
                   </node>

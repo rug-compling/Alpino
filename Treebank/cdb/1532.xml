@@ -12,7 +12,7 @@
         <node begin="6" cat="ssub" end="15" id="9" rel="body">
           <node begin="6" cat="np" end="8" id="10" index="1" rel="su">
             <node begin="6" buiging="met-e" end="7" graad="basis" id="11" lemma="militair" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="militair" word="militaire"/>
-            <node begin="7" end="8" getal="mv" graad="basis" id="12" lemma="oefenterrein" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="oefenterrein" word="oefenterreinen"/>
+            <node begin="7" end="8" getal="mv" graad="basis" id="12" lemma="oefen_terrein" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="oefenterrein" word="oefenterreinen"/>
           </node>
           <node begin="11" end="12" id="13" lemma="zullen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="zal" word="zouden" wvorm="pv"/>
           <node begin="6" cat="inf" end="15" id="14" rel="vc">
@@ -25,7 +25,7 @@
             <node begin="12" buiging="zonder" end="13" id="20" lemma="hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb" word="hebben" wvorm="inf"/>
             <node begin="13" cat="cp" end="15" id="21" rel="mod">
               <node begin="13" end="14" id="22" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
-              <node begin="14" end="15" getal="mv" graad="basis" id="23" lemma="recreatiegebied" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="body" root="gebieden" word="recreatiegebieden"/>
+              <node begin="14" end="15" getal="mv" graad="basis" id="23" lemma="recreatie_gebied" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="body" root="gebieden" word="recreatiegebieden"/>
             </node>
           </node>
         </node>

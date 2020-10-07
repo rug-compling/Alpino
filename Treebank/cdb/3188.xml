@@ -6,7 +6,7 @@
       <node begin="0" cat="np" end="3" id="3" index="1" rel="su">
         <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
         <node begin="1" buiging="met-e" end="2" getal="mv" graad="basis" id="5" lemma="beide" naamval="stan" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,mv,basis)" pt="vnw" rel="det" root="beide" vwtype="onbep" word="beide"/>
-        <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="kamerlid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kamerlid" word="Kamerleden"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="kamer_lid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kamerlid" word="Kamerleden"/>
       </node>
       <node begin="3" end="4" id="7" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
       <node begin="0" cat="ppart" end="28" id="8" rel="vc">
@@ -53,7 +53,7 @@
                     <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="43" lemma="informatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="informatie" word="informatie"/>
                     <node begin="26" cat="pp" end="28" id="44" rel="mod">
                       <node begin="26" end="27" id="45" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-                      <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="46" lemma="werkgeverszijde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="zijde" word="werkgeverszijde"/>
+                      <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="46" lemma="werkgever_zijde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="zijde" word="werkgeverszijde"/>
                     </node>
                   </node>
                 </node>

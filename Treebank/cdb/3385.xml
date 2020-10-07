@@ -11,7 +11,7 @@
           <node begin="4" cat="np" end="7" id="8" index="1" rel="su">
             <node begin="4" buiging="zonder" end="5" getal="ev" id="9" lemma="haar" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="haar" status="vol" vwtype="bez" word="haar"/>
             <node begin="5" buiging="met-e" end="6" graad="basis" id="10" lemma="schijnbaar" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="schijnbaar" word="schijnbare"/>
-            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="onkwetsbaarheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kwetsbaarheid" word="onkwetsbaarheid"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="on_kwetsbaarheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kwetsbaarheid" word="onkwetsbaarheid"/>
           </node>
           <node begin="10" end="11" id="12" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
           <node begin="4" cat="ti" end="16" id="13" rel="vc">
@@ -19,11 +19,11 @@
             <node begin="4" cat="inf" end="16" id="15" rel="body">
               <node begin="4" end="7" id="16" index="1" rel="obj1"/>
               <node begin="7" end="8" id="17" lemma="terug" pos="part" postag="BW()" pt="bw" rel="svp" root="terug" word="terug"/>
-              <node begin="9" buiging="zonder" end="10" id="18" lemma="voeren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voer" word="voeren" wvorm="inf"/>
+              <node begin="9" buiging="zonder" end="10" id="18" lemma="terug_voeren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voer" word="voeren" wvorm="inf"/>
               <node begin="11" cat="pp" end="16" id="19" rel="pc">
                 <node begin="11" end="12" id="20" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
                 <node begin="12" cat="np" end="16" id="21" rel="obj1">
-                  <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="gevoelloosheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gevoelloosheid" word="gevoelloosheid"/>
+                  <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="gevoel_loos_heid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gevoelloosheid" word="gevoelloosheid"/>
                   <node begin="13" cat="pp" end="16" id="23" rel="mod">
                     <node begin="13" end="14" id="24" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                     <node begin="14" cat="np" end="16" id="25" rel="obj1">

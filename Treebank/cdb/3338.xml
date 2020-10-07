@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="22" id="0" rel="top">
-    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" end="1" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="1" cat="smain" end="21" id="2" rel="--">
       <node begin="1" cat="pp" end="4" id="3" rel="mod">
         <node begin="1" end="2" id="4" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
         <node begin="2" cat="np" end="4" id="5" rel="obj1">
           <node begin="2" end="3" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="zeehavenbeleid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="beleid" word="zeehavenbeleid"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="zeehaven_beleid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="beleid" word="zeehavenbeleid"/>
         </node>
       </node>
       <node begin="4" end="5" id="8" lemma="bezitten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="bezit" word="bezitten" wvorm="pv"/>
@@ -27,7 +27,7 @@
                 <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="invloed" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="invloed" word="invloed"/>
               </node>
               <node begin="13" end="14" id="23" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
-              <node begin="15" buiging="zonder" end="16" id="24" lemma="oefenen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="oefen" word="oefenen" wvorm="inf"/>
+              <node begin="15" buiging="zonder" end="16" id="24" lemma="uit_oefenen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="oefen" word="oefenen" wvorm="inf"/>
               <node begin="16" cat="pp" end="21" id="25" rel="pc">
                 <node begin="16" end="17" id="26" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
                 <node begin="17" cat="np" end="21" id="27" rel="obj1">
@@ -44,8 +44,8 @@
     </node>
     <node begin="21" end="22" id="32" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>&quot; In het zeehavenbeleid bezitten we een belangrijk instrument om een zekere invloed uit te oefenen op het toekomstige maatschappelijke gebeuren .</sentence>
+  <sentence>&#34; In het zeehavenbeleid bezitten we een belangrijk instrument om een zekere invloed uit te oefenen op het toekomstige maatschappelijke gebeuren .</sentence>
   <comments>
-    <comment>&quot;invloed uitoefenen op&quot; ??</comment>
+    <comment>&#34;invloed uitoefenen op&#34; ??</comment>
   </comments>
 </alpino_ds>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="39" id="0" rel="top">
-    <node begin="2" end="3" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="7" end="8" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="2" end="3" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="7" end="8" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="25" end="26" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="conj" end="38" id="4" rel="--">
       <node begin="0" cat="np" end="7" id="5" rel="cnj">
@@ -31,7 +31,7 @@
               <node begin="15" cat="np" end="38" id="25" rel="obj1">
                 <node begin="15" end="16" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                 <node begin="16" buiging="met-e" end="17" graad="basis" id="27" lemma="representatief" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="representatief" word="representatieve"/>
-                <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="28" lemma="bel-etage" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="etage" word="bel-etage"/>
+                <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="28" lemma="bel_etage" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="etage" word="bel-etage"/>
                 <node begin="18" cat="pp" end="25" id="29" rel="mod">
                   <node begin="18" end="19" id="30" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                   <node begin="19" cat="conj" end="25" id="31" rel="obj1">
@@ -59,7 +59,7 @@
                         <node begin="28" end="29" id="49" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
                         <node begin="29" cat="np" end="32" id="50" rel="obj1">
                           <node begin="29" end="30" id="51" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                          <node begin="30" buiging="met-e" end="31" graad="basis" id="52" lemma="leuningloos" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="loos" word="leuningloze"/>
+                          <node begin="30" buiging="met-e" end="31" graad="basis" id="52" lemma="leuning_loos" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="loos" word="leuningloze"/>
                           <node begin="31" end="32" genus="zijd" getal="ev" graad="basis" id="53" lemma="trap" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="trap" word="trap"/>
                         </node>
                       </node>
@@ -69,7 +69,7 @@
                         <node begin="35" cat="np" end="38" id="57" rel="obj1">
                           <node begin="35" end="36" id="58" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                           <node begin="36" buiging="met-e" end="37" graad="basis" id="59" lemma="platvloers" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="platvloers" word="platvloerse"/>
-                          <node begin="37" end="38" genus="zijd" getal="ev" graad="basis" id="60" lemma="burgerruimte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ruimte" word="burgerruimte"/>
+                          <node begin="37" end="38" genus="zijd" getal="ev" graad="basis" id="60" lemma="burger_ruimte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ruimte" word="burgerruimte"/>
                         </node>
                       </node>
                     </node>
@@ -83,5 +83,5 @@
     </node>
     <node begin="38" end="39" id="61" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>een huis &quot; voor de hele burgerij &quot; maar toch met een zwaar accent op de representatieve bel-etage van B. en W. en de raad , die slechts met een leuningloze trap verbonden zijn met de platvloerse burgerruimte .</sentence>
+  <sentence>een huis &#34; voor de hele burgerij &#34; maar toch met een zwaar accent op de representatieve bel-etage van B. en W. en de raad , die slechts met een leuningloze trap verbonden zijn met de platvloerse burgerruimte .</sentence>
 </alpino_ds>

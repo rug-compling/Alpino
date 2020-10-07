@@ -2,9 +2,9 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="24" id="0" rel="top">
     <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="11" end="12" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="11" end="12" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="13" end="14" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="18" end="19" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="18" end="19" id="4" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="23" id="5" rel="--">
       <node begin="0" cat="oti" end="3" id="6" rel="mod">
         <node begin="0" end="1" id="7" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="Om"/>
@@ -32,7 +32,7 @@
                     <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="27" lemma="onverdraagzaam" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="onverdraagzaam" word="onverdraagzame"/>
                     <node begin="14" buiging="met-e" end="15" graad="basis" id="28" lemma="hysterisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="hysterisch" word="hysterische"/>
                     <node begin="15" conjtype="neven" end="16" id="29" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-                    <node begin="16" buiging="met-e" end="17" graad="basis" id="30" lemma="nietswaardig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="waardige" word="nietswaardige"/>
+                    <node begin="16" buiging="met-e" end="17" graad="basis" id="30" lemma="niets_waardig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="waardige" word="nietswaardige"/>
                   </node>
                   <node begin="17" end="18" genus="onz" getal="ev" graad="dim" id="31" lemma="club" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="clubje" word="clubje"/>
                 </node>
@@ -49,5 +49,5 @@
     </node>
     <node begin="23" end="24" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Om te beginnen was het Vondeling , die zich door het &quot; onverdraagzame , hysterische en nietswaardige clubje &quot; op sleeptouw liet nemen .</sentence>
+  <sentence>Om te beginnen was het Vondeling , die zich door het &#34; onverdraagzame , hysterische en nietswaardige clubje &#34; op sleeptouw liet nemen .</sentence>
 </alpino_ds>

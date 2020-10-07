@@ -20,7 +20,7 @@
               <node begin="7" cat="inf" end="11" id="16" rel="body">
                 <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="17" lemma="Italië" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Italie" word="Italie"/>
                 <node begin="8" end="9" id="18" lemma="omver" pos="part" postag="BW()" pt="bw" rel="svp" root="omver" word="omver"/>
-                <node begin="10" buiging="zonder" end="11" id="19" lemma="halen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="haal" word="halen" wvorm="inf"/>
+                <node begin="10" buiging="zonder" end="11" id="19" lemma="omver_halen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="haal" word="halen" wvorm="inf"/>
               </node>
             </node>
           </node>
@@ -41,7 +41,7 @@
               <node begin="17" end="18" genus="genus" getal="ev" graad="basis" id="31" lemma="Patzke" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Patzke" word="Patzke"/>
             </node>
           </node>
-          <node begin="18" buiging="zonder" end="19" id="32" lemma="inzetten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zet" word="ingezet" wvorm="vd"/>
+          <node begin="18" buiging="zonder" end="19" id="32" lemma="in_zetten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zet" word="ingezet" wvorm="vd"/>
           <node begin="19" cat="oti" end="29" id="33" rel="mod">
             <node begin="19" end="20" id="34" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
             <node begin="20" cat="ti" end="29" id="35" rel="body">
@@ -54,7 +54,7 @@
                     <node begin="21" end="22" id="42" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
                     <node begin="22" cat="np" end="24" id="43" rel="obj1">
                       <node begin="22" buiging="met-e" end="23" graad="basis" id="44" lemma="massaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="massaal" word="massale"/>
-                      <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="45" lemma="aanvalskracht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kracht" word="aanvalskracht"/>
+                      <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="45" lemma="aanval_kracht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kracht" word="aanvalskracht"/>
                     </node>
                   </node>
                   <node begin="24" cat="np" end="26" id="46" rel="obj1">

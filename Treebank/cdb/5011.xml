@@ -45,7 +45,7 @@
             </node>
           </node>
         </node>
-        <node begin="18" buiging="zonder" end="19" id="34" lemma="dragen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="draag" word="opgedragen" wvorm="vd"/>
+        <node begin="18" buiging="zonder" end="19" id="34" lemma="op_dragen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="draag" word="opgedragen" wvorm="vd"/>
         <node begin="8" cat="oti" end="41" id="35" rel="vc">
           <node begin="19" end="20" id="36" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
           <node begin="8" cat="ti" end="41" id="37" rel="body">
@@ -63,7 +63,7 @@
                     <node begin="26" end="27" id="49" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
                     <node begin="24" cat="ppart" end="41" id="50" rel="vc">
                       <node begin="24" end="25" id="51" index="3" rel="obj1"/>
-                      <node begin="25" buiging="zonder" end="26" id="52" lemma="aanvoeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voer" word="aangevoerd" wvorm="vd"/>
+                      <node begin="25" buiging="zonder" end="26" id="52" lemma="aan_voeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voer" word="aangevoerd" wvorm="vd"/>
                       <node begin="27" cat="conj" end="41" id="53" rel="mod">
                         <node begin="27" cat="pp" end="30" id="54" rel="cnj">
                           <node begin="27" end="28" id="55" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
@@ -83,12 +83,12 @@
                             </node>
                             <node begin="36" cat="np" end="41" id="67" rel="mod">
                               <node begin="36" end="37" id="68" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                              <node begin="37" end="38" getal="mv" graad="basis" id="69" lemma="autovrachtdienst" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dienst" word="autovrachtdiensten"/>
+                              <node begin="37" end="38" getal="mv" graad="basis" id="69" lemma="auto_vracht_dienst" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dienst" word="autovrachtdiensten"/>
                               <node begin="38" cat="pp" end="41" id="70" rel="mod">
                                 <node begin="38" end="39" id="71" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                                 <node begin="39" cat="np" end="41" id="72" rel="obj1">
                                   <node begin="39" end="40" id="73" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                                  <node begin="40" end="41" getal="mv" graad="basis" id="74" lemma="spoorwegen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="spoorweg" word="spoorwegen"/>
+                                  <node begin="40" end="41" getal="mv" graad="basis" id="74" lemma="spoor_weg" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="spoorweg" word="spoorwegen"/>
                                 </node>
                               </node>
                             </node>

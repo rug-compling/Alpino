@@ -12,14 +12,14 @@
           <node begin="1" cat="ssub" end="9" id="9" rel="body">
             <node begin="2" cat="np" end="4" id="10" index="3" rel="su">
               <node begin="2" end="3" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="12" lemma="doodstraf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="doodstraf" word="doodstraf"/>
+              <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="12" lemma="dood_straf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="doodstraf" word="doodstraf"/>
             </node>
             <node begin="7" end="8" id="13" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
             <node begin="1" cat="ppart" end="9" id="14" rel="vc">
               <node begin="1" end="2" id="15" index="2" rel="mod"/>
               <node begin="2" end="4" id="16" index="3" rel="obj1"/>
               <node begin="5" buiging="zonder" end="6" graad="basis" id="17" lemma="gelukkig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="gelukkig" word="gelukkig"/>
-              <node begin="8" buiging="zonder" end="9" id="18" lemma="afschaffen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schaf" word="afgeschaft" wvorm="vd"/>
+              <node begin="8" buiging="zonder" end="9" id="18" lemma="af_schaffen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schaf" word="afgeschaft" wvorm="vd"/>
             </node>
           </node>
         </node>
@@ -33,7 +33,7 @@
         </node>
         <node begin="13" buiging="zonder" end="14" graad="basis" id="25" lemma="vanzelfsprekend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="vanzelfsprekend" word="vanzelfsprekend"/>
         <node begin="14" end="15" id="26" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-        <node begin="15" buiging="zonder" end="16" id="27" lemma="toepassen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="pas" word="toepassen" wvorm="inf"/>
+        <node begin="15" buiging="zonder" end="16" id="27" lemma="toe_passen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="pas" word="toepassen" wvorm="inf"/>
       </node>
     </node>
     <node begin="16" end="17" id="28" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

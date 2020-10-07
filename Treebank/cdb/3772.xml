@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="30" id="0" rel="top">
-    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" end="1" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="6" end="7" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="14" end="15" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="1" cat="conj" end="28" id="4" rel="--">
@@ -13,7 +13,7 @@
         </node>
         <node begin="4" cat="np" end="6" id="10" rel="dp">
           <node begin="4" end="5" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="en"/>
-          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="12" lemma="naaktstrand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="strand" word="naaktstrand"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="12" lemma="naakt_strand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="strand" word="naaktstrand"/>
         </node>
       </node>
       <node begin="7" cat="np" end="14" id="13" rel="cnj">
@@ -35,7 +35,7 @@
           <node begin="16" end="17" id="26" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="17" cat="np" end="19" id="27" rel="obj1">
             <node begin="17" end="18" id="28" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-            <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="29" lemma="gemeentemuseum" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="museum" word="gemeentemuseum"/>
+            <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="29" lemma="gemeente_museum" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="museum" word="gemeentemuseum"/>
           </node>
         </node>
       </node>
@@ -46,7 +46,7 @@
           <node begin="21" end="22" id="34" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="22" cat="np" end="28" id="35" rel="obj1">
             <node begin="22" end="23" id="36" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-            <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="37" lemma="burgemeesterstoezicht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="toezicht" word="burgemeesterstoezicht"/>
+            <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="37" lemma="burgemeester_toezicht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="toezicht" word="burgemeesterstoezicht"/>
             <node begin="24" cat="pp" end="28" id="38" rel="mod">
               <node begin="24" end="25" id="39" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
               <node begin="25" cat="np" end="28" id="40" rel="obj1">
@@ -60,10 +60,10 @@
       </node>
     </node>
     <node begin="28" end="29" id="44" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
-    <node begin="29" end="30" id="45" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="29" end="30" id="45" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
   </node>
-  <sentence>&quot; het hele strand en naaktstrand , onbelemmerd sexueel verkeer in alle publieke parken , fetichistencollecties in het gemeentemuseum en afschaffing van het burgemeesterstoezicht op het openbaar jolijt . &quot;</sentence>
+  <sentence>&#34; het hele strand en naaktstrand , onbelemmerd sexueel verkeer in alle publieke parken , fetichistencollecties in het gemeentemuseum en afschaffing van het burgemeesterstoezicht op het openbaar jolijt . &#34;</sentence>
   <comments>
-    <comment>&apos;en&apos; treated as a typo for &apos;een&apos;</comment>
+    <comment>&#39;en&#39; treated as a typo for &#39;een&#39;</comment>
   </comments>
 </alpino_ds>

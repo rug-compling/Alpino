@@ -3,8 +3,8 @@
   <node begin="0" cat="top" end="60" id="0" rel="top">
     <node begin="12" end="13" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
     <node begin="14" end="15" id="2" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
-    <node begin="15" end="16" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="31" end="32" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="15" end="16" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="31" end="32" id="4" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="32" end="33" id="5" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
     <node begin="39" end="40" id="6" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="44" end="45" id="7" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
@@ -39,7 +39,7 @@
                   <node begin="28" cat="np" end="31" id="32" rel="cnj">
                     <node begin="28" buiging="met-e" end="29" id="33" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" vwtype="onbep" word="alle"/>
                     <node begin="29" buiging="met-e" end="30" graad="basis" id="34" lemma="overig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="overig" word="overige"/>
-                    <node begin="30" end="31" getal="mv" graad="basis" id="35" lemma="jeugdspeler" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="speler" word="jeugdspelers"/>
+                    <node begin="30" end="31" getal="mv" graad="basis" id="35" lemma="jeugd_speler" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="speler" word="jeugdspelers"/>
                   </node>
                 </node>
               </node>
@@ -114,7 +114,7 @@
                 <node begin="55" end="56" genus="onz" getal="ev" graad="basis" id="88" lemma="Moskou" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Moskou" word="Moskou"/>
               </node>
               <node begin="56" end="57" id="89" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
-              <node begin="58" buiging="zonder" end="59" id="90" lemma="zenden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zend" word="zenden" wvorm="inf"/>
+              <node begin="58" buiging="zonder" end="59" id="90" lemma="uit_zenden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zend" word="zenden" wvorm="inf"/>
             </node>
           </node>
         </node>
@@ -122,5 +122,5 @@
     </node>
     <node begin="59" end="60" id="91" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De NTTB heeft nu besloten de talentvolle junior Hans van den Broek ( Tigerman : &quot; Als loon voor zijn harde trainen en als stimulans voor hem en alle overige jeugdspelers &quot; ) naast de vaste keuzen Bert Schoofs , Bert van der Helm , Frans Schoofs en Nico van Slobbe als vijfde man naar Moskou uit te zenden .</sentence>
+  <sentence>De NTTB heeft nu besloten de talentvolle junior Hans van den Broek ( Tigerman : &#34; Als loon voor zijn harde trainen en als stimulans voor hem en alle overige jeugdspelers &#34; ) naast de vaste keuzen Bert Schoofs , Bert van der Helm , Frans Schoofs en Nico van Slobbe als vijfde man naar Moskou uit te zenden .</sentence>
 </alpino_ds>

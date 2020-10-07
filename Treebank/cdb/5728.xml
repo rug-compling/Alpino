@@ -2,7 +2,7 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
-      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="maandagochtend" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="maandagochtend" word="Maandagochtend"/>
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="maandag_ochtend" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="maandagochtend" word="Maandagochtend"/>
       <node begin="1" end="2" id="3" lemma="komen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kom" word="kwamen" wvorm="pv"/>
       <node begin="2" end="3" id="4" lemma="opnieuw" pos="adv" postag="BW()" pt="bw" rel="mod" root="opnieuw" word="opnieuw"/>
       <node begin="3" cat="np" end="6" id="5" rel="su">
@@ -10,7 +10,7 @@
           <node begin="3" end="4" id="7" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
           <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="reeks" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="reeks" word="reeks"/>
         </node>
-        <node begin="5" end="6" getal="mv" graad="basis" id="9" lemma="aardschok" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="schok" word="aardschokken"/>
+        <node begin="5" end="6" getal="mv" graad="basis" id="9" lemma="aard_schok" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="schok" word="aardschokken"/>
       </node>
     </node>
     <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

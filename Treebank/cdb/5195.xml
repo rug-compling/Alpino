@@ -11,7 +11,7 @@
     <node begin="0" cat="smain" end="64" id="8" rel="--">
       <node begin="0" cat="np" end="6" id="9" index="1" rel="su">
         <node begin="0" end="1" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="11" lemma="rijkspolitie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rijkspolitie" word="Rijkspolitie"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="11" lemma="rijk_politie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rijkspolitie" word="Rijkspolitie"/>
         <node begin="2" cat="pp" end="6" id="12" rel="mod">
           <node begin="2" end="3" id="13" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
           <node begin="3" cat="np" end="6" id="14" rel="obj1">
@@ -72,15 +72,15 @@
                         </node>
                         <node begin="32" cat="np" end="43" id="61" rel="obj1">
                           <node begin="32" end="33" id="62" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                          <node begin="33" buiging="met-e" end="34" graad="basis" id="63" lemma="86-jarige" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="86-jarige"/>
-                          <node begin="34" end="35" genus="zijd" getal="ev" graad="basis" id="64" lemma="oudmijnwerker" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="mijnwerker" word="oudmijnwerker"/>
+                          <node begin="33" buiging="met-e" end="34" graad="basis" id="63" lemma="86_jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="86-jarige"/>
+                          <node begin="34" end="35" genus="zijd" getal="ev" graad="basis" id="64" lemma="oud_mijnwerker" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="mijnwerker" word="oudmijnwerker"/>
                           <node begin="35" cat="mwu" end="43" id="65" rel="app">
                             <node begin="35" end="36" id="66" lemma="Jan" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jan" spectype="deeleigen" word="Jan"/>
                             <node begin="36" end="37" id="67" lemma="(" pos="noun" postag="LET()" pt="let" rel="mwp" root="(" word="("/>
-                            <node begin="37" end="38" id="68" lemma="&quot;" pos="noun" postag="LET()" pt="let" rel="mwp" root="&quot;" word="&quot;"/>
+                            <node begin="37" end="38" id="68" lemma="&#34;" pos="noun" postag="LET()" pt="let" rel="mwp" root="&#34;" word="&#34;"/>
                             <node begin="38" end="39" id="69" lemma="Zwarte" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Zwarte" spectype="deeleigen" word="Zwarte"/>
                             <node begin="39" end="40" id="70" lemma="Jan" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jan" spectype="deeleigen" word="Jan"/>
-                            <node begin="40" end="41" id="71" lemma="&quot;" pos="noun" postag="LET()" pt="let" rel="mwp" root="&quot;" word="&quot;"/>
+                            <node begin="40" end="41" id="71" lemma="&#34;" pos="noun" postag="LET()" pt="let" rel="mwp" root="&#34;" word="&#34;"/>
                             <node begin="41" end="42" id="72" lemma=")" pos="noun" postag="LET()" pt="let" rel="mwp" root=")" word=")"/>
                             <node begin="42" end="43" id="73" lemma="Martens" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Martens" spectype="deeleigen" word="Martens"/>
                           </node>
@@ -103,14 +103,14 @@
                                 <node begin="53" end="54" id="88" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                                 <node begin="54" cat="np" end="56" id="89" rel="obj1">
                                   <node begin="54" end="55" genus="zijd" getal="ev" graad="basis" id="90" lemma="september" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="september" word="september"/>
-                                  <node begin="55" end="56" id="91" lemma="&apos;69" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="&apos;69" word="&apos;69"/>
+                                  <node begin="55" end="56" id="91" lemma="&#39;69" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="&#39;69" word="&#39;69"/>
                                 </node>
                               </node>
                               <node begin="56" cat="pp" end="58" id="92" rel="ld">
                                 <node begin="56" end="57" id="93" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
                                 <node begin="57" end="58" genus="masc" getal="ev" id="94" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="vol" vwtype="pers" word="hem"/>
                               </node>
-                              <node begin="59" buiging="zonder" end="60" id="95" lemma="inbreken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="breek" word="ingebroken" wvorm="vd"/>
+                              <node begin="59" buiging="zonder" end="60" id="95" lemma="in_breken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="breek" word="ingebroken" wvorm="vd"/>
                               <node begin="61" cat="du" end="64" id="96" rel="mod">
                                 <node begin="61" end="62" genus="zijd" getal="ev" graad="basis" id="97" lemma="buit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="dp" root="buit" word="buit"/>
                                 <node begin="62" cat="mwu" end="64" id="98" rel="dp">
@@ -134,5 +134,5 @@
     <node begin="64" end="65" id="101" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
     <node begin="65" end="66" id="102" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De Rijkspolitie uit het Zuidlimburgse Stein heeft gisterochtend om 6 uur de bouwvakker Anton J. P. L. ( 24 , ongehuwd ) gearresteerd , die ervan wordt verdacht , omstreeks 12 februari de 86-jarige oudmijnwerker Jan ( &quot; Zwarte Jan &quot; ) Martens om het leven te hebben gebracht , nadat hij reeds in september &apos;69 bij hem had ingebroken ( buit flo 27.000 ) .</sentence>
+  <sentence>De Rijkspolitie uit het Zuidlimburgse Stein heeft gisterochtend om 6 uur de bouwvakker Anton J. P. L. ( 24 , ongehuwd ) gearresteerd , die ervan wordt verdacht , omstreeks 12 februari de 86-jarige oudmijnwerker Jan ( &#34; Zwarte Jan &#34; ) Martens om het leven te hebben gebracht , nadat hij reeds in september &#39;69 bij hem had ingebroken ( buit flo 27.000 ) .</sentence>
 </alpino_ds>

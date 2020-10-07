@@ -14,7 +14,7 @@
         <node begin="0" buiging="zonder" end="1" id="11" lemma="verdelen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verdeeld" word="Verdeeld" wvorm="vd"/>
         <node begin="1" cat="pp" end="3" id="12" rel="mod">
           <node begin="1" end="2" id="13" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
-          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="14" lemma="financieringswijze" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="wijze" word="financieringswijze"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="14" lemma="financiering_wijze" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="wijze" word="financieringswijze"/>
         </node>
       </node>
       <node begin="3" end="4" id="15" lemma="bestaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="besta" word="bestond" wvorm="pv"/>
@@ -47,14 +47,14 @@
               <node begin="16" end="17" id="37" lemma="14.133" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="hd" root="14.133" word="14.133"/>
               <node begin="18" end="19" id="38" lemma="15.098" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="15.098" word="15.098"/>
             </node>
-            <node begin="20" end="21" getal="mv" graad="basis" id="39" lemma="woningwetwoning" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="woning" word="woningwetwoningen"/>
+            <node begin="20" end="21" getal="mv" graad="basis" id="39" lemma="woningwet_woning" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="woning" word="woningwetwoningen"/>
           </node>
           <node begin="22" cat="np" end="28" id="40" rel="cnj">
             <node begin="22" cat="detp" end="25" id="41" rel="det">
               <node begin="22" end="23" id="42" lemma="18.335" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="hd" root="18.335" word="18.335"/>
               <node begin="24" end="25" id="43" lemma="17.657" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="17.657" word="17.657"/>
             </node>
-            <node begin="27" end="28" getal="mv" graad="basis" id="44" lemma="premiewoning" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="woning" word="premiewoningen"/>
+            <node begin="27" end="28" getal="mv" graad="basis" id="44" lemma="premie_woning" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="woning" word="premiewoningen"/>
           </node>
           <node begin="28" conjtype="neven" end="29" id="45" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
           <node begin="29" cat="np" end="35" id="46" rel="cnj">
@@ -62,7 +62,7 @@
               <node begin="29" end="30" id="48" lemma="7.008" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="hd" root="7.008" word="7.008"/>
               <node begin="31" end="32" id="49" lemma="6.225" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="6.225" word="6.225"/>
             </node>
-            <node begin="33" buiging="met-e" end="34" graad="basis" id="50" lemma="ongesubsidieerd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gesubsidieerd" word="ongesubsidieerde"/>
+            <node begin="33" buiging="met-e" end="34" graad="basis" id="50" lemma="on_gesubsidieerd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gesubsidieerd" word="ongesubsidieerde"/>
             <node begin="34" end="35" getal="mv" graad="basis" id="51" lemma="woning" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="woning" word="woningen"/>
           </node>
         </node>

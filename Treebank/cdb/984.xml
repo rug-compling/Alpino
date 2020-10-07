@@ -3,11 +3,11 @@
   <node begin="0" cat="top" end="38" id="0" rel="top">
     <node begin="12" end="13" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="18" end="19" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="19" end="20" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="23" end="24" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="19" end="20" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="23" end="24" id="4" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="24" end="25" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="32" end="33" id="6" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="35" end="36" id="7" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="32" end="33" id="6" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="35" end="36" id="7" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="du" end="37" id="8" rel="--">
       <node begin="0" cat="smain" end="18" id="9" rel="nucl">
         <node begin="0" cat="np" end="2" id="10" index="1" rel="su">
@@ -64,7 +64,7 @@
             <node begin="26" cat="np" end="31" id="49" rel="su">
               <node begin="26" end="27" id="50" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
               <node begin="27" buiging="met-e" end="28" graad="basis" id="51" lemma="westduits" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Westduits" word="Westduitse"/>
-              <node begin="28" end="29" genus="onz" getal="ev" graad="basis" id="52" lemma="weekblad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="weekblad" word="weekblad"/>
+              <node begin="28" end="29" genus="onz" getal="ev" graad="basis" id="52" lemma="week_blad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="weekblad" word="weekblad"/>
               <node begin="29" cat="mwu" end="31" id="53" rel="app">
                 <node begin="29" end="30" id="54" lemma="Der" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Der" spectype="deeleigen" word="Der"/>
                 <node begin="30" end="31" id="55" lemma="Stern" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Stern" spectype="deeleigen" word="Stern"/>
@@ -82,8 +82,8 @@
     </node>
     <node begin="37" end="38" id="61" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Uitgebreide aandacht wordt door de Duitse pers en televisie aan de geschiedenis , de economie van Nederland besteed , &quot; De kleine reus &quot; , zoals het Westduitse weekblad Der Stern zijn &quot; buurman Holland &quot; noemt .</sentence>
+  <sentence>Uitgebreide aandacht wordt door de Duitse pers en televisie aan de geschiedenis , de economie van Nederland besteed , &#34; De kleine reus &#34; , zoals het Westduitse weekblad Der Stern zijn &#34; buurman Holland &#34; noemt .</sentence>
   <comments>
-    <comment>&apos;zoals&apos; as a relative, as proposed by Heleen Hoekstra (CGN) in email-discussion</comment>
+    <comment>&#39;zoals&#39; as a relative, as proposed by Heleen Hoekstra (CGN) in email-discussion</comment>
   </comments>
 </alpino_ds>

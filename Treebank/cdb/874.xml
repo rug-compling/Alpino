@@ -28,7 +28,7 @@
             <node begin="11" cat="np" end="18" id="21" rel="obj1">
               <node begin="11" end="12" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
               <node begin="12" buiging="met-e" end="13" graad="basis" id="23" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="grote"/>
-              <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="24" lemma="luchtrace" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="race" word="luchtrace"/>
+              <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="24" lemma="lucht_race" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="race" word="luchtrace"/>
               <node begin="14" cat="pp" end="16" id="25" rel="mod">
                 <node begin="14" end="15" id="26" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                 <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="27" lemma="Londen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Londen" word="Londen"/>
@@ -44,7 +44,7 @@
           <node begin="18" end="19" id="32" lemma="24" naamval="stan" numtype="hoofd" pos="det" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="24" word="24"/>
           <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="33" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="uur" word="uur"/>
         </node>
-        <node begin="20" buiging="zonder" end="21" id="34" lemma="uitstellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="uitgesteld" wvorm="vd"/>
+        <node begin="20" buiging="zonder" end="21" id="34" lemma="uit_stellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="uitgesteld" wvorm="vd"/>
       </node>
     </node>
     <node begin="21" end="22" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

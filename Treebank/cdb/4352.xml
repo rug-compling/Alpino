@@ -23,7 +23,7 @@
               <node begin="19" cat="np" end="22" id="19" rel="obj1">
                 <node begin="19" end="20" id="20" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                 <node begin="20" cat="mwu" end="22" id="21" rel="hd">
-                  <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="22" lemma="gpv-kamerlid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="GPV-Kamerlid" word="GPV-Kamerlid"/>
+                  <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="22" lemma="gpv_kamerlid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="GPV-Kamerlid" word="GPV-Kamerlid"/>
                   <node begin="21" end="22" id="23" lemma="Jongeling" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jongeling" spectype="deeleigen" word="Jongeling"/>
                 </node>
               </node>
@@ -56,7 +56,7 @@
               <node begin="3" buiging="zonder" end="4" id="42" lemma="houden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gehouden" word="gehouden" wvorm="vd"/>
             </node>
             <node begin="4" buiging="met-e" end="5" graad="basis" id="43" lemma="zuidhollands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Zuidhollandse" word="Zuidhollandse"/>
-            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="44" lemma="landdag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="landdag" word="landdag"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="44" lemma="land_dag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="landdag" word="landdag"/>
             <node begin="6" cat="pp" end="9" id="45" rel="mod">
               <node begin="6" end="7" id="46" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="7" cat="np" end="9" id="47" rel="obj1">
@@ -77,7 +77,7 @@
               <node begin="34" end="35" id="58" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="35" cat="np" end="37" id="59" rel="obj1">
                 <node begin="35" end="36" id="60" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="36" end="37" getal="mv" graad="basis" id="61" lemma="volksverzekering" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verzekering" word="volksverzekeringen"/>
+                <node begin="36" end="37" getal="mv" graad="basis" id="61" lemma="volk_verzekering" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verzekering" word="volksverzekeringen"/>
               </node>
             </node>
             <node begin="37" cat="pp" end="58" id="62" rel="mod">

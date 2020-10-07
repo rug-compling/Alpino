@@ -41,7 +41,7 @@
                 <node begin="19" cat="np" end="22" id="33" rel="cnj">
                   <node begin="19" end="20" id="34" index="1" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                   <node begin="20" buiging="met-e" end="21" graad="basis" id="35" index="2" lemma="interuniversitair" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="universitair" word="interuniversitaire"/>
-                  <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="36" lemma="taakverdeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="taakverdeling" word="taakverdeling"/>
+                  <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="36" lemma="taak_verdeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="taakverdeling" word="taakverdeling"/>
                 </node>
                 <node begin="22" conjtype="neven" end="23" id="37" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                 <node begin="19" cat="np" end="24" id="38" rel="cnj">
@@ -65,7 +65,7 @@
             <node begin="28" buiging="zonder" end="29" id="49" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="die"/>
             <node begin="29" end="30" genus="zijd" getal="ev" graad="basis" id="50" lemma="raad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="raad" word="raad"/>
           </node>
-          <node begin="33" end="34" id="51" lemma="aanlopen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="loop" word="aanloopt" wvorm="pv"/>
+          <node begin="33" end="34" id="51" lemma="aan_lopen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="loop" word="aanloopt" wvorm="pv"/>
           <node begin="30" cat="pp" end="39" id="52" rel="ld">
             <node begin="30" end="31" id="53" lemma="achter" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="achter" vztype="init" word="achter"/>
             <node begin="31" cat="np" end="39" id="54" rel="obj1">

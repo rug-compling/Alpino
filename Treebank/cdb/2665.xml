@@ -7,7 +7,7 @@
         <node begin="1" end="2" id="4" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="mod" root="zeer" word="zeer"/>
         <node begin="2" buiging="met-e" end="3" graad="basis" id="5" lemma="vroeg" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="vroeg" word="vroege"/>
       </node>
-      <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="nachtvorst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="nachtvorst" word="nachtvorst"/>
+      <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="nacht_vorst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="nachtvorst" word="nachtvorst"/>
       <node begin="4" cat="rel" end="29" id="7" rel="mod">
         <node begin="4" cat="mwu" end="6" id="8" index="1" rel="rhd">
           <node begin="4" end="5" getal="getal" id="9" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="pp" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mwp" root="waar" status="vol" vwtype="vb" word="waar"/>
@@ -30,7 +30,7 @@
                 </node>
               </node>
             </node>
-            <node begin="13" buiging="zonder" end="14" id="25" lemma="teruggaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="teruggaan" wvorm="inf"/>
+            <node begin="13" buiging="zonder" end="14" id="25" lemma="terug_gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="teruggaan" wvorm="inf"/>
             <node begin="14" cat="oti" end="29" id="26" rel="mod">
               <node begin="14" end="15" id="27" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
               <node begin="15" cat="ti" end="29" id="28" rel="body">
@@ -50,14 +50,14 @@
                   <node begin="20" cat="np" end="23" id="39" rel="obj1">
                     <node begin="20" end="21" id="40" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                     <node begin="21" end="22" id="41" lemma="één" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="eerste" word="eerste"/>
-                    <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="42" lemma="nachtvorst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="nachtvorst" word="nachtvorst"/>
+                    <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="42" lemma="nacht_vorst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="nachtvorst" word="nachtvorst"/>
                   </node>
                   <node begin="23" cat="ppart" end="27" id="43" rel="predc">
                     <node begin="23" cat="pp" end="26" id="44" rel="mod">
                       <node begin="23" end="24" id="45" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
                       <node begin="24" cat="np" end="26" id="46" rel="obj1">
                         <node begin="24" buiging="met-e" end="25" graad="basis" id="47" lemma="normaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="normaal" word="normale"/>
-                        <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="48" lemma="waarnemingshoogte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hoogte" word="waarnemingshoogte"/>
+                        <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="48" lemma="waarneming_hoogte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hoogte" word="waarnemingshoogte"/>
                       </node>
                     </node>
                     <node begin="26" buiging="zonder" end="27" id="49" lemma="waarnemen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="waargenomen" word="waargenomen" wvorm="vd"/>

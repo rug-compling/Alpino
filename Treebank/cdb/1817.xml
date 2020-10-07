@@ -6,9 +6,9 @@
     <node begin="0" cat="smain" end="34" id="3" rel="--">
       <node begin="0" cat="np" end="9" id="4" rel="su">
         <node begin="0" cat="mwu" end="4" id="5" rel="hd">
-          <node begin="0" end="1" id="6" lemma="&quot;" pos="noun" postag="LET()" pt="let" rel="mwp" root="&quot;" word="&quot;"/>
+          <node begin="0" end="1" id="6" lemma="&#34;" pos="noun" postag="LET()" pt="let" rel="mwp" root="&#34;" word="&#34;"/>
           <node begin="1" end="2" id="7" lemma="Beer" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Beer" spectype="deeleigen" word="Beer"/>
-          <node begin="2" end="3" id="8" lemma="&quot;" pos="noun" postag="LET()" pt="let" rel="mwp" root="&quot;" word="&quot;"/>
+          <node begin="2" end="3" id="8" lemma="&#34;" pos="noun" postag="LET()" pt="let" rel="mwp" root="&#34;" word="&#34;"/>
           <node begin="3" end="4" id="9" lemma="Wentink" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wentink" spectype="deeleigen" word="Wentink"/>
         </node>
         <node begin="5" cat="np" end="9" id="10" rel="app">
@@ -20,7 +20,7 @@
           </node>
         </node>
       </node>
-      <node begin="10" end="11" id="16" lemma="leiden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="leid" word="leidde" wvorm="pv"/>
+      <node begin="10" end="11" id="16" lemma="in_leiden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="leid" word="leidde" wvorm="pv"/>
       <node begin="11" cat="np" end="17" id="17" rel="obj1">
         <node begin="11" end="12" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="19" lemma="nederlaag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="nederlaag" word="nederlaag"/>
@@ -75,5 +75,5 @@
     </node>
     <node begin="34" end="35" id="54" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>&quot; Beer &quot; Wentink , de aanvoerder van Haarlem , leidde de nederlaag van zijn dappere ploeg in door twaalf minuten voor het einde al te onzorgvuldig de bal naar doelman Paternotte te spelen .</sentence>
+  <sentence>&#34; Beer &#34; Wentink , de aanvoerder van Haarlem , leidde de nederlaag van zijn dappere ploeg in door twaalf minuten voor het einde al te onzorgvuldig de bal naar doelman Paternotte te spelen .</sentence>
 </alpino_ds>

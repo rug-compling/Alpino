@@ -11,7 +11,7 @@
             <node begin="3" end="4" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
             <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="9" lemma="aantal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aantal" word="aantal"/>
             <node begin="5" cat="np" end="9" id="10" rel="mod">
-              <node begin="5" end="6" getal="mv" graad="basis" id="11" lemma="bedrijfshoofd" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="hoofd" word="bedrijfshoofden"/>
+              <node begin="5" end="6" getal="mv" graad="basis" id="11" lemma="bedrijf_hoofd" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="hoofd" word="bedrijfshoofden"/>
               <node begin="6" cat="pp" end="9" id="12" rel="mod">
                 <node begin="6" end="7" id="13" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                 <node begin="7" cat="np" end="9" id="14" rel="obj1">
@@ -32,7 +32,7 @@
           <node begin="12" buiging="zonder" end="13" id="23" lemma="bereiken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bereik" word="bereiken" wvorm="inf"/>
           <node begin="13" cat="pp" end="15" id="24" rel="mod">
             <node begin="13" end="14" id="25" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
-            <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="26" lemma="beroepsverandering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="verandering" word="beroepsverandering"/>
+            <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="26" lemma="beroep_verandering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="verandering" word="beroepsverandering"/>
           </node>
         </node>
       </node>

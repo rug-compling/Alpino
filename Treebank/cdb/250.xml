@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="31" id="0" rel="top">
-    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" end="1" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="18" end="19" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="1" cat="conj" end="30" id="3" rel="--">
       <node begin="1" cat="smain" end="18" id="4" rel="cnj">
@@ -23,7 +23,7 @@
                 </node>
                 <node begin="11" cat="pp" end="13" id="20" rel="mod">
                   <node begin="11" end="12" id="21" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-                  <node begin="12" end="13" getal="mv" graad="basis" id="22" lemma="landskampioen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="landskampioen" word="landskampioenen"/>
+                  <node begin="12" end="13" getal="mv" graad="basis" id="22" lemma="land_kampioen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="landskampioen" word="landskampioenen"/>
                 </node>
               </node>
               <node begin="13" conjtype="neven" end="14" id="23" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
@@ -32,7 +32,7 @@
                 <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="26" lemma="beker" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beker" word="beker"/>
                 <node begin="16" cat="pp" end="18" id="27" rel="mod">
                   <node begin="16" end="17" id="28" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-                  <node begin="17" end="18" genus="genus" getal="ev" graad="basis" id="29" lemma="Jaarbeurssteden" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="steden" word="Jaarbeurssteden"/>
+                  <node begin="17" end="18" genus="genus" getal="ev" graad="basis" id="29" lemma="Jaarbeurs_stad" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="steden" word="Jaarbeurssteden"/>
                 </node>
               </node>
             </node>
@@ -63,5 +63,5 @@
     </node>
     <node begin="30" end="31" id="46" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>&quot; Natuurlijk is er een groot verschil tussen de Europa Cup voor landskampioenen en de beker voor Jaarbeurssteden , maar de druk is niet alleen daardoor niet zo groot meer .</sentence>
+  <sentence>&#34; Natuurlijk is er een groot verschil tussen de Europa Cup voor landskampioenen en de beker voor Jaarbeurssteden , maar de druk is niet alleen daardoor niet zo groot meer .</sentence>
 </alpino_ds>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="26" id="0" rel="top">
-    <node begin="3" end="4" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="7" end="8" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="3" end="4" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="7" end="8" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="8" end="9" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="13" end="14" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="25" id="5" rel="--">
@@ -42,7 +42,7 @@
                   <node begin="19" cat="np" end="22" id="34" rel="obj1">
                     <node begin="19" end="20" id="35" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                     <node begin="20" buiging="met-e" end="21" graad="basis" id="36" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="grote"/>
-                    <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="37" lemma="rembrandttheater" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="theater" word="Rembrandttheater"/>
+                    <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="37" lemma="rembrandt_theater" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="theater" word="Rembrandttheater"/>
                   </node>
                 </node>
                 <node begin="24" buiging="zonder" end="25" id="38" lemma="vertonen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vertoon" word="vertoond" wvorm="vd"/>
@@ -54,5 +54,5 @@
     </node>
     <node begin="25" end="26" id="39" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De bekroonde film &quot; Bericht uit Biafra &quot; , opgenomen op 16 mm , was niet geschikt om in het grote Rembrandttheater te worden vertoond .</sentence>
+  <sentence>De bekroonde film &#34; Bericht uit Biafra &#34; , opgenomen op 16 mm , was niet geschikt om in het grote Rembrandttheater te worden vertoond .</sentence>
 </alpino_ds>

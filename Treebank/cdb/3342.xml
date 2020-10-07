@@ -36,7 +36,7 @@
             <node begin="13" conjtype="neven" end="14" id="26" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="3" cat="ssub" end="21" id="27" rel="cnj">
               <node begin="3" end="4" id="28" index="2" rel="su"/>
-              <node begin="14" end="15" id="29" lemma="deelnemen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="neem" word="deelnam" wvorm="pv"/>
+              <node begin="14" end="15" id="29" lemma="deel_nemen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="neem" word="deelnam" wvorm="pv"/>
               <node begin="15" cat="pp" end="21" id="30" rel="pc">
                 <node begin="15" end="16" id="31" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
                 <node begin="16" cat="np" end="21" id="32" rel="obj1">
@@ -75,7 +75,7 @@
           <node begin="29" end="30" id="54" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
           <node begin="30" cat="np" end="34" id="55" rel="obj1">
             <node begin="30" buiging="zonder" end="31" getal="ev" id="56" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
-            <node begin="31" end="32" genus="zijd" getal="ev" graad="basis" id="57" lemma="trainersfunctie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="functie" word="trainersfunctie"/>
+            <node begin="31" end="32" genus="zijd" getal="ev" graad="basis" id="57" lemma="trainer_functie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="functie" word="trainersfunctie"/>
             <node begin="32" cat="pp" end="34" id="58" rel="mod">
               <node begin="32" end="33" id="59" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
               <node begin="33" end="34" genus="onz" getal="ev" graad="basis" id="60" lemma="Spanje" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Spanje" word="Spanje"/>

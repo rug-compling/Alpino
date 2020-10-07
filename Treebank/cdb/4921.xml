@@ -13,7 +13,7 @@
         <node begin="1" end="2" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         <node begin="2" cat="np" end="11" id="11" rel="predc">
           <node begin="2" end="3" id="12" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="13" lemma="protestfilm" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="film" word="protestfilm"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="13" lemma="protest_film" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="film" word="protestfilm"/>
           <node begin="5" cat="pp" end="7" id="14" rel="mod">
             <node begin="5" end="6" id="15" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
             <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="16" lemma="Hollywood" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Hollywood" word="Hollywood"/>
@@ -42,7 +42,7 @@
               </node>
             </node>
             <node begin="18" end="19" getal="mv" graad="basis" id="34" lemma="reactie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="reactie" word="reacties"/>
-            <node begin="19" end="20" id="35" lemma="losmaken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="maak" word="losmaakt" wvorm="pv"/>
+            <node begin="19" end="20" id="35" lemma="los_maken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="maak" word="losmaakt" wvorm="pv"/>
             <node begin="21" cat="conj" end="31" id="36" rel="mod">
               <node begin="21" cat="pp" end="26" id="37" rel="cnj">
                 <node begin="21" cat="advp" end="23" id="38" rel="mod">
@@ -52,7 +52,7 @@
                 <node begin="23" end="24" id="41" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                 <node begin="24" cat="np" end="26" id="42" rel="obj1">
                   <node begin="24" buiging="zonder" end="25" getal="ev" id="43" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
-                  <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="44" lemma="denktrant" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="trant" word="denktrant"/>
+                  <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="44" lemma="denk_trant" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="trant" word="denktrant"/>
                 </node>
               </node>
               <node begin="26" conjtype="neven" end="27" id="45" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
@@ -70,7 +70,7 @@
               <node begin="33" end="34" id="54" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
               <node begin="34" cat="np" end="39" id="55" rel="obj1">
                 <node begin="34" end="35" id="56" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="35" end="36" getal="mv" graad="basis" id="57" lemma="beroepskijker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kijker" word="beroepskijkers"/>
+                <node begin="35" end="36" getal="mv" graad="basis" id="57" lemma="beroep_kijker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kijker" word="beroepskijkers"/>
                 <node begin="37" cat="np" end="39" id="58" rel="app">
                   <node begin="37" end="38" id="59" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                   <node begin="38" end="39" getal="mv" graad="basis" id="60" lemma="criticus" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="criticus" word="critici"/>

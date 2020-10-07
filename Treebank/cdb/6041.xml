@@ -2,7 +2,7 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="28" id="0" rel="top">
     <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="21" end="22" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="21" end="22" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="26" id="3" rel="--">
       <node begin="0" end="1" genus="fem" getal="ev" id="4" index="1" lemma="zij" naamval="nomin" pdtype="pron" persoon="3v" pos="noun" postag="VNW(pers,pron,nomin,vol,3v,ev,fem)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="Zij"/>
       <node begin="1" end="2" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
@@ -21,7 +21,7 @@
             <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="17" lemma="koper" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="koper" word="koper"/>
             <node begin="9" cat="np" end="16" id="18" rel="app">
               <node begin="9" end="10" id="19" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="10" buiging="met-e" end="11" graad="basis" id="20" lemma="25-jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="25-jarige"/>
+              <node begin="10" buiging="met-e" end="11" graad="basis" id="20" lemma="25_jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="25-jarige"/>
               <node begin="11" buiging="met-e" end="12" graad="basis" id="21" lemma="ongehuwd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ongehuwd" word="ongehuwde"/>
               <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="colporteur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="colporteur" word="colporteur"/>
               <node begin="13" cat="mwu" end="16" id="23" rel="app">
@@ -52,8 +52,8 @@
         </node>
       </node>
     </node>
-    <node begin="26" end="27" id="40" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="26" end="27" id="40" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="27" end="28" id="41" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Zij heeft in verband daarmee de adspirant koper , de 25-jarige ongehuwde colporteur F. de R. laten arresteren op titel van &quot; vermoedelijke poging tot oplichting &quot; .</sentence>
+  <sentence>Zij heeft in verband daarmee de adspirant koper , de 25-jarige ongehuwde colporteur F. de R. laten arresteren op titel van &#34; vermoedelijke poging tot oplichting &#34; .</sentence>
 </alpino_ds>

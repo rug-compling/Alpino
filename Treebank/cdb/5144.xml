@@ -21,7 +21,7 @@
                   <node begin="6" cat="np" end="9" id="18" rel="obj1">
                     <node begin="6" end="7" id="19" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
                     <node begin="7" buiging="met-e" end="8" graad="basis" id="20" lemma="grootscheeps" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="grootscheeps" word="grootscheepse"/>
-                    <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="21" lemma="speurtocht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="speurtocht" word="speurtocht"/>
+                    <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="21" lemma="speur_tocht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="speurtocht" word="speurtocht"/>
                   </node>
                 </node>
                 <node begin="9" cat="pp" end="15" id="22" rel="mod">
@@ -49,7 +49,7 @@
                 <node begin="19" cat="np" end="23" id="38" rel="obj1">
                   <node begin="19" end="20" id="39" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                   <node begin="20" buiging="met-e" end="21" graad="basis" id="40" lemma="Amsterdams" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Amsterdams" word="Amsterdamse"/>
-                  <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="41" lemma="politiebureau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="politiebureau" word="politiebureau"/>
+                  <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="41" lemma="politie_bureau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="politiebureau" word="politiebureau"/>
                   <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="42" lemma="Warmoesstraat" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Warmoesstraat" word="Warmoesstraat"/>
                 </node>
               </node>
@@ -57,7 +57,7 @@
                 <node begin="23" end="24" id="44" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
                 <node begin="24" cat="np" end="26" id="45" rel="obj1">
                   <node begin="24" end="25" id="46" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                  <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="47" lemma="vechtpartij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vechtpartij" word="vechtpartij"/>
+                  <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="47" lemma="vecht_partij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vechtpartij" word="vechtpartij"/>
                 </node>
               </node>
               <node begin="26" end="27" id="48" lemma="vluchten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vlucht" word="vluchtte" wvorm="pv"/>
@@ -75,7 +75,7 @@
             <node begin="31" end="32" genus="zijd" getal="ev" graad="basis" id="56" lemma="politie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="politie" word="politie"/>
           </node>
         </node>
-        <node begin="32" buiging="zonder" end="33" id="57" lemma="neerschieten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schiet" word="neergeschoten" wvorm="vd"/>
+        <node begin="32" buiging="zonder" end="33" id="57" lemma="neer_schieten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schiet" word="neergeschoten" wvorm="vd"/>
         <node begin="33" cat="pp" end="37" id="58" rel="mod">
           <node begin="33" end="34" id="59" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="34" cat="np" end="37" id="60" rel="obj1">

@@ -25,7 +25,7 @@
         </node>
         <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="18" lemma="onderzoek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="onderzoek" word="onderzoek"/>
       </node>
-      <node begin="10" end="11" id="19" lemma="wijzen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="wijs" word="wees" wvorm="pv"/>
+      <node begin="10" end="11" id="19" lemma="uit_wijzen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="wijs" word="wees" wvorm="pv"/>
       <node begin="11" end="12" id="20" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
       <node begin="13" cat="cp" end="39" id="21" rel="vc">
         <node begin="13" conjtype="onder" end="14" id="22" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
@@ -48,7 +48,7 @@
                       <node begin="22" end="23" id="39" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
                       <node begin="23" cat="np" end="25" id="40" rel="obj1">
                         <node begin="23" end="24" id="41" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                        <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="42" lemma="portiekzijde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zijde" word="portiekzijde"/>
+                        <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="42" lemma="portiek_zijde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zijde" word="portiekzijde"/>
                       </node>
                     </node>
                   </node>

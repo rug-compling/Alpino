@@ -37,7 +37,7 @@
                   <node begin="16" end="17" id="30" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                   <node begin="17" cat="np" end="22" id="31" rel="obj1">
                     <node begin="17" end="18" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                    <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="33" lemma="competitiewedstrijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="competitiewedstrijd" word="competitiewedstrijd"/>
+                    <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="33" lemma="competitie_wedstrijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="competitiewedstrijd" word="competitiewedstrijd"/>
                     <node begin="19" cat="pp" end="22" id="34" rel="mod">
                       <node begin="19" end="20" id="35" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
                       <node begin="20" cat="mwu" end="22" id="36" rel="obj1">
@@ -57,7 +57,7 @@
               <node begin="30" buiging="zonder" end="31" id="44" lemma="kunnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kan" word="kunnen" wvorm="inf"/>
               <node begin="11" cat="inf" end="32" id="45" rel="vc">
                 <node begin="11" end="24" id="46" index="2" rel="su"/>
-                <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="47" lemma="woensdagavond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="woensdagavond" word="woensdagavond"/>
+                <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="47" lemma="woensdag_avond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="woensdagavond" word="woensdagavond"/>
                 <node begin="26" cat="pp" end="29" id="48" rel="pc">
                   <node begin="26" end="27" id="49" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
                   <node begin="27" cat="mwu" end="29" id="50" rel="obj1">
@@ -65,7 +65,7 @@
                     <node begin="28" end="29" id="52" lemma="Milan" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Milan" spectype="deeleigen" word="Milan"/>
                   </node>
                 </node>
-                <node begin="31" buiging="zonder" end="32" id="53" lemma="meespelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="speel" word="meespelen" wvorm="inf"/>
+                <node begin="31" buiging="zonder" end="32" id="53" lemma="mee_spelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="speel" word="meespelen" wvorm="inf"/>
               </node>
             </node>
           </node>

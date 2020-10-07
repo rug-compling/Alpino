@@ -2,7 +2,7 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="23" id="0" rel="top">
     <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="19" end="20" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="19" end="20" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="21" id="3" rel="--">
       <node begin="0" cat="np" end="3" id="4" index="1" rel="su">
         <node begin="0" end="1" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
@@ -13,7 +13,7 @@
       <node begin="4" end="5" id="9" lemma="allemaal" pos="adv" postag="BW()" pt="bw" rel="predm" root="allemaal" word="allemaal"/>
       <node begin="0" cat="ppart" end="21" id="10" rel="vc">
         <node begin="0" end="3" id="11" index="1" rel="obj1"/>
-        <node begin="5" buiging="zonder" end="6" id="12" lemma="afkeuren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="keur" word="afgekeurd" wvorm="vd"/>
+        <node begin="5" buiging="zonder" end="6" id="12" lemma="af_keuren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="keur" word="afgekeurd" wvorm="vd"/>
         <node begin="7" cat="cp" end="21" id="13" rel="mod">
           <node begin="7" conjtype="onder" end="8" id="14" lemma="terwijl" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="terwijl" word="terwijl"/>
           <node begin="8" cat="ssub" end="21" id="15" rel="body">
@@ -26,7 +26,7 @@
                   <node begin="11" end="12" id="22" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                   <node begin="12" cat="np" end="14" id="23" rel="obj1">
                     <node begin="12" end="13" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                    <node begin="13" end="14" getal="mv" graad="basis" id="25" lemma="groentewinkel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="winkels" word="groentewinkels"/>
+                    <node begin="13" end="14" getal="mv" graad="basis" id="25" lemma="groente_winkel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="winkels" word="groentewinkels"/>
                   </node>
                 </node>
               </node>
@@ -47,8 +47,8 @@
         </node>
       </node>
     </node>
-    <node begin="21" end="22" id="35" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="21" end="22" id="35" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="22" end="23" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De kostelijke ladingen werden allemaal afgekeurd , terwijl in de etalages van de groentewinkels vergeelde komkommers en gekneusde tomaten &quot; pronken &quot; .</sentence>
+  <sentence>De kostelijke ladingen werden allemaal afgekeurd , terwijl in de etalages van de groentewinkels vergeelde komkommers en gekneusde tomaten &#34; pronken &#34; .</sentence>
 </alpino_ds>

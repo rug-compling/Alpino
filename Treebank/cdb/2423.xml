@@ -23,7 +23,7 @@
                   <node begin="10" end="11" id="19" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                   <node begin="11" cat="np" end="13" id="20" rel="obj1">
                     <node begin="11" end="12" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                    <node begin="12" end="13" genus="genus" getal="ev" graad="basis" id="22" lemma="Kanaalstraat" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="straat" word="Kanaalstraat"/>
+                    <node begin="12" end="13" genus="genus" getal="ev" graad="basis" id="22" lemma="Kanaal_straat" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="straat" word="Kanaalstraat"/>
                   </node>
                 </node>
               </node>
@@ -34,14 +34,14 @@
             <node begin="5" end="13" id="25" index="1" rel="su"/>
             <node begin="13" end="14" id="26" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
             <node begin="14" end="15" id="27" lemma="mee" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="mee" vztype="fin" word="mee"/>
-            <node begin="16" buiging="zonder" end="17" id="28" lemma="werken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="werk" word="werken" wvorm="inf"/>
+            <node begin="16" buiging="zonder" end="17" id="28" lemma="mee_werken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="werk" word="werken" wvorm="inf"/>
             <node begin="17" cat="cp" end="26" id="29" rel="mod">
               <node begin="17" end="18" id="30" lemma="door" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="door" vztype="init" word="door"/>
               <node begin="18" cat="ti" end="26" id="31" rel="body">
                 <node begin="24" end="25" id="32" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
                 <node begin="18" cat="inf" end="26" id="33" rel="body">
                   <node begin="18" cat="np" end="23" id="34" rel="obj1">
-                    <node begin="18" end="19" id="35" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&apos;n"/>
+                    <node begin="18" end="19" id="35" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&#39;n"/>
                     <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="36" lemma="stuk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stuk" word="stuk"/>
                     <node begin="20" cat="pp" end="23" id="37" rel="mod">
                       <node begin="20" end="21" id="38" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
@@ -52,7 +52,7 @@
                     </node>
                   </node>
                   <node begin="23" end="24" id="42" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="af" vztype="fin" word="af"/>
-                  <node begin="25" buiging="zonder" end="26" id="43" lemma="staan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="sta" word="staan" wvorm="inf"/>
+                  <node begin="25" buiging="zonder" end="26" id="43" lemma="af_staan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="sta" word="staan" wvorm="inf"/>
                 </node>
               </node>
             </node>
@@ -62,5 +62,5 @@
     </node>
     <node begin="26" end="27" id="44" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Het argument was , dat de slager aan het eind van de Kanaalstraat niet mee wilde werken door &apos;n stuk van zijn grond af te staan .</sentence>
+  <sentence>Het argument was , dat de slager aan het eind van de Kanaalstraat niet mee wilde werken door &#39;n stuk van zijn grond af te staan .</sentence>
 </alpino_ds>

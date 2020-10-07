@@ -2,8 +2,8 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="28" id="0" rel="top">
     <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="17" end="18" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="22" end="23" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="17" end="18" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="22" end="23" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="23" end="24" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="27" id="5" rel="--">
       <node begin="0" cat="pp" end="2" id="6" rel="mod">
@@ -49,11 +49,11 @@
         <node begin="24" cat="np" end="27" id="37" rel="app">
           <node begin="24" end="25" id="38" lemma="eveneens" pos="adv" postag="BW()" pt="bw" rel="mod" root="eveneens" word="eveneens"/>
           <node begin="25" end="26" id="39" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="26" end="27" genus="onz" getal="ev" graad="basis" id="40" lemma="meesterwerk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="meesterwerk" word="meesterwerk"/>
+          <node begin="26" end="27" genus="onz" getal="ev" graad="basis" id="40" lemma="meester_werk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="meesterwerk" word="meesterwerk"/>
         </node>
       </node>
     </node>
     <node begin="27" end="28" id="41" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>IN 1962 VERSCHIJNT opnieuw een roman van Carpentier , dat in het Engels de titel draagt van &quot; Explosion in a Cathedral &quot; , eveneens een meesterwerk .</sentence>
+  <sentence>IN 1962 VERSCHIJNT opnieuw een roman van Carpentier , dat in het Engels de titel draagt van &#34; Explosion in a Cathedral &#34; , eveneens een meesterwerk .</sentence>
 </alpino_ds>

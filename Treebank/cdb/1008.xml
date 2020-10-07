@@ -5,7 +5,7 @@
     <node begin="0" cat="smain" end="21" id="2" rel="--">
       <node begin="0" cat="np" end="2" id="3" rel="su">
         <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="obligatierent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rente" word="obligatierente"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="obligatie_rente" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rente" word="obligatierente"/>
       </node>
       <node begin="2" end="3" id="6" lemma="tonen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="toon" word="toont" wvorm="pv"/>
       <node begin="3" end="4" getal="getal" id="7" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="daar" status="vol" vwtype="aanw" word="daar"/>
@@ -28,7 +28,7 @@
           <node begin="13" cat="np" end="16" id="21" rel="su">
             <node begin="13" end="14" id="22" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
             <node begin="14" end="15" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="24" lemma="geldmarkt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="markt" word="geldmarkt"/>
+            <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="24" lemma="geld_markt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="markt" word="geldmarkt"/>
           </node>
           <node begin="16" cat="np" end="19" id="25" rel="obj1">
             <node begin="16" end="17" getal="mv" graad="basis" id="26" lemma="teken" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="teken" word="tekenen"/>

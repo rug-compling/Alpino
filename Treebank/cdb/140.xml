@@ -5,7 +5,7 @@
     <node begin="0" cat="smain" end="16" id="2" rel="--">
       <node begin="0" cat="np" end="4" id="3" index="1" rel="su">
         <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="Nobelprijs" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Nobelprijs" word="Nobelprijs"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="Nobel_prijs" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Nobelprijs" word="Nobelprijs"/>
         <node begin="2" cat="pp" end="4" id="6" rel="mod">
           <node begin="2" end="3" id="7" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
           <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="economie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="economie" word="economie"/>
@@ -14,7 +14,7 @@
       <node begin="4" end="5" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="0" cat="ppart" end="16" id="10" rel="vc">
         <node begin="0" end="4" id="11" index="1" rel="obj1"/>
-        <node begin="5" buiging="zonder" end="6" id="12" lemma="toekennen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ken" word="toegekend" wvorm="vd"/>
+        <node begin="5" buiging="zonder" end="6" id="12" lemma="toe_kennen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ken" word="toegekend" wvorm="vd"/>
         <node begin="6" cat="pp" end="16" id="13" rel="obj2">
           <node begin="6" end="7" id="14" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
           <node begin="7" cat="np" end="16" id="15" rel="obj1">

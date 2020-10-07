@@ -38,13 +38,13 @@
           <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="27" lemma="tijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tijd" word="tijd"/>
         </node>
         <node begin="15" buiging="zonder" end="16" graad="basis" id="28" lemma="stil" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="stil" word="stil"/>
-        <node begin="16" buiging="zonder" end="17" id="29" lemma="leggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leg" word="gelegd" wvorm="vd"/>
+        <node begin="16" buiging="zonder" end="17" id="29" lemma="stil_leggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leg" word="gelegd" wvorm="vd"/>
         <node begin="17" cat="cp" end="35" id="30" rel="mod">
           <node begin="17" conjtype="onder" end="18" id="31" lemma="omdat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="omdat" word="omdat"/>
           <node begin="18" cat="ssub" end="35" id="32" rel="body">
             <node begin="18" cat="np" end="20" id="33" index="2" rel="su">
               <node begin="18" end="19" id="34" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="19" end="20" getal="mv" graad="basis" id="35" lemma="personeelslid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="personeelslid" word="personeelsleden"/>
+              <node begin="19" end="20" getal="mv" graad="basis" id="35" lemma="personeel_lid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="personeelslid" word="personeelsleden"/>
             </node>
             <node begin="20" end="21" id="36" lemma="willen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="wil" word="wilden" wvorm="pv"/>
             <node begin="18" cat="inf" end="35" id="37" rel="vc">
@@ -76,7 +76,7 @@
                             <node begin="31" conjtype="neven" end="32" id="61" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                             <node begin="29" cat="np" end="33" id="62" rel="cnj">
                               <node begin="29" end="30" id="63" index="4" rel="det"/>
-                              <node begin="32" end="33" getal="mv" graad="basis" id="64" lemma="ontslagregeling" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="regeling" word="ontslagregelingen"/>
+                              <node begin="32" end="33" getal="mv" graad="basis" id="64" lemma="ontslag_regeling" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="regeling" word="ontslagregelingen"/>
                             </node>
                           </node>
                         </node>

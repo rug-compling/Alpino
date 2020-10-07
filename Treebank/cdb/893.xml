@@ -11,13 +11,13 @@
         <node begin="0" cat="np" end="6" id="8" rel="su">
           <node begin="0" end="1" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
           <node begin="1" buiging="met-e" end="2" graad="comp" id="10" lemma="licht" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="licht" word="lichtere"/>
-          <node begin="2" end="3" getal="mv" graad="basis" id="11" lemma="dcg&apos;er" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Dcg&apos;ers" word="Dcg&apos;ers"/>
+          <node begin="2" end="3" getal="mv" graad="basis" id="11" lemma="dcg&#39;er" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Dcg&#39;ers" word="Dcg&#39;ers"/>
           <node begin="4" cat="np" end="6" id="12" rel="mod">
             <node begin="4" buiging="zonder" end="5" graad="basis" id="13" lemma="speciaal" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="speciaal" word="speciaal"/>
             <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="14" lemma="Verheuvel" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Verheuvel" word="Verheuvel"/>
           </node>
         </node>
-        <node begin="7" end="8" id="15" lemma="komen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kom" word="kwamen" wvorm="pv"/>
+        <node begin="7" end="8" id="15" lemma="weg_komen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kom" word="kwamen" wvorm="pv"/>
         <node begin="8" end="9" id="16" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
         <node begin="9" cat="mwu" end="11" id="17" rel="mod">
           <node begin="9" end="10" id="18" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="adj" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
@@ -65,7 +65,7 @@
                     </node>
                   </node>
                 </node>
-                <node begin="35" end="36" id="54" lemma="doorbreken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="breek" word="doorbrak" wvorm="pv"/>
+                <node begin="35" end="36" id="54" lemma="door_breken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="breek" word="doorbrak" wvorm="pv"/>
               </node>
               <node begin="36" conjtype="neven" end="37" id="55" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
               <node begin="19" cat="ssub" end="41" id="56" rel="cnj">
@@ -74,10 +74,10 @@
                   <node begin="37" end="38" id="59" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
                   <node begin="38" cat="np" end="40" id="60" rel="obj1">
                     <node begin="38" end="39" id="61" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                    <node begin="39" end="40" genus="onz" getal="ev" graad="basis" id="62" lemma="hollandiadoel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="Hollandiadoel" word="Hollandiadoel"/>
+                    <node begin="39" end="40" genus="onz" getal="ev" graad="basis" id="62" lemma="hollandia_doel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="Hollandiadoel" word="Hollandiadoel"/>
                   </node>
                 </node>
-                <node begin="40" end="41" id="63" lemma="afstormen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="storm" word="afstormde" wvorm="pv"/>
+                <node begin="40" end="41" id="63" lemma="af_stormen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="storm" word="afstormde" wvorm="pv"/>
               </node>
             </node>
           </node>
@@ -86,5 +86,5 @@
     </node>
     <node begin="41" end="42" id="64" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De lichtere Dcg&apos;ers - speciaal Verheuvel - kwamen nog het beste weg en het was dan ook Verheuvel , die halverwege de eerste helft , toen de Amsterdammers tegen de krachtige wind in tornden , doorbrak en op het Hollandiadoel afstormde .</sentence>
+  <sentence>De lichtere Dcg&#39;ers - speciaal Verheuvel - kwamen nog het beste weg en het was dan ook Verheuvel , die halverwege de eerste helft , toen de Amsterdammers tegen de krachtige wind in tornden , doorbrak en op het Hollandiadoel afstormde .</sentence>
 </alpino_ds>

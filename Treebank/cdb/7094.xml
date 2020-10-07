@@ -29,7 +29,7 @@
           <node begin="16" end="17" id="21" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
           <node begin="12" cat="inf" end="28" id="22" rel="body">
             <node begin="15" end="16" id="23" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
-            <node begin="17" buiging="zonder" end="18" id="24" lemma="stellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel" word="stellen" wvorm="inf"/>
+            <node begin="17" buiging="zonder" end="18" id="24" lemma="aan_stellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel" word="stellen" wvorm="inf"/>
             <node begin="12" cat="np" end="28" id="25" rel="obj1">
               <node begin="12" end="13" id="26" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
               <node begin="13" buiging="met-e" end="14" graad="basis" id="27" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
@@ -53,7 +53,7 @@
                         <node begin="25" conjtype="neven" end="26" id="44" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                         <node begin="26" cat="np" end="28" id="45" rel="cnj">
                           <node begin="26" end="27" id="46" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                          <node begin="27" end="28" getal="mv" graad="basis" id="47" lemma="rustperiode" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="periode" word="rustperioden"/>
+                          <node begin="27" end="28" getal="mv" graad="basis" id="47" lemma="rust_periode" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="periode" word="rustperioden"/>
                         </node>
                       </node>
                     </node>

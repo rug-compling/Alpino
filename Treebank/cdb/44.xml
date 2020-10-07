@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="14" id="0" rel="top">
-    <node begin="5" end="6" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="9" end="10" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="5" end="6" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="9" end="10" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="13" id="3" rel="--">
       <node begin="3" end="4" id="4" lemma="kunnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kan" word="kon" wvorm="pv"/>
       <node begin="4" cat="np" end="9" id="5" index="1" rel="su">
-        <node begin="4" end="5" getal="ev" graad="basis" id="6" lemma="Breero" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Breero" word="Breero&apos;s"/>
+        <node begin="4" end="5" getal="ev" graad="basis" id="6" lemma="Breero" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Breero" word="Breero&#39;s"/>
         <node begin="6" cat="mwu" end="9" id="7" rel="hd">
           <node begin="6" end="7" id="8" lemma="De" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
           <node begin="7" end="8" id="9" lemma="Spaanse" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Spaanse" spectype="deeleigen" word="Spaanse"/>
@@ -27,5 +27,5 @@
     </node>
     <node begin="13" end="14" id="20" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" word=";"/>
   </node>
-  <sentence>Het vorig jaar kon Breero&apos;s &quot; De Spaanse Brabander &quot; nog uitkomst bieden ;</sentence>
+  <sentence>Het vorig jaar kon Breero&#39;s &#34; De Spaanse Brabander &#34; nog uitkomst bieden ;</sentence>
 </alpino_ds>

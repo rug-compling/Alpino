@@ -15,7 +15,7 @@
         <node begin="5" end="6" genus="onz" getal="ev" id="10" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
         <node begin="6" cat="pp" end="8" id="11" rel="pc">
           <node begin="6" end="7" id="12" lemma="om" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="om" vztype="init" word="om"/>
-          <node begin="7" end="8" getal="mv" graad="basis" id="13" lemma="statenverkiezing" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="verkiezing" word="Statenverkiezingen"/>
+          <node begin="7" end="8" getal="mv" graad="basis" id="13" lemma="staten_verkiezing" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="verkiezing" word="Statenverkiezingen"/>
         </node>
       </node>
       <node begin="8" conjtype="neven" end="9" id="14" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
@@ -45,7 +45,7 @@
                 <node begin="21" end="22" id="35" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                 <node begin="22" cat="np" end="24" id="36" rel="obj1">
                   <node begin="22" end="23" id="37" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                  <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="38" lemma="partijstructuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="structuur" word="partijstructuur"/>
+                  <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="38" lemma="partij_structuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="structuur" word="partijstructuur"/>
                 </node>
               </node>
             </node>

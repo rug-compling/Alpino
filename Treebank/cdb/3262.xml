@@ -2,15 +2,15 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="32" id="0" rel="top">
     <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="7" end="8" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="9" end="10" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="7" end="8" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="9" end="10" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="10" end="11" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="20" end="21" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="23" end="24" id="6" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="23" end="24" id="6" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="31" id="7" rel="--">
       <node begin="0" cat="np" end="9" id="8" index="1" rel="su">
         <node begin="0" end="1" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
-        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="10" lemma="partijblad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="blad" word="partijblad"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="10" lemma="partij_blad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="blad" word="partijblad"/>
         <node begin="2" cat="pp" end="6" id="11" rel="mod">
           <node begin="2" end="3" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="3" cat="np" end="6" id="13" rel="obj1">
@@ -61,5 +61,5 @@
     </node>
     <node begin="31" end="32" id="46" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Het partijblad van de Italiaanse communisten , &quot; Unita &quot; , heeft olie op het vuur gegooid door te verklaren , dat er &quot; binnenkort een grote algemene nationale staking komt .</sentence>
+  <sentence>Het partijblad van de Italiaanse communisten , &#34; Unita &#34; , heeft olie op het vuur gegooid door te verklaren , dat er &#34; binnenkort een grote algemene nationale staking komt .</sentence>
 </alpino_ds>

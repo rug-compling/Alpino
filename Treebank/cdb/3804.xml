@@ -20,13 +20,13 @@
             <node begin="4" cat="np" end="13" id="16" rel="obj1">
               <node begin="4" end="5" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
               <node begin="5" buiging="met-e" end="6" id="18" lemma="bestaan" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="bestaand" word="bestaande" wvorm="od"/>
-              <node begin="6" end="7" getal="mv" graad="basis" id="19" lemma="luchtverkeersregel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="regel" word="luchtverkeersregels"/>
+              <node begin="6" end="7" getal="mv" graad="basis" id="19" lemma="lucht_verkeer_regel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="regel" word="luchtverkeersregels"/>
               <node begin="8" cat="ppart" end="13" id="20" rel="mod">
                 <node begin="8" cat="pp" end="11" id="21" rel="mod">
                   <node begin="8" end="9" id="22" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="volgens"/>
                   <node begin="9" cat="np" end="11" id="23" rel="obj1">
                     <node begin="9" end="10" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                    <node begin="10" end="11" getal="mv" graad="basis" id="25" lemma="verkeersleider" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="leider" word="verkeersleiders"/>
+                    <node begin="10" end="11" getal="mv" graad="basis" id="25" lemma="verkeer_leider" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="leider" word="verkeersleiders"/>
                   </node>
                 </node>
                 <node begin="11" buiging="zonder" end="12" graad="basis" id="26" lemma="volstrekt" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="volstrekt" word="volstrekt"/>
@@ -36,7 +36,7 @@
           </node>
           <node begin="15" end="16" id="28" index="1" rel="obj1"/>
           <node begin="16" buiging="zonder" end="17" id="29" lemma="binden" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="mod" root="bindend" word="bindend" wvorm="od"/>
-          <node begin="18" buiging="zonder" end="19" id="30" lemma="voorschrijven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schrijf" word="voorgeschreven" wvorm="vd"/>
+          <node begin="18" buiging="zonder" end="19" id="30" lemma="voor_schrijven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schrijf" word="voorgeschreven" wvorm="vd"/>
         </node>
       </node>
     </node>

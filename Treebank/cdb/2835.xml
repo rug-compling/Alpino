@@ -12,7 +12,7 @@
       </node>
       <node begin="3" end="4" id="8" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
       <node begin="4" cat="np" end="7" id="9" rel="su">
-        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="kwj-voorzitter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzitter" word="KWJ-voorzitter"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="kwj_voorzitter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzitter" word="KWJ-voorzitter"/>
         <node begin="5" cat="mwu" end="7" id="11" rel="app">
           <node begin="5" end="6" id="12" lemma="Wim" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wim" spectype="deeleigen" word="Wim"/>
           <node begin="6" end="7" id="13" lemma="Bos" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bos" spectype="deeleigen" word="Bos"/>
@@ -35,7 +35,7 @@
                 </node>
               </node>
             </node>
-            <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="28" lemma="bedrijfsscholen-in-oprichting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="school" word="bedrijfsscholen-in-oprichting"/>
+            <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="28" lemma="bedrijf_school_in_oprichting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="school" word="bedrijfsscholen-in-oprichting"/>
             <node begin="17" conjtype="neven" end="18" id="29" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="18" cat="np" end="20" id="30" rel="cnj">
               <node begin="18" buiging="met-e" end="19" graad="basis" id="31" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
@@ -45,7 +45,7 @@
           <node begin="24" end="25" id="33" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
           <node begin="9" cat="ppart" end="45" id="34" rel="vc">
             <node begin="9" end="20" id="35" index="1" rel="su"/>
-            <node begin="23" buiging="zonder" end="24" id="36" lemma="afkomen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kom" word="afgekomen" wvorm="vd"/>
+            <node begin="23" buiging="zonder" end="24" id="36" lemma="af_komen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kom" word="afgekomen" wvorm="vd"/>
             <node begin="20" cat="pp" end="45" id="37" rel="ld">
               <node begin="20" end="21" id="38" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
               <node begin="21" cat="np" end="45" id="39" rel="obj1">

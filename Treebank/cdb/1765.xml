@@ -10,7 +10,7 @@
         </node>
         <node begin="3" cat="np" end="11" id="7" rel="obj1">
           <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="koersontwikkeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ontwikkeling" word="koersontwikkeling"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="koers_ontwikkeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ontwikkeling" word="koersontwikkeling"/>
           <node begin="5" cat="pp" end="11" id="10" rel="mod">
             <node begin="5" end="6" id="11" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
             <node begin="6" cat="np" end="11" id="12" rel="obj1">
@@ -27,7 +27,7 @@
           </node>
         </node>
       </node>
-      <node begin="11" end="12" id="20" lemma="lopen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="loop" word="liep" wvorm="pv"/>
+      <node begin="11" end="12" id="20" lemma="op_lopen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="loop" word="liep" wvorm="pv"/>
       <node begin="12" cat="np" end="17" id="21" rel="su">
         <node begin="12" end="13" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="koers" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="koers" word="koers"/>

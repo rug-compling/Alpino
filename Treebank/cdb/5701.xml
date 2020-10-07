@@ -32,12 +32,12 @@
         <node begin="11" cat="conj" end="16" id="22" rel="obj1">
           <node begin="11" cat="np" end="13" id="23" rel="cnj">
             <node begin="11" end="12" id="24" lemma="602" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="602" word="602"/>
-            <node begin="12" end="13" getal="mv" graad="basis" id="25" lemma="oud-mijnwerker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mijnwerker" word="oud-mijnwerkers"/>
+            <node begin="12" end="13" getal="mv" graad="basis" id="25" lemma="oud_mijnwerker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mijnwerker" word="oud-mijnwerkers"/>
           </node>
           <node begin="13" conjtype="neven" end="14" id="26" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
           <node begin="14" cat="np" end="16" id="27" rel="cnj">
             <node begin="14" buiging="zonder" end="15" getal="mv" id="28" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
-            <node begin="15" end="16" getal="mv" graad="basis" id="29" lemma="gezinslid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="lid" word="gezinsleden"/>
+            <node begin="15" end="16" getal="mv" graad="basis" id="29" lemma="gezin_lid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="lid" word="gezinsleden"/>
           </node>
         </node>
         <node begin="16" buiging="zonder" end="17" id="30" lemma="ondervragen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ondervraag" word="ondervraagd" wvorm="vd"/>
@@ -46,7 +46,7 @@
           <node begin="18" cat="np" end="21" id="33" rel="obj1">
             <node begin="18" end="19" id="34" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="19" buiging="met-e" end="20" graad="basis" id="35" lemma="huidig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="huidig" word="huidige"/>
-            <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="36" lemma="werksituatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="werksituatie" word="werksituatie"/>
+            <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="36" lemma="werk_situatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="werksituatie" word="werksituatie"/>
           </node>
         </node>
       </node>

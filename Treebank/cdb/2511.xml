@@ -8,7 +8,7 @@
         <node begin="0" end="1" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
         <node begin="1" cat="mwu" end="3" id="6" rel="hd">
           <node begin="1" end="2" id="7" lemma="EDO" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="EDO" spectype="deeleigen" word="EDO"/>
-          <node begin="2" end="3" id="8" lemma="Bergsma-ANWB-prijs" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bergsma-ANWB-prijs" spectype="deeleigen" word="Bergsma-ANWB-prijs"/>
+          <node begin="2" end="3" id="8" lemma="Bergsma_ANWB_prijs" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bergsma-ANWB-prijs" spectype="deeleigen" word="Bergsma-ANWB-prijs"/>
         </node>
       </node>
       <node begin="3" end="4" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
@@ -58,7 +58,7 @@
                     <node begin="28" cat="conj" end="31" id="47" rel="obj1">
                       <node begin="28" end="29" id="48" lemma="natuur-" pos="noun" postag="SPEC(afgebr)" pt="spec" rel="cnj" root="natuur-" spectype="afgebr" word="natuur-"/>
                       <node begin="29" conjtype="neven" end="30" id="49" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-                      <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="50" lemma="landschapsbescherming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="bescherming" word="landschapsbescherming"/>
+                      <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="50" lemma="landschap_bescherming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="bescherming" word="landschapsbescherming"/>
                     </node>
                   </node>
                 </node>
@@ -76,7 +76,7 @@
               <node begin="36" end="37" id="58" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
               <node begin="37" cat="np" end="39" id="59" rel="obj1">
                 <node begin="37" end="38" id="60" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="38" end="39" genus="zijd" getal="ev" graad="basis" id="61" lemma="natuurbescherming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bescherming" word="natuurbescherming"/>
+                <node begin="38" end="39" genus="zijd" getal="ev" graad="basis" id="61" lemma="natuur_bescherming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bescherming" word="natuurbescherming"/>
               </node>
             </node>
           </node>

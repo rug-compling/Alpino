@@ -21,7 +21,7 @@
         <node begin="8" buiging="zonder" end="9" id="15" lemma="verstrekken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verstrek" word="verstrekt" wvorm="vd"/>
         <node begin="6" cat="np" end="40" id="16" index="1" rel="obj1">
           <node begin="6" end="7" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="18" lemma="overbruggingsregeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="regeling" word="overbruggingsregeling"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="18" lemma="overbrugging_regeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="regeling" word="overbruggingsregeling"/>
           <node begin="10" cat="rel" end="40" id="19" rel="mod">
             <node begin="10" cat="pp" end="12" id="20" index="2" rel="rhd">
               <node begin="10" end="11" id="21" lemma="gedurende" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="gedurende" vztype="init" word="gedurende"/>
@@ -37,7 +37,7 @@
                   <node begin="10" cat="ppart" end="21" id="30" rel="vc">
                     <node begin="10" end="12" id="31" index="2" rel="mod"/>
                     <node begin="12" end="13" id="32" index="3" rel="obj1"/>
-                    <node begin="15" buiging="zonder" end="16" id="33" lemma="opleiden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leid" word="opgeleid" wvorm="vd"/>
+                    <node begin="15" buiging="zonder" end="16" id="33" lemma="op_leiden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leid" word="opgeleid" wvorm="vd"/>
                     <node begin="16" cat="pp" end="21" id="34" rel="pc">
                       <node begin="16" end="17" id="35" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
                       <node begin="17" cat="np" end="21" id="36" rel="obj1">
@@ -66,7 +66,7 @@
                         <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="54" lemma="functie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="functie" word="functie"/>
                         <node begin="27" cat="pp" end="29" id="55" rel="mod">
                           <node begin="27" end="28" id="56" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-                          <node begin="28" end="29" genus="zijd" getal="ev" graad="basis" id="57" lemma="loondienst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="dienst" word="loondienst"/>
+                          <node begin="28" end="29" genus="zijd" getal="ev" graad="basis" id="57" lemma="loon_dienst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="dienst" word="loondienst"/>
                         </node>
                       </node>
                       <node begin="30" buiging="zonder" end="31" id="58" lemma="vinden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vind" word="vinden" wvorm="inf"/>
@@ -90,7 +90,7 @@
                       <node begin="37" end="38" getal="mv" graad="basis" id="72" lemma="voorziening" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="voorziening" word="voorzieningen"/>
                     </node>
                   </node>
-                  <node begin="39" buiging="zonder" end="40" id="73" lemma="overgaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="overgaan" wvorm="inf"/>
+                  <node begin="39" buiging="zonder" end="40" id="73" lemma="over_gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="overgaan" wvorm="inf"/>
                 </node>
               </node>
             </node>

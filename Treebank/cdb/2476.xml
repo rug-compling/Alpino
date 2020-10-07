@@ -12,7 +12,7 @@
         <node begin="3" cat="pp" end="26" id="9" rel="mod">
           <node begin="3" end="4" id="10" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
           <node begin="4" cat="np" end="26" id="11" rel="obj1">
-            <node begin="4" buiging="zonder" end="5" id="12" lemma="zo&apos;n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="zo&apos;n" vwtype="aanw" word="zo&apos;n"/>
+            <node begin="4" buiging="zonder" end="5" id="12" lemma="zo&#39;n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="zo&#39;n" vwtype="aanw" word="zo&#39;n"/>
             <node begin="5" buiging="met-e" end="6" graad="basis" id="13" lemma="jong" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jong" word="jonge"/>
             <node begin="6" end="7" genus="genus" getal="ev" graad="basis" id="14" lemma="Ambonnees" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Ambonnees" word="Ambonnees"/>
             <node begin="7" cat="pp" end="9" id="15" rel="mod">
@@ -23,7 +23,7 @@
               <node begin="10" end="11" id="19" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
               <node begin="11" cat="ap" end="13" id="20" rel="mod">
                 <node begin="11" end="12" id="21" lemma="bijna" pos="adv" postag="BW()" pt="bw" rel="mod" root="bijna" word="bijna"/>
-                <node begin="12" buiging="met-e" end="13" graad="basis" id="22" lemma="18-jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="jarig" word="18-jarige"/>
+                <node begin="12" buiging="met-e" end="13" graad="basis" id="22" lemma="18_jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="jarig" word="18-jarige"/>
               </node>
               <node begin="13" buiging="met-e" end="14" graad="sup" id="23" lemma="jong" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="jong" word="jongste"/>
               <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="24" lemma="bediende" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bediende" word="bediende"/>
@@ -40,7 +40,7 @@
                   <node begin="20" cat="conj" end="23" id="34" rel="pc">
                     <node begin="20" cat="pp" end="22" id="35" rel="cnj">
                       <node begin="20" end="21" id="36" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
-                      <node begin="21" end="22" getal="mv" graad="basis" id="37" lemma="vechtpartij" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="vechtpartij" word="vechtpartijen"/>
+                      <node begin="21" end="22" getal="mv" graad="basis" id="37" lemma="vecht_partij" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="vechtpartij" word="vechtpartijen"/>
                     </node>
                     <node begin="22" end="23" id="38" lemma="etc." pos="vg" postag="SPEC(afk)" pt="spec" rel="crd" root="etc." spectype="afk" word="etc."/>
                   </node>
@@ -57,5 +57,5 @@
     </node>
     <node begin="26" end="27" id="42" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Nu het woord aan zo&apos;n jonge Ambonnees uit Hoogkerk , een bijna 18-jarige jongste bediende , die meermalen betrokken was bij vechtpartijen etc. , Benjamin Mainassy .</sentence>
+  <sentence>Nu het woord aan zo&#39;n jonge Ambonnees uit Hoogkerk , een bijna 18-jarige jongste bediende , die meermalen betrokken was bij vechtpartijen etc. , Benjamin Mainassy .</sentence>
 </alpino_ds>

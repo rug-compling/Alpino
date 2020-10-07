@@ -13,7 +13,7 @@
           <node begin="4" end="5" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="5" cat="np" end="7" id="10" rel="obj1">
             <node begin="5" end="6" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-            <node begin="6" end="7" genus="onz" getal="ev" graad="dim" id="12" lemma="nieuwsfilm" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="filmpje" word="nieuwsfilmpje"/>
+            <node begin="6" end="7" genus="onz" getal="ev" graad="dim" id="12" lemma="nieuws_film" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="filmpje" word="nieuwsfilmpje"/>
           </node>
         </node>
         <node begin="7" cat="whsub" end="13" id="13" rel="vc">
@@ -35,14 +35,14 @@
         <node begin="14" end="15" getal="mv" id="25" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
         <node begin="15" end="16" id="26" lemma="zien" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zie" word="zien" wvorm="pv"/>
         <node begin="16" cat="conj" end="19" id="27" index="2" rel="obj1">
-          <node begin="16" end="17" getal="mv" graad="basis" id="28" lemma="tassenrover" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="rover" word="tassenrovers"/>
+          <node begin="16" end="17" getal="mv" graad="basis" id="28" lemma="tas_rover" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="rover" word="tassenrovers"/>
           <node begin="17" conjtype="neven" end="18" id="29" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-          <node begin="18" end="19" getal="mv" graad="basis" id="30" lemma="autodief" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="dief" word="autodieven"/>
+          <node begin="18" end="19" getal="mv" graad="basis" id="30" lemma="auto_dief" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="dief" word="autodieven"/>
         </node>
         <node begin="16" cat="inf" end="25" id="31" rel="vc">
           <node begin="16" end="19" id="32" index="2" rel="su"/>
           <node begin="19" end="20" genus="onz" getal="ev" id="33" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
-          <node begin="20" buiging="zonder" end="21" id="34" lemma="afleggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="leg" word="afleggen" wvorm="inf"/>
+          <node begin="20" buiging="zonder" end="21" id="34" lemma="af_leggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="leg" word="afleggen" wvorm="inf"/>
           <node begin="21" cat="pp" end="25" id="35" rel="pc">
             <node begin="21" end="22" id="36" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
             <node begin="22" cat="np" end="25" id="37" rel="obj1">

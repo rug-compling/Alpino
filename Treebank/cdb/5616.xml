@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="33" id="0" rel="top">
-    <node begin="7" end="8" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="12" end="13" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="7" end="8" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="12" end="13" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="32" id="3" rel="--">
       <node begin="20" end="21" id="4" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
       <node begin="21" cat="np" end="23" id="5" index="1" rel="su">
@@ -61,12 +61,12 @@
           <node begin="29" end="30" id="46" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
           <node begin="30" cat="np" end="32" id="47" rel="obj1">
             <node begin="30" end="31" id="48" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="31" end="32" genus="zijd" getal="ev" graad="basis" id="49" lemma="thema-avond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="thema-avond" word="thema-avond"/>
+            <node begin="31" end="32" genus="zijd" getal="ev" graad="basis" id="49" lemma="thema_avond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="thema-avond" word="thema-avond"/>
           </node>
         </node>
       </node>
     </node>
     <node begin="32" end="33" id="50" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Ondanks de zware concurrentie van de film &quot; Les parapluies de Cherbourg &quot; met Catherine Deneuve op het andere kanaal gaat de VARA het voor de tweede maal proberen met een thema-avond .</sentence>
+  <sentence>Ondanks de zware concurrentie van de film &#34; Les parapluies de Cherbourg &#34; met Catherine Deneuve op het andere kanaal gaat de VARA het voor de tweede maal proberen met een thema-avond .</sentence>
 </alpino_ds>

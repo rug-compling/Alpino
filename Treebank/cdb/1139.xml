@@ -19,7 +19,7 @@
         <node begin="7" cat="ssub" end="33" id="13" rel="body">
           <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="14" index="1" lemma="Israël" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Israel" word="Israel"/>
           <node begin="9" end="10" id="15" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
-          <node begin="10" end="11" id="16" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          <node begin="10" end="11" id="16" lemma="uit_zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
           <node begin="7" cat="pp" end="33" id="17" rel="pc">
             <node begin="8" end="9" id="18" lemma="erop" pos="pp" postag="BW()" pt="bw" rel="hd" root="erop" word="erop"/>
             <node begin="7" cat="conj" end="33" id="19" rel="vc">
@@ -30,7 +30,7 @@
                   <node begin="11" cat="np" end="14" id="24" rel="obj1">
                     <node begin="11" end="12" id="25" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                     <node begin="12" buiging="met-e" end="13" graad="basis" id="26" lemma="Egyptisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Egyptisch" word="Egyptische"/>
-                    <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="27" lemma="defensiesysteem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="systeem" word="defensiesysteem"/>
+                    <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="27" lemma="defensie_systeem" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="systeem" word="defensiesysteem"/>
                   </node>
                   <node begin="15" buiging="zonder" end="16" id="28" lemma="vernietigen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vernietig" word="vernietigen" wvorm="inf"/>
                 </node>
@@ -49,7 +49,7 @@
                       </node>
                       <node begin="20" buiging="met-e" end="21" id="40" lemma="verrichten" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="verricht" word="verrichte" wvorm="vd"/>
                     </node>
-                    <node begin="21" end="22" getal="mv" graad="basis" id="41" lemma="herstelwerkzaamheden" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="werkzaamheden" word="herstelwerkzaamheden"/>
+                    <node begin="21" end="22" getal="mv" graad="basis" id="41" lemma="herstel_werkzaamheid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="werkzaamheden" word="herstelwerkzaamheden"/>
                     <node begin="22" cat="pp" end="30" id="42" rel="mod">
                       <node begin="22" end="23" id="43" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
                       <node begin="23" cat="np" end="30" id="44" rel="obj1">

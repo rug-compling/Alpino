@@ -11,7 +11,7 @@
           <node begin="2" cat="np" end="19" id="8" rel="obj1">
             <node begin="2" end="3" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="3" buiging="met-e" end="4" graad="basis" id="10" lemma="internationaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Internationaal" word="internationale"/>
-            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="consumentenbeurs" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beurs" word="consumentenbeurs"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="consument_beurs" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beurs" word="consumentenbeurs"/>
             <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="12" lemma="Femina" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Femina" word="Femina"/>
             <node begin="7" cat="rel" end="19" id="13" rel="mod">
               <node begin="7" end="8" getal="getal" id="14" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
@@ -69,7 +69,7 @@
                     <node begin="30" end="31" id="54" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                     <node begin="31" cat="np" end="33" id="55" rel="obj1">
                       <node begin="31" end="32" id="56" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                      <node begin="32" end="33" genus="onz" getal="ev" graad="basis" id="57" lemma="beursgebouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebouw" word="beursgebouw"/>
+                      <node begin="32" end="33" genus="onz" getal="ev" graad="basis" id="57" lemma="beurs_gebouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebouw" word="beursgebouw"/>
                     </node>
                   </node>
                 </node>

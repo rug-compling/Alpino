@@ -19,19 +19,19 @@
               <node begin="9" cat="ssub" end="24" id="16" rel="body">
                 <node begin="10" cat="np" end="12" id="17" index="2" rel="su">
                   <node begin="10" end="11" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                  <node begin="11" end="12" getal="mv" graad="basis" id="19" lemma="beerda" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Beerda&apos;s" word="Beerda&apos;s"/>
+                  <node begin="11" end="12" getal="mv" graad="basis" id="19" lemma="beerda" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Beerda&#39;s" word="Beerda&#39;s"/>
                 </node>
                 <node begin="13" end="14" id="20" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
                 <node begin="9" cat="ppart" end="24" id="21" rel="vc">
                   <node begin="9" end="10" id="22" index="1" rel="mod"/>
                   <node begin="10" end="12" id="23" index="2" rel="su"/>
-                  <node begin="12" buiging="zonder" end="13" graad="basis" id="24" lemma="jarenlang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="jarenlang" word="jarenlang"/>
+                  <node begin="12" buiging="zonder" end="13" graad="basis" id="24" lemma="jaar_lang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="jarenlang" word="jarenlang"/>
                   <node begin="14" buiging="zonder" end="15" id="25" lemma="leven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leef" word="geleefd" wvorm="vd"/>
                   <node begin="15" cat="pp" end="24" id="26" rel="mod">
                     <node begin="15" end="16" id="27" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
                     <node begin="16" cat="np" end="24" id="28" rel="obj1">
                       <node begin="16" buiging="zonder" end="17" getal="mv" id="29" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
-                      <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="30" lemma="bovenwoning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="woning" word="bovenwoning"/>
+                      <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="30" lemma="boven_woning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="woning" word="bovenwoning"/>
                       <node begin="18" cat="pp" end="24" id="31" rel="mod">
                         <node begin="18" end="19" id="32" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
                         <node begin="19" cat="np" end="24" id="33" rel="obj1">
@@ -55,5 +55,5 @@
     </node>
     <node begin="24" end="25" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Daarmee komt een einde aan de onhoudbare situatie , waarin de Beerda&apos;s jarenlang hebben geleefd op hun bovenwoning aan de Lage der A 36-a .</sentence>
+  <sentence>Daarmee komt een einde aan de onhoudbare situatie , waarin de Beerda&#39;s jarenlang hebben geleefd op hun bovenwoning aan de Lage der A 36-a .</sentence>
 </alpino_ds>

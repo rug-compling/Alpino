@@ -5,7 +5,7 @@
     <node begin="0" cat="smain" end="23" id="2" rel="--">
       <node begin="0" cat="np" end="2" id="3" index="1" rel="su">
         <node begin="0" buiging="zonder" end="1" id="4" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="Die"/>
-        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="slijtageslag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="slag" word="slijtageslag"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="slijtage_slag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="slag" word="slijtageslag"/>
       </node>
       <node begin="2" end="3" id="6" lemma="schijnen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="schijn" word="scheen" wvorm="pv"/>
       <node begin="0" cat="ti" end="23" id="7" rel="vc">
@@ -21,7 +21,7 @@
             <node begin="7" end="8" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
             <node begin="8" cat="np" end="23" id="17" rel="obj1">
               <node begin="8" end="9" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="19" lemma="kerstvakantie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kerstvakantie" word="kerstvakantie"/>
+              <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="19" lemma="kerst_vakantie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kerstvakantie" word="kerstvakantie"/>
               <node begin="11" cat="cp" end="23" id="20" rel="mod">
                 <node begin="11" conjtype="onder" end="12" id="21" lemma="toen" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="toen" word="toen"/>
                 <node begin="12" cat="ssub" end="23" id="22" rel="body">
@@ -38,7 +38,7 @@
                         <node begin="19" cat="pp" end="23" id="33" rel="mod">
                           <node begin="19" end="20" id="34" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
                           <node begin="20" cat="conj" end="23" id="35" rel="obj1">
-                            <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="36" lemma="onderwijsvernieuwing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="vernieuwing" word="onderwijsvernieuwing"/>
+                            <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="36" lemma="onderwijs_vernieuwing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="vernieuwing" word="onderwijsvernieuwing"/>
                             <node begin="21" conjtype="neven" end="22" id="37" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                             <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="38" lemma="democratisering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="democratisering" word="democratisering"/>
                           </node>

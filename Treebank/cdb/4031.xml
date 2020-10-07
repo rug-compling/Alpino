@@ -7,11 +7,11 @@
         <node begin="1" cat="ap" end="4" id="4" rel="mod">
           <node begin="1" cat="np" end="3" id="5" rel="me">
             <node begin="1" end="2" id="6" lemma="150" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="150" word="150"/>
-            <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="kilometer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kilometer" word="kilometer"/>
+            <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="kilo_meter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kilometer" word="kilometer"/>
           </node>
           <node begin="3" buiging="met-e" end="4" graad="basis" id="8" lemma="breed" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="breed" word="brede"/>
         </node>
-        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="dooizone" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dooizone" word="dooizone"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="dooi_zone" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dooizone" word="dooizone"/>
       </node>
       <node begin="5" end="6" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="0" cat="ppart" end="10" id="11" rel="vc">
@@ -21,7 +21,7 @@
           <node begin="7" buiging="zonder" end="8" getal="mv" id="15" lemma="ons" naamval="stan" npagr="evon" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,zonder,evon)" pt="vnw" rel="det" root="ons" status="vol" vwtype="bez" word="ons"/>
           <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="16" lemma="land" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="land" word="land"/>
         </node>
-        <node begin="9" buiging="zonder" end="10" id="17" lemma="binnentrekken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="trek" word="binnengetrokken" wvorm="vd"/>
+        <node begin="9" buiging="zonder" end="10" id="17" lemma="binnen_trekken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="trek" word="binnengetrokken" wvorm="vd"/>
       </node>
     </node>
     <node begin="10" end="11" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

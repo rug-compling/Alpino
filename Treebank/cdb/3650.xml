@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="22" id="0" rel="top">
-    <node begin="10" end="11" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="12" end="13" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="10" end="11" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="12" end="13" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="21" id="3" rel="--">
       <node begin="0" end="1" getal="ev" id="4" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dit" status="vol" vwtype="aanw" word="Dit"/>
       <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
@@ -22,7 +22,7 @@
                 <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="19" lemma="bezinningscongres" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="congres" word="bezinningscongres"/>
                 <node begin="13" cat="pp" end="15" id="20" rel="mod">
                   <node begin="13" end="14" id="21" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-                  <node begin="14" end="15" id="22" lemma="D&apos;66" pos="noun" postag="SPEC(symb)" pt="spec" rel="obj1" root="D&apos;66" spectype="symb" word="D&apos;66"/>
+                  <node begin="14" end="15" id="22" lemma="D&#39;66" pos="noun" postag="SPEC(symb)" pt="spec" rel="obj1" root="D&#39;66" spectype="symb" word="D&#39;66"/>
                 </node>
                 <node begin="15" cat="rel" end="21" id="23" rel="mod">
                   <node begin="15" end="16" getal="ev" id="24" index="1" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
@@ -50,5 +50,5 @@
     </node>
     <node begin="21" end="22" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Dit is de overtuiging van de overgrote meerderheid van het &quot; bezinningscongres &quot; van D&apos;66 dat zaterdag in Haarlem is gehouden .</sentence>
+  <sentence>Dit is de overtuiging van de overgrote meerderheid van het &#34; bezinningscongres &#34; van D&#39;66 dat zaterdag in Haarlem is gehouden .</sentence>
 </alpino_ds>

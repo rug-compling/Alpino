@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="48" id="0" rel="top">
-    <node begin="6" end="7" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="8" end="9" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="6" end="7" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="8" end="9" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="12" end="13" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="34" end="35" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="47" id="5" rel="--">
@@ -44,7 +44,7 @@
                     <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="37" lemma="commissie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="commissie" word="commissie"/>
                   </node>
                 </node>
-                <node begin="23" end="24" id="38" lemma="aanbieden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="bied" word="aanbood" wvorm="pv"/>
+                <node begin="23" end="24" id="38" lemma="aan_bieden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="bied" word="aanbood" wvorm="pv"/>
               </node>
             </node>
           </node>
@@ -54,14 +54,14 @@
             <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="42" lemma="combinatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="combinatie" word="combinatie"/>
             <node begin="27" cat="pp" end="29" id="43" rel="mod">
               <node begin="27" end="28" id="44" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-              <node begin="28" end="29" getal="mv" graad="basis" id="45" lemma="weermeter" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="meters" word="weermeters"/>
+              <node begin="28" end="29" getal="mv" graad="basis" id="45" lemma="weer_meter" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="meters" word="weermeters"/>
             </node>
             <node begin="29" cat="pp" end="47" id="46" rel="mod">
               <node begin="29" end="30" id="47" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="30" cat="np" end="47" id="48" rel="obj1">
                 <node begin="30" end="31" id="49" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                 <node begin="31" buiging="met-e" end="32" graad="basis" id="50" lemma="bevriend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="bevriend" word="bevriende"/>
-                <node begin="32" end="33" genus="zijd" getal="ev" graad="basis" id="51" lemma="zeilvereniging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vereniging" word="zeilvereniging"/>
+                <node begin="32" end="33" genus="zijd" getal="ev" graad="basis" id="51" lemma="zeil_vereniging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vereniging" word="zeilvereniging"/>
                 <node begin="33" end="34" genus="genus" getal="ev" graad="basis" id="52" lemma="ZVLM" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="ZVLM" word="ZVLM"/>
                 <node begin="35" cat="rel" end="47" id="53" rel="mod">
                   <node begin="35" end="36" getal="getal" id="54" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
@@ -101,5 +101,5 @@
     </node>
     <node begin="47" end="48" id="75" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Het gewenste clubhuis kreeg reeds enig &quot; gezicht &quot; via de klok , die de heer D. de Nijs namens de gemeentelijke commissie aanbood en de combinatie van weermeters van de bevriende zeilvereniging ZVLM , die in het legertje van 102 deelnemers weer bijzonder sterk vertegenwoordigd is .</sentence>
+  <sentence>Het gewenste clubhuis kreeg reeds enig &#34; gezicht &#34; via de klok , die de heer D. de Nijs namens de gemeentelijke commissie aanbood en de combinatie van weermeters van de bevriende zeilvereniging ZVLM , die in het legertje van 102 deelnemers weer bijzonder sterk vertegenwoordigd is .</sentence>
 </alpino_ds>

@@ -7,7 +7,7 @@
       <node begin="8" end="9" id="4" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
       <node begin="10" cat="np" end="19" id="5" index="1" rel="su">
         <node begin="10" end="11" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="11" buiging="met-e" end="12" graad="basis" id="7" lemma="31-jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="31-jarige"/>
+        <node begin="11" buiging="met-e" end="12" graad="basis" id="7" lemma="31_jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="31-jarige"/>
         <node begin="12" cat="mwu" end="15" id="8" rel="hd">
           <node begin="12" end="13" id="9" lemma="mevr." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="mevr." spectype="deeleigen" word="mevr."/>
           <node begin="13" end="14" id="10" lemma="A." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="A." spectype="deeleigen" word="A."/>
@@ -31,7 +31,7 @@
             <node begin="4" cat="pp" end="8" id="24" rel="mod">
               <node begin="4" end="5" id="25" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="5" cat="conj" end="8" id="26" rel="obj1">
-                <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="27" lemma="overspanning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="spanning" word="overspanning"/>
+                <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="27" lemma="over_spanning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="spanning" word="overspanning"/>
                 <node begin="6" conjtype="neven" end="7" id="28" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                 <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="29" lemma="zwaarmoedigheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="zwaarmoedigheid" word="zwaarmoedigheid"/>
               </node>
@@ -57,7 +57,7 @@
           <node begin="27" end="28" id="43" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
           <node begin="28" cat="np" end="32" id="44" rel="obj1">
             <node begin="28" end="29" id="45" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-            <node begin="29" end="30" genus="onz" getal="ev" graad="basis" id="46" lemma="rangeerterrein" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="terrein" word="rangeerterrein"/>
+            <node begin="29" end="30" genus="onz" getal="ev" graad="basis" id="46" lemma="rangeer_terrein" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="terrein" word="rangeerterrein"/>
             <node begin="30" cat="pp" end="32" id="47" rel="mod">
               <node begin="30" end="31" id="48" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="31" end="32" genus="onz" getal="ev" graad="basis" id="49" lemma="Oldenzaal" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Oldenzaal" word="Oldenzaal"/>

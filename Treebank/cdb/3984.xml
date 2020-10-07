@@ -8,7 +8,7 @@
         <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         <node begin="2" cat="np" end="11" id="6" rel="su">
           <node begin="2" end="3" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="8" lemma="stofgehalte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gehalte" word="stofgehalte"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="8" lemma="stof_gehalte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gehalte" word="stofgehalte"/>
           <node begin="4" cat="pp" end="11" id="9" rel="mod">
             <node begin="4" end="5" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="5" cat="np" end="11" id="11" rel="obj1">
@@ -74,7 +74,7 @@
                       <node begin="35" end="36" id="58" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
                       <node begin="34" cat="inf" end="37" id="59" rel="body">
                         <node begin="34" end="35" id="60" lemma="in" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="in" vztype="fin" word="in"/>
-                        <node begin="36" buiging="zonder" end="37" id="61" lemma="ademen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="adem" word="ademen" wvorm="inf"/>
+                        <node begin="36" buiging="zonder" end="37" id="61" lemma="in_ademen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="adem" word="ademen" wvorm="inf"/>
                       </node>
                     </node>
                     <node begin="37" end="38" genus="zijd" getal="ev" graad="basis" id="62" lemma="lucht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="lucht" word="lucht"/>

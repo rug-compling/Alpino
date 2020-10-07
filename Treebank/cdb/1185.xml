@@ -12,7 +12,7 @@
           <node begin="15" end="16" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="16" cat="np" end="21" id="10" rel="obj1">
             <node begin="16" end="17" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="12" lemma="vliegbasis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vliegbasis" word="vliegbasis"/>
+            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="12" lemma="vlieg_basis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vliegbasis" word="vliegbasis"/>
             <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="13" lemma="Volkel" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Volkel" word="Volkel"/>
             <node begin="20" end="21" id="14" lemma="n.-br." pos="noun" postag="SPEC(afgebr)" pt="spec" rel="mod" root="N.-Br." spectype="afgebr" word="N.-Br."/>
           </node>
@@ -29,7 +29,7 @@
               <node begin="4" cat="np" end="7" id="23" rel="obj1">
                 <node begin="4" end="5" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                 <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="25" lemma="spoorbaan" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="spoorbaan" word="spoorbaan"/>
-                <node begin="6" buiging="zonder" end="7" graad="basis" id="26" lemma="meppel-steenwijk" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="app" root="Meppel-Steenwijk" word="Meppel-Steenwijk"/>
+                <node begin="6" buiging="zonder" end="7" graad="basis" id="26" lemma="meppel_steenwijk" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="app" root="Meppel-Steenwijk" word="Meppel-Steenwijk"/>
               </node>
             </node>
           </node>
@@ -44,7 +44,7 @@
           </node>
         </node>
         <node begin="13" end="21" id="34" index="1" rel="su"/>
-        <node begin="22" buiging="zonder" end="23" id="35" lemma="neerstorten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stort" word="neergestort" wvorm="vd"/>
+        <node begin="22" buiging="zonder" end="23" id="35" lemma="neer_storten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stort" word="neergestort" wvorm="vd"/>
       </node>
     </node>
     <node begin="23" end="24" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

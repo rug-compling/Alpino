@@ -18,14 +18,14 @@
             <node begin="6" cat="np" end="18" id="14" rel="obj1">
               <node begin="6" end="7" id="15" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
               <node begin="7" buiging="met-e" end="8" graad="basis" id="16" lemma="ernstig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ernstig" word="ernstige"/>
-              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="17" lemma="voetblessure" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="blessure" word="voetblessure"/>
+              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="17" lemma="voet_blessure" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="blessure" word="voetblessure"/>
               <node begin="9" cat="rel" end="18" id="18" rel="mod">
                 <node begin="9" end="10" id="19" index="2" lemma="waardoor" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waardoor" word="waardoor"/>
                 <node begin="9" cat="ssub" end="18" id="20" rel="body">
                   <node begin="9" end="10" id="21" index="2" rel="mod"/>
                   <node begin="10" cat="np" end="12" id="22" rel="su">
                     <node begin="10" end="11" id="23" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                    <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="24" lemma="atletiekseizoen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="seizoen" word="atletiekseizoen"/>
+                    <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="24" lemma="atletiek_seizoen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="seizoen" word="atletiekseizoen"/>
                   </node>
                   <node begin="12" cat="advp" end="14" id="25" rel="mod">
                     <node begin="12" end="13" id="26" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="hd" root="nu" word="nu"/>
@@ -45,7 +45,7 @@
       </node>
       <node begin="19" cat="smain" end="27" id="33" rel="dp">
         <node begin="19" end="20" genus="genus" getal="ev" graad="basis" id="34" lemma="Smeman" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="su" root="Smeman" word="Smeman"/>
-        <node begin="20" end="21" id="35" lemma="vallen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="val" word="viel" wvorm="pv"/>
+        <node begin="20" end="21" id="35" lemma="mee_vallen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="val" word="viel" wvorm="pv"/>
         <node begin="21" cat="pp" end="25" id="36" rel="mod">
           <node begin="21" end="22" id="37" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
           <node begin="22" cat="np" end="25" id="38" rel="obj1">

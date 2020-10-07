@@ -4,12 +4,12 @@
     <node begin="0" cat="smain" end="9" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
         <node begin="0" buiging="met-e" end="1" graad="basis" id="3" lemma="schril" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="schrille" word="Schrille"/>
-        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="fluitconcert" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="concerten" word="fluitconcerten"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="fluit_concert" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="concerten" word="fluitconcerten"/>
       </node>
       <node begin="2" end="3" id="5" lemma="maken" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="maak" word="maakten" wvorm="pv"/>
       <node begin="3" cat="pp" end="5" id="6" rel="pc">
         <node begin="3" end="4" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-        <node begin="4" end="5" genus="genus" getal="ev" graad="basis" id="8" lemma="Houtrust" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Houtrust" word="Houtrust"/>
+        <node begin="4" end="5" genus="genus" getal="ev" graad="basis" id="8" lemma="Hout_rust" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Houtrust" word="Houtrust"/>
       </node>
       <node begin="5" cat="np" end="9" id="9" rel="obj1">
         <node begin="5" end="6" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>

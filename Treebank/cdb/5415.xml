@@ -4,7 +4,7 @@
     <node begin="0" cat="smain" end="21" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" rel="su">
         <node begin="0" end="1" id="3" lemma="vier" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="vier" word="Vier"/>
-        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="kilometer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kilometer" word="kilometer"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="kilo_meter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kilometer" word="kilometer"/>
         <node begin="2" buiging="zonder" end="3" id="5" lemma="harddraven" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="mod" root="draaf" word="harddraven" wvorm="inf"/>
       </node>
       <node begin="3" end="4" id="6" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
@@ -29,7 +29,7 @@
                   <node begin="11" cat="np" end="14" id="24" rel="obj1">
                     <node begin="11" end="12" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                     <node begin="12" buiging="met-e" end="13" graad="basis" id="26" lemma="geheel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="geheel" word="gehele"/>
-                    <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="27" lemma="drafsportwereld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wereld" word="drafsportwereld"/>
+                    <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="27" lemma="draf_sport_wereld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wereld" word="drafsportwereld"/>
                   </node>
                 </node>
                 <node begin="15" buiging="zonder" end="16" id="28" lemma="beschouwen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="beschouw" word="beschouwd" wvorm="vd"/>

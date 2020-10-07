@@ -8,7 +8,7 @@
       <node begin="1" cat="np" end="22" id="5" rel="obj1">
         <node begin="1" end="2" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="2" buiging="met-e" end="3" graad="basis" id="7" lemma="permanent" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="permanent" word="permanente"/>
-        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="mandekking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dekking" word="mandekking"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="man_dekking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dekking" word="mandekking"/>
         <node begin="4" cat="pp" end="8" id="9" rel="mod">
           <node begin="4" end="5" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="5" cat="np" end="8" id="11" rel="obj1">
@@ -21,7 +21,7 @@
           <node begin="9" cat="conj" end="17" id="16" rel="su">
             <node begin="9" end="10" genus="genus" getal="ev" graad="basis" id="17" lemma="Scaratti-Ressel" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="cnj" root="Scaratti-Ressel" word="Scaratti-Ressel"/>
             <node begin="11" cat="mwu" end="14" id="18" rel="cnj">
-              <node begin="11" end="12" id="19" lemma="Bet-Van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bet-Van" spectype="deeleigen" word="Bet-Van"/>
+              <node begin="11" end="12" id="19" lemma="Bet_Van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bet-Van" spectype="deeleigen" word="Bet-Van"/>
               <node begin="12" end="13" id="20" lemma="de" lwtype="bep" naamval="gen" npagr="rest3" pos="noun" postag="LID(bep,gen,rest3)" pt="lid" rel="mwp" root="der" word="der"/>
               <node begin="13" end="14" getal="mv" graad="basis" id="21" lemma="kuylen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Kuylen" word="Kuylen"/>
             </node>
@@ -34,7 +34,7 @@
           <node begin="17" end="18" id="26" lemma="vormen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="vorm" word="vormden" wvorm="pv"/>
           <node begin="18" cat="ppres" end="20" id="27" rel="mod">
             <node begin="18" end="19" id="28" lemma="bijna" pos="adv" postag="BW()" pt="bw" rel="mod" root="bijna" word="bijna"/>
-            <node begin="19" buiging="zonder" end="20" graad="basis" id="29" lemma="voortdurend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="voortdurend" word="voortdurend"/>
+            <node begin="19" buiging="zonder" end="20" graad="basis" id="29" lemma="voort_durend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="voortdurend" word="voortdurend"/>
           </node>
           <node begin="20" cat="np" end="22" id="30" rel="obj1">
             <node begin="20" buiging="met-e" end="21" graad="basis" id="31" lemma="onafscheidelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="onafscheidelijk" word="onafscheidelijke"/>

@@ -6,15 +6,15 @@
     <node begin="18" end="19" id="3" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
     <node begin="24" end="25" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="34" end="35" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="40" end="41" id="6" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="42" end="43" id="7" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="40" end="41" id="6" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="42" end="43" id="7" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="48" id="8" rel="--">
       <node begin="0" end="1" getal="ev" id="9" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dat" status="vol" vwtype="aanw" word="Dat"/>
       <node begin="1" end="2" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
       <node begin="2" end="3" id="11" lemma="bijvoorbeeld" pos="adv" postag="BW()" pt="bw" rel="mod" root="bijvoorbeeld" word="bijvoorbeeld"/>
       <node begin="3" cat="np" end="7" id="12" rel="predc">
         <node begin="3" buiging="met-e" end="4" graad="basis" id="13" lemma="zwart" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="zwart" word="zwarte"/>
-        <node begin="4" end="5" getal="mv" graad="basis" id="14" lemma="lakschoen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="schoen" word="lakschoenen"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="14" lemma="lak_schoen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="schoen" word="lakschoenen"/>
         <node begin="5" cat="pp" end="7" id="15" rel="mod">
           <node begin="5" end="6" id="16" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="6" end="7" genus="genus" getal="ev" graad="basis" id="17" lemma="Cardin" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Cardin" word="Cardin"/>
@@ -34,7 +34,7 @@
               </node>
               <node begin="16" cat="ap" end="18" id="29" rel="dp">
                 <node begin="16" end="17" id="30" lemma="soms" pos="adv" postag="BW()" pt="bw" rel="mod" root="soms" word="soms"/>
-                <node begin="17" buiging="zonder" end="18" graad="basis" id="31" lemma="cirkelvormig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="cirkelvormig" word="cirkelvormig"/>
+                <node begin="17" buiging="zonder" end="18" graad="basis" id="31" lemma="cirkel_vormig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="cirkelvormig" word="cirkelvormig"/>
               </node>
             </node>
             <node begin="19" cat="conj" end="48" id="32" index="3" rel="mod">
@@ -54,7 +54,7 @@
                         <node begin="28" end="29" genus="zijd" getal="ev" graad="basis" id="46" lemma="pc" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="app" root="PC" word="PC"/>
                         <node begin="29" cat="pp" end="32" id="47" rel="mod">
                           <node begin="29" end="30" id="48" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
-                          <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="49" lemma="onherkenbaarheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="onherkenbaarheid" word="onherkenbaarheid"/>
+                          <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="49" lemma="on_herkenbaarheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="onherkenbaarheid" word="onherkenbaarheid"/>
                           <node begin="31" end="32" id="50" lemma="toe" pos="part" postag="VZ(fin)" pt="vz" rel="hdf" root="toe" vztype="fin" word="toe"/>
                         </node>
                       </node>
@@ -85,7 +85,7 @@
                   </node>
                   <node begin="46" cat="pp" end="48" id="69" rel="mod">
                     <node begin="46" end="47" id="70" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-                    <node begin="47" end="48" genus="zijd" getal="ev" graad="basis" id="71" lemma="zilvermetaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="metaal" word="zilvermetaal"/>
+                    <node begin="47" end="48" genus="zijd" getal="ev" graad="basis" id="71" lemma="zilver_metaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="metaal" word="zilvermetaal"/>
                   </node>
                 </node>
               </node>
@@ -102,5 +102,5 @@
     </node>
     <node begin="48" end="49" id="77" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Dat zijn bijvoorbeeld zwarte lakschoenen van Cardin , met bijpassende ceintuurs en tassen - deze laatsten soms cirkelvormig - met een markante blinkende gesp , waarin het monogram PC tot onherkenbaarheid toe is gevarieerd , of met een groot bol &quot; oog &quot; van glashelder plastic in zilvermetaal .</sentence>
+  <sentence>Dat zijn bijvoorbeeld zwarte lakschoenen van Cardin , met bijpassende ceintuurs en tassen - deze laatsten soms cirkelvormig - met een markante blinkende gesp , waarin het monogram PC tot onherkenbaarheid toe is gevarieerd , of met een groot bol &#34; oog &#34; van glashelder plastic in zilvermetaal .</sentence>
 </alpino_ds>

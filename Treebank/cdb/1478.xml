@@ -6,7 +6,7 @@
       <node begin="0" cat="np" end="7" id="3" rel="su">
         <node begin="0" end="1" id="4" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
         <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="Rotterdams" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Rotterdams" word="Rotterdamse"/>
-        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="6" lemma="afdelingsbestuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bestuur" word="afdelingsbestuur"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="6" lemma="afdeling_bestuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bestuur" word="afdelingsbestuur"/>
         <node begin="3" cat="pp" end="7" id="7" rel="mod">
           <node begin="3" end="4" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="4" cat="np" end="7" id="9" rel="obj1">
@@ -52,12 +52,12 @@
                   </node>
                 </node>
               </node>
-              <node begin="25" buiging="zonder" end="26" id="42" lemma="afdragen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="draag" word="afdragen" wvorm="inf"/>
+              <node begin="25" buiging="zonder" end="26" id="42" lemma="af_dragen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="draag" word="afdragen" wvorm="inf"/>
               <node begin="26" cat="pp" end="32" id="43" rel="obj2">
                 <node begin="26" end="27" id="44" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
                 <node begin="27" cat="np" end="32" id="45" rel="obj1">
                   <node begin="27" end="28" id="46" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                  <node begin="28" end="29" genus="onz" getal="ev" graad="basis" id="47" lemma="hoofdbestuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="hoofdbestuur" word="hoofdbestuur"/>
+                  <node begin="28" end="29" genus="onz" getal="ev" graad="basis" id="47" lemma="hoofd_bestuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="hoofdbestuur" word="hoofdbestuur"/>
                   <node begin="29" cat="pp" end="32" id="48" rel="mod">
                     <node begin="29" end="30" id="49" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                     <node begin="30" cat="np" end="32" id="50" rel="obj1">

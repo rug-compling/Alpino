@@ -38,7 +38,7 @@
                 <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="30" lemma="manier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="manier" word="manier"/>
               </node>
             </node>
-            <node begin="16" buiging="zonder" end="17" id="31" lemma="samenhangen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="hang" word="samenhangen" wvorm="inf"/>
+            <node begin="16" buiging="zonder" end="17" id="31" lemma="samen_hangen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="hang" word="samenhangen" wvorm="inf"/>
             <node begin="17" cat="pp" end="26" id="32" rel="pc">
               <node begin="17" end="18" id="33" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
               <node begin="18" cat="np" end="26" id="34" rel="obj1">
@@ -47,13 +47,13 @@
                   <node begin="19" end="20" id="37" lemma="eveneens" pos="adv" postag="BW()" pt="bw" rel="mod" root="eveneens" word="eveneens"/>
                   <node begin="20" buiging="zonder" end="21" graad="comp" id="38" lemma="weinig" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="hd" root="min" vwtype="onbep" word="minder"/>
                 </node>
-                <node begin="21" buiging="zonder" end="22" id="39" lemma="voorkomen" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voorkomen" word="voorkomen" wvorm="inf"/>
+                <node begin="21" buiging="zonder" end="22" id="39" lemma="voor_komen" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voorkomen" word="voorkomen" wvorm="inf"/>
                 <node begin="22" cat="pp" end="26" id="40" rel="mod">
                   <node begin="22" end="23" id="41" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                   <node begin="23" cat="mwu" end="26" id="42" rel="obj1">
                     <node begin="23" end="24" id="43" lemma="hart-" pos="noun" postag="SPEC(afgebr)" pt="spec" rel="mwp" root="hart-" spectype="afgebr" word="hart-"/>
                     <node begin="24" conjtype="neven" end="25" id="44" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
-                    <node begin="25" end="26" getal="mv" graad="basis" id="45" lemma="vaatziekte" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="vaatziekte" word="vaatziekten"/>
+                    <node begin="25" end="26" getal="mv" graad="basis" id="45" lemma="vaat_ziekte" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="vaatziekte" word="vaatziekten"/>
                   </node>
                 </node>
               </node>
@@ -63,7 +63,7 @@
       </node>
       <node begin="27" cat="smain" end="37" id="46" rel="tag">
         <node begin="27" end="28" id="47" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="vc" root="zo" word="zo"/>
-        <node begin="28" end="29" id="48" lemma="zetten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zet" word="zet" wvorm="pv"/>
+        <node begin="28" end="29" id="48" lemma="uiteen_zetten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zet" word="zet" wvorm="pv"/>
         <node begin="29" cat="np" end="31" id="49" rel="su">
           <node begin="29" end="30" genus="zijd" getal="ev" graad="basis" id="50" lemma="dokter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dokter" word="dokter"/>
           <node begin="30" end="31" genus="genus" getal="ev" graad="basis" id="51" lemma="Elwood" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Elwood" word="Elwood"/>

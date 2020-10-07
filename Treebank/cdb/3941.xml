@@ -6,7 +6,7 @@
       <node begin="0" cat="np" end="3" id="3" rel="su">
         <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
         <node begin="1" buiging="zonder" end="2" id="5" lemma="aftreden" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="mod" root="afgetreden" word="afgetreden" wvorm="vd"/>
-        <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="bestuurslid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bestuurslid" word="bestuursleden"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="bestuur_lid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bestuurslid" word="bestuursleden"/>
       </node>
       <node begin="3" end="4" id="7" lemma="richten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="richt" word="richten" wvorm="pv"/>
       <node begin="4" end="5" getal="getal" id="8" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="zich" status="red" vwtype="refl" word="zich"/>
@@ -32,7 +32,7 @@
                     <node begin="16" cat="np" end="19" id="27" rel="obj1">
                       <node begin="16" end="17" id="28" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                       <node begin="17" buiging="zonder" end="18" graad="basis" id="29" lemma="landelijk" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="landelijk" word="landelijk"/>
-                      <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="30" lemma="partijbestuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="partijbestuur" word="partijbestuur"/>
+                      <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="30" lemma="partij_bestuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="partijbestuur" word="partijbestuur"/>
                     </node>
                   </node>
                   <node begin="19" cat="pp" end="23" id="31" rel="mod">
@@ -43,10 +43,10 @@
                       <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="36" lemma="weekeinde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="weekeinde" word="weekeinde"/>
                     </node>
                   </node>
-                  <node begin="23" buiging="zonder" end="24" id="37" lemma="afzetten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="afgezet" word="afgezet" wvorm="vd"/>
+                  <node begin="23" buiging="zonder" end="24" id="37" lemma="af_zetten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="afgezet" word="afgezet" wvorm="vd"/>
                   <node begin="24" cat="cp" end="26" id="38" rel="mod">
                     <node begin="24" end="25" id="39" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
-                    <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="40" lemma="propagandaleider" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="leider" word="propagandaleider"/>
+                    <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="40" lemma="propaganda_leider" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="leider" word="propagandaleider"/>
                   </node>
                 </node>
               </node>
@@ -64,7 +64,7 @@
                 </node>
                 <node begin="30" cat="np" end="39" id="51" rel="obj1">
                   <node begin="30" end="31" id="52" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                  <node begin="31" end="32" genus="onz" getal="ev" graad="basis" id="53" lemma="oorlogsverleden" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verleden" word="oorlogsverleden"/>
+                  <node begin="31" end="32" genus="onz" getal="ev" graad="basis" id="53" lemma="oorlog_verleden" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verleden" word="oorlogsverleden"/>
                   <node begin="32" cat="pp" end="39" id="54" rel="mod">
                     <node begin="32" end="33" id="55" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                     <node begin="33" cat="np" end="39" id="56" rel="obj1">

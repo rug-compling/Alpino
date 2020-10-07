@@ -5,7 +5,7 @@
     <node begin="0" cat="smain" end="33" id="2" rel="--">
       <node begin="0" cat="np" end="8" id="3" rel="su">
         <node begin="0" end="1" id="4" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
-        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="giro-apparaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="apparaat" word="giro-apparaat"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="giro_apparaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="apparaat" word="giro-apparaat"/>
         <node begin="2" cat="rel" end="8" id="6" rel="mod">
           <node begin="2" end="3" getal="ev" id="7" index="1" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
           <node begin="2" cat="ssub" end="8" id="8" rel="body">
@@ -42,12 +42,12 @@
           <node begin="17" end="18" id="30" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
           <node begin="16" cat="inf" end="33" id="31" rel="body">
             <node begin="16" end="17" id="32" lemma="over" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="over" vztype="fin" word="over"/>
-            <node begin="18" buiging="zonder" end="19" id="33" lemma="gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="gaan" wvorm="inf"/>
+            <node begin="18" buiging="zonder" end="19" id="33" lemma="over_gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="gaan" wvorm="inf"/>
             <node begin="19" cat="pp" end="22" id="34" rel="pc">
               <node begin="19" end="20" id="35" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
               <node begin="20" cat="np" end="22" id="36" rel="obj1">
                 <node begin="20" end="21" id="37" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="38" lemma="rentevergoeding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vergoeding" word="rentevergoeding"/>
+                <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="38" lemma="rente_vergoeding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vergoeding" word="rentevergoeding"/>
               </node>
             </node>
             <node begin="22" cat="pp" end="33" id="39" rel="mod">
@@ -65,13 +65,13 @@
                       <node begin="27" buiging="zonder" end="28" graad="basis" id="50" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="hd" root="veel" vwtype="onbep" word="veel"/>
                     </node>
                     <node begin="28" buiging="met-e" end="29" graad="basis" id="51" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
-                    <node begin="29" end="30" getal="mv" graad="basis" id="52" lemma="arbeidskosten" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kosten" word="arbeidskosten"/>
+                    <node begin="29" end="30" getal="mv" graad="basis" id="52" lemma="arbeid_kosten" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kosten" word="arbeidskosten"/>
                   </node>
                   <node begin="30" cat="pp" end="32" id="53" rel="pc">
                     <node begin="30" end="31" id="54" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
                     <node begin="31" end="32" getal="getal" id="55" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
                   </node>
-                  <node begin="32" end="33" id="56" lemma="meebrengen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="breng" word="meebrengt" wvorm="pv"/>
+                  <node begin="32" end="33" id="56" lemma="mee_brengen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="breng" word="meebrengt" wvorm="pv"/>
                 </node>
               </node>
             </node>

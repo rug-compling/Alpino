@@ -69,7 +69,7 @@
         <node begin="29" cat="np" end="42" id="50" rel="predc">
           <node begin="29" end="30" id="51" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="30" buiging="met-e" end="31" graad="basis" id="52" lemma="Nederlands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Nederlands" word="Nederlandse"/>
-          <node begin="31" end="32" genus="zijd" getal="ev" graad="basis" id="53" lemma="handelsagent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="agent" word="handelsagent"/>
+          <node begin="31" end="32" genus="zijd" getal="ev" graad="basis" id="53" lemma="handel_agent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="agent" word="handelsagent"/>
           <node begin="32" cat="pp" end="42" id="54" rel="mod">
             <node begin="32" end="33" id="55" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="33" cat="np" end="42" id="56" rel="obj1">
@@ -81,10 +81,10 @@
                 <node begin="38" cat="pp" end="42" id="62" rel="mod">
                   <node begin="38" end="39" id="63" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                   <node begin="39" cat="np" end="42" id="64" rel="obj1">
-                    <node begin="39" end="40" getal="mv" graad="basis" id="65" lemma="lakenhoes" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="hoes" word="lakenhoezen"/>
+                    <node begin="39" end="40" getal="mv" graad="basis" id="65" lemma="laken_hoes" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="hoes" word="lakenhoezen"/>
                     <node begin="40" cat="pp" end="42" id="66" rel="mod">
                       <node begin="40" end="41" id="67" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-                      <node begin="41" end="42" getal="mv" graad="basis" id="68" lemma="donsdeken" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="deken" word="donsdekens"/>
+                      <node begin="41" end="42" getal="mv" graad="basis" id="68" lemma="dons_deken" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="deken" word="donsdekens"/>
                     </node>
                   </node>
                 </node>

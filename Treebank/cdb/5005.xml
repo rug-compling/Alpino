@@ -5,7 +5,7 @@
       <node begin="0" cat="np" end="3" id="2" index="1" rel="su">
         <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
         <node begin="1" buiging="met-e" end="2" graad="basis" id="4" lemma="noordvietnamees" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Noordvietnamese" word="Noordvietnamese"/>
-        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="persbureau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bureau" word="persbureau"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="pers_bureau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bureau" word="persbureau"/>
       </node>
       <node begin="3" end="4" id="6" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
       <node begin="0" cat="ppart" end="19" id="7" rel="vc">
@@ -28,7 +28,7 @@
                   <node begin="10" end="11" id="23" lemma="boven" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="boven" vztype="init" word="boven"/>
                   <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="24" lemma="Noord-Vietnam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Noord-Vietnam" word="Noord-Vietnam"/>
                 </node>
-                <node begin="13" buiging="zonder" end="14" id="25" lemma="neerschieten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schiet" word="neergeschoten" wvorm="vd"/>
+                <node begin="13" buiging="zonder" end="14" id="25" lemma="neer_schieten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schiet" word="neergeschoten" wvorm="vd"/>
               </node>
             </node>
             <node begin="14" conjtype="neven" end="15" id="26" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>

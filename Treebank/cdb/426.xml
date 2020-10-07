@@ -22,7 +22,7 @@
             <node begin="9" buiging="zonder" end="10" graad="basis" id="17" lemma="moedeloos" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predm" root="moedeloos" word="moedeloos"/>
             <node begin="12" buiging="zonder" end="13" id="18" lemma="hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb" word="hebben" wvorm="inf"/>
             <node begin="10" cat="ppart" end="22" id="19" rel="vc">
-              <node begin="10" buiging="zonder" end="11" id="20" lemma="vaststellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="vastgesteld" wvorm="vd"/>
+              <node begin="10" buiging="zonder" end="11" id="20" lemma="vast_stellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="vastgesteld" wvorm="vd"/>
               <node begin="13" cat="cp" end="22" id="21" rel="vc">
                 <node begin="13" conjtype="onder" end="14" id="22" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
                 <node begin="14" cat="ssub" end="22" id="23" rel="body">
@@ -31,12 +31,12 @@
                     <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="26" lemma="soldaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="soldaat" word="soldaat"/>
                     <node begin="16" cat="pp" end="18" id="27" rel="mod">
                       <node begin="16" end="17" id="28" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-                      <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="29" lemma="vredestijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="vredestijd" word="vredestijd"/>
+                      <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="29" lemma="vrede_tijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="vredestijd" word="vredestijd"/>
                     </node>
                   </node>
                   <node begin="18" cat="np" end="21" id="30" rel="predc">
                     <node begin="18" end="19" id="31" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                    <node begin="19" buiging="zonder" end="20" graad="basis" id="32" lemma="onnuttig" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="nuttig" word="onnuttig"/>
+                    <node begin="19" buiging="zonder" end="20" graad="basis" id="32" lemma="on_nuttig" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="nuttig" word="onnuttig"/>
                     <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="33" lemma="ding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="ding" word="ding"/>
                   </node>
                   <node begin="21" end="22" id="34" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>

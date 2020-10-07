@@ -9,11 +9,11 @@
         <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="6" lemma="stadhuis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stadhuis" word="stadhuis"/>
         <node begin="2" cat="pp" end="4" id="7" rel="mod">
           <node begin="2" end="3" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="&quot;d&quot;-niveau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="niveau" word="&quot;D&quot;-niveau"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="D_niveau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="niveau" word="&#34;D&#34;-niveau"/>
         </node>
       </node>
       <node begin="5" cat="du" end="9" id="10" rel="dp">
-        <node begin="5" end="6" getal="mv" graad="basis" id="11" lemma="bouwkosten" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="dp" root="kost" word="bouwkosten"/>
+        <node begin="5" end="6" getal="mv" graad="basis" id="11" lemma="bouw_kost" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="dp" root="kost" word="bouwkosten"/>
         <node begin="6" cat="mwu" end="9" id="12" rel="dp">
           <node begin="6" end="7" getal="mv" graad="basis" id="13" lemma="flo" ntype="soort" pos="num" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="flo" word="flo"/>
           <node begin="7" end="8" id="14" lemma="19" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="19" word="19"/>
@@ -31,5 +31,5 @@
     </node>
     <node begin="14" end="15" id="22" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" word=";"/>
   </node>
-  <sentence>Een stadhuis van &quot;D&quot;-niveau , bouwkosten flo 19 miljoen , inrichting flo 5.4 miljoen ;</sentence>
+  <sentence>Een stadhuis van &#34;D&#34;-niveau , bouwkosten flo 19 miljoen , inrichting flo 5.4 miljoen ;</sentence>
 </alpino_ds>

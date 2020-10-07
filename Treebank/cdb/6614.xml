@@ -33,7 +33,7 @@
                         <node begin="11" end="12" id="28" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
                         <node begin="12" end="13" getal="mv" id="29" lemma="elkaar" naamval="obl" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="obj1" root="elkaar" status="vol" vwtype="recip" word="elkaar"/>
                       </node>
-                      <node begin="14" buiging="zonder" end="15" id="30" lemma="meedelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="deel" word="meedelen" wvorm="inf"/>
+                      <node begin="14" buiging="zonder" end="15" id="30" lemma="mee_delen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="deel" word="meedelen" wvorm="inf"/>
                     </node>
                   </node>
                 </node>
@@ -44,7 +44,7 @@
               <node begin="6" end="15" id="33" index="2" rel="obj1"/>
               <node begin="15" cat="pp" end="17" id="34" rel="ld">
                 <node begin="15" end="16" id="35" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
-                <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="36" lemma="muziekpapier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="papier" word="muziekpapier"/>
+                <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="36" lemma="muziek_papier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="papier" word="muziekpapier"/>
               </node>
               <node begin="17" buiging="zonder" end="18" id="37" lemma="schrijven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schrijf" word="geschreven" wvorm="vd"/>
             </node>
@@ -69,9 +69,9 @@
             <node begin="27" end="28" getal="getal" id="51" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="ld" root="er" status="red" vwtype="aanw" word="er"/>
             <node begin="28" cat="cp" end="30" id="52" rel="predm">
               <node begin="28" end="29" id="53" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
-              <node begin="29" end="30" genus="onz" getal="ev" graad="basis" id="54" lemma="luistergeld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="body" root="geld" word="luistergeld"/>
+              <node begin="29" end="30" genus="onz" getal="ev" graad="basis" id="54" lemma="luister_geld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="body" root="geld" word="luistergeld"/>
             </node>
-            <node begin="30" end="31" id="55" lemma="instoppen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="stop" word="instoppen" wvorm="pv"/>
+            <node begin="30" end="31" id="55" lemma="in_stoppen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="stop" word="instoppen" wvorm="pv"/>
           </node>
         </node>
       </node>

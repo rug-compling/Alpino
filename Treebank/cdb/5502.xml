@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="23" id="0" rel="top">
-    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" end="1" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="1" end="2" id="2" lemma="...." pos="punct" postag="LET()" pt="let" rel="--" root="...." word="...."/>
     <node begin="2" cat="smain" end="22" id="3" rel="--">
       <node begin="2" end="3" id="4" lemma="dienen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="dien" word="diende" wvorm="pv"/>
@@ -25,7 +25,7 @@
                     <node begin="11" end="12" id="21" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                     <node begin="12" cat="np" end="14" id="22" rel="obj1">
                       <node begin="12" end="13" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                      <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="24" lemma="binnenstad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="binnenstad" word="binnenstad"/>
+                      <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="24" lemma="binnen_stad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="binnenstad" word="binnenstad"/>
                     </node>
                   </node>
                 </node>
@@ -49,5 +49,5 @@
     </node>
     <node begin="22" end="23" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>&quot; .... diende in aanmerking te worden genomen dat dit deel van de binnenstad ook op zichzelf reeds een betere ontsluiting behoefde .</sentence>
+  <sentence>&#34; .... diende in aanmerking te worden genomen dat dit deel van de binnenstad ook op zichzelf reeds een betere ontsluiting behoefde .</sentence>
 </alpino_ds>

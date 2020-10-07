@@ -37,7 +37,7 @@
             <node begin="12" buiging="met-e" end="13" id="28" lemma="vestigen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="gevestigd" word="gevestigde" wvorm="vd"/>
           </node>
           <node begin="13" buiging="met-e" end="14" graad="basis" id="29" lemma="absoluut" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="absoluut" word="absolute"/>
-          <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="30" lemma="baanrecord" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="record" word="baanrecord"/>
+          <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="30" lemma="baan_record" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="record" word="baanrecord"/>
           <node begin="16" cat="np" end="20" id="31" rel="mod">
             <node begin="16" end="17" id="32" lemma="258.3" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="258.3" word="258.3"/>
             <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="33" lemma="km" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kilometer" word="km"/>
@@ -88,7 +88,7 @@
               <node begin="38" cat="inf" end="48" id="67" rel="body">
                 <node begin="38" end="40" id="68" index="2" rel="su"/>
                 <node begin="41" end="42" id="69" lemma="terug" pos="part" postag="BW()" pt="bw" rel="svp" root="terug" word="terug"/>
-                <node begin="43" buiging="zonder" end="44" id="70" lemma="schakelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="schakel" word="schakelen" wvorm="inf"/>
+                <node begin="43" buiging="zonder" end="44" id="70" lemma="terug_schakelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="schakel" word="schakelen" wvorm="inf"/>
                 <node begin="44" cat="pp" end="48" id="71" rel="ld">
                   <node begin="44" end="45" id="72" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
                   <node begin="45" cat="np" end="48" id="73" rel="obj1">

@@ -3,7 +3,7 @@
   <node begin="0" cat="top" end="26" id="0" rel="top">
     <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="7" end="8" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="8" end="9" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="8" end="9" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="20" end="21" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="du" end="25" id="5" rel="--">
       <node begin="2" cat="smain" end="7" id="6" rel="tag">
@@ -43,7 +43,7 @@
                     </node>
                   </node>
                 </node>
-                <node begin="19" end="20" id="36" lemma="aangaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="aangaat" wvorm="pv"/>
+                <node begin="19" end="20" id="36" lemma="aan_gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="aangaat" wvorm="pv"/>
               </node>
             </node>
             <node begin="21" end="22" id="37" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
@@ -58,5 +58,5 @@
     </node>
     <node begin="25" end="26" id="42" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Neen , zo zegt de heer Duynstee , &quot; wij in Nederland moeten wat de kwestie van de opvolging aangaat , nog heel wat leren .</sentence>
+  <sentence>Neen , zo zegt de heer Duynstee , &#34; wij in Nederland moeten wat de kwestie van de opvolging aangaat , nog heel wat leren .</sentence>
 </alpino_ds>

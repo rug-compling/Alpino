@@ -30,19 +30,19 @@
               </node>
             </node>
             <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="24" lemma="stop" naamval="stan" ntype="soort" pos="part" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="svp" root="stop" word="stop"/>
-            <node begin="14" buiging="zonder" end="15" id="25" lemma="zetten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zet" word="zetten" wvorm="inf"/>
+            <node begin="14" buiging="zonder" end="15" id="25" lemma="stop_zetten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zet" word="zetten" wvorm="inf"/>
             <node begin="16" cat="cp" end="22" id="26" rel="mod">
               <node begin="16" conjtype="onder" end="17" id="27" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
               <node begin="17" cat="ssub" end="22" id="28" rel="body">
                 <node begin="17" cat="np" end="19" id="29" index="1" rel="su">
                   <node begin="17" end="18" id="30" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                  <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="31" lemma="el-al-bemanning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bemanning" word="EL-AL-bemanning"/>
+                  <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="31" lemma="el-al_bemanning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bemanning" word="EL-AL-bemanning"/>
                 </node>
                 <node begin="20" end="21" id="32" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
                 <node begin="17" cat="ppart" end="22" id="33" rel="vc">
                   <node begin="17" end="19" id="34" index="1" rel="obj1"/>
                   <node begin="19" end="20" id="35" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-                  <node begin="21" buiging="zonder" end="22" id="36" lemma="vrijlaten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="laat" word="vrijgelaten" wvorm="vd"/>
+                  <node begin="21" buiging="zonder" end="22" id="36" lemma="vrij_laten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="laat" word="vrijgelaten" wvorm="vd"/>
                 </node>
               </node>
             </node>

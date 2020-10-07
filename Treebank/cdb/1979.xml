@@ -8,7 +8,7 @@
       <node begin="1" end="2" id="5" lemma="komen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kom" word="kwamen" wvorm="pv"/>
       <node begin="2" cat="np" end="18" id="6" rel="su">
         <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="3" end="4" getal="mv" graad="basis" id="8" lemma="buizenfabriek" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="fabriek" word="buizenfabrieken"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="8" lemma="buis_fabriek" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="fabriek" word="buizenfabrieken"/>
         <node begin="4" cat="pp" end="18" id="9" rel="mod">
           <node begin="4" end="5" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="5" cat="conj" end="18" id="11" rel="obj1">
@@ -43,7 +43,7 @@
               </node>
             </node>
             <node begin="7" cat="np" end="18" id="33" rel="cnj">
-              <node begin="7" end="8" genus="genus" getal="ev" graad="basis" id="34" lemma="Rijnstaal" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Rijnstaal" word="Rijnstaal"/>
+              <node begin="7" end="8" genus="genus" getal="ev" graad="basis" id="34" lemma="Rijn_staal" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Rijnstaal" word="Rijnstaal"/>
               <node begin="9" end="18" id="35" index="1" rel="mod"/>
             </node>
           </node>

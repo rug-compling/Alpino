@@ -36,7 +36,7 @@
       <node begin="13" conjtype="neven" end="14" id="25" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
       <node begin="14" cat="smain" end="25" id="26" rel="cnj">
         <node begin="14" end="15" genus="masc" getal="ev" id="27" lemma="men" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,red,3p,ev,masc)" pt="vnw" rel="su" root="men" status="red" vwtype="pers" word="men"/>
-        <node begin="15" end="16" id="28" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+        <node begin="15" end="16" id="28" lemma="voort_gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
         <node begin="16" end="17" id="29" lemma="hiermee" pos="pp" postag="BW()" pt="bw" rel="pc" root="hiermee" word="hiermee"/>
         <node begin="17" cat="pp" end="23" id="30" rel="mod">
           <node begin="17" cat="mwu" end="20" id="31" rel="hd">
@@ -57,6 +57,6 @@
   </node>
   <sentence>Uit het met koraal overdekte schip zijn al bepaalde voorwerpen naar boven gehaald en men gaat hiermee onder leiding van de twee deskundigen mee voort .</sentence>
   <comments>
-    <comment>second &apos;mee&apos; not annotated: appears to be mistake in sentence</comment>
+    <comment>second &#39;mee&#39; not annotated: appears to be mistake in sentence</comment>
   </comments>
 </alpino_ds>

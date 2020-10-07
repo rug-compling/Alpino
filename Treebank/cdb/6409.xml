@@ -16,7 +16,7 @@
       <node begin="5" end="6" id="10" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
       <node begin="0" cat="ppart" end="16" id="11" rel="vc">
         <node begin="0" end="5" id="12" index="1" rel="su"/>
-        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="zondagochtend" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="zondagochtend" word="zondagochtend"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="zondag_ochtend" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="zondagochtend" word="zondagochtend"/>
         <node begin="7" cat="pp" end="12" id="14" rel="mod">
           <node begin="7" end="8" id="15" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
           <node begin="8" cat="np" end="12" id="16" rel="obj1">
@@ -30,7 +30,7 @@
         </node>
         <node begin="12" cat="np" end="15" id="22" rel="obj1">
           <node begin="12" end="13" id="23" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
-          <node begin="13" buiging="met-e" end="14" graad="basis" id="24" lemma="driejarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="driejarig" word="driejarige"/>
+          <node begin="13" buiging="met-e" end="14" graad="basis" id="24" lemma="drie_jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="driejarig" word="driejarige"/>
           <node begin="14" end="15" getal="mv" graad="dim" id="25" lemma="jongen" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" root="jongetje" word="jongetjes"/>
         </node>
         <node begin="15" buiging="zonder" end="16" id="26" lemma="wonden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="wond" word="gewond" wvorm="vd"/>

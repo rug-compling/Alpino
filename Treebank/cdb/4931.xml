@@ -17,13 +17,13 @@
         <node begin="3" cat="pp" end="25" id="14" rel="mod">
           <node begin="3" end="4" id="15" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
           <node begin="4" cat="conj" end="25" id="16" rel="obj1">
-            <node begin="4" end="5" getal="mv" graad="basis" id="17" lemma="proces-operator" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="proces-operators" word="proces-operators"/>
-            <node begin="6" end="7" getal="mv" graad="basis" id="18" lemma="bankwerker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="werker" word="bankwerkers"/>
-            <node begin="8" end="9" getal="mv" graad="basis" id="19" lemma="pijpfitter" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="pijpfitters" word="pijpfitters"/>
-            <node begin="10" end="11" getal="mv" graad="basis" id="20" lemma="leerlingpijpfitter" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="leerlingpijpfitters" word="leerlingpijpfitters"/>
+            <node begin="4" end="5" getal="mv" graad="basis" id="17" lemma="proces_operator" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="proces-operators" word="proces-operators"/>
+            <node begin="6" end="7" getal="mv" graad="basis" id="18" lemma="bank_werker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="werker" word="bankwerkers"/>
+            <node begin="8" end="9" getal="mv" graad="basis" id="19" lemma="pijp_fitter" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="pijpfitters" word="pijpfitters"/>
+            <node begin="10" end="11" getal="mv" graad="basis" id="20" lemma="leerling_pijpfitter" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="leerlingpijpfitters" word="leerlingpijpfitters"/>
             <node begin="12" end="13" getal="mv" graad="basis" id="21" lemma="lasser" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="lassers" word="lassers"/>
             <node begin="14" end="15" getal="mv" graad="basis" id="22" lemma="elektricien" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="elektricien" word="elektriciens"/>
-            <node begin="16" end="17" getal="mv" graad="basis" id="23" lemma="keteloperator" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="keteloperators" word="keteloperators"/>
+            <node begin="16" end="17" getal="mv" graad="basis" id="23" lemma="ketel_operator" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="keteloperators" word="keteloperators"/>
             <node begin="18" cat="mwu" end="20" id="24" rel="cnj">
               <node begin="18" end="19" getal="mv" graad="basis" id="25" lemma="meeten" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="meeten" word="meeten"/>
               <node begin="19" end="20" getal="mv" graad="basis" id="26" lemma="regeltechnicus" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="regeltechnici" word="regeltechnici"/>
@@ -35,7 +35,7 @@
                 <node begin="22" end="23" id="31" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
                 <node begin="23" cat="np" end="25" id="32" rel="obj1">
                   <node begin="23" end="24" id="33" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                  <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="34" lemma="bedrijfsschool" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="school" word="bedrijfsschool"/>
+                  <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="34" lemma="bedrijf_school" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="school" word="bedrijfsschool"/>
                 </node>
               </node>
             </node>

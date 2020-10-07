@@ -13,7 +13,7 @@
           <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="10" lemma="huis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="huis" word="huis"/>
         </node>
         <node begin="4" end="5" id="11" index="1" rel="su"/>
-        <node begin="5" buiging="zonder" end="6" id="12" lemma="inrichten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="richt" word="ingericht" wvorm="vd"/>
+        <node begin="5" buiging="zonder" end="6" id="12" lemma="in_richten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="richt" word="ingericht" wvorm="vd"/>
         <node begin="6" cat="cp" end="26" id="13" rel="predc">
           <node begin="6" end="7" id="14" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
           <node begin="7" cat="np" end="26" id="15" rel="body">
@@ -34,7 +34,7 @@
                       <node begin="15" end="16" genus="fem" getal="ev" id="29" lemma="zij" naamval="nomin" pdtype="pron" persoon="3v" pos="noun" postag="VNW(pers,pron,nomin,vol,3v,ev,fem)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
                       <node begin="16" cat="pp" end="18" id="30" rel="pc">
                         <node begin="16" end="17" id="31" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-                        <node begin="17" end="18" getal="mv" graad="basis" id="32" lemma="marktkoopman" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="koopman" word="marktkooplui"/>
+                        <node begin="17" end="18" getal="mv" graad="basis" id="32" lemma="markt_koopman" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="koopman" word="marktkooplui"/>
                       </node>
                       <node begin="18" end="19" id="33" lemma="kopen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="koop" word="kocht" wvorm="pv"/>
                     </node>

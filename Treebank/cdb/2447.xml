@@ -26,12 +26,12 @@
                   <node begin="10" end="11" id="21" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                   <node begin="11" cat="np" end="16" id="22" rel="obj1">
                     <node begin="11" end="12" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                    <node begin="12" end="13" getal="mv" graad="basis" id="24" lemma="vleesbelang" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="belang" word="vleesbelangen"/>
+                    <node begin="12" end="13" getal="mv" graad="basis" id="24" lemma="vlees_belang" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="belang" word="vleesbelangen"/>
                     <node begin="13" cat="pp" end="16" id="25" rel="mod">
                       <node begin="13" end="14" id="26" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                       <node begin="14" cat="np" end="16" id="27" rel="obj1">
                         <node begin="14" end="15" id="28" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                        <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="29" lemma="AKZO-concern" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="concern" word="AKZO-concern"/>
+                        <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="29" lemma="AKZO_concern" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="concern" word="AKZO-concern"/>
                       </node>
                     </node>
                   </node>
@@ -49,11 +49,11 @@
               </node>
               <node begin="18" buiging="zonder" end="19" graad="basis" id="37" lemma="geheel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="geheel" word="geheel"/>
             </node>
-            <node begin="20" buiging="zonder" end="21" id="38" lemma="afsluiten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="sluit" word="afgesloten" wvorm="vd"/>
+            <node begin="20" buiging="zonder" end="21" id="38" lemma="af_sluiten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="sluit" word="afgesloten" wvorm="vd"/>
           </node>
         </node>
       </node>
-      <node begin="22" end="23" id="39" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
+      <node begin="22" end="23" id="39" lemma="vast_staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
       <node begin="23" end="24" id="40" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
       <node begin="24" buiging="zonder" end="25" graad="basis" id="41" lemma="vast" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="vast" word="vast"/>
       <node begin="25" cat="cp" end="31" id="42" rel="su">
@@ -61,7 +61,7 @@
         <node begin="26" cat="ssub" end="31" id="44" rel="body">
           <node begin="27" cat="np" end="29" id="45" index="2" rel="su">
             <node begin="27" end="28" id="46" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="28" end="29" genus="onz" getal="ev" graad="basis" id="47" lemma="eindstadium" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stadium" word="eindstadium"/>
+            <node begin="28" end="29" genus="onz" getal="ev" graad="basis" id="47" lemma="eind_stadium" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stadium" word="eindstadium"/>
           </node>
           <node begin="29" end="30" id="48" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
           <node begin="26" cat="ppart" end="31" id="49" rel="vc">

@@ -17,16 +17,16 @@
         <node begin="6" end="7" id="12" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
         <node begin="7" cat="np" end="12" id="13" rel="obj1">
           <node begin="7" end="8" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="kandidatenlijst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kandidatenlijst" word="kandidatenlijst"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="kandidaat_lijst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kandidatenlijst" word="kandidatenlijst"/>
           <node begin="9" cat="pp" end="12" id="16" rel="mod">
             <node begin="9" end="10" id="17" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
             <node begin="10" cat="np" end="12" id="18" rel="obj1">
               <node begin="10" end="11" id="19" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="11" end="12" getal="mv" graad="basis" id="20" lemma="gemeenteraadsverkiezing" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verkiezing" word="gemeenteraadsverkiezingen"/>
+              <node begin="11" end="12" getal="mv" graad="basis" id="20" lemma="gemeente_raad_verkiezing" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verkiezing" word="gemeenteraadsverkiezingen"/>
             </node>
           </node>
         </node>
-        <node begin="12" buiging="zonder" end="13" id="21" lemma="samenstellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="samengesteld" wvorm="vd"/>
+        <node begin="12" buiging="zonder" end="13" id="21" lemma="samen_stellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="samengesteld" wvorm="vd"/>
       </node>
     </node>
     <node begin="13" end="14" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

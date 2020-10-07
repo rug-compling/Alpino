@@ -7,7 +7,7 @@
       <node begin="4" cat="conj" end="15" id="4" index="1" rel="su">
         <node begin="4" cat="np" end="6" id="5" rel="cnj">
           <node begin="4" end="5" id="6" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="7" lemma="politiemacht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="macht" word="politiemacht"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="7" lemma="politie_macht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="macht" word="politiemacht"/>
         </node>
         <node begin="7" cat="np" end="10" id="8" rel="cnj">
           <node begin="7" end="8" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
@@ -33,9 +33,9 @@
         <node begin="4" end="15" id="24" index="1" rel="su"/>
         <node begin="15" cat="np" end="17" id="25" rel="obj1">
           <node begin="15" end="16" id="26" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="27" lemma="speurtocht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="speurtocht" word="speurtocht"/>
+          <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="27" lemma="speur_tocht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="speurtocht" word="speurtocht"/>
         </node>
-        <node begin="17" buiging="zonder" end="18" id="28" lemma="uitvoeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voer" word="uitgevoerd" wvorm="vd"/>
+        <node begin="17" buiging="zonder" end="18" id="28" lemma="uit_voeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voer" word="uitgevoerd" wvorm="vd"/>
         <node begin="18" cat="pp" end="27" id="29" rel="mod">
           <node begin="18" end="19" id="30" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="19" cat="conj" end="27" id="31" rel="obj1">
@@ -54,7 +54,7 @@
             </node>
             <node begin="19" cat="np" end="27" id="42" rel="cnj">
               <node begin="19" end="20" id="43" index="2" rel="det"/>
-              <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="44" lemma="duingebied" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebied" word="duingebied"/>
+              <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="44" lemma="duin_gebied" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebied" word="duingebied"/>
               <node begin="23" end="27" id="45" index="3" rel="mod"/>
             </node>
           </node>

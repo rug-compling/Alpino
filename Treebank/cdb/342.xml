@@ -8,13 +8,13 @@
       <node begin="2" cat="conj" end="15" id="5" rel="obj1">
         <node begin="2" cat="np" end="9" id="6" rel="cnj">
           <node begin="2" buiging="zonder" end="3" getal="ev" id="7" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
-          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="8" lemma="hoofdkantoor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="hoofdkantoor" word="hoofdkantoor"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="8" lemma="hoofd_kantoor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="hoofdkantoor" word="hoofdkantoor"/>
           <node begin="4" cat="pp" end="9" id="9" rel="mod">
             <node begin="4" end="5" id="10" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
             <node begin="5" cat="np" end="9" id="11" rel="obj1">
               <node begin="5" cat="mwu" end="7" id="12" rel="hd">
                 <node begin="5" end="6" id="13" lemma="Villanova" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Villanova" spectype="deeleigen" word="Villanova"/>
-                <node begin="6" end="7" id="14" lemma="d&apos;Ardenghi" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="d&apos;Ardenghi" spectype="vreemd" word="d&apos;Ardenghi"/>
+                <node begin="6" end="7" id="14" lemma="d&#39;Ardenghi" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="d&#39;Ardenghi" spectype="vreemd" word="d&#39;Ardenghi"/>
               </node>
               <node begin="7" cat="pp" end="9" id="15" rel="mod">
                 <node begin="7" end="8" id="16" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
@@ -26,7 +26,7 @@
         <node begin="10" conjtype="neven" end="11" id="18" lemma="alsmede" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="alsmede" word="alsmede"/>
         <node begin="11" cat="np" end="15" id="19" rel="cnj">
           <node begin="11" end="12" id="20" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="21" lemma="verkoopkantoor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kantoor" word="verkoopkantoor"/>
+          <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="21" lemma="verkoop_kantoor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kantoor" word="verkoopkantoor"/>
           <node begin="13" cat="pp" end="15" id="22" rel="mod">
             <node begin="13" end="14" id="23" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
             <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="24" lemma="Milaan" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Milaan" word="Milaan"/>
@@ -36,5 +36,5 @@
     </node>
     <node begin="15" end="16" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Xiat heeft zijn hoofdkantoor in Villanova d&apos;Ardenghi bij Pavia , alsmede een verkoopkantoor in Milaan .</sentence>
+  <sentence>Xiat heeft zijn hoofdkantoor in Villanova d&#39;Ardenghi bij Pavia , alsmede een verkoopkantoor in Milaan .</sentence>
 </alpino_ds>

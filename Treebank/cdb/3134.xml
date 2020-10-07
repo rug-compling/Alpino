@@ -9,7 +9,7 @@
           <node begin="1" cat="pp" end="4" id="6" rel="mod">
             <node begin="1" end="2" id="7" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
             <node begin="2" cat="np" end="4" id="8" rel="obj1">
-              <node begin="2" buiging="zonder" end="3" id="9" lemma="zo&apos;n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="zo&apos;n" vwtype="aanw" word="zo&apos;n"/>
+              <node begin="2" buiging="zonder" end="3" id="9" lemma="zo&#39;n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="zo&#39;n" vwtype="aanw" word="zo&#39;n"/>
               <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="10" lemma="wedstrijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wedstrijd" word="wedstrijd"/>
             </node>
           </node>
@@ -33,7 +33,7 @@
               <node begin="13" end="14" genus="masc" getal="ev" id="25" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" root="hem" status="vol" vwtype="pers" word="hem"/>
               <node begin="14" end="15" id="26" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
               <node begin="15" end="16" id="27" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
-              <node begin="17" buiging="zonder" end="18" id="28" lemma="kalefateren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kalefater" word="kalefateren" wvorm="inf"/>
+              <node begin="17" buiging="zonder" end="18" id="28" lemma="op_kalefateren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kalefater" word="kalefateren" wvorm="inf"/>
             </node>
           </node>
         </node>
@@ -46,5 +46,5 @@
     </node>
     <node begin="21" end="22" id="33" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Als in zo&apos;n wedstrijd een speler geblesseerd raakt , is de tijd om hem weer op te kalefateren wel erg kort .</sentence>
+  <sentence>Als in zo&#39;n wedstrijd een speler geblesseerd raakt , is de tijd om hem weer op te kalefateren wel erg kort .</sentence>
 </alpino_ds>

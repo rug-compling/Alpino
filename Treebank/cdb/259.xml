@@ -56,7 +56,7 @@
               <node begin="23" end="24" id="43" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
               <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="44" lemma="dag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="dag" word="dag"/>
             </node>
-            <node begin="25" buiging="zonder" end="26" id="45" lemma="uitkeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="keer" word="uitgekeerd" wvorm="vd"/>
+            <node begin="25" buiging="zonder" end="26" id="45" lemma="uit_keren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="keer" word="uitgekeerd" wvorm="vd"/>
             <node begin="27" cat="oti" end="44" id="46" rel="mod">
               <node begin="27" end="28" id="47" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
               <node begin="28" cat="conj" end="44" id="48" rel="body">
@@ -80,11 +80,11 @@
                       <node begin="35" end="36" id="63" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                       <node begin="36" cat="np" end="38" id="64" rel="obj1">
                         <node begin="36" end="37" id="65" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                        <node begin="37" end="38" getal="mv" graad="basis" id="66" lemma="dorpsbar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bars" word="dorpsbars"/>
+                        <node begin="37" end="38" getal="mv" graad="basis" id="66" lemma="dorp_bar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bars" word="dorpsbars"/>
                       </node>
                     </node>
                     <node begin="38" cat="np" end="41" id="67" rel="obj1">
-                      <node begin="38" buiging="zonder" end="39" getal="ev" id="68" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+                      <node begin="38" buiging="zonder" end="39" getal="ev" id="68" lemma="uit_zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
                       <node begin="39" buiging="met-e" end="40" graad="basis" id="69" lemma="overtollig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="overtollig" word="overtollige"/>
                       <node begin="40" end="41" genus="zijd" getal="ev" graad="basis" id="70" lemma="levenslust" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="levenslust" word="levenslust"/>
                     </node>

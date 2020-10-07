@@ -5,7 +5,7 @@
     <node begin="0" cat="smain" end="21" id="2" rel="--">
       <node begin="0" cat="np" end="4" id="3" rel="su">
         <node begin="0" end="1" id="4" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
-        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="hogedrukcentrum" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="centrum" word="hogedrukcentrum"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="hoog_druk_centrum" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="centrum" word="hogedrukcentrum"/>
         <node begin="2" cat="pp" end="4" id="6" rel="mod">
           <node begin="2" end="3" id="7" lemma="boven" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="boven" vztype="init" word="boven"/>
           <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="zuidscandinavie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="zuidScandinavie" word="zuidScandinavie"/>
@@ -26,7 +26,7 @@
         <node begin="12" cat="ssub" end="21" id="19" rel="body">
           <node begin="12" cat="np" end="14" id="20" index="1" rel="su">
             <node begin="12" end="13" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="22" lemma="onweerskans" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kans" word="onweerskans"/>
+            <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="22" lemma="onweer_kans" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kans" word="onweerskans"/>
           </node>
           <node begin="19" end="20" id="23" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
           <node begin="12" cat="ppart" end="21" id="24" rel="vc">

@@ -52,7 +52,7 @@
           <node begin="20" end="21" getal="mv" id="37" lemma="elkaar" naamval="gen" pdtype="pron" persoon="persoon" pos="det" postag="VNW(recip,pron,gen,vol,persoon,mv)" pt="vnw" rel="det" root="elkaar" status="vol" vwtype="recip" word="elkaars"/>
           <node begin="21" end="22" getal="mv" graad="basis" id="38" lemma="kerk" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kerk" word="kerken"/>
         </node>
-        <node begin="22" buiging="zonder" end="23" id="39" lemma="openstellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="opengesteld" wvorm="vd"/>
+        <node begin="22" buiging="zonder" end="23" id="39" lemma="open_stellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="opengesteld" wvorm="vd"/>
         <node begin="23" cat="pp" end="26" id="40" rel="mod">
           <node begin="23" end="24" id="41" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
           <node begin="24" cat="np" end="26" id="42" rel="obj1">
@@ -82,7 +82,7 @@
               <node begin="35" end="36" id="60" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
               <node begin="34" cat="inf" end="41" id="61" rel="body">
                 <node begin="34" end="35" genus="onz" getal="ev" graad="basis" id="62" lemma="deel" naamval="stan" ntype="soort" pos="part" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="svp" root="deel" word="deel"/>
-                <node begin="36" buiging="zonder" end="37" id="63" lemma="nemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem" word="nemen" wvorm="inf"/>
+                <node begin="36" buiging="zonder" end="37" id="63" lemma="deel_nemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem" word="nemen" wvorm="inf"/>
                 <node begin="37" cat="pp" end="41" id="64" rel="pc">
                   <node begin="37" end="38" id="65" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
                   <node begin="38" cat="conj" end="41" id="66" rel="obj1">

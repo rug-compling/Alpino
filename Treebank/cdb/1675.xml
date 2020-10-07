@@ -11,7 +11,7 @@
       <node begin="3" end="4" id="7" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
       <node begin="4" cat="np" end="14" id="8" rel="su">
         <node begin="4" end="5" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="vierstemmig" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="stemmige" word="vierstemmige"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="vier_stemmig" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="stemmige" word="vierstemmige"/>
         <node begin="6" cat="ppart" end="10" id="11" rel="mod">
           <node begin="6" cat="pp" end="9" id="12" rel="obj2">
             <node begin="6" end="7" id="13" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
@@ -68,6 +68,6 @@
   </node>
   <sentence>Heel opmerkelijk was ook de vierstemmige aan Philips 11 opgedragen Missa Previs van Palestrina , al werd die dan niet in de Romeinse maar in de Engelse stijl geinterpreteerd .</sentence>
   <comments>
-    <comment>Should we encode that &apos;stijl&apos; is also the head for &apos;Romeins&apos;? Where do we attach &apos;niet&apos;?</comment>
+    <comment>Should we encode that &#39;stijl&#39; is also the head for &#39;Romeins&#39;? Where do we attach &#39;niet&#39;?</comment>
   </comments>
 </alpino_ds>

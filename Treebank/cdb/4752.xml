@@ -3,8 +3,8 @@
   <node begin="0" cat="top" end="39" id="0" rel="top">
     <node begin="15" end="16" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="24" end="25" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="31" end="32" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="33" end="34" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="31" end="32" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="33" end="34" id="4" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="conj" end="38" id="5" rel="--">
       <node begin="0" cat="smain" end="28" id="6" rel="cnj">
         <node begin="16" end="17" id="7" lemma="mogen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="mag" word="mag" wvorm="pv"/>
@@ -42,7 +42,7 @@
                       <node begin="7" cat="inf" end="15" id="34" rel="body">
                         <node begin="7" end="9" id="35" index="3" rel="obj1"/>
                         <node begin="12" end="13" id="36" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
-                        <node begin="14" buiging="zonder" end="15" id="37" lemma="vallen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="val" word="vallen" wvorm="inf"/>
+                        <node begin="14" buiging="zonder" end="15" id="37" lemma="aan_vallen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="val" word="vallen" wvorm="inf"/>
                       </node>
                     </node>
                   </node>
@@ -69,7 +69,7 @@
               <node begin="25" buiging="zonder" end="26" id="52" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
               <node begin="26" end="27" getal="mv" graad="basis" id="53" lemma="deur" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="deur" word="deuren"/>
             </node>
-            <node begin="27" buiging="zonder" end="28" id="54" lemma="dichtslaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="sla" word="dichtslaan" wvorm="inf"/>
+            <node begin="27" buiging="zonder" end="28" id="54" lemma="dicht_slaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="sla" word="dichtslaan" wvorm="inf"/>
           </node>
         </node>
       </node>
@@ -94,5 +94,5 @@
     </node>
     <node begin="38" end="39" id="69" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Als je door de diepten glijdt om de vijand te bespieden of aan te vallen , mag je in de boot niet hardop praten , geen deuren dichtslaan en moet de &quot; zeun &quot; de mokken zachtjes behandelen .</sentence>
+  <sentence>Als je door de diepten glijdt om de vijand te bespieden of aan te vallen , mag je in de boot niet hardop praten , geen deuren dichtslaan en moet de &#34; zeun &#34; de mokken zachtjes behandelen .</sentence>
 </alpino_ds>

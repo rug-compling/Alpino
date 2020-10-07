@@ -18,10 +18,10 @@
               </node>
             </node>
             <node begin="11" end="12" id="15" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
-            <node begin="13" buiging="zonder" end="14" id="16" lemma="leggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="leg" word="leggen" wvorm="inf"/>
+            <node begin="13" buiging="zonder" end="14" id="16" lemma="aan_leggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="leg" word="leggen" wvorm="inf"/>
           </node>
         </node>
-        <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="17" lemma="spoorlijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="spoorlijn" word="spoorlijn"/>
+        <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="17" lemma="spoor_lijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="spoorlijn" word="spoorlijn"/>
       </node>
       <node begin="0" cat="inf" end="24" id="18" rel="vc">
         <node begin="6" end="15" id="19" index="1" rel="su"/>
@@ -34,7 +34,7 @@
                 <node begin="1" end="2" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                 <node begin="2" end="3" getal="mv" graad="basis" id="27" lemma="berekening" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="berekening" word="berekeningen"/>
               </node>
-              <node begin="3" end="4" id="28" lemma="uitkomen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kom" word="uitkomen" wvorm="pv"/>
+              <node begin="3" end="4" id="28" lemma="uit_komen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kom" word="uitkomen" wvorm="pv"/>
             </node>
           </node>
           <node begin="6" end="15" id="29" index="1" rel="su"/>
@@ -43,7 +43,7 @@
             <node begin="16" cat="np" end="22" id="32" rel="obj1">
               <node begin="16" end="17" id="33" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
               <node begin="17" buiging="met-e" end="18" graad="sup" id="34" lemma="druk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="druk" word="drukste"/>
-              <node begin="18" end="19" getal="mv" graad="basis" id="35" lemma="baanvak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vakken" word="baanvakken"/>
+              <node begin="18" end="19" getal="mv" graad="basis" id="35" lemma="baan_vak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vakken" word="baanvakken"/>
               <node begin="19" cat="pp" end="22" id="36" rel="mod">
                 <node begin="19" end="20" id="37" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                 <node begin="20" cat="np" end="22" id="38" rel="obj1">

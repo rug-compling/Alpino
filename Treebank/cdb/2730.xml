@@ -48,7 +48,7 @@
             <node begin="20" end="21" getal="getal" id="35" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
             <node begin="20" cat="ssub" end="40" id="36" rel="body">
               <node begin="20" end="21" id="37" index="1" rel="su"/>
-              <node begin="21" end="22" id="38" lemma="aankondigen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kondig" word="aankondigde" wvorm="pv"/>
+              <node begin="21" end="22" id="38" lemma="aan_kondigen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kondig" word="aankondigde" wvorm="pv"/>
               <node begin="22" cat="cp" end="40" id="39" rel="vc">
                 <node begin="22" conjtype="onder" end="23" id="40" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
                 <node begin="23" cat="ssub" end="40" id="41" rel="body">
@@ -68,7 +68,7 @@
                     </node>
                     <node begin="28" cat="np" end="37" id="53" rel="obj1">
                       <node begin="28" buiging="zonder" end="29" getal="ev" id="54" lemma="haar" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="haar" status="vol" vwtype="bez" word="haar"/>
-                      <node begin="29" end="30" getal="mv" graad="basis" id="55" lemma="herstructureringsplan" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="plan" word="herstructureringsplannen"/>
+                      <node begin="29" end="30" getal="mv" graad="basis" id="55" lemma="her_structurering_plan" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="plan" word="herstructureringsplannen"/>
                       <node begin="30" cat="rel" end="37" id="56" rel="mod">
                         <node begin="30" end="31" getal="getal" id="57" index="3" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
                         <node begin="30" cat="ssub" end="37" id="58" rel="body">
@@ -84,7 +84,7 @@
                               </node>
                             </node>
                             <node begin="34" end="35" id="68" lemma="reeds" pos="adv" postag="BW()" pt="bw" rel="mod" root="reeds" word="reeds"/>
-                            <node begin="36" buiging="zonder" end="37" id="69" lemma="aankondigen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kondig" word="aangekondigd" wvorm="vd"/>
+                            <node begin="36" buiging="zonder" end="37" id="69" lemma="aan_kondigen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kondig" word="aangekondigd" wvorm="vd"/>
                           </node>
                         </node>
                       </node>

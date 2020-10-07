@@ -17,9 +17,9 @@
           <node begin="5" end="6" id="12" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
           <node begin="6" cat="np" end="8" id="13" rel="obj1">
             <node begin="6" end="7" id="14" lemma="45.000" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="45.000" word="45.000"/>
-            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="15" lemma="kilometer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kilometer" word="kilometer"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="15" lemma="kilo_meter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kilometer" word="kilometer"/>
           </node>
-          <node begin="8" buiging="zonder" end="9" id="16" lemma="afleggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leg" word="afgelegd" wvorm="vd"/>
+          <node begin="8" buiging="zonder" end="9" id="16" lemma="af_leggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leg" word="afgelegd" wvorm="vd"/>
         </node>
         <node begin="9" conjtype="neven" end="10" id="17" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="0" cat="ppart" end="17" id="18" rel="cnj">
@@ -30,7 +30,7 @@
               <node begin="10" buiging="zonder" end="11" graad="basis" id="23" lemma="ruim" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ruim" word="ruim"/>
               <node begin="11" end="12" id="24" lemma="100.000" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="100.000" word="100.000"/>
             </node>
-            <node begin="12" end="13" getal="mv" graad="basis" id="25" lemma="betonblok" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="blok" word="betonblokken"/>
+            <node begin="12" end="13" getal="mv" graad="basis" id="25" lemma="beton_blok" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="blok" word="betonblokken"/>
           </node>
           <node begin="13" cat="pp" end="16" id="26" rel="ld">
             <node begin="13" end="14" id="27" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>

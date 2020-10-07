@@ -3,8 +3,8 @@
   <node begin="0" cat="top" end="37" id="0" rel="top">
     <node begin="10" end="11" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="15" end="16" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="25" end="26" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="28" end="29" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="25" end="26" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="28" end="29" id="4" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="29" end="30" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="conj" end="36" id="6" rel="--">
       <node begin="0" cat="smain" end="10" id="7" rel="cnj">
@@ -50,7 +50,7 @@
           <node begin="18" end="19" id="37" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
           <node begin="19" cat="np" end="21" id="38" rel="obj1">
             <node begin="19" buiging="met-e" end="20" graad="basis" id="39" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
-            <node begin="20" end="21" getal="mv" graad="basis" id="40" lemma="gemenebestland" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="land" word="gemenebestlanden"/>
+            <node begin="20" end="21" getal="mv" graad="basis" id="40" lemma="gemenebest_land" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="land" word="gemenebestlanden"/>
           </node>
         </node>
       </node>
@@ -86,5 +86,5 @@
     </node>
     <node begin="36" end="37" id="62" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>2,5 procent van de moeders kwam uit India en Pakistan , 2 procent uit West-Indie , 1.3 procent uit andere gemenebestlanden en 2,8 procent uit &quot; andere landen &quot; , waaronder Europa en de Ver. Staten .</sentence>
+  <sentence>2,5 procent van de moeders kwam uit India en Pakistan , 2 procent uit West-Indie , 1.3 procent uit andere gemenebestlanden en 2,8 procent uit &#34; andere landen &#34; , waaronder Europa en de Ver. Staten .</sentence>
 </alpino_ds>

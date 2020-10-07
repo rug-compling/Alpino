@@ -4,7 +4,7 @@
     <node begin="0" cat="smain" end="17" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
         <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="autobusdienst" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dienst" word="autobusdiensten"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="auto_bus_dienst" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dienst" word="autobusdiensten"/>
       </node>
       <node begin="2" end="3" id="5" lemma="konden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kan" word="konden" wvorm="pv"/>
       <node begin="0" cat="inf" end="17" id="6" rel="vc">
@@ -30,7 +30,7 @@
         </node>
         <node begin="12" cat="np" end="14" id="22" rel="obj1">
           <node begin="12" end="13" id="23" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="24" lemma="dienstregeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dienstregeling" word="dienstregeling"/>
+          <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="24" lemma="dienst_regeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dienstregeling" word="dienstregeling"/>
         </node>
         <node begin="14" cat="mwu" end="16" id="25" rel="svp">
           <node begin="14" end="15" id="26" lemma="op" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>

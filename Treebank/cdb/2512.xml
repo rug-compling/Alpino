@@ -17,14 +17,14 @@
             <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="achtergrond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="achtergrond" word="achtergrond"/>
             <node begin="7" cat="pp" end="9" id="14" rel="mod">
               <node begin="7" end="8" id="15" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-              <node begin="8" end="9" genus="genus" getal="ev" graad="basis" id="16" lemma="N&apos;70" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="N&apos;70" word="N&apos;70"/>
+              <node begin="8" end="9" genus="genus" getal="ev" graad="basis" id="16" lemma="N&#39;70" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="N&#39;70" word="N&#39;70"/>
             </node>
           </node>
         </node>
       </node>
       <node begin="10" cat="smain" end="15" id="17" rel="dp">
         <node begin="10" end="11" id="18" lemma="aldus" pos="adv" postag="BW()" pt="bw" rel="mod" root="aldus" word="aldus"/>
-        <node begin="11" end="12" id="19" lemma="delen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="deel" word="deelde" wvorm="pv"/>
+        <node begin="11" end="12" id="19" lemma="mee_delen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="deel" word="deelde" wvorm="pv"/>
         <node begin="12" cat="np" end="14" id="20" rel="su">
           <node begin="12" end="13" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="22" lemma="ANWB" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="ANWB" word="ANWB"/>
@@ -34,5 +34,5 @@
     </node>
     <node begin="15" end="16" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De toekenning geschiedde mede tegen de achtergrond van N&apos;70 , aldus deelde de ANWB mee .</sentence>
+  <sentence>De toekenning geschiedde mede tegen de achtergrond van N&#39;70 , aldus deelde de ANWB mee .</sentence>
 </alpino_ds>

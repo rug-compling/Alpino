@@ -6,7 +6,7 @@
     <node begin="0" cat="conj" end="18" id="3" rel="--">
       <node begin="0" cat="smain" end="5" id="4" rel="cnj">
         <node begin="0" end="1" genus="onz" getal="ev" id="5" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
-        <node begin="1" end="2" id="6" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
+        <node begin="1" end="2" id="6" lemma="leeg_staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
         <node begin="2" cat="np" end="4" id="7" rel="mod">
           <node begin="2" end="3" id="8" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
           <node begin="3" end="4" getal="mv" graad="basis" id="9" lemma="jaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="jaar" word="jaren"/>
@@ -31,10 +31,10 @@
             <node begin="14" buiging="zonder" end="15" id="24" lemma="sporen" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="spoor" word="sporen" wvorm="inf"/>
             <node begin="15" cat="pp" end="17" id="25" rel="mod">
               <node begin="15" end="16" id="26" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-              <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="27" lemma="vernielzucht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="zucht" word="vernielzucht"/>
+              <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="27" lemma="verniel_zucht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="zucht" word="vernielzucht"/>
             </node>
           </node>
-          <node begin="17" buiging="zonder" end="18" id="28" lemma="achterlaten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="laat" word="achtergelaten" wvorm="vd"/>
+          <node begin="17" buiging="zonder" end="18" id="28" lemma="achter_laten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="laat" word="achtergelaten" wvorm="vd"/>
         </node>
       </node>
     </node>

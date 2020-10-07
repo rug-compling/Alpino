@@ -2,13 +2,13 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="28" id="0" rel="top">
     <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="18" end="19" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="25" end="26" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="18" end="19" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="25" end="26" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="27" id="4" rel="--">
       <node begin="0" cat="np" end="3" id="5" rel="su">
         <node begin="0" buiging="zonder" end="1" id="6" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="Dit"/>
         <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="7" lemma="brok" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="brok" word="brok"/>
-        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="8" lemma="jeugdsentiment" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mod" root="sentiment" word="jeugdsentiment"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="8" lemma="jeugd_sentiment" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mod" root="sentiment" word="jeugdsentiment"/>
       </node>
       <node begin="3" end="4" id="9" lemma="schieten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="schiet" word="schoot" wvorm="pv"/>
       <node begin="4" end="5" getal="mv" id="10" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj2" root="ons" status="vol" vwtype="pr" word="ons"/>
@@ -31,7 +31,7 @@
               <node begin="14" end="15" id="25" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="15" cat="np" end="25" id="26" rel="obj1">
                 <node begin="15" end="16" id="27" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="16" end="17" getal="mv" graad="basis" id="28" lemma="heruitgave" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="heruitgave" word="heruitgaven"/>
+                <node begin="16" end="17" getal="mv" graad="basis" id="28" lemma="her_uitgave" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="heruitgave" word="heruitgaven"/>
                 <node begin="17" cat="pp" end="25" id="29" rel="mod">
                   <node begin="17" end="18" id="30" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                   <node begin="19" cat="mwu" end="25" id="31" rel="obj1">
@@ -52,5 +52,5 @@
     </node>
     <node begin="27" end="28" id="39" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Dit brok jeugdsentiment schoot ons in de keel , toen we het eerste deel van de heruitgaven van &quot; De Avonturen van Eric de Noorman &quot; ontvingen .</sentence>
+  <sentence>Dit brok jeugdsentiment schoot ons in de keel , toen we het eerste deel van de heruitgaven van &#34; De Avonturen van Eric de Noorman &#34; ontvingen .</sentence>
 </alpino_ds>

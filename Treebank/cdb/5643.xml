@@ -6,7 +6,7 @@
       <node begin="0" cat="smain" end="6" id="3" rel="cnj">
         <node begin="0" cat="np" end="2" id="4" index="1" rel="su">
           <node begin="0" end="1" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
-          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="6" lemma="toerwagenbedrijf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bedrijf" word="toerwagenbedrijf"/>
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="6" lemma="toerwagen_bedrijf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bedrijf" word="toerwagenbedrijf"/>
         </node>
         <node begin="2" end="3" id="7" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
         <node begin="0" cat="ppart" end="6" id="8" rel="vc">
@@ -51,13 +51,13 @@
                           <node begin="22" buiging="zonder" end="23" graad="basis" id="42" lemma="haastig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="haastig" word="haastig"/>
                           <node begin="23" buiging="met-e" end="24" id="43" lemma="opstellen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="opgesteld" word="opgestelde" wvorm="vd"/>
                         </node>
-                        <node begin="24" buiging="met-e" end="25" id="44" lemma="aanvullen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="aanvullend" word="aanvullende" wvorm="od"/>
+                        <node begin="24" buiging="met-e" end="25" id="44" lemma="aan_vullen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="aanvullend" word="aanvullende" wvorm="od"/>
                         <node begin="25" end="26" getal="mv" graad="basis" id="45" lemma="bepaling" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bepaling" word="bepalingen"/>
                         <node begin="26" cat="pp" end="31" id="46" rel="mod">
                           <node begin="26" end="27" id="47" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                           <node begin="27" cat="np" end="31" id="48" rel="obj1">
                             <node begin="27" end="28" id="49" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                            <node begin="28" end="29" getal="mv" graad="basis" id="50" lemma="keuringsvoorschrift" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="voorschrift" word="keuringsvoorschriften"/>
+                            <node begin="28" end="29" getal="mv" graad="basis" id="50" lemma="keuring_voorschrift" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="voorschrift" word="keuringsvoorschriften"/>
                             <node begin="29" cat="pp" end="31" id="51" rel="mod">
                               <node begin="29" end="30" id="52" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
                               <node begin="30" end="31" getal="mv" graad="basis" id="53" lemma="bus" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="bus" word="bussen"/>

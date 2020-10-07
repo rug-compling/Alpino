@@ -29,7 +29,7 @@
                     <node begin="11" end="12" id="24" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                     <node begin="12" cat="np" end="14" id="25" rel="obj1">
                       <node begin="12" end="13" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                      <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="27" lemma="woordkant" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kant" word="woordkant"/>
+                      <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="27" lemma="woord_kant" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kant" word="woordkant"/>
                     </node>
                   </node>
                   <node begin="15" buiging="zonder" end="16" id="28" lemma="benaderen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="benader" word="benaderen" wvorm="inf"/>
@@ -79,7 +79,7 @@
                                   <node begin="34" end="35" getal="mv" graad="basis" id="64" lemma="geval" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="geval" word="gevallen"/>
                                   <node begin="35" cat="pp" end="37" id="65" rel="mod">
                                     <node begin="35" end="36" id="66" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-                                    <node begin="36" end="37" genus="onz" getal="ev" graad="basis" id="67" lemma="taalgebruik" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="taalgebruik" word="taalgebruik"/>
+                                    <node begin="36" end="37" genus="onz" getal="ev" graad="basis" id="67" lemma="taal_gebruik" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="taalgebruik" word="taalgebruik"/>
                                   </node>
                                 </node>
                               </node>
@@ -98,7 +98,7 @@
                                 <node begin="42" end="43" getal="mv" graad="basis" id="77" lemma="geval" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="geval" word="gevallen"/>
                                 <node begin="43" cat="pp" end="45" id="78" rel="mod">
                                   <node begin="43" end="44" id="79" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-                                  <node begin="44" end="45" genus="onz" getal="ev" graad="basis" id="80" lemma="taalgebruik" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="taalgebruik" word="taalgebruik"/>
+                                  <node begin="44" end="45" genus="onz" getal="ev" graad="basis" id="80" lemma="taal_gebruik" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="taalgebruik" word="taalgebruik"/>
                                 </node>
                               </node>
                               <node begin="46" buiging="zonder" end="47" id="81" lemma="produceren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="produceer" word="produceren" wvorm="inf"/>

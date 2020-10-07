@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="28" id="0" rel="top">
-    <node begin="9" end="10" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="9" end="10" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="11" end="12" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="13" end="14" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="17" end="18" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="17" end="18" id="4" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="23" end="24" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="27" id="6" rel="--">
       <node begin="0" cat="pp" end="17" id="7" rel="ld">
@@ -40,7 +40,7 @@
       <node begin="20" cat="np" end="27" id="30" rel="su">
         <node begin="20" end="21" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="21" buiging="met-e" end="22" graad="basis" id="32" lemma="bizar" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="bizar" word="bizarre"/>
-        <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="33" lemma="handelsgeest" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="geest" word="handelsgeest"/>
+        <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="33" lemma="handel_geest" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="geest" word="handelsgeest"/>
         <node begin="24" cat="conj" end="27" id="34" rel="mod">
           <node begin="24" buiging="zonder" end="25" graad="basis" id="35" lemma="satanisch" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="cnj" root="satanisch" word="satanisch"/>
           <node begin="25" conjtype="neven" end="26" id="36" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
@@ -50,5 +50,5 @@
     </node>
     <node begin="27" end="28" id="38" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Tegenover zijn de pathetiek niet zelden naderende hang naar &quot; Waarachtigheid , Orde , Rust en Wet &quot; staat weer de bizarre handelsgeest , satanisch en meedogenloos .</sentence>
+  <sentence>Tegenover zijn de pathetiek niet zelden naderende hang naar &#34; Waarachtigheid , Orde , Rust en Wet &#34; staat weer de bizarre handelsgeest , satanisch en meedogenloos .</sentence>
 </alpino_ds>

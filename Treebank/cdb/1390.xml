@@ -4,8 +4,8 @@
     <node begin="4" end="5" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
     <node begin="9" end="10" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
     <node begin="16" end="17" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="19" end="20" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="22" end="23" id="5" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="19" end="20" id="4" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="22" end="23" id="5" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="26" id="6" rel="--">
       <node begin="10" end="11" id="7" lemma="zullen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zal" word="zullen" wvorm="pv"/>
       <node begin="11" cat="np" end="13" id="8" index="1" rel="su">
@@ -42,16 +42,16 @@
               <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="34" lemma="betiteling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="betiteling" word="betiteling"/>
               <node begin="20" cat="np" end="22" id="35" rel="app">
                 <node begin="20" buiging="zonder" end="21" id="36" lemma="beschermen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="mod" root="beschermd" word="beschermd" wvorm="vd"/>
-                <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="37" lemma="dorpsgezicht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="dorpsgezicht" word="dorpsgezicht"/>
+                <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="37" lemma="dorp_gezicht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="dorpsgezicht" word="dorpsgezicht"/>
               </node>
             </node>
             <node begin="23" end="24" id="38" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
-            <node begin="25" buiging="zonder" end="26" id="39" lemma="heffen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="hef" word="heffen" wvorm="inf"/>
+            <node begin="25" buiging="zonder" end="26" id="39" lemma="aan_heffen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="hef" word="heffen" wvorm="inf"/>
           </node>
         </node>
       </node>
     </node>
     <node begin="26" end="27" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>In het ongunstigste geval ( maar wel reeel geacht ) zullen de ministers in 1990 besluiten , de betiteling &quot; beschermd dorpsgezicht &quot; op te heffen .</sentence>
+  <sentence>In het ongunstigste geval ( maar wel reeel geacht ) zullen de ministers in 1990 besluiten , de betiteling &#34; beschermd dorpsgezicht &#34; op te heffen .</sentence>
 </alpino_ds>

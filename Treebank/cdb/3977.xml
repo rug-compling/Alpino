@@ -36,12 +36,12 @@
               <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="28" lemma="gedeelte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gedeelte" word="gedeelte"/>
             </node>
           </node>
-          <node begin="15" buiging="zonder" end="16" id="29" lemma="toeschrijven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schrijf" word="toegeschreven" wvorm="vd"/>
+          <node begin="15" buiging="zonder" end="16" id="29" lemma="toe_schrijven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schrijf" word="toegeschreven" wvorm="vd"/>
           <node begin="16" cat="pp" end="34" id="30" rel="obj2">
             <node begin="16" end="17" id="31" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
             <node begin="17" cat="np" end="34" id="32" rel="obj1">
               <node begin="17" end="18" id="33" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="18" end="19" getal="mv" graad="basis" id="34" lemma="tuindersbedrijf" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bedrijf" word="tuindersbedrijven"/>
+              <node begin="18" end="19" getal="mv" graad="basis" id="34" lemma="tuinder_bedrijf" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bedrijf" word="tuindersbedrijven"/>
               <node begin="19" cat="pp" end="22" id="35" rel="mod">
                 <node begin="19" end="20" id="36" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                 <node begin="20" cat="np" end="22" id="37" rel="obj1">
@@ -53,7 +53,7 @@
                 <node begin="23" end="24" getal="getal" id="41" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
                 <node begin="23" cat="ssub" end="34" id="42" rel="body">
                   <node begin="23" end="24" id="43" index="2" rel="su"/>
-                  <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="44" lemma="stookolie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="olie" word="stookolie"/>
+                  <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="44" lemma="stook_olie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="olie" word="stookolie"/>
                   <node begin="25" cat="cp" end="33" id="45" rel="predc">
                     <node begin="25" end="26" id="46" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
                     <node begin="26" cat="np" end="33" id="47" rel="body">

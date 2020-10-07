@@ -11,7 +11,7 @@
           <node begin="3" end="4" id="8" lemma="Jacob" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jacob" spectype="deeleigen" word="Jacob"/>
         </node>
       </node>
-      <node begin="4" end="5" id="9" lemma="volgen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="volg" word="volgt" wvorm="pv"/>
+      <node begin="4" end="5" id="9" lemma="op_volgen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="volg" word="volgt" wvorm="pv"/>
       <node begin="9" end="10" id="10" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
       <node begin="5" cat="np" end="23" id="11" rel="obj1">
         <node begin="5" cat="mwu" end="9" id="12" rel="hd">
@@ -31,7 +31,7 @@
                 <node begin="12" buiging="zonder" end="13" getal="ev" id="25" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
                 <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="26" lemma="functie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="functie" word="functie"/>
               </node>
-              <node begin="15" buiging="zonder" end="16" id="27" lemma="neerleggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="leg" word="neerleggen" wvorm="inf"/>
+              <node begin="15" buiging="zonder" end="16" id="27" lemma="neer_leggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="leg" word="neerleggen" wvorm="inf"/>
               <node begin="16" cat="pp" end="23" id="28" rel="mod">
                 <node begin="16" end="17" id="29" lemma="wegens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="wegens" vztype="init" word="wegens"/>
                 <node begin="17" cat="np" end="23" id="30" rel="obj1">
@@ -41,7 +41,7 @@
                     <node begin="19" end="20" id="34" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                     <node begin="20" cat="np" end="23" id="35" rel="obj1">
                       <node begin="20" end="21" id="36" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                      <node begin="21" buiging="met-e" end="22" graad="basis" id="37" lemma="pensioengerechtigd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gerechtigd" word="pensioengerechtigde"/>
+                      <node begin="21" buiging="met-e" end="22" graad="basis" id="37" lemma="pensioen_gerechtigd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gerechtigd" word="pensioengerechtigde"/>
                       <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="38" lemma="leeftijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="leeftijd" word="leeftijd"/>
                     </node>
                   </node>

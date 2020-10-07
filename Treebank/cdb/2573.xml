@@ -10,9 +10,9 @@
           <node begin="10" end="11" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
           <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="8" lemma="steenhuis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="huis" word="steenhuis"/>
           <node begin="13" cat="np" end="16" id="9" rel="mod">
-            <node begin="13" end="14" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="&apos;t"/>
+            <node begin="13" end="14" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="&#39;t"/>
             <node begin="14" buiging="met-e" end="15" graad="comp" id="11" lemma="vroeger" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="vroeg" word="vroegere"/>
-            <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="12" lemma="torengebouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebouw" word="torengebouw"/>
+            <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="12" lemma="toren_gebouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebouw" word="torengebouw"/>
           </node>
         </node>
         <node begin="0" cat="ti" end="23" id="13" rel="vc">
@@ -34,7 +34,7 @@
                     </node>
                   </node>
                   <node begin="6" end="7" getal="mv" graad="basis" id="29" lemma="dijk" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="dijk" word="dijken"/>
-                  <node begin="8" buiging="zonder" end="9" id="30" lemma="aanleggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="leg" word="aanleggen" wvorm="inf"/>
+                  <node begin="8" buiging="zonder" end="9" id="30" lemma="aan_leggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="leg" word="aanleggen" wvorm="inf"/>
                 </node>
               </node>
             </node>
@@ -75,5 +75,5 @@
     </node>
     <node begin="31" end="32" id="55" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Nadat men in de 13e eeuw dijken ging aanleggen hoefde het steenhuis ( &apos;t vroegere torengebouw ) niet meer zo hoog te staan en kon men buiten de wierden gaan wonen .</sentence>
+  <sentence>Nadat men in de 13e eeuw dijken ging aanleggen hoefde het steenhuis ( &#39;t vroegere torengebouw ) niet meer zo hoog te staan en kon men buiten de wierden gaan wonen .</sentence>
 </alpino_ds>

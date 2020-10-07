@@ -22,7 +22,7 @@
                   <node begin="6" end="7" id="19" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                   <node begin="7" cat="np" end="9" id="20" rel="obj1">
                     <node begin="7" buiging="met-e" end="8" id="21" lemma="meerdere" naamval="stan" npagr="mv" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,mv)" pt="vnw" rel="det" root="meerder" vwtype="onbep" word="meerder"/>
-                    <node begin="8" end="9" getal="mv" graad="basis" id="22" lemma="spelsoort" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="soort" word="spelsoorten"/>
+                    <node begin="8" end="9" getal="mv" graad="basis" id="22" lemma="spel_soort" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="soort" word="spelsoorten"/>
                   </node>
                 </node>
                 <node begin="10" buiging="zonder" end="11" id="23" lemma="gespecialiseerd" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="specialiseer" word="gespecialiseerd" wvorm="vd"/>
@@ -54,7 +54,7 @@
               <node begin="15" cat="np" end="18" id="41" rel="obj1">
                 <node begin="15" end="16" id="42" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                 <node begin="16" buiging="met-e" end="17" graad="basis" id="43" lemma="verschillend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="verschillend" word="verschillende"/>
-                <node begin="17" end="18" getal="mv" graad="basis" id="44" lemma="spelsoort" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="soort" word="spelsoorten"/>
+                <node begin="17" end="18" getal="mv" graad="basis" id="44" lemma="spel_soort" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="soort" word="spelsoorten"/>
               </node>
             </node>
             <node begin="18" end="19" id="45" lemma="soms" pos="adv" postag="BW()" pt="bw" rel="mod" root="soms" word="soms"/>
@@ -79,7 +79,7 @@
             <node begin="35" end="36" getal="mv" graad="basis" id="60" lemma="inkomsten" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="inkomst" word="inkomsten"/>
           </node>
           <node begin="36" buiging="zonder" end="37" graad="basis" id="61" lemma="stil" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="stil" word="stil"/>
-          <node begin="37" end="38" id="62" lemma="staan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="sta" word="staan" wvorm="pv"/>
+          <node begin="37" end="38" id="62" lemma="stil_staan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="sta" word="staan" wvorm="pv"/>
         </node>
       </node>
     </node>

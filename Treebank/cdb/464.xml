@@ -2,8 +2,8 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="31" id="0" rel="top">
     <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="4" end="5" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="8" end="9" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="4" end="5" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="8" end="9" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="conj" end="30" id="4" rel="--">
       <node begin="0" cat="smain" end="18" id="5" rel="cnj">
         <node begin="0" cat="np" end="8" id="6" index="1" rel="su">
@@ -25,12 +25,12 @@
             <node begin="10" end="11" id="19" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
             <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="20" lemma="Japan" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Japan" word="Japan"/>
           </node>
-          <node begin="12" buiging="zonder" end="13" id="21" lemma="inzenden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zend" word="ingezonden" wvorm="vd"/>
+          <node begin="12" buiging="zonder" end="13" id="21" lemma="in_zenden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zend" word="ingezonden" wvorm="vd"/>
           <node begin="13" cat="pp" end="18" id="22" rel="ld">
             <node begin="13" end="14" id="23" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
             <node begin="14" cat="np" end="18" id="24" rel="obj1">
               <node begin="14" end="15" id="25" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-              <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="26" lemma="montreux-festival" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="festival" word="Montreux-festival"/>
+              <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="26" lemma="montreux_festival" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="festival" word="Montreux-festival"/>
               <node begin="16" cat="pp" end="18" id="27" rel="mod">
                 <node begin="16" end="17" id="28" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                 <node begin="17" end="18" id="29" lemma="1968" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1968" word="1968"/>
@@ -69,5 +69,5 @@
     </node>
     <node begin="30" end="31" id="51" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De show , getiteld &quot; Grand Musical Show &quot; is door Japan ingezonden naar het Montreux-festival van 1968 en maakte daar toen diepe indruk wegens de grandioze montage en opzet .</sentence>
+  <sentence>De show , getiteld &#34; Grand Musical Show &#34; is door Japan ingezonden naar het Montreux-festival van 1968 en maakte daar toen diepe indruk wegens de grandioze montage en opzet .</sentence>
 </alpino_ds>

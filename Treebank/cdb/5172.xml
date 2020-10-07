@@ -6,7 +6,7 @@
     <node begin="0" cat="du" end="20" id="3" rel="--">
       <node begin="0" cat="smain" end="4" id="4" rel="dp">
         <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="5" lemma="Zuid" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Zuid" word="Zuid"/>
-        <node begin="1" end="2" id="6" lemma="trekken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="trek" word="trok" wvorm="pv"/>
+        <node begin="1" end="2" id="6" lemma="na_trekken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="trek" word="trok" wvorm="pv"/>
         <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="klaver" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="klaver" word="klaver"/>
         <node begin="3" end="4" id="8" lemma="na" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="na" vztype="fin" word="na"/>
       </node>
@@ -14,7 +14,7 @@
         <node begin="5" cat="smain" end="8" id="10" rel="cnj">
           <node begin="5" buiging="zonder" end="6" graad="basis" id="11" index="1" lemma="west" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="su" root="west" word="west"/>
           <node begin="6" end="7" id="12" lemma="pakken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="pak" word="pakte" wvorm="pv"/>
-          <node begin="7" buiging="zonder" end="8" graad="basis" id="13" lemma="klaveraas" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="obj1" root="aas" word="klaveraas"/>
+          <node begin="7" buiging="zonder" end="8" graad="basis" id="13" lemma="klaver_aas" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="obj1" root="aas" word="klaveraas"/>
         </node>
         <node begin="8" conjtype="neven" end="9" id="14" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="5" cat="smain" end="12" id="15" rel="cnj">
@@ -34,7 +34,7 @@
         <node begin="15" conjtype="neven" end="16" id="25" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="13" cat="smain" end="20" id="26" rel="cnj">
           <node begin="13" end="14" id="27" index="2" rel="su"/>
-          <node begin="16" end="17" id="28" lemma="spelen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="speel" word="speelde" wvorm="pv"/>
+          <node begin="16" end="17" id="28" lemma="door_spelen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="speel" word="speelde" wvorm="pv"/>
           <node begin="17" cat="np" end="19" id="29" rel="obj1">
             <node begin="17" end="18" id="30" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="31" lemma="kleur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kleur" word="kleur"/>

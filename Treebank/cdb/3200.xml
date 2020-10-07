@@ -2,8 +2,8 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="41" id="0" rel="top">
     <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="8" end="9" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="15" end="16" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="8" end="9" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="15" end="16" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="20" end="21" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="40" id="5" rel="--">
       <node begin="1" end="2" id="6" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
@@ -20,7 +20,7 @@
               <node begin="5" end="6" id="16" index="1" rel="su"/>
               <node begin="6" cat="np" end="8" id="17" rel="obj1">
                 <node begin="6" end="7" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="7" end="8" genus="genus" getal="ev" graad="basis" id="19" lemma="Breznjew-doctrine" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="doctrine" word="Breznjew-doctrine"/>
+                <node begin="7" end="8" genus="genus" getal="ev" graad="basis" id="19" lemma="Breznjew_doctrine" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="doctrine" word="Breznjew-doctrine"/>
               </node>
               <node begin="9" cat="np" end="15" id="20" rel="predc">
                 <node begin="9" end="10" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
@@ -47,7 +47,7 @@
                   <node begin="22" cat="np" end="27" id="38" rel="su">
                     <node begin="22" end="23" id="39" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                     <node begin="23" buiging="met-e" end="24" graad="basis" id="40" lemma="Russisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Russisch" word="Russische"/>
-                    <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="41" lemma="partijleider" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="partijleider" word="partijleider"/>
+                    <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="41" lemma="partij_leider" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="partijleider" word="partijleider"/>
                     <node begin="25" cat="mwu" end="27" id="42" rel="app">
                       <node begin="25" end="26" id="43" lemma="Leonid" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Leonid" spectype="deeleigen" word="Leonid"/>
                       <node begin="26" end="27" id="44" lemma="Breznjew" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Breznjew" spectype="deeleigen" word="Breznjew"/>
@@ -87,5 +87,5 @@
     </node>
     <node begin="40" end="41" id="64" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Het waren de Joegoslaven , die de Breznjew-doctrine &quot; de theorie van de beperkte soevereiniteit &quot; noemden en honend lachten , toen de Russische partijleider Leonid Breznjew het bestaan van een dergelijke theorie een vuil verzinsel van de imperialisten noemde .</sentence>
+  <sentence>Het waren de Joegoslaven , die de Breznjew-doctrine &#34; de theorie van de beperkte soevereiniteit &#34; noemden en honend lachten , toen de Russische partijleider Leonid Breznjew het bestaan van een dergelijke theorie een vuil verzinsel van de imperialisten noemde .</sentence>
 </alpino_ds>

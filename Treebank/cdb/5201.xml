@@ -30,7 +30,7 @@
                 <node begin="13" end="14" genus="genus" getal="ev" graad="basis" id="25" lemma="H.F." naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="H.F." word="H.F."/>
               </node>
             </node>
-            <node begin="14" end="15" id="26" lemma="treden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="treed" word="treden" wvorm="pv"/>
+            <node begin="14" end="15" id="26" lemma="op_treden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="treed" word="treden" wvorm="pv"/>
             <node begin="15" cat="np" end="17" id="27" rel="su">
               <node begin="15" end="16" getal="getal" id="28" lemma="er" naamval="gen" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(onbep,adv-pron,gen,red,3,getal)" pt="vnw" rel="hd" root="er" status="red" vwtype="onbep" word="er"/>
               <node begin="16" end="17" id="29" lemma="elf" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="det" root="elf" word="elf"/>
@@ -54,7 +54,7 @@
                     <node begin="23" cat="np" end="28" id="44" rel="cnj">
                       <node begin="23" end="24" id="45" index="3" rel="det"/>
                       <node begin="26" buiging="met-e" end="27" graad="basis" id="46" lemma="creatief" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="creatief" word="creatieve"/>
-                      <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="47" lemma="vernieuwingsdrang" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="drang" word="vernieuwingsdrang"/>
+                      <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="47" lemma="vernieuwing_drang" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="drang" word="vernieuwingsdrang"/>
                     </node>
                   </node>
                 </node>
@@ -70,6 +70,6 @@
   </node>
   <sentence>Om zich heen heeft hij een aantal jongere dansers verzameld ( in het H.F. treden er elf op ) , die het met zijn visie en creatieve vernieuwingsdrang eens zijn .</sentence>
   <comments>
-    <comment>&quot;om zich heen verzamelen&quot; ??</comment>
+    <comment>&#34;om zich heen verzamelen&#34; ??</comment>
   </comments>
 </alpino_ds>

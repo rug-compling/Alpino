@@ -5,8 +5,8 @@
     <node begin="7" end="8" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="14" end="15" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="23" end="24" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="35" end="36" id="5" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="37" end="38" id="6" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="35" end="36" id="5" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="37" end="38" id="6" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="conj" end="40" id="7" rel="--">
       <node begin="0" cat="smain" end="23" id="8" rel="cnj">
         <node begin="0" cat="np" end="7" id="9" rel="su">
@@ -23,7 +23,7 @@
             </node>
           </node>
         </node>
-        <node begin="8" end="9" id="19" lemma="storten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="stort" word="storten" wvorm="pv"/>
+        <node begin="8" end="9" id="19" lemma="op_storten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="stort" word="storten" wvorm="pv"/>
         <node begin="9" end="10" getal="getal" id="20" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="zich" status="red" vwtype="refl" word="zich"/>
         <node begin="10" cat="pp" end="14" id="21" rel="mod">
           <node begin="10" end="11" id="22" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
@@ -73,7 +73,7 @@
               <node begin="34" cat="inf" end="40" id="57" rel="body">
                 <node begin="34" cat="np" end="37" id="58" rel="obj1">
                   <node begin="34" end="35" id="59" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                  <node begin="36" end="37" genus="zijd" getal="ev" graad="basis" id="60" lemma="spraakverwarring" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verwarring" word="spraakverwarring"/>
+                  <node begin="36" end="37" genus="zijd" getal="ev" graad="basis" id="60" lemma="spraak_verwarring" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verwarring" word="spraakverwarring"/>
                 </node>
                 <node begin="39" buiging="zonder" end="40" id="61" lemma="voorkomen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voorkom" word="voorkomen" wvorm="inf"/>
               </node>
@@ -84,5 +84,5 @@
     </node>
     <node begin="40" end="41" id="62" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>de auteurs , voor zover daarin opgesloten , storten zich uit de ivoren toren , desnoods op de spietsen van hun kritische lezers , en de toren van Babel laat men links liggen om een &quot; spraakverwarring &quot; te voorkomen .</sentence>
+  <sentence>de auteurs , voor zover daarin opgesloten , storten zich uit de ivoren toren , desnoods op de spietsen van hun kritische lezers , en de toren van Babel laat men links liggen om een &#34; spraakverwarring &#34; te voorkomen .</sentence>
 </alpino_ds>

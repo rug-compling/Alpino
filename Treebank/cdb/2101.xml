@@ -24,7 +24,7 @@
           <node begin="8" buiging="met-e" end="9" id="18" lemma="enig" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enig" vwtype="onbep" word="enige"/>
           <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="19" lemma="beperking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beperking" word="beperking"/>
         </node>
-        <node begin="10" buiging="zonder" end="11" id="20" lemma="opleggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leg" word="opgelegd" wvorm="vd"/>
+        <node begin="10" buiging="zonder" end="11" id="20" lemma="op_leggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leg" word="opgelegd" wvorm="vd"/>
         <node begin="12" cat="cp" end="30" id="21" rel="mod">
           <node begin="12" end="13" id="22" lemma="door" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="door" vztype="init" word="door"/>
           <node begin="13" cat="ti" end="30" id="23" rel="body">
@@ -49,7 +49,7 @@
                         <node begin="22" end="23" id="41" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                         <node begin="23" cat="np" end="28" id="42" rel="obj1">
                           <node begin="23" end="24" id="43" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                          <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="44" lemma="grondoppervlak" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="oppervlak" word="grondoppervlak"/>
+                          <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="44" lemma="grond_oppervlak" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="oppervlak" word="grondoppervlak"/>
                           <node begin="25" cat="pp" end="28" id="45" rel="mod">
                             <node begin="25" end="26" id="46" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                             <node begin="26" cat="np" end="28" id="47" rel="obj1">

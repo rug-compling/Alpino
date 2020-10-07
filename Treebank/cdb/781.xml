@@ -4,7 +4,7 @@
     <node begin="16" end="17" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="25" id="2" rel="--">
       <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="Frans" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Frans" word="Frans"/>
-      <node begin="1" end="2" id="4" lemma="lopen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="loop" word="liep" wvorm="pv"/>
+      <node begin="1" end="2" id="4" lemma="op_lopen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="loop" word="liep" wvorm="pv"/>
       <node begin="2" cat="pp" end="13" id="5" rel="mod">
         <node begin="2" end="3" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
         <node begin="3" cat="np" end="13" id="7" rel="obj1">
@@ -31,7 +31,7 @@
       <node begin="15" end="16" id="22" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
       <node begin="13" cat="np" end="25" id="23" rel="obj1">
         <node begin="13" end="14" id="24" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="25" lemma="spierblessure" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="blessure" word="spierblessure"/>
+        <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="25" lemma="spier_blessure" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="blessure" word="spierblessure"/>
         <node begin="17" cat="rel" end="25" id="26" rel="mod">
           <node begin="17" end="18" getal="getal" id="27" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
           <node begin="17" cat="ssub" end="25" id="28" rel="body">

@@ -12,19 +12,19 @@
       <node begin="3" cat="np" end="40" id="9" rel="obj1">
         <node begin="3" end="4" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
         <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="11" lemma="aantal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aantal" word="aantal"/>
-        <node begin="5" end="6" getal="mv" graad="basis" id="12" lemma="beveiligingsmaatregel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="maatregel" word="beveiligingsmaatregelen"/>
+        <node begin="5" end="6" getal="mv" graad="basis" id="12" lemma="beveiliging_maatregel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="maatregel" word="beveiligingsmaatregelen"/>
         <node begin="7" cat="cp" end="40" id="13" rel="mod">
           <node begin="7" conjtype="onder" end="8" id="14" lemma="zoals" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zoals" word="zoals"/>
           <node begin="8" cat="conj" end="40" id="15" rel="body">
             <node begin="8" cat="np" end="13" id="16" rel="cnj">
-              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="17" lemma="verplichtstelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stelling" word="verplichtstelling"/>
+              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="17" lemma="verplicht_stelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stelling" word="verplichtstelling"/>
               <node begin="9" cat="pp" end="13" id="18" rel="mod">
                 <node begin="9" end="10" id="19" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                 <node begin="10" cat="np" end="13" id="20" rel="obj1">
-                  <node begin="10" end="11" getal="mv" graad="basis" id="21" lemma="hoofdsteun" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="steun" word="hoofdsteunen"/>
+                  <node begin="10" end="11" getal="mv" graad="basis" id="21" lemma="hoofd_steun" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="steun" word="hoofdsteunen"/>
                   <node begin="11" cat="pp" end="13" id="22" rel="mod">
                     <node begin="11" end="12" id="23" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-                    <node begin="12" end="13" getal="mv" graad="basis" id="24" lemma="auto" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="auto" word="auto&apos;s"/>
+                    <node begin="12" end="13" getal="mv" graad="basis" id="24" lemma="auto" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="auto" word="auto&#39;s"/>
                   </node>
                 </node>
               </node>
@@ -35,7 +35,7 @@
                 <node begin="15" end="16" id="28" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                 <node begin="16" cat="np" end="18" id="29" rel="obj1">
                   <node begin="16" end="17" id="30" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                  <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="31" lemma="maximumsnelheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="maximumsnelheid" word="maximumsnelheid"/>
+                  <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="31" lemma="maximum_snelheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="maximumsnelheid" word="maximumsnelheid"/>
                 </node>
               </node>
               <node begin="18" cat="pp" end="21" id="32" rel="mod">
@@ -74,11 +74,11 @@
                   <node begin="35" end="36" genus="zijd" getal="ev" graad="basis" id="57" lemma="toepassing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="toepassing" word="toepassing"/>
                   <node begin="36" cat="pp" end="38" id="58" rel="mod">
                     <node begin="36" end="37" id="59" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-                    <node begin="37" end="38" getal="mv" graad="basis" id="60" lemma="kooiconstructie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="constructie" word="kooiconstructies"/>
+                    <node begin="37" end="38" getal="mv" graad="basis" id="60" lemma="kooi_constructie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="constructie" word="kooiconstructies"/>
                   </node>
                   <node begin="38" cat="pp" end="40" id="61" rel="mod">
                     <node begin="38" end="39" id="62" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
-                    <node begin="39" end="40" getal="mv" graad="basis" id="63" lemma="auto" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="auto" word="auto&apos;s"/>
+                    <node begin="39" end="40" getal="mv" graad="basis" id="63" lemma="auto" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="auto" word="auto&#39;s"/>
                   </node>
                 </node>
               </node>
@@ -89,5 +89,5 @@
     </node>
     <node begin="40" end="41" id="64" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Hij bepleitte verder een aantal beveiligingsmaatregelen , zoals verplichtstelling van hoofdsteunen in auto&apos;s , verhoging van de maximumsnelheid op bepaalde punten , vermijding van gelijkvloerse kruisingen ook bij secundaire wegen , en bevordering van de toepassing van kooiconstructies bij auto&apos;s .</sentence>
+  <sentence>Hij bepleitte verder een aantal beveiligingsmaatregelen , zoals verplichtstelling van hoofdsteunen in auto&#39;s , verhoging van de maximumsnelheid op bepaalde punten , vermijding van gelijkvloerse kruisingen ook bij secundaire wegen , en bevordering van de toepassing van kooiconstructies bij auto&#39;s .</sentence>
 </alpino_ds>

@@ -7,7 +7,7 @@
       <node begin="0" cat="np" end="36" id="4" index="1" rel="su">
         <node begin="0" end="1" id="5" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
         <node begin="1" buiging="zonder" end="2" graad="basis" id="6" lemma="Haags" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="Haags" word="Haags"/>
-        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="7" lemma="muziektheater" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="theater" word="muziektheater"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="7" lemma="muziek_theater" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="theater" word="muziektheater"/>
         <node begin="4" cat="rel" end="36" id="8" rel="mod">
           <node begin="4" end="5" getal="ev" id="9" index="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
           <node begin="4" cat="ssub" end="36" id="10" rel="body">
@@ -16,7 +16,7 @@
             <node begin="4" cat="ppart" end="36" id="13" rel="vc">
               <node begin="4" end="5" id="14" index="2" rel="obj1"/>
               <node begin="5" end="6" id="15" lemma="onlangs" pos="adv" postag="BW()" pt="bw" rel="mod" root="onlangs" word="onlangs"/>
-              <node begin="7" buiging="zonder" end="8" id="16" lemma="oprichten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="richt" word="opgericht" wvorm="vd"/>
+              <node begin="7" buiging="zonder" end="8" id="16" lemma="op_richten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="richt" word="opgericht" wvorm="vd"/>
               <node begin="8" cat="pp" end="36" id="17" rel="mod">
                 <node begin="8" end="9" id="18" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
                 <node begin="9" cat="np" end="36" id="19" rel="obj1">
@@ -66,7 +66,7 @@
                         <node begin="30" end="31" id="54" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
                         <node begin="31" cat="np" end="36" id="55" rel="obj1">
                           <node begin="31" end="32" id="56" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                          <node begin="32" end="33" genus="zijd" getal="ev" graad="basis" id="57" lemma="operacultuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="cultuur" word="operacultuur"/>
+                          <node begin="32" end="33" genus="zijd" getal="ev" graad="basis" id="57" lemma="opera_cultuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="cultuur" word="operacultuur"/>
                           <node begin="33" cat="pp" end="36" id="58" rel="mod">
                             <node begin="33" end="34" id="59" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                             <node begin="34" cat="np" end="36" id="60" rel="obj1">
@@ -99,7 +99,7 @@
           <node begin="42" cat="np" end="45" id="73" rel="obj1">
             <node begin="42" end="43" id="74" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
             <node begin="43" buiging="met-e" end="44" graad="basis" id="75" lemma="Schevenings" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Scheveningse" word="Scheveningse"/>
-            <node begin="44" end="45" genus="genus" getal="ev" graad="basis" id="76" lemma="Circustheater" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="theater" word="Circustheater"/>
+            <node begin="44" end="45" genus="genus" getal="ev" graad="basis" id="76" lemma="Circus_theater" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="theater" word="Circustheater"/>
           </node>
         </node>
         <node begin="45" buiging="zonder" end="46" id="77" lemma="debuteren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="debuteer" word="debuteren" wvorm="inf"/>
@@ -113,7 +113,7 @@
               <node begin="50" cat="np" end="53" id="85" rel="obj1">
                 <node begin="50" end="51" id="86" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
                 <node begin="51" buiging="met-e" end="52" graad="basis" id="87" lemma="kort" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="kort" word="korte"/>
-                <node begin="52" end="53" getal="mv" graad="basis" id="88" lemma="opera" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="opera" word="opera&apos;s"/>
+                <node begin="52" end="53" getal="mv" graad="basis" id="88" lemma="opera" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="opera" word="opera&#39;s"/>
               </node>
             </node>
           </node>
@@ -122,5 +122,5 @@
     </node>
     <node begin="53" end="54" id="89" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
   </node>
-  <sentence>Het Haags muziektheater , dat onlangs werd opgericht met de bedoeling niet alleen een Haagse maar vooral bij de keuze van de medewerkers ook een echt Nederlandse bijdrage te leveren aan de operacultuur in ons land , zal zaterdag 27 september in het Scheveningse Circustheater debuteren met een voorstelling van twee korte opera&apos;s :</sentence>
+  <sentence>Het Haags muziektheater , dat onlangs werd opgericht met de bedoeling niet alleen een Haagse maar vooral bij de keuze van de medewerkers ook een echt Nederlandse bijdrage te leveren aan de operacultuur in ons land , zal zaterdag 27 september in het Scheveningse Circustheater debuteren met een voorstelling van twee korte opera&#39;s :</sentence>
 </alpino_ds>

@@ -9,7 +9,7 @@
           <node begin="2" cat="np" end="9" id="6" rel="obj1">
             <node begin="2" end="3" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
             <node begin="3" buiging="met-e" end="4" graad="basis" id="8" lemma="huidig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="huidig" word="huidige"/>
-            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="9" lemma="vakantiegeld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geld" word="vakantiegeld"/>
+            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="9" lemma="vakantie_geld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geld" word="vakantiegeld"/>
             <node begin="5" cat="pp" end="9" id="10" rel="mod">
               <node begin="5" end="6" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="6" cat="np" end="9" id="12" rel="obj1">
@@ -32,7 +32,7 @@
       </node>
     </node>
     <node begin="14" end="15" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
-    <node begin="15" end="16" id="24" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="15" end="16" id="24" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
   </node>
-  <sentence>En van het huidige vakantiegeld van ongeveer flo 400 kan men niet op vakantie . &quot;</sentence>
+  <sentence>En van het huidige vakantiegeld van ongeveer flo 400 kan men niet op vakantie . &#34;</sentence>
 </alpino_ds>

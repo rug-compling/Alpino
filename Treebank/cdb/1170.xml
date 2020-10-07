@@ -26,7 +26,7 @@
                 <node begin="7" end="8" id="21" lemma="ondanks" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="ondanks" vztype="init" word="ondanks"/>
                 <node begin="8" cat="np" end="22" id="22" rel="obj1">
                   <node begin="8" end="9" id="23" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                  <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="24" lemma="rentevergoeding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vergoeding" word="rentevergoeding"/>
+                  <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="24" lemma="rente_vergoeding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vergoeding" word="rentevergoeding"/>
                   <node begin="10" cat="pp" end="14" id="25" rel="mod">
                     <node begin="10" end="11" id="26" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                     <node begin="11" cat="np" end="14" id="27" rel="obj1">
@@ -45,7 +45,7 @@
                         <node begin="16" buiging="zonder" end="17" graad="basis" id="37" lemma="courant" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="courant" word="courant"/>
                       </node>
                       <node begin="18" cat="np" end="22" id="38" rel="mod">
-                        <node begin="18" end="19" getal="mv" graad="basis" id="39" lemma="girorekening" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="rekeningen" word="girorekeningen"/>
+                        <node begin="18" end="19" getal="mv" graad="basis" id="39" lemma="giro_rekening" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="rekeningen" word="girorekeningen"/>
                         <node begin="19" cat="pp" end="22" id="40" rel="mod">
                           <node begin="19" end="20" id="41" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                           <node begin="20" cat="np" end="22" id="42" rel="obj1">
@@ -62,7 +62,7 @@
                 <node begin="24" end="25" id="46" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                 <node begin="25" cat="np" end="27" id="47" rel="obj1">
                   <node begin="25" end="26" id="48" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                  <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="49" lemma="geldsector" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sector" word="geldsector"/>
+                  <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="49" lemma="geld_sector" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sector" word="geldsector"/>
                 </node>
               </node>
               <node begin="27" cat="pp" end="29" id="50" rel="mod">

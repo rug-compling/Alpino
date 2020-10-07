@@ -8,7 +8,7 @@
         <node begin="4" end="5" id="5" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
         <node begin="5" cat="np" end="14" id="6" index="1" rel="su">
           <node begin="5" end="6" id="7" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="8" lemma="wervingsovereenkomst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="overeenkomst" word="wervingsovereenkomst"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="8" lemma="werving_overeenkomst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="overeenkomst" word="wervingsovereenkomst"/>
           <node begin="7" cat="pp" end="14" id="9" rel="mod">
             <node begin="7" end="8" id="10" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>
             <node begin="8" cat="conj" end="14" id="11" rel="obj1">
@@ -49,7 +49,7 @@
             <node begin="19" end="20" id="36" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
             <node begin="20" cat="np" end="24" id="37" rel="obj1">
               <node begin="20" buiging="zonder" end="21" getal="mv" id="38" lemma="ons" naamval="stan" npagr="evon" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,zonder,evon)" pt="vnw" rel="det" root="ons" status="vol" vwtype="bez" word="ons"/>
-              <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="39" lemma="wervingskantoor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kantoor" word="wervingskantoor"/>
+              <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="39" lemma="werving_kantoor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kantoor" word="wervingskantoor"/>
               <node begin="22" cat="pp" end="24" id="40" rel="mod">
                 <node begin="22" end="23" id="41" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                 <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="42" lemma="Casablanca" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Casablanca" word="Casablanca"/>
@@ -71,7 +71,7 @@
                 <node begin="30" cat="ssub" end="37" id="54" rel="body">
                   <node begin="30" end="32" id="55" index="2" rel="su"/>
                   <node begin="32" buiging="zonder" end="33" graad="basis" id="56" lemma="gelijk" pos="fixed" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="gelijk" word="gelijk"/>
-                  <node begin="33" end="34" id="57" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
+                  <node begin="33" end="34" id="57" lemma="gelijk_staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
                   <node begin="34" cat="pp" end="37" id="58" rel="pc">
                     <node begin="34" end="35" id="59" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
                     <node begin="35" cat="np" end="37" id="60" rel="obj1">

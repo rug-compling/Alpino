@@ -24,15 +24,15 @@
               </node>
               <node begin="6" end="7" id="19" lemma="helemaal" pos="adv" postag="BW()" pt="bw" rel="mod" root="helemaal" word="helemaal"/>
               <node begin="7" buiging="zonder" end="8" graad="basis" id="20" lemma="mis" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="mis" word="mis"/>
-              <node begin="10" buiging="zonder" end="11" id="21" lemma="lopen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="loop" word="lopen" wvorm="inf"/>
+              <node begin="10" buiging="zonder" end="11" id="21" lemma="mis_lopen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="loop" word="lopen" wvorm="inf"/>
             </node>
           </node>
         </node>
       </node>
-      <node begin="12" end="13" id="22" lemma="gaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ga" word="ging" wvorm="pv"/>
+      <node begin="12" end="13" id="22" lemma="over_gaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ga" word="ging" wvorm="pv"/>
       <node begin="13" cat="np" end="19" id="23" rel="su">
         <node begin="13" end="14" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="25" lemma="centraalpost" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="post" word="centraalpost"/>
+        <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="25" lemma="centraal_post" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="post" word="centraalpost"/>
         <node begin="15" cat="pp" end="19" id="26" rel="mod">
           <node begin="15" end="16" id="27" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="16" cat="np" end="19" id="28" rel="obj1">

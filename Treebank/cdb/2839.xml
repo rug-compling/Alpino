@@ -30,7 +30,7 @@
                   <node begin="10" end="11" id="24" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
                   <node begin="11" cat="np" end="13" id="25" rel="obj1">
                     <node begin="11" end="12" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                    <node begin="12" end="13" getal="mv" graad="basis" id="27" lemma="kerkdeur" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="deur" word="kerkdeuren"/>
+                    <node begin="12" end="13" getal="mv" graad="basis" id="27" lemma="kerk_deur" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="deur" word="kerkdeuren"/>
                   </node>
                 </node>
                 <node begin="14" buiging="zonder" end="15" id="28" lemma="bevestigen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bevestig" word="bevestigen" wvorm="inf"/>
@@ -39,7 +39,7 @@
           </node>
         </node>
       </node>
-      <node begin="15" end="16" id="29" lemma="heffen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="hef" word="hieven" wvorm="pv"/>
+      <node begin="15" end="16" id="29" lemma="aan_heffen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="hef" word="hieven" wvorm="pv"/>
       <node begin="16" end="17" getal="mv" id="30" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
       <node begin="17" cat="np" end="19" id="31" rel="obj1">
         <node begin="17" end="18" id="32" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>

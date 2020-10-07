@@ -11,7 +11,7 @@
             <node begin="3" end="4" id="8" lemma="x" pos="adj" postag="SPEC(symb)" pt="spec" rel="mwp" root="x" spectype="symb" word="x"/>
             <node begin="4" end="5" id="9" lemma="200" naamval="stan" numtype="hoofd" pos="adj" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="200" word="200"/>
             <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="meter" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="meter" word="meter"/>
-            <node begin="6" end="7" id="11" lemma="vrijeslag-equipe" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="vrijeslag-equipe" spectype="symb" word="vrijeslag-equipe"/>
+            <node begin="6" end="7" id="11" lemma="vrijeslag_equipe" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="vrijeslag-equipe" spectype="symb" word="vrijeslag-equipe"/>
           </node>
         </node>
         <node begin="7" end="8" id="12" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
@@ -20,7 +20,7 @@
           <node begin="8" cat="conj" end="11" id="15" rel="obj1">
             <node begin="8" end="9" getal="mv" graad="basis" id="16" lemma="trainer" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="trainer" word="trainers"/>
             <node begin="9" conjtype="neven" end="10" id="17" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-            <node begin="10" end="11" getal="mv" graad="basis" id="18" lemma="bondsofficial" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="bondsofficials" word="bondsofficials"/>
+            <node begin="10" end="11" getal="mv" graad="basis" id="18" lemma="bond_official" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="bondsofficials" word="bondsofficials"/>
           </node>
           <node begin="11" cat="np" end="13" id="19" rel="mod">
             <node begin="11" buiging="zonder" end="12" id="20" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>

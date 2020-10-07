@@ -12,7 +12,7 @@
           <node begin="2" end="3" id="8" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
           <node begin="3" cat="np" end="5" id="9" rel="obj1">
             <node begin="3" end="4" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="vakbeweging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vakbeweging" word="vakbeweging"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="vak_beweging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vakbeweging" word="vakbeweging"/>
           </node>
         </node>
       </node>
@@ -28,12 +28,12 @@
             <node begin="11" end="12" getal="mv" graad="basis" id="21" lemma="zaak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="zaak" word="zaken"/>
           </node>
           <node begin="12" end="13" id="22" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
-          <node begin="13" buiging="zonder" end="14" id="23" lemma="rechtzetten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zet" word="rechtzetten" wvorm="inf"/>
+          <node begin="13" buiging="zonder" end="14" id="23" lemma="recht_zetten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zet" word="rechtzetten" wvorm="inf"/>
         </node>
       </node>
     </node>
     <node begin="14" end="15" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
-    <node begin="15" end="16" id="25" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="15" end="16" id="25" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
   </node>
-  <sentence>Het liefst door de vakbeweging , maar anders zullen wij de zaken wel rechtzetten . &quot;</sentence>
+  <sentence>Het liefst door de vakbeweging , maar anders zullen wij de zaken wel rechtzetten . &#34;</sentence>
 </alpino_ds>

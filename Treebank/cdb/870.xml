@@ -11,7 +11,7 @@
           <node begin="1" buiging="zonder" end="2" graad="basis" id="8" lemma="groots" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="groots" word="groots"/>
           <node begin="2" buiging="met-e" end="3" id="9" lemma="opzetten" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="opgezet" word="opgezette" wvorm="vd"/>
         </node>
-        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="10" lemma="popfestival" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="festival" word="popfestival"/>
+        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="10" lemma="pop_festival" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="festival" word="popfestival"/>
         <node begin="5" cat="conj" end="26" id="11" rel="mod">
           <node begin="5" cat="rel" end="15" id="12" rel="cnj">
             <node begin="5" end="6" getal="ev" id="13" index="1" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
@@ -37,7 +37,7 @@
                     <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="30" lemma="Rai" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Rai" word="Rai"/>
                   </node>
                 </node>
-                <node begin="14" buiging="zonder" end="15" id="31" lemma="plaatsvinden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vind" word="plaatsvinden" wvorm="inf"/>
+                <node begin="14" buiging="zonder" end="15" id="31" lemma="plaats_vinden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vind" word="plaatsvinden" wvorm="inf"/>
               </node>
             </node>
           </node>
@@ -59,13 +59,13 @@
                   <node begin="22" end="23" getal="mv" graad="basis" id="46" lemma="week" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="week" word="weken"/>
                 </node>
                 <node begin="23" buiging="zonder" end="24" graad="basis" id="47" lemma="danig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="danig" word="danig"/>
-                <node begin="25" buiging="zonder" end="26" id="48" lemma="bezighouden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="houd" word="beziggehouden" wvorm="vd"/>
+                <node begin="25" buiging="zonder" end="26" id="48" lemma="bezig_houden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="houd" word="beziggehouden" wvorm="vd"/>
               </node>
             </node>
           </node>
         </node>
       </node>
-      <node begin="27" end="28" id="49" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+      <node begin="27" end="28" id="49" lemma="door_gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
       <node begin="28" buiging="zonder" end="29" graad="basis" id="50" lemma="definitief" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="definitief" word="definitief"/>
       <node begin="29" end="30" id="51" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
       <node begin="30" end="31" id="52" lemma="door" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="door" vztype="fin" word="door"/>

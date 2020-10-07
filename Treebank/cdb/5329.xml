@@ -28,7 +28,7 @@
                         <node begin="10" end="11" id="25" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
                         <node begin="11" buiging="met-e" end="12" graad="basis" id="26" lemma="gevreesd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="gevreesd" word="gevreesde"/>
                       </node>
-                      <node begin="12" end="13" getal="mv" graad="basis" id="27" lemma="aanvalsspits" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="spits" word="aanvalsspitsen"/>
+                      <node begin="12" end="13" getal="mv" graad="basis" id="27" lemma="aanval_spits" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="spits" word="aanvalsspitsen"/>
                     </node>
                     <node begin="13" end="14" genus="onz" getal="ev" id="28" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
                     <node begin="14" cat="np" end="16" id="29" rel="mod">
@@ -36,14 +36,14 @@
                       <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="31" lemma="middag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="middag" word="middag"/>
                     </node>
                     <node begin="16" end="17" id="32" lemma="laten" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="laat" word="lieten" wvorm="pv"/>
-                    <node begin="17" buiging="zonder" end="18" id="33" lemma="afweten" pos="fixed" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="svp" root="weet" word="afweten" wvorm="inf"/>
+                    <node begin="17" buiging="zonder" end="18" id="33" lemma="af_weten" pos="fixed" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="svp" root="weet" word="afweten" wvorm="inf"/>
                   </node>
                 </node>
               </node>
             </node>
           </node>
         </node>
-        <node begin="19" end="20" id="34" lemma="rukken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ruk" word="rukte" wvorm="pv"/>
+        <node begin="19" end="20" id="34" lemma="op_rukken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ruk" word="rukte" wvorm="pv"/>
         <node begin="20" end="21" id="35" lemma="zelf" pos="adv" postag="BW()" pt="bw" rel="predm" root="zelf" word="zelf"/>
         <node begin="21" end="22" id="36" lemma="mee" pos="adv" postag="VZ(fin)" pt="vz" rel="mod" root="mee" vztype="fin" word="mee"/>
         <node begin="22" end="23" id="37" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>

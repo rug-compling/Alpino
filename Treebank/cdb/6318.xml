@@ -4,7 +4,7 @@
     <node begin="0" cat="smain" end="31" id="1" rel="--">
       <node begin="0" cat="np" end="5" id="2" index="1" rel="su">
         <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="pechdag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dag" word="pechdag"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="pech_dag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dag" word="pechdag"/>
         <node begin="2" cat="pp" end="5" id="5" rel="mod">
           <node begin="2" end="3" id="6" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
           <node begin="3" cat="np" end="5" id="7" rel="obj1">
@@ -26,7 +26,7 @@
               <node begin="10" end="11" id="20" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
               <node begin="11" cat="np" end="15" id="21" rel="obj1">
                 <node begin="11" end="12" id="22" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="23" lemma="centraalstation" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="station" word="centraalstation"/>
+                <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="23" lemma="centraal_station" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="station" word="centraalstation"/>
                 <node begin="13" cat="pp" end="15" id="24" rel="mod">
                   <node begin="13" end="14" id="25" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                   <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="26" lemma="Utrecht" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Utrecht" word="Utrecht"/>
@@ -39,8 +39,8 @@
               <node begin="17" cat="pp" end="20" id="30" rel="mod">
                 <node begin="17" end="18" id="31" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                 <node begin="18" cat="np" end="20" id="32" rel="obj1">
-                  <node begin="18" buiging="met-e" end="19" id="33" lemma="aansluiten" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="aansluitend" word="aansluitende" wvorm="od"/>
-                  <node begin="19" end="20" getal="mv" graad="basis" id="34" lemma="posttrein" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="trein" word="posttreinen"/>
+                  <node begin="18" buiging="met-e" end="19" id="33" lemma="aan_sluiten" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="aansluitend" word="aansluitende" wvorm="od"/>
+                  <node begin="19" end="20" getal="mv" graad="basis" id="34" lemma="post_trein" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="trein" word="posttreinen"/>
                 </node>
               </node>
             </node>
