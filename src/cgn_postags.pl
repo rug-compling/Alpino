@@ -90,9 +90,9 @@ tags(off,Q0,Q,Stem0,Tag,[cgn_postag(Q0,Q,Stem,Tag)|L],L) :-
     guess_lemma(Stem0,Stem).
 
 tags(on,Q0,Q,Stem0,Tag,L0,L) :-
+    guess_lemma(Stem0,Stem),
     (   Q is Q0 + 1
-    ->  guess_lemma(Stem0,Stem),
-	L0 = [cgn_postag(Q0,Q,Stem,Tag)|L]
+    ->  L0 = [cgn_postag(Q0,Q,Stem,Tag)|L]
     ;   stags(Q0,Q,Stem,Tag,1,L0,L)
     ).
 
