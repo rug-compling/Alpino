@@ -4,7 +4,7 @@
 
 use Getopt::Std;
 
-getopts('m:p:o:u');
+getopts('m:p:o:uz');
 
 $opt_p ||= 5000;
 $opt_m ||= 1000;
@@ -14,8 +14,16 @@ if ($opt_u){
     %seen=();
 }
 
-$ofile = $opt_o."_part00001.sents.gz";
-open(OUTPUT,"|gzip >$ofile") || 
+if ($opt_z) {
+    $filesuffix = "";
+    $cmdprefix = "|cat >"
+} else {
+    $filesuffix = ".gz";
+    $cmdprefix = "|gzip >"
+}
+
+$ofile = $opt_o."_part00001.sents$filesuffix";
+open(OUTPUT,"$cmdprefix$ofile") || 
   die "cannot write to $ofile: $!\n";
 $part=2;
 $counter=0;
@@ -41,8 +49,8 @@ while (<> )  {
   if ($counter >= $opt_p) {
     $counter=0;
     close OUTPUT;
-    $ofile = sprintf "%s_part%05d.sents.gz",$opt_o,$part;
-    open(OUTPUT,"|gzip >$ofile") || 
+    $ofile = sprintf "%s_part%05d.sents$filesuffix",$opt_o,$part;
+    open(OUTPUT,"$cmdprefix$ofile") || 
       die "cannot write to $ofile: $!\n";
     $part++;
   }
