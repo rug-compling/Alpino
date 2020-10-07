@@ -9,7 +9,7 @@
       <node begin="1" end="2" id="6" lemma="zenden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zend" word="zond" wvorm="pv"/>
       <node begin="2" buiging="zonder" end="3" graad="basis" id="7" lemma="prompt" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="prompt" word="prompt"/>
       <node begin="3" cat="np" end="20" id="8" rel="obj1">
-        <node begin="3" end="4" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&#39;n"/>
+        <node begin="3" end="4" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&apos;n"/>
         <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="mini_zender" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zender" word="mini-zender"/>
         <node begin="6" cat="rel" end="20" id="11" rel="mod">
           <node begin="6" end="7" getal="getal" id="12" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
@@ -48,5 +48,5 @@
     </node>
     <node begin="20" end="21" id="34" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Moskou zond prompt &#39;n mini-zender , die Marggraf - vroeg aanwezig om tafel te dekken - in de verwarmingsapparatuur bevestigde .</sentence>
+  <sentence>Moskou zond prompt &apos;n mini-zender , die Marggraf - vroeg aanwezig om tafel te dekken - in de verwarmingsapparatuur bevestigde .</sentence>
 </alpino_ds>

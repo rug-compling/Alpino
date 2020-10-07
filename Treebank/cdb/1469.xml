@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="14" id="0" rel="top">
-    <node begin="7" end="8" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
-    <node begin="9" end="10" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="7" end="8" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="9" end="10" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
     <node begin="0" cat="smain" end="13" id="3" rel="--">
       <node begin="0" cat="np" end="3" id="4" index="1" rel="su">
         <node begin="0" end="1" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
         <node begin="1" cat="mwu" end="3" id="6" rel="hd">
           <node begin="1" end="2" id="7" lemma="QUIZ" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="QUIZ" spectype="deeleigen" word="QUIZ"/>
-          <node begin="2" end="3" id="8" lemma="&#39;69" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="&#39;69" word="&#39;69"/>
+          <node begin="2" end="3" id="8" lemma="&apos;69" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="&apos;69" word="&apos;69"/>
         </node>
       </node>
       <node begin="3" end="4" id="9" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
@@ -31,5 +31,5 @@
     </node>
     <node begin="13" end="14" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De QUIZ &#39;69 wordt in de NOSstudio &#34; Bellevue &#34; te Amsterdam uitgevoerd .</sentence>
+  <sentence>De QUIZ &apos;69 wordt in de NOSstudio &quot; Bellevue &quot; te Amsterdam uitgevoerd .</sentence>
 </alpino_ds>

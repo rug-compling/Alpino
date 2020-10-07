@@ -29,7 +29,7 @@
           <node begin="10" cat="pp" end="15" id="21" rel="ld">
             <node begin="10" end="11" id="22" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
             <node begin="11" cat="np" end="15" id="23" rel="obj1">
-              <node begin="11" end="12" id="24" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&#39;n"/>
+              <node begin="11" end="12" id="24" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&apos;n"/>
               <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="25" lemma="raad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="raad" word="raad"/>
               <node begin="13" cat="pp" end="15" id="26" rel="mod">
                 <node begin="13" end="14" id="27" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
@@ -49,5 +49,5 @@
     </node>
     <node begin="21" end="22" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De overdonderde arbeiders zoeken steun bij de vakbonden , verschijnen voor &#39;n raad van beroep , advocaten staan hen gratis bij .</sentence>
+  <sentence>De overdonderde arbeiders zoeken steun bij de vakbonden , verschijnen voor &apos;n raad van beroep , advocaten staan hen gratis bij .</sentence>
 </alpino_ds>
