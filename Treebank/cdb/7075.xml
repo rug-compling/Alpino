@@ -4,7 +4,7 @@
     <node begin="0" cat="smain" end="16" id="1" rel="--">
       <node begin="0" cat="advp" end="5" id="2" rel="mod">
         <node begin="0" cat="mwu" end="2" id="3" rel="hd">
-          <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="gen" npagr="evmo" pos="adv" postag="LID(bep,gen,evmo)" pt="lid" rel="mwp" root="&apos;s" word="&apos;s"/>
+          <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="gen" npagr="evmo" pos="adv" postag="LID(bep,gen,evmo)" pt="lid" rel="mwp" root="&#39;s" word="&#39;s"/>
           <node begin="1" end="2" getal="ev" graad="basis" id="5" lemma="nacht" naamval="gen" ntype="soort" pos="adv" postag="N(soort,ev,basis,gen)" pt="n" rel="mwp" root="Nachts" word="Nachts"/>
         </node>
         <node begin="2" cat="pp" end="5" id="6" rel="mod">
@@ -36,11 +36,11 @@
             <node begin="12" end="13" getal="mv" graad="dim" id="26" lemma="schuur" ntype="soort" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" root="schuurtje" word="schuurtjes"/>
           </node>
           <node begin="13" end="14" id="27" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="af" vztype="fin" word="af"/>
-          <node begin="15" buiging="zonder" end="16" id="28" lemma="breken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breek" word="breken" wvorm="inf"/>
+          <node begin="15" buiging="zonder" end="16" id="28" lemma="af_breken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breek" word="breken" wvorm="inf"/>
         </node>
       </node>
     </node>
     <node begin="16" end="17" id="29" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>&apos;s Nachts om vier uur begonnen de leden van de commune de schuurtjes af te breken .</sentence>
+  <sentence>&#39;s Nachts om vier uur begonnen de leden van de commune de schuurtjes af te breken .</sentence>
 </alpino_ds>

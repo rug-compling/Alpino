@@ -6,14 +6,14 @@
       <node begin="0" cat="smain" end="6" id="3" rel="cnj">
         <node begin="0" cat="np" end="2" id="4" index="1" rel="su">
           <node begin="0" buiging="met-e" end="1" id="5" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="Deze"/>
-          <node begin="1" end="2" getal="mv" graad="basis" id="6" lemma="soortgenoot" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="soortgenoot" word="soortgenoten"/>
+          <node begin="1" end="2" getal="mv" graad="basis" id="6" lemma="soort_genoot" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="soortgenoot" word="soortgenoten"/>
         </node>
         <node begin="2" end="3" id="7" lemma="staan" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="sta" word="stonden" wvorm="pv"/>
         <node begin="3" cat="pp" end="6" id="8" rel="ld">
           <node begin="3" end="4" id="9" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
           <node begin="4" cat="np" end="6" id="10" rel="obj1">
             <node begin="4" end="5" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="12" lemma="Damsterkade" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Damsterkade" word="Damsterkade"/>
+            <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="12" lemma="Damster_kade" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Damsterkade" word="Damsterkade"/>
           </node>
         </node>
       </node>
@@ -37,7 +37,7 @@
                 <node begin="15" end="16" id="29" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                 <node begin="16" cat="np" end="18" id="30" rel="obj1">
                   <node begin="16" end="17" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                  <node begin="17" end="18" genus="genus" getal="ev" graad="basis" id="32" lemma="Oosterhavenbrug" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="brug" word="Oosterhavenbrug"/>
+                  <node begin="17" end="18" genus="genus" getal="ev" graad="basis" id="32" lemma="Ooster_haven_brug" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="brug" word="Oosterhavenbrug"/>
                 </node>
               </node>
             </node>

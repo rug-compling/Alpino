@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="49" id="0" rel="top">
-    <node begin="18" end="19" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="22" end="23" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="18" end="19" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="22" end="23" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="23" end="24" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="31" end="32" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="48" id="5" rel="--">
@@ -56,7 +56,7 @@
               <node begin="28" end="29" genus="onz" getal="ev" graad="basis" id="44" lemma="Friesland" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Friesland" word="Friesland"/>
               <node begin="29" cat="pp" end="31" id="45" rel="mod">
                 <node begin="29" end="30" id="46" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-                <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="47" lemma="oorlogstijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="oorlogstijd" word="oorlogstijd"/>
+                <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="47" lemma="oorlog_tijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="oorlogstijd" word="oorlogstijd"/>
               </node>
             </node>
           </node>
@@ -78,7 +78,7 @@
                 </node>
                 <node begin="34" cat="np" end="40" id="61" rel="cnj">
                   <node begin="34" end="35" id="62" index="1" rel="det"/>
-                  <node begin="37" end="38" genus="zijd" getal="ev" graad="basis" id="63" lemma="oud-verzetsman" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oud-verzetsman" word="oud-verzetsman"/>
+                  <node begin="37" end="38" genus="zijd" getal="ev" graad="basis" id="63" lemma="oud_verzetsman" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oud-verzetsman" word="oud-verzetsman"/>
                   <node begin="38" end="40" id="64" index="2" rel="app"/>
                 </node>
               </node>
@@ -107,5 +107,5 @@
     </node>
     <node begin="48" end="49" id="78" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Ter gelegenheid van de 25ste viering van de bevrijding van Friesland verschijnt begin april het eerste deel van &quot; Bezettingstijd in Friesland &quot; , een uitgebreid relaas over Friesland in oorlogstijd , geschreven door de journalist en oud-verzetsman Piter Wybenga en uitgegeven met medewerking van de Fryske Akademy .</sentence>
+  <sentence>Ter gelegenheid van de 25ste viering van de bevrijding van Friesland verschijnt begin april het eerste deel van &#34; Bezettingstijd in Friesland &#34; , een uitgebreid relaas over Friesland in oorlogstijd , geschreven door de journalist en oud-verzetsman Piter Wybenga en uitgegeven met medewerking van de Fryske Akademy .</sentence>
 </alpino_ds>

@@ -12,13 +12,13 @@
             <node begin="3" cat="np" end="6" id="9" rel="obj1">
               <node begin="3" end="4" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
               <node begin="4" end="5" id="11" lemma="één" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="eerste" word="eerste"/>
-              <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="wereldoorlog" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wereldoorlog" word="wereldoorlog"/>
+              <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="wereld_oorlog" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wereldoorlog" word="wereldoorlog"/>
             </node>
           </node>
           <node begin="6" cat="pp" end="9" id="13" rel="mod">
             <node begin="6" end="7" id="14" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
             <node begin="7" cat="np" end="9" id="15" rel="obj1">
-              <node begin="7" buiging="met-e" end="8" id="16" lemma="afkeuren" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="afkeurend" word="afkeurende" wvorm="od"/>
+              <node begin="7" buiging="met-e" end="8" id="16" lemma="af_keuren" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="afkeurend" word="afkeurende" wvorm="od"/>
               <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="17" lemma="zin" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zin" word="zin"/>
             </node>
           </node>
@@ -27,7 +27,7 @@
           <node begin="11" end="12" id="20" lemma="spreken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="spreek" word="sprak" wvorm="pv"/>
           <node begin="12" cat="pp" end="14" id="21" rel="pc">
             <node begin="12" end="13" id="22" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-            <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="regeringsbrood" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="brood" word="regeringsbrood"/>
+            <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="regering_brood" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="brood" word="regeringsbrood"/>
           </node>
         </node>
       </node>
@@ -47,7 +47,7 @@
           <node begin="21" buiging="zonder" end="22" id="35" lemma="spreken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="spreek" word="spreken" wvorm="inf"/>
           <node begin="22" cat="pp" end="24" id="36" rel="pc">
             <node begin="22" end="23" id="37" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-            <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="38" lemma="regeringsmuziek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="regeringsmuziek" word="regeringsmuziek"/>
+            <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="38" lemma="regering_muziek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="regeringsmuziek" word="regeringsmuziek"/>
           </node>
         </node>
       </node>

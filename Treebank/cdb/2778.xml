@@ -49,7 +49,7 @@
                   <node begin="20" cat="ppart" end="30" id="39" rel="vc">
                     <node begin="20" end="21" id="40" index="2" rel="mod"/>
                     <node begin="21" end="22" genus="masc" getal="ev" id="41" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj2" root="hem" status="vol" vwtype="pers" word="hem"/>
-                    <node begin="23" buiging="zonder" end="24" id="42" lemma="meedelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="deel" word="meegedeeld" wvorm="vd"/>
+                    <node begin="23" buiging="zonder" end="24" id="42" lemma="mee_delen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="deel" word="meegedeeld" wvorm="vd"/>
                     <node begin="24" cat="cp" end="30" id="43" rel="vc">
                       <node begin="24" conjtype="onder" end="25" id="44" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
                       <node begin="25" cat="ssub" end="30" id="45" rel="body">
@@ -74,7 +74,7 @@
               <node begin="32" cat="np" end="35" id="56" rel="body">
                 <node begin="32" end="33" id="57" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
                 <node begin="33" buiging="met-e" end="34" graad="basis" id="58" lemma="formeel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="formeel" word="formele"/>
-                <node begin="34" end="35" genus="zijd" getal="ev" graad="basis" id="59" lemma="ontslagbrief" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="brief" word="ontslagbrief"/>
+                <node begin="34" end="35" genus="zijd" getal="ev" graad="basis" id="59" lemma="ontslag_brief" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="brief" word="ontslagbrief"/>
               </node>
             </node>
             <node begin="35" end="36" id="60" lemma="zien" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zie" word="zien" wvorm="pv"/>

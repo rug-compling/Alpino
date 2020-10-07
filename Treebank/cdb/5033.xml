@@ -3,14 +3,14 @@
   <node begin="0" cat="top" end="42" id="0" rel="top">
     <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="14" end="15" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="15" end="16" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="19" end="20" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="15" end="16" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="19" end="20" id="4" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="20" end="21" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="36" end="37" id="6" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="41" id="7" rel="--">
       <node begin="0" cat="np" end="19" id="8" rel="su">
         <node begin="0" end="1" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
-        <node begin="1" buiging="zonder" end="2" getal-n="zonder-n" id="10" lemma="aftreden" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="treed" word="aftreden" wvorm="inf"/>
+        <node begin="1" buiging="zonder" end="2" getal-n="zonder-n" id="10" lemma="af_treden" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="treed" word="aftreden" wvorm="inf"/>
         <node begin="2" cat="pp" end="14" id="11" rel="mod">
           <node begin="2" end="3" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="3" cat="np" end="14" id="13" rel="obj1">
@@ -58,7 +58,7 @@
               <node begin="30" cat="np" end="41" id="46" rel="obj1">
                 <node begin="30" end="31" id="47" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
                 <node begin="31" buiging="met-e" end="32" graad="basis" id="48" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
-                <node begin="32" end="33" genus="zijd" getal="ev" graad="basis" id="49" lemma="actiegroep" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="actiegroep" word="actiegroep"/>
+                <node begin="32" end="33" genus="zijd" getal="ev" graad="basis" id="49" lemma="actie_groep" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="actiegroep" word="actiegroep"/>
                 <node begin="33" cat="pp" end="36" id="50" rel="mod">
                   <node begin="33" end="34" id="51" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                   <node begin="34" cat="np" end="36" id="52" rel="obj1">
@@ -82,5 +82,5 @@
     </node>
     <node begin="41" end="42" id="61" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Het aftreden van de penningmeester van de CHU , de heer Hoonakker uit Amsterdam , &quot; wegens drukke werkzaamheden &quot; , is waarschijnlijk het directe gevolg van het optreden van een nieuwe actiegroep in de CHU , het comite-31 januari 1970 .</sentence>
+  <sentence>Het aftreden van de penningmeester van de CHU , de heer Hoonakker uit Amsterdam , &#34; wegens drukke werkzaamheden &#34; , is waarschijnlijk het directe gevolg van het optreden van een nieuwe actiegroep in de CHU , het comite-31 januari 1970 .</sentence>
 </alpino_ds>

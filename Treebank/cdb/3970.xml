@@ -3,18 +3,18 @@
   <node begin="0" cat="top" end="25" id="0" rel="top">
     <node begin="5" end="6" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
     <node begin="17" end="18" id="2" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
-    <node begin="19" end="20" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="21" end="22" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="19" end="20" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="21" end="22" id="4" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="conj" end="23" id="5" rel="--">
       <node begin="0" cat="smain" end="5" id="6" rel="cnj">
         <node begin="0" cat="np" end="2" id="7" rel="su">
-          <node begin="0" end="1" getal="ev" graad="basis" id="8" lemma="Polonsky" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Polonsky" word="Polonsky&apos;s"/>
+          <node begin="0" end="1" getal="ev" graad="basis" id="8" lemma="Polonsky" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Polonsky" word="Polonsky&#39;s"/>
           <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="9" lemma="camera" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="camera" word="camera"/>
         </node>
         <node begin="2" end="3" id="10" lemma="observeren" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="observeer" word="observeert" wvorm="pv"/>
         <node begin="3" cat="np" end="5" id="11" rel="obj1">
           <node begin="3" end="4" id="12" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="13" lemma="indianenfeest" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="feest" word="Indianenfeest"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="13" lemma="indiaan_feest" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="feest" word="Indianenfeest"/>
         </node>
       </node>
       <node begin="6" conjtype="neven" end="7" id="14" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
@@ -49,5 +49,5 @@
     <node begin="23" end="24" id="35" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
     <node begin="24" end="25" id="36" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
   </node>
-  <sentence>Polonsky&apos;s camera observeert een Indianenfeest - maar niet om de toeschouwer te vergasten op pittoreske folkloristische observaties ( het &quot; toeristische &quot; standpunt ) :</sentence>
+  <sentence>Polonsky&#39;s camera observeert een Indianenfeest - maar niet om de toeschouwer te vergasten op pittoreske folkloristische observaties ( het &#34; toeristische &#34; standpunt ) :</sentence>
 </alpino_ds>

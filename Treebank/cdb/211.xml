@@ -6,10 +6,10 @@
     <node begin="17" end="18" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="36" id="4" rel="--">
       <node begin="0" end="1" genus="masc" getal="ev" id="5" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
-      <node begin="1" end="2" id="6" lemma="vuren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vuur" word="vuurde" wvorm="pv"/>
+      <node begin="1" end="2" id="6" lemma="af_vuren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vuur" word="vuurde" wvorm="pv"/>
       <node begin="2" cat="np" end="4" id="7" rel="obj1">
         <node begin="2" end="3" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="scheldkannonade" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kannonade" word="scheldkannonade"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="scheld_kannonade" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kannonade" word="scheldkannonade"/>
       </node>
       <node begin="4" end="5" id="10" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="af" vztype="fin" word="af"/>
       <node begin="5" cat="pp" end="36" id="11" rel="ld">
@@ -20,7 +20,7 @@
             <node begin="7" end="8" id="16" lemma="Beers" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Beers" spectype="deeleigen" word="Beers"/>
           </node>
           <node begin="9" cat="np" end="16" id="17" rel="mod">
-            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="teammanager" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="manager" word="teammanager"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="team_manager" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="manager" word="teammanager"/>
             <node begin="10" cat="pp" end="16" id="19" rel="mod">
               <node begin="10" end="11" id="20" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="11" cat="np" end="16" id="21" rel="obj1">

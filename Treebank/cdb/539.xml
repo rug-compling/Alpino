@@ -3,7 +3,7 @@
   <node begin="0" cat="top" end="38" id="0" rel="top">
     <node begin="21" end="22" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="26" end="27" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="30" end="31" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="30" end="31" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="31" end="32" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="du" end="37" id="5" rel="--">
       <node begin="0" cat="conj" end="30" id="6" rel="nucl">
@@ -34,7 +34,7 @@
                   <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="28" lemma="zand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="zand" word="zand"/>
                 </node>
                 <node begin="12" end="13" id="29" lemma="bij" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="bij" vztype="fin" word="bij"/>
-                <node begin="14" buiging="zonder" end="15" id="30" lemma="strooien" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="strooi" word="strooien" wvorm="inf"/>
+                <node begin="14" buiging="zonder" end="15" id="30" lemma="bij_strooien" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="strooi" word="strooien" wvorm="inf"/>
               </node>
             </node>
           </node>
@@ -48,7 +48,7 @@
             <node begin="18" end="19" id="37" lemma="hierop" pos="pp" postag="BW()" pt="bw" rel="mod" root="hierop" word="hierop"/>
             <node begin="19" cat="np" end="26" id="38" rel="obj2">
               <node begin="19" buiging="met-e" end="20" getal="mv" id="39" lemma="ons" naamval="stan" npagr="rest" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" pt="vnw" rel="det" root="onze" status="vol" vwtype="bez" word="onze"/>
-              <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="40" lemma="terreinknecht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="knecht" word="terreinknecht"/>
+              <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="40" lemma="terrein_knecht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="knecht" word="terreinknecht"/>
               <node begin="22" cat="np" end="26" id="41" rel="app">
                 <node begin="22" end="23" id="42" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                 <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="43" lemma="heer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="heer" word="heer"/>
@@ -62,7 +62,7 @@
               <node begin="27" buiging="met-e" end="28" id="48" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
               <node begin="28" end="29" genus="zijd" getal="ev" graad="basis" id="49" lemma="opdracht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="opdracht" word="opdracht"/>
             </node>
-            <node begin="29" buiging="zonder" end="30" id="50" lemma="doorgeven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geef" word="doorgegeven" wvorm="vd"/>
+            <node begin="29" buiging="zonder" end="30" id="50" lemma="door_geven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geef" word="doorgegeven" wvorm="vd"/>
           </node>
         </node>
       </node>
@@ -78,5 +78,5 @@
     </node>
     <node begin="37" end="38" id="58" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De scheidsrechter vroeg mij alleen om op enkele plaatsen nog wat zand bij te strooien en ik heb hierop onze terreinknecht , de heer K. Niemeijer , deze opdracht doorgegeven &quot; , aldus stelt de heer Brands .</sentence>
+  <sentence>De scheidsrechter vroeg mij alleen om op enkele plaatsen nog wat zand bij te strooien en ik heb hierop onze terreinknecht , de heer K. Niemeijer , deze opdracht doorgegeven &#34; , aldus stelt de heer Brands .</sentence>
 </alpino_ds>

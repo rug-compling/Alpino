@@ -55,7 +55,7 @@
                           <node begin="28" buiging="met-e" end="29" graad="basis" id="47" lemma="giftig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="giftig" word="giftige"/>
                           <node begin="29" end="30" getal="mv" graad="basis" id="48" lemma="wolk" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="wolk" word="wolken"/>
                         </node>
-                        <node begin="30" end="31" id="49" lemma="opstijgen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="stijg" word="opstegen" wvorm="pv"/>
+                        <node begin="30" end="31" id="49" lemma="op_stijgen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="stijg" word="opstegen" wvorm="pv"/>
                         <node begin="31" cat="pp" end="36" id="50" rel="mod">
                           <node begin="31" end="32" id="51" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
                           <node begin="32" cat="np" end="36" id="52" rel="obj1">
@@ -63,7 +63,7 @@
                             <node begin="33" end="34" genus="zijd" getal="ev" graad="basis" id="54" lemma="box" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="box" word="box"/>
                             <node begin="34" cat="pp" end="36" id="55" rel="mod">
                               <node begin="34" end="35" id="56" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
-                              <node begin="35" end="36" genus="zijd" getal="ev" graad="basis" id="57" lemma="meststof" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="stof" word="meststof"/>
+                              <node begin="35" end="36" genus="zijd" getal="ev" graad="basis" id="57" lemma="mest_stof" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="stof" word="meststof"/>
                             </node>
                           </node>
                         </node>

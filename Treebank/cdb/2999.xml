@@ -40,7 +40,7 @@
             <node begin="17" conjtype="neven" end="18" id="30" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="18" cat="np" end="35" id="31" rel="cnj">
               <node begin="18" end="19" id="32" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-              <node begin="19" buiging="met-e" end="20" graad="basis" id="33" lemma="hyper-theatraal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="teatraal" word="hyper-theatrale"/>
+              <node begin="19" buiging="met-e" end="20" graad="basis" id="33" lemma="hyper_theatraal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="teatraal" word="hyper-theatrale"/>
               <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="34" lemma="spel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="spel" word="spel"/>
               <node begin="21" cat="pp" end="24" id="35" rel="mod">
                 <node begin="21" end="22" id="36" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
@@ -88,7 +88,7 @@
           <node begin="36" end="37" id="65" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
           <node begin="38" end="39" id="66" index="2" rel="su"/>
           <node begin="40" end="41" id="67" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
-          <node begin="41" buiging="zonder" end="42" id="68" lemma="uitzoeken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zoek" word="uitzoeken" wvorm="inf"/>
+          <node begin="41" buiging="zonder" end="42" id="68" lemma="uit_zoeken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zoek" word="uitzoeken" wvorm="inf"/>
           <node begin="42" cat="whsub" end="46" id="69" rel="vc">
             <node begin="42" end="43" getal="ev" id="70" index="3" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" root="wat" status="vol" vwtype="vb" word="wat"/>
             <node begin="42" cat="ssub" end="46" id="71" rel="body">

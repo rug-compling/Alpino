@@ -7,7 +7,7 @@
         <node begin="0" buiging="zonder" end="1" graad="basis" id="4" lemma="natuurlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="tag" root="natuurlijk" word="Natuurlijk"/>
         <node begin="1" cat="smain" end="9" id="5" rel="nucl">
           <node begin="1" cat="mwu" end="3" id="6" rel="mod">
-            <node begin="1" end="2" id="7" lemma="de" lwtype="bep" naamval="gen" npagr="evmo" pos="adv" postag="LID(bep,gen,evmo)" pt="lid" rel="mwp" root="&apos;s" word="&apos;s"/>
+            <node begin="1" end="2" id="7" lemma="de" lwtype="bep" naamval="gen" npagr="evmo" pos="adv" postag="LID(bep,gen,evmo)" pt="lid" rel="mwp" root="&#39;s" word="&#39;s"/>
             <node begin="2" end="3" getal="mv" graad="basis" id="8" lemma="winter" ntype="soort" pos="adv" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="winters" word="winters"/>
           </node>
           <node begin="3" end="4" id="9" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
@@ -24,7 +24,7 @@
       </node>
       <node begin="10" conjtype="neven" end="11" id="17" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
       <node begin="11" cat="smain" end="19" id="18" rel="cnj">
-        <node begin="12" end="13" id="19" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="12" end="13" id="19" lemma="af_zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         <node begin="13" cat="np" end="15" id="20" rel="su">
           <node begin="13" end="14" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="22" lemma="lol" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="lol" word="lol"/>
@@ -40,8 +40,8 @@
     </node>
     <node begin="19" end="20" id="29" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Natuurlijk &apos;s winters hebben we mooie reisjes en zo , maar daar is de lol intussen al wel vanaf .</sentence>
+  <sentence>Natuurlijk &#39;s winters hebben we mooie reisjes en zo , maar daar is de lol intussen al wel vanaf .</sentence>
   <comments>
-    <comment>&apos;vanaf&apos;? af particle? dat de lol er al lang van moet af zijn???</comment>
+    <comment>&#39;vanaf&#39;? af particle? dat de lol er al lang van moet af zijn???</comment>
   </comments>
 </alpino_ds>

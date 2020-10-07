@@ -10,7 +10,7 @@
           <node begin="3" cat="np" end="12" id="7" rel="obj1">
             <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="4" buiging="met-e" end="5" graad="basis" id="9" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="groot" word="grote"/>
-            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="bestaansonzekerheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="onzekerheid" word="bestaansonzekerheid"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="bestaan_onzekerheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="onzekerheid" word="bestaansonzekerheid"/>
             <node begin="6" cat="rel" end="12" id="11" rel="mod">
               <node begin="6" end="7" getal="getal" id="12" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
               <node begin="6" cat="ssub" end="12" id="13" rel="body">
@@ -36,7 +36,7 @@
           <node begin="13" end="14" id="26" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
           <node begin="14" cat="np" end="23" id="27" rel="obj1">
             <node begin="14" end="15" id="28" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="15" buiging="met-e" end="16" id="29" lemma="voortgaan" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="voortgaand" word="voortgaande" wvorm="od"/>
+            <node begin="15" buiging="met-e" end="16" id="29" lemma="voort_gaan" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="voortgaand" word="voortgaande" wvorm="od"/>
             <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="30" lemma="verschraling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verschraling" word="verschraling"/>
             <node begin="17" cat="pp" end="23" id="31" rel="mod">
               <node begin="17" end="18" id="32" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>

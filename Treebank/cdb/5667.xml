@@ -72,7 +72,7 @@
           <node begin="33" end="34" genus="onz" getal="ev" graad="basis" id="54" lemma="team" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="team" word="team"/>
           <node begin="34" cat="pp" end="36" id="55" rel="mod">
             <node begin="34" end="35" id="56" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-            <node begin="35" end="36" getal="mv" graad="basis" id="57" lemma="veiligheidsagent" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="agent" word="veiligheidsagenten"/>
+            <node begin="35" end="36" getal="mv" graad="basis" id="57" lemma="veiligheid_agent" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="agent" word="veiligheidsagenten"/>
           </node>
         </node>
         <node begin="37" cat="oti" end="52" id="58" rel="mod">
@@ -82,7 +82,7 @@
             <node begin="38" cat="inf" end="52" id="62" rel="body">
               <node begin="38" buiging="zonder" end="39" graad="basis" id="63" lemma="precies" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="precies" word="precies"/>
               <node begin="39" end="40" id="64" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
-              <node begin="41" buiging="zonder" end="42" id="65" lemma="zoeken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zoek" word="zoeken" wvorm="inf"/>
+              <node begin="41" buiging="zonder" end="42" id="65" lemma="uit_zoeken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zoek" word="zoeken" wvorm="inf"/>
               <node begin="42" cat="whsub" end="52" id="66" rel="vc">
                 <node begin="42" end="43" id="67" index="2" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="whd" root="hoe" word="hoe"/>
                 <node begin="42" cat="ssub" end="52" id="68" rel="body">
@@ -101,7 +101,7 @@
                         <node begin="47" end="48" id="80" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                         <node begin="48" cat="np" end="50" id="81" rel="obj1">
                           <node begin="48" end="49" id="82" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                          <node begin="49" end="50" genus="onz" getal="ev" graad="basis" id="83" lemma="zondagsblad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="blad" word="zondagsblad"/>
+                          <node begin="49" end="50" genus="onz" getal="ev" graad="basis" id="83" lemma="zondag_blad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="blad" word="zondagsblad"/>
                         </node>
                       </node>
                     </node>

@@ -36,7 +36,7 @@
         </node>
         <node begin="11" end="15" id="26" index="1" rel="obj1"/>
         <node begin="15" end="16" id="27" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
-        <node begin="16" buiging="zonder" end="17" id="28" lemma="uitstellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="uitgesteld" wvorm="vd"/>
+        <node begin="16" buiging="zonder" end="17" id="28" lemma="uit_stellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="uitgesteld" wvorm="vd"/>
         <node begin="17" cat="pp" end="37" id="29" rel="mod">
           <node begin="17" end="18" id="30" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
           <node begin="18" cat="pp" end="37" id="31" rel="obj1">
@@ -59,7 +59,7 @@
                         <node begin="25" cat="ppart" end="29" id="48" rel="vc">
                           <node begin="25" end="26" id="49" index="2" rel="su"/>
                           <node begin="26" end="27" id="50" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
-                          <node begin="28" buiging="zonder" end="29" id="51" lemma="toezeggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zeg" word="toegezegd" wvorm="vd"/>
+                          <node begin="28" buiging="zonder" end="29" id="51" lemma="toe_zeggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zeg" word="toegezegd" wvorm="vd"/>
                         </node>
                       </node>
                     </node>
@@ -76,7 +76,7 @@
                       <node begin="34" end="35" id="60" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
                       <node begin="35" cat="np" end="37" id="61" rel="obj1">
                         <node begin="35" end="36" id="62" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                        <node begin="36" end="37" genus="zijd" getal="ev" graad="basis" id="63" lemma="vestigingsplaats" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="plaats" word="vestigingsplaats"/>
+                        <node begin="36" end="37" genus="zijd" getal="ev" graad="basis" id="63" lemma="vestiging_plaats" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="plaats" word="vestigingsplaats"/>
                       </node>
                     </node>
                   </node>

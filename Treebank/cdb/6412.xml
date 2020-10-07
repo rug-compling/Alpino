@@ -17,7 +17,7 @@
             <node begin="5" end="6" id="13" index="1" rel="su"/>
             <node begin="6" end="7" getal="getal" id="14" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
             <node begin="7" buiging="zonder" end="8" id="15" lemma="verbazen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="predm" root="verbaasd" word="verbaasd" wvorm="vd"/>
-            <node begin="8" end="9" id="16" lemma="afvragen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="vraag" word="afvragen" wvorm="pv"/>
+            <node begin="8" end="9" id="16" lemma="af_vragen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="vraag" word="afvragen" wvorm="pv"/>
             <node begin="10" cat="whsub" end="30" id="17" rel="vc">
               <node begin="10" end="11" id="18" index="2" lemma="waarom" pos="adv" postag="BW()" pt="bw" rel="whd" root="waarom" word="waarom"/>
               <node begin="10" cat="ssub" end="30" id="19" rel="body">
@@ -56,7 +56,7 @@
                     <node begin="27" end="28" id="46" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                     <node begin="28" cat="np" end="30" id="47" rel="obj1">
                       <node begin="28" end="29" id="48" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                      <node begin="29" end="30" genus="zijd" getal="ev" graad="basis" id="49" lemma="gemeenteraad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gemeenteraad" word="gemeenteraad"/>
+                      <node begin="29" end="30" genus="zijd" getal="ev" graad="basis" id="49" lemma="gemeente_raad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gemeenteraad" word="gemeenteraad"/>
                     </node>
                   </node>
                 </node>

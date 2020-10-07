@@ -15,7 +15,7 @@
       <node begin="4" end="5" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="5" cat="np" end="22" id="11" rel="predc">
         <node begin="5" end="6" id="12" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="13" lemma="meesterstuk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stuk" word="meesterstuk"/>
+        <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="13" lemma="meester_stuk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stuk" word="meesterstuk"/>
         <node begin="8" cat="rel" end="22" id="14" rel="mod">
           <node begin="8" end="9" getal="ev" id="15" index="1" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
           <node begin="8" cat="ssub" end="22" id="16" rel="body">
@@ -43,7 +43,7 @@
                 </node>
               </node>
             </node>
-            <node begin="21" end="22" id="35" lemma="blootleggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="leg" word="blootlegt" wvorm="pv"/>
+            <node begin="21" end="22" id="35" lemma="bloot_leggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="leg" word="blootlegt" wvorm="pv"/>
           </node>
         </node>
       </node>

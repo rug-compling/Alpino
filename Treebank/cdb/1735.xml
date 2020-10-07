@@ -19,7 +19,7 @@
             <node begin="6" end="7" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
             <node begin="7" cat="np" end="9" id="17" rel="obj1">
               <node begin="7" end="8" id="18" lemma="zestig" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="zestig" word="zestig"/>
-              <node begin="8" end="9" getal="mv" graad="basis" id="19" lemma="kleurenfoto" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kleurenfoto" word="kleurenfoto&apos;s"/>
+              <node begin="8" end="9" getal="mv" graad="basis" id="19" lemma="kleurenfoto" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kleurenfoto" word="kleurenfoto&#39;s"/>
             </node>
           </node>
           <node begin="9" cat="pp" end="12" id="20" rel="mod">
@@ -43,9 +43,9 @@
                   <node begin="15" cat="inf" end="32" id="36" rel="body">
                     <node begin="15" end="16" id="37" index="3" rel="su"/>
                     <node begin="18" cat="conj" end="25" id="38" rel="obj1">
-                      <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="39" lemma="natuurschoon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="natuurschoon" word="natuurschoon"/>
+                      <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="39" lemma="natuur_schoon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="natuurschoon" word="natuurschoon"/>
                       <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="40" lemma="folklore" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="folklore" word="folklore"/>
-                      <node begin="22" end="23" getal="mv" graad="basis" id="41" lemma="kunstschat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="schat" word="kunstschatten"/>
+                      <node begin="22" end="23" getal="mv" graad="basis" id="41" lemma="kunst_schat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="schat" word="kunstschatten"/>
                       <node begin="23" conjtype="neven" end="24" id="42" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                       <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="43" lemma="architectuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="architectuur" word="architectuur"/>
                     </node>
@@ -58,7 +58,7 @@
                       </node>
                     </node>
                     <node begin="29" end="30" id="50" lemma="samen" pos="part" postag="BW()" pt="bw" rel="svp" root="samen" word="samen"/>
-                    <node begin="31" buiging="zonder" end="32" id="51" lemma="stellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel" word="stellen" wvorm="inf"/>
+                    <node begin="31" buiging="zonder" end="32" id="51" lemma="samen_stellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel" word="stellen" wvorm="inf"/>
                   </node>
                 </node>
               </node>
@@ -69,5 +69,5 @@
     </node>
     <node begin="32" end="33" id="52" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Brantl heeft hiermede een magnifieke documentatie in zestig kleurenfoto&apos;s van zijn land gegeven , waarin hij getracht heeft natuurschoon , folklore , kunstschatten en architectuur in een harmonische verhouding samen te stellen .</sentence>
+  <sentence>Brantl heeft hiermede een magnifieke documentatie in zestig kleurenfoto&#39;s van zijn land gegeven , waarin hij getracht heeft natuurschoon , folklore , kunstschatten en architectuur in een harmonische verhouding samen te stellen .</sentence>
 </alpino_ds>

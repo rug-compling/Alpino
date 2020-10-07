@@ -18,9 +18,9 @@
           <node begin="7" end="8" id="14" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
           <node begin="8" cat="np" end="14" id="15" rel="obj1">
             <node begin="8" end="9" id="16" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-            <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="17" lemma="wegmaterieel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="materieel" word="wegmaterieel"/>
+            <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="17" lemma="weg_materieel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="materieel" word="wegmaterieel"/>
             <node begin="11" cat="conj" end="14" id="18" rel="mod">
-              <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="vrachtwagen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="vrachtwagen" word="vrachtwagen"/>
+              <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="vracht_wagen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="vrachtwagen" word="vrachtwagen"/>
               <node begin="12" conjtype="neven" end="13" id="20" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
               <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="21" lemma="aanhanger" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="aanhanger" word="aanhanger"/>
             </node>
@@ -32,12 +32,12 @@
         <node begin="16" cat="ssub" end="25" id="24" rel="body">
           <node begin="16" cat="np" end="18" id="25" rel="su">
             <node begin="16" end="17" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="27" lemma="kangoeroe-techniek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="techniek" word="kangoeroe-techniek"/>
+            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="27" lemma="kangoeroe_techniek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="techniek" word="kangoeroe-techniek"/>
           </node>
           <node begin="18" cat="conj" end="24" id="28" rel="obj1">
             <node begin="18" cat="np" end="20" id="29" rel="cnj">
               <node begin="18" buiging="met-e" end="19" graad="basis" id="30" lemma="speciaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="speciaal" word="speciale"/>
-              <node begin="19" end="20" getal="mv" graad="basis" id="31" lemma="spoorwagen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="wagen" word="spoorwagens"/>
+              <node begin="19" end="20" getal="mv" graad="basis" id="31" lemma="spoor_wagen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="wagen" word="spoorwagens"/>
             </node>
             <node begin="20" conjtype="neven" end="21" id="32" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="21" cat="np" end="24" id="33" rel="cnj">

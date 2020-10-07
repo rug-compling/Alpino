@@ -4,7 +4,7 @@
     <node begin="0" cat="smain" end="29" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
         <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="kontarsky" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Kontarsky&apos;s" word="Kontarsky&apos;s"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="kontarsky" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Kontarsky&#39;s" word="Kontarsky&#39;s"/>
       </node>
       <node begin="2" end="3" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
       <node begin="0" cat="ppart" end="29" id="6" rel="vc">
@@ -14,8 +14,8 @@
           <node begin="3" cat="pp" end="7" id="10" rel="mod">
             <node begin="3" end="4" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="4" cat="np" end="7" id="12" rel="obj1">
-              <node begin="4" end="5" getal="ev" graad="basis" id="13" lemma="Strawinsky" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Strawinsky" word="Strawinsky&apos;s"/>
-              <node begin="5" buiging="met-e" end="6" graad="basis" id="14" lemma="vierdelig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vierdelige" word="vierdelige"/>
+              <node begin="4" end="5" getal="ev" graad="basis" id="13" lemma="Strawinsky" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Strawinsky" word="Strawinsky&#39;s"/>
+              <node begin="5" buiging="met-e" end="6" graad="basis" id="14" lemma="vier_delig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vierdelige" word="vierdelige"/>
               <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="15" lemma="compositie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="compositie" word="compositie"/>
             </node>
           </node>
@@ -55,7 +55,7 @@
                     </node>
                     <node begin="25" end="26" genus="onz" getal="ev" graad="basis" id="45" lemma="geweld" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="svp" root="geweld" word="geweld"/>
                     <node begin="26" end="27" id="46" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
-                    <node begin="28" buiging="zonder" end="29" id="47" lemma="doen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="doe" word="doen" wvorm="inf"/>
+                    <node begin="28" buiging="zonder" end="29" id="47" lemma="aan_doen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="doe" word="doen" wvorm="inf"/>
                   </node>
                 </node>
               </node>
@@ -66,5 +66,5 @@
     </node>
     <node begin="29" end="30" id="48" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De Kontarsky&apos;s hebben van Strawinsky&apos;s vierdelige compositie een indringende en plastische vertolking gegeven die de gecompliceerde structuur analyseerde zonder de doorlopende beweging van de muziek geweld aan te doen .</sentence>
+  <sentence>De Kontarsky&#39;s hebben van Strawinsky&#39;s vierdelige compositie een indringende en plastische vertolking gegeven die de gecompliceerde structuur analyseerde zonder de doorlopende beweging van de muziek geweld aan te doen .</sentence>
 </alpino_ds>

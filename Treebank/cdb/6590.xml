@@ -14,10 +14,10 @@
           <node begin="2" end="3" id="11" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
           <node begin="3" cat="np" end="20" id="12" rel="obj1">
             <node begin="3" end="4" id="13" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-            <node begin="4" buiging="zonder" end="5" getal-n="zonder-n" id="14" lemma="inleggen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="leg" word="inleggen" wvorm="inf"/>
+            <node begin="4" buiging="zonder" end="5" getal-n="zonder-n" id="14" lemma="in_leggen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="leg" word="inleggen" wvorm="inf"/>
             <node begin="6" cat="np" end="20" id="15" rel="mod">
               <node begin="6" end="7" id="16" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-              <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="17" lemma="werphengel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hengel" word="werphengel"/>
+              <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="17" lemma="werp_hengel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hengel" word="werphengel"/>
               <node begin="8" cat="pp" end="15" id="18" rel="mod">
                 <node begin="8" end="9" id="19" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
                 <node begin="9" cat="pp" end="13" id="20" rel="mod">
@@ -56,7 +56,7 @@
             <node begin="25" end="26" id="43" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
             <node begin="26" cat="np" end="28" id="44" rel="obj1">
               <node begin="26" end="27" id="45" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="46" lemma="messroom" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="room" word="messroom"/>
+              <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="46" lemma="mess_room" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="room" word="messroom"/>
             </node>
           </node>
           <node begin="29" cat="whrel" end="32" id="47" rel="mod">
@@ -64,7 +64,7 @@
             <node begin="29" cat="ssub" end="32" id="49" rel="body">
               <node begin="29" end="30" id="50" index="2" rel="mod"/>
               <node begin="30" end="31" getal="mv" id="51" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
-              <node begin="31" end="32" id="52" lemma="ophalen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="haal" word="ophaalden" wvorm="pv"/>
+              <node begin="31" end="32" id="52" lemma="op_halen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="haal" word="ophaalden" wvorm="pv"/>
             </node>
           </node>
         </node>

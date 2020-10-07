@@ -29,13 +29,13 @@
           </node>
           <node begin="12" buiging="zonder" end="13" graad="comp" id="22" lemma="verder" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="verder" word="verder"/>
           <node begin="13" end="14" id="23" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
-          <node begin="15" buiging="zonder" end="16" id="24" lemma="breiden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breid" word="breiden" wvorm="inf"/>
+          <node begin="15" buiging="zonder" end="16" id="24" lemma="uit_breiden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breid" word="breiden" wvorm="inf"/>
           <node begin="16" cat="pp" end="36" id="25" rel="mod">
             <node begin="16" end="17" id="26" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
             <node begin="17" cat="conj" end="36" id="27" rel="obj1">
               <node begin="17" cat="np" end="22" id="28" rel="cnj">
                 <node begin="17" end="18" id="29" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                <node begin="18" buiging="zonder" end="19" getal-n="zonder-n" id="30" lemma="overnemen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="neem" word="overnemen" wvorm="inf"/>
+                <node begin="18" buiging="zonder" end="19" getal-n="zonder-n" id="30" lemma="over_nemen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="neem" word="overnemen" wvorm="inf"/>
                 <node begin="19" cat="pp" end="22" id="31" rel="mod">
                   <node begin="19" end="20" id="32" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                   <node begin="20" cat="np" end="22" id="33" rel="obj1">
@@ -71,7 +71,7 @@
                       </node>
                     </node>
                     <node begin="28" cat="np" end="36" id="57" rel="cnj">
-                      <node begin="28" end="29" getal="mv" graad="basis" id="58" lemma="verkoopmaatschappij" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="maatschappij" word="verkoopmaatschappijen"/>
+                      <node begin="28" end="29" getal="mv" graad="basis" id="58" lemma="verkoop_maatschappij" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="maatschappij" word="verkoopmaatschappijen"/>
                       <node begin="29" end="36" id="59" index="1" rel="mod"/>
                     </node>
                   </node>

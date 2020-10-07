@@ -11,7 +11,7 @@
           <node begin="2" end="3" id="8" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
           <node begin="3" cat="np" end="7" id="9" rel="obj1">
             <node begin="3" end="4" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="4" buiging="met-e" end="5" graad="basis" id="11" lemma="12-jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="12-jarige"/>
+            <node begin="4" buiging="met-e" end="5" graad="basis" id="11" lemma="12_jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="12-jarige"/>
             <node begin="5" cat="mwu" end="7" id="12" rel="hd">
               <node begin="5" end="6" id="13" lemma="Rinie" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Rinie" spectype="deeleigen" word="Rinie"/>
               <node begin="6" end="7" id="14" lemma="Wielheesen" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Wielheesen" spectype="deeleigen" word="Wielheesen"/>
@@ -29,7 +29,7 @@
       <node begin="12" end="13" id="20" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="0" cat="ppart" end="14" id="21" rel="vc">
         <node begin="0" end="11" id="22" index="1" rel="obj1"/>
-        <node begin="13" buiging="zonder" end="14" id="23" lemma="oplossen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="los" word="opgelost" wvorm="vd"/>
+        <node begin="13" buiging="zonder" end="14" id="23" lemma="op_lossen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="los" word="opgelost" wvorm="vd"/>
       </node>
     </node>
     <node begin="14" end="15" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

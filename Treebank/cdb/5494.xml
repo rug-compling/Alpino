@@ -25,10 +25,10 @@
             <node begin="9" cat="np" end="13" id="19" rel="su">
               <node begin="9" end="10" id="20" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
               <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="21" lemma="PvdA" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mod" root="PvdA" word="PvdA"/>
-              <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="22" lemma="kamerlid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kamerlid" word="Kamerlid"/>
+              <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="22" lemma="kamer_lid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kamerlid" word="Kamerlid"/>
               <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="23" lemma="Wierenga" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="app" root="Wierenga" word="Wierenga"/>
             </node>
-            <node begin="15" end="16" id="24" lemma="indienen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="dien" word="indiende" wvorm="pv"/>
+            <node begin="15" end="16" id="24" lemma="in_dienen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="dien" word="indiende" wvorm="pv"/>
             <node begin="13" cat="np" end="29" id="25" rel="obj1">
               <node begin="13" end="14" id="26" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
               <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="27" lemma="motie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="motie" word="motie"/>
@@ -38,7 +38,7 @@
                   <node begin="18" end="19" id="31" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
                   <node begin="17" cat="ppart" end="29" id="32" rel="vc">
                     <node begin="17" end="18" id="33" index="2" rel="mod"/>
-                    <node begin="19" buiging="zonder" end="20" id="34" lemma="aandringen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="dring" word="aangedrongen" wvorm="vd"/>
+                    <node begin="19" buiging="zonder" end="20" id="34" lemma="aan_dringen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="dring" word="aangedrongen" wvorm="vd"/>
                     <node begin="20" cat="pp" end="29" id="35" rel="pc">
                       <node begin="20" end="21" id="36" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
                       <node begin="21" cat="np" end="29" id="37" rel="obj1">

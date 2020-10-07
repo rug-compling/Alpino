@@ -17,7 +17,7 @@
               <node begin="2" end="3" id="14" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
               <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="15" lemma="Wilson" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Wilson" word="Wilson"/>
             </node>
-            <node begin="4" buiging="zonder" end="5" graad="basis" id="16" lemma="welbewust" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="welbewust" word="welbewust"/>
+            <node begin="4" buiging="zonder" end="5" graad="basis" id="16" lemma="wel_bewust" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="welbewust" word="welbewust"/>
             <node begin="5" buiging="zonder" end="6" id="17" lemma="kiezen" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="hd" root="gekozen" word="gekozen" wvorm="vd"/>
           </node>
           <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="18" lemma="spektakelstuk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stuk" word="spektakelstuk"/>
@@ -26,8 +26,8 @@
             <node begin="8" cat="conj" end="28" id="21" rel="obj1">
               <node begin="8" cat="np" end="11" id="22" rel="cnj">
                 <node begin="8" end="9" id="23" index="1" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                <node begin="9" buiging="zonder" end="10" graad="basis" id="24" lemma="voortdurend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="voortdurend" word="voortdurend"/>
-                <node begin="10" buiging="zonder" end="11" id="25" lemma="rondtrekken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="trek" word="rondtrekken" wvorm="inf"/>
+                <node begin="9" buiging="zonder" end="10" graad="basis" id="24" lemma="voort_durend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="voortdurend" word="voortdurend"/>
+                <node begin="10" buiging="zonder" end="11" id="25" lemma="rond_trekken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="trek" word="rondtrekken" wvorm="inf"/>
               </node>
               <node begin="8" cat="np" end="14" id="26" rel="cnj">
                 <node begin="8" end="9" id="27" index="1" rel="det"/>
@@ -64,7 +64,7 @@
             </node>
           </node>
         </node>
-        <node begin="29" end="30" id="50" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+        <node begin="29" end="30" id="50" lemma="af_gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
         <node begin="30" cat="conj" end="35" id="51" rel="obj2">
           <node begin="30" cat="np" end="33" id="52" rel="cnj">
             <node begin="30" end="31" id="53" index="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>

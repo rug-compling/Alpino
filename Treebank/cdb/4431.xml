@@ -22,8 +22,8 @@
                 <node begin="8" cat="pp" end="11" id="18" rel="mod">
                   <node begin="8" end="9" id="19" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                   <node begin="9" cat="np" end="11" id="20" rel="obj1">
-                    <node begin="9" end="10" id="21" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&apos;n"/>
-                    <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="22" lemma="tophonkballer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tophonkballer" word="tophonkballer"/>
+                    <node begin="9" end="10" id="21" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&#39;n"/>
+                    <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="22" lemma="top_honkballer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tophonkballer" word="tophonkballer"/>
                   </node>
                 </node>
                 <node begin="11" cat="pp" end="13" id="23" rel="mod">
@@ -37,7 +37,7 @@
             <node begin="16" cat="ssub" end="22" id="28" rel="cnj">
               <node begin="16" cat="np" end="18" id="29" index="1" rel="su">
                 <node begin="16" end="17" id="30" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="17" end="18" getal="mv" graad="basis" id="31" lemma="trainingsfaciliteit" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="faciliteit" word="trainingsfaciliteiten"/>
+                <node begin="17" end="18" getal="mv" graad="basis" id="31" lemma="training_faciliteit" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="faciliteit" word="trainingsfaciliteiten"/>
               </node>
               <node begin="16" cat="ti" end="21" id="32" rel="vc">
                 <node begin="19" end="20" id="33" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
@@ -116,5 +116,5 @@
     </node>
     <node begin="51" end="52" id="84" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Maar ook Richardson realiseert zich dat de mogelijkheden van &apos;n tophonkballer in Nederland beperkt zijn , de trainingsfaciliteiten gering te noemen zijn , de tegenstand in de vaderlandse competitie soms te verwaarlozen is en het internationaal contact van het nationale team beperkt blijft tot de Haarlemse Honkbalweek en de Europese kampioenschappen .</sentence>
+  <sentence>Maar ook Richardson realiseert zich dat de mogelijkheden van &#39;n tophonkballer in Nederland beperkt zijn , de trainingsfaciliteiten gering te noemen zijn , de tegenstand in de vaderlandse competitie soms te verwaarlozen is en het internationaal contact van het nationale team beperkt blijft tot de Haarlemse Honkbalweek en de Europese kampioenschappen .</sentence>
 </alpino_ds>

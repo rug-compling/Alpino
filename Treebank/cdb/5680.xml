@@ -24,7 +24,7 @@
               </node>
             </node>
             <node begin="9" end="10" id="19" lemma="voort" pos="part" postag="BW()" pt="bw" rel="svp" root="voort" word="voort"/>
-            <node begin="11" buiging="zonder" end="12" id="20" lemma="zetten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zet" word="zetten" wvorm="inf"/>
+            <node begin="11" buiging="zonder" end="12" id="20" lemma="voort_zetten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zet" word="zetten" wvorm="inf"/>
             <node begin="12" cat="cp" end="23" id="21" rel="mod">
               <node begin="12" conjtype="onder" end="13" id="22" lemma="zodat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="zodat" word="zodat"/>
               <node begin="13" cat="ssub" end="23" id="23" rel="body">
@@ -36,7 +36,7 @@
                     <node begin="16" cat="pp" end="20" id="29" rel="mod">
                       <node begin="16" end="17" id="30" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                       <node begin="17" cat="conj" end="20" id="31" rel="obj1">
-                        <node begin="17" end="18" getal="mv" graad="basis" id="32" lemma="melkleverancier" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="leverancier" word="melkleveranciers"/>
+                        <node begin="17" end="18" getal="mv" graad="basis" id="32" lemma="melk_leverancier" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="leverancier" word="melkleveranciers"/>
                         <node begin="18" conjtype="neven" end="19" id="33" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                         <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="34" lemma="personeel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="personeel" word="personeel"/>
                       </node>
@@ -47,7 +47,7 @@
                   <node begin="20" buiging="zonder" end="21" id="36" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
                   <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="37" lemma="wijziging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wijziging" word="wijziging"/>
                 </node>
-                <node begin="22" end="23" id="38" lemma="optreden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="treed" word="optreedt" wvorm="pv"/>
+                <node begin="22" end="23" id="38" lemma="op_treden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="treed" word="optreedt" wvorm="pv"/>
               </node>
             </node>
           </node>

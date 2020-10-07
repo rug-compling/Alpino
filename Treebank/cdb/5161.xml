@@ -12,7 +12,7 @@
             <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="9" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="uur" word="uur"/>
           </node>
         </node>
-        <node begin="3" end="4" id="10" lemma="geven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="geef" word="gaf" wvorm="pv"/>
+        <node begin="3" end="4" id="10" lemma="op_geven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="geef" word="gaf" wvorm="pv"/>
         <node begin="4" end="5" genus="genus" getal="ev" graad="basis" id="11" index="1" lemma="Ongania" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="su" root="Ongania" word="Ongania"/>
         <node begin="5" end="6" genus="onz" getal="ev" id="12" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="het"/>
         <node begin="6" end="7" id="13" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
@@ -43,7 +43,7 @@
                     <node begin="21" conjtype="onder" end="22" id="36" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
                     <node begin="22" cat="ssub" end="24" id="37" rel="body">
                       <node begin="22" end="23" genus="masc" getal="ev" id="38" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
-                      <node begin="23" end="24" id="39" lemma="aftreden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="treed" word="aftrad" wvorm="pv"/>
+                      <node begin="23" end="24" id="39" lemma="af_treden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="treed" word="aftrad" wvorm="pv"/>
                     </node>
                   </node>
                 </node>

@@ -6,7 +6,7 @@
         <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
         <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="nkv" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="NKV" word="NKV"/>
       </node>
-      <node begin="2" end="3" id="5" lemma="sporen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="spoort" word="spoort" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="aan_sporen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="spoort" word="spoort" wvorm="pv"/>
       <node begin="3" cat="np" end="5" id="6" index="1" rel="obj1">
         <node begin="3" end="4" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="regering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="regering" word="regering"/>
@@ -29,7 +29,7 @@
           </node>
           <node begin="11" cat="np" end="13" id="22" rel="obj2">
             <node begin="11" end="12" id="23" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-            <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="24" lemma="ser-advies" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="advies" word="SER-advies"/>
+            <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="24" lemma="ser_advies" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="advies" word="SER-advies"/>
           </node>
           <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="25" lemma="gestalte" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="svp" root="gestalte" word="gestalte"/>
           <node begin="15" buiging="zonder" end="16" id="26" lemma="geven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="geef" word="geven" wvorm="inf"/>
@@ -37,7 +37,7 @@
             <node begin="16" end="17" id="28" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
             <node begin="17" cat="np" end="19" id="29" rel="obj1">
               <node begin="17" end="18" id="30" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-              <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="31" lemma="wetsontwerp" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="wetsontwerp" word="wetsontwerp"/>
+              <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="31" lemma="wet_ontwerp" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="wetsontwerp" word="wetsontwerp"/>
             </node>
           </node>
         </node>

@@ -2,7 +2,7 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="33" id="0" rel="top">
     <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="29" end="30" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="29" end="30" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="31" id="3" rel="--">
       <node begin="0" cat="cp" end="8" id="4" rel="su">
         <node begin="0" conjtype="onder" end="1" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="Dat"/>
@@ -49,14 +49,14 @@
                   <node begin="22" end="23" id="39" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
                   <node begin="23" cat="np" end="26" id="40" rel="obj1">
                     <node begin="23" end="24" id="41" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                    <node begin="24" buiging="met-e" end="25" graad="basis" id="42" lemma="links-rechts" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="rechts" word="links-rechtse"/>
+                    <node begin="24" buiging="met-e" end="25" graad="basis" id="42" lemma="links_rechts" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="rechts" word="links-rechtse"/>
                     <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="43" lemma="combinatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="combinatie" word="combinatie"/>
                   </node>
                 </node>
                 <node begin="26" end="27" id="44" lemma="zowaar" pos="adv" postag="BW()" pt="bw" rel="mod" root="zowaar" word="zowaar"/>
                 <node begin="27" end="28" id="45" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
                 <node begin="28" end="29" id="46" lemma="even" pos="adj" postag="BW()" pt="bw" rel="mod" root="even" word="even"/>
-                <node begin="30" end="31" id="47" lemma="aanslaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="sla" word="aansloeg" wvorm="pv"/>
+                <node begin="30" end="31" id="47" lemma="aan_slaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="sla" word="aansloeg" wvorm="pv"/>
               </node>
             </node>
           </node>
@@ -64,7 +64,7 @@
       </node>
     </node>
     <node begin="31" end="32" id="48" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
-    <node begin="32" end="33" id="49" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="32" end="33" id="49" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
   </node>
-  <sentence>Dat het einde ten slotte nog onverwacht kwam , is de verdienste van strijdlustige Lubbers die zijn tegenstander in de vijfde ronde met een links-rechtse combinatie zowaar nog even &quot; aansloeg . &quot;</sentence>
+  <sentence>Dat het einde ten slotte nog onverwacht kwam , is de verdienste van strijdlustige Lubbers die zijn tegenstander in de vijfde ronde met een links-rechtse combinatie zowaar nog even &#34; aansloeg . &#34;</sentence>
 </alpino_ds>

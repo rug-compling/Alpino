@@ -19,7 +19,7 @@
       <node begin="6" end="7" id="12" lemma="beginnen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="begin" word="beginnen" wvorm="pv"/>
       <node begin="7" cat="np" end="13" id="13" rel="su">
         <node begin="7" end="8" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="8" end="9" getal="mv" graad="basis" id="15" lemma="avondspitsdienst" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="diensten" word="avondspitsdiensten"/>
+        <node begin="8" end="9" getal="mv" graad="basis" id="15" lemma="avond_spits_dienst" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="diensten" word="avondspitsdiensten"/>
         <node begin="9" cat="pp" end="13" id="16" rel="mod">
           <node begin="9" end="10" id="17" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="10" cat="conj" end="13" id="18" rel="obj1">
@@ -41,7 +41,7 @@
             <node begin="17" end="18" id="30" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
             <node begin="18" cat="np" end="20" id="31" rel="obj1">
               <node begin="18" buiging="met-e" end="19" graad="basis" id="32" lemma="gewoon" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gewoon" word="gewone"/>
-              <node begin="19" end="20" getal="mv" graad="basis" id="33" lemma="werkdag" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="werkdag" word="werkdagen"/>
+              <node begin="19" end="20" getal="mv" graad="basis" id="33" lemma="werk_dag" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="werkdag" word="werkdagen"/>
             </node>
           </node>
         </node>

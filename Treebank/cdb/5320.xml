@@ -11,7 +11,7 @@
             <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="8" lemma="redenering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="redenering" word="redenering"/>
           </node>
         </node>
-        <node begin="4" buiging="zonder" end="5" id="9" lemma="aannemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="neem" word="aangenomen" wvorm="vd"/>
+        <node begin="4" buiging="zonder" end="5" id="9" lemma="aan_nemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="neem" word="aangenomen" wvorm="vd"/>
         <node begin="5" cat="cp" end="25" id="10" rel="vc">
           <node begin="5" conjtype="onder" end="6" id="11" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
           <node begin="6" cat="ssub" end="25" id="12" rel="body">
@@ -43,7 +43,7 @@
                           <node begin="18" cat="pp" end="21" id="37" rel="mod">
                             <node begin="18" end="19" id="38" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                             <node begin="19" cat="np" end="21" id="39" rel="obj1">
-                              <node begin="19" end="20" getal="ev" graad="basis" id="40" lemma="Jenkins" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Jenkins" word="Jenkins&apos;"/>
+                              <node begin="19" end="20" getal="ev" graad="basis" id="40" lemma="Jenkins" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Jenkins" word="Jenkins&#39;"/>
                               <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="41" lemma="begroting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="begroting" word="begroting"/>
                             </node>
                           </node>
@@ -62,5 +62,5 @@
     </node>
     <node begin="25" end="26" id="44" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>In deze redenering wordt aangenomen dat premier Wilson de gunstige electorale gevolgen van een zekere mate van reflatie in Jenkins&apos; begroting niet zal willen ontberen .</sentence>
+  <sentence>In deze redenering wordt aangenomen dat premier Wilson de gunstige electorale gevolgen van een zekere mate van reflatie in Jenkins&#39; begroting niet zal willen ontberen .</sentence>
 </alpino_ds>

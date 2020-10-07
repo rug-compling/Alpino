@@ -10,12 +10,12 @@
           <node begin="1" end="2" id="7" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="2" cat="np" end="8" id="8" rel="obj1">
             <node begin="2" end="3" id="9" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="10" lemma="bovenzaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zaal" word="bovenzaal"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="10" lemma="boven_zaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zaal" word="bovenzaal"/>
             <node begin="5" cat="pp" end="8" id="11" rel="mod">
               <node begin="5" end="6" id="12" lemma="boven" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="boven" vztype="init" word="boven"/>
               <node begin="6" cat="np" end="8" id="13" rel="obj1">
                 <node begin="6" end="7" id="14" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="15" lemma="ijssalon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="salon" word="ijssalon"/>
+                <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="15" lemma="ijs_salon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="salon" word="ijssalon"/>
               </node>
             </node>
           </node>
@@ -38,7 +38,7 @@
               <node begin="17" cat="pp" end="22" id="29" rel="pc">
                 <node begin="17" end="18" id="30" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
                 <node begin="18" cat="np" end="22" id="31" rel="obj1">
-                  <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="32" lemma="kruidendokter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dokter" word="kruidendokter"/>
+                  <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="32" lemma="kruid_dokter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dokter" word="kruidendokter"/>
                   <node begin="19" cat="mwu" end="22" id="33" rel="app">
                     <node begin="19" end="20" id="34" lemma="Van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Van" spectype="deeleigen" word="Van"/>
                     <node begin="20" end="21" id="35" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>

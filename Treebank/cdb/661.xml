@@ -17,13 +17,13 @@
           <node begin="2" end="4" id="13" index="1" rel="su"/>
           <node begin="4" buiging="zonder" end="5" graad="basis" id="14" lemma="ongetwijfeld" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ongetwijfeld" word="ongetwijfeld"/>
           <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="15" lemma="gelijk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="gelijk" word="gelijk"/>
-          <node begin="6" buiging="zonder" end="7" id="16" lemma="hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb" word="hebben" wvorm="inf"/>
+          <node begin="6" buiging="zonder" end="7" id="16" lemma="gelijk_hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb" word="hebben" wvorm="inf"/>
         </node>
       </node>
       <node begin="8" conjtype="neven" end="9" id="17" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
       <node begin="9" cat="smain" end="50" id="18" rel="cnj">
         <node begin="9" buiging="zonder" end="10" graad="basis" id="19" lemma="vast" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="vast" word="vast"/>
-        <node begin="10" end="11" id="20" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
+        <node begin="10" end="11" id="20" lemma="vast_staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
         <node begin="11" end="12" id="21" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
         <node begin="12" cat="cp" end="50" id="22" rel="su">
           <node begin="12" conjtype="onder" end="13" id="23" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
@@ -52,7 +52,7 @@
                   <node begin="25" end="26" genus="onz" getal="ev" graad="basis" id="42" lemma="Vaticaan" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Vaticaan" word="Vaticaan"/>
                 </node>
               </node>
-              <node begin="27" buiging="zonder" end="28" id="43" lemma="uitvechten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vecht" word="uitgevochten" wvorm="vd"/>
+              <node begin="27" buiging="zonder" end="28" id="43" lemma="uit_vechten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vecht" word="uitgevochten" wvorm="vd"/>
               <node begin="20" cat="np" end="50" id="44" index="2" rel="obj1">
                 <node begin="20" end="21" id="45" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
                 <node begin="21" buiging="met-e" end="22" graad="basis" id="46" lemma="dramatisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="dramatisch" word="dramatische"/>

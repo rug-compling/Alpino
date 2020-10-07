@@ -18,7 +18,7 @@
         </node>
         <node begin="5" conjtype="neven" end="6" id="15" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="6" cat="sv1" end="9" id="16" rel="cnj">
-          <node begin="6" end="7" id="17" lemma="komen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kom" word="kom" wvorm="pv"/>
+          <node begin="6" end="7" id="17" lemma="terug_komen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kom" word="kom" wvorm="pv"/>
           <node begin="7" end="8" id="18" lemma="alleen" pos="adv" postag="BW()" pt="bw" rel="predm" root="alleen" word="alleen"/>
           <node begin="8" end="9" id="19" lemma="terug" pos="part" postag="BW()" pt="bw" rel="svp" root="terug" word="terug"/>
         </node>
@@ -52,7 +52,7 @@
                     <node begin="26" cat="np" end="33" id="43" rel="obj1">
                       <node begin="26" end="27" id="44" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
                       <node begin="27" end="28" genus="onz" getal="ev" graad="dim" id="45" lemma="troep" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="troepje" word="troepje"/>
-                      <node begin="28" end="29" getal="mv" graad="basis" id="46" lemma="ex-veroordelen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="veroordeelde" word="ex-veroordeelden"/>
+                      <node begin="28" end="29" getal="mv" graad="basis" id="46" lemma="ex_veroordelen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" root="veroordeelde" word="ex-veroordeelden"/>
                       <node begin="30" cat="np" end="33" id="47" rel="app">
                         <node begin="30" cat="ap" end="32" id="48" rel="mod">
                           <node begin="30" end="31" id="49" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="mod" root="zeer" word="zeer"/>
@@ -72,7 +72,7 @@
                   <node begin="36" cat="np" end="39" id="57" rel="obj1">
                     <node begin="36" end="37" id="58" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                     <node begin="37" buiging="met-e" end="38" graad="basis" id="59" lemma="Amerikaans" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Amerikaans" word="Amerikaanse"/>
-                    <node begin="38" end="39" genus="zijd" getal="ev" graad="basis" id="60" lemma="burgeroorlog" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="burgeroorlog" word="burgeroorlog"/>
+                    <node begin="38" end="39" genus="zijd" getal="ev" graad="basis" id="60" lemma="burger_oorlog" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="burgeroorlog" word="burgeroorlog"/>
                   </node>
                 </node>
                 <node begin="39" cat="pp" end="43" id="61" rel="mod">
@@ -87,7 +87,7 @@
                   <node begin="34" end="35" getal="getal" id="68" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
                   <node begin="43" end="44" id="69" lemma="op" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="op" vztype="fin" word="op"/>
                 </node>
-                <node begin="44" buiging="zonder" end="45" id="70" lemma="uitsturen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stuur" word="uitgestuurd" wvorm="vd"/>
+                <node begin="44" buiging="zonder" end="45" id="70" lemma="uit_sturen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stuur" word="uitgestuurd" wvorm="vd"/>
               </node>
               <node begin="45" end="46" id="71" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
             </node>

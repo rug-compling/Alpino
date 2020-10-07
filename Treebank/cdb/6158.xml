@@ -7,7 +7,7 @@
         <node begin="1" end="2" id="4" lemma="doen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="doe" word="deed" wvorm="pv"/>
         <node begin="2" cat="np" end="4" id="5" index="1" rel="obj1">
           <node begin="2" end="3" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="thuisclub" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="club" word="thuisclub"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="thuis_club" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="club" word="thuisclub"/>
         </node>
         <node begin="2" cat="inf" end="6" id="8" rel="vc">
           <node begin="2" end="4" id="9" index="1" rel="su"/>
@@ -24,7 +24,7 @@
             <node begin="9" end="10" getal="mv" graad="basis" id="18" lemma="minuut" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="minuut" word="minuten"/>
           </node>
         </node>
-        <node begin="10" end="11" id="19" lemma="kijken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kijk" word="keek" wvorm="pv"/>
+        <node begin="10" end="11" id="19" lemma="aan_kijken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kijk" word="keek" wvorm="pv"/>
         <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="20" lemma="RCH" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="RCH" word="RCH"/>
         <node begin="12" cat="pp" end="16" id="21" rel="ld">
           <node begin="12" end="13" id="22" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>

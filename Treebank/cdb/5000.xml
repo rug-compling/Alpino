@@ -14,7 +14,7 @@
             <node begin="11" end="12" id="11" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="12" cat="np" end="14" id="12" rel="obj1">
               <node begin="12" buiging="met-e" end="13" graad="basis" id="13" lemma="kwikhoudend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="houdend" word="kwikhoudende"/>
-              <node begin="13" end="14" getal="mv" graad="basis" id="14" lemma="bestrijdingsmiddel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bestrijdingsmiddel" word="bestrijdingsmiddelen"/>
+              <node begin="13" end="14" getal="mv" graad="basis" id="14" lemma="bestrijding_middel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bestrijdingsmiddel" word="bestrijdingsmiddelen"/>
             </node>
           </node>
         </node>
@@ -109,7 +109,7 @@
               <node begin="43" end="44" id="81" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
             </node>
             <node begin="44" cat="np" end="51" id="82" rel="obj1">
-              <node begin="44" end="45" getal="mv" graad="basis" id="83" lemma="vraag" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vraag" word="vragen"/>
+              <node begin="44" end="45" getal="mv" graad="basis" id="83" lemma="op_vragen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vraag" word="vragen"/>
               <node begin="45" cat="pp" end="51" id="84" rel="mod">
                 <node begin="45" end="46" id="85" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                 <node begin="46" cat="np" end="51" id="86" rel="obj1">
@@ -121,7 +121,7 @@
               </node>
             </node>
           </node>
-          <node begin="52" buiging="zonder" end="53" id="91" lemma="meedelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="deel" word="meegedeeld" wvorm="vd"/>
+          <node begin="52" buiging="zonder" end="53" id="91" lemma="mee_delen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="deel" word="meegedeeld" wvorm="vd"/>
         </node>
       </node>
     </node>

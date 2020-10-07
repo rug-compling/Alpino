@@ -6,9 +6,9 @@
         <node begin="0" cat="np" end="3" id="3" index="1" rel="su">
           <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
           <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="Nederlands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Nederlands" word="Nederlandse"/>
-          <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="platenjongen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="jongens" word="platenjongens"/>
+          <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="plaat_jongen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="jongens" word="platenjongens"/>
         </node>
-        <node begin="3" end="4" id="7" lemma="komen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kom" word="komen" wvorm="pv"/>
+        <node begin="3" end="4" id="7" lemma="binnen_komen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kom" word="komen" wvorm="pv"/>
         <node begin="4" cat="pp" end="6" id="8" rel="mod">
           <node begin="4" end="5" id="9" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
           <node begin="5" end="6" getal="mv" graad="basis" id="10" lemma="ure" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="uur" word="uren"/>

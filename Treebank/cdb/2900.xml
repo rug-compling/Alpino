@@ -14,7 +14,7 @@
       </node>
       <node begin="0" cat="smain" end="11" id="10" rel="cnj">
         <node begin="0" end="2" id="11" index="1" rel="su"/>
-        <node begin="6" end="7" id="12" lemma="dringen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="dring" word="drong" wvorm="pv"/>
+        <node begin="6" end="7" id="12" lemma="op_dringen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="dring" word="drong" wvorm="pv"/>
         <node begin="7" end="8" id="13" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
         <node begin="8" cat="pp" end="11" id="14" rel="ld">
           <node begin="8" end="9" id="15" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
@@ -40,7 +40,7 @@
                 <node begin="15" end="16" id="32" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
                 <node begin="17" end="18" id="33" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
                 <node begin="18" end="19" getal="ev" id="34" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="num" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="wat" status="vol" vwtype="onbep" word="wat"/>
-                <node begin="21" buiging="zonder" end="22" id="35" lemma="uitvoeren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voer" word="uitvoeren" wvorm="inf"/>
+                <node begin="21" buiging="zonder" end="22" id="35" lemma="uit_voeren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voer" word="uitvoeren" wvorm="inf"/>
               </node>
             </node>
           </node>

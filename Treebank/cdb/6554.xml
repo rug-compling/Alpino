@@ -12,8 +12,8 @@
           </node>
         </node>
         <node begin="4" cat="np" end="21" id="9" rel="dp">
-          <node begin="4" end="5" getal="ev" graad="basis" id="10" lemma="Marie" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Marie" word="Marie&apos;s"/>
-          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="echtgenoot" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="echtgenoot" word="echtgenoot"/>
+          <node begin="4" end="5" getal="ev" graad="basis" id="10" lemma="Marie" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Marie" word="Marie&#39;s"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="echt_genoot" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="echtgenoot" word="echtgenoot"/>
           <node begin="6" cat="mwu" end="8" id="12" rel="app">
             <node begin="6" end="7" id="13" lemma="Sjo" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Sjo" spectype="deeleigen" word="Sjo"/>
             <node begin="7" end="8" id="14" lemma="Servaes" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Servaes" spectype="deeleigen" word="Servaes"/>
@@ -51,5 +51,5 @@
     </node>
     <node begin="21" end="22" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>En niet te vergeten Marie&apos;s echtgenoot Sjo Servaes die haar bij nacht en ontij in zijn auto uit en thuis bracht .</sentence>
+  <sentence>En niet te vergeten Marie&#39;s echtgenoot Sjo Servaes die haar bij nacht en ontij in zijn auto uit en thuis bracht .</sentence>
 </alpino_ds>

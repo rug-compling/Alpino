@@ -8,7 +8,7 @@
         <node begin="1" conjtype="neven" end="2" id="5" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="6" lemma="PPR" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="PPR" word="PPR"/>
       </node>
-      <node begin="3" end="4" id="7" lemma="leggen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="leg" word="legden" wvorm="pv"/>
+      <node begin="3" end="4" id="7" lemma="neer_leggen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="leg" word="legden" wvorm="pv"/>
       <node begin="4" cat="np" end="6" id="8" rel="obj1">
         <node begin="4" buiging="zonder" end="5" getal="mv" id="9" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
         <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="10" lemma="verlangen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="verlangen" word="verlangen"/>
@@ -25,7 +25,7 @@
               <node begin="11" end="12" id="20" index="1" rel="obj1"/>
               <node begin="12" end="13" getal="mv" id="21" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
               <node begin="13" end="14" id="22" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
-              <node begin="14" end="15" id="23" lemma="indienen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="dien" word="indienden" wvorm="pv"/>
+              <node begin="14" end="15" id="23" lemma="in_dienen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="dien" word="indienden" wvorm="pv"/>
               <node begin="15" cat="pp" end="25" id="24" rel="mod">
                 <node begin="15" end="16" id="25" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
                 <node begin="16" cat="np" end="25" id="26" rel="obj1">

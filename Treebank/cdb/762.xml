@@ -18,7 +18,7 @@
           <node begin="7" end="8" id="14" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="15" lemma="Salzburg" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Salzburg" word="Salzburg"/>
         </node>
-        <node begin="9" buiging="zonder" end="10" id="16" lemma="terugtrekken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="trek" word="terugtrekken" wvorm="inf"/>
+        <node begin="9" buiging="zonder" end="10" id="16" lemma="terug_trekken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="trek" word="terugtrekken" wvorm="inf"/>
         <node begin="10" cat="pp" end="44" id="17" rel="mod">
           <node begin="10" end="11" id="18" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
           <node begin="11" cat="np" end="44" id="19" rel="obj1">
@@ -29,7 +29,7 @@
               <node begin="14" cat="np" end="44" id="24" rel="obj1">
                 <node begin="14" end="15" id="25" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
                 <node begin="15" buiging="zonder" end="16" graad="basis" id="26" lemma="nieuw" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="nieuw" word="nieuw"/>
-                <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="27" lemma="toekomstboek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="boek" word="toekomstboek"/>
+                <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="27" lemma="toekomst_boek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="boek" word="toekomstboek"/>
                 <node begin="18" cat="rel" end="44" id="28" rel="mod">
                   <node begin="18" end="19" getal="ev" id="29" index="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>
                   <node begin="18" cat="ssub" end="44" id="30" rel="body">
@@ -51,7 +51,7 @@
                               <node begin="27" end="28" id="46" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
                               <node begin="26" cat="inf" end="44" id="47" rel="body">
                                 <node begin="26" end="27" id="48" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
-                                <node begin="28" buiging="zonder" end="29" id="49" lemma="vinden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vind" word="vinden" wvorm="inf"/>
+                                <node begin="28" buiging="zonder" end="29" id="49" lemma="uit_vinden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vind" word="vinden" wvorm="inf"/>
                                 <node begin="29" cat="conj" end="44" id="50" rel="vc">
                                   <node begin="29" cat="whsub" end="38" id="51" rel="cnj">
                                     <node begin="29" cat="np" end="31" id="52" index="3" rel="whd">

@@ -8,7 +8,7 @@
       <node begin="1" end="2" id="5" lemma="maken" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="maak" word="maakten" wvorm="pv"/>
       <node begin="2" cat="np" end="7" id="6" rel="obj1">
         <node begin="2" buiging="zonder" end="3" getal="mv" id="7" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
-        <node begin="3" buiging="met-e" end="4" graad="basis" id="8" lemma="halfjaarlijks" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jaarlijkse" word="halfjaarlijkse"/>
+        <node begin="3" buiging="met-e" end="4" graad="basis" id="8" lemma="half_jaarlijks" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jaarlijkse" word="halfjaarlijkse"/>
         <node begin="4" end="5" genus="onz" getal="ev" graad="dim" id="9" lemma="uitstap" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="uitstapje" word="uitstapje"/>
         <node begin="5" cat="pp" end="7" id="10" rel="mod">
           <node begin="5" end="6" id="11" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
@@ -31,7 +31,7 @@
             </node>
             <node begin="14" cat="np" end="16" id="25" rel="obj1">
               <node begin="14" end="15" getal="ev" id="26" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="det" root="wat" status="vol" vwtype="onbep" word="wat"/>
-              <node begin="15" buiging="zonder" end="16" graad="comp" id="27" lemma="carnavalssfeer" pos="noun" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="sfeer" word="carnavalssfeer"/>
+              <node begin="15" buiging="zonder" end="16" graad="comp" id="27" lemma="carnaval_sfeer" pos="noun" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="sfeer" word="carnavalssfeer"/>
             </node>
             <node begin="17" buiging="zonder" end="18" id="28" lemma="proeven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="proef" word="proeven" wvorm="inf"/>
           </node>

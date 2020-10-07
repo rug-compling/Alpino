@@ -24,7 +24,7 @@
                 <node begin="11" cat="pp" end="14" id="20" rel="mod">
                   <node begin="11" end="12" id="21" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                   <node begin="12" cat="np" end="14" id="22" rel="obj1">
-                    <node begin="12" end="13" getal="ev" graad="basis" id="23" lemma="Ocana" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Ocana" word="Ocana&apos;s"/>
+                    <node begin="12" end="13" getal="ev" graad="basis" id="23" lemma="Ocana" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Ocana" word="Ocana&#39;s"/>
                     <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="24" lemma="behuizing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="behuizing" word="behuizing"/>
                   </node>
                 </node>
@@ -49,7 +49,7 @@
                   <node begin="19" end="20" genus="onz" getal="ev" graad="dim" id="39" lemma="kleurtje" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="kleurtje" word="kleurtje"/>
                 </node>
               </node>
-              <node begin="22" buiging="zonder" end="23" id="40" lemma="opverven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geverfd" word="opgeverfd" wvorm="vd"/>
+              <node begin="22" buiging="zonder" end="23" id="40" lemma="op_verven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geverfd" word="opgeverfd" wvorm="vd"/>
               <node begin="23" cat="cp" end="27" id="41" rel="mod">
                 <node begin="23" conjtype="onder" end="24" id="42" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
                 <node begin="24" cat="ssub" end="27" id="43" rel="body">
@@ -65,5 +65,5 @@
     </node>
     <node begin="27" end="28" id="47" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>En de aankomst in Saint Gaudens , niet zo heel ver van Ocana&apos;s behuizing , zou met een mooi kleurtje kunnen worden opgeverfd als Luis daar won .</sentence>
+  <sentence>En de aankomst in Saint Gaudens , niet zo heel ver van Ocana&#39;s behuizing , zou met een mooi kleurtje kunnen worden opgeverfd als Luis daar won .</sentence>
 </alpino_ds>

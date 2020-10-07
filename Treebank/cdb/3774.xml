@@ -6,7 +6,7 @@
     <node begin="19" end="20" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="45" id="4" rel="--">
       <node begin="0" end="1" id="5" lemma="daarin" pos="pp" postag="BW()" pt="bw" rel="mod" root="daarin" word="Daarin"/>
-      <node begin="1" end="2" id="6" lemma="spreken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="spreek" word="spreken" wvorm="pv"/>
+      <node begin="1" end="2" id="6" lemma="uit_spreken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="spreek" word="spreken" wvorm="pv"/>
       <node begin="2" end="3" getal="mv" id="7" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
       <node begin="4" cat="ppart" end="13" id="8" rel="mod">
         <node begin="4" buiging="zonder" end="5" id="9" lemma="letten" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gelet" word="gelet" wvorm="vd"/>
@@ -49,7 +49,7 @@
               <node begin="21" cat="inf" end="45" id="39" rel="vc">
                 <node begin="21" end="23" id="40" index="1" rel="su"/>
                 <node begin="23" end="24" getal="getal" id="41" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
-                <node begin="26" buiging="zonder" end="27" id="42" lemma="voordoen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="doe" word="voordoen" wvorm="inf"/>
+                <node begin="26" buiging="zonder" end="27" id="42" lemma="voor_doen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="doe" word="voordoen" wvorm="inf"/>
                 <node begin="27" cat="conj" end="45" id="43" rel="mod">
                   <node begin="27" cat="pp" end="34" id="44" rel="cnj">
                     <node begin="27" end="28" id="45" lemma="zonder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="zonder" vztype="init" word="zonder"/>

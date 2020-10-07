@@ -28,10 +28,10 @@
                 <node begin="10" cat="np" end="13" id="22" rel="obj1">
                   <node begin="10" end="11" id="23" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
                   <node begin="11" buiging="zonder" end="12" graad="basis" id="24" lemma="nieuw" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="nieuw" word="nieuw"/>
-                  <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="25" lemma="dossier-tsjaad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="dossier-Tsjaad" word="dossier-Tsjaad"/>
+                  <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="25" lemma="dossier_tsjaad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="dossier-Tsjaad" word="dossier-Tsjaad"/>
                 </node>
                 <node begin="13" end="14" id="26" lemma="samen" pos="part" postag="BW()" pt="bw" rel="svp" root="samen" word="samen"/>
-                <node begin="15" buiging="zonder" end="16" id="27" lemma="stellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel" word="stellen" wvorm="inf"/>
+                <node begin="15" buiging="zonder" end="16" id="27" lemma="samen_stellen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="stel" word="stellen" wvorm="inf"/>
               </node>
             </node>
             <node begin="16" conjtype="neven" end="17" id="28" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
@@ -41,7 +41,7 @@
                 <node begin="17" end="18" id="32" lemma="daartoe" pos="pp" postag="BW()" pt="bw" rel="mod" root="daartoe" word="daartoe"/>
                 <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="33" lemma="contact" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="contact" word="contact"/>
                 <node begin="19" end="20" id="34" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
-                <node begin="21" buiging="zonder" end="22" id="35" lemma="nemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem" word="nemen" wvorm="inf"/>
+                <node begin="21" buiging="zonder" end="22" id="35" lemma="op_nemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem" word="nemen" wvorm="inf"/>
                 <node begin="22" cat="pp" end="25" id="36" rel="pc">
                   <node begin="22" end="23" id="37" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
                   <node begin="23" cat="np" end="25" id="38" rel="obj1">

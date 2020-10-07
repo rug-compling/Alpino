@@ -27,12 +27,12 @@
       <node begin="10" conjtype="neven" end="11" id="18" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
       <node begin="0" cat="sv1" end="16" id="19" rel="cnj">
         <node begin="0" end="2" id="20" index="1" rel="su"/>
-        <node begin="11" end="12" id="21" lemma="vuren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vuur" word="vuurde" wvorm="pv"/>
+        <node begin="11" end="12" id="21" lemma="raak_vuren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vuur" word="vuurde" wvorm="pv"/>
         <node begin="12" cat="pp" end="15" id="22" rel="mod">
           <node begin="12" end="13" id="23" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
           <node begin="13" cat="np" end="15" id="24" rel="obj1">
             <node begin="13" end="14" id="25" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-            <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="26" lemma="linkerbeen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="linkerbeen" word="linkerbeen"/>
+            <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="26" lemma="linker_been" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="linkerbeen" word="linkerbeen"/>
           </node>
         </node>
         <node begin="15" end="16" id="27" lemma="raken" pos="part" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="svp" root="raak" word="raak" wvorm="pv"/>

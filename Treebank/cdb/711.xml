@@ -5,8 +5,8 @@
     <node begin="7" end="8" id="2" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
     <node begin="10" end="11" id="3" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
     <node begin="12" end="13" id="4" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
-    <node begin="13" end="14" id="5" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="22" end="23" id="6" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="13" end="14" id="5" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="22" end="23" id="6" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="23" end="24" id="7" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="35" end="36" id="8" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
     <node begin="0" cat="du" end="37" id="9" rel="--">
@@ -43,13 +43,13 @@
           <node begin="19" cat="np" end="22" id="33" rel="obj1">
             <node begin="19" end="20" id="34" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
             <node begin="20" buiging="met-e" end="21" graad="basis" id="35" lemma="militair" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="militair" word="militaire"/>
-            <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="36" lemma="strafprocesrecht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="strafprocesrecht" word="strafprocesrecht"/>
+            <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="36" lemma="straf_proces_recht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="strafprocesrecht" word="strafprocesrecht"/>
           </node>
         </node>
       </node>
       <node begin="24" cat="smain" end="37" id="37" rel="tag">
         <node begin="24" end="25" id="38" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="vc" root="zo" word="zo"/>
-        <node begin="25" end="26" id="39" lemma="delen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="deel" word="delen" wvorm="pv"/>
+        <node begin="25" end="26" id="39" lemma="mee_delen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="deel" word="delen" wvorm="pv"/>
         <node begin="26" end="27" getal="mv" id="40" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
         <node begin="27" end="28" id="41" lemma="mee" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="mee" vztype="fin" word="mee"/>
         <node begin="28" cat="pp" end="37" id="42" rel="mod">
@@ -60,7 +60,7 @@
               <node begin="30" end="31" id="47" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="31" cat="np" end="37" id="48" rel="obj1">
                 <node begin="31" end="32" id="49" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                <node begin="32" end="33" genus="onz" getal="ev" graad="basis" id="50" lemma="kamerlid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kamerlid" word="Kamerlid"/>
+                <node begin="32" end="33" genus="onz" getal="ev" graad="basis" id="50" lemma="kamer_lid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kamerlid" word="Kamerlid"/>
                 <node begin="33" cat="mwu" end="35" id="51" rel="app">
                   <node begin="33" end="34" id="52" lemma="drs." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="drs." spectype="deeleigen" word="drs."/>
                   <node begin="34" end="35" id="53" lemma="Lems" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lems" spectype="deeleigen" word="Lems"/>
@@ -75,5 +75,5 @@
     <node begin="37" end="38" id="55" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
     <node begin="38" end="39" id="56" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Volgens de ministers Den Toom ( Defensie ) en Polak ( Justitie ) &quot; strookte hun executie niet met het militaire strafprocesrecht &quot; , zo delen zij mee op vragen van het Kamerlid drs. Lems ( PvdA ) .</sentence>
+  <sentence>Volgens de ministers Den Toom ( Defensie ) en Polak ( Justitie ) &#34; strookte hun executie niet met het militaire strafprocesrecht &#34; , zo delen zij mee op vragen van het Kamerlid drs. Lems ( PvdA ) .</sentence>
 </alpino_ds>

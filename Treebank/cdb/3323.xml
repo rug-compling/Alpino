@@ -68,11 +68,11 @@
         <node begin="28" end="29" getal="getal" id="50" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
         <node begin="29" end="30" id="51" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
         <node begin="30" end="31" id="52" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
-        <node begin="31" buiging="zonder" end="32" id="53" lemma="afvragen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vraag" word="afgevraagd" wvorm="vd"/>
+        <node begin="31" buiging="zonder" end="32" id="53" lemma="af_vragen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="vraag" word="afgevraagd" wvorm="vd"/>
         <node begin="33" cat="cp" end="41" id="54" rel="mod">
           <node begin="33" conjtype="onder" end="34" id="55" lemma="toen" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="toen" word="toen"/>
           <node begin="34" cat="ssub" end="41" id="56" rel="body">
-            <node begin="34" end="35" getal="mv" graad="basis" id="57" lemma="impressario" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="impressario&apos;s" word="impressario&apos;s"/>
+            <node begin="34" end="35" getal="mv" graad="basis" id="57" lemma="impressario" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="impressario&#39;s" word="impressario&#39;s"/>
             <node begin="35" cat="pp" end="38" id="58" rel="mod">
               <node begin="35" end="36" id="59" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
               <node begin="36" cat="np" end="38" id="60" rel="obj1">
@@ -84,7 +84,7 @@
               <node begin="38" end="39" id="64" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
               <node begin="39" end="40" getal="mv" graad="basis" id="65" lemma="aanbieding" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="aanbieding" word="aanbiedingen"/>
             </node>
-            <node begin="40" end="41" id="66" lemma="loskomen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kom" word="loskwamen" wvorm="pv"/>
+            <node begin="40" end="41" id="66" lemma="los_komen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kom" word="loskwamen" wvorm="pv"/>
           </node>
         </node>
         <node begin="42" cat="cp" end="53" id="67" rel="vc">
@@ -120,5 +120,5 @@
     </node>
     <node begin="53" end="54" id="88" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De driehoofdige leiding van het ballet ( mr. A. Gerritsen voor de zakelijke kant , Rudi van Dantzig en Robert Kaesen voor de artistieke kant ) , heeft zich dan ook afgevraagd , toen impressario&apos;s na de premiere met aanbiedingen loskwamen , of het Nationaal Ballet zich met of zonder Noerejew moet presenteren .</sentence>
+  <sentence>De driehoofdige leiding van het ballet ( mr. A. Gerritsen voor de zakelijke kant , Rudi van Dantzig en Robert Kaesen voor de artistieke kant ) , heeft zich dan ook afgevraagd , toen impressario&#39;s na de premiere met aanbiedingen loskwamen , of het Nationaal Ballet zich met of zonder Noerejew moet presenteren .</sentence>
 </alpino_ds>

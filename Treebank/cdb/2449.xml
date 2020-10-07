@@ -23,7 +23,7 @@
                 <node begin="7" end="8" id="19" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
                 <node begin="8" cat="np" end="13" id="20" rel="obj1">
                   <node begin="8" end="9" id="21" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                  <node begin="9" buiging="zonder" end="10" getal-n="zonder-n" id="22" lemma="afsluiten" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="sluit" word="afsluiten" wvorm="inf"/>
+                  <node begin="9" buiging="zonder" end="10" getal-n="zonder-n" id="22" lemma="af_sluiten" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="sluit" word="afsluiten" wvorm="inf"/>
                   <node begin="10" cat="pp" end="13" id="23" rel="mod">
                     <node begin="10" end="11" id="24" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                     <node begin="11" cat="np" end="13" id="25" rel="obj1">
@@ -56,14 +56,14 @@
                         <node begin="23" end="24" id="46" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                         <node begin="24" cat="np" end="26" id="47" rel="obj1">
                           <node begin="24" end="25" id="48" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                          <node begin="25" end="26" genus="genus" getal="ev" graad="basis" id="49" lemma="AKZO-concern" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="AKZO-concern" word="AKZO-concern"/>
+                          <node begin="25" end="26" genus="genus" getal="ev" graad="basis" id="49" lemma="AKZO_concern" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="AKZO-concern" word="AKZO-concern"/>
                         </node>
                       </node>
                     </node>
                   </node>
                 </node>
                 <node begin="26" end="27" id="50" lemma="teweeg" pos="part" postag="BW()" pt="bw" rel="svp" root="teweeg" word="teweeg"/>
-                <node begin="28" buiging="zonder" end="29" id="51" lemma="brengen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breng" word="brengen" wvorm="inf"/>
+                <node begin="28" buiging="zonder" end="29" id="51" lemma="teweeg_brengen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breng" word="brengen" wvorm="inf"/>
               </node>
             </node>
           </node>

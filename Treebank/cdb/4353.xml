@@ -22,14 +22,14 @@
               <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="17" lemma="stelsel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stelsel" word="stelsel"/>
               <node begin="10" cat="pp" end="12" id="18" rel="mod">
                 <node begin="10" end="11" id="19" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-                <node begin="11" end="12" getal="mv" graad="basis" id="20" lemma="volksverzekering" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="verzekering" word="volksverzekeringen"/>
+                <node begin="11" end="12" getal="mv" graad="basis" id="20" lemma="volk_verzekering" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="verzekering" word="volksverzekeringen"/>
               </node>
             </node>
             <node begin="12" cat="mwu" end="14" id="21" rel="svp">
               <node begin="12" end="13" id="22" lemma="te" pos="part" postag="BW()" pt="bw" rel="mwp" root="te" word="te"/>
               <node begin="13" buiging="zonder" end="14" graad="basis" id="23" lemma="kort" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="kort" word="kort"/>
             </node>
-            <node begin="14" end="15" id="24" lemma="doen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="doe" word="doet" wvorm="pv"/>
+            <node begin="14" end="15" id="24" lemma="tekort_doen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="doe" word="doet" wvorm="pv"/>
             <node begin="15" cat="pp" end="23" id="25" rel="obj2">
               <node begin="15" end="16" id="26" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
               <node begin="16" cat="np" end="23" id="27" rel="obj1">
@@ -60,7 +60,7 @@
             <node begin="28" end="29" id="45" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
             <node begin="29" cat="np" end="31" id="46" rel="obj1">
               <node begin="29" end="30" id="47" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="48" lemma="volkskracht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kracht" word="volkskracht"/>
+              <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="48" lemma="volk_kracht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kracht" word="volkskracht"/>
             </node>
           </node>
         </node>

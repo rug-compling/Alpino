@@ -8,11 +8,11 @@
           <node begin="1" end="2" id="5" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="2" cat="np" end="4" id="6" rel="obj1">
             <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="3" end="4" getal="mv" graad="basis" id="8" lemma="gastarbeider" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gastarbeider" word="gastarbeiders"/>
+            <node begin="3" end="4" getal="mv" graad="basis" id="8" lemma="gast_arbeider" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gastarbeider" word="gastarbeiders"/>
           </node>
         </node>
       </node>
-      <node begin="4" end="5" id="9" lemma="bellen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="bel" word="belden" wvorm="pv"/>
+      <node begin="4" end="5" id="9" lemma="op_bellen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="bel" word="belden" wvorm="pv"/>
       <node begin="5" cat="np" end="8" id="10" rel="mod">
         <node begin="5" end="6" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="6" buiging="met-e" end="7" id="12" lemma="volgen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="volgend" word="volgende" wvorm="od"/>
@@ -48,6 +48,6 @@
   </node>
   <sentence>Twee van de gastarbeiders belden de volgende dag op met de mededeling dat ze toch wel weer aan het werk wilden .</sentence>
   <comments>
-    <comment>What is &apos;aan het werk&apos; (willen, zijn, gaan, mogen, kunnen, ...)</comment>
+    <comment>What is &#39;aan het werk&#39; (willen, zijn, gaan, mogen, kunnen, ...)</comment>
   </comments>
 </alpino_ds>

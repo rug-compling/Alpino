@@ -9,8 +9,8 @@
     <node begin="20" end="21" id="6" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="22" end="23" id="7" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="24" end="25" id="8" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="30" end="31" id="9" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="32" end="33" id="10" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="30" end="31" id="9" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="32" end="33" id="10" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="du" end="34" id="11" rel="--">
       <node begin="0" cat="smain" end="11" id="12" rel="nucl">
         <node begin="0" cat="np" end="2" id="13" rel="su">
@@ -37,16 +37,16 @@
           <node begin="13" end="14" genus="onz" getal="ev" id="29" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
           <node begin="14" end="15" id="30" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
           <node begin="15" cat="conj" end="32" id="31" rel="predc">
-            <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="32" lemma="stationsjeugd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="jeugd" word="stationsjeugd"/>
-            <node begin="17" end="18" getal="mv" graad="basis" id="33" lemma="damslaper" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="slaper" word="Damslapers"/>
+            <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="32" lemma="stations_jeugd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="jeugd" word="stationsjeugd"/>
+            <node begin="17" end="18" getal="mv" graad="basis" id="33" lemma="dam_slaper" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="slaper" word="Damslapers"/>
             <node begin="19" end="20" getal="mv" graad="basis" id="34" lemma="kabouter" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="kabouter" word="kabouters"/>
-            <node begin="21" end="22" getal="mv" graad="basis" id="35" lemma="maagdenhuisbezetter" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="bezetter" word="Maagdenhuisbezetters"/>
-            <node begin="23" end="24" getal="mv" graad="basis" id="36" lemma="bbk&apos;er" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="BBK&apos;ers" word="BBK&apos;ers"/>
+            <node begin="21" end="22" getal="mv" graad="basis" id="35" lemma="maagdenhuis_bezetter" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="bezetter" word="Maagdenhuisbezetters"/>
+            <node begin="23" end="24" getal="mv" graad="basis" id="36" lemma="bbk&#39;er" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="BBK&#39;ers" word="BBK&#39;ers"/>
             <node begin="25" cat="np" end="28" id="37" rel="cnj">
               <node begin="25" buiging="met-e" end="26" graad="basis" id="38" lemma="manlijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="manlijk" word="manlijke"/>
               <node begin="26" cat="mwu" end="28" id="39" rel="hd">
                 <node begin="26" buiging="met-e" end="27" graad="basis" id="40" lemma="dol" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Dolle" word="Dolle"/>
-                <node begin="27" end="28" id="41" lemma="Mina&apos;s" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Mina&apos;s" spectype="deeleigen" word="Mina&apos;s"/>
+                <node begin="27" end="28" id="41" lemma="Mina&#39;s" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Mina&#39;s" spectype="deeleigen" word="Mina&#39;s"/>
               </node>
             </node>
             <node begin="28" conjtype="neven" end="29" id="42" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
@@ -61,5 +61,5 @@
     </node>
     <node begin="34" end="35" id="47" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>alle langharigen zijn , in die opvatting , een pot nat - of het nu stationsjeugd , Damslapers , kabouters , Maagdenhuisbezetters , BBK&apos;ers , manlijke Dolle Mina&apos;s of ander &quot; tuig &quot; is .</sentence>
+  <sentence>alle langharigen zijn , in die opvatting , een pot nat - of het nu stationsjeugd , Damslapers , kabouters , Maagdenhuisbezetters , BBK&#39;ers , manlijke Dolle Mina&#39;s of ander &#34; tuig &#34; is .</sentence>
 </alpino_ds>

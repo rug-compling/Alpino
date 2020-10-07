@@ -12,7 +12,7 @@
             <node begin="3" end="4" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="4" buiging="met-e" end="5" graad="basis" id="10" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
             <node begin="5" end="6" id="11" lemma="één" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="eerste" word="eerste"/>
-            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="divisieploeg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ploeg" word="divisieploeg"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="divisie_ploeg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ploeg" word="divisieploeg"/>
           </node>
         </node>
       </node>
@@ -32,7 +32,7 @@
                 <node begin="15" end="16" id="26" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
                 <node begin="16" cat="np" end="18" id="27" rel="obj1">
                   <node begin="16" end="17" getal="ev" graad="basis" id="28" lemma="Heerenveen" naamval="gen" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Heerenveen" word="Heerenveens"/>
-                  <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="29" lemma="tegentreffer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="treffer" word="tegentreffer"/>
+                  <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="29" lemma="tegen_treffer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="treffer" word="tegentreffer"/>
                 </node>
               </node>
             </node>

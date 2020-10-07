@@ -10,7 +10,7 @@
             <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="bakker" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bakker" word="bakker"/>
             <node begin="2" end="3" genus="genus" getal="ev" graad="basis" id="8" lemma="Darding" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Darding" word="Darding"/>
           </node>
-          <node begin="3" end="4" id="9" lemma="toegeven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="geef" word="toegeeft" wvorm="pv"/>
+          <node begin="3" end="4" id="9" lemma="toe_geven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="geef" word="toegeeft" wvorm="pv"/>
           <node begin="1" cat="ti" end="11" id="10" rel="vc">
             <node begin="8" end="9" id="11" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
             <node begin="1" cat="inf" end="11" id="12" rel="body">
@@ -32,7 +32,7 @@
           </node>
         </node>
       </node>
-      <node begin="12" end="13" id="24" lemma="vatten" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="vat" word="vat" wvorm="pv"/>
+      <node begin="12" end="13" id="24" lemma="op_vatten" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="vat" word="vat" wvorm="pv"/>
       <node begin="13" end="14" genus="masc" getal="ev" id="25" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
       <node begin="14" cat="np" end="22" id="26" rel="obj1">
         <node begin="14" buiging="zonder" end="15" getal="ev" id="27" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>

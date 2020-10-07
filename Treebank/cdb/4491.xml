@@ -14,7 +14,7 @@
               <node begin="3" end="4" id="11" index="1" rel="su"/>
               <node begin="4" cat="np" end="6" id="12" rel="obj1">
                 <node begin="4" buiging="zonder" end="5" id="13" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
-                <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="14" lemma="woorde-aanduiding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aanduiding" word="woorde-aanduiding"/>
+                <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="14" lemma="woorde_aanduiding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aanduiding" word="woorde-aanduiding"/>
               </node>
               <node begin="6" end="7" id="15" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
             </node>
@@ -22,7 +22,7 @@
             <node begin="3" cat="ssub" end="12" id="17" rel="cnj">
               <node begin="3" end="4" id="18" index="1" rel="su"/>
               <node begin="8" cat="np" end="11" id="19" rel="obj1">
-                <node begin="8" end="9" id="20" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="&apos;t"/>
+                <node begin="8" end="9" id="20" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="&#39;t"/>
                 <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="21" lemma="jaartal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaartal" word="jaartal"/>
                 <node begin="10" end="11" id="22" lemma="1969" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="app" root="1969" word="1969"/>
               </node>
@@ -36,10 +36,10 @@
       <node begin="15" buiging="zonder" end="16" graad="basis" id="26" lemma="grotendeels" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="grotendeels" word="grotendeels"/>
       <node begin="16" cat="cp" end="18" id="27" rel="predc">
         <node begin="16" conjtype="onder" end="17" id="28" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
-        <node begin="17" end="18" getal="mv" graad="basis" id="29" lemma="reclamevignet" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="body" root="vignet" word="reclamevignetten"/>
+        <node begin="17" end="18" getal="mv" graad="basis" id="29" lemma="reclamev_ignet" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="body" root="vignet" word="reclamevignetten"/>
       </node>
     </node>
     <node begin="18" end="19" id="30" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Zijn zegels , die geen woorde-aanduiding hebben en &apos;t jaartal 1969 dragen , gebruikt hij grotendeels als reclamevignetten .</sentence>
+  <sentence>Zijn zegels , die geen woorde-aanduiding hebben en &#39;t jaartal 1969 dragen , gebruikt hij grotendeels als reclamevignetten .</sentence>
 </alpino_ds>

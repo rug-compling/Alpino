@@ -34,7 +34,7 @@
           <node begin="12" end="13" id="25" lemma="21" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="21" word="21"/>
           <node begin="13" end="14" getal="mv" graad="basis" id="26" lemma="industrieen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="industrieën" word="industrieen"/>
         </node>
-        <node begin="14" buiging="zonder" end="15" id="27" lemma="oproepen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="roep" word="opgeroepen" wvorm="vd"/>
+        <node begin="14" buiging="zonder" end="15" id="27" lemma="op_roepen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="roep" word="opgeroepen" wvorm="vd"/>
         <node begin="12" cat="ti" end="34" id="28" rel="vc">
           <node begin="32" end="33" id="29" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
           <node begin="12" cat="inf" end="34" id="30" rel="body">
@@ -44,7 +44,7 @@
               <node begin="16" buiging="zonder" end="17" getal-n="zonder-n" id="34" lemma="lozen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="loos" word="lozen" wvorm="inf"/>
               <node begin="17" cat="pp" end="19" id="35" rel="mod">
                 <node begin="17" end="18" id="36" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-                <node begin="18" end="19" getal="mv" graad="basis" id="37" lemma="afvalstof" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="stoffen" word="afvalstoffen"/>
+                <node begin="18" end="19" getal="mv" graad="basis" id="37" lemma="afval_stof" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="stoffen" word="afvalstoffen"/>
               </node>
               <node begin="20" cat="rel" end="26" id="38" rel="mod">
                 <node begin="20" end="21" id="39" index="3" lemma="waarbij" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarbij" word="waarbij"/>
@@ -58,7 +58,7 @@
                       <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="47" lemma="hinder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hinder" word="hinder"/>
                     </node>
                   </node>
-                  <node begin="25" end="26" id="48" lemma="optreden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="treed" word="optreedt" wvorm="pv"/>
+                  <node begin="25" end="26" id="48" lemma="op_treden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="treed" word="optreedt" wvorm="pv"/>
                 </node>
               </node>
             </node>

@@ -5,7 +5,7 @@
     <node begin="0" cat="smain" end="16" id="2" rel="--">
       <node begin="0" cat="np" end="2" id="3" rel="su">
         <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="periode-ball" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="periode-Ball" word="periode-Ball"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="periode_ball" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="periode-Ball" word="periode-Ball"/>
       </node>
       <node begin="2" end="3" id="6" lemma="tonen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="toon" word="toonde" wvorm="pv"/>
       <node begin="4" cat="cp" end="16" id="7" rel="vc">
@@ -31,7 +31,7 @@
               </node>
             </node>
             <node begin="13" end="14" id="25" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
-            <node begin="15" buiging="zonder" end="16" id="26" lemma="kunnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kan" word="kunnen" wvorm="inf"/>
+            <node begin="15" buiging="zonder" end="16" id="26" lemma="aan_kunnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kan" word="kunnen" wvorm="inf"/>
           </node>
         </node>
       </node>

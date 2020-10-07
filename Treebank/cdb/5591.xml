@@ -9,7 +9,7 @@
         <node begin="15" end="16" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="16" cat="mwu" end="18" id="7" rel="hd">
           <node begin="16" end="17" id="8" lemma="Tweede" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Tweede" spectype="deeleigen" word="Tweede"/>
-          <node begin="17" end="18" id="9" lemma="Kamerleden" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kamerleden" spectype="deeleigen" word="Kamerleden"/>
+          <node begin="17" end="18" id="9" lemma="Kamer_lid" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kamerleden" spectype="deeleigen" word="Kamerleden"/>
         </node>
         <node begin="18" cat="conj" end="21" id="10" rel="app">
           <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="11" lemma="Schuring" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Schuring" word="Schuring"/>
@@ -29,7 +29,7 @@
               <node begin="5" cat="np" end="10" id="23" rel="obj1">
                 <node begin="5" end="6" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                 <node begin="6" buiging="met-e" end="7" graad="basis" id="25" lemma="vast" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vast" word="vaste"/>
-                <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="26" lemma="kamercommissie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="commissie" word="Kamercommissie"/>
+                <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="26" lemma="kamer_commissie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="commissie" word="Kamercommissie"/>
                 <node begin="8" cat="pp" end="10" id="27" rel="mod">
                   <node begin="8" end="9" id="28" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
                   <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="29" lemma="onderwijs" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="onderwijs" word="Onderwijs"/>
@@ -40,13 +40,13 @@
               <node begin="10" end="11" id="31" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
               <node begin="11" cat="np" end="13" id="32" rel="obj1">
                 <node begin="11" end="12" id="33" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="34" lemma="nota-veringa" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="nota-Veringa" word="nota-Veringa"/>
+                <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="34" lemma="nota_veringa" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="nota-Veringa" word="nota-Veringa"/>
               </node>
             </node>
           </node>
         </node>
         <node begin="15" end="21" id="35" index="1" rel="su"/>
-        <node begin="26" buiging="zonder" end="27" id="36" lemma="opstellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="opgesteld" wvorm="vd"/>
+        <node begin="26" buiging="zonder" end="27" id="36" lemma="op_stellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="opgesteld" wvorm="vd"/>
         <node begin="21" cat="np" end="35" id="37" rel="obj1">
           <node begin="21" end="22" id="38" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
           <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="39" lemma="schets" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schets" word="schets"/>
@@ -54,7 +54,7 @@
             <node begin="23" end="24" id="41" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
             <node begin="24" cat="np" end="26" id="42" rel="obj1">
               <node begin="24" end="25" id="43" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-              <node begin="25" end="26" genus="onz" getal="ev" graad="basis" id="44" lemma="universiteitsbestuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bestuur" word="universiteitsbestuur"/>
+              <node begin="25" end="26" genus="onz" getal="ev" graad="basis" id="44" lemma="universiteit_bestuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bestuur" word="universiteitsbestuur"/>
             </node>
           </node>
           <node begin="28" cat="rel" end="35" id="45" rel="mod">
@@ -72,7 +72,7 @@
                     <node begin="32" end="33" genus="zijd" getal="ev" graad="basis" id="57" lemma="fractie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="fractie" word="fractie"/>
                   </node>
                 </node>
-                <node begin="34" buiging="zonder" end="35" id="58" lemma="overnemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="neem" word="overgenomen" wvorm="vd"/>
+                <node begin="34" buiging="zonder" end="35" id="58" lemma="over_nemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="neem" word="overgenomen" wvorm="vd"/>
               </node>
             </node>
           </node>

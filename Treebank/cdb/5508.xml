@@ -3,7 +3,7 @@
   <node begin="0" cat="top" end="32" id="0" rel="top">
     <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="18" end="19" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="19" end="20" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="19" end="20" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="30" id="4" rel="--">
       <node begin="8" end="9" id="5" lemma="mogen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="mag" word="mag" wvorm="pv"/>
       <node begin="0" cat="inf" end="30" id="6" rel="vc">
@@ -16,7 +16,7 @@
                 <node begin="1" end="2" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                 <node begin="2" end="3" getal="mv" graad="basis" id="14" lemma="loon" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="loon" word="lonen"/>
               </node>
-              <node begin="3" end="4" id="15" lemma="achterblijven" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="blijf" word="achterblijven" wvorm="pv"/>
+              <node begin="3" end="4" id="15" lemma="achter_blijven" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="blijf" word="achterblijven" wvorm="pv"/>
               <node begin="4" cat="pp" end="7" id="16" rel="pc">
                 <node begin="4" end="5" id="17" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
                 <node begin="5" cat="np" end="7" id="18" rel="obj1">
@@ -36,7 +36,7 @@
             <node begin="13" cat="np" end="16" id="27" rel="obj1">
               <node begin="13" end="14" id="28" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
               <node begin="14" buiging="zonder" end="15" graad="basis" id="29" lemma="gezond" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="gezond" word="gezond"/>
-              <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="30" lemma="arbeidsklimaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="klimaat" word="arbeidsklimaat"/>
+              <node begin="15" end="16" genus="onz" getal="ev" graad="basis" id="30" lemma="arbeid_klimaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="klimaat" word="arbeidsklimaat"/>
             </node>
           </node>
           <node begin="17" buiging="zonder" end="18" id="31" lemma="spreken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="spreek" word="gesproken" wvorm="vd"/>
@@ -64,7 +64,7 @@
       </node>
     </node>
     <node begin="30" end="31" id="47" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
-    <node begin="31" end="32" id="48" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="31" end="32" id="48" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
   </node>
-  <sentence>Omdat de lonen achterblijven bij het westen , mag volgens hem niet van een gezond arbeidsklimaat worden gesproken , &quot; al komt er zo langzamerhand wel een gunstige wending in . &quot;</sentence>
+  <sentence>Omdat de lonen achterblijven bij het westen , mag volgens hem niet van een gezond arbeidsklimaat worden gesproken , &#34; al komt er zo langzamerhand wel een gunstige wending in . &#34;</sentence>
 </alpino_ds>

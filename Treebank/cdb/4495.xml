@@ -6,7 +6,7 @@
       <node begin="1" end="2" id="3" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
       <node begin="2" cat="np" end="4" id="4" index="1" rel="su">
         <node begin="2" end="3" id="5" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
-        <node begin="3" end="4" getal="mv" graad="basis" id="6" lemma="partijenblok" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="blok" word="partijenblokken"/>
+        <node begin="3" end="4" getal="mv" graad="basis" id="6" lemma="partij_blok" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="blok" word="partijenblokken"/>
       </node>
       <node begin="0" cat="ppart" end="17" id="7" rel="vc">
         <node begin="0" buiging="zonder" end="1" graad="basis" id="8" lemma="lang" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="lang" word="Lang"/>
@@ -33,7 +33,7 @@
                   <node begin="13" buiging="zonder" end="14" getal-n="zonder-n" graad="basis" id="27" lemma="ander" pos="noun" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="hd" root="ander" word="ander"/>
                 </node>
                 <node begin="14" end="15" getal="ev" id="28" lemma="iets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="iets" status="vol" vwtype="onbep" word="iets"/>
-                <node begin="16" buiging="zonder" end="17" id="29" lemma="toegeven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="geef" word="toegeven" wvorm="inf"/>
+                <node begin="16" buiging="zonder" end="17" id="29" lemma="toe_geven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="geef" word="toegeven" wvorm="inf"/>
               </node>
             </node>
           </node>

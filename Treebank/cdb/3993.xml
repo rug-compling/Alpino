@@ -7,18 +7,18 @@
         <node begin="0" end="1" id="4" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="Met"/>
         <node begin="1" cat="np" end="15" id="5" rel="obj1">
           <node begin="1" end="2" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-          <node begin="2" buiging="zonder" end="3" getal-n="zonder-n" id="7" lemma="aanbieden" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="bied" word="aanbieden" wvorm="inf"/>
+          <node begin="2" buiging="zonder" end="3" getal-n="zonder-n" id="7" lemma="aan_bieden" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="bied" word="aanbieden" wvorm="inf"/>
           <node begin="3" cat="pp" end="15" id="8" rel="mod">
             <node begin="3" end="4" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="4" cat="conj" end="15" id="10" rel="obj1">
               <node begin="4" cat="np" end="7" id="11" rel="cnj">
                 <node begin="4" end="5" id="12" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
                 <node begin="5" buiging="zonder" end="6" graad="basis" id="13" lemma="gratis" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="gratis" word="gratis"/>
-                <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="65-plus-jaarkaart" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kaart" word="65-plus-jaarkaart"/>
+                <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="65_plus_jaar_kaart" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kaart" word="65-plus-jaarkaart"/>
               </node>
               <node begin="7" conjtype="neven" end="8" id="15" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
               <node begin="8" cat="np" end="15" id="16" rel="cnj">
-                <node begin="8" end="9" getal="mv" graad="basis" id="17" lemma="reischeque" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="cheque" word="reischeques"/>
+                <node begin="8" end="9" getal="mv" graad="basis" id="17" lemma="reis_cheque" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="cheque" word="reischeques"/>
                 <node begin="9" cat="pp" end="15" id="18" rel="mod">
                   <node begin="9" end="10" id="19" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
                   <node begin="10" cat="np" end="15" id="20" rel="obj1">

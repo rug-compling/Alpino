@@ -15,11 +15,11 @@
               <node begin="3" end="4" id="12" index="1" rel="su"/>
               <node begin="4" cat="np" end="6" id="13" rel="obj1">
                 <node begin="4" buiging="zonder" end="5" getal="ev" id="14" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
-                <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="15" lemma="trainingsprogramma" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="programma" word="trainingsprogramma"/>
+                <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="15" lemma="training_programma" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="programma" word="trainingsprogramma"/>
               </node>
               <node begin="6" end="7" getal="ev" id="16" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="adv" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="mod" root="wat" status="vol" vwtype="vb" word="wat"/>
               <node begin="7" end="8" id="17" lemma="terug" pos="part" postag="BW()" pt="bw" rel="svp" root="terug" word="terug"/>
-              <node begin="9" buiging="zonder" end="10" id="18" lemma="brengen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breng" word="brengen" wvorm="inf"/>
+              <node begin="9" buiging="zonder" end="10" id="18" lemma="terug_brengen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breng" word="brengen" wvorm="inf"/>
             </node>
           </node>
         </node>
@@ -52,7 +52,7 @@
               <node begin="25" end="26" id="41" lemma="te" pos="adv" postag="BW()" pt="bw" rel="mod" root="te" word="te"/>
               <node begin="26" buiging="zonder" end="27" graad="basis" id="42" lemma="veel" naamval="stan" pdtype="grad" pos="num" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="hd" root="veel" vwtype="onbep" word="veel"/>
             </node>
-            <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="43" lemma="wedstrijdinstelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="instelling" word="wedstrijdinstelling"/>
+            <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="43" lemma="wedstrijd_instelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="instelling" word="wedstrijdinstelling"/>
           </node>
         </node>
       </node>

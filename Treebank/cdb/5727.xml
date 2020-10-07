@@ -10,11 +10,11 @@
           <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="aardbeving" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aardbeving" word="aardbeving"/>
           <node begin="4" cat="pp" end="6" id="8" rel="mod">
             <node begin="4" end="5" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="zaterdagavond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="zaterdagavond" word="zaterdagavond"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="zaterdag_avond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="zaterdagavond" word="zaterdagavond"/>
           </node>
         </node>
       </node>
-      <node begin="6" end="7" id="11" lemma="trillen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="tril" word="trilde" wvorm="pv"/>
+      <node begin="6" end="7" id="11" lemma="na_trillen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="tril" word="trilde" wvorm="pv"/>
       <node begin="7" cat="conj" end="16" id="12" rel="mod">
         <node begin="7" cat="np" end="10" id="13" rel="cnj">
           <node begin="7" buiging="zonder" end="8" graad="basis" id="14" lemma="heel" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="heel" word="heel"/>
@@ -46,7 +46,7 @@
         <node begin="20" end="21" id="33" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
         <node begin="21" cat="np" end="23" id="34" rel="obj1">
           <node begin="21" end="22" id="35" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-          <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="36" lemma="rampgebied" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebied" word="rampgebied"/>
+          <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="36" lemma="ramp_gebied" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebied" word="rampgebied"/>
         </node>
       </node>
     </node>

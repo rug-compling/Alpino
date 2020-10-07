@@ -3,8 +3,8 @@
   <node begin="0" cat="top" end="33" id="0" rel="top">
     <node begin="3" end="4" id="1" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
     <node begin="6" end="7" id="2" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
-    <node begin="7" end="8" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="24" end="25" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="7" end="8" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="24" end="25" id="4" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="25" end="26" id="5" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
     <node begin="0" cat="smain" end="32" id="6" rel="--">
       <node begin="0" cat="np" end="24" id="7" rel="su">
@@ -14,7 +14,7 @@
         <node begin="4" cat="du" end="24" id="11" rel="mod">
           <node begin="4" cat="np" end="6" id="12" rel="dp">
             <node begin="4" buiging="zonder" end="5" id="13" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
-            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="14" lemma="speelfilm" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="speelfilm" word="speelfilm"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="14" lemma="speel_film" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="speelfilm" word="speelfilm"/>
           </node>
           <node begin="8" cat="smain" end="24" id="15" rel="dp">
             <node begin="8" end="9" getal="ev" id="16" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
@@ -42,7 +42,7 @@
                       <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="36" lemma="paar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="paar" word="paar"/>
                     </node>
                     <node begin="21" end="22" id="37" lemma="toe" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="toe" vztype="fin" word="toe"/>
-                    <node begin="23" buiging="zonder" end="24" id="38" lemma="voegen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voeg" word="voegen" wvorm="inf"/>
+                    <node begin="23" buiging="zonder" end="24" id="38" lemma="toe_voegen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voeg" word="voegen" wvorm="inf"/>
                   </node>
                 </node>
               </node>
@@ -63,5 +63,5 @@
     </node>
     <node begin="32" end="33" id="47" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Het medium film ( geen speelfilm : &quot; Ik heb geen behoefte om aan alle bestaande verhaaltjes er nog een paar toe te voegen &quot; ) heeft Vroom ook in zijn greep .</sentence>
+  <sentence>Het medium film ( geen speelfilm : &#34; Ik heb geen behoefte om aan alle bestaande verhaaltjes er nog een paar toe te voegen &#34; ) heeft Vroom ook in zijn greep .</sentence>
 </alpino_ds>

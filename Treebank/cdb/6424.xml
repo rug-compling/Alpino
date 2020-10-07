@@ -15,7 +15,7 @@
             <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="11" lemma="concert" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="concert" word="CONCERT"/>
             <node begin="3" cat="pp" end="5" id="12" rel="mod">
               <node begin="3" end="4" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="14" lemma="zaterdagavond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="zaterdagavond" word="zaterdagavond"/>
+              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="14" lemma="zaterdag_avond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="zaterdagavond" word="zaterdagavond"/>
             </node>
             <node begin="5" cat="pp" end="9" id="15" rel="mod">
               <node begin="5" end="6" id="16" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
@@ -31,7 +31,7 @@
         <node begin="12" cat="np" end="18" id="22" rel="obj1">
           <node begin="12" end="13" id="23" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
           <node begin="13" buiging="met-e" end="14" graad="basis" id="24" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
-          <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="25" lemma="pianoconcert" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="concert" word="pianoconcert"/>
+          <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="25" lemma="piano_concert" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="concert" word="pianoconcert"/>
           <node begin="15" cat="pp" end="18" id="26" rel="mod">
             <node begin="15" end="16" id="27" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="16" cat="mwu" end="18" id="28" rel="obj1">
@@ -45,7 +45,7 @@
           <node begin="19" buiging="met-e" end="20" graad="basis" id="33" lemma="muzikaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="muzikaal" word="muzikale"/>
           <node begin="20" end="21" genus="onz" getal="ev" graad="dim" id="34" lemma="volk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="volke" word="volke"/>
         </node>
-        <node begin="21" buiging="zonder" end="22" id="35" lemma="voorstellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="voorgesteld" wvorm="vd"/>
+        <node begin="21" buiging="zonder" end="22" id="35" lemma="voor_stellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="voorgesteld" wvorm="vd"/>
       </node>
     </node>
     <node begin="22" end="23" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

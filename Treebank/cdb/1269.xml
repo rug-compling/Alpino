@@ -9,7 +9,7 @@
         <node begin="4" buiging="zonder" end="5" id="6" lemma="bezoeken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bezoek" word="bezoeken" wvorm="inf"/>
         <node begin="2" cat="np" end="13" id="7" rel="obj1">
           <node begin="2" end="3" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="wereldtentoonstelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stelling" word="wereldtentoonstelling"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="wereld_tentoonstelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stelling" word="wereldtentoonstelling"/>
           <node begin="5" cat="rel" end="13" id="10" rel="mod">
             <node begin="5" end="6" getal="getal" id="11" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
             <node begin="5" cat="ssub" end="13" id="12" rel="body">
@@ -22,7 +22,7 @@
                   <node begin="7" end="8" id="19" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                   <node begin="8" cat="np" end="11" id="20" rel="obj1">
                     <node begin="8" end="9" id="21" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                    <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="22" lemma="havenstad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="havenstad" word="havenstad"/>
+                    <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="22" lemma="haven_stad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="havenstad" word="havenstad"/>
                     <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="23" lemma="Osaka" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Osaka" word="Osaka"/>
                   </node>
                 </node>

@@ -49,7 +49,7 @@
                         <node begin="22" cat="inf" end="31" id="41" rel="body">
                           <node begin="22" cat="np" end="26" id="42" rel="obj2">
                             <node begin="22" end="23" id="43" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                            <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="44" lemma="coalitieregering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="coalitieregering" word="coalitieregering"/>
+                            <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="44" lemma="coalitie_regering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="coalitieregering" word="coalitieregering"/>
                             <node begin="24" cat="pp" end="26" id="45" rel="mod">
                               <node begin="24" end="25" id="46" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                               <node begin="25" end="26" genus="onz" getal="ev" graad="basis" id="47" lemma="Laos" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Laos" word="Laos"/>
@@ -60,7 +60,7 @@
                             <node begin="27" end="28" genus="onz" getal="ev" graad="basis" id="50" lemma="leven" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="leven" word="leven"/>
                           </node>
                           <node begin="28" end="29" id="51" lemma="in" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="in" vztype="fin" word="in"/>
-                          <node begin="30" buiging="zonder" end="31" id="52" lemma="blazen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="blaas" word="blazen" wvorm="inf"/>
+                          <node begin="30" buiging="zonder" end="31" id="52" lemma="in_blazen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="blaas" word="blazen" wvorm="inf"/>
                         </node>
                       </node>
                     </node>
@@ -70,7 +70,7 @@
                   <node begin="32" conjtype="onder" end="33" id="54" lemma="terwijl" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="terwijl" word="terwijl"/>
                   <node begin="33" cat="ssub" end="44" id="55" rel="body">
                     <node begin="33" end="34" getal="mv" id="56" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
-                    <node begin="34" end="35" id="57" lemma="terugdeinzen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="deins" word="terugdeinzen" wvorm="pv"/>
+                    <node begin="34" end="35" id="57" lemma="terug_deinzen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="deins" word="terugdeinzen" wvorm="pv"/>
                     <node begin="35" cat="pp" end="44" id="58" rel="pc">
                       <node begin="35" end="36" id="59" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
                       <node begin="36" cat="np" end="44" id="60" rel="obj1">

@@ -2,10 +2,10 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="29" id="0" rel="top">
     <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="22" end="23" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="26" end="27" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="22" end="23" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="26" end="27" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="conj" end="28" id="4" rel="--">
-      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="5" lemma="donderdagavond-tros-avond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="donderdagavond-TROS-avond" word="donderdagavond-TROS-avond"/>
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="5" lemma="donderdag_avond_tros_avond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="donderdagavond-TROS-avond" word="donderdagavond-TROS-avond"/>
       <node begin="2" end="3" id="6" lemma="dus" pos="vg" postag="BW()" pt="bw" rel="crd" root="dus" word="dus"/>
       <node begin="3" cat="conj" end="28" id="7" rel="cnj">
         <node begin="3" cat="smain" end="14" id="8" rel="cnj">
@@ -29,7 +29,7 @@
               <node begin="9" end="10" getal="getal" id="23" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
               <node begin="12" end="13" id="24" lemma="voor" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="voor" vztype="fin" word="voor"/>
             </node>
-            <node begin="13" buiging="zonder" end="14" id="25" lemma="zitten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zit" word="zitten" wvorm="inf"/>
+            <node begin="13" buiging="zonder" end="14" id="25" lemma="voor_zitten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zit" word="zitten" wvorm="inf"/>
           </node>
         </node>
         <node begin="14" conjtype="neven" end="15" id="26" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
@@ -43,7 +43,7 @@
                 <node begin="17" end="18" id="34" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                 <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="35" lemma="TROS" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="TROS" word="TROS"/>
               </node>
-              <node begin="19" end="20" id="36" lemma="waarmaken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="maak" word="waarmaakt" wvorm="pv"/>
+              <node begin="19" end="20" id="36" lemma="waar_maken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="maak" word="waarmaakt" wvorm="pv"/>
               <node begin="20" cat="cp" end="28" id="37" rel="vc">
                 <node begin="20" conjtype="onder" end="21" id="38" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
                 <node begin="21" cat="ssub" end="28" id="39" rel="body">
@@ -65,5 +65,5 @@
     </node>
     <node begin="28" end="29" id="47" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>donderdagavond-TROS-avond , dus de aanhangers van deze omroep gaan er dan echt voor zitten en verwachten dat de TROS waarmaakt dat hij &quot; anders dan anderen &quot; is .</sentence>
+  <sentence>donderdagavond-TROS-avond , dus de aanhangers van deze omroep gaan er dan echt voor zitten en verwachten dat de TROS waarmaakt dat hij &#34; anders dan anderen &#34; is .</sentence>
 </alpino_ds>

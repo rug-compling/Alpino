@@ -14,7 +14,7 @@
           <node begin="1" cat="ssub" end="14" id="10" rel="body">
             <node begin="1" cat="np" end="6" id="11" index="2" rel="su">
               <node begin="1" end="2" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="13" lemma="surseance-aanvraag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aanvraag" word="surseance-aanvraag"/>
+              <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="13" lemma="surseance_aanvraag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aanvraag" word="surseance-aanvraag"/>
               <node begin="3" cat="pp" end="6" id="14" rel="mod">
                 <node begin="3" end="4" id="15" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                 <node begin="4" cat="mwu" end="6" id="16" rel="obj1">
@@ -45,7 +45,7 @@
         <node begin="16" end="18" id="32" index="1" rel="su"/>
         <node begin="18" buiging="zonder" end="19" graad="basis" id="33" lemma="uiteindelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="uiteindelijk" word="uiteindelijk"/>
         <node begin="19" end="20" id="34" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
-        <node begin="20" buiging="zonder" end="21" id="35" lemma="meevallen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="val" word="meegevallen" wvorm="vd"/>
+        <node begin="20" buiging="zonder" end="21" id="35" lemma="mee_vallen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="val" word="meegevallen" wvorm="vd"/>
       </node>
     </node>
     <node begin="21" end="22" id="36" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

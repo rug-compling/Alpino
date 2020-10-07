@@ -13,7 +13,7 @@
         <node begin="1" cat="inf" end="18" id="9" rel="vc">
           <node begin="1" end="3" id="10" index="1" rel="su"/>
           <node begin="3" end="4" id="11" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
-          <node begin="4" buiging="zonder" end="5" id="12" lemma="meedelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="deel" word="meedelen" wvorm="inf"/>
+          <node begin="4" buiging="zonder" end="5" id="12" lemma="mee_delen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="deel" word="meedelen" wvorm="inf"/>
           <node begin="5" cat="whsub" end="18" id="13" rel="vc">
             <node begin="5" cat="np" end="15" id="14" index="2" rel="whd">
               <node begin="5" end="6" id="15" lemma="hoeveel" naamval="stan" numtype="hoofd" pos="det" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="hoeveel" word="hoeveel"/>
@@ -41,7 +41,7 @@
               <node begin="5" cat="ppart" end="18" id="32" rel="vc">
                 <node begin="5" end="15" id="33" index="2" rel="obj1"/>
                 <node begin="15" end="16" id="34" lemma="inmiddels" pos="adv" postag="BW()" pt="bw" rel="mod" root="inmiddels" word="inmiddels"/>
-                <node begin="17" buiging="zonder" end="18" id="35" lemma="indienen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="dien" word="ingediend" wvorm="vd"/>
+                <node begin="17" buiging="zonder" end="18" id="35" lemma="in_dienen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="dien" word="ingediend" wvorm="vd"/>
               </node>
             </node>
           </node>

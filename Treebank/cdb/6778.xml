@@ -5,7 +5,7 @@
     <node begin="0" cat="smain" end="25" id="2" rel="--">
       <node begin="0" cat="np" end="19" id="3" rel="su">
         <node begin="0" end="1" id="4" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
-        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="regeringsvoorstel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="voorstel" word="regeringsvoorstel"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="regering_voorstel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="voorstel" word="regeringsvoorstel"/>
         <node begin="2" cat="pp" end="19" id="6" rel="mod">
           <node begin="2" end="3" id="7" lemma="inzake" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="inzake" vztype="init" word="inzake"/>
           <node begin="3" cat="np" end="19" id="8" rel="obj1">
@@ -38,7 +38,7 @@
                           <node begin="14" buiging="zonder" end="15" getal="mv" id="32" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
                           <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="33" lemma="functie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="functie" word="functie"/>
                         </node>
-                        <node begin="18" buiging="zonder" end="19" id="34" lemma="uitoefenen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="oefen" word="uitoefenen" wvorm="inf"/>
+                        <node begin="18" buiging="zonder" end="19" id="34" lemma="uit_oefenen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="oefen" word="uitoefenen" wvorm="inf"/>
                       </node>
                     </node>
                   </node>

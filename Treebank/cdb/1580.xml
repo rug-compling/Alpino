@@ -11,7 +11,7 @@
         <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="8" lemma="heer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="heer" word="heer"/>
         <node begin="2" end="3" genus="genus" getal="ev" graad="basis" id="9" lemma="Schravemade" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Schravemade" word="Schravemade"/>
         <node begin="4" cat="np" end="11" id="10" rel="app">
-          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="districtsbestuurder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bestuurder" word="districtsbestuurder"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="district_bestuurder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bestuurder" word="districtsbestuurder"/>
           <node begin="5" cat="pp" end="11" id="12" rel="mod">
             <node begin="5" end="6" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="6" cat="np" end="11" id="14" rel="obj1">
@@ -40,7 +40,7 @@
             <node begin="18" cat="inf" end="22" id="31" rel="body">
               <node begin="18" cat="pp" end="20" id="32" rel="mod">
                 <node begin="18" end="19" id="33" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
-                <node begin="19" end="20" getal="mv" graad="basis" id="34" lemma="atletiekterm" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="termen" word="atletiektermen"/>
+                <node begin="19" end="20" getal="mv" graad="basis" id="34" lemma="atletiek_term" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="termen" word="atletiektermen"/>
               </node>
               <node begin="21" buiging="zonder" end="22" id="35" lemma="spreken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="spreek" word="spreken" wvorm="inf"/>
             </node>

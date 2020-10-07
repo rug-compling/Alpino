@@ -2,14 +2,14 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="35" id="0" rel="top">
     <node begin="19" end="20" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="26" end="27" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="31" end="32" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="26" end="27" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="31" end="32" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="34" id="4" rel="--">
       <node begin="0" cat="np" end="2" id="5" rel="su">
         <node begin="0" end="1" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
         <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="ambassade" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ambassade" word="ambassade"/>
       </node>
-      <node begin="2" end="3" id="8" lemma="spreken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="spreek" word="spreekt" wvorm="pv"/>
+      <node begin="2" end="3" id="8" lemma="uit_spreken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="spreek" word="spreekt" wvorm="pv"/>
       <node begin="4" cat="np" end="6" id="9" rel="obj1">
         <node begin="4" buiging="zonder" end="5" getal="ev" id="10" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
         <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="verbazing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verbazing" word="verbazing"/>
@@ -75,5 +75,5 @@
     </node>
     <node begin="34" end="35" id="55" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De ambassade spreekt er zijn verbazing over uit dat in Nederlandse kranten zoveel aandacht is geschonken aan het gebeurde , vooral omdat een deel ervan als &quot; uit de lug gegryp &quot; wordt beschouwd .</sentence>
+  <sentence>De ambassade spreekt er zijn verbazing over uit dat in Nederlandse kranten zoveel aandacht is geschonken aan het gebeurde , vooral omdat een deel ervan als &#34; uit de lug gegryp &#34; wordt beschouwd .</sentence>
 </alpino_ds>

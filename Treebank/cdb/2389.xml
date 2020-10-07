@@ -12,7 +12,7 @@
             <node begin="2" end="3" id="9" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
             <node begin="3" cat="np" end="6" id="10" rel="obj1">
               <node begin="3" end="4" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="12" lemma="neurochirurg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="chirurg" word="neurochirurg"/>
+              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="12" lemma="neuro_chirurg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="chirurg" word="neurochirurg"/>
               <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="13" lemma="Cairns" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Cairns" word="Cairns"/>
             </node>
           </node>
@@ -49,7 +49,7 @@
                   <node begin="20" end="21" id="38" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
                   <node begin="21" buiging="zonder" end="22" graad="basis" id="39" lemma="radicaal" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="radicaal" word="radicaal"/>
                 </node>
-                <node begin="23" buiging="zonder" end="24" id="40" lemma="wegsnijden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="snijd" word="weggesneden" wvorm="vd"/>
+                <node begin="23" buiging="zonder" end="24" id="40" lemma="weg_snijden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="snijd" word="weggesneden" wvorm="vd"/>
                 <node begin="24" cat="pp" end="45" id="41" rel="mod">
                   <node begin="24" end="25" id="42" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
                   <node begin="25" cat="cp" end="27" id="43" rel="predc">
@@ -76,7 +76,7 @@
                               </node>
                             </node>
                             <node begin="33" end="34" id="63" lemma="door" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="door" vztype="fin" word="door"/>
-                            <node begin="36" buiging="zonder" end="37" id="64" lemma="woekeren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="woeker" word="woekeren" wvorm="inf"/>
+                            <node begin="36" buiging="zonder" end="37" id="64" lemma="door_woekeren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="woeker" word="woekeren" wvorm="inf"/>
                           </node>
                         </node>
                       </node>
@@ -90,10 +90,10 @@
                           <node begin="39" cat="np" end="43" id="72" rel="obj1">
                             <node begin="39" end="40" id="73" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                             <node begin="40" buiging="met-e" end="41" graad="basis" id="74" lemma="heel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="heel" word="hele"/>
-                            <node begin="41" buiging="met-e" end="42" graad="basis" id="75" lemma="niet-dominant" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="dominant" word="niet-dominante"/>
+                            <node begin="41" buiging="met-e" end="42" graad="basis" id="75" lemma="niet_dominant" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="dominant" word="niet-dominante"/>
                             <node begin="42" end="43" genus="zijd" getal="ev" graad="basis" id="76" lemma="hersenhelft" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="helft" word="hersenhelft"/>
                           </node>
-                          <node begin="44" buiging="zonder" end="45" id="77" lemma="uitschakelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schakel" word="uitgeschakeld" wvorm="vd"/>
+                          <node begin="44" buiging="zonder" end="45" id="77" lemma="uit_schakelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="schakel" word="uitgeschakeld" wvorm="vd"/>
                         </node>
                       </node>
                     </node>

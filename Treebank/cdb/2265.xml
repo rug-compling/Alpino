@@ -30,7 +30,7 @@
             <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="23" lemma="spel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="spel" word="spel"/>
           </node>
         </node>
-        <node begin="13" buiging="zonder" end="14" id="24" lemma="afscheiden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="scheid" word="afgescheiden" wvorm="vd"/>
+        <node begin="13" buiging="zonder" end="14" id="24" lemma="af_scheiden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="scheid" word="afgescheiden" wvorm="vd"/>
         <node begin="14" cat="pp" end="25" id="25" rel="pc">
           <node begin="14" end="15" id="26" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="15" cat="np" end="25" id="27" rel="obj1">
@@ -47,7 +47,7 @@
                     <node begin="21" end="22" id="38" index="2" rel="su"/>
                     <node begin="22" cat="pp" end="24" id="39" rel="ld">
                       <node begin="22" end="23" id="40" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
-                      <node begin="23" end="24" genus="onz" getal="ev" graad="dim" id="41" lemma="schoolreis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="obj1" root="schoolreisje" word="schoolreisje"/>
+                      <node begin="23" end="24" genus="onz" getal="ev" graad="dim" id="41" lemma="school_reis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="obj1" root="schoolreisje" word="schoolreisje"/>
                     </node>
                     <node begin="24" end="25" id="42" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
                   </node>

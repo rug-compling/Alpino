@@ -29,7 +29,7 @@
               <node begin="3" buiging="met-e" end="4" graad="basis" id="22" lemma="reele" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="reëel" word="reele"/>
               <node begin="4" end="5" getal="mv" graad="basis" id="23" lemma="mogelijkheid" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mogelijkheid" word="mogelijkheden"/>
             </node>
-            <node begin="5" end="6" id="24" lemma="voordoen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="doe" word="voordoen" wvorm="pv"/>
+            <node begin="5" end="6" id="24" lemma="voor_doen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="doe" word="voordoen" wvorm="pv"/>
             <node begin="6" cat="pp" end="15" id="25" rel="mod">
               <node begin="6" end="7" id="26" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
               <node begin="7" cat="np" end="15" id="27" rel="obj1">
@@ -60,7 +60,7 @@
             <node begin="24" end="25" id="44" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
             <node begin="26" end="27" id="45" index="1" rel="su"/>
             <node begin="27" cat="np" end="29" id="46" rel="obj1">
-              <node begin="27" buiging="met-e" end="28" id="47" lemma="aanvullen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="aanvullend" word="aanvullende" wvorm="od"/>
+              <node begin="27" buiging="met-e" end="28" id="47" lemma="aan_vullen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="aanvullend" word="aanvullende" wvorm="od"/>
               <node begin="28" end="29" genus="zijd" getal="ev" graad="basis" id="48" lemma="financiering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="financiering" word="financiering"/>
             </node>
             <node begin="29" buiging="zonder" end="30" id="49" lemma="bezien" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bezie" word="bezien" wvorm="inf"/>

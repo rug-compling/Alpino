@@ -17,10 +17,10 @@
                 <node begin="2" end="3" id="14" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                 <node begin="3" cat="np" end="5" id="15" rel="obj1">
                   <node begin="3" end="4" id="16" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                  <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="17" lemma="atoomkern" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kern" word="atoomkern"/>
+                  <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="17" lemma="atoom_kern" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kern" word="atoomkern"/>
                 </node>
               </node>
-              <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="18" lemma="bindingsenergie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="energie" word="bindingsenergie"/>
+              <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="18" lemma="binding_energie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="energie" word="bindingsenergie"/>
               <node begin="6" buiging="zonder" end="7" graad="basis" id="19" lemma="aanwezig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="aanwezig" word="aanwezig"/>
               <node begin="7" end="8" id="20" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
             </node>
@@ -36,7 +36,7 @@
               <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="29" lemma="materie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="materie" word="materie"/>
             </node>
           </node>
-          <node begin="18" buiging="zonder" end="19" id="30" lemma="aannemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem" word="aannemen" wvorm="inf"/>
+          <node begin="18" buiging="zonder" end="19" id="30" lemma="aan_nemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem" word="aannemen" wvorm="inf"/>
         </node>
       </node>
     </node>

@@ -11,7 +11,7 @@
           <node begin="4" buiging="zonder" end="5" graad="basis" id="8" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="det" root="veel" vwtype="onbep" word="veel"/>
           <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="9" lemma="geld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geld" word="geld"/>
         </node>
-        <node begin="7" buiging="zonder" end="8" id="10" lemma="uitgeven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geef" word="uitgegeven" wvorm="vd"/>
+        <node begin="7" buiging="zonder" end="8" id="10" lemma="uit_geven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geef" word="uitgegeven" wvorm="vd"/>
         <node begin="0" cat="pp" end="16" id="11" rel="pc">
           <node begin="2" end="3" getal="getal" id="12" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="pobj1" root="er" status="red" vwtype="aanw" word="er"/>
           <node begin="6" end="7" id="13" lemma="voor" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="voor" vztype="fin" word="voor"/>
@@ -25,7 +25,7 @@
                   <node begin="9" cat="np" end="12" id="21" rel="cnj">
                     <node begin="9" end="10" id="22" index="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                     <node begin="10" buiging="met-e" end="11" graad="basis" id="23" index="3" lemma="nodig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nodig" word="nodige"/>
-                    <node begin="11" end="12" getal="mv" graad="basis" id="24" lemma="vuurschip" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="schip" word="vuurschepen"/>
+                    <node begin="11" end="12" getal="mv" graad="basis" id="24" lemma="vuur_schip" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="schip" word="vuurschepen"/>
                   </node>
                   <node begin="12" conjtype="neven" end="13" id="25" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                   <node begin="9" cat="np" end="14" id="26" rel="cnj">
@@ -42,7 +42,7 @@
       </node>
     </node>
     <node begin="16" end="17" id="31" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
-    <node begin="17" end="18" id="32" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="17" end="18" id="32" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
   </node>
-  <sentence>Frankrijk heeft er zelf veel geld voor uitgegeven om de nodige vuurschepen en boeien te plaatsen . &quot;</sentence>
+  <sentence>Frankrijk heeft er zelf veel geld voor uitgegeven om de nodige vuurschepen en boeien te plaatsen . &#34;</sentence>
 </alpino_ds>

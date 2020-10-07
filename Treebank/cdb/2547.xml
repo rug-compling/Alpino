@@ -13,7 +13,7 @@
           <node begin="3" end="4" id="9" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
           <node begin="4" cat="np" end="6" id="10" rel="obj1">
             <node begin="4" end="5" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="leerkracht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="leerkracht" word="leerkracht"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="leer_kracht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="leerkracht" word="leerkracht"/>
           </node>
         </node>
       </node>
@@ -26,7 +26,7 @@
         <node begin="12" cat="pp" end="15" id="19" rel="mod">
           <node begin="12" end="13" id="20" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
           <node begin="13" cat="np" end="15" id="21" rel="obj1">
-            <node begin="13" buiging="zonder" end="14" getal="ev" id="22" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="red" vwtype="bez" word="z&apos;n"/>
+            <node begin="13" buiging="zonder" end="14" getal="ev" id="22" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="red" vwtype="bez" word="z&#39;n"/>
             <node begin="14" end="15" getal="mv" graad="basis" id="23" lemma="twintig" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="twintigen" word="twintigen"/>
           </node>
         </node>
@@ -41,5 +41,5 @@
     </node>
     <node begin="18" end="19" id="29" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Ruil een kanon voor een leerkracht , en ze zitten nog maar met z&apos;n twintigen in de klas .</sentence>
+  <sentence>Ruil een kanon voor een leerkracht , en ze zitten nog maar met z&#39;n twintigen in de klas .</sentence>
 </alpino_ds>

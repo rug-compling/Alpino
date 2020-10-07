@@ -29,7 +29,7 @@
           <node begin="10" cat="pp" end="15" id="21" rel="ld">
             <node begin="10" end="11" id="22" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
             <node begin="11" cat="np" end="15" id="23" rel="obj1">
-              <node begin="11" end="12" id="24" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&apos;n"/>
+              <node begin="11" end="12" id="24" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&#39;n"/>
               <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="25" lemma="raad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="raad" word="raad"/>
               <node begin="13" cat="pp" end="15" id="26" rel="mod">
                 <node begin="13" end="14" id="27" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
@@ -41,7 +41,7 @@
       </node>
       <node begin="16" cat="smain" end="21" id="29" rel="dp">
         <node begin="16" end="17" getal="mv" graad="basis" id="30" lemma="advocaat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="advocate" word="advocaten"/>
-        <node begin="17" end="18" id="31" lemma="staan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="sta" word="staan" wvorm="pv"/>
+        <node begin="17" end="18" id="31" lemma="bij_staan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="sta" word="staan" wvorm="pv"/>
         <node begin="18" end="19" getal="mv" id="32" lemma="hen" naamval="obl" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,obl,vol,3p,mv)" pt="vnw" rel="obj1" root="hen" status="vol" vwtype="pers" word="hen"/>
         <node begin="19" buiging="zonder" end="20" graad="basis" id="33" lemma="gratis" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="gratis" word="gratis"/>
         <node begin="20" end="21" id="34" lemma="bij" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="bij" vztype="fin" word="bij"/>
@@ -49,5 +49,5 @@
     </node>
     <node begin="21" end="22" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De overdonderde arbeiders zoeken steun bij de vakbonden , verschijnen voor &apos;n raad van beroep , advocaten staan hen gratis bij .</sentence>
+  <sentence>De overdonderde arbeiders zoeken steun bij de vakbonden , verschijnen voor &#39;n raad van beroep , advocaten staan hen gratis bij .</sentence>
 </alpino_ds>

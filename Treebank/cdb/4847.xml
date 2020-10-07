@@ -3,7 +3,7 @@
   <node begin="0" cat="top" end="26" id="0" rel="top">
     <node begin="0" cat="smain" end="25" id="1" rel="--">
       <node begin="0" cat="np" end="5" id="2" index="1" rel="su">
-        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="nkvvoorzitter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzitter" word="NKVvoorzitter"/>
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="nkv_voorzitter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzitter" word="NKVvoorzitter"/>
         <node begin="1" cat="mwu" end="5" id="4" rel="app">
           <node begin="1" end="2" id="5" lemma="P." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="P." spectype="deeleigen" word="P."/>
           <node begin="2" end="3" id="6" lemma="J." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="J." spectype="deeleigen" word="J."/>
@@ -26,7 +26,7 @@
               </node>
               <node begin="11" buiging="zonder" end="12" id="21" lemma="houden" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gehouden" word="gehouden" wvorm="vd"/>
             </node>
-            <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="verbondsraad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="raad" word="verbondsraad"/>
+            <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="22" lemma="verbond_raad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="raad" word="verbondsraad"/>
           </node>
         </node>
         <node begin="13" buiging="zonder" end="14" id="23" lemma="zeggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zeg" word="gezegd" wvorm="vd"/>
@@ -42,7 +42,7 @@
                   <node begin="18" end="19" id="33" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                   <node begin="19" buiging="met-e" end="20" id="34" lemma="stranden" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="gestrand" word="gestrande" wvorm="vd"/>
                   <node begin="20" buiging="met-e" end="21" graad="basis" id="35" lemma="centraal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="centraal" word="centrale"/>
-                  <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="36" lemma="loonoverleg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="overleg" word="loonoverleg"/>
+                  <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="36" lemma="loon_overleg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="overleg" word="loonoverleg"/>
                 </node>
               </node>
             </node>

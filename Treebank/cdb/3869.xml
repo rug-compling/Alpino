@@ -34,12 +34,12 @@
           <node begin="10" end="11" id="25" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
           <node begin="11" cat="np" end="20" id="26" rel="obj1">
             <node begin="11" end="12" id="27" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-            <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="28" lemma="oorlogsmonument" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="monument" word="oorlogsmonument"/>
+            <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="28" lemma="oorlog_monument" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="monument" word="oorlogsmonument"/>
             <node begin="13" cat="pp" end="20" id="29" rel="mod">
               <node begin="13" end="14" id="30" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
               <node begin="14" cat="np" end="20" id="31" rel="obj1">
                 <node begin="14" end="15" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="33" lemma="erebegraafplaats" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="begraafplaats" word="erebegraafplaats"/>
+                <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="33" lemma="ere_begraaf_plaats" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="begraafplaats" word="erebegraafplaats"/>
                 <node begin="16" cat="pp" end="20" id="34" rel="mod">
                   <node begin="16" end="17" id="35" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                   <node begin="17" cat="np" end="20" id="36" rel="obj1">
@@ -52,7 +52,7 @@
           </node>
         </node>
         <node begin="21" end="23" id="39" index="1" rel="su"/>
-        <node begin="23" buiging="zonder" end="24" id="40" lemma="plaatshebben" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="heb" word="plaatsgehad" wvorm="vd"/>
+        <node begin="23" buiging="zonder" end="24" id="40" lemma="plaats_hebben" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="heb" word="plaatsgehad" wvorm="vd"/>
         <node begin="24" cat="pp" end="40" id="41" rel="mod">
           <node begin="24" end="25" id="42" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="25" cat="np" end="40" id="43" rel="obj1">

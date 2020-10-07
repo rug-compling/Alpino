@@ -13,8 +13,8 @@
         <node begin="0" end="3" id="9" index="1" rel="su"/>
         <node begin="4" cat="np" end="9" id="10" rel="obj1">
           <node begin="4" end="5" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="5" buiging="met-e" end="6" graad="basis" id="12" lemma="37-jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="37-jarige"/>
-          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="onderbaas" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="baas" word="onderbaas"/>
+          <node begin="5" buiging="met-e" end="6" graad="basis" id="12" lemma="37_jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="37-jarige"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="onder_baas" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="baas" word="onderbaas"/>
           <node begin="7" cat="mwu" end="9" id="14" rel="app">
             <node begin="7" end="8" id="15" lemma="W." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="W." spectype="deeleigen" word="W."/>
             <node begin="8" end="9" id="16" lemma="K." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="K." spectype="deeleigen" word="K."/>
@@ -26,7 +26,7 @@
           <node begin="11" cat="np" end="19" id="20" rel="obj1">
             <node begin="11" end="12" id="21" lemma="vier" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="vier" word="vier"/>
             <node begin="12" end="13" getal="mv" graad="basis" id="22" lemma="maanden" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="maand" word="maanden"/>
-            <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="gevangenisstraf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="gevangenisstraf" word="gevangenisstraf"/>
+            <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="23" lemma="gevangenis_straf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="gevangenisstraf" word="gevangenisstraf"/>
             <node begin="14" cat="pp" end="19" id="24" rel="mod">
               <node begin="14" end="15" id="25" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
               <node begin="15" cat="np" end="19" id="26" rel="obj1">
@@ -93,10 +93,10 @@
                     <node begin="40" end="41" id="71" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
                     <node begin="41" cat="np" end="43" id="72" rel="obj1">
                       <node begin="41" end="42" id="73" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                      <node begin="42" end="43" genus="onz" getal="ev" graad="basis" id="74" lemma="dammonument" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="monument" word="Dammonument"/>
+                      <node begin="42" end="43" genus="onz" getal="ev" graad="basis" id="74" lemma="dam_monument" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="monument" word="Dammonument"/>
                     </node>
                   </node>
-                  <node begin="44" buiging="zonder" end="45" id="75" lemma="aanhouden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="houd" word="aanhouden" wvorm="inf"/>
+                  <node begin="44" buiging="zonder" end="45" id="75" lemma="aan_houden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="houd" word="aanhouden" wvorm="inf"/>
                 </node>
               </node>
             </node>

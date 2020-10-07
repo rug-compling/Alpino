@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="35" id="0" rel="top">
-    <node begin="0" end="1" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" end="1" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="8" end="9" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="9" end="10" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="9" end="10" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="28" end="29" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="1" cat="du" end="34" id="5" rel="--">
       <node begin="1" cat="smain" end="8" id="6" rel="nucl">
@@ -35,7 +35,7 @@
           <node begin="15" end="16" id="26" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="16" cat="np" end="18" id="27" rel="obj1">
             <node begin="16" end="17" id="28" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="29" lemma="gemeenteraad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gemeenteraad" word="gemeenteraad"/>
+            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="29" lemma="gemeente_raad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gemeenteraad" word="gemeenteraad"/>
           </node>
         </node>
         <node begin="18" cat="pp" end="21" id="30" rel="mod">
@@ -77,5 +77,5 @@
     </node>
     <node begin="34" end="35" id="55" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>&quot; De deur staat weer op een kier , &quot; zei wethouder van Delden gisteravond in de gemeenteraad tijdens de beantwoording van het college naar aanleiding van opmerkingen , tijdens de algemene beschouwingen gemaakt .</sentence>
+  <sentence>&#34; De deur staat weer op een kier , &#34; zei wethouder van Delden gisteravond in de gemeenteraad tijdens de beantwoording van het college naar aanleiding van opmerkingen , tijdens de algemene beschouwingen gemaakt .</sentence>
 </alpino_ds>

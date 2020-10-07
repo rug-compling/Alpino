@@ -38,7 +38,7 @@
                       <node begin="12" end="13" id="31" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                       <node begin="13" cat="np" end="15" id="32" rel="obj1">
                         <node begin="13" end="14" id="33" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                        <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="34" lemma="staatsblad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="blad" word="staatsblad"/>
+                        <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="34" lemma="staat_blad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="blad" word="staatsblad"/>
                       </node>
                     </node>
                     <node begin="16" buiging="zonder" end="17" id="35" lemma="krijgen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="krijg" word="krijgen" wvorm="inf"/>
@@ -69,8 +69,8 @@
               <node begin="27" cat="inf" end="33" id="52" rel="vc">
                 <node begin="27" end="28" id="53" index="2" rel="su"/>
                 <node begin="28" cat="np" end="30" id="54" rel="obj1">
-                  <node begin="28" end="29" getal="ev" graad="basis" id="55" lemma="Jenkins" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Jenkins" word="Jenkins&apos;"/>
-                  <node begin="29" end="30" genus="zijd" getal="ev" graad="basis" id="56" lemma="bewegingsvrijheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bewegingsvrijheid" word="bewegingsvrijheid"/>
+                  <node begin="28" end="29" getal="ev" graad="basis" id="55" lemma="Jenkins" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Jenkins" word="Jenkins&#39;"/>
+                  <node begin="29" end="30" genus="zijd" getal="ev" graad="basis" id="56" lemma="beweging_vrijheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bewegingsvrijheid" word="bewegingsvrijheid"/>
                 </node>
                 <node begin="30" end="31" id="57" lemma="tezeer" pos="adv" postag="BW()" pt="bw" rel="mod" root="tezeer" word="tezeer"/>
                 <node begin="32" buiging="zonder" end="33" id="58" lemma="beperken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="beperk" word="beperken" wvorm="inf"/>
@@ -82,5 +82,5 @@
     </node>
     <node begin="33" end="34" id="59" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>In verband met de noodzaak om de begroting toch voor de verkiezingen in het staatsblad te krijgen zou deze alsdan een zo eenvoudig mogelijk karakter moeten dragen wat Jenkins&apos; bewegingsvrijheid tezeer zou beperken .</sentence>
+  <sentence>In verband met de noodzaak om de begroting toch voor de verkiezingen in het staatsblad te krijgen zou deze alsdan een zo eenvoudig mogelijk karakter moeten dragen wat Jenkins&#39; bewegingsvrijheid tezeer zou beperken .</sentence>
 </alpino_ds>

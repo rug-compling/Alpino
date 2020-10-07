@@ -11,7 +11,7 @@
             <node begin="2" end="3" id="8" lemma="Schouten" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Schouten" spectype="deeleigen" word="Schouten"/>
           </node>
         </node>
-        <node begin="3" end="4" id="9" lemma="stellen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="stel" word="stelde" wvorm="pv"/>
+        <node begin="3" end="4" id="9" lemma="teleur_stellen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="stel" word="stelde" wvorm="pv"/>
         <node begin="4" end="5" id="10" lemma="echter" pos="adv" postag="BW()" pt="bw" rel="mod" root="echter" word="echter"/>
         <node begin="5" buiging="zonder" end="6" graad="basis" id="11" lemma="danig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="danig" word="danig"/>
         <node begin="6" end="7" id="12" lemma="teleur" pos="part" postag="BW()" pt="bw" rel="svp" root="teleur" word="teleur"/>
@@ -21,13 +21,13 @@
         <node begin="9" cat="ppres" end="12" id="15" rel="mod">
           <node begin="9" end="10" id="16" lemma="daarmee" pos="pp" postag="BW()" pt="bw" rel="pc" root="daarmee" word="daarmee"/>
           <node begin="10" buiging="zonder" end="11" graad="basis" id="17" lemma="nauw" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="nauw" word="nauw"/>
-          <node begin="11" buiging="zonder" end="12" id="18" lemma="samenhangen" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="hd" root="samenhangend" word="samenhangend" wvorm="od"/>
+          <node begin="11" buiging="zonder" end="12" id="18" lemma="samen_hangen" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="hd" root="samenhangend" word="samenhangend" wvorm="od"/>
         </node>
         <node begin="12" end="13" id="19" lemma="komen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kom" word="kwamen" wvorm="pv"/>
         <node begin="13" cat="np" end="16" id="20" rel="su">
           <node begin="13" end="14" id="21" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
           <node begin="14" end="15" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="15" end="16" getal="mv" graad="basis" id="23" lemma="damesestafetteteam" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="teams" word="damesestafetteteams"/>
+          <node begin="15" end="16" getal="mv" graad="basis" id="23" lemma="dame_estafette_team" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="teams" word="damesestafetteteams"/>
         </node>
         <node begin="16" cat="pp" end="20" id="24" rel="pc">
           <node begin="16" end="17" id="25" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>

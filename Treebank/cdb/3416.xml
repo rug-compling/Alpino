@@ -17,7 +17,7 @@
           <node begin="1" end="2" id="12" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="2" cat="np" end="4" id="13" rel="obj1">
             <node begin="2" end="3" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="3" end="4" getal="mv" graad="basis" id="15" lemma="bouwvak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vak" word="bouwvakken"/>
+            <node begin="3" end="4" getal="mv" graad="basis" id="15" lemma="bouw_vak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vak" word="bouwvakken"/>
           </node>
         </node>
         <node begin="5" cat="pp" end="8" id="16" rel="mod">
@@ -29,7 +29,7 @@
         </node>
         <node begin="8" end="12" id="21" index="1" rel="obj1"/>
         <node begin="12" buiging="zonder" end="13" graad="basis" id="22" lemma="mondeling" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="mondeling" word="mondeling"/>
-        <node begin="13" buiging="zonder" end="14" id="23" lemma="opzeggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zeg" word="opgezegd" wvorm="vd"/>
+        <node begin="13" buiging="zonder" end="14" id="23" lemma="op_zeggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zeg" word="opgezegd" wvorm="vd"/>
       </node>
     </node>
     <node begin="14" end="15" id="24" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>

@@ -6,14 +6,14 @@
       <node begin="0" conjtype="neven" end="1" id="3" lemma="maar" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="maar" word="Maar"/>
       <node begin="1" cat="smain" end="34" id="4" rel="nucl">
         <node begin="1" end="2" id="5" lemma="intussen" pos="adv" postag="BW()" pt="bw" rel="mod" root="intussen" word="intussen"/>
-        <node begin="2" end="3" id="6" lemma="breiden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="breid" word="breidt" wvorm="pv"/>
+        <node begin="2" end="3" id="6" lemma="uit_breiden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="breid" word="breidt" wvorm="pv"/>
         <node begin="3" cat="np" end="7" id="7" rel="su">
           <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="4" cat="ppart" end="6" id="9" rel="mod">
             <node begin="4" end="5" id="10" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
             <node begin="5" buiging="zonder" end="6" id="11" lemma="beginnen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="begonnen" word="begonnen" wvorm="vd"/>
           </node>
-          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="metrostaking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="staking" word="metrostaking"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="metro_staking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="staking" word="metrostaking"/>
         </node>
         <node begin="7" end="8" getal="getal" id="13" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="zich" status="red" vwtype="refl" word="zich"/>
         <node begin="8" end="9" id="14" lemma="verder" pos="adj" postag="BW()" pt="bw" rel="mod" root="verder" word="verder"/>

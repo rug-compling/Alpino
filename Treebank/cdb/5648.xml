@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="30" id="0" rel="top">
-    <node begin="10" end="11" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="13" end="14" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="10" end="11" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="13" end="14" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="14" end="15" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="du" end="29" id="4" rel="--">
       <node begin="0" cat="smain" end="13" id="5" rel="dp">
@@ -18,7 +18,7 @@
               <node begin="6" end="7" getal="getal" id="15" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
               <node begin="6" cat="ssub" end="13" id="16" rel="body">
                 <node begin="6" end="7" id="17" index="1" rel="su"/>
-                <node begin="7" end="8" id="18" lemma="schuilgaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="schuilgaat" word="schuilgaat" wvorm="pv"/>
+                <node begin="7" end="8" id="18" lemma="schuil_gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="schuilgaat" word="schuilgaat" wvorm="pv"/>
                 <node begin="8" cat="pp" end="13" id="19" rel="ld">
                   <node begin="8" end="9" id="20" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                   <node begin="9" cat="np" end="13" id="21" rel="obj1">
@@ -54,7 +54,7 @@
                       <node begin="27" end="28" id="44" lemma="willen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="wil" word="willen" wvorm="pv"/>
                       <node begin="26" cat="inf" end="29" id="45" rel="vc">
                         <node begin="26" end="27" id="46" index="3" rel="su"/>
-                        <node begin="28" buiging="zonder" end="29" id="47" lemma="ingrijpen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="grijp" word="ingrijpen" wvorm="inf"/>
+                        <node begin="28" buiging="zonder" end="29" id="47" lemma="in_grijpen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="grijp" word="ingrijpen" wvorm="inf"/>
                       </node>
                     </node>
                   </node>
@@ -72,5 +72,5 @@
     </node>
     <node begin="29" end="30" id="52" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Ik heb oog voor de dramatiek die schuilgaat in een &quot; verzopen leven &quot; , ik geloof in de integriteit en de kunde van de mensen die willen ingrijpen .</sentence>
+  <sentence>Ik heb oog voor de dramatiek die schuilgaat in een &#34; verzopen leven &#34; , ik geloof in de integriteit en de kunde van de mensen die willen ingrijpen .</sentence>
 </alpino_ds>

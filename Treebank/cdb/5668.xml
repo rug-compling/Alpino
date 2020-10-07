@@ -10,7 +10,7 @@
       <node begin="0" cat="ppart" end="39" id="7" rel="vc">
         <node begin="0" end="1" id="8" lemma="inmiddels" pos="adv" postag="BW()" pt="bw" rel="mod" root="inmiddels" word="Inmiddels"/>
         <node begin="2" end="3" getal="getal" id="9" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
-        <node begin="5" buiging="zonder" end="6" id="10" lemma="indienen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="dien" word="ingediend" wvorm="vd"/>
+        <node begin="5" buiging="zonder" end="6" id="10" lemma="in_dienen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="dien" word="ingediend" wvorm="vd"/>
         <node begin="3" cat="np" end="39" id="11" index="1" rel="obj1">
           <node begin="3" buiging="met-e" end="4" graad="basis" id="12" lemma="officieel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="officieel" word="officiele"/>
           <node begin="4" end="5" getal="mv" graad="basis" id="13" lemma="aanklacht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="aanklacht" word="aanklachten"/>
@@ -53,7 +53,7 @@
                     <node begin="24" end="25" getal="getal" id="42" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" status="vol" vwtype="aanw" word="hier"/>
                     <node begin="25" buiging="met-e" end="26" graad="basis" id="43" lemma="bekend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="bekend" word="bekende"/>
                   </node>
-                  <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="44" lemma="freelance-journalist" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="journalist" word="freelance-journalist"/>
+                  <node begin="26" end="27" genus="zijd" getal="ev" graad="basis" id="44" lemma="freelance_journalist" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="journalist" word="freelance-journalist"/>
                   <node begin="33" cat="mwu" end="35" id="45" index="2" rel="app">
                     <node begin="33" end="34" id="46" lemma="Jonathan" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jonathan" spectype="deeleigen" word="Jonathan"/>
                     <node begin="34" end="35" id="47" lemma="Aitken" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Aitken" spectype="deeleigen" word="Aitken"/>

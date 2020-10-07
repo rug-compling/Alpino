@@ -14,8 +14,8 @@
         <node begin="6" cat="pp" end="12" id="11" rel="mod">
           <node begin="6" end="7" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="7" cat="conj" end="12" id="13" rel="obj1">
-            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="14" lemma="vakbeweging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="vakbeweging" word="vakbeweging"/>
-            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="15" lemma="ondernemingsraad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="ondernemingsraad" word="ondernemingsraad"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="14" lemma="vak_beweging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="vakbeweging" word="vakbeweging"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="15" lemma="onderneming_raad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="ondernemingsraad" word="ondernemingsraad"/>
             <node begin="10" conjtype="neven" end="11" id="16" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="17" lemma="personeel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="personeel" word="personeel"/>
           </node>
@@ -24,7 +24,7 @@
           <node begin="12" end="13" id="19" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
           <node begin="13" cat="conj" end="18" id="20" rel="obj1">
             <node begin="13" end="14" getal="mv" graad="basis" id="21" lemma="fusie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="fusie" word="fusies"/>
-            <node begin="15" end="16" getal="mv" graad="basis" id="22" lemma="bedrijfssluiting" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="sluiting" word="bedrijfssluitingen"/>
+            <node begin="15" end="16" getal="mv" graad="basis" id="22" lemma="bedrijf_sluiting" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="sluiting" word="bedrijfssluitingen"/>
             <node begin="16" conjtype="neven" end="17" id="23" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="17" end="18" getal="mv" graad="basis" id="24" lemma="reorganisatie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="reorganisatie" word="reorganisaties"/>
           </node>

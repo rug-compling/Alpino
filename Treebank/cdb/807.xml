@@ -21,7 +21,7 @@
                 <node begin="17" cat="np" end="20" id="18" rel="obj1">
                   <node begin="17" end="18" id="19" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                   <node begin="18" buiging="met-e" end="19" graad="basis" id="20" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
-                  <node begin="19" end="20" getal="mv" graad="basis" id="21" lemma="televisietoren" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="toren" word="televisietoren"/>
+                  <node begin="19" end="20" getal="mv" graad="basis" id="21" lemma="televisie_toren" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="toren" word="televisietoren"/>
                 </node>
               </node>
               <node begin="20" conjtype="neven" end="21" id="22" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
@@ -33,7 +33,7 @@
                     <node begin="23" buiging="zonder" end="24" graad="basis" id="28" lemma="bijzonder" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="bijzonder" word="bijzonder"/>
                     <node begin="24" buiging="met-e" end="25" graad="basis" id="29" lemma="modern" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="modern" word="moderne"/>
                   </node>
-                  <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="30" lemma="toeristenkerk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kerk" word="toeristenkerk"/>
+                  <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="30" lemma="toerist_kerk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kerk" word="toeristenkerk"/>
                 </node>
               </node>
             </node>
@@ -80,7 +80,7 @@
                   <node begin="35" cat="np" end="38" id="61" rel="obj1">
                     <node begin="35" end="36" id="62" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                     <node begin="36" buiging="met-e" end="37" graad="basis" id="63" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
-                    <node begin="37" end="38" genus="zijd" getal="ev" graad="basis" id="64" lemma="schaatskampioene" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schaatskampioene" word="schaatskampioene"/>
+                    <node begin="37" end="38" genus="zijd" getal="ev" graad="basis" id="64" lemma="schaats_kampioene" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="schaatskampioene" word="schaatskampioene"/>
                   </node>
                   <node begin="39" buiging="zonder" end="40" id="65" lemma="spreken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="spreek" word="spreken" wvorm="inf"/>
                 </node>
@@ -88,7 +88,7 @@
             </node>
           </node>
         </node>
-        <node begin="41" end="42" id="66" lemma="kijken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kijk" word="kijken" wvorm="pv"/>
+        <node begin="41" end="42" id="66" lemma="aan_kijken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kijk" word="kijken" wvorm="pv"/>
         <node begin="42" cat="np" end="47" id="67" rel="su">
           <node begin="42" end="43" id="68" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="43" end="44" getal="mv" graad="basis" id="69" lemma="mens" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mens" word="mensen"/>

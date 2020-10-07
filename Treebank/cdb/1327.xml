@@ -15,7 +15,7 @@
           <node begin="0" cat="ppart" end="7" id="11" rel="vc">
             <node begin="0" end="3" id="12" index="1" rel="obj1"/>
             <node begin="4" end="5" id="13" lemma="ermee" pos="pp" postag="BW()" pt="bw" rel="pc" root="ermee" word="ermee"/>
-            <node begin="6" buiging="zonder" end="7" id="14" lemma="uitrusten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="rust" word="uitgerust" wvorm="vd"/>
+            <node begin="6" buiging="zonder" end="7" id="14" lemma="uit_rusten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="rust" word="uitgerust" wvorm="vd"/>
           </node>
         </node>
       </node>
@@ -41,7 +41,7 @@
           <node begin="15" end="16" id="30" index="2" rel="su"/>
           <node begin="16" cat="np" end="18" id="31" rel="obj1">
             <node begin="16" end="17" id="32" lemma="duizend" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="duizend" word="duizend"/>
-            <node begin="17" end="18" getal="mv" graad="basis" id="33" lemma="regeringsauto" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="auto&apos;s" word="regeringsauto&apos;s"/>
+            <node begin="17" end="18" getal="mv" graad="basis" id="33" lemma="regering_auto" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="auto&#39;s" word="regeringsauto&#39;s"/>
           </node>
           <node begin="18" buiging="zonder" end="19" id="34" lemma="verbouwen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verbouw" word="verbouwen" wvorm="inf"/>
           <node begin="19" cat="pp" end="24" id="35" rel="mod">
@@ -51,7 +51,7 @@
               <node begin="21" buiging="zonder" end="22" getal-n="zonder-n" id="39" lemma="rijden" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="rijd" word="rijden" wvorm="inf"/>
               <node begin="22" cat="pp" end="24" id="40" rel="mod">
                 <node begin="22" end="23" id="41" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
-                <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="42" lemma="aardgas" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="aardgas" word="aardgas"/>
+                <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="42" lemma="aard_gas" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="aardgas" word="aardgas"/>
               </node>
             </node>
           </node>
@@ -60,5 +60,5 @@
     </node>
     <node begin="24" end="25" id="43" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Twaalf experimentele exemplaren zullen ermee worden uitgerust en aan het eind van het jaar wil men duizend regeringsauto&apos;s verbouwen voor het rijden op aardgas .</sentence>
+  <sentence>Twaalf experimentele exemplaren zullen ermee worden uitgerust en aan het eind van het jaar wil men duizend regeringsauto&#39;s verbouwen voor het rijden op aardgas .</sentence>
 </alpino_ds>

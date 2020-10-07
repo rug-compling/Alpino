@@ -19,7 +19,7 @@
                     <node begin="6" end="7" id="16" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                     <node begin="7" cat="np" end="9" id="17" rel="obj1">
                       <node begin="7" end="8" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                      <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="19" lemma="achtergrondmuziek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="muziek" word="achtergrondmuziek"/>
+                      <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="19" lemma="achter_grondmuziek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="muziek" word="achtergrondmuziek"/>
                     </node>
                   </node>
                   <node begin="10" buiging="zonder" end="11" id="20" lemma="zwijgen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zwijg" word="zwijgen" wvorm="inf"/>
@@ -33,7 +33,7 @@
             <node begin="5" end="11" id="24" index="3" rel="mod"/>
           </node>
         </node>
-        <node begin="12" end="13" id="25" lemma="volgen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="volg" word="volgen" wvorm="pv"/>
+        <node begin="12" end="13" id="25" lemma="op_volgen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="volg" word="volgen" wvorm="pv"/>
         <node begin="13" end="14" getal="mv" id="26" lemma="elkaar" naamval="obl" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="obj1" root="elkaar" status="vol" vwtype="recip" word="elkaar"/>
         <node begin="14" cat="advp" end="16" id="27" rel="mod">
           <node begin="14" end="15" id="28" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
@@ -51,7 +51,7 @@
       <node begin="20" conjtype="neven" end="21" id="36" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
       <node begin="0" cat="smain" end="32" id="37" rel="cnj">
         <node begin="0" end="11" id="38" index="1" rel="su"/>
-        <node begin="21" end="22" id="39" lemma="dragen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="draag" word="dragen" wvorm="pv"/>
+        <node begin="21" end="22" id="39" lemma="bij_dragen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="draag" word="dragen" wvorm="pv"/>
         <node begin="22" end="23" id="40" lemma="bij" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="bij" vztype="fin" word="bij"/>
         <node begin="23" cat="pp" end="32" id="41" rel="pc">
           <node begin="23" end="24" id="42" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>

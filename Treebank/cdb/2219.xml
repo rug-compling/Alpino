@@ -2,12 +2,12 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="34" id="0" rel="top">
     <node begin="18" end="19" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="23" end="24" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="25" end="26" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="23" end="24" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="25" end="26" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="33" id="4" rel="--">
       <node begin="0" cat="np" end="8" id="5" rel="su">
         <node begin="0" end="1" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" getal="mv" graad="basis" id="7" lemma="protestactie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="protestactie" word="protestacties"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="7" lemma="protest_actie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="protestactie" word="protestacties"/>
         <node begin="2" cat="pp" end="8" id="8" rel="mod">
           <node begin="2" end="3" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="3" cat="np" end="8" id="10" rel="obj1">
@@ -71,5 +71,5 @@
     </node>
     <node begin="33" end="34" id="52" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De protestacties van de jaren 1968 en 1969 vormden voor velen een welkome doorbreking van de dagelijkse sleur , een opwindende roes als &quot; escape &quot; uit een te rationele en vertechniseerde wereld .</sentence>
+  <sentence>De protestacties van de jaren 1968 en 1969 vormden voor velen een welkome doorbreking van de dagelijkse sleur , een opwindende roes als &#34; escape &#34; uit een te rationele en vertechniseerde wereld .</sentence>
 </alpino_ds>

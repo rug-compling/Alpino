@@ -25,7 +25,7 @@
             <node begin="9" cat="np" end="12" id="19" rel="su">
               <node begin="9" end="10" id="20" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
               <node begin="10" buiging="met-e" end="11" graad="basis" id="21" lemma="enorm" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="enorm" word="enorme"/>
-              <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="22" lemma="steekvlam" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vlam" word="steekvlam"/>
+              <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="22" lemma="steek_vlam" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vlam" word="steekvlam"/>
             </node>
             <node begin="12" end="13" id="23" lemma="ontstaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ontsta" word="ontstond" wvorm="pv"/>
           </node>
@@ -34,7 +34,7 @@
       <node begin="14" conjtype="neven" end="15" id="24" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
       <node begin="0" cat="sv1" end="20" id="25" rel="cnj">
         <node begin="0" end="2" id="26" index="1" rel="su"/>
-        <node begin="15" end="16" id="27" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
+        <node begin="15" end="16" id="27" lemma="neer_komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
         <node begin="16" end="17" id="28" lemma="neer" pos="part" postag="BW()" pt="bw" rel="svp" root="neer" word="neer"/>
         <node begin="17" cat="pp" end="20" id="29" rel="ld">
           <node begin="17" end="18" id="30" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>

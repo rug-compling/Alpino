@@ -5,7 +5,7 @@
       <node begin="3" end="4" id="2" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="4" cat="np" end="9" id="3" index="1" rel="su">
         <node begin="4" end="5" id="4" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-        <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="5" lemma="lesprogramma" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="programma" word="lesprogramma"/>
+        <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="5" lemma="les_programma" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="programma" word="lesprogramma"/>
         <node begin="6" cat="pp" end="9" id="6" rel="mod">
           <node begin="6" end="7" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="7" cat="np" end="9" id="8" rel="obj1">
@@ -30,7 +30,7 @@
             <node begin="13" end="14" genus="genus" getal="ev" graad="basis" id="23" lemma="Shannon" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Shannon" word="Shannon"/>
           </node>
         </node>
-        <node begin="14" buiging="zonder" end="15" id="24" lemma="uitvoeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voer" word="uitgevoerd" wvorm="vd"/>
+        <node begin="14" buiging="zonder" end="15" id="24" lemma="uit_voeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voer" word="uitgevoerd" wvorm="vd"/>
       </node>
     </node>
     <node begin="15" end="16" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

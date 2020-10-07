@@ -20,20 +20,20 @@
                 <node begin="6" end="7" id="17" index="1" rel="mod"/>
                 <node begin="7" cat="np" end="9" id="18" rel="su">
                   <node begin="7" end="8" id="19" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                  <node begin="8" end="9" getal="mv" graad="basis" id="20" lemma="sfc-dame" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dame" word="SFC-dames"/>
+                  <node begin="8" end="9" getal="mv" graad="basis" id="20" lemma="sfc_dame" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="dame" word="SFC-dames"/>
                 </node>
                 <node begin="9" cat="pp" end="18" id="21" rel="mod">
                   <node begin="9" end="10" id="22" lemma="tegen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tegen" vztype="init" word="tegen"/>
                   <node begin="10" cat="np" end="18" id="23" rel="obj1">
-                    <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="24" lemma="landskampioen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="landskampioen" word="landskampioen"/>
+                    <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="24" lemma="land_kampioen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="landskampioen" word="landskampioen"/>
                     <node begin="11" cat="mwu" end="13" id="25" rel="app">
                       <node begin="11" end="12" id="26" lemma="Haag" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Haag" spectype="deeleigen" word="Haag"/>
-                      <node begin="12" end="13" id="27" lemma="&apos;68" pos="noun" postag="LET()" pt="let" rel="mwp" root="&apos;68" word="&apos;68"/>
+                      <node begin="12" end="13" id="27" lemma="&#39;68" pos="noun" postag="LET()" pt="let" rel="mwp" root="&#39;68" word="&#39;68"/>
                     </node>
                     <node begin="14" cat="pp" end="18" id="28" rel="mod">
                       <node begin="14" end="15" id="29" lemma="zonder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="zonder" vztype="init" word="zonder"/>
                       <node begin="15" cat="np" end="18" id="30" rel="obj1">
-                        <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="31" lemma="jeugd-international" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="international" word="jeugd-international"/>
+                        <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="31" lemma="jeugd_international" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="international" word="jeugd-international"/>
                         <node begin="16" cat="mwu" end="18" id="32" rel="app">
                           <node begin="16" end="17" id="33" lemma="Marijke" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Marijke" spectype="deeleigen" word="Marijke"/>
                           <node begin="17" end="18" id="34" lemma="Bruggeman" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bruggeman" spectype="deeleigen" word="Bruggeman"/>
@@ -73,5 +73,5 @@
     <node begin="32" end="33" id="52" lemma=")" pos="punct" postag="LET()" pt="let" rel="--" root=")" word=")"/>
     <node begin="33" end="34" id="53" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Groot feest dus in Assen , waar de SFC-dames tegen landskampioen Haag &apos;68 , zonder jeugd-international Marijke Bruggeman , het tekort aan lengte direct al compenseerde door een felle inzet ( 15-5 ) .</sentence>
+  <sentence>Groot feest dus in Assen , waar de SFC-dames tegen landskampioen Haag &#39;68 , zonder jeugd-international Marijke Bruggeman , het tekort aan lengte direct al compenseerde door een felle inzet ( 15-5 ) .</sentence>
 </alpino_ds>

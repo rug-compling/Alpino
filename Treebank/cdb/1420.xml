@@ -5,7 +5,7 @@
     <node begin="0" cat="smain" end="41" id="2" rel="--">
       <node begin="0" cat="np" end="26" id="3" index="1" rel="su">
         <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="47-jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="47-jarige"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="47_jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="jarig" word="47-jarige"/>
         <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="Turk" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Turk" word="Turk"/>
         <node begin="3" cat="mwu" end="5" id="7" rel="app">
           <node begin="3" end="4" id="8" lemma="A." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="A." spectype="deeleigen" word="A."/>
@@ -60,7 +60,7 @@
             <node begin="24" conjtype="neven" end="25" id="44" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="5" cat="ssub" end="26" id="45" rel="cnj">
               <node begin="5" end="6" id="46" index="2" rel="su"/>
-              <node begin="25" end="26" id="47" lemma="toesteken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="steek" word="toestak" wvorm="pv"/>
+              <node begin="25" end="26" id="47" lemma="toe_steken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="steek" word="toestak" wvorm="pv"/>
             </node>
           </node>
         </node>
@@ -69,7 +69,7 @@
       <node begin="0" cat="ppart" end="41" id="49" rel="vc">
         <node begin="0" end="26" id="50" index="1" rel="obj1"/>
         <node begin="28" cat="np" end="34" id="51" rel="mod">
-          <node begin="28" end="29" genus="zijd" getal="ev" graad="basis" id="52" lemma="nieuwjaarsdag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dag" word="nieuwjaarsdag"/>
+          <node begin="28" end="29" genus="zijd" getal="ev" graad="basis" id="52" lemma="nieuwjaar_dag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dag" word="nieuwjaarsdag"/>
           <node begin="29" cat="pp" end="34" id="53" rel="mod">
             <node begin="29" end="30" id="54" lemma="om" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="om" vztype="init" word="om"/>
             <node begin="30" cat="np" end="34" id="55" rel="obj1">
@@ -78,7 +78,7 @@
                 <node begin="31" end="32" genus="onz" getal="ev" graad="basis" id="58" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="uur" word="uur"/>
               </node>
               <node begin="32" cat="mwu" end="34" id="59" rel="mod">
-                <node begin="32" end="33" id="60" lemma="&apos;s" lwtype="bep" naamval="gen" npagr="evmo" pos="adv" postag="LID(bep,gen,evmo)" pt="lid" rel="mwp" root="&apos;s" word="&apos;s"/>
+                <node begin="32" end="33" id="60" lemma="&#39;s" lwtype="bep" naamval="gen" npagr="evmo" pos="adv" postag="LID(bep,gen,evmo)" pt="lid" rel="mwp" root="&#39;s" word="&#39;s"/>
                 <node begin="33" end="34" getal="ev" graad="basis" id="61" lemma="morgens" naamval="gen" ntype="soort" pos="adv" postag="N(soort,ev,basis,gen)" pt="n" rel="mwp" root="morgens" word="morgens"/>
               </node>
             </node>
@@ -98,10 +98,10 @@
             <node begin="39" end="40" genus="zijd" getal="ev" graad="basis" id="71" lemma="woning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="woning" word="woning"/>
           </node>
         </node>
-        <node begin="40" buiging="zonder" end="41" id="72" lemma="aanhouden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="houd" word="aangehouden" wvorm="vd"/>
+        <node begin="40" buiging="zonder" end="41" id="72" lemma="aan_houden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="houd" word="aangehouden" wvorm="vd"/>
       </node>
     </node>
     <node begin="41" end="42" id="73" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De 47-jarige Turk A. K. die tijdens een ruzie in het huis van het slachtoffer in de Witte Herenstraat de dolk te voorschijn haalde en toestak , werd nieuwjaarsdag om elf uur &apos;s morgens door de politie in zijn woning aangehouden .</sentence>
+  <sentence>De 47-jarige Turk A. K. die tijdens een ruzie in het huis van het slachtoffer in de Witte Herenstraat de dolk te voorschijn haalde en toestak , werd nieuwjaarsdag om elf uur &#39;s morgens door de politie in zijn woning aangehouden .</sentence>
 </alpino_ds>

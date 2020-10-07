@@ -30,12 +30,12 @@
           <node begin="15" end="16" id="24" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
           <node begin="16" cat="np" end="21" id="25" rel="obj1">
             <node begin="16" end="17" id="26" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-            <node begin="17" buiging="zonder" end="18" getal-n="zonder-n" id="27" lemma="uitbreken" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="breek" word="uitbreken" wvorm="inf"/>
+            <node begin="17" buiging="zonder" end="18" getal-n="zonder-n" id="27" lemma="uit_breken" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="breek" word="uitbreken" wvorm="inf"/>
             <node begin="18" cat="pp" end="21" id="28" rel="mod">
               <node begin="18" end="19" id="29" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="19" cat="np" end="21" id="30" rel="obj1">
                 <node begin="19" end="20" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="32" lemma="burgeroorlog" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="burgeroorlog" word="burgeroorlog"/>
+                <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="32" lemma="burger_oorlog" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="burgeroorlog" word="burgeroorlog"/>
               </node>
             </node>
           </node>
@@ -45,7 +45,7 @@
           <node begin="23" cat="np" end="26" id="35" rel="obj1">
             <node begin="23" cat="np" end="25" id="36" rel="det">
               <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="37" lemma="generaal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="generaal" word="generaal"/>
-              <node begin="24" end="25" getal="ev" graad="basis" id="38" lemma="Franco" naamval="gen" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,gen)" pt="n" rel="app" root="Franco&apos;s" word="Franco&apos;s"/>
+              <node begin="24" end="25" getal="ev" graad="basis" id="38" lemma="Franco" naamval="gen" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,gen)" pt="n" rel="app" root="Franco&#39;s" word="Franco&#39;s"/>
             </node>
             <node begin="25" end="26" getal="mv" graad="basis" id="39" lemma="aanhanger" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="aanhanger" word="aanhangers"/>
           </node>
@@ -88,5 +88,5 @@
     </node>
     <node begin="41" end="42" id="64" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Dat kon toen ook moeilijk anders , want er bestonden in die tijd , vlak na het uitbreken van de burgeroorlog , onder generaal Franco&apos;s aanhangers helemaal geen leden van een Movimiento , maar des te meer leden van de falange .</sentence>
+  <sentence>Dat kon toen ook moeilijk anders , want er bestonden in die tijd , vlak na het uitbreken van de burgeroorlog , onder generaal Franco&#39;s aanhangers helemaal geen leden van een Movimiento , maar des te meer leden van de falange .</sentence>
 </alpino_ds>

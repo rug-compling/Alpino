@@ -4,13 +4,13 @@
     <node begin="0" cat="smain" end="14" id="1" rel="--">
       <node begin="0" cat="conj" end="4" id="2" rel="su">
         <node begin="0" cat="np" end="2" id="3" rel="cnj">
-          <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="4" lemma="sportclub" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sportclub" word="Sportclub"/>
+          <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="4" lemma="sport_club" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sportclub" word="Sportclub"/>
           <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="Stadskanaal" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="app" root="Stadskanaal" word="Stadskanaal"/>
         </node>
         <node begin="2" conjtype="neven" end="3" id="6" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="3" end="4" id="7" lemma="CEC" pos="noun" postag="SPEC(symb)" pt="spec" rel="cnj" root="CEC" spectype="symb" word="CEC"/>
       </node>
-      <node begin="4" end="5" id="8" lemma="schotelen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="schotel" word="schotelden" wvorm="pv"/>
+      <node begin="4" end="5" id="8" lemma="voor_schotelen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="schotel" word="schotelden" wvorm="pv"/>
       <node begin="5" cat="np" end="8" id="9" rel="obj2">
         <node begin="5" end="6" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="6" end="7" id="11" lemma="1500" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="1500" word="1500"/>

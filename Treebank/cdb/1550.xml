@@ -9,7 +9,7 @@
         <node begin="2" cat="np" end="8" id="6" rel="obj1">
           <node begin="2" end="3" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
           <node begin="3" buiging="met-e" end="4" id="8" lemma="een" naamval="stan" npagr="evz" pdtype="det" pos="adj" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="mod" root="ene" vwtype="onbep" word="ene"/>
-          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="9" lemma="verenigingsgebouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebouw" word="verenigingsgebouw"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="9" lemma="vereniging_gebouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebouw" word="verenigingsgebouw"/>
           <node begin="5" cat="pp" end="8" id="10" rel="mod">
             <node begin="5" end="6" id="11" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
             <node begin="6" cat="np" end="8" id="12" rel="obj1">
@@ -26,7 +26,7 @@
         <node begin="10" end="11" id="19" lemma="tenslotte" pos="adv" postag="BW()" pt="bw" rel="mod" root="tenslotte" word="tenslotte"/>
         <node begin="11" cat="np" end="23" id="20" rel="obj1">
           <node begin="11" end="12" id="21" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-          <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="22" lemma="bedrijfscomplex" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="complex" word="bedrijfscomplex"/>
+          <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="22" lemma="bedrijf_complex" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="complex" word="bedrijfscomplex"/>
           <node begin="13" cat="pp" end="23" id="23" rel="mod">
             <node begin="13" end="14" id="24" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="14" cat="np" end="23" id="25" rel="obj1">
@@ -37,7 +37,7 @@
               </node>
               <node begin="18" cat="np" end="23" id="30" rel="app">
                 <node begin="18" end="19" id="31" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="32" lemma="dochteronderneming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dochteronderneming" word="dochteronderneming"/>
+                <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="32" lemma="dochter_onderneming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dochteronderneming" word="dochteronderneming"/>
                 <node begin="20" cat="pp" end="23" id="33" rel="mod">
                   <node begin="20" end="21" id="34" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                   <node begin="21" cat="np" end="23" id="35" rel="obj1">

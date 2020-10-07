@@ -8,7 +8,7 @@
           <node begin="0" buiging="zonder" end="1" id="5" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="Die"/>
           <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="6" lemma="mutatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="mutatie" word="mutatie"/>
         </node>
-        <node begin="2" end="3" id="7" lemma="helpen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="help" word="hielp" wvorm="pv"/>
+        <node begin="2" end="3" id="7" lemma="mee_helpen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="help" word="hielp" wvorm="pv"/>
         <node begin="3" buiging="zonder" end="4" graad="basis" id="8" lemma="aardig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="aardig" word="aardig"/>
         <node begin="4" end="5" id="9" lemma="mee" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="mee" vztype="fin" word="mee"/>
         <node begin="0" cat="oti" end="17" id="10" rel="vc">
@@ -24,7 +24,7 @@
                   <node begin="8" end="9" id="20" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                   <node begin="9" cat="np" end="11" id="21" rel="obj1">
                     <node begin="9" end="10" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                    <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="23" lemma="thuisclub" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="club" word="thuisclub"/>
+                    <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="23" lemma="thuis_club" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="club" word="thuisclub"/>
                   </node>
                 </node>
               </node>
@@ -36,7 +36,7 @@
                 <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="28" lemma="dreiging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dreiging" word="dreiging"/>
               </node>
               <node begin="14" end="15" id="29" lemma="mee" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="mee" vztype="fin" word="mee"/>
-              <node begin="16" buiging="zonder" end="17" id="30" lemma="geven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="geef" word="geven" wvorm="inf"/>
+              <node begin="16" buiging="zonder" end="17" id="30" lemma="mee_geven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="geef" word="geven" wvorm="inf"/>
             </node>
           </node>
         </node>
@@ -45,7 +45,7 @@
       <node begin="19" cat="smain" end="37" id="32" rel="cnj">
         <node begin="19" cat="np" end="21" id="33" rel="su">
           <node begin="19" end="20" id="34" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="35" lemma="oud-volendamspeler" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="speler" word="oud-Volendamspeler"/>
+          <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="35" lemma="oud_volendamspeler" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="speler" word="oud-Volendamspeler"/>
         </node>
         <node begin="21" end="22" id="36" lemma="starten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="start" word="startte" wvorm="pv"/>
         <node begin="22" cat="pp" end="37" id="37" rel="mod">

@@ -38,7 +38,7 @@
                 <node begin="18" cat="np" end="21" id="31" rel="cnj">
                   <node begin="18" end="19" id="32" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
                   <node begin="19" end="20" id="33" lemma="twee" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="tweede" word="tweede"/>
-                  <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="34" lemma="stationsgebouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gebouw" word="stationsgebouw"/>
+                  <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="34" lemma="stations_gebouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gebouw" word="stationsgebouw"/>
                 </node>
               </node>
             </node>
@@ -46,7 +46,7 @@
         </node>
         <node begin="22" cat="np" end="27" id="35" rel="obj1">
           <node begin="22" end="23" id="36" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="37" lemma="jumbo-ontwikkeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ontwikkeling" word="Jumbo-ontwikkeling"/>
+          <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="37" lemma="jumbo_ontwikkeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ontwikkeling" word="Jumbo-ontwikkeling"/>
           <node begin="24" cat="pp" end="27" id="38" rel="mod">
             <node begin="24" end="25" id="39" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="25" cat="np" end="27" id="40" rel="obj1">
@@ -55,7 +55,7 @@
             </node>
           </node>
         </node>
-        <node begin="27" buiging="zonder" end="28" id="43" lemma="bijhouden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="houd" word="bijhouden" wvorm="inf"/>
+        <node begin="27" buiging="zonder" end="28" id="43" lemma="bij_houden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="houd" word="bijhouden" wvorm="inf"/>
       </node>
     </node>
     <node begin="28" end="29" id="44" lemma=";" pos="punct" postag="LET()" pt="let" rel="--" root=";" word=";"/>

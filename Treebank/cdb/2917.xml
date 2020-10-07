@@ -8,7 +8,7 @@
         <node begin="1" cat="ssub" end="20" id="5" rel="body">
           <node begin="1" cat="np" end="3" id="6" index="1" rel="su">
             <node begin="1" end="2" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-            <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="8" lemma="hoofdstembureau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stembureau" word="hoofdstembureau"/>
+            <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="8" lemma="hoofd_stem_bureau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stembureau" word="hoofdstembureau"/>
           </node>
           <node begin="18" end="19" id="9" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" word="had" wvorm="pv"/>
           <node begin="1" cat="ppart" end="20" id="10" rel="vc">
@@ -57,7 +57,7 @@
           <node begin="25" cat="np" end="28" id="42" rel="obj1">
             <node begin="25" end="26" id="43" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="26" buiging="met-e" end="27" graad="basis" id="44" lemma="zwols" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Zwolse" word="Zwolse"/>
-            <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="45" lemma="gemeenteraad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gemeenteraad" word="gemeenteraad"/>
+            <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="45" lemma="gemeente_raad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gemeenteraad" word="gemeenteraad"/>
           </node>
         </node>
       </node>
@@ -72,9 +72,9 @@
               <node begin="30" end="31" id="54" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
               <node begin="31" cat="pp" end="33" id="55" rel="pc">
                 <node begin="31" end="32" id="56" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
-                <node begin="32" end="33" genus="zijd" getal="ev" graad="basis" id="57" lemma="herstelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="telling" word="herstelling"/>
+                <node begin="32" end="33" genus="zijd" getal="ev" graad="basis" id="57" lemma="her_stelling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="telling" word="herstelling"/>
               </node>
-              <node begin="35" buiging="zonder" end="36" id="58" lemma="overgaan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ga" word="overgegaan" wvorm="vd"/>
+              <node begin="35" buiging="zonder" end="36" id="58" lemma="over_gaan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ga" word="overgegaan" wvorm="vd"/>
             </node>
           </node>
         </node>

@@ -25,7 +25,7 @@
           </node>
         </node>
       </node>
-      <node begin="10" end="11" id="19" lemma="drukken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="druk" word="drukken" wvorm="pv"/>
+      <node begin="10" end="11" id="19" lemma="af_drukken" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="druk" word="drukken" wvorm="pv"/>
       <node begin="11" end="12" getal="mv" id="20" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
       <node begin="12" cat="pp" end="14" id="21" rel="mod">
         <node begin="12" end="13" id="22" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
@@ -41,7 +41,7 @@
       <node begin="19" end="20" id="29" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="af" vztype="fin" word="af"/>
       <node begin="14" cat="np" end="28" id="30" rel="obj1">
         <node begin="14" end="15" id="31" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="32" lemma="bestelbon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bon" word="bestelbon"/>
+        <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="32" lemma="bestel_bon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bon" word="bestelbon"/>
         <node begin="21" cat="rel" end="28" id="33" rel="mod">
           <node begin="21" end="22" id="34" index="1" lemma="waarmee" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarmee" word="waarmee"/>
           <node begin="21" cat="ssub" end="28" id="35" rel="body">
@@ -55,7 +55,7 @@
                 <node begin="24" buiging="zonder" end="25" getal="mv" id="43" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
                 <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="44" lemma="reservering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="reservering" word="reservering"/>
               </node>
-              <node begin="27" buiging="zonder" end="28" id="45" lemma="opgeven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="geef" word="opgeven" wvorm="inf"/>
+              <node begin="27" buiging="zonder" end="28" id="45" lemma="op_geven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="geef" word="opgeven" wvorm="inf"/>
             </node>
           </node>
         </node>

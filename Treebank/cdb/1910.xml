@@ -3,7 +3,7 @@
   <node begin="0" cat="top" end="30" id="0" rel="top">
     <node begin="0" cat="smain" end="29" id="1" rel="--">
       <node begin="0" cat="np" end="16" id="2" rel="su">
-        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="pompbediende" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bediende" word="Pompbediende"/>
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="pomp_bediende" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bediende" word="Pompbediende"/>
         <node begin="1" cat="mwu" end="3" id="4" rel="app">
           <node begin="1" end="2" id="5" lemma="C." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="C." spectype="deeleigen" word="C."/>
           <node begin="2" end="3" id="6" lemma="Verhees" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Verhees" spectype="deeleigen" word="Verhees"/>
@@ -12,7 +12,7 @@
           <node begin="3" end="4" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="4" cat="np" end="16" id="9" rel="obj1">
             <node begin="4" end="5" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="benzinestation" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="benzinestation" word="benzinestation"/>
+            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="benzine_station" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="benzinestation" word="benzinestation"/>
             <node begin="6" cat="pp" end="10" id="12" rel="mod">
               <node begin="6" end="7" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="7" cat="np" end="10" id="14" rel="obj1">

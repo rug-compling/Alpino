@@ -24,7 +24,7 @@
         <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="17" lemma="aanbod" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aanbod" word="aanbod"/>
         <node begin="10" cat="pp" end="12" id="18" rel="mod">
           <node begin="10" end="11" id="19" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-          <node begin="11" end="12" getal="mv" graad="basis" id="20" lemma="buspassagier" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="passagier" word="buspassagiers"/>
+          <node begin="11" end="12" getal="mv" graad="basis" id="20" lemma="bus_passagier" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="passagier" word="buspassagiers"/>
         </node>
       </node>
       <node begin="12" cat="ap" end="16" id="21" rel="predc">
@@ -42,10 +42,10 @@
           <node begin="18" end="19" id="31" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
           <node begin="19" cat="np" end="22" id="32" rel="obj1">
             <node begin="19" end="20" id="33" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="20" buiging="met-e" end="21" id="34" lemma="extra-vertragen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="vertragend" word="extra-vertragende" wvorm="od"/>
+            <node begin="20" buiging="met-e" end="21" id="34" lemma="extra_vertragen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="vertragend" word="extra-vertragende" wvorm="od"/>
             <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="35" lemma="factor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="factor" word="factor"/>
           </node>
-          <node begin="22" end="23" id="36" lemma="opleveren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="lever" word="opleverde" wvorm="pv"/>
+          <node begin="22" end="23" id="36" lemma="op_leveren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="lever" word="opleverde" wvorm="pv"/>
         </node>
       </node>
     </node>

@@ -26,14 +26,14 @@
             <node begin="10" end="11" id="20" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
             <node begin="11" cat="np" end="13" id="21" rel="obj1">
               <node begin="11" end="12" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="23" lemma="begrotingszitting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zitting" word="begrotingszitting"/>
+              <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="23" lemma="begroting_zitting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zitting" word="begrotingszitting"/>
             </node>
           </node>
           <node begin="13" cat="ap" end="15" id="24" rel="mod">
             <node begin="13" end="14" id="25" lemma="vrijwel" pos="adv" postag="BW()" pt="bw" rel="mod" root="vrijwel" word="vrijwel"/>
             <node begin="14" buiging="zonder" end="15" graad="basis" id="26" lemma="unaniem" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="unaniem" word="unaniem"/>
           </node>
-          <node begin="15" buiging="zonder" end="16" id="27" lemma="aandringen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="dring" word="aangedrongen" wvorm="vd"/>
+          <node begin="15" buiging="zonder" end="16" id="27" lemma="aan_dringen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="dring" word="aangedrongen" wvorm="vd"/>
           <node begin="16" cat="pp" end="22" id="28" rel="pc">
             <node begin="16" end="17" id="29" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
             <node begin="17" cat="np" end="22" id="30" rel="obj1">
@@ -71,7 +71,7 @@
                     <node begin="28" end="29" genus="zijd" getal="ev" graad="basis" id="56" lemma="openheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="openheid" word="openheid"/>
                   </node>
                   <node begin="31" end="32" id="57" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="af" vztype="fin" word="af"/>
-                  <node begin="33" buiging="zonder" end="34" id="58" lemma="spelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="speel" word="spelen" wvorm="inf"/>
+                  <node begin="33" buiging="zonder" end="34" id="58" lemma="af_spelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="speel" word="spelen" wvorm="inf"/>
                 </node>
               </node>
             </node>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="30" id="0" rel="top">
-    <node begin="5" end="6" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="7" end="8" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="5" end="6" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="7" end="8" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="29" id="3" rel="--">
       <node begin="0" cat="np" end="12" id="4" index="1" rel="su">
         <node begin="0" end="1" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
         <node begin="1" buiging="met-e" end="2" graad="basis" id="6" lemma="succesvol" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="succesvol" word="succesvolle"/>
-        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="tv-filmserie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="serie" word="TV-filmserie"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="tv_film_serie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="serie" word="TV-filmserie"/>
         <node begin="3" cat="pp" end="5" id="8" rel="mod">
           <node begin="3" end="4" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="kleur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="kleur" word="kleur"/>
@@ -64,5 +64,5 @@
     </node>
     <node begin="29" end="30" id="47" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De succesvolle TV-filmserie in kleur &quot; Civilisation &quot; van Sir Kenneth Clark zal met ingang van 5 september a.s. ook in het Rijksmuseum en andere Nederlandse musea worden vertoond .</sentence>
+  <sentence>De succesvolle TV-filmserie in kleur &#34; Civilisation &#34; van Sir Kenneth Clark zal met ingang van 5 september a.s. ook in het Rijksmuseum en andere Nederlandse musea worden vertoond .</sentence>
 </alpino_ds>

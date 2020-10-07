@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="12" id="0" rel="top">
-    <node begin="2" end="3" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="2" end="3" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="4" end="5" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="np" end="11" id="3" rel="--">
       <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
       <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="z.g." naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="z.g." word="z.g."/>
-      <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="speelstraat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="straat" word="speelstraat"/>
+      <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="speel_straat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="straat" word="speelstraat"/>
       <node begin="5" cat="rel" end="11" id="7" rel="mod">
         <node begin="5" end="6" getal="getal" id="8" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
         <node begin="5" cat="ssub" end="11" id="9" rel="body">
@@ -23,7 +23,7 @@
     </node>
     <node begin="11" end="12" id="17" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
-  <sentence>de z.g. &quot; speelstraat , die hier en daar al bestaat ?</sentence>
+  <sentence>de z.g. &#34; speelstraat , die hier en daar al bestaat ?</sentence>
   <comments>
     <comment>hier en daar is a multiword unit?</comment>
   </comments>

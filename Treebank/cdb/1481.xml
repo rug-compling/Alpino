@@ -5,12 +5,12 @@
       <node begin="0" cat="np" end="6" id="2" index="1" rel="su">
         <node begin="0" end="1" id="3" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
         <node begin="1" buiging="met-e" end="2" graad="basis" id="4" lemma="financiel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="financiële" word="financiele"/>
-        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="wanbeleid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="beleid" word="wanbeleid"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="wan_beleid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="beleid" word="wanbeleid"/>
         <node begin="3" cat="pp" end="6" id="6" rel="mod">
           <node begin="3" end="4" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="4" cat="np" end="6" id="8" rel="obj1">
             <node begin="4" end="5" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="astmabestrijding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bestrijding" word="astmabestrijding"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="astma_bestrijding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bestrijding" word="astmabestrijding"/>
           </node>
         </node>
       </node>

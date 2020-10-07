@@ -44,7 +44,7 @@
                 <node begin="19" end="20" id="35" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                 <node begin="20" cat="np" end="22" id="36" rel="obj1">
                   <node begin="20" end="21" id="37" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                  <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="38" lemma="staatscommissie-vos" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="staatscommissie-Vos" word="staatscommissie-Vos"/>
+                  <node begin="21" end="22" genus="zijd" getal="ev" graad="basis" id="38" lemma="staat_commissie_vos" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="staatscommissie-Vos" word="staatscommissie-Vos"/>
                 </node>
               </node>
               <node begin="23" cat="rel" end="57" id="39" rel="mod">
@@ -54,7 +54,7 @@
                   <node begin="23" cat="ppart" end="57" id="43" rel="vc">
                     <node begin="23" end="24" id="44" index="2" rel="mod"/>
                     <node begin="24" end="25" id="45" lemma="o.m." pos="adv" postag="SPEC(afk)" pt="spec" rel="mod" root="onder_meer" spectype="afk" word="o.m."/>
-                    <node begin="26" buiging="zonder" end="27" id="46" lemma="voorstellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="voorgesteld" wvorm="vd"/>
+                    <node begin="26" buiging="zonder" end="27" id="46" lemma="voor_stellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="voorgesteld" wvorm="vd"/>
                     <node begin="27" cat="conj" end="57" id="47" rel="vc">
                       <node begin="27" cat="ti" end="33" id="48" rel="cnj">
                         <node begin="31" end="32" id="49" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
@@ -62,17 +62,17 @@
                           <node begin="27" cat="np" end="30" id="51" rel="obj1">
                             <node begin="27" end="28" id="52" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                             <node begin="28" buiging="met-e" end="29" id="53" lemma="verplichten" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="verplicht" word="verplichte" wvorm="vd"/>
-                            <node begin="29" end="30" genus="zijd" getal="ev" graad="basis" id="54" lemma="ziekenfondsverzekering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verzekering" word="ziekenfondsverzekering"/>
+                            <node begin="29" end="30" genus="zijd" getal="ev" graad="basis" id="54" lemma="ziekenfonds_verzekering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verzekering" word="ziekenfondsverzekering"/>
                           </node>
                           <node begin="30" end="31" id="55" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="af" vztype="fin" word="af"/>
-                          <node begin="32" buiging="zonder" end="33" id="56" lemma="schaffen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="schaf" word="schaffen" wvorm="inf"/>
+                          <node begin="32" buiging="zonder" end="33" id="56" lemma="af_schaffen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="schaf" word="schaffen" wvorm="inf"/>
                         </node>
                       </node>
                       <node begin="34" cat="ti" end="47" id="57" rel="cnj">
                         <node begin="39" end="40" id="58" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
                         <node begin="34" cat="inf" end="47" id="59" rel="body">
                           <node begin="34" cat="conj" end="38" id="60" rel="obj1">
-                            <node begin="34" end="35" genus="zijd" getal="ev" graad="basis" id="61" lemma="ziekenhuisverpleging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="verpleging" word="ziekenhuisverpleging"/>
+                            <node begin="34" end="35" genus="zijd" getal="ev" graad="basis" id="61" lemma="ziekenhuis_verpleging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="verpleging" word="ziekenhuisverpleging"/>
                             <node begin="35" conjtype="neven" end="36" id="62" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                             <node begin="36" cat="np" end="38" id="63" rel="cnj">
                               <node begin="36" buiging="met-e" end="37" graad="basis" id="64" lemma="specialistisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="specialistisch" word="specialistische"/>
@@ -80,7 +80,7 @@
                             </node>
                           </node>
                           <node begin="38" end="39" id="66" lemma="onder" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="onder" vztype="fin" word="onder"/>
-                          <node begin="40" buiging="zonder" end="41" id="67" lemma="brengen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breng" word="brengen" wvorm="inf"/>
+                          <node begin="40" buiging="zonder" end="41" id="67" lemma="onder_brengen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breng" word="brengen" wvorm="inf"/>
                           <node begin="41" cat="pp" end="47" id="68" rel="ld">
                             <node begin="41" end="42" id="69" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                             <node begin="42" cat="np" end="47" id="70" rel="obj1">
@@ -112,7 +112,7 @@
                             </node>
                           </node>
                           <node begin="54" end="55" id="90" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="af" vztype="fin" word="af"/>
-                          <node begin="56" buiging="zonder" end="57" id="91" lemma="schaffen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="schaf" word="schaffen" wvorm="inf"/>
+                          <node begin="56" buiging="zonder" end="57" id="91" lemma="af_schaffen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="schaf" word="schaffen" wvorm="inf"/>
                         </node>
                       </node>
                     </node>

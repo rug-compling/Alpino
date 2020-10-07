@@ -33,7 +33,7 @@
       <node begin="13" buiging="zonder" end="14" graad="basis" id="24" lemma="omstandig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="omstandig" word="omstandig"/>
       <node begin="14" cat="np" end="30" id="25" rel="obj1">
         <node begin="14" end="15" id="26" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="15" end="16" getal="mv" graad="basis" id="27" lemma="grondoorzaak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="oorzaak" word="grondoorzaken"/>
+        <node begin="15" end="16" getal="mv" graad="basis" id="27" lemma="grond_oorzaak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="oorzaak" word="grondoorzaken"/>
         <node begin="16" cat="pp" end="30" id="28" rel="mod">
           <node begin="16" end="17" id="29" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="17" cat="np" end="30" id="30" rel="obj1">
@@ -47,7 +47,7 @@
                 <node begin="22" cat="np" end="25" id="38" rel="su">
                   <node begin="22" end="23" id="39" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                   <node begin="23" buiging="met-e" end="24" graad="basis" id="40" lemma="eindeloos" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="eindeloos" word="eindeloze"/>
-                  <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="41" lemma="burgeroorlog" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="burgeroorlog" word="burgeroorlog"/>
+                  <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="41" lemma="burger_oorlog" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="burgeroorlog" word="burgeroorlog"/>
                 </node>
                 <node begin="25" cat="np" end="29" id="42" rel="predc">
                   <node begin="25" end="26" id="43" lemma="slechts" pos="adv" postag="BW()" pt="bw" rel="mod" root="slechts" word="slechts"/>

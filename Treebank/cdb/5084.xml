@@ -17,11 +17,11 @@
         <node begin="3" end="4" id="12" lemma="verder" pos="adj" postag="BW()" pt="bw" rel="mod" root="verder" word="verder"/>
         <node begin="4" cat="np" end="6" id="13" rel="obj2">
           <node begin="4" end="5" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="15" lemma="faculteitsvoorzitter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzitter" word="faculteitsvoorzitter"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="15" lemma="faculteit_voorzitter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzitter" word="faculteitsvoorzitter"/>
         </node>
         <node begin="6" cat="np" end="24" id="16" rel="obj1">
           <node begin="6" end="7" id="17" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="18" lemma="concept-verslag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verslag" word="concept-verslag"/>
+          <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="18" lemma="concept_verslag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verslag" word="concept-verslag"/>
           <node begin="8" cat="pp" end="24" id="19" rel="mod">
             <node begin="8" end="9" id="20" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
             <node begin="9" cat="np" end="24" id="21" rel="obj1">
@@ -30,17 +30,17 @@
               <node begin="11" cat="pp" end="21" id="24" rel="mod">
                 <node begin="11" end="12" id="25" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                 <node begin="12" cat="conj" end="21" id="26" rel="obj1">
-                  <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="27" lemma="faculteitsbestuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="bestuur" word="faculteitsbestuur"/>
-                  <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="28" lemma="reglementscommissie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="commissie" word="reglementscommissie"/>
+                  <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="27" lemma="faculteit_bestuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="bestuur" word="faculteitsbestuur"/>
+                  <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="28" lemma="reglement_commissie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="commissie" word="reglementscommissie"/>
                   <node begin="15" conjtype="neven" end="16" id="29" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                   <node begin="16" cat="np" end="21" id="30" rel="cnj">
                     <node begin="16" end="17" getal="mv" graad="basis" id="31" lemma="vertegenwoordiger" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vertegenwoordiger" word="vertegenwoordigers"/>
                     <node begin="17" cat="pp" end="21" id="32" rel="mod">
                       <node begin="17" end="18" id="33" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                       <node begin="18" cat="conj" end="21" id="34" rel="obj1">
-                        <node begin="18" end="19" getal="mv" graad="basis" id="35" lemma="studiecommissie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="commissie" word="studiecommissies"/>
+                        <node begin="18" end="19" getal="mv" graad="basis" id="35" lemma="studie_commissie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="commissie" word="studiecommissies"/>
                         <node begin="19" conjtype="neven" end="20" id="36" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-                        <node begin="20" end="21" getal="mv" graad="basis" id="37" lemma="actiegroep" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="actiegroep" word="actiegroepen"/>
+                        <node begin="20" end="21" getal="mv" graad="basis" id="37" lemma="actie_groep" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="actiegroep" word="actiegroepen"/>
                       </node>
                     </node>
                   </node>
@@ -50,14 +50,14 @@
                 <node begin="21" end="22" id="39" lemma="inzake" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="inzake" vztype="init" word="inzake"/>
                 <node begin="22" cat="np" end="24" id="40" rel="obj1">
                   <node begin="22" end="23" id="41" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                  <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="42" lemma="structuurvernieuwing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vernieuwing" word="structuurvernieuwing"/>
+                  <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="42" lemma="structuur_vernieuwing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vernieuwing" word="structuurvernieuwing"/>
                 </node>
               </node>
             </node>
           </node>
         </node>
         <node begin="26" end="27" genus="onz" getal="ev" graad="basis" id="43" lemma="weer" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mod" root="weer" word="weer"/>
-        <node begin="27" buiging="zonder" end="28" id="44" lemma="terugsturen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stuur" word="teruggestuurd" wvorm="vd"/>
+        <node begin="27" buiging="zonder" end="28" id="44" lemma="terug_sturen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stuur" word="teruggestuurd" wvorm="vd"/>
       </node>
     </node>
     <node begin="28" end="29" id="45" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

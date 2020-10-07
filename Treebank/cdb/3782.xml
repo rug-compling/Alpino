@@ -12,7 +12,7 @@
           </node>
           <node begin="3" end="4" id="9" lemma="170" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="170" word="170"/>
         </node>
-        <node begin="4" end="5" getal="mv" graad="basis" id="10" lemma="litho" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="litho" word="litho&apos;s"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="10" lemma="litho" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="litho" word="litho&#39;s"/>
         <node begin="5" cat="conj" end="26" id="11" rel="mod">
           <node begin="5" cat="rel" end="13" id="12" rel="cnj">
             <node begin="5" end="6" getal="getal" id="13" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
@@ -55,7 +55,7 @@
                     <node begin="21" end="22" id="43" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                     <node begin="22" cat="np" end="26" id="44" rel="obj1">
                       <node begin="22" end="23" id="45" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                      <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="46" lemma="rijksacademie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="academie" word="Rijksacademie"/>
+                      <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="46" lemma="rijk_academie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="academie" word="Rijksacademie"/>
                       <node begin="24" cat="pp" end="26" id="47" rel="mod">
                         <node begin="24" end="25" id="48" lemma="te" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="te" vztype="init" word="te"/>
                         <node begin="25" end="26" genus="onz" getal="ev" graad="basis" id="49" lemma="Amsterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Amsterdam" word="Amsterdam"/>
@@ -84,5 +84,5 @@
     </node>
     <node begin="33" end="34" id="60" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De meer dan 170 litho&apos;s die Oskar Kokoschka na zijn 75 jaar maakte en die tot 5 april te zien waren in de Rijksacademie te Amsterdam , zijn nu verhuisd naar het oosten .</sentence>
+  <sentence>De meer dan 170 litho&#39;s die Oskar Kokoschka na zijn 75 jaar maakte en die tot 5 april te zien waren in de Rijksacademie te Amsterdam , zijn nu verhuisd naar het oosten .</sentence>
 </alpino_ds>

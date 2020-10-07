@@ -16,13 +16,13 @@
                 <node begin="4" end="5" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                 <node begin="5" cat="np" end="8" id="14" rel="obj1">
                   <node begin="5" end="6" id="15" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                  <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="16" lemma="jachtseizoen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="seizoen" word="jachtseizoen"/>
+                  <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="16" lemma="jacht_seizoen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="seizoen" word="jachtseizoen"/>
                   <node begin="7" end="8" id="17" lemma="1969-1970" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="app" root="1969-1970" word="1969-1970"/>
                 </node>
               </node>
             </node>
             <node begin="8" end="9" id="18" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="af" vztype="fin" word="af"/>
-            <node begin="10" buiging="zonder" end="11" id="19" lemma="wachten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="wacht" word="wachten" wvorm="inf"/>
+            <node begin="10" buiging="zonder" end="11" id="19" lemma="af_wachten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="wacht" word="wachten" wvorm="inf"/>
             <node begin="11" cat="oti" end="42" id="20" rel="mod">
               <node begin="11" end="12" id="21" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
               <node begin="12" cat="ti" end="42" id="22" rel="body">
@@ -74,7 +74,7 @@
                           <node begin="33" end="34" id="59" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                           <node begin="34" cat="np" end="39" id="60" rel="obj1">
                             <node begin="34" end="35" id="61" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                            <node begin="35" end="36" genus="zijd" getal="ev" graad="basis" id="62" lemma="jachttijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tijd" word="jachttijd"/>
+                            <node begin="35" end="36" genus="zijd" getal="ev" graad="basis" id="62" lemma="jacht_tijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tijd" word="jachttijd"/>
                             <node begin="36" cat="pp" end="39" id="63" rel="mod">
                               <node begin="36" end="37" id="64" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
                               <node begin="37" cat="np" end="39" id="65" rel="obj1">

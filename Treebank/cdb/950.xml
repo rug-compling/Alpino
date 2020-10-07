@@ -19,7 +19,7 @@
       <node begin="5" end="6" id="12" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
       <node begin="0" cat="ppart" end="32" id="13" rel="vc">
         <node begin="0" end="5" id="14" index="1" rel="su"/>
-        <node begin="8" buiging="zonder" end="9" id="15" lemma="inroepen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="roep" word="ingeroepen" wvorm="vd"/>
+        <node begin="8" buiging="zonder" end="9" id="15" lemma="in_roepen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="roep" word="ingeroepen" wvorm="vd"/>
         <node begin="6" cat="np" end="12" id="16" rel="obj1">
           <node begin="6" end="7" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="18" lemma="assistentie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="assistentie" word="assistentie"/>
@@ -27,7 +27,7 @@
             <node begin="9" end="10" id="20" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="10" cat="np" end="12" id="21" rel="obj1">
               <node begin="10" buiging="met-e" end="11" graad="basis" id="22" lemma="Haags" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Haags" word="Haagse"/>
-              <node begin="11" end="12" getal="mv" graad="basis" id="23" lemma="opsporingsspecialist" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="specialist" word="opsporingsspecialisten"/>
+              <node begin="11" end="12" getal="mv" graad="basis" id="23" lemma="opsporing_specialist" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="specialist" word="opsporingsspecialisten"/>
             </node>
           </node>
         </node>
@@ -60,7 +60,7 @@
                             <node begin="27" cat="np" end="30" id="50" rel="obj1">
                               <node begin="27" end="28" id="51" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                               <node begin="28" buiging="met-e" end="29" graad="basis" id="52" lemma="middelburgs" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Middelburgse" word="Middelburgse"/>
-                              <node begin="29" end="30" genus="onz" getal="ev" graad="basis" id="53" lemma="gerechtsgebouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebouw" word="gerechtsgebouw"/>
+                              <node begin="29" end="30" genus="onz" getal="ev" graad="basis" id="53" lemma="gerecht_gebouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebouw" word="gerechtsgebouw"/>
                             </node>
                           </node>
                         </node>

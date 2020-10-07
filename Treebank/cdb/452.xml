@@ -10,7 +10,7 @@
           <node begin="2" end="3" id="7" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="3" cat="np" end="7" id="8" rel="obj1">
             <node begin="3" end="4" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="raadsvergadering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vergadering" word="raadsvergadering"/>
+            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="raad_vergadering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vergadering" word="raadsvergadering"/>
             <node begin="5" cat="pp" end="7" id="11" rel="mod">
               <node begin="5" end="6" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="13" lemma="Maastricht" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Maastricht" word="Maastricht"/>
@@ -50,7 +50,7 @@
               <node begin="22" end="23" id="38" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="23" cat="np" end="25" id="39" rel="obj1">
                 <node begin="23" end="24" id="40" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="41" lemma="psp-fractie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="fractie" word="Psp-fractie"/>
+                <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="41" lemma="psp_fractie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="fractie" word="Psp-fractie"/>
               </node>
             </node>
             <node begin="25" cat="pp" end="39" id="42" rel="mod">
@@ -81,7 +81,7 @@
                             <node begin="37" end="38" genus="onz" getal="ev" graad="basis" id="65" lemma="internaat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="internaat" word="internaat"/>
                           </node>
                         </node>
-                        <node begin="38" end="39" id="66" lemma="uitbreken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="breek" word="uitbrak" wvorm="pv"/>
+                        <node begin="38" end="39" id="66" lemma="uit_breken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="breek" word="uitbrak" wvorm="pv"/>
                       </node>
                     </node>
                   </node>

@@ -16,7 +16,7 @@
         <node begin="5" cat="ssub" end="25" id="12" rel="body">
           <node begin="5" cat="np" end="17" id="13" rel="su">
             <node begin="5" end="6" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="6" end="7" genus="genus" getal="ev" graad="basis" id="15" lemma="Neoplan-bus" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="bus" word="Neoplan-bus"/>
+            <node begin="6" end="7" genus="genus" getal="ev" graad="basis" id="15" lemma="Neoplan_bus" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="bus" word="Neoplan-bus"/>
             <node begin="8" cat="rel" end="17" id="16" rel="mod">
               <node begin="8" end="9" getal="getal" id="17" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
               <node begin="8" cat="ssub" end="17" id="18" rel="body">
@@ -41,14 +41,14 @@
           </node>
           <node begin="18" cat="pp" end="20" id="32" rel="mod">
             <node begin="18" end="19" id="33" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
-            <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="34" lemma="luchtvering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="luchtvering" word="luchtvering"/>
+            <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="34" lemma="lucht_vering" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="luchtvering" word="luchtvering"/>
           </node>
           <node begin="21" cat="np" end="24" id="35" rel="obj1">
             <node begin="21" cat="ap" end="23" id="36" rel="mod">
               <node begin="21" end="22" id="37" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="mod" root="zeer" word="zeer"/>
               <node begin="22" buiging="met-e" end="23" graad="basis" id="38" lemma="goed" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="goed" word="goede"/>
             </node>
-            <node begin="23" end="24" getal="mv" graad="basis" id="39" lemma="wegeigenschap" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="eigenschap" word="wegeigenschappen"/>
+            <node begin="23" end="24" getal="mv" graad="basis" id="39" lemma="weg_eigenschap" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="eigenschap" word="wegeigenschappen"/>
           </node>
           <node begin="24" end="25" id="40" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
         </node>

@@ -23,7 +23,7 @@
           </node>
           <node begin="9" buiging="met-e" end="10" id="17" lemma="uitvoeren" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="uitgevoerd" word="uitgevoerde" wvorm="vd"/>
         </node>
-        <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="18" lemma="metaalplastiek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="metaalplastiek" word="metaalplastiek"/>
+        <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="18" lemma="metaal_plastiek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="metaalplastiek" word="metaalplastiek"/>
         <node begin="11" cat="pp" end="18" id="19" rel="mod">
           <node begin="11" end="12" id="20" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="12" cat="np" end="18" id="21" rel="obj1">
@@ -43,7 +43,7 @@
         <node begin="0" end="18" id="31" index="1" rel="obj1"/>
         <node begin="19" end="20" id="32" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
         <node begin="20" buiging="zonder" end="21" graad="basis" id="33" lemma="officieel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="officieel" word="officieel"/>
-        <node begin="21" buiging="zonder" end="22" id="34" lemma="overdragen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="draag" word="overgedragen" wvorm="vd"/>
+        <node begin="21" buiging="zonder" end="22" id="34" lemma="over_dragen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="draag" word="overgedragen" wvorm="vd"/>
         <node begin="22" cat="pp" end="24" id="35" rel="obj2">
           <node begin="22" end="23" id="36" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
           <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="37" lemma="Unilever" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Unilever" word="Unilever"/>

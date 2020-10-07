@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="20" id="0" rel="top">
-    <node begin="16" end="17" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="16" end="17" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="18" id="2" rel="--">
       <node begin="0" cat="np" end="8" id="3" index="1" rel="su">
         <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
         <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="traditioneel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="traditioneel" word="traditionele"/>
-        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="nieuwjaarswedstrijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wedstrijd" word="nieuwjaarswedstrijd"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="nieuwjaar_wedstrijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wedstrijd" word="nieuwjaarswedstrijd"/>
         <node begin="3" cat="pp" end="8" id="7" rel="mod">
           <node begin="3" end="4" id="8" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>
           <node begin="4" cat="conj" end="8" id="9" rel="obj1">
@@ -14,7 +14,7 @@
             <node begin="5" conjtype="neven" end="6" id="11" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="6" cat="np" end="8" id="12" rel="cnj">
               <node begin="6" end="7" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="7" end="8" getal="mv" graad="basis" id="14" lemma="oud-international" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="international" word="oud-internationals"/>
+              <node begin="7" end="8" getal="mv" graad="basis" id="14" lemma="oud_international" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="international" word="oud-internationals"/>
             </node>
           </node>
         </node>
@@ -40,8 +40,8 @@
         </node>
       </node>
     </node>
-    <node begin="18" end="19" id="30" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="18" end="19" id="30" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="19" end="20" id="31" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De traditionele nieuwjaarswedstrijd tussen HFC en de oud-internationals is geeindigd in een 4-0 overwinning voor de &quot; oudjes &quot; .</sentence>
+  <sentence>De traditionele nieuwjaarswedstrijd tussen HFC en de oud-internationals is geeindigd in een 4-0 overwinning voor de &#34; oudjes &#34; .</sentence>
 </alpino_ds>

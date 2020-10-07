@@ -63,7 +63,7 @@
                   <node begin="28" buiging="met-e" end="29" graad="basis" id="50" lemma="apart" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="apart" word="aparte"/>
                   <node begin="29" end="30" genus="zijd" getal="ev" graad="basis" id="51" lemma="plaats" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="plaats" word="plaats"/>
                 </node>
-                <node begin="31" buiging="zonder" end="32" id="52" lemma="innemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="neem" word="ingenomen" wvorm="vd"/>
+                <node begin="31" buiging="zonder" end="32" id="52" lemma="in_nemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="neem" word="ingenomen" wvorm="vd"/>
                 <node begin="32" cat="pp" end="39" id="53" rel="mod">
                   <node begin="32" end="33" id="54" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                   <node begin="33" cat="np" end="39" id="55" rel="obj1">
@@ -73,7 +73,7 @@
                       <node begin="35" end="36" id="59" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                       <node begin="36" cat="np" end="39" id="60" rel="obj1">
                         <node begin="36" end="37" id="61" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                        <node begin="37" buiging="met-e" end="38" graad="basis" id="62" lemma="Duitstalig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Duitstalige" word="Duitstalige"/>
+                        <node begin="37" buiging="met-e" end="38" graad="basis" id="62" lemma="Duits_talig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Duitstalige" word="Duitstalige"/>
                         <node begin="38" end="39" genus="onz" getal="ev" graad="basis" id="63" lemma="amusement" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="amusement" word="amusement"/>
                       </node>
                     </node>

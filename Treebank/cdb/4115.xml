@@ -10,7 +10,7 @@
         <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="adjudant" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="adjudant" word="adjudant"/>
         <node begin="3" cat="np" end="5" id="8" rel="mod">
           <node begin="3" end="4" id="9" lemma="de" lwtype="bep" naamval="gen" npagr="rest3" pos="det" postag="LID(bep,gen,rest3)" pt="lid" rel="det" root="der" word="der"/>
-          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="rijkspolitie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rijkspolitie" word="rijkspolitie"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="rijk_politie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rijkspolitie" word="rijkspolitie"/>
         </node>
         <node begin="5" cat="mwu" end="7" id="11" rel="app">
           <node begin="5" end="6" id="12" lemma="S." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="S." spectype="deeleigen" word="S."/>
@@ -31,15 +31,15 @@
       <node begin="14" end="15" id="22" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="0" cat="ppart" end="23" id="23" rel="vc">
         <node begin="0" end="13" id="24" index="1" rel="obj1"/>
-        <node begin="15" buiging="zonder" end="16" id="25" lemma="terugplaatsen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="plaats" word="teruggeplaatst" wvorm="vd"/>
+        <node begin="15" buiging="zonder" end="16" id="25" lemma="terug_plaatsen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="plaats" word="teruggeplaatst" wvorm="vd"/>
         <node begin="16" cat="pp" end="23" id="26" rel="mod">
           <node begin="16" end="17" id="27" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
           <node begin="17" cat="np" end="23" id="28" rel="obj1">
             <node begin="17" end="18" id="29" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="30" lemma="districtsrecherche" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="recherche" word="districtsrecherche"/>
+            <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="30" lemma="district_recherche" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="recherche" word="districtsrecherche"/>
             <node begin="19" cat="np" end="21" id="31" rel="mod">
               <node begin="19" end="20" id="32" lemma="de" lwtype="bep" naamval="gen" npagr="rest3" pos="det" postag="LID(bep,gen,rest3)" pt="lid" rel="det" root="der" word="der"/>
-              <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="33" lemma="rijkspolitie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rijkspolitie" word="rijkspolitie"/>
+              <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="33" lemma="rijk_politie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="rijkspolitie" word="rijkspolitie"/>
             </node>
             <node begin="21" cat="pp" end="23" id="34" rel="mod">
               <node begin="21" end="22" id="35" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>

@@ -13,7 +13,7 @@
         <node begin="4" end="5" id="9" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
         <node begin="5" cat="np" end="7" id="10" rel="su">
           <node begin="5" end="6" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="stemmenverhouding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verhouding" word="stemmenverhouding"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="stem_verhouding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verhouding" word="stemmenverhouding"/>
         </node>
       </node>
       <node begin="8" conjtype="neven" end="9" id="13" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
@@ -28,7 +28,7 @@
             <node begin="14" end="15" id="22" lemma="hiervan" pos="pp" postag="BW()" pt="bw" rel="mod" root="hiervan" word="hiervan"/>
           </node>
         </node>
-        <node begin="15" end="16" id="23" lemma="gaan" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ga" word="gingen" wvorm="pv"/>
+        <node begin="15" end="16" id="23" lemma="over_gaan" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ga" word="gingen" wvorm="pv"/>
         <node begin="16" cat="np" end="21" id="24" rel="su">
           <node begin="16" end="17" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="17" buiging="met-e" end="18" getal-n="mv-n" graad="comp" id="26" lemma="jong" pos="noun" positie="nom" postag="ADJ(nom,comp,met-e,mv-n)" pt="adj" rel="hd" root="jongere" word="jongeren"/>
@@ -46,7 +46,7 @@
           <node begin="23" cat="np" end="26" id="35" rel="obj1">
             <node begin="23" end="24" id="36" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
             <node begin="24" buiging="zonder" end="25" graad="basis" id="37" lemma="luid" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="luid" word="luid"/>
-            <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="38" lemma="boe-geroep" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="geroep" word="boe-geroep"/>
+            <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="38" lemma="boe_geroep" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="geroep" word="boe-geroep"/>
           </node>
         </node>
       </node>

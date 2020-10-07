@@ -12,7 +12,7 @@
         <node begin="2" end="3" getal="mv" id="9" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
         <node begin="3" cat="np" end="6" id="10" rel="obj1">
           <node begin="3" end="4" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="4" buiging="met-e" end="5" id="12" lemma="vooruitzien" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="vooruitziend" word="vooruitziende" wvorm="od"/>
+          <node begin="4" buiging="met-e" end="5" id="12" lemma="voor_uitzien" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="vooruitziend" word="vooruitziende" wvorm="od"/>
           <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="13" lemma="blik" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="blik" word="blik"/>
         </node>
       </node>
@@ -72,7 +72,7 @@
               <node begin="32" end="33" id="54" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
               <node begin="33" end="34" genus="zijd" getal="ev" graad="basis" id="55" lemma="soort" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="soort" word="soort"/>
             </node>
-            <node begin="34" end="35" genus="onz" getal="ev" graad="dim" id="56" lemma="debating-avond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="debating-avondje" word="debating-avondje"/>
+            <node begin="34" end="35" genus="onz" getal="ev" graad="dim" id="56" lemma="debating_avond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="debating-avondje" word="debating-avondje"/>
             <node begin="36" cat="rel" end="47" id="57" rel="mod">
               <node begin="36" end="37" id="58" index="1" lemma="waarvoor" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarvoor" word="waarvoor"/>
               <node begin="36" cat="ssub" end="47" id="59" rel="body">
@@ -83,7 +83,7 @@
                     <node begin="39" end="40" id="64" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
                     <node begin="40" buiging="met-e" end="41" graad="sup" id="65" lemma="goed" naamval="stan" pos="det" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mwp" root="beste" word="beste"/>
                   </node>
-                  <node begin="41" end="42" genus="zijd" getal="ev" graad="basis" id="66" lemma="gespreksgroep" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gespreksgroep" word="gespreksgroep"/>
+                  <node begin="41" end="42" genus="zijd" getal="ev" graad="basis" id="66" lemma="gesprek_groep" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="gespreksgroep" word="gespreksgroep"/>
                 </node>
                 <node begin="45" end="46" id="67" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
                 <node begin="36" cat="inf" end="47" id="68" rel="vc">

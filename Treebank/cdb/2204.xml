@@ -2,8 +2,8 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="34" id="0" rel="top">
     <node begin="14" end="15" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="25" end="26" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="30" end="31" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="25" end="26" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="30" end="31" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="33" id="4" rel="--">
       <node begin="0" end="1" id="5" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="Zo"/>
       <node begin="1" end="2" id="6" lemma="publiceren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="publiceer" word="publiceerde" wvorm="pv"/>
@@ -17,7 +17,7 @@
             <node begin="6" end="7" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="7" buiging="met-e" end="8" graad="basis" id="15" lemma="nationaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nationaal" word="nationale"/>
             <node begin="8" buiging="met-e" end="9" graad="basis" id="16" lemma="Braziliaans" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Braziliaans" word="Braziliaanse"/>
-            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="17" lemma="bisschoppenconferentie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="conferentie" word="bisschoppenconferentie"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="17" lemma="bisschop_conferentie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="conferentie" word="bisschoppenconferentie"/>
           </node>
         </node>
       </node>
@@ -74,5 +74,5 @@
     </node>
     <node begin="33" end="34" id="54" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Zo publiceerde de centrale commissie van de nationale Braziliaanse bisschoppenconferentie in februari een document , waarin de autoriteiten werd verzocht zo snel mogelijk met de &quot; democratisering van de regering &quot; te beginnen .</sentence>
+  <sentence>Zo publiceerde de centrale commissie van de nationale Braziliaanse bisschoppenconferentie in februari een document , waarin de autoriteiten werd verzocht zo snel mogelijk met de &#34; democratisering van de regering &#34; te beginnen .</sentence>
 </alpino_ds>

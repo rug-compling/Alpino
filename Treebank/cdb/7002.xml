@@ -11,7 +11,7 @@
           <node begin="3" end="4" id="7" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
           <node begin="2" cat="inf" end="5" id="8" rel="body">
             <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="9" lemma="les" naamval="stan" ntype="soort" pos="part" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="svp" root="les" word="les"/>
-            <node begin="4" buiging="zonder" end="5" id="10" lemma="geven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="geef" word="geven" wvorm="inf"/>
+            <node begin="4" buiging="zonder" end="5" id="10" lemma="les_geven" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="geef" word="geven" wvorm="inf"/>
           </node>
         </node>
       </node>
@@ -33,7 +33,7 @@
         <node begin="13" cat="conj" end="21" id="23" rel="obj1">
           <node begin="13" cat="np" end="15" id="24" rel="cnj">
             <node begin="13" end="14" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="26" lemma="mammoetwet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wet" word="mammoetwet"/>
+            <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="26" lemma="mammoet_wet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wet" word="mammoetwet"/>
           </node>
           <node begin="15" conjtype="neven" end="16" id="27" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
           <node begin="16" cat="np" end="21" id="28" rel="cnj">

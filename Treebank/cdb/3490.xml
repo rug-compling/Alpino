@@ -14,7 +14,7 @@
           <node begin="3" end="4" id="10" index="1" rel="su"/>
           <node begin="4" cat="pp" end="6" id="11" rel="ld">
             <node begin="4" end="5" id="12" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
-            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="13" lemma="zangles" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="les" word="zangles"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="13" lemma="zang_les" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="les" word="zangles"/>
           </node>
           <node begin="6" buiging="zonder" end="7" id="14" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" word="geweest" wvorm="vd"/>
           <node begin="7" cat="pp" end="15" id="15" rel="mod">
@@ -61,7 +61,7 @@
                 <node begin="26" end="27" id="47" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
                 <node begin="25" cat="ppart" end="34" id="48" rel="vc">
                   <node begin="25" end="26" id="49" index="3" rel="su"/>
-                  <node begin="27" buiging="zonder" end="28" id="50" lemma="uitgroeien" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="groei" word="uitgegroeid" wvorm="vd"/>
+                  <node begin="27" buiging="zonder" end="28" id="50" lemma="uit_groeien" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="groei" word="uitgegroeid" wvorm="vd"/>
                   <node begin="28" cat="pp" end="34" id="51" rel="pc">
                     <node begin="28" end="29" id="52" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
                     <node begin="29" cat="np" end="34" id="53" rel="obj1">
@@ -71,7 +71,7 @@
                         <node begin="31" cat="np" end="34" id="57" rel="obj1">
                           <node begin="31" end="32" getal="ev" graad="basis" id="58" lemma="Nederland" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Nederland" word="Neerlands"/>
                           <node begin="32" buiging="met-e" end="33" graad="sup" id="59" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="groot" word="grootste"/>
-                          <node begin="33" end="34" getal="mv" graad="basis" id="60" lemma="popzangeres" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="zangeres" word="popzangeressen"/>
+                          <node begin="33" end="34" getal="mv" graad="basis" id="60" lemma="pop_zangeres" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="zangeres" word="popzangeressen"/>
                         </node>
                       </node>
                     </node>

@@ -7,15 +7,15 @@
         <node begin="1" buiging="met-e" end="2" graad="basis" id="4" lemma="beijerlands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Beijerlandse" word="Beijerlandse"/>
         <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="equipe" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="equipe" word="equipe"/>
       </node>
-      <node begin="3" end="4" id="6" lemma="eisen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="eis" word="eiste" wvorm="pv"/>
+      <node begin="3" end="4" id="6" lemma="op_eisen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="eis" word="eiste" wvorm="pv"/>
       <node begin="4" cat="pp" end="9" id="7" rel="mod">
         <node begin="4" end="5" id="8" lemma="via" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="via" vztype="init" word="via"/>
         <node begin="5" cat="np" end="9" id="9" rel="obj1">
           <node begin="5" end="6" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="5-2-overwinning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="overwinning" word="5-2-overwinning"/>
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" lemma="5_2_overwinning" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="overwinning" word="5-2-overwinning"/>
           <node begin="7" cat="pp" end="9" id="12" rel="mod">
             <node begin="7" end="8" id="13" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
-            <node begin="8" end="9" getal="mv" graad="basis" id="14" lemma="ijsselmeervogel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="vogel" word="Ijsselmeervogels"/>
+            <node begin="8" end="9" getal="mv" graad="basis" id="14" lemma="ijsselmeer_vogel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="vogel" word="Ijsselmeervogels"/>
           </node>
         </node>
       </node>

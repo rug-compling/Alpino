@@ -6,7 +6,7 @@
       <node begin="11" end="12" id="3" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
       <node begin="12" cat="np" end="14" id="4" index="1" rel="su">
         <node begin="12" end="13" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="13" end="14" getal="mv" graad="basis" id="6" lemma="bijenvolk" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="volk" word="bijenvolken"/>
+        <node begin="13" end="14" getal="mv" graad="basis" id="6" lemma="bij_volk" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="volk" word="bijenvolken"/>
       </node>
       <node begin="0" cat="ppart" end="27" id="7" rel="vc">
         <node begin="0" cat="pp" end="11" id="8" rel="mod">
@@ -36,13 +36,13 @@
           </node>
         </node>
         <node begin="12" end="14" id="27" index="1" rel="obj1"/>
-        <node begin="14" buiging="zonder" end="15" id="28" lemma="aanvoeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voer" word="aangevoerd" wvorm="vd"/>
+        <node begin="14" buiging="zonder" end="15" id="28" lemma="aan_voeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voer" word="aangevoerd" wvorm="vd"/>
         <node begin="15" cat="pp" end="27" id="29" rel="mod">
           <node begin="15" end="16" id="30" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
           <node begin="16" cat="np" end="27" id="31" rel="obj1">
             <node begin="16" end="17" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="17" buiging="met-e" end="18" graad="basis" id="33" lemma="traditioneel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="traditioneel" word="traditionele"/>
-            <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="34" lemma="jaarmarkt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="markt" word="jaarmarkt"/>
+            <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="34" lemma="jaar_markt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="markt" word="jaarmarkt"/>
             <node begin="19" cat="pp" end="21" id="35" rel="mod">
               <node begin="19" end="20" id="36" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
               <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="37" lemma="Veenendaal" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Veenendaal" word="Veenendaal"/>

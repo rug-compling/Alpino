@@ -11,7 +11,7 @@
         <node begin="0" end="2" id="7" index="1" rel="su"/>
         <node begin="3" cat="np" end="5" id="8" rel="obj1">
           <node begin="3" buiging="zonder" end="4" getal="ev" id="9" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
-          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="televisieavond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="avond" word="televisieavond"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="televisie_avond" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="avond" word="televisieavond"/>
         </node>
         <node begin="5" cat="advp" end="9" id="11" rel="mod">
           <node begin="5" end="6" id="12" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="hd" root="gisteren" word="gisteren"/>
@@ -24,11 +24,11 @@
           </node>
         </node>
         <node begin="9" buiging="zonder" end="10" graad="basis" id="18" lemma="geheel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="geheel" word="geheel"/>
-        <node begin="10" buiging="zonder" end="11" id="19" lemma="uitruimen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ruim" word="uitgeruimd" wvorm="vd"/>
+        <node begin="10" buiging="zonder" end="11" id="19" lemma="uit_ruimen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ruim" word="uitgeruimd" wvorm="vd"/>
         <node begin="11" cat="pp" end="15" id="20" rel="mod">
           <node begin="11" end="12" id="21" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
           <node begin="12" cat="np" end="15" id="22" rel="obj1">
-            <node begin="12" end="13" getal="mv" graad="basis" id="23" lemma="programma" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="programma" word="programma&apos;s"/>
+            <node begin="12" end="13" getal="mv" graad="basis" id="23" lemma="programma" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="programma" word="programma&#39;s"/>
             <node begin="13" cat="pp" end="15" id="24" rel="mod">
               <node begin="13" end="14" id="25" lemma="rond" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="rond" vztype="init" word="rond"/>
               <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="26" lemma="Lenin" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Lenin" word="Lenin"/>
@@ -39,5 +39,5 @@
     </node>
     <node begin="15" end="16" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De VARA had zijn televisieavond gisteren na het journaal geheel uitgeruimd voor programma&apos;s rond Lenin .</sentence>
+  <sentence>De VARA had zijn televisieavond gisteren na het journaal geheel uitgeruimd voor programma&#39;s rond Lenin .</sentence>
 </alpino_ds>

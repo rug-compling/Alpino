@@ -7,7 +7,7 @@
       <node begin="2" cat="np" end="8" id="4" rel="obj1">
         <node begin="2" buiging="zonder" end="3" id="5" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
         <node begin="3" buiging="met-e" end="4" graad="basis" id="6" lemma="speciaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="speciaal" word="speciale"/>
-        <node begin="4" end="5" getal="mv" graad="basis" id="7" lemma="&quot;cd&quot;-nummerplaat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="plaat" word="&quot;Cd&quot;-nummerplaten"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="7" lemma="cd_nummerplaat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="plaat" word="&#34;Cd&#34;-nummerplaten"/>
         <node begin="5" cat="pp" end="8" id="8" rel="mod">
           <node begin="5" end="6" id="9" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
           <node begin="6" cat="np" end="8" id="10" rel="obj1">
@@ -19,5 +19,5 @@
     </node>
     <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Diplomaten krijgen geen speciale &quot;Cd&quot;-nummerplaten op hun wagens .</sentence>
+  <sentence>Diplomaten krijgen geen speciale &#34;Cd&#34;-nummerplaten op hun wagens .</sentence>
 </alpino_ds>

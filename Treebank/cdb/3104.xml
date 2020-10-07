@@ -15,7 +15,7 @@
                 <node begin="2" cat="pp" end="6" id="12" rel="mod">
                   <node begin="2" end="3" id="13" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                   <node begin="3" cat="np" end="6" id="14" rel="obj1">
-                    <node begin="3" end="4" id="15" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&apos;n"/>
+                    <node begin="3" end="4" id="15" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="&#39;n"/>
                     <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="16" lemma="liter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="liter" word="liter"/>
                     <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="17" lemma="melk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="melk" word="melk"/>
                   </node>
@@ -63,7 +63,7 @@
                 <node begin="27" cat="conj" end="30" id="48" rel="obj1">
                   <node begin="27" end="28" genus="onz" getal="ev" graad="basis" id="49" lemma="hart" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="hart" word="hart"/>
                   <node begin="28" conjtype="neven" end="29" id="50" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-                  <node begin="29" end="30" getal="mv" graad="basis" id="51" lemma="vaatziekte" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="vaatziekte" word="vaatziekten"/>
+                  <node begin="29" end="30" getal="mv" graad="basis" id="51" lemma="vaat_ziekte" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="vaatziekte" word="vaatziekten"/>
                 </node>
               </node>
             </node>
@@ -84,5 +84,5 @@
     </node>
     <node begin="38" end="39" id="61" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Bij gebruik van &apos;n liter melk per dag zou men 32 gram grotendeels verzadigd vet naar binnen krijgen en dat is met het oog op toeneming van hart en vaatziekten toch wel bedenkelijk , zo stelde dr. Mellema .</sentence>
+  <sentence>Bij gebruik van &#39;n liter melk per dag zou men 32 gram grotendeels verzadigd vet naar binnen krijgen en dat is met het oog op toeneming van hart en vaatziekten toch wel bedenkelijk , zo stelde dr. Mellema .</sentence>
 </alpino_ds>

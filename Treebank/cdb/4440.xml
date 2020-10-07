@@ -18,12 +18,12 @@
           <node begin="6" buiging="zonder" end="7" graad="basis" id="13" lemma="direct" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="direct" word="direct"/>
           <node begin="7" end="8" id="14" lemma="daarna" pos="pp" postag="BW()" pt="bw" rel="hd" root="daarna" word="daarna"/>
         </node>
-        <node begin="8" end="9" id="15" lemma="treden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="treed" word="trad" wvorm="pv"/>
+        <node begin="8" end="9" id="15" lemma="in_treden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="treed" word="trad" wvorm="pv"/>
         <node begin="12" end="13" id="16" lemma="in" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="in" vztype="fin" word="in"/>
         <node begin="9" cat="np" end="17" id="17" rel="su">
           <node begin="9" end="10" id="18" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
           <node begin="10" buiging="zonder" end="11" graad="basis" id="19" lemma="flink" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="flink" word="flink"/>
-          <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="20" lemma="koersherstel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="herstel" word="koersherstel"/>
+          <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="20" lemma="koers_herstel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="herstel" word="koersherstel"/>
           <node begin="13" cat="pp" end="17" id="21" rel="mod">
             <node begin="13" end="14" id="22" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
             <node begin="14" cat="np" end="17" id="23" rel="obj1">

@@ -35,7 +35,7 @@
                 <node begin="15" end="16" id="28" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
                 <node begin="16" cat="np" end="38" id="29" rel="obj1">
                   <node begin="16" end="17" id="30" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                  <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="31" lemma="wetsontwerp" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="wetsontwerp" word="wetsontwerp"/>
+                  <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="31" lemma="wet_ontwerp" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="wetsontwerp" word="wetsontwerp"/>
                   <node begin="18" cat="rel" end="38" id="32" rel="mod">
                     <node begin="18" end="19" id="33" index="2" lemma="waarin" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waarin" word="waarin"/>
                     <node begin="18" cat="ssub" end="38" id="34" rel="body">
@@ -47,13 +47,13 @@
                       <node begin="18" cat="ppart" end="38" id="39" rel="vc">
                         <node begin="18" end="19" id="40" index="2" rel="mod"/>
                         <node begin="19" end="21" id="41" index="3" rel="su"/>
-                        <node begin="22" buiging="zonder" end="23" id="42" lemma="voorstellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="voorgesteld" wvorm="vd"/>
+                        <node begin="22" buiging="zonder" end="23" id="42" lemma="voor_stellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="voorgesteld" wvorm="vd"/>
                         <node begin="24" cat="ti" end="38" id="43" rel="vc">
                           <node begin="26" end="27" id="44" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
                           <node begin="24" cat="inf" end="38" id="45" rel="body">
-                            <node begin="24" end="25" getal="mv" graad="basis" id="46" lemma="wachtlijst" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="wachtlijst" word="wachtlijsten"/>
+                            <node begin="24" end="25" getal="mv" graad="basis" id="46" lemma="wacht_lijst" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="wachtlijst" word="wachtlijsten"/>
                             <node begin="25" end="26" id="47" lemma="in" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="in" vztype="fin" word="in"/>
-                            <node begin="27" buiging="zonder" end="28" id="48" lemma="voeren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voer" word="voeren" wvorm="inf"/>
+                            <node begin="27" buiging="zonder" end="28" id="48" lemma="in_voeren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voer" word="voeren" wvorm="inf"/>
                             <node begin="28" cat="pp" end="38" id="49" rel="mod">
                               <node begin="28" end="29" id="50" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
                               <node begin="29" cat="np" end="38" id="51" rel="obj1">

@@ -36,12 +36,12 @@
             </node>
           </node>
         </node>
-        <node begin="16" buiging="zonder" end="17" id="28" lemma="meedelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="deel" word="meegedeeld" wvorm="vd"/>
+        <node begin="16" buiging="zonder" end="17" id="28" lemma="mee_delen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="deel" word="meegedeeld" wvorm="vd"/>
         <node begin="17" cat="cp" end="49" id="29" rel="vc">
           <node begin="17" conjtype="onder" end="18" id="30" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
           <node begin="18" cat="ssub" end="49" id="31" rel="body">
             <node begin="18" end="19" genus="masc" getal="ev" id="32" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
-            <node begin="19" end="20" id="33" lemma="aannemen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="neem" word="aanneemt" wvorm="pv"/>
+            <node begin="19" end="20" id="33" lemma="aan_nemen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="neem" word="aanneemt" wvorm="pv"/>
             <node begin="20" cat="cp" end="49" id="34" rel="vc">
               <node begin="20" conjtype="onder" end="21" id="35" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
               <node begin="21" cat="ssub" end="49" id="36" rel="body">
@@ -52,7 +52,7 @@
                     <node begin="23" end="24" id="41" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                     <node begin="24" cat="np" end="26" id="42" rel="obj1">
                       <node begin="24" end="25" id="43" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                      <node begin="25" end="26" getal="mv" graad="basis" id="44" lemma="huisarts" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="huisarts" word="huisartsen"/>
+                      <node begin="25" end="26" getal="mv" graad="basis" id="44" lemma="huis_arts" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="huisarts" word="huisartsen"/>
                     </node>
                   </node>
                   <node begin="26" cat="pp" end="29" id="45" rel="mod">

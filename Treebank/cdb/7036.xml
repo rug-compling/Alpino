@@ -7,7 +7,7 @@
         <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="4" lemma="onderwijzer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="onderwijzer" word="Onderwijzers"/>
         <node begin="1" cat="pp" end="3" id="5" rel="mod">
           <node begin="1" end="2" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-          <node begin="2" end="3" getal="mv" graad="basis" id="7" lemma="gemeenteschool" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="school" word="gemeentescholen"/>
+          <node begin="2" end="3" getal="mv" graad="basis" id="7" lemma="gemeente_school" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="school" word="gemeentescholen"/>
         </node>
       </node>
       <node begin="3" end="4" id="8" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" word="moeten" wvorm="pv"/>
@@ -16,7 +16,7 @@
         <node begin="5" buiging="zonder" end="6" id="11" lemma="kunnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kan" word="kunnen" wvorm="inf"/>
         <node begin="0" cat="inf" end="19" id="12" rel="vc">
           <node begin="0" end="3" id="13" index="1" rel="su"/>
-          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="14" lemma="raadslid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="predc" root="raadslid" word="raadslid"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="14" lemma="raad_lid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="predc" root="raadslid" word="raadslid"/>
           <node begin="6" buiging="zonder" end="7" id="15" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
           <node begin="8" cat="cp" end="19" id="16" rel="mod">
             <node begin="8" end="9" id="17" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>

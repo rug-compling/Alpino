@@ -14,7 +14,7 @@
           <node begin="3" end="4" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
           <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="11" lemma="complot" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="complot" word="complot"/>
         </node>
-        <node begin="5" buiging="zonder" end="6" id="12" lemma="oprollen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="rol" word="oprollen" wvorm="inf"/>
+        <node begin="5" buiging="zonder" end="6" id="12" lemma="op_rollen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="rol" word="oprollen" wvorm="inf"/>
         <node begin="7" cat="cp" end="29" id="13" rel="mod">
           <node begin="7" conjtype="onder" end="8" id="14" lemma="nadat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="nadat" word="nadat"/>
           <node begin="8" cat="ssub" end="29" id="15" rel="body">
@@ -24,7 +24,7 @@
             </node>
             <node begin="13" end="14" id="19" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
             <node begin="8" cat="ppart" end="29" id="20" rel="vc">
-              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="21" lemma="vrijdagnacht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="vrijdagnacht" word="vrijdagnacht"/>
+              <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="21" lemma="vrijdag_nacht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="vrijdagnacht" word="vrijdagnacht"/>
               <node begin="9" end="11" id="22" index="2" rel="obj1"/>
               <node begin="11" cat="mwu" end="13" id="23" rel="mod">
                 <node begin="11" end="12" id="24" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
@@ -45,7 +45,7 @@
                         <node begin="21" cat="np" end="24" id="38" rel="obj1">
                           <node begin="21" end="22" id="39" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                           <node begin="22" buiging="met-e" end="23" graad="basis" id="40" lemma="bredaas" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Bredase" word="Bredase"/>
-                          <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="41" lemma="binnenstad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="binnenstad" word="binnenstad"/>
+                          <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="41" lemma="binnen_stad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="binnenstad" word="binnenstad"/>
                         </node>
                       </node>
                     </node>
@@ -57,7 +57,7 @@
                       <node begin="16" end="17" id="46" index="3" rel="su"/>
                       <node begin="25" end="26" genus="onz" getal="ev" graad="basis" id="47" lemma="geld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="geld" word="geld"/>
                       <node begin="26" end="27" id="48" lemma="weg" pos="part" postag="BW()" pt="bw" rel="svp" root="weg" word="weg"/>
-                      <node begin="28" buiging="zonder" end="29" id="49" lemma="halen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="haal" word="halen" wvorm="inf"/>
+                      <node begin="28" buiging="zonder" end="29" id="49" lemma="weg_halen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="haal" word="halen" wvorm="inf"/>
                     </node>
                   </node>
                 </node>

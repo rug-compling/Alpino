@@ -12,7 +12,7 @@
         <node begin="2" conjtype="neven" end="3" id="8" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="3" cat="np" end="20" id="9" rel="cnj">
           <node begin="3" end="4" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="4" buiging="met-e" end="5" graad="basis" id="11" lemma="achttienjarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="achttienjarig" word="achttienjarige"/>
+          <node begin="4" buiging="met-e" end="5" graad="basis" id="11" lemma="achttien_jarig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="achttienjarig" word="achttienjarige"/>
           <node begin="5" cat="mwu" end="9" id="12" rel="hd">
             <node begin="5" end="6" id="13" lemma="mej." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="mej." spectype="deeleigen" word="mej."/>
             <node begin="6" end="7" id="14" lemma="B." pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="B." spectype="deeleigen" word="B."/>
@@ -36,7 +36,7 @@
                 <node begin="16" end="17" id="29" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
                 <node begin="17" cat="np" end="19" id="30" rel="obj1">
                   <node begin="17" end="18" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                  <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="32" lemma="hofauto" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="auto" word="hofauto"/>
+                  <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="32" lemma="hof_auto" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="auto" word="hofauto"/>
                 </node>
               </node>
               <node begin="19" end="20" id="33" lemma="gooien" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="gooi" word="gooide" wvorm="pv"/>

@@ -22,7 +22,7 @@
                 <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="18" lemma="tegemoetkoming" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tegemoetkoming" word="tegemoetkoming"/>
               </node>
               <node begin="9" end="10" id="19" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
-              <node begin="11" buiging="zonder" end="12" id="20" lemma="bieden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bied" word="bieden" wvorm="inf"/>
+              <node begin="11" buiging="zonder" end="12" id="20" lemma="aan_bieden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bied" word="bieden" wvorm="inf"/>
             </node>
           </node>
         </node>
@@ -67,7 +67,7 @@
                 </node>
               </node>
               <node begin="30" end="31" id="52" lemma="uit" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="uit" vztype="fin" word="uit"/>
-              <node begin="32" buiging="zonder" end="33" id="53" lemma="brengen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breng" word="brengen" wvorm="inf"/>
+              <node begin="32" buiging="zonder" end="33" id="53" lemma="uit_brengen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breng" word="brengen" wvorm="inf"/>
             </node>
           </node>
           <node begin="34" conjtype="neven" end="35" id="54" lemma="noch" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="noch" word="noch"/>
@@ -81,7 +81,7 @@
                 <node begin="39" cat="pp" end="46" id="62" rel="mod">
                   <node begin="39" end="40" id="63" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
                   <node begin="40" cat="np" end="46" id="64" rel="obj1">
-                    <node begin="40" end="41" genus="zijd" getal="ev" graad="basis" id="65" lemma="omwisseling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wisseling" word="omwisseling"/>
+                    <node begin="40" end="41" genus="zijd" getal="ev" graad="basis" id="65" lemma="om_wisseling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wisseling" word="omwisseling"/>
                     <node begin="41" cat="pp" end="46" id="66" rel="mod">
                       <node begin="41" end="42" id="67" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                       <node begin="42" cat="conj" end="46" id="68" rel="obj1">

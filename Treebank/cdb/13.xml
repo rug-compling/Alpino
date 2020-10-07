@@ -40,7 +40,7 @@
                     <node begin="16" end="17" id="32" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                     <node begin="17" cat="np" end="22" id="33" rel="obj1">
                       <node begin="17" end="18" id="34" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                      <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="35" lemma="koersstijging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="koersstijging" word="koersstijging"/>
+                      <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="35" lemma="koers_stijging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="koersstijging" word="koersstijging"/>
                       <node begin="19" cat="pp" end="22" id="36" rel="mod">
                         <node begin="19" end="20" id="37" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                         <node begin="20" cat="np" end="22" id="38" rel="obj1">
@@ -78,7 +78,7 @@
             <node begin="32" conjtype="neven" end="33" id="57" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="30" cat="np" end="34" id="58" rel="cnj">
               <node begin="30" end="31" id="59" index="3" rel="mod"/>
-              <node begin="33" end="34" getal="mv" graad="basis" id="60" lemma="zuivelprodukt" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="zuivelprodukten" word="zuivelprodukten"/>
+              <node begin="33" end="34" getal="mv" graad="basis" id="60" lemma="zuivel_produkt" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="zuivelprodukten" word="zuivelprodukten"/>
             </node>
           </node>
         </node>
@@ -88,6 +88,6 @@
   </node>
   <sentence>De enige maatregel die de Duitsers mogen nemen om hun boeren te beschermen tegen de gevolgen van de koersstijging van de mark is een concrete sluiting van de grenzen voor buitenlandse granen en zuivelprodukten .</sentence>
   <comments>
-    <comment>om-zin zou ook mod bij hd/maatregel kunnen zijn. Gj: it&apos;s a vc of maatregel.</comment>
+    <comment>om-zin zou ook mod bij hd/maatregel kunnen zijn. Gj: it&#39;s a vc of maatregel.</comment>
   </comments>
 </alpino_ds>

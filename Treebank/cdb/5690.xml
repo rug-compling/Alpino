@@ -4,7 +4,7 @@
     <node begin="0" cat="smain" end="29" id="1" rel="--">
       <node begin="0" cat="np" end="4" id="2" index="1" rel="su">
         <node begin="0" buiging="met-e" end="1" graad="comp" id="3" lemma="particulier" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,comp,met-e,stan)" pt="adj" rel="mod" root="particulier" word="Particuliere"/>
-        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="woningbouwbedrijf" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bouwbedrijf" word="woningbouwbedrijven"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="woningbouw_bedrijf" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bouwbedrijf" word="woningbouwbedrijven"/>
         <node begin="2" cat="pp" end="4" id="5" rel="mod">
           <node begin="2" end="3" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
           <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="Limburg" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Limburg" word="Limburg"/>
@@ -36,7 +36,7 @@
                   <node begin="15" cat="conj" end="29" id="29" rel="obj1">
                     <node begin="15" cat="np" end="20" id="30" rel="cnj">
                       <node begin="15" end="16" id="31" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                      <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="32" lemma="bouwfonds" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="fonds" word="bouwfonds"/>
+                      <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="32" lemma="bouw_fonds" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="fonds" word="bouwfonds"/>
                       <node begin="17" cat="pp" end="20" id="33" rel="mod">
                         <node begin="17" end="18" id="34" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
                         <node begin="18" cat="np" end="20" id="35" rel="obj1">

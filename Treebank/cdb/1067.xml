@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="45" id="0" rel="top">
-    <node begin="10" end="11" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="12" end="13" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="10" end="11" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="12" end="13" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="15" end="16" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="23" end="24" id="4" lemma="(" pos="punct" postag="LET()" pt="let" rel="--" root="(" word="("/>
     <node begin="25" end="26" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
@@ -25,13 +25,13 @@
         <node begin="0" cat="ppart" end="15" id="20" rel="vc">
           <node begin="0" end="1" id="21" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="Zo"/>
           <node begin="2" end="8" id="22" index="1" rel="obj1"/>
-          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="23" lemma="zaterdagmiddag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="zaterdagmiddag" word="zaterdagmiddag"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="23" lemma="zaterdag_middag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="zaterdagmiddag" word="zaterdagmiddag"/>
           <node begin="9" cat="np" end="14" id="24" rel="obj2">
             <node begin="9" end="10" id="25" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
             <node begin="11" buiging="zonder" end="12" id="26" lemma="bezetten" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="mod" root="bezet" word="bezet" wvorm="vd"/>
-            <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="27" lemma="kunstenaarshuis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="huis" word="kunstenaarshuis"/>
+            <node begin="13" end="14" genus="onz" getal="ev" graad="basis" id="27" lemma="kunstenaar_huis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="huis" word="kunstenaarshuis"/>
           </node>
-          <node begin="14" buiging="zonder" end="15" id="28" lemma="binnenleiden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leid" word="binnengeleid" wvorm="vd"/>
+          <node begin="14" buiging="zonder" end="15" id="28" lemma="binnen_leiden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leid" word="binnengeleid" wvorm="vd"/>
         </node>
       </node>
       <node begin="16" cat="ppart" end="44" id="29" rel="sat">
@@ -69,8 +69,8 @@
                       <node begin="39" cat="inf" end="44" id="59" rel="body">
                         <node begin="39" cat="np" end="42" id="60" rel="obj1">
                           <node begin="39" buiging="met-e" end="40" id="61" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
-                          <node begin="40" buiging="met-e" end="41" graad="basis" id="62" lemma="ministeriel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ministerieel" word="ministeriele"/>
-                          <node begin="41" end="42" genus="zijd" getal="ev" graad="basis" id="63" lemma="inzegening" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zegening" word="inzegening"/>
+                          <node begin="40" buiging="met-e" end="41" graad="basis" id="62" lemma="ministerieel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ministerieel" word="ministeriele"/>
+                          <node begin="41" end="42" genus="zijd" getal="ev" graad="basis" id="63" lemma="in_zegening" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zegening" word="inzegening"/>
                         </node>
                         <node begin="43" buiging="zonder" end="44" id="64" lemma="ondergaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="onderga" word="ondergaan" wvorm="inf"/>
                       </node>
@@ -85,5 +85,5 @@
     </node>
     <node begin="44" end="45" id="65" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Zo werd minister dr. M. A. . Klompe zaterdagmiddag een &quot; bezet &quot; kunstenaarshuis binnengeleid , bezet overigens door een 65-tal glundere kunstenaars ( schilders , beeldhouwers , auteurs , acteurs en musici ) die bijzonder gewillig waren om deze ministeriele inzegening te ondergaan .</sentence>
+  <sentence>Zo werd minister dr. M. A. . Klompe zaterdagmiddag een &#34; bezet &#34; kunstenaarshuis binnengeleid , bezet overigens door een 65-tal glundere kunstenaars ( schilders , beeldhouwers , auteurs , acteurs en musici ) die bijzonder gewillig waren om deze ministeriele inzegening te ondergaan .</sentence>
 </alpino_ds>

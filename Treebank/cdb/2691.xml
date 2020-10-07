@@ -4,7 +4,7 @@
     <node begin="11" end="12" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="13" end="14" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="17" end="18" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="21" end="22" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="21" end="22" id="4" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="23" id="5" rel="--">
       <node begin="3" end="4" id="6" lemma="zullen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zal" word="zullen" wvorm="pv"/>
       <node begin="0" cat="inf" end="23" id="7" rel="vc">
@@ -16,13 +16,13 @@
               <node begin="0" end="1" id="13" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
               <node begin="1" cat="np" end="3" id="14" rel="obj1">
                 <node begin="1" end="2" id="15" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="16" lemma="prentenkabinet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kabinet" word="prentenkabinet"/>
+                <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="16" lemma="prent_kabinet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="kabinet" word="prentenkabinet"/>
               </node>
             </node>
             <node begin="4" end="5" id="17" lemma="steeds" pos="adv" postag="BW()" pt="bw" rel="mod" root="steeds" word="steeds"/>
             <node begin="7" buiging="zonder" end="8" id="18" lemma="zien" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zie" word="zien" wvorm="inf"/>
             <node begin="5" cat="np" end="23" id="19" index="1" rel="obj1">
-              <node begin="5" end="6" getal="mv" graad="basis" id="20" lemma="soloexpositie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="expositie" word="soloexposities"/>
+              <node begin="5" end="6" getal="mv" graad="basis" id="20" lemma="solo_expositie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="expositie" word="soloexposities"/>
               <node begin="9" cat="pp" end="17" id="21" rel="mod">
                 <node begin="9" end="10" id="22" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                 <node begin="10" cat="conj" end="17" id="23" rel="obj1">
@@ -38,7 +38,7 @@
                 <node begin="19" cat="np" end="23" id="31" rel="obj1">
                   <node begin="19" end="20" id="32" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                   <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="33" lemma="titel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="titel" word="titel"/>
-                  <node begin="22" end="23" getal="mv" graad="basis" id="34" lemma="kabinettentoonstelling" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="app" root="tentoonstelling" word="kabinettentoonstellingen"/>
+                  <node begin="22" end="23" getal="mv" graad="basis" id="34" lemma="kabinet_tentoonstelling" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="app" root="tentoonstelling" word="kabinettentoonstellingen"/>
                 </node>
               </node>
             </node>
@@ -49,7 +49,7 @@
       <node begin="5" end="23" id="36" index="1" rel="su"/>
     </node>
     <node begin="23" end="24" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
-    <node begin="24" end="25" id="38" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="24" end="25" id="38" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
   </node>
-  <sentence>In het prentenkabinet zullen steeds soloexposities te zien zijn van grafiek , tekeningen , objecten of ideeen , onder de titel &quot; kabinettentoonstellingen . &quot;</sentence>
+  <sentence>In het prentenkabinet zullen steeds soloexposities te zien zijn van grafiek , tekeningen , objecten of ideeen , onder de titel &#34; kabinettentoonstellingen . &#34;</sentence>
 </alpino_ds>

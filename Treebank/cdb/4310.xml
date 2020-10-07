@@ -18,12 +18,12 @@
               <node begin="5" end="6" id="15" index="1" rel="su"/>
               <node begin="6" end="7" id="16" lemma="thans" pos="adv" postag="BW()" pt="bw" rel="mod" root="thans" word="thans"/>
               <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="17" lemma="deel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="deel" word="deel"/>
-              <node begin="8" end="9" id="18" lemma="uitmaken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="maak" word="uitmaakt" wvorm="pv"/>
+              <node begin="8" end="9" id="18" lemma="uit_maken" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="maak" word="uitmaakt" wvorm="pv"/>
               <node begin="9" cat="pp" end="28" id="19" rel="pc">
                 <node begin="9" end="10" id="20" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                 <node begin="10" cat="np" end="28" id="21" rel="obj1">
                   <node begin="10" end="11" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                  <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="23" lemma="hoofddirectie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="directie" word="hoofddirectie"/>
+                  <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="23" lemma="hoofd_directie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="directie" word="hoofddirectie"/>
                   <node begin="12" cat="pp" end="28" id="24" rel="mod">
                     <node begin="12" end="13" id="25" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                     <node begin="13" cat="np" end="28" id="26" rel="obj1">
@@ -44,9 +44,9 @@
                         <node begin="21" end="22" id="38" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                         <node begin="22" cat="mwu" end="26" id="39" rel="hd">
                           <node begin="22" end="23" id="40" lemma="A.G." pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="A.G." spectype="symb" word="A.G."/>
-                          <node begin="23" end="24" id="41" lemma="&quot;" pos="noun" postag="LET()" pt="let" rel="mwp" root="&quot;" word="&quot;"/>
+                          <node begin="23" end="24" id="41" lemma="&#34;" pos="noun" postag="LET()" pt="let" rel="mwp" root="&#34;" word="&#34;"/>
                           <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="42" lemma="wes" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Weser" word="Weser"/>
-                          <node begin="25" end="26" id="43" lemma="&quot;" pos="noun" postag="LET()" pt="let" rel="mwp" root="&quot;" word="&quot;"/>
+                          <node begin="25" end="26" id="43" lemma="&#34;" pos="noun" postag="LET()" pt="let" rel="mwp" root="&#34;" word="&#34;"/>
                         </node>
                         <node begin="26" cat="pp" end="28" id="44" rel="mod">
                           <node begin="26" end="27" id="45" lemma="te" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="te" vztype="init" word="te"/>
@@ -83,7 +83,7 @@
                     <node begin="41" end="42" genus="zijd" getal="ev" graad="basis" id="66" lemma="bouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bouw" word="bouw"/>
                     <node begin="42" cat="pp" end="44" id="67" rel="mod">
                       <node begin="42" end="43" id="68" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-                      <node begin="43" end="44" getal="mv" graad="basis" id="69" lemma="mammoettanker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="tanker" word="mammoettankers"/>
+                      <node begin="43" end="44" getal="mv" graad="basis" id="69" lemma="mammoet_tanker" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="tanker" word="mammoettankers"/>
                     </node>
                   </node>
                 </node>
@@ -112,5 +112,5 @@
     </node>
     <node begin="53" end="54" id="83" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Met de heer Vernede , die thans deel uitmaakt van de hoofddirectie van een van de grootste scheepswerven van Duitsland , de A.G. &quot; Weser &quot; te Bremen , hadden wij een gesprek over de achtergrond van de verliezen bij de bouw van mammoettankers , zoals die recentelijk aan het licht zijn gekomen .</sentence>
+  <sentence>Met de heer Vernede , die thans deel uitmaakt van de hoofddirectie van een van de grootste scheepswerven van Duitsland , de A.G. &#34; Weser &#34; te Bremen , hadden wij een gesprek over de achtergrond van de verliezen bij de bouw van mammoettankers , zoals die recentelijk aan het licht zijn gekomen .</sentence>
 </alpino_ds>

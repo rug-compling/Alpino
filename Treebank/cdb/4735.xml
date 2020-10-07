@@ -4,7 +4,7 @@
     <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="21" id="2" rel="--">
       <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="vast" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="vast" word="Vast"/>
-      <node begin="1" end="2" id="4" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
+      <node begin="1" end="2" id="4" lemma="vast_staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
       <node begin="2" end="3" id="5" lemma="echter" pos="adv" postag="BW()" pt="bw" rel="mod" root="echter" word="echter"/>
       <node begin="3" end="4" id="6" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
       <node begin="5" cat="cp" end="21" id="7" rel="su">
@@ -45,8 +45,8 @@
         </node>
       </node>
     </node>
-    <node begin="21" end="22" id="34" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="21" end="22" id="34" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="22" end="23" id="35" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Vast staat echter wel , dat vrouwen niet minder dan mannen geschikt zijn voor welk beroep of welke verantwoordelijkheid dan ook &quot; .</sentence>
+  <sentence>Vast staat echter wel , dat vrouwen niet minder dan mannen geschikt zijn voor welk beroep of welke verantwoordelijkheid dan ook &#34; .</sentence>
 </alpino_ds>

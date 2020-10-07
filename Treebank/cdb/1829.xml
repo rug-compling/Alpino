@@ -5,7 +5,7 @@
       <node begin="4" end="5" id="2" lemma="worden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="word" word="werden" wvorm="pv"/>
       <node begin="5" cat="np" end="8" id="3" index="1" rel="su">
         <node begin="5" end="6" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="6" buiging="met-e" end="7" id="5" lemma="actievoeren" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="voerende" word="actievoerende" wvorm="od"/>
+        <node begin="6" buiging="met-e" end="7" id="5" lemma="actie_voeren" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="voerende" word="actievoerende" wvorm="od"/>
         <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="6" lemma="jongelui" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="jongmens" word="jongelui"/>
       </node>
       <node begin="0" cat="conj" end="20" id="7" rel="vc">
@@ -29,13 +29,13 @@
               </node>
             </node>
           </node>
-          <node begin="12" buiging="zonder" end="13" id="23" lemma="aanhouden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="houd" word="aangehouden" wvorm="vd"/>
+          <node begin="12" buiging="zonder" end="13" id="23" lemma="aan_houden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="houd" word="aangehouden" wvorm="vd"/>
         </node>
         <node begin="13" conjtype="neven" end="14" id="24" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="0" cat="ppart" end="20" id="25" rel="cnj">
           <node begin="0" end="4" id="26" index="2" rel="mod"/>
           <node begin="5" end="8" id="27" index="1" rel="obj1"/>
-          <node begin="14" buiging="zonder" end="15" id="28" lemma="afvoeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voer" word="afgevoerd" wvorm="vd"/>
+          <node begin="14" buiging="zonder" end="15" id="28" lemma="af_voeren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="voer" word="afgevoerd" wvorm="vd"/>
           <node begin="15" cat="pp" end="20" id="29" rel="ld">
             <node begin="15" end="16" id="30" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
             <node begin="16" cat="np" end="20" id="31" rel="obj1">

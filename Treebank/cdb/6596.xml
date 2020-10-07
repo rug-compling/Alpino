@@ -52,7 +52,7 @@
                 </node>
               </node>
               <node begin="22" end="23" id="40" lemma="over" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="over" vztype="fin" word="over"/>
-              <node begin="24" buiging="zonder" end="25" id="41" lemma="gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="gaan" wvorm="inf"/>
+              <node begin="24" buiging="zonder" end="25" id="41" lemma="over_gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="gaan" wvorm="inf"/>
               <node begin="25" cat="pp" end="36" id="42" rel="pc">
                 <node begin="25" end="26" id="43" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
                 <node begin="26" cat="np" end="36" id="44" rel="obj1">
@@ -69,11 +69,11 @@
                           <node begin="31" end="32" id="55" lemma="laad-" pos="noun" postag="SPEC(afgebr)" pt="spec" rel="hd" root="laad-" spectype="afgebr" word="laad-"/>
                           <node begin="34" cat="pp" end="36" id="56" index="1" rel="mod">
                             <node begin="34" end="35" id="57" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-                            <node begin="35" end="36" genus="onz" getal="ev" graad="basis" id="58" lemma="wagenladingvervoer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="vervoer" word="wagenladingvervoer"/>
+                            <node begin="35" end="36" genus="onz" getal="ev" graad="basis" id="58" lemma="wagenlading_vervoer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="vervoer" word="wagenladingvervoer"/>
                           </node>
                         </node>
                         <node begin="33" cat="np" end="36" id="59" rel="cnj">
-                          <node begin="33" end="34" getal="mv" graad="basis" id="60" lemma="losplaats" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="plaats" word="losplaatsen"/>
+                          <node begin="33" end="34" getal="mv" graad="basis" id="60" lemma="los_plaats" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="plaats" word="losplaatsen"/>
                           <node begin="34" end="36" id="61" index="1" rel="mod"/>
                         </node>
                       </node>

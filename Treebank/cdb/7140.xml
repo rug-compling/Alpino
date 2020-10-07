@@ -9,14 +9,14 @@
       <node begin="10" cat="np" end="23" id="6" index="1" rel="su">
         <node begin="10" end="11" id="7" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="drie" word="drie"/>
         <node begin="11" buiging="met-e" end="12" graad="basis" id="8" lemma="landelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="landelijk" word="landelijke"/>
-        <node begin="12" end="13" getal="mv" graad="basis" id="9" lemma="kruisorganisatie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="organisatie" word="kruisorganisaties"/>
+        <node begin="12" end="13" getal="mv" graad="basis" id="9" lemma="kruis_organisatie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="organisatie" word="kruisorganisaties"/>
         <node begin="14" cat="conj" end="23" id="10" rel="mod">
           <node begin="14" cat="np" end="16" id="11" rel="cnj">
             <node begin="14" end="15" id="12" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
             <node begin="15" end="16" genus="genus" getal="ev" graad="basis" id="13" lemma="Wit-Gele" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Wit-Gele" word="Wit-Gele"/>
           </node>
           <node begin="17" cat="np" end="19" id="14" rel="cnj">
-            <node begin="17" end="18" id="15" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="&apos;t"/>
+            <node begin="17" end="18" id="15" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="&#39;t"/>
             <node begin="18" buiging="met-e" end="19" graad="basis" id="16" lemma="groen" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="Groene" word="Groene"/>
           </node>
           <node begin="19" conjtype="neven" end="20" id="17" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
@@ -68,5 +68,5 @@
     </node>
     <node begin="31" end="32" id="50" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Op initiatief van de nationale federatie Het Wit-Gele Kruis zullen drie landelijke kruisorganisaties - het Wit-Gele , &apos;t Groene en het Oranje-Groene Kruis - de mogelijkheid van een fusie gaan bespreken .</sentence>
+  <sentence>Op initiatief van de nationale federatie Het Wit-Gele Kruis zullen drie landelijke kruisorganisaties - het Wit-Gele , &#39;t Groene en het Oranje-Groene Kruis - de mogelijkheid van een fusie gaan bespreken .</sentence>
 </alpino_ds>

@@ -49,7 +49,7 @@
                       <node begin="16" end="17" id="39" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
                       <node begin="17" cat="np" end="19" id="40" rel="obj1">
                         <node begin="17" end="18" id="41" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                        <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="42" lemma="staatsontvangst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ontvangst" word="staatsontvangst"/>
+                        <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="42" lemma="staat_ontvangst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ontvangst" word="staatsontvangst"/>
                       </node>
                     </node>
                     <node begin="21" buiging="zonder" end="22" id="43" lemma="lijken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="lijk" word="lijken" wvorm="inf"/>
@@ -61,7 +61,7 @@
         </node>
         <node begin="24" end="25" id="44" index="1" rel="su"/>
         <node begin="26" end="27" id="45" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-        <node begin="28" buiging="zonder" end="29" id="46" lemma="overgaan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ga" word="overgegaan" wvorm="vd"/>
+        <node begin="28" buiging="zonder" end="29" id="46" lemma="over_gaan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ga" word="overgegaan" wvorm="vd"/>
         <node begin="24" cat="pp" end="45" id="47" rel="pc">
           <node begin="25" end="26" getal="getal" id="48" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="noun" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="pobj1" root="er" status="red" vwtype="aanw" word="er"/>
           <node begin="27" end="28" id="49" lemma="toe" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="toe" vztype="fin" word="toe"/>
@@ -93,7 +93,7 @@
                 <node begin="39" end="40" id="70" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
                 <node begin="40" cat="np" end="43" id="71" rel="obj1">
                   <node begin="40" end="41" id="72" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                  <node begin="41" end="42" genus="onz" getal="ev" graad="basis" id="73" lemma="grensstation" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="station" word="grensstation"/>
+                  <node begin="41" end="42" genus="onz" getal="ev" graad="basis" id="73" lemma="grens_station" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="station" word="grensstation"/>
                   <node begin="42" end="43" genus="genus" getal="ev" graad="basis" id="74" lemma="Bebra" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Bebra" word="Bebra"/>
                 </node>
               </node>

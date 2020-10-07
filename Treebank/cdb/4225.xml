@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="23" id="0" rel="top">
-    <node begin="1" end="2" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="3" end="4" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="1" end="2" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="3" end="4" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="19" end="20" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="conj" end="22" id="4" rel="--">
       <node begin="0" cat="smain" end="7" id="5" rel="cnj">
@@ -40,7 +40,7 @@
                     </node>
                   </node>
                   <node begin="15" end="16" id="34" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
-                  <node begin="18" buiging="zonder" end="19" id="35" lemma="volhouden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="houd" word="volhouden" wvorm="inf"/>
+                  <node begin="18" buiging="zonder" end="19" id="35" lemma="vol_houden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="houd" word="volhouden" wvorm="inf"/>
                 </node>
               </node>
             </node>
@@ -51,5 +51,5 @@
     </node>
     <node begin="22" end="23" id="37" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De &quot; meester &quot; is 70 jaar en of hij het in het vijfde uur nog zal kunnen volhouden , moet blijken .</sentence>
+  <sentence>De &#34; meester &#34; is 70 jaar en of hij het in het vijfde uur nog zal kunnen volhouden , moet blijken .</sentence>
 </alpino_ds>

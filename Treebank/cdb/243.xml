@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="30" id="0" rel="top">
-    <node begin="16" end="17" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="21" end="22" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="16" end="17" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="21" end="22" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="smain" end="29" id="3" rel="--">
       <node begin="0" cat="pp" end="6" id="4" rel="mod">
         <node begin="0" end="1" id="5" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="Na"/>
@@ -12,13 +12,13 @@
           <node begin="3" cat="pp" end="6" id="9" rel="mod">
             <node begin="3" end="4" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="4" cat="np" end="6" id="11" rel="obj1">
-              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="12" lemma="scheepsjongen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="jongen" word="scheepsjongen"/>
+              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="12" lemma="schip_jongen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="jongen" word="scheepsjongen"/>
               <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="13" lemma="Padde" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="Padde" word="Padde"/>
             </node>
           </node>
         </node>
       </node>
-      <node begin="6" end="7" id="14" lemma="lezen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="lees" word="las" wvorm="pv"/>
+      <node begin="6" end="7" id="14" lemma="voor_lezen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="lees" word="las" wvorm="pv"/>
       <node begin="7" cat="np" end="9" id="15" rel="su">
         <node begin="7" end="8" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="17" lemma="omroepster" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="omroepster" word="omroepster"/>
@@ -60,5 +60,5 @@
     </node>
     <node begin="29" end="30" id="44" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Na de avonturen van scheepsjongen Padde las de omroepster een resume van de vorige aflevering van &quot; De waaier van Sevilla &quot; voor in een volkomen en ondoorgrondelijk duister .</sentence>
+  <sentence>Na de avonturen van scheepsjongen Padde las de omroepster een resume van de vorige aflevering van &#34; De waaier van Sevilla &#34; voor in een volkomen en ondoorgrondelijk duister .</sentence>
 </alpino_ds>

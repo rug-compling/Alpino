@@ -32,7 +32,7 @@
               <node begin="14" cat="conj" end="17" id="25" rel="su">
                 <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="26" lemma="burgemeester" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="burgemeester" word="burgemeester"/>
                 <node begin="15" conjtype="neven" end="16" id="27" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-                <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="28" lemma="schoolhoofd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="schoolhoofd" word="schoolhoofd"/>
+                <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="28" lemma="school_hoofd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="schoolhoofd" word="schoolhoofd"/>
               </node>
               <node begin="17" cat="pp" end="19" id="29" rel="ld">
                 <node begin="17" end="18" id="30" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
@@ -47,7 +47,7 @@
                   <node begin="22" cat="inf" end="29" id="38" rel="vc">
                     <node begin="22" end="23" id="39" index="1" rel="su"/>
                     <node begin="23" cat="np" end="27" id="40" rel="obj1">
-                      <node begin="23" end="24" getal="mv" graad="basis" id="41" lemma="handenarbeidles" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="les" word="handenarbeidlessen"/>
+                      <node begin="23" end="24" getal="mv" graad="basis" id="41" lemma="hand_arbeid_les" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="les" word="handenarbeidlessen"/>
                       <node begin="24" cat="pp" end="27" id="42" rel="mod">
                         <node begin="24" end="25" id="43" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
                         <node begin="25" cat="np" end="27" id="44" rel="obj1">
@@ -56,7 +56,7 @@
                         </node>
                       </node>
                     </node>
-                    <node begin="28" buiging="zonder" end="29" id="47" lemma="opzetten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zet" word="opzetten" wvorm="inf"/>
+                    <node begin="28" buiging="zonder" end="29" id="47" lemma="op_zetten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zet" word="opzetten" wvorm="inf"/>
                   </node>
                 </node>
               </node>

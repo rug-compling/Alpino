@@ -30,7 +30,7 @@
             <node begin="11" buiging="met-e" end="12" graad="basis" id="24" lemma="kil" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="kil" word="kille"/>
             <node begin="13" cat="ap" end="15" id="25" rel="mod">
               <node begin="13" end="14" id="26" lemma="welhaast" pos="adv" postag="BW()" pt="bw" rel="mod" root="welhaast" word="welhaast"/>
-              <node begin="14" buiging="met-e" end="15" graad="basis" id="27" lemma="emotieloos" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="loos" word="emotieloze"/>
+              <node begin="14" buiging="met-e" end="15" graad="basis" id="27" lemma="emotie_loos" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="loos" word="emotieloze"/>
             </node>
             <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="28" lemma="sfeer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sfeer" word="sfeer"/>
           </node>
@@ -74,7 +74,7 @@
                   <node begin="37" conjtype="neven" end="38" id="59" lemma="en" pos="adv" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
                   <node begin="38" end="39" genus="zijd" getal="ev" graad="basis" id="60" lemma="wijle" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="wijle" word="wijle"/>
                 </node>
-                <node begin="39" end="40" id="61" lemma="overkomen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="overkwam" wvorm="pv"/>
+                <node begin="39" end="40" id="61" lemma="over_komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="overkwam" wvorm="pv"/>
               </node>
             </node>
           </node>

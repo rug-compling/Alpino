@@ -35,7 +35,7 @@
                             <node begin="10" end="11" id="31" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                             <node begin="11" cat="np" end="13" id="32" rel="obj1">
                               <node begin="11" end="12" id="33" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                              <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="34" lemma="industriegordel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gordel" word="industriegordel"/>
+                              <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="34" lemma="industrie_gordel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gordel" word="industriegordel"/>
                             </node>
                           </node>
                         </node>
@@ -51,10 +51,10 @@
         <node begin="17" end="20" id="36" index="1" rel="su"/>
         <node begin="20" cat="np" end="23" id="37" rel="obj1">
           <node begin="20" end="21" id="38" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-          <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="39" lemma="streekplan" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="streekplan" word="streekplan"/>
+          <node begin="21" end="22" genus="onz" getal="ev" graad="basis" id="39" lemma="streek_plan" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="streekplan" word="streekplan"/>
           <node begin="22" end="23" genus="genus" getal="ev" graad="basis" id="40" lemma="WestBrabant" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="app" root="WestBrabant" word="WestBrabant"/>
         </node>
-        <node begin="23" buiging="zonder" end="24" id="41" lemma="opstellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="opgesteld" wvorm="vd"/>
+        <node begin="23" buiging="zonder" end="24" id="41" lemma="op_stellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stel" word="opgesteld" wvorm="vd"/>
       </node>
     </node>
     <node begin="24" end="25" id="42" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

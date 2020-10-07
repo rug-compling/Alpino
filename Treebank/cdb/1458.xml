@@ -9,7 +9,7 @@
       <node begin="2" end="3" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
       <node begin="0" cat="ppart" end="12" id="6" rel="vc">
         <node begin="0" end="2" id="7" index="1" rel="su"/>
-        <node begin="3" buiging="zonder" end="4" id="8" lemma="afzien" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zie" word="afgezien" wvorm="vd"/>
+        <node begin="3" buiging="zonder" end="4" id="8" lemma="af_zien" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zie" word="afgezien" wvorm="vd"/>
         <node begin="4" cat="pp" end="12" id="9" rel="pc">
           <node begin="4" end="5" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="5" cat="np" end="12" id="11" rel="obj1">
@@ -22,7 +22,7 @@
                 <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="ronde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ronde" word="ronde"/>
                 <node begin="10" cat="pp" end="12" id="19" rel="mod">
                   <node begin="10" end="11" id="20" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-                  <node begin="11" end="12" getal="mv" graad="basis" id="21" lemma="beroepsrenner" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="renners" word="beroepsrenners"/>
+                  <node begin="11" end="12" getal="mv" graad="basis" id="21" lemma="beroep_renner" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="renners" word="beroepsrenners"/>
                 </node>
               </node>
             </node>

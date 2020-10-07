@@ -14,7 +14,7 @@
         <node begin="5" end="6" id="10" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
         <node begin="6" cat="np" end="8" id="11" rel="obj1">
           <node begin="6" end="7" id="12" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-          <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="13" lemma="politiebureau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="politiebureau" word="politiebureau"/>
+          <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="13" lemma="politie_bureau" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="politiebureau" word="politiebureau"/>
         </node>
       </node>
       <node begin="9" cat="cp" end="15" id="14" rel="mod">
@@ -28,7 +28,7 @@
                 <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="22" lemma="huis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="huis" word="huis"/>
               </node>
             </node>
-            <node begin="13" buiging="zonder" end="14" id="23" lemma="inbreken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="breek" word="ingebroken" wvorm="vd"/>
+            <node begin="13" buiging="zonder" end="14" id="23" lemma="in_breken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="breek" word="ingebroken" wvorm="vd"/>
           </node>
           <node begin="14" end="15" id="24" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
         </node>

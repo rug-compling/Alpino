@@ -18,7 +18,7 @@
             <node begin="7" end="8" id="15" lemma="na" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="na" vztype="init" word="na"/>
             <node begin="8" cat="np" end="21" id="16" rel="obj1">
               <node begin="8" end="9" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="9" end="10" getal="mv" graad="basis" id="18" lemma="hartklacht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="klacht" word="hartklachten"/>
+              <node begin="9" end="10" getal="mv" graad="basis" id="18" lemma="hart_klacht" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="klacht" word="hartklachten"/>
               <node begin="10" cat="rel" end="21" id="19" rel="mod">
                 <node begin="10" end="11" getal="getal" id="20" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
                 <node begin="10" cat="ssub" end="21" id="21" rel="body">
@@ -53,7 +53,7 @@
       <node begin="23" end="24" getal="getal" id="39" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
       <node begin="24" cat="np" end="26" id="40" rel="mod">
         <node begin="24" buiging="met-e" end="25" id="41" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
-        <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="42" lemma="procesdag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dag" word="procesdag"/>
+        <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="42" lemma="proces_dag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dag" word="procesdag"/>
       </node>
       <node begin="26" cat="ap" end="28" id="43" rel="mod">
         <node begin="26" end="27" id="44" lemma="vrijwel" pos="adv" postag="BW()" pt="bw" rel="mod" root="vrijwel" word="vrijwel"/>
@@ -70,7 +70,7 @@
               <node begin="32" buiging="met-e" end="33" graad="basis" id="54" lemma="openbaar" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="openbaar" word="openbare"/>
               <node begin="33" end="34" genus="zijd" getal="ev" graad="basis" id="55" lemma="aanklager" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aanklager" word="aanklager"/>
             </node>
-            <node begin="35" end="36" genus="zijd" getal="ev" graad="basis" id="56" lemma="nevenaanklager" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="aanklager" word="nevenaanklager"/>
+            <node begin="35" end="36" genus="zijd" getal="ev" graad="basis" id="56" lemma="neven_aanklager" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="aanklager" word="nevenaanklager"/>
             <node begin="37" end="38" genus="onz" getal="ev" graad="basis" id="57" lemma="publiek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="cnj" root="publiek" word="publiek"/>
             <node begin="38" conjtype="neven" end="39" id="58" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="39" cat="np" end="41" id="59" rel="cnj">
@@ -121,7 +121,7 @@
                           <node begin="62" buiging="met-e" end="63" id="97" lemma="leggen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mwp" root="gelegde" word="gelegde" wvorm="vd"/>
                         </node>
                       </node>
-                      <node begin="63" end="64" getal="mv" graad="basis" id="98" lemma="oorlogsmisdaad" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="misdaad" word="oorlogsmisdaden"/>
+                      <node begin="63" end="64" getal="mv" graad="basis" id="98" lemma="oorlog_misdaad" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="misdaad" word="oorlogsmisdaden"/>
                     </node>
                   </node>
                 </node>

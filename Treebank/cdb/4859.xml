@@ -12,7 +12,7 @@
             <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="ronde" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ronde" word="ronde"/>
           </node>
         </node>
-        <node begin="5" end="6" id="10" lemma="nemen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="neem" word="nam" wvorm="pv"/>
+        <node begin="5" end="6" id="10" lemma="over_nemen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="neem" word="nam" wvorm="pv"/>
         <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="11" index="1" lemma="Rodriguez" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Rodriguez" word="Rodriguez"/>
         <node begin="7" cat="np" end="9" id="12" rel="obj1">
           <node begin="7" end="8" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
@@ -35,7 +35,7 @@
       <node begin="16" conjtype="neven" end="17" id="25" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
       <node begin="6" cat="smain" end="22" id="26" rel="cnj">
         <node begin="6" end="7" id="27" index="1" rel="su"/>
-        <node begin="17" end="18" id="28" lemma="staan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="sta" word="stond" wvorm="pv"/>
+        <node begin="17" end="18" id="28" lemma="af_staan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="sta" word="stond" wvorm="pv"/>
         <node begin="18" end="19" getal="getal" id="29" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="obj1" root="die" status="vol" vwtype="aanw" word="die"/>
         <node begin="19" cat="advp" end="21" id="30" rel="mod">
           <node begin="19" end="20" id="31" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="hd" root="niet" word="niet"/>

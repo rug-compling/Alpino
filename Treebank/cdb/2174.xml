@@ -4,10 +4,10 @@
     <node begin="7" end="8" id="1" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
     <node begin="12" end="13" id="2" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
     <node begin="13" end="14" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="18" end="19" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="21" end="22" id="5" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="24" end="25" id="6" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="26" end="27" id="7" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="18" end="19" id="4" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="21" end="22" id="5" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="24" end="25" id="6" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="26" end="27" id="7" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="conj" end="32" id="8" rel="--">
       <node begin="0" cat="smain" end="12" id="9" rel="cnj">
         <node begin="0" cat="np" end="3" id="10" index="1" rel="su">
@@ -15,7 +15,7 @@
           <node begin="1" buiging="zonder" end="2" graad="basis" id="12" lemma="emmer" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="Emmer" word="Emmer"/>
           <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="13" lemma="brandweer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="brandweer" word="brandweer"/>
         </node>
-        <node begin="3" end="4" id="14" lemma="rukken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ruk" word="rukte" wvorm="pv"/>
+        <node begin="3" end="4" id="14" lemma="uit_rukken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ruk" word="rukte" wvorm="pv"/>
         <node begin="4" cat="np" end="6" id="15" rel="mod">
           <node begin="4" end="5" id="16" lemma="elf" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="elf" word="elf"/>
           <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="17" lemma="keer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="keer" word="keer"/>
@@ -55,7 +55,7 @@
                 <node begin="28" end="29" id="44" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                 <node begin="29" cat="np" end="31" id="45" rel="obj1">
                   <node begin="29" end="30" id="46" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                  <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="47" lemma="hooiopslag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="opslag" word="hooiopslag"/>
+                  <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="47" lemma="hooi_opslag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="opslag" word="hooiopslag"/>
                 </node>
               </node>
             </node>
@@ -66,5 +66,5 @@
     </node>
     <node begin="32" end="33" id="49" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De Emmer brandweer rukte elf keer uit - vorig jaar 27 maal - , en ontdekte dat een &quot; grote brand &quot; in Zuidbarge &quot; slechts &quot; brand in een hooiopslag was .</sentence>
+  <sentence>De Emmer brandweer rukte elf keer uit - vorig jaar 27 maal - , en ontdekte dat een &#34; grote brand &#34; in Zuidbarge &#34; slechts &#34; brand in een hooiopslag was .</sentence>
 </alpino_ds>

@@ -10,7 +10,7 @@
           <node begin="10" end="11" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="11" cat="np" end="13" id="8" rel="obj1">
             <node begin="11" end="12" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="10" lemma="marinevoorlichtingsdienst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorlichtingsdienst" word="marinevoorlichtingsdienst"/>
+            <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="10" lemma="marine_voorlichting_dienst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorlichtingsdienst" word="marinevoorlichtingsdienst"/>
           </node>
         </node>
       </node>
@@ -53,7 +53,7 @@
                   <node begin="25" end="26" id="42" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
                   <node begin="23" cat="ppart" end="27" id="43" rel="vc">
                     <node begin="23" end="25" id="44" index="2" rel="su"/>
-                    <node begin="26" buiging="zonder" end="27" id="45" lemma="voorkomen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kom" word="voorgekomen" wvorm="vd"/>
+                    <node begin="26" buiging="zonder" end="27" id="45" lemma="voor_komen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kom" word="voorgekomen" wvorm="vd"/>
                   </node>
                 </node>
               </node>

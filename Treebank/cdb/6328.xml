@@ -7,7 +7,7 @@
         <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
         <node begin="1" end="2" getal="mv" graad="basis" id="5" lemma="engelsen" ntype="eigen" pos="noun" postag="N(eigen,mv,basis)" pt="n" rel="hd" root="Engelsman" word="Engelsen"/>
       </node>
-      <node begin="2" end="3" id="6" lemma="hebben" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="heb" word="hadden" wvorm="pv"/>
+      <node begin="2" end="3" id="6" lemma="mee_hebben" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="heb" word="hadden" wvorm="pv"/>
       <node begin="5" end="6" id="7" lemma="mee" pos="adv" postag="VZ(fin)" pt="vz" rel="mod" root="mee" vztype="fin" word="mee"/>
       <node begin="3" cat="np" end="21" id="8" rel="obj1">
         <node begin="3" end="4" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
@@ -21,7 +21,7 @@
               <node begin="10" end="11" id="17" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
               <node begin="11" cat="np" end="13" id="18" rel="obj1">
                 <node begin="11" buiging="met-e" end="12" id="19" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" word="deze"/>
-                <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="20" lemma="dinsdagmiddag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dinsdagmiddag" word="dinsdagmiddag"/>
+                <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="20" lemma="dinsdag_middag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dinsdagmiddag" word="dinsdagmiddag"/>
               </node>
             </node>
             <node begin="15" end="16" id="21" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>

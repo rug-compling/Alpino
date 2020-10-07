@@ -3,7 +3,7 @@
   <node begin="0" cat="top" end="34" id="0" rel="top">
     <node begin="23" end="24" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="28" end="29" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="29" end="30" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="29" end="30" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="du" end="33" id="4" rel="--">
       <node begin="0" cat="du" end="28" id="5" rel="nucl">
         <node begin="0" cat="whrel" end="23" id="6" rel="dp">
@@ -26,7 +26,7 @@
                 <node begin="6" cat="conj" end="13" id="21" rel="obj1">
                   <node begin="6" cat="np" end="8" id="22" rel="cnj">
                     <node begin="6" end="7" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                    <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="24" lemma="astmabestrijding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bestrijding" word="astmabestrijding"/>
+                    <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="24" lemma="astma_bestrijding" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bestrijding" word="astmabestrijding"/>
                   </node>
                   <node begin="8" conjtype="neven" end="9" id="25" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                   <node begin="9" cat="np" end="13" id="26" rel="cnj">
@@ -50,7 +50,7 @@
                     <node begin="19" end="20" id="40" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
                     <node begin="20" buiging="zonder" end="21" graad="basis" id="41" lemma="kostbaar" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="kostbaar" word="kostbaar"/>
                     <node begin="21" buiging="zonder" end="22" graad="basis" id="42" lemma="eigen" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="eigen" word="eigen"/>
-                    <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="43" lemma="kantoorpand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pand" word="kantoorpand"/>
+                    <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="43" lemma="kantoor_pand" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="pand" word="kantoorpand"/>
                   </node>
                 </node>
               </node>
@@ -58,7 +58,7 @@
           </node>
         </node>
         <node begin="24" cat="smain" end="28" id="44" rel="dp">
-          <node begin="24" end="25" id="45" lemma="dragen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="draag" word="dragen" wvorm="pv"/>
+          <node begin="24" end="25" id="45" lemma="af_dragen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="draag" word="dragen" wvorm="pv"/>
           <node begin="25" end="26" getal="mv" id="46" lemma="wij" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" root="wij" status="vol" vwtype="pers" word="wij"/>
           <node begin="26" end="27" getal="ev" id="47" lemma="niets" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="niets" status="vol" vwtype="onbep" word="niets"/>
           <node begin="27" end="28" id="48" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="af" vztype="fin" word="af"/>
@@ -74,7 +74,7 @@
     </node>
     <node begin="33" end="34" id="54" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>waarbij het geld zoveel mogelijk aan de astmabestrijding en de ruim 800.000 astmapatienten wordt besteed in plaats van aan een kostbaar eigen kantoorpand , dragen wij niets af , &quot; aldus het bestuur .</sentence>
+  <sentence>waarbij het geld zoveel mogelijk aan de astmabestrijding en de ruim 800.000 astmapatienten wordt besteed in plaats van aan een kostbaar eigen kantoorpand , dragen wij niets af , &#34; aldus het bestuur .</sentence>
   <comments>
     <comment>mis-tokenization?</comment>
   </comments>

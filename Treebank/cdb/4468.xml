@@ -12,12 +12,12 @@
         <node begin="2" end="3" id="8" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
         <node begin="0" cat="ppart" end="15" id="9" rel="vc">
           <node begin="0" end="2" id="10" index="1" rel="obj1"/>
-          <node begin="3" buiging="zonder" end="4" id="11" lemma="rondsturen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stuur" word="rondgestuurd" wvorm="vd"/>
+          <node begin="3" buiging="zonder" end="4" id="11" lemma="rond_sturen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stuur" word="rondgestuurd" wvorm="vd"/>
           <node begin="4" cat="pp" end="15" id="12" rel="mod">
             <node begin="4" end="5" id="13" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
             <node begin="5" cat="np" end="15" id="14" rel="obj1">
               <node begin="5" end="6" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="6" end="7" getal="mv" graad="basis" id="16" lemma="kiesvereniging" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vereniging" word="kiesverenigingen"/>
+              <node begin="6" end="7" getal="mv" graad="basis" id="16" lemma="kies_vereniging" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="vereniging" word="kiesverenigingen"/>
               <node begin="8" cat="rel" end="15" id="17" rel="mod">
                 <node begin="8" end="9" getal="getal" id="18" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
                 <node begin="8" cat="ssub" end="15" id="19" rel="body">

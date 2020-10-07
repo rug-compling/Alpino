@@ -23,7 +23,7 @@
                 <node begin="10" buiging="met-e" end="11" graad="basis" id="19" lemma="ernstig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ernstig" word="ernstige"/>
                 <node begin="11" end="12" getal="mv" graad="basis" id="20" lemma="verwonding" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="verwonding" word="verwondingen"/>
               </node>
-              <node begin="12" end="13" id="21" lemma="oplopen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="loop" word="opliep" wvorm="pv"/>
+              <node begin="12" end="13" id="21" lemma="op_lopen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="loop" word="opliep" wvorm="pv"/>
             </node>
             <node begin="13" conjtype="neven" end="14" id="22" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="8" cat="ssub" end="23" id="23" rel="cnj">
@@ -36,17 +36,17 @@
                   <node begin="14" end="15" id="30" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
                   <node begin="15" cat="np" end="19" id="31" rel="obj1">
                     <node begin="15" end="16" id="32" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-                    <node begin="16" end="17" genus="genus" getal="ev" graad="basis" id="33" lemma="Wilhelmina-Gasthuis" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Wilhelmina-Gasthuis" word="Wilhelmina-Gasthuis"/>
+                    <node begin="16" end="17" genus="genus" getal="ev" graad="basis" id="33" lemma="Wilhelmina_Gasthuis" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Wilhelmina-Gasthuis" word="Wilhelmina-Gasthuis"/>
                     <node begin="17" cat="pp" end="19" id="34" rel="mod">
                       <node begin="17" end="18" id="35" lemma="te" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="te" vztype="init" word="te"/>
                       <node begin="18" end="19" genus="onz" getal="ev" graad="basis" id="36" lemma="Amsterdam" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Amsterdam" word="Amsterdam"/>
                     </node>
                   </node>
                 </node>
-                <node begin="20" buiging="zonder" end="21" id="37" lemma="overbrengen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="breng" word="overgebracht" wvorm="vd"/>
+                <node begin="20" buiging="zonder" end="21" id="37" lemma="over_brengen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="breng" word="overgebracht" wvorm="vd"/>
                 <node begin="21" cat="pp" end="23" id="38" rel="mod">
                   <node begin="21" end="22" id="39" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
-                  <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="40" lemma="ziekenauto" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="auto" word="ziekenauto"/>
+                  <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="40" lemma="zieke_auto" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="auto" word="ziekenauto"/>
                 </node>
               </node>
             </node>

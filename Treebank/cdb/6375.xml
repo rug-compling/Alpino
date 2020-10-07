@@ -13,7 +13,7 @@
           <node begin="4" cat="np" end="9" id="10" rel="obj1">
             <node begin="4" end="5" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="5" buiging="met-e" end="6" graad="basis" id="12" lemma="internationaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Internationaal" word="internationale"/>
-            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="arbeidsorganisatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="arbeidsorganisatie" word="arbeidsorganisatie"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="arbeid_organisatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="arbeidsorganisatie" word="arbeidsorganisatie"/>
             <node begin="8" end="9" genus="genus" getal="ev" graad="basis" id="14" lemma="IAO" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mod" root="IAO" word="IAO"/>
           </node>
         </node>
@@ -42,7 +42,7 @@
                   <node begin="19" buiging="met-e" end="20" graad="basis" id="35" lemma="speciaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="speciaal" word="speciale"/>
                   <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="36" lemma="commissie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="commissie" word="commissie"/>
                 </node>
-                <node begin="22" buiging="zonder" end="23" id="37" lemma="uitbrengen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="breng" word="uitgebracht" wvorm="vd"/>
+                <node begin="22" buiging="zonder" end="23" id="37" lemma="uit_brengen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="breng" word="uitgebracht" wvorm="vd"/>
               </node>
             </node>
           </node>
@@ -52,7 +52,7 @@
               <node begin="26" conjtype="neven" end="27" id="41" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
               <node begin="24" cat="np" end="34" id="42" rel="cnj">
                 <node begin="24" end="25" id="43" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="44" lemma="arbeidssituatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="situatie" word="arbeidssituatie"/>
+                <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="44" lemma="arbeid_situatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="situatie" word="arbeidssituatie"/>
                 <node begin="32" cat="pp" end="34" id="45" index="3" rel="mod">
                   <node begin="32" end="33" id="46" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                   <node begin="33" end="34" genus="onz" getal="ev" graad="basis" id="47" lemma="Spanje" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Spanje" word="Spanje"/>
@@ -65,7 +65,7 @@
                   <node begin="29" end="30" id="52" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                   <node begin="30" cat="np" end="32" id="53" rel="obj1">
                     <node begin="30" end="31" id="54" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                    <node begin="31" end="32" genus="zijd" getal="ev" graad="basis" id="55" lemma="vakbeweging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vakbeweging" word="vakbeweging"/>
+                    <node begin="31" end="32" genus="zijd" getal="ev" graad="basis" id="55" lemma="vak_beweging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="vakbeweging" word="vakbeweging"/>
                   </node>
                 </node>
                 <node begin="32" end="34" id="56" index="3" rel="mod"/>

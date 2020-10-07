@@ -24,7 +24,7 @@
             <node begin="10" end="11" id="18" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="11" cat="np" end="13" id="19" rel="obj1">
               <node begin="11" end="12" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="21" lemma="versnellingsbak" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bak" word="versnellingsbak"/>
+              <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="21" lemma="versnelling_bak" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bak" word="versnellingsbak"/>
             </node>
           </node>
           <node begin="13" cat="pp" end="22" id="22" rel="mod">
@@ -62,12 +62,12 @@
             </node>
             <node begin="27" buiging="met-e" end="28" graad="basis" id="46" lemma="verstelbaar" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="verstelbare" word="verstelbare"/>
           </node>
-          <node begin="28" end="29" getal="mv" graad="basis" id="47" lemma="rugleuning" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="rugleuning" word="rugleuningen"/>
+          <node begin="28" end="29" getal="mv" graad="basis" id="47" lemma="rug_leuning" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="rugleuning" word="rugleuningen"/>
           <node begin="29" cat="pp" end="32" id="48" rel="mod">
             <node begin="29" end="30" id="49" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="30" cat="np" end="32" id="50" rel="obj1">
               <node begin="30" end="31" id="51" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="31" end="32" getal="mv" graad="basis" id="52" lemma="voorstoel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="stoel" word="voorstoelen"/>
+              <node begin="31" end="32" getal="mv" graad="basis" id="52" lemma="voor_stoel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="stoel" word="voorstoelen"/>
             </node>
           </node>
         </node>

@@ -9,7 +9,7 @@
     <node begin="0" cat="du" end="36" id="6" rel="--">
       <node begin="0" cat="smain" end="19" id="7" rel="dp">
         <node begin="0" cat="np" end="9" id="8" rel="su">
-          <node begin="0" end="1" getal="ev" graad="basis" id="9" lemma="Schalekamp" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Schalekamp" word="Schalekamp&apos;s"/>
+          <node begin="0" end="1" getal="ev" graad="basis" id="9" lemma="Schalekamp" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Schalekamp" word="Schalekamp&#39;s"/>
           <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="10" lemma="collega" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="collega" word="collega"/>
           <node begin="2" cat="pp" end="5" id="11" rel="mod">
             <node begin="2" end="3" id="12" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
@@ -36,12 +36,12 @@
           </node>
         </node>
         <node begin="15" cat="np" end="19" id="28" rel="predc">
-          <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="29" lemma="bedrijfsleider" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bedrijfsleider" word="bedrijfsleider"/>
+          <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="29" lemma="bedrijf_leider" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bedrijfsleider" word="bedrijfsleider"/>
           <node begin="16" cat="pp" end="19" id="30" rel="mod">
             <node begin="16" end="17" id="31" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="17" cat="np" end="19" id="32" rel="obj1">
               <node begin="17" end="18" id="33" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-              <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="34" lemma="besteldienst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dienst" word="besteldienst"/>
+              <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="34" lemma="bestel_dienst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dienst" word="besteldienst"/>
             </node>
           </node>
         </node>
@@ -76,5 +76,5 @@
     </node>
     <node begin="36" end="37" id="56" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Schalekamp&apos;s collega in Den Helder , de heer Pesie , is sinds begin vorig jaar bedrijfsleider van een besteldienst , hij heeft maar een klant , een bank , waarvoor hij dagelijks ongeveer 400 brieven bezorgt .</sentence>
+  <sentence>Schalekamp&#39;s collega in Den Helder , de heer Pesie , is sinds begin vorig jaar bedrijfsleider van een besteldienst , hij heeft maar een klant , een bank , waarvoor hij dagelijks ongeveer 400 brieven bezorgt .</sentence>
 </alpino_ds>

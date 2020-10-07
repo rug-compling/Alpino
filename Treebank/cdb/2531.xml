@@ -6,7 +6,7 @@
         <node begin="0" cat="np" end="3" id="3" rel="cnj">
           <node begin="0" end="1" id="4" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
           <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="zogenaamd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="zogenaamd" word="zogenaamde"/>
-          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="moeraskever" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kever" word="moeraskever"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="moeras_kever" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kever" word="moeraskever"/>
         </node>
         <node begin="3" conjtype="neven" end="4" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="4" cat="np" end="6" id="8" rel="cnj">
@@ -40,12 +40,12 @@
         <node begin="18" end="19" id="29" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
         <node begin="19" cat="np" end="27" id="30" rel="obj1">
           <node begin="19" end="20" id="31" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-          <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="32" lemma="grondwerk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="werk" word="grondwerk"/>
+          <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="32" lemma="grond_werk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="werk" word="grondwerk"/>
           <node begin="21" cat="pp" end="27" id="33" rel="mod">
             <node begin="21" end="22" id="34" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
             <node begin="22" cat="np" end="27" id="35" rel="obj1">
               <node begin="22" end="23" id="36" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-              <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="37" lemma="satellietontvangststation" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="station" word="satellietontvangststation"/>
+              <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="37" lemma="satelliet_ontvangst_station" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="station" word="satellietontvangststation"/>
               <node begin="24" cat="pp" end="27" id="38" rel="mod">
                 <node begin="24" end="25" id="39" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                 <node begin="25" cat="np" end="27" id="40" rel="obj1">

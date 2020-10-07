@@ -2,8 +2,8 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="48" id="0" rel="top">
     <node begin="19" end="20" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="23" end="24" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="27" end="28" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="23" end="24" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="27" end="28" id="3" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="34" end="35" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="conj" end="47" id="5" rel="--">
       <node begin="0" cat="smain" end="19" id="6" rel="cnj">
@@ -14,7 +14,7 @@
             <node begin="1" end="2" id="11" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
             <node begin="2" cat="np" end="4" id="12" rel="obj1">
               <node begin="2" end="3" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="14" lemma="verkiezingsnacht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verkiezingsnacht" word="verkiezingsnacht"/>
+              <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="14" lemma="verkiezing_nacht" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verkiezingsnacht" word="verkiezingsnacht"/>
             </node>
           </node>
           <node begin="5" cat="ap" end="7" id="15" rel="mod">
@@ -94,7 +94,7 @@
                             <node begin="43" cat="pp" end="46" id="74" rel="ld">
                               <node begin="43" end="44" id="75" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
                               <node begin="44" cat="np" end="46" id="76" rel="obj1">
-                                <node begin="44" buiging="met-e" end="45" graad="basis" id="77" lemma="twee/deren" naamval="stan" pos="num" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="derde" word="twee/derde"/>
+                                <node begin="44" buiging="met-e" end="45" graad="basis" id="77" lemma="twee/derde" naamval="stan" pos="num" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="derde" word="twee/derde"/>
                                 <node begin="45" end="46" genus="zijd" getal="ev" graad="basis" id="78" lemma="meerderheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="meerderheid" word="meerderheid"/>
                               </node>
                             </node>
@@ -116,5 +116,5 @@
     </node>
     <node begin="47" end="48" id="83" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Reeds in de verkiezingsnacht werd direct al gesproken over nieuwe verkiezingen als mogelijkheid om uit de moeilijkheid te komen , maar in het &quot; akkoord van Kralendijk &quot; hebben zoveel partijen elkaar thans gevonden , dat er een kabinet gevormd kan worden dat op twee/derde meerderheid steunt .</sentence>
+  <sentence>Reeds in de verkiezingsnacht werd direct al gesproken over nieuwe verkiezingen als mogelijkheid om uit de moeilijkheid te komen , maar in het &#34; akkoord van Kralendijk &#34; hebben zoveel partijen elkaar thans gevonden , dat er een kabinet gevormd kan worden dat op twee/derde meerderheid steunt .</sentence>
 </alpino_ds>

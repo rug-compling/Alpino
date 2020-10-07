@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="26" id="0" rel="top">
-    <node begin="3" end="4" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="6" end="7" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="3" end="4" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="6" end="7" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="11" end="12" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="15" end="16" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="25" id="5" rel="--">
@@ -29,7 +29,7 @@
               <node begin="12" cat="ssub" end="15" id="23" rel="body">
                 <node begin="12" end="13" id="24" index="2" rel="su"/>
                 <node begin="13" end="14" getal="getal" id="25" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="zich" status="red" vwtype="refl" word="zich"/>
-                <node begin="14" end="15" id="26" lemma="aaneensluiten" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sluit" word="aaneensluit" wvorm="pv"/>
+                <node begin="14" end="15" id="26" lemma="aaneen_sluiten" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sluit" word="aaneensluit" wvorm="pv"/>
               </node>
             </node>
           </node>
@@ -54,5 +54,5 @@
     </node>
     <node begin="25" end="26" id="40" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>De teneur van &quot; Realengo 18 &quot; is dat een volk , dat zich aaneensluit , zich de sterkere onderdrukker van het lijf kan houden .</sentence>
+  <sentence>De teneur van &#34; Realengo 18 &#34; is dat een volk , dat zich aaneensluit , zich de sterkere onderdrukker van het lijf kan houden .</sentence>
 </alpino_ds>

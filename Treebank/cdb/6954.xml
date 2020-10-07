@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="32" id="0" rel="top">
-    <node begin="23" end="24" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="25" end="26" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="23" end="24" id="1" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
+    <node begin="25" end="26" id="2" lemma="&#34;" pos="punct" postag="LET()" pt="let" rel="--" root="&#34;" word="&#34;"/>
     <node begin="0" cat="du" end="31" id="3" rel="--">
       <node begin="0" cat="smain" end="23" id="4" rel="dp">
         <node begin="0" end="1" genus="masc" getal="ev" id="5" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="Hij"/>
@@ -67,12 +67,12 @@
           <node begin="28" end="29" id="49" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
           <node begin="29" cat="np" end="31" id="50" rel="body">
             <node begin="29" end="30" id="51" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="52" lemma="natuurserie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="serie" word="natuurserie"/>
+            <node begin="30" end="31" genus="zijd" getal="ev" graad="basis" id="52" lemma="natuur_serie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="serie" word="natuurserie"/>
           </node>
         </node>
       </node>
     </node>
     <node begin="31" end="32" id="53" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
-  <sentence>Hij vertoeft met zijn camera steeds in die uithoeken van de wereld waar resten van oude volken zich teweer stellen tegen hun ondergang &quot; Bespied &quot; is gestart als een natuurserie .</sentence>
+  <sentence>Hij vertoeft met zijn camera steeds in die uithoeken van de wereld waar resten van oude volken zich teweer stellen tegen hun ondergang &#34; Bespied &#34; is gestart als een natuurserie .</sentence>
 </alpino_ds>
