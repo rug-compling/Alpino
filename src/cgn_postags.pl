@@ -35,10 +35,10 @@ cgn_postag_c(particle(_),Stem,_,Q0,Q,_,_) -->
     !,
     tags(Q0,Q,Stem,Tag).
 
-cgn_postag_c(robust_skip,Stem,Word,Q0,Q,_Cat,_) -->
+cgn_postag_c(robust_skip,Surf,Word,Q0,Q,_Cat,_) -->
     {  lassy(Word,Tag) },
     !,
-    tags(Q0,Q,Stem,Tag).
+    tags(Q0,Q,guess(Surf),Tag).
 
 cgn_postag_c(robust_skip,_Stem,Word,Q0,Q,Cat,_) -->
     {  alpino_lexical_analysis:tag(_,_,Q0,Q,Stem,Word,His,Frame) },
@@ -86,11 +86,13 @@ tags(Q0,Q,Stem,Tag,L0,L):-
     hdrug_util:hdrug_flag(add_nodes_for_mwu,On),
     tags(On,Q0,Q,Stem,Tag,L0,L).
 
-tags(off,Q0,Q,Stem,Tag,[cgn_postag(Q0,Q,Stem,Tag)|L],L).
+tags(off,Q0,Q,Stem0,Tag,[cgn_postag(Q0,Q,Stem,Tag)|L],L) :-
+    guess_lemma(Stem0,Stem).
 
-tags(on,Q0,Q,Stem,Tag,L0,L) :-
+tags(on,Q0,Q,Stem0,Tag,L0,L) :-
     (   Q is Q0 + 1
-    ->  L0 = [cgn_postag(Q0,Q,Stem,Tag)|L]
+    ->  guess_lemma(Stem0,Stem),
+	L0 = [cgn_postag(Q0,Q,Stem,Tag)|L]
     ;   stags(Q0,Q,Stem,Tag,1,L0,L)
     ).
 
@@ -1810,7 +1812,15 @@ num_postag(A,'SPEC(symb)') :-
     alpino_lex:num_dot_num(_,A).
 
 %% mwu_postag(lemma,surf,tags,newlemma)
-mwu_postag(voorzover,'voor zover',['VZ(init)','BW()'],[voor,zover]).
+mwu_postag(voorzover,'voor zover',
+	   ['VZ(init)','BW()'],
+	   [voor,zover]).
+mwu_postag('mogelijk zoveel',_,
+	   ['TW(hoofd,vrij)','ADJ(vrij,basis,zonder)'],
+	   [zoveel,mogelijk]).
+mwu_postag('aantal een',_,
+	   ['LID(onbep,stan,agr)','N(soort,ev,basis,onz,stan)'],
+	   [een,aantal]).
 
 %% da 's
 mwu_postag(v_root(ben,zijn),'da \'s',
@@ -1929,7 +1939,6 @@ mwu_postag('een handje',['LID(onbep,stan,agr)','N(soort,ev,dim,onz,stan)']).
 mwu_postag('een kleine',['LID(onbep,stan,agr)','ADJ(prenom,basis,met-e,stan)']).
 mwu_postag('een of ander',['TW(hoofd,prenom,stan)','VG(neven)','ADJ(prenom,basis,met-e,stan)']).
 mwu_postag('een of',['LID(onbep,stan,agr)','VG(neven)']).
-mwu_postag('aantal een',['LID(onbep,stan,agr)','N(soort,ev,basis,onz,stan)']).
 mwu_postag('een paar',['LID(onbep,stan,agr)','N(soort,ev,basis,genus,stan)']).
 mwu_postag('eens te meer',['BW()','VZ(init)','VNW(onbep,grad,stan,vrij,zonder,comp)']).
 mwu_postag('eigen verklaring',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,zijd,stan)']).
@@ -2013,8 +2022,8 @@ mwu_postag('je reinste',['VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)','ADJ(no
 mwu_postag('de reinste',['LID(bep,stan,rest)','ADJ(nom,sup,met-e,zonder-n,stan)']).
 mwu_postag('keer op keer',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,ev,basis,zijd,stan)']).
 mwu_postag('laat staan',['WW(pv,tgw,ev)','WW(inf,vrij,zonder)']).
-mwu_postag('lang niet',['ADJ(vrij,basis,zonder)','BW()']).
-mwu_postag('langer niet',['BW()','ADJ(vrij,comp,zonder)']).
+%mwu_postag('lang niet',['ADJ(vrij,basis,zonder)','BW()']).
+%mwu_postag('langer niet',['BW()','ADJ(vrij,comp,zonder)']).
 mwu_postag('langzaamaan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
 mwu_postag('maar dan',['VG(neven)','BW()']).
 mwu_postag('maar ja',['VG(neven)','TSW()']).
@@ -2030,7 +2039,6 @@ mwu_postag('met name',['VZ(init)','N(soort,ev,basis,dat)']).
 mwu_postag('met uitzondering van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
 mwu_postag('min of meer',['BW()','VG(neven)','VNW(onbep,grad,stan,vrij,zonder,comp)']).
 mwu_postag('minder dan',['VNW(onbep,grad,stan,vrij,zonder,comp)','VG(onder)']).
-mwu_postag('mogelijk zoveel',['TW(hoofd,vrij)','ADJ(vrij,basis,zonder)']).
 mwu_postag('na afloop van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
 mwu_postag('na verloop van',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)']).
 mwu_postag('naar aanleiding van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
@@ -3899,4 +3907,509 @@ gelijk           ADJ(vrij,basis,zonder)                       N(soort,ev,basis,o
 
 */
 
+guess_lemma(guess(Surf),Lemma) :-
+    !,
+    (   lassy_lemma(Surf,Lemma1)
+    ->  Lemma = Lemma1
+    ;   Lemma = Surf
+    ).
+guess_lemma(Lemma,Lemma).
 
+lassy_lemma('georganiseerd','organiseren').
+lassy_lemma('getroffen','treffen').
+lassy_lemma('hield','houden').
+lassy_lemma('landelijke','landelijk').
+lassy_lemma('maakten','maken').
+lassy_lemma('provincies','provincie').
+lassy_lemma('raakte','raken').
+lassy_lemma('volgend','volgen').
+lassy_lemma('wens','wensen').
+lassy_lemma('wilden','willen').
+lassy_lemma('beschouwd','beschouwen').
+lassy_lemma('Chinese','Chinees').
+lassy_lemma('Franstalige','Franstalig').
+lassy_lemma('honderden','honderd').
+lassy_lemma('ingezet','inzetten').
+lassy_lemma('mocht','mogen').
+lassy_lemma('nr.','nummer').
+lassy_lemma('prettige','prettig').
+lassy_lemma('\'t','het').
+lassy_lemma('vormt','vormen').
+lassy_lemma('behandeld','behandelen').
+lassy_lemma('best','goed').
+lassy_lemma('concrete','concreet').
+lassy_lemma('gebouwd','bouwen').
+lassy_lemma('Gemeenschap','gemeenschap').
+lassy_lemma('hoeft','hoeven').
+lassy_lemma('iedere','ieder').
+lassy_lemma('Spaanse','Spaans').
+lassy_lemma('verhalen','verhaal').
+lassy_lemma('betaald','betalen').
+lassy_lemma('cijfers','cijfer').
+lassy_lemma('grenzen','grens').
+lassy_lemma('lager','laag').
+lassy_lemma('overheden','overheid').
+lassy_lemma('regionale','regionaal').
+lassy_lemma('schreef','schrijven').
+lassy_lemma('Ten','te').
+lassy_lemma('Epilepsie','epilepsie').
+lassy_lemma('juiste','juist').
+lassy_lemma('Koning','koning').
+lassy_lemma('liep','lopen').
+lassy_lemma('banken','bank').
+lassy_lemma('bijzondere','bijzonder').
+lassy_lemma('Blz.','bladzij').
+lassy_lemma('Japanse','Japans').
+lassy_lemma('Kamer','kamer').
+lassy_lemma('medewerkers','medewerker').
+lassy_lemma('Terwijl','terwijl').
+lassy_lemma('vaste','vast').
+lassy_lemma('vonden','vinden').
+lassy_lemma('werkte','werken').
+lassy_lemma('zet','zetten').
+lassy_lemma('bevoegdheden','bevoegdheid').
+lassy_lemma('Hun','hun').
+lassy_lemma('stelde','stellen').
+lassy_lemma('grotere','groot').
+lassy_lemma('Men','men').
+lassy_lemma('Vandaag','vandaag').
+lassy_lemma('wilt','willen').
+lassy_lemma('duizenden','duizend').
+lassy_lemma('gebeurde','gebeuren').
+lassy_lemma('redenen','reden').
+lassy_lemma('vormen','vorm').
+lassy_lemma('werken','werk').
+lassy_lemma('won','winnen').
+lassy_lemma('belangen','belang').
+lassy_lemma('lag','liggen').
+lassy_lemma('soorten','soort').
+lassy_lemma('Waarom','waarom').
+lassy_lemma('wetenschappelijke','wetenschappelijk').
+lassy_lemma('afspraken','afspraak').
+lassy_lemma('heren','heer').
+lassy_lemma('Indien','indien').
+lassy_lemma('verkocht','verkopen').
+lassy_lemma('vielen','vallen').
+lassy_lemma('vóór','voor').
+lassy_lemma('wapens','wapen').
+lassy_lemma('Geen','geen').
+lassy_lemma('ogen','oog').
+lassy_lemma('risico\'s','risico').
+lassy_lemma('telt','tellen').
+lassy_lemma('uitgebreid','uitbreiden').
+lassy_lemma('verboden','verbieden').
+lassy_lemma('recente','recent').
+lassy_lemma('Andere','ander').
+lassy_lemma('boeren','boer').
+lassy_lemma('gekregen','krijgen').
+lassy_lemma('omstandigheden','omstandigheid').
+lassy_lemma('verbonden','verbinden').
+lassy_lemma('brengt','brengen').
+lassy_lemma('én','en').
+lassy_lemma('geleid','leiden').
+lassy_lemma('oudere','oud').
+lassy_lemma('punten','punt').
+lassy_lemma('vermiste','vermist').
+lassy_lemma('Arabische','Arabisch').
+lassy_lemma('vrije','vrij').
+lassy_lemma('bekende','bekend').
+lassy_lemma('besloot','besluiten').
+lassy_lemma('Externe','extern').
+lassy_lemma('kent','kennen').
+lassy_lemma('Nog','nog').
+lassy_lemma('vaker','vaak').
+lassy_lemma('verdachte','verdenken').
+lassy_lemma('bedoeld','bedoelen').
+lassy_lemma('beelden','beeld').
+lassy_lemma('Dames','dame').
+lassy_lemma('ernstige','ernstig').
+lassy_lemma('moderne','modern').
+lassy_lemma('Verder','verder').
+lassy_lemma('delen','deel').
+lassy_lemma('hogere','hoog').
+lassy_lemma('onderzocht','onderzoeken').
+lassy_lemma('ontwikkeld','ontwikkelen').
+lassy_lemma('partners','partner').
+lassy_lemma('vrienden','vriend').
+lassy_lemma('Zoals','zoals').
+lassy_lemma('beperkt','beperken').
+lassy_lemma('Een','één').
+lassy_lemma('\'s','de').
+lassy_lemma('Sommige','sommig').
+lassy_lemma('Alle','al').
+lassy_lemma('Dan','dan').
+lassy_lemma('groepen','groep').
+lassy_lemma('initiatieven','initiatief').
+lassy_lemma('Is','zijn').
+lassy_lemma('ontstond','ontstaan').
+lassy_lemma('prijzen','prijs').
+lassy_lemma('staten','staat').
+lassy_lemma('tanks','tank').
+lassy_lemma('trok','trekken').
+lassy_lemma('Wel','wel').
+lassy_lemma('bereikt','bereiken').
+lassy_lemma('Twee','twee').
+lassy_lemma('voorwaarden','voorwaarde').
+lassy_lemma('betreffende','betreffen').
+lassy_lemma('onderhandelingen','onderhandeling').
+lassy_lemma('Onderwijs','onderwijs').
+lassy_lemma('Palestijnse','Palestijns').
+lassy_lemma('rechten','recht').
+lassy_lemma('verloren','verliezen').
+lassy_lemma('gezegd','zeggen').
+lassy_lemma('stoffen','stof').
+lassy_lemma('studies','studie').
+lassy_lemma('technische','technisch').
+lassy_lemma('verplicht','verplichten').
+lassy_lemma('besloten','besluiten').
+lassy_lemma('verwacht','verwachten').
+lassy_lemma('gezet','zetten').
+lassy_lemma('betere','goed').
+lassy_lemma('Britten','Brit').
+lassy_lemma('gekozen','kiezen').
+lassy_lemma('zag','zien').
+lassy_lemma('bevat','bevatten').
+lassy_lemma('enorme','enorm').
+lassy_lemma('veroorzaakt','veroorzaken').
+lassy_lemma('dergelijke','dergelijk').
+lassy_lemma('doden','dood').
+lassy_lemma('ene','een').
+lassy_lemma('gewone','gewoon').
+lassy_lemma('mogelijkheden','mogelijkheid').
+lassy_lemma('minuten','minuut').
+lassy_lemma('totale','totaal').
+lassy_lemma('Wij','wij').
+lassy_lemma('wist','weten').
+lassy_lemma('bracht','brengen').
+lassy_lemma('echte','echt').
+lassy_lemma('klanten','klant').
+lassy_lemma('organisaties','organisatie').
+lassy_lemma('uitgevoerd','uitvoeren').
+lassy_lemma('verdere','ver').
+lassy_lemma('Alleen','alleen').
+lassy_lemma('boeken','boek').
+lassy_lemma('Daarbij','daarbij').
+lassy_lemma('Vooral','vooral').
+lassy_lemma('voormalige','voormalig').
+lassy_lemma('Wie','wie').
+lassy_lemma('begint','beginnen').
+lassy_lemma('Duitsers','Duitser').
+lassy_lemma('Omdat','omdat').
+lassy_lemma('Over','over').
+lassy_lemma('specifieke','specifiek').
+lassy_lemma('Al','al').
+lassy_lemma('gesproken','spreken').
+lassy_lemma('hebt','hebben').
+lassy_lemma('leidt','leiden').
+lassy_lemma('ministers','minister').
+lassy_lemma('Nederlanders','Nederlander').
+lassy_lemma('plannen','plan').
+lassy_lemma('werknemers','werknemer').
+lassy_lemma('gebaseerd','baseren').
+lassy_lemma('officiële','officieel').
+lassy_lemma('projecten','project').
+lassy_lemma('speciale','speciaal').
+lassy_lemma('studenten','student').
+lassy_lemma('gericht','richten').
+lassy_lemma('Iraakse','Iraaks').
+lassy_lemma('opgericht','oprichten').
+lassy_lemma('gingen','gaan').
+lassy_lemma('mogelijke','mogelijk').
+lassy_lemma('viel','vallen').
+lassy_lemma('volledige','volledig').
+lassy_lemma('woorden','woord').
+lassy_lemma('loopt','lopen').
+lassy_lemma('soldaten','soldaat').
+lassy_lemma('biedt','bieden').
+lassy_lemma('Hier','hier').
+lassy_lemma('Of','of').
+lassy_lemma('personen','persoon').
+lassy_lemma('gesloten','sluiten').
+lassy_lemma('ziet','zien').
+lassy_lemma('instellingen','instelling').
+lassy_lemma('interne','intern').
+lassy_lemma('Naast','naast').
+lassy_lemma('Uit','uit').
+lassy_lemma('gehad','hebben').
+lassy_lemma('goederen','goed').
+lassy_lemma('Je','je').
+lassy_lemma('plaatsen','plaats').
+lassy_lemma('sterke','sterk').
+lassy_lemma('Vanaf','vanaf').
+lassy_lemma('Buitenlandse','buitenlands').
+lassy_lemma('openbare','openbaar').
+lassy_lemma('speelt','spelen').
+lassy_lemma('Unie','unie').
+lassy_lemma('bepaald','bepalen').
+lassy_lemma('Italiaanse','Italiaans').
+lassy_lemma('leidde','leiden').
+lassy_lemma('Meer','veel').
+lassy_lemma('aanslagen','aanslag').
+lassy_lemma('kregen','krijgen').
+lassy_lemma('groter','groot').
+lassy_lemma('Justitie','justitie').
+lassy_lemma('jonge','jong').
+lassy_lemma('Russische','Russisch').
+lassy_lemma('burgers','burger').
+lassy_lemma('gebeurt','gebeuren').
+lassy_lemma('volgt','volgen').
+lassy_lemma('gevonden','vinden').
+lassy_lemma('kosten','kost').
+lassy_lemma('ben','zijn').
+lassy_lemma('der','de').
+lassy_lemma('Wanneer','wanneer').
+lassy_lemma('zogenaamde','zogenaamd').
+lassy_lemma('centrale','centraal').
+lassy_lemma('medicijnen','medicijn').
+lassy_lemma('vond','vinden').
+lassy_lemma('vragen','vraag').
+lassy_lemma('bestaande','bestaan').
+lassy_lemma('dient','dienen').
+lassy_lemma('slachtoffers','slachtoffer').
+lassy_lemma('diverse','divers').
+lassy_lemma('algemene','algemeen').
+lassy_lemma('betreft','betreffen').
+lassy_lemma('gesteld','stellen').
+lassy_lemma('korte','kort').
+lassy_lemma('Bovendien','bovendien').
+lassy_lemma('Daarom','daarom').
+lassy_lemma('Hoewel','hoewel').
+lassy_lemma('steden','stad').
+lassy_lemma('komende','komen').
+lassy_lemma('hoger','hoog').
+lassy_lemma('anderen','ander').
+lassy_lemma('deed','doen').
+lassy_lemma('gekomen','komen').
+lassy_lemma('inwoners','inwoner').
+lassy_lemma('moesten','moeten').
+lassy_lemma('valt','vallen').
+lassy_lemma('werkt','werken').
+lassy_lemma('Brusselse','Brussels').
+lassy_lemma('regels','regel').
+lassy_lemma('liet','laten').
+lassy_lemma('Niet','niet').
+lassy_lemma('resultaten','resultaat').
+lassy_lemma('gebieden','gebied').
+lassy_lemma('lokale','lokaal').
+lassy_lemma('militaire','militair').
+lassy_lemma('opgenomen','opnemen').
+lassy_lemma('gevallen','geval').
+lassy_lemma('betrokken','betrekken').
+lassy_lemma('bleef','blijven').
+lassy_lemma('handen','hand').
+lassy_lemma('Israëlische','Israëlisch').
+lassy_lemma('mannen','man').
+lassy_lemma('lange','lang').
+lassy_lemma('militairen','militair').
+lassy_lemma('Onder','onder').
+lassy_lemma('Sinds','sinds').
+lassy_lemma('stelt','stellen').
+lassy_lemma('Veel','veel').
+lassy_lemma('buitenlandse','buitenlands').
+lassy_lemma('gebracht','brengen').
+lassy_lemma('gezien','zien').
+lassy_lemma('middelen','middel').
+lassy_lemma('Nu','nu').
+lassy_lemma('begonnen','beginnen').
+lassy_lemma('zei','zeggen').
+lassy_lemma('gegeven','geven').
+lassy_lemma('lidstaten','lidstaat').
+lassy_lemma('nam','nemen').
+lassy_lemma('Daarnaast','daarnaast').
+lassy_lemma('DE','de').
+lassy_lemma('weet','weten').
+lassy_lemma('verder','ver').
+lassy_lemma('wilde','willen').
+lassy_lemma('betekent','betekenen').
+lassy_lemma('leerlingen','leerling').
+lassy_lemma('bent','zijn').
+lassy_lemma('Zaken','zaak').
+lassy_lemma('Aan','aan').
+lassy_lemma('gaf','geven').
+lassy_lemma('konden','kunnen').
+lassy_lemma('zie','zien').
+lassy_lemma('geworden','worden').
+lassy_lemma('stond','staan').
+lassy_lemma('financiële','financieel').
+lassy_lemma('activiteiten','activiteit').
+lassy_lemma('gevolgen','gevolg').
+lassy_lemma('neemt','nemen').
+lassy_lemma('Amerikanen','Amerikaan').
+lassy_lemma('genoemd','noemen').
+lassy_lemma('name','naam').
+lassy_lemma('troepen','troep').
+lassy_lemma('scholen','school').
+lassy_lemma('zware','zwaar').
+lassy_lemma('diensten','dienst').
+lassy_lemma('gedaan','doen').
+lassy_lemma('beste','goed').
+lassy_lemma('houdt','houden').
+lassy_lemma('laat','laten').
+lassy_lemma('langer','lang').
+lassy_lemma('partijen','partij').
+lassy_lemma('Tot','tot').
+lassy_lemma('producten','product').
+lassy_lemma('jongeren','jong').
+lassy_lemma('genomen','nemen').
+lassy_lemma('bleek','blijken').
+lassy_lemma('Toch','toch').
+lassy_lemma('Zie','zien').
+lassy_lemma('z\'n','zijn').
+lassy_lemma('eerst','één').
+lassy_lemma('nationale','nationaal').
+lassy_lemma('geldt','gelden').
+lassy_lemma('gemeenten','gemeente').
+lassy_lemma('zaken','zaak').
+lassy_lemma('begon','beginnen').
+lassy_lemma('federale','federaal').
+lassy_lemma('maatregelen','maatregel').
+lassy_lemma('Daar','daar').
+lassy_lemma('aanvallen','aanval').
+lassy_lemma('sommige','sommig').
+lassy_lemma('heb','hebben').
+lassy_lemma('Tijdens','tijdens').
+lassy_lemma('Want','want').
+lassy_lemma('vorige','vorig').
+lassy_lemma('leden','lid').
+lassy_lemma('Toen','toen').
+lassy_lemma('elke','elk').
+lassy_lemma('Hoe','hoe').
+lassy_lemma('patiënten','patiënt').
+lassy_lemma('gegevens','gegeven').
+lassy_lemma('lijkt','lijken').
+lassy_lemma('woningen','woning').
+lassy_lemma('hoge','hoog').
+lassy_lemma('gehouden','houden').
+lassy_lemma('maakte','maken').
+lassy_lemma('Minister','minister').
+lassy_lemma('verkiezingen','verkiezing').
+lassy_lemma('derde','drie').
+lassy_lemma('zit','zitten').
+lassy_lemma('bepaalde','bepalen').
+lassy_lemma('duurzame','duurzaam').
+lassy_lemma('bedrijven','bedrijf').
+lassy_lemma('doet','doen').
+lassy_lemma('problemen','probleem').
+lassy_lemma('huidige','huidig').
+lassy_lemma('oude','oud').
+lassy_lemma('kwamen','komen').
+lassy_lemma('weken','week').
+lassy_lemma('welke','welk').
+lassy_lemma('belangrijkste','belangrijk').
+lassy_lemma('meeste','veel').
+lassy_lemma('enige','enig').
+lassy_lemma('ouders','ouder').
+lassy_lemma('kleine','klein').
+lassy_lemma('Zijn','zijn').
+lassy_lemma('geeft','geven').
+lassy_lemma('geweest','zijn').
+lassy_lemma('Van','van').
+lassy_lemma('ontwikkelingslanden','ontwikkelingsland').
+lassy_lemma('maanden','maand').
+lassy_lemma('ligt','liggen').
+lassy_lemma('vrouwen','vrouw').
+lassy_lemma('goede','goed').
+lassy_lemma('meest','veel').
+lassy_lemma('U','u').
+lassy_lemma('kreeg','krijgen').
+lassy_lemma('vele','veel').
+lassy_lemma('bestaat','bestaan').
+lassy_lemma('Wat','wat').
+lassy_lemma('beter','goed').
+lassy_lemma('We','we').
+lassy_lemma('afgelopen','aflopen').
+lassy_lemma('Britse','Brits').
+lassy_lemma('economische','economisch').
+lassy_lemma('Franse','Frans').
+lassy_lemma('Zij','zij').
+lassy_lemma('maakt','maken').
+lassy_lemma('dagen','dag').
+lassy_lemma('moest','moeten').
+lassy_lemma('vindt','vinden').
+lassy_lemma('blijkt','blijken').
+lassy_lemma('belangrijke','belangrijk').
+lassy_lemma('sociale','sociaal').
+lassy_lemma('blijft','blijven').
+lassy_lemma('ter','te').
+lassy_lemma('krijgt','krijgen').
+lassy_lemma('Door','door').
+lassy_lemma('hele','heel').
+lassy_lemma('grootste','groot').
+lassy_lemma('gebruikt','gebruiken').
+lassy_lemma('ging','gaan').
+lassy_lemma('internationale','internationaal').
+lassy_lemma('Om','om').
+lassy_lemma('zegt','zeggen').
+lassy_lemma('mag','mogen').
+lassy_lemma('gemaakt','maken').
+lassy_lemma('kunt','kunnen').
+lassy_lemma('Volgens','volgens').
+lassy_lemma('Duitse','Duits').
+lassy_lemma('tweede','twee').
+lassy_lemma('politieke','politiek').
+lassy_lemma('volgende','volgen').
+lassy_lemma('zouden','zullen').
+lassy_lemma('kon','kunnen').
+lassy_lemma('Zo','zo').
+lassy_lemma('een','één').
+lassy_lemma('hadden','hebben').
+lassy_lemma('later','laat').
+lassy_lemma('kinderen','kind').
+lassy_lemma('minder','weinig').
+lassy_lemma('Belgische','Belgisch').
+lassy_lemma('Na','na').
+lassy_lemma('onze','ons').
+lassy_lemma('ten','te').
+lassy_lemma('staat','staan').
+lassy_lemma('Europese','Europees').
+lassy_lemma('Met','met').
+lassy_lemma('enkele','enkel').
+lassy_lemma('Die','die').
+lassy_lemma('Ik','ik').
+lassy_lemma('laatste','laat').
+lassy_lemma('verschillende','verschillend').
+lassy_lemma('kwam','komen').
+lassy_lemma('Amerikaanse','Amerikaans').
+lassy_lemma('Bij','bij').
+lassy_lemma('landen','land').
+lassy_lemma('komt','komen').
+lassy_lemma('Ze','ze').
+lassy_lemma('Voor','voor').
+lassy_lemma('Vlaamse','Vlaams').
+lassy_lemma('Nederlandse','Nederlands').
+lassy_lemma('jaren','jaar').
+lassy_lemma('wil','willen').
+lassy_lemma('Als','als').
+lassy_lemma('Er','er').
+lassy_lemma('Deze','deze').
+lassy_lemma('gaat','gaan').
+lassy_lemma('grote','groot').
+lassy_lemma('Ook','ook').
+lassy_lemma('Dit','dit').
+lassy_lemma('Hij','hij').
+lassy_lemma('alle','al').
+lassy_lemma('Op','op').
+lassy_lemma('waren','zijn').
+lassy_lemma('Dat','dat').
+lassy_lemma('mensen','mens').
+lassy_lemma('had','hebben').
+lassy_lemma('werden','worden').
+lassy_lemma('zal','zullen').
+lassy_lemma('En','en').
+lassy_lemma('zou','zullen').
+lassy_lemma('eerste','één').
+lassy_lemma('moet','moeten').
+lassy_lemma('Maar','maar').
+lassy_lemma('nieuwe','nieuw').
+lassy_lemma('andere','ander').
+lassy_lemma('Een','een').
+lassy_lemma('kan','kunnen').
+lassy_lemma('meer','veel').
+lassy_lemma('heeft','hebben').
+lassy_lemma('wordt','worden').
+lassy_lemma('werd','worden').
+lassy_lemma('In','in').
+lassy_lemma('was','zijn').
+lassy_lemma('Het','het').
+lassy_lemma('De','de').
+lassy_lemma('is','zijn').

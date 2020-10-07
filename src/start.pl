@@ -2584,7 +2584,8 @@ compare_treebank_cgn(File,_) :-
     fail.
 
 compare_treebank_cgn_continue(File,SysTags,Ident) :-
-    hdrug_flag(current_input_sentence,Words),
+    hdrug_flag(current_input_sentence,Words0),
+    ignore_brackets(Words0,Words),
     collect_treebank_cgn(File,GoldTags),
     format(user_error,"~w~t~40+~w~t~40+~w~t~40+ T    ~w~n",[word,treebank,parser,key]),
     length(GoldTags,Len),

@@ -1346,6 +1346,7 @@ adv_tag(nice).
 adv_tag(nogmaals).
 adv_tag(overigens).
 adv_tag(tenminste).
+adv_tag([ten,minste]).  % officieel is schrijfwijze afhankelijk van spelling, dus ander lemma
 adv_tag(toch).
 adv_tag(trouwens).
 adv_tag(uiteraard).
@@ -2462,7 +2463,7 @@ particle(vandoor).
 particle(vaneen).
 particle(vast).
 particle(veilig).
-particle(verder).
+m(ver,particle(verder),verder).
 particle(verrot).
 particle(vet).
 particle(vlam).
@@ -3648,6 +3649,7 @@ m('in plaats van',  complementizer(inf),[inplaats,van]).  % prep
 m(met,              complementizer(inf),met).             % VL "Met ouder te worden voel ik me milder worden"
 m(na,               complementizer(inf),na).              % prep
 m(teneinde,         complementizer(inf),teneinde).        % cmp
+m('ten einde',      complementizer(inf),[ten,einde]).        % cmp
 m(vooraleer,        complementizer(inf),vooraleer).       % not in CGN
 m(zonder,           complementizer(inf),zonder).          % prep
 
@@ -3711,6 +3713,7 @@ m('sinds dat',      complementizer,[sinds,dat]).
 m('tegen dat',      complementizer,[tegen,dat]).
 m(telkens,          complementizer,telkens). % Vlaams
 m(temeer,           complementizer,temeer). % VL temeer we op cruciale momenten zelf in de fout gingen .
+m('te veel',        complementizer,[te,meer]). % VL temeer we op cruciale momenten zelf in de fout gingen .
 m(tenzij,           complementizer,tenzij).
 m(terwijl,          complementizer,terwijl).
 m(toen,             complementizer,toen).
@@ -3726,8 +3729,8 @@ m('ware het niet dat',complementizer,[ware,Het,niet,dat]) :- het(Het).
 m(zo,               complementizer,zo).
 m(zodat,            complementizer,zodat).
 m(zodra,            complementizer,zodra).
-m(zogauw,           complementizer,zogauw).
-m(zogauw,           complementizer,[zo,gauw]).
+m('zo gauw',           complementizer,zogauw).
+m('zo gauw',           complementizer,[zo,gauw]).
 m(zolang,           complementizer,zolang).
 m(zolang,           complementizer,[zo,lang]).
 
@@ -4639,7 +4642,7 @@ m(nu,               postp_adverb,nu).
 m(ook,              postp_adverb,ook).
 m(pas,              postp_adverb,pas). % in december pas
 m(tenslotte,        postp_adverb,tenslotte).
-m(tenslotte,        postp_adverb,[ten,slotte]).
+m('ten slotte',     postp_adverb,[ten,slotte]).
 m('wel te verstaan',postp_adverb,welteverstaan).
 m('wel te verstaan',postp_adverb,[wel,te,verstaan]).
 m(weliswaar,        postp_adverb,weliswaar).
@@ -4669,7 +4672,7 @@ m(overigens,        postnp_adverb,overigens).
 m(pas,              postnp_adverb,pas).  % twee weken pas
 m(slechts,          postnp_adverb,slechts).
 m(tenslotte,        postnp_adverb,tenslotte).
-m(tenslotte,        postnp_adverb,[ten,slotte]).
+m('ten slotte',     postnp_adverb,[ten,slotte]).
 m('tot en met',     postnp_adverb,[tot,en,met]).
 m(trouwens,         postnp_adverb,[trouwens]).
 m('wel te verstaan',postnp_adverb,[wel,te,verstaan]).
@@ -4708,7 +4711,7 @@ m(zijnerzijds,      postnp_adverb,zijnerzijds).
 
 m(genoeg,           postnp_adverb,genoeg). % todo: + om-vp
 m(temeer,           postnp_adverb,temeer).  % reden temeer
-m(temeer,           postnp_adverb,[te,meer]).  % reden temeer
+m('te veel',           postnp_adverb,[te,meer]).  % reden temeer
 m('te over',        postnp_adverb,[te,over]). % todo: + om-vp
 
 m(ongeveer,         postnp_adverb,ongeveer).
@@ -4782,7 +4785,7 @@ with_dt([temeer,niet],
 
 with_dt([te,meer,niet],
 	modal_adverb(comp),
-	dt(advp,[hd=l(temeer,adverb,0,2),
+	dt(advp,[hd=l('te veel',adverb,0,2),
 		 mod=l(niet,adverb,advp,2,3)])).
 
 with_dt([Ook,Al],
@@ -4833,14 +4836,10 @@ modal_adverb(['God',betere,'\'t']).
 modal_adverb(inzonderheid).
 modal_adverb(juist).
 modal_adverb(louter).
-modal_adverb([met,name]).
 modal_adverb(nauwelijks).
 modal_adverb(net).
 modal_adverb(nog).
 modal_adverb([nota,bene]).
-modal_adverb([onder,andere]).
-modal_adverb([onder,anderen]).
-modal_adverb([onder,meer]).
 modal_adverb(ook).
 modal_adverb(pas).
 modal_adverb(precies).
@@ -4859,6 +4858,11 @@ modal_adverb(zeker).
 modal_adverb(zelfs).
 modal_adverb([ja,zelfs]).
 modal_adverb(zowel). % Vlaams?
+
+m('met naam', modal_adverb,[met,name]).
+m('onder ander', modal_adverb, [onder,andere]).
+m('onder ander', modal_adverb, [onder,anderen]).
+m('onder veel',  modal_adverb, [onder,meer]).
 
 %% prep   bijna in alle gevallen
 %% noun   bijna iedereen
@@ -4960,6 +4964,7 @@ m(plusminus,        modal_adverb(noun_prep),plusminus).
 m(ruwweg,           modal_adverb(noun_prep),ruwweg).
 m('ten hoogste',    modal_adverb(noun_prep),[ten,hoogste]).
 m(tenminste,        modal_adverb(noun_prep),tenminste).
+m('ten minste',        modal_adverb(noun_prep),[ten,minste]).
 m(uiterlijk,        modal_adverb(noun_prep),uiterlijk).
 m(ver,              modal_adverb(noun_prep),ver).
 m(verreweg,         modal_adverb(noun_prep),verreweg).  % with superlative
@@ -5028,7 +5033,7 @@ m(altijd,           modal_adverb(comp), altijd).  % wanneer als
 m(steeds,           modal_adverb(comp), steeds).  % wanneer als indien
 m(telkens,          modal_adverb(comp), telkens). % wanneer als indien
 m(temeer,           modal_adverb(comp), temeer).  % temeer daar/omdat
-m(temeer,           modal_adverb(comp), [te,meer]).  % temeer daar/omdat
+m('te veel',        modal_adverb(comp), [te,meer]).  % temeer daar/omdat
 
 
 m(desnoods,         modal_adverb(prep),desnoods).
@@ -5619,9 +5624,10 @@ sentence_adverb([te,pas]).
 sentence_adverb([ten,diepste]).
 sentence_adverb([ten,lange,leste]). 
 sentence_adverb([ten,langen,leste]). 
-m(tenslotte, sentence_adverb, [ten,slotte]). 
 sentence_adverb(tenminste). 
+sentence_adverb([ten,minste]). 
 sentence_adverb(tenslotte).
+sentence_adverb([ten,slotte]). 
 sentence_adverb(toendertijd).
 sentence_adverb([tot,dusver]). 
 sentence_adverb([tot,dusverre]). 
@@ -6198,7 +6204,7 @@ m(nog,              postadv_adverb,nog). % cdb/2535 in december nog
 m(nu,               postadv_adverb,nu).
 m(pas,              postadv_adverb,pas). % in december pas
 m(tenslotte,        postadv_adverb,tenslotte).
-m(tenslotte,        postadv_adverb,[ten,slotte]).
+m('ten slotte',     postadv_adverb,[ten,slotte]).
 m(trouwens,         postadv_adverb,trouwens).
 m('wel te verstaan',postadv_adverb,welteverstaan).
 m('wel te verstaan',postadv_adverb,[wel,te,verstaan]).
@@ -6237,7 +6243,7 @@ m(intussen,         postadj_adverb,intussen).
 m(nog,              postadj_adverb,nog). % wat bleekjes nog ...
 m(nu,               postadj_adverb,nu).
 m(tenslotte,        postadj_adverb,tenslotte).
-m(tenslotte,        postadj_adverb,[ten,slotte]).
+m('ten slotte',     postadj_adverb,[ten,slotte]).
 m('wel te verstaan',postadj_adverb,welteverstaan).
 m('wel te verstaan',postadj_adverb,[wel,te,verstaan]).
 m(weliswaar,        postadj_adverb,weliswaar).
@@ -6269,13 +6275,13 @@ with_dt([wellicht,ten,overvloede],
         adverb,dt(advp,[mod=l(wellicht,sentence_adverb,advp,0,1),
                         hd=l('ten overvloede',adverb,1,3)])).
 
-with_dt([H,M], adverb,dt(advp,[mod=l(M,adverb,advp,1,2),
-			       hd=l(H,adverb,0,1)])) :-
-    hd_mod_adverb(H,M).
+with_dt([H,M], adverb,dt(advp,[mod=l(M1,adverb,advp,1,2),
+			       hd=l(H1,adverb,0,1)])) :-
+    hd_mod_adverb(H,M,H1,M1).
 
-with_dt([H,M], adverb,dt(advp,[mod=l(M,Pos,Cat,1,2),
-			       hd=l(H,adverb,0,1)])) :-
-    hd_mod_adverb(H,M,Pos,Cat).
+with_dt([H,M], adverb,dt(advp,[mod=l(M1,Pos,Cat,1,2),
+			       hd=l(H1,adverb,0,1)])) :-
+    hd_mod_adverb(H,M,H1,M1,Pos,Cat).
 
 with_dt([MOD,niet,altijd],
 	adverb,
@@ -6357,28 +6363,28 @@ mod_hd_adverb(werkelijk,      niet, adjective(no_e(adv)),       ap).
 mod_hd_adverb(zeker,          niet, adjective(no_e(adv)),       ap).
 
 %% hd < mod
-hd_mod_adverb(alleen,   maar).
-hd_mod_adverb(even,     maar).
+hd_mod_adverb(alleen,   maar, alleen, maar).
+hd_mod_adverb(even,     maar, even,   maar).
 
-hd_mod_adverb(niet,     eens).
+hd_mod_adverb(niet,     eens, niet,   eens).
 
-hd_mod_adverb(misschien,zelfs).
+hd_mod_adverb(misschien,zelfs, misschien,zelfs).
 
 %% wie is hoofd hier?
-hd_mod_adverb(dan,      ineens).
+hd_mod_adverb(dan,      ineens, dan, ineens).
 
-hd_mod_adverb(eens,     temeer).
+hd_mod_adverb(eens,     temeer, eens, temeer).
 
-hd_mod_adverb(werkelijk,overal).
+hd_mod_adverb(werkelijk,overal,werkelijk,overal).
 
-hd_mod_adverb(niet,     langer,    adjective(er(tmpadv)),          ap).
-hd_mod_adverb(niet,     bepaald,   adjective(ge_no_e(adv)),        ap).
-hd_mod_adverb(niet,     echt,      adjective(no_e(adv)),           ap).
-hd_mod_adverb(wel,      degelijk,  adjective(no_e(adv)),           ap).
+hd_mod_adverb(niet,     langer,    niet,lang,adjective(er(tmpadv)),          ap).
+hd_mod_adverb(niet,     bepaald,   niet,bepaald,adjective(ge_no_e(adv)),        ap).
+hd_mod_adverb(niet,     echt,      niet,echt,adjective(no_e(adv)),           ap).
+hd_mod_adverb(wel,      degelijk,  wel,degelijk,adjective(no_e(adv)),           ap).
 
 with_dt([eens,te,meer],
 	adverb,
-	dt(advp,[mod=l('te meer',adverb,advp,1,3),
+	dt(advp,[mod=l('te veel',adverb,advp,1,3),
 		 hd=l(eens,adverb,0,1)])).
 
 %%% predm_adverbs

@@ -997,23 +997,26 @@ lexicon__(tot,adverb,Label,Ws0,Ws,'tot V-s aan toe',_) :-
     inf(InfVal),
     hdrug_util:concat_all([tot,VerbInfS,aan,toe],Label,' ').
 
-lexicon__(AllerXst,Adj,Label,Ws,Ws,'aller-Asuper'(His),LC) :-
+lexicon__(AllerXst,Adj,AllerLabel,Ws,Ws,'aller-Asuper'(His),LC) :-
     atom(AllerXst),
     atom_concat(aller,Xst,AllerXst),
     lexicon__(Xst,Adj,Label,Ws,Ws,His,LC),
-    aller(Adj).
+    aller(Adj),
+    atom_concat(aller_,Label,AllerLabel).
 
-lexicon__(aller,Adj,Label,Ws0,Ws,'aller-Asuper'(His),LC) :-
+lexicon__(aller,Adj,AllerLabel,Ws0,Ws,'aller-Asuper'(His),LC) :-
     aller_path(Ws0,Ws1),
     next_word(Xst,Ws1,Ws2,_),
     lexicon__(Xst,Adj,Label,Ws2,Ws,His,LC),
-    aller(Adj).
+    aller(Adj),
+    atom_concat(aller_,Label,AllerLabel).
 
-lexicon__('aller-',Adj,Label,Ws0,Ws,'aller-Asuper'(His),LC) :-
+lexicon__('aller-',Adj,AllerLabel,Ws0,Ws,'aller-Asuper'(His),LC) :-
     aller_path(Ws0,Ws1),
     next_word(Xst,Ws1,Ws2,_),
     lexicon__(Xst,Adj,Label,Ws2,Ws,His,LC),
-    aller(Adj).
+    aller(Adj),
+    atom_concat(aller_,Label,AllerLabel).
 
 lexicon__(op,pp,Label1,Ws0,Ws,'op zijn Belgisch'(His),LC) :-
     lists:member(W/L,[zijn/zijn,
@@ -1818,8 +1821,6 @@ spelling_variant21(sinds,dien,    sindsdien).
 spelling_variant21(te,kort,       tekort).
 spelling_variant21(te,weeg,       teweeg).
 spelling_variant21(tegen,op,      tegenop).
-spelling_variant21(ten,einde,     teneinde).
-spelling_variant21(ten,minste,    tenminste).
 spelling_variant21(terug,reis,    terugreis).
 spelling_variant21(terug,weg,     terugweg).
 spelling_variant21(tot,dat,       totdat).
@@ -2372,6 +2373,14 @@ spelling_variant(akademischere,academischere).
 spelling_variant(akademischst,academischst).
 spelling_variant(akademischste,academischste).
 spelling_variant(abstrakt,abstract).
+spelling_variant(abstrakte,abstracte).
+spelling_variant(abstrakter,abstracter).
+spelling_variant(abstraktere,abstractere).
+spelling_variant(abstrakts,abstracts).
+spelling_variant(abstraktst,abstractst).
+spelling_variant(abstraktste,abstractste).
+spelling_variant(accoord,akkoord).
+spelling_variant(accoorden,akkoorden).
 spelling_variant(kabaret,cabaret).
 spelling_variant(kabarets,cabarets).
 spelling_variant(kabine,cabine).
@@ -3051,6 +3060,10 @@ spelling_variant(vind,    vindt) :-
     \+ word_form(ik).
 
 spelling_variant(kondt, kunt).
+
+spelling_variant('Belgie','België').
+spelling_variant('Brazilie','Brazilië').
+spelling_variant('Israel','Israël').
 
 parse_only_variant(notabene,'nota bene', modal_adverb).
 parse_only_variant(ondermeer,'onder meer', modal_adverb).

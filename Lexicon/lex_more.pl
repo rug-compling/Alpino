@@ -633,40 +633,40 @@ phrasal_entry(noun(both,count,sg),numbercilinder) -->
     n_word(NumberTal),
     { numbersuffix(NumberTal,cilinder) }.
 
-phrasal_entry(noun(het,count,pl),numbercilinders) -->
+phrasal_entry(noun(het,count,pl),Stem,numbercilinders) -->
     { hdrug_util:debug_message(4,"numbercilinders~n",[]) },
     n_word(NumberTal),
-    { numbersuffix(NumberTal,cilinders) }.
+    { numbersuffix(NumberTal,cilinders,_,Stem,cilinder) }.
 
 phrasal_entry(noun(de,count,sg),numberklasser) -->
     { hdrug_util:debug_message(4,"numberklasser~n",[]) },
     n_word(NumberTal),
     { numbersuffix(NumberTal,klasser) }.
 
-phrasal_entry(noun(de,count,pl),numberklassers) -->
+phrasal_entry(noun(de,count,pl),Stem,numberklassers) -->
     { hdrug_util:debug_message(4,"numberklasser~n",[]) },
     n_word(NumberTal),
-    { numbersuffix(NumberTal,klassers) }.
+    { numbersuffix(NumberTal,klassers,_,Stem,klasser) }.
 
 phrasal_entry(noun(het,count,sg),numberluik) -->
     { hdrug_util:debug_message(4,"numberluik~n",[]) },
     n_word(NumberTal),
     { numbersuffix(NumberTal,luik) }.
 
-phrasal_entry(noun(het,count,pl),numberluik) -->
+phrasal_entry(noun(het,count,pl),Stem,numberluik) -->
     { hdrug_util:debug_message(4,"numberluik~n",[]) },
     n_word(NumberTal),
-    { numbersuffix(NumberTal,luiken) }.
+    { numbersuffix(NumberTal,luiken,_,Stem,luik) }.
 
-phrasal_entry(noun(het,count,pl,measure),numbertallen) -->
+phrasal_entry(noun(het,count,pl,measure),Stem,numbertallen) -->
     { hdrug_util:debug_message(4,"numbertallen~n",[]) },
     n_word(NumberTal),
-    { numbersuffix(NumberTal,tallen) }.
+    { numbersuffix(NumberTal,tallen,_,Stem,tal) }.
 
-phrasal_entry(noun(het,count,pl),numbertallen) -->
+phrasal_entry(noun(het,count,pl),Stem,numbertallen) -->
     { hdrug_util:debug_message(4,"numbertallen~n",[]) },
     n_word(NumberTal),
-    { numbersuffix(NumberTal,tallen) }.
+    { numbersuffix(NumberTal,tallen,_,Stem,tal) }.
 
 phrasal_entry(noun(de,count,sg,measure),numberkaart) -->
     { hdrug_util:debug_message(4,"numberkaart~n",[]) },
@@ -678,80 +678,80 @@ phrasal_entry(noun(de,count,sg),numberkaart) -->
     n_word(NumberKaart),
     { numbersuffix(NumberKaart,kaart) }.
 
-phrasal_entry(noun(de,count,pl,measure),numberkaarten) -->
+phrasal_entry(noun(de,count,pl,measure),Stem,numberkaarten) -->
     { hdrug_util:debug_message(4,"numberkaarten~n",[]) },
     n_word(NumberKaarten),
-    { numbersuffix(NumberKaarten,kaarten) }.
+    { numbersuffix(NumberKaarten,kaarten,_,Stem,kaart) }.
 
 phrasal_entry(noun(de,count,sg),numberwieler) -->
     { hdrug_util:debug_message(4,"numberwieler~n",[]) },
     n_word(NumberKaart),
     { numbersuffix(NumberKaart,wieler) }.
 
-phrasal_entry(noun(de,count,pl),numberwielers) -->
+phrasal_entry(noun(de,count,pl),Stem,numberwielers) -->
     { hdrug_util:debug_message(4,"numberwielers~n",[]) },
     n_word(NumberKaarten),
-    { numbersuffix(NumberKaarten,wielers) }.
+    { numbersuffix(NumberKaarten,wielers,_,Stem,wieler) }.
 
 phrasal_entry(noun(de,count,sg),numberplusser) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaart),
     { numbersuffix(NumberKaart,plusser) }.
 
-phrasal_entry(noun(de,count,pl),numberplussers) -->
+phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaarten),
-    { numbersuffix(NumberKaarten,plussers) }.
+    { numbersuffix(NumberKaarten,plussers,_,Stem,plusser) }.
 
 phrasal_entry(noun(de,count,sg),numberplusser) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaart),
     { numbersuffix(NumberKaart,minner) }.
 
-phrasal_entry(noun(de,count,pl),numberplussers) -->
+phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaarten),
-    { numbersuffix(NumberKaarten,minners) }.
+    { numbersuffix(NumberKaarten,minners,_,Stem,minner) }.
 
 phrasal_entry(noun(de,count,sg),numberplusser) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaart),
     { numbersuffix(NumberKaart,kamp) }.
 
-phrasal_entry(noun(de,count,pl),numberplussers) -->
+phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaarten),
-    { numbersuffix(NumberKaarten,kampen) }.
+    { numbersuffix(NumberKaarten,kampen,_,Stem,kamp) }.
 
 phrasal_entry(noun(de,count,sg),numberplusser) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaart),
     { numbersuffix(NumberKaart,sprong) }.
 
-phrasal_entry(noun(de,count,pl),numberplussers) -->
+phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaarten),
-    { numbersuffix(NumberKaarten,sprongen) }.
+    { numbersuffix(NumberKaarten,sprongen,_,Stem,sprong) }.
 
 phrasal_entry(noun(de,count,sg),numberplusser) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaart),
     { numbersuffix(NumberKaart,setter) }.
 
-phrasal_entry(noun(de,count,pl),numberplussers) -->
+phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaarten),
-    { numbersuffix(NumberKaarten,setters) }.
+    { numbersuffix(NumberKaarten,setters,_,Stem,setter) }.
 
 phrasal_entry(noun(de,count,sg),numberplusser) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaart),
     { numbersuffix(NumberKaart,klapper) }.
 
-phrasal_entry(noun(de,count,pl),numberplussers) -->
+phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaarten),
-    { numbersuffix(NumberKaarten,setters) }.
+    { numbersuffix(NumberKaarten,setters,_,Stem,setter) }.
 
 phrasal_entry(nominalized_adjective,numberjarig) -->
     { hdrug_util:debug_message(4,"numberjarig~n",[]) },
@@ -877,6 +877,18 @@ numbersuffix(Word,Suffix,Number) :-
     atom(Word),
     atom_concat(Number,Suffix,Word),
     isa_number(_,[Number],[]).
+
+numbersuffix(Word,Suffix,Number,Stem,StemSuffix) :-
+    atom(Word),
+    alpino_util:split_atom(Word,"-",[Number,Suffix]),
+    isa_number(_,[Number],[]),
+    !,
+    hdrug_util:concat_all([Number,StemSuffix],Stem,'-').
+numbersuffix(Word,Suffix,Number,Stem,StemSuffix) :-
+    atom(Word),
+    atom_concat(Number,Suffix,Word),
+    isa_number(_,[Number],[]),
+    atom_concat(Number,StemSuffix,Stem).
 
 numberpersoons(Persoons) :-
     persoons(Suffix),

@@ -778,6 +778,13 @@ codes_words_to_words([H|T],[W0|W]) :-
     atom_codes(W0,H),
     codes_words_to_words(T,W).
 
+unknown_word_heuristic(P1,R1,W,_Ws,"spelling_variant_compound|~p|~p~n",
+		       [W,[Th|Tt]],_,_) :-
+    debug_message(3,"trying heuristic spelling_variant_compound~n",[]),
+    findall(Orig/Tag,
+	    spelling_variant_compound(W,Orig,P1,R1,Tag),
+	    [Th|Tt]).
+
 unknown_word_heuristic(P1,R1,W,_Ws,"compound(~p)|~p|~p|~p~n",
 		       [Len,W,Wmin,[Th|Tt]],_,len(1)) :-
     debug_message(3,"trying heuristic compound()~n",[]),
@@ -1012,6 +1019,7 @@ unknown_word_heuristic(P1,R1,W,_Ws,"similar_ending|~p|~p|~p~n",
     \+ tag(P1,_,_,_,_,_,decap(_),_),
     \+ tag(P1,_,_,_,_,_,compound(_),_),
     \+ tag(P1,_,_,_,_,_,diminutive,_),
+    \+ tag(P1,_,_,_,_,_,spelling_variant_compound(_),_),
     \+ tag(P1,_,_,_,_,_,prefix_name,_),
     \+ tag(P1,_,_,_,_,_,decap_and_compound(_),_),
     \+ tag(P1,_,_,_,_,_,form_of_suffix(_),_),
@@ -1276,6 +1284,7 @@ unknown_word_heuristic(P1,R1,W,_Ws,"default|~p|~p~n",
     \+ tag(P1,_,_,_,_,_,decap_and_compound(_),meas_mod_noun(_,_,_)),
     \+ tag(P1,_,_,_,_,_,left_headed_compound,noun(_,_,_)),
     \+ tag(P1,_,_,_,_,_,measure,_),
+    \+ tag(P1,_,_,_,_,_,spelling_variant_compound(_),_),
     \+ tag(P1,_,_,_,_,_,w_dia,_),
     \+ tag(P1,_,_,_,_,_,wo_dia,_),
     \+ tag(P1,_,_,_,_,_,mistok,_),
@@ -2751,6 +2760,7 @@ never_compound_part(Atom) :-
 
 never_compound_part_sc(aar).
 never_compound_part_sc(aars).
+never_compound_part_sc(acc).
 never_compound_part_sc(ace).
 never_compound_part_sc(ach).
 never_compound_part_sc(air).
@@ -6338,3 +6348,13 @@ typical_spelling_mistake_suffixes(tte,te).   % wenstte   -> wenste
 typical_spelling_mistake_suffixes(tten,ten). % wenstten  -> wensten
 typical_spelling_mistake_suffixes(dde,de).   % bloosdde  -> bloosde
 typical_spelling_mistake_suffixes(dden,den). % bloosdden -> bloosden
+
+spelling_variant_compound(HandelsAccoord,HandelsAkkoord,P0,R0,Frame) :-
+    atom(HandelsAccoord),
+    P is P0 + 1,
+    R is R0 + 1,
+    atom_concat(Handels,Accoord,HandelsAccoord),
+    alpino_lex:spelling_variant(Accoord,Akkoord),
+    atom_concat(Handels,Akkoord,HandelsAkkoord),
+    alpino_lex:lexicon(Frame,Stem,[HandelsAkkoord],[],_),
+    assert_tag(P0,P,R0,R,Stem,spelling_variant_compound(Akkoord),Frame).

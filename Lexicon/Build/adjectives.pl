@@ -2180,8 +2180,7 @@ a([e(acceptabele),
   [subject_sbar,
    subject_vp],[]).
 
-a([pred(accoord),
-   pred(akkoord)],nonadv,
+a([pred(akkoord)],nonadv,
   [pp(met),
    er_pp_sbar(met),
    er_pp_vp(met)],[]).
@@ -33893,8 +33892,9 @@ a([e(tendentieuze),
 
 a([both(teneergeslagen)],padv,[],[]).
 
-a([pred([ten,einde]),
-   pred(teneinde)],nonadv,[],[]).
+a([pred(teneinde)],nonadv,[],[]).
+
+a([pred([ten,einde])],nonadv,[],[]).
 
 a([pred([ten,einde,raad])],padv,[],[]).
 
