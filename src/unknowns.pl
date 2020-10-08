@@ -2862,6 +2862,7 @@ never_compound_part_sc(och).
 never_compound_part_sc(oe).
 never_compound_part_sc(of).
 never_compound_part_sc(ok).
+never_compound_part_sc(oo).
 never_compound_part_sc(or).
 never_compound_part_sc(ov).
 never_compound_part_sc('o\'s').
