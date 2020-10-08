@@ -29,7 +29,7 @@
                 <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="24" lemma="geld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="geld" word="geld"/>
                 <node begin="11" cat="pp" end="13" id="25" rel="mod">
                   <node begin="11" end="12" id="26" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-                  <node begin="12" end="13" getal="mv" graad="basis" id="27" lemma="mee_jood" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="jood" word="medejoden"/>
+                  <node begin="12" end="13" getal="mv" graad="basis" id="27" lemma="mede_jood" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="jood" word="medejoden"/>
                 </node>
               </node>
             </node>
@@ -77,7 +77,7 @@
               </node>
               <node begin="32" end="33" id="60" lemma="zelfs" pos="adv" postag="BW()" pt="bw" rel="mod" root="zelfs" word="zelfs"/>
               <node begin="33" buiging="zonder" end="34" graad="basis" id="61" lemma="schuldig" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="schuldig" word="schuldig"/>
-              <node begin="34" buiging="zonder" end="35" id="62" lemma="schuld-g_maken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="maak" word="gemaakt" wvorm="vd"/>
+              <node begin="34" buiging="zonder" end="35" id="62" lemma="schuldig_maken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="maak" word="gemaakt" wvorm="vd"/>
               <node begin="36" cat="pp" end="39" id="63" rel="pc">
                 <node begin="36" end="37" id="64" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
                 <node begin="37" cat="np" end="39" id="65" rel="obj1">
