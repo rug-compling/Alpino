@@ -4977,10 +4977,6 @@ n([pl(bijnamen),sg(bijnaam)],de,[np_app_measure]).
 
 n([pl(bijnierschorshormonen),sg(bijnierschorshormoon)],het,[]).
 
-n([pl(bijproducten),sg(bijproduct)],het,[]).
-
-n([pl(bijprodukten),sg(bijprodukt)],het,[]).
-
 n([sg(bijrol),pl(bijrollen)],de,[]).
 
 n([sg(bijschrift),pl(bijschriften)],het,
@@ -10224,10 +10220,6 @@ n([pl(eindjes),sg(eindje)],het,[measure,meas_mod]).
 n([sg(eindklassement),pl(eindklassementen)],het,[]).
 
 n([pl(eindoordelen),sg(eindoordeel)],het,[]).
-
-n([pl(eindproducten),sg(eindproduct)],het,[]).
-
-n([pl(eindprodukten),sg(eindprodukt)],het,[]).
 
 n([pl(eindresultaten),sg(eindresultaat)],het,[sbar,subject_sbar]).
 
@@ -27314,8 +27306,10 @@ n([pl(producers),sg(producer)],de,[]).
 
 n([pl(producten),sg(product),
    pl(produkten),sg(produkt)],het,[app_measure],
-  [i(consument,consumenten),
+  [bij,
+   i(consument,consumenten),
    s(belegging),
+   eind,
    kip,
    landbouw,
    metaal,
