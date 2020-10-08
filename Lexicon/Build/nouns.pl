@@ -12519,7 +12519,7 @@ n([sg(genoot),pl(genoten)],de,[],
    s(dorp),
    echt,
    i(ex_echt,'ex-echt'),
-   fractie,fraktie,
+   fractie,i(fractie,fraktie),
    s(geloof),
    generatie,
    huis,
@@ -12551,7 +12551,7 @@ n([sg(genote),pl(genotes)],de,[],
    s(dorp),
    echt,
    i(ex_echt,'ex-echt'),
-   fractie,fraktie,
+   fractie,i(fractie,fraktie),
    s(geloof),
    generatie,
    huis,
@@ -13563,7 +13563,7 @@ n([pl(groenten),pl(groentes),sg(groente)],de,[]).
 n([pl(groepen),sg(groep)],de,[measure],[dim(groepje)]).
 
 n([pl(groepen),sg(groep)],de,[app_measure],
-  [actie,aktie,
+  [actie,i(actie,aktie),
    i(belang,belangen),
    s(beroep),
    s(bevolking),
@@ -33429,8 +33429,9 @@ n([sg(tackle),pl(tackles)],de,[]).
 
 n([mass(tact)],de,[]).
 
-n([mass(tactiek),pl(tactieken),sg(tactiek)],de,[subject_sbar,
-						subject_vp]).
+n([mass(tactiek),pl(tactieken),sg(tactiek),sg(taktiek)],de,
+  [subject_sbar,
+   subject_vp]).
 
 n([mass([tae,bo]),
    mass(['Tae','Bo'])],both,[]).
@@ -33492,9 +33493,7 @@ n([pl(takenpakketten),sg(takenpakket)],het,[]).
 
 n([mass(takt)],de,[]).
 
-n([mass(taktiek)],de,[]).
-
-n([mass(tal)],de,[]).  % VL de tal van bedrijven
+n([mass(tal)],de,[]).		% VL de tal van bedrijven
 
 n([sg([tale,'Kanaäns'])],de,[]).
 

@@ -731,7 +731,7 @@ deptree_xml_label_rest(l(FrameTerm,Cat,Root0/[P0,P]),String,_,
     ->  true
     ;   Tag = 'NA()'
     ),
-    get_lemma_or_word(Lemma0,Lemma,Word),
+    get_lemma(FrameTerm,Lemma0,Lemma,Word),
     get_root(Root0,Root),    
     hdrug_flag(xml_format_frame,On),
     (   On == on,
@@ -755,12 +755,12 @@ adt_lex_atts([],[]).
 adt_lex_atts([A=V|T],[A-V|NewT]) :-
     adt_lex_atts(T,NewT).
 
-get_lemma(read_from_treebank(_,_,Lemma0,_),_,Lemma) :-
+get_lemma(read_from_treebank(_,_,Lemma0,_),_,Lemma,_) :-
     !, Lemma0=Lemma.
-get_lemma(read_from_treebank(_,Lemma0,_),_,Lemma) :-
+get_lemma(read_from_treebank(_,Lemma0,_),_,Lemma,_) :-
     !, Lemma0=Lemma.
-get_lemma(_,Root,Lemma) :-
-    get_lemma(Root,Lemma).
+get_lemma(_,Root,Lemma0,Lemma,Root) :-
+    get_lemma_or_word(Lemma0,Lemma,Root).
 
 get_lemma_or_word(Var,Lemma,Word) :-
     var(Var), !,
