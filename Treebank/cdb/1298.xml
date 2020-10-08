@@ -9,7 +9,7 @@
         <node begin="3" cat="mwu" end="6" id="6" rel="app">
           <node begin="3" end="4" id="7" lemma="Dirk" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Dirk" spectype="deeleigen" word="Dirk"/>
           <node begin="4" end="5" id="8" lemma="de" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
-          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="vrooom" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Vroome" word="Vroome"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="Vroome" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Vroome" word="Vroome"/>
         </node>
       </node>
       <node begin="6" end="7" id="10" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
@@ -50,8 +50,8 @@
                     <node begin="24" end="25" id="41" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                     <node begin="25" cat="np" end="28" id="42" rel="obj1">
                       <node begin="25" end="26" id="43" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                      <node begin="26" buiging="met-e" end="27" graad="basis" id="44" lemma="heerlens" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Heerlense" word="Heerlense"/>
-                      <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="45" lemma="vroedvrouwenschool" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="Vroedvrouwenschool" word="Vroedvrouwenschool"/>
+                      <node begin="26" buiging="met-e" end="27" graad="basis" id="44" lemma="Heerlens" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Heerlense" word="Heerlense"/>
+                      <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="45" lemma="vroed_vrouw_school" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="Vroedvrouwenschool" word="Vroedvrouwenschool"/>
                     </node>
                   </node>
                 </node>

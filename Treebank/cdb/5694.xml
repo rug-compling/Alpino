@@ -6,7 +6,7 @@
     <node begin="0" cat="smain" end="17" id="3" rel="--">
       <node begin="0" cat="np" end="9" id="4" index="1" rel="su">
         <node begin="0" end="1" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node begin="1" end="2" getal="mv" graad="basis" id="6" lemma="mannen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="man" word="mannen"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="6" lemma="man" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="man" word="mannen"/>
         <node begin="3" cat="rel" end="9" id="7" rel="mod">
           <node begin="3" end="4" getal="getal" id="8" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
           <node begin="3" cat="ssub" end="9" id="9" rel="body">
@@ -26,7 +26,7 @@
           </node>
         </node>
       </node>
-      <node begin="10" end="11" id="20" lemma="konden" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kan" word="konden" wvorm="pv"/>
+      <node begin="10" end="11" id="20" lemma="kunnen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="kan" word="konden" wvorm="pv"/>
       <node begin="0" cat="inf" end="17" id="21" rel="vc">
         <node begin="0" end="9" id="22" index="1" rel="su"/>
         <node begin="15" buiging="zonder" end="16" id="23" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
