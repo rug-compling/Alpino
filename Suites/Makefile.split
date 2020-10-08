@@ -1,0 +1,55 @@
+ifeq "$(shell if [ -r ../Makefile.include ]; then echo yes; fi)" "yes"
+include ../Makefile.include
+else
+ifeq "$(shell if [ -r $(ALPINO_HOME)/Makefile.include ]; then echo yes; fi)" "yes"
+include $(ALPINO_HOME)/Makefile.include
+endif
+endif
+
+sents = $(wildcard [CDPIWXU]/*.sents)
+pls = $(sents:%.sents=%.pl)
+
+sents: C D P I W X U
+
+pl: $(pls)
+
+
+
+C_treebank = ../Treebank/cdb
+D_treebank = ../Treebank/dpc
+P_treebank = ../Treebank/PPH
+I_treebank = ../Treebank/PPI
+W_treebank = ../Treebank/WIKI
+X_treebank = ../Treebank/extra
+U_treebank = ../Treebank/WSU
+
+C_name = c
+D_name = d
+P_name = p
+I_name = i
+W_name = w
+X_name = x
+U_name = u
+
+C D P I W X U: 
+	mkdir -p ${@}
+	( cd ${${@}_treebank}; \
+          ls -v *.xml |\
+          xargs dtxslt -s\
+          ${ALPINO_HOME}/TreebankTools/stylesheets/dt2sent_with_key.xsl |\
+          sed -e 's/\[/\\\[/g' \
+              -e 's/\]/\\\]/g' \
+        ) |\
+	( cd ${@} ; \
+          ../split_in_parts -o ${${@}_name} -p 100 -z \
+        )
+
+%.pl : %.sents
+	echo ":- module(alpino_suite,[ sentence/2 ])." > $*.pl
+	echo >> $*.pl
+	cat $< |\
+	sed -e "s/| /|/" \
+            -e "s/  *$$//" \
+        | $(HDRUG) -notk -l $(ALPINO_HOME)/src/utils -l $(ALPINO_HOME)/Suites/create_pl_suite \
+                 -cmd "to_suite(key)" | \
+        sed -e 's/^my_sentence/sentence/' >>$*.pl
