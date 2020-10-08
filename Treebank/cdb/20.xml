@@ -9,7 +9,7 @@
         <node begin="0" end="1" id="6" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="Dan"/>
         <node begin="1" end="2" id="7" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
         <node begin="2" cat="np" end="6" id="8" rel="su">
-          <node begin="2" end="3" getal="ev" graad="basis" id="9" lemma="Ncrv&apos;s" naamval="gen" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Ncrv&apos;s" word="Ncrv&apos;s"/>
+          <node begin="2" end="3" getal="ev" graad="basis" id="9" lemma="NCRV" naamval="gen" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Ncrv&apos;s" word="Ncrv&apos;s"/>
           <node begin="3" buiging="met-e" end="4" graad="basis" id="10" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuwe" word="nieuwe"/>
           <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="pop_parlement" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="Popparlement" word="Popparlement"/>
         </node>
@@ -48,7 +48,7 @@
           <node begin="23" cat="conj" end="30" id="36" rel="obj1">
             <node begin="23" cat="np" end="26" id="37" rel="cnj">
               <node begin="23" end="24" id="38" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="24" buiging="met-e" end="25" graad="sup" id="39" lemma="inlassen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="ingelast" word="ingelaste"/>
+              <node begin="24" buiging="met-e" end="25" graad="sup" id="39" lemma="in_gelasten" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="ingelast" word="ingelaste"/>
               <node begin="25" end="26" getal="mv" graad="basis" id="40" lemma="interview" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="interviews" word="interviews"/>
             </node>
             <node begin="26" conjtype="neven" end="27" id="41" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
