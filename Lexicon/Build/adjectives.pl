@@ -39268,7 +39268,7 @@ a([e(waardige),
   [so_np,
    so_np_subject_vp,
    so_np_subject_sbar],
-  []).
+  [niets]).
 
 a([e(waargebeurde),
    no_e(waargebeurd)],nonadv,[],[]).
