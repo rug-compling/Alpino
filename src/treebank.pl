@@ -759,7 +759,7 @@ get_lemma(read_from_treebank(_,_,Lemma0,_),_,Lemma,_) :-
     !, Lemma0=Lemma.
 get_lemma(read_from_treebank(_,Lemma0,_),_,Lemma,_) :-
     !, Lemma0=Lemma.
-get_lemma(_,Root,Lemma0,Lemma,Root) :-
+get_lemma(_,Lemma0,Lemma,Root) :-
     get_lemma_or_word(Lemma0,Lemma,Root).
 
 get_lemma_or_word(Var,Lemma,Word) :-
