@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" special="aanhaal_both" word="&apos;"/>
+    <node begin="2" end="3" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="3" end="4" id="3" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" special="aanhaal_both" word="&apos;"/>
+    <node begin="1" cat="du" end="8" id="4" rel="--">
+      <node begin="1" end="2" id="5" lemma="alsjeblieft" pos="adv" postag="BW()" pt="bw" rel="nucl" root="alsjeblieft" word="Alsjeblieft"/>
+      <node begin="4" cat="sv1" end="8" id="6" rel="tag">
+        <node begin="4" end="5" id="7" infl="sg" lemma="aan_dringen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="dring_aan" sc="part_dip_sbar(aan)" tense="past" word="drong" wvorm="pv"/>
+        <node begin="5" cat="np" end="7" id="8" rel="su">
+          <node begin="5" end="6" id="9" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="ridder" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="ridder" word="ridder"/>
+        </node>
+        <node begin="7" end="8" id="11" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>&apos; Alsjeblieft , &apos; drong de ridder aan .</sentence>
+</alpino_ds>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="2" end="3" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="3" end="4" id="3" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="1" cat="du" end="13" id="4" rel="--">
+      <node begin="1" end="2" id="5" lemma="kijk" pos="noun" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="nucl" root="kijk" word="Kijk" wvorm="pv"/>
+      <node begin="4" cat="sv1" end="13" id="6" rel="tag">
+        <node begin="4" end="5" id="7" lemma="roepen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="roep" word="riep" wvorm="pv"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="8" lemma="Anna" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Anna" word="Anna"/>
+        <node begin="6" cat="pp" end="13" id="9" rel="mod">
+          <node begin="6" end="7" id="10" lemma="vanaf" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="vanaf" vztype="init" word="vanaf"/>
+          <node begin="7" cat="np" end="13" id="11" rel="obj1">
+            <node begin="7" end="8" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="8" buiging="met-e" end="9" graad="basis" id="13" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
+            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="14" lemma="kant" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kant" word="kant"/>
+            <node begin="10" cat="pp" end="13" id="15" rel="mod">
+              <node begin="10" end="11" id="16" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="11" cat="np" end="13" id="17" rel="obj1">
+                <node begin="11" end="12" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="19" lemma="tuin" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tuin" word="tuin"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="13" end="14" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&apos; Kijk , &apos; riep Anna vanaf de andere kant van de tuin .</sentence>
+</alpino_ds>
