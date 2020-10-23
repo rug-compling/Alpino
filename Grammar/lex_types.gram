@@ -3218,14 +3218,21 @@ ld_dir_arg(ADV):-
     unify_mods(ADV),
     ADV:tmploc => ld_dir.
 
+tr_vp_arg(VP) :-
+    VP => vp,
+    VP:e_deps => [],
+    unify_mods(VP),
+    VP:ctype => ~c_mod,   % forbid: de verplichting [vc cmp:na body:te komen]
+    VP:vform => (om;te).
+
 vp_arg(VP) :-
     VP => vp,
     VP:e_deps => [],
-    ( VP:slash => []       % added GvN 2009-03-21
-                          % sometimes violated: cdb/2707
-                          % een bedrag dat ik gedwongen werd hem te geven
-                          % dat weiger ik te aanvaarden
-    ; VP:slash <=> [NP],
+    (   VP:slash => []  % added GvN 2009-03-21
+			% sometimes violated: cdb/2707
+                        % een bedrag dat ik gedwongen werd hem te geven
+                        % dat weiger ik te aanvaarden
+    ;   VP:slash <=> [NP],
         acc_np_arg(NP)
     ),
     unify_mods(VP),
@@ -3246,6 +3253,12 @@ no_subj_vp_arg(VP) :-
 
 subj_control_vp_arg(VP,V) :-
     vp_arg(VP),
+    V:subj <=> Subj,
+    control(VP,Subj),
+    VP:control => control_subj.
+
+tr_subj_control_vp_arg(VP,V) :-
+    tr_vp_arg(VP),
     V:subj <=> Subj,
     control(VP,Subj),
     VP:control => control_subj.
@@ -4874,6 +4887,16 @@ vp(V,C,C):-
     dependents(V,[vc/VP]),
     instantiated_deprel(V,vc,VP).
 
+%% ik waag te vertrekken
+%% het boek waag ik te lezen
+%% dat is toch niet normaal , waag ik op te merken
+tr_vp(V,C,C):-
+    main_v(V),
+    V:passive => imp_passive,
+    tr_subj_control_vp_arg(VP,V),
+    dependents(V,[vc/VP]),
+    instantiated_deprel(V,vc,VP).
+
 %% dat ik verzoek (om) de uitzending te verbieden
 %% no control 
 vp_no_control(V,C,C):-
@@ -5111,6 +5134,14 @@ refl_sbar(V,C,C) :-
     main_v(V),
     V:passive => no_passive,
     sbar_arg(Obj),
+    refl_np_arg(Refl,V),
+    dependents(V,[vc/Obj,se/Refl]).
+
+%% dat ik me afvraag of ze komt
+refl_dip_sbar(V,C,C) :-
+    main_v(V),
+    V:passive => no_passive,
+    dip_sbar_arg(Obj),
     refl_np_arg(Refl,V),
     dependents(V,[vc/Obj,se/Refl]).
 
