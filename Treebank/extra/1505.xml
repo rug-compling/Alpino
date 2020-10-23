@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="sv1" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" infl="modal_not_u" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" sc="aux(inf)" stype="ynquestion" tense="present" word="Zal" wvorm="pv"/>
+      <node begin="1" case="nom" def="def" end="2" gen="de" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+      <node begin="1" cat="inf" end="6" id="4" rel="vc">
+        <node begin="1" end="2" id="5" index="1" rel="su"/>
+        <node begin="2" cat="np" end="5" id="6" rel="obj1">
+          <node begin="2" end="3" getal="ev" id="7" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="hd" rnum="sg" root="wat" sc="iets" status="vol" vwtype="onbep" word="wat"/>
+          <node begin="3" cat="ti" end="5" id="8" rel="mod">
+            <node begin="3" end="4" id="9" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+            <node begin="4" buiging="zonder" end="5" id="10" infl="inf" lemma="drinken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="body" root="drink" sc="intransitive" word="drinken" wvorm="inf"/>
+          </node>
+        </node>
+        <node begin="5" buiging="zonder" end="6" id="11" infl="inf" lemma="halen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="haal" sc="transitive" word="halen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Zal ik wat te drinken halen ?</sentence>
+</alpino_ds>

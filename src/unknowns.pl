@@ -2807,6 +2807,7 @@ never_compound_part_sc(ende).
 never_compound_part_sc(ent).
 never_compound_part_sc(er).
 never_compound_part_sc(es).
+never_compound_part_sc(eu).
 never_compound_part_sc(eur).
 never_compound_part_sc('e\'s').
 never_compound_part_sc(fa).
@@ -3608,6 +3609,19 @@ alternative_open_class(Integer,Word,Parts,P0,R0,Name,Tag):-
     \+ shorter_tag(P0,P,R0,R,Tag,Name),
     check_de_het(P0,Tag),
     assert_tag(P0,P,R0,R,NewStem,Name,Tag).
+
+%% vooroverboog = voorover + boog
+%%                dir_adverb + ld_adv
+alternative_open_class(2,Boog,[Voorover],P0,R0,Name,Tag) :-
+    alpino_lex:lexicon(verb(HZ,Fin,Sc0),v_root(Root,Lemma),[Boog],[],_),
+    alpino_lex:lexicon(dir_adverb,VooroverL,[Voorover],[],_),
+    ld_dir(Sc0,Sc1,Sc2,Voorover),
+    P is P0 + 1,
+    R is R0 + 1,
+    concat_all([Root,VooroverL],RootL,'_'),
+    concat_all([Voorover,Lemma],LemmaL,'_'),
+    Tag = verb(HZ,Fin,ninv(Sc1,Sc2)),
+    assert_tag(P0,P,R0,R,v_root(RootL,LemmaL),dir_v(Name),Tag).
 
 alternative_open_class(slash,Word,Parts,P0,R0,Name,Tag):-
     alpino_lex:lexicon(Tag,Stem,[Word],[],_),
@@ -6359,3 +6373,7 @@ spelling_variant_compound(HandelsAccoord,HandelsAkkoord,P0,R0,Frame) :-
     atom_concat(Handels,Akkoord,HandelsAkkoord),
     alpino_lex:lexicon(Frame,Stem,[HandelsAkkoord],[],_),
     assert_tag(P0,P,R0,R,Stem,spelling_variant_compound(Akkoord),Frame).
+
+ld_dir(ld_dir,intransitive,part_intransitive(Voorover),Voorover).
+ld_dir(refl_ld_dir,refl,part_refl(Voorover),Voorover).
+ld_dir(np_ld_dir,transitive,part_transitive(Voorover),Voorover).

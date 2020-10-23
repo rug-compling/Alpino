@@ -799,6 +799,8 @@ n([pl('Noordkoreanen'),sg('Noordkoreaan'),
 
 n([mass('Noors')],het,[]).
 
+n([sg('Oegandees'),pl('Oegandezen')],de,[]).
+
 n([sg('Oeigoer'),pl('Oeigoeren')],de,[]).
 
 n([sg('Oekraïner'),pl('Oekraïners')],de,[]).
@@ -6358,8 +6360,6 @@ n([pl(bureaukraten),sg(bureaukraat)],de,[]).
 
 n([mass(bureaukratie)],de,[]).
 
-n([pl(bureaulampen),sg(bureaulamp)],de,[]).
-
 n([pl(burelen),sg(bureel)],het,[]).
 
 n([sg(burg),pl(burgen)],de,[]).
@@ -8240,8 +8240,6 @@ n([mass(dageraad)],de,[]).
 n([mass(dagindeling)],de,[]).
 
 n([pl([dagjes,uit]),sg([dagje,uit])],het,[]).
-
-n([mass(daglicht)],het,[]).
 
 n([sg(dagpauwoog),pl(dagpauwogen)],de,[]).
 
@@ -16531,8 +16529,6 @@ n([pl(karen),sg(kaar)],de,[]).
 
 n([pl(kaarsen),sg(kaars)],de,[measure],[dim(kaarsje)]).
 
-n([mass(kaarslicht)],het,[]).
-
 n([pl(kaarten),sg(kaart)],de,[],
   [ansicht,
    bij,
@@ -18877,14 +18873,17 @@ n([pl('lama\'s'),sg(lama)],de,[]).
 n([pl(lambrizeringen),sg(lambrizering)],de,[]).
 
 n([pl(lampen),sg(lamp)],de,[],
-  [spaar,
+  [binnen,
+   buiten,
+   bureau,
+   mist,
+   olie,
+   spaar,
    zak,
    zwaai,
    dim(lampje)]).
 
 n([pl(lampions),sg(lampion)],de,[]).
-
-n([mass(lamplicht)],het,[]).
 
 n([pl(lanceringen),sg(lancering)],de,[]).
 
@@ -19574,13 +19573,24 @@ n([mass(lichamelijkheid)],de,[]).
 
 n([pl(lichten),sg(licht)],het,[],
   [achter,
-   i(mist_achter,mistachter),
+   binnen,
+   buiten,
+   dag,
    dim,
+   kaars,
    knipper,
+   lamp,
    s(leven),
    maan,
+   i(mist_achter,mistachter),
+   morgen,
+   ochtend,
    pool,
+   schemer,
+   stop,
+   voet,
    voor,
+   zoek,
    zon,
    zwaai,
    dim(lichtje)]).
@@ -22176,8 +22186,6 @@ n([sg(morgen),pl(morgens)],de,[temp_mod,sbar],[zondag,
 				      donderdag,
 				      vrijdag,
 				      zaterdag]).
-
-n([mass(morgenlicht)],het,[]).
 
 n([pl(morgensterren),sg(morgenster)],de,[]).
 
@@ -28589,7 +28597,7 @@ n([pl(reizigers),sg(reiziger)],de,[],
   [trein,
    i(zaak,zaken)]).
 
-n([mass(rek)],de,[],[klim]).
+n([mass(rek)],both,[],[klim]).
 
 n([pl(rekken),sg(rek)],het,[measure]).
 
@@ -29967,8 +29975,6 @@ n([pl(schemeringen),sg(schemering)],de,[]).
 
 n([pl(schemerlampen),sg(schemerlamp)],de,[]).
 
-n([mass(schemerlicht)],het,[]).
-
 n([pl(schendingen),sg(schending)],de,[sbar,vp]).
 
 n([pl(schendingen),sg(schending)],de,[],
@@ -30256,7 +30262,7 @@ n([pl(schorsen),sg(schors)],de,[]).
 
 n([pl(schorsingen),sg(schorsing)],de,[]).
 
-n([pl(schorten),sg(schort)],de,[],[dim(schortje)]).
+n([pl(schorten),sg(schort)],both,[],[dim(schortje)]).
 
 n([mass(shorttrack),
    mass('short-track'),
@@ -32789,8 +32795,6 @@ n([pl(stoppen),pl(stops),sg(stop)],de,[],
 
 n([pl(stopcontacten),sg(stopcontact),
    pl(stopkontakten),sg(stopkontakt)],het,[]).
-
-n([pl(stoplichten),sg(stoplicht)],het,[]).
 
 n([pl(stoppelen),pl(stoppels),sg(stoppel)],de,[],[dim(stoppeltje)]).
 
@@ -36451,8 +36455,6 @@ n([sg(verkeersdode),pl(verkeersdoden)],de,[]).
 
 n([pl(verkeerslessen),sg(verkeersles)],de,[]).
 
-n([pl(verkeerslichten),sg(verkeerslicht)],het,[]).
-
 n([pl(verkenners),sg(verkenner)],de,[]).
 
 n([pl(verkenningen),sg(verkenning)],de,[]).
@@ -37742,8 +37744,6 @@ n([pl(voetbalvelden),sg(voetbalveld)],het,[]).
 n([pl(voeteneinden),sg(voeteneinde),sg(voeteneind)],het,[]).
 
 n([pl(voetgangers),sg(voetganger)],de,[],[dim(voetgangertje)]).
-
-n([pl(voetlichten),sg(voetlicht)],het,[]).
 
 n([pl(voetnoten),sg(voetnoot)],de,[sbar,vp]).
 
@@ -40657,8 +40657,6 @@ n([pl(zoekers),sg(zoeker)],de,[],
 n([pl(zoeksters),sg(zoekster)],de,[],
   [asiel,
    goud]).
-
-n([pl(zoeklichten),sg(zoeklicht)],het,[]).
 
 n([sg(zoem),pl(zoemen)],de,[]).
 

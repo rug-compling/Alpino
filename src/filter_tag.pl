@@ -343,6 +343,7 @@ valid_adj_sc(refl_er_pp_sbar(Prep),   [check_refl,er_prep(Prep),
                                        check_of_dat_whsub_sbar_right]).
 valid_adj_sc(refl_vp,                 [check_refl,check_vform(te)]).
 valid_adj_sc(refl_sbar,               [check_refl]).
+valid_adj_sc(refl_dip_sbar,           [check_refl]).
 valid_adj_sc(subject_vp,              [check_vform(te)]). % no copula required, because of pred_vp_dp rule
 valid_adj_sc(subject_vp_no_het,       [check_vform(te)]). % no copula required: pred_vp_dp rule
 valid_adj_sc(subject_vp_sbar,         [check_vform(te)]).
@@ -396,6 +397,7 @@ valid_adj_sc(nonp_pred,               []).
 valid_noun_sc(pp(_Prep),              [fail]).
 valid_noun_sc(pp_pp(_,_),             [fail]).
 valid_noun_sc(vp,                     [check_vform(te)]).
+valid_noun_sc(tr_vp,                  [check_vform(te)]).
 valid_noun_sc(pred_pp(Prep),          [prep(Prep)]).
 valid_noun_sc(pred_pp(Prep,SubType),  [prep(Prep)|Conds]) :-
     valid_noun_sc(SubType,Conds).
@@ -622,6 +624,7 @@ valid_sc(als_pred_refl,               [check_refl,
                                        check_tag(complementizer(als))]).
 valid_sc(refl_vp,                     [check_refl,check_vform(te)]).
 valid_sc(vp,                          [check_vform(te)]).
+valid_sc(tr_vp,                       [check_vform(te)]).
 valid_sc(vp_no_control,               [check_vform(te)]).
 valid_sc(pp_vp(Prep),                 [prep(Prep),check_vform(te)]).
 valid_sc(so_pp_vp,                    [prep(aan),check_vform(te)]).
@@ -649,6 +652,7 @@ valid_sc(ld_pp_sbar,               [check_ld_prep]).
 valid_sc(pp_dip_sbar(Prep),           [prep(Prep)]).
 valid_sc(pp_refl_sbar(Prep),          [check_refl,prep(Prep)]).
 valid_sc(refl_sbar,                   [check_refl]).
+valid_sc(refl_dip_sbar,               [check_refl]).
 valid_sc(sbar_subj_het,               [check_het,
                                        check_of_dat_sbar]).
 valid_sc(sbar_subj,                   [check_of_dat_whsub_sbar]).
