@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="3" end="4" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="4" end="5" id="3" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>
+    <node begin="7" end="8" id="4" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="1" cat="du" end="15" id="5" rel="--">
+      <node begin="1" cat="sv1" end="3" id="6" rel="nucl">
+        <node begin="1" end="2" id="7" lemma="op_vertellen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="vertel_op" word="Vertel" wvorm="pv"/>
+        <node begin="2" end="3" id="8" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
+      </node>
+      <node begin="5" cat="sv1" end="15" id="9" rel="tag">
+        <node begin="5" end="6" id="10" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
+        <node begin="6" end="7" genus="fem" getal="ev" id="11" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
+        <node begin="8" cat="cp" end="15" id="12" rel="mod">
+          <node begin="8" conjtype="onder" end="9" id="13" lemma="toen" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="toen" word="toen"/>
+          <node begin="9" cat="ssub" end="15" id="14" rel="body">
+            <node begin="9" end="10" getal="ev" id="15" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+            <node begin="10" cat="np" end="12" id="16" rel="obj1">
+              <node begin="10" end="11" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="18" lemma="voor_deur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voor_deur" word="voordeur"/>
+            </node>
+            <node begin="12" cat="pp" end="14" id="19" rel="mod">
+              <node begin="12" end="13" id="20" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+              <node begin="13" end="14" genus="fem" getal="getal" id="21" lemma="haar" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,getal,fem)" pt="vnw" rel="obj1" root="haar" status="vol" vwtype="pers" word="haar"/>
+            </node>
+            <node begin="14" end="15" id="22" lemma="open_doen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="doe_open" word="opendeed" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="23" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>&apos; Vertel op , &apos; zei ze , toen ik de voordeur voor haar opendeed .</sentence>
+</alpino_ds>

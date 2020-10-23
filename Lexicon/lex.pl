@@ -2362,6 +2362,9 @@ spelling_variant('TV',     tv).
 
 spelling_variant(jouw,    jou).
 
+spelling_variant(ais,     als).
+
+
 %% ck
 spelling_variant(akademie,academie).
 spelling_variant(akademiën,academiën).
@@ -3064,6 +3067,7 @@ spelling_variant(kondt, kunt).
 spelling_variant('Belgie','België').
 spelling_variant('Brazilie','Brazilië').
 spelling_variant('Israel','Israël').
+spelling_variant('Israels','Israëls').
 
 parse_only_variant(notabene,'nota bene', modal_adverb).
 parse_only_variant(ondermeer,'onder meer', modal_adverb).

@@ -220,6 +220,7 @@ lemma_root(aan_knallen,knal_aan) .
 lemma_root(aan_knellen,knel_aan) .
 lemma_root(aan_knijpen,knijp_aan) .
 lemma_root(aan_knikkeren,knikker_aan) .
+lemma_root(aan_knippen,knip_aan) .
 lemma_root(aan_knopen,knoop_aan) .
 lemma_root(aan_koeken,koek_aan) .
 lemma_root(aan_koersen,koers_aan) .
@@ -600,6 +601,7 @@ lemma_root(aan_wakkeren,wakker_aan) .
 lemma_root(aan_wandelen,wandel_aan) .
 lemma_root(aan_wankelen,wankel_aan) .
 lemma_root(aan_waren,waar_aan) .
+lemma_root(aan_wasemen,wasem_aan) .
 lemma_root(aan_wassen,was_aan) .
 lemma_root(aan_weerkaatsen,weerkaats_aan) .
 lemma_root(aan_wellen,wel_aan) .
@@ -693,6 +695,7 @@ lemma_root(achterna_commanderen,commandeer_achterna) .
 lemma_root(achterna_concurreren,concurreer_achterna) .
 lemma_root(achterna_crossen,cross_achterna) .
 lemma_root(achterna_dalen,daal_achterna) .
+lemma_root(achterna_dansen,dans_achterna) .
 lemma_root(achterna_denderen,dender_achterna) .
 lemma_root(achterna_denken,denk_achterna) .
 lemma_root(achterna_dirigeren,dirigeer_achterna) .
@@ -765,6 +768,7 @@ lemma_root(achterna_krabbelen,krabbel_achterna) .
 lemma_root(achterna_krabben,krab_achterna) .
 lemma_root(achterna_krijgen,krijg_achterna) .
 lemma_root(achterna_krikken,krik_achterna) .
+lemma_root(achterna_kringelen,kringel_achterna) .
 lemma_root(achterna_kruipen,kruip_achterna) .
 lemma_root(achterna_krullen,krul_achterna) .
 lemma_root(achterna_kuieren,kuier_achterna) .
@@ -859,6 +863,7 @@ lemma_root(achterna_spuiten,spuit_achterna) .
 lemma_root(achterna_staan,sta_achterna) .
 lemma_root(achterna_stampen,stamp_achterna) .
 lemma_root(achterna_stappen,stap_achterna) .
+lemma_root(achterna_staren,staar_achterna) .
 lemma_root(achterna_steken,steek_achterna) .
 lemma_root(achterna_stevenen,steven_achterna) .
 lemma_root(achterna_stieren,stier_achterna) .
@@ -1637,6 +1642,7 @@ lemma_root(af_waggelen,waggel_af) .
 lemma_root(af_wandelen,wandel_af) .
 lemma_root(af_wankelen,wankel_af) .
 lemma_root(af_waren,waar_af) .
+lemma_root(af_wasemen,wasem_af) .
 lemma_root(af_wassen,was_af) .
 lemma_root(af_wateren,water_af) .
 lemma_root(af_weerkaatsen,weerkaats_af) .
@@ -2265,6 +2271,7 @@ lemma_root(binnen_commanderen,commandeer_binnen) .
 lemma_root(binnen_concurreren,concurreer_binnen) .
 lemma_root(binnen_crossen,cross_binnen) .
 lemma_root(binnen_dalen,daal_binnen) .
+lemma_root(binnen_dansen,dans_binnen) .
 lemma_root(binnen_denderen,dender_binnen) .
 lemma_root(binnen_denken,denk_binnen) .
 lemma_root(binnen_dirigeren,dirigeer_binnen) .
@@ -2339,6 +2346,7 @@ lemma_root(binnen_krabbelen,krabbel_binnen) .
 lemma_root(binnen_krabben,krab_binnen) .
 lemma_root(binnen_krijgen,krijg_binnen) .
 lemma_root(binnen_krikken,krik_binnen) .
+lemma_root(binnen_kringelen,kringel_binnen) .
 lemma_root(binnen_kruipen,kruip_binnen) .
 lemma_root(binnen_krullen,krul_binnen) .
 lemma_root(binnen_kuieren,kuier_binnen) .
@@ -2435,6 +2443,7 @@ lemma_root(binnen_spuiten,spuit_binnen) .
 lemma_root(binnen_staan,sta_binnen) .
 lemma_root(binnen_stampen,stamp_binnen) .
 lemma_root(binnen_stappen,stap_binnen) .
+lemma_root(binnen_staren,staar_binnen) .
 lemma_root(binnen_steken,steek_binnen) .
 lemma_root(binnen_stevenen,steven_binnen) .
 lemma_root(binnen_stieren,stier_binnen) .
@@ -2882,6 +2891,7 @@ lemma_root(doeken,doek) .
 lemma_root(doelen,doel) .
 lemma_root(doemen,doem) .
 lemma_root(doen,doe) .
+lemma_root(doezelen,doezel) .
 lemma_root(doffen,dof) .
 lemma_root(dokken,dok) .
 lemma_root(dokteren,dokter) .
@@ -5388,6 +5398,7 @@ lemma_root(door_wappen,wap_door) .
 lemma_root(door_wapperen,wapper_door) .
 lemma_root(door_waren,waar_door) .
 lemma_root(door_warmen,warm_door) .
+lemma_root(door_wasemen,wasem_door) .
 lemma_root(door_wassen,was_door) .
 lemma_root(door_wateren,water_door) .
 lemma_root(door_watertanden,watertand_door) .
@@ -6506,6 +6517,7 @@ lemma_root(heen_walsen,wals_heen) .
 lemma_root(heen_wandelen,wandel_heen) .
 lemma_root(heen_wankelen,wankel_heen) .
 lemma_root(heen_waren,waar_heen) .
+lemma_root(heen_wasemen,wasem_heen) .
 lemma_root(heen_wassen,was_heen) .
 lemma_root(heen_weerkaatsen,weerkaats_heen) .
 lemma_root(heen_wellen,wel_heen) .
@@ -6796,6 +6808,7 @@ lemma_root(individualiseren,individualiseer) .
 lemma_root(in_dobberen,dobber_in) .
 lemma_root(indoctrineren,indoctrineer) .
 lemma_root(in_doen,doe_in) .
+lemma_root(in_doezelen,doezel_in) .
 lemma_root(in_dolen,dool_in) .
 lemma_root(in_dommelen,dommel_in) .
 lemma_root(in_dompelen,dompel_in) .
@@ -7406,6 +7419,7 @@ lemma_root(in_waggelen,waggel_in) .
 lemma_root(in_wandelen,wandel_in) .
 lemma_root(in_wankelen,wankel_in) .
 lemma_root(in_waren,waar_in) .
+lemma_root(in_wasemen,wasem_in) .
 lemma_root(in_wassen,was_in) .
 lemma_root(in_weerkaatsen,weerkaats_in) .
 lemma_root(in_wellen,wel_in) .
@@ -8348,6 +8362,7 @@ lemma_root(langs_waggelen,waggel_langs) .
 lemma_root(langs_wandelen,wandel_langs) .
 lemma_root(langs_wankelen,wankel_langs) .
 lemma_root(langs_waren,waar_langs) .
+lemma_root(langs_wasemen,wasem_langs) .
 lemma_root(langs_wassen,was_langs) .
 lemma_root(langs_weerkaatsen,weerkaats_langs) .
 lemma_root(langs_wellen,wel_langs) .
@@ -8510,6 +8525,7 @@ lemma_root(los_staan,sta_los) .
 lemma_root(los_trillen,tril_los) .
 lemma_root(los_troggelen,troggel_los) .
 lemma_root(los_weken,week_los) .
+lemma_root(los_wurmen,wurm_los) .
 lemma_root(loten,loot) .
 lemma_root(louteren,louter) .
 lemma_root(loven,loof) .
@@ -8929,6 +8945,7 @@ lemma_root(om_commanderen,commandeer_om) .
 lemma_root(om_concurreren,concurreer_om) .
 lemma_root(om_crossen,cross_om) .
 lemma_root(om_dalen,daal_om) .
+lemma_root(om_dansen,dans_om) .
 lemma_root(om_denderen,dender_om) .
 lemma_root(om_denken,denk_om) .
 lemma_root(om_dijken,dijk_om) .
@@ -9016,6 +9033,7 @@ lemma_root(om_krabbelen,krabbel_om) .
 lemma_root(om_krabben,krab_om) .
 lemma_root(om_krijgen,krijg_om) .
 lemma_root(om_krikken,krik_om) .
+lemma_root(om_kringelen,kringel_om) .
 lemma_root(om_kruipen,kruip_om) .
 lemma_root(om_krullen,krul_om) .
 lemma_root(om_kuieren,kuier_om) .
@@ -9131,6 +9149,7 @@ lemma_root(om_spuiten,spuit_om) .
 lemma_root(om_staan,sta_om) .
 lemma_root(om_stampen,stamp_om) .
 lemma_root(om_stappen,stap_om) .
+lemma_root(om_staren,staar_om) .
 lemma_root(om_steken,steek_om) .
 lemma_root(om_stevenen,steven_om) .
 lemma_root(om_stieren,stier_om) .
@@ -9437,6 +9456,7 @@ lemma_root(op_concurreren,concurreer_op) .
 lemma_root(op_crossen,cross_op) .
 lemma_root(op_dagen,daag_op) .
 lemma_root(op_dalen,daal_op) .
+lemma_root(op_dansen,dans_op) .
 lemma_root(op_dekken,dek_op) .
 lemma_root(op_delen,deel_op) .
 lemma_root(op_denderen,dender_op) .
@@ -9467,7 +9487,9 @@ lemma_root(op_duikelen,duikel_op) .
 lemma_root(op_duiken,duik_op) .
 lemma_root(op_durven,durf_op) .
 lemma_root(op_duwen,duw_op) .
+lemma_root(op_dweilen,dweil_op) .
 lemma_root(op_dwingen,dwing_op) .
+lemma_root(opeen_klemmen,klem_opeen) .
 lemma_root(opeen_volgen,volg_opeen) .
 lemma_root(op_eisen,eis_op) .
 lemma_root(openbaren,openbaar) .
@@ -9587,6 +9609,7 @@ lemma_root(op_krabben,krab_op) .
 lemma_root(op_krassen,kras_op) .
 lemma_root(op_krijgen,krijg_op) .
 lemma_root(op_krikken,krik_op) .
+lemma_root(op_kringelen,kringel_op) .
 lemma_root(op_kroppen,krop_op) .
 lemma_root(op_kruipen,kruip_op) .
 lemma_root(op_krullen,krul_op) .
@@ -9752,6 +9775,7 @@ lemma_root(op_staan,sta_op) .
 lemma_root(op_stampen,stamp_op) .
 lemma_root(op_stapelen,stapel_op) .
 lemma_root(op_stappen,stap_op) .
+lemma_root(op_staren,staar_op) .
 lemma_root(op_starten,start_op) .
 lemma_root(op_steken,steek_op) .
 lemma_root(op_stellen,stel_op) .
@@ -9807,6 +9831,7 @@ lemma_root(op_verdwijnen,verdwijn_op) .
 lemma_root(op_veren,veer_op) .
 lemma_root(op_verhuizen,verhuis_op) .
 lemma_root(op_verjagen,verjaag_op) .
+lemma_root(op_vertellen,vertel_op) .
 lemma_root(op_vijzelen,vijzel_op) .
 lemma_root(op_vissen,vis_op) .
 lemma_root(op_vlammen,vlam_op) .
@@ -9912,6 +9937,7 @@ lemma_root(over_commanderen,commandeer_over) .
 lemma_root(over_concurreren,concurreer_over) .
 lemma_root(over_crossen,cross_over) .
 lemma_root(over_dalen,daal_over) .
+lemma_root(over_dansen,dans_over) .
 lemma_root(overdekken,overdek) .
 lemma_root(over_denderen,dender_over) .
 lemma_root(over_denken,denk_over) .
@@ -10011,6 +10037,7 @@ lemma_root(over_krabbelen,krabbel_over) .
 lemma_root(over_krabben,krab_over) .
 lemma_root(over_krijgen,krijg_over) .
 lemma_root(over_krikken,krik_over) .
+lemma_root(over_kringelen,kringel_over) .
 lemma_root(over_kruipen,kruip_over) .
 lemma_root(over_krullen,krul_over) .
 lemma_root(over_kuieren,kuier_over) .
@@ -10142,6 +10169,7 @@ lemma_root(over_spuiten,spuit_over) .
 lemma_root(over_staan,sta_over) .
 lemma_root(over_stampen,stamp_over) .
 lemma_root(over_stappen,stap_over) .
+lemma_root(over_staren,staar_over) .
 lemma_root(over_steken,steek_over) .
 lemma_root(overstelpen,overstelp) .
 lemma_root(overstemmen,overstem) .
@@ -12802,6 +12830,7 @@ lemma_root(raak_wanhopen,wanhoop_raak) .
 lemma_root(raak_wankelen,wankel_raak) .
 lemma_root(raak_wappen,wap_raak) .
 lemma_root(raak_wapperen,wapper_raak) .
+lemma_root(raak_wasemen,wasem_raak) .
 lemma_root(raak_wassen,was_raak) .
 lemma_root(raak_wateren,water_raak) .
 lemma_root(raak_watertanden,watertand_raak) .
@@ -13115,6 +13144,7 @@ lemma_root(rond_commanderen,commandeer_rond) .
 lemma_root(rond_concurreren,concurreer_rond) .
 lemma_root(rond_crossen,cross_rond) .
 lemma_root(rond_dalen,daal_rond) .
+lemma_root(rond_dansen,dans_rond) .
 lemma_root(rond_delen,deel_rond) .
 lemma_root(rond_denderen,dender_rond) .
 lemma_root(rond_denken,denk_rond) .
@@ -13191,6 +13221,7 @@ lemma_root(rond_krabbelen,krabbel_rond) .
 lemma_root(rond_krabben,krab_rond) .
 lemma_root(rond_krijgen,krijg_rond) .
 lemma_root(rond_krikken,krik_rond) .
+lemma_root(rond_kringelen,kringel_rond) .
 lemma_root(rond_kruipen,kruip_rond) .
 lemma_root(rond_krullen,krul_rond) .
 lemma_root(rond_kuieren,kuier_rond) .
@@ -13290,6 +13321,7 @@ lemma_root(rond_spuiten,spuit_rond) .
 lemma_root(rond_staan,sta_rond) .
 lemma_root(rond_stampen,stamp_rond) .
 lemma_root(rond_stappen,stap_rond) .
+lemma_root(rond_staren,staar_rond) .
 lemma_root(rond_steken,steek_rond) .
 lemma_root(rond_stevenen,steven_rond) .
 lemma_root(rond_stieren,stier_rond) .
@@ -13903,6 +13935,7 @@ lemma_root(tegemoet_commanderen,commandeer_tegemoet) .
 lemma_root(tegemoet_concurreren,concurreer_tegemoet) .
 lemma_root(tegemoet_crossen,cross_tegemoet) .
 lemma_root(tegemoet_dalen,daal_tegemoet) .
+lemma_root(tegemoet_dansen,dans_tegemoet) .
 lemma_root(tegemoet_denderen,dender_tegemoet) .
 lemma_root(tegemoet_denken,denk_tegemoet) .
 lemma_root(tegemoet_dirigeren,dirigeer_tegemoet) .
@@ -13976,6 +14009,7 @@ lemma_root(tegemoet_krabbelen,krabbel_tegemoet) .
 lemma_root(tegemoet_krabben,krab_tegemoet) .
 lemma_root(tegemoet_krijgen,krijg_tegemoet) .
 lemma_root(tegemoet_krikken,krik_tegemoet) .
+lemma_root(tegemoet_kringelen,kringel_tegemoet) .
 lemma_root(tegemoet_kruipen,kruip_tegemoet) .
 lemma_root(tegemoet_krullen,krul_tegemoet) .
 lemma_root(tegemoet_kuieren,kuier_tegemoet) .
@@ -14071,6 +14105,7 @@ lemma_root(tegemoet_spuiten,spuit_tegemoet) .
 lemma_root(tegemoet_staan,sta_tegemoet) .
 lemma_root(tegemoet_stampen,stamp_tegemoet) .
 lemma_root(tegemoet_stappen,stap_tegemoet) .
+lemma_root(tegemoet_staren,staar_tegemoet) .
 lemma_root(tegemoet_steken,steek_tegemoet) .
 lemma_root(tegemoet_stevenen,steven_tegemoet) .
 lemma_root(tegemoet_stieren,stier_tegemoet) .
@@ -14454,6 +14489,7 @@ lemma_root(toe_gieten,giet_toe) .
 lemma_root(toe_glanzen,glans_toe) .
 lemma_root(toe_glibberen,glibber_toe) .
 lemma_root(toe_glijden,glijd_toe) .
+lemma_root(toe_glimlachen,glimlach_toe) .
 lemma_root(toe_glippen,glip_toe) .
 lemma_root(toe_gluren,gluur_toe) .
 lemma_root(toe_golven,golf_toe) .
@@ -14898,6 +14934,7 @@ lemma_root(toe_wandelen,wandel_toe) .
 lemma_root(toe_wankelen,wankel_toe) .
 lemma_root(toe_wapperen,wapper_toe) .
 lemma_root(toe_waren,waar_toe) .
+lemma_root(toe_wasemen,wasem_toe) .
 lemma_root(toe_wassen,was_toe) .
 lemma_root(toe_weerkaatsen,weerkaats_toe) .
 lemma_root(toe_wellen,wel_toe) .
@@ -15551,6 +15588,7 @@ lemma_root(tussen_waggelen,waggel_tussen) .
 lemma_root(tussen_wandelen,wandel_tussen) .
 lemma_root(tussen_wankelen,wankel_tussen) .
 lemma_root(tussen_waren,waar_tussen) .
+lemma_root(tussen_wasemen,wasem_tussen) .
 lemma_root(tussen_wassen,was_tussen) .
 lemma_root(tussen_weerkaatsen,weerkaats_tussen) .
 lemma_root(tussen_wellen,wel_tussen) .
@@ -17756,6 +17794,7 @@ lemma_root(uit_wankelen,wankel_uit) .
 lemma_root(uit_wappen,wap_uit) .
 lemma_root(uit_wapperen,wapper_uit) .
 lemma_root(uit_waren,waar_uit) .
+lemma_root(uit_wasemen,wasem_uit) .
 lemma_root(uit_wassen,was_uit) .
 lemma_root(uit_wateren,water_uit) .
 lemma_root(uit_watertanden,watertand_uit) .
@@ -18448,6 +18487,7 @@ lemma_root(vanaf_waggelen,waggel_vanaf) .
 lemma_root(vanaf_wandelen,wandel_vanaf) .
 lemma_root(vanaf_wankelen,wankel_vanaf) .
 lemma_root(vanaf_waren,waar_vanaf) .
+lemma_root(vanaf_wasemen,wasem_vanaf) .
 lemma_root(vanaf_wassen,was_vanaf) .
 lemma_root(vanaf_weerkaatsen,weerkaats_vanaf) .
 lemma_root(vanaf_wellen,wel_vanaf) .
@@ -19034,6 +19074,7 @@ lemma_root(vandaan_waggelen,waggel_vandaan) .
 lemma_root(vandaan_wandelen,wandel_vandaan) .
 lemma_root(vandaan_wankelen,wankel_vandaan) .
 lemma_root(vandaan_waren,waar_vandaan) .
+lemma_root(vandaan_wasemen,wasem_vandaan) .
 lemma_root(vandaan_wassen,was_vandaan) .
 lemma_root(vandaan_weerkaatsen,weerkaats_vandaan) .
 lemma_root(vandaan_wellen,wel_vandaan) .
@@ -19617,6 +19658,7 @@ lemma_root(vandoor_waggelen,waggel_vandoor) .
 lemma_root(vandoor_wandelen,wandel_vandoor) .
 lemma_root(vandoor_wankelen,wankel_vandoor) .
 lemma_root(vandoor_waren,waar_vandoor) .
+lemma_root(vandoor_wasemen,wasem_vandoor) .
 lemma_root(vandoor_wassen,was_vandoor) .
 lemma_root(vandoor_weerkaatsen,weerkaats_vandoor) .
 lemma_root(vandoor_wellen,wel_vandoor) .
@@ -22684,6 +22726,7 @@ lemma_root(voort_wanhopen,wanhoop_voort) .
 lemma_root(voort_wankelen,wankel_voort) .
 lemma_root(voort_wappen,wap_voort) .
 lemma_root(voort_wapperen,wapper_voort) .
+lemma_root(voort_wasemen,wasem_voort) .
 lemma_root(voort_wassen,was_voort) .
 lemma_root(voort_wateren,water_voort) .
 lemma_root(voort_watertanden,watertand_voort) .
@@ -22905,6 +22948,7 @@ lemma_root(wapperen,wapper) .
 lemma_root(waren,waar) .
 lemma_root(warmen,warm) .
 lemma_root(warm_lopen,loop_warm) .
+lemma_root(wasemen,wasem) .
 lemma_root(wassen,was) .
 lemma_root(wateren,water) .
 lemma_root(watertanden,watertand) .
@@ -22938,6 +22982,7 @@ lemma_root(weg_cijferen,cijfer_weg) .
 lemma_root(weg_deemsteren,deemster_weg) .
 lemma_root(weg_denken,denk_weg) .
 lemma_root(weg_doen,doe_weg) .
+lemma_root(weg_doezelen,doezel_weg) .
 lemma_root(weg_dooien,dooi_weg) .
 lemma_root(weg_draaien,draai_weg) .
 lemma_root(weg_dragen,draag_weg) .
@@ -22964,6 +23009,7 @@ lemma_root(weg_jagen,jaag_weg) .
 lemma_root(weg_kapen,kaap_weg) .
 lemma_root(weg_kijken,kijk_weg) .
 lemma_root(weg_klappen,klap_weg) .
+lemma_root(weg_knipperen,knipper_weg) .
 lemma_root(weg_komen,kom_weg) .
 lemma_root(weg_kopen,koop_weg) .
 lemma_root(weg_koppen,kop_weg) .

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node aform="base" begin="0" buiging="zonder" end="1" graad="basis" id="2" infl="no_e" lemma="spannend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="spannend" vform="adj" word="Spannend"/>
+      <node begin="1" end="2" id="3" infl="sg" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" sc="copula" stype="declarative" tense="past" word="werd" wvorm="pv"/>
+      <node begin="2" end="3" genus="onz" getal="ev" id="4" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
+      <node begin="3" end="4" id="5" lemma="pas" pos="adv" postag="BW()" pt="bw" rel="mod" root="pas" word="pas"/>
+      <node begin="4" cat="cp" end="12" id="6" rel="mod">
+        <node begin="4" conjtype="onder" end="5" id="7" lemma="toen" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="toen" word="toen"/>
+        <node begin="5" cat="ssub" end="12" id="8" rel="body">
+          <node begin="8" cat="np" end="10" id="9" index="1" rel="su">
+            <node begin="8" end="9" id="10" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+            <node begin="9" end="10" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lemma="furie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="furie" word="furie"/>
+          </node>
+          <node begin="10" end="11" id="12" infl="sg" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" sc="aux(psp(part_intransitive(aan)))" tense="past" word="kwam" wvorm="pv"/>
+          <node begin="5" cat="ppart" end="12" id="13" rel="vc">
+            <node begin="5" cat="pp" end="8" id="14" rel="mod">
+              <node begin="5" end="6" id="15" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+              <node begin="6" cat="np" end="8" id="16" rel="obj1">
+                <node aform="base" begin="6" buiging="zonder" end="7" id="17" infl="no_e" lemma="roffelen" pos="adj" positie="prenom" postag="WW(od,prenom,zonder)" pt="ww" rel="mod" root="roffel" vform="gerund" word="roffelend" wvorm="od"/>
+                <node begin="7" end="8" gen="het" genus="onz" getal="ev" graad="basis" id="18" lemma="stemgeluid" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="stemgeluid" word="stemgeluid"/>
+              </node>
+            </node>
+            <node begin="8" end="10" id="19" index="1" rel="su"/>
+            <node begin="11" buiging="zonder" end="12" id="20" infl="psp" lemma="aan_snellen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="snel_aan" sc="part_intransitive(aan)" word="aangesneld" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Spannend werd het pas toen met roffelend stemgeluid een furie kwam aangesneld .</sentence>
+</alpino_ds>

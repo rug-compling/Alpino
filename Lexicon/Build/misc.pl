@@ -1247,6 +1247,7 @@ with_dt([welaan,dan],
 
 tag(wee).
 tag(weh).
+tag([wel,godverdomme]).
 tag(welnee).
 tag(welnu).
 tag(welteruste).
@@ -3276,6 +3277,14 @@ pp(vanoudsher).
 pp(voordien).
 
 pp(elders,elders).
+
+pp(vanachter,van).
+pp(vanbinnen,van).   % diep vanbinnen
+pp(vanboven,van).
+pp(vanbuiten,van).
+pp(vanonder,van).
+pp(vanvoor,van).   % vlaams
+
 
 %% optional complements:
 pp(zonder,zonder).  % zitten zonder; kunnen zonder; patat zonder
@@ -5787,12 +5796,6 @@ loc_adverb(tussenbeide).
 loc_adverb(tussendoor).
 loc_adverb(tussenin).    % 
 loc_adverb(terug).
-loc_adverb(vanachter).
-loc_adverb(vanbinnen).
-loc_adverb(vanboven).
-loc_adverb(vanbuiten).
-loc_adverb(vanonder).
-loc_adverb(vanvoor).   % vlaams
 loc_adverb(vooraan).
 loc_adverb(voorin).
 loc_adverb(voorop).
@@ -7305,6 +7308,13 @@ m(ons,          reflexive(fir,pl),ons).
 m(u,            reflexive(u,sg),u).
 m(zich,         reflexive(u_thi,both),zich).
 
+%% gesproken taal, regionaal (?)
+m('je eigen',           reflexive(je,both),[je,eigen]).
+m('jullie eigen',       reflexive(je,pl),[jullie,eigen]).
+m('me eigen',           reflexive(fir,sg),[me,eigen]).
+m('ons eigen',          reflexive(fir,pl),[ons,eigen]).
+m('u eigen',            reflexive(u,sg),[u,eigen]).
+
 m(jezelf,       reflexive(je,both),jezelf).
 m(mezelf,       reflexive(fir,sg),mezelf).
 m(mijzelf,      reflexive(fir,sg),mijzelf).
@@ -8792,6 +8802,7 @@ m(datti,complementizer(datti),datti).
 m(datti,complementizer(datti),'dat-i').
 m(datti,complementizer(datti),'dat-ie').
 m(datti,complementizer(datti),dattie).
+m(datti,complementizer(datti),datie).
 
 
 

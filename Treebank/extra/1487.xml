@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="conj" end="17" id="2" rel="--">
+      <node begin="0" cat="sv1" end="4" id="3" rel="cnj">
+        <node begin="0" end="1" id="4" infl="sg" lemma="verbeelden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verbeeld" sc="refl_np" stype="ynquestion" tense="past" word="Verbeeldde" wvorm="pv"/>
+        <node begin="1" case="both" def="def" end="2" gen="de" genus="fem" getal="ev" id="5" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" rnum="sg" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="ze"/>
+        <node begin="2" end="3" genus="onz" getal="ev" id="6" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
+        <node begin="3" end="4" getal="getal" id="7" lemma="zich" naamval="obl" num="both" pdtype="pron" per="u_thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" refl="refl" rel="se" rnum="sg" root="zich" status="red" vwtype="refl" word="zich"/>
+      </node>
+      <node begin="5" conjtype="neven" end="6" id="8" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+      <node begin="6" cat="sv1" end="17" id="9" rel="cnj">
+        <node begin="6" end="7" id="10" infl="sg" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" sc="transitive_ndev" tense="past" word="had" wvorm="pv"/>
+        <node begin="7" case="both" def="def" end="8" gen="de" genus="fem" getal="ev" id="11" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" rnum="sg" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="ze"/>
+        <node begin="8" end="9" id="12" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+        <node begin="9" cat="np" end="11" id="13" rel="mod">
+          <node begin="9" end="10" id="14" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="10" end="11" gen="het" genus="onz" getal="ev" graad="dim" id="15" lemma="beet" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" rnum="sg" root="beet_DIM" special="mod" word="beetje"/>
+        </node>
+        <node begin="11" cat="np" end="17" id="16" rel="obj1">
+          <node begin="11" end="12" id="17" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="12" end="13" gen="de" genus="zijd" getal="ev" graad="basis" id="18" lemma="uitstraling" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="uitstraling" word="uitstraling"/>
+          <node begin="13" cat="pp" end="17" id="19" rel="mod">
+            <node begin="13" end="14" id="20" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="14" cat="np" end="17" id="21" rel="obj1">
+              <node begin="14" end="15" id="22" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node aform="base" begin="15" buiging="met-e" end="16" id="23" infl="e" lemma="bemiddeld" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="bemiddeld" vform="psp" word="bemiddelde" wvorm="vd"/>
+              <node begin="16" end="17" gen="de" genus="zijd" getal="ev" graad="basis" id="24" lemma="vrouw" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="vrouw" word="vrouw"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="25" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Verbeeldde ze het zich , of had ze al een beetje de uitstraling van een bemiddelde vrouw ?</sentence>
+</alpino_ds>

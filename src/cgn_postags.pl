@@ -1821,6 +1821,10 @@ mwu_postag('mogelijk zoveel',_,
 mwu_postag('aantal een',_,
 	   ['LID(onbep,stan,agr)','N(soort,ev,basis,onz,stan)'],
 	   [een,aantal]).
+mwu_postag('hard om','om het hardst',
+	   ['VZ(init)','LID(bep,stan,evon)','ADJ(vrij,sup,zonder)'],
+	   [om,het,hard]).
+
 
 %% da 's
 mwu_postag(v_root(ben,zijn),'da \'s',
@@ -2252,8 +2256,6 @@ mwu_postag('zachtjes aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
 
 mwu_postag('weet je',['WW(pv,tgw,ev)','VNW(pers,pron,nomin,red,2v,ev)']).
 mwu_postag('je noem wat',['VNW(vb,pron,stan,vol,3o,ev)','VNW(pers,pron,nomin,red,2v,ev)','WW(pv,tgw,met-t)']).
-
-mwu_postag('hard om',['VZ(init)','LID(bep,stan,evon)','ADJ(vrij,sup,zonder)']).
 
 mwu_postag(Stem,['SPEC(deeleigen)','SPEC(deeleigen)']):-
     name2(Stem).

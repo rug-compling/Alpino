@@ -11099,7 +11099,7 @@ a([ge_e(geboetseerde),
 
 a([ge_both(gebogen),
    ere(gebogenere),
-   er(gebogener)],both,[],[]).
+   er(gebogener)],both,[],[voorover]).
 
 a([ge_e(gebokste),
    ge_no_e(gebokst)],adv,[],[]).
@@ -13394,7 +13394,7 @@ a([e(geletterde),
    ste(geletterdste)],nonadv,[],[]).
 
 a([ge_e(geleunde),
-   ge_no_e(geleund)],padv,[],[]).
+   ge_no_e(geleund)],padv,[],[achterover]).
 
 a([ge_e(geleverde),
    ge_no_e(geleverd)],adv,
@@ -19403,7 +19403,7 @@ a([both(ineengedoken),
 
 a([ge_both(ineengekrompen)],padv,[],[]).
 
-a([both(ingeengeslagen)],padv,[],[]).
+a([ge_both(ineengeslagen)],padv,[],[]).
 
 a([ge_e(ineengestorte),
    ge_no_e(ineengestort)],adv,[],[]).
@@ -29601,7 +29601,7 @@ a([e(perplexe),
    ere(perplexere),
    no_e(perplex),
    st(perplext),
-   ste(perplexte)],nonadv,[pp(van)],[]).
+   ste(perplexte)],padv,[pp(van)],[]).  % nonadv -> adv; riddle; Sam kijkt haar perplex aan
 
 a([e(persistente),
    no_e(persistent)],padv,[],[]).
@@ -31799,6 +31799,8 @@ a([e(scheve),
    no_e(scheef),
    st(scheefst),
    ste(scheefste)],adv,[],[]).
+
+a([pred(scheefjes)],adv,[],[]).
 
 a([e(schele),
    er(scheler),

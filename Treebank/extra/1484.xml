@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="19" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="conj" end="18" id="2" rel="--">
+      <node begin="0" cat="sv1" end="6" id="3" rel="cnj">
+        <node begin="0" end="1" id="4" infl="sg" lemma="verbeelden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verbeeld" sc="refl_np" stype="ynquestion" tense="past" word="Verbeeldde" wvorm="pv"/>
+        <node begin="1" case="both" def="def" end="2" gen="de" genus="fem" getal="ev" id="5" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" rnum="sg" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="ze"/>
+        <node begin="2" end="3" genus="onz" getal="ev" id="6" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
+        <node begin="3" end="4" getal="getal" id="7" lemma="zich" naamval="obl" num="both" pdtype="pron" per="u_thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" refl="refl" rel="se" rnum="sg" root="zich" status="red" vwtype="refl" word="zich"/>
+        <node begin="4" cat="advp" end="6" his="normal" his_1="normal" id="8" rel="mod">
+          <node begin="4" end="5" id="9" lemma="alleen" pos="adv" postag="BW()" pt="bw" rel="hd" root="alleen" word="alleen"/>
+          <node begin="5" end="6" id="10" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
+        </node>
+      </node>
+      <node begin="7" conjtype="neven" end="8" id="11" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+      <node begin="8" cat="sv1" end="18" id="12" rel="cnj">
+        <node begin="8" end="9" id="13" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" sc="aux_psp_zijn" tense="past" word="waren" wvorm="pv"/>
+        <node begin="9" cat="np" end="15" id="14" index="1" rel="su">
+          <node begin="9" end="10" id="15" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="10" end="11" gen="both" getal="mv" graad="basis" id="16" lemma="mens" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="mens" word="mensen"/>
+          <node begin="11" cat="pp" end="15" id="17" rel="mod">
+            <node begin="11" end="12" id="18" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+            <node begin="12" cat="np" end="15" id="19" rel="obj1">
+              <node begin="12" end="13" id="20" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node aform="compar" begin="13" buiging="met-e" end="14" graad="basis" id="21" infl="e" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" vform="adj" word="andere"/>
+              <node begin="14" end="15" gen="het" getal="mv" graad="dim" id="22" lemma="tafel" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" rnum="pl" root="tafel_DIM" word="tafeltjes"/>
+            </node>
+          </node>
+        </node>
+        <node begin="9" cat="ppart" end="18" id="23" rel="vc">
+          <node begin="9" end="15" id="24" index="1" rel="su"/>
+          <node begin="15" cat="pp" end="17" id="25" rel="pc">
+            <node begin="15" end="16" id="26" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+            <node begin="16" buiging="zonder" end="17" getal-n="zonder-n" id="27" lemma="eten" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="obj1" rnum="sg" root="eet" sc="intransitive" special="v_noun" word="eten" wvorm="inf"/>
+          </node>
+          <node begin="17" buiging="zonder" end="18" id="28" infl="psp" lemma="stoppen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stop" sc="pc_pp(met)" word="gestopt" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="18" end="19" id="29" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Verbeeldde ze het zich alleen maar , of waren de mensen aan de andere tafeltjes met eten gestopt ?</sentence>
+</alpino_ds>
