@@ -4788,6 +4788,7 @@ lemma_root(door_snotteren,snotter_door) .
 lemma_root(door_snowboarden,snowboarden_door) .
 lemma_root(doorsnuffelen,doorsnuffel) .
 lemma_root(door_snuffelen,snuffel_door) .
+lemma_root(door_snuffen,snuf_door) .
 lemma_root(door_snuiven,snuif_door) .
 lemma_root(door_snurken,snurk_door) .
 lemma_root(door_socialiseren,socialiseer_door) .
@@ -5893,6 +5894,7 @@ lemma_root(glunderen,glunder) .
 lemma_root(gluren,gluur) .
 lemma_root(gniffelen,gniffel) .
 lemma_root(gnuiven,gnuif) .
+lemma_root(goed_doen,doe_goed) .
 lemma_root(goed_dunken,dunk_goed) .
 lemma_root(goed_gaan,ga_goed) .
 lemma_root(goed_keuren,keur_goed) .
@@ -12264,6 +12266,7 @@ lemma_root(raak_snorren,snor_raak) .
 lemma_root(raak_snotteren,snotter_raak) .
 lemma_root(raak_snowboarden,snowboarden_raak) .
 lemma_root(raak_snuffelen,snuffel_raak) .
+lemma_root(raak_snuffen,snuf_raak) .
 lemma_root(raak_snuiven,snuif_raak) .
 lemma_root(raak_snurken,snurk_raak) .
 lemma_root(raak_socialiseren,socialiseer_raak) .
@@ -13673,6 +13676,7 @@ lemma_root(snorren,snor) .
 lemma_root(snotteren,snotter) .
 lemma_root(snowboarden,snowboarden) .
 lemma_root(snuffelen,snuffel) .
+lemma_root(snuffen,snuf) .
 lemma_root(snuiten,snuit) .
 lemma_root(snuiven,snuif) .
 lemma_root(snurken,snurk) .
@@ -17340,6 +17344,7 @@ lemma_root(uit_snoeven,snoef_uit) .
 lemma_root(uit_snorren,snor_uit) .
 lemma_root(uit_snotteren,snotter_uit) .
 lemma_root(uit_snuffelen,snuffel_uit) .
+lemma_root(uit_snuffen,snuf_uit) .
 lemma_root(uit_snuiven,snuif_uit) .
 lemma_root(uit_snurken,snurk_uit) .
 lemma_root(uit_sodemieteren,sodemieter_uit) .
@@ -22159,6 +22164,7 @@ lemma_root(voort_snorren,snor_voort) .
 lemma_root(voort_snotteren,snotter_voort) .
 lemma_root(voort_snowboarden,snowboarden_voort) .
 lemma_root(voort_snuffelen,snuffel_voort) .
+lemma_root(voort_snuffen,snuf_voort) .
 lemma_root(voort_snuiven,snuif_voort) .
 lemma_root(voort_snurken,snurk_voort) .
 lemma_root(voort_socialiseren,socialiseer_voort) .

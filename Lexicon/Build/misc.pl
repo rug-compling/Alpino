@@ -6528,6 +6528,7 @@ m(bijvoorbeeld,       vandaar_adverb,bijvoorbeeld).
 m(daarmee,            vandaar_adverb,daarmee). % Vlaams
 m(daarom,             vandaar_adverb,daarom).  % Vlaams
 m('gelukkig maar',    vandaar_adverb,[gelukkig,maar]).
+m(goddank,            vandaar_adverb,goddank).
 m(helaas,             vandaar_adverb,helaas).
 m(hopelijk,           vandaar_adverb,hopelijk).
 m(misschien,          vandaar_adverb,misschien).

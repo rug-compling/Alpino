@@ -5969,6 +5969,8 @@ v(doe,doet,inflected(doen,doene),gedaan,deed,deden,
 	sbar,
 	% so_np,
 	nonp_copula,		% hij doet gek / raar / misselijk
+	so_nonp_copula,         % de vakantie deed hem goed
+	part_so_np(goed),       % riddle: de vakantie zou hem goeddoen
 	pp_pred_np(op,slot),    % hij doet de deur op slot
         % so_pp_np,    
 	fixed([ap_pred,het_obj1],no_passive),
@@ -20649,6 +20651,9 @@ v(snor,snort,snorren,gesnord,snorde,snorden,
 v(snotter,snottert,snotteren,gesnotterd,snotterde,snotterden,
     [h([intransitive])]).
 
+v(snuf,snuft,snuffen,gesnuft,snufte,snuften,
+    [h([intransitive])]).
+
 v(snuffel,snuffelt,snuffelen,gesnuffeld,snuffelde,snuffelden,
     [h([intransitive,
         part_transitive(af),
@@ -21080,6 +21085,7 @@ v(spoor,spoort,sporen,gespoord,spoorde,spoorden,
      h([transitive,
 	part_np_vp_obj1(aan),
 	part_dip_sbar(aan),
+	part_acc_np_dip_sbar(aan),
 	part_transitive(op),
         part_intransitive(op),
 	pc_pp(met),
