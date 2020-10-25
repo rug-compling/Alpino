@@ -29612,6 +29612,8 @@ n([pl(safes),sg(safe)],de,[]).
 
 n([sg([safe,area]),pl([safe,areas])],de,[]).
 
+n([sg([safe,house]),pl([safe,houses])],both,[]).
+
 n([pl(saffieren),sg(saffier)],de,[],[dim(saffiertje)]).
 
 n([mass(saffraan)],de,[]).
