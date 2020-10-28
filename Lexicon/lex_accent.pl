@@ -271,6 +271,12 @@ accent(creeert,creëert).
 accent(creeren,creëren).
 accent(creme,crème).
 accent(creme,crême).
+accent(cremekleurig,crèmekleurig).
+accent(cremekleurige,crèmekleurige).
+accent(cremekleuriger,crèmekleuriger).
+accent(cremekleurigere,crèmekleurigere).
+accent(cremekleurigst,crèmekleurigst).
+accent(cremekleurigste,crèmekleurigste).
 accent(cremes,crèmes).
 accent('crisis-situatien','crisis-situatiën').
 accent(crisissituatien,crisissituatiën).
@@ -770,6 +776,7 @@ accent(ideele,ideële).
 accent(ideelere,ideëlere).
 accent(ideeler,ideëler).
 accent(ideologieen,ideologieën).
+accent(ijstheeen,ijstheeën).
 accent(immateriele,immateriële).
 accent(immaterieler,immateriëler).
 accent(incompatibilite,incompatibilité).
@@ -1092,6 +1099,8 @@ accent(prielen,priëlen).
 accent(principiele,principiële).
 accent(principieler,principiëler).
 accent(privebezit,privébezit).
+accent(privedetective,privédetective).
+accent(privedetectives,privédetectives).
 accent('prive-klinieken','privé-klinieken').
 accent(priveklinieken,privéklinieken).
 accent('prive-kliniek','privé-kliniek').

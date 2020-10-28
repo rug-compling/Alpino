@@ -655,6 +655,7 @@ filter_new_left_corner(H,L,L1):-
     ;   L = [H|L1]
     ).
 
+not_new_left_corner(lc(skip,skip,[])).
 not_new_left_corner(lc(Goal,First,Rest)) :-
     rewrite_first(First,First2),
     lists:append(Rest,[finish],Rest2),

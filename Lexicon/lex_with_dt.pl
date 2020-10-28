@@ -1459,6 +1459,8 @@ with_dt_all(drietjes,[u]).
 with_dt_all(drietjes,[wij]).
 with_dt_all(drietjes,[zij]).
 with_dt_all('d\'r',[moeder]).
+with_dt_all('d\'r',[oma]).
+with_dt_all('d\'r',[opa]).
 with_dt_all('d\'r',[tante]).
 with_dt_all('d\'r',[vader]).
 with_dt_all('d\'r',[vriend]).
@@ -1661,6 +1663,8 @@ with_dt_all(gunste,[te,uwen]).
 with_dt_all(gunste,[te,zijnen]).
 with_dt_all(haar,[majesteit]).
 with_dt_all(haar,[moeder]).
+with_dt_all(haar,[oma]).
+with_dt_all(haar,[opa]).
 with_dt_all(haar,[tante]).
 with_dt_all(haar,[vader]).
 with_dt_all(haar,[vriend]).
@@ -1740,6 +1744,8 @@ with_dt_all(hun,[met,zessen]).
 with_dt_all(hun,[met,zevenen]).
 with_dt_all(hun,[moeder]).
 with_dt_all(hun,[negenen]).
+with_dt_all(hun,[oma]).
+with_dt_all(hun,[opa]).
 with_dt_all(hun,[tante]).
 with_dt_all(hun,[tienen]).
 with_dt_all(hun,[twee]).
@@ -1787,6 +1793,8 @@ with_dt_all(inzoverre,[zelfs]).
 with_dt_all(ja,[nee,of]).
 with_dt_all(je,[moeder]).
 with_dt_all(je,[noem,wat]).
+with_dt_all(je,[oma]).
+with_dt_all(je,[opa]).
 with_dt_all(je,[tante]).
 with_dt_all(je,[vader]).
 with_dt_all(je,[vriend]).
@@ -1795,6 +1803,8 @@ with_dt_all(je,[weet]).
 with_dt_all(jongsaf,[sinds]).
 with_dt_all(jongsaf,[van]).
 with_dt_all(jouw,[moeder]).
+with_dt_all(jouw,[oma]).
+with_dt_all(jouw,[opa]).
 with_dt_all(jouw,[tante]).
 with_dt_all(jouw,[vader]).
 with_dt_all(jouw,[vriend]).
@@ -1814,6 +1824,8 @@ with_dt_all(jullie,[met,zessen]).
 with_dt_all(jullie,[met,zevenen]).
 with_dt_all(jullie,[moeder]).
 with_dt_all(jullie,[negenen]).
+with_dt_all(jullie,[oma]).
+with_dt_all(jullie,[opa]).
 with_dt_all(jullie,[tante]).
 with_dt_all(jullie,[tienen]).
 with_dt_all(jullie,[twee]).
@@ -1912,6 +1924,8 @@ with_dt_all(met,['z\'n',zessen]).
 with_dt_all(met,['z\'n',zevenen]).
 with_dt_all(mijnen,[nadele,te]).
 with_dt_all(mijn,[moeder]).
+with_dt_all(mijn,[oma]).
+with_dt_all(mijn,[opa]).
 with_dt_all(mijn,[tante]).
 with_dt_all(mijn,[vader]).
 with_dt_all(mijn,[vriend]).
@@ -1922,6 +1936,8 @@ with_dt_all(misschien,[vandaar]).
 with_dt_all(misschien,[wel]).
 with_dt_all(misschien,[zelfs]).
 with_dt_all('m\'n',[moeder]).
+with_dt_all('m\'n',[oma]).
+with_dt_all('m\'n',[opa]).
 with_dt_all('m\'n',[tante]).
 with_dt_all('m\'n',[vader]).
 with_dt_all('m\'n',[vriend]).
@@ -2028,6 +2044,9 @@ with_dt_all(of,[wel]).
 with_dt_all(of,[zo]).
 with_dt_all(of,[zo,iets]).
 with_dt_all(of,[zoiets]).
+with_dt_all(oma,[uw]).
+with_dt_all(oma,[zijn]).
+with_dt_all(oma,['z\'n']).
 with_dt_all(onderweg,[voor]).
 with_dt_all(oneindig,[op]).
 with_dt_all(ongeveer,[zo]).
@@ -2055,6 +2074,9 @@ with_dt_all(ook,[vandaar]).
 with_dt_all(ook,[vooral]).
 with_dt_all(ook,[vooral,weer]).
 with_dt_all(ook,[zelf]).
+with_dt_all(opa,[uw]).
+with_dt_all(opa,[zijn]).
+with_dt_all(opa,['z\'n']).
 with_dt_all(opnieuw,[steeds]).
 with_dt_all(opnieuw,[telkens]).
 with_dt_all(op,[vandaag]).
@@ -2830,6 +2852,7 @@ with_dt_root(nu).
 with_dt_root(nummer).
 with_dt_root(of).
 with_dt_root(om).
+with_dt_root(oma).
 with_dt_root(omgekeerd).
 with_dt_root(onbekend).
 with_dt_root(onbemind).
@@ -2850,6 +2873,7 @@ with_dt_root(onzent).
 with_dt_root(ook).
 with_dt_root(oordeel).
 with_dt_root(op).
+with_dt_root(opa).
 with_dt_root(opnieuw).
 with_dt_root(opzichte).
 with_dt_root(oud).

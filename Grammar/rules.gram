@@ -7768,7 +7768,9 @@ grammar_rule(adv_tag_root_dp,MAX,[ADV,OPTCOMMA,TAG,COMMA,XP]) :-
 %% waarom deze vragen?
 %% met welk doel zo'n onderzoek?
 max_wh_xp_structure(WH,XP,MAX) :-
-    MAX => start,
+				%    MAX => start,
+    MAX => max,
+    MAX:max_type => t_dp,
     max_modifier(WH),
     WH:wh => ywh,
     WH:wh => yq,
