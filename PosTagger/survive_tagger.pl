@@ -103,7 +103,7 @@ surviving_word_tag(voorbij,adjective(both(adv))).
 surviving_root_tag(_,_):-
     fail.
 
-%% De ref wees terecht naar de stop en de strafschop werd omgezet
+%% De ref wees terecht naar de stip en de strafschop werd omgezet
 surviving_root_tag(terecht,adjective(_)).
 surviving_root_tag(terecht,adjective(_,_)).
 

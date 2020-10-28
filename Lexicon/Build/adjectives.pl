@@ -1690,10 +1690,10 @@ a([ge_both(aangemeten)],adv,[],[]).
 a([ge_e(aangemoedigde),
    ge_no_e(aangemoedigd)],adv,[],[]).
 
-a([ge_e(aangename),
+a([e(aangename),
    er(aangenamer),
    ere(aangenamere),
-   ge_no_e(aangenaam),
+   no_e(aangenaam),
    st(aangenaamst),
    ste(aangenaamste)],adv,
   [pp(voor),
@@ -2624,6 +2624,9 @@ a([ge_e(afgepakte),
 
 a([ge_e(afgepaste),
    ge_no_e(afgepast)],adv,[],[]).
+
+a([ge_e(afgepeigerde),
+   ge_no_e(afgepeigerd)],padv,[],[]).
 
 a([ge_e(afgeplakte),
    ge_no_e(afgeplakt)],adv,[],[]).
@@ -4193,7 +4196,7 @@ a([ende(begrijpende),
    ere(begrijpendere),
    end(begrijpend),
    st(begrijpendst),
-   ste(begrijpendste)],adv,[transitive],[]).
+   ste(begrijpendste)],adv,[transitive],[h(niet)]).
 
 a([ge_e(begroeide),
    ge_no_e(begroeid)],adv,
@@ -6125,7 +6128,10 @@ a([e(blauwe),
    ere(blauwere),
    no_e(blauw),
    st(blauwst),
-   ste(blauwste)],nonadv,[],[donker,licht]).
+   ste(blauwste)],nonadv,[],
+  [donker,
+   grijs,h(grijs),
+   licht]).
 
 a([e(blauwachtige),
    er(blauwachtiger),
@@ -6133,19 +6139,6 @@ a([e(blauwachtige),
    no_e(blauwachtig),
    st(blauwachtigst),
    ste(blauwachtigste)],nonadv,[],[]).
-
-a([e('blauw-grijze'),
-   e(blauwgrijze),
-   er('blauw-grijzer'),
-   er(blauwgrijzer),
-   ere('blauw-grijzere'),
-   ere(blauwgrijzere),
-   no_e('blauw-grijs'),
-   no_e(blauwgrijs),
-   st('blauw-grijst'),
-   st(blauwgrijst),
-   ste('blauw-grijste'),
-   ste(blauwgrijste)],nonadv,[],[]).
 
 a([e(bleke),
    er(bleker),
@@ -6260,7 +6253,9 @@ a([e(blonde),
    ere(blondere),
    no_e(blond),
    st(blondst),
-   ste(blondste)],nonadv,[],[]).
+   ste(blondste)],nonadv,[],
+  [goud,
+   donker]).
 
 a([e(blote),
    er(bloter),
@@ -6625,6 +6620,7 @@ a([e(bruine),
    st(bruinst),
    ste(bruinste)],adv,[],
   [donker,
+   goud,
    licht,
    rood]).
 
@@ -8357,7 +8353,7 @@ a([e(domme),
    st(domst),
    ste(domste)],adv,
   [subject_vp,
-   subject_sbar],[]).
+   subject_sbar],[olie]).
 
 a([e(dominante),
    er(dominanter),
@@ -8373,14 +8369,9 @@ a([e(donkere),
    ere(donkerdere),
    no_e(donker),
    st(donkerst),
-   ste(donkerste)],nonadv,[],[stik]).
-
-a([e(donkerblonde),
-   er(donkerblonder),
-   ere(donkerblondere),
-   no_e(donkerblond),
-   st(donkerblondst),
-   ste(donkerblondste)],nonadv,[],[]).
+   ste(donkerste)],nonadv,[],
+  [pik,
+   stik]).
 
 a([stof(donzen)],nonadv,[],[]).
 
@@ -9669,7 +9660,8 @@ a([e(enge),
    st(engst),
    ste(engste)],adv,
   [subject_sbar,
-   subject_vp],[]).
+   subject_vp],
+  [dood]).
 
 a([stof(enige),
    no_e(enig),
@@ -10792,6 +10784,9 @@ a([ge_e(geadviseerde),
    ge_no_e(geadviseerd),
    ge_e(geadvizeerde),
    ge_no_e(geadvizeerd)],adv,[],[]).
+
+a([ge_e(geagiteerde),
+   ge_no_e(geagiteerd)],adv,[],[]).
 
 a([ge_e(geaksentueerde),
    ge_no_e(geaksentueerd)],adv,[],[]).
@@ -11994,7 +11989,11 @@ a([e(gele),
    ere(gelere),
    no_e(geel),
    st(geelst),
-   ste(geelste)],nonadv,[],[]).
+   ste(geelste)],nonadv,[],
+  [licht,
+   donker,
+   goud,
+   h(goud)]).
 
 a([e(geelachtige),
    er(geelachtiger),
@@ -12703,7 +12702,11 @@ a([e(gekke),
    subject_vp,
    er_pp_vp(op),
    pp(op),
-   pp(van)],[]).
+   pp(van)
+  ],
+  [knetter,
+   stapel
+  ]).
 
 a([ge_e(gekaalde),
    ge_no_e(gekaald)],adv,[],[]).
@@ -13106,6 +13109,9 @@ a([ge_e(gekrepeerde),
 
 a([e(gekreukelde),
    no_e(gekreukeld)],padv,[],[]).
+
+a([e(gekreukte),
+   no_e(gekreukt)],padv,[],[]).
 
 a([ge_e(gekriebelde),
    ge_no_e(gekriebeld)],adv,[],[]).
@@ -14137,7 +14143,8 @@ a([ge_e(geopenbaarde),
    ge_no_e(geopenbaard)],adv,[],[]).
 
 a([ge_e(geopende),
-   ge_no_e(geopend)],adv,[],[]).
+   ge_no_e(geopend)],adv,[],
+  [on]).
 
 a([ge_e(geoperationaliseerde),
    ge_no_e(geoperationaliseerd)],adv,[],[]).
@@ -15222,7 +15229,10 @@ a([ge_e(geschoonde),
 a([ge_e(geschopte),
    ge_no_e(geschopt)],adv,[],[]).
 
-a([ge_both(geschoren)],adv,[],[]).
+a([ge_both(geschoren)],adv,[],
+  [glad,
+   kaal,
+   on]).
 
 a([ge_e(geschorste),
    ge_no_e(geschorst)],adv,[],[]).
@@ -17285,7 +17295,10 @@ a([e(gladde),
    ere(gladdere),
    no_e(glad),
    st(gladst),
-   ste(gladste)],adv,[],[spek]).
+   ste(gladste)],adv,[],
+  [spek,
+   spiegel
+  ]).
 
 a([ge_both(gladgestreken)],adv,[],[]).
 
@@ -17506,41 +17519,7 @@ a([e(gore),
 a([e(gotische),
    no_e(gotisch)],nonadv,[],[]).
 
-a([e(goudblonde),
-   er(goudblonder),
-   ere(goudblondere),
-   no_e(goudblond),
-   st(goudblondst),
-   ste(goudblondste)],nonadv,[],[]).
-
-a([e(goudbruine),
-   er(goudbruiner),
-   ere(goudbruinere),
-   no_e(goudbruin),
-   st(goudbruinst),
-   ste(goudbruinste)],nonadv,[],[]).
-
 a([stof(gouden)],nonadv,[],[]).
-
-a([e('goud-gele'),
-   e(goudgele),
-   er('goud-geler'),
-   er(goudgeler),
-   ere('goud-gelere'),
-   ere(goudgelere),
-   no_e('goud-geel'),
-   no_e(goudgeel),
-   st('goud-geelst'),
-   st(goudgeelst),
-   ste('goud-geelste'),
-   ste(goudgeelste)],nonadv,[],[]).
-
-a([e(goudkleurige),
-   er(goudkleuriger),
-   ere(goudkleurigere),
-   no_e(goudkleurig),
-   st(goudkleurigst),
-   ste(goudkleurigste)],nonadv,[],[]).
 
 a([e(gouvernementele),
    no_e(gouvernementeel)],nonadv,[],[h(niet),h(non)]).
@@ -17649,28 +17628,11 @@ a([e(grijze),
    no_e(grijs),
    st(grijst),
    ste(grijste)],nonadv,[],
-  [donker,
-   licht]).
-
-a([e('grijs-blauwe'),
-   e(grijsblauwe),
-   er('grijs-blauwer'),
-   er(grijsblauwer),
-   ere('grijs-blauwere'),
-   ere(grijsblauwere),
-   no_e('grijs-blauw'),
-   no_e(grijsblauw),
-   st('grijs-blauwst'),
-   st(grijsblauwst),
-   ste('grijs-blauwste'),
-   ste(grijsblauwste)],nonadv,[],[]).
-
-a([e(grijsgroene),
-   er(grijsgroener),
-   ere(grijsgroenere),
-   no_e(grijsgroen),
-   st(grijsgroenst),
-   ste(grijsgroenste)],nonadv,[],[]).
+  [blauw,
+   h(blauw),
+   donker,
+   licht,
+   zilver]).
 
 a([e(grijzige),
    er(grijziger),
@@ -17701,6 +17663,7 @@ a([e(groene),
    ste(groenste)],nonadv,[],
   [brons,
    donker,
+   grijs,
    licht,
    paars,h(paars),
    rood,h(rood)]).
@@ -17891,13 +17854,6 @@ a([e(hachelijke),
    st(hachelijkst),
    ste(hachelijkste)],nonadv,[],[]).
 
-a([e(hagelwitte),
-   er(hagelwitter),
-   ere(hagelwittere),
-   no_e(hagelwit),
-   st(hagelwitst),
-   ste(hagelwitste)],nonadv,[],[]).
-
 a([both(halal)],adv,[],[]).
 
 a([e(hallucinogene),
@@ -18043,7 +17999,11 @@ a([e(harige),
    ere(harigere),
    no_e(harig),
    st(harigst),
-   ste(harigste)],nonadv,[],[glad]).
+   ste(harigste)],nonadv,[],
+  [donker,
+   glad,
+   lang,
+   rood]).
 
 a([e(harmonieuze),
    er(harmonieuzer),
@@ -18187,7 +18147,9 @@ a([e(hete),
    ere(hetere),
    no_e(heet),
    st(heetst),
-   ste(heetste)],adv,[],[]).
+   ste(heetste)],adv,[],
+  [bloed,
+   snik]).
 
 a([e(heetgebakerde),
    no_e(heetgebakerd)],padv,[],[]).
@@ -20381,8 +20343,6 @@ a([e(kale),
    st(kaalst),
    ste(kaalste)],adv,[],[]).
 
-a([ge_both(kaalgeschoren)],adv,[],[]).
-
 a([e(kaarsrechte),
    er(kaarsrechter),
    ere(kaarsrechtere),
@@ -20841,7 +20801,13 @@ a([e(kleurige),
    ere(kleurigere),
    no_e(kleurig),
    st(kleurigst),
-   ste(kleurigste)],adv,[],[]).
+   ste(kleurigste)],adv,[],
+  [crème,
+   goud,
+   koper,
+   veel,
+   zilver
+  ]).
 
 a([e(kleurloze),
    er(kleurlozer),
@@ -21035,13 +21001,6 @@ a([e(koosjere),
    subject_vp],[]).
 
 a([stof(koperen)],nonadv,[],[]).
-
-a([e(koperkleurige),
-   er(koperkleuriger),
-   ere(koperkleurigere),
-   no_e(koperkleurig),
-   st(koperkleurigst),
-   ste(koperkleurigste)],nonadv,[],[]).
 
 a([e(koppige),
    er(koppiger),
@@ -21614,13 +21573,6 @@ a([e(langgerekte),
    st(langgerektst),
    ste(langgerektste)],nonadv,[],[]).
 
-a([e(langharige),
-   er(langhariger),
-   ere(langharigere),
-   no_e(langharig),
-   st(langharigst),
-   ste(langharigste)],nonadv,[],[]).
-
 a([e(langlopende),
    no_e(langlopend)],nonadv,[],[]).
 
@@ -21730,7 +21682,8 @@ a([e(lege),
    ere(legere),
    no_e(leeg),
    st(leegst),
-   ste(leegste)],adv,[],[]).
+   ste(leegste)],adv,[],
+  [half]).
 
 a([ende(leegdrinkende),
    end(leegdrinkend)],adv,
@@ -22972,13 +22925,6 @@ a([e(melkachtige),
    st(melkachtigst),
    ste(melkachtigste)],nonadv,[],[]).
 
-a([e(melkwitte),
-   er(melkwitter),
-   ere(melkwittere),
-   no_e(melkwit),
-   st(melkwitst),
-   ste(melkwitste)],nonadv,[],[]).
-
 a([e(melodieuze),
    er(melodieuzer),
    ere(melodieuzere),
@@ -23718,7 +23664,8 @@ a([e(naakte),
    ere(naaktere),
    no_e(naakt),
    st(naaktst),
-   ste(naaktste)],adv,[],[]).
+   ste(naaktste)],adv,[],
+  [spier]).
 
 a([e(naamloze),
    no_e(naamloos)],adv,[],[]).
@@ -26111,8 +26058,6 @@ a([e(ongeschoolde),
    no_e(ongeschoold),
    st(ongeschooldst),
    ste(ongeschooldste)],nonadv,[],[]).
-
-a([both(ongeschoren)],padv,[],[]).
 
 a([both(ongeschreven)],nonadv,[],[]).
 
@@ -31371,13 +31316,6 @@ a([e(roodgloeiende),
    st(roodgloeiendst),
    ste(roodgloeiendste)],nonadv,[],[]).
 
-a([e(roodharige),
-   er(roodhariger),
-   ere(roodharigere),
-   no_e(roodharig),
-   st(roodharigst),
-   ste(roodharigste)],nonadv,[],[]).
-
 a([e(roomse),
    no_e(rooms),
    er(roomser),
@@ -31937,7 +31875,8 @@ a([e(schone),
    ere(schonere),
    no_e(schoon),
    st(schoonst),
-   ste(schoonste)],adv,[],[]).
+   ste(schoonste)],adv,[],
+  [brand]).
 
 a([ge_both(schoongehouden)],adv,[],[]).
 
@@ -32533,13 +32472,6 @@ a([e(snaakse),
 
 a([both(sneaky)],adv,[],[]).
 
-a([e(sneeuwwitte),
-   er(sneeuwwitter),
-   ere(sneeuwwittere),
-   no_e(sneeuwwit),
-   st(sneeuwwitst),
-   ste(sneeuwwitste)],nonadv,[],[]).
-
 a([e(snelle),
    er(sneller),
    ere(snellere),
@@ -32558,9 +32490,6 @@ a([e(snijdende),
    st(snijdendst),
    ste(snijdendste)],adv,
   [transitive],[twee]).
-
-a([e(snikhete),
-   no_e(snikheet)],adv,[],[]).
 
 a([e(snode),
    no_e(snood)],nonadv,[],[]).
@@ -32778,23 +32707,6 @@ a([e(spichtige),
    no_e(spichtig),
    st(spichtigst),
    ste(spichtigste)],adv,[],[]).
-
-a([e(spiegelgladde),
-   er(spiegelgladder),
-   ere(spiegelgladdere),
-   no_e(spiegelglad),
-   st(spiegelgladst),
-   ste(spiegelgladste)],nonadv,[],[]).
-
-a([e(spiernaakte),
-   no_e(spiernaakt)],padv,[],[]).
-
-a([e(spierwitte),
-   er(spierwitter),
-   ere(spierwittere),
-   no_e(spierwit),
-   st(spierwitst),
-   ste(spierwitste)],padv,[],[]).
 
 a([e(spijtige),
    er(spijtiger),
@@ -35790,11 +35702,6 @@ a([ge_both(veelgeprezen)],nonadv,[],[]).
 
 a([ge_both(veelgelezen)],nonadv,[],[]).
 
-a([er(veelkleuriger),
-   ere(veelkleurigere),
-   e(veelkleurige),
-   no_e(veelkleurig)],nonadv,[],[]).
-
 a([e(veelomvattende),
    no_e(veelomvattend)],nonadv,[],[]).
 
@@ -36522,7 +36429,8 @@ a([ge_both(verhangen)],adv,[],[]).
 
 a([ge_e(verharde),
    ge_no_e(verhard)],adv,
-  [pp(met)],[]).
+  [pp(met)],
+  [on]).
 
 a([ge_e(verheelde),
    ge_no_e(verheeld)],adv,[],[]).
@@ -36844,7 +36752,8 @@ a([e(verliefde),
    no_e(verliefd),
    st(verliefdst),
    ste(verliefdste)],adv,
-  [pp(op)],[]).
+  [pp(op)],
+  [smoor]).
 
 a([e(verliesgevende),
    no_e(verliesgevend)],nonadv,[],[]).
@@ -38416,7 +38325,8 @@ a([e(volle),
 a([e(volle),
    no_e(vol)],both,
   [],
-  [belofte]).
+  [s(begrip),
+   belofte]).
 
 a([both(volbloed)],nonadv,[],[]).
 
@@ -39036,6 +38946,7 @@ a([e(vrije),
    no_e(vrij)],both,
   [],
   [ijs,
+   kogel,
    premie,
    rook,
    sneeuw,
@@ -40063,9 +39974,15 @@ a([e(witte),
    no_e(wit),
    st(witst),
    ste(witste)],adv,[],
-  [h(rood),
-   h(blauw),
-   h(zwart)]).
+  [h(blauw),
+   hagel,
+   melk,
+   h(rood),
+   sneeuw,
+   spier,
+   zilver,
+   h(zwart)
+  ]).
 
 a([e(witgekalkte),
    no_e(witgekalkt)],nonadv,[],[]).
@@ -40504,16 +40421,6 @@ a([e(zilverachtige),
 
 a([stof(zilveren)],nonadv,[],[]).
 
-a([e(zilverkleurige),
-   er(zilverkleuriger),
-   ere(zilverkleurigere),
-   no_e(zilverkleurig),
-   st(zilverkleurigst),
-   ste(zilverkleurigste)],nonadv,[],[]).
-
-a([e(zilverwitte),
-   no_e(zilverwit)],nonadv,[],[]).
-
 a([e(zindelijke),
    er(zindelijker),
    ere(zindelijkere),
@@ -40862,9 +40769,6 @@ a([e(zwarte),
    inkt,
    kool,
    pik]).
-
-a([both('zwart-wit'),
-   e('zwart-witte')],adv,[],[]).
 
 a([e(zwartgeblakerde),
    no_e(zwartgeblakerd)],padv,[],[]).

@@ -6372,6 +6372,7 @@ spelling_variant_compound(HandelsAccoord,HandelsAkkoord,P0,R0,Frame) :-
     alpino_lex:spelling_variant(Accoord,Akkoord),
     atom_concat(Handels,Akkoord,HandelsAkkoord),
     alpino_lex:lexicon(Frame,Stem,[HandelsAkkoord],[],_),
+    guess_proper_compound(HandelsAkkoord,Akkoord,_,2),
     assert_tag(P0,P,R0,R,Stem,spelling_variant_compound(Akkoord),Frame).
 
 ld_dir(ld_dir,intransitive,part_intransitive(Voorover),Voorover).

@@ -1221,6 +1221,7 @@ inf_only_sport(polsstokhoogspringen).
 inf_only_sport(prijsschieten).
 inf_only_sport(profwielrennen).
 inf_only_sport(rekeningrijden).
+inf_only_sport(ruziemaken).
 inf_only_sport(schoolverlaten).
 inf_only_sport(skispringen).
 inf_only_sport(skivliegen).
@@ -4558,6 +4559,7 @@ v(breid,breidt,breiden,gebreid,breidde,breidden,
 	part_pc_pp(uit,met),
 	part_pc_pp(uit,tot),
 	part_transitive(uit),
+	part_refl(uit),  % word order: refl<su
 	part_np_pc_pp(uit,met),
 	part_np_pc_pp(uit,tot)])]).
 
@@ -6959,9 +6961,10 @@ v(eb,ebt,ebben,geëbd,ebde,ebden,
      h([intransitive])]).
 
 v(echo,echoot,echoën,geëchood,echode,echoden,
-    [h([intransitive,
-	part_intransitive(na),
-	transitive])]).
+  [h([intransitive,
+      dip_sbar,
+      part_intransitive(na),
+      transitive])]).
 
 v(edit,edit,[editten,editen],[geëdit,'ge-edit'],[editte,edite],[editten,editen],
     [h([intransitive,
@@ -7796,6 +7799,7 @@ v(ga,gaat,inflected(gaan,gane),gegaan,ging,gingen,ga,
 	part_pc_pp(op,aan),        % het geld ging op aan snoep
 	part_pc_pp(op,in),         % hij ging helemaal op in zijn boek
 	part_pc_pp(op,voor),       % ik ga op voor mijn examen
+	part_so_np(op),		   % toen ging mij een lichtje op
 	part_sbar_subj(op),        % VL het gaat niet op dat ...
 	part_intransitive(open),
 	part_so_np(open),          % toen gingen mij de ogen open
@@ -8617,7 +8621,8 @@ v(glunder,glundert,glunderen,geglunderd,glunderde,glunderden,
        ])]).
 
 v(gluur,gluurt,gluren,gegluurd,gluurde,gluurden,
-    [h([intransitive,
+  [h([intransitive,
+      	ld_dir,  % ze gluurde de gang in
 	ld_pp])]).
 
 v(gniffel,gniffelt,gniffelen,gegniffeld,gniffelde,gniffelden,
@@ -12948,6 +12953,7 @@ v(lees,leest,lezen,gelezen,las,lazen,
 	part_intransitive(kaart),
 	part_sbar(na),
 	part_transitive(door),
+	part_transitive(over),
         part_transitive(in),
 	part_transitive(na),
         part_intransitive(na),
@@ -16805,6 +16811,9 @@ v(pit,pit,pitten,gepit,pitte,pitten,
     [h([intransitive,
 	transitive])]).
 
+v(pitch,pitcht,pitchen,gepitcht,pitchte,pitchten,
+    [h([intransitive])]).
+
 v(plaag,plaagt,plagen,geplaagd,plaagde,plaagden,
     [h([intransitive,
 	sbar_subj_so_np,
@@ -18220,8 +18229,9 @@ v(resoneer,resoneert,resoneren,geresoneerd,resoneerde,resoneerden,
 	pc_pp(op)])]).
 
 v(respecteer,respecteert,respecteren,gerespecteerd,respecteerde,respecteerden,
-    [h([transitive,
-	sbar])]).
+  [h([transitive,
+      sbar_obj,
+      sbar])]).
 
 v(respekteer,respekteert,respekteren,gerespekteerd,respekteerde,respekteerden,
     [h([transitive])]).
@@ -20030,6 +20040,9 @@ v([ski,skie],skiet,skiën,geskied,skiede,skieden,
 
 v(skip,skipt,skippen,geskipt,skipte,skipten,
     [h([transitive])]).
+
+v([skype,skyp],[skypet,skypt],skypen,[geskypet,geskypt],[skypete,skypte],[skypeten,skypten],
+    [h([intransitive])]).  
 
 v(sla,slaat,slaan,geslagen,sloeg,sloegen,
     [z([aan_het,  % hij slaat aan het rekenen

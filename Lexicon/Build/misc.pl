@@ -1371,6 +1371,8 @@ adv_tag(['God',betere,het]).
 adv_tag(['God',betere,'\'t']).
 adv_tag(godverdomme).
 adv_tag(godverdorie).
+adv_tag(godverdegodver).
+adv_tag(goddomme).
 
 tag([echt,waar]).
 tag([eerlijk,waar]).
@@ -2131,6 +2133,8 @@ mijn_vaders_vaders(tante,tantes).
 mijn_vaders_vaders(vader,vaders).
 mijn_vaders_vaders(vriend,vriends).
 mijn_vaders_vaders(vriendin,vriendins).
+mijn_vaders_vaders(opa,'opa\'s').
+mijn_vaders_vaders(oma,'oma\'s').
 
 
 m(welk,          determiner(welke,rwh,nmod,pro,yparg),   welke).
@@ -7032,6 +7036,12 @@ with_dt([absoluut,niemand],
 	pronoun(nwh,thi,sg,de,both,indef,strpro),
 	dt(np,[mod=l(absoluut,adverb,advp,0,1),
 	       hd=l(niemand,pronoun(nwh,thi,sg,de,both,indef,strpro),1,2)
+	      ])).
+
+with_dt([absoluut,iedereen],
+	pronoun(nwh,thi,sg,de,both,def,strpro),
+	dt(np,[mod=l(absoluut,adverb,advp,0,1),
+	       hd=l(niemand,pronoun(nwh,thi,sg,de,both,def,strpro),1,2)
 	      ])).
 
 with_dt([zo,iemand],
