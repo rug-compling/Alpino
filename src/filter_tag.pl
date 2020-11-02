@@ -206,7 +206,6 @@ filter_tag_rule(proper_name(_),        []).
 filter_tag_rule(proper_name(_,_),      []).
 filter_tag_rule(punct(_),              []).
 filter_tag_rule(tag,                   []).
-filter_tag_rule(adv_tag,               []).
 filter_tag_rule(noun(_,_,_),           []).
 filter_tag_rule(post_n_n,              [check_tag(number(hoofd(_)))]).
 filter_tag_rule(enumeration,           []).

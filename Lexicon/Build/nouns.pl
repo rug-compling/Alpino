@@ -2869,7 +2869,8 @@ n([pl(atletes),sg(atlete)],de,[]).
 
 n([mass(atletiek)],de,[],[weg]).
 
-n([pl(atmosferen),sg(atmosfeer)],de,[]).
+%% een druk van vijf atmosfeer
+n([pl(atmosferen),meas(atmosfeer)],de,[]).
 
 n([pl(atollen),sg(atol)],both,[]).
 
@@ -5732,6 +5733,7 @@ n([pl(boots)],de,[]). % schoenen?
 %% er hing een bord dat roken verboden is
 n([pl(borden),sg(bord)],het,[sbar],
   [s(verkeer),
+   s(waarschuwing),
    dim(bordje)
   ]).
 
@@ -26442,6 +26444,8 @@ n([mass(platteland)],het,[]).
 
 n([sg(platter),pl(platters)],de,[]).
 
+n([sg(plavei),pl(plaveien)],both,[]). 
+
 n([pl(plaveisels),sg(plaveisel)],het,[]).
 
 n([pl(plavuizen),sg(plavuis)],de,[]).
@@ -30716,7 +30720,7 @@ n([pl(selecties),sg(selectie),
 
 n([sg(selfie),pl(selfies)],de,[]).
 
-n([sg(semester),pl(semesters)],het,[]).
+n([sg(semester),pl(semesters)],het,[temp_mod]).
 
 n([sg(seminar),pl(seminars)],both,[]).
 
@@ -31260,7 +31264,7 @@ n([pl(slokdarmen),sg(slokdarm)],de,[]).
 
 n([sg(sloof),pl(sloven)],de,[]).
 
-n([mass(sloop),pl(slopen),sg(sloop)],de,[],
+n([mass(sloop),pl(slopen),sg(sloop)],both,[],
   [kussen % en niet kus_sloop
   ]).
 
@@ -35134,7 +35138,7 @@ n([sg(triloog),pl(trilogen)],de,[]).
 
 n([mass(trim)],de,[]).
 
-n([pl(trimesters),sg(trimester)],het,[]).
+n([pl(trimesters),sg(trimester)],het,[temp_mod]).
 
 n([pl('trio\'s'),sg(trio)],het,[measure],[dim(triootje)]).
 

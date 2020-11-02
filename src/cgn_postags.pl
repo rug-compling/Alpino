@@ -649,7 +649,7 @@ exceptional_stem_tag(eens,clause_np_adjective(_),                   'ADJ(vrij,ba
 exceptional_stem_tag(eens,het_np_adjective(_),                      'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(eerder,tmp_app_noun,                           'ADJ(vrij,comp,zonder)').
 exceptional_stem_tag(eersten,noun(both,count,pl),                   'TW(rang,nom,mv-n)').
-exceptional_stem_tag(eindelijk,adv_tag,                             'ADJ(vrij,basis,zonder)').
+exceptional_stem_tag(eindelijk,tag,                             'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(eindje,noun(het,count,sg),                     'N(soort,ev,dim,onz,stan)').
 exceptional_stem_tag(eindje,noun(het,count,pl),                     'N(soort,mv,dim)').
 exceptional_stem_tag(elk,predm_adverb,                              'VNW(onbep,det,stan,vrij,zonder)').
@@ -672,7 +672,7 @@ exceptional_stem_tag(geleden,pred_np_me_adjective,                  'BW()').
 %exceptional_stem_tag(gevangen,particle(_),                          'WW(vd,vrij,zonder)').
 exceptional_stem_tag(god,determiner(pron),                          'N(soort,ev,basis,gen)').
 exceptional_stem_tag(god,pronoun(nwh,thi,sg,de,gen,def),            'N(soort,ev,basis,gen)').
-exceptional_stem_tag(goed,adv_tag,                                  'ADJ(vrij,basis,zonder)').
+exceptional_stem_tag(goed,tag,                                  'ADJ(vrij,basis,zonder)').
 %exceptional_stem_tag(goed,particle(_),                              'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(groen, noun(het,mass,sg),                       'ADJ(nom,basis,zonder,zonder-n)').
 exceptional_stem_tag(grootmoeder,determiner(pron),                 'N(soort,ev,basis,gen)').
@@ -1147,7 +1147,6 @@ cgn_postag_c(post_wh_adverb,                  'BW()').
 cgn_postag_c(sentence_adverb,                 'BW()').
 cgn_postag_c(waar_adverb(_),                  'BW()').
 cgn_postag_c(er_adverb(_),                    'BW()').
-cgn_postag_c(adv_tag,                         'BW()').
 cgn_postag_c(intensifier,                     'BW()').
 cgn_postag_c(intensifier(e),                  'ADJ(prenom,basis,met-e,stan)').
 cgn_postag_c(me_intensifier,                  'BW()').

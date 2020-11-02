@@ -6541,7 +6541,7 @@ grammar_rule(adj_te_zien, AP, [ V ] ) :-
     unify_except(V0,V,sc),
     V:sc <=> [NP|Tail],
     V:hstem <=> STEM,
-    alpino_wappend:wwmember(STEM,[zie,hoor,merk]),
+    alpino_wappend:wwmember(STEM,[zie,hoor,merk,oordeel,voel]),
     NP => np,
     NP:dt => [],
     NP:allows_drop => yes,
@@ -7598,7 +7598,7 @@ grammar_rule(a_advp_dp,MAX,[A,COMMA,XP]) :-
     MAX:max_type => t_dp,
     max_ap(A0),
     unify_except_l(A0,A,[deverbal,avform]),
-    A:avform => (avform_ap;avform_aan_ti),
+    A:avform => (avform_ap;avform_aan_ti;avform_ppart),
     max_advp(XP),
     dp_dp_structure(A,XP,MAX).
 
@@ -8117,6 +8117,19 @@ grammar_rule(top_tag_start_xp, Start, [Tag,OPTCOMMA,Max]):-
     COMMA => punct,
     COMMA:puncttype => (komma;dubb_punt;hellip;punt),
     unify_mods(Tag),
+    tag_max_structure(Max,Tag,Start).
+
+%% Allemachtig , moeten we dat allemaal doen?
+grammar_rule(top_adv_tag_start_sv1, Start, [Tag,COMMA,Max]):-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
+    Tag => tag,
+    Tag:adv => yes,
+    Tag:np => no,
+    COMMA => punct,
+    COMMA:puncttype => (komma;dubb_punt;hellip;punt),
+    unify_mods(Tag),
+    Max => max,
+    Max:sv1 => yes,
     tag_max_structure(Max,Tag,Start).
 
 grammar_rule(top_np_tag_start_xp, Start, [Tag,COMMA,Max]):-

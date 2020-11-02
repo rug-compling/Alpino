@@ -122,13 +122,6 @@ tag(Sign) :-
     sign(Sign,advp),
     initialize_dt([],Sign).
 
-adv_tag(Sign) :-
-    Sign => tag,
-    Sign:adv => yes,
-    Sign:np => no,
-    sign(Sign,advp),
-    initialize_dt([],Sign).
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%% Nouns %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -4843,8 +4836,7 @@ refl_vp(V,C,C) :-
     main_v(V),
     V:passive => no_passive,
     refl_np_arg(Obj2,V),
-    subj_control_vp_arg(Obj1,V),
-%    Obj1:slash => [],   allow DIP
+    tr_subj_control_vp_arg(Obj1,V),
     % ik kom , haast hij zich te zeggen
     dependents(V,[vc/Obj1,se/Obj2]),
     instantiated_deprel(V,vc,Obj1). 

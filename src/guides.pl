@@ -178,6 +178,21 @@ tr_sc(fixed(_),R) :-
     R = fixed.
 tr_sc(pp_sbar_subj(uit),pp_sbar_subj_opt_het(uit)) :-  % TMP
     !.
+tr_sc(ap_copula(_),R) :-
+    !,
+    R = ap_copula.
+tr_sc(pp_copula(_,_),R) :-
+    !,
+    R = pp_copula.
+tr_sc(pp_pred_np(_,_),R) :-
+    !,
+    R = pp_pred_np.
+tr_sc(pp_pred_np_vp(_,_),R) :-
+    !,
+    R = pp_pred_np_vp.
+tr_sc(pp_pred_np_sbar(_,_),R) :-
+    !,
+    R = pp_pred_np_sbar.
 tr_sc(S,S).
 
 /*
