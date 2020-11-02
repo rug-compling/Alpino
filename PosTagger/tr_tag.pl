@@ -27,6 +27,9 @@ t(verb(_,B0,C0),            verb(B,C)) :-
     ),
     t_subcat(C0,C).
 
+%% adv_tag no longer exists
+t(adv_tag,tag).
+
 t(name_determiner(X),  determiner(X)).
 t(name_determiner(X,_),determiner(X)).
 
