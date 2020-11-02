@@ -123,14 +123,14 @@ include ../Makefile.include
 tt: $(sentsfiles) $(namedsentsfiles) 
 	cat $(sentsfiles) | grep -v -e '^[%]' -e '^--' > tt.sents
 	awk -F\| '{ print $$2 }' $(namedsentsfiles) >> tt.sents
-	cat tt.sents  | shuf | ./split_in_parts -p 500 -o tt
-	mv tt_part*.sents.gz Machine/
+	cat tt.sents  | ./split_in_parts -p 500 -o tt
+	for file in tt_part*.sents.gz ; do if cmp -s $$file Machine/$$file; then true ; else cp -f $$file Machine/$$file; fi; done
 	touch tt
 
 tu: extra.sents
 	cat extra.sents | grep -v -e '^[%]' -e '^--' > tu.sents
-	cat tu.sents  | shuf | ./split_in_parts -p 200 -o tu
-	mv tu_part*.sents.gz Machine/
+	cat tu.sents  | ./split_in_parts -p 200 -o tu
+	for file in tu_part*.sents.gz; do if cmp -s $$file Machine/$$file; then true ; else cp -f $$file Machine/$$file; fi; done
 	gzip -c extra.sents > Machine/extra.sents.gz
 	touch tu
 else

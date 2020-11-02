@@ -37,18 +37,18 @@ HPCTARGET=left_corners
 
 left_corners:
 	zcat ../Suites/Machine/$(suite).sents.gz | \
-        $(ALPINO) -flag suite undefined -parse 2> $(DISK)/$(suite)-spec.log | gzip > $(DISK)/$(suite).lc 
+        $(ALPINO) -flag suite undefined -parse 2> $(DISK)/$(suite)-spec.log | gzip > $(DISK)/$(suite).lc.gz 
 	gzip $(DISK)/$(suite)-spec.log
 	mv $(DISK)/$(suite)-spec.log.gz $(suite).log.gz
-	mv $(DISK)/$(suite).lc .
+	mv $(DISK)/$(suite).lc.gz .
 	$(MAKE) $(suite).ps
 
 nleft_corners:
 	echo "parser_comparisons." | \
-        $(ALPINO) -flag suite ../Suites/$(suite) 2> $(DISK)/$(suite)-spec.log | gzip > $(DISK)/$(suite).lc 
+        $(ALPINO) -flag suite ../Suites/$(suite) 2> $(DISK)/$(suite)-spec.log | gzip > $(DISK)/$(suite).lc.gz 
 	gzip $(DISK)/$(suite)-spec.log
 	mv $(DISK)/$(suite)-spec.log.gz $(suite).log.gz
-	mv $(DISK)/$(suite).lc .
+	mv $(DISK)/$(suite).lc.gz .
 	$(MAKE) $(suite).ps
 
 #%.left_corners:%.log.gz
@@ -57,7 +57,7 @@ nleft_corners:
 #       | sed -e 's/^LEFTCORNER#//'\
 #        | gzip > $@
 
-%.ps: %.lc ../src/guides.pl
+%.ps: %.lc.gz ../src/guides.pl
 	zcat $< \
         | grep '^LEFTCORNER#' \
         | sed -e 's/^LEFTCORNER#//'\
@@ -65,12 +65,12 @@ nleft_corners:
         | ./generate_prefixes \
         | sort -u > $@
 
-%.lc:../Suites/Machine/%.sents.gz
+%.log.gz:../Suites/Machine/%.sents.gz
 	zcat $< | \
-        $(ALPINO)  -flag suite undefined -parse 2> $(DISK)/$*-spec.log | gzip > $(DISK)/$*.lc
+        $(ALPINO)  -flag suite undefined -parse 2> $(DISK)/$*-spec.log | gzip > $(DISK)/$*.lc.gz
 	gzip $(DISK)/$*-spec.log
 	mv $(DISK)/$*-spec.log.gz $*.log.gz
-	mv $(DISK)/$*.lc .
+	mv $(DISK)/$*.lc.gz .
 
 include $(ALPINO_HOME)/Makefile.errormining
 
@@ -80,7 +80,15 @@ DATA=$(wildcard $(PAT)*.log.gz)
 echo:
 	echo $(DATA:%.log.gz=%.ps)
 
-guides.t: $(DATA:%.log.gz=%.ps)
+noparses:
+	sort  -u $(DATA:%.log.gz=%.ps) > guides.t
+	cat guides.t |\
+   ../src/Alpino cmdint=off debug=1 -notk -l to_predict_guides \
+             -cmd "to_sguides(tpl_prefix)" | sort -u > guides.txt
+	awk -F\| '{ print $$1}' guides.txt | ./make_guide_vector > guides_data.c
+	cp guides_data.c ../src/guides_data.c.$(PROLOG)
+
+guides.t: $(DATA:%.log.gz=%.ps) make_guide_vector
 	sort  -u $(DATA:%.log.gz=%.ps) > guides.t
 
 guides.txt: guides.t
@@ -106,11 +114,11 @@ nodata: make_guide_vector
          awk -F\| '{ print $$1}' |\
          ./make_guide_vector > ../src/guides_data.c.$(PROLOG)
 
-TTS=tt_part00001.ps tt_part00002.ps tt_part00003.ps tt_part00004.ps tt_part00005.ps tt_part00006.ps tt_part00007.ps tt_part00008.ps tt_part00009.ps tt_part00010.ps tt_part00011.ps tt_part00012.ps tt_part00013.ps tt_part00014.ps tt_part00015.ps tt_part00016.ps tt_part00017.ps tt_part00018.ps tt_part00019.ps tt_part00020.ps tt_part00021.ps tt_part00022.ps tt_part00023.ps tt_part00024.ps tt_part00025.ps tu_part00001.ps tu_part00002.ps tu_part00003.ps tu_part00004.ps tu_part00005.ps tu_part00006.ps tu_part00007.ps tu_part00008.ps
+TTS=tt_part00001.log.gz tt_part00002.log.gz tt_part00003.log.gz tt_part00004.log.gz tt_part00005.log.gz tt_part00006.log.gz tt_part00007.log.gz tt_part00008.log.gz tt_part00009.log.gz tt_part00010.log.gz tt_part00011.log.gz tt_part00012.log.gz tt_part00013.log.gz tt_part00014.log.gz tt_part00015.log.gz tt_part00016.log.gz tt_part00017.log.gz tt_part00018.log.gz tt_part00019.log.gz tt_part00020.log.gz tt_part00021.log.gz tt_part00022.log.gz tt_part00023.log.gz tt_part00024.log.gz tt_part00025.log.gz tu_part00001.log.gz tu_part00002.log.gz tu_part00003.log.gz tu_part00004.log.gz tu_part00005.log.gz tu_part00006.log.gz tu_part00007.log.gz tu_part00008.log.gz tu_part00009.log.gz
 
 tts:
 	$(MAKE) -j $(J) $(TTS) EXTRA=pos_tagger_m=5
 
 rules:
-	cat *.ps | grep finish |awk -F\| '{ printf "%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n",$$2,$$3,$$4,$$5,$$6,$$7,$$8,$$9,$$10,$$11,$$12,$$13,$$14,$$15,$$16,$$17,$$18,$$19 }' | grep -v 'lex(' | grep -v finish | grep . | sort | uniq -c | sort -nr | awk '{ printf "frequent_rule(%s,%s).\n",$$2,$$1 }' > rules
+	cat *.ps| grep finish |awk -F\| '{ printf "%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n",$$2,$$3,$$4,$$5,$$6,$$7,$$8,$$9,$$10,$$11,$$12,$$13,$$14,$$15,$$16,$$17,$$18,$$19 }' | grep -v 'lex(' | grep -v finish | grep . | sort | uniq -c | sort -nr | awk '{ printf "frequent_rule(%s,%s).\n",$$2,$$1 }' > rules
 
