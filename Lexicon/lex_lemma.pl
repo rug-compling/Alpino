@@ -2213,6 +2213,7 @@ lemma_root(bij_lopen,loop_bij) .
 lemma_root(bij_passen,pas_bij) .
 lemma_root(bij_praten,praat_bij) .
 lemma_root(bij_schaven,schaaf_bij) .
+lemma_root(bij_schenken,schenk_bij) .
 lemma_root(bij_schnabbelen,schnabbel_bij) .
 lemma_root(bij_scholen,school_bij) .
 lemma_root(bij_schrijven,schrijf_bij) .
@@ -12401,6 +12402,7 @@ lemma_root(raak_stralen,straal_raak) .
 lemma_root(raak_stranden,strand_raak) .
 lemma_root(raak_streamen,stream_raak) .
 lemma_root(raak_strekken,strek_raak) .
+lemma_root(raak_strelen,streel_raak) .
 lemma_root(raak_stremmen,strem_raak) .
 lemma_root(raak_stribbelen,stribbel_raak) .
 lemma_root(raak_striemen,striem_raak) .
@@ -22308,6 +22310,7 @@ lemma_root(voort_stralen,straal_voort) .
 lemma_root(voort_stranden,strand_voort) .
 lemma_root(voort_streamen,stream_voort) .
 lemma_root(voort_strekken,strek_voort) .
+lemma_root(voort_strelen,streel_voort) .
 lemma_root(voort_stremmen,strem_voort) .
 lemma_root(voort_stribbelen,stribbel_voort) .
 lemma_root(voort_striemen,striem_voort) .

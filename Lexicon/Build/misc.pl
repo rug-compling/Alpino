@@ -710,13 +710,9 @@ m(Stem,tag,Word) :-
     smiley(Word),
     stem_from_surf(Word,Stem).
 
-m(Stem,adv_tag,PN) :-
-    adv_tag(PN),
-    stem_from_surf(PN,Stem).
-
-m(v_root(zeg,zeggen),adv_tag,zeg).
-m(v_root(kijk,kijken),adv_tag,kijk).
-m(v_root(kom,komen),adv_tag,kom).
+m(v_root(zeg,zeggen),tag,zeg).
+m(v_root(kijk,kijken),tag,kijk).
+m(v_root(kom,komen),tag,kom).
 
 tag('√').
 tag('♪').  % in subtitles, to indicate that the rest of sentence is sung
@@ -1319,60 +1315,60 @@ tag(wtf).    % what the fuck
 tag(xxx).    % kusjes
 tag(xxxx).   % kusjes
 
-adv_tag(allemachtig).
-adv_tag(alsjeblieft).
-adv_tag(alstublieft).
-adv_tag(echt).
-adv_tag(godzijdank).
-adv_tag(nou).
-adv_tag(nu).
-adv_tag(vooruit).
-adv_tag(wel).
+tag(allemachtig).
+tag(alsjeblieft).
+tag(alstublieft).
+tag(echt).
+tag(godzijdank).
+tag(nou).
+tag(nu).
+tag(vooruit).
+tag(wel).
 
 
-adv_tag(althans).   % according to CGN annotations
-adv_tag(bovendien).
-adv_tag(eindelijk).
-adv_tag(gelukkig).
-adv_tag(goed).
-adv_tag(graag).
-adv_tag(heus).
-adv_tag(hier).
-adv_tag(immers).
-adv_tag(inderdaad).
-adv_tag(jammer).
-adv_tag(kortom).
-adv_tag(natuurlijk).
-adv_tag(nice).
-adv_tag(nogmaals).
-adv_tag(overigens).
-adv_tag(tenminste).
-adv_tag([ten,minste]).  % officieel is schrijfwijze afhankelijk van spelling, dus ander lemma
-adv_tag(toch).
-adv_tag(trouwens).
-adv_tag(uiteraard).
-adv_tag(warempel).
-adv_tag(weliswaar).
-adv_tag([wel,te,verstaan]).
-adv_tag(welteverstaan).
-adv_tag(zeker).
-adv_tag([zeer,zeker]).
-adv_tag([zeg,maar]).
-adv_tag(zelfs).
-adv_tag(zo).
+tag(althans).   % according to CGN annotations
+tag(bovendien).
+tag(eindelijk).
+tag(gelukkig).
+tag(goed).
+tag(graag).
+tag(heus).
+tag(hier).
+tag(immers).
+tag(inderdaad).
+tag(jammer).
+tag(kortom).
+tag(natuurlijk).
+tag(nice).
+tag(nogmaals).
+tag(overigens).
+tag(tenminste).
+tag([ten,minste]).  % officieel is schrijfwijze afhankelijk van spelling, dus ander lemma
+tag(toch).
+tag(trouwens).
+tag(uiteraard).
+tag(warempel).
+tag(weliswaar).
+tag([wel,te,verstaan]).
+tag(welteverstaan).
+tag(zeker).
+tag([zeer,zeker]).
+tag([zeg,maar]).
+tag(zelfs).
+tag(zo).
 
-adv_tag(godbetert).
-adv_tag(gvd).
-adv_tag([god,betert]).
-adv_tag([god,betere,het]).
-adv_tag([god,betere,'\'t']).
-adv_tag(['God',betert]).
-adv_tag(['God',betere,het]).
-adv_tag(['God',betere,'\'t']).
-adv_tag(godverdomme).
-adv_tag(godverdorie).
-adv_tag(godverdegodver).
-adv_tag(goddomme).
+tag(godbetert).
+tag(gvd).
+tag([god,betert]).
+tag([god,betere,het]).
+tag([god,betere,'\'t']).
+tag(['God',betert]).
+tag(['God',betere,het]).
+tag(['God',betere,'\'t']).
+tag(godverdomme).
+tag(godverdorie).
+tag(godverdegodver).
+tag(goddomme).
 
 tag([echt,waar]).
 tag([eerlijk,waar]).

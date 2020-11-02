@@ -2256,6 +2256,9 @@ a([e(achterlijke),
 
 a([ge_both(achternagezeten)],adv,[],[]).
 
+a([ge_e(achterovergedrukte),
+   ge_no_e(achterovergedrukt)],adv,[],[]).
+
 a([e(achterste),
    no_e(achterst)],nonadv,[],[]).
 
@@ -2889,7 +2892,9 @@ a([e(afgrijselijke),
    ere(afgrijselijkere),
    no_e(afgrijselijk),
    st(afgrijselijkst),
-   ste(afgrijselijkste)],adv,[],[]).
+   ste(afgrijselijkste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(afgunstige),
    er(afgunstiger),
@@ -14482,6 +14487,9 @@ a([ge_e(geprikkelde),
 a([ge_e(geprikte),
    ge_no_e(geprikt)],adv,[],[]).
 
+a([ge_e(geprinte),
+   ge_no_e(geprint)],adv,[],[]).
+
 a([ge_e(geprivatiseerde),
    ge_no_e(geprivatiseerd)],adv,[],[]).
 
@@ -25938,6 +25946,9 @@ a([e(ongemakkelijke),
    st(ongemakkelijkst),
    ste(ongemakkelijkste)],adv,[],[]).
 
+a([e(ongemanierde),
+   no_e(ongemanierd)],adv,[],[]).
+
 a([e(ongemene),
    er(ongemener),
    ere(ongemenere),
@@ -35602,6 +35613,9 @@ a([ge_both(vastgebonden)],adv,[],[]).
 a([ge_both(vastgegrepen)],adv,[],[]).
 
 a([ge_both(vastgehouden)],adv,[],[]).
+
+a([ge_e(vastgeketende),
+   ge_no_e(vastgeketend)],padv,[],[]).
 
 a([ge_e(vastgeklampte),
    ge_no_e(vastgeklampt)],adv,[],[]).

@@ -830,6 +830,13 @@ start_hook(generate,_,_,_) :-
     if_gui(tcl(update)).
 
 check_flags :-
+    hdrug_flag(end_hook,EndHook),
+    (   EndHook == left_corners
+    ->  set_flag(keep_notree,on)
+    ;   EndHook == new_left_corners
+    ->  set_flag(keep_notree,on)
+    ;   true
+    ),
     hdrug_flag(number_analyses,Total),
     hdrug_flag(disambiguation,Dis),
     hdrug_flag(disambiguation_beam,Beam),
@@ -839,19 +846,22 @@ check_flags :-
 	Beam<Total
     ->	debug_message(1,
    "Warning: disambiguation_beam (~w) < number_analyses (~w)~n",
-	       [Beam,Total])
+		      [Beam,Total]),
+	set_flag(disambiguation_beam,Total)
     ;   CBeam>0,
 	Dis == on,
 	CBeam<Total
     ->	debug_message(1,
    "Warning: disambiguation_candidates_beam (~w) < number_analyses (~w)~n",
-	       [CBeam,Total])
+		      [CBeam,Total]),
+	set_flag(disambiguation_candidates_beam,Total)
     ;	CBeam>0,
 	Dis == on,
 	CBeam < Beam
     ->	debug_message(1,
    "Warning: disambiguation_candidates_beam (~w) < disambiguation_beam (~w)~n",
-	       [CBeam,Beam])
+		      [CBeam,Beam]),
+	set_flag(disambiguation_candidates_beam,Beam)
     ;	true
     ),
     hdrug_flag(end_hook,End),

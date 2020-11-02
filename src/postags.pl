@@ -312,7 +312,6 @@ p_of_f(proper_name(Num),name,[num=Num,neclass='MISC']).
 p_of_f(proper_name(Num,Class),name,[num=Num,neclass=Class]).
 
 p_of_f(tag,tag,[]).
-p_of_f(adv_tag,tag,[]).
 
 p_of_f(within_word_conjunct,prefix,[]).
 
