@@ -6907,19 +6907,33 @@ aci_aux(VP,V) :-
 %% *ik help regenen
 %% *ik help schurken zijn die dat doen
 aci_no_obj(V,C,C) :-
-    aux_v(V,VP),
+    aux_v(V0,VP),
     assign_vform_of_vc(inf,VP),
     VP:cleft => no,
     VP:subj => np,
     VP:subj:nform => norm,
     VP:subj:hstem ==> [],
-    main_v_subj(V),
-    V:vtype => vcontrol,
-    V:act => act,
+    main_v_subj(V0),
+    V0:vtype => vcontrol,
+    V0:act => act,
     VP:predms <=> VP:cpredms,
     VP:dets <=> VP:cdets,
     VP:apps <=> VP:capps,
-    dependents(V,[vc/VP]).
+    add_door_pp(Tail),
+    dependents(V0,V,[vc/VP|Tail]).
+
+%% ik laat de buurvrouw me zoenen
+%% ik laat me door de buurvrouw zoenen
+%% daar laat ik me niet door afle
+add_door_pp([]).
+
+/* werkt niet
+add_door_pp([mod/PP]) :-
+    pp_pc_arg(PP,door),
+    PP:pp_er => yes,
+    PP:wh => nwh,
+    PP:sel => ~to_topic.
+*/
 
 passive(V,C0,C) :-
     assign_vform_of_vc(psp,VP),

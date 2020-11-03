@@ -11498,7 +11498,7 @@ n([sg([forward,air,controller]),pl([forward,air,controllers])],de,[]).
 
 n([pl(fosfaten),sg(fosfaat)],het,[]).
 
-n([mass(fosfor)],de,[]).
+n([mass(fosfor)],both,[]).
 
 n([pl(fossielen),sg(fossiel)],het,[]).
 
@@ -27288,6 +27288,8 @@ n([sg(prioriteit),pl(prioriteiten)],de,
    top]).
 
 n([pl('prisma\'s'),pl(prismata),sg(prisma)],het,[]).
+
+n([sg(privaat),pl(privaten)],het,[]).   % de privaten moeten naar seksen gescheiden
 
 n([mass(privacy)],de,[]).
 

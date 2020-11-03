@@ -826,8 +826,10 @@ lemma_root(achterna_rolschaatsen,rolschaats_achterna) .
 lemma_root(achterna_rossen,ros_achterna) .
 lemma_root(achterna_rukken,ruk_achterna) .
 lemma_root(achterna_schaatsen,schaats_achterna) .
+lemma_root(achterna_scheuren,scheur_achterna) .
 lemma_root(achterna_schieten,schiet_achterna) .
 lemma_root(achterna_schoppen,schop_achterna) .
+lemma_root(achterna_schrijden,schrijd_achterna) .
 lemma_root(achterna_schrijven,schrijf_achterna) .
 lemma_root(achterna_schudden,schud_achterna) .
 lemma_root(achterna_schuifelen,schuifel_achterna) .
@@ -875,6 +877,7 @@ lemma_root(achterna_stormen,storm_achterna) .
 lemma_root(achterna_storten,stort_achterna) .
 lemma_root(achterna_stromen,stroom_achterna) .
 lemma_root(achterna_strompelen,strompel_achterna) .
+lemma_root(achterna_strooien,strooi_achterna) .
 lemma_root(achterna_struinen,struin_achterna) .
 lemma_root(achterna_stuiteren,stuiter_achterna) .
 lemma_root(achterna_stuiven,stuif_achterna) .
@@ -905,6 +908,7 @@ lemma_root(achterna_vliegen,vlieg_achterna) .
 lemma_root(achterna_vloeien,vloei_achterna) .
 lemma_root(achterna_vluchten,vlucht_achterna) .
 lemma_root(achterna_voeren,voer_achterna) .
+lemma_root(achterna_volgen,volg_achterna) .
 lemma_root(achterna_volleren,volleer_achterna) .
 lemma_root(achterna_volleyen,volley_achterna) .
 lemma_root(achterna_vuren,vuur_achterna) .
@@ -1422,6 +1426,7 @@ lemma_root(af_schillen,schil_af) .
 lemma_root(af_schoppen,schop_af) .
 lemma_root(af_schrapen,schraap_af) .
 lemma_root(af_schrappen,schrap_af) .
+lemma_root(af_schrijden,schrijd_af) .
 lemma_root(af_schrijven,schrijf_af) .
 lemma_root(af_schrikken,schrik_af) .
 lemma_root(af_schroeven,schroef_af) .
@@ -1885,6 +1890,7 @@ lemma_root(beitelen,beitel) .
 lemma_root(beitsen,beits) .
 lemma_root(bejegenen,bejegen) .
 lemma_root(bejubelen,bejubel) .
+lemma_root(bekabelen,bekabel) .
 lemma_root(bekampen,bekamp) .
 lemma_root(bekend_geraken,geraak_bekend) .
 lemma_root(bekend_maken,maak_bekend) .
@@ -2407,8 +2413,10 @@ lemma_root(binnen_rolschaatsen,rolschaats_binnen) .
 lemma_root(binnen_rossen,ros_binnen) .
 lemma_root(binnen_rukken,ruk_binnen) .
 lemma_root(binnen_schaatsen,schaats_binnen) .
+lemma_root(binnen_scheuren,scheur_binnen) .
 lemma_root(binnen_schieten,schiet_binnen) .
 lemma_root(binnen_schoppen,schop_binnen) .
+lemma_root(binnen_schrijden,schrijd_binnen) .
 lemma_root(binnen_schrijven,schrijf_binnen) .
 lemma_root(binnen_schudden,schud_binnen) .
 lemma_root(binnen_schuifelen,schuifel_binnen) .
@@ -2457,6 +2465,7 @@ lemma_root(binnen_stormen,storm_binnen) .
 lemma_root(binnen_storten,stort_binnen) .
 lemma_root(binnen_stromen,stroom_binnen) .
 lemma_root(binnen_strompelen,strompel_binnen) .
+lemma_root(binnen_strooien,strooi_binnen) .
 lemma_root(binnen_struinen,struin_binnen) .
 lemma_root(binnen_stuiteren,stuiter_binnen) .
 lemma_root(binnen_stuiven,stuif_binnen) .
@@ -2488,6 +2497,7 @@ lemma_root(binnen_vliegen,vlieg_binnen) .
 lemma_root(binnen_vloeien,vloei_binnen) .
 lemma_root(binnen_vluchten,vlucht_binnen) .
 lemma_root(binnen_voeren,voer_binnen) .
+lemma_root(binnen_volgen,volg_binnen) .
 lemma_root(binnen_volleren,volleer_binnen) .
 lemma_root(binnen_volleyen,volley_binnen) .
 lemma_root(binnen_vuren,vuur_binnen) .
@@ -3040,6 +3050,7 @@ lemma_root(door_beiden,beid_door) .
 lemma_root(door_beieren,beier_door) .
 lemma_root(door_beitelen,beitel_door) .
 lemma_root(door_beitsen,beits_door) .
+lemma_root(door_bekabelen,bekabel_door) .
 lemma_root(door_bekampen,bekamp_door) .
 lemma_root(door_bekennen,beken_door) .
 lemma_root(door_bekeren,beker_door) .
@@ -3471,6 +3482,7 @@ lemma_root(door_evolueren,evolueer_door) .
 lemma_root(door_examineren,examineer_door) .
 lemma_root(door_excelleren,excelleer_door) .
 lemma_root(door_excuseren,excuseer_door) .
+lemma_root(door_executeren,executeer_door) .
 lemma_root(door_expanderen,expandeer_door) .
 lemma_root(door_experimenteren,experimenteer_door) .
 lemma_root(door_exploderen,explodeer_door) .
@@ -4403,6 +4415,7 @@ lemma_root(door_pochen,poch_door) .
 lemma_root(door_poedelen,poedel_door) .
 lemma_root(door_poeieren,poeier_door) .
 lemma_root(door_poepen,poep_door) .
+lemma_root(door_poetsen,poets_door) .
 lemma_root(door_pokeren,poker_door) .
 lemma_root(door_polariseren,polariseer_door) .
 lemma_root(door_polderen,polder_door) .
@@ -7199,6 +7212,7 @@ lemma_root(in_schikken,schik_in) .
 lemma_root(in_schoppen,schop_in) .
 lemma_root(in_schrappen,schrap_in) .
 lemma_root(in_schreeuwen,schreeuw_in) .
+lemma_root(in_schrijden,schrijd_in) .
 lemma_root(in_schrijven,schrijf_in) .
 lemma_root(in_schroeven,schroef_in) .
 lemma_root(in_schrokken,schrok_in) .
@@ -8189,6 +8203,7 @@ lemma_root(langs_scheuren,scheur_langs) .
 lemma_root(langs_schieten,schiet_langs) .
 lemma_root(langs_schoppen,schop_langs) .
 lemma_root(langs_schrappen,schrap_langs) .
+lemma_root(langs_schrijden,schrijd_langs) .
 lemma_root(langs_schrijven,schrijf_langs) .
 lemma_root(langs_schroeven,schroef_langs) .
 lemma_root(langs_schrokken,schrok_langs) .
@@ -9111,9 +9126,11 @@ lemma_root(om_rukken,ruk_om) .
 lemma_root(om_schaatsen,schaats_om) .
 lemma_root(om_schakelen,schakel_om) .
 lemma_root(om_scheppen,schep_om) .
+lemma_root(om_scheuren,scheur_om) .
 lemma_root(om_schieten,schiet_om) .
 lemma_root(om_scholen,school_om) .
 lemma_root(om_schoppen,schop_om) .
+lemma_root(om_schrijden,schrijd_om) .
 lemma_root(omschrijven,omschrijf) .
 lemma_root(om_schrijven,schrijf_om) .
 lemma_root(om_schudden,schud_om) .
@@ -9170,6 +9187,7 @@ lemma_root(om_storten,stort_om) .
 lemma_root(omstrengelen,omstrengel) .
 lemma_root(om_stromen,stroom_om) .
 lemma_root(om_strompelen,strompel_om) .
+lemma_root(om_strooien,strooi_om) .
 lemma_root(om_struinen,struin_om) .
 lemma_root(om_stuiteren,stuiter_om) .
 lemma_root(om_stuiven,stuif_om) .
@@ -9209,6 +9227,7 @@ lemma_root(om_vliegen,vlieg_om) .
 lemma_root(om_vloeien,vloei_om) .
 lemma_root(om_vluchten,vlucht_om) .
 lemma_root(om_voeren,voer_om) .
+lemma_root(om_volgen,volg_om) .
 lemma_root(om_volleren,volleer_om) .
 lemma_root(om_volleyen,volley_om) .
 lemma_root(om_vormen,vorm_om) .
@@ -9726,10 +9745,12 @@ lemma_root(op_schalen,schaal_op) .
 lemma_root(op_scharrelen,scharrel_op) .
 lemma_root(op_schepen,scheep_op) .
 lemma_root(op_scheppen,schep_op) .
+lemma_root(op_scheuren,scheur_op) .
 lemma_root(op_schieten,schiet_op) .
 lemma_root(op_schonen,schoon_op) .
 lemma_root(op_schoppen,schop_op) .
 lemma_root(op_schorten,schort_op) .
+lemma_root(op_schrijden,schrijd_op) .
 lemma_root(op_schrijven,schrijf_op) .
 lemma_root(op_schrikken,schrik_op) .
 lemma_root(op_schroeven,schroef_op) .
@@ -9803,6 +9824,7 @@ lemma_root(op_stoten,stoot_op) .
 lemma_root(op_strijken,strijk_op) .
 lemma_root(op_stromen,stroom_op) .
 lemma_root(op_strompelen,strompel_op) .
+lemma_root(op_strooien,strooi_op) .
 lemma_root(op_stropen,stroop_op) .
 lemma_root(op_struinen,struin_op) .
 lemma_root(op_stuiteren,stuiter_op) .
@@ -10131,12 +10153,14 @@ lemma_root(overschaduwen,overschaduw) .
 lemma_root(over_schakelen,schakel_over) .
 lemma_root(overschatten,overschat) .
 lemma_root(over_scheppen,schep_over) .
+lemma_root(over_scheuren,scheur_over) .
 lemma_root(over_schieten,schiet_over) .
 lemma_root(overschilderen,overschilder) .
 lemma_root(over_schilderen,schilder_over) .
 lemma_root(over_schoppen,schop_over) .
 lemma_root(overschreeuwen,overschreeuw) .
 lemma_root(overschrijden,overschrijd) .
+lemma_root(over_schrijden,schrijd_over) .
 lemma_root(overschrijven,overschrijf) .
 lemma_root(over_schrijven,schrijf_over) .
 lemma_root(over_schudden,schud_over) .
@@ -10196,6 +10220,7 @@ lemma_root(over_storten,stort_over) .
 lemma_root(overstromen,overstroom) .
 lemma_root(over_stromen,stroom_over) .
 lemma_root(over_strompelen,strompel_over) .
+lemma_root(over_strooien,strooi_over) .
 lemma_root(over_struinen,struin_over) .
 lemma_root(over_stuiteren,stuiter_over) .
 lemma_root(over_stuiven,stuif_over) .
@@ -10241,6 +10266,7 @@ lemma_root(over_vloeien,vloei_over) .
 lemma_root(over_vluchten,vlucht_over) .
 lemma_root(overvoeren,overvoer) .
 lemma_root(over_voeren,voer_over) .
+lemma_root(over_volgen,volg_over) .
 lemma_root(over_volleren,volleer_over) .
 lemma_root(over_volleyen,volley_over) .
 lemma_root(overvragen,overvraag) .
@@ -10625,6 +10651,7 @@ lemma_root(raak_beiden,beid_raak) .
 lemma_root(raak_beieren,beier_raak) .
 lemma_root(raak_beitelen,beitel_raak) .
 lemma_root(raak_beitsen,beits_raak) .
+lemma_root(raak_bekabelen,bekabel_raak) .
 lemma_root(raak_bekampen,bekamp_raak) .
 lemma_root(raak_bekennen,beken_raak) .
 lemma_root(raak_bekeren,beker_raak) .
@@ -11035,6 +11062,7 @@ lemma_root(raak_evolueren,evolueer_raak) .
 lemma_root(raak_examineren,examineer_raak) .
 lemma_root(raak_excelleren,excelleer_raak) .
 lemma_root(raak_excuseren,excuseer_raak) .
+lemma_root(raak_executeren,executeer_raak) .
 lemma_root(raak_expanderen,expandeer_raak) .
 lemma_root(raak_experimenteren,experimenteer_raak) .
 lemma_root(raak_exploderen,explodeer_raak) .
@@ -11906,6 +11934,7 @@ lemma_root(raak_plussen,plus_raak) .
 lemma_root(raak_pochen,poch_raak) .
 lemma_root(raak_poedelen,poedel_raak) .
 lemma_root(raak_poepen,poep_raak) .
+lemma_root(raak_poetsen,poets_raak) .
 lemma_root(raak_pokeren,poker_raak) .
 lemma_root(raak_polariseren,polariseer_raak) .
 lemma_root(raak_polderen,polder_raak) .
@@ -13300,9 +13329,11 @@ lemma_root(rond_rossen,ros_rond) .
 lemma_root(rond_rukken,ruk_rond) .
 lemma_root(rond_schaatsen,schaats_rond) .
 lemma_root(rond_scharrelen,scharrel_rond) .
+lemma_root(rond_scheuren,scheur_rond) .
 lemma_root(rond_schieten,schiet_rond) .
 lemma_root(rond_schnabbelen,schnabbel_rond) .
 lemma_root(rond_schoppen,schop_rond) .
+lemma_root(rond_schrijden,schrijd_rond) .
 lemma_root(rond_schrijven,schrijf_rond) .
 lemma_root(rond_schudden,schud_rond) .
 lemma_root(rond_schuifelen,schuifel_rond) .
@@ -13351,6 +13382,7 @@ lemma_root(rond_stormen,storm_rond) .
 lemma_root(rond_storten,stort_rond) .
 lemma_root(rond_stromen,stroom_rond) .
 lemma_root(rond_strompelen,strompel_rond) .
+lemma_root(rond_strooien,strooi_rond) .
 lemma_root(rond_struinen,struin_rond) .
 lemma_root(rond_stuiteren,stuiter_rond) .
 lemma_root(rond_stuiven,stuif_rond) .
@@ -13381,6 +13413,7 @@ lemma_root(rond_vliegen,vlieg_rond) .
 lemma_root(rond_vloeien,vloei_rond) .
 lemma_root(rond_vluchten,vlucht_rond) .
 lemma_root(rond_voeren,voer_rond) .
+lemma_root(rond_volgen,volg_rond) .
 lemma_root(rond_volleren,volleer_rond) .
 lemma_root(rond_volleyen,volley_rond) .
 lemma_root(rond_vuren,vuur_rond) .
@@ -14090,8 +14123,10 @@ lemma_root(tegemoet_rossen,ros_tegemoet) .
 lemma_root(tegemoet_rukken,ruk_tegemoet) .
 lemma_root(tegemoet_schaatsen,schaats_tegemoet) .
 lemma_root(tegemoet_schallen,schal_tegemoet) .
+lemma_root(tegemoet_scheuren,scheur_tegemoet) .
 lemma_root(tegemoet_schieten,schiet_tegemoet) .
 lemma_root(tegemoet_schoppen,schop_tegemoet) .
+lemma_root(tegemoet_schrijden,schrijd_tegemoet) .
 lemma_root(tegemoet_schrijven,schrijf_tegemoet) .
 lemma_root(tegemoet_schudden,schud_tegemoet) .
 lemma_root(tegemoet_schuifelen,schuifel_tegemoet) .
@@ -14140,6 +14175,7 @@ lemma_root(tegemoet_storten,stort_tegemoet) .
 lemma_root(tegemoet_stralen,straal_tegemoet) .
 lemma_root(tegemoet_stromen,stroom_tegemoet) .
 lemma_root(tegemoet_strompelen,strompel_tegemoet) .
+lemma_root(tegemoet_strooien,strooi_tegemoet) .
 lemma_root(tegemoet_struinen,struin_tegemoet) .
 lemma_root(tegemoet_stuiteren,stuiter_tegemoet) .
 lemma_root(tegemoet_stuiven,stuif_tegemoet) .
@@ -14170,6 +14206,7 @@ lemma_root(tegemoet_vliegen,vlieg_tegemoet) .
 lemma_root(tegemoet_vloeien,vloei_tegemoet) .
 lemma_root(tegemoet_vluchten,vlucht_tegemoet) .
 lemma_root(tegemoet_voeren,voer_tegemoet) .
+lemma_root(tegemoet_volgen,volg_tegemoet) .
 lemma_root(tegemoet_volleren,volleer_tegemoet) .
 lemma_root(tegemoet_volleyen,volley_tegemoet) .
 lemma_root(tegemoet_vuren,vuur_tegemoet) .
@@ -15779,6 +15816,7 @@ lemma_root(uit_beiden,beid_uit) .
 lemma_root(uit_beieren,beier_uit) .
 lemma_root(uit_beitelen,beitel_uit) .
 lemma_root(uit_beitsen,beits_uit) .
+lemma_root(uit_bekabelen,bekabel_uit) .
 lemma_root(uit_bekampen,bekamp_uit) .
 lemma_root(uit_bekennen,beken_uit) .
 lemma_root(uit_bekeren,beker_uit) .
@@ -16162,6 +16200,7 @@ lemma_root(uit_evangeliseren,evangeliseer_uit) .
 lemma_root(uit_examineren,examineer_uit) .
 lemma_root(uit_excelleren,excelleer_uit) .
 lemma_root(uit_excuseren,excuseer_uit) .
+lemma_root(uit_executeren,executeer_uit) .
 lemma_root(uit_expanderen,expandeer_uit) .
 lemma_root(uit_experimenteren,experimenteer_uit) .
 lemma_root(uit_exporteren,exporteer_uit) .
@@ -16997,6 +17036,7 @@ lemma_root(uit_pochen,poch_uit) .
 lemma_root(uit_poedelen,poedel_uit) .
 lemma_root(uit_poeieren,poeier_uit) .
 lemma_root(uit_poepen,poep_uit) .
+lemma_root(uit_poetsen,poets_uit) .
 lemma_root(uit_pokeren,poker_uit) .
 lemma_root(uit_polariseren,polariseer_uit) .
 lemma_root(uit_polderen,polder_uit) .
@@ -18332,6 +18372,7 @@ lemma_root(vanaf_scheuren,scheur_vanaf) .
 lemma_root(vanaf_schieten,schiet_vanaf) .
 lemma_root(vanaf_schoppen,schop_vanaf) .
 lemma_root(vanaf_schrappen,schrap_vanaf) .
+lemma_root(vanaf_schrijden,schrijd_vanaf) .
 lemma_root(vanaf_schrijven,schrijf_vanaf) .
 lemma_root(vanaf_schroeven,schroef_vanaf) .
 lemma_root(vanaf_schrokken,schrok_vanaf) .
@@ -19742,6 +19783,7 @@ lemma_root(varen,vaar) .
 lemma_root(variëren,varieer) .
 lemma_root(vast_bijten,bijt_vast) .
 lemma_root(vast_binden,bind_vast) .
+lemma_root(vast_duwen,duw_vast) .
 lemma_root(vasten,vast) .
 lemma_root(vast_grijpen,grijp_vast) .
 lemma_root(vast_hangen,hang_vast) .
@@ -20530,6 +20572,7 @@ lemma_root(voort_beiden,beid_voort) .
 lemma_root(voort_beieren,beier_voort) .
 lemma_root(voort_beitelen,beitel_voort) .
 lemma_root(voort_beitsen,beits_voort) .
+lemma_root(voort_bekabelen,bekabel_voort) .
 lemma_root(voort_bekampen,bekamp_voort) .
 lemma_root(voort_bekennen,beken_voort) .
 lemma_root(voort_bekeren,beker_voort) .
@@ -20941,6 +20984,7 @@ lemma_root(voort_evolueren,evolueer_voort) .
 lemma_root(voort_examineren,examineer_voort) .
 lemma_root(voort_excelleren,excelleer_voort) .
 lemma_root(voort_excuseren,excuseer_voort) .
+lemma_root(voort_executeren,executeer_voort) .
 lemma_root(voort_expanderen,expandeer_voort) .
 lemma_root(voort_experimenteren,experimenteer_voort) .
 lemma_root(voort_exploderen,explodeer_voort) .
@@ -21813,6 +21857,7 @@ lemma_root(voort_plussen,plus_voort) .
 lemma_root(voort_pochen,poch_voort) .
 lemma_root(voort_poedelen,poedel_voort) .
 lemma_root(voort_poepen,poep_voort) .
+lemma_root(voort_poetsen,poets_voort) .
 lemma_root(voort_pokeren,poker_voort) .
 lemma_root(voort_polariseren,polariseer_voort) .
 lemma_root(voort_polderen,polder_voort) .
