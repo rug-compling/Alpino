@@ -26,13 +26,6 @@ ALPINO=$(ALPINO_HOME)/src/Alpino -notk cmdint=off\
           end_hook=left_corners\
           $(EXTRA)\
 
-
-# only add additional left corners:
-#EXTRA=end_hook=new_left_corners
-
-# specializes a specialized version further!:
-##EXTRA=-veryfast max_sentence_length=35 end_hook=new_left_corners
-
 HPCTARGET=left_corners
 
 left_corners:
@@ -42,20 +35,6 @@ left_corners:
 	mv $(DISK)/$(suite)-spec.log.gz $(suite).log.gz
 	mv $(DISK)/$(suite).lc.gz .
 	$(MAKE) $(suite).ps
-
-nleft_corners:
-	echo "parser_comparisons." | \
-        $(ALPINO) -flag suite ../Suites/$(suite) 2> $(DISK)/$(suite)-spec.log | gzip > $(DISK)/$(suite).lc.gz 
-	gzip $(DISK)/$(suite)-spec.log
-	mv $(DISK)/$(suite)-spec.log.gz $(suite).log.gz
-	mv $(DISK)/$(suite).lc.gz .
-	$(MAKE) $(suite).ps
-
-#%.left_corners:%.log.gz
-#	zcat $< |\
-#	grep '^LEFTCORNER#' \
-#       | sed -e 's/^LEFTCORNER#//'\
-#        | gzip > $@
 
 %.ps: %.lc.gz ../src/guides.pl
 	zcat $< \
@@ -81,7 +60,7 @@ echo:
 	echo $(DATA:%.log.gz=%.ps)
 
 noparses:
-	sort  -u $(DATA:%.log.gz=%.ps) > guides.t
+	sort  -u *.ps > guides.t
 	cat guides.t |\
    ../src/Alpino cmdint=off debug=1 -notk -l to_predict_guides \
              -cmd "to_sguides(tpl_prefix)" | sort -u > guides.txt
