@@ -1370,8 +1370,11 @@ xml_term_to_dt_atts_rest(leaf,Atts0,adt_lex(Cat,Root,Sense,PosTag,LexAtts),adt) 
 xml_term_to_dt_atts_rest(leaf,Atts0,l(Pos,Cat,Root/[P0,P]),dt) :-
     xml_term_to_dt_atts_rest_frame(Atts0,Atts1,Pos),
     !,
-    select(root=RootCodes,Atts1,Atts2),
-    atom_codes(Root,RootCodes),
+    (   select(root=RootCodes,Atts1,Atts2)
+    ->  atom_codes(Root,RootCodes)
+    ;   Atts1 = Atts2,
+	Root = 'NA'
+    ),    
     select(begin=P0Codes,Atts2,Atts3),
     number_codes(P0,P0Codes),
     select(end=PCodes,Atts3,Atts4),
