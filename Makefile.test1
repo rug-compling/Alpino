@@ -324,7 +324,7 @@ hpctests:
 
 tests: ts cgns
 
-ts: t0 t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 t16 t17 t18 t19 t20 t21 t22 t23 t24 t25
+ts: t0 t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 t16 t17 t18 t19 t20 t21 t22 t23 t24 t25 t26
 
 t0:
 	make test1 suite=cdb_part cdb_part=0
@@ -378,6 +378,8 @@ t24:
 	make test1 suite=wpspel_annot
 t25:
 	make test1 suite=lassy
+t26:
+	make test1 suite=novelsample_corrected
 
 
 jobsuites=$(sort $(dir $(wildcard */job*)))
