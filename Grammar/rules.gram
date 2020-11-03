@@ -8791,6 +8791,16 @@ short_wh_sbar_structure(Wh,SBAR) :-
     SBAR:dt:stype => whquestion,
     hd_structure(Wh,SBAR0,_).
 
+%%% wat als
+grammar_rule(wat_als,Max,[Wat,Als]) :-
+    Wat => sbar,
+    Wat:ctype => c_of_short,
+    Als => sbar,
+    Als:ctype => c_mod,
+    Max => max,
+    Max:max_type => t_dp,
+    dp_dp_structure(Wat,Als,Max).    
+
 %% rel --> REL-ARG vp
 rel_arg_structure(Pro,VP,Rel) :-
     Rel => rel, Rel0=> rel, VP0 => vp,

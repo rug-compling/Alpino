@@ -70,6 +70,7 @@ adverb([all,over,the,world]).
 adverb(allang).
 adverb(allengs).
 adverb(allereerst).
+adverb(allerliefst).  % ze lachte allerliefst =/= het allerliefste
 adverb(allerminst).
 adverb(allerwege).
 adverb(allerwegen).
@@ -209,6 +210,7 @@ adverb(gewoonweg).
 adverb([god,zij,dank]).
 adverb(['God',zij,dank]).
 adverb(goddank).
+adverb(goddomme).
 adverb(godverdomme).
 adverb(gvd).
 adverb(godbetert).

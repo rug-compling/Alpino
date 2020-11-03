@@ -2071,6 +2071,8 @@ m(god,          determiner(pron), gods).
 m(god,          determiner(pron), 'Gods').
 m(grootmoeder,  determiner(pron), grootmoeders).
 m(grootvader,   determiner(pron), grootvaders).
+m(stief_moeder, determiner(pron), stiefmoeders).
+m(stief_vader,  determiner(pron), stiefvaders).
 m(land,         determiner(pron), slands).
 m('\'s land',   determiner(pron), ['\'',slands]).
 m(mam,          determiner(pron), mams).
@@ -2125,8 +2127,12 @@ mijn_vaders_mijn(uw).
 mijn_vaders_vaders(broer,broers).
 mijn_vaders_vaders(broeder,broeders).
 mijn_vaders_vaders(moeder,moeders).
+mijn_vaders_vaders(grootmoeder,grootmoeders).
 mijn_vaders_vaders(tante,tantes).
 mijn_vaders_vaders(vader,vaders).
+mijn_vaders_vaders(grootvader,grootvaders).
+mijn_vaders_vaders(stief_vader,stiefvaders).
+mijn_vaders_vaders(stief_moeder,stiefmoeders).
 mijn_vaders_vaders(vriend,vriends).
 mijn_vaders_vaders(vriendin,vriendins).
 mijn_vaders_vaders(opa,'opa\'s').
@@ -6721,6 +6727,9 @@ m(zulk,         pronoun(nwh,thi,sg,het,both,indef),zulks).
 
 m('de een na de ander',     
                 pronoun(nwh,thi,sg,de,both,def,strpro),[de,een,na,de,ander]).
+
+m('de een na de ander',     
+                predm_adverb,[de,een,na,de,ander]).
 
 m('wat voor één',
   pronoun(ywh,thi,sg,both,both,indef),[wat,voor,Een]) :- een1(Een).

@@ -15,6 +15,9 @@ m(Stem,Tag,Surf) :-
     select_subcat(Subcat,Infl,Tag),
     add_compounds:add_compounds(Suffixes,Stem1,Surf1,Stem,Surf).
 
+%% allerliefst is an adverb too
+m(aller_liefst, adjective(st(adv)), allerliefst).  
+
 m(teveel,  me_adjective(no_e(odet_adv)), teveel).
 m(teveel,  vp_om_me_adjective(no_e(odet_adv)), teveel).
 
@@ -2081,9 +2084,6 @@ a([e(aanzienlijke),
    no_e(aanzienlijk),
    st(aanzienlijkst),
    ste(aanzienlijkste)],adv,[],[]).
-
-a([e(aardedonkere),
-   no_e(aardedonker)],nonadv,[],[]).
 
 a([stof(aarden)],nonadv,[],[]).
 
@@ -7405,7 +7405,9 @@ a([e(coole),
    er(cooler),
    ere(coolere),
    st(coolst),
-   ste(coolste)],adv,[],[]).
+   ste(coolste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(coöperatieve),
    e(koöperatieve),
@@ -8375,7 +8377,8 @@ a([e(donkere),
    no_e(donker),
    st(donkerst),
    ste(donkerste)],nonadv,[],
-  [pik,
+  [aarde,
+   pik,
    stik]).
 
 a([stof(donzen)],nonadv,[],[]).
@@ -18756,6 +18759,8 @@ a([e(hoorbare),
    no_e(hoorbaar),
    st(hoorbaarst),
    ste(hoorbaarste)],adv,[],[]).
+
+a([stof(hoornen)],nonadv,[],[]).
 
 a([e(hopelijke),
    no_e(hopelijk)],adv,[],[]).

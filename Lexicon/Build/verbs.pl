@@ -641,6 +641,7 @@ m(v_root(heb,hebben),
 	fixed([{[acc(geld),pc(voor)]}],no_passive),
 	fixed([{[acc(idee),er_pp(van,A)]},extra_sbar(A)],no_passive), % of/wie
 	fixed([acc(invloed),sbar_subj],no_passive),
+	fixed([{[acc(gelijk),pc(in)]}],no_passive),  % daar heb je (groot) gelijk in
 	fixed([acc(gelijk),sbar],no_passive),  % je hebt (groot) gelijk, dat ..
 	fixed([acc(gelijk),vp],no_passive),  % je hebt (groot) gelijk, om ..
 	                                     % je hebt het grootste gelijk van de wereld , om / dat ...
@@ -2273,6 +2274,10 @@ v(bejubel,bejubelt,bejubelen,bejubeld,bejubelde,bejubelden,
 v(bek,bekt,bekken,gebekt,bekte,bekten,
     [h([intransitive,
 	part_transitive(af)])]).  
+
+v(bekabel,bekabelt,bekabelen,bekabeld,bekabelde,bekabelden,
+    [h([intransitive,
+        transitive])]).    
 
 v(bekamp,bekampt,bekampen,bekampt,bekampte,bekampten,
     [h([intransitive,
@@ -5968,8 +5973,9 @@ v(doe,doet,inflected(doen,doene),gedaan,deed,deden,
     [h([transitive_ndev,
 	aci,
 	aci_no_obj,
-	np_ld_pp,      % ik deed suiker in de koffie
-	               % no LD for "wat deed je in Amsterdam == terwijl je in Amsterdam was" 
+	np_ld_pp,		% ik deed suiker in de koffie
+				% no LD for "wat deed je in Amsterdam == terwijl je in Amsterdam was"
+	np_ld_adv,		% ik deed het raampje omhoog
 	sbar,
 	% so_np,
 	nonp_copula,		% hij doet gek / raar / misselijk
@@ -6913,6 +6919,7 @@ v([duw,douw],[duwt,douwt],[duwen,douwen],[geduwd,gedouwd],[duwde,douwde],[duwden
 	part_transitive(aan),
 	part_transitive(af),
 	part_transitive(in),
+	part_transitive(vast),
 	part_transitive(voort),
 	part_transitive(weg)])]).
 
@@ -7203,7 +7210,8 @@ v(excuseer,excuseert,excuseren,geëxcuseerd,excuseerde,excuseerden,
 
 v(executeer,executeert,executeren,geëxecuteerd,executeerde,executeerden,
     [h([% refl,
-	transitive])]).
+	transitive,
+	intransitive])]).
 
 v(expandeer,expandeert,expanderen,geëxpandeerd,expandeerde,expandeerden,
     [b([intransitive]),
@@ -8794,7 +8802,8 @@ v(grien,grient,grienen,gegriend,griende,grienden,
         mod_pp(om)])]).
 
 v(griezel,griezelt,griezelen,gegriezeld,griezelde,griezelden,
-    [h([intransitive])]).
+  [h([intransitive,
+      pc_pp(van)])]).
 
 v(grif,grift,griffen,gegrift,grifte,griften,
     [h([transitive,
@@ -9740,6 +9749,7 @@ v(hoepel,hoepelt,hoepelen,gehoepeld,hoepelde,hoepelden,
 v(hoest,hoest,hoesten,gehoest,hoestte,hoestten,
     [h([intransitive,
         mod_pp(doorheen),
+	so_np_ld_pp,  % iemand in zijn gezicht hoesten
 	part_transitive(op),
 	part_transitive(uit),
 	transitive])]).
@@ -12741,8 +12751,8 @@ v(laat,laat,laten,gelaten,liet,lieten,
         fixed([ap_pred(heel),pc(van),acc],norm_passive), % niets/weinig/geen spaan
 	fixed([[in,de,steek],acc],norm_passive),
 	fixed([[in,het,onzekere],acc],norm_passive),
-	fixed([[in,het,midden],acc],no_passive), 
-	fixed([[in,het,midden],sbar],no_passive), 
+	fixed([[in,het,midden],acc],norm_passive), 
+	fixed([[in,het,midden],sbar],norm_passive), 
 	fixed([[in,'\'t',onzekere],acc],norm_passive),
 	fixed([[met,rust],acc],norm_passive),
 	fixed([[onbetuigd],refl],no_passive),
@@ -15433,7 +15443,8 @@ v(ondervind,ondervindt,ondervinden,ondervonden,ondervond,ondervonden,
 	fixed([[aan,den,lijve],sbar],imp_passive)])]).
 
 v(ondervraag,ondervraagt,ondervragen,ondervraagd,[ondervroeg,ondervraagde],[ondervroegen,ondervraagden],
-    [h([transitive])]).
+  [h([transitive,
+      acc_np_sbar])]).
 
 v(onderwerp,onderwerpt,onderwerpen,onderworpen,onderwierp,onderwierpen,
     [h([transitive,
@@ -17056,6 +17067,7 @@ v(poep,poept,poepen,gepoept,poepte,poepten,
 v(poets,poetst,poetsen,gepoetst,poetste,poetsten,
     [h([ap_pred_np,
 	transitive,
+	intransitive,
 	part_transitive(weg),
 	part_sbar_subj_so_np(op),
 	part_transitive(op)])]).
@@ -21253,14 +21265,17 @@ v(spring,springt,springen,gesprongen,sprong,sprongen,
 	intransitive])]).
 
 v(sprint,sprint,sprinten,gesprint,sprintte,sprintten,
-    [h([intransitive,
-        ld_pp,
-        ld_dir,			% het veld af; de bocht om
-        ld_adv,			% cdb 3637: hij sprintte binnen
-	pred_refl,              % VL hij sprintte zich derde
-	refl_ld_pp,             % VL hij sprintte zich naar de tweede plek
-	part_so_np(voorbij),
-        part_intransitive(aan)])]).
+  [h([intransitive
+     ]),
+   b([red_refl,                 % VL hij sprintte zich derde
+      refl_ld_pp                % VL hij sprintte zich naar de tweede plek
+     ]),
+   z([ld_pp,
+      ld_dir,			% het veld af; de bocht om
+      ld_adv,			% cdb 3637: hij sprintte binnen
+      part_so_np(voorbij),
+      part_intransitive(aan)
+     ])]).
 
 v(sproei,sproeit,sproeien,gesproeid,sproeide,sproeiden,
     [h([intransitive,
@@ -21551,6 +21566,7 @@ v(staar,staart,staren,gestaard,staarde,staarden,
 	part_transitive(aan),
 	part_transitive(af),
 	part_transitive(na),
+	so_np_ld_pp,  % hij staarde haar in de ogen
 	ld_pp,
 	ld_dir,  % ze staarde omlaag / het raam uit / de duisternis in
         part_pc_pp_refl(uit,voor),
@@ -22380,6 +22396,7 @@ v(strooi,strooit,strooien,gestrooid,strooide,strooiden,
 	part_transitive(uit),
 	pc_pp(met),
 	np_ld_pp,
+	np_ld_dir,
 	fixed([[in,de,ogen],acc(zand),dat],imp_passive),
 	part_np_ld_pp(uit)])]).
 
@@ -23603,6 +23620,7 @@ v(vaag,vaagt,vagen,gevaagd,vaagde,vaagden,
 v(vaar,vaart,varen,gevaren,[voer,vaarde],[voeren,vaarden],
     [z([part_pc_pp(uit,tegen),
 	part_intransitive(aan),	% with "komen"
+	part_intransitive(af),  % we varen pas morgen af
 	part_intransitive(over),
 	part_ld_pp(over)]),
      h([transitive,
@@ -26863,6 +26881,7 @@ v(volg,volgt,volgen,gevolgd,volgde,volgden,
 	pc_pp(op),
 	pc_pp(uit)]),
      b([np_ld_pp,
+	np_ld_dir,
 	part_transitive(na),
         transitive,
         fixed([[op,de,voet],acc],norm_passive),
@@ -27558,7 +27577,8 @@ v(wend,wendt,wenden,gewend,wendde,wendden,
 v(wenk,wenkt,wenken,gewenkt,wenkte,wenkten,
     [h([intransitive,
 	transitive,
-	sbar,  % ze wenkt dat ik dichterbij moet komen
+	sbar,		       % ze wenkt dat ik dichterbij moet komen
+	np_vp_obj1,
 	np_ld_pp])]).
 
 v(wens,wenst,wensen,gewenst,wenste,wensten,
@@ -27981,6 +28001,7 @@ v(worstel,worstelt,worstelen,geworsteld,worstelde,worstelden,
 	part_transitive(door),
 	pc_pp(met),
 	pc_pp(tegen),
+	ap_pred_refl,  % hij worstelde zich vrij/los
 	refl_ld_pp,
 	refl_ld_dir])]).
 
@@ -28432,8 +28453,10 @@ v(zeul,zeult,zeulen,gezeuld,zeulde,zeulden,
 v(zeur,zeurt,zeuren,gezeurd,zeurde,zeurden,
     [h([intransitive,
 	sbar,
+	fixed([svp_pp(aan,kop),dat],no_passive),
+				% hem aan zijn kop gezeurd
         ap_pred_np,		% ik heb haar gek gezeurd (om ...)
-	np_np,  % de oren van de kop/het lijf
+	np_np,			% de oren van de kop/het lijf
 	pc_pp(om),
 	er_pp_sbar(over),
 	pc_pp(over)])]).
@@ -28515,6 +28538,8 @@ v(zie,ziet,inflected(zien,ziene),gezien,zag,zagen,
 	fixed([{[[geen,graten],er_pp(in,C)]},extra_vp(C)],no_passive),  % VL
 	fixed([[het,licht]],no_passive),
 	fixed([acc(kans),vp],imp_passive),
+	fixed([{[acc(kans),er_pp(tot,C)]},extra_sbar(C)],no_passive),
+	fixed([{[acc(kans),er_pp(tot,C)]},extra_vp(C)],no_passive),
 	fixed([[schoon],acc(kans)],no_passive),
 	fixed([[schoon],acc(kans),vp],no_passive),
 	part_fixed(in,[{[pc(van),acc(nut)]}],norm_passive),
