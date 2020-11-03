@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" rel="--" end="39" id="0">
+    <node begin="5" end="6" id="1" lemma="," pos="let" postag="LET()" rel="--" word="," />
+    <node begin="16" end="17" id="2" lemma="," pos="let" postag="LET()" rel="--" word="," />
+    <node begin="0" cat="smain" end="38" id="3" rel="--">
+      <node begin="0" cat="du" end="16" id="4" rel="su">
+        <node begin="0" cat="whrel" end="5" id="5" rel="nucl">
+          <node begin="0" end="1" id="6" lemma="wat" pos="vnw" postag="VNW(vb,pron,stan,vol,3o,ev)" rel="rhd" word="Wat" />
+          <node begin="1" cat="ssub" end="5" id="7" rel="body">
+            <node begin="1" end="2" id="8" lemma="ik" pos="vnw" postag="VNW(pers,pron,nomin,vol,1,ev)" rel="su" word="ik" />
+            <node begin="3" end="4" id="9" lemma="hebben" pos="ww" postag="WW(pv,tgw,ev)" rel="hd" word="heb" />
+            <node begin="2" cat="ppart" end="5" id="10" rel="vc">
+              <node begin="2" end="3" id="11" lemma="niemand" pos="vnw" postag="VNW(onbep,pron,stan,vol,3p,ev)" rel="obj2" word="niemand" />
+              <node begin="4" end="5" id="12" lemma="vertellen" pos="ww" postag="WW(vd,vrij,zonder)" rel="hd" word="verteld" />
+            </node>
+          </node>
+        </node>
+        <node begin="6" cat="du" end="16" id="13" rel="sat">
+          <node begin="6" end="7" id="14" lemma="en" pos="vg" postag="VG(neven)" rel="dlink" word="en" />
+          <node begin="7" cat="smain" end="16" id="15" rel="nucl">
+            <node begin="7" end="8" id="16" lemma="daar" pos="vnw" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" rel="mod" word="daar" />
+            <node begin="8" end="9" id="17" lemma="zijn" pos="ww" postag="WW(pv,verl,ev)" rel="hd" word="was" />
+            <node begin="9" end="10" id="18" lemma="ik" pos="vnw" postag="VNW(pers,pron,nomin,vol,1,ev)" rel="su" word="ik" />
+            <node begin="10" cat="pp" end="13" id="19" rel="mod">
+              <node begin="10" end="11" id="20" lemma="op" pos="vz" postag="VZ(init)" rel="hd" word="op" />
+              <node begin="11" cat="np" end="13" id="21" rel="obj1">
+                <node begin="11" end="12" id="22" lemma="dat" pos="vnw" postag="VNW(aanw,det,stan,prenom,zonder,evon)" rel="det" word="dat" />
+                <node begin="12" end="13" id="23" lemma="moment" pos="n" postag="N(soort,ev,basis,onz,stan)" rel="hd" word="moment" />
+              </node>
+            </node>
+            <node begin="13" cat="ap" end="15" id="24" rel="predc">
+              <node begin="13" end="14" id="25" lemma="heel" pos="adj" postag="ADJ(vrij,basis,zonder)" rel="mod" word="heel" />
+              <node begin="14" end="15" id="26" lemma="blij" pos="adj" postag="ADJ(vrij,basis,zonder)" rel="hd" word="blij" />
+            </node>
+            <node begin="15" end="16" id="27" lemma="om" pos="vz" postag="VZ(init)" rel="--" word="om" />
+          </node>
+        </node>
+      </node>
+      <node begin="17" end="18" id="28" lemma="zijn" pos="ww" postag="WW(pv,verl,ev)" rel="hd" word="was" />
+      <node begin="18" cat="cp" end="38" id="29" rel="predc">
+        <node begin="18" end="19" id="30" lemma="dat" pos="vg" postag="VG(onder)" rel="cmp" word="dat" />
+        <node begin="19" cat="ssub" end="38" id="31" rel="body">
+          <node begin="19" cat="np" end="20" id="32" rel="su">
+            <node begin="19" end="20" id="33" lemma="ik" pos="vnw" postag="VNW(pers,pron,nomin,vol,1,ev)" rel="hd" word="ik" />
+          </node>
+          <node begin="20" cat="pp" end="24" id="34" rel="mod">
+            <node begin="20" end="21" id="35" lemma="in" pos="vz" postag="VZ(init)" rel="hd" word="in" />
+            <node begin="21" cat="np" end="24" id="36" rel="obj1">
+              <node begin="21" end="22" id="37" lemma="mijn" pos="vnw" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" rel="det" word="mijn" />
+              <node begin="22" end="23" id="38" lemma="vrij" pos="adj" postag="ADJ(prenom,basis,met-e,stan)" rel="mod" word="vrije" />
+              <node begin="23" end="24" id="39" lemma="tijd" pos="n" postag="N(soort,ev,basis,zijd,stan)" rel="hd" word="tijd" />
+            </node>
+          </node>
+          <node begin="24" cat="np" end="26" id="40" rel="mod">
+            <node begin="24" end="25" id="41" lemma="al" pos="bw" postag="BW()" rel="mod" word="al" />
+            <node begin="25" end="26" id="42" lemma="maand" pos="n" postag="N(soort,mv,basis)" rel="hd" word="maanden" />
+          </node>
+          <node begin="26" end="27" id="43" lemma="om_gaan" pos="ww" postag="WW(pv,verl,ev)" rel="hd" word="omging" />
+          <node begin="27" cat="pp" end="38" id="44" rel="pc">
+            <node begin="27" end="28" id="45" lemma="met" pos="vz" postag="VZ(init)" rel="hd" word="met" />
+            <node begin="28" cat="np" end="38" id="46" rel="obj1">
+              <node begin="28" end="29" id="47" lemma="een" pos="lid" postag="LID(onbep,stan,agr)" rel="det" word="een" />
+              <node begin="29" end="30" id="48" lemma="jongen" pos="n" postag="N(soort,ev,basis,zijd,stan)" rel="hd" word="jongen" />
+              <node begin="30" cat="pp" end="33" id="49" rel="mod">
+                <node begin="30" end="31" id="50" lemma="uit" pos="vz" postag="VZ(init)" rel="hd" word="uit" />
+                <node begin="31" cat="mwu" end="33" id="51" rel="obj1">
+                  <node begin="31" end="32" id="52" lemma="La" pos="spec" postag="SPEC(deeleigen)" rel="mwp" word="La" />
+                  <node begin="32" end="33" id="53" lemma="Gomera" pos="spec" postag="SPEC(deeleigen)" rel="mwp" word="Gomera" />
+                </node>
+              </node>
+              <node begin="33" cat="rel" end="38" id="54" rel="mod">
+                <node begin="33" end="34" id="55" lemma="die" pos="vnw" postag="VNW(betr,pron,stan,vol,persoon,getal)" rel="rhd" word="die" />
+                <node begin="34" cat="ssub" end="38" id="56" rel="body">
+                  <node begin="34" end="35" id="57" lemma="daar" pos="vnw" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" rel="mod" word="daar" />
+                  <node begin="35" cat="cp" end="37" id="58" rel="predm">
+                    <node begin="35" end="36" id="59" lemma="als" pos="vz" postag="VZ(init)" rel="cmp" word="als" />
+                    <node begin="36" end="37" id="60" lemma="ober" pos="n" postag="N(soort,ev,basis,zijd,stan)" rel="body" word="ober" />
+                  </node>
+                  <node begin="37" end="38" id="61" lemma="werken" pos="ww" postag="WW(pv,verl,ev)" rel="hd" word="werkte" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="38" end="39" id="62" lemma="." pos="let" postag="LET()" rel="--" word="." />
+  </node>
+  <sentence>Wat ik niemand heb verteld , en daar was ik op dat moment heel blij om , was dat ik in mijn vrije tijd al maanden omging met een jongen uit La Gomera die daar als ober werkte .</sentence>
+  <comment>Vermeer_Suite/1131-2|Q#1131-2|Wat ik niemand heb verteld , en daar was ik op dat moment heel blij om , was dat ik in mijn vrije tijd al maanden omging met een jongen uit La Gomera die daar als ober werkte .|1|4|-3.4760347440199983</comment>
+</alpino_ds>

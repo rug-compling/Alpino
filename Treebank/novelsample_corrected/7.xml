@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" rel="--" end="9" id="0">
+    <node begin="4" end="5" id="1" lemma="," pos="let" postag="LET()" rel="--" word="," />
+    <node begin="0" cat="du" end="8" id="2" rel="--">
+      <node begin="0" cat="smain" end="4" id="3" rel="nucl">
+        <node begin="0" end="1" id="4" lemma="u" pos="vnw" postag="VNW(pers,pron,nomin,vol,2b,getal)" rel="su" word="U" />
+        <node begin="1" end="2" id="5" lemma="zijn" pos="ww" postag="WW(pv,tgw,met-t)" rel="hd" word="bent" />
+        <node begin="2" cat="ppart" end="4" id="6" rel="vc">
+          <node begin="2" end="3" id="7" lemma="pas" pos="bw" postag="BW()" rel="mod" word="pas" />
+          <node begin="3" end="4" id="8" lemma="verhuizen" pos="ww" postag="WW(vd,vrij,zonder)" rel="hd" word="verhuisd" />
+        </node>
+      </node>
+      <node begin="5" cat="sv1" end="8" id="9" rel="tag">
+        <node begin="5" end="6" id="10" lemma="zijn" pos="ww" postag="WW(pv,tgw,ev)" rel="hd" word="is" />
+        <node begin="6" end="7" id="11" lemma="het" pos="vnw" postag="VNW(pers,pron,stan,red,3,ev,onz)" rel="su" word="het" />
+        <node begin="7" end="8" id="12" lemma="niet" pos="bw" postag="BW()" rel="mod" word="niet" />
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="?" pos="let" postag="LET()" rel="--" word="?" />
+  </node>
+  <sentence>U bent pas verhuisd , is het niet ?</sentence>
+  <comment>Zwaan_Parnassia/1515-2|Q#1515-2|U bent pas verhuisd , is het niet ?|1|1|-0.8948805184599993</comment>
+</alpino_ds>

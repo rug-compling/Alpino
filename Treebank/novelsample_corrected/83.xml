@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" rel="--" end="8" id="0">
+    <node begin="2" end="3" id="1" lemma="," pos="let" postag="LET()" rel="--" word="," />
+    <node begin="4" end="5" id="2" lemma="," pos="let" postag="LET()" rel="--" word="," />
+    <node begin="0" cat="np" end="7" id="3" rel="--">
+      <node begin="0" end="1" id="4" lemma="een" pos="lid" postag="LID(onbep,stan,agr)" rel="det" word="Een" />
+      <node begin="1" end="2" id="5" lemma="lang" pos="adj" postag="ADJ(prenom,basis,met-e,stan)" rel="mod" word="lange" />
+      <node begin="3" end="4" id="6" lemma="fris" pos="adj" postag="ADJ(prenom,basis,met-e,stan)" rel="mod" word="frisse" />
+      <node begin="5" end="6" id="7" lemma="zuiveren" pos="ww" postag="WW(od,prenom,met-e)" rel="mod" word="zuiverende" />
+      <node begin="6" end="7" id="8" lemma="wandeling" pos="n" postag="N(soort,ev,basis,zijd,stan)" rel="hd" word="wandeling" />
+    </node>
+    <node begin="7" end="8" id="9" lemma="." pos="let" postag="LET()" rel="--" word="." />
+  </node>
+  <sentence>Een lange , frisse , zuiverende wandeling .</sentence>
+  <comment>Wickham_Zwemfeestje/2433-6|Q#2433-6|Een lange , frisse , zuiverende wandeling .|1|1|-0.15558143707999783</comment>
+</alpino_ds>
