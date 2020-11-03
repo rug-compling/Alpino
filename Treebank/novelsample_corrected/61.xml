@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" rel="--" end="11" id="0">
+    <node begin="0" cat="smain" end="10" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="mijn" pos="vnw" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" rel="det" word="Mijn" />
+        <node begin="1" end="2" id="4" lemma="moeder" pos="n" postag="N(soort,ev,basis,zijd,stan)" rel="hd" word="moeder" />
+      </node>
+      <node begin="2" end="3" id="5" lemma="zeggen" pos="ww" postag="WW(pv,verl,ev)" rel="hd" word="zei" />
+      <node begin="3" cat="cp" end="10" id="6" rel="vc">
+        <node begin="3" end="4" id="7" lemma="dat" pos="vg" postag="VG(onder)" rel="cmp" word="dat" />
+        <node begin="4" cat="ssub" end="10" id="8" rel="body">
+          <node begin="4" end="5" id="9" lemma="ik" pos="vnw" postag="VNW(pers,pron,nomin,vol,1,ev)" rel="su" word="ik" />
+          <node begin="5" end="6" id="10" lemma="zijn" pos="ww" postag="WW(pv,verl,ev)" rel="hd" word="was" />
+          <node begin="6" cat="ppart" end="10" id="11" rel="vc">
+            <node begin="6" end="7" id="12" lemma="op_rekken" pos="ww" postag="WW(vd,vrij,zonder)" rel="hd" word="opgerekt" />
+            <node begin="7" cat="pp" end="10" id="13" rel="mod">
+              <node begin="7" end="8" id="14" lemma="door" pos="vz" postag="VZ(init)" rel="hd" word="door" />
+              <node begin="8" cat="np" end="10" id="15" rel="obj1">
+                <node begin="8" end="9" id="16" lemma="twee" pos="tw" postag="TW(hoofd,prenom,stan)" rel="det" word="twee" />
+                <node begin="9" end="10" id="17" lemma="trek_paard" pos="n" postag="N(soort,mv,basis)" rel="hd" word="trekpaarden" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="10" end="11" id="18" lemma="." pos="let" postag="LET()" rel="--" word="." />
+  </node>
+  <sentence>Mijn moeder zei dat ik was opgerekt door twee trekpaarden .</sentence>
+  <comment>Ammaniti_JijEnIk/24-2|Q#24-2|Mijn moeder zei dat ik was opgerekt door twee trekpaarden .|1|1|-6.029794155319997</comment>
+</alpino_ds>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" rel="--" end="21" id="0">
+    <node begin="0" cat="conj" end="20" id="1" rel="--">
+      <node begin="0" cat="smain" end="7" id="2" rel="cnj">
+        <node begin="0" cat="np" end="2" id="3" rel="su">
+          <node begin="0" end="1" id="4" lemma="de" pos="lid" postag="LID(bep,stan,rest)" rel="det" word="De" />
+          <node begin="1" end="2" id="5" lemma="kool_boer" pos="n" postag="N(soort,ev,basis,zijd,stan)" rel="hd" word="kolenboer" />
+        </node>
+        <node begin="2" end="3" id="6" lemma="persen" pos="ww" postag="WW(pv,verl,ev)" rel="hd" word="perste" />
+        <node begin="3" cat="np" end="5" id="7" rel="obj1">
+          <node begin="3" end="4" id="8" lemma="zijn" pos="vnw" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" rel="det" word="zijn" />
+          <node begin="4" end="5" id="9" lemma="lip" pos="n" postag="N(soort,mv,basis)" rel="hd" word="lippen" />
+        </node>
+        <node begin="5" cat="pp" end="7" id="10" rel="ld">
+          <node begin="5" end="6" id="11" lemma="op" pos="vz" postag="VZ(init)" rel="hd" word="op" />
+          <node begin="6" end="7" id="12" lemma="elkaar" pos="vnw" postag="VNW(recip,pron,obl,vol,persoon,mv)" rel="obj1" word="elkaar" />
+        </node>
+      </node>
+      <node begin="7" end="8" id="13" lemma="en" pos="vg" postag="VG(neven)" rel="crd" word="en" />
+      <node begin="8" cat="smain" end="20" id="14" rel="cnj">
+        <node begin="8" end="9" id="15" lemma="af_sluipen" pos="ww" postag="WW(pv,verl,ev)" rel="hd" word="sloop" />
+        <node begin="9" cat="pp" end="17" id="16" rel="mod">
+          <node begin="9" end="10" id="17" lemma="met" pos="vz" postag="VZ(init)" rel="hd" word="met" />
+          <node begin="10" cat="np" end="17" id="18" rel="obj1">
+            <node begin="10" end="11" id="19" lemma="de" pos="lid" postag="LID(bep,stan,rest)" rel="det" word="de" />
+            <node begin="11" end="12" id="20" lemma="besteld" pos="ww" postag="WW(vd,prenom,met-e)" rel="mod" word="bestelde" />
+            <node begin="12" end="13" id="21" lemma="zak" pos="n" postag="N(soort,ev,basis,zijd,stan)" rel="hd" word="zak" />
+            <node begin="13" end="14" id="22" lemma="kool" pos="n" postag="N(soort,mv,basis)" rel="mod" word="kolen" />
+            <node begin="14" cat="pp" end="17" id="23" rel="mod">
+              <node begin="14" end="15" id="24" lemma="op" pos="vz" postag="VZ(init)" rel="hd" word="op" />
+              <node begin="15" cat="np" end="17" id="25" rel="obj1">
+                <node begin="15" end="16" id="26" lemma="zijn" pos="vnw" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" rel="det" word="zijn" />
+                <node begin="16" end="17" id="27" lemma="rug" pos="n" postag="N(soort,ev,basis,zijd,stan)" rel="hd" word="rug" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="17" cat="np" end="19" id="28" rel="ld">
+          <node begin="17" end="18" id="29" lemma="de" pos="lid" postag="LID(bep,stan,rest)" rel="det" word="de" />
+          <node begin="18" end="19" id="30" lemma="kelder_trap" pos="n" postag="N(soort,ev,basis,zijd,stan)" rel="hd" word="keldertrap" />
+        </node>
+        <node begin="19" end="20" id="31" lemma="af" pos="vz" postag="VZ(fin)" rel="svp" word="af" />
+      </node>
+    </node>
+    <node begin="20" end="21" id="32" lemma="." pos="let" postag="LET()" rel="--" word="." />
+  </node>
+  <sentence>De kolenboer perste zijn lippen op elkaar en sloop met de bestelde zak kolen op zijn rug de keldertrap af .</sentence>
+  <comment>Hollander_Naaktportret/109-2|Q#109-2|De kolenboer perste zijn lippen op elkaar en sloop met de bestelde zak kolen op zijn rug de keldertrap af .|1|1|9.37288581723999</comment>
+</alpino_ds>

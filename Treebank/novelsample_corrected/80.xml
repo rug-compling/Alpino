@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" rel="--" end="6" id="0">
+    <node begin="0" end="1" id="1" lemma="'" pos="let" postag="LET()" rel="--" word="'" />
+    <node begin="1" cat="du" end="4" id="2" rel="--">
+      <node begin="1" cat="np" end="3" id="3" rel="dp">
+        <node begin="1" end="2" id="4" lemma="een" pos="lid" postag="LID(onbep,stan,agr)" rel="det" word="Een" />
+        <node begin="2" end="3" id="5" lemma="beet" pos="n" postag="N(soort,ev,dim,onz,stan)" rel="hd" word="beetje" />
+      </node>
+      <node begin="3" end="4" id="6" lemma="wat" pos="vnw" postag="VNW(onbep,pron,stan,vol,3o,ev)" rel="dp" word="wat" />
+    </node>
+    <node begin="4" end="5" id="7" lemma="?" pos="let" postag="LET()" rel="--" word="?" />
+    <node begin="5" end="6" id="8" lemma="'" pos="let" postag="LET()" rel="--" word="'" />
+  </node>
+  <sentence>' Een beetje wat ? '</sentence>
+  <comment>Barr_Klasgenoten/1830-1|Q#1830-1|' Een beetje wat ? '|1|1|2.7745217548800003</comment>
+</alpino_ds>

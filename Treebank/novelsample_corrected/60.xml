@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" rel="--" end="8" id="0">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="het" pos="vnw" postag="VNW(pers,pron,stan,red,3,ev,onz)" rel="su" word="Het" />
+      <node begin="1" end="2" id="3" lemma="uit_maken" pos="ww" postag="WW(pv,verl,ev)" rel="hd" word="maakte" />
+      <node begin="2" cat="pp" end="4" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="voor" pos="vz" postag="VZ(init)" rel="hd" word="voor" />
+        <node begin="3" end="4" id="6" lemma="Robie" pos="n" postag="N(eigen,ev,basis,zijd,stan)" rel="obj1" word="Robie" />
+      </node>
+      <node begin="4" end="5" id="7" lemma="allemaal" pos="bw" postag="BW()" rel="predm" word="allemaal" />
+      <node begin="5" end="6" id="8" lemma="niets" pos="vnw" postag="VNW(onbep,pron,stan,vol,3o,ev)" rel="obj1" word="niets" />
+      <node begin="6" end="7" id="9" lemma="uit" pos="vz" postag="VZ(fin)" rel="svp" word="uit" />
+    </node>
+    <node begin="7" end="8" id="10" lemma="." pos="let" postag="LET()" rel="--" word="." />
+  </node>
+  <sentence>Het maakte voor Robie allemaal niets uit .</sentence>
+  <comment>Baldacci_Onschuldig/339-6|Q#339-6|Het maakte voor Robie allemaal niets uit .|1|1|-1.5622708582500013</comment>
+</alpino_ds>

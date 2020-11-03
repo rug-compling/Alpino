@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" rel="--" end="18" id="0">
+    <node begin="6" end="7" id="1" lemma="," pos="let" postag="LET()" rel="--" word="," />
+    <node begin="14" end="15" id="2" lemma="," pos="let" postag="LET()" rel="--" word="," />
+    <node begin="0" cat="conj" end="17" id="3" rel="--">
+      <node begin="0" cat="smain" end="6" id="4" rel="cnj">
+        <node begin="0" end="1" id="5" lemma="ik" pos="vnw" postag="VNW(pers,pron,nomin,vol,1,ev)" rel="su" word="Ik" />
+        <node begin="1" end="2" id="6" lemma="porren" pos="ww" postag="WW(pv,tgw,ev)" rel="hd" word="por" />
+        <node begin="2" end="3" id="7" lemma="wat" pos="vnw" postag="VNW(onbep,pron,stan,vol,3o,ev)" rel="mod" word="wat" />
+        <node begin="3" cat="pp" end="6" id="8" rel="ld">
+          <node begin="3" end="4" id="9" lemma="in" pos="vz" postag="VZ(init)" rel="hd" word="in" />
+          <node begin="4" cat="np" end="6" id="10" rel="obj1">
+            <node begin="4" end="5" id="11" lemma="mijn" pos="vnw" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" rel="det" word="mijn" />
+            <node begin="5" end="6" id="12" lemma="hersenen" pos="n" postag="N(soort,mv,basis)" rel="hd" word="hersenen" />
+          </node>
+        </node>
+      </node>
+      <node begin="7" end="8" id="13" lemma="maar" pos="vg" postag="VG(neven)" rel="crd" word="maar" />
+      <node begin="8" cat="smain" end="17" id="14" rel="cnj">
+        <node begin="8" end="9" id="15" lemma="prikken" pos="ww" postag="WW(pv,tgw,ev)" rel="hd" word="prik" />
+        <node begin="9" cat="advp" end="11" id="16" rel="mod">
+          <node begin="9" end="10" id="17" lemma="alleen" pos="bw" postag="BW()" rel="hd" word="alleen" />
+          <node begin="10" end="11" id="18" lemma="maar" pos="bw" postag="BW()" rel="mod" word="maar" />
+        </node>
+        <node begin="11" cat="pp" end="17" id="19" rel="ld">
+          <node begin="11" end="12" id="20" lemma="in" pos="vz" postag="VZ(init)" rel="hd" word="in" />
+          <node begin="12" cat="np" end="17" id="21" rel="obj1">
+            <node begin="12" end="13" id="22" lemma="een" pos="lid" postag="LID(onbep,stan,agr)" rel="det" word="een" />
+            <node begin="13" end="14" id="23" lemma="stom" pos="adj" postag="ADJ(prenom,basis,met-e,stan)" rel="mod" word="stomme" />
+            <node begin="15" end="16" id="24" lemma="leeg" pos="adj" postag="ADJ(prenom,basis,met-e,stan)" rel="mod" word="lege" />
+            <node begin="16" end="17" id="25" lemma="ballon" pos="n" postag="N(soort,ev,basis,zijd,stan)" rel="hd" word="ballon" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="26" lemma="." pos="let" postag="LET()" rel="--" word="." />
+  </node>
+  <sentence>Ik por wat in mijn hersenen , maar prik alleen maar in een stomme , lege ballon .</sentence>
+  <comment>Kinsella_KenJeMe/100-1|Q#100-1|Ik por wat in mijn hersenen , maar prik alleen maar in een stomme , lege ballon .|1|1|-1.4610407087999997</comment>
+</alpino_ds>
