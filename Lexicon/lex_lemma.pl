@@ -949,6 +949,7 @@ lemma_root(achterover_drukken,druk_achterover) .
 lemma_root(achterover_leunen,leun_achterover) .
 lemma_root(achter_staan,sta_achter) .
 lemma_root(achter_stellen,stel_achter) .
+lemma_root(achteruit_deinzen,deins_achteruit) .
 lemma_root(achteruit_gaan,ga_achteruit) .
 lemma_root(achteruit_lopen,loop_achteruit) .
 lemma_root(achteruit_rijden,rijd_achteruit) .

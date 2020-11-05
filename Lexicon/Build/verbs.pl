@@ -5551,6 +5551,7 @@ v(dein,deint,deinen,gedeind,deinde,deinden,
 
 v(deins,deinst,deinzen,gedeinsd,deinsde,deinsden,
     [z([intransitive,
+	part_intransitive(achteruit),
 	part_intransitive(terug),
 	part_pc_pp(terug,voor),
 	part_er_pp_vp(terug,voor)])]).
@@ -7289,6 +7290,7 @@ v(faseer,faseert,faseren,gefaseerd,faseerde,faseerden,
 v(fax,faxt,faxen,gefaxt,faxte,faxten,
     [h([transitive,
 	intransitive,
+	np_np,
         part_transitive(door),
 	part_np_np_ld_pp(toe),
 	np_pc_pp(naar),
@@ -21267,7 +21269,7 @@ v(spring,springt,springen,gesprongen,sprong,sprongen,
 v(sprint,sprint,sprinten,gesprint,sprintte,sprintten,
   [h([intransitive
      ]),
-   b([red_refl,                 % VL hij sprintte zich derde
+   b([pred_refl,                % VL hij sprintte zich derde
       refl_ld_pp                % VL hij sprintte zich naar de tweede plek
      ]),
    z([ld_pp,
@@ -28741,7 +28743,8 @@ v(zit,zit,zitten,gezeten,zat,zaten,
 	part_fixed(op,[[bovenarms],svp_er],no_passive), % idem
 	
 	fixed([[in,de,haren],dat],no_passive),
-	fixed([[in,de,weg],acc],norm_passive),
+	fixed([[in,de,weg],dat],no_passive),
+	fixed([[in,de,weg]],no_passive),
 	fixed([subj(klad),pc(in)],no_passive),
 	fixed([[snor]],no_passive),
 	fixed([{[ld_adv,svp_dat(hem)]}],no_passive),  % het zit 'm in de details

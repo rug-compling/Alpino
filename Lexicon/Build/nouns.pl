@@ -10150,7 +10150,7 @@ n([pl(eetzalen),sg(eetzaal)],de,[]).
 n([sg(eeuw),pl(eeuwen)],de,[measure,temp_mod,sbar],
   [kwart]).
 
-n([pl(eeuwigheden),sg(eeuwigheid)],de,[]).
+n([pl(eeuwigheden),sg(eeuwigheid)],de,[temp_mod]).
 
 n([pl(eeuwwisselingen),sg(eeuwwisseling)],de,[]).
 
