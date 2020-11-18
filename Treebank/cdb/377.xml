@@ -2,7 +2,7 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="25" id="0" rel="top">
     <node begin="0" cat="conj" end="24" id="1" rel="--">
-      <node begin="0" cat="sv1" end="15" id="2" rel="cnj">
+      <node begin="0" cat="smain" end="15" id="2" rel="cnj">
         <node begin="0" cat="np" end="3" id="3" index="1" rel="su">
           <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
           <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="Belgisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Belgisch" word="Belgische"/>
@@ -34,7 +34,7 @@
         </node>
       </node>
       <node begin="15" conjtype="neven" end="16" id="25" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-      <node begin="0" cat="sv1" end="24" id="26" rel="cnj">
+      <node begin="0" cat="smain" end="24" id="26" rel="cnj">
         <node begin="0" end="3" id="27" index="1" rel="su"/>
         <node begin="16" end="17" id="28" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
         <node begin="0" cat="inf" end="24" id="29" rel="vc">

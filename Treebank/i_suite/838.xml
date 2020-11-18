@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="7" end="8" id="2" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" special="aanhaal_both" word="&apos;"/>
+    <node begin="0" cat="du" end="12" id="3" rel="--">
+      <node begin="0" cat="smain" end="6" id="4" rel="nucl">
+        <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="5" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
+        <node begin="1" end="2" id="6" infl="sg1" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" word="heb" wvorm="pv"/>
+        <node begin="0" cat="ppart" end="6" id="7" rel="vc">
+          <node begin="0" end="1" id="8" index="1" rel="su"/>
+          <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="9" infl="no_e" lemma="echt" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="echt" vform="adj" word="echt"/>
+          <node begin="2" cat="pp" end="5" id="10" rel="pc">
+            <node begin="2" end="3" getal="getal" id="11" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" special="er" status="red" vwtype="aanw" word="er"/>
+            <node begin="4" end="5" id="12" lemma="over" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="over" vztype="fin" word="over"/>
+          </node>
+          <node begin="5" buiging="zonder" end="6" id="13" infl="psp" lemma="na_denken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="denk_na" sc="part_pc_pp(na,over)" word="nagedacht" wvorm="vd"/>
+        </node>
+      </node>
+      <node begin="8" cat="sv1" end="12" id="14" rel="tag">
+        <node begin="8" end="9" id="15" infl="sg" lemma="vervolgen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vervolg" sc="acc_np_sbar" tense="past" word="vervolgde" wvorm="pv"/>
+        <node begin="9" case="nom" def="def" end="10" gen="de" genus="masc" getal="ev" id="16" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+        <node begin="10" cat="np" end="12" id="17" rel="obj1">
+          <node begin="10" buiging="zonder" end="11" getal="ev" id="18" infl="pron" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+          <node begin="11" end="12" gen="het" genus="onz" getal="ev" graad="basis" id="19" lemma="verhaal" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="verhaal" word="verhaal"/>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Ik heb er echt over nagedacht , &apos; vervolgde hij zijn verhaal .</sentence>
+</alpino_ds>

@@ -2,7 +2,7 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="16" id="0" rel="top">
     <node begin="0" cat="conj" end="15" id="1" rel="--">
-      <node begin="0" cat="sv1" end="6" id="2" rel="cnj">
+      <node begin="0" cat="smain" end="6" id="2" rel="cnj">
         <node begin="0" cat="np" end="2" id="3" index="1" rel="su">
           <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
           <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="fotograaf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="fotograaf" word="fotograaf"/>
@@ -15,7 +15,7 @@
         </node>
       </node>
       <node begin="6" conjtype="neven" end="7" id="11" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-      <node begin="0" cat="sv1" end="15" id="12" rel="cnj">
+      <node begin="0" cat="smain" end="15" id="12" rel="cnj">
         <node begin="0" end="2" id="13" index="1" rel="su"/>
         <node begin="7" end="8" id="14" lemma="over_houden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="houd" word="hield" wvorm="pv"/>
         <node begin="8" cat="np" end="11" id="15" rel="obj1">

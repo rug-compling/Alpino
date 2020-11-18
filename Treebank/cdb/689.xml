@@ -2,7 +2,7 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="14" id="0" rel="top">
     <node begin="0" cat="conj" end="13" id="1" rel="--">
-      <node begin="0" cat="sv1" end="5" id="2" rel="cnj">
+      <node begin="0" cat="smain" end="5" id="2" rel="cnj">
         <node begin="0" end="1" id="3" index="1" lemma="inmiddels" pos="adv" postag="BW()" pt="bw" rel="mod" root="inmiddels" word="Inmiddels"/>
         <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         <node begin="2" end="3" genus="masc" getal="ev" id="5" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
@@ -10,7 +10,7 @@
         <node begin="4" end="5" id="7" lemma="terug" pos="adv" postag="BW()" pt="bw" rel="ld" root="terug" word="terug"/>
       </node>
       <node begin="5" conjtype="neven" end="6" id="8" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-      <node begin="0" cat="sv1" end="13" id="9" rel="cnj">
+      <node begin="0" cat="smain" end="13" id="9" rel="cnj">
         <node begin="0" end="1" id="10" index="1" rel="mod"/>
         <node begin="6" end="7" id="11" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
         <node begin="7" end="8" genus="masc" getal="ev" id="12" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
