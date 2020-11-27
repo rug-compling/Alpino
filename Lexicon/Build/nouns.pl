@@ -2802,10 +2802,6 @@ n([mass(asfalt)],het,[]).
 
 n([pl(asielen),sg(asiel),mass(asiel)],het,[]).
 
-n([pl(asielzoekers),sg(asielzoeker)],de,[]).
-
-n([pl(asielzoeksters),sg(asielzoekster)],de,[]).
-
 n([pl(aspecten),sg(aspect)],het,[sbar]).
 
 n([pl(asperges),sg(asperge)],de,[]).
@@ -5539,7 +5535,7 @@ n([pl(boezems),sg(boezem)],de,[],[dim(boezempje)]).
 
 n([pl(boezemvrienden),sg(boezemvriend)],de,[]).
 
-n([mass(bof)],de,[]).
+n([mass(bof)],de,[sbar,subject_sbar]).
 
 n([sg(bogey),pl(bogeys)],de,[]).
 
@@ -6942,6 +6938,7 @@ n([pl(chefs),sg(chef)],de,[],
   [kabinet, s(kabinet),
    leger,
    pers,
+   s(personeel),
    politie]).
 
 n([sg([chef,de,bureau]),pl([chefs,de,bureau])],de,[]).
@@ -7289,7 +7286,8 @@ n([pl(collecties),sg(collectie)],de,[],
    winter,
    zomer]).
 
-n([pl(collectieven),sg(collectief)],het,[]).
+n([pl(collectieven),sg(collectief)],het,[],
+  [s(personeels)]).
 
 n([pl(collectiviteiten),sg(collectiviteit)],de,[]).
 
@@ -9180,8 +9178,8 @@ n([pl(dobbers),sg(dobber)],de,[],[dim(dobbertje)]).
 
 n([pl(docenten),sg(docent)],de,
   [app_measure],
-  [gast
-  ]
+  [gast,
+   hoofd]
  ).
 
 n([pl(docentes),sg(docente)],de,[app_measure],[gast]).
@@ -10365,8 +10363,8 @@ n([pl(ellenden),pl(ellendes),sg(ellende)],de,[sbar,vp]).
 
 n([pl(ellendelingen),sg(ellendeling)],de,[]).
 
-n([pl(elpees),sg(elpee),
-   sg(lp),pl('lp\'s')],de,[]).
+n([sg(lp),pl(elpees),sg(elpee),
+   pl('lp\'s')],de,[]).
 
 n([pl(emancipaties),sg(emancipatie)],de,[]).
 
@@ -10606,6 +10604,12 @@ n([pl(etages),sg(etage)],de,[]).
 n([pl(etalages),sg(etalage)],de,[]).
 
 n([pl(etappen),pl(etappes),sg(etappe)],de,[temp_mod],[berg]).
+
+n([mass(eten)],het,[],
+  [avond,
+   s(lieveling),
+   middag
+  ]).
 
 n([pl(etenswaren),sg(etenswaar)],de,[]).
 
@@ -11148,7 +11152,8 @@ n([pl(fietspaden),sg(fietspad)],het,[]).
 n([pl(figuranten),sg(figurant)],de,[]).
 
 n([pl(figuren),sg(figuur)],both,[],
-  [s(sprookje),
+  [hoofd,
+   s(sprookje),
    stijl,
    strip,
    i(vrouw,vrouwen),
@@ -11935,7 +11940,10 @@ n([pl(gebeden),sg(gebed)],het,[]).
 
 n([pl(gebeenten),sg(gebeente)],het,[]).
 
-n([pl(gebergten),pl(gebergtes),sg(gebergte)],het,[]).
+n([pl(gebergten),pl(gebergtes),sg(gebergte)],het,[],
+  [laag,
+   midden,
+   hoog]).
 
 n([pl(gebeurens),sg(gebeuren)],het,[]).
 
@@ -14876,60 +14884,32 @@ n([pl(hoofdbrekens)],both,[]).
 
 n([pl(hoofddeksels),sg(hoofddeksel)],het,[]).
 
-n([sg(hoofddocent),pl(hoofddocenten)],de,
-  [app_measure],
-  []).
-
-n([pl(hoofddoeken),sg(hoofddoek)],de,[]).
-
 n([pl(hoofdeinden),sg(hoofdeinde)],het,[]).
-
-n([pl(hoofdfiguren),sg(hoofdfiguur)],de,[]).
-
-n([mass(hoofdingang)],de,[]).
 
 n([sg(hoofdklasser),pl(hoofdklassers)],de,[]).
 
 n([pl(hoofdknikken),sg(hoofdknik)],de,[],[dim(hoofdknikje)]).
 
-n([pl(hoofdkommissarissen),sg(hoofdkommissaris)],de,[]).
-
 n([pl(hoofdkussens),sg(hoofdkussen)],het,[]).
 
 n([pl(hoofdkwartieren),sg(hoofdkwartier)],het,[]).
-
-n([pl(hoofdletters),sg(hoofdletter)],de,[]).
 
 n([pl(hoofdlieden),pl(hoofdmannen),sg(hoofdman)],de,[]).
 
 n([pl(hoofdmoten),sg(hoofdmoot)],de,[]).
 
-n([pl(hoofdofficieren),sg(hoofdofficier)],de,[]).
-
-n([pl(hoofdpersonen),sg(hoofdpersoon)],de,[]).
-
-n([pl(hoofdrollen),sg(hoofdrol)],de,[]).
-
 n([pl(hoofdschuldigen),sg(hoofdschuldige)],de,[]).
-
-n([pl(hoofdsponsors),pl(hoofdsponsoren),sg(hoofdsponsor)],de,[]).
 
 n([pl(hoofdsteden),sg(hoofdstad)],de,[]).
 
 n([pl(hoofdstukken),sg(hoofdstuk)],het,[app_measure,
 					start_app_measure]).
 
-n([pl('hoofdthema\'s'),sg(hoofdthema)],het,[sbar]).
-
-n([pl(hoofdverdachten),sg(hoofdverdachte)],de,[]).
-
 n([sg(hoog)],het,[]). % hoge-drukgebied
 
 n([mass(hoogachting)],de,[]).
 
 n([mass(hoogbouw)],de,[]).
-
-n([pl(hooggebergten),pl(hooggebergtes),sg(hooggebergte)],het,[]).
 
 n([pl(hooggerechtshoven),sg(hooggerechtshof)],het,[]).
 
@@ -14954,8 +14934,6 @@ n([sg(hoogspringster),pl(hoogspringsters)],de,[],[polsstok]).
 n([pl(hoogten),pl(hoogtes),sg(hoogte)],de,[],
   [record,
    dim(hoogtetje)]).
-
-n([pl(hoogteverschillen),sg(hoogteverschil)],het,[]).
 
 n([mass(hoogtij)],both,[]).
 
@@ -15699,7 +15677,9 @@ n([mass(infrastruktuur)],de,[]).
 
 n([mass(infuus)],het,[]).
 
-n([pl(ingangen),sg(ingang)],de,[]).
+n([pl(ingangen),sg(ingang)],de,[],
+  [hoofd,
+   zij]).
 
 n([pl(ingenieurs),sg(ingenieur)],de,
   [app_measure]).
@@ -18976,6 +18956,7 @@ n([pl(lampen),sg(lamp)],de,[],
    mist,
    nacht,
    olie,
+   petroleum,
    spaar,
    zak,
    zwaai,
@@ -19476,7 +19457,11 @@ n([sg(let)],de,[]).
 
 n([pl(letsels),sg(letsel)],het,[],[hersen]).
 
-n([pl(letters),sg(letter)],de,[sbar,app_measure],[dim(lettertje)]).
+n([pl(letters),sg(letter)],de,
+  [sbar,
+   app_measure],
+  [hoofd,
+   dim(lettertje)]).
 
 n([pl(lettergrepen),sg(lettergreep)],de,[app_measure]).
 
@@ -21653,8 +21638,6 @@ n([sg(middag),pl(middagen)],de,[temp_mod,sbar,measure],
    dim(middagje)
   ]).
 
-n([mass(middageten)],het,[]).
-
 n([pl(middagmalen),sg(middagmaal)],het,[]).
 
 n([pl(middaguren),sg(middaguur)],het,[]).
@@ -23418,7 +23401,8 @@ n([sg([office,manager]),pl([office,managers])],de,[]).
 n([sg(official),pl(officials)],de,[]).
 
 n([pl(officieren),pl(officiers),sg(officier)],de,[],
-  [leger,
+  [hoofd,
+   leger,
    pers,
    s(verbinding),
    dim(officiertje)]).
@@ -23829,6 +23813,7 @@ n([mass(onderwijs)],het,[],
    omroep,
    praktijk,
    taal,
+   vak,
    zwem]).
 
 n([pl(onderwijsgevenden),sg(onderwijsgevende)],de,[]).
@@ -25964,24 +25949,15 @@ n([mass(personeel)],het,[],
    s(overheid),
    winkel]).
 
-n([pl(personeelsbestanden),sg(personeelsbestand)],het,[]).
-
-n([pl(personeelschefs),sg(personeelschef)],de,[]).
-
-n([sg(personeelscollectief),pl(personeelscollectieven)],het,[]).
-
-n([pl(personeelstekorten),sg(personeelstekort)],het,[]).
-
 n([pl(personificaties),sg(personificatie)],de,[]).
 
 n([pl(personen),sg(persoon)],de,[],
   [s(bewind),
+   hoofd,
    dim(persoontje),
    s(vertrouwen)]).
 
 n([pl(persoonlijkheden),sg(persoonlijkheid)],de,[]).
-
-n([pl(persoonlijkheidsstructuren),sg(persoonlijkheidsstructuur)],de,[]).
 
 n([pl(persoonsbewijzen),sg(persoonsbewijs)],het,[]).
 
@@ -26022,8 +25998,6 @@ n([mass(peterselie)],de,[]).
 n([pl(petities),pl(petitiën),sg(petitie)],de,[]).
 
 n([mass(petroleum)],de,[]).
-
-n([pl(petroleumlampen),sg(petroleumlamp)],de,[]).
 
 n([pl(peuken),sg(peuk)],de,[],[dim(peukje)]).
 
@@ -26201,6 +26175,8 @@ n([mass(pit)],het,[]).
 n([sg(pit),pl(pitten)],de,[],
   [pijnboom,
    dim(pitje)]).
+
+n([sg(pitch),pl(pitches)],de,[]).
 
 n([sg(pitcher),pl(pitchers)],de,[]).
 
@@ -26750,8 +26726,6 @@ n([mass(politiek)],de,[],
    wereld]).
 
 n([sg(politieker),pl(politiekers)],de,[]).
-
-n([pl(politiekommissarissen),sg(politiekommissaris)],de,[]).
 
 n([pl(politiemannen),sg(politieman)],de,[]).
 
@@ -29187,8 +29161,6 @@ n([pl(rijksdaalders),sg(rijksdaalder)],de,[]).
 
 n([pl(rijksinstituten),sg(rijksinstituut)],het,[]).
 
-n([pl(rijkskommissarissen),sg(rijkskommissaris)],de,[]).
-
 n([pl(rijksoverheden),sg(rijksoverheid)],de,[]).
 
 n([pl(rijksuniversiteiten),sg(rijksuniversiteit)],de,[]).
@@ -29394,6 +29366,7 @@ n([pl(rollen),sg(rol)],de,[measure],
 n([pl(rollen),sg(rol)],de,[],
   [dubbel,
    gast,
+   hoofd,
    sleutel,
    titel,
    s(voortrekker)
@@ -30339,6 +30312,7 @@ n([pl(scholen),sg(school)],de,[np_app_measure],
   [s(ambacht),
    avond,
    basis,
+   f(business),
    gemeente,
    i(hoog,hoge),
    kleuter,
@@ -32018,7 +31992,8 @@ n([pl(spokerijen),sg(spokerij)],de,[]).
 
 n([pl(sponsen),pl(sponzen),sg(spons)],de,[]).
 
-n([pl(sponsors),pl(sponsoren),sg(sponsor)],de,[]).
+n([pl(sponsors),pl(sponsoren),sg(sponsor)],de,[],
+  [hoofd]).
 
 n([mass(sponsoring)],de,[]).
 
@@ -33208,7 +33183,8 @@ n([pl(strubbelingen),sg(strubbeling)],de,[sbar,vp],[dim(strubbelingetje)]).
 n([mass(structurering),pl(structureringen),sg(structurering)],de,[]).
 
 n([pl(structuren),sg(structuur)],de,[],
-  [s(bestuur)]).
+  [s(bestuur),
+   s(persoonlijkheid)]).
 
 n([pl('structuurschema\'s'),sg(structuurschema)],het,[]).
 
@@ -33966,6 +33942,7 @@ n([pl(tekorten),sg(tekort)],het,[],
   [i(cel,cellen),
    i(leraar,leraren),
    s(overheid),
+   s(personeel),
    slaap,
    vocht
   ]).
@@ -34287,7 +34264,9 @@ n([pl('thema\'s'),sg(thema)],het,
   [sbar,
    vp,
    app_measure,
-   start_app_measure]).
+   start_app_measure],
+  [hoofd,
+   neven]).
 
 n([mass(thematiek)],de,[]).
 
@@ -35207,8 +35186,6 @@ n([pl(trompettisten),sg(trompettist)],de,[]).
 n([pl(tronies),sg(tronie)],de,[]).
 
 n([pl(tronen),sg(troon)],de,[],[dim(troontje)]).
-
-n([pl(troonopvolgers),sg(troonopvolger)],de,[]).
 
 n([mass(troost)],de,[subject_sbar,subject_vp,sbar,vp]).
 
@@ -36318,7 +36295,8 @@ n([pl(verbruikers),sg(verbruiker)],de,[],
 n([pl(verbruiksters),sg(verbruikster)],de,[]).
 
 n([pl(verdachten),sg(verdachte)],de,[],
-  [mede,
+  [hoofd,
+   mede,
    terreur]).
 
 n([pl(verdachtmakingen),sg(verdachtmaking)],de,[sbar,vp]).
@@ -36947,8 +36925,6 @@ n([pl(verpersoonlijkingen),sg(verpersoonlijking)],de,[]).
 
 n([pl(verplaatsingen),sg(verplaatsing)],de,[],[s(bedrijf)]).
 
-n([pl(verpleeghuizen),sg(verpleeghuis)],het,[]).
-
 n([mass(verpleegkunde)],de,[]).
 
 n([sg(verpleegkundige),pl(verpleegkundigen)],de,[],[wijk]).
@@ -37017,6 +36993,7 @@ n([pl(verschillen),sg(verschil)],het,[sbar,subject_sbar,vp]).
 
 n([pl(verschillen),sg(verschil)],het,[],
   [cultuur,
+   hoogte,
    s(inkomen),
    s(leeftijd),
    sekse]).

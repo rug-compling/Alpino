@@ -1224,6 +1224,7 @@ inf_only_sport(profwielrennen).
 inf_only_sport(rekeningrijden).
 inf_only_sport(ruziemaken).
 inf_only_sport(schoolverlaten).
+inf_only_sport(schoolzwemmen).
 inf_only_sport(skispringen).
 inf_only_sport(skivliegen).
 inf_only_sport(skydiven).
@@ -9733,7 +9734,8 @@ v(hoed,hoedt,hoeden,gehoed,hoedde,hoedden,
 v(hoef,hoeft,hoeven,[gehoefd,gehoeven],hoefde,hoefden,
     [h([intransitive,
 	transitive,
-        part_transitive(aan),  % we hoeven die kleding toch niet aan?
+        part_transitive(aan),	% we hoeven die kleding toch niet aan?
+	part_intransitive(op),  % ik hoef nog niet op
 	ld_dir,
         uit,
 	ld_pp,
@@ -9885,6 +9887,7 @@ v([houd,hou],houdt,houden,gehouden,hield,hielden,
 	voor_pred_np_vp,
 	np_vp_obj1, % we zijn gehouden de begroting uit te voeren
 	part_intransitive(aan),
+	part_dip_sbar(aan),
 	part_intransitive(af),
 	part_intransitive(halt),
 	part_intransitive(huis),
@@ -10291,9 +10294,10 @@ v(innoveer,innoveert,innoveren,geïnnoveerd,innoveerde,innoveerden,
       transitive])]).
 
 v(insinueer,insinueert,insinueren,geïnsinueerd,insinueerde,insinueerden,
-    [h([sbar,
-	transitive,
-	vp])]).
+  [h([sbar,
+      intransitive,
+      transitive,
+      vp])]).
 
 v(inspecteer,inspecteert,inspecteren,geïnspecteerd,inspecteerde,inspecteerden,
     [h([intransitive,
@@ -11372,6 +11376,7 @@ v(knal,knalt,knallen,geknald,knalde,knalden,
 	part_transitive(af),
         part_intransitive(binnen),
         part_transitive(binnen),
+	part_transitive(dicht),  % de deur
 	part_transitive(neer),
 	part_transitive(naast),
 	part_transitive(over),
@@ -21937,6 +21942,7 @@ v(stem,stemt,stemmen,gestemd,stemde,stemden,
 	transitive,
 	np_pc_pp(tot),
 	part_intransitive(in),
+	part_dip_sbar(in),
 	part_intransitive(mee),
 	part_intransitive(overeen),
 	part_intransitive(tegen),
@@ -24086,7 +24092,8 @@ v(verbreid,verbreidt,verbreiden,verbreid,verbreidde,verbreidden,
 	transitive])]).
 
 v(verbrijzel,verbrijzelt,verbrijzelen,verbrijzeld,verbrijzelde,verbrijzelden,
-    [h([transitive])]).
+  [h([transitive,
+      intransitive])]).
 
 v(verbroeder,verbroedert,verbroederen,verbroederd,verbroederde,verbroederden,
     [z([intransitive]),
@@ -26044,7 +26051,8 @@ v(vervoer,vervoert,vervoeren,vervoerd,vervoerde,vervoerden,
 
 v(vervolg,vervolgt,vervolgen,vervolgd,vervolgde,vervolgden,
     [h([transitive,
-	sbar,               % mostly in dip: 'Hij vervolgt: ....'
+	sbar,			% mostly in dip: 'Hij vervolgt: ....'
+	acc_np_sbar,            % .. , vervolgde hij zijn verhaal
 	pc_pp(met),
         intransitive  % justitie vervolgt niet
        ])]).
@@ -27148,8 +27156,9 @@ v(vuur,vuurt,vuren,gevuurd,vuurde,vuurden,
 	part_np_pc_pp(af,op)])]).
 
 v(waad,waadt,waden,gewaad,waadde,waadden,
-    [z([ld_pp,
-	intransitive]),
+  [z([ld_pp,
+      ld_dir,
+      intransitive]),
      h([part_transitive(door)])]).
 
 v(waag,waagt,wagen,gewaagd,waagde,waagden,
@@ -28353,6 +28362,7 @@ v(zet,zet,zetten,gezet,zette,zetten,
 	part_transitive(neer),
         part_np_ld_pp(neer),
 	part_transitive(om),
+	np_pc_pp(op),   % ik zet hem op stil
  	part_transitive(op),
 	part_transitive(open),
 	part_transitive(opzij),

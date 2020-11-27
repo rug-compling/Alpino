@@ -239,8 +239,6 @@ a([prefix([korte,termijn]),
 a([prefix('kosten-baten'),
    prefix([kosten,baten])],nonadv,[],[]).
 
-a([prefix(kut)],nonadv,[],[]).
-
 a([prefix([lange,termijn]),
    prefix('lange-termijn')],nonadv,[],[]).
 
@@ -8035,6 +8033,8 @@ a([ge_both(dichtgetrokken)],adv,[],[]).
 
 a([both(dichtgevallen)],adv,[],[]).
 
+a([ge_both(dichtgevroren)],adv,[],[]).
+
 a([   e(dichtstbijzijnde),
    no_e(dichtstbijzijnd),
       e([dichtst,bijzijnde]),
@@ -9551,14 +9551,14 @@ a([e(elegante),
 a([e(electorale),
    no_e(electoraal)],adv,[],[]).
 
-a([e(electrische),
+a([no_e(elektrisch),   % spelling met k is officieel
+   e(electrische),
    e(elektrische),
    er(electrischer),
    er(elektrischer),
    ere(electrischere),
    ere(elektrischere),
    no_e(electrisch),
-   no_e(elektrisch),
    st(electrischt),
    st(elektrischt),
    ste(electrischte),
@@ -21337,6 +21337,8 @@ a([e(kurkdroge),
    st(kurkdroogst),
    ste(kurkdroogste)],nonadv,[],[]).
 
+a([both(kut)],nonadv,[],[]).
+
 a([e(kwade),
    er(kwader),er(kwaaier),
    ere(kwadere),ere(kwaaiere),
@@ -27818,8 +27820,9 @@ a([e(onwezenlijke),
    ere(onwezenlijkere),
    no_e(onwezenlijk),
    st(onwezenlijkst),
-   ste(onwezenlijkste)],nonadv,[subject_sbar,
-				subject_vp],[]).
+   ste(onwezenlijkste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(onwillekeurige),
    er(onwillekeuriger),
@@ -40532,7 +40535,7 @@ a([e(zoete),
    ste(zoetste)],nonadv,[],[]).
 
 a([e(zoetgevooisde),
-   no_e(zoetgevooisd)],nonadv,[],[]).
+   no_e(zoetgevooisd)],adv,[],[]).
 
 a([e(zoetige),
    er(zoetiger),
