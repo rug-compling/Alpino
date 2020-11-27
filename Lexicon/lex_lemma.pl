@@ -913,6 +913,7 @@ lemma_root(achterna_volleren,volleer_achterna) .
 lemma_root(achterna_volleyen,volley_achterna) .
 lemma_root(achterna_vuren,vuur_achterna) .
 lemma_root(achterna_waaien,waai_achterna) .
+lemma_root(achterna_waden,waad_achterna) .
 lemma_root(achterna_wagen,waag_achterna) .
 lemma_root(achterna_waggelen,waggel_achterna) .
 lemma_root(achterna_wandelen,wandel_achterna) .
@@ -2503,6 +2504,7 @@ lemma_root(binnen_volleren,volleer_binnen) .
 lemma_root(binnen_volleyen,volley_binnen) .
 lemma_root(binnen_vuren,vuur_binnen) .
 lemma_root(binnen_waaien,waai_binnen) .
+lemma_root(binnen_waden,waad_binnen) .
 lemma_root(binnen_wagen,waag_binnen) .
 lemma_root(binnen_waggelen,waggel_binnen) .
 lemma_root(binnen_wandelen,wandel_binnen) .
@@ -2857,6 +2859,7 @@ lemma_root(dichten,dicht) .
 lemma_root(dicht_gaan,ga_dicht) .
 lemma_root(dicht_kitten,kit_dicht) .
 lemma_root(dicht_klappen,klap_dicht) .
+lemma_root(dicht_knallen,knal_dicht) .
 lemma_root(dicht_knijpen,knijp_dicht) .
 lemma_root(dicht_knopen,knoop_dicht) .
 lemma_root(dicht_plakken,plak_dicht) .
@@ -3795,6 +3798,7 @@ lemma_root('door_in-lineskaten','in-lineskaten_door') .
 lemma_root(door_inlineskaten,inlineskaten_door) .
 lemma_root(door_innen,in_door) .
 lemma_root(door_innoveren,innoveer_door) .
+lemma_root(door_insinueren,insinueer_door) .
 lemma_root(door_inspecteren,inspecteer_door) .
 lemma_root(door_inspekteren,inspekteer_door) .
 lemma_root(door_inspireren,inspireer_door) .
@@ -4682,6 +4686,7 @@ lemma_root(door_scholen,school_door) .
 lemma_root(door_schommelen,schommel_door) .
 lemma_root(door_schooien,schooi_door) .
 lemma_root(door_schoolverlaten,schoolverlaten_door) .
+lemma_root(door_schoolzwemmen,schoolzwemmen_door) .
 lemma_root(door_schoppen,schop_door) .
 lemma_root(door_schorsen,schors_door) .
 lemma_root(door_schorten,schort_door) .
@@ -5126,6 +5131,7 @@ lemma_root(door_verblozen,verbloos_door) .
 lemma_root(door_verbouwen,verbouw_door) .
 lemma_root(door_verbranden,verbrand_door) .
 lemma_root(door_verbreden,verbreed_door) .
+lemma_root(door_verbrijzelen,verbrijzel_door) .
 lemma_root(door_verbroederen,verbroeder_door) .
 lemma_root(door_verbrokkelen,verbrokkel_door) .
 lemma_root(door_verdachtmaken,verdachtmaken_door) .
@@ -9234,6 +9240,7 @@ lemma_root(om_volleyen,volley_om) .
 lemma_root(om_vormen,vorm_om) .
 lemma_root(om_vuren,vuur_om) .
 lemma_root(om_waaien,waai_om) .
+lemma_root(om_waden,waad_om) .
 lemma_root(om_wagen,waag_om) .
 lemma_root(om_waggelen,waggel_om) .
 lemma_root(om_wandelen,wandel_om) .
@@ -9888,6 +9895,7 @@ lemma_root(op_vuren,vuur_op) .
 lemma_root(op_waaien,waai_op) .
 lemma_root(op_waarderen,waardeer_op) .
 lemma_root(op_wachten,wacht_op) .
+lemma_root(op_waden,waad_op) .
 lemma_root(op_wagen,waag_op) .
 lemma_root(op_waggelen,waggel_op) .
 lemma_root(op_wakkeren,wakker_op) .
@@ -10274,6 +10282,7 @@ lemma_root(overvragen,overvraag) .
 lemma_root(over_vuren,vuur_over) .
 lemma_root(over_waaien,waai_over) .
 lemma_root(over_waarderen,waardeer_over) .
+lemma_root(over_waden,waad_over) .
 lemma_root(over_wagen,waag_over) .
 lemma_root(over_waggelen,waggel_over) .
 lemma_root(over_wandelen,wandel_over) .
@@ -11359,6 +11368,7 @@ lemma_root('raak_in-lineskaten','in-lineskaten_raak') .
 lemma_root(raak_inlineskaten,inlineskaten_raak) .
 lemma_root(raak_innen,in_raak) .
 lemma_root(raak_innoveren,innoveer_raak) .
+lemma_root(raak_insinueren,insinueer_raak) .
 lemma_root(raak_inspecteren,inspecteer_raak) .
 lemma_root(raak_inspekteren,inspekteer_raak) .
 lemma_root(raak_inspireren,inspireer_raak) .
@@ -12190,6 +12200,7 @@ lemma_root(raak_scholen,school_raak) .
 lemma_root(raak_schommelen,schommel_raak) .
 lemma_root(raak_schooien,schooi_raak) .
 lemma_root(raak_schoolverlaten,schoolverlaten_raak) .
+lemma_root(raak_schoolzwemmen,schoolzwemmen_raak) .
 lemma_root(raak_schoppen,schop_raak) .
 lemma_root(raak_schorsen,schors_raak) .
 lemma_root(raak_schorten,schort_raak) .
@@ -12605,6 +12616,7 @@ lemma_root(raak_verblozen,verbloos_raak) .
 lemma_root(raak_verbouwen,verbouw_raak) .
 lemma_root(raak_verbranden,verbrand_raak) .
 lemma_root(raak_verbreden,verbreed_raak) .
+lemma_root(raak_verbrijzelen,verbrijzel_raak) .
 lemma_root(raak_verbroederen,verbroeder_raak) .
 lemma_root(raak_verbrokkelen,verbrokkel_raak) .
 lemma_root(raak_verdachtmaken,verdachtmaken_raak) .
@@ -13419,6 +13431,7 @@ lemma_root(rond_volleren,volleer_rond) .
 lemma_root(rond_volleyen,volley_rond) .
 lemma_root(rond_vuren,vuur_rond) .
 lemma_root(rond_waaien,waai_rond) .
+lemma_root(rond_waden,waad_rond) .
 lemma_root(rond_wagen,waag_rond) .
 lemma_root(rond_waggelen,waggel_rond) .
 lemma_root(rond_wandelen,wandel_rond) .
@@ -13576,6 +13589,7 @@ lemma_root(schommelen,schommel) .
 lemma_root(schonen,schoon) .
 lemma_root(schooien,schooi) .
 lemma_root(schoolverlaten,schoolverlaten) .
+lemma_root(schoolzwemmen,schoolzwemmen) .
 lemma_root(schoon_boenen,boen_schoon) .
 lemma_root(schoon_houden,houd_schoon) .
 lemma_root(schoon_maken,maak_schoon) .
@@ -14212,6 +14226,7 @@ lemma_root(tegemoet_volleren,volleer_tegemoet) .
 lemma_root(tegemoet_volleyen,volley_tegemoet) .
 lemma_root(tegemoet_vuren,vuur_tegemoet) .
 lemma_root(tegemoet_waaien,waai_tegemoet) .
+lemma_root(tegemoet_waden,waad_tegemoet) .
 lemma_root(tegemoet_wagen,waag_tegemoet) .
 lemma_root(tegemoet_waggelen,waggel_tegemoet) .
 lemma_root(tegemoet_walmen,walm_tegemoet) .
@@ -16484,6 +16499,7 @@ lemma_root(uit_injecteren,injecteer_uit) .
 lemma_root(uit_inkten,inkt_uit) .
 lemma_root(uit_innen,in_uit) .
 lemma_root(uit_innoveren,innoveer_uit) .
+lemma_root(uit_insinueren,insinueer_uit) .
 lemma_root(uit_inspecteren,inspecteer_uit) .
 lemma_root(uit_inspekteren,inspekteer_uit) .
 lemma_root(uit_inspireren,inspireer_uit) .
@@ -17686,6 +17702,7 @@ lemma_root(uit_verblinden,verblind_uit) .
 lemma_root(uit_verblozen,verbloos_uit) .
 lemma_root(uit_verbouwen,verbouw_uit) .
 lemma_root(uit_verbreden,verbreed_uit) .
+lemma_root(uit_verbrijzelen,verbrijzel_uit) .
 lemma_root(uit_verdedigen,verdedig_uit) .
 lemma_root(uit_verdelen,verdeel_uit) .
 lemma_root(uit_verdienen,verdien_uit) .
@@ -21281,6 +21298,7 @@ lemma_root('voort_in-lineskaten','in-lineskaten_voort') .
 lemma_root(voort_inlineskaten,inlineskaten_voort) .
 lemma_root(voort_innen,in_voort) .
 lemma_root(voort_innoveren,innoveer_voort) .
+lemma_root(voort_insinueren,insinueer_voort) .
 lemma_root(voort_inspecteren,inspecteer_voort) .
 lemma_root(voort_inspekteren,inspekteer_voort) .
 lemma_root(voort_inspireren,inspireer_voort) .
@@ -22114,6 +22132,7 @@ lemma_root(voort_scholen,school_voort) .
 lemma_root(voort_schommelen,schommel_voort) .
 lemma_root(voort_schooien,schooi_voort) .
 lemma_root(voort_schoolverlaten,schoolverlaten_voort) .
+lemma_root(voort_schoolzwemmen,schoolzwemmen_voort) .
 lemma_root(voort_schoppen,schop_voort) .
 lemma_root(voort_schorsen,schors_voort) .
 lemma_root(voort_schorten,schort_voort) .
@@ -22530,6 +22549,7 @@ lemma_root(voort_verblozen,verbloos_voort) .
 lemma_root(voort_verbouwen,verbouw_voort) .
 lemma_root(voort_verbranden,verbrand_voort) .
 lemma_root(voort_verbreden,verbreed_voort) .
+lemma_root(voort_verbrijzelen,verbrijzel_voort) .
 lemma_root(voort_verbroederen,verbroeder_voort) .
 lemma_root(voort_verbrokkelen,verbrokkel_voort) .
 lemma_root(voort_verdachtmaken,verdachtmaken_voort) .

@@ -3232,11 +3232,14 @@ grammar_rule(imp_np,START,[IMP,COMMA,NP,OPTPUNCT]) :-
     Type => (hellip;uitroep;punt).
 
 %% dat is een teunisbloem denk ik
-grammar_rule(start_max_denk_ik,START,[NUCL,TAG]) :-
+grammar_rule(start_max_denk_ik,START,[NUCL,OPTPUNCT,COMMA,TAG]) :-
     START => max,
     START:max_type => t_dp,
     NUCL => start,
     TAG => denk_ik,
+    optend_punct(OPTPUNCT,Type),
+    NUCL:puncttype <=> Type,
+    optcomma(COMMA),
     nucl_tag_structure(NUCL,TAG,START).
 
 %% Hij is gek ! , riep ik
@@ -3275,6 +3278,27 @@ grammar_rule(start_dq2_max_dip,START,[NUCL,OPTPUNCT,DQ2,COMMA,TAG]) :-
     TAG => dip,
     nucl_tag_structure(NUCL,TAG,START).
 
+%% ik kom , " zei hij 
+grammar_rule(start_dq3_max_dip,START,[NUCL,COMMA,DQ2,TAG]) :-
+    qr(DQ2),
+    START => max,
+    START:max_type => t_dp,
+    comma(COMMA),
+    NUCL => start,
+    TAG => dip,
+    nucl_tag_structure(NUCL,TAG,START).
+
+%% " ik kom , " zei hij 
+grammar_rule(start_dq4_max_dip,START,[DQ1,NUCL,COMMA,DQ2,TAG]) :-
+    ql(DQ1),
+    qr(DQ2),
+    START => max,
+    START:max_type => t_dp,
+    comma(COMMA),
+    NUCL => start,
+    TAG => dip,
+    nucl_tag_structure(NUCL,TAG,START).
+
 %% Wie ben jij ? vroeg hij
 grammar_rule(start_max_dip_no_comma,START,[NUCL,PUNCT,TAG]) :-
     START => max,
@@ -3293,6 +3317,7 @@ grammar_rule(start_dq1_max_dip_no_comma,START,[DQ1,NUCL,PUNCT,DQ2,TAG]) :-
     START => max,
     START:max_type => t_dp,
     optend_punct(PUNCT,Type),
+    Type => ~komma,  % use q4 rule
     NUCL => start,
     NUCL:puncttype <=> Type,
     TAG => dip,
@@ -3306,6 +3331,7 @@ grammar_rule(start_dq2_max_dip_no_comma,START,[NUCL,PUNCT,DQ2,TAG]) :-
     optend_punct(PUNCT,Type),
     NUCL => start,
     NUCL:puncttype <=> Type,
+    Type => ~komma,  % use q3 rule
     TAG => dip,
     nucl_tag_structure(NUCL,TAG,START).
 
@@ -8237,7 +8263,8 @@ grammar_rule(tag_np,Tag,[NP]) :-
     Tag:np => yes,
     Tag:adv => no,
     NP:hstem <=> HSTEM,
-    alpino_wappend:wwmember(HSTEM,[mijnheer,meneer,mevrouw,heer,dame,jongen,meisje]),
+    alpino_wappend:wwmember(HSTEM,[mijnheer,meneer,mevrouw,heer,dame,jongen,meisje,
+				   professor,sire,buurman,buurvrouw,man]),
     hd_structure(NP,Tag).
 
 grammar_rule(tag_pn,Tag,[NP]) :-
@@ -8366,6 +8393,15 @@ grammar_rule(xp_en_root,Start,[XP,OPTCOMMA,CRD,ROOT]) :-
     ROOT => max,
     ROOT:max_type => (t_dp;t_root),
     xp_en_root_structure(Start,XP,CRD,ROOT).
+
+grammar_rule(xp_ques,Start,[XP,COMMA,QUES]) :-
+    comma(COMMA),
+    XP => max,
+    XP:max_type => (t_xp;t_dp),
+    max_sv1(QUES),
+    Start => max,
+    Start:max_type => t_dp,
+    nucl_sat_structure(QUES,XP,Start).
 
 %% leuk idee , maar werkt het ook ?
 grammar_rule(xp_en_ques,Start,[XP,OPTCOMMA,CRD,ROOT]) :-
@@ -8793,9 +8829,9 @@ short_wh_sbar_structure(Wh,SBAR) :-
 
 %%% wat als
 grammar_rule(wat_als,Max,[Wat,Als]) :-
-    Wat => sbar,
+    max_sbar(Wat),
     Wat:ctype => c_of_short,
-    Als => sbar,
+    max_sbar(Als),
     Als:ctype => c_mod,
     Max => max,
     Max:max_type => t_dp,
