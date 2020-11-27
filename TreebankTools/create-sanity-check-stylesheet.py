@@ -159,8 +159,6 @@ def sanity_checks():
    check('//node[@lemma and @lemma=""]','empty lemma?')
    check('//node[@root and @root=""]','empty root?')
    check('//node[@word and @word=""]','empty word?')
-   check('//node[contains(@lemma," ")]','space in lemma? Use _ instead.')
-   check('//node[contains(@root," ")]','space in root? Use _ instead.')
    check('//node[contains(@word," ")]','space in word????')
    check('//node[contains(@postag," ")]','space in postag????')
    check('//node[@cat="smain" and not(node[@rel="su"]) and node[@rel="obj1"]]','no subject in smain?')
