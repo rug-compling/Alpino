@@ -45,6 +45,7 @@ default_testN_options=-testN stop_if_optimal=off debug=$(debug) user_max=900000 
 
 ## defaults per suite for testN target
 LassySmall_testN_options=suite_shortest_first=on max_sentence_length=20
+novelsample_corrected_testN_options=max_sentence_length=20
 cdb_testN_options=suite_shortest_first=on
 PPH_testN_options=suite_shortest_first=on
 PPI_testN_options=suite_shortest_first=on
@@ -221,7 +222,7 @@ hpctests:
 	$(MAKE) job HPCTARGET=testN suite=dpc-rou
 	$(MAKE) job HPCTARGET=testN suite=wpspel_annot
 
-tests: t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 t16 t17
+tests: t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 t16 t17 t18
 
 t1:
 	$(MAKE) testN suite=i_suite
@@ -257,6 +258,8 @@ t16:
 	$(MAKE) testN suite=lassy
 t17:
 	$(MAKE) testN suite=WSU
+t18:
+	$(MAKE) testN suite=novelsample_corrected
 
 bf:
 	@echo "        BEST-CA          #PARSES        SUITE"
