@@ -63,7 +63,7 @@ special_capitalized_word(P0,Word,Rest0,Rest,DecapWord,Length) :-
     only_capitals_but_one(Word,DecapWord),
     P1 is P0 + 1,
     only_capitals_but_one_prefix(Rest0,Rest,P1,P,0,4),
-    \+ tag(P0,P,_,_,_,_,_,_),
+    \+ tag(P0,P,_,_,_,_,normal(_),_),
     Length is P-P0.
 
 tag(A,B,C,D,E,F,G,H) :-
