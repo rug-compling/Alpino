@@ -967,11 +967,25 @@ enforce_unique_match :-
 	fail
     ;   true
     ),
+    remove_identical_tags_but_lemma,
     count_edges(tag(_,_,_,_,_,_,_,_),Edges),
     (   Edges < Edges0
     ->  hdrug_util:debug_message(1,"enforce unique match: ~w to ~w edges~n",[Edges0,Edges])
     ;   true
     ).
+
+remove_identical_tags_but_lemma :-
+    (   tag(P0,P,Q0,Q,Lemma,Word,History,Tag),
+	dif(Lemma,Lemma2),
+	clause(tag(P0,P,Q0,Q,Lemma2,Word,History,Tag),true,Ref),
+	prefer_lemma(Lemma,Lemma2,Tag),
+	erase_tag(Ref),
+	fail
+    ;   true
+    ).
+
+prefer_lemma(Lemma1,Lemma2,_) :-
+    alpino_unknowns:cap_first(Lemma2,Lemma1).   % prefer lemma Breskens over breskens
 
 % proper_longer(normal(_),R0,R,S0,S) :-
 %     !,

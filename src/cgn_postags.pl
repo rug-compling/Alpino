@@ -3916,6 +3916,10 @@ guess_lemma(guess(Surf),Lemma) :-
     ).
 guess_lemma(Lemma,Lemma).
 
+
+lassy_lemma(ten,te).
+lassy_lemma(ter,te).
+lassy_lemma(der,de).
 lassy_lemma('georganiseerd','organiseren').
 lassy_lemma('getroffen','treffen').
 lassy_lemma('hield','houden').
