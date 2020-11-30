@@ -1919,7 +1919,7 @@ m(die,           determiner(der),                dier).
 %m(die,           determiner(de,nwh,nmod,pro,nparg),       diejen). % vlaams
 %m(die,           determiner(de,nwh,nmod,pro,nparg),       diene).  % vlaams
 %m(die,           determiner(de,nwh,nmod,pro,nparg),       dien).   % vlaams
-m(diens,         determiner(pron),               diens).
+m(die,         determiner(pron),               diens).
 m(diezelfde,     determiner(de,nwh,mod,pro,yparg),   diezelfde).
 m(dit,           determiner(het,nwh,nmod,pro,nparg),      dit).
 m(ditzelfde,     determiner(het,nwh,mod,pro,yparg),  ditzelfde).
@@ -3594,8 +3594,8 @@ m('op los',         preposition([op,los],[],extracted_np),[op,los]).
 
 m('aan\'t',         preposition(aan,[],nodet),  'aan\'t' ).
 m(te,               preposition(te, [],nodet),  te       ).
-m(ten,              preposition(ten,[],nodet),  ten      ).
-m(ter,              preposition(ter,[],nodet),  ter      ).
+m(te,               preposition(ten,[],nodet),  ten      ).
+m(te,               preposition(ter,[],nodet),  ter      ).
 m('v/d',            preposition(van,[],nodet),  'v/d'    ).
 
 m(voor,             preposition(voor,[],voor_pred),voor).   
@@ -6431,6 +6431,7 @@ m(Stem,predm_adverb,Surf) :-
     stem_from_surf(Surf,Stem).
 
 m(al,predm_adverb,alle).
+m(beide,predm_adverb,beiden).
 
 % floating quantifiers and similar:
 predm_adverb(allebei).
@@ -6441,7 +6442,6 @@ predm_adverb(alletwee).
 predm_adverb(allevier).
 predm_adverb(allevijf).
 predm_adverb(beide).
-predm_adverb(beiden).
 predm_adverb([Een,voor,Een2]) :- een1(Een), een1(Een2).
 predm_adverb(elk).
 predm_adverb([elk,voor,zich]).
@@ -6477,12 +6477,12 @@ predm_adverb(zelf).
 % hun
 % hen
 
-with_dt([Wij,PREDM],
+with_dt([Wij,WORD],
         Tag,
 	dt(np,[hd=l(Wij,Tag,0,1),
 	       mod=l(PREDM,predm_adverb,advp,1,2)])) :-
     wij_allebei_wij(Wij,Tag),
-    wij_allebei(PREDM).
+    wij_allebei(WORD,PREDM).
 
 wij_allebei_wij(wij,pronoun(nwh,fir,pl,de,nom,def)).
 wij_allebei_wij(jullie,pronoun(nwh,je,pl,de,both,def)).
@@ -6492,10 +6492,13 @@ wij_allebei_wij(hen,pronoun(nwh,thi,pl,de,dat_acc,def)).
 wij_allebei_wij(zij,pronoun(nwh,thi,both,de,nom,def)).
 wij_allebei_wij(u,pronoun(nwh,u,sg,de,both,def)).
 
+wij_allebei(Stem,Stem) :-
+    wij_allebei(Stem).
+wij_allebei(beiden,beide).
+
 wij_allebei(allemaal).
 wij_allebei(allen).
 wij_allebei(allebei).
-wij_allebei(beiden).
 wij_allebei(beidjes).
 
 wij_allebei(tweeën).

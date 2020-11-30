@@ -4596,7 +4596,9 @@ n([pl(betoveringen),sg(betovering)],de,[]).
 
 n([mass(betrekkelijkheid),pl(betrekkelijkheden),sg(betrekkelijkheid)],de,[]).
 
-n([pl(betrekkingen),sg(betrekking)],de,[]).
+n([pl(betrekkingen),sg(betrekking)],de,[],
+  [dienst,
+   s(handel)]).
 
 n([mass(betrokkenheid)],de,[]).
 
@@ -7461,7 +7463,8 @@ n([pl(commoties),sg(commotie)],de,[]).
 n([pl(communes),sg(commune)],de,[]).
 
 n([pl(communicaties),sg(communicatie)],de,[],
-  [marketing]).
+  [s(bedrijf),
+   marketing]).
 
 n([pl('communicatie-processen'),sg('communicatie-proces')],het,[]).
 
@@ -8899,8 +8902,6 @@ n([pl(diensten),sg(dienst)],de,[],
    kerk]).
 
 n([mass(dienstbaarheid)],de,[]).
-
-n([mass(dienstbetrekking),pl(dienstbetrekkingen),sg(dienstbetrekking)],de,[]).
 
 n([pl(dienstboden),pl(dienstbodes),sg(dienstbode)],de,[]).
 
@@ -14010,8 +14011,6 @@ n([pl(handelaars),pl(handelaren),sg(handelaar)],de,[],
    zwart]).
 
 n([pl(handelingen),sg(handeling)],de,[]).
-
-n([pl(handelsbetrekkingen),sg(handelsbetrekking)],de,[]).
 
 n([pl(handelshuizen),sg(handelshuis)],het,[]).
 

@@ -154,7 +154,7 @@ lexicon_fallback_(Word,noun(de,count,sg),LiefHeidStem,Ws,Ws,'-heid',_) :-
     atom_concat(Lief,heid,Word),
     xl(Lief,adjective(NOE),LiefStem,[],[]),
     no_e(NOE,no_e),
-    concat_stems([LiefStem,heid],LiefHeidStem,'_').
+    concat_stems([LiefStem,heid],LiefHeidStem,'').
 
 %% ADJ-heden de-noun
 lexicon_fallback_(Word,noun(de,count,pl),LiefHeidStem,Ws,Ws,'-heden',_) :-
@@ -162,7 +162,7 @@ lexicon_fallback_(Word,noun(de,count,pl),LiefHeidStem,Ws,Ws,'-heden',_) :-
     atom_concat(Lief,heden,Word),
     xl(Lief,adjective(NOE),LiefStem,[],[]),
     no_e(NOE,no_e),
-    concat_stems([LiefStem,heid],LiefHeidStem,'_').
+    concat_stems([LiefStem,heid],LiefHeidStem,'').
 
 next_words([],Ws,Ws,0,_,[]).
 next_words([H|T],Ws0,Ws,N,Prev,[V|Vs]) :-
