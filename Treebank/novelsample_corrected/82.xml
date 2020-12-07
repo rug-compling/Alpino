@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
-  <node begin="0" cat="top" rel="--" end="4" id="0">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
     <node begin="0" cat="np" end="2" id="1" rel="--">
-      <node begin="0" end="1" id="2" lemma="iets" pos="vnw" postag="VNW(onbep,pron,stan,vol,3o,ev)" rel="hd" word="Iets" />
-      <node begin="1" end="2" id="3" lemma="groot" pos="adj" postag="ADJ(postnom,basis,met-s)" rel="mod" word="groots" />
+      <node begin="0" end="1" id="2" lemma="iets" pos="vnw" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" vwtype="onbep" pdtype="pron" naamval="stan" status="vol" persoon="3o" getal="ev" rel="hd" word="Iets"/>
+      <node begin="1" end="2" id="3" lemma="groot" pos="adj" postag="ADJ(postnom,basis,met-s)" pt="adj" positie="postnom" graad="basis" buiging="met-s" rel="mod" word="groots"/>
     </node>
-    <node begin="2" end="3" id="4" lemma="." pos="let" postag="LET()" rel="--" word="." />
-    <node begin="3" end="4" id="5" lemma="'" pos="let" postag="LET()" rel="--" word="'" />
+    <node begin="2" end="3" id="4" lemma="." pos="let" postag="LET()" pt="let" rel="--" word="."/>
+    <node begin="3" end="4" id="5" lemma="'" pos="let" postag="LET()" pt="let" rel="--" word="'"/>
   </node>
   <sentence>Iets groots . '</sentence>
-  <comment>Pauw_Drift/1791-2|Q#1791-2|Iets groots . '|1|1|-1.7103888212300005</comment>
+  <comments>
+    <comment>Pauw_Drift/1791-2|Q#1791-2|Iets groots . '|1|1|-1.7103888212300005</comment>
+  </comments>
 </alpino_ds>

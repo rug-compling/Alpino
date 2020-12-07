@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
-  <node begin="0" cat="top" rel="--" end="7" id="0">
-    <node begin="0" end="1" id="1" lemma="'" pos="let" postag="LET()" rel="--" word="'" />
-    <node begin="2" end="3" id="2" lemma="," pos="let" postag="LET()" rel="--" word="," />
-    <node begin="3" end="4" id="3" lemma="'" pos="let" postag="LET()" rel="--" word="'" />
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="'" pos="let" postag="LET()" pt="let" rel="--" word="'"/>
+    <node begin="2" end="3" id="2" lemma="," pos="let" postag="LET()" pt="let" rel="--" word=","/>
+    <node begin="3" end="4" id="3" lemma="'" pos="let" postag="LET()" pt="let" rel="--" word="'"/>
     <node begin="1" cat="du" end="6" id="4" rel="--">
-      <node begin="1" end="2" id="5" lemma="sjonge" pos="tsw" postag="TSW()" rel="nucl" word="Sjonge" />
+      <node begin="1" end="2" id="5" lemma="sjonge" pos="tsw" postag="TSW()" pt="tsw" rel="nucl" word="Sjonge"/>
       <node begin="4" cat="sv1" end="6" id="6" rel="tag">
-        <node begin="4" end="5" id="7" lemma="zeggen" pos="ww" postag="WW(pv,tgw,met-t)" rel="hd" word="zegt" />
-        <node begin="5" end="6" id="8" lemma="ze" pos="vnw" postag="VNW(pers,pron,stan,red,3,ev,fem)" rel="su" word="ze" />
+        <node begin="4" end="5" id="7" lemma="zeggen" pos="ww" postag="WW(pv,tgw,met-t)" pt="ww" wvorm="pv" pvtijd="tgw" pvagr="met-t" rel="hd" word="zegt"/>
+        <node begin="5" end="6" id="8" lemma="ze" pos="vnw" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" vwtype="pers" pdtype="pron" naamval="stan" status="red" persoon="3" getal="ev" genus="fem" rel="su" word="ze"/>
       </node>
     </node>
-    <node begin="6" end="7" id="9" lemma="." pos="let" postag="LET()" rel="--" word="." />
+    <node begin="6" end="7" id="9" lemma="." pos="let" postag="LET()" pt="let" rel="--" word="."/>
   </node>
   <sentence>' Sjonge , ' zegt ze .</sentence>
-  <comment>MacDowell_DinerVoor2/1135-1|Q#1135-1|' Sjonge , ' zegt ze .|1|1|-0.53717157685</comment>
+  <comments>
+    <comment>MacDowell_DinerVoor2/1135-1|Q#1135-1|' Sjonge , ' zegt ze .|1|1|-0.53717157685</comment>
+  </comments>
 </alpino_ds>

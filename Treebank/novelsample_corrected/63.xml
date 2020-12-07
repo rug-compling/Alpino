@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
-  <node begin="0" cat="top" rel="--" end="3" id="0">
-    <node begin="0" end="1" id="1" lemma="'" pos="let" postag="LET()" rel="--" word="'" />
-    <node begin="1" end="2" id="2" lemma="jawel" pos="tsw" postag="TSW()" rel="--" word="Jawel" />
-    <node begin="2" end="3" id="3" lemma="." pos="let" postag="LET()" rel="--" word="." />
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="'" pos="let" postag="LET()" pt="let" rel="--" word="'"/>
+    <node begin="1" end="2" id="2" lemma="jawel" pos="tsw" postag="TSW()" pt="tsw" rel="--" word="Jawel"/>
+    <node begin="2" end="3" id="3" lemma="." pos="let" postag="LET()" pt="let" rel="--" word="."/>
   </node>
   <sentence>' Jawel .</sentence>
-  <comment>Dijkzeul_VerlorenZoon/2801-1|Q#2801-1|' Jawel .|1|1|0.91266043017</comment>
+  <comments>
+    <comment>Dijkzeul_VerlorenZoon/2801-1|Q#2801-1|' Jawel .|1|1|0.91266043017</comment>
+  </comments>
 </alpino_ds>

@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
-  <node begin="0" cat="top" rel="--" end="7" id="0">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
-      <node begin="0" end="1" id="2" lemma="ik" pos="vnw" postag="VNW(pers,pron,nomin,vol,1,ev)" rel="su" word="Ik" />
-      <node begin="1" end="2" id="3" lemma="verwachten" pos="ww" postag="WW(pv,tgw,ev)" rel="hd" word="verwacht" />
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="vnw" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="verwachten" pos="ww" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" word="verwacht" wvorm="pv"/>
       <node begin="2" cat="cp" end="6" id="4" rel="vc">
-        <node begin="2" end="3" id="5" lemma="dat" pos="vg" postag="VG(onder)" rel="cmp" word="dat" />
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="vg" postag="VG(onder)" pt="vg" rel="cmp" word="dat"/>
         <node begin="3" cat="ssub" end="6" id="6" rel="body">
-          <node begin="3" end="4" id="7" lemma="hij" pos="vnw" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" rel="su" word="hij" />
-          <node begin="4" cat="ppart" end="5" id="8" rel="vc">
-            <node begin="4" end="5" id="9" lemma="ontslaan" pos="ww" postag="WW(vd,vrij,zonder)" rel="hd" word="ontslagen" />
+          <node begin="3" end="4" genus="masc" getal="ev" id="7" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="vnw" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" status="vol" vwtype="pers" word="hij"/>
+          <node begin="3" cat="ppart" end="5" id="8" rel="vc">
+            <node begin="3" end="4" id="9" index="1" rel="obj1"/>
+            <node begin="4" buiging="zonder" end="5" id="10" lemma="ontslaan" pos="ww" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" word="ontslagen" wvorm="vd"/>
           </node>
-          <node begin="5" end="6" id="10" lemma="zijn" pos="ww" postag="WW(pv,tgw,ev)" rel="hd" word="is" />
+          <node begin="5" end="6" id="11" lemma="zijn" pos="ww" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" word="is" wvorm="pv"/>
         </node>
       </node>
     </node>
-    <node begin="6" end="7" id="11" lemma="." pos="let" postag="LET()" rel="--" word="." />
+    <node begin="6" end="7" id="12" lemma="." pos="let" postag="LET()" pt="let" rel="--" word="."/>
   </node>
   <sentence>Ik verwacht dat hij ontslagen is .</sentence>
-  <comment>Hollander_Driftleven/1815-5|Q#1815-5|Ik verwacht dat hij ontslagen is .|1|1|-6.239032118539998</comment>
+  <comments>
+    <comment>Hollander_Driftleven/1815-5|Q#1815-5|Ik verwacht dat hij ontslagen is .|1|1|-6.239032118539998</comment>
+  </comments>
 </alpino_ds>

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
-  <node begin="0" cat="top" rel="--" end="3" id="0">
-    <node begin="0" end="1" id="1" lemma="'" pos="let" postag="LET()" rel="--" word="'" />
-    <node begin="1" end="2" id="2" lemma="ik" pos="vnw" postag="VNW(pers,pron,nomin,vol,1,ev)" rel="--" word="Ik" />
-    <node begin="2" end="3" id="3" lemma="..." pos="let" postag="LET()" rel="--" word="..." />
+  <node begin="0" cat="top" end="3" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="'" pos="let" postag="LET()" pt="let" rel="--" word="'"/>
+    <node begin="1" end="2" id="2" lemma="ik" pos="vnw" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" vwtype="pers" pdtype="pron" naamval="nomin" status="vol" persoon="1" getal="ev" rel="--" word="Ik"/>
+    <node begin="2" end="3" id="3" lemma="..." pos="let" postag="LET()" pt="let" rel="--" word="..."/>
   </node>
   <sentence>' Ik ...</sentence>
-  <comment>Baldacci_GeniaalGeheim/4705-2|Q#4705-2|' Ik ...|1|1|4.76429807107</comment>
+  <comments>
+    <comment>Baldacci_GeniaalGeheim/4705-2|Q#4705-2|' Ik ...|1|1|4.76429807107</comment>
+  </comments>
 </alpino_ds>
