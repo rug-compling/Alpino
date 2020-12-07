@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
-  <node begin="0" cat="top" rel="--" end="4" id="0">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
     <node begin="0" cat="np" end="3" id="1" rel="--">
-      <node begin="0" end="1" id="2" lemma="vorig" pos="adj" postag="ADJ(prenom,basis,met-e,stan)" rel="mod" word="Vorige" />
-      <node begin="1" end="2" id="3" lemma="week" pos="n" postag="N(soort,ev,basis,zijd,stan)" rel="hd" word="week" />
-      <node begin="2" end="3" id="4" lemma="zaterdag" pos="n" postag="N(eigen,ev,basis,zijd,stan)" rel="mod" word="zaterdag" />
+      <node begin="0" cat="np" end="2" id="2" rel="mod">
+        <node begin="0" buiging="met-e" end="1" graad="basis" id="3" lemma="vorig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" word="Vorige"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="week" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" word="week"/>
+      </node>
+      <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="zaterdag" naamval="stan" ntype="eigen" pos="n" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" word="zaterdag"/>
     </node>
-    <node begin="3" end="4" id="5" lemma="..." pos="let" postag="LET()" rel="--" word="..." />
+    <node begin="3" end="4" id="6" lemma="..." pos="let" postag="LET()" pt="let" rel="--" word="..."/>
   </node>
   <sentence>Vorige week zaterdag ...</sentence>
-  <comment>Avallone_Staal/2872-4|Q#2872-4|Vorige week zaterdag ...|1|1|-0.8750663934500005</comment>
+  <comments>
+    <comment>Avallone_Staal/2872-4|Q#2872-4|Vorige week zaterdag ...|1|1|-0.8750663934500005</comment>
+  </comments>
 </alpino_ds>

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
-  <node begin="0" cat="top" rel="--" end="4" id="0">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
     <node begin="0" cat="conj" end="3" id="1" rel="--">
-      <node begin="0" end="1" id="2" lemma="zakelijk" pos="adj" postag="ADJ(vrij,basis,zonder)" rel="cnj" word="Zakelijk" />
-      <node begin="1" end="2" id="3" lemma="en" pos="vg" postag="VG(neven)" rel="crd" word="en" />
-      <node begin="2" end="3" id="4" lemma="onopvallend" pos="adj" postag="ADJ(vrij,basis,zonder)" rel="cnj" word="onopvallend" />
+      <node begin="0" end="1" id="2" lemma="zakelijk" pos="adj" postag="ADJ(vrij,basis,zonder)" pt="adj" positie="vrij" graad="basis" buiging="zonder" rel="cnj" word="Zakelijk"/>
+      <node begin="1" end="2" id="3" lemma="en" pos="vg" postag="VG(neven)" pt="vg" conjtype="neven" rel="crd" word="en"/>
+      <node begin="2" end="3" id="4" lemma="onopvallend" pos="adj" postag="ADJ(vrij,basis,zonder)" pt="adj" positie="vrij" graad="basis" buiging="zonder" rel="cnj" word="onopvallend"/>
     </node>
-    <node begin="3" end="4" id="5" lemma="." pos="let" postag="LET()" rel="--" word="." />
+    <node begin="3" end="4" id="5" lemma="." pos="let" postag="LET()" pt="let" rel="--" word="."/>
   </node>
   <sentence>Zakelijk en onopvallend .</sentence>
-  <comment>Vlugt_InMijnDromen/699-5|Q#699-5|Zakelijk en onopvallend .|1|1|1.5370981091000002</comment>
+  <comments>
+    <comment>Vlugt_InMijnDromen/699-5|Q#699-5|Zakelijk en onopvallend .|1|1|1.5370981091000002</comment>
+  </comments>
 </alpino_ds>

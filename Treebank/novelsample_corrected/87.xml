@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
-  <node begin="0" cat="top" rel="--" end="6" id="0">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
-      <node begin="0" end="1" id="2" lemma="hij" pos="vnw" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" rel="su" word="Hij" />
-      <node begin="1" end="2" id="3" lemma="herinneren" pos="ww" postag="WW(pv,verl,ev)" rel="hd" word="herinnerde" />
-      <node begin="2" end="3" id="4" lemma="het" pos="vnw" postag="VNW(pers,pron,stan,red,3,ev,onz)" rel="obj1" word="het" />
-      <node begin="3" end="4" id="5" lemma="zich" pos="vnw" postag="VNW(refl,pron,obl,red,3,getal)" rel="se" word="zich" />
-      <node begin="4" end="5" id="6" lemma="weer" pos="bw" postag="BW()" rel="mod" word="weer" />
+      <node begin="0" end="1" id="2" lemma="hij" pos="vnw" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" vwtype="pers" pdtype="pron" naamval="nomin" status="vol" persoon="3" getal="ev" genus="masc" rel="su" word="Hij"/>
+      <node begin="1" end="2" id="3" lemma="herinneren" pos="ww" postag="WW(pv,verl,ev)" pt="ww" wvorm="pv" pvtijd="verl" pvagr="ev" rel="hd" word="herinnerde"/>
+      <node begin="2" end="3" id="4" lemma="het" pos="vnw" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" vwtype="pers" pdtype="pron" naamval="stan" status="red" persoon="3" getal="ev" genus="onz" rel="obj1" word="het"/>
+      <node begin="3" end="4" id="5" lemma="zich" pos="vnw" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" vwtype="refl" pdtype="pron" naamval="obl" status="red" persoon="3" getal="getal" rel="se" word="zich"/>
+      <node begin="4" end="5" id="6" lemma="weer" pos="bw" postag="BW()" pt="bw" rel="mod" word="weer"/>
     </node>
-    <node begin="5" end="6" id="7" lemma="." pos="let" postag="LET()" rel="--" word="." />
+    <node begin="5" end="6" id="7" lemma="." pos="let" postag="LET()" pt="let" rel="--" word="."/>
   </node>
   <sentence>Hij herinnerde het zich weer .</sentence>
-  <comment>Cronin_Oversteek/4337-1|Q#4337-1|Hij herinnerde het zich weer .|1|1|-2.911776048449999</comment>
+  <comments>
+    <comment>Cronin_Oversteek/4337-1|Q#4337-1|Hij herinnerde het zich weer .|1|1|-2.911776048449999</comment>
+  </comments>
 </alpino_ds>

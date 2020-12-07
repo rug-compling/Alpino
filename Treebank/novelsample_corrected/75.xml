@@ -1,43 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
-  <node begin="0" cat="top" rel="--" end="18" id="0">
-    <node begin="12" end="13" id="1" lemma="," pos="let" postag="LET()" rel="--" word="," />
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="12" end="13" id="1" lemma="," pos="let" postag="LET()" pt="let" rel="--" word=","/>
     <node begin="0" cat="smain" end="17" id="2" rel="--">
-      <node begin="0" end="1" id="3" lemma="ik" pos="vnw" postag="VNW(pers,pron,nomin,vol,1,ev)" rel="su" word="Ik" />
-      <node begin="1" end="2" id="4" lemma="voor_stellen" pos="ww" postag="WW(pv,tgw,ev)" rel="hd" word="stel" />
-      <node begin="2" end="3" id="5" lemma="voor" pos="vz" postag="VZ(fin)" rel="svp" word="voor" />
+      <node begin="0" end="1" getal="ev" id="3" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="vnw" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="4" lemma="voor_stellen" pos="ww" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" word="stel" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="voor" pos="vz" postag="VZ(fin)" pt="vz" rel="svp" vztype="fin" word="voor"/>
       <node begin="3" cat="cp" end="17" id="6" rel="vc">
-        <node begin="3" end="4" id="7" lemma="dat" pos="vg" postag="VG(onder)" rel="cmp" word="dat" />
+        <node begin="3" conjtype="onder" end="4" id="7" lemma="dat" pos="vg" postag="VG(onder)" pt="vg" rel="cmp" word="dat"/>
         <node begin="4" cat="conj" end="17" id="8" rel="body">
           <node begin="4" cat="ssub" end="12" id="9" rel="cnj">
-            <node begin="4" end="5" id="10" lemma="u" pos="vnw" postag="VNW(pers,pron,nomin,vol,2b,getal)" rel="su" word="u" />
+            <node begin="4" end="5" getal="getal" id="10" index="1" lemma="u" naamval="nomin" pdtype="pron" persoon="2b" pos="vnw" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" status="vol" vwtype="pers" word="u"/>
             <node begin="5" cat="np" end="7" id="11" rel="obj1">
-              <node begin="5" end="6" id="12" lemma="de" pos="lid" postag="LID(bep,stan,rest)" rel="det" word="de" />
-              <node begin="6" end="7" id="13" lemma="foto" pos="n" postag="N(soort,mv,basis)" rel="hd" word="foto's" />
+              <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="lid" postag="LID(bep,stan,rest)" pt="lid" rel="det" word="de"/>
+              <node begin="6" end="7" getal="mv" graad="basis" id="13" lemma="foto" ntype="soort" pos="n" postag="N(soort,mv,basis)" pt="n" rel="hd" word="foto&apos;s"/>
             </node>
-            <node begin="7" end="8" id="14" lemma="hier" pos="vnw" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" rel="mod" word="hier" />
+            <node begin="7" end="8" getal="getal" id="14" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="vnw" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" status="vol" vwtype="aanw" word="hier"/>
             <node begin="8" cat="pp" end="11" id="15" rel="mod">
-              <node begin="8" end="9" id="16" lemma="op" pos="vz" postag="VZ(init)" rel="hd" word="op" />
+              <node begin="8" end="9" id="16" lemma="op" pos="vz" postag="VZ(init)" pt="vz" rel="hd" vztype="init" word="op"/>
               <node begin="9" cat="np" end="11" id="17" rel="obj1">
-                <node begin="9" end="10" id="18" lemma="u" pos="vnw" postag="VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)" rel="det" word="uw" />
-                <node begin="10" end="11" id="19" lemma="gemak" pos="n" postag="N(soort,ev,basis,onz,stan)" rel="hd" word="gemak" />
+                <node begin="9" buiging="zonder" end="10" getal="getal" id="18" lemma="u" naamval="stan" npagr="agr" pdtype="det" persoon="2" pos="vnw" positie="prenom" postag="VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)" pt="vnw" rel="det" status="vol" vwtype="bez" word="uw"/>
+                <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="19" lemma="gemak" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" word="gemak"/>
               </node>
             </node>
-            <node begin="11" end="12" id="20" lemma="bekijken" pos="ww" postag="WW(pv,tgw,met-t)" rel="hd" word="bekijkt" />
+            <node begin="11" end="12" id="20" lemma="bekijken" pos="ww" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" word="bekijkt" wvorm="pv"/>
           </node>
-          <node begin="13" end="14" id="21" lemma="en" pos="vg" postag="VG(neven)" rel="crd" word="en" />
-          <node begin="14" cat="ssub" end="17" id="22" rel="cnj">
-            <node begin="14" cat="np" end="16" id="23" rel="obj1">
-              <node begin="14" end="15" id="24" lemma="een" pos="lid" postag="LID(onbep,stan,agr)" rel="det" word="een" />
-              <node begin="15" end="16" id="25" lemma="keuze" pos="n" postag="N(soort,ev,basis,zijd,stan)" rel="hd" word="keuze" />
+          <node begin="13" conjtype="neven" end="14" id="21" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" word="en"/>
+          <node begin="4" cat="ssub" end="17" id="22" rel="cnj">
+            <node begin="4" end="5" id="23" index="1" rel="su"/>
+            <node begin="14" cat="np" end="16" id="24" rel="obj1">
+              <node begin="14" end="15" id="25" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="lid" postag="LID(onbep,stan,agr)" pt="lid" rel="det" word="een"/>
+              <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="26" lemma="keuze" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" word="keuze"/>
             </node>
-            <node begin="16" end="17" id="26" lemma="maken" pos="ww" postag="WW(pv,tgw,met-t)" rel="hd" word="maakt" />
+            <node begin="16" end="17" id="27" lemma="maken" pos="ww" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" word="maakt" wvorm="pv"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="17" end="18" id="27" lemma="." pos="let" postag="LET()" rel="--" word="." />
+    <node begin="17" end="18" id="28" lemma="." pos="let" postag="LET()" pt="let" rel="--" word="."/>
   </node>
-  <sentence>Ik stel voor dat u de foto's hier op uw gemak bekijkt , en een keuze maakt .</sentence>
-  <comment>Burgers-Drost_TussenHartEn/388-3|Q#388-3|Ik stel voor dat u de foto's hier op uw gemak bekijkt , en een keuze maakt .|1|1|-7.4824502488799975</comment>
+  <sentence>Ik stel voor dat u de foto&apos;s hier op uw gemak bekijkt , en een keuze maakt .</sentence>
+  <comments>
+    <comment>Burgers-Drost_TussenHartEn/388-3|Q#388-3|Ik stel voor dat u de foto&apos;s hier op uw gemak bekijkt , en een keuze maakt .|1|1|-7.4824502488799975</comment>
+  </comments>
 </alpino_ds>

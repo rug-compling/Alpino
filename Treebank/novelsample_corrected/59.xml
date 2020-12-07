@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
-  <node begin="0" cat="top" rel="--" end="5" id="0">
-    <node begin="0" end="1" id="1" lemma="..." pos="let" postag="LET()" rel="--" word="..." />
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="..." pos="let" postag="LET()" pt="let" rel="--" word="..."/>
     <node begin="1" cat="ap" end="4" id="2" rel="--">
       <node begin="1" cat="np" end="3" id="3" rel="mod">
-        <node begin="1" end="2" id="4" lemma="vier" pos="tw" postag="TW(hoofd,prenom,stan)" rel="det" word="vier" />
-        <node begin="2" end="3" id="5" lemma="maand" pos="n" postag="N(soort,mv,basis)" rel="hd" word="maanden" />
+        <node begin="1" end="2" id="4" lemma="vier" pos="tw" postag="TW(hoofd,prenom,stan)" pt="tw" numtype="hoofd" positie="prenom" naamval="stan" rel="det" word="vier"/>
+        <node begin="2" end="3" id="5" lemma="maand" pos="n" postag="N(soort,mv,basis)" pt="n" ntype="soort" getal="mv" graad="basis" rel="hd" word="maanden"/>
       </node>
-      <node begin="3" end="4" id="6" lemma="zwanger" pos="adj" postag="ADJ(vrij,basis,zonder)" rel="hd" word="zwanger" />
+      <node begin="3" end="4" id="6" lemma="zwanger" pos="adj" postag="ADJ(vrij,basis,zonder)" pt="adj" positie="vrij" graad="basis" buiging="zonder" rel="hd" word="zwanger"/>
     </node>
-    <node begin="4" end="5" id="7" lemma="." pos="let" postag="LET()" rel="--" word="." />
+    <node begin="4" end="5" id="7" lemma="." pos="let" postag="LET()" pt="let" rel="--" word="."/>
   </node>
   <sentence>... vier maanden zwanger .</sentence>
-  <comment>Verhoef_D&#233;j&#224;Vu/678-1|Q#678-1|... vier maanden zwanger .|1|1|1.6102867779000007</comment>
+  <comments>
+    <comment>Verhoef_DéjàVu/678-1|Q#678-1|... vier maanden zwanger .|1|1|1.6102867779000007</comment>
+  </comments>
 </alpino_ds>

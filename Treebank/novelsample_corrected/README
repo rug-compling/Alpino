@@ -1,9 +1,0 @@
-I got these corrected files from Andreas Cranenborgh
-
-I changed a few things:
-
-to ensure the files are ok wrt DTD:
-sed -i -e 's/cat="root"/cat="top" rel="--"/' *.xml
-
-the analyses have no "root" attribute. The ALpino xml parser (in src/treebank.pl) has been adapted to be robust
-against that

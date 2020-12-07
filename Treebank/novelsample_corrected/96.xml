@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
-  <node begin="0" cat="top" rel="--" end="5" id="0">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="whsub" end="4" id="1" rel="--">
-      <node begin="0" end="1" id="2" lemma="wat" pos="vnw" postag="VNW(vb,pron,stan,vol,3o,ev)" rel="whd" word="Wat" />
-      <node begin="1" cat="ssub" end="4" id="3" rel="body">
-        <node begin="1" end="2" id="4" lemma="Mam" pos="n" postag="N(eigen,ev,basis,zijd,stan)" rel="su" word="Mam" />
-        <node begin="2" end="3" id="5" lemma="nodig" pos="adj" postag="ADJ(vrij,basis,zonder)" rel="predc" word="nodig" />
-        <node begin="3" end="4" id="6" lemma="hebben" pos="ww" postag="WW(pv,tgw,met-t)" rel="hd" word="heeft" />
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="vnw" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" status="vol" vwtype="vb" word="Wat"/>
+      <node begin="0" cat="ssub" end="4" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="obj1"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="Mam" naamval="stan" ntype="eigen" pos="n" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" word="Mam"/>
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="6" lemma="nodig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" word="nodig"/>
+        <node begin="3" end="4" id="7" lemma="hebben" pos="ww" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" word="heeft" wvorm="pv"/>
       </node>
     </node>
-    <node begin="4" end="5" id="7" lemma="?" pos="let" postag="LET()" rel="--" word="?" />
+    <node begin="4" end="5" id="8" lemma="?" pos="let" postag="LET()" pt="let" rel="--" word="?"/>
   </node>
   <sentence>Wat Mam nodig heeft ?</sentence>
-  <comment>Donoghue_Kamer/1003-1|Q#1003-1|Wat Mam nodig heeft ?|1|1|-0.2835303727300005</comment>
+  <comments>
+    <comment>Donoghue_Kamer/1003-1|Q#1003-1|Wat Mam nodig heeft ?|1|1|-0.2835303727300005</comment>
+  </comments>
 </alpino_ds>

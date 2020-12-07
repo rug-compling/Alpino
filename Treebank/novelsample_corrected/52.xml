@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
-  <node begin="0" cat="top" rel="--" end="8" id="0">
-    <node begin="0" end="1" id="1" lemma="'" pos="let" postag="LET()" rel="--" word="'" />
-    <node begin="2" end="3" id="2" lemma="," pos="let" postag="LET()" rel="--" word="," />
-    <node begin="3" end="4" id="3" lemma="'" pos="let" postag="LET()" rel="--" word="'" />
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" end="1" id="1" lemma="'" pos="let" postag="LET()" pt="let" rel="--" word="'"/>
+    <node begin="2" end="3" id="2" lemma="," pos="let" postag="LET()" pt="let" rel="--" word=","/>
+    <node begin="3" end="4" id="3" lemma="'" pos="let" postag="LET()" pt="let" rel="--" word="'"/>
     <node begin="1" cat="du" end="7" id="4" rel="--">
-      <node begin="1" end="2" id="5" lemma="natuurlijk" pos="adj" postag="ADJ(vrij,basis,zonder)" rel="nucl" word="Tuurlijk" />
+      <node begin="1" end="2" id="5" lemma="natuurlijk" pos="adj" postag="ADJ(vrij,basis,zonder)" pt="adj" positie="vrij" graad="basis" buiging="zonder" rel="nucl" word="Tuurlijk"/>
       <node begin="4" cat="sv1" end="7" id="6" rel="tag">
-        <node begin="4" end="5" id="7" lemma="zeggen" pos="ww" postag="WW(pv,verl,ev)" rel="hd" word="zei" />
-        <node begin="5" end="6" id="8" lemma="ze" pos="vnw" postag="VNW(pers,pron,stan,red,3,ev,fem)" rel="su" word="ze" />
-        <node begin="6" end="7" id="9" lemma="luchtig" pos="adj" postag="ADJ(vrij,basis,zonder)" rel="mod" word="luchtig" />
+        <node begin="4" end="5" id="7" lemma="zeggen" pos="ww" postag="WW(pv,verl,ev)" pt="ww" wvorm="pv" pvtijd="verl" pvagr="ev" rel="hd" word="zei"/>
+        <node begin="5" end="6" id="8" lemma="ze" pos="vnw" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" vwtype="pers" pdtype="pron" naamval="stan" status="red" persoon="3" getal="ev" genus="fem" rel="su" word="ze"/>
+        <node begin="6" end="7" id="9" lemma="luchtig" pos="adj" postag="ADJ(vrij,basis,zonder)" pt="adj" positie="vrij" graad="basis" buiging="zonder" rel="mod" word="luchtig"/>
       </node>
     </node>
-    <node begin="7" end="8" id="10" lemma="." pos="let" postag="LET()" rel="--" word="." />
+    <node begin="7" end="8" id="10" lemma="." pos="let" postag="LET()" pt="let" rel="--" word="."/>
   </node>
   <sentence>' Tuurlijk , ' zei ze luchtig .</sentence>
-  <comment>French_TotVoorbijIs/3172-1|Q#3172-1|' Tuurlijk , ' zei ze luchtig .|1|1|0.44084898499999925</comment>
+  <comments>
+    <comment>French_TotVoorbijIs/3172-1|Q#3172-1|' Tuurlijk , ' zei ze luchtig .|1|1|0.44084898499999925</comment>
+  </comments>
 </alpino_ds>
