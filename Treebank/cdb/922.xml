@@ -16,8 +16,8 @@
               <node begin="1" cat="np" end="6" id="13" rel="obj1">
                 <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="14" lemma="Princenhage" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Princenhage" word="Princenhage"/>
                 <node begin="4" cat="mwu" end="6" id="15" rel="mod">
-                  <node begin="4" end="5" id="16" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="noun" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="&apos;t" word="&apos;t"/>
-                  <node begin="5" end="6" genus="onz" getal="ev" graad="dim" id="17" lemma="Aogtje" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="mwp" root="Aogtje" word="Aogtje"/>
+                  <node begin="4" end="5" id="16" lemma="&apos;t" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="&apos;t" spectype="deeleigen" word="&apos;t"/>
+                  <node begin="5" end="6" id="17" lemma="Aogtje" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Aogtje" spectype="deeleigen" word="Aogtje"/>
                 </node>
               </node>
             </node>
