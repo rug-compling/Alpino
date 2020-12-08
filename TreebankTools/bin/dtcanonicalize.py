@@ -592,7 +592,7 @@ class Canonicalizer:
 
     def check_leaf_node(self, node):
         """Check for missing attributes"""
-        for attr in 'pos', 'begin', 'end', 'root', 'word':
+        for attr in 'begin', 'end', 'word', 'lemma', 'postag':
             if not node.has_key(attr):
                 raise self.Error(self.filename, "leaf node without @%s : %s!" % (attr, node.attributes))
 

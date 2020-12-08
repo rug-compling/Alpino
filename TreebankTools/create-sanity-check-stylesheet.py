@@ -149,7 +149,7 @@ def sanity_checks():
    check('//node[@cat="pp" and @rel="obj1" and not(../@cat="pp")]','this PP is perhaps not an OBJ1?')
    check('//node[@rel="predc" and @cat="ppart" and node[@index and (@rel="obj1" or @rel="su" or @rel="obj2")] and not(../@rel="cnj")]','this looks like a PREDC with controlled arg inside?')
    check('//node[@root="er" and @rel="sup"]','er as SUP')
-   check('//node[@word and not(@root)]','no root?')
+   # check('//node[@word and not(@root)]','no root?')
    check('//node[@word and not(@lemma)]','no lemma?')
    check('//node[@word and not(@postag)]','no postag?')
    check('//node[@postag and not(@pt)]','postag but no pt?')
