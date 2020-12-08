@@ -12,7 +12,7 @@
       </node>
       <node begin="3" end="4" id="8" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
       <node begin="4" cat="np" end="17" id="9" rel="su">
-        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="sprake" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sprake" word="sprake"/>
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="spraak" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sprake" word="sprake"/>
         <node begin="5" cat="pp" end="17" id="11" rel="mod">
           <node begin="5" end="6" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="6" cat="np" end="17" id="13" rel="obj1">
@@ -64,7 +64,7 @@
                     <node begin="28" end="29" id="50" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                     <node begin="29" cat="np" end="37" id="51" rel="obj1">
                       <node begin="29" end="30" id="52" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                      <node begin="30" end="31" getal="mv" graad="basis" id="53" lemma="inkomsten" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="inkomst" word="inkomsten"/>
+                      <node begin="30" end="31" getal="mv" graad="basis" id="53" lemma="inkomst" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="inkomst" word="inkomsten"/>
                       <node begin="31" cat="rel" end="37" id="54" rel="mod">
                         <node begin="31" end="32" getal="getal" id="55" index="3" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
                         <node begin="31" cat="ssub" end="37" id="56" rel="body">

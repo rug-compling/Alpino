@@ -6,14 +6,14 @@
         <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
         <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="cel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="cel" word="cel"/>
         <node begin="2" cat="np" end="4" id="5" rel="app">
-          <node begin="2" buiging="met-e" end="3" id="6" lemma="vermist" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="vermist" word="vermiste" wvorm="vd"/>
+          <node begin="2" buiging="met-e" end="3" id="6" lemma="vermissen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="vermist" word="vermiste" wvorm="vd"/>
           <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="persoon" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="persoon" word="personen"/>
         </node>
       </node>
       <node begin="4" end="5" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="momenteel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="momenteel" word="momenteel"/>
       <node begin="6" cat="mwu" end="8" id="10" mwu_root="ter plaatse" mwu_sense="ter plaatse" rel="ld">
-        <node begin="6" end="7" id="11" lemma="ter" pos="adv" postag="VZ(versm)" pt="vz" rel="mwp" root="ter" vztype="versm" word="ter"/>
+        <node begin="6" end="7" id="11" lemma="te" pos="adv" postag="VZ(versm)" pt="vz" rel="mwp" root="ter" vztype="versm" word="ter"/>
         <node begin="7" end="8" getal="ev" graad="basis" id="12" lemma="plaatse" naamval="dat" ntype="soort" pos="adv" postag="N(soort,ev,basis,dat)" pt="n" rel="mwp" root="plaatse" word="plaatse"/>
       </node>
     </node>

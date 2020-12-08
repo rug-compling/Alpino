@@ -9,7 +9,7 @@
       <node begin="2" end="3" id="5" lemma="noemen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="noem" word="noemt" wvorm="pv"/>
       <node begin="3" cat="np" end="5" id="6" rel="obj1">
         <node begin="3" end="4" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node begin="4" buiging="zonder" end="5" id="8" lemma="overvallen" pos="noun" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="overval" word="overvallen" wvorm="vd"/>
+        <node begin="4" end="5" getal="mv" graad="basis" id="8" lemma="overval" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="overval" word="overvallen"/>
       </node>
       <node begin="5" cat="conj" end="8" id="9" rel="predc">
         <node begin="5" buiging="zonder" end="6" graad="basis" id="10" lemma="asociaal" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="a-sociaal" word="asociaal"/>

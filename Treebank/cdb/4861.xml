@@ -24,7 +24,7 @@
               <node begin="5" cat="np" end="8" id="19" rel="obj1">
                 <node begin="5" end="6" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                 <node begin="6" end="7" id="21" lemma="1000" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="1000" word="1000"/>
-                <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="22" lemma="km" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kilometer" word="km"/>
+                <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="22" lemma="kilo_meter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kilometer" word="km"/>
               </node>
             </node>
             <node begin="9" cat="pp" end="12" id="23" rel="mod">
@@ -40,7 +40,7 @@
           <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="30" lemma="baan_record" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="record" word="baanrecord"/>
           <node begin="16" cat="np" end="20" id="31" rel="mod">
             <node begin="16" end="17" id="32" lemma="258.3" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="258.3" word="258.3"/>
-            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="33" lemma="km" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kilometer" word="km"/>
+            <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="33" lemma="kilo_meter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kilometer" word="km"/>
             <node begin="18" cat="pp" end="20" id="34" rel="mod">
               <node begin="18" end="19" id="35" lemma="per" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="per" vztype="init" word="per"/>
               <node begin="19" end="20" genus="onz" getal="ev" graad="basis" id="36" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="uur" word="uur"/>
@@ -67,7 +67,7 @@
               <node begin="33" cat="pp" end="38" id="52" rel="mod">
                 <node begin="33" end="34" id="53" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                 <node begin="34" cat="np" end="38" id="54" rel="obj1">
-                  <node begin="34" end="35" getal-n="zonder-n" graad="basis" id="55" lemma="een" numtype="hoofd" pos="noun" positie="nom" postag="TW(hoofd,nom,zonder-n,basis)" pt="tw" rel="hd" root="een" word="een"/>
+                  <node begin="34" end="35" getal-n="zonder-n" graad="basis" id="55" lemma="één" numtype="hoofd" pos="noun" positie="nom" postag="TW(hoofd,nom,zonder-n,basis)" pt="tw" rel="hd" root="een" word="een"/>
                   <node begin="35" cat="pp" end="38" id="56" rel="mod">
                     <node begin="35" end="36" id="57" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                     <node begin="36" cat="np" end="38" id="58" rel="obj1">
