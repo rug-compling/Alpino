@@ -567,10 +567,10 @@ phrasal_entry(adjective(no_e(nonadv)),numbereeuws) -->
     n_word(NumberPersoons),
     { rangnumbereeuws(NumberPersoons) }.
 
-phrasal_entry(adjective(e),numbereeuwse) -->
+phrasal_entry(adjective(e),Root,numbereeuwse) -->
     { hdrug_util:debug_message(4,"numbereeuwse~n",[]) },
     n_word(NumberPersoons),
-    { rangnumbereeuwse(NumberPersoons) }.
+    { rangnumbereeuwse(NumberPersoons,Root) }.
 
 phrasal_entry(adjective(no_e(nonadv)),numbereeuws) -->
     { hdrug_util:debug_message(4,"numbereeuws~n",[]) },
@@ -930,9 +930,11 @@ rangnumbereeuws(Persoons) :-
     rangeeuws(Suffix,_),
     rangnumbersuffix(Persoons,Suffix).
 
-rangnumbereeuwse(Persoons) :-
-    rangeeuws(_,Suffix),
-    rangnumbersuffix(Persoons,Suffix).
+rangnumbereeuwse(Persoons,Stem) :-
+    rangeeuws(SuffixL,Suffix),
+    rangnumbersuffix(Persoons,Suffix),
+    atom_concat(Prefix,Suffix,Persoons),
+    atom_concat(Prefix,SuffixL,Stem).
 
 rangeeuws(eeuws,eeuwse).
 

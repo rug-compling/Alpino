@@ -7,17 +7,7 @@ m(Stem, adverb, PN) :-
     ;	hdrug_util:concat_all(PN,Stem,' ')
     ).
 
-m('min of veel',adverb,[min,of,meer]).
 m('onder ander',adverb,[onder,andere]).
-m('onder ander',adverb,[onder,anderen]).
-m('onder veel',adverb,ondermeer).
-m('onder veel',adverb,[onder,meer]).
-m('pak hem beet',adverb,[pak,'\'m',beet]).
-m('te veel',adverb,[te,meer]). 
-m('zonder veel',adverb,[zonder,meer]).
-m('zonder veel',adverb,zondermeer).
-
-adverb([for,the,time,being]).
 
 adverb([geen,bal]).
 adverb([geen,barst]).
@@ -197,6 +187,7 @@ adverb([ex,nihilo]).
 adverb([ex,officio]).
 adverb([face,to,face]).
 adverb([fast,forward]).
+adverb([for,the,time,being]).
 adverb(fluks).
 adverb(gaandeweg).
 adverb(gaarne).
@@ -321,6 +312,7 @@ adverb(mijnerzijds).
 adverb([mijns,inziens]).
 adverb([mijns,ondanks]).
 % adverb(minder).
+adverb([min,of,meer]).
 adverb(minstens).
 adverb(mitsdien).
 adverb(mitsgaders).
@@ -355,7 +347,10 @@ adverb([om,en,om]).
 adverb([om,en,rond]).	        %VL "ongeveer"
 adverb([om,en,rond,de]).        %VL "ongeveer"
 adverb(omstreeks). % pre-num "ongeveer" pre-year pre-amount
+adverb([onder,anderen]).
 adverb(onderuit).  % loc? dir? pred?
+adverb(ondermeer).
+adverb([onder,meer]).
 adverb([ons,inziens]).
 adverb([onzes,inziens]).
 adverb([ons,ondanks]).
@@ -375,6 +370,7 @@ adverb(overlaatst).
 adverb(overnieuw).
 adverb(overweg).
 adverb([pak,hem,beet]).
+adverb([pak,'\'m',beet]).
 adverb(pakweg).
 adverb(pal).
 adverb(pardoes).
@@ -429,6 +425,7 @@ adverb([te,hooi,en,te,gras]).
 adverb([te,zeer]).
 adverb([te,vuur,en,te,zwaard]).
 adverb(temeer).	   %  requires sbar:  'dit is temeer een probleem, omdat ..'
+adverb([te,meer]). 
 adverb([te,alle,prijze]).
 adverb([te,alle,prijzen]).
 adverb([te,allen,prijze]).
@@ -561,6 +558,8 @@ adverb([zeg,maar]).
 adverb([zeg,maar,gerust]).  
 adverb(zelfs).
 adverb(zienderogen).
+adverb([zonder,meer]).
+adverb(zondermeer).
 adverb([zij,het]). % er is al een zij het bescheiden begin gemaakt...
 adverb(zijnerzijds).
 adverb([zijns,inziens]).
