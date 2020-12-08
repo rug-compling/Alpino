@@ -346,6 +346,7 @@ normal_lex2(Tag,Label,[Word|Input0],Input,P,special(decap(His)),LC,Tags) :-
     lists:append(Consumed,Input,[DecapWord|Input1]),
     in_lexicon(Tag,Label,[DecapWord|Input1],Input,His,LC),
     \+ His = chess,
+    \+ His = variant(variant(_,_),normal),
     \+ member(f(Tag,_,Input,_),Tags).
 
 normal_lex2(Tag,Label,Input0,Input,_,special(His),LC,_) :-
@@ -984,6 +985,8 @@ remove_identical_tags_but_lemma :-
     ;   true
     ).
 
+prefer_lemma(leiden,geleiden,_).
+prefer_lemma(raken,geraken,_).
 prefer_lemma(Lemma1,Lemma2,_) :-
     alpino_unknowns:cap_first(Lemma2,Lemma1).   % prefer lemma Breskens over breskens
 
@@ -2188,7 +2191,7 @@ probably_wrong_tag(P1,P) :-
     \+ alternative_to_de_sg_noun(P1,P).
 
 probably_wrong_tag(P1,P) :-
-    search_tag_stem(te,tag(_,P1,_,_,_,_,_,_)),
+    search_tag_stem(te,tag(_,P1,_,_,_,_,preposition(te,[],nodet),_)),
     \+ te_following_tag(P1,P).
 
 te_following_tag(P1,P) :-

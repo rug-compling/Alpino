@@ -1641,12 +1641,30 @@ mwu_postag(Frame,Stem,_Surf,Q0,Q,_Result) -->
     mwu_tags(Tags,Stem,1,Q0,Q).
 
 mwu_postag(_Frame,Stem,_Surf,Q0,Q,_Result) -->
-    { mwu_postag(Stem,Tags) },
-    mwu_tags(Tags,Stem,1,Q0,Q).
+    { mwu_postag(Stem,Tags,Stems) },
+    mwu_tags_stems(Tags,Stems,Q0,Q).
 
 mwu_postag(_Frame,Stem,Surf,Q0,Q,_Result) -->
     { mwu_postag(Stem,Surf,Tags,Stems) },
     mwu_tags_stems(Tags,Stems,Q0,Q).
+mwu_postag(proper_name(_),Stem,_Surf,Q0,Q,_Result) -->
+    mwu_name_tags(Stem,Q0,Q).
+mwu_postag(proper_name(_,_),Stem,_,Q0,Q,_Result) -->
+    mwu_name_tags(Stem,Q0,Q).
+
+%% 
+mwu_name_tags(Stem,Q0,Q) -->
+    {  alpino_util:split_atom(Stem," ",Words),
+       length(Words,Len),
+       Len =:= Q-Q0
+    },
+    mwu_name_tags_(Words,Q0,Q).
+
+mwu_name_tags_([],Q,Q) --> [].
+mwu_name_tags_([W|Words],Q0,Q) -->
+    [cgn_postag(Q0,Q1,W,'SPEC(deeleigen)')],
+     { Q1 is Q0 + 1 },
+     mwu_name_tags_(Words,Q1,Q).
 
 mwu_tags_stems([],_,Q,Q) --> [].
 mwu_tags_stems([H|T],[Stem|Stems],Q0,Q) -->
@@ -1746,9 +1764,6 @@ mwu_postag_frame_stem(er_adverb(_),Stem,['VNW(aanw,adv-pron,stan,red,3,getal)','
 mwu_postag_frame_stem(waar_adverb(_),Stem,['VNW(vb,adv-pron,obl,vol,3o,getal)','BW()']) :-
     atom(Stem),
     atom_concat('waar ',_,Stem).
-mwu_postag_frame_stem(tmp_adverb,Stem,['LID(bep,gen,evmo)','N(soort,ev,basis,gen)']) :-
-    atom(Stem),
-    atom_concat('\'s ',_,Stem).
 mwu_postag_frame_stem(tmp_np,Stem,PosTags) :-
     atom_codes(Stem,Codes),
     alpino_util:split_string(Codes," ",Words),
@@ -1833,624 +1848,7 @@ mwu_postag('als het ware','als het ware',
 	   ['VG(onder)','VNW(pers,pron,stan,red,3,ev,onz)','WW(pv,conj,ev)'],
 	   [als,het,v_root(ben,zijn)]).
 
-
-mwu_postag('des te',['BW()','BW()']).
-mwu_postag('1 februari',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)']).
-mwu_postag('1 januari 2003',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)','TW(hoofd,vrij)']).
-mwu_postag('1 januari 2006',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)','TW(hoofd,vrij)']).
-mwu_postag('1 januari',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)']).
-mwu_postag('1 juli 2005',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)','TW(hoofd,vrij)']).
-mwu_postag('1 maart',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)']).
-mwu_postag('1 mei',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)']).
-mwu_postag('11 maart',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)']).
-mwu_postag('11 september 2001',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)','TW(hoofd,vrij)']).
-mwu_postag('11 september',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)']).
-mwu_postag('14 juni',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)']).
-mwu_postag('22 september',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)']).
-mwu_postag('26 december',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)']).
-mwu_postag('5 september 2005',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)','TW(hoofd,vrij)']).
-mwu_postag('8 mei',['TW(hoofd,vrij)','N(eigen,ev,basis,zijd,stan)']).
-
-
-mwu_postag('8 uur journaal',['TW(hoofd,vrij)','N(soort,ev,basis,onz,stan)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('Alcohol en de wet',['N(soort,ev,basis,zijd,stan)','VG(neven)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('Applications on Demand',['SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('the Army of the Potomac',['SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)','N(eigen,ev,basis,zijd,stan)']).
-mwu_postag('Army of the Potomac',['SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)','N(eigen,ev,basis,zijd,stan)']).
-mwu_postag('Army of Northern Virginia',['SPEC(vreemd)','SPEC(vreemd)','SPEC(deeleigen)','SPEC(deeleigen)']).
-mwu_postag('the Army of Northern Virginia',['SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)','SPEC(deeleigen)','SPEC(deeleigen)']).
-mwu_postag('Contactpunt Vlaanderen',['N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,onz,stan)']).
-mwu_postag('Drank en Horecawet',['SPEC(afgebr)','VG(neven)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('EUREKA SLIDE',['N(eigen,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('Economische en Monetaire Unie',['SPEC(deeleigen)','SPEC(deeleigen)','SPEC(deeleigen)','SPEC(deeleigen)']).
-mwu_postag('Een drinker in huis',['LID(onbep,stan,agr)','N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('Eigen Verklaring',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('FOD Justitie',['N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('FOD Sociale Zekerheid',['N(eigen,ev,basis,zijd,stan)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('God zij dank',['N(eigen,ev,basis,zijd,stan)','WW(pv,conj,ev)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('goed avond',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('Human Development Report',['SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('Integraal Dossier JGZ',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,zijd,stan)']).
-mwu_postag('KWR 2000',['N(eigen,ev,basis,zijd,stan)','TW(hoofd,vrij)']).
-mwu_postag('Lam Gods',['N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,gen)']).
-mwu_postag('Nederlandse betrekkingen/beleid',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('Nieuws in het Kort',['N(soort,ev,basis,onz,stan)','VZ(init)','LID(bep,stan,evon)','ADJ(vrij,basis,zonder)']).
-mwu_postag('Palestijns gebied',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)']).
-mwu_postag('Slangen & Partners',['N(eigen,ev,basis,zijd,stan)','SPEC(symb)','N(soort,mv,basis)']).
-mwu_postag('Sportvrouw van het Jaar',['N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('Start / Stop',['WW(pv,tgw,ev)','LET()','WW(pv,tgw,ev)']).
-mwu_postag('\'s avonds',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)']).
-mwu_postag('\'s lands',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)']).
-mwu_postag('\'s middags',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)']).
-mwu_postag('\'s nachts',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)']).
-mwu_postag('\'s ochtends',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)']).
-mwu_postag('aan bod',['VZ(init)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('aan de beurt',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('aan de dag',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('aan de gang',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('aan de hand van',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('aan de hand',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('aan de kaak',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('aan het hoofd',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('aan het licht',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('aan het',['VZ(init)','LID(bep,stan,evon)']).
-mwu_postag('acht uur journaal',['TW(hoofd,vrij)','N(soort,ev,basis,onz,stan)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('ad rem',['SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('af en toe',['VZ(fin)','VG(neven)','VZ(fin)']).
-mwu_postag('al dan niet',['BW()','BW()','BW()']).
-mwu_postag('al met al',['BW()','VZ(init)','BW()']).
-mwu_postag('alleen al',['BW()','BW()']).
-mwu_postag('alles bij elkaar',['VNW(onbep,pron,stan,vol,3o,ev)','VZ(init)','VNW(recip,pron,obl,vol,persoon,mv)']).
-mwu_postag('als gevolg van',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('als volgt',['VG(onder)','WW(pv,tgw,met-t)']).
-mwu_postag('andere onder',['ADJ(nom,basis,met-e,zonder-n,stan)','VZ(init)']).
-mwu_postag('bij elkaar',['VZ(init)','VNW(recip,pron,obl,vol,persoon,mv)']).
-mwu_postag('bij machte',['VZ(init)','N(soort,ev,basis,dat)']).
-mwu_postag('bij verre',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('bij voorbaat',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('bij wijze van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('buiten beschouwing',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('c\'est la vie',['SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('daar tussendoor',['VNW(aanw,adv-pron,obl,vol,3o,getal)','BW()']).
-mwu_postag('daarmee basta',['BW()','TSW()']).
-mwu_postag('dag in dag uit',['N(soort,ev,basis,zijd,stan)','VZ(fin)','N(soort,ev,basis,zijd,stan)','VZ(fin)']).
-mwu_postag('dan meer',['VG(onder)','VNW(onbep,grad,stan,vrij,zonder,comp)']).
-mwu_postag('dan ook',['BW()','BW()']).
-mwu_postag('danwel',['VG(onder)','BW()']).
-mwu_postag('dank je wel',['WW(pv,tgw,ev)','VNW(pr,pron,obl,red,2v,getal)','BW()']).
-mwu_postag('dat soort',['VNW(aanw,det,stan,prenom,zonder,evon)','N(soort,ev,basis,genus,stan)']).
-mwu_postag('dat wil zeg',['VNW(aanw,pron,stan,vol,3o,ev)','WW(pv,tgw,ev)','WW(inf,vrij,zonder)']).
-mwu_postag('dat wil zeggen',['VNW(aanw,pron,stan,vol,3o,ev)','WW(pv,tgw,ev)','WW(inf,vrij,zonder)']).
-mwu_postag('de eerste de beste',['LID(bep,stan,rest)','TW(rang,nom,zonder-n)','LID(bep,stan,rest)','ADJ(nom,sup,met-e,zonder-n,stan)']).
-mwu_postag('de ene na de andere',['LID(bep,stan,rest)','VNW(onbep,det,stan,prenom,met-e,evz)','VZ(init)','LID(bep,stan,rest)','ADJ(prenom,basis,met-e,stan)']).
-mwu_postag('de facto',['SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('de ronde',['LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('de tijd',['LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('de wind',['LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('degelijk wel',['BW()','ADJ(vrij,basis,zonder)']).
-mwu_postag('des te',['BW()','BW()']).
-mwu_postag('dicht bij',['ADJ(vrij,basis,zonder)','VZ(init)']).
-mwu_postag('dichtbij',['ADJ(vrij,basis,zonder)','VZ(init)']).
-mwu_postag('die van',['VZ(init)','VNW(aanw,det,stan,prenom,zonder,rest)']).
-mwu_postag('dit keer',['VNW(aanw,det,stan,prenom,zonder,evon)','N(soort,ev,basis,genus,stan)']).
-mwu_postag('door de knieën',['VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)']).
-mwu_postag('door middel van',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('drotrecogin alfa',['N(soort,ev,basis,zijd,stan)','ADJ(postnom,basis,zonder)']).
-mwu_postag('één en ander',['TW(hoofd,nom,zonder-n,basis)','VG(neven)','ADJ(nom,basis,zonder,zonder-n)']).
-mwu_postag('een en ander',['TW(hoofd,nom,zonder-n,basis)','VG(neven)','ADJ(nom,basis,zonder,zonder-n)']).
-mwu_postag('een handje',['LID(onbep,stan,agr)','N(soort,ev,dim,onz,stan)']).
-mwu_postag('een kleine',['LID(onbep,stan,agr)','ADJ(prenom,basis,met-e,stan)']).
-mwu_postag('een of ander',['TW(hoofd,prenom,stan)','VG(neven)','ADJ(prenom,basis,met-e,stan)']).
-mwu_postag('een of',['LID(onbep,stan,agr)','VG(neven)']).
-mwu_postag('een paar',['LID(onbep,stan,agr)','N(soort,ev,basis,genus,stan)']).
-mwu_postag('eens te meer',['BW()','VZ(init)','VNW(onbep,grad,stan,vrij,zonder,comp)']).
-mwu_postag('eigen verklaring',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('en / of',['VG(neven)','LET()','VG(neven)']).
-mwu_postag('en dergelijke',['VG(neven)','ADJ(nom,basis,met-e,zonder-n,stan)']).
-mwu_postag('en klaar',['VG(neven)','ADJ(vrij,basis,zonder)']).
-mwu_postag('en niet zo\'n beetje ook',['VG(neven)','BW()','VNW(aanw,det,stan,prenom,zonder,agr)','N(soort,ev,dim,onz,stan)','BW()']).
-mwu_postag('en vice versa',['VG(neven)','SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('for president',['SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('geen van allen',['VNW(onbep,det,stan,prenom,zonder,agr)','VZ(init)','VNW(onbep,det,stan,nom,met-e,mv-n)']).
-mwu_postag('hand in hand',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('heden ten dage',['BW()','VZ(versm)','N(soort,ev,basis,dat)']).
-mwu_postag('heel wat',['ADJ(vrij,basis,zonder)','VNW(onbep,pron,stan,vol,3o,ev)']).
-mwu_postag('heen en weer',['VZ(fin)','VG(neven)','BW()']).
-mwu_postag('hem / haar',['VNW(pers,pron,obl,vol,3,ev,masc)','LET()','VNW(pers,pron,obl,vol,3,getal,fem)']).
-mwu_postag('haar / hem',['VNW(pers,pron,obl,vol,3,getal,fem)','LET()','VNW(pers,pron,obl,vol,3,ev,masc)']).
-mwu_postag('her en der',['BW()','VG(neven)','BW()']).
-mwu_postag('het best',['LID(bep,stan,evon)','ADJ(vrij,sup,zonder)']).
-mwu_postag('het beste',['LID(bep,stan,evon)','ADJ(nom,sup,met-e,zonder-n,stan)']).
-mwu_postag('het eerste het beste',['LID(bep,stan,evon)','TW(rang,prenom,stan)','LID(bep,stan,evon)','ADJ(prenom,basis,met-e,stan)']).
-mwu_postag('het gebied van op',['LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)','VZ(init)','VZ(init)']).
-mwu_postag('het grootst',['LID(bep,stan,evon)','ADJ(vrij,sup,zonder)']).
-mwu_postag('het hoofd',['LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('het liefst',['LID(bep,stan,evon)','ADJ(vrij,sup,zonder)']).
-mwu_postag('het meest',['LID(bep,stan,evon)','VNW(onbep,grad,stan,vrij,zonder,sup)']).
-mwu_postag('het minst',['LID(bep,stan,evon)','VNW(onbep,grad,stan,vrij,zonder,sup)']).
-mwu_postag('het nakijken',['LID(bep,stan,evon)','WW(inf,nom,zonder,zonder-n)']).
-mwu_postag('hoog tijd',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('in aanraking',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('in acht',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('in actie',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('in beeld',['VZ(init)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('in beslag',['VZ(init)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('in combinatie met',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('in contact',['VZ(init)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('in de gaten',['VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)']).
-mwu_postag('in de hand',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('in de loop van',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('in de persoon van',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('in de lucht',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('in de wacht',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('in de weer',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('in de weg',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('in die mate zelfs',['VZ(init)','VNW(aanw,det,stan,prenom,zonder,rest)','N(soort,ev,basis,zijd,stan)','BW()']).
-mwu_postag('in duigen',['VZ(init)','N(soort,mv,basis)']).
-mwu_postag('in elkaar',['VZ(init)','VNW(recip,pron,obl,vol,persoon,mv)']).
-mwu_postag('in feite',['VZ(init)','N(soort,ev,basis,dat)']).
-mwu_postag('in gebruik',['VZ(init)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('in geval van',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('in hand',['VZ(init)','N(soort,mv,basis)']).
-mwu_postag('in handen',['VZ(init)','N(soort,mv,basis)']).
-mwu_postag('in het bijzonder',['VZ(init)','LID(bep,stan,evon)','ADJ(nom,basis,zonder,zonder-n)']).
-mwu_postag('in het kader van',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('in het leven',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('in het oog',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('in het teken',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('in het verschiet',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('in het werk',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('in het wilde weg',['VZ(init)','LID(bep,stan,evon)','ADJ(prenom,basis,met-e,stan)','BW()']).
-mwu_postag('in kaart',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('in navolging van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('in omloop',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('in opdracht van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('in opstand',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('in orde',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('in overleg met',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('in plaats van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('in reactie op',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('in ruil voor',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('in samenwerking met',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('in staat',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('in stand',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('in strijd',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('in tegenstelling tot',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('in tegenstelling tot vroeg',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)','ADJ(vrij,comp,zonder)']).
-mwu_postag('in verband met',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('in verband',['VZ(init)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('in vergelijking met',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('ja zelfs',['TSW()','BW()']).
-mwu_postag('je reinste',['VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)','ADJ(nom,sup,met-e,zonder-n,stan)']).
-mwu_postag('de reinste',['LID(bep,stan,rest)','ADJ(nom,sup,met-e,zonder-n,stan)']).
-mwu_postag('keer op keer',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('laat staan',['WW(pv,tgw,ev)','WW(inf,vrij,zonder)']).
-%mwu_postag('lang niet',['ADJ(vrij,basis,zonder)','BW()']).
-%mwu_postag('langer niet',['BW()','ADJ(vrij,comp,zonder)']).
-mwu_postag('langzaamaan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
-mwu_postag('maar dan',['VG(neven)','BW()']).
-mwu_postag('maar ja',['VG(neven)','TSW()']).
-mwu_postag('maar liefst',['BW()','BW()']).
-mwu_postag('meer dan',['VNW(onbep,grad,stan,vrij,zonder,comp)','VG(onder)']).
-mwu_postag('met andere woorden',['VZ(init)','ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)']).
-mwu_postag('met behulp van',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('met betrekking tot',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('met het oog op',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('met inachtneming van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('met ingang van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('met name',['VZ(init)','N(soort,ev,basis,dat)']).
-mwu_postag('met uitzondering van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('min of meer',['BW()','VG(neven)','VNW(onbep,grad,stan,vrij,zonder,comp)']).
-mwu_postag('minder dan',['VNW(onbep,grad,stan,vrij,zonder,comp)','VG(onder)']).
-mwu_postag('na afloop van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('na verloop van',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('naar aanleiding van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('naar schatting',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('naar voren',['VZ(init)','BW()']).
-mwu_postag('never change a winning team',['SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('niet alleen',['BW()','BW()']).
-mwu_postag('niet meer dan',['BW()','VNW(onbep,grad,stan,vrij,zonder,comp)','VG(onder)']).
-mwu_postag('niet minder dan',['BW()','VNW(onbep,grad,stan,vrij,zonder,comp)','VG(onder)']).
-mwu_postag('niet waarschijnlijk',['ADJ(vrij,basis,zonder)','BW()']).
-mwu_postag('niets op tegen',['VNW(onbep,pron,stan,vol,3o,ev)','VZ(fin)','ADJ(vrij,basis,zonder)']).
-mwu_postag('niks op tegen',['VNW(onbep,pron,stan,vol,3o,ev)','VZ(fin)','ADJ(vrij,basis,zonder)']).
-mwu_postag('nieuws in het Kort',['N(soort,ev,basis,onz,stan)','VZ(init)','LID(bep,stan,evon)','ADJ(vrij,basis,zonder)']).
-mwu_postag('nieuws in het kort',['N(soort,ev,basis,onz,stan)','VZ(init)','LID(bep,stan,evon)','ADJ(nom,basis,zonder,zonder-n)']).
-mwu_postag('niets mis mee',['VNW(onbep,pron,stan,vol,3o,ev)','ADJ(vrij,basis,zonder)','VZ(fin)']).
-mwu_postag('niks mis mee',['VNW(onbep,pron,stan,vol,3o,ev)','ADJ(vrij,basis,zonder)','VZ(fin)']).
-mwu_postag('noblesse oblige',['SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('nog eens',['BW()','BW()']).
-mwu_postag('nog geen',['BW()','VNW(onbep,det,stan,prenom,zonder,agr)']).
-mwu_postag('nog sterk',['ADJ(vrij,comp,zonder)','BW()']).
-mwu_postag('nu eenmaal',['BW()','BW()']).
-mwu_postag('om het even',['VZ(init)','LID(bep,stan,evon)','BW()']).
-mwu_postag('om het hardst',['VZ(init)','LID(bep,stan,evon)','ADJ(nom,sup,zonder,zonder-n)']).
-mwu_postag('om het leven',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('om niet',['VZ(init)','BW()']).
-mwu_postag('omwille van',['BW()','VZ(init)']).
-mwu_postag('onder aanvoering van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('onder andere',['VZ(init)','ADJ(nom,basis,met-e,zonder-n,stan)']).
-mwu_postag('onder anderen',['VZ(init)','ADJ(nom,basis,met-e,mv-n)']).
-mwu_postag('onder de indruk',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('onder invloed van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('onder leiding van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('onder meer',['VZ(init)','VNW(onbep,grad,stan,vrij,zonder,comp)']).
-mwu_postag('oog in oog',['N(soort,ev,basis,onz,stan)','VZ(init)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('opgeruimd staat netjes',['WW(vd,vrij,zonder)','WW(pv,tgw,met-t)','ADJ(vrij,dim,zonder)']).
-mwu_postag('op basis van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('op de been',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('op de hoogte',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('op de loer',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('op de markt',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('op de voet',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('op den duur',['VZ(init)','LID(bep,dat,evmo)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('op dreef',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('op een lopen',['VZ(init)','LID(onbep,stan,agr)','WW(inf,nom,zonder,zonder-n)']).
-mwu_postag('op gang',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('op grond van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('echter op grond van',['VZ(init)','N(soort,ev,basis,zijd,stan)','BW()','VZ(init)']).
-mwu_postag('op het gebied van',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('op het gevaar af',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)','VZ(fin)']).
-mwu_postag('op het oog',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('op het spel',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('op last van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('op los',['VZ(init)','ADJ(vrij,basis,zonder)']).
-mwu_postag('op losse schroeven',['VZ(init)','ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)']).
-mwu_postag('op naam van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('op non-actief',['VZ(init)','ADJ(vrij,basis,zonder)']).
-mwu_postag('op verdenking van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('op verzoek van',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('op weg',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('op zak',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('op zijn min',['VZ(init)','VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)','VNW(onbep,grad,stan,vrij,zonder,sup)']).
-mwu_postag('op zoek',['VZ(init)','ADJ(vrij,basis,zonder)']).
-mwu_postag('over de kop',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('over en weer',['VZ(fin)','VG(neven)','VZ(fin)']).
-mwu_postag('over the top',['SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('pecunia non olet',['SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('per se',['SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('prime time',['SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('rock and roll',['SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('rond de',['VZ(init)','LID(bep,stan,rest)']).
-mwu_postag('schouder aan schouder',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('staat in',['N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('stap voor stap',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('status epilepticus',['N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('take it or leave it',['SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('tal van',['N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('talent management',['N(soort,ev,basis,onz,stan)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('te boven',['VZ(init)','VZ(fin)']).
-mwu_postag('te gast',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('te goed',['BW()','ADJ(vrij,basis,zonder)']).
-mwu_postag('te hulp',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('te koop',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('te pakken',['VZ(init)','WW(inf,vrij,zonder)']).
-mwu_postag('te ver',['BW()','ADJ(vrij,basis,zonder)']).
-mwu_postag('te wensen',['VZ(init)','WW(inf,vrij,zonder)']).
-mwu_postag('te werk',['VZ(init)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('te weten',['VZ(init)','WW(inf,vrij,zonder)']).
-mwu_postag('te woord',['VZ(init)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('ten aanzien van',['VZ(versm)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('ten behoeve van',['VZ(versm)','N(soort,ev,basis,dat)','VZ(init)']).
-mwu_postag('ten dele',['VZ(versm)','N(soort,ev,basis,dat)']).
-mwu_postag('ten eerste',['VZ(versm)','TW(rang,nom,zonder-n)']).
-mwu_postag('ten einde',['VZ(versm)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('ten enenmale',['VZ(versm)','N(soort,ev,basis,dat)']).
-mwu_postag('ten gevolge van',['VZ(versm)','N(soort,ev,basis,dat)','VZ(init)']).
-mwu_postag('ten goede',['VZ(versm)','ADJ(nom,basis,met-e,zonder-n,bijz)']).
-mwu_postag('ten grondslag',['VZ(versm)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('ten gunste van',['VZ(versm)','N(soort,ev,basis,dat)','VZ(init)']).
-mwu_postag('ten halve',['VZ(versm)','N(soort,ev,basis,dat)']).
-mwu_postag('ten koste',['VZ(versm)','N(soort,ev,basis,dat)']).
-mwu_postag('ten minste',['VZ(versm)','VNW(onbep,grad,stan,nom,met-e,zonder-n,sup)']).
-mwu_postag('ten noorden van',['VZ(versm)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('ten onder',['VZ(versm)','VZ(fin)']).
-mwu_postag('ten onrechte',['VZ(versm)','N(soort,ev,basis,dat)']).
-mwu_postag('ten oosten van',['VZ(versm)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('ten opzichte van',['VZ(versm)','N(soort,ev,basis,dat)','VZ(init)']).
-mwu_postag('ten overstaan van',['VZ(versm)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('ten slotte',['VZ(versm)','N(soort,ev,basis,dat)']).
-mwu_postag('ten tijde van',['VZ(versm)','N(soort,ev,basis,dat)','VZ(init)']).
-mwu_postag('ten tonele',['VZ(versm)','N(soort,ev,basis,dat)']).
-mwu_postag('ten tweede',['VZ(versm)','TW(rang,nom,zonder-n)']).
-mwu_postag('ten volle',['VZ(versm)','ADJ(nom,basis,met-e,zonder-n,bijz)']).
-mwu_postag('ten westen van',['VZ(versm)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('ten zuiden van',['VZ(versm)','N(soort,ev,basis,onz,stan)','VZ(init)']).
-mwu_postag('ter beschikking',['VZ(versm)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('ter bevordering van',['VZ(versm)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('ter discussie',['VZ(versm)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('ter dood',['VZ(versm)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('ter ere van',['VZ(versm)','N(soort,ev,basis,dat)','VZ(init)']).
-mwu_postag('ter gelegenheid van',['VZ(versm)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('ter hand',['VZ(versm)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('ter plaatse',['VZ(versm)','N(soort,ev,basis,dat)']).
-mwu_postag('ter sprake',['VZ(versm)','N(soort,ev,basis,dat)']).
-mwu_postag('ter voorbereiding op',['VZ(versm)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('ter waarde van',['VZ(versm)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('ter wille van',['VZ(versm)','N(soort,ev,basis,dat)','VZ(init)']).
-mwu_postag('tien uur',['TW(hoofd,vrij)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('the show must go on',['SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('tot doel',['VZ(init)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('tot dusver',['VZ(init)','BW()']).
-mwu_postag('tot dusverre',['VZ(init)','BW()']).
-mwu_postag('tot en met',['VZ(init)','VG(neven)','VZ(init)']).
-mwu_postag('het laatst toe tot',['VZ(init)','LID(bep,stan,evon)','ADJ(nom,sup,zonder,zonder-n)','VZ(fin)']).
-mwu_postag('tot leven',['VZ(init)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('tot stand',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('tot uitdrukking',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('tot uiting',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('tot voor kort',['VZ(init)','VZ(init)','ADJ(vrij,basis,zonder)']).
-mwu_postag('uit angst voor',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)']).
-mwu_postag('uit de doeken',['VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)']).
-mwu_postag('uit de hand',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('uit de verf',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('uit den treure',['VZ(init)','LID(bep,dat,evmo)','N(soort,ev,basis,dat)']).
-mwu_postag('uit elkaar',['VZ(init)','VNW(recip,pron,obl,vol,persoon,mv)']).
-mwu_postag('uit handen',['VZ(init)','N(soort,mv,basis)']).
-mwu_postag('uit het oog',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('van alles',['VZ(init)','VNW(onbep,pron,stan,vol,3o,ev)']).
-mwu_postag('van als gevolg',['VZ(init)','VZ(init)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('van dien aard',['VZ(init)','VNW(aanw,det,dat,prenom,met-e,evmo)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('van harte',['VZ(init)','N(soort,ev,basis,dat)']).
-mwu_postag('van in het kader',['VZ(init)','VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('van kracht',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('van mening',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('van op basis',['VZ(init)','VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('van plan',['VZ(init)','N(soort,ev,basis,onz,stan)']).
-mwu_postag('van start',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('van tevoren',['VZ(init)','BW()']).
-mwu_postag('van toepassing',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('van voren',['VZ(init)','BW()']).
-mwu_postag('van zodra',['VZ(init)','VG(onder)']).
-mwu_postag('vandaag de dag',['BW()','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('ver weg',['ADJ(vrij,basis,zonder)','BW()']).
-mwu_postag('verder heen',['ADJ(vrij,comp,zonder)','VZ(fin)']).
-mwu_postag('verkeer en waterstaat',['N(soort,ev,basis,onz,stan)','VG(neven)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('verre van',['ADJ(prenom,basis,met-e,stan)','VZ(init)']).
-mwu_postag('vice versa',['SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('voor de dag',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('voor de hand',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('voor elkaar',['VZ(init)','VNW(recip,pron,obl,vol,persoon,mv)']).
-mwu_postag('voor het eerst',['VZ(init)','LID(bep,stan,evon)','TW(rang,nom,zonder-n)']). %% of BW()????
-mwu_postag('voor het laatst',['VZ(init)','LID(bep,stan,evon)','ADJ(nom,sup,zonder,zonder-n)']).
-mwu_postag('voor rekening',['VZ(init)','N(soort,ev,basis,zijd,stan)']).
-mwu_postag('voor zover',['VZ(init)','BW()']).
-mwu_postag('wat betreft',['VNW(vb,pron,stan,vol,3o,ev)','WW(pv,tgw,met-t)']).
-mwu_postag('wat een',['VNW(vb,pron,stan,vol,3o,ev)','LID(onbep,stan,agr)']).
-mwu_postag('wat voor',['VNW(vb,pron,stan,vol,3o,ev)','VZ(init)']).
-mwu_postag('what\'s in a name',['SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)','SPEC(vreemd)']).
-mwu_postag('zegge en schrijve', ['WW(pv,conj,ev)','VG(neven)','WW(pv,conj,ev)']).
-mwu_postag('zegge en schrijven',['WW(pv,conj,ev)','VG(neven)','WW(pv,conj,ev)']).
-mwu_postag('zij het',['WW(pv,conj,ev)','VNW(pers,pron,stan,red,3,ev,onz)']).
-mwu_postag('zo goed als',['BW()','ADJ(vrij,basis,zonder)','VG(onder)']).
-% mwu_postag('zo goed als',['BW()','ADJ(vrij,basis,zonder)','VZ(init)']).
-mwu_postag('zo ja',['BW()','TSW()']).
-mwu_postag('zo meteen',['BW()','BW()']).
-mwu_postag('zo nee',['BW()','TSW()']).
-mwu_postag('zo niet',['BW()','BW()']).
-mwu_postag('zo nu en dan',['BW()','BW()','VG(neven)','BW()']).
-mwu_postag('zo ook',['BW()','BW()']).
-mwu_postag('zonder meer',['VZ(init)','VNW(onbep,grad,stan,vrij,zonder,comp)']).
-mwu_postag(eenieder,['LID(onbep,stan,agr)','VNW(onbep,det,stan,vrij,zonder)']).
-mwu_postag(tenminste,['VZ(versm)','VNW(onbep,grad,stan,nom,met-e,zonder-n,sup)']).
-mwu_postag(zogauw,['BW()','ADJ(vrij,basis,zonder)']).
-mwu_postag(zoniet,['BW()','BW()']). % !!
-mwu_postag(zover,['BW()','ADJ(vrij,basis,zonder)']). % !!
-
-mwu_postag('Basistakenpakket Jeugdgezondheidszorg',['N(soort,ev,basis,onz,stan)','N(soort,ev,basis,zijd,stan)']).
-
-
-mwu_postag('geleidelijk aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
-mwu_postag('geleidelijker aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
-mwu_postag('kalm aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
-mwu_postag('kalmer aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
-mwu_postag('rustig aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
-mwu_postag('rustiger aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
-mwu_postag('voorzichtig aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
-mwu_postag('voorzichtiger aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
-mwu_postag('kalmpjes aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
-mwu_postag('losjes aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
-mwu_postag('stilletjes aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
-mwu_postag('zachtjes aan',['ADJ(vrij,basis,zonder)','VZ(fin)']).
-
-mwu_postag('weet je',['WW(pv,tgw,ev)','VNW(pers,pron,nomin,red,2v,ev)']).
-mwu_postag('je noem wat',['VNW(vb,pron,stan,vol,3o,ev)','VNW(pers,pron,nomin,red,2v,ev)','WW(pv,tgw,met-t)']).
-
-mwu_postag(Stem,['SPEC(deeleigen)','SPEC(deeleigen)']):-
-    name2(Stem).
-
-mwu_postag(Stem,['SPEC(deeleigen)','SPEC(deeleigen)','SPEC(deeleigen)']):-
-    name3(Stem).
-
-mwu_postag(Stem,['SPEC(deeleigen)','SPEC(deeleigen)','SPEC(deeleigen)','SPEC(deeleigen)']):-
-    name4(Stem).
-
-mwu_postag(Stem,['SPEC(deeleigen)','SPEC(deeleigen)','SPEC(deeleigen)','SPEC(deeleigen)','SPEC(deeleigen)']):-
-    name5(Stem).
-
-name2('Algemene Zaken').
-name2('Almere Stad').
-name2('Barcelona Dragons').
-name2('Binnenlandse Zaken').
-name2('Buitenlandse Zaken').
-name2('Derde Wereld').
-name2('Dominicaanse Republiek').
-name2('Duitstalige Gemeenschap').
-name2('Eerste Kamer').
-name2('Euro 2000').
-name2('Europees Hof').
-name2('Europese Unie').
-name2('Goede Vrijdag').
-name2('Grijze Wolven').
-name2('Grote Markt').
-name2('Het Staatsblad').
-name2('Hoge Raad').
-name2('Internationaal Gerechtshof').
-name2('IJzeren Rijn').
-name2('Joegoslavië Tribunaal').
-name2('KBC Verzekeringen').
-name2('Korps Mariniers').
-name2('Koude Oorlog').
-name2('Nationale Recherche').
-name2('Nederlandse Spoorwegen').
-name2('Onze Vader').
-name2('Openbaar Ministerie').
-name2('Palestijnse Autoriteit').
-name2('Real Madrid').
-name2('Rode Leger').
-name2('Romeinse Rijk').
-name2('Urbanus VIII').
-name2('Vlaamse Gewest').
-name2('Vlaams Gewest').
-name2('Brussels Parlement').
-name2('Vlaamse Gemeenschap').
-name2('Waals Gewest').
-name2('Westelijke Jordaanoever').
-name2('Witte Huis').
-name2('Zuidelijke Nederlanden').
-name2('De Post').
-name2('Nederlandse Antillen').
-name2('Vrije Universiteit').
-name2('Erasmus Universiteit').
-name2('Radbout Universiteit').
-name2('Open Universiteit').
-name2('Katholieke Universiteit').
-name2('Universiteit Hasselt').
-name2('Universiteit Antwerpen').
-name2('Universiteit Twente').
-name2('Universiteit Luik').
-name2('Universiteit Leiden').
-name2('Universiteit Utrecht').
-name2('Universiteit Gent').
-name2('Universiteit Leuven').
-name2('KU Leuven').
-name2('Nationale Loterij').
-name2('Rijksuniversiteit Gent').
-name2('Rijksuniversiteit Groningen').
-name2('Roze Zaterdag').
-name2('Stichting Lezen').
-name2('Stichting Yousuf').
-name2('Travel Unie').
-name2('Travel unie').
-name2('Vendex KBB').
-name2('Nederland 1').
-name2('Nederland 2').
-name2('Nederland 3').
-name2('Ned. 1').
-name2('Ned. 2').
-name2('Ned. 3').
-name2('Ned 1').
-name2('Ned 2').
-name2('Ned 3').
-name2('1860 München').
-name2('RTL 4').
-name2('RTL 5').
-name2('RTL 7').
-name2('SBS 6').
-name2('SBS 9').
-name2('Vlaamse Gemeenschapscommissie').
-name2('Stedelijk Museum').
-name2('Serie A').
-name2('Dertigjarige Oorlog').
-name2('Openbaar Ministerie').
-name2('Openbaar ministerie').
-name2('Leefbaar Nederland').
-name2('Groothertogdom Luxemburg').
-name2('Werkgroep Jeugdgezondheidszorg').
-name2('Ruimtelijke Ordening').
-name2('Openbare Werken').
-name2('Noordelijke Nederlanden').
-name2('Nationale Bank').
-name2('Europees Ontwikkelingsfonds').
-name2('Meldpunt Vermisten').
-name2('NV Vloro').
-name2('Samyn and Partners').
-name2('Stichting Marketing').
-name2('Contactpunt Vlaanderen').
-name2('Uitgeverij TYR').
-name2('Europese Conventie').
-name2('Burgerlijk Wetboek').
-name2('Algemene Raad').
-name2('Rooms-Katholieke Kerk').
-name2('Socialistische Partij').
-name2('Nationaal Congres').
-name2('Nabije Oosten').
-name2('Leefbaar Rotterdam').
-name2('Dolle Dinsdag').
-name2('Centrale Commando').
-name2('Centraal Planbureau').
-name2('Algemene Rekenkamer').
-name2('Tweede Maasvlakte').
-name2('Nieuwe Testament').
-name2('Oude Testament').
-name2('Inter Milaan').
-name2('Club Brugge').
-name2('Atlético Madrid').
-
-name3('Wereld Economisch Forum').
-name3('Wetboek van Strafrecht').
-name3('Commissie Gelijke Behandeling').
-name3('Het Laatste Nieuws').
-name3('P & O').
-name3('Vrede van Westfalen').
-name3('Vrede van Beieren').
-name3('Vrede van Utrecht').
-name3('Verdrag van Verdun').
-name3('Verdrag van Londen').
-name3('Verbond van Lombardije').
-name3('Tweede Vaticaanse Concilie').
-name3('Internationaal Olympisch Comité').
-name3('Heilige Roomse Rijk').
-name3('Vereniging van Effectenbezitters').
-name3('Iers Republikeins Leger').
-name3('Nederlandse Honden Stamboek').
-name3('Nederlandse Rottweiler Club').
-name3('Vendex / KBB').
-name3('Suske en Wiske').
-name3('Universiteit van Leiden').
-name3('Radbout Universiteit Nijmegen').
-name3('Open Universiteit Nederland').
-name3('Katholieke Universiteit Leuven').
-name3('Erasmus Universiteit Rotterdam').
-name3('Universiteit van Amsterdam').
-name3('Katholieke Universiteit Nijmegen').
-name3('Vrije Universiteit Brussel').
-name3('Universiteit van Tilburg').
-name3('Fortis Private Banking').
-name3('Verdrag van Nice').
-name3('Verdrag van Versailles').
-name3('Ronde van Italië').
-name3('Ronde van Vlaanderen').
-name3('Raad van State').
-name3('Nationaal Epilepsie Fonds').
-name3('Epilepsie Vereniging Nederland').
-name3('Brussels Hoofdstedelijk Gewest').
-name3('Brusselse Hoofdstedelijk Gewest').
-name3('Brussels Hoofdstedelijk3 Gewest').
-name3('Brusselse Hoofdstedelijk3 Gewest').
-name3('Internationaal Monetair Fonds').
-name3('Nederlandse Juristen Vereniging').
-name3('Amsterdam Option Traders').
-name3('Huis Van Afgevaardigden').
-name3('Huis van Afgevaardigden').
-name3('Hof van Cassatie').
-name3('Slangen & Partners').
-name3('Rode Kruis Vlaanderen').
-name3('Lernout & Hauspie').
-name3('IBM Business Partners').
-
-name4('Eli Lilly Nederland B.V.').
-name4('De band Krijgt Kinderen').
-name4('De Band Krijgt Kinderen').
-name4('Partij van de Arbeid').
-name4('Nieuws in het Kort').
-name4('Raad voor de Journalistiek').
-name4('Stichting Epilepsie Instellingen Nederland').
-name4('Stichting Hans Berger Kliniek').
-name4('Federatie Slechtzienden- en Blindenbelang').
-
-name5('Raad van de Europese Unie').
-name5('Koninklijk Museum voor Schone Kunsten').
+:- use_module(mwu).
 
 with_dt_tags(Tree,Q0,L0,L) :-
     (   with_dt_tags_(Tree,Q0,L0,L)
@@ -3914,507 +3312,550 @@ guess_lemma(guess(Surf),Lemma) :-
     ->  Lemma = Lemma1
     ;   Lemma = Surf
     ).
-guess_lemma(Lemma,Lemma).
+guess_lemma(Surf,Lemma) :-
+    (    exc_lemma(Surf,Lemma1)
+    ->   Lemma = Lemma1
+    ;    Surf = Lemma
+    ).
+
+exc_lemma(sprake,spraak).
+
+exc_lemma('Beweging',beweging).
+exc_lemma('College',college).
+exc_lemma('Comité',comité).
+exc_lemma('Commissie',commissie).
+exc_lemma('Congres',congres).
+exc_lemma('Cultuur',cultuur).
+exc_lemma('Defensie',defensie).
+exc_lemma('Europese','Europees').
+exc_lemma('Financiën',financiën).
+exc_lemma('Gemeenschap',gemeenschap).
+exc_lemma('Grondwet',grondwet).
+exc_lemma('Hof',hof).
+exc_lemma('Hoogheid',hoogheid).
+exc_lemma('Journaal',journaal).
+exc_lemma('Justitie',justitie).
+exc_lemma('Kamer',kamer).
+exc_lemma('Kerk',kerk).
+exc_lemma('Koning',koning).
+exc_lemma('Koninklijk',koninklijk).
+exc_lemma('Koninklijke',koninklijk).
+exc_lemma('Landbouw',landbouw).
+exc_lemma('Museum',museum).
+exc_lemma('Olympische','Olympisch').
+exc_lemma('Onderwijs',onderwijs).
+exc_lemma('Ontwikkelingssamenwerking',ontwikkelingssamenwerking).
+exc_lemma('Raad',raad).
+exc_lemma('Senaat',senaat).
+exc_lemma('Staat',staat).
+exc_lemma('Stichting',stichting).
+exc_lemma('Strafwetboek',strafwetboek).
+exc_lemma('Unie',unie).
+exc_lemma('Universiteit',universiteit).
+exc_lemma('Verbond',verbond).
+exc_lemma('Verdrag',verdrag).
+exc_lemma('Vereniging',vereniging).
+exc_lemma('Volkskgezondheid',volksgezondheid).
 
 
-lassy_lemma(ten,te).
-lassy_lemma(ter,te).
-lassy_lemma(der,de).
-lassy_lemma('georganiseerd','organiseren').
-lassy_lemma('getroffen','treffen').
-lassy_lemma('hield','houden').
-lassy_lemma('landelijke','landelijk').
-lassy_lemma('maakten','maken').
-lassy_lemma('provincies','provincie').
-lassy_lemma('raakte','raken').
-lassy_lemma('volgend','volgen').
-lassy_lemma('wens','wensen').
-lassy_lemma('wilden','willen').
-lassy_lemma('beschouwd','beschouwen').
-lassy_lemma('Chinese','Chinees').
-lassy_lemma('Franstalige','Franstalig').
-lassy_lemma('honderden','honderd').
-lassy_lemma('ingezet','inzetten').
-lassy_lemma('mocht','mogen').
-lassy_lemma('nr.','nummer').
-lassy_lemma('prettige','prettig').
-lassy_lemma('\'t','het').
-lassy_lemma('vormt','vormen').
-lassy_lemma('behandeld','behandelen').
-lassy_lemma('best','goed').
-lassy_lemma('concrete','concreet').
-lassy_lemma('gebouwd','bouwen').
-lassy_lemma('Gemeenschap','gemeenschap').
-lassy_lemma('hoeft','hoeven').
-lassy_lemma('iedere','ieder').
-lassy_lemma('Spaanse','Spaans').
-lassy_lemma('verhalen','verhaal').
-lassy_lemma('betaald','betalen').
-lassy_lemma('cijfers','cijfer').
-lassy_lemma('grenzen','grens').
-lassy_lemma('lager','laag').
-lassy_lemma('overheden','overheid').
-lassy_lemma('regionale','regionaal').
-lassy_lemma('schreef','schrijven').
-lassy_lemma('Ten','te').
-lassy_lemma('Epilepsie','epilepsie').
-lassy_lemma('juiste','juist').
-lassy_lemma('Koning','koning').
-lassy_lemma('liep','lopen').
-lassy_lemma('banken','bank').
-lassy_lemma('bijzondere','bijzonder').
-lassy_lemma('Blz.','bladzij').
-lassy_lemma('Japanse','Japans').
-lassy_lemma('Kamer','kamer').
-lassy_lemma('medewerkers','medewerker').
-lassy_lemma('Terwijl','terwijl').
-lassy_lemma('vaste','vast').
-lassy_lemma('vonden','vinden').
-lassy_lemma('werkte','werken').
-lassy_lemma('zet','zetten').
-lassy_lemma('bevoegdheden','bevoegdheid').
-lassy_lemma('Hun','hun').
-lassy_lemma('stelde','stellen').
-lassy_lemma('grotere','groot').
-lassy_lemma('Men','men').
-lassy_lemma('Vandaag','vandaag').
-lassy_lemma('wilt','willen').
-lassy_lemma('duizenden','duizend').
-lassy_lemma('gebeurde','gebeuren').
-lassy_lemma('redenen','reden').
-lassy_lemma('vormen','vorm').
-lassy_lemma('werken','werk').
-lassy_lemma('won','winnen').
-lassy_lemma('belangen','belang').
-lassy_lemma('lag','liggen').
-lassy_lemma('soorten','soort').
-lassy_lemma('Waarom','waarom').
-lassy_lemma('wetenschappelijke','wetenschappelijk').
-lassy_lemma('afspraken','afspraak').
-lassy_lemma('heren','heer').
-lassy_lemma('Indien','indien').
-lassy_lemma('verkocht','verkopen').
-lassy_lemma('vielen','vallen').
-lassy_lemma('vóór','voor').
-lassy_lemma('wapens','wapen').
-lassy_lemma('Geen','geen').
-lassy_lemma('ogen','oog').
-lassy_lemma('risico\'s','risico').
-lassy_lemma('telt','tellen').
-lassy_lemma('uitgebreid','uitbreiden').
-lassy_lemma('verboden','verbieden').
-lassy_lemma('recente','recent').
-lassy_lemma('Andere','ander').
-lassy_lemma('boeren','boer').
-lassy_lemma('gekregen','krijgen').
-lassy_lemma('omstandigheden','omstandigheid').
-lassy_lemma('verbonden','verbinden').
-lassy_lemma('brengt','brengen').
-lassy_lemma('én','en').
-lassy_lemma('geleid','leiden').
-lassy_lemma('oudere','oud').
-lassy_lemma('punten','punt').
-lassy_lemma('vermiste','vermist').
-lassy_lemma('Arabische','Arabisch').
-lassy_lemma('vrije','vrij').
-lassy_lemma('bekende','bekend').
-lassy_lemma('besloot','besluiten').
-lassy_lemma('Externe','extern').
-lassy_lemma('kent','kennen').
-lassy_lemma('Nog','nog').
-lassy_lemma('vaker','vaak').
-lassy_lemma('verdachte','verdenken').
-lassy_lemma('bedoeld','bedoelen').
-lassy_lemma('beelden','beeld').
-lassy_lemma('Dames','dame').
-lassy_lemma('ernstige','ernstig').
-lassy_lemma('moderne','modern').
-lassy_lemma('Verder','verder').
-lassy_lemma('delen','deel').
-lassy_lemma('hogere','hoog').
-lassy_lemma('onderzocht','onderzoeken').
-lassy_lemma('ontwikkeld','ontwikkelen').
-lassy_lemma('partners','partner').
-lassy_lemma('vrienden','vriend').
-lassy_lemma('Zoals','zoals').
-lassy_lemma('beperkt','beperken').
-lassy_lemma('Een','één').
-lassy_lemma('\'s','de').
-lassy_lemma('Sommige','sommig').
-lassy_lemma('Alle','al').
-lassy_lemma('Dan','dan').
-lassy_lemma('groepen','groep').
-lassy_lemma('initiatieven','initiatief').
-lassy_lemma('Is','zijn').
-lassy_lemma('ontstond','ontstaan').
-lassy_lemma('prijzen','prijs').
-lassy_lemma('staten','staat').
-lassy_lemma('tanks','tank').
-lassy_lemma('trok','trekken').
-lassy_lemma('Wel','wel').
-lassy_lemma('bereikt','bereiken').
-lassy_lemma('Twee','twee').
-lassy_lemma('voorwaarden','voorwaarde').
-lassy_lemma('betreffende','betreffen').
-lassy_lemma('onderhandelingen','onderhandeling').
-lassy_lemma('Onderwijs','onderwijs').
-lassy_lemma('Palestijnse','Palestijns').
-lassy_lemma('rechten','recht').
-lassy_lemma('verloren','verliezen').
-lassy_lemma('gezegd','zeggen').
-lassy_lemma('stoffen','stof').
-lassy_lemma('studies','studie').
-lassy_lemma('technische','technisch').
-lassy_lemma('verplicht','verplichten').
-lassy_lemma('besloten','besluiten').
-lassy_lemma('verwacht','verwachten').
-lassy_lemma('gezet','zetten').
-lassy_lemma('betere','goed').
-lassy_lemma('Britten','Brit').
-lassy_lemma('gekozen','kiezen').
-lassy_lemma('zag','zien').
-lassy_lemma('bevat','bevatten').
-lassy_lemma('enorme','enorm').
-lassy_lemma('veroorzaakt','veroorzaken').
-lassy_lemma('dergelijke','dergelijk').
-lassy_lemma('doden','dood').
-lassy_lemma('ene','een').
-lassy_lemma('gewone','gewoon').
-lassy_lemma('mogelijkheden','mogelijkheid').
-lassy_lemma('minuten','minuut').
-lassy_lemma('totale','totaal').
-lassy_lemma('Wij','wij').
-lassy_lemma('wist','weten').
-lassy_lemma('bracht','brengen').
-lassy_lemma('echte','echt').
-lassy_lemma('klanten','klant').
-lassy_lemma('organisaties','organisatie').
-lassy_lemma('uitgevoerd','uitvoeren').
-lassy_lemma('verdere','ver').
-lassy_lemma('Alleen','alleen').
-lassy_lemma('boeken','boek').
-lassy_lemma('Daarbij','daarbij').
-lassy_lemma('Vooral','vooral').
-lassy_lemma('voormalige','voormalig').
-lassy_lemma('Wie','wie').
-lassy_lemma('begint','beginnen').
-lassy_lemma('Duitsers','Duitser').
-lassy_lemma('Omdat','omdat').
-lassy_lemma('Over','over').
-lassy_lemma('specifieke','specifiek').
-lassy_lemma('Al','al').
-lassy_lemma('gesproken','spreken').
-lassy_lemma('hebt','hebben').
-lassy_lemma('leidt','leiden').
-lassy_lemma('ministers','minister').
-lassy_lemma('Nederlanders','Nederlander').
-lassy_lemma('plannen','plan').
-lassy_lemma('werknemers','werknemer').
-lassy_lemma('gebaseerd','baseren').
-lassy_lemma('officiële','officieel').
-lassy_lemma('projecten','project').
-lassy_lemma('speciale','speciaal').
-lassy_lemma('studenten','student').
-lassy_lemma('gericht','richten').
-lassy_lemma('Iraakse','Iraaks').
-lassy_lemma('opgericht','oprichten').
-lassy_lemma('gingen','gaan').
-lassy_lemma('mogelijke','mogelijk').
-lassy_lemma('viel','vallen').
-lassy_lemma('volledige','volledig').
-lassy_lemma('woorden','woord').
-lassy_lemma('loopt','lopen').
-lassy_lemma('soldaten','soldaat').
-lassy_lemma('biedt','bieden').
-lassy_lemma('Hier','hier').
-lassy_lemma('Of','of').
-lassy_lemma('personen','persoon').
-lassy_lemma('gesloten','sluiten').
-lassy_lemma('ziet','zien').
-lassy_lemma('instellingen','instelling').
-lassy_lemma('interne','intern').
-lassy_lemma('Naast','naast').
-lassy_lemma('Uit','uit').
-lassy_lemma('gehad','hebben').
-lassy_lemma('goederen','goed').
-lassy_lemma('Je','je').
-lassy_lemma('plaatsen','plaats').
-lassy_lemma('sterke','sterk').
-lassy_lemma('Vanaf','vanaf').
-lassy_lemma('Buitenlandse','buitenlands').
-lassy_lemma('openbare','openbaar').
-lassy_lemma('speelt','spelen').
-lassy_lemma('Unie','unie').
-lassy_lemma('bepaald','bepalen').
-lassy_lemma('Italiaanse','Italiaans').
-lassy_lemma('leidde','leiden').
-lassy_lemma('Meer','veel').
-lassy_lemma('aanslagen','aanslag').
-lassy_lemma('kregen','krijgen').
-lassy_lemma('groter','groot').
-lassy_lemma('Justitie','justitie').
-lassy_lemma('jonge','jong').
-lassy_lemma('Russische','Russisch').
-lassy_lemma('burgers','burger').
-lassy_lemma('gebeurt','gebeuren').
-lassy_lemma('volgt','volgen').
-lassy_lemma('gevonden','vinden').
-lassy_lemma('kosten','kost').
-lassy_lemma('ben','zijn').
-lassy_lemma('der','de').
-lassy_lemma('Wanneer','wanneer').
-lassy_lemma('zogenaamde','zogenaamd').
-lassy_lemma('centrale','centraal').
-lassy_lemma('medicijnen','medicijn').
-lassy_lemma('vond','vinden').
-lassy_lemma('vragen','vraag').
-lassy_lemma('bestaande','bestaan').
-lassy_lemma('dient','dienen').
-lassy_lemma('slachtoffers','slachtoffer').
-lassy_lemma('diverse','divers').
-lassy_lemma('algemene','algemeen').
-lassy_lemma('betreft','betreffen').
-lassy_lemma('gesteld','stellen').
-lassy_lemma('korte','kort').
-lassy_lemma('Bovendien','bovendien').
-lassy_lemma('Daarom','daarom').
-lassy_lemma('Hoewel','hoewel').
-lassy_lemma('steden','stad').
-lassy_lemma('komende','komen').
-lassy_lemma('hoger','hoog').
-lassy_lemma('anderen','ander').
-lassy_lemma('deed','doen').
-lassy_lemma('gekomen','komen').
-lassy_lemma('inwoners','inwoner').
-lassy_lemma('moesten','moeten').
-lassy_lemma('valt','vallen').
-lassy_lemma('werkt','werken').
-lassy_lemma('Brusselse','Brussels').
-lassy_lemma('regels','regel').
-lassy_lemma('liet','laten').
-lassy_lemma('Niet','niet').
-lassy_lemma('resultaten','resultaat').
-lassy_lemma('gebieden','gebied').
-lassy_lemma('lokale','lokaal').
-lassy_lemma('militaire','militair').
-lassy_lemma('opgenomen','opnemen').
-lassy_lemma('gevallen','geval').
-lassy_lemma('betrokken','betrekken').
-lassy_lemma('bleef','blijven').
-lassy_lemma('handen','hand').
-lassy_lemma('Israëlische','Israëlisch').
-lassy_lemma('mannen','man').
-lassy_lemma('lange','lang').
-lassy_lemma('militairen','militair').
-lassy_lemma('Onder','onder').
-lassy_lemma('Sinds','sinds').
-lassy_lemma('stelt','stellen').
-lassy_lemma('Veel','veel').
-lassy_lemma('buitenlandse','buitenlands').
-lassy_lemma('gebracht','brengen').
-lassy_lemma('gezien','zien').
-lassy_lemma('middelen','middel').
-lassy_lemma('Nu','nu').
-lassy_lemma('begonnen','beginnen').
-lassy_lemma('zei','zeggen').
-lassy_lemma('gegeven','geven').
-lassy_lemma('lidstaten','lidstaat').
-lassy_lemma('nam','nemen').
-lassy_lemma('Daarnaast','daarnaast').
-lassy_lemma('DE','de').
-lassy_lemma('weet','weten').
-lassy_lemma('verder','ver').
-lassy_lemma('wilde','willen').
-lassy_lemma('betekent','betekenen').
-lassy_lemma('leerlingen','leerling').
-lassy_lemma('bent','zijn').
-lassy_lemma('Zaken','zaak').
-lassy_lemma('Aan','aan').
-lassy_lemma('gaf','geven').
-lassy_lemma('konden','kunnen').
-lassy_lemma('zie','zien').
-lassy_lemma('geworden','worden').
-lassy_lemma('stond','staan').
-lassy_lemma('financiële','financieel').
-lassy_lemma('activiteiten','activiteit').
-lassy_lemma('gevolgen','gevolg').
-lassy_lemma('neemt','nemen').
-lassy_lemma('Amerikanen','Amerikaan').
-lassy_lemma('genoemd','noemen').
-lassy_lemma('name','naam').
-lassy_lemma('troepen','troep').
-lassy_lemma('scholen','school').
-lassy_lemma('zware','zwaar').
-lassy_lemma('diensten','dienst').
-lassy_lemma('gedaan','doen').
-lassy_lemma('beste','goed').
-lassy_lemma('houdt','houden').
-lassy_lemma('laat','laten').
-lassy_lemma('langer','lang').
-lassy_lemma('partijen','partij').
-lassy_lemma('Tot','tot').
-lassy_lemma('producten','product').
-lassy_lemma('jongeren','jong').
-lassy_lemma('genomen','nemen').
-lassy_lemma('bleek','blijken').
-lassy_lemma('Toch','toch').
-lassy_lemma('Zie','zien').
-lassy_lemma('z\'n','zijn').
-lassy_lemma('eerst','één').
-lassy_lemma('nationale','nationaal').
-lassy_lemma('geldt','gelden').
-lassy_lemma('gemeenten','gemeente').
-lassy_lemma('zaken','zaak').
-lassy_lemma('begon','beginnen').
-lassy_lemma('federale','federaal').
-lassy_lemma('maatregelen','maatregel').
-lassy_lemma('Daar','daar').
-lassy_lemma('aanvallen','aanval').
-lassy_lemma('sommige','sommig').
-lassy_lemma('heb','hebben').
-lassy_lemma('Tijdens','tijdens').
-lassy_lemma('Want','want').
-lassy_lemma('vorige','vorig').
-lassy_lemma('leden','lid').
-lassy_lemma('Toen','toen').
-lassy_lemma('elke','elk').
-lassy_lemma('Hoe','hoe').
-lassy_lemma('patiënten','patiënt').
-lassy_lemma('gegevens','gegeven').
-lassy_lemma('lijkt','lijken').
-lassy_lemma('woningen','woning').
-lassy_lemma('hoge','hoog').
-lassy_lemma('gehouden','houden').
-lassy_lemma('maakte','maken').
-lassy_lemma('Minister','minister').
-lassy_lemma('verkiezingen','verkiezing').
-lassy_lemma('derde','drie').
-lassy_lemma('zit','zitten').
-lassy_lemma('bepaalde','bepalen').
-lassy_lemma('duurzame','duurzaam').
-lassy_lemma('bedrijven','bedrijf').
-lassy_lemma('doet','doen').
-lassy_lemma('problemen','probleem').
-lassy_lemma('huidige','huidig').
-lassy_lemma('oude','oud').
-lassy_lemma('kwamen','komen').
-lassy_lemma('weken','week').
-lassy_lemma('welke','welk').
-lassy_lemma('belangrijkste','belangrijk').
-lassy_lemma('meeste','veel').
-lassy_lemma('enige','enig').
-lassy_lemma('ouders','ouder').
-lassy_lemma('kleine','klein').
-lassy_lemma('Zijn','zijn').
-lassy_lemma('geeft','geven').
-lassy_lemma('geweest','zijn').
-lassy_lemma('Van','van').
-lassy_lemma('ontwikkelingslanden','ontwikkelingsland').
-lassy_lemma('maanden','maand').
-lassy_lemma('ligt','liggen').
-lassy_lemma('vrouwen','vrouw').
-lassy_lemma('goede','goed').
-lassy_lemma('meest','veel').
-lassy_lemma('U','u').
-lassy_lemma('kreeg','krijgen').
-lassy_lemma('vele','veel').
-lassy_lemma('bestaat','bestaan').
-lassy_lemma('Wat','wat').
-lassy_lemma('beter','goed').
-lassy_lemma('We','we').
-lassy_lemma('afgelopen','aflopen').
-lassy_lemma('Britse','Brits').
-lassy_lemma('economische','economisch').
-lassy_lemma('Franse','Frans').
-lassy_lemma('Zij','zij').
-lassy_lemma('maakt','maken').
-lassy_lemma('dagen','dag').
-lassy_lemma('moest','moeten').
-lassy_lemma('vindt','vinden').
-lassy_lemma('blijkt','blijken').
-lassy_lemma('belangrijke','belangrijk').
-lassy_lemma('sociale','sociaal').
-lassy_lemma('blijft','blijven').
-lassy_lemma('ter','te').
-lassy_lemma('krijgt','krijgen').
-lassy_lemma('Door','door').
-lassy_lemma('hele','heel').
-lassy_lemma('grootste','groot').
-lassy_lemma('gebruikt','gebruiken').
-lassy_lemma('ging','gaan').
-lassy_lemma('internationale','internationaal').
-lassy_lemma('Om','om').
-lassy_lemma('zegt','zeggen').
-lassy_lemma('mag','mogen').
-lassy_lemma('gemaakt','maken').
-lassy_lemma('kunt','kunnen').
-lassy_lemma('Volgens','volgens').
-lassy_lemma('Duitse','Duits').
-lassy_lemma('tweede','twee').
-lassy_lemma('politieke','politiek').
-lassy_lemma('volgende','volgen').
-lassy_lemma('zouden','zullen').
-lassy_lemma('kon','kunnen').
-lassy_lemma('Zo','zo').
-lassy_lemma('een','één').
-lassy_lemma('hadden','hebben').
-lassy_lemma('later','laat').
-lassy_lemma('kinderen','kind').
-lassy_lemma('minder','weinig').
-lassy_lemma('Belgische','Belgisch').
-lassy_lemma('Na','na').
-lassy_lemma('onze','ons').
-lassy_lemma('ten','te').
-lassy_lemma('staat','staan').
-lassy_lemma('Europese','Europees').
-lassy_lemma('Met','met').
-lassy_lemma('enkele','enkel').
-lassy_lemma('Die','die').
-lassy_lemma('Ik','ik').
-lassy_lemma('laatste','laat').
-lassy_lemma('verschillende','verschillend').
-lassy_lemma('kwam','komen').
+lassy_lemma('Aan',aan).
+lassy_lemma(aanslagen,aanslag).
+lassy_lemma(aanvallen,aanval).
+lassy_lemma(activiteiten,activiteit).
+lassy_lemma(afgelopen,aflopen).
+lassy_lemma(afspraken,afspraak).
+lassy_lemma('Al',al).
+lassy_lemma(algemene,algemeen).
+lassy_lemma(alle,al).
+lassy_lemma('Alle',al).
+lassy_lemma('Alleen',alleen).
+lassy_lemma('Als',als).
 lassy_lemma('Amerikaanse','Amerikaans').
-lassy_lemma('Bij','bij').
-lassy_lemma('landen','land').
-lassy_lemma('komt','komen').
-lassy_lemma('Ze','ze').
-lassy_lemma('Voor','voor').
-lassy_lemma('Vlaamse','Vlaams').
+lassy_lemma('Amerikanen','Amerikaan').
+lassy_lemma(andere,ander).
+lassy_lemma('Andere',ander).
+lassy_lemma(anderen,ander).
+lassy_lemma('Arabische','Arabisch').
+lassy_lemma(banken,bank).
+lassy_lemma(bedoeld,bedoelen).
+lassy_lemma(bedrijven,bedrijf).
+lassy_lemma(beelden,beeld).
+lassy_lemma(begint,beginnen).
+lassy_lemma(begon,beginnen).
+lassy_lemma(begonnen,beginnen).
+lassy_lemma(behandeld,behandelen).
+lassy_lemma(bekende,bekend).
+lassy_lemma(belangen,belang).
+lassy_lemma(belangrijke,belangrijk).
+lassy_lemma(belangrijkste,belangrijk).
+lassy_lemma('Belgische','Belgisch').
+lassy_lemma(bent,zijn).
+lassy_lemma(ben,zijn).
+lassy_lemma(bepaald,bepalen).
+lassy_lemma(bepaalde,bepalen).
+lassy_lemma(beperkt,beperken).
+lassy_lemma(bereikt,bereiken).
+lassy_lemma(beschouwd,beschouwen).
+lassy_lemma(besloot,besluiten).
+lassy_lemma(besloten,besluiten).
+lassy_lemma(bestaande,bestaan).
+lassy_lemma(bestaat,bestaan).
+lassy_lemma(beste,goed).
+lassy_lemma(best,goed).
+lassy_lemma(betaald,betalen).
+lassy_lemma(betekent,betekenen).
+lassy_lemma(betere,goed).
+lassy_lemma(beter,goed).
+lassy_lemma(betreffende,betreffen).
+lassy_lemma(betreft,betreffen).
+lassy_lemma(betrokken,betrekken).
+lassy_lemma(bevat,bevatten).
+lassy_lemma(bevoegdheden,bevoegdheid).
+lassy_lemma(biedt,bieden).
+lassy_lemma('Bij',bij).
+lassy_lemma(bijzondere,bijzonder).
+lassy_lemma(bleef,blijven).
+lassy_lemma(bleek,blijken).
+lassy_lemma(blijft,blijven).
+lassy_lemma(blijkt,blijken).
+lassy_lemma('Blz.',bladzij).
+lassy_lemma(boeken,boek).
+lassy_lemma(boeren,boer).
+lassy_lemma('Bovendien',bovendien).
+lassy_lemma(bracht,brengen).
+lassy_lemma(brengt,brengen).
+lassy_lemma('Britse','Brits').
+lassy_lemma('Britten','Brit').
+lassy_lemma('Brusselse','Brussels').
+lassy_lemma(buitenlandse,buitenlands).
+lassy_lemma('Buitenlandse',buitenlands).
+lassy_lemma(burgers,burger).
+lassy_lemma(centrale,centraal).
+lassy_lemma('Chinese','Chinees').
+lassy_lemma(cijfers,cijfer).
+lassy_lemma(concrete,concreet).
+lassy_lemma('Daarbij',daarbij).
+lassy_lemma('Daar',daar).
+lassy_lemma('Daarnaast',daarnaast).
+lassy_lemma('Daarom',daarom).
+lassy_lemma(dagen,dag).
+lassy_lemma('Dames',dame).
+lassy_lemma('Dan',dan).
+lassy_lemma('Dat',dat).
+lassy_lemma('De',de).
+lassy_lemma('DE',de).
+lassy_lemma(deed,doen).
+lassy_lemma(delen,deel).
+lassy_lemma(der,de).
+lassy_lemma(der,de).
+lassy_lemma(derde,drie).
+lassy_lemma(dergelijke,dergelijk).
+lassy_lemma('Deze',deze).
+lassy_lemma('Die',die).
+lassy_lemma(diensten,dienst).
+lassy_lemma(dient,dienen).
+lassy_lemma('Dit',dit).
+lassy_lemma(diverse,divers).
+lassy_lemma(doden,dood).
+lassy_lemma(doet,doen).
+lassy_lemma('Door',door).
+lassy_lemma('Duitse','Duits').
+lassy_lemma('Duitsers','Duitser').
+lassy_lemma(duizenden,duizend).
+lassy_lemma(duurzame,duurzaam).
+lassy_lemma(echte,echt).
+lassy_lemma(economische,economisch).
+lassy_lemma('Een',een).
+lassy_lemma(een,één).
+lassy_lemma('Een',één).
+lassy_lemma(eerste,één).
+lassy_lemma(eerst,één).
+lassy_lemma(elke,elk).
+lassy_lemma(ene,een).
+lassy_lemma('En',en).
+lassy_lemma(én,en).
+lassy_lemma(enige,enig).
+lassy_lemma(enkele,enkel).
+lassy_lemma(enorme,enorm).
+lassy_lemma('Epilepsie',epilepsie).
+lassy_lemma('Er',er).
+lassy_lemma(ernstige,ernstig).
+lassy_lemma('Europese','Europees').
+lassy_lemma('Externe',extern).
+lassy_lemma(federale,federaal).
+lassy_lemma(financiële,financieel).
+lassy_lemma('Franse','Frans').
+lassy_lemma('Franstalige','Franstalig').
+lassy_lemma(gaat,gaan).
+lassy_lemma(gaf,geven).
+lassy_lemma(gebaseerd,baseren).
+lassy_lemma(gebeurde,gebeuren).
+lassy_lemma(gebeurt,gebeuren).
+lassy_lemma(gebieden,gebied).
+lassy_lemma(gebouwd,bouwen).
+lassy_lemma(gebracht,brengen).
+lassy_lemma(gebruikt,gebruiken).
+lassy_lemma(gedaan,doen).
+lassy_lemma(geeft,geven).
+lassy_lemma('Geen',geen).
+lassy_lemma(gegeven,geven).
+lassy_lemma(gegevens,gegeven).
+lassy_lemma(gehad,hebben).
+lassy_lemma(gehouden,houden).
+lassy_lemma(gekomen,komen).
+lassy_lemma(gekozen,kiezen).
+lassy_lemma(gekregen,krijgen).
+lassy_lemma(geldt,gelden).
+lassy_lemma(geleid,leiden).
+lassy_lemma(gemaakt,maken).
+lassy_lemma('Gemeenschap',gemeenschap).
+lassy_lemma(gemeenten,gemeente).
+lassy_lemma(genoemd,noemen).
+lassy_lemma(genomen,nemen).
+lassy_lemma(georganiseerd,organiseren).
+lassy_lemma(gericht,richten).
+lassy_lemma(gesloten,sluiten).
+lassy_lemma(gesproken,spreken).
+lassy_lemma(gesteld,stellen).
+lassy_lemma(getroffen,treffen).
+lassy_lemma(gevallen,geval).
+lassy_lemma(gevolgen,gevolg).
+lassy_lemma(gevonden,vinden).
+lassy_lemma(geweest,zijn).
+lassy_lemma(gewone,gewoon).
+lassy_lemma(geworden,worden).
+lassy_lemma(gezegd,zeggen).
+lassy_lemma(gezet,zetten).
+lassy_lemma(gezien,zien).
+lassy_lemma(gingen,gaan).
+lassy_lemma(ging,gaan).
+lassy_lemma(goede,goed).
+lassy_lemma(goederen,goed).
+lassy_lemma(grenzen,grens).
+lassy_lemma(groepen,groep).
+lassy_lemma(grootste,groot).
+lassy_lemma(grote,groot).
+lassy_lemma(grotere,groot).
+lassy_lemma(groter,groot).
+lassy_lemma(hadden,hebben).
+lassy_lemma(had,hebben).
+lassy_lemma(handen,hand).
+lassy_lemma(heb,hebben).
+lassy_lemma(hebt,hebben).
+lassy_lemma(heeft,hebben).
+lassy_lemma(hele,heel).
+lassy_lemma(heren,heer).
+lassy_lemma('Het',het).
+lassy_lemma(hield,houden).
+lassy_lemma('Hier',hier).
+lassy_lemma('Hij',hij).
+lassy_lemma(hoeft,hoeven).
+lassy_lemma('Hoe',hoe).
+lassy_lemma('Hoewel',hoewel).
+lassy_lemma(hoge,hoog).
+lassy_lemma(hogere,hoog).
+lassy_lemma(hoger,hoog).
+lassy_lemma(honderden,honderd).
+lassy_lemma(houdt,houden).
+lassy_lemma(huidige,huidig).
+lassy_lemma('Hun',hun).
+lassy_lemma(iedere,ieder).
+lassy_lemma('Ik',ik).
+lassy_lemma('Indien',indien).
+lassy_lemma(ingezet,inzetten).
+lassy_lemma('In',in).
+lassy_lemma(initiatieven,initiatief).
+lassy_lemma(instellingen,instelling).
+lassy_lemma(internationale,internationaal).
+lassy_lemma(interne,intern).
+lassy_lemma(inwoners,inwoner).
+lassy_lemma('Iraakse','Iraaks').
+lassy_lemma('Israëlische','Israëlisch').
+lassy_lemma(is,zijn).
+lassy_lemma('Is',zijn).
+lassy_lemma('Italiaanse','Italiaans').
+lassy_lemma('Japanse','Japans').
+lassy_lemma(jaren,jaar).
+lassy_lemma('Je',je).
+lassy_lemma(jonge,jong).
+lassy_lemma(jongeren,jong).
+lassy_lemma(juiste,juist).
+lassy_lemma('Justitie',justitie).
+lassy_lemma('Kamer',kamer).
+lassy_lemma(kan,kunnen).
+lassy_lemma(kent,kennen).
+lassy_lemma(kinderen,kind).
+lassy_lemma(klanten,klant).
+lassy_lemma(kleine,klein).
+lassy_lemma(komende,komen).
+lassy_lemma(komt,komen).
+lassy_lemma(konden,kunnen).
+lassy_lemma('Koning',koning).
+lassy_lemma(kon,kunnen).
+lassy_lemma(korte,kort).
+lassy_lemma(kosten,kost).
+lassy_lemma(kreeg,krijgen).
+lassy_lemma(kregen,krijgen).
+lassy_lemma(krijgt,krijgen).
+lassy_lemma(kunt,kunnen).
+lassy_lemma(kwamen,komen).
+lassy_lemma(kwam,komen).
+lassy_lemma(laat,laten).
+lassy_lemma(laatste,laat).
+lassy_lemma(lager,laag).
+lassy_lemma(lag,liggen).
+lassy_lemma(landelijke,landelijk).
+lassy_lemma(landen,land).
+lassy_lemma(lange,lang).
+lassy_lemma(langer,lang).
+lassy_lemma(later,laat).
+lassy_lemma(leden,lid).
+lassy_lemma(leerlingen,leerling).
+lassy_lemma(leidde,leiden).
+lassy_lemma(leidt,leiden).
+lassy_lemma(lidstaten,lidstaat).
+lassy_lemma(liep,lopen).
+lassy_lemma(liet,laten).
+lassy_lemma(ligt,liggen).
+lassy_lemma(lijkt,lijken).
+lassy_lemma(lokale,lokaal).
+lassy_lemma(loopt,lopen).
+lassy_lemma(maakte,maken).
+lassy_lemma(maakten,maken).
+lassy_lemma(maakt,maken).
+lassy_lemma(maanden,maand).
+lassy_lemma('Maar',maar).
+lassy_lemma(maatregelen,maatregel).
+lassy_lemma(mag,mogen).
+lassy_lemma(mannen,man).
+lassy_lemma(medewerkers,medewerker).
+lassy_lemma(medicijnen,medicijn).
+lassy_lemma(meer,veel).
+lassy_lemma('Meer',veel).
+lassy_lemma(meeste,veel).
+lassy_lemma(meest,veel).
+lassy_lemma('Men',men).
+lassy_lemma(mensen,mens).
+lassy_lemma('Met',met).
+lassy_lemma(middelen,middel).
+lassy_lemma(militaire,militair).
+lassy_lemma(militairen,militair).
+lassy_lemma(minder,weinig).
+lassy_lemma('Minister',minister).
+lassy_lemma(ministers,minister).
+lassy_lemma(minuten,minuut).
+lassy_lemma(mocht,mogen).
+lassy_lemma(moderne,modern).
+lassy_lemma(moesten,moeten).
+lassy_lemma(moest,moeten).
+lassy_lemma(moet,moeten).
+lassy_lemma(mogelijke,mogelijk).
+lassy_lemma(mogelijkheden,mogelijkheid).
+lassy_lemma('Naast',naast).
+lassy_lemma(name,naam).
+lassy_lemma(nam,nemen).
+lassy_lemma('Na',na).
+lassy_lemma(nationale,nationaal).
+lassy_lemma('Nederlanders','Nederlander').
 lassy_lemma('Nederlandse','Nederlands').
-lassy_lemma('jaren','jaar').
-lassy_lemma('wil','willen').
-lassy_lemma('Als','als').
-lassy_lemma('Er','er').
-lassy_lemma('Deze','deze').
-lassy_lemma('gaat','gaan').
-lassy_lemma('grote','groot').
-lassy_lemma('Ook','ook').
-lassy_lemma('Dit','dit').
-lassy_lemma('Hij','hij').
-lassy_lemma('alle','al').
-lassy_lemma('Op','op').
-lassy_lemma('waren','zijn').
-lassy_lemma('Dat','dat').
-lassy_lemma('mensen','mens').
-lassy_lemma('had','hebben').
-lassy_lemma('werden','worden').
-lassy_lemma('zal','zullen').
-lassy_lemma('En','en').
-lassy_lemma('zou','zullen').
-lassy_lemma('eerste','één').
-lassy_lemma('moet','moeten').
-lassy_lemma('Maar','maar').
-lassy_lemma('nieuwe','nieuw').
-lassy_lemma('andere','ander').
-lassy_lemma('Een','een').
-lassy_lemma('kan','kunnen').
-lassy_lemma('meer','veel').
-lassy_lemma('heeft','hebben').
-lassy_lemma('wordt','worden').
-lassy_lemma('werd','worden').
-lassy_lemma('In','in').
-lassy_lemma('was','zijn').
-lassy_lemma('Het','het').
-lassy_lemma('De','de').
-lassy_lemma('is','zijn').
+lassy_lemma(neemt,nemen).
+lassy_lemma('Niet',niet).
+lassy_lemma(nieuwe,nieuw).
+lassy_lemma('Nog',nog).
+lassy_lemma('nr.',nummer).
+lassy_lemma('Nu',nu).
+lassy_lemma(officiële,officieel).
+lassy_lemma('Of',of).
+lassy_lemma(ogen,oog).
+lassy_lemma('Omdat',omdat).
+lassy_lemma('Om',om).
+lassy_lemma(omstandigheden,omstandigheid).
+lassy_lemma(onderhandelingen,onderhandeling).
+lassy_lemma('Onder',onder).
+lassy_lemma('Onderwijs',onderwijs).
+lassy_lemma(onderzocht,onderzoeken).
+lassy_lemma(ontstond,ontstaan).
+lassy_lemma(ontwikkeld,ontwikkelen).
+lassy_lemma(ontwikkelingslanden,ontwikkelingsland).
+lassy_lemma(onze,ons).
+lassy_lemma('Ook',ook).
+lassy_lemma(openbare,openbaar).
+lassy_lemma(opgenomen,opnemen).
+lassy_lemma(opgericht,oprichten).
+lassy_lemma('Op',op).
+lassy_lemma(organisaties,organisatie).
+lassy_lemma(oude,oud).
+lassy_lemma(oudere,oud).
+lassy_lemma(ouders,ouder).
+lassy_lemma(overheden,overheid).
+lassy_lemma('Over',over).
+lassy_lemma('Palestijnse','Palestijns').
+lassy_lemma(partijen,partij).
+lassy_lemma(partners,partner).
+lassy_lemma(patiënten,patiënt).
+lassy_lemma(personen,persoon).
+lassy_lemma(plaatsen,plaats).
+lassy_lemma(plannen,plan).
+lassy_lemma(politieke,politiek).
+lassy_lemma(prettige,prettig).
+lassy_lemma(prijzen,prijs).
+lassy_lemma(problemen,probleem).
+lassy_lemma(producten,product).
+lassy_lemma(projecten,project).
+lassy_lemma(provincies,provincie).
+lassy_lemma(punten,punt).
+lassy_lemma(raakte,raken).
+lassy_lemma(recente,recent).
+lassy_lemma(rechten,recht).
+lassy_lemma(redenen,reden).
+lassy_lemma(regels,regel).
+lassy_lemma(regionale,regionaal).
+lassy_lemma(resultaten,resultaat).
+lassy_lemma('risico\'s',risico).
+lassy_lemma('Russische','Russisch').
+lassy_lemma(scholen,school).
+lassy_lemma(schreef,schrijven).
+lassy_lemma('\'s',de).
+lassy_lemma('Sinds',sinds).
+lassy_lemma(slachtoffers,slachtoffer).
+lassy_lemma(sociale,sociaal).
+lassy_lemma(soldaten,soldaat).
+lassy_lemma(sommige,sommig).
+lassy_lemma('Sommige',sommig).
+lassy_lemma(soorten,soort).
+lassy_lemma('Spaanse','Spaans').
+lassy_lemma(speciale,speciaal).
+lassy_lemma(specifieke,specifiek).
+lassy_lemma(speelt,spelen).
+lassy_lemma(staat,staan).
+lassy_lemma(staten,staat).
+lassy_lemma(steden,stad).
+lassy_lemma(stelde,stellen).
+lassy_lemma(stelt,stellen).
+lassy_lemma(sterke,sterk).
+lassy_lemma(stoffen,stof).
+lassy_lemma(stond,staan).
+lassy_lemma(studenten,student).
+lassy_lemma(studies,studie).
+lassy_lemma(tanks,tank).
+lassy_lemma(technische,technisch).
+lassy_lemma(telt,tellen).
+lassy_lemma(ten,te).
+lassy_lemma(ten,te).
+lassy_lemma('Ten',te).
+lassy_lemma(ter,te).
+lassy_lemma(ter,te).
+lassy_lemma('Terwijl',terwijl).
+lassy_lemma('\'t',het).
+lassy_lemma('Tijdens',tijdens).
+lassy_lemma('Toch',toch).
+lassy_lemma('Toen',toen).
+lassy_lemma(totale,totaal).
+lassy_lemma('Tot',tot).
+lassy_lemma(troepen,troep).
+lassy_lemma(trok,trekken).
+lassy_lemma(tweede,twee).
+lassy_lemma('Twee',twee).
+lassy_lemma(uitgebreid,uitbreiden).
+lassy_lemma(uitgevoerd,uitvoeren).
+lassy_lemma('Uit',uit).
+lassy_lemma('Unie',unie).
+lassy_lemma('U',u).
+lassy_lemma(vaker,vaak).
+lassy_lemma(valt,vallen).
+lassy_lemma('Vanaf',vanaf).
+lassy_lemma('Vandaag',vandaag).
+lassy_lemma('Van',van).
+lassy_lemma(vaste,vast).
+lassy_lemma('Veel',veel).
+lassy_lemma(vele,veel).
+lassy_lemma(verboden,verbieden).
+lassy_lemma(verbonden,verbinden).
+lassy_lemma(verdachte,verdenken).
+lassy_lemma(verdere,ver).
+lassy_lemma(verder,ver).
+lassy_lemma('Verder',verder).
+lassy_lemma(verhalen,verhaal).
+lassy_lemma(verkiezingen,verkiezing).
+lassy_lemma(verkocht,verkopen).
+lassy_lemma(verloren,verliezen).
+lassy_lemma(vermiste,vermist).
+lassy_lemma(veroorzaakt,veroorzaken).
+lassy_lemma(verplicht,verplichten).
+lassy_lemma(verschillende,verschillend).
+lassy_lemma(verwacht,verwachten).
+lassy_lemma(vielen,vallen).
+lassy_lemma(viel,vallen).
+lassy_lemma(vindt,vinden).
+lassy_lemma('Vlaamse','Vlaams').
+lassy_lemma(volgende,volgen).
+lassy_lemma(volgend,volgen).
+lassy_lemma('Volgens',volgens).
+lassy_lemma(volgt,volgen).
+lassy_lemma(volledige,volledig).
+lassy_lemma(vonden,vinden).
+lassy_lemma(vond,vinden).
+lassy_lemma('Vooral',vooral).
+lassy_lemma(voormalige,voormalig).
+lassy_lemma('Voor',voor).
+lassy_lemma(vóór,voor).
+lassy_lemma(voorwaarden,voorwaarde).
+lassy_lemma(vorige,vorig).
+lassy_lemma(vormen,vorm).
+lassy_lemma(vormt,vormen).
+lassy_lemma(vragen,vraag).
+lassy_lemma(vrienden,vriend).
+lassy_lemma(vrije,vrij).
+lassy_lemma(vrouwen,vrouw).
+lassy_lemma('Waarom',waarom).
+lassy_lemma('Wanneer',wanneer).
+lassy_lemma('Want',want).
+lassy_lemma(wapens,wapen).
+lassy_lemma(waren,zijn).
+lassy_lemma(was,zijn).
+lassy_lemma('Wat',wat).
+lassy_lemma(weet,weten).
+lassy_lemma(weken,week).
+lassy_lemma(welke,welk).
+lassy_lemma('Wel',wel).
+lassy_lemma(wens,wensen).
+lassy_lemma(werden,worden).
+lassy_lemma(werd,worden).
+lassy_lemma(werken,werk).
+lassy_lemma(werknemers,werknemer).
+lassy_lemma(werkte,werken).
+lassy_lemma(werkt,werken).
+lassy_lemma(wetenschappelijke,wetenschappelijk).
+lassy_lemma('We',we).
+lassy_lemma('Wie',wie).
+lassy_lemma('Wij',wij).
+lassy_lemma(wilden,willen).
+lassy_lemma(wilde,willen).
+lassy_lemma(wilt,willen).
+lassy_lemma(wil,willen).
+lassy_lemma(wist,weten).
+lassy_lemma(woningen,woning).
+lassy_lemma(won,winnen).
+lassy_lemma(woorden,woord).
+lassy_lemma(wordt,worden).
+lassy_lemma(zag,zien).
+lassy_lemma(zaken,zaak).
+lassy_lemma('Zaken',zaak).
+lassy_lemma(zal,zullen).
+lassy_lemma(zegt,zeggen).
+lassy_lemma(zei,zeggen).
+lassy_lemma(zet,zetten).
+lassy_lemma('Ze',ze).
+lassy_lemma(ziet,zien).
+lassy_lemma(zie,zien).
+lassy_lemma('Zie',zien).
+lassy_lemma('Zijn',zijn).
+lassy_lemma('Zij',zij).
+lassy_lemma(zit,zitten).
+lassy_lemma('z\'n',zijn).
+lassy_lemma('Zoals',zoals).
+lassy_lemma(zogenaamde,zogenaamd).
+lassy_lemma(zouden,zullen).
+lassy_lemma(zou,zullen).
+lassy_lemma('Zo',zo).
+lassy_lemma(zware,zwaar).
