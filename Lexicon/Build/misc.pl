@@ -1960,7 +1960,7 @@ m(heleboel,      determiner(wat,nwh,mod,pro,nparg),heleboel).
 m(het,           determiner(het,nwh,nmod,pro,nparg,wkpro),het).
 m(hetzelfde,     determiner(het,nwh,mod,pro,yparg),hetzelfde).
 m(hun,           determiner(pron),hun).
-m(hunner,        determiner(der),hunner).
+m(hun,           determiner(der),hunner).
 %m(hun,           determiner(pron),ulder).
 %m(hun,           determiner(pron),zullie).
 m(ieder,         determiner(het,nwh,mod),ieder).
@@ -1970,7 +1970,7 @@ m(iemand,        determiner(pron),iemands).
 m(je,            determiner(pron),je).
 m('de reinste',  determiner(both),[de,reinste]).
 m('je reinste',  determiner(both),[je,reinste]).
-m(jouw,          determiner(pron),jouw).
+m(jou,           determiner(pron),jouw).
 m(jullie,        determiner(pron),jullie).
 m(meerdere,      determiner(pl_num,nwh,nmod,pro,yparg),meerdere).
 m(menig,         determiner(een),menig).
@@ -1986,7 +1986,7 @@ m(ons,           determiner(het),ons).
 m(ons,           determiner(onze),onze).
 m(ons,           determiner(der),onzer).
 %m(ons,           determiner(pron),onzer).
-m('ons aller',   determiner(pron),[ons,aller]).
+m('ons al',   determiner(pron),[ons,aller]).
 m(onvoldoende,   determiner(wat,nwh,mod,pro,yparg),onvoldoende).
 m(sommig,        determiner(pl_num,nwh,nmod,pro,yparg),sommige).
 %m(tal,           determiner(wat),tal).  % ja dat zeggen mensen echt
@@ -1996,7 +1996,7 @@ m(tal,           determiner(wat,nwh,mod,pro,yparg),tal).
 %% tal van medewerkers raakten gewond
 %% tal van zijn medewerkers raakten gewond
 m(u,             determiner(pron),uw).
-m('uw aller',    determiner(pron),[uw,aller]).
+m('u al',    determiner(pron),[uw,aller]).
 %m(u,            determiner(pron),uwe).    % vlaams
 %m(u,            determiner(pron),uwen).   % vlaams
 %m(u,            determiner(pron),uwer).
@@ -2055,7 +2055,7 @@ with_dt([niet,een],
 with_dt([niet,eentje],
 	pronoun(nwh,thi,sg,both,both,indef,strpro),
 	dt(detp,[mod=l(niet,adverb,advp,0,1),
-		 hd=l(eentje,pronoun(nwh,thi,sg,de,both,indef),1,2)])).
+		 hd=l(één,pronoun(nwh,thi,sg,de,both,indef),1,2)])).
 
 m('\'s koning', determiner(pron), ['\'s',konings]).
 m('\'s koning', determiner(pron), ['\'s',keizers]).
@@ -2107,22 +2107,22 @@ m('Rood',      name_determiner(pron,'PER'),['Roods']).
 with_dt([Mijn,Vaders],
 	determiner(pron),
 	dt(detp,[hd=l(Vader,noun(de,count,sg),1,2),
-		 det=l(Mijn,determiner(pron),detp,0,1)
+		 det=l(MijnL,determiner(pron),detp,0,1)
 		])) :-
-    mijn_vaders_mijn(Mijn),
+    mijn_vaders_mijn(Mijn,MijnL),
     mijn_vaders_vaders(Vader,Vaders).
 
-mijn_vaders_mijn(je).
-mijn_vaders_mijn(mijn).
-mijn_vaders_mijn('m\'n').
-mijn_vaders_mijn(zijn).
-mijn_vaders_mijn('z\'n').
-mijn_vaders_mijn(haar).
-mijn_vaders_mijn('d\'r').
-mijn_vaders_mijn(hun).
-mijn_vaders_mijn(jouw).
-mijn_vaders_mijn(jullie).
-mijn_vaders_mijn(uw).
+mijn_vaders_mijn(je,je).
+mijn_vaders_mijn(mijn,mijn).
+mijn_vaders_mijn('m\'n',mijn).
+mijn_vaders_mijn(zijn,zijn).
+mijn_vaders_mijn('z\'n',zijn).
+mijn_vaders_mijn(haar,haar).
+mijn_vaders_mijn('d\'r',haar).
+mijn_vaders_mijn(hun,hun).
+mijn_vaders_mijn(jouw,jou).
+mijn_vaders_mijn(jullie,jullie).
+mijn_vaders_mijn(uw,u).
 
 mijn_vaders_vaders(broer,broers).
 mijn_vaders_vaders(broeder,broeders).
@@ -2236,8 +2236,8 @@ with_dt([van,zulke],
        ).
 
 %m(welk,          determiner(pron,rwh), welks). parse_only_lex
-m(wiens,         determiner(pron,rwh), wiens).
-m(wier,          determiner(pron,rwh), wier).
+m(wie,           determiner(pron,rwh), wiens).
+m(wie,           determiner(pron,rwh), wier).
 
 m(datzelfde,     comp_determiner(het,als),datzelfde).
 m(dezelfde,      comp_determiner(de,als  ),dezelfde).
@@ -2532,7 +2532,7 @@ preposition(aldus).
 m(dixit,preposition(aldus,[]),dixit).  % also for dip
 preposition(anno).
 preposition(à).
-preposition(betreffende).
+m(betreffen,preposition(betreffende,[]),betreffende).
 preposition(bezijden).
 %preposition(bijgenaamd).
 preposition(blijkens).
@@ -2608,7 +2608,7 @@ preposition(vergelijk).
 preposition(via).
 preposition(wegens).
 preposition(volgens).
-preposition(zijnde).
+m(zijn,preposition(zijnde,[]),zijnde).
 
 preposition('d.d.').            % tja...
 preposition('na/op').           % tja...
@@ -2904,7 +2904,6 @@ collocational_preposition([tegen,betaling,van]).
 collocational_preposition([uit,kracht,van]).
 collocational_preposition([van,de,kant,van]).
 collocational_preposition([door,toedoen,van]).
-
 
 
 with_dt([zonder,blikken,of,blozen],
@@ -3559,7 +3558,7 @@ m(af,               preposition(af,[],extracted_np),af).
 m(bovenuit,         preposition(boven,[],extracted_np),bovenuit).
 m(doorheen,         preposition(door,[],extracted_np),doorheen).
 m(heen,             preposition(naar,[],extracted_np),heen).
-m(met,              preposition(met,[mee],extracted_np),mee).
+m(mee,              preposition(met,[mee],extracted_np),mee).
 m(naartoe,          preposition(naar,[],extracted_np),naartoe).
 m(naar,             preposition(naartoe,[],extracted_np),naartoe).
 m(omheen,           preposition(om,[],extracted_np),omheen).
@@ -3581,7 +3580,7 @@ m(tussenuit,        preposition(tussenuit,[],extracted_np),tussenuit).
 m(vantussen,        preposition(vantussen,[],extracted_np),vantussen).  % VL
 m('van tussen',     preposition([van,tussen],[],extracted_np),[van,tussen]).  % VL
 m('van tussenuit',  preposition(tussenuit,[],extracted_np),[van,tussenuit]).  % VL
-m(tot,              preposition(tot,[],extracted_np),toe).
+m(toe,              preposition(tot,[],extracted_np),toe).
 m(vanaf,            preposition(vanaf,[],extracted_np),[van,af]).
 %% dat zijn bossen om hakhuit vandaan te halen
 m(vandaan,          preposition(vandaan,[],extracted_np),vandaan).
@@ -4060,6 +4059,7 @@ m(Stem, etc, Surf):-
 etc([cum,suis]).  % X cum suis --> kan als meervoud worden gebruikt
 etc(etcetera).
 etc(enzoverder).
+etc(enzovoort).
 etc(enzovoorts).
 etc(enzo).
 etc([en,zo,voort]).
@@ -4089,7 +4089,7 @@ with_dt([en,niet,anders],
 	complex_etc,
 	dt(conj,[crd=l(en,conj(en),vg,0,1),
 		 cnj=dt(advp,[mod=l(niet,adverb,advp,1,2),
-			      hd=l(anders,adjective(anders),2,3)])])).
+			      hd=l(ander,adjective(anders),2,3)])])).
 
 with_dt([en,niet,andersom],
 	complex_etc,
@@ -4246,10 +4246,10 @@ with_dt([met,Hun,Tweeen],
 	adjective(pred(padv)),
 	dt(pp,[hd=l(met,preposition(met,[]),0,1),
 	       obj1=dt(np,[det=l(Hun,determiner(pron),detp,1,2),
-			   hd=l(Tweeen,noun(both,both,pl),2,3)])])) :-
+			   hd=l(Lemma,noun(both,both,pl),2,3)])])) :-
 
     zijn(Hun),
-    wij_allebei(Tweeen).
+    wij_allebei(Tweeen,Lemma).
 
 zijn(ons).
 zijn(jullie).
@@ -4397,7 +4397,7 @@ m(geleden,          pred_np_me_adjective(tmpadv),geleden).
 m(hogerop,          pred_np_me_adjective(dir_locadv),hogerop).
 m(terug,            pred_np_me_adjective(tmpadv),terug).
 m(verderop,         pred_np_me_adjective(dir_locadv),verderop).
-m(verwijderd,       pred_np_me_adjective(adv),verwijderd).
+m(verwijderen,      pred_np_me_adjective(adv),verwijderd).
 m(voor,             pred_np_me_adjective(nonadv),voor).
 
 m(geleden,          subject_sbar_pred_np_me_adjective,geleden).
@@ -4405,6 +4405,9 @@ m(terug,            subject_sbar_pred_np_me_adjective,terug).
 
 
 m(door,             np_me_adjective(both(oadv)), door). % het hele jaar door
+
+m(duren, np_me_adjective(e),          durende).
+m(duren, np_me_adjective(no_e(adv)),  durende).
 
 np_me_adjective(breed,brede,adv       ).
 np_me_adjective(diep,diepe,locadv        ).
@@ -4414,10 +4417,9 @@ np_me_adjective(dik,dikke,adv         ). % een 300 blz dik boek
 np_me_adjective(koud,koude,adv).
 np_me_adjective(warm,warme,adv).
 
+
 %% np_me_adjective(duur,dure,adv         ).  only false hits
-np_me_adjective(durend,durende,adv    ).
-np_me_adjective(groot,grote,adv       ).
-				% een 2 ha groot ..
+np_me_adjective(groot,grote,adv       ).   % een 2 ha groot ..
 np_me_adjective(hoog,hoge,adv         ).
 np_me_adjective(jong,jonge,adv        ).
 np_me_adjective(lang,lange,adv        ).
@@ -6433,11 +6435,14 @@ m(Stem,predm_adverb,Surf) :-
 m(al,predm_adverb,alle).
 m(beide,predm_adverb,beiden).
 
+m('geen van alle', predm_adverb, [geen,van,alle]).
+m('geen van allen', predm_adverb, [geen,van,allen]).
+m(al,            predm_adverb, allen).
+
 % floating quantifiers and similar:
 predm_adverb(allebei).
 predm_adverb(alledrie).
 predm_adverb(allemaal).
-predm_adverb(allen).
 predm_adverb(alletwee).
 predm_adverb(allevier).
 predm_adverb(allevijf).
@@ -6448,8 +6453,6 @@ predm_adverb([elk,voor,zich]).
 predm_adverb([en,bloc]).
 predm_adverb([en,masse]).
 predm_adverb(gedrieën).
-predm_adverb([geen,van,alle]).
-predm_adverb([geen,van,allen]).
 predm_adverb([geen,van,beiden]).
 predm_adverb([geen,van,drieën]).
 predm_adverb([geen,van,tweeën]).
@@ -6495,9 +6498,9 @@ wij_allebei_wij(u,pronoun(nwh,u,sg,de,both,def)).
 wij_allebei(Stem,Stem) :-
     wij_allebei(Stem).
 wij_allebei(beiden,beide).
+wij_allebei(allen,al).
 
 wij_allebei(allemaal).
-wij_allebei(allen).
 wij_allebei(allebei).
 wij_allebei(beidjes).
 
@@ -6616,7 +6619,7 @@ m(alledrie,     pronoun(nwh,thi,pl,de,both,indef),alledrie).
 m(allevier,     pronoun(nwh,thi,pl,de,both,indef),allevier).
 m(allevijf,     pronoun(nwh,thi,pl,de,both,indef),allevijf).
 m(allemaal,     pronoun(nwh,thi,pl,de,both,indef),allemaal).
-m(alle,         pronoun(nwh,thi,pl,de,both,indef),allen).
+m(al,           pronoun(nwh,thi,pl,de,both,indef),allen).
 m(beide,        pronoun(nwh,thi,pl,de,both,indef),beide).
 m(beide,        pronoun(nwh,thi,pl,de,both,indef),beiden).
 m(datgeen,      pronoun(nwh,thi,sg,het,both,def,strpro),datgeen).
@@ -6631,7 +6634,7 @@ m(één,          pronoun(nwh,thi,sg,both,both,indef,strpro),een).
 m(één,          pronoun(nwh,thi,sg,both,both,indef,strpro),één).
 m(eenieder,     pronoun(nwh,thi,sg,de,both,def,strpro),[Een,ieder]) :- een(Een).
 m(eenieder,     pronoun(nwh,thi,sg,de,both,def,strpro),eenieder).
-m(eentje,       pronoun(nwh,thi,sg,de,both,indef,strpro),eentje).
+m(één,          pronoun(nwh,thi,sg,de,both,indef,strpro),eentje).
 m(elkaar,       pronoun(nwh,thi,pl,de,dat_acc,def),elkaar).
 m(elkander,     pronoun(nwh,thi,pl,de,dat_acc,def),elkander).
 m(ge,           pronoun(nwh,u,sg,de,both,def),ge).
@@ -7362,20 +7365,20 @@ m(Stem,nominalized_adjective,Surf) :-
     nominalized_adjective(Stem0,Surf0,Compounds),
     add_compounds:add_compounds(Compounds,Stem0,Surf0,Stem,Surf).
 
-m(sprekend,    nominalized_adjective(transitive),             sprekenden).
-m(veroordeeld, nominalized_adjective(fixed([[ter,dood]])),    veroordeelden).
+m(spreken,     nominalized_adjective(transitive),             sprekenden).
+m(veroordelen, nominalized_adjective(fixed([[ter,dood]])),    veroordeelden).
 
-nominalized_adjective_both(aangewezen,aangewezene,aangewezenen).
-nominalized_adjective_both(betrokken,betrokkene,betrokkenen).
+nominalized_adjective_both(aan_wijzen,aangewezene,aangewezenen).
+nominalized_adjective_both(betrekken,betrokkene,betrokkenen).
 nominalized_adjective_both(bezeten,bezetene,bezetenen).
-nominalized_adjective_both(geboden,gebodene,gebodenen).
+nominalized_adjective_both(bieden,gebodene,gebodenen).
 nominalized_adjective_both(geboren,geborene,geborenen).
-nominalized_adjective_both(getroffen,getroffene,getroffenen).
-nominalized_adjective_both(overwogen,overwogene,overwogenen).
-nominalized_adjective_both(overgebleven,overgeblevene,overgeblevenen).
+nominalized_adjective_both(treffen,getroffene,getroffenen).
+nominalized_adjective_both(overwegen,overwogene,overwogenen).
+nominalized_adjective_both(over_blijven,overgeblevene,overgeblevenen).
 nominalized_adjective_both(pasgeboren,pasgeborene,pasgeborenen).
 nominalized_adjective_both(uitverkoren,uitverkorene,uitverkorenen).
-nominalized_adjective_both(vrijgelaten,vrijgelatene,vrijgelatenen).
+nominalized_adjective_both(vrij_laten,vrijgelatene,vrijgelatenen).
 nominalized_adjective_both(werkwillig,werkwillige,werkwilligen).
 
 %% een ander dan ik had allang...
@@ -7383,6 +7386,9 @@ m(ander,nominalized_compar_adjective_sg,ander).
 
 m(ander,nominalized_compar_adjective,anderen).
 m(oud,  nominalized_compar_adjective,ouderen).
+m(klein,nominalized_compar_adjective,kleineren).
+m(rijk, nominalized_compar_adjective,rijkeren).
+m(zwak, nominalized_compar_adjective,zwakkeren).
 
 m(achterst,nominalized_super_adjective,achtersten).
 m(laatst,  nominalized_super_adjective,laatsten).
@@ -7400,47 +7406,47 @@ nominalized_adjective('Spaanstalig','Spaanstaligen').
 nominalized_adjective(aanstaand,aanstaanden).
 nominalized_adjective(aanwezig,aanwezigen).
 nominalized_adjective(achterlijk,achterlijken).
-nominalized_adjective(afgeleid,afgeleiden).
+nominalized_adjective(afleiden,afgeleiden).
 nominalized_adjective(afwezig,afwezigen).
-nominalized_adjective(afgestudeerd,afgestudeerden).
+nominalized_adjective(afstuderen,afgestudeerden).
 nominalized_adjective(alleenstaand,alleenstaanden).
-nominalized_adjective(andersdenkend,andersdenkenden).
+nominalized_adjective(anders_denken,andersdenkenden).
 nominalized_adjective(arbeidsongeschikt,arbeidsongeschikten).
 nominalized_adjective(arm,armen).
-nominalized_adjective(bedeeld,bedeelden).
-nominalized_adjective(bedreigd,bedreigden).
-nominalized_adjective(bedroefd,bedroefden).
-nominalized_adjective(begunstigd,begunstigden).
-nominalized_adjective(behandeld,behandelden).
+nominalized_adjective(bedelen,bedeelden).
+nominalized_adjective(bedreigen,bedreigden).
+nominalized_adjective(bedroefven,bedroefden).
+nominalized_adjective(begunstigen,begunstigden).
+nominalized_adjective(behandelen,behandelden).
 nominalized_adjective(bejaard,bejaarden).
 nominalized_adjective(bekend,bekenden).
-nominalized_adjective(beklaagd,beklaagden).
-nominalized_adjective(bekroond,bekroonden).
+nominalized_adjective(beklagen,beklaagden).
+nominalized_adjective(bekronen,bekroonden).
 nominalized_adjective(belanghebbend,belanghebbenden).
-nominalized_adjective(belasterd,belasterde,belasterden).
-nominalized_adjective(beledigd,beledigden).
-nominalized_adjective(belegerd,belegerden).
-nominalized_adjective(bemind,beminden).
-nominalized_adjective(benadeeld,benadeelden).
-nominalized_adjective(benoemd,benoemden).
-nominalized_adjective(beperkt,beperkten).
+nominalized_adjective(belasteren,belasterde,belasterden).
+nominalized_adjective(beledigen,beledigden).
+nominalized_adjective(belegeren,belegerden).
+nominalized_adjective(beminnen,beminden).
+nominalized_adjective(benadelen,benadeelden).
+nominalized_adjective(benoemen,benoemden).
+nominalized_adjective(beperken,beperkten).
 nominalized_adjective(beroemd,beroemden).
-nominalized_adjective(beschuldigd,beschuldigden).
-nominalized_adjective(besmet,besmetten).
-nominalized_adjective(bestraft,bestraften).
-nominalized_adjective(bevoordeeld,bevoordeelden).
-nominalized_adjective(bevraagd,bevraagden).
+nominalized_adjective(beschuldigen,beschuldigden).
+nominalized_adjective(besmetten,besmetten).
+nominalized_adjective(bestraffen,bestraften).
+nominalized_adjective(bevoordelen,bevoordeelden).
+nominalized_adjective(bevragen,bevraagden).
 nominalized_adjective(bezoldigd,bezoldigden).
 nominalized_adjective(goed,besten).
-nominalized_adjective(bekeerd,bekeerden).
-nominalized_adjective(betaald,betaalden).
-nominalized_adjective(beter,beteren).
-nominalized_adjective(beticht,betichten).
-nominalized_adjective(betrapt,betrapten).
-nominalized_adjective(betrokken,betrokkenen).
-nominalized_adjective(bevoegd,bevoegden).
+nominalized_adjective(bekeren,bekeerden).
+nominalized_adjective(betalen,betaalden).
+nominalized_adjective(goed,beteren).
+nominalized_adjective(betichten,betichten).
+nominalized_adjective(betrappen,betrapten).
+nominalized_adjective(betrekken,betrokkenen).
+nominalized_adjective(bevoegen,bevoegden).
 nominalized_adjective(bevoorrecht,bevoorrechten).
-nominalized_adjective(bezwaard,bezwaarden).
+nominalized_adjective(bezwaren,bezwaarden).
 nominalized_adjective(blank,blanken).
 nominalized_adjective(blind,blinden).
 nominalized_adjective(blond,blonden).
@@ -7462,35 +7468,35 @@ nominalized_adjective(enig,enigen).
 nominalized_adjective(enkel,enkelen).
 nominalized_adjective(extern,externen).
 nominalized_adjective(geallieerd,geallieerden).
-nominalized_adjective(gedelegeerd,gedelegeerden).
-nominalized_adjective(gedeporteerd,gedeporteerden).
-nominalized_adjective(gedoogd,gedoogden).
-nominalized_adjective(gedupeerd,gedupeerden).
-nominalized_adjective(gegijzeld,gegijzelden).
+nominalized_adjective(delegeren,gedelegeerden).
+nominalized_adjective(deporteren,gedeporteerden).
+nominalized_adjective(gedogen,gedoogden).
+nominalized_adjective(duperen,gedupeerden).
+nominalized_adjective(gijzelen,gegijzelden).
 nominalized_adjective(gehandicapt,gehandicapten).
-nominalized_adjective(gehuwd,gehuwden).
-nominalized_adjective(geïnteresseerd,geïnteresseerden).
-nominalized_adjective(gekwetst,gekwetsten).
+nominalized_adjective(huwen,gehuwden).
+nominalized_adjective(interesseen,geïnteresseerden).
+nominalized_adjective(kwetsten,gekwetsten).
 nominalized_adjective(geleerd,geleerden).
 nominalized_adjective(geliefd,geliefden).
 nominalized_adjective(gelijk,gelijken).
 nominalized_adjective(gelijkgestemd,gelijkgestemden).
 nominalized_adjective(gelovig,gelovigen).
 nominalized_adjective(gelukkig,gelukkigen).
-nominalized_adjective(gemachtigd,gemachtigden).
+nominalized_adjective(machtigen,gemachtigden).
 nominalized_adjective(genodigd,genodigden).
-nominalized_adjective(genomineerd,genomineerden).
-nominalized_adjective(gepensioneerd,gepensioneerden).
+nominalized_adjective(nomineren,genomineerden).
+nominalized_adjective(pensioneren,gepensioneerden).
 nominalized_adjective(gereformeerd,gereformeerden).
-nominalized_adjective(geplaatst,geplaatsten).
-nominalized_adjective(geslaagd,geslaagden).
-nominalized_adjective(gesteld,gestelden).
-nominalized_adjective(gestoord,gestoorden).
-nominalized_adjective(getekend,getekenden).
-nominalized_adjective(getrouwd,getrouwden).
+nominalized_adjective(plaatsen,geplaatsten).
+nominalized_adjective(slagen,geslaagden).
+nominalized_adjective(stellen,gestelden).
+nominalized_adjective(storen,gestoorden).
+nominalized_adjective(tekenen,getekenden).
+nominalized_adjective(trouwen,getrouwden).
 nominalized_adjective(getrouw,getrouwen).
-nominalized_adjective(geveinsd,geveinsden).
-nominalized_adjective(gevorderd,gevorderden).
+nominalized_adjective(veinzen,geveinsden).
+nominalized_adjective(vorderen,gevorderden).
 nominalized_adjective(geweldig,geweldigen).
 nominalized_adjective(gewetensbezwaard,gewetensbezwaarden).
 nominalized_adjective(gewond,gewonden).
@@ -7503,9 +7509,9 @@ nominalized_adjective(heilig,heiligen).
 nominalized_adjective(herkeurd,herkeurden).
 nominalized_adjective(hervormd,hervormden).
 nominalized_adjective(hoog,hogen).
-nominalized_adjective(hoogopgeleid,hoogopgeleiden).
-nominalized_adjective(hulpzoekend,hulpzoekenden).
-nominalized_adjective(ingewijd,ingewijden).
+nominalized_adjective(hoog_op_leid,hoogopgeleiden).
+nominalized_adjective(hulp_zoeken,hulpzoekenden).
+nominalized_adjective(in_wijden,ingewijden).
 nominalized_adjective(ingezeten,ingezetenen).
 nominalized_adjective(intern,internen).
 nominalized_adjective(inzittend,inzittenden).
@@ -7514,54 +7520,52 @@ nominalized_adjective(kansarm,kansarmen).
 nominalized_adjective(kiesgerechtigd,kiesgerechtigden).
 nominalized_adjective(klassiek,klassieken).
 nominalized_adjective(klein,kleinen).
-nominalized_adjective(kleiner,kleineren).
 nominalized_adjective(krankzinnig,krankzinnigen).
 nominalized_adjective(kreupel,kreupelen).
 nominalized_adjective(krom,krommen).
-nominalized_adjective(laaggeschoold,laaggeschoolden).
-nominalized_adjective(laagopgeleid,laagopgeleiden).
+nominalized_adjective(laag_scholen,laaggeschoolden).
+nominalized_adjective(laag_op_leid,laagopgeleiden).
 nominalized_adjective(langharigen,langharigen).
-nominalized_adjective(leidinggevend,leidinggevenden).
-nominalized_adjective(lichtgewond,lichtgewonden).
+nominalized_adjective(leiding_geven,leidinggevenden).
+nominalized_adjective(licht_gewond,lichtgewonden).
 nominalized_adjective(los,lossen).
 nominalized_adjective(machtig,machtigen).
 nominalized_adjective(meest,meesten).
 nominalized_adjective(minder,minderen).
 nominalized_adjective(minderjarig,minderjarigen).
-nominalized_adjective(mismaakt,mismaakten).
-nominalized_adjective(misvormd,misvormden).
+nominalized_adjective(mis_maken,mismaakten).
+nominalized_adjective(mis_vormen,misvormden).
 nominalized_adjective(mobiel,mobielen).  % de opwaarts mobielen
 nominalized_adjective(moedig,moedigen).
 nominalized_adjective(naast,naasten).
 nominalized_adjective(nieuwsgierig,nieuwsgierigen).
-nominalized_adjective(omwonend,omwonenden).
+nominalized_adjective(om_wonen,omwonenden).
 nominalized_adjective(onafhankelijk,onafhankelijken).
 nominalized_adjective(onbekend,onbekenden).
 nominalized_adjective(onderdrukt,onderdrukten).
-nominalized_adjective(opgeleid,opgeleiden).
-nominalized_adjective(ondervraagd,ondervraagden).
-nominalized_adjective(onderzocht,onderzochten).
+nominalized_adjective(op_leiden,opgeleiden).
+nominalized_adjective(ondervragen,ondervraagden).
+nominalized_adjective(onderzoeken,onderzochten).
 nominalized_adjective(ongelovig,ongelovigen).
 nominalized_adjective(ongelukkig,ongelukkigen).
 nominalized_adjective(onteigend,onteigenden).
 nominalized_adjective(ontevreden,ontevredenen).
 nominalized_adjective(ontheemd,ontheemden).
-nominalized_adjective(ontsnapt,ontsnapten).
-nominalized_adjective(ontvoerd,ontvoerden).
-nominalized_adjective(ontwikkeld,ontwikkelden).
-nominalized_adjective(ontworteld,ontwortelden).
+nominalized_adjective(ontsnappen,ontsnapten).
+nominalized_adjective(ontvoeren,ontvoerden).
+nominalized_adjective(ontwikkelen,ontwikkelden).
+nominalized_adjective(ontwortelen,ontwortelden).
 nominalized_adjective(on_wetend,onwetenden).
 nominalized_adjective(orthodox,orthodoxen).
 nominalized_adjective(oud,ouden).
 nominalized_adjective(overig,overigen).
-nominalized_adjective(overtuigd,overtuigden).
+nominalized_adjective(overtuigen,overtuigden).
 nominalized_adjective(prominent,prominenten).
 nominalized_adjective(rampzalig,rampzaligen).
 nominalized_adjective(rap,rappen).
 nominalized_adjective(rechtvaardig,rechtvaardigen).
 nominalized_adjective(religieus,religieuzen).
 nominalized_adjective(rijk,rijken).
-nominalized_adjective(rijk,rijkeren).
 nominalized_adjective(rood,roden).
 nominalized_adjective(rood,rooien).
 nominalized_adjective(scheel,schelen).
@@ -7580,31 +7584,31 @@ nominalized_adjective(valide,validen). % met "minder"
 nominalized_adjective(variabel,variabelen).
 nominalized_adjective(veel,velen).
 nominalized_adjective(verantwoordelijk,verantwoordelijken).
-nominalized_adjective(verblind,verblinden).
-nominalized_adjective(verdoemd,verdoemden).
-nominalized_adjective(verdrukt,verdrukten).
-nominalized_adjective(verhoord,verhoorden).
+nominalized_adjective(verblinden,verblinden).
+nominalized_adjective(verdoemen,verdoemden).
+nominalized_adjective(verdrukken,verdrukten).
+nominalized_adjective(verhoren,verhoorden).
 nominalized_adjective(verkeerd,verkeerden).
-nominalized_adjective(verkommerd,verkommerden).
-nominalized_adjective(verkozen,verkozenen).
-nominalized_adjective(verloederd,verloederden).
-nominalized_adjective(verlost,verlosten).
-nominalized_adjective(verminkt,verminkten).
-nominalized_adjective(vermist,vermisten).
-nominalized_adjective(vermoeid,vermoeiden).
-nominalized_adjective(vermoord,vermoorden).
-nominalized_adjective(verongelukt,verongelukten).
-nominalized_adjective(verontrust,verontrusten).
-nominalized_adjective(verontwaardigd,verontwaardigden).
-nominalized_adjective(veroordeeld,veroordeelden).
-nominalized_adjective(verpauperd,verpauperden).
+nominalized_adjective(verkommeren,verkommerden).
+nominalized_adjective(verkiezen,verkozenen).
+nominalized_adjective(verloederen,verloederden).
+nominalized_adjective(verlossen,verlosten).
+nominalized_adjective(verminken,verminkten).
+nominalized_adjective(vermissen,vermisten).
+nominalized_adjective(vermoeien,vermoeiden).
+nominalized_adjective(vermoorden,vermoorden).
+nominalized_adjective(verongelukken,verongelukten).
+nominalized_adjective(verontrusten,verontrusten).
+nominalized_adjective(verontwaardigen,verontwaardigden).
+nominalized_adjective(veroordelen,veroordeelden).
+nominalized_adjective(verpauperen,verpauperden).
 nominalized_adjective(verpleegkundig,verpleegkundigen).
-nominalized_adjective(vertrapt,vertrapten).
-nominalized_adjective(vertrouwd,vertrouwden).
-nominalized_adjective(vervloekt,vervloekten).
-nominalized_adjective(vervolgd,vervolgden).
-nominalized_adjective(verzekerd,verzekerden).
-nominalized_adjective(verzuurd,verzuurden).
+nominalized_adjective(vertrappen,vertrapten).
+nominalized_adjective(vertrouwen,vertrouwden).
+nominalized_adjective(vervloeken,vervloekten).
+nominalized_adjective(vervolgen,vervolgden).
+nominalized_adjective(verzekeren,verzekerden).
+nominalized_adjective(verzuren,verzuurden).
 nominalized_adjective(vreemd,vreemden).
 nominalized_adjective(vrij,vrijen).
 nominalized_adjective(vrijgesteld,vrijgestelden).
@@ -7619,15 +7623,14 @@ nominalized_adjective(wild,wilden).
 nominalized_adjective(wit,witten).
 nominalized_adjective(zalig,zaligen).
 nominalized_adjective(zelfstandig,zelfstandigen).
-nominalized_adjective(woning_zoek,woningzoekenden).
+nominalized_adjective(woning_zoeken,woningzoekenden).
 nominalized_adjective(ziek,zieken).
 nominalized_adjective(zoveel,zovelen).
-nominalized_adjective(zwaargewond,zwaargewonden).
-nominalized_adjective(zwakkeren,zwakkeren).
+nominalized_adjective(zwaar_gewond,zwaargewonden).
 nominalized_adjective(zwakzinnig,zwakzinnigen).
 nominalized_adjective(zwart,zwarten).
 
-nominalized_adjective(verslaafd,verslaafden,
+nominalized_adjective(verslaven,verslaafden,
 		      [alcohol,
 		       drugs,
 		       game,
@@ -7640,9 +7643,6 @@ m(Stem,iets_noun,Surf) :-
     stem_from_surf(Surf,Stem).
 
 m(veel,iets_noun,meer).
-
-m(Stem,iets_noun,Surf) :-
-    iets_noun(Surf,Stem).
 
 m(Stem,wh_iets_noun,Surf) :-
     wh_iets_noun(Surf),
@@ -7705,13 +7705,13 @@ with_dt([heel,wat],
                  mod=l(heel,intensifier,advp,0,1)])).
 
 
-iets_noun(niks,niets).
 
 iets_noun(allerlei).
 iets_noun(ander).
 iets_noun(genoeg).
 iets_noun(iets).
 iets_noun(niets).
+iets_noun(niks).
 iets_noun(teveel).
 iets_noun(veel).
 iets_noun(wat).
@@ -8033,7 +8033,7 @@ with_dt([Leuk,is,anders],
 	max,
 	dt(smain,[hd=l(v_root(ben,zijn),verb(zijn,sg1,copula),1,2),
 		  su=l(Leuk,adjective(no_e(adv)),ap,0,1),
-		  predc=l(anders,adjective(anders),ap,2,3)])) :-
+		  predc=l(ander,adjective(anders),ap,2,3)])) :-
     is_anders(Leuk).
 
 is_anders(leuk).

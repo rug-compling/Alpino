@@ -3640,7 +3640,7 @@ v(bezaai,bezaait,bezaaien,bezaaid,bezaaide,bezaaiden,
 v(bezat,bezat,bezatten,bezat,bezatte,bezatten,
     [h([refl])]).
 
-v(bezeil,bezeilt,bezeilen,gezeild,bezeilde,bezeilden,
+v(bezeil,bezeilt,bezeilen,bezeild,bezeilde,bezeilden,
     [h([transitive,
 	fixed([{[acc(land),pc(met)]}],norm_passive)])]).
 
@@ -11824,7 +11824,7 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
           fixed([[op,de,proppen],pc(met)],no_passive),
           fixed([[naar,buiten],sbar_subj_no_het],no_passive),
           fixed([[te,koop]],no_passive),
-          fixed([[ten,ijs],ap_pred(beslagen)],no_passive),
+          fixed([[ten,ijs],ap_pred(beslaan)],no_passive),
           fixed([[tot,leven]],norm_passive),
           fixed([[tot,uiting]],norm_passive),
           fixed([[tot,uiting],sbar_subj_no_het],norm_passive),
@@ -26683,7 +26683,7 @@ v(vloek,vloekt,vloeken,gevloekt,vloekte,vloekten,
 v(vloer,vloert,vloeren,gevloerd,vloerde,vloerden,
     [h([transitive])]).
 
-v(vlog,vlogt,vloggen,gevolgd,vlogde,vlogden,
+v(vlog,vlogt,vloggen,gevlogd,vlogde,vlogden,
     [h([intransitive])]).
 
 v(vlooi,vlooit,vlooien,gevlooid,vlooide,vlooiden,
@@ -28766,8 +28766,8 @@ v(zit,zit,zitten,gezeten,zat,zaten,
 	fixed([[in,de,kouwe,kleren],dat],no_passive),
 	fixed([svp_pp(in,maag),pc(met)],no_passive),
 	fixed([[op,de,hielen],acc],norm_passive),
-	fixed([{[pc(met),ap_pred(verveeld)]}],no_passive), % VLAAMS
-	fixed([{[er_pp(met,C),ap_pred(verveeld)]},extra_sbar(C)],no_passive), % VLAAMS
+	fixed([{[pc(met),ap_pred(vervelen)]}],no_passive), % VLAAMS
+	fixed([{[er_pp(met,C),ap_pred(vervelen)]},extra_sbar(C)],no_passive), % VLAAMS
 	fixed([[in,het,bloed],dat],no_passive),
 	part_ld_pp(aan),
 	part_ld_pp(neer),

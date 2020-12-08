@@ -2394,7 +2394,6 @@ spelling_variant(aanbeelden, aambeelden).
 spelling_variant(beidde,beide).
 spelling_variant(burgelijk, burgerlijk).
 spelling_variant(burgelijke,burgerlijke).
-spelling_variant(enzovoort,enzovoorts).
 spelling_variant(honderste,honderdste).
 spelling_variant(hondertal,honderdtal).
 spelling_variant(laaste,   laatste).
@@ -2934,13 +2933,6 @@ spelling_variant(workpace,         workspace).
 
 %% result of tokenization errors
 spelling_variant('al.',    al).
-spelling_variant('u.', u).
-
-spelling_variant(europese,         'Europese').
-spelling_variant(workpace,         workspace).
-
-%% result of tokenization errors
-spelling_variant('al.',    al).
 spelling_variant('u.',      u).
 spelling_variant('i.',      i).
 
@@ -3068,6 +3060,9 @@ spelling_variant('Belgie','België').
 spelling_variant('Brazilie','Brazilië').
 spelling_variant('Israel','Israël').
 spelling_variant('Israels','Israëls').
+spelling_variant('Italie','Italië').
+
+spelling_variant('V.S.','VS').
 
 parse_only_variant(notabene,'nota bene', modal_adverb).
 parse_only_variant(ondermeer,'onder meer', modal_adverb).
