@@ -2733,6 +2733,8 @@ never_final_compound_part(sis).
 never_final_compound_part(tel).
 never_final_compound_part(tij).
 never_final_compound_part(ven).
+never_final_compound_part(loos). % is a derivation
+never_final_compound_part(loze). % is a derivation
 
 never_middle_compound_part(aan).
 never_middle_compound_part(af).
@@ -4118,7 +4120,7 @@ next_one_special_decap(P0) :-
     next_one_special_decap(P1).
 
 previous_one_special_decap(P) :-
-    tag(_,P,_,_,Foto,_,special(decap(_)),_),
+    tag(_,P,_,_,Foto,_,special(decap(_)),_),!,
     \+ foto(Foto).
 previous_one_special_decap(P) :-
     tag(P0,P,_,_,_,_,_,punct(_)),
