@@ -6,7 +6,7 @@ endif
 
 default:
 
-all: trees_doc dact
+all: trees_doc enhanced dact poslemma
 
 ignoredoc=lassy $(wildcard RSTCode/????) gen_g_suite medfail
 
@@ -39,18 +39,9 @@ PWD:=${shell pwd}
 transform:
 	find $(DIRECTORIES) -name '*.xml' | xargs Alpino -u -xml_converse
 
-m:
-	echo $(DIRS_FOR_INDEX)
+DACTS=$(filter-out cdb novelsample_corrected, $(DIRECTORIES))
 
-make_index:
-	for dir in $(DIRS_FOR_INDEX); do $(ALPINO_HOME)/Treebank/create_index $$dir $$dir/index.html; done
-
-TARGET=.
-DIRS_FOR_INDEX=$(shell find $(TARGET) -type d |grep -v '.svn')
-
-##MANUAL=cdb cgn_exs conll2006-test extra g_suite h_suite i_suite leuven_yellow_pages lot_test_suite1 ovis qa
-
-dact: $(DIRECTORIES:%=%.dact)
+dact: $(DACTS:%=%.dact) Enhanced/cdb.dact Enhanced/novelsample_corrected.dact
 
 %.dact: %/*.xml
 	alpinocorpus-create -d $*.dact.new $*
@@ -62,12 +53,24 @@ alpino.dact: $(DIRECTORIES:%=%.dact)
 	chmod 644 alpino.dact.new
 	mv alpino.dact.new alpino.dact
 
+poslemma: $(DIRECTORIES:%=POSLEMMA/%.poslemma)
+
+POSLEMMA/%.poslemma: %.dact
+	dtxslt -s plat.xsl $* > POSLEMMA/$*.poslemma
+
+
 gitversion=$(shell git log --oneline | wc -l)
 
 enhanced:
 	/net/corpora/LassyDevelopMod/lassymod -t -u Enhanced/cdb
-	$(MAKE) Enhanced/cdb.dact
+	/net/corpora/novelsample_correctedMod/novelmod -u Enhanced/novelsample_corrected
+
+tar:
 	( cd Enhanced ; tar czf cdb-$(gitversion).tar.gz cdb )
+
+tar-install: tar
+	mv Enhanced/cdb-$(gitversion).tar.gz ~/public_html/treebanks/
+	( cd ~/public_html/treebanks; rm cdb.tar.gz; ln -s cdb-$(gitversion).tar.gz cdb.tar.gz )
 
 dtchecks:
 	dtchecks $(DIRECTORIES)

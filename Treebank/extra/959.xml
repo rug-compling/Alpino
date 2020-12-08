@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="10" id="0" rel="top">
-    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="9" id="2" rel="--">
       <node begin="0" cat="whrel" end="4" id="3" rel="su">
-        <node begin="0" case="both" def="indef" end="1" gen="de" getal="getal" id="4" index="1" lemma="wie" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="rhd" rnum="sg" root="wie" status="vol" vwtype="vb" wh="ywh" word="Wie"/>
+        <node begin="0" end="1" getal="getal" id="4" index="1" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="rhd" root="wie" status="vol" vwtype="vb" word="Wie"/>
         <node begin="0" cat="ssub" end="4" id="5" rel="body">
           <node begin="0" end="1" id="6" index="1" rel="su"/>
           <node begin="1" end="2" id="7" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-          <node aform="base" begin="2" buiging="zonder" end="3" graad="basis" id="8" infl="no_e" lemma="waakzaam" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="waakzaam" vform="adj" word="waakzaam"/>
-          <node begin="3" end="4" id="9" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" tense="present" word="is" wvorm="pv"/>
+          <node begin="2" buiging="zonder" end="3" graad="basis" id="8" lemma="waakzaam" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="waakzaam" word="waakzaam"/>
+          <node begin="3" end="4" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         </node>
       </node>
-      <node begin="5" end="6" id="10" infl="sg3" lemma="ten_onder_gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga_ten_onder" sc="part_intransitive(ten onder)" stype="declarative" tense="present" word="gaat" wvorm="pv"/>
-      <node aform="base" begin="6" buiging="zonder" end="7" graad="basis" id="11" infl="no_e" lemma="snel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="snel" vform="adj" word="snel"/>
-      <node begin="7" cat="mwu" end="9" his="normal" his_1="normal" id="12" mwu_root="ten onder" mwu_sense="ten onder" rel="svp">
-        <node begin="7" end="8" id="13" lemma="ten" pos="part" postag="VZ(versm)" pt="vz" rel="mwp" root="ten" vztype="versm" word="ten"/>
+      <node begin="5" end="6" id="10" lemma="ten_onder_gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga_ten_onder" word="gaat" wvorm="pv"/>
+      <node begin="6" buiging="zonder" end="7" graad="basis" id="11" lemma="snel" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="snel" word="snel"/>
+      <node begin="7" cat="mwu" end="9" id="12" mwu_root="ten onder" mwu_sense="ten onder" rel="svp">
+        <node begin="7" end="8" id="13" lemma="te" pos="part" postag="VZ(versm)" pt="vz" rel="mwp" root="ten" vztype="versm" word="ten"/>
         <node begin="8" end="9" id="14" lemma="onder" pos="part" postag="VZ(fin)" pt="vz" rel="mwp" root="onder" vztype="fin" word="onder"/>
       </node>
     </node>
-    <node begin="9" end="10" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="9" end="10" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Wie niet waakzaam is , gaat snel ten onder .</sentence>
 </alpino_ds>
