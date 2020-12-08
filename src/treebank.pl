@@ -468,10 +468,15 @@ xml_entity(0'>,"&gt;").
 xml_entity(0'',"&apos;").
 
 xml_entity_prefix([38,113,117,111,116,59|T],T,0'").  % "
+xml_entity_prefix([38,35,51,52,59|T],       T,0'").  % "
 xml_entity_prefix([38,97,109,112,59|T],     T,0'&).
+xml_entity_prefix([38,35,51,56,59|T],       T,0'&).
 xml_entity_prefix([38,108,116,59|T],        T,0'<).
+xml_entity_prefix([38,35,54,48,59|T],       T,0'<).
 xml_entity_prefix([38,103,116,59|T],        T,0'>).
+xml_entity_prefix([38,35,54,50,59|T],       T,0'>).
 xml_entity_prefix([38,97,112,111,115,59|T], T,0'').
+xml_entity_prefix([38,35,51,57,59|T],       T,0'').
 
 format_word_list_xml(List) :-
     with_output_to_chars(format_word_list(List),Chars0),
@@ -1272,14 +1277,24 @@ xml_term_to_dt_list(List,DT,Type) :-
 
 xml_term_to_dt_ds([],[],_).
 xml_term_to_dt_ds([H0|T0],[H|T],Type) :-
-    xml_term_to_dt_sub(H0,H,Type), 
+    xml_term_to_dt_sub(H0,H,Type),
+    !,
+    xml_term_to_dt_ds(T0,T,Type).
+xml_term_to_dt_ds([__H0|T0],T,Type) :- % ignore unknown elements, eg. ud
     xml_term_to_dt_ds(T0,T,Type).
 
 xml_term_to_dt_sub(elem(node,Atts),tree(Label,_,[]),Type) :-
     xml_term_to_dt_atts(Atts,Label,leaf,Type).
 xml_term_to_dt_sub(env(node,Atts,Sub),tree(Label,_,Ds),Type) :-
-    xml_term_to_dt_atts(Atts,Label,non_leaf,Type),
-    xml_term_to_dt_ds(Sub,Ds,Type).
+    (   (  member(env(node,_),Sub)
+	;  member(env(node,_,_),Sub)
+	;  member(elem(node,_),Sub)
+	)
+    ->  xml_term_to_dt_atts(Atts,Label,non_leaf,Type),
+	xml_term_to_dt_ds(Sub,Ds,Type)
+    ;   xml_term_to_dt_atts(Atts,Label,leaf,Type),
+	Ds = []
+    ).
 
 xml_term_to_dt_atts(Atts0,r(Rel,Label),Leaf,Type) :-
     remove_empty_atts(Atts0,Atts1),
