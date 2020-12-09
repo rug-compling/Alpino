@@ -300,3 +300,5 @@ leuven_yellow_pages/./238.xml	//node[@lemma="als" and (../@rel="predc" or ../@re
 leuven_yellow_pages/./128.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
 leuven_yellow_pages/./129.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
 leuven_yellow_pages/./169.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
+leuven_yellow_pages/./253.xml	//node[not(@cat="pp") and node[@rel="hd" and @postag="VZ(init)"]]	preposition head, but not PP?
+leuven_yellow_pages/./253.xml	//node[not(@cat="pp") and node[@rel="hd" and @postag="VZ(init)"]]	preposition head, but not PP?

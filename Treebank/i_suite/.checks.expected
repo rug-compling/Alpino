@@ -50,3 +50,5 @@ i_suite/./631.xml	//node[ @cat and @rel="svp" and not(@cat="pp") and not(@cat="m
 i_suite/./685.xml	//node[@rel="whd" and not(@index)]	whd without index?
 i_suite/./686.xml	//node[@rel="whd" and not(@index)]	whd without index?
 i_suite/./729.xml	//node[(@cat="pp" or @cat="detp" or @cat="ap") and node[@cat="rel"]]	unexpected relative clause
+i_suite/./387.xml	//node[not(@cat="pp") and node[@rel="hd" and @postag="VZ(init)"]]	preposition head, but not PP?
+i_suite/./387.xml	//node[not(@cat="pp") and node[@rel="hd" and @postag="VZ(init)"]]	preposition head, but not PP?
