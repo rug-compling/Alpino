@@ -17,7 +17,7 @@
             <node begin="8" buiging="met-e" end="9" graad="basis" id="14" lemma="totaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="totaal" word="totale"/>
             <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="15" lemma="proces" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="proces" word="proces"/>
             <node begin="10" cat="pp" end="25" id="16" rel="mod">
-              <node begin="10" end="11" id="17" lemma="richting" pos="prep" postag="VZ(Init)" pt="vz" rel="hd" root="richting" word="richting"/>
+              <node begin="10" end="11" id="17" lemma="richting" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="richting" vztype="init" word="richting"/>
               <node begin="11" cat="np" end="25" id="18" rel="obj1">
                 <node begin="11" buiging="met-e" end="12" id="19" lemma="samenhangen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="hang_samen" word="samenhangende" wvorm="od"/>
                 <node begin="13" buiging="met-e" end="14" graad="basis" id="20" lemma="integraal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="integraal" word="integrale"/>

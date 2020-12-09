@@ -123,3 +123,4 @@ cdb/./6842.xml	//node[@wvorm="pv" and not(../@cat="smain" or ../@cat="ssub" or .
 cdb/./5173.xml	//node[@rel="hd" and ../@cat="ap" and @pt and not(@pt="vz" or @pt="tw" or @pt="bw" or @pt="vnw" or @pt="adj")]	unexpected postag for head of ap
 cdb/./6794.xml	//node[@rel="hd" and ../@cat="advp" and @pt and not(@pt="bw" or @pt="n" or @pt="adj" or @pt="vnw" or @pt="tw")]	unexpected postag for head of advp
 cdb/./6937.xml	//node[@rel="hd" and ../@cat="advp" and @pt and not(@pt="bw" or @pt="n" or @pt="adj" or @pt="vnw" or @pt="tw")]	unexpected postag for head of advp
+cdb/./2465.xml	//node[@cat="pp" and node[@rel="hd" and @pt="vz"] and not(node[@rel="obj1" or @rel="vc" or @rel="se"])]	preposition without object?

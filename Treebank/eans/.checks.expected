@@ -6,3 +6,4 @@ eans/./02_04_05_13.xml	//node[ ../@cat="ap" and not(@rel="hd") and not(@rel="mod
 eans/./02_04_05_14.xml	//node[@wvorm="pv" and not(../@cat="smain" or ../@cat="ssub" or ../@cat="sv1" or ../@cat="mwu" or ../@cat="top" or ../@cat="du") ]	unexpected finite verb?
 eans/./02_04_02_8.xml	//node[@cat="inf" and node[@rel="hd" and @pt and not(@postag="WW(inf,vrij,zonder)")]]	inf cat without inf hd?
 eans/./01_03_7.xml	//node[@rel="hd" and ../@cat="np" and @pt and not(@pt="n" or @pt="tw" or @pt="spec" or @pt="adj" or @pt="ww" or @pt="vnw" or @pt="bw")]	unexpected postag for head of np
+eans/./01_03_7.xml	//node[not(@cat="pp") and node[@rel="hd" and @postag="VZ(init)"]]	preposition head, but not PP?
