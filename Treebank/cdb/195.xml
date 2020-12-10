@@ -13,7 +13,7 @@
           <node begin="1" end="2" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
           <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="11" lemma="ochtend" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ochtend" word="ochtend"/>
           <node begin="4" cat="cp" end="12" id="12" rel="mod">
-            <node begin="4" end="5" id="13" lemma="juist" pos="adv" postag="BW()" pt="bw" rel="mod" root="juist" word="juist"/>
+            <node begin="4" buiging="zonder" end="5" graad="basis" id="13" lemma="juist" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="juist" word="juist"/>
             <node begin="5" conjtype="onder" end="6" id="14" lemma="wanneer" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="wanneer" word="wanneer"/>
             <node begin="6" cat="ssub" end="12" id="15" rel="body">
               <node begin="6" end="7" genus="masc" getal="ev" id="16" index="1" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>

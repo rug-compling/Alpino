@@ -27,7 +27,7 @@
         <node begin="10" end="11" id="19" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="20" lemma="beweging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="beweging" word="beweging"/>
         <node begin="12" cat="mwu" end="14" id="21" rel="app">
-          <node begin="12" end="13" id="22" lemma="vrij" pos="noun" postag="BW()" pt="bw" rel="mwp" root="Vrij" word="Vrij"/>
+          <node begin="12" buiging="zonder" end="13" graad="basis" id="22" lemma="vrij" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="Vrij" word="Vrij"/>
           <node begin="13" end="14" id="23" lemma="Papoea" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Papoea" spectype="deeleigen" word="Papoea"/>
         </node>
         <node begin="15" cat="rel" end="28" id="24" rel="mod">
