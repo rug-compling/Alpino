@@ -15,7 +15,7 @@
         </node>
         <node begin="5" end="6" id="11" index="1" rel="su"/>
         <node begin="6" cat="np" end="8" id="12" rel="obj1">
-          <node begin="6" buiging="met-e" end="7" graad="basis" id="13" lemma="bepalen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="bepaald" word="bepaalde"/>
+          <node begin="6" buiging="met-e" end="7" id="13" lemma="bepalen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="bepaald" word="bepaalde" wvorm="vd"/>
           <node begin="7" end="8" getal="mv" graad="basis" id="14" lemma="risico" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="risico" word="risico&apos;s"/>
         </node>
         <node begin="8" buiging="zonder" end="9" id="15" lemma="nemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem" word="nemen" wvorm="inf"/>

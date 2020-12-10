@@ -5,7 +5,7 @@
       <node begin="0" cat="cp" end="5" id="2" rel="mod">
         <node begin="0" cat="mwu" end="2" id="3" rel="cmp">
           <node begin="0" conjtype="onder" end="1" id="4" lemma="Voor" pos="comp" postag="VG(onder)" pt="vg" rel="mwp" root="Voor" word="Voor"/>
-          <node begin="1" conjtype="onder" end="2" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="mwp" root="dat" word="dat"/>
+          <node begin="1" end="2" getal="ev" id="5" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="comp" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="mwp" root="dat" status="vol" vwtype="aanw" word="dat"/>
         </node>
         <node begin="2" cat="ssub" end="5" id="6" rel="body">
           <node begin="2" end="3" getal="ev" id="7" index="1" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
@@ -21,7 +21,7 @@
       <node begin="7" end="8" id="14" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
       <node begin="8" cat="np" end="10" id="15" rel="mod">
         <node begin="8" end="9" id="16" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-        <node begin="9" end="10" genus="onz" getal="ev" graad="dim" id="17" lemma="beet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="beet_DIM" word="beetje"/>
+        <node begin="9" end="10" genus="onz" getal="ev" graad="dim" id="17" lemma="beetje" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,dim,onz,stan)" pt="n" rel="hd" root="beet_DIM" word="beetje"/>
       </node>
     </node>
     <node begin="10" end="11" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

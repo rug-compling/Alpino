@@ -6,9 +6,9 @@
       <node begin="1" end="2" id="3" lemma="vragen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vraag" word="vroeg" wvorm="pv"/>
       <node begin="2" cat="whsub" end="8" id="4" rel="vc">
         <node begin="2" cat="conj" end="5" id="5" index="1" rel="whd">
-          <node begin="2" buiging="zonder" end="3" graad="basis" id="6" lemma="waar" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="waar" word="waar"/>
+          <node begin="2" end="3" getal="getal" id="6" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="cnj" root="waar" status="vol" vwtype="vb" word="waar"/>
           <node begin="3" conjtype="neven" end="4" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-          <node begin="4" conjtype="onder" end="5" id="8" lemma="wanneer" pos="adv" postag="VG(onder)" pt="vg" rel="cnj" root="wanneer" word="wanneer"/>
+          <node begin="4" end="5" id="8" lemma="wanneer" pos="adv" postag="BW()" pt="bw" rel="cnj" root="wanneer" word="wanneer"/>
         </node>
         <node begin="2" cat="ssub" end="8" id="9" rel="body">
           <node begin="5" end="6" getal="mv" id="10" index="2" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>

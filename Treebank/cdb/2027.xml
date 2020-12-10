@@ -9,7 +9,7 @@
     <node begin="10" end="11" id="6" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
     <node begin="11" end="12" id="7" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
     <node begin="1" cat="du" end="14" id="8" rel="--">
-      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="9" lemma="Duitser" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="dp" root="Duitser" word="Duitser"/>
+      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="9" lemma="Duitser" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="dp" root="Duitser" word="Duitser"/>
       <node begin="5" cat="pp" end="9" id="10" rel="dp">
         <node begin="5" end="6" id="11" lemma="wegens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="wegens" vztype="init" word="wegens"/>
         <node begin="6" cat="np" end="9" id="12" rel="obj1">
@@ -20,7 +20,7 @@
       </node>
       <node begin="12" cat="du" end="14" id="16" rel="dp">
         <node begin="12" end="13" id="17" lemma="nee" pos="tag" postag="TSW()" pt="tsw" rel="tag" root="nee" word="Nee"/>
-        <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="18" lemma="Nederlander" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="nucl" root="Nederlander" word="Nederlander"/>
+        <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="18" lemma="Nederlander" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="nucl" root="Nederlander" word="Nederlander"/>
       </node>
     </node>
     <node begin="14" end="15" id="19" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>

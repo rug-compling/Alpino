@@ -23,7 +23,7 @@
             <node begin="9" end="10" id="18" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
             <node begin="10" cat="conj" end="16" id="19" rel="obj1">
               <node begin="10" cat="np" end="12" id="20" rel="cnj">
-                <node begin="10" buiging="met-e" end="11" graad="basis" id="21" index="2" lemma="bepalen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="bepaald" word="bepaalde"/>
+                <node begin="10" buiging="met-e" end="11" id="21" index="2" lemma="bepalen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="bepaald" word="bepaalde" wvorm="vd"/>
                 <node begin="11" end="12" getal="mv" graad="basis" id="22" lemma="voorwerp" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="voorwerp" word="voorwerpen"/>
               </node>
               <node begin="10" cat="np" end="14" id="23" rel="cnj">

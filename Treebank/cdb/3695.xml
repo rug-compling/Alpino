@@ -86,9 +86,9 @@
         <node begin="38" conjtype="neven" end="39" id="63" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="39" cat="du" end="51" id="64" rel="cnj">
           <node begin="39" end="40" getal="ev" id="65" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="dp" root="dat" status="vol" vwtype="aanw" word="dat"/>
-          <node begin="40" cat="du" end="51" id="66" rel="dp">
-            <node begin="40" conjtype="onder" end="41" id="67" lemma="terwijl" pos="comp" postag="VG(onder)" pt="vg" rel="dlink" root="terwijl" word="terwijl"/>
-            <node begin="41" cat="ssub" end="51" id="68" rel="nucl">
+          <node begin="40" cat="cp" end="51" id="66" rel="dp">
+            <node begin="40" conjtype="onder" end="41" id="67" lemma="terwijl" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="terwijl" word="terwijl"/>
+            <node begin="41" cat="ssub" end="51" id="68" rel="body">
               <node begin="41" cat="np" end="43" id="69" rel="su">
                 <node begin="41" end="42" id="70" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                 <node begin="42" end="43" getal="mv" graad="basis" id="71" lemma="prijs" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="prijs" word="prijzen"/>
