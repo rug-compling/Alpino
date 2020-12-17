@@ -2,19 +2,19 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="9" id="1" rel="--">
-      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="2" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="weten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="weet" sc="tr_sbar" stype="declarative" tense="present" word="weet" wvorm="pv"/>
+      <node begin="0" end="1" getal="ev" id="2" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
+      <node begin="1" end="2" id="3" lemma="weten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="weet" word="weet" wvorm="pv"/>
       <node begin="2" cat="cp" end="9" id="4" rel="vc">
-        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
         <node begin="3" cat="ssub" end="9" id="6" rel="body">
-          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="Ajax" naamval="stan" neclass="ORG" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="Ajax" word="Ajax"/>
-          <node begin="4" end="5" id="8" infl="sg3" lemma="tenonder_gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga_tenonder" sc="part_pc_pp(tenonder,aan)" tense="present" word="tenondergaat" wvorm="pv"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="Ajax" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Ajax" word="Ajax"/>
+          <node begin="4" end="5" id="8" lemma="tenonder_gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga_tenonder" word="tenondergaat" wvorm="pv"/>
           <node begin="5" cat="pp" end="9" id="9" rel="pc">
             <node begin="5" end="6" id="10" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
             <node begin="6" cat="conj" end="9" id="11" rel="obj1">
-              <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="12" lemma="drank" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" rnum="sg" root="drank" word="drank"/>
+              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="drank" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="drank" word="drank"/>
               <node begin="7" conjtype="neven" end="8" id="13" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-              <node begin="8" end="9" gen="de" getal="mv" graad="basis" id="14" lemma="drug" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" rnum="pl" root="drug" word="drugs"/>
+              <node begin="8" end="9" getal="mv" graad="basis" id="14" lemma="drug" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="drug" word="drugs"/>
             </node>
           </node>
         </node>

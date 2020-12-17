@@ -14,7 +14,7 @@
         <node begin="6" cat="np" end="14" id="10" rel="obj1">
           <node begin="6" end="7" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="7" cat="ppres" end="9" id="12" rel="mod">
-            <node begin="7" end="8" id="13" lemma="overwegen" pos="adj" postag="BW()" pt="bw" rel="mod" root="overwegend" word="overwegend"/>
+            <node begin="7" buiging="zonder" end="8" graad="basis" id="13" lemma="overwegend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="overwegend" word="overwegend"/>
             <node begin="8" buiging="met-e" end="9" id="14" lemma="teleur_stellen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="hd" root="teleurstellend" word="teleurstellende" wvorm="od"/>
           </node>
           <node begin="9" end="10" getal="mv" graad="basis" id="15" lemma="prestatie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="prestatie" word="prestaties"/>

@@ -11,7 +11,7 @@
       <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="7" lemma="PEC" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="PEC" word="PEC"/>
       <node begin="5" cat="pp" end="7" id="8" rel="mod">
         <node begin="5" end="6" id="9" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
-        <node begin="6" end="7" id="10" lemma="0-0" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="0-0" word="0-0"/>
+        <node begin="6" end="7" id="10" lemma="0-0" pos="num" postag="SPEC(symb)" pt="spec" rel="obj1" root="0-0" spectype="symb" word="0-0"/>
       </node>
     </node>
     <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

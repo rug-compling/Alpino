@@ -23,8 +23,8 @@
               <node begin="10" cat="np" end="13" id="19" rel="obj1">
                 <node begin="10" end="11" id="20" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                 <node begin="11" cat="mwu" end="13" id="21" rel="hd">
-                  <node begin="11" buiging="met-e" end="12" graad="basis" id="22" lemma="Europees" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Europese" word="Europese"/>
-                  <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="23" lemma="commissie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Commissie" word="Commissie"/>
+                  <node begin="11" end="12" id="22" lemma="Europese" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Europese" spectype="deeleigen" word="Europese"/>
+                  <node begin="12" end="13" id="23" lemma="Commissie" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Commissie" spectype="deeleigen" word="Commissie"/>
                 </node>
               </node>
               <node begin="13" end="14" id="24" lemma="gehoorzamen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="gehoorzaam" word="gehoorzamen" wvorm="pv"/>

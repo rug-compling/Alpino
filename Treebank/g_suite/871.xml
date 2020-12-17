@@ -12,7 +12,7 @@
             <node begin="2" cat="ssub" end="5" id="9" rel="body">
               <node begin="2" end="3" getal="ev" id="10" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
               <node begin="3" end="4" id="11" lemma="thuis" pos="part" postag="BW()" pt="bw" rel="svp" root="thuis" word="thuis"/>
-              <node begin="4" end="5" id="12" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom_thuis" word="kwam" wvorm="pv"/>
+              <node begin="4" end="5" id="12" lcat="p(ssub)" lemma="thuis_komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom_thuis" word="kwam" wvorm="pv"/>
             </node>
           </node>
         </node>

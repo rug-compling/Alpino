@@ -76,7 +76,7 @@
                 <node begin="21" end="22" id="57" index="2" rel="pc"/>
                 <node begin="32" cat="mwu" end="34" id="58" rel="hd">
                   <node begin="32" end="33" id="59" lemma="op" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
-                  <node begin="33" end="34" genus="onz" getal="ev" graad="basis" id="60" lemma="zoek" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="zoek" word="zoek"/>
+                  <node begin="33" buiging="zonder" end="34" graad="basis" id="60" lemma="zoek" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="zoek" word="zoek"/>
                 </node>
               </node>
               <node begin="34" end="35" id="61" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
@@ -84,7 +84,7 @@
           </node>
           <node begin="36" cat="np" end="39" id="62" rel="app">
             <node begin="36" end="37" id="63" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-            <node begin="37" buiging="met-e" end="38" graad="basis" id="64" lemma="zogenaamd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="zogenaamd" word="zg."/>
+            <node begin="37" end="38" id="64" lemma="zogenaamd" pos="adj" postag="SPEC(afk)" pt="spec" rel="mod" root="zogenaamd" spectype="afk" word="zg."/>
             <node begin="38" end="39" id="65" lemma="quark" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="hd" root="quark" spectype="vreemd" word="quark"/>
           </node>
         </node>

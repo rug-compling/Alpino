@@ -14,7 +14,7 @@
             <node begin="3" buiging="met-e" end="4" graad="sup" id="11" lemma="laat" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="laatst" word="laatste"/>
             <node begin="4" end="5" getal="mv" graad="basis" id="12" lemma="jaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="jaar" word="jaren"/>
           </node>
-          <node begin="5" buiging="zonder" end="6" graad="basis" id="13" lemma="voort_duren" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="voortdurend" word="voortdurend"/>
+          <node begin="5" buiging="zonder" end="6" id="13" lemma="voort_duren" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="mod" root="voortdurend" word="voortdurend" wvorm="od"/>
           <node begin="6" buiging="zonder" end="7" id="14" lemma="achteruit_gaan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ga" word="achteruitgegaan" wvorm="vd"/>
         </node>
       </node>

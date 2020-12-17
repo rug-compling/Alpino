@@ -9,7 +9,7 @@
           <node begin="1" end="2" id="6" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
           <node begin="2" buiging="met-e" end="3" graad="basis" id="7" lemma="gewond" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="gewond" word="gewonde"/>
         </node>
-        <node begin="3" end="4" id="8" lemma="M." pos="noun" postag="SPEC(symb)" pt="spec" rel="hd" root="M." spectype="symb" word="M."/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="M." naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="M." word="M."/>
         <node begin="4" cat="rel" end="20" id="9" rel="mod">
           <node begin="4" end="5" getal="getal" id="10" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
           <node begin="4" cat="ssub" end="20" id="11" rel="body">

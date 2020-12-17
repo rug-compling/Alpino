@@ -5,7 +5,7 @@
       <node begin="1" end="2" id="2" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
       <node begin="0" cat="inf" end="6" id="3" rel="vc">
         <node begin="0" buiging="zonder" end="1" graad="basis" id="4" lemma="vast" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="vast" word="Vast"/>
-        <node begin="2" buiging="zonder" end="3" id="5" lemma="staan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="sta_vast" word="staan" wvorm="inf"/>
+        <node begin="2" buiging="zonder" end="3" id="5" lcat="p(inf)" lemma="vast_staan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="sta_vast" word="staan" wvorm="inf"/>
         <node begin="3" cat="cp" end="6" id="6" rel="su">
           <node begin="3" conjtype="onder" end="4" id="7" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
           <node begin="4" cat="ssub" end="6" id="8" rel="body">

@@ -28,9 +28,9 @@
         <node begin="13" cat="np" end="20" id="21" rel="obj1">
           <node begin="13" end="14" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="14" cat="mwu" end="17" id="23" rel="hd">
-            <node begin="14" end="15" genus="zijd" getal="ev" graad="basis" id="24" lemma="Raad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Raad" word="Raad"/>
-            <node begin="15" end="16" id="25" lemma="van" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
-            <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="26" lemma="State" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="State" word="State"/>
+            <node begin="14" end="15" id="24" lemma="Raad" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Raad" spectype="deeleigen" word="Raad"/>
+            <node begin="15" end="16" id="25" lemma="van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+            <node begin="16" end="17" id="26" lemma="State" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="State" spectype="deeleigen" word="State"/>
           </node>
           <node begin="17" cat="pp" end="20" id="27" rel="mod">
             <node begin="17" end="18" id="28" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
@@ -54,7 +54,7 @@
               <node begin="26" buiging="met-e" end="27" graad="basis" id="42" lemma="provinciaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="provinciaal" word="provinciale"/>
               <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="43" lemma="weg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="weg" word="weg"/>
               <node begin="28" cat="mwu" end="30" id="44" rel="app">
-                <node begin="28" end="29" genus="onz" getal="ev" graad="basis" id="45" lemma="nummer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="nr." word="nr."/>
+                <node begin="28" end="29" id="45" lemma="nummer" pos="noun" postag="SPEC(afk)" pt="spec" rel="mwp" root="nr." spectype="afk" word="nr."/>
                 <node begin="29" end="30" id="46" lemma="1" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="1" word="1"/>
               </node>
               <node begin="31" cat="np" end="54" id="47" rel="mod">

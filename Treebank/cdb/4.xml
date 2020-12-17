@@ -38,8 +38,8 @@
                 <node begin="17" cat="np" end="20" id="30" rel="cnj">
                   <node begin="17" end="18" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                   <node begin="18" cat="mwu" end="20" id="32" rel="hd">
-                    <node begin="18" buiging="met-e" end="19" graad="basis" id="33" lemma="Europees" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Europese" word="Europese"/>
-                    <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="34" lemma="commissie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Commissie" word="Commissie"/>
+                    <node begin="18" end="19" id="33" lemma="Europese" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Europese" spectype="deeleigen" word="Europese"/>
+                    <node begin="19" end="20" id="34" lemma="Commissie" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Commissie" spectype="deeleigen" word="Commissie"/>
                   </node>
                 </node>
                 <node begin="20" conjtype="neven" end="21" id="35" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>

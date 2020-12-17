@@ -22,7 +22,7 @@
           <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="16" lemma="behandeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="behandeling" word="behandeling"/>
         </node>
       </node>
-      <node begin="11" end="12" id="17" lemma="neer" pos="part" postag="BW()" pt="bw" rel="svp" root="neer" word="neer"/>
+      <node begin="11" end="12" id="17" lemma="neer" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="neer" vztype="fin" word="neer"/>
       <node begin="10" cat="pp" end="51" id="18" rel="pc">
         <node begin="10" end="11" id="19" lemma="hierop" pos="pp" postag="BW()" pt="bw" rel="hd" root="hierop" word="hierop"/>
         <node begin="12" cat="cp" end="51" id="20" rel="vc">
@@ -43,7 +43,7 @@
                 <node begin="19" end="20" id="33" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="volgens"/>
                 <node begin="20" cat="np" end="27" id="34" rel="obj1">
                   <node begin="20" end="21" id="35" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                  <node begin="21" buiging="zonder" end="22" graad="basis" id="36" lemma="bepaald" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="bepaald" word="bepaald"/>
+                  <node begin="21" buiging="zonder" end="22" id="36" lemma="bepalen" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="mod" root="bepaald" word="bepaald" wvorm="vd"/>
                   <node begin="22" cat="ppart" end="26" id="37" rel="mod">
                     <node begin="22" cat="pp" end="25" id="38" rel="mod">
                       <node begin="22" end="23" id="39" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>

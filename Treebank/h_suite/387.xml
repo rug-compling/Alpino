@@ -9,7 +9,7 @@
         <node begin="4" end="5" id="6" lemma="voelen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="voel" word="voelde" wvorm="pv"/>
         <node begin="3" cat="inf" end="6" id="7" rel="svp">
           <node begin="3" end="4" id="8" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
-          <node begin="5" buiging="zonder" end="6" id="9" lemma="komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom_aan" word="komen" wvorm="inf"/>
+          <node begin="5" buiging="zonder" end="6" id="9" lcat="p(inf)" lemma="aan_komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom_aan" word="komen" wvorm="inf"/>
         </node>
         <node begin="6" cat="cp" end="11" id="10" rel="vc">
           <node begin="6" conjtype="onder" end="7" id="11" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
