@@ -12,7 +12,7 @@
       </node>
       <node begin="0" cat="sv1" end="19" id="8" rel="body">
         <node begin="0" end="4" id="9" index="1" rel="ld"/>
-        <node begin="4" end="5" id="10" lemma="brengen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="breng_door" word="bracht" wvorm="pv"/>
+        <node begin="4" end="5" id="10" lcat="p(sv1)" lemma="door_brengen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="breng_door" word="bracht" wvorm="pv"/>
         <node begin="5" cat="mwu" end="7" id="11" rel="su">
           <node begin="5" end="6" id="12" lemma="Jan" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jan" spectype="deeleigen" word="Jan"/>
           <node begin="6" end="7" id="13" lemma="Toorop" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Toorop" spectype="deeleigen" word="Toorop"/>
@@ -40,7 +40,7 @@
           <node begin="16" conjtype="neven" end="17" id="29" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
           <node begin="13" cat="np" end="18" id="30" rel="cnj">
             <node begin="13" end="15" id="31" index="2" rel="det"/>
-            <node begin="17" end="18" getal="mv" graad="basis" id="32" lemma="maanden" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="maand" word="maanden"/>
+            <node begin="17" end="18" getal="mv" graad="basis" id="32" lemma="maand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="maand" word="maanden"/>
           </node>
         </node>
         <node begin="18" end="19" id="33" lemma="door" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="door" vztype="fin" word="door"/>
