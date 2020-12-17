@@ -311,7 +311,7 @@ with_dt([het,nu],
 
 with_dt([meer,van,dat],  % VL
         np,
-        dt(np,[hd=l(meer,adjective(meer),0,1),
+        dt(np,[hd=l(veel,adjective(meer),0,1),
                obj1=dt(pp,
                        [hd=l(van,preposition(van,[af,uit,vandaan,[af,aan]]),1,2),
                         obj1=l(dat,determiner(het,nwh,nmod,pro,nparg),np,2,3)])
@@ -1712,23 +1712,23 @@ m(enkel,    adj_number(enkel),  enkel).   % een enkel, geen enkel
 m(enkel,    adj_number(enkele), enkele).
 m(ettelijk, adj_number(pl_num), ettelijke).
 
-m('veel als',         intensifier, [meer,als]).
-m('veel dan',         intensifier, [meer,dan]).
-m('weinig als',       intensifier, [minder,als]).
-m('weinig dan',       intensifier, [minder,dan]).
-m('niet veel als',    intensifier, [niet,meer,als]).
-m('niet veel dan',    intensifier, [niet,meer,dan]).
-m('niet weinig als',  intensifier, [niet,minder,als]).
-m('niet weinig dan',  intensifier, [niet,minder,dan]).
+m('meer als',         intensifier, [meer,als]).
+m('meer dan',         intensifier, [meer,dan]).
+m('minder als',       intensifier, [minder,als]).
+m('minder dan',       intensifier, [minder,dan]).
+m('niet meer als',    intensifier, [niet,meer,als]).
+m('niet meer dan',    intensifier, [niet,meer,dan]).
+m('niet minder als',  intensifier, [niet,minder,als]).
+m('niet minder dan',  intensifier, [niet,minder,dan]).
 
-m('veel als',         pre_num_adv(both), [meer,als]).
-m('veel dan',         pre_num_adv(both), [meer,dan]).
-m('weinig als',       pre_num_adv(both), [minder,als]).
-m('weinig dan',       pre_num_adv(both), [minder,dan]).
-m('niet veel als',    pre_num_adv(both), [niet,meer,als]).
-m('niet veel dan',    pre_num_adv(both), [niet,meer,dan]).
-m('niet weinig als',  pre_num_adv(both), [niet,minder,als]).
-m('niet weinig dan',  pre_num_adv(both), [niet,minder,dan]).
+m('meer als',         pre_num_adv(both), [meer,als]).
+m('meer dan',         pre_num_adv(both), [meer,dan]).
+m('minder als',       pre_num_adv(both), [minder,als]).
+m('minder dan',       pre_num_adv(both), [minder,dan]).
+m('niet meer als',    pre_num_adv(both), [niet,meer,als]).
+m('niet meer dan',    pre_num_adv(both), [niet,meer,dan]).
+m('niet minder als',  pre_num_adv(both), [niet,minder,als]).
+m('niet minder dan',  pre_num_adv(both), [niet,minder,dan]).
 
 %% pre_det_quant
 %% quantifiers that may precede determiner in NP
@@ -2236,8 +2236,8 @@ with_dt([van,zulke],
        ).
 
 %m(welk,          determiner(pron,rwh), welks). parse_only_lex
-m(wie,           determiner(pron,rwh), wiens).
-m(wie,           determiner(pron,rwh), wier).
+m(wiens,         determiner(pron,rwh), wiens).
+m(wier,          determiner(pron,rwh), wier).
 
 m(datzelfde,     comp_determiner(het,als),datzelfde).
 m(dezelfde,      comp_determiner(de,als  ),dezelfde).
@@ -4245,17 +4245,17 @@ with_dt([en,met,succes],
 with_dt([met,Hun,Tweeen],
 	adjective(pred(padv)),
 	dt(pp,[hd=l(met,preposition(met,[]),0,1),
-	       obj1=dt(np,[det=l(Hun,determiner(pron),detp,1,2),
+	       obj1=dt(np,[det=l(HunL,determiner(pron),detp,1,2),
 			   hd=l(Lemma,noun(both,both,pl),2,3)])])) :-
 
-    zijn(Hun),
+    zijn(Hun,HunL),
     wij_allebei(Tweeen,Lemma).
 
-zijn(ons).
-zijn(jullie).
-zijn(hun).
-zijn(zijn).
-zijn('z\'n').
+zijn(ons,ons).
+zijn(jullie,jullie).
+zijn(hun,hun).
+zijn(zijn,zijn).
+zijn('z\'n',zijn).
 
 m('het eerst',     adjective(het_st(adv)),   [Het,eerst]) :- het(Het).
 m('het eerst',     adjective(het_st(oadv)), [Het,eerste]) :- het(Het).
@@ -4876,10 +4876,10 @@ modal_adverb(zelfs).
 modal_adverb([ja,zelfs]).
 modal_adverb(zowel). % Vlaams?
 
-m('met naam', modal_adverb,[met,name]).
+m('met name', modal_adverb,[met,name]).
 m('onder ander', modal_adverb, [onder,andere]).
 m('onder ander', modal_adverb, [onder,anderen]).
-m('onder veel',  modal_adverb, [onder,meer]).
+m('onder meer',  modal_adverb, [onder,meer]).
 
 %% prep   bijna in alle gevallen
 %% noun   bijna iedereen
@@ -5097,9 +5097,9 @@ m(hoeveelste,       wh_number(rang), hoeveelste).
 with_dt([met,Hun,hoevelen],
 	wh_adjective(padv),
 	dt(pp,[hd=l(met,preposition(met,[]),0,1),
-	       obj1=dt(np,[det=l(Hun,determiner(pron),detp,1,2),
+	       obj1=dt(np,[det=l(HunL,determiner(pron),detp,1,2),
 			   hd=l(hoeveel,noun(both,both,pl),2,3)])])) :-
-    zijn(Hun).
+    zijn(Hun,HunL).
 
 
 m(hoever,            wh_adverb,hoever).
@@ -7808,10 +7808,10 @@ m(niets,comp_noun(het,mass,sg,dan),niks).
 %			  hd=l(min,adjective(er(adv)),ap,1,2)])])).
 
 
-m('niets weinig dan', modal_adverb(noun),[niets,minder,dan]).
-m('niemand weinig dan', modal_adverb(noun),[niemand,minder,dan]).
-m('niets weinig als', modal_adverb(noun),[niets,minder,als]).
-m('niemand weinig als', modal_adverb(noun),[niemand,minder,als]).
+m('niets minder dan', modal_adverb(noun),[niets,minder,dan]).
+m('niemand minder dan', modal_adverb(noun),[niemand,minder,dan]).
+m('niets minder als', modal_adverb(noun),[niets,minder,als]).
+m('niemand minder als', modal_adverb(noun),[niemand,minder,als]).
 
 %% op zich 't idee vind ik wel leuk
 with_dt([op,zich],

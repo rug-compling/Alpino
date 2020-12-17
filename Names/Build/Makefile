@@ -13,7 +13,8 @@ all:
 	$(MAKE) sorted f=geo
 	$(MAKE) sorted f=per
 	$(MAKE) sorted f=misc
-	$(MAKE) seeds.fsa 
+	$(MAKE) seeds.fsa
+	$(MAKE) name_accents.pl
 
 f=geo
 sorted:
@@ -42,5 +43,7 @@ realclean: clean
 
 install:
 	if cmp -s seeds.fsa ../seeds.fsa; then true ; else cp seeds.fsa ../ ; fi
+	if cmp -s name_accents.pl ../name_accents.pl; then true ; else cp name_accents.pl ../; fi
 
-
+name_accents.pl: seeds
+	cut -f1 seeds | Alpino -notk -l accents | sort -u > name_accents.pl

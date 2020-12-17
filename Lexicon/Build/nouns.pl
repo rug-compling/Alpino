@@ -791,9 +791,9 @@ n([pl('NK'),sg('NK'),pl('NK\'s'),
 n([sg('NK-viertallen'),
    pl('NK-viertallen')],het,[]).
 
-n([stem('Nobel_prijs'),pl('Nobelprijzen'),sg('Nobelprijs')],de,[app_measure]).
+n([pl('Nobelprijzen'),sg('Nobelprijs')],de,[app_measure]).
 
-n([stem('Nobel_prijs_winnaar'),pl('Nobelprijswinnaars'),sg('Nobelprijswinnaar')],de,[app_measure]).
+n([stem('Nobelprijs_winnaar'),pl('Nobelprijswinnaars'),sg('Nobelprijswinnaar')],de,[app_measure]).
 
 n([pl('Noren'),sg('Noor')],de,[]).
 
@@ -8492,9 +8492,7 @@ n([sg([déjà,vu]),
 n([pl(delen),sg(deel),sg('dl.'), pl('dln.')],het,[measure,mod],
   [dim(deeltje)]).
 
-n([pl(delen),sg(deel),
-   ignore_stem(deel),
-   ignore_stem(deel_DIM)],het,[],
+n([pl(delen),sg(deel),ignore_stem(deel)],het,[],
   [bouw,
    eiland,
    s(gebied),                   % overzeese
@@ -8518,8 +8516,6 @@ n([mass(deelneming),pl(deelnemingen),sg(deelneming)],de,[]).
 n([pl(deelstaten),sg(deelstaat)],de,[]).
 
 n([mass(deeltijd)],de,[]).
-
-n([pl(deeltjes),sg(deeltje)],het,[measure]).
 
 n([mass(deemoed)],de,[]).
 
@@ -8699,7 +8695,8 @@ n([pl(desintegraties),sg(desintegratie)],de,[]).
 
 n([pl(desinteresses),sg(desinteresse)],de,[]).
 
-n([sg(deskundige),pl(deskundigen)],de,[],
+n([stem(deskundig),
+   sg(deskundige),pl(deskundigen)],de,[],
   [s(arbeid),
    s(belegging),
    s(ervaring)]).
@@ -9235,7 +9232,7 @@ n([sg(doejong),pl(doejongs)],de,[]).
 
 n([pl(doeken),sg(doek)],de,[]).
 
-n([mass(doek),pl(doeken),sg(doek)],het,[],
+n([mass(doek),pl(doeken),sg(doek)],both,[],
   [hoofd,
    dim(doekje)]).
 
@@ -13866,7 +13863,7 @@ n([sg([haantje,de,voorste])],het,[]).
 n([pl(haren),sg(haar)],de,[],[dim(haartje)]).
 n([mass(haar)],het,[]).
 
-n([sg(hare),pl(hare)],both,[]).
+n([stem(haar),sg(hare),pl(hare)],both,[]).
 
 n([pl(haarden),sg(haard)],de,[]).
 
@@ -16522,7 +16519,7 @@ n([pl(journalistes),sg(journaliste)],de,[],
 
 n([mass(journalistiek)],de,[],[sport]).
 
-n([sg(jouwe),pl(jouwen),pl(jouwe)],both,[]).
+n([stem(jou),sg(jouwe),pl(jouwen),pl(jouwe)],both,[]).
 
 n([mass(jubel)],de,[]).
 
@@ -20225,6 +20222,8 @@ n([stem(lood_DIM),pl(loodjes),sg(loodje)],het,[]).
 
 n([pl(loodsen),sg(loods)],de,[]).
 
+n([sg(loodswezen)],het,[]).
+
 n([mass(loof)],het,[]).
 
 n([mass(loog)],het,[]).
@@ -21777,7 +21776,7 @@ n([pl(mijnen),sg(mijn)],de,[],
    steenkool
   ]).
 
-n([sg(mijne),pl(mijne)],both,[]).
+n([stem(mijn),sg(mijne),pl(mijne)],both,[]).
 
 n([mass(mijnbouw)],de,[]).
 
@@ -24199,7 +24198,7 @@ n([mass(onwil)],de,[vp]).
 
 n([pl(onzekerheden),sg(onzekerheid)],de,[sbar]).
 
-n([pl(onzen),sg(onze)],both,[]).
+n([stem(ons),pl(onzen),sg(onze)],both,[]).
 
 n([sg(onzevader),pl(onzevaders)],het,[]).
 
@@ -24404,10 +24403,12 @@ n([pl(operettes),sg(operette)],de,[]).
 
 n([sg(opfok)],de,[]).
 
-n([pl(opgaven),sg(opgaaf),sg(opgave)],de,
+n([stem(opgave),
+   pl(opgaven),sg(opgaaf),sg(opgave)],de,
   [sbar,vp]).
 
-n([pl(opgaven),sg(opgaaf),sg(opgave)],de,[],
+n([stem(opgave),
+   pl(opgaven),sg(opgaaf),sg(opgave)],de,[],
   [jaar]).
 
 n([pl(opgangen),sg(opgang)],de,[]).
@@ -25798,11 +25799,9 @@ n([mass(pekel)],de,[]).
 %% VL, schil?
 n([sg(pel)],de,[]).
 
-n([sg(peleton),pl(peletons),
-   pl(pelotons),sg(peloton)],het,[measure]).
+n([pl(pelotons),sg(peloton)],het,[measure]).
 
-n([sg(peleton),pl(peletons),
-   pl(pelotons),sg(peloton)],het,[],
+n([pl(pelotons),sg(peloton)],het,[],
   [wieler]).
 
 n([pl(pelgrims),sg(pelgrim)],de,[]).
@@ -27370,15 +27369,14 @@ n([pl(procedures),sg(procedure)],de,[],
   ]).
 
 n([meas(procent),
-   pl(procenten),
-   meas(percent),
-   pl(percenten)],both,
+   pl(procenten)],both,
   [meas_mod,
    measure],
   [s(gewicht),
    dim(procentje)]).
 
-n([meas(percent)],both,
+n([meas(percent),
+   pl(percenten)],both,
   [meas_mod,
    measure],
   []).
@@ -27868,6 +27866,8 @@ n([pl(putten),sg(put)],de,[],
   [beer,
    bouw,
    gier]).
+
+n([sg(putto),pl(putti)],de,[]).
 
 n([pl(puzzels),sg(puzzel),
    pl(puzzles),sg(puzzle)],de,[sbar,vp],[dim(puzzeltje)]).
@@ -35896,7 +35896,7 @@ n([pl(uren),sg(uur),
    i(vraag,vragen),
    dim(uurtje)]).
 
-n([sg(uwe),pl(uwen)],both,[]).
+n([stem(u),sg(uwe),pl(uwen)],both,[]).
 
 n([pl('v\'s'),sg(v)],de,[],[dim('v\'tje')]).
 

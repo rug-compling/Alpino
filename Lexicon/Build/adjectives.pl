@@ -23,9 +23,9 @@ m(teveel,  vp_om_me_adjective(no_e(odet_adv)), teveel).
 
 m(zoveel,  adjective(meer), zoveel).
 
-m(veel,    adjective(meer),   meer).
+m(meer,    adjective(meer),   meer).
 
-m(weinig,  adjective(meer),   minder).
+m(minder,  adjective(meer),   minder).
 
 %% todo: een minder jaartje/resultaat
 
@@ -1299,7 +1299,7 @@ a([e('Tsjechische'),
    no_e('Tsjechisch')],nonadv,[],[]).
 
 a([e('Tsjetsjeense'),
-   no_e('Tsetsjeens')],nonadv,[],[]).
+   no_e('Tsjetsjeens')],nonadv,[],[]).
 
 a([e('Tunesische'),
    no_e('Tunesisch')],nonadv,[],[]).
@@ -1962,7 +1962,8 @@ a([stem(aan_houden),
    st(aanhoudendst),
    ste(aanhoudendste)],adv,[],[]).
 
-a([both(aankomend),  % de aankomend kamerleden etc.
+a([stem(aan_komen),
+   both(aankomend),		% de aankomend kamerleden etc.
    ende(aankomende)],adv,[],[]).
 
 a([e(aanlokkelijke),
@@ -8328,7 +8329,8 @@ a([e(doeltreffende),
    st(doeltreffendst),
    ste(doeltreffendste)],adv,[],[]).
 
-a([ende(doende)],padv,
+a([stem(doen),
+   ende(doende)],padv,
   [object_vp,
    pp(met),
    fixed([[terzake]])],[]).
@@ -8962,7 +8964,7 @@ a([e(drijfnatte),
    st(drijfnatst),
    ste(drijfnatste)],padv,[],[]).
 
-a([stem(dringen),
+a([stem(dringend),
    e(dringende),
    er(dringender),
    ere(dringendere),
@@ -13351,7 +13353,8 @@ a([ge_e(geleaste),
    ge_e(geleasde),
    ge_no_e(geleasd)],adv,[],[]).
 
-a([ge_both(geleden)],tmpadv,
+a([stem(geleden),
+   ge_both(geleden)],tmpadv,
   [pp(door),
    subject_sbar],[]).
 
@@ -17956,7 +17959,7 @@ a([e(halsstarrige),
 
 a([postn_pred([hand,in,hand])],padv,[pp(met)],[]).
 
-a([stem(hand_verstoren),
+a([stem(handel_verstoren),
    end(handelsverstorend),
    ende(handelsverstorende)],padv,[],[]).
 
@@ -22936,8 +22939,7 @@ a([e(meeslepende),
    st(meeslependst),
    ste(meeslependste)],adv,[],[]).
 
-a([stem(veel),
-   st(meest),
+a([stem(veel),st(meest),
    ste(meeste)],adv,[],[]).
 
 a([e(meesterlijke),
@@ -26948,7 +26950,8 @@ a([ge_e(ontglipte),
 
 a([ge_both(ontgonnen)],adv,[],[]).
 
-a([ge_e(ontgoochelde),
+a([stem(ontgoocheld),
+   ge_e(ontgoochelde),
    er(ontgoochelder),
    ere(ontgoocheldere),
    ge_no_e(ontgoocheld),
@@ -34842,7 +34845,8 @@ a([e(uiterlijke),
 a([e(uiterste),
    no_e(uiterst)],adv,[],[]).
 
-a([ende(uitgaande),
+a([stem(uit_gaan),
+   ende(uitgaande),
    no_e(uitgaand)],padv,
   [pp(van),
    er_pp_sbar(van)],[]).
@@ -36547,10 +36551,10 @@ a([ge_e(verheerlijkte),
 a([ge_e(verhelderde),
    ge_no_e(verhelderd)],adv,[],[]).
 
-a([ge_e(verheugde),
+a([e(verheugde),
    er(verheugder),
    ere(verheugdere),
-   ge_no_e(verheugd),
+   no_e(verheugd),
    st(verheugdst),
    ste(verheugdste)],adv,
   [object_sbar,
@@ -37675,7 +37679,8 @@ a([ge_e(vertroetelde),
 
 a([ge_both(vertrokken)],adv,[],[]).
 
-a([ge_e(vertrouwde),
+a([stem(vertrouwd),
+   ge_e(vertrouwde),
    ge_e(vertrouwdere),
    ge_no_e(vertrouwd),
    ge_no_e(vertrouwder)],padv,
@@ -42398,7 +42403,6 @@ stem(gelaveerd,v_root(laveer,laveren)).
 stem(gelazerd,v_root(lazer,lazeren)).
 stem(geleasd,v_root(leas,leasen)).
 stem(geleast,v_root(leas,leasen)).
-stem(geleden,v_root(lijd,lijden)).
 stem(geledigd,v_root(ledig,ledigen)).
 stem(geleefd,v_root(leef,leven)).
 stem(geleegd,v_root(leeg,legen)).
@@ -43676,7 +43680,6 @@ stem(ontfutseld,v_root(ontfutsel,ontfutselen)).
 stem(ontgaan,v_root(ontga,ontgaan)).
 stem(ontglipt,v_root(ontglip,ontglippen)).
 stem(ontgonnen,v_root(ontgin,ontginnen)).
-stem(ontgoocheld,v_root(ontgoochel,ontgoochelen)).
 stem(ontgroeid,v_root(ontgroei,ontgroeien)).
 stem(onthaald,v_root(onthaal,onthalen)).
 stem(onthaard,v_root(onthaar,ontharen)).
@@ -44546,7 +44549,6 @@ stem(verhard,v_root(verhard,verharden)).
 stem(verheeld,v_root(verheel,verhelen)).
 stem(verheerlijkt,v_root(verheerlijk,verheerlijken)).
 stem(verhelderd,v_root(verhelder,verhelderen)).
-stem(verheugd,v_root(verheug,verheugen)).
 stem(verheven,v_root(verhef,verheffen)).
 stem(verhevigd,v_root(verhevig,verhevigen)).
 stem(verhinderd,v_root(verhinder,verhinderen)).
@@ -44767,7 +44769,6 @@ stem(vertrapt,v_root(vertrap,vertrappen)).
 stem(vertroebeld,v_root(vertroebel,vertroebelen)).
 stem(vertroeteld,v_root(vertroetel,vertroetelen)).
 stem(vertrokken,v_root(vertrek,vertrekken)).
-stem(vertrouwd,v_root(vertrouw,vertrouwen)).
 stem(vertwijfeld,v_root(vertwijfel,vertwijfelen)).
 stem(vervaagd,v_root(vervaag,vervagen)).
 stem(vervaardigd,v_root(vervaardig,vervaardigen)).

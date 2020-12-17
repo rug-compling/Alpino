@@ -26,6 +26,11 @@ cgn_postag_c(Frame,Stem,Surf,Q0,Q,_Cat,_) -->
     tags(Q0,Q,Stem,Tag).
 
 cgn_postag_c(Frame,Stem,_,Q0,Q,_Cat,_) -->
+    {  exceptional_stem_tag(Stem,Frame,Tag,Lemma) },
+    !,
+    tags(Q0,Q,Lemma,Tag).
+
+cgn_postag_c(Frame,Stem,_,Q0,Q,_Cat,_) -->
     {  exceptional_stem_tag(Stem,Frame,Tag) },
     !,
     tags(Q0,Q,Stem,Tag).
@@ -51,9 +56,23 @@ cgn_postag_c(Frame,Stem,_,Q0,Q,_Cat,_) -->
     tags(Q0,Q,Stem,Tag).
 
 cgn_postag_c(Frame,Stem,_,Q0,Q,Cat,_) -->
+    {  context_dependent_tag_lemma(Frame,Tag,Stem,Stem1,Q0,Q,Cat) },
+    !,
+    tags(Q0,Q,Stem1,Tag).
+
+cgn_postag_c(Frame,Stem,_,Q0,Q,Cat,_) -->
     {  context_dependent_tag(Frame,Tag,Stem,Q0,Q,Cat) },
     !,
     tags(Q0,Q,Stem,Tag).
+
+cgn_postag_c(amount_meas_mod_noun(A,B,C),Stem,_,Q0,Q,_,_) -->
+    {  atom(Stem),
+       alpino_util:split_atom(Stem," ",Stems),
+       length(Stems,Len),
+       Q is Len + Q0
+    },
+    !,
+    guess_tags(Q0,Q,amount_meas_mod_noun(A,B,C),Stems).
 
 cgn_postag_c(Frame,Stem,_,Q0,Q,_Cat,_) -->
     {  cgn_postag_c(Frame,Tag) },
@@ -121,14 +140,21 @@ not_last_m_tag('N(eigen,ev,dim,gen)',  'SPEC(deeleigen)').
 history_tags(normal(decap(X)),Q0,Q,Stem,Surf,Frame,Result) -->
     history_tags(normal(X),Q0,Q,Stem,Surf,Frame,Result).
 
+history_tags(normal(ten_xste),Q0,Q,Stem,_Surf,_Frame,_Result) -->
+    { Q1 is Q0 + 1,
+      atom(Stem),
+      alpino_util:split_atom(Stem," ",[ten,Tweede]),
+      alpino_lex:lexicon(number(rang),Twee,[Tweede],[],_)
+    },
+    [ cgn_postag(Q0,Q1,te,'VZ(versm)')],
+    [ cgn_postag(Q1,Q,Twee,'TW(rang,nom,zonder-n)')].
+
 history_tags(double_compound,Q0,Q,Stem,_Surf,Frame,Result) -->
     { 2 is Q-Q0,
       starts_with_capital(Stem),
       Q1 is Q0 + 1,
-      atom_codes(Stem,Codes),
-      alpino_util:split_string(Codes," ",[W1,W2]),
-      atom_codes(Stem1,W1),
-      atom_codes(Stem2,W2)
+      atom(Stem),
+      alpino_util:split_atom(Stem," ",[Stem1,Stem2])
     },
     [ cgn_postag(Q0,Q1,Stem1,'SPEC(deeleigen)')],
     cgn_postag_c(Frame,Stem2,Stem2,Q1,Q,Result,no).
@@ -138,8 +164,9 @@ history_tags(normal(abbreviation(normal)),Q0,Q,Stem,'\'t',determiner(het,nwh,nmo
     [ cgn_postag(Q0,Q,Stem,'LID(bep,stan,evon)') ].
 
 history_tags(normal(abbreviation(normal)),Q0,Q,Stem,_,_,_) -->
-    { 1 is Q-Q0 }, 
-    [ cgn_postag(Q0,Q,Stem,'SPEC(afk)') ].
+    { 1 is Q-Q0,
+      guess_lemma(Stem,Stem1)}, 
+    [ cgn_postag(Q0,Q,Stem1,'SPEC(afk)') ].
 
 history_tags(part_verb_conjunct,Q0,Q,Stem,_,_,_) -->
     { 1 is Q-Q0 }, 
@@ -150,7 +177,8 @@ history_tags(normal(url),Q0,Q,Stem,_,_,_) -->
     [ cgn_postag(Q0,Q,Stem,'SPEC(symb)') ].
 
 history_tags(quoted_name(_,_),Q0,Q,Stem,_,_,_) -->
-    {  atom_codes(Stem,Codes),
+    {  atom(Stem),
+       atom_codes(Stem,Codes),
        alpino_util:codes_to_words(Codes,Words),
        length(Words,Len),
        Len is Q - Q0
@@ -174,26 +202,34 @@ history_tags(english_compound(normal),P0,P,Stem,_Surf,Frame,_Result) -->
 
 guess_tag_list([],Q,Q) --> [].
 guess_tag_list([H|T],Q0,Q) -->
-    guess_tag(H,Q0,Q1),
+    guess_tag(H,H,Q0,Q1),
     guess_tag_list(T,Q1,Q).
 
 guess_tags(Q0,Q,Frame,Stem,L0,L) :-
     (   Q is Q0 + 1
-    ->  guess_tag(Stem,Q0,Q,L0,L)
+    ->  guess_tag(Stem,Frame,Q0,Q,L0,L)
     ;   guess_stags(Q0,Q,Frame,Stem,L0,L)
     ).
 
-guess_tag(Stem,Q0,Q) -->
+guess_tag(Stem,skip,Q0,Q) -->
+    { alpino_lexical_analysis:hesitation(Stem),
+      Q is Q0 + 1
+    },
+    !,
+    [cgn_postag(Q0,Q,Stem,'TSW()')].
+
+guess_tag(Stem0,_,Q0,Q) -->
     [cgn_postag(Q0,Q,Stem,Tag)],
     { Q is Q0 + 1,
-      lassy(Stem,Tag) },
+      lassy(Stem0,Tag),
+      guess_lemma(Stem0,Stem)},
     !.
-guess_tag(Stem,Q0,Q) -->
+guess_tag(Stem,_,Q0,Q) -->
     [cgn_postag(Q0,Q,Stem,Tag)],
     { Q is Q0 + 1,
       guess_lex(Stem,Tag) },
     !.
-guess_tag(Stem,Q0,Q) -->
+guess_tag(Stem,_,Q0,Q) -->
     { Q is Q0 + 1 },
     [cgn_postag(Q0,Q,Stem,'NA()')].
 
@@ -201,10 +237,10 @@ guess_stags(Q0,Q,Tag,St,L0,L) :-
     (   Q > Q0
     ->  Q1 is Q0 + 1,
 	(   Tag=fixed_part([H|T])
-	->  guess_tag(H,Q0,Q1,L0,L1),
+	->  guess_tag(H,H,Q0,Q1,L0,L1),
 	    guess_stags(Q1,Q,fixed_part(T),_Stems,L1,L)
 	;   St = [Stem|Stems],
-	    lassy(Stem,POSTAG)
+	    guess_lex(Stem,POSTAG)
 	->  L0 = [cgn_postag(Q0,Q1,Stem,POSTAG)|L1],
 	    guess_stags(Q1,Q,Tag,Stems,L1,L)
 	;   St = [Stem|Stems]
@@ -236,6 +272,37 @@ guess_lex(Stem1,Tag) :-
 guess_lex(S,'N(eigen,ev,basis,zijd,stan)'):-
     starts_with_capital(S),!.
 guess_lex(_,'N(soort,ev,basis,zijd,stan)').
+
+context_dependent_tag_lemma(adjective(er(adv)),'BW()',lief,liever,Q0,Q,Result) :-
+    find_path(Q0,Q,Result,Path),
+    adv_path(Path).
+
+context_dependent_tag_lemma(adjective(meer),PosTag,Stem0,Stem,Q0,Q,Result) :-
+    find_path(Q0,Q,Result,Path),
+    (   pronoun_path(Path)
+    ->  det_pron(Stem0,_,PosTag)
+    ;   adv_path(Path)
+    ->  det_pron(Stem0,_,PosTag)
+    ;   det_pron(Stem0,PosTag,_)
+    ),
+    (   meer_lemma(Stem0,Stem1)
+    ->  Stem1 = Stem
+    ;   Stem0 = Stem
+    ).
+
+context_dependent_tag_lemma(adjective(ste),Tag,veel,veel,Q0,Q,Result) :-
+    find_node(Q0,Q,Result,Node),
+    (   nattr(Node)
+    ->  Tag = 'VNW(onbep,grad,stan,vrij,zonder,sup)'
+    ;   find_path(Q0,Q,Result,Path),
+	(   noun_path(Path)
+	->  Tag = 'VNW(onbep,grad,stan,nom,met-e,zonder-n,sup)'
+	;   Tag = 'VNW(onbep,grad,stan,prenom,met-e,agr,sup)'
+	)
+    ).
+
+meer_lemma(meer,veel).
+meer_lemma(minder,weinig).
 
 context_dependent_tag(preposition(_,_),'VZ(fin)',_Stem,Q0,Q,Result) :-
     find_node(Q0,Q,Result,Node),
@@ -293,15 +360,6 @@ context_dependent_tag(determiner(wat,nwh,mod,pro,nparg),PosTag,Stem,Q0,Q,Result)
 context_dependent_tag(determiner(_,nwh,nmod,pro,nparg),PosTag,Stem,Q0,Q,Result):-
     find_path(Q0,Q,Result,Path),
     (   pronoun_path(Path)
-    ->  det_pron(Stem,_,PosTag)
-    ;   det_pron(Stem,PosTag,_)
-    ).
-
-context_dependent_tag(adjective(meer),PosTag,Stem,Q0,Q,Result) :-
-    find_path(Q0,Q,Result,Path),
-    (   pronoun_path(Path)
-    ->  det_pron(Stem,_,PosTag)
-    ;   adv_path(Path)
     ->  det_pron(Stem,_,PosTag)
     ;   det_pron(Stem,PosTag,_)
     ).
@@ -442,20 +500,22 @@ context_dependent_tag(adjective(ende(_)),'WW(od,nom,met-e,zonder-n)',_Stem,Q0,Q,
     find_path(Q0,Q,Result,Path),
     noun_path(Path).
 
-context_dependent_tag(adjective(ste),Tag,meest,Q0,Q,Result) :-
-    find_node(Q0,Q,Result,Node),
-    (   nattr(Node)
-    ->  Tag = 'VNW(onbep,grad,stan,vrij,zonder,sup)'
-    ;   find_path(Q0,Q,Result,Path),
-	(   noun_path(Path)
-	->  Tag = 'VNW(onbep,grad,stan,nom,met-e,zonder-n,sup)'
-	;   Tag = 'VNW(onbep,grad,stan,prenom,met-e,agr,sup)'
-	)
-    ).
-
 context_dependent_tag(adjective(ste),'ADJ(nom,sup,met-e,zonder-n,stan)',_Stem,Q0,Q,Result) :-
     find_path(Q0,Q,Result,Path),
     noun_path(Path).
+
+context_dependent_tag(number(rang),'ADJ(nom,sup,met-e,zonder-n,stan)',laat,Q0,Q,Result) :-
+    find_path(Q0,Q,Result,Path),
+    noun_path(Path).
+
+context_dependent_tag(number(rang),'ADJ(nom,sup,met-e,zonder-n,stan)',laat,Q0,Q,Result) :-
+    find_path(Q0,Q,Result,Path),
+    pronoun_path(Path).
+
+context_dependent_tag(number(rang),'ADJ(prenom,sup,met-e,stan)',laat,Q0,Q,Result) :-
+    find_path(Q0,Q,Result,Path),
+    \+ noun_path(Path),
+    \+ pronoun_path(Path).
 
 context_dependent_tag(adjective(stof),'VNW(onbep,det,stan,nom,met-e,zonder-n)',enig,Q0,Q,Result) :-
     find_path(Q0,Q,Result,Path),
@@ -541,6 +601,7 @@ is_name(W) :-
 %% right hand head rule: you are a name if
 %% rightmost morpheme is
 complex_name(W) :-
+    atom(W),
     atom_codes(W,Codes),
     alpino_util:split_string(Codes,"_",Words0),
     lists:last(Words0,Last),
@@ -563,17 +624,53 @@ is_simple_name('NK').
 is_simple_name('WK').
 
 is_simple_name(W) :-
+    atom(W),
     atom_codes(W,[F,G|_T]),
     alpino_latin1:isupper(F),
     alpino_latin1:islower(G).
+
+exceptional_stem_tag(Var,_,_,_) :-
+    var(Var),
+    !,
+    fail.
+exceptional_stem_tag(meest,nominalized_adjective,                   'VNW(onbep,grad,stan,nom,met-e,mv-n,sup)',veel).
+exceptional_stem_tag(meest,nominalized_super_adjective,             'VNW(onbep,grad,stan,nom,met-e,mv-n,sup)',veel).
+exceptional_stem_tag(veel,adjective(st(_)),                         'VNW(onbep,grad,stan,vrij,zonder,sup)',   veel).
+
+exceptional_stem_tag('Congres',_,        'N(soort,ev,basis,onz,stan)', congres).
+exceptional_stem_tag('Defensie',_,       'N(soort,ev,basis,zijd,stan)',defensie).
+exceptional_stem_tag('Gemeenschap',_,    'N(soort,ev,basis,zijd,stan)',gemeenschap).
+exceptional_stem_tag('Justitie',_,       'N(soort,ev,basis,zijd,stan)',justitie).
+exceptional_stem_tag('Kamer',_,          'N(soort,ev,basis,zijd,stan)',kamer).
+exceptional_stem_tag('Onderwijs',_,      'N(soort,ev,basis,onz,stan)', onderwijs).
+exceptional_stem_tag('Ontwikkelingssamenwerking',_,
+		                         'N(soort,ev,basis,onz,stan)', ontwikkelingssamenwerking).
+exceptional_stem_tag('Raad',_,           'N(soort,ev,basis,zijd,stan)',raad).
+exceptional_stem_tag('Staat',_,          'N(soort,ev,basis,zijd,stan)',staat).
+exceptional_stem_tag('Senaat',_,         'N(soort,ev,basis,zijd,stan)',senaat).
+exceptional_stem_tag('Unie',_,           'N(soort,ev,basis,zijd,stan)',unie).
+exceptional_stem_tag('Verdrag',_,        'N(soort,ev,basis,onz,stan)', verdrag).
+exceptional_stem_tag('Volksgezondheid',_,'N(soort,ev,basis,zijd,stan)',volksgezondheid).
+
+exceptional_stem_tag(betreffen,preposition(betreffende,[]),   'WW(od,vrij,zonder)',betreffen).
+exceptional_stem_tag(dood,noun(de,count,pl),                  'ADJ(nom,basis,met-e,mv-n)',dood).
+exceptional_stem_tag(dood,noun(de,count,sg),                  'ADJ(nom,basis,met-e,zonder-n,stan)',dood).
+exceptional_stem_tag(gezien,complementizer,                   'WW(vd,vrij,zonder)',zien).
+exceptional_stem_tag(gezien,preposition(_,_),                 'WW(vd,vrij,zonder)',zien).
+exceptional_stem_tag(hoeveelste, wh_number(rang),             'TW(rang,prenom,stan)',hoeveel).
+exceptional_stem_tag(mee,loc_adverb,                          'VZ(fin)',mee).
+exceptional_stem_tag(sprake,_,                                'N(soort,ev,basis,dat)',spraak).
+exceptional_stem_tag(streven,noun(het,mass,sg),               'WW(inf,vrij,zonder)',streven).
+exceptional_stem_tag(verdenken,noun(de,count,sg),             'WW(vd,nom,met-e,zonder-n)',verdenken).
+exceptional_stem_tag(verdenken,noun(de,count,pl),             'WW(vd,nom,met-e,mv-n)',verdenken).
 
 exceptional_stem_tag(Var,_,_) :-
     var(Var),
     !,
     fail.
 
-exceptional_stem_tag(v_root(Stem,_),Frame,Tag) :-
-    exceptional_stem_tag(Stem,Frame,Tag).
+exceptional_stem_tag(v_root(_,Lem),Pos,Tag) :-
+    exceptional_stem_tag(Lem,Pos,Tag).
 
 exceptional_stem_tag(Stem,noun(both,both,both),'N(soort,ev,dim,onz,stan)') :-
     atom(Stem),
@@ -597,11 +694,14 @@ exceptional_stem_tag(alleen,modal_adverb,                           'BW()').
 exceptional_stem_tag(alle,pronoun(nwh,thi,pl,de,both,indef),        'VNW(onbep,det,stan,nom,met-e,mv-n)').
 exceptional_stem_tag(allebei,_,                                     'VNW(onbep,det,stan,vrij,zonder)').
 exceptional_stem_tag(allemaal,_,                                    'BW()').
+exceptional_stem_tag(allemachtig,tag,                               'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(allen,predm_adverb,                            'VNW(onbep,det,stan,nom,met-e,mv-n)'). % in with_dt
 exceptional_stem_tag(allen,noun(both,both,pl),                      'VNW(onbep,det,stan,nom,met-e,mv-n)'). % in with_dt
 exceptional_stem_tag(aller,determiner(pron),                        'VNW(onbep,det,gen,prenom,met-e,mv)').
 exceptional_stem_tag(alles,noun(het,mass,sg),                       'VNW(onbep,pron,stan,vol,3o,ev)').
 exceptional_stem_tag(alsook,_,                                      'VG(neven)').
+exceptional_stem_tag(alsjeblieft,_,                                 'BW()').
+exceptional_stem_tag(alstublieft,_,                                 'BW()').
 exceptional_stem_tag(alvorens,_,                                    'VG(onder)').
 exceptional_stem_tag(ander,post_adjective(er),                      'ADJ(postnom,basis,met-s)').
 exceptional_stem_tag(ander,nominalized_compar_adjective_sg,         'ADJ(nom,basis,zonder,zonder-n)').
@@ -610,6 +710,11 @@ exceptional_stem_tag(andere,determiner(de,nwh,nmod,pro,yparg),      'ADJ(prenom,
 exceptional_stem_tag(andermans,determiner(pron),                    'VNW(onbep,pron,gen,vol,3p,ev)').
 exceptional_stem_tag(annex,conj(annex),                             'VZ(init)').
 %exceptional_stem_tag(bekend,particle(_),                            'ADJ(vrij,basis,zonder)').
+exceptional_stem_tag(beetje,noun(het,count,sg),                 'N(soort,ev,dim,onz,stan)').
+exceptional_stem_tag(beetje,noun(het,count,sg,_),               'N(soort,ev,dim,onz,stan)').
+exceptional_stem_tag(beetje,noun(het,count,pl),                 'N(soort,mv,dim)').
+exceptional_stem_tag(beetje,noun(het,count,pl,_),               'N(soort,mv,dim)').
+exceptional_stem_tag(behalve,_,                                       'VG(onder)').
 exceptional_stem_tag(belangstellende,noun(de,count,sg),             'WW(od,nom,met-e,zonder-n)').
 exceptional_stem_tag(belangstellende,noun(de,count,pl),             'WW(od,nom,met-e,mv-n)').
 exceptional_stem_tag(beneden,loc_adverb,                            'VZ(fin)').
@@ -637,16 +742,12 @@ exceptional_stem_tag(destijds,_,                                    'ADJ(vrij,ba
 exceptional_stem_tag(deze,determiner(der),                          'VNW(aanw,det,gen,prenom,met-e,rest3)').
 exceptional_stem_tag(deze,determiner(de,nwh,nmod,pro,yparg),        'VNW(aanw,det,stan,prenom,met-e,rest)').
 %exceptional_stem_tag(dicht,particle(_),                             'ADJ(vrij,basis,zonder)').
-exceptional_stem_tag(diens,determiner(pron),                        'VNW(aanw,pron,gen,vol,3m,ev)').
+exceptional_stem_tag(die,determiner(pron),                          'VNW(aanw,pron,gen,vol,3m,ev)').
 exceptional_stem_tag(driemaal,noun(both,count,bare_meas),           'BW()').
-exceptional_stem_tag(duizenden,noun(de,count,pl),                   'TW(hoofd,nom,mv-n,basis)').
+exceptional_stem_tag(duizend,noun(de,count,pl),                   'TW(hoofd,nom,mv-n,basis)').
 exceptional_stem_tag(dus,_,                                         'BW()').
 exceptional_stem_tag(echt,adverb,                                   'ADJ(vrij,basis,zonder)').
-exceptional_stem_tag(eens,clause_np_adjective,                      'ADJ(vrij,basis,zonder)').
-exceptional_stem_tag(eens,np_adjective,                             'ADJ(vrij,basis,zonder)').
-exceptional_stem_tag(eens,np_adjective(_),                          'ADJ(vrij,basis,zonder)').
-exceptional_stem_tag(eens,clause_np_adjective(_),                   'ADJ(vrij,basis,zonder)').
-exceptional_stem_tag(eens,het_np_adjective(_),                      'ADJ(vrij,basis,zonder)').
+exceptional_stem_tag(eens,_,                                        'BW()').
 exceptional_stem_tag(eerder,tmp_app_noun,                           'ADJ(vrij,comp,zonder)').
 exceptional_stem_tag(eersten,noun(both,count,pl),                   'TW(rang,nom,mv-n)').
 exceptional_stem_tag(eindelijk,tag,                             'ADJ(vrij,basis,zonder)').
@@ -656,10 +757,12 @@ exceptional_stem_tag(elk,predm_adverb,                              'VNW(onbep,d
 exceptional_stem_tag(elkaar,_,                                      'VNW(recip,pron,obl,vol,persoon,mv)').
 exceptional_stem_tag(elkaars,determiner(pron),                      'VNW(recip,pron,gen,vol,persoon,mv)').
 exceptional_stem_tag(elkanders,determiner(pron),                    'VNW(recip,pron,gen,vol,persoon,mv)').
-exceptional_stem_tag(ene,determiner(de,nwh,nmod,pro,yparg),         'VNW(onbep,det,stan,prenom,met-e,evz)').
+% exceptional_stem_tag(ene,determiner(de,nwh,nmod,pro,yparg),         'VNW(onbep,det,stan,prenom,met-e,evz)').
+exceptional_stem_tag(een,adjective(e),                               'VNW(onbep,det,stan,prenom,met-e,evz)').
 exceptional_stem_tag(ergens,_,                                      'VNW(onbep,adv-pron,obl,vol,3o,getal)').
 %exceptional_stem_tag(eruit,particle(_),                             'BW()').
 exceptional_stem_tag(even,adjective(both(tmpadv)),                  'BW()').
+exceptional_stem_tag(fancy,_,                                       'SPEC(vreemd)').
 exceptional_stem_tag(gaandeweg,_,                                   'BW()').
 %exceptional_stem_tag(gelijk,particle(_),                            'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(gene,determiner(de,nwh,nmod,pro,yparg),        'VNW(aanw,det,stan,nom,met-e,zonder-n)').
@@ -687,41 +790,40 @@ exceptional_stem_tag(henzelf,_,                                     'VNW(pers,pr
 exceptional_stem_tag(hij,pronoun(nwh,thi,sg,de,nom,def),            'VNW(pers,pron,nomin,vol,3,ev,masc)').
 exceptional_stem_tag(hij,pronoun(nwh,thi,sg,de,nom,def,wkpro),      'VNW(pers,pron,nomin,red,3,ev,masc)').
 exceptional_stem_tag(hijzelf,_,                                     'VNW(pers,pron,nomin,nadr,3m,ev,masc)').
-exceptional_stem_tag(honderdduizenden,noun(de,count,pl),            'TW(hoofd,nom,mv-n,basis)').
-exceptional_stem_tag(honderden,noun(de,count,pl),                   'TW(hoofd,nom,mv-n,basis)').
+exceptional_stem_tag(honderdduizend,noun(de,count,pl),            'TW(hoofd,nom,mv-n,basis)').
+exceptional_stem_tag(honderd,noun(de,count,pl),                   'TW(hoofd,nom,mv-n,basis)').
 exceptional_stem_tag(hun,determiner(pron),                          'VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)').
 exceptional_stem_tag(ieders,determiner(pron),                       'VNW(onbep,pron,gen,vol,3p,ev)').
 exceptional_stem_tag(iemand,determiner(pron),                      'VNW(onbep,pron,gen,vol,3p,ev)').
 exceptional_stem_tag(iemand,_,                                      'VNW(onbep,pron,stan,vol,3p,ev)').
 exceptional_stem_tag(iets,_,                                        'VNW(onbep,pron,stan,vol,3o,ev)').
 exceptional_stem_tag(ikzelf,_,                                      'VNW(pers,pron,nomin,nadr,1,ev)').
+exceptional_stem_tag(inderdaad,tag,                                 'BW()').
 %exceptional_stem_tag(ineen,particle(_),                             'BW()').
 exceptional_stem_tag(ja,_,                                          'TSW()').
 exceptional_stem_tag(je,determiner(pron),                           'VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)').
 exceptional_stem_tag(jezelf,_,                                      'VNW(pr,pron,obl,nadr,2v,getal)').
-exceptional_stem_tag(jongere,noun(de,count,pl),                     'ADJ(nom,comp,met-e,mv-n)').
-exceptional_stem_tag(jongere,noun(de,count,sg),                     'ADJ(nom,comp,met-e,zonder-n,stan)').
-exceptional_stem_tag(jouw,determiner(pron),                         'VNW(bez,det,stan,vol,2v,ev,prenom,zonder,agr)').
+exceptional_stem_tag(jong,noun(de,count,pl),                        'ADJ(nom,comp,met-e,mv-n)').
+exceptional_stem_tag(jong,noun(de,count,sg),                        'ADJ(nom,comp,met-e,zonder-n,stan)').
+exceptional_stem_tag(jou,determiner(pron),                          'VNW(bez,det,stan,vol,2v,ev,prenom,zonder,agr)').
 exceptional_stem_tag(juist,modal_adverb,                            'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(jullie,determiner(pron),                       'VNW(bez,det,stan,nadr,2v,mv,prenom,zonder,agr)').
 exceptional_stem_tag(keer,noun(de,count,meas),                      'N(soort,ev,basis,genus,stan)').
 %exceptional_stem_tag(kennis,particle(_),                            'N(soort,ev,basis,zijd,stan)').
-exceptional_stem_tag(keizer,determiner(pron),                      'N(soort,ev,basis,gen)').
+exceptional_stem_tag(keizer,determiner(pron),                       'N(soort,ev,basis,gen)').
 exceptional_stem_tag(kerke,noun(_,_,_),                             'N(soort,ev,basis,dat)').
 %exceptional_stem_tag(kwalijk, particle(_),                          'ADJ(vrij,basis,zonder)').
-%exceptional_stem_tag(kwijt, particle(_),                            'ADJ(vrij,basis,zonder)').
+exceptional_stem_tag(kwijt,_,'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(land,determiner(pron),                        'N(soort,ev,basis,gen)').
 exceptional_stem_tag(later,tmp_app_noun,                            'ADJ(vrij,comp,zonder)').
 %exceptional_stem_tag(les,particle(_),                               'N(soort,ev,basis,zijd,stan)').
-exceptional_stem_tag(lief,adjective(er(_)),                         'BW()').
+%exceptional_stem_tag(lief,adjective(er(_)),                         'BW()').
 exceptional_stem_tag(liefst,modal_adverb(_),                        'BW()').
 %exceptional_stem_tag(los,particle(_),                               'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(man,determiner(pron),                         'N(soort,ev,basis,gen)').
-exceptional_stem_tag(meer,postadv_adverb,                           'VNW(onbep,grad,stan,vrij,zonder,comp)').
+exceptional_stem_tag(veel,postadv_adverb,                           'VNW(onbep,grad,stan,vrij,zonder,comp)').
+exceptional_stem_tag('v.j.',_,                                      'SPEC(afk)').
 exceptional_stem_tag(meerdere,determiner(pl_num,nwh,nmod,pro,yparg),'VNW(onbep,det,stan,prenom,met-e,mv)').
-exceptional_stem_tag(meest,nominalized_adjective,                   'VNW(onbep,grad,stan,nom,met-e,mv-n,sup)').
-exceptional_stem_tag(meest,nominalized_super_adjective,             'VNW(onbep,grad,stan,nom,met-e,mv-n,sup)').
-exceptional_stem_tag(meest,adjective(st(_)),                        'VNW(onbep,grad,stan,vrij,zonder,sup)').
 exceptional_stem_tag(meisje,noun(het,count,sg),                     'N(soort,ev,dim,onz,stan)').
 exceptional_stem_tag(meisje,noun(het,count,pl),                     'N(soort,mv,dim)').
 exceptional_stem_tag(men,pronoun(nwh,thi,sg,de,nom,def),            'VNW(pers,pron,nomin,red,3p,ev,masc)').
@@ -732,7 +834,6 @@ exceptional_stem_tag(miljard,noun(_,_,meas),               'N(soort,ev,basis,onz
 exceptional_stem_tag(miljoen,noun(_,_,meas),               'N(soort,ev,basis,onz,stan)').
 exceptional_stem_tag(minus,preposition(_,_),                        'BW()').
 exceptional_stem_tag(moeder,determiner(pron),                       'N(soort,ev,basis,gen)').
-exceptional_stem_tag(moment,noun(both,count,sg),                    'N(soort,ev,basis,onz,stan)').
 exceptional_stem_tag(na,adjective(pred(_)),                         'VZ(fin)').
 exceptional_stem_tag(nee,_,                                         'TSW()').
 %exceptional_stem_tag(neer, particle(_),                             'BW()').
@@ -742,12 +843,18 @@ exceptional_stem_tag(net,modal_adverb,                              'BW()').
 exceptional_stem_tag(niemand,_,                                     'VNW(onbep,pron,stan,vol,3p,ev)').
 exceptional_stem_tag(niemands,determiner(pron),                     'VNW(onbep,pron,gen,vol,3p,ev)').
 exceptional_stem_tag(niets,_,                                       'VNW(onbep,pron,stan,vol,3o,ev)').
+exceptional_stem_tag(niks,_,                                        'VNW(onbep,pron,stan,vol,3o,ev)').
+exceptional_stem_tag(nou,tag,                                       'BW()').
+exceptional_stem_tag(kijken,tag,                                      'WW(pv,tgw,ev)').
 exceptional_stem_tag(om,adjective(pred(_)),                         'VZ(fin)').
+exceptional_stem_tag(ondanks,_,                                     'VZ(init)').
 exceptional_stem_tag(onder,loc_adverb,                              'VZ(fin)').
 exceptional_stem_tag(onderweg,adjective(_),                         'BW()').
+exceptional_stem_tag(oneens,_,                                      'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(ons,determiner(pron),                          'VNW(bez,det,stan,vol,1,mv,prenom,zonder,evon)').
 exceptional_stem_tag(onszelf,_,                                     'VNW(pr,pron,obl,nadr,1,mv)').
 exceptional_stem_tag(onverschillig,preposition(_,_,of_sbar),        'ADJ(vrij,basis,zonder)').
+exceptional_stem_tag(ongetwijfeld,sentence_adverb,                  'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(op,adjective(pred(_)),                         'VZ(fin)').
 exceptional_stem_tag(openbaar,noun(het,mass,sg),                    'ADJ(nom,basis,zonder,zonder-n)').
 exceptional_stem_tag(opgeleid,nominalized_adjective,              'WW(vd,nom,met-e,mv-n)').
@@ -755,10 +862,10 @@ exceptional_stem_tag(opgeleid,nominalized_adjective,              'WW(vd,nom,met
 exceptional_stem_tag(overal,_,                                      'VNW(onbep,adv-pron,obl,vol,3o,getal)').
 exceptional_stem_tag(overstag,_,                                     'BW()').
 %exceptional_stem_tag(plaats,particle(_),                            'N(soort,ev,basis,zijd,stan)').
-exceptional_stem_tag(punt,noun(both,count,meas),                    'N(soort,ev,basis,onz,stan)').
-exceptional_stem_tag(punt,noun(both,count,sg),                      'N(soort,ev,basis,onz,stan)').
 exceptional_stem_tag(red,   tag,                                    'N(soort,ev,basis,zijd,stan)').
 exceptional_stem_tag('red.',tag,                                    'N(soort,ev,basis,zijd,stan)').
+exceptional_stem_tag(respectievelijk,conj(_),                       'ADJ(vrij,basis,zonder)').
+exceptional_stem_tag(respectievelijk,left_conj(_),                  'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(reuze,_,                                       'BW()').
 exceptional_stem_tag(richting,preposition(_,_),                     'N(soort,ev,basis,zijd,stan)').
 exceptional_stem_tag(rood, noun(het,mass,sg),                       'ADJ(nom,basis,zonder,zonder-n)').
@@ -768,17 +875,8 @@ exceptional_stem_tag(sinds,complementizer,                          'VZ(init)').
 exceptional_stem_tag(land,determiner(pron),                         'N(soort,ev,basis,gen)').
 exceptional_stem_tag(schuldig,np_adjective,                         'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(sommig,nominalized_adjective,                  'VNW(onbep,det,stan,nom,met-e,mv-n)').
-exceptional_stem_tag(soort,noun(both,both,sg),                      'N(soort,ev,basis,onz,stan)').
-%exceptional_stem_tag(stand, particle(_),                            'N(soort,ev,basis,zijd,stan)').
-%exceptional_stem_tag(stil, particle(_),                             'ADJ(vrij,basis,zonder)').
-%exceptional_stem_tag(stop, particle(_),                             'N(soort,ev,basis,zijd,stan)').
 exceptional_stem_tag(streven,noun(sg,_,het),                        'WW(inf,nom,zonder,zonder-n)').
-exceptional_stem_tag(weekend,noun(both,count,sg),                   'N(soort,ev,basis,onz,stan)').
 exceptional_stem_tag(wereld,determiner(pron),                       'N(soort,ev,basis,gen)').
-%exceptional_stem_tag(tekort, particle(_),                           'N(soort,ev,basis,onz,stan)').
-%exceptional_stem_tag(terecht, particle(_),                          'ADJ(vrij,basis,zonder)').
-%exceptional_stem_tag(terug, particle(_),                            'BW()').
-%exceptional_stem_tag(thee,particle(_),                              'N(soort,ev,basis,zijd,stan)').
 exceptional_stem_tag(thuis,_,                                       'BW()').
 exceptional_stem_tag(toedoen,_,                                     'WW(inf,nom,zonder,zonder-n)').
 exceptional_stem_tag(tot,conj(tot),                                 'VZ(init)').
@@ -803,6 +901,7 @@ exceptional_stem_tag(vol,preposition(_,_),                          'ADJ(vrij,ba
 exceptional_stem_tag(voor,complementizer,                           'VZ(init)').
 exceptional_stem_tag(voor,adjective(pred(_)),                       'VZ(fin)').
 exceptional_stem_tag(vooraleer,_,                                   'VG(onder)').
+exceptional_stem_tag(voornamelijk,_,                                'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(waard,np_adjective,                            'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(waard,clause_np_adjective,                     'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(waard,subject_sbar_pred_np_adjective,          'ADJ(vrij,basis,zonder)').
@@ -872,11 +971,21 @@ exceptional_stem_tag(jullie,  reflexive(je,pl),                       'VNW(pers,
 % uzelf
 exceptional_stem_tag(uzelf,   reflexive(u,sg),                        'VNW(pers,pron,nomin,nadr,2b,getal)').
 % hoeveelste
-exceptional_stem_tag(hoeveelste, wh_number(rang),                     'TW(rang,prenom,stan)').
 % onzer
 exceptional_stem_tag(ons,     pronoun(nwh,fir,pl,both,gen,def),       'VNW(pers,pron,gen,vol,1,mv)').
 
 exceptional_stem_tag('Copa',  _,                                      'N(eigen,ev,basis,zijd,stan)').
+
+exceptional_stem_tag(Compound,Frame,Tag) :-
+    atom(Compound),
+    alpino_util:split_atom(Compound,"_",[_|Parts]), % at least two parts
+    lists:append(_,[Head],Parts),
+    exceptional_stem_tag(Head,Frame,Tag).
+
+
+
+
+%  exceptional_word_tag(meer,adjective(meer),'VNW(onbep,grad,stan,vrij,zonder,comp)').
 
 exceptional_word_tag('o.a.',_,'SPEC(afk)').
 exceptional_word_tag('O.a.',_,'SPEC(afk)').
@@ -912,6 +1021,7 @@ exceptional_word_tag('resp.',_,'SPEC(afk)').
 exceptional_word_tag('d.d.',_,'SPEC(afk)').
 exceptional_word_tag('i.s.m.',_,'SPEC(afk)').
 
+exceptional_word_tag('¤',_,'SPEC(symb)').
 exceptional_word_tag(mm,_,'SPEC(symb)').
 exceptional_word_tag(m,_,'SPEC(symb)').
 exceptional_word_tag('mm.',_,'SPEC(symb)').
@@ -936,10 +1046,43 @@ exceptional_word_tag(graden,noun(de,count,meas),                     'N(soort,mv
 exceptional_word_tag('-ie',pronoun(nwh,thi,sg,de,nom,def),           'VNW(pers,pron,nomin,red,3,ev,masc)').
 exceptional_word_tag(beide,predm_adverb,                            'VNW(onbep,grad,stan,nom,met-e,zonder-n,basis)').
 exceptional_word_tag(beiden,predm_adverb,                           'VNW(onbep,grad,stan,nom,met-e,mv-n,basis)').
+exceptional_word_tag(gevangenen,_,'WW(vd,nom,met-e,mv-n)').
 
 %% kom de gij mee
 exceptional_word_tag(de,    pronoun(nwh,inv,sg,both,both,def),       'VNW(pers,pron,dial)').
 
+often_het(afval).
+often_het(bestuur).
+often_het(commentaar).
+often_het(gewicht).
+often_het(kwart).
+often_het(miljard).
+often_het(miljoen).
+often_het(misbruik).
+often_het(moment).
+often_het(onderhoud).
+often_het(paar).
+often_het(percent).
+often_het(plan).
+often_het(punt).
+often_het(raam).
+often_het(schilderij).
+often_het(toezicht).
+often_het(weekend).
+
+genus_genus(baldakijn).
+genus_genus(boord).
+genus_genus(keer).
+genus_genus(soort).
+
+stem_dependent_tag(noun(both,_,sg),Stem,'N(soort,ev,basis,genus,stan)') :-
+    genus_genus(Stem).
+stem_dependent_tag(noun(both,_,bare_meas),Stem,'N(soort,ev,basis,onz,stan)') :-
+    often_het(Stem).
+stem_dependent_tag(noun(both,_,meas),Stem,'N(soort,ev,basis,onz,stan)') :-
+    often_het(Stem).
+stem_dependent_tag(noun(both,_,sg),Stem,'N(soort,ev,basis,onz,stan)') :-
+    often_het(Stem).
 stem_dependent_tag(determiner(pron),Cap, 'N(eigen,ev,basis,gen)') :-
     starts_with_capital(Cap). 
 stem_dependent_tag('--', Eh, 'TSW()') :-
@@ -1124,6 +1267,7 @@ cgn_postag_c(pre_num_adv(both),    'VNW(onbep,grad,stan,vrij,zonder,comp)').
 cgn_postag_c(pre_num_adv(pl),      'VNW(onbep,det,stan,prenom,zonder,agr)').
 cgn_postag_c(pre_num_adv(pl_indef),'VNW(aanw,det,stan,prenom,zonder,agr)').
 
+cgn_postag_c(punct(is_gelijk),                'SPEC(symb)').
 cgn_postag_c(punct(_),                        'LET()').
 
 cgn_postag_c(score_cat,                       'SPEC(symb)').
@@ -1241,7 +1385,9 @@ cgn_postag_c(name_determiner(pron,_),         'N(eigen,ev,basis,gen)').
 
 
 cgn_postag_c(preposition(_,_),                'VZ(init)').
-cgn_postag_c(preposition(_,_,nodet),          'VZ(versm)').
+cgn_postag_c(preposition(te,_,nodet),         'VZ(init)').
+cgn_postag_c(preposition(ten,_,nodet),        'VZ(versm)').
+cgn_postag_c(preposition(ter,_,nodet),        'VZ(versm)').
 cgn_postag_c(preposition(_,_,extracted_np),   'VZ(fin)').
 cgn_postag_c(preposition(_,_,_),              'VZ(init)').
 
@@ -1558,17 +1704,24 @@ try_dehet(both,DeHet,Stem) :-
 try_dehet(de,de,_).
 try_dehet(het,het,_).
 
+try_sgpl('Alpen',               pl).
 try_sgpl('Antillen',            pl).
 try_sgpl('Balearen',            pl).
+try_sgpl('Caraïben',            pl).
 try_sgpl('Cats',                pl).
 try_sgpl('Cetniks',             pl).
+try_sgpl('Filipijnen',          pl).
 try_sgpl('Flinstones',          pl).
 try_sgpl('Flintstones',         pl).
 try_sgpl('FNV-Bondgenoten',     pl).
+try_sgpl('Middeleeuwen',        pl).
 try_sgpl('Nederlanden',         pl).
 try_sgpl('Oscars',              pl).
+try_sgpl('Spelen',              pl).
 try_sgpl('VS',                  pl).
+try_sgpl('VS.',                  pl).
 try_sgpl('V.S.',                pl).
+try_sgpl('Waddeneilanden',      pl).
 
 try_dehet(Stem,                 de) :-
     atom(Stem),
@@ -1577,15 +1730,63 @@ try_dehet(Stem,                 de) :-
     ),
     atom_codes(R,[H|T]),
     digits([H|T]).
-try_dehet('ANP',                het).
-try_dehet('Buitenhof',          het).
-try_dehet('CDA',                het).
-try_dehet('Corland',            de).  % naam van een paard
-try_dehet('Feyenoord',          het).
-try_dehet('GroenLinks',         het).
-try_dehet('Oranje-Nassau',      het).
-try_dehet('Tour',               de).
-try_dehet('Vuelta',             de).
+try_dehet(L,de) :-
+    de_naam(L).
+try_dehet(L,het) :-
+    het_naam(L).
+try_dehet(L,genus) :-
+    genus_naam(L).
+
+genus_naam('Ahold').
+genus_naam('Heineken').
+genus_naam('IBM').
+
+de_naam('Che').
+de_naam('Corland').
+de_naam('Fabeltjeskrant').
+de_naam('Grigorenko').
+de_naam('Herestraat').
+de_naam('HP').
+de_naam('Hughes').
+de_naam('Ida').
+de_naam('IRA').
+de_naam('JeanJacques').
+de_naam('KLM').
+de_naam('Ligterink').
+de_naam('Martinitoren').
+de_naam('Napoleon').
+de_naam('NASA').
+de_naam('NAVO').
+de_naam('Nuninga').
+de_naam('Oscar').
+de_naam('PvdA').
+de_naam('Roosevelt').
+de_naam('Shell').
+de_naam('Titanic').
+de_naam('Tour').
+de_naam('Vondeling').
+de_naam('Vuelta').
+de_naam('VVD').
+de_naam('WTO').
+
+het_naam('Agalev').
+het_naam('Ajax').               
+het_naam('ANP').                
+het_naam('Buitenhof').          
+het_naam('CDA').
+het_naam('D\'66').
+het_naam('Feyenoord').          
+het_naam('Feijenoord').         
+het_naam('Greenpeace').         
+het_naam('GroenLinks').         
+het_naam('GVAV').
+het_naam('IMEC').
+het_naam('Oranje-Nassau').      
+het_naam('Philips').
+het_naam('PSV').               
+het_naam('U2').
+het_naam('Unilever').
+het_naam('Zuiderdiep').
 
 digits([]).
 digits([H|T]) :-
@@ -1598,12 +1799,14 @@ name_postag(both, sg,   'PER',  'N(eigen,ev,basis,zijd,stan)' ).
 name_postag(both, sg,   'ORG',  'N(eigen,ev,basis,zijd,stan)'  ).
 name_postag(de,   sg,   _,      'N(eigen,ev,basis,zijd,stan)' ).
 name_postag(het,  sg,   _,      'N(eigen,ev,basis,onz,stan)'  ).
+name_postag(genus,sg,   _,      'N(eigen,ev,basis,genus,stan)'  ).
 name_postag(both, both, 'MISC', 'N(eigen,ev,basis,genus,stan)').
 name_postag(both, both, 'LOC',  'N(eigen,ev,basis,onz,stan)'  ).
 name_postag(both, both, 'PER',  'N(eigen,ev,basis,zijd,stan)' ).
 name_postag(both, both, 'ORG',  'N(eigen,ev,basis,zijd,stan)'  ).
 name_postag(de,   both, _,      'N(eigen,ev,basis,zijd,stan)' ).
 name_postag(het,  both, _,      'N(eigen,ev,basis,onz,stan)'  ).
+name_postag(genus,both, _,      'N(eigen,ev,basis,genus,stan)'  ).
 name_postag(_,    pl,   _,      'N(eigen,mv,basis)'           ).
 
 find_node(Q0,Q,Result,Node) :-
@@ -1633,8 +1836,16 @@ subtree_path(tree(_,Rule,List,_),Q0,Q,Path0,Path) :-
     subtree_path(Tree,Q0,Q,[Rule/N|Path0],Path).
 
 mwu_postag(Frame,Stem,Surf,Q0,Q,_Result) -->
+    { mwu_postag_frame_stem_surf(Frame,Stem,Surf,Tags) },
+    mwu_tags(Tags,Stem,1,Q0,Q).
+
+mwu_postag(Frame,Stem,Surf,Q0,Q,_Result) -->
     { mwu_postag_frame_surf(Frame,Surf,Tags) },
     mwu_tags(Tags,Stem,1,Q0,Q).
+
+mwu_postag(Frame,Stem,_Surf,Q0,Q,_Result) -->
+    { mwu_postag_frame_stem(Frame,Stem,Tags,Stems) },
+    mwu_tags_stems(Tags,Stems,Q0,Q).
 
 mwu_postag(Frame,Stem,_Surf,Q0,Q,_Result) -->
     { mwu_postag_frame_stem(Frame,Stem,Tags) },
@@ -1652,9 +1863,22 @@ mwu_postag(proper_name(_),Stem,_Surf,Q0,Q,_Result) -->
 mwu_postag(proper_name(_,_),Stem,_,Q0,Q,_Result) -->
     mwu_name_tags(Stem,Q0,Q).
 
+%% en/of written as 'en / of'
+mwu_postag(_Tag,Stem,Surf,Q0,Q,_) -->
+    {  atom(Surf),
+       alpino_util:split_atom(Surf," ",SurfEls),
+       length(SurfEls,Len),
+       (   hdrug_util:concat_all(SurfEls,Stem,'')
+       ;   hdrug_util:concat_all(SurfEls,Stem,'-')
+       ),
+       Len is Q-Q0
+    },
+    guess_tag_list(SurfEls,Q0,Q).
+
 %% 
 mwu_name_tags(Stem,Q0,Q) -->
-    {  alpino_util:split_atom(Stem," ",Words),
+    {  atom(Stem),
+       alpino_util:split_atom(Stem," ",Words),
        length(Words,Len),
        Len =:= Q-Q0
     },
@@ -1679,56 +1903,28 @@ mwu_tags([H|T],Stem,Pos,Q0,Q) -->
       Pos1 is Pos + 1},
     mwu_tags(T,Stem,Pos1,Q1,Q).
 
-mwu_postag_frame_surf(pre_np_adverb,Stem,['N(soort,ev,basis,onz,stan)','TW(hoofd,vrij)']):-
-    atom(Stem),
-    atom_concat(nummer,_,Stem).
-mwu_postag_frame_surf(pre_np_adverb,Stem,['N(soort,ev,basis,zijd,stan)','TW(hoofd,vrij)']):-
-    atom(Stem),
-    atom_concat(top,_,Stem).
-
-mwu_postag_frame_surf(adjective(het_st(_)),Stem,['LID(bep,stan,evon)','ADJ(vrij,sup,zonder)']) :-
-    atom(Stem),
-    (   atom_concat('het ',_,Stem)
-    ;   atom_concat('Het ',_,Stem)
-    ),
-    atom_concat(_,st,Stem).
-mwu_postag_frame_surf(adjective(het_st(_)),Stem,['LID(bep,stan,evon)','ADJ(nom,sup,met-e,zonder-n,stan)']) :-
-    atom(Stem),
-    (   atom_concat('het ',_,Stem)
-    ;   atom_concat('Het ',_,Stem)
-    ),
-    atom_concat(_,ste,Stem).
-mwu_postag_frame_surf(adjective(het_st(_)),Stem,['VZ(init)',Pron,'ADJ(nom,sup,zonder,zonder-n)']) :-
-    atom(Stem),
-    atom_codes(Stem,Codes),
-    alpino_util:codes_to_words(Codes,[Op,Zijn,_Vroegst]),
-    op(Op),
-    zijn_tag(Zijn,Pron).
-mwu_postag_frame_surf(determiner(pron),Stem,['LID(bep,gen,evmo)','N(soort,ev,basis,gen)']) :-
-    atom(Stem),
-    atom_concat('\'s ',_,Stem).
 mwu_postag_frame_surf(particle(tekort),'te kort',['BW()','ADJ(vrij,basis,zonder)']).
 
 %% ADJ(nom,sup,zonder,zonder-n)
 
 %% todo: kunnen ook SPEC(symb) zijn etc.
-mwu_postag_frame_surf(number(hoofd(both)),Stem,[ATag,'LET()',BTag]) :-
-    atom(Stem),
-    atom_codes(Stem,Codes),
+mwu_postag_frame_surf(number(hoofd(both)),Surf,[ATag,'LET()',BTag]) :-
+    atom(Surf),
+    atom_codes(Surf,Codes),
     alpino_util:codes_to_words(Codes,[A,'-',B]),
     num_postag(A,ATag),
     num_postag(B,BTag).    
 
-mwu_postag_frame_surf(with_dt(np(year),_),Stem,[ATag,'LET()',BTag]) :-
-    atom(Stem),
-    atom_codes(Stem,Codes),
+mwu_postag_frame_surf(with_dt(np(year),_),Surf,[ATag,'LET()',BTag]) :-
+    atom(Surf),
+    atom_codes(Surf,Codes),
     alpino_util:codes_to_words(Codes,[A,'-',B]),
     num_postag(A,ATag),
     num_postag(B,BTag).    
 
-mwu_postag_frame_surf(score_cat,Stem,[ATag,'LET()',BTag]) :-
-    atom(Stem),
-    atom_codes(Stem,Codes),
+mwu_postag_frame_surf(score_cat,Surf,[ATag,'LET()',BTag]) :-
+    atom(Surf),
+    atom_codes(Surf,Codes),
     alpino_util:codes_to_words(Codes,[A,'-',B]),
     num_postag(A,ATag),
     num_postag(B,BTag).
@@ -1736,21 +1932,58 @@ mwu_postag_frame_surf(score_cat,Stem,[ATag,'LET()',BTag]) :-
 mwu_postag_frame_surf(fixed_part(op_een_v),_,
        ['VZ(init)','LID(onbep,stan,agr)','WW(inf,nom,zonder,zonder-n)']).
 
+
+mwu_postag_frame_stem_surf(adjective(het_st(_)),Stem,Surf,['LID(bep,stan,evon)',TweedePos]) :-
+    atom_concat('het ',_,Stem),
+    atom_concat(_,Gek,Surf),
+    st(Gek,TweedePos),
+    !.
+mwu_postag_frame_stem_surf(adjective(het_st(_)),Stem,Surf,['LID(bep,stan,evon)','ADJ(vrij,sup,zonder)']) :-
+    atom(Stem),
+    atom_concat('het ',_,Stem),
+    atom_concat(_,st,Surf).
+mwu_postag_frame_stem_surf(adjective(het_st(_)),Stem,Surf,['LID(bep,stan,evon)','ADJ(nom,sup,met-e,zonder-n,stan)']) :-
+    atom(Stem),
+    atom_concat('het ',_,Stem),
+    atom_concat(_,ste,Surf).
+mwu_postag_frame_stem_surf(adjective(het_st(_)),_,Surf,['VZ(init)',Pron,'ADJ(nom,sup,zonder,zonder-n)']) :-
+    atom(Surf),
+    atom_codes(Surf,Codes),
+    alpino_util:codes_to_words(Codes,[Op,Zijn,_Vroegst]),
+    op(Op),
+    zijn_tag(Zijn,Pron).
+
+st(eerst,'TW(rang,nom,zonder-n)').
+st(eerste,'TW(rang,nom,zonder-n)').
+st(meest,'VNW(onbep,grad,stan,vrij,zonder,sup)').
+st(meeste,'VNW(onbep,grad,stan,nom,met-e,zonder-n,sup)').
+st(minst,'VNW(onbep,grad,stan,vrij,zonder,sup)').
+st(minste,'VNW(onbep,grad,stan,nom,met-e,zonder-n,sup)').
+
+mwu_postag_frame_stem(er_adverb([_Uit,_Het,_Oogpunt,_Van]),Stem,[Atag,Btag,Ctag,'BW()'],Stems) :-
+    mwu_postag(Stem,[Atag,Btag,Ctag,_],Stems).
+
+mwu_postag_frame_stem(waar_adverb([_Uit,_Het,_Oogpunt,_Van]),Stem,[Atag,Btag,Ctag,'BW()'],Stems) :-
+    mwu_postag(Stem,[Atag,Btag,Ctag,_],Stems).
+
+mwu_postag_frame_stem(er_adverb([_In,_Ruil,_Voor]),Stem,[Atag,Btag,'BW()'],Stems) :-
+    mwu_postag(Stem,[Atag,Btag,_],Stems).
+
+mwu_postag_frame_stem(waar_adverb([_In,_Ruil,_Voor]),Stem,[Atag,Btag,'BW()'],Stems) :-
+    mwu_postag(Stem,[Atag,Btag,_],Stems).
+
+
+
+
+mwu_postag_frame_stem(pre_np_adverb,Stem,['N(soort,ev,basis,onz,stan)','TW(hoofd,vrij)']):-
+    atom(Stem),
+    atom_concat(nummer,_,Stem).
+mwu_postag_frame_stem(pre_np_adverb,Stem,['N(soort,ev,basis,zijd,stan)','TW(hoofd,vrij)']):-
+    atom(Stem),
+    atom_concat(top,_,Stem).
 mwu_postag_frame_stem(with_dt(adverb,_),'des te meer',['BW()','BW()','VNW(onbep,grad,stan,vrij,zonder,comp)']).
 
 mwu_postag_frame_stem(with_dt(determiner(_),_),'des te meer',['BW()','BW()','VNW(onbep,grad,stan,prenom,zonder,agr,comp)']).
-
-mwu_postag_frame_stem(er_adverb([_Uit,_Het,_Oogpunt,_Van]),Stem,[Atag,Btag,Ctag,'BW()']) :-
-    mwu_postag(Stem,[Atag,Btag,Ctag,_]).
-
-mwu_postag_frame_stem(waar_adverb([_Uit,_Het,_Oogpunt,_Van]),Stem,[Atag,Btag,Ctag,'BW()']) :-
-    mwu_postag(Stem,[Atag,Btag,Ctag,_]).
-
-mwu_postag_frame_stem(er_adverb([_In,_Ruil,_Voor]),Stem,[Atag,Btag,'BW()']) :-
-    mwu_postag(Stem,[Atag,Btag,_]).
-
-mwu_postag_frame_stem(waar_adverb([_In,_Ruil,_Voor]),Stem,[Atag,Btag,'BW()']) :-
-    mwu_postag(Stem,[Atag,Btag,_]).
 
 mwu_postag_frame_stem(er_adverb(_),Stem,['VNW(aanw,adv-pron,obl,vol,3o,getal)','BW()']) :-
     atom(Stem),
@@ -1765,10 +1998,12 @@ mwu_postag_frame_stem(waar_adverb(_),Stem,['VNW(vb,adv-pron,obl,vol,3o,getal)','
     atom(Stem),
     atom_concat('waar ',_,Stem).
 mwu_postag_frame_stem(tmp_np,Stem,PosTags) :-
+    atom(Stem),
     atom_codes(Stem,Codes),
     alpino_util:split_string(Codes," ",Words),
     tmp_np(Words,PosTags).
 mwu_postag_frame_stem(np(year),Stem,PosTags) :-
+    atom(Stem),
     atom_codes(Stem,Codes),
     alpino_util:split_string(Codes," ",Words),
     tmp_np(Words,PosTags).
@@ -1795,6 +2030,7 @@ tmp_np1(String,'SPEC(symb)') :-
 tmp_np1(String,'TW(hoofd,vrij)'):-
     alpino_lex:number_codes_silent(_,String).
 tmp_np1("half",'ADJ(prenom,basis,zonder)').
+tmp_np1("kwart",'N(soort,ev,basis,onz,stan)').
 tmp_np1("uur",'N(soort,ev,basis,onz,stan)').
 tmp_np1("voor",'VZ(init)').
 tmp_np1("na",'VZ(init)').
@@ -1858,7 +2094,7 @@ with_dt_tags(Tree,Q0,L0,L) :-
 	L0 = L
     ).
 
-with_dt_tags_l_l(Stem,Frame,R0,R,Q0) -->
+with_dt_tags_l_l(Stem0,Frame,R0,R,Q0) -->
     [cgn_postag(S0,S,Stem,Tag)],
     {  integer(R0),
        integer(R),
@@ -1866,12 +2102,15 @@ with_dt_tags_l_l(Stem,Frame,R0,R,Q0) -->
        !,
        S0 is Q0 + R0,
        S is Q0 + R,
-       cgn_postag_l(Stem,Frame,Tag)
+       cgn_postag_l(Stem0,Stem,Frame,Tag)
     }.
 with_dt_tags_l_l(Stem,Tag,R0,R,Q0) -->
-    { R - R0 > 1 },
+    { integer(R0),
+      integer(R),
+      R - R0 > 1 },
     !,
-    { alpino_util:split_atom(Stem," ",Words),
+    { atom(Stem),
+      alpino_util:split_atom(Stem," ",Words),
       S0 is Q0 + R0,
       S  is Q0 + R
     },
@@ -1895,20 +2134,22 @@ with_dt_tags_list([_=DT|T],Q0) -->
     with_dt_tags_(DT,Q0),
     with_dt_tags_list(T,Q0).
 
-cgn_postag_l(Stem,Frame0,Tag) :-
-    (   frame_map(Frame0,Stem,Frame)
+cgn_postag_l(Stem0,Stem,Frame0,Tag) :-
+    (   frame_map(Frame0,Stem0,Frame)
     ->  true
     ;   Frame0 = Frame
     ),
-    cgn_postag_l2(Stem,Frame,Tag).
+    cgn_postag_l2(Stem0,Stem,Frame,Tag).
 
-cgn_postag_l2(bepaald,adjective(ge_no_e(adv)),'WW(vd,vrij,zonder)').
+cgn_postag_l2(bepaald,bepalen,adjective(ge_no_e(adv)),'WW(vd,vrij,zonder)').
 
-cgn_postag_l2(Stem,Frame,Tag) :-
+cgn_postag_l2(Stem,Stem,Frame,Tag) :-
+    stem_dependent_tag(Frame,Stem,Tag), !.
+cgn_postag_l2(Stem,Stem,Frame,Tag) :-
     exceptional_stem_tag(Stem,Frame,Tag), !.
-cgn_postag_l2(_Stem,Frame,Tag) :-
+cgn_postag_l2(Stem,Stem,Frame,Tag) :-
     cgn_postag_c(Frame,Tag), !.
-cgn_postag_l2(Stem,Frame,'NA()') :-
+cgn_postag_l2(Stem,Stem,Frame,'NA()') :-
     format(user_error,"no with_dt cgn tag rule for ~w ~w~n",[Stem,Frame]).
 
 number_vrij_path([n_n_num_app/2|_]).
@@ -1966,14 +2207,12 @@ pronoun_path([det_adj/1,np_det_n/1|_]):-!,fail.
 od_is_adj(aanpalend).
 od_is_adj(adembenemend).
 od_is_adj(v_root(ga_door,door_gaan)).
-od_is_adj(duur_voort).
+od_is_adj(voort_duren).
 od_is_adj(oogstrelend).
 od_is_adj(overwegend).
-od_is_adj(overweeg).
+od_is_adj(overwegen).
 od_is_adj(voortdurend).
-od_is_adj(sluit_uit).
-od_is_adj(uitsluitend).
-od_is_adj(verschil).
+od_is_adj(verschillen).
 od_is_adj(verschillend).
 
 
@@ -2404,6 +2643,7 @@ lassy(belang, 'N(soort,ev,basis,onz,stan)').
 lassy(mei, 'N(eigen,ev,basis,zijd,stan)').
 lassy('Van', 'VZ(init)').
 lassy(niets, 'VNW(onbep,pron,stan,vol,3o,ev)').
+lassy(niks, 'VNW(onbep,pron,stan,vol,3o,ev)').
 lassy(meest, 'VNW(onbep,grad,stan,vrij,zonder,sup)').
 lassy(gaan, 'WW(pv,tgw,mv)').
 lassy(ontwikkelingslanden, 'N(soort,mv,basis)').
@@ -2971,7 +3211,7 @@ lassy(zitten, 'WW(pv,tgw,mv)').
 lassy(zin, 'N(soort,ev,basis,zijd,stan)').
 lassy(vervolgens, 'BW()').
 lassy(tegenover, 'VZ(init)').
-lassy(sprake, 'N(soort,ev,basis,zijd,stan)').
+lassy(sprake, 'N(soort,ev,basis,dat)').
 lassy(omgeving, 'N(soort,ev,basis,zijd,stan)').
 lassy(lichaam, 'N(soort,ev,basis,onz,stan)').
 lassy(enkel, 'BW()').
@@ -3027,6 +3267,7 @@ lassy('7', 'TW(hoofd,vrij)').
 lassy('God','N(eigen,ev,basis,zijd,stan)').
 lassy(rondje,'N(soort,ev,dim,onz,stan)').
 lassy(afhandig,'ADJ(vrij,basis,zonder)').
+lassy('¤','SPEC(symb)').
 
 %%%
 %%% todo
@@ -3318,24 +3559,24 @@ guess_lemma(Surf,Lemma) :-
     ;    Surf = Lemma
     ).
 
+exc_lemma('onder meer','onder veel').  % voor 'o.m.'
 exc_lemma(sprake,spraak).
+exc_lemma(ten,te).
+exc_lemma(ter,te).
+exc_lemma(wiens,wie).
+exc_lemma(wier,wie).
 
 exc_lemma('Beweging',beweging).
 exc_lemma('College',college).
 exc_lemma('Comité',comité).
 exc_lemma('Commissie',commissie).
-exc_lemma('Congres',congres).
 exc_lemma('Cultuur',cultuur).
-exc_lemma('Defensie',defensie).
 exc_lemma('Europese','Europees').
 exc_lemma('Financiën',financiën).
-exc_lemma('Gemeenschap',gemeenschap).
 exc_lemma('Grondwet',grondwet).
 exc_lemma('Hof',hof).
 exc_lemma('Hoogheid',hoogheid).
 exc_lemma('Journaal',journaal).
-exc_lemma('Justitie',justitie).
-exc_lemma('Kamer',kamer).
 exc_lemma('Kerk',kerk).
 exc_lemma('Koning',koning).
 exc_lemma('Koninklijk',koninklijk).
@@ -3343,17 +3584,10 @@ exc_lemma('Koninklijke',koninklijk).
 exc_lemma('Landbouw',landbouw).
 exc_lemma('Museum',museum).
 exc_lemma('Olympische','Olympisch').
-exc_lemma('Onderwijs',onderwijs).
-exc_lemma('Ontwikkelingssamenwerking',ontwikkelingssamenwerking).
-exc_lemma('Raad',raad).
-exc_lemma('Senaat',senaat).
-exc_lemma('Staat',staat).
 exc_lemma('Stichting',stichting).
 exc_lemma('Strafwetboek',strafwetboek).
-exc_lemma('Unie',unie).
 exc_lemma('Universiteit',universiteit).
 exc_lemma('Verbond',verbond).
-exc_lemma('Verdrag',verdrag).
 exc_lemma('Vereniging',vereniging).
 exc_lemma('Volkskgezondheid',volksgezondheid).
 
