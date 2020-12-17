@@ -125,6 +125,9 @@ def sanity_checks():
    check('//node[@root="genoemd" and @pt="vz"]','genoemd is not a prep but an adjective')
    check('//node[@root="inbegrepen" and @pt="vz"]','inbegrepen is not a prep but an adjective')
    check('//node[@root="zoals" and (@pt="vz" or @rel="hd" or ../@cat="pp")]','zoals is not a prep but a complementizer')
+
+   check('//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]','vg(onder) is not cmp')
+   
    # check('//node[@root="als" and @pt="vz" and not(@rel="mwp")]','als is not a prep but a complementizer')
    check('//node[@cat="pp" and node[@rel="hd" and @pt="vz"] and not(node[@rel="obj1" or @rel="vc" or @rel="se"])]','preposition without object?')
    check('//node[not(@cat="pp") and node[@rel="hd" and @postag="VZ(init)"]]','preposition head, but not PP?')
