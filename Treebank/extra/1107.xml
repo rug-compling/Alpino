@@ -2,22 +2,22 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
-      <node begin="3" end="4" id="2" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="intransitive" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="3" end="4" id="2" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="0" cat="np" end="8" id="3" rel="su">
-        <node begin="0" end="1" id="4" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node aform="base" begin="1" buiging="met-e" end="2" graad="basis" id="5" infl="e" lemma="naakt" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="naakt" vform="adj" word="naakte"/>
-        <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="realiteit" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="realiteit" sc="sbar" word="realiteit"/>
+        <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="met-e" end="2" graad="basis" id="5" lemma="naakt" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="naakt" word="naakte"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="realiteit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="realiteit" word="realiteit"/>
         <node begin="4" cat="cp" end="8" id="7" rel="vc">
-          <node begin="4" conjtype="onder" end="5" id="8" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+          <node begin="4" conjtype="onder" end="5" id="8" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
           <node begin="5" cat="ssub" end="8" id="9" rel="body">
-            <node begin="5" case="nom" def="def" end="6" gen="de" getal="mv" id="10" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
-            <node begin="6" end="7" getal-n="zonder-n" id="11" lemma="laatste" numtype="rang" pos="num" positie="nom" postag="TW(rang,nom,zonder-n)" pt="tw" rel="predc" root="laatste" special="rang" word="laatste"/>
-            <node begin="7" end="8" id="12" infl="pl" lemma="staan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="sta" sc="nonp_copula" tense="present" word="staan" wvorm="pv"/>
+            <node begin="5" end="6" getal="mv" id="10" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+            <node begin="6" buiging="met-e" end="7" getal-n="zonder-n" graad="sup" id="11" lemma="laat" naamval="stan" pos="num" positie="nom" postag="ADJ(nom,sup,met-e,zonder-n,stan)" pt="adj" rel="predc" root="laatste" word="laatste"/>
+            <node begin="7" end="8" id="12" lemma="staan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="sta" word="staan" wvorm="pv"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De naakte realiteit is dat we laatste staan .</sentence>
 </alpino_ds>

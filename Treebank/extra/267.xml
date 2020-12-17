@@ -12,7 +12,7 @@
         <node begin="2" end="4" id="8" index="1" rel="su"/>
         <node begin="4" end="5" id="9" lemma="vanmiddag" pos="adv" postag="BW()" pt="bw" rel="mod" root="vanmiddag" word="vanmiddag"/>
         <node begin="5" buiging="zonder" end="6" graad="basis" id="10" lemma="bekend" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="bekend" word="bekend"/>
-        <node begin="6" buiging="zonder" end="7" id="11" lemma="maken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="maak_bekend" word="gemaakt" wvorm="vd"/>
+        <node begin="6" buiging="zonder" end="7" id="11" lcat="p(ppart)" lemma="bekend_maken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="maak_bekend" word="gemaakt" wvorm="vd"/>
       </node>
     </node>
     <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
