@@ -4,7 +4,7 @@
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="ap" end="3" id="2" rel="mod">
         <node begin="0" cat="np" end="2" id="3" rel="me">
-          <node begin="0" end="1" id="4" lemma="paar" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="paar" word="Paar"/>
+          <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="4" lemma="paar" naamval="stan" ntype="soort" pos="det" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="det" root="paar" word="Paar"/>
           <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
         </node>
         <node begin="2" end="3" id="6" lemma="geleden" pos="adj" postag="BW()" pt="bw" rel="hd" root="geleden" word="geleden"/>

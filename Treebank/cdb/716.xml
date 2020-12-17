@@ -23,7 +23,7 @@
             <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="18" lemma="afdeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="afdeling" word="afdeling"/>
             <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="19" lemma="voorlichting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="app" root="Voorlichting" word="Voorlichting"/>
             <node begin="11" cat="np" end="15" id="20" rel="mod">
-              <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="21" lemma="tel." naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="tel." word="tel."/>
+              <node begin="11" end="12" id="21" lemma="telefoon" pos="noun" postag="SPEC(afk)" pt="spec" rel="hd" root="tel." spectype="afk" word="tel."/>
               <node begin="12" cat="conj" end="15" id="22" rel="app">
                 <node begin="12" end="13" id="23" lemma="040-12280" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="cnj" root="040-12280" word="040-12280"/>
                 <node begin="13" conjtype="neven" end="14" id="24" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>

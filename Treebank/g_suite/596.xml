@@ -3,7 +3,7 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" end="1" id="2" lemma="dus" pos="adv" postag="BW()" pt="bw" rel="mod" root="dus" word="Dus"/>
-      <node begin="1" end="2" id="3" lemma="begeven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="begeef_op" word="begaf" wvorm="pv"/>
+      <node begin="1" end="2" id="3" lcat="p(smain)" lemma="op_begeven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="begeef_op" word="begaf" wvorm="pv"/>
       <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="4" lemma="Alie" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Alie" word="Alie"/>
       <node begin="3" end="4" getal="getal" id="5" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
       <node begin="4" cat="np" end="6" id="6" rel="ld">

@@ -12,7 +12,7 @@
             <node begin="3" cat="inf" end="7" id="9" rel="body">
               <node begin="3" end="4" id="10" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
               <node begin="4" buiging="zonder" end="5" graad="basis" id="11" lemma="mis" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="mis" word="mis"/>
-              <node begin="6" buiging="met-e" end="7" id="12" lemma="verstaan" pos="verb" positie="prenom" postag="WW(inf,prenom,met-e)" pt="ww" rel="hd" root="versta_mis" word="verstane" wvorm="inf"/>
+              <node begin="6" buiging="met-e" end="7" id="12" lcat="p(inf)" lemma="mis_verstaan" pos="verb" positie="prenom" postag="WW(inf,prenom,met-e)" pt="ww" rel="hd" root="versta_mis" word="verstane" wvorm="inf"/>
             </node>
           </node>
           <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="13" lemma="wijze" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wijze" word="wijze"/>

@@ -14,7 +14,7 @@
         <node begin="3" end="4" id="10" index="1" lemma="gaan" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ga" word="gingen" wvorm="pv"/>
         <node begin="4" buiging="zonder" end="5" id="11" lemma="ieder" naamval="stan" pdtype="det" pos="adv" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="predm" root="ieder" vwtype="onbep" word="ieder"/>
         <node begin="5" cat="mwu" end="7" id="12" rel="mod">
-          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="13" lemma="flo" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="flo" word="flo"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="13" lemma="flo" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="flo" word="flo"/>
           <node begin="6" end="7" id="14" lemma="1" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="1" word="1"/>
         </node>
         <node begin="19" end="20" id="15" index="2" lemma="omhoog" pos="adv" postag="BW()" pt="bw" rel="ld" root="omhoog" word="omhoog"/>
@@ -23,7 +23,7 @@
         <node begin="3" end="4" id="17" index="1" rel="hd"/>
         <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="18" lemma="Bols" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Bols" word="Bols"/>
         <node begin="9" cat="mwu" end="11" id="19" rel="mod">
-          <node begin="9" end="10" id="20" lemma="flo" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="flo" spectype="deeleigen" word="flo"/>
+          <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="20" lemma="flo" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="flo" word="flo"/>
           <node begin="10" end="11" id="21" lemma="2" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="2" word="2"/>
         </node>
         <node begin="19" end="20" id="22" index="2" rel="ld"/>
@@ -36,7 +36,7 @@
           <node begin="14" end="15" id="28" lemma="Drijver" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Drijver" spectype="deeleigen" word="Drijver"/>
         </node>
         <node begin="15" cat="mwu" end="17" id="29" rel="mod">
-          <node begin="15" end="16" id="30" lemma="flo" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="flo" spectype="deeleigen" word="flo"/>
+          <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="30" lemma="flo" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="flo" word="flo"/>
           <node begin="16" end="17" id="31" lemma="1,50" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="1,50" word="1,50"/>
         </node>
         <node begin="19" end="20" id="32" index="2" rel="ld"/>

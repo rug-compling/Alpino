@@ -6,14 +6,14 @@
       <node begin="1" cat="smain" end="12" id="3" rel="nucl">
         <node begin="2" end="3" id="4" lemma="lijken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="lijk" word="leek" wvorm="pv"/>
         <node begin="3" end="4" getal="ev" id="5" lemma="me" naamval="obl" pdtype="pron" persoon="1" pos="noun" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj2" root="me" status="red" vwtype="pr" word="me"/>
-        <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="6" index="1" lemma="spraak" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="sprake" word="sprake"/>
+        <node begin="9" end="10" getal="ev" graad="basis" id="6" index="1" lemma="spraak" naamval="dat" ntype="soort" pos="noun" postag="N(soort,ev,basis,dat)" pt="n" rel="su" root="sprake" word="sprake"/>
         <node begin="1" cat="ti" end="12" id="7" rel="vc">
           <node begin="10" end="11" id="8" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
           <node begin="1" cat="inf" end="12" id="9" rel="body">
             <node begin="1" end="2" id="10" lemma="hiervan" pos="pp" postag="BW()" pt="bw" rel="pc" root="hiervan" word="hiervan"/>
             <node begin="4" cat="np" end="6" id="11" rel="mod">
               <node begin="4" buiging="zonder" end="5" id="12" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>
-              <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="13" lemma="keer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="keer" word="keer"/>
+              <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="13" lemma="keer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,genus,stan)" pt="n" rel="hd" root="keer" word="keer"/>
             </node>
             <node begin="6" end="7" id="14" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
             <node begin="7" end="8" id="15" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>

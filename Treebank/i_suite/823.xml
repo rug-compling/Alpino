@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="5" id="0" rel="top">
-    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="du" end="4" id="2" rel="--">
-      <node begin="0" end="1" id="3" lemma="allemachtig" pos="tag" postag="BW()" pt="bw" rel="tag" root="allemachtig" word="Allemachtig"/>
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="allemachtig" pos="tag" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="tag" root="allemachtig" word="Allemachtig"/>
       <node begin="2" cat="sv1" end="4" id="4" rel="nucl">
-        <node begin="2" end="3" id="5" infl="sg1" lemma="komen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kom" sc="ld_adv" stype="topic_drop" tense="present" word="kom" wvorm="pv"/>
-        <node begin="3" end="4" getal="getal" id="6" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="ld" root="hier" special="er_loc" status="vol" vwtype="aanw" word="hier"/>
+        <node begin="2" end="3" id="5" lemma="komen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kom" word="kom" wvorm="pv"/>
+        <node begin="3" end="4" getal="getal" id="6" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="ld" root="hier" status="vol" vwtype="aanw" word="hier"/>
       </node>
     </node>
-    <node begin="4" end="5" id="7" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" special="uitroep" word="!"/>
+    <node begin="4" end="5" id="7" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
   </node>
   <sentence>Allemachtig , kom hier !</sentence>
 </alpino_ds>

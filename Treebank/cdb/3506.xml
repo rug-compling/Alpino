@@ -9,7 +9,7 @@
           <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="6" lemma="auto" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="auto" word="auto"/>
           <node begin="2" cat="pp" end="4" id="7" rel="mod">
             <node begin="2" end="3" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-            <node begin="3" end="4" id="9" lemma="K." pos="noun" postag="SPEC(symb)" pt="spec" rel="obj1" root="K." spectype="symb" word="K."/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="K." naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="K." word="K."/>
           </node>
         </node>
         <node begin="4" end="5" id="10" index="2" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>

@@ -11,7 +11,7 @@
           <node begin="3" cat="ssub" end="29" id="8" rel="body">
             <node begin="3" end="4" getal="getal" id="9" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
             <node begin="4" end="5" id="10" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
-            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="spraak" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="sprake" word="sprake"/>
+            <node begin="5" end="6" getal="ev" graad="basis" id="11" lemma="spraak" naamval="dat" ntype="soort" pos="noun" postag="N(soort,ev,basis,dat)" pt="n" rel="su" root="sprake" word="sprake"/>
             <node begin="6" end="7" id="12" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
             <node begin="7" cat="pp" end="29" id="13" rel="pc">
               <node begin="7" end="8" id="14" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
@@ -45,7 +45,7 @@
                                   <node begin="24" end="25" id="42" lemma="8" pos="num" postag="SPEC(symb)" pt="spec" rel="mwp" root="8" spectype="symb" word="8"/>
                                   <node begin="25" end="26" id="43" lemma="1/4" pos="num" postag="SPEC(symb)" pt="spec" rel="mwp" root="1/4" spectype="symb" word="1/4"/>
                                 </node>
-                                <node begin="26" end="27" id="44" lemma="procent" pos="noun" postag="SPEC(symb)" pt="spec" rel="hd" root="pct." spectype="symb" word="pct."/>
+                                <node begin="26" end="27" id="44" lemma="procent" pos="noun" postag="SPEC(afk)" pt="spec" rel="hd" root="pct." spectype="afk" word="pct."/>
                               </node>
                               <node begin="27" end="28" genus="onz" getal="ev" graad="basis" id="45" lemma="BNG" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mod" root="BNG" word="BNG"/>
                               <node begin="28" end="29" genus="zijd" getal="ev" graad="basis" id="46" lemma="lening" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="lening" word="lening"/>
