@@ -7,7 +7,7 @@
     <node begin="0" cat="whq" end="20" id="4" rel="--">
       <node begin="0" cat="np" end="9" id="5" index="1" rel="whd">
         <node begin="0" buiging="met-e" end="1" id="6" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welke" vwtype="vb" word="Welke"/>
-        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="7" lemma="soort" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="soort" word="soort"/>
+        <node begin="1" end="2" genus="genus" getal="ev" graad="basis" id="7" lemma="soort" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,genus,stan)" pt="n" rel="hd" root="soort" word="soort"/>
         <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="8" lemma="brandewijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="brandewijn" word="brandewijn"/>
         <node begin="4" cat="rel" end="9" id="9" rel="mod">
           <node begin="4" end="5" getal="getal" id="10" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
@@ -30,7 +30,7 @@
           <node begin="11" cat="np" end="14" id="23" rel="mod">
             <node begin="11" end="12" id="24" lemma="slechts" pos="adv" postag="BW()" pt="bw" rel="mod" root="slechts" word="slechts"/>
             <node begin="12" end="13" id="25" lemma="één" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="één" word="één"/>
-            <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="26" lemma="keer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="keer" word="keer"/>
+            <node begin="13" end="14" genus="genus" getal="ev" graad="basis" id="26" lemma="keer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,genus,stan)" pt="n" rel="hd" root="keer" word="keer"/>
           </node>
           <node begin="14" buiging="zonder" end="15" id="27" lemma="destilleren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="destilleer" word="gedestilleerd" wvorm="vd"/>
           <node begin="16" cat="pp" end="20" id="28" rel="mod">
