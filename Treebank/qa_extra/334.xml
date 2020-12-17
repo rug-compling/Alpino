@@ -5,7 +5,7 @@
       <node begin="0" end="1" getal="ev" id="2" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" root="wat" status="vol" vwtype="vb" word="Wat"/>
       <node begin="0" cat="sv1" end="4" id="3" rel="body">
         <node begin="0" end="1" id="4" index="1" rel="obj1"/>
-        <node begin="1" end="2" id="5" lemma="houden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="houd_in" word="houdt" wvorm="pv"/>
+        <node begin="1" end="2" id="5" lcat="p(sv1)" lemma="in_houden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="houd_in" word="houdt" wvorm="pv"/>
         <node begin="2" end="3" id="6" lemma="bag" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="su" root="bag" spectype="vreemd" word="bag"/>
         <node begin="3" end="4" id="7" lemma="in" pos="part" postag="VZ(init)" pt="vz" rel="svp" root="in" vztype="init" word="in"/>
       </node>
