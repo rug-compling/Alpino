@@ -114,9 +114,9 @@ OneLiner.sents.gz: OneLiner_NL_text.txt
           | awk '{N++; printf "%s|%s\n",N,$$0 }' \
          >  $*.sents
 
-sentsfiles=g_suite.sents h_suite.sents i_suite.sents leuven_yellow_pages.sents wpspel.sents\
+sentsfiles=g_suite.sents h_suite.sents i_suite.sents leuven_yellow_pages.sents\
            h_suite.sents journaal.sents lot_test_suite1.sents ovis.sents
-namedsentsfiles=cgn_exs.named_sents conll2006-test.named_sents lassy.named_sents qa.named_sents
+namedsentsfiles=cgn_exs.named_sents lassy.named_sents qa.named_sents
 
 ifeq "$(shell if [ -d Machine/ ]; then echo yes; fi)" "yes"
 include ../Makefile.include
