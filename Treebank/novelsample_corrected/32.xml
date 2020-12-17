@@ -2,31 +2,31 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="13" id="0" rel="top">
     <node begin="0" cat="smain" end="12" id="1" rel="--">
-      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="Niels" naamval="stan" ntype="eigen" pos="n" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" word="Niels"/>
-      <node begin="1" end="2" id="3" lemma="hebben" pos="ww" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" word="had" wvorm="pv"/>
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="Niels" naamval="stan" ntype="eigen" pos="n" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="NA" word="Niels"/>
+      <node begin="1" end="2" id="3" lemma="hebben" pos="ww" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="NA" word="had" wvorm="pv"/>
       <node begin="2" cat="np" end="12" id="4" rel="obj1">
-        <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="lid" postag="LID(bep,stan,rest)" pt="lid" rel="det" word="de"/>
-        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="indruk" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" word="indruk"/>
+        <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="lid" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="NA" word="de"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="indruk" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="NA" word="indruk"/>
         <node begin="4" cat="cp" end="12" id="7" rel="vc">
-          <node begin="4" conjtype="onder" end="5" id="8" lemma="dat" pos="vg" postag="VG(onder)" pt="vg" rel="cmp" word="dat"/>
+          <node begin="4" conjtype="onder" end="5" id="8" lemma="dat" pos="vg" postag="VG(onder)" pt="vg" rel="cmp" root="NA" word="dat"/>
           <node begin="5" cat="ssub" end="12" id="9" rel="body">
-            <node begin="5" end="6" genus="masc" getal="ev" id="10" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="vnw" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" status="vol" vwtype="pers" word="hij"/>
-            <node begin="6" end="7" getal="getal" id="11" index="1" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="vnw" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" status="red" vwtype="refl" word="zich"/>
-            <node begin="10" end="11" id="12" lemma="laten" pos="ww" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" word="liet" wvorm="pv"/>
+            <node begin="5" end="6" genus="masc" getal="ev" id="10" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="vnw" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="NA" status="vol" vwtype="pers" word="hij"/>
+            <node begin="6" end="7" getal="getal" id="11" index="1" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="vnw" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="NA" status="red" vwtype="refl" word="zich"/>
+            <node begin="10" end="11" id="12" lemma="laten" pos="ww" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="NA" word="liet" wvorm="pv"/>
             <node begin="6" cat="inf" end="12" id="13" rel="vc">
               <node begin="6" end="7" id="14" index="1" rel="su"/>
               <node begin="7" cat="pp" end="9" id="15" rel="ld">
-                <node begin="7" end="8" id="16" lemma="tegen" pos="vz" postag="VZ(init)" pt="vz" rel="hd" vztype="init" word="tegen"/>
-                <node begin="8" end="9" genus="masc" getal="ev" id="17" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="vnw" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" status="vol" vwtype="pers" word="hem"/>
+                <node begin="7" end="8" id="16" lemma="tegen" pos="vz" postag="VZ(init)" pt="vz" rel="hd" root="NA" vztype="init" word="tegen"/>
+                <node begin="8" end="9" genus="masc" getal="ev" id="17" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="vnw" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" root="NA" status="vol" vwtype="pers" word="hem"/>
               </node>
-              <node begin="9" end="10" id="18" lemma="aan" pos="vz" postag="VZ(fin)" pt="vz" rel="svp" vztype="fin" word="aan"/>
-              <node begin="11" buiging="zonder" end="12" id="19" lemma="vallen" pos="ww" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" word="vallen" wvorm="inf"/>
+              <node begin="9" end="10" id="18" lemma="aan" pos="vz" postag="VZ(fin)" pt="vz" rel="svp" root="NA" vztype="fin" word="aan"/>
+              <node begin="11" buiging="zonder" end="12" id="19" lcat="p(inf)" lemma="aan_vallen" pos="ww" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="NA" word="vallen" wvorm="inf"/>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="12" end="13" id="20" lemma="." pos="let" postag="LET()" pt="let" rel="--" word="."/>
+    <node begin="12" end="13" id="20" lemma="." pos="let" postag="LET()" pt="let" rel="--" root="NA" word="."/>
   </node>
   <sentence>Niels had de indruk dat hij zich tegen hem aan liet vallen .</sentence>
   <comments>
