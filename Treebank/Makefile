@@ -6,11 +6,9 @@ endif
 
 default:
 
-all: trees_doc enhanced dact poslemma
+all: trees_doc prepare_enhanced_all enhanced_all dact poslemma mwu
 
-ignoredoc=lassy $(wildcard RSTCode/????) gen_g_suite medfail
-
-DIRECTORIES=$(filter-out $(ignoredoc), $(wildcard $(TREEBANKS)))
+DIRECTORIES=$(TREEBANKS)
 
 trees_doc:
 	for dir in $(DIRECTORIES); do\
@@ -39,19 +37,23 @@ PWD:=${shell pwd}
 transform:
 	find $(DIRECTORIES) -name '*.xml' | xargs Alpino -u -xml_converse
 
-DACTS=$(filter-out cdb novelsample_corrected, $(DIRECTORIES))
+d:
+	@echo $(DIRECTORIES:%=Enhanced/%.dact)
 
-dact: $(DACTS:%=%.dact) Enhanced/cdb.dact Enhanced/novelsample_corrected.dact
+dact: $(DIRECTORIES:%=Enhanced/%.dact) 
 
 %.dact: %/*.xml
 	alpinocorpus-create -d $*.dact.new $*
 	chmod 644 $*.dact.new
 	mv $*.dact.new $*.dact
 
-alpino.dact: $(DIRECTORIES:%=%.dact)
-	alpinocorpus-create -d alpino.dact.new $(DIRECTORIES)
-	chmod 644 alpino.dact.new
-	mv alpino.dact.new alpino.dact
+mwu: $(DIRECTORIES:%=MWU/%.mwu)
+
+## removes the .mwu file, because if it is empty it would otherwise
+## be rebuilt over and over again!
+MWU/%.mwu: %.dact mwu_tags.xsl
+	rm -f MWU/$*.mwu
+	alpinocorpus-xslt -q '//node[@cat="mwu"]' mwu_tags.xsl $*.dact > MWU/$*.mwu
 
 poslemma: $(DIRECTORIES:%=POSLEMMA/%.poslemma)
 
@@ -61,9 +63,9 @@ POSLEMMA/%.poslemma: %.dact
 
 gitversion=$(shell git log --oneline | wc -l)
 
-enhanced:
-	/net/corpora/LassyDevelopMod/lassymod -t -u Enhanced/cdb
-	/net/corpora/novelsample_correctedMod/novelmod -u Enhanced/novelsample_corrected
+# enhanced:
+# 	/net/corpora/LassyDevelopMod/lassymod -t -u Enhanced/cdb
+# 	/net/corpora/novelsample_correctedMod/novelmod -u Enhanced/novelsample_corrected
 
 tar:
 	( cd Enhanced ; tar czf cdb-$(gitversion).tar.gz cdb )
@@ -81,3 +83,22 @@ index_manual:
 
 clean_manual:
 	for dir in $(DIRECTORIES); do ( cd $$dir ; rm -f *svg *pdf index.html ) ; done
+
+enhanceddirs=cgn_exs eans extra g_suite h_suite i_suite leuven_yellow_pages lot_test_suite1 \
+             ntv-suite qa wpspel novelsample_corrected cdb
+
+sqldir=/net/aps/haytabo/opt/alpinotools
+prepare_enhanced_all:
+	for corpus in $(enhanceddirs); do make sql/$$corpus.sqlite corpus=$$corpus; done
+
+sql/$(corpus).sqlite: best/$(corpus)/*.xml fast/$(corpus)/*.xml
+	rm -f sql/$(corpus).sqlite
+	$(sqldir)/auto2sql sql/$(corpus).sqlite best/$(corpus) fast/$(corpus)
+
+enhanced_all:
+	for corpus in $(enhanceddirs); do make enhanced corpus=$$corpus; done
+
+enhanced: 
+	$(sqldir)/alpinomod -p $(corpus) -u sql/$(corpus).sqlite $(corpus) Enhanced/$(corpus)
+
+

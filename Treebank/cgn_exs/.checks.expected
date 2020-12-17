@@ -41,3 +41,4 @@ cgn_exs/./160.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@
 cgn_exs/./415.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
 cgn_exs/./279.xml	//node[@cat="np" and node[@rel="hd" and @genus="onz" and not(@root="jaar" or @root="paar" or @root="miljoen" or @root="uur" or @root="procent" or @root="miljard" or @root="nummer")] and node[@rel="det" and (@root="de" or @root="die" or @root="deze")]]	de-determiner combines with onz noun?
 cgn_exs/./159.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve")]	vg(onder) is not cmp
+cgn_exs/./159.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
