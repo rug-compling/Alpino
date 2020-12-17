@@ -2364,6 +2364,8 @@ spelling_variant(jouw,    jou).
 
 spelling_variant(ais,     als).
 
+spelling_variant(peleton, peloton).
+spelling_variant(peletons,pelotons).
 
 %% ck
 spelling_variant(akademie,academie).
@@ -2717,6 +2719,7 @@ spelling_variant(miloen,        miljoen).
 spelling_variant(mijoen,        miljoen).
 spelling_variant(miloenen,        miljoenen).
 spelling_variant(mijoenen,        miljoenen).
+spelling_variant(ministeriele,ministeriële).
 spelling_variant(mistte,      miste).
 spelling_variant(mistten,     misten).
 spelling_variant(moeit,       moeite).
@@ -3056,11 +3059,12 @@ spelling_variant(vind,    vindt) :-
 
 spelling_variant(kondt, kunt).
 
-spelling_variant('Belgie','België').
-spelling_variant('Brazilie','Brazilië').
-spelling_variant('Israel','Israël').
-spelling_variant('Israels','Israëls').
-spelling_variant('Italie','Italië').
+% spelling_variant('Belgie','België').
+% spelling_variant('Brazilie','Brazilië').
+% spelling_variant('Israel','Israël').
+% spelling_variant('Israels','Israëls').
+% spelling_variant('Italie','Italië').
+% spelling_variant('Munchen','München').
 
 spelling_variant('V.S.','VS').
 

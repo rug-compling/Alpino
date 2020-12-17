@@ -15,6 +15,8 @@
 :- use_module('../Names/classify_named_entity').
 :- use_module(library(lists)).
 
+:- ensure_loaded('../Names/name_accents').
+
 :- discontiguous
     unknown_word_heuristic/8,
     guess_compound/4.
@@ -600,7 +602,7 @@ unknown_word_heuristic(P1,R1,W,Ws,"iseer|~p|~p|~p~n",
 unknown_word_heuristic(P1,R1,W,Ws,"add_diacritics|~p|~p|~p~n",
 		       [W,Wmin,[Th|Tt]],_,HIS) :-
     debug_message(3,"trying heuristic add_diacritics~n",[]),
-    alpino_lex:accent(W,Wmin),
+    add_accents(W,Wmin),
     findall(Tag,
 	    alternative([Wmin|Ws],P1,_,R1,_,wo_dia,Tag,HIS),
 	    [Th|Tt]).
@@ -609,7 +611,7 @@ unknown_word_heuristic(P1,R1,W,Ws,"wrong_diacritics|~p|~p|~p~n",
 		       [W,Wmin,[Th|Tt]],_,HIS) :-
     debug_message(3,"trying heuristic wrong_diacritics~n",[]),
     strip_accents(W,Wtussen),
-    alpino_lex:accent(Wtussen,Wmin),
+    add_accents(Wtussen,Wmin),
     findall(Tag,
 	    alternative([Wmin|Ws],P1,_,R1,_,wr_dia,Tag,HIS),
 	    [Th|Tt]).
@@ -667,7 +669,7 @@ decap_some_word_heuristic(W,P1,R1,W0,Ws,"decap_and_add_diacritics|~p|~p|~p~n",
 		       [W0,Wmin,[Th|Tt]],_) :-
     debug_message(3,"trying heuristic decap_and_add_diacritics~n",[]),
     \+ tag(P1,_,_,_,_,_,special(decap(_)),_),
-    alpino_lex:accent(W,Wmin),
+    add_accents(W,Wmin),
     \+ tag(P1,_P,R1,_R,Wmin,W0,wo_dia,_),
     findall(Tag,
 	    alternative([Wmin|Ws],P1,_,R1,_,decap_wo_dia,Tag,_),
@@ -3834,6 +3836,10 @@ subsumed_by_dict(P0,P,_,Tag) :-
     Q0-Q \= P0-P,
     \+ exceptional_not_subsumed_by_dict(His,C,Tag).
 
+subsumed_by_dict(_,_,[Surf],_) :-
+    accent(Surf,Name),
+    alpino_lex:lexicon(_,_,[Name],[],_).
+
 %% John Major van Groot-Brittanië
 %% forbid: "Name1 van Name2"
 %% where "Name1" and "Name2" are known names,
@@ -5487,7 +5493,7 @@ name_unknown(Word,P0) :-
     \+ name_firma(Word),
     \+ is_decap_only(Word),
     \+ longpunct(Word),
-    \+ ( alpino_lex:accent(Word,Stripped),
+    \+ ( add_accents(Word,Stripped),
          alpino_lex:lexicon(_,_,[Stripped],[],_)
        ),
     \+ ( strip_accents(Word,Stripped),
@@ -6380,3 +6386,8 @@ spelling_variant_compound(HandelsAccoord,HandelsAkkoord,P0,R0,Frame) :-
 ld_dir(ld_dir,intransitive,part_intransitive(Voorover),Voorover).
 ld_dir(refl_ld_dir,refl,part_refl(Voorover),Voorover).
 ld_dir(np_ld_dir,transitive,part_transitive(Voorover),Voorover).
+
+add_accents(W,Wmin) :-
+    alpino_lex:accent(W,Wmin).
+add_accents(W,Wmin) :-
+    accent(W,Wmin).  % from names

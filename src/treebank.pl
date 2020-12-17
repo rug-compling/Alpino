@@ -338,8 +338,8 @@ xml_save_object(Obj) :-
 xml_save_object(Obj,File) :-
     hdrug:object(Obj,o(Result,String0,_)),
     alpino_lexical_analysis:remove_brackets(String0,String1),
-    remove_phantoms(String1,String),
-    xml_save(Result,String,[],File,normal).
+%    remove_phantoms(String1,String),
+    xml_save(Result,String1,[],File,normal).
 
 remove_phantoms(String0,String) :-
     get_phantoms(Ps),
@@ -403,8 +403,9 @@ xml_filename(File) :-
 xml_save(Result,String,Comments,File,Flag):-
     xml_save(Result,String,Comments,[],File,Flag).
 
-xml_save(Result,String,Comments,Meta,File,Flag) :-
-    (   xml_save__(Result,String,Comments,Meta,File,Flag)
+xml_save(Result,String0,Comments,Meta,File,Flag) :-
+    (   remove_phantoms(String0,String),
+	xml_save__(Result,String,Comments,Meta,File,Flag)
     ->  true
     ;   format(user_error,"ERROR: something went wrong in saving the XML in ~w!~n",[File])
     ).

@@ -985,10 +985,12 @@ remove_identical_tags_but_lemma :-
     ;   true
     ).
 
-prefer_lemma(leiden,geleiden,_).
-prefer_lemma(raken,geraken,_).
+prefer_lemma(v_root(_,B),v_root(_,D),Tag) :-
+    prefer_lemma(B,D,Tag).
 prefer_lemma(Lemma1,Lemma2,_) :-
     alpino_unknowns:cap_first(Lemma2,Lemma1).   % prefer lemma Breskens over breskens
+prefer_lemma(leiden,geleiden,_).
+prefer_lemma(raken,geraken,_).
 
 % proper_longer(normal(_),R0,R,S0,S) :-
 %     !,
