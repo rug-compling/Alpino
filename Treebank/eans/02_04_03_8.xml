@@ -15,7 +15,7 @@
           </node>
           <node begin="2" cat="np" end="6" id="11" rel="obj1">
             <node begin="2" end="3" id="12" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-            <node begin="3" buiging="met-e" end="4" graad="basis" id="13" lemma="voort_duren" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="duur_voort" word="voortdurende"/>
+            <node begin="3" buiging="met-e" end="4" id="13" lemma="voort_duren" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="duur_voort" word="voortdurende" wvorm="od"/>
             <node begin="4" buiging="met-e" end="5" graad="basis" id="14" lemma="goed" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="goed" word="goede"/>
             <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="15" lemma="weer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="weer" word="weer"/>
           </node>

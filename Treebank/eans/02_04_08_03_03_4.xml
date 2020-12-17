@@ -6,7 +6,7 @@
         <node begin="0" buiging="zonder" end="1" id="3" lemma="volgen" pos="adj" positie="prenom" postag="WW(od,prenom,zonder)" pt="ww" rel="mod" root="volg" word="Volgend" wvorm="od"/>
         <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
       </node>
-      <node begin="2" end="3" id="5" lemma="doen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="doe_mee" word="doet" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lcat="p(smain)" lemma="mee_doen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="doe_mee" word="doet" wvorm="pv"/>
       <node begin="3" end="4" genus="masc" getal="ev" id="6" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
       <node begin="4" end="5" id="7" lemma="mee" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="mee" vztype="fin" word="mee"/>
       <node begin="5" cat="pp" end="10" id="8" rel="pc">

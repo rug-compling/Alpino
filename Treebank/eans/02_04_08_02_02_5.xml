@@ -3,7 +3,7 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
       <node begin="0" end="1" id="2" lemma="vanmorgen" pos="adv" postag="BW()" pt="bw" rel="mod" root="vanmorgen" word="Vanmorgen"/>
-      <node begin="1" end="2" id="3" lemma="komen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kom_tegen" word="kom" wvorm="pv"/>
+      <node begin="1" end="2" id="3" lcat="p(smain)" lemma="tegen_komen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kom_tegen" word="kom" wvorm="pv"/>
       <node begin="2" end="3" getal="ev" id="4" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
       <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="5" lemma="Max" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Max" word="Max"/>
       <node begin="4" cat="pp" end="7" id="6" rel="mod">

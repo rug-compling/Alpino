@@ -3,7 +3,7 @@
   <node begin="0" cat="top" end="15" id="0" rel="top">
     <node begin="0" cat="smain" end="14" id="1" rel="--">
       <node begin="0" end="1" genus="onz" getal="ev" graad="basis" id="2" lemma="Nutricia" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Nutricia" word="Nutricia"/>
-      <node begin="1" end="2" id="3" lemma="brengen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="breng_over" word="brengt" wvorm="pv"/>
+      <node begin="1" end="2" id="3" lcat="p(smain)" lemma="over_brengen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="breng_over" word="brengt" wvorm="pv"/>
       <node begin="2" cat="np" end="8" id="4" rel="obj1">
         <node begin="2" end="3" id="5" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="productie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="productie" word="productie"/>
