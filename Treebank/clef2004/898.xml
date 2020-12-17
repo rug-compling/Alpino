@@ -25,7 +25,7 @@
                     <node begin="10" end="11" id="21" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
                     <node begin="9" cat="inf" end="21" id="22" rel="body">
                       <node begin="9" end="10" id="23" lemma="in" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="in" vztype="fin" word="in"/>
-                      <node begin="11" buiging="zonder" end="12" id="24" lemma="breken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breek_in" word="breken" wvorm="inf"/>
+                      <node begin="11" buiging="zonder" end="12" id="24" lcat="p(inf)" lemma="in_breken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="breek_in" word="breken" wvorm="inf"/>
                       <node begin="12" cat="pp" end="21" id="25" rel="mod">
                         <node begin="12" end="13" id="26" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                         <node begin="13" cat="np" end="21" id="27" rel="obj1">

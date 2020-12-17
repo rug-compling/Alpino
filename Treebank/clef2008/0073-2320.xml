@@ -8,7 +8,7 @@
       </node>
       <node begin="0" cat="sv1" end="11" id="5" rel="body">
         <node begin="0" end="2" id="6" index="1" rel="su"/>
-        <node begin="2" end="3" id="7" lemma="brengen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="breng_uit" word="bracht" wvorm="pv"/>
+        <node begin="2" end="3" id="7" lcat="p(sv1)" lemma="uit_brengen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="breng_uit" word="bracht" wvorm="pv"/>
         <node begin="3" cat="np" end="8" id="8" rel="obj1">
           <node begin="3" end="4" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
           <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="album" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="album" word="album"/>

@@ -14,8 +14,8 @@
             <node begin="5" cat="np" end="8" id="11" rel="obj1">
               <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
               <node begin="6" cat="mwu" end="8" id="13" rel="hd">
-                <node begin="6" buiging="met-e" end="7" graad="basis" id="14" lemma="Europees" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Europese" word="Europese"/>
-                <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="15" lemma="commissie" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Commissie" word="Commissie"/>
+                <node begin="6" end="7" id="14" lemma="Europese" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Europese" spectype="deeleigen" word="Europese"/>
+                <node begin="7" end="8" id="15" lemma="Commissie" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Commissie" spectype="deeleigen" word="Commissie"/>
               </node>
             </node>
           </node>
