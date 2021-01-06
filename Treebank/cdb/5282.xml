@@ -3,7 +3,7 @@
   <node begin="0" cat="top" end="23" id="0" rel="top">
     <node begin="11" end="12" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="du" end="22" id="2" rel="--">
-      <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="verder" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="dp" root="verder" word="Verder"/>
+      <node begin="0" buiging="zonder" end="1" graad="comp" id="3" lemma="ver" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="dp" root="verder" word="Verder"/>
       <node begin="1" cat="np" end="22" id="4" rel="dp">
         <node begin="1" end="2" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
         <node begin="2" buiging="met-e" end="3" graad="basis" id="6" lemma="heel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="heel" word="hele"/>
@@ -24,7 +24,7 @@
                 <node begin="12" end="13" getal="getal" id="20" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
                 <node begin="12" cat="ssub" end="22" id="21" rel="body">
                   <node begin="12" end="13" id="22" index="1" rel="su"/>
-                  <node begin="13" buiging="zonder" end="14" graad="basis" id="23" lemma="ditmaal" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="ditmaal" word="ditmaal"/>
+                  <node begin="13" end="14" id="23" lemma="ditmaal" pos="adv" postag="BW()" pt="bw" rel="mod" root="ditmaal" word="ditmaal"/>
                   <node begin="16" cat="mwu" end="19" id="24" rel="svp">
                     <node begin="16" end="17" id="25" lemma="aan" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="aan" vztype="init" word="aan"/>
                     <node begin="17" end="18" id="26" lemma="den" pos="fixed" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="den" spectype="deeleigen" word="den"/>

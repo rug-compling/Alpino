@@ -6,7 +6,7 @@
       <node begin="1" end="2" id="3" lemma="beschouwen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="beschouw" word="beschouw" wvorm="pv"/>
       <node begin="2" end="3" genus="onz" getal="ev" id="4" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="pobj1" root="het" status="red" vwtype="pers" word="het"/>
       <node begin="3" cat="cp" end="5" id="5" rel="predc">
-        <node begin="3" end="4" id="6" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+        <node begin="3" conjtype="onder" end="4" id="6" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
         <node begin="4" buiging="zonder" end="5" graad="basis" id="7" lemma="ongepast" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="body" root="ongepast" word="ongepast"/>
       </node>
       <node begin="5" cat="oti" end="8" id="8" rel="vc">

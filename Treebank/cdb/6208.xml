@@ -6,7 +6,7 @@
         <node begin="0" buiging="zonder" end="1" graad="comp" id="3" lemma="laat" pos="adv" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="later" word="Later"/>
         <node begin="1" buiging="zonder" end="2" id="4" lemma="uit_brengen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="uitgebracht" word="uitgebracht" wvorm="vd"/>
         <node begin="2" cat="cp" end="4" id="5" rel="mod">
-          <node begin="2" end="3" id="6" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+          <node begin="2" conjtype="onder" end="3" id="6" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
           <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="single" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="single" word="single"/>
         </node>
       </node>

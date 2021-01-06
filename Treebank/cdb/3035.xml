@@ -12,7 +12,7 @@
       <node begin="3" end="4" id="7" lemma="dienen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="dien" word="dienden" wvorm="pv"/>
       <node begin="4" end="5" getal="mv" id="8" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
       <node begin="5" cat="cp" end="11" id="9" rel="predc">
-        <node begin="5" end="6" id="10" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+        <node begin="5" conjtype="onder" end="6" id="10" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
         <node begin="6" cat="np" end="11" id="11" rel="body">
           <node begin="6" end="7" getal="mv" graad="basis" id="12" lemma="lijn_toestel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="toestellen" word="lijntoestellen"/>
           <node begin="7" cat="pp" end="11" id="13" rel="mod">

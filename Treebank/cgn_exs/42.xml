@@ -11,9 +11,9 @@
           <node begin="6" end="7" id="8" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
           <node begin="2" cat="inf" end="8" id="9" rel="body">
             <node begin="2" end="3" id="10" index="1" rel="su"/>
-            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="streng" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mod" root="streng" word="strenger"/>
+            <node begin="4" buiging="zonder" end="5" graad="comp" id="11" lemma="streng" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="streng" word="strenger"/>
             <node begin="5" end="6" id="12" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="op" vztype="fin" word="op"/>
-            <node begin="7" buiging="zonder" end="8" id="13" lcat="p(inf)" lemma="op_treden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="treed_op" word="treden" wvorm="inf"/>
+            <node begin="7" buiging="zonder" end="8" id="13" lemma="op_treden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="treed_op" word="treden" wvorm="inf"/>
           </node>
         </node>
       </node>

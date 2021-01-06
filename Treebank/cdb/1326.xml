@@ -17,7 +17,7 @@
             <node begin="6" end="7" id="13" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
             <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="14" lemma="aard_gas" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="aardgas" word="aardgas"/>
             <node begin="8" cat="cp" end="12" id="15" rel="predc">
-              <node begin="8" end="9" id="16" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+              <node begin="8" conjtype="onder" end="9" id="16" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
               <node begin="9" cat="np" end="12" id="17" rel="body">
                 <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="18" lemma="brandstof" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="brandstof" word="brandstof"/>
                 <node begin="10" cat="pp" end="12" id="19" rel="mod">

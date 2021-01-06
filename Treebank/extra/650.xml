@@ -23,7 +23,7 @@
             <node begin="10" end="11" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="19" lemma="mens" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="mens" word="mens"/>
             <node begin="12" cat="cp" end="14" id="20" rel="mod">
-              <node begin="12" end="13" id="21" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+              <node begin="12" conjtype="onder" end="13" id="21" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
               <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="22" lemma="persoon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="persoon" word="persoon"/>
             </node>
           </node>

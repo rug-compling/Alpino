@@ -8,7 +8,7 @@
         <node begin="0" end="1" id="5" index="1" rel="obj1"/>
         <node begin="2" buiging="zonder" end="3" id="6" lemma="aan_bevelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="beveel" word="aanbevolen" wvorm="vd"/>
         <node begin="3" cat="cp" end="11" id="7" rel="predc">
-          <node begin="3" end="4" id="8" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+          <node begin="3" conjtype="onder" end="4" id="8" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
           <node begin="4" cat="np" end="11" id="9" rel="body">
             <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="haven" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="haven" word="haven"/>
             <node begin="5" cat="pp" end="11" id="11" rel="mod">

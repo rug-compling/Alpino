@@ -28,7 +28,7 @@
         <node begin="10" cat="ap" end="17" id="19" rel="cnj">
           <node begin="10" cat="np" end="12" id="20" rel="me">
             <node begin="10" end="11" id="21" lemma="23" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="23" word="23"/>
-            <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="22" lemma="centi_meter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="cm" word="cm"/>
+            <node begin="11" end="12" id="22" lemma="cm" pos="noun" postag="SPEC(symb)" pt="spec" rel="hd" root="cm" spectype="symb" word="cm"/>
           </node>
           <node begin="12" buiging="zonder" end="13" graad="comp" id="23" lemma="kort" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="korter" word="korter"/>
           <node begin="13" cat="cp" end="17" id="24" rel="obcomp">
@@ -47,7 +47,7 @@
           <node begin="18" end="19" id="33" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
           <node begin="19" cat="np" end="21" id="34" rel="me">
             <node begin="19" end="20" id="35" lemma="10" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="10" word="10"/>
-            <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="36" lemma="centi_meter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="cm" word="cm"/>
+            <node begin="20" end="21" id="36" lemma="cm" pos="noun" postag="SPEC(symb)" pt="spec" rel="hd" root="cm" spectype="symb" word="cm"/>
           </node>
           <node begin="21" buiging="zonder" end="22" graad="comp" id="37" lemma="smal" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="smal" word="smaller"/>
         </node>

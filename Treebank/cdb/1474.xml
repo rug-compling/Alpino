@@ -9,7 +9,7 @@
         <node begin="2" end="3" id="6" lemma="mogen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="mag" word="mag" wvorm="pv"/>
         <node begin="3" end="4" genus="masc" getal="ev" id="7" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
         <node begin="4" cat="cp" end="8" id="8" rel="predm">
-          <node begin="4" end="5" id="9" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+          <node begin="4" conjtype="onder" end="5" id="9" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
           <node begin="5" cat="np" end="8" id="10" rel="body">
             <node begin="5" buiging="met-e" end="6" id="11" lemma="enig" naamval="stan" npagr="rest" pdtype="det" pos="adj" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="mod" root="enige" vwtype="onbep" word="enige"/>
             <node begin="6" buiging="met-e" end="7" graad="basis" id="12" lemma="Nederlands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Nederlands" word="Nederlandse"/>

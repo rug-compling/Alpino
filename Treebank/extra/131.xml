@@ -5,7 +5,7 @@
       <node begin="3" end="4" id="2" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kun" wvorm="pv"/>
       <node begin="4" end="5" getal="ev" id="3" index="1" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
       <node begin="6" cat="cp" end="8" id="4" rel="predm">
-        <node begin="6" end="7" id="5" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+        <node begin="6" conjtype="onder" end="7" id="5" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
         <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="6" lemma="buitenstaander" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="buitenstaander" word="buitenstaander"/>
       </node>
       <node begin="0" cat="inf" end="12" id="7" rel="vc">

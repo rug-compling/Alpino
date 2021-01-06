@@ -9,12 +9,12 @@
       </node>
       <node begin="2" end="3" id="6" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
       <node begin="24" cat="cp" end="26" id="7" rel="predm">
-        <node begin="24" end="25" id="8" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+        <node begin="24" conjtype="onder" end="25" id="8" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
         <node begin="25" buiging="zonder" end="26" graad="basis" id="9" lemma="onaanvaardbaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="body" root="onaanvaardbaar" word="onaanvaardbaar"/>
       </node>
       <node begin="0" cat="ppart" end="28" id="10" rel="vc">
         <node begin="0" end="2" id="11" index="1" rel="su"/>
-        <node begin="3" end="4" id="12" lemma="verder" pos="adj" postag="BW()" pt="bw" rel="mod" root="verder" word="verder"/>
+        <node begin="3" buiging="zonder" end="4" graad="comp" id="12" lemma="ver" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="verder" word="verder"/>
         <node begin="4" cat="np" end="6" id="13" rel="obj2">
           <node begin="4" end="5" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="15" lemma="faculteit_voorzitter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="voorzitter" word="faculteitsvoorzitter"/>

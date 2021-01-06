@@ -4,7 +4,7 @@
     <node begin="0" cat="np" end="8" id="1" rel="--">
       <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="lekker" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="lekker" word="Lekker"/>
       <node begin="1" buiging="zonder" end="2" graad="basis" id="3" lemma="rustig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="rustig" word="rustig"/>
-      <node begin="2" buiging="zonder" end="3" id="4" lemma="zitten" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zit" word="zitten" wvorm="inf"/>
+      <node begin="2" buiging="zonder" end="3" getal-n="zonder-n" id="4" lemma="zitten" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="zit" word="zitten" wvorm="inf"/>
       <node begin="3" cat="pp" end="8" id="5" rel="mod">
         <node begin="3" cat="mwu" end="6" id="6" rel="hd">
           <node begin="3" end="4" id="7" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
@@ -13,7 +13,7 @@
         </node>
         <node begin="6" cat="np" end="8" id="10" rel="obj1">
           <node begin="6" end="7" id="11" lemma="altijd" pos="adv" postag="BW()" pt="bw" rel="mod" root="altijd" word="altijd"/>
-          <node begin="7" buiging="zonder" end="8" id="12" lemma="hollen" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="hollen" word="hollen" wvorm="inf"/>
+          <node begin="7" buiging="zonder" end="8" getal-n="zonder-n" id="12" lemma="hollen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="hollen" word="hollen" wvorm="inf"/>
         </node>
       </node>
     </node>

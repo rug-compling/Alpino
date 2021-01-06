@@ -35,3 +35,6 @@ extra/./572.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="a
 extra/./610.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
 extra/./611.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
 extra/./1236.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
+extra/./112.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
+extra/./573.xml	//node[@rel="det" and @pos and not(@pt="lid" or @pt="vnw" or @pt="tw" or (@pt="n" and @naamval="gen") or @pt="spec" or @pt="adj" or @root="genoeg" or (@pt="n" and @ntype="eigen"))]	unexpected postag for determiner
+extra/./573.xml	//node[@pt="n" and @rel="det" and not(@naamval="gen")]	unexpected postag for det

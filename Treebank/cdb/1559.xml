@@ -38,7 +38,7 @@
               <node begin="16" cat="pp" end="22" id="30" rel="pc">
                 <node begin="16" end="17" id="31" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
                 <node begin="17" cat="np" end="22" id="32" rel="obj1">
-                  <node begin="17" end="18" id="33" lemma="honderdduizend" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="honderdduizend" word="honderdduizend"/>
+                  <node begin="17" end="18" id="33" lemma="honderd_duizend" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="honderdduizend" word="honderdduizend"/>
                   <node begin="18" end="19" genus="zijd" getal="ev" graad="basis" id="34" lemma="kilo_meter" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kilometer" word="kilometer"/>
                   <node begin="19" cat="pp" end="22" id="35" rel="mod">
                     <node begin="19" end="20" id="36" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
@@ -59,7 +59,7 @@
         <node begin="25" end="26" id="43" lemma="vertonen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="vertoon" word="vertoonden" wvorm="pv"/>
         <node begin="26" cat="np" end="30" id="44" rel="obj1">
           <node begin="26" buiging="zonder" end="27" id="45" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
-          <node begin="27" buiging="zonder" end="28" id="46" lemma="sporen" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="spoor" word="sporen" wvorm="inf"/>
+          <node begin="27" end="28" getal="mv" graad="basis" id="46" lemma="spoor" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="spoor" word="sporen"/>
           <node begin="28" cat="pp" end="30" id="47" rel="mod">
             <node begin="28" end="29" id="48" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="29" end="30" genus="zijd" getal="ev" graad="basis" id="49" lemma="vermoeidheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="vermoeidheid" word="vermoeidheid"/>

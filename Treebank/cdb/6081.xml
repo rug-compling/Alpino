@@ -11,7 +11,7 @@
       <node begin="1" end="2" id="8" lemma="omschrijven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="omschrijf" word="omschrijft" wvorm="pv"/>
       <node begin="2" buiging="met-e" end="3" getal-n="zonder-n" id="9" lemma="deze" naamval="stan" pdtype="det" pos="det" positie="nom" postag="VNW(aanw,det,stan,nom,met-e,zonder-n)" pt="vnw" rel="obj1" root="deze" vwtype="aanw" word="deze"/>
       <node begin="3" cat="cp" end="43" id="10" rel="predc">
-        <node begin="3" end="4" id="11" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+        <node begin="3" conjtype="onder" end="4" id="11" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
         <node begin="5" cat="np" end="43" id="12" rel="body">
           <node begin="5" end="6" id="13" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
           <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="menselijkheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="menselijkheid" word="menselijkheid"/>

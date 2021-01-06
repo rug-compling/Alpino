@@ -53,7 +53,7 @@
                 </node>
                 <node begin="23" buiging="zonder" end="24" id="42" lemma="aan_prijzen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="prijs" word="aangeprezen" wvorm="vd"/>
                 <node begin="24" cat="cp" end="28" id="43" rel="predc">
-                  <node begin="24" end="25" id="44" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+                  <node begin="24" conjtype="onder" end="25" id="44" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
                   <node begin="25" cat="np" end="28" id="45" rel="body">
                     <node begin="25" buiging="met-e" end="26" id="46" lemma="verantwoorden" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="verantwoord" word="verantwoorde" wvorm="vd"/>
                     <node begin="26" buiging="met-e" end="27" graad="basis" id="47" lemma="buitenlands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="buitenlands" word="buitenlandse"/>

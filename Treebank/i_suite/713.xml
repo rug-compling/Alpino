@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="16" id="0" rel="top">
-    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="15" id="2" rel="--">
-      <node begin="0" end="1" getal="ev" id="3" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="Dat"/>
-      <node begin="1" end="2" id="4" infl="sg1" lemma="doen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="doe" sc="transitive_ndev" stype="declarative" tense="present" word="doe" wvorm="pv"/>
-      <node begin="2" case="nom" def="def" end="3" gen="de" getal="ev" id="5" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
-      <node begin="3" end="4" id="6" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" special="sentence" word="ook"/>
+      <node begin="0" end="1" getal="ev" id="3" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" word="Dat"/>
+      <node begin="1" end="2" id="4" lemma="doen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="doe" word="doe" wvorm="pv"/>
+      <node begin="2" end="3" getal="ev" id="5" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+      <node begin="3" end="4" id="6" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
       <node begin="5" cat="cp" end="15" id="7" rel="mod">
-        <node begin="5" cat="mwu" end="7" his="normal" his_1="normal" id="8" mwu_root="zij het" mwu_sense="zij het" rel="cmp">
-          <node begin="5" end="6" id="9" lemma="zij" pos="comp" postag="WW(pv,conj,ev)" pt="ww" pvagr="ev" pvtijd="conj" rel="mwp" root="zij" sc="pp" word="zij" wvorm="pv"/>
-          <node begin="6" end="7" genus="onz" getal="ev" id="10" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="comp" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="mwp" root="het" sc="pp" status="red" vwtype="pers" word="het"/>
+        <node begin="5" cat="mwu" end="7" id="8" mwu_root="zij het" mwu_sense="zij het" rel="cmp">
+          <node begin="5" end="6" id="9" lemma="zijn" pos="comp" postag="WW(pv,conj,ev)" pt="ww" pvagr="ev" pvtijd="conj" rel="mwp" root="zij" word="zij" wvorm="pv"/>
+          <node begin="6" end="7" genus="onz" getal="ev" id="10" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="comp" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="mwp" root="het" status="red" vwtype="pers" word="het"/>
         </node>
-        <node begin="7" end="8" id="11" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" special="tmp" word="dan"/>
+        <node begin="7" end="8" id="11" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
         <node begin="8" cat="conj" end="15" id="12" rel="body">
           <node begin="8" cat="pp" end="11" id="13" rel="cnj">
             <node begin="8" end="9" id="14" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
             <node begin="9" cat="np" end="11" id="15" rel="obj1">
-              <node begin="9" buiging="zonder" end="10" getal="ev" id="16" infl="pron" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
-              <node begin="10" end="11" gen="de" genus="zijd" getal="ev" graad="basis" id="17" lemma="manier" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="manier" word="manier"/>
+              <node begin="9" buiging="zonder" end="10" getal="ev" id="16" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+              <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="17" lemma="manier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="manier" word="manier"/>
             </node>
           </node>
           <node begin="11" conjtype="neven" end="12" id="18" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
           <node begin="12" cat="pp" end="15" id="19" rel="cnj">
             <node begin="12" end="13" id="20" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
             <node begin="13" cat="np" end="15" id="21" rel="obj1">
-              <node begin="13" buiging="zonder" end="14" getal="ev" id="22" infl="pron" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
-              <node begin="14" end="15" gen="het" genus="onz" getal="ev" graad="basis" id="23" lemma="tempo" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="tempo" word="tempo"/>
+              <node begin="13" buiging="zonder" end="14" getal="ev" id="22" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+              <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="23" lemma="tempo" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="tempo" word="tempo"/>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="15" end="16" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="15" end="16" id="24" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Dat doe ik ook , zij het dan op mijn manier en in mijn tempo .</sentence>
 </alpino_ds>

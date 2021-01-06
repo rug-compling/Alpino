@@ -53,3 +53,7 @@ i_suite/./729.xml	//node[(@cat="pp" or @cat="detp" or @cat="ap") and node[@cat="
 i_suite/./387.xml	//node[not(@cat="pp") and node[@rel="hd" and @postag="VZ(init)"]]	preposition head, but not PP?
 i_suite/./387.xml	//node[not(@cat="pp") and node[@rel="hd" and @postag="VZ(init)"]]	preposition head, but not PP?
 i_suite/./359.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
+i_suite/./153.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
+i_suite/./154.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
+i_suite/./457.xml	//node[@rel="det" and @pos and not(@pt="lid" or @pt="vnw" or @pt="tw" or (@pt="n" and @naamval="gen") or @pt="spec" or @pt="adj" or @root="genoeg" or (@pt="n" and @ntype="eigen"))]	unexpected postag for determiner
+i_suite/./457.xml	//node[@pt="n" and @rel="det" and not(@naamval="gen")]	unexpected postag for det

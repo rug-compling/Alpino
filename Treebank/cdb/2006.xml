@@ -28,7 +28,7 @@
                 <node begin="12" end="13" id="24" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
                 <node begin="13" cat="ap" end="15" id="25" rel="mod">
                   <node begin="13" buiging="zonder" end="14" graad="basis" id="26" lemma="psychisch" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="psychisch" word="psychisch"/>
-                  <node begin="14" buiging="met-e" end="15" graad="basis" id="27" lemma="gestoord" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="gestoord" word="gestoorde"/>
+                  <node begin="14" buiging="met-e" end="15" id="27" lemma="storen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="gestoord" word="gestoorde" wvorm="vd"/>
                 </node>
                 <node begin="15" end="16" getal="mv" graad="basis" id="28" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kind" word="kinderen"/>
               </node>

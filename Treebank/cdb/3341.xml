@@ -15,7 +15,7 @@
             <node begin="3" end="4" id="11" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
             <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="12" lemma="functie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="functie" word="functie"/>
             <node begin="5" cat="cp" end="15" id="13" rel="mod">
-              <node begin="5" end="6" id="14" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+              <node begin="5" conjtype="onder" end="6" id="14" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
               <node begin="6" cat="np" end="15" id="15" rel="body">
                 <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="16" lemma="leraar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="leraar" word="leraar"/>
                 <node begin="7" cat="pp" end="15" id="17" rel="mod">

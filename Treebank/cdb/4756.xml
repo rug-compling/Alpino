@@ -31,7 +31,7 @@
             <node begin="1" end="2" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="25" lemma="staat" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="staat" word="staat"/>
             <node begin="3" cat="cp" end="5" id="26" rel="mod">
-              <node begin="3" end="4" id="27" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+              <node begin="3" conjtype="onder" end="4" id="27" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
               <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="28" lemma="aandeelhouder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="aandeelhouder" word="aandeelhouder"/>
             </node>
           </node>

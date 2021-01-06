@@ -51,7 +51,7 @@
       <node begin="21" cat="du" end="39" id="36" rel="dp">
         <node begin="21" end="22" getal="ev" id="37" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="dp" root="dit" status="vol" vwtype="aanw" word="dit"/>
         <node begin="22" cat="pp" end="39" id="38" rel="dp">
-          <node begin="22" end="23" id="39" lemma="gezien" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="gezien" vztype="init" word="gezien"/>
+          <node begin="22" buiging="zonder" end="23" id="39" lemma="zien" pos="prep" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gezien" word="gezien" wvorm="vd"/>
           <node begin="23" cat="np" end="39" id="40" rel="obj1">
             <node begin="23" end="24" id="41" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
             <node begin="24" end="25" genus="onz" getal="ev" graad="basis" id="42" lemma="feit" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="feit" word="feit"/>

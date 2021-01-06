@@ -30,12 +30,12 @@
         <node begin="11" end="12" id="21" lemma="missen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="mis" word="mist" wvorm="pv"/>
         <node begin="12" cat="conj" end="17" id="22" rel="predm">
           <node begin="12" cat="cp" end="14" id="23" rel="cnj">
-            <node begin="12" end="13" id="24" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+            <node begin="12" conjtype="onder" end="13" id="24" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
             <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="25" lemma="mens" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="mens" word="mens"/>
           </node>
           <node begin="14" conjtype="neven" end="15" id="26" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
           <node begin="15" cat="cp" end="17" id="27" rel="cnj">
-            <node begin="15" end="16" id="28" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+            <node begin="15" conjtype="onder" end="16" id="28" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
             <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="29" lemma="opvoeder" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="opvoeder" word="opvoeder"/>
           </node>
         </node>

@@ -3,15 +3,15 @@
   <node begin="0" cat="top" end="5" id="0" rel="top">
     <node begin="0" cat="du" end="4" id="1" rel="--">
       <node begin="0" cat="cp" end="2" id="2" rel="dp">
-        <node begin="0" end="1" frame="complementizer(als)" id="3" lcat="cp" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" sc="als" sense="als" vztype="init" word="Als"/>
-        <node aform="super" begin="1" buiging="met-e" end="2" frame="adjective(ste)" getal-n="zonder-n" graad="sup" id="4" infl="e" lcat="np" lemma="laat" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,sup,met-e,zonder-n,stan)" pt="adj" rel="body" root="laat" sense="laat" vform="adj" word="laatste"/>
+        <node begin="0" conjtype="onder" end="1" id="3" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sense="als" word="Als"/>
+        <node begin="1" buiging="met-e" end="2" getal-n="zonder-n" graad="sup" id="4" lemma="laat" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,sup,met-e,zonder-n,stan)" pt="adj" rel="body" root="laat" sense="laat" word="laatste"/>
       </node>
       <node begin="2" cat="np" end="4" id="5" rel="dp">
-        <node begin="2" end="3" frame="determiner(het,nwh,nmod,pro,nparg,wkpro)" id="6" infl="het" lcat="detp" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" wh="nwh" word="het"/>
-        <node begin="3" end="4" frame="noun(het,count,sg)" gen="het" genus="onz" getal="ev" graad="basis" id="7" lcat="np" lemma="milieu" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="milieu" sense="milieu" word="milieu"/>
+        <node begin="2" end="3" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" sense="het" word="het"/>
+        <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="7" lemma="milieu" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="milieu" sense="milieu" word="milieu"/>
       </node>
     </node>
-    <node begin="4" end="5" frame="punct(punt)" id="8" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+    <node begin="4" end="5" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." word="."/>
   </node>
   <sentence>Als laatste het milieu .</sentence>
 </alpino_ds>

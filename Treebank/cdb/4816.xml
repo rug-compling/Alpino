@@ -7,7 +7,7 @@
         <node begin="0" end="1" id="4" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
         <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="5" lemma="kamer_muziek" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="muziek" word="kamermuziek"/>
         <node begin="2" cat="cp" end="5" id="6" rel="mod">
-          <node begin="2" end="3" id="7" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+          <node begin="2" conjtype="onder" end="3" id="7" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
           <node begin="3" cat="np" end="5" id="8" rel="body">
             <node begin="3" buiging="zonder" end="4" graad="basis" id="9" lemma="muzikaal" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="muzikaal" word="muzikaal"/>
             <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="genre" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="genre" word="genre"/>
@@ -34,7 +34,7 @@
       <node begin="15" cat="pp" end="29" id="24" rel="mod">
         <node begin="15" end="16" id="25" lemma="mede" pos="adv" postag="BW()" pt="bw" rel="mod" root="mede" word="mede"/>
         <node begin="16" cat="mwu" end="19" id="26" rel="hd">
-          <node begin="16" end="17" id="27" lemma="als" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="als" vztype="init" word="als"/>
+          <node begin="16" conjtype="onder" end="17" id="27" lemma="als" pos="prep" postag="VG(onder)" pt="vg" rel="mwp" root="als" word="als"/>
           <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="28" lemma="gevolg" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="gevolg" word="gevolg"/>
           <node begin="18" end="19" id="29" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
         </node>

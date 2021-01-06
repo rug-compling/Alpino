@@ -8,7 +8,7 @@
       <node begin="2" end="3" genus="fem" getal="ev" id="5" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
       <node begin="3" end="4" getal="getal" id="6" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="se" root="zich" status="red" vwtype="refl" word="zich"/>
       <node begin="4" cat="cp" end="9" id="7" rel="predc">
-        <node begin="4" end="5" id="8" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+        <node begin="4" conjtype="onder" end="5" id="8" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
         <node begin="5" cat="np" end="9" id="9" rel="body">
           <node begin="5" end="6" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="7" cat="mwu" end="9" id="11" rel="hd">

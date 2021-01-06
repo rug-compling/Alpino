@@ -20,7 +20,7 @@
         </node>
         <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="15" lemma="werk_groep" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="werkgroep" word="werkgroep"/>
         <node begin="9" cat="mwu" end="13" id="16" rel="app">
-          <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="17" lemma="aktie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Aktie" word="Aktie"/>
+          <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="17" lemma="actie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Aktie" word="Aktie"/>
           <node begin="10" end="11" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
           <node begin="11" buiging="met-e" end="12" graad="basis" id="19" lemma="bot" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="botte" word="botte"/>
           <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="20" lemma="bijl" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="bijl" word="bijl"/>
@@ -49,7 +49,7 @@
         <node begin="23" end="24" id="36" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
         <node begin="24" cat="np" end="26" id="37" rel="obj1">
           <node begin="24" buiging="zonder" end="25" graad="basis" id="38" lemma="autoritair" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="autoritair" word="autoritair"/>
-          <node begin="25" buiging="zonder" end="26" id="39" lemma="denken" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="denk" word="denken" wvorm="inf"/>
+          <node begin="25" buiging="zonder" end="26" getal-n="zonder-n" id="39" lemma="denken" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="denk" word="denken" wvorm="inf"/>
         </node>
       </node>
       <node begin="26" cat="cp" end="36" id="40" rel="mod">

@@ -6,7 +6,7 @@
       <node begin="1" end="2" id="3" lcat="p(smain)" lemma="bekend_staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" word="staat" wvorm="pv"/>
       <node begin="2" buiging="zonder" end="3" graad="basis" id="4" lemma="bekend" pos="part" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="svp" root="bekend" word="bekend"/>
       <node begin="3" cat="cp" end="7" id="5" rel="predc">
-        <node begin="3" end="4" id="6" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+        <node begin="3" conjtype="onder" end="4" id="6" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
         <node begin="4" cat="np" end="7" id="7" rel="body">
           <node begin="4" end="5" id="8" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
           <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="verstandig" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="verstandig" word="verstandig"/>

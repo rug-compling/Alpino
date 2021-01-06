@@ -25,7 +25,7 @@
                 <node begin="8" end="9" id="20" index="2" rel="su"/>
                 <node begin="9" end="10" getal="getal" id="21" lemma="zich" naamval="obl" pdtype="pron" persoon="3" pos="noun" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" root="zich" status="red" vwtype="refl" word="zich"/>
                 <node begin="10" cat="cp" end="12" id="22" rel="predc">
-                  <node begin="10" end="11" id="23" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+                  <node begin="10" conjtype="onder" end="11" id="23" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
                   <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="24" lemma="artiest" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="artiest" word="artiest"/>
                 </node>
                 <node begin="14" buiging="zonder" end="15" id="25" lemma="afficheren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="afficheer" word="afficheren" wvorm="inf"/>
@@ -34,7 +34,7 @@
                   <node begin="15" cat="cp" end="18" id="28" rel="obcomp">
                     <node begin="15" conjtype="onder" end="16" id="29" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
                     <node begin="16" cat="cp" end="18" id="30" rel="body">
-                      <node begin="16" end="17" id="31" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+                      <node begin="16" conjtype="onder" end="17" id="31" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
                       <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="32" lemma="vakman" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="vakman" word="vakman"/>
                     </node>
                   </node>

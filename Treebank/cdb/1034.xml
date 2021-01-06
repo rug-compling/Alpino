@@ -10,7 +10,7 @@
         <node begin="8" end="9" id="7" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
         <node begin="0" cat="inf" end="30" id="8" rel="body">
           <node begin="0" cat="pp" end="6" id="9" rel="mod">
-            <node begin="0" end="1" id="10" lemma="gezien" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="gezien" vztype="init" word="Gezien"/>
+            <node begin="0" buiging="zonder" end="1" id="10" lemma="zien" pos="prep" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gezien" word="Gezien" wvorm="vd"/>
             <node begin="1" cat="np" end="6" id="11" rel="obj1">
               <node begin="1" end="2" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
               <node begin="2" end="3" getal="mv" graad="basis" id="13" lemma="kwaliteit" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kwaliteit" word="kwaliteiten"/>

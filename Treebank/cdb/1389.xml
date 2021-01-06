@@ -14,8 +14,8 @@
       </node>
       <node begin="4" end="5" id="10" lemma="verworden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="verword" word="verwordt" wvorm="pv"/>
       <node begin="5" cat="mwu" end="7" id="11" rel="su">
-        <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="De" word="De"/>
-        <node begin="6" buiging="zonder" end="7" graad="basis" id="13" lemma="Rijp" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="Rijp" word="Rijp"/>
+        <node begin="5" end="6" id="12" lemma="De" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
+        <node begin="6" end="7" id="13" lemma="Rijp" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Rijp" spectype="deeleigen" word="Rijp"/>
       </node>
       <node begin="7" cat="pp" end="26" id="14" rel="pc">
         <node begin="7" end="8" id="15" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
