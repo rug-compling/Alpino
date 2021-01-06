@@ -67,12 +67,18 @@ gitversion=$(shell git log --oneline | wc -l)
 # 	/net/corpora/LassyDevelopMod/lassymod -t -u Enhanced/cdb
 # 	/net/corpora/novelsample_correctedMod/novelmod -u Enhanced/novelsample_corrected
 
-tar:
-	( cd Enhanced ; tar czf cdb-$(gitversion).tar.gz cdb )
+tars:
+	for dir in $(enhanceddirs); do make tar dir=$$dir; done
 
-tar-install: tar
-	mv Enhanced/cdb-$(gitversion).tar.gz ~/public_html/treebanks/
-	( cd ~/public_html/treebanks; rm cdb.tar.gz; ln -s cdb-$(gitversion).tar.gz cdb.tar.gz )
+tars-install:
+	for dir in $(enhanceddirs); do make tar-install dir=$$dir; done
+
+tar:
+	( cd Enhanced ; tar czf $(dir)-$(gitversion).tar.gz $(dir) )
+
+tar-install: 
+	mv Enhanced/$(dir)-$(gitversion).tar.gz ~/public_html/treebanks/
+	( cd ~/public_html/treebanks; rm -f $(dir).tar.gz; ln -s $(dir)-$(gitversion).tar.gz $(dir).tar.gz )
 
 dtchecks:
 	dtchecks $(DIRECTORIES)
