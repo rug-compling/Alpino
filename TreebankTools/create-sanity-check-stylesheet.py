@@ -125,6 +125,7 @@ def sanity_checks():
    check('//node[@root="genoemd" and @pt="vz"]','genoemd is not a prep but an adjective')
    check('//node[@root="inbegrepen" and @pt="vz"]','inbegrepen is not a prep but an adjective')
    check('//node[@root="zoals" and (@pt="vz" or @rel="hd" or ../@cat="pp")]','zoals is not a prep but a complementizer')
+   check('//node[@lemma="als" and (@pt="vz" or @rel="hd" or ../@cat="pp")]','als is not a prep but a complementizer')
 
    check('//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]','vg(onder) is not cmp')
    
@@ -205,7 +206,7 @@ def sanity_checks():
    check('//node[@rel="hd" and ../@cat="np" and @pt and not(@pt="n" or @pt="tw" or @pt="spec" or @pt="adj" or @pt="ww" or @pt="vnw" or @pt="bw")]','unexpected postag for head of np')
    check('//node[@rel="hd" and ../@cat="ap" and @pt and not(@pt="vz" or @pt="tw" or @pt="bw" or @pt="vnw" or @pt="adj")]','unexpected postag for head of ap')
    check('//node[@rel="hd" and ../@cat="advp" and @pt and not(@pt="bw" or @pt="n" or @pt="adj" or @pt="vnw" or @pt="tw" or @postag="VZ(fin)")]','unexpected postag for head of advp')
-   check('//node[@rel="hd" and ../@cat="pp" and @pt and not(@pt="vz" or @pt="spec" or @pt="bw" or @pt="adj" or @lemma="richting" or @lemma="naargelang" or @lemma="getuige")]','unexpected postag for head of pp')
+   check('//node[@rel="hd" and ../@cat="pp" and @pt and not(@pt="vz" or @pt="spec" or @pt="bw" or @pt="adj" or @lemma="richting" or @lemma="naargelang" or @lemma="getuige" or @lemma="zien")]','unexpected postag for head of pp')
    check('//node[@rel="hd" and (../@cat="ssub" or ../@cat="smain" or ../@cat="sv1") and @pt and not(@pt="ww")]','unexpected pt for head of finite sentence')
 
 #----------------------------------------------------------------------
