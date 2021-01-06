@@ -95,8 +95,6 @@ adverb([beetje,bij,beetje]).
 adverb(beroepshalve).
 adverb(bovenmate).
 adverb([bij,de,vleet]).
-adverb([bij,deze]).
-adverb([bij,dezen]).
 adverb([bij,hoog,en,bij,laag]).
 adverb([bij,lange]).
 adverb([bij,lange,na]).
