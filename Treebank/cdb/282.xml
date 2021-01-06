@@ -31,13 +31,13 @@
                   <node begin="4" cat="np" end="17" id="25" rel="obj1">
                     <node begin="4" end="5" id="26" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                     <node begin="5" end="6" id="27" lemma="één" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="eerste" word="eerste"/>
-                    <node begin="6" buiging="zonder" end="7" getal-n="zonder-n" id="28" lemma="op_treden" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="optreden" word="optreden" wvorm="inf"/>
+                    <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="28" lemma="optreden" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="optreden" word="optreden"/>
                     <node begin="7" cat="pp" end="14" id="29" rel="mod">
                       <node begin="7" end="8" id="30" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                       <node begin="8" cat="np" end="14" id="31" rel="obj1">
                         <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="32" lemma="Chicago" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="Chicago" word="Chicago"/>
                         <node begin="10" cat="np" end="14" id="33" rel="mod">
-                          <node begin="10" buiging="zonder" end="11" graad="basis" id="34" lemma="vroeg" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="vroeger" word="vroeger"/>
+                          <node begin="10" buiging="zonder" end="11" graad="comp" id="34" lemma="vroeg" pos="adv" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="vroeger" word="vroeger"/>
                           <node begin="11" cat="mwu" end="14" id="35" rel="hd">
                             <node begin="11" end="12" id="36" lemma="Chicago" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Chicago" spectype="deeleigen" word="Chicago"/>
                             <node begin="12" end="13" id="37" lemma="Transit" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Transit" spectype="deeleigen" word="Transit"/>

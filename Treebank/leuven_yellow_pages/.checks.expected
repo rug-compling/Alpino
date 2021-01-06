@@ -302,3 +302,5 @@ leuven_yellow_pages/./129.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub"
 leuven_yellow_pages/./169.xml	//node[(@cat="rel" or @cat="whrel" or @cat="whsub") and node[@index] and node[@rel="body" and not(@cat="ssub" or (@cat="conj" and node[@cat="ssub"]))]]	unexpected relative
 leuven_yellow_pages/./253.xml	//node[not(@cat="pp") and node[@rel="hd" and @postag="VZ(init)"]]	preposition head, but not PP?
 leuven_yellow_pages/./253.xml	//node[not(@cat="pp") and node[@rel="hd" and @postag="VZ(init)"]]	preposition head, but not PP?
+leuven_yellow_pages/./201.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp
+leuven_yellow_pages/./202.xml	//node[@postag="VG(onder)" and not(@rel="cmp") and not(@lemma="als" or @lemma="dan" or @lemma="evenals" or @lemma="behalve" or @lemma="zoals")]	vg(onder) is not cmp

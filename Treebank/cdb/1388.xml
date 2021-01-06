@@ -12,7 +12,7 @@
         <node begin="3" cat="mwu" end="6" id="9" rel="app">
           <node begin="3" end="4" id="10" lemma="redden" pos="noun" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="mwp" root="Redt" word="Redt" wvorm="pv"/>
           <node begin="4" end="5" id="11" lemma="De" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
-          <node begin="5" buiging="zonder" end="6" graad="basis" id="12" lemma="Rijp" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="Rijp" word="Rijp"/>
+          <node begin="5" end="6" id="12" lemma="Rijp" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Rijp" spectype="deeleigen" word="Rijp"/>
         </node>
         <node begin="8" cat="rel" end="13" id="13" rel="mod">
           <node begin="8" end="9" getal="getal" id="14" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>

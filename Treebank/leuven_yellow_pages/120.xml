@@ -9,7 +9,7 @@
         <node begin="2" end="3" id="6" index="1" rel="su"/>
         <node begin="3" buiging="zonder" end="4" id="7" lemma="werken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="werk" word="werken" wvorm="inf"/>
         <node begin="4" cat="cp" end="6" id="8" rel="mod">
-          <node begin="4" end="5" id="9" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+          <node begin="4" conjtype="onder" end="5" id="9" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
           <node begin="5" end="6" getal="mv" graad="basis" id="10" lemma="beest" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="body" root="beest" word="beesten"/>
         </node>
       </node>

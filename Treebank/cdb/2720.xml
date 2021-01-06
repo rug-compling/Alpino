@@ -73,7 +73,7 @@
           <node begin="29" buiging="met-e" end="30" graad="basis" id="54" lemma="collectief" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="collectief" word="collectieve"/>
           <node begin="30" end="31" getal="mv" graad="basis" id="55" lemma="instelling" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="instelling" word="instellingen"/>
           <node begin="31" cat="cp" end="59" id="56" rel="mod">
-            <node begin="31" end="32" id="57" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+            <node begin="31" conjtype="onder" end="32" id="57" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
             <node begin="32" cat="conj" end="59" id="58" rel="body">
               <node begin="38" conjtype="neven" end="39" id="59" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
               <node begin="32" cat="np" end="59" id="60" rel="cnj">

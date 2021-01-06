@@ -3,17 +3,17 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="du" end="6" id="1" rel="--">
       <node begin="0" cat="cp" end="2" id="2" rel="dp">
-        <node begin="0" end="1" frame="complementizer(als)" id="3" lcat="cp" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" sc="als" sense="als" vztype="init" word="Als"/>
-        <node aform="super" begin="1" buiging="met-e" end="2" frame="adjective(ste)" getal-n="zonder-n" graad="sup" id="4" infl="e" lcat="np" lemma="laat" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,sup,met-e,zonder-n,stan)" pt="adj" rel="body" root="laat" sense="laat" vform="adj" word="laatste"/>
+        <node begin="0" conjtype="onder" end="1" id="3" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sense="als" word="Als"/>
+        <node begin="1" buiging="met-e" end="2" getal-n="zonder-n" graad="sup" id="4" lemma="laat" naamval="stan" pos="adj" positie="nom" postag="ADJ(nom,sup,met-e,zonder-n,stan)" pt="adj" rel="body" root="laat" sense="laat" word="laatste"/>
       </node>
       <node begin="2" cat="np" end="6" id="5" rel="dp">
-        <node begin="2" end="3" frame="modal_adverb" id="6" lcat="advp" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" sc="modal" sense="nog" word="nog"/>
-        <node begin="3" end="4" frame="determiner(een)" id="7" infl="een" lcat="detp" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
-        <node aform="base" begin="4" buiging="met-e" end="5" frame="adjective(e)" graad="basis" id="8" infl="e" lcat="ap" lemma="specifiek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="specifiek" sense="specifiek" vform="adj" word="specifieke"/>
-        <node begin="5" end="6" frame="noun(de,count,sg)" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lcat="np" lemma="kwestie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kwestie" sense="kwestie" word="kwestie"/>
+        <node begin="2" end="3" id="6" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" sense="nog" word="nog"/>
+        <node begin="3" end="4" id="7" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" sense="een" word="een"/>
+        <node begin="4" buiging="met-e" end="5" graad="basis" id="8" lemma="specifiek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="specifiek" sense="specifiek" word="specifieke"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="kwestie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kwestie" sense="kwestie" word="kwestie"/>
       </node>
     </node>
-    <node begin="6" end="7" frame="punct(punt)" id="10" lcat="punct" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." special="punt" word="."/>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." sense="." word="."/>
   </node>
   <sentence>Als laatste nog een specifieke kwestie .</sentence>
 </alpino_ds>

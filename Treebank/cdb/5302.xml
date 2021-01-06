@@ -34,7 +34,7 @@
           <node begin="0" end="11" id="24" index="1" rel="obj1"/>
           <node begin="12" buiging="zonder" end="13" id="25" lemma="betitelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="betitel" word="betiteld" wvorm="vd"/>
           <node begin="13" cat="cp" end="27" id="26" rel="predc">
-            <node begin="13" end="14" id="27" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+            <node begin="13" conjtype="onder" end="14" id="27" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
             <node begin="14" cat="np" end="27" id="28" rel="body">
               <node begin="14" end="15" id="29" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
               <node begin="15" cat="conj" end="18" id="30" rel="mod">

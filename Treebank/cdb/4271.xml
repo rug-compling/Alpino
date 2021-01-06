@@ -34,7 +34,7 @@
           <node begin="15" cat="np" end="20" id="25" rel="su">
             <node begin="15" end="16" getal="mv" graad="basis" id="26" lemma="product" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="produkt" word="produkten"/>
             <node begin="16" cat="cp" end="20" id="27" rel="mod">
-              <node begin="16" end="17" id="28" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+              <node begin="16" conjtype="onder" end="17" id="28" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
               <node begin="17" cat="conj" end="20" id="29" rel="body">
                 <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="30" lemma="cacao" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="cacao" word="cacao"/>
                 <node begin="18" conjtype="neven" end="19" id="31" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>

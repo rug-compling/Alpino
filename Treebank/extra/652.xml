@@ -16,7 +16,7 @@
         <node begin="5" buiging="zonder" end="6" id="11" lemma="verstrekken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verstrek" word="verstrekt" wvorm="vd"/>
       </node>
       <node begin="6" cat="cp" end="11" id="12" rel="predm">
-        <node begin="6" end="7" id="13" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+        <node begin="6" conjtype="onder" end="7" id="13" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
         <node begin="7" cat="np" end="11" id="14" rel="body">
           <node begin="7" end="8" id="15" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
           <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="16" lemma="bedrag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bedrag" word="bedrag"/>

@@ -6,7 +6,7 @@
       <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="3" lemma="Zagalo" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Zagalo" word="Zagalo"/>
       <node begin="1" end="2" id="4" lemma="spelen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="speel" word="speelde" wvorm="pv"/>
       <node begin="2" cat="cp" end="5" id="5" rel="mod">
-        <node begin="2" end="3" id="6" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+        <node begin="2" conjtype="onder" end="3" id="6" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
         <node begin="3" cat="np" end="5" id="7" rel="body">
           <node begin="3" buiging="zonder" end="4" graad="basis" id="8" lemma="teruggetrokken" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="teruggetrokken" word="teruggetrokken"/>
           <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="9" lemma="linksbuiten" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="linksbuiten" word="linksbuiten"/>

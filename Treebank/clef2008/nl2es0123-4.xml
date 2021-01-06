@@ -11,7 +11,7 @@
         <node begin="2" end="3" id="7" lemma="gebruiken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="gebruik" word="gebruikte" wvorm="pv"/>
         <node begin="3" end="4" genus="genus" getal="ev" graad="basis" id="8" lemma="Bibendum" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Bibendum" word="Bibendum"/>
         <node begin="4" cat="cp" end="6" id="9" rel="predc">
-          <node begin="4" end="5" id="10" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+          <node begin="4" conjtype="onder" end="5" id="10" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
           <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="mascotte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="mascotte" word="mascotte"/>
         </node>
       </node>

@@ -7,7 +7,7 @@
         <node begin="2" end="3" id="4" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
         <node begin="3" end="4" getal="getal" id="5" index="1" lemma="u" naamval="nomin" pdtype="pron" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" root="u" status="vol" vwtype="pers" word="u"/>
         <node begin="4" cat="cp" end="6" id="6" rel="predm">
-          <node begin="4" end="5" id="7" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+          <node begin="4" conjtype="onder" end="5" id="7" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
           <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="8" lemma="man" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="man" word="man"/>
         </node>
         <node begin="1" cat="inf" end="14" id="9" rel="vc">

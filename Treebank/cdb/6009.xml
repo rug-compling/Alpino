@@ -7,7 +7,7 @@
         <node begin="1" end="2" id="4" lemma="aan_raden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="raad" word="raadde" wvorm="pv"/>
         <node begin="2" cat="np" end="4" id="5" rel="obj1">
           <node begin="2" end="3" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-          <node begin="3" buiging="zonder" end="4" id="7" lemma="onder_duiken" pos="noun" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="duik" word="onderduiken" wvorm="inf"/>
+          <node begin="3" buiging="zonder" end="4" getal-n="zonder-n" id="7" lemma="onder_duiken" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="duik" word="onderduiken" wvorm="inf"/>
         </node>
         <node begin="4" end="5" id="8" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
       </node>

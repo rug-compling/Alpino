@@ -24,7 +24,7 @@
             <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="19" lemma="betekenis" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="betekenis" word="betekenis"/>
             <node begin="12" buiging="zonder" end="13" id="20" lemma="hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb" word="hebben" wvorm="inf"/>
             <node begin="13" cat="cp" end="15" id="21" rel="mod">
-              <node begin="13" end="14" id="22" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+              <node begin="13" conjtype="onder" end="14" id="22" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
               <node begin="14" end="15" getal="mv" graad="basis" id="23" lemma="recreatie_gebied" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="body" root="gebieden" word="recreatiegebieden"/>
             </node>
           </node>

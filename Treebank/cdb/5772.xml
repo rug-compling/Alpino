@@ -28,7 +28,7 @@
           </node>
           <node begin="22" conjtype="neven" end="23" id="22" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
           <node begin="23" cat="cp" end="31" id="23" rel="cnj">
-            <node begin="23" end="24" id="24" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+            <node begin="23" conjtype="onder" end="24" id="24" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
             <node begin="24" cat="np" end="31" id="25" rel="body">
               <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="26" lemma="stimulans" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stimulans" word="stimulans"/>
               <node begin="25" cat="pp" end="31" id="27" rel="mod">
@@ -103,7 +103,7 @@
                 </node>
               </node>
               <node begin="51" cat="cp" end="54" id="81" rel="predm">
-                <node begin="51" end="52" id="82" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+                <node begin="51" conjtype="onder" end="52" id="82" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
                 <node begin="52" cat="np" end="54" id="83" rel="body">
                   <node begin="52" end="53" id="84" lemma="vijf" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="vijfde" word="vijfde"/>
                   <node begin="53" end="54" genus="zijd" getal="ev" graad="basis" id="85" lemma="man" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="man" word="man"/>

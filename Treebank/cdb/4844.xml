@@ -27,12 +27,12 @@
               <node begin="8" cat="np" end="11" id="22" rel="cnj">
                 <node begin="8" end="9" id="23" index="1" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                 <node begin="9" buiging="zonder" end="10" id="24" lemma="voort_duren" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="mod" root="voortdurend" word="voortdurend" wvorm="od"/>
-                <node begin="10" buiging="zonder" end="11" id="25" lemma="rond_trekken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="trek" word="rondtrekken" wvorm="inf"/>
+                <node begin="10" buiging="zonder" end="11" getal-n="zonder-n" id="25" lemma="rond_trekken" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="trek" word="rondtrekken" wvorm="inf"/>
               </node>
               <node begin="8" cat="np" end="14" id="26" rel="cnj">
                 <node begin="8" end="9" id="27" index="1" rel="det"/>
                 <node begin="12" buiging="zonder" end="13" id="28" lemma="zien" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="vc" root="zie" word="gezien" wvorm="vd"/>
-                <node begin="13" buiging="zonder" end="14" id="29" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+                <node begin="13" buiging="zonder" end="14" getal-n="zonder-n" id="29" lemma="worden" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
               </node>
               <node begin="8" cat="np" end="28" id="30" rel="cnj">
                 <node begin="8" end="9" id="31" index="1" rel="det"/>
@@ -42,7 +42,7 @@
                   <node begin="17" end="18" getal="mv" graad="basis" id="35" lemma="mensenmenigte" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="menigte" word="mensenmenigten"/>
                   <node begin="18" end="19" id="36" lemma="heen" pos="part" postag="VZ(fin)" pt="vz" rel="hdf" root="heen" vztype="fin" word="heen"/>
                 </node>
-                <node begin="19" buiging="zonder" end="20" id="37" lemma="dringen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="dring" word="dringen" wvorm="inf"/>
+                <node begin="19" buiging="zonder" end="20" getal-n="zonder-n" id="37" lemma="dringen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="dring" word="dringen" wvorm="inf"/>
                 <node begin="21" cat="oti" end="28" id="38" rel="mod">
                   <node begin="21" end="22" id="39" lemma="om" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="om" vztype="init" word="om"/>
                   <node begin="22" cat="ti" end="28" id="40" rel="body">

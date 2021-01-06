@@ -7,7 +7,7 @@
         <node begin="1" end="2" getal="mv" id="4" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="ze"/>
         <node begin="2" end="3" getal="ev" id="5" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" root="dat" status="vol" vwtype="aanw" word="dat"/>
         <node begin="3" cat="cp" end="8" id="6" rel="predm">
-          <node begin="3" end="4" id="7" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+          <node begin="3" conjtype="onder" end="4" id="7" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
           <node begin="4" cat="np" end="8" id="8" rel="body">
             <node begin="4" end="5" getal="mv" graad="basis" id="9" lemma="redacteur" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="redacteur" word="redacteuren"/>
             <node begin="5" cat="pp" end="8" id="10" rel="mod">

@@ -91,7 +91,7 @@
                         <node begin="47" buiging="met-e" end="48" graad="basis" id="74" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ander" word="andere"/>
                         <node begin="48" end="49" getal="mv" graad="basis" id="75" lemma="oorzaak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="oorzaak" word="oorzaken"/>
                         <node begin="49" cat="cp" end="53" id="76" rel="mod">
-                          <node begin="49" end="50" id="77" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+                          <node begin="49" conjtype="onder" end="50" id="77" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
                           <node begin="50" cat="conj" end="53" id="78" rel="body">
                             <node begin="50" end="51" getal="mv" graad="basis" id="79" lemma="ziekte" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="ziekte" word="ziekten"/>
                             <node begin="51" conjtype="neven" end="52" id="80" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>

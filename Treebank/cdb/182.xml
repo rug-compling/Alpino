@@ -28,7 +28,7 @@
         <node begin="9" end="10" id="20" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
         <node begin="10" buiging="zonder" end="11" id="21" lemma="op_vatten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="opvatten" word="opvatten" wvorm="inf"/>
         <node begin="11" cat="cp" end="30" id="22" rel="predc">
-          <node begin="11" end="12" id="23" lemma="als" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="als" vztype="init" word="als"/>
+          <node begin="11" conjtype="onder" end="12" id="23" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
           <node begin="12" cat="np" end="30" id="24" rel="body">
             <node begin="12" end="13" id="25" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
             <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="26" lemma="mededeling" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="mededeling" word="mededeling"/>
