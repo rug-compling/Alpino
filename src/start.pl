@@ -117,6 +117,8 @@ alpino_table_goal:unknown_predicate_handler(_,fail).
 :- initialize_flag(display_main_parts,on).
 :- initialize_flag(require_brackets_balanced,on).
 
+:- initialize_flag(compare_cgn,off).
+
 %% load additional files
 
 :- use_module(library(charsio)).
@@ -402,6 +404,7 @@ undefined_options :-
 test1_options :-
     set_flag(after_timeout_options,on),
     set_flag(end_hook,best_score),
+    set_flag(compare_cgn,on),
     veryfast_options.
 
 veryfast_options :-
@@ -450,6 +453,7 @@ no_heur_options:-
     set_flag(use_guides,off).
 
 testN_options :-
+    set_flag(compare_cgn,off),
     set_flag(after_timeout_options,off),
     set_flag(end_hook,best_score),
     set_flag(disambiguation,off),
@@ -932,6 +936,7 @@ result_hook(parse,_,o(Result,String,_),Flag) :-
     hdrug_flag(found_solutions,No),
     hdrug_flag(display_main_parts,DMP),
     hdrug_flag(display_quality,Q),
+    hdrug_flag(compare_cgn,CGN),
     construct_identifier(Key,No,Identifier),
     ignore_brackets(String,StringNoBrackets),
     (   Th==xml
@@ -1013,6 +1018,13 @@ result_hook(parse,_,o(Result,String,_),Flag) :-
     ->  alpino_treebank:format_dep_features(Result,Identifier)
     ;   true
     ),
+
+    (   CGN == on
+    ->  xml_filename(File,Key),
+	compare_treebank_cgn_result(File,Result,Key)
+    ;   true
+    ),
+
     (	DMP == on
     ->	display_main_parts(user_error,Tree),
 	nl(user_error)
@@ -2113,6 +2125,11 @@ compare_treebank_cgn :-
 hdrug_command(cc,compare_treebank_cgn(File,Obj),[Obj]) :-
     xml_filename(File).
 hdrug_command(cc,compare_treebank_cgn(File,1),[]) :-
+    xml_filename(File).
+
+hdrug_command(compare_cgn,compare_treebank_cgn(File,Obj),[Obj]) :-
+    xml_filename(File).
+hdrug_command(compare_cgn,compare_treebank_cgn(File,1),[]) :-
     xml_filename(File).
 
 hdrug_command(ncc,( next, compare_treebank_cgn ), []).
