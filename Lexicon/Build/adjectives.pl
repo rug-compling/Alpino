@@ -2736,6 +2736,9 @@ a([ge_both(afgesneden)],adv,[],[]).
 a([ge_e(afgespeelde),
    ge_no_e(afgespeeld)],adv,[],[]).
 
+a([ge_e(afgesplitste),
+   ge_no_e(afgesplitst)],adv,[],[]).
+
 a([ge_e(afgespoelde),
    ge_no_e(afgespoeld)],adv,[],[]).
 
@@ -4103,8 +4106,8 @@ a([ge_both(bedwongen)],adv,[],[]).
 a([ge_no_e(beëdigd),
    ge_e(beëdigde)],padv,[],[]).
 
-a([ende(beeldende),
-   end(beeldend)],adv,[],[]).
+a([e(beeldende),
+   no_e(beeldend)],adv,[],[]).
 
 a([e(beeldige),
    no_e(beeldig)],adv,[],[]).
@@ -28806,10 +28809,10 @@ a([e(optische),
    no_e(optisch)],adv,[],[]).
 
 a([stem(op_vallen),
-   e(opvallende),
+   ende(opvallende),
    er(opvallender),
    ere(opvallendere),
-   no_e(opvallend),
+   end(opvallend),
    st(opvallendst),
    ste(opvallendste)],adv,
   [subject_vp,
@@ -31930,10 +31933,10 @@ a([e(schimmige),
    st(schimmigst),
    ste(schimmigste)],adv,[],[]).  % ze handelden schimmig
 
-a([e(schitterende),
+a([ende(schitterende),
    er(schitterender),
    ere(schitterendere),
-   no_e(schitterend),
+   end(schitterend),
    st(schitterendst),
    ste(schitterendste)],adv,[subject_sbar,
                              subject_vp],[]).
@@ -40376,14 +40379,14 @@ a([e(zeldzame),
    st(zeldzaamst),
    ste(zeldzaamste)],adv,[],[]).
 
-a([e('zelf-bewuste'),
+a([no_e(zelfbewust),
+   e('zelf-bewuste'),
    e(zelfbewuste),
    er('zelf-bewuster'),
    er(zelfbewuster),
    ere('zelf-bewustere'),
    ere(zelfbewustere),
-   no_e('zelf-bewust'),
-   no_e(zelfbewust)],padv,[],[]).
+   no_e('zelf-bewust')],padv,[],[]).
 
 a([stof(zelfde)],nonadv,[],[]).
 
@@ -41198,6 +41201,7 @@ stem(afgesloten,v_root(sluit_af,af_sluiten)).
 stem(afgesneden,v_root(snijd_af,af_snijden)).
 stem(afgespeeld,v_root(speel_af,af_spelen)).
 stem(afgespoeld,v_root(spoel_af,af_spoelen)).
+stem(afgesplitst,v_root(splits_af,af_splitsen)).
 stem(afgesproken,v_root(spreek_af,af_spreken)).
 stem(afgesprongen,v_root(spring_af,af_springen)).
 stem(afgestaan,v_root(sta_af,af_staan)).
@@ -41548,7 +41552,6 @@ stem(bezongen,v_root(bezing,bezingen)).
 stem(bezonken,v_root(bezink,bezinken)).
 stem(bezonnen,v_root(bezin,bezinnen)).
 stem(bezopen,v_root(bezuip,bezuipen)).
-stem(bezorgd,v_root(bezorg,bezorgen)).
 stem(bezuinigd,v_root(bezuinig,bezuinigen)).
 stem(bezwaard,v_root(bezwaar,bezwaren)).
 stem(bezwangerd,v_root(bezwanger,bezwangeren)).
@@ -42783,7 +42786,6 @@ stem(geruit,v_root(ruit,ruiten)).
 stem(gerukt,v_root(ruk,rukken)).
 stem(gerund,v_root(run,runnen)).
 stem(gerustgesteld,v_root(stel_gerust,gerust_stellen)).
-stem(gerust,v_root(rust,rusten)).
 stem(gesaboteerd,v_root(saboteer,saboteren)).
 stem(gesanctioneerd,v_root(sanctioneer,sanctioneren)).
 stem(gesard,v_root(sar,sarren)).

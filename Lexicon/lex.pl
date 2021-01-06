@@ -3474,7 +3474,7 @@ abbreviation_b(theel,    theelepel).
 abbreviation_b(tl,       theelepel).
 abbreviation_b(theel,    theelepels).
 abbreviation_b(tl,       theelepels).
-abbreviation_b(blz,      bladzijden).
+abbreviation_b(blz,      bladzij).
 abbreviation_b(sec,      seconden).
 abbreviation_b(pnt,      punten).
 abbreviation_b('Inl',    inlichtingen).

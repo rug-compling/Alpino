@@ -3202,7 +3202,8 @@ pp(benedendeks,beneden).
 pp(benedenstrooms,beneden).
 pp(binnenshuis,binnen).
 pp(binnenskamers,binnen).
-pp([bij,deze]). pp([bij,dezen]).
+pp([bij,deze]).
+pp([bij,dezen]).
 pp(bovendeks,boven).
 pp(bovengronds,boven).
 pp(bovenstrooms,boven).
@@ -7390,9 +7391,9 @@ m(klein,nominalized_compar_adjective,kleineren).
 m(rijk, nominalized_compar_adjective,rijkeren).
 m(zwak, nominalized_compar_adjective,zwakkeren).
 
-m(achterst,nominalized_super_adjective,achtersten).
-m(laatst,  nominalized_super_adjective,laatsten).
-m(liefst,  nominalized_super_adjective,liefsten).
+m(achter,nominalized_super_adjective,achtersten).
+m(laat,  nominalized_super_adjective,laatsten).
+m(lief,  nominalized_super_adjective,liefsten).
 
 %% plural only, because singular is an adjective, and hence can be
 %% treated in syntax:
@@ -7408,7 +7409,7 @@ nominalized_adjective(aanwezig,aanwezigen).
 nominalized_adjective(achterlijk,achterlijken).
 nominalized_adjective(afleiden,afgeleiden).
 nominalized_adjective(afwezig,afwezigen).
-nominalized_adjective(afstuderen,afgestudeerden).
+nominalized_adjective(af_studeren,afgestudeerden).
 nominalized_adjective(alleenstaand,alleenstaanden).
 nominalized_adjective(anders_denken,andersdenkenden).
 nominalized_adjective(arbeidsongeschikt,arbeidsongeschikten).
