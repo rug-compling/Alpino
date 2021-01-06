@@ -138,97 +138,96 @@ ignore(['<','!','INDEX','!','>']).
 ignore(['bèta','compleet']).
 
 lexical_analysisXX(Input) :-
-    ignore(Input),
-    !,
-    hdrug_flag(debug,Debug),
-    time(Debug,lexical_analysis_cleanup).
-
-lexical_analysisXX(Input) :-
     set_thread_flag(current_input_sentence,Input),
     set_thread_flag(current_lexical_analysis_values,none),
     hdrug_flag(debug,Debug),
     hdrug_flag(unknowns,Unk),
     time(Debug,lexical_analysis_cleanup),
 
-    add_word_forms(Input),
-    length(Input,Length),
-    MaxPos is Length-1,
+    (   ignore(Input)
+    ->  true
+    ;   
 
+	add_word_forms(Input),
+	length(Input,Length),
+	MaxPos is Length-1,
+	
     %% add tags for words that are in the lexicon:
+	
+	time(Debug,
+	     lexical_analysis(Input,0,P,0,R,UnbracketedInput,0,[])),
 
-    time(Debug,
-        lexical_analysis(Input,0,P,0,R,UnbracketedInput,0,[])),
+	time(Debug,filter_enumeration_tags),
 
-    time(Debug,filter_enumeration_tags),
+	%%    time(Debug,assert_cgn_tags(R)),
 
-    %%    time(Debug,assert_cgn_tags(R)),
-
-    (   Unk == on
-    ->  time(Debug,guess_names(Input)), % unknowns.pl
-        time(Debug,guess_slash_pairs),  % unknowns.pl
-	time(Debug,guess_eng_compounds(Input))
-    ;   true
-    ),
-    time(Debug,enforce_unique_match),
-    time(Debug,enforce_longest_match(UnbracketedInput,0,P)),
-    %% add tags for unknown words:
-    (   Unk == on
-    ->  time(Debug,guess_unknowns(Input,MaxPos)),
-        time(Debug,guess_english_compounds),
-        time(Debug,add_quoted_names(Input,0,P,0,R))
-    ;   true
-    ),
-    count_edges(tag(_,_,_,_,_,_,_,_),Edges0),
-    hdrug_flag(filter_lexical_analysis,Filter),
-    hdrug_flag(interactive_lexical_analysis,Interactive),
-
-    add_user_skips,
-
-    time(2,filter_tags(Filter)),
-
-    time(Debug,ensure_connected(Input,MaxPos)), % adds pseudo tags, useful for skipper
-    time(Debug,skips),
-    time(Debug,filter_te_tags),
-    time(Debug,replace_per_tags),
-    time(Debug,ensure_connected(Input,MaxPos)), % adds pseudo tags, useful for tagger
-    count_edges(tag(_,_,_,_,_,_,_,_),Edges),
-
-    time(Debug,alpino_postagger:pos_filter(UnbracketedInput,EraseTags0,RefTags)),
-    sort(EraseTags0,EraseTags), % remove duplicates tagger/cgn
-    filter_interactively(Interactive,Input,UnbracketedInput,
-			 EraseTags,ErasedTags),
-    restore_alternatives_to_unknown(ErasedTags,MaxPos,UnbracketedInput),
-    count_edges(tag(_,_,_,_,_,_,_,_),VEdges),
-    (	VEdges < Edges
-    ->	time(2,filter_tags(Filter))
-    ;	true
-    ),
-    count_edges(tag(_,_,_,_,_,_,_,_),VVEdges),
-    time(Debug,check_connected(Input,MaxPos,ErasedTags,Filter)),
-
-    alpino_unknowns:retract_wikipedia_list,
-
-    %% some tags are removed, so we re-do filter_tags
-    %% example: Een storm van beschuldigingen aan het adres van Weinreb
-    %%                brak los (pos_tager=on)
-    count_edges(tag(_,_,_,_,_,_,_,_),VVVEdges),
-    (	VVVEdges < VVEdges
-    ->	time(2,filter_tags(Filter))
-    ;	true
-    ),
-    count_edges(tag(_,_,_,_,_,_,_,_),VVVVEdges),
-
-    add_score_refs(RefTags),
-
-    %% create full signs for each of the remaining tags:
-    time(Debug,create_syn_lex_analysis),
-
-    %% communicate debug values to call_cleanup above,
-    %% sometimes goes wrong otherwise, presumably due to
-    %% bug in SICStus?
-    set_thread_flag(current_lexical_analysis_values,f(R,Edges0,Edges,VEdges,VVEdges,VVVVEdges)),
-    %% same for the cut, I don't get it...
-    !.
+	(   Unk == on
+	->  time(Debug,guess_names(Input)), % unknowns.pl
+	    time(Debug,guess_slash_pairs),  % unknowns.pl
+	    time(Debug,guess_eng_compounds(Input))
+	;   true
+	),
+	time(Debug,enforce_unique_match),
+	time(Debug,enforce_longest_match(UnbracketedInput,0,P)),
+	%% add tags for unknown words:
+	(   Unk == on
+	->  time(Debug,guess_unknowns(Input,MaxPos)),
+	    time(Debug,guess_english_compounds),
+	    time(Debug,add_quoted_names(Input,0,P,0,R))
+	;   true
+	),
+	count_edges(tag(_,_,_,_,_,_,_,_),Edges0),
+	hdrug_flag(filter_lexical_analysis,Filter),
+	hdrug_flag(interactive_lexical_analysis,Interactive),
+	
+	add_user_skips,
+	
+	time(2,filter_tags(Filter)),
+	
+	time(Debug,ensure_connected(Input,MaxPos)), % adds pseudo tags, useful for skipper
+	time(Debug,skips),
+	time(Debug,filter_te_tags),
+	time(Debug,replace_per_tags),
+	time(Debug,ensure_connected(Input,MaxPos)), % adds pseudo tags, useful for tagger
+	count_edges(tag(_,_,_,_,_,_,_,_),Edges),
+	
+	time(Debug,alpino_postagger:pos_filter(UnbracketedInput,EraseTags0,RefTags)),
+	sort(EraseTags0,EraseTags), % remove duplicates tagger/cgn
+	filter_interactively(Interactive,Input,UnbracketedInput,
+			     EraseTags,ErasedTags),
+	restore_alternatives_to_unknown(ErasedTags,MaxPos,UnbracketedInput),
+	count_edges(tag(_,_,_,_,_,_,_,_),VEdges),
+	(	VEdges < Edges
+	->	time(2,filter_tags(Filter))
+	;	true
+	),
+	count_edges(tag(_,_,_,_,_,_,_,_),VVEdges),
+	time(Debug,check_connected(Input,MaxPos,ErasedTags,Filter)),
+	
+	alpino_unknowns:retract_wikipedia_list,
+	
+	%% some tags are removed, so we re-do filter_tags
+	%% example: Een storm van beschuldigingen aan het adres van Weinreb
+	%%                brak los (pos_tager=on)
+	count_edges(tag(_,_,_,_,_,_,_,_),VVVEdges),
+	(	VVVEdges < VVEdges
+	->	time(2,filter_tags(Filter))
+	;	true
+	),
+	count_edges(tag(_,_,_,_,_,_,_,_),VVVVEdges),
+	
+	add_score_refs(RefTags),
+	
+	%% create full signs for each of the remaining tags:
+	time(Debug,create_syn_lex_analysis),
+	
+	%% communicate debug values to call_cleanup above,
+	%% sometimes goes wrong otherwise, presumably due to
+	%% bug in SICStus?
+	set_thread_flag(current_lexical_analysis_values,f(R,Edges0,Edges,VEdges,VVEdges,VVVVEdges)),
+	%% same for the cut, I don't get it...
+	!
+    ).
 
 %% do lexicon lookup for each of the words in the input
 lexical_analysis([],P,P,R,R,[],BracketCounter,_LC) :-
