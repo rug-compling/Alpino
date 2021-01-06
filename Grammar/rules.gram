@@ -5465,6 +5465,7 @@ grammar_rule(n_n_mod_a, NP, [ N, MOD ]) :-
     unify_except(MOD0,MOD,adv),
     n_post_mod_structure(N,MOD,NP),
     N:rightm => no,
+    N:subn => ~sub_num,
 %%    NP:rightm => yes,  'kleding bestemd voor Polen uit de achterse wagen ..'
     MOD:adv => ~oadv & ~detadv,
     MOD:tmploc => ~wk_er & ~str_er & ~tmp & ~tmp_n & ~ld_dir & ~me, % use np_np_tmp in those cases
