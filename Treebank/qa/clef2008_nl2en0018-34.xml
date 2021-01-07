@@ -1,1 +1,29 @@
-../clef2008/nl2en0018-34.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="sv1" end="8" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="noemen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="noem" word="Noem" wvorm="pv"/>
+      <node begin="1" cat="np" end="8" id="3" rel="obj1">
+        <node begin="1" end="2" id="4" lemma="twee" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twee" word="twee"/>
+        <node begin="2" end="3" getal="mv" graad="basis" id="5" lemma="instrument" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="instrument" word="instrumenten"/>
+        <node begin="3" cat="rel" end="8" id="6" rel="mod">
+          <node begin="3" end="4" getal="getal" id="7" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
+          <node begin="3" cat="ssub" end="8" id="8" rel="body">
+            <node begin="3" end="4" id="9" index="1" rel="su"/>
+            <node begin="6" end="7" id="10" lemma="worden" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="word" word="worden" wvorm="pv"/>
+            <node begin="3" cat="ppart" end="8" id="11" rel="vc">
+              <node begin="3" end="4" id="12" index="1" rel="obj1"/>
+              <node begin="4" cat="pp" end="6" id="13" rel="mod">
+                <node begin="4" end="5" id="14" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+                <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="15" lemma="Emerson" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Emerson" word="Emerson"/>
+              </node>
+              <node begin="7" buiging="zonder" end="8" id="16" lemma="bespelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="bespeel" word="bespeeld" wvorm="vd"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="17" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Noem twee instrumenten die door Emerson worden bespeeld .</sentence>
+</alpino_ds>

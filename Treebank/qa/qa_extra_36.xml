@@ -1,1 +1,22 @@
-../qa_extra/36.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welke"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="sport" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sport" word="sport"/>
+      </node>
+      <node begin="0" cat="sv1" end="6" id="5" rel="body">
+        <node begin="0" end="2" id="6" index="1" rel="obj1"/>
+        <node begin="2" end="3" id="7" lemma="beoefenen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="beoefen" word="beoefent" wvorm="pv"/>
+        <node begin="3" cat="mwu" end="6" id="8" rel="su">
+          <node begin="3" end="4" id="9" lemma="Ida" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ida" spectype="deeleigen" word="Ida"/>
+          <node begin="4" end="5" id="10" lemma="van" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+          <node begin="5" end="6" id="11" lemma="Noord" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Noord" spectype="deeleigen" word="Noord"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke sport beoefent Ida van Noord ?</sentence>
+</alpino_ds>

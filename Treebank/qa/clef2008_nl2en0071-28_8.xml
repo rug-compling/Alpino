@@ -1,1 +1,46 @@
-../clef2008/nl2en0071-28_8.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="25" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="19" end="20" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="whq" end="24" id="3" rel="--">
+      <node begin="0" end="1" id="4" index="1" lemma="wanneer" pos="adv" postag="BW()" pt="bw" rel="whd" root="wanneer" word="Wanneer"/>
+      <node begin="0" cat="sv1" end="24" id="5" rel="body">
+        <node begin="0" end="1" id="6" index="1" rel="mod"/>
+        <node begin="1" end="2" id="7" lemma="geven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="geef" word="gaf" wvorm="pv"/>
+        <node begin="2" end="3" genus="masc" getal="ev" id="8" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+        <node begin="3" cat="np" end="19" id="9" rel="obj1">
+          <node begin="3" end="4" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="lezing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="lezing" word="lezing"/>
+          <node begin="6" cat="mwu" end="19" id="12" rel="app">
+            <node begin="6" end="7" id="13" lemma="Structure" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Structure" spectype="deeleigen" word="Structure"/>
+            <node begin="7" end="8" id="14" lemma="," pos="name" postag="LET()" pt="let" rel="mwp" root="," word=","/>
+            <node begin="8" end="9" id="15" lemma="Sign" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Sign" spectype="vreemd" word="Sign"/>
+            <node begin="9" end="10" id="16" lemma="," pos="name" postag="LET()" pt="let" rel="mwp" root="," word=","/>
+            <node begin="10" end="11" id="17" lemma="and" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="and" spectype="vreemd" word="and"/>
+            <node begin="11" end="12" id="18" lemma="Play" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Play" spectype="vreemd" word="Play"/>
+            <node begin="12" end="13" id="19" lemma="in" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="in" spectype="vreemd" word="in"/>
+            <node begin="13" end="14" id="20" lemma="the" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="the" spectype="vreemd" word="the"/>
+            <node begin="14" end="15" id="21" lemma="Discourse" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Discourse" spectype="vreemd" word="Discourse"/>
+            <node begin="15" end="16" id="22" lemma="of" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="of" spectype="vreemd" word="of"/>
+            <node begin="16" end="17" id="23" lemma="the" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="the" spectype="vreemd" word="the"/>
+            <node begin="17" end="18" id="24" lemma="Human" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Human" spectype="deeleigen" word="Human"/>
+            <node begin="18" end="19" id="25" lemma="Sciences" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Sciences" spectype="deeleigen" word="Sciences"/>
+          </node>
+        </node>
+        <node begin="20" cat="pp" end="24" id="26" rel="obj2">
+          <node begin="20" end="21" id="27" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+          <node begin="21" cat="np" end="24" id="28" rel="obj1">
+            <node begin="21" end="22" id="29" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="22" cat="mwu" end="24" id="30" rel="hd">
+              <node begin="22" end="23" id="31" lemma="Johns" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Johns" spectype="deeleigen" word="Johns"/>
+              <node begin="23" end="24" id="32" lemma="Hopkinsuniversiteit" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hopkinsuniversiteit" spectype="deeleigen" word="Hopkinsuniversiteit"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="24" end="25" id="33" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wanneer gaf hij de lezing &quot; Structure , Sign , and Play in the Discourse of the Human Sciences &quot; aan de Johns Hopkinsuniversiteit ?</sentence>
+</alpino_ds>

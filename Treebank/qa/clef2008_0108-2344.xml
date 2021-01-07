@@ -1,1 +1,25 @@
-../clef2008/0108-2344.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="3" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welke"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="bier" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="bier" word="bieren"/>
+      </node>
+      <node begin="0" cat="sv1" end="6" id="5" rel="body">
+        <node begin="0" end="2" id="6" index="1" rel="su"/>
+        <node begin="2" end="3" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+        <node begin="0" cat="ppart" end="6" id="8" rel="vc">
+          <node begin="0" end="2" id="9" index="1" rel="obj1"/>
+          <node begin="3" buiging="zonder" end="4" id="10" lemma="erkennen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="erken" word="erkend" wvorm="vd"/>
+          <node begin="4" cat="cp" end="6" id="11" rel="predc">
+            <node begin="4" conjtype="onder" end="5" id="12" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="13" lemma="trappistenbier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" root="trappistenbier" word="trappistenbier"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="14" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welke bieren zijn erkend als trappistenbier ?</sentence>
+</alpino_ds>

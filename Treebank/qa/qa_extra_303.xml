@@ -1,1 +1,24 @@
-../qa_extra/303.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="wanneer" pos="adv" postag="BW()" pt="bw" rel="whd" root="wanneer" word="Wanneer"/>
+      <node begin="0" cat="sv1" end="7" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="2" cat="mwu" end="6" id="5" index="2" rel="su">
+          <node begin="2" end="3" id="6" lemma="Henk" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Henk" spectype="deeleigen" word="Henk"/>
+          <node begin="3" end="4" id="7" lemma="van" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
+          <node begin="4" end="5" id="8" lemma="der" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="der" spectype="deeleigen" word="der"/>
+          <node begin="5" end="6" id="9" lemma="Steen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Steen" spectype="deeleigen" word="Steen"/>
+        </node>
+        <node begin="0" cat="ppart" end="7" id="10" rel="vc">
+          <node begin="0" end="1" id="11" index="1" rel="mod"/>
+          <node begin="2" end="6" id="12" index="2" rel="obj1"/>
+          <node begin="6" buiging="zonder" end="7" id="13" lemma="geboren" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="geboren" word="geboren" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="14" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wanneer is Henk van der Steen geboren ?</sentence>
+</alpino_ds>

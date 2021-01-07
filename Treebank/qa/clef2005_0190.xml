@@ -1,1 +1,28 @@
-../clef2005/0190.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="whq" end="8" id="1" rel="--">
+      <node begin="0" cat="ap" end="2" id="2" index="1" rel="whd">
+        <node begin="0" end="1" id="3" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="mod" root="hoe" word="Hoe"/>
+        <node begin="1" buiging="zonder" end="2" graad="basis" id="4" lemma="oud" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="oud" word="oud"/>
+      </node>
+      <node begin="0" cat="sv1" end="8" id="5" rel="body">
+        <node begin="0" end="2" id="6" index="1" rel="predc"/>
+        <node begin="2" end="3" id="7" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        <node begin="3" cat="mwu" end="5" id="8" rel="su">
+          <node begin="3" end="4" id="9" lemma="Manfred" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Manfred" spectype="deeleigen" word="Manfred"/>
+          <node begin="4" end="5" id="10" lemma="Donike" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Donike" spectype="deeleigen" word="Donike"/>
+        </node>
+        <node begin="5" cat="cp" end="8" id="11" rel="mod">
+          <node begin="5" conjtype="onder" end="6" id="12" lemma="toen" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="toen" word="toen"/>
+          <node begin="6" cat="ssub" end="8" id="13" rel="body">
+            <node begin="6" end="7" genus="masc" getal="ev" id="14" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
+            <node begin="7" end="8" id="15" lemma="sterven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="sterf" word="stierf" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="16" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe oud was Manfred Donike toen hij stierf ?</sentence>
+</alpino_ds>

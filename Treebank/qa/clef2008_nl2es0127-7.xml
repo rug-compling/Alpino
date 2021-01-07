@@ -1,1 +1,33 @@
-../clef2008/nl2es0127-7.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="whq" end="11" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" index="1" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="whd" root="wie" status="vol" vwtype="vb" word="Wie"/>
+      <node begin="0" cat="sv1" end="11" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="su"/>
+        <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        <node begin="2" cat="np" end="5" id="6" rel="predc">
+          <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" buiging="met-e" end="4" graad="basis" id="8" lemma="Amerikaans" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Amerikaans" word="Amerikaanse"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="president" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="president" word="president"/>
+        </node>
+        <node begin="5" cat="pp" end="11" id="10" rel="mod">
+          <node begin="5" end="6" id="11" lemma="tijdens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tijdens" vztype="init" word="tijdens"/>
+          <node begin="6" cat="np" end="11" id="12" rel="obj1">
+            <node begin="6" end="7" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="14" lemma="aanval" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aanval" word="aanval"/>
+            <node begin="8" cat="pp" end="11" id="15" rel="mod">
+              <node begin="8" end="9" id="16" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+              <node begin="9" cat="mwu" end="11" id="17" rel="obj1">
+                <node begin="9" end="10" id="18" lemma="Pearl" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Pearl" spectype="deeleigen" word="Pearl"/>
+                <node begin="10" end="11" id="19" lemma="Harbor" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Harbor" spectype="deeleigen" word="Harbor"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="20" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wie was de Amerikaanse president tijdens de aanval op Pearl Harbor ?</sentence>
+</alpino_ds>

@@ -1,1 +1,18 @@
-../clef2005/0046.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="whq" end="4" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" index="1" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="whd" root="wie" status="vol" vwtype="vb" word="Wie"/>
+      <node begin="0" cat="sv1" end="4" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="predc"/>
+        <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="2" cat="mwu" end="4" id="6" rel="su">
+          <node begin="2" end="3" id="7" lemma="Yoko" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Yoko" spectype="deeleigen" word="Yoko"/>
+          <node begin="3" end="4" id="8" lemma="Ono" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ono" spectype="deeleigen" word="Ono"/>
+        </node>
+      </node>
+    </node>
+    <node begin="4" end="5" id="9" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wie is Yoko Ono ?</sentence>
+</alpino_ds>

@@ -1,1 +1,23 @@
-../clef2004/1024.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="whd" root="waar" status="vol" vwtype="vb" word="Waar"/>
+      <node begin="0" cat="sv1" end="7" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="ld"/>
+        <node begin="1" end="2" id="5" lemma="plaats_vinden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="vind_plaats" word="vond" wvorm="pv"/>
+        <node begin="2" cat="np" end="6" id="6" rel="su">
+          <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" cat="mwu" end="6" id="8" rel="hd">
+            <node begin="3" end="4" id="9" lemma="International" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="International" spectype="deeleigen" word="International"/>
+            <node begin="4" end="5" id="10" lemma="Air" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Air" spectype="deeleigen" word="Air"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="show" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Show" word="Show"/>
+          </node>
+        </node>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="plaats" naamval="stan" ntype="soort" pos="part" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="svp" root="plaats" word="plaats"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Waar vond de International Air Show plaats ?</sentence>
+</alpino_ds>

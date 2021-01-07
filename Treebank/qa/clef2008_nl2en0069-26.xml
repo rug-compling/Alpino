@@ -1,1 +1,22 @@
-../clef2008/nl2en0069-26.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="whd" root="waar" status="vol" vwtype="vb" word="Waar"/>
+      <node begin="0" cat="sv1" end="6" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="mod"/>
+        <node begin="1" end="2" id="5" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+        <node begin="2" cat="mwu" end="4" id="6" rel="su">
+          <node begin="2" end="3" id="7" lemma="Martin" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Martin" spectype="deeleigen" word="Martin"/>
+          <node begin="3" end="4" id="8" lemma="Heidegger" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Heidegger" spectype="deeleigen" word="Heidegger"/>
+        </node>
+        <node begin="4" cat="np" end="6" id="9" rel="predc">
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="hoogleraar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hoogleraar" word="hoogleraar"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="filosofie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="app" root="filosofie" word="filosofie"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Waar werd Martin Heidegger hoogleraar filosofie ?</sentence>
+</alpino_ds>

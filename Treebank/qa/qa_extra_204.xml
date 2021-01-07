@@ -1,1 +1,22 @@
-../qa_extra/204.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" cat="sv1" end="6" id="2" rel="body">
+        <node begin="2" end="3" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+        <node begin="3" end="4" getal="getal" id="4" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+        <node begin="0" cat="np" end="6" id="5" index="1" rel="su">
+          <node begin="0" end="1" id="6" lemma="hoeveel" naamval="stan" numtype="hoofd" pos="adj" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="hoeveel" word="Hoeveel"/>
+          <node begin="1" end="2" getal="mv" graad="basis" id="7" lemma="seizoen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="seizoen" word="seizoenen"/>
+          <node begin="4" cat="pp" end="6" id="8" rel="mod">
+            <node begin="4" end="5" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="10" lemma="House" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="House" word="House"/>
+          </node>
+        </node>
+      </node>
+      <node begin="0" end="6" id="11" index="1" rel="whd"/>
+    </node>
+    <node begin="6" end="7" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoeveel seizoenen zijn er van House ?</sentence>
+</alpino_ds>

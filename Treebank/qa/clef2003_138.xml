@@ -1,1 +1,27 @@
-../clef2003/138.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" cat="pp" end="3" id="2" index="1" rel="whd">
+        <node begin="0" end="1" id="3" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+        <node begin="1" cat="np" end="3" id="4" rel="obj1">
+          <node begin="1" buiging="met-e" end="2" id="5" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welke" vwtype="vb" word="welke"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="stad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stad" word="stad"/>
+        </node>
+      </node>
+      <node begin="0" cat="sv1" end="7" id="7" rel="body">
+        <node begin="0" end="3" id="8" index="1" rel="ld"/>
+        <node begin="3" end="4" id="9" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="4" cat="np" end="7" id="10" rel="su">
+          <node begin="4" end="5" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="5" cat="mwu" end="7" id="12" rel="hd">
+            <node begin="5" end="6" id="13" lemma="Delle" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Delle" spectype="deeleigen" word="Delle"/>
+            <node begin="6" end="7" id="14" lemma="Alpi-stadion" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Alpi-stadion" spectype="deeleigen" word="Alpi-stadion"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="15" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>In welke stad is het Delle Alpi-stadion ?</sentence>
+</alpino_ds>

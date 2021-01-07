@@ -1,1 +1,45 @@
-../clef2006/0115.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="0" cat="whq" end="15" id="1" rel="--">
+      <node begin="0" cat="pp" end="3" id="2" index="1" rel="whd">
+        <node begin="0" end="1" id="3" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+        <node begin="1" cat="np" end="3" id="4" rel="obj1">
+          <node begin="1" buiging="zonder" end="2" id="5" lemma="welk" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="welk" vwtype="vb" word="welk"/>
+          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="6" lemma="land" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="land" word="land"/>
+        </node>
+      </node>
+      <node begin="0" cat="sv1" end="15" id="7" rel="body">
+        <node begin="0" end="3" id="8" index="1" rel="mod"/>
+        <node begin="3" end="4" id="9" lemma="slapen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="slaap" word="slapen" wvorm="pv"/>
+        <node begin="4" cat="pp" end="7" id="10" rel="mod">
+          <node begin="4" end="5" id="11" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="volgens"/>
+          <node begin="5" cat="mwu" end="7" id="12" rel="obj1">
+            <node begin="5" end="6" id="13" lemma="Pippi" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Pippi" spectype="deeleigen" word="Pippi"/>
+            <node begin="6" end="7" id="14" lemma="Langkous" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Langkous" spectype="deeleigen" word="Langkous"/>
+          </node>
+        </node>
+        <node begin="7" cat="np" end="9" id="15" rel="su">
+          <node begin="7" buiging="met-e" end="8" id="16" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="alle" vwtype="onbep" word="alle"/>
+          <node begin="8" end="9" getal="mv" graad="basis" id="17" lemma="mens" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="mens" word="mensen"/>
+        </node>
+        <node begin="9" cat="pp" end="15" id="18" rel="mod">
+          <node begin="9" end="10" id="19" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
+          <node begin="10" cat="np" end="12" id="20" rel="obj1">
+            <node begin="10" buiging="zonder" end="11" getal="mv" id="21" lemma="hun" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)" pt="vnw" rel="det" root="hun" status="vol" vwtype="bez" word="hun"/>
+            <node begin="11" end="12" getal="mv" graad="basis" id="22" lemma="voet" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="voet" word="voeten"/>
+          </node>
+          <node begin="12" cat="pp" end="15" id="23" rel="mod">
+            <node begin="12" end="13" id="24" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="13" cat="np" end="15" id="25" rel="obj1">
+              <node begin="13" end="14" id="26" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+              <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="27" lemma="hoofdkussen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="hoofdkussen" word="hoofdkussen"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="28" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>In welk land slapen volgens Pippi Langkous alle mensen met hun voeten op het hoofdkussen ?</sentence>
+</alpino_ds>

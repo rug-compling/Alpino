@@ -1,1 +1,25 @@
-../qa_extra/482.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="whd">
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="welk" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welk"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="volk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="volk" word="volk"/>
+      </node>
+      <node begin="0" cat="sv1" end="6" id="5" rel="body">
+        <node begin="0" end="2" id="6" index="1" rel="su"/>
+        <node begin="2" end="3" id="7" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+        <node begin="0" cat="ppart" end="6" id="8" rel="vc">
+          <node begin="0" end="2" id="9" index="1" rel="obj1"/>
+          <node begin="3" buiging="zonder" end="4" id="10" lemma="leiden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leid" word="geleid" wvorm="vd"/>
+          <node begin="4" cat="pp" end="6" id="11" rel="mod">
+            <node begin="4" end="5" id="12" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="13" lemma="montezuma" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="montezuma" word="montezuma"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="14" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welk volk werd geleid door montezuma ?</sentence>
+</alpino_ds>

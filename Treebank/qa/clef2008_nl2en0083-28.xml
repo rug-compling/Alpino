@@ -1,1 +1,22 @@
-../clef2008/nl2en0083-28.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="4" id="2" index="1" rel="whd">
+        <node begin="0" end="1" id="3" lemma="hoeveel" naamval="stan" numtype="hoofd" pos="adj" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="hoeveel" word="Hoeveel"/>
+        <node begin="1" cat="mwu" end="4" id="4" rel="hd">
+          <node begin="1" end="2" id="5" lemma="Jeu" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Jeu" spectype="deeleigen" word="Jeu"/>
+          <node begin="2" end="3" id="6" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+          <node begin="3" end="4" getal="mv" graad="basis" id="7" lemma="paumevelen" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Paumevelden" word="Paumevelden"/>
+        </node>
+      </node>
+      <node begin="0" cat="sv1" end="6" id="8" rel="body">
+        <node begin="0" end="4" id="9" index="1" rel="su"/>
+        <node begin="4" end="5" id="10" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+        <node begin="5" end="6" getal="getal" id="11" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="er"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoeveel Jeu de Paumevelden zijn er ?</sentence>
+</alpino_ds>

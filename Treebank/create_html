@@ -20,8 +20,8 @@ The svg format (packaged here in an xhtml file) is supported by decent browsers 
 as Firefox. It is not supported by Internet Explorer.
 ";
 print "<p><a href=\"index.pdf\">Single pdf file with all dependency structures</a><p>\n";
-print "<p><a href=\"xmls.tar.gz\">Single tar file with all xml files</a><p>\n";
-print "<p><a href=\"../$opt_s.dact\">Dact file for this corpus</a><p>\n";
+# print "<p><a href=\"xmls.tar.gz\">Single tar file with all xml files</a><p>\n";
+# print "<p><a href=\"../$opt_s.dact\">Dact file for this corpus</a><p>\n";
 
 while (<>) {
   chomp;

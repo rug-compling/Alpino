@@ -1,1 +1,30 @@
-../clef2004/1041.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="11" id="0" rel="top">
+    <node begin="0" cat="whq" end="10" id="1" rel="--">
+      <node begin="0" cat="np" end="6" id="2" index="1" rel="whd">
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="welk" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welk"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="percentage" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="percentage" word="percentage"/>
+        <node begin="2" cat="pp" end="6" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="3" cat="np" end="6" id="7" rel="obj1">
+            <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" buiging="met-e" end="5" graad="basis" id="9" lemma="Amerikaans" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Amerikaans" word="Amerikaanse"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="bevolking" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bevolking" word="bevolking"/>
+          </node>
+        </node>
+      </node>
+      <node begin="0" cat="sv1" end="10" id="11" rel="body">
+        <node begin="0" end="6" id="12" index="1" rel="su"/>
+        <node begin="6" end="7" id="13" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        <node begin="7" cat="advp" end="9" id="14" rel="mod">
+          <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="15" lemma="eind" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="eind" word="eind"/>
+          <node begin="8" end="9" id="16" lemma="1994" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mod" root="1994" word="1994"/>
+        </node>
+        <node begin="9" buiging="zonder" end="10" graad="basis" id="17" lemma="werkloos" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="werkloos" word="werkloos"/>
+      </node>
+    </node>
+    <node begin="10" end="11" id="18" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welk percentage van de Amerikaanse bevolking was eind 1994 werkloos ?</sentence>
+</alpino_ds>

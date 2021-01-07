@@ -1,1 +1,19 @@
-../clef2008/nl2es0095-28.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="whq" end="5" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoeveel" numtype="hoofd" pos="adj" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="whd" root="hoeveel" word="Hoeveel"/>
+      <node begin="0" cat="sv1" end="5" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="me"/>
+        <node begin="1" end="2" id="5" lemma="kosten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kost" word="kostte" wvorm="pv"/>
+        <node begin="2" cat="np" end="5" id="6" rel="su">
+          <node begin="2" end="3" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="3" buiging="met-e" end="4" graad="sup" id="8" lemma="laat" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="laat" word="laatste"/>
+          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="9" lemma="stuk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="stuk" word="stuk"/>
+        </node>
+      </node>
+    </node>
+    <node begin="5" end="6" id="10" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoeveel kostte het laatste stuk ?</sentence>
+</alpino_ds>

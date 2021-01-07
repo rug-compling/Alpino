@@ -86,7 +86,7 @@ index.tex:  $(files:%=%.pdf)
 xmls.tar.gz: $(files:%=%.xml)
 	tar czf xmls.tar.gz -h $(files:%=%.xml)
 
-index.html: $(files:%=%.xml) $(files:%=%.svg) $(files:%=%.pdf) xmls.tar.gz $(thisdir)/create_html index.pdf
+index.html: $(files:%=%.xml) $(files:%=%.svg) $(files:%=%.pdf) $(thisdir)/create_html index.pdf
 	dtxslt --stylesheet $(ttdir)/stylesheets/dt2sent_with_file.xsl $(files:%=%.xml)\
               | grep [.]| sed -e 's/[.]xml//g' |\
          $(thisdir)/create_html -s $(suite) -c $(css) > index.html
