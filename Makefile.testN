@@ -55,7 +55,7 @@ dpc-rou_testN_options=suite_shortest_first=on -flag treebank ../Treebank/dpc
 cgn_exs_testN_options="number_analyses=5000"
 ovistrain_testN_options=-flag treebank ../Treebank/ovis
 oviswg_testN_options=-flag treebank ../Treebank/ovis
-wpspel_annot_testN_options=-flag treebank ../Treebank/wpspel
+wpspel_testN_options=-flag treebank ../Treebank/wpspel
 
 job := job${shell echo $$$$}
 
@@ -220,9 +220,10 @@ hpctests:
 	$(MAKE) job HPCTARGET=testN suite=PPI
 	$(MAKE) job HPCTARGET=testN suite=dpc-ind
 	$(MAKE) job HPCTARGET=testN suite=dpc-rou
-	$(MAKE) job HPCTARGET=testN suite=wpspel_annot
+	$(MAKE) job HPCTARGET=testN suite=wpspel
 
 tests: t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 t16 t17 t18
+shorts: t9 t1 t2 t3 t4 t5 t6 t7 t8 t16 t18 
 
 t1:
 	$(MAKE) testN suite=i_suite
@@ -251,7 +252,7 @@ t12:
 t13:
 	$(MAKE) testN suite=dpc-rou
 t14:
-	$(MAKE) testN suite=wpspel_annot
+	$(MAKE) testN suite=wpspel
 t15:
 	$(MAKE) testN suite=LassySmall
 t16:
