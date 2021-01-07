@@ -1,1 +1,26 @@
-../clef2003/289.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="whq" end="8" id="1" rel="--">
+      <node begin="0" cat="sv1" end="8" id="2" rel="body">
+        <node begin="2" end="3" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="3" cat="np" end="6" id="4" rel="su">
+          <node begin="3" end="4" id="5" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="6" lemma="iberisch" pos="name" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="Iberisch" word="Iberisch"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="7" lemma="schiereiland" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="schiereiland" word="schiereiland"/>
+        </node>
+        <node begin="0" cat="ap" end="8" id="8" index="1" rel="predc">
+          <node begin="0" end="1" id="9" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="mod" root="hoe" word="Hoe"/>
+          <node begin="1" buiging="zonder" end="2" graad="basis" id="10" lemma="ver" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="ver" word="ver"/>
+          <node begin="6" cat="pp" end="8" id="11" rel="pc">
+            <node begin="6" end="7" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="13" lemma="Afrika" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Afrika" word="Afrika"/>
+          </node>
+        </node>
+      </node>
+      <node begin="0" end="8" id="14" index="1" rel="whd"/>
+    </node>
+    <node begin="8" end="9" id="15" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe ver is het Iberisch schiereiland van Afrika ?</sentence>
+</alpino_ds>

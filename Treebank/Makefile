@@ -6,14 +6,15 @@ endif
 
 default:
 
-all: trees_doc prepare_enhanced_all enhanced_all dact poslemma mwu
+all: prepare_enhanced_all enhanced_all dact poslemma mwu trees_doc
 
-DIRECTORIES=$(TREEBANKS)
+DIRECTORIES=cgn_exs eans extra g_suite h_suite i_suite leuven_yellow_pages lot_test_suite1 \
+             ntv-suite qa wpspel novelsample_corrected cdb
 
 trees_doc:
 	for dir in $(DIRECTORIES); do\
-                   ( cd $$dir ;\
-                     echo $$dir;\
+                   ( cd Enhanced/$$dir ;\
+                     echo Enhanced/$$dir;\
                      $(MAKE) --no-print-directory -j 30 doc );\
                    done
 
@@ -68,10 +69,10 @@ gitversion=$(shell git log --oneline | wc -l)
 # 	/net/corpora/novelsample_correctedMod/novelmod -u Enhanced/novelsample_corrected
 
 tars:
-	for dir in $(enhanceddirs); do make tar dir=$$dir; done
+	for dir in $(DIRECTORIES); do make tar dir=$$dir; done
 
 tars-install:
-	for dir in $(enhanceddirs); do make tar-install dir=$$dir; done
+	for dir in $(DIRECTORIES); do make tar-install dir=$$dir; done
 
 tar:
 	( cd Enhanced ; tar czf $(dir)-$(gitversion).tar.gz $(dir) )
@@ -83,26 +84,16 @@ tar-install:
 dtchecks:
 	dtchecks $(DIRECTORIES)
 
-
-index_manual:
-	for dir in $(DIRECTORIES); do ( cd $$dir ; make index.html ) ; done
-
-clean_manual:
-	for dir in $(DIRECTORIES); do ( cd $$dir ; rm -f *svg *pdf index.html ) ; done
-
-enhanceddirs=cgn_exs eans extra g_suite h_suite i_suite leuven_yellow_pages lot_test_suite1 \
-             ntv-suite qa wpspel novelsample_corrected cdb
-
 sqldir=/net/aps/haytabo/opt/alpinotools
 prepare_enhanced_all:
-	for corpus in $(enhanceddirs); do make sql/$$corpus.sqlite corpus=$$corpus; done
+	for corpus in $(DIRECTORIES); do make sql/$$corpus.sqlite corpus=$$corpus; done
 
 sql/$(corpus).sqlite: best/$(corpus)/*.xml fast/$(corpus)/*.xml
 	rm -f sql/$(corpus).sqlite
 	$(sqldir)/auto2sql sql/$(corpus).sqlite best/$(corpus) fast/$(corpus)
 
 enhanced_all:
-	for corpus in $(enhanceddirs); do make enhanced corpus=$$corpus; done
+	for corpus in $(DIRECTORIES); do make enhanced corpus=$$corpus; done
 
 enhanced: 
 	$(sqldir)/alpinomod -p $(corpus) -u sql/$(corpus).sqlite $(corpus) Enhanced/$(corpus)

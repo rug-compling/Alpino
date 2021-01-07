@@ -1,1 +1,26 @@
-../clef2004/1122.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" root="wat" status="vol" vwtype="vb" word="Wat"/>
+      <node begin="0" cat="sv1" end="7" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="su"/>
+        <node begin="1" end="2" id="5" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+        <node begin="0" cat="ppart" end="7" id="6" rel="vc">
+          <node begin="0" end="1" id="7" index="1" rel="obj1"/>
+          <node begin="2" cat="pp" end="6" id="8" rel="mod">
+            <node begin="2" end="3" id="9" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+            <node begin="3" cat="mwu" end="6" id="10" rel="obj1">
+              <node begin="3" end="4" id="11" lemma="13" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="13" word="13"/>
+              <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="12" lemma="augustus" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="augustus" word="augustus"/>
+              <node begin="5" end="6" id="13" lemma="1961" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="1961" word="1961"/>
+            </node>
+          </node>
+          <node begin="6" buiging="zonder" end="7" id="14" lemma="op_richten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="richt_op" word="opgericht" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="15" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wat werd op 13 augustus 1961 opgericht ?</sentence>
+</alpino_ds>

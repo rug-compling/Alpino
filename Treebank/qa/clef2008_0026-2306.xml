@@ -1,1 +1,28 @@
-../clef2008/0026-2306.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" cat="pp" end="3" id="2" index="1" rel="whd">
+        <node begin="0" end="1" id="3" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="Uit"/>
+        <node begin="1" cat="np" end="3" id="4" rel="obj1">
+          <node begin="1" end="2" id="5" lemma="hoeveel" naamval="stan" numtype="hoofd" pos="adj" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="hoeveel" word="hoeveel"/>
+          <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="deel" ntype="soort" pos="verb" postag="N(soort,mv,basis)" pt="n" rel="hd" root="deel" word="delen"/>
+        </node>
+      </node>
+      <node begin="0" cat="sv1" end="7" id="7" rel="body">
+        <node begin="3" end="4" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="4" cat="np" end="6" id="9" index="2" rel="su">
+          <node begin="4" end="5" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="beeld" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="beeld" word="beeld"/>
+        </node>
+        <node begin="0" cat="ppart" end="7" id="12" rel="vc">
+          <node begin="0" end="3" id="13" index="1" rel="mod"/>
+          <node begin="4" end="6" id="14" index="2" rel="obj1"/>
+          <node begin="6" buiging="zonder" end="7" id="15" lemma="maken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="maak" word="gemaakt" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="16" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Uit hoeveel delen is het beeld gemaakt ?</sentence>
+</alpino_ds>

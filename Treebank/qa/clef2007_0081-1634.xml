@@ -1,1 +1,23 @@
-../clef2007/0081-1634.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="waarvan" pos="pp" postag="BW()" pt="bw" rel="whd" root="waarvan" word="Waarvan"/>
+      <node begin="0" cat="sv1" end="7" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        <node begin="2" end="3" genus="genus" getal="ev" graad="basis" id="5" lemma="Panaji" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="su" root="Panaji" word="Panaji"/>
+        <node begin="0" cat="np" end="5" id="6" rel="predc">
+          <node begin="0" end="1" id="7" index="1" rel="mod"/>
+          <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="hoofdstad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="hoofdstad" word="hoofdstad"/>
+        </node>
+        <node begin="5" cat="pp" end="7" id="10" rel="mod">
+          <node begin="5" end="6" id="11" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+          <node begin="6" end="7" id="12" lemma="1987" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1987" word="1987"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Waarvan was Panaji de hoofdstad voor 1987 ?</sentence>
+</alpino_ds>

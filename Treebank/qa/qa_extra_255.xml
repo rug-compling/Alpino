@@ -1,1 +1,29 @@
-../qa_extra/255.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="whq" end="8" id="1" rel="--">
+      <node begin="0" cat="pp" end="3" id="2" index="1" rel="whd">
+        <node begin="0" end="1" id="3" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="Voor"/>
+        <node begin="1" cat="np" end="3" id="4" rel="obj1">
+          <node begin="1" buiging="met-e" end="2" id="5" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="welke"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="datum" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="datum" word="datum"/>
+        </node>
+      </node>
+      <node begin="0" cat="sv1" end="8" id="7" rel="body">
+        <node begin="3" end="4" id="8" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+        <node begin="4" end="5" getal="ev" id="9" index="2" lemma="je" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" root="je" status="red" vwtype="pers" word="je"/>
+        <node begin="0" cat="inf" end="8" id="10" rel="vc">
+          <node begin="0" end="3" id="11" index="1" rel="mod"/>
+          <node begin="4" end="5" id="12" index="2" rel="su"/>
+          <node begin="5" cat="np" end="7" id="13" rel="obj1">
+            <node begin="5" end="6" id="14" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+            <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="15" lemma="belastingformulier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="belasting_formulier" word="belastingformulier"/>
+          </node>
+          <node begin="7" buiging="zonder" end="8" id="16" lemma="inleveren" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="lever_in" word="inleveren" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="17" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Voor welke datum moet je het belastingformulier inleveren ?</sentence>
+</alpino_ds>

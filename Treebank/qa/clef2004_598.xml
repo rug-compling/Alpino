@@ -1,1 +1,26 @@
-../clef2004/598.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="6" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="kunnen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kan" word="kan" wvorm="pv"/>
+        <node begin="2" cat="np" end="4" id="5" index="2" rel="su">
+          <node begin="2" end="3" id="6" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="allergie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="allergie" word="allergie"/>
+        </node>
+        <node begin="0" cat="inf" end="6" id="8" rel="vc">
+          <node begin="2" end="4" id="9" index="2" rel="su"/>
+          <node begin="4" buiging="zonder" end="5" id="10" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
+          <node begin="0" cat="ppart" end="6" id="11" rel="vc">
+            <node begin="0" end="1" id="12" index="1" rel="mod"/>
+            <node begin="2" end="4" id="13" index="2" rel="obj1"/>
+            <node begin="5" buiging="zonder" end="6" id="14" lemma="behandelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="behandel" word="behandeld" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="15" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe kan een allergie worden behandeld ?</sentence>
+</alpino_ds>

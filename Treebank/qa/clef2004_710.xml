@@ -1,1 +1,23 @@
-../clef2004/710.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="wanneer" pos="adv" postag="BW()" pt="bw" rel="whd" root="wanneer" word="Wanneer"/>
+      <node begin="0" cat="sv1" end="7" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="mod"/>
+        <node begin="1" end="2" id="5" lemma="gaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ga" word="ging" wvorm="pv"/>
+        <node begin="2" cat="mwu" end="5" id="6" rel="su">
+          <node begin="2" end="3" id="7" lemma="José" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="José" spectype="deeleigen" word="José"/>
+          <node begin="3" end="4" id="8" lemma="Celestino" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Celestino" spectype="deeleigen" word="Celestino"/>
+          <node begin="4" end="5" id="9" lemma="Mutis" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Mutis" spectype="deeleigen" word="Mutis"/>
+        </node>
+        <node begin="5" cat="pp" end="7" id="10" rel="ld">
+          <node begin="5" end="6" id="11" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+          <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="12" lemma="Colombia" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Colombia" word="Colombia"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wanneer ging José Celestino Mutis naar Colombia ?</sentence>
+</alpino_ds>

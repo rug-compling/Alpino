@@ -1,1 +1,23 @@
-../clef2005/0102.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adj" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="7" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="predc"/>
+        <node begin="1" end="2" id="5" lemma="heten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heet" word="heet" wvorm="pv"/>
+        <node begin="2" cat="np" end="7" id="6" rel="su">
+          <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" cat="mwu" end="7" id="8" rel="hd">
+            <node begin="3" end="4" id="9" lemma="Europese" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Europees" spectype="deeleigen" word="Europese"/>
+            <node begin="4" end="5" id="10" lemma="Gemeenschap" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Gemeenschap" spectype="deeleigen" word="Gemeenschap"/>
+            <node begin="5" end="6" id="11" lemma="voor" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="voor" vztype="init" word="voor"/>
+            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="atoomenergie" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Atoomenergie" word="Atoomenergie"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe heet de Europese Gemeenschap voor Atoomenergie ?</sentence>
+</alpino_ds>

@@ -1,1 +1,24 @@
-../clef2004/1061.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" cat="pp" end="3" id="2" index="1" rel="whd">
+        <node begin="0" end="1" id="3" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="Op"/>
+        <node begin="1" cat="np" end="3" id="4" rel="obj1">
+          <node begin="1" buiging="zonder" end="2" id="5" lemma="welk" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="welk" vwtype="vb" word="welk"/>
+          <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="6" lemma="eiland" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="eiland" word="eiland"/>
+        </node>
+      </node>
+      <node begin="0" cat="sv1" end="6" id="7" rel="body">
+        <node begin="0" end="3" id="8" index="1" rel="ld"/>
+        <node begin="3" end="4" id="9" lemma="liggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lig" word="ligt" wvorm="pv"/>
+        <node begin="4" cat="mwu" end="6" id="10" rel="su">
+          <node begin="4" end="5" id="11" lemma="Ponta" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ponta" spectype="deeleigen" word="Ponta"/>
+          <node begin="5" end="6" id="12" lemma="Delgada" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Delgada" spectype="deeleigen" word="Delgada"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Op welk eiland ligt Ponta Delgada ?</sentence>
+</alpino_ds>

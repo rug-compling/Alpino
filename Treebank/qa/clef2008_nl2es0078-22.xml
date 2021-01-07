@@ -1,1 +1,21 @@
-../clef2008/nl2es0078-22.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="whq" end="5" id="1" rel="--">
+      <node begin="0" cat="pp" end="3" id="2" index="1" rel="whd">
+        <node begin="0" end="1" id="3" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
+        <node begin="1" cat="np" end="3" id="4" rel="obj1">
+          <node begin="1" buiging="met-e" end="2" id="5" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="welke"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="provincie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="provincie" word="provincie"/>
+        </node>
+      </node>
+      <node begin="0" cat="sv1" end="5" id="7" rel="body">
+        <node begin="0" end="3" id="8" index="1" rel="ld"/>
+        <node begin="3" end="4" id="9" lemma="liggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lig" word="ligt" wvorm="pv"/>
+        <node begin="4" end="5" genus="genus" getal="ev" graad="basis" id="10" lemma="Catoira" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="su" root="Catoira" word="Catoira"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="11" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>In welke provincie ligt Catoira ?</sentence>
+</alpino_ds>

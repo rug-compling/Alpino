@@ -1,1 +1,23 @@
-../clef2003/322.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="hoe" pos="adv" postag="BW()" pt="bw" rel="whd" root="hoe" word="Hoe"/>
+      <node begin="0" cat="sv1" end="7" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="mod"/>
+        <node begin="1" end="2" id="5" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" word="kwam" wvorm="pv"/>
+        <node begin="2" cat="mwu" end="4" id="6" rel="su">
+          <node begin="2" end="3" id="7" lemma="Ayrton" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ayrton" spectype="deeleigen" word="Ayrton"/>
+          <node begin="3" end="4" id="8" lemma="Senna" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Senna" spectype="deeleigen" word="Senna"/>
+        </node>
+        <node begin="4" cat="mwu" end="7" id="9" rel="svp">
+          <node begin="4" end="5" id="10" lemma="om" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="om" vztype="init" word="om"/>
+          <node begin="5" end="6" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="fixed" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+          <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="12" lemma="leven" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="leven" word="leven"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Hoe kwam Ayrton Senna om het leven ?</sentence>
+</alpino_ds>

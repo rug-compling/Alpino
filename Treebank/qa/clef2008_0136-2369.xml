@@ -1,1 +1,22 @@
-../clef2008/0136-2369.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" index="1" rel="whd">
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="welk" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welk"/>
+        <node begin="1" buiging="zonder" end="2" graad="basis" id="4" lemma="Europees" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="Europees" word="Europees"/>
+        <node begin="2" end="3" genus="onz" getal="ev" graad="basis" id="5" lemma="land" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="land" word="land"/>
+      </node>
+      <node begin="0" cat="sv1" end="6" id="6" rel="body">
+        <node begin="0" end="3" id="7" index="1" rel="su"/>
+        <node begin="3" end="4" id="8" lemma="kennen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ken" word="kent" wvorm="pv"/>
+        <node begin="4" cat="np" end="6" id="9" rel="obj1">
+          <node begin="4" buiging="zonder" end="5" id="10" lemma="geen" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,agr)" pt="vnw" rel="det" root="geen" vwtype="onbep" word="geen"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="zomer_tijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="zomer_tijd" word="zomertijd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Welk Europees land kent geen zomertijd ?</sentence>
+</alpino_ds>

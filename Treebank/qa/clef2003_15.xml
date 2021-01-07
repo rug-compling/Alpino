@@ -1,1 +1,26 @@
-../clef2003/15.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" index="1" lemma="wanneer" pos="adv" postag="BW()" pt="bw" rel="whd" root="wanneer" word="Wanneer"/>
+      <node begin="0" cat="sv1" end="7" id="3" rel="body">
+        <node begin="1" end="2" id="4" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
+        <node begin="2" cat="np" end="6" id="5" index="2" rel="su">
+          <node begin="2" end="3" id="6" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
+          <node begin="3" cat="mwu" end="6" id="7" rel="hd">
+            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="8" lemma="verdrag" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Verdrag" word="Verdrag"/>
+            <node begin="4" end="5" id="9" lemma="van" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+            <node begin="5" end="6" id="10" lemma="Rome" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Rome" spectype="deeleigen" word="Rome"/>
+          </node>
+        </node>
+        <node begin="0" cat="ppart" end="7" id="11" rel="vc">
+          <node begin="0" end="1" id="12" index="1" rel="mod"/>
+          <node begin="2" end="6" id="13" index="2" rel="obj1"/>
+          <node begin="6" buiging="zonder" end="7" id="14" lemma="tekenen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="teken" word="getekend" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="15" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wanneer werd het Verdrag van Rome getekend ?</sentence>
+</alpino_ds>

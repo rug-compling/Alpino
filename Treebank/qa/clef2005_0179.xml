@@ -1,1 +1,22 @@
-../clef2005/0179.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="0" cat="whq" end="7" id="2" rel="--">
+      <node begin="0" end="1" getal="getal" id="3" index="1" lemma="wie" naamval="stan" pdtype="pron" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="whd" root="wie" status="vol" vwtype="vb" word="Wie"/>
+      <node begin="0" cat="sv1" end="7" id="4" rel="body">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="1" end="2" id="6" lemma="schrijven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="schrijf" word="schreef" wvorm="pv"/>
+        <node begin="3" cat="mwu" end="7" id="7" rel="obj1">
+          <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="De" word="De"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="wereld" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="wereld" word="wereld"/>
+          <node begin="5" end="6" id="10" lemma="van" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+          <node begin="6" end="7" id="11" lemma="Sofie" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Sofie" spectype="deeleigen" word="Sofie"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="8" end="9" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+  </node>
+  <sentence>Wie schreef &quot; De wereld van Sofie &quot; ?</sentence>
+</alpino_ds>
