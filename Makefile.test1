@@ -51,7 +51,7 @@ cdb_part_test1_options= -flag treebank ../Treebank/cdb\
                         -flag syntax_features cdb/pc_weights\
                         cdb_part=$(part)
 extra_test1_options=-flag syntax_features cdb/px_weights
-wpspel_annot_test1_options=-flag treebank ../Treebank/wpspel
+wpspel_test1_options=-flag treebank ../Treebank/wpspel
 
 ## ensure it enters Treebank/PPH through the official route, so the
 ## links will work on HPC... :-(
@@ -87,6 +87,7 @@ test1rest:
                         >> $(suite)$(part)/$(job)/scores
 	cat $(suite)$(part)/$(job)/scores >> $(suite)$(part)/scores
 	cat $(suite)$(part)/$(job)/scores >> $(suite)$(part)/$(job)/score
+	grep -e '#LM' -e '#PT' -e 'Lexical analysis: ' $(suite)$(part)/$(job)/log1 > $(suite)$(part)/$(job)/poslemma
 	$(MAKE) report
 	-$(MAKE) compare_score suite=$(prefix)$(suite)
 
@@ -205,7 +206,7 @@ reportcurrentscore:
           echo "----- expected:";\
           grep ca-score $(suite)$(part)/score | head -n1; fi
 
-suites=leuven_yellow_pages cgn_exs lassy g_suite h_suite i_suite lot_test_suite1 wpspel_annot extra PPH PPH PPI WIKI WSU
+suites=leuven_yellow_pages cgn_exs lassy g_suite h_suite i_suite lot_test_suite1 wpspel extra PPH PPH PPI WIKI WSU
 
 clean:
 	for suite in $(suites) $(CGNSUITES) ;\
@@ -253,6 +254,10 @@ cf0:
         done
 
 upd_all:
+	@for file in `echo $(shell ls $(ORDERED) */*/poslemma 2>/dev/null)`; do \
+        suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
+	echo "cp $$file $(prefix)$$suite/";\
+        done
 	@for file in `echo $(shell ls $(ORDERED) */*/score 2>/dev/null)`; do \
         suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
 	echo "cp $$file $(prefix)$$suite/";\
@@ -319,12 +324,13 @@ hpctests:
 	make shortjob HPCTARGET=test1 suite=lot_test_suite1
 	make shortjob HPCTARGET=test1 suite=cgn_exs
 	make shortjob HPCTARGET=test1 suite=qa
-	make shortjob HPCTARGET=test1 suite=conll2006-test
-	make shortjob HPCTARGET=test1 suite=wpspel_annot
+	make shortjob HPCTARGET=test1 suite=wpspel
 
-tests: ts cgns
+tests: ts ds cgns
 
-ts: t0 t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 t16 t17 t18 t19 t20 t21 t22 t23 t24 t25 t26
+ts: t0 t1 t2 t3 t4 t5 t6 t7 t8 t9 t15 t16 t17 t18 t19 t20 t21 t22 t23 t24 t25 
+
+ds: t10 t11 t12 t13 t14
 
 t0:
 	make test1 suite=cdb_part cdb_part=0
@@ -373,12 +379,10 @@ t21:
 t22:
 	make test1 suite=qa
 t23:
-	make test1 suite=conll2006-test
+	make test1 suite=wpspel
 t24:
-	make test1 suite=wpspel_annot
-t25:
 	make test1 suite=lassy
-t26:
+t25:
 	make test1 suite=novelsample_corrected
 
 
@@ -570,3 +574,31 @@ cgn42:
 	make test1 suitepath=$(CGNDIR)/comp-o/vl suite=fv801065 extra="-flag treebank $(CGNDIR)/comp-o/vl/fv801065"
 cgn43:
 	make test1 suitepath=$(CGNDIR)/comp-o/vl suite=fv801195 extra="-flag treebank $(CGNDIR)/comp-o/vl/fv801195"
+
+
+analyse:
+	@$(MAKE) analyse0 analyse1 files=*/job*/log1
+
+sota:
+	@$(MAKE) analyse0 analyse1 files=*/poslemma
+
+an:
+	@for j in $(jobsuites); do $(MAKE) -s analyse1 files=$$j/job*/log*; done
+
+
+analyse0:
+	@echo "        WORD                                    TREEBANK                                PARSER" > pos
+	@echo "        WORD                                    TREEBANK                                PARSER" > lem
+	@cat  $(files) | grep "#PT" | cut -c1-112 |sort | uniq -c | sort -nr				       >>pos
+	@cat  $(files) | grep "#LM" | cut -c1-112 |sort | uniq -c | sort -nr				       >>lem
+	@echo "        WORD                                    TREEBANK                                PARSER" >>pos
+	@echo "        WORD                                    TREEBANK                                PARSER" >>lem
+
+analyse1:
+	@echo $(files)
+	@echo -n "lemma accuracy: "
+	@mistakes=`cat $(files) | grep -c "#LM"` ; \
+         cat $(files) | grep 'Lexical analysis: ' | awk "{ N=N+\$$3 } END { print 1 - $$mistakes/N }"
+	@echo -n "postag accuracy: "
+	@mistakes=`cat $(files) | grep -c "#PT"` ; \
+         cat $(files) | grep 'Lexical analysis: ' | awk "{ N=N+\$$3 } END { print 1 - $$mistakes/N }"
