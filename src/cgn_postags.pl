@@ -1832,6 +1832,8 @@ genus_naam('NED1').
 genus_naam('NED2').
 genus_naam('NED3').
 genus_naam('Parmalat').
+genus_naam('Rituals').
+genus_naam('Ryanair').
 genus_naam('Sabena').
 genus_naam('Smead').
 genus_naam('Spirit').
@@ -1864,6 +1866,7 @@ de_naam('Lila').
 de_naam('Lincoln').
 de_naam('Mars').
 de_naam('Mercator').
+de_naam('MRI').
 de_naam('Napoleon').
 de_naam('NASA').
 de_naam('NAVO').
@@ -1903,6 +1906,7 @@ het_naam('Apple').
 het_naam('CBS').
 het_naam('CDA').
 het_naam('CERN').
+het_naam('CHMP').
 het_naam('D\'66').
 het_naam('DWS').
 het_naam('Ecolo').
@@ -1916,12 +1920,14 @@ het_naam('ISBN').
 het_naam('ISSN').
 het_naam('Journaal').
 het_naam('Netwerk').
+het_naam('NIGZ').
 het_naam('Oranje-Nassau').      
 het_naam('Philips').
 het_naam('PSV').
 het_naam('Theravada').
 het_naam('U2').
 het_naam('Unilever').
+het_naam('VLAO').
 
 het_suf(bedrijf).
 het_suf(diep).

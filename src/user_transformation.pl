@@ -69,6 +69,11 @@ surf_lemma(Word,'N(eigen,ev,basis,genus,stan)','N(eigen,ev,basis,onz,stan)',L,L)
 surf_lemma(Word,'N(eigen,ev,basis,zijd,stan)','N(eigen,ev,basis,onz,stan)',L,L) :-
     het_naam(Word).
 
+surf_lemma(Word,'N(eigen,ev,basis,onz,stan)','N(eigen,ev,basis,genus,stan)',L,L) :-
+    genus_naam(Word).
+surf_lemma(Word,'N(eigen,ev,basis,zijd,stan)','N(eigen,ev,basis,genus,stan)',L,L) :-
+    genus_naam(Word).
+
 surf_lemma(Word,'N(eigen,ev,basis,genus,stan)','N(eigen,mv,basis)',L,L) :-
     pl_naam(Word).
 surf_lemma(Word,'N(eigen,ev,basis,zijd,stan)','N(eigen,mv,basis)',L,L) :-
@@ -89,6 +94,9 @@ het_naam(_):-
 de_naam(_) :-
     fail.
 
+genus_naam(_) :-
+    fail.
+
 
 surf_lemma(_,_,_,_,_,_) :- fail.
 
@@ -97,4 +105,10 @@ tag_lemma(_,_,_) :- fail.
 lemma(_,_) :-
     fail.
 
+lemma('ZYPREXA','Zyprexa').
+lemma('VELOTAB','Velotab').
+lemma('RIZIV','Riziv').
 
+genus_naam('Forsteo').
+genus_naam('Liprolog').
+genus_naam('Evista').

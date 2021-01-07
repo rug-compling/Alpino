@@ -1003,7 +1003,7 @@ a([e('Mongoolse'),
    no_e('Mongools')],nonadv,[],[]).
 
 a([e('Montenegrijnse'),
-   no_e('Montenegrijs')],nonadv,[],[]).
+   no_e('Montenegrijns')],nonadv,[],[]).
 
 a([e('Moorse'),
    no_e('Moors')],nonadv,[],[]).
