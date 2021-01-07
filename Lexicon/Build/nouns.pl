@@ -21583,8 +21583,10 @@ n([pl(meteorieten),sg(meteoriet)],de,[]).
 
 n([sg(meteoroloog),pl(meteorologen)],de,[]).
 
-%% peter en meter, dus peettante
-n([sg(meter),pl(meters)],de,[]).
+%% ook: peter en meter, dus peettante
+n([sg(meter),pl(meters)],de,[],
+  [stroom,
+   dim(metertje)]).
 
 n([meas(meter),pl(meters)],de,[meas_mod,measure],
   [centi,

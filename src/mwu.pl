@@ -1719,6 +1719,7 @@ mwu_postag('Op het eiland Amoras',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,b
 mwu_postag('op het laatst',['VZ(init)','LID(bep,stan,evon)','ADJ(vrij,sup,zonder)'],[op,het,laat]).
 mwu_postag('op het verkeerde been',['VZ(init)','LID(bep,stan,evon)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,onz,stan)'],[op,het,verkeerd,been]).
 mwu_postag('opioïde peptiden',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[opoïde,peptide]).
+mwu_postag('op initiatief van',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)'],[op,initiatief,van]).
 mwu_postag('op kosten van',['VZ(init)','N(soort,mv,basis)','VZ(init)'],[op,kost,van]).
 mwu_postag('Opleiding Nederlands',['N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,onz,stan)'],[opleiding,'Nederland']).
 mwu_postag('op lossen schroeven',['VZ(init)','WW(inf,vrij,zonder)','N(soort,mv,basis)'],[op,lossen,schroef]).
