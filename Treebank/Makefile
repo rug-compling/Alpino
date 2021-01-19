@@ -48,13 +48,20 @@ dact: $(DIRECTORIES:%=Enhanced/%.dact)
 	chmod 644 $*.dact.new
 	mv $*.dact.new $*.dact
 
-mwu: $(DIRECTORIES:%=MWU/%.mwu)
+mwu: $(DIRECTORIES:%=MWU/%.mwu) FREQ/mwu-tagged.freq
 
 ## removes the .mwu file, because if it is empty it would otherwise
 ## be rebuilt over and over again!
 MWU/%.mwu: %.dact mwu_tags.xsl
 	rm -f MWU/$*.mwu
 	alpinocorpus-xslt -q '//node[@cat="mwu"]' mwu_tags.xsl $*.dact > MWU/$*.mwu
+
+FREQ/mwu-tagged.freq: $(DIRECTORIES:%=MWU/%.mwu) /net/corpora/LassyDevelop/MWU/*.mwu
+	cat $(DIRECTORIES:%=MWU/%.mwu) /net/corpora/LassyDevelop/MWU/*.mwu\
+        | sort\
+        | uniq -c\
+        | sort -nr > FREQ/mwu-tagged.freq
+	cat FREQ/mwu-tagged.freq | python3 /net/corpora/LassyDevelop/find-inconsistent m > FREQ/mwu-inconsistent
 
 poslemma: $(DIRECTORIES:%=POSLEMMA/%.poslemma)
 
@@ -99,3 +106,11 @@ enhanced:
 	$(sqldir)/alpinomod -p $(corpus) -u sql/$(corpus).sqlite $(corpus) Enhanced/$(corpus)
 
 
+sents: $(DIRECTORIES:%=../SENTS/%.sents)
+../SENTS/%.sents: %.dact
+	( cd $* ;\
+             ls -v *.xml |\
+             xargs dtxslt -s\
+             $(ALPINO_HOME)/TreebankTools/stylesheets/dt2sent_with_key.xsl |\
+             sed -e 's/\[/\\\[/g' \
+                 -e 's/\]/\\\]/g') > $@

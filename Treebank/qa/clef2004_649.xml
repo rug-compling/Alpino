@@ -14,12 +14,12 @@
           <node begin="3" end="4" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="uitspraak" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="uitspraak" word="uitspraak"/>
           <node begin="6" cat="mwu" end="12" id="12" rel="app">
-            <node begin="6" buiging="zonder" end="7" graad="basis" id="13" lemma="close" pos="name" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="close" word="close"/>
-            <node begin="7" end="8" getal="mv" graad="basis" id="14" lemma="encounter" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="encounters" word="encounters"/>
-            <node begin="8" conjtype="neven" end="9" id="15" lemma="of" pos="name" postag="VG(neven)" pt="vg" rel="mwp" root="of" word="of"/>
+            <node begin="6" end="7" id="13" lemma="close" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="close" spectype="vreemd" word="close"/>
+            <node begin="7" end="8" id="14" lemma="encounters" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="encounters" spectype="vreemd" word="encounters"/>
+            <node begin="8" end="9" id="15" lemma="of" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="of" spectype="vreemd" word="of"/>
             <node begin="9" end="10" id="16" lemma="the" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="the" spectype="vreemd" word="the"/>
             <node begin="10" end="11" id="17" lemma="third" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="third" spectype="vreemd" word="third"/>
-            <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="18" lemma="kind" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="kind" word="kind"/>
+            <node begin="11" end="12" id="18" lemma="kind" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="kind" spectype="vreemd" word="kind"/>
           </node>
         </node>
       </node>

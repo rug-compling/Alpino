@@ -8,7 +8,7 @@
         <node begin="0" cat="np" end="3" id="5" rel="su">
           <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="6" lemma="pvv-fractieleider" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="PVV_fractie_leider" word="PVV-fractieleider"/>
           <node begin="1" cat="mwu" end="3" id="7" rel="app">
-            <node begin="1" end="2" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="De" word="De"/>
+            <node begin="1" end="2" id="8" lemma="De" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
             <node begin="2" end="3" id="9" lemma="Roon" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Roon" spectype="deeleigen" word="Roon"/>
           </node>
         </node>

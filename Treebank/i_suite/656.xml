@@ -7,18 +7,18 @@
         <node begin="0" conjtype="onder" end="1" id="4" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="Als"/>
         <node begin="1" cat="ssub" end="11" id="5" rel="body">
           <node begin="1" case="both" def="def" end="2" gen="de" getal="ev" id="6" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" rnum="sg" root="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="je"/>
-          <node begin="2" cat="mwu" end="5" his="normal" his_1="spaced_letters" id="7" mwu_root="O M G" mwu_sense="O M G" rel="obj1">
+          <node begin="2" cat="mwu" end="5" his="normal" his_1="spaced_letters" id="7" rel="obj1">
             <node begin="2" end="3" id="8" lemma="O" neclass="MISC" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="O" spectype="deeleigen" word="O"/>
             <node begin="3" end="4" id="9" lemma="M" neclass="MISC" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="M" spectype="deeleigen" word="M"/>
             <node begin="4" end="5" id="10" lemma="G" neclass="MISC" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="G" spectype="deeleigen" word="G"/>
           </node>
           <node begin="5" end="6" id="11" infl="sg3" lemma="zeggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zeg" sc="transitive" tense="present" word="zegt" wvorm="pv"/>
           <node begin="6" cat="pp" end="11" id="12" rel="mod">
-            <node begin="6" cat="mwu" end="8" his="normal" his_1="normal" id="13" mwu_root="inplaats van" mwu_sense="inplaats van" rel="hd">
+            <node begin="6" cat="mwu" end="8" his="normal" his_1="normal" id="13" rel="hd">
               <node begin="6" end="7" id="14" lemma="inplaats" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="inplaats" vztype="init" word="inplaats"/>
               <node begin="7" end="8" id="15" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
             </node>
-            <node begin="8" cat="mwu" end="11" his="normal" his_1="names_dictionary" id="16" mwu_root="Oh My God" mwu_sense="Oh My God" rel="obj1">
+            <node begin="8" cat="mwu" end="11" his="normal" his_1="names_dictionary" id="16" rel="obj1">
               <node begin="8" end="9" id="17" lemma="Oh" neclass="MISC" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Oh" spectype="deeleigen" word="Oh"/>
               <node begin="9" end="10" id="18" lemma="My" neclass="MISC" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="My" spectype="deeleigen" word="My"/>
               <node begin="10" end="11" id="19" lemma="God" neclass="MISC" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="God" spectype="deeleigen" word="God"/>

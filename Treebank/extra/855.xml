@@ -14,7 +14,7 @@
               <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="manier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="manier" word="manier"/>
             </node>
           </node>
-          <node begin="5" cat="mwu" end="7" id="12" mwu_root="te werk" mwu_sense="te werk" rel="svp">
+          <node begin="5" cat="mwu" end="7" id="12" rel="svp">
             <node begin="5" end="6" id="13" lemma="te" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="te" vztype="init" word="te"/>
             <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="14" lemma="werk" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="werk" word="werk"/>
           </node>
@@ -23,7 +23,7 @@
       </node>
       <node begin="9" end="10" id="16" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
       <node begin="10" end="11" genus="onz" getal="ev" id="17" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="het" status="red" vwtype="pers" word="het"/>
-      <node begin="11" cat="mwu" end="14" id="18" mwu_root="om het even" mwu_sense="om het even" rel="predc">
+      <node begin="11" cat="mwu" end="14" id="18" rel="predc">
         <node begin="11" end="12" id="19" lemma="om" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="om" vztype="init" word="om"/>
         <node begin="12" end="13" id="20" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="adj" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
         <node begin="13" end="14" id="21" lemma="even" pos="adj" postag="BW()" pt="bw" rel="mwp" root="even" word="even"/>

@@ -8,8 +8,8 @@
         <node begin="3" end="4" id="5" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
         <node begin="5" cat="ap" end="8" id="6" rel="mod">
           <node begin="5" cat="mwu" end="7" id="7" rel="mod">
-            <node begin="5" end="6" getal="mv" id="8" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="adv" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="mwp" root="zij" status="vol" vwtype="pers" word="zij"/>
-            <node begin="6" end="7" id="9" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="adv" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+            <node begin="5" end="6" id="8" lemma="zijn" pos="adv" postag="WW(pv,conj,ev)" pt="ww" pvagr="ev" pvtijd="conj" rel="mwp" root="zij" word="zij" wvorm="pv"/>
+            <node begin="6" end="7" genus="onz" getal="ev" id="9" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="adv" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="mwp" root="het" status="red" vwtype="pers" word="het"/>
           </node>
           <node begin="7" buiging="zonder" end="8" graad="basis" id="10" lemma="bescheiden" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="hd" root="bescheiden" word="bescheiden"/>
         </node>

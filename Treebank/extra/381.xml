@@ -3,13 +3,13 @@
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="np" end="8" id="1" rel="--">
       <node begin="0" end="1" id="2" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="Een"/>
-      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="3" lemma="oefenwedstrijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oefen_wedstrijd" word="oefenwedstrijd"/>
+      <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="3" lemma="oefen_wedstrijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oefen_wedstrijd" word="oefenwedstrijd"/>
       <node begin="2" cat="pp" end="8" id="4" rel="mod">
         <node begin="2" end="3" id="5" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>
         <node begin="3" cat="conj" end="8" id="6" rel="obj1">
           <node begin="3" cat="np" end="6" id="7" rel="cnj">
             <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="4" cat="mwu" end="6" id="9" mwu_root="Verenigde_Staten" mwu_sense="Verenigde_Staten" rel="hd">
+            <node begin="4" cat="mwu" end="6" id="9" rel="hd">
               <node begin="4" end="5" id="10" lemma="Verenigde" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Verenigde" spectype="deeleigen" word="Verenigde"/>
               <node begin="5" end="6" id="11" lemma="Staten" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Staten" spectype="deeleigen" word="Staten"/>
             </node>

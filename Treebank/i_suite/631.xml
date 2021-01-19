@@ -6,7 +6,7 @@
         <node begin="0" end="1" gen="het" getal="mv" graad="basis" id="3" lemma="jaar" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" rnum="pl" root="jaar" special="tmp" word="Jaren"/>
         <node begin="4" buiging="zonder" end="5" getal-n="zonder-n" id="4" lemma="staan" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" rnum="sg" root="sta" sc="fixed([ap_svp(aan het hoofd)],no_passive)" special="v_noun" word="staan" wvorm="inf"/>
         <node begin="1" cat="ap" end="9" id="5" rel="svp">
-          <node begin="1" cat="mwu" end="4" his="normal" his_1="normal" id="6" mwu_root="aan het hoofd" mwu_sense="aan het hoofd-van" rel="hd">
+          <node begin="1" cat="mwu" end="4" his="normal" his_1="normal" id="6" rel="hd">
             <node aform="base" begin="1" end="2" id="7" infl="pred" lemma="aan" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="aan" sc="pp(van)" vform="adj" vztype="init" word="aan"/>
             <node aform="base" begin="2" end="3" id="8" infl="pred" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="adj" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" sc="pp(van)" vform="adj" word="het"/>
             <node aform="base" begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" infl="pred" lemma="hoofd" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="hoofd" sc="pp(van)" vform="adj" word="hoofd"/>
@@ -22,7 +22,7 @@
         </node>
       </node>
       <node begin="9" end="10" id="16" infl="sg3" lemma="geven" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="geef" sc="transitive" stype="declarative" tense="present" word="geeft" wvorm="pv"/>
-      <node begin="10" cat="mwu" end="13" his="normal" his_1="normal" id="17" mwu_root="op den duur" mwu_sense="op den duur" rel="mod">
+      <node begin="10" cat="mwu" end="13" his="normal" his_1="normal" id="17" rel="mod">
         <node begin="10" end="11" id="18" lemma="op" pos="adv" postag="VZ(init)" pt="vz" rel="mwp" root="op" special="sentence" vztype="init" word="op"/>
         <node begin="11" end="12" id="19" lemma="den" lwtype="bep" naamval="dat" npagr="evmo" pos="adv" postag="LID(bep,dat,evmo)" pt="lid" rel="mwp" root="den" special="sentence" word="den"/>
         <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="20" lemma="duur" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="duur" special="sentence" word="duur"/>

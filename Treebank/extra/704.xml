@@ -7,7 +7,7 @@
         <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="paard" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="paard" word="peerd"/>
         <node begin="2" cat="pp" end="5" id="5" rel="mod">
           <node begin="2" end="3" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-          <node begin="3" cat="mwu" end="5" id="7" mwu_root="Ome Loeks" mwu_sense="Ome Loeks" rel="obj1">
+          <node begin="3" cat="mwu" end="5" id="7" rel="obj1">
             <node begin="3" end="4" id="8" lemma="Ome" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ome" spectype="deeleigen" word="Ome"/>
             <node begin="4" end="5" id="9" lemma="Loeks" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Loeks" spectype="deeleigen" word="Loeks"/>
           </node>

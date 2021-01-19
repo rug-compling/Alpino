@@ -6,7 +6,7 @@
         <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="3" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
         <node begin="1" end="2" id="4" infl="sg1" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" tense="present" word="ben" wvorm="pv"/>
         <node begin="2" cat="ppart" end="5" id="5" rel="predc">
-          <node begin="2" cat="mwu" end="4" his="normal" his_1="normal" id="6" mwu_root="verre van" mwu_sense="verre van" rel="mod">
+          <node begin="2" cat="mwu" end="4" his="normal" his_1="normal" id="6" rel="mod">
             <node begin="2" buiging="met-e" end="3" graad="basis" id="7" lemma="verre" naamval="stan" pos="adv" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="verre" special="intensifier" word="verre"/>
             <node begin="3" end="4" id="8" lemma="van" pos="adv" postag="VZ(init)" pt="vz" rel="mwp" root="van" special="intensifier" vztype="init" word="van"/>
           </node>

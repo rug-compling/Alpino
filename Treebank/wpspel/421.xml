@@ -15,8 +15,8 @@
             <node begin="6" cat="np" end="9" id="12" rel="obj1">
               <node begin="6" end="7" id="13" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
               <node begin="7" cat="mwu" end="9" id="14" rel="hd">
-                <node begin="7" buiging="met-e" end="8" graad="basis" id="15" lemma="nieuw" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Nieuwe" word="Nieuwe"/>
-                <node begin="8" end="9" genus="onz" getal="ev" graad="basis" id="16" lemma="testament" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Testament" word="Testament"/>
+                <node begin="7" end="8" id="15" lemma="Nieuwe" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Nieuwe" spectype="deeleigen" word="Nieuwe"/>
+                <node begin="8" end="9" id="16" lemma="Testament" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Testament" spectype="deeleigen" word="Testament"/>
               </node>
             </node>
           </node>

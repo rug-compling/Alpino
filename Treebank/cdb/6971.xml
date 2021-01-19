@@ -28,8 +28,8 @@
               <node begin="10" cat="np" end="17" id="22" rel="obj1">
                 <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="23" lemma="hotel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="hotel" word="hotel"/>
                 <node begin="12" cat="mwu" end="14" id="24" rel="app">
-                  <node begin="12" end="13" id="25" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
-                  <node begin="13" end="14" id="26" lemma="Hanenhof" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hanenhof" spectype="deeleigen" word="Hanenhof"/>
+                  <node begin="12" end="13" id="25" lemma="de" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+                  <node begin="13" end="14" id="26" lemma="Hanenhof" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hanenhof" spectype="deeleigen" word="Hanenhof"/>
                 </node>
                 <node begin="15" cat="pp" end="17" id="27" rel="mod">
                   <node begin="15" end="16" id="28" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>

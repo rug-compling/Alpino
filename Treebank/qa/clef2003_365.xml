@@ -14,7 +14,7 @@
           <node begin="3" end="4" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="bijnaam" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="bijnaam" word="bijnaam"/>
           <node begin="6" cat="mwu" end="8" id="12" rel="app">
-            <node begin="6" end="7" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="De" word="De"/>
+            <node begin="6" end="7" id="13" lemma="De" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
             <node begin="7" end="8" id="14" lemma="Tijgerin" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Tijgerin" spectype="deeleigen" word="Tijgerin"/>
           </node>
         </node>

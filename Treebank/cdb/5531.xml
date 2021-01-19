@@ -15,7 +15,7 @@
         <node begin="6" end="7" getal="mv" graad="basis" id="11" lemma="vrouw" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="vrouw" word="vrouwen"/>
       </node>
       <node begin="8" cat="conj" end="11" id="12" rel="cnj">
-        <node begin="8" end="9" getal="mv" graad="basis" id="13" lemma="gehuwd" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="gehuwde" word="gehuwden"/>
+        <node begin="8" buiging="met-e" end="9" getal-n="mv-n" id="13" lemma="huwen" pos="noun" positie="nom" postag="WW(vd,nom,met-e,mv-n)" pt="ww" rel="cnj" root="gehuwde" word="gehuwden" wvorm="vd"/>
         <node begin="9" conjtype="neven" end="10" id="14" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="10" buiging="met-e" end="11" getal-n="mv-n" graad="basis" id="15" lemma="ongehuwd" pos="noun" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="cnj" root="gehuwden" word="ongehuwden"/>
       </node>

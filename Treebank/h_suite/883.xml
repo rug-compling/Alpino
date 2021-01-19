@@ -8,8 +8,8 @@
         <node begin="2" end="3" id="5" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
         <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="6" lemma="nummer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="nummer" word="nummer"/>
         <node begin="4" cat="mwu" end="8" id="7" rel="app">
-          <node begin="4" end="5" id="8" lemma="Stranger" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Stranger" spectype="deeleigen" word="Stranger"/>
-          <node begin="5" end="6" id="9" lemma="in" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+          <node begin="4" end="5" id="8" lemma="Stranger" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Stranger" spectype="vreemd" word="Stranger"/>
+          <node begin="5" end="6" id="9" lemma="in" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="in" spectype="vreemd" word="in"/>
           <node begin="6" end="7" id="10" lemma="my" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="my" spectype="vreemd" word="my"/>
           <node begin="7" end="8" id="11" lemma="house" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="house" spectype="vreemd" word="house"/>
         </node>

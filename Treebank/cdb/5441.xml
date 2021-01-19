@@ -5,7 +5,7 @@
     <node begin="22" end="23" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="31" id="3" rel="--">
       <node begin="0" cat="ap" end="3" id="4" rel="predc">
-        <node begin="0" buiging="zonder" end="1" graad="basis" id="5" lemma="op_vallen" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="opvallend" word="Opvallend"/>
+        <node begin="0" buiging="zonder" end="1" id="5" lemma="op_vallen" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="mod" root="opvallend" word="Opvallend" wvorm="od"/>
         <node begin="1" buiging="zonder" end="2" graad="basis" id="6" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="goed" word="goed"/>
         <node begin="2" end="3" id="7" lemma="bijvoorbeeld" pos="adv" postag="BW()" pt="bw" rel="mod" root="bijvoorbeeld" word="bijvoorbeeld"/>
       </node>

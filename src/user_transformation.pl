@@ -51,8 +51,6 @@ surf_lemma(_,_,_,_) :- fail.
 
 surf_lemma(_,_,_) :- fail.
 
-surf_lemma('XVde','15','XV').
-
 surf_lemma(Word,'N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)',L,L) :-
     eigen(Word).
 surf_lemma(Word,'N(soort,mv,basis)','N(eigen,mv,basis)',L,L) :-
@@ -84,7 +82,6 @@ surf_lemma(Word,'N(eigen,ev,basis,onz,stan)','N(eigen,mv,basis)',L,L) :-
 eigen(_):-
     fail.
 
-
 pl_naam(_) :-
     fail.
 
@@ -98,17 +95,94 @@ genus_naam(_) :-
     fail.
 
 
-surf_lemma(_,_,_,_,_,_) :- fail.
+surf_lemma(Word,Rel,Pos0,Pos,Lem0,Lem) :-
+    \+ Rel = mwp,
+    surf(Word,Pos,Lem),
+    \+ Pos0/Lem0 = Pos/Lem.
+
 
 tag_lemma(_,_,_) :- fail.
 
 lemma(_,_) :-
     fail.
 
-lemma('ZYPREXA','Zyprexa').
-lemma('VELOTAB','Velotab').
-lemma('RIZIV','Riziv').
+surf(_,_,_) :-
+    fail.
 
-genus_naam('Forsteo').
-genus_naam('Liprolog').
-genus_naam('Evista').
+user:query:-
+    findall(L,lemma(L,_),Ls),
+    (   Ls = [_|_]
+    ->  query(Ls,Chars,[]),
+	format("~n~nconverse '//node[@lemma=(~s)]'~n",[Chars])
+    ;   true
+    ),
+    findall(S,surf(S,_,_),Ss),
+    (   Ss = [_|_]
+    ->  query(Ss,Chars2,[]),
+	format("~nconverse '//node[@word=(~s)]'~n~n",[Chars2])
+    ;   true
+    ).
+
+query([]) --> [].
+query([H|T]) -->
+    q(T,H),
+    query(T).
+
+q([],H) -->
+    charsio:format_to_chars("\"~w\"",H).
+q([_|_],H) -->
+    charsio:format_to_chars("\"~w\",",H).
+    
+
+user_transformation(r(REL,p(mwu)),B,Ds0,
+		    r(REL,p(mwu)),B,Ds ,String,_) :-
+    surfs(Ds0,Surfs,String),
+    correct_tags(Surfs,Lemmas,Tags),
+    assign_tags(Lemmas,Tags,Ds0,Ds),
+    \+ Ds0 = Ds.
+
+surfs([],[],_).
+surfs([tree(r(mwp,l(_,_,_/[P0,P])),_,_)|Trees],[Surf|Surfs],String) :-
+    alpino_treebank:get_root(P0,P,String,Surf),
+    surfs(Trees,Surfs,String).
+surfs([tree(r(mwp,i(_,l(_,_,_/[P0,P]))),_,_)|Trees],[Surf|Surfs],String) :-
+    alpino_treebank:get_root(P0,P,String,Surf),
+    surfs(Trees,Surfs,String).
+
+assign_tags([],[],[],[]).
+assign_tags([Lem|Lems],[Tag|Tags],[Tree0|Trees0],[Tree|Trees]) :-
+    assign_tag(Lem,Tag,Tree0,Tree),
+    assign_tags(Lems,Tags,Trees0,Trees).
+
+assign_tag(Lem, Tag,
+	   tree(r(mwp,l(read_from_treebank(Az,_,_),Cat,W)),B,[]),
+	   tree(r(mwp,l(read_from_treebank(Az,Lem,Tag),Cat,W)),B,[])
+	  ).
+assign_tag(Lem, Tag,
+	   tree(r(mwp,i(Index,l(read_from_treebank(Az,_,_),Cat,W))),B,[]),
+	   tree(r(mwp,i(Index,l(read_from_treebank(Az,Lem,Tag),Cat,W))),B,[])
+	  ).
+
+deeleigen([],[]).
+deeleigen([_|T],['SPEC(deeleigen)'|L]) :-
+    deeleigen(T,L).
+
+vreemd([],[]).
+vreemd([_|T],['SPEC(vreemd)'|L]) :-
+    vreemd(T,L).
+
+correct_tags(L,L,Deeleigen) :-
+    flat(L),
+    deeleigen(L,Deeleigen).
+
+correct_tags(L,L,Deeleigen) :-
+    vreemd(L),
+    vreemd(L,Deeleigen).
+
+flat(_) :-
+    fail.
+
+vreemd(_) :-
+    fail.
+
+

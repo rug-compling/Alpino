@@ -14,7 +14,7 @@
       <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="9" lemma="Biotechnologie" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="su" root="Biotechnologie" word="Biotechnologie"/>
       <node begin="6" cat="pp" end="9" id="10" rel="ld">
         <node begin="6" end="7" id="11" lemma="onder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="onder" vztype="init" word="onder"/>
-        <node begin="7" cat="mwu" end="9" id="12" mwu_root="Biomedisch Laboratoriumonderzoek" mwu_sense="Biomedisch Laboratoriumonderzoek" rel="obj1">
+        <node begin="7" cat="mwu" end="9" id="12" rel="obj1">
           <node begin="7" end="8" id="13" lemma="Biomedisch" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Biomedisch" spectype="deeleigen" word="Biomedisch"/>
           <node begin="8" end="9" id="14" lemma="Laboratoriumonderzoek" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Laboratoriumonderzoek" spectype="deeleigen" word="Laboratoriumonderzoek"/>
         </node>

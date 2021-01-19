@@ -13,9 +13,9 @@
           <node begin="6" cat="ssub" end="18" id="10" rel="body">
             <node begin="6" cat="np" end="9" id="11" index="1" rel="su">
               <node begin="6" end="7" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="7" cat="mwu" end="9" id="13" mwu_root="Europese Unie" mwu_sense="Europese Unie" rel="hd">
-                <node begin="7" buiging="met-e" end="8" graad="basis" id="14" lemma="Europese" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Europese" word="Europese"/>
-                <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="Unie" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Unie" word="Unie"/>
+              <node begin="7" cat="mwu" end="9" id="13" rel="hd">
+                <node begin="7" end="8" id="14" lemma="Europese" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Europese" spectype="deeleigen" word="Europese"/>
+                <node begin="8" end="9" id="15" lemma="Unie" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Unie" spectype="deeleigen" word="Unie"/>
               </node>
             </node>
             <node begin="12" end="13" id="16" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>

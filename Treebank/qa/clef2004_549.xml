@@ -9,9 +9,9 @@
         <node begin="2" cat="np" end="6" id="6" rel="su">
           <node begin="2" end="3" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
           <node begin="3" cat="mwu" end="6" id="8" rel="hd">
-            <node begin="3" buiging="met-e" end="4" graad="basis" id="9" lemma="internationaal" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Internationale" word="Internationale"/>
-            <node begin="4" buiging="met-e" end="5" graad="basis" id="10" lemma="rood" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Rode" word="Rode"/>
-            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="kruis" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Kruis" word="Kruis"/>
+            <node begin="3" end="4" id="9" lemma="Internationale" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Internationale" spectype="deeleigen" word="Internationale"/>
+            <node begin="4" end="5" id="10" lemma="Rode" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Rode" spectype="deeleigen" word="Rode"/>
+            <node begin="5" end="6" id="11" lemma="Kruis" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kruis" spectype="deeleigen" word="Kruis"/>
           </node>
         </node>
       </node>

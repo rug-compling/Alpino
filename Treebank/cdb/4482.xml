@@ -22,9 +22,9 @@
                 <node begin="9" cat="np" end="13" id="18" rel="obj1">
                   <node begin="9" end="10" id="19" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                   <node begin="10" cat="mwu" end="13" id="20" rel="hd">
-                    <node begin="10" buiging="met-e" end="11" graad="basis" id="21" lemma="internationaal" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Internationale" word="Internationale"/>
-                    <node begin="11" buiging="met-e" end="12" graad="basis" id="22" lemma="monetair" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Monetaire" word="Monetaire"/>
-                    <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="23" lemma="fonds" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Fonds" word="Fonds"/>
+                    <node begin="10" end="11" id="21" lemma="Internationale" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Internationale" spectype="deeleigen" word="Internationale"/>
+                    <node begin="11" end="12" id="22" lemma="Monetaire" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Monetaire" spectype="deeleigen" word="Monetaire"/>
+                    <node begin="12" end="13" id="23" lemma="Fonds" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Fonds" spectype="deeleigen" word="Fonds"/>
                   </node>
                 </node>
               </node>

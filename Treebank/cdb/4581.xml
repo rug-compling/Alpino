@@ -31,7 +31,7 @@
         <node begin="10" end="11" id="22" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="11" end="12" getal="mv" graad="basis" id="23" lemma="student" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="student" word="studenten"/>
         <node begin="13" cat="cp" end="18" id="24" rel="mod">
-          <node begin="13" end="14" id="25" lemma="voorzover" pos="comp" postag="BW()" pt="bw" rel="cmp" root="voorzover" word="voorzover"/>
+          <node begin="13" conjtype="onder" end="14" id="25" lemma="voorzover" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="voorzover" word="voorzover"/>
           <node begin="14" cat="ssub" end="18" id="26" rel="body">
             <node begin="14" end="15" getal="mv" id="27" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
             <node begin="15" cat="np" end="17" id="28" rel="obj1">

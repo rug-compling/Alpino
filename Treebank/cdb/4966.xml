@@ -10,13 +10,13 @@
             <node begin="2" cat="np" end="6" id="7" rel="obj1">
               <node begin="2" end="3" id="8" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
               <node begin="3" cat="mwu" end="6" id="9" rel="hd">
-                <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="10" lemma="verdrag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Verdrag" word="Verdrag"/>
-                <node begin="4" end="5" id="11" lemma="van" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+                <node begin="3" end="4" id="10" lemma="Verdrag" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Verdrag" spectype="deeleigen" word="Verdrag"/>
+                <node begin="4" end="5" id="11" lemma="van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
                 <node begin="5" end="6" id="12" lemma="Tokio" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Tokio" spectype="deeleigen" word="Tokio"/>
               </node>
             </node>
           </node>
-          <node begin="6" buiging="zonder" end="7" id="13" lemma="overeenkomen" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="hd" root="overeengekomen" word="overeengekomen" wvorm="vd"/>
+          <node begin="6" buiging="zonder" end="7" id="13" lemma="overeen_komen" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="hd" root="overeengekomen" word="overeengekomen" wvorm="vd"/>
         </node>
         <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="14" lemma="maximum" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mod" root="maximum" word="maximum"/>
         <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="straf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="straf" word="straf"/>
@@ -35,8 +35,8 @@
         <node begin="15" end="16" getal="getal" id="25" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="hd" root="hier" status="vol" vwtype="aanw" word="hier"/>
       </node>
       <node begin="16" cat="mwu" end="18" id="26" rel="predc">
-        <node begin="16" end="17" id="27" lemma="van" pos="adj" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
-        <node begin="17" end="18" id="28" lemma="kracht" pos="adj" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="kracht" spectype="deeleigen" word="kracht"/>
+        <node begin="16" end="17" id="27" lemma="van" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+        <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="28" lemma="kracht" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="kracht" word="kracht"/>
       </node>
     </node>
     <node begin="18" end="19" id="29" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>

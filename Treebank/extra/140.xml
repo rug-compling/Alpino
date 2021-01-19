@@ -2,11 +2,11 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="14" id="0" rel="top">
     <node begin="0" cat="smain" end="13" id="1" rel="--">
-      <node begin="0" cat="mwu" end="2" id="2" rel="su">
-        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="De" word="De"/>
-        <node begin="1" end="2" id="4" lemma="Stadsschouwburg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Stadsschouwburg" spectype="deeleigen" word="Stadsschouwburg"/>
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="De" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="Stadsschouwburg" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Stadsschouwburg" word="Stadsschouwburg"/>
       </node>
-      <node begin="2" end="3" id="5" lcat="p(smain)" lemma="af_sluiten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="sluit_af" word="sluit" wvorm="pv"/>
+      <node begin="2" end="3" id="5" lemma="af_sluiten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="sluit_af" word="sluit" wvorm="pv"/>
       <node begin="3" cat="np" end="5" id="6" rel="obj1">
         <node begin="3" end="4" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
         <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="8" lemma="seizoen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="seizoen" word="seizoen"/>

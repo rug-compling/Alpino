@@ -15,8 +15,8 @@
           <node begin="10" end="11" id="12" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
           <node begin="11" cat="conj" end="25" id="13" rel="obj1">
             <node begin="11" cat="mwu" end="13" id="14" rel="cnj">
-              <node begin="11" buiging="met-e" end="12" graad="basis" id="15" lemma="groot" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Grote" word="Grote"/>
-              <node begin="12" end="13" genus="zijd" getal="ev" graad="basis" id="16" lemma="markt" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Markt" word="Markt"/>
+              <node begin="11" end="12" id="15" lemma="Grote" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Grote" spectype="deeleigen" word="Grote"/>
+              <node begin="12" end="13" id="16" lemma="Markt" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Markt" spectype="deeleigen" word="Markt"/>
             </node>
             <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="17" lemma="Martinikerkhof" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Martinikerkhof" word="Martinikerkhof"/>
             <node begin="16" cat="mwu" end="18" id="18" rel="cnj">

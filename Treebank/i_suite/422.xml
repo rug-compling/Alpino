@@ -15,9 +15,9 @@
         </node>
       </node>
       <node begin="6" end="7" id="11" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
-      <node begin="7" cat="ppart" end="9" id="12" rel="predc">
+      <node begin="7" cat="ap" end="9" id="12" rel="predc">
         <node begin="7" end="8" genus="masc" getal="ev" id="13" lemma="hem" naamval="obl" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj2" root="hem" status="vol" vwtype="pers" word="hem"/>
-        <node begin="8" buiging="zonder" end="9" id="14" lemma="aangeboren" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="aangeboren" word="aangeboren" wvorm="vd"/>
+        <node begin="8" buiging="zonder" end="9" graad="basis" id="14" lemma="aangeboren" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="aangeboren" word="aangeboren"/>
       </node>
     </node>
   </node>

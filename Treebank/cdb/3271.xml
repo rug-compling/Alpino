@@ -4,7 +4,7 @@
     <node begin="11" end="12" id="1" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
     <node begin="16" end="17" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
     <node begin="0" cat="smain" end="18" id="3" rel="--">
-      <node begin="0" buiging="zonder" end="1" graad="basis" id="4" lemma="op_vallen" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="opvallend" word="Opvallend"/>
+      <node begin="0" buiging="zonder" end="1" id="4" lemma="op_vallen" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="predc" root="opvallend" word="Opvallend" wvorm="od"/>
       <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
       <node begin="2" cat="np" end="18" id="6" rel="su">
         <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>

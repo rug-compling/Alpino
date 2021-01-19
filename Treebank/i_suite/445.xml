@@ -6,7 +6,7 @@
       <node begin="1" end="2" id="3" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" word="komt" wvorm="pv"/>
       <node begin="2" buiging="zonder" end="3" graad="basis" id="4" lemma="natuurlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="natuurlijk" word="natuurlijk"/>
       <node begin="3" end="4" id="5" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-      <node begin="4" cat="mwu" end="7" id="6" mwu_root="uit de lucht" mwu_sense="uit de lucht" rel="svp">
+      <node begin="4" cat="mwu" end="7" id="6" rel="svp">
         <node begin="4" end="5" id="7" lemma="uit" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="uit" vztype="init" word="uit"/>
         <node begin="5" end="6" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="fixed" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
         <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="9" lemma="lucht" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="lucht" word="lucht"/>
