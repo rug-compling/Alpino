@@ -6,10 +6,10 @@
       <node begin="1" end="2" id="3" lemma="staan" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="sta" word="staan" wvorm="pv"/>
       <node begin="2" end="3" id="4" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
       <node begin="3" cat="pp" end="11" id="5" rel="mod">
-        <node begin="3" cat="mwu" end="7" id="6" mwu_root="aan de vooravond van" mwu_sense="aan de vooravond van" rel="hd">
+        <node begin="3" cat="mwu" end="7" id="6" rel="hd">
           <node begin="3" end="4" id="7" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="aan" vztype="init" word="aan"/>
-          <node begin="4" end="5" id="8" lemma="de" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="de" vztype="init" word="de"/>
-          <node begin="5" end="6" id="9" lemma="vooravond" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="vooravond" vztype="init" word="vooravond"/>
+          <node begin="4" end="5" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="prep" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="9" lemma="vooravond" naamval="stan" ntype="soort" pos="prep" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="vooravond" word="vooravond"/>
           <node begin="6" end="7" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
         </node>
         <node begin="7" cat="np" end="11" id="11" rel="obj1">

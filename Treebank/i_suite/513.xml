@@ -6,7 +6,7 @@
       <node begin="0" cat="sv1" end="5" id="3" rel="cnj">
         <node begin="0" end="1" id="4" lemma="houden" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="houd" word="Hou" wvorm="pv"/>
         <node begin="1" end="2" getal="mv" id="5" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj1" root="ons" status="vol" vwtype="pr" word="ons"/>
-        <node begin="2" cat="mwu" end="5" id="6" mwu_root="op de hoogte" mwu_sense="op de hoogte" rel="predc">
+        <node begin="2" cat="mwu" end="5" id="6" rel="predc">
           <node begin="2" end="3" id="7" lemma="op" pos="adj" postag="VZ(init)" pt="vz" rel="mwp" root="op" vztype="init" word="op"/>
           <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="adj" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
           <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="hoogte" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="hoogte" word="hoogte"/>

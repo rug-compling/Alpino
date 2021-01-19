@@ -14,7 +14,7 @@
         <node begin="23" buiging="met-e" end="24" graad="basis" id="11" lemma="recent" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="recent" word="recente"/>
         <node begin="25" cat="ppart" end="29" id="12" rel="mod">
           <node begin="25" cat="mwu" end="27" id="13" rel="mod">
-            <node begin="25" end="26" getal="mv" id="14" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="adv" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="mwp" root="zij" status="vol" vwtype="pers" word="zij"/>
+            <node begin="25" end="26" id="14" lemma="zijn" pos="adv" postag="WW(pv,conj,ev)" pt="ww" pvagr="ev" pvtijd="conj" rel="mwp" root="zij" word="zij" wvorm="pv"/>
             <node begin="26" end="27" genus="onz" getal="ev" id="15" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="adv" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="mwp" root="het" status="red" vwtype="pers" word="het"/>
           </node>
           <node begin="27" end="28" id="16" lemma="enigszins" pos="adv" postag="BW()" pt="bw" rel="mod" root="enigszins" word="enigszins"/>

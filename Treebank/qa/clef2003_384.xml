@@ -16,8 +16,8 @@
           <node begin="3" end="4" id="12" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
           <node begin="4" end="5" id="13" lemma="wel" pos="adv" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
           <node begin="6" cat="mwu" end="9" id="14" rel="predc">
-            <node begin="6" end="7" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="De" word="De"/>
-            <node begin="7" buiging="met-e" end="8" graad="basis" id="16" lemma="laag" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Lage" word="Lage"/>
+            <node begin="6" end="7" id="15" lemma="De" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
+            <node begin="7" end="8" id="16" lemma="Lage" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lage" spectype="deeleigen" word="Lage"/>
             <node begin="8" end="9" id="17" lemma="Landen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Landen" spectype="deeleigen" word="Landen"/>
           </node>
           <node begin="10" buiging="zonder" end="11" id="18" lemma="noemen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="noem" word="genoemd" wvorm="vd"/>

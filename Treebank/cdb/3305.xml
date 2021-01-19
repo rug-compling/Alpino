@@ -34,8 +34,8 @@
                   <node begin="15" cat="np" end="18" id="28" rel="obj1">
                     <node begin="15" end="16" id="29" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                     <node begin="16" cat="mwu" end="18" id="30" rel="hd">
-                      <node begin="16" buiging="met-e" end="17" graad="basis" id="31" lemma="één" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Eerste" word="Eerste"/>
-                      <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="32" lemma="kamer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Kamer" word="Kamer"/>
+                      <node begin="16" end="17" id="31" lemma="Eerste" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Eerste" spectype="deeleigen" word="Eerste"/>
+                      <node begin="17" end="18" id="32" lemma="Kamer" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kamer" spectype="deeleigen" word="Kamer"/>
                     </node>
                   </node>
                   <node begin="18" cat="pp" end="20" id="33" rel="mod">

@@ -22,9 +22,9 @@
             <node begin="10" cat="ti" end="16" id="17" rel="body">
               <node begin="14" end="15" id="18" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
               <node begin="10" cat="inf" end="16" id="19" rel="body">
-                <node begin="10" cat="mwu" end="12" id="20" mwu_root="terzake" mwu_sense="terzake" rel="mod">
-                  <node begin="10" end="11" id="21" lemma="te" pos="adj" postag="BW()" pt="bw" rel="mwp" root="ter" word="ter"/>
-                  <node begin="11" end="12" id="22" lemma="zake" pos="adj" postag="BW()" pt="bw" rel="mwp" root="zake" word="zake"/>
+                <node begin="10" cat="mwu" end="12" id="20" rel="mod">
+                  <node begin="10" end="11" id="21" lemma="te" pos="adj" postag="VZ(versm)" pt="vz" rel="mwp" root="ter" vztype="versm" word="ter"/>
+                  <node begin="11" end="12" getal="ev" graad="basis" id="22" lemma="zaak" naamval="dat" ntype="soort" pos="adj" postag="N(soort,ev,basis,dat)" pt="n" rel="mwp" root="zake" word="zake"/>
                 </node>
                 <node begin="12" cat="np" end="14" id="23" rel="obj1">
                   <node begin="12" buiging="met-e" end="13" id="24" lemma="enig" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="enig" vwtype="onbep" word="enige"/>

@@ -11,7 +11,7 @@
           <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="8" lemma="overste" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="overste" word="overste"/>
           <node begin="2" cat="mwu" end="4" id="9" rel="app">
             <node begin="2" end="3" id="10" lemma="S." pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="S." spectype="deeleigen" word="S."/>
-            <node begin="3" end="4" id="11" lemma="Springer" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Springer" spectype="deeleigen" word="Springer"/>
+            <node begin="3" end="4" genus="genus" getal="ev" graad="basis" id="11" lemma="Springer" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mwp" root="Springer" word="Springer"/>
           </node>
           <node begin="5" cat="np" end="17" id="12" rel="app">
             <node begin="5" end="6" id="13" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
@@ -55,7 +55,7 @@
               <node begin="25" end="26" id="42" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="26" cat="np" end="40" id="43" rel="obj1">
                 <node begin="26" end="27" id="44" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="45" lemma="oorlogssituatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oorlog_situatie" word="oorlogssituatie"/>
+                <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="45" lemma="oorlog_situatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="oorlog_situatie" word="oorlogssituatie"/>
                 <node begin="28" cat="pp" end="40" id="46" rel="mod">
                   <node begin="28" end="29" id="47" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                   <node begin="29" cat="np" end="40" id="48" rel="obj1">

@@ -13,7 +13,7 @@
           <node begin="3" buiging="zonder" end="4" getal="ev" id="10" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
           <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="11" lemma="jong" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jong" word="jong"/>
           <node begin="6" cat="cp" end="11" id="12" rel="mod">
-            <node begin="6" cat="mwu" end="8" id="13" mwu_root="zij het" mwu_sense="zij het" rel="cmp">
+            <node begin="6" cat="mwu" end="8" id="13" rel="cmp">
               <node begin="6" end="7" id="14" lemma="zijn" pos="comp" postag="WW(pv,conj,ev)" pt="ww" pvagr="ev" pvtijd="conj" rel="mwp" root="zij" word="zij" wvorm="pv"/>
               <node begin="7" end="8" genus="onz" getal="ev" id="15" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="comp" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="mwp" root="het" status="red" vwtype="pers" word="het"/>
             </node>
@@ -25,7 +25,7 @@
           </node>
         </node>
         <node begin="12" end="13" id="20" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
-        <node begin="13" cat="mwu" end="16" id="21" mwu_root="met de grond" mwu_sense="met de grond" rel="svp">
+        <node begin="13" cat="mwu" end="16" id="21" rel="svp">
           <node begin="13" end="14" id="22" lemma="met" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="met" vztype="init" word="met"/>
           <node begin="14" end="15" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="fixed" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
           <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="24" lemma="grond" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="grond" word="grond"/>

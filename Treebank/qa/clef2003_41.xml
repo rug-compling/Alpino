@@ -15,8 +15,8 @@
         <node begin="4" cat="np" end="8" id="10" rel="su">
           <node begin="4" end="5" id="11" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
           <node begin="5" cat="mwu" end="8" id="12" rel="hd">
-            <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="13" lemma="verdrag" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Verdrag" word="Verdrag"/>
-            <node begin="6" end="7" id="14" lemma="van" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+            <node begin="5" end="6" id="13" lemma="Verdrag" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Verdrag" spectype="deeleigen" word="Verdrag"/>
+            <node begin="6" end="7" id="14" lemma="van" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
             <node begin="7" end="8" id="15" lemma="Maastricht" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Maastricht" spectype="deeleigen" word="Maastricht"/>
           </node>
         </node>

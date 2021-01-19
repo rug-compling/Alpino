@@ -45,7 +45,7 @@
             <node begin="25" cat="np" end="28" id="37" rel="cnj">
               <node begin="25" buiging="met-e" end="26" graad="basis" id="38" lemma="manlijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="manlijk" word="manlijke"/>
               <node begin="26" cat="mwu" end="28" id="39" rel="hd">
-                <node begin="26" buiging="met-e" end="27" graad="basis" id="40" lemma="dol" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Dolle" word="Dolle"/>
+                <node begin="26" end="27" id="40" lemma="Dolle" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Dolle" spectype="deeleigen" word="Dolle"/>
                 <node begin="27" end="28" id="41" lemma="Mina&apos;s" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Mina&apos;s" spectype="deeleigen" word="Mina&apos;s"/>
               </node>
             </node>

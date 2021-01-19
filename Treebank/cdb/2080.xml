@@ -66,8 +66,8 @@
                     <node begin="29" cat="np" end="32" id="52" rel="obj1">
                       <node begin="29" end="30" id="53" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                       <node begin="30" cat="mwu" end="32" id="54" rel="hd">
-                        <node begin="30" buiging="zonder" end="31" graad="basis" id="55" lemma="algemeen" pos="noun" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="Algemeen" word="Algemeen"/>
-                        <node begin="31" end="32" genus="onz" getal="ev" graad="basis" id="56" lemma="dag_blad" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Dagblad" word="Dagblad"/>
+                        <node begin="30" end="31" id="55" lemma="Algemeen" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Algemeen" spectype="deeleigen" word="Algemeen"/>
+                        <node begin="31" end="32" id="56" lemma="Dagblad" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Dagblad" spectype="deeleigen" word="Dagblad"/>
                       </node>
                     </node>
                   </node>

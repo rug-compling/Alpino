@@ -8,7 +8,7 @@
         <node begin="1" end="2" id="5" lemma="gaan" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ga" word="ging" wvorm="pv"/>
         <node begin="2" cat="np" end="8" id="6" rel="su">
           <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="3" cat="mwu" end="5" id="8" mwu_root="terug_weg" mwu_sense="terug_weg" rel="hd">
+          <node begin="3" cat="mwu" end="5" id="8" rel="hd">
             <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="terug" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="terug" word="terug"/>
             <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="weg" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="weg" word="weg"/>
           </node>

@@ -11,8 +11,8 @@
           <node begin="5" cat="np" end="8" id="8" rel="obj1">
             <node begin="5" end="6" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="6" cat="mwu" end="8" id="10" rel="hd">
-              <node begin="6" buiging="met-e" end="7" id="11" lemma="verenigen" pos="name" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mwp" root="Verenigde" word="Verenigde" wvorm="vd"/>
-              <node begin="7" end="8" getal="mv" graad="basis" id="12" lemma="natie" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Naties" word="Naties"/>
+              <node begin="6" end="7" id="11" lemma="Verenigde" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Verenigde" spectype="deeleigen" word="Verenigde"/>
+              <node begin="7" end="8" id="12" lemma="Naties" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Naties" spectype="deeleigen" word="Naties"/>
             </node>
           </node>
         </node>

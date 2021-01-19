@@ -13,8 +13,8 @@
           <node begin="4" buiging="met-e" end="5" graad="basis" id="10" lemma="internationaal" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="internationaal" word="Internationale"/>
           <node begin="5" end="6" genus="genus" getal="ev" graad="basis" id="11" lemma="Schaaktoernooi" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Schaaktoernooi" word="Schaaktoernooi"/>
           <node begin="7" cat="mwu" end="10" id="12" rel="app">
-            <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="13" lemma="ciudad" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Ciudad" word="Ciudad"/>
-            <node begin="8" end="9" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="name" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+            <node begin="7" end="8" id="13" lemma="Ciudad" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ciudad" spectype="deeleigen" word="Ciudad"/>
+            <node begin="8" end="9" id="14" lemma="de" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
             <node begin="9" end="10" id="15" lemma="Pamplona" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Pamplona" spectype="deeleigen" word="Pamplona"/>
           </node>
         </node>

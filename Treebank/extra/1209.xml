@@ -2,27 +2,27 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="10" id="0" rel="top">
     <node begin="0" cat="inf" end="9" id="1" rel="--">
-      <node begin="0" end="1" genus="onz" getal="ev" id="2" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="Het"/>
-      <node begin="1" cat="mwu" end="3" his="normal" his_1="normal" id="3" mwu_root="voor lief" mwu_sense="voor lief" rel="svp">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" root="het" status="red" vwtype="pers" word="Het"/>
+      <node begin="1" cat="mwu" end="3" id="3" rel="svp">
         <node begin="1" end="2" id="4" lemma="voor" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="voor" vztype="init" word="voor"/>
-        <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="lief" pos="fixed" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="lief" word="lief"/>
+        <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="lief" pos="fixed" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="lief" word="lief"/>
       </node>
-      <node begin="3" buiging="zonder" end="4" id="6" infl="inf" lemma="nemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem" sc="fixed([[voor,lief],acc],norm_passive)" word="nemen" wvorm="inf"/>
+      <node begin="3" buiging="zonder" end="4" id="6" lemma="nemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem" word="nemen" wvorm="inf"/>
       <node begin="4" cat="pp" end="9" id="7" rel="mod">
         <node begin="4" end="5" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
         <node begin="5" cat="np" end="9" id="9" rel="obj1">
           <node begin="5" cat="ap" end="8" id="10" rel="mod">
             <node begin="5" cat="pp" end="7" id="11" rel="mod">
               <node begin="5" end="6" id="12" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-              <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="13" lemma="prof_voetbal" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="prof_voetbal" word="profvoetbal"/>
+              <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="13" lemma="prof_voetbal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="prof_voetbal" word="profvoetbal"/>
             </node>
-            <node aform="base" begin="7" buiging="met-e" end="8" graad="basis" id="14" infl="e" lemma="onwaardig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="onwaardig" vform="adj" word="onwaardige"/>
+            <node begin="7" buiging="met-e" end="8" graad="basis" id="14" lemma="onwaardig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="onwaardig" word="onwaardige"/>
           </node>
-          <node begin="8" end="9" gen="de" genus="zijd" getal="ev" graad="basis" id="15" lemma="accommodatie" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="accommodatie" word="accommodatie"/>
+          <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="15" lemma="accommodatie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="accommodatie" word="accommodatie"/>
         </node>
       </node>
     </node>
-    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Het voor lief nemen van voor profvoetbal onwaardige accommodatie .</sentence>
 </alpino_ds>

@@ -12,7 +12,7 @@
         <node begin="1" cat="pp" end="4" id="9" rel="mod">
           <node begin="1" end="2" id="10" lemma="om" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="om" vztype="init" word="om"/>
           <node begin="2" cat="mwu" end="4" id="11" rel="obj1">
-            <node begin="2" end="3" id="12" lemma="4" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="4" word="4"/>
+            <node begin="2" end="3" id="12" lemma="4" naamval="stan" numtype="hoofd" pos="noun" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="4" word="4"/>
             <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="13" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="uur" word="uur"/>
           </node>
         </node>
@@ -56,8 +56,8 @@
               <node begin="22" end="23" id="42" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
               <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="43" lemma="ontspanning_gebouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="gebouw" word="ontspanningsgebouw"/>
               <node begin="25" cat="mwu" end="27" id="44" rel="app">
-                <node begin="25" end="26" id="45" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="De" word="De"/>
-                <node begin="26" end="27" id="46" lemma="Slof" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Slof" spectype="deeleigen" word="Slof"/>
+                <node begin="25" end="26" id="45" lemma="De" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="De" spectype="deeleigen" word="De"/>
+                <node begin="26" end="27" id="46" lemma="Slof" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Slof" spectype="deeleigen" word="Slof"/>
               </node>
               <node begin="29" cat="np" end="35" id="47" rel="app">
                 <node begin="29" end="30" genus="onz" getal="ev" graad="basis" id="48" lemma="toevluchtsoord" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="toevluchtsoord" word="toevluchtsoord"/>

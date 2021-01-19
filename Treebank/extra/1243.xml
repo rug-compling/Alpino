@@ -8,7 +8,7 @@
         <node begin="2" end="3" id="5" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
         <node begin="3" cat="np" end="6" id="6" rel="obj1">
           <node begin="3" end="4" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="4" cat="mwu" end="6" id="8" mwu_root="Verenigde Naties" mwu_sense="Verenigde Naties" rel="hd">
+          <node begin="4" cat="mwu" end="6" id="8" rel="hd">
             <node begin="4" end="5" id="9" lemma="Verenigde" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Verenigde" spectype="deeleigen" word="Verenigde"/>
             <node begin="5" end="6" id="10" lemma="Naties" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Naties" spectype="deeleigen" word="Naties"/>
           </node>
@@ -19,9 +19,9 @@
         <node begin="7" cat="ti" end="12" id="13" rel="body">
           <node begin="10" end="11" id="14" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
           <node begin="7" cat="inf" end="12" id="15" rel="body">
-            <node begin="7" cat="mwu" end="9" id="16" mwu_root="terzake" mwu_sense="terzake" rel="mod">
-              <node begin="7" end="8" id="17" lemma="te" pos="adj" postag="BW()" pt="bw" rel="mwp" root="ter" word="ter"/>
-              <node begin="8" end="9" id="18" lemma="zake" pos="adj" postag="BW()" pt="bw" rel="mwp" root="zake" word="zake"/>
+            <node begin="7" cat="mwu" end="9" id="16" rel="mod">
+              <node begin="7" end="8" id="17" lemma="te" pos="adj" postag="VZ(versm)" pt="vz" rel="mwp" root="ter" vztype="versm" word="ter"/>
+              <node begin="8" end="9" getal="ev" graad="basis" id="18" lemma="zaak" naamval="dat" ntype="soort" pos="adj" postag="N(soort,ev,basis,dat)" pt="n" rel="mwp" root="zake" word="zake"/>
             </node>
             <node begin="9" end="10" getal="mv" graad="basis" id="19" lemma="beslissing" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="beslissing" word="beslissingen"/>
             <node begin="11" buiging="zonder" end="12" id="20" lemma="nemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem" word="nemen" wvorm="inf"/>

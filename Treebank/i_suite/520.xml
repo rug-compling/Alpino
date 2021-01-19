@@ -7,7 +7,7 @@
       <node begin="0" cat="ppart" end="19" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="su"/>
         <node begin="2" end="3" id="6" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
-        <node begin="3" cat="mwu" end="5" id="7" mwu_root="te weten" mwu_sense="te weten" rel="svp">
+        <node begin="3" cat="mwu" end="5" id="7" rel="svp">
           <node begin="3" end="4" id="8" lemma="te" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="te" vztype="init" word="te"/>
           <node begin="4" buiging="zonder" end="5" id="9" lemma="weten" pos="fixed" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="mwp" root="weten" word="weten" wvorm="inf"/>
         </node>
@@ -17,7 +17,7 @@
           <node begin="6" cat="ssub" end="19" id="13" rel="body">
             <node begin="6" end="7" id="14" index="2" rel="mod"/>
             <node begin="7" cat="conj" end="12" id="15" rel="su">
-              <node begin="7" cat="mwu" end="9" id="16" mwu_root="Van Siska" mwu_sense="Van Siska" rel="cnj">
+              <node begin="7" cat="mwu" end="9" id="16" rel="cnj">
                 <node begin="7" end="8" id="17" lemma="Van" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Van" spectype="deeleigen" word="Van"/>
                 <node begin="8" end="9" id="18" lemma="Siska" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Siska" spectype="deeleigen" word="Siska"/>
               </node>
@@ -35,7 +35,7 @@
                 <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="28" lemma="Javastraat" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Javastraat" word="Javastraat"/>
               </node>
             </node>
-            <node begin="16" cat="mwu" end="18" id="29" mwu_root="te werk" mwu_sense="te werk" rel="svp">
+            <node begin="16" cat="mwu" end="18" id="29" rel="svp">
               <node begin="16" end="17" id="30" lemma="te" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="te" vztype="init" word="te"/>
               <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="31" lemma="werk" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="werk" word="werk"/>
             </node>

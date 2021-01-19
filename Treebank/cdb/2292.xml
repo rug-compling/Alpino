@@ -12,7 +12,7 @@
           <node begin="4" cat="np" end="9" id="9" rel="obj1">
             <node begin="4" end="5" id="10" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
             <node begin="5" cat="mwu" end="7" id="11" rel="hd">
-              <node begin="5" buiging="zonder" end="6" graad="basis" id="12" lemma="academisch" pos="noun" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="Academisch" word="Academisch"/>
+              <node begin="5" end="6" id="12" lemma="Academisch" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Academisch" spectype="deeleigen" word="Academisch"/>
               <node begin="6" end="7" id="13" lemma="Ziekenhuis" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Ziekenhuis" spectype="deeleigen" word="Ziekenhuis"/>
             </node>
             <node begin="7" cat="pp" end="9" id="14" rel="mod">

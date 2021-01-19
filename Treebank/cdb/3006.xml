@@ -71,9 +71,9 @@
                   <node begin="35" cat="pp" end="39" id="56" rel="mod">
                     <node begin="35" end="36" id="57" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                     <node begin="36" cat="mwu" end="39" id="58" rel="obj1">
-                      <node begin="36" end="37" id="59" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="noun" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="Het" word="Het"/>
-                      <node begin="37" buiging="met-e" end="38" graad="basis" id="60" lemma="vrij" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Vrije" word="Vrije"/>
-                      <node begin="38" end="39" genus="zijd" getal="ev" graad="basis" id="61" lemma="volk" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Volk" word="Volk"/>
+                      <node begin="36" end="37" id="59" lemma="Het" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Het" spectype="deeleigen" word="Het"/>
+                      <node begin="37" end="38" id="60" lemma="Vrije" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Vrije" spectype="deeleigen" word="Vrije"/>
+                      <node begin="38" end="39" id="61" lemma="Volk" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Volk" spectype="deeleigen" word="Volk"/>
                     </node>
                   </node>
                 </node>

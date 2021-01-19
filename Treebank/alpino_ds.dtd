@@ -3,6 +3,8 @@
 <!-- Alpino Dependency Structures DTD -->
 
 <!--
+Versie 1.13 mwu_sense and mwu_root are gone, no longer used
+
 Versie 1.12 per 16 september 2020
 
  - sonar_ne_class, sonar_ne_begin, sonar_ne_end, sonar_ne
@@ -258,9 +260,6 @@ recursion_limit CDATA			#IMPLIED
 	  id		CDATA	#IMPLIED
 
 	  %nodeattr;
-
-	  mwu_root	CDATA	#IMPLIED
-	  mwu_sense	CDATA	#IMPLIED
 
 	  sense		CDATA	#IMPLIED
 	  lcat		CDATA	#IMPLIED

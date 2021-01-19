@@ -16,14 +16,14 @@
               <node begin="4" end="5" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="5" cat="np" end="8" id="13" rel="obj1">
                 <node begin="5" end="6" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="6" cat="mwu" end="8" id="15" mwu_root="Europese Unie" mwu_sense="Europese Unie" rel="hd">
-                  <node begin="6" buiging="met-e" end="7" graad="basis" id="16" lemma="Europese" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Europese" word="Europese"/>
-                  <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="17" lemma="Unie" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Unie" word="Unie"/>
+                <node begin="6" cat="mwu" end="8" id="15" rel="hd">
+                  <node begin="6" end="7" id="16" lemma="Europese" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Europese" spectype="deeleigen" word="Europese"/>
+                  <node begin="7" end="8" id="17" lemma="Unie" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Unie" spectype="deeleigen" word="Unie"/>
                 </node>
               </node>
             </node>
           </node>
-          <node begin="9" cat="mwu" end="11" id="18" mwu_root="nieuw leven" mwu_sense="nieuw leven" rel="svp">
+          <node begin="9" cat="mwu" end="11" id="18" rel="svp">
             <node begin="9" buiging="zonder" end="10" graad="basis" id="19" lemma="nieuw" pos="fixed" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="nieuw" word="nieuw"/>
             <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="20" lemma="leven" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="leven" word="leven"/>
           </node>

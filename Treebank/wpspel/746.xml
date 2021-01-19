@@ -24,7 +24,7 @@
         </node>
       </node>
       <node begin="10" cat="mwu" end="22" id="18" rel="nucl">
-        <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="19" lemma="i" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="I" word="I"/>
+        <node begin="10" end="11" id="19" lemma="I" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="I" spectype="vreemd" word="I"/>
         <node begin="11" end="12" id="20" lemma="ate" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="ate" spectype="vreemd" word="ate"/>
         <node begin="12" end="13" id="21" lemma="his" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="his" spectype="vreemd" word="his"/>
         <node begin="13" end="14" id="22" lemma="liver" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="liver" spectype="vreemd" word="liver"/>
@@ -35,7 +35,7 @@
         <node begin="18" end="19" id="27" lemma="and" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="and" spectype="vreemd" word="and"/>
         <node begin="19" end="20" id="28" lemma="a" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="a" spectype="vreemd" word="a"/>
         <node begin="20" end="21" id="29" lemma="nice" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="nice" spectype="vreemd" word="nice"/>
-        <node begin="21" end="22" id="30" lemma="Chianti" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Chianti" spectype="deeleigen" word="Chianti"/>
+        <node begin="21" end="22" id="30" lemma="Chianti" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Chianti" spectype="vreemd" word="Chianti"/>
       </node>
     </node>
     <node begin="22" end="23" id="31" lemma="&apos;" pos="punct" postag="LET()" pt="let" rel="--" root="&apos;" word="&apos;"/>

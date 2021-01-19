@@ -52,7 +52,7 @@
             <node begin="24" end="25" id="40" lemma="acht" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="acht" word="acht"/>
             <node begin="25" end="26" getal="mv" graad="basis" id="41" lemma="maand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="maand" word="maanden"/>
             <node begin="26" cat="np" end="28" id="42" rel="mod">
-              <node begin="26" buiging="met-e" end="27" graad="basis" id="43" lemma="in_grijpen" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="ingrijpend" word="ingrijpende"/>
+              <node begin="26" buiging="met-e" end="27" id="43" lemma="in_grijpen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="ingrijpend" word="ingrijpende" wvorm="od"/>
               <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="44" lemma="verbouwing" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="verbouwing" word="verbouwing"/>
             </node>
           </node>

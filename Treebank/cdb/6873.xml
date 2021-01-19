@@ -7,8 +7,8 @@
         <node begin="1" end="2" id="4" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
         <node begin="2" cat="np" end="6" id="5" rel="obj1">
           <node begin="2" cat="mwu" end="4" id="6" rel="hd">
-            <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="noun" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
-            <node begin="3" end="4" id="8" lemma="Doelen" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Doelen" spectype="deeleigen" word="Doelen"/>
+            <node begin="2" end="3" id="7" lemma="de" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+            <node begin="3" end="4" id="8" lemma="Doelen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Doelen" spectype="deeleigen" word="Doelen"/>
           </node>
           <node begin="4" cat="pp" end="6" id="9" rel="mod">
             <node begin="4" end="5" id="10" lemma="te" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="te" vztype="init" word="te"/>

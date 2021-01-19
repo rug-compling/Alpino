@@ -77,7 +77,7 @@
         <node begin="34" cat="conj" end="50" id="57" rel="mod">
           <node begin="34" end="35" id="58" lemma="zowel" pos="vg" postag="BW()" pt="bw" rel="crd" root="zowel" word="zowel"/>
           <node begin="35" cat="cp" end="41" id="59" rel="cnj">
-            <node begin="35" end="36" id="60" lemma="voorzover" pos="comp" postag="BW()" pt="bw" rel="cmp" root="voorzover" word="voorzover"/>
+            <node begin="35" conjtype="onder" end="36" id="60" lemma="voorzover" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="voorzover" word="voorzover"/>
             <node begin="36" cat="ssub" end="41" id="61" rel="body">
               <node begin="36" end="37" getal="mv" id="62" lemma="zij" naamval="nomin" pdtype="pron" persoon="3p" pos="noun" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="su" root="zij" status="vol" vwtype="pers" word="zij"/>
               <node begin="37" buiging="zonder" end="38" graad="basis" id="63" lemma="gezamenlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predm" root="gezamenlijk" word="gezamenlijk"/>

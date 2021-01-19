@@ -9,7 +9,7 @@
         <node begin="3" cat="pp" end="14" id="6" rel="mod">
           <node begin="3" end="4" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="4" cat="np" end="14" id="8" rel="obj1">
-            <node begin="4" cat="mwu" end="6" id="9" mwu_root="Eddy Verheyden" mwu_sense="Eddy Verheyden" rel="hd">
+            <node begin="4" cat="mwu" end="6" id="9" rel="hd">
               <node begin="4" end="5" id="10" lemma="Eddy" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Eddy" spectype="deeleigen" word="Eddy"/>
               <node begin="5" end="6" id="11" lemma="Verheyden" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Verheyden" spectype="deeleigen" word="Verheyden"/>
             </node>
@@ -26,7 +26,7 @@
                 </node>
                 <node begin="7" cat="pp" end="13" id="21" rel="ld">
                   <node begin="7" end="8" getal="getal" id="22" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
-                  <node begin="11" cat="mwu" end="13" id="23" mwu_root="van tussenuit" mwu_sense="van tussenuit" rel="hd">
+                  <node begin="11" cat="mwu" end="13" id="23" rel="hd">
                     <node begin="11" end="12" id="24" lemma="van" pos="prep" postag="VZ(fin)" pt="vz" rel="mwp" root="van" vztype="fin" word="van"/>
                     <node begin="12" end="13" id="25" lemma="tussenuit" pos="prep" postag="VZ(fin)" pt="vz" rel="mwp" root="tussenuit" vztype="fin" word="tussenuit"/>
                   </node>

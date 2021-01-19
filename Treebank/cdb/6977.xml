@@ -11,8 +11,8 @@
       <node begin="3" cat="np" end="6" id="7" index="1" rel="obj2">
         <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="4" cat="mwu" end="6" id="9" rel="hd">
-          <node begin="4" buiging="met-e" end="5" graad="basis" id="10" lemma="één" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Eerste" word="Eerste"/>
-          <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="kamer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Kamer" word="Kamer"/>
+          <node begin="4" end="5" id="10" lemma="Eerste" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Eerste" spectype="deeleigen" word="Eerste"/>
+          <node begin="5" end="6" id="11" lemma="Kamer" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Kamer" spectype="deeleigen" word="Kamer"/>
         </node>
       </node>
       <node begin="6" cat="pp" end="8" id="12" rel="mod">

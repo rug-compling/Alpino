@@ -4,7 +4,7 @@
     <node begin="0" cat="smain" end="4" id="1" rel="--">
       <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="Henk" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Henk" word="Henk"/>
       <node begin="1" end="2" id="3" lemma="reizen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="reis" word="reist" wvorm="pv"/>
-      <node begin="2" cat="mwu" end="4" id="4" mwu_root="eerste klas" mwu_sense="eerste klas" rel="mod">
+      <node begin="2" cat="mwu" end="4" id="4" rel="mod">
         <node begin="2" buiging="zonder" end="3" graad="basis" id="5" lemma="één" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="eerste" word="eerste"/>
         <node begin="3" buiging="zonder" end="4" graad="basis" id="6" lemma="klas" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="klas" word="klas"/>
       </node>

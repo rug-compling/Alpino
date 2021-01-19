@@ -9,8 +9,8 @@
         <node begin="2" cat="np" end="6" id="6" rel="su">
           <node begin="2" end="3" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
           <node begin="3" cat="mwu" end="6" id="8" rel="hd">
-            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="verdrag" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Verdrag" word="Verdrag"/>
-            <node begin="4" end="5" id="10" lemma="van" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+            <node begin="3" end="4" id="9" lemma="Verdrag" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Verdrag" spectype="deeleigen" word="Verdrag"/>
+            <node begin="4" end="5" id="10" lemma="van" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
             <node begin="5" end="6" id="11" lemma="Londen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Londen" spectype="deeleigen" word="Londen"/>
           </node>
         </node>
