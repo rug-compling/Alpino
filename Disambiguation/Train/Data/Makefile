@@ -53,12 +53,12 @@ cgz=c_part00001.cgz c_part00002.cgz c_part00003.cgz c_part00004.cgz c_part00005.
 pc.gz: $(cgz)
 	zcat $(cgz) | gzip > pc.gz
 
-pgz=p_part0001.pgz p_part0002.pgz p_part0003.pgz p_part0004.pgz p_part0005.pgz p_part0006.pgz p_part0007.pgz p_part0008.pgz p_part0009.pgz p_part00010.pgz p_part00011.pgz p_part00012.pgz p_part00013.pgz p_part00014.pgz p_part00015.pgz p_part00016.pgz p_part00017.pgz p_part00018.pgz p_part00019.pgz p_part00020.pgz p_part00021.pgz p_part00022.pgz p_part00023.pgz p_part00024.pgz p_part00025.pgz p_part00026.pgz p_part00027.pgz p_part00028.pgz p_part00029.pgz
+pgz=p_part00001.pgz p_part00002.pgz p_part00003.pgz p_part00004.pgz p_part00005.pgz p_part00006.pgz p_part00007.pgz p_part00008.pgz p_part00009.pgz p_part00010.pgz p_part00011.pgz p_part00012.pgz p_part00013.pgz p_part00014.pgz p_part00015.pgz p_part00016.pgz p_part00017.pgz p_part00018.pgz p_part00019.pgz p_part00020.pgz p_part00021.pgz p_part00022.pgz p_part00023.pgz
 
 pp.gz: $(pgz)
 	zcat $(pgz) | gzip > pp.gz
 
-dgz=d_part0001.dgz d_part0002.dgz d_part0003.dgz d_part0004.dgz d_part0005.dgz d_part0006.dgz d_part0007.dgz d_part0008.dgz d_part0009.dgz d_part00010.dgz d_part00011.dgz d_part00012.dgz d_part00013.dgz d_part00014.dgz d_part00015.dgz d_part00016.dgz d_part00017.dgz d_part00018.dgz d_part00019.dgz d_part00020.dgz d_part00021.dgz
+dgz=d_part00001.dgz d_part00002.dgz d_part00003.dgz d_part00004.dgz d_part00005.dgz d_part00006.dgz d_part00007.dgz d_part00008.dgz d_part00009.dgz d_part00010.dgz d_part00011.dgz d_part00012.dgz d_part00013.dgz d_part00014.dgz d_part00015.dgz d_part00016.dgz d_part00017.dgz d_part00018.dgz d_part00019.dgz d_part00020.dgz d_part00021.dgz
 
 pd.gz: $(dgz) 
 	zcat $(dgz) | gzip > pd.gz
@@ -73,7 +73,7 @@ igz=i_part00001.igz i_part00002.igz i_part00003.igz i_part00004.igz i_part00005.
 pi.gz: $(igz)
 	zcat $(igz) | gzip > pi.gz
 
-xgz=x_part00001.xgz x_part00002.xgz x_part00003.xgz x_part00004.xgz x_part00005.xgz x_part00006.xgz x_part00007.xgz x_part00008.xgz x_part00009.xgz x_part00010.xgz x_part00011.xgz x_part00012.xgz x_part00013.xgz x_part00014.xgz
+xgz=x_part00001.xgz x_part00002.xgz x_part00003.xgz x_part00004.xgz x_part00005.xgz x_part00006.xgz x_part00007.xgz x_part00008.xgz x_part00009.xgz x_part00010.xgz x_part00011.xgz x_part00012.xgz x_part00013.xgz x_part00014.xgz x_part00015.xgz x_part00016.xgz x_part00017.xgz 
 
 px.gz: $(xgz)
 	zcat $(xgz) | gzip > px.gz

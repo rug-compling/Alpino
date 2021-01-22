@@ -95,13 +95,17 @@ $lc_n=0;
 $lb_score=0;
 $lc_score=0;
 $counter=0;
+$lc_cgn=0;       # number correct lemma of current best
+$lc_total_cgn=0; # number total lemma of current best
+$t_cgn=0;        # summed correct lemma of all best
+$t_total_cgn=0;  # summed total lemma of all best
 
 while(<>) {
   next if /^[%\#]/;
   next if !/\|/;
   chomp;
   ($key,undef,$triple,$pairs) = split/\#/;
-  ($overlap,$correct,$system) = split/\|/,$triple;
+  ($overlap,$correct,$system,$cgn,$cgn_total) = split/\|/,$triple;
   
   $this_weight=weight($pairs);
   $this_pen=pen($overlap,$correct,$system);
@@ -122,6 +126,8 @@ while(<>) {
 	  $lc_overlap=$overlap;
 	  $lc_correct=$correct;
 	  $lc_system=$system;
+	  $lc_cgn=$cgn;
+	  $lc_total_cgn=$cgn_total;
       }
       if ($this_score > $lb_score) {
           $lb_score=$this_score;
@@ -141,9 +147,12 @@ while(<>) {
       $f_overlap += $overlap;
       $f_correct += $correct;
       $f_system += $system;
-
+      
       if (defined $prevkey) {
 
+	  $t_cgn += $lc_cgn;
+	  $t_total_cgn += $lc_total_cgn;
+	  
 	  $c_pen += $lc_pen;
 	  $c_n += $lc_n;
 	  $c_av+=score($lc_pen,$lc_n);
@@ -168,8 +177,8 @@ while(<>) {
 
       if ($opt_d && $prevkey) {
 	  $c_score=score($c_pen,$c_n);
-	  printf STDERR "\t%s test-score\t%.2f\t(%.2f) (exact: %.2f)\n",
-	          $prevkey,$lc_score,$c_score,$exact/$counter ;
+	  printf STDERR "\t%s test-score\t%6.2f\t(%6.2f) (exact: %6.2f)\t lemma/pos-score\t%6.2f\t(%6.2f)\n",
+             $prevkey,$lc_score,$c_score,$exact/$counter,100*$lc_cgn/$lc_total_cgn,100*$t_cgn/$t_total_cgn;
       }
       if ($opt_r && $prevkey) {
 	  print "$prevkey\t$lc_pen\t$lc_n\n";
@@ -179,6 +188,8 @@ while(<>) {
       $lc_n = $this_n;
       $lc_pen = $this_pen;
       $lc_score = $this_score;
+      $lc_cgn = $cgn;
+      $lc_total_cgn= $cgn_total;
 
       $lb_n = $this_n;
       $lb_pen = $this_pen;
@@ -196,6 +207,9 @@ while(<>) {
   }
   $prevkey = $key;
 }
+
+$t_cgn += $lc_cgn;
+$t_total_cgn += $lc_total_cgn;
 
 $c_pen += $lc_pen;
 $c_n += $lc_n;
@@ -223,8 +237,8 @@ $c_system += $lc_system;
 if ($opt_d && $prevkey) {
     $c_score=score($c_pen,$c_n);
     $lc_score=score($lc_pen,$lc_n);
-	  printf STDERR "\t%s test-score\t%.2f\t(%.2f) (exact: %.2f)\n",
-	          $prevkey,$lc_score,$c_score,$exact/$counter ;
+	  printf STDERR "\t%s test-score\t%6.2f\t(%6.2f) (exact: %6.2f)\t lemma/pos-score\t%6.2f\t(%6.2f)\n",
+            $prevkey,$lc_score,$c_score,$exact/$counter,100*$lc_cgn/$lc_total_cgn,100*$t_cgn/$t_total_cgn;
 }
 
 if ($opt_r) {
@@ -246,11 +260,11 @@ if ($b_average != $f_average) {
 
 if (!$opt_r) {
   print "\n";
-  printf "exact %.2f\n",$exact/$counter;
-  printf "first-score %.2f %.2f\n", $f_score,$f_average;
-  printf "best-score  %.2f %.2f\n", $b_score,$b_average;
-  printf "test-score  %.2f %.2f\n", $c_score,$c_average;
-  printf "phi-score   %.2f %.2f\n", $kappa,$kappa_av;
+  printf "exact %6.2f\n",$exact/$counter;
+  printf "first-score %6.2f %6.2f\n", $f_score,$f_average;
+  printf "best-score  %6.2f %6.2f\n", $b_score,$b_average;
+  printf "test-score  %6.2f %6.2f\n", $c_score,$c_average;
+  printf "phi-score   %6.2f %6.2f\n", $kappa,$kappa_av;
   printf "first-p/m:  %s     %s\n", $f_pen, $f_n;
   printf "best-p/m:   %s     %s\n", $b_pen, $b_n; 
   printf "test-p/m:   %s     %s\n", $c_pen, $c_n;
@@ -271,23 +285,25 @@ if (!$opt_r) {
   $f_precision=100*$f_overlap/$f_system;
   $f_recall=100*$f_overlap/$f_correct;
   $f_fscore=(2*$f_precision*$f_recall)/($f_precision+$f_recall);
-  printf "first-precision  %.2f\n",$f_precision;
-  printf "first-recall     %.2f\n",$f_recall;
-  printf "first-fscore     %.2f\n",$f_fscore;
+  printf "first-precision  %6.2f\n",$f_precision;
+  printf "first-recall     %6.2f\n",$f_recall;
+  printf "first-fscore     %6.2f\n",$f_fscore;
 
   $b_precision=100*$b_overlap/$b_system;
   $b_recall=100*$b_overlap/$b_correct;
   $b_fscore=(2*$b_precision*$b_recall)/($b_precision+$b_recall);
-  printf "best-precision   %.2f\n",$b_precision;
-  printf "best-recall      %.2f\n",$b_recall;
-  printf "best-fscore      %.2f\n",$b_fscore;
+  printf "best-precision   %6.2f\n",$b_precision;
+  printf "best-recall      %6.2f\n",$b_recall;
+  printf "best-fscore      %6.2f\n",$b_fscore;
 
   $c_precision=100*$c_overlap/$c_system;
   $c_recall=100*$c_overlap/$c_correct;
   $c_fscore=(2*$c_precision*$c_recall)/($c_precision+$c_recall);
-  printf "test-precision   %.2f\n",$c_precision;
-  printf "test-recall      %.2f\n",$c_recall;
-  printf "test-fscore      %.2f\n",$c_fscore;
+  printf "test-precision   %6.2f\n",$c_precision;
+  printf "test-recall      %6.2f\n",$c_recall;
+  printf "test-fscore      %6.2f\n",$c_fscore;
+
+  printf "lemma/pos-score  %6.2f\n",100*$t_cgn/$t_total_cgn;
 
 }
 
