@@ -31,9 +31,9 @@
       <node begin="11" cat="conj" end="36" id="22" rel="sat">
         <node begin="11" cat="np" end="23" id="23" rel="cnj">
           <node begin="11" cat="mwu" end="14" id="24" rel="hd">
-            <node begin="11" end="12" id="25" lemma="Ode" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Ode" spectype="vreemd" word="Ode"/>
+            <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="25" lemma="ode" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Ode" word="Ode"/>
             <node begin="12" end="13" id="26" lemma="aan" pos="noun" postag="VZ(init)" pt="vz" rel="mwp" root="aan" vztype="init" word="aan"/>
-            <node begin="13" end="14" id="27" lemma="Napoleon" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Napoleon" spectype="deeleigen" word="Napoleon"/>
+            <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="27" lemma="Napoleon" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Napoleon" word="Napoleon"/>
           </node>
           <node begin="14" cat="pp" end="20" id="28" rel="mod">
             <node begin="14" end="15" id="29" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>

@@ -2,24 +2,24 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="13" id="0" rel="top">
     <node begin="0" cat="smain" end="12" id="1" rel="--">
-      <node begin="0" end="1" id="2" lemma="ze" pos="vnw" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" vwtype="pers" pdtype="pron" naamval="stan" status="red" persoon="3" getal="ev" genus="fem" rel="su" word="Ze"/>
-      <node begin="1" end="2" id="3" lemma="pakken" pos="ww" postag="WW(pv,verl,ev)" pt="ww" wvorm="pv" pvtijd="verl" pvagr="ev" rel="hd" word="pakte"/>
-      <node begin="2" end="3" id="4" lemma="voorzichtig" pos="adj" postag="ADJ(vrij,basis,zonder)" pt="adj" positie="vrij" graad="basis" buiging="zonder" rel="mod" word="voorzichtig"/>
+      <node begin="0" end="1" genus="fem" getal="ev" id="2" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="vnw" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" status="red" vwtype="pers" word="Ze"/>
+      <node begin="1" end="2" id="3" lemma="pakken" pos="ww" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" word="pakte" wvorm="pv"/>
+      <node begin="2" buiging="zonder" end="3" graad="basis" id="4" lemma="voorzichtig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" word="voorzichtig"/>
       <node begin="3" cat="np" end="9" id="5" rel="obj1">
         <node begin="3" cat="mwu" end="8" id="6" rel="det">
-          <node begin="3" end="4" id="7" lemma="de" pos="lid" postag="LID(bep,stan,rest)" pt="lid" lwtype="bep" naamval="stan" npagr="rest" rel="mwp" word="de"/>
-          <node begin="4" end="5" id="8" lemma="ene" pos="vnw" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" vwtype="onbep" pdtype="det" naamval="stan" positie="prenom" buiging="met-e" npagr="evz" rel="mwp" word="ene"/>
-          <node begin="5" end="6" id="9" lemma="na" pos="vz" postag="VZ(init)" pt="vz" vztype="init" rel="mwp" word="na"/>
-          <node begin="6" end="7" id="10" lemma="de" pos="lid" postag="LID(bep,stan,rest)" pt="lid" lwtype="bep" naamval="stan" npagr="rest" rel="mwp" word="de"/>
-          <node begin="7" end="8" id="11" lemma="andere" pos="adj" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" positie="prenom" graad="basis" buiging="met-e" naamval="stan" rel="mwp" word="andere"/>
+          <node begin="3" end="4" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="lid" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" word="de"/>
+          <node begin="4" buiging="met-e" end="5" id="8" lemma="een" naamval="stan" npagr="evz" pdtype="det" pos="vnw" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="mwp" vwtype="onbep" word="ene"/>
+          <node begin="5" end="6" id="9" lemma="na" pos="vz" postag="VZ(init)" pt="vz" rel="mwp" vztype="init" word="na"/>
+          <node begin="6" end="7" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="lid" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" word="de"/>
+          <node begin="7" buiging="met-e" end="8" graad="basis" id="11" lemma="ander" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" word="andere"/>
         </node>
-        <node begin="8" end="9" id="12" lemma="herinnering" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" ntype="soort" getal="ev" graad="basis" genus="zijd" naamval="stan" rel="hd" word="herinnering"/>
+        <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="12" lemma="herinnering" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" word="herinnering"/>
       </node>
       <node begin="9" cat="pp" end="12" id="13" rel="ld">
-        <node begin="9" end="10" id="14" lemma="uit" pos="vz" postag="VZ(init)" pt="vz" vztype="init" rel="hd" word="uit"/>
+        <node begin="9" end="10" id="14" lemma="uit" pos="vz" postag="VZ(init)" pt="vz" rel="hd" vztype="init" word="uit"/>
         <node begin="10" cat="np" end="12" id="15" rel="obj1">
-          <node begin="10" end="11" id="16" lemma="de" pos="lid" postag="LID(bep,stan,rest)" pt="lid" lwtype="bep" naamval="stan" npagr="rest" rel="det" word="de"/>
-          <node begin="11" end="12" id="17" lemma="kist" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" ntype="soort" getal="ev" graad="basis" genus="zijd" naamval="stan" rel="hd" word="kist"/>
+          <node begin="10" end="11" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="lid" postag="LID(bep,stan,rest)" pt="lid" rel="det" word="de"/>
+          <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="17" lemma="kist" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" word="kist"/>
         </node>
       </node>
     </node>

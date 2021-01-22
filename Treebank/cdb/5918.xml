@@ -11,11 +11,11 @@
         <node begin="4" cat="pp" end="10" id="8" rel="mod">
           <node begin="4" end="5" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="5" cat="mwu" end="10" id="10" rel="obj1">
-            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="11" lemma="shell" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Shell" word="Shell"/>
+            <node begin="5" end="6" id="11" lemma="Shell" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Shell" spectype="deeleigen" word="Shell"/>
             <node begin="6" end="7" id="12" lemma="Transport" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Transport" spectype="deeleigen" word="Transport"/>
-            <node begin="7" end="8" id="13" lemma="and" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="and" spectype="vreemd" word="and"/>
-            <node begin="8" end="9" id="14" lemma="Trading" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Trading" spectype="vreemd" word="Trading"/>
-            <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="15" lemma="co" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="co" word="co"/>
+            <node begin="7" end="8" id="13" lemma="and" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="and" spectype="deeleigen" word="and"/>
+            <node begin="8" end="9" id="14" lemma="Trading" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Trading" spectype="deeleigen" word="Trading"/>
+            <node begin="9" end="10" id="15" lemma="co" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="co" spectype="deeleigen" word="co"/>
           </node>
         </node>
         <node begin="11" cat="mwu" end="13" id="16" rel="app">

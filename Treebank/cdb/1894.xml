@@ -48,8 +48,8 @@
                           <node begin="24" buiging="met-e" end="25" graad="basis" id="41" lemma="klein" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="klein" word="kleine"/>
                           <node begin="25" cat="mwu" end="28" id="42" rel="hd">
                             <node begin="25" end="26" id="43" lemma="Lincoln" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Lincoln" spectype="deeleigen" word="Lincoln"/>
-                            <node begin="26" end="27" id="44" lemma="National" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="National" spectype="vreemd" word="National"/>
-                            <node begin="27" end="28" genus="zijd" getal="ev" graad="basis" id="45" lemma="bank" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Bank" word="Bank"/>
+                            <node begin="26" end="27" id="44" lemma="National" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="National" spectype="deeleigen" word="National"/>
+                            <node begin="27" end="28" id="45" lemma="Bank" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bank" spectype="deeleigen" word="Bank"/>
                           </node>
                         </node>
                       </node>

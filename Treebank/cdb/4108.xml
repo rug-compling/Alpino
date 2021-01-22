@@ -11,8 +11,8 @@
         <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="8" lemma="tijdschrift" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="tijdschrift" word="tijdschrift"/>
         <node begin="5" cat="mwu" end="8" id="9" rel="app">
           <node begin="5" end="6" id="10" lemma="X-unsere" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="X-unsere" spectype="deeleigen" word="X-unsere"/>
-          <node begin="6" end="7" id="11" lemma="wellen" pos="noun" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="mwp" root="welt" word="welt" wvorm="pv"/>
-          <node begin="7" end="8" id="12" lemma="heute" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="heute" spectype="vreemd" word="heute"/>
+          <node begin="6" end="7" id="11" lemma="welt" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="welt" spectype="deeleigen" word="welt"/>
+          <node begin="7" end="8" id="12" lemma="heute" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="heute" spectype="deeleigen" word="heute"/>
         </node>
       </node>
       <node begin="9" end="10" id="13" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>

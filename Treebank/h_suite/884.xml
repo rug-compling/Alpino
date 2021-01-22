@@ -9,9 +9,9 @@
         <node begin="3" cat="np" end="7" id="6" rel="obj1">
           <node begin="3" end="4" getal="ev" graad="basis" id="7" lemma="Hitchcock" naamval="gen" ntype="eigen" pos="det" postag="N(eigen,ev,basis,gen)" pt="n" rel="det" root="Hitchcock" word="Hitchcocks"/>
           <node begin="4" cat="mwu" end="7" id="8" rel="hd">
-            <node begin="4" end="5" id="9" lemma="Strangers" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Strangers" spectype="deeleigen" word="Strangers"/>
+            <node begin="4" end="5" id="9" lemma="Strangers" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Strangers" spectype="vreemd" word="Strangers"/>
             <node begin="5" end="6" id="10" lemma="on" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="on" spectype="vreemd" word="on"/>
-            <node begin="6" end="7" id="11" lemma="trainen" pos="name" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="mwp" root="train" word="train" wvorm="pv"/>
+            <node begin="6" end="7" id="11" lemma="train" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="train" spectype="vreemd" word="train"/>
           </node>
         </node>
       </node>

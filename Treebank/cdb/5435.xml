@@ -3,27 +3,27 @@
   <node begin="0" cat="top" end="16" id="0" rel="top">
     <node begin="1" end="2" id="1" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" word="!"/>
     <node begin="2" end="3" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="5" end="6" id="3" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
-    <node begin="8" end="9" id="4" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
-    <node begin="9" end="10" id="5" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
-    <node begin="12" end="13" id="6" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
-    <node begin="0" cat="du" end="15" id="7" rel="--">
-      <node begin="0" end="1" genus="genus" getal="ev" graad="basis" id="8" lemma="Jogja" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="dp" root="Jogja" word="Jogja"/>
-      <node begin="3" cat="mwu" end="5" id="9" rel="dp">
-        <node begin="3" end="4" id="10" lemma="Tres" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Tres" spectype="vreemd" word="Tres"/>
-        <node begin="4" end="5" id="11" lemma="Espanoles" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Espanoles" spectype="vreemd" word="Espanoles"/>
+    <node begin="8" end="9" id="3" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" word="&quot;"/>
+    <node begin="9" end="10" id="4" lemma="-" pos="punct" postag="LET()" pt="let" rel="--" root="-" word="-"/>
+    <node begin="12" end="13" id="5" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="15" id="6" rel="--">
+      <node begin="0" end="1" genus="genus" getal="ev" graad="basis" id="7" lemma="Jogja" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="dp" root="Jogja" word="Jogja"/>
+      <node begin="3" cat="mwu" end="8" id="8" rel="dp">
+        <node begin="3" end="4" id="9" lemma="Tres" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Tres" spectype="vreemd" word="Tres"/>
+        <node begin="4" end="5" id="10" lemma="Espanoles" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Espanoles" spectype="vreemd" word="Espanoles"/>
+        <node begin="5" end="6" id="11" lemma="." pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="." spectype="vreemd" word="."/>
+        <node begin="6" end="7" id="12" lemma="tres" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="tres" spectype="vreemd" word="tres"/>
+        <node begin="7" end="8" id="13" lemma="caballeros" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="caballeros" spectype="vreemd" word="caballeros"/>
       </node>
-      <node begin="6" cat="mwu" end="8" id="12" rel="dp">
-        <node begin="6" end="7" id="13" lemma="tres" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="tres" spectype="vreemd" word="tres"/>
-        <node begin="7" buiging="zonder" end="8" graad="basis" id="14" lemma="caballeros" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mwp" root="caballeros" word="caballeros"/>
-      </node>
-      <node begin="10" cat="np" end="12" id="15" rel="dp">
-        <node begin="10" end="11" id="16" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="drie" word="drie"/>
-        <node begin="11" end="12" getal="mv" graad="basis" id="17" lemma="jogjanees" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Jogjanezen" word="Jogjanezen"/>
-      </node>
-      <node begin="13" cat="np" end="15" id="18" rel="dp">
-        <node begin="13" end="14" id="19" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="drie" word="drie"/>
-        <node begin="14" end="15" getal="mv" graad="basis" id="20" lemma="aristocraat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="aristocraat" word="aristocraten"/>
+      <node begin="10" cat="du" end="15" id="14" rel="dp">
+        <node begin="10" cat="np" end="12" id="15" rel="dp">
+          <node begin="10" end="11" id="16" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="drie" word="drie"/>
+          <node begin="11" end="12" getal="mv" graad="basis" id="17" lemma="jogjanees" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Jogjanezen" word="Jogjanezen"/>
+        </node>
+        <node begin="13" cat="np" end="15" id="18" rel="dp">
+          <node begin="13" end="14" id="19" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="drie" word="drie"/>
+          <node begin="14" end="15" getal="mv" graad="basis" id="20" lemma="aristocraat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="aristocraat" word="aristocraten"/>
+        </node>
       </node>
     </node>
     <node begin="15" end="16" id="21" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
