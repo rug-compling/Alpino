@@ -208,6 +208,8 @@ def sanity_checks():
    check('//node[@rel="hd" and ../@cat="advp" and @pt and not(@pt="bw" or @pt="n" or @pt="adj" or @pt="vnw" or @pt="tw" or @postag="VZ(fin)")]','unexpected postag for head of advp')
    check('//node[@rel="hd" and ../@cat="pp" and @pt and not(@pt="vz" or @pt="spec" or @pt="bw" or @pt="adj" or @lemma="richting" or @lemma="naargelang" or @lemma="getuige" or @lemma="zien")]','unexpected postag for head of pp')
    check('//node[@rel="hd" and (../@cat="ssub" or ../@cat="smain" or ../@cat="sv1") and @pt and not(@pt="ww")]','unexpected pt for head of finite sentence')
+   check('//node[@naamval="obl" and (@rel="su" or (@rel="hd"and ../@rel="su") or (@rel="cnj" and ../@rel="su")) and (@lemma="u" or @lemma="uzelf" or @lemma="je")]','obl case in nominative position?')
+   check('//node[@naamval="nomin" and not(@rel="su" or (@rel="hd"and ../@rel="su") or (@rel="cnj" and ../@rel="su")) and (@lemma="u" or @lemma="uzelf" or @lemma="je")]','nominative case in obl position?')
 
 #----------------------------------------------------------------------
 # SANITY CHECKS

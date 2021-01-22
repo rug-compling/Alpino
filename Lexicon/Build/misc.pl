@@ -2722,6 +2722,7 @@ m(Stem,preposition(Words,[]),Words) :-
 
 m('onder leiding van',preposition([onder,leiding,van],[]),['o.l.v.',van]).
 
+collocational_preposition([à,raison,de]).
 collocational_preposition([à,raison,van]).
 collocational_preposition([als,gevolg,van]).
 collocational_preposition([en,marge,van]).
@@ -7424,6 +7425,7 @@ nominalized_adjective(bekend,bekenden).
 nominalized_adjective(beklagen,beklaagden).
 nominalized_adjective(bekronen,bekroonden).
 nominalized_adjective(belanghebbend,belanghebbenden).
+nominalized_adjective(belang_stellen,belangstellenden).
 nominalized_adjective(belasteren,belasterde,belasterden).
 nominalized_adjective(beledigen,beledigden).
 nominalized_adjective(belegeren,belegerden).
@@ -8329,6 +8331,9 @@ with_dt([als,volgt],
 	dt(cp,[cmp=l(als,complementizer(als),cp,0,1),
 	       body=l(v_root(volg,volgen),verb(hebben/zijn,sg3,intransitive),ssub,1,2)
 	      ])).
+
+m('SP.A',proper_name(sg,'ORG'),'sp.a').
+m('SP.A',proper_name(sg,'ORG'),'Sp.a').
 
 m(Stem, proper_name(sg,'MISC'), PN) :-
     term(PN),

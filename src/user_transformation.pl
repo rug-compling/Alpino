@@ -79,6 +79,7 @@ surf_lemma(Word,'N(eigen,ev,basis,zijd,stan)','N(eigen,mv,basis)',L,L) :-
 surf_lemma(Word,'N(eigen,ev,basis,onz,stan)','N(eigen,mv,basis)',L,L) :-
     pl_naam(Word).
 
+
 eigen(_):-
     fail.
 
@@ -95,6 +96,7 @@ genus_naam(_) :-
     fail.
 
 
+
 surf_lemma(Word,Rel,Pos0,Pos,Lem0,Lem) :-
     \+ Rel = mwp,
     surf(Word,Pos,Lem),
@@ -108,6 +110,8 @@ lemma(_,_) :-
 
 surf(_,_,_) :-
     fail.
+
+surf(conform,'VZ(init)',conform).
 
 user:query:-
     findall(L,lemma(L,_),Ls),
@@ -163,12 +167,38 @@ assign_tag(Lem, Tag,
 	   tree(r(mwp,i(Index,l(read_from_treebank(Az,Lem,Tag),Cat,W))),B,[])
 	  ).
 
+let(',').
+let('.').
+let('(').
+let(')').
+let('/').
+let('"').   % "
+let('\'').
+let('!').
+let('?').
+let(':').
+let(';').
+
+deeleigen1(L,Tag) :-
+    let(L),
+    !,
+    Tag = 'LET()'.
+deeleigen1(_,'SPEC(deeleigen)').
+
+vreemd1(L,Tag) :-
+    let(L),
+    !,
+    Tag = 'LET()'.
+vreemd1(_,'SPEC(vreemd)').
+
 deeleigen([],[]).
-deeleigen([_|T],['SPEC(deeleigen)'|L]) :-
+deeleigen([LET|T],[Tag|L]) :-
+    deeleigen1(LET,Tag),
     deeleigen(T,L).
 
 vreemd([],[]).
-vreemd([_|T],['SPEC(vreemd)'|L]) :-
+vreemd([LET|T],[Tag|L]) :-
+    vreemd1(LET,Tag),
     vreemd(T,L).
 
 correct_tags(L,L,Deeleigen) :-
@@ -184,5 +214,4 @@ flat(_) :-
 
 vreemd(_) :-
     fail.
-
 
