@@ -434,6 +434,21 @@ context_dependent_tag(pronoun(nwh,je,sg,de,both,def,wkpro),PosTag,_,Q0,Q,Result)
     ;   PosTag = 'VNW(pers,pron,nomin,red,2v,ev)'
     ).
 
+context_dependent_tag(pronoun(nwh,u,sg,de,both,def),PosTag,u,Q0,Q,Result) :-
+    find_node(Q0,Q,Result,Node),
+    (   \+ alpino_data:nominative(Node)
+    ->  PosTag = 'VNW(pr,pron,obl,vol,2,getal)'
+    ;   PosTag = 'VNW(pers,pron,nomin,vol,2b,getal)'
+    ).
+
+context_dependent_tag(pronoun(nwh,u,sg,de,both,def),PosTag,uzelf,Q0,Q,Result) :-
+    find_node(Q0,Q,Result,Node),
+    (   \+ alpino_data:nominative(Node)
+    ->  PosTag = 'VNW(pr,pron,obl,nadr,2,getal)'
+    ;   PosTag = 'VNW(pers,pron,nomin,nadr,2b,getal)'
+    ).
+
+
 context_dependent_tag(determiner(pl_num,nwh,nmod,pro,yparg),PosTag,Stem,Q0,Q,Result) :-
     find_path(Q0,Q,Result,Path),
     (   pronoun_path(Path)
@@ -719,6 +734,7 @@ exceptional_stem_tag('Verdrag',_,        'N(soort,ev,basis,onz,stan)', verdrag).
 exceptional_stem_tag('Vereniging',_,     'N(soort,ev,basis,zijd,stan)',vereniging).
 exceptional_stem_tag('Volksgezondheid',_,'N(soort,ev,basis,zijd,stan)',volksgezondheid).
 
+exceptional_stem_tag(aan,adjective(_),                        'VZ(fin)',aan).
 exceptional_stem_tag(betreffen,preposition(betreffende,[]),   'WW(od,vrij,zonder)',betreffen).
 exceptional_stem_tag(derden,noun(both,count,pl),              'TW(rang,nom,mv-n)',drie).
 exceptional_stem_tag(dode,noun(de,count,pl),                  'ADJ(nom,basis,met-e,mv-n)',dood).
@@ -733,8 +749,11 @@ exceptional_stem_tag(mee,loc_adverb,                          'VZ(fin)',mee).
 exceptional_stem_tag(natuurkundige,noun(de,count,pl),         'ADJ(nom,basis,met-e,mv-n)',natuurkundig).
 exceptional_stem_tag(natuurkundige,noun(de,count,sg),         'ADJ(nom,basis,met-e,zonder-n,stan)',natuurkundig).
 exceptional_stem_tag(ons,noun(both,count,sg),                 'VNW(bez,det,stan,vol,1,mv,nom,met-e,zonder-n)',ons).
+exceptional_stem_tag(op,adjective(_),                         'VZ(fin)',op).
+exceptional_stem_tag(over,adjective(_),                       'VZ(fin)',over).
 exceptional_stem_tag(sprake,_,                                'N(soort,ev,basis,dat)',spraak).
 exceptional_stem_tag(streven,noun(het,mass,sg),               'WW(inf,nom,zonder,zonder-n)',streven).
+exceptional_stem_tag(tegen,_,                                 'VZ(fin)',tegen).
 exceptional_stem_tag(toe,_,                                   'VZ(fin)',toe).
 exceptional_stem_tag(verdenken,noun(de,count,sg),             'WW(vd,nom,met-e,zonder-n)',verdenken).
 exceptional_stem_tag(verdenken,noun(de,count,pl),             'WW(vd,nom,met-e,mv-n)',verdenken).
@@ -1698,6 +1717,7 @@ cgn_postag_c(pronoun(nwh,u,sg,de,nom,def),'VNW(pers,pron,nomin,vol,2,getal)').
 cgn_postag_c(pronoun(ywh,thi,both,de,both,indef),'VNW(vb,pron,stan,vol,3p,getal)').
 cgn_postag_c(pronoun(ywh,thi,sg,het,both,def),'VNW(betr,det,stan,nom,zonder,zonder-n)').
 cgn_postag_c(pronoun(ywh,thi,sg,het,both,indef,nparg),'VNW(vb,pron,stan,vol,3o,ev)').
+cgn_postag_c(pronoun(nwh,je,sg,de,both,def,wkpro),'VNW(pers,pron,nomin,red,2v,ev)').  % only used in with_dt?
 
 cgn_postag_c(noun(_,_,pl),'N(soort,mv,basis)'). 
 cgn_postag_c(noun(het,_,_),'N(soort,ev,basis,onz,stan)').
@@ -1861,6 +1881,10 @@ try_dehet(L,het) :-
     het_naam(L).
 try_dehet(L,genus) :-
     genus_naam(L).
+try_dehet(L,de) :-
+    de_heur(L).
+try_dehet(L,het) :-
+    het_heur(L).
 
 genus_naam('4FM').
 genus_naam('Adecco').
@@ -1886,11 +1910,6 @@ genus_naam('Spirit').
 genus_naam('Textkernel').
 genus_naam('Vivant').
 genus_naam('Yukos').
-
-de_naam(Atom) :-
-    atom(Atom),
-    atom_concat(_,Suf,Atom),
-    de_suf(Suf).
 
 de_naam('Bono').
 de_naam('Boymans').
@@ -1932,6 +1951,11 @@ de_naam('Vuelta').
 de_naam('VVD').
 de_naam('WTO').
 
+de_heur(Atom) :-
+    atom(Atom),
+    atom_concat(_,Suf,Atom),
+    de_suf(Suf).
+
 de_suf(baan).
 de_suf(gracht).
 de_suf(krant).
@@ -1941,11 +1965,6 @@ de_suf(steeg).
 de_suf(straat).
 de_suf(toren).
 de_suf(weg).
-
-het_naam(Atom) :-
-    atom(Atom),
-    atom_concat(_,Suf,Atom),
-    het_suf(Suf).
 
 het_naam('Agalev').
 het_naam('Ajax').
@@ -1980,6 +1999,11 @@ het_naam('Theravada').
 het_naam('U2').
 het_naam('Unilever').
 het_naam('VLAO').
+
+het_heur(Atom) :-
+    atom(Atom),
+    atom_concat(_,Suf,Atom),
+    het_suf(Suf).
 
 het_suf(bedrijf).
 het_suf(diep).

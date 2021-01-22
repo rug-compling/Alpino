@@ -559,6 +559,9 @@ a([e('Berlijnse'),
 a([e('Birmese'),
    no_e('Birmees')],nonadv,[],[]).
 
+a([e('Birmaanse'),
+   no_e('Birmaans')],nonadv,[],[]).
+
 a([e('Boheemse'),
    no_e('Boheems')],nonadv,[],[]).
 
@@ -1049,32 +1052,32 @@ a([e('Nijmeegse'),
    no_e('Nijmeegs')],nonadv,[],[]).
 
 a([e('Noordafrikaanse'),
+   no_e('Noord-Afrikaans'),
    no_e('Noordafrikaans'),
-   e('Noord-Afrikaanse'),
-   no_e('Noord-Afrikaans')],nonadv,[],[]).
+   e('Noord-Afrikaanse')],nonadv,[],[]).
 
 a([e('Noordatlantische'),
+   no_e('Noord-Atlantisch'),
    no_e('Noordatlantisch'),
-   e('Noord-Atlantische'),
-   no_e('Noord-Atlantisch')],nonadv,[],[]).
+   e('Noord-Atlantische')],nonadv,[],[]).
 
 a([e('Noordamerikaanse'),
+   no_e('Noord-Amerikaans'),
    no_e('Noordamerikaans'),
-   e('Noord-Amerikaanse'),
-   no_e('Noord-Amerikaans')],nonadv,[],[]).
+   e('Noord-Amerikaanse')],nonadv,[],[]).
 
 a([e('Noord-Brabantse'),
    no_e('Noord-Brabants')],nonadv,[],[]).
 
 a([e('Noordeuropese'),
+   no_e('Noord-Europees'),
    no_e('Noordeuropees'),
-   e('Noord-Europese'),
-   no_e('Noord-Europees')],adv,[],[]).
+   e('Noord-Europese')],adv,[],[]).
 
 a([e('Noordhollandse'),
+   no_e('Noord-Hollands'),
    no_e('Noordhollands'),
-   e('Noord-Hollandse'),
-   no_e('Noord-Hollands')],nonadv,[],[]).
+   e('Noord-Hollandse')],nonadv,[],[]).
 
 a([e('Noord-Ierse'),
    no_e('Noord-Iers'),
@@ -1082,9 +1085,9 @@ a([e('Noord-Ierse'),
    no_e('Noordiers')],nonadv,[],[]).
 
 a([e('Noordkoreaanse'),
+   no_e('Noord-Koreaans'),
    no_e('Noordkoreaans'),
-   e('Noord-Koreaanse'),
-   no_e('Noord-Koreaans')],nonadv,[],[]).
+   e('Noord-Koreaanse')],nonadv,[],[]).
 
 a([e('Noord-Limburgse'),
    no_e('Noord-Limburgs')],nonadv,[],[]).
@@ -1102,22 +1105,22 @@ a([e('Oezbeekse'),
    no_e('Oezbeeks')],nonadv,[],[]).
 
 a([e('Oostafrikaanse'),
+   no_e('Oost-Afrikaans'),
    no_e('Oostafrikaans'),
-   e('Oost-Afrikaanse'),
-   no_e('Oost-Afrikaans')],nonadv,[],[]).
+   e('Oost-Afrikaanse')],nonadv,[],[]).
 
 a([e('Oostduitse'),
+   no_e('Oost-Duits'),
    no_e('Oostduits'),
-   e('Oost-Duitse'),
-   no_e('Oost-Duits')],nonadv,[],[]).
+   e('Oost-Duitse')],nonadv,[],[]).
 
 a([e('Oostenrijkse'),
    no_e('Oostenrijks')],nonadv,[],[]).
 
 a([e('Oosteuropese'),
+   no_e('Oost-Europees'),
    no_e('Oosteuropees'),
-   e('Oost-Europese'),
-   no_e('Oost-Europees')],adv,[],[]).
+   e('Oost-Europese')],adv,[],[]).
 
 a([e('Oost-Timorese'),
    no_e('Oost-Timorees'),
@@ -1363,15 +1366,15 @@ a([e('Washingtonse'),
 a([e('Weense'),
    no_e('Weens')],nonadv,[],[]).
 
-a([e('Westafrikaanse'),
-   no_e('Westafrikaans'),
+a([no_e('Westafrikaans'),
    e('West-Afrikaanse'),
+   e('Westafrikaanse'),
    no_e('West-Afrikaans')],nonadv,[],[]).
 
-a([e('Westduitse'),
-   no_e('Westduits'),
+a([no_e('West-Duits'),
    e('West-Duitse'),
-   no_e('West-Duits')],nonadv,[],[]).
+   e('Westduitse'),
+   no_e('Westduits')],nonadv,[],[]).
 
 a([e('Westerse'),
    no_e('Westers'),
@@ -1381,15 +1384,15 @@ a([e('Westerse'),
    h(pro),
    h(anti)]).
 
-a([e('Westeuropese'),
-   no_e('Westeuropees'),
+a([no_e('West-Europees'),
    e('West-Europese'),
-   no_e('West-Europees')],adv,[],[]).
+   e('Westeuropese'),
+   no_e('Westeuropees')],adv,[],[]).
 
 a([e('Westindische'),
+   no_e('West-Indisch'),
    no_e('Westindisch'),
-   e('West-Indische'),
-   no_e('West-Indisch')],nonadv,[],[]).
+   e('West-Indische')],nonadv,[],[]).
 
 a([e('Wit-Russische'),
    no_e('Wit-Russisch'),
@@ -1416,24 +1419,24 @@ a([e('Zoetermeerse'),
    no_e('Zoetermeers')],nonadv,[],[]).
 
 a([e('Zuidafrikaanse'),
+   no_e('Zuid-Afrikaans'),
    no_e('Zuidafrikaans'),
-   e('Zuid-Afrikaanse'),
-   no_e('Zuid-Afrikaans')],nonadv,[],[]).
+   e('Zuid-Afrikaanse')],nonadv,[],[]).
 
 a([e('Zuidamerikaanse'),
+   no_e('Zuid-Amerikaans'),
    no_e('Zuidamerikaans'),
-   e('Zuid-Amerikaanse'),
-   no_e('Zuid-Amerikaans')],nonadv,[],[]).
+   e('Zuid-Amerikaanse')],nonadv,[],[]).
 
 a([e('Zuideuropese'),
+   no_e('Zuid-Europees'),
    no_e('Zuideuropees'),
-   e('Zuid-Europese'),
-   no_e('Zuid-Europees')],adv,[],[]).
+   e('Zuid-Europese')],adv,[],[]).
 
 a([e('Zuidhollandse'),
+   no_e('Zuid-Hollands'),
    no_e('Zuidhollands'),
-   e('Zuid-Hollandse'),
-   no_e('Zuid-Hollands')],nonadv,[],[]).
+   e('Zuid-Hollandse')],nonadv,[],[]).
 
 a([e('Zuid-Jemenitische'),
    no_e('Zuid-Jemenitisch'),
@@ -1441,14 +1444,14 @@ a([e('Zuid-Jemenitische'),
    no_e('Zuidjemenitisch')],nonadv,[],[]).
 
 a([e('Zuidkoreaanse'),
+   no_e('Zuid-Koreaans'),
    no_e('Zuidkoreaans'),
-   e('Zuid-Koreaanse'),
-   no_e('Zuid-Koreaans')],nonadv,[],[]).
+   e('Zuid-Koreaanse')],nonadv,[],[]).
 
 a([e('Zuidlimburgse'),
+   no_e('Zuid-limburgs'),
    no_e('Zuidlimburgs'),
-   e('Zuid-Limburgse'),
-   no_e('Zuid-limburgs')],nonadv,[],[]).
+   e('Zuid-Limburgse')],nonadv,[],[]).
 
 a([e('Zweedse'),
    no_e('Zweeds')],nonadv,[],[]).
@@ -2351,11 +2354,10 @@ a([e(adellijke),
    st(adellijkst),
    ste(adellijkste)],adv,[],[]). % adv: je kunt adellijk trouwen
 
-a([stem(adem_benemen),
-   ende(adembenemende),
+a([e(adembenemende),
    er(adembenemender),
    ere(adembenemendere),
-   end(adembenemend),
+   no_e(adembenemend),
    st(adembenemendst),
    ste(adembenemendste)],adv,[],[]).
 
@@ -4599,10 +4601,11 @@ a([e(belangrijke),
    subject_vp_sbar_no_het,
    pp(voor)],[]).
 
-a([e(belangstellende),
+a([stem(belang_stellen),
+   ende(belangstellende),
    er(belangstellender),
    ere(belangstellendere),
-   no_e(belangstellend),
+   end(belangstellend),
    st(belangstellendst),
    ste(belangstellendste)],adv,[],[]).
 
@@ -10944,7 +10947,7 @@ a([ge_e(geautomatiseerde),
 a([ge_e(geautoriseerde),
    ge_no_e(geautoriseerd)],padv,[],[]).
 
-a([stem(geavanceerd),
+a([stem(avanceren),
    ge_e(geavanceerde),
    er(geavanceerder),
    ere(geavanceerdere),
@@ -11694,8 +11697,8 @@ a([ge_e(gedetailleerde),
    st(gedetailleerdst),
    ste(gedetailleerdste)],adv,[],[]).
 
-a([e(gedetineerde),
-   no_e(gedetineerd)],nonadv,[],[]).
+a([ge_e(gedetineerde),
+   ge_no_e(gedetineerd)],nonadv,[],[]).
 
 a([ge_e(gedetermineerde),
    ge_no_e(gedetermineerd)],adv,[],[]).
@@ -19931,10 +19934,10 @@ a([ge_e(ingeënte),
    ge_no_e(ingeënt)],adv,[],[]).
 
 a([stem(in_grijpen),
-   e(ingrijpende),
+   ende(ingrijpende),
    er(ingrijpender),
    ere(ingrijpendere),
-   no_e(ingrijpend),
+   end(ingrijpend),
    st(ingrijpendst),
    ste(ingrijpendste)],adv,
   [subject_vp],[diep]).
@@ -27981,9 +27984,11 @@ a([e(onzuivere),
 a([pred([oog,in,oog])],padv,
   [pp(met)],[]).
 
-a([stem(oogluikend),
-   ende(oogluikende),
-   end(oogluikend)],adv,[],[]).
+a([e(oogluikende),
+   no_e(oogluikend)],adv,[],[]).
+
+a([e(oogstrelende),
+   no_e(oogstrelend)],adv,[],[]).
 
 a([e(oogverblindende),
    er(oogverblindender),
@@ -36981,8 +36986,8 @@ a([ge_e(verminderde),
 a([ge_e(verminkte),
    ge_no_e(verminkt)],padv,[],[]).
 
-a([ge_e(vermiste),
-   ge_no_e(vermist)],adv,[],[]).
+a([e(vermiste),
+   no_e(vermist)],adv,[],[]).
 
 a([ge_e(vermochte),
    ge_no_e(vermocht)],adv,[],[]).
@@ -37008,6 +37013,9 @@ a([e(vermoeiende),
    ste(vermoeiendste)],adv,
   [subject_vp,
    subject_sbar],[]).
+
+a([e(vermogende),
+   no_e(vermogend)],adv,[],[]).
 
 a([e(vermolmde),
    no_e(vermolmd)],padv,[],[]).
@@ -37176,10 +37184,10 @@ a([e(verpleegkundige),
 a([ge_e(verpletterde),
    ge_no_e(verpletterd)],adv,[],[]).
 
-a([e(verpletterende),
+a([ende(verpletterende),
    er(verpletterender),
    ere(verpletterendere),
-   no_e(verpletterend),
+   end(verpletterend),
    st(verpletterendst),
    ste(verpletterendste)],adv,[],[]).
 
@@ -37698,10 +37706,10 @@ a([e(vertrouwelijke),
    st(vertrouwelijkst),
    ste(vertrouwelijkste)],adv,[],[]).
 
-a([ge_e(vertwijfelde),
+a([e(vertwijfelde),
    er(vertwijfelder),
    ere(vertwijfeldere),
-   ge_no_e(vertwijfeld),
+   no_e(vertwijfeld),
    st(vertwijfeldst),
    ste(vertwijfeldste)],adv,[],[]).
 
@@ -41949,6 +41957,7 @@ stem(gedeporteerd,v_root(deporteer,deporteren)).
 stem(gedeprimeerd,v_root(deprimeer,deprimeren)).
 stem(gedept,v_root(dep,deppen)).
 stem(gedeputeerd,v_root(deputeer,deputeren)).
+stem(gedetineerd,v_root(detineer,detineren)).
 stem(gederfd,v_root(derf,derven)).
 stem(gedeserteerd,v_root(deserteer,deserteren)).
 stem(gedesinfecteerd,v_root(desinfecteer,desinfecteren)).

@@ -891,6 +891,7 @@ accent(kustprovincien,kustprovinciën).
 accent(lance,lancé).
 accent(leefsituatien,leefsituatiën).
 accent(leeftijdscategorieen,leeftijdscategorieën).
+accent(leemindustrieen,leemindustrieën).
 accent(legionellabacterien,legionellabacteriën).
 accent(lelien,leliën).
 accent(levensbeeindigingen,levensbeëindigingen).
