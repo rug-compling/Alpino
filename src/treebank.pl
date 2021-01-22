@@ -588,7 +588,7 @@ deptree_xml(Cat,String,Comments,Meta,Flag,Tags,HisList) -->
     deptree_xml_end.
 
 
-%% version 1.3: added mwu_root attribute for mwu nodes
+%% version 1.3: added mwu_root attribute for mwu nodes / removed again, not used
 %% version 1.4: metadata
 %% version 1.5: sentid
 %% currently, sentid only in output
@@ -752,9 +752,9 @@ deptree_xml_label_rest(adt_lex(Cat,Root,Sense,PosTag,LexAtts),_,_,
                        [root-Root,sense-Sense,pos-PosTag,cat-Cat|Atts],_,_) :-
     adt_lex_atts(LexAtts,Atts).
 
-extract_category_features(mwu(Root,Sense),mwu,Atts0,Atts) :-
-    !,
-    Atts0=[mwu_root-Root,mwu_sense-Sense|Atts].
+%extract_category_features(mwu(Root,Sense),mwu,Atts0,Atts) :-
+%    !,
+%    Atts0=[mwu_root-Root,mwu_sense-Sense|Atts].
 extract_category_features(Cat,Cat,Atts,Atts).
 
 adt_lex_atts([],[]).
@@ -942,12 +942,12 @@ deptree_xml_att_format(root,Root) -->
     },
     format_to_chars(' root="~s"',[RootChars]).
 
-deptree_xml_att_format(mwu_root,Root) -->
-    !,
-    {  format_to_chars("~w",[Root],RootChars0),
-       add_xml_entities(RootChars0,RootChars)
-    },
-    format_to_chars(' mwu_root="~s"',[RootChars]).
+%deptree_xml_att_format(mwu_root,Root) -->
+%    !,
+%    {  format_to_chars("~w",[Root],RootChars0),
+%       add_xml_entities(RootChars0,RootChars)
+%    },
+%    format_to_chars(' mwu_root="~s"',[RootChars]).
 
 deptree_xml_att_format(sense,Sense) -->
     !,
@@ -956,12 +956,12 @@ deptree_xml_att_format(sense,Sense) -->
     },
     format_to_chars(' sense="~s"',[SenseChars]).
 
-deptree_xml_att_format(mwu_sense,Sense) -->
-    !,
-    {  format_to_chars("~w",[Sense],SenseChars0),
-       add_xml_entities(SenseChars0,SenseChars)
-    },
-    format_to_chars(' mwu_sense="~s"',[SenseChars]).
+%deptree_xml_att_format(mwu_sense,Sense) -->
+%    !,
+%    {  format_to_chars("~w",[Sense],SenseChars0),
+%       add_xml_entities(SenseChars0,SenseChars)
+%    },
+%    format_to_chars(' mwu_sense="~s"',[SenseChars]).
 
 deptree_xml_att_format(frame,Frame) -->
     !,
@@ -1403,17 +1403,10 @@ xml_term_to_dt_atts_rest(leaf,Atts0,l(Pos,Cat,Root/[P0,P]),dt) :-
 %% the "empty" dependency structure has cat and still is leaf
 %% also, perhaps we want cat in the future for leaves
 xml_term_to_dt_atts_rest(_,Atts0,Label,_Type) :-
-    select(cat=CatCodes,Atts0,Atts1),
+    select(cat=CatCodes,Atts0,_Atts),
     !,
     atom_codes(Cat,CatCodes),
-    (   Cat == mwu,
-        select(mwu_root=RootCodes,Atts1,_),
-	select(mwu_sense=SenseCodes,Atts1,_)
-    ->  atom_codes(Root,RootCodes),
-	atom_codes(Sense,SenseCodes),
-	Label=p(mwu(Root,Sense))
-    ;   Label=p(Cat)
-    ).
+    Label=p(Cat).
 
 %% be robust against missing cat
 xml_term_to_dt_atts_rest(non_leaf,_Atts0,p(_),_Type).
@@ -1763,11 +1756,23 @@ format_score_with_penalties(Result) :-
     alpino_data:result_term(_,Sentence,Cat,Tree,Frames,Result),
     alpino_penalties:count_maxent_features(Cat,Tree,Frames,His,on),
     score_string_of_result(Result,ScoreString),
+    compare_cgn_string_of_result(Item,Result,CgnString),
     length(Sentence,Length),
-    format("MAXENT#~q#~w#~s#",[Item,Length,ScoreString]),
-    format_counted_features(His),
-    alpino_format_syntax:result_to_bracketed_string_palm(Result,PalmString,[]),
-    format("PALM#~q#~s\n",[Item,PalmString]).
+    format("MAXENT#~q#~w#~s~s#",[Item,Length,ScoreString,CgnString]),
+    format_counted_features(His).
+%    alpino_format_syntax:result_to_bracketed_string_palm(Result,PalmString,[]),
+%    format("PALM#~q#~s\n",[Item,PalmString]).
+
+compare_cgn_string_of_result(Item,Result,CgnString) :-
+    xml_filename(File,Item),
+    alpino_format_syntax:result_to_frames(Result,Frames,_),
+    alpino_format_syntax:frames_to_postags(Frames,Result,SysTags),
+    hdrug_flag(current_input_sentence,Words0),
+    user:ignore_brackets(Words0,Words),
+    user:collect_treebank_cgn(File,GoldTags),
+    length(GoldTags,Len),
+    user:compare_cgn(GoldTags,SysTags,0,Words,0,Correct,Item),
+    format_to_chars("|~w|~w",[Correct,Len],CgnString).
 
 format_penalties(Result) :-
     alpino_data:result_term(_,_,Cat,Tree,Frames,Result),
