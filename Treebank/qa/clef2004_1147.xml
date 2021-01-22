@@ -10,9 +10,9 @@
         <node begin="2" cat="np" end="7" id="7" rel="su">
           <node begin="2" end="3" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="4" cat="mwu" end="7" id="9" rel="hd">
-            <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="pc" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="PC" word="PC"/>
+            <node begin="4" end="5" id="10" lemma="PC" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="PC" spectype="vreemd" word="PC"/>
             <node begin="5" end="6" id="11" lemma="do" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="do" spectype="vreemd" word="do"/>
-            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="12" lemma="b" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="B" word="B"/>
+            <node begin="6" end="7" id="12" lemma="B" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="B" spectype="vreemd" word="B"/>
           </node>
         </node>
       </node>

@@ -3,9 +3,9 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
       <node begin="0" cat="mwu" end="3" id="2" index="1" rel="su">
-        <node begin="0" buiging="met-e" end="1" graad="basis" id="3" lemma="howe" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Howe" word="Howe"/>
-        <node begin="1" end="2" id="4" lemma="and" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="and" spectype="vreemd" word="and"/>
-        <node begin="2" end="3" id="5" lemma="Bainbridge" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Bainbridge" spectype="vreemd" word="Bainbridge"/>
+        <node begin="0" end="1" id="3" lemma="Howe" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Howe" spectype="deeleigen" word="Howe"/>
+        <node begin="1" end="2" id="4" lemma="and" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="and" spectype="deeleigen" word="and"/>
+        <node begin="2" end="3" id="5" lemma="Bainbridge" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Bainbridge" spectype="deeleigen" word="Bainbridge"/>
       </node>
       <node begin="3" end="4" id="6" lemma="zullen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zal" word="zullen" wvorm="pv"/>
       <node begin="0" cat="inf" end="8" id="7" rel="vc">

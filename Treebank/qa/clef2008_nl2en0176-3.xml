@@ -9,7 +9,7 @@
         <node begin="2" cat="np" end="8" id="6" rel="predc">
           <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="directeur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="directeur" word="directeur"/>
           <node begin="3" cat="mwu" end="5" id="8" rel="app">
-            <node begin="3" buiging="zonder" end="4" graad="basis" id="9" lemma="corporate" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="corporate" word="corporate"/>
+            <node begin="3" end="4" id="9" lemma="corporate" pos="adj" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="corporate" spectype="vreemd" word="corporate"/>
             <node begin="4" end="5" id="10" lemma="services" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="services" spectype="vreemd" word="services"/>
           </node>
           <node begin="5" cat="pp" end="8" id="11" rel="mod">
