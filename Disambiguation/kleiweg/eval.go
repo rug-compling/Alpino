@@ -1,9 +1,10 @@
 package main
 
 import (
+	"github.com/pebbe/util"
+
 	"bufio"
 	"bytes"
-	"github.com/pebbe/util"
 	"flag"
 	"fmt"
 	"io"
@@ -54,8 +55,10 @@ func main() {
 	var counter, exact int64
 	var fCorrect, fN, fOverlap, fPen, fSystem int64
 	var iCorrect, iOverlap, iSystem int64
+	var iCgn, iCgnTotal int64
 	var lbCorrect, lbN, lbOverlap, lbPen, lbSystem int64
 	var lcCorrect, lcN, lcOverlap, lcPen, lcSystem int64
+	var lcCgn, lcTotalCgn, tCgn, tTotalCgn int64
 	var thisN, thisPen int64
 
 	var bAv, bAverage, bFscore, bPrecision, bRecall, bScore float64
@@ -105,6 +108,9 @@ MainLoop:
 			newSentence = true
 
 		case tokenBlockEnd:
+			tCgn += lcCgn
+			tTotalCgn += lcTotalCgn
+
 			cPen += lcPen
 			cN += lcN
 			cAv += score(lcPen, lcN)
@@ -127,8 +133,9 @@ MainLoop:
 
 			if *opt_d {
 				cScore = score(cPen, cN)
-				fmt.Fprintf(os.Stderr, "\t%s test-score\t%.2f\t(%.2f) (exact: %.2f)\n",
-					filename, lcScore, cScore, float64(exact)/float64(counter))
+				fmt.Fprintf(os.Stderr, "\t%s test-score\t%6.2f\t(%6.2f) (exact: %6.2f)\t lemma/pos-score\t%6.2f\t(%6.2f)\n",
+					filename, lcScore, cScore, float64(exact)/float64(counter),
+					100.0*float64(lcCgn)/float64(lcTotalCgn), 100.0*float64(tCgn)/float64(tTotalCgn))
 			}
 
 			if *opt_r {
@@ -139,6 +146,8 @@ MainLoop:
 			iOverlap = (<-ch).i
 			iCorrect = (<-ch).i
 			iSystem = (<-ch).i
+			iCgn = (<-ch).i
+			iCgnTotal = (<-ch).i
 
 			thisWeight = (<-ch).f
 
@@ -156,6 +165,8 @@ MainLoop:
 					lcOverlap = iOverlap
 					lcCorrect = iCorrect
 					lcSystem = iSystem
+					lcCgn = iCgn
+					lcTotalCgn = iCgnTotal
 				}
 				if thisScore > lbScore {
 					lbScore = thisScore
@@ -181,6 +192,9 @@ MainLoop:
 				lcN = thisN
 				lcPen = thisPen
 				lcScore = thisScore
+
+				lcCgn = iCgn
+				lcTotalCgn = iCgnTotal
 
 				lbN = thisN
 				lbPen = thisPen
@@ -219,11 +233,11 @@ MainLoop:
 	if !*opt_r {
 
 		fmt.Printf("\n")
-		fmt.Printf("exact %.2f %v %v\n", float64(exact)/float64(counter),exact,counter)
-		fmt.Printf("first-score %.2f %.2f\n", fScore, fAverage)
-		fmt.Printf("best-score  %.2f %.2f\n", bScore, bAverage)
-		fmt.Printf("test-score  %.2f %.2f\n", cScore, cAverage)
-		fmt.Printf("phi-score   %.2f %.2f\n", kappa, kappaAv)
+		fmt.Printf("exact %6.2f\n", float64(exact)/float64(counter))
+		fmt.Printf("first-score %6.2f %6.2f\n", fScore, fAverage)
+		fmt.Printf("best-score  %6.2f %6.2f\n", bScore, bAverage)
+		fmt.Printf("test-score  %6.2f %6.2f\n", cScore, cAverage)
+		fmt.Printf("phi-score   %6.2f %6.2f\n", kappa, kappaAv)
 		fmt.Printf("first-p/m:  %v     %v\n", fPen, fN)
 		fmt.Printf("best-p/m:   %v     %v\n", bPen, bN)
 		fmt.Printf("test-p/m:   %v     %v\n", cPen, cN)
@@ -244,23 +258,25 @@ MainLoop:
 		fPrecision = 100.0 * float64(fOverlap) / float64(fSystem)
 		fRecall = 100.0 * float64(fOverlap) / float64(fCorrect)
 		fFscore = (2.0 * fPrecision * fRecall) / (fPrecision + fRecall)
-		fmt.Printf("first-precision  %.2f\n", fPrecision)
-		fmt.Printf("first-recall     %.2f\n", fRecall)
-		fmt.Printf("first-fscore     %.2f\n", fFscore)
+		fmt.Printf("first-precision  %6.2f\n", fPrecision)
+		fmt.Printf("first-recall     %6.2f\n", fRecall)
+		fmt.Printf("first-fscore     %6.2f\n", fFscore)
 
 		bPrecision = 100.0 * float64(bOverlap) / float64(bSystem)
 		bRecall = 100.0 * float64(bOverlap) / float64(bCorrect)
 		bFscore = (2 * bPrecision * bRecall) / (bPrecision + bRecall)
-		fmt.Printf("best-precision   %.2f\n", bPrecision)
-		fmt.Printf("best-recall      %.2f\n", bRecall)
-		fmt.Printf("best-fscore      %.2f\n", bFscore)
+		fmt.Printf("best-precision   %6.2f\n", bPrecision)
+		fmt.Printf("best-recall      %6.2f\n", bRecall)
+		fmt.Printf("best-fscore      %6.2f\n", bFscore)
 
 		cPrecision = 100.0 * float64(cOverlap) / float64(cSystem)
 		cRecall = 100.0 * float64(cOverlap) / float64(cCorrect)
 		cFscore = (2.0 * cPrecision * cRecall) / (cPrecision + cRecall)
-		fmt.Printf("test-precision   %.2f\n", cPrecision)
-		fmt.Printf("test-recall      %.2f\n", cRecall)
-		fmt.Printf("test-fscore      %.2f\n", cFscore)
+		fmt.Printf("test-precision   %6.2f\n", cPrecision)
+		fmt.Printf("test-recall      %6.2f\n", cRecall)
+		fmt.Printf("test-fscore      %6.2f\n", cFscore)
+
+		fmt.Printf("lemma/pos-score  %6.2f\n", 100.0*float64(tCgn)/float64(tTotalCgn))
 
 	}
 
@@ -295,6 +311,8 @@ output optimized lexer:
             tokenInt
             tokenInt
             tokenInt
+            tokenInt
+            tokenInt
             tokenTokenFloat      // processed features
         ) *
         tokenBlockEnd
@@ -308,6 +326,8 @@ output simple lexer (not used):
         tokenString           // filename
         (
             tokenLineBegin
+            tokenInt
+            tokenInt
             tokenInt
             tokenInt
             tokenInt
@@ -329,6 +349,8 @@ output lexer with error detection (not used):
         tokenString           // filename
         (
             tokenLineBegin
+            tokenInt
+            tokenInt
             tokenInt
             tokenInt
             tokenInt
@@ -390,9 +412,9 @@ func lexer(filename string, ch chan<- token) {
 				breaks = append(breaks, i)
 				j++
 				switch {
-				case j%2 == 1 && j > 4:
+				case j%2 == 1 && j > 6:
 					p = '@'
-				case j < 2 || j == 4:
+				case j < 2 || j == 6:
 					p = '#'
 				default:
 					p = '|'
@@ -400,7 +422,7 @@ func lexer(filename string, ch chan<- token) {
 			}
 		}
 
-		if n := len(breaks); n < 5 || n%2 != 0 {
+		if n := len(breaks); n < 7 || n%2 != 0 {
 			fmt.Fprintf(os.Stderr, "Parse failed for line %v: %v\n", lineno, line)
 			continue
 		}
@@ -427,11 +449,15 @@ func lexer(filename string, ch chan<- token) {
 		ch <- token{t: tokenInt, i: v}
 		v, _ = strconv.ParseInt(line[breaks[3]+1:breaks[4]], 10, 64)
 		ch <- token{t: tokenInt, i: v}
+		v, _ = strconv.ParseInt(line[breaks[4]+1:breaks[5]], 10, 64)
+		ch <- token{t: tokenInt, i: v}
+		v, _ = strconv.ParseInt(line[breaks[5]+1:breaks[6]], 10, 64)
+		ch <- token{t: tokenInt, i: v}
 
 		var w float64 = 0.0
 		var fl float64
 		breaks = append(breaks, len(line))
-		for n, i := len(breaks)-1, 4; i < n; i += 2 {
+		for n, i := len(breaks)-1, 6; i < n; i += 2 {
 			// ParseFloat is slow, so try ParseInt first, since most input values look like ints
 			a := line[breaks[i]+1 : breaks[i+1]]
 			ii, e := strconv.ParseInt(a, 10, 64)

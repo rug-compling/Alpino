@@ -65,10 +65,19 @@ while(<>) {
       ($key,$length,$scoretriple,$pairs) = split/\#/;
       next if ($opt_l && $length > $opt_l);
       if ($scoretriple =~ /\|/) {
-	  ($score_overlap,$score_correct,$score_system) = split/\|/,$scoretriple;
+	  #  ($score_overlap,$score_correct,$score_system) = split/\|/,$scoretriple;
+	  #  $this_pen=pen($score_overlap,$score_correct,$score_system);
+	  #  $this_n=max($score_correct,$score_system);
+	  #  $score=score($this_pen,$this_n);
+	  ($score_overlap,$score_correct,$score_system,$correct_lem,$total_lem) = split/\|/,$scoretriple;
 	  $this_pen=pen($score_overlap,$score_correct,$score_system);
 	  $this_n=max($score_correct,$score_system);
-	  $score=score($this_pen,$this_n);
+	  $dep_score=score($this_pen,$this_n);
+	  if ($total_lem) {
+	      $lem_score=$correct_lem/$total_lem;
+	  } else { return 0 
+	  }
+	  $score = 19/20 * $dep_score + 1/20 * $lem_score;
       } else {
 	  $score=$scoretriple;
       }
