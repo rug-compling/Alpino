@@ -65,6 +65,9 @@ WSU_test1_options=-flag treebank $(ALPINO_HOME)/Treebank/WSU -flag syntax_featur
 job := job${shell echo $$$$}
 
 test1:
+	$(MAKE) $(suite).test1
+
+$(suite).test1:
 	mkdir -p $(suite)$(part)/$(job)
 	echo "extra=$(extra)" >> $(suite)$(part)/scores
 	-$(MAKE) trees dir=$(suite)$(part)/$(job) mode=1
@@ -90,6 +93,7 @@ test1rest:
 	grep -e '#LM' -e '#PT' -e 'Lexical analysis: ' $(suite)$(part)/$(job)/log1 > $(suite)$(part)/$(job)/poslemma
 	$(MAKE) report
 	-$(MAKE) compare_score suite=$(prefix)$(suite)
+	touch $(suite)$(part).test1
 
 cpu1=${shell ls -t $(suite)$(part)/*/log?|head -n 1}
 cpu2=$(prefix)$(suite)$(part)/time
@@ -589,8 +593,8 @@ an:
 analyse0:
 	@echo "        WORD                                    TREEBANK                                PARSER" > pos
 	@echo "        WORD                                    TREEBANK                                PARSER" > lem
-	@cat  $(files) | grep "#PT" | cut -c1-112 |sort | uniq -c | sort -nr				       >>pos
-	@cat  $(files) | grep "#LM" | cut -c1-112 |sort | uniq -c | sort -nr				       >>lem
+	@cat  $(files) | grep "#PT" | cut -c1-120 |sort | uniq -c | sort -nr				       >>pos
+	@cat  $(files) | grep "#LM" | cut -c1-120 |sort | uniq -c | sort -nr				       >>lem
 	@echo "        WORD                                    TREEBANK                                PARSER" >>pos
 	@echo "        WORD                                    TREEBANK                                PARSER" >>lem
 
