@@ -3218,26 +3218,26 @@ form_of_suffix_rule('iteiten','iteit',noun(de,count,pl),[]).
 
 form_of_suffix_rule('ingen','ing',noun(de,count,pl),[]).
 
-form_of_suffix_rule(eert,eer,verb(hebben,sg3,intransitive),[]).
-form_of_suffix_rule(eert,eer,verb(hebben,sg3,transitive),[]).
-form_of_suffix_rule(eren,eer,verb(hebben,pl,intransitive),[jongeren,
+form_of_suffix_rule(eert,eren,verb(hebben,sg3,intransitive),[]).
+form_of_suffix_rule(eert,eren,verb(hebben,sg3,transitive),[]).
+form_of_suffix_rule(eren,eren,verb(hebben,pl,intransitive),[jongeren,
 							   kinderen]).
-form_of_suffix_rule(eren,eer,verb(hebben,pl,transitive),[jongeren,
+form_of_suffix_rule(eren,eren,verb(hebben,pl,transitive),[jongeren,
 							   kinderen]).
-form_of_suffix_rule(eren,eer,verb(hebben,inf,intransitive),[jongeren,
+form_of_suffix_rule(eren,eren,verb(hebben,inf,intransitive),[jongeren,
 							   kinderen]).
-form_of_suffix_rule(eren,eer,verb(hebben,inf,transitive),[jongeren,
+form_of_suffix_rule(eren,eren,verb(hebben,inf,transitive),[jongeren,
 							   kinderen]).
-form_of_suffix_rule(ëren,ëer,verb(hebben,pl,intransitive),[]).
-form_of_suffix_rule(ëren,ëer,verb(hebben,pl,transitive),[]).
-form_of_suffix_rule(ëren,ëer,verb(hebben,inf,intransitive),[]).
-form_of_suffix_rule(ëren,ëer,verb(hebben,inf,transitive),[]).
-form_of_suffix_rule(eerd,eer,verb(hebben,psp,intransitive),[]).  % wrong root
-form_of_suffix_rule(eerd,eer,verb(hebben,psp,transitive),[]).    % wrong root
-form_of_suffix_rule(eerde,eer,verb(hebben,past(sg),intransitive),[]).
-form_of_suffix_rule(eerde,eer,verb(hebben,past(sg),transitive),[]).
-form_of_suffix_rule(eerden,eer,verb(hebben,past(pl),intransitive),[]).
-form_of_suffix_rule(eerden,eer,verb(hebben,past(pl),transitive),[]).
+form_of_suffix_rule(ëren,ëren,verb(hebben,pl,intransitive),[]).
+form_of_suffix_rule(ëren,ëren,verb(hebben,pl,transitive),[]).
+form_of_suffix_rule(ëren,ëren,verb(hebben,inf,intransitive),[]).
+form_of_suffix_rule(ëren,ëren,verb(hebben,inf,transitive),[]).
+form_of_suffix_rule(eerd,eren,verb(hebben,psp,intransitive),[]).  % wrong root
+form_of_suffix_rule(eerd,eren,verb(hebben,psp,transitive),[]).    % wrong root
+form_of_suffix_rule(eerde,eren,verb(hebben,past(sg),intransitive),[]).
+form_of_suffix_rule(eerde,eren,verb(hebben,past(sg),transitive),[]).
+form_of_suffix_rule(eerden,eren,verb(hebben,past(pl),intransitive),[]).
+form_of_suffix_rule(eerden,eren,verb(hebben,past(pl),transitive),[]).
 
 form_of_suffix_rule(achtigen,achtig,nominalized_adjective,[]).
 
