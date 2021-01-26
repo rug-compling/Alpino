@@ -1799,7 +1799,6 @@ spelling_variant21(t,zelfde,      hetzelfde).
 spelling_variant21(heen,weg,      heenweg).
 spelling_variant21(hoger,op,      hogerop).
 spelling_variant21(hoogst,persoonlijk,hoogstpersoonlijk).
-spelling_variant21(hoogst,waarschijnlijk,hoogstwaarschijnlijk).
 spelling_variant21(hoofd,rol,     hoofdrol).
 spelling_variant21(in,zover,      inzover).
 spelling_variant21(in,zake,       inzake).

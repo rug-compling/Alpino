@@ -883,9 +883,14 @@ mwu_postag('op basis van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],
 mwu_postag('op de hoogte',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[op,de,hoogte]).
 mwu_postag('op de hielen',['VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],[op,de,hiel]).
 mwu_postag('op de lange baan',['VZ(init)','LID(bep,stan,rest)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[op,de,lang,baan]).
+mwu_postag('Op de duur',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[op,de,duur]).
+mwu_postag('Op den duur',['VZ(init)','LID(bep,dat,evmo)','N(soort,ev,basis,zijd,stan)'],[op,de,duur]).
+mwu_postag('op de duur',['VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[op,de,duur]).
 mwu_postag('op den duur',['VZ(init)','LID(bep,dat,evmo)','N(soort,ev,basis,zijd,stan)'],[op,de,duur]).
 mwu_postag('op de proppen',['VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],[op,de,prop]).
+mwu_postag('op dreef',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[op,dreef]). 
 mwu_postag('op en neer',['VZ(fin)','VG(neven)','BW()'],[op,en,neer]).
+mwu_postag('op en top',['VZ(fin)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[op,en,top]).
 mwu_postag('op het gebied van',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)','VZ(init)'],[op,het,gebied,van]).
 mwu_postag('op het gevaar af',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)','VZ(fin)'],[op,het,gevaar,af]).
 mwu_postag('Openbaar Vervoer',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],[openbaar,vervoer]).
@@ -896,11 +901,14 @@ mwu_postag('op haar smalst',['VZ(init)','VNW(bez,det,stan,vol,3,ev,prenom,zonder
 mwu_postag('op handen',['VZ(init)','N(soort,mv,basis)'],[op,hand]).
 mwu_postag('op het laatst',['VZ(init)','LID(bep,stan,evon)','ADJ(vrij,sup,zonder)'],[op,het,laat]).
 mwu_postag('op het verkeerde been',['VZ(init)','LID(bep,stan,evon)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,onz,stan)'],[op,het,verkeerd,been]).
+mwu_postag('op heterdaad',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[op,heterdaad]).
 mwu_postag('op initiatief van',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)'],[op,initiatief,van]).
+mwu_postag('op komst',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[op,komst]). 
 mwu_postag('op kosten van',['VZ(init)','N(soort,mv,basis)','VZ(init)'],[op,kost,van]).
 mwu_postag('op lossen schroeven',['VZ(init)','WW(inf,vrij,zonder)','N(soort,mv,basis)'],[op,lossen,schroef]).
 mwu_postag('op losse schroeven',['VZ(init)','ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[op,los,schroef]).
 mwu_postag('op poten',['VZ(init)','N(soort,mv,basis)'],[op,poot]).
+mwu_postag('op til',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[op,til]).
 mwu_postag('op uitnodiging van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[op,uitnodiging,van]).
 mwu_postag('op verzoek van',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)'],[op,verzoek,van]).
 mwu_postag('op weg naar',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[op,weg,naar]).
@@ -912,6 +920,7 @@ mwu_postag('op zijn zachtst',['VZ(init)','VNW(bez,det,stan,vol,3,ev,prenom,zonde
 mwu_postag('op z\'n best',['VZ(init)','VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)','ADJ(nom,sup,zonder,zonder-n)'],[op,zijn,goed]).
 mwu_postag('op z\'n minst',['VZ(init)','VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)','VNW(onbep,grad,stan,vrij,zonder,sup)'],[op,zijn,weinig]).
 mwu_postag('op z\'n vroegst',['VZ(init)','VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)','ADJ(nom,sup,zonder,zonder-n)'],[op,zijn,vroeg]).
+mwu_postag('op zoek',['VZ(init)','ADJ(vrij,basis,zonder)'],[op,zoek]).
 mwu_postag('orde op zaken',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,mv,basis)'],[orde,op,zaak]).
 mwu_postag('Paleis van Justitie',['N(soort,ev,basis,onz,stan)','VZ(init)','N(soort,ev,basis,zijd,stan)'],[paleis,van,justitie]).
 mwu_postag('Palestijnse Bevrijdingsorganisatie',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Palestijns',bevrijdingsorganisatie]).
@@ -1321,11 +1330,15 @@ vreemd('an sich').
 vreemd('Applications on Demand').
 vreemd('a priori').
 vreemd('Army of the Potomac').
+vreemd('the Army of the Potomac').
+vreemd('The Army of the Potomac').
+vreemd('Army of Northern Virginia').
 vreemd('bad guy').
 vreemd('beau monde').
 vreemd('best practice').
 vreemd('best practices').
 vreemd('BETA COMPLEET').
+vreemd('Big Brother').
 vreemd('business class').
 vreemd('Business Partners').
 vreemd('captain of industry').
@@ -1353,6 +1366,7 @@ vreemd('en masse').
 vreemd('En masse').
 vreemd('et cetera').
 vreemd('founding fathers').
+vreemd('from France').
 vreemd('girl power').
 vreemd('grand café').
 vreemd('grand chef').
@@ -1363,6 +1377,7 @@ vreemd('haute couture').
 vreemd('haute cuisine').
 vreemd('haute finance').
 vreemd('hazard ratio').
+vreemd('Human Development Report').
 vreemd('human media interaction').
 vreemd('human resources').
 vreemd('im groszen ganzen').
@@ -1383,6 +1398,7 @@ vreemd('low bat').
 vreemd('missing link').
 vreemd('missing links').
 vreemd('MISSING PARA').
+vreemd('Moulin Rouge').
 vreemd('mission statement').
 vreemd('nota bene').
 vreemd('On Demand business').
@@ -1403,6 +1419,7 @@ vreemd('Purple Rain').
 vreemd('Purple Rain Tour').
 vreemd('rector magnificus').
 vreemd('Rector Magnificus').
+vreemd('Regional Surveys of the World').
 vreemd('reductio ad absurdum').
 vreemd('remote control').
 vreemd('remote controls').
