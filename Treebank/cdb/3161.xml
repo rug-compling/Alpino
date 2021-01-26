@@ -11,7 +11,7 @@
           <node begin="4" end="5" genus="onz" getal="ev" id="8" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>
           <node begin="3" cat="pp" end="6" id="9" rel="pc">
             <node begin="3" end="4" id="10" index="1" rel="obj1"/>
-            <node begin="5" end="6" id="11" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
+            <node begin="5" end="6" id="11" lcat="p(pp)" lemma="aan" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="aan" vztype="fin" word="aan"/>
           </node>
           <node begin="6" end="7" id="12" lemma="schorten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="schort" word="schort" wvorm="pv"/>
         </node>
