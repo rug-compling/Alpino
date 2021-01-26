@@ -178,6 +178,17 @@ history_tags(normal(abbreviation(normal)),Q0,Q,Stem,_,_,_) -->
       guess_lemma(Stem,Stem1)}, 
     [ cgn_postag(Q0,Q,Stem1,'SPEC(afk)') ].
 
+history_tags(slash(His1,His2),Q0,Q,Stem,_Surf,Tag,Result) -->
+    { alpino_util:split_atom(Stem," ",[Stem1,Stem2,Stem3]),
+      Q1 is Q0 + 1,
+      Q2 is Q1 + 1,
+      Q  is Q2 + 1
+    },
+    cgn_postag_c(Tag,Stem1,Stem1,Q0,Q1,Result,His1),
+    [ cgn_postag(Q1,Q2,Stem2,'SPEC(symb)')],
+    cgn_postag_c(Tag,Stem3,Stem3,Q2,Q ,Result,His2).
+    
+
 history_tags(normal(chess),Q0,Q,Stem,_,_,_) -->
     { 1 is Q-Q0 },
     [ cgn_postag(Q0,Q,Stem,'SPEC(symb)') ].
@@ -719,6 +730,7 @@ exceptional_stem_tag('Kamer',_,          'N(soort,ev,basis,zijd,stan)',kamer).
 exceptional_stem_tag('Koning',_,         'N(soort,ev,basis,zijd,stan)',koning).
 exceptional_stem_tag('Landbouw',_,       'N(soort,ev,basis,zijd,stan)',landbouw).
 exceptional_stem_tag('Leefmilieu',_,     'N(soort,ev,basis,onz,stan)', leefmilieu).
+exceptional_stem_tag('Nederlanden',_,    'N(iegen,mv,basis)',          'Nederland').
 exceptional_stem_tag('Onderwijs',_,      'N(soort,ev,basis,onz,stan)', onderwijs).
 exceptional_stem_tag('Ontwikkeling',_,   'N(soort,ev,basis,zijd,stan)',ontwikkeling).
 exceptional_stem_tag('Ontwikkelingssamenwerking',_,
@@ -753,7 +765,7 @@ exceptional_stem_tag(op,adjective(_),                         'VZ(fin)',op).
 exceptional_stem_tag(over,adjective(_),                       'VZ(fin)',over).
 exceptional_stem_tag(sprake,_,                                'N(soort,ev,basis,dat)',spraak).
 exceptional_stem_tag(streven,noun(het,mass,sg),               'WW(inf,nom,zonder,zonder-n)',streven).
-exceptional_stem_tag(tegen,_,                                 'VZ(fin)',tegen).
+exceptional_stem_tag(tegen,adjective(_),                      'VZ(fin)',tegen).
 exceptional_stem_tag(toe,_,                                   'VZ(fin)',toe).
 exceptional_stem_tag(verdenken,noun(de,count,sg),             'WW(vd,nom,met-e,zonder-n)',verdenken).
 exceptional_stem_tag(verdenken,noun(de,count,pl),             'WW(vd,nom,met-e,mv-n)',verdenken).
@@ -785,6 +797,8 @@ exceptional_stem_tag(©,_,                                           'SPEC(symb)
 exceptional_stem_tag('CA',_,                                        'SPEC(symb)').
 exceptional_stem_tag('#',tag,                                       'SPEC(symb)').
 exceptional_stem_tag(aan,complementizer(aan_het),                   'VZ(init)').
+exceptional_stem_tag(achter,loc_adverb,                             'VZ(fin)').
+exceptional_stem_tag(achter,pred_np_me_adjective(_),                'VZ(fin)').
 exceptional_stem_tag(af,adjective(pred(_)),                         'VZ(fin)').
 exceptional_stem_tag(af_studeren,nominalized_adjective,             'WW(vd,nom,met-e,mv-n)').
 exceptional_stem_tag(af_vaardigen,nominalized_adjective,            'WW(vd,nom,met-e,mv-n)').
@@ -944,6 +958,7 @@ exceptional_stem_tag(ondanks,_,                                     'VZ(init)').
 exceptional_stem_tag(onder,loc_adverb,                              'VZ(fin)').
 exceptional_stem_tag(onderweg,adjective(_),                         'BW()').
 exceptional_stem_tag(oneens,_,                                      'ADJ(vrij,basis,zonder)').
+exceptional_stem_tag(onmiddellijk,modal_adverb(_),                  'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(ons,determiner(pron),                          'VNW(bez,det,stan,vol,1,mv,prenom,zonder,evon)').
 exceptional_stem_tag(onszelf,_,                                     'VNW(pr,pron,obl,nadr,1,mv)').
 exceptional_stem_tag(onverschillig,preposition(_,_,of_sbar),        'ADJ(vrij,basis,zonder)').
@@ -1909,6 +1924,7 @@ genus_naam('Smead').
 genus_naam('Spirit').
 genus_naam('Textkernel').
 genus_naam('Vivant').
+genus_naam('Wesbank').
 genus_naam('Yukos').
 
 de_naam('Bono').

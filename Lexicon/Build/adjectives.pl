@@ -5233,6 +5233,12 @@ a([ge_e(bespaarde),
 
 a([ge_both(bespannen)],adv,[],[]).
 
+a([end(besparend),
+   ende(besparende)],padv,[],
+  [energie,
+   i(kost,kosten)
+  ]).
+
 a([e(bespatte),
    no_e(bespat)],adv,[],[]).
 
@@ -7808,6 +7814,10 @@ a([e(degelijke),
    no_e(degelijk),
    st(degelijkst),
    ste(degelijkste)],adv,[],[]).
+
+a([ende(dekkende),
+   end(dekkend)],padv,[],
+  [i(kost,kosten)]).
 
 a([e(dekselse),
    no_e(deksels)],adv,[],[]).
@@ -21175,14 +21185,6 @@ a([e(kostelijke),
 
 a([e(kosteloze),
    no_e(kosteloos)],adv,[],[]).
-
-a([stem(kost_besparen),
-   ende(kostenbesparende),
-   end(kostenbesparend)],both,[],[]).
-
-a([stem(kost_dekken),
-   ende(kostendekkende),
-   end(kostendekkend)],both,[],[]).
 
 a([e(koude),
    er(kouder),

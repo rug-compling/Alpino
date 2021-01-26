@@ -12,6 +12,21 @@ user_transformation(r(Rel,i(X,Cat)),A,B,
                         r(Rel2,Cat2),C,D,E,F).
 
 
+% user_transformation(r(Rel,Cat),A,Ds0,
+% 		    r(Rel,Cat),A,[Hd,Obj1|Hdf],_,_) :-
+%     Obj1 = tree(r(obj1,i(Ix)),Obj1A,Obj1Ds),
+%     Hd0  = tree(r(hd,l(read_from_treebank(Az,L,'VZ(init)'),Cat,W)),HdA,[]),
+%     Hd   = tree(r(hd,l(read_from_treebank(Az,L,'VZ(fin)'),Cat,W)),HdA,[]),
+%     lists:select(Obj1,Ds0,Ds1),
+%     lists:select(Hd0,Ds1,Hdf).
+		   
+
+% user_transformation(r(Rel,Cat),A,[Obj1,Hd0|Hdf],
+% 		    r(Rel,Cat),A,[Obj1,Hd|Hdf],_,_) :-
+%     Obj1 = tree(r(obj1,CAT),Obj1A,Obj1Ds),
+%     Hd0  = tree(r(hd,l(read_from_treebank(Az,L,'VZ(init)'),Cat,W)),HdA,[]),
+%     Hd   = tree(r(hd,l(read_from_treebank(Az,L,'VZ(fin)'),Cat,W)),HdA,[]).
+		   
 
 user_transformation(r(REL,l(read_from_treebank(Az,L0,Tag),Cat,W/[P0,P])),B,[],
 		    r(REL,l(read_from_treebank(Az,L1,Tag),Cat,W/[P0,P])),B,[],_,_) :-
@@ -80,6 +95,8 @@ surf_lemma(Word,'N(eigen,ev,basis,onz,stan)','N(eigen,mv,basis)',L,L) :-
     pl_naam(Word).
 
 
+
+
 eigen(_):-
     fail.
 
@@ -96,7 +113,6 @@ genus_naam(_) :-
     fail.
 
 
-
 surf_lemma(Word,Rel,Pos0,Pos,Lem0,Lem) :-
     \+ Rel = mwp,
     surf(Word,Pos,Lem),
@@ -111,7 +127,6 @@ lemma(_,_) :-
 surf(_,_,_) :-
     fail.
 
-surf(conform,'VZ(init)',conform).
 
 user:query:-
     findall(L,lemma(L,_),Ls),
@@ -208,6 +223,8 @@ correct_tags(L,L,Deeleigen) :-
 correct_tags(L,L,Deeleigen) :-
     vreemd(L),
     vreemd(L,Deeleigen).
+
+correct_tags([op,den,duur],[op,de,duur],['VZ(init)','LID(bep,dat,evmo)','N(soort,ev,basis,zijd,stan)']).
 
 flat(_) :-
     fail.

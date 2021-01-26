@@ -24964,6 +24964,8 @@ n([stem(oud_DIM),pl(oudjes),sg(oudje)],het,[]).
 
 n([sg(outfit),pl(outfits)],de,[]).
 
+n([sg(outlier),pl(outliers)],de,[]).
+
 n([mass(output)],de,[]).
 
 n([sg(outsider),pl(outsiders)],de,[]).
