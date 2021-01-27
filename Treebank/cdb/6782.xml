@@ -35,10 +35,10 @@
         <node begin="13" cat="pp" end="18" id="25" rel="mod">
           <node begin="13" end="14" id="26" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>
           <node begin="14" cat="conj" end="18" id="27" rel="obj1">
-            <node begin="14" end="15" id="28" lemma="19.15" pos="num" postag="SPEC(symb)" pt="spec" rel="cnj" root="19.15" spectype="symb" word="19.15"/>
+            <node begin="14" end="15" id="28" lemma="19.15" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="cnj" root="19.15" word="19.15"/>
             <node begin="15" conjtype="neven" end="16" id="29" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="16" cat="mwu" end="18" id="30" rel="cnj">
-              <node begin="16" end="17" id="31" lemma="19.55" naamval="stan" numtype="hoofd" pos="noun" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="mwp" root="19.55" word="19.55"/>
+              <node begin="16" end="17" id="31" lemma="19.55" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="19.55" word="19.55"/>
               <node begin="17" end="18" genus="onz" getal="ev" graad="basis" id="32" lemma="uur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="uur" word="uur"/>
             </node>
           </node>

@@ -12,7 +12,7 @@
         <node begin="4" end="5" genus="genus" getal="ev" graad="basis" id="8" lemma="Springer" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="obj1" root="Springer" word="Springer"/>
         <node begin="5" cat="pp" end="7" id="9" rel="mod">
           <node begin="5" end="6" id="10" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
-          <node begin="6" end="7" id="11" lemma="26-24" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="26-24" word="26-24"/>
+          <node begin="6" end="7" id="11" lemma="26-24" pos="num" postag="SPEC(symb)" pt="spec" rel="obj1" root="26-24" spectype="symb" word="26-24"/>
         </node>
       </node>
       <node begin="7" conjtype="neven" end="8" id="12" lemma="doch" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="doch" word="doch"/>
@@ -28,7 +28,7 @@
           <node begin="8" end="12" id="21" index="1" rel="su"/>
           <node begin="13" cat="pp" end="15" id="22" rel="mod">
             <node begin="13" end="14" id="23" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
-            <node begin="14" end="15" id="24" lemma="18-22" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="18-22" word="18-22"/>
+            <node begin="14" end="15" id="24" lemma="18-22" pos="num" postag="SPEC(symb)" pt="spec" rel="obj1" root="18-22" spectype="symb" word="18-22"/>
           </node>
           <node begin="15" cat="pp" end="17" id="25" rel="pc">
             <node begin="15" end="16" id="26" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
