@@ -112,12 +112,10 @@ de_naam(_) :-
 genus_naam(_) :-
     fail.
 
-
 surf_lemma(Word,Rel,Pos0,Pos,Lem0,Lem) :-
     \+ Rel = mwp,
     surf(Word,Pos,Lem),
     \+ Pos0/Lem0 = Pos/Lem.
-
 
 tag_lemma(_,_,_) :- fail.
 
@@ -224,7 +222,11 @@ correct_tags(L,L,Deeleigen) :-
     vreemd(L),
     vreemd(L,Deeleigen).
 
-correct_tags([op,den,duur],[op,de,duur],['VZ(init)','LID(bep,dat,evmo)','N(soort,ev,basis,zijd,stan)']).
+correct_tags([een,uur],[één,uur],['TW(hoofd,vrij)','N(soort,ev,basis,onz,stan)']).
+
+correct_tags(L,L,Deeleigen) :-
+    correct_tags(L,Deeleigen).
+
 
 flat(_) :-
     fail.
@@ -232,3 +234,7 @@ flat(_) :-
 vreemd(_) :-
     fail.
 
+correct_tags(_,_) :-
+    fail.
+
+correct_tags([_,uur],['TW(hoofd,vrij)','N(soort,ev,basis,onz,stan)']).
