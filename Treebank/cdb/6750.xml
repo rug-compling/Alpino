@@ -8,7 +8,7 @@
       <node begin="3" end="4" id="5" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
       <node begin="4" buiging="zonder" end="5" graad="comp" id="6" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="predc" root="beter" word="beter"/>
       <node begin="5" cat="cp" end="14" id="7" rel="mod">
-        <node begin="5" end="6" id="8" lemma="al" pos="comp" postag="BW()" pt="bw" rel="cmp" root="al" word="al"/>
+        <node begin="5" conjtype="onder" end="6" id="8" lemma="al" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="al" word="al"/>
         <node begin="6" cat="sv1" end="14" id="9" rel="body">
           <node begin="6" end="7" id="10" lemma="blijven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="blijf" word="bleef" wvorm="pv"/>
           <node begin="7" end="8" genus="onz" getal="ev" id="11" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="het"/>

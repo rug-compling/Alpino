@@ -23,7 +23,7 @@
       </node>
       <node begin="10" end="11" id="17" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
       <node begin="11" cat="np" end="40" id="18" rel="predc">
-        <node begin="11" end="12" id="19" lemma="één" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="hd" root="een" word="een"/>
+        <node begin="11" end="12" getal-n="zonder-n" graad="basis" id="19" lemma="één" numtype="hoofd" pos="noun" positie="nom" postag="TW(hoofd,nom,zonder-n,basis)" pt="tw" rel="hd" root="een" word="een"/>
         <node begin="12" cat="pp" end="15" id="20" rel="mod">
           <node begin="12" end="13" id="21" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="13" cat="np" end="15" id="22" rel="obj1">
@@ -47,7 +47,7 @@
                 <node begin="16" end="19" id="37" index="3" rel="su"/>
                 <node begin="20" buiging="zonder" end="21" id="38" lemma="horen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="hoor" word="horen" wvorm="inf"/>
                 <node begin="22" cat="cp" end="40" id="39" rel="mod">
-                  <node begin="22" end="23" id="40" lemma="toen" pos="comp" postag="BW()" pt="bw" rel="cmp" root="toen" word="toen"/>
+                  <node begin="22" conjtype="onder" end="23" id="40" lemma="toen" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="toen" word="toen"/>
                   <node begin="23" cat="ssub" end="40" id="41" rel="body">
                     <node begin="23" cat="np" end="25" id="42" rel="su">
                       <node begin="23" buiging="zonder" end="24" id="43" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="dit"/>

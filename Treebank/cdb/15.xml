@@ -9,7 +9,7 @@
         <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="zuivel_product" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="zuivelprodukt" word="zuivelprodukten"/>
       </node>
       <node begin="3" end="4" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
-      <node begin="4" end="5" id="8" lemma="nl." pos="adv" postag="BW()" pt="bw" rel="mod" root="namelijk" word="nl."/>
+      <node begin="4" end="5" id="8" lemma="namelijk" pos="adv" postag="SPEC(afk)" pt="spec" rel="mod" root="namelijk" spectype="afk" word="nl."/>
       <node begin="5" cat="np" end="21" id="9" rel="predc">
         <node begin="5" end="6" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
         <node begin="6" buiging="met-e" end="7" id="11" lemma="enig" naamval="stan" npagr="rest" pdtype="det" pos="adj" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,rest)" pt="vnw" rel="mod" root="enig" vwtype="onbep" word="enige"/>

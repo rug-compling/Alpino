@@ -31,7 +31,7 @@
             <node begin="12" end="13" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="13" cat="mwu" end="16" id="24" rel="hd">
               <node begin="13" buiging="met-e" end="14" graad="basis" id="25" lemma="landelijk" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Landelijke" word="Landelijke"/>
-              <node begin="14" end="15" getal="mv" graad="basis" id="26" lemma="huisarts" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Huisartsen" word="Huisartsen"/>
+              <node begin="14" end="15" getal="mv" graad="basis" id="26" lemma="huis_arts" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Huisartsen" word="Huisartsen"/>
               <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="27" lemma="vereniging" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Vereniging" word="Vereniging"/>
             </node>
           </node>
@@ -77,7 +77,7 @@
                   <node begin="33" end="34" id="59" lemma="omhoog" pos="adv" postag="BW()" pt="bw" rel="ld" root="omhoog" word="omhoog"/>
                   <node begin="35" buiging="zonder" end="36" id="60" lemma="gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" word="gaan" wvorm="inf"/>
                   <node begin="36" cat="cp" end="49" id="61" rel="mod">
-                    <node begin="36" end="37" id="62" lemma="nu" pos="comp" postag="BW()" pt="bw" rel="cmp" root="nu" word="nu"/>
+                    <node begin="36" conjtype="onder" end="37" id="62" lemma="nu" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="nu" word="nu"/>
                     <node begin="37" cat="ssub" end="49" id="63" rel="body">
                       <node begin="40" end="41" id="64" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
                       <node begin="37" cat="ppart" end="49" id="65" rel="vc">

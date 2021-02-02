@@ -11,12 +11,14 @@
       </node>
       <node begin="3" end="4" id="7" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
       <node begin="4" cat="np" end="7" id="8" rel="obj1">
-        <node begin="4" buiging="zonder" end="5" graad="basis" id="9" lemma="louter" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="louter" word="louter"/>
-        <node begin="5" buiging="met-e" end="6" graad="basis" id="10" lemma="praktisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="practisch" word="praktische"/>
-        <node begin="6" end="7" getal="mv" graad="basis" id="11" lemma="reden" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="reden" word="redenen"/>
+        <node begin="4" cat="ap" end="6" id="9" rel="mod">
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="10" lemma="louter" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="louter" word="louter"/>
+          <node begin="5" buiging="met-e" end="6" graad="basis" id="11" lemma="praktisch" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="practisch" word="praktische"/>
+        </node>
+        <node begin="6" end="7" getal="mv" graad="basis" id="12" lemma="reden" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="reden" word="redenen"/>
       </node>
     </node>
-    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="7" end="8" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Dat hij komt heeft louter praktische redenen .</sentence>
 </alpino_ds>

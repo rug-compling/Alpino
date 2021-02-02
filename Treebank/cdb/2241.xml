@@ -13,7 +13,7 @@
         <node begin="3" cat="np" end="16" id="9" rel="app">
           <node begin="3" end="4" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
           <node begin="4" cat="conj" end="7" id="11" rel="mod">
-            <node begin="4" buiging="zonder" end="5" graad="basis" id="12" lemma="geboren" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="cnj" root="geboren" word="geboren"/>
+            <node begin="4" buiging="zonder" end="5" id="12" lemma="geboren" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="cnj" root="geboren" word="geboren" wvorm="vd"/>
             <node begin="5" conjtype="neven" end="6" id="13" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="6" buiging="zonder" end="7" id="14" lemma="tijgen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="cnj" root="getogen" word="getogen" wvorm="vd"/>
           </node>

@@ -20,7 +20,7 @@
               <node begin="8" end="9" id="16" lemma="11" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="mwp" root="11" word="11"/>
             </node>
           </node>
-          <node begin="9" buiging="zonder" end="10" id="17" lemma="dragen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="opgedragen" word="opgedragen" wvorm="vd"/>
+          <node begin="9" buiging="zonder" end="10" id="17" lemma="dragen" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="hd" root="opgedragen" word="opgedragen" wvorm="vd"/>
         </node>
         <node begin="10" cat="mwu" end="12" id="18" rel="hd">
           <node begin="10" end="11" id="19" lemma="Missa" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Missa" spectype="deeleigen" word="Missa"/>
@@ -32,7 +32,7 @@
         </node>
       </node>
       <node begin="15" cat="cp" end="29" id="24" rel="mod">
-        <node begin="15" end="16" id="25" lemma="al" pos="comp" postag="BW()" pt="bw" rel="cmp" root="al" word="al"/>
+        <node begin="15" conjtype="onder" end="16" id="25" lemma="al" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="al" word="al"/>
         <node begin="16" cat="sv1" end="29" id="26" rel="body">
           <node begin="16" end="17" id="27" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" word="werd" wvorm="pv"/>
           <node begin="17" end="18" getal="getal" id="28" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="su" root="die" status="vol" vwtype="aanw" word="die"/>

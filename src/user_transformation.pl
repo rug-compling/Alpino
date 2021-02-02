@@ -60,11 +60,12 @@ user_transformation(r(REL,l(read_from_treebank(Az,L0,Tag),Cat,W/[P0,P])),B,[],
 		    r(REL,l(read_from_treebank(Az,L1,Tag),Cat,W/[P0,P])),B,[],_,_) :-
     lemma(L0,L1).
 
-root_lemma(_,_,_) :- fail.
-
-surf_lemma(_,_,_,_) :- fail.
-
-surf_lemma(_,_,_) :- fail.
+user_transformation(r(REL,p(mwu)),B,Ds0,
+		    r(REL,p(mwu)),B,Ds ,String,_) :-
+    surfs(Ds0,Surfs,String),
+    correct_tags(Surfs,Lemmas,Tags),
+    assign_tags(Lemmas,Tags,Ds0,Ds),
+    \+ Ds0 = Ds.
 
 surf_lemma(Word,'N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)',L,L) :-
     eigen(Word).
@@ -95,36 +96,15 @@ surf_lemma(Word,'N(eigen,ev,basis,onz,stan)','N(eigen,mv,basis)',L,L) :-
     pl_naam(Word).
 
 
-
-
-eigen(_):-
-    fail.
-
-pl_naam(_) :-
-    fail.
-
-het_naam(_):-
-    fail.
-
-de_naam(_) :-
-    fail.
-
-genus_naam(_) :-
-    fail.
-
 surf_lemma(Word,Rel,Pos0,Pos,Lem0,Lem) :-
     \+ Rel = mwp,
     surf(Word,Pos,Lem),
     \+ Pos0/Lem0 = Pos/Lem.
 
-tag_lemma(_,_,_) :- fail.
-
-lemma(_,_) :-
-    fail.
-
-surf(_,_,_) :-
-    fail.
-
+surf_lemma(Word,Rel,Pos0,Pos,Lem,Lem) :-
+    \+ Rel = mwp,
+    surf(Word,Pos),
+    \+ Pos0 = Pos.
 
 user:query:-
     findall(L,lemma(L,_),Ls),
@@ -150,13 +130,6 @@ q([],H) -->
 q([_|_],H) -->
     charsio:format_to_chars("\"~w\",",H).
     
-
-user_transformation(r(REL,p(mwu)),B,Ds0,
-		    r(REL,p(mwu)),B,Ds ,String,_) :-
-    surfs(Ds0,Surfs,String),
-    correct_tags(Surfs,Lemmas,Tags),
-    assign_tags(Lemmas,Tags,Ds0,Ds),
-    \+ Ds0 = Ds.
 
 surfs([],[],_).
 surfs([tree(r(mwp,l(_,_,_/[P0,P])),_,_)|Trees],[Surf|Surfs],String) :-
@@ -222,10 +195,13 @@ correct_tags(L,L,Deeleigen) :-
     vreemd(L),
     vreemd(L,Deeleigen).
 
-correct_tags([een,uur],[één,uur],['TW(hoofd,vrij)','N(soort,ev,basis,onz,stan)']).
-
 correct_tags(L,L,Deeleigen) :-
     correct_tags(L,Deeleigen).
+
+
+
+
+
 
 
 flat(_) :-
@@ -237,4 +213,35 @@ vreemd(_) :-
 correct_tags(_,_) :-
     fail.
 
-correct_tags([_,uur],['TW(hoofd,vrij)','N(soort,ev,basis,onz,stan)']).
+root_lemma(_,_,_) :- fail.
+
+surf_lemma(_,_,_,_) :- fail.
+
+surf_lemma(_,_,_) :- fail.
+
+eigen(_):-
+    fail.
+
+pl_naam(_) :-
+    fail.
+
+het_naam(_):-
+    fail.
+
+de_naam(_) :-
+    fail.
+
+genus_naam(_) :-
+    fail.
+
+tag_lemma(_,_,_) :- fail.
+
+lemma(_,_) :-
+    fail.
+
+surf(_,_,_) :-
+    fail.
+
+surf(_,_) :-
+    fail.
+

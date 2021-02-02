@@ -4,7 +4,7 @@
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
         <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="goed" word="Goed"/>
-        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="aanval" ntype="soort" pos="verb" postag="N(soort,mv,basis)" pt="n" rel="hd" root="val_aan" word="aanvallen"/>
+        <node begin="1" buiging="zonder" end="2" getal-n="zonder-n" id="4" lemma="aanvallen" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="val_aan" word="aanvallen" wvorm="inf"/>
       </node>
       <node begin="2" end="3" id="5" lemma="beginnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="begin" word="begint" wvorm="pv"/>
       <node begin="3" cat="pp" end="6" id="6" rel="mod">
