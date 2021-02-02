@@ -24,7 +24,7 @@
         </node>
         <node begin="10" buiging="zonder" end="11" id="18" lemma="worden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="word" word="worden" wvorm="inf"/>
         <node begin="11" cat="cp" end="18" id="19" rel="mod">
-          <node begin="11" end="12" id="20" lemma="nu" pos="comp" postag="BW()" pt="bw" rel="cmp" root="nu" word="nu"/>
+          <node begin="11" conjtype="onder" end="12" id="20" lemma="nu" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="nu" word="nu"/>
           <node begin="12" cat="ssub" end="18" id="21" rel="body">
             <node begin="12" cat="mwu" end="14" id="22" index="2" rel="su">
               <node begin="12" end="13" id="23" lemma="Be" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Be" spectype="deeleigen" word="Be"/>

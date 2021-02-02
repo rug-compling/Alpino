@@ -5,7 +5,7 @@
     <node begin="0" cat="du" end="19" id="2" rel="--">
       <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="zeker" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="dp" root="zeker" word="Zeker"/>
       <node begin="2" cat="cp" end="19" id="4" rel="dp">
-        <node begin="2" end="3" id="5" lemma="nu" pos="comp" postag="BW()" pt="bw" rel="cmp" root="nu" word="nu"/>
+        <node begin="2" conjtype="onder" end="3" id="5" lemma="nu" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="nu" word="nu"/>
         <node begin="3" cat="ssub" end="19" id="6" rel="body">
           <node begin="3" end="4" genus="masc" getal="ev" id="7" lemma="hij" naamval="nomin" pdtype="pron" persoon="3" pos="noun" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" root="hij" status="vol" vwtype="pers" word="hij"/>
           <node begin="7" end="8" id="8" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>

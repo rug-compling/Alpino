@@ -68,7 +68,7 @@
         <node begin="30" cat="conj" end="35" id="51" rel="obj2">
           <node begin="30" cat="np" end="33" id="52" rel="cnj">
             <node begin="30" end="31" id="53" index="2" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-            <node begin="31" buiging="zonder" end="32" graad="basis" id="54" index="3" lemma="geboren" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="geboren" word="geboren"/>
+            <node begin="31" buiging="zonder" end="32" id="54" index="3" lemma="geboren" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="mod" root="geboren" word="geboren" wvorm="vd"/>
             <node begin="32" end="33" id="55" lemma="communicator" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="hd" root="communicator" spectype="vreemd" word="communicator"/>
           </node>
           <node begin="33" conjtype="neven" end="34" id="56" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>

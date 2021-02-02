@@ -12,7 +12,7 @@
           <node begin="4" cat="np" end="19" id="9" rel="obj1">
             <node begin="4" end="5" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="5" end="6" id="11" lemma="405.000" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="405.000" word="405.000"/>
-            <node begin="6" cat="ap" end="18" id="12" rel="mod">
+            <node begin="6" cat="ppart" end="18" id="12" rel="mod">
               <node begin="6" cat="pp" end="13" id="13" rel="mod">
                 <node begin="6" end="7" id="14" lemma="tussen" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tussen" vztype="init" word="tussen"/>
                 <node begin="7" cat="conj" end="13" id="15" rel="obj1">
@@ -36,7 +36,7 @@
                   <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="29" lemma="Wales" naamval="stan" ntype="eigen" pos="adj" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="cnj" root="Wales" word="Wales"/>
                 </node>
               </node>
-              <node begin="17" buiging="zonder" end="18" graad="basis" id="30" lemma="geboren" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="geboren" word="geboren"/>
+              <node begin="17" buiging="zonder" end="18" id="30" lemma="geboren" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="hd" root="geboren" word="geboren" wvorm="vd"/>
             </node>
             <node begin="18" end="19" getal="mv" graad="basis" id="31" lemma="kind" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="kind" word="kinderen"/>
           </node>

@@ -33,7 +33,7 @@
           <node begin="14" end="15" id="25" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" word="wordt" wvorm="pv"/>
           <node begin="15" end="16" genus="zijd" getal="ev" graad="basis" id="26" lemma="week" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="predc" root="week" word="week"/>
           <node begin="17" cat="cp" end="26" id="27" rel="mod">
-            <node begin="17" end="18" id="28" lemma="nu" pos="comp" postag="BW()" pt="bw" rel="cmp" root="nu" word="nu"/>
+            <node begin="17" conjtype="onder" end="18" id="28" lemma="nu" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="nu" word="nu"/>
             <node begin="18" cat="ssub" end="26" id="29" rel="body">
               <node begin="18" end="19" getal="ev" id="30" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="noun" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
               <node begin="19" cat="pp" end="22" id="31" rel="mod">
