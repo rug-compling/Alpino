@@ -5861,7 +5861,6 @@ lemma_root(gelijk_zetten,zet_gelijk) .
 lemma_root(geloven,geloof) .
 lemma_root(gelukken,geluk) .
 lemma_root(geluk_wensen,wens_geluk) .
-lemma_root(gemoeid,gemoeid) .
 lemma_root(generaliseren,generaliseer) .
 lemma_root(generen,geneer) .
 lemma_root(genereren,genereer) .

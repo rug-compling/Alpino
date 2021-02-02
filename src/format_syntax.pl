@@ -683,7 +683,7 @@ format_cgn_postags([cgn_postag(P0,P,Lemma0,Tag)|T],[W|Words],Key) :-
     format("~w|~w|~w|~w|~w|~w\n",[Key,W,P0,P,Tag,Lemma]),
     format_cgn_postags(T,Words,Key).
 
-get_stem(v_root(A,_B),C) :-
+get_stem(v_root(_A,B),C) :-
     !,
-    A = C.
+    B = C.
 get_stem(A,A).

@@ -1033,6 +1033,14 @@ m(v_root(zal,zullen),
 m(v_root(Psp,Psp),verb(_,_,_,Psp,_,_,_,HZ,Subcat)) :-
     psp_only(Psp,HZ,Subcat).
 
+m(Stem,verb(_,_,_,Psp,_,_,_,HZ,Subcat)) :-
+    psp_only(Stem,Psp,HZ,Subcat).
+
+psp_only(v_root(moei,moeien),
+	 gemoeid,
+         zijn,
+         [pc_pp(met)]).
+
 psp_only(bedacht,
          zijn,
          [pc_pp(op),
@@ -1072,10 +1080,6 @@ psp_only(gecharmeerd,
          [pc_pp(van),
           er_pp_sbar(van),
           er_pp_vp(van)]).
-
-psp_only(gemoeid,
-         zijn,
-         [pc_pp(met)]).
 
 psp_only(geoorloofd,
          zijn,

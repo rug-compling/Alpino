@@ -602,7 +602,7 @@ analyse1:
 	@echo $(files)
 	@echo -n "lemma accuracy: "
 	@mistakes=`cat $(files) | grep -c "#LM"` ; \
-         cat $(files) | grep 'Lexical analysis: ' | awk "{ N=N+\$$3 } END { print 1 - $$mistakes/N }"
+         cat $(files) | grep 'Lexical analysis: ' | awk "{ N=N+\$$3 } END { print 100*(1 - $$mistakes/N)  }"
 	@echo -n "postag accuracy: "
 	@mistakes=`cat $(files) | grep -c "#PT"` ; \
-         cat $(files) | grep 'Lexical analysis: ' | awk "{ N=N+\$$3 } END { print 1 - $$mistakes/N }"
+         cat $(files) | grep 'Lexical analysis: ' | awk "{ N=N+\$$3 } END { print 100*(1 - $$mistakes/N) }"

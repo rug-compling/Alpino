@@ -402,9 +402,9 @@ graphic_daughter(cfg,No,tree(_,_,Ds,_),D) :-
 graphic_daughter(cfg,1,tree(_,_,lex(W),_),lex(W)).
 
 
-root_of_pair(v_root(Root0,_Lemma),Root) :-
+root_of_pair(v_root(_Root0,Lemma),Root) :-
     !,
-    Root0=Root.
+    Lemma=Root.
 root_of_pair(Root,Root).
 
 show_node(adt,Tree,Medium) :-
