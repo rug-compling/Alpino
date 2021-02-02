@@ -226,6 +226,7 @@ mwu_postag('De Vlaamse Vlagge',['LID(bep,stan,rest)','ADJ(prenom,basis,met-e,sta
 mwu_postag('De vrije',['LID(bep,stan,rest)','ADJ(prenom,basis,met-e,stan)'],[de,vrij]).
 mwu_postag('De Zevende Dag',['LID(bep,stan,rest)','TW(rang,prenom,stan)','N(soort,ev,basis,zijd,stan)'],[de,zeven,dag]).
 mwu_postag('De Zevende Hemel',['LID(bep,stan,rest)','TW(rang,prenom,stan)','N(soort,ev,basis,zijd,stan)'],[de,zeven,hemel]).
+mwu_postag(dichtbij,['ADJ(vrij,basis,zonder)','VZ(init)'],[dicht,bij]).
 mwu_postag('Dienst Grondstoffen en Verwerkte Producten',['N(soort,ev,basis,zijd,stan)','N(soort,mv,basis)','VG(neven)','WW(vd,prenom,met-e)','N(soort,mv,basis)'],[dienst,grondstof,en,verwerken,product]).
 mwu_postag('Dienst gynaecologie en verloskunde',['N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[dienst,gynaecologie,en,verlos_kunde]).
 mwu_postag('Dienst Informatie Vorming en Afstemming',['N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[dienst,informatie,vorming,en,afstemming]).
@@ -290,6 +291,7 @@ mwu_postag('Eerste Batallion',['TW(rang,prenom,stan)','N(soort,ev,basis,onz,stan
 mwu_postag('Eerste en Tweede Kamer',['TW(rang,prenom,stan)','VG(neven)','TW(rang,prenom,stan)','N(soort,ev,basis,zijd,stan)'],[één,en,twee,kamer]).
 mwu_postag('Eerste Kamerlid',['TW(rang,prenom,stan)','N(soort,ev,basis,onz,stan)'],[één,kamer_lid]).
 mwu_postag('Eerste Kerstavond',['TW(rang,prenom,stan)','N(eigen,ev,basis,zijd,stan)'],[één,'Kerstavond']).
+mwu_postag('eerste klas',['TW(rang,prenom,stan)','N(soort,ev,basis,zijd,stan)'],[één,klas]).
 mwu_postag('Eerste Pantserleger',['TW(rang,prenom,stan)','N(soort,ev,basis,onz,stan)'],[één,pantserleger]).
 mwu_postag('Eerste Regiment Grenadiers',['TW(rang,prenom,stan)','N(soort,ev,basis,onz,stan)','N(soort,mv,basis)'],[één,regiment,grenadier]).
 mwu_postag('Eerste Regiment Jagers',['TW(rang,prenom,stan)','N(soort,ev,basis,onz,stan)','N(soort,mv,basis)'],[één,regiment,jager]).
