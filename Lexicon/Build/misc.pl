@@ -2039,8 +2039,8 @@ m(Stem,      determiner(pron,wh),[watvoor,Een]) :- een(Een), stem_from_surf([wat
 
 %% iedere twee weken
 %% elke twee jaar
-m(elke,          tmp_determiner,  elke).
-m(iedere,        tmp_determiner,  iedere).
+m(elk,          tmp_determiner,  elke).
+m(ieder,        tmp_determiner,  iedere).
 
 with_dt([niet,een],
 	determiner(een),
@@ -4882,6 +4882,7 @@ m('met name', modal_adverb,[met,name]).
 m('onder ander', modal_adverb, [onder,andere]).
 m('onder ander', modal_adverb, [onder,anderen]).
 m('onder meer',  modal_adverb, [onder,meer]).
+m(ondermeer,  modal_adverb, ondermeer).
 
 %% prep   bijna in alle gevallen
 %% noun   bijna iedereen
@@ -6680,7 +6681,7 @@ m(jou,          pronoun(nwh,je,sg,de,dat_acc,def),jou).
 m(jullie,       pronoun(nwh,je,pl,de,both,def),jullie).
 m(men,          pronoun(nwh,thi,sg,de,nom,def),men).
 m(me,           pronoun(nwh,fir,sg,de,dat_acc,def,wkpro),me).
-m(elkaar,       pronoun(nwh,thi,pl,de,dat_acc,def),mekaar).
+m(mekaar,       pronoun(nwh,thi,pl,de,dat_acc,def),mekaar).
 m(menigeen,     pronoun(nwh,thi,sg,de,both,def),menigeen).
 m(mezelf,       pronoun(nwh,fir,both,de,dat_acc,def),mezelf).
 m(mezelf,       pronoun(nwh,fir,both,de,dat_acc,def),mezelve).
@@ -7455,7 +7456,8 @@ nominalized_adjective(blind,blinden).
 nominalized_adjective(blond,blonden).
 nominalized_adjective(boos,bozen).
 nominalized_adjective(bruin,bruinen).
-nominalized_adjective(deskundig,deskundigen).   % in order to be able to analyze "onafhankelijk deskundigen"
+nominalized_adjective(deskundig,deskundigen). % in order to be able to analyze "onafhankelijk deskundigen"
+nominalized_adjective(detineren,gedetineerden).
 nominalized_adjective(dik,dikken).
 nominalized_adjective(doof,doven).
 nominalized_adjective(doopsgezind,doopsgezinden).

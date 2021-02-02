@@ -7,7 +7,8 @@ m(Stem, adverb, PN) :-
     ;	hdrug_util:concat_all(PN,Stem,' ')
     ).
 
-m('onder ander',adverb,[onder,andere]).
+m('onder ander',adverb, [onder,andere]).
+m('te veel',    adverb, [te,meer]). 
 
 adverb([geen,bal]).
 adverb([geen,barst]).
@@ -423,7 +424,6 @@ adverb([te,hooi,en,te,gras]).
 adverb([te,zeer]).
 adverb([te,vuur,en,te,zwaard]).
 adverb(temeer).	   %  requires sbar:  'dit is temeer een probleem, omdat ..'
-adverb([te,meer]). 
 adverb([te,alle,prijze]).
 adverb([te,alle,prijzen]).
 adverb([te,allen,prijze]).

@@ -1162,6 +1162,7 @@ n([sg(aanbod)],het,
 n([sg(aanbod)],het,
   [],
   [s(arbeid),
+   nieuws,
    over]).
 
 n([mass(aanbouw),pl(aanbouwen)],de,
@@ -3701,6 +3702,7 @@ n([pl(bedrijven),sg(bedrijf)],het,[],
    touringcar,
    transport,
    s(varken),
+   i(vee_voeder,veevoeder),
    s(vervoer),vervoer,
    s(verzekering),
    s(voeding),
@@ -12152,8 +12154,6 @@ n([sg(gedeputeerde),pl(gedeputeerden)],de,[]).
 
 n([mass(gedestilleerd)],both,[]).
 
-n([sg(gedetineerde),pl(gedetineerden)],de,[]).
-
 n([pl(gedichten),sg(gedicht)],het,[],
   [dim(gedichtje)]).
 
@@ -16507,7 +16507,9 @@ n([stem(jong),
    school,
    zwerf]).
 
-n([pl(jongelieden),pl(jongelui),sg(jongmens)],het,[]).
+n([stem(jongelui),pl(jongelieden),pl(jongelui)],both,[]).
+
+n([sg(jongmens)],het,[]).
 
 n([pl(jonkers),sg(jonker)],de,[],[dim(jonkertje)]).
 
@@ -18176,6 +18178,9 @@ n([mass(kooldioxyde),
    mass(kooldioxide)],both,[]).
 
 n([pl(koolhydraten),sg(koolhydraat)],both,[]).
+
+n([mass(koolmonoxyde),
+   mass(koolmonoxide)],both,[]).
 
 n([mass(koolstof)],de,[]).
 
@@ -22663,8 +22668,6 @@ n([pl(nadelen),sg(nadeel)],het,[sbar,
                                 pred_pp(in,subject_sbar),
                                 pred_pp(in,subject_vp)]).
 
-n([mass(nadenken)],het,[]).
-
 n([mass(nadering)],de,[]).
 
 n([pl(nadrukken),sg(nadruk)],de,[]).
@@ -23340,6 +23343,8 @@ n([sg(numero),sg(nummero)],both,[]).
 n([pl(nummertjes),sg(nummertje)],het,[measure]).  % een nummertje Xen
 
 n([mass(nut)],het,[]).
+
+n([sg(nutriënt),pl(nutriënten)],de,[]).
 
 n([mass(nutteloosheid)],de,[]).
 
@@ -24521,6 +24526,7 @@ n([pl(opleidingen),sg(opleiding)],de,
    school,
    vak,
    vervolg,
+   voltijd,
    voor,
    h('VWO'),
    h('WO')
@@ -27178,7 +27184,8 @@ n([pl(pressies),sg(pressie)],de,[sbar,vp]).
 n([pl(prestaties),sg(prestatie)],de,[subject_sbar,subject_vp],
   [richt,
    tegen,
-   top]).
+   top,
+   wieler]).
 
 n([mass(prestige)],both,[]).
 
@@ -36083,6 +36090,8 @@ n([pl(vallen),sg(val)],de,[],
 
 n([mass(validiteit)],de,[]).
 
+n([sg(validering),pl(valideringen)],de,[]).
+
 n([pl(valiezen),sg(valies)],both,[]).  %VL: de
 
 n([mass(valium)],both,[]).
@@ -39718,8 +39727,6 @@ n([pl(werkwijzen),sg(werkwijze)],de,[sbar]).
 n([pl(werkzaamheden),sg(werkzaamheid)],de,[sbar,vp]).
 
 n([pl(werkzaamheden),sg(werkzaamheid)],de,[],[weg]).
-
-n([pl(werkzoekenden),sg(werkzoekende)],de,[]).
 
 n([pl(werpers),sg(werper)],de,[],[speer]).
 

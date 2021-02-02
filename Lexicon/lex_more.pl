@@ -504,7 +504,7 @@ phrasal_entry(adjective(e),numberjarig) -->
     { hdrug_util:debug_message(4,"16 jarige~n",[]) },
     number_expression_word,
     n_word(Jarige),
-    { jarige(Jarige,_) }.
+    { jarige(Jarige,_) }.  % todo correct stem
 
 phrasal_entry(nominalized_adjective,Root,numberjarig) -->
     { hdrug_util:debug_message(4,"numberjarig~n",[]) },

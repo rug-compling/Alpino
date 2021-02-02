@@ -3065,11 +3065,11 @@ spelling_variant(kondt, kunt).
 % spelling_variant('Italie','Italië').
 % spelling_variant('Munchen','München').
 
+spelling_variant('Nos','NOS').
+spelling_variant('Psv','PSV').
 spelling_variant('V.S.','VS').
 
 parse_only_variant(notabene,'nota bene', modal_adverb).
-parse_only_variant(ondermeer,'onder meer', modal_adverb).
-
 parse_only_variant(opzoek, 'op zoek', adjective(pred(padv))).
 parse_only_variant(opzoek, 'op zoek', adjective(pred(padv),pp(naar))).
 

@@ -990,6 +990,8 @@ accent('niet-essentiele','niet-essentiële').
 accent(nieuwjaarsreceptien,nieuwjaarsreceptiën).
 accent(noodsituatien,noodsituatiën).
 accent(notariele,notariële).
+accent(nutrienten,nutriënten).
+accent(nutrient,nutriënt).
 accent('Oekraiense','Oekraïense').
 accent('Oekraiens','Oekraïens').
 accent('Oekrainer','Oekraïner').

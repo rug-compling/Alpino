@@ -4796,6 +4796,11 @@ potential_name_fsa_not_begin(_,P0,[Rue,du|Words],Ws,[Rue,du|Prefix],
     rue(Rue),!,
     P1 is P0 + 2,
     potential_name_fsa(6,P1,Words,Ws,Prefix,His).
+potential_name_fsa_not_begin(_,P0,[Rue,des|Words],Ws,[Rue,des|Prefix],
+		   [rue_de|His]) :-
+    rue(Rue),!,
+    P1 is P0 + 2,
+    potential_name_fsa(6,P1,Words,Ws,Prefix,His).
 potential_name_fsa_not_begin(_,P0,[The,Word|Words],Ws,
                    [The,Word|Prefix],[foreign,foreign|His]) :-
     ( The == the ; The == 'The' ),

@@ -2273,9 +2273,7 @@ a([ge_both(achternagezeten)],adv,[],[]).
 a([ge_e(achterovergedrukte),
    ge_no_e(achterovergedrukt)],adv,[],[]).
 
-a([stem(achter),
-   e(achterste),
-   no_e(achterst)],nonadv,[],[]).
+a([e(achterste)],nonadv,[],[]).
 
 a([e(achterstallige),
    no_e(achterstallig)],nonadv,[],[]).
@@ -4869,10 +4867,10 @@ a([ge_e(bepaalde),
 a([ge_e(bepakte),
    ge_no_e(bepakt)],padv,[],[]).
 
-a([e(bepalende),
+a([ende(bepalende),
    er(bepalender),
    ere(bepalendere),
-   no_e(bepalend),
+   end(bepalend),
    st(bepalendst),
    ste(bepalendste)],adv,
   [pp(voor),
@@ -6096,8 +6094,7 @@ a([ge_both(binnengevallen)],adv,[],[]).
 a([e(binnenlandse),
    no_e(binnenlands)],adv,[],[]).
 
-a([e(binnenste),
-   no_e(binnenste)],nonadv,[],[]).
+a([e(binnenste)],nonadv,[],[]).
 
 a([pred(binnenstebuiten),
    pred([binnenste,buiten])],adv,[],[]).
@@ -6508,8 +6505,7 @@ a([e(bovennatuurlijke),
    st(bovennatuurlijkst),
    ste(bovennatuurlijkste)],adv,[],[]).
 
-a([ste(bovenste),
-   st(bovenste)],nonadv,[],[]).
+a([e(bovenste)],nonadv,[],[]).
 
 a([e(bovenstaande),
    no_e(bovenstaand)],nonadv,[],[]).
@@ -6759,8 +6755,7 @@ a([e(buitensporige),
    ste(buitensporigste)],adv,
   [subject_vp],[]).
 
-a([e(buitenste),
-   no_e(buitenste)],nonadv,[],[]).
+a([e(buitenste)],nonadv,[],[]).
 
 a([ge_e(buitgemaakte),
    ge_no_e(buitgemaakt)],adv,[],[]).
@@ -23138,8 +23133,7 @@ a([e(middelmatige),
    st(middelmatigst),
    ste(middelmatigste)],adv,[],[]).
 
-a([e(middelste),
-   no_e(middelste)],nonadv,[],[]).
+a([e(middelste)],nonadv,[],[]).
 
 a([e(miezerige),
    er(miezeriger),
@@ -25583,8 +25577,7 @@ a([ge_e(onderschepte),
 
 a([ge_both(onderschreven)],adv,[],[]).
 
-a([e(onderste),
-   no_e(onderste)],nonadv,[],[]).
+a([e(onderste)],nonadv,[],[]).
 
 a([e(onderstaande),
    no_e(onderstaand)],adv,[],[]).
@@ -33337,10 +33330,10 @@ a([e(strakke),
    ste(strakste)],adv,
   [pp(in)],[]).
 
-a([e(stralende),
+a([ende(stralende),
    er(stralender),
    ere(stralendere),
-   no_e(stralend),
+   end(stralend),
    st(stralendst),
    ste(stralendste)],adv,[],[]).
 
@@ -33678,7 +33671,7 @@ a([e(talentvolle),
 
 a([e(talige),
    no_e(talig)],nonadv,[],
-  [i(ander,anders),
+  [anders,
    'Nederlands',h('Nederlands'),nederlands,
    'Engels',h('Engels'),engels,
    'Spaans',h('Spaans'),spaans,
@@ -36816,7 +36809,8 @@ a([ge_both(verlaten),
    ste(verlatenste)],adv,
   [pp(door)],[]).
 
-a([ge_both(verleden)],nonadv,[],[]).
+a([stem(verleden),
+   ge_both(verleden)],nonadv,[],[]).
 
 a([ge_e(verleende),
    ge_no_e(verleend)],adv,
@@ -38517,7 +38511,8 @@ a([er(vollediger),
 a([e(volleerde),
    no_e(volleerd)],nonadv,[],[]).
 
-a([ge_e(volmaakte),
+a([stem(volmaakt),
+   ge_e(volmaakte),
    er(volmaakter),
    ere(volmaaktere),
    ge_no_e(volmaakt),
@@ -38782,9 +38777,7 @@ a([e(voorspoedige),
    st(voorspoedigst),
    ste(voorspoedigste)],adv,[],[]).
 
-a([stem(voor),
-   e(voorste),
-   no_e(voorste)],adv,[],[]).
+a([e(voorste)],adv,[],[]).
 
 a([e(voorstelbare),
    er(voorstelbaarder),
@@ -39912,8 +39905,7 @@ a([e(werkzame),
    ste(werkzaamste)],adv,
   [subject_vp],[]).
 
-a([stem(werk_zoeken),
-   ende(werkzoekende),
+a([ende(werkzoekende),
    end(werkzoekend)],nonadv,[],[]).
 
 a([pred(west)],nonadv,[],[]).
@@ -44610,7 +44602,6 @@ stem(verlaat,v_root(verlaat,verlaten)).
 stem(verlamd,v_root(verlam,verlammen)).
 stem(verlangd,v_root(verlang,verlangen)).
 stem(verlaten,v_root(verlaat,verlaten)).
-stem(verleden,v_root(verlijd,verlijden)).
 stem(verleend,v_root(verleen,verlenen)).
 stem(verleerd,v_root(verleer,verleren)).
 stem(verlegd,v_root(verleg,verleggen)).
@@ -44881,7 +44872,6 @@ stem(volgelopen,v_root(loop_vol,vol_lopen)).
 stem(volgepropt,v_root(prop_vol,vol_proppen)).
 stem(volgeschreven,v_root(schrijf_vol,vol_schrijven)).
 stem(volgestouwd,v_root(stouw_vol,vol_stouwen)).
-stem(volmaakt,v_root(volmaak,volmaken)).
 stem(voltooid,v_root(voltooi,voltooien)).
 stem(voltrokken,v_root(voltrek,voltrekken)).
 stem(volvoerd,v_root(volvoer,volvoeren)).

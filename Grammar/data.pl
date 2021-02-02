@@ -141,11 +141,11 @@ tags(Mother,Tags) ::-
     cat(Mother),
     if_defined(Mother:tags,Tags,[]).
 
-agr_val(sg,Val) :-
-    Val:agr => sg.
-agr_val(pl,Val) :-
-    Val:agr => pl.
-
+%% no longer used?
+%agr_val(sg,Val) :-
+%    Val:agr => sg.
+%agr_val(pl,Val) :-
+%    Val:agr => pl.
 
 mexs(Mother,Mexs) ::-
     cat(Mother),
@@ -369,6 +369,13 @@ puncttype(Cat,Type) ::-
 
 vraag_puncttype(Type) ::-
     Type => vraag.
+
+wh_relagr(Cat,Agr) ::-
+    Cat => det,
+    Cat:wh => rwh,
+    Cat:wh:relagr <=> Agr.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %% Generation features %%
