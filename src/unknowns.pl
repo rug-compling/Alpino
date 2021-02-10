@@ -4465,6 +4465,7 @@ unlikely_name_lonely('Algemene').
 unlikely_name_lonely('Alles').
 unlikely_name_lonely('And').
 unlikely_name_lonely('Awards').
+unlikely_name_lonely('Baldakijn').
 unlikely_name_lonely('Bank').
 unlikely_name_lonely('Beach').
 unlikely_name_lonely('Bin').
