@@ -61,6 +61,7 @@ endif
 state:
 	-echo "Alpino-$(PLATFORM)-git$(gitversion)-$(PROLOG)" > ../version
 	-echo "use_module('../Hdrug/Prolog/hdrug_main'),\
+               set_flag(suite,$(SUITE)),\
                use_module(start),\
    version('Alpino (development), `cat ../version` $(shell date "+%Y-%m-%dT%H:%M%z")'),\
                save_program('$(DISK)/Alpino.sav',hdrug_main)." |\
