@@ -321,6 +321,14 @@ syntactic_penalty_cat(Cat,extraction_from_a_pp) ::-
     Cat:slash <=> [PP],
     PP => pp.
 
+adjective_er_plural(Cat,Agr,Sg) ::-
+    Cat => a,
+    Cat:dt => dt,
+    Cat:dt:frame ==> adjective(er(_)),
+    Cat:agr <=> Agr,
+    Sg => agr,
+    Sg => sg.
+
 conj(Cat,Conj) ::-
     Cat => clist,
     Cat:cform <=> Conj,
