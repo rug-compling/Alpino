@@ -88,6 +88,14 @@ surf_lemma(Word,'N(eigen,ev,basis,onz,stan)','N(eigen,ev,basis,genus,stan)',L,L)
 surf_lemma(Word,'N(eigen,ev,basis,zijd,stan)','N(eigen,ev,basis,genus,stan)',L,L) :-
     genus_naam(Word).
 
+surf_lemma(Word,'N(eigen,ev,basis,genus,stan)','N(eigen,mv,basis)',_,L) :-
+    pl_naam(Word,L).
+surf_lemma(Word,'N(eigen,ev,basis,zijd,stan)','N(eigen,mv,basis)',_,L) :-
+    pl_naam(Word,L).
+surf_lemma(Word,'N(eigen,ev,basis,onz,stan)','N(eigen,mv,basis)',_,L) :-
+    pl_naam(Word,L).
+
+
 surf_lemma(Word,'N(eigen,ev,basis,genus,stan)','N(eigen,mv,basis)',L,L) :-
     pl_naam(Word).
 surf_lemma(Word,'N(eigen,ev,basis,zijd,stan)','N(eigen,mv,basis)',L,L) :-
@@ -111,6 +119,12 @@ user:query:-
     (   Ls = [_|_]
     ->  query(Ls,Chars,[]),
 	format("~n~nconverse '//node[@lemma=(~s)]'~n",[Chars])
+    ;   true
+    ),
+    findall(M,eigen(M),Ms),
+    (   Ms = [_|_]
+    ->  query(Ms,Chars3,[]),
+	format("~n~nconverse '//node[@word=(~s)]'~n",[Chars3])
     ;   true
     ),
     findall(S,surf(S,_,_),Ss),
@@ -199,11 +213,6 @@ correct_tags(L,L,Deeleigen) :-
     correct_tags(L,Deeleigen).
 
 
-
-
-
-
-
 flat(_) :-
     fail.
 
@@ -223,6 +232,9 @@ eigen(_):-
     fail.
 
 pl_naam(_) :-
+    fail.
+
+pl_naam(_,_) :-
     fail.
 
 het_naam(_):-
@@ -246,6 +258,11 @@ surf(_,_) :-
     fail.
 
 
+surf_lemma(Word,'N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)',L,L) :-
+    eigen(Word).
+surf_lemma(Word,'N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,onz,stan)',L,L) :-
+    eigen(Word).
 
-
+eigen(_):-
+    fail.
 

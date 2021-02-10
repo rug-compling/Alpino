@@ -189,7 +189,7 @@ history_tags(slash(His1,His2),Q0,Q,Stem0,_Surf,Tag,Result) -->
       Q  is Q2 + 1
     },
     cgn_postag_c(Tag,Stem1,Stem1,Q0,Q1,Result,His1),
-    [ cgn_postag(Q1,Q2,Stem2,'SPEC(symb)')],
+    [ cgn_postag(Q1,Q2,Stem2,'LET()')],
     cgn_postag_c(Tag,Stem3,Stem3,Q2,Q ,Result,His2).
     
 
@@ -716,10 +716,6 @@ post_h_word(kabinet).
 post_h_word(regering).
 post_h_word(zaak).
 
-is_simple_name('EK').
-is_simple_name('NK').
-is_simple_name('WK').
-
 is_simple_name(W) :-
     atom(W),
     atom_codes(W,[F,G|_T]),
@@ -766,6 +762,7 @@ exceptional_stem_tag('Vereniging',_,     'N(soort,ev,basis,zijd,stan)',verenigin
 exceptional_stem_tag('Volksgezondheid',_,'N(soort,ev,basis,zijd,stan)',volksgezondheid).
 
 exceptional_stem_tag(aan,adjective(_),                        'VZ(fin)',aan).
+exceptional_stem_tag(belang_stellen,nominalized_adjective,    'WW(vd,nom,met-e,mv-n)',belang_stellen).
 exceptional_stem_tag(betreffen,preposition(betreffende,[]),   'WW(od,vrij,zonder)',betreffen).
 exceptional_stem_tag(derden,noun(both,count,pl),              'TW(rang,nom,mv-n)',drie).
 exceptional_stem_tag(detineren,nominalized_adjective,         'WW(vd,nom,met-e,mv-n)',detineren).
@@ -787,6 +784,7 @@ exceptional_stem_tag(sprake,_,                                'N(soort,ev,basis,
 exceptional_stem_tag(streven,noun(het,mass,sg),               'WW(inf,nom,zonder,zonder-n)',streven).
 exceptional_stem_tag(tegen,adjective(_),                      'VZ(fin)',tegen).
 exceptional_stem_tag(toe,_,                                   'VZ(fin)',toe).
+exceptional_stem_tag(uitgerekend,modal_adverb,                'WW(vd,vrij,zonder)',uit_rekenen).
 exceptional_stem_tag(verdenken,noun(de,count,sg),             'WW(vd,nom,met-e,zonder-n)',verdenken).
 exceptional_stem_tag(verdenken,noun(de,count,pl),             'WW(vd,nom,met-e,mv-n)',verdenken).
 
@@ -801,6 +799,8 @@ exceptional_stem_tag(v_root(_,Lem),Pos,Tag) :-
 exceptional_stem_tag(Stem,noun(both,both,both),'N(soort,ev,dim,onz,stan)') :-
     atom(Stem),
     atom_concat(_,je,Stem).
+exceptional_stem_tag(Stem,_,'SPEC(vreemd)') :-
+    vreemd_lemma(Stem).
 exceptional_stem_tag('AEX-index',proper_name(sg),                   'N(soort,ev,basis,zijd,stan)').
 exceptional_stem_tag('AOW',proper_name(sg),                         'N(soort,ev,basis,zijd,stan)').
 exceptional_stem_tag('BTW',proper_name(sg),                         'N(soort,ev,basis,zijd,stan)').
@@ -856,12 +856,13 @@ exceptional_stem_tag(beschoren,np_adjective,                        'WW(vd,vrij,
 exceptional_stem_tag(best,noun(both,mass,sg),                       'ADJ(nom,sup,zonder,zonder-n)').
 exceptional_stem_tag(betrekken,nominalized_adjective,               'WW(vd,nom,met-e,mv-n)').
 exceptional_stem_tag(betrekken,nominalized_adjective_sg,            'WW(vd,nom,met-e,zonder-n)').
+exceptional_stem_tag(beu,np_adjective,                              'ADJ(vrij,basis,zonder)').
+exceptional_stem_tag(beu,clause_np_adjective,                       'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(bij,conj(en),                                  'VZ(init)').
 exceptional_stem_tag(binnen,loc_adverb,                             'VZ(fin)').
 exceptional_stem_tag(blauw, noun(het,mass,sg),                      'ADJ(nom,basis,zonder,zonder-n)').
 exceptional_stem_tag(boven,loc_adverb,                              'VZ(fin)').
 exceptional_stem_tag(buiten,loc_adverb,                             'VZ(fin)').
-exceptional_stem_tag(conform,preposition(_,_),                      'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(daarom, _,                                     'BW()').
 exceptional_stem_tag(datgeen,_,                                     'VNW(aanw,det,stan,nom,met-e,zonder-n)').
 exceptional_stem_tag(deels,adverb,                                  'ADJ(vrij,basis,zonder)').
@@ -893,7 +894,6 @@ exceptional_stem_tag(een,adjective(e),                              'VNW(onbep,d
 exceptional_stem_tag(ergens,_,                                      'VNW(onbep,adv-pron,obl,vol,3o,getal)').
 exceptional_stem_tag(even,adjective(both(tmpadv)),                  'BW()').
 exceptional_stem_tag(eventjes,_,                                    'BW()').
-exceptional_stem_tag(fancy,_,                                       'SPEC(vreemd)').
 exceptional_stem_tag(gaandeweg,_,                                   'BW()').
 exceptional_stem_tag(gene,determiner(de,nwh,nmod,pro,yparg),        'VNW(aanw,det,stan,nom,met-e,zonder-n)').
 exceptional_stem_tag(genoeg, _,                                     'BW()').
@@ -911,6 +911,7 @@ exceptional_stem_tag(grootvader,determiner(pron),                   'N(soort,ev,
 exceptional_stem_tag(haar,determiner(pron),                         'VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)').
 exceptional_stem_tag(haar,pronoun(nwh,thi,sg,de,dat_acc,def,wkpro), 'VNW(pers,pron,obl,vol,3,getal,fem)').
 exceptional_stem_tag(haarzelf,_,                                    'VNW(pers,pron,obl,nadr,3v,getal,fem)').
+exceptional_stem_tag(hars,noun(both,count,sg),                      'N(soort,ev,basis,genus,stan)').
 exceptional_stem_tag(heel,intensifier,                              'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(hem,pronoun(nwh,thi,sg,de,dat_acc,def,wkpro),  'VNW(pers,pron,obl,vol,3,ev,masc)').
 exceptional_stem_tag(hemzelf,_,                                     'VNW(pers,pron,obl,nadr,3m,ev,masc)').
@@ -920,7 +921,7 @@ exceptional_stem_tag(hij,pronoun(nwh,thi,sg,de,nom,def,wkpro),      'VNW(pers,pr
 exceptional_stem_tag(hijzelf,_,                                     'VNW(pers,pron,nomin,nadr,3m,ev,masc)').
 exceptional_stem_tag(honderd_duizend,noun(de,count,pl),             'TW(hoofd,nom,mv-n,basis)').
 exceptional_stem_tag(honderd,noun(de,count,pl),                     'TW(hoofd,nom,mv-n,basis)').
-exceptional_stem_tag(hoogst,intensifier,                            'ADJ(vrij,sup,zonder)').
+exceptional_stem_tag(hoogst,intensifier,                            'BW()').
 exceptional_stem_tag(hun,determiner(pron),                          'VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)').
 exceptional_stem_tag(ieder,predm_adverb,                            'VNW(onbep,det,stan,vrij,zonder)').
 exceptional_stem_tag(ieders,determiner(pron),                       'VNW(onbep,pron,gen,vol,3p,ev)').
@@ -988,7 +989,9 @@ exceptional_stem_tag(onverschillig,preposition(_,_,of_sbar),        'ADJ(vrij,ba
 exceptional_stem_tag(op,adjective(pred(_)),                         'VZ(fin)').
 exceptional_stem_tag(openbaar,noun(het,mass,sg),                    'ADJ(nom,basis,zonder,zonder-n)').
 exceptional_stem_tag(op_leiden,nominalized_adjective,               'WW(vd,nom,met-e,mv-n)').
+exceptional_stem_tag(opzet,noun(de,count,sg),                       'N(soort,ev,basis,genus,stan)').
 exceptional_stem_tag(overal,_,                                      'VNW(onbep,adv-pron,obl,vol,3o,getal)').
+exceptional_stem_tag(overeenkomstig,preposition(_,_),               'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(overleven, nominalized_adjective,              'WW(od,nom,met-e,mv-n)').
 exceptional_stem_tag(overstag,_,                                    'BW()').
 exceptional_stem_tag(red,   tag,                                    'N(soort,ev,basis,zijd,stan)').
@@ -1007,6 +1010,7 @@ exceptional_stem_tag(sommig,nominalized_adjective,                  'VNW(onbep,d
 exceptional_stem_tag(storen,nominalized_adjective,                  'WW(vd,nom,met-e,mv-n)').
 exceptional_stem_tag(streven,noun(sg,_,het),                        'WW(inf,nom,zonder,zonder-n)').
 exceptional_stem_tag(tal,determiner(wat,nwh,mod,pro,yparg),         'N(soort,ev,basis,onz,stan)').
+exceptional_stem_tag(tegemoet,_,                                    'BW()').
 exceptional_stem_tag(teneinde,complementizer(inf),                  'VG(onder)').
 exceptional_stem_tag(tenminste,tag,                                 'BW()').
 exceptional_stem_tag(thuis,_,                                       'BW()').
@@ -1016,7 +1020,6 @@ exceptional_stem_tag(tot,conj(tot),                                 'VZ(init)').
 exceptional_stem_tag(tot,complementizer,                            'VZ(init)').
 exceptional_stem_tag(tweemaal,noun(both,count,bare_meas),           'BW()').
 exceptional_stem_tag(u,determiner(pron),                            'VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)').
-exceptional_stem_tag(uitgerekend,modal_adverb,                      'WW(vd,vrij,zonder)').
 exceptional_stem_tag(uit_voeren,nominalized_adjective,              'WW(od,nom,met-e,mv-n)').
 exceptional_stem_tag(uw,determiner(pron),                           'VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)').
 exceptional_stem_tag(jezelf,_,                                      'VNW(pr,pron,obl,nadr,2,getal)').
@@ -1051,6 +1054,7 @@ exceptional_stem_tag(xxx,_,                                         'SPEC(onvers
 exceptional_stem_tag(zat,np_adjective,                              'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(zat,clause_np_adjective,                       'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(zat,postadj_adverb,                            'ADJ(vrij,basis,zonder)').
+exceptional_stem_tag(zien,nominalized_adjective,                    'WW(od,nom,met-e,mv-n)').
 exceptional_stem_tag(zichzelf,_,                                    'VNW(refl,pron,obl,nadr,3,getal)').
 exceptional_stem_tag(zijn,determiner(pron),                         'VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)').
 exceptional_stem_tag(zijn,preposition(zijnde,[]),                   'WW(od,vrij,zonder)').
@@ -1886,26 +1890,61 @@ try_dehet(both,DeHet,Stem) :-
 try_dehet(de,de,_).
 try_dehet(het,het,_).
 
-try_sgpl('Alpen',               pl).
-try_sgpl('Antillen',            pl).
-try_sgpl('Ardennen',            pl).
-try_sgpl('Balearen',            pl).
-try_sgpl('Caraïben',            pl).
-try_sgpl('Cats',                pl).
-try_sgpl('Cetniks',             pl).
-try_sgpl('Filipijnen',          pl).
-try_sgpl('Flinstones',          pl).
-try_sgpl('Flintstones',         pl).
-try_sgpl('FNV-Bondgenoten',     pl).
-try_sgpl('Middeleeuwen',        pl).
-try_sgpl('Nederlanden',         pl).
-try_sgpl('Oscars',              pl).
-try_sgpl('Pyreneeën',           pl).
-try_sgpl('Spelen',              pl).
-try_sgpl('VS',                  pl).
-try_sgpl('VS.',                  pl).
-try_sgpl('V.S.',                pl).
-try_sgpl('Waddeneilanden',      pl).
+try_sgpl('Alpen',pl).
+try_sgpl('Angels',pl).
+try_sgpl('Antillen',pl).
+try_sgpl('Ardennen',pl).
+try_sgpl('Balearen',pl).
+try_sgpl('Bardi\'s',pl).
+try_sgpl('Borg',pl).
+try_sgpl('Brattholmeilanden',pl).
+try_sgpl('Caraïben',pl).
+try_sgpl('Caraïben',pl).
+try_sgpl('Cats',pl).
+try_sgpl('Cetniks',pl).
+try_sgpl('Dorsets',pl).
+try_sgpl('FNV-Bondgenoten',pl).
+try_sgpl('Filipijnen',pl).
+try_sgpl('Flinstones',pl).
+try_sgpl('Flintstones',pl).
+try_sgpl('Franken',pl).
+try_sgpl('Fransen',pl).
+try_sgpl('Fransen',pl).
+try_sgpl('GGD-en',pl).
+try_sgpl('Grenslandhallen',pl).
+try_sgpl('Habsburgers',pl).
+try_sgpl('Hohenstaufen',pl).
+try_sgpl('Hoogovens',pl).
+try_sgpl('Kempen',pl).
+try_sgpl('Khmer',pl).
+try_sgpl('Klingonen',pl).
+try_sgpl('Middeleeuwen',pl).
+try_sgpl('Molukken',pl).
+try_sgpl('Mon',pl).
+try_sgpl('Nederlanden',pl).
+try_sgpl('Nomads',pl).
+try_sgpl('Noord-Molukken',pl).
+try_sgpl('Oostkantons',pl).
+try_sgpl('Oscars',pl).
+try_sgpl('Pashtun',pl).
+try_sgpl('Pruisen',pl).
+try_sgpl('Pyreneeën',pl).
+try_sgpl('Pyu',pl).
+try_sgpl('Safaviden',pl).
+try_sgpl('Spelen',pl).
+try_sgpl('Taliban',pl).
+try_sgpl('Tories',pl).
+try_sgpl('Trekkies',pl).
+try_sgpl('USA',pl).
+try_sgpl('V.S.',pl).
+try_sgpl('VN',pl).
+try_sgpl('VS',pl).
+try_sgpl('VS.',pl).
+try_sgpl('Vikings',pl).
+try_sgpl('Vulcans',pl).
+try_sgpl('Wadden',pl).
+try_sgpl('Waddeneilanden',pl).
+
 
 try_dehet(Stem,                 de) :-
     atom(Stem),
@@ -1926,122 +1965,410 @@ try_dehet(L,het) :-
     het_heur(L).
 
 genus_naam('4FM').
+genus_naam('ABN-AMRO').
 genus_naam('Adecco').
+genus_naam('Agusta').
 genus_naam('Ahold').
+genus_naam('Al-Qaida').
+genus_naam('al-Qaida').
+genus_naam('ARJOS').
+genus_naam('Beernink').
+genus_naam('Belga').
+genus_naam('Braet').
+genus_naam('C&C').
+genus_naam('Comcast').
+genus_naam('CTB').
+genus_naam('Daimler').
+genus_naam('Dassault').
 genus_naam('DAT').
+genus_naam('Dexia').
+genus_naam('DHL').
 genus_naam('DNS').
+genus_naam('EcoConsult').
 genus_naam('Enron').
+genus_naam('Estonia').
+genus_naam('Euronext').
+genus_naam('EWI').
+genus_naam('EZ').
 genus_naam('Fortis').
 genus_naam('Google').
 genus_naam('Heineken').
-genus_naam('IBM').
+genus_naam('IGE').
+genus_naam('Interbrew').
+genus_naam('Interpay').
+genus_naam('IRIS').
+genus_naam('JetSky').
 genus_naam('Laurus').
-genus_naam('MOSTforWater').
+genus_naam('LMS').
+genus_naam('Mannesmann').
+genus_naam('Mobistar').
+genus_naam('MOSTforWATER').
 genus_naam('Nature').
 genus_naam('NED1').
 genus_naam('NED2').
 genus_naam('NED3').
+genus_naam('NUON').
 genus_naam('Parmalat').
+genus_naam('Prego').
 genus_naam('Rituals').
 genus_naam('Ryanair').
 genus_naam('Sabena').
+genus_naam('SAR').
+genus_naam('SEM').
 genus_naam('Smead').
+genus_naam('Sobelair').
+genus_naam('SOLFA').
 genus_naam('Spirit').
+genus_naam('STEVIN').
 genus_naam('Textkernel').
+genus_naam('U2').
+genus_naam('VHO').
 genus_naam('Vivant').
+genus_naam('VMF').
+genus_naam('Vodafone').
+genus_naam('VROM').
+genus_naam('VWS').
 genus_naam('Wesbank').
+genus_naam('Whitehall').
 genus_naam('Yukos').
 
+de_naam('Allerheiligen').
+de_naam('Alzheimer').
+de_naam('Antenna').
+de_naam('Aquarius').
+de_naam('AR').
+de_naam('ARP').
+de_naam('As-Sadr').
+de_naam('Barabas').
+de_naam('Barroso').
+de_naam('Batman').
+de_naam('Belgica').
+de_naam('Betuweroute').
+de_naam('Beukwilg').
+de_naam('Blitzkrieg').
 de_naam('Bono').
 de_naam('Boymans').
+de_naam('Browning').
+de_naam('Buford').
 de_naam('Bush').
 de_naam('Carter').
 de_naam('Che').
+de_naam('Cheney').
+de_naam('Chevrolet').
 de_naam('Chirac').
+de_naam('CHU').
 de_naam('Corland').
+de_naam('Cunningham').
+de_naam('D-Day').
+de_naam('DDR').
+de_naam('Daisy').
+de_naam('Davenport').
+de_naam('Demer').
+de_naam('Dousberg').
+de_naam('Dove').
+de_naam('EEG').
+de_naam('EG').
+de_naam('Early').
+de_naam('Eikenhorst').
+de_naam('Enterprise').
+de_naam('Esmeralda').
+de_naam('Estienne').
+de_naam('Ewell').
+de_naam('FARC').
+de_naam('Farnese').
+de_naam('Fere').
+de_naam('Fiat').
+de_naam('Flanagan').
+de_naam('FNB').
+de_naam('G.R.I.').
 de_naam('Gore').
+de_naam('Grant').
 de_naam('Grigorenko').
 de_naam('HP').
+de_naam('HR-beglazing').
+de_naam('Hamilton').
+de_naam('Hanekop').
+de_naam('Hector').
+de_naam('Helmsley').
+de_naam('Hoegaarden').
 de_naam('Hughes').
-de_naam('Ida').
+de_naam('IJzer').
+de_naam('Intertoys').
 de_naam('IRA').
+de_naam('Ida').
+de_naam('IKEA').
+de_naam('JFK').
 de_naam('JeanJacques').
-de_naam('Kongo').
+de_naam('Jiska').
 de_naam('KLM').
+de_naam('Kapp').
+de_naam('Kolme').
+de_naam('Kongo').
+de_naam('Koninginnedag').
+de_naam('KVP').
+de_naam('Langefjord').
+de_naam('Lay').
 de_naam('Ligterink').
 de_naam('Lila').
 de_naam('Lincoln').
-de_naam('Mars').
-de_naam('Mercator').
+de_naam('Longstreet').
 de_naam('MRI').
-de_naam('Napoleon').
+de_naam('Maas').
+de_naam('Mangé').
+de_naam('Mars').
+de_naam('Meade').
+de_naam('Mejia').
+de_naam('Mercator').
+de_naam('Mercurius').
+de_naam('Metternich').
+de_naam('Meys').
+de_naam('Mezen').
+de_naam('Morgan').
+de_naam('Mother').
+de_naam('Mouret').
+de_naam('Muggia').
 de_naam('NASA').
 de_naam('NAVO').
+de_naam('NT2').
+de_naam('Napoleon').
+de_naam('Ned').
+de_naam('Ney').
 de_naam('Nuninga').
+de_naam('Opel').
+de_naam('OS').
+de_naam('Octopus').
+de_naam('Oekraïne').
+de_naam('Opportunity').
 de_naam('Oscar').
+de_naam('Paardenmarkt').
+de_naam('Pastrana').
+de_naam('Pearl').
 de_naam('Permeke').
+de_naam('PFF').
+de_naam('Place').
 de_naam('Prince').
+de_naam('Prinsjesdag').
 de_naam('PvdA').
+de_naam('PVV').
+de_naam('Renault').
+de_naam('Q-Music').
+de_naam('Rodenbach').
 de_naam('Roosevelt').
+de_naam('SIC').
+de_naam('Sangha').
 de_naam('Sharon').
 de_naam('Shell').
+de_naam('Sherman').
+de_naam('Sinaï').
+de_naam('Sint-Quintinuskathedraal').
+de_naam('Slibreeks').
+de_naam('SP.A').
+de_naam('Spa-Francorchamps').
+de_naam('Spock').
+de_naam('St.-Pieter').
+de_naam('Swinton').
+de_naam('TV-Brussel').
+de_naam('Tea').
+de_naam('Tipitaka').
 de_naam('Titanic').
+de_naam('Tongersepoort').
 de_naam('Tour').
-de_naam('Vondeling').
-de_naam('Vuelta').
+de_naam('Tricolor').
+de_naam('UGent').
+de_naam('UMTS').
+de_naam('Unità').
+de_naam('USSR').
+de_naam('Uranus').
 de_naam('VVD').
+de_naam('Vauban').
+de_naam('VLD').
+de_naam('Vondeling').
+de_naam('Vroenhof').
+de_naam('VTM').
+de_naam('Vuelta').
+de_naam('WAO').
 de_naam('WTO').
+de_naam('Wellington').
+de_naam('Westerbouwing').
+de_naam('Wilson').
+de_naam('X-10').
+de_naam('X-6').
+de_naam('X-7').
+de_naam('X-9').
+de_naam('al-Saoed').
+
 
 de_heur(Atom) :-
     atom(Atom),
     atom_concat(_,Suf,Atom),
     de_suf(Suf).
 
+de_suf(baai).
 de_suf(baan).
+de_suf(basiliek).
+de_suf(brug).
 de_suf(gracht).
+de_suf(haven).
+de_suf(kade).
+de_suf(kathedraal).
+de_suf(kazerne).
+de_suf(kerk).
 de_suf(krant).
 de_suf(laan).
+de_suf(lijn).
+de_suf(linie).
+de_suf(markt).
+de_suf(school).
+de_suf(singel).
 de_suf(stichting).
 de_suf(steeg).
 de_suf(straat).
+de_suf(streek).
 de_suf(toren).
 de_suf(transfer).
+de_suf(unie).
 de_suf(weg).
+de_suf(wijk).
+de_suf(zee).
 
+het_naam('ABVV').
+het_naam('ANP').
+het_naam('ASO').
+het_naam('ASTRON').
+het_naam('AZG').
 het_naam('Agalev').
 het_naam('Ajax').
+het_naam('Al-Arish').
 het_naam('Alexandria').
-het_naam('ANP').
+het_naam('Alken-Maes').
 het_naam('Apple').
+het_naam('Aquafin').
+het_naam('BIS').
+het_naam('BSO').
+het_naam('Bam').
+het_naam('Barsela').
+het_naam('Bayer').
+het_naam('Belgacom').
+het_naam('Berlijn').
+het_naam('Beverwijk').
+het_naam('Bizz').
+het_naam('Blokkeer').
+het_naam('Bologna').
+het_naam('Buitenhof').
+het_naam('CBR').
 het_naam('CBS').
 het_naam('CDA').
+het_naam('Celtic').
 het_naam('CERN').
 het_naam('CHMP').
-het_naam('D\'66').
+het_naam('CNV').
+het_naam('COX-1').
+het_naam('COX-2').
+het_naam('CWI').
+het_naam('Connexxion').
+het_naam('DOS').
+het_naam('DWK').
 het_naam('DWS').
+het_naam('D\'66').
+het_naam('EPA').
+het_naam('EPAR').
+het_naam('ESA').
+het_naam('EUAIN').
 het_naam('Ecolo').
-het_naam('Feyenoord').          
+het_naam('Engels').
+het_naam('Essent').
+het_naam('FAVV').
 het_naam('Feijenoord').         
-het_naam('Greenpeace').         
-het_naam('GroenLinks').         
+het_naam('Feyenoord').
+het_naam('FNV').
+het_naam('Frans').
+het_naam('GMD').
+het_naam('GRUP').
 het_naam('GVAV').
+het_naam('Georgia').
+het_naam('Greenpeace').         
+het_naam('Griffoendor').
+het_naam('GroenLinks').         
+het_naam('Harvard').
+het_naam('Heeswijk').
+het_naam('Herkenrode').
+het_naam('HFC').
+het_naam('Hoogkerk').
+het_naam('I-City').
+het_naam('IFAD').
 het_naam('IMEC').
 het_naam('ISBN').
+het_naam('ISS').
 het_naam('ISSN').
+het_naam('IST').
+het_naam('Inter').
+het_naam('Israël').
+het_naam('Jamathi').
 het_naam('Journaal').
+het_naam('Juda').
 het_naam('Juventus').
+het_naam('KSO').
+het_naam('Keulen').
+het_naam('Kluwer').
+het_naam('LOP').
+het_naam('Levante').
+het_naam('Lufthansa').
+het_naam('Luxemburg').
+het_naam('MGIMO').
+het_naam('Mattel').
+het_naam('Maagdenhuis').
+het_naam('Microsoft').
 het_naam('Milaan').
-het_naam('Netwerk').
+het_naam('Morgan').
+het_naam('NEF').
 het_naam('NIGZ').
 het_naam('NKV').
+het_naam('NRG4SD').
+het_naam('NUV').
+het_naam('NVV').
+het_naam('Nazjaf').
+het_naam('Netwerk').
+het_naam('Noord-Zuid').
+het_naam('Noordwijk').
+het_naam('OIE').
+het_naam('OLS').
+het_naam('OM').
+het_naam('Oost-Berlijn').
+het_naam('OPB').
 het_naam('Oranje-Nassau').      
-het_naam('Philips').
+het_naam('PSG').
 het_naam('PSV').
+het_naam('Paradiso').
+het_naam('Peer').
+het_naam('Peshawar').
+het_naam('Philips').
+het_naam('Philips').
+het_naam('Portugees').
+het_naam('Quasus').
+het_naam('Ridderkerk').
+het_naam('RIZIV').
+het_naam('Real').
+het_naam('Rennes').
+het_naam('Rijswijk').
+het_naam('Siemens').
+het_naam('Spaans').
+het_naam('Sørøy').
+het_naam('TNO').
+het_naam('TSO').
 het_naam('Telstar').
 het_naam('Theravada').
+het_naam('TVM').
 het_naam('U2').
+het_naam('UNDP').
+het_naam('UWV').
 het_naam('Unilever').
+het_naam('Verolme').
+het_naam('VK').
 het_naam('VLAO').
+het_naam('Washington').
+het_naam('West-Berlijn').
+het_naam('Winterswijk').
+het_naam('Z33').
 
 het_heur(Atom) :-
     atom(Atom),
@@ -2049,10 +2376,17 @@ het_heur(Atom) :-
     het_suf(Suf).
 
 het_suf(bedrijf).
+het_suf(centrum).
+het_suf(comité).
 het_suf(diep).
+het_suf(huis).
+het_suf(lyceum).
 het_suf(museum).
+het_suf(plantsoen).
 het_suf(plein).
 het_suf(spoor).
+het_suf(theater).
+
 
 
 digits([]).
@@ -2063,14 +2397,14 @@ digits([H|T]) :-
 name_postag(both, sg,   'MISC', 'N(eigen,ev,basis,genus,stan)').
 name_postag(both, sg,   'LOC',  'N(eigen,ev,basis,onz,stan)'  ).
 name_postag(both, sg,   'PER',  'N(eigen,ev,basis,zijd,stan)' ).
-name_postag(both, sg,   'ORG',  'N(eigen,ev,basis,zijd,stan)'  ).
+name_postag(both, sg,   'ORG',  'N(eigen,ev,basis,onz,stan)'  ).
 name_postag(de,   sg,   _,      'N(eigen,ev,basis,zijd,stan)' ).
 name_postag(het,  sg,   _,      'N(eigen,ev,basis,onz,stan)'  ).
 name_postag(genus,sg,   _,      'N(eigen,ev,basis,genus,stan)'  ).
 name_postag(both, both, 'MISC', 'N(eigen,ev,basis,genus,stan)').
 name_postag(both, both, 'LOC',  'N(eigen,ev,basis,onz,stan)'  ).
 name_postag(both, both, 'PER',  'N(eigen,ev,basis,zijd,stan)' ).
-name_postag(both, both, 'ORG',  'N(eigen,ev,basis,zijd,stan)'  ).
+name_postag(both, both, 'ORG',  'N(eigen,ev,basis,onz,stan)'  ).
 name_postag(de,   both, _,      'N(eigen,ev,basis,zijd,stan)' ).
 name_postag(het,  both, _,      'N(eigen,ev,basis,onz,stan)'  ).
 name_postag(genus,both, _,      'N(eigen,ev,basis,genus,stan)'  ).
@@ -2385,6 +2719,7 @@ num_postag(',','LET()').
 num_postag(')','LET()').
 num_postag('(','LET()').
 num_postag('-','LET()').
+num_postag('/','LET()').
 
 num_postag(_A,'SPEC(symb)').
 %    alpino_lex:num_dot_num(_,A).
@@ -2538,6 +2873,7 @@ pronoun_path([det_adj/1,np_det_n/1|_]):-!,fail.
 od_is_adj(aan_palen,aanpalend).
 od_is_adj(door_gaan,doorgaand).
 od_is_adj(overwegen,overwegend).
+od_is_adj(aanstaand,aanstaand).
 
 vd_is_adj(aangeboren,aangeboren).
 vd_is_adj(begaan,begaan).
@@ -2562,6 +2898,7 @@ vd_is_adj(ongewenst,ongewenst).
 vd_is_adj(ontstellen,ontsteld).
 vd_is_adj(op_luchten,opgelucht).
 vd_is_adj(tegenover_stellen,tegenovergesteld).
+vd_is_adj(verschuldigd,verschuldigd).
 vd_is_adj(verbijten,verbeten).
 vd_is_adj(vertrouwd,vertrouwd).
 vd_is_adj(zelfverklaard,zelfverklaard).
@@ -2591,6 +2928,15 @@ frame_map(mod_noun(A,B,C,_),_,                noun(A,B,C)).
 frame_map(meas_mod_noun(both,count,meas),procent,noun(het,count,meas)).
 frame_map(meas_mod_noun(A,B,C),_,             noun(A,B,C)).
 frame_map(meas_mod_noun(A,B,C,_),_,           noun(A,B,C)).
+
+vreemd_lemma(consolatio).
+vreemd_lemma(fancy).
+vreemd_lemma(fatwa).
+vreemd_lemma(licensee).
+vreemd_lemma(onsite).
+vreemd_lemma(passphrase).
+vreemd_lemma(warlord).
+vreemd_lemma(warlords).
 
 
 lassy(de, 'LID(bep,stan,rest)').
@@ -3689,6 +4035,7 @@ particle_tag(post,'N(soort,ev,basis,zijd,stan)').
 particle_tag(prat,'ADJ(vrij,basis,zonder)').
 particle_tag(prijs,'N(soort,ev,basis,zijd,stan)').
 particle_tag(quitte,'ADJ(vrij,basis,zonder)').
+particle_tag(raak,'ADJ(vrij,basis,zonder)').
 particle_tag(recht,'ADJ(vrij,basis,zonder)').
 particle_tag(rijp,'ADJ(vrij,basis,zonder)').
 particle_tag(rood,'ADJ(vrij,basis,zonder)').
