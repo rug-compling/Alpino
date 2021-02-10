@@ -6,7 +6,7 @@
         <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
         <node begin="1" cat="mwu" end="3" id="4" rel="hd">
           <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="artikel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="artikel" word="artikel"/>
-          <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="12-status" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="12-status" word="12-status"/>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="6" lemma="12-status" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="12-status" word="12-status"/>
         </node>
         <node begin="3" cat="pp" end="7" id="7" rel="mod">
           <node begin="3" end="4" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
@@ -14,7 +14,7 @@
             <node begin="4" end="5" id="10" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="5" cat="mwu" end="7" id="11" rel="hd">
               <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="top" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="top" word="top"/>
-              <node begin="6" end="7" getal="mv" graad="basis" id="13" lemma="10-baan" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="10-baan" word="10-baan"/>
+              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="10-baan" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="10-baan" word="10-baan"/>
             </node>
           </node>
         </node>

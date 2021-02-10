@@ -26,10 +26,10 @@
             <node begin="11" cat="np" end="16" id="20" rel="obj1">
               <node begin="11" end="12" genus="zijd" getal="ev" graad="basis" id="21" lemma="naam" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="naam" word="naam"/>
               <node begin="12" cat="mwu" end="16" id="22" rel="app">
-                <node begin="12" end="13" id="23" lemma="A" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="A" spectype="symb" word="A"/>
-                <node begin="13" end="14" id="24" lemma="K" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="K" spectype="symb" word="K"/>
-                <node begin="14" end="15" id="25" lemma="Z" pos="noun" postag="SPEC(symb)" pt="spec" rel="mwp" root="Z" spectype="symb" word="Z"/>
-                <node begin="15" end="16" id="26" lemma="O" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="O" spectype="deeleigen" word="O"/>
+                <node begin="12" end="13" id="23" lemma="A" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="A" spectype="deeleigen" word="A"/>
+                <node begin="13" end="14" id="24" lemma="K" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="K" spectype="deeleigen" word="K"/>
+                <node begin="14" end="15" id="25" lemma="Z" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Z" spectype="deeleigen" word="Z"/>
+                <node begin="15" end="16" id="26" lemma="O" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="O" spectype="deeleigen" word="O"/>
               </node>
             </node>
           </node>

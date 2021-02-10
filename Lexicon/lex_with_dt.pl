@@ -1014,6 +1014,8 @@ with_dt_all(allen,[prijze,ten]).
 with_dt_all(alles,[lang,niet]).
 with_dt_all(alles,[niet]).
 with_dt_all(alles,[samen]).
+with_dt_all(alles,[tesamen]).
+with_dt_all(alles,[tezamen]).
 with_dt_all(allicht,[daarom]).
 with_dt_all(allicht,[vandaar]).
 with_dt_all(al,[maar,te]).
@@ -2925,6 +2927,8 @@ with_dt_root(ter).
 with_dt_root(terecht).
 with_dt_root(terug).
 with_dt_root(terzijde).
+with_dt_root(tesamen).
+with_dt_root(tezamen).
 with_dt_root(thuis).
 with_dt_root(tien).
 with_dt_root(tienen).

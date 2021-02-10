@@ -9,7 +9,7 @@
         <node begin="2" end="3" id="6" lemma="volgens" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="volgens" vztype="init" word="volgens"/>
         <node begin="3" cat="np" end="5" id="7" rel="obj1">
           <node begin="3" end="4" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="4" end="5" genus="genus" getal="ev" graad="basis" id="9" lemma="CNV_secretaris" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="secretaris" word="CNV-secretaris"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="CNV_secretaris" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="secretaris" word="CNV-secretaris"/>
         </node>
       </node>
       <node begin="5" end="6" id="10" lemma="overigens" pos="adv" postag="BW()" pt="bw" rel="mod" root="overigens" word="overigens"/>
@@ -29,7 +29,7 @@
         <node begin="13" cat="ssub" end="29" id="21" rel="body">
           <node begin="13" cat="np" end="15" id="22" index="1" rel="su">
             <node begin="13" end="14" id="23" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
-            <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="24" lemma="CNV" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="CNV" word="CNV"/>
+            <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="24" lemma="CNV" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="hd" root="CNV" word="CNV"/>
           </node>
           <node begin="21" end="22" id="25" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" word="zou" wvorm="pv"/>
           <node begin="13" cat="inf" end="29" id="26" rel="vc">

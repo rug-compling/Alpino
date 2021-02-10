@@ -134,3 +134,4 @@ cdb/./5446.xml	//node[@rel="hd" and ../@cat="pp" and @pt and not(@pt="vz" or @pt
 cdb/./6199.xml	//node[@rel="hd" and ../@cat="pp" and @pt and not(@pt="vz" or @pt="spec" or @pt="bw" or @pt="adj" or @lemma="richting" or @lemma="naargelang" or @lemma="getuige" or @lemma="gezien")]	unexpected postag for head of pp
 cdb/./6760.xml	//node[@rel="hd" and ../@cat="pp" and @pt and not(@pt="vz" or @pt="spec" or @pt="bw" or @pt="adj" or @lemma="richting" or @lemma="naargelang" or @lemma="getuige" or @lemma="gezien")]	unexpected postag for head of pp
 cdb/./930.xml	//node[@rel="hd" and ../@cat="pp" and @pt and not(@pt="vz" or @pt="spec" or @pt="bw" or @pt="adj" or @lemma="richting" or @lemma="naargelang" or @lemma="getuige" or @lemma="zien")]	unexpected postag for head of pp
+cdb/./6794.xml	//node[not(@cat="pp") and node[@rel="hd" and @postag="VZ(init)"]]	preposition head, but not PP?

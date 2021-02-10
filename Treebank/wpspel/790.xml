@@ -16,8 +16,8 @@
         <node begin="5" cat="np" end="8" id="11" rel="su">
           <node begin="5" end="6" id="12" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
           <node begin="6" cat="mwu" end="8" id="13" rel="hd">
-            <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="14" lemma="gallus" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Gallus" word="Gallus"/>
-            <node begin="7" end="8" getal="mv" graad="basis" id="15" lemma="domesticus" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="domesticus" word="domesticus"/>
+            <node begin="6" end="7" id="14" lemma="Gallus" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="Gallus" spectype="vreemd" word="Gallus"/>
+            <node begin="7" end="8" id="15" lemma="domesticus" pos="name" postag="SPEC(vreemd)" pt="spec" rel="mwp" root="domesticus" spectype="vreemd" word="domesticus"/>
           </node>
         </node>
       </node>
