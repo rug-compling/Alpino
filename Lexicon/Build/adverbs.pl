@@ -10,6 +10,15 @@ m(Stem, adverb, PN) :-
 m('onder ander',adverb, [onder,andere]).
 m('te veel',    adverb, [te,meer]). 
 
+m('zijn in_zien',adverb,[zijns,inziens]).
+m('zijn ondanks',adverb,[zijns,ondanks]).
+m('hun in_zien',adverb,[huns,inziens]).
+m('hun in_zien',adverb,[huns,ondanks]).
+m('mijn in_zien',adverb,[mijns,inziens]).
+m('mijn in_zien',adverb,[mijns,ondanks]).
+m('ons in_zien',adverb,[ons,inziens]).
+m('ons in_zien',adverb,[onzes,inziens]).
+
 adverb([geen,bal]).
 adverb([geen,barst]).
 adverb([geen,biet]).
@@ -241,8 +250,6 @@ adverb([hors,concours]).
 adverb([huis,aan,huis]).
 adverb('huis-aan-huis').
 adverb(hunnerzijds).
-adverb([huns,inziens]).
-adverb([huns,ondanks]).
 adverb(idealiter).
 adverb(idem).
 adverb([idem,dito]).
@@ -308,8 +315,6 @@ adverb(meteen).
 adverb(metterdaad).
 adverb(mettertijd).
 adverb(mijnerzijds).
-adverb([mijns,inziens]).
-adverb([mijns,ondanks]).
 % adverb(minder).
 adverb([min,of,meer]).
 adverb(minstens).
@@ -350,8 +355,6 @@ adverb([onder,anderen]).
 adverb(onderuit).  % loc? dir? pred?
 adverb(ondermeer).
 adverb([onder,meer]).
-adverb([ons,inziens]).
-adverb([onzes,inziens]).
 adverb([ons,ondanks]).
 adverb([onverrichter,zake]).
 adverb(onverrichterzake).
@@ -560,8 +563,6 @@ adverb([zonder,meer]).
 adverb(zondermeer).
 adverb([zij,het]). % er is al een zij het bescheiden begin gemaakt...
 adverb(zijnerzijds).
-adverb([zijns,inziens]).
-adverb([zijns,ondanks]).
 adverb(zo).
 adverb(['zo\'n',beetje]).
 adverb(zoal).

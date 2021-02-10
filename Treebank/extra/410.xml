@@ -16,7 +16,7 @@
               <node begin="4" cat="np" end="9" id="13" rel="su">
                 <node begin="4" end="5" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                 <node begin="5" buiging="met-e" end="6" graad="basis" id="15" lemma="nieuw" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="nieuw" word="nieuwe"/>
-                <node begin="6" end="7" genus="genus" getal="ev" graad="basis" id="16" lemma="Auditopman" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Audi_topman" word="Auditopman"/>
+                <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="16" lemma="Audi_topman" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="Audi_topman" word="Auditopman"/>
                 <node begin="7" cat="mwu" end="9" id="17" rel="app">
                   <node begin="7" end="8" id="18" lemma="Rupert" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Rupert" spectype="deeleigen" word="Rupert"/>
                   <node begin="8" end="9" id="19" lemma="Stadler" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Stadler" spectype="deeleigen" word="Stadler"/>
@@ -40,7 +40,7 @@
         <node begin="18" cat="np" end="31" id="30" rel="obj1">
           <node begin="18" end="19" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="19" buiging="met-e" end="20" graad="basis" id="32" lemma="klein" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="klein" word="kleine"/>
-          <node begin="20" end="21" genus="genus" getal="ev" graad="basis" id="33" lemma="A1" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="A1" word="A1"/>
+          <node begin="20" end="21" genus="zijd" getal="ev" graad="basis" id="33" lemma="A1" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="A1" word="A1"/>
           <node begin="22" cat="rel" end="31" id="34" rel="mod">
             <node begin="22" end="23" getal="getal" id="35" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
             <node begin="22" cat="ssub" end="31" id="36" rel="body">

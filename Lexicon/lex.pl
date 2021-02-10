@@ -724,6 +724,7 @@ number_both(['Filippijnen']).
 number_both(['FNV-Bondgenoten']).
 number_both(['G.S.']).
 number_both(['GS']).
+number_both(['Hoogovens']).
 number_both(['Indiana','Pacers']).
 number_both(['Jackson','5']).
 number_both(['Jackson','Five']).
@@ -847,6 +848,7 @@ plural_suffix(jicks).
 plural_suffix(jumpers).
 plural_suffix(kids).
 plural_suffix(kinks).
+plural_suffix(koloniën).
 plural_suffix(lemonheads).
 plural_suffix(lions).
 plural_suffix(lips).
@@ -2416,8 +2418,6 @@ spelling_variant(hektare,  hectare).
 spelling_variant(hektaren, hectaren).
 spelling_variant(hektares, hectares).
 spelling_variant(kwaaie,   kwade).
-spelling_variant(tezamen,  samen).
-spelling_variant(tesamen,  samen).
 
 spelling_variant(gristen,  christen).  
 
@@ -3445,9 +3445,11 @@ abbreviation_b(jr,       junior).
 abbreviation_b(kath,     katholiek).
 abbreviation_b(mld,      miljard).
 abbreviation_b(mln,      miljoen).
+abbreviation_b('mln.',   miljoen).
 abbreviation_b(mnd,      maand).
 abbreviation_b('Pag',    pagina).
 abbreviation_b(pag,      pagina).
+abbreviation_b(pg,       pagina).
 abbreviation_b(pag,      'pagina\'s').
 abbreviation_b(sr,       senior).
 abbreviation_b(verz,     verzorger).
@@ -3618,8 +3620,8 @@ abbreviation('m.',     meter).
 abbreviation('min.',   minuut).
 abbreviation('min.',   minuten).
 abbreviation('min.',   minimum).
-abbreviation('tel.',   telefoonnummer).
-abbreviation('Tel.',   telefoonnummer).
+abbreviation('tel.',   telefoon).
+abbreviation('Tel.',   telefoon).
 abbreviation('tel.nr.',   telefoonnummer).
 abbreviation('Tel.nr.',   telefoonnummer).
 abbreviation('uitg.',  uitgever).   % or uitgeverij

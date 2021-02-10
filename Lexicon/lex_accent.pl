@@ -1186,6 +1186,10 @@ accent(reunie,reünie).
 accent(rijksinspectien,rijksinspectiën).
 accent(rontgenfoto,röntgenfoto).
 accent('rontgenfoto\'s','röntgenfoto\'s').
+accent(rontgenstraal,röntgenstraal).
+accent(rontgenstraaltje,röntgenstraaltje).
+accent(rontgenstraaltjes,röntgenstraaltjes).
+accent(rontgenstralen,röntgenstralen).
 accent(rontgenstraling,röntgenstraling).
 accent(rose,rosé).
 accent('rose\'s','rosé\'s').
@@ -1274,6 +1278,8 @@ accent(symphatieen,symphatieën).
 accent('Syriers','Syriërs').
 accent('Syrier','Syriër').
 accent(systeemtheorieen,systeemtheorieën).
+accent(taalcoordinatoren,taalcoördinatoren).
+accent(taalcoordinator,taalcoördinator).
 accent(taaltechnologieen,taaltechnologieën).
 accent(tabaksindustrieen,tabaksindustrieën).
 accent(tatoeeerden,tatoeëerden).

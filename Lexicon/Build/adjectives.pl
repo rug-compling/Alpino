@@ -7448,6 +7448,9 @@ a([e(coöperatieve),
 
 a([stof(corduroy)],nonadv,[],[]).
 
+a([e(coronale),
+   no_e(coronaal)],nonadv,[],[]).
+
 a([e(corporatieve),
    e(korporatieve),
    no_e(corporatief),
@@ -7681,10 +7684,10 @@ a([e(dartele),
    st(dartelst),
    ste(dartelste)],adv,[],[]).
 
-a([e(daverende),
+a([ende(daverende),
    er(daverender),
    ere(daverendere),
-   no_e(daverend),
+   end(daverend),
    st(daverendst),
    ste(daverendste)],adv,[],[]).
 
@@ -9854,14 +9857,14 @@ a([e(essentiële),
    pp(in),
    pp(voor)],[h(niet)]).
 
-a([e(estetische),
+a([no_e(esthetisch),
+   e(estetische),
    e(esthetische),
    er(estetischer),
    er(esthetischer),
    ere(estetischere),
    ere(esthetischere),
    no_e(estetisch),
-   no_e(esthetisch),
    st(estetischt),
    st(esthetischt),
    ste(estetischte),
@@ -32283,6 +32286,11 @@ a([e(sfeervolle),
    st(sfeervolst),
    ste(sfeervolste)],adv,[],[]).
 
+a([e('shi\'itische'),
+   no_e('shi\'itisch'),
+   e(shiitische),
+   no_e(shiitisch)],adv,[],[]).
+
 a([e(sierlijke),
    er(sierlijker),
    ere(sierlijkere),
@@ -32342,11 +32350,7 @@ a([e('sji\'itische'),
    e('sji\'ietische'),
    no_e('sji\'ietisch'),
    e(sjiitische),
-   no_e(sjiitisch),
-   e('shi\'itische'),
-   no_e('shi\'itisch'),
-   e(shiitische),
-   no_e(shiitisch)],adv,[],[]).
+   no_e(sjiitisch)],adv,[],[]).
 
 a([e(sjofele),
    er(sjofeler),
@@ -33880,10 +33884,11 @@ a([ge_e(teleurgestelde),
    ge_no_e(teleurgesteld)],padv,
   [object_sbar],[]).
 
-a([e(teleurstellende),
+a([stem(teleur_stellen),
+   ende(teleurstellende),
    er(teleurstellender),
    ere(teleurstellendere),
-   no_e(teleurstellend),
+   end(teleurstellend),
    st(teleurstellendst),
    ste(teleurstellendste)],adv,
   [subject_sbar,
@@ -33975,6 +33980,10 @@ a([e(tersluikse),
 
 a([e(tertiaire),
    no_e(tertiair)],nonadv,[],[]).
+
+a([postn_pred(tesamen)],padv,[pp(met)],[]).
+
+a([postn_pred(tezamen)],padv,[pp(met)],[]).
 
 a([pred([terug,van,weggeweest])],nonadv,[],[]).
 
@@ -35529,8 +35538,9 @@ a([er(universeler),
 a([e(universitaire),
    no_e(universitair)],adv,[],[]).
 
-a([both([up,to,date]),
-   both('up-to-date')],adv,[],[]).
+a([both([up,to,date])],adv,[],[]).
+
+a([both('up-to-date')],adv,[],[]).
 
 a([both(urban)],nonadv,[],[]).
 
@@ -44705,7 +44715,6 @@ stem(verschrikt,v_root(verschrik,verschrikken)).
 stem(verschroeid,v_root(verschroei,verschroeien)).
 stem(verschrokken,v_root(verschrik,verschrikken)).
 stem(verschrompeld,v_root(verschrompel,verschrompelen)).
-stem(verschuldigd,v_root(verschuldigd,verschuldigd)).
 stem(versierd,v_root(versier,versieren)).
 stem(versimpeld,v_root(versimpel,versimpelen)).
 stem(verslaafd,v_root(verslaaf,verslaven)).

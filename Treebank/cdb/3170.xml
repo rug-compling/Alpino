@@ -6,7 +6,7 @@
     <node begin="24" end="25" id="3" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="28" id="4" rel="--">
       <node begin="0" cat="np" end="12" id="5" rel="su">
-        <node begin="0" end="1" genus="genus" getal="ev" graad="basis" id="6" lemma="Zubeldia" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="hd" root="Zubeldia" word="Zubeldia"/>
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="6" lemma="Zubeldia" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Zubeldia" word="Zubeldia"/>
         <node begin="2" cat="rel" end="12" id="7" rel="mod">
           <node begin="2" cat="np" end="6" id="8" index="1" rel="rhd">
             <node begin="2" end="3" getal="ev" id="9" lemma="wie" naamval="gen" pdtype="pron" persoon="3m" pos="det" postag="VNW(vb,pron,gen,vol,3m,ev)" pt="vnw" rel="det" root="wiens" status="vol" vwtype="vb" word="wiens"/>
@@ -55,7 +55,7 @@
           <node begin="22" end="23" id="40" lemma="Van" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Van" spectype="deeleigen" word="Van"/>
           <node begin="23" end="24" id="41" lemma="Hanegem" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hanegem" spectype="deeleigen" word="Hanegem"/>
         </node>
-        <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="42" lemma="moulijn" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Moulijn" word="Moulijn"/>
+        <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="42" lemma="moulijn" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Moulijn" word="Moulijn"/>
         <node begin="26" conjtype="neven" end="27" id="43" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="27" end="28" genus="genus" getal="ev" graad="basis" id="44" lemma="Kindvall" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="cnj" root="Kindvall" word="Kindvall"/>
       </node>

@@ -277,10 +277,34 @@ with_dt([alles,samen],
 	       mod=l(samen,adjective(postn_pred(padv)),ap,1,2)
 	      ])).
 
+with_dt([alles,tesamen],
+	adverb,
+	dt(np,[hd=l(alles,noun(het,mass,sg),0,1),
+	       mod=l(tesamen,adjective(postn_pred(padv)),ap,1,2)
+	      ])).
+
+with_dt([alles,tezamen],
+	adverb,
+	dt(np,[hd=l(alles,noun(het,mass,sg),0,1),
+	       mod=l(samen,adjective(postn_pred(padv)),ap,1,2)
+	      ])).
+
 with_dt([alles,samen],
 	modal_adverb(noun_prep),
 	dt(np,[hd=l(alles,noun(het,mass,sg),0,1),
 	       mod=l(samen,adjective(postn_pred(padv)),ap,1,2)
+	      ])).
+
+with_dt([alles,tesamen],
+	modal_adverb(noun_prep),
+	dt(np,[hd=l(alles,noun(het,mass,sg),0,1),
+	       mod=l(tesamen,adjective(postn_pred(padv)),ap,1,2)
+	      ])).
+
+with_dt([alles,tezamen],
+	modal_adverb(noun_prep),
+	dt(np,[hd=l(alles,noun(het,mass,sg),0,1),
+	       mod=l(tezamen,adjective(postn_pred(padv)),ap,1,2)
 	      ])).
 
 m('te bewijzene',noun(both,count,sg),[te,bewijzene]).
@@ -7586,7 +7610,6 @@ nominalized_adjective(stil,stillen).
 nominalized_adjective(stom,stommen).
 nominalized_adjective(thuisloos,thuislozen).
 nominalized_adjective(valide,validen). % met "minder"
-nominalized_adjective(variabel,variabelen).
 nominalized_adjective(veel,velen).
 nominalized_adjective(verantwoordelijk,verantwoordelijken).
 nominalized_adjective(verblinden,verblinden).
