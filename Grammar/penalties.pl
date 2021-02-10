@@ -488,6 +488,9 @@ additional_weight(bal(kamp,de),0.2).
 
 additional_weight(van_tot(van,tot),-1).
 
+%% prefer [[eerder gevonden] oplossingen] over [eerder gevonden oplossingen]
+additional_weight(adjective_er_plural,1).
+
 additional_weight_f2(hen,noun,0.2).
 additional_weight_f2(haar,noun,0.2).
 additional_weight_f2(zij,noun,0.2).
@@ -495,7 +498,6 @@ additional_weight_f2(u,noun,0.2).
 additional_weight_f2(kies,noun,0.2).
 additional_weight_f2(armen,noun,1).
 additional_weight_f2(rijken,noun,1).
-
 
 %% TODO:
 %% prefer 'door-PP' attach to embedded verb in passive
@@ -554,6 +556,9 @@ syntactic_penalty([],Node,Rule,His) :-
     syntactic_penalty_nl(Rule,Node,[],His).
 syntactic_penalty([H|T],Node,Rule,His) :-
     syntactic_penalty_nl(Rule,Node,[H|T],His).
+syntactic_penalty(lex(_Ref),Node,_,adjective_er_plural) :-
+    alpino_data:adjective_er_plural(Node,Agr,Sg),
+    \+ Agr = Sg.  % if agreement cannot unify with singular, it must be plural
 
 syntactic_penalty_nl(_,Cat,_,s1(Name)) :-
     alpino_data:syntactic_penalty_cat(Cat,Name).
