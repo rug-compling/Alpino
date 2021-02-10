@@ -56,7 +56,7 @@ ifndef MANDIR
 endif
 
 ifndef SUITE
-       SUITE=Suites/g_suite
+       SUITE=alpino('Suites/g_suite')
 endif
 
 ifndef S_FSA_MORPH_SCRIPT
