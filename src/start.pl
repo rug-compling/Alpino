@@ -89,7 +89,6 @@ alpino_table_goal:unknown_predicate_handler(_,fail).
                       % historically, relative to directory of penalties...
 
 :- initialize_flag(suite,            alpino('Suites/g_suite')).
-%%:- initialize_flag(generation_suite, alpino('Generation/g_suite')).
 
 :- initialize_flag(fluency_feature_weights,
                    alpino('Generation/fluency/maxent_feature_weights')).
@@ -230,16 +229,6 @@ load_suite :-
     if_gui(tcl(add_parse_widget)),
     if_gui(tcl(extend_parse_widget)),
     if_gui(update_buttons).
-
-% load_generation_suite :-
-%     hdrug_flag(generation_suite,File),
-%     (	File==undefined
-%     ->	inform_undefined_module(generation_suite,alpino_gen_suite)
-%     ;	File==n
-%     ->	inform_undefined_module(generation_suite,alpino_gen_suite)
-%     ;   overrule_module(File,[])
-%     ).
-
 
 lf(Id,LF) :-
     hdrug_flag(generation_suite_parts,Parts),
