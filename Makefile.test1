@@ -330,9 +330,9 @@ hpctests:
 	make shortjob HPCTARGET=test1 suite=qa
 	make shortjob HPCTARGET=test1 suite=wpspel
 
-tests: ts ds cgns
+tests: ts ds cgns t24
 
-ts: t0 t1 t2 t3 t4 t5 t6 t7 t8 t9 t15 t16 t17 t18 t19 t20 t21 t22 t23 t24 t25 
+ts: t0 t1 t2 t3 t4 t5 t6 t7 t8 t9 t15 t16 t17 t18 t19 t20 t21 t22 t23 t25 
 
 ds: t10 t11 t12 t13 t14
 
