@@ -58,6 +58,7 @@ user_transformation(r(REL,l(read_from_treebank(Az,L0,Tag0),Cat,W/[P0,P])),B,[],
 
 user_transformation(r(REL,l(read_from_treebank(Az,L0,Tag),Cat,W/[P0,P])),B,[],
 		    r(REL,l(read_from_treebank(Az,L1,Tag),Cat,W/[P0,P])),B,[],_,_) :-
+    \+ REL = mwp,
     lemma(L0,L1).
 
 user_transformation(r(REL,p(mwu)),B,Ds0,
