@@ -91,6 +91,7 @@ e:
                   -e '^english compound' |\
          grep -iw -e killed\
                   -e warning\
+		  -e 'relocation undefined,'\
                   -e error\
                   -e segmentation\
                   -e failure    |\
