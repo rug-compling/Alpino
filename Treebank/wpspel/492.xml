@@ -27,7 +27,7 @@
                     <node begin="13" end="14" id="24" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
                     <node begin="12" cat="inf" end="20" id="25" rel="body">
                       <node begin="12" end="13" id="26" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
-                      <node begin="14" buiging="zonder" end="15" id="27" lcat="p(inf)" lemma="aan_duiden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="duid_aan" word="duiden" wvorm="inf"/>
+                      <node begin="14" buiging="zonder" end="15" id="27" lemma="aan_duiden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="duid_aan" word="duiden" wvorm="inf"/>
                       <node begin="15" cat="whsub" end="20" id="28" rel="vc">
                         <node begin="15" end="16" id="29" index="4" lemma="hoeveel" numtype="hoofd" pos="det" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="whd" root="hoeveel" word="hoeveel"/>
                         <node begin="15" cat="ssub" end="20" id="30" rel="body">
@@ -38,7 +38,7 @@
                           <node begin="15" cat="ppart" end="19" id="34" rel="vc">
                             <node begin="15" end="16" id="35" index="4" rel="obj1"/>
                             <node begin="16" end="18" id="36" index="5" rel="su"/>
-                            <node begin="18" buiging="zonder" end="19" graad="basis" id="37" lemma="verschuldigd" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="verschuldigd" word="verschuldigd"/>
+                            <node begin="18" buiging="zonder" end="19" id="37" lemma="verschuldigen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verschuldigd" word="verschuldigd" wvorm="vd"/>
                           </node>
                           <node begin="19" end="20" id="38" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
                         </node>
