@@ -662,6 +662,8 @@ n([sg('Joegoslaaf'),pl('Joegoslaven')],de,[]).
 
 n([sg('Jordaniër'),pl('Jordaniërs')],de,[]).
 
+n([sg('KWR')],de,[]). % de kwalitatieve woningregistratie
+
 n([pl('Kelten'),sg('Kelt')],de,[]).
 
 n([mass('Keltisch')],het,[]).
@@ -3379,6 +3381,7 @@ n([pl(banken),sg(bank)],de,[],
   [i(effect,effecten),
    hypotheek,
    s(investering),
+   s(ontwikkeling),
    landbouw,
    spaar,
    s(staat),
@@ -6885,6 +6888,7 @@ n([pl(centra),pl(centrums),sg(centrum)],het,
    onderwijs,
    s(onderzoek),
    s(ontmoeting),
+   s(ontwikkeling),
    opvang,
    reken,
    revalidatie,
@@ -9306,6 +9310,7 @@ n([pl(doelen),sg(doel)],het,
    kern,
    koers,
    neven,
+   s(ontwikkeling),
    streef]).
 
 n([pl(doelen),sg(doel)],het,[],
@@ -11819,7 +11824,8 @@ n([pl(fysici),sg(fysicus)],de,[]).
 
 n([mass(fysiek)],both,[]).
 
-n([mass(fysiologie)],de,[]).
+n([mass(fysiologie)],de,[],
+  [s(ontwikkeling)]).
 
 n([pl(fysiologen),sg(fysioloog)],de,[]).
 
@@ -12784,6 +12790,7 @@ n([pl(geschiedenissen),sg(geschiedenis)],de,[],
    s(liefde),
    literatuur,
    s(ontstaan),
+   s(ontwikkeling),
    voetbal,
    voor,
    wereld]).
@@ -19078,6 +19085,7 @@ n([pl(landen),sg(land)],het,[],
    h('G8'),
    h('NAVO'),'NAVO',h('Navo'),'Navo',
    h('OESO'),
+   s(ontwikkeling),
    h('Schengen'),'Schengen',
    tussen,
    wintersport,
@@ -24922,6 +24930,7 @@ n([pl(organisaties),sg(organisatie),
    i(mens_recht,mensenrechten),
    moslim,
    omroep,
+   s(ontwikkeling),
    i(oud,ouderen),  % niet oud_ren_organisaties
    s(overheid),
    proces,
@@ -25421,6 +25430,8 @@ n([mass([pakkie,an])],het,[subject_sbar,subject_vp]).
 n([pl(paleizen),sg(paleis)],het,[],
   [justitie,
    sport]).
+
+n([mass('PPS')],de,[]).		% publiek-private samenwerking
 
 n([sg('Palestijn'),pl('Palestijnen')],de,[]).
 
@@ -31070,7 +31081,8 @@ n([pl(signaturen),sg(signatuur)],de,
    app_measure,
    pred_pp(van)]).
 
-n([sg(sikh),pl(sikhs),
+n([stem('Sikh'),
+   sg(sikh),pl(sikhs),
    sg('Sikh'),pl('Sikhs')],de,[]).
 
 n([pl(sikken),sg(sik)],de,[]).

@@ -52,7 +52,7 @@
               <node begin="20" cat="ssub" end="26" id="40" rel="body">
                 <node begin="20" cat="np" end="23" id="41" rel="su">
                   <node begin="20" end="21" id="42" lemma="negentien" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="negentien" word="negentien"/>
-                  <node begin="21" buiging="met-e" end="22" graad="basis" id="43" lemma="aangrenzend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="aangrenzend" word="aangrenzende"/>
+                  <node begin="21" buiging="met-e" end="22" id="43" lemma="aan_grenzen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="aangrenzend" word="aangrenzende" wvorm="od"/>
                   <node begin="22" end="23" getal="mv" graad="basis" id="44" lemma="auto_box" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="box" word="autoboxen"/>
                 </node>
                 <node begin="23" cat="pp" end="25" id="45" rel="predc">

@@ -5603,10 +5603,10 @@ a([ge_e(bevraagde),
 a([ge_e(bevredigde),
    ge_no_e(bevredigd)],adv,[],[]).
 
-a([e(bevredigende),
+a([ende(bevredigende),
    er(bevredigender),
    ere(bevredigendere),
-   no_e(bevredigend),
+   end(bevredigend),
    st(bevredigendst),
    ste(bevredigendste)],adv,
   [subject_sbar,
