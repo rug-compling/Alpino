@@ -437,6 +437,7 @@ slow_options :-
 %% NB: veryfast is now the default!
 :- veryfast_options.
 
+:- public no_heur_options/0.
 no_heur_options:-
     set_flag(pos_tagger,off),
     set_flag(use_guides,off).

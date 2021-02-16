@@ -15,7 +15,7 @@
     checked/2,
     checked_ok/2.
 
-:- public check_fixed_part/3, is_sc_member/2, check_verb_sc/3,
+:- public check_fixed_part/3, is_sc_member/2, check_verb_sc/3, check_voor/2,
     check_op/2, check_vform_right/3, check_tpart/3, check_tpart/4,
     check_of_dat_whsub_sbar/2, check_of_dat_whsub_sbar/2, check_tmp_adv/2,
     check_stem/3, check_ap_pp_copula/2, check_nonp_copula/2,

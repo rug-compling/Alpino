@@ -43,7 +43,6 @@ call_clause(_,_).
 call_default(_).
 call_ignore_clause(_).
 call_leaf(_,_).
-call_leaf(_,_,_).
 catch_print_error(_,_,_).
 change_tree(_,_).
 clig_tree_user_node(_,_,_).
