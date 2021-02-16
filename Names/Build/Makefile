@@ -43,7 +43,10 @@ realclean: clean
 
 install:
 	if cmp -s seeds.fsa ../seeds.fsa; then true ; else cp seeds.fsa ../ ; fi
-	if cmp -s name_accents.pl ../name_accents.pl; then true ; else cp name_accents.pl ../; fi
+	if cmp -s name_accents.pl ../name_accents.pl.$(PROLOG);\
+        then true ;\
+        else cp name_accents.pl ../name_accents.pl.$(PROLOG);\
+        fi
 
 name_accents.pl: seeds
 	cut -f1 seeds | Alpino -notk -l accents | sort -u > name_accents.pl
