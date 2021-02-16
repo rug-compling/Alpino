@@ -458,7 +458,7 @@ format_postags_of_result(Result) :-
 format_postags_of_result(Result,Key) :-
     result_to_frames(Result,Frames,_),
     frames_to_postags(Frames,Result,Words,PosTags),
-    format_cgn_postags(PosTags,Words,Key,[]).
+    format_cgn_postags(PosTags,Words,Key).
 
 format_pts_of_result(Result) :-
     result_to_frames(Result,Frames,_),
@@ -470,7 +470,7 @@ format_pts_of_result(Result,Key) :-
     result_to_frames(Result,Frames,_),
     frames_to_postags(Frames,Result,Words,PosTags),
     postags_to_pts(PosTags,Pts),
-    format_cgn_postags(Pts,Words,Key,[]).
+    format_cgn_postags(Pts,Words,Key).
 
 postags_to_pts([],[]).
 postags_to_pts([cgn_postag(P0,P,Lemma,Tag0)|T0],[cgn_postag(P0,P,Lemma,Tag)|T]) :-

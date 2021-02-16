@@ -673,9 +673,12 @@ context_dependent_tag(noun(both,_,sg),'N(soort,ev,basis,onz,stan)',_,Q0,Q,Result
     alpino_data:agr(Node,Agr),
     \+ alpino_data:de(Agr).
 
-%context_dependent_tag(complementizer(als),'VG(onder)',_,Q0,Q,Result) :-
-%    find_path(Q0,Q,Result,Path),
-%    vg_als_path(Path).
+%%%context_dependent_tag(complementizer(als),'VG(onder)',_,Q0,Q,Result) :-
+%%%    find_path(Q0,Q,Result,Path),
+%%%    vg_als_path(Path).
+
+%%%vg_als_path([sbar(vp)/1|_]).
+
 
 context_dependent_tag(verb(_,inf,_),'WW(inf,prenom,zonder)',_,Q0,Q,Result) :-
     find_path(Q0,Q,Result,Path),
@@ -2870,8 +2873,6 @@ adv_path([a_detadv_a/2|Path]) :-
     adv_path(Path).
 adv_path([a_me_comp_a/2|Path]) :-
     adv_path(Path).
-
-vg_als_path([sbar(vp)/1|_]).
 
 pronoun_path([pred_a/1|_]).
 pronoun_path([pron_det/1|_]).
