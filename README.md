@@ -14,6 +14,10 @@ Normally, something like this should suffice:
 To compile Alpino from sources, you need SICStus Prolog 3.12.11 (it does not work with SICStus 4), or
 SWI-Prolog 6.6.4 (it does not work with later SWI versions).
 
+For SWI-Prolog 6.6.4, you need the package "clib" too. Furthermore, you must make sure
+that the system finds swipl-lfr.pl (resides in directory pl-6.6.4/library/dialect/sicstus of
+the SWI distribution).
+
 cp Makefile.defs.in to Makefile.defs and edit the file appropriately. After that,
 ensure that the environment variable ALPINO_HOME points to the right directory, and run make
 
