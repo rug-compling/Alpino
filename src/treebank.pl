@@ -752,9 +752,9 @@ deptree_xml_label_rest(adt_lex(Cat,Root,Sense,PosTag,LexAtts),_,_,
                        [root-Root,sense-Sense,pos-PosTag,cat-Cat|Atts],_,_) :-
     adt_lex_atts(LexAtts,Atts).
 
-%extract_category_features(mwu(Root,Sense),mwu,Atts0,Atts) :-
-%    !,
-%    Atts0=[mwu_root-Root,mwu_sense-Sense|Atts].
+extract_category_features(mwu(_Root,_Sense),mwu,Atts0,Atts) :-
+    !,
+    Atts0=Atts.
 extract_category_features(Cat,Cat,Atts,Atts).
 
 adt_lex_atts([],[]).
