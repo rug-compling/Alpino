@@ -15,7 +15,7 @@ trees_doc:
 	for dir in $(DIRECTORIES); do\
                    ( cd Enhanced/$$dir ;\
                      echo Enhanced/$$dir;\
-                     $(MAKE) --no-print-directory -j 30 doc );\
+                     $(MAKE) --no-print-directory -j 30 index.html );\
                    done
 
 trees_realclean:
@@ -82,7 +82,7 @@ tars-install:
 	for dir in $(DIRECTORIES); do make tar-install dir=$$dir; done
 
 tar:
-	( cd Enhanced ; tar czf $(dir)-$(gitversion).tar.gz --exclude '*.svg' $(dir) )
+	( cd Enhanced ; tar czf $(dir)-$(gitversion).tar.gz $(dir) )
 
 tar-install: 
 	mv Enhanced/$(dir)-$(gitversion).tar.gz ~/public_html/treebanks/
