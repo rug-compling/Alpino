@@ -82,7 +82,7 @@ tars-install:
 	for dir in $(DIRECTORIES); do make tar-install dir=$$dir; done
 
 tar:
-	( cd Enhanced ; tar czf $(dir)-$(gitversion).tar.gz $(dir) )
+	( cd Enhanced ; tar czf $(dir)-$(gitversion).tar.gz --exclude '*.svg' $(dir) )
 
 tar-install: 
 	mv Enhanced/$(dir)-$(gitversion).tar.gz ~/public_html/treebanks/
