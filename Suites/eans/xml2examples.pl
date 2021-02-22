@@ -136,6 +136,9 @@ remove_nl([10|Cs0],Cs) :-
 remove_nl([13|Cs0],Cs) :-
     !,
     remove_nl(Cs0,Cs).
+remove_nl([124|Cs0],Cs) :-  % also removes |
+    !,
+    remove_nl(Cs0,Cs).
 remove_nl([C|Cs0],[C|Cs]) :-
     remove_nl(Cs0,Cs).
 remove_nl([],[]).
