@@ -13,6 +13,9 @@ suites=$(sents:%.sents=%) $(named_sents:%.named_sents=%)
 
 all: $(suites:%=%.pl) tt tu
 
+%.po : %.pl
+	echo "compile('$*'), save_files('$*','$*')." | $(HDRUG) -notk
+
 install:
 
 clean:
