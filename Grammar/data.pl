@@ -215,6 +215,10 @@ lexical_node(Node,Stem,Word,Frame,LexHis) ::-
     Node:dt:frame ==> Frame,
     Node:dt:hwrd:his ==> LexHis.
 
+yes_det(Node) ::-
+    Node => n,
+    Node:hdet => yes.
+
 det_agr(Node,Agr) ::-
     Node => det,
     Node:agr <=> Agr.
@@ -243,6 +247,10 @@ het(Node) ::-
     Node => het.
 
 plural(Node) ::-
+    Node:agr => pl.
+
+plural_noun(Node) ::-
+    Node => n,
     Node:agr => pl.
 
 aform(Node,Attr) ::-
