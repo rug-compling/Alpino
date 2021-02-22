@@ -781,11 +781,11 @@ get_lemma_or_word(Pos/Atom,Lemma,_Word) :-
     (   Pos =:= 1,
 	Len =:= 1
     ->  Lemma = Pos/Atom,
-	debug_message(1,"warning: no matching lemma ~w~n",[Pos/Atom])
+	debug_message(2,"warning: no matching lemma ~w~n",[Pos/Atom])
     ;   lists:nth(Pos,SubList,LemmaCodes)
     ->  atom_codes(Lemma,LemmaCodes)
     ;   Lemma=Pos/Atom,
-	debug_message(1,"warning: no matching lemma ~w~n",[Pos/Atom])
+	debug_message(2,"warning: no matching lemma ~w~n",[Pos/Atom])
     ).	
 get_lemma_or_word(v_root(_,Lemma0),Lemma,Word) :-
     !,

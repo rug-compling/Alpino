@@ -2644,6 +2644,12 @@ spelling_variant(formateren,  formatteren).
 spelling_variant(geformateer, geformatteerd).
 spelling_variant(formateerde, formatteerde).
 spelling_variant(formateerden,formatteerden).
+spelling_variant(frekwent,    frequent).
+spelling_variant(frekwente,   frequente).
+spelling_variant(frekwenter,  frequenter).
+spelling_variant(frekwentere, frequentere).
+spelling_variant(frekwentst,  frequentst).
+spelling_variant(frekwentste, frequentste).
 spelling_variant(fronsde,     fronste).
 spelling_variant(fronsden,    fronsten).
 spelling_variant(frusterend,  frustrerend).

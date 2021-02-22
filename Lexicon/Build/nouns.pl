@@ -807,6 +807,8 @@ n([pl('Noord-Hollanders'),sg('Noord-Hollander'),
 n([pl('Noordkoreanen'),sg('Noord-Koreaan'),sg('Noordkoreaan'),
    pl('Noord-Koreanen')],de,[]).
 
+n([pl('Noormannen'),sg('Noorman')],de,[]).
+
 n([mass('Noors')],het,[]).
 
 n([sg('Oegandees'),pl('Oegandezen')],de,[]).
@@ -4186,6 +4188,8 @@ n([pl(beletselen),pl(beletsels),sg(beletsel)],het,[subject_vp,vp]).
 n([pl(belevenissen),sg(belevenis)],de,[]).
 
 n([pl(belevingen),sg(beleving)],de,[]).
+
+n([sg(belfort),pl(belforten)],het,[]).
 
 n([mass(belichaming),pl(belichamingen),sg(belichaming)],de,[]).
 
@@ -11660,6 +11664,12 @@ n([sg(fractuur),pl(fracturen)],de,[]).
 
 n([pl(fragmenten),sg(fragment)],het,[measure],[dim(fragmentje)]).
 
+n([pl(fragmenten),sg(fragment)],het,[],
+  [beeld,
+   film,
+   s(geluid),
+   dim(fragmentje)]).
+
 n([pl(frambozen),sg(framboos)],de,[]).
 
 n([pl(frames),sg(frame)],het,[],[dim(framepje)]).
@@ -12278,6 +12288,8 @@ n([mass(geestdrift)],de,[]).
 n([mass(geestelijkheid)],de,[]).
 
 n([pl(geestesgesteldheden),sg(geestesgesteldheid)],de,[]).
+
+n([sg(geestelijke),pl(geestelijken)],de,[]).
 
 n([pl(geesteskinderen),sg(geesteskind)],het,[]).
 
@@ -18434,7 +18446,13 @@ n([pl(kotten),sg(kot)],het,[],[friet]).
 
 n([mass(kots)],both,[]).
 
-n([mass(kou),mass(koude)],de,[],[vries]).
+n([mass(kou)],de,[],
+  [vries,
+   winter]).
+
+n([mass(koude)],de,[],
+  [vries,
+   winter]).
 
 n([pl(kousen),sg(kous)],de,[]).
 
@@ -21297,6 +21315,7 @@ n([mass(mechanika)],de,[]).
 n([pl(mechanismen),pl(mechanismes),sg(mechanisme)],het,
   [sbar],
   [afweer,
+   l(anti_hanteerbaarheid,antihanteerbaarheids),
    evaluatie,
    markt,
    prijs]).
@@ -22959,6 +22978,10 @@ n([sg([nervous,breakdown])],de,[]).
 
 n([pl(nesten),sg(nest)],het,[measure],[dim(nestje)]).
 
+n([pl(nesten),sg(nest)],het,[],
+  [s(adelaar),  % Ade_laars_nest
+   dim(nestje)]).
+
 n([pl(nestors),sg(nestor)],de,[]).
 
 n([pl(netten),sg(net)],het,[],
@@ -24267,8 +24290,6 @@ n([pl(ontwikkelingen),sg(ontwikkeling)],de,[],
    rook,
    winst]).
 
-n([pl(ontwikkelingslanden),sg(ontwikkelingsland)],het,[]).
-
 n([pl(ontwrichtingen),sg(ontwrichting)],de,[]).
 
 n([mass(ontzag)],het,[]).
@@ -25422,7 +25443,7 @@ n([pl(pakketten),sg(pakket)],het,
    i(bloem,bloemen),
    kerst,
    steun,  % voor Griekenland
-   i(ziek_fonds,ziekenfonds),
+   ziekenfonds,
    dim(pakketje)]).
 
 n([mass([pakkie,an])],het,[subject_sbar,subject_vp]).
@@ -25815,8 +25836,16 @@ n([mass(pathos)],both,[]).
 
 n([pl('patio\'s'),sg(patio)],de,[]).
 
-n([pl(patiënten),sg(patiënt),
-   pl(patiëntes),sg(patiënte)],de,[],
+n([pl(patiënten),sg(patiënt)],de,[],
+  [aids,h(aids),
+   alzheimer,
+   hart,
+   hemofilie,
+   kanker,
+   reuma
+  ]).
+
+n([pl(patiëntes),sg(patiënte)],de,[],
   [aids,h(aids),
    alzheimer,
    hart,
@@ -30789,6 +30818,7 @@ n([pl(sectoren),pl(sectors),sg(sector),
    landbouw,
    luchtvaart,
    markt,
+   media,
    metaal,
    olie,
    onderwijs,
@@ -31045,7 +31075,8 @@ n([sg(showman),pl(showmannen)],de,[]).
 
 n([sg(showroom),pl(showrooms)],de,[]).
 
-n([sg(shuttle),pl(shuttles)],de,[]).
+n([sg(shuttle),pl(shuttles)],de,[],
+  [space]).
 
 n([pl('si\'s'),sg(si)],de,[]).
 
@@ -31175,10 +31206,22 @@ n([pl(sjeiks),sg(sjeik)],de,[]).
 
 n([pl(sjerpen),sg(sjerp)],de,[]).
 
-n([sg('sji\'iet'),pl('sji\'ieten'),
-   sg(shiiet),pl(shiieten),
-   sg('shi\'iet'),pl('shi\'ieten'),
-   sg(sjiiet),pl(sjiieten),
+n([sg('Shiiet'),pl('Shiieten'),
+   sg(shiiet),pl(shiieten)],de,[]).
+
+n([sg('Shi\'iet'),pl('Shi\'ieten'),
+   sg('shi\'iet'),pl('shi\'ieten')],de,[]).
+
+n([sg('Shi-iet'),pl('Shi-ieten'),
+   sg('shi-iet'),pl('shi-ieten')],de,[]).
+
+n([sg('Sjiiet'),pl('Sjiieten'),
+   sg(sjiiet),pl(sjiieten)],de,[]).
+
+n([sg('Sji\'iet'),pl('Sji\'ieten'),
+   sg('sji\'iet'),pl('sji\'ieten')],de,[]).
+
+n([sg('Sji-iet'),pl('Sji-ieten'),
    sg('sji-iet'),pl('sji-ieten')],de,[]).
 
 n([mass(sjoege)],both,[]).
@@ -39177,8 +39220,9 @@ n([pl(wantoestanden),sg(wantoestand)],de,[]).
 
 n([mass(wantrouwen)],het,[]).
 
-n([sg('wao\'er'),pl('wao\'ers'),
-   sg('WAO\'er'),pl('WAO\'ers')],de,[]).
+n([sg('wao\'er'),pl('wao\'ers')],de,[]).
+
+n([sg('WAO\'er'),pl('WAO\'ers')],de,[]).
 
 n([mass(wap)],both,[]).
 
@@ -40076,7 +40120,9 @@ n([mass(wijwater)],het,[]).
 n([sg(wijze)],de,[sbar]). % de wijze waarop
 
 n([sg(wijze)],de,[],
-  [schrijf]). 
+  [schrijf,
+   s(toediening)
+  ]). 
 
 n([pl(wijzers),sg(wijzer)],de,[],[dim(wijzertje)]).
 
