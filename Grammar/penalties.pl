@@ -491,6 +491,9 @@ additional_weight(van_tot(van,tot),-1).
 %% prefer [[eerder gevonden] oplossingen] over [eerder gevonden oplossingen]
 additional_weight(adjective_er_plural,1).
 
+%% dislike hij heeft [eerder Che] ondervraagd
+additional_weight(eerder_n,1).
+
 additional_weight_f2(hen,noun,0.2).
 additional_weight_f2(haar,noun,0.2).
 additional_weight_f2(zij,noun,0.2).
@@ -556,7 +559,7 @@ syntactic_penalty([],Node,Rule,His) :-
     syntactic_penalty_nl(Rule,Node,[],His).
 syntactic_penalty([H|T],Node,Rule,His) :-
     syntactic_penalty_nl(Rule,Node,[H|T],His).
-syntactic_penalty(lex(_Ref),Node,_,adjective_er_plural) :-
+syntactic_penalty(_,Node,_,adjective_er_plural) :-
     alpino_data:adjective_er_plural(Node,Agr,Sg),
     \+ Agr = Sg.  % if agreement cannot unify with singular, it must be plural
 
@@ -635,6 +638,16 @@ syntactic_penalty_nl(a_pp_comp_a,_,[tree(PP,_,_,_),tree(Adj,_,_,_)],meebezig(Pre
     alpino_data:prep(PP,Prep), nonvar(Prep),
     alpino_data:hstem(Adj,Stem), nonvar(Stem).
 
+syntactic_penalty_nl(n_adj_n,N,[Tree,_],eerder_n) :-
+    syntactic_penalty_nl(n_adj_n,N,[Tree,_],eerder_n(_)).    
+
+syntactic_penalty_nl(n_adj_n,N,[Tree,_],eerder_n(Lex)) :-
+    \+ alpino_data:yes_det(N),
+    alpino_data:plural_noun(Plural),
+    \+ N = Plural,   % is taken care of by adjective_er_plural penalty
+    rulename_lex_postag(Tree,Lex,adjective(er(adv))).
+    
+
 nth_syntactic_penalty(Id,N,D,r2(Id,N,DId)) :-
     rulename(D,DId).
 
@@ -674,6 +687,8 @@ det_conj_n_no_agr(Det,Conj) :-
 %count_words_ds([H|T],C0,C) :-
 %    count_words(H,C0,C1),
 %    count_words_ds(T,C1,C).
+
+rulename_lex_postag(tree(_,_,lex(ref(Tag,_,Root,_,_,_,_,_,_,_,_)),_),Root,Tag).
 
 rulename_lex(tree(_,_,lex(ref(_,_,Root,_,_,_,_,_,_,_,_)),_),Root).
 
