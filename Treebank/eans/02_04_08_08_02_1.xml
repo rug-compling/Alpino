@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="14" id="2" rel="--">
+      <node begin="9" end="10" id="3" infl="sg" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="past" word="had" wvorm="pv"/>
+      <node begin="10" case="nom" def="def" end="11" gen="de" getal="ev" id="4" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+      <node begin="0" cat="ppart" end="14" id="5" rel="vc">
+        <node begin="0" cat="cp" end="8" id="6" rel="mod">
+          <node begin="0" conjtype="onder" end="1" id="7" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="Als"/>
+          <node begin="1" cat="ssub" end="8" id="8" rel="body">
+            <node begin="1" case="nom" def="def" end="2" gen="de" getal="ev" id="9" index="2" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+            <node begin="1" cat="ppart" end="7" id="10" rel="vc">
+              <node begin="1" end="2" id="11" index="2" rel="su"/>
+              <node begin="2" cat="pp" end="5" id="12" rel="mod">
+                <node begin="2" end="3" id="13" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="3" cat="np" end="5" id="14" rel="obj1">
+                  <node begin="3" buiging="zonder" end="4" getal="ev" id="15" infl="pron" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+                  <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="16" lemma="jeugd" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="jeugd" special="tmp" word="jeugd"/>
+                </node>
+              </node>
+              <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="17" lemma="geld" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="geld" word="geld"/>
+              <node begin="6" buiging="zonder" end="7" id="18" infl="psp" lemma="hebben" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="heb" sc="transitive_ndev" word="gehad" wvorm="vd"/>
+            </node>
+            <node begin="7" end="8" id="19" infl="sg" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" sc="aux_psp_hebben" tense="past" word="had" wvorm="pv"/>
+          </node>
+        </node>
+        <node begin="10" end="11" id="20" index="1" rel="su"/>
+        <node begin="11" cat="ap" end="13" id="21" rel="mod">
+          <node aform="base" begin="11" buiging="zonder" end="12" graad="basis" id="22" infl="no_e" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,basis)" pt="vnw" rel="mod" root="veel" vform="adj" vwtype="onbep" word="veel"/>
+          <node aform="compar" begin="12" buiging="zonder" end="13" graad="comp" id="23" infl="meer" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="hd" root="meer" vform="adj" vwtype="onbep" word="meer"/>
+        </node>
+        <node begin="13" buiging="zonder" end="14" id="24" infl="psp" lemma="reizen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="reis" sc="intransitive" word="gereisd" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="14" end="15" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Als ik in mijn jeugd geld gehad had , had ik veel meer gereisd .</sentence>
+</alpino_ds>
