@@ -751,7 +751,7 @@ exceptional_stem_tag('Kamer',_,          'N(soort,ev,basis,zijd,stan)',kamer).
 exceptional_stem_tag('Koning',_,         'N(soort,ev,basis,zijd,stan)',koning).
 exceptional_stem_tag('Landbouw',_,       'N(soort,ev,basis,zijd,stan)',landbouw).
 exceptional_stem_tag('Leefmilieu',_,     'N(soort,ev,basis,onz,stan)', leefmilieu).
-exceptional_stem_tag('Nederlanden',_,    'N(iegen,mv,basis)',          'Nederland').
+exceptional_stem_tag('Nederlanden',_,    'N(eigen,mv,basis)',          'Nederland').
 exceptional_stem_tag('Onderwijs',_,      'N(soort,ev,basis,onz,stan)', onderwijs).
 exceptional_stem_tag('Ontwikkeling',_,   'N(soort,ev,basis,zijd,stan)',ontwikkeling).
 exceptional_stem_tag('Ontwikkelingssamenwerking',_,
@@ -885,6 +885,7 @@ exceptional_stem_tag(driemaal,noun(both,count,bare_meas),           'BW()').
 exceptional_stem_tag(duizend,noun(de,count,pl),                     'TW(hoofd,nom,mv-n,basis)').
 exceptional_stem_tag(dus,_,                                         'BW()').
 exceptional_stem_tag(echt,adverb,                                   'ADJ(vrij,basis,zonder)').
+exceptional_stem_tag(eenmaal,tmp_noun(_,_,_),                       'BW()').
 exceptional_stem_tag(eens,_,                                        'BW()').
 exceptional_stem_tag(eerder,tmp_app_noun,                           'ADJ(vrij,comp,zonder)').
 exceptional_stem_tag(eersten,noun(both,count,pl),                   'TW(rang,nom,mv-n)').
@@ -954,6 +955,7 @@ exceptional_stem_tag(land,determiner(pron),                         'N(soort,ev,
 exceptional_stem_tag(later,tmp_app_noun,                            'ADJ(vrij,comp,zonder)').
 exceptional_stem_tag(liefst,modal_adverb(_),                        'BW()').
 exceptional_stem_tag(man,determiner(pron),                          'N(soort,ev,basis,gen)').
+exceptional_stem_tag(maximum,adjective(_),                          'N(soort,ev,basis,onz,stan)').
 exceptional_stem_tag(veel,postadv_adverb,                           'VNW(onbep,grad,stan,vrij,zonder,comp)').
 exceptional_stem_tag('v.j.',_,                                      'SPEC(afk)').
 exceptional_stem_tag(meerdere,determiner(pl_num,nwh,nmod,pro,yparg),'VNW(onbep,det,stan,prenom,met-e,mv)').
@@ -965,6 +967,7 @@ exceptional_stem_tag(mijzelf,_,                                     'VNW(pr,pron
 exceptional_stem_tag(mijn,determiner(pron),                         'VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)').
 exceptional_stem_tag(miljard,noun(_,_,meas),                        'N(soort,ev,basis,onz,stan)').
 exceptional_stem_tag(miljoen,noun(_,_,meas),                        'N(soort,ev,basis,onz,stan)').
+exceptional_stem_tag(minimum,adjective(_),                          'N(soort,ev,basis,onz,stan)').
 exceptional_stem_tag(minus,preposition(_,_),                        'BW()').
 exceptional_stem_tag(moeder,determiner(pron),                       'N(soort,ev,basis,gen)').
 exceptional_stem_tag(na,adjective(pred(_)),                         'VZ(fin)').
@@ -982,6 +985,7 @@ exceptional_stem_tag(nou,tag,                                       'BW()').
 exceptional_stem_tag(nummer,noun(both,count,sg),                    'N(soort,ev,basis,onz,stan)').
 exceptional_stem_tag(komen,tag,                                     'WW(pv,tgw,ev)').
 exceptional_stem_tag(kijken,tag,                                    'WW(pv,tgw,ev)').
+exceptional_stem_tag(o,tag,                                         'SPEC(symb)').  % used frequently as an itemizer
 exceptional_stem_tag(om,adjective(pred(_)),                         'VZ(fin)').
 exceptional_stem_tag(ondanks,_,                                     'VZ(init)').
 exceptional_stem_tag(onder,loc_adverb,                              'VZ(fin)').
@@ -1034,6 +1038,7 @@ exceptional_stem_tag(jezelf,_,                                      'VNW(pr,pron
 exceptional_stem_tag(vader,determiner(pron),                        'N(soort,ev,basis,gen)').
 exceptional_stem_tag(veel,adjective(e),                             'VNW(onbep,grad,stan,prenom,met-e,agr,basis)').
 exceptional_stem_tag(veel,nominalized_adjective,                    'VNW(onbep,grad,stan,nom,met-e,mv-n,basis)').
+exceptional_stem_tag(veevoer,noun(both,mass,sg),                    'N(soort,ev,basis,onz,stan)').
 exceptional_stem_tag(verdachte,noun(de,count,sg),                   'WW(vd,nom,met-e,zonder-n)').
 exceptional_stem_tag(verdachte,noun(de,count,pl),                   'WW(vd,nom,met-e,mv-n)').
 exceptional_stem_tag(veroordelen,nominalized_adjective(_),          'WW(vd,nom,met-e,mv-n)').
@@ -1060,6 +1065,7 @@ exceptional_stem_tag(wiens,determiner(pron,rwh),                    'VNW(vb,pron
 exceptional_stem_tag(wit,determiner(pron),                          'N(soort,ev,basis,gen)').
 exceptional_stem_tag(wit, noun(het,mass,sg),                        'ADJ(nom,basis,zonder,zonder-n)').
 exceptional_stem_tag(xxx,_,                                         'SPEC(onverst)').
+exceptional_stem_tag(x,tmp_noun(_,_,_),                             'SPEC(symb)').
 exceptional_stem_tag(zat,np_adjective,                              'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(zat,clause_np_adjective,                       'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(zat,postadj_adverb,                            'ADJ(vrij,basis,zonder)').
@@ -1208,6 +1214,7 @@ exceptional_word_tag('m\'n',determiner(pron),                        'VNW(bez,de
 exceptional_word_tag('d\'r',determiner(pron),                        'VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)').
 exceptional_word_tag(graden,noun(de,count,meas),                     'N(soort,mv,basis)').
 exceptional_word_tag('-ie',pronoun(nwh,thi,sg,de,nom,def),           'VNW(pers,pron,nomin,red,3,ev,masc)').
+exceptional_word_tag(beide,pronoun(nwh,thi,pl,de,both,indef),        'VNW(onbep,grad,stan,nom,met-e,zonder-n,basis)').
 exceptional_word_tag(beide,predm_adverb,                             'VNW(onbep,grad,stan,nom,met-e,zonder-n,basis)').
 exceptional_word_tag(beiden,predm_adverb,                            'VNW(onbep,grad,stan,nom,met-e,mv-n,basis)').
 exceptional_word_tag(gevangenen,_,                                   'WW(vd,nom,met-e,mv-n)').
@@ -1237,6 +1244,7 @@ symb('km.',_, 'SPEC(symb)').
 symb(km/u,_,  'SPEC(symb)').
 symb(km2,_,   'SPEC(symb)').
 symb(mg,_,    'SPEC(symb)').
+symb('µg',_,  'SPEC(symb)').
 symb(ml,_,    'SPEC(symb)').
 symb('mg.',_, 'SPEC(symb)').
 symb('ml.',_, 'SPEC(symb)').
@@ -1245,7 +1253,10 @@ often_het(afval).
 often_het(bestuur).
 often_het(commentaar).
 often_het(gewicht).
+often_het(idee).
+often_het(hoogte_punt).
 often_het(kwart).
+often_het(lucht_toezicht).
 often_het(miljard).
 often_het(miljoen).
 often_het(misbruik).
@@ -2211,6 +2222,7 @@ de_naam('X-10').
 de_naam('X-6').
 de_naam('X-7').
 de_naam('X-9').
+de_naam('Zesdaagse').
 de_naam('al-Saoed').
 
 
@@ -2259,6 +2271,7 @@ het_naam('Alexandria').
 het_naam('Alken-Maes').
 het_naam('Apple').
 het_naam('Aquafin').
+het_naam('Arsenal').
 het_naam('BIS').
 het_naam('BSO').
 het_naam('Bam').
@@ -2556,6 +2569,13 @@ mwu_postag_frame_surf(number(hoofd(both)),Surf,[ATag,'LET()',BTag]) :-
     atom(Surf),
     atom_codes(Surf,Codes),
     alpino_util:codes_to_words(Codes,[A,'-',B]),
+    num_postag(A,ATag),
+    num_postag(B,BTag).    
+
+mwu_postag_frame_surf(number(hoofd(both)),Surf,[ATag,'SPEC(symb)',BTag]) :-
+    atom(Surf),
+    atom_codes(Surf,Codes),
+    alpino_util:codes_to_words(Codes,[A,'x',B]),
     num_postag(A,ATag),
     num_postag(B,BTag).    
 

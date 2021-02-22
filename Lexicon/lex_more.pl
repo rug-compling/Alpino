@@ -610,7 +610,7 @@ phrasal_entry(noun(het,count,sg),numbertal) -->
 
 phrasal_entry(with_dt(determiner(pl_num,nwh,nmod,pro,yparg),
                       dt(np,[det=l(een,determiner(een),detp,0,1),
-                             hd=l(NumberTal,noun(both,both,sg),1,2)])),
+                             hd=l(NumberTal,noun(het,count,sg),1,2)])),
               numbertal) -->
     { hdrug_util:debug_message(4,"een drie tal~n",[]) },
     n_word(een),

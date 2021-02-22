@@ -10588,17 +10588,11 @@ a([both('free-style'),
 
 a([both(frêle)],adv,[],[]).
 
-a([e(frekwente),
-   e(frequente),
-   er(frekwenter),
+a([e(frequente),
    er(frequenter),
-   ere(frekwentere),
    ere(frequentere),
-   no_e(frekwent),
    no_e(frequent),
-   st(frekwentst),
    st(frequentst),
-   ste(frekwentste),
    ste(frequentste)],adv,[],[]).
 
 a([e(freudiaanse),
@@ -32946,6 +32940,9 @@ a([e(sprookjesachtige),
 a([e(staatkundige),
    no_e(staatkundig)],adv,[],[]).
 
+a([e(staatloze),
+   no_e(staatloos)],nonadv,[],[]).
+
 a([e(staatse),
    no_e(staats)],nonadv,[],[]).
 
@@ -42193,7 +42190,6 @@ stem(gehalveerd,v_root(halveer,halveren)).
 stem(gehamerd,v_root(hamer,hameren)).
 stem(gehandeld,v_root(handel,handelen)).
 stem(gehandhaafd,v_root(handhaaf,handhaven)).
-stem(gehandicapt,v_root(handicap,handicappen)).
 stem(gehangen,v_root(hang,hangen)).
 stem(gehanteerd,v_root(hanteer,hanteren)).
 stem(gehapt,v_root(hap,happen)).

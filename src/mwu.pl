@@ -576,6 +576,7 @@ mwu_postag('Indonesische Volkscongres',['ADJ(prenom,basis,met-e,stan)','N(eigen,
 mwu_postag('in duigen',['VZ(init)','N(soort,mv,basis)'],[in,duig]).
 mwu_postag('Industriële Revolutie',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[industrieel,revolutie]).
 mwu_postag('in feite',['VZ(init)','N(soort,ev,basis,dat)'],[in,feit]).
+mwu_postag('in functie van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[in,functie,van]).
 mwu_postag('in gebreke',['VZ(init)','N(soort,ev,basis,dat)'],[in,gebrek]).
 mwu_postag('in gebruik',['VZ(init)','N(soort,ev,basis,onz,stan)'],[in,gebruik]).
 mwu_postag('in geval van',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)'],[in,geval,van]).
@@ -590,6 +591,7 @@ mwu_postag('in het teken',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,basis,onz
 mwu_postag('in het wilde weg',['VZ(init)','LID(bep,stan,evon)','ADJ(prenom,basis,met-e,stan)','BW()'],[in,het,wild,weg]).
 mwu_postag('in kaart',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[in,kaart]).
 mwu_postag('in levende lijve',['VZ(init)','WW(od,prenom,met-e)','N(soort,ev,basis,dat)'],[in,leven,lijf]).
+mwu_postag('in lichterlaaie',['VZ(init)','BW()'],[in,lichterlaaie]).
 mwu_postag('in orde',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[in,orde]).
 mwu_postag('in overleg met',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)'],[in,overleg,met]).
 mwu_postag('in opdracht van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[in,opdracht,van]).
@@ -635,6 +637,7 @@ mwu_postag('in verband met',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)']
 mwu_postag('in verbinding',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[in,verbinding]).
 mwu_postag('in vergelijking met',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(init)'],[in,vergelijking,met]).
 mwu_postag('in wezen',['VZ(init)','N(soort,ev,basis,onz,stan)'],[in,wezen]).
+mwu_postag('in zak en as',['VZ(init)','N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[in,zak,en,as]).
 mwu_postag('Islamitische Jihad',['ADJ(prenom,basis,met-e,stan)','N(eigen,ev,basis,zijd,stan)'],[islamitisch,'Jihad']).
 mwu_postag('Islamitische Leger',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,onz,stan)'],[islamitisch,leger]).
 mwu_postag('Islamitische Verzetsbeweging',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[islamitisch,verzet_beweging]).

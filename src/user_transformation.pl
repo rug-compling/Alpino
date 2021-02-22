@@ -266,4 +266,3 @@ surf_lemma(Word,'N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,onz,stan)',L,L) :
 
 eigen(_):-
     fail.
-
