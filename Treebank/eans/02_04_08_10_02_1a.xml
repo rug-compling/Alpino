@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" special="dubb_punt" word=":"/>
+    <node begin="4" end="5" id="2" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" special="aanhaal_both" word="&quot;"/>
+    <node begin="0" cat="du" end="15" id="3" rel="--">
+      <node begin="0" cat="smain" end="3" id="4" rel="tag">
+        <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="5" lemma="Frits" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="Frits" word="Frits"/>
+        <node begin="1" end="2" id="6" infl="sg" lemma="beloven" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="beloof" sc="np_sbar" stype="declarative" tense="past" word="beloofde" wvorm="pv"/>
+        <node begin="2" case="dat_acc" def="def" end="3" gen="de" getal="ev" id="7" lemma="me" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj2" rnum="sg" root="me" special="wkpro" status="red" vwtype="pr" wh="nwh" word="me"/>
+      </node>
+      <node begin="5" cat="smain" end="15" id="8" rel="nucl">
+        <node begin="5" case="nom" def="def" end="6" gen="de" getal="ev" id="9" index="1" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
+        <node begin="6" end="7" id="10" infl="modal_not_u" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" sc="aux(inf)" stype="declarative" tense="present" word="zal" wvorm="pv"/>
+        <node begin="5" cat="inf" end="15" id="11" rel="vc">
+          <node begin="5" end="6" id="12" index="1" rel="su"/>
+          <node begin="5" cat="ppart" end="14" id="13" rel="vc">
+            <node begin="5" end="6" id="14" index="1" rel="su"/>
+            <node begin="7" end="8" id="15" lemma="morgen" pos="adv" postag="BW()" pt="bw" rel="mod" root="morgen" special="tmp" word="morgen"/>
+            <node begin="8" cat="np" end="10" id="16" rel="obj1">
+              <node begin="8" end="9" id="17" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="9" end="10" gen="de" genus="zijd" getal="ev" graad="basis" id="18" lemma="klok" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="klok" word="klok"/>
+            </node>
+            <node begin="10" end="11" id="19" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
+            <node begin="11" cat="pp" end="13" id="20" rel="ld">
+              <node begin="11" end="12" id="21" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+              <node begin="12" case="dat_acc" def="def" end="13" gen="de" getal="mv" id="22" lemma="elkaar" naamval="obl" num="pl" pdtype="pron" per="thi" persoon="persoon" pos="pron" postag="VNW(recip,pron,obl,vol,persoon,mv)" pt="vnw" rel="obj1" rnum="pl" root="elkaar" status="vol" vwtype="recip" wh="nwh" word="elkaar"/>
+            </node>
+            <node begin="13" buiging="zonder" end="14" id="23" infl="psp" lemma="zetten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zet" sc="np_ld_pp" word="gezet" wvorm="vd"/>
+          </node>
+          <node begin="14" buiging="zonder" end="15" id="24" infl="inf" lemma="hebben" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="heb" sc="aux_psp_hebben" word="hebben" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="25" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="16" end="17" id="26" lemma="&quot;" pos="punct" postag="LET()" pt="let" rel="--" root="&quot;" special="aanhaal_both" word="&quot;"/>
+  </node>
+  <sentence>Frits beloofde me : &quot; Ik zal morgen de klok weer in elkaar gezet hebben . &quot;</sentence>
+</alpino_ds>

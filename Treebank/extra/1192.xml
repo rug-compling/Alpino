@@ -2,7 +2,7 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="10" id="0" rel="top">
     <node begin="0" cat="smain" end="9" id="1" rel="--">
-      <node begin="0" end="1" id="2" lemma="beide" pos="adv" postag="BW()" pt="bw" rel="predm" root="beiden" word="Beiden"/>
+      <node begin="0" buiging="met-e" end="1" getal-n="mv-n" graad="basis" id="2" lemma="beide" naamval="stan" pdtype="grad" pos="adv" positie="nom" postag="VNW(onbep,grad,stan,nom,met-e,mv-n,basis)" pt="vnw" rel="predm" root="beiden" vwtype="onbep" word="Beiden"/>
       <node begin="1" end="2" id="3" lemma="concluderen" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="concludeer" word="concludeerden" wvorm="pv"/>
       <node begin="2" end="3" getal="mv" id="4" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
       <node begin="3" cat="cp" end="9" id="5" rel="vc">

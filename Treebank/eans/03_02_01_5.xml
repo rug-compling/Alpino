@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" status="red" vwtype="aanw" word="Er"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="2" cat="pp" end="5" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="3" cat="np" end="5" id="6" rel="obj1">
+          <node begin="3" buiging="met-e" end="4" getal="mv" id="7" lemma="ons" naamval="stan" npagr="rest" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,mv,prenom,met-e,rest)" pt="vnw" rel="det" root="ons" status="vol" vwtype="bez" word="onze"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="familie" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="familie" word="familie"/>
+        </node>
+      </node>
+      <node begin="5" end="6" id="9" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" word="wel"/>
+      <node begin="6" cat="np" end="8" id="10" rel="su">
+        <node begin="6" end="7" id="11" lemma="vijf" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="vijf" word="vijf"/>
+        <node begin="7" end="8" getal="mv" graad="basis" id="12" lemma="Jaap" ntype="eigen" pos="name" postag="N(eigen,mv,basis)" pt="n" rel="hd" root="Japen" word="Japen"/>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Er zijn in onze familie wel vijf Japen .</sentence>
+</alpino_ds>
