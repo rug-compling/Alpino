@@ -93,6 +93,9 @@ surviving_root(_):-
 surviving_word_tag(zorgen,noun(de,count,pl)).
 
 %% temp
+surviving_word_tag(eten,noun(het,mass,sg)).
+
+%% temp
 surviving_word_tag(bezoek,tmp_noun(het,count,sg)).
 surviving_word_tag(bezoek,tmp_noun(het,count,sg,pred_pp(op))).
 surviving_word_tag(voorbij,adjective(both(adv))).
