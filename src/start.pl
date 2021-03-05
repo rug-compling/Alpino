@@ -1171,7 +1171,9 @@ end_hook(generate,_A,_B,_C) :-
 %% hdrug_hook
 %% goal: replace numbers by atoms
 
-extern_phon([],L) :-
+extern_phon(L0,L) :-
+    nonvar(L0),
+    L0 = [],
     !,
     format(user_error,"sentence: ",[]),
     ttyflush,    
