@@ -73,6 +73,7 @@ mwu_postag('Belgisch Kampioenschap',['ADJ(prenom,basis,zonder)','N(soort,ev,basi
 mwu_postag('Belgisch-Nederlandse Conferentie',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Belgisch-Nederlands',conferentie]).
 mwu_postag('Belgisch Parlement',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],['Belgisch',parlement]).
 mwu_postag('Beloofde Land',['WW(vd,prenom,met-e)','N(soort,ev,basis,onz,stan)'],[beloven,land]).
+mwu_postag('beslist niet',['ADJ(vrij,basis,zonder)','BW()'],[beslist,niet]).
 mwu_postag('Beter Wonen',['ADJ(vrij,comp,zonder)','WW(inf,vrij,zonder)'],[goed,wonen]).
 mwu_postag('Bezette Gebieden',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[bezet,gebied]).
 mwu_postag('bij deze',['VZ(init)','VNW(aanw,det,stan,nom,met-e,zonder-n)'],[bij,deze]).
@@ -798,6 +799,7 @@ mwu_postag('naar aanleiding van',['VZ(init)','N(soort,ev,basis,zijd,stan)','VZ(i
 mwu_postag('naar gelang van',['VZ(init)','VG(onder)','VZ(init)'],[naar,naargelang,van]).
 mwu_postag('naar schatting',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[naar,schatting]).
 mwu_postag('naar verluidt',['VZ(init)','WW(pv,tgw,met-t)'],[naar,verluiden]).
+mwu_postag('naar voren',['VZ(init)','BW()'],[naar,voren]).
 mwu_postag('Nationaal Akkoord Wonen',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)','WW(inf,vrij,zonder)'],[nationaal,akkoord,wonen]).
 mwu_postag('Nationaal Comité',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],[nationaal,comité]).
 mwu_postag('Nationaal Fond Ouderenhulp',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)','N(soort,ev,basis,zijd,stan)'],[nationaal,fond,ouderenhulp]).
@@ -1227,6 +1229,7 @@ mwu_postag('van gedachten',['VZ(init)','N(soort,mv,basis)'],[van,gedacht]).
 mwu_postag('van harte',['VZ(init)','N(soort,ev,basis,dat)'],[van,hart]).
 mwu_postag('van heinde en verre',['VZ(init)','BW()','VG(neven)','ADJ(prenom,basis,met-e,stan)'],[van,heinde,en,ver]).
 mwu_postag('van kracht',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[van,kracht]).
+mwu_postag('van te voren',['VZ(init)','VZ(init)','BW()'],[van,te,voren]).
 mwu_postag('van toepassing',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[van,toepassing]).
 mwu_postag('van kwaad naar erger',['VZ(init)','N(soort,ev,basis,onz,stan)','VZ(init)','ADJ(vrij,comp,zonder)'],[van,kwaad,naar,erg]).
 mwu_postag('van zins',['VZ(init)','N(soort,ev,basis,gen)'],[van,zin]).
@@ -1303,7 +1306,7 @@ mwu_postag('voor het éérst',['VZ(init)','LID(bep,stan,evon)','TW(rang,nom,zond
 mwu_postag('voor het laatst',['VZ(init)','LID(bep,stan,evon)','ADJ(nom,sup,zonder,zonder-n)'],[voor,het,laat]).
 mwu_postag('voor het lapje',['VZ(init)','LID(bep,stan,evon)','N(soort,ev,dim,onz,stan)'],[voor,het,lap]).
 mwu_postag('voor ogen',['VZ(init)','N(soort,mv,basis)'],[voor,oog]).
-mwu_postag('voors en tegens',['N(soort,mv,basis)','VG(neven)','N(soort,mv,basis)'],[voor,en,tegen]).
+mwu_postag('voor en tegen',['N(soort,mv,basis)','VG(neven)','N(soort,mv,basis)'],[voor,en,tegen]).
 mwu_postag('Vrede van Aken',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],[vrede,van,'Aken']).
 mwu_postag('Vrede van Brest-Litovsk',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],[vrede,van,'Brest-Litovsk']).
 mwu_postag('Vrede van Karlowitz',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],[vrede,van,'Karlowitz']).
@@ -1322,12 +1325,9 @@ mwu_postag('Waalse en Brussels Hoofdstedelijk Gewest',['ADJ(prenom,basis,met-e,s
 mwu_postag('Waalse milieuraad voor duurzame ontwikkeling',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)','VZ(init)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Waals',milieu_raad,voor,duurzaam,ontwikkeling]).
 mwu_postag('Waals Parlement',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],['Waals',parlement]).
 mwu_postag('wat betreft',['VNW(vb,pron,stan,vol,3o,ev)','WW(pv,tgw,met-t)'],[wat,betreffen]).
-mwu_postag('Wat een',['VNW(vb,pron,stan,vol,3o,ev)','LID(onbep,stan,agr)'],[wat,een]).
-mwu_postag('Wat voor',['VNW(vb,pron,stan,vol,3o,ev)','VZ(init)'],[wat,voor]).
+mwu_postag('wat een',['VNW(excl,pron,stan,vol,3,getal)','LID(onbep,stan,agr)'],[wat,een]).
 mwu_postag('wat voor',['VNW(vb,pron,stan,vol,3o,ev)','VZ(init)'],[wat,voor]).
-mwu_postag('Wat voor een',['VNW(vb,pron,stan,vol,3o,ev)','VZ(init)','LID(onbep,stan,agr)'],[wat,voor,een]).
 mwu_postag('wat voor een',['VNW(vb,pron,stan,vol,3o,ev)','VZ(init)','LID(onbep,stan,agr)'],[wat,voor,een]).
-mwu_postag('Wat voor één',['VNW(vb,pron,stan,vol,3o,ev)','VZ(init)','TW(hoofd,prenom,stan)'],[wat,voor,één]).
 mwu_postag('wat voor één',['VNW(vb,pron,stan,vol,3o,ev)','VZ(init)','TW(hoofd,prenom,stan)'],[wat,voor,één]).
 mwu_postag('Wereld Sociaal Forum',['N(soort,ev,basis,zijd,stan)','ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],[wereld,sociaal,forum]).
 mwu_postag('Wereld Voedsel Organisatie',['N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,onz,stan)','N(soort,ev,basis,zijd,stan)'],[wereld,voedsel,organisatie]).
