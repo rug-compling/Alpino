@@ -403,8 +403,8 @@ xml_filename(File) :-
 xml_save(Result,String,Comments,File,Flag):-
     xml_save(Result,String,Comments,[],File,Flag).
 
-xml_save(Result,String0,Comments,Meta,File,Flag) :-
-    (   remove_phantoms(String0,String),
+xml_save(Result,String,Comments,Meta,File,Flag) :-
+    (   % remove_phantoms(String0,String),
 	xml_save__(Result,String,Comments,Meta,File,Flag)
     ->  true
     ;   format(user_error,"ERROR: something went wrong in saving the XML in ~w!~n",[File])
