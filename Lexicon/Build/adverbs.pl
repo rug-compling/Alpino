@@ -101,7 +101,6 @@ adverb([au,fond]).
 adverb(azo).   % vlaams
 %% adverb(begin).
 %adverb(beetje).
-adverb([beetje,bij,beetje]).
 adverb(beroepshalve).
 adverb(bovenmate).
 adverb([bij,de,vleet]).
@@ -247,7 +246,6 @@ adverb(honderdmaal).
 adverb(hoogstens).
 adverb(hooguit).
 adverb([hors,concours]).
-adverb([huis,aan,huis]).
 adverb('huis-aan-huis').
 adverb(hunnerzijds).
 adverb(idealiter).
@@ -275,7 +273,6 @@ adverb(integendeel).
 adverb(inzonderheid).
 adverb(inzover).
 adverb(inzoverre).
-adverb([keer,op,keer]).
 adverb([keer,op,keer,op,keer]).
 adverb(kortweg).
 adverb([koste,wat,het,kost]).
@@ -327,7 +324,6 @@ adverb([naar,schatting]).
 adverb(nagenoeg).
 adverb(nauwelijks).
 adverb(neer). % loc dir pred?
-adverb([nek,aan,nek]).
 adverb(netzomin).
 adverb(niet).
 adverb([niet,in,het,minst]).
@@ -396,7 +392,6 @@ adverb(ruwweg).
 adverb([sans,gêne]).
 adverb(schier).
 adverb([schots,en,scheef]).
-adverb([schouder,aan,schouder]).
 adverb(schuins).
 adverb(sebiet).
 adverb(sec).

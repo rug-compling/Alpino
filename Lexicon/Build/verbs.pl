@@ -8186,6 +8186,7 @@ v(geef,geeft,geven,gegeven,gaf,gaven,
        	fixed([pc(op),acc(antwoord),dat],norm_passive),
        	fixed([inv(acc(antwoord)),pc(op),dat],norm_passive),
        	fixed([acc(antwoord),inv(dat),pc(op)],norm_passive),
+	fixed([{[acc(bevel),pc(tot)]}],norm_passive),
 	fixed([{[pc(aan),[gehoor]]}],imp_passive),
 	fixed([{[pc(aan),[gevolg]]}],imp_passive),
 	fixed([[cadeau],{[acc,dat]}],norm_passive),
@@ -14853,7 +14854,8 @@ v(nationaliseer,nationaliseert,nationaliseren,genationaliseerd,nationaliseerde,n
     [h([transitive])]).
 
 v(naturaliseer,naturaliseert,naturaliseren,genaturaliseerd,naturaliseerde,naturaliseerden,
-    [z([intransitive]),
+  [z([intransitive,
+      pc_pp(tot)]),
      h([transitive])]).
 
 v(navigeer,navigeert,navigeren,genavigeerd,navigeerde,navigeerden,

@@ -3979,14 +3979,19 @@ never_compound_part(L) :-
     alpino_unknowns:contains_never_compound_part(L).
 
 %% huis voor huis, meter voor meter etc.
-phrasal_entry(sentence_adverb,x_voor_x) -->
+phrasal_entry(sentence_adverb,Label,x_voor_x) -->
     { hdrug_util:debug_message(4,"x voor x~n",[]) },
     n_word(X),
-    n_word(voor),
+    n_word_preposition(Voor),
     n_word(X),
-    { xl(X,TAG,_,[],[]),
-      sg_noun(TAG,_)
+    { xl(X,TAG,Root,[],[]),
+      sg_noun(TAG,_),
+      hdrug_util:concat_all([Root,Voor,Root],Label,' ')
     }.
+
+n_word_preposition(Voor) -->
+    n_word(Prep),
+    {  xl(Prep,preposition(_,_),Voor,[],[]) }.
 
 voor_chr -->
     voor_chr_voor,
