@@ -217,45 +217,61 @@ graphic_daughter(dts,1,tree(r(_,i(_,l(_,_,Word))),_,[]),word(Word)).
 graphic_daughter(dts,N,tree(_,_,Ds),D) :-
     nth(N,Ds,D).
 
-%% FORMAT DT dts with sense
+%% FORMAT DT with postag and lemma / default format for textual interface
+graphic_path(dt,Result,_) :-
+    var(Result), !.
 graphic_path(dt,Result,Tree) :-
-    result_to_dt(Result,Tree).  % dt.pl
+    Result = already_canonical_dt(Tree0),
+    !,
+    promote_tags(Tree0,Tree).
+graphic_path(dt,Result,Tree) :-
+    result_to_dt(Result,Tree0), % dt.pl
+    alpino_format_syntax:result_to_frames(Result,Frames,_),
+    alpino_format_syntax:frames_to_postags(Frames,Result,SysTags),
+    replace_tags(Tree0,Tree,SysTags).
 
-graphic_label(dt,tree(r(Rel,Label),_,_),Rest) :-
-    graphic_label_rest(Label,Rel,Rest).
-
-graphic_label(dt,sense(W),W).
-
-graphic_daughter(dt,1,tree(r(_,l(Frame,_,Word0/_)),_,[]),sense(Sense)) :-
-    root_of_pair(Word0,Word),
-    alpino_treebank:frame2sense(Word,Frame,Sense).
-graphic_daughter(dt,1,tree(r(_,i(_,l(Frame,_,Word0/_))),_,[]),sense(Sense)) :-
-    root_of_pair(Word0,Word),
-    alpino_treebank:frame2sense(Word,Frame,Sense).
 graphic_daughter(dt,N,tree(_,_,Ds),D) :-
     nth(N,Ds,D).
+graphic_daughter(dt,1,tree(r(_,l(Frame,Lemma)),_,[]),l(Frame,Lemma)).
+graphic_daughter(dt,1,tree(r(_,i(_,l(Frame,Lemma))),_,[]),l(Frame,Lemma)).
+
+graphic_daughter(dt,1,l(_,Lemma),l(Lemma)).
+
+    
+graphic_label(dt,tree(r(Rel,Label),_,_),Rest) :-
+    graphic_label_rest_dt(Label,Rel,Rest).
+
+graphic_label(dt,l(Frame,_),Frame).
+graphic_label(dt,l(Lemma),Lemma).
+
+graphic_label_rest_dt(i(X),Rel,Label) :-
+    short_pair(Rel,X,Label).
+graphic_label_rest_dt(p(X),Rel,L) :- extract_cat(X,Y), short_pair(Rel,Y,L).
+graphic_label_rest_dt(l(_,_),Rel,Rel).
+graphic_label_rest_dt(i(I,p(X)),Rel,L) :- extract_cat(X,Y), short_pair(Rel,I:Y,L).
+graphic_label_rest_dt(i(I,l(_,_)),Rel,L) :- short_pair(Rel,I,L).
 
 
-%% FORMAT DTP, DT with positions
-graphic_path(dtp,Result,Tree) :-
-    result_to_dt(Result,Tree).  % dt.pl
+%%%graphic_path(dt,Result,Tree) :-
+%%%    result_to_dt(Result,Tree).  % dt.pl
 
-graphic_label(dtp,tree(r(Rel,Label),_,_),Rest) :-
-    graphic_label_rest(Label,Rel,Rest).
 
-graphic_label(dtp,word(A-B-W0/_L),A-B-W) :-
-    root_of_pair(W0,W).
-graphic_label(dtp,position([P0,_]),P0).
+%%%graphic_label(dt,sense(W),W).
 
-graphic_daughter(dtp,1,tree(r(_,l(A,B,Word)),_,[]),word(A-B-Word)).
-graphic_daughter(dtp,1,tree(r(_,i(_,l(A,B,Word))),_,[]),word(A-B-Word)).
-graphic_daughter(dtp,N,tree(_,_,Ds),D) :-
-    nth(N,Ds,D).
-graphic_daughter(dtp,1,word(_-_-_/L),position(L)).
 
-%% FORMAT USER(DT)  DT WITH NICE BOXES
+
+%% FORMAT USER(DT)  DT WITH NICE BOXES default format for graphical interface
+graphic_path(user(dt),Result,_) :-
+    var(Result), !.
 graphic_path(user(dt),Result,Tree) :-
-    result_to_dt(Result,Tree).  % dt.pl
+    Result = already_canonical_dt(Tree0),
+    !,
+    promote_tags(Tree0,Tree).
+graphic_path(user(dt),Result,Tree) :-
+    result_to_dt(Result,Tree0), % dt.pl
+    alpino_format_syntax:result_to_frames(Result,Frames,_),
+    alpino_format_syntax:frames_to_postags(Frames,Result,SysTags),
+    replace_tags(Tree0,Tree,SysTags).
 
 graphic_daughter(user(dt),N,tree(_,_,Ds),D) :-
     nth(N,Ds,D).
@@ -287,6 +303,11 @@ clig_dt_node(l(Frame,_Cat,Word0/_),_Rel) -->
     { alpino_treebank:frame2sense(Word,Frame,Sense) },
     format_to_chars(" { stack { plain-text { ~w } } { plain-text { ~w }} }",
 		    [Pos,Sense]).
+
+clig_dt_node(l(Tag,Word0),_Rel) -->
+    { root_of_pair(Word0,Word) },
+    format_to_chars(" { stack { plain-text { ~w } } { plain-text { ~w }} }",
+		    [Tag,Word]).
 
 %% OUTPUT_tree_user_node
 %% DOT
@@ -410,3 +431,35 @@ root_of_pair(Root,Root).
 show_node(adt,Tree,Medium) :-
     show(fs,Medium,[value(Tree)]).
 
+replace_tags(tree(r(REL,CAT),Inf,Ds0), tree(r(REL,CAT2),Inf, Ds), Tags) :-
+    replace_tags_cat(CAT,CAT2,Tags),
+    replace_tags_ds(Ds0,Ds,Tags).
+
+replace_tags_cat(i(X),i(X),_).
+replace_tags_cat(p(X),p(X),_).
+replace_tags_cat(i(I,C),i(I,C2),Tags) :-
+    replace_tags_cat(C,C2,Tags).
+replace_tags_cat(l(_,W,_/[P0,P]), l(Tag,L), Tags) :-
+    lists:member(cgn_postag(P0,P,L0,Tag), Tags),
+    alpino_treebank:get_lemma_or_word(L0,L,W).
+
+replace_tags_ds([],[],_).
+replace_tags_ds([H0|T0],[H|T],Tags) :-
+    replace_tags(H0,H,Tags),
+    replace_tags_ds(T0,T,Tags).
+
+promote_tags(tree(r(REL,CAT),Inf,Ds0), tree(r(REL,CAT2),Inf, Ds)) :-
+    promote_tags_cat(CAT,CAT2),
+    promote_tags_ds(Ds0,Ds).
+
+promote_tags_cat(i(X),i(X)).
+promote_tags_cat(p(X),p(X)).
+promote_tags_cat(i(I,C),i(I,C2)) :-
+    promote_tags_cat(C,C2).
+promote_tags_cat(l(read_from_treebank(_,L,Tag),_,_), l(Tag,L)).
+promote_tags_cat(l(read_from_treebank(_,_,L,Tag),_,_), l(Tag,L)).
+
+promote_tags_ds([],[]).
+promote_tags_ds([H0|T0],[H|T]) :-
+    promote_tags(H0,H),
+    promote_tags_ds(T0,T).
