@@ -36,7 +36,7 @@ clean:
 	rm -f *.tcounts *.weights *.iweights *.features *.zest 
 
 realclean:
-	rm -f *.tcounts *.weights *.iweights *.features *.zest *.gz *.counts *.test
+	rm -f *.tcounts *.weights *.iweights *.features *.zest *.gz *.counts *.test nohup.out
 
 ### TESTING and LOGGING
 
