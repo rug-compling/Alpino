@@ -6,7 +6,7 @@ endif
 
 default:
 
-all: prepare_enhanced_all enhanced_all dact poslemma mwu trees_doc sents
+all: prepare_enhanced_all enhanced_all dact poslemma mwu trees_doc sents sentspl
 
 DIRECTORIES=cgn_exs eans extra g_suite h_suite i_suite leuven_yellow_pages lot_test_suite1 \
              ntv-suite qa wpspel novelsample_corrected cdb
@@ -114,3 +114,5 @@ sents: $(DIRECTORIES:%=../SENTS/%.sents)
              $(ALPINO_HOME)/TreebankTools/stylesheets/dt2sent_with_sentid.xsl |\
              sed -e 's/\[/\\\[/g' \
                  -e 's/\]/\\\]/g') > $@
+sentspl:
+	(  cd ../SENTS ; make )
