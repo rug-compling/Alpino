@@ -39,10 +39,15 @@ keyprefix=""
              !/^(%|--)/ { printf("my_sentence($(keyprefix)%d,[%c%s%c]).\n",N,39,$$0,39); N++;}' | $(HDRUG) -notk -l $(ALPINO_HOME)/Suites/echo >>$*.pl
 	(echo; echo "expand_sentences."; echo) >>$*.pl
 
+qa_application_type_text=":- hdrug_util:set_flag(application_type,qa)."
+
+
 ## assume there already is a key (after |-symbol):
 ## this is robust against multiple occurrences of |
 %.pl : %.named_sents
 	echo ":- module(alpino_suite,[ sentence/2 ])." > $*.pl
+	echo >> $*.pl
+	echo $($*_application_type_text) >> $*.pl
 	echo >> $*.pl
 	cat $< |\
 	sed -e "s/| /|/" \
