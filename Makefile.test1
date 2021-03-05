@@ -51,7 +51,6 @@ cdb_part_test1_options= -flag treebank ../Treebank/cdb\
                         -flag syntax_features cdb/pc_weights\
                         cdb_part=$(part)
 extra_test1_options=-flag syntax_features cdb/px_weights
-wpspel_test1_options=-flag treebank ../Treebank/wpspel
 
 ## ensure it enters Treebank/PPH through the official route, so the
 ## links will work on HPC... :-(
@@ -332,7 +331,9 @@ hpctests:
 
 tests: ts ds cgns t24
 
-ts: t0 t1 t2 t3 t4 t5 t6 t7 t8 t9 t15 t16 t17 t18 t19 t20 t21 t22 t23 t25 
+ts: cdbt t15 t16 t17 t18 t19 t20 t21 t22 t23 t25 
+
+cdbt: t0 t1 t2 t3 t4 t5 t6 t7 t8 t9 
 
 ds: t10 t11 t12 t13 t14
 
@@ -388,6 +389,8 @@ t24:
 	make test1 suite=lassy
 t25:
 	make test1 suite=novelsample_corrected
+t26:
+	make test1 suite=eans
 
 
 jobsuites=$(sort $(dir $(wildcard */job*)))
