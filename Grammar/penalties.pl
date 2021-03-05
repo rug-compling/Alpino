@@ -444,12 +444,12 @@ get_feature_weight(weight(Weight),W) :-
 get_feature_weight(Feature-Count,Weight) :-
     !,
     try_penalty_weight(Feature,S1),
-    try_additional_weight(Feature,S2),
-    Weight is (Count*S1)+(Count*S2).
+%    try_additional_weight(Feature,S2),
+    Weight is (Count*S1). % +(Count*S2).
 get_feature_weight(Feature,Weight) :-
     try_penalty_weight(Feature,S1),
-    try_additional_weight(Feature,S2),
-    Weight is S1+S2.
+%    try_additional_weight(Feature,S2),
+    Weight is S1.  %+S2.
 
 try_penalty_weight(P,S1) :-
     (   alpino_disambiguation_weights:feature_weight(P,S)
@@ -457,11 +457,11 @@ try_penalty_weight(P,S1) :-
     ;   S1=0.0
     ).
 
-try_additional_weight(P,S1) :-
-    (   additional_weight(P,S)
-    ->  S=S1
-    ;   S1=0.0
-    ).
+% try_additional_weight(P,S1) :-
+%     (   additional_weight(P,S)
+%     ->  S=S1
+%     ;   S1=0.0
+%     ).
 
 %% additional weights are set by hand, to prefer readings which cannot be
 %% distinguished from competing readings by mapping to the treebank; for
@@ -471,36 +471,39 @@ try_additional_weight(P,S1) :-
 
 %% only punish "bad" readings
 
-additional_weight(f2(Word,Pos),Val) :-
-    additional_weight_f2(Word,Pos,Val).
+%%additional_weight(f2(Word,Pos),Val) :-
+%%    additional_weight_f2(Word,Pos,Val).
 
-additional_weight(subjunctive(ga),0.000000001).
+%% is now learned because postag is taken into account
+%%additional_weight(subjunctive(ga),0.000000001).
 
-additional_weight(stem_best(best),                0.4).   % prefer goed over best
-additional_weight(stem_best(v_root(las,lassen)),  0.1).   % prefer lezen over lassen
-additional_weight(stem_best(v_root(zaag,zagen)),  0.1).   % prefer zien over zagen
-additional_weight(stem_best(v_root(eet,eten)),    0.1).   % prefer eten/noun over eten/v_noun
+%% should now be learned because lemma is taken into account
+%additional_weight(stem_best(best),                0.4).   % prefer goed over best
+%additional_weight(stem_best(v_root(las,lassen)),  0.1).   % prefer lezen over lassen
+%additional_weight(stem_best(v_root(zaag,zagen)),  0.1).   % prefer zien over zagen
+%additional_weight(stem_best(v_root(eet,eten)),    0.1).   % prefer eten/noun over eten/v_noun
 
-additional_weight(bal(bal,het),0.2).
-additional_weight(bal(blik,het),0.2).
-additional_weight(bal(broek,het),0.2).
-additional_weight(bal(kamp,de),0.2).
+%% could be learned, but typically are not
+%%additional_weight(bal(bal,het),0.2).
+%%additional_weight(bal(blik,het),0.2).
+%%additional_weight(bal(broek,het),0.2).
+%%additional_weight(bal(kamp,de),0.2).
 
-additional_weight(van_tot(van,tot),-1).
+%% is now learned
+%%additional_weight(van_tot(van,tot),-1).
 
+%% is now learned
 %% prefer [[eerder gevonden] oplossingen] over [eerder gevonden oplossingen]
-additional_weight(adjective_er_plural,1).
+%%additional_weight(adjective_er_plural,1).
 
-%% dislike hij heeft [eerder Che] ondervraagd
-additional_weight(eerder_n,1).
-
-additional_weight_f2(hen,noun,0.2).
-additional_weight_f2(haar,noun,0.2).
-additional_weight_f2(zij,noun,0.2).
-additional_weight_f2(u,noun,0.2).
-additional_weight_f2(kies,noun,0.2).
-additional_weight_f2(armen,noun,1).
-additional_weight_f2(rijken,noun,1).
+%% should be learned
+%%additional_weight_f2(hen,noun,0.2).
+%%additional_weight_f2(haar,noun,0.2).
+%%additional_weight_f2(zij,noun,0.2).
+%%additional_weight_f2(u,noun,0.2).
+%%additional_weight_f2(kies,noun,0.2).
+%%additional_weight_f2(armen,noun,1).
+%%additional_weight_f2(rijken,noun,1).
 
 %% TODO:
 %% prefer 'door-PP' attach to embedded verb in passive
@@ -637,16 +640,6 @@ syntactic_penalty_nl(max_xp(sv1),Cat,_,q(yesno)) :-
 syntactic_penalty_nl(a_pp_comp_a,_,[tree(PP,_,_,_),tree(Adj,_,_,_)],meebezig(Prep,Stem)) :-
     alpino_data:prep(PP,Prep), nonvar(Prep),
     alpino_data:hstem(Adj,Stem), nonvar(Stem).
-
-syntactic_penalty_nl(n_adj_n,N,[Tree,_],eerder_n) :-
-    syntactic_penalty_nl(n_adj_n,N,[Tree,_],eerder_n(_)).    
-
-syntactic_penalty_nl(n_adj_n,N,[Tree,_],eerder_n(Lex)) :-
-    \+ alpino_data:yes_det(N),
-    alpino_data:plural_noun(Plural),
-    \+ N = Plural,   % is taken care of by adjective_er_plural penalty
-    rulename_lex_postag(Tree,Lex,adjective(er(adv))).
-    
 
 nth_syntactic_penalty(Id,N,D,r2(Id,N,DId)) :-
     rulename(D,DId).

@@ -7176,6 +7176,10 @@ grammar_rule(preda_adv_np_dp,MAX,[ADV,XP]) :-
     XP:subn => ~sub_indef_verb & ~sub_det,
     dp_dp_structure(ADV,XP,MAX).
 
+%% fijn dat hij komt
+%% this rule is also used for
+%% (.. en) gelukkig dat hij was!
+%% although perhaps then there ought to be co-indexing of gelukkig with embedded predc
 pred_sbar_dp_structure(MAX,ADJ,SBAR) :-
     MAX => max,
     MAX:max_type => t_xp,

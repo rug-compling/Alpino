@@ -292,3 +292,62 @@ px.test:test-score   91.30  91.00
 px.test:phi-score    82.26  80.81
 px.test:lemma/pos-score   96.46
 END RUN
+START RUN
+total result after 7 tests
+first 74.08
+best  93.88
+test  90.14
+rate  81.13
+p/s-first 77.31
+p/s-best  95.42
+p/s-test  91.87
+p/s-rate  80.42
+   5559 pZ.weights
+   7740 pc.weights
+   6968 pd.weights
+   6826 pi.weights
+   6874 pp.weights
+   7904 pu.weights
+   7498 pw.weights
+   6934 px.weights
+  56303 total
+out of memory 0
+timed out 0
+sentences 5743
+1021434 parses in total
+pc.test:first-score  73.44  76.32
+pc.test:best-score   93.17  95.38
+pc.test:test-score   89.05  91.48
+pc.test:phi-score    79.16  79.56
+pc.test:lemma/pos-score   96.05
+pd.test:first-score  73.61  75.84
+pd.test:best-score   94.10  95.20
+pd.test:test-score   90.16  91.46
+pd.test:phi-score    80.77  80.70
+pd.test:lemma/pos-score   95.76
+pi.test:first-score  73.48  75.89
+pi.test:best-score   93.66  95.54
+pi.test:test-score   90.12  92.18
+pi.test:phi-score    82.45  82.92
+pi.test:lemma/pos-score   97.49
+pp.test:first-score  75.50  78.24
+pp.test:best-score   95.63  96.92
+pp.test:test-score   92.08  93.39
+pp.test:phi-score    82.34  81.11
+pp.test:lemma/pos-score   97.68
+pu.test:first-score  74.80  76.96
+pu.test:best-score   94.96  95.79
+pu.test:test-score   91.48  92.36
+pu.test:phi-score    82.74  81.78
+pu.test:lemma/pos-score   97.50
+pw.test:first-score  73.02  79.91
+pw.test:best-score   92.08  94.59
+pw.test:test-score   87.94  90.93
+pw.test:phi-score    78.30  75.06
+pw.test:lemma/pos-score   94.83
+px.test:first-score  78.26  78.61
+px.test:best-score   94.08  93.92
+px.test:test-score   91.24  90.98
+px.test:phi-score    82.03  80.79
+px.test:lemma/pos-score   96.59
+END RUN

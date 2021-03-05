@@ -40,7 +40,7 @@ run:
 
 
 realclean:
-	rm -f *gz d_part*.log p_part*.log p?.log p??.log
+	rm -f *gz d_part*.log p_part*.log p?.log p??.log nohup.out
 
 po.gz:
 	$(ALPINO) -flag suite ../../../Suites/ovistrain -flag treebank ../../../Treebank/ovis 2>po.log | gzip > po.gz
