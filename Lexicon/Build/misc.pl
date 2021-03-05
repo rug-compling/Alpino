@@ -4271,17 +4271,17 @@ with_dt([en,met,succes],
 with_dt([met,Hun,Tweeen],
 	adjective(pred(padv)),
 	dt(pp,[hd=l(met,preposition(met,[]),0,1),
-	       obj1=dt(np,[det=l(HunL,determiner(pron),detp,1,2),
+	       obj1=dt(np,[det=l(Hun,determiner(pron),detp,1,2),
 			   hd=l(Lemma,noun(both,both,pl),2,3)])])) :-
 
-    zijn(Hun,HunL),
+    zijn(Hun),
     wij_allebei(Tweeen,Lemma).
 
-zijn(ons,ons).
-zijn(jullie,jullie).
-zijn(hun,hun).
-zijn(zijn,zijn).
-zijn('z\'n',zijn).
+zijn(ons).
+zijn(jullie).
+zijn(hun).
+zijn(zijn).
+zijn('z\'n').
 
 m('het eerst',     adjective(het_st(adv)),   [Het,eerst]) :- het(Het).
 m('het eerst',     adjective(het_st(oadv)), [Het,eerste]) :- het(Het).
@@ -5124,9 +5124,9 @@ m(hoeveelste,       wh_number(rang), hoeveelste).
 with_dt([met,Hun,hoevelen],
 	wh_adjective(padv),
 	dt(pp,[hd=l(met,preposition(met,[]),0,1),
-	       obj1=dt(np,[det=l(HunL,determiner(pron),detp,1,2),
+	       obj1=dt(np,[det=l(Hun,determiner(pron),detp,1,2),
 			   hd=l(hoeveel,noun(both,both,pl),2,3)])])) :-
-    zijn(Hun,HunL).
+    zijn(Hun).
 
 
 m(hoever,            wh_adverb,hoever).

@@ -737,6 +737,7 @@ number_both(['Nederlanden']).
 number_both(['Pinkstergemeenten']).
 number_both(['PS']).  % provinciale staten?
 number_both(['Pyreneeen']).
+number_both(['Pyreneeën']).
 number_both(['Staten','Generaal']).
 number_both(['Staten-Generaal']).
 number_both(['Talibaan']).
@@ -746,6 +747,7 @@ number_both(['Tories']).
 number_both(['Trappers']).
 number_both(['Twin','Towers']).
 number_both(['VN']).
+number_both(['Vogezen']).
 number_both(['VS']).
 number_both(['Verenigde','Staten','van','Amerika']).
 
@@ -1330,6 +1332,7 @@ check_already_het_noun(Word) :-
 	   )
     ).
 
+exception_het_noun(eten).
 exception_het_noun(wezen).
 exception_het_noun(optreden).
 exception_het_noun(schrijven).

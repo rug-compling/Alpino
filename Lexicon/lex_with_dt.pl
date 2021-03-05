@@ -917,6 +917,7 @@ with_dt_all(achten,[jullie]).
 with_dt_all(achten,[jullie,met]).
 with_dt_all(achten,[met,ons]).
 with_dt_all(achten,[met,zijn]).
+with_dt_all(achten,[met,'z\'n']).
 with_dt_all(achten,[ons]).
 with_dt_all(acht,[en,tien,tussen]).
 with_dt_all(acht,[en,tussen,twaalf]).
@@ -978,6 +979,7 @@ with_dt_all(allebei,[jullie]).
 with_dt_all(allebei,[jullie,met]).
 with_dt_all(allebei,[met,ons]).
 with_dt_all(allebei,[met,zijn]).
+with_dt_all(allebei,[met,'z\'n']).
 with_dt_all(allebei,[of]).
 with_dt_all(allebei,[ons]).
 with_dt_all(allebei,[u]).
@@ -1002,6 +1004,7 @@ with_dt_all(allemaal,[lang,niet]).
 with_dt_all(allemaal,[lief]).
 with_dt_all(allemaal,[met,ons]).
 with_dt_all(allemaal,[met,zijn]).
+with_dt_all(allemaal,[met,'z\'n']).
 with_dt_all(allemaal,[niet]).
 with_dt_all(allemaal,[ons]).
 with_dt_all(allemaal,[u]).
@@ -1021,6 +1024,7 @@ with_dt_all(allicht,[vandaar]).
 with_dt_all(al,[maar,te]).
 with_dt_all(al,[met,ons]).
 with_dt_all(al,[met,zijn]).
+with_dt_all(al,[met,'z\'n']).
 with_dt_all(al,[niet]).
 with_dt_all(al,[ons]).
 with_dt_all(al,[ook]).
@@ -1095,6 +1099,7 @@ with_dt_all(beide,[jullie]).
 with_dt_all(beide,[jullie,met]).
 with_dt_all(beide,[met,ons]).
 with_dt_all(beide,[met,zijn]).
+with_dt_all(beide,[met,'z\'n']).
 with_dt_all(beide,[ons]).
 with_dt_all(beide,[u]).
 with_dt_all(beide,[wij]).
@@ -1106,6 +1111,7 @@ with_dt_all(beidjes,[jullie]).
 with_dt_all(beidjes,[jullie,met]).
 with_dt_all(beidjes,[met,ons]).
 with_dt_all(beidjes,[met,zijn]).
+with_dt_all(beidjes,[met,'z\'n']).
 with_dt_all(beidjes,[ons]).
 with_dt_all(beidjes,[u]).
 with_dt_all(beidjes,[wij]).
@@ -1420,6 +1426,8 @@ with_dt_all(drieen,[met,ons]).
 with_dt_all(drieën,[met,ons]).
 with_dt_all(drieen,[met,zijn]).
 with_dt_all(drieën,[met,zijn]).
+with_dt_all(drieen,[met,'z\'n']).
+with_dt_all(drieën,[met,'z\'n']).
 with_dt_all(drieen,[ons]).
 with_dt_all(drieën,[ons]).
 with_dt_all(drie,[en,tien,tussen]).
@@ -1441,6 +1449,7 @@ with_dt_all(drietjes,[jullie]).
 with_dt_all(drietjes,[jullie,met]).
 with_dt_all(drietjes,[met,ons]).
 with_dt_all(drietjes,[met,zijn]).
+with_dt_all(drietjes,[met,'z\'n']).
 with_dt_all(drietjes,[ons]).
 with_dt_all(drietjes,[u]).
 with_dt_all(drietjes,[wij]).
@@ -1716,6 +1725,7 @@ with_dt_all(hoeveel,[ik,niet,weet]).
 with_dt_all(hoeveel,[jullie,met]).
 with_dt_all(hoeveel,[met,ons]).
 with_dt_all(hoeveel,[met,zijn]).
+with_dt_all(hoeveel,[met,'z\'n']).
 with_dt_all(hoever,[in]).
 with_dt_all(hoeverre,[in]).
 with_dt_all(hoever,[tot]).
@@ -1887,6 +1897,7 @@ with_dt_all(men,[zie]).
 with_dt_all(meteen,[vrijwel]).
 with_dt_all(met,[negenen,ons]).
 with_dt_all(met,[negenen,zijn]).
+with_dt_all(met,[negenen,'z\'n']).
 with_dt_all(met,[ons,tienen]).
 with_dt_all(met,[ons,twee]).
 with_dt_all(met,[ons,tweeen]).
@@ -1900,19 +1911,31 @@ with_dt_all(met,[ons,zesjes]).
 with_dt_all(met,[ons,zessen]).
 with_dt_all(met,[ons,zevenen]).
 with_dt_all(met,[tienen,zijn]).
+with_dt_all(met,[tienen,'z\'n']).
 with_dt_all(met,[toen]).
 with_dt_all(met,[tweeen,zijn]).
 with_dt_all(met,[tweeën,zijn]).
+with_dt_all(met,[tweeen,'z\'n']).
+with_dt_all(met,[tweeën,'z\'n']).
 with_dt_all(met,[tweetjes,zijn]).
+with_dt_all(met,[tweetjes,'z\'n']).
 with_dt_all(met,[twee,zijn]).
+with_dt_all(met,[twee,'z\'n']).
 with_dt_all(met,[vieren,zijn]).
+with_dt_all(met,[vieren,'z\'n']).
 with_dt_all(met,[viertjes,zijn]).
+with_dt_all(met,[viertjes,'z\'n']).
 with_dt_all(met,[vijfjes,zijn]).
+with_dt_all(met,[vijfjes,'z\'n']).
 with_dt_all(met,[vijven,zijn]).
+with_dt_all(met,[vijven,'z\'n']).
 with_dt_all(met,[vroeger]).
 with_dt_all(met,[zesjes,zijn]).
 with_dt_all(met,[zessen,zijn]).
 with_dt_all(met,[zevenen,zijn]).
+with_dt_all(met,['z\'n',zesjes]).
+with_dt_all(met,['z\'n',zessen]).
+with_dt_all(met,['z\'n',zevenen]).
 with_dt_all(mijnen,[nadele,te]).
 with_dt_all(mijn,[moeder]).
 with_dt_all(mijn,[oma]).
@@ -3082,6 +3105,7 @@ with_dt_root(zie).
 with_dt_root(zij).
 with_dt_root(zijn).
 with_dt_root(zijnen).
+with_dt_root('z\'n').
 with_dt_root(zo).
 with_dt_root(zodanig).
 with_dt_root(zogauw).
