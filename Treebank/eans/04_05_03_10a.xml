@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+      <node begin="1" end="2" id="3" infl="sg3" lemma="weg_gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga_weg" sc="part_intransitive(weg)" stype="declarative" tense="present" word="gaat" wvorm="pv"/>
+      <node begin="2" end="3" id="4" lemma="nooit" pos="adv" postag="BW()" pt="bw" rel="mod" root="nooit" special="tmp" word="nooit"/>
+      <node begin="3" end="4" id="5" lemma="weg" pos="part" postag="BW()" pt="bw" rel="svp" root="weg" word="weg"/>
+      <node begin="4" cat="pp" end="6" id="6" rel="mod">
+        <node begin="4" end="5" id="7" lemma="zonder" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="zonder" vztype="init" word="zonder"/>
+        <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="8" lemma="wandelstok" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="wandelstok" word="wandelstok"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Hij gaat nooit weg zonder wandelstok .</sentence>
+</alpino_ds>

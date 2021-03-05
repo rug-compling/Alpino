@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" special="dubb_punt" word=":"/>
+    <node begin="0" cat="du" end="14" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="A" pos="tag" postag="SPEC(symb)" pt="spec" rel="tag" root="A" spectype="symb" word="A"/>
+      <node begin="2" cat="whq" end="14" id="4" rel="nucl">
+        <node begin="2" end="3" getal="getal" id="5" index="1" lemma="waar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(vb,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="whd" root="waar" special="er_loc" status="vol" vwtype="vb" wh="ywh" word="Waar"/>
+        <node begin="2" cat="sv1" end="14" id="6" rel="body">
+          <node begin="3" end="4" id="7" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="aux_psp_zijn" stype="whquestion" tense="present" word="is" wvorm="pv"/>
+          <node begin="4" cat="np" end="12" id="8" index="2" rel="su">
+            <node begin="4" buiging="zonder" end="5" id="9" infl="het" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" wh="nwh" word="dat"/>
+            <node begin="5" end="6" gen="het" genus="onz" getal="ev" graad="basis" id="10" lemma="kind" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="kind" word="kind"/>
+            <node begin="6" cat="rel" end="12" id="11" rel="mod">
+              <node begin="6" case="no_obl" end="7" gen="het" getal="ev" id="12" index="3" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" rnum="sg" root="dat" status="vol" vwtype="betr" wh="rel" word="dat"/>
+              <node begin="6" cat="ssub" end="12" id="13" rel="body">
+                <node begin="6" end="7" id="14" index="3" rel="su"/>
+                <node begin="7" end="8" getal="getal" id="15" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="daar" special="er_loc" status="vol" vwtype="aanw" word="daar"/>
+                <node begin="8" cat="pp" end="11" id="16" rel="ld">
+                  <node begin="8" end="9" id="17" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                  <node begin="9" cat="np" end="11" id="18" rel="obj1">
+                    <node begin="9" end="10" id="19" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="10" end="11" gen="de" genus="zijd" getal="ev" graad="basis" id="20" lemma="stoep" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="stoep" word="stoep"/>
+                  </node>
+                </node>
+                <node begin="11" end="12" id="21" infl="sg" lemma="zitten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zit" sc="ld_pp" tense="past" word="zat" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+          <node begin="2" cat="ppart" end="14" id="22" rel="vc">
+            <node begin="2" end="3" id="23" index="1" rel="ld"/>
+            <node begin="4" end="12" id="24" index="2" rel="su"/>
+            <node begin="12" end="13" id="25" lemma="ineens" pos="adv" postag="BW()" pt="bw" rel="mod" root="ineens" word="ineens"/>
+            <node begin="13" buiging="zonder" end="14" id="26" infl="psp" lemma="blijven" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="blijf" sc="ld_adv" word="gebleven" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="27" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>A : Waar is dat kind dat daar op de stoep zat ineens gebleven ?</sentence>
+</alpino_ds>

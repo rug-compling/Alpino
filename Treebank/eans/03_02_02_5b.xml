@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" special="er" status="red" vwtype="aanw" word="Er"/>
+      <node begin="1" end="2" id="3" infl="sg" lemma="liggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="lig" sc="ld_pp" stype="declarative" tense="past" word="lag" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="4" rel="su">
+        <node aform="base" begin="2" buiging="zonder" end="3" graad="basis" id="5" infl="no_e" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="adj" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="det" root="veel" vform="adj" vwtype="onbep" word="veel"/>
+        <node begin="3" end="4" gen="het" genus="onz" getal="ev" graad="basis" id="6" lemma="zand" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="zand" word="zand"/>
+      </node>
+      <node begin="4" cat="pp" end="7" id="7" rel="ld">
+        <node begin="4" end="5" id="8" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="5" cat="np" end="7" id="9" rel="obj1">
+          <node begin="5" end="6" id="10" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lemma="kamer" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="kamer" word="kamer"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Er lag veel zand in de kamer .</sentence>
+</alpino_ds>

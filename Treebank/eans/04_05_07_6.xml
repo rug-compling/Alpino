@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" index="1" lemma="René" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="René" word="René"/>
+      <node begin="1" end="2" id="3" infl="modal_not_u" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" sc="modifier(aux(inf))" stype="declarative" tense="present" word="wil" wvorm="pv"/>
+      <node begin="0" cat="inf" end="8" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="6" buiging="zonder" end="7" id="6" infl="inf(no_e)" lemma="gaan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ga" sc="aux(inf)" word="gaan" wvorm="inf"/>
+        <node begin="0" cat="inf" end="8" id="7" rel="vc">
+          <node begin="0" end="1" id="8" index="1" rel="su"/>
+          <node begin="2" cat="np" end="4" id="9" rel="obj1">
+            <node begin="2" buiging="zonder" end="3" id="10" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="die"/>
+            <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lemma="schuur" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="schuur" word="schuur"/>
+          </node>
+          <node begin="4" cat="cp" end="6" id="12" rel="predc">
+            <node begin="4" conjtype="onder" end="5" id="13" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="als"/>
+            <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="14" lemma="moskee" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" rnum="sg" root="moskee" word="moskee"/>
+          </node>
+          <node begin="7" buiging="zonder" end="8" id="15" infl="inf" lemma="gebruiken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="gebruik" sc="als_pred_np" word="gebruiken" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>René wil die schuur als moskee gaan gebruiken .</sentence>
+</alpino_ds>

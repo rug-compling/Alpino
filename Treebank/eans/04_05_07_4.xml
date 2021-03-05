@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="cp" end="2" id="2" rel="predm">
+        <node begin="0" conjtype="onder" end="1" id="3" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="Als"/>
+        <node begin="1" end="2" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="president" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="body" rnum="sg" root="president" word="president"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="sg" lemma="zullen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zal" sc="aux(inf)" stype="declarative" tense="past" word="zou" wvorm="pv"/>
+      <node begin="3" case="nom" def="def" end="4" gen="de" genus="masc" getal="ev" id="6" index="1" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+      <node begin="3" cat="inf" end="8" id="7" rel="vc">
+        <node begin="3" end="4" id="8" index="1" rel="su"/>
+        <node begin="6" buiging="zonder" end="7" id="9" infl="inf" lemma="mogen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="mag" sc="modifier(aux(inf))" word="mogen" wvorm="inf"/>
+        <node begin="3" cat="inf" end="8" id="10" rel="vc">
+          <node begin="3" end="4" id="11" index="1" rel="su"/>
+          <node begin="4" end="5" getal="ev" id="12" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
+          <node begin="5" end="6" id="13" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
+          <node begin="7" buiging="zonder" end="8" id="14" infl="inf" lemma="weten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="weet" sc="transitive" word="weten" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Als president zou hij dat toch mogen weten .</sentence>
+</alpino_ds>

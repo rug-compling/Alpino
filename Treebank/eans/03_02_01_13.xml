@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="sv1" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" infl="pl" lemma="zullen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zal" sc="aux(inf)" stype="ynquestion" tense="present" word="Zullen" wvorm="pv"/>
+      <node begin="1" case="nom" def="def" end="2" gen="de" getal="mv" id="3" index="1" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
+      <node begin="1" cat="inf" end="6" id="4" rel="vc">
+        <node begin="1" end="2" id="5" index="1" rel="su"/>
+        <node begin="2" cat="conj" end="5" id="6" rel="obj1">
+          <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="7" lemma="kip" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" rnum="sg" root="kip" word="kip"/>
+          <node begin="3" conjtype="neven" end="4" id="8" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+          <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="vis" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" rnum="sg" root="vis" word="vis"/>
+        </node>
+        <node begin="5" buiging="zonder" end="6" id="10" infl="inf" lemma="nemen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="neem" sc="transitive" word="nemen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Zullen we kip of vis nemen ?</sentence>
+</alpino_ds>
