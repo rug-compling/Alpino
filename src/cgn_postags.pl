@@ -240,14 +240,14 @@ history_tags(english_compound(normal),P0,P,Stem,_Surf,Frame,_Result) -->
 
 history_tags(normal(x_voor_x),P0,P,Stem,_,_,_) -->
     { atom(Stem),
-      alpino_util:split_atom(Stem," ",[S,voor,S]),
+      alpino_util:split_atom(Stem," ",[S,Voor,S]),
       guess_lex(S,Tag),
       P1 is P0 + 1,
       P2 is P1 + 1,
       P  is P2 + 1
     },
     [cgn_postag(P0,P1,S,Tag),
-     cgn_postag(P1,P2,voor,'VZ(init)'),
+     cgn_postag(P1,P2,Voor,'VZ(init)'),
      cgn_postag(P2,P, S,Tag)
     ].
 
@@ -735,6 +735,7 @@ exceptional_stem_tag(meest,nominalized_adjective,                   'VNW(onbep,g
 exceptional_stem_tag(meest,nominalized_super_adjective,             'VNW(onbep,grad,stan,nom,met-e,mv-n,sup)',veel).
 exceptional_stem_tag(veel,adjective(st(_)),                         'VNW(onbep,grad,stan,vrij,zonder,sup)',   veel).    % meest
 exceptional_stem_tag(weinig,adjective(st(_)),                       'VNW(onbep,grad,stan,vrij,zonder,sup)',   weinig).  % minst
+exceptional_stem_tag('z\'n',determiner(pron),                       'VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)',zijn).
 
 exceptional_stem_tag('College',_,        'N(soort,ev,basis,onz,stan)', college).
 exceptional_stem_tag('Comité',_,         'N(soort,ev,basis,onz,stan)', comité).
@@ -787,6 +788,7 @@ exceptional_stem_tag(ons,noun(both,count,sg),                 'VNW(bez,det,stan,
 exceptional_stem_tag(op,adjective(_),                         'VZ(fin)',op).
 exceptional_stem_tag(over,adjective(_),                       'VZ(fin)',over).
 exceptional_stem_tag(sprake,_,                                'N(soort,ev,basis,dat)',spraak).
+exceptional_stem_tag(stel,tag,                                'WW(pv,tgw,ev)',stellen).
 exceptional_stem_tag(streven,noun(het,mass,sg),               'WW(inf,nom,zonder,zonder-n)',streven).
 exceptional_stem_tag(tegen,adjective(_),                      'VZ(fin)',tegen).
 exceptional_stem_tag(toe,_,                                   'VZ(fin)',toe).
@@ -882,6 +884,7 @@ exceptional_stem_tag(deze,determiner(der),                          'VNW(aanw,de
 exceptional_stem_tag(deze,determiner(de,nwh,nmod,pro,yparg),        'VNW(aanw,det,stan,prenom,met-e,rest)').
 exceptional_stem_tag(die,determiner(pron),                          'VNW(aanw,pron,gen,vol,3m,ev)').
 exceptional_stem_tag(driemaal,noun(both,count,bare_meas),           'BW()').
+exceptional_stem_tag(drug,noun(de,mass,sg),                         'N(soort,mv,basis)').
 exceptional_stem_tag(duizend,noun(de,count,pl),                     'TW(hoofd,nom,mv-n,basis)').
 exceptional_stem_tag(dus,_,                                         'BW()').
 exceptional_stem_tag(echt,adverb,                                   'ADJ(vrij,basis,zonder)').
@@ -1069,6 +1072,7 @@ exceptional_stem_tag(x,tmp_noun(_,_,_),                             'SPEC(symb)'
 exceptional_stem_tag(zat,np_adjective,                              'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(zat,clause_np_adjective,                       'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(zat,postadj_adverb,                            'ADJ(vrij,basis,zonder)').
+exceptional_stem_tag(zeggen,tag,                                    'WW(pv,tgw,ev)').
 exceptional_stem_tag(zien,nominalized_adjective,                    'WW(od,nom,met-e,mv-n)').
 exceptional_stem_tag(zichzelf,_,                                    'VNW(refl,pron,obl,nadr,3,getal)').
 exceptional_stem_tag(zijn,determiner(pron),                         'VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)').
@@ -1965,6 +1969,7 @@ try_sgpl('Trekkies',pl).
 try_sgpl('USA',pl).
 try_sgpl('V.S.',pl).
 try_sgpl('VN',pl).
+try_sgpl('Vogezen',pl).
 try_sgpl('VS',pl).
 try_sgpl('VS.',pl).
 try_sgpl('Vikings',pl).
@@ -2852,6 +2857,8 @@ cgn_postag_l2(bepaald,bepalen,adjective(ge_no_e(adv)),'WW(vd,vrij,zonder)').
 
 cgn_postag_l2(Stem,Stem,Frame,Tag) :-
     stem_dependent_tag(Frame,Stem,Tag), !.
+cgn_postag_l2(Stem,Stem2,Frame,Tag) :-
+    exceptional_stem_tag(Stem,Frame,Tag,Stem2), !.
 cgn_postag_l2(Stem,Stem,Frame,Tag) :-
     exceptional_stem_tag(Stem,Frame,Tag), !.
 cgn_postag_l2(Stem,Stem,Frame,Tag) :-
