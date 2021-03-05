@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" cat="mwu" end="2" his="normal" his_1="names_dictionary" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="Albert" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Albert" spectype="deeleigen" word="Albert"/>
+        <node begin="1" end="2" id="4" lemma="II" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="II" spectype="deeleigen" word="II"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="3" cat="np" end="8" id="6" rel="predc">
+        <node begin="3" end="4" id="7" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node aform="base" begin="4" buiging="met-e" end="5" graad="basis" id="8" infl="e" lemma="huidig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="huidig" vform="adj" word="huidige"/>
+        <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="koning" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="koning" word="koning"/>
+        <node begin="6" cat="np" end="8" id="10" rel="mod">
+          <node begin="6" end="7" id="11" infl="der" lemma="de" lwtype="bep" naamval="gen" npagr="rest3" pos="det" postag="LID(bep,gen,rest3)" pt="lid" rel="det" root="de" word="der"/>
+          <node begin="7" end="8" gen="de" getal="mv" graad="basis" id="12" lemma="Belg" ntype="eigen" num="pl" pos="noun" postag="N(eigen,mv,basis)" pt="n" rel="hd" rnum="pl" root="Belg" word="Belgen"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Albert II is de huidige koning der Belgen .</sentence>
+</alpino_ds>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="conj" end="6" id="1" rel="--">
+      <node begin="0" cat="smain" end="3" id="2" rel="cnj">
+        <node begin="0" end="1" getal="ev" id="3" lemma="jij" naamval="nomin" pdtype="pron" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,vol,2v,ev)" pt="vnw" rel="su" root="jij" status="vol" vwtype="pers" word="Jij"/>
+        <node begin="1" end="2" id="4" index="1" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="stoel" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="predc" root="stoel" word="stoel"/>
+      </node>
+      <node begin="3" conjtype="neven" end="4" id="6" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+      <node begin="1" cat="smain" end="6" id="7" rel="cnj">
+        <node begin="1" end="2" id="8" index="1" rel="hd"/>
+        <node begin="4" end="5" getal="ev" id="9" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+        <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="10" lemma="tafel" naamval="stan" ntype="soort" pos="verb" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="predc" root="tafel" word="tafel"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Jij was stoel en ik tafel .</sentence>
+</alpino_ds>

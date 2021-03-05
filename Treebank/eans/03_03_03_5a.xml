@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="14" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="du" end="13" id="2" rel="--">
+      <node begin="0" cat="cp" end="7" id="3" rel="sat">
+        <node begin="0" conjtype="onder" end="1" id="4" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" sc="als" word="Als"/>
+        <node begin="1" cat="ssub" end="7" id="5" rel="body">
+          <node begin="1" cat="np" end="3" id="6" rel="su">
+            <node begin="1" end="2" id="7" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="8" lemma="tafel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="tafel" word="tafel"/>
+          </node>
+          <node begin="3" cat="mwu" end="6" his="normal" his_1="normal" id="9" rel="svp">
+            <node begin="3" end="4" id="10" lemma="in" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+            <node begin="4" end="5" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="fixed" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+            <node begin="5" end="6" genus="zijd" getal="ev" graad="basis" id="12" lemma="weg" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="weg" word="weg"/>
+          </node>
+          <node begin="6" end="7" id="13" infl="sg3" lemma="staan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="sta" sc="fixed([[in,de,weg]],no_passive)" tense="present" word="staat" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="8" cat="sv1" end="13" id="14" rel="nucl">
+        <node begin="8" end="9" id="15" infl="sg1" lemma="schuiven" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="schuif" sc="np_ld_dir" stype="imparative" tense="present" word="schuif" wvorm="pv"/>
+        <node begin="9" case="dat_acc" def="def" end="10" gen="de" genus="masc" getal="ev" id="16" lemma="hem" naamval="obl" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,obl,red,3,ev,masc)" pt="vnw" rel="obj1" rnum="sg" root="hem" special="wkpro" status="red" vwtype="pers" wh="nwh" word="&apos;m"/>
+        <node begin="10" end="11" id="17" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" special="tmp" word="dan"/>
+        <node begin="11" end="12" id="18" lemma="maar" pos="adv" postag="BW()" pt="bw" rel="mod" root="maar" word="maar"/>
+        <node begin="12" end="13" id="19" lemma="opzij" pos="adv" postag="BW()" pt="bw" rel="ld" root="opzij" special="dir" word="opzij"/>
+      </node>
+    </node>
+    <node begin="13" end="14" id="20" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Als de tafel in de weg staat , schuif &apos;m dan maar opzij .</sentence>
+</alpino_ds>

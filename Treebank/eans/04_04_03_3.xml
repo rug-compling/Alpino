@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" special="er" status="red" vwtype="aanw" word="Er"/>
+      <node begin="1" end="2" id="3" infl="pl" lemma="komen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="kom" sc="ld_pp" stype="declarative" tense="present" word="komen" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="4" rel="mod">
+        <node begin="2" buiging="met-e" end="3" id="5" infl="elke" lemma="elk" naamval="stan" npagr="evz" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,evz)" pt="vnw" rel="det" root="elk" vwtype="onbep" wh="nwh" word="elke"/>
+        <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="6" lemma="dag" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="dag" special="tmp" word="dag"/>
+      </node>
+      <node begin="4" cat="np" end="9" id="7" rel="su">
+        <node begin="4" cat="conj" end="8" id="8" rel="det">
+          <node begin="4" cat="detp" end="6" id="9" rel="cnj">
+            <node begin="4" buiging="zonder" end="5" id="10" index="1" infl="pl_indef" lemma="zo&apos;n" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,agr)" pt="vnw" rel="mod" root="zo&apos;n" special="pre_num_adv" vwtype="aanw" word="zo&apos;n"/>
+            <node begin="5" end="6" id="11" infl="pl_num" lemma="drie" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="drie" special="hoofd" word="drie"/>
+          </node>
+          <node begin="6" conjtype="neven" end="7" id="12" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+          <node begin="4" cat="detp" end="8" id="13" rel="cnj">
+            <node begin="4" end="5" id="14" index="1" rel="mod"/>
+            <node begin="7" end="8" id="15" infl="pl_num" lemma="vier" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="vier" special="hoofd" word="vier"/>
+          </node>
+        </node>
+        <node begin="8" end="9" gen="de" getal="mv" graad="basis" id="16" lemma="student" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="student" word="studenten"/>
+      </node>
+      <node begin="9" cat="pp" end="12" id="17" rel="ld">
+        <node begin="9" end="10" id="18" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="10" cat="np" end="12" id="19" rel="obj1">
+          <node begin="10" end="11" id="20" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+          <node begin="11" end="12" gen="het" genus="onz" getal="ev" graad="basis" id="21" lemma="spreekuur" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="spreekuur" word="spreekuur"/>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Er komen elke dag zo&apos;n drie of vier studenten op het spreekuur .</sentence>
+</alpino_ds>

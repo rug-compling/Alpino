@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="du" end="17" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="stellen" pos="tag" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="tag" root="stel" word="Stel" wvorm="pv"/>
+      <node begin="1" cat="du" end="17" id="4" rel="nucl">
+        <node begin="1" cat="cp" end="8" id="5" rel="sat">
+          <node begin="1" conjtype="onder" end="2" id="6" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+          <node begin="2" cat="ssub" end="8" id="7" rel="body">
+            <node begin="2" cat="np" end="5" id="8" rel="su">
+              <node begin="2" end="3" id="9" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+              <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="10" infl="no_e" lemma="buitenlands" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="buitenlands" vform="adj" word="buitenlands"/>
+              <node begin="4" end="5" gen="het" genus="onz" getal="ev" graad="basis" id="11" lemma="staatshoofd" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="staatshoofd" word="staatshoofd"/>
+            </node>
+            <node begin="5" cat="pp" end="7" id="12" rel="predc">
+              <node begin="5" end="6" id="13" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+              <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="14" lemma="bezoek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="bezoek" sc="pred_pp(op)" special="tmp" word="bezoek"/>
+            </node>
+            <node begin="7" end="8" id="15" infl="sg3" lemma="komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom" sc="pp_copula" tense="present" word="komt" wvorm="pv"/>
+          </node>
+        </node>
+        <node begin="9" cat="smain" end="17" id="16" rel="nucl">
+          <node begin="10" end="11" id="17" infl="pl" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" sc="modifier(aux(inf))" stype="declarative" tense="present" word="moeten" wvorm="pv"/>
+          <node begin="11" case="nom" def="def" end="12" gen="de" getal="mv" id="18" index="1" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
+          <node begin="9" cat="inf" end="17" id="19" rel="vc">
+            <node begin="11" end="12" id="20" index="1" rel="su"/>
+            <node begin="15" buiging="zonder" end="16" id="21" infl="inf" lemma="kunnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kan" sc="aux(inf)" word="kunnen" wvorm="inf"/>
+            <node begin="9" cat="inf" end="17" id="22" rel="vc">
+              <node begin="9" end="10" id="23" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" special="tmp" word="dan"/>
+              <node begin="11" end="12" id="24" index="1" rel="su"/>
+              <node begin="12" end="13" getal="ev" id="25" infl="het" lemma="dat" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" rnum="sg" root="dat" status="vol" vwtype="aanw" wh="nwh" word="dat"/>
+              <node begin="13" end="14" id="26" lemma="toch" pos="adv" postag="BW()" pt="bw" rel="mod" root="toch" word="toch"/>
+              <node aform="base" begin="14" buiging="zonder" end="15" graad="basis" id="27" infl="no_e" lemma="waardig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="waardig" vform="adj" word="waardig"/>
+              <node begin="16" buiging="zonder" end="17" id="28" infl="inf" lemma="ontvangen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ontvang" sc="transitive" word="ontvangen" wvorm="inf"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="29" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Stel dat een buitenlands staatshoofd op bezoek komt , dan moeten we dat toch waardig kunnen ontvangen .</sentence>
+</alpino_ds>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="8" end="9" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="11" id="3" rel="--">
+      <node begin="0" cat="smain" end="5" id="4" rel="dp">
+        <node begin="0" end="1" genus="onz" getal="ev" id="5" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" root="het" status="red" vwtype="pers" word="Het"/>
+        <node begin="1" end="2" id="6" lemma="op_zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben_op" word="is" wvorm="pv"/>
+        <node begin="2" cat="np" end="5" id="7" rel="ld">
+          <node begin="2" end="3" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" buiging="met-e" end="4" graad="basis" id="9" lemma="heel" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="heel" word="hele"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="10" lemma="dag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="dag" word="dag"/>
+        </node>
+      </node>
+      <node begin="6" cat="du" end="11" id="11" rel="dp">
+        <node begin="6" cat="du" end="8" id="12" rel="dp">
+          <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="trap" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="dp" root="trap" word="trap"/>
+          <node begin="7" end="8" id="14" lemma="op" pos="part" postag="VZ(fin)" pt="vz" rel="dp" root="op" vztype="fin" word="op"/>
+        </node>
+        <node begin="9" cat="du" end="11" id="15" rel="dp">
+          <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="16" lemma="af_trappen" naamval="stan" ntype="soort" pos="verb" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="dp" root="trap_af" word="trap"/>
+          <node begin="10" end="11" id="17" lemma="af" pos="part" postag="VZ(fin)" pt="vz" rel="dp" root="af" vztype="fin" word="af"/>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Het is de hele dag : trap op , trap af .</sentence>
+</alpino_ds>

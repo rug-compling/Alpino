@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" cat="np" end="6" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" cat="ppart" end="4" id="4" rel="mod">
+          <node begin="1" cat="pp" end="3" id="5" rel="mod">
+            <node begin="1" end="2" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="2" end="3" id="7" lemma="1983" neclass="year" numtype="hoofd" pos="noun" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1983" word="1983"/>
+          </node>
+          <node aform="base" begin="3" buiging="zonder" end="4" id="8" infl="both" lemma="overlijden" pos="adj" positie="prenom" postag="WW(vd,prenom,zonder)" pt="ww" rel="hd" root="overlijden" vform="psp" word="overleden" wvorm="vd"/>
+        </node>
+        <node begin="4" cat="mwu" end="6" his="normal" his_1="names_dictionary" id="9" rel="hd">
+          <node begin="4" end="5" id="10" lemma="Tennessee" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Tennessee" spectype="deeleigen" word="Tennessee"/>
+          <node begin="5" end="6" id="11" lemma="Williams" neclass="PER" num="sg" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Williams" spectype="deeleigen" word="Williams"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="12" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="copula" stype="declarative" tense="past" word="was" wvorm="pv"/>
+      <node begin="7" cat="np" end="11" id="13" rel="predc">
+        <node begin="7" end="8" id="14" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node aform="base" begin="8" buiging="zonder" end="9" graad="basis" id="15" infl="no_e" lemma="bekend" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="bekend" vform="adj" word="bekend"/>
+        <node aform="base" begin="9" buiging="zonder" end="10" graad="basis" id="16" infl="no_e" lemma="Amerikaans" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="Amerikaans" vform="adj" word="Amerikaans"/>
+        <node begin="10" end="11" gen="de" genus="zijd" getal="ev" graad="basis" id="17" lemma="toneelschrijver" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="toneelschrijver" word="toneelschrijver"/>
+      </node>
+    </node>
+    <node begin="11" end="12" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>De in 1983 overleden Tennessee Williams was een bekend Amerikaans toneelschrijver .</sentence>
+</alpino_ds>
