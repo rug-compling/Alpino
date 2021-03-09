@@ -209,7 +209,7 @@ reportcurrentscore:
           echo "----- expected:";\
           grep ca-score $(suite)$(part)/score | head -n1; fi
 
-suites=leuven_yellow_pages cgn_exs lassy g_suite h_suite i_suite lot_test_suite1 wpspel extra PPH PPH PPI WIKI WSU
+suites=leuven_yellow_pages cgn_exs lassy g_suite h_suite i_suite m_suite lot_test_suite1 wpspel extra PPH PPH PPI WIKI WSU
 
 clean:
 	for suite in $(suites) $(CGNSUITES) ;\
@@ -322,6 +322,7 @@ hpctests:
 	make shortjob HPCTARGET=test1 suite=g_suite
 	make shortjob HPCTARGET=test1 suite=h_suite
 	make shortjob HPCTARGET=test1 suite=i_suite
+	make shortjob HPCTARGET=test1 suite=m_suite
 	make shortjob HPCTARGET=test1 suite=extra
 	make shortjob HPCTARGET=test1 suite=leuven_yellow_pages
 	make shortjob HPCTARGET=test1 suite=lot_test_suite1
@@ -331,7 +332,7 @@ hpctests:
 
 tests: ts ds cgns t24
 
-ts: cdbt t15 t16 t17 t18 t19 t20 t21 t22 t23 t25 
+ts: cdbt t15 t16 t17 t18 t19 t20 t21 t22 t23 t25 t26 t27
 
 cdbt: t0 t1 t2 t3 t4 t5 t6 t7 t8 t9 
 
@@ -391,6 +392,8 @@ t25:
 	make test1 suite=novelsample_corrected
 t26:
 	make test1 suite=eans
+t27:
+	make test1 suite=m_suite
 
 
 jobsuites=$(sort $(dir $(wildcard */job*)))
@@ -586,8 +589,11 @@ cgn43:
 analyse:
 	@$(MAKE) analyse0 analyse1 files=*/job*/log1
 
+lsuites=leuven_yellow_pages cgn_exs lassy g_suite h_suite i_suite eans lot_test_suite1 wpspel extra cdb_part?
+
 sota:
-	@$(MAKE) analyse0 analyse1 files=*/poslemma
+	@$(MAKE) analyse0 analyse1 files="$(lsuites:%=%/poslemma)"
+	
 
 an:
 	@for j in $(jobsuites); do $(MAKE) -s analyse1 files=$$j/job*/log*; done
