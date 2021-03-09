@@ -1,0 +1,37 @@
+ALUD=~/bin/alud
+ALUD_OPTIONS=-t -d -e -x
+EVAL=$(ALPINO_HOME)/UD2.0/conll17_ud_eval.py -v
+GOODKEYS=python3 $(ALPINO_HOME)/EvalUD/goodkeys.py
+
+compare: $(SUITES:%=%.compare)
+
+parse: $(SUITES:%=%.log)
+
+%.log:
+	$(MAKE) annotate suite=$*
+
+annotate:
+	mkdir -p $(suite)
+	$(ALPINO_HOME)/src/Alpino -notk cmdint=off\
+          -veryfast\
+          user_max=600000 debug=1\
+          xml_format_frame=on\
+          xml_format_failed_parse=on\
+          display_main_parts=off\
+          display_quality=off\
+          -flag suite ../Suites/$(suite)\
+          -flag treebank $(suite)\
+          demo=off\
+          end_hook=xml $(extra)\
+          $($(suite)_test1_options)\
+          batch_command="parser_comparisons" 2> $(suite).log
+
+
+%.conllu: %/*.xml $(ALUD)
+	ls -v $*/*.xml |  $(ALUD) $(ALUD_OPTIONS) > $*.conllu 2> $*.conllu.err
+
+%.conllu.cln: %.conllu $(CONLLU)/%.conllu
+	$(GOODKEYS) $(CONLLU)/$*.conllu $*.conllu > $*.conllu.cln
+
+%.compare: $(CONLLU)/%.conllu %.conllu.cln
+	$(EVAL) $(CONLLU)/$*.conllu $*.conllu.cln > $*.compare
