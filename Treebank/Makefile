@@ -6,7 +6,7 @@ endif
 
 default:
 
-all: prepare_enhanced_all enhanced_all dact poslemma mwu trees_doc sents sentspl
+all: prepare_enhanced_all enhanced_all dact poslemma mwu trees_doc sents sentspl conllu
 
 DIRECTORIES=cgn_exs eans extra g_suite h_suite i_suite leuven_yellow_pages lot_test_suite1 \
              ntv-suite qa wpspel novelsample_corrected cdb
@@ -15,7 +15,7 @@ trees_doc:
 	for dir in $(DIRECTORIES); do\
                    ( cd Enhanced/$$dir ;\
                      echo Enhanced/$$dir;\
-                     $(MAKE) --no-print-directory -j 30 index.html );\
+                     $(MAKE) -s --no-print-directory -j 30 index.html );\
                    done
 
 trees_realclean:
@@ -38,23 +38,20 @@ PWD:=${shell pwd}
 transform:
 	find $(DIRECTORIES) -name '*.xml' | xargs Alpino -u -xml_converse
 
-d:
-	@echo $(DIRECTORIES:%=Enhanced/%.dact)
-
 dact: $(DIRECTORIES:%=Enhanced/%.dact) 
 
-%.dact: %/*.xml
-	alpinocorpus-create -d $*.dact.new $*
-	chmod 644 $*.dact.new
-	mv $*.dact.new $*.dact
+Enhanced/%.dact: Enhanced/%/*.xml
+	alpinocorpus-create -d Enhanced/$*.dact.new Enhanced/$*
+	chmod 644 Enhanced/$*.dact.new
+	mv Enhanced/$*.dact.new Enhanced/$*.dact
 
 mwu: $(DIRECTORIES:%=MWU/%.mwu) FREQ/mwu-tagged.freq
 
 ## removes the .mwu file, because if it is empty it would otherwise
 ## be rebuilt over and over again!
-MWU/%.mwu: %.dact mwu_tags.xsl
+MWU/%.mwu: Enhanced/%.dact mwu_tags.xsl
 	rm -f MWU/$*.mwu
-	alpinocorpus-xslt -q '//node[@cat="mwu"]' mwu_tags.xsl $*.dact > MWU/$*.mwu
+	alpinocorpus-xslt -q '//node[@cat="mwu"]' mwu_tags.xsl Enhanced/$*.dact > MWU/$*.mwu
 
 FREQ/mwu-tagged.freq: $(DIRECTORIES:%=MWU/%.mwu) /net/corpora/LassyDevelop/MWU/*.mwu
 	cat $(DIRECTORIES:%=MWU/%.mwu) /net/corpora/LassyDevelop/MWU/*.mwu\
@@ -65,15 +62,11 @@ FREQ/mwu-tagged.freq: $(DIRECTORIES:%=MWU/%.mwu) /net/corpora/LassyDevelop/MWU/*
 
 poslemma: $(DIRECTORIES:%=POSLEMMA/%.poslemma)
 
-POSLEMMA/%.poslemma: %.dact
-	dtxslt -s plat.xsl $* > POSLEMMA/$*.poslemma
+POSLEMMA/%.poslemma: Enhanced/%.dact
+	dtxslt -s plat.xsl Enhanced/$* > POSLEMMA/$*.poslemma
 
 
 gitversion=$(shell git log --oneline | wc -l)
-
-# enhanced:
-# 	/net/corpora/LassyDevelopMod/lassymod -t -u Enhanced/cdb
-# 	/net/corpora/novelsample_correctedMod/novelmod -u Enhanced/novelsample_corrected
 
 tars:
 	for dir in $(DIRECTORIES); do make tar dir=$$dir; done
@@ -100,14 +93,21 @@ sql/$(corpus).sqlite: best/$(corpus)/*.xml fast/$(corpus)/*.xml
 	$(sqldir)/auto2sql sql/$(corpus).sqlite best/$(corpus) fast/$(corpus)
 
 enhanced_all:
-	for corpus in $(DIRECTORIES); do make enhanced corpus=$$corpus; done
+	for corpus in $(DIRECTORIES); do make enhanced corpus=$$corpus; done 
 
 enhanced: 
-	$(sqldir)/alpinomod -p $(corpus) -u sql/$(corpus).sqlite $(corpus) Enhanced/$(corpus)
+	$(sqldir)/alpinomod -p $(corpus)  sql/$(corpus).sqlite $(corpus) Inter/$(corpus)
+	ls Inter/$(corpus)/*.xml | sed -e 's/Inter/Enhanced/' | xargs make -s corpus=$(corpus)
+
+ALUD=~/bin/alud
+ALUD_OPTIONS=-t -d -e
+
+Enhanced/$(corpus)/%.xml: Inter/$(corpus)/%.xml $(ALUD)
+	$(ALUD) -a $< > $@
 
 
 sents: $(DIRECTORIES:%=../SENTS/%.sents)
-../SENTS/%.sents: %.dact $(ALPINO_HOME)/TreebankTools/stylesheets/dt2sent_with_sentid.xsl
+../SENTS/%.sents: Enhanced/%/*.xml $(ALPINO_HOME)/TreebankTools/stylesheets/dt2sent_with_sentid.xsl
 	( cd Enhanced/$* ;\
              ls -v *.xml |\
              xargs dtxslt -s\
@@ -116,3 +116,9 @@ sents: $(DIRECTORIES:%=../SENTS/%.sents)
                  -e 's/\]/\\\]/g') > $@
 sentspl:
 	(  cd ../SENTS ; make )
+
+conllu: $(DIRECTORIES:%=../CONLLU/%.conllu)
+
+../CONLLU/%.conllu: Enhanced/%.dact $(ALUD)
+	ls -v ../Treebank/Enhanced/$*/*.xml | $(ALUD) $(ALUD_OPTIONS) > ../CONLLU/$*.conllu 2> ../CONLLU/$*.conllu.err
+
