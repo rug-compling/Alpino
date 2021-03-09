@@ -4,14 +4,13 @@
     <node begin="0" cat="conj" end="6" id="1" rel="--">
       <node begin="0" cat="smain" end="3" id="2" rel="cnj">
         <node begin="0" end="1" getal="ev" id="3" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="Ik"/>
-        <node begin="1" end="2" id="4" index="1" lemma="kopen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="koop" word="kocht" wvorm="pv"/>
+        <node begin="1" end="2" id="4" lemma="kopen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="koop" word="kocht" wvorm="pv"/>
         <node begin="2" end="3" getal="mv" graad="basis" id="5" lemma="boek" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="boek" word="boeken"/>
       </node>
       <node begin="3" conjtype="neven" end="4" id="6" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-      <node begin="1" cat="smain" end="6" id="7" rel="cnj">
-        <node begin="1" end="2" id="8" index="1" rel="hd"/>
-        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="Piet" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Piet" word="Piet"/>
-        <node begin="5" end="6" getal="mv" graad="basis" id="10" lemma="plaat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="plaat" word="platen"/>
+      <node begin="4" cat="smain" end="6" id="7" rel="cnj">
+        <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="8" lemma="Piet" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" root="Piet" word="Piet"/>
+        <node begin="5" end="6" getal="mv" graad="basis" id="9" lemma="plaat" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="plaat" word="platen"/>
       </node>
     </node>
   </node>
