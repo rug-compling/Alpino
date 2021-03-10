@@ -816,12 +816,30 @@ start_hook(parse,_,o(_,Sentence,_),Sentence):-
     check_flags,
     adapt_guides_flag(Sentence),
     try_hook(alpino_start_hook(Key,Sentence)),
+    (   Th == xml
+    ->  check_unannotated(Key)
+    ;   true
+    ),
     if_gui(tcl(update)).
 
 start_hook(generate,_,_,_) :-
     ensure_grammar_compiled,  % !
     check_flags,
     if_gui(tcl(update)).
+
+check_unannotated(Key) :-
+    hdrug_flag(parse_unannotated_only,Only),
+    check_unannotated(Only,Key).
+
+check_unannotated(off,_).
+check_unannotated(undefined,_).
+check_unannotated(on,Key) :-
+    construct_identifier(Key,1,Identifier),
+    xml_filename(File,Identifier),
+    (   file_exists(File)
+    ->  raise_exception(alpino_error('This sentence is already annotated'))
+    ;   true
+    ).
 
 check_flags :-
     hdrug_flag(end_hook,EndHook),
