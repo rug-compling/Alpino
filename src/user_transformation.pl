@@ -268,4 +268,3 @@ eigen(_):-
     fail.
 
 
-de_naam('Petra').

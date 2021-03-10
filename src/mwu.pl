@@ -175,6 +175,7 @@ mwu_postag('dat wil zeggen',['VNW(aanw,pron,stan,vol,3o,ev)','WW(pv,tgw,ev)','WW
 mwu_postag('dat wou zeggen',['VNW(aanw,pron,stan,vol,3o,ev)','WW(pv,verl,ev)','WW(inf,vrij,zonder)'],[dat,willen,zeggen]).
 mwu_postag('Davis Cup-team',['SPEC(deeleigen)','N(eigen,ev,basis,onz,stan)'],['Davis','Cup_team']).
 mwu_postag('degelijk wel',['BW()','ADJ(vrij,basis,zonder)'],[wel,degelijk]).
+mwu_postag('de eerste de beste',['LID(bep,stan,rest)','TW(rang,prenom,stan)','LID(bep,stan,rest)','ADJ(prenom,sup,met-e,stan)'],[de,één,de,goed]).
 mwu_postag('de ene na de andere',['LID(bep,stan,rest)','VNW(onbep,det,stan,prenom,met-e,evz)','VZ(init)','LID(bep,stan,rest)','ADJ(nom,basis,met-e,zonder-n,stan)'],[de,een,na,de,ander]).
 mwu_postag('Departement ASRO',['N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,zijd,stan)'],[departement,'ASRO']).
 mwu_postag('Departement Biologie',['N(soort,ev,basis,onz,stan)','N(soort,ev,basis,zijd,stan)'],[departement,biologie]).
@@ -293,6 +294,7 @@ mwu_postag('één of andere',['TW(hoofd,prenom,stan)','VG(neven)','ADJ(prenom,ba
 mwu_postag('een of ander',['TW(hoofd,prenom,stan)','VG(neven)','ADJ(prenom,basis,zonder)'],[één,of,ander]).
 mwu_postag('een oogje',['LID(onbep,stan,agr)','N(soort,ev,dim,onz,stan)'],[een,oog]).
 mwu_postag('een slordige',['LID(onbep,stan,agr)','ADJ(prenom,basis,met-e,stan)'],[een,slordig]).
+mwu_postag('een weinig',['LID(onbep,stan,agr)','VNW(onbep,grad,stan,vrij,zonder,basis)'],[een,weinig]).
 mwu_postag('Eerste Batallion',['TW(rang,prenom,stan)','N(soort,ev,basis,onz,stan)'],[één,batallion]).
 mwu_postag('Eerste en Tweede Kamer',['TW(rang,prenom,stan)','VG(neven)','TW(rang,prenom,stan)','N(soort,ev,basis,zijd,stan)'],[één,en,twee,kamer]).
 mwu_postag('Eerste Kamerlid',['TW(rang,prenom,stan)','N(soort,ev,basis,onz,stan)'],[één,kamer_lid]).
