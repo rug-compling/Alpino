@@ -35,3 +35,13 @@ annotate:
 
 %.compare: $(CONLLU)/%.conllu %.conllu.cln
 	$(EVAL) $(CONLLU)/$*.conllu $*.conllu.cln > $*.compare
+
+analyse:
+	@echo "mean per corpus results; does not take into account size of corpora"
+	@grep UPOS *.compare | awk '{ N=N+1; T = T + $$9 } END { print "UPOS\t" T/N }'
+	@grep XPOS *.compare | awk '{ N=N+1; T = T + $$9 } END { print "XPOS\t" T/N }'
+	@grep Feats *.compare | awk '{ N=N+1; T = T + $$9 } END { print "Feats\t" T/N }'
+	@grep AllTags *.compare | awk '{ N=N+1; T = T + $$9 } END { print "AllTags\t" T/N }'
+	@grep Lemmas *.compare | awk '{ N=N+1; T = T + $$9 } END { print "Lemmas\t" T/N }'
+	@grep UAS *.compare | awk '{ N=N+1; T = T + $$9 } END { print "UAS\t" T/N }'
+	@grep LAS *.compare | awk '{ N=N+1; T = T + $$9 } END { print "LAS\t" T/N }'
