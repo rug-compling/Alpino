@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="15" end="16" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="21" id="3" rel="--">
+      <node begin="0" cat="conj" end="15" id="4" rel="sat">
+        <node begin="0" cat="cp" end="8" id="5" rel="cnj">
+          <node begin="0" conjtype="onder" end="1" id="6" lemma="als" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="Als"/>
+          <node begin="1" cat="ssub" end="8" id="7" rel="body">
+            <node begin="1" end="2" getal="ev" id="8" index="1" lemma="iemand" naamval="stan" pdtype="pron" persoon="3p" pos="noun" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="su" root="iemand" status="vol" vwtype="onbep" word="iemand"/>
+            <node begin="6" end="7" id="9" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
+            <node begin="1" cat="ppart" end="8" id="10" rel="vc">
+              <node begin="1" end="2" id="11" index="1" rel="su"/>
+              <node begin="2" cat="pp" end="4" id="12" rel="mod">
+                <node begin="2" end="3" id="13" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                <node begin="3" buiging="met-e" end="4" getal-n="mv-n" graad="basis" id="14" lemma="ander" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="obj1" root="ander" word="anderen"/>
+              </node>
+              <node begin="4" cat="np" end="6" id="15" rel="obj1">
+                <node begin="4" buiging="zonder" end="5" getal="ev" id="16" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+                <node begin="5" buiging="zonder" end="6" getal-n="zonder-n" graad="sup" id="17" lemma="best" pos="noun" positie="nom" postag="ADJ(nom,sup,zonder,zonder-n)" pt="adj" rel="hd" root="best" word="best"/>
+              </node>
+              <node begin="7" buiging="zonder" end="8" id="18" lemma="doen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="doe" word="gedaan" wvorm="vd"/>
+            </node>
+          </node>
+        </node>
+        <node begin="9" conjtype="neven" end="10" id="19" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+        <node begin="10" cat="smain" end="15" id="20" rel="cnj">
+          <node begin="10" end="11" genus="zijd" getal="ev" graad="basis" id="21" lemma="on_dank" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="su" root="on_dank" word="ondank"/>
+          <node begin="11" end="12" id="22" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+          <node begin="12" end="13" id="23" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+          <node begin="13" cat="np" end="15" id="24" rel="predc">
+            <node begin="13" buiging="zonder" end="14" getal="ev" id="25" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+            <node begin="14" end="15" genus="onz" getal="ev" graad="basis" id="26" lemma="loon" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="loon" word="loon"/>
+          </node>
+        </node>
+      </node>
+      <node begin="16" cat="smain" end="21" id="27" rel="nucl">
+        <node begin="16" end="17" id="28" lemma="dan" pos="adv" postag="BW()" pt="bw" rel="mod" root="dan" word="dan"/>
+        <node begin="17" end="18" id="29" lemma="gaan" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="ga" word="gaat" wvorm="pv"/>
+        <node begin="18" cat="np" end="20" id="30" rel="su">
+          <node begin="18" end="19" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="32" lemma="aardigheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="aardigheid" word="aardigheid"/>
+        </node>
+        <node begin="20" end="21" id="33" lemma="eraf" pos="pp" postag="BW()" pt="bw" rel="ld" root="eraf" word="eraf"/>
+      </node>
+    </node>
+    <node begin="21" end="22" id="34" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Als iemand voor anderen zijn best heeft gedaan , en ondank is dan zijn loon , dan gaat de aardigheid eraf .</sentence>
+</alpino_ds>

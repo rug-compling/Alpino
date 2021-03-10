@@ -7,3 +7,7 @@ eans/./02_04_05_14.xml	//node[@wvorm="pv" and not(../@cat="smain" or ../@cat="ss
 eans/./02_04_02_8.xml	//node[@cat="inf" and node[@rel="hd" and @pt and not(@postag="WW(inf,vrij,zonder)")]]	inf cat without inf hd?
 eans/./01_03_7.xml	//node[@rel="hd" and ../@cat="np" and @pt and not(@pt="n" or @pt="tw" or @pt="spec" or @pt="adj" or @pt="ww" or @pt="vnw" or @pt="bw")]	unexpected postag for head of np
 eans/./01_03_7.xml	//node[not(@cat="pp") and node[@rel="hd" and @postag="VZ(init)"]]	preposition head, but not PP?
+eans/./04_03_03_7.xml	//node[ @cat and @rel="predm" and not(@cat="advp") and not(@cat="np") and not(@cat="ap") and not(@cat="ppart") and not(@cat="ppres") and not(@cat="cp") and not(@cat="pp") and not(@cat="conj") and not(@cat="mwu") and not(@cat="whrel")]	unexpected predm-category.   Expected cats: advp np ap ppart ppres cp pp conj mwu whrel
+eans/./05_02_05_02_02_25_1.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+eans/./05_02_06_9.xml	//node[count(node[@rel="tag"]) > 1]/node[@rel="tag"]	rel "tag" occurs more than once
+eans/./05_02_06_20_2.xml	//node[count(node[@rel="tag"]) > 1]/node[@rel="tag"]	rel "tag" occurs more than once

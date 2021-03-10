@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="du" end="6" id="2" rel="--">
+      <node begin="0" end="1" id="3" lemma="ja" pos="noun" postag="TSW()" pt="tsw" rel="tag" root="ja" word="Ja"/>
+      <node begin="1" end="2" id="4" lemma="zeker" pos="tag" postag="TSW()" pt="tsw" rel="tag" root="zeker" word="zeker"/>
+      <node begin="3" cat="smain" end="6" id="5" rel="nucl">
+        <node begin="3" end="4" getal="ev" id="6" lemma="dit" naamval="stan" pdtype="pron" persoon="3o" pos="det" postag="VNW(aanw,pron,stan,vol,3o,ev)" pt="vnw" rel="su" root="dit" status="vol" vwtype="aanw" word="dit"/>
+        <node begin="4" end="5" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
+        <node begin="5" end="6" getal="mv" id="8" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="predc" root="ze" status="red" vwtype="pers" word="ze"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Ja zeker , dit is ze .</sentence>
+</alpino_ds>
