@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" case="both" def="def" end="1" gen="de" genus="fem" getal="ev" id="2" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" rnum="sg" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="Ze"/>
+      <node begin="1" end="2" id="3" infl="sg" lemma="trakteren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="trakteer" sc="pc_pp(op)" stype="declarative" tense="past" word="trakteerde" wvorm="pv"/>
+      <node begin="2" cat="pp" end="5" id="4" rel="pc">
+        <node begin="2" end="3" id="5" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="3" cat="np" end="5" id="6" rel="obj1">
+          <node aform="base" begin="3" buiging="met-e" end="4" id="7" infl="e" lemma="eigen_maken" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="eigen_maken" vform="psp" word="eigengemaakte" wvorm="vd"/>
+          <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="8" lemma="jam" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="jam" word="jam"/>
+        </node>
+      </node>
+    </node>
+    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Ze trakteerde op eigengemaakte jam .</sentence>
+</alpino_ds>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="0" case="both" def="def" end="1" gen="de" getal="mv" id="2" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" rnum="pl" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="Ze"/>
+      <node begin="1" end="2" id="3" infl="pl" lemma="zien" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zie" sc="transitive_ndev_ndev" stype="declarative" tense="present" word="zien" wvorm="pv"/>
+      <node begin="2" case="dat_acc" def="def" end="3" gen="de" genus="masc" getal="ev" id="4" lemma="hem" naamval="obl" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,obl,vol,3,ev,masc)" pt="vnw" rel="obj1" rnum="sg" root="hem" status="vol" vwtype="pers" wh="nwh" word="hem"/>
+      <node begin="3" end="4" getal="getal" id="5" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="daar" special="er_loc" status="vol" vwtype="aanw" word="daar"/>
+      <node begin="4" cat="ap" end="8" id="6" rel="mod">
+        <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="7" infl="no_e" lemma="vaak" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="vaak" vform="adj" word="vaak"/>
+        <node begin="4" cat="advp" end="8" id="8" rel="mod">
+          <node begin="4" comparative="als" end="5" id="9" lemma="even" pos="adv" postag="BW()" pt="bw" rel="hd" root="even" special="comp" word="even"/>
+          <node begin="6" cat="cp" end="8" id="10" rel="obcomp">
+            <node begin="6" conjtype="onder" end="7" id="11" lemma="als" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+            <node begin="7" case="dat_acc" def="def" end="8" gen="de" getal="ev" id="12" lemma="jou" naamval="obl" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,obl,vol,2v,ev)" pt="vnw" rel="body" rnum="sg" root="jou" status="vol" vwtype="pers" wh="nwh" word="jou"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Ze zien hem daar even vaak als jou .</sentence>
+</alpino_ds>

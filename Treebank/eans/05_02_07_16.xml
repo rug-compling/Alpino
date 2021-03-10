@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="pp" end="2" id="2" rel="mod">
+        <node begin="0" end="1" id="3" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="Vóór"/>
+        <node begin="1" case="dat_acc" def="def" end="2" gen="de" getal="ev" id="4" lemma="me" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj1" rnum="sg" root="me" special="wkpro" status="red" vwtype="pr" wh="nwh" word="me"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="sg" lemma="zien" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zie" sc="transitive_ndev_ndev" stype="declarative" tense="past" word="zag" wvorm="pv"/>
+      <node begin="3" case="nom" def="def" end="4" gen="de" getal="ev" id="6" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+      <node begin="4" cat="np" end="7" id="7" rel="obj1">
+        <node begin="4" end="5" id="8" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node aform="base" begin="5" buiging="met-e" end="6" id="9" infl="e" lemma="gapen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="gaap" vform="gerund" word="gapende" wvorm="od"/>
+        <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="afgrond" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="afgrond" word="afgrond"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Vóór me zag ik een gapende afgrond .</sentence>
+</alpino_ds>
