@@ -19,7 +19,7 @@ annotate:
           xml_format_failed_parse=on\
           display_main_parts=off\
           display_quality=off\
-          -flag suite ../Suites/$(suite)\
+          -flag suite $(SUITESDIR)/$(suite)\
           -flag treebank $(suite)\
           demo=off\
           end_hook=xml $(extra)\
