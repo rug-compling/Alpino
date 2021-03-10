@@ -36,8 +36,8 @@
         <node begin="14" end="15" id="25" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="vc" root="zo" word="zo"/>
         <node begin="15" end="16" id="26" lemma="zeggen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zeg" word="zei" wvorm="pv"/>
         <node begin="16" cat="mwu" end="18" id="27" rel="su">
-          <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="28" lemma="mr." naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="mr." word="mr."/>
-          <node begin="17" end="18" genus="zijd" getal="ev" graad="basis" id="29" lemma="worst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Worst" word="Worst"/>
+          <node begin="16" end="17" id="28" lemma="mr." pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="mr." spectype="deeleigen" word="mr."/>
+          <node begin="17" end="18" id="29" lemma="Worst" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Worst" spectype="deeleigen" word="Worst"/>
         </node>
       </node>
     </node>
