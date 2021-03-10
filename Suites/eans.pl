@@ -355,7 +355,7 @@ sentence('02_03_02_08_04_05_ia',['Ik',heb,vruchteloos,proberen,te,ontkomen,'.'])
 sentence('02_03_02_08_04_05_iia',['Ik',heb,zo,gauw,mogelijk,proberen,te,ontkomen,'.']).
 sentence('02_03_02_08_04_05_iib',['Ik',ben,zo,gauw,mogelijk,proberen,te,ontkomen,'.']).
 sentence('02_03_02_08_04_05_iic',['Ik',heb,zo,gauw,mogelijk,geprobeerd,te,ontkomen,'.']).
-sentence('eans02_04_02_1',['Het',regengebied,zal,morgen,ons,land,bereiken,'.']).
+sentence('02_04_02_1',['Het',regengebied,zal,morgen,ons,land,bereiken,'.']).
 sentence('02_04_02_10',['De',regering,kon,het,niet,eens,worden,over,de,te,nemen,maatregelen,'.']).
 sentence('02_04_02_11',['In',een,nog,nader,uit,te,werken,hoofdstuk,over,de,buitenlandse,politiek,in,het,interbellum,zal,dieper,op,deze,kwestie,worden,ingegaan,'.']).
 sentence('02_04_02_12',['Doorlopen',!]).
