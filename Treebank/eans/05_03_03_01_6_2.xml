@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="buur" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="buur" word="buren"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="pl" lemma="gedragen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="gedraag" sc="nonp_pred_refl" stype="declarative" tense="present" word="gedragen" wvorm="pv"/>
+      <node begin="3" end="4" getal="getal" id="6" lemma="zich" naamval="obl" num="both" pdtype="pron" per="u_thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" refl="refl" rel="se" rnum="pl" root="zich" status="red" vwtype="refl" word="zich"/>
+      <node aform="base" begin="4" buiging="zonder" end="5" graad="basis" id="7" infl="no_e" lemma="merkwaardig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="merkwaardig" vform="adj" word="merkwaardig"/>
+    </node>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>De buren gedragen zich merkwaardig .</sentence>
+</alpino_ds>

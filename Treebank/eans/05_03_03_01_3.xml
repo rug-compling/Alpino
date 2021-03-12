@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" case="both" def="def" end="1" gen="de" getal="ev" id="2" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" rnum="sg" root="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="Je"/>
+      <node begin="1" end="2" id="3" infl="sg3" lemma="zien" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zie" sc="np_pc_pp(in)" stype="declarative" tense="present" word="ziet" wvorm="pv"/>
+      <node begin="2" case="dat_acc" def="def" end="3" gen="de" getal="getal" id="4" lemma="jezelf" naamval="obl" num="both" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pr,pron,obl,nadr,2v,getal)" pt="vnw" rel="obj1" rnum="sg" root="jezelf" status="nadr" vwtype="pr" wh="nwh" word="jezelf"/>
+      <node begin="3" cat="pp" end="6" id="5" rel="pc">
+        <node begin="3" end="4" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+        <node begin="4" cat="np" end="6" id="7" rel="obj1">
+          <node begin="4" end="5" id="8" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="spiegel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="spiegel" word="spiegel"/>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Je ziet jezelf in de spiegel .</sentence>
+</alpino_ds>

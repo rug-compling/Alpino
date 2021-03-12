@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="Pieter" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="Pieter" word="Pieter"/>
+      <node begin="1" end="2" id="3" infl="sg" lemma="verdedigen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verdedig" sc="transitive" stype="declarative" tense="past" word="verdedigde" wvorm="pv"/>
+      <node begin="2" case="dat_acc" def="def" end="3" gen="de" getal="getal" id="4" lemma="zich" naamval="obl" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,red,3,getal)" pt="vnw" rel="obj1" rnum="sg" root="zich" special="wkpro" status="red" vwtype="refl" wh="nwh" word="zich"/>
+      <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="5" infl="no_e" lemma="goed" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="goed" vform="adj" word="goed"/>
+    </node>
+    <node begin="4" end="5" id="6" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Pieter verdedigde zich goed .</sentence>
+</alpino_ds>

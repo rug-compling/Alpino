@@ -1028,6 +1028,10 @@ graad(ons).
 graad(st).
 graad(ml).
 
+%% guldens
+graad(',-').
+graad(',--').
+
 opt_miljoen -->
     n_word(Miljoen),
     {  opt_miljoen(Miljoen)  }.
