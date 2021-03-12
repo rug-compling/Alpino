@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" case="both" def="def" end="1" gen="de" getal="mv" id="2" index="1" lemma="jullie" naamval="stan" num="pl" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,stan,nadr,2v,mv)" pt="vnw" rel="su" rnum="pl" root="jullie" status="nadr" vwtype="pers" wh="nwh" word="Jullie"/>
+      <node begin="1" end="2" id="3" infl="pl" lemma="moeten" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="moet" sc="modifier(aux(inf))" stype="declarative" tense="present" word="moeten" wvorm="pv"/>
+      <node begin="0" cat="inf" end="5" id="4" rel="vc">
+        <node begin="0" end="1" id="5" index="1" rel="su"/>
+        <node begin="2" end="3" getal="getal" id="6" lemma="je" naamval="obl" num="both" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pr,pron,obl,red,2v,getal)" pt="vnw" refl="refl" rel="se" rnum="pl" root="je" status="red" vwtype="pr" word="je"/>
+        <node aform="compar" begin="3" buiging="zonder" end="4" graad="comp" id="7" infl="meer" lemma="veel" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="mod" root="meer" vform="adj" vwtype="onbep" word="meer"/>
+        <node begin="4" buiging="zonder" end="5" id="8" infl="inf" lemma="in_spannen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="span_in" sc="part_refl(in)" word="inspannen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="9" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Jullie moeten je meer inspannen .</sentence>
+</alpino_ds>

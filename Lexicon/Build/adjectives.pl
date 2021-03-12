@@ -2949,6 +2949,11 @@ a([e(afkerige),
    ste(afkerigste)],padv,
   [pp(van)],[]).
 
+a([e(afkeurenswaardige),
+   no_e(afkeurenswaardig)],nonadv,
+  [subject_sbar,
+   subject_vp],[]).
+
 a([e(afkomstige),
    postn_no_e(afkomstig)],padv,
   [pp(uit),

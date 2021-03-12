@@ -5044,6 +5044,8 @@ m('zo goed als',    modal_adverb(noun),[zogoed,als]).
 
 m('zegge en schrijve', modal_adverb(noun_prep),[zegge,en,schrijve]).
 m('zegge en schrijve', modal_adverb(noun_prep),[zegge,en,schrijven]).
+m('zegge en schrijve', modal_adverb(noun_prep),[zeggen,en,schrijve]).
+m('zegge en schrijve', modal_adverb(noun_prep),[zeggen,en,schrijven]).
 
 %% even voor/na het einde; even voordat ..
 m(even,             modal_adverb(comp_prep),even).
@@ -5588,7 +5590,8 @@ sentence_adverb(godzijdank).
 sentence_adverb(hedentendage). 
 sentence_adverb([heden,ten,dage]). 
 sentence_adverb(helaas).
-sentence_adverb(hetzelfde).   % reageren, zich gedragen, zich opstellen
+sentence_adverb(hetzelfde).  % reageren, zich gedragen, zich opstellen
+sentence_adverb([honderd,uit]).
 sentence_adverb(immers).
 sentence_adverb([in,allerijl]). 
 sentence_adverb([in,aller,ijl]).
@@ -6707,8 +6710,8 @@ m(men,          pronoun(nwh,thi,sg,de,nom,def),men).
 m(me,           pronoun(nwh,fir,sg,de,dat_acc,def,wkpro),me).
 m(mekaar,       pronoun(nwh,thi,pl,de,dat_acc,def),mekaar).
 m(menigeen,     pronoun(nwh,thi,sg,de,both,def),menigeen).
-m(mezelf,       pronoun(nwh,fir,both,de,dat_acc,def),mezelf).
-m(mezelf,       pronoun(nwh,fir,both,de,dat_acc,def),mezelve).
+m(mezelf,       pronoun(nwh,fir,sg,de,dat_acc,def),mezelf).
+m(mezelf,       pronoun(nwh,fir,sg,de,dat_acc,def),mezelve).
 m(mij,          pronoun(nwh,fir,sg,de,dat_acc,def),mij).
 m(mijn,         pronoun(nwh,fir,sg,both,gen,def),mijner).
 m(mijzelf,      pronoun(nwh,fir,both,de,dat_acc,def),mijzelf).
@@ -7358,11 +7361,36 @@ m(u,            reflexive(u,sg),u).
 m(zich,         reflexive(u_thi,both),zich).
 
 %% gesproken taal, regionaal (?)
-m('je eigen',           reflexive(je,both),[je,eigen]).
-m('jullie eigen',       reflexive(je,pl),[jullie,eigen]).
-m('me eigen',           reflexive(fir,sg),[me,eigen]).
-m('ons eigen',          reflexive(fir,pl),[ons,eigen]).
-m('u eigen',            reflexive(u,sg),[u,eigen]).
+
+m('me eigen',           pronoun(nwh,fir,both,de,dat_acc,def),[me,eigen]).
+m('mijn eigen',         pronoun(nwh,fir,sg,de,dat_acc,def),  [mijn,eigen]).
+m('m\'n eigen',         pronoun(nwh,fir,sg,de,dat_acc,def),  ['m\'n',eigen]).
+m('je eigen',           pronoun(nwh,je,sg,de,dat_acc,def),   [je,eigen]).
+m('d\'r eigen',         pronoun(nwh,thi,sg,de,dat_acc,def),  ['d\'r',eigen]).
+m('\'r eigen',          pronoun(nwh,thi,sg,de,dat_acc,def),  ['\'r',eigen]).
+m('haar eigen',         pronoun(nwh,thi,sg,de,dat_acc,def),  [haar,eigen]).
+m('zijn eigen',         pronoun(nwh,thi,sg,de,dat_acc,def),  [zijn,eigen]).
+m('z\'n eigen',         pronoun(nwh,thi,sg,de,dat_acc,def),  ['z\'n',eigen]).
+m('ons eigen',          pronoun(nwh,fir,pl,de,dat_acc,def),  [ons,eigen]).
+m('jullie eigen',       pronoun(nwh,je,pl,de,dat_acc,def),   [jullie,eigen]).
+m('u eigen',            pronoun(nwh,u,sg,de,both,def),       [u,eigen]).
+m('uw eigen',           pronoun(nwh,u,sg,de,both,def),       [uw,eigen]).
+m('hun eigen',          pronoun(nwh,thi,pl,de,dat_acc,def),  [hun,eigen]).
+
+m('me eigen',           reflexive(fir,sg),                   [me,eigen]).
+m('mijn eigen',         reflexive(fir,sg),                   [mijn,eigen]).
+m('m\'n eigen',         reflexive(fir,sg),                   ['m\'n',eigen]).
+m('je eigen',           reflexive(je,both),                  [je,eigen]).
+m('d\'r eigen',         reflexive(thi,sg),                   ['d\'r',eigen]).
+m('\'r eigen',          reflexive(thi,sg),                   ['\'r',eigen]).
+m('haar eigen',         reflexive(thi,sg),                   [haar,eigen]).
+m('zijn eigen',         reflexive(thi,sg),                   [zijn,eigen]).
+m('z\'n eigen',         reflexive(thi,sg),                   ['z\'n',eigen]).
+m('ons eigen',          reflexive(fir,pl),                   [ons,eigen]).
+m('jullie eigen',       reflexive(je,pl),                    [jullie,eigen]).
+m('u eigen',            reflexive(u,sg),                     [u,eigen]).
+m('uw eigen',           reflexive(u,sg),                     [uw,eigen]).
+m('hun eigen',          reflexive(thi,pl),                   [hun,eigen]).
 
 m(jezelf,       reflexive(je,both),jezelf).
 m(mezelf,       reflexive(fir,sg),mezelf).
