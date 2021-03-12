@@ -36,6 +36,8 @@ postag_of_frame(Var,_,_,_,_) :-
     var(Var),
     !,
     fail.
+postag_of_frame(none,none,none,[],_):-
+    !.
 postag_of_frame(read_from_treebank(PosTag0),none,PosTag,[],_) :-
     !,
     functor(PosTag0,PosTag,_).
@@ -311,6 +313,7 @@ p_of_f(particle(_),part,[]).
 p_of_f(proper_name(Num),name,[num=Num,neclass='MISC']).
 p_of_f(proper_name(Num,Class),name,[num=Num,neclass=Class]).
 
+p_of_f(adv_tag,tag,[]). % no longer used, but occurs in older Treebanks
 p_of_f(tag,tag,[]).
 
 p_of_f(within_word_conjunct,prefix,[]).

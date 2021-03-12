@@ -2064,8 +2064,10 @@ hdrug_command('T',dtedit,[]).
 
 hdrug_command(check_suite,alpino_treebank:check_suite_and_treebank_are_consistent,[]).
 
-hdrug_command(treebank_triples,alpino_treebank:treebank_triples_list(Files),
-		   Files).
+hdrug_command(treebank_triples,alpino_treebank:treebank_triples_list([F|Files]),
+		   [F|Files]).
+
+hdrug_command(treebank_triples,alpino_treebank:treebank_triples,[]).
 
 hdrug_command(treebank_dep_features,alpino_treebank:treebank_dep_features_list(Files),
 		   Files).

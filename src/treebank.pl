@@ -70,6 +70,7 @@
     canonical_xml_file/1,
     canonical_xml_overwrite_files/1,
     empty_xml_files/1,
+    treebank_triples/0,
     treebank_triples_list/1,
     treebank_dep_features_list/1,
     treebank_dep_features_with_file_list/1,
@@ -161,6 +162,14 @@ treebank_lassy_triples_list([]).
 treebank_lassy_triples_list([H|T]) :-
     treebank_lassy_triples(H),
     treebank_lassy_triples_list(T).
+
+treebank_triples :-
+    hdrug_flag(current_ref,Item0),
+    current_ref_treebank(Item0,Item),
+    treebank_directory(GoldDir),
+    format_to_chars("~w/~w.xml",[GoldDir,Item],CharsFile),
+    atom_codes(CorrectFile,CharsFile),
+    treebank_triples(CorrectFile).
 
 treebank_triples(File) :-
     xml_file_to_dt(File,DT),
@@ -1815,6 +1824,9 @@ positions_to_words([deprel(Root/PosList,Rel,Root2/PosList2)|T0],
     pos_to_word(PosList2,Word2,Pos2,Sentence),
     positions_to_words(T0,T,Sentence).
 
+pos_to_word([0,0],W,P,_) :-
+    !,
+    W = none, P = none.
 pos_to_word(top,top,top,_).
 pos_to_word([Pos,_],Word,Pos,Sentence) :-
     lists:nth0(Pos,Sentence,Word).
@@ -2267,3 +2279,4 @@ attribute(Path,N0,Att,PathNext) :-
     atom_codes(PathNext,PathNextChars).
 
 %Atts1 = [his-His|Atts]
+

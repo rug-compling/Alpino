@@ -434,16 +434,18 @@ select_head(HeadRel,Head,Ds0,Ds,Rs0,Rs,Re0,Re) :-
     !,
     dt_to_relations(Label,More,Head,Rs0,Rs,Re0,Re).
 
-%% top level case, select non-lexical -- daughter
-select_head('--',Head,Ds0,Ds,Rs0,Rs,Re0,Re) :-
-    select(tree(r('--',p(Label)),_,More),Ds0,Ds),
-    !,
-    dt_to_relations(p(Label),More,Head,Rs0,Rs,Re0,Re).
-
 %% catch all
 select_head(Rel,Head,Ds0,Ds,Rs0,Rs,Re0,Re) :-
     select(tree(r(Rel,Cat),_,More),Ds0,Ds),
+    \+ Rel = '--',
+    !,
     dt_to_relations(Cat,More,Head,Rs0,Rs,Re0,Re).
+
+%% top level case, select non-lexical -- daughter
+%% since we now have mwu skipped nodes, we will take the
+%% largest non-lexical -- daughter
+select_head('--',Head,Ds,Ds,Rs0,Rs,Re0,Re) :-
+    dt_to_relations(l(none,none,none/[0,0]),[],Head,Rs0,Rs,Re0,Re).
 
 
 head_rel(hd).
@@ -506,14 +508,18 @@ select_head_lemma(HeadRel,Head,Ds0,Ds,Rs0,Rs,Re0,Re) :-
     select(tree(r(HeadRel,Label),_,More),Ds0,Ds),
     !,
     dt_to_relations_lemma(Label,More,Head,Rs0,Rs,Re0,Re).
-select_head_lemma('--',Head,Ds0,Ds,Rs0,Rs,Re0,Re) :-
-    select(tree(r('--',p(Label)),_,More),Ds0,Ds),
-    !,
-    dt_to_relations_lemma(p(Label),More,Head,Rs0,Rs,Re0,Re).
 select_head_lemma(Rel,Head,Ds0,Ds,Rs0,Rs,Re0,Re) :-
     select(tree(r(Rel,Cat),_,More),Ds0,Ds),
+    \+ Rel = '--',
     !,
     dt_to_relations_lemma(Cat,More,Head,Rs0,Rs,Re0,Re).
+
+%% top level case, select non-lexical -- daughter
+%% since we now have mwu skipped nodes, we will take the
+%% largest non-lexical -- daughter
+select_head_lemma('--',Head,Ds,Ds,Rs0,Rs,Re0,Re) :-
+    dt_to_relations_lemma(l(none,none,none/[0,0]),[],Head,Rs0,Rs,Re0,Re).
+
 
 lemma_of_pair(v_root(_Root,Lemma0),Lemma) :-
     !,
@@ -637,28 +643,11 @@ dt_to_relations_harmen(DT,Rels) :-
     relations_simplify_frames(Rels0,Rels1),
     relations_harmen(Rels1,Rels).
 
-:- initialize_flag(triples_include_top,on).
-
 dt_to_relations_start(DT,RELS) :-
-    hdrug_flag(triples_include_top,Bool),
-    dt_to_relations_start(Bool,DT,RELS).
-
-dt_to_relations_start(off,DT,RELS) :-
     dt_to_relations(DT,_,RELS,[],_).
-dt_to_relations_start(on,DT,[TOP|RELS]) :-
-    TOP = deprel(top:(top/top),top/hd,Head),
-    dt_to_relations(DT,Head,RELS,[],_).
     
 dt_to_relations_lemma(DT,RELS) :-
-    hdrug_flag(triples_include_top,Bool),
-    dt_to_relations_lemma(Bool,DT,RELS).
-
-dt_to_relations_lemma(off,DT,RELS) :-
     dt_to_relations_lemma(DT,_,RELS,[],_).
-dt_to_relations_lemma(on,DT,[TOP|RELS]) :-
-    TOP = deprel(top/top,top/hd,Head),
-    dt_to_relations_lemma(DT,Head,RELS,[],_).
-
 
 relations_simplify_frames([],[]).
 relations_simplify_frames([H0|T0],[H|T]) :-
