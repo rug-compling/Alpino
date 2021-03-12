@@ -234,12 +234,20 @@ next_states(St0,St,Done,Input,Items,Skips):-
     sort(Items1,Items).
 
 next_skips(on,St0,Input,Ts0,Ts):-
-    input_word(St0,St,Sym,Input),
-    (   alpino_lexical_analysis:skips(St0,St,Sym)
-    ->  Ts0=Ts
-    ;   Ts0=[i(St,1,1,skip(Sym,St0,St))|Ts]
-    ).
+    input_word(St0,Input,Candidates),
+    next_skips_candidates(Candidates,St0,Ts0,Ts).
 next_skips(off,_,_,Hs,Hs).
+
+next_skips_candidates([],_,Ts,Ts).
+next_skips_candidates([Q-Word|Qs],Q0,Ts0,Ts) :-
+    next_skips_candidate(Q0,Q,Word,Ts0,Ts1),
+    next_skips_candidates(Qs,Q0,Ts1,Ts).
+
+next_skips_candidate(Q0,Q,Word,Ts0,Ts) :-
+    (   alpino_lexical_analysis:skips(Q0,Q,Word)
+    ->  Ts0=Ts
+    ;   Ts0=[i(Q,1,1,skip(Word,Q0,Q))|Ts]
+    ).
 
 %% [x1...xi] [,] [xj...xn]
 %% should not be worse than
@@ -312,9 +320,14 @@ score(Skip,Step,Score) :-
 input_final(Input,Final) :-
     length(Input,Final).
 
-input_word(P,Q,Word,Input) :-
+input_word(P,Input,Qs) :-
+    findall(Q1-Word1,input_word_option(P,Q1,Word1,Input),Qs0),
+    sort(Qs0,Qs).
+
+%% known skips
+input_word_option(P,Q,Word,Input) :-
     alpino_lexical_analysis:user_skips(List),
-    member(mwu(P,Q),List),!,
+    member(mwu(P,Q),List),
     length(Prefix,P),
     append(Prefix,Suffix,Input),
     L is Q-P,
@@ -322,7 +335,13 @@ input_word(P,Q,Word,Input) :-
     append(WordList,_,Suffix),
     concat_all(WordList,Word,' ').
 
-input_word(P,Q,Word,Input) :-
+%% prefer mwu over individual words
+input_word_option(P,Q,Word,_Input) :-
+    alpino_lexical_analysis:tag(P,Q,_,_,_,Word,His,_),
+    \+ His = skip(_,_,_,_).
+
+%% if all else fails
+input_word_option(P,Q,Word,Input) :-
     nth0(P,Input,Word),
     Q is P+1.
 

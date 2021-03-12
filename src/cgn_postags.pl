@@ -775,6 +775,8 @@ exceptional_stem_tag(derden,noun(both,count,pl),              'TW(rang,nom,mv-n)
 exceptional_stem_tag(detineren,nominalized_adjective,         'WW(vd,nom,met-e,mv-n)',detineren).
 exceptional_stem_tag(dode,noun(de,count,pl),                  'ADJ(nom,basis,met-e,mv-n)',dood).
 exceptional_stem_tag(dode,noun(de,count,sg),                  'ADJ(nom,basis,met-e,zonder-n,stan)',dood).
+exceptional_stem_tag(geestelijke,noun(de,count,pl),           'ADJ(nom,basis,met-e,mv-n)',geestelijk).
+exceptional_stem_tag(geestelijke,noun(de,count,sg),           'ADJ(nom,basis,met-e,zonder-n,stan)',geestelijk).
 exceptional_stem_tag(gevangen,particle(_),                    'WW(vd,vrij,zonder)',vangen).
 exceptional_stem_tag(gezien,complementizer,                   'WW(vd,vrij,zonder)',zien).
 exceptional_stem_tag(gezien,preposition(_,_),                 'WW(vd,vrij,zonder)',zien).

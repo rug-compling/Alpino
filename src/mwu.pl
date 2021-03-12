@@ -1,3 +1,19 @@
+
+mwu_postag('me eigen',           ['VNW(pr,pron,obl,red,1,ev)','ADJ(nom,basis,zonder,zonder-n)'],[me,eigen]).
+mwu_postag('mijn eigen',         ['VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)','ADJ(nom,basis,zonder,zonder-n)'],[mijn,eigen]).
+mwu_postag('m\'n eigen',         ['VNW(bez,det,stan,red,1,ev,prenom,zonder,agr)','ADJ(nom,basis,zonder,zonder-n)'],[mijn,eigen]).
+mwu_postag('je eigen',           ['VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)','ADJ(nom,basis,zonder,zonder-n)'],[je,eigen]).
+mwu_postag('d\'r eigen',         ['VNW(pers,pron,obl,red,3v,getal,fem)','ADJ(nom,basis,zonder,zonder-n)'],[haar,eigen]).
+mwu_postag('\'r eigen',          ['VNW(pers,pron,obl,red,3v,getal,fem)','ADJ(nom,basis,zonder,zonder-n)'],[haar,eigen]).
+mwu_postag('haar eigen',         ['VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)','ADJ(nom,basis,zonder,zonder-n)'],[haar,eigen]).
+mwu_postag('zijn eigen',         ['VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)','ADJ(nom,basis,zonder,zonder-n)'],[zijn,eigen]).
+mwu_postag('z\'n eigen',         ['VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)','ADJ(nom,basis,zonder,zonder-n)'],[zijn,eigen]).
+mwu_postag('ons eigen',          ['VNW(bez,det,stan,vol,1,mv,prenom,zonder,evon)','ADJ(nom,basis,zonder,zonder-n)'],[ons,eigen]).
+mwu_postag('jullie eigen',       ['VNW(bez,det,stan,nadr,2v,mv,prenom,zonder,agr)','ADJ(nom,basis,zonder,zonder-n)'],[jullie,eigen]).
+mwu_postag('u eigen',            ['VNW(pers,pron,nomin,vol,2b,getal)','ADJ(nom,basis,zonder,zonder-n)'],[u,eigen]).
+mwu_postag('uw eigen',           ['VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)','ADJ(nom,basis,zonder,zonder-n)'],[u,eigen]).
+mwu_postag('hun eigen',          ['VNW(bez,det,stan,vol,3,mv,prenom,zonder,agr)','ADJ(nom,basis,zonder,zonder-n)'],[hun,eigen]).
+
 mwu_postag('100 meter vrije slag',['TW(hoofd,prenom,stan)','N(soort,ev,basis,zijd,stan)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['100',meter,vrij,slag]).
 mwu_postag('10 jaar Urbanus Live',['TW(hoofd,prenom,stan)','N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,zijd,stan)','ADJ(vrij,basis,zonder)'],['10',jaar,'Urbanus',live]).
 mwu_postag('17 jarige',['TW(hoofd,vrij)','ADJ(prenom,basis,met-e,stan)'],['17',jarig]).
@@ -532,6 +548,7 @@ mwu_postag('Hoge Snelheidslijn',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basi
 mwu_postag('Hoge Vergadering',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[hoog,vergadering]).
 mwu_postag('Hoge Vertegenwoordiger',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[hoog,vertegenwoordiger]).
 mwu_postag('Hollands Glorie',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,zijd,stan)'],['Hollands',glorie]).
+mwu_postag('honderd uit',['TW(hoofd,vrij)','VZ(fin)'],[honderd,uit]).
 mwu_postag('Honderdjarige Oorlog',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[honderjarig,oorlog]).
 mwu_postag('Hoofdstedelijk Parlement',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],[hoofdstedelijk,parlement]).
 mwu_postag('Huis Bernadotte',['N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,zijd,stan)'],[huis,'Bernadotte']).
