@@ -8204,6 +8204,8 @@ v(geef,geeft,geven,gegeven,gaf,gaven,
 	fixed([[de,tijd],i(dat,X),obj_vp(X)],imp_passive),
 	fixed([{[[gestalte],pc(in)]},dat],imp_passive),
 	fixed([[gewonnen],refl],no_passive),
+	fixed([{[acc(moeite)]},refl],imp_passive),
+	fixed([{[acc(moeite),pc(voor)]},refl],imp_passive),
 	fixed([{[[opdracht],pc(tot)]}],imp_passive),
         fixed([[present]],imp_passive),  % Vlaams
 	fixed([{[acc(rekenschap),pc(van)]},refl],imp_passive),
@@ -9027,6 +9029,7 @@ v(haal,haalt,halen,gehaald,haalde,haalden,
 	fixed([[uit,het,slop],acc],norm_passive),
 	fixed([svp_pp(op,hals),acc],norm_passive),
 	fixed([svp_pp(op,hals),{[acc,refl]}],norm_passive),
+	fixed([ap_pred('uit elkaar'),acc],norm_passive),
 	fixed([[voor,de,geest],{[acc,refl]}],norm_passive),
 	fixed([[voor,de,geest],refl,sbar],norm_passive),
         fixed([[de,koekoek],[je]],no_passive),
@@ -12294,6 +12297,7 @@ v(krijg,krijgt,krijgen,gekregen,kreeg,kregen,
 	fixed([[gedaan],het_pobj1(sbar)],no_passive),
 	fixed([[gedaan],nt(sbar)],no_passive),
         fixed([{[[het,schijt],pc(van)]}],no_passive),
+	fixed([[voor,elkaar],acc],no_passive),
 	fixed([[voor,elkaar],het_pobj1(sbar)],no_passive),
 	fixed([[voor,elkaar],nt(sbar)],no_passive),
 	fixed([[voor,mekaar],het_pobj1(sbar)],no_passive),
@@ -28080,7 +28084,7 @@ v(wring,wringt,wringen,gewrongen,wrong,wrongen,
 	part_transitive(uit),
         part_fixed(om,[[de,nek],acc],norm_passive), % kansen de nek om wringen VL
         part_fixed(om,[acc(nek)],norm_passive), % ik ga Bruno zijn nek omwringen VL
-	fixed([no_subj,[de,schoen],ld_adv,[hem]],no_passive),
+	fixed([no_subj,[de,schoen],ld_adv,[hem]],no_passive),  % daar wringt hem de schoen
 	part_intransitive(tegen),  % VL
 	np_ld_pp,
 	np_ld_dir
@@ -28726,6 +28730,7 @@ v(zit,zit,zitten,gezeten,zat,zaten,
 	fixed([{[[in,de,knoop],pc(met)]}],no_passive),
 	fixed([{[[omhoog]]}],no_passive),
 	fixed([{[[omhoog],pc(met)]}],no_passive),
+
 
 	% dat zit er dik in
 	fixed([{[[dik],svp_er_pp(in)]}],no_passive),
