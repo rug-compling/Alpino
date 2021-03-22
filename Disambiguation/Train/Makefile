@@ -1,13 +1,13 @@
-MODEL_NUMBER_ANALYSES=1000
+MODEL_NUMBER_ANALYSES=200
 MODEL_MAX_SENTENCE_LENGTH=400
 TESTDEBUG=
 ESTIMATE=tinyest --l1 0.0001
 
 ## for which we build a model:
-MPARTS=px pp pd pc pZ pw pi pu
+MPARTS=px pp pd pc pZ pw pi pu pl pe
 ## parts which are required for other models:
-TPARTS=px pp pd po pq pc pw pi pu
-TESTPARTS=px pp pd pc pw pi pu
+TPARTS=px pp pd po pq pc pw pi pu pl pe
+TESTPARTS=px pp pd pc pw pi pu pl pe
 
 MIN_FEATURE_FREQ=0
 
@@ -30,6 +30,8 @@ install:
 	cp pc.weights ../../Grammar/cdb/pc_weights.t
 	cp pw.weights ../../Grammar/cdb/pw_weights.t
 	cp pi.weights ../../Grammar/cdb/pi_weights.t
+	cp pl.weights ../../Grammar/cdb/pl_weights.t
+	cp pe.weights ../../Grammar/cdb/pe_weights.t
 	cp pZ.weights ../../Grammar/penalty_weights.t
 
 clean:
@@ -145,11 +147,13 @@ tenfold:
 	$(MAKE) -j $(MPARTS:%=%.zest) 
 	$(MAKE) $(MPARTS:%=%.weights) 
 
-pw_PARTS=cdipux
-pp_PARTS=cdiuwx
-px_PARTS=cdipuw
-pd_PARTS=cipuwx
-pZ_PARTS=cdiopquwx
-pc_PARTS=dipuwx
-pi_PARTS=cdpuwx
-pu_PARTS=cdipwz
+pw_PARTS=cdipuxle
+pp_PARTS=cdiuwxle
+px_PARTS=cdipuwle
+pd_PARTS=cipuwxle
+pZ_PARTS=cdiopquwxle
+pc_PARTS=dipuwxle
+pi_PARTS=cdpuwxle
+pu_PARTS=cdipwzle
+pl_PARTS=cdipwzue
+pe_PARTS=cdipwzul
