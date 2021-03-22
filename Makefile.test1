@@ -209,6 +209,11 @@ reportcurrentscore:
           echo "----- expected:";\
           grep ca-score $(suite)$(part)/score | head -n1; fi
 
+score:
+	@tail -n4 $(suite)/score
+	@$(MAKE) analyse1 files=$(suite)/poslemma
+
+
 suites=leuven_yellow_pages cgn_exs lassy g_suite h_suite i_suite m_suite lot_test_suite1 wpspel extra PPH PPH PPI WIKI WSU
 
 clean:
@@ -608,10 +613,9 @@ analyse0:
 	@echo "        WORD                                    TREEBANK                                PARSER" >>lem
 
 analyse1:
-	@echo $(files)
-	@echo -n "lemma accuracy: "
+	@echo -n "lemma   : "
 	@mistakes=`cat $(files) | grep -c "#LM"` ; \
          cat $(files) | grep 'Lexical analysis: ' | awk "{ N=N+\$$3 } END { print 100*(1 - $$mistakes/N)  }"
-	@echo -n "postag accuracy: "
+	@echo -n "postag  : "
 	@mistakes=`cat $(files) | grep -c "#PT"` ; \
          cat $(files) | grep 'Lexical analysis: ' | awk "{ N=N+\$$3 } END { print 100*(1 - $$mistakes/N) }"
