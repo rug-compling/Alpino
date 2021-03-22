@@ -1247,6 +1247,9 @@ mwu_postag('van een leien dakje',['VZ(init)','LID(onbep,stan,agr)','ADJ(prenom,b
 mwu_postag('van gedachten',['VZ(init)','N(soort,mv,basis)'],[van,gedacht]).
 mwu_postag('van harte',['VZ(init)','N(soort,ev,basis,dat)'],[van,hart]).
 mwu_postag('van heinde en verre',['VZ(init)','BW()','VG(neven)','ADJ(prenom,basis,met-e,stan)'],[van,heinde,en,ver]).
+mwu_postag('van jewelste',['VZ(init)','BW()'],[van,jewelste]).
+mwu_postag('van je welste',['VZ(init)','VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)','BW()'],[van,je,welste]).
+		
 mwu_postag('van kracht',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[van,kracht]).
 mwu_postag('van te voren',['VZ(init)','VZ(init)','BW()'],[van,te,voren]).
 mwu_postag('van toepassing',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[van,toepassing]).
