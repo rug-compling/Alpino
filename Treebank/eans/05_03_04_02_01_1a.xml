@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="4" id="0" rel="top">
+    <node begin="0" cat="smain" end="3" id="1" rel="--">
+      <node begin="0" case="both" def="def" end="1" gen="de" getal="ev" id="2" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" rnum="sg" root="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="Je"/>
+      <node begin="1" end="2" id="3" infl="sg3" lemma="vergissen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="vergis" sc="refl" stype="declarative" tense="present" word="vergist" wvorm="pv"/>
+      <node begin="2" end="3" getal="getal" id="4" lemma="je" naamval="obl" num="both" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pr,pron,obl,red,2v,getal)" pt="vnw" refl="refl" rel="se" rnum="sg" root="je" status="red" vwtype="pr" word="je"/>
+    </node>
+    <node begin="3" end="4" id="5" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Je vergist je .</sentence>
+</alpino_ds>

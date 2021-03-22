@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="sv1" end="8" id="1" rel="--">
+      <node begin="0" end="1" id="2" infl="sg3" lemma="beginnen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="begin" sc="pc_pp(over)" stype="ynquestion" tense="present" word="Begint" wvorm="pv"/>
+      <node begin="1" case="both" def="def" end="2" gen="de" genus="fem" getal="ev" id="3" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,ev,fem)" pt="vnw" rel="su" rnum="sg" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="ze"/>
+      <node begin="2" end="3" id="4" lemma="nou" pos="adv" postag="BW()" pt="bw" rel="mod" root="nou" word="nou"/>
+      <node begin="3" end="4" id="5" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
+      <node begin="4" cat="pp" end="8" id="6" rel="pc">
+        <node begin="4" end="5" id="7" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+        <node begin="5" cat="np" end="8" id="8" rel="obj1">
+          <node begin="5" buiging="zonder" end="6" getal="ev" id="9" infl="pron" lemma="haar" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="haar" status="vol" vwtype="bez" word="haar"/>
+          <node aform="base" begin="6" buiging="met-e" end="7" graad="basis" id="10" infl="e" lemma="vier_waardig" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="vier_waardig" vform="adj" word="vierwaardige"/>
+          <node begin="7" end="8" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lemma="logica" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="logica" word="logica"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Begint ze nou weer over haar vierwaardige logica ?</sentence>
+</alpino_ds>
