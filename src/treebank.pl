@@ -22,6 +22,7 @@
 			     xml_file_to_xml_file/2,
 			     treebank_mwu_roots_list/1,
 			     treebank_dep_features_dt/1,
+			     treebank_dep_features_stdin/0,
 %			     preceding_treebank_file/2,
 %			     following_treebank_file/2,
 			     converse_xml_files/1,
@@ -72,6 +73,7 @@
     empty_xml_files/1,
     treebank_triples/0,
     treebank_triples_list/1,
+    treebank_dep_features_stdin/0,
     treebank_dep_features_list/1,
     treebank_dep_features_with_file_list/1,
     treebank_dep_features_dt/1,
@@ -98,6 +100,25 @@ treebank_dep_features_list([]).
 treebank_dep_features_list([H|T]) :-
     treebank_dep_features(H),!,
     treebank_dep_features_list(T).
+
+treebank_dep_features_stdin :-
+    repeat,
+    read_line(Codes),
+    (   Codes == end_of_file
+    ->  !
+    ;   atom_codes(File,Codes),
+	(   on_exception(Exc,
+			 treebank_dep_features(File),
+			 (  format(user_error,"exception: ~w~n",[Exc])
+			 ,  fail
+			 )
+			)
+	->  true
+	;   format(user_error,"treebank_dep_features failed on ~w~n",[File])
+	),
+	fail
+    ).
+
 
 treebank_dep_features_with_file_list([]).
 treebank_dep_features_with_file_list([H|T]) :-
