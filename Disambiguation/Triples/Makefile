@@ -7,8 +7,69 @@ endif
 endif
 
 PTH=1
-TH=50
-sorted=$(wildcard *.sorted)
+TH=30
+###sorted=$(wildcard *.sorted)
+
+sorted=$(LLSORTED) $(LLESORTED) $(LLRSORTED)
+
+LL=/net/corpora/LassyLarge
+LLE=/net/corpora/LassyLargeExtra
+LLR=/net/shared/vannoord/LassyLargeRestricted
+
+## all except NLWIKI20110804 and EUROPARL, for which there are extended
+## versions in $(LLE)
+LLSORTED=$(LL)/EINDHOVEN.sorted \
+ $(LL)/EMEA.sorted \
+ $(LL)/SENSEVAL.sorted \
+ $(LL)/TROONREDE.sorted \
+ $(LL)/WR-P-E-A.sorted \
+ $(LL)/WR-P-E-C.sorted \
+ $(LL)/WR-P-E-E.sorted \
+ $(LL)/WR-P-E-F.sorted \
+ $(LL)/WR-P-E-G.sorted \
+ $(LL)/WR-P-E-H.sorted \
+ $(LL)/WR-P-E-I.sorted \
+ $(LL)/WR-P-E-J.sorted \
+ $(LL)/WR-P-E-K.sorted \
+ $(LL)/WR-P-E-L.sorted \
+ $(LL)/WR-P-P-B.sorted \
+ $(LL)/WR-P-P-C.sorted \
+ $(LL)/WR-P-P-D.sorted \
+ $(LL)/WR-P-P-E.sorted \
+ $(LL)/WR-P-P-F.sorted \
+ $(LL)/WR-P-P-G.sorted \
+ $(LL)/WR-P-P-H.sorted \
+ $(LL)/WR-P-P-I.sorted \
+ $(LL)/WR-P-P-J.sorted \
+ $(LL)/WR-P-P-K.sorted \
+ $(LL)/WR-U-E-A.sorted \
+ $(LL)/WR-U-E-D.sorted \
+ $(LL)/WR-U-E-E.sorted \
+ $(LL)/WS-U-E-A.sorted \
+ $(LL)/WS-U-T-B.sorted
+
+
+LLESORTED=$(LLE)/Books.sorted \
+ $(LLE)/CHILDES.sorted \
+ $(LLE)/CLEF.sorted \
+ $(LLE)/DGT.sorted \
+ $(LLE)/DutchWebCorpus.sorted \
+ $(LLE)/europarl7.sorted \
+ $(LLE)/GELOOFDERKAMERADEN.sorted \
+ $(LLE)/GlobalVoices.sorted \
+ $(LLE)/JRC-Acquis.sorted \
+ $(LLE)/News-Commentary11.sorted \
+ $(LLE)/ParaCrawl.sorted \
+ $(LLE)/Tatoeba.sorted \
+ $(LLE)/TED2013.sorted \
+ $(LLE)/wiki2017.sorted \
+ $(LLE)/OpenSubtitles2018.sorted \
+
+LLRSORTED=$(LLR)/CGN.sorted \
+ $(LLR)/VK1997.sorted \
+ $(LLR)/TWNC.sorted \
+ $(LLR)/MEDIARGUS.sorted \
+ $(LLR)/NLCOW.sorted
 
 ## remember you might want to use 
 ## export TMPDIR=/dev/shm

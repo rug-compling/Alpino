@@ -7,7 +7,7 @@ USER_MAX=10000000
 
 ### CONSTRUCTING THE ALPINO DATA
 
-TPARTS=px pp pd po pq pc pw pi pu
+TPARTS=px pp pd po pq pc pw pi pu pe pl
 
 data: $(TPARTS:%=%.gz) 
 
@@ -40,7 +40,7 @@ run:
 
 
 realclean:
-	rm -f *gz d_part*.log p_part*.log p?.log p??.log nohup.out
+	rm -f *gz d_part*.log p_part*.log p?.log p??.log ?_part*.log nohup.out
 
 po.gz:
 	$(ALPINO) -flag suite ../../../Suites/ovistrain -flag treebank ../../../Treebank/ovis 2>po.log | gzip > po.gz
@@ -83,6 +83,16 @@ ugz=u_part00001.ugz u_part00002.ugz u_part00003.ugz u_part00004.ugz u_part00005.
 pu.gz: $(ugz)
 	zcat $(ugz) | gzip > pu.gz
 
+egz=e_part00001.egz e_part00002.egz e_part00003.egz e_part00004.egz e_part00005.egz e_part00006.egz e_part00007.egz e_part00008.egz e_part00009.egz e_part00010.egz e_part00011.egz e_part00012.egz e_part00013.egz e_part00014.egz e_part00015.egz e_part00016.egz e_part00017.egz e_part00018.egz e_part00019.egz e_part00020.egz e_part00021.egz e_part00022.egz e_part00023.egz e_part00024.egz e_part00025.egz e_part00026.egz e_part00027.egz e_part00028.egz e_part00029.egz e_part00030.egz e_part00031.egz e_part00032.egz e_part00033.egz e_part00034.egz e_part00035.egz e_part00036.egz e_part00037.egz e_part00038.egz e_part00039.egz e_part00040.egz e_part00041.egz e_part00042.egz e_part00043.egz e_part00044.egz e_part00045.egz e_part00046.egz e_part00047.egz e_part00048.egz e_part00049.egz e_part00050.egz e_part00051.egz e_part00052.egz e_part00053.egz e_part00054.egz e_part00055.egz e_part00056.egz e_part00057.egz e_part00058.egz e_part00059.egz e_part00060.egz e_part00061.egz e_part00062.egz e_part00063.egz e_part00064.egz e_part00065.egz e_part00066.egz e_part00067.egz e_part00068.egz e_part00069.egz e_part00070.egz e_part00071.egz e_part00072.egz e_part00073.egz e_part00074.egz e_part00075.egz e_part00076.egz e_part00077.egz e_part00078.egz e_part00079.egz e_part00080.egz e_part00081.egz e_part00082.egz e_part00083.egz e_part00084.egz e_part00085.egz e_part00086.egz e_part00087.egz e_part00088.egz e_part00089.egz e_part00090.egz e_part00091.egz e_part00092.egz e_part00093.egz e_part00094.egz e_part00095.egz e_part00096.egz e_part00097.egz e_part00098.egz e_part00099.egz e_part00100.egz e_part00101.egz e_part00102.egz e_part00103.egz e_part00104.egz e_part00105.egz e_part00106.egz e_part00107.egz e_part00108.egz e_part00109.egz e_part00110.egz e_part00111.egz e_part00112.egz e_part00113.egz e_part00114.egz e_part00115.egz e_part00116.egz e_part00117.egz e_part00118.egz e_part00119.egz e_part00120.egz e_part00121.egz e_part00122.egz e_part00123.egz e_part00124.egz e_part00125.egz e_part00126.egz e_part00127.egz e_part00128.egz e_part00129.egz e_part00130.egz e_part00131.egz e_part00132.egz e_part00133.egz e_part00134.egz e_part00135.egz e_part00136.egz e_part00137.egz e_part00138.egz e_part00139.egz e_part00140.egz e_part00141.egz e_part00142.egz e_part00143.egz e_part00144.egz e_part00145.egz
+
+pe.gz: $(egz)
+	zcat $(egz) | gzip > pe.gz
+
+lgz=l_part00001.lgz l_part00002.lgz l_part00003.lgz l_part00004.lgz l_part00005.lgz l_part00006.lgz l_part00007.lgz l_part00008.lgz l_part00009.lgz l_part00010.lgz l_part00011.lgz l_part00012.lgz l_part00013.lgz l_part00014.lgz l_part00015.lgz l_part00016.lgz l_part00017.lgz l_part00018.lgz l_part00019.lgz l_part00020.lgz l_part00021.lgz l_part00022.lgz l_part00023.lgz l_part00024.lgz l_part00025.lgz l_part00026.lgz l_part00027.lgz l_part00028.lgz l_part00029.lgz l_part00030.lgz l_part00031.lgz l_part00032.lgz l_part00033.lgz l_part00034.lgz l_part00035.lgz l_part00036.lgz l_part00037.lgz l_part00038.lgz l_part00039.lgz l_part00040.lgz l_part00041.lgz l_part00042.lgz l_part00043.lgz l_part00044.lgz l_part00045.lgz l_part00046.lgz l_part00047.lgz l_part00048.lgz l_part00049.lgz l_part00050.lgz l_part00051.lgz l_part00052.lgz l_part00053.lgz l_part00054.lgz l_part00055.lgz l_part00056.lgz l_part00057.lgz l_part00058.lgz l_part00059.lgz l_part00060.lgz l_part00061.lgz l_part00062.lgz l_part00063.lgz l_part00064.lgz l_part00065.lgz l_part00066.lgz l_part00067.lgz l_part00068.lgz l_part00069.lgz l_part00070.lgz l_part00071.lgz l_part00072.lgz l_part00073.lgz l_part00074.lgz l_part00075.lgz l_part00076.lgz l_part00077.lgz l_part00078.lgz l_part00079.lgz l_part00080.lgz l_part00081.lgz l_part00082.lgz l_part00083.lgz l_part00084.lgz l_part00085.lgz l_part00086.lgz l_part00087.lgz l_part00088.lgz l_part00089.lgz l_part00090.lgz l_part00091.lgz l_part00092.lgz l_part00093.lgz l_part00094.lgz l_part00095.lgz l_part00096.lgz l_part00097.lgz
+
+pl.gz: $(lgz)
+	zcat $(lgz) | gzip > pl.gz
+
 %.xgz: ../../../Suites/X/%.pl
 	$(ALPINO) -flag suite $< -flag treebank ../../../Treebank/extra 2>$*.log | gzip > $*.xgz
 
@@ -103,4 +113,10 @@ pu.gz: $(ugz)
 
 %.ugz: ../../../Suites/U/%.pl
 	$(ALPINO) -flag suite $< -flag treebank ../../../Treebank/WSU 2>$*.log | gzip > $*.ugz
+
+%.egz: ../../../Suites/E/%.pl
+	$(ALPINO) -flag suite $< -flag treebank ../../../Treebank/PE 2>$*.log | gzip > $*.egz
+
+%.lgz: ../../../Suites/L/%.pl
+	$(ALPINO) -flag suite $< -flag treebank ../../../Treebank/PL 2>$*.log | gzip > $*.lgz
 

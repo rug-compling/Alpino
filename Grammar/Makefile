@@ -1,6 +1,6 @@
 #           -*-Mode: makefile;-*-
 
-EXTRA=cdb/pc_weights.t cdb/pd_weights.t cdb/pp_weights.t cdb/px_weights.t cdb/pw_weights.t cdb/pi_weights.t cdb/pu_weights.t
+EXTRA=cdb/pc_weights.t cdb/pd_weights.t cdb/pp_weights.t cdb/px_weights.t cdb/pw_weights.t cdb/pi_weights.t cdb/pu_weights.t cdb/pe_weights.t cdb/pl_weights.t
 
 ifeq "$(shell if [ -r ../Makefile.include ]; then echo yes; fi)" "yes"
 include ../Makefile.include
