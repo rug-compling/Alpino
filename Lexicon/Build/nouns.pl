@@ -16613,7 +16613,7 @@ n([pl(journalistes),sg(journaliste)],de,[],
 
 n([mass(journalistiek)],de,[],[sport]).
 
-n([stem(jou),sg(jouwe),pl(jouwen),pl(jouwe)],both,[]).
+n([sg(jouwe),pl(jouwen),pl(jouwe)],both,[]).
 
 n([mass(jubel)],de,[]).
 

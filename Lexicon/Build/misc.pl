@@ -3299,6 +3299,7 @@ pp([van,horen,zeggen],van).
 pp([van,hot,naar,haar]).
 pp([van,hot,naar,her]).
 pp([van,jewelste]).  % only with nouns, but can be extraposed
+pp([van,je,welste]).  % only with nouns, but can be extraposed
 pp([van,heb,ik,jou,daar]).  % id.
 pp([van,kus,mijn,gat]).     % id; VL
 pp([van,kus,'m\'n',gat]).     % id; VL
