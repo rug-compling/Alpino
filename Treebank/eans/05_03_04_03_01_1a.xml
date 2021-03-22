@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="ap" end="2" id="2" rel="mod">
+        <node begin="0" buiging="zonder" end="1" graad="basis" id="3" lemma="heel" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="heel" special="intensifier" word="Heel"/>
+        <node aform="base" begin="1" buiging="zonder" end="2" graad="basis" id="4" infl="no_e" lemma="langzaam" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="langzaam" vform="adj" word="langzaam"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="sg" lemma="komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom" sc="pc_pp(tot)" stype="declarative" tense="past" word="kwam" wvorm="pv"/>
+      <node begin="3" case="nom" def="def" end="4" gen="de" genus="masc" getal="ev" id="6" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="hij"/>
+      <node begin="4" end="5" id="7" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="mod" root="weer" word="weer"/>
+      <node begin="5" cat="pp" end="7" id="8" rel="pc">
+        <node begin="5" end="6" id="9" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+        <node begin="6" case="dat_acc" def="def" end="7" gen="de" getal="getal" id="10" lemma="zichzelf" naamval="obl" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,nadr,3,getal)" pt="vnw" rel="obj1" rnum="sg" root="zichzelf" status="nadr" vwtype="refl" wh="nwh" word="zichzelf"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Heel langzaam kwam hij weer tot zichzelf .</sentence>
+</alpino_ds>

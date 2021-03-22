@@ -21,33 +21,38 @@
               <node begin="5" cat="ppart" end="24" id="17" rel="vc">
                 <node begin="5" end="6" id="18" index="2" rel="su"/>
                 <node begin="6" buiging="zonder" end="7" id="19" lemma="stijgen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="stijg" word="gestegen" wvorm="vd"/>
-                <node begin="8" cat="pp" end="13" id="20" rel="mod">
+                <node begin="8" cat="pp" end="18" id="20" rel="mod">
                   <node begin="8" end="9" id="21" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-                  <node begin="9" cat="np" end="13" id="22" rel="obj1">
+                  <node begin="9" cat="np" end="18" id="22" rel="obj1">
                     <node begin="9" end="10" id="23" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                    <node begin="10" cat="pp" end="13" id="24" rel="mod">
-                      <node begin="10" end="11" id="25" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
-                      <node begin="11" end="12" id="26" lemma="één" numtype="hoofd" pos="pron" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="één" word="één"/>
-                      <node begin="12" end="13" id="27" lemma="na" pos="part" postag="VZ(fin)" pt="vz" rel="hdf" root="na" vztype="fin" word="na"/>
+                    <node begin="10" cat="ppart" end="17" id="24" rel="mod">
+                      <node begin="10" cat="pp" end="13" id="25" rel="mod">
+                        <node begin="10" end="11" id="26" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+                        <node begin="11" end="12" id="27" lemma="één" numtype="hoofd" pos="pron" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="één" word="één"/>
+                        <node begin="12" end="13" id="28" lemma="na" pos="part" postag="VZ(fin)" pt="vz" rel="hdf" root="na" vztype="fin" word="na"/>
+                      </node>
+                      <node begin="15" buiging="zonder" end="16" graad="sup" id="29" index="3" lemma="hoog" pos="adj" positie="vrij" postag="ADJ(vrij,sup,zonder)" pt="adj" rel="mod" root="hoog" word="hoogst"/>
+                      <node begin="16" buiging="met-e" end="17" id="30" index="4" lemma="klasseren" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="geklasseerd" word="geklasseerde" wvorm="vd"/>
                     </node>
+                    <node begin="17" end="18" getal="mv" graad="basis" id="31" index="5" lemma="wijn" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="wijn" word="wijnen"/>
                   </node>
                 </node>
-                <node begin="13" cat="pp" end="24" id="28" rel="ld">
-                  <node begin="13" end="14" id="29" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
-                  <node begin="14" cat="np" end="24" id="30" rel="obj1">
-                    <node begin="14" end="15" id="31" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                    <node begin="15" cat="ppart" end="17" id="32" rel="mod">
-                      <node begin="15" buiging="zonder" end="16" graad="sup" id="33" lemma="hoog" pos="adj" positie="vrij" postag="ADJ(vrij,sup,zonder)" pt="adj" rel="mod" root="hoog" word="hoogst"/>
-                      <node begin="16" buiging="met-e" end="17" id="34" lemma="klasseren" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="geklasseerd" word="geklasseerde" wvorm="vd"/>
+                <node begin="13" cat="pp" end="24" id="32" rel="ld">
+                  <node begin="13" end="14" id="33" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+                  <node begin="14" cat="np" end="24" id="34" rel="obj1">
+                    <node begin="14" end="15" id="35" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                    <node begin="15" cat="ppart" end="17" id="36" rel="mod">
+                      <node begin="15" end="16" id="37" index="3" rel="mod"/>
+                      <node begin="16" end="17" id="38" index="4" rel="hd"/>
                     </node>
-                    <node begin="17" end="18" getal="mv" graad="basis" id="35" lemma="wijn" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="wijn" word="wijnen"/>
-                    <node begin="19" cat="np" end="24" id="36" rel="app">
-                      <node begin="19" end="20" id="37" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                      <node begin="20" cat="mwu" end="24" id="38" rel="hd">
-                        <node begin="20" end="21" getal="mv" graad="basis" id="39" lemma="premier" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="premiers" word="premiers"/>
-                        <node begin="21" end="22" getal="mv" graad="basis" id="40" lemma="grand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="grands" word="grands"/>
-                        <node begin="22" end="23" getal="mv" graad="basis" id="41" lemma="crus" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="crus" word="crus"/>
-                        <node begin="23" end="24" getal="mv" graad="basis" id="42" lemma="classés" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="classés" word="classés"/>
+                    <node begin="17" end="18" id="39" index="5" rel="hd"/>
+                    <node begin="19" cat="np" end="24" id="40" rel="app">
+                      <node begin="19" end="20" id="41" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                      <node begin="20" cat="mwu" end="24" id="42" rel="hd">
+                        <node begin="20" end="21" getal="mv" graad="basis" id="43" lemma="premier" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="premiers" word="premiers"/>
+                        <node begin="21" end="22" getal="mv" graad="basis" id="44" lemma="grand" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="grands" word="grands"/>
+                        <node begin="22" end="23" getal="mv" graad="basis" id="45" lemma="crus" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="crus" word="crus"/>
+                        <node begin="23" end="24" getal="mv" graad="basis" id="46" lemma="classés" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="classés" word="classés"/>
                       </node>
                     </node>
                   </node>
@@ -58,7 +63,7 @@
         </node>
       </node>
     </node>
-    <node begin="24" end="25" id="43" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+    <node begin="24" end="25" id="47" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Welke bordeauxwijn is de enige die gestegen is van de op één na naar de hoogst geklasseerde wijnen , de premiers grands crus classés ?</sentence>
 </alpino_ds>
