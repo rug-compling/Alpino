@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
-  <node begin="0" cat="top" end="9" id="0" rel="top">
-    <node begin="1" end="2" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" special="dubb_punt" word=":"/>
-    <node begin="0" cat="du" end="8" id="2" rel="--">
-      <node begin="0" end="1" id="3" lemma="A" pos="tag" postag="SPEC(symb)" pt="spec" rel="tag" root="A" spectype="symb" word="A"/>
-      <node begin="2" cat="whq" end="8" id="4" rel="nucl">
-        <node begin="2" case="both" def="indef" end="3" gen="het" getal="ev" id="5" index="1" lemma="wat" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" rnum="sg" root="wat" special="nparg" status="vol" vwtype="vb" wh="ywh" word="Wat"/>
-        <node begin="2" cat="sv1" end="8" id="6" rel="body">
-          <node begin="2" end="3" id="7" index="1" rel="obj1"/>
-          <node begin="3" end="4" id="8" infl="pl" lemma="zien" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zie" sc="aci" stype="whquestion" tense="present" word="zien" wvorm="pv"/>
-          <node begin="4" case="both" def="def" end="5" gen="de" getal="mv" id="9" lemma="jullie" naamval="stan" num="pl" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,stan,nadr,2v,mv)" pt="vnw" rel="su" rnum="pl" root="jullie" status="nadr" vwtype="pers" wh="nwh" word="jullie"/>
-          <node begin="2" cat="inf" end="8" id="10" rel="vc">
-            <node begin="2" end="3" id="11" index="1" rel="su"/>
-            <node begin="5" cat="pp" end="7" id="12" rel="pc">
-              <node begin="5" end="6" id="13" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-              <node begin="6" case="both" def="def" end="7" gen="de" getal="getal" id="14" lemma="je" naamval="obl" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pr,pron,obl,red,2v,getal)" pt="vnw" rel="obj1" rnum="sg" root="je" special="wkpro" status="red" vwtype="pr" wh="nwh" word="je"/>
-            </node>
-            <node begin="7" buiging="zonder" end="8" id="15" infl="inf(no_e)" lemma="staan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="sta" sc="pc_pp(voor)" word="staan" wvorm="inf"/>
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="whq" end="6" id="1" rel="--">
+      <node begin="0" case="both" def="indef" end="1" gen="het" getal="ev" id="2" index="1" lemma="wat" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" rnum="sg" root="wat" special="nparg" status="vol" vwtype="vb" wh="ywh" word="Wat"/>
+      <node begin="0" cat="sv1" end="6" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="obj1"/>
+        <node begin="1" end="2" id="5" infl="pl" lemma="zien" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="zie" sc="aci" stype="whquestion" tense="present" word="zien" wvorm="pv"/>
+        <node begin="2" case="both" def="def" end="3" gen="de" getal="mv" id="6" lemma="jullie" naamval="stan" num="pl" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,stan,nadr,2v,mv)" pt="vnw" rel="su" rnum="pl" root="jullie" status="nadr" vwtype="pers" wh="nwh" word="jullie"/>
+        <node begin="0" cat="inf" end="6" id="7" rel="vc">
+          <node begin="0" end="1" id="8" index="1" rel="su"/>
+          <node begin="3" cat="pp" end="5" id="9" rel="ld">
+            <node begin="3" end="4" id="10" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+            <node begin="4" case="both" def="def" end="5" gen="de" getal="getal" id="11" lemma="je" naamval="obl" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pr,pron,obl,red,2v,getal)" pt="vnw" rel="obj1" rnum="sg" root="je" special="wkpro" status="red" vwtype="pr" wh="nwh" word="je"/>
           </node>
+          <node begin="5" buiging="zonder" end="6" id="12" infl="inf(no_e)" lemma="staan" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="sta" sc="ld_pp" word="staan" wvorm="inf"/>
         </node>
       </node>
     </node>
-    <node begin="8" end="9" id="16" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+    <node begin="6" end="7" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
   </node>
-  <sentence>A : Wat zien jullie voor je staan ?</sentence>
+  <sentence>Wat zien jullie voor je staan ?</sentence>
 </alpino_ds>
