@@ -1112,6 +1112,38 @@ lexicon__(Word,Cat,Label,Ws,Ws,variant(His),LC) :-
     parse_only_variant(Word,Word1,Cat),
     lexicon__(Word1,Cat,Label,Ws,Ws,His,LC).
 
+%% op m'n eentje
+lexicon__(op,pp,Label1,Ws0,Ws,'in mijn eentje',_) :-
+    lists:member(W/L,[zijn/  zijn,
+		      'z\'n'/zijn,
+		      haar/  haar,
+		      'd\'r'/haar,
+		      mijn/  mijn,
+		      'm\'n'/mijn,
+		      ons/   ons,
+		      jullie/jullie,
+		      hun/   hun,
+		      je/    je]),
+    next_word(W,Ws0,Ws1,_),
+    next_word(eentje,Ws1,Ws,_),
+    hdrug_util:concat_all([op,L,één],Label1,' ').
+
+%% in je eentje
+lexicon__(in,pp,Label1,Ws0,Ws,'in mijn eentje',_) :-
+    lists:member(W/L,[zijn/  zijn,
+		      'z\'n'/zijn,
+		      haar/  haar,
+		      'd\'r'/haar,
+		      mijn/  mijn,
+		      'm\'n'/mijn,
+		      ons/   ons,
+		      jullie/jullie,
+		      hun/   hun,
+		      je/    je]),
+    next_word(W,Ws0,Ws1,_),
+    next_word(eentje,Ws1,Ws,_),
+    hdrug_util:concat_all([op,L,één],Label1,' ').
+
 %% special stuff for verbs
 %% dat hij daar tegen inbracht dat ...
 %% hij bracht daar [tegenin] dat ...

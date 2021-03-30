@@ -12487,7 +12487,8 @@ v(kus,kust,kussen,gekust,kuste,kusten,
     [h([intransitive,
 	transitive,
 	fixed([[gedag]],imp_passive),
-	fixed([dat,[gedag]],imp_passive),
+	fixed([[gedag],dat],imp_passive),
+	fixed([acc(hand),dat],imp_passive),
 	np_ld_pp])]).
 
 v(kut,kut,kutten,gekut,kutte,kutten,
@@ -12613,7 +12614,7 @@ v(laak,laakt,laken,gelaakt,laakte,laakten,
 v(laat,laat,laten,gelaten,liet,lieten,
     [h([aci,            % ik liet de kinderen het liedje zingen
 	aci_no_obj,     % ik liet de schilderijen stelen
-	% Gerlof: ik laat de boeken aan hem zien / ik laat hem de boeken zien
+	% Gerlof Bouma: ik laat de boeken aan hem zien / ik laat hem de boeken zien
 	% isn't this obj2? Yes. Further evidence because of unexpected vp and sbar arg's
 	fixed([vc(hoor,inf,intransitive),vp],no_passive),
 	fixed([vc(hoor,inf,intransitive),dat,vp],no_passive),
