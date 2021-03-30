@@ -46,8 +46,6 @@ number(één,hoofd(sg_num)).
 number(N,hoofd(pl_num)) :-
     nm(N).
 
-nm(tweetjes).
-
 nm(nul).
 
 nm([nul,komma,nul]).

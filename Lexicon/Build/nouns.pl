@@ -4213,7 +4213,7 @@ n([pl(beloningen),sg(beloning)],de,[],
   [prestatie,
    dim(beloninkje)]).
 
-n([pl(belopen),sg(beloop)],het,[]).
+n([pl(belopen),sg(beloop)],het,[pred_pp(op)]).
 
 n([sg(belt),pl(belten)],de,[]).
 
@@ -13946,7 +13946,7 @@ n([sg([haantje,de,voorste])],het,[]).
 n([pl(haren),sg(haar)],de,[],[dim(haartje)]).
 n([mass(haar)],het,[]).
 
-n([stem(haar),sg(hare),pl(hare)],both,[]).
+n([sg(hare),pl(hare)],both,[]).
 
 n([pl(haarden),sg(haard)],de,[]).
 

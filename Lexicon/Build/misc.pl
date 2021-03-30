@@ -4273,10 +4273,10 @@ with_dt([met,Hun,Tweeen],
 	adjective(pred(padv)),
 	dt(pp,[hd=l(met,preposition(met,[]),0,1),
 	       obj1=dt(np,[det=l(Hun,determiner(pron),detp,1,2),
-			   hd=l(Lemma,noun(both,both,pl),2,3)])])) :-
+			   hd=l(Lemma,Postag,Cat,2,3)])])) :-
 
     zijn(Hun),
-    wij_allebei(Tweeen,Lemma).
+    wij_allebei(Tweeen,Lemma,Postag,Cat).
 
 zijn(ons).
 zijn(jullie).
@@ -4502,6 +4502,9 @@ m(zodanig,          sbar_adjective(e),          zodanige).
 m(zoveel,           sbar_adjective(no_e(odet_adv)),  zoveel).
 m(zoveel,           sbar_adjective(e),          zovele).
 m(zozeer,           sbar_adjective(both(adv)),  zozeer).
+
+m(dergelijk,        sbar_adjective(e),          dergelijke).
+m(dergelijk,        sbar_adjective(no_e(adv)),  dergelijk).
 
 m('in die mate',    sbar_pred_adjective(adv),[in,die,mate]).
 m('bij zoverre',    sbar_pred_adjective(adv),[bij,zoverre]).
@@ -6381,6 +6384,7 @@ mod_hd_adverb(te,       dikwijls).
 mod_hd_adverb(hoegenaamd,     niet).
 mod_hd_adverb(heus,      niet).
 mod_hd_adverb(toch,      niet).
+mod_hd_adverb(vast,      niet).
 mod_hd_adverb(wellicht,  niet).
 
 mod_hd_adverb(niet,     altijd).
@@ -6514,9 +6518,9 @@ predm_adverb(zelf).
 with_dt([Wij,WORD],
         Tag,
 	dt(np,[hd=l(Wij,Tag,0,1),
-	       mod=l(PREDM,predm_adverb,advp,1,2)])) :-
+	       mod=l(PREDM,Tag,Cat,1,2)])) :-
     wij_allebei_wij(Wij,Tag),
-    wij_allebei(WORD,PREDM).
+    wij_allebei(WORD,PREDM,Tag,Cat).
 
 wij_allebei_wij(wij,pronoun(nwh,fir,pl,de,nom,def)).
 wij_allebei_wij(jullie,pronoun(nwh,je,pl,de,both,def)).
@@ -6526,34 +6530,32 @@ wij_allebei_wij(hen,pronoun(nwh,thi,pl,de,dat_acc,def)).
 wij_allebei_wij(zij,pronoun(nwh,thi,both,de,nom,def)).
 wij_allebei_wij(u,pronoun(nwh,u,sg,de,both,def)).
 
-wij_allebei(Stem,Stem) :-
-    wij_allebei(Stem).
-wij_allebei(beiden,beide).
-wij_allebei(allen,al).
-
-wij_allebei(allemaal).
-wij_allebei(allebei).
-wij_allebei(beidjes).
-
-wij_allebei(tweeën).
-wij_allebei(drieën).
-wij_allebei(tweeen).
-wij_allebei(drieen).
-wij_allebei(vieren).
-wij_allebei(vijven).
-wij_allebei(zessen).
-wij_allebei(zevenen).
-wij_allebei(achten).
-wij_allebei(negenen).
-wij_allebei(tienen).
-wij_allebei(tweetjes).
-wij_allebei(drietjes).
-wij_allebei(viertjes).
-wij_allebei(vijfjes).
-wij_allebei(zesjes).
+wij_allebei(beiden,   beide,     predm_adverb,       advp).
+wij_allebei(allen,    al,        predm_adverb,       advp).
+wij_allebei(allemaal, allemaal,  predm_adverb,       advp).
+wij_allebei(allebei,  allebei,   predm_adverb,       advp).
+wij_allebei(beidjes,  beide_DIM, noun(het,count,pl), np).
 
 %% VL
-wij_allebei(twee).
+wij_allebei(twee,     twee,      noun(de,count,sg),  np).
+%% 
+wij_allebei(tweeën,   twee,      noun(de,count,pl),  np).
+wij_allebei(drieën,   drie,      noun(de,count,pl),  np).
+wij_allebei(tweeen,   twee,      noun(de,count,pl),  np).
+wij_allebei(drieen,   drie,      noun(de,count,pl),  np).
+wij_allebei(vieren,   vier,      noun(de,count,pl),  np).
+wij_allebei(vijven,   vijf,      noun(de,count,pl),  np).
+wij_allebei(zessen,   zes,       noun(de,count,pl),  np).
+wij_allebei(zevenen,  zeven,     noun(de,count,pl),  np).
+wij_allebei(achten,   acht,      noun(de,count,pl),  np).
+wij_allebei(negenen,  negen,     noun(de,count,pl),  np).
+wij_allebei(tienen,   tien,      noun(de,count,pl),  np).
+wij_allebei(tweetjes, twee_DIM,  noun(het,count,pl), np).
+wij_allebei(drietjes, drie_DIM,  noun(het,count,pl), np).
+wij_allebei(viertjes, vier_DIM,  noun(het,count,pl), np).
+wij_allebei(vijfjes,  vijf_DIM,  noun(het,count,pl), np).
+wij_allebei(zesjes,   zes_DIM,   noun(het,count,pl), np).
+
 
 
 m(eenmaal,eenmaal_adverb,eenmaal).
@@ -8882,8 +8884,6 @@ m(datti,complementizer(datti),'dat-i').
 m(datti,complementizer(datti),'dat-ie').
 m(datti,complementizer(datti),dattie).
 m(datti,complementizer(datti),datie).
-
-
 
 %%% these are the most frequent productive with_dt phrases.
 %%% they are included here for the sole purpose of generation
