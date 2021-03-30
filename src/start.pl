@@ -407,6 +407,11 @@ disamb_options :-
     set_flag(number_analyses,4),
     set_flag(list_all_maxent_features,on).
 
+annotate_options :-
+    veryfast_options,
+    set_flag(pos_tagger,off),
+    set_flag(use_guides,off).
+
 fast_options :-
     set_flag(after_timeout_options,on),
     set_flag(disambiguation,on),
@@ -457,6 +462,7 @@ testN_options :-
     set_flag(display_main_parts,off),
     set_flag(display_quality,off).
 
+hdrug_command(ann,annotate_options,[]).
 hdrug_command(test1,test1_options,[]).
 hdrug_command(testN,testN_options,[]).
 hdrug_command(veryfast,veryfast_options,[]).
