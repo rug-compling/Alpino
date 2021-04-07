@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="7" end="8" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="12" id="2" rel="--">
+      <node begin="0" cat="np" end="7" id="3" rel="su">
+        <node begin="0" case="nom" def="def" end="1" gen="de" getal="mv" id="4" lemma="zij" naamval="nomin" num="both" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="hd" rnum="pl" root="zij" status="vol" vwtype="pers" wh="nwh" word="Zij"/>
+        <node begin="1" cat="rel" end="7" id="5" rel="mod">
+          <node begin="1" case="no_obl" end="2" gen="de" getal="getal" id="6" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" rnum="pl" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+          <node begin="1" cat="ssub" end="7" id="7" rel="body">
+            <node begin="1" end="2" id="8" index="1" rel="su"/>
+            <node begin="1" cat="ti" end="6" id="9" rel="vc">
+              <node begin="4" end="5" id="10" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+              <node begin="1" cat="inf" end="6" id="11" rel="body">
+                <node begin="1" end="2" id="12" index="1" rel="su"/>
+                <node begin="2" case="dat_acc" def="def" end="3" gen="de" getal="getal" id="13" lemma="zichzelf" naamval="obl" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(refl,pron,obl,nadr,3,getal)" pt="vnw" rel="obj2" rnum="sg" root="zichzelf" status="nadr" vwtype="refl" wh="nwh" word="zichzelf"/>
+                <node begin="3" end="4" gen="het" getal="ev" id="14" lemma="niets" naamval="stan" num="sg" pdtype="pron" persoon="3o" pos="noun" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="obj1" rnum="sg" root="niets" special="meas_mod" status="vol" vwtype="onbep" word="niets"/>
+                <node begin="5" buiging="zonder" end="6" id="15" infl="inf" lemma="verwijten" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="verwijt" sc="np_np" word="verwijten" wvorm="inf"/>
+              </node>
+            </node>
+            <node begin="6" end="7" id="16" infl="pl" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" sc="subj_control(pass_te)" tense="present" word="hebben" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+      <node begin="8" end="9" id="17" infl="pl" lemma="werpen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="werp" sc="transitive" stype="declarative" tense="present" word="werpen" wvorm="pv"/>
+      <node begin="9" cat="np" end="12" id="18" rel="obj1">
+        <node begin="9" end="10" id="19" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="10" end="11" id="20" lemma="één" naamval="stan" numtype="rang" pos="num" positie="prenom" postag="TW(rang,prenom,stan)" pt="tw" rel="mod" root="één" special="rang" word="eerste"/>
+        <node begin="11" end="12" gen="both" genus="zijd" getal="ev" graad="basis" id="21" lemma="steen" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="steen" word="steen"/>
+      </node>
+    </node>
+    <node begin="12" end="13" id="22" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Zij die zichzelf niets te verwijten hebben , werpen de eerste steen .</sentence>
+</alpino_ds>

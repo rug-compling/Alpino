@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="7" id="2" rel="--">
+      <node begin="0" cat="whrel" end="3" id="3" index="1" rel="su">
+        <node begin="0" end="1" getal="getal" id="4" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="Die" status="vol" vwtype="betr" word="Die"/>
+        <node begin="0" cat="ssub" end="3" id="5" rel="body">
+          <node begin="0" end="1" id="6" index="2" rel="su"/>
+          <node begin="0" cat="inf" end="2" id="7" rel="vc">
+            <node begin="0" end="1" id="8" index="2" rel="su"/>
+            <node begin="1" buiging="zonder" end="2" id="9" lemma="komen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kom" word="komen" wvorm="inf"/>
+          </node>
+          <node begin="2" end="3" id="10" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" word="wil" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="4" end="5" id="11" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" word="moet" wvorm="pv"/>
+      <node begin="0" cat="inf" end="7" id="12" rel="vc">
+        <node begin="0" end="3" id="13" index="1" rel="su"/>
+        <node begin="5" end="6" id="14" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
+        <node begin="6" buiging="zonder" end="7" id="15" lemma="betalen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="betaal" word="betalen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Die komen wil , moet nu betalen .</sentence>
+</alpino_ds>

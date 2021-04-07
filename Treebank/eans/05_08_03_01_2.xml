@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="18" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="12" end="13" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="17" id="3" rel="--">
+      <node begin="0" cat="np" end="12" id="4" index="1" rel="su">
+        <node begin="0" end="1" id="5" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node aform="base" begin="1" buiging="met-e" end="2" graad="basis" id="6" infl="e" lemma="antiek" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="antiek" vform="adj" word="antieke"/>
+        <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="7" lemma="klok" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="klok" word="klok"/>
+        <node begin="3" cat="pp" end="12" id="8" rel="mod">
+          <node begin="3" end="4" id="9" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+          <node begin="4" cat="np" end="12" id="10" rel="obj1">
+            <node begin="4" buiging="zonder" end="5" getal="ev" id="11" infl="pron" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+            <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="12" lemma="tante" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="tante" word="tante"/>
+            <node begin="7" cat="rel" end="12" id="13" rel="mod">
+              <node begin="7" case="no_obl" end="8" gen="de" getal="getal" id="14" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" rnum="sg" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+              <node begin="7" cat="ssub" end="12" id="15" rel="body">
+                <node begin="7" end="8" id="16" index="2" rel="su"/>
+                <node begin="8" cat="ap" end="11" id="17" rel="predc">
+                  <node begin="8" cat="np" end="10" id="18" rel="obj1">
+                    <node begin="8" end="9" id="19" infl="pl_num" lemma="duizend" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="duizend" special="hoofd" word="duizend"/>
+                    <node begin="9" end="10" gen="de" genus="zijd" getal="ev" graad="basis" id="20" lemma="gulden" naamval="stan" ntype="soort" num="meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="gulden" special="meas_mod" word="gulden"/>
+                  </node>
+                  <node begin="10" buiging="zonder" end="11" graad="basis" id="21" lemma="waard" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="waard" special="np" word="waard"/>
+                </node>
+                <node begin="11" end="12" id="22" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="copula" tense="past" word="was" wvorm="pv"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node begin="13" end="14" id="23" infl="sg" lemma="blijken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="blijk" sc="aux(te)" stype="declarative" tense="past" word="bleek" wvorm="pv"/>
+      <node begin="0" cat="ti" end="17" id="24" rel="vc">
+        <node begin="15" end="16" id="25" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+        <node begin="0" cat="inf" end="17" id="26" rel="body">
+          <node begin="0" end="12" id="27" index="1" rel="su"/>
+          <node begin="0" cat="ppart" end="15" id="28" rel="vc">
+            <node begin="0" end="12" id="29" index="1" rel="obj1"/>
+            <node begin="14" buiging="zonder" end="15" id="30" infl="psp" lemma="stelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="steel" sc="transitive" word="gestolen" wvorm="vd"/>
+          </node>
+          <node begin="16" buiging="zonder" end="17" id="31" infl="inf" lemma="zijn" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="ben" sc="passive" word="zijn" wvorm="inf"/>
+        </node>
+      </node>
+    </node>
+    <node begin="17" end="18" id="32" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>De antieke klok van mijn tante , die duizend gulden waard was , bleek gestolen te zijn .</sentence>
+</alpino_ds>

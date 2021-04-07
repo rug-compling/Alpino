@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="7" id="2" rel="--">
+      <node begin="0" cat="whrel" end="4" id="3" index="1" rel="su">
+        <node begin="0" case="both" def="indef" end="1" gen="de" getal="getal" id="4" index="2" lemma="wie" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="rhd" rnum="sg" root="wie" status="vol" vwtype="vb" wh="ywh" word="Wie"/>
+        <node begin="0" cat="ssub" end="4" id="5" rel="body">
+          <node begin="0" end="1" id="6" index="2" rel="su"/>
+          <node begin="0" cat="inf" end="3" id="7" rel="vc">
+            <node begin="0" end="1" id="8" index="2" rel="su"/>
+            <node begin="1" end="2" id="9" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+            <node begin="2" buiging="zonder" end="3" id="10" infl="inf" lemma="horen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="hoor" sc="intransitive" word="horen" wvorm="inf"/>
+          </node>
+          <node begin="3" end="4" id="11" infl="modal_not_u" lemma="willen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="wil" sc="modifier(aux(inf))" tense="present" word="wil" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="5" end="6" id="12" infl="sg" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" sc="modifier(aux(inf))" stype="declarative" tense="present" word="moet" wvorm="pv"/>
+      <node begin="0" cat="inf" end="7" id="13" rel="vc">
+        <node begin="0" end="4" id="14" index="1" rel="su"/>
+        <node begin="6" buiging="zonder" end="7" id="15" infl="inf" lemma="voelen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voel" sc="intransitive" word="voelen" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Wie niet horen wil , moet voelen .</sentence>
+</alpino_ds>

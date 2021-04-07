@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="0" cat="smain" end="8" id="2" rel="--">
+      <node begin="0" cat="whrel" end="5" id="3" rel="predc">
+        <node begin="0" end="1" getal="ev" id="4" index="1" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="Wat"/>
+        <node begin="0" cat="ssub" end="5" id="5" rel="body">
+          <node begin="0" end="1" id="6" index="1" rel="obj1"/>
+          <node begin="1" end="2" getal="ev" id="7" lemma="ik" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" root="ik" status="vol" vwtype="pers" word="ik"/>
+          <node begin="2" cat="pp" end="4" id="8" rel="mod">
+            <node begin="2" end="3" id="9" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="10" lemma="werkelijkheid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="werkelijkheid" word="werkelijkheid"/>
+          </node>
+          <node begin="4" end="5" id="11" lemma="zien" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zie" word="zag" wvorm="pv"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="12" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
+      <node begin="7" end="8" getal="mv" graad="basis" id="13" lemma="duikboot" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="su" root="duikboot" word="duikboten"/>
+    </node>
+    <node begin="8" end="9" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Wat ik in werkelijkheid zag , waren duikboten .</sentence>
+</alpino_ds>

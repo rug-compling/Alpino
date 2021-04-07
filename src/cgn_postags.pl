@@ -527,6 +527,13 @@ context_dependent_tag(determiner(zulke,nwh,nmod,pro,yparg),PosTag,Stem,Q0,Q,Resu
     ;   det_pron(Stem,PosTag,_)
     ).
 
+context_dependent_tag(determiner(zulk),PosTag,Stem,Q0,Q,Result) :-
+    find_path(Q0,Q,Result,Path),
+    (   pronoun_path(Path)
+    ->  det_pron(Stem,_,PosTag)
+    ;   det_pron(Stem,PosTag,_)
+    ).
+
 context_dependent_tag(determiner(pl_num,nwh,nmod,pro,yparg),PosTag,Stem,Q0,Q,Result) :-
     find_path(Q0,Q,Result,Path),
     (   pronoun_path(Path)
@@ -1920,7 +1927,8 @@ det_pron(weinig,      'VNW(onbep,grad,stan,prenom,zonder,agr,basis)',   'VNW(onb
 det_pron(welk,        'VNW(vb,det,stan,prenom,zonder,evon)',            'VNW(vb,det,stan,nom,met-e,zonder-n)').   % want "zonder,basis" oid bestaat niet in tag-set!!
 det_pron(welke,       'VNW(vb,det,stan,prenom,met-e,rest)',             'VNW(vb,det,stan,nom,met-e,zonder-n)').
 det_pron(zoveel,      'TW(hoofd,prenom,stan)',                          'TW(hoofd,vrij)').
-det_pron(zulke,       'VNW(aanw,det,stan,prenom,met-e,rest)',           'VNW(aanw,det,stan,nom,met-e,zonder-n)').  % want "rest" oid ipv "zonder-n" bestaat niet in tag-set!!
+det_pron(zulke,       'VNW(aanw,det,stan,prenom,met-e,rest)',           'VNW(aanw,det,stan,nom,met-e,zonder-n)'). % want "rest" oid ipv "zonder-n" bestaat niet in tag-set!!
+det_pron(zulk,        'VNW(aanw,det,stan,prenom,zonder,evon)',          'VNW(aanw,det,stan,vrij,zonder)').
 
 cgn_postag_proper(Postag,Stem0,Stem,Q0,Q,Result,SUB) :-
     stem_al(Stem0,Stem),

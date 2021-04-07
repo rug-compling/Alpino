@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node aform="base" begin="0" buiging="met-e" end="1" graad="basis" id="3" infl="e" lemma="Nederlands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="Nederlands" vform="adj" word="Nederlandse"/>
+        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="toneel_speler" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="toneel_speler" word="toneelspelers"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" word="zijn" wvorm="pv"/>
+      <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="6" infl="no_e" lemma="waardeloos" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="waardeloos" vform="adj" word="waardeloos"/>
+    </node>
+    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Nederlandse toneelspelers zijn waardeloos .</sentence>
+</alpino_ds>

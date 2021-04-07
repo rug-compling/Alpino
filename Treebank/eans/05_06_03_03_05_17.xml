@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="15" id="0" rel="top">
+    <node begin="1" end="2" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="14" id="2" rel="--">
+      <node begin="0" cat="np" end="6" id="3" rel="su">
+        <node begin="0" end="1" gen="de" genus="zijd" getal="ev" graad="basis" id="4" lemma="mevrouw" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="mevrouw" word="Mevrouw"/>
+        <node begin="2" cat="np" end="6" id="5" rel="app">
+          <node begin="2" cat="detp" end="5" id="6" rel="det">
+            <node begin="2" cat="np" end="4" id="7" rel="mod">
+              <node begin="2" buiging="zonder" end="3" getal="ev" id="8" infl="pron" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+              <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="man" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="man" word="man"/>
+            </node>
+            <node begin="4" buiging="zonder" end="5" getal="ev" id="10" infl="sg" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)" pt="vnw" rel="hd" rnum="sg" root="zijn" special="gen" status="red" vwtype="bez" word="z&apos;n"/>
+          </node>
+          <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lemma="baard" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="baard" word="baard"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="12" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node begin="7" cat="ap" end="14" id="13" rel="predc">
+        <node aform="compar" begin="7" buiging="zonder" end="8" graad="comp" id="14" infl="no_e" lemma="lang" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="hd" root="lang" vform="adj" word="langer"/>
+        <node begin="8" cat="cp" end="14" id="15" rel="obcomp">
+          <node begin="8" conjtype="onder" end="9" id="16" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+          <node begin="9" cat="np" end="14" id="17" rel="body">
+            <node begin="9" end="10" getal="getal" id="18" infl="de" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="hd" rnum="sg" root="die" status="vol" vwtype="aanw" wh="nwh" word="die"/>
+            <node begin="10" cat="pp" end="14" id="19" rel="mod">
+              <node begin="10" end="11" id="20" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="11" cat="np" end="14" id="21" rel="obj1">
+                <node begin="11" end="12" getal="getal" id="22" infl="de" lemma="die" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(aanw,pron,stan,vol,3,getal)" pt="vnw" rel="hd" rnum="sg" root="die" status="vol" vwtype="aanw" wh="nwh" word="die"/>
+                <node begin="12" cat="pp" end="14" id="23" rel="mod">
+                  <node begin="12" end="13" id="24" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+                  <node begin="13" case="both" def="def" end="14" gen="de" getal="getal" id="25" lemma="u" naamval="obl" num="sg" pdtype="pron" per="u" persoon="2" pos="pron" postag="VNW(pr,pron,obl,vol,2,getal)" pt="vnw" rel="obj1" rnum="sg" root="u" status="vol" vwtype="pr" wh="nwh" word="u"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="14" end="15" id="26" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Mevrouw , mijn man z&apos;n baard is langer dan die van die van u .</sentence>
+</alpino_ds>

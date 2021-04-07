@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="conj" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="zowel" pos="vg" postag="BW()" pt="bw" rel="crd" root="zowel" special="left" word="zowel"/>
+      <node begin="1" cat="np" end="3" id="3" rel="cnj">
+        <node begin="1" buiging="zonder" end="2" getal="ev" id="4" infl="pron" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+        <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="5" lemma="ruit_wisser" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="ruit_wisser" word="ruitewisser"/>
+      </node>
+      <node begin="3" conjtype="onder" end="4" id="6" lemma="als" pos="vg" postag="VG(onder)" pt="vg" rel="crd" root="als" special="right" word="als"/>
+      <node begin="4" cat="np" end="6" id="7" rel="cnj">
+        <node begin="4" end="5" id="8" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="5" buiging="met-e" end="6" gen="both" getal="ev" getal-n="zonder-n" id="9" lemma="zijn" naamval="stan" num="both" pdtype="det" persoon="3m" pos="noun" positie="nom" postag="VNW(bez,det,stan,vol,3m,ev,nom,met-e,zonder-n)" pt="vnw" rel="hd" rnum="sg" root="zijne" status="vol" vwtype="bez" word="zijne"/>
+      </node>
+    </node>
+  </node>
+  <sentence>zowel mijn ruitewisser als de zijne</sentence>
+</alpino_ds>

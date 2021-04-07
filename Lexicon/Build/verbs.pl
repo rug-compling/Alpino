@@ -26451,9 +26451,10 @@ v(verzwelg,verzwelgt,verzwelgen,verzwolgen,verzwolg,verzwolgen,
     [h([transitive])]).
 
 v(verzwijg,verzwijgt,verzwijgen,verzwegen,verzweeg,verzwegen,
-    [h([sbar,
-	transitive,
-	vp])]).
+  [h([sbar,
+      np_np,  % je hebt me iets verzwegen
+      transitive,
+      vp])]).
 
 v(verzwik,verzikt,verzwikken,verzwikt,verzwikte,verzwikten,
     [h([transitive])]).

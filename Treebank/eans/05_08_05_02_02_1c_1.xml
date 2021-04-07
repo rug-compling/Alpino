@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" case="nom" def="def" end="1" gen="de" getal="mv" id="3" lemma="zij" naamval="nomin" num="both" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(pers,pron,nomin,vol,3p,mv)" pt="vnw" rel="hd" rnum="pl" root="zij" status="vol" vwtype="pers" wh="nwh" word="Zij"/>
+        <node begin="1" cat="rel" end="3" id="4" rel="mod">
+          <node begin="1" case="no_obl" end="2" gen="de" getal="getal" id="5" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" rnum="pl" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+          <node begin="1" cat="ssub" end="3" id="6" rel="body">
+            <node begin="1" end="2" id="7" index="1" rel="su"/>
+            <node begin="2" end="3" id="8" infl="pl" lemma="stelen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="steel" sc="intransitive" tense="present" word="stelen" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+      <node begin="3" end="4" id="9" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" word="zijn" wvorm="pv"/>
+      <node begin="4" end="5" gen="de" getal="mv" graad="basis" id="10" lemma="dief" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="predc" rnum="pl" root="dief" word="dieven"/>
+    </node>
+    <node begin="5" end="6" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Zij die stelen zijn dieven .</sentence>
+</alpino_ds>
