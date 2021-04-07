@@ -6,6 +6,7 @@ SUITESDIR=../SENTS
 cdb_test1_options=-flag syntax_features cdb/pc_weights
 extra_test1_options=-flag syntax_features cdb/px_weights
 eans_test1_options=-flag parse_unannotated_only on
+i_suite_test1_options=-flag parse_unannotated_only on
 
 include $(ALPINO_HOME)/Makefile.EvalUD
 
