@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" getal="mv" id="2" lemma="wij" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,mv)" pt="vnw" rel="su" rnum="pl" root="wij" status="vol" vwtype="pers" wh="nwh" word="Wij"/>
+      <node begin="1" end="2" id="3" infl="pl" lemma="hebben" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="heb" sc="transitive_ndev" stype="declarative" tense="past" word="hadden" wvorm="pv"/>
+      <node begin="2" cat="np" end="6" id="4" rel="obj1">
+        <node begin="3" end="4" gen="de" genus="zijd" getal="ev" graad="basis" id="5" lemma="gids" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="gids" word="gids"/>
+        <node begin="2" cat="detp" end="6" id="6" rel="det">
+          <node begin="2" buiging="zonder" comparative="als" end="3" graad="basis" id="7" infl="de" lemma="diezelfde" pos="det" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="hd" root="diezelfde" special="comp" word="diezelfde"/>
+          <node begin="4" cat="cp" end="6" id="8" rel="obcomp">
+            <node begin="4" conjtype="onder" end="5" id="9" lemma="als" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+            <node begin="5" case="both" def="def" end="6" gen="de" getal="mv" id="10" lemma="jullie" naamval="stan" num="pl" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,stan,nadr,2v,mv)" pt="vnw" rel="body" rnum="pl" root="jullie" status="nadr" vwtype="pers" wh="nwh" word="jullie"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Wij hadden diezelfde gids als jullie .</sentence>
+</alpino_ds>

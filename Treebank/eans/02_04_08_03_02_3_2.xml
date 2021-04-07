@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="2" end="3" id="1" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" special="dubb_punt" word=":"/>
+    <node begin="0" cat="du" end="8" id="2" rel="--">
+      <node begin="0" cat="smain" end="2" id="3" rel="tag">
+        <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="4" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
+        <node begin="1" end="2" id="5" infl="sg1" lemma="zeggen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zeg" sc="tr_sbar" stype="declarative" tense="present" word="zeg" wvorm="pv"/>
+      </node>
+      <node begin="3" cat="whq" end="8" id="6" rel="nucl">
+        <node begin="3" case="both" def="indef" end="4" gen="het" getal="ev" id="7" index="1" lemma="wat" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" rnum="sg" root="wat" special="nparg" status="vol" vwtype="vb" wh="ywh" word="Wat"/>
+        <node begin="3" cat="sv1" end="8" id="8" rel="body">
+          <node begin="3" end="4" id="9" index="1" rel="obj1"/>
+          <node begin="4" end="5" id="10" infl="sg1" lemma="doen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="doe" sc="transitive_ndev" stype="whquestion" tense="present" word="doe" wvorm="pv"/>
+          <node begin="5" case="nom" def="def" end="6" gen="de" getal="ev" id="11" lemma="jij" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,vol,2v,ev)" pt="vnw" rel="su" rnum="sg" root="jij" status="vol" vwtype="pers" wh="nwh" word="jij"/>
+          <node begin="6" end="7" getal="getal" id="12" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" special="er_loc" status="vol" vwtype="aanw" word="hier"/>
+          <node begin="7" end="8" id="13" lemma="nou" pos="adv" postag="BW()" pt="bw" rel="mod" root="nou" word="nou"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="14" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Ik zeg : Wat doe jij hier nou ?</sentence>
+</alpino_ds>

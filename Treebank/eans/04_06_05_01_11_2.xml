@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="mod">
+        <node aform="base" begin="0" buiging="zonder" end="1" id="3" infl="no_e" lemma="komen" pos="adj" positie="prenom" postag="WW(od,prenom,zonder)" pt="ww" rel="mod" root="kom" vform="gerund" word="komend" wvorm="od"/>
+        <node begin="1" end="2" gen="both" genus="onz" getal="ev" graad="basis" id="4" lemma="weekend" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="weekend" special="tmp" word="weekend"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="ld_adv" stype="declarative" tense="present" word="zijn" wvorm="pv"/>
+      <node begin="3" case="nom" def="def" end="4" gen="de" getal="mv" id="6" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
+      <node begin="4" end="5" id="7" lemma="thuis" pos="adv" postag="BW()" pt="bw" rel="ld" root="thuis" special="loc" word="thuis"/>
+    </node>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>komend weekend zijn we thuis .</sentence>
+</alpino_ds>

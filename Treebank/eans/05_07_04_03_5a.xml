@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="whq" end="4" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" index="1" rel="whd">
+        <node begin="0" buiging="met-e" end="1" id="3" infl="welke" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" wh="rwh" word="Welke"/>
+        <node begin="1" end="2" gen="het" getal="mv" graad="dim" id="4" lemma="huis" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,dim)" pt="n" rel="hd" rnum="pl" root="huis_DIM" word="huisjes"/>
+      </node>
+      <node begin="0" cat="sv1" end="4" id="5" rel="body">
+        <node begin="0" end="2" id="6" index="1" rel="su"/>
+        <node begin="2" end="3" id="7" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="aux_psp_zijn" stype="whquestion" tense="present" word="zijn" wvorm="pv"/>
+        <node begin="0" cat="ppart" end="4" id="8" rel="vc">
+          <node begin="0" end="2" id="9" index="1" rel="su"/>
+          <node begin="3" buiging="zonder" end="4" id="10" infl="psp" lemma="verdwijnen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verdwijn" sc="intransitive" word="verdwenen" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="4" end="5" id="11" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Welke huisjes zijn verdwenen ?</sentence>
+</alpino_ds>

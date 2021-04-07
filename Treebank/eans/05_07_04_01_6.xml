@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" case="both" def="indef" end="1" gen="de" getal="getal" id="2" index="1" lemma="wie" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="whd" rnum="pl" root="wie" status="vol" vwtype="vb" wh="ywh" word="Wie"/>
+      <node begin="0" cat="sv1" end="7" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="su"/>
+        <node begin="1" end="2" id="5" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="whquestion" tense="present" word="zijn" wvorm="pv"/>
+        <node begin="2" cat="mwu" end="7" his="name" his_1="not_begin" id="6" rel="predc">
+          <node begin="2" end="3" id="7" lemma="Arthur" neclass="MISC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Arthur" spectype="deeleigen" word="Arthur"/>
+          <node begin="3" end="4" id="8" lemma="Leroy" neclass="MISC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Leroy" spectype="deeleigen" word="Leroy"/>
+          <node begin="4" end="5" id="9" lemma="en" neclass="MISC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="en" spectype="deeleigen" word="en"/>
+          <node begin="5" end="6" id="10" lemma="Francis" neclass="MISC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Francis" spectype="deeleigen" word="Francis"/>
+          <node begin="6" end="7" id="11" lemma="Pay" neclass="MISC" num="both" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="sg" root="Pay" spectype="deeleigen" word="Pay"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Wie zijn Arthur Leroy en Francis Pay ?</sentence>
+</alpino_ds>

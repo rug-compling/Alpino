@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="su">
+        <node begin="0" buiging="met-e" end="1" id="3" infl="de" lemma="deze" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="deze" vwtype="aanw" wh="nwh" word="Deze"/>
+        <node aform="base" begin="1" buiging="zonder" end="2" graad="basis" id="4" infl="stof" lemma="zelfde" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="zelfde" vform="adj" word="zelfde"/>
+        <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="5" lemma="tafel" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="tafel" word="tafel"/>
+      </node>
+      <node begin="3" end="4" id="6" infl="sg" lemma="kosten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="kost" sc="meas" stype="declarative" tense="present" word="kost" wvorm="pv"/>
+      <node begin="4" end="5" id="7" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" special="tmp" word="nu"/>
+      <node begin="5" cat="np" end="7" id="8" rel="me">
+        <node begin="5" end="6" id="9" infl="pl_num" lemma="duizend" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="duizend" special="hoofd" word="duizend"/>
+        <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="10" lemma="gulden" naamval="stan" ntype="soort" num="meas" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="gulden" special="meas_mod" word="gulden"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Deze zelfde tafel kost nu duizend gulden .</sentence>
+</alpino_ds>

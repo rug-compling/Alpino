@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="1" end="2" id="2" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
+      <node begin="2" end="3" getal="mv" id="3" index="1" lemma="we" naamval="nomin" pdtype="pron" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" root="we" status="red" vwtype="pers" word="we"/>
+      <node begin="0" cat="ppart" end="7" id="4" rel="vc">
+        <node begin="0" buiging="zonder" end="1" getal-n="mv-n" graad="basis" id="5" lemma="diezelfde" pos="name" positie="nom" postag="ADJ(nom,basis,zonder,mv-n)" pt="adj" rel="obj1" root="Diezelfden" word="Diezelfden"/>
+        <node begin="2" end="3" id="6" index="1" rel="su"/>
+        <node begin="3" end="4" id="7" lemma="gisteren" pos="adv" postag="BW()" pt="bw" rel="mod" root="gisteren" word="gisteren"/>
+        <node begin="4" end="5" id="8" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" word="ook"/>
+        <node begin="5" end="6" id="9" lemma="al" pos="adv" postag="BW()" pt="bw" rel="mod" root="al" word="al"/>
+        <node begin="6" buiging="zonder" end="7" id="10" lemma="spreken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="spreek" word="gesproken" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Diezelfden hebben we gisteren ook al gesproken .</sentence>
+</alpino_ds>

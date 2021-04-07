@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="17" id="0" rel="top">
+    <node begin="8" end="9" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="16" id="2" rel="--">
+      <node begin="0" cat="np" end="8" id="3" rel="su">
+        <node begin="0" end="1" id="4" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="Het"/>
+        <node begin="1" end="2" gen="both" genus="genus" getal="ev" graad="basis" id="5" lemma="soort" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,genus,stan)" pt="n" rel="hd" rnum="sg" root="soort" sc="measure" word="soort"/>
+        <node begin="2" end="3" gen="het" getal="mv" graad="basis" id="6" lemma="probleem" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" rnum="pl" root="probleem" word="problemen"/>
+        <node begin="3" cat="rel" end="8" id="7" rel="mod">
+          <node begin="3" case="no_obl" end="4" gen="het" getal="ev" id="8" index="1" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" rnum="sg" root="dat" status="vol" vwtype="betr" wh="rel" word="dat"/>
+          <node begin="3" cat="ssub" end="8" id="9" rel="body">
+            <node begin="3" end="4" id="10" index="1" rel="obj1"/>
+            <node begin="4" case="both" def="def" end="5" gen="de" getal="ev" id="11" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" rnum="sg" root="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="je"/>
+            <node begin="5" cat="advp" end="7" his="normal" his_1="normal" id="12" rel="mod">
+              <node begin="5" end="6" id="13" lemma="steeds" pos="adv" postag="BW()" pt="bw" rel="mod" root="steeds" word="steeds"/>
+              <node begin="6" end="7" id="14" lemma="weer" pos="adv" postag="BW()" pt="bw" rel="hd" root="weer" word="weer"/>
+            </node>
+            <node begin="7" end="8" id="15" infl="sg3" lemma="tegen_komen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="kom_tegen" sc="part_transitive(tegen)" tense="present" word="tegenkomt" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+      <node begin="9" end="10" id="16" infl="sg3" lemma="liggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lig" sc="ld_pp" stype="declarative" tense="present" word="ligt" wvorm="pv"/>
+      <node begin="10" cat="pp" end="16" id="17" rel="ld">
+        <node begin="10" end="11" id="18" lemma="op" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="op" vztype="init" word="op"/>
+        <node begin="11" cat="np" end="16" id="19" rel="obj1">
+          <node begin="11" end="12" id="20" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+          <node begin="12" end="13" gen="het" genus="onz" getal="ev" graad="basis" id="21" lemma="terrein" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="terrein" word="terrein"/>
+          <node begin="13" cat="pp" end="16" id="22" rel="mod">
+            <node begin="13" end="14" id="23" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="14" cat="np" end="16" id="24" rel="obj1">
+              <node begin="14" end="15" id="25" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="15" end="16" gen="de" genus="zijd" getal="ev" graad="basis" id="26" lemma="politiek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="politiek" word="politiek"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="16" end="17" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Het soort problemen dat je steeds weer tegenkomt , ligt op het terrein van de politiek .</sentence>
+</alpino_ds>

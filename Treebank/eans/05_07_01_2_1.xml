@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="Het"/>
+        <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="gebouw" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="gebouw" word="gebouw"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="sg_heeft" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" sc="transitive_ndev" stype="declarative" tense="present" word="heeft" wvorm="pv"/>
+      <node aform="base" begin="3" end="4" id="6" infl="pred" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" vform="adj" word="wel"/>
+      <node begin="4" cat="np" end="6" id="7" rel="obj1">
+        <node begin="4" end="5" id="8" infl="pl_num" lemma="tien" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="tien" special="hoofd" word="tien"/>
+        <node begin="5" end="6" gen="de" getal="mv" graad="basis" id="9" lemma="verdieping" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="verdieping" word="verdiepingen"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Het gebouw heeft wel tien verdiepingen .</sentence>
+</alpino_ds>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="sv1" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" infl="sg1" lemma="bedoelen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="bedoel" sc="transitive" stype="ynquestion" tense="present" word="Bedoel" wvorm="pv"/>
+      <node begin="1" case="both" def="def" end="2" gen="de" getal="ev" id="3" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" rnum="sg" root="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="je"/>
+      <node begin="2" cat="conj" end="7" id="4" rel="obj1">
+        <node begin="2" cat="np" end="4" id="5" rel="cnj">
+          <node begin="2" buiging="zonder" end="3" getal="ev" id="6" infl="pron" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="mijn"/>
+          <node begin="3" end="4" gen="het" genus="onz" getal="ev" graad="basis" id="7" lemma="boek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="boek" word="boek"/>
+        </node>
+        <node begin="4" conjtype="neven" end="5" id="8" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+        <node begin="5" cat="np" end="7" id="9" rel="cnj">
+          <node begin="5" buiging="zonder" end="6" getal="ev" id="10" infl="pron" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+          <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="11" lemma="boek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="boek" word="boek"/>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Bedoel je mijn boek of zijn boek ?</sentence>
+</alpino_ds>

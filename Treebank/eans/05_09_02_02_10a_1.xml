@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" index="1" rel="su">
+        <node begin="0" cat="detp" end="2" id="3" rel="det">
+          <node begin="0" buiging="zonder" end="1" id="4" infl="al" lemma="al" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="mod" root="al" special="pre_det_quant" vwtype="onbep" word="Al"/>
+          <node begin="1" end="2" id="5" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="hd" root="de" word="de"/>
+        </node>
+        <node begin="2" end="3" gen="both" genus="zijd" getal="ev" graad="basis" id="6" lemma="alcohol" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="alcohol" word="alcohol"/>
+      </node>
+      <node begin="3" end="4" id="7" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="aux_psp_zijn" stype="declarative" tense="past" word="was" wvorm="pv"/>
+      <node begin="0" cat="ppart" end="5" id="8" rel="vc">
+        <node begin="0" end="3" id="9" index="1" rel="su"/>
+        <node begin="4" buiging="zonder" end="5" id="10" infl="psp" lemma="verdampen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="verdamp" sc="intransitive" word="verdampt" wvorm="vd"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Al de alcohol was verdampt .</sentence>
+</alpino_ds>

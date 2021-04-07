@@ -1381,6 +1381,7 @@ mwu_postag('zo af en toe',['BW()','VG(fin)','VG(neven)','VG(fin)'],[zo,af,en,toe
 mwu_postag('zo nu en dan',['BW()','BW()','VG(neven)','BW()'],[zo,nu,en,dan]).
 mwu_postag('zo te zien',['BW()','VZ(init)','WW(inf,vrij,zonder)'],[zo,te,zien]).
 mwu_postag('zonder meer',['VZ(init)','VNW(onbep,grad,stan,vrij,zonder,comp)'],[zonder,veel]).
+mwu_postag('zulk een',['VNW(aanw,det,stan,vrij,zonder)','LID(onbep,stan,agr)'],[zulk,een]).
 mwu_postag('Zwitserse Garde',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Zwitsers',garde]).
 mwu_postag('ZYPREXA VELOTAB-tabletten',['SPEC(deeleigen)','N(soort,mv,basis)'],['ZYPREXA','VELOTAB_tablet']).
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="whq" end="7" id="1" rel="--">
+      <node begin="0" case="both" def="indef" end="1" gen="het" getal="ev" id="2" index="1" lemma="wat" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3o" pos="pron" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="whd" rnum="sg" root="wat" special="nparg" status="vol" vwtype="vb" wh="ywh" word="Wat"/>
+      <node begin="0" cat="sv1" end="7" id="3" rel="body">
+        <node begin="0" end="1" id="4" index="1" rel="predc"/>
+        <node begin="1" end="2" id="5" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="whquestion" tense="present" word="zijn" wvorm="pv"/>
+        <node begin="2" cat="np" end="7" id="6" rel="su">
+          <node begin="2" end="3" id="7" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+          <node begin="3" end="4" gen="het" getal="mv" graad="basis" id="8" lemma="kenmerk" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="kenmerk" word="kenmerken"/>
+          <node begin="4" cat="pp" end="7" id="9" rel="mod">
+            <node begin="4" end="5" id="10" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+            <node begin="5" cat="np" end="7" id="11" rel="obj1">
+              <node begin="5" end="6" id="12" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="13" lemma="verbranding_motor" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="verbranding_motor" word="verbrandingsmotor"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="14" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Wat zijn de kenmerken van de verbrandingsmotor ?</sentence>
+</alpino_ds>

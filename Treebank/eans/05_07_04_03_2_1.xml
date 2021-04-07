@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" special="er" status="red" vwtype="aanw" word="Er"/>
+      <node begin="1" end="2" id="3" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="intransitive" stype="declarative" tense="present" word="zijn" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="4" rel="su">
+        <node aform="compar" begin="2" end="3" id="5" infl="meer" lemma="zoveel" naamval="stan" numtype="hoofd" pos="adj" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="zoveel" vform="adj" word="zoveel"/>
+        <node begin="3" end="4" gen="de" getal="mv" graad="basis" id="6" lemma="monteur" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="monteur" word="monteurs"/>
+      </node>
+    </node>
+    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Er zijn zoveel monteurs .</sentence>
+</alpino_ds>

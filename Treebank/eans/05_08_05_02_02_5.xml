@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="sv1" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" infl="imp(sg1)" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="imparative" tense="present" word="Wees" wvorm="pv"/>
+      <node aform="base" begin="1" buiging="zonder" end="2" graad="basis" id="3" infl="no_e" lemma="vriendelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="vriendelijk" vform="adj" word="vriendelijk"/>
+      <node begin="2" cat="pp" end="7" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+        <node begin="3" cat="whrel" end="7" id="6" rel="obj1">
+          <node begin="3" cat="np" end="5" his="normal" his_1="normal" id="7" index="1" rel="rhd">
+            <node begin="3" buiging="zonder" end="4" id="8" infl="al" lemma="al" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="det" root="al" special="pre_det_quant" vwtype="onbep" word="al"/>
+            <node begin="4" case="both" def="indef" end="5" gen="de" getal="getal" id="9" lemma="wie" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(vb,pron,stan,vol,3p,getal)" pt="vnw" rel="hd" rnum="sg" root="wie" status="vol" vwtype="vb" wh="ywh" word="wie"/>
+          </node>
+          <node begin="3" cat="ssub" end="7" id="10" rel="body">
+            <node begin="3" end="5" id="11" index="1" rel="su"/>
+            <node begin="5" case="both" def="def" end="6" gen="de" getal="getal" id="12" lemma="je" naamval="obl" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pr,pron,obl,red,2v,getal)" pt="vnw" rel="obj1" rnum="sg" root="je" special="wkpro" status="red" vwtype="pr" wh="nwh" word="je"/>
+            <node begin="6" end="7" id="13" infl="sg" lemma="ontmoeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ontmoet" sc="transitive" tense="present" word="ontmoet" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Wees vriendelijk voor al wie je ontmoet .</sentence>
+</alpino_ds>
