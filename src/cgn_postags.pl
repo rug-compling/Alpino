@@ -1598,7 +1598,7 @@ cgn_postag_c(hoe_adv,                         'BW()').
 cgn_postag_c(postadj_adverb,                  'BW()').
 cgn_postag_c(postadv_adverb,                  'BW()').
 cgn_postag_c(om_postadj_adverb,               'BW()').
-cgn_postag_c(num_predm_adverb,                'BW()').
+cgn_postag_c(num_predm_adverb,                'VNW(onbep,det,stan,prenom,met-e,agr)').
 cgn_postag_c(zo_mogelijk_zo,                  'BW()').
 cgn_postag_c(zo_mogelijk_mogelijk(no_e),      'ADJ(vrij,basis,zonder)').
 cgn_postag_c(zo_mogelijk_mogelijk(e),         'ADJ(prenom,basis,met-e,stan)').
@@ -2967,6 +2967,7 @@ cgn_postag_l2(Stem,Stem,Frame,Tag) :-
 cgn_postag_l2(Stem,Stem,Frame,'NA()') :-
     format(user_error,"no with_dt cgn tag rule for ~w ~w~n",[Stem,Frame]).
 
+number_vrij_path([alle_zes/2|_]).
 number_vrij_path([n_n_num_app/2|_]).
 number_vrij_path([n_num/1,np_n/1|_]).
 number_vrij_path([n_num/1,np_det_n/2|_]).
