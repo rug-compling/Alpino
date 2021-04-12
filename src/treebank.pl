@@ -368,8 +368,9 @@ xml_save_object(Obj) :-
 xml_save_object(Obj,File) :-
     hdrug:object(Obj,o(Result,String0,_)),
     alpino_lexical_analysis:remove_brackets(String0,String1),
-%    remove_phantoms(String1,String),
-    xml_save(Result,String1,[],File,normal).
+    remove_phantoms(String1,String2), % sometimes ok, sometimes not
+    %% necc for xml_save of "mensen [ @phantom , ] kom naar buiten"
+    xml_save(Result,String2,[],File,normal).
 
 remove_phantoms(String0,String) :-
     get_phantoms(Ps),
