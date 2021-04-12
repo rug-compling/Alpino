@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="du" end="5" id="1" rel="--">
+      <node begin="0" cat="np" end="3" id="2" rel="tag">
+        <node begin="0" end="1" getal="mv" graad="basis" id="3" lemma="proletariër" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="proletariër" word="Proletariërs"/>
+        <node begin="1" cat="np" end="3" id="4" rel="mod">
+          <node begin="1" end="2" id="5" lemma="al" lwtype="bep" naamval="gen" npagr="rest3" pos="det" postag="LID(bep,gen,rest3)" pt="lid" rel="det" root="al" word="aller"/>
+          <node begin="2" end="3" getal="mv" graad="basis" id="6" lemma="land" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="land" word="landen"/>
+        </node>
+      </node>
+      <node begin="3" cat="sv1" end="5" id="7" rel="nucl">
+        <node begin="3" end="4" id="8" lemma="verenigen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="verenig" word="verenigt" wvorm="pv"/>
+        <node begin="4" end="5" getal="getal" id="9" lemma="u" naamval="obl" pdtype="pron" persoon="2" pos="pron" postag="VNW(pr,pron,obl,vol,2,getal)" pt="vnw" rel="su" root="u" status="vol" vwtype="pr" word="u"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="10" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>Proletariërs aller landen verenigt u .</sentence>
+</alpino_ds>

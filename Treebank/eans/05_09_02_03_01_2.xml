@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" cat="np" end="5" id="2" rel="su">
+        <node begin="0" buiging="zonder" end="1" id="3" infl="het" lemma="elk" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="elk" vwtype="onbep" wh="nwh" word="Elk"/>
+        <node begin="1" end="2" gen="het" genus="onz" getal="ev" graad="basis" id="4" lemma="huis" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="huis" word="huis"/>
+        <node begin="2" cat="pp" end="5" id="5" rel="mod">
+          <node begin="2" end="3" id="6" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+          <node begin="3" cat="np" end="5" id="7" rel="obj1">
+            <node begin="3" end="4" id="8" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+            <node begin="4" end="5" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="omgeving" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="omgeving" word="omgeving"/>
+          </node>
+        </node>
+      </node>
+      <node begin="5" end="6" id="10" infl="sg" lemma="hebben" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="heb" sc="transitive_ndev" stype="declarative" tense="past" word="had" wvorm="pv"/>
+      <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="11" lemma="water_schade" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="water_schade" word="waterschade"/>
+    </node>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Elk huis in de omgeving had waterschade .</sentence>
+</alpino_ds>
