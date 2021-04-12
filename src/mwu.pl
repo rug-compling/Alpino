@@ -521,6 +521,7 @@ mwu_postag('het beste',['LID(bep,stan,evon)','ADJ(nom,sup,met-e,zonder-n,stan)']
 mwu_postag('het best',['LID(bep,stan,evon)','ADJ(vrij,sup,zonder)'],[het,goed]).
 mwu_postag('het Departement Economie , Wetenschap en Innovatie',['LID(bep,stan,evon)','N(soort,ev,basis,onz,stan)','N(soort,ev,basis,zijd,stan)','LET()','N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[het,departement,economie,',',wetenschap,en,innovatie]).
 mwu_postag('het dichtst bij',['LID(bep,stan,evon)','ADJ(nom,sup,zonder,zonder-n)','VZ(init)'],[het,dicht,bij]).
+mwu_postag('het eerste het beste',['LID(bep,stan,evon)','TW(rang,prenom,stan)','LID(bep,stan,evon)','ADJ(prenom,sup,met-e,stan)'],[het,één,het,goed]).
 mwu_postag('bijzonder het in',['VZ(init)','LID(bep,stan,evon)','ADJ(nom,basis,zonder,zonder-n)'],[in,het,bijzonder]).
 mwu_postag('echt het in',['VZ(init)','LID(bep,stan,evon)','ADJ(nom,basis,zonder,zonder-n)'],[in,het,echt]).
 mwu_postag('echter op grond van',['VZ(init)','N(soort,ev,basis,zijd,stan)','BW()','VZ(init)'],[op,grond,echter,van]).
