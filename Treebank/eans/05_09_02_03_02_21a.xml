@@ -3,20 +3,20 @@
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="smain" end="6" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" index="1" rel="su">
-        <node begin="0" buiging="zonder" end="1" id="3" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="Die"/>
-        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="gijzelaar" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="gijzelaar" word="gijzelaars"/>
+        <node begin="0" buiging="zonder" end="1" id="3" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" word="Die"/>
+        <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="gijzelaar" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gijzelaar" word="gijzelaars"/>
       </node>
-      <node begin="2" end="3" id="5" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="passive" stype="declarative" tense="present" word="zijn" wvorm="pv"/>
-      <node begin="3" cat="detp" end="5" id="6" rel="predm">
-        <node begin="3" end="4" id="7" lemma="al" pos="det" postag="BW()" pt="bw" rel="det" root="al" special="num_predm" word="alle"/>
-        <node begin="4" end="5" id="8" infl="pl_num" lemma="negentig" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="hd" root="negentig" special="hoofd" word="negentig"/>
+      <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
+      <node begin="3" cat="np" end="5" id="6" rel="predm">
+        <node begin="3" buiging="met-e" end="4" id="7" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="al" vwtype="onbep" word="alle"/>
+        <node begin="4" end="5" id="8" lemma="negentig" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="hd" root="negentig" word="negentig"/>
       </node>
       <node begin="0" cat="ppart" end="6" id="9" rel="vc">
         <node begin="0" end="2" id="10" index="1" rel="obj1"/>
-        <node begin="5" buiging="zonder" end="6" id="11" infl="psp" lemma="redden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="red" sc="transitive" word="gered" wvorm="vd"/>
+        <node begin="5" buiging="zonder" end="6" id="11" lemma="redden" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="red" word="gered" wvorm="vd"/>
       </node>
     </node>
-    <node begin="6" end="7" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="6" end="7" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Die gijzelaars zijn alle negentig gered .</sentence>
 </alpino_ds>
