@@ -481,7 +481,7 @@ parse_single_or_loop([]) :-
     parse_loop.
 parse_single_or_loop([H|T]) :-
     initialize_flag(current_ref,0),
-    alpino_parse_line(0,[H|T]).
+    alpino_parse_tokens(0,[H|T]).
 
 update_line_number(Int) :-
     hdrug_flag(current_line_no,Int0),
@@ -1030,6 +1030,8 @@ result_hook(parse,_,o(Result,String,_),Flag) :-
 	compare_treebank_cgn_result(File,Result,Key)
     ;   Th==dep_features
     ->  alpino_treebank:format_dep_features(Result,Identifier)
+    ;   Th==demo
+    ->  show(tree(dt),user,[value(Result)])
     ;   true
     ),
 
