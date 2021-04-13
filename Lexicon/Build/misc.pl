@@ -4301,6 +4301,7 @@ m(zoveel,           als_adjective(no_e(odet_adv)),zoveel).
 
 m(even,             comp_adverb(als),even).
 m(zo,               comp_adverb(als),zo).
+% also with of: "geen mens is zo dom of hij weet waar Rome ligt"
 
 m(veeleer,          comp_adverb(dan),veeleer).
 
