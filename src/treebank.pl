@@ -270,6 +270,7 @@ lassy_relation(deprel(Dep,Rel,Head),deprel(DepLem,DepPos,Rel,HeadPos,HeadLem)) :
     lassy_lem_pos(Dep,DepLem,DepPos),
     lassy_lem_pos(Head,HeadLem,HeadPos).
 
+lassy_lem_pos(none:none/[0,0],none,none).
 lassy_lem_pos(top:top/top,top,top).
 lassy_lem_pos(read_from_treebank(_,Lem,Pos):_/_,Lem,Pos).
 
