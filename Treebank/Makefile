@@ -4,6 +4,8 @@ else
 include $(ALPINO_HOME)/Makefile.include
 endif
 
+LASSYSMALL=/net/corpora/LassyDevelop
+
 default:
 
 all: prepare_enhanced_all enhanced_all dact poslemma mwu trees_doc sents sentspl conllu
@@ -49,21 +51,21 @@ mwu: $(DIRECTORIES:%=MWU/%.mwu) FREQ/mwu-tagged.freq
 
 ## removes the .mwu file, because if it is empty it would otherwise
 ## be rebuilt over and over again!
-MWU/%.mwu: Enhanced/%.dact mwu_tags.xsl
+MWU/%.mwu: Enhanced/%.dact $(LASSYSMALL)/Scripts/mwu_tags.xsl
 	rm -f MWU/$*.mwu
-	alpinocorpus-xslt -q '//node[@cat="mwu"]' mwu_tags.xsl Enhanced/$*.dact > MWU/$*.mwu
+	ls -v Enhanced/$*/*.xml | dtxslt --stdin -q '//node[@cat="mwu"]' -s $(LASSYSMALL)/Scripts/mwu_tags.xsl > MWU/$*.mwu
 
-FREQ/mwu-tagged.freq: $(DIRECTORIES:%=MWU/%.mwu) /net/corpora/LassyDevelop/MWU/*.mwu
-	cat $(DIRECTORIES:%=MWU/%.mwu) /net/corpora/LassyDevelop/MWU/*.mwu\
+FREQ/mwu-tagged.freq: $(DIRECTORIES:%=MWU/%.mwu) $(LASSYSMALL)/MWU/*.mwu
+	cat $(DIRECTORIES:%=MWU/%.mwu) $(LASSYSMALL)/MWU/*.mwu\
         | sort\
         | uniq -c\
         | sort -nr > FREQ/mwu-tagged.freq
-	cat FREQ/mwu-tagged.freq | python3 /net/corpora/LassyDevelop/find-inconsistent m > FREQ/mwu-inconsistent
+	cat FREQ/mwu-tagged.freq | python3 $(LASSYSMALL)/Scripts/find-inconsistent m > FREQ/mwu-inconsistent
 
 poslemma: $(DIRECTORIES:%=POSLEMMA/%.poslemma)
 
 POSLEMMA/%.poslemma: Enhanced/%.dact
-	dtxslt -s plat.xsl Enhanced/$* > POSLEMMA/$*.poslemma
+	dtxslt -s $(LASSYSMALL)/Scripts/plat.xsl Enhanced/$* > POSLEMMA/$*.poslemma
 
 
 gitversion=$(shell git log --oneline | wc -l)

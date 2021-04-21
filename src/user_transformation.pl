@@ -115,6 +115,9 @@ surf_lemma(Word,Rel,Pos0,Pos,Lem,Lem) :-
     surf(Word,Pos),
     \+ Pos0 = Pos.
 
+
+surf_lemma(reinste,mwp,'ADJ(nom,sup,met-e,zonder-n,stan)','ADJ(prenom,sup,met-e,stan)',_,rein).
+
 user:query:-
     findall(L,lemma(L,_),Ls),
     (   Ls = [_|_]

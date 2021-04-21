@@ -668,7 +668,7 @@ mwu_postag('Jacques Brel-vertolkers',['SPEC(deeleigen)','N(soort,mv,basis)'],['J
 mwu_postag('Jehovah\'s Getuige',['N(eigen,ev,basis,gen)','N(soort,ev,basis,zijd,stan)'],['Jehovah',getuige]).
 mwu_postag('Jehovah\'s Getuigen',['N(eigen,ev,basis,gen)','N(soort,mv,basis)'],['Jehovah',getuige]).
 mwu_postag('Jellinek Preventie Amsterdam',['N(eigen,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,onz,stan)'],['Jellinek',preventie,'Amsterdam']).
-mwu_postag('je reinste',['VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)','ADJ(nom,sup,met-e,zonder-n,stan)'],[je,rein]).
+mwu_postag('je reinste',['VNW(bez,det,stan,red,2v,ev,prenom,zonder,agr)','ADJ(prenom,sup,met-e,stan)'],[je,rein]).
 mwu_postag('Jeugd en Sport',['N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[jeugd,en,sport]).
 mwu_postag('Jeugd en Stad',['N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[jeugd,en,stad]).
 mwu_postag('jihad - strijders',['N(soort,ev,basis,zijd,stan)','LET()','N(soort,mv,basis)'],[jihad,-,strijder]).
@@ -1021,6 +1021,7 @@ mwu_postag('Rijksinstituut voor Volksgezondheid en Milieu',['N(soort,ev,basis,on
 mwu_postag('rock en roll',['SPEC(vreemd)','VG(neven)','SPEC(vreemd)'],[rock,en,roll]).
 mwu_postag('Rode Brigades',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[rood,brigade]).
 mwu_postag('Rode Duivels',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[rood,duivel]).
+mwu_postag('rond de',['VZ(init)','LID(bep,stan,evon)'],[rond,de]).
 mwu_postag('Rooms katholieke',['ADJ(vrij,basis,zonder)','ADJ(prenom,basis,met-e,stan)'],['Rooms',katholiek]).
 mwu_postag('Rotterdam Centraal',['N(eigen,ev,basis,onz,stan)','ADJ(vrij,basis,zonder)'],['Rotterdam',centraal]).
 mwu_postag('Rotterdamse Gemeentelijk Havenbedrijf',['ADJ(prenom,basis,met-e,stan)','ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],['Rotterdams',gemeentelijk,havenbedrijf]).

@@ -9,7 +9,7 @@
       <node begin="2" end="3" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
       <node begin="3" cat="np" end="5" id="6" rel="predm">
         <node begin="3" buiging="met-e" end="4" id="7" lemma="al" naamval="stan" npagr="agr" pdtype="det" pos="det" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="det" root="al" vwtype="onbep" word="alle"/>
-        <node begin="4" buiging="met-e" end="5" id="8" lemma="drie" naamval="stan" npagr="agr" pdtype="det" pos="num" positie="prenom" postag="VNW(onbep,det,stan,prenom,met-e,agr)" pt="vnw" rel="hd" root="drie" vwtype="onbep" word="drie"/>
+        <node begin="4" end="5" id="8" lemma="drie" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="hd" root="drie" word="drie"/>
       </node>
       <node begin="5" cat="np" end="7" id="9" rel="obj1">
         <node begin="5" end="6" id="10" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
