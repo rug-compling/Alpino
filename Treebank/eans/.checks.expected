@@ -15,3 +15,8 @@ eans/./05_07_03_02_11b.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(
 eans/./05_07_03_02_12b.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
 eans/./05_07_04_03_10_2.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
 eans/./05_08_05_05_02_2c.xml	//node[ ../@cat="whrel" and not(@rel="body") and not(@rel="rhd")]	unexpected whrel-daughter.   Expected rels: body rhd
+eans/./02_04_03_15.xml	//node[ @cat and @rel="me" and not(@cat="np") and not(@cat="ap") and not(@cat="conj") and not(@cat="mwu")]	unexpected me-category.   Expected cats: np ap conj mwu
+eans/./02_04_06_7.xml	//node[ @cat and @rel="predm" and not(@cat="advp") and not(@cat="np") and not(@cat="ap") and not(@cat="ppart") and not(@cat="ppres") and not(@cat="cp") and not(@cat="pp") and not(@cat="conj") and not(@cat="mwu") and not(@cat="whrel")]	unexpected predm-category.   Expected cats: advp np ap ppart ppres cp pp conj mwu whrel
+eans/./04_03_03_7.xml	//node[ @cat and @rel="predm" and not(@cat="advp") and not(@cat="np") and not(@cat="ap") and not(@cat="ppart") and not(@cat="ppres") and not(@cat="cp") and not(@cat="pp") and not(@cat="conj") and not(@cat="mwu") and not(@cat="whrel")]	unexpected predm-category.   Expected cats: advp np ap ppart ppres cp pp conj mwu whrel
+eans/./04_04_02_2a.xml	//node[node[@getal="mv" and @rel="hd"] and node[@rel="det" and (@root="het" or @root="een" or @root="dit" or @root="dat")]]	plural head noun with singular determiner?
+eans/./04_04_02_3.xml	//node[node[@getal="mv" and @rel="hd"] and node[@rel="det" and (@root="het" or @root="een" or @root="dit" or @root="dat")]]	plural head noun with singular determiner?

@@ -7,7 +7,7 @@
       <node begin="0" cat="ppart" end="5" id="4" rel="vc">
         <node begin="0" end="1" id="5" index="1" rel="su"/>
         <node begin="2" cat="np" end="4" id="6" rel="obj1">
-          <node begin="2" buiging="met-e" end="3" graad="basis" id="7" lemma="ettelijk" naamval="stan" pos="num" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="det" root="ettelijke" word="ettelijke"/>
+          <node begin="2" buiging="met-e" end="3" getal="mv" graad="basis" id="7" lemma="ettelijk" naamval="stan" pdtype="grad" pos="num" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,mv,basis)" pt="vnw" rel="det" root="ettelijke" vwtype="onbep" word="ettelijke"/>
           <node begin="3" end="4" getal="mv" graad="basis" id="8" lemma="prijs" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="prijs" word="prijzen"/>
         </node>
         <node begin="4" buiging="zonder" end="5" id="9" lemma="winnen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="gewin" word="gewonnen" wvorm="vd"/>

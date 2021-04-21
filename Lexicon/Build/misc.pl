@@ -1735,6 +1735,7 @@ m(beide,    adj_number(both),   beider).   % hun beider levenslot
 m(enkel,    adj_number(enkel),  enkel).   % een enkel, geen enkel
 m(enkel,    adj_number(enkele), enkele).
 m(ettelijk, adj_number(pl_num), ettelijke).
+%% according to ANS, this should also include "verscheidene, verschillende"
 
 m('meer als',         intensifier, [meer,als]).
 m('meer dan',         intensifier, [meer,dan]).
@@ -6662,6 +6663,7 @@ m(degeen,       pronoun(nwh,thi,sg,de,both,def,strpro),degeen).
 m(degeen,       pronoun(nwh,thi,sg,de,both,def,strpro),degene).
 m(degeen,       pronoun(nwh,thi,pl,de,both,def,strpro),degenen).
 m(deze,         pronoun(nwh,thi,both,both,gen,def),dezes).
+m(deze,         pronoun(nwh,thi,pl,de,both,def,strpro),dezen).
 m(diegene,      pronoun(nwh,thi,sg,de,both,def,strpro),diegene).
 m(diegene,      pronoun(nwh,thi,pl,de,both,def,strpro),diegenen).
 m(één,          pronoun(nwh,thi,sg,both,both,indef,strpro),een).
@@ -6672,6 +6674,7 @@ m(één,          pronoun(nwh,thi,sg,de,both,indef,strpro),eentje).
 m(elkaar,       pronoun(nwh,thi,pl,de,dat_acc,def),elkaar).
 m(elkander,     pronoun(nwh,thi,pl,de,dat_acc,def),elkander).
 m(ge,           pronoun(nwh,u,sg,de,both,def),ge).
+m(gene,         pronoun(nwh,thi,pl,de,both,def,strpro),genen).
 m(gij,          pronoun(nwh,u,sg,de,nom,def),gij).
 m(haar,         pronoun(nwh,thi,sg,de,dat_acc,def),haar).
 m(haar,         pronoun(nwh,thi,sg,de,dat_acc,def,wkpro),'\'r').
