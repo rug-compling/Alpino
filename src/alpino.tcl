@@ -319,7 +319,7 @@ proc create_top_canvas_pos_filter {w} {
 
 proc extend_parse_widget { } {
     global pp_nr internal_pp_answer last_cmd_no module
-    entry .pp.top.nr -bd 1 -width 10 -textvariable pp_nr
+    entry .pp.top.nr -bd 1 -width 40 -textvariable pp_nr
     bind .pp.top.nr <Return> { prolog $module:put_sentence_key($pp_nr) }
     bind .pp.top.nr <2> { prolog $module:put_sentence_key($pp_nr) }
     bind .pp.top.nr <3> {
