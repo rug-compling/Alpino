@@ -5014,7 +5014,9 @@ grammar_rule(det_adj,Det,[ AP0 ]) :-
     AP:e_deps => [],
     AP:sc => [],
     AP:aform => (nattr;attr;anders),
-    hd_structure(AP,Det),
+    hd_structure(AP,Det0),
+    unify_except(Det0,Det,ccat0),
+    Det:ccat0 ==> detp,
     AP0:agr => het & indef & sg, % should not have -e suffix!
     unify_except(AP0,AP,agr).  % agr of 'veel' sg&het, but 'veel boeken' and 'veel wijn'
 
