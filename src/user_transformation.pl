@@ -19,7 +19,9 @@ user_transformation(r(Rel,i(X,Cat)),A,B,
 %     Hd   = tree(r(hd,l(read_from_treebank(Az,L,'VZ(fin)'),Cat,W)),HdA,[]),
 %     lists:select(Obj1,Ds0,Ds1),
 %     lists:select(Hd0,Ds1,Hdf).
-		   
+
+
+
 
 % user_transformation(r(Rel,Cat),A,[Obj1,Hd0|Hdf],
 % 		    r(Rel,Cat),A,[Obj1,Hd|Hdf],_,_) :-
@@ -103,6 +105,12 @@ surf_lemma(Word,'N(eigen,ev,basis,zijd,stan)','N(eigen,mv,basis)',L,L) :-
     pl_naam(Word).
 surf_lemma(Word,'N(eigen,ev,basis,onz,stan)','N(eigen,mv,basis)',L,L) :-
     pl_naam(Word).
+
+
+surf_lemma(Word,'N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)',L,L) :-
+    eigen(Word).
+surf_lemma(Word,'N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,onz,stan)',L,L) :-
+    eigen(Word).
 
 
 surf_lemma(Word,Rel,Pos0,Pos,Lem0,Lem) :-
@@ -261,13 +269,5 @@ surf(_,_,_) :-
 surf(_,_) :-
     fail.
 
-
-surf_lemma(Word,'N(soort,ev,basis,zijd,stan)','N(eigen,ev,basis,zijd,stan)',L,L) :-
-    eigen(Word).
-surf_lemma(Word,'N(soort,ev,basis,onz,stan)','N(eigen,ev,basis,onz,stan)',L,L) :-
-    eigen(Word).
-
-eigen(_):-
-    fail.
 
 
