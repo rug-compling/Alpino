@@ -1,2 +1,17 @@
 eans/./02_02_03_10a.xml	//node[count(node[@rel="tag"]) > 1]/node[@rel="tag"]	rel "tag" occurs more than once
 eans/./02_04_02_8.xml	//node[@cat="inf" and node[@rel="hd" and @pt and not(@postag="WW(inf,vrij,zonder)")]]	inf cat without inf hd?
+eans/./04_04_02_4.xml	//node[node[@getal="mv" and @rel="hd"] and node[@rel="det" and (@root="het" or @root="een" or @root="dit" or @root="dat")]]	plural head noun with singular determiner?
+eans/./04_04_02_8.xml	//node[node[@getal="mv" and @rel="hd"] and node[@rel="det" and (@root="het" or @root="een" or @root="dit" or @root="dat")]]	plural head noun with singular determiner?
+eans/./04_05_02_15.xml	//node[ @cat and @rel="ld" and not(@cat="pp") and not(@cat="np") and not(@cat="conj") and not(@cat="mwu") and not(@cat="ap") and not(@cat="advp") and not(@cat="whrel")]	unexpected ld-category.   Expected cats: pp np conj mwu ap advp whrel
+eans/./04_05_02_16.xml	//node[ @cat and @rel="ld" and not(@cat="pp") and not(@cat="np") and not(@cat="conj") and not(@cat="mwu") and not(@cat="ap") and not(@cat="advp") and not(@cat="whrel")]	unexpected ld-category.   Expected cats: pp np conj mwu ap advp whrel
+eans/./04_06_05_02_1.xml	//node[ @cat and @rel="vc" and not(@cat="cp") and not(@cat="ti") and not(@cat="ppart") and not(@cat="inf") and not(@cat="oti") and not(@cat="conj") and not(@cat="whsub") and not(@cat="ahi") and not(@cat="svan") and not(@cat="smain")]	unexpected vc-category.   Expected cats: cp ti ppart inf oti conj whsub ahi svan smain
+eans/./05_02_05_02_02_25_1.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+eans/./05_02_06_9.xml	//node[count(node[@rel="tag"]) > 1]/node[@rel="tag"]	rel "tag" occurs more than once
+eans/./05_02_06_20_2.xml	//node[count(node[@rel="tag"]) > 1]/node[@rel="tag"]	rel "tag" occurs more than once
+eans/./05_05_05_02_5.xml	//node[count(node[@rel="tag"]) > 1]/node[@rel="tag"]	rel "tag" occurs more than once
+eans/./05_05_06_02_16.xml	//node[@rel="hd" and ../@cat="np" and @pt and not(@pt="n" or @pt="tw" or @pt="spec" or @pt="adj" or @pt="ww" or @pt="vnw" or @pt="bw")]	unexpected postag for head of np
+eans/./05_07_03_02_10b.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+eans/./05_07_03_02_11b.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+eans/./05_07_03_02_12b.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+eans/./05_07_04_03_10_2.xml	//node[../@cat="mwu" and not(@end = ../@end) and not(@end = ../node/@begin)]	MWU with hole in it?
+eans/./05_08_05_05_02_2c.xml	//node[ ../@cat="whrel" and not(@rel="body") and not(@rel="rhd")]	unexpected whrel-daughter.   Expected rels: body rhd

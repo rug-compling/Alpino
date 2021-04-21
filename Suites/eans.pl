@@ -2194,7 +2194,8 @@ sentence('05_09_03_02_05_20a',['Er',zal,mij,wel,wat,ontgaan,'.']).
 sentence('05_09_03_02_05_20c',['Iets',zal,mij,wel,ontgaan,'.']).
 sentence('05_09_03_02_05_21',['Ik',zal,er,toch,wel,wat,van,begrijpen,'.']).
 sentence('05_09_03_02_05_22b',['Ik',zal,er,wel,weer,iets,niet,van,begrijpen,'.']).
-sentence('05_09_03_02_05_23b',['Geef',eens,iets,wat_dat,je,moeilijk,kunt,missen,'.']).
+sentence('05_09_03_02_05_23b_1',['Geef',eens,iets,wat,je,moeilijk,kunt,missen,'.']).
+sentence('05_09_03_02_05_23b_2',['Geef',eens,iets,dat,je,moeilijk,kunt,missen,'.']).
 sentence('05_09_03_02_05_24b',['Ik',zit,met,iets,'.']).
 sentence('05_09_03_02_05_25b',['Zit',je,op,iets,te,wachten,?]).
 sentence('05_09_03_02_05_26',['Het',een,of,ander,zal,me,wel,weer,ontgaan,'.']).
@@ -2224,7 +2225,8 @@ sentence('05_09_03_02_05_9c',['Je',hebt,me,alles,verzwegen,'.']).
 sentence('05_09_03_02_06_1',['Sommige',zijn,al,dood,'.']).
 sentence('05_09_03_02_06_10',['Bezit',hij,enig,geld,?]).
 sentence('05_09_03_02_06_14a',['Voor',die,enkele,bezoeker,die,we,kunnen,verwachten,',',hoeven,we,niet,de,hele,dag,open,te,blijven,'.']).
-sentence('05_09_03_02_06_14b',['Voor',de_die,enkele,bezoekers,die,we,kunnen,verwachten,',',hoeven,we,niet,de,hele,dag,open,te,blijven,'.']).
+sentence('05_09_03_02_06_14b_1',['Voor',de,enkele,bezoekers,die,we,kunnen,verwachten,',',hoeven,we,niet,de,hele,dag,open,te,blijven,'.']).
+sentence('05_09_03_02_06_14b_2',['Voor',die,enkele,bezoekers,die,we,kunnen,verwachten,',',hoeven,we,niet,de,hele,dag,open,te,blijven,'.']).
 sentence('05_09_03_02_06_14c',['Voor',die,paar,bezoekers,die,we,kunnen,verwachten,',',hoeven,we,niet,de,hele,dag,open,te,blijven,'.']).
 sentence('05_09_03_02_06_15',['Met',een,enkel,woord,wist,hij,veel,te,zeggen,'.']).
 sentence('05_09_03_02_06_16a',['Er',zijn,enkele,bezoekers,gekomen,'.']).
@@ -2237,7 +2239,8 @@ sentence('05_09_03_02_06_2',['Enkelen',hebben,nog,niets,gevangen,'.']).
 sentence('05_09_03_02_06_20',['De',enkelen,die,nog,volgehouden,hadden,',',waren,blij,toen,de,bel,ging,'.']).
 sentence('05_09_03_02_06_21',['Ik',heb,alleen,wat,vrienden,uitgenodigd,'.']).
 sentence('05_09_03_02_06_22',['Neem',nog,wat,kaas,'.']).
-sentence('05_09_03_02_06_23',['Boeken',?,'Ik',heb,er,nogal,wat,'.']).
+sentence('05_09_03_02_06_23_1',['Boeken',?]).
+sentence('05_09_03_02_06_23_2',['Ik',heb,er,nogal,wat,'.']).
 sentence('05_09_03_02_06_24',['Er',is,vrij,wat,uranium,gevonden,in,'Zichem','.']).
 sentence('05_09_03_02_06_25',['De',heren,hadden,tamelijk,wat,alcoholische,drank,genoten,'.']).
 sentence('05_09_03_02_06_26',['Er',waren,heel,wat,mensen,'.']).
@@ -2245,7 +2248,10 @@ sentence('05_09_03_02_06_27',['Er',staan,toch,al,aardig,wat,bomen,in,die,nieuwe,
 sentence('05_09_03_02_06_28',['Daar',heeft,hij,een,paar,artikelen,over,geschreven,'.']).
 sentence('05_09_03_02_06_29',['Ik',heb,heel,wat,vrienden,',',maar,ik,heb,er,maar,een,paar,uitgenodigd,'.']).
 sentence('05_09_03_02_06_3',['Enige',hengelaars,hadden,al,een,visje,verschalkt,',',maar,sommige,wachtten,nog,geduldig,op,de,eerste,beweging,van,hun,dobber,'.']).
-sentence('05_09_03_02_06_30a',['Ik',weet,niet,precies,hoeveel,exemplaren,ik,heb,',',maar,ik,heb,er,wel,enige_enkele_wat_een,paar,'.']).
+sentence('05_09_03_02_06_30a_1',['Ik',weet,niet,precies,hoeveel,exemplaren,ik,heb,',',maar,ik,heb,er,wel,enige,'.']).
+sentence('05_09_03_02_06_30a_2',['Ik',weet,niet,precies,hoeveel,exemplaren,ik,heb,',',maar,ik,heb,er,wel,enkele,'.']).
+sentence('05_09_03_02_06_30a_3',['Ik',weet,niet,precies,hoeveel,exemplaren,ik,heb,',',maar,ik,heb,er,wel,wat,'.']).
+sentence('05_09_03_02_06_30a_4',['Ik',weet,niet,precies,hoeveel,exemplaren,ik,heb,',',maar,ik,heb,er,wel,een,paar,'.']).
 sentence('05_09_03_02_06_31a',['Sommige',bezoekers,vroegen,of,de,schilderijen,te,koop,waren,'.']).
 sentence('05_09_03_02_06_32a',['Over',duizend,jaar,zullen,sommige,mensen,zich,misschien,afvragen,waar,wij,ons,druk,over,gemaakt,hebben,'.']).
 sentence('05_09_03_02_06_33',['Sommige',bezoekers,kunnen,zo,lastig,zijn,'.']).

@@ -498,6 +498,19 @@ context_dependent_tag(pronoun(nwh,u,sg,de,both,def),PosTag,uzelf,Q0,Q,Result) :-
     ;   PosTag = 'VNW(pers,pron,nomin,nadr,2b,getal)'
     ).
 
+context_dependent_tag(determiner(geen,nwh,mod,pro,yparg,nwkpro,geen),PosTag,geen,Q0,Q,Result) :-
+    find_path(Q0,Q,Result,Path),
+    (   pronoun_path(Path)
+    ->  det_pron(geen,_,PosTag)
+    ;   det_pron(geen,PosTag,_)
+    ).
+
+context_dependent_tag(determiner(de,nwh,nmod,pro,yparg),PosTag,gene,Q0,Q,Result) :-
+    find_path(Q0,Q,Result,Path),
+    (   pronoun_path(Path)
+    ->  det_pron(gene,_,PosTag)
+    ;   det_pron(gene,PosTag,_)
+    ).
 
 context_dependent_tag(determiner(welk,rwh,nmod,pro,yparg),PosTag,welk,Q0,Q,Result) :-
     find_path(Q0,Q,Result,Path),
@@ -1007,7 +1020,6 @@ exceptional_stem_tag(ergens,_,                                      'VNW(onbep,a
 exceptional_stem_tag(even,adjective(both(tmpadv)),                  'BW()').
 exceptional_stem_tag(eventjes,_,                                    'BW()').
 exceptional_stem_tag(gaandeweg,_,                                   'BW()').
-exceptional_stem_tag(gene,determiner(de,nwh,nmod,pro,yparg),        'VNW(aanw,det,stan,nom,met-e,zonder-n)').
 exceptional_stem_tag(genoeg, _,                                     'BW()').
 exceptional_stem_tag(ggg,_,                                         'SPEC(onverst)').
 exceptional_stem_tag(sneuvelen,nominalized_adjective,               'WW(vd,nom,met-e,mv-n)').
@@ -1910,6 +1922,8 @@ det_pron(dezelve,     'VNW(aanw,det,stan,prenom,met-e,rest)',           'VNW(aan
 det_pron(dit,         'VNW(aanw,det,stan,prenom,zonder,evon)',          'VNW(aanw,pron,stan,vol,3o,ev)').
 det_pron(ditzelfde,   'ADJ(prenom,basis,zonder)',                       'ADJ(nom,basis,zonder,zonder-n)').
 det_pron(elk,         'VNW(onbep,det,stan,prenom,zonder,evon)',         'VNW(onbep,det,stan,vrij,zonder)').
+det_pron(geen,        'VNW(onbep,det,stan,prenom,zonder,agr)',          'VNW(onbep,det,stan,nom,zonder,zonder-n)').
+det_pron(gene,        'VNW(aanw,det,stan,prenom,met-e,rest)',           'VNW(aanw,det,stan,nom,met-e,zonder-n)').
 det_pron(heleboel,    'N(soort,ev,basis,zijd,stan)',                    'N(soort,ev,basis,zijd,stan)').
 det_pron(het,         'LID(bep,stan,evon)',                             'VNW(pers,pron,stan,red,3,ev,onz)').
 det_pron(hetzelfde,   'ADJ(prenom,basis,zonder)',                       'ADJ(nom,basis,zonder,zonder-n)').
@@ -1919,7 +1933,7 @@ det_pron(hoeveel,     'TW(hoofd,prenom,stan)',                          'TW(hoof
 det_pron(meer,        'VNW(onbep,grad,stan,prenom,zonder,agr,comp)',    'VNW(onbep,grad,stan,vrij,zonder,comp)').
 det_pron(minder,      'VNW(onbep,grad,stan,prenom,zonder,agr,comp)',    'VNW(onbep,grad,stan,vrij,zonder,comp)').
 det_pron(onvoldoende, 'ADJ(prenom,basis,zonder)',                       'ADJ(vrij,basis,zonder)').
-det_pron(sommige,     'VNW(onbep,det,stan,prenom,met-e,rest)',          'VNW(onbep,det,stan,nom,met-e,zonder-n)').
+det_pron(sommig,      'VNW(onbep,det,stan,prenom,met-e,rest)',          'VNW(onbep,det,stan,nom,met-e,zonder-n)').
 det_pron(teveel,      'VNW(onbep,grad,stan,prenom,zonder,agr,basis)',   'VNW(onbep,grad,stan,vrij,zonder,basis)').
 det_pron(veel,        'VNW(onbep,grad,stan,prenom,zonder,agr,basis)',   'VNW(onbep,grad,stan,vrij,zonder,basis)').
 det_pron(voldoende,   'ADJ(prenom,basis,zonder)',                       'ADJ(vrij,basis,zonder)').
@@ -2766,6 +2780,10 @@ st(meeste,'VNW(onbep,grad,stan,nom,met-e,zonder-n,sup)').
 st(minst,'VNW(onbep,grad,stan,vrij,zonder,sup)').
 st(minste,'VNW(onbep,grad,stan,nom,met-e,zonder-n,sup)').
 
+mwu_postag_frame_stem(noun(both,mass,sg),'een of ander',
+		      ['TW(hoofd,nom,zonder-n,basis)','VG(neven)','ADJ(nom,basis,zonder,zonder-n)'],
+		      [één,of,ander]).
+
 mwu_postag_frame_stem(adjective(pred_er(_)),Stem,['ADJ(vrij,comp,zonder)','VZ(fin)'],[Kalm,aan]) :-
     atom(Stem),
     alpino_util:split_atom(Stem," ",[AdjEr,aan]),
@@ -2971,6 +2989,8 @@ number_vrij_path([alle_zes/2|_]).
 number_vrij_path([n_n_num_app/2|_]).
 number_vrij_path([n_num/1,np_n/1|_]).
 number_vrij_path([n_num/1,np_det_n/2|_]).
+number_vrij_path([num_num_adv_num/2|Tail]) :-
+    number_vrij_path(Tail).
 number_vrij_path([n_rang/1|_]).
 number_vrij_path([pred_a/1|_]).
 number_vrij_path([start_coord(_,_)/1|Path]) :-
@@ -2979,6 +2999,8 @@ number_vrij_path([end_coord(_,_)/4,start_coord(_,_)/2|Path]) :-
     number_vrij_path(Path).
 
 
+number_nom_path([num_num_adv_num/2|Path]) :-
+    number_nom_path(Path).
 number_nom_path([n_num/1,n_n_pps/1|_]).
 number_nom_path([n_num/1,np_n/1,rel_pp_np_dp/2|_]).
 number_nom_path([pron_pron_pps/1|_]).
