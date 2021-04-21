@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="6" id="0" rel="top">
+    <node begin="0" cat="smain" end="5" id="1" rel="--">
+      <node begin="0" end="1" getal="getal" id="2" lemma="hier" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="hier" special="er_loc" status="vol" vwtype="aanw" word="Hier"/>
+      <node begin="1" end="2" id="3" infl="sg3" lemma="liggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lig" sc="intransitive" stype="declarative" tense="present" word="ligt" wvorm="pv"/>
+      <node begin="2" cat="np" end="5" id="4" rel="su">
+        <node begin="2" end="3" id="5" infl="een" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+        <node begin="3" end="4" gen="het" genus="onz" getal="ev" graad="basis" id="6" lemma="paar" naamval="stan" ntype="soort" num="meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="paar" sc="measure" special="meas_mod" word="paar"/>
+        <node begin="4" end="5" gen="de" getal="mv" graad="basis" id="7" lemma="sok" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mod" rnum="pl" root="sok" word="sokken"/>
+      </node>
+    </node>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Hier ligt een paar sokken .</sentence>
+</alpino_ds>

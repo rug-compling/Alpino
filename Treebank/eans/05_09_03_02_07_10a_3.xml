@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" getal="ev" id="2" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="Ik"/>
+      <node begin="1" end="2" id="3" infl="sg1" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" sc="transitive_ndev" stype="declarative" tense="present" word="heb" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="4" rel="obj1">
+        <node begin="2" buiging="met-e" end="3" getal="mv" graad="basis" id="5" infl="pl_num" lemma="ettelijk" naamval="stan" pdtype="grad" pos="det" positie="prenom" postag="VNW(onbep,grad,stan,prenom,met-e,mv,basis)" pt="vnw" rel="det" root="ettelijk" special="adj_number" vwtype="onbep" word="ettelijke"/>
+        <node begin="3" end="4" gen="het" getal="mv" graad="basis" id="6" lemma="exemplaar" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="exemplaar" word="exemplaren"/>
+      </node>
+    </node>
+    <node begin="4" end="5" id="7" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Ik heb ettelijke exemplaren .</sentence>
+</alpino_ds>

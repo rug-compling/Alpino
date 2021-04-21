@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="smain" end="8" id="1" rel="--">
+      <node begin="1" end="2" id="2" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="passive" stype="declarative" tense="present" word="zijn" wvorm="pv"/>
+      <node begin="2" cat="np" end="4" id="3" index="1" rel="su">
+        <node aform="base" begin="2" buiging="met-e" end="3" graad="basis" id="4" infl="e" lemma="verschillend" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="verschillend" vform="adj" word="verschillende"/>
+        <node begin="3" end="4" gen="both" getal="mv" graad="basis" id="5" lemma="mens" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="mens" word="mensen"/>
+      </node>
+      <node begin="0" cat="ppart" end="8" id="6" rel="vc">
+        <node begin="0" end="1" getal="getal" id="7" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="mod" root="er" special="er" status="red" vwtype="aanw" word="Er"/>
+        <node begin="2" end="4" id="8" index="1" rel="obj1"/>
+        <node begin="4" buiging="zonder" end="5" id="9" infl="psp" lemma="veroordelen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="veroordeel" sc="np_pc_pp(tot)" word="veroordeeld" wvorm="vd"/>
+        <node begin="5" cat="pp" end="8" id="10" rel="pc">
+          <node begin="5" end="6" id="11" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
+          <node begin="6" cat="np" end="8" id="12" rel="obj1">
+            <node aform="base" begin="6" buiging="met-e" end="7" graad="basis" id="13" infl="e" lemma="hoog" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="hoog" vform="adj" word="hoge"/>
+            <node begin="7" end="8" gen="de" getal="mv" graad="basis" id="14" lemma="boete" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="boete" word="boetes"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Er zijn verschillende mensen veroordeeld tot hoge boetes .</sentence>
+</alpino_ds>
