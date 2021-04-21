@@ -653,6 +653,10 @@ context_dependent_tag(adj_number(enkele),'VNW(onbep,det,stan,nom,met-e,zonder-n)
     find_path(Q0,Q,Result,Path),
     number_nom_path(Path).
 
+context_dependent_tag(adj_number(pl_num),'VNW(onbep,grad,stan,nom,met-e,zonder-n,basis)',_,Q0,Q,Result) :-
+    find_path(Q0,Q,Result,Path),
+    number_vrij_path(Path).
+
 context_dependent_tag(adjective(e),'VNW(onbep,det,stan,nom,met-e,zonder-n)',ene,Q0,Q,Result) :-
     find_path(Q0,Q,Result,Path),
     noun_path(Path).
@@ -997,6 +1001,7 @@ exceptional_stem_tag(deskundige,noun(de,count,sg),                  'ADJ(nom,bas
 exceptional_stem_tag(destijds,_,                                    'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(deze,determiner(der),                          'VNW(aanw,det,gen,prenom,met-e,rest3)').
 exceptional_stem_tag(deze,determiner(de,nwh,nmod,pro,yparg),        'VNW(aanw,det,stan,prenom,met-e,rest)').
+exceptional_stem_tag(deze,pronoun(nwh,thi,pl,de,both,def,strpro),   'VNW(aanw,det,stan,nom,met-e,mv-n)').
 exceptional_stem_tag(die,determiner(pron),                          'VNW(aanw,pron,gen,vol,3m,ev)').
 exceptional_stem_tag(driemaal,noun(both,count,bare_meas),           'BW()').
 exceptional_stem_tag(drug,noun(de,mass,sg),                         'N(soort,mv,basis)').
@@ -1020,6 +1025,7 @@ exceptional_stem_tag(ergens,_,                                      'VNW(onbep,a
 exceptional_stem_tag(even,adjective(both(tmpadv)),                  'BW()').
 exceptional_stem_tag(eventjes,_,                                    'BW()').
 exceptional_stem_tag(gaandeweg,_,                                   'BW()').
+exceptional_stem_tag(gene,pronoun(nwh,thi,pl,de,both,def,strpro),   'VNW(aanw,det,stan,nom,met-e,mv-n)').
 exceptional_stem_tag(genoeg, _,                                     'BW()').
 exceptional_stem_tag(ggg,_,                                         'SPEC(onverst)').
 exceptional_stem_tag(sneuvelen,nominalized_adjective,               'WW(vd,nom,met-e,mv-n)').
