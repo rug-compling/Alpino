@@ -819,18 +819,18 @@ exceptional_stem_tag(veel,adjective(st(_)),                         'VNW(onbep,g
 exceptional_stem_tag(weinig,adjective(st(_)),                       'VNW(onbep,grad,stan,vrij,zonder,sup)',   weinig).  % minst
 exceptional_stem_tag('z\'n',determiner(pron),                       'VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)',zijn).
 
-exceptional_stem_tag(twee,    noun(de,count,pl),   'TW(hoofd,nom,vn-n,basis)', twee).
-exceptional_stem_tag(drie,    noun(de,count,pl),   'TW(hoofd,nom,vn-n,basis)', drie).
-exceptional_stem_tag(vier,    noun(de,count,pl),   'TW(hoofd,nom,vn-n,basis)', vier).
-exceptional_stem_tag(vijf,    noun(de,count,pl),   'TW(hoofd,nom,vn-n,basis)', vijf).
-exceptional_stem_tag(zes,     noun(de,count,pl),   'TW(hoofd,nom,vn-n,basis)', zes).
-exceptional_stem_tag(zeven,   noun(de,count,pl),   'TW(hoofd,nom,vn-n,basis)', zeven).
-exceptional_stem_tag(acht,    noun(de,count,pl),   'TW(hoofd,nom,vn-n,basis)', acht).
-exceptional_stem_tag(negen,   noun(de,count,pl),   'TW(hoofd,nom,vn-n,basis)', negen).
-exceptional_stem_tag(tien,    noun(de,count,pl),   'TW(hoofd,nom,vn-n,basis)', tien).
-exceptional_stem_tag(twintig, noun(de,count,pl),   'TW(hoofd,nom,vn-n,basis)', twintig).
-exceptional_stem_tag(dertig,  noun(de,count,pl),   'TW(hoofd,nom,vn-n,basis)', dertig).
-exceptional_stem_tag(vijftig, noun(de,count,pl),   'TW(hoofd,nom,vn-n,basis)', vijftig).
+exceptional_stem_tag(twee,    noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', twee).
+exceptional_stem_tag(drie,    noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', drie).
+exceptional_stem_tag(vier,    noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', vier).
+exceptional_stem_tag(vijf,    noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', vijf).
+exceptional_stem_tag(zes,     noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', zes).
+exceptional_stem_tag(zeven,   noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', zeven).
+exceptional_stem_tag(acht,    noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', acht).
+exceptional_stem_tag(negen,   noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', negen).
+exceptional_stem_tag(tien,    noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', tien).
+exceptional_stem_tag(twintig, noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', twintig).
+exceptional_stem_tag(dertig,  noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', dertig).
+exceptional_stem_tag(vijftig, noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', vijftig).
 
 exceptional_stem_tag(twee_DIM,noun(het,count,pl),  'TW(hoofd,nom,mv-n,dim)',   twee).
 exceptional_stem_tag(drie_DIM,noun(het,count,pl),  'TW(hoofd,nom,mv-n,dim)',   drie).
@@ -1919,7 +1919,7 @@ starts_with_capital(W) :-
     atom_codes(W,[F|_T]),
     isupper(F).
 
-
+det_pron(allebei,     'ADJ(prenom,basis,zonder)',                       'ADJ(nom,basis,zonder,zonder-n)').
 det_pron(die,         'VNW(aanw,det,stan,prenom,zonder,rest)',          'VNW(aanw,pron,stan,vol,3,getal)').
 det_pron(dat,         'VNW(aanw,det,stan,prenom,zonder,evon)',          'VNW(aanw,pron,stan,vol,3o,ev)').
 det_pron(datzelfde,   'ADJ(prenom,basis,zonder)',                       'ADJ(nom,basis,zonder,zonder-n)').
