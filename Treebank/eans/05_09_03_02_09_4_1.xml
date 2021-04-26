@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="21" id="0" rel="top">
+    <node begin="6" end="7" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="20" id="2" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="3" index="1" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+      <node begin="1" end="2" id="4" infl="modal_not_u" lemma="zullen" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="zal" sc="aux(inf)" stype="declarative" tense="present" word="zal" wvorm="pv"/>
+      <node begin="0" cat="inf" end="20" id="5" rel="vc">
+        <node begin="0" end="1" id="6" index="1" rel="su"/>
+        <node begin="4" buiging="zonder" end="5" id="7" infl="inf" lemma="kunnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="kan" sc="aux(inf)" word="kunnen" wvorm="inf"/>
+        <node begin="0" cat="inf" end="20" id="8" rel="vc">
+          <node begin="0" end="1" id="9" index="1" rel="su"/>
+          <node begin="2" case="both" def="def" end="3" gen="de" getal="getal" id="10" lemma="je" naamval="obl" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pr,pron,obl,red,2v,getal)" pt="vnw" rel="obj2" rnum="sg" root="je" special="wkpro" status="red" vwtype="pr" wh="nwh" word="je"/>
+          <node aform="base" begin="3" end="4" id="11" infl="pred" lemma="wel" pos="adj" postag="BW()" pt="bw" rel="mod" root="wel" vform="adj" word="wel"/>
+          <node begin="5" buiging="zonder" end="6" id="12" infl="inf" lemma="zeggen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="zeg" sc="np_sbar" word="zeggen" wvorm="inf"/>
+          <node begin="7" cat="cp" end="20" id="13" rel="vc">
+            <node begin="7" conjtype="onder" end="8" id="14" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+            <node begin="8" cat="ssub" end="20" id="15" rel="body">
+              <node begin="8" case="both" def="def" end="9" gen="de" getal="ev" id="16" index="2" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" rnum="sg" root="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="je"/>
+              <node begin="15" end="16" id="17" infl="sg" lemma="moeten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="moet" sc="modifier(aux(inf))" tense="present" word="moet" wvorm="pv"/>
+              <node begin="8" cat="inf" end="20" id="18" rel="vc">
+                <node begin="8" end="9" id="19" index="2" rel="su"/>
+                <node begin="9" cat="np" end="15" id="20" rel="obj1">
+                  <node begin="9" cat="conj" end="14" id="21" rel="det">
+                    <node begin="9" buiging="zonder" end="10" id="22" infl="het" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="cnj" root="dit" vwtype="aanw" wh="nwh" word="dit"/>
+                    <node begin="10" conjtype="neven" end="11" id="23" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+                    <node begin="11" buiging="zonder" end="12" id="24" infl="het" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="cnj" root="dit" vwtype="aanw" wh="nwh" word="dit"/>
+                    <node begin="12" conjtype="neven" end="13" id="25" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+                    <node begin="13" buiging="zonder" end="14" id="26" infl="het" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="cnj" root="dat" vwtype="aanw" wh="nwh" word="dat"/>
+                  </node>
+                  <node begin="14" end="15" gen="het" genus="onz" getal="ev" graad="basis" id="27" lemma="boek" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="boek" word="boek"/>
+                </node>
+                <node begin="16" buiging="zonder" end="17" id="28" infl="inf" lemma="lezen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="lees" sc="np_pc_pp(over)" word="lezen" wvorm="inf"/>
+                <node begin="17" cat="pp" end="20" id="29" rel="pc">
+                  <node begin="17" end="18" id="30" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
+                  <node begin="18" cat="np" end="20" id="31" rel="obj1">
+                    <node begin="18" buiging="zonder" end="19" id="32" infl="het" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" wh="nwh" word="dat"/>
+                    <node begin="19" end="20" gen="het" genus="onz" getal="ev" graad="basis" id="33" lemma="onderwerp" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="onderwerp" word="onderwerp"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="20" end="21" id="34" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Hij zal je wel kunnen zeggen , dat je dit of dit of dat boek moet lezen over dat onderwerp .</sentence>
+</alpino_ds>
