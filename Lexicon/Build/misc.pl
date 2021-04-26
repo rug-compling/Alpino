@@ -1923,7 +1923,7 @@ m('de ene na de andere',determiner(de,nwh,nmod,pro,yparg), [de,een,na,de,andere]
 m(al,          determiner(alle,nwh,mod,pro,nparg), alle).
 m(al,          determiner(der),                aller).
 m(al,          determiner(pron),               aller).
-m(allerlei,      determiner(wat),                allerlei).
+m(allerlei,      determiner(wat,nwh,mod,pro,yparg),                allerlei).
 m(andermans,     determiner(pron),               andermans).
 m(dat,           determiner(het,nwh,nmod,pro,nparg),      dat).
 m(datzelfde,     determiner(het,nwh,mod,pro,yparg),  datzelfde).
@@ -6519,9 +6519,9 @@ predm_adverb(zelf).
 
 with_dt([Wij,WORD],
         Tag,
-	dt(np,[hd=l(Wij,Tag,0,1),
+	dt(np,[hd=l(Wij,TagH,0,1),
 	       mod=l(PREDM,Tag,Cat,1,2)])) :-
-    wij_allebei_wij(Wij,Tag),
+    wij_allebei_wij(Wij,TagH),
     wij_allebei(WORD,PREDM,Tag,Cat).
 
 wij_allebei_wij(wij,pronoun(nwh,fir,pl,de,nom,def)).
