@@ -4274,10 +4274,10 @@ with_dt([met,Hun,Tweeen],
 	adjective(pred(padv)),
 	dt(pp,[hd=l(met,preposition(met,[]),0,1),
 	       obj1=dt(np,[det=l(Hun,determiner(pron),detp,1,2),
-			   hd=l(Lemma,Postag,Cat,2,3)])])) :-
+			   hd=l(Lemma,Postag,2,3)])])) :-
 
     zijn(Hun),
-    wij_allebei(Tweeen,Lemma,Postag,Cat).
+    wij_allebei(Tweeen,Lemma,Postag,_Cat).
 
 zijn(ons).
 zijn(jullie).
