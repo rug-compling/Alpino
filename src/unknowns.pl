@@ -4937,7 +4937,7 @@ potential_name_fsa(not_begin(Flag),Pos0,Ws0,Ws,Ls0,Hs) :-
     potential_name_fsa_not_begin(Flag,Pos0,Ws0,Ws,Ls0,Hs).
 
 potential_name_fsa(begin,P0,[Word1|Words0],Words,[Word1|Used],[begin|His]) :-
-    Word1 \= 'De',
+    \+ ( Word1 = 'De', Words0 = [Ini|_], \+ name_initial(Ini) ), % De K. had samen met een vriend een man lastig gevallen die ...
     Word1 \= 'Het',
     Word1 \= '\'t',
     %%
