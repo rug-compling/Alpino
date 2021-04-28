@@ -6518,7 +6518,7 @@ predm_adverb(zelf).
 % hen
 
 with_dt([Wij,WORD],
-        Tag,
+        TagH,
 	dt(np,[hd=l(Wij,TagH,0,1),
 	       mod=l(PREDM,Tag,Cat,1,2)])) :-
     wij_allebei_wij(Wij,TagH),
