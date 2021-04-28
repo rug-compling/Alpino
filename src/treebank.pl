@@ -609,7 +609,7 @@ deptree_xml(Cat,String,Comments,Meta) -->
 
 deptree_xml(Cat,String,Comments,Meta,Flag,Tags,HisList) -->
     { alpino_dt:result_to_dt(Cat,Flag,Tree0),
-      deptree_xml_tree(Tree0,Tree,String,0,_,Tags,HisList)
+      deptree_xml_tree(Tree0,Tree,String,0,_,Tags,HisList,_)
     },
     deptree_xml_start,
     deptree_xml_meta(Meta),
@@ -724,22 +724,22 @@ format_sentid -->
     format_to_chars(' sentid="~s"',[WordChars]).
 format_sentid --> [].
 
-deptree_xml_tree(tree(Label,Ds0),tree(Atts,_,Ds),String,No0,No,Tags,HisList) :-
-    deptree_xml_label(Label,_,String,No0,Atts0,Tags,HisList),
+deptree_xml_tree(tree(Label,Ds0),tree(Atts,_,Ds),String,No0,No,Tags,HisList0,HisList) :-
+    deptree_xml_label(Label,_,String,No0,Atts0,Tags,HisList0,HisList1),
     keysort(Atts0,Atts1),
     check_atts(Atts1,Atts),
     No1 is No0+1,
-    deptree_xml_ds(Ds0,Ds,String,No1,No,Tags,HisList).
+    deptree_xml_ds(Ds0,Ds,String,No1,No,Tags,HisList1,HisList).
 
-deptree_xml_tree(tree(Label,Key,Ds0),tree(Atts,_,Ds),String,No0,No,Tags,HisList) :-
-    deptree_xml_label(Label,Key,String,No0,Atts0,Tags,HisList),
+deptree_xml_tree(tree(Label,Key,Ds0),tree(Atts,_,Ds),String,No0,No,Tags,HisList0,HisList) :-
+    deptree_xml_label(Label,Key,String,No0,Atts0,Tags,HisList0,HisList1),
     keysort(Atts0,Atts1),
     check_atts(Atts1,Atts),
     No1 is No0+1,
-    deptree_xml_ds(Ds0,Ds,String,No1,No,Tags,HisList).
+    deptree_xml_ds(Ds0,Ds,String,No1,No,Tags,HisList1,HisList).
 
-deptree_xml_label(r(Rel,Label),Key,String,NodeId,[id-NodeId,rel-Rel|Atts],Tags,HisList) :-
-    deptree_xml_label_rest(Label,String,Key,Atts,Tags,HisList).
+deptree_xml_label(r(Rel,Label),Key,String,NodeId,[id-NodeId,rel-Rel|Atts],Tags,HisList0,HisList) :-
+    deptree_xml_label_rest(Label,String,Key,Atts,Tags,HisList0,HisList).
 
 deptree_xml_key(P1-List,[begin-P0,end-P],P0,P) :-
     nonvar(P1),
@@ -748,23 +748,25 @@ deptree_xml_key(P1-List,[begin-P0,end-P],P0,P) :-
     P is P1+1.
 deptree_xml_key(_,[],-1,-1). % ADT
 
-deptree_xml_label_rest(i(I,Rest),String,Key,[index-I|Atts],Tags,HisList) :-
-    deptree_xml_label_rest(Rest,String,Key,Atts,Tags,HisList).
+deptree_xml_label_rest(i(I,Rest),String,Key,[index-I|Atts],Tags,HisList0,HisList) :-
+    deptree_xml_label_rest(Rest,String,Key,Atts,Tags,HisList0,HisList).
 
-deptree_xml_label_rest(i(I),_,Key,[index-I|Atts],_Tags,_His) :-
+deptree_xml_label_rest(i(I),_,Key,[index-I|Atts],_Tags,His,His) :-
     deptree_xml_key(Key,Atts,_P0,_P).
 
-deptree_xml_label_rest(p(C0),_,Key,[cat-C|Atts1],_Tags,HisList) :-
+deptree_xml_label_rest(p(C0),_,Key,[cat-C|Atts1],_Tags,HisList0,HisList) :-
     extract_category_features(C0,C,Atts1,Atts2),
     deptree_xml_key(Key,Atts,P0,P),
-    (   C == mwu,
-	lists:member(his(P0,P,His),HisList)
+    hdrug_flag(xml_format_frame,On),
+    (   On == on,
+	lists:select(his(P0,P,His),HisList0,HisList)
     ->  encode_his(His,Atts2,Atts)
-    ;   Atts2 = Atts
+    ;   Atts2 = Atts,
+	HisList0 = HisList
     ).
 
 deptree_xml_label_rest(l(FrameTerm,Cat,Root0/[P0,P]),String,_,
-                       [begin-P0,end-P,lemma-Lemma,root-Root,word-Word|Atts1],Tags,HisList) :-
+                       [begin-P0,end-P,lemma-Lemma,root-Root,word-Word|Atts1],Tags,HisList0,HisList) :-
     get_root(P0,P,String,Word),
     (   lists:member(cgn_postag(P0,P,Lemma0,Tag),Tags)
     ->  true
@@ -774,9 +776,10 @@ deptree_xml_label_rest(l(FrameTerm,Cat,Root0/[P0,P]),String,_,
     get_root(Root0,Root),    
     hdrug_flag(xml_format_frame,On),
     (   On == on,
-	lists:member(his(P0,P,His),HisList)
+	lists:select(his(P0,P,His),HisList0,HisList)
     ->  encode_his(His,Atts1,Atts)
-    ;   Atts1 = Atts
+    ;   Atts1 = Atts,
+	HisList0=HisList
     ),
     deptree_xml_label_rest_frame(On,Root,FrameTerm,Cat,Atts,P0,Word,Tag).
 
@@ -884,10 +887,10 @@ deptree_xml_label_frame([],[]).
 deptree_xml_label_frame([Att=Val|T],[Att-Val|Atts]) :-
     deptree_xml_label_frame(T,Atts).
 
-deptree_xml_ds([],[],_String,No,No,_,_).
-deptree_xml_ds([H|T],[NH|NT],String,No0,No,Tags,His) :-
-    deptree_xml_tree(H,NH,String,No0,No1,Tags,His),
-    deptree_xml_ds(T,NT,String,No1,No,Tags,His).
+deptree_xml_ds([],[],_String,No,No,_,His,His).
+deptree_xml_ds([H|T],[NH|NT],String,No0,No,Tags,His0,His) :-
+    deptree_xml_tree(H,NH,String,No0,No1,Tags,His0,His1),
+    deptree_xml_ds(T,NT,String,No1,No,Tags,His1,His).
 
 get_root(P0,P,Sentence,Word) :-
     (   get_root0(P0,P,Sentence,Word0)
