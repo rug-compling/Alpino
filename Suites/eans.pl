@@ -2353,7 +2353,8 @@ sentence('05_10_02_02_5',['Wat',zien,de,huizen,er,hier,typisch,'Hollands',uit,!]
 sentence('05_10_02_03_1a',['Wat',kun,jij,liegen,',',zeg,!]).
 sentence('05_10_02_03_1b',['Jij',kunt,nogal,liegen,',',zeg,!]).
 sentence('05_10_02_03_2a',['Wat',heb,ik,geslapen,!]).
-sentence('05_10_02_03_2b',['Ik',heb,zeer,lang_diep,geslapen,!]).
+sentence('05_10_02_03_2b_1',['Ik',heb,zeer,lang,geslapen,!]).
+sentence('05_10_02_03_2b_2',['Ik',heb,zeer,diep,geslapen,!]).
 sentence('05_10_03_4a',['Wat',is,dat,een,schitterend,boek,!]).
 sentence('05_10_04_1',['Zo\'n',lief,kind,toch,!]).
 sentence('05_10_04_2_1',['Zo\'n',hufter,!]).

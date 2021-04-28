@@ -136,3 +136,6 @@ cdb/./6760.xml	//node[@rel="hd" and ../@cat="pp" and @pt and not(@pt="vz" or @pt
 cdb/./930.xml	//node[@rel="hd" and ../@cat="pp" and @pt and not(@pt="vz" or @pt="spec" or @pt="bw" or @pt="adj" or @lemma="richting" or @lemma="naargelang" or @lemma="getuige" or @lemma="zien")]	unexpected postag for head of pp
 cdb/./6794.xml	//node[not(@cat="pp") and node[@rel="hd" and @postag="VZ(init)"]]	preposition head, but not PP?
 cdb/./6794.xml	//node[@rel="hd" and ../@cat="advp" and @pt and not(@pt="bw" or @pt="n" or @pt="adj" or @pt="vnw" or @pt="tw" or @postag="VZ(fin)")]	unexpected postag for head of advp
+cdb/./1545.xml	//node[ ../@cat="detp" and not(@rel="hd") and not(@rel="obcomp") and not(@rel="mod") and not(@rel="me")]	unexpected detp-daughter.   Expected rels: hd obcomp mod me
+cdb/./4268.xml	//node[ ../@cat="detp" and not(@rel="hd") and not(@rel="obcomp") and not(@rel="mod") and not(@rel="me")]	unexpected detp-daughter.   Expected rels: hd obcomp mod me
+cdb/./6916.xml	//node[ ../@cat="detp" and not(@rel="hd") and not(@rel="obcomp") and not(@rel="mod") and not(@rel="me")]	unexpected detp-daughter.   Expected rels: hd obcomp mod me
