@@ -12212,6 +12212,8 @@ n([pl(gedeelten),pl(gedeeltes),sg(gedeelte)],het,[],
 
 n([pl(gedenktekens),sg(gedenkteken)],het,[]).
 
+n([stem(detineren),sg(gedetineerde),pl(gedetineerden)],de,[],[mede]).
+
 n([sg(gedeputeerde),pl(gedeputeerden)],de,[]).
 
 n([mass(gedestilleerd)],both,[]).
@@ -19865,6 +19867,14 @@ n([pl(leden),sg(lid)],het,[],
    kamer,h(kamer),
    i(kamer,'Kamer'),
    i(kamer,'Kamer-'),
+   ['1e','Kamer'],
+   ['2e','Kamer'],
+   ['1e','kamer'],
+   ['2e','kamer'],
+   wh(['1e','Kamer']),
+   wh(['2e','Kamer']),
+   wh(['1e','kamer']),
+   wh(['2e','kamer']),
    'Eerste-Kamer',['Eerste','Kamer'],
    'Tweede-Kamer',['Tweede','Kamer'],
    i('CD_kamer','CD-kamer'),

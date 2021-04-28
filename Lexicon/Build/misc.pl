@@ -7516,7 +7516,6 @@ nominalized_adjective(blond,blonden).
 nominalized_adjective(boos,bozen).
 nominalized_adjective(bruin,bruinen).
 nominalized_adjective(deskundig,deskundigen). % in order to be able to analyze "onafhankelijk deskundigen"
-nominalized_adjective(detineren,gedetineerden).
 nominalized_adjective(dik,dikken).
 nominalized_adjective(doof,doven).
 nominalized_adjective(doopsgezind,doopsgezinden).
