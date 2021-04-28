@@ -3099,12 +3099,12 @@ spelling_variant(vind,    vindt) :-
 
 spelling_variant(kondt, kunt).
 
-% spelling_variant('Belgie','België').
-% spelling_variant('Brazilie','Brazilië').
-% spelling_variant('Israel','Israël').
-% spelling_variant('Israels','Israëls').
-% spelling_variant('Italie','Italië').
-% spelling_variant('Munchen','München').
+spelling_variant('Belgie','België').
+spelling_variant('Brazilie','Brazilië').
+spelling_variant('Israel','Israël').
+spelling_variant('Israels','Israëls').
+spelling_variant('Italie','Italië').
+spelling_variant('Munchen','München').
 
 spelling_variant('Nos','NOS').
 spelling_variant('Psv','PSV').
