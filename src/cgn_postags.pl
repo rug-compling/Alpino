@@ -1919,6 +1919,7 @@ starts_with_capital(W) :-
     atom_codes(W,[F|_T]),
     isupper(F).
 
+det_pron(allerlei,    'ADJ(prenom,basis,zonder)',                       'ADJ(nom,basis,zonder,zonder-n)').
 det_pron(allebei,     'ADJ(prenom,basis,zonder)',                       'ADJ(nom,basis,zonder,zonder-n)').
 det_pron(die,         'VNW(aanw,det,stan,prenom,zonder,rest)',          'VNW(aanw,pron,stan,vol,3,getal)').
 det_pron(dat,         'VNW(aanw,det,stan,prenom,zonder,evon)',          'VNW(aanw,pron,stan,vol,3o,ev)').
