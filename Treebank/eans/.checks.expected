@@ -20,3 +20,7 @@ eans/./02_04_06_7.xml	//node[ @cat and @rel="predm" and not(@cat="advp") and not
 eans/./04_03_03_7.xml	//node[ @cat and @rel="predm" and not(@cat="advp") and not(@cat="np") and not(@cat="ap") and not(@cat="ppart") and not(@cat="ppres") and not(@cat="cp") and not(@cat="pp") and not(@cat="conj") and not(@cat="mwu") and not(@cat="whrel")]	unexpected predm-category.   Expected cats: advp np ap ppart ppres cp pp conj mwu whrel
 eans/./04_04_02_2a.xml	//node[node[@getal="mv" and @rel="hd"] and node[@rel="det" and (@root="het" or @root="een" or @root="dit" or @root="dat")]]	plural head noun with singular determiner?
 eans/./04_04_02_3.xml	//node[node[@getal="mv" and @rel="hd"] and node[@rel="det" and (@root="het" or @root="een" or @root="dit" or @root="dat")]]	plural head noun with singular determiner?
+eans/./04_05_04_8.xml	//node[@rel="whd" and @pos and not(@vwtype="vb" or @pt="bw" or @root="hoeveel")]	whd without wh postag?
+eans/./05_07_04_02_8.xml	//node[@rel="whd" and @pos and not(@vwtype="vb" or @pt="bw" or @root="hoeveel")]	whd without wh postag?
+eans/./05_10_02_01_8b.xml	//node[@rel="whd" and @pos and not(@vwtype="vb" or @pt="bw" or @root="hoeveel")]	whd without wh postag?
+eans/./05_10_02_03_1a.xml	//node[@rel="whd" and @pos and not(@vwtype="vb" or @pt="bw" or @root="hoeveel")]	whd without wh postag?
