@@ -125,7 +125,7 @@ surf_lemma(Word,Rel,Pos0,Pos,Lem,Lem) :-
 
 
 % surf_lemma(reinste,mwp,'ADJ(nom,sup,met-e,zonder-n,stan)','ADJ(prenom,sup,met-e,stan)',_,rein).
-
+/*
 surf_lemma(wat,whd,'VNW(onbep,pron,stan,vol,3o,ev)','VNW(excl,pron,stan,vol,3,getal)',wat,wat).
 surf_lemma('Wat',whd,'VNW(onbep,pron,stan,vol,3o,ev)','VNW(excl,pron,stan,vol,3,getal)',wat,wat).
 surf_lemma(wat,whd,'VNW(vb,pron,stan,vol,3o,ev)','VNW(excl,pron,stan,vol,3,getal)',wat,wat).
@@ -135,7 +135,7 @@ surf_lemma(wat,mod,'VNW(onbep,pron,stan,vol,3o,ev)','VNW(excl,pron,stan,vol,3,ge
 surf_lemma('Wat',mod,'VNW(onbep,pron,stan,vol,3o,ev)','VNW(excl,pron,stan,vol,3,getal)',wat,wat).
 surf_lemma(wat,mod,'VNW(vb,pron,stan,vol,3o,ev)','VNW(excl,pron,stan,vol,3,getal)',wat,wat).
 surf_lemma('Wat',mod,'VNW(vb,pron,stan,vol,3o,ev)','VNW(excl,pron,stan,vol,3,getal)',wat,wat).
-
+*/
 user:query:-
     findall(L,lemma(L,_),Ls),
     (   Ls = [_|_]

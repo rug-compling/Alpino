@@ -759,6 +759,7 @@ deptree_xml_label_rest(p(C0),_,Key,[cat-C|Atts1],_Tags,HisList0,HisList) :-
     deptree_xml_key(Key,Atts,P0,P),
     hdrug_flag(xml_format_frame,On),
     (   On == on,
+	\+ C == top,
 	lists:select(his(P0,P,His),HisList0,HisList)
     ->  encode_his(His,Atts2,Atts)
     ;   Atts2 = Atts,
