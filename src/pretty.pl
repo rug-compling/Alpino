@@ -518,10 +518,7 @@ add_weights([H|T0],[W1-W2-Count-Feature|T]) :-
     ;  W1 = 0
     ),
     (  ParseOrGen = parse
-    -> (  alpino_penalties:additional_weight(Feature,W2)
-       -> true
-       ;  W2=0
-       )
+    -> W2=0
     ;  (  alpino_fluency_maxent:additional_weight(Feature,W2)
        -> true
        ;  W2=0

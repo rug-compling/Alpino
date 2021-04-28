@@ -757,7 +757,8 @@ deptree_xml_label_rest(i(I),_,Key,[index-I|Atts],_Tags,_His) :-
 deptree_xml_label_rest(p(C0),_,Key,[cat-C|Atts1],_Tags,HisList) :-
     extract_category_features(C0,C,Atts1,Atts2),
     deptree_xml_key(Key,Atts,P0,P),
-    (   lists:member(his(P0,P,His),HisList)
+    (   C == mwu,
+	lists:member(his(P0,P,His),HisList)
     ->  encode_his(His,Atts2,Atts)
     ;   Atts2 = Atts
     ).
