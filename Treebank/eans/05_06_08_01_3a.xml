@@ -14,7 +14,7 @@
               <node begin="4" end="5" id="11" lemma="over" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="over" vztype="init" word="over"/>
               <node begin="5" cat="np" end="11" id="12" rel="obj1">
                 <node begin="5" end="6" id="13" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                <node begin="6" cat="mwu" end="8" his="double_compound" id="14" rel="hd">
+                <node begin="6" cat="mwu" end="8" id="14" rel="hd">
                   <node begin="6" end="7" gen="het" id="15" lemma="BTW" num="pl" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" rnum="pl" root="BTW" spectype="deeleigen" word="BTW"/>
                   <node begin="7" end="8" gen="het" getal="mv" graad="basis" id="16" lemma="_tarief" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" rnum="pl" root="_tarief" word="-tarieven"/>
                 </node>
@@ -33,7 +33,7 @@
       <node begin="12" end="13" id="22" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" sc="aux_psp_zijn" stype="declarative" tense="present" word="zijn" wvorm="pv"/>
       <node begin="0" cat="ppart" end="17" id="23" rel="vc">
         <node begin="0" end="11" id="24" index="1" rel="su"/>
-        <node begin="13" cat="pp" end="16" his="normal" his_1="normal" id="25" rel="mod">
+        <node begin="13" cat="pp" end="16" id="25" rel="mod">
           <node begin="13" end="14" id="26" lemma="tot" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="tot" vztype="init" word="tot"/>
           <node begin="14" end="15" id="27" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="obj1" root="nog" word="nog"/>
           <node begin="15" end="16" id="28" lemma="toe" pos="part" postag="VZ(fin)" pt="vz" rel="hdf" root="toe" vztype="fin" word="toe"/>
