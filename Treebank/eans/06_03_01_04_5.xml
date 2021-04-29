@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+      <node begin="1" end="2" id="3" infl="sg" lemma="terug_komen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="kom_terug" sc="part_ld_pp(terug)" stype="declarative" tense="past" word="kwam" wvorm="pv"/>
+      <node aform="base" begin="2" buiging="zonder" end="3" graad="basis" id="4" infl="no_e" lemma="berooid" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predm" root="berooid" vform="adj" word="berooid"/>
+      <node begin="3" cat="pp" end="6" id="5" rel="ld">
+        <node begin="3" end="4" id="6" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+        <node begin="4" cat="np" end="6" id="7" rel="obj1">
+          <node begin="4" buiging="zonder" end="5" getal="ev" id="8" infl="pron" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="zijn" status="red" vwtype="bez" word="z&apos;n"/>
+          <node begin="5" end="6" gen="de" genus="zijd" getal="ev" graad="basis" id="9" lemma="wereld_reis" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="wereld_reis" special="tmp" word="wereldreis"/>
+        </node>
+      </node>
+      <node begin="6" end="7" id="10" lemma="terug" pos="part" postag="BW()" pt="bw" rel="svp" root="terug" word="terug"/>
+    </node>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Hij kwam berooid van z&apos;n wereldreis terug .</sentence>
+</alpino_ds>

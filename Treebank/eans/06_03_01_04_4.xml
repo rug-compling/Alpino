@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="4" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="Het"/>
+      <node begin="1" end="2" id="3" infl="sg3" lemma="worden" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="word" sc="copula" stype="declarative" tense="present" word="wordt" wvorm="pv"/>
+      <node aform="base" begin="2" buiging="zonder" end="3" graad="basis" id="4" infl="no_e" lemma="gauw" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="gauw" vform="adj" word="gauw"/>
+      <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="5" infl="no_e" lemma="donker" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="donker" vform="adj" word="donker"/>
+    </node>
+    <node begin="4" end="5" id="6" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Het wordt gauw donker .</sentence>
+</alpino_ds>

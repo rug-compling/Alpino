@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="22" id="0" rel="top">
+    <node begin="11" end="12" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="smain" end="21" id="2" rel="--">
+      <node begin="12" end="13" id="3" infl="pl" lemma="willen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="wil" sc="modifier(aux(inf))" stype="declarative" tense="present" word="willen" wvorm="pv"/>
+      <node begin="13" case="nom" def="def" end="14" gen="de" getal="mv" id="4" index="1" lemma="we" naamval="nomin" num="pl" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,red,1,mv)" pt="vnw" rel="su" rnum="pl" root="we" special="wkpro" status="red" vwtype="pers" wh="nwh" word="we"/>
+      <node begin="0" cat="inf" end="21" id="5" rel="vc">
+        <node begin="0" cat="cp" end="11" id="6" rel="mod">
+          <node begin="0" conjtype="onder" end="1" id="7" lemma="alvorens" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="alvorens" sc="inf" word="Alvorens"/>
+          <node begin="1" cat="ti" end="11" id="8" rel="body">
+            <node begin="5" end="6" id="9" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" sc="te" vztype="init" word="te"/>
+            <node begin="1" cat="inf" end="11" id="10" rel="body">
+              <node begin="1" cat="np" end="4" id="11" rel="obj1">
+                <node begin="1" end="2" id="12" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node aform="base" begin="2" buiging="met-e" end="3" id="13" infl="e" lemma="volgen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="volg" vform="gerund" word="volgende" wvorm="od"/>
+                <node begin="3" end="4" gen="de" getal="mv" graad="basis" id="14" lemma="bladzijde" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="bladzijde" special="meas_mod" word="bladzijden"/>
+              </node>
+              <node begin="4" end="5" id="15" lemma="in" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="in" vztype="fin" word="in"/>
+              <node begin="6" buiging="zonder" end="7" id="16" infl="inf" lemma="in_voegen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="voeg_in" sc="part_transitive(in)" word="voegen" wvorm="inf"/>
+              <node begin="7" cat="pp" end="11" id="17" rel="mod">
+                <node begin="7" end="8" id="18" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+                <node begin="8" cat="np" end="11" id="19" rel="obj1">
+                  <node begin="8" end="9" id="20" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                  <node aform="base" begin="9" buiging="met-e" end="10" graad="basis" id="21" infl="e" lemma="respectievelijk" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="respectievelijk" vform="adj" word="respectievelijke"/>
+                  <node begin="10" end="11" gen="het" getal="mv" graad="basis" id="22" lemma="hoofdstuk" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="hoofdstuk" word="hoofdstukken"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node begin="13" end="14" id="23" index="1" rel="su"/>
+        <node begin="14" cat="mwu" end="17" id="24" rel="obj1">
+          <node begin="14" end="15" gen="het" getal-n="zonder-n" graad="basis" id="25" lemma="één" num="sg" numtype="hoofd" pos="noun" positie="nom" postag="TW(hoofd,nom,zonder-n,basis)" pt="tw" rel="mwp" rnum="sg" root="een" word="een"/>
+          <node begin="15" conjtype="neven" end="16" gen="het" id="26" lemma="en" num="sg" pos="noun" postag="VG(neven)" pt="vg" rel="mwp" rnum="sg" root="en" word="en"/>
+          <node begin="16" buiging="zonder" end="17" gen="het" getal-n="zonder-n" graad="basis" id="27" lemma="ander" num="sg" pos="noun" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="mwp" rnum="sg" root="ander" word="ander"/>
+        </node>
+        <node begin="17" end="18" id="28" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
+        <node begin="18" end="19" id="29" lemma="eens" pos="adv" postag="BW()" pt="bw" rel="mod" root="eens" special="tmp" word="eens"/>
+        <node aform="compar" begin="19" buiging="zonder" end="20" graad="comp" id="30" infl="no_e" lemma="nader" pos="adj" positie="vrij" postag="ADJ(vrij,comp,zonder)" pt="adj" rel="mod" root="nader" vform="adj" word="nader"/>
+        <node begin="20" buiging="zonder" end="21" id="31" infl="inf" lemma="bekijken" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="bekijk" sc="transitive" word="bekijken" wvorm="inf"/>
+      </node>
+    </node>
+    <node begin="21" end="22" id="32" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Alvorens de volgende bladzijden in te voegen in de respectievelijke hoofdstukken , willen we een en ander nog eens nader bekijken .</sentence>
+</alpino_ds>
