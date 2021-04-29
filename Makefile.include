@@ -55,10 +55,6 @@ ifndef MANDIR
        MANDIR=$(PREFIX)/man
 endif
 
-ifndef SUITE
-       SUITE=alpino('Suites/g_suite')
-endif
-
 ifndef S_FSA_MORPH_SCRIPT
        S_FSA_MORPH_SCRIPT=morph_data.pl
 endif
