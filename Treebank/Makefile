@@ -124,3 +124,16 @@ conllu: $(DIRECTORIES:%=../CONLLU/%.conllu)
 ../CONLLU/%.conllu: Enhanced/%.dact $(ALUD)
 	ls -v ../Treebank/Enhanced/$*/*.xml | $(ALUD) $(ALUD_OPTIONS) > ../CONLLU/$*.conllu 2> ../CONLLU/$*.conllu.err
 
+
+#	( cd fast; make eans.log BASE=/net/aistaff/vannoord/z/Alpino )
+
+## all steps for one suite only
+update:
+	$(MAKE) sql/$(suite).sqlite corpus=$(suite)
+	$(MAKE) enhanced corpus=$(suite)
+	$(MAKE) Enhanced/$(suite).dact
+	$(MAKE) POSLEMMA/eans.poslemma
+	$(MAKE) MWU/eans.mwu FREQ/mwu-tagged.freq
+	(  cd Enhanced/$(suite); $(MAKE) -s --no-print-directory -j 30 index.html )
+	$(MAKE) ../SENTS/eans.sents sentspl
+	$(MAKE) ../CONLLU/eans.conllu
