@@ -2376,7 +2376,8 @@ sentence('06_03_01_02_1',['Het',is,een,rebelse,meid,'.']).
 sentence('06_03_01_02_2',['De',dure,hoed,waaide,in,het,water,'.']).
 sentence('06_03_01_03_1',['Er',zijn,duidelijke,afspraken,en,onduidelijke,'.']).
 sentence('06_03_01_03_10',['Napoleon',wou,de,grootste,zijn,'.']).
-sentence('06_03_01_03_11',['Ze',gelden,als,de,'verstandigste(n)',van,hun,jaar,'.']).
+sentence('06_03_01_03_11_1',['Ze',gelden,als,de,'verstandigsten',van,hun,jaar,'.']).
+sentence('06_03_01_03_11_2',['Ze',gelden,als,de,'verstandigste',van,hun,jaar,'.']).
 sentence('06_03_01_03_12',['De',groten,zijn,groot,dank,zij,de,kleinen,'.']).
 sentence('06_03_01_03_13',['De',zwakke,moet,het,met,list,winnen,van,de,sterke]).
 sentence('06_03_01_03_14a',['De',zieken,mochten,de,eerste,dagen,nog,geen,bezoek,ontvangen,'.']).
@@ -2402,11 +2403,13 @@ sentence('06_03_01_04_7',['Dit',wasmiddel,wast,witter,'.']).
 sentence('06_03_01_04_8',['Ik',vind,hem,belachelijk,'.']).
 sentence('06_03_01_04_9',['Deze',toevoeging,maakt,de,tekst,al,heel,wat,beter,'.']).
 sentence('06_03_01_05_1',['Werk',maar,wat,harder,door,'.']).
-sentence('06_03_01_05_10',['De',patiënt,is,nog,wat,flauwtjes,'_',zwakjes,'.']).
+sentence('06_03_01_05_10_1',['De',patiënt,is,nog,wat,flauwtjes,'.']).
+sentence('06_03_01_05_10_2',['De',patiënt,is,nog,wat,zwakjes,'.']).
 sentence('06_03_01_05_11',['Ik',vind,het,maar,povertjes,'.']).
 sentence('06_03_01_05_12',['Maak',het,nu,eens,wat,netjes,'.']).
 sentence('06_03_01_05_13',['Fijntjes',merkte,hij,op,dat,de,voorzitter,op,die,manier,eerst,genoemd,zou,worden,'.']).
-sentence('06_03_01_05_14',['Ze',zitten,er,warmpjes,in_bij,'.']).
+sentence('06_03_01_05_14_1',['Ze',zitten,er,warmpjes,in,'.']).
+sentence('06_03_01_05_14_2',['Ze',zitten,er,warmpjes,bij,'.']).
 sentence('06_03_01_05_15',['Ze',was,povertjes,gekleed,'.']).
 sentence('06_03_01_05_16',['Je',moet,je,netjes,gedragen,'.']).
 sentence('06_03_01_05_2',['Ze',ziet,heel,slecht,'.']).
