@@ -463,6 +463,7 @@ testN_options :-
     set_flag(display_quality,off).
 
 hdrug_command(ann,annotate_options,[]).
+hdrug_command(annot,annotate_options,[]).
 hdrug_command(test1,test1_options,[]).
 hdrug_command(testN,testN_options,[]).
 hdrug_command(veryfast,veryfast_options,[]).

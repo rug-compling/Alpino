@@ -1160,6 +1160,8 @@ exceptional_stem_tag(uit_voeren,nominalized_adjective,              'WW(od,nom,m
 exceptional_stem_tag(uw,determiner(pron),                           'VNW(bez,det,stan,vol,2,getal,prenom,zonder,agr)').
 exceptional_stem_tag(jezelf,_,                                      'VNW(pr,pron,obl,nadr,2,getal)').
 exceptional_stem_tag(vader,determiner(pron),                        'N(soort,ev,basis,gen)').
+exceptional_stem_tag(vallen,nominalized_adjective,                  'WW(vd,nom,met-e,mv-n)').
+exceptional_stem_tag(vallen,nominalized_adjective_sg,               'WW(vd,nom,met-e,zonder-n)').
 exceptional_stem_tag(veel,adjective(e),                             'VNW(onbep,grad,stan,prenom,met-e,agr,basis)').
 exceptional_stem_tag(veel,nominalized_adjective,                    'VNW(onbep,grad,stan,nom,met-e,mv-n,basis)').
 exceptional_stem_tag(veevoer,noun(both,mass,sg),                    'N(soort,ev,basis,onz,stan)').
@@ -1489,6 +1491,7 @@ tjes(droogjes,droog).
 tjes(dunnetjes,dun).
 tjes(fijntjes,fijn).
 tjes(flauwtjes,flauw).
+tjes(frisjes,fris).
 tjes(gewoontjes,gewoon).
 tjes(gladjes,glad).
 tjes(kampjes,kalm).
