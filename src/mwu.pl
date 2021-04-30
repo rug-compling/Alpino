@@ -187,8 +187,9 @@ mwu_postag('dag in , dag uit',['N(soort,ev,basis,zijd,stan)','VZ(fin)','LET()','
 mwu_postag('Dag van de Geliefden',['N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],[dag,van,de,geliefde]).
 mwu_postag('Dag van de Student',['N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[dag,van,de,student]).
 mwu_postag('Dag voor Internet-veiligheid',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,ev,basis,zijd,stan)'],[dag,voor,internet_veiligheid]).
+mwu_postag(dankzij,['N(soort,ev,basis,zijd,stan)','WW(pv,conj,ev)'],[dank,zijn]).
+mwu_postag('dan wel',['VG(neven)','BW()'],[dan,wel]).
 mwu_postag('dat wil zeggen',['VNW(aanw,pron,stan,vol,3o,ev)','WW(pv,tgw,ev)','WW(inf,vrij,zonder)'],[dat,willen,zeggen]).
-mwu_postag('dat wou zeggen',['VNW(aanw,pron,stan,vol,3o,ev)','WW(pv,verl,ev)','WW(inf,vrij,zonder)'],[dat,willen,zeggen]).
 mwu_postag('Davis Cup-team',['SPEC(deeleigen)','N(eigen,ev,basis,onz,stan)'],['Davis','Cup_team']).
 mwu_postag('degelijk wel',['BW()','ADJ(vrij,basis,zonder)'],[wel,degelijk]).
 mwu_postag('de eerste de beste',['LID(bep,stan,rest)','TW(rang,prenom,stan)','LID(bep,stan,rest)','ADJ(prenom,sup,met-e,stan)'],[de,één,de,goed]).

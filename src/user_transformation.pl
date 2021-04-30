@@ -124,6 +124,8 @@ surf_lemma(Word,Rel,Pos0,Pos,Lem,Lem) :-
     \+ Pos0 = Pos.
 
 
+% surf_lemma(dichter,_,'ADJ(vrij,comp,zonder)','N(soort,ev,basis,zijd,stan)',_,dichter).
+
 % surf_lemma(reinste,mwp,'ADJ(nom,sup,met-e,zonder-n,stan)','ADJ(prenom,sup,met-e,stan)',_,rein).
 /*
 surf_lemma(wat,whd,'VNW(onbep,pron,stan,vol,3o,ev)','VNW(excl,pron,stan,vol,3,getal)',wat,wat).
@@ -234,6 +236,8 @@ correct_tags(L,L,Deeleigen) :-
 correct_tags(L,L,Deeleigen) :-
     correct_tags(L,Deeleigen).
 
+
+%correct_tags([dan,wel],['VG(neven)','BW()']).
 
 flat(_) :-
     fail.
