@@ -7435,6 +7435,7 @@ nominalized_adjective_both(betrekken,betrokkene,betrokkenen).
 nominalized_adjective_both(bezeten,bezetene,bezetenen).
 nominalized_adjective_both(bieden,gebodene,gebodenen).
 nominalized_adjective_both(geboren,geborene,geborenen).
+nominalized_adjective_both(vallen,gevallene,gevallenen).
 nominalized_adjective_both(treffen,getroffene,getroffenen).
 nominalized_adjective_both(overwegen,overwogene,overwogenen).
 nominalized_adjective_both(over_blijven,overgeblevene,overgeblevenen).
@@ -7442,6 +7443,8 @@ nominalized_adjective_both(pasgeboren,pasgeborene,pasgeborenen).
 nominalized_adjective_both(uitverkoren,uitverkorene,uitverkorenen).
 nominalized_adjective_both(vrij_laten,vrijgelatene,vrijgelatenen).
 nominalized_adjective_both(werkwillig,werkwillige,werkwilligen).
+
+
 
 %% een ander dan ik had allang...
 m(ander,nominalized_compar_adjective_sg,ander).
