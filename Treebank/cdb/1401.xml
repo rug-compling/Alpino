@@ -65,9 +65,9 @@
             <node begin="26" end="27" getal="ev" id="49" index="3" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="noun" postag="VNW(vb,pron,stan,vol,3o,ev)" pt="vnw" rel="rhd" root="wat" status="vol" vwtype="vb" word="wat"/>
             <node begin="26" cat="ssub" end="48" id="50" rel="body">
               <node begin="26" end="27" id="51" index="3" rel="su"/>
-              <node begin="27" cat="mwu" end="29" id="52" rel="svp">
-                <node begin="27" conjtype="onder" end="28" id="53" lemma="als" pos="fixed" postag="VG(onder)" pt="vg" rel="mwp" root="als" word="als"/>
-                <node begin="28" end="29" genus="onz" getal="ev" graad="basis" id="54" lemma="gevolg" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="gevolg" word="gevolg"/>
+              <node begin="27" cat="cp" end="29" id="52" rel="predc">
+                <node begin="27" conjtype="onder" end="28" id="53" lemma="als" pos="fixed" postag="VG(onder)" pt="vg" rel="cmp" root="als" word="als"/>
+                <node begin="28" end="29" genus="onz" getal="ev" graad="basis" id="54" lemma="gevolg" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="body" root="gevolg" word="gevolg"/>
               </node>
               <node begin="29" end="30" id="55" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" word="heeft" wvorm="pv"/>
               <node begin="31" cat="cp" end="48" id="56" rel="vc">

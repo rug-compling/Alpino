@@ -11,7 +11,7 @@
         <node begin="3" end="4" id="7" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         <node begin="4" cat="conj" end="7" id="8" rel="predc">
           <node begin="4" buiging="zonder" end="5" graad="basis" id="9" lemma="behoorlijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="behoorlijk" word="behoorlijk"/>
-          <node begin="5" end="6" id="10" lemma="tot" pos="vg" postag="VZ(init)" pt="vz" rel="crd" root="tot" vztype="init" word="tot"/>
+          <node begin="5" conjtype="neven" end="6" id="10" lemma="tot" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="tot" word="tot"/>
           <node begin="6" buiging="zonder" end="7" graad="basis" id="11" lemma="uitstekend" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="cnj" root="uitstekend" word="uitstekend"/>
         </node>
       </node>

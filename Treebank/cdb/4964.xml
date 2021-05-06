@@ -57,9 +57,9 @@
                       <node begin="23" end="24" genus="zijd" getal="ev" graad="basis" id="46" lemma="wet" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wet" word="wet"/>
                     </node>
                   </node>
-                  <node begin="24" cat="pp" end="26" id="47" rel="ld">
-                    <node begin="24" end="25" id="48" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="aan" vztype="init" word="aan"/>
-                    <node begin="25" end="26" getal="mv" graad="basis" id="49" lemma="band" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="band" word="banden"/>
+                  <node begin="24" cat="mwu" end="26" id="47" rel="svp">
+                    <node begin="24" end="25" id="48" lemma="aan" pos="prep" postag="VZ(init)" pt="vz" rel="mwp" root="aan" vztype="init" word="aan"/>
+                    <node begin="25" end="26" getal="mv" graad="basis" id="49" lemma="band" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="banden" word="banden"/>
                   </node>
                   <node begin="27" buiging="zonder" end="28" id="50" lemma="leggen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="leg" word="gelegd" wvorm="vd"/>
                 </node>

@@ -27,9 +27,9 @@
                     <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="23" lemma="hoofd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="hoofd" word="hoofd"/>
                   </node>
                   <node begin="10" end="11" id="24" lemma="enigszins" pos="adv" postag="BW()" pt="bw" rel="mod" root="enigszins" word="enigszins"/>
-                  <node begin="11" cat="mwu" end="13" id="25" rel="svp">
-                    <node begin="11" end="12" id="26" lemma="boven" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="boven" vztype="init" word="boven"/>
-                    <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="27" lemma="water" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="water" word="water"/>
+                  <node begin="11" cat="pp" end="13" id="25" rel="ld">
+                    <node begin="11" end="12" id="26" lemma="boven" pos="fixed" postag="VZ(init)" pt="vz" rel="hd" root="boven" vztype="init" word="boven"/>
+                    <node begin="12" end="13" genus="onz" getal="ev" graad="basis" id="27" lemma="water" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="obj1" root="water" word="water"/>
                   </node>
                   <node begin="15" buiging="zonder" end="16" id="28" lemma="houden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="houd" word="houden" wvorm="inf"/>
                 </node>

@@ -2,19 +2,19 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="8" id="0" rel="top">
     <node begin="0" cat="smain" end="7" id="1" rel="--">
-      <node begin="0" end="1" id="2" lemma="blijkbaar" pos="adj" postag="ADJ(vrij,basis,zonder)" pt="adj" positie="vrij" graad="basis" buiging="zonder" rel="mod" word="Blijkbaar"/>
-      <node begin="1" end="2" id="3" lemma="geloven" pos="ww" postag="WW(pv,verl,ev)" pt="ww" wvorm="pv" pvtijd="verl" pvagr="ev" rel="hd" word="geloofde"/>
+      <node begin="0" buiging="zonder" end="1" graad="basis" id="2" lemma="blijkbaar" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="NA" word="Blijkbaar"/>
+      <node begin="1" end="2" id="3" lemma="geloven" pos="ww" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="NA" word="geloofde" wvorm="pv"/>
       <node begin="2" cat="np" end="4" id="4" rel="su">
-        <node begin="2" end="3" id="5" lemma="oud" pos="adj" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" positie="prenom" graad="basis" buiging="met-e" naamval="stan" rel="mod" word="ouwe"/>
-        <node begin="3" end="4" id="6" lemma="Skip" pos="n" postag="N(eigen,ev,basis,zijd,stan)" pt="n" ntype="eigen" getal="ev" graad="basis" genus="zijd" naamval="stan" rel="hd" word="Skip"/>
+        <node begin="2" buiging="met-e" end="3" graad="basis" id="5" lemma="oud" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="NA" word="ouwe"/>
+        <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="Skip" naamval="stan" ntype="eigen" pos="n" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="NA" word="Skip"/>
       </node>
-      <node begin="4" end="5" id="7" lemma="niet" pos="bw" postag="BW()" pt="bw" rel="mod" word="niet"/>
+      <node begin="4" end="5" id="7" lemma="niet" pos="bw" postag="BW()" pt="bw" rel="mod" root="NA" word="niet"/>
       <node begin="5" cat="pp" end="7" id="8" rel="pc">
-        <node begin="5" end="6" id="9" lemma="in" pos="vz" postag="VZ(init)" pt="vz" vztype="init" rel="hd" word="in"/>
-        <node begin="6" end="7" id="10" lemma="credit_card" pos="n" postag="N(soort,mv,basis)" pt="n" ntype="soort" getal="mv" graad="basis" rel="obj1" word="creditcards"/>
+        <node begin="5" end="6" id="9" lemma="in" pos="vz" postag="VZ(init)" pt="vz" rel="hd" root="NA" vztype="init" word="in"/>
+        <node begin="6" end="7" getal="mv" graad="basis" id="10" lemma="creditcard" ntype="soort" pos="n" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="NA" word="creditcards"/>
       </node>
     </node>
-    <node begin="7" end="8" id="11" lemma="." pos="let" postag="LET()" pt="let" rel="--" word="."/>
+    <node begin="7" end="8" id="11" lemma="." pos="let" postag="LET()" pt="let" rel="--" root="NA" word="."/>
   </node>
   <sentence>Blijkbaar geloofde ouwe Skip niet in creditcards .</sentence>
   <comments>

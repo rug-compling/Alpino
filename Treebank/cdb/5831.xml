@@ -43,8 +43,8 @@
           <node begin="16" cat="np" end="22" id="31" rel="me">
             <node begin="16" end="17" id="32" lemma="ongeveer" pos="adv" postag="BW()" pt="bw" rel="mod" root="ongeveer" word="ongeveer"/>
             <node begin="17" cat="conj" end="20" id="33" rel="det">
-              <node begin="17" end="18" id="34" lemma="zestig" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="cnj" root="zestig" word="zestig"/>
-              <node begin="18" end="19" id="35" lemma="tot" pos="vg" postag="VZ(init)" pt="vz" rel="crd" root="tot" vztype="init" word="tot"/>
+              <node begin="17" end="18" id="34" lemma="zestig" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="cnj" root="zestig" word="zestig"/>
+              <node begin="18" conjtype="neven" end="19" id="35" lemma="tot" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="tot" word="tot"/>
               <node begin="19" end="20" id="36" lemma="zeventig" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="cnj" root="zeventig" word="zeventig"/>
             </node>
             <node begin="20" end="21" genus="onz" getal="ev" graad="basis" id="37" lemma="miljoen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="miljoen" word="miljoen"/>

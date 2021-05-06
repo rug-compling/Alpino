@@ -10,8 +10,8 @@
         <node begin="3" cat="pp" end="6" id="7" rel="mod">
           <node begin="3" end="4" id="8" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
           <node begin="4" cat="mwu" end="6" id="9" rel="obj1">
-            <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="10" lemma="prof." naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="prof." word="prof."/>
-            <node begin="5" end="6" id="11" lemma="euw" pos="noun" postag="BW()" pt="bw" rel="mwp" root="Euwe" word="Euwe"/>
+            <node begin="4" end="5" id="10" lemma="prof." pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="prof." spectype="deeleigen" word="prof."/>
+            <node begin="5" end="6" id="11" lemma="Euwe" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Euwe" spectype="deeleigen" word="Euwe"/>
           </node>
         </node>
         <node begin="7" cat="cp" end="17" id="12" rel="vc">
