@@ -8,8 +8,7 @@
     <xsl:call-template name="print-atts"/>
   </xsl:template>
 
-  
-  <xsl:template name="print-atts">
+    <xsl:template name="print-atts">
     <xsl:for-each select="//node[@word and @postag]">
       <xsl:sort select="@begin" data-type="number"/>
        <xsl:apply-templates select="@word"/>
@@ -22,6 +21,8 @@
        <xsl:text>&#xA;</xsl:text>
     </xsl:for-each>
   </xsl:template>
+  
+
   
  <xsl:template match="@*">
    <xsl:value-of select="."/>
