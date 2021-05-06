@@ -1,71 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="31" id="0" rel="top">
-    <node begin="0" end="1" id="1" lemma="&apos;" pos="let" postag="LET()" pt="let" rel="--" word="&apos;"/>
-    <node begin="9" end="10" id="2" lemma="," pos="let" postag="LET()" pt="let" rel="--" word=","/>
-    <node begin="21" end="22" id="3" lemma="," pos="let" postag="LET()" pt="let" rel="--" word=","/>
+    <node begin="0" end="1" id="1" lemma="&apos;" pos="let" postag="LET()" pt="let" rel="--" root="NA" word="&apos;"/>
+    <node begin="9" end="10" id="2" lemma="," pos="let" postag="LET()" pt="let" rel="--" root="NA" word=","/>
+    <node begin="21" end="22" id="3" lemma="," pos="let" postag="LET()" pt="let" rel="--" root="NA" word=","/>
     <node begin="1" cat="smain" end="30" id="4" rel="--">
-      <node begin="1" end="2" genus="onz" getal="ev" id="5" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="vnw" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" status="red" vwtype="pers" word="Het"/>
-      <node begin="2" end="3" id="6" lemma="zijn" pos="ww" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" word="was" wvorm="pv"/>
-      <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="gewoon" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" word="gewoon"/>
-      <node begin="4" end="5" id="8" lemma="niet" pos="bw" postag="BW()" pt="bw" rel="mod" word="niet"/>
-      <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="logisch" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" word="logisch"/>
+      <node begin="1" end="2" genus="onz" getal="ev" id="5" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="vnw" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="sup" root="NA" status="red" vwtype="pers" word="Het"/>
+      <node begin="2" end="3" id="6" lemma="zijn" pos="ww" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="NA" word="was" wvorm="pv"/>
+      <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="gewoon" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="NA" word="gewoon"/>
+      <node begin="4" end="5" id="8" lemma="niet" pos="bw" postag="BW()" pt="bw" rel="mod" root="NA" word="niet"/>
+      <node begin="5" buiging="zonder" end="6" graad="basis" id="9" lemma="logisch" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="predc" root="NA" word="logisch"/>
       <node begin="6" cat="cp" end="30" id="10" rel="su">
-        <node begin="6" conjtype="onder" end="7" id="11" lemma="dat" pos="vg" postag="VG(onder)" pt="vg" rel="cmp" word="dat"/>
+        <node begin="6" conjtype="onder" end="7" id="11" lemma="dat" pos="vg" postag="VG(onder)" pt="vg" rel="cmp" root="NA" word="dat"/>
         <node begin="7" cat="ssub" end="30" id="12" rel="body">
           <node begin="7" cat="np" end="21" id="13" index="1" rel="su">
-            <node begin="7" buiging="zonder" end="8" id="14" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="vnw" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" vwtype="aanw" word="die"/>
-            <node begin="8" end="9" getal="mv" graad="basis" id="15" lemma="duikboot" ntype="soort" pos="n" postag="N(soort,mv,basis)" pt="n" rel="hd" word="duikboten"/>
+            <node begin="7" buiging="zonder" end="8" id="14" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="vnw" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="NA" vwtype="aanw" word="die"/>
+            <node begin="8" end="9" getal="mv" graad="basis" id="15" lemma="duikboot" ntype="soort" pos="n" postag="N(soort,mv,basis)" pt="n" rel="hd" root="NA" word="duikboten"/>
             <node begin="10" cat="rel" end="21" id="16" rel="mod">
-              <node begin="10" end="11" id="17" index="2" lemma="waarvan" pos="bw" postag="BW()" pt="bw" rel="rhd" word="waarvan"/>
+              <node begin="10" end="11" id="17" index="2" lemma="waarvan" pos="bw" postag="BW()" pt="bw" rel="rhd" root="NA" word="waarvan"/>
               <node begin="10" cat="ssub" end="21" id="18" rel="body">
-                <node begin="12" end="13" id="19" lemma="zijn" pos="ww" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" word="was" wvorm="pv"/>
+                <node begin="12" end="13" id="19" lemma="zijn" pos="ww" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="NA" word="was" wvorm="pv"/>
                 <node begin="10" cat="ppart" end="21" id="20" rel="vc">
                   <node begin="10" end="11" id="21" index="2" rel="mod"/>
-                  <node begin="11" buiging="zonder" end="12" id="22" lemma="bewezen" pos="ww" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" word="bewezen" wvorm="vd"/>
+                  <node begin="11" buiging="zonder" end="12" id="22" lemma="bewijzen" pos="ww" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="NA" word="bewezen" wvorm="vd"/>
                   <node begin="13" cat="cp" end="21" id="23" rel="vc">
-                    <node begin="13" conjtype="onder" end="14" id="24" lemma="dat" pos="vg" postag="VG(onder)" pt="vg" rel="cmp" word="dat"/>
+                    <node begin="13" conjtype="onder" end="14" id="24" lemma="dat" pos="vg" postag="VG(onder)" pt="vg" rel="cmp" root="NA" word="dat"/>
                     <node begin="14" cat="ssub" end="21" id="25" rel="body">
-                      <node begin="14" end="15" getal="mv" id="26" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="vnw" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" status="red" vwtype="pers" word="ze"/>
+                      <node begin="14" end="15" getal="mv" id="26" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="vnw" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="NA" status="red" vwtype="pers" word="ze"/>
                       <node begin="15" cat="pp" end="17" id="27" rel="mod">
-                        <node begin="15" end="16" id="28" lemma="in" pos="vz" postag="VZ(init)" pt="vz" rel="hd" vztype="init" word="in"/>
-                        <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="29" lemma="Hårsfjärden" naamval="stan" ntype="eigen" pos="n" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" word="Hårsfjärden"/>
+                        <node begin="15" end="16" id="28" lemma="in" pos="vz" postag="VZ(init)" pt="vz" rel="hd" root="NA" vztype="init" word="in"/>
+                        <node begin="16" end="17" genus="onz" getal="ev" graad="basis" id="29" lemma="Hårsfjärden" naamval="stan" ntype="eigen" pos="n" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="NA" word="Hårsfjärden"/>
                       </node>
                       <node begin="17" cat="pp" end="20" id="30" rel="ld">
-                        <node begin="17" end="18" id="31" lemma="onder" pos="vz" postag="VZ(init)" pt="vz" rel="hd" vztype="init" word="onder"/>
+                        <node begin="17" end="18" id="31" lemma="onder" pos="vz" postag="VZ(init)" pt="vz" rel="hd" root="NA" vztype="init" word="onder"/>
                         <node begin="18" cat="np" end="20" id="32" rel="obj1">
-                          <node begin="18" end="19" id="33" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="lid" postag="LID(bep,stan,rest)" pt="lid" rel="det" word="de"/>
-                          <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="34" lemma="oppervlakte" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" word="oppervlakte"/>
+                          <node begin="18" end="19" id="33" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="lid" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="NA" word="de"/>
+                          <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="34" lemma="oppervlakte" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="NA" word="oppervlakte"/>
                         </node>
                       </node>
-                      <node begin="20" end="21" id="35" lemma="liggen" pos="ww" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" word="lagen" wvorm="pv"/>
+                      <node begin="20" end="21" id="35" lemma="liggen" pos="ww" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="NA" word="lagen" wvorm="pv"/>
                     </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
-          <node begin="27" end="28" id="36" lemma="leken" pos="ww" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" word="leken" wvorm="pv"/>
+          <node begin="27" end="28" id="36" lemma="leken" pos="ww" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="NA" word="leken" wvorm="pv"/>
           <node begin="7" cat="ti" end="30" id="37" rel="vc">
-            <node begin="28" end="29" id="38" lemma="te" pos="vz" postag="VZ(init)" pt="vz" rel="cmp" vztype="init" word="te"/>
+            <node begin="28" end="29" id="38" lemma="te" pos="vz" postag="VZ(init)" pt="vz" rel="cmp" root="NA" vztype="init" word="te"/>
             <node begin="7" cat="inf" end="30" id="39" rel="body">
               <node begin="7" end="21" id="40" index="1" rel="su"/>
-              <node begin="22" end="23" getal="mv" id="41" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="vnw" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj2" status="vol" vwtype="pr" word="ons"/>
-              <node begin="23" end="24" id="42" lemma="continu" pos="bw" postag="BW()" pt="bw" rel="mod" word="continu"/>
+              <node begin="22" end="23" getal="mv" id="41" lemma="ons" naamval="obl" pdtype="pron" persoon="1" pos="vnw" postag="VNW(pr,pron,obl,vol,1,mv)" pt="vnw" rel="obj2" root="NA" status="vol" vwtype="pr" word="ons"/>
+              <node begin="23" end="24" id="42" lemma="continu" pos="bw" postag="BW()" pt="bw" rel="mod" root="NA" word="continu"/>
               <node begin="24" cat="ap" end="27" id="43" rel="predc">
                 <node begin="24" cat="np" end="26" id="44" rel="me">
-                  <node begin="24" end="25" id="45" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="lid" postag="LID(onbep,stan,agr)" pt="lid" rel="det" word="een"/>
-                  <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="46" lemma="stap" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" word="stap"/>
+                  <node begin="24" end="25" id="45" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="lid" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="NA" word="een"/>
+                  <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="46" lemma="stap" naamval="stan" ntype="soort" pos="n" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="NA" word="stap"/>
                 </node>
-                <node begin="26" end="27" id="47" lemma="voor" pos="vz" postag="VZ(fin)" pt="vz" rel="hd" vztype="fin" word="voor"/>
+                <node begin="26" end="27" id="47" lemma="voor" pos="vz" postag="VZ(fin)" pt="vz" rel="hd" root="NA" vztype="fin" word="voor"/>
               </node>
-              <node begin="29" buiging="zonder" end="30" id="48" lemma="zijn" pos="ww" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" word="zijn" wvorm="inf"/>
+              <node begin="29" buiging="zonder" end="30" id="48" lemma="zijn" pos="ww" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="NA" word="zijn" wvorm="inf"/>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="30" end="31" id="49" lemma="." pos="let" postag="LET()" pt="let" rel="--" word="."/>
+    <node begin="30" end="31" id="49" lemma="." pos="let" postag="LET()" pt="let" rel="--" root="NA" word="."/>
   </node>
   <sentence>&apos; Het was gewoon niet logisch dat die duikboten , waarvan bewezen was dat ze in Hårsfjärden onder de oppervlakte lagen , ons continu een stap voor leken te zijn .</sentence>
   <comments>

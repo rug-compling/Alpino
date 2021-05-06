@@ -12,7 +12,7 @@
             <node begin="2" end="3" id="9" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="3" cat="conj" end="7" id="10" rel="mod">
               <node begin="3" buiging="met-e" end="4" graad="basis" id="11" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="groot" word="grote"/>
-              <node begin="4" end="5" id="12" lemma="tot" pos="vg" postag="VZ(init)" pt="vz" rel="crd" root="tot" vztype="init" word="tot"/>
+              <node begin="4" conjtype="neven" end="5" id="12" lemma="tot" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="tot" word="tot"/>
               <node begin="5" cat="ap" end="7" id="13" rel="cnj">
                 <node begin="5" end="6" id="14" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="mod" root="zeer" word="zeer"/>
                 <node begin="6" buiging="met-e" end="7" graad="basis" id="15" lemma="groot" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="groot" word="grote"/>
