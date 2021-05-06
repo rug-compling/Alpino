@@ -2427,12 +2427,14 @@ sentence('06_03_02_01_11',['Hij',deed,de,wekelijkse,was,'.']).
 sentence('06_03_02_01_12',['De',redactie,komt,wekelijks,bijeen,'.']).
 sentence('06_03_02_01_13',['U',kunt,desgewenst,betalen,in,halfjaarlijkse,termijnen,'.']).
 sentence('06_03_02_01_14',['Wie',zou,dit,keer,de,driejaarlijkse,staatsprijs,voor,letterkunde,krijgen,?]).
-sentence('06_03_02_01_1b',['De',kachel,is,van,ijzer,'_',uit,ijzer,gemaakt,'.']).
+sentence('06_03_02_01_1b_1',['De',kachel,is,van,ijzer,'.']).
+sentence('06_03_02_01_1b_2',['De',kachel,is,uit,ijzer,gemaakt,'.']).
 sentence('06_03_02_01_2b',['De',verpakkingen,zijn,van,plastic,'.']).
 sentence('06_03_02_01_3',['Die',manier,van,werken,doet,erg,'Amerikaans',aan,'.']).
 sentence('06_03_02_01_4',['Zijn',stijl,is,nogal,'Vondeliaans','.']).
 sentence('06_03_02_01_5',['Pruisen',was,al,sedert,de,middeleeuwen,'Duits','.']).
-sentence('06_03_02_01_6b',['Ben',jij,'Nederlander_Nederlandse',?]).
+sentence('06_03_02_01_6b_1',['Ben',jij,'Nederlander',?]).
+sentence('06_03_02_01_6b_2',['Ben',jij,'Nederlandse',?]).
 sentence('06_03_02_01_7b',['Zijn',ouders,waren,'Polen','.']).
 sentence('06_03_02_01_8',['Ze',waren,erg,menselijk,behandeld,'.']).
 sentence('06_03_02_01_9',['Ze',hebben,recht,op,een,maandelijkse,uitkering,'.']).
@@ -2440,7 +2442,8 @@ sentence('06_03_02_02_1_1',['Hij',is,het,'grootste','.']).
 sentence('06_03_02_02_1_2',['Hij',is,het,'grootst','.']).
 sentence('06_03_02_02_2_1',['Zij',kwam,het,'eerste','.']).
 sentence('06_03_02_02_2_2',['Zij',kwam,het,'eerst','.']).
-sentence('06_03_02_02_3',['Hij',is,de,eerste_de,laatste,'.']).
+sentence('06_03_02_02_3_1',['Hij',is,de,eerste,'.']).
+sentence('06_03_02_02_3_2',['Hij',is,de,laatste,'.']).
 sentence('06_03_02_02_4b',['Deze',compositie,is,louter,instrumentaal,'.']).
 sentence('06_03_03_1',['Het',terrein,ligt,al,jaren,braak,'.']).
 sentence('06_03_03_10',['Dat',boek,was,vatbaar,voor,kritiek,'.']).

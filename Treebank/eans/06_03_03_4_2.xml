@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="smain" end="7" id="1" rel="--">
+      <node begin="0" case="nom" def="def" end="1" gen="de" genus="masc" getal="ev" id="2" lemma="hij" naamval="nomin" num="sg" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,nomin,vol,3,ev,masc)" pt="vnw" rel="su" rnum="sg" root="hij" status="vol" vwtype="pers" wh="nwh" word="Hij"/>
+      <node begin="1" end="2" id="3" infl="sg" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" sc="copula_np" stype="declarative" tense="past" word="was" wvorm="pv"/>
+      <node begin="2" cat="ap" end="7" id="4" rel="predc">
+        <node begin="2" cat="np" end="4" id="5" rel="obj1">
+          <node begin="2" buiging="zonder" end="3" id="6" infl="de" lemma="die" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,rest)" pt="vnw" rel="det" root="die" vwtype="aanw" wh="nwh" word="die"/>
+          <node begin="3" end="4" gen="het" getal="mv" graad="basis" id="7" lemma="praatje" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="praatje" word="praatjes"/>
+        </node>
+        <node begin="4" cat="ap" end="6" id="8" rel="mod">
+          <node begin="4" buiging="zonder" end="5" graad="basis" id="9" lemma="heel" pos="adv" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="heel" special="intensifier" word="heel"/>
+          <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="10" infl="no_e" lemma="erg" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="erg" vform="adj" word="erg"/>
+        </node>
+        <node begin="6" end="7" id="11" lemma="moe" pos="adj" postag="BW()" pt="bw" rel="hd" root="moe" special="np" word="moe"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="12" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Hij was die praatjes heel erg moe .</sentence>
+</alpino_ds>
