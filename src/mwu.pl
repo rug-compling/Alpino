@@ -1022,7 +1022,7 @@ mwu_postag('Rijksinstituut voor Volksgezondheid en Milieu',['N(soort,ev,basis,on
 mwu_postag('rock en roll',['SPEC(vreemd)','VG(neven)','SPEC(vreemd)'],[rock,en,roll]).
 mwu_postag('Rode Brigades',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[rood,brigade]).
 mwu_postag('Rode Duivels',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)'],[rood,duivel]).
-mwu_postag('rond de',['VZ(init)','LID(bep,stan,evon)'],[rond,de]).
+mwu_postag('rond de',['VZ(init)','LID(bep,stan,rest)'],[rond,de]).
 mwu_postag('Rooms katholieke',['ADJ(vrij,basis,zonder)','ADJ(prenom,basis,met-e,stan)'],['Rooms',katholiek]).
 mwu_postag('Rotterdam Centraal',['N(eigen,ev,basis,onz,stan)','ADJ(vrij,basis,zonder)'],['Rotterdam',centraal]).
 mwu_postag('Rotterdamse Gemeentelijk Havenbedrijf',['ADJ(prenom,basis,met-e,stan)','ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],['Rotterdams',gemeentelijk,havenbedrijf]).

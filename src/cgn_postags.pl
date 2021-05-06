@@ -887,6 +887,7 @@ exceptional_stem_tag(in,adjective(_),                         'VZ(fin)',in).
 exceptional_stem_tag(jouwe,noun(both,count,both),             'VNW(bez,det,stan,vol,2v,ev,nom,met-e,zonder-n)',jou).
 exceptional_stem_tag(jouwe,noun(both,count,pl),               'VNW(bez,det,stan,vol,2v,ev,nom,met-e,mv-n)',jou).
 exceptional_stem_tag(leven_lang,noun(_,_,_),                  'ADJ(vrij,basis,zonder)',leven_lang).
+exceptional_stem_tag(man,postn_adverb,                        'N(soort,mv,basis)',man).
 exceptional_stem_tag(mee,loc_adverb,                          'VZ(fin)',mee).
 exceptional_stem_tag(natuurkundige,noun(de,count,pl),         'ADJ(nom,basis,met-e,mv-n)',natuurkundig).
 exceptional_stem_tag(natuurkundige,noun(de,count,sg),         'ADJ(nom,basis,met-e,zonder-n,stan)',natuurkundig).
@@ -901,6 +902,7 @@ exceptional_stem_tag(toe,_,                                   'VZ(fin)',toe).
 exceptional_stem_tag(uitgerekend,modal_adverb,                'WW(vd,vrij,zonder)',uit_rekenen).
 exceptional_stem_tag(verdenken,noun(de,count,sg),             'WW(vd,nom,met-e,zonder-n)',verdenken).
 exceptional_stem_tag(verdenken,noun(de,count,pl),             'WW(vd,nom,met-e,mv-n)',verdenken).
+exceptional_stem_tag(vrouw,postn_adverb,                      'N(soort,mv,basis)',vrouw).
 
 exceptional_stem_tag(mijne, noun(both,count,both),            'VNW(bez,det,stan,vol,1,ev,nom,met-e,zonder-n)',    mijn).
 exceptional_stem_tag(onze,  noun(both,count,sg),              'VNW(bez,det,stan,vol,1,mv,nom,met-e,zonder-n)',    ons).
