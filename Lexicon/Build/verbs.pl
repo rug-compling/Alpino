@@ -9024,7 +9024,6 @@ v(haal,haalt,halen,gehaald,haalde,haalden,
 	part_fixed(op,[{[mod_pp(bij),acc(schouder)]}],norm_passive),
 	part_fixed(op,[{[pc(over),acc(schouder)]}],norm_passive),
 	part_fixed(op,[acc(schouder),dip_sbar],norm_passive),
-	fixed([[boven,water],acc],norm_passive),
 	fixed([[door,het,slijk],acc],norm_passive),
 	fixed([[uit,het,slop],acc],norm_passive),
 	fixed([svp_pp(op,hals),acc],norm_passive),
@@ -9962,7 +9961,6 @@ v([houd,hou],houdt,houden,gehouden,hield,hielden,
 	er_pp_sbar(van),
 	%% spelling
 	fixed([[boven,het,hoofd],acc(hand),dat],imp_passive),
-	fixed([[boven,water],acc],norm_passive),
 	fixed([{[[boek],pc(van)]}],imp_passive),
 	fixed([{[acc(contact),pc(met)]}],norm_passive),
         fixed([{[pc(aan),[de,hand]]}],imp_passive),
@@ -11928,7 +11926,6 @@ v(kom,komt,komen,gekomen,kwam,kwamen,
           fixed([sbar_subj_no_het,[aan,het,licht]],no_passive),
           fixed([[aan,het,rollen]],no_passive),
           fixed([[beschikbaar]],no_passive), %% predc?
-          fixed([[boven,water]],no_passive),
           fixed([er_pp(af),ap_pred],no_passive),
           fixed([er_pp(vanaf),ap_pred],no_passive),
           part_fixed(uit,[acc(strot),dat],no_passive),	% dat komt me/ons de/mijn/onze strot uit
@@ -12281,7 +12278,6 @@ v(krijg,krijgt,krijgen,gekregen,kreeg,kregen,
         fixed([{[pc(in),acc(aardigheid)]}],norm_passive),
 	fixed([{[er_pp(in,C),acc(aardigheid)]},extra_sbar(C)],norm_passive),
 	fixed([{[er_pp(in,C),acc(aardigheid)]},extra_vp(C)],norm_passive),
-	fixed([[boven,water],acc],no_passive),
 	fixed([[cadeau],acc],no_passive),
 	fixed([[kado],acc],no_passive),
 	fixed([[te,leen],acc],no_passive),
@@ -21377,7 +21373,7 @@ v(sta,staat,inflected(staan,stane),gestaan,stond,stonden,
 	te_passive,       % staat te bezien, ..
 	norm_passive,     % omdat het beeld prachtig stond opgesteld
 	sbar_passive,     % omdat er staat geschreven dat ...
-	nonp_copula,      % de versieringen staan prachtig
+	nonp_copula,      % de versieringen staan prachtig, je staat buiten spel
         num_pred,         % het staat 3-0
 	part_num_pred(voor),   % we staan 3-0 voor
 	part_num_pred(achter),

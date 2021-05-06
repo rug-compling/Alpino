@@ -32030,7 +32030,8 @@ n([pl(spekulanten),sg(spekulant)],de,[]).
 n([pl(spekulaties),sg(spekulatie)],de,[sbar]).
 
 n([pl(spelen),pl(spellen),sg(spel)],het,
-  [measure,  % een spel kaarten
+  [measure,			% een spel kaarten
+   pred_pp(spel),               % dat is toch duidelijk buiten spel
    vp],
   [dim(spelletje)]).
 

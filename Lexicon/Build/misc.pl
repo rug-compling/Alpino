@@ -4346,6 +4346,7 @@ m(troef,            np_adjective,troef        ). % Het was armoe troef
 m(zat,              np_adjective,zat          ).
 m(erkentelijk,      np_adjective,erkentelijk  ).
 m(kwijt,            np_adjective,kwijt        ).
+m(machtig,          np_adjective,machtig      ). % ik ben het Frans helaas niet machtig
 m(meester,          np_adjective,meester      ).
 m(moe,              np_adjective,moe          ).
 m(rijk,             np_adjective,rijk         ). % De stad is 5 kerken rijk
