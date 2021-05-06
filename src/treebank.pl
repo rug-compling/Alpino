@@ -1887,7 +1887,12 @@ xml_file_to_xml_file(File0,File) :-
 
 converse_xml_files([]).
 converse_xml_files([File|Files]) :-
-    converse_xml_file(File),
+    on_exception(Exc,
+		 converse_xml_file(File),
+		 (  format(user_error,"exception: ~w~n",[Exc]),
+		    format(user_error,"ignoring ~w~n",[File])
+		 )
+		),
     converse_xml_files(Files).
 
 converse_xml_file(File) :-
