@@ -301,6 +301,7 @@ mwu_postag('Economische Zaken',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis
 mwu_postag('Economische Zaken en Werkgelegenheid',['ADJ(prenom,basis,met-e,stan)','N(soort,mv,basis)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[economisch,zaak,en,werkgelegenheid]).
 mwu_postag('Economisch Partnerschap Akkoorden',['ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)','N(soort,mv,basis)'],[economisch,partnerschap,akkoord]).
 mwu_postag('een en ander',['TW(hoofd,nom,zonder-n,basis)','VG(neven)','ADJ(nom,basis,zonder,zonder-n)'],[één,en,ander]).
+mwu_postag('één en ander',['TW(hoofd,nom,zonder-n,basis)','VG(neven)','ADJ(nom,basis,zonder,zonder-n)'],[één,en,ander]).
 mwu_postag('een handje',['LID(onbep,stan,agr)','N(soort,ev,dim,onz,stan)'],[een,hand]).
 mwu_postag('Eenheid Ontvoeringen en Afpersing',['N(soort,ev,basis,zijd,stan)','N(soort,mv,basis)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[eenheid,ontvoering,en,afpersing]).
 mwu_postag('een kleine',['LID(onbep,stan,agr)','ADJ(prenom,basis,met-e,stan)'],[een,klein]).
@@ -410,6 +411,7 @@ mwu_postag('Fonds voor Arbeidsongevallen',['N(soort,ev,basis,onz,stan)','VZ(init
 mwu_postag('Fonds voor de Podiumkunsten',['N(soort,ev,basis,onz,stan)','VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],[fonds,voor,de,podiumkunst]).
 mwu_postag('Fortis Groep',['N(eigen,ev,basis,genus,stan)','N(soort,ev,basis,zijd,stan)'],['Fortis',groep]).
 mwu_postag('FOVIG werkgroep ICT',['N(eigen,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)'],['FOVIG',werk_groep,'ICT']).
+mwu_postag('frank en vrij',['ADJ(vrij,basis,zonder)','VG(neven)','ADJ(vrij,basis,zonder)'],[frank,en,vrij]).
 mwu_postag('Frans-Belgische Gebarentaal',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Frans-Belgisch',gebarentaal]).
 mwu_postag('Franse Gemeenschapscommissie',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Frans',gemeenschapscommissie]).
 mwu_postag('Franse Gemeenschap van België',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],['Frans',gemeenschap,van,'België']).
@@ -699,6 +701,7 @@ mwu_postag('keer op keer',['N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,ev,
 mwu_postag('Kerkelijke Staat',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[kerkelijk,staat]).
 mwu_postag('Keuringsdienst van Waren',['N(soort,ev,basis,zijd,stan)','VZ(init)','WW(pv,verl,mv)'],[keuringsdienst,van,zijn]).
 mwu_postag('Klassieke Oudheid',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[klassiek,oudheid]).
+mwu_postag('kommer en kwel',['N(soort,ev,basis,zijd,stan)','VG(neven)','N(soort,ev,basis,zijd,stan)'],[kommer,en,kwel]).
 mwu_postag('koning der Belgen',['N(soort,ev,basis,zijd,stan)','LID(bep,gen,rest3)','N(eigen,mv,basis)'],[koning,de,'Belg']).
 mwu_postag('Koning der Belgen',['N(soort,ev,basis,zijd,stan)','LID(bep,gen,rest3)','N(eigen,mv,basis)'],[koning,de,'Belg']).
 mwu_postag('Koning der Nederlanden',['N(soort,ev,basis,zijd,stan)','LID(bep,gen,rest3)','N(eigen,mv,basis)'],[koning,de,'Nederland']).
@@ -1354,6 +1357,7 @@ mwu_postag('wat een',['VNW(excl,pron,stan,vol,3,getal)','LID(onbep,stan,agr)'],[
 mwu_postag('wat voor',['VNW(vb,pron,stan,vol,3o,ev)','VZ(init)'],[wat,voor]).
 mwu_postag('wat voor een',['VNW(vb,pron,stan,vol,3o,ev)','VZ(init)','LID(onbep,stan,agr)'],[wat,voor,een]).
 mwu_postag('wat voor één',['VNW(vb,pron,stan,vol,3o,ev)','VZ(init)','TW(hoofd,prenom,stan)'],[wat,voor,één]).
+mwu_postag('wel of geen',['BW()','VG(neven)','VNW(onbep,det,stan,prenom,zonder,agr)'],[wel,of,geen]).
 mwu_postag('Wereld Sociaal Forum',['N(soort,ev,basis,zijd,stan)','ADJ(prenom,basis,zonder)','N(soort,ev,basis,onz,stan)'],[wereld,sociaal,forum]).
 mwu_postag('Wereld Voedsel Organisatie',['N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,onz,stan)','N(soort,ev,basis,zijd,stan)'],[wereld,voedsel,organisatie]).
 mwu_postag('werkgevers- en werknemersorganisaties',['SPEC(afgebr)','VG(neven)','N(soort,mv,basis)'],['werkgevers-',en,werknemersorganisatie]).
