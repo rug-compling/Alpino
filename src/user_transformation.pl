@@ -12,24 +12,6 @@ user_transformation(r(Rel,i(X,Cat)),A,B,
                         r(Rel2,Cat2),C,D,E,F).
 
 
-% user_transformation(r(Rel,Cat),A,Ds0,
-% 		    r(Rel,Cat),A,[Hd,Obj1|Hdf],_,_) :-
-%     Obj1 = tree(r(obj1,i(Ix)),Obj1A,Obj1Ds),
-%     Hd0  = tree(r(hd,l(read_from_treebank(Az,L,'VZ(init)'),Cat,W)),HdA,[]),
-%     Hd   = tree(r(hd,l(read_from_treebank(Az,L,'VZ(fin)'),Cat,W)),HdA,[]),
-%     lists:select(Obj1,Ds0,Ds1),
-%     lists:select(Hd0,Ds1,Hdf).
-
-
-
-
-% user_transformation(r(Rel,Cat),A,[Obj1,Hd0|Hdf],
-% 		    r(Rel,Cat),A,[Obj1,Hd|Hdf],_,_) :-
-%     Obj1 = tree(r(obj1,CAT),Obj1A,Obj1Ds),
-%     Hd0  = tree(r(hd,l(read_from_treebank(Az,L,'VZ(init)'),Cat,W)),HdA,[]),
-%     Hd   = tree(r(hd,l(read_from_treebank(Az,L,'VZ(fin)'),Cat,W)),HdA,[]).
-		   
-
 user_transformation(r(REL,l(read_from_treebank(Az,L0,Tag),Cat,W/[P0,P])),B,[],
 		    r(REL,l(read_from_treebank(Az,L1,Tag),Cat,W/[P0,P])),B,[],_,_) :-
     root_lemma(W,L0,L1).
@@ -61,11 +43,17 @@ user_transformation(r(REL,l(read_from_treebank(Az,L0,Tag0),Cat,W/[P0,P])),B,[],
 user_transformation(r(REL,l(read_from_treebank(Az,L0,Tag),Cat,W/[P0,P])),B,[],
 		    r(REL,l(read_from_treebank(Az,L1,Tag),Cat,W/[P0,P])),B,[],_,_) :-
     \+ REL = mwp,
-    lemma(L0,L1).
+    lemma(L0,L1),
+    format(user_error,"~w -> ~w~n",[L0,L1]).
+
+user_transformation(r(REL,l(read_from_treebank(Az,L0,Tag),Cat,W/[P0,P])),B,[],
+		    r(REL,l(read_from_treebank(Az,L1,Tag),Cat,W/[P0,P])),B,[],_,_) :-
+    mlemma(L0,L1),
+    format(user_error,"~w -> ~w~n",[L0,L1]).
 
 user_transformation(r(REL,p(mwu)),B,Ds0,
 		    r(REL,p(mwu)),B,Ds ,String,_) :-
-    surfs(Ds0,Surfs,String),
+    surfs(Ds0,Surfs,String), 
     correct_tags(Surfs,Lemmas,Tags),
     assign_tags(Lemmas,Tags,Ds0,Ds),
     \+ Ds0 = Ds.
@@ -124,20 +112,7 @@ surf_lemma(Word,Rel,Pos0,Pos,Lem,Lem) :-
     \+ Pos0 = Pos.
 
 
-% surf_lemma(dichter,_,'ADJ(vrij,comp,zonder)','N(soort,ev,basis,zijd,stan)',_,dichter).
 
-% surf_lemma(reinste,mwp,'ADJ(nom,sup,met-e,zonder-n,stan)','ADJ(prenom,sup,met-e,stan)',_,rein).
-/*
-surf_lemma(wat,whd,'VNW(onbep,pron,stan,vol,3o,ev)','VNW(excl,pron,stan,vol,3,getal)',wat,wat).
-surf_lemma('Wat',whd,'VNW(onbep,pron,stan,vol,3o,ev)','VNW(excl,pron,stan,vol,3,getal)',wat,wat).
-surf_lemma(wat,whd,'VNW(vb,pron,stan,vol,3o,ev)','VNW(excl,pron,stan,vol,3,getal)',wat,wat).
-surf_lemma('Wat',whd,'VNW(vb,pron,stan,vol,3o,ev)','VNW(excl,pron,stan,vol,3,getal)',wat,wat).
-
-surf_lemma(wat,mod,'VNW(onbep,pron,stan,vol,3o,ev)','VNW(excl,pron,stan,vol,3,getal)',wat,wat).
-surf_lemma('Wat',mod,'VNW(onbep,pron,stan,vol,3o,ev)','VNW(excl,pron,stan,vol,3,getal)',wat,wat).
-surf_lemma(wat,mod,'VNW(vb,pron,stan,vol,3o,ev)','VNW(excl,pron,stan,vol,3,getal)',wat,wat).
-surf_lemma('Wat',mod,'VNW(vb,pron,stan,vol,3o,ev)','VNW(excl,pron,stan,vol,3,getal)',wat,wat).
-*/
 user:query:-
     findall(L,lemma(L,_),Ls),
     (   Ls = [_|_]
@@ -237,8 +212,6 @@ correct_tags(L,L,Deeleigen) :-
     correct_tags(L,Deeleigen).
 
 
-%correct_tags([dan,wel],['VG(neven)','BW()']).
-
 flat(_) :-
     fail.
 
@@ -277,11 +250,12 @@ tag_lemma(_,_,_) :- fail.
 lemma(_,_) :-
     fail.
 
+mlemma(_,_) :-
+    fail.
+
 surf(_,_,_) :-
     fail.
 
 surf(_,_) :-
     fail.
-
-
 
