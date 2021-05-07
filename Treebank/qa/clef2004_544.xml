@@ -11,10 +11,10 @@
           <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="risicofactor" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="risicofactor" word="risicofactor"/>
           <node begin="4" cat="pp" end="8" id="9" rel="mod">
             <node begin="4" end="5" id="10" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
-            <node begin="5" cat="mwu" end="8" id="11" rel="obj1">
-              <node begin="5" end="6" id="12" lemma="hart-" pos="noun" postag="SPEC(afgebr)" pt="spec" rel="mwp" root="hart-" spectype="afgebr" word="hart-"/>
-              <node begin="6" conjtype="neven" end="7" id="13" lemma="en" pos="noun" postag="VG(neven)" pt="vg" rel="mwp" root="en" word="en"/>
-              <node begin="7" end="8" getal="mv" graad="basis" id="14" lemma="vaatziekte" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="vaatziekten" word="vaatziekten"/>
+            <node begin="5" cat="conj" end="8" id="11" rel="obj1">
+              <node begin="5" end="6" id="12" lemma="hart" pos="noun" postag="SPEC(afgebr)" pt="spec" rel="cnj" root="hart-" spectype="afgebr" word="hart-"/>
+              <node begin="6" conjtype="neven" end="7" id="13" lemma="en" pos="noun" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+              <node begin="7" end="8" getal="mv" graad="basis" id="14" lemma="vaatziekte" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="vaatziekten" word="vaatziekten"/>
             </node>
           </node>
         </node>

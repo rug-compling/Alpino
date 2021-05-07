@@ -7,8 +7,8 @@
         <node begin="2" end="3" id="4" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
         <node begin="3" buiging="zonder" end="4" graad="basis" id="5" lemma="Brits" pos="adj" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mod" root="Brits" word="Brits"/>
         <node begin="4" cat="mwu" end="7" id="6" rel="hd">
-          <node begin="4" end="5" genus="onz" getal="ev" graad="basis" id="7" lemma="hof" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Hof" word="Hof"/>
-          <node begin="5" end="6" id="8" lemma="van" pos="name" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+          <node begin="4" end="5" id="7" lemma="Hof" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Hof" spectype="deeleigen" word="Hof"/>
+          <node begin="5" end="6" id="8" lemma="van" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
           <node begin="6" end="7" id="9" lemma="Beroep" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Beroep" spectype="deeleigen" word="Beroep"/>
         </node>
       </node>

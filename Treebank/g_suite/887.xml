@@ -10,14 +10,14 @@
             <node begin="2" conjtype="neven" end="3" id="7" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
             <node begin="0" cat="np" end="9" id="8" rel="cnj">
               <node begin="0" end="1" id="9" index="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-              <node begin="1" end="2" id="10" lemma="lees-" pos="noun" postag="SPEC(afgebr)" pt="spec" rel="hd" root="honger" spectype="afgebr" word="lees-"/>
+              <node begin="1" end="2" id="10" lemma="lees" pos="noun" postag="SPEC(afgebr)" pt="spec" rel="hd" root="honger" spectype="afgebr" word="lees-"/>
               <node begin="4" cat="pp" end="9" id="11" index="4" rel="mod">
                 <node begin="4" end="5" id="12" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
                 <node begin="5" cat="np" end="9" id="13" rel="obj1">
                   <node begin="5" cat="conj" end="8" id="14" rel="mod">
-                    <node begin="5" end="6" id="15" lemma="binnen-" pos="adj" postag="SPEC(afgebr)" pt="spec" rel="cnj" root="buitenlands" spectype="afgebr" word="binnen-"/>
+                    <node begin="5" end="6" id="15" lemma="binnen" pos="adj" postag="SPEC(afgebr)" pt="spec" rel="cnj" root="buitenlands" spectype="afgebr" word="binnen-"/>
                     <node begin="6" conjtype="neven" end="7" id="16" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-                    <node begin="7" buiging="met-e" end="8" graad="basis" id="17" lemma="buitenlands" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="buitenlands" word="buitenlandse"/>
+                    <node begin="7" buiging="met-e" end="8" graad="basis" id="17" lemma="buitenland" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="cnj" root="buitenlands" word="buitenlandse"/>
                   </node>
                   <node begin="8" end="9" getal="mv" graad="basis" id="18" lemma="gezin" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gezin" word="gezinnen"/>
                 </node>
@@ -30,7 +30,7 @@
             </node>
           </node>
           <node begin="10" end="11" id="23" index="1" rel="su"/>
-          <node begin="11" end="12" id="24" lemma="aan-" pos="verb" postag="SPEC(afgebr)" pt="spec" rel="hd" root="voer_af" spectype="afgebr" word="aan-"/>
+          <node begin="11" end="12" id="24" lemma="aan" pos="verb" postag="SPEC(afgebr)" pt="spec" rel="hd" root="voer_af" spectype="afgebr" word="aan-"/>
         </node>
         <node begin="12" conjtype="neven" end="13" id="25" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
         <node begin="0" cat="inf" end="14" id="26" rel="cnj">

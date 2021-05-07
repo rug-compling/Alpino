@@ -8,7 +8,7 @@
       <node begin="0" cat="smain" end="11" id="5" rel="dp">
         <node begin="0" cat="np" end="4" id="6" rel="su">
           <node begin="0" end="1" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="Het"/>
-          <node begin="1" end="2" id="8" lemma="front" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="hd" root="front" spectype="vreemd" word="front"/>
+          <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="8" lemma="front" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="front" word="front"/>
           <node begin="2" cat="np" end="4" id="9" rel="mod">
             <node begin="2" end="3" id="10" lemma="de" lwtype="bep" naamval="gen" npagr="rest3" pos="det" postag="LID(bep,gen,rest3)" pt="lid" rel="det" root="der" word="der"/>
             <node begin="3" end="4" getal="mv" graad="basis" id="11" lemma="activist" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="activist" word="activisten"/>
