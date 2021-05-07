@@ -19,7 +19,7 @@ trees_doc:
 	for dir in $(DIRECTORIES); do\
                    ( cd Enhanced/$$dir ;\
                      echo Enhanced/$$dir;\
-                     $(MAKE) -s --no-print-directory -j 30 index.html );\
+                     $(MAKE)  -j 30 index.html );\
                    done
 
 trees_realclean:

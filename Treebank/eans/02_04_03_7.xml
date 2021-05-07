@@ -9,7 +9,7 @@
         <node begin="2" cat="mwu" end="5" id="6" rel="mod">
           <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="God" naamval="stan" ntype="eigen" pos="adj" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="mwp" root="God" word="God"/>
           <node begin="3" end="4" id="8" lemma="zijn" pos="adj" postag="WW(pv,conj,ev)" pt="ww" pvagr="ev" pvtijd="conj" rel="mwp" root="zij" word="zij" wvorm="pv"/>
-          <node begin="4" end="5" id="9" lemma="danken" pos="adj" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="mwp" root="dank" word="dank" wvorm="pv"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="9" lemma="dank" naamval="stan" ntype="soort" pos="adj" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="dank" word="dank"/>
         </node>
         <node begin="5" buiging="zonder" end="6" graad="basis" id="10" lemma="veilig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="veilig" word="veilig"/>
         <node begin="6" buiging="zonder" end="7" id="11" lemma="aan_komen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="kom_aan" word="aangekomen" wvorm="vd"/>

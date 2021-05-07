@@ -4,7 +4,7 @@
     <node begin="0" cat="smain" end="12" id="1" rel="--">
       <node begin="0" cat="np" end="2" id="2" rel="su">
         <node begin="0" buiging="zonder" end="1" id="3" lemma="dit" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dit" vwtype="aanw" word="Dit"/>
-        <node begin="1" end="2" id="4" lemma="front" pos="noun" postag="SPEC(vreemd)" pt="spec" rel="hd" root="front" spectype="vreemd" word="front"/>
+        <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="4" lemma="front" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="front" word="front"/>
       </node>
       <node begin="2" end="3" id="5" lemma="veroorzaken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="veroorzaak" word="veroorzaakte" wvorm="pv"/>
       <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="regen" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="regen" word="regen"/>

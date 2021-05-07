@@ -20,9 +20,9 @@
                 <node begin="5" cat="np" end="11" id="17" rel="obj1">
                   <node begin="5" end="6" id="18" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
                   <node begin="6" cat="mwu" end="9" id="19" rel="hd">
-                    <node begin="6" buiging="met-e" end="7" id="20" lemma="wapenen" pos="name" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mwp" root="Gewapende" word="Gewapende" wvorm="vd"/>
-                    <node begin="7" buiging="met-e" end="8" graad="basis" id="21" lemma="islamitisch" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Islamitische" word="Islamitische"/>
-                    <node begin="8" end="9" genus="zijd" getal="ev" graad="basis" id="22" lemma="groep" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Groep" word="Groep"/>
+                    <node begin="6" end="7" id="20" lemma="Gewapende" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Gewapende" spectype="deeleigen" word="Gewapende"/>
+                    <node begin="7" end="8" id="21" lemma="Islamitische" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Islamitische" spectype="deeleigen" word="Islamitische"/>
+                    <node begin="8" end="9" id="22" lemma="Groep" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Groep" spectype="deeleigen" word="Groep"/>
                   </node>
                   <node begin="10" end="11" genus="onz" getal="ev" graad="basis" id="23" lemma="GIA" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="mod" root="GIA" word="GIA"/>
                 </node>
