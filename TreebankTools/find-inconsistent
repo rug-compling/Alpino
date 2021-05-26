@@ -1,0 +1,23 @@
+import sys
+
+mwu={}
+for line in sys.stdin:
+    (left,tag) = line.split('\t')
+    list = left.split()
+    freq = list.pop(0)
+    words = " ".join(list)
+    tag=tag.rstrip()
+    if words in mwu:
+        mwu[words].append((tag,freq))
+    else:
+        mwu[words] = [(tag,freq)]
+
+for w in mwu:
+    if len(mwu[w]) > 1:
+        print("#{}".format(w))
+        for (taglemma,freq) in sorted(mwu[w]):
+            if sys.argv[1] == 'l':
+                (tag,lemma) = taglemma.split()
+                print("@  {:<50} {:<20} ({:>6})".format(tag,lemma,freq))
+            else:
+                print("@  {:<60} ({:>6})".format(taglemma,freq))
