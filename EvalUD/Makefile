@@ -1,5 +1,5 @@
 CONLLU=$(ALPINO_HOME)/CONLLU
-SUITES=cdb cgn_exs eans extra g_suite h_suite i_suite leuven_yellow_pages lot_test_suite1 novelsample_corrected ntv-suite qa wpspel
+SUITES=cdb cgn_exs extra g_suite h_suite i_suite leuven_yellow_pages lot_test_suite1 novelsample_corrected ntv-suite qa wpspel
 SUITESDIR=../SENTS
 
 ## defaults per suite for test1 target

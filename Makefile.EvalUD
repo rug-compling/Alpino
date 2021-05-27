@@ -1,5 +1,5 @@
 ALUD=~/bin/alud
-ALUD_OPTIONS=-t -d -e -x
+ALUD_OPTIONS=-t -d -x
 EVAL=$(ALPINO_HOME)/UD2.0/conll17_ud_eval.py -v
 GOODKEYS=python3 $(ALPINO_HOME)/EvalUD/goodkeys.py
 
