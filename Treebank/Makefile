@@ -158,10 +158,10 @@ enhanced_all:
 
 enhanced: 
 	$(sqldir)/alpinomod -p $(corpus)  sql/$(corpus).sqlite $(corpus) Inter/$(corpus)
-	ls Inter/$(corpus)/*.xml | sed -e 's/Inter/Enhanced/' | xargs make -s corpus=$(corpus)
+	ls Inter/$(corpus)/*.xml | sed -e 's/Inter/Enhanced/' | xargs make corpus=$(corpus)
 
 ALUD=~/bin/alud
-ALUD_OPTIONS=-t -d -e
+ALUD_OPTIONS=-t -d
 
 Enhanced/$(corpus)/%.xml: Inter/$(corpus)/%.xml $(ALUD)
 	$(ALUD) -a $< > $@
