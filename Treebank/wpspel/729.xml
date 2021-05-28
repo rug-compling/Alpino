@@ -13,7 +13,7 @@
       <node begin="0" cat="sv1" end="11" id="8" rel="body">
         <node begin="4" end="5" id="9" lemma="zijn" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="ben" word="was" wvorm="pv"/>
         <node begin="5" cat="mwu" end="7" id="10" rel="su">
-          <node begin="5" buiging="zonder" end="6" graad="basis" id="11" lemma="Belgisch" pos="name" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="mwp" root="Belgisch" word="Belgisch"/>
+          <node begin="5" end="6" id="11" lemma="Belgisch" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Belgisch" spectype="deeleigen" word="Belgisch"/>
           <node begin="6" end="7" id="12" lemma="Congo" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Congo" spectype="deeleigen" word="Congo"/>
         </node>
         <node begin="7" end="8" genus="onz" getal="ev" graad="basis" id="13" lemma="eertijds" naamval="stan" ntype="soort" pos="adv" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mod" root="eertijds" word="eertijds"/>

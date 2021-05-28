@@ -47,8 +47,8 @@
                     <node begin="23" cat="np" end="30" id="39" rel="obj1">
                       <node begin="23" end="24" id="40" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
                       <node begin="24" cat="mwu" end="26" id="41" rel="hd">
-                        <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="42" lemma="partij" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Partij" word="Partij"/>
-                        <node begin="25" end="26" genus="zijd" getal="ev" graad="basis" id="43" lemma="convent" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Convent" word="Convent"/>
+                        <node begin="24" end="25" id="42" lemma="Partij" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Partij" spectype="deeleigen" word="Partij"/>
+                        <node begin="25" end="26" id="43" lemma="Convent" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Convent" spectype="deeleigen" word="Convent"/>
                       </node>
                       <node begin="27" cat="rel" end="30" id="44" rel="mod">
                         <node begin="27" end="28" getal="ev" id="45" index="2" lemma="dat" naamval="stan" pdtype="pron" persoon="3" pos="noun" postag="VNW(betr,pron,stan,vol,3,ev)" pt="vnw" rel="rhd" root="dat" status="vol" vwtype="betr" word="dat"/>

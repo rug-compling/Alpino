@@ -85,8 +85,8 @@
                           <node begin="39" cat="pp" end="42" id="68" rel="mod">
                             <node begin="39" end="40" id="69" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
                             <node begin="40" cat="mwu" end="42" id="70" rel="obj1">
-                              <node begin="40" buiging="met-e" end="41" graad="basis" id="71" lemma="economisch" naamval="stan" pos="noun" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Economische" word="Economische"/>
-                              <node begin="41" end="42" getal="mv" graad="basis" id="72" lemma="zaak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Zaken" word="Zaken"/>
+                              <node begin="40" end="41" id="71" lemma="Economische" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Economische" spectype="deeleigen" word="Economische"/>
+                              <node begin="41" end="42" id="72" lemma="Zaken" pos="noun" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Zaken" spectype="deeleigen" word="Zaken"/>
                             </node>
                           </node>
                         </node>

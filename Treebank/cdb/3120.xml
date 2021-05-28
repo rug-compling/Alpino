@@ -48,9 +48,9 @@
                 <node begin="21" cat="np" end="25" id="37" rel="obj1">
                   <node begin="21" end="22" id="38" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
                   <node begin="22" cat="mwu" end="25" id="39" rel="hd">
-                    <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="40" lemma="school" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="School" word="School"/>
-                    <node begin="23" end="24" genus="onz" getal="ev" graad="basis" id="41" lemma="advies" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Advies" word="Advies"/>
-                    <node begin="24" end="25" genus="zijd" getal="ev" graad="basis" id="42" lemma="dienst" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Dienst" word="Dienst"/>
+                    <node begin="22" end="23" id="40" lemma="School" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="School" spectype="deeleigen" word="School"/>
+                    <node begin="23" end="24" id="41" lemma="Advies" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Advies" spectype="deeleigen" word="Advies"/>
+                    <node begin="24" end="25" id="42" lemma="Dienst" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Dienst" spectype="deeleigen" word="Dienst"/>
                   </node>
                 </node>
               </node>
