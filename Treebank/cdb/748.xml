@@ -43,9 +43,9 @@
               <node begin="19" end="20" genus="zijd" getal="ev" graad="basis" id="34" lemma="onderdrukker" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="onderdrukker" word="onderdrukker"/>
             </node>
             <node begin="20" cat="mwu" end="23" id="35" rel="svp">
-              <node begin="20" end="21" id="36" lemma="van" pos="fixed" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="van" spectype="deeleigen" word="van"/>
-              <node begin="21" end="22" id="37" lemma="het" pos="fixed" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="het" spectype="deeleigen" word="het"/>
-              <node begin="22" end="23" id="38" lemma="lijf" pos="fixed" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="lijf" spectype="deeleigen" word="lijf"/>
+              <node begin="20" end="21" id="36" lemma="van" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="van" vztype="init" word="van"/>
+              <node begin="21" end="22" id="37" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="fixed" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
+              <node begin="22" end="23" genus="onz" getal="ev" graad="basis" id="38" lemma="lijf" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="lijf" word="lijf"/>
             </node>
             <node begin="24" buiging="zonder" end="25" id="39" lemma="houden" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="houd" word="houden" wvorm="inf"/>
           </node>

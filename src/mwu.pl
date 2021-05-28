@@ -221,7 +221,7 @@ mwu_postag('De roze rimpel',['LID(bep,stan,rest)','ADJ(prenom,basis,met-e,stan)'
 mwu_postag('Dertigjarige Oorlog',['SPEC(deeleigen)','SPEC(deeleigen)'],['Dertig_jarige','Oorlog']).
 mwu_postag('De Russische muziek',['LID(bep,stan,rest)','ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[de,'Russisch',muziek]).
 mwu_postag('des avonds',['LID(bep,gen,evmo)','N(soort,ev,basis,gen)'],[de,avond]).
-mwu_postag('des te',['LID(bep,gen,evmo)','BW()'],[de,te]).
+mwu_postag('des te',['LID(bep,gen,evmo)','VZ(init)'],[de,te]).
 mwu_postag('De schat van Beersel',['LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)','VZ(init)','N(eigen,ev,basis,onz,stan)'],[de,schat,van,'Beersel']).
 mwu_postag('De Scheepvaart',['LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[de,scheepvaart]).
 mwu_postag('De Schreeuw',['LID(bep,stan,rest)','N(soort,ev,basis,zijd,stan)'],[de,schreeuw]).

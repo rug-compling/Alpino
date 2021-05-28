@@ -10,9 +10,9 @@
         <node begin="0" end="2" id="6" index="1" rel="su"/>
         <node begin="2" end="3" id="7" lemma="verkopen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="verkoop" word="verkocht" wvorm="pv"/>
         <node begin="3" cat="mwu" end="6" id="8" rel="obj1">
-          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="9" lemma="studer" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="Studer" word="Studer"/>
+          <node begin="3" end="4" id="9" lemma="Studer" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Studer" spectype="deeleigen" word="Studer"/>
           <node begin="4" end="5" id="10" lemma="Revox" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Revox" spectype="deeleigen" word="Revox"/>
-          <node begin="5" end="6" id="11" lemma="AG" pos="name" postag="SPEC(symb)" pt="spec" rel="mwp" root="AG" spectype="symb" word="AG"/>
+          <node begin="5" end="6" id="11" lemma="AG" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="AG" spectype="deeleigen" word="AG"/>
         </node>
       </node>
     </node>

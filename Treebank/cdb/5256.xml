@@ -8,7 +8,7 @@
         <node begin="1" end="2" genus="onz" getal="ev" graad="basis" id="5" lemma="bestuur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bestuur" word="bestuur"/>
         <node begin="2" cat="pp" end="4" id="6" rel="mod">
           <node begin="2" end="3" id="7" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-          <node begin="3" end="4" getal="mv" graad="basis" id="8" lemma="Estudiantes" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="Estudiantes" word="Estudiantes"/>
+          <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="8" lemma="Estudiantes" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" root="Estudiantes" word="Estudiantes"/>
         </node>
       </node>
       <node begin="4" end="5" id="9" lemma="hopen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="hoop" word="hoopt" wvorm="pv"/>

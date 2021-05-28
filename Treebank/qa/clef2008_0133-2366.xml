@@ -8,18 +8,16 @@
         <node begin="1" end="2" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
         <node begin="2" cat="np" end="7" id="6" rel="su">
           <node begin="2" end="3" id="7" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="8" lemma="Partij" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Partij" word="Partij"/>
-          <node begin="4" cat="pp" end="7" id="9" rel="mod">
-            <node begin="4" end="5" id="10" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-            <node begin="5" cat="np" end="7" id="11" rel="obj1">
-              <node begin="5" end="6" id="12" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="13" lemma="vrijheid" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="Vrijheid" word="Vrijheid"/>
-            </node>
+          <node begin="3" cat="mwu" end="7" id="8" rel="hd">
+            <node begin="3" end="4" id="9" lemma="Partij" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Partij" spectype="deeleigen" word="Partij"/>
+            <node begin="4" end="5" id="10" lemma="voor" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="voor" spectype="deeleigen" word="voor"/>
+            <node begin="5" end="6" id="11" lemma="de" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="de" spectype="deeleigen" word="de"/>
+            <node begin="6" end="7" id="12" lemma="Vrijheid" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Vrijheid" spectype="deeleigen" word="Vrijheid"/>
           </node>
         </node>
       </node>
     </node>
-    <node begin="7" end="8" id="14" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
+    <node begin="7" end="8" id="13" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" word="?"/>
   </node>
   <sentence>Wat is de Partij voor de Vrijheid ?</sentence>
 </alpino_ds>
