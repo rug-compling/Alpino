@@ -222,8 +222,8 @@ hpctests:
 	$(MAKE) job HPCTARGET=testN suite=dpc-rou
 	$(MAKE) job HPCTARGET=testN suite=wpspel
 
-tests: t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 t16 t17 t18
-shorts: t9 t1 t2 t3 t4 t5 t6 t7 t8 t16 t18 
+tests: t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12 t13 t14 t15 t16 t17 t18 t19
+shorts: t1 t2 t3 t4 t5 t6 t7 t8 t16 t18 t19
 
 t1:
 	$(MAKE) testN suite=i_suite
@@ -261,6 +261,8 @@ t17:
 	$(MAKE) testN suite=WSU
 t18:
 	$(MAKE) testN suite=novelsample_corrected
+t19:
+	$(MAKE) testN suite=eans
 
 bf:
 	@echo "        BEST-CA          #PARSES        SUITE"

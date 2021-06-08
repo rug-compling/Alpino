@@ -258,7 +258,7 @@ cf0:
         suite=`echo $$file | awk -F/ '{ print $$1 }'`;\
         times=`echo $$file | sed -e 's/scores/times/'`;\
         time=`echo $$file | sed -e 's/scores/time/'`;\
-        echo `grep 'ca-score:' $$file | awk '{ print $$2 }' `"	"`if [ -f $$suite/score ]; then grep 'ca-score:' $$suite/score | tail -n 2 | head -n 1 | awk '{ print $$2 }' ; fi`"	"`grep 'items' $$file | awk '{ print $$3 }' `"	"`if [ -f $$suite/score ]; then grep 'items' $$suite/score | tail -n 2 | head -n 1 | awk '{ print $$3 }' ; fi`"	"`awk -F\| '/^T\#/{ N++; P=P+$$4 } END { print P/N}' $$time`"	"`awk -F\| '/^T\#/{ N++; P=P+$$4 } END { print P/N}' $$suite/time`"	"`grep 'sents' $$file | awk '{ print $$3 }' `"	"`if [ -f $$suite/score ]; then grep 'sents' $$suite/score | tail -n 2 | head -n 1 | awk '{ print $$3 }' ; fi`"	"$$suite"	"`grep extra= $$times|sed -e 's/extra=//'`"	"`echo $$file| awk -F/ '{ print $$2 }'`;\
+        echo `grep 'ca-score:' $$file | awk '{ print $$2 }' `"	"`if [ -f $$suite/score ]; then grep 'ca-score:' $$suite/score | tail -n 2 | head -n 1 | awk '{ print $$2 }' ; fi`"	"`grep 'items' $$file | awk '{ print $$3 }' `"	"`if [ -f $$suite/score ]; then grep 'items' $$suite/score | tail -n 2 | head -n 1 | awk '{ print $$3 }' ; fi`"	"`awk -F\| '/^T#/{ N++; P=P+$$4 } END { print P/N}' $$time`"	"`awk -F\| '/^T#/{ N++; P=P+$$4 } END { print P/N}' $$suite/time`"	"`grep 'sents' $$file | awk '{ print $$3 }' `"	"`if [ -f $$suite/score ]; then grep 'sents' $$suite/score | tail -n 2 | head -n 1 | awk '{ print $$3 }' ; fi`"	"$$suite"	"`grep extra= $$times|sed -e 's/extra=//'`"	"`echo $$file| awk -F/ '{ print $$2 }'`;\
         done
 
 upd_all:
@@ -598,7 +598,6 @@ lsuites=leuven_yellow_pages cgn_exs lassy g_suite h_suite i_suite eans lot_test_
 
 sota:
 	@$(MAKE) analyse0 analyse1 files="$(lsuites:%=%/poslemma)"
-	
 
 an:
 	@for j in $(jobsuites); do $(MAKE) -s analyse1 files=$$j/job*/log*; done
