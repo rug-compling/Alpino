@@ -140,8 +140,8 @@ with_dt_all('1,2',['1,5',de,en,tussen]).
 with_dt_all('12',['15',de,en,tussen]).
 with_dt_all('12',['15',en,tussen]).
 with_dt_all('12',['16',de,en,tussen]).
-with_dt_all('12',['16°',en,tussen]).
 with_dt_all('12',['16',en,tussen]).
+with_dt_all('12',['16°',en,tussen]).
 with_dt_all('12',['17',de,en,tussen]).
 with_dt_all('12',['18',de,en,tussen]).
 with_dt_all('12',['20',de,en,tussen]).
@@ -2204,8 +2204,8 @@ with_dt_root('1500-tal').
 with_dt_root('150-tal').
 with_dt_root('15-tal').
 with_dt_root('1,6').
-with_dt_root('16°').
 with_dt_root('16').
+with_dt_root('16°').
 with_dt_root('160').
 with_dt_root('1600').
 with_dt_root('160-tal').

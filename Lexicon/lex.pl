@@ -1821,7 +1821,7 @@ spelling_variant21(binnen,kant,   binnenkant).
 spelling_variant21(boven,kant,    bovenkant).
 spelling_variant21(boven,verdieping,bovenverdieping).
 spelling_variant21(bij,voorbeeld, bijvoorbeeld).
-spelling_variant21(buiten,spel,   buitenspel).
+%spelling_variant21(buiten,spel,   buitenspel).
 spelling_variant21(bus,station,   busstation).
 spelling_variant21(dank,zij,      dankzij).
 spelling_variant21(dat,gene,      datgene).

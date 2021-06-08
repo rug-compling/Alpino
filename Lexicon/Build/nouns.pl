@@ -11459,7 +11459,8 @@ n([pl(fokkers),sg(fokker)],de,[]).
 
 n([pl(foksen),sg(foks)],de,[]).
 
-n([pl(folders),sg(folder)],de,[],[dim(foldertje)]).
+n([pl(folders),sg(folder)],de,
+  [np_app_measure],[dim(foldertje)]).
 
 n([pl(folies),sg(folie)],both,[],[aluminium]).
 
@@ -32031,7 +32032,7 @@ n([pl(spekulaties),sg(spekulatie)],de,[sbar]).
 
 n([pl(spelen),pl(spellen),sg(spel)],het,
   [measure,			% een spel kaarten
-   pred_pp(spel),               % dat is toch duidelijk buiten spel
+   pred_pp(buiten),               % dat is toch duidelijk buiten spel
    vp],
   [dim(spelletje)]).
 
@@ -40976,7 +40977,6 @@ n([pl(ziekten),pl(ziektes),sg(ziekte)],de,[app_measure],
    i(gek_koe,gekkekoeien),i(gek_koe,'gekke-koeien'),
    s(geslacht),
    hart,
-   ['hart-',en,vaat],['hart-en',vaat],
    hersen,
    huid,
    infectie,i(infectie,infektie),
