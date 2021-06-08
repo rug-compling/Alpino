@@ -7804,7 +7804,6 @@ max_wh_xp_structure(WH,XP,MAX) :-
 				%    MAX => start,
     MAX => max,
     MAX:max_type => t_dp,
-    max_modifier(WH),
     WH:wh => ywh,
     WH:wh => yq,
     WH:redrel =?> no,
@@ -7820,10 +7819,18 @@ max_wh_xp_structure(WH,XP,MAX) :-
     MAX:dt:stype => whquestion,
     xy_dep_nostype_structure(WH,XP,MAX,whq,whd,body).
 
+max_mod_wh_xp_structure(WH,XP,MAX) :-
+    max_modifier(WH),
+    max_wh_xp_structure(WH,XP,MAX).
+
+max_np_wh_xp_structure(WH,XP,MAX) :-
+    WH => np,
+    max_wh_xp_structure(WH,XP,MAX).
+
 grammar_rule(max_wh_adv_np,MAX,[ADV,XP]) :-
     max_np(XP),
     XP:subn => ~sub_indef_verb, %  & ~sub_det,  hoezo dat?
-    max_wh_xp_structure(ADV,XP,MAX).
+    max_mod_wh_xp_structure(ADV,XP,MAX).
 
 grammar_rule(max_wh_adv_mod_np,MAX,[ADV,MOD,XP]) :-
     max_np(XP),
@@ -7832,17 +7839,47 @@ grammar_rule(max_wh_adv_mod_np,MAX,[ADV,MOD,XP]) :-
     Tussen:max_type => t_dp,
     dp_dp_structure(MOD,XP,Tussen),
     XP:subn => ~sub_indef_verb, %  & ~sub_det,  hoezo dat?
-    max_wh_xp_structure(ADV,Tussen,MAX).
+    max_mod_wh_xp_structure(ADV,Tussen,MAX).
 
 grammar_rule(max_wh_adv_ap,MAX,[ADV,XP]) :-
     max_nadv_ap(XP),
     XP:adv => nboth,
-    max_wh_xp_structure(ADV,XP,MAX).
+    max_mod_wh_xp_structure(ADV,XP,MAX).
 
 grammar_rule(max_wh_adv_pp,MAX,[ADV,XP]) :-
     max_pp(XP),
     XP:sel => ~to_topic,
-    max_wh_xp_structure(ADV,XP,MAX).
+    max_mod_wh_xp_structure(ADV,XP,MAX).
+
+%% waarom niet ?
+grammar_rule(max_wh_adv_adv,MAX,[WH,ADVP]) :-
+    max_advp(ADVP),
+    ADVP:sel => ~to_topic,
+    max_mod_wh_xp_structure(WH,ADVP,MAX).
+
+%% waarom dan niet ?
+grammar_rule(max_wh_adv_mod_adv,MAX,[WH,MOD,ADVP]) :-
+    max_advp(ADVP),
+    max_modifier(MOD),
+    Tussen => max,
+    Tussen:max_type => t_dp,
+    dp_dp_structure(MOD,ADVP,Tussen),
+    max_mod_wh_xp_structure(WH,Tussen,MAX).
+
+%% wie dan ?
+grammar_rule(max_np_wh_adv_adv,MAX,[WH,ADVP]) :-
+    max_advp(ADVP),
+    ADVP:sel => ~to_topic,
+    max_np_wh_xp_structure(WH,ADVP,MAX).
+
+%% welke kinderen dan niet ?
+grammar_rule(max_np_wh_adv_mod_adv,MAX,[WH,MOD,ADVP]) :-
+    max_advp(ADVP),
+    max_modifier(MOD),
+    Tussen => max,
+    Tussen:max_type => t_dp,
+    dp_dp_structure(MOD,ADVP,Tussen),
+    max_np_wh_xp_structure(WH,Tussen,MAX).
 
 short_np(NP1,SUBN) :-
     max_np(NP1),
@@ -8791,10 +8828,23 @@ grammar_rule(short_wh_sbar(np_mod),SBAR,[NP,MOD]) :-
     NP:case => (dat;acc),
     short_wh_mod_sbar_structure(SBAR,NP,MOD).
 
+grammar_rule(short_wh_sbar(np_mod_mod),SBAR,[NP,MOD1,MOD2]) :-
+    NP => np,
+    NP:e_deps => [],
+    NP:pred => npred,
+    NP:nform => norm,
+    NP:case => (dat;acc),
+    short_wh_mod_mod_sbar_structure(SBAR,NP,MOD1,MOD2).
+
 grammar_rule(short_wh_sbar(advp_mod),SBAR,[Wh,MOD]) :-
     Wh => adv,
     Wh:exs => [],
     short_wh_mod_sbar_structure(SBAR,Wh,MOD).
+
+grammar_rule(short_wh_sbar(advp_mod_mod),SBAR,[Wh,MOD1,MOD2]) :-
+    Wh => adv,
+    Wh:exs => [],
+    short_wh_mod_mod_sbar_structure(SBAR,Wh,MOD1,MOD2).
 
 grammar_rule(short_wh_sbar(pp_mod),SBAR,[Wh,MOD]) :-
     Wh => pp,
@@ -8804,6 +8854,15 @@ grammar_rule(short_wh_sbar(pp_mod),SBAR,[Wh,MOD]) :-
     Wh:ld_pc => mod_pp,
     Wh:pp_role => pp_obj1,
     short_wh_mod_sbar_structure(SBAR,Wh,MOD).
+
+grammar_rule(short_wh_sbar(pp_mod_mod),SBAR,[Wh,MOD1,MOD2]) :-
+    Wh => pp,
+    Wh:slash => [],
+    Wh:e_deps => [],
+    Wh:nnform => ~refl,
+    Wh:ld_pc => mod_pp,
+    Wh:pp_role => pp_obj1,
+    short_wh_mod_mod_sbar_structure(SBAR,Wh,MOD1,MOD2).
 
 short_wh_mod_sbar_structure(SBAR,NP,MOD) :-
     max_advp(MOD),  % wie wel
@@ -8820,6 +8879,30 @@ short_wh_mod_sbar_structure(SBAR,NP,MOD) :-
     SBAR:slash => [],
     SBAR:dt:stype => whquestion,
     xy_dep_nostype_structure(NP,MOD,SBAR,whsub,whd,body).
+
+%% wie dan wel
+short_wh_mod_mod_sbar_structure(SBAR,NP,MOD1,MOD2) :-
+    max_advp(MOD1), 
+    MOD1:wh => nwh,
+    unify_mods(MOD1),
+    finish_mexs(MOD1),
+    max_advp(MOD2), 
+    MOD2:wh => nwh,
+    unify_mods(MOD2),
+    finish_mexs(MOD2),
+    Tussen => max,
+    Tussen:max_type => t_dp,
+    dp_dp_structure(MOD1,MOD2,Tussen),
+    NP:wh => ywh,
+    NP:wh => yq,
+    NP:wh_reltmploc => ~hoe_hoe & ~str_er & ~wk_er & ~postp,
+    unify_mods(NP),
+    SBAR => sbar,
+    SBAR:ctype => c_of_short,
+    SBAR:tags => [],
+    SBAR:slash => [],
+    SBAR:dt:stype => whquestion,
+    xy_dep_nostype_structure(NP,Tussen,SBAR,whsub,whd,body).
 
 short_wh_sbar_structure(Wh,SBAR) :-
     SBAR0 => sbar,
@@ -9377,7 +9460,7 @@ grammar_rule(start_coord(root_modifier,en),M,[XP,ModList]) :-
     Root:question => no,
     Root:dt <=> Mod:dt,
     unify_subj(M,XP).
- 
+
 %% Wie heb je gesproken en wie niet?
 grammar_rule(start_coord(quest_short,en),M,[XP,ShortList]) :-
     start_coord_name_en_structure(root,M,XP,QuesList),
