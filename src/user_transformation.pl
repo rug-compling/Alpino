@@ -126,7 +126,9 @@ user:query:-
 	format("~n~nconverse '//node[@word=(~s)]'~n",[Chars3])
     ;   true
     ),
-    findall(S,surf(S,_,_),Ss),
+    findall(S,( surf(S,_,_)
+	      ; surf_lemma(S,_,_,_,_)
+	      ), Ss),
     (   Ss = [_|_]
     ->  query(Ss,Chars2,[]),
 	format("~nconverse '//node[@word=(~s)]'~n~n",[Chars2])
@@ -258,4 +260,5 @@ surf(_,_,_) :-
 
 surf(_,_) :-
     fail.
+
 
