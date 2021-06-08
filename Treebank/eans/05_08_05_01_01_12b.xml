@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="15" id="0" rel="top">
-    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
-    <node begin="12" end="13" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="3" end="4" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
+    <node begin="12" end="13" id="2" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," word=","/>
     <node begin="0" cat="smain" end="14" id="3" rel="--">
-      <node begin="0" case="both" def="def" end="1" gen="de" getal="mv" id="4" index="1" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" rnum="pl" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="Ze"/>
-      <node begin="1" end="2" id="5" infl="pl" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" word="hebben" wvorm="pv"/>
+      <node begin="0" end="1" getal="mv" id="4" index="1" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="Ze"/>
+      <node begin="1" end="2" id="5" lemma="hebben" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="heb" word="hebben" wvorm="pv"/>
       <node begin="0" cat="ppart" end="14" id="6" rel="vc">
         <node begin="0" end="1" id="7" index="1" rel="su"/>
         <node begin="2" cat="np" end="12" id="8" rel="obj1">
-          <node begin="2" case="dat_acc" def="def" end="3" gen="de" getal="ev" id="9" lemma="mij" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="hd" rnum="sg" root="mij" status="vol" vwtype="pr" wh="nwh" word="mij"/>
+          <node begin="2" end="3" getal="ev" id="9" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="hd" root="mij" status="vol" vwtype="pr" word="mij"/>
           <node begin="4" cat="rel" end="12" id="10" rel="mod">
-            <node begin="4" case="no_obl" end="5" gen="de" getal="getal" id="11" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" rnum="sg" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+            <node begin="4" end="5" getal="getal" id="11" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
             <node begin="4" cat="ssub" end="12" id="12" rel="body">
               <node begin="4" end="5" id="13" index="2" rel="su"/>
               <node begin="4" cat="ppart" end="11" id="14" rel="vc">
                 <node begin="4" end="5" id="15" index="2" rel="su"/>
                 <node begin="5" cat="np" end="7" id="16" rel="mod">
-                  <node begin="5" end="6" id="17" infl="pl_num" lemma="twintig" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twintig" special="hoofd" word="twintig"/>
-                  <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="18" lemma="jaar" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="jaar" special="tmp" word="jaar"/>
+                  <node begin="5" end="6" id="17" lemma="twintig" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="twintig" word="twintig"/>
+                  <node begin="6" end="7" genus="onz" getal="ev" graad="basis" id="18" lemma="jaar" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="jaar" word="jaar"/>
                 </node>
                 <node begin="7" cat="pp" end="10" id="19" rel="mod">
                   <node begin="7" end="8" id="20" lemma="bij" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="bij" vztype="init" word="bij"/>
                   <node begin="8" cat="np" end="10" id="21" rel="obj1">
-                    <node begin="8" buiging="zonder" end="9" id="22" infl="het" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" wh="nwh" word="dat"/>
-                    <node begin="9" end="10" gen="het" genus="onz" getal="ev" graad="basis" id="23" lemma="bedrijf" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="bedrijf" word="bedrijf"/>
+                    <node begin="8" buiging="zonder" end="9" id="22" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" word="dat"/>
+                    <node begin="9" end="10" genus="onz" getal="ev" graad="basis" id="23" lemma="bedrijf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bedrijf" word="bedrijf"/>
                   </node>
                 </node>
-                <node begin="10" buiging="zonder" end="11" id="24" infl="psp" lemma="werken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="werk" sc="intransitive" word="gewerkt" wvorm="vd"/>
+                <node begin="10" buiging="zonder" end="11" id="24" lemma="werken" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="werk" word="gewerkt" wvorm="vd"/>
               </node>
-              <node begin="11" end="12" id="25" infl="sg_heeft" lemma="heb" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" tense="present" word="heb" wvorm="pv"/>
+              <node begin="11" end="12" id="25" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" word="heb" wvorm="pv"/>
             </node>
           </node>
         </node>
-        <node begin="13" buiging="zonder" end="14" id="26" infl="psp" lemma="ontslaan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ontsla" sc="transitive" word="ontslagen" wvorm="vd"/>
+        <node begin="13" buiging="zonder" end="14" id="26" lemma="ontslaan" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ontsla" word="ontslagen" wvorm="vd"/>
       </node>
     </node>
-    <node begin="14" end="15" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="14" end="15" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ze hebben mij , die twintig jaar bij dat bedrijf gewerkt heb , ontslagen .</sentence>
 </alpino_ds>

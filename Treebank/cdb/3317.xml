@@ -9,7 +9,7 @@
             <node begin="1" end="2" id="6" index="1" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
             <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="7" lemma="stichting" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="stichting" word="Stichting"/>
           </node>
-          <node begin="3" conjtype="neven" end="4" id="8" lemma="en/of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en/of" word="en/of"/>
+          <node begin="3" end="4" id="8" lemma="en/of" pos="vg" postag="SPEC(enof)" pt="spec" rel="crd" root="en/of" spectype="enof" word="en/of"/>
           <node begin="1" cat="np" end="5" id="9" rel="cnj">
             <node begin="1" end="2" id="10" index="1" rel="det"/>
             <node begin="4" end="5" getal="mv" graad="basis" id="11" lemma="spaarder" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="spaarders" word="spaarders"/>

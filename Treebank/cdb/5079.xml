@@ -27,9 +27,9 @@
           <node begin="13" cat="pp" end="17" id="21" rel="pc">
             <node begin="13" end="14" id="22" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
             <node begin="14" cat="np" end="17" id="23" rel="obj1">
-              <node begin="14" cat="ap" end="16" id="24" rel="mod">
+              <node begin="14" cat="ppart" end="16" id="24" rel="mod">
                 <node begin="14" end="15" id="25" lemma="vanouds" pos="adv" postag="BW()" pt="bw" rel="mod" root="vanouds" word="vanouds"/>
-                <node begin="15" buiging="met-e" end="16" graad="basis" id="26" lemma="beproefd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="beproefd" word="beproefde"/>
+                <node begin="15" buiging="met-e" end="16" id="26" lemma="beproefd" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="beproefd" word="beproefde" wvorm="vd"/>
               </node>
               <node begin="16" end="17" getal="mv" graad="basis" id="27" lemma="middel" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="middel" word="middelen"/>
             </node>
