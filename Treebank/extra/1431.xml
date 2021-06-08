@@ -2,9 +2,9 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="3" id="0" rel="top">
     <node begin="0" cat="smain" end="3" id="1" rel="--">
-      <node begin="0" end="1" genus="zijd" getal="ev" graad="basis" id="2" lemma="Ahold" naamval="stan" neclass="ORG" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="su" rnum="sg" root="Ahold" word="Ahold"/>
-      <node begin="1" end="2" id="3" infl="sg" lemma="zakken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zak" sc="meas" stype="declarative" tense="past" word="zakte" wvorm="pv"/>
-      <node begin="2" end="3" id="4" infl="both" lemma="0,3%" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="me" rnum="sg" root="0,3%" special="hoofd" word="0,3%"/>
+      <node begin="0" end="1" genus="genus" getal="ev" graad="basis" id="2" lemma="Ahold" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="su" root="Ahold" word="Ahold"/>
+      <node begin="1" end="2" id="3" lemma="zakken" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="zak" word="zakte" wvorm="pv"/>
+      <node begin="2" end="3" id="4" lemma="0,3%" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="me" root="0,3%" word="0,3%"/>
     </node>
   </node>
   <sentence>Ahold zakte 0,3%</sentence>

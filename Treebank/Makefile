@@ -65,15 +65,21 @@ pair: $(DIRECTORIES:%=PAIR/%.pair) $(DIRECTORIES:%=PAIR/%.triple)
 inconsistent-words: POSLEMMA/*.poslemma $(LASSYSMALL)/POSLEMMA/*.poslemma
 	cat POSLEMMA/*.poslemma $(LASSYSMALL)/POSLEMMA/*.poslemma \
         | grep -v 'SPEC(deeleigen)'\
-	| sed -e 's/ADJ(prenom,basis,zonder)/ADJ/g'\
-	| sed -e 's/ADJ(vrij,basis,zonder)/ADJ/g'\
+	| sed -e 's/ADJ(prenom,basis,zonder)/ADJ(basis)/g'\
+	| sed -e 's/ADJ(vrij,basis,zonder)/ADJ(basis)/g'\
 	| sed -e 's/ADJ(prenom,comp,zonder)/ADJ(comp)/g'\
 	| sed -e 's/ADJ(vrij,comp,zonder)/ADJ(comp)/g'\
+	| sed -e 's/ADJ(prenom,sup,zonder)/ADJ(sup)/g'\
+	| sed -e 's/ADJ(vrij,sup,zonder)/ADJ(sup)/g'\
         | sed -e 's/ADJ(prenom,basis,met-e,stan)/ADJ(met-e)/g'\
         | sed -e 's/ADJ(nom,basis,met-e,zonder-n,stan)/ADJ(met-e)/g'\
-	| sed -e 's/WW(inf,vrij,zonder)/WW/g'\
-	| sed -e 's/WW(inf,nom,zonder,zonder-n)/WW/g'\
-	| sed -e 's/WW(pv,tgw,mv)/WW/g'\
+	| sed -e 's/WW(inf,vrij,zonder)/WW(inf)/g'\
+	| sed -e 's/WW(inf,nom,zonder,zonder-n)/WW(inf)/g'\
+	| sed -e 's/WW(pv,tgw,mv)/WW(inf)/g'\
+        | sed -e 's/WW(vd,prenom,zonder)/WW(vd)/g'\
+        | sed -e 's/WW(vd,vrij,zonder)/WW(vd)/g'\
+        | sed -e 's/WW(od,prenom,zonder)/WW(od)/g'\
+        | sed -e 's/WW(od,vrij,zonder)/WW(od)/g'\
 	| sed -e 's/TW(hoofd,prenom,stan)/TW/g'\
 	| sed -e 's/TW(hoofd,vrij)/TW/g'\
 	| sed -e 's/TW(hoofd,nom,zonder-n,basis)/TW/g'\

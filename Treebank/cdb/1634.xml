@@ -25,9 +25,9 @@
                 <node begin="10" end="11" id="21" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
                 <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="22" lemma="aantal" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="aantal" word="aantal"/>
                 <node begin="13" cat="np" end="17" id="23" rel="mod">
-                  <node begin="13" cat="ap" end="15" id="24" rel="mod">
+                  <node begin="13" cat="ppart" end="15" id="24" rel="mod">
                     <node begin="13" buiging="zonder" end="14" graad="basis" id="25" lemma="zorgvuldig" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="zorgvuldig" word="zorgvuldig"/>
-                    <node begin="14" buiging="met-e" end="15" graad="basis" id="26" lemma="registreren" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="geregistreerd" word="geregistreerde"/>
+                    <node begin="14" buiging="met-e" end="15" id="26" lemma="registreren" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="geregistreerd" word="geregistreerde" wvorm="vd"/>
                   </node>
                   <node begin="16" end="17" getal="mv" graad="basis" id="27" lemma="gemeente" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="gemeente" word="gemeenten"/>
                 </node>

@@ -17,13 +17,13 @@
             <node begin="9" end="10" id="13" lemma="te" pos="comp" postag="VZ(init)" pt="vz" rel="cmp" root="te" vztype="init" word="te"/>
             <node begin="1" cat="inf" end="11" id="14" rel="body">
               <node begin="4" end="7" id="15" index="1" rel="su"/>
-              <node begin="7" end="8" id="16" lemma="hoera" pos="noun" postag="SPEC(symb)" pt="spec" rel="obj1" root="hoera" spectype="symb" word="hoera"/>
+              <node begin="7" end="8" id="16" lemma="hoera" pos="noun" postag="TSW()" pt="tsw" rel="obj1" root="hoera" word="hoera"/>
               <node begin="1" cat="pp" end="9" id="17" rel="pc">
                 <node begin="1" cat="np" end="3" id="18" rel="obj1">
                   <node begin="1" end="2" id="19" lemma="zelfs" pos="adv" postag="BW()" pt="bw" rel="mod" root="zelfs" word="zelfs"/>
                   <node begin="2" end="3" getal="getal" id="20" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="noun" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="hd" root="daar" status="vol" vwtype="aanw" word="daar"/>
                 </node>
-                <node begin="8" end="9" id="21" lcat="p(pp)" lemma="tegen" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="tegen" vztype="fin" word="tegen"/>
+                <node begin="8" end="9" id="21" lemma="tegen" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="tegen" vztype="fin" word="tegen"/>
               </node>
               <node begin="10" buiging="zonder" end="11" id="22" lemma="roepen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="roep" word="roepen" wvorm="inf"/>
             </node>
