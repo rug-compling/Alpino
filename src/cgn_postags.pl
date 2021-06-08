@@ -886,6 +886,7 @@ exceptional_stem_tag(hoeveelste, wh_number(rang),             'TW(rang,prenom,st
 exceptional_stem_tag(in,adjective(_),                         'VZ(fin)',in).
 exceptional_stem_tag(jouwe,noun(both,count,both),             'VNW(bez,det,stan,vol,2v,ev,nom,met-e,zonder-n)',jou).
 exceptional_stem_tag(jouwe,noun(both,count,pl),               'VNW(bez,det,stan,vol,2v,ev,nom,met-e,mv-n)',jou).
+exceptional_stem_tag(kortweg,_,                               'BW()',kortweg).
 exceptional_stem_tag(leven_lang,noun(_,_,_),                  'ADJ(vrij,basis,zonder)',leven_lang).
 exceptional_stem_tag(man,postn_adverb,                        'N(soort,mv,basis)',man).
 exceptional_stem_tag(mee,loc_adverb,                          'VZ(fin)',mee).
