@@ -62,7 +62,7 @@ pair: $(DIRECTORIES:%=PAIR/%.pair) $(DIRECTORIES:%=PAIR/%.triple)
 
 ## the odd sed commands for XX[0-9]XX are there to fool awk into treating
 ## numbers as strings, otherwise 3.00 = 3.0 = 3 etc
-inconsistent-words: POSLEMMA/*.poslemma $(LASSYSMALL)/POSLEMMA/*.poslemma
+inconsistent-words: # POSLEMMA/*.poslemma $(LASSYSMALL)/POSLEMMA/*.poslemma
 	cat POSLEMMA/*.poslemma $(LASSYSMALL)/POSLEMMA/*.poslemma \
         | grep -v 'SPEC(deeleigen)'\
 	| sed -e 's/ADJ(prenom,basis,zonder)/ADJ(basis)/g'\
@@ -127,6 +127,7 @@ FREQ/mwu-tagged.freq: $(DIRECTORIES:%=MWU/%.mwu) $(LASSYSMALL)/MWU/*.mwu
 	cat FREQ/mwu-tagged.freq | python3 $(ALPINO_HOME)/TreebankTools/find-inconsistent m > FREQ/mwu-inconsistent
 
 poslemma: $(DIRECTORIES:%=POSLEMMA/%.poslemma)
+	rm inconsistent-words
 	$(MAKE) inconsistent-words
 
 POSLEMMA/%.poslemma: Enhanced/%/*.xml

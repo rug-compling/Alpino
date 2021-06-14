@@ -3,21 +3,21 @@
   <node begin="0" cat="top" end="9" id="0" rel="top">
     <node begin="0" cat="smain" end="8" id="1" rel="--">
       <node begin="0" cat="np" end="3" id="2" rel="su">
-        <node begin="0" end="1" id="3" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
-        <node aform="base" begin="1" buiging="met-e" end="2" id="4" infl="e" lemma="achter_liggen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="lig_achter" vform="gerund" word="achterliggende" wvorm="od"/>
-        <node begin="2" end="3" gen="de" genus="zijd" getal="ev" graad="basis" id="5" lemma="boodschap" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="boodschap" word="boodschap"/>
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" buiging="met-e" end="2" id="4" lemma="achter_liggen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="lig_achter" word="achterliggende" wvorm="od"/>
+        <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="5" lemma="boodschap" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="boodschap" word="boodschap"/>
       </node>
-      <node begin="3" end="4" id="6" infl="sg3" lemma="liggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lig" sc="nonp_copula" stype="declarative" tense="present" word="ligt" wvorm="pv"/>
+      <node begin="3" end="4" id="6" lemma="liggen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="lig" word="ligt" wvorm="pv"/>
       <node begin="5" end="6" id="7" lemma="meteen" pos="adv" postag="BW()" pt="bw" rel="mod" root="meteen" word="meteen"/>
       <node begin="4" cat="ppart" end="8" id="8" rel="predc">
         <node begin="4" cat="pp" end="7" id="9" rel="pc">
-          <node begin="4" end="5" getal="getal" id="10" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" special="er" status="red" vwtype="aanw" word="er"/>
+          <node begin="4" end="5" getal="getal" id="10" lemma="er" naamval="stan" pdtype="adv-pron" persoon="3" pos="adv" postag="VNW(aanw,adv-pron,stan,red,3,getal)" pt="vnw" rel="obj1" root="er" status="red" vwtype="aanw" word="er"/>
           <node begin="6" end="7" id="11" lemma="in" pos="prep" postag="VZ(fin)" pt="vz" rel="hd" root="in" vztype="fin" word="in"/>
         </node>
-        <node aform="base" begin="7" buiging="zonder" end="8" id="12" infl="both" lemma="begrepen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="begrepen" sc="pp(in)" vform="psp" word="begrepen" wvorm="vd"/>
+        <node begin="7" buiging="zonder" end="8" id="12" lemma="begrijpen" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="begrepen" word="begrepen" wvorm="vd"/>
       </node>
     </node>
-    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="8" end="9" id="13" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>De achterliggende boodschap ligt er meteen in begrepen .</sentence>
 </alpino_ds>
