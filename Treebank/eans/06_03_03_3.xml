@@ -2,15 +2,15 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="6" id="0" rel="top">
     <node begin="0" cat="smain" end="5" id="1" rel="--">
-      <node begin="0" case="both" def="def" end="1" gen="de" getal="mv" id="2" lemma="ze" naamval="stan" num="both" pdtype="pron" per="thi" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" rnum="pl" root="ze" special="wkpro" status="red" vwtype="pers" wh="nwh" word="Ze"/>
-      <node begin="1" end="2" id="3" infl="pl" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" sc="fixed([[bijster],[het,spoor]],no_passive)" stype="declarative" tense="past" word="waren" wvorm="pv"/>
+      <node begin="0" end="1" getal="mv" id="2" lemma="ze" naamval="stan" pdtype="pron" persoon="3" pos="pron" postag="VNW(pers,pron,stan,red,3,mv)" pt="vnw" rel="su" root="ze" status="red" vwtype="pers" word="Ze"/>
+      <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="ben" word="waren" wvorm="pv"/>
       <node begin="2" cat="mwu" end="4" id="4" rel="svp">
         <node begin="2" end="3" id="5" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="fixed" postag="LID(bep,stan,evon)" pt="lid" rel="mwp" root="het" word="het"/>
         <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="6" lemma="spoor" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="spoor" word="spoor"/>
       </node>
-      <node begin="4" buiging="zonder" end="5" graad="basis" id="7" lemma="bijster" pos="fixed" positie="prenom" postag="ADJ(prenom,basis,zonder)" pt="adj" rel="svp" root="bijster" word="bijster"/>
+      <node begin="4" end="5" id="7" lemma="bijster" pos="fixed" postag="BW()" pt="bw" rel="svp" root="bijster" word="bijster"/>
     </node>
-    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="5" end="6" id="8" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Ze waren het spoor bijster .</sentence>
 </alpino_ds>

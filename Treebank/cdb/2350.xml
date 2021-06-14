@@ -71,9 +71,9 @@
                       <node begin="30" end="31" id="56" index="3" rel="su"/>
                       <node begin="31" cat="np" end="35" id="57" rel="obj1">
                         <node begin="31" end="32" id="58" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                        <node begin="32" cat="ap" end="34" id="59" rel="mod">
+                        <node begin="32" cat="ppart" end="34" id="59" rel="mod">
                           <node begin="32" buiging="zonder" end="33" graad="basis" id="60" lemma="uiterst" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="uiterst" word="uiterst"/>
-                          <node begin="33" buiging="met-e" end="34" graad="basis" id="61" lemma="geconcentreerd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="hd" root="geconcentreerd" word="geconcentreerde"/>
+                          <node begin="33" buiging="met-e" end="34" id="61" lemma="concentreren" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="hd" root="geconcentreerd" word="geconcentreerde" wvorm="vd"/>
                         </node>
                         <node begin="34" end="35" genus="zijd" getal="ev" graad="basis" id="62" lemma="wedstrijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="wedstrijd" word="wedstrijd"/>
                       </node>

@@ -14,8 +14,8 @@
         <node begin="5" cat="np" end="8" id="10" rel="obj1">
           <node begin="5" end="6" id="11" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
           <node begin="6" cat="mwu" end="8" id="12" rel="hd">
-            <node begin="6" buiging="met-e" end="7" graad="basis" id="13" lemma="groot" naamval="stan" pos="name" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mwp" root="Grote" word="Grote"/>
-            <node begin="7" end="8" getal="mv" graad="basis" id="14" lemma="antillen" ntype="soort" pos="name" postag="N(soort,mv,basis)" pt="n" rel="mwp" root="Antillen" word="Antillen"/>
+            <node begin="6" end="7" id="13" lemma="Grote" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Grote" spectype="deeleigen" word="Grote"/>
+            <node begin="7" end="8" id="14" lemma="Antillen" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Antillen" spectype="deeleigen" word="Antillen"/>
           </node>
         </node>
       </node>
