@@ -1114,9 +1114,9 @@ mwu_postag('te onpas',['VZ(init)','BW()'],[te,onpas]).
 mwu_postag('te over',['VZ(init)','VZ(fin)'],[te,over]).
 mwu_postag('te voorschijn',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[te,voorschijn]).
 mwu_postag('te weten',['VZ(init)','WW(inf,vrij,zonder)'],[te,weten]).
-mwu_postag('ten aan zien van',['VZ(versm)','N(soort,ev,basis,onz,stan)','N(soort,ev,basis,onz,stan)','VZ(init)'],[te,aan,aan_zien,van]).
+mwu_postag('ten aan zien van',['VZ(versm)','N(soort,ev,basis,onz,stan)','N(soort,ev,basis,onz,stan)','VZ(init)'],[te,aan,aanzien,van]).
 mwu_postag('ten aanzien van',['VZ(versm)','N(soort,ev,basis,onz,stan)','VZ(init)'],[te,aan_zien,van]).
-mwu_postag('ten aanzien',['VZ(versm)','N(soort,ev,basis,onz,stan)'],[te,aan_zien]).
+mwu_postag('ten aanzien',['VZ(versm)','N(soort,ev,basis,onz,stan)'],[te,aanzien]).
 mwu_postag('ten achter',['VZ(versm)','VZ(fin)'],[te,achter]).
 mwu_postag('ten bate van',['VZ(versm)','N(soort,ev,basis,dat)','VZ(init)'],[te,baat,van]).
 mwu_postag('ten behoeve van',['VZ(versm)','N(soort,ev,basis,dat)','VZ(init)'],[te,behoeve,van]).
