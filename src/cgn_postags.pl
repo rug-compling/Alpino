@@ -963,6 +963,7 @@ exceptional_stem_tag(allebei,_,                                     'VNW(onbep,d
 exceptional_stem_tag(allemaal,_,                                    'BW()').
 exceptional_stem_tag(allemachtig,tag,                               'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(aller,determiner(pron),                        'VNW(onbep,det,gen,prenom,met-e,mv)').
+exceptional_stem_tag(allerhande,postn_adverb,                       'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(alles,noun(het,mass,sg),                       'VNW(onbep,pron,stan,vol,3o,ev)').
 exceptional_stem_tag(alsook,_,                                      'VG(neven)').
 exceptional_stem_tag(alsjeblieft,_,                                 'BW()').
@@ -990,6 +991,7 @@ exceptional_stem_tag(betrekken,nominalized_adjective_sg,            'WW(vd,nom,m
 exceptional_stem_tag(beu,np_adjective,                              'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(beu,clause_np_adjective,                       'ADJ(vrij,basis,zonder)').
 exceptional_stem_tag(bij,conj(en),                                  'VZ(init)').
+exceptional_stem_tag(bijster,_,                                     'BW()').
 exceptional_stem_tag(binnen,loc_adverb,                             'VZ(fin)').
 exceptional_stem_tag(blauw, noun(het,mass,sg),                      'ADJ(nom,basis,zonder,zonder-n)').
 exceptional_stem_tag(boven,loc_adverb,                              'VZ(fin)').

@@ -2364,7 +2364,7 @@ n([pl(ambten),sg(ambt)],het,[]).
 
 n([pl(ambtenaars),pl(ambtenaren),sg(ambtenaar)],de,[app_measure],
   [s(bestuur),
-   leerplicht,
+   i(leer_plicht,leerplicht),
    s(opsporing),
    s(rijk),
    top,

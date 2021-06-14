@@ -42,7 +42,10 @@ user_transformation(r(REL,l(read_from_treebank(Az,L0,Tag0),Cat,W/[P0,P])),B,[],
 
 user_transformation(r(REL,l(read_from_treebank(Az,L0,Tag),Cat,W/[P0,P])),B,[],
 		    r(REL,l(read_from_treebank(Az,L1,Tag),Cat,W/[P0,P])),B,[],_,_) :-
-    \+ REL = mwp,
+    ( \+ REL = mwp
+    ; \+ Tag = 'SPEC(deeleigen)',
+      \+ Tag = 'SPEC(vreemd)'
+    ),
     lemma(L0,L1),
     format(user_error,"~w -> ~w~n",[L0,L1]).
 
@@ -111,8 +114,6 @@ surf_lemma(Word,Rel,Pos0,Pos,Lem,Lem) :-
     surf(Word,Pos),
     \+ Pos0 = Pos.
 
-
-
 user:query:-
     findall(L,lemma(L,_),Ls),
     (   Ls = [_|_]
@@ -127,6 +128,7 @@ user:query:-
     ;   true
     ),
     findall(S,( surf(S,_,_)
+	      ; surf(S,_)
 	      ; surf_lemma(S,_,_,_,_)
 	      ), Ss),
     (   Ss = [_|_]
@@ -261,4 +263,76 @@ surf(_,_,_) :-
 surf(_,_) :-
     fail.
 
+
+surf('Oostenrijker','N(eigen,ev,basis,zijd,stan)').
+
+lemma(opdeciem,opdeciemen).
+lemma(opgelost,op_lossen).
+lemma(opduiken,op_duiken).
+lemma('ouder(s)',ouder).
+lemma('oud-staatssecretaris',oud_staatssecretaris).
+lemma(over_drijven,overdrijven).
+lemma(overmaken,over_maken).
+lemma(overplaatsen,over_plaatsen).
+lemma(overleden,overlijden).
+lemma(overzichtstentoonstelling,overzicht_tentoonstelling).
+lemma('Paris-Roubaix','Paris_Roubaix').
+lemma(parlementsgebouw,parlement_gebouw).
+lemma(parlementslid,parlement_lid).
+lemma(parlementsverkiezing,parlement_verkiezing).
+lemma(partijgenoot,partij_genoot).
+lemma(passend,passen).
+lemma(patiëntenbelangenvereniging,patiënt_belang_vereniging).
+lemma(patroonheilige,patroon_heilige).
+lemma('Pdf',pdf).
+lemma('PDF',pdf).
+lemma(pelgrimstocht,pelgrim_tocht).
+lemma(personeelsbestand,personeel_bestand).
+lemma(plaatsvinden,plaats_vinden).
+lemma(plantenfamilie,plant_familie).
+lemma(platenmaatschappij,plaat_maatschappij).
+lemma(platdrukken,plat_drukken).
+lemma(platleggen,plat_leggen).
+lemma(pletzersstraat,'Pletzersstraat').
+lemma(plooi_baar,plooibaar).
+lemma(politieagent,politie_agent).
+lemma(politieauto,politie_auto).
+lemma('Postbus',postbus).
+lemma(postcode,post_code).
+lemma(praatprogramma,praat_programma).
+lemma(praktizerend,praktizeren).
+lemma(prefrontaal,pre_frontaal).
+lemma(preoperatief,pre_operatief).
+lemma('pre-pensioen',pre_pensioen).
+lemma(prijsbewust,prijs_bewust).
+lemma(procedurebesluit,procedure_besluit).
+lemma(provinciehoofdstad,provincie_hoofdstad).
+lemma(quota,quotum).
+lemma(racebaan,race_baan).
+lemma(radioprogramma,radio_programma).
+lemma(radiostation,radio_station).
+lemma(rangeer_terrein,rangeren_terrein).
+lemma(rechttrekken,recht_trekken).
+lemma(rechtspreken,recht_spreken).
+lemma(rechtssysteem,recht_systeem).
+lemma(rechtszaak,recht_zaak).
+lemma(reductieverplichting,reductie_verplichting).
+lemma(regeringsbesluit,regering_besluit).
+lemma(regeringscoalitie,regering_coalitie).
+lemma(regeringslid,regering_lid).
+lemma(regeringswoordvoerder,regering_woordvoerder).
+lemma(reikwijdte,reik_wijdte).
+
+surf('Rekenhof','N(eigen,ev,basis,onz,stan)','Rekenhof').
+surf('Rekenkamer','N(eigen,ev,basis,onz,stan)','Rekenkamer').
+surf(religieuzen,'ADJ(nom,basis,met-e,mv-n)',religieus).
+
+surf_lemma('Prins','N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)','Prins',prins).
+surf_lemma('Prinses','N(soort,ev,basis,zijd,stan)','N(soort,ev,basis,zijd,stan)','Prinses',prinses).
+
+surf_lemma(prijskaartje,'N(soort,ev,dim,onz,stan)',prijs_kaart).
+
+surf_lemma(politiemensen,'N(soort,mv,basis)',politie_mens).
+
+surf_lemma(opgekropte,_,'WW(vd,prenom,met-e)',_,op_kroppen).
 
