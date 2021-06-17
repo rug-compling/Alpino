@@ -204,6 +204,8 @@ def sanity_checks():
    check('//node[@cat="ap" and node[@rel="hd" and @pt="n"]]','noun heads an ap')
    #
    check('//node[@rel="hd" and ../@cat="np" and @pt and not(@pt="n" or @pt="tw" or @pt="spec" or @pt="adj" or @pt="ww" or @pt="vnw" or @pt="bw")]','unexpected postag for head of np')
+   check('//node[@pt="adj" and @positie="vrij" and @rel="hd" and ../@cat="np"]','free adjective as head of NP?')
+   check('//node[@pt="adj" and @positie="vrij" and (@rel="su" or (@rel="obj1" and not(../@cat="pp")) or @rel="obj2") ]','free adjective as NP?')
    check('//node[@rel="hd" and ../@cat="ap" and @pt and not(@pt="vz" or @pt="tw" or @pt="bw" or @pt="vnw" or @pt="adj")]','unexpected postag for head of ap')
    check('//node[@rel="hd" and ../@cat="advp" and @pt and not(@pt="bw" or @pt="n" or @pt="adj" or @pt="vnw" or @pt="tw" or @postag="VZ(fin)")]','unexpected postag for head of advp')
    check('//node[@rel="hd" and ../@cat="pp" and @pt and not(@pt="vz" or @pt="spec" or @pt="bw" or @pt="adj" or @lemma="richting" or @lemma="naargelang" or @lemma="getuige" or @lemma="zien")]','unexpected postag for head of pp')
