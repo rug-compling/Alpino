@@ -4,17 +4,17 @@
     <node begin="0" cat="smain" end="7" id="1" rel="--">
       <node begin="0" cat="pp" end="2" id="2" rel="mod">
         <node begin="0" end="1" id="3" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="In"/>
-        <node begin="1" end="2" id="4" infl="pl_num" lemma="1659" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" rnum="pl" root="1659" special="hoofd" word="1659"/>
+        <node begin="1" end="2" id="4" lemma="1659" numtype="hoofd" pos="num" positie="vrij" postag="TW(hoofd,vrij)" pt="tw" rel="obj1" root="1659" word="1659"/>
       </node>
-      <node begin="2" end="3" id="5" infl="sg" lemma="annexeren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="annexeer" sc="transitive" stype="declarative" tense="past" word="annexeerde" wvorm="pv"/>
-      <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="6" lemma="Frankrijk" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" rnum="sg" root="Frankrijk" word="Frankrijk"/>
+      <node begin="2" end="3" id="5" lemma="annexeren" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="annexeer" word="annexeerde" wvorm="pv"/>
+      <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="6" lemma="Frankrijk" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="su" root="Frankrijk" word="Frankrijk"/>
       <node begin="4" cat="np" end="7" id="7" rel="obj1">
-        <node begin="4" end="5" id="8" infl="de" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-        <node aform="base" begin="5" buiging="met-e" end="6" id="9" infl="e" lemma="catalaanssprekend" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="catalaanssprekend" vform="gerund" word="catalaanssprekende" wvorm="od"/>
-        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="10" lemma="Roussillon" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="Roussillon" word="Roussillon"/>
+        <node begin="4" end="5" id="8" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+        <node begin="5" buiging="met-e" end="6" id="9" lemma="Catalaans_spreken" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="catalaanssprekend" word="catalaanssprekende" wvorm="od"/>
+        <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="10" lemma="Roussillon" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Roussillon" word="Roussillon"/>
       </node>
     </node>
-    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+    <node begin="7" end="8" id="11" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>In 1659 annexeerde Frankrijk de catalaanssprekende Roussillon .</sentence>
 </alpino_ds>

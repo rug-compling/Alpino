@@ -7,8 +7,8 @@
         <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="premier" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="premier" word="premier"/>
       </node>
       <node begin="2" end="3" id="5" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" word="is" wvorm="pv"/>
-      <node begin="3" cat="ppart" end="9" id="6" rel="predc">
-        <node begin="3" buiging="zonder" end="4" id="7" lemma="ontgoocheld" pos="adj" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ontgoocheld" word="ontgoocheld" wvorm="vd"/>
+      <node begin="3" cat="ap" end="9" id="6" rel="predc">
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="7" lemma="ontgoocheld" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="ontgoocheld" word="ontgoocheld"/>
         <node begin="4" cat="cp" end="9" id="8" rel="vc">
           <node begin="4" conjtype="onder" end="5" id="9" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" word="dat"/>
           <node begin="5" cat="ssub" end="9" id="10" rel="body">

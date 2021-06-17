@@ -64,6 +64,7 @@ pair: $(DIRECTORIES:%=PAIR/%.pair) $(DIRECTORIES:%=PAIR/%.triple)
 ## numbers as strings, otherwise 3.00 = 3.0 = 3 etc
 inconsistent-words: # POSLEMMA/*.poslemma $(LASSYSMALL)/POSLEMMA/*.poslemma
 	cat POSLEMMA/*.poslemma $(LASSYSMALL)/POSLEMMA/*.poslemma \
+        | grep -v '<sent id=' \
         | grep -v 'SPEC(deeleigen)'\
 	| sed -e 's/ADJ(prenom,basis,zonder)/ADJ(basis)/g'\
 	| sed -e 's/ADJ(vrij,basis,zonder)/ADJ(basis)/g'\
