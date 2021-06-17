@@ -6,7 +6,7 @@
       <node begin="1" end="2" id="3" lemma="zijn" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="ben" word="zijn" wvorm="pv"/>
       <node begin="2" end="3" id="4" lemma="zelfs" pos="adv" postag="BW()" pt="bw" rel="mod" root="zelfs" word="zelfs"/>
       <node begin="3" cat="ap" end="5" id="5" rel="predc">
-        <node begin="3" end="4" id="6" lemma="tamelijk" pos="adj" postag="BW()" pt="bw" rel="mod" root="tamelijk" word="tamelijk"/>
+        <node begin="3" buiging="zonder" end="4" graad="basis" id="6" lemma="tamelijk" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="tamelijk" word="tamelijk"/>
         <node begin="4" buiging="zonder" end="5" graad="basis" id="7" lemma="sceptisch" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="sceptisch" word="sceptisch"/>
       </node>
     </node>

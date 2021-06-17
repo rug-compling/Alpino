@@ -66,12 +66,12 @@
         <node begin="31" cat="conj" end="35" id="49" rel="su">
           <node begin="31" cat="np" end="33" id="50" rel="cnj">
             <node begin="31" buiging="zonder" end="32" graad="basis" id="51" index="1" lemma="veel" naamval="stan" npagr="agr" pdtype="grad" pos="det" positie="prenom" postag="VNW(onbep,grad,stan,prenom,zonder,agr,basis)" pt="vnw" rel="det" root="veel" vwtype="onbep" word="veel"/>
-            <node begin="32" buiging="zonder" end="33" graad="basis" id="52" lemma="wit" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="wit" word="wit"/>
+            <node begin="32" buiging="zonder" end="33" getal-n="zonder-n" graad="basis" id="52" lemma="wit" pos="noun" positie="nom" postag="ADJ(nom,basis,zonder,zonder-n)" pt="adj" rel="hd" root="wit" word="wit"/>
           </node>
           <node begin="33" conjtype="neven" end="34" id="53" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
           <node begin="31" cat="np" end="35" id="54" rel="cnj">
             <node begin="31" end="32" id="55" index="1" rel="det"/>
-            <node begin="34" buiging="zonder" end="35" graad="basis" id="56" lemma="off-white" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="off-white" word="off-white"/>
+            <node begin="34" end="35" id="56" lemma="off-white" pos="adj" postag="SPEC(vreemd)" pt="spec" rel="hd" root="off-white" spectype="vreemd" word="off-white"/>
           </node>
         </node>
       </node>

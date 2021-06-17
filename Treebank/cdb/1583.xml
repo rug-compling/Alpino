@@ -61,30 +61,29 @@
                 <node begin="26" cat="pp" end="34" id="48" rel="mod">
                   <node begin="26" end="27" id="49" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
                   <node begin="27" cat="conj" end="34" id="50" rel="obj1">
-                    <node begin="29" conjtype="neven" end="30" id="51" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-                    <node begin="27" cat="np" end="34" id="52" rel="cnj">
-                      <node begin="27" end="28" id="53" index="3" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
-                      <node begin="28" end="29" id="54" lemma="reparatie-" pos="noun" postag="SPEC(afgebr)" pt="spec" rel="hd" root="reparatie-" spectype="afgebr" word="reparatie-"/>
-                      <node begin="32" cat="pp" end="34" id="55" index="4" rel="mod">
-                        <node begin="32" end="33" id="56" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
-                        <node begin="33" end="34" genus="zijd" getal="ev" graad="basis" id="57" lemma="nieuwbouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="nieuwbouw" word="nieuwbouw"/>
-                      </node>
+                    <node begin="27" cat="np" end="29" id="51" rel="cnj">
+                      <node begin="27" end="28" id="52" index="3" lemma="een" lwtype="onbep" naamval="stan" npagr="agr" pos="det" postag="LID(onbep,stan,agr)" pt="lid" rel="det" root="een" word="een"/>
+                      <node begin="28" end="29" id="53" lemma="reparatie-" pos="noun" postag="SPEC(afgebr)" pt="spec" rel="hd" root="reparatie-" spectype="afgebr" word="reparatie-"/>
                     </node>
-                    <node begin="27" cat="np" end="34" id="58" rel="cnj">
-                      <node begin="27" end="28" id="59" index="3" rel="det"/>
-                      <node begin="30" buiging="zonder" end="31" graad="basis" id="60" lemma="werf_bedrijf" pos="noun" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="bedrijf" word="werfbedrijf"/>
-                      <node begin="32" end="34" id="61" index="4" rel="mod"/>
+                    <node begin="29" conjtype="neven" end="30" id="54" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
+                    <node begin="27" cat="np" end="34" id="55" rel="cnj">
+                      <node begin="27" end="28" id="56" index="3" rel="det"/>
+                      <node begin="30" end="31" genus="onz" getal="ev" graad="basis" id="57" lemma="werf_bedrijf" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bedrijf" word="werfbedrijf"/>
+                      <node begin="32" cat="pp" end="34" id="58" rel="mod">
+                        <node begin="32" end="33" id="59" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+                        <node begin="33" end="34" genus="zijd" getal="ev" graad="basis" id="60" lemma="nieuwbouw" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="nieuwbouw" word="nieuwbouw"/>
+                      </node>
                     </node>
                   </node>
                 </node>
-                <node begin="36" buiging="zonder" end="37" id="62" lemma="vestigen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vestig" word="vestigen" wvorm="inf"/>
+                <node begin="36" buiging="zonder" end="37" id="61" lemma="vestigen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="vestig" word="vestigen" wvorm="inf"/>
               </node>
             </node>
           </node>
         </node>
       </node>
     </node>
-    <node begin="37" end="38" id="63" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+    <node begin="37" end="38" id="62" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
   </node>
   <sentence>Voor de heer Schravenmade lijdt het geen twijfel , dat de Rijn-Schelde , waarin Wilton-Feijenoord is opgenomen , alle haast maakt om zich op de Maasvlakte met een reparatie- en werfbedrijf ( voor nieuwbouw ) te vestigen .</sentence>
 </alpino_ds>

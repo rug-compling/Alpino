@@ -9,7 +9,7 @@
         <node begin="2" cat="np" end="6" id="6" rel="su">
           <node begin="2" end="3" id="7" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
           <node begin="3" cat="mwu" end="5" id="8" rel="mod">
-            <node begin="3" end="4" genus="onz" getal="ev" graad="basis" id="9" lemma="timan" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="mwp" root="Timan" word="Timan"/>
+            <node begin="3" end="4" id="9" lemma="Timan" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Timan" spectype="deeleigen" word="Timan"/>
             <node begin="4" end="5" id="10" lemma="Pechora" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Pechora" spectype="deeleigen" word="Pechora"/>
           </node>
           <node begin="5" end="6" genus="onz" getal="ev" graad="basis" id="11" lemma="bassin" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" root="bassin" word="bassin"/>

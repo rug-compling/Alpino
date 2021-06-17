@@ -5,9 +5,9 @@
       <node begin="0" cat="np" end="4" id="2" index="1" rel="whd">
         <node begin="0" buiging="met-e" end="1" id="3" lemma="welk" naamval="stan" npagr="rest" pdtype="det" pos="det" positie="prenom" postag="VNW(vb,det,stan,prenom,met-e,rest)" pt="vnw" rel="det" root="welk" vwtype="vb" word="Welke"/>
         <node begin="1" end="2" getal="mv" graad="basis" id="4" lemma="smaak" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="smaak" word="smaken"/>
-        <node begin="2" cat="mwu" end="4" id="5" rel="app">
-          <node begin="2" end="3" id="6" lemma="Aquarius" pos="name" postag="SPEC(deeleigen)" pt="spec" rel="mwp" root="Aquarius" spectype="deeleigen" word="Aquarius"/>
-          <node begin="3" end="4" id="7" lemma="sportdrank" pos="name" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="mwp" root="sportdrank" word="sportdrank" wvorm="pv"/>
+        <node begin="2" cat="np" end="4" id="5" rel="app">
+          <node begin="2" end="3" genus="genus" getal="ev" graad="basis" id="6" lemma="Aquarius" naamval="stan" ntype="eigen" pos="name" postag="N(eigen,ev,basis,genus,stan)" pt="n" rel="mod" root="Aquarius" word="Aquarius"/>
+          <node begin="3" end="4" genus="zijd" getal="ev" graad="basis" id="7" lemma="sport_drank" naamval="stan" ntype="soort" pos="name" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="sportdrank" word="sportdrank"/>
         </node>
       </node>
       <node begin="0" cat="sv1" end="6" id="8" rel="body">
