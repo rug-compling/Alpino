@@ -21964,6 +21964,7 @@ v(stem,stemt,stemmen,gestemd,stemde,stemden,
 	pc_pp(voor),
 	er_pp_sbar(voor),
 	er_pp_vp(voor),
+	fixed([[blanco]],imp_passive),
 	part_pc_pp(af,op),
 	part_np_pc_pp(af,op),
 	part_pc_pp(in,met),
@@ -28720,7 +28721,7 @@ v(zit,zit,zitten,gezeten,zat,zaten,
 	er_pp_sbar(met),  % ik kan er niet mee zitten dat ...
         so_np_pc_pp(tot), % dat zit me tot hier
         
-	pc_pp(voor),   % ?
+	pc_pp(voor),   % ? ik ga er eens goed voor zitten
 	pc_pp(zonder),
 	subj_control(wk_te),  % hij zit te zeuren
 	fixed([subj(schot),pc(in)],no_passive),
