@@ -8,9 +8,7 @@ XSL=$(ALPINO_HOME)/TreebankTools/stylesheets
 
 LASSYSMALL=/net/corpora/LassyDevelop
 
-default:
-
-all: prepare_enhanced_all enhanced_all poslemma mwu trees_doc sents sentspl conllu pair dact
+all: dtchecks prepare_enhanced_all enhanced_all poslemma mwu trees_doc sents sentspl conllu pair dact
 
 DIRECTORIES=cgn_exs eans extra g_suite h_suite i_suite leuven_yellow_pages lot_test_suite1 \
              ntv-suite qa wpspel novelsample_corrected cdb
