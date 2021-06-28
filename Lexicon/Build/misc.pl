@@ -2554,7 +2554,8 @@ preposition(aangezien). % VL
 preposition(ad).
 preposition(afgezien).
 preposition(aldus).
-m(dixit,preposition(aldus,[]),dixit).  % also for dip
+m(dixit,preposition(aldus,[]),dixit). % also for dip
+preposition(alias).
 preposition(anno).
 preposition(à).
 m(betreffen,preposition(betreffende,[]),betreffende).
@@ -4005,7 +4006,6 @@ m(Stem,conj(Stem),Surf) :-
     conj/3.
 
 conj(à,                à).
-conj(alias,            alias).
 conj(alsmede,          alsmede,   maar).
 conj(alsook,           alsook,    maar).
 conj(alswel,           [als,wel], maar).
