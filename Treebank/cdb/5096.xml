@@ -29,8 +29,8 @@
             <node begin="17" cat="pp" end="23" id="22" rel="mod">
               <node begin="17" end="18" id="23" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
               <node begin="18" cat="conj" end="23" id="24" rel="obj1">
-                <node begin="18" end="19" getal="mv" graad="basis" id="25" lemma="op_ruien" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="opruien" word="opruien"/>
-                <node begin="20" end="21" getal="mv" graad="basis" id="26" lemma="verdachtmaken" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="verdachtmaken" word="verdachtmaken"/>
+                <node begin="18" buiging="zonder" end="19" getal-n="zonder-n" id="25" lemma="op_ruien" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="cnj" root="opruien" word="opruien" wvorm="inf"/>
+                <node begin="20" buiging="zonder" end="21" getal-n="zonder-n" id="26" lemma="verdacht_maken" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="cnj" root="verdachtmaken" word="verdachtmaken" wvorm="inf"/>
                 <node begin="21" conjtype="neven" end="22" id="27" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
                 <node begin="22" end="23" genus="zijd" getal="ev" graad="basis" id="28" lemma="woord_terreur" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="terreur" word="woordterreur"/>
               </node>

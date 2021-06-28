@@ -8,7 +8,7 @@
         <node begin="2" conjtype="neven" end="3" id="5" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
         <node begin="3" end="4" id="6" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="cnj" root="zo" word="zo"/>
         <node begin="1" cat="np" end="11" id="7" rel="cnj">
-          <node begin="1" end="2" getal="mv" graad="basis" id="8" lemma="marginalen" ntype="soort" pos="adj" postag="N(soort,mv,basis)" pt="n" rel="hd" root="marginaal" word="marginalen"/>
+          <node begin="1" buiging="met-e" end="2" getal-n="mv-n" graad="basis" id="8" lemma="marginaal" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="hd" root="marginaal" word="marginalen"/>
           <node begin="5" cat="rel" end="11" id="9" rel="mod">
             <node begin="5" end="6" getal="getal" id="10" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
             <node begin="5" cat="ssub" end="11" id="11" rel="body">

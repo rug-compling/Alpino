@@ -17,7 +17,7 @@
             <node begin="4" cat="np" end="7" id="13" rel="obj1">
               <node begin="4" end="5" id="14" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
               <node begin="5" buiging="met-e" end="6" id="15" lemma="volgen" pos="adj" positie="prenom" postag="WW(od,prenom,met-e)" pt="ww" rel="mod" root="volgend" word="volgende" wvorm="od"/>
-              <node begin="6" end="7" genus="zijd" getal="ev" graad="basis" id="16" lemma="(werk)dag" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="werkdag" word="(werk)dag"/>
+              <node begin="6" end="7" id="16" lemma="(werk)dag" pos="noun" postag="SPEC(enof)" pt="spec" rel="hd" root="werkdag" spectype="enof" word="(werk)dag"/>
             </node>
           </node>
         </node>

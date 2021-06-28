@@ -9,9 +9,9 @@
         <node begin="2" cat="np" end="6" id="6" rel="su">
           <node begin="2" end="3" getal="mv" graad="basis" id="7" lemma="demonstratie" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="demonstraties" word="demonstraties"/>
           <node begin="3" cat="conj" end="6" id="8" rel="mod">
-            <node begin="3" end="4" getal="mv" graad="basis" id="9" lemma="parachute-springen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="spring" word="parachute-springen"/>
+            <node begin="3" buiging="zonder" end="4" getal-n="zonder-n" id="9" lemma="parachute_springen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="cnj" root="spring" word="parachute-springen" wvorm="inf"/>
             <node begin="4" conjtype="neven" end="5" id="10" lemma="en" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="en" word="en"/>
-            <node begin="5" end="6" getal="mv" graad="basis" id="11" lemma="helicopter_vliegen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="cnj" root="vlieg" word="helicoptervliegen"/>
+            <node begin="5" buiging="zonder" end="6" getal-n="zonder-n" id="11" lemma="helicopter_vliegen" pos="noun" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="cnj" root="vlieg" word="helicoptervliegen" wvorm="inf"/>
           </node>
         </node>
       </node>
