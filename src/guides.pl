@@ -243,4 +243,6 @@ tr_fixed_el(X,X).
 
 tr_infl(past(X),X) :-
     !.
+tr_infl(both(X),X) :-
+    !.
 tr_infl(X,X).
