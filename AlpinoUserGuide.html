@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.6" />
+<meta name="generator" content="AsciiDoc 9.0.0rc1" />
 <title>Alpino User Guide</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -87,9 +88,15 @@ ul, ol, li > p {
 ul > li     { color: #aaa; }
 ul > li > * { color: black; }
 
-pre {
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
   padding: 0;
   margin: 0;
+}
+pre {
+  white-space: pre-wrap;
 }
 
 #author {
@@ -219,7 +226,7 @@ div.exampleblock > div.content {
 }
 
 div.imageblock div.content { padding-left: 0; }
-span.image img { border-style: none; }
+span.image img { border-style: none; vertical-align: text-bottom; }
 a.image:visited { color: white; }
 
 dl {
@@ -349,7 +356,7 @@ div.colist td img {
   margin-bottom: 0.1em;
 }
 
-div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -407,17 +414,13 @@ span.underline { text-decoration: underline; }
 span.overline { text-decoration: overline; }
 span.line-through { text-decoration: line-through; }
 
+div.unbreakable { page-break-inside: avoid; }
+
 
 /*
  * xhtml11 specific
  *
  * */
-
-tt {
-  font-family: monospace;
-  font-size: inherit;
-  color: navy;
-}
 
 div.tableblock {
   margin-top: 1.0em;
@@ -433,7 +436,7 @@ thead, p.table.header {
 p.table {
   margin-top: 0;
 }
-/* Because the table frame attribute is overriden by CSS in most browsers. */
+/* Because the table frame attribute is overridden by CSS in most browsers. */
 div.tableblock > table[frame="void"] {
   border-style: none;
 }
@@ -451,12 +454,6 @@ div.tableblock > table[frame="vsides"] {
  * html5 specific
  *
  * */
-
-.monospaced {
-  font-family: monospace;
-  font-size: inherit;
-  color: navy;
-}
 
 table.tableblock {
   margin-top: 1.0em;
@@ -537,6 +534,8 @@ body.manpage div.sectionbody {
 @media print {
   body.manpage div#toc { display: none; }
 }
+
+
 </style>
 <script type="text/javascript">
 /*<![CDATA[*/
@@ -581,7 +580,7 @@ toc: function (toclevels) {
 
   function tocEntries(el, toclevels) {
     var result = new Array;
-    var re = new RegExp('[hH]([2-'+(toclevels+1)+'])');
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
     // Function that scans the DOM tree for header elements (the DOM2
     // nodeIterator API would be a better technique but not supported by all
     // browsers).
@@ -610,7 +609,7 @@ toc: function (toclevels) {
   var i;
   for (i = 0; i < toc.childNodes.length; i++) {
     var entry = toc.childNodes[i];
-    if (entry.nodeName == 'div'
+    if (entry.nodeName.toLowerCase() == 'div'
      && entry.getAttribute("class")
      && entry.getAttribute("class").match(/^toclevel/))
       tocEntriesToRemove.push(entry);
@@ -656,7 +655,7 @@ footnotes: function () {
   var entriesToRemove = [];
   for (i = 0; i < noteholder.childNodes.length; i++) {
     var entry = noteholder.childNodes[i];
-    if (entry.nodeName == 'div' && entry.getAttribute("class") == "footnote")
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
       entriesToRemove.push(entry);
   }
   for (i = 0; i < entriesToRemove.length; i++) {
@@ -737,7 +736,7 @@ asciidoc.install();
 <div id="header">
 <h1>Alpino User Guide</h1>
 <span id="author">Gertjan van Noord</span><br />
-<span id="email"><tt>&lt;<a href="mailto:g.j.m.van.noord@rug.nl">g.j.m.van.noord@rug.nl</a>&gt;</tt></span><br />
+<span id="email"><code>&lt;<a href="mailto:g.j.m.van.noord@rug.nl">g.j.m.van.noord@rug.nl</a>&gt;</code></span><br />
 </div>
 <div id="content">
 <div id="preamble">
@@ -756,7 +755,7 @@ steps:</p></div>
 <li>
 <p>
 Download the relevant file for your architecture at
-<a href="http://www.let.rug.nl/~vannoord/alp/Alpino/binary/versions">Alpino download site</a>.
+<a href="http://www.let.rug.nl/vannoord/alp/Alpino/versions/binary">Alpino download site</a>.
 </p>
 </li>
 <li>
@@ -766,7 +765,7 @@ Extract the contents of that file in a place of your liking, e.g.,
 </p>
 <div class="literalblock">
 <div class="content">
-<pre><tt>tar xzf Alpino-bla-bla-19327.tar.gz</tt></pre>
+<pre><code>tar xzf Alpino-bla-bla-19327.tar.gz</code></pre>
 </div></div>
 </li>
 </ol></div>
@@ -775,7 +774,7 @@ system libraries. The specific dependencies of the current release are
 as follows (subject to change):</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>        linux-vdso.so.1
+<pre><code>        linux-vdso.so.1
         libstdc++.so.6
         libz.so.1
         libtk8.4.so.0
@@ -792,7 +791,7 @@ as follows (subject to change):</p></div>
         libuuid.so.1
         libxcb.so.1
         libXau.so.6
-        libXdmcp.so.6</tt></pre>
+        libXdmcp.so.6</code></pre>
 </div></div>
 <div class="paragraph"><p>In addition, some of the tools and programs that are shipped with
 Alpino require additional packages. Here is the beginning of a
@@ -857,17 +856,17 @@ home directory, assuming you use bash, and assuming you extracted the
 Alpino stuff in a directory called Alpino in your home directory:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>export ALPINO_HOME=$HOME/Alpino
-export PATH=$PATH:$ALPINO_HOME/bin</tt></pre>
+<pre><code>export ALPINO_HOME=$HOME/Alpino
+export PATH=$PATH:$ALPINO_HOME/bin</code></pre>
 </div></div>
 <div class="sect2">
 <h3 id="_basic_usage">Basic Usage</h3>
 <div class="paragraph"><p>The various usages of Alpino can be summarized as follows:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>Alpino [Options]
+<pre><code>Alpino [Options]
 Alpino [Options] -parse
-Alpino [Options] -parse W1 .. Wn</tt></pre>
+Alpino [Options] -parse W1 .. Wn</code></pre>
 </div></div>
 <div class="paragraph"><p>In the first form, the system will work in interactive mode. By
 default, it will start the graphical user interface. Use the options
@@ -882,7 +881,7 @@ experience with Unix, this form allows you to parse larger collections of
 sentences using input redirection:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>cat MySentences.txt | Alpino -parse</tt></pre>
+<pre><code>cat MySentences.txt | Alpino -parse</code></pre>
 </div></div>
 <div class="paragraph"><p>Finally, in the third form, the system will parse the single sentence
 given on the command line, provide output (again, depending on the
@@ -895,7 +894,7 @@ system runs. For most options, there is documentation available from
 the graphical user interface. In order to have access to this, run:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>Alpino</tt></pre>
+<pre><code>Alpino</code></pre>
 </div></div>
 <div class="paragraph"><p>Some frequently used options are given here.</p></div>
 <div class="dlist"><dl>
@@ -1157,7 +1156,7 @@ parse of each sentence as xml. In that case, the following
 command might be what you want:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>Alpino -flag treebank $HOME/tmp end_hook=xml -parse</tt></pre>
+<pre><code>Alpino -flag treebank $HOME/tmp end_hook=xml -parse</code></pre>
 </div></div>
 <div class="paragraph"><p>For each sentence read from standard input, an xml file will be
 created in the directory $HOME/tmp containing the dependency
@@ -1174,19 +1173,19 @@ that you only care for the dependency triples (two words, and the
 name of the dependency relation). For this, you might try:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>Alpino end_hook=triples -parse</tt></pre>
+<pre><code>Alpino end_hook=triples -parse</code></pre>
 </div></div>
 <div class="paragraph"><p>For an input consisting of the three lines:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>ik houd van spruitjes
+<pre><code>ik houd van spruitjes
 ik ben gek op spruitjes
-Mijn minimal brain dysfunction speelt weer op</tt></pre>
+Mijn minimal brain dysfunction speelt weer op</code></pre>
 </div></div>
 <div class="paragraph"><p>this writes out:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>houd/[1,2]|su|ik/[0,1]|1
+<pre><code>houd/[1,2]|su|ik/[0,1]|1
 houd/[1,2]|pc|van/[2,3]|1
 van/[2,3]|obj1|spruitje/[3,4]|1
 ben/[1,2]|su|ik/[0,1]|2
@@ -1196,7 +1195,7 @@ op/[3,4]|obj1|spruitje/[4,5]|2
 speel_op/[4,5]|su|minimal brain dysfunction/[1,4]|3
 minimal brain dysfunction/[1,4]|det|mijn/[0,1]|3
 speel_op/[4,5]|mod|weer/[5,6]|3
-speel_op/[4,5]|svp|op/[6,7]|3</tt></pre>
+speel_op/[4,5]|svp|op/[6,7]|3</code></pre>
 </div></div>
 <div class="paragraph"><p>Each line is a single dependency triple. The line contains four fields
 separated by the | character. The first field is the head word,
@@ -1209,10 +1208,10 @@ then use the end_hook=triples_with_frames option. Typical output
 then looks like:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>houd/[1,2]|verb|mod|niet/[2,3]|adv|1
+<pre><code>houd/[1,2]|verb|mod|niet/[2,3]|adv|1
 houd/[1,2]|verb|pc|van/[3,4]|prep|1
 houd/[1,2]|verb|su|ik/[0,1]|pron|1
-van/[3,4]|prep|obj1|smurfen/[4,5]|noun|1</tt></pre>
+van/[3,4]|prep|obj1|smurfen/[4,5]|noun|1</code></pre>
 </div></div>
 </div>
 <div class="sect3">
@@ -1226,14 +1225,14 @@ bracket is followed by the category (preceded by the ampersand). For
 the phrase</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>de leuke en vervelende kinderen</tt></pre>
+<pre><code>de leuke en vervelende kinderen</code></pre>
 </div></div>
 <div class="paragraph"><p>the (rather verbose) output is, where each line starts with the
 sentence number, the separation character | and the annotated
 sentence:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>1| [ @top_cat [ @start [ @max [ @np [ @det de ] [ @n [ @a [ @a leuke ] [ @clist
+<pre><code>1| [ @top_cat [ @start [ @max [ @np [ @det de ] [ @n [ @a [ @a leuke ] [ @clist
   [ @optpunct ] [ @conj en ] [ @a vervelende ] ] ] [ @n kinderen ] ] ]
   ] ] [ @optpunct ] ]
 1| [ @top_cat [ @start [ @max [ @np [ @det de ] [ @n [ @n [ @a leuke ] ] [ @clist
@@ -1241,7 +1240,7 @@ sentence:</p></div>
   ] ] [ @optpunct ] ]
 1| [ @top_cat [ @start [ @max [ @np [ @np [ @det de ] [ @n [ @a leuke ] ] ]
   [ @clist [ @optpunct ] [ @conj en ] [ @np [ @n [ @a vervelende ] [ @n
-  kinderen ] ] ] ] ] ] ] [ @optpunct ] ]</tt></pre>
+  kinderen ] ] ] ] ] ] ] [ @optpunct ] ]</code></pre>
 </div></div>
 </div>
 <div class="sect3">
@@ -1250,18 +1249,18 @@ sentence:</p></div>
 derive the best parse, then you can use the following command:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>Alpino end_hook=frames -parse</tt></pre>
+<pre><code>Alpino end_hook=frames -parse</code></pre>
 </div></div>
 <div class="paragraph"><p>In that case, the system prints lines like the following to standard error (!).
 For historical reasons, the output goes to standard error, not to standard
 output.</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>ik|pronoun(nwh,fir,sg,de,nom,def)|1|0|1|normal|pre
+<pre><code>ik|pronoun(nwh,fir,sg,de,nom,def)|1|0|1|normal|pre
 vertrek|verb(zijn,sg1,intransitive)|1|1|2|normal|post
 houdt|verb(hebben,sg3,pc_pp(van))|2|1|2|normal|post
 van|preposition(van,[af,uit,vandaan,[af,aan]])|2|2|3|normal|post
-Marietje|proper_name(both)|2|3|4|name(not_begin)|post</tt></pre>
+Marietje|proper_name(both)|2|3|4|name(not_begin)|post</code></pre>
 </div></div>
 <div class="paragraph"><p>Each line represents the information of a word. The information is
 contained in various fields separated by the | character. The fileds
@@ -1278,12 +1277,12 @@ author if you have specific requests.</p></div>
 try is to alter in the Alpino initialization script the line</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>debug=0</tt></pre>
+<pre><code>debug=0</code></pre>
 </div></div>
 <div class="paragraph"><p>into</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>debug=1</tt></pre>
+<pre><code>debug=1</code></pre>
 </div></div>
 <div class="paragraph"><p>If you are lucky this implies that you get told what is going wrong.</p></div>
 <div class="paragraph"><p>If this doesn&#8217;t help, send a bug-report to the author. Please.</p></div>
@@ -1298,22 +1297,22 @@ Alpino supports the UTF-8
 encoding. Here are some properly tokenized sentences:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>Dat is nog niet duidelijk . '
+<pre><code>Dat is nog niet duidelijk . '
 We zien hier niet het breken van tandenstokers .
 Dodelijke wapens worden gesloopt . '
 Slechts enkele nieuwe documenten zijn aan het licht gekomen . '
-Er is nog geen bewijs van verboden activiteiten gevonden .</tt></pre>
+Er is nog geen bewijs van verboden activiteiten gevonden .</code></pre>
 </div></div>
 <div class="paragraph"><p>If you want to assign an identifier for each sentence, then you write
 the identifier in front of the sentence, with a | separation
 character. For instance:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>volkskrant20030308_12|Dat is nog niet duidelijk . '
+<pre><code>volkskrant20030308_12|Dat is nog niet duidelijk . '
 volkskrant20030308_14|We zien hier niet het breken van tandenstokers .
 volkskrant20030308_15|Dodelijke wapens worden gesloopt . '
 volkskrant20030308_17|Slechts enkele nieuwe documenten zijn aan het licht gekomen . '
-volkskrant20030308_20|Er is nog geen bewijs van verboden activiteiten gevonden . '</tt></pre>
+volkskrant20030308_20|Er is nog geen bewijs van verboden activiteiten gevonden . '</code></pre>
 </div></div>
 <div class="paragraph"><p>It follows that the vertical bar is a special character that is
 supposed to be not part of the sentence in case there is not an
@@ -1322,12 +1321,12 @@ identifier.</p></div>
 sign is used to introduce comments:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>volkskrant20030308_12|Dat is nog niet duidelijk . '
+<pre><code>volkskrant20030308_12|Dat is nog niet duidelijk . '
 volkskrant20030308_14|We zien hier niet het breken van tandenstokers .
 %% the next sentence is easy:
 volkskrant20030308_15|Dodelijke wapens worden gesloopt . '
 volkskrant20030308_17|Slechts enkele nieuwe documenten zijn aan het licht gekomen . '
-volkskrant20030308_20|Er is nog geen bewijs van verboden activiteiten gevonden . '</tt></pre>
+volkskrant20030308_20|Er is nog geen bewijs van verboden activiteiten gevonden . '</code></pre>
 </div></div>
 <div class="paragraph"><p>If you have corpus material that has not been tokenized yet, then you
 can also use Alpino to tokenize your input. Use the flag
@@ -1352,13 +1351,13 @@ sentence identifier and the rank of the analysis, separated by a
 dash. Example:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>echo "example1|de mannen kussen de vrouwen" |\
-Alpino -notk number_analyses=0 end_hook=frames -parse</tt></pre>
+<pre><code>echo "example1|de mannen kussen de vrouwen" |\
+Alpino -notk number_analyses=0 end_hook=frames -parse</code></pre>
 </div></div>
 <div class="paragraph"><p>This yields:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>de|determiner(de)|example1|0|1|normal(normal)|pre|de|0|1
+<pre><code>de|determiner(de)|example1|0|1|normal(normal)|pre|de|0|1
 mannen|meas_mod_noun(de,count,pl)|example1|1|2|normal(normal)|pre|man|0|1
 kussen|verb(hebben,pl,transitive)|example1|2|3|normal(normal)|post|kus|0|1
 de|determiner(de)|example1|3|4|normal(normal)|post|de|0|1
@@ -1372,7 +1371,7 @@ de|determiner(de)|example1-3|0|1|normal(normal)|pre|de|0|1
 mannen|meas_mod_noun(de,count,pl)|example1-3|1|2|normal(normal)|pre|man|0|1
 kussen|verb(hebben,pl,intransitive)|example1-3|2|3|normal(normal)|post|kus|0|1
 de|determiner(de)|example1-3|3|4|normal(normal)|post|de|0|1
-vrouwen|noun(de,count,pl)|example1-3|4|5|normal(normal)|post|vrouw|0|1</tt></pre>
+vrouwen|noun(de,count,pl)|example1-3|4|5|normal(normal)|post|vrouw|0|1</code></pre>
 </div></div>
 </div>
 </div>
@@ -1382,7 +1381,7 @@ vrouwen|noun(de,count,pl)|example1-3|4|5|normal(normal)|post|vrouw|0|1</tt></pre
 Alpino:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>| [ ] % ^P</tt></pre>
+<pre><code>| [ ] % ^P</code></pre>
 </div></div>
 <div class="paragraph"><p>The vertical bar | is used to separate the sentence key from the
 sentence. Only the first occurrence of a vertical bar on a given line
@@ -1399,14 +1398,14 @@ command-line reader will return to the state before control-P was typed.</p></di
 solution is to use a key (for interactive usage, perhaps use the empty key):</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>3|% is een procentteken
-|% is een procentteken</tt></pre>
+<pre><code>3|% is een procentteken
+|% is een procentteken</code></pre>
 </div></div>
 <div class="paragraph"><p>The same trick can be used to interpret the vertical bar literally:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>4|ik bereken P(x|y)
-|ik bereken P(x|y)</tt></pre>
+<pre><code>4|ik bereken P(x|y)
+|ik bereken P(x|y)</code></pre>
 </div></div>
 <div class="paragraph"><p>Note that it is currently not possible to use keys that start with the
 symbol % or |.</p></div>
@@ -1506,14 +1505,29 @@ Brackets are normally associated with a category name, using the
 etc. Examples:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>Hij fietst [ @pp op zijn gemakje ] [ door de straten van De Baarsjes ] .
+<pre><code>Hij fietst [ @pp op zijn gemakje ] [ door de straten van De Baarsjes ] .
 FNB zet teksten van [ [ kranten en tijdschriften ] , boeken , [
   studie- en vaklectuur ] , bladmuziek , folders , brochures ] om in
   gesproken vorm .
 [ @np De conferentie die betrekking heeft op ondersteunende
   technologie voor gehandicapten in het algemeen ] , bood [ @np een goed
   platform [ om duidelijk te maken hoe uitgevers zelf toegankelijke
-  structuren in hun informatie kunnen aanbrengen ] ] .</tt></pre>
+  structuren in hun informatie kunnen aanbrengen ] ] .</code></pre>
+</div></div>
+<div class="paragraph"><p>This mechanism can also be used (somewhat unexpectedly perhaps) to indicate
+what the fragments of the input are, if an input contains several fragments but
+is not a syntactic unit (this occurs frequently for spoken input, for instance).
+Suppose your input sentence is the sentence "de boer als hij gepresseerd is hè hij gaat voort in het veld".
+You can indicate the fragments using a bracket with a category that does not occur in the grammar,
+e.g., x:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>[ @x de boer ] [ @x als hij gepresseerd is ] [ @x hè ] [ @x hij gaat voort in het veld ]</code></pre>
+</div></div>
+<div class="paragraph"><p>or even simply:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>[ @ de boer ] [ @ als hij gepresseerd is ] [ @ hè ] [ @ hij gaat voort in het veld ]</code></pre>
 </div></div>
 <div class="paragraph"><p>You can also force a lexical assingment to a token or a series of
 tokens, if the Alpino lexicon does not contain the proper assignment.
@@ -1524,9 +1538,9 @@ written in a foreign language or a spelling mistake has occurred. Of
 course, the resulting dependency structure may need adjusting with the editor afterwards.</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>Hij heeft een beetje [ @postag adjective(both(nonadv)) curly ] haar .
+<pre><code>Hij heeft een beetje [ @postag adjective(both(nonadv)) curly ] haar .
 Op een [ @postag adjective(e) mgooie ] dag gingen ze fietsen .
-Mijn [ @postag proper_name(sg,'MISC') body mass index ] laat te wensen over .</tt></pre>
+Mijn [ @postag proper_name(sg,'MISC') body mass index ] laat te wensen over .</code></pre>
 </div></div>
 <div class="paragraph"><p>As a variant of the @postag annotation, you can also use the @posflt
 annotation. In this case, only the functor of the POS-tag is given,
@@ -1534,8 +1548,8 @@ and Alpino will allow any lexical assignments which have the same
 functor. Example:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>ik wil [ @posflt preposition naar ] huis
-ik voel me [ @posflt adjective naar ]</tt></pre>
+<pre><code>ik wil [ @posflt preposition naar ] huis
+ik voel me [ @posflt adjective naar ]</code></pre>
 </div></div>
 <div class="paragraph"><p>Note that the @postag annotation differs from the @posflt annotation,
 in that in the first case, a lexical category is assigned without
@@ -1547,8 +1561,8 @@ a given word in the input with the lexical categories associated with
 another word. Example:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>ik wil [ @add_lex naar naa ] huis
-ik voel me [ @add_lex goed gooooooeeeeed ]</tt></pre>
+<pre><code>ik wil [ @add_lex naar naa ] huis
+ik voel me [ @add_lex goed gooooooeeeeed ]</code></pre>
 </div></div>
 <div class="paragraph"><p>In this case, the word <em>naa</em> in the input will be treated in
 lexical lookup as if the word <em>naar</em> was given. Similarly, the
@@ -1562,21 +1576,21 @@ lexical assignment for the words marked @mwu, then it is assumed that
 this sequence should be analysed as a name.</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>Dat was de periode van het [ @mwu Derde Rijk ]
-Op [ @mwu 1 januari 2001 ]</tt></pre>
+<pre><code>Dat was de periode van het [ @mwu Derde Rijk ]
+Op [ @mwu 1 januari 2001 ]</code></pre>
 </div></div>
 <div class="paragraph"><p>Skips. If the annotator can predict that a certain token or series of
 tokens will make the annotation a mess, it can be skipped by
 @skip. In such a case, the sentence is parsed as if the word(s) that
-are marked with <tt>skip</tt> where not there, except that the numbering of
+are marked with <code>skip</code> where not there, except that the numbering of
 the words in the resulting dependency structure is still correct.
 Clearly, in many cases an additional editing phase is required to
 obtain the fully correct analysis, but this method might reduce
 efforts considerably.</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>Ik wil [ @skip ??? ] naar huis
-Ten opzichte [ @skip echter ] van deze bezwaren willen wij ....</tt></pre>
+<pre><code>Ik wil [ @skip ??? ] naar huis
+Ten opzichte [ @skip echter ] van deze bezwaren willen wij ....</code></pre>
 </div></div>
 <div class="paragraph"><p>A related trick that is useful in particular cases, is to add a word
 to the sentence in order to ensure that the parse can succeed, but
@@ -1584,9 +1598,9 @@ instruct Alpino that this word should not be part of the resulting
 dependency structures. Such words are labeled @phantom as follows:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>Ik aanbad [ @phantom hem ] dagelijks in de kerk
+<pre><code>Ik aanbad [ @phantom hem ] dagelijks in de kerk
 Ik kocht boeken en Piet [ @phantom kocht ] platen
-Ik heb [ @phantom meer ] boeken gezien dan hem</tt></pre>
+Ik heb [ @phantom meer ] boeken gezien dan hem</code></pre>
 </div></div>
 <div class="paragraph"><p>Limitations: a phantom bracketed string can only contain a single
 word. The technique does not work yet for words that are part of a
@@ -1601,8 +1615,8 @@ postag and lemma values to the @postag and @lemma XML attributes
 of the corresponding node in the XML output. Examples:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>[ @folia subtiel ADJ(vrij,basis,zonder) Subtiel ]
-[ @folia zijn WW(pv,tgw,mv) Zijn ] [ @folia cafévriend N(soort,mv,basis) cafévrienden ] [ @folia bekijken WW(pv,tgw,mv) bekijken ] [ @folia hem VNW(pers,pron,obl,vol,3,ev,masc) hem ] [ @folia argwanend ADJ(vrij,basis,zonder) argwanend ] [ @folia . LET() . ]</tt></pre>
+<pre><code>[ @folia subtiel ADJ(vrij,basis,zonder) Subtiel ]
+[ @folia zijn WW(pv,tgw,mv) Zijn ] [ @folia cafévriend N(soort,mv,basis) cafévrienden ] [ @folia bekijken WW(pv,tgw,mv) bekijken ] [ @folia hem VNW(pers,pron,obl,vol,3,ev,masc) hem ] [ @folia argwanend ADJ(vrij,basis,zonder) argwanend ] [ @folia . LET() . ]</code></pre>
 </div></div>
 <div class="paragraph"><p>There also is the @id meta-notation. This notation can be used to
 add a wordid attribute in the XML output of a particular word. In order
@@ -1610,8 +1624,8 @@ that this meta-notation can be used in combination with other, the
 notation <strong>precedes</strong> the word for which it is meant.</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>[ @id w1 ] ik [ @id w2 ] besta
-[ @id w1 ] [ @folia subtiel ADJ(vrij,basis,zonder) Subtiel ] was het niet</tt></pre>
+<pre><code>[ @id w1 ] ik [ @id w2 ] besta
+[ @id w1 ] [ @folia subtiel ADJ(vrij,basis,zonder) Subtiel ] was het niet</code></pre>
 </div></div>
 </div>
 </div>
@@ -1624,8 +1638,8 @@ library. Yet, you might find it useful to know that you can call the
 Alpino parser from Prolog using the following two predicates:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>alpino_parse_line(Ref,String)
-alpino_parse_tokens(Ref,Tokens)</tt></pre>
+<pre><code>alpino_parse_line(Ref,String)
+alpino_parse_tokens(Ref,Tokens)</code></pre>
 </div></div>
 <div class="paragraph"><p>Here, Ref is an atomic identifier which is used for administrative
 purposes, so that results for different sentences can be easily
@@ -1635,16 +1649,16 @@ a list of atoms where each atom is a token (word, punctuation mark) of
 the sentence. Here are some examples of the use of these predicates:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>?- alpino_parse_line(s2323,"ik besta").
+<pre><code>?- alpino_parse_line(s2323,"ik besta").
 
-?- alpino_parse_tokens(s2324,[ik,besta]).</tt></pre>
+?- alpino_parse_tokens(s2324,[ik,besta]).</code></pre>
 </div></div>
 <div class="paragraph"><p>If you want to extend the functionality of Alpino, you may be
 interested to learn about the following (Prolog-) hooks.</p></div>
 <div class="paragraph"><p>The hook predicate</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>alpino_start_hook(Key,Sentence)</tt></pre>
+<pre><code>alpino_start_hook(Key,Sentence)</code></pre>
 </div></div>
 <div class="paragraph"><p>is called before the parse of each sentence. Key is instantiated as
 the atomic identifier of the sentence. Such identifiers are set using
@@ -1652,7 +1666,7 @@ the current_ref Hdrug flag.</p></div>
 <div class="paragraph"><p>The hook predicate</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>alpino_result_hook(Key,Sentence,No,Result)</tt></pre>
+<pre><code>alpino_result_hook(Key,Sentence,No,Result)</code></pre>
 </div></div>
 <div class="paragraph"><p>is called for each parse. Key and Sentence are as before, No is an
 integer indicating the number of the parse (parses for a given
@@ -1661,7 +1675,7 @@ representation of the full parse itself.</p></div>
 <div class="paragraph"><p>The hook predicate</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>alpino_end_hook(Key,Sentence,Status,NumberOfSolutions)</tt></pre>
+<pre><code>alpino_end_hook(Key,Sentence,Status,NumberOfSolutions)</code></pre>
 </div></div>
 <div class="paragraph"><p>is called after the parser has found all solutions. NumberOfSolutions
 is an integer indicating the number of solutions. Status is an atom
@@ -1669,10 +1683,10 @@ indicating whether parsing was successful, or not. Possible values
 are the following - their meaning is supposed to be evident:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>success
+<pre><code>success
 failure
 time_out
-out_of_memory</tt></pre>
+out_of_memory</code></pre>
 </div></div>
 <div class="paragraph"><p>Other values describe more exotic possibilities, please consult the
 hdrug_status flag in Hdrug for further details.</p></div>
@@ -1697,7 +1711,7 @@ If your input is not like that, cf the script paragraph_per_line.</p></div>
 <div class="paragraph"><p>For an example text, cf the text file t1.txt which contains the following:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>Het PIONIER project Algorithms for Linguistic Processing van Gertjan
+<pre><code>Het PIONIER project Algorithms for Linguistic Processing van Gertjan
 van Noord is een onderzoeksproject op het gebied van de computationele
 taalkunde.
 
@@ -1737,14 +1751,14 @@ snel onbegrijpelijk worden, maar wel als grammaticaal moeten worden
 beschouwd.
 
 Een volledige beschrijving van het voorgestelde onderzoek is
-beschikbaar op het Internet www.let.rug.nl/~vannoord/alp/index.html.</tt></pre>
+beschikbaar op het Internet www.let.rug.nl/~vannoord/alp/index.html.</code></pre>
 </div></div>
 <div class="paragraph"><p>In order to tokenize your text, you would first ensure that each line contains a paragraph of
 text with the paragraph_per_line script (this essentially removes single newlines from the
 input), and then pipe the result to the tokenizer:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>./paragraph_per_line t1.txt | ./tokenize.sh</tt></pre>
+<pre><code>./paragraph_per_line t1.txt | ./tokenize.sh</code></pre>
 </div></div>
 <div class="paragraph"><p>This results in a file where each line contains a single tokenized sentence.</p></div>
 </div>
@@ -1755,20 +1769,20 @@ and the sentence number in that paragraph. For this purpose, we need the
 two scripts ./add_key and ./number_sents.</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>./paragraph_per_line t1.txt | ./add_key | ./tokenize.sh | ./number_sents</tt></pre>
+<pre><code>./paragraph_per_line t1.txt | ./add_key | ./tokenize.sh | ./number_sents</code></pre>
 </div></div>
 <div class="paragraph"><p>Each line is now prefixed with an identifier X-Y where X is the paragraph number
 and Y is the sentence number. The first few lines of the result are listed here:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>1-1|Het PIONIER project Algorithms for Linguistic Processing van Gertjan van Noord is een onderzoeksproject op het gebied van de computationele taalkunde .
+<pre><code>1-1|Het PIONIER project Algorithms for Linguistic Processing van Gertjan van Noord is een onderzoeksproject op het gebied van de computationele taalkunde .
 2-1|Een van de taken van de taalkunde is het opstellen van modellen voor natuurlijke talen .
 2-2|Het model ( grammatica ) beschrijft bijvoorbeeld de mogelijke uitingen van het Nederlands en hun bijbehorende betekenis .
 2-3|Zo'n model beschrijft dus ( onder andere ) de relatie tussen vorm en betekenis .
 2-4|Een belangrijke vraag in de computationele taalkunde is vervolgens hoe je deze relatie algoritmisch kunt bepalen .
 2-5|Hoe kun je voor een gegeven uiting van het Nederlands de bijbehorende betekenis berekenen ?
 3-1|Het PIONIER onderzoek richt zich hierbij op twee fundamentele problemen : ambiguiteit en efficientie .
-3-2|Het probleem van ambiguiteit doet zich voor in zelfs de meest onschuldige zinnetjes :</tt></pre>
+3-2|Het probleem van ambiguiteit doet zich voor in zelfs de meest onschuldige zinnetjes :</code></pre>
 </div></div>
 </div>
 </div>
@@ -1786,7 +1800,7 @@ and Y is the sentence number. The first few lines of the result are listed here:
 a server program. The server is started using the Prolog command</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>alpino_server</tt></pre>
+<pre><code>alpino_server</code></pre>
 </div></div>
 <div class="paragraph"><p>Communication with a client proceeds through the use of internet
 sockets. There are options to set the domain-name and the port number.
@@ -1803,7 +1817,7 @@ languages. For instance, the following defines a simple
 Alpino client in Python:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>import socket
+<pre><code>import socket
 
 def alpino_parse(sent, host='vingolf.let.rug.nl', port=42424):
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -1828,7 +1842,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()</tt></pre>
+    main()</code></pre>
 </div></div>
 <div class="paragraph"><p>The Alpino Server is experimental, and the interface may change in
 future versions.</p></div>
@@ -1890,7 +1904,8 @@ Tcl/Tk affects the global process locale.</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-11-04 13:25:03 CET
+Last updated
+ 2021-06-25 10:41:32 CEST
 </div>
 </div>
 </body>
