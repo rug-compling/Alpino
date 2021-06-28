@@ -1219,6 +1219,7 @@ mwu_postag('\'t koudst',['LID(bep,stan,evon)','ADJ(vrij,sup,zonder)'],[het,koud]
 mwu_postag('t / m',['SPEC(afk)','LET()','SPEC(afk)'],[tot,/,met]).
 mwu_postag('tot dusver',['VZ(init)','BW()'],[tot,dusver]).
 mwu_postag('tot dusverre',['VZ(init)','BW()'],[tot,dusverre]).
+mwu_postag('tot ziens',['VZ(init)','TSW()'],[tot,ziens]).
 mwu_postag('tot voor kort',['VZ(init)','VZ(init)','ADJ(vrij,basis,zonder)'],[tot,voor,kort]).
 mwu_postag('Tweede Kamerfractie',['SPEC(deeleigen)','N(soort,ev,basis,zijd,stan)'],['Tweede','Kamer_fractie']).
 mwu_postag('Tweede Kamerlid',['TW(rang,prenom,stan)','N(soort,ev,basis,onz,stan)'],[twee,kamer_lid]).
