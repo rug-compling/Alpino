@@ -337,7 +337,8 @@ normal_lex2(Tag,Label,_Input0,Input,_P,normal(His),_,List) :-
 normal_lex2(Tag,Label,[Word|Input0],Input,P,normal(decap(His)),LC,Tags) :-
     alpino_unknowns:normal_capitalized_word(P,Word,Input0,Input1,DecapWord),
     in_lexicon(Tag,Label,[DecapWord|Input1],Input,His,LC),
-    \+ member(f(Tag,_,Input,_),Tags).
+    \+ member(f(Tag,_,Input,_),Tags),
+    \+ forbid_odd_normal_word(Word,Tag).
 
 normal_lex2(Tag,Label,[Word|Input0],Input,P,special(decap(His)),LC,Tags) :-
     alpino_unknowns:special_capitalized_word(P,Word,Input0,Input1,DecapWord,Len),
@@ -350,6 +351,9 @@ normal_lex2(Tag,Label,[Word|Input0],Input,P,special(decap(His)),LC,Tags) :-
 
 normal_lex2(Tag,Label,Input0,Input,_,special(His),LC,_) :-
     alpino_lex:special_lexicon(Tag,Label,Input0,Input,His,LC).
+
+forbid_odd_normal_word('A',conj(_)).
+forbid_odd_normal_word('A',preposition(_,_)).
 
 in_lexicon(Tag,Label,[Word|Input0],Input,His,LC) :-
     alpino_lex:lexicon(Tag,Label,[Word|Input0],Input,His,LC).
@@ -940,6 +944,7 @@ requires_longest_match(name(not_begin)).
 requires_longest_match(name(begin)).
 
 
+requires_unique_match(normal(spaced_letters),normal(_),6,0).
 requires_unique_match(normal(bridge),normal(bridge),5,0).
 requires_unique_match(normal(number_sequence),normal(number_sequence),5,0).
 requires_unique_match(name(_),name(_),10,5).
