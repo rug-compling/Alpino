@@ -36,7 +36,7 @@ left_corners:
 	mv $(DISK)/$(suite).lc.gz .
 	$(MAKE) $(suite).ps
 
-%.ps: %.lc.gz ../src/guides.pl
+%.ps: %.lc.gz
 	zcat $< \
         | grep '^LEFTCORNER#' \
         | sed -e 's/^LEFTCORNER#//'\
@@ -70,7 +70,7 @@ noparses:
 guides.t: $(DATA:%.log.gz=%.ps) make_guide_vector
 	sort  -u $(DATA:%.log.gz=%.ps) > guides.t
 
-guides.txt: guides.t
+guides.txt: guides.t ../src/guides.pl
 	cat guides.t |\
    ../src/Alpino cmdint=off debug=1 -notk -l to_predict_guides \
              -cmd "to_sguides(tpl_prefix)" | sort -u > guides.txt
@@ -93,7 +93,7 @@ nodata: make_guide_vector
          awk -F\| '{ print $$1}' |\
          ./make_guide_vector > ../src/guides_data.c.$(PROLOG)
 
-TTS=tt_part00001.log.gz tt_part00002.log.gz tt_part00003.log.gz tt_part00004.log.gz tt_part00005.log.gz tt_part00006.log.gz tt_part00007.log.gz tt_part00008.log.gz tt_part00009.log.gz tt_part00010.log.gz tt_part00011.log.gz tt_part00012.log.gz tt_part00013.log.gz tt_part00014.log.gz tt_part00015.log.gz tt_part00016.log.gz tt_part00017.log.gz tt_part00018.log.gz tt_part00019.log.gz tt_part00020.log.gz tt_part00021.log.gz tt_part00022.log.gz tt_part00023.log.gz tt_part00024.log.gz tt_part00025.log.gz tu_part00001.log.gz tu_part00002.log.gz tu_part00003.log.gz tu_part00004.log.gz tu_part00005.log.gz tu_part00006.log.gz tu_part00007.log.gz tu_part00008.log.gz tu_part00009.log.gz
+TTS=tt_part00001.log.gz tt_part00002.log.gz tt_part00003.log.gz tt_part00004.log.gz tt_part00005.log.gz tt_part00006.log.gz tt_part00007.log.gz tt_part00008.log.gz tt_part00009.log.gz tt_part00010.log.gz tt_part00011.log.gz tt_part00012.log.gz tt_part00013.log.gz tt_part00014.log.gz tt_part00015.log.gz tt_part00016.log.gz tt_part00017.log.gz tt_part00018.log.gz tu_part00001.log.gz tu_part00002.log.gz tu_part00003.log.gz tu_part00004.log.gz tu_part00005.log.gz tu_part00006.log.gz tu_part00007.log.gz tu_part00008.log.gz tu_part00009.log.gz
 
 tts:
 	$(MAKE) -j $(J) $(TTS) EXTRA=pos_tagger_m=5
