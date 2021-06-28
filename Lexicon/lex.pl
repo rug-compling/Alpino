@@ -1251,7 +1251,8 @@ s_atom(ic).
 
 identical_verbal_infl(Cat,Cat,_,_).
 identical_verbal_infl(verb(HZ,inf,Sc),verb(HZ,pl,Sc),Word,Label) :-
-    \+ ( Word = wezen, Label = v_root(ben,zijn) ).
+    \+ ( Word = wezen, Label = v_root(ben,zijn) ),
+    \+ xl(Word,verb(HZ,both(pl),Sc),Label,[],[]).
 identical_verbal_infl(verb(HZ,inf(no_e),Sc),verb(HZ,pl,Sc), _, _).
 
 gerund_frame(ninv(Sc,_),  A0,A) :-
@@ -4289,6 +4290,7 @@ non_3sg(sg1).
 non_3sg(sg_hebt).
 non_3sg(pl).
 non_3sg(past(pl)).
+non_3sg(both(pl)).
 non_3sg(modal_inv).
 
 non_3(sg1).
@@ -4296,6 +4298,7 @@ non_3(modal_inv).
 non_3(sg_hebt).
 
 finite(past(_)).
+finite(both(_)).
 finite(sg).
 finite(sg1).
 finite(sg3).
