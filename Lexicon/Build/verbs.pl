@@ -72,6 +72,13 @@ t(verb(W1,W3,_,_,_,_,_,Z,Sc),     W,verb(Z,sg,Sc)         ):-
     mem_eq(W1,W),
     mem_eq(W3,W).
 
+t(verb(_,_,Inf,_,_,PastPl,_,Z,Sc),W,verb(Z,both(pl),Sc)   ):-
+    mem_eq(Inf,W),
+    mem_eq(PastPl,W).
+t(verb(_,_,Inf,_,_,W0,_,Z,Sc),      W,verb(Z,past(pl),Sc)   ):-
+    mem_eq(W0,W),
+    \+ mem_eq(Inf,W).
+
 t(verb(W,A,B,C),                  W,verb(A,B,C)).
 
 t(verb(_,_,W0,_,_,_,_,Z,Sc),      W,verb(Z,inf,Sc)        ):- mem_eq(W0,W).
@@ -81,7 +88,6 @@ t(verb(_,_,inflected(_, E),_,_,_,_,Z,Sc),
                                   W,verb(Z,inf(e),Sc)     ):- mem_eq(E, W).
 t(verb(_,_,_,W0,_,_,_,Z,Sc),      W,verb(Z,psp,Sc)        ):- mem_eq(W0,W).
 t(verb(_,_,_,_,W0,_,_,Z,Sc),      W,verb(Z,past(sg),Sc)   ):- mem_eq(W0,W).
-t(verb(_,_,_,_,_,W0,_,Z,Sc),      W,verb(Z,past(pl),Sc)   ):- mem_eq(W0,W).
 
 t(verb_heb(W0,_,_,_,_,_,_,Z,Sc),  W,verb(Z,sg1,Sc)        ):- mem_eq(W0,W).
 t(verb_heb(_,W0,_,_,_,_,_,Z,Sc),  W,verb(Z,sg_hebt,Sc)    ):- mem_eq(W0,W).
