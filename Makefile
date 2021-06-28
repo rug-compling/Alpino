@@ -5,7 +5,7 @@ include Makefile.include
 
 DIRS= TreebankTools fadd unix SuffixArrays PosTagger\
       Names Tokenization Generation/fluency Suites Lexicon\
-      Grammar Treebank src
+      Grammar src
 
 .PHONY: all install clean realclean xref checks
 
