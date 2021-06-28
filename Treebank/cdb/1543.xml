@@ -15,13 +15,13 @@
             <node begin="1" end="2" id="12" index="1" rel="obj1"/>
             <node begin="2" cat="pp" end="8" id="13" rel="mod">
               <node begin="2" end="3" id="14" lemma="uit" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="uit" vztype="init" word="uit"/>
-              <node begin="3" cat="conj" end="8" id="15" rel="obj1">
-                <node begin="3" cat="np" end="5" id="16" rel="cnj">
-                  <node begin="3" end="4" id="17" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-                  <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="18" lemma="LM" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="LM" word="LM"/>
+              <node begin="3" cat="np" end="8" id="15" rel="obj1">
+                <node begin="3" end="4" id="16" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+                <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="17" lemma="LM" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="LM" word="LM"/>
+                <node begin="6" cat="pp" end="8" id="18" rel="mod">
+                  <node begin="6" end="7" id="19" lemma="alias" pos="vg" postag="VZ(init)" pt="vz" rel="hd" root="alias" vztype="init" word="alias"/>
+                  <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="20" lemma="Intrepid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" root="Intrepid" word="Intrepid"/>
                 </node>
-                <node begin="6" end="7" id="19" lemma="alias" pos="vg" postag="BW()" pt="bw" rel="crd" root="alias" word="alias"/>
-                <node begin="7" end="8" genus="zijd" getal="ev" graad="basis" id="20" lemma="Intrepid" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="cnj" root="Intrepid" word="Intrepid"/>
               </node>
             </node>
             <node begin="10" buiging="zonder" end="11" id="21" lemma="tillen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="til" word="getild" wvorm="vd"/>

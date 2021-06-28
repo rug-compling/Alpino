@@ -16,7 +16,7 @@
           <node begin="4" end="5" getal="mv" graad="basis" id="12" lemma="decaan" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="decaan" word="decanen"/>
           <node begin="5" cat="pp" end="7" id="13" rel="mod">
             <node begin="5" end="6" id="14" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
-            <node begin="6" end="7" getal="mv" graad="basis" id="15" lemma="(sub)faculteit" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="faculteit" word="(sub)faculteiten"/>
+            <node begin="6" end="7" id="15" lemma="(sub)faculteit" pos="noun" postag="SPEC(enof)" pt="spec" rel="obj1" root="faculteit" spectype="enof" word="(sub)faculteiten"/>
           </node>
           <node begin="9" cat="rel" end="15" id="16" rel="mod">
             <node begin="9" end="10" getal="getal" id="17" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>

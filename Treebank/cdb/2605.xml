@@ -11,7 +11,7 @@
         <node begin="3" buiging="zonder" end="4" graad="basis" id="8" lemma="direct" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="direct" word="direct"/>
         <node begin="5" buiging="zonder" end="6" id="9" lemma="in_zetten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="zet" word="ingezet" wvorm="vd"/>
         <node begin="4" cat="np" end="16" id="10" rel="obj1">
-          <node begin="4" end="5" getal="mv" graad="basis" id="11" lemma="Roggeveen" ntype="soort" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" root="Roggeveen" word="Roggeveen"/>
+          <node begin="4" end="5" genus="zijd" getal="ev" graad="basis" id="11" lemma="Roggeveen" naamval="stan" ntype="eigen" pos="noun" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" root="Roggeveen" word="Roggeveen"/>
           <node begin="7" cat="rel" end="16" id="12" rel="mod">
             <node begin="7" end="8" getal="getal" id="13" index="2" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="noun" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" root="die" status="vol" vwtype="betr" word="die"/>
             <node begin="7" cat="conj" end="16" id="14" rel="body">

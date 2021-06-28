@@ -5,7 +5,7 @@
       <node begin="0" end="1" id="2" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" word="het"/>
       <node begin="1" cat="pp" end="3" id="3" rel="mod">
         <node begin="1" end="2" id="4" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
-        <node begin="2" end="3" getal="mv" graad="basis" id="5" lemma="minderjarigen" ntype="soort" pos="adj" postag="N(soort,mv,basis)" pt="n" rel="obj1" root="minderjarig" word="minderjarigen"/>
+        <node begin="2" buiging="met-e" end="3" getal-n="mv-n" graad="basis" id="5" lemma="minderjarig" pos="adj" positie="nom" postag="ADJ(nom,basis,met-e,mv-n)" pt="adj" rel="obj1" root="minderjarig" word="minderjarigen"/>
       </node>
       <node begin="3" buiging="zonder" end="4" getal-n="zonder-n" id="6" lemma="roken" pos="verb" positie="nom" postag="WW(inf,nom,zonder,zonder-n)" pt="ww" rel="hd" root="rook" word="roken" wvorm="inf"/>
       <node begin="4" cat="pp" end="6" id="7" rel="mod">

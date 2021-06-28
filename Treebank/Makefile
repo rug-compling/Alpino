@@ -64,6 +64,8 @@ inconsistent-words: # POSLEMMA/*.poslemma $(LASSYSMALL)/POSLEMMA/*.poslemma
 	cat POSLEMMA/*.poslemma $(LASSYSMALL)/POSLEMMA/*.poslemma \
         | grep -v '<sent id=' \
         | grep -v 'SPEC(deeleigen)'\
+        | grep -v 'SPEC(vreemd)'\
+        | grep -v 'SPEC(symb)'\
 	| sed -e 's/ADJ(prenom,basis,zonder)/ADJ(basis)/g'\
 	| sed -e 's/ADJ(vrij,basis,zonder)/ADJ(basis)/g'\
 	| sed -e 's/ADJ(prenom,comp,zonder)/ADJ(comp)/g'\
@@ -149,7 +151,14 @@ tar-install:
 	( cd ~/public_html/treebanks; rm -f $(dir).tar.gz; ln -s $(dir)-$(gitversion).tar.gz $(dir).tar.gz )
 
 dtchecks:
-	dtchecks $(DIRECTORIES)
+	touch .dtchecks2
+	dtchecks $(shell find $(DIRECTORIES) -name '*.xml' -newer .dtchecks | awk -F/ '{ printf "%s\n",$$1 }' | sort -u)
+	mv .dtchecks2 .dtchecks
+
+all_dtchecks:
+	touch .dtchecks2
+	dtchecks $(shell find $(DIRECTORIES) -name '*.xml' | awk -F/ '{ printf "%s\n",$$1 }' | sort -u)
+	mv .dtchecks2 .dtchecks
 
 sqldir=/net/aps/haytabo/opt/alpinotools
 prepare_enhanced_all:

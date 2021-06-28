@@ -25,3 +25,5 @@ eans/./05_07_04_02_8.xml	//node[@rel="whd" and @pos and not(@vwtype="vb" or @pt=
 eans/./05_10_02_01_8b.xml	//node[@rel="whd" and @pos and not(@vwtype="vb" or @pt="bw" or @root="hoeveel")]	whd without wh postag?
 eans/./05_10_02_03_1a.xml	//node[@rel="whd" and @pos and not(@vwtype="vb" or @pt="bw" or @root="hoeveel")]	whd without wh postag?
 eans/./04_06_05_01_39.xml	//node[ @naamval="gen" and @pt="n" and not(@rel="det" or @rel="mwp" or @rel="hd") ]	Genitive noun, but not determiner?
+eans/./02_03_02_08_04_01_7.xml	//node[ @cat and @rel="mod" and not(@cat="rel") and not(@cat="cp") and not(@cat="np") and not(@cat="advp") and not(@cat="ap") and not(@cat="ppart") and not(@cat="pp") and not(@cat="mwu") and not(@cat="conj") and not(@cat="oti") and not(@cat="du") and not(@cat="smain") and not(@cat="whrel") and not(@cat="ti") and not(@cat="sv1") and not(@cat="ppres")]	unexpected mod-category.   Expected cats: rel cp np advp ap ppart pp mwu conj oti du smain whrel ti sv1 ppres
+eans/./05_08_05_05_02_2c.xml	//node[../node[@rel="rhd"] and not(@rel="body") and not(@rel="rhd")]	unexpected rhd-sister.   Expected rels: body rhd

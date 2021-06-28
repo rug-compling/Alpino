@@ -33,7 +33,7 @@
             <node begin="13" end="14" id="25" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
             <node begin="14" cat="np" end="17" id="26" rel="obj1">
               <node begin="14" end="15" id="27" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
-              <node begin="15" buiging="met-e" end="16" graad="basis" id="28" lemma="kies_gerechtigd" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,basis,met-e,stan)" pt="adj" rel="mod" root="gerechtigd" word="kiesgerechtigde"/>
+              <node begin="15" buiging="met-e" end="16" id="28" lemma="kies_rechtigen" pos="adj" positie="prenom" postag="WW(vd,prenom,met-e)" pt="ww" rel="mod" root="gerechtigd" word="kiesgerechtigde" wvorm="vd"/>
               <node begin="16" end="17" genus="zijd" getal="ev" graad="basis" id="29" lemma="leeftijd" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="leeftijd" word="leeftijd"/>
             </node>
           </node>
