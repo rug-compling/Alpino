@@ -581,6 +581,23 @@ FNB zet teksten van [ [ kranten en tijdschriften ] , boeken , [
   structuren in hun informatie kunnen aanbrengen ] ] .
 --------------------------------------
 
+This mechanism can also be used (somewhat unexpectedly perhaps) to indicate
+what the fragments of the input are, if an input contains several fragments but
+is not a syntactic unit (this occurs frequently for spoken input, for instance).
+Suppose your input sentence is the sentence "de boer als hij gepresseerd is hè hij gaat voort in het veld".
+You can indicate the fragments using a bracket with a category that does not occur in the grammar,
+e.g., x:
+
+----------------------------------------------------------------------------------------
+[ @x de boer ] [ @x als hij gepresseerd is ] [ @x hè ] [ @x hij gaat voort in het veld ]
+----------------------------------------------------------------------------------------
+
+or even simply:
+
+------------------------------------------------------------------------------------
+[ @ de boer ] [ @ als hij gepresseerd is ] [ @ hè ] [ @ hij gaat voort in het veld ]
+------------------------------------------------------------------------------------
+
 You can also force a lexical assingment to a token or a series of
 tokens, if the Alpino lexicon does not contain the proper assignment. 
 A @postag followed by an Alpino lexical category will force the
