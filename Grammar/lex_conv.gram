@@ -1617,6 +1617,17 @@ features_verb_infl(modal_inv, Sign) :-
     Sign:ccat0 ==> ssub,
     subject_verb_agreement(Sign,sg,invje).
 
+features_verb_infl(both(pl),Sign) :-
+    Sign:vform => fin,
+    Sign:ccat0 ==> ssub,
+    subject_verb_agreement(Sign,pl).
+
+features_verb_infl(past(pl),Sign) :-
+    Sign:tense => past,
+    Sign:vform => fin,
+    Sign:ccat0 ==> ssub,
+    subject_verb_agreement(Sign,pl).
+
 features_verb_infl(pl,Sign) :-
     Sign:tense => present,
     Sign:vform => fin,
