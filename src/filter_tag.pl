@@ -1122,6 +1122,7 @@ finite(sg_heeft).
 finite(modal_not_u).
 finite(modal_inv).
 finite(past(_)).
+finite(both(_)).
 finite(subjunctive).
 
 %% particles must be to the left, except for finite verbs

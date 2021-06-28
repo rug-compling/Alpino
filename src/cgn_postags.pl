@@ -1853,6 +1853,7 @@ cgn_postag_c(verb(_,inf(no_e),_),             'WW(inf,vrij,zonder)').
 cgn_postag_c(verb(_,inf(e),_),                'WW(inf,prenom,met-e)').
 cgn_postag_c(verb(_,past(sg),_),              'WW(pv,verl,ev)').
 cgn_postag_c(verb(_,past(pl),_),              'WW(pv,verl,mv)').
+cgn_postag_c(verb(_,both(pl),_),              'WW(pv,pvtijd,mv)').
 cgn_postag_c(verb(_,modal_inv,_),             'WW(pv,tgw,ev)').
 cgn_postag_c(verb(_,sg_hebt,_),               'WW(pv,tgw,met-t)').
 cgn_postag_c(verb(_,modal_not_u,_),           'WW(pv,tgw,ev)').

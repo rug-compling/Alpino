@@ -352,6 +352,7 @@ verb_infl(past(sg),sg,[tense=past]).
 verb_infl(past(pl),pl,[tense=past]).
 verb_infl(sg,sg,[tense=present]).
 verb_infl(pl,pl,[tense=present]).
+verb_infl(both(pl),pl,[]).
 verb_infl(sg1,sg1,[tense=present]).
 verb_infl(sg3,sg3,[tense=present]).
 verb_infl(sg_hebt,sg_hebt,[tense=present]).
