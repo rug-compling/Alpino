@@ -499,8 +499,6 @@ unknown_word_heuristic(P1,R1,W,Ws0,Mess,Args,Rest,None) :-
 		[Th|Tt])
     ).
 
-
-
 unknown_word_heuristic(P1,R1,W,Ws,"strip_diacritics|~p|~p|~p~n",
 		       [W,Wmin,[Th|Tt]],_,HIS) :-
     debug_message(3,"trying heuristic strip_diacritics~n",[]),
@@ -548,6 +546,8 @@ unknown_word_heuristic(P1,R1,W,Ws,"g_ch|~p|~p|~p~n",
     findall(Tag,
 	    alternative([Wmin|Ws],P1,_,R1,_,g_ch_letters,Tag,HIS),
 	    [Th|Tt]).
+
+
 
 unknown_word_heuristic(P1,R1,W,Ws,"skip_bracket|~p|~p|~p~n",
 		       [W,Wmin,[Th|Tt]],_,HIS ):-
@@ -6397,3 +6397,4 @@ add_accents(W,Wmin) :-
     alpino_lex:accent(W,Wmin).
 add_accents(W,Wmin) :-
     accent(W,Wmin).  % from names
+

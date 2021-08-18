@@ -183,13 +183,15 @@ lexical_analysisXX(Input) :-
 	add_user_skips,
 	
 	time(2,filter_tags(Filter)),
-	
-	time(Debug,ensure_connected(Input,MaxPos)), % adds pseudo tags, useful for skipper
-	time(Debug,skips),
-	time(Debug,filter_te_tags),
-	time(Debug,replace_per_tags),
-	time(Debug,ensure_connected(Input,MaxPos)), % adds pseudo tags, useful for tagger
-	count_edges(tag(_,_,_,_,_,_,_,_),Edges),
+
+	(   Unk == on
+	->  time(Debug,ensure_connected(Input,MaxPos)), % adds pseudo tags, useful for skipper
+	    time(Debug,skips),
+	    time(Debug,filter_te_tags),
+	    time(Debug,replace_per_tags),
+	    time(Debug,ensure_connected(Input,MaxPos)), % adds pseudo tags, useful for tagger
+	    count_edges(tag(_,_,_,_,_,_,_,_),Edges)
+	),
 	
 	time(Debug,alpino_postagger:pos_filter(UnbracketedInput,EraseTags0,RefTags)),
 	sort(EraseTags0,EraseTags), % remove duplicates tagger/cgn
@@ -296,6 +298,14 @@ lexical_analysis_(Input,P0,R0,LC):-
 	fail
     ;   true
     ).
+
+
+lexical_analysis__(_Input,P1,_R1,_LC):-
+    user_skips(List),
+    lists:member(add_lex(P0,P,_,_),List),
+    P1 >= P0, P1 < P,
+    !,
+    fail.
 
 lexical_analysis__(Input,P0,R0,LC):-
     Input = [InputStart|_],
@@ -1544,8 +1554,8 @@ add_user_skip(add_lex(P0,P,Lex,Surf)) :-
     remove_alternatives_to_skip(P0,P),
     R is R0 + (P-P0),
     concat_all(Surf,SurfAtom,' '),
-    (   alpino_lex:lexicon(Tag,_,[Lex],[],_,[]),
-	assert_tag(P0,P,R0,R,SurfAtom,SurfAtom,skip,Tag),
+    (   alpino_lex:lexicon(Tag,Lemma,[Lex],[],His,[]),
+	assert_tag(P0,P,R0,R,Lemma,SurfAtom,normal(His),Tag),
 	fail
     ;   true
     ).
@@ -1987,8 +1997,10 @@ do_one(Flag,Key) :-
 do_one(lex,Key,Sent) :-
     format("KEY#~w|",[Key]),
     write_list(Sent),nl,
-    lexical_analysis(Sent),
-    add_skips_for_unknowns(Sent),  % have UNKNOWN tags!
+    (   lexical_analysis(Sent),
+	add_skips_for_unknowns(Sent) % have UNKNOWN tags!
+    ;   true
+    ),
     display_lexical_analysis(Sent).
 
 do_one(tag,Key,Sent) :-
@@ -2072,9 +2084,18 @@ display_lexical_analysis(normal,Sent) :-
     sort(Tags0,Tags),
     display_tags(Tags,Sent).
 
+display_lexical_analysis(unknowns,[Sent|_]) :-
+    findall(t(P0,P,Tag,History,Stem,Surf,Ref),clause(tag(P0,P,_,_,Stem,Surf,History,Tag),_,Ref),Tags0),
+    sort(Tags0,Tags),
+    display_unknowns(Tags,Sent).
+
 display_lexical_analysis(tagger_test,Sent) :-
     alpino_postagger:all_tags(Tags,_),
     display_tags(Tags,Sent).
+
+display_unknowns([],Sent) :-
+    format(user_error,"unknown: ~w~n",[Sent]).
+display_unknowns([_|_],_).
 
 display_tags([],_Sent).
 display_tags([H|T],Sent) :-
@@ -2145,7 +2166,10 @@ is_used(P1) :-
     open_bracket(P0,P,_),
     P0 < P1, P1 < P.
 
-
+is_dict_used(P1) :-
+    user_skips(List),
+    lists:member(add_lex(P0,P,_,_),List),
+    P1 >= P0, P1 < P.
 is_dict_used(P1) :-
     tag(P1,P2,_,_,_,_,normal(_),_),
     \+ probably_wrong_tag(P1,P2).
@@ -2450,10 +2474,19 @@ check_variant_frozen([PREV-_ITEM|T0],PREV,T,_Bool0,Bool) :-
 check_variant_frozen([NEXT-ITEM|T0],_PREV,[ITEM|T],Bool0,Bool) :-
     check_variant_frozen(T0,NEXT,T,Bool0,Bool).
 
-add_word_forms([]).
+add_word_forms([]) :-
+    add_word_forms_skips.
 add_word_forms([W|Ws]) :-
     add_word_form(W),
     add_word_forms(Ws).
+
+add_word_forms_skips :-
+    (   user_skips(List),
+	lists:member(add_lex(_,_,Form,_),List),
+	add_word_form(Form),
+	fail
+    ;   true
+    ).
 
 %% TODO: skip @ meta words
 add_word_form(bracket(_)).
@@ -2839,4 +2872,4 @@ remove_worse([path(Score,P,R,Path)|Ag0],P1,R1,Ag):-
     ;   Ag = [path(Score,P,R,Path)|Ag1],
 	remove_worse(Ag0,P1,R1,Ag1)
     ).
-		    
+

@@ -1,8 +1,20 @@
+if you want to see which words are unknown for Alpino, you can use
+this:
+
+Alpino -notk pos_tagger=off display_lexical_analysis=unknowns unknowns=off batch_command=lex_all
+
+for each input line (possibly single word per line), the word(s) without any
+lexical analysis are reported
+
+---
+
 important difference for evaluation and computation of CA:
 no longer the first non-lexical element of the top is used
 as daughter, but a special "none" type is used. As a result,
 punctuation etc is not counted as incorrect if you happen
 to have skips in the parse.
+
+---
 
 * bug fixed: interaction of with_dt with skips
 
