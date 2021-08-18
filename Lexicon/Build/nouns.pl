@@ -31864,6 +31864,8 @@ n([pl(soorten),sg(soort)],both,
    vogel,
    werk]).
 
+n([sg(soos),pl(sozen)],de,[]).
+
 n([pl(soppen),sg(sop)],het,[]).
 
 n([sg(sopraan),pl(sopranen)],de,[],
