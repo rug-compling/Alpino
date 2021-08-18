@@ -133,6 +133,7 @@ adverb('cross-over').
 adverb([cum,laude]).
 adverb(daarenboven).
 adverb(daarentegen).
+adverb(daareven).
 adverb(daarzo).
 adverb(deels).
 adverb(dermate).
