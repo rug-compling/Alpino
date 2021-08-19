@@ -546,7 +546,7 @@ Alpino supports brackets in the input to indicate:
 - lexical assignment
  * @postag
  * @posflt
- * @add_lex
+ * @alt (@add_lex in older versions)
  * @mwu
  * @folia
 - requirement to skip words
@@ -628,19 +628,37 @@ consultation of the dictionary. In the latter case, a subset of the
 lexical categories assigned by Alpino is allowed (this subset can be
 empty). 
 
-The @add_lex meta annotation can be used to tell the parser to treat
+The @alt meta annotation can be used to tell the parser to treat
 a given word in the input with the lexical categories associated with
 another word. Example:
 
 --------------------------------------
-ik wil [ @add_lex naar naa ] huis
-ik voel me [ @add_lex goed gooooooeeeeed ]
+ik wil [ @alt naar naa ] huis
+ik voel me [ @alt goed gooooooeeeeed ]
 --------------------------------------
 
 In this case, the word 'naa' in the input will be treated in
 lexical lookup as if the word 'naar' was given. Similarly, the
 lexical categories associated with 'gooooooeeeeed' are those
 of the word 'goed'.
+
+In older versions, we used (for historical reasons) the label
+"add_lex" instead of alt. Furthermore, add_lex would also support
+treating more than a single word as a unit. This can be accomplished
+using "alt" in combination with skips. For example:
+
+old:
+
+--------------------------------------
+ik wil [ @add_lex daarom daar om ] naar huis
+--------------------------------------
+
+new:
+
+--------------------------------------
+ik wil [ @alt daarom daar ] [ @skip om ] naar huis
+--------------------------------------
+
 
 A further meta-label for lexical assignment is the @mwu label. This
 indicates that the bracketed sequence of words should be regarded as a

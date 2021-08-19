@@ -1,3 +1,10 @@
+The meta-notation @add_lex is still supported, but only for a single word
+at the time. We now use the tag @alt for such cases (possibly in combination
+with @skip). Refer to the user manual for a few examples. The implemenation
+has been simplified and improved.
+
+---
+
 if you want to see which words are unknown for Alpino, you can use
 this:
 
