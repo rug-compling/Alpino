@@ -137,7 +137,25 @@ ignore(['<','!','TABLE','!','>']).
 ignore(['<','!','INDEX','!','>']).
 ignore(['bèta','compleet']).
 
-lexical_analysisXX(Input) :-
+
+replace_alt([],_,[]).
+replace_alt([W|Ws],P0,[N|Ns]) :-
+    replace_w(W,P0,N),
+    P is P0 + 1,
+    replace_alt(Ws,P,Ns).
+
+replace_w(W,P0,N) :-
+    user_skips(List),
+    lists:member(alt(P0,N,W),List),
+    !.
+replace_w(W,_,W).
+
+
+lexical_analysisXX(Input0) :-
+    replace_alt(Input0,0,Input),
+    lexical_analysisXXX(Input).
+
+lexical_analysisXXX(Input) :-
     set_thread_flag(current_input_sentence,Input),
     set_thread_flag(current_lexical_analysis_values,none),
     hdrug_flag(debug,Debug),
@@ -299,13 +317,6 @@ lexical_analysis_(Input,P0,R0,LC):-
     ;   true
     ).
 
-
-lexical_analysis__(_Input,P1,_R1,_LC):-
-    user_skips(List),
-    lists:member(add_lex(P0,P,_,_),List),
-    P1 >= P0, P1 < P,
-    !,
-    fail.
 
 lexical_analysis__(Input,P0,R0,LC):-
     Input = [InputStart|_],
@@ -1548,18 +1559,6 @@ add_user_skip(postag(P0,P,Tag,Surf)) :-
     concat_all(Surf,SurfAtom,' '),
     assert_tag(P0,P,R0,R,SurfAtom,SurfAtom,skip,Tag).
 
-add_user_skip(add_lex(P0,P,Lex,Surf)) :-
-    !,
-    find_symbolic_begin(P0,R0),
-    remove_alternatives_to_skip(P0,P),
-    R is R0 + (P-P0),
-    concat_all(Surf,SurfAtom,' '),
-    (   alpino_lex:lexicon(Tag,Lemma,[Lex],[],His,[]),
-	assert_tag(P0,P,R0,R,Lemma,SurfAtom,normal(His),Tag),
-	fail
-    ;   true
-    ).
-
 /*
 add_user_skip(universal(P0,P,Surf)) :-
     find_symbolic_begin(P0,R0),
@@ -1998,7 +1997,8 @@ do_one(lex,Key,Sent) :-
     format("KEY#~w|",[Key]),
     write_list(Sent),nl,
     (   lexical_analysis(Sent),
-	add_skips_for_unknowns(Sent) % have UNKNOWN tags!
+	add_skips_for_unknowns(Sent), % have UNKNOWN tags!
+	fail
     ;   true
     ),
     display_lexical_analysis(Sent).
@@ -2167,10 +2167,6 @@ is_used(P1) :-
     P0 < P1, P1 < P.
 
 is_dict_used(P1) :-
-    user_skips(List),
-    lists:member(add_lex(P0,P,_,_),List),
-    P1 >= P0, P1 < P.
-is_dict_used(P1) :-
     tag(P1,P2,_,_,_,_,normal(_),_),
     \+ probably_wrong_tag(P1,P2).
 is_dict_used(P1) :-
@@ -2316,17 +2312,19 @@ extract_skip_positions([H|T],Rest0,Rest,P0,[postag(P0,P,Tag,Surf)|SkipIntervals]
     append(Surf0,Input,Input0),  % Surf0 includes closing bracket
     append(Surf,[_],Surf0),
     extract_skip_positions(Input,Rest1,Rest,P,SkipIntervals).
-extract_skip_positions([H|T],Rest0,Rest,P0,[add_lex(P0,P,Lex,Surf)|SkipIntervals]) :-
-    start_add_lex_skip([H|T],Input0,Lex),!,
+extract_skip_positions([H|T],Rest0,Rest,P0,[alt(P0,Lex,Surf)|SkipIntervals]) :-
+    start_alt_skip([H|T],Input0,Lex),!,
     find_end_skip(Input0,Input,Rest0,Rest1,P0,P),
     (   P0 =:= P
-    ->  format(user_error,"error: add_lex skip without word: ~w!~n",
+    ->  format(user_error,"error: alt skip without word: ~w!~n",
                [Lex]),
         raise_exception(alpino_error(unbalanced_brackets))
+    ;   P0 + 1 < P
+    ->  format(user_error,"error: alt skip with more than a single word: ~w!~n",
+	       [Lex])
     ;   true
     ),
-    append(Surf0,Input,Input0),  % Surf0 includes closing bracket
-    append(Surf,[_],Surf0),
+    append([Surf,_closing],Input,Input0), 
     extract_skip_positions(Input,Rest1,Rest,P,SkipIntervals).
 extract_skip_positions([H|T],[Word|Rest0],Rest,P0,[folia(P0,P,Lemma,Tag)|SkipIntervals]) :-
     start_folia_skip([H|T]),!,
@@ -2413,7 +2411,10 @@ phantom_skip(['[','@phantom'|L],L).
 start_postag_skip(['[','@postag',Tag0|L],L,Tag) :-
     atom_term(Tag0,Tag).
 
-start_add_lex_skip(['[','@add_lex',Tag|L],L,Tag).
+start_alt_skip(['[','@alt',Tag|L],L,Tag).
+
+% for historical reasons:
+start_alt_skip(['[','@add_lex',Tag|L],L,Tag).
 
 % start_universal_skip(['[','@universal'|L],L).
 
@@ -2474,19 +2475,10 @@ check_variant_frozen([PREV-_ITEM|T0],PREV,T,_Bool0,Bool) :-
 check_variant_frozen([NEXT-ITEM|T0],_PREV,[ITEM|T],Bool0,Bool) :-
     check_variant_frozen(T0,NEXT,T,Bool0,Bool).
 
-add_word_forms([]) :-
-    add_word_forms_skips.
+add_word_forms([]).
 add_word_forms([W|Ws]) :-
     add_word_form(W),
     add_word_forms(Ws).
-
-add_word_forms_skips :-
-    (   user_skips(List),
-	lists:member(add_lex(_,_,Form,_),List),
-	add_word_form(Form),
-	fail
-    ;   true
-    ).
 
 %% TODO: skip @ meta words
 add_word_form(bracket(_)).
