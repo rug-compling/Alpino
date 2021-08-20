@@ -14592,6 +14592,9 @@ v(misgun,misgunt,misgunnen,misgund,misgunde,misgunden,
 v(misdraag,misdraagt,misdragen,misdragen,misdroeg,misdroegen,
     [h([refl])]).
 
+v(misgrijp,misgrijpt,misgrijpen,misgrepen,misgreep,misgrepen,
+    [h([refl])]).
+
 v(mishaag,mishaagt,mishagen,mishaagd,mishaagde,mishaagden,
     [h([intransitive,
 	so_np])]).

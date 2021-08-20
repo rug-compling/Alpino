@@ -5622,6 +5622,7 @@ sentence_adverb([in,godsnaam]).
 sentence_adverb([in,'Godsnaam']). 
 sentence_adverb([in,hemelsnaam]). 
 sentence_adverb([in,'\'s',hemelsnaam]).
+sentence_adverb([in,lang]).  % ik heb hem in lang niet gezien
 sentence_adverb([in,the,end]).
 sentence_adverb([in,vredesnaam]).
 sentence_adverb(inderdaad). 
@@ -6017,6 +6018,8 @@ tmp_adverb(dan).
 tmp_adverb([dan,en,slechts,dan]).
 tmp_adverb(dato).
 tmp_adverb(destijds).
+tmp_adverb(dinsdags).
+tmp_adverb(donderdags).
 tmp_adverb(eens).
 tmp_adverb(eergisteren).
 tmp_adverb(eergisteravond).
@@ -6046,7 +6049,8 @@ tmp_adverb(gisterenmorgen).
 tmp_adverb(gisterennacht).
 tmp_adverb(gisterenochtend).
 tmp_adverb(indertijd). 
-tmp_adverb(kortgeleden). % tot kortgeleden
+tmp_adverb(kortgeleden).	% tot kortgeleden
+tmp_adverb(maandags).
 tmp_adverb(morgen).
 tmp_adverb(morgenavond).
 tmp_adverb(morgenmiddag).
@@ -6087,7 +6091,9 @@ tmp_adverb(vanochtend).
 tmp_adverb('v.j.').  % vorig jaar; beursberichten
 tmp_adverb(vooraf).
 tmp_adverb(voorheen).
+tmp_adverb(vrijdags).
 tmp_adverb(weleer).
+tmp_adverb(woensdags).
 tmp_adverb(zaterdags).
 tmp_adverb(zoëven). 
 tmp_adverb(zojuist).
