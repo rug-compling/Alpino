@@ -230,8 +230,8 @@ if __name__ == '__main__':
         params["expr"] = xslt_quote_string(options.query)
 
         # We moeten het stylesheet compileren
-        styledoc = libxml2.parseFile(options.stylesheet)
-        stylesheet = libxslt.parseStylesheetDoc(styledoc)
+        styledoc = etree.parse(options.stylesheet)
+        stylesheet = etree.XSLT(styledoc)
 
     # argumenten uit stdin lezen indien nodig
     # voor de archief-onderhoudsacties lezen we eerst alle argumenten in
@@ -281,7 +281,3 @@ if __name__ == '__main__':
             options.recursive, True)
 
     # eind van de actie-opties
-
-    # Geheugen vrijgeven van het stylesheet indien nodig
-    if stylesheet:
-        stylesheet.freeStylesheet()          # pakt styledoc ook gelijk
