@@ -5867,6 +5867,9 @@ a([ge_e(bezwete),
 
 a([ge_both(bezweken)],adv,[],[]).
 
+a([e(bezwijmde),
+   no_e(bezwijmd)],adv,[],[]).
+
 a([ge_both(bezworen)],adv,[],[]).
 
 a([ge_e(beëindigde),

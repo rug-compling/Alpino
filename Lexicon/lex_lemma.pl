@@ -8714,6 +8714,7 @@ lemma_root(mis_gaan,ga_mis) .
 lemma_root(mis_gokken,gok_mis) .
 lemma_root(mis_gooien,gooi_mis) .
 lemma_root(mis_grijpen,grijp_mis) .
+lemma_root(misgrijpen,misgrijp) .
 lemma_root(misgunnen,misgun) .
 lemma_root(mishagen,mishaag) .
 lemma_root(mishandelen,mishandel) .
