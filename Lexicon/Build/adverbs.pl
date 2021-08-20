@@ -352,6 +352,7 @@ adverb([onder,anderen]).
 adverb(onderuit).  % loc? dir? pred?
 adverb(ondermeer).
 adverb([onder,meer]).
+adverb(ongaarne).
 adverb([ons,ondanks]).
 adverb([onverrichter,zake]).
 adverb(onverrichterzake).
@@ -501,6 +502,9 @@ adverb([van,harte]).
 adverb(vandaar).
 adverb(vanouds).
 adverb(vanzelf).
+adverb([van,zelf]).
+adverb(vanzelve).
+adverb([van,zelve]).
 adverb(veeleer).
 adverb(veiligheidshalve).
 adverb(verre).  % dit heeft verre de voerkeur

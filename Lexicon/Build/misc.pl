@@ -884,9 +884,19 @@ tag([god,',',o,'God']).
 tag([god,',',oh,'God']).
 tag(godsallemachtig).
 tag(goedenavond).
+tag(goededag).
 tag(goedendag).
 tag(goedemiddag).
+tag(goedenmiddag).
 tag(goedemorgen).
+tag(goedenmorgen).
+tag(goedenacht).
+tag(goedennacht).
+tag([goeden,avond]).
+tag([goeden,dag]).
+tag([goeden,middag]).
+tag([goeden,morgen]).
+tag([goeden,nacht]).
 tag(goedzo).
 tag(goh).
 tag(gosh).
@@ -5656,7 +5666,8 @@ sentence_adverb(redelijkerwijze).
 sentence_adverb(['\'s',anderdaags]).
 sentence_adverb(['\'s',anderendaags]). 
 sentence_adverb(anderdaags).  
-sentence_adverb(anderendaags).  
+sentence_adverb(anderendaags).
+sentence_adverb([des,anderen,daags]).
 sentence_adverb(sedert). 
 sentence_adverb(sedertdien).
 sentence_adverb(sluiks).
@@ -5705,6 +5716,8 @@ sentence_adverb(uiteraard).
 sentence_adverb([van,langs,om]).  % VL
 sentence_adverb([van,meetaf,aan]).
 sentence_adverb([van,tijd,tot,tijd]).
+sentence_adverb([van,lieverlee]).
+sentence_adverb([van,lieverlede]).
 sentence_adverb(veelal). 
 sentence_adverb(verdomme).
 sentence_adverb(verdorie).
