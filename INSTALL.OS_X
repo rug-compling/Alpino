@@ -42,14 +42,8 @@ Prebuilt binary
 Treebank tools
 --------------
 
-The treebank tools require Python bindings for libxml2 and
-libxslt. However, as of writing (January, 2010) libxml2-python in
-MacPorts is broken. For more information refer to:
-
-http://trac.macports.org/ticket/23139
-
-As a work-around the Python module from the libxslt source
-distribution can be compiled and installed.
+The treebank tools require Python2 and Python2 bindings for 
+liblxml. Not tested recently. 
 
 Compilation
 -----------
