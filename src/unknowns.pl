@@ -46,6 +46,7 @@ normal_capitalized_word(P,Word,[Word1|Rest],[Word2|Rest],Word) :-
 starts_with_quote('\'n').
 starts_with_quote('\'s').
 starts_with_quote('\'t').
+starts_with_quote('\'k').
 
 %% if it is written in full capitals, find all analyses
 %% with lower case
@@ -1976,6 +1977,7 @@ decap_only('Daar').
 decap_only('Daarom').
 decap_only('Dáárom').
 decap_only('Dankzij').
+decap_only('Denk').
 decap_only('Edoch').
 decap_only('Een').
 decap_only('Eind').
@@ -2051,6 +2053,7 @@ decap_only('Vanwege').
 decap_only('Vanuit').
 decap_only('Veel').
 decap_only('Vert.').
+decap_only('Vind').
 decap_only('Volgens').
 decap_only('Volk').
 decap_only('Voor').
@@ -3447,7 +3450,8 @@ is_start_sentence_(P):-
     alpino_lexical_analysis:open_bracket(P0,P,_),
     is_start_sentence_(P0).
 is_start_sentence_(P):-
-    tag(P0,P,_,_,het,'\'t',_,het_noun),
+    tag(P0,P,_,_,_het,Quoted,_,_het_noun),
+    starts_with_quote(Quoted),
     is_start_sentence_(P0).
 
 is_start_sentence__(0,_).

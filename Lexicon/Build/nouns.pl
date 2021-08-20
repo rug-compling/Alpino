@@ -15606,6 +15606,8 @@ n([pl(inboedels),sg(inboedel)],de,[]).
 
 n([pl(inboorlingen),sg(inboorling)],de,[]).
 
+n([sg(inborst),pl(inborsten)],de,[]).
+
 n([mass(inbouw)],de,[]).
 
 n([sg(inbox)],de,[]).

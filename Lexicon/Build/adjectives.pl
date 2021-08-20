@@ -32753,6 +32753,9 @@ a([e(spannende),
   [subject_vp,
    subject_sbar],[]).
 
+a([e('Spartaanse'),
+   no_e('Spartaans')],adv,[],[]).
+
 a([e(spastische),
    er(spastischer),
    ere(spastischere),
