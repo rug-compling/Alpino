@@ -18,7 +18,7 @@ if not ALPINO_HOME:
 sys.path.insert(0, os.path.join(ALPINO_HOME, "TreebankTools/python-lib"))
 
 from actlib import process_arguments, xslt_quote_string, msg, xmlmatch_from_mem
-import libxml2, libxslt
+from lxml import etree
 
 #----------------------------------------------------------------------
 
@@ -54,10 +54,9 @@ def workhorse(xmldata, filename, query=""):
 
     query = options.query
 
-    doc = libxml2.parseDoc(xmldata)
+    doc = etree.fromstring(xmldata)
 
-    ctxt = doc.xpathNewContext()
-    xpathres = ctxt.xpathEval(query)
+    xpathres = doc.xpath(query)
 
     if xpathres:
         if options.dtview:
@@ -72,10 +71,6 @@ def workhorse(xmldata, filename, query=""):
 
         elif options.statistics or options.rootlabels:
             verhoog_tellertjes(xpathres, counthash)
-
-    ctxt.xpathFreeContext()
-    doc.freeDoc()
-
 
 
 def shellquote(str):
@@ -105,12 +100,12 @@ def verhoog_tellertjes(xpathres, counthash):
     if type(xpathres) == types.ListType:
         for node in xpathres:
 
-            if node.name != 'node':
+            if node.tag != 'node':
                 break
 
             for attr in counthash.keys():
                 hash = counthash[attr]
-                value = node.prop(attr)
+                value = node.get(attr)
                 if value != None:
                     try:
                         hash[value] += 1
@@ -142,18 +137,17 @@ def print_bracketed_sentence(doc, xpathres, filename):
     Output is hard-coded to iso-8859-1, like the stylesheet version."""
 
     # haal de zin op
-    ctxt = doc.xpathNewContext()
-    sentence = ctxt.xpathEval('/*/sentence')[0]
-    words = sentence.content.split()
+    sentence = doc.xpath('/*/sentence')[0]
+    words = sentence.text.split()
 
     if type(xpathres) == types.ListType:
         for node in xpathres:
 
-            if node.name != 'node':
+            if node.tag != 'node':
                 break
 
-            begin = node.prop('begin')
-            end   = node.prop('end')
+            begin = node.get('begin')
+            end   = node.get('end')
 
             if begin:
                 begin = int(begin)
@@ -161,7 +155,6 @@ def print_bracketed_sentence(doc, xpathres, filename):
             if end:
                 words[int(end) - 1] += ']'
         
-    ctxt.xpathFreeContext()
     print filename + "\t" + string.join(words, " ")
                                                    ##.decode('utf8').encode('latin1')
 
@@ -242,8 +235,8 @@ def main():
 
         if stylesheet:
             # compileer het stylesheet e.d.
-            styledoc = libxml2.parseFile(stylesheet)
-            parsedsheet = libxslt.parseStylesheetDoc(styledoc)
+            styledoc = etree.parse(stylesheet)
+            parsedsheet= etree.XSLT(styledoc)
 
 
         # wanneer het stylesheet niet gezet is krijgen we alleen files te zien
@@ -269,9 +262,6 @@ def main():
             dtview_fp.close()
         else:
             msg("no matches found!")
-
-    if parsedsheet:
-        parsedsheet.freeStylesheet()    # pakt styledoc ook gelijk
 
 
 #----------------------------------------------------------------------

@@ -8,8 +8,7 @@
 import sys
 import os
 import re
-import libxml2
-import libxslt
+from lxml import etree
 from glob import glob
 
 from compactcorpus import *
@@ -40,7 +39,7 @@ signal.signal(signal.SIGPIPE, signal.SIG_DFL)
 # functions
 
 def print_arg(arg):
-	print arg
+    print arg
 
 def extract_archives(args, targetdir, force=0):
     for arg in args:
@@ -51,12 +50,12 @@ def extract_archives(args, targetdir, force=0):
 def list_archives(archivelist):
     for archive in archivelist:
         if (os.path.isdir(archive)):
-		xmlFiles = numsort.sorted_copy(glob(archive + '/*.xml'))
-		for f in xmlFiles:
-			print f
-	else:
-        	corpus_exists_or_die(archive)
-        	list_archive(archive)
+            xmlFiles = numsort.sorted_copy(glob(archive + '/*.xml'))
+            for f in xmlFiles:
+                print f
+        else:
+            corpus_exists_or_die(archive)
+            list_archive(archive)
 
 
 def corpus_exists_or_die(corpuspath):
@@ -201,9 +200,9 @@ def process_argument(arg, function, recursive=0, passData = True, **keywords):
             # to fail completely, since there may be other files to
             # process.
             try:
-                 data = filereader.data(arg)
+                data = filereader.data(arg)
             except RuntimeError, e:
-		print >> sys.stderr, e.message
+                print >> sys.stderr, e.message
             else:
                 if data:
                     apply(function,(data, arg), keywords)
@@ -319,7 +318,7 @@ def process_directory(dir, function, recursive = 0, passData = True, **keywords)
         process_directory(subdir, function, recursive, passData, **keywords)
     
 
-def xmlmatch_from_mem(xmldata, filename, query="/", stylesheet=None, params=None):
+def xmlmatch_from_mem(xmldata, filename, query=None, stylesheet=None, params=None):
     """Laat QUERY los op XMLDATA zoals bij xmlmatch
 
     FILENAME is de filenaam die we voor de uitvoer gebruiken.
@@ -327,19 +326,21 @@ def xmlmatch_from_mem(xmldata, filename, query="/", stylesheet=None, params=None
     Beschrijving keyword argumenten:
 
       QUERY       - een XPath (string-)expressie met de query
-      STYLESHEET  - een geparsed stylesheet (libxslt) (of None)
+      STYLESHEET  - een geparsed stylesheet (of None)
       PARAMS      - een dictionary met parameters voor het stylesheet
 
     """
 
     try:
-        doc = libxml2.parseDoc(xmldata)
+        doc = etree.fromstring(xmldata)
     except Exception, error:
         print >> sys.stderr, "Could not parse %s: %s" % (filename, error)
-	return
+        return
 
-    ctxt = doc.xpathNewContext()
-    xpathobj = ctxt.xpathEval(query)
+    if query:
+         xpathobj = doc.xpath(query)
+    else:
+         xpathobj = True
 
     if xpathobj:
         if stylesheet:
@@ -348,19 +349,12 @@ def xmlmatch_from_mem(xmldata, filename, query="/", stylesheet=None, params=None
             params["filename"] = xslt_quote_string(filename)
 
             # het stylesheet loslaten op de file
-            result = stylesheet.applyStylesheet(doc, params)
+            result = stylesheet(doc, **params)
 
             # uitvoer naar stdout
-            stylesheet.saveResultToFilename("-", result, 0)
-
-            # en de boel weer vrijgeven
-            result.freeDoc()
+            result.write_output("-")
         else:
             print filename
-        
-
-    ctxt.xpathFreeContext()
-    doc.freeDoc()
 
 
 def xslt_quote_string(str):
