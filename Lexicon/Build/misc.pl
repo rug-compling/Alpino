@@ -1990,12 +1990,14 @@ m(generlei,      determiner(geen,nwh,mod,pro,yparg,nwkpro,geen),   generlei).
 m(genoeg,        determiner(wat,nwh,mod,pro,yparg),  genoeg).
 m(haar,          determiner(pron),               haar).
 m(haar,          determiner(der),harer).
+m(haar,          determiner(der),haars).
 %m(haar,          determiner(pron),               heur).
 m(heleboel,      determiner(wat,nwh,mod,pro,nparg),heleboel).
 m(het,           determiner(het,nwh,nmod,pro,nparg,wkpro),het).
 m(hetzelfde,     determiner(het,nwh,mod,pro,yparg),hetzelfde).
 m(hun,           determiner(pron),hun).
 m(hun,           determiner(der),hunner).
+m(hun,           determiner(der),huns).
 %m(hun,           determiner(pron),ulder).
 %m(hun,           determiner(pron),zullie).
 m(ieder,         determiner(het,nwh,mod),ieder).
@@ -2013,6 +2015,7 @@ m(menig,         determiner(sg_num),menige).
 m(mijn,          determiner(pron),mijn).
 %m(mijn,          determiner(pron),mijne).  % mijne heren, ,mijne..
 m(mijn,          determiner(der),mijner).
+m(mijn,          determiner(der),mijns).
 %m(mijn,          determiner(pron),mijner).
 m(niemand,       determiner(pron),niemands).
 m(nul,           determiner(geen,nwh,mod,pro,yparg,nwkpro,geen), nul). % dat zou nul rendement betekenen
@@ -2020,6 +2023,7 @@ m(nul,           determiner(geen,nwh,mod,pro,yparg,nwkpro,geen), nul). % dat zou
 m(ons,           determiner(het),ons).
 m(ons,           determiner(onze),onze).
 m(ons,           determiner(der),onzer).
+m(ons,           determiner(der),onzes).
 %m(ons,           determiner(pron),onzer).
 m('ons al',   determiner(pron),[ons,aller]).
 m(onvoldoende,   determiner(wat,nwh,mod,pro,yparg),onvoldoende).
@@ -2036,6 +2040,7 @@ m('u al',    determiner(pron),[uw,aller]).
 %m(u,            determiner(pron),uwen).   % vlaams
 %m(u,            determiner(pron),uwer).
 m(u,             determiner(der),uwer).
+m(u,             determiner(der),uws).  % erg ouderwets
 m('van de',      determiner(der),vd).
 m(veel,          determiner(pron),veler).
 m(voldoende,     determiner(wat,nwh,mod,pro,yparg),voldoende).

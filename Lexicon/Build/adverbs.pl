@@ -270,6 +270,7 @@ adverb([in,wezen]).
 adverb(inderhaast).
 adverb(ineens).
 adverb(inmiddels).
+adverb(insgelijks).
 adverb(integendeel).
 adverb(inzonderheid).
 adverb(inzover).

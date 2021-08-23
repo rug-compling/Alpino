@@ -46,11 +46,13 @@ mwu_postag('Algemene Kinderbijslagwet',['ADJ(prenom,basis,met-e,stan)','N(soort,
 mwu_postag('Algemene Maatregel van Bestuur',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,ev,basis,onz,stan)'],[algemeen,maatregel,van,bestuur]).
 mwu_postag('Algemene Ouderdomswet',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[algemeen,ouderdomswet]).
 mwu_postag('Algemene Vergadering',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[algemeen,vergadering]).
+mwu_postag('alleen niet',['BW()','BW()'],[alleen,niet]).
 mwu_postag('al naargelang',['BW()','VG(onder)'],[al,naargelang]).
 mwu_postag('Al Qaeda-kopstuk',['SPEC(deeleigen)','N(soort,ev,basis,onz,stan)'],['Al','Qaeda_kopstuk']).
 mwu_postag('Al Qaida-man',['SPEC(deeleigen)','N(soort,ev,basis,zijd,stan)'],['Al','Qaida_man']).
 mwu_postag('als gevolg van',['VG(onder)','N(soort,ev,basis,onz,stan)','VZ(init)'],[als,gevolg,van]).
 mwu_postag('als het ware',['VG(onder)','VNW(pers,pron,stan,red,3,ev,onz)','WW(pv,conj,ev)'],[als,het,zijn]).
+mwu_postag('al te',['BW()','BW()'],[al,te]).
 mwu_postag('Amerikaanse Burgeroorlog',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],['Amerikaans',burgeroorlog]).
 mwu_postag('Amstel , Gooi en vechtstreek',['SPEC(deeleigen)','LET()','SPEC(deeleigen)','SPEC(deeleigen)','SPEC(deeleigen)'],['Amstel',',','Gooi',en,'Vechtstreek']).
 mwu_postag('Amsterdamse Hogeschool voor de Kunsten',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)','VZ(init)','LID(bep,stan,rest)','N(soort,mv,basis)'],['Amsterdams',hogeschool,voor,de,kunst]).
@@ -311,7 +313,9 @@ mwu_postag('een of andere',['TW(hoofd,prenom,stan)','VG(neven)','ADJ(prenom,basi
 mwu_postag('één of andere',['TW(hoofd,prenom,stan)','VG(neven)','ADJ(prenom,basis,met-e,stan)'],[één,of,ander]).
 mwu_postag('een of ander',['TW(hoofd,prenom,stan)','VG(neven)','ADJ(prenom,basis,zonder)'],[één,of,ander]).
 mwu_postag('een oogje',['LID(onbep,stan,agr)','N(soort,ev,dim,onz,stan)'],[een,oog]).
+mwu_postag('een paar',['LID(onbep,stan,agr)','N(soort,ev,basis,onz,stan)'],[een,paar]).
 mwu_postag('een slordige',['LID(onbep,stan,agr)','ADJ(prenom,basis,met-e,stan)'],[een,slordig]).
+mwu_postag('een soort',['LID(onbep,stan,agr)','N(soort,ev,basis,onz,stan)'],[een,soort]).
 mwu_postag('een weinig',['LID(onbep,stan,agr)','VNW(onbep,grad,stan,vrij,zonder,basis)'],[een,weinig]).
 mwu_postag('Eerste Batallion',['TW(rang,prenom,stan)','N(soort,ev,basis,onz,stan)'],[één,batallion]).
 mwu_postag('Eerste en Tweede Kamer',['TW(rang,prenom,stan)','VG(neven)','TW(rang,prenom,stan)','N(soort,ev,basis,zijd,stan)'],[één,en,twee,kamer]).
