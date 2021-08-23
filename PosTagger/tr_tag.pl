@@ -140,15 +140,6 @@ t(het_noun,determiner(het,nwh,nmod,pro,nparg,wkpro)).
 % treat special 'wat' as wh-pronoun 'wat'
 t(wh_cleft_het_noun,pronoun(ywh,thi,sg,het,both,indef,nparg)).
 
-% treat reflexives as ordinary pronouns
-t(reflexive(u_thi,both),pronoun(nwh,thi,both, de,dat_acc,def,wkpro)). % zich
-t(reflexive(fir,sg),    pronoun(nwh,fir,sg,   de,dat_acc,def,wkpro)). % me/mij
-t(reflexive(je,both),   pronoun(nwh,je, sg,   de,both,   def,wkpro)). % je
-t(reflexive(je,pl),     pronoun(nwh,je, pl,   de,both,   def)). % jullie
-t(reflexive(fir,pl),    pronoun(nwh,fir,pl,   de,dat_acc,def)). % ons
-t(reflexive(u,sg),      pronoun(nwh,u,  sg,   de,both,   def)). % u
-t(reflexive(thi,pl),    pronoun(nwh,thi,pl,   de,dat_acc,def)). % ulder
-
 %% keep form only for potential hdf-postpositions
 %% probably these ought to be their own tags,
 %% because quite different distribution
