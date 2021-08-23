@@ -116,6 +116,8 @@ surviving_root_tag(aan,particle(aan)) :-
 surviving_tag(_):-
     fail.
 
+surviving_tag(reflexive(_,_)).
+
 %% If there is no suitable verb (adjective), they will be removed anyway.
 surviving_tag(fixed_part(_)).
 surviving_tag(particle(_)).
