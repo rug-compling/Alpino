@@ -1870,6 +1870,7 @@ spelling_variant21(verhaal,lijnen,verhaallijnen).
 spelling_variant21(verzend,kosten,verzendkosten).
 spelling_variant21(van,af,        vanaf).
 spelling_variant21(van,daag,      vandaag).
+spelling_variant21(van,daan,      vandaan).
 spelling_variant21(van,tevoren,   vantevoren).
 spelling_variant21(van,zelf,      vanzelf).
 spelling_variant21(vol,strekt,    volstrekt).
@@ -3433,6 +3434,7 @@ parse_only_lex(Atom, Root, Tag ) :-
     avonds(Avonds,Tag,Root).
 
 parse_only_lex(welks,welk,determiner(pron,rwh)).
+parse_only_lex(welker,welk,determiner(pron,rwh)).
 
 % des nachts des Nachts
 parse_only_lex(des, Root, Tag,[Avonds],[]) :-

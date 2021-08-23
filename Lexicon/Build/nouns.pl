@@ -22215,6 +22215,7 @@ n([pl(moeders),sg(moeder)],de,[],
   [s(bijstand),
    draag,
    oer,
+   pleeg,
    schoon,
    stief,
    tiener,
@@ -23130,6 +23131,8 @@ n([pl(nichten),sg(nicht)],de,[],[dim(nichtje)]).
 n([mass(nicotine)],de,[]).
 
 n([mass(niemandsland)],het,[]).
+
+n([mass(niemendal)],het,[]).
 
 n([pl(nieren),sg(nier)],de,[],
   [bij,
@@ -27153,7 +27156,7 @@ n([mass(poëzie)],de,[]).
 
 n([mass(pr)],de,[]).
 
-n([mass(praal)],de,[]).
+n([mass(praal)],de,[],[zege]).
 
 n([mass(praat)],de,[]).
 
@@ -35409,13 +35412,16 @@ n([sg(triviant)],both,[],[dim(triviantje)]).
 
 n([pl(troeven),sg(troef)],de,[subject_sbar]).
 
-n([pl(troepen),sg(troep)],de,[measure]).
+n([pl(troepen),sg(troep)],de,
+  [measure],
+  [dim(troepje)]).  % een troepje bezoekers
 n([pl(troepen),sg(troep)],de,[],
   [s(bezetting),  % niet bezetting_stro_epos
    coalitie,
    elite,
    s(vrede),
-   h('NAVO'),h('Navo'),'NAVO','Navo']).
+   h('NAVO'),h('Navo'),'NAVO','Navo',
+   dim(troepje)]).
 
 n([pl(trofeeën),sg(trofee)],de,[]).
 
@@ -36180,6 +36186,7 @@ n([pl(vaders),sg(vader),pl(vaderen)],de,[],
    kerk,
    oer,
    peet,
+   pleeg,
    schoon,
    stam,
    stief,
