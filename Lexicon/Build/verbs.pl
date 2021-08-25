@@ -2232,16 +2232,17 @@ v(behoef,behoeft,behoeven,behoefd,behoefde,behoefden,
 	aux(te)])]).
 
 v(behoor,behoort,behoren,behoord,behoorde,behoorden,
-    [h([so_np,
-	so_pp,
-	pc_pp(bij),
-	pc_pp(in),
-	pc_pp(tot),
-	pp_sbar_subj(tot),  % het behoort tot de mogelijkheden dat...
-	pp_vp_subj(tot),  % het behoort tot de traditie om zo nu en dan...
-	part_so_pp(toe),
-	part_so_np(toe),
-	aux(te)])]).
+  [h([intransitive,  % zoals het behoort (ouderwets)
+      so_np,
+      so_pp,
+      pc_pp(bij),
+      pc_pp(in),
+      pc_pp(tot),
+      pp_sbar_subj(tot),     % het behoort tot de mogelijkheden dat...
+      pp_vp_subj(tot), % het behoort tot de traditie om zo nu en dan...
+      part_so_pp(toe),
+      part_so_np(toe),
+      aux(te)])]).
 
 v([behoud,behoud],behoudt,behouden,behouden,behield,behielden,
     [h([transitive,
@@ -2501,7 +2502,8 @@ v(beland,belandt,belanden,beland,belandde,belandden,
 	    part_ld_adv(aan)])]).
 
 v(belang,belangt,belangen,belangd,belangde,belangden,
-  [h([part_transitive(aan)])]).
+  [h([so_np,  % wat mij belangt (ouderwets)
+      part_transitive(aan)])]).
 
 v(belast,belast,belasten,belast,belastte,belastten,
     [h([transitive,
@@ -9465,6 +9467,7 @@ v(hergroepeer,hergroepeert,hergroeperen,gehergroepeerd,hergroepeerde,
 v(herhaal,herhaalt,herhalen,herhaald,herhaalde,herhaalden,
     [h([refl,  % tot twee maal toe herhaalde zich dit ritueel
 	sbar,
+	np_np,  % ik herhaal het u (ouderwets)
 	transitive,
 	vp,
         intransitive])]).
@@ -19605,6 +19608,7 @@ v(schop,schopt,schoppen,geschopt,schopte,schopten,
 	np_pc_pp(tot),
         np_np, % schop de mensen een geweten!
         part_transitive(in),  % de deur...
+        part_transitive(om),  % een stoel...
         part_transitive(uit), % haar schoenen...
         part_pc_pp(in,op),    % op iemand inschoppen
 	fixed([{[pc(over),acc(herrie)]}],imp_passive),
@@ -21954,7 +21958,8 @@ v(stelp,stelpt,stelpen,gestelpt,stelpte,stelpten,
 v(stem,stemt,stemmen,gestemd,stemde,stemden,
     [h([ap_pred_np,
 	su_ap_pred_sbar,	% het stemt ons tevreden dat je komt
-	pp_sbar_subj(tot),      % het stemt tot tevredenheid dat je komt
+	pp_sbar_subj(tot),    % het stemt tot tevredenheid dat je komt
+	part_np_sbar(toe),    % u zult me toestemmen dat (ouderwets)
 	intransitive,
 	transitive,
 	np_pc_pp(tot),
@@ -28070,6 +28075,7 @@ v(wrijf,wrijft,wrijven,gewreven,wreef,wreven,
 	part_np_sbar(in),
 	part_np_vp_obj(in),
 	part_so_np(in),
+	part_transitive(af),
 	part_transitive(aan),
 	part_transitive(in),
 	refl_np_ld_pp,   % hij wrijft zich de slaap uit de ogen
@@ -28116,7 +28122,8 @@ v(wuif,wuift,wuiven,[gewuifd,gewoven],[wuifde,woof],[wuifden,woven],
 	np_ld_dir,
 	fixed([[gedag]],imp_passive),
 	fixed([dat,[gedag]],imp_passive),
-	part_np_np(toe), % iemand koelte toe wuiven
+	part_np_np(toe),	% iemand koelte toe wuiven
+	part_transitive(na),
 	part_transitive(toe),
 	part_transitive(uit),
 	part_transitive(weg),

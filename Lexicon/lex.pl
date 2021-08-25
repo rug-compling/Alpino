@@ -1830,9 +1830,11 @@ spelling_variant21(de,ze,         deze).
 spelling_variant21(functie,eis,   functieeis).
 spelling_variant21(functie,eisen, functieeisen).
 spelling_variant21(half,stok,     halfstok).
+spelling_variant21('\'t',geen,    hetgeen).
+spelling_variant21(het,geen,      hetgeen).
 spelling_variant21(het,welk,      hetwelk).
 spelling_variant21('\'t',welk,    hetwelk).
-spelling_variant21('`t',welk,    hetwelk).
+spelling_variant21('`t',welk,     hetwelk).
 spelling_variant21(t,zelfde,      hetzelfde).
 spelling_variant21(heen,weg,      heenweg).
 spelling_variant21(hoger,op,      hogerop).

@@ -1511,6 +1511,11 @@ number_features(pl_num,Sign) :-
     Sign:agr => pl.
 number_features(both,_).
 
+%% ouderwets: "jullie" kan ook enkelvoud zijn
+pronoun_features(nwh,je,pl,de,both,def,Sign) :-
+    !,
+    pronoun_features(nwh,je,both,de,both,def,Sign).
+
 pronoun_features(Wh,Person,Number,Gender,Case,Def,Sign) :-
     features_person(Person,Sign),
     features_number(Number,Sign),

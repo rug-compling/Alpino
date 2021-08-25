@@ -20780,7 +20780,9 @@ n([pl(machten),sg(macht)],de,[],
    troepen,
    s(vrede),
    h('VN'),
-   i('VN_vrede','VN-vredes')]).
+   i('VN_vrede','VN-vredes'),
+   zee  % niet niet zeem-achten
+  ]).
 
 n([mass(machteloosheid)],de,[]).
 

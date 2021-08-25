@@ -3050,6 +3050,7 @@ lemma_root(door_behandelen,behandel_door) .
 lemma_root(door_behangen,behang_door) .
 lemma_root(door_behelpen,behelp_door) .
 lemma_root(door_behoeven,behoef_door) .
+lemma_root(door_behoren,behoor_door) .
 lemma_root(door_beiden,beid_door) .
 lemma_root(door_beieren,beier_door) .
 lemma_root(door_beitelen,beitel_door) .
@@ -8870,6 +8871,7 @@ lemma_root(na_voelen,voel_na) .
 lemma_root(na_volgen,volg_na) .
 lemma_root(na_vragen,vraag_na) .
 lemma_root(na_wijzen,wijs_na) .
+lemma_root(na_wuiven,wuif_na) .
 lemma_root(na_zeggen,zeg_na) .
 lemma_root(na_zinderen,zinder_na) .
 lemma_root(na_zwaaien,zwaai_na) .
@@ -10657,6 +10659,7 @@ lemma_root(raak_behandelen,behandel_raak) .
 lemma_root(raak_behangen,behang_raak) .
 lemma_root(raak_behelpen,behelp_raak) .
 lemma_root(raak_behoeven,behoef_raak) .
+lemma_root(raak_behoren,behoor_raak) .
 lemma_root(raak_beiden,beid_raak) .
 lemma_root(raak_beieren,beier_raak) .
 lemma_root(raak_beitelen,beitel_raak) .
@@ -15828,6 +15831,7 @@ lemma_root(uit_behandelen,behandel_uit) .
 lemma_root(uit_behangen,behang_uit) .
 lemma_root(uit_behelpen,behelp_uit) .
 lemma_root(uit_behoeven,behoef_uit) .
+lemma_root(uit_behoren,behoor_uit) .
 lemma_root(uit_beiden,beid_uit) .
 lemma_root(uit_beieren,beier_uit) .
 lemma_root(uit_beitelen,beitel_uit) .
@@ -20586,6 +20590,7 @@ lemma_root(voort_behandelen,behandel_voort) .
 lemma_root(voort_behangen,behang_voort) .
 lemma_root(voort_behelpen,behelp_voort) .
 lemma_root(voort_behoeven,behoef_voort) .
+lemma_root(voort_behoren,behoor_voort) .
 lemma_root(voort_beiden,beid_voort) .
 lemma_root(voort_beieren,beier_voort) .
 lemma_root(voort_beitelen,beitel_voort) .
