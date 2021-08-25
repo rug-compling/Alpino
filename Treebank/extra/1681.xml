@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="12" id="0" rel="top">
+    <node begin="0" cat="smain" end="11" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" end="1" id="3" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="De"/>
+        <node begin="1" end="2" genus="zijd" getal="ev" graad="basis" id="4" lemma="kamer" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="kamer" word="kamer"/>
+      </node>
+      <node begin="2" end="3" id="5" lemma="aan_voelen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="voel_aan" word="voelde" wvorm="pv"/>
+      <node begin="6" end="7" id="6" lemma="aan" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="aan" vztype="fin" word="aan"/>
+      <node begin="3" cat="ap" end="11" id="7" rel="predc">
+        <node begin="5" buiging="zonder" end="6" graad="basis" id="8" lemma="kil" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="kil" word="kil"/>
+        <node begin="3" cat="ap" end="11" id="9" rel="mod">
+          <node begin="3" buiging="zonder" end="4" id="10" lemma="op_vallen" pos="adj" positie="vrij" postag="WW(od,vrij,zonder)" pt="ww" rel="mod" root="op_vallen" word="opvallend" wvorm="od"/>
+          <node begin="4" buiging="zonder" end="5" graad="comp" id="11" lemma="weinig" naamval="stan" pdtype="grad" pos="adj" positie="vrij" postag="VNW(onbep,grad,stan,vrij,zonder,comp)" pt="vnw" rel="hd" root="minder" vwtype="onbep" word="minder"/>
+          <node begin="7" cat="cp" end="11" id="12" rel="obcomp">
+            <node begin="7" conjtype="onder" end="8" id="13" lemma="dan" pos="comparative" postag="VG(onder)" pt="vg" rel="cmp" root="dan" word="dan"/>
+            <node begin="8" cat="np" end="11" id="14" rel="body">
+              <node begin="8" end="9" id="15" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="det" postag="LID(bep,stan,rest)" pt="lid" rel="det" root="de" word="de"/>
+              <node begin="9" end="10" genus="zijd" getal="ev" graad="basis" id="16" lemma="ruimte" naamval="stan" ntype="soort" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" root="ruimte" word="ruimte"/>
+              <node begin="10" end="11" id="17" lemma="beneden" pos="adv" postag="VZ(fin)" pt="vz" rel="mod" root="beneden" vztype="fin" word="beneden"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="11" end="12" id="18" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." word="."/>
+  </node>
+  <sentence>De kamer voelde opvallend minder kil aan dan de ruimte beneden .</sentence>
+</alpino_ds>

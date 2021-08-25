@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="du" end="8" id="1" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" sc="root" word="En"/>
+      <node begin="1" cat="whq" end="8" id="3" rel="nucl">
+        <node begin="1" end="2" id="4" index="1" lemma="waaromtrent" pos="pp" postag="BW()" pt="bw" rel="whd" root="waaromtrent" special="waar" word="waaromtrent"/>
+        <node begin="1" cat="sv1" end="8" id="5" rel="body">
+          <node begin="2" end="3" id="6" infl="sg" lemma="worden" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="word" sc="passive" stype="whquestion" tense="past" word="werd" wvorm="pv"/>
+          <node begin="3" case="both" def="def" end="4" gen="de" getal="getal" id="7" index="2" lemma="ge" naamval="nomin" num="sg" pdtype="pron" per="u" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" rnum="sg" root="ge" status="vol" vwtype="pers" wh="nwh" word="ge"/>
+          <node begin="1" cat="ppart" end="8" id="8" rel="vc">
+            <node begin="1" end="2" id="9" index="1" rel="mod"/>
+            <node begin="3" end="4" id="10" index="2" rel="obj1"/>
+            <node begin="4" cat="pp" end="7" id="11" rel="mod">
+              <node begin="4" end="5" id="12" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+              <node begin="5" cat="np" end="7" id="13" rel="obj1">
+                <node begin="5" buiging="zonder" end="6" id="14" infl="het" lemma="dat" naamval="stan" npagr="evon" pdtype="det" pos="det" positie="prenom" postag="VNW(aanw,det,stan,prenom,zonder,evon)" pt="vnw" rel="det" root="dat" vwtype="aanw" wh="nwh" word="dat"/>
+                <node begin="6" end="7" gen="het" genus="onz" getal="ev" graad="basis" id="15" lemma="monster" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="monster" word="monster"/>
+              </node>
+            </node>
+            <node begin="7" buiging="zonder" end="8" id="16" infl="psp" lemma="achtervolgen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="achtervolg" sc="transitive" word="achtervolgd" wvorm="vd"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="17" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>En waaromtrent werd ge door dat monster achtervolgd ?</sentence>
+</alpino_ds>
