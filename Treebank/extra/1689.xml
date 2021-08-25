@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="np" end="8" id="1" rel="--">
+      <node begin="0" end="1" id="2" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="Het"/>
+      <node begin="1" end="2" gen="both" genus="onz" getal="ev" graad="basis" id="3" lemma="punt" naamval="stan" ntype="soort" num="bare_meas" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="punt" special="meas_mod" word="punt"/>
+      <node begin="2" cat="rel" end="8" id="4" rel="mod">
+        <node begin="2" end="3" id="5" index="1" lemma="waaromtrent" pos="pp" postag="BW()" pt="bw" rel="rhd" root="waaromtrent" special="waar" word="waaromtrent"/>
+        <node begin="2" cat="ssub" end="8" id="6" rel="body">
+          <node begin="2" end="3" id="7" index="1" rel="mod"/>
+          <node begin="3" case="nom" def="def" end="4" gen="de" getal="ev" id="8" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+          <node begin="4" end="5" id="9" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="5" cat="ap" end="7" id="10" rel="predc">
+            <node begin="5" end="6" id="11" lemma="zo" pos="adv" postag="BW()" pt="bw" rel="mod" root="zo" word="zo"/>
+            <node aform="base" begin="6" buiging="zonder" end="7" graad="basis" id="12" infl="no_e" lemma="zeker" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="hd" root="zeker" vform="adj" word="zeker"/>
+          </node>
+          <node begin="7" end="8" id="13" infl="sg1" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" tense="present" word="ben" wvorm="pv"/>
+        </node>
+      </node>
+    </node>
+  </node>
+  <sentence>Het punt waaromtrent ik niet zo zeker ben</sentence>
+</alpino_ds>
