@@ -767,8 +767,11 @@ unknown_word_heuristic(P1,R1,W,_Ws,"dashed_mwu|~p|~p~n",
     split_string(Codes,"-",[C1,C2|CTail]),
     codes_words_to_words([C1,C2|CTail],[W1,W2|Tail]),
     alpino_lex:xl(W1,Tag0,_,[W2|Tail],[]),
-    (   Tag0 = with_dt(Tag,_)
-    ->  true
+    (   Tag0 = with_dt(Tag1,_)
+    ->  (   Tag1 == complex_etc
+	->  Tag = etc
+	;   Tag = Tag1
+	)
     ;   Tag0 = Tag
     ),
     P is P1 + 1,
