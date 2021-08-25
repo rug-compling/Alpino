@@ -705,6 +705,7 @@ context_dependent_tag(adjective(stof),'ADJ(nom,basis,met-e,zonder-n,stan)',_Stem
     noun_path(Path).
 
 context_dependent_tag(number(hoofd(_)),'SPEC(symb)',Stem,_,_,_) :-
+    atom(Stem),
     atom_codes(Stem,[N1,45,N2]),
     N1 > 47, N2 < 58,
     N2 > 47, N2 < 58.
