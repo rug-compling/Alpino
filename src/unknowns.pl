@@ -1036,6 +1036,7 @@ unknown_word_heuristic(P0,R0,W0,_,"subjunctive|~p|~p~n",[W,Stems],_,len(1)) :-
     atom_concat(W,n,Inf),
     P is P0+1, R is R0+1,
     findall(Stem,(alpino_lex:lexicon(verb(Hz,inf,Sc),Stem,[Inf],[],_),
+		  \+ alpino_lex:impossible_subcat_infl_combination(verb(Hz,subjunctive,Sc)),
 		  assert_tag(P0,P,R0,R,Stem,subjunctive,
 			     verb(Hz,subjunctive,Sc))
 		 ),[H0|T0]

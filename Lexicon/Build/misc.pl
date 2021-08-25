@@ -2158,6 +2158,7 @@ mijn_vaders_mijn('m\'n',mijn).
 mijn_vaders_mijn(zijn,zijn).
 mijn_vaders_mijn('z\'n',zijn).
 mijn_vaders_mijn(haar,haar).
+mijn_vaders_mijn(haars,haar).  %ouderwets
 mijn_vaders_mijn('d\'r',haar).
 mijn_vaders_mijn(hun,hun).
 mijn_vaders_mijn(jouw,jou).
@@ -2175,8 +2176,11 @@ mijn_vaders_vaders(stief_vader,stiefvaders).
 mijn_vaders_vaders(stief_moeder,stiefmoeders).
 mijn_vaders_vaders(vriend,vriends).
 mijn_vaders_vaders(vriendin,vriendins).
+mijn_vaders_vaders(zuster,zusters).
 mijn_vaders_vaders(opa,'opa\'s').
 mijn_vaders_vaders(oma,'oma\'s').
+mijn_vaders_vaders(man,mans).
+mijn_vaders_vaders(minnaar,minnaars).
 
 
 m(welk,          determiner(welke,rwh,nmod,pro,yparg),   welke).

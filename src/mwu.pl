@@ -46,7 +46,8 @@ mwu_postag('Algemene Kinderbijslagwet',['ADJ(prenom,basis,met-e,stan)','N(soort,
 mwu_postag('Algemene Maatregel van Bestuur',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)','VZ(init)','N(soort,ev,basis,onz,stan)'],[algemeen,maatregel,van,bestuur]).
 mwu_postag('Algemene Ouderdomswet',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[algemeen,ouderdomswet]).
 mwu_postag('Algemene Vergadering',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[algemeen,vergadering]).
-mwu_postag('alleen niet',['BW()','BW()'],[alleen,niet]).
+mwu_postag('alleen maar',['BW()','BW()'],[alleen,maar]).
+mwu_postag('alleen niet',['BW()','BW()'],[niet,alleen]).
 mwu_postag('al naargelang',['BW()','VG(onder)'],[al,naargelang]).
 mwu_postag('Al Qaeda-kopstuk',['SPEC(deeleigen)','N(soort,ev,basis,onz,stan)'],['Al','Qaeda_kopstuk']).
 mwu_postag('Al Qaida-man',['SPEC(deeleigen)','N(soort,ev,basis,zijd,stan)'],['Al','Qaida_man']).
