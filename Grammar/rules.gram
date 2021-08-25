@@ -10360,7 +10360,23 @@ comparative_structure(Comp,XP,CompP) :-
     Comp => comparative,
     unify_mods(XP),
     XP:tags =?> [],
+    if_defined(XP:slash,Slash,[]),
+    NotNP /=> np,
+    EmptyNP => np,
+    EmptyNP:hstem => [],
+    EmptyNP:subn => sub_noun,
+    EmptyNP:case => (obl;acc;nom),
+    EmptyNP:dt => [],
+    EmptyNP:allows_drop => yes,
+    when(nonvar(Slash),
+	 (  Slash = []
+	 ;  Slash = [SlashCat],
+	     (  SlashCat = NotNP
+	     ;  SlashCat = EmptyNP
+	     )
+	 )),
     cmp_body_structure(Comp,XP,CompP,cp).
+
 
 grammar_rule(comparative(np), CompP, [ Comp, XP ]) :-
     max_np(XP),
