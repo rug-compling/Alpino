@@ -173,6 +173,32 @@ t(preposition(A,_,Sc),Tag) :-
 
 t(pp(_),pp).
 
+%% don't distinguish between reflexive and normal pronoun
+%% complicated because wk/pro for normal pronouns
+
+t(reflexive(fir,sg),me).
+t(pronoun(nwh,fir,sg,de,dat_acc,def,wkpro),me).
+t(pronoun(nwh,fir,sg,de,dat_acc,def),me).
+t(pronoun(nwh,fir,both,de,dat_acc,def),me).
+t(pronoun(nwh,fir,sg,de,dat_acc,def),me).
+
+t(reflexive(u_thi,both),zich).
+t(pronoun(nwh,thi,both,de,dat_acc,def,wkpro),zich).
+t(pronoun(nwh,thi,both,de,dat_acc,def),zich).
+
+t(reflexive(je,both),je).
+t(pronoun(nwh,je,sg,de,both,def,wkpro),je).
+t(pronoun(nwh,je,both,de,dat_acc,def),je).
+
+t(reflexive(fir,pl),ons).
+t(pronoun(nwh,fir,pl,de,dat_acc,def),ons).
+
+t(reflexive(u,sg),u).
+t(pronoun(nwh,u,sg,de,both,def),u).
+
+t(reflexive(je,pl),jullie).
+t(pronoun(nwh,je,pl,de,both,def),jullie).
+
 t_subcat(ninv(Frame0,_),Frame):-
     !,
     t_subcat(Frame0,Frame).
