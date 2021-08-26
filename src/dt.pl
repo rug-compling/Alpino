@@ -1356,26 +1356,58 @@ lexical_feature_val_(Sc,Sc).
 
 converse_phantom(Tree0,Tree) :-
     get_phantoms(Ps),
-    converse_phantom(Tree0,Tree,Ps,_).
+    converse_phantom(Tree0,Tree1,Ps,_,Is,[]),
+    remove_removed_is(Tree1,Tree,Is).
 
-converse_phantom(tree(Rel/Node,IX,Ds0),tree(Rel/Node,IX,Ds),Ps0,Ps):-
-    converse_phantom_ds(Ds0,Ds,Ps0,Ps).
+converse_phantom(tree(Rel/Node,IX,Ds0),tree(Rel/Node,IX,Ds),Ps0,Ps,Is0,Is):-
+    converse_phantom_ds(Ds0,Ds,Ps0,Ps,Is0,Is).
 
-converse_phantom_ds(Ds0,Ds,Ps0,Ps) :-
+remove_removed_is(tree(Node,Ix,Ds0), tree(Node,Ix,Ds), Is) :-
+    remove_removed_is_ds(Ds0,Ds,Is).
+
+remove_removed_is_ds(Ds0,Ds,Is) :-
+    lists:select(D,Ds0,Ds1),
+    D = tree(_,i(I),_),
+    lists:member(I,Is),
+    !,
+    remove_removed_is_ds(Ds1,Ds,Is).
+remove_removed_is_ds(Ds0,Ds,Is) :-
+    remove_removed_is_ds_ds(Ds0,Ds,Is).
+
+remove_removed_is_ds_ds([],[],_).
+remove_removed_is_ds_ds([H0|T0],[H|T],Is) :-
+    remove_removed_is(H0,H,Is),
+    remove_removed_is_ds_ds(T0,T,Is).
+
+converse_phantom_ds(Ds0,Ds,Ps0,Ps,[I|Is0],Is) :-
     select(P0,Ps0,Ps1),
     select(D,Ds0,Ds1),
-    starts_with(D,P0),
+    starts_with(D,P0,I),
     !,
-    converse_phantom_ds(Ds1,Ds,Ps1,Ps).
+    converse_phantom_ds(Ds1,Ds,Ps1,Ps,Is0,Is).
 
-converse_phantom_ds([],[],Ps,Ps).
-converse_phantom_ds([H0|T0],[H|T],Ps0,Ps) :-
-    converse_phantom(H0,H,Ps0,Ps1),
-    converse_phantom_ds(T0,T,Ps1,Ps).
+converse_phantom_ds(Ds0,Ds,Ps0,Ps,Is0,Is) :-
+    select(P0,Ps0,Ps1),
+    select(D,Ds0,Ds1),
+    is_part(D,D1,P0),
+    !,
+    converse_phantom_ds([D1|Ds1],Ds,Ps1,Ps,Is0,Is).
 
-starts_with(tree(_Rel/(_Pos:_Word/[Pos,_]),_,[]),Pos).
-starts_with(tree(_,_,[Daughter]),Pos) :-
-    starts_with(Daughter,Pos).
+converse_phantom_ds([],[],Ps,Ps,Is,Is).
+converse_phantom_ds([H0|T0],[H|T],Ps0,Ps,Is0,Is) :-
+    converse_phantom(H0,H,Ps0,Ps1,Is0,Is1),
+    converse_phantom_ds(T0,T,Ps1,Ps,Is1,Is).
+
+starts_with(tree(_Rel/(_Pos:_Word/[Pos,_]),i(Ix,_),[]),Pos,Ix).
+starts_with(tree(_,_,[Daughter]),Pos,Ix) :-
+    starts_with(Daughter,Pos,Ix).
+
+is_part(tree(Rel/(Tag:Word/[Pos0,Pos]),Ix,[]),Tree,Pos1) :-
+    Pos0 < Pos1,
+    Pos1 < Pos,
+    !,
+    Pos2 is Pos - 1,
+    Tree = tree(Rel/(Tag:Word/[Pos0,Pos2]),Ix,[]).
 
 get_phantoms(Ps) :-
     try_hook(alpino_lexical_analysis:user_skips(S),S=[]),
@@ -1384,7 +1416,7 @@ get_phantoms(Ps) :-
 
 member_phantom_skip(Q,S) :-
     member(phantom_skip(P),S),
-    alpino_lexical_analysis:tag(P,_,Q,_,_,_,_,_).
+    alpino_lexical_analysis:rpos(P,Q).
 
 renumber_positions(tree(Node0,Ix,Ds0),tree(Node,Ix,Ds),Ps) :-
     renumber_positions_node(Node0,Node,Ps),
