@@ -12278,6 +12278,8 @@ n([mass(gedrevenheid)],de,[]).
 
 n([pl(gedrochten),sg(gedrocht)],het,[app_measure]).
 
+n([mass(gedruis)],het,[],[feest]).
+
 n([mass(geduld)],het,[]).
 
 n([mass(geel)],het,[],[licht]).
@@ -22147,6 +22149,8 @@ n([sg([missing,link]),pl([missing,links])],de,[]).
 
 n([pl(missionarissen),sg(missionaris)],de,[]).
 
+n([mass(misnoegen)],het,[]).
+
 n([pl(misstanden),sg(misstand)],de,[subject_sbar]).
 
 n([pl(misstappen),sg(misstap)],de,[sbar,vp],[dim(misstapje)]).
@@ -22156,6 +22160,8 @@ n([pl(misten),sg(mist)],de,[]).
 n([mass(mister)],de,[]).
 
 n([sg(mistrap),pl(mistrappen)],de,[]).
+
+n([mass(mistrouwen)],het,[]).
 
 n([pl(misvattingen),sg(misvatting)],de,[sbar,vp]).
 
@@ -39666,6 +39672,8 @@ n([pl(weiden),sg(weide),sg(wei)],de,[],[dim(weitje)]).
 n([pl(weigeringen),sg(weigering)],de,[vp]).
 
 n([pl(weilanden),sg(weiland)],het,[]).
+
+n([sg(weinigje)],het,[mod,measure]).  %ouderwets
 
 n([sg(weit)],het,[]). % zoals boekweit
 

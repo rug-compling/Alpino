@@ -19114,6 +19114,9 @@ a([e(ijle),
 a([e(ijlingse),
    no_e(ijlings)],oadv,[],[]).
 
+a([e(ijselijke),
+   no_e(ijselijk)],adv,[],[]).
+
 a([e(ijverige),
    er(ijveriger),
    ere(ijverigere),

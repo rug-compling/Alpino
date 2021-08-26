@@ -1782,6 +1782,8 @@ spelling_variant31(in,dienst,name, indienstname).
 spelling_variant31(so,wie,so,      sowieso).
 spelling_variant31(tot,stand,koming,totstandkoming).
 spelling_variant31('?','?',n,      één).  % part of SONAR
+spelling_variant31(te,zelfder,tijd,tezelfdertijd).
+spelling_variant31(ter,zelfder,tijd,tezelfdertijd).  % oud
 
 spelling_variant31(in,en,intriest,'in-en-in-triest').
 spelling_variant31('in-',en,intriest,'in-en-in-triest').
@@ -1885,6 +1887,8 @@ spelling_variant21(tegen,partij,  tegenpartij).
 spelling_variant21(te,gemoet,     tegemoet).
 spelling_variant21(te,zamen,      samen).
 spelling_variant21(te,samen,      samen).
+spelling_variant21(tezelfder,tijd,tezelfdertijd).
+spelling_variant21(terzelfder,tijd,tezelfdertijd).  % oud
 spelling_variant21(te,zijnertijd, tezijnertijd).
 spelling_variant21(ten,gevolge,   tengevolge).
 spelling_variant21(ter,zake,      terzake).

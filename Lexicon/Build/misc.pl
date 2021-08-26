@@ -2166,6 +2166,7 @@ mijn_vaders_mijn(hun,hun).
 mijn_vaders_mijn(jouw,jou).
 mijn_vaders_mijn(jullie,jullie).
 mijn_vaders_mijn(uw,u).
+mijn_vaders_mijn(des,de).
 
 mijn_vaders_vaders(broer,broers).
 mijn_vaders_vaders(broeder,broeders).
@@ -2183,7 +2184,7 @@ mijn_vaders_vaders(opa,'opa\'s').
 mijn_vaders_vaders(oma,'oma\'s').
 mijn_vaders_vaders(man,mans).
 mijn_vaders_vaders(minnaar,minnaars).
-
+mijn_vaders_vaders(jongeling,jongeling).
 
 m(welk,          determiner(welke,rwh,nmod,pro,yparg),   welke).
 %% m(welk,          determiner(welke,rwh,nmod,pro,yparg),   [de,welke]). % VL; now parse_only
@@ -6707,6 +6708,7 @@ m(eenieder,     pronoun(nwh,thi,sg,de,both,def,strpro),eenieder).
 m(één,          pronoun(nwh,thi,sg,de,both,indef,strpro),eentje).
 m(elkaar,       pronoun(nwh,thi,pl,de,dat_acc,def),elkaar).
 m(elkander,     pronoun(nwh,thi,pl,de,dat_acc,def),elkander).
+m(elkeen,       pronoun(nwh,thi,sg,de,both,def,strpro),elkeen).
 m(ge,           pronoun(nwh,u,sg,de,both,def),ge).
 m(gene,         pronoun(nwh,thi,pl,de,both,def,strpro),genen).
 m(gij,          pronoun(nwh,u,sg,de,nom,def),gij).
