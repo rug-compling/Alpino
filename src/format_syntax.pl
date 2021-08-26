@@ -395,7 +395,8 @@ frames_to_postags(Frames,Result,Words,PosTags) :-
 
 add_missing_postags(PosTags0,PosTags,Result) :-
     alpino_data:result_term(_,Words0,_,_,_,Result),
-    alpino_lexical_analysis:replace_alt(Words0,0,Words),
+    alpino_lexical_analysis:replace_alt(Words0,0,Words1),
+    alpino_treebank:remove_phantoms(Words1,Words),
     add_missing_postags_(PosTags0,Words,0,PosTags).
 
 add_missing_postags_([],Str,N,PosTags) :-
