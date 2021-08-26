@@ -1284,6 +1284,8 @@ tag(welteruste).
 tag(welterusten).
 tag(weltruste).
 tag(weltrusten).
+tag([wel,te,ruste]).
+tag([wel,te,rusten]).
 tag(woh).
 tag(wauw).
 tag(waauw).
@@ -5860,6 +5862,7 @@ loc_adverb([ter,perse]).
 loc_adverb([ter,plaatse]).  % not pp: 'ter plaatse waar ...'; cf also postnp_adverb
 loc_adverb(terplaatse).
 loc_adverb(thuis).
+loc_adverb([te,huis]).
 loc_adverb(tussenbeide).
 loc_adverb(tussendoor).
 loc_adverb(tussenin).    % 
@@ -5933,6 +5936,7 @@ dir_adverb(buitenom).
 dir_adverb(derwaarts).
 dir_adverb([heen,en,weer]).
 dir_adverb('heen-en-weer').
+dir_adverb(herwaarts).
 dir_adverb(heuvelaf).
 dir_adverb(heuvelop).
 dir_adverb([kopje,onder]).
@@ -6057,6 +6061,7 @@ tmp_adverb(gisterennamiddag).
 tmp_adverb(gisterenmorgen).
 tmp_adverb(gisterennacht).
 tmp_adverb(gisterenochtend).
+tmp_adverb(hedenavond).
 tmp_adverb(indertijd). 
 tmp_adverb(kortgeleden).	% tot kortgeleden
 tmp_adverb(maandags).
@@ -6750,8 +6755,8 @@ m(mezelf,       pronoun(nwh,fir,sg,de,dat_acc,def),mezelf).
 m(mezelf,       pronoun(nwh,fir,sg,de,dat_acc,def),mezelve).
 m(mij,          pronoun(nwh,fir,sg,de,dat_acc,def),mij).
 m(mijn,         pronoun(nwh,fir,sg,both,gen,def),mijner).
-m(mijzelf,      pronoun(nwh,fir,both,de,dat_acc,def),mijzelf).
-m(mijzelf,      pronoun(nwh,fir,both,de,dat_acc,def),mijzelve).
+m(mijzelf,      pronoun(nwh,fir,both,de,dat_acc,def),mijzelf).  % why both and not sg???
+m(mijzelf,      pronoun(nwh,fir,both,de,dat_acc,def),mijzelve). % why both and not sg???
 m(niemand,      pronoun(nwh,thi,sg,de,both,indef,strpro),niemand).
 m(ons,          pronoun(nwh,fir,pl,de,dat_acc,def),ons).
 m(onszelf,      pronoun(nwh,fir,pl,de,dat_acc,def),onszelf).

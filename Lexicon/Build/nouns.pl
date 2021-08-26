@@ -3061,6 +3061,7 @@ n([sg(avond),pl(avonden)],de,[measure,temp_mod,sbar],
    donderdag,
    vrijdag,
    zaterdag,
+   feest,
    inspraak,
    kerst,
    klaverjas,
@@ -5769,6 +5770,9 @@ n([sg(booswicht),pl(booswichten)],de,[]).
 n([pl(boten),sg(boot)],de,[np_app_measure],
   [s(huwelijk),
    kanonneer,
+   mail,
+   redding,
+   s(redding),
    speed,
    woon,
    dim(bootje)]).
@@ -5823,7 +5827,8 @@ n([pl(borrels),sg(borrel)],de,[],
 
 n([pl(borsten),sg(borst)],de,[],
   [linker,
-   rechter]).
+   rechter,
+   dim(borstje)]).
 
 n([pl(borstels),sg(borstel)],de,[],[dim(borsteltje)]).
 
@@ -6160,7 +6165,9 @@ n([pl(brochures),sg(brochure)],de,[],
 
 n([sg(broed)],het,[]).
 
-n([pl(broederen),pl(broeders),sg(broeder)],de,[],[dim(broedertje)]).
+n([pl(broederen),pl(broeders),sg(broeder)],de,[],
+  [schoon,
+   dim(broedertje)]).
 
 n([pl(broederschappen),sg(broederschap)],de,[]).
 
@@ -6419,7 +6426,9 @@ n([pl(bureaus),pl('bureau\'s'),sg(bureau),sg(buro),pl('buro\'s')],both,
    project,
    rating,
    reclame,i(reclame,reklame),
+   redactie,
    reis,
+   schrijf,
    staf,
    statistiek,
    stem,
@@ -9256,6 +9265,7 @@ n([pl(docentes),sg(docente)],de,[app_measure],[gast]).
 
 n([pl(dochteren),pl(dochters),sg(dochter)],de,[],
   [internet,
+   s(koning),
    schoon,
    dim(dochtertje)]).
 
@@ -12429,6 +12439,7 @@ n([pl(gelden),sg(geld)],het,[],
    drugs,
    s(gemeenschap),
    inschrijf,
+   kost,
    leer,
    les,
    los,
@@ -13134,7 +13145,8 @@ n([pl(gezelschappen),sg(gezelschap)],het,[],
 n([pl(gezichten),sg(gezicht)],het,[sbar,van_sbar]).
 
 n([pl(gezichten),sg(gezicht)],het,[],
-  [s(stad),
+  [bleek, % in oude romans
+   s(stad),
    dim(gezichtje)]).
 
 n([pl(gezichtskringen),sg(gezichtskring)],de,[]).
@@ -13294,7 +13306,7 @@ n([mass(gnosis)],de,[]).
 
 n([mass(go)],both,[]).
 
-n([pl(goals),sg(goal)],de,[measure]).
+n([pl(goals),sg(goal)],de,[measure],[dim(goaltje)]).
 
 n([sg(goalgetter),pl(goalgetters)],de,[]).
 
@@ -14695,7 +14707,9 @@ n([pl(hetzes),sg(hetze)],de,[]).
 
 n([pl(heupen),sg(heup)],de,[]).
 
-n([pl(heuvelen),pl(heuvels),sg(heuvel)],de,[],[dim(heuveltje)]).
+n([pl(heuvelen),pl(heuvels),sg(heuvel)],de,[],
+  [vlucht,
+   dim(heuveltje)]).
 
 n([sg(hevel),pl(hevels)],de,[]).
 
@@ -15268,6 +15282,7 @@ n([pl(huizen),sg(huis)],het,[np_app_measure],
    tussen,
    vakantie,
    verpleeg,
+   voor,
    i(vorst,vorsten),
    wijn,
    dim(huisje)]).
@@ -16561,7 +16576,7 @@ n([sg(jojo),pl('jojo\'s')],de,[]).
 
 n([sg(joker),pl(jokers)],de,[]).
 
-n([pl(jongen),sg(jong)],het,[]).
+n([pl(jongen),sg(jong)],het,[],[]).
 
 n([pl(jongedames),sg(jongedame)],de,[]).
 
@@ -16574,6 +16589,9 @@ n([pl(jongemannen),sg(jongeman)],de,[]).
 n([pl(jongens),sg(jongen)],de,[],
   [buur,
    loop,
+   neger, % excuus, komt in oude romans zo voor
+   school,
+   straat,
    dim(jongetje)]).
 
 n([stem(jong),
@@ -17242,6 +17260,7 @@ n([pl(kasten),sg(kast)],de,[],
    flipper,
    i(glas,glazen),
    i(handschoen,handschoenen),
+   hang,
    gok,
    kleding,
    lade,
@@ -17341,6 +17360,7 @@ n([sg(keizersnede),pl(keizersnedes)],de,[]).
 n([pl(kelders),sg(kelder)],de,[],
   [graf,
    dim(keldertje),
+   provisie,
    schuil,
    wijn]).
 
@@ -17876,6 +17896,7 @@ n([pl(klodders),sg(klodder)],de,[measure],[dim(kloddertje)]).
 
 n([pl(klokken),sg(klok)],de,[],
   [nood,
+   toren,
    dim(klokje)]).
 
 n([pl(klokhuizen),sg(klokhuis)],het,[]).
@@ -17940,7 +17961,9 @@ n([pl(knaagdieren),sg(knaagdier)],het,[]).
 
 n([sg(knaak),pl(knaken)],de,[],[medicijn]).
 
-n([pl(knapen),sg(knaap)],de,[],[dim(knaapje)]).
+n([pl(knapen),sg(knaap)],de,[],
+  [schild,
+   dim(knaapje)]).
 
 n([sg(knak),pl(knakken)],de,[]).
 
@@ -20747,6 +20770,7 @@ n([pl(machines),sg(machine)],de,[],
    s(codering),
    keuken,
    type,
+   vlieg,
    zoek,
    dim(machientje),
    dim(machinetje)]).
@@ -21446,7 +21470,9 @@ n([mass(meerwaarde)],de,[]).
 n([pl(mezen),sg(mees)],de,[]).
 
 n([pl(meesters),sg(meester)],de,[],
-  [concert,
+  [boven,
+   concert,
+   hoofd,
    ijs,
    school,
    dim(meestertje)]).
@@ -21748,7 +21774,8 @@ n([sg(metropoliet),pl(metropolieten)],de,[]).
 
 n([pl(metra),pl(metrums),sg(metrum)],het,[]).
 
-n([pl(metselaars),sg(metselaar)],de,[]).
+n([pl(metselaars),sg(metselaar)],de,[],
+  [dim(metselaartje)]).
 
 n([pl(meubelen),pl(meubels),sg(meubel)],het,[],[dim(meubeltje)]).
 
@@ -23996,9 +24023,9 @@ n([mass(onderwijskunde)],de,[]).
 
 n([mass(onderwijsveld)],het,[]).
 
-n([pl(onderwijzers),sg(onderwijzer)],de,[]).
+n([pl(onderwijzers),sg(onderwijzer)],de,[],[hoofd]).
 
-n([pl(onderwijzeressen),sg(onderwijzeres)],de,[]).
+n([pl(onderwijzeressen),sg(onderwijzeres)],de,[],[hoofd]).
 
 n([mass(onderworpenheid)],de,[]).
 
@@ -24420,6 +24447,9 @@ n([pl(oorkonden),pl(oorkondes),sg(oorkonde)],de,[]).
 n([sg(oorkussen),pl(oorkussens)],het,[]).
 
 n([pl(oorlellen),sg(oorlel)],de,[],[dim(oorlelletje)]).
+
+%% ouderwets, "toestemming"
+n([sg(oorlof)],both,[vp],[]).
 
 n([pl(oorlogen),sg(oorlog),mass(oorlog)],de,[],
   [broeder,
@@ -27121,7 +27151,8 @@ n([pl(potten),sg(pot)],de,
 
 n([pl(potten),sg(pot)],de,
   [],
-  [koffie,
+  [inkt,
+   koffie,
    i(strop,stroppen),
    thee,
    toilet,
@@ -28345,7 +28376,9 @@ n([mass(ratatouille)],de,[]).
 
 n([sg(ratel),pl(ratels)],de,[]).
 
-n([pl(ratten),sg(rat)],de,[],[muskus]).  % geen mus_kus_rat
+n([pl(ratten),sg(rat)],de,[],
+  [water,
+   muskus]).			% geen mus_kus_rat
 
 n([pl(ratificaties),sg(ratificatie)],de,[]).
 
@@ -28759,6 +28792,7 @@ n([pl(regelen),pl(regels),sg(regel)],de,
    huis,
    milieu,
    privacy,
+   straf,
    dim(regeltje)]).
 
 n([pl(regelgevingen),sg(regelgeving)],de,[sbar,vp]).
@@ -30304,7 +30338,10 @@ n([mass(schemer)],de,[]).
 
 n([mass(schemerdonker)],het,[]).
 
-n([pl(schemeringen),sg(schemering)],de,[]).
+n([pl(schemeringen),sg(schemering)],de,[],
+  [avond,
+   morgen,
+   ochtend]).
 
 n([pl(schemerlampen),sg(schemerlamp)],de,[]).
 
@@ -30625,7 +30662,7 @@ n([pl(schotels),sg(schotel)],de,[measure],
    stoof,
    dim(schoteltje)]).
 
-n([pl(schotsen),sg(schots)],de,[]).
+n([pl(schotsen),sg(schots)],de,[],[ijs]).
 
 n([pl(schouders),sg(schouder)],de,[],
   [linker,
@@ -32054,6 +32091,7 @@ n([pl(spelen),pl(spellen),sg(spel)],het,[app_measure],
    simulatie,
    h(tv),
    video,
+   voetbal,
    dim(spelletje)]).
 
 n([pl(spelen),pl(spellen),sg(spel)],het,[],
@@ -33067,6 +33105,7 @@ n([pl(stoelen),sg(stoel)],de,[],
    keuken,
    i(kind,kinder),
    leun,
+   leuning,
    lig,
    s(passagier),
    preek,
@@ -33230,6 +33269,7 @@ n([pl(stralen),sg(straal)],de,[measure],[dim(straaltje)]).
 
 n([pl(stralen),sg(straal)],de,[],
   [h('UV'),
+   bliksem,
    röntgen,
    dim(straaltje)]).
 
@@ -33848,6 +33888,7 @@ n([pl(tafelen),pl(tafels),sg(tafel)],de,[measure],
    eet,
    s(inhoud),
    keuken,
+   koffie,
    massage,
    s(onderhandeling),
    ontbijt,
@@ -36515,7 +36556,9 @@ n([pl(verbintenissen),sg(verbintenis)],de,[sbar,vp]).
 n([mass(verbittering)],de,[]).
 
 n([pl(verblijven),sg(verblijf)],het,[],
-  [i(gast,gasten)]).
+  [i(gast,gasten),
+   nacht
+  ]).
 
 n([pl(verboden),sg(verbod)],het,
   [sbar,vp]).
@@ -37248,7 +37291,7 @@ n([mass(verruiming)],de,[]).
 
 n([pl(verrukkingen),sg(verrukking)],de,[sbar,vp]).
 
-n([pl(verzen),sg(vers)],het,[]).
+n([pl(verzen),sg(vers)],het,[],[dim(versje)]).
 
 n([sg([vers,twee])],het,[subject_sbar]).
 
@@ -38073,6 +38116,7 @@ n([pl(vluchten),sg(vlucht)],de,[temp_mod],
    nacht,
    oefen,
    over,
+   proef,
    ramp,
    retour,
    rond,
@@ -38203,7 +38247,9 @@ n([pl(voetstukken),sg(voetstuk)],het,[]).
 n([pl(voetzolen),sg(voetzool)],de,[]).
 
 n([pl(vogelen),pl(vogels),sg(vogel)],de,[],
-  [ijs,
+  [s(geluk),
+   s(ongeluk),
+   ijs,
    roof,
    struis,
    trek,
@@ -38248,6 +38294,7 @@ n([pl(volières),sg(volière)],de,[]).
 n([pl(volken),pl(volkeren),sg(volk)],het,[],
   [i('Indiaan','Indianen'),
    i('Indiaan',indianen),
+   s(krijg),
    dim(volkje)]).
 
 n([mass(volkenkunde)],de,[]).
@@ -39567,6 +39614,7 @@ n([pl(wegen),sg(weg),
    auto,
    i(auto_snel,autosnel),
    berg,
+   grind,
    hoofd,
    land,
    s(leven),
@@ -40219,6 +40267,7 @@ n([pl(winkels),sg(winkel)],de,[],
    boek,
    i(dier,dieren),
    nacht,
+   i(sigaar,sigaren),
    speelgoed,
    vis,
    web,
@@ -40690,6 +40739,7 @@ n([pl(zalen),sg(zaal)],de,[np_app_measure],
    muziek,
    parochie,
    toon,
+   troon,
    dim(zaaltje)]).
 
 n([mass(zachtheid)],de,[]).
