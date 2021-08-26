@@ -113,6 +113,7 @@ adverb(bijvoorbaat).
 adverb(bijgevolg).
 adverb(bijkans).
 adverb(bijtijds).
+adverb([bij,tijds]).
 adverb([bij,verre]).
 adverb(bijwijlen).
 adverb([bij,wijze,van]).
@@ -266,6 +267,7 @@ adverb([in,groten,getale]).
 adverb([in,het,geheel]).
 adverb([in,het,minst]).
 adverb([in,no,time]).
+adverb([in,tijds]).
 adverb([in,wezen]).
 adverb(inderhaast).
 adverb(ineens).
@@ -285,6 +287,7 @@ adverb([koste,wat,koste]).
 adverb([kostte,wat,koste]).
 adverb([kostte,wat,kostte]).
 adverb([kost,wat,kost]).
+adverb(krek).
 adverb(kriskras).
 adverb(laatstelijk).
 adverb(languit).
@@ -520,6 +523,7 @@ adverb(vj).  %  vorig jaar; bij economische berichten
 adverb(vlnr).
 adverb('v.l.n.r.').
 adverb(voetstoots).
+adverb(volgaarne).
 adverb(volop).
 adverb(voluit).
 adverb([voor,het,geval,dat]).

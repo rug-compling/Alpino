@@ -1109,6 +1109,7 @@ mwu_postag('te allen tijde',['VZ(init)','VNW(onbep,det,dat,prenom,met-e,evmo)','
 mwu_postag('te gast',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[te,gast]).
 mwu_postag('te gelegenertijd',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[te,gelegenertijd]).
 mwu_postag('te goed',['VZ(init)','ADJ(vrij,basis,zonder)'],[te,goed]).
+mwu_postag('te huis',['VZ(init)','N(soort,ev,basis,onz,stan)'],[te,huis]).
 mwu_postag('te koop',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[te,koop]).
 mwu_postag('te kort',['VZ(init)','ADJ(vrij,basis,zonder)'],[te,kort]).
 mwu_postag('te leen',['VZ(init)','N(soort,ev,basis,zijd,stan)'],[te,leen]).
