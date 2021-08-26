@@ -67,17 +67,18 @@ result_to_dt__(Result0,Flag,SortedTree) :-
     ->  true
     ;   copy_term(Result0,Result),
 	alpino_data:result(Result,List,Tokens0),
+	alpino_treebank:remove_phantoms(Tokens0,Tokens1),
 	alpino_format_syntax:result_to_frames(Result,Frames,_),
 	(   nonvar(List)
 	->  get_phantoms(Positions),
 	    graphic_path_dt_list(List,Tree),
 	    rewrite_labels(Tree,TreeWithLabels0),
-	    (   nonvar(Tokens0)
-	    ->  add_nodes_for_missing_tokens(TreeWithLabels0,TreeWithLabels1,Flag,Tokens0,Frames),
-		add_nodes_for_mwu(TreeWithLabels1,TreeWithLabels2,Tokens0)
-	    ;   TreeWithLabels0=TreeWithLabels2
+	    renumber_positions(TreeWithLabels0,TreeWithLabels1,Positions),
+	    (   nonvar(Tokens1)
+	    ->  add_nodes_for_missing_tokens(TreeWithLabels1,TreeWithLabels2,Flag,Tokens1,Frames),
+		add_nodes_for_mwu(TreeWithLabels2,TreeWithLabels,Tokens1)
+	    ;   TreeWithLabels1=TreeWithLabels
 	    ),
-	    renumber_positions(TreeWithLabels2,TreeWithLabels,Positions),
 	    dt_canonical_dt(TreeWithLabels,SortedTree),
 	    check_variable_cat(SortedTree)
 	;   SortedTree = none
@@ -1171,8 +1172,8 @@ guess_tag(Tag0,Tag,Hstem0,H,Hstem,P,P1) :-
     ).
 
 %% in case of time-out, this should really compute the best frame sequence
-guess_tag(Tag,H,Hstem,P,P1) :-
-    (   alpino_lexical_analysis:tag(_,_,P,P1,Hstem,_,_,Tag0)
+guess_tag(Tag,H,Hstem,_P,_) :-
+    (   alpino_lexical_analysis:tag(_,_,_,_,Hstem,H,_,Tag0)
     ->  (    Tag0 = with_dt(Tag,_)
 	->   true
 	;    Tag0 = Tag
@@ -1252,9 +1253,9 @@ find_duplicates_([H|T],N,Dups) :-
     ),
     find_duplicates_(T,H,Dups1).
 
-select_a_position(_,Pos) :-
-    get_phantoms(PosList),
-    member(Pos,PosList).
+%select_a_position(_,Pos) :-
+%    get_phantoms(PosList),
+%    member(Pos,PosList).
 
 select_a_position(tree(Label,_,Ds),Pos) :-
     select_a_position_(Ds,Label,Pos).
