@@ -28,6 +28,7 @@
     add_skip_word/2,
     word_form/1,
     tag/8,
+    rpos/2,
     open_bracket/3, close_bracket/3,
     syn_lex_analysis/4, syn_lex_analysis/6, syn_sem_lex_analysis/10,
     tag_nr/2,
@@ -67,6 +68,7 @@ lexical_analysis_cleanup :-
     retractall(alpino_lex:found_number_expression(_,_,_)),
     retractall(alpino_lex:found_number_expression_word(_,_,_)),
     retractall(word_form(_)),
+    retractall(rpos(_,_)),
     retractall(tag(_,_,_,_,_,_,_,_)),
 %%    retractall(cgn_tag(_,_,_)),
     retractall(index_tag_tag(_,_)),
@@ -281,6 +283,7 @@ lexical_analysis_or_bracket(bracket(close),Rest,Rest1,P0,P,R,R,I,I,BC0,BC,LC,LC)
 lexical_analysis_or_bracket(W,Rest,Rest,P0,P,R0,R,[W|I],I,BC,BC,LC,[W|LC]) :-
     P is P0 + 1,
     R is R0 + 1,
+    assertz(rpos(P0,R0)),
     lexical_analysis_([W|Rest],P0,R0,LC).
 
 open_bracket_type([],[],P0,P) :-

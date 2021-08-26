@@ -395,8 +395,7 @@ frames_to_postags(Frames,Result,Words,PosTags) :-
 
 add_missing_postags(PosTags0,PosTags,Result) :-
     alpino_data:result_term(_,Words0,_,_,_,Result),
-    alpino_lexical_analysis:replace_alt(Words0,0,Words1),
-    alpino_treebank:remove_phantoms(Words1,Words),
+    alpino_lexical_analysis:replace_alt(Words0,0,Words),
     add_missing_postags_(PosTags0,Words,0,PosTags).
 
 add_missing_postags_([],Str,N,PosTags) :-
@@ -520,6 +519,13 @@ ignore_phantoms_([FH0|FT0],Frames,Pos) :-
 
 ignore_phantom(_-frame(_,_,Q0,_,_,_,_,_),FT,Frames,Pos) :-
     Pos =:= Q0, !,
+    renumber_frames(FT,Frames).
+ignore_phantom(A0-frame(P0,P,Q0,Q,A3,A4,A5,A6),FT,[Frame|Frames],Pos) :-
+    Pos > Q0,
+    Pos < Q, !,
+    Q1 is Q -1,
+    P1 is P -1,
+    Frame = A0-frame(P0,P1,Q0,Q1,A3,A4,A5,A6),
     renumber_frames(FT,Frames).
 ignore_phantom(Frame,FT,[Frame|Frames],Pos) :-
     ignore_phantoms_(FT,Frames,Pos).
