@@ -952,18 +952,19 @@ result_hook(parse,_,o(Result,String,_),Flag) :-
     hdrug_flag(display_main_parts,DMP),
     hdrug_flag(display_quality,Q),
     hdrug_flag(compare_cgn,CGN),
+    thread_flag(input,StringInput),
     construct_identifier(Key,No,Identifier),
     ignore_brackets(String,StringNoBrackets),
     (   Th==xml
-    ->  display_quality(Q,Tree,StringNoBrackets,Score,Identifier,QualityString),
+    ->  display_quality(Q,Tree,StringInput,Score,Identifier,QualityString),
 	xml_filename(File,Identifier),
         xml_save(Result,StringNoBrackets,[QualityString],File,normal)
     ;   Th==xml_without_comments
-    ->  display_quality(Q,Tree,StringNoBrackets,Score,Identifier,_QualityString),
+    ->  display_quality(Q,Tree,StringInput,Score,Identifier,_QualityString),
 	xml_filename(File,Identifier),
         xml_save(Result,StringNoBrackets,[],File,normal)
     ;   (  Th==xml_dump ; Th==dump_xml )
-    ->  display_quality(Q,Tree,StringNoBrackets,Score,Identifier,QualityString),
+    ->  display_quality(Q,Tree,StringInput,Score,Identifier,QualityString),
         xml_save(Result,StringNoBrackets,[QualityString],stream(user_output),normal)
 %    ;   Th=ldplayer
 %    ->  format_thistle_script_of_result(Result,String,[])
@@ -1049,7 +1050,7 @@ result_hook(parse,_,o(Result,String,_),Flag) :-
     ),
     (   Q == on
     ->  (   var(QualityString)  % perhaps already done this, above
-	->  display_quality(on,Tree,StringNoBrackets,Score,Identifier,QualityString)
+	->  display_quality(on,Tree,StringInput,Score,Identifier,QualityString)
 	;   true
 	),
 	format(user_error,"~s~n",[QualityString])
@@ -1213,6 +1214,7 @@ extern_phon(L0,L) :-
 extern_phon(L0,L) :-
     nonvar(L0),
     replace_numbers_by_atoms(L0,L1),  % also removes spaces
+    set_thread_flag(input,L1),
     alpino_lexical_analysis:extract_skip_positions(L1,L,[],0,UserSkips),
     retractall(alpino_lexical_analysis:user_skips(_)),
     assertz(alpino_lexical_analysis:user_skips(UserSkips)).
