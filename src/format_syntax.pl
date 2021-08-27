@@ -510,9 +510,15 @@ result_to_frames(Result,Fs,Fs1) :-
 %% assumption: always a very short list of phantoms
 %% so don't worry about efficiency here
 ignore_phantoms([],P,P).
-ignore_phantoms([P0|Ps],F0,F) :-
+ignore_phantoms([P0|Ps0],F0,F) :-
     ignore_phantoms_(F0,F1,P0),
+    add_one(Ps0,Ps),
     ignore_phantoms(Ps,F1,F).
+
+add_one([],[]).
+add_one([P0|P0s],[P|Ps]) :-
+    P is P0 - 1,
+    add_one(P0s,Ps).
 
 ignore_phantoms_([],[],_).
 ignore_phantoms_([FH0|FT0],Frames,Pos) :-
