@@ -1,3 +1,18 @@
+experimental new feature. A word ~w1~w2~w3 is interpreted as
+either word w1, or word w2 or word w3. This is useful, probably,
+only in combination with @alt.  This can be used if a pre-processor
+suspects that a word is mistyped, but also wants to keep the
+original possibility. E.g:
+
+ik ben [ @alt ~u~uw u ] dienaar
+ik was [ @alt ~dien~die dien ] dag al vroeg op
+de [ @alt ~luiden~lieden~luide luiden ] stormden naar het plein
+
+potential not downward compatible: a word that starts with ~ and has a
+further ~ somewere is now only treated as if it is meta.
+
+---
+
 The meta-notation @add_lex is still supported, but only for a single word
 at the time. We now use the tag @alt for such cases (possibly in combination
 with @skip). Refer to the user manual for a few examples. The implemenation

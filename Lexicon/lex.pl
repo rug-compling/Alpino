@@ -187,6 +187,14 @@ next_word(Word,In,Out,His,Context) :-
     hdrug_util:hdrug_flag(parse_or_generate,PG),
     next_word_(PG,Word,In,Out,His,Context).
 
+%% treat ~w1~w2~w3 as either w1, w2 or w3
+%% so starting ~ is required
+next_word_(parse,Next,[Word|Ws],Ws,normal,_) :-
+    atom(Word),
+    alpino_util:split_atom(Word,"~",['',A|C]),
+    !,
+    lists:member(Next,[A|C]).
+
 next_word_(_,Word,[Word|Out],Out,normal,_) :-
     atom(Word).
 
