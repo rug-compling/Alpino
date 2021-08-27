@@ -1466,6 +1466,8 @@ tag(mens).
 tag(mensen).
 tag(moeder).
 tag(monseigneur).
+tag(oma).
+tag(opa).
 tag(pa).
 tag(pap).
 tag(papa).

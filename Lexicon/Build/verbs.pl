@@ -7012,7 +7012,9 @@ v(eet,eet,eten,gegeten,at,aten,
       pc_pp(van),
       mod_pp(bij), %% eet er geroosterd brood bij
       np_pc_pp(van),
-      part_transitive(op)])]).
+      part_transitive(op),
+      part_intransitive(op)  % eet maar lekker op!
+     ])]).
 
 v(effectueer,effectueert,effectueren,geëffectueerd,effectueerde,effectueerden,
     [h([transitive])]).
@@ -25503,10 +25505,8 @@ v(verschaal,verschaalt,verschalen,verschaald,verschaalde,verschaalden,
 v(verschaf,verschaft,verschaffen,verschaft,verschafte,verschaften,
     [h([np_np,
 	so_pp_np,
-	fixed([{[pc(over),acc(informatie)]}],norm_passive),
-        fixed([pc(over),acc(informatie),dat],norm_passive),
-       	fixed([inv(acc(informatie)),pc(over),dat],norm_passive),
-       	fixed([acc(informatie),inv(dat),pc(over)],norm_passive),
+	%% informatie zekerheid opheldering uitleg over ..
+	np_np_mod_pp(over),
 	fixed([{[pc(tot),acc(toegang)]}],norm_passive),
         fixed([pc(tot),acc(toegang),dat],norm_passive),
        	fixed([inv(acc(toegang)),pc(tot),dat],norm_passive),
