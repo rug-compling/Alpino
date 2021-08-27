@@ -10978,6 +10978,7 @@ v(kijk,kijkt,kijken,gekeken,keek,keken,
 	fixed([[tv]],imp_passive),
 	fixed([[op,of,om]],imp_passive),
 	part_pc_pp_refl(uit,voor),  % hij kijkt voor zich uit
+	part_pc_pp_refl(heen,voor),  % hij kijkt voor zich heen; ouderwets
 	part_pc_pp(uit,naar),
 	part_er_pp_sbar(uit,naar),  % ik kijk er naar uit dat ze promoveren
 	part_er_pp_sbar(toe,op),    % we moeten er op toekijken dat   VL
@@ -20875,6 +20876,7 @@ v(spat,spat,spatten,gespat,spatte,spatten,
     [z([ld_pp,
         part_intransitive(af),
 	part_intransitive(op),
+	so_np_ld_pp,  % het zeepsop spat haar in het gezicht
         ap_copula('uit elkaar'),
         fixed([ap_pred('uit elkaar'),pc(in)],no_passive),
 	part_intransitive(uiteen),
@@ -25324,10 +25326,11 @@ v(verouder,veroudert,verouderen,verouderd,verouderde,verouderden,
     [unacc([intransitive])]).
 
 v(verover,verovert,veroveren,veroverd,veroverde,veroverden,
-    [h([transitive,
-	part_transitive(terug),
-	part_np_pc_pp(terug,op),
-	np_pc_pp(op)])]).
+  [h([transitive,
+      refl_np, % hij veroverde zich een mooie positie
+      part_transitive(terug),
+      part_np_pc_pp(terug,op),
+      np_pc_pp(op)])]).
 
 v(verpacht,verpacht,verpachten,verpacht,verpachtte,verpachtten,
     [h([transitive,

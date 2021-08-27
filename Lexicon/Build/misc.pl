@@ -1442,6 +1442,8 @@ tag(jonguhs).
 tag(jow).
 tag(juf).
 tag(juffrouw).
+tag(kerel).
+tag(kindje).
 tag(klootzak).
 tag(lezer).
 tag(liefje).
@@ -1462,6 +1464,7 @@ tag(meester).
 tag(meid).
 tag(mens).
 tag(mensen).
+tag(moeder).
 tag(monseigneur).
 tag(pa).
 tag(pap).
@@ -5632,8 +5635,9 @@ sentence_adverb([in,dier,voege]).
 sentence_adverb([in,extremis]).
 sentence_adverb([in,godsnaam]). 
 sentence_adverb([in,'Godsnaam']). 
-sentence_adverb([in,hemelsnaam]). 
+sentence_adverb([in,hemelsnaam]).
 sentence_adverb([in,'\'s',hemelsnaam]).
+sentence_adverb([in,het,eerst]). % ouderwets?
 sentence_adverb([in,lang]).  % ik heb hem in lang niet gezien
 sentence_adverb([in,the,end]).
 sentence_adverb([in,vredesnaam]).
