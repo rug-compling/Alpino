@@ -859,6 +859,9 @@ infinitive_tag(verb(_,inf,_)).
 infinitive_tag(verb(_,inf(_),_)).
 
 followed_by_proper_name_or_tmp_np(Q1) :-
+    search_tag_r0(Q1,tag(_,_,_,_,_,W,_,_)),
+    lists:member(W,[wapen,huis,drommel]).
+followed_by_proper_name_or_tmp_np(Q1) :-
     search_tag_r0(Q1,tag(_,_,Q1,_,_,_,_,NAME)),
     proper_name_or_tmp_np_tag(NAME).
 followed_by_proper_name_or_tmp_np(Q1) :-

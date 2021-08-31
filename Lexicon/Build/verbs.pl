@@ -119,6 +119,9 @@ t(verb_modal(_,_,_,_,_,_,W0,Z,Sc),W,verb(Z,past(pl),Sc)   ):- mem_eq(W0,W).
 %% moment
 %% weest: also for imparatives, but we don't get that now...
 
+m(v_root(geschied,geschieden),
+  verb(geschiede,unacc,subjunctive,[intransitive])).
+
 %% het zij zo
 m(v_root(ben,zijn),
   verb(zij,unacc,subjunctive,[copula,    % het zij zo
@@ -4701,6 +4704,8 @@ v(breng,brengt,brengen,gebracht,bracht,brachten,
 	fixed([[op,smaak],acc],norm_passive),
 	fixed([[te,berde],acc],norm_passive),
 	fixed([[te,berde],sbar],imp_passive),
+	fixed([[te,binnen],refl],norm_passive),  % ouderwets
+	fixed([[te,binnen],refl,sbar],norm_passive),  % ouderwets
 	fixed([[te,gelde],acc],norm_passive),
 	fixed([[ten,einde],acc],norm_passive),
 	fixed([[teneinde],acc],norm_passive),
@@ -9529,8 +9534,9 @@ v(herleid,herleidt,herleiden,herleid,herleidde,herleidden,
 	np_pc_pp(tot)])]).
 
 v(herneem,herneemt,hernemen,hernomen,hernam,hernamen,
-    [h([intransitive,
-	transitive])]).
+  [h([intransitive,
+      dip_sbar,
+      transitive])]).
 
 v(hernieuw,hernieuwt,hernieuwen,hernieuwd,hernieuwde,hernieuwden,
     [h([transitive])]).
@@ -19491,6 +19497,8 @@ v(schijn,schijnt,schijnen,geschenen,scheen,schenen,
 				% hij is daar helemaal niet over te spreken
 	fixed([[terwille],dat],no_passive),
         part_fixed(toe,[er_pp(aan),ap_pred],no_passive),
+	part_so_copula_vp(toe), % ouderwets: het had ons heerlijk toegeschenen om te blijven
+	part_np_vp_subj(toe),   % ouderwets: het buro had me toegeschenen een paardenstal te zijn
         fixed([pp_pred(van,invloed),pc(op)],no_passive),
         fixed([[van,de,partij]],no_passive),
 	fixed([[van,plan],acc],no_passive),
@@ -21244,7 +21252,9 @@ v(spreek,spreekt,spreken,gesproken,sprak,spraken,
 	part_refl_pc_pp(uit,over),
 	part_refl_pc_pp(uit,tegen),
 	part_refl_pc_pp(uit,voor)]),
-     b([part_intransitive(in)])]).
+     b([part_intransitive(in),
+	part_intransitive(uit)   % ouderwets: nadat hij uitgesproken had
+       ])]).
 
 v(spreid,spreidt,spreiden,gespreid,spreidde,spreidden,
     [h([transitive,
@@ -25579,7 +25589,8 @@ v(verschraal,verschraalt,verschralen,verschraald,verschraalde,verschraalden,
      h([transitive])]).
 
 v(verschrik,verschrikt,verschrikken,verschrikt,verschrikte,verschrikten,
-    [h([transitive])]).
+  [h([transitive,
+      intransitive])]).
 
 v(verschrik,verschrikt,verschrikken,verschrokken,verschrok,verschrokken,
     [unacc([intransitive])]).
@@ -27240,9 +27251,11 @@ v(waak,waakt,waken,gewaakt,waakte,waakten,
 	er_pp_vp(voor)])]).
 
 v(waan,waant,wanen,gewaand,waande,waanden,
-    [h([pred_np,
-	refl_ld_pp,
-	refl_ld_adv])]).
+  [h([pred_np,
+      sbar,			% ouderwets
+      vp,			% ouderwets
+      refl_ld_pp,
+      refl_ld_adv])]).
 
 % de baardmijt waart rond!
 % en het Iglo-spook waart nog altijd door de levensmiddelenindustrie
@@ -27908,10 +27921,12 @@ v(wip,wipt,wippen,gewipt,wipte,wipten,
 	pc_pp(met)])]).
 
 v(wis,wist,wissen,gewist,wiste,wisten,
-    [h([transitive,
-	part_np_np(uit),
-	part_transitive(af),
-	part_transitive(uit)])]).
+  [h([transitive,
+      np_ld_pp,
+      refl_np_ld_pp,  % hij wiste zich een traain uit de ogen
+      part_np_np(uit),
+      part_transitive(af),
+      part_transitive(uit)])]).
 
 v(wissel,wisselt,wisselen,gewisseld,wisselde,wisselden,
     [h([intransitive,

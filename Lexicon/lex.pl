@@ -1792,9 +1792,10 @@ spelling_variant31(tot,stand,koming,totstandkoming).
 spelling_variant31('?','?',n,      één).  % part of SONAR
 spelling_variant31(te,zelfder,tijd,tezelfdertijd).
 spelling_variant31(ter,zelfder,tijd,tezelfdertijd).  % oud
-
+spelling_variant31(wel,is,waar,weliswaar).
 spelling_variant31(in,en,intriest,'in-en-in-triest').
 spelling_variant31('in-',en,intriest,'in-en-in-triest').
+spelling_variant31(als,je,blieft,alsjeblieft).
 
 %% ad2003/ad2004
 spelling_variant31('sji-','\'',ietisch,'sji\'itisch').
@@ -1862,6 +1863,7 @@ spelling_variant21(na,dat,        nadat).
 spelling_variant21(naar,mate,     naarmate).
 spelling_variant21(ofte,wel,      oftewel).
 spelling_variant21(om,heen,       omheen).
+spelling_variant21(op,eens,       opeens).
 spelling_variant21(over,heen,     overheen).
 spelling_variant21(non,actief,    'non-actief').
 spelling_variant21(plus,minus,    plusminus).
@@ -1892,6 +1894,7 @@ spelling_variant21(voor,zover,    voorzover).
 spelling_variant21(vuurwerk,ramp, vuurwerkramp).
 spelling_variant21(waar,toe,      waartoe).
 spelling_variant21(tegen,partij,  tegenpartij).
+spelling_variant21(te,gemoed,     tegemoet).
 spelling_variant21(te,gemoet,     tegemoet).
 spelling_variant21(te,zamen,      samen).
 spelling_variant21(te,samen,      samen).
@@ -2586,6 +2589,7 @@ spelling_variant(ouwerwets,ouderwets).
 spelling_variant(ouwerwetse,ouderwetse).
 spelling_variant(pappie,papa).
 spelling_variant(peerd,paard). % van Ome Loeks
+spelling_variant(peerden,paarden). % van Ome Loeks
 spelling_variant(stukkie,stukje).
 spelling_variant(tuurlijk, natuurlijk).
 spelling_variant('\'tzelfde',hetzelfde).

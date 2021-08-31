@@ -2811,6 +2811,10 @@ nodet_preposition(P,Prep) :-
     instantiated_deprel(P,obj1,N).
 
 te_requires_name(te,N) :-
+    N:subn => sub_noun,
+    N:hstem <=> Hstem,
+    when(nonvar(Hstem),lists:member(Hstem,[wapen,huis,drommel])).
+te_requires_name(te,N) :-
     N:hdet => no,
     N:subn => (sub_name;sub_tmp).  % also 'te 19.00'
 te_requires_name(NotTe,_) :-
@@ -5523,7 +5527,7 @@ so_np_vp_obj(V,C,C) :-
     VP:slash => [],
     het_obj_or_topicalize(VP,Deps,Passive),
     dependents(V,[obj2/Obj2|Deps]),
-    VP:control => control_subj,
+    VP:control => control_subj,  % ???? see next line ????
     control(VP,Obj2).
 
 %% hij haalde het in zijn hoofd om...

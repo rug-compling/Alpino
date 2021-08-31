@@ -5569,6 +5569,8 @@ n([pl(boerinnen),sg(boerin)],de,[],[dim(boerinnetje)]).
 
 n([sg(boeroe),pl(boeroes)],de,[]).
 
+n([sg(boet)],de,[]).  % schuur voor hooi? ouderwets? meervoud?
+
 n([pl(boeten),pl(boetes),sg(boete)],de,[]).
 
 n([pl(boetedoeningen),sg(boetedoening)],de,[]).
@@ -17572,6 +17574,8 @@ n([pl(kijkers),sg(kijker)],de,[],
 n([pl(kikken),sg(kik)],de,[]).
 
 n([pl(kikkers),sg(kikker)],de,[],[dim(kikkertje)]).
+
+n([sg(kikvors),pl(kikvorsen)],de,[],[]).
 
 n([sg(killer),pl(killers)],de,[]).
 
@@ -32633,7 +32637,10 @@ n([pl(stakkers),sg(stakker)],de,[],[dim(stakkertje)]).
 
 n([pl(stallen),sg(stal)],de,[],
   [kerst,
+   i(koe,koeien),
+   i(paard,paarden),
    ren,
+   s(varken),
    dim(stalletje)]).
 
 n([sg(stalker),pl(stalkers)],de,[]).

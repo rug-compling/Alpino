@@ -619,6 +619,7 @@ lemma_root(aan_wikkelen,wikkel_aan) .
 lemma_root(aan_willen,wil_aan) .
 lemma_root(aan_winden,wind_aan) .
 lemma_root(aan_wippen,wip_aan) .
+lemma_root(aan_wissen,wis_aan) .
 lemma_root(aan_woeden,woed_aan) .
 lemma_root(aan_woelen,woel_aan) .
 lemma_root(aan_wonden,wond_aan) .
@@ -5478,6 +5479,7 @@ lemma_root(door_winnen,win_door) .
 lemma_root(door_winteren,winter_door) .
 lemma_root(door_wippen,wip_door) .
 lemma_root(door_wisselen,wissel_door) .
+lemma_root(door_wissen,wis_door) .
 lemma_root(door_witten,wit_door) .
 lemma_root(door_woeden,woed_door) .
 lemma_root(door_woekeren,woeker_door) .
@@ -6562,6 +6564,7 @@ lemma_root(heen_wikkelen,wikkel_heen) .
 lemma_root(heen_willen,wil_heen) .
 lemma_root(heen_winden,wind_heen) .
 lemma_root(heen_wippen,wip_heen) .
+lemma_root(heen_wissen,wis_heen) .
 lemma_root(heen_woeden,woed_heen) .
 lemma_root(heen_woelen,woel_heen) .
 lemma_root(heen_wonden,wond_heen) .
@@ -7470,6 +7473,7 @@ lemma_root(in_winden,wind_in) .
 lemma_root(in_winnen,win_in) .
 lemma_root(in_wippen,wip_in) .
 lemma_root(in_wisselen,wissel_in) .
+lemma_root(in_wissen,wis_in) .
 lemma_root(in_woeden,woed_in) .
 lemma_root(in_woelen,woel_in) .
 lemma_root(in_wonden,wond_in) .
@@ -8410,6 +8414,7 @@ lemma_root(langs_willen,wil_langs) .
 lemma_root(langs_wimpelen,wimpel_langs) .
 lemma_root(langs_winden,wind_langs) .
 lemma_root(langs_wippen,wip_langs) .
+lemma_root(langs_wissen,wis_langs) .
 lemma_root(langs_woeden,woed_langs) .
 lemma_root(langs_woelen,woel_langs) .
 lemma_root(langs_wonden,wond_langs) .
@@ -15031,6 +15036,7 @@ lemma_root(toe_wikkelen,wikkel_toe) .
 lemma_root(toe_willen,wil_toe) .
 lemma_root(toe_winden,wind_toe) .
 lemma_root(toe_wippen,wip_toe) .
+lemma_root(toe_wissen,wis_toe) .
 lemma_root(toe_woeden,woed_toe) .
 lemma_root(toe_woelen,woel_toe) .
 lemma_root(toe_wonden,wond_toe) .
@@ -15684,6 +15690,7 @@ lemma_root(tussen_wikkelen,wikkel_tussen) .
 lemma_root(tussen_willen,wil_tussen) .
 lemma_root(tussen_winden,wind_tussen) .
 lemma_root(tussen_wippen,wip_tussen) .
+lemma_root(tussen_wissen,wis_tussen) .
 lemma_root(tussen_woeden,woed_tussen) .
 lemma_root(tussen_woelen,woel_tussen) .
 lemma_root(tussen_wonden,wond_tussen) .
@@ -17773,6 +17780,7 @@ lemma_root(uit_verruwen,verruw_uit) .
 lemma_root(uit_versagen,versaag_uit) .
 lemma_root(uit_verschijnen,verschijn_uit) .
 lemma_root(uit_verschillen,verschil_uit) .
+lemma_root(uit_verschrikken,verschrik_uit) .
 lemma_root(uit_verschuilen,verschuil_uit) .
 lemma_root(uit_verslaven,verslaaf_uit) .
 lemma_root(uit_versloffen,verslof_uit) .
@@ -18594,6 +18602,7 @@ lemma_root(vanaf_willen,wil_vanaf) .
 lemma_root(vanaf_wimpelen,wimpel_vanaf) .
 lemma_root(vanaf_winden,wind_vanaf) .
 lemma_root(vanaf_wippen,wip_vanaf) .
+lemma_root(vanaf_wissen,wis_vanaf) .
 lemma_root(vanaf_woeden,woed_vanaf) .
 lemma_root(vanaf_woelen,woel_vanaf) .
 lemma_root(vanaf_wonden,wond_vanaf) .
@@ -19180,6 +19189,7 @@ lemma_root(vandaan_wikkelen,wikkel_vandaan) .
 lemma_root(vandaan_willen,wil_vandaan) .
 lemma_root(vandaan_winden,wind_vandaan) .
 lemma_root(vandaan_wippen,wip_vandaan) .
+lemma_root(vandaan_wissen,wis_vandaan) .
 lemma_root(vandaan_woeden,woed_vandaan) .
 lemma_root(vandaan_woelen,woel_vandaan) .
 lemma_root(vandaan_wonden,wond_vandaan) .
@@ -19764,6 +19774,7 @@ lemma_root(vandoor_wikkelen,wikkel_vandoor) .
 lemma_root(vandoor_willen,wil_vandoor) .
 lemma_root(vandoor_winden,wind_vandoor) .
 lemma_root(vandoor_wippen,wip_vandoor) .
+lemma_root(vandoor_wissen,wis_vandoor) .
 lemma_root(vandoor_woeden,woed_vandoor) .
 lemma_root(vandoor_woelen,woel_vandoor) .
 lemma_root(vandoor_wonden,wond_vandoor) .

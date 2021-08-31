@@ -4218,6 +4218,8 @@ unlikely_name_pair(arts,had).
 unlikely_name_pair(best,even).
 unlikely_name_pair(brand,had).
 unlikely_name_pair(club,had).
+unlikely_name_pair(den,loop).
+unlikely_name_pair(den,man).
 unlikely_name_pair(dollar,had).
 unlikely_name_pair(dollar,over).
 unlikely_name_pair(even,had).
