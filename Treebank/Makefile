@@ -8,7 +8,11 @@ XSL=$(ALPINO_HOME)/TreebankTools/stylesheets
 
 LASSYSMALL=/net/corpora/LassyDevelop
 
-all: dtchecks prepare_enhanced_all enhanced_all poslemma mwu trees_doc sents sentspl conllu pair dact
+all: dtchecks novel prepare_enhanced_all enhanced_all poslemma mwu trees_doc sents sentspl conllu pair dact
+
+novel:
+	( cd best; make -j i_suite extra eans )
+	( cd fast; make -j i_suite extra eans )
 
 DIRECTORIES=cgn_exs eans extra g_suite h_suite i_suite leuven_yellow_pages lot_test_suite1 \
              ntv-suite qa wpspel novelsample_corrected cdb

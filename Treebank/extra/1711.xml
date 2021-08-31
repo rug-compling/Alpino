@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="du" end="9" id="2" rel="--">
+      <node begin="0" conjtype="neven" end="1" id="3" lemma="want" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="want" sc="root" word="Want"/>
+      <node begin="1" cat="smain" end="9" id="4" rel="nucl">
+        <node begin="1" case="nom" def="def" end="2" gen="de" getal="ev" id="5" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+        <node begin="2" end="3" id="6" infl="sg" lemma="weten" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="weet" sc="tr_sbar" stype="declarative" tense="present" word="weet" wvorm="pv"/>
+        <node aform="base" begin="3" buiging="zonder" end="4" graad="basis" id="7" infl="no_e" lemma="zeker" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="mod" root="zeker" vform="adj" word="zeker"/>
+        <node begin="5" cat="cp" end="9" id="8" rel="vc">
+          <node begin="5" conjtype="onder" end="6" id="9" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+          <node begin="6" cat="ssub" end="9" id="10" rel="body">
+            <node begin="6" case="both" def="def" end="7" gen="de" getal="getal" id="11" index="1" lemma="u" naamval="nomin" num="sg" pdtype="pron" per="u" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" rnum="sg" root="u" status="vol" vwtype="pers" wh="nwh" word="u"/>
+            <node begin="6" cat="inf" end="8" id="12" rel="vc">
+              <node begin="6" end="7" id="13" index="1" rel="su"/>
+              <node begin="7" buiging="zonder" end="8" id="14" infl="inf" lemma="winnen" pos="verb" positie="vrij" postag="WW(inf,vrij,zonder)" pt="ww" rel="hd" root="win" sc="intransitive" word="winnen" wvorm="inf"/>
+            </node>
+            <node begin="8" end="9" id="15" infl="sg_hebt" lemma="zullen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="zal" sc="aux(inf)" tense="present" word="zult" wvorm="pv"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="9" end="10" id="16" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Want ik weet zeker , dat u winnen zult .</sentence>
+</alpino_ds>

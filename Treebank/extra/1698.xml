@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="9" id="0" rel="top">
+    <node begin="0" cat="whq" end="8" id="1" rel="--">
+      <node begin="0" cat="pp" end="2" id="2" index="1" rel="whd">
+        <node begin="0" end="1" id="3" lemma="sedert" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="sedert" sc="tmp_adv" vztype="init" word="Sedert"/>
+        <node begin="1" end="2" id="4" lemma="wanneer" pos="adv" postag="BW()" pt="bw" rel="obj1" root="wanneer" special="tmp" wh="ywh" word="wanneer"/>
+      </node>
+      <node begin="0" cat="sv1" end="8" id="5" rel="body">
+        <node begin="2" end="3" id="6" infl="sg1" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="aux_psp_zijn" stype="whquestion" tense="present" word="ben" wvorm="pv"/>
+        <node begin="3" case="both" def="def" end="4" gen="de" getal="ev" id="7" index="2" lemma="je" naamval="nomin" num="sg" pdtype="pron" per="je" persoon="2v" pos="pron" postag="VNW(pers,pron,nomin,red,2v,ev)" pt="vnw" rel="su" rnum="sg" root="je" special="wkpro" status="red" vwtype="pers" wh="nwh" word="je"/>
+        <node begin="0" cat="ppart" end="8" id="8" rel="vc">
+          <node begin="0" end="2" id="9" index="1" rel="mod"/>
+          <node begin="3" end="4" id="10" index="2" rel="su"/>
+          <node begin="4" end="5" id="11" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="niet"/>
+          <node begin="5" cat="pp" end="7" id="12" rel="ld">
+            <node begin="5" end="6" id="13" lemma="in" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="in" vztype="init" word="in"/>
+            <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="14" lemma="Delft_haven" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="Delft_haven" word="Delftshaven"/>
+          </node>
+          <node begin="7" buiging="zonder" end="8" id="15" infl="psp" lemma="zijn" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="ben" sc="ld_pp" word="geweest" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="8" end="9" id="16" lemma="?" pos="punct" postag="LET()" pt="let" rel="--" root="?" special="vraag" word="?"/>
+  </node>
+  <sentence>Sedert wanneer ben je niet in Delftshaven geweest ?</sentence>
+</alpino_ds>
