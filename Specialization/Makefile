@@ -44,7 +44,7 @@ left_corners:
         | ./generate_prefixes \
         | sort -u > $@
 
-%.log.gz:../Suites/Machine/%.sents.gz
+%.log.gz: ../Suites/Machine/%.sents.gz
 	zcat $< | \
         $(ALPINO)  -flag suite undefined -parse 2> $(DISK)/$*-spec.log | gzip > $(DISK)/$*.lc.gz
 	gzip $(DISK)/$*-spec.log
