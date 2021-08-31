@@ -267,7 +267,7 @@ t_s_r(aux(X),aux(X)).
 
 t_s_r(inverted_aux(X),inverted_aux(X)).
 
-adj_infl(aller_st,St) :-
+adj_infl(aller_st(A),St) :-
     !,
-    St = st.
+    St = st(A).
 adj_infl(X,X).
