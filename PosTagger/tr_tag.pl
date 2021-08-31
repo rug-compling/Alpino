@@ -37,8 +37,8 @@ t(adv_tag,tag).
 t(name_determiner(X),  determiner(X)).
 t(name_determiner(X,_),determiner(X)).
 
-t(adjective(Infl),           adjective(Infl)).
-t(adjective(Infl,_),         adjective(Infl)).
+t(adjective(Infl0),           adjective(Infl)) :- adj_infl(Infl0,Infl).
+t(adjective(Infl0,_),         adjective(Infl)) :- adj_infl(Infl0,Infl).
 
 t(np_adjective,             np_adjective).
 t(np_adjective(_),          np_adjective).
@@ -267,3 +267,7 @@ t_s_r(aux(X),aux(X)).
 
 t_s_r(inverted_aux(X),inverted_aux(X)).
 
+adj_infl(aller_st,St) :-
+    !,
+    St = st.
+adj_infl(X,X).

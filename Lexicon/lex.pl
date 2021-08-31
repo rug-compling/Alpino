@@ -1012,22 +1012,22 @@ lexicon__(tot,adverb,Label,Ws0,Ws,'tot V-s aan toe',_) :-
 lexicon__(AllerXst,Adj,AllerLabel,Ws,Ws,'aller-Asuper'(His),LC) :-
     atom(AllerXst),
     atom_concat(aller,Xst,AllerXst),
-    lexicon__(Xst,Adj,Label,Ws,Ws,His,LC),
-    aller(Adj),
+    lexicon__(Xst,Adj0,Label,Ws,Ws,His,LC),
+    aller(Adj0,Adj),
     atom_concat(aller_,Label,AllerLabel).
 
 lexicon__(aller,Adj,AllerLabel,Ws0,Ws,'aller-Asuper'(His),LC) :-
     aller_path(Ws0,Ws1),
     next_word(Xst,Ws1,Ws2,_),
-    lexicon__(Xst,Adj,Label,Ws2,Ws,His,LC),
-    aller(Adj),
+    lexicon__(Xst,Adj0,Label,Ws2,Ws,His,LC),
+    aller(Adj0,Adj),
     atom_concat(aller_,Label,AllerLabel).
 
 lexicon__('aller-',Adj,AllerLabel,Ws0,Ws,'aller-Asuper'(His),LC) :-
     aller_path(Ws0,Ws1),
     next_word(Xst,Ws1,Ws2,_),
-    lexicon__(Xst,Adj,Label,Ws2,Ws,His,LC),
-    aller(Adj),
+    lexicon__(Xst,Adj0,Label,Ws2,Ws,His,LC),
+    aller(Adj0,Adj),
     atom_concat(aller_,Label,AllerLabel).
 
 lexicon__(op,pp,Label1,Ws0,Ws,'op zijn Belgisch'(His),LC) :-
@@ -1231,10 +1231,10 @@ het_st(adjective(st(Adv),Sc),      adjective(het_st(Adv),Sc)).
 het_ste(adjective(st(Adv)),        adjective(het_st(Adv))).
 het_ste(adjective(st(Adv),Sc),     adjective(het_st(Adv),Sc)).
 
-aller(adjective(st(_))).
-aller(adjective(ste)).
-aller(adjective(st(_),_)).
-aller(adjective(ste,_)).
+aller(adjective(st(A)),   adjective(aller_st(A))).
+aller(adjective(ste),     adjective(ste)).
+aller(adjective(st(A),B), adjective(aller_st(A),B)).
+aller(adjective(ste,B),   adjective(ste,B)).
 
 no_e(postn_no_e(_),no_e).
 no_e(no_e(_),no_e).
