@@ -106,8 +106,13 @@ tr_tag(preposition(A,_,Sc),Tag) :-
     ;   Tag = preposition(Sc)
     ).
 
-tr_tag(adjective(Infl,Sc0),adjective(Infl,Sc)) :-
+tr_tag(adjective(Infl0),adjective(Infl)) :-
     !,
+    adj_infl(Infl0,Infl).
+
+tr_tag(adjective(Infl0,Sc0),adjective(Infl,Sc)) :-
+    !,
+    adj_infl(Infl0,Infl),
     tr_sc(Sc0,Sc).
 
 tr_tag(fixed_part(_),Tag) :-
@@ -157,6 +162,10 @@ tr_tag(tmp_noun(DeHet,_,Num,Sc), Tag) :-
 
 tr_tag(Tag,Tag).
 
+adj_infl(aller_st(X),St) :-
+    !,
+    St = st(X).
+adj_infl(X,X).
 
 tr_sc(ninv(A,_B),ninv(NA)) :-
     !,
