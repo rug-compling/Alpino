@@ -10094,8 +10094,9 @@ v(huisvest,huisvest,huisvesten,gehuisvest,huisvestte,huisvestten,
 	np_ld_pp])]).
 
 v(huiver,huivert,huiveren,gehuiverd,huiverde,huiverden,
-    [h([intransitive,
-	pc_pp(voor)])]).
+  [h([intransitive,
+      pc_pp(van),
+      pc_pp(voor)])]).
 
 v(hul,hult,hullen,gehuld,hulde,hulden,
     [h([np_ld_pp
@@ -16632,6 +16633,7 @@ v(peiger,peigert,peigeren,gepeigerd,peigerde,peigerden,
 v(peil,peilt,peilen,gepeild,peilde,peilden,
     [h([sbar,
 	transitive,
+	intransitive,
 	pc_pp(naar)])]).
 
 v(peins,peinst,peinzen,gepeinsd,peinsde,peinsden,
