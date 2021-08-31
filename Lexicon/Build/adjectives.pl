@@ -8757,6 +8757,8 @@ a([ge_e(doorknede),
 a([ge_e(doorkruiste),
    ge_no_e(doorkruist)],adv,[],[]).
 
+a([ge_both(doorleden)],adv,[],[]).
+
 a([ge_e(doorleefde),
    ge_no_e(doorleefd)],adv,[],[]).
 
@@ -34375,10 +34377,12 @@ a([ge_both(toegesproken)],adv,[],[]).
 a([ge_e(toegestane),
    ge_no_e(toegestaan)],adv,[],[]).
 
-a([ge_both(toegestoken)],adv,[],[]).
+a([ge_both(toegestoken)],adv,
+  [so_np],[]).
 
 a([ge_e(toegestopte),
-   ge_no_e(toegestopt)],adv,[],[]).
+   ge_no_e(toegestopt)],adv,
+  [so_np],[]).
 
 a([ge_e(toegestroomde),
    ge_no_e(toegestroomd)],adv,[],[]).

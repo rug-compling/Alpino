@@ -3450,6 +3450,7 @@ with_dt([in,Het,Adj],
     het(Het).
 
 in_het_adj_pp(bijzonder).
+in_het_adj_pp(breed).		% ouderwets
 in_het_adj_pp(echt).
 in_het_adj_pp(groot).
 in_het_adj_pp(klein).
@@ -5663,6 +5664,7 @@ sentence_adverb(niettemin).
 sentence_adverb(nochtans). 
 sentence_adverb(noodzakelijkerwijs). 
 sentence_adverb(noodzakelijkerwijze). 
+sentence_adverb(omtrent).	% ouderwets
 sentence_adverb(onderhand). 
 sentence_adverb(ondertussen). 
 sentence_adverb(onderwijl). 
@@ -5684,8 +5686,11 @@ sentence_adverb(redelijkerwijs).
 sentence_adverb(redelijkerwijze). 
 sentence_adverb(['\'s',anderdaags]).
 sentence_adverb(['\'s',anderendaags]). 
+sentence_adverb(['\'s',ander,daags]).
+sentence_adverb(['\'s',anderen,daags]). 
 sentence_adverb(anderdaags).  
 sentence_adverb(anderendaags).
+sentence_adverb([des,ander,daags]).
 sentence_adverb([des,anderen,daags]).
 sentence_adverb(sedert). 
 sentence_adverb(sedertdien).
@@ -6138,6 +6143,19 @@ tmp_adverb(['\'s',zaterdags]).
 tmp_adverb(['\'s',winters]).
 tmp_adverb(['\'s',zomers]).
 
+tmp_adverb([des,morgens]).
+tmp_adverb([des,middags]).
+tmp_adverb([des,namiddags]).
+tmp_adverb([des,avonds]).
+tmp_adverb([des,nachts]).
+tmp_adverb([des,ochtends]).
+tmp_adverb([des,zondags]).
+tmp_adverb([des,maandags]).
+tmp_adverb([des,woensdags]).
+tmp_adverb([des,zaterdags]).
+tmp_adverb([des,winters]).
+tmp_adverb([des,zomers]).
+
 tmp_adverb(['\'s',zondagavonds]).
 tmp_adverb(['\'s',zondagsavonds]).
 tmp_adverb(['\'s',maandagavonds]).
@@ -6566,6 +6584,7 @@ with_dt([Wij,WORD],
     wij_allebei(WORD,PREDM,Tag,Cat).
 
 wij_allebei_wij(wij,pronoun(nwh,fir,pl,de,nom,def)).
+wij_allebei_wij(gij,pronoun(nwh,u,sg,de,nom,def)).
 wij_allebei_wij(jullie,pronoun(nwh,je,pl,de,both,def)).
 wij_allebei_wij(ons,pronoun(nwh,fir,pl,de,dat_acc,def)).
 wij_allebei_wij(hun,pronoun(nwh,thi,pl,de,dat_acc,def)).
@@ -6698,6 +6717,7 @@ m(allemaal,     pronoun(nwh,thi,pl,de,both,indef),allemaal).
 m(al,           pronoun(nwh,thi,pl,de,both,indef),allen).
 m(beide,        pronoun(nwh,thi,pl,de,both,indef),beide).
 m(beide,        pronoun(nwh,thi,pl,de,both,indef),beiden).
+m(beide,        pronoun(nwh,thi,pl,de,both,indef),[die,beiden]).
 m(datgeen,      pronoun(nwh,thi,sg,het,both,def,strpro),datgeen).
 m(datgeen,      pronoun(nwh,thi,sg,het,both,def,strpro),datgene).
 m(degeen,       pronoun(nwh,thi,sg,de,both,def,strpro),degeen).
@@ -6791,7 +6811,7 @@ m('wie o wie',          pronoun(ywh,thi,both,de,both,indef),[wie,oh,wie]).
 m('wie o wie',          pronoun(ywh,thi,both,de,both,indef),[wie,',',oh,wie]).
 m('wie de hell',  pronoun(ywh,thi,both,de,both,indef), [wie,de,hell]).
 m('wie the hell', pronoun(ywh,thi,both,de,both,indef), [wie,thee,hell]).
-m(wie,          pronoun(ywh,thi,both,de,dat,def),wien). 
+m(wie,          pronoun(ywh,thi,both,de,dat_acc,def),wien). 
 m(wij,          pronoun(nwh,fir,pl,de,nom,def),wij).
 m(wijzelf,      pronoun(nwh,fir,pl,de,nom,def),wijzelf).
 m(wijzelf,      pronoun(nwh,fir,pl,de,nom,def),wijzelve).

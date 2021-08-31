@@ -915,6 +915,7 @@ with_dt_all(acht,[en,tussen,twaalf]).
 with_dt_all(acht,[en,tussen,vier]).
 with_dt_all(acht,[en,tussen,zes]).
 with_dt_all(acht,[en,tussen,zeven]).
+with_dt_all(acht,[gij]).
 with_dt_all(acht,[hen]).
 with_dt_all(achthonderdtal,[een]).
 with_dt_all(acht,[hun]).
@@ -965,6 +966,7 @@ with_dt_all(afstand,[lang]).
 with_dt_all(al,[dat]).
 with_dt_all(al,[degenen]).
 with_dt_all(al,[dit]).
+with_dt_all(al,[gij]).
 with_dt_all(al,[hen]).
 with_dt_all(al,[het]).
 with_dt_all(al,[hun]).
@@ -972,6 +974,7 @@ with_dt_all(al,[hun,met]).
 with_dt_all(al,[jullie]).
 with_dt_all(al,[jullie,met]).
 with_dt_all(al,[lang,niet]).
+with_dt_all(allebei,[gij]).
 with_dt_all(allebei,[hen]).
 with_dt_all(allebei,[hun]).
 with_dt_all(allebei,[hun,met]).
@@ -994,6 +997,7 @@ with_dt_all(alleen,[maar]).
 with_dt_all(alleen,[niet]).
 with_dt_all(allemaal,[best]).
 with_dt_all(allemaal,[bijna]).
+with_dt_all(allemaal,[gij]).
 with_dt_all(allemaal,[haast]).
 with_dt_all(allemaal,[hen]).
 with_dt_all(allemaal,[hun]).
@@ -1093,6 +1097,7 @@ with_dt_all(bed,[te]).
 with_dt_all(beginne,[den,in]).
 with_dt_all(begrijp,[me,niet,verkeerd]).
 with_dt_all(beide,[de]).
+with_dt_all(beide_DIM,[gij]).
 with_dt_all(beide_DIM,[hen]).
 with_dt_all(beide_DIM,[hun]).
 with_dt_all(beide_DIM,[hun,met]).
@@ -1105,6 +1110,7 @@ with_dt_all(beide_DIM,[ons]).
 with_dt_all(beide_DIM,[u]).
 with_dt_all(beide_DIM,[wij]).
 with_dt_all(beide_DIM,[zij]).
+with_dt_all(beide,[gij]).
 with_dt_all(beide,[hen]).
 with_dt_all(beide,[hun]).
 with_dt_all(beide,[hun,met]).
@@ -1189,6 +1195,7 @@ with_dt_all(blind,[liefde,maak]).
 with_dt_all(bloede,[in,koelen]).
 with_dt_all(boel,[een]).
 with_dt_all(bovengenoemd,[deze,en]).
+with_dt_all(breed,[het,in]).
 with_dt_all(brode,[den,om]).
 with_dt_all(broeder,[de]).
 with_dt_all(broeder,[haar]).
@@ -1431,6 +1438,7 @@ with_dt_all(doen,[goede,in]).
 with_dt_all(doen,[goeden,heel,in]).
 with_dt_all(doen,[goeden,in]).
 with_dt_all(draai,[u,vraag,wij]).
+with_dt_all(drie_DIM,[gij]).
 with_dt_all(drie_DIM,[hen]).
 with_dt_all(drie_DIM,[hun]).
 with_dt_all(drie_DIM,[hun,met]).
@@ -1447,6 +1455,7 @@ with_dt_all(drie,[en,tien,tussen]).
 with_dt_all(drie,[en,tussen,vier]).
 with_dt_all(drie,[en,tussen,vijf]).
 with_dt_all(drie,[en,tussen,zes]).
+with_dt_all(drie,[gij]).
 with_dt_all(drie,[hen]).
 with_dt_all(driehonderdtal,[een]).
 with_dt_all(drie,[hun]).
@@ -1631,6 +1640,17 @@ with_dt_all(geloof,[niet,te]).
 with_dt_all(gemeentewege,[van]).
 with_dt_all(genoeg,[jammer]).
 with_dt_all(geval,[ieder,in]).
+with_dt_all(gij,[negen]).
+with_dt_all(gij,[tien]).
+with_dt_all(gij,[twee]).
+with_dt_all(gij,[twee_DIM]).
+with_dt_all(gij,[vier]).
+with_dt_all(gij,[vier_DIM]).
+with_dt_all(gij,[vijf]).
+with_dt_all(gij,[vijf_DIM]).
+with_dt_all(gij,[zes]).
+with_dt_all(gij,[zes_DIM]).
+with_dt_all(gij,[zeven]).
 with_dt_all(ginder,[langs]).
 with_dt_all(gisteravond,[later]).
 with_dt_all(gisterenavond,[later]).
@@ -2579,6 +2599,7 @@ with_dt_root(bloede).
 with_dt_root(bloos).
 with_dt_root(boel).
 with_dt_root(bovengenoemd).
+with_dt_root(breed).
 with_dt_root(brode).
 with_dt_root(broeder).
 with_dt_root(broer).
@@ -2674,6 +2695,7 @@ with_dt_root(gemeentewege).
 with_dt_root(genoeg).
 with_dt_root(geval).
 with_dt_root(giet).
+with_dt_root(gij).
 with_dt_root(ginder).
 with_dt_root(gisteravond).
 with_dt_root(gisteren).
