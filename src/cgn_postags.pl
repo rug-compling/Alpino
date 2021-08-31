@@ -639,6 +639,10 @@ context_dependent_tag(adjective(st(_)),'ADJ(vrij,sup,zonder)',_Stem,Q0,Q,Result)
     find_node(Q0,Q,Result,Node),
     nattr(Node).
 
+context_dependent_tag(adjective(aller_st(_)),'ADJ(vrij,sup,zonder)',_Stem,Q0,Q,Result) :-
+    find_node(Q0,Q,Result,Node),
+    nattr(Node).
+
 context_dependent_tag(adjective(e),'VNW(onbep,grad,stan,nom,met-e,zonder-n,basis)',weinig,Q0,Q,Result) :-
     find_node(Q0,Q,Result,Node),
     nattr(Node).
@@ -817,7 +821,9 @@ exceptional_stem_tag(Var,_,_,_) :-
 exceptional_stem_tag(meest,nominalized_adjective,                   'VNW(onbep,grad,stan,nom,met-e,mv-n,sup)',veel).
 exceptional_stem_tag(meest,nominalized_super_adjective,             'VNW(onbep,grad,stan,nom,met-e,mv-n,sup)',veel).
 exceptional_stem_tag(veel,adjective(st(_)),                         'VNW(onbep,grad,stan,vrij,zonder,sup)',   veel).    % meest
+exceptional_stem_tag(veel,adjective(aller_st(_)),                         'VNW(onbep,grad,stan,vrij,zonder,sup)',   veel).    % allermeest
 exceptional_stem_tag(weinig,adjective(st(_)),                       'VNW(onbep,grad,stan,vrij,zonder,sup)',   weinig).  % minst
+exceptional_stem_tag(weinig,adjective(aller_st(_)),                       'VNW(onbep,grad,stan,vrij,zonder,sup)',   weinig).  % allerminst
 exceptional_stem_tag('z\'n',determiner(pron),                       'VNW(bez,det,stan,red,3,ev,prenom,zonder,agr)',zijn).
 
 exceptional_stem_tag(twee,    noun(de,count,pl),   'TW(hoofd,nom,mv-n,basis)', twee).
@@ -1774,6 +1780,7 @@ cgn_postag_c(adjective(ge_both(_)),           'WW(vd,prenom,zonder)').
 cgn_postag_c(adjective(no_e(_)),              'ADJ(prenom,basis,zonder)').
 cgn_postag_c(adjective(er(_)),                'ADJ(prenom,comp,zonder)').
 cgn_postag_c(adjective(st(_)),                'ADJ(prenom,sup,zonder)').
+cgn_postag_c(adjective(aller_st(_)),                'ADJ(prenom,sup,zonder)').
 
 cgn_postag_c(adjective(end(_)),               'WW(od,prenom,zonder)').
 

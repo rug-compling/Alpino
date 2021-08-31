@@ -2466,6 +2466,7 @@ sentence('06_03_03_5',['Hij',is,heel,wat,talen,machtig,'.']).
 sentence('06_03_03_6',['Ze',zijn,begaan,met,het,lot,van,de,armen,'.']).
 sentence('06_03_03_7',['Ben',jij,bereid,tot,medewerking,?]).
 sentence('06_03_03_8',['Steeds',meer,wordt,ze,afhankelijk,van,hem,'.']).
+/*
 sentence('06_03_03_9',['De',fietser,was,verantwoordelijk,voor,het,ongeluk,'.']).
 sentence('06_04_01_01_01_1',['In',gevallen,als,de,zojuist,besprokene,worden,de,adjectieven,wel,verbogen,'.']).
 sentence('06_04_01_01_01_i',['Doe',niet,zo,bête,'.']).
@@ -11427,3 +11428,4 @@ sentence('30_03_04_3',['De',soldaat,stierf,binnen,twee,dagen,aan,zijn,verwonding
 sentence('30_03_04_4',['Charlie','Chaplin',struikelde,urenlang,over,een,steen,'.']).
 sentence('30_03_04_5',['De',soldaat,stierf,maandenlang,aan,zijn,verwondingen,'.']).
 sentence('30_03_04_6',['Doornroosje',sliep,in,een,paar,minuten,'.']).
+*/

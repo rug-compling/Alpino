@@ -19992,7 +19992,9 @@ v(show,showt,showen,geshowd,showde,showden,
 
 v(sidder,siddert,sidderen,gesidderd,sidderde,sidderden,
     [h([intransitive,
-	pc_pp(voor)])]).
+	pc_pp(voor),
+	pc_pp(van)  % om van te sidderen
+       ])]).
 
 v(sier,siert,sieren,gesierd,sierde,sierden,
     [h([sbar_subj_so_np,

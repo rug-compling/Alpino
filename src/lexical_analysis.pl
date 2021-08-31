@@ -138,7 +138,7 @@ ignore(['Uitzonderingen',':','G']).
 ignore(['<','!','TABLE','!','>']).
 ignore(['<','!','INDEX','!','>']).
 ignore(['bèta','compleet']).
-
+ignore(['*','*','*']).
 
 replace_alt([],_,[]).
 replace_alt([W|Ws],P0,[N|Ns]) :-

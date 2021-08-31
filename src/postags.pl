@@ -384,6 +384,7 @@ adj_form(er,          [infl=no_e,   aform=compar,  vform=adj]).
 adj_form(het_st,      [infl=pred,   aform=super,   vform=adj]).
 adj_form(het_ste,     [infl=pred,   aform=super,   vform=adj]).
 adj_form(st,          [infl=no_e,   aform=super,   vform=adj]).
+adj_form(aller_st,    [infl=no_e,   aform=super,   vform=adj]).
 adj_form(ende,        [infl=e,      aform=base,    vform=gerund]).
 adj_form(end,         [infl=no_e,   aform=base,    vform=gerund]).
 

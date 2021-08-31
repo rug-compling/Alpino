@@ -40170,7 +40170,7 @@ n([pl(wijken),sg(wijk)],de,[np_app_measure],
    s(volk),
    woon]).
 
-n([pl(wijlen),sg(wijle)],de,[]).
+n([pl(wijlen),sg(wijle)],de,[temp_mod]).
 
 n([mass(wijn),pl(wijnen),sg(wijn)],de,[],
   [dessert,
