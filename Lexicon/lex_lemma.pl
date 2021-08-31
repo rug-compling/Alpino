@@ -4360,6 +4360,7 @@ lemma_root(door_passeren,passeer_door) .
 lemma_root(door_patrouilleren,patrouilleer_door) .
 lemma_root(door_pauzeren,pauzeer_door) .
 lemma_root(door_peddelen,peddel_door) .
+lemma_root(door_peilen,peil_door) .
 lemma_root(door_peinzen,peins_door) .
 lemma_root(door_peizen,peis_door) .
 lemma_root(door_pellen,pel_door) .
@@ -11903,6 +11904,7 @@ lemma_root(raak_passeren,passeer_raak) .
 lemma_root(raak_patrouilleren,patrouilleer_raak) .
 lemma_root(raak_pauzeren,pauzeer_raak) .
 lemma_root(raak_peddelen,peddel_raak) .
+lemma_root(raak_peilen,peil_raak) .
 lemma_root(raak_peinzen,peins_raak) .
 lemma_root(raak_peizen,peis_raak) .
 lemma_root(raak_pellen,pel_raak) .
@@ -17003,6 +17005,7 @@ lemma_root(uit_passen,pas_uit) .
 lemma_root(uit_patrouilleren,patrouilleer_uit) .
 lemma_root(uit_pauzeren,pauzeer_uit) .
 lemma_root(uit_peddelen,peddel_uit) .
+lemma_root(uit_peilen,peil_uit) .
 lemma_root(uit_peinzen,peins_uit) .
 lemma_root(uit_peizen,peis_uit) .
 lemma_root(uit_pellen,pel_uit) .
@@ -21842,6 +21845,7 @@ lemma_root(voort_passeren,passeer_voort) .
 lemma_root(voort_patrouilleren,patrouilleer_voort) .
 lemma_root(voort_pauzeren,pauzeer_voort) .
 lemma_root(voort_peddelen,peddel_voort) .
+lemma_root(voort_peilen,peil_voort) .
 lemma_root(voort_peinzen,peins_voort) .
 lemma_root(voort_peizen,peis_voort) .
 lemma_root(voort_pellen,pel_voort) .
