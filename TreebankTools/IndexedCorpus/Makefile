@@ -87,7 +87,7 @@ endif
 
 prolog/corpusreader.s.o: prolog/corpusreader.pl prolog/corpusreader.cpp libcorpus$(DYLIBEXT)
 	splfr prolog/corpusreader.pl prolog/corpusreader.cpp \
-		 --static --cflag="$(CXXFLAGS)" -O2 -LD -Wall \
+		 --static --cflag="$(CXXFLAGS) -fPIE" -O2 -LD -Wall \
 		-Wl,-rpath,$(PWD)  \
 		-L.  -lcorpus \
 		-lboost_filesystem -lboost_system -lstdc++ -lz

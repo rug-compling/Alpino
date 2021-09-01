@@ -26,7 +26,7 @@ unix.bundle unix.dylib: unix.c unix.pl
 
 unix.s.o: unix.c unix.pl
 	splfr unix.pl unix.c \
-		--static -LD
+		-cflag -fPIE --static -LD
 
 clean:
 

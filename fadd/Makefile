@@ -113,7 +113,7 @@ pro_fadd.dll: fadd.lib fadd.h fsa.h pro_fadd.cc pro_fadd.pl
 	mt -manifest pro_fadd.dll.manifest -outputresource:pro_fadd.dll\;2
 
 pro_fadd.s.o: $(SHAREDLIB) fadd.h fsa.h pro_fadd.cc pro_fadd.pl
-	splfr pro_fadd.pl pro_fadd.cc --cflag="${CPPFLAGS}"\
+	splfr pro_fadd.pl pro_fadd.cc --cflag="${CPPFLAGS} -fPIE"\
               --static\
              -LD -Wl,-rpath,$(PWD) -L. -lfadd $(LDFLAGS) -lstdc++
 
