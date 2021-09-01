@@ -45,6 +45,7 @@ echo:
 	@echo $(TAR)
 
 tar:
+	cp create_bin/Alpino bin/
 	( cd .. ; tar czf $(TAR)\
                   --exclude=.svn\
                   --exclude=.git\
@@ -90,6 +91,12 @@ tar:
                   --exclude=Treebank/tt2015\
                   --exclude=Treebank/LassySample250\
                   --exclude=Treebank/LassySample500\
+                  --exclude=Treebank/dpc\
+                  --exclude=Treebank/PPH\
+                  --exclude=Treebank/PPI\
+                  --exclude=Treebank/WSU\
+                  --exclude=Treebank/WIKI\
+                  --exclude=TestLEM\
                   --exclude=Suites/Machine\
                   --exclude=ovis*\
                   --exclude=LassySample250\
