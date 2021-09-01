@@ -10,9 +10,12 @@ LASSYSMALL=/net/corpora/LassyDevelop
 
 all: dtchecks novel prepare_enhanced_all enhanced_all poslemma mwu trees_doc sents sentspl conllu pair dact
 
+## slow, because it retries all timed-out sentences
+best:
+	( cd best; make -j i_suite.log extra.log eans.log )
+
 novel:
-	( cd best; make -j i_suite extra eans )
-	( cd fast; make -j i_suite extra eans )
+	( cd fast; make -j i_suite.log extra.log eans.log )
 
 DIRECTORIES=cgn_exs eans extra g_suite h_suite i_suite leuven_yellow_pages lot_test_suite1 \
              ntv-suite qa wpspel novelsample_corrected cdb
