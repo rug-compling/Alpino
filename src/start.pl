@@ -579,6 +579,12 @@ allow_sentence_key_for_parser(Key) :-
 
 allow_sentence_key_for_parser(off,_).
 allow_sentence_key_for_parser(on,Ref) :-
+    hdrug_flag(end_hook,best_score(xml)),
+    !,
+    format_to_chars("~w.xml",[Ref],Codes),
+    atom_codes(File,Codes),
+    \+ file_exists(File).
+allow_sentence_key_for_parser(on,Ref) :-
     construct_identifier(Ref,1,Identifier),
     xml_filename(File,Identifier),
     \+ file_exists(File).
@@ -704,7 +710,7 @@ gram_startup_hook_end :-
     tcl('bind . <Control-c> "prolog $module:analyse_differences"',[]),
     tcl('bind . <Control-t> "prolog $module:show_treebank_current_ref"',[]).
     
-:- set_flag(type_default(user),tree(dt)).
+:- set_flag(type_default(user),tree(dts)).
 :- set_flag(type_default(clig),tree(user(dt))).
 
 :- initialize_flag(xml_format_failed_parse,off).
