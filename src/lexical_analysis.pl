@@ -351,7 +351,16 @@ added_lex(Tag,Label,[Word|Input0],Input,user,_) :-
 %% added_lex(Tag,Label,[Word|Input0],Input,universal(Weight),_) :-
 %%    add_universal_table(Word,Label,Input0,Input,Tag,Weight).
 
-normal_lex(Tag,Label,Input0,Input,P,His,LC) :-
+normal_lex(Tag,Label,[Word|Input0],Input,P,His,LC) :-
+    atom(Word),
+    alpino_util:split_atom(Word,"~",['',A|C]),
+    !,
+    lists:member(NW,[A|C]),
+    normal_lex_(Tag,Label,[NW|Input0],Input,P,His,LC).
+normal_lex(Tag,Label,[W|Input0],Input,P,His,LC) :-
+    normal_lex_(Tag,Label,[W|Input0],Input,P,His,LC).
+
+normal_lex_(Tag,Label,Input0,Input,P,His,LC) :-
     findall(f(Tag1,Label1,Input1,His1),in_lexicon(Tag1,Label1,Input0,Input1,His1,LC),List),
     normal_lex2(Tag,Label,Input0,Input,P,His,LC,List).
 
@@ -2488,6 +2497,11 @@ add_word_forms([W|Ws]) :-
 
 %% TODO: skip @ meta words
 add_word_form(bracket(_)).
+add_word_form(Word) :-
+    atom(Word),
+    alpino_util:split_atom(Word,"~",['',A|C]),
+    !,
+    add_word_forms([A|C]).
 add_word_form(W) :-
     atomic(W),
     atom_codes(W,Wstr0),
