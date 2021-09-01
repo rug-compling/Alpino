@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="conj" end="7" id="1" rel="--">
+      <node begin="4" conjtype="neven" end="5" id="2" lemma="of" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="of" word="of"/>
+      <node begin="0" cat="smain" end="7" id="3" rel="cnj">
+        <node begin="0" cat="np" end="3" id="4" index="1" rel="su">
+          <node begin="0" case="both" def="indef" end="1" gen="de" getal="ev" id="5" lemma="niemand" naamval="stan" num="sg" pdtype="pron" per="thi" persoon="3p" pos="pron" postag="VNW(onbep,pron,stan,vol,3p,ev)" pt="vnw" rel="hd" rnum="sg" root="niemand" special="strpro" status="vol" vwtype="onbep" wh="nwh" word="Niemand"/>
+          <node begin="1" cat="np" end="3" id="6" rel="mod">
+            <node begin="1" end="2" id="7" infl="der" lemma="de" lwtype="bep" naamval="gen" npagr="rest3" pos="det" postag="LID(bep,gen,rest3)" pt="lid" rel="det" root="de" word="der"/>
+            <node begin="2" end="3" gen="de" getal="mv" graad="basis" id="8" lemma="voorbijganger" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="voorbijganger" word="voorbijgangers"/>
+          </node>
+        </node>
+        <node begin="3" end="4" id="9" infl="sg" lemma="weten" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="weet" sc="transitive" tense="past" word="wist" wvorm="pv"/>
+        <node begin="6" end="7" genus="onz" getal="ev" id="10" index="2" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
+      </node>
+      <node begin="0" cat="ssub" end="7" id="11" rel="cnj">
+        <node begin="0" end="3" id="12" index="1" rel="su"/>
+        <node begin="5" end="6" id="13" infl="sg" lemma="begrijpen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="begrijp" sc="transitive" tense="past" word="begreep" wvorm="pv"/>
+        <node begin="6" end="7" id="14" index="2" rel="obj1"/>
+      </node>
+    </node>
+    <node begin="7" end="8" id="15" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Niemand der voorbijgangers wist of begreep het .</sentence>
+</alpino_ds>

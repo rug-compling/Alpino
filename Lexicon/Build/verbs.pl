@@ -19473,6 +19473,7 @@ v(schijn,schijnt,schijnen,geschenen,scheen,schenen,
 	part_van_sbar(uit),     % VL
 	part_transitive(uit),   % VL
 	aux(te),
+	passive,                % het boek scheen voor hem klaargelegd
         fixed([vc(lig,psp,intransitive),pc(aan),dat],no_passive),
         fixed([vc(lig,psp,intransitive),extra_obj_vp(A,B),er_pp(aan,A),i(dat,B)],no_passive),
         fixed([vc(lig,psp,intransitive),extra_sbar(A),er_pp(aan,A),dat],no_passive),
@@ -21865,6 +21866,7 @@ v(stel,stelt,stellen,gesteld,stelde,stelden,
 	part_als_pred_np(tentoon),
 	part_transitive(terecht),
         part_transitive(tewerk),
+	part_intransitive(uit),
 	part_transitive(uit),
 	part_transitive(vast),
 	part_transitive(veilig),
@@ -22907,6 +22909,12 @@ v(telefoneer,telefoneert,telefoneren,getelefoneerd,telefoneerde,telefoneerden,
 	part_intransitive(door),
 	part_transitive(door),
 	pc_pp(met)])]).
+
+v(telegrafeer,telegrafeert,telegraferen,getelegrafeerd,telegrafeerde,telegrafeerden,
+  [h([transitive,
+      sbar,
+      np_sbar
+     ])]).
 
 v(tem,temt,temmen,getemd,temde,temden,
     [h([transitive])]).
@@ -25124,6 +25132,8 @@ v(vermaal,vermaalt,vermalen,vermalen,vermaalde,vermaalden,
 
 v(vermaan,vermaant,vermanen,vermaand,vermaande,vermaanden,
   [h([transitive,
+      np_pc_pp(tot),
+      pc_pp(tot), % de directeur vermaande (ons) tot kalmte
       acc_np_dip_sbar,
       dip_sbar])]).
 

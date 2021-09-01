@@ -316,6 +316,7 @@ adverb([met,verve]).
 adverb(meteen).
 adverb(metterdaad).
 adverb(mettertijd).
+adverb(middelerwijl).
 adverb(mijnerzijds).
 % adverb(minder).
 adverb([min,of,meer]).

@@ -1949,6 +1949,7 @@ m(de,            determiner(de),                 de).
 m(de,            determiner(der),                der).
 m(de,            determiner(des),                des).
 m('des duivels', determiner(pron),               [des,duivels]).
+m('d\'rlui',     determiner(pron),               'd\'rlui').
 m(deze,          determiner(de,nwh,nmod,pro,nparg),       deze).
 m(dezelve,       determiner(de,nwh,nmod,pro,yparg),       dezelve).
 %m(deze,          determiner(both,nwh,nmod,pro,yparg),     dees).   % vlaams

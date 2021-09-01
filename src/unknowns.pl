@@ -2083,6 +2083,7 @@ decap_only('Zijn').
 decap_only('Zo').
 decap_only('Zo\'n').
 decap_only('Zoals').
+decap_only('Zondag').
 decap_only('Zonder').
 decap_only('Zou').
 decap_only('Zowel').
