@@ -2,7 +2,10 @@
 
 export ALPINO_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
 
+echo $ALPINO_HOME
+
 LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$ALPINO_HOME/util
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$ALPINO_HOME/Tokenization
 LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$ALPINO_HOME/fadd
 LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$ALPINO_HOME/TreebankTools/IndexedCorpus
 LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$ALPINO_HOME/create_bin
@@ -15,8 +18,8 @@ export SP_CTYPE=utf8
 if ( ldd $ALPINO_HOME/create_bin/Alpino.bin | grep -q -E '(libtcl|libtk).*not found' )
 then
     LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ALPINO_HOME/create_bin/extralibs
-    export TCL_LIBRARY=$ALPINO_HOME/create_bin/extralibs/tcl8.6
-    export TK_LIBRARY=$ALPINO_HOME/create_bin/extralibs/tk8.6
+    export TCL_LIBRARY=$ALPINO_HOME/create_bin/extralibs/tcl8.5
+    export TK_LIBRARY=$ALPINO_HOME/create_bin/extralibs/tk8.5
 fi
 
 if ( ldd $ALPINO_HOME/create_bin/Alpino.bin | grep -q 'libboost.*not found' )
