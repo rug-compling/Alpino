@@ -57,7 +57,7 @@ pro_lm.dll: pro_lm.cpp lm.cpp pro_lm.pl lm.h
 	mt -manifest pro_lm.dll.manifest -outputresource:pro_lm.dll\;2
 
 pro_lm.s.o: pro_lm.cpp pro_lm.pl lm.o lm.h
-	splfr pro_lm.pl pro_lm.cpp lm.o --cflag="${CXXFLAGS}" \
+	splfr pro_lm.pl pro_lm.cpp lm.o --cflag="${CXXFLAGS} -fPIE" \
 		--static \
 		-LD -Wall -lstdc++ -Wl,-rpath,$(ALPINO_HOME)/fadd \
 		-L$(FADD) -lfadd

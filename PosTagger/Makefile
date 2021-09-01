@@ -51,7 +51,7 @@ alpino_pos.dll: tagger.obj guesser.obj alpino_pos.pl prolog_pos.cc
 
 alpino_pos.s.o: tagger.o guesser.o alpino_pos.pl prolog_pos.cc
 	splfr alpino_pos.pl tagger.o guesser.o prolog_pos.cc\
-                --cflag="-I../fadd $(CCDEBUG) -D_GNU_SOURCE"\
+                --cflag="-I../fadd $(CCDEBUG) -D_GNU_SOURCE -fPIE"\
                 --static\
                 -LD -Wall -lstdc++ -L../fadd -lfadd\
                  -Wl,-rpath,$(PWD)/../fadd

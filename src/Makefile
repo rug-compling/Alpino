@@ -129,7 +129,7 @@ guides$(MODULEEXT): guides.pl guides.c guides_data.o
 
 guides.s.o: guides.pl guides.c guides_data.o
 	splfr --static guides.pl guides.c guides_data.o \
-        --cflag="-O2 -Wall" --static -LD
+        --cflag="-O2 -Wall -fPIE" --static -LD
 
 
 guides_data.c: guides_data.c.$(PROLOG)

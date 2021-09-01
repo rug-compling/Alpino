@@ -53,7 +53,7 @@ tokenize.so: pl_libtok.c libtok_no_breaks.o tokenize.pl
 # make tokenize.s.o dependent on tokenize.so so that those targets are
 # not built in parallel (create same temporary files...)
 tokenize.s.o: tokenize.so pl_libtok.c libtok_no_breaks.o tokenize.pl
-	splfr tokenize.pl pl_libtok.c libtok_no_breaks.o\
+	splfr -cflag -fPIE tokenize.pl pl_libtok.c libtok_no_breaks.o\
              --static\
              -LD  -Wl,-rpath,$(PWD) $(LDFLAGS)
 
