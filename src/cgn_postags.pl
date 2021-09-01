@@ -1229,7 +1229,7 @@ exceptional_stem_tag(zulk,    pronoun(nwh,thi,sg,het,both,indef),     'VNW(aanw,
 % u
 exceptional_stem_tag(u,       reflexive(u,sg),                        'VNW(pr,pron,obl,vol,2,getal)').
 % wien
-exceptional_stem_tag(wie,     pronoun(ywh,thi,both,de,dat,def),       'VNW(vb,pron,dat,vol,3p,getal)').
+exceptional_stem_tag(wie,     pronoun(ywh,thi,both,de,dat_acc,def),       'VNW(vb,pron,dat,vol,3p,getal)').
 % ener
 exceptional_stem_tag(een,     determiner(ener),                       'LID(onbep,gen,evf)').
 % hunner

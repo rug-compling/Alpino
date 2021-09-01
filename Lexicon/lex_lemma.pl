@@ -14297,6 +14297,7 @@ lemma_root(tekort_doen,doe_tekort) .
 lemma_root(tekort_komen,kom_tekort) .
 lemma_root(tekort_schieten,schiet_tekort) .
 lemma_root(telefoneren,telefoneer) .
+lemma_root(telegraferen,telegrafeer) .
 lemma_root(teleleren,teleleren) .
 lemma_root(telen,teel) .
 lemma_root(teleur_stellen,stel_teleur) .

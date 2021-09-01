@@ -1729,7 +1729,8 @@ format_of_result(dump_xml,Result,_Key) :-
     xml_save(Result,String,[],stream(user_output),normal).
 format_of_result(xml,Result,Key) :-
     alpino_data:result_term(_,String,_,_,_,_,Result),
-    format_to_chars("~w.xml",[Key],Codes),
+    format_to_chars("~w.xml",[Key],Codes), % note: always local! because flag(treebank) is used
+                                           % for looking up the gold standard already
     atom_codes(File,Codes),
     xml_save(Result,String,[],File,normal).
 format_of_result(triples,Result,Key) :-
