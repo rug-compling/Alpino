@@ -1439,7 +1439,17 @@ renumber_positions_node(p(Index),p(Index),_Ps).
 renumber_positions_node(Word/[P0,P],Word/[Q0,Q],Ps) :-
     renumber_positions_pos(P0,P,Q0,Q,Ps).
 
+
+renumber_positions_pos_list([],[],[],[],_).
+renumber_positions_pos_list([H0|T0],[H1|T1],[H2|T2],[H|T],Ps) :-
+    renumber_positions_pos(H0,H1,H2,H,Ps),
+    renumber_positions_pos_list(T0,T1,T2,T,Ps).
+
+renumber_positions_pos([H0|T0],[H1|T1],Q0,Q,Ps) :-
+    renumber_positions_pos_list([H0|T0],[H1|T1],Q0,Q,Ps).
+
 renumber_positions_pos(P0,P,Q0,Q,Ps):-
+    integer(P0), integer(P),
     count_smaller_ps(Ps,P0,0,Count),
     Q0 is P0 - Count,
     Q  is P - Count.
