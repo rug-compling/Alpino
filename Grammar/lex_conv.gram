@@ -1330,8 +1330,7 @@ adjective_features(ste,Sign) :-
     %% Sign:agr =>  ~(het & indef & sg),   % belangrijkste bezwaar was ...
    Sign:cform => super.
 adjective_features(st(_ADV),Sign) :-
-    Sign:hstem ==> Hstem,
-    adapt_adv_st(Hstem,Sign),
+    Sign:modifies_v => no,
     Sign:can_postn => no,
     features_adjective_adv(oadv,Sign),   % *hij is snelst
 				% *hij is meest
@@ -1340,10 +1339,10 @@ adjective_features(st(_ADV),Sign) :-
     Sign:agr =>  het & indef & sg,
     Sign:cform => super.
 %%  maar wel: zijn uitkomst was allerbelabberdst, dus aller_st =/= oadv
-adjective_features(aller_st(_ADV),Sign) :-
-    Sign:hstem ==> Hstem,
-    adapt_adv_st(Hstem,Sign),
+%%     en   : ze speelden allerbelabberdst, 
+adjective_features(aller_st(_),Sign) :-
     Sign:can_postn => no,
+    features_adjective_adv(both,Sign),
     Sign:avform => avform_ap,
     Sign:agr =>  het & indef & sg,
     Sign:cform => super.
@@ -1368,14 +1367,6 @@ adjective_features(ende(ADV),Sign) :-
     Sign:agr => ~(het & indef & sg),
     Sign:cform => base.
 
-%%  *ik heb hardst gelopen
-%%  *zij is liefst
-adapt_adv_st(meest,_). 
-adapt_adv_st(belabberd,_). 
-adapt_adv_st(Hstem,Sign) :-
-    dif(Hstem,meest),
-    dif(Hstem,belabberd),
-    Sign:modifies_v => no.
 
 modal_adv_arg(adv_noun_prep,Sign) :-
     Sign:modal_adv_arg => (adv_adv;adv_prep;adv_noun).
