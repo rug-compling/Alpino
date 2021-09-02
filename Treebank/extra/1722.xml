@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="np" end="6" id="1" rel="--">
+      <node begin="0" end="1" id="2" infl="pl_num" lemma="vijftien" naamval="stan" numtype="hoofd" pos="num" positie="prenom" postag="TW(hoofd,prenom,stan)" pt="tw" rel="det" root="vijftien" special="hoofd" word="Vijftien"/>
+      <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="3" lemma="stuiver" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="stuiver" word="stuivers"/>
+      <node begin="2" cat="pp" end="6" id="4" rel="mod">
+        <node begin="2" end="3" id="5" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="voor"/>
+        <node begin="3" cat="np" end="6" id="6" rel="obj1">
+          <node begin="3" buiging="zonder" end="4" id="7" infl="het" lemma="elk" naamval="stan" pdtype="det" pos="det" positie="vrij" postag="VNW(onbep,det,stan,vrij,zonder)" pt="vnw" rel="hd" rnum="sg" root="elk" vwtype="onbep" wh="nwh" word="elk"/>
+          <node begin="4" cat="np" end="6" id="8" rel="mod">
+            <node begin="4" end="5" id="9" infl="der" lemma="mijn" lwtype="bep" naamval="gen" npagr="rest3" pos="det" postag="LID(bep,gen,rest3)" pt="lid" rel="det" root="mijn" word="mijner"/>
+            <node begin="5" end="6" gen="de" getal="mv" graad="basis" id="10" lemma="man" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="man" word="mannen"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="6" end="7" id="11" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" special="uitroep" word="!"/>
+  </node>
+  <sentence>Vijftien stuivers voor elk mijner mannen !</sentence>
+</alpino_ds>
