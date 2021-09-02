@@ -62,7 +62,6 @@ adverb([al,bij,al]).
 adverb([al,dan,niet]).
 adverb([al,met,al]).
 adverb([al,of,niet]).
-adverb(aldoor).
 adverb(aldus).
 adverb(algauw).
 adverb([all,out]).  % cricket ?

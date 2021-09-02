@@ -5600,6 +5600,7 @@ sentence_adverb([af,een,toe]).
 sentence_adverb([af,te,toe]).  %VL
 sentence_adverb([af,ten,toe]).  %VL
 sentence_adverb([af,toe]).
+sentence_adverb(aldoor).
 sentence_adverb([alles,bijeen]). 
 sentence_adverb([alles,bijelkaar]). 
 sentence_adverb([alles,bij,elkaar]).
