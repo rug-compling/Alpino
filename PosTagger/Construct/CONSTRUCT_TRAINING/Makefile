@@ -35,11 +35,12 @@ lexical_analysis:
           $(extra) batch_command=lex_all\
                          2>$(suite).la.log > $(suite).la
 
-suite=parool2001_test
 
 test:
-	$(MAKE) -s lexical_analysis  &
-	$(MAKE) -s frames TRAIN_TEST=test &
+	$(MAKE) -s lexical_analysis suite=parool2001_test &
+	$(MAKE) ps
+	zcat $(PS:%=%.log.gz) > parool2001_test.log.gz
+#	$(MAKE) -s frames TRAIN_TEST=test &
 
 install_test:
 	cp $(suite).la $(suite).log.gz ..
@@ -47,17 +48,27 @@ install_test:
 include $(ALPINO_HOME)/Makefile.errormining
 
 
-TTS=tt_part00001 tt_part00002 tt_part00003 tt_part00004 tt_part00005 tt_part00006 tt_part00007 tt_part00008 tt_part00009 tt_part00010 tt_part00011 tt_part00012 tt_part00013 tt_part00014 tt_part00015 tt_part00016 tt_part00017 tt_part00018 tt_part00019 tt_part00020 tt_part00021 tt_part00022 tt_part00023 tt_part00024 tt_part00025
+TTS=tt_part00001 tt_part00002 tt_part00003 tt_part00004 tt_part00005 tt_part00006 tt_part00007 tt_part00008 tt_part00009 tt_part00010 tt_part00011 tt_part00012 tt_part00013 tt_part00014 tt_part00015 tt_part00016 tt_part00017 tt_part00018 
+
+TUS=tu_part00001 tu_part00002 tu_part00003 tu_part00004 tu_part00005 tu_part00006 tu_part00007 tu_part00008 tu_part00009 
+
+PS=p_part00001 p_part00002 p_part00003 p_part00004 p_part00005 p_part00006 p_part00007 p_part00008 p_part00009 p_part00010 p_part00011 p_part00012 p_part00013 p_part00014 p_part00015 p_part00016 p_part00017 p_part00018 p_part00019 p_part00020
+
+ps:
+	$(MAKE) -j $(J) $(PS:%=%.test.log.gz)
 
 tts:
 	$(MAKE) -j $(J) $(TTS:%=%.log.gz) 
 
-
+tus:
+	$(MAKE) -j $(J) $(TUS:%=%.tu.log.gz) 
 
 %.log.gz: ../../../Suites/Machine/%.sents.gz
 	$(MAKE) frames suite=$*
 
+%.test.log.gz: ../../../Suites/Machine/%.sents.gz
+	$(MAKE) frames suite=$* TRAIN_TEST=test &
 
-extra:
-	$(MAKE) frames suite=extra \
-                 extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/extra end_hook=best_score\(frames\)"
+%.tu.log.gz: ../../../Suites/Machine/%.sents.gz
+	$(MAKE) frames suite=$* extra="-slow stop_if_optimal=on -flag treebank $(ALPINO_HOME)/Treebank/extra end_hook=best_score\(frames\)"
+
