@@ -1902,6 +1902,7 @@ spelling_variant21(tezelfder,tijd,tezelfdertijd).
 spelling_variant21(terzelfder,tijd,tezelfdertijd).  % oud
 spelling_variant21(te,zijnertijd, tezijnertijd).
 spelling_variant21(ten,gevolge,   tengevolge).
+spelling_variant21(ter,sluiks,    tersluiks).
 spelling_variant21(ter,zake,      terzake).
 spelling_variant21(tussen,uur,    tussenuur).
 spelling_variant21(voor,avond,    vooravond).

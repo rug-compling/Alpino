@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="7" id="0" rel="top">
+    <node begin="0" cat="smain" end="6" id="1" rel="--">
+      <node begin="0" end="1" getal="ev" id="2" lemma="wat" naamval="stan" pdtype="pron" persoon="3o" pos="adv" postag="VNW(onbep,pron,stan,vol,3o,ev)" pt="vnw" rel="mod" root="wat" status="vol" vwtype="onbep" word="Wat"/>
+      <node begin="1" end="2" id="3" infl="sg_heeft" lemma="hebben" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="heb" sc="transitive_ndev" stype="declarative" tense="present" word="heeft" wvorm="pv"/>
+      <node begin="2" case="both" def="def" end="3" gen="de" getal="getal" id="4" lemma="u" naamval="nomin" num="sg" pdtype="pron" per="u" persoon="2b" pos="pron" postag="VNW(pers,pron,nomin,vol,2b,getal)" pt="vnw" rel="su" rnum="sg" root="u" status="vol" vwtype="pers" wh="nwh" word="u"/>
+      <node begin="3" end="4" getal="getal" id="5" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="mod" root="daar" special="er_loc" status="vol" vwtype="aanw" word="daar"/>
+      <node begin="4" cat="np" end="6" id="6" rel="obj1">
+        <node aform="super" begin="4" buiging="met-e" end="5" graad="sup" id="7" infl="e" lemma="aller_lief" naamval="stan" pos="adj" positie="prenom" postag="ADJ(prenom,sup,met-e,stan)" pt="adj" rel="mod" root="aller_lief" vform="adj" word="allerliefste"/>
+        <node begin="5" end="6" gen="de" getal="mv" graad="basis" id="8" lemma="bloem" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="bloem" word="bloemen"/>
+      </node>
+    </node>
+    <node begin="6" end="7" id="9" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" special="uitroep" word="!"/>
+  </node>
+  <sentence>Wat heeft u daar allerliefste bloemen !</sentence>
+</alpino_ds>

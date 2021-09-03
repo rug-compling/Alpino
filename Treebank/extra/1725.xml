@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="5" id="0" rel="top">
+    <node begin="0" cat="smain" end="3" id="1" rel="--">
+      <node begin="0" end="1" genus="onz" getal="ev" id="2" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="su" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="Het"/>
+      <node begin="1" end="2" id="3" infl="sg_heeft" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="copula" stype="declarative" tense="present" word="is" wvorm="pv"/>
+      <node aform="super" begin="2" buiging="zonder" end="3" graad="sup" id="4" infl="no_e" lemma="aller_verdrietig" pos="adj" positie="vrij" postag="ADJ(vrij,sup,zonder)" pt="adj" rel="predc" root="aller_verdrietig" vform="adj" word="allerverdrietigst"/>
+    </node>
+    <node begin="3" end="4" id="5" lemma="!" pos="punct" postag="LET()" pt="let" rel="--" root="!" special="uitroep" word="!"/>
+    <node begin="4" end="5" id="6" lemma="’" pos="punct" postag="LET()" pt="let" rel="--" root="’" special="aanhaal_rechts" word="’"/>
+  </node>
+  <sentence>Het is allerverdrietigst ! ’</sentence>
+</alpino_ds>

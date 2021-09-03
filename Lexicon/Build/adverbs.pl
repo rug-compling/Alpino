@@ -109,6 +109,7 @@ adverb([bij,lange,na]).
 adverb([bij,tijd,en,wijle]).
 adverb([bij,voorbaat]).
 adverb(bijvoorbaat).
+adverb(bijgeval). % ouderwets
 adverb(bijgevolg).
 adverb(bijkans).
 adverb(bijtijds).
