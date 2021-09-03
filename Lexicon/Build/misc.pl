@@ -1118,6 +1118,7 @@ tag(oeh).
 tag(oei).
 tag(oelala).
 tag(oeps).
+tag(ofschoon).
 tag(oh).
 tag(ohh).
 tag([oh,boy]).
@@ -1256,6 +1257,7 @@ tag([vooruit,dan,maar]).
 tag(wablief).
 tag(wablieft).
 tag(wah).
+tag([wat,drommel]).
 tag([wat,jij]).
 tag([wat,nou]).
 tag(wauw).
@@ -4794,6 +4796,7 @@ m('te veel',           postnp_adverb,[te,meer]).  % reden temeer
 m('te over',        postnp_adverb,[te,over]). % todo: + om-vp
 
 m(ongeveer,         postnp_adverb,ongeveer).
+m(zowat,            postnp_adverb,zowat).
 
 m('k.k.',           postnp_adverb,'k.k.').
 
@@ -6332,6 +6335,7 @@ m(precies,          postadv_adverb,precies).
 m(reeds,            postadv_adverb,reeds).
 m(vroeg,            postadv_adverb,vroeg).   % morgenochtend vroeg
 m(weer,             postadv_adverb,weer).    % ook nu weer ; dan weer
+m(zowat,            postadv_adverb,zowat).   % een uur geleden zowat kwam hij voorbij
 
 m(genoeg,           postadj_adverb,genoeg).  % gek genoeg; wonderlijk genoeg
 m(zat,              postadj_adverb,zat).     % makkelijk zat

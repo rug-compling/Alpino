@@ -20549,7 +20549,7 @@ a([e(katachtige),
    ere(katachtigere),
    no_e(katachtig),
    st(katachtigst),
-   ste(katachtigste)],nonadv,[],[]).
+   ste(katachtigste)],adv,[],[]).
 
 a([e(kathaarse),
    no_e(kathaars)],nonadv,[],[]).
@@ -21900,7 +21900,7 @@ a([e(leugenachtige),
    ere(leugenachtigere),
    no_e(leugenachtig),
    st(leugenachtigst),
-   ste(leugenachtigste)],nonadv,[],[]).
+   ste(leugenachtigste)],adv,[],[]).
 
 a([e(leuke),
    er(leuker),
@@ -35328,7 +35328,7 @@ a([ge_both(uitgestoten)],adv,[],[]).
 a([ge_e(uitgestraalde),
    ge_no_e(uitgestraald)],adv,[],[]).
 
-a([ge_both(uitgestreken)],nonadv,[],[]).
+a([ge_both(uitgestreken)],adv,[],[]).
 
 a([ge_e(uitgestrekte),
    er(uitgestrekter),

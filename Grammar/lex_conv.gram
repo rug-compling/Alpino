@@ -1330,11 +1330,18 @@ adjective_features(ste,Sign) :-
     %% Sign:agr =>  ~(het & indef & sg),   % belangrijkste bezwaar was ...
    Sign:cform => super.
 adjective_features(st(_ADV),Sign) :-
-    Sign:modifies_v => no,
+    Sign => a,
+    SignNotVeel => a,
+    SignNotVeel:modifies_v => no,
     Sign:can_postn => no,
-    features_adjective_adv(oadv,Sign),   % *hij is snelst
-				% *hij is meest
-				% maar wel: zijn uitkomst was allerbelabberdst
+    Sign:hstem <=> HSTEM,
+    when(nonvar(HSTEM),
+	 (  HSTEM == veel       % hier wonen meest Chinezen
+	 ;  HSTEM \== veel,
+	     Sign = SignNotVeel % *hij loopt snelst
+	 )
+	),
+    features_adjective_adv(oadv,Sign),   % *hij is snelst,  *hij is meest
     Sign:avform => avform_ap,
     Sign:agr =>  het & indef & sg,
     Sign:cform => super.

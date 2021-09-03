@@ -733,6 +733,7 @@ lemma_root(achterna_hakken,hak_achterna) .
 lemma_root(achterna_halen,haal_achterna) .
 lemma_root(achterna_hangen,hang_achterna) .
 lemma_root(achterna_harken,hark_achterna) .
+lemma_root(achterna_heffen,hef_achterna) .
 lemma_root(achterna_heien,hei_achterna) .
 lemma_root(achterna_hellen,hel_achterna) .
 lemma_root(achterna_helpen,help_achterna) .
@@ -2321,6 +2322,7 @@ lemma_root(binnen_halen,haal_binnen) .
 lemma_root(binnen_hangen,hang_binnen) .
 lemma_root(binnen_harken,hark_binnen) .
 lemma_root(binnen_hebben,heb_binnen) .
+lemma_root(binnen_heffen,hef_binnen) .
 lemma_root(binnen_heien,hei_binnen) .
 lemma_root(binnen_hellen,hel_binnen) .
 lemma_root(binnen_helpen,help_binnen) .
@@ -3079,6 +3081,7 @@ lemma_root(door_belijden,belijd_door) .
 lemma_root(door_bellen,bel_door) .
 lemma_root(door_beloven,beloof_door) .
 lemma_root(door_bemiddelen,bemiddel_door) .
+lemma_root(door_beminnen,bemin_door) .
 lemma_root(door_bemoedigen,bemoedig_door) .
 lemma_root(door_benauwen,benauw_door) .
 lemma_root(door_benen,been_door) .
@@ -3090,6 +3093,7 @@ lemma_root(door_beraadslagen,beraadslaag_door) .
 lemma_root(door_berekenen,bereken_door) .
 lemma_root(door_bergen,berg_door) .
 lemma_root(door_berglopen,berglopen_door) .
+lemma_root(door_berispen,berisp_door) .
 lemma_root(door_berusten,berust_door) .
 lemma_root(door_beschadigen,beschadig_door) .
 lemma_root(door_beschikken,beschik_door) .
@@ -9025,6 +9029,7 @@ lemma_root(om_hakken,hak_om) .
 lemma_root(om_halen,haal_om) .
 lemma_root(om_hangen,hang_om) .
 lemma_root(om_harken,hark_om) .
+lemma_root(om_heffen,hef_om) .
 lemma_root(om_heien,hei_om) .
 lemma_root(omheinen,omhein) .
 lemma_root(om_hellen,hel_om) .
@@ -10040,6 +10045,7 @@ lemma_root(over_hangen,hang_over) .
 lemma_root(over_harken,hark_over) .
 lemma_root(over_hebben,heb_over) .
 lemma_root(overheersen,overheers) .
+lemma_root(over_heffen,hef_over) .
 lemma_root(over_heien,hei_over) .
 lemma_root(over_hellen,hel_over) .
 lemma_root(over_helpen,help_over) .
@@ -10692,6 +10698,7 @@ lemma_root(raak_belijden,belijd_raak) .
 lemma_root(raak_bellen,bel_raak) .
 lemma_root(raak_beloven,beloof_raak) .
 lemma_root(raak_bemiddelen,bemiddel_raak) .
+lemma_root(raak_beminnen,bemin_raak) .
 lemma_root(raak_bemoedigen,bemoedig_raak) .
 lemma_root(raak_benauwen,benauw_raak) .
 lemma_root(raak_benen,been_raak) .
@@ -10701,6 +10708,7 @@ lemma_root(raak_beoordelen,beoordeel_raak) .
 lemma_root(raak_bepalen,bepaal_raak) .
 lemma_root(raak_beraadslagen,beraadslaag_raak) .
 lemma_root(raak_berglopen,berglopen_raak) .
+lemma_root(raak_berispen,berisp_raak) .
 lemma_root(raak_berusten,berust_raak) .
 lemma_root(raak_beschadigen,beschadig_raak) .
 lemma_root(raak_beschikken,beschik_raak) .
@@ -13255,6 +13263,7 @@ lemma_root(rond_hakken,hak_rond) .
 lemma_root(rond_halen,haal_rond) .
 lemma_root(rond_hangen,hang_rond) .
 lemma_root(rond_harken,hark_rond) .
+lemma_root(rond_heffen,hef_rond) .
 lemma_root(rond_heien,hei_rond) .
 lemma_root(rond_hellen,hel_rond) .
 lemma_root(rond_helpen,help_rond) .
@@ -14053,6 +14062,7 @@ lemma_root(tegemoet_hakken,hak_tegemoet) .
 lemma_root(tegemoet_halen,haal_tegemoet) .
 lemma_root(tegemoet_hangen,hang_tegemoet) .
 lemma_root(tegemoet_harken,hark_tegemoet) .
+lemma_root(tegemoet_heffen,hef_tegemoet) .
 lemma_root(tegemoet_heien,hei_tegemoet) .
 lemma_root(tegemoet_hellen,hel_tegemoet) .
 lemma_root(tegemoet_helpen,help_tegemoet) .
@@ -14413,6 +14423,7 @@ lemma_root(terug_zakken,zak_terug) .
 lemma_root(terug_zeggen,zeg_terug) .
 lemma_root(terug_zetten,zet_terug) .
 lemma_root(terug_zien,zie_terug) .
+lemma_root(terug_zwemmen,zwem_terug) .
 lemma_root(testen,test) .
 lemma_root(tetteren,tetter) .
 lemma_root(tevreden_stellen,stel_tevreden) .
@@ -15865,6 +15876,7 @@ lemma_root(uit_belijden,belijd_uit) .
 lemma_root(uit_bellen,bel_uit) .
 lemma_root(uit_beloven,beloof_uit) .
 lemma_root(uit_bemiddelen,bemiddel_uit) .
+lemma_root(uit_beminnen,bemin_uit) .
 lemma_root(uit_bemoedigen,bemoedig_uit) .
 lemma_root(uit_benauwen,benauw_uit) .
 lemma_root(uit_benen,been_uit) .
@@ -15874,6 +15886,7 @@ lemma_root(uit_beoordelen,beoordeel_uit) .
 lemma_root(uit_bepalen,bepaal_uit) .
 lemma_root(uit_beraadslagen,beraadslaag_uit) .
 lemma_root(uit_bergen,berg_uit) .
+lemma_root(uit_berispen,berisp_uit) .
 lemma_root(uit_berusten,berust_uit) .
 lemma_root(uit_beschikken,beschik_uit) .
 lemma_root(uit_beslissen,beslis_uit) .
@@ -20632,6 +20645,7 @@ lemma_root(voort_belijden,belijd_voort) .
 lemma_root(voort_bellen,bel_voort) .
 lemma_root(voort_beloven,beloof_voort) .
 lemma_root(voort_bemiddelen,bemiddel_voort) .
+lemma_root(voort_beminnen,bemin_voort) .
 lemma_root(voort_bemoedigen,bemoedig_voort) .
 lemma_root(voort_benauwen,benauw_voort) .
 lemma_root(voort_benen,been_voort) .
@@ -20641,6 +20655,7 @@ lemma_root(voort_beoordelen,beoordeel_voort) .
 lemma_root(voort_bepalen,bepaal_voort) .
 lemma_root(voort_beraadslagen,beraadslaag_voort) .
 lemma_root(voort_berglopen,berglopen_voort) .
+lemma_root(voort_berispen,berisp_voort) .
 lemma_root(voort_berusten,berust_voort) .
 lemma_root(voort_beschadigen,beschadig_voort) .
 lemma_root(voort_beschikken,beschik_voort) .
@@ -23110,6 +23125,7 @@ lemma_root(weg_duiken,duik_weg) .
 lemma_root(weg_duwen,duw_weg) .
 lemma_root(weg_ebben,eb_weg) .
 lemma_root(wegen,weeg) .
+lemma_root(weg_fladderen,fladder_weg) .
 lemma_root(weg_gaan,ga_weg) .
 lemma_root(weg_geven,geef_weg) .
 lemma_root(weg_glijden,glijd_weg) .

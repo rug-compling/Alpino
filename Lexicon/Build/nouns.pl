@@ -9310,9 +9310,7 @@ n([pl(doeaniers),sg(doeanier)],de,[]).
 
 n([sg(doejong),pl(doejongs)],de,[]).
 
-n([pl(doeken),sg(doek)],de,[]).
-
-n([mass(doek),pl(doeken),sg(doek)],both,[],
+n([pl(doeken),sg(doek)],both,[],
   [hoofd,
    dim(doekje)]).
 
