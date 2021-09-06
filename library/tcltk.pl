@@ -58,7 +58,7 @@ new_interp('$wish$'(Strm,TermStream,EventStream),Options) :-
 
 open_command(Command, Stream) :-
     shell(Shell, Command, ArgsList),
-    process_create(Shell, ArgsList,
+    process:process_create(Shell, ArgsList,
                   [ stdin(pipe(Stream)),
                     detached(true)
                   ]).
