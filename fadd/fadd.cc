@@ -44,7 +44,7 @@ struct col_inf3 {		// info on tree columns for version 3
   int		item_size;	// size of a hash key and a pointer
 };
 
-class tuple {
+class fadd_tuple {
 public:
   int		word_dicts;	// number of words in the tuple
   int		num_dicts;	// number of numbers in the tuple
@@ -71,7 +71,7 @@ class dict_inf {
 public:
   union {
     fsa		*fsap;		// automaton
-    tuple	*tuplep;		// tuple
+    fadd_tuple	*tuplep;		// tuple
   }		dictionary;	// dictionary pointer
   const char	*filename;	// name of the file containing dictionary
   int		type;		// type of dictionary
@@ -212,7 +212,7 @@ add_tuple(const char *filename);
  *
  *		In case of errors, fadd_get_error() provides error code.
  */
-tuple *
+fadd_tuple *
 open_tuple(const char *filename);
 
 /* Name:	interp
@@ -243,7 +243,7 @@ open_tuple(const char *filename);
  *		between the differences of respective indexes.
  */
 int
-interp(const char *str, const int l, const int r, const tuple *t);
+interp(const char *str, const int l, const int r, const fadd_tuple *t);
 
 
 /* Name:	str2i
@@ -271,7 +271,7 @@ str2i(const char *str, const int len);
  *		in bytes. This is done in order to save space.
  */
 long int
-find_keys(list_of_words *word_list, const tuple *t);
+find_keys(list_of_words *word_list, const fadd_tuple *t);
 
 /* Name:	find_subkeys
  * Class:	None.
@@ -289,7 +289,7 @@ find_keys(list_of_words *word_list, const tuple *t);
  *		refers to a unique subtree. That subtree is returned.
  */
 long int
-find_subkeys(list_of_words *word_list, const tuple *t, int *plen);
+find_subkeys(list_of_words *word_list, const fadd_tuple *t, int *plen);
 
 
 /* Name:	find_hashed_keys
@@ -308,7 +308,7 @@ find_subkeys(list_of_words *word_list, const tuple *t, int *plen);
  *		of words instead of words themselves.
  */
 long int
-find_hashed_keys(list_of_numbers *word_list, const tuple *t);
+find_hashed_keys(list_of_numbers *word_list, const fadd_tuple *t);
 
 /* Name:	get_fpnumbers
  * Class:	None.
@@ -320,7 +320,7 @@ find_hashed_keys(list_of_numbers *word_list, const tuple *t);
  * Remarks:	Intergers are converted to floating-point.
  */
 list_of_fpnumbers *
-get_fpnumbers(const long int indx, const tuple *t);
+get_fpnumbers(const long int indx, const fadd_tuple *t);
 
 /* Name:	get_fpsubtree
  * Class:	None.
@@ -332,7 +332,7 @@ get_fpnumbers(const long int indx, const tuple *t);
  * Remarks:	None.
  */
 tree_of_fpnumbers *
-get_fpsubtree(const long int idx, const tuple *t, const int col);
+get_fpsubtree(const long int idx, const fadd_tuple *t, const int col);
 
 /* Name:	get_fpsisters
  * Class:	None.
@@ -360,7 +360,7 @@ get_fpsubtree(const long int idx, const tuple *t, const int col);
  *		  (b (a (c (3 2 1))))).
  */
 tree_of_fpnumbers *
-get_fpsisters(const tuple *t, const int col, const long int l,
+get_fpsisters(const fadd_tuple *t, const int col, const long int l,
 	      const long int p);
 
 
@@ -2291,7 +2291,7 @@ init_given_tuple(const int dict_no, const char *filename,
     all_dict_no = dict_no + 1;
   }
   if (all_dict[dict_no] == NULL) {
-    tuple *t;
+    fadd_tuple *t;
     if ((t = open_tuple(filename))) {
       if ((all_dict[dict_no] = new dict_inf) == NULL) {
 	fadd_set_errno(FADD_MEM);
@@ -2368,7 +2368,7 @@ long int
 init_tuple(list_of_words *dict_list)
 {
   long int dict_no;
-  tuple *dd;
+  fadd_tuple *dd;
 
 #ifdef DEBUG
   cerr << "Init tuple\n";
@@ -2424,7 +2424,7 @@ init_tuple(list_of_words *dict_list)
 long int
 add_tuple(const char *filename)
 {
-  tuple *t;
+  fadd_tuple *t;
 #ifdef DEBUG
   cerr << "add tuple\n";
 #endif
@@ -2578,7 +2578,7 @@ add_tuple(const char *filename)
  *
  *		In case of errors, fadd_get_error() provides error code.
  */
-tuple *
+fadd_tuple *
 open_tuple(const char *filename)
 {
   unsigned char	sig_arc[8];
@@ -2636,8 +2636,8 @@ open_tuple(const char *filename)
   }
 
   // read sizes
-  tuple *t;
-  if ((t = new tuple) == NULL) {
+  fadd_tuple *t;
+  if ((t = new fadd_tuple) == NULL) {
     fadd_set_errno(FADD_MEM);
     return NULL;
   }
@@ -3300,7 +3300,7 @@ word_tuple_grams(list_of_words* word_list, const long int dict_no)
 
   if (dict_no < all_dict_no && all_dict[dict_no] &&
       all_dict[dict_no]->type == FADD_TUPLE) {
-    tuple *t = all_dict[dict_no]->dictionary.tuplep;
+    fadd_tuple *t = all_dict[dict_no]->dictionary.tuplep;
     char *str;
     if ((str = new char[t->string_size + 1]) == NULL) {
       fadd_set_errno(FADD_MEM);
@@ -3546,7 +3546,7 @@ word_tuple_fpgrams(list_of_words *word_list, const long int dict_no)
   fadd_set_errno(FADD_OK);
   if (dict_no < all_dict_no && all_dict[dict_no] &&
       all_dict[dict_no]->type == FADD_TUPLE) {
-    tuple *t = all_dict[dict_no]->dictionary.tuplep;
+    fadd_tuple *t = all_dict[dict_no]->dictionary.tuplep;
     if (t->version != 3 && t->version != 4) {
       fadd_set_errno(FADD_TYPE);
       return NULL;
@@ -3581,7 +3581,7 @@ prefix_fpgrams(list_of_words *word_list, const long int dict_no)
   fadd_set_errno(FADD_OK);
   if (dict_no < all_dict_no && all_dict[dict_no] &&
       all_dict[dict_no]->type == FADD_TUPLE) {
-    tuple *t = all_dict[dict_no]->dictionary.tuplep;
+    fadd_tuple *t = all_dict[dict_no]->dictionary.tuplep;
     if (t->version != 3 && t->version != 4) {
       fadd_set_errno(FADD_TYPE);
       return NULL;
@@ -3611,7 +3611,7 @@ prefix_fpgrams(list_of_words *word_list, const long int dict_no)
  *		as the entry in the last word column.
  */
 long int
-find_keys(list_of_words *word_list, const tuple *t)
+find_keys(list_of_words *word_list, const fadd_tuple *t)
 {
   if (t->word_dicts == 1) {
     return number_word(word_list->word, t->dicts[0]);
@@ -3715,7 +3715,7 @@ find_keys(list_of_words *word_list, const tuple *t)
  *		refers to a unique subtree. That subtree is returned.
  */
 long int
-find_subkeys(list_of_words *word_list, const tuple *t, int *plen)
+find_subkeys(list_of_words *word_list, const fadd_tuple *t, int *plen)
 {
   if (t->word_dicts == 1) {
     // The same as normal grams - just one word column
@@ -3811,7 +3811,7 @@ hashkey_tuple_fpgrams(list_of_numbers *word_list, const long int dict_no)
   fadd_set_errno(FADD_OK);
   if (dict_no < all_dict_no && all_dict[dict_no] &&
       all_dict[dict_no]->type == FADD_TUPLE) {
-    tuple *t = all_dict[dict_no]->dictionary.tuplep;
+    fadd_tuple *t = all_dict[dict_no]->dictionary.tuplep;
     if (t->version != 3 && t->version != 4) {
       fadd_set_errno(FADD_TYPE);
       return NULL;
@@ -3842,7 +3842,7 @@ hashkey_tuple_fpgrams(list_of_numbers *word_list, const long int dict_no)
  *		of words instead of words themselves.
  */
 long int
-find_hashed_keys(list_of_numbers *word_list, const tuple *t)
+find_hashed_keys(list_of_numbers *word_list, const fadd_tuple *t)
 {
   if (t->word_dicts == 1) {
     return word_list->word;
@@ -3930,7 +3930,7 @@ find_hashed_keys(list_of_numbers *word_list, const tuple *t)
  * Remarks:	Intergers are converted to floating-point.
  */
 list_of_fpnumbers *
-get_fpnumbers(const long int indx, const tuple *t)
+get_fpnumbers(const long int indx, const fadd_tuple *t)
 {
   const char *buf = t->numbers +
     indx * (t->tuple_size -
@@ -4072,7 +4072,7 @@ get_int(const char *buf, const int s)
  * Remarks:	None.
  */
 tree_of_fpnumbers *
-get_fpsubtree(const long int idx, const tuple *t, const int col)
+get_fpsubtree(const long int idx, const fadd_tuple *t, const int col)
 {
   long col_offset = t->tree_col_inf[col].col_addr;
   int ws = t->sizes[col];	// key size for ith column
@@ -4115,7 +4115,7 @@ get_fpsubtree(const long int idx, const tuple *t, const int col)
  *		  (b (a (c (3 2 1))))).
  */
 tree_of_fpnumbers *
-get_fpsisters(const tuple *t, const int col, const long int l,
+get_fpsisters(const fadd_tuple *t, const int col, const long int l,
 	      const long int p)
 {
   long col_offset = t->tree_col_inf[col].col_addr;
@@ -4186,7 +4186,7 @@ get_fpsisters(const tuple *t, const int col, const long int l,
  *		between the differences of respective indexes.
  */
 int
-interp(const char *str, const int l, const int r, const tuple *t)
+interp(const char *str, const int l, const int r, const fadd_tuple *t)
 {
   int offset = 0;
   const char *p1 = t->tuples + l * t->tuple_size;
@@ -4282,7 +4282,7 @@ close_tuple(const long int dict_no)
   if (all_dict[dict_no]) {
     if (all_dict[dict_no]->user == 1) {
       // First close associated dictionaries
-      tuple *t = all_dict[dict_no]->dictionary.tuplep;
+      fadd_tuple *t = all_dict[dict_no]->dictionary.tuplep;
       for (int i = 0; i < t->word_dicts; i++) {
 	if (close_dict(t->dicts[i]) == -1L) {
 	  return -1L;
