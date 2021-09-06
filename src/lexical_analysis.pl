@@ -2339,7 +2339,7 @@ extract_skip_positions([H|T],Rest0,Rest,P0,[alt(P0,Lex,Surf)|SkipIntervals]) :-
 	       [Lex])
     ;   true
     ),
-    append([Surf,_closing],Input,Input0), 
+    append([Surf,_],Input,Input0), 
     extract_skip_positions(Input,Rest1,Rest,P,SkipIntervals).
 extract_skip_positions([H|T],[Word|Rest0],Rest,P0,[folia(P0,P,Lemma,Tag)|SkipIntervals]) :-
     start_folia_skip([H|T]),!,
