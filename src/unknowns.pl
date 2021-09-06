@@ -3455,7 +3455,7 @@ is_start_sentence_(P):-
     alpino_lexical_analysis:open_bracket(P0,P,_),
     is_start_sentence_(P0).
 is_start_sentence_(P):-
-    tag(P0,P,_,_,_het,Quoted,_,_het_noun),
+    tag(P0,P,_,_,_,Quoted,_,_),
     starts_with_quote(Quoted),
     is_start_sentence_(P0).
 
