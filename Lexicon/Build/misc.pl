@@ -2126,6 +2126,7 @@ m(stief_vader,  determiner(pron), stiefvaders).
 m(land,         determiner(pron), slands).
 m('\'s land',   determiner(pron), ['\'',slands]).
 m(mam,          determiner(pron), mams).
+m(meester,      determiner(pron), meesters).
 m(moeder,       determiner(pron), moeders).
 m(noord,        determiner(pron), noords).
 m(oost,         determiner(pron), oosts).
@@ -5092,6 +5093,7 @@ m(direct,           modal_adverb(comp_prep),direct).
 m(direct,           modal_adverb(comp_prep),direkt).
 m(meteen,           modal_adverb(comp_prep),meteen). % meteen na(dat)..
 m(onmiddellijk,     modal_adverb(comp_prep),onmiddellijk).
+m(terstond,         modal_adverb(comp_prep),terstond).
 m(vlak,             modal_adverb(comp_prep),vlak). % vlak voor(dat)..
 
 with_dt([Ook,Al],

@@ -2960,6 +2960,7 @@ v(beschrijf,beschrijft,beschrijven,beschreven,beschreef,beschreven,
     [h([np_sbar,
 	so_pp_sbar,
 	sbar,
+	np_mod_pp(van),
 	als_pred_np,
 	transitive])]).
 
