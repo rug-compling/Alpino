@@ -4021,7 +4021,8 @@ v(blijf,blijft,blijven,gebleven,bleef,bleven,
 	copula_np,
 	copula_sbar,
 	copula_vp,
-	intransitive,
+	    intransitive,
+	    so_np,    % dan blijft er mij geen keus
 	ld_adv,
         norm_passive,                % omdat .. blijft voorbehouden/aangewezen/behouden
 	te_passive,
@@ -14088,6 +14089,7 @@ v(maak,maakt,maken,gemaakt,maakte,maakten,
 	part_transitive(schoon),
 	part_transitive(uit),
 	part_transitive(vast),
+	part_transitive(vuil),
 	part_transitive(vrij),
 	part_transitive(waar),
         part_transitive(wakker),
@@ -24751,7 +24753,8 @@ v(verhoog,verhoogt,verhogen,verhoogd,verhoogde,verhoogden,
   [h([transitive,
       ld_pp,
       np_ld_pp,
-      intransitive		% west verhoogde, en oost bood de manche
+      sbar_subj,	      % het verhoogde de spanning dat ...
+      intransitive	      % west verhoogde, en oost bood de manche
      ])]).
 
 v(verhoop,verhoopt,verhopen,verhoopt,verhoopte,verhoopten,

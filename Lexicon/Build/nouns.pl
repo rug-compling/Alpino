@@ -21574,7 +21574,11 @@ n([pl(memoranda),pl(memorandums),sg(memorandum)],het,[]).
 
 n([pl(memories),sg(memorie)],de,[]).
 
-n([pl(meneren),sg(meneer)],de,[np_app_measure],[dim(meneertje)]).
+n([pl(meneren),sg(meneer)],de,
+  [np_app_measure,		% meneer de pastoor
+   app_measure			% meneer pastoor
+  ],
+  [dim(meneertje)]).
 
 n([pl(mengelingen),sg(mengeling)],de,[]).
 

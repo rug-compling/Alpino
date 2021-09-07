@@ -23049,6 +23049,7 @@ lemma_root(vrij_stellen,stel_vrij) .
 lemma_root(vrijwaren,vrijwaar) .
 lemma_root(vrolijken,vrolijk) .
 lemma_root(vrouwenwielrennen,vrouwenwielrennen) .
+lemma_root(vuil_maken,maak_vuil) .
 lemma_root(vullen,vul) .
 lemma_root(vuren,vuur) .
 lemma_root(waaien,waai) .
