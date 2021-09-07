@@ -2542,6 +2542,7 @@ particle(vorm).
 particle(vreemd).
 particle(vrij).
 particle(vrijaf).
+particle(vuil).
 particle(waar).
 particle(wacht).
 particle(wakker).

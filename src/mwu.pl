@@ -318,6 +318,7 @@ mwu_postag('een paar',['LID(onbep,stan,agr)','N(soort,ev,basis,onz,stan)'],[een,
 mwu_postag('een slordige',['LID(onbep,stan,agr)','ADJ(prenom,basis,met-e,stan)'],[een,slordig]).
 mwu_postag('een soort',['LID(onbep,stan,agr)','N(soort,ev,basis,onz,stan)'],[een,soort]).
 mwu_postag('een weinig',['LID(onbep,stan,agr)','VNW(onbep,grad,stan,vrij,zonder,basis)'],[een,weinig]).
+mwu_postag('eens niet',['BW()','BW()'],[niet,eens]).
 mwu_postag('Eerste Batallion',['TW(rang,prenom,stan)','N(soort,ev,basis,onz,stan)'],[één,batallion]).
 mwu_postag('Eerste en Tweede Kamer',['TW(rang,prenom,stan)','VG(neven)','TW(rang,prenom,stan)','N(soort,ev,basis,zijd,stan)'],[één,en,twee,kamer]).
 mwu_postag('Eerste Kamerlid',['TW(rang,prenom,stan)','N(soort,ev,basis,onz,stan)'],[één,kamer_lid]).
@@ -882,6 +883,7 @@ mwu_postag('niet alleen meer',['BW()','BW()','VNW(onbep,grad,stan,vrij,zonder,co
 mwu_postag('niet het minst',['BW()','LID(bep,stan,evon)','VNW(onbep,grad,stan,nom,zonder,zonder-n,sup)'],[niet,het,weinig]).
 mwu_postag('niet meer dan',['BW()','VNW(onbep,grad,stan,vrij,zonder,comp)','VG(onder)'],[niet,veel,dan]).
 mwu_postag('niet minder dan',['BW()','VNW(onbep,grad,stan,vrij,zonder,comp)','VG(onder)'],[niet,weinig,dan]).
+mwu_postag('niet zonder',['BW()','VZ(init)'],[niet,zonder]).
 mwu_postag('niets minder dan',['VNW(onbep,pron,stan,vol,3o,ev)','VNW(onbep,grad,stan,vrij,zonder,comp)','VG(onder)'],[niets,weinig,dan]).
 mwu_postag('Nieuwe Orde',['ADJ(prenom,basis,met-e,stan)','N(soort,ev,basis,zijd,stan)'],[nieuw,orde]).
 mwu_postag('Nieuws in Het Kort',['N(soort,ev,basis,onz,stan)','VZ(init)','LID(bep,stan,evon)','ADJ(vrij,basis,zonder)'],[nieuw,in,het,kort]).

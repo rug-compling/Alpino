@@ -95,6 +95,10 @@ surviving_word_tag(zorgen,noun(de,count,pl)).
 %% temp
 surviving_word_tag(eten,noun(het,mass,sg)).
 
+%% often wrong in novels
+surviving_word_tag('Beiden',predm_adverb).
+surviving_word_tag('Wat',adverb).
+
 %% temp
 surviving_word_tag(bezoek,tmp_noun(het,count,sg)).
 surviving_word_tag(bezoek,tmp_noun(het,count,sg,pred_pp(op))).
