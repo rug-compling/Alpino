@@ -2010,6 +2010,7 @@ decap_only('Jazeker').
 decap_only('Je').
 decap_only('Kan').
 decap_only('Maar').
+decap_only('Mama').
 decap_only('Me').
 decap_only('Met').
 decap_only('Na').
@@ -2440,7 +2441,7 @@ guess_left_headed_compound(W,Ws,Wmin,Stem,Surf,SurfLength) :-
 %    isupper(RestH1),		% verslag-van Noord
     islower(FirstH1),
     atom_codes(Wmin,[FirstH1,FirstH2|First]),
-    \+ compound_part(Wmin),
+    \+ compound_part(Wmin,_),
     atom_codes(W1,[RestH1,RestH2|RestT]),
     hdrug_util:debug_message(5,"try lhc: ~w~n",[[W1|Ws]]),
     alpino_lex:lexicon(_,Stem,[W1|Ws],Remains,names_dictionary),
@@ -2453,7 +2454,7 @@ guess_prefix_compound(W,Wfirst,WLast) :-
     once(atom_split(W,'-',Wfirst,WLast)),
     \+ Wfirst = 'Sint',  % Sint-X is often not a PER but a LOC or ORG
     (   %% oost-Frankrijk; ex-Ajax
-        compound_part(Wfirst)
+        compound_part(Wfirst,_)
     ;   %% Ajax-Feyenoord
         alpino_lex:lexicon(_,_,[Wfirst],[],names_dictionary),
 	alpino_lex:lexicon(_,_,[WLast],[],names_dictionary)
@@ -2516,6 +2517,8 @@ illegal_compound(Tail,List) :-
     illegal_compound_pattern(Tail,Prefix),
     append(_,Prefix,List).
 
+
+illegal_compound_pattern(ster,[ven]).
 illegal_compound_pattern(meter,[kilo]).
 illegal_compound_pattern(meters,[kilo]).
 illegal_compound_pattern(positie,[ex]).
@@ -2534,18 +2537,24 @@ guess_proper_compound(W,Wmin,Parts,Len) :-
 guess_compound_(W,FinalPart,Len0,Len,[PrefixStem|Parts],Previous):-
     Len1 is Len0+1,
     atom(W),
-    atom_pair_lengths(W,Prefix,Rest,14),
+    atom_pair_lengths(W,Prefix,Rest,20),
     compound_part(first,Prefix,PrefixStem),
     guess_compound__(Rest,FinalPart,Len1,Len,Parts,[PrefixStem|Previous],Prefix).
 
 guess_compound__(W,W,L,L,[Wstem],_,_) :-
     compound_part(final,W,Wstem).
-guess_compound__(SW,W,L,L,[Wstem],PreviousList,_) :-
+%guess_compound__(SW,W,L,L,[Wstem],PreviousList,_) :-
+%    atom(SW),
+%    atom_concat(s,W,SW),
+%    W \= schap, % no -s- with schap
+%    allow_verbindings_s(PreviousList),
+%    compound_part(final,W,Wstem).   % why final??? overgang*s*klasse*club
+guess_compound__(SW,FinalPart,L0,L,Parts,Prev,PrevPrefix) :-
     atom(SW),
     atom_concat(s,W,SW),
     W \= schap, % no -s- with schap
-    allow_verbindings_s(PreviousList),
-    compound_part(final,W,Wstem).
+    allow_verbindings_s(Prev),
+    guess_compound__(W,FinalPart,L0,L,Parts,Prev,PrevPrefix).
 guess_compound__(W,FinalPart,L0,L,Parts,Prev,PrevPrefix):-
     \+ do_not_split(W),
     %% reverse(Prev,RevPrev),
@@ -2591,7 +2600,7 @@ do_not_split(Word) :-
 guess_compound___(W,FinalPart,Len0,Len,[PrefixStem|Parts],Previous,PrevPrefix):-
     Len1 is Len0+1, Len1 < 10,    
     atom(W),
-    atom_pair_lengths(W,Prefix,Rest,14),
+    atom_pair_lengths(W,Prefix,Rest,20),
     \+ Prefix = PrevPrefix,
     compound_part(middle,Prefix,PrefixStem),
     guess_compound__(Rest,FinalPart,Len1,Len,Parts,[PrefixStem|Previous],Prefix).
@@ -2600,12 +2609,15 @@ compound_part(first,W,Stem) :-
     \+ never_compound_part(W),
     once(open_class_stem_tag_pair(non_final,W,Stem,_)).
 
-compound_part(first,W,W) :-
-    compound_part(W).
+compound_part(first,W0,W) :-
+    compound_part(W0,W).
+compound_part(first,W0,W) :-
+    decap_first(W0,W1),
+    compound_part(W1,W).
 compound_part(first,WD,W) :-
     atom(WD),
-    atom_concat(W,'-',WD),
-    compound_part(W).
+    atom_concat(W0,'-',WD),
+    compound_part(W0,W).
 
 compound_part(middle,W,Stem) :-
     \+ never_compound_part(W),
@@ -2617,6 +2629,10 @@ compound_part(final,W,Stem) :-
     \+ never_final_compound_part(W),
     unique_open_class_stem_tag_pair(final,W,Stem).
 
+compound_part(W,W) :-
+    compound_part(W).
+compound_part(kinder,kind).
+
 compound_part(achteraf).
 compound_part(anti).
 compound_part(ex).
@@ -2624,7 +2640,6 @@ compound_part(half).
 compound_part(her).
 compound_part(hyper).
 compound_part(kei).
-compound_part(kinder).
 compound_part(macro).
 compound_part(mega).
 compound_part(micro).
@@ -2648,11 +2663,6 @@ compound_part(welkomst).
 compound_part(west).
 compound_part(zuid).
 
-compound_part('Midden').
-compound_part('Noord').
-compound_part('Oost').
-compound_part('West').
-compound_part('Zuid').
 
 unique_open_class_stem_tag_pair(Final,W,Stem) :-
     findall(Stem,open_class_stem_tag_pair(Final,W,Stem,_),List0),
@@ -2662,11 +2672,15 @@ unique_open_class_stem_tag_pair(Final,W,Stem) :-
 %% since we try this for all possible suffixes, this ought to be fast
 %% and therefore we immediately call alpino_lex:xl/5...
 %%
-%% try non-verbs before verbs, because the resulting lemma is more
+%% try non-verbs/adjs before adjs before verbs, because the resulting lemma is more
 %% often correct...
 open_class_stem_tag_pair(Final,W,Stem,Cat) :-
     (   alpino_lex:xl(W,Cat0,Stem,[],[]),
-	\+ Cat0 = verb(_,_,_)
+	\+ Cat0 = verb(_,_,_),
+	\+ Cat0 = adjective(_),
+	\+ Cat0 = adjective(_,_)
+    ;   alpino_lex:xl(W,adjective(ADV),Stem,[],[]),
+        Cat0 = adjective(ADV)
     ;   alpino_lex:in_names_dictionary(Cat0,W,Stem,[],[],_),
         \+ Cat0 = proper_name(_,'PER')
     ;   alpino_lex:simple_convert_number(W,_),
@@ -2737,6 +2751,7 @@ never_final_compound_part(om).
 never_final_compound_part(on).
 never_final_compound_part(op).
 never_final_compound_part(pel).
+never_final_compound_part(ping).
 never_final_compound_part(pro).
 never_final_compound_part(ren).
 never_final_compound_part(sis).
@@ -2770,6 +2785,9 @@ never_compound_part(Atom) :-
     never_compound_part_sub(Sym),
     sub_atom(Atom,_,_,_,Sym).
 
+never_compound_part('Kinder').  
+never_compound_part('Pro').  % but pro is ok
+
 never_compound_part_sc(aar).
 never_compound_part_sc(aars).
 never_compound_part_sc(acc).
@@ -2777,23 +2795,26 @@ never_compound_part_sc(ace).
 never_compound_part_sc(ach).
 never_compound_part_sc(air).
 never_compound_part_sc(al).
+never_compound_part_sc(ama).
 never_compound_part_sc(an).
 never_compound_part_sc(app).
 never_compound_part_sc(are).
 never_compound_part_sc(aren).
 never_compound_part_sc('a\'s').
 never_compound_part_sc(au).
-never_compound_part_sc(an).
+never_compound_part_sc(ava).
 never_compound_part_sc(ba).
 never_compound_part_sc(ben).
 never_compound_part_sc(bet).
 never_compound_part_sc(bo).
+never_compound_part_sc(bok).  % wel bokken- en boks-
 never_compound_part_sc(bra).
 never_compound_part_sc(ca).
 never_compound_part_sc(cao).
 never_compound_part_sc(cl).
 never_compound_part_sc('d\'s').
 never_compound_part_sc(da).
+never_compound_part_sc(dan).
 never_compound_part_sc(de).
 never_compound_part_sc(den).
 never_compound_part_sc(der).
@@ -2897,6 +2918,7 @@ never_compound_part_sc(sen).
 never_compound_part_sc(sens).
 never_compound_part_sc(si).
 never_compound_part_sc(sic).
+never_compound_part_sc(slo).
 never_compound_part_sc(so).
 never_compound_part_sc(sol).
 never_compound_part_sc(sp).
@@ -3077,16 +3099,33 @@ form_of_suffix_rule(loos,loos,adjective(no_e(adv)),[]).
 form_of_suffix_rule(baar,baar,adjective(no_e(adv)),[]).
 form_of_suffix_rule(st,st,adjective(st(adv)),[activist,
 					      attest,
+					      beest,
+					      bewust,
+					      componist,
 					      dienst,
+					      eest,
 					      feest,
+					      gast,
 					      gehoortest,
+					      gepoetst,
+					      gitarist,
+					      holocaust,
+					      iest,
+					      jurist,
+					      komst,
  					      kunst,
+					      kust,
 					      list,
 					      lijst,
+					      lust,
+					      pessimist,
+					      podcast,
 					      post,
 					      protest,
 					      vangst,
-					      west
+					      vast,
+					      west,
+					      winst
 					     ]).
 form_of_suffix_rule(der,der,adjective(no_e(adv)),[beheerder,
 						  bieder,

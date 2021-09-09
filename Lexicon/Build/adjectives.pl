@@ -16785,6 +16785,8 @@ a([e(gewillige),
 a([ge_e(gewipte),
    ge_no_e(gewipt)],adv,[],[]).
 
+a([e(gewisse),no_e(gewis)],adv,[],[]).
+
 a([ge_e(gewisselde),
    ge_no_e(gewisseld)],adv,[],[]).
 
@@ -17735,6 +17737,7 @@ a([e(groene),
   [brons,
    donker,
    grijs,
+   leger, % niet leeg_groen
    licht,
    paars,h(paars),
    rood,h(rood)]).
@@ -40089,9 +40092,7 @@ a([e(winterse),
 a([e(wisse),
    er(wisser),
    ere(wissere),
-   no_e(wis),
-   st(wist),
-   ste(wiste)],adv,[],[]).
+   no_e(wis)],adv,[],[]).
 
 a([e(wiskundige),
    no_e(wiskundig)],adv,[],[]).

@@ -87,6 +87,10 @@ p_of_f(top,top,[]).
 
 p_of_f(robust_skip,robust_skip,[]).
 
+%% only after time-out??
+p_of_f(with_dt(Tag,_),Result,Atts) :-
+    p_of_f(Tag,Result,Atts).
+
 p_of_f(pronoun(Wh,Per,Num,Gen,Case,Def),
 		pron,
 		[wh=Wh,per=Per,num=Num,gen=Gen,case=Case,def=Def]).
