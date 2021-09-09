@@ -2816,7 +2816,7 @@ compute_score([t(P0,P,Tag,Score1)|T],Score0,Score,Counts) :-
 
 warn_unexpected_missing_fs(Tag,Used) :-
     prettyvars(Tag),
-    format(user_error,"warning: no features structure for ~w (~w)~n",[Tag,Used]).
+    format(user_error,"warning: no feature structure for ~w (~w)~n",[Tag,Used]).
 
 
 interval_not_bracket(P0,P) :-
