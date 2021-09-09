@@ -352,7 +352,7 @@ def xmlmatch_from_mem(xmldata, filename, query=None, stylesheet=None, params=Non
             result = stylesheet(doc, **params)
 
             # uitvoer naar stdout
-            sys.stdout.write(unicode(result))
+            result.write_output("-")
         else:
             print filename
 
