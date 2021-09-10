@@ -975,6 +975,28 @@ unknown_word_heuristic(P1,R1,W,_,"plural_nominalization|~p|~p|~p~n",
     ),
     lexical_analysis_tag(Tag,P1,R1,Astem,nom_adj).
  
+unknown_word_heuristic(P1,R1,W,_,"comparative|~p|~p|~p~n",
+		       [W,A,adjective(er(ADV))],_,len(1)) :-
+    debug_message(3,"trying heuristic comparative~n",[]),
+    atom(W),
+    atom_concat(A,er,W), 
+    (  alpino_lex:lexicon(adjective(no_e(ADV)),Astem,[A],[],_)
+    ;  alpino_lex:lexicon(adjective(end(ADV)),Astem,[A],[],_)
+    ;  alpino_lex:lexicon(adjective(ge_no_e(ADV)),Astem,[A],[],_)
+    ),
+    lexical_analysis_tag(adjective(er(ADV)),P1,R1,Astem,compar_adj).
+ 
+unknown_word_heuristic(P1,R1,W,_,"comparative|~p|~p|~p~n",
+		       [W,A,adjective(ere)],_,len(1)) :-
+    debug_message(3,"trying heuristic comparative+e~n",[]),
+    atom(W),
+    atom_concat(A,ere,W), 
+    (  alpino_lex:lexicon(adjective(no_e(ADV)),Astem,[A],[],_)
+    ;  alpino_lex:lexicon(adjective(end(ADV)),Astem,[A],[],_)
+    ;  alpino_lex:lexicon(adjective(ge_no_e(ADV)),Astem,[A],[],_)
+    ),
+    lexical_analysis_tag(adjective(ere),P1,R1,Astem,compar_adj).
+ 
 %%% memo'ed for long repeated sequences
 :- dynamic guessed_similar/2.
 :- thread_local guessed_similar/2.
@@ -1015,6 +1037,7 @@ unknown_word_heuristic(P1,R1,W,_Ws,"suffix|~p|~p|~p~n",[W,Suffix,Tag],_,len(1)) 
     \+ tag(P1,_,_,_,_,_,special(decap(_)),_),
     \+ tag(P1,_,_,_,_,_,compound(hyphen),_),
     \+ tag(P1,_,_,_,_,_,prefix_name,_),
+    \+ tag(P1,_,_,_,_,_,compar_adj,_),
     guess_form_of_suffix(W,Root,Suffix,Tag,CompTag),
     \+ tag(P1,_,_,_,_,_,_,CompTag),
     findall(_,lexical_analysis_tag(Tag,P1,R1,Root,form_of_suffix(Suffix)),[_|_]).
@@ -1029,6 +1052,7 @@ unknown_word_heuristic(P1,R1,W,_Ws,"similar_ending|~p|~p|~p~n",
     \+ tag(P1,_,_,_,_,_,prefix_name,_),
     \+ tag(P1,_,_,_,_,_,decap_and_compound(_),_),
     \+ tag(P1,_,_,_,_,_,form_of_suffix(_),_),
+    \+ tag(P1,_,_,_,_,_,compar_adj,_),
     similar_endings(P1,R1,W,Wmin,Tags).
 
 unknown_word_heuristic(P0,R0,W0,_,"subjunctive|~p|~p~n",[W,Stems],_,len(1)) :-
@@ -3051,7 +3075,8 @@ form_of_suffix_rule(shalve,shalve,  adverb,[]).
 
 form_of_suffix_rule(aals,aals,adjective(no_e(adv)),[]).
 form_of_suffix_rule(aans,aans,adjective(no_e(adv)),[]).
-form_of_suffix_rule(aal,aal,adjective(no_e(adv)),[gemaal,
+form_of_suffix_rule(aal,aal,adjective(no_e(adv)),[éénmaal,
+						  gemaal,
 						  journaal,
 						  kapitaal,
 						  kanaal,
@@ -3062,12 +3087,18 @@ form_of_suffix_rule(aal,aal,adjective(no_e(adv)),[gemaal,
 						  verhaal]).
 form_of_suffix_rule(air,air,adjective(no_e(adv)),[]).
 form_of_suffix_rule(eerd,eerd,adjective(ge_no_e(adv)),[]).
-form_of_suffix_rule(ees,ees,adjective(no_e(adv)),[trainees,
-						  vlees]).
+form_of_suffix_rule(ees,ees,adjective(no_e(adv)),[abonnees,
+						  trainees,
+						  vlees,
+						  vrees]).
+form_of_suffix_rule(ees,ees,post_adjective(no_e),[abonnes,
+						  trainees,
+						  vlees,
+						  vrees]).
 form_of_suffix_rule(end,end,adjective(end(both)),[]).
 form_of_suffix_rule(esk,esk,adjective(no_e(adv)),[desk]).
 form_of_suffix_rule(eus,eus,adjective(no_e(adv)),[keus,
-						   reus]).
+						  reus]).
 form_of_suffix_rule(ieel,ieel,adjective(no_e(adv)),[]).
 form_of_suffix_rule(ief,ief,adjective(no_e(adv)),[brief,
 						  chief, % archief
@@ -3077,10 +3108,12 @@ form_of_suffix_rule(ief,ief,adjective(no_e(adv)),[brief,
 						  perspectief,
 						  tarief]).
 form_of_suffix_rule(iek,iek,adjective(no_e(adv)),[atletiek,
-						  piek,
 						  fabriek,
+						  kliniek,
+						  linguïstiek,
 						  mozaiek,
 						  muziek,
+						  piek,
 						  republiek,
 						  rubriek,
 						  tactiek,
@@ -3097,66 +3130,13 @@ form_of_suffix_rule(lijk,lijk,adjective(no_e(adv)),[babylijk]).
 form_of_suffix_rule(loos,loos,adjective(no_e(adv)),[]).
 form_of_suffix_rule(loos,loos,adjective(no_e(adv)),[]).
 form_of_suffix_rule(baar,baar,adjective(no_e(adv)),[]).
-form_of_suffix_rule(st,st,adjective(st(adv)),[activist,
-					      attest,
-					      beest,
-					      bewust,
-					      componist,
-					      dienst,
-					      eest,
-					      feest,
-					      gast,
-					      gehoortest,
-					      gepoetst,
-					      gitarist,
-					      holocaust,
-					      iest,
-					      jurist,
-					      komst,
- 					      kunst,
-					      kust,
-					      list,
-					      lijst,
-					      lust,
-					      pessimist,
-					      podcast,
-					      post,
-					      protest,
-					      vangst,
-					      vast,
-					      west,
-					      winst
-					     ]).
-form_of_suffix_rule(der,der,adjective(no_e(adv)),[beheerder,
-						  bieder,
-						  doder,
-						  hinder,
-						  houder,
-						  investeerder,
-						  kader,
-						  leader,
-						  leider,
-						  melder,
-						  moeder,
-						  polder,
-						  rijder,
-						  tenonder]).
-form_of_suffix_rule(oir,oir,adjective(no_e(adv)),[]).
+form_of_suffix_rule(oir,oir,adjective(no_e(adv)),[reservoir]).
 form_of_suffix_rule(gewijs,gewijs,adjective(no_e(adv)),[]).
 form_of_suffix_rule(loos,loos,adjective(no_e(padv)),[]).
 form_of_suffix_rule(zaam,zaam,adjective(no_e(adv)),[]).
 
 
 form_of_suffix_rule(tigste,  tig,     number(rang),[vergeetachtigste]).
-
-form_of_suffix_rule(tal,     '_tal',     noun(het,count,sg),
-		    [aantal,
-		     getal,
-		     hospital]).
-form_of_suffix_rule(tal,     '_tal',     noun(het,count,sg,measure),
-		    [aantal,
-		     getal,
-		     hospital]).
 
 form_of_suffix_rule(aalse,   aals,    adjective(e),[]).
 form_of_suffix_rule(aanse,   aans,    adjective(e),[]).
@@ -3183,12 +3163,10 @@ form_of_suffix_rule(le,      l,       adjective(e),['Cercle',
 						    djingle,
 						    shuttle,
 						    jingle]).
-form_of_suffix_rule(ste,     '',      adjective(ste),[extremiste]).
+form_of_suffix_rule(ste,     st,      adjective(e),[extremiste]).
 form_of_suffix_rule(bare,    'baar',  adjective(e),[]).
 form_of_suffix_rule(ere,     er,      adjective(e),[àndere,
 						    ándere]).
-form_of_suffix_rule(ere,     '',      adjective(ere),[àndere,
-						      ándere]).
 form_of_suffix_rule(ese,     ees,     adjective(e),[]).
 form_of_suffix_rule(ïde,     ïde,     adjective(both(adv)),[]).
 form_of_suffix_rule(oire,    oir,     adjective(e),[]).
@@ -3196,25 +3174,14 @@ form_of_suffix_rule(gewijze, gewijs,  adjective(e),[]).
 form_of_suffix_rule(loze,    loos,    adjective(e),[]).
 form_of_suffix_rule(zame,    zaam,    adjective(e),[]).
 
-form_of_suffix_rule(iger,    ig,      adjective(er(adv)),[verdediger]).
+form_of_suffix_rule(iger,    ig,      adjective(er(adv)),[verdediger,
+							  reiziger,
+							  vertegenwoordiger
+							 ]).
 form_of_suffix_rule(ischer,  isch,    adjective(er(adv)),[]).
 form_of_suffix_rule(ïscher,  ïsch,    adjective(er(adv)),[]).
 form_of_suffix_rule(lijker,  lijk,    adjective(er(adv)),[]).
 form_of_suffix_rule(lozer,   loos,    adjective(er(adv)),[]).
-form_of_suffix_rule(der,     d,       adjective(er(adv)),[beheerder,
-							  bieder,
-							  doder,
-							  hinder,
-							  houder,
-							  investeerder,
-							  kader,
-							  leader,
-							  leider,
-							  melder,
-							  moeder,
-							  polder,
-							  rijder,
-							  tenonder]).
 form_of_suffix_rule(ender,   end,     adjective(er(adv)),[]).
 form_of_suffix_rule(baarder, baar,    adjective(er(adv)),[]).
 
@@ -3223,11 +3190,8 @@ form_of_suffix_rule(aals,   aal,     post_adjective(no_e),[]).
 form_of_suffix_rule(aans,   aan,     post_adjective(no_e),[]).
 form_of_suffix_rule(airs,   air,     post_adjective(no_e),[]).
 form_of_suffix_rule(eerds,  eerd,    post_adjective(no_e),[]).
-form_of_suffix_rule(ees,    ees,     post_adjective(no_e),[trainees,
-							   vlees]).
 form_of_suffix_rule(ends,   end,     post_adjective(no_e),[]).
 form_of_suffix_rule(esks,   esk,     post_adjective(no_e),[]).
-form_of_suffix_rule(eus,    eus,     post_adjective(no_e),[]).
 form_of_suffix_rule(ieels,  ieel,    post_adjective(no_e),[]).
 form_of_suffix_rule(iefs,   ief,     post_adjective(no_e),[]).
 form_of_suffix_rule(ieks,   iek,     post_adjective(no_e),[]).

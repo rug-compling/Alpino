@@ -665,6 +665,8 @@ accent(geirriteerd,geïrriteerd).
 accent(geirriteerdste,geïrriteerdste).
 accent(geirriteerdst,geïrriteerdst).
 accent(geisoleerde,geïsoleerde).
+accent(geisoleerdere,geïsoleerdere).
+accent(geisoleerder,geïsoleerder).
 accent(geisoleerd,geïsoleerd).
 accent(gekoordineerde,gekoördineerde).
 accent(gekoordineerd,gekoördineerd).
