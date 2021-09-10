@@ -92,7 +92,6 @@ test1rest:
 	grep -e '#LM' -e '#PT' -e 'Lexical analysis: ' $(suite)$(part)/$(job)/log1 > $(suite)$(part)/$(job)/poslemma
 	$(MAKE) report
 	-$(MAKE) compare_score suite=$(prefix)$(suite)
-	touch $(suite)$(part).test1
 
 cpu1=${shell ls -t $(suite)$(part)/*/log?|head -n 1}
 cpu2=$(prefix)$(suite)$(part)/time
