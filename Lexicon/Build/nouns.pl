@@ -4765,7 +4765,8 @@ n([pl(bevruchtingen),sg(bevruchting)],de,[]).
 
 n([pl(bewaaksters),sg(bewaakster)],de,[]).
 
-n([pl(bewaarders),sg(bewaarder)],de,[]).
+n([pl(bewaarders),sg(bewaarder)],de,[],
+  [gevangen]).
 
 n([pl(bewakers),sg(bewaker)],de,[]).
 
@@ -16931,6 +16932,8 @@ n([pl(kalveren),sg(kalf)],het,[],
 
 n([pl(kalibers),sg(kaliber)],het,[pred_pp(van)]).
 
+n([sg(kalief),pl(kalieven)],de,[]).
+
 n([sg(kalifaat),pl(kalifaten)],het,[]).
 
 n([mass(kalium)],het,[]).
@@ -21614,8 +21617,6 @@ n([mass(melk)],de,[],
 
 n([sg('Melkertbaan'),pl('Melkertbanen')],de,[]).
 
-n([sg(melkpoeder),pl(melkpoeders)],both,[]).
-
 n([pl(melktanden),sg(melktand)],de,[]).
 
 n([pl(melodieën),sg(melodie)],de,[],[dim(melodietje)]).
@@ -22925,6 +22926,8 @@ n([mass(narcisme)],het,[]).
 n([mass(narcose)],de,[]).
 
 n([pl(narigheden),sg(narigheid)],de,[sbar,vp]).
+
+n([sg(narratief),pl(narratieven)],het,[]).
 
 n([mass(nasleep)],de,[]).
 
@@ -26903,14 +26906,17 @@ n([pl(poedels),sg(poedel)],de,[],[dim(poedeltje)]).
 n([pl(poeders),sg(poeder)],both,[],
   [bak,
    cacao,
+   curry,
+   gember,
+   kaneel,
    kerrie,
    knoflook,
+   melk,
+   i(baby_melk,babymelk),
    paprika,
    was,
    wortel,
    dim(poedertje)]).
-
-n([mass(poeder)],het,[]).
 
 n([sg(poeier),pl(poeiers)],de,[]).
 
@@ -30530,7 +30536,11 @@ n([pl(schillen),sg(schil)],de,[],
 
 n([pl(schilden),sg(schild)],het,[],[raket]).
 
-n([pl(schilders),sg(schilder)],de,[],[klad]).
+n([pl(schilders),sg(schilder)],de,[],
+  [huis,
+   klad,
+   portret
+  ]).
 
 n([pl(schilderessen),sg(schilderes)],de,[]).
 
@@ -31158,6 +31168,8 @@ n([sg([shaken,baby,syndrome]),sg([shaken,baby,syndroom])],het,[]).
 n([sg([shake,out])],de,[]).
 
 n([pl(shampoos),sg(shampoo)],de,[]).
+
+n([sg(shareholder),pl(shareholders)],de,[]).
 
 n([sg(sheet),pl(sheets)],both,[]).
 

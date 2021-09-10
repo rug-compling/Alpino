@@ -1354,6 +1354,8 @@ tag(xxx).    % kusjes
 tag(xxxx).   % kusjes
 
 tag(allemachtig).
+tag(asjeblief).
+tag(alsjeblief).
 tag(alsjeblieft).
 tag(alstublieft).
 tag(echt).

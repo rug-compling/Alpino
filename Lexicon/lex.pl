@@ -1059,6 +1059,7 @@ lexicon__(op,adjective(het_st(adv)),Label1,Ws0,Ws,'op zijn Asuper'(His),LC) :-
     next_word(W,Ws0,Ws1,_),
     next_word(Word,Ws1,Ws2,_),
     (   lexicon__(Word,adjective(st(_A)),Label,Ws2,Ws,His,[op,W|LC])
+    ;   lexicon__(Word,adjective(aller_st(_A)),Label,Ws2,Ws,His,[op,W|LC])
     ;   Word = elfendertigst,
 	Label = elfendertigst,
 	Ws2 = Ws,
@@ -1070,7 +1071,9 @@ lexicon__(op,adjective(het_st(adv)),Label1,Ws0,Ws,'op zijn Asuper'(His),LC) :-
 lexicon__(om,adjective(het_st(adv)),Label1,Ws0,Ws,'om ter Asuper'(His),LC) :-
     next_word(ter,Ws0,Ws1,_),
     next_word(Word,Ws1,Ws2,_),
-    lexicon__(Word,adjective(st(_A)),Label,Ws2,Ws,His,[om,ter|LC]),
+    (  lexicon__(Word,adjective(st(_A)),Label,Ws2,Ws,His,[om,ter|LC])
+    ;  lexicon__(Word,adjective(aller_st(_A)),Label,Ws2,Ws,His,[om,ter|LC])
+    ),
     hdrug_util:concat_all([om,ter,Label],Label1,' ').    
 
 %% zij is het aardigst(e) ---> ambiguous between complex adj and [@np det adj]
@@ -1220,20 +1223,22 @@ het_ste_tag(Adj,Label,STE,His) :-
     atom(STE),
     atom_concat(ST,e,STE),
     lexicon_(Adj0,Label,[ST],[],His,[]),
-    het_ste(Adj0,Adj).
+    het_st(Adj0,Adj).
 het_ste_tag(Adj,Label,STE,His) :-
     lexicon_(Adj0,Label,[STE],[],His,[]),
     het_st(Adj0,Adj).
 
 het_st(adjective(st(Adv)),         adjective(het_st(Adv))).
 het_st(adjective(st(Adv),Sc),      adjective(het_st(Adv),Sc)).
+het_st(adjective(aller_st(Adv)),         adjective(het_st(Adv))).
+het_st(adjective(aller_st(Adv),Sc),      adjective(het_st(Adv),Sc)).
 
-het_ste(adjective(st(Adv)),        adjective(het_st(Adv))).
-het_ste(adjective(st(Adv),Sc),     adjective(het_st(Adv),Sc)).
 
 aller(adjective(st(A)),   adjective(aller_st(A))).
+aller(adjective(aller_st(A)),   adjective(aller_st(A))).
 aller(adjective(ste),     adjective(ste)).
 aller(adjective(st(A),B), adjective(aller_st(A),B)).
+aller(adjective(aller_st(A),B), adjective(aller_st(A),B)).
 aller(adjective(ste,B),   adjective(ste,B)).
 
 no_e(postn_no_e(_),no_e).
