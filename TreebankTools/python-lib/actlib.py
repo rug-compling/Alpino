@@ -8,6 +8,7 @@
 import sys
 import os
 import re
+import codecs
 from lxml import etree
 from glob import glob
 
@@ -352,7 +353,7 @@ def xmlmatch_from_mem(xmldata, filename, query=None, stylesheet=None, params=Non
             result = stylesheet(doc, **params)
 
             # uitvoer naar stdout
-            result.write_output("-")
+            codecs.getwriter('utf-8')(sys.stdout).write(unicode(result))
         else:
             print filename
 

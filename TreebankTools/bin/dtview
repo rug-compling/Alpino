@@ -5,6 +5,8 @@ exec wish "$0" -- "$@"
 #----------------------------------------------------------------------
 ### CONFIG
 
+encoding system utf-8
+
 set cligdir "$env(ALPINO_HOME)/Hdrug/Tcl/Clig"
 set env(CLIG_DIR) $cligdir
 set stylesheetdir $env(ALPINO_HOME)/TreebankTools/stylesheets
