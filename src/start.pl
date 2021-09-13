@@ -1128,11 +1128,13 @@ end_hook(parse,_,_,String) :-
     (   Demo==on,
 	Th==best_score
     ->  object(No,o(Result,_,_)),
-	if_gui(show(tree(user(dt)),clig,[value(Result)])),
+	show_defaults(Format,Output),
+	if_gui(show(Format,Output,[value(Result)])),
 	notify_active_obj(No)	       
     ;	Demo==on,
 	object(1,o(Result,_,_))
-    ->	if_gui((show(tree(user(dt)),clig,[value(Result)]),
+    ->	show_defaults(Format,Output),
+        if_gui((show(Format,Output,[value(Result)]),
 		notify_active_obj(1))
 %	       show(tree(dt),user,[value(Result)])
 	      )
@@ -2105,24 +2107,21 @@ hdrug_command(treebank,alpino_treebank:show_treebank(Type,Output,FileXml),L0) :-
     hdrug_cmdint:show_command(Type,Output,L0,[]),
     xml_filename(FileXml).
 
-hdrug_command(t,alpino_treebank:show_treebank(tree(Format),Output,FileXml),
+hdrug_command(t,alpino_treebank:show_treebank(Format,Output,FileXml),
 		   [File]) :-
     set_flag(current_ref,File),
     treebank_directory(Dir),
     format_to_chars('~w/~w.xml',[Dir,File],Chars),
     atom_codes(FileXml,Chars),
-    if_gui((Format=user(dt),Output=clig),
-		      (Format=dt,Output=user)).
+    show_defaults(Format,Output).
 
-hdrug_command(dtget,alpino_treebank:show_treebank(tree(Format),Output,File),
-		   [File]) :-
-    if_gui((Format=user(dt),Output=clig),
-		      (Format=dt,Output=user)).
+hdrug_command(dtget,alpino_treebank:show_treebank(Format,Output,File),
+	      [File]) :-
+    show_defaults(Format,Output).
 
-hdrug_command(t,alpino_treebank:show_treebank(tree(Format),Output,FileXml),[]) :-
+hdrug_command(t,alpino_treebank:show_treebank(Format,Output,FileXml),[]) :-
     xml_filename(FileXml),
-    if_gui((Format=user(dt),Output=clig),
-		      (Format=dt,Output=user)).
+    show_defaults(Format,Output).
 
 hdrug_command(t_cgn,show_treebank_cgn(FileXml),
 		   [File]) :-
@@ -2166,9 +2165,8 @@ hdrug_command(ncc,( next, compare_treebank_cgn ), []).
 :- public show_treebank_current_ref/0.
 show_treebank_current_ref :-
     xml_filename(FileXml),
-    if_gui((Format=user(dt),Output=clig),
-	   (Format=dt,Output=user)),
-    alpino_treebank:show_treebank(tree(Format),Output,FileXml).
+    show_defaults(Format,Output),
+    alpino_treebank:show_treebank(Format,Output,FileXml).
 
 hdrug_command(tree_comparison,tree_comparison(Obj),[Obj]).
 hdrug_command(tree_comparison,tree_comparison,[]).
@@ -3402,3 +3400,12 @@ tree_has_rule(tree(_,_,Ds,_),Rule) :-
     lists:member(D,Ds),
     tree_has_rule(D,Rule).
 
+show_defaults(Format,Output) :-
+    hdrug_flag(type_default(user),UserType),
+    hdrug_flag(type_default(clig),CligType),
+    if_gui(( Format=CligType,
+	     Output=clig
+	   ),
+	   ( Format=UserType,
+	       Output=user
+	   )).
