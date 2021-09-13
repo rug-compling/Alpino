@@ -21,37 +21,17 @@ http://www.let.rug.nl/vannoord/alp/Alpino/versions/binary[Alpino download site].
       tar xzf Alpino-bla-bla-19327.tar.gz
 
 The binary file depends on the Tcl/Tk libraries as well as a number of
-system libraries. The specific dependencies of the current release are
-as follows (subject to change): 
-
-------------------------------------
-	linux-vdso.so.1
-	libstdc++.so.6
-	libz.so.1
-	libtk8.4.so.0
-	libtcl8.4.so.0
-	libSM.so.6
-	libICE.so.6
-	libX11.so.6
-	libdl.so.2
-	libm.so.6
-	libpthread.so.0
-	libgcc_s.so.1
-	libc.so.6
-	/lib64/ld-linux-x86-64.so.2
-	libuuid.so.1
-	libxcb.so.1
-	libXau.so.6
-	libXdmcp.so.6
-------------------------------------
+system libraries. These libraries are often available for a standard Linux
+distribution. A few likely candidates for trouble are included in the
+distribution (under create_bin/extralibs)
 
 In addition, some of the tools and programs that are shipped with
 Alpino require additional packages. Here is the beginning of a
 list. Typically you need a recent version ;-)
 
+* go
 * tcl/tk
-* libxml2
-* libxslt
+* lxml
 * python2
 * python2 library lxml
 * dictzip (sometimes packaged with dictd)
@@ -352,6 +332,31 @@ sentence:
 POS-tags
 ^^^^^^^^
 
+
+If you only care for the part-of-speech tags that Alpino used to
+derive the best parse, then you can use the following command: 
+
+      Alpino end_hook=postags -parse
+
+In that case, the system prints lines like the following:
+
+----------------------------------------------
+101|met|0|1|VZ(init)|met
+101|de|1|2|LID(bep,stan,rest)|de
+101|trein|2|3|N(soort,ev,basis,zijd,stan)|trein
+101|mee|3|4|VZ(fin)|mee
+101|wil|4|5|WW(pv,tgw,ev)|willen
+101|ik|5|6|VNW(pers,pron,nomin,vol,1,ev)|ik
+101|vandaag|6|7|BW()|vandaag
+----------------------------------------------
+
+The fields are seperated by vertical bar and represent the key, the word,
+begin position, end position, part-of-speech label and lemma.
+
+
+Internal POS-tags
+^^^^^^^^^^^^^^^^^
+
 If you only care for the part-of-speech tags that Alpino used to
 derive the best parse, then you can use the following command: 
 
@@ -369,12 +374,14 @@ van|preposition(van,[af,uit,vandaan,[af,aan]])|2|2|3|normal|post
 Marietje|proper_name(both)|2|3|4|name(not_begin)|post
 ----------------------------------------------
 
-Each line represents the information of a word. The information is
-contained in various fields separated by the | character. The fileds
-represent from left to right: the word, the part-of-speech tag, the
-sentence number, the begin position of the word, the end position of
-the word, and two further fields that you probably want to ignore. 
+Each line represents the information of a word. The fields
+represent: the word, the internal part-of-speech tag, the
+sentence key, the begin position of the word, the end position of
+the word, and two further fields that you probably want to ignore.
 
+Note that this type of output provides the internal word categories.
+If you need the "official" CGN/Lassy-style part-of-speech labels,
+you need the end_hook "postags" described above.
 
 It is fairly easy to define further output formats. Please contact the
 author if you have specific requests.  
@@ -390,7 +397,7 @@ try is to alter in the Alpino initialization script the line
 
 into
 
-       debug=1
+       debug=1 (or even a higher number)
 
 If you are lucky this implies that you get told what is going wrong.
 
@@ -489,6 +496,9 @@ kussen|verb(hebben,pl,intransitive)|example1-3|2|3|normal(normal)|post|kus|0|1
 de|determiner(de)|example1-3|3|4|normal(normal)|post|de|0|1
 vrouwen|noun(de,count,pl)|example1-3|4|5|normal(normal)|post|vrouw|0|1
 -------------------------------------------------------------------------------------
+
+NB: there may be a problem with sentence identifiers that contain non-ascii
+characters. See the section "Known Issues" below.
 
 
 Special symbols in the input
@@ -971,6 +981,8 @@ future versions.
 Known Issues
 ------------
 
+Parsing strings with odd characters if the GUI is running and you use SICStus
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Alpino assumes that your input is in UTF8. There is a problem if you
 run Alpino with the graphical user interface, and you attempt to parse
@@ -1009,3 +1021,21 @@ So, the SICStus bug is that character classification is affected by
 the process locale. The Tcl/Tk bug/misfeature is that initializing
 Tcl/Tk affects the global process locale.
 
+
+File-names with non-ascii characters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you parse sentences, and save the result using the key of that sentence,
+then if your key includes non-ascii characters the resulting file-name may be
+wrong. This happens only if you use the SICStus version, the SWI-version treats
+such keys correctly.
+
+Example:
+
+------------------------------------------------------
+
+% echo "2-1-π1|Plotseling vlogen ze overeind" | Alpino end_hook=xml -flag treebank . -parse
+% ls *.xml
+2-1-?1.xml
+
+------------------------------------------------------
