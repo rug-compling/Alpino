@@ -770,33 +770,18 @@ Extract the contents of that file in a place of your liking, e.g.,
 </li>
 </ol></div>
 <div class="paragraph"><p>The binary file depends on the Tcl/Tk libraries as well as a number of
-system libraries. The specific dependencies of the current release are
-as follows (subject to change):</p></div>
-<div class="listingblock">
-<div class="content">
-<pre><code>        linux-vdso.so.1
-        libstdc++.so.6
-        libz.so.1
-        libtk8.4.so.0
-        libtcl8.4.so.0
-        libSM.so.6
-        libICE.so.6
-        libX11.so.6
-        libdl.so.2
-        libm.so.6
-        libpthread.so.0
-        libgcc_s.so.1
-        libc.so.6
-        /lib64/ld-linux-x86-64.so.2
-        libuuid.so.1
-        libxcb.so.1
-        libXau.so.6
-        libXdmcp.so.6</code></pre>
-</div></div>
+system libraries. These libraries are often available for a standard Linux
+distribution. A few likely candidates for trouble are included in the
+distribution (under create_bin/extralibs)</p></div>
 <div class="paragraph"><p>In addition, some of the tools and programs that are shipped with
 Alpino require additional packages. Here is the beginning of a
 list. Typically you need a recent version ;-)</p></div>
 <div class="ulist"><ul>
+<li>
+<p>
+go
+</p>
+</li>
 <li>
 <p>
 tcl/tk
@@ -804,12 +789,7 @@ tcl/tk
 </li>
 <li>
 <p>
-libxml2
-</p>
-</li>
-<li>
-<p>
-libxslt
+lxml
 </p>
 </li>
 <li>
@@ -1244,6 +1224,28 @@ sentence:</p></div>
 derive the best parse, then you can use the following command:</p></div>
 <div class="literalblock">
 <div class="content">
+<pre><code>Alpino end_hook=postags -parse</code></pre>
+</div></div>
+<div class="paragraph"><p>In that case, the system prints lines like the following:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>101|met|0|1|VZ(init)|met
+101|de|1|2|LID(bep,stan,rest)|de
+101|trein|2|3|N(soort,ev,basis,zijd,stan)|trein
+101|mee|3|4|VZ(fin)|mee
+101|wil|4|5|WW(pv,tgw,ev)|willen
+101|ik|5|6|VNW(pers,pron,nomin,vol,1,ev)|ik
+101|vandaag|6|7|BW()|vandaag</code></pre>
+</div></div>
+<div class="paragraph"><p>The fields are seperated by vertical bar and represent the key, the word,
+begin position, end position, part-of-speech label and lemma.</p></div>
+</div>
+<div class="sect3">
+<h4 id="_internal_pos_tags">Internal POS-tags</h4>
+<div class="paragraph"><p>If you only care for the part-of-speech tags that Alpino used to
+derive the best parse, then you can use the following command:</p></div>
+<div class="literalblock">
+<div class="content">
 <pre><code>Alpino end_hook=frames -parse</code></pre>
 </div></div>
 <div class="paragraph"><p>In that case, the system prints lines like the following to standard error (!).
@@ -1257,11 +1259,13 @@ houdt|verb(hebben,sg3,pc_pp(van))|2|1|2|normal|post
 van|preposition(van,[af,uit,vandaan,[af,aan]])|2|2|3|normal|post
 Marietje|proper_name(both)|2|3|4|name(not_begin)|post</code></pre>
 </div></div>
-<div class="paragraph"><p>Each line represents the information of a word. The information is
-contained in various fields separated by the | character. The fileds
-represent from left to right: the word, the part-of-speech tag, the
-sentence number, the begin position of the word, the end position of
+<div class="paragraph"><p>Each line represents the information of a word. The fields
+represent: the word, the internal part-of-speech tag, the
+sentence key, the begin position of the word, the end position of
 the word, and two further fields that you probably want to ignore.</p></div>
+<div class="paragraph"><p>Note that this type of output provides the internal word categories.
+If you need the "official" CGN/Lassy-style part-of-speech labels,
+you need the end_hook "postags" described above.</p></div>
 <div class="paragraph"><p>It is fairly easy to define further output formats. Please contact the
 author if you have specific requests.</p></div>
 </div>
@@ -1277,7 +1281,7 @@ try is to alter in the Alpino initialization script the line</p></div>
 <div class="paragraph"><p>into</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code>debug=1</code></pre>
+<pre><code>debug=1 (or even a higher number)</code></pre>
 </div></div>
 <div class="paragraph"><p>If you are lucky this implies that you get told what is going wrong.</p></div>
 <div class="paragraph"><p>If this doesn&#8217;t help, send a bug-report to the author. Please.</p></div>
@@ -1368,6 +1372,8 @@ kussen|verb(hebben,pl,intransitive)|example1-3|2|3|normal(normal)|post|kus|0|1
 de|determiner(de)|example1-3|3|4|normal(normal)|post|de|0|1
 vrouwen|noun(de,count,pl)|example1-3|4|5|normal(normal)|post|vrouw|0|1</code></pre>
 </div></div>
+<div class="paragraph"><p>NB: there may be a problem with sentence identifiers that contain non-ascii
+characters. See the section "Known Issues" below.</p></div>
 </div>
 </div>
 <div class="sect2">
@@ -1860,6 +1866,8 @@ future versions.</p></div>
 <div class="sect1">
 <h2 id="_known_issues">Known Issues</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_parsing_strings_with_odd_characters_if_the_gui_is_running_and_you_use_sicstus">Parsing strings with odd characters if the GUI is running and you use SICStus</h3>
 <div class="paragraph"><p>Alpino assumes that your input is in UTF8. There is a problem if you
 run Alpino with the graphical user interface, and you attempt to parse
 sentences through the command interpreter (either the Hdrug/Alpino
@@ -1908,13 +1916,28 @@ When library(tcltk) is not loaded then the process will ignore the
 the process locale. The Tcl/Tk bug/misfeature is that initializing
 Tcl/Tk affects the global process locale.</p></div>
 </div>
+<div class="sect2">
+<h3 id="_file_names_with_non_ascii_characters">File-names with non-ascii characters</h3>
+<div class="paragraph"><p>If you parse sentences, and save the result using the key of that sentence,
+then if your key includes non-ascii characters the resulting file-name may be
+wrong. This happens only if you use the SICStus version, the SWI-version treats
+such keys correctly.</p></div>
+<div class="paragraph"><p>Example:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>% echo "2-1-π1|Plotseling vlogen ze overeind" | Alpino end_hook=xml -flag treebank . -parse
+% ls *.xml
+2-1-?1.xml</code></pre>
+</div></div>
+</div>
+</div>
 </div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2021-08-20 10:43:30 CEST
+ 2021-09-13 09:40:47 CEST
 </div>
 </div>
 </body>
