@@ -1059,6 +1059,7 @@ unknown_word_heuristic(P0,R0,W0,_,"subjunctive|~p|~p~n",[W,Stems],_,len(1)) :-
     debug_message(3,"trying heuristic subjunctive~n",[]),
     decap(W0,W),
     atom(W),
+    \+ tag(P0,_,_,_,_,W,decap(not_begin),_),
     atom_concat(_,e,W),
     atom_concat(W,n,Inf),
     P is P0+1, R is R0+1,
@@ -1074,6 +1075,7 @@ unknown_word_heuristic(P0,R0,W0,_,"drop_n|~p|~p~n",[W,Stems],_,len(1)) :-
     debug_message(3,"trying heuristic drop_n~n",[]),
     decap(W0,W),
     atom(W),
+    \+ tag(P0,_,_,_,_,W,decap(not_begin),_),
     atom_concat(_,e,W),
     atom_concat(W,n,Inf),
     P is P0+1, R is R0+1,
@@ -1088,6 +1090,7 @@ unknown_word_heuristic(P0,R0,W0,_,"end_d_t|~p|~p~n",[W,Stems],_,len(1)) :-
     debug_message(3,"trying heuristic end_d_t~n",[]),
     decap(W0,W),
     atom(W),
+    \+ tag(P0,_,_,_,_,W,decap(not_begin),_),
     atom_concat(Prefix,d,W),
     atom_concat(Prefix,t,Alt),
     P is P0+1, R is R0+1,
@@ -2025,6 +2028,7 @@ decap_only('Hier').
 decap_only('Hij').
 decap_only('Hoe').
 decap_only('Hoeveel').
+decap_only('Hoofdstuk').
 decap_only('Hun').
 decap_only('Illustratie').
 decap_only('In').
@@ -2153,6 +2157,7 @@ function('Aanvoerder').
 function('Aartsbisschop').
 function('Aartsengel').
 function('Aartsrivaal').
+function('Abt').
 function('Accountant').
 function('Accountantskantoor').
 function('Achtervolger').
@@ -2200,8 +2205,9 @@ function('Branchegenoot').
 function('Brit').
 function('Broeder').
 function('Broer').
-function('Buurland').
 function('Buitenlandse').
+function('Burgemeester').
+function('Buurland').
 function('Canadees').
 function('CEO').
 function('Chileen').
@@ -2246,6 +2252,7 @@ function('Generaal').
 function('Gigant').
 function('Gitarist').
 function('Gouverneur').
+function('Gravin').
 function('Grensrechter').
 function('Griek').
 function('Grootaandeelhouder').
@@ -2261,11 +2268,13 @@ function('Invalster').
 function('Italiaan').
 function('Japanner').
 function('Judoka').
+function('Juffrouw').
 function('Kamerlid').
 function('Kamervoorzitter').
 function('Kamervoorzitster').
 function('Kampioen').
 function('Kanselier').
+function('Kapitein').
 function('Keniaan').
 function('Koploper').
 function('Kopman').
@@ -2274,10 +2283,12 @@ function('Kroonprins').
 function('Kroaat').
 function('Landskampioen').
 function('Lijsttrekker').
+function('Madam').
 function('Makelaar').
 function('Manager').
 function('Marktleider').
 function('Marokkaan').
+function('Mejuffrouw').
 function('Meneer').
 function('Mevrouw').
 function('Middenvelder').
@@ -2301,6 +2312,7 @@ function('Organisatie').
 function('Organisator').
 function('Organisatrice').
 function('Outsider').
+function('Overste').
 function('Partijleider').
 function('Partijleidster').
 function('Pianist').
@@ -2367,6 +2379,7 @@ function('Verzorgster').
 function('Voorlichter').
 function('Voorzitter').
 function('Voorzitster').
+function('Vrouw').
 function('Wereldkampioen').
 function('Wethouder').
 function('Wielrenner').
@@ -2379,6 +2392,17 @@ function('Zuid-Afrikaan').
 function('Zuster').
 function('Zweed').
 function('Zwitser').
+
+function('Vader').
+function('Moeder').
+function('Oom').
+function('Tante').
+function('Pa').
+function('Moe').
+
+function('Excellentie').
+function('Hoogheid').
+function('Majesteit').
 
 function(InterimPremier) :-
     atom(InterimPremier),
@@ -4855,6 +4879,7 @@ potential_name_fsa_not_begin(unknown,P0,[Word|Words],Ws,[Word|Prefix],
     (   name_unknown(Word,P0),
         potential_name_fsa(23,P1,Words,Ws,Prefix,His)
     ;   \+ alpino_lexical_analysis:hesitation(Word),
+	\+ decap_normal(Word),
 	potential_name_fsa(2,P1,Words,Ws,Prefix,His)
     ).
 potential_name_fsa_not_begin(unknown,P0,['\'s',Word|Words],Ws,
@@ -5958,6 +5983,10 @@ not_a_second_name_word('Sydney').
 not_a_second_name_word('The').
 not_a_second_name_word('Volksgezondheid').
 not_a_second_name_word('Zuid-Holland').
+
+decap_normal(Word) :-
+    decap_first(Word,Decap),
+    alpino_lex:lexicon(_,_,[Decap],[],normal).
 
 verb_ster(W,W,noun(de,count,sg)):-
     atom(W),

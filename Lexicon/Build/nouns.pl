@@ -5579,6 +5579,7 @@ n([pl(boeren),sg(boer)],de,[],
    groente,
    i(groente,groenten),
    hobby,
+   i(kip,kippen),
    melk,
    s(varken),
    wijn,
@@ -9045,12 +9046,14 @@ n([sg(diepvries)],de,[]).
 n([pl(dieren),sg(dier)],het,[],
   [s(gezelschap),
    hobby,
+   land,
    prooi,
    schelp,
    water,
    i(zoet_water,zoetwater),
    i(zout_water,zoutwater),
    week,
+   zee,
    dim(diertje)]).
 
 n([mass(dierenriem)],de,[]).
@@ -12514,7 +12517,8 @@ n([pl(geldstukken),sg(geldstuk)],het,[]).
 n([pl(geledingen),sg(geleding)],de,[]).
 
 n([sg(geleerde),pl(geleerden)],de,[],
-  [kern,
+  [atoom,
+   kern,
    s(recht)]).
 
 n([pl(geleerdheden),sg(geleerdheid)],de,[]).
@@ -28425,6 +28429,7 @@ n([pl(rappers),sg(rapper)],de,[]).
 
 n([pl(rapporten),sg(rapport)],het,[np_app_measure],
   [i(baan,banen),
+   s(beoordeling),
    eind,
    jury,
    h('NIOD'),h('Niod'),
@@ -32102,7 +32107,7 @@ n([pl(specialistes),sg(specialiste)],de,[app_measure]).
 
 n([pl(specialiteiten),sg(specialiteit)],de,[app_measure]).
 
-n([pl(species),sg(species)],de,[],[bagger]).
+n([pl(species),sg(specie)],de,[],[bagger]).
 
 n([pl(specificaties),pl(specificatiën),sg(specificatie)],de,[]).
 
@@ -32823,6 +32828,7 @@ n([pl(starts),sg(start)],de,[],
   [i(band,banden),
    competitie,
    her,
+   in,
    seizoen,s(seizoen)]).
 
 n([pl(startbanen),sg(startbaan)],de,[]).
@@ -33641,7 +33647,8 @@ n([mass(stuff)],de,[]).
 
 n([mass(stuifmeel)],het,[]).
 
-n([pl(stuipen),sg(stuip)],de,[]).
+n([pl(stuipen),sg(stuip)],de,[],
+  [koorts]).
 
 n([pl(stuiptrekkingen),sg(stuiptrekking)],de,[]).
 

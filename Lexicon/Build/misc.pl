@@ -755,6 +755,7 @@ tag([ach,mevrouw]).
 tag([ach,mijnheer]).
 tag([ach,nee]).
 tag([ach,wat]).
+tag(adieu).
 tag(afijn).
 tag(ah).
 tag(ahh).
