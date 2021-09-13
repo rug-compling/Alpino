@@ -141,3 +141,10 @@ export-install:
 	@echo and make sure latest.tar.gz points to this new file
 
 
+check-permissions:
+	ls -lR |\
+        awk '{ print $$1 }' |\
+        grep . |\
+        grep -v -e '^[.]/' -e ^total -e '^-rw-r--r--.' \
+                -e '^drwxr-xr-x.' -e '^-rwxr-xr-x.' \
+                -e '^lrwxrwxrwx.'
