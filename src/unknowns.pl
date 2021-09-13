@@ -2157,7 +2157,6 @@ function('Aanvoerder').
 function('Aartsbisschop').
 function('Aartsengel').
 function('Aartsrivaal').
-function('Abt').
 function('Accountant').
 function('Accountantskantoor').
 function('Achtervolger').
@@ -2198,6 +2197,7 @@ function('Bewoonster').
 function('Bestuurslid').
 function('Bestuursvoorzitter').
 function('Bierbrouwer').
+function('Bisschop').
 function('Bondsarts').
 function('Bondscoach').
 function('Bondskanselier').
@@ -2206,7 +2206,6 @@ function('Brit').
 function('Broeder').
 function('Broer').
 function('Buitenlandse').
-function('Burgemeester').
 function('Buurland').
 function('Canadees').
 function('CEO').
@@ -2247,12 +2246,12 @@ function('Fotomodel').
 function('Fractievoorzitter').
 function('Fractievoorzitster').
 function('Fransman').
+function('Freule').
 function('Gedeputeerde').
 function('Generaal').
 function('Gigant').
 function('Gitarist').
 function('Gouverneur').
-function('Gravin').
 function('Grensrechter').
 function('Griek').
 function('Grootaandeelhouder').
@@ -2268,13 +2267,13 @@ function('Invalster').
 function('Italiaan').
 function('Japanner').
 function('Judoka').
+function('Jonkvrouw').
 function('Juffrouw').
 function('Kamerlid').
 function('Kamervoorzitter').
 function('Kamervoorzitster').
 function('Kampioen').
 function('Kanselier').
-function('Kapitein').
 function('Keniaan').
 function('Koploper').
 function('Kopman').
@@ -2284,6 +2283,7 @@ function('Kroaat').
 function('Landskampioen').
 function('Lijsttrekker').
 function('Madam').
+function('Mademoiselle').
 function('Makelaar').
 function('Manager').
 function('Marktleider').
@@ -2393,12 +2393,18 @@ function('Zuster').
 function('Zweed').
 function('Zwitser').
 
+function('Grootvader').
+function('Grootmoeder').
+function('Opa').
+function('Oma').
 function('Vader').
 function('Moeder').
 function('Oom').
 function('Tante').
 function('Pa').
 function('Moe').
+function('Zus').
+function('Zoon').
 
 function('Excellentie').
 function('Hoogheid').
@@ -2439,12 +2445,17 @@ name_koning('B.',['&','W.']).
 name_koning('B.',[en,'W']).
 name_koning('B.',[en,'W.']).
 
+name_koning('Abt').
 name_koning('Bisschop').
 name_koning('B&W').
 name_koning('Burgemeester').
 name_koning('Dominee').
 name_koning('Frater').
 name_koning('Generaal').
+name_koning('Graaf').
+name_koning('Gravin').
+name_koning('Hertog').
+name_koning('Hertogin').
 name_koning('Kolonel').
 name_koning('Koning').
 name_koning('Koningin').
@@ -2458,6 +2469,7 @@ name_koning('President').
 name_koning('Prins').
 name_koning('Prinses').
 name_koning('Professor').
+name_koning('Schout').
 
 guess_number(W) :-
     \+ wikipedia_list(W),
@@ -3971,6 +3983,14 @@ subsumed_by_dict(P0,P,_,proper_name(_)) :-
     tag(P0,P,_,_,_,_,special(decap(_)),Tag),
     proper_name_tag(Tag).
 
+%% Heer !
+subsumed_by_dict(P0,P,_,_) :-
+    tag(P0,P1,_,_,_,_,normal(_),_),
+    tag(P1,P,_,_,_,_,_,punct(uitroep)).
+
+subsumed_by_dict(_P0,_P,[Surf],_) :-
+    name_koning(Surf).
+
 optional_de_het(P,P).
 optional_de_het(P0,P) :-
     tag(P0,P,_,_,de,de,_,_).
@@ -4879,7 +4899,6 @@ potential_name_fsa_not_begin(unknown,P0,[Word|Words],Ws,[Word|Prefix],
     (   name_unknown(Word,P0),
         potential_name_fsa(23,P1,Words,Ws,Prefix,His)
     ;   \+ alpino_lexical_analysis:hesitation(Word),
-	\+ decap_normal(Word),
 	potential_name_fsa(2,P1,Words,Ws,Prefix,His)
     ).
 potential_name_fsa_not_begin(unknown,P0,['\'s',Word|Words],Ws,

@@ -359,6 +359,8 @@ n([mass('Baskisch')],het,[]).
 
 n([sg('Bataaf'),pl('Bataven')],de,[]).
 
+n([sg('Batavier'),pl('Batavieren')],de,[]).
+
 n([sg('Beier'),pl('Beiers')],de,[]).
 
 n([mass('Beiers')],het,[]).
@@ -16666,6 +16668,8 @@ n([sg(jonkie),pl(jonkies)],het,[]).
 
 n([pl(jonkvrouwen),sg(jonkvrouw)],de,[]).
 
+n([pl(jonkmannen),sg(jonkman)],de,[]).
+
 n([pl('Joden'),sg('Jood')],de,[]).
 
 n([pl(joden),sg(jood)],de,[]).
@@ -20895,6 +20899,8 @@ n([pl(madammen),pl(madams),sg(madam),
    pl(madames),pl(mesdames),sg(madame)],de,[],[dim(madammetje),
 					       dim(madammeke),
 					       dim(madammeken)]).
+
+n([sg(mademoiselle),pl(mademoiselles)],de,[],[]).
 
 n([pl(maden),sg(made)],de,[]).
 

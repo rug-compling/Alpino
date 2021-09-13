@@ -2134,6 +2134,7 @@ m(moeder,       determiner(pron), moeders).
 m(noord,        determiner(pron), noords).
 m(oost,         determiner(pron), oosts).
 m(overvloed,    determiner(pron), overvloeds).
+m(tante,        determiner(pron), 'tante\'s').
 m(vader,        determiner(pron), vaders).
 m(west,         determiner(pron), wests).
 m(wit,          determiner(pron), wits).
@@ -5855,6 +5856,7 @@ loc_adverb(buitenaf).
 loc_adverb(buitenom).
 loc_adverb(buitengaats).
 loc_adverb(daarginds).
+loc_adverb(daarginder).
 loc_adverb([down,under]).
 loc_adverb(ginder).
 loc_adverb(halfweg).
@@ -6790,6 +6792,7 @@ m(jullie,       pronoun(nwh,je,pl,de,both,def),jullie).
 m(men,          pronoun(nwh,thi,sg,de,nom,def),men).
 m(me,           pronoun(nwh,fir,sg,de,dat_acc,def,wkpro),me).
 m(mekaar,       pronoun(nwh,thi,pl,de,dat_acc,def),mekaar).
+m(mekander,     pronoun(nwh,thi,pl,de,dat_acc,def),mekander).
 m(menigeen,     pronoun(nwh,thi,sg,de,both,def),menigeen).
 m(mezelf,       pronoun(nwh,fir,sg,de,dat_acc,def),mezelf).
 m(mezelf,       pronoun(nwh,fir,sg,de,dat_acc,def),mezelve).
