@@ -41716,9 +41716,11 @@ measure_noun(tpm).
 
 measure_noun('BEF').
 measure_noun('Bfr').
+measure_noun('DEM').
 measure_noun('EUR').
 measure_noun('FF').
 measure_noun('FRF').
+measure_noun('GBP').
 measure_noun('NLG').
 measure_noun('SRG').  % Surinaamse gulden?
 measure_noun('USD').
