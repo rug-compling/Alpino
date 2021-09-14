@@ -991,9 +991,9 @@ unknown_word_heuristic(P1,R1,W,_,"comparative|~p|~p|~p~n",
     debug_message(3,"trying heuristic comparative+e~n",[]),
     atom(W),
     atom_concat(A,ere,W), 
-    (  alpino_lex:lexicon(adjective(no_e(ADV)),Astem,[A],[],_)
-    ;  alpino_lex:lexicon(adjective(end(ADV)),Astem,[A],[],_)
-    ;  alpino_lex:lexicon(adjective(ge_no_e(ADV)),Astem,[A],[],_)
+    (  alpino_lex:lexicon(adjective(no_e(_)),Astem,[A],[],_)
+    ;  alpino_lex:lexicon(adjective(end(_)),Astem,[A],[],_)
+    ;  alpino_lex:lexicon(adjective(ge_no_e(_)),Astem,[A],[],_)
     ),
     lexical_analysis_tag(adjective(ere),P1,R1,Astem,compar_adj).
  
@@ -2392,23 +2392,6 @@ function('Zuid-Afrikaan').
 function('Zuster').
 function('Zweed').
 function('Zwitser').
-
-function('Grootvader').
-function('Grootmoeder').
-function('Opa').
-function('Oma').
-function('Vader').
-function('Moeder').
-function('Oom').
-function('Tante').
-function('Pa').
-function('Moe').
-function('Zus').
-function('Zoon').
-
-function('Excellentie').
-function('Hoogheid').
-function('Majesteit').
 
 function(InterimPremier) :-
     atom(InterimPremier),
@@ -4648,6 +4631,23 @@ unlikely_name_lonely('Beachvolleybal').
 unlikely_name_lonely('Reis').
 unlikely_name_lonely('IJshockey').
 unlikely_name_lonely('Wielrennen').
+
+unlikely_name_lonely('Grootvader').
+unlikely_name_lonely('Grootmoeder').
+unlikely_name_lonely('Opa').
+unlikely_name_lonely('Oma').
+unlikely_name_lonely('Vader').
+unlikely_name_lonely('Moeder').
+unlikely_name_lonely('Oom').
+unlikely_name_lonely('Tante').
+unlikely_name_lonely('Pa').
+unlikely_name_lonely('Moe').
+unlikely_name_lonely('Zus').
+unlikely_name_lonely('Zoon').
+
+unlikely_name_lonely('Excellentie').
+unlikely_name_lonely('Hoogheid').
+unlikely_name_lonely('Majesteit').
 
 unlikely_name_lonely(W) :-
     decap_foreign_word(W).
