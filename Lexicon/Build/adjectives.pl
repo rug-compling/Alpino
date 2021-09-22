@@ -717,8 +717,12 @@ a([e('Ethiopische'),
    no_e('Ethiopisch')],nonadv,[],[]).
 
 a([e('Europese'),
-   no_e('Europees')],adv,[],[h('Arabisch'),
-			     h(pan) ]).
+   no_e('Europees'),
+   er('Europeser'),
+   ere('Europesere')
+  ],adv,[],
+  [h('Arabisch'),
+   h(pan) ]).
 
 a([e('Filipijnse'),
    no_e('Filipijns')],nonadv,[],[]).
@@ -3877,7 +3881,7 @@ a([ge_e(beantwoorde),
    ge_no_e(beantwoord)],adv,[],[]).
 
 a([ge_e(beargumenterde),
-   no_no_e(beargumenteerd)],adv,[],[]).
+   ge_no_e(beargumenteerd)],adv,[],[]).
 
 a([ge_e(bebaarde),
    ge_no_e(bebaard)],padv,[],[]).
@@ -5541,7 +5545,7 @@ a([ende(bevestigende),
    ere(bevestigendere),
    end(bevestigend),
    st(bevestigendst),
-   ste(bevestigendste)],adv,[],[]).
+   ste(bevestigendste)],adv,[transitive],[]).
 
 a([ge_e(beviste),
    ge_no_e(bevist)],padv,[],[]).
@@ -7705,7 +7709,9 @@ a([ende(daverende),
 a([both([de,facto])],adv,[],[]).
 
 a([pred(debet)],nonadv,
-  [pp(aan)],[]).
+  [pp(aan),
+   pp_subject_sbar(aan)  % dat wij de dienst uitmaakten is daar debet aan
+  ],[]).
 
 a([e(debiele),
    er(debieler),
@@ -11934,6 +11940,9 @@ a([ge_e(gedribbelde),
 a([ge_e(gedrilde),
    ge_no_e(gedrild)],adv,[],[]).
 
+a([ge_e(gedrogeerde),
+   ge_no_e(gedrogeerd)],padv,[],[]).
+
 a([ge_both(gedrongen),
    er(gedrongener),
    ere(gedrongenere),
@@ -14473,6 +14482,9 @@ a([ge_e(gepolariseerde),
 
 a([ge_e(gepolijste),
    ge_no_e(gepolijst)],adv,[],[]).
+
+a([ge_e(gepolitiseerde),
+   ge_no_e(gepolitiseerd)],adv,[],[]).
 
 a([ge_e(gepolste),
    ge_no_e(gepolst)],adv,[],[]).
@@ -17280,7 +17292,8 @@ a([ge_e(geïnspireerde),
    ere(geïnspireerdere),
    ge_no_e(geïnspireerd),
    st(geïnspireerdst),
-   ste(geïnspireerdste)],adv,[],[]).
+   ste(geïnspireerdste)],adv,
+  [mod_pp(door)],[]).
 
 a([ge_e(geïnstalleerde),
    ge_no_e(geïnstalleerd)],adv,[],[]).
@@ -24550,6 +24563,8 @@ a([pred([off,and,on,the,record])],adv,[],[]).
 
 a([pred([off,en,on,the,record])],adv,[],[]).
 
+a([both([off,shore])],adv,[],[]).
+
 a([e(offensieve),
    no_e(offensief),
    er(offensiever),
@@ -31141,6 +31156,13 @@ a([e(respectievelijke),
 a([e(restitueerbare),
    no_e(restitueerbaar)],nonadv,[],[]).
 
+a([no_e(restrictief),
+   e(restrictieve),
+   er(restrictiever),
+   ere(restrictievere),
+   st(restrictiefst),
+   ste(restrictiefste)],adv,[],[]).
+
 a([e(retorische),
    no_e(retorisch)],adv,[],[]).
 
@@ -31791,6 +31813,7 @@ a([e(sceptische),
    ste(sceptischte),
    ste(skeptischte)],adv,
   [er_pp_vp(over),
+   er_pp_sbar(over),
    pp(over)],[]).
 
 a([e(schaamteloze),
@@ -34761,7 +34784,7 @@ a([e(troosteloze),
    ste(troostelooste)],adv,[],[]).
 
 a([end(troostend),
-   ende(troostende)],padv,[],[]).
+   ende(troostende)],padv,[transitive],[]).
 
 a([e(tropische),
    no_e(tropisch)],adv,[],[]).
@@ -34889,7 +34912,7 @@ a([stem(uit_dagen),
    ere(uitdagendere),
    end(uitdagend),
    st(uitdagendst),
-   ste(uitdagendste)],adv,[],[]).
+   ste(uitdagendste)],adv,[transitive],[]).
 
 a([e(uitdrukkelijke),
    er(uitdrukkelijker),
@@ -35155,7 +35178,7 @@ a([ge_e(uitgeleefde),
    ge_no_e(uitgeleefd)],adv,[],[]).
 
 a([ge_e(uitgeleende),
-   ge_no_e(uitgeleend)],adv,[],[]).
+   ge_no_e(uitgeleend)],adv,[so_np],[]).
 
 %% omdat je noot uitgeleerd raakt
 a([ge_e(uitgeleerde),
@@ -38373,7 +38396,9 @@ a([e(vleiende),
    st(vleiendst),
    ste(vleiendste)],adv,
   [pp(over),
-   pp(voor)],[]).
+   pp(voor),
+   transitive
+  ],[]).
 
 a([e(vlekkeloze),
    no_e(vlekkeloos)],adv,[],[]).
@@ -39353,7 +39378,7 @@ a([e(waarderende),
    ere(waarderendere),
    no_e(waarderend),
    st(waarderendst),
-   ste(waarderendste)],adv,[],[]).
+   ste(waarderendste)],adv,[transitive],[]).
 
 a([e(waardevolle),
    er(waardevoller),
@@ -39465,7 +39490,7 @@ a([e(wantrouwende),
    ere(wantrouwendere),
    no_e(wantrouwend),
    st(wantrouwendst),
-   ste(wantrouwendste)],adv,[],[]).
+   ste(wantrouwendste)],adv,[transitive],[]).
 
 a([e(wantrouwige),
    er(wantrouwiger),
@@ -39910,8 +39935,10 @@ a([e(welwillende),
    ere(welwillendere),
    no_e(welwillend),
    st(welwillendst),
-   ste(welwillendste)],adv,[subject_sbar,
-			    subject_vp],[on]).
+   ste(welwillendste)],adv,
+  [so_np,
+   subject_sbar,
+   subject_vp],[on]).
 
 a([e(wendbare),
    no_e(wendbaar)],nonadv,[],[]).

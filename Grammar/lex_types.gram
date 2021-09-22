@@ -5371,7 +5371,14 @@ van_sbar_subj_so_np_no_het(V,C,C) :-
     V:subj <=> Subj,
     Subj => np,
     dummy_subj(Subj).
-    
+
+%% voorop staat het belang van de reiziger
+tpart(V,C,C) :-
+    main_v(V0),
+    unify_except(V0,V,tpart),
+    V:tpart => yes,
+    dependents(V,[]).
+
 %% vast staat dat hij komt
 sbar_subj_no_het_tpart(V,C0,C) :-
     sbar_subj_no_het(V0,C0,C),
@@ -5418,6 +5425,11 @@ sbar_subj_refl_opt_het(V,C,C) :-
     refl_np_arg(Obj),
     sbar_subj(V,Sdat,Subj,[se/Obj]),
     opt_het_subj_or_topicalize(V,Sdat,Subj).
+
+sbar_sbar_subj(V,C,C) :-
+    sbar_arg(VC),
+    sbar_subj(V,_,Subj,[vc/VC]),
+    dummy_subj(Subj).
 
 sbar_subj(V,C,C) :-
     sbar_subj(V,Sdat,Subj,[]),

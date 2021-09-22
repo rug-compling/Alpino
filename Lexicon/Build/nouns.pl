@@ -3994,6 +3994,8 @@ n([sg([beige,book])],het,[]).
 
 n([pl(beitels),sg(beitel)],de,[],[dim(beiteltje)]).
 
+n([sg(beits)],de,[]).
+
 n([pl(bejaardenhuizen),sg(bejaardenhuis)],het,[np_app_measure]).
 
 n([pl(bejaardentehuizen),sg(bejaardentehuis)],het,[]).
@@ -31723,7 +31725,10 @@ n([sg(smeltpunt),pl(smeltpunten)],het,[]).
 
 n([pl(smerissen),sg(smeris)],de,[]).
 
-n([pl(smetten),sg(smet)],de,[sbar,vp],
+n([pl(smetten),sg(smet)],de,
+  [subject_sbar, % dat ze niet vaker scoorde was het enige smetje
+   sbar,
+   vp],
   [dim(smetje)]).
 
 n([pl(smeden),sg(smid)],de,[],

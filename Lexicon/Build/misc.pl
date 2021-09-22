@@ -2518,6 +2518,7 @@ particle(teweeg).
 particle(tewerk).
 particle(thee).
 particle(thuis).
+particle(tijd).
 particle(toe).
 particle(totstand).
 particle(toneel).

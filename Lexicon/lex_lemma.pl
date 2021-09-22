@@ -7588,6 +7588,7 @@ lemma_root(kapituleren,kapituleer) .
 lemma_root(kapot_gooien,gooi_kapot) .
 lemma_root(kapot_maken,maak_kapot) .
 lemma_root(kapot_slaan,sla_kapot) .
+lemma_root(kapot_vriezen,vries_kapot) .
 lemma_root(kappen,kap) .
 lemma_root(kapseizen,kapseis) .
 lemma_root(kapselen,kapsel) .
@@ -11535,6 +11536,7 @@ lemma_root(raak_knappen,knap_raak) .
 lemma_root(raak_knapperen,knapper_raak) .
 lemma_root(raak_knarsen,knars_raak) .
 lemma_root(raak_knarsetanden,knarsetand_raak) .
+lemma_root(raak_kneden,kneed_raak) .
 lemma_root(raak_knellen,knel_raak) .
 lemma_root(raak_knerpen,knerp_raak) .
 lemma_root(raak_knetteren,knetter_raak) .
@@ -14446,6 +14448,7 @@ lemma_root(thuis_voelen,voel_thuis) .
 lemma_root(thuiswerken,thuiswerken) .
 lemma_root(tienen,tien) .
 lemma_root(tieren,tier) .
+lemma_root(tijd_rekken,rek_tijd) .
 lemma_root(tijdrekken,tijdrekken) .
 lemma_root(tijdrijden,tijdrijden) .
 lemma_root(tijgen,tijg) .
@@ -16672,6 +16675,7 @@ lemma_root(uit_knappen,knap_uit) .
 lemma_root(uit_knapperen,knapper_uit) .
 lemma_root(uit_knarsen,knars_uit) .
 lemma_root(uit_knarsetanden,knarsetand_uit) .
+lemma_root(uit_kneden,kneed_uit) .
 lemma_root(uit_knellen,knel_uit) .
 lemma_root(uit_knerpen,knerp_uit) .
 lemma_root(uit_knetteren,knetter_uit) .
@@ -21483,6 +21487,7 @@ lemma_root(voort_knappen,knap_voort) .
 lemma_root(voort_knapperen,knapper_voort) .
 lemma_root(voort_knarsen,knars_voort) .
 lemma_root(voort_knarsetanden,knarsetand_voort) .
+lemma_root(voort_kneden,kneed_voort) .
 lemma_root(voort_knellen,knel_voort) .
 lemma_root(voort_knerpen,knerp_voort) .
 lemma_root(voort_knetteren,knetter_voort) .
