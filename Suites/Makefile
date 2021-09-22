@@ -122,15 +122,17 @@ OneLiner.sents.gz: OneLiner_NL_text.txt
           | awk '{N++; printf "%s|%s\n",N,$$0 }' \
          >  $*.sents
 
-sentsfiles=g_suite.sents h_suite.sents i_suite.sents m_suite.sents leuven_yellow_pages.sents\
-           h_suite.sents journaal.sents lot_test_suite1.sents ovis.sents
+sentsfiles=g_suite.sents h_suite.sents m_suite.sents\
+           leuven_yellow_pages.sents h_suite.sents\
+           journaal.sents lot_test_suite1.sents ovis.sents\
+           i_suite.sents 
 namedsentsfiles=cgn_exs.named_sents lassy.named_sents qa.named_sents
 
 ifeq "$(shell if [ -d Machine/ ]; then echo yes; fi)" "yes"
 include ../Makefile.include
-tt: $(sentsfiles) $(namedsentsfiles) 
-	cat $(sentsfiles) | grep -v -e '^[%]' -e '^--' > tt.sents
-	awk -F\| '{ print $$2 }' $(namedsentsfiles) >> tt.sents
+tt: $(namedsentsfiles) $(sentsfiles) 
+	awk -F\| '{ print $$2 }' $(namedsentsfiles) >> t.sents
+	cat $(sentsfiles) | grep -v -e '^[%]' -e '^--' >> tt.sents
 	cat tt.sents  | ./split_in_parts -p 500 -o tt
 	for file in tt_part*.sents.gz ; do if cmp -s $$file Machine/$$file; then true ; else cp -f $$file Machine/$$file; fi; done
 	touch tt

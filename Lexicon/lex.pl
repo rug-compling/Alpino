@@ -707,6 +707,7 @@ guess_number(Name,Both) :-
     ;   Both = sg
     ).
 
+number_both(['Admirals']).
 number_both(['Alpen']).
 number_both(['Ardennen']).
 number_both(['Artsen'|_]).
@@ -738,6 +739,8 @@ number_both(['Jackson','5']).
 number_both(['Jackson','Five']).
 number_both(['Kamers'|_]).
 number_both(['Kempen']).
+number_both(['Lakers']).
+number_both(['Les','Bleus']).
 number_both(['Molukken']).
 number_both(['Mujahedeen']).
 number_both(['NS']).
@@ -746,6 +749,7 @@ number_both(['Pinkstergemeenten']).
 number_both(['PS']).  % provinciale staten?
 number_both(['Pyreneeen']).
 number_both(['Pyreneeën']).
+number_both(['Rode','Khmers']).
 number_both(['Staten','Generaal']).
 number_both(['Staten-Generaal']).
 number_both(['Talibaan']).
@@ -779,6 +783,7 @@ number_both_last(Atom) :-
     plural_suffix(Suffix),
     atom_concat(_,Suffix,Atom).
 
+plural_suffix(admirals).
 plural_suffix(alpen).
 plural_suffix(angels).
 plural_suffix(antillen).
@@ -1488,6 +1493,7 @@ impossible_nominalization_frame(np_aan_het).
 impossible_nominalization_frame(no_subj).
 impossible_nominalization_frame(alsof_sbar_subj).
 impossible_nominalization_frame(alsof_sbar_subj_so_np).
+impossible_nominalization_frame(sbar_subj_subj).
 impossible_nominalization_frame(sbar_subj_het).
 impossible_nominalization_frame(sbar_subj_opt_het).
 impossible_nominalization_frame(sbar_subj_np).
@@ -4348,6 +4354,7 @@ third_person_sg_sc(ninv(Sc,_)):-
 third_person_sg_sc(het_subj).
 third_person_sg_sc(het_subj_sbar_obcomp).
 third_person_sg_sc(no_subj).
+third_person_sg_sc(sbar_sbar_subj).
 third_person_sg_sc(sbar_subj).
 third_person_sg_sc(sbar_subj_np).
 third_person_sg_sc(sbar_subj_np_np).

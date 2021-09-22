@@ -3479,6 +3479,7 @@ v(beveilig,beveiligt,beveiligen,beveiligd,beveiligde,beveiligden,
 
 v(bevestig,bevestigt,bevestigen,bevestigd,bevestigde,bevestigden,
     [h([sbar,
+	sbar_sbar_subj, % dat hij komt bevestigt dat ...
 	np_sbar,
 	so_pp_sbar,
 	np_np,
@@ -3631,6 +3632,7 @@ v(bewierook,bewierookt,bewieroken,bewierookt,bewierookte,bewierookten,
 v(bewijs,bewijst,bewijzen,bewezen,bewees,bewezen,
     [h([np_sbar,
 	sbar,
+	sbar_sbar_subj, % dat hij komt bewijst dat ...
         sbar_obj, % omdat het bewezen is dat hij ...
 	so_pp_np,
 	so_pp_sbar,
@@ -5258,8 +5260,10 @@ v(contracteer,contracteert,contracteren,gecontracteerd,contracteerde,contracteer
     [h([transitive])]).
 
 v(contrasteer,contrasteert,contrasteren,gecontrasteerd,contrasteerde,contrasteerden,
-    [h([intransitive,
-	pc_pp(met)])]).
+  [h([intransitive,
+      transitive,
+      np_pc_pp(met),
+      pc_pp(met)])]).
 
 v(controleer,controleert,controleren,gecontroleerd,controleerde,controleerden,
     [h([sbar,
@@ -8122,7 +8126,8 @@ v(geef,geeft,geven,gegeven,gaf,gaven,
 	sbar_subj_np,  % het geeft een kick / een goed gevoel / ... dat ...
         np_mod_pp(voor), 
 	part_als_pred_np(op),
-	part_intransitive(aan),   % tenzij anders is aangegeven
+	part_intransitive(aan),	% tenzij anders is aangegeven
+	part_sbar_sbar_subj(aan),
 	part_np_np(aan),
 	part_np_np(door),
 	part_np_np(in),
@@ -11453,6 +11458,8 @@ v(knecht,knechten,knechten,geknecht,knechtte,knechtten,
 v(kneed,kneedt,kneden,gekneed,kneedde,kneedden,
     [h([transitive,
         part_transitive(door),
+	intransitive,   % in recepten: kneed totdat ..
+	part_intransitive(door),     % kneed door tot een soepel ...
         np_pc_pp(van)])]).
 
 v(knel,knelt,knellen,gekneld,knelde,knelden,
@@ -18146,7 +18153,8 @@ v(reis,reist,reizen,gereisd,reisde,reisden,
 v(rek,rekt,rekken,gerekt,rekte,rekten,
     [unacc([part_intransitive(uit)]),
      h([transitive,
-	% part_refl(uit),
+	%%% part_refl(uit),
+	part_intransitive(tijd),
 	part_transitive(op),
 	part_transitive(uit)]),
      b([intransitive])]).
@@ -21495,6 +21503,7 @@ v(sta,staat,inflected(staan,stane),gestaan,stond,stonden,
 	part_np_vp_obj(toe),
 	part_so_vp_obj(toe),  % ik sta aan hem_i toe om PRO_i mij te zoenen
 	part_sbar_subj_no_het_tpart(vast),
+	part_tpart(voorop),
 	part_sbar_subj_no_het_tpart(voorop),
 	part_sbar(toe),
 	fixed([[overeind],sbar_subj_no_het],no_passive),
@@ -22464,6 +22473,7 @@ v(strooi,strooit,strooien,gestrooid,strooide,strooiden,
 	transitive,
 	part_transitive(bij),
 	part_transitive(in),
+	part_transitive(rond),
 	part_transitive(uit),
 	pc_pp(met),
 	np_ld_pp,
@@ -23152,6 +23162,7 @@ v(toon,toont,tonen,getoond,toonde,toonden,
 	part_np_np(aan), % ik kan het je aantonen
 	part_vp(aan),
 	part_sbar(aan),
+	part_sbar_sbar_subj(aan),
 	part_transitive(aan)])]).
 
 v(toost,toost,toosten,getoost,toostte,toostten,
@@ -26696,6 +26707,7 @@ v(vlieg,vliegt,vliegen,gevlogen,vloog,vlogen,
 	part_intransitive(aan),
 	part_intransitive(door),
 	part_intransitive(in),
+	part_intransitive(langs),
 	part_intransitive(om),
 	part_intransitive(op),
 	part_intransitive(over),  % ik kwam speciaal over vliegen
@@ -27175,11 +27187,13 @@ v(vries,vriest,vriezen,gevroren,vroor,vroren,
       ap_copula,		% de plas vroor dicht; hij vroor dood
       part_intransitive(op),
       part_intransitive(vast),
+      part_intransitive(kapot),
       part_intransitive(dood)
      ]),
    h([intransitive,	  % de ijsmeester is toen hard gaan vriezen...
       het_subj_sbar_obcomp,
       part_transitive(door),
+      part_transitive(kapot),  % de vorst heeft de mais kapot gevroren
       part_transitive(in)])]).
 
 v(vrij,vrijt,vrijen,[gevrijd,gevreeën],[vrijde,vree],[vrijden,vreeën],

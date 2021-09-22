@@ -654,6 +654,7 @@ valid_sc(refl_sbar,                   [check_refl]).
 valid_sc(refl_dip_sbar,               [check_refl]).
 valid_sc(sbar_subj_het,               [check_het,
                                        check_of_dat_sbar]).
+valid_sc(sbar_sbar_subj,              [check_of_dat_whsub_sbar]).
 valid_sc(sbar_subj,                   [check_of_dat_whsub_sbar]).
 valid_sc(sbar_subj_opt_het,           [check_of_dat_whsub_sbar]).
 valid_sc(dip_sbar_subj,               [check_het]).
@@ -672,8 +673,9 @@ valid_sc(pp_vp_obj(Prep),             [prep(Prep),check_vform(te)]).
 valid_sc(sbar_subj_no_het,            [check_of_dat_whsub_sbar]).
 valid_sc(er_sbar_subj_no_het,         [check_of_dat_whsub_sbar,check_er]).
 valid_sc(dip_sbar_subj_no_het,        []).
-valid_sc(dip_sbar_subj_opt_het,        []).
+valid_sc(dip_sbar_subj_opt_het,       []).
 valid_sc(sbar_subj_no_het_tpart,      [check_of_dat_whsub_sbar]).
+valid_sc(tpart,                       []).
 valid_sc(van_sbar_subj_no_het,        [check_tag(complementizer(van))]).
 valid_sc(van_sbar_subj_so_np_no_het,  [check_tag(complementizer(van))]).
 valid_sc(pp_sbar_subj(Prep),          [prep(Prep),check_of_dat_whsub_sbar]). 
