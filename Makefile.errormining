@@ -20,6 +20,9 @@ default:
         | LANG=POSIX LC_ALL=POSIX sort  -k 1,1n -k2,2rn > $*.ok_nor
 
 
+%.mistakes:%.q
+	zcat $*.q | $(Q) -m > $*.mistakes
+
 %.m_ngram: %.m_fsa
 	zcat $*.q | $(Q) -m |\
         $(UNIQ) |\
@@ -49,32 +52,16 @@ default:
         LANG=POSIX LC_ALL=POSIX sort -u |\
         fsa_build -N -o $*.m_fsa
 
-.PRECIOUS : %.m_ngram %.m_fsa %.a_ngram %.a_fsa %.fsa %.ngram %.txt0
-
-#%.ngram : %.txt %.fsa
-#	cat $*.txt | $(UNIQ) | $(WORD_PER_LINE) |\
-#            $(SADIR)/suffix_array -e -d $*.fsa -n $(N) -w -G\| \
-#                                  -f $(f) -u -v -N\
-#              | grep -v ' @ ' > $*.ngram
-
-## grep -v ' @ '
-## because we are not interested in ngrams that cross sentence boundaries
+.PRECIOUS : %.m_ngram %.m_fsa %.a_ngram %.a_fsa 
 
 %.colc : %.a_ngram
 	cat $*.a_ngram | $(ALPINO_HOME)/Suites/colc -t 0.001 |\
          $(ALPINO_HOME)/Suites/remove_smaller |\
          LANG=POSIX LC_ALL=POSIX sort -k1,1nr -k2,2nr > $*.colc
 
+LOGS=*.log.gz
 
-#%.fsa : %.txt
-#	cat $*.txt | $(WORD_PER_LINE) |\
-#        LANG=POSIX LC_ALL=POSIX sort -u |\
-#        grep .|\
-#        fsa_build -N -o $*.fsa
-
-LOGS=*.log
-
-cat=cat
+cat=zcat
 
 e:
 	-@$(cat) $(LOGS) | \
@@ -101,21 +88,9 @@ e:
 logs:
 	-$(cat) $(LOGS) | $(Q) -c
 
-unknowns:
-	-$(cat) $(LOGS) | grep '^unknown|' | awk -F\| '{ if (NF==4) print $$2 }' |\
-          $(COUNT)
-
-word=word
-u:
-	-$(cat) $(LOGS) | grep '^unknown|$(word)|' | awk -F\| '{ print $$4 }' |\
-           $(ALPINO_HOME)/Suites/kwic '$(word)'
-
-u.txt0:
-	$(cat) $(LOGS) | grep '^unknown|' |\
-           $(UNIQ) > u.txt0
-
-u.txt: u.txt0
-	cat u.txt0 | awk -F\| '{ print $$4 }' > u.txt
+%.unknowns:%.log.gz
+	zcat $*.log.gz | grep '^unknown|' | awk -F\| '{ if (NF==4) print $$2 }' |\
+          $(COUNT) > $*.unknowns
 
 FRAMES=*.frames
 
@@ -140,13 +115,6 @@ assigned_with_heur:
 	awk -F\| '{ printf "%s|%s|%s\n",$$1,$$2,$$6 }' |\
         $(COUNT) |\
 	$(ALPINO_HOME)/bin/analyse_unknowns
-
-progress:
-	@$(cat) $(LOGS) | $(Q) -c
-
-last_tags:
-	@$(cat) $(LOGS) | grep 'warning: filter_tags removed last tag for'|\
-           sed -e 's/warning: filter_tags removed last tag for //' 
 
 ## make tmp log=LOGFILE
 ## reports statistics based on the log file
