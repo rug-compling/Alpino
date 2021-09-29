@@ -22667,6 +22667,10 @@ v(substitueer,substitueert,substitueren,gesubstitueerd,substitueerde,substitueer
 
 v(sudder,suddert,sudderen,gesudderd,sudderde,sudderden,
   [h([intransitive,
+      ap_pred_np,		% sudder het vlees gaar
+      transitive,
+      part_transitive(na),
+      part_transitive(mee),
       part_intransitive(na)])]).
 
 v(suf,suft,suffen,gesuft,sufte,suften,

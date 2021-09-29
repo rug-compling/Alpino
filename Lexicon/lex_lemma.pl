@@ -8672,6 +8672,7 @@ lemma_root(mee_spreken,spreek_mee) .
 lemma_root(mee_stemmen,stem_mee) .
 lemma_root(meester_maken,maak_meester) .
 lemma_root(mee_sturen,stuur_mee) .
+lemma_root(mee_sudderen,sudder_mee) .
 lemma_root(mee_tellen,tel_mee) .
 lemma_root(mee_trainen,train_mee) .
 lemma_root(mee_trekken,trek_mee) .
