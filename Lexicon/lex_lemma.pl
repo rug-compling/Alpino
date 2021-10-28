@@ -3786,6 +3786,7 @@ lemma_root(door_ijzelen,ijzel_door) .
 lemma_root(door_illustreren,illustreer_door) .
 lemma_root(door_imiteren,imiteer_door) .
 lemma_root(door_imponeren,imponeer_door) .
+lemma_root(door_importeren,importeer_door) .
 lemma_root(door_improviseren,improviseer_door) .
 lemma_root(door_inbegrepen,inbegrepen_door) .
 lemma_root(door_incasseren,incasseer_door) .
@@ -11370,6 +11371,7 @@ lemma_root(raak_ijshockeyen,ijshockey_raak) .
 lemma_root(raak_illustreren,illustreer_raak) .
 lemma_root(raak_imiteren,imiteer_raak) .
 lemma_root(raak_imponeren,imponeer_raak) .
+lemma_root(raak_importeren,importeer_raak) .
 lemma_root(raak_improviseren,improviseer_raak) .
 lemma_root(raak_inbegrepen,inbegrepen_raak) .
 lemma_root(raak_incasseren,incasseer_raak) .
@@ -16516,6 +16518,7 @@ lemma_root(uit_ijshockeyen,ijshockey_uit) .
 lemma_root(uit_illustreren,illustreer_uit) .
 lemma_root(uit_imiteren,imiteer_uit) .
 lemma_root(uit_imponeren,imponeer_uit) .
+lemma_root(uit_importeren,importeer_uit) .
 lemma_root(uit_improviseren,improviseer_uit) .
 lemma_root(uit_incasseren,incasseer_uit) .
 lemma_root(uit_incorporeren,incorporeer_uit) .
@@ -21321,6 +21324,7 @@ lemma_root(voort_ijshockeyen,ijshockey_voort) .
 lemma_root(voort_illustreren,illustreer_voort) .
 lemma_root(voort_imiteren,imiteer_voort) .
 lemma_root(voort_imponeren,imponeer_voort) .
+lemma_root(voort_importeren,importeer_voort) .
 lemma_root(voort_improviseren,improviseer_voort) .
 lemma_root(voort_inbegrepen,inbegrepen_voort) .
 lemma_root(voort_incasseren,incasseer_voort) .

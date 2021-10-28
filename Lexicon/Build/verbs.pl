@@ -10246,7 +10246,8 @@ v(imponeer,imponeert,imponeren,geïmponeerd,imponeerde,imponeerden,
 	pc_pp(met)])]).
 
 v(importeer,importeert,importeren,geïmporteerd,importeerde,importeerden,
-    [h([transitive])]).
+  [h([transitive,
+      intransitive])]).
 
 v(improviseer,improviseert,improviseren,geïmproviseerd,improviseerde,improviseerden,
     [h([intransitive,
@@ -26920,6 +26921,7 @@ v(voer,voert,voeren,gevoerd,voerde,voerden,
 	part_sbar(in),
 	part_so_pp_np(op),
 	part_intransitive(actie),
+	part_intransitive(in),
 	part_intransitive(uit),
 	part_transitive(aan),
         part_np_np(aan), %% de havens krijgen vis aangevoerd.
