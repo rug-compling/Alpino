@@ -60,9 +60,12 @@ container_head(Ds,Mod):-
 np(tree(r(_,p(np)),_)).
 np(tree(r(_,adt_lex(np,_,_,_,_)),_)).
 
-important_mod(r(_,adt_lex(_,eerste,_,_,_))).
-important_mod(r(_,adt_lex(_,niet,_,_,_))).
-important_mod(r(_,adt_lex(_,nooit,_,_,_))).
+important_mod_stem(niet).
+important_mod_stem(nooit).
+important_mod_stem(anders).
+
+important_mod(r(_,adt_lex(_,Stem,_,_,_))):-
+	important_mod_stem(Stem).
 
 important_modifier(tree(Cat,_)):-
     important_mod(Cat).

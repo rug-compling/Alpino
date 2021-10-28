@@ -3242,6 +3242,7 @@ paraphrase(Ref,Tokens,Chars) :-
     flag(copy_input_if_no_transformation,On),
 %    set_flag(end_hook,print_generated_sentence),
     set_flag(geneval,off),
+    flag(demo,Demo),
     flag(paraphrase_file,File),
     use_module(alpino(File)),
     set_flag(robustness,if_required),
@@ -3254,7 +3255,10 @@ paraphrase(Ref,Tokens,Chars) :-
     save_additional_lexical_entries(Cat),
 
     if_gui(Output=clig,Output=user),
-    debug_call(1,show(tree(adt),Output,[value(Adt0)])),
+    (   Demo == on
+    ->  debug_call(1,show(tree(adt),Output,[value(Adt0)]))
+    ;   true
+    ),
     
     apply_adt_transformations(Adt0,Adt),
     
@@ -3266,8 +3270,11 @@ paraphrase(Ref,Tokens,Chars) :-
 	Adt0 == Adt
     ->  format("ignored~n",[]),
 	format(user_error,"copy_input_if_no_transformation=ignore: ignore input~n",[])
-    ;   if_gui(Output=clig,Output=user),
-	debug_call(1,show(tree(adt),Output,[value(Adt)])),
+    ;   (   Demo == on
+	->  if_gui(Output=clig,Output=user),
+	    show(tree(adt),Output,[value(Adt)])
+	;   true
+	),
 	set_flag(robustness,off),
 	flag(copy_input_if_paraphrase_failed,Off),
 	(   Off == off
