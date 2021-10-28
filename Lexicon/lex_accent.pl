@@ -804,6 +804,7 @@ accent(ingeente,ingeënte).
 accent(ingeent,ingeënt).
 accent(ingredienten,ingrediënten).
 accent(ingredient,ingrediënt).
+accent(initiele,initiële).
 accent(initieren,initiëren).
 accent(inkonvenienten,inkonveniënten).
 accent(inkonvenient,inkonveniënt).

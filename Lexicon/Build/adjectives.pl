@@ -20031,6 +20031,9 @@ a([e(inhumane),
    st(inhumaanst),
    ste(inhumaanste)],adv,[],[]).
 
+a([e(initiële),
+   no_e(initieel)],adv,[],[]).
+
 a([e(inlandse),
    no_e(inlands)],nonadv,[],[]).
 
