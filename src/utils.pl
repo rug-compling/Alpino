@@ -55,6 +55,7 @@
 :- op(0,yfx,mod).
 
 :- use_module(library(lists)).
+:- use_module(library(charsio)).
 
 :- dynamic
     alpino_util_tmp:bpair/2,
@@ -764,7 +765,10 @@ write_feature_list0([H|T]) :-
     write_feature_list0(T).
 
 write_feature(Count-Feat) :-
-    write(Count), write('@'), writeq(Feat).
+    with_output_to_chars(format("~q",[Feat]),FeatCodes),
+    atom_codes(FeatAtom,FeatCodes),
+    alpino_format_syntax:escape_b(FeatAtom,FeatString),
+    format("~w@~s",[Count,FeatString]).
 
 count_features(List0,List) :-
     add_var(List0,List1),
