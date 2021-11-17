@@ -1,29 +1,25 @@
-:- module(alpino_user_transformation, [ apply_adt_transformations/2 ]).
+:- module(alpino_simplify_split, [ apply_split_transformations/2 ]).
 
 %% --------------------------------------------------------------------------------------------- %%
 
-apply_adt_transformations(Tree0,Tree) :-
-    dont_paraphrase(Tree0), !,
-    Tree0 = Tree.
-
-apply_adt_transformations(Tree0,Tree) :-
-    apply_split_transformations(Tree0,Tree1),
+apply_split_transformations(Tree0,Tree) :-
+    split_transformations(Tree0,Tree1),
     collapse_all(Tree1,Tree2,List),
 				% if the relative is removed, we need to ensure
                                 % its contents end up at the co-indexed node
     expand_all(Tree2,Tree,List).  % if i(I) occurs in a split as first mention, it must become a pronoun
 
-apply_split_transformations(tree(Cat0,Ds0),tree(Cat,Ds)) :-
+split_transformations(tree(Cat0,Ds0),tree(Cat,Ds)) :-
     split_transformation(Cat0,Ds0,Cat1,Ds1),
     !,
-    apply_split_transformations(tree(Cat1,Ds1),tree(Cat,Ds)).
-apply_split_transformations(tree(Cat,Ds0),tree(Cat,Ds)) :-
-    apply_split_transformations_list(Ds0,Ds).
+    split_transformations(tree(Cat1,Ds1),tree(Cat,Ds)).
+split_transformations(tree(Cat,Ds0),tree(Cat,Ds)) :-
+    split_transformations_list(Ds0,Ds).
 
-apply_split_transformations_list([],[]).
-apply_split_transformations_list([H0|T0],[H|T]) :-
-    apply_split_transformations(H0,H),
-    apply_split_transformations_list(T0,T).
+split_transformations_list([],[]).
+split_transformations_list([H0|T0],[H|T]) :-
+    split_transformations(H0,H),
+    split_transformations_list(T0,T).
 
 split_transformation(r(top,p(top)),Ds0,r(split,p(split)),Ds) :-
     select_replace(Ds0,D,X1,X2,Ds),
@@ -280,21 +276,6 @@ lex_replace_t(tree(r(Rel,X),Ds0),Cat0,Cat,tree(r(Rel,Y),Ds)):-
 c_replace(X,X,Y,Y) :- !.
 c_replace(X,_,_,X).
 	       
-
-dont_paraphrase(Tree) :-
-    tree_member(Sub,Tree),
-    dont_paraphrase_sub(Sub).
-
-dont_paraphrase_sub(tree(r(_,adt_lex(_,_,_,_,Atts)),[])) :-
-    lists:member(stype=topic_drop,Atts).
-dont_paraphrase_sub(tree(r(_,i(_,adt_lex(_,_,_,_,Atts))),[])) :-
-    lists:member(stype=topic_drop,Atts).
-
-tree_member(Sub,Sub).
-tree_member(Sub,tree(_,Ds)) :-
-    lists:member(D,Ds),
-    tree_member(Sub,D).
-
 %% must replace something...
 replace(El0,El,[El0|Tail],[El|Tail]).
 replace(El0,El,[X|Tail0],[X|Tail]):-

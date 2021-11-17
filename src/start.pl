@@ -146,7 +146,8 @@ alpino_table_goal:unknown_predicate_handler(_,fail).
 		  '../Tokenization/tokenize.pl',
 		  '../Generation/adt',
 		  '../Generation/geneval',
-		  '../Generation/cg'
+		  '../Generation/cg',
+		  simplify
 %%%%		  '../Derivbank/derivbank'
 		]).
 
@@ -3237,14 +3238,11 @@ paraphrase(Tokens0) :-
     concat_all(Tokens,Chars,' '),
     paraphrase(0,Tokens,Chars).
 
-:- initialize_flag(paraphrase_file,'src/passive.pl').
 paraphrase(Ref,Tokens,Chars) :-    
     flag(copy_input_if_no_transformation,On),
 %    set_flag(end_hook,print_generated_sentence),
     set_flag(geneval,off),
     flag(demo,Demo),
-    flag(paraphrase_file,File),
-    use_module(alpino(File)),
     set_flag(robustness,if_required),
     set_flag(order_canonical_dt,off),
     alpino_parse_tokens(Ref,Tokens),
