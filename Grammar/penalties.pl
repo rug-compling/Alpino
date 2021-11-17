@@ -684,6 +684,8 @@ det_conj_n_no_agr(Det,Conj) :-
 rulename_lex_postag(tree(_,_,lex(ref(Tag,_,Root,_,_,_,_,_,_,_,_)),_),Root,Tag).
 
 rulename_lex(tree(_,_,lex(ref(_,_,Root,_,_,_,_,_,_,_,_)),_),Root).
+rulename_lex(tree(_,_,[D],_),RuleName) :-
+    rulename_lex(D,RuleName).
 
 rulename(tree(_,Name,Ds,_),RuleName) :-
     rulename(Ds,Name,RuleName).
