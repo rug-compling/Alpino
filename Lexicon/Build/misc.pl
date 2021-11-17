@@ -1967,7 +1967,7 @@ m(die,           determiner(der),                dier).
 %m(die,           determiner(de,nwh,nmod,pro,nparg),       diejen). % vlaams
 %m(die,           determiner(de,nwh,nmod,pro,nparg),       diene).  % vlaams
 %m(die,           determiner(de,nwh,nmod,pro,nparg),       dien).   % vlaams
-m(die,         determiner(pron),               diens).
+m(diens,         determiner(pron),               diens).
 m(diezelfde,     determiner(de,nwh,mod,pro,yparg),   diezelfde).
 m(dit,           determiner(het,nwh,nmod,pro,nparg),      dit).
 m(ditzelfde,     determiner(het,nwh,mod,pro,yparg),  ditzelfde).

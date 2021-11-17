@@ -47,6 +47,7 @@ adverb([geen,zier]).
 adverb([bij,elkaar]). % pre-nump
 
 adverb([a,fortiori]).
+adverb([a,posterio]).
 adverb([a,posteriori]).
 adverb([a,priori]).
 adverb([à,la,minute]).

@@ -6115,6 +6115,18 @@ map_deps({[dat,acc]},Deps0,Deps,V0,V) :-
     ;  map_deps_list([inv(dat),inv_pron_acc],Deps0,Deps,V0,V)
     ).
 
+map_deps({[acc,refl]},Deps0,Deps,V0,V) :-
+    !,
+    (  map_deps_list([acc,refl],Deps0,Deps,V0,V)
+    ;  map_deps_list([inv(refl),inv_pron_acc],Deps0,Deps,V0,V)
+    ).
+
+map_deps({[refl,acc]},Deps0,Deps,V0,V) :-
+    !,
+    (  map_deps_list([acc,refl],Deps0,Deps,V0,V)
+    ;  map_deps_list([inv(refl),inv_pron_acc],Deps0,Deps,V0,V)
+    ).
+
 map_deps({[acc,dat_pp(Prep)]},Deps0,Deps,V0,V) :-
     !,
     (  map_deps_list([inv(acc),nsl_inv(dat_pp(Prep))],Deps0,Deps,V0,V)
