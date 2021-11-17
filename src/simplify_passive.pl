@@ -1,28 +1,28 @@
-:- module(alpino_user_transformation, [ apply_adt_transformations/2 ]).
+:- module(alpino_simplify_passive, [ apply_passive_transformations/2 ]).
 
 %% --------------------------------------------------------------------------------------------- %%
 
-apply_adt_transformations(Tree0,Tree) :-
+apply_passive_transformations(Tree0,Tree) :-
     dont_paraphrase(Tree0), !,
     Tree0 = Tree.
 
-apply_adt_transformations(Tree0,Tree) :-
+apply_passive_transformations(Tree0,Tree) :-
     apply_unraise_transformations(Tree0,Tree1),
-    apply_passive_transformations(Tree1,Tree2,[]),
+    passive_transformations(Tree1,Tree2,[]),
     apply_raise_transformations(Tree2,Tree).
 
-apply_passive_transformations(tree(Cat0,Ds0),tree(Cat,Ds),C) :-
+passive_transformations(tree(Cat0,Ds0),tree(Cat,Ds),C) :-
     passive_transformation(Cat0,Ds0,Cat1,Ds1,C),
     !,
-    apply_passive_transformations(tree(Cat1,Ds1),tree(Cat,Ds),C).
-apply_passive_transformations(tree(Cat,Ds0),tree(Cat,Ds),C) :-
+    passive_transformations(tree(Cat1,Ds1),tree(Cat,Ds),C).
+passive_transformations(tree(Cat,Ds0),tree(Cat,Ds),C) :-
     Cat = r(Rel,_),
-    apply_passive_transformations_list(Ds0,Ds,[Rel|C]).
+    passive_transformations_list(Ds0,Ds,[Rel|C]).
 
-apply_passive_transformations_list([],[],_).
-apply_passive_transformations_list([H0|T0],[H|T],C) :-
-    apply_passive_transformations(H0,H,C),
-    apply_passive_transformations_list(T0,T,C).
+passive_transformations_list([],[],_).
+passive_transformations_list([H0|T0],[H|T],C) :-
+    passive_transformations(H0,H,C),
+    passive_transformations_list(T0,T,C).
 
 apply_unraise_transformations(tree(Cat0,Ds0),tree(Cat,Ds)) :-
     unraise_transformation(Cat0,Ds0,Cat1,Ds1),

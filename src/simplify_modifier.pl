@@ -1,13 +1,6 @@
-:- module(alpino_user_transformation, [ apply_adt_transformations/2 ]).
+:- module(alpino_simplify_modifier, [ apply_modifier_transformations/2 ]).
 
 %% --------------------------------------------------------------------------------------------- %%
-
-apply_adt_transformations(Tree0,Tree) :-
-    dont_paraphrase(Tree0), !,
-    Tree0 = Tree.
-
-apply_adt_transformations(Tree0,Tree) :-
-    apply_modifier_transformations(Tree0,Tree).
 
 apply_modifier_transformations(tree(Cat0,Ds0),tree(Cat,Ds)) :-
     modifier_transformation(Cat0,Ds0,Cat1,Ds1),
@@ -75,21 +68,7 @@ important_modifier(tree(_Cat,Ds)) :-
 
 important_modifier1(tree(Cat,_)):-
     important_mod(Cat).
-
-dont_paraphrase(Tree) :-
-    tree_member(Sub,Tree),
-    dont_paraphrase_sub(Sub).
-
-dont_paraphrase_sub(tree(r(_,adt_lex(_,_,_,_,Atts)),[])) :-
-    lists:member(stype=topic_drop,Atts).
-dont_paraphrase_sub(tree(r(_,i(_,adt_lex(_,_,_,_,Atts))),[])) :-
-    lists:member(stype=topic_drop,Atts).
-
-tree_member(Sub,Sub).
-tree_member(Sub,tree(_,Ds)) :-
-    lists:member(D,Ds),
-    tree_member(Sub,D).
-
+ 
 modifier_rel(predm,_).
 modifier_rel(mod,_).
 modifier_rel(app,Cat) :-

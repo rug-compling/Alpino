@@ -884,6 +884,7 @@ exceptional_stem_tag(dode,noun(de,count,pl),                  'ADJ(nom,basis,met
 exceptional_stem_tag(dode,noun(de,count,sg),                  'ADJ(nom,basis,met-e,zonder-n,stan)',dood).
 exceptional_stem_tag(detineren,noun(de,count,sg),             'WW(vd,nom,met-e,zonder-n)',detineren).
 exceptional_stem_tag(detineren,noun(de,count,pl),             'WW(vd,nom,met-e,mv-n)',detineren).
+exceptional_stem_tag(diens,determiner(pron),                  'VNW(aanw,pron,gen,vol,3m,ev)',die).
 exceptional_stem_tag(geestelijke,noun(de,count,pl),           'ADJ(nom,basis,met-e,mv-n)',geestelijk).
 exceptional_stem_tag(geestelijke,noun(de,count,sg),           'ADJ(nom,basis,met-e,zonder-n,stan)',geestelijk).
 exceptional_stem_tag(gevangen,particle(_),                    'WW(vd,vrij,zonder)',vangen).
