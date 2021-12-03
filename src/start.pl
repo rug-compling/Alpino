@@ -48,29 +48,8 @@ alpino_table_goal:unknown_predicate_handler(_,fail).
 :- initialize_flag(pos_tagger_dir,
 		   alpino('PosTagger/MODELS')).
 
-:- initialize_flag(ngram_model_words,
-		   alpino('Generation/fluency/words.fsa')).
-
-:- initialize_flag(ngram_model_unigrams,
-                   alpino('Generation/fluency/unigrams.tpl')).
-
-:- initialize_flag(ngram_model_bigrams,
-                   alpino('Generation/fluency/bigrams.tpl')).
-
-:- initialize_flag(ngram_model_trigrams,
-                   alpino('Generation/fluency/trigrams.tpl')).
-
-:- initialize_flag(ngram_model_tags,
-                   alpino('Generation/fluency/tags.fsa')).
-
-:- initialize_flag(ngram_model_tag_unigrams,
-                   alpino('Generation/fluency/tag-unigrams.tpl')).
-    
-:- initialize_flag(ngram_model_tag_bigrams,
-                   alpino('Generation/fluency/tag-bigrams.tpl')).
-
-:- initialize_flag(ngram_model_tag_trigrams,
-                   alpino('Generation/fluency/tag-trigrams.tpl')).
+:- initialize_flag(ngram_model_dir,
+		   alpino('Generation/fluency')).
 
 %% standard files - it is not assumed you want to load
 %% alternatives for these.
@@ -2408,21 +2387,28 @@ process_and_save(parse,Stream,Peer,Timeout) :-
     xml_save(Result,StringNoBrackets,[],stream(Stream),normal),
     !.
 
+% process_and_save(paraphrase,Stream,Peer,Timeout) :-
+%     read_line_timeout(Stream,Line,Timeout),
+%     alpino_parse_line(Peer,Line),
+%     alpino_adt:object_adt(1,Adt),
+%     generate(Adt),
+%     findall(Sent,object(_,o(_,Sent,_)),Sents),
+%     print_realizations(Sents,Stream),
+%     !.
+
 process_and_save(paraphrase,Stream,Peer,Timeout) :-
     read_line_timeout(Stream,Line,Timeout),
-    alpino_parse_line(Peer,Line),
-    alpino_adt:object_adt(1,Adt),
-    generate(Adt),
-    findall(Sent,object(_,o(_,Sent,_)),Sents),
-    print_realizations(Sents,Stream),
+    codes_to_words_or_tokenize(Line,Words),
+    paraphrase(Peer,Words,Line,Result),
+    format(Stream,"~a~n",[Result]),
     !.
 
-process_and_save(compress,Stream,_Peer,Timeout) :-
-    read_line_timeout(Stream,Line,Timeout),
-    generate_compression(Line),
-    findall(Sent,object(_,o(_,Sent,_)),Sents),
-    print_realizations(Sents,Stream),
-    !.
+% process_and_save(compress,Stream,_Peer,Timeout) :-
+%     read_line_timeout(Stream,Line,Timeout),
+%     generate_compression(Line),
+%     findall(Sent,object(_,o(_,Sent,_)),Sents),
+%     print_realizations(Sents,Stream),
+%     !.
 
 process_and_save(_Kind,Stream,_Peer,_Timeout) :-
     print_error_stream(Stream,'parsing failed').
@@ -3238,7 +3224,11 @@ paraphrase(Tokens0) :-
     concat_all(Tokens,Chars,' '),
     paraphrase(0,Tokens,Chars).
 
-paraphrase(Ref,Tokens,Chars) :-    
+paraphrase(Ref,Tokens,Chars) :-
+    paraphrase(Ref,Tokens,Chars,Result),
+    format("~a~n",Result).
+
+paraphrase(Ref,Tokens,Chars,Result) :-
     flag(copy_input_if_no_transformation,On),
 %    set_flag(end_hook,print_generated_sentence),
     set_flag(geneval,off),
@@ -3252,9 +3242,9 @@ paraphrase(Ref,Tokens,Chars) :-
     
     save_additional_lexical_entries(Cat),
 
-    if_gui(Output=clig,Output=user),
     (   Demo == on
-    ->  debug_call(1,show(tree(adt),Output,[value(Adt0)]))
+    ->  if_gui(Output=clig,Output=user),
+        debug_call(1,show(tree(adt),Output,[value(Adt0)]))
     ;   true
     ),
     
@@ -3263,10 +3253,10 @@ paraphrase(Ref,Tokens,Chars) :-
     (   On == on,
 	Adt0 == Adt
     ->  format(user_error,"copy_input_if_no_transformation=on: copying input~n",[]),
-	format("~s~n",[Chars])
+	Result = Chars
     ;   On == ignore,
 	Adt0 == Adt
-    ->  format("ignored~n",[]),
+    ->  Result = "", % format("ignored~n",[]),
 	format(user_error,"copy_input_if_no_transformation=ignore: ignore input~n",[])
     ;   (   Demo == on
 	->  if_gui(Output=clig,Output=user),
@@ -3280,8 +3270,7 @@ paraphrase(Ref,Tokens,Chars) :-
 	;   set_flag(copy_input_if_paraphrase_failed,on(Chars,Tokens))
 	),
 	generate_or_split(Adt,GenTokens,[]),
-	hdrug_util:concat_all(GenTokens,Res,' '),
-	format("~s~n",Res)
+	hdrug_util:concat_all(GenTokens,Result,' ')
     ).
 
 paraphrase :-
@@ -3373,8 +3362,12 @@ generate_or_split(Tree,Toks0,Toks) :-
 
 generate_list([],Toks,Toks).
 generate_list([H|T],Toks0,Toks) :-
-    if_gui(Output=clig,Output=user),	
-    debug_call(1,show(tree(adt),Output,[value(H)])),
+    flag(demo,Demo),
+    (   Demo == on
+    ->  if_gui(Output=clig,Output=user),	
+	debug_call(1,show(tree(adt),Output,[value(H)]))
+    ;   true
+    ),
     generate_or_split(H,Toks0,Toks1),
     generate_list(T,Toks1,Toks).
 
