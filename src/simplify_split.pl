@@ -4,7 +4,7 @@
 
 apply_split_transformations(Tree0,Tree) :-
     split_transformations(Tree0,Tree1),
-    collapse_all(Tree1,Tree2,List),
+    alpino_cg:collapse_all(Tree1,Tree2,List),
 				% if the relative is removed, we need to ensure
                                 % its contents end up at the co-indexed node
     expand_all(Tree2,Tree,List).  % if i(I) occurs in a split as first mention, it must become a pronoun
@@ -98,40 +98,6 @@ generate_pronoun(p(mwu(Lemma,_)),Ds0,adt_lex(np,Pronoun,Pronoun,_,Atts),[]) :-
     lists:member(Hd,Ds0),
     pronoun(Lemma,_,Atts0,Atts,Pronoun).
 
-collapse_all(tree(r(Rel,Cat0),Ds0), tree(r(Rel,Cat),Ds), Params) :-
-    collapse_one(Cat0,Ds0,Cat,Ds1,Params),
-    collapse_ds(Ds1,Ds,Params).
-
-collapse_ds([],[],_).
-collapse_ds([H0|T0],[H|T],Ps) :-
-    collapse_all(H0,H,Ps),
-    collapse_ds(T0,T,Ps).
-
-collapse_one(i(Ix,Cat),Ds0,Out,Ds,Ps) :-
-    lists:member(Ix=Val,Ps), !,
-    (   var(Val)
-    ->  Val = s(Cat,Ds),
-	Out = i(Ix,Cat),
-	Ds0 = Ds
-    ;   Val = s(Cat,Ds0),
-	Out = i(Ix),
-	Ds = []
-    ).
-    
-collapse_one(i(Ix),[],Out,Ds,Ps) :-
-    lists:member(Ix=Val,Ps), !,
-    (   var(Val)
-    ->  Val = s(Cat,Ds),
-	Out = i(Ix,Cat)
-    ;   Val = s(Cat,_),
-	Out = i(Ix),
-	Ds = []
-    ).
-    
-collapse_one(p(Cat),Ds,p(Cat),Ds,_).
-collapse_one(adt_lex(A,B,C,D,E),[],adt_lex(A,B,C,D,E),[],_).
-
-	  
 %% replace element by two elements
 select_replace([H|T],H,X1,X2,[X1,X2|T]).
 select_replace([H|T],D,X1,X2,[H|NT]) :-
@@ -140,12 +106,13 @@ select_replace([H|T],D,X1,X2,[H|NT]) :-
 %% smain and smain ==> smain. smain.
 split_transformation(tree(r('--',p(conj)),Ds0),X1,X2) :-
     D1 = tree(r(crd,adt_lex(_,en,_,_,_)),[]),
-    D2 = tree(r(cnj,P1),L1),
+    D2 = tree(r(cnj,p(P1)),L1),
     D3 = tree(r(cnj,P2),L2),
     lists:select(D1,Ds0,Ds1),
+    lists:member(P1,[smain,sv1,whq]),
     lists:select(D2,Ds1,Ds2),
     lists:select(D3,Ds2,[]),
-    X1 = tree(r(top,p(top)),[tree(r('--',P1),L1)]),
+    X1 = tree(r(top,p(top)),[tree(r('--',p(P1)),L1)]),
     X2 = tree(r(top,p(top)),[tree(r('--',P2),L2)]).
 
 %% SU [rel die/dat Rest] VP  ==> SU VP. SU Rest.
