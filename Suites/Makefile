@@ -131,7 +131,7 @@ namedsentsfiles=cgn_exs.named_sents lassy.named_sents qa.named_sents
 ifeq "$(shell if [ -d Machine/ ]; then echo yes; fi)" "yes"
 include ../Makefile.include
 tt: $(namedsentsfiles) $(sentsfiles) 
-	awk -F\| '{ print $$2 }' $(namedsentsfiles) >> t.sents
+	awk -F\| '{ print $$2 }' $(namedsentsfiles) > tt.sents
 	cat $(sentsfiles) | grep -v -e '^[%]' -e '^--' >> tt.sents
 	cat tt.sents  | ./split_in_parts -p 500 -o tt
 	for file in tt_part*.sents.gz ; do if cmp -s $$file Machine/$$file; then true ; else cp -f $$file Machine/$$file; fi; done
