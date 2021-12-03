@@ -30,7 +30,7 @@ if __name__ == '__main__':
     for line in sys.stdin:
         lineParts = line.split('|')
 
-        if len(lineParts) != 7:
+        if len(lineParts) < 8:
             continue # Ignore
 
         lineId = lineParts[2]

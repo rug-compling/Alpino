@@ -104,3 +104,20 @@ install:
 %.po : %.pl
 	echo "compile('$*'), save_files('$*','$*')." | $(HDRUG) -notk
 
+
+grams.pl:
+	echo ":- module(alpino_grams,[])." > grams.pl
+	echo >> grams.pl
+	echo >> grams.pl
+	cat /dev/shm/unigrams | sed -e 's#/|\\#\t#g' | Alpino -notk -l index_lm >> grams.pl
+	cat /dev/shm/bigrams | sed -e 's#/|\\#\t#g' | Alpino -notk -l index_lm >> grams.pl
+	cat /dev/shm/trigrams | sed -e 's#/|\\#\t#g' | Alpino -notk -l index_lm >> grams.pl
+
+tags.pl:
+	echo ":- module(alpino_tags,[])." > tags.pl
+	echo >> tags.pl
+	echo >> tags.pl
+	cat /dev/shm/tag-unigrams | sed -e 's#/|\\#\t#g' | Alpino -notk -l index_lm >> tags.pl
+	cat /dev/shm/tag-bigrams | sed -e 's#/|\\#\t#g' | Alpino -notk -l index_lm >> tags.pl
+	cat /dev/shm/tag-trigrams | sed -e 's#/|\\#\t#g' | Alpino -notk -l index_lm >> tags.pl
+

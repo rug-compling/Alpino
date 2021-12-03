@@ -223,9 +223,10 @@ double fluency(vector<string> const &words, int unigramDict,
 
     p += p0;
 
-    // cerr << (iter-2) -> c_str() << " " << (iter-1) -> c_str() << " " << (iter-0) -> c_str() << " " << p3 << endl;
-    // cerr <<                               (iter-1) -> c_str() << " " << (iter-0) -> c_str() << " " << p2 << endl;
-    // cerr <<                                                             (iter-0) -> c_str() << " " << p1 << endl;
+    // cerr << "trigram: " << p3 << " " << (iter-2) -> c_str() << " " << (iter-1) -> c_str() << " " << iter -> c_str() << endl;
+    // cerr << "bigram:  " << p2 << " " << (iter-1) -> c_str() << " " << iter -> c_str() << endl;
+    // cerr << "unigram: " << p1 << " " << iter -> c_str() << endl;
+
     // cerr << "logadd: " << p0 << endl;
 
   }

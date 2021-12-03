@@ -172,7 +172,7 @@ void printNgrams(ostream &out, size_t n, NgramProbs const &ngramProbs)
       continue;
 
     copy(iter->first.begin(), iter->first.end(),
-	 ostream_iterator<string>(out, "/|\\"));
+	 ostream_iterator<string>(out, "	"));
     out << iter->second << endl;
   }
 }
