@@ -393,7 +393,7 @@ er(adv,noun,advp,np,nergens,niets,nergens,niets,[],[rnum=sg]).
 er(adv,noun,advp,np,ergens,iets,ergens,iets,[],[rnum=sg]).
 
 remove_er(List0,List) :-
-    Er = tree(r(mod,adt_lex(_,er,er,adv,[])),[]),
+    Er = tree(r(mod,adt_lex(_,er,er,adv,_)),[]),
     lists:select(Er,List0,List).
 remove_er(List,List).
 
@@ -416,11 +416,13 @@ verb_allows_passive(_,_,_,_).
 verb_disallows_passive(bedek,ben,_,not_door).
 verb_disallows_passive(beken,_,_,_).
 verb_disallows_passive(bevriend,_,_,_).
+verb_disallows_passive(breek_aan,ben,_,not_door).  % het moment is aangebroken =/= men breekt het moment aan
 verb_disallows_passive(geboren,_,_,_).
 verb_disallows_passive(interesseer,ben,_,not_door).
 verb_disallows_passive(hecht,ben,_,not_door).
 verb_disallows_passive(open,ben,_,not_door).
 verb_disallows_passive(ontwikkel,ben,_,not_door).
+verb_disallows_passive(overtuig,ben,_,not_door).
 verb_disallows_passive(relateer,ben,_,not_door).
 verb_disallows_passive(sluit,ben,_,not_door).
 verb_disallows_passive(vestig,ben,_,not_door).

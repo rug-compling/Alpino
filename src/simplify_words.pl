@@ -20,25 +20,30 @@ words_transformation(r(Rel,VAR),A,r(Rel2,i(X,Cat2)),C) :-
     words_transformation(r(Rel,Cat),A,r(Rel2,Cat2),C).
 
 words_transformation(r(Rel,p(Cat0)),Ds0,r(Rel,p(Cat)),[Hd|Ds]) :-
-    Hd0 = tree(r(HD,adt_lex(Cat0,Old,Old,D,E)),[]),
+    Hd0 = tree(r(HD,adt_lex(Cat0,Old,Old,D,E0)),[]),
     Hd  = tree(r(HD,adt_lex(Cat,New,New,D,E)),[]),
     head_rel(HD),
     lists:select(Hd0,Ds0,Ds),
-    simplify(Old,New,Cat0,Cat,D).
+    simplify(Old,New,Cat0,Cat,D,E0,E).
 
 words_transformation(r(Rel,p(mwu(_,_))),Ds,
-		     r(Rel,adt_lex(Cat,Lem,Lem,Pos,[])),[]):-
+		     r(Rel,adt_lex(Cat,Lem,Lem,Pos,Atts)),[]):-
     mwu(Ds,Words),
-    simplify_mwu(Words,Lem,Pos,Cat).
+    simplify_mwu(Words,Lem,Pos,Cat,Atts).
 
 words_transformation(r(Rel,adt_lex(_,Lem,Lem,_,_)),[],
 		     r(Rel,Cat),Ds):-
     lemma_to_tree(Lem,Cat,Ds).
 
-words_transformation(r(Rel,adt_lex(Cat0,Old,Old,D,E)),[],
+words_transformation(r(Rel,adt_lex(Cat0,Old,Old,D,E0)),[],
 		     r(Rel,adt_lex(Cat,New,New,D,E)),[]) :-
     \+ Rel = mwp,
-    simplify(Old,New,Cat0,Cat,D).
+    simplify(Old,New,Cat0,Cat,D,E0,E).
+
+words_transformation(r(Rel,Cat),Ds0,r(Rel,Cat),Ds) :-
+    pattern_rule(Left,Right),
+    match_left_pattern(Left,Ds0,Ds1),
+    add_right_pattern(Right,Ds1,Ds).
 
 head_rel(hd).
 head_rel(cmp).
@@ -47,19 +52,67 @@ mwu([],[]).
 mwu([tree(r(mwp,adt_lex(_,W,_,_,_)),[])|Trees],[W|Ws]) :-
     mwu(Trees,Ws).
 
+%%%
+
+
+pattern_rule([hd=l(sta,Pos,Atts),
+	      vc=dt(ti,[cmp=l(te,_,_),
+			body=VC]),
+	      svp=mwu([op,het,punt])],
+	     [hd=l(ga,Pos,Atts),
+	      vc=VC]).
+
+match_left_pattern([],Ds,Ds).
+match_left_pattern([Pat|Pats],Ds0,Ds) :-
+    match_left_pattern_tree(Pat,Ds0,Ds1),
+    match_left_pattern(Pats,Ds1,Ds).
+
+match_left_pattern_tree(Rel=Node,Ds0,Ds) :-
+    lists:select(tree(r(Rel,NodeCat),NodeDs),Ds0,Ds),
+    match_left_pattern_node(Node,NodeCat,NodeDs).
+
+match_left_pattern_node(Var,Cat,Ds):-
+    var(Var),
+    !,
+    Var = Cat/Ds.
+match_left_pattern_node(dt(Cat,Pattern),p(Cat),Ds) :-
+    match_left_pattern(Pattern,Ds,[]).
+    
+match_left_pattern_node(l(Lem,Pos,Atts),adt_lex(_,Lem,_,Pos,Atts),[]).
+match_left_pattern_node(mwu(List),p(mwu(_,_)),Ds) :-
+    mwu(Ds,List).
+
+add_right_pattern([],Ds,Ds).
+add_right_pattern([H|T],Ds0,Ds) :-
+    add_right_pattern_tree(H,Ds0,Ds1),
+    add_right_pattern(T,Ds1,Ds).
+
+add_right_pattern_tree(Rel=Node,Ds,[tree(r(Rel,NewNode),NewDs)|Ds]) :-
+    add_right_pattern_node(Node,NewNode,NewDs).
+
+add_right_pattern_node(Cat/Ds,Cat,Ds).
+add_right_pattern_node(l(Lem,Pos,Atts),adt_lex(_,Lem,_,Pos,Atts),[]).
+
+
 %% must replace something...
 replace(El0,El,[El0|Tail],[El|Tail]).
 replace(El0,El,[X|Tail0],[X|Tail]):-
     replace(El0,El,Tail0,Tail).
 
-simplify_mwu([a,posterio],achteraf,adv,advp).
-simplify_mwu([a,posteriori],achteraf,adv,advp).
-simplify_mwu([a,priori],vooraf,adv,advp).
-simplify_mwu([ad,hoc],{[direct,tijdelijk]},adj,ap).
-simplify_mwu([aan,de,hand,van],{[met,door]},prep,pp).
-simplify_mwu([acquis,communautaire],gemeenschap_recht,noun,np).
-simplify_mwu([als,gevolg,van],door,prep,pp).
-simplify_mwu([ten,volle],helemaal,adv,advp).
+simplify_mwu([a,posterio],achteraf,adv,advp,[]).
+simplify_mwu([a,posteriori],achteraf,adv,advp,[]).
+simplify_mwu([a,priori],vooraf,adv,advp,[]).
+simplify_mwu([ad,hoc],{[direct,tijdelijk]},adj,ap,[]).
+simplify_mwu([aan,de,hand,van],{[met,door]},prep,pp,[]).
+simplify_mwu([acquis,communautaire],gemeenschap_recht,noun,np,[]).
+simplify_mwu([als,gevolg,van],door,prep,pp,[]).
+simplify_mwu([te,allen,tijde],altijd,adv,advp,[]).
+simplify_mwu([te,zijner,tijd],laat,adj,ap,[aform=compar]).
+simplify_mwu([ten,behoeve,van],voor,prep,pp,[]).
+simplify_mwu([ten,dele],gedeeltelijk,adj,ap,[]).
+simplify_mwu([ten,gevolge,van],door,prep,pp,[]).
+simplify_mwu([ten,tijde,van],tijdens,prep,pp,[]).
+simplify_mwu([ten,volle],helemaal,adv,advp,[]).
 
 lemma_to_tree(abusievelijk, p(pp),
 	      [tree(r(hd,adt_lex(pp,per,per,prep,[])),[]),
@@ -84,206 +137,260 @@ stree_ds([Rel=Stree|StreeDs],[tree(r(Rel,Cat),N)|Ds]):-
 
 lemma_to_stree(anderzijds,p(pp),[hd=aan,obj1=np(det=de,mod=ander,hd=kant)]).
 
-simplify(aandachtig,goed,Cat,Cat,_).
-simplify(aangaande,over,Cat,Cat,_).
-simplify(aangezien,omdat,Cat,Cat,_).
-simplify(aanmerkelijk,groot,Cat,Cat,_).
-simplify(aanstonds,zo,Cat,Cat,_).
-simplify(aanvang,begin,Cat,Cat,_).
-simplify(aanvankelijk,{[eerst,eerder]},Cat,Cat,_).
-simplify(aanzienlijk,groot,Cat,Cat,_).
-simplify(abuis,fout,Cat,Cat,_).
-simplify(acceptatie,goedkeuring,Cat,Cat,_).
-simplify(accomodatie,{[gebouw,locatie]},Cat,Cat,_).
-simplify(accordeer,keur_goed,Cat,Cat,_).
-simplify(acht,vind,Cat,Cat,_).
-simplify(actualiseer,{[pas_aan,moderniseer,werk_bij]},Cat,Cat,_).
-simplify(acuut,direct,Cat,Cat,_).
-simplify(additioneel,voeg_toe,ap,ppart,_).
-simplify(adequaat,juist,Cat,Cat,_).
-simplify(adhesie,steun,Cat,Cat,_).
-simplify(adstrueer,leg_uit,Cat,Cat,_).
-simplify(affirmatief,bevestig,ap,ppres,_).
-simplify(ageer,treed_op,Cat,Cat,_).
-simplify(aldaar,daar,Cat,Cat,_).
-simplify(aldus,{[zo,volgens]},Cat,Cat,_).
-simplify(alloceer,wijs_toe,Cat,Cat,_).
-simplify(alom,overal,Cat,Cat,_).
-simplify(alvorens,voordat,Cat,Cat,_).
-simplify(ambivalent,dubbel,Cat,Cat,_).
-simplify(amendement,wijziging,Cat,Cat,_).
-simplify(amotie,sloop,Cat,Cat,_).
-simplify(amoveer,sloop,Cat,Cat,_).
-simplify(ampel,uitvoerig,Cat,Cat,_).
-simplify(andermaal,weer,Cat,Cat,_).
-simplify(anderszins,anders,Cat,Cat,_).
-simplify(annonce,aankondiging,Cat,Cat,_).
-simplify(apocrief,twijfelachtig,Cat,Cat,_).
-simplify(archaïsch,ouderwets,Cat,Cat,_).
-simplify(authentiek,echt,Cat,Cat,_).
-simplify(autonoom,zelfstandig,Cat,Cat,_).
-simplify(behels,houd_in,Cat,Cat,_).
-simplify(behoedzaam,voorzichtig,Cat,Cat,_).
-simplify(bemachtig,krijg,Cat,Cat,_).
-simplify(bemiddeling_procedure,procedure,Cat,Cat,_).
-simplify(bijgevolg,daarom,Cat,Cat,_).
-simplify(blijkens,volgens,Cat,Cat,_).
-simplify(bonafide,betrouwbaar,Cat,Cat,_).	% oh brother where art thou
-simplify(catastrofe,ramp,Cat,Cat,_).
-simplify(cineast,filmmaker,Cat,Cat,_).
-simplify(coherentie,samenhang,Cat,Cat,_).
-simplify(communiceer,praat,Cat,Cat,_).
-simplify(compliceren,moeilijk,ppart,ap,adj).
-simplify(confirmeer,bevestig,Cat,Cat,_).
-simplify(conform,volgens,Cat,Cat,_).
-simplify(constructief,bruikbaar,Cat,Cat,_).
-simplify(consulteer,raadpleeg,Cat,Cat,_).
-simplify(continueer,zet_voort,Cat,Cat,_).
-simplify(continuïteit,voortgang,Cat,Cat,_).
-simplify(continu,steeds,Cat,Cat,_).
-simplify(controversieel,omstreden,Cat,Cat,_).
-simplify(convenant,overeenkomst,Cat,Cat,_).
-simplify(coördinatie,afstemming,Cat,Cat,_).
-simplify(cruciaal,belangrijk,Cat,Cat,_).
-simplify(cultus,verering,Cat,Cat,_).
-simplify(daadwerkelijk,echt,Cat,Cat,_).
-simplify(daar,omdat,Cat,Cat,comp).
-simplify(dat,{[die,dat]},Cat,Cat,_).
-simplify(decadent,smakeloos,Cat,Cat,_).
-simplify(declameer,draag_voor,Cat,Cat,_).
-simplify(de,{[de,het]},Cat,Cat,_).
-simplify(deel_mede,zeg,Cat,Cat,_).
-simplify(delicaat,gevoelig,Cat,Cat,_).
-simplify(derving,verlies,Cat,Cat,_).
-simplify(deze,{[deze,dit]},Cat,Cat,_).
-simplify(die,{[die,dat]},Cat,Cat,_).
-simplify(diffuus,onduidelijk,Cat,Cat,_).
-simplify(discrepantie,verschil,Cat,Cat,_).
-simplify(discutabel,twijfelachtig,Cat,Cat,_).
-simplify(dissertatie,proefschrift,Cat,Cat,_).
-simplify(dit,{[deze,dit]},Cat,Cat,_).
-simplify(dogmatisch,star,Cat,Cat,_).
-simplify(dominant,overheers,Cat,Cat,_).
-simplify(donatie,schenking,Cat,Cat,_).
-simplify(doneer,schenk,Cat,Cat,_).
-simplify(doorgaans,meestal,Cat,Cat,_).
-simplify(dotatie,schenking,Cat,Cat,_).
-simplify(draconisch,streng,Cat,Cat,_).
-simplify(dubieus,twijfelachtig,Cat,Cat,_).
-simplify(dupeer,benadeel,Cat,Cat,_).
-simplify(eenvoudig,simpel,Cat,Cat,_).
-simplify(eminent,munt_uit,Cat,Cat,_).
-simplify(enerverend,spannend,Cat,Cat,_).
-simplify(enigma,raadsel,Cat,Cat,_).
-simplify(epiloog,slotwoord,Cat,Cat,_).
-simplify(etisch,moreel,Cat,Cat,_).
-simplify(evident,duidelijk,Cat,Cat,_).
-simplify(excessief,overdreven,Cat,Cat,_).
-simplify(exercitie,oefening,Cat,Cat,_).
-simplify(exhaustief,compleet,Cat,Cat,_).
-simplify(exorbitant,overdreven,Cat,Cat,_).
-simplify(expertise,kennis,Cat,Cat,_).
-simplify(explicatie,uitleg,Cat,Cat,_).
-simplify(exporteer,voer_uit,Cat,Cat,_).
-simplify(fair,eerlijk,Cat,Cat,_).
-simplify(falsificatie,vervalsing,Cat,Cat,_).
-simplify(filantroop,weldoener,Cat,Cat,_).
-simplify(florissant,gunstig,Cat,Cat,_).
-simplify(frictie,wrijving,Cat,Cat,_).
-simplify(furieus,boos,Cat,Cat,_).
-simplify(futiliteit,kleinigheid,Cat,Cat,_).
-simplify(geenszins,niet,Cat,Cat,_).
-simplify(gepikeerd,boos,Cat,Cat,_).
-simplify(gering,klein,Cat,Cat,_).
-simplify(governance,bestuur,Cat,Cat,_).
-simplify(gracieus,elegant,Cat,Cat,_).
-simplify(hectiek,drukte,Cat,Cat,_).
-simplify(hectisch,druk,Cat,Cat,_).
-simplify(hermetisch,helemaal,Cat,Cat,_).
-simplify(het,{[de,het]},Cat,Cat,_).
-simplify(heterogeen,mengen,ap,ppart,_).
-simplify(hiërarchie,rangorde,Cat,Cat,_).
-simplify(hypothese,aanname,Cat,Cat,_).
-simplify(immer,altijd,Cat,Cat,_).
-simplify(implementeer,voer_in,Cat,Cat,_).
-simplify(implicatie,gevolg,Cat,Cat,_).
-simplify(importantie,belang,Cat,Cat,_).
-simplify(importeer,voer_in,Cat,Cat,_).
-simplify(incidenteel,eenmalig,Cat,Cat,_).
-simplify(incrimineer,beschuldig,Cat,Cat,_).
-simplify(indicatie,aanwijzing,Cat,Cat,_).
-simplify(initieel,één,ap,ap,adj).
-simplify(insinueer,suggereer,Cat,Cat,_).
-simplify(integraal,volledig,Cat,Cat,_).
-simplify(intensief,grondig,Cat,Cat,_).
-simplify(intensiveer,versterk,Cat,Cat,_).
-simplify(intensivering,verdieping,Cat,Cat,_).
-simplify(introvert,verlegen,Cat,Cat,_).
-simplify(inzake,over,Cat,Cat,_).
-simplify(laveloos,dronken,Cat,Cat,_).
-simplify(legitiem,wettig,Cat,Cat,_).
-simplify(linguïstiek,taalkunde,Cat,Cat,_).
-simplify(linguïstisch,taalkundig,Cat,Cat,_).
-simplify(linguïst,taalkundige,Cat,Cat,_).
-simplify(louter,alleen,Cat,Cat,_).
-simplify(ludiek,speels,Cat,Cat,_).
-simplify(marginaal,klein,Cat,Cat,_).
-simplify(minutieus,precies,Cat,Cat,_).
-simplify(mitigeer,zwak_af,Cat,Cat,_).
-simplify(moedwillig,expres,Cat,Cat,_).
-simplify(momenteel,nu,Cat,Cat,_).
-simplify(notificatie,melding,Cat,Cat,_).
-simplify(omineus,onheilspellend,Cat,Cat,_).
-simplify(onberispelijk,keurig,Cat,Cat,_).
-simplify(ontbeer,mis,Cat,Cat,_).
-simplify(ontdaan,overstuur,Cat,Cat,_).
-simplify(opgetogen,blij,Cat,Cat,_).
-simplify(optimaliseer,verbeter,Cat,Cat,_).
-simplify(participatie,deelname,Cat,Cat,_).
-simplify(pendule,klok,Cat,Cat,_).
-simplify(percipieer,neem_waar,Cat,Cat,_).
-simplify(perspectief,zicht,Cat,Cat,_).
-simplify(pertinent,echt,Cat,Cat,_).
-simplify(plausibel,redelijk,Cat,Cat,_).
-simplify(potentieel,mogelijk,Cat,Cat,adj).
-simplify(potentieel,mogelijkheid,Cat,Cat,noun).
-simplify(prioritair,belangrijk,Cat,Cat,_).
-simplify(prioriteit,kern_punt,Cat,Cat,_).
-simplify(prolongatie,verlenging,Cat,Cat,_).
-simplify(quarantaine,afzondering,Cat,Cat,_).
-simplify(recapituleer,vat_samen,Cat,Cat,_).
-simplify(reduceer,verminder,Cat,Cat,_).
-simplify(reductie,beperking,Cat,Cat,_).
-simplify(relevant,belangrijk,Cat,Cat,_).
-simplify(reprimande,waarschuwing,Cat,Cat,_).
-simplify(ressentiment,wrok,Cat,Cat,_).
-simplify(ridicuul,belachelijk,Cat,Cat,_).
-simplify(robuust,stevig,Cat,Cat,_).
-simplify(secularisatie,ontkerkelijking,Cat,Cat,_).
-simplify(secuur,precies,Cat,Cat,_).
-simplify(sereen,vredig,Cat,Cat,_).
-simplify(sommeer,beveel,Cat,Cat,_).
-simplify(speculaar,gok,Cat,Cat,_).
-simplify(sporadisch,soms,Cat,Cat,_).
-simplify(staatshoofd,koning,Cat,Cat,_).
-simplify(stagnatie,stilstand,Cat,Cat,_).
-simplify(stoïcijns,onverstoorbaar,Cat,Cat,_).
-simplify(stuur_aan,{[leid,stuur]},Cat,Cat,_).
-simplify(substantieel,flink,Cat,Cat,_).
-simplify(substituut,vervanging,Cat,Cat,_).
-simplify(teneinde,om,cp,oti,_).
-simplify(tenuitvoerlegging,uitvoering,Cat,Cat,_).
-simplify(tevens,ook,Cat,Cat,_).
-simplify(transparantie,duidelijkheid,Cat,Cat,_).
-simplify(tref_aan,vind,Cat,Cat,_).
-simplify(triviaal,gewoon,Cat,Cat,_).
-simplify(uiterst,heel,Cat,Cat,_).
-simplify(uitfasering,stop,Cat,Cat,_).
-simplify('up-to-date',actueel,Cat,Cat,_).
-simplify(verifieer,controleer,Cat,Cat,_).
-simplify(verklaar,zeg,Cat,Cat,_).
-simplify(voorts,ook,Cat,Cat,_).
-simplify(wederrechtelijk,onwettig,Cat,Cat,_).
-simplify(weifel,aarzel,Cat,Cat,_).
-simplify(wend_aan,gebruik,Cat,Cat,_).
-simplify(wetgeving_resolutie,resolutie,Cat,Cat,_).
+simplify(aandachtig,goed,Cat,Cat,_,E,E).
+simplify(aangaande,over,Cat,Cat,_,E,E).
+simplify(aangezien,omdat,Cat,Cat,_,E,E).
+simplify(aanmerkelijk,groot,Cat,Cat,_,E,E).
+simplify(aanstonds,zo,Cat,Cat,_,E,E).
+simplify(aanvang,begin,Cat,Cat,_,E,E).
+%%simplify(aanvankelijk,{[eerst,eerder]},Cat,Cat,_,E,E).   %TODO para Aanvankelijk een overeenkomst voor drie jaar en vervolgens om de twee jaar verlengde overeenkomsten .
+simplify(aanzienlijk,groot,Cat,Cat,_,E,E).
+simplify(abuis,fout,Cat,Cat,_,E,E).
+simplify(acceptatie,goedkeuring,Cat,Cat,_,E,E).
+simplify(accomodatie,{[gebouw,locatie]},Cat,Cat,_,E,E).
+simplify(accordeer,keur_goed,Cat,Cat,_,E,E).
+simplify(acht,vind,Cat,Cat,_,E,E).
+simplify(actualiseer,{[pas_aan,moderniseer,werk_bij]},Cat,Cat,_,E,E).
+simplify(acuut,direct,Cat,Cat,_,E,E).
+simplify(additioneel,voeg_toe,ap,ppart,_,E,E).
+simplify(adequaat,juist,Cat,Cat,_,E,E).
+simplify(adhesie,steun,Cat,Cat,_,E,E).
+simplify(adstrueer,leg_uit,Cat,Cat,_,E,E).
+simplify(affirmatief,bevestig,ap,ppres,_,E,E).
+simplify(ageer,treed_op,Cat,Cat,_,E,E).
+simplify(aldaar,daar,Cat,Cat,_,E,E).
+simplify(aldus,{[zo,volgens]},Cat,Cat,_,E,E).
+simplify(alloceer,wijs_toe,Cat,Cat,_,E,E).
+simplify(alom,overal,Cat,Cat,_,E,E).
+simplify(alvorens,voordat,Cat,Cat,_,E,E).
+simplify(ambivalent,dubbel,Cat,Cat,_,E,E).
+simplify(amendement,wijziging,Cat,Cat,_,E,E).
+simplify(amotie,sloop,Cat,Cat,_,E,E).
+simplify(amoveer,sloop,Cat,Cat,_,E,E).
+simplify(ampel,uitvoerig,Cat,Cat,_,E,E).
+simplify(andermaal,weer,Cat,Cat,_,E,E).
+simplify(anderszins,anders,Cat,Cat,_,E,E).
+simplify(annonce,aankondiging,Cat,Cat,_,E,E).
+simplify(apocrief,twijfelachtig,Cat,Cat,_,E,E).
+simplify(archaïsch,ouderwets,Cat,Cat,_,E,E).
+simplify(authentiek,echt,Cat,Cat,_,E,E).
+simplify(autonoom,zelfstandig,Cat,Cat,_,E,E).
+simplify(behels,houd_in,Cat,Cat,_,E,E).
+simplify(behoedzaam,voorzichtig,Cat,Cat,_,E,E).
+simplify(bemachtig,krijg,Cat,Cat,_,E,E).
+simplify(bemiddeling_procedure,procedure,Cat,Cat,_,E,E).
+simplify(bijgevolg,daarom,Cat,Cat,_,E,E).
+simplify(blijkens,volgens,Cat,Cat,_,E,E).
+simplify(bonafide,betrouwbaar,Cat,Cat,_,E,E).	% oh brother where art thou
+simplify(catastrofe,ramp,Cat,Cat,_,E,E).
+simplify(cineast,filmmaker,Cat,Cat,_,E,E).
+simplify(coherentie,samenhang,Cat,Cat,_,E,E).
+simplify(communiceer,praat,Cat,Cat,_,E,E).
+simplify(compliceren,moeilijk,ppart,ap,adj,E,E).
+simplify(confirmeer,bevestig,Cat,Cat,_,E,E).
+simplify(conform,volgens,Cat,Cat,_,E,E).
+simplify(constructief,bruikbaar,Cat,Cat,_,E,E).
+simplify(consulteer,raadpleeg,Cat,Cat,_,E,E).
+simplify(continueer,zet_voort,Cat,Cat,_,E,E).
+simplify(continuïteit,voortgang,Cat,Cat,_,E,E).
+simplify(continu,steeds,Cat,Cat,_,E,E).
+simplify(controversieel,omstreden,Cat,Cat,_,E,E).
+simplify(convenant,overeenkomst,Cat,Cat,_,E,E).
+simplify(coördinatie,afstemming,Cat,Cat,_,E,E).
+simplify(cruciaal,belangrijk,Cat,Cat,_,E,E).
+simplify(cultus,verering,Cat,Cat,_,E,E).
+simplify(daadwerkelijk,echt,Cat,Cat,_,E,E).
+simplify(daar,omdat,Cat,Cat,comp,E,E).
+simplify(dat,{[die,dat]},detp,detp,det,E,E).
+simplify(decadent,smakeloos,Cat,Cat,_,E,E).
+simplify(declameer,draag_voor,Cat,Cat,_,E,E).
+simplify(de,{[de,het]},detp,detp,det,E,E).
+simplify(deel_mede,zeg,Cat,Cat,_,E,E).
+simplify(delicaat,gevoelig,Cat,Cat,_,E,E).
+simplify(derving,verlies,Cat,Cat,_,E,E).
+simplify(deze,{[deze,dit]},detp,detp,det,E,E).
+simplify(die,{[die,dat]},detp,detp,det,E,E).
+simplify(diffuus,onduidelijk,Cat,Cat,_,E,E).
+simplify(discrepantie,verschil,Cat,Cat,_,E,E).
+simplify(discutabel,twijfelachtig,Cat,Cat,_,E,E).
+simplify(dissertatie,proefschrift,Cat,Cat,_,E,E).
+simplify(dit,{[deze,dit]},Cat,Cat,_,E,E).
+simplify(dogmatisch,star,Cat,Cat,_,E,E).
+simplify(dominant,overheers,Cat,Cat,_,E,E).
+simplify(donatie,schenking,Cat,Cat,_,E,E).
+simplify(doneer,schenk,Cat,Cat,_,E,E).
+simplify(doorgaans,meestal,Cat,Cat,_,E,E).
+simplify(dotatie,schenking,Cat,Cat,_,E,E).
+simplify(draconisch,streng,Cat,Cat,_,E,E).
+simplify(dubieus,twijfelachtig,Cat,Cat,_,E,E).
+simplify(dupeer,benadeel,Cat,Cat,_,E,E).
+simplify(echter,maar,du,du,_,E,E).
+simplify(eenvoudig,simpel,Cat,Cat,_,E,E).
+simplify(eminent,munt_uit,Cat,Cat,_,E,E).
+simplify(enerverend,spannend,Cat,Cat,_,E,E).
+simplify(enigma,raadsel,Cat,Cat,_,E,E).
+simplify(epiloog,slotwoord,Cat,Cat,_,E,E).
+simplify(etisch,moreel,Cat,Cat,_,E,E).
+simplify(evident,duidelijk,Cat,Cat,_,E,E).
+simplify(excessief,overdreven,Cat,Cat,_,E,E).
+simplify(exercitie,oefening,Cat,Cat,_,E,E).
+simplify(exhaustief,compleet,Cat,Cat,_,E,E).
+simplify(exorbitant,overdreven,Cat,Cat,_,E,E).
+simplify(expertise,kennis,Cat,Cat,_,E,E).
+simplify(explicatie,uitleg,Cat,Cat,_,E,E).
+simplify(exploitatie,gebruik,Cat,Cat,_,E,E).
+simplify(exporteer,voer_uit,Cat,Cat,_,E,E).
+simplify(fair,eerlijk,Cat,Cat,_,E,E).
+simplify(falsificatie,vervalsing,Cat,Cat,_,E,E).
+simplify(fiatteer,keur_goed,Cat,Cat,_,E,E).
+simplify(filantroop,weldoener,Cat,Cat,_,E,E).
+simplify(florissant,gunstig,Cat,Cat,_,E,E).
+simplify(fluctueer,schommel,Cat,Cat,_,E,E).
+simplify(frictie,wrijving,Cat,Cat,_,E,E).
+simplify(furieus,boos,Cat,Cat,_,E,E).
+simplify(futiliteit,kleinigheid,Cat,Cat,_,E,E).
+simplify(gaarne,graag,Cat,Cat,_,E,E).
+simplify(geenszins,niet,Cat,Cat,_,E,E).
+simplify(gedurende,tijdens,Cat,Cat,_,E,E).
+simplify(gemeenzaam,alledaags,Cat,Cat,_,E,E).
+simplify(gepikeerd,boos,Cat,Cat,_,E,E).
+simplify(gering,klein,Cat,Cat,_,E,E).
+simplify(geschil,ruzie,Cat,Cat,_,E,E).
+simplify(governance,bestuur,Cat,Cat,_,E,E).
+simplify(gracieus,elegant,Cat,Cat,_,E,E).
+simplify(hectiek,drukte,Cat,Cat,_,E,E).
+simplify(hectisch,druk,Cat,Cat,_,E,E).
+simplify(heden,nu,advp,advp,_,E,E).
+simplify(hermetisch,helemaal,Cat,Cat,_,E,E).
+simplify(het,{[de,het]},detp,detp,det,E,E).
+simplify(heterogeen,mengen,ap,ppart,_,E,E).
+simplify(hiërarchie,rangorde,Cat,Cat,_,E,E).
+simplify(hypothese,aanname,Cat,Cat,_,E,E).
+simplify(immer,altijd,Cat,Cat,_,E,E).
+simplify(implementeer,voer_in,Cat,Cat,_,E,E).
+simplify(impliceer,beteken,Cat,Cat,_,E,E).
+simplify(implicatie,gevolg,Cat,Cat,_,E,E).
+simplify(importantie,belang,Cat,Cat,_,E,E).
+simplify(importeer,voer_in,Cat,Cat,_,E,E).
+simplify(incidenteel,eenmalig,Cat,Cat,_,E,E).
+simplify(incrimineer,beschuldig,Cat,Cat,_,E,E).
+simplify(indicatie,aanwijzing,Cat,Cat,_,E,E).
+simplify(initieel,één,ap,ap,adj,E,E).
+simplify(initieer,begin,Cat,Cat,_,E,E).
+simplify(insinueer,suggereer,Cat,Cat,_,E,E).
+simplify(integraal,volledig,Cat,Cat,_,E,E).
+simplify(intensief,grondig,Cat,Cat,_,E,E).
+simplify(intensiveer,versterk,Cat,Cat,_,E,E).
+simplify(intensivering,verdieping,Cat,Cat,_,E,E).
+simplify(introvert,verlegen,Cat,Cat,_,E,E).
+simplify(inzake,over,Cat,Cat,_,E,E).
+simplify(laveloos,dronken,Cat,Cat,_,E,E).
+simplify(legitiem,wettig,Cat,Cat,_,E,E).
+simplify(linguïstiek,taalkunde,Cat,Cat,_,E,E).
+simplify(linguïstisch,taalkundig,Cat,Cat,_,E,E).
+simplify(linguïst,taalkundige,Cat,Cat,_,E,E).
+simplify(louter,alleen,Cat,Cat,_,E,E).
+simplify(ludiek,speels,Cat,Cat,_,E,E).
+simplify(marginaal,klein,Cat,Cat,_,E,E).
+simplify(minutieus,precies,Cat,Cat,_,E,E).
+simplify(mitigeer,zwak_af,Cat,Cat,_,E,E).
+simplify(moedwillig,expres,Cat,Cat,_,E,E).
+simplify(momenteel,nu,Cat,Cat,_,E,E).
+simplify(mutatie,wijziging,Cat,Cat,_,E,E).
+simplify(nadien,daarna,Cat,Cat,_,E,E).
+simplify(nietemin,toch,Cat,Cat,_,E,E).
+simplify(nimmer,nooit,Cat,Cat,_,E,E).
+simplify(nochtans,toch,Cat,Cat,_,E,E).
+simplify(noodzakelijk,nodig,Cat,Cat,_,E,E).
+simplify(noop,dwing,Cat,Cat,_,E,E).
+simplify(notificatie,melding,Cat,Cat,_,E,E).
+simplify(omineus,onheilspellend,Cat,Cat,_,E,E).
+simplify(omtrent,over,Cat,Cat,_,E,E).
+simplify(onberispelijk,keurig,Cat,Cat,_,E,E).
+simplify(onjuist,fout,Cat,Cat,_,E,E).
+simplify(ontbeer,mis,Cat,Cat,_,E,E).
+simplify(ontdaan,overstuur,Cat,Cat,_,E,E).
+simplify(onverwijld,onmiddellijk,Cat,Cat,_,E,E).
+simplify(onvolkomenheid,fout,Cat,Cat,_,E,E).
+simplify(opgetogen,blij,Cat,Cat,_,E,E).
+simplify(opteer,kies,Cat,Cat,_,E,E).
+simplify(optimaliseer,verbeter,Cat,Cat,_,E,E).
+simplify(overeenkomstig,volgens,Cat,Cat,_,E,E).
+simplify(paraaf,handtekening,Cat,Cat,_,E,E).
+simplify(participatie,deelname,Cat,Cat,_,E,E).
+simplify(partieel,gedeeltelijk,Cat,Cat,_,E,E).
+simplify(pendule,klok,Cat,Cat,_,E,E).
+simplify(percipieer,neem_waar,Cat,Cat,_,E,E).
+simplify(perspectief,zicht,Cat,Cat,_,E,E).
+simplify(pertinent,echt,Cat,Cat,_,E,E).
+simplify(plausibel,redelijk,Cat,Cat,_,E,E).
+simplify(poog,probeer,Cat,Cat,_,E,E).
+simplify(potentieel,mogelijk,Cat,Cat,adj,E,E).
+simplify(potentieel,mogelijkheid,Cat,Cat,noun,E,E).
+simplify(prerogatief,voorrecht,Cat,Cat,_,E,E).
+simplify(prioritair,belangrijk,Cat,Cat,_,E,E).
+simplify(prioriteit,{[voorrang,kern_punt]},Cat,Cat,_,E,E).
+simplify(procedure,werkwijze,Cat,Cat,_,E,E).
+simplify(prolongatie,verlenging,Cat,Cat,_,E,E).
+simplify(prominent,belangrijk,Cat,Cat,_,E,E).
+simplify(quarantaine,afzondering,Cat,Cat,_,E,E).
+simplify(rationeel,verstandig,Cat,Cat,_,E,E).
+simplify(recapituleer,vat_samen,Cat,Cat,_,E,E).
+simplify(reduceer,verminder,Cat,Cat,_,E,E).
+simplify(reductie,beperking,Cat,Cat,_,E,E).
+simplify(refereer,verwijs,Cat,Cat,_,E,E).
+simplify(referentie,verwijzing,Cat,Cat,_,E,E).
+simplify(relevant,belangrijk,Cat,Cat,_,E,E).
+simplify(reprimande,waarschuwing,Cat,Cat,_,E,E).
+simplify(respons,antwoord,Cat,Cat,_,E,E).
+simplify(ressentiment,wrok,Cat,Cat,_,E,E).
+simplify(restrictie,beperking,Cat,Cat,_,E,E).
+simplify(resumé,samenvatting,Cat,Cat,_,E,E).
+simplify(resumeer,vat_samen,Cat,Cat,_,E,E).
+simplify(retourneer,stuur_terug,Cat,Cat,_,E,E).
+simplify(ridicuul,belachelijk,Cat,Cat,_,E,E).
+simplify(robuust,stevig,Cat,Cat,_,E,E).
+simplify(sanctie,maatregel,Cat,Cat,_,E,E).
+simplify(secularisatie,ontkerkelijking,Cat,Cat,_,E,E).
+simplify(secuur,precies,Cat,Cat,_,E,E).
+simplify(sedert,sinds,Cat,Cat,_,E,E).
+simplify(sereen,vredig,Cat,Cat,_,E,E).
+simplify(sommeer,beveel,Cat,Cat,_,E,E).
+simplify(speculaar,gok,Cat,Cat,_,E,E).
+simplify(sporadisch,soms,Cat,Cat,_,E,E).
+simplify(staatshoofd,koning,Cat,Cat,_,E,E).
+simplify(stagnatie,stilstand,Cat,Cat,_,E,E).
+simplify(stakeholder,betrekken,Cat,Cat,_,E,[personalized=true,aform=base|E]).
+simplify(start_op,begin,Cat,Cat,_,E,E).
+simplify(stoïcijns,onverstoorbaar,Cat,Cat,_,E,E).
+simplify(strategie,plan,Cat,Cat,_,E,E).
+simplify(stringent,streng,Cat,Cat,_,E,E).
+simplify(stuur_aan,{[leid,stuur]},Cat,Cat,_,E,E).
+simplify(substantieel,flink,Cat,Cat,_,E,E).
+simplify(substituut,vervanging,Cat,Cat,_,E,E).
+simplify(summier,kort,Cat,Cat,_,E,E).
+simplify(target,doel,Cat,Cat,_,E,E).
+simplify(taskforce,werk_groep,Cat,Cat,_,E,E).
+simplify(teneinde,om,cp,oti,_,E,E).
+simplify(tenuitvoerlegging,uitvoering,Cat,Cat,_,E,E).
+simplify(terstond,onmiddellijk,Cat,Cat,_,E,E).
+simplify(tevens,ook,Cat,Cat,_,E,E).
+simplify(transparantie,duidelijkheid,Cat,Cat,_,E,E).
+simplify(tref_aan,vind,Cat,Cat,_,E,E).
+simplify(triviaal,gewoon,Cat,Cat,_,E,E).
+simplify(uiterst,heel,Cat,Cat,_,E,E).
+simplify(uitfasering,stop,Cat,Cat,_,E,E).
+simplify(universeel,algemeen,Cat,Cat,_,E,E).
+simplify('up-to-date',actueel,Cat,Cat,_,E,E).
+simplify(urgent,dringend,Cat,Cat,_,E,E).
+simplify(urgentie,haast,Cat,Cat,_,E,E).
+simplify(vacant,vrij,Cat,Cat,_,E,E).
+simplify(verifieer,controleer,Cat,Cat,_,E,E).
+simplify(verklaar,zeg,Cat,Cat,_,E,E).
+simplify(volgaarne,graag,Cat,Cat,_,E,E).
+simplify(voorts,ook,Cat,Cat,_,E,E).
+simplify(vorder,eis,Cat,Cat,_,E,E).
+simplify(wederrechtelijk,onwettig,Cat,Cat,_,E,E).
+simplify(weifel,aarzel,Cat,Cat,_,E,E).
+simplify(wend_aan,gebruik,Cat,Cat,_,E,E).
+simplify(wetgeving_resolutie,resolutie,Cat,Cat,_,E,E).
