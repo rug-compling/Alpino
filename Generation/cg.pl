@@ -105,8 +105,9 @@ generate(o(Obj,Str,Sem0)) :-
     capitalize_first(Str0,Str1),
     add_punt_if_not(Str1,Str).
 
-generate_one(Obj,Sem,TopRobust) :-
-    debug_message(2,"generating for ~w~n",[Sem]),
+generate_one(Obj,Sem0,TopRobust) :-
+    debug_message(2,"generating for ~w~n",[Sem0]),
+    ensure_indices_ok(Sem0,Sem),
     hdrug_flag(use_fluency_model,UseFluency),
     prepare_adt_and_lex(Sem,Fs,BitcodeAll,TopRobust),
     count_edges(lex(_,_,_,_,_,_),Edges),
@@ -1389,3 +1390,117 @@ add1_last([],I0,I) :-
 add1_last([H|T],_,I) :-
     add1_last(T,H,I).
 
+
+%%% ensure there are no indexed nodes i(I,N)
+%%% for which there is no dependent node i(I)
+%%% also, ensure there are no indexed nodes i(I)
+%%% for which there are no i(I,N)
+%%% and make sure, the i(I,N) precedes I(I) 
+ensure_indices_ok(Sem0,Sem) :-
+    collapse_all(Sem0,Sem1,Ps0),
+    find_missing_ps(Ps0,Missing,[]),
+    all_ana_indices(Sem1,Ana,[]),
+    reconsider_indices(Sem1,Sem,Ana,Missing).
+
+all_ana_indices(tree(Node,Ds)) -->
+    all_ana_indices_node(Node),
+    all_ana_indices_ds(Ds).
+
+all_ana_indices_ds([]) --> [].
+all_ana_indices_ds([H|T]) -->
+    all_ana_indices(H),
+    all_ana_indices_ds(T).
+
+all_ana_indices_node(r(_,N)) -->
+    all_ana_indices_node(N).
+
+all_ana_indices_node(p(_)) --> [].
+all_ana_indices_node(adt_lex(_,_,_,_,_)) --> [].
+all_ana_indices_node(i(_,_)) --> [].
+all_ana_indices_node(i(I)) --> [I].
+
+reconsider_indices(tree(Node0,Ds0),tree(Node,Ds),Ind,Missing) :-
+    reconsider_indices_node(Node0,Node,Ind),
+    reconsider_indices_ds(Ds0,Ds,Ind,Missing).
+
+reconsider_indices_ds([],[],_,_).
+reconsider_indices_ds([H0|T0],T,Ind,Missing) :-
+    missing(H0,Missing),
+    !,
+    reconsider_indices_ds(T0,T,Ind,Missing).
+
+reconsider_indices_ds([H0|T0],[H|T],Ind,Missing) :-
+    reconsider_indices(H0,H,Ind,Missing),
+    reconsider_indices_ds(T0,T,Ind,Missing).
+
+reconsider_indices_node(r(Rel,Node0), r(Rel,Node), Ind) :-
+    reconsider_indices_node(Node0,Node, Ind).
+reconsider_indices_node(i(I),i(I),_).
+reconsider_indices_node(p(Cat),p(Cat),_).
+reconsider_indices_node(adt_lex(A,B,C,D,E),adt_lex(A,B,C,D,E),_).
+reconsider_indices_node(i(Ix,Node),Result,Ind) :-
+    (   lists:member(Ix,Ind)
+    ->  Result = i(Ix,Node)
+    ;   Result = Node
+    ).
+
+missing(tree(r(_,i(Ix)),[]),Missing):-
+    lists:member(Ix,Missing).
+missing(tree(r(_,i(Ix,_)),[]),Missing):-
+    lists:member(Ix,Missing).
+    
+
+collapse_all(tree(r(Rel,Cat0),Ds0), tree(r(Rel,Cat),Ds), Params) :-
+    collapse_one(Cat0,Ds0,Cat,Ds1,Params),
+    collapse_ds(Ds1,Ds,Params).
+
+collapse_ds(Var,Var2,_) :-
+    var(Var),
+    !,
+    Var = Var2.
+collapse_ds([],[],_).
+collapse_ds([H0|T0],[H|T],Ps) :-
+    collapse_all(H0,H,Ps),
+    collapse_ds(T0,T,Ps).
+
+collapse_one(i(Ix,Cat),Ds0,Out,Ds,Ps) :-
+    lists:member(Ix=Val,Ps), !,
+    (   var(Val)          % we see the index for the first time, put info on list
+    ->  Val = s(Cat,Ds),
+	Out = i(Ix,Cat),
+	Ds0 = Ds
+    ;		    % we saw the index before, now we know its content
+	collapse_ds(Ds0,Ds1,Ps),
+	Val = s(Cat,Ds1),
+	Out = i(Ix),
+	Ds = []
+    ).
+    
+collapse_one(i(Ix),[],Out,Ds,Ps) :-
+    lists:member(Ix=Val,Ps), !,
+    (   var(Val)          % we see the index for the first time
+    ->  Val = s(Cat,Ds),  % therefore its content should show up here
+	Out = i(Ix,Cat)
+    ;   Val = s(Cat,_),   % seen before, nothing changes
+	Out = i(Ix),
+	Ds = []
+    ).
+
+collapse_one(p(Cat),Ds,p(Cat),Ds,_).
+collapse_one(adt_lex(A,B,C,D,E),[],adt_lex(A,B,C,D,E),[],_).
+
+
+find_missing_ps(Var,Ps0,Ps) :-
+    var(Var), !,
+    Ps0 = Ps.
+find_missing_ps([],Ps,Ps).
+find_missing_ps([H|T],Ps0,Ps) :-
+    find_missing_p(H,Ps0,Ps1),
+    find_missing_ps(T,Ps1,Ps).
+
+find_missing_p(Ind=s(Var,Ds),Ps0,Ps) :-
+    (   var(Var)
+    ->  Ps0 = [Ind|Ps],
+	Var = none, Ds = []
+    ;   Ps0 = Ps
+    ).

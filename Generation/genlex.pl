@@ -41,12 +41,18 @@ create_lex(adt_lex(_,Root,Bc,Frames,Dt,SimpleDt),REL,[],Path) :-
 %% special case for "ik heb gegeten en gedronken"
 %% a head word that is co-indexed does not get unified
 %% with its DT...
+%%
+%% no. "ik heb gegeten en gedronken" works without this too.
+%% but "En tussendoor worden natuurlijk de verdachten verhoord en familieleden ondervraagd ."
+%% runs into an infinite loop
+/*
 create_lex_indexed(adt_lex(_,Root,Bc,Frames,_Dt,_SimpleDt),hd,[],Path) :-
     !,
     debug_message(2,"ps: co-indexed head spotted (~w); not unifying DT~n",[Root]),
     alpino_data:lexical(Hwrd,Root,_,_,_,_,_,Bc),
     alpino_data:dt(Dt,Hwrd,_,_,_),
     if(create_frames(Frames,Root,Bc,Dt,Dt,[hd|Path]),true,true).
+*/
 create_lex_indexed(Node,Rel,Ds,Path):-
     create_lex(Node,Rel,Ds,Path).
 
@@ -578,6 +584,7 @@ ignore_input_atts([H=V|T],Atts,Pos,Frame) :-
 ignore_input_att(H,_,_,Pos,Frame) :-
     ignore_input_att(H,Pos,Frame).
 
+ignore_input_att(tense,_,_).  % after paraphrasing un-passive "para er worden door schepen veel containers overboord gezet
 ignore_input_att(rnum,_,_).   % not really ignored, of course, but treated differently
 ignore_input_att(stype,_,_).  % not really ignored, of course, but treated differently
 ignore_input_att(lemma,_,_).
@@ -1466,6 +1473,11 @@ score_words([W|Ws],[F-W|Ws1]) :-
     alpino_ngram_lm:unigram_fluency([W],F),
     score_words(Ws,Ws1).
 
+unknown_root_heuristic(Pos,{RootList},Root,Atts,Pos,Surfs) :-
+    !,
+    lists:member(Root0,RootList),
+    unknown_root_heuristic(Pos,Root0,Root,Atts,Pos,Surfs).
+
 unknown_root_heuristic(noun,Root,_,Attr,noun(Gen,both,Num),Surfs) :-
     \+ sub_atom(Root,_,1,_,'_'),
     (   member(gen=Gen,Attr)
@@ -1589,6 +1601,12 @@ specific_frames(proper_name(both,Type),proper_name(sg,Type)).
 specific_frames(proper_name(both,Type),proper_name(pl,Type)).
 
 %% todo: adapt surface form for some inflectional variants
+
+last_resort_heuristic(Pos,{RootList},Root,Atts,Pos,Surfs) :-
+    !,
+    lists:member(Root0,RootList),
+    last_resort_heuristic(Pos,Root0,Root,Atts,Pos,Surfs).
+
 last_resort_heuristic(Pos,Root,_,Attr,Frame,Surfs):-
     last_resort_tag(Frame),
     alpino_postags:postag_of_frame(Frame,Pos,CheckAttr),
