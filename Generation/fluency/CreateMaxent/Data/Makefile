@@ -74,3 +74,6 @@ pu.gz: $(ugz)
 %.ugz: ../../../../Suites/U/%.pl
 	$(ALPINO) -flag suite $< -flag treebank ../../../../Treebank/WSU 2>$*.log | gzip > $*.ugz
 
+
+l: ~/l
+	$(ALPINO) -flag suite $< -flag treebank ../../../../Treebank/cdb  > l
