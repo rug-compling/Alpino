@@ -78,13 +78,16 @@ frames_features(Frames,P0,P) :-
 
 frame_feature(Frames,Pen) :-
     nv_member(frame(_P0,_P,Q0,Q,Stem,Frame,Surf,His),Frames),
+    debug_message(4,"frame features for frame ~w:~n",[Frame]),
     alpino_dt:somewhat_simplify_frame(Frame,Frame1),
     (   nonvar(Q),
 	nonvar(Q0)	% for generation these are not instantiated...
     ->  Len is Q - Q0
     ;   true
     ),
-    lexical_penalty_frame(His,Stem,Surf,Frame,Frame1,Len,Pen).
+    lexical_penalty_frame(His,Stem,Surf,Frame,Frame1,Len,Pen),
+    debug_message(4,"    ~w:~n",[Pen]).
+
 
 nv_member(El,List) :-
     nonvar(List),
