@@ -291,8 +291,8 @@ p_of_f(gen_determiner(Infl),det,[infl=Infl,special=gen]).
 p_of_f(tmp_determiner,det,[special=tmp]).
 p_of_f(num_predm_adverb,det,[special=num_predm]).
 
-p_of_f(number(hoofd(Infl)),num,[infl=Infl,special=hoofd]).
-p_of_f(number(rang),num,[special=rang]).
+p_of_f(number(hoofd(Infl)),num,[infl=Infl,numtype=hoofd]).
+p_of_f(number(rang),num,[numtype=rang]).
 p_of_f(num_na,num,[special=na]). % de drie na mooiste, only with_dt?
 p_of_f(wh_number(rang),num,[wh=wh,special=rang]).
 p_of_f(score_cat,num,[special=score]).
