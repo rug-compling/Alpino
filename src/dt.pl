@@ -1326,14 +1326,14 @@ somewhat_simplify_postags_of_relations([H0|T0],[H|T]) :-
 
 somewhat_simplify_postags_of_relation(deprel(Pa0:Ha,R,Pb0:Hb),
 				      deprel(Pa: Ha,R,Pb :Hb)) :-
-    somewhat_simplify_frame(Pa0,Pa,[special,wh,refl,neclass]),
-    somewhat_simplify_frame(Pb0,Pb,[special,wh,refl,neclass]).
+    somewhat_simplify_frame(Pa0,Pa,[numtype,special,wh,refl,neclass]),
+    somewhat_simplify_frame(Pb0,Pb,[numtype,special,wh,refl,neclass]).
 
 somewhat_simplify_frame(with_dt(A,_B),Frame) :-
     !,
     somewhat_simplify_frame(A,Frame).
 somewhat_simplify_frame(Frame0,Frame) :-
-    somewhat_simplify_frame(Frame0,Frame,[sc,special,wh,refl,neclass]).
+    somewhat_simplify_frame(Frame0,Frame,[numtype,sc,infl,special,wh,refl,neclass]).
 
 somewhat_simplify_frame(Frame0,Frame,RelFeats) :-
     alpino_postags:postag_of_frame(Frame0,PosTag,List0),
