@@ -313,6 +313,7 @@ relevant_att(pron).
 relevant_att(iets).
 relevant_att(neclass).
 relevant_att(tense).
+relevant_att(numtype).
 
 %%% not ignored attributes:
 %%% rnum (special!)
