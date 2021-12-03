@@ -1,4 +1,5 @@
 PORT=42424
+PORT2=42425
 TIMEOUT=20000
 MEMLIMIT=800M
 
@@ -12,3 +13,20 @@ start_server:
 	    -init_dict_p\
             batch_command=alpino_server\
                     2> $(TMPDIR)/alpino_server.log &
+
+
+start_simplify:
+	PROLOGMAXSIZE=$(MEMLIMIT) Alpino -notk -veryfast user_max=$(TIMEOUT)\
+            server_kind=paraphrase\
+            server_port=$(PORT2)\
+            assume_input_is_tokenized=off\
+	    simplify_split=on\
+            simplify_words=on\
+            simplify_passive=on\
+            simplify_modifier=on\
+            copy_input_if_no_transformation=off\
+	    copy_input_if_paraphrase_failed=off\
+            debug=1\
+	    -init_dict_p\
+            batch_command=alpino_server\
+                    2> $(TMPDIR)/alpino_server2.log &
