@@ -1440,17 +1440,6 @@ stem_dependent_tag(modal_adverb(_),Word,'ADJ(vrij,basis,zonder)') :-
 stem_dependent_tag(pronoun(nwh,thi,sg,de,dat_acc,def),hem,  'VNW(pers,pron,obl,vol,3,ev,masc)').
 stem_dependent_tag(pronoun(nwh,thi,sg,de,dat_acc,def),haar, 'VNW(pers,pron,obl,vol,3,getal,fem)').
 
-stem_dependent_tag(verb(_,sg_heeft,_),v_root(Word,_),Tag) :-
-    (   Word == heb
-    ->  Tag='WW(pv,tgw,met-t)'
-    ;   Word == ben
-    ->  Tag='WW(pv,tgw,ev)'
-    ;   atom_concat(heb_,_,Word)
-    ->  Tag='WW(pv,tgw,met-t)'
-    ;   atom_concat(ben_,_,Word)
-    ->  Tag='WW(pv,tgw,ev)'
-    ).
-
 stem_dependent_tag(left_conj(_),Stem,Tag) :-
     !,
     (   Stem == zowel
@@ -1865,6 +1854,9 @@ cgn_postag_c(verb(_,past(pl),_),              'WW(pv,verl,mv)').
 cgn_postag_c(verb(_,both(pl),_),              'WW(pv,pvtijd,mv)').
 cgn_postag_c(verb(_,modal_inv,_),             'WW(pv,tgw,ev)').
 cgn_postag_c(verb(_,sg_hebt,_),               'WW(pv,tgw,met-t)').
+cgn_postag_c(verb(_,sg_heeft,_),              'WW(pv,tgw,met-t)').
+cgn_postag_c(verb(_,sg_bent,_),               'WW(pv,tgw,met-t)').
+cgn_postag_c(verb(_,sg_is,_),                 'WW(pv,tgw,ev)').
 cgn_postag_c(verb(_,modal_not_u,_),           'WW(pv,tgw,ev)').
 cgn_postag_c(verb(_,imp(sg1),_),              'WW(pv,tgw,ev)').
 cgn_postag_c(verb(_,sg1,_),                   'WW(pv,tgw,ev)').

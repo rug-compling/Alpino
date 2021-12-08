@@ -54,13 +54,56 @@ mwu([tree(r(mwp,adt_lex(_,W,_,_,_)),[])|Trees],[W|Ws]) :-
 
 %%%
 
+%% ik ben van oordeel => ik vind
+pattern_rule([hd=l(ben,Pos,Atts),
+	      svp=mwu([van,oordeel])
+	     ],
+	     [hd=l(vind,Pos,Atts)
+	     ]).
 
+%% ten goede komen => helpen
+pattern_rule([hd=l(kom,Pos,Atts),
+	      svp=mwu([ten,goede]),
+	      obj2=OBJ
+	     ],
+	     [hd=l(help,Pos,Atts),
+	      obj1=OBJ
+	     ]).
+
+%% in het vooruitzicht stellen => aankondigen
+pattern_rule([hd=l(stel,Pos,Atts),
+	      ld=dt(pp,[hd=l(in,_,_),
+			obj1=dt(np,[hd=l(vooruitzicht,_,_),
+				    det=l(het,_,_)
+				   ])])
+	     ],
+	     [hd=l(kondig_aan,Pos,Atts)
+	     ]
+	    ).
+
+%% op het punt staan te => gaan
+%% todo: VC should not itself be headed by "ga"
+%% ik sta op het punt naar buiten te gaan
+%% ==> ik ga naar buiten gaan
 pattern_rule([hd=l(sta,Pos,Atts),
 	      vc=dt(ti,[cmp=l(te,_,_),
 			body=VC]),
-	      svp=mwu([op,het,punt])],
+	      svp=mwu([op,het,punt])
+	     ],
 	     [hd=l(ga,Pos,Atts),
-	      vc=VC]).
+	      vc=VC
+	     ]).
+
+%% op het punt staan om te => gaan
+pattern_rule([hd=l(sta,Pos,Atts),
+	      vc=dt(oti,[cmp=l(om,_,_),
+			 body=dt(ti,[cmp=l(te,_,_),
+				     body=VC])]),
+	      svp=mwu([op,het,punt])
+	     ],
+	     [hd=l(ga,Pos,Atts),
+	      vc=VC
+	     ]).
 
 match_left_pattern([],Ds,Ds).
 match_left_pattern([Pat|Pats],Ds0,Ds) :-
@@ -252,6 +295,7 @@ simplify(futiliteit,kleinigheid,Cat,Cat,_,E,E).
 simplify(gaarne,graag,Cat,Cat,_,E,E).
 simplify(geenszins,niet,Cat,Cat,_,E,E).
 simplify(gedurende,tijdens,Cat,Cat,_,E,E).
+simplify(geëquipeerd,toegerust,Cat,Cat,_,E,E).
 simplify(gemeenzaam,alledaags,Cat,Cat,_,E,E).
 simplify(gepikeerd,boos,Cat,Cat,_,E,E).
 simplify(gering,klein,Cat,Cat,_,E,E).

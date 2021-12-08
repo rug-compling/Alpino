@@ -541,6 +541,7 @@ boolean_type(cform,[[base, compar, super, rang]]).	% cform: groot, groter, groot
 
 boolean_type(stype,[[imparative, ynquestion, whquestion, declarative, topic_drop ]]).
 
+
 %% Det/Pron is a weak pronoun (het, me, we, ze, je, zich)
 %% no coordination: *de jongen en me
 %% no comparative:  *groter dan me

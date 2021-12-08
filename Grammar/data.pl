@@ -246,6 +246,13 @@ het(Node) ::-
     Node => agr,
     Node => het.
 
+def(Node) ::-
+    Node => np,
+    Node:agr => def.
+indef(Node) ::-
+    Node => np,
+    Node:agr => indef.
+
 plural(Node) ::-
     Node:agr => pl.
 
@@ -295,6 +302,30 @@ syntactic_penalty_cat_d(Cat,non_np_topic) ::-
     Cat:slash <=> [Slash],
     Slash:wh => nwh,
     Slash /=> np.
+
+/*  now treated in the grammar as a constraint
+%% ??Er woont men heerlijk
+%% Men woont er heerlijk
+syntactic_penalty_cat_d(Cat,er_men) :-
+    Cat => sv1,
+    Cat:slash <=> [Slash],
+    Slash => modifier,
+    Slash:hstem ==> er, 
+    Cat:subj <=> Subj,
+    Subj => np,
+    Subj:hstem ==> men.
+*/
+
+%% ??Er woont de dokter al jaren
+%% De dokter woont er al jaren
+syntactic_penalty_cat_d(Cat,er_def) :-
+    Cat => sv1,
+    Cat:slash <=> [Slash],
+    Slash => modifier,
+    Slash:hstem ==> er, 
+    Cat:subj <=> Subj,
+    Subj => np,
+    Subj:agr => def.
 
 %% this one could be employed during first phase of parsing
 syntactic_penalty_cat(Cat,non_subj_np_rel) ::-

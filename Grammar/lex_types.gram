@@ -6964,25 +6964,35 @@ add_door_pp([mod/PP]) :-
 */
 
 passive(V,C0,C) :-
+    passive(V,C0,C,[]).
+
+passive(V,C0,C,Deps) :-
     assign_vform_of_vc(psp,VP),
-    passive(V,VP,C0,C).
+    passive(V,VP,C0,C,Deps).
 
 %% only personal passive?
 norm_passive(V,C0,C) :-
-    passive_verb(V0,VP,C0,C),
+    passive_verb(V0,VP,C0,C,[]),
     unify_except(V0,V,subj:nform),    
     assign_vform_of_vc(psp,VP),
     V:act => norm_pas.
 
 sbar_passive(V,C0,C) :-
-    passive_verb(V0,VP,C0,C),
+    passive_verb(V0,VP,C0,C,[]),
     unify_except(V0,V,subj:nform),    
     assign_vform_of_vc(psp,VP),
     V:act => sbar_pas.
 
+%% hij is te verslaan
 te_passive(V,C0,C) :-
     assign_vform_of_vc(pass_te,VP),
-    passive(V,VP,C0,C).
+    passive(V,VP,C0,C,[]).
+
+%% hij lijkt me te verslaan
+dat_te_passive(V,C0,C) :-
+    assign_vform_of_vc(pass_te,VP),
+    nowh_exp_dat_np_arg(Dat),
+    passive(V,VP,C0,C,[obj2/Dat]).
 
 %% hij voelt zich in de kou gezet
 %% hij heeft zich in de kou gezet gevoeld
@@ -6998,6 +7008,23 @@ refl_passive(V,C,C) :-
     refl_np_arg(Refl,V),
     V:dt:se => dt,
     dependents(V,[vc/VP,se/Refl]),
+    VP:hebben_zijn => ~unacc,
+    VP:passive => norm_passive.
+
+
+%% hij lijkt me van zijn geld beroofd (te zijn)
+dat_passive(V,C,C) :-
+    aux_v(V,VP),
+    main_v_subj(V),
+    assign_vform_of_vc(psp,VP),
+    V:vtype => vcontrol,
+    V:act => pas,
+    VP:predms <=> VP:cpredms,
+    VP:dets <=> VP:cdets,
+    VP:apps <=> VP:capps,
+    nowh_exp_dat_np_arg(Dat),
+    V:dt:obj2 => dt,
+    dependents(V,[vc/VP,obj2/Dat]),
     VP:hebben_zijn => ~unacc,
     VP:passive => norm_passive.
 
@@ -7038,8 +7065,8 @@ sbar_subj_te_passive(V,C0,C) :-
     unify_except_l(V0,V,[subj,act]),  
     V:act => sbar_subj_te_pas.
 
-passive(V,VP,C0,C) :-
-    passive_verb(V0,VP,C0,C),
+passive(V,VP,C0,C,Deps) :-
+    passive_verb(V0,VP,C0,C,Deps),
     unify_except(V0,V,subj:nform),    
     V:act => pas.
 
@@ -7048,15 +7075,15 @@ so_passive(V,C0,C) :-
     so_passive(V,VP,C0,C).
 
 so_passive(V,VP,C0,C):-
-    passive_verb(V,VP,C0,C),
+    passive_verb(V,VP,C0,C,[]),
     V:act => so_pas.
 
-passive_verb(V,VP,C,C) :-
+passive_verb(V,VP,C,C,Deps) :-
     aux_v(V,VP),
     main_v_subj(V),
     V:imper => no,
     V:vtype => vaux,
-    dependents(V,[vc/VP]),
+    dependents(V,[vc/VP|Deps]),
     VP:dt => dt,
     VP:predms <=> VP:cpredms,
     VP:dets <=> VP:cdets,
@@ -7064,7 +7091,7 @@ passive_verb(V,VP,C,C) :-
     VP:hebben_zijn => ~unacc,
     VP:vtype => (vmain;vaanhet).
 
-passive_verb(V,VP,[er_word,tag(preposition(door,[heen]))|C],C) :-
+passive_verb(V,VP,[er_word,tag(preposition(door,[heen]))|C],C,Deps) :-
     aux_v(V0,VP),
     main_v_subj(V0),
     pp_pc_arg(PP,door),
@@ -7073,7 +7100,7 @@ passive_verb(V,VP,[er_word,tag(preposition(door,[heen]))|C],C) :-
     PP:sel => ~to_topic,
     V0:imper => no,
     V0:vtype => vaux,
-    dependents(V0,V,[vc/VP,mod/PP]),
+    dependents(V0,V,[vc/VP,mod/PP|Deps]),
     VP:dt => dt,
     VP:predms <=> VP:cpredms,
     VP:dets <=> VP:cdets,

@@ -2409,6 +2409,7 @@ grammar_rule(non_wh_topicalization(modifier),ROOT,[Topic,OPTCOMMA,Ques]) :-
     ROOT => root,
     ROOT1 => root,
     unify_except(ROOT,ROOT1,allows_root_imp),
+    not_er_topic_with_men_subject(Topic,Ques),    
     non_wh_topic_structure(Ques,Topic,ROOT1,OPTCOMMA).
 
 grammar_rule(non_wh_topicalization(vc),ROOT,[Topic,OPTCOMMA,Ques]) :-
@@ -3337,6 +3338,7 @@ grammar_rule(start_dq2_max_dip_no_comma,START,[NUCL,PUNCT,DQ2,TAG]) :-
 
 %% Kok : " ik hou er mee op "
 grammar_rule(np_dip,MAX,[NP,DUBB,XP,OPTEND]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     optend_punct(OPTEND,Type),
     MAX => start,
     max_np(NP),
@@ -3348,6 +3350,7 @@ grammar_rule(np_dip,MAX,[NP,DUBB,XP,OPTEND]) :-
     nucl_tag_structure(XP,NP,MAX).
 
 grammar_rule(np_quoted_dip,MAX,[NP,DUBB,DQ1,XP,OPTEND,DQ2]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     optend_punct(OPTEND,Type),
     MAX => start,
     max_np(NP),
@@ -10687,3 +10690,19 @@ haspreyes(parse,Cat) :-
     Cat:haspre => yes.
 haspreyes(generate,_).
 
+not_er_topic_with_men_subject(Topic,Ques) :-
+    %% when the subject is "men", "er" cannot be topic
+    Topic:hstem <=> ER,
+    NP => np,
+    NP:hstem <=> MEN,
+    NONP /=> np,
+    Ques:subj <=> SUBJ,
+    when(nonvar(SUBJ),
+	 (   SUBJ=NP
+	 ;   SUBJ=NONP,
+	     MEN=not_men
+	 )),
+    when((nonvar(ER),nonvar(MEN)),
+	 (  ER \== er
+	 ;  ER == er, MEN \== men
+	 )).

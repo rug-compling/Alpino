@@ -661,7 +661,16 @@ a_lex(pronoun(Wh,Person,Number,Gender,Case,Def),Sign) :-
     pronoun(Sign),
     hstem(Sign),
     pronoun_features(Wh,Person,Number,Gender,Case,Def,Sign),
-    Sign:wkpro => normpro.
+    Sign:hstem <=> Men,
+    Sign:wkpro <=> WKPRO,
+    Norm => normpro,
+    Weak => weakpro,
+    when(nonvar(Men),
+	 (   Men \== men,
+	     WKPRO = Norm
+	 ;   Men == men,
+	     WKPRO = Weak
+	 )).
 
 a_lex(pronoun(Wh,Person,Number,Gender,Case,Def,nparg),Sign) :-
     pronoun(Sign),
@@ -1591,7 +1600,8 @@ features_verb_infl(sg1,Sign) :-
     Sign:vform => fin,
     Sign:ccat0 ==> ssub,
     subject_verb_agreement(Sign,sg,(fir; invje)).
-%% hij heeft/heb je
+%% hij/u heeft/heb je
+%% hij/u is (?)
 features_verb_infl(sg_heeft,Sign) :-
     Sign:tense => present,
     Sign:vform => fin,
@@ -1599,6 +1609,21 @@ features_verb_infl(sg_heeft,Sign) :-
     subject_verb_agreement(Sign,sg,(thi;u)).
 %% je hebt/u hebt/hebt u  / bent
 features_verb_infl(sg_hebt,Sign) :-
+    Sign:tense => present,
+    Sign:vform => fin,
+    Sign:ccat0 ==> ssub,
+    subject_verb_agreement(Sign,sg,(ninvje ; u)).
+features_verb_infl(sg_is,Sign) :-
+    Sign:tense => present,
+    Sign:vform => fin,
+    Sign:ccat0 ==> ssub,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+        subject_verb_agreement(Sign,sg,(thi;u))
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	subject_verb_agreement(Sign,sg,thi)
+    ).
+%% je hebt/u hebt/hebt u  / bent
+features_verb_infl(sg_bent,Sign) :-
     Sign:tense => present,
     Sign:vform => fin,
     Sign:ccat0 ==> ssub,
@@ -1621,7 +1646,11 @@ features_verb_infl(modal_not_u,Sign) :-
     Sign:tense => present,
     Sign:vform => fin,
     Sign:ccat0 ==> ssub,
-    subject_verb_agreement(Sign,sg).
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+        subject_verb_agreement(Sign,sg)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	subject_verb_agreement(Sign,sg,~u)
+    ).
 %% kun jij
 features_verb_infl(modal_inv, Sign) :-
     Sign:tense => present,
@@ -1630,12 +1659,6 @@ features_verb_infl(modal_inv, Sign) :-
     subject_verb_agreement(Sign,sg,invje).
 
 features_verb_infl(both(pl),Sign) :-
-    Sign:vform => fin,
-    Sign:ccat0 ==> ssub,
-    subject_verb_agreement(Sign,pl).
-
-features_verb_infl(past(pl),Sign) :-
-    Sign:tense => past,
     Sign:vform => fin,
     Sign:ccat0 ==> ssub,
     subject_verb_agreement(Sign,pl).
