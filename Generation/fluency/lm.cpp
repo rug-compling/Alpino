@@ -148,7 +148,7 @@ long int wordsProb(vector<string>::const_iterator i1,
     ps = word_tuple_grams(low, dict);
   }
 
-  p = (ps == NULL ? 1000 : ps->word);
+  p = (ps == NULL ? 10000 : ps->word);
 
   // if (p == 0) {
   //   cerr << "zero-valued ngram in tuple file... " << distance(i1,i2) << endl;

@@ -23,7 +23,8 @@ CURRENT=$(ALPINO_HOME)/Generation/fluency/CreateLM
 ALL=$(wildcard $(DIR)/*.sfr )
 #PARTS=VK1997 AD1999 TROUW2000 VK2001 NRC2002 PAROOL2003 AD2004 CLEF WRPPH WRPPG WSUEA
 #PARTS=$(notdir $(basename $(ALL)))
-PARTS=AD1994 NRC1995 VK1997 TROUW2000 PAROOL2001 NRC2002 VK2003 AD2004 AD2005 PPH WIKI0 WYT11 WSUEA
+PARTS=AD1994 NRC1995 VK1997 TROUW2000 PAROOL2001 NRC2002 VK2003 AD2004 AD2005 WIKI0 WYT11 WSUEA
+#PARTS=AD1994
 
 DATA=$(PARTS:%=$(DIR)/%)
 SFR=$(DATA:%=%.sfr)
@@ -42,18 +43,29 @@ new:
 	rm -f $(DISK)/frames $(DISK)/corpus
 	$(MAKE) model
 
-model: 
-	$(MAKE) -j $(DISK)/words.fsa $(DISK)/tags.fsa
-	$(MAKE) $(DISK)/unigrams.tpl     $(DISK)/bigrams.tpl     $(DISK)/trigrams.tpl
-	$(MAKE) $(DISK)/tag-unigrams.tpl $(DISK)/tag-bigrams.tpl $(DISK)/tag-trigrams.tpl
-
 #### tuples cannot be parallel because fadd uses fixed names for some of its temp files :-(
+
+model:
+	$(MAKE) w
+	$(MAKE) t
+
+t: $(DISK)/frames
+	$(MAKE) $(DISK)/tags.fsa 
+	$(MAKE) $(DISK)/tag-unigrams.tpl
+	$(MAKE) $(DISK)/tag-bigrams.tpl
+	$(MAKE) $(DISK)/tag-trigrams.tpl
+
+w: $(DISK)/corpus
+	$(MAKE) $(DISK)/words.fsa
+	$(MAKE) $(DISK)/unigrams.tpl
+	$(MAKE) $(DISK)/bigrams.tpl
+	$(MAKE) $(DISK)/trigrams.tpl
 
 train_ngram_model: train_ngram_model.cpp
 	g++ $(CXXFLAGS) -std=c++11 -o $@ $<
 
 $(DISK)/unigrams: train_ngram_model $(DISK)/corpus
-	$(CURRENT)/train_ngram_model $(DISK)/corpus 0 $(DISK)/unigrams $(DISK)/bigrams $(DISK)/trigrams
+	$(CURRENT)/train_ngram_model $(DISK)/corpus 3 $(DISK)/unigrams $(DISK)/bigrams $(DISK)/trigrams
 
 $(DISK)/tag-unigrams: train_ngram_model $(DISK)/frames
 	$(CURRENT)/train_ngram_model $(DISK)/frames 0 $(DISK)/tag-unigrams $(DISK)/tag-bigrams $(DISK)/tag-trigrams
@@ -107,13 +119,31 @@ evaluate:
 	Alpino -notk -s cdb batch_command=alpino_ngram_lm:evaluate_fluency -flag ngram_model_dir $(DISK)
 	Alpino -notk -s cdbw batch_command=alpino_ngram_lm:evaluate_fluency -flag ngram_model_dir $(DISK)
 
-# previous stable release:
+# previous stable release: (trigrams.tpl 487Mb!)
 # total score 1125378.0 after 7136 sentences
-# total score 1388170.0 after 7136 sentences
+# total score 1388170.0 after 7136 sentences 262792
 
-# threshold 5, all data
+# threshold 5, all data+PPH    (trigrams.tpl 36Mb!)
 # total score  990210.0 after 7136 sentences
-# total score 1310265.0 after 7136 sentences
+# total score 1310265.0 after 7136 sentences 320055
+
+# threshold 5, all data-PPH    (trigrams.tpl 27Mb!)
+# total score 1000030.0 after 7136 sentences
+# total score 1318430.0 after 7136 sentences
+
+# threshold 3, all data-PPH    (trigrams.tpl 53Mb!)
+# total score 980077.0 after 7136 sentences
+# total score 1310038.0 after 7136 sentences
+
+
+
+# threshold 0, all data+PPH    (trigrams.tpl 714Mb)
+# total score 930546.0 after 7136 sentences
+# total score 1284568.0 after 7136 sentences 354022
+
+# threshold 2, all data+PPH    (trigrams.tpl 137Mb) 339320
+# total score 956580.0 after 7136 sentences
+# total score 1295900.0 after 7136 sentences
 
 # threshold 0, only AD1994
 # total score  998205.0 after 7136 sentences
