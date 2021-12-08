@@ -21,7 +21,7 @@ ALPINO=$(ALPINO_HOME)/src/Alpino -notk cmdint=off\
           debug=1 demo=off\
           display_main_parts=off\
           max_sentence_length=50\
-          user_max=900000\
+          user_max=90000\
           use_guides=off\
           end_hook=left_corners\
           $(EXTRA)\
