@@ -1,0 +1,7 @@
+Alpino user_max=300000 \
+       simplify_split=on\
+       simplify_words=on\
+       simplify_passive=on\
+       simplify_modifier=on\
+       demo=on -notk\
+       copy_input_if_no_transformation=off copy_input_if_paraphrase_failed=off  $*
