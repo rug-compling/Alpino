@@ -326,6 +326,10 @@ hdrug_command(compare_score,     compare_score(Obj1,Obj2),[Obj1,Obj2]).
 hdrug_command(compare_penalties, compare_score(Obj1,Obj2),[Obj1,Obj2]).
 hdrug_command(compare_features,  compare_score(Obj1,Obj2),[Obj1,Obj2]).
 
+hdrug_command(all_compare_score,     all_compare_score(Obj1,Obj2),[Obj1,Obj2]).
+hdrug_command(all_compare_penalties, all_compare_score(Obj1,Obj2),[Obj1,Obj2]).
+hdrug_command(all_compare_features,  all_compare_score(Obj1,Obj2),[Obj1,Obj2]).
+
 hdrug_command(compare_dt,        compare_dt(Obj1,Obj2),[Obj1,Obj2]).
 hdrug_command(compare_dt,        compare_dt(1,2),[]).
 
@@ -475,6 +479,13 @@ display_differences(Arity,Dt1,Dt2):-
 compare_score(Obj1,Obj2) :-
     compare_score(long,Obj1,Obj2,_).
 
+all_compare_score(Obj1,Obj2) :-
+    hdrug_util:hdrug_flag(display_zero_weight_penalties,Old,on),
+    call_cleanup(compare_score(Obj1,Obj2),
+                 hdrug_util:set_flag(display_zero_weight_penalties,Old)
+		).
+
+
 compare_score(Long,Obj1,Obj2,R) :-
     object(Obj1,o(Cat1,_,_)),
     object(Obj2,o(Cat2,_,_)),
@@ -599,6 +610,17 @@ hdrug_command(features,display_penalties_of_obj(Obj),[Obj]).
 hdrug_command(features,display_penalties_of_obj(1),[]).
 hdrug_command(penalties,display_penalties_of_obj(Obj),[Obj]).
 hdrug_command(penalties,display_penalties_of_obj(1),[]).
+
+hdrug_command(all_features,all_display_penalties_of_obj(Obj),[Obj]).
+hdrug_command(all_features,all_display_penalties_of_obj(1),[]).
+hdrug_command(all_penalties,all_display_penalties_of_obj(Obj),[Obj]).
+hdrug_command(all_penalties,all_display_penalties_of_obj(1),[]).
+
+all_display_penalties_of_obj(N) :-
+    hdrug_util:hdrug_flag(display_zero_weight_penalties,Old,on),
+    call_cleanup(display_penalties_of_obj(N),
+                 hdrug_util:set_flag(display_zero_weight_penalties,Old)
+		).
 
 display_penalties_of_obj(N) :-
     hdrug_flag(current_ref,Key),

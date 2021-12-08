@@ -724,12 +724,14 @@ valid_sc(aux_psp_hebben,              [check_hebben]).
 valid_sc(aux_psp_zijn,                [check_zijn]).
 valid_sc(simple_aux_psp_zijn,         [check_simple_zijn]).
 valid_sc(te_passive,                  [check_te_passive]).
+valid_sc(dat_te_passive,              [check_te_passive]).
 valid_sc(sbar_subj_te_passive,        [check_vform(te)]).
 valid_sc(passive,                     [check_passive]).
 valid_sc(sbar_passive,                [check_passive]).
 valid_sc(norm_passive,                [check_passive]).
 valid_sc(refl_passive,                [check_passive]).
 valid_sc(so_passive,                  [check_passive]).
+valid_sc(dat_passive,                 [check_passive]).
 valid_sc(obj1_passive,                [check_passive]).
 valid_sc(obj1_te_passive,             [check_vform(te)]).
 valid_sc(op,                          [check_tag(complementizer(op))]).
@@ -1121,6 +1123,8 @@ finite(sg).
 finite(pl).
 finite(sg_hebt).
 finite(sg_heeft).
+finite(sg_bent).
+finite(sg_is).
 finite(modal_not_u).
 finite(modal_inv).
 finite(past(_)).

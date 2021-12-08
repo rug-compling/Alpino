@@ -700,14 +700,15 @@ rulename([],Name,Name).
 mf_pos(Cat,Val) :-
     functor(Cat,Fun,_),
     mf_pos(Fun,Cat,Val).
-mf_pos(np,Cat,np(Case,Pos)) :-
+mf_pos(np,Cat,Type) :-
     !,
     alpino_data:case(Cat,CaseVal),
     hdrug_feature:give_boolean_type(CaseVal,Case),
     alpino_data:postag(Cat,PosTagValTerm),
     nonvar(PosTagValTerm),
     alpino_dt:somewhat_simplify_frame(PosTagValTerm,Pos0),
-    simplify_name(Pos0,Pos).
+    simplify_name(Pos0,Pos),
+    add_men(np(Case,Pos),Type,Cat).
 mf_pos(modifier,Cat,Type) :-
     !,
     alpino_data:modifier(Cat,DtrCat),
@@ -724,7 +725,28 @@ add_niet(mcat_adv,mcat_niet,Cat) :-
     alpino_data:dt(DT,Hwrd,_,_,_),
     alpino_data:label(Hwrd,Niet,_,_,_,_),
     Niet == niet.
+add_niet(mcat_adv,mcat_meer,Cat) :-
+    alpino_data:dt(Cat,DT),
+    alpino_data:dt(DT,Hwrd,_,_,_),
+    alpino_data:label(Hwrd,Niet,_,_,_,_),
+    Niet == meer.
+add_niet(mcat_adv,mcat_er,Cat) :-
+    alpino_data:dt(Cat,DT),
+    alpino_data:dt(DT,Hwrd,_,_,_),
+    alpino_data:label(Hwrd,Niet,_,_,_,_),
+    Niet == er.
 add_niet(Type,Type,_).
+
+add_men(np(nom,pron(nwh)),men,Cat) :-
+    alpino_data:dt(Cat,DT),
+    alpino_data:dt(DT,Hwrd,_,_,_),
+    alpino_data:label(Hwrd,Men,_,_,_,_),
+    Men == men.
+add_men(np(A,B),np(A,B,def),Cat) :-
+    \+ alpino_data:indef(Cat).
+add_men(np(A,B),np(A,B,indef),Cat) :-
+    \+ alpino_data:def(Cat).
+add_men(Type,Type,_).
 
 simplify_name(name(_),X) :-
     !,

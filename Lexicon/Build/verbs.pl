@@ -42,7 +42,7 @@ mem_eq(W0,W) :-
 %% then this is a `not exist'.
 %%
 %% paradigm for modals and auxiliaries "hebben" and "zijn" is different.
-%% They use verb_modal/9 and verb_heb/9; see the examples:
+%% They use verb_modal/9, verb_heb/9, verb_ben/9; see the examples:
 %%
 %% ik  werk  ik      ben       heb      kan      wil      mag
 %% je  werkt         bent      hebt     kunt     wil(t)   mag
@@ -97,13 +97,13 @@ t(verb_heb(_,_,_,_,W0,_,_,Z,Sc),  W,verb(Z,psp,Sc)        ):- mem_eq(W0,W).
 t(verb_heb(_,_,_,_,_,W0,_,Z,Sc),  W,verb(Z,past(sg),Sc)   ):- mem_eq(W0,W).
 t(verb_heb(_,_,_,_,_,_,W0,Z,Sc),  W,verb(Z,past(pl),Sc)   ):- mem_eq(W0,W).
 
-t(verb_heb(W0,_,_,_,_,_,_,Z,Sc),  W,verb(Z,sg1,Sc)        ):- mem_eq(W0,W).
-t(verb_heb(_,W0,_,_,_,_,_,Z,Sc),  W,verb(Z,sg_hebt,Sc)    ):- mem_eq(W0,W).
-t(verb_heb(_,_,W0,_,_,_,_,Z,Sc),  W,verb(Z,sg_heeft,Sc)   ):- mem_eq(W0,W).
-t(verb_heb(_,_,_,W0,_,_,_,Z,Sc),  W,verb(Z,inf,Sc)        ):- mem_eq(W0,W).
-t(verb_heb(_,_,_,_,W0,_,_,Z,Sc),  W,verb(Z,psp,Sc)        ):- mem_eq(W0,W).
-t(verb_heb(_,_,_,_,_,W0,_,Z,Sc),  W,verb(Z,past(sg),Sc)   ):- mem_eq(W0,W).
-t(verb_heb(_,_,_,_,_,_,W0,Z,Sc),  W,verb(Z,past(pl),Sc)   ):- mem_eq(W0,W).
+t(verb_ben(W0,_,_,_,_,_,_,Z,Sc),  W,verb(Z,sg1,Sc)        ):- mem_eq(W0,W).
+t(verb_ben(_,W0,_,_,_,_,_,Z,Sc),  W,verb(Z,sg_bent,Sc)    ):- mem_eq(W0,W).
+t(verb_ben(_,_,W0,_,_,_,_,Z,Sc),  W,verb(Z,sg_is,Sc)      ):- mem_eq(W0,W).
+t(verb_ben(_,_,_,W0,_,_,_,Z,Sc),  W,verb(Z,inf,Sc)        ):- mem_eq(W0,W).
+t(verb_ben(_,_,_,_,W0,_,_,Z,Sc),  W,verb(Z,psp,Sc)        ):- mem_eq(W0,W).
+t(verb_ben(_,_,_,_,_,W0,_,Z,Sc),  W,verb(Z,past(sg),Sc)   ):- mem_eq(W0,W).
+t(verb_ben(_,_,_,_,_,_,W0,Z,Sc),  W,verb(Z,past(pl),Sc)   ):- mem_eq(W0,W).
 
 t(verb_modal(W0,_,_,_,_,_,_,Z,Sc),W,verb(Z,modal_not_u,Sc)):- mem_eq(W0,W).
 t(verb_modal(_,W0,_,_,_,_,_,Z,Sc),W,verb(Z,modal_inv,Sc)  ):- mem_eq(W0,W).
@@ -258,8 +258,8 @@ m(v_root(schrik,schrikken),
 %% is selected by something which requires a PSP
 %%%%% this only seems to produce additional false analyses !?!?!
 m(v_root(ben,zijn),verb(ben,   zijn, sg1,      [aux_simple(inf)])).
-m(v_root(ben,zijn),verb(bent,  zijn, sg_hebt,  [aux_simple(inf)])).
-m(v_root(ben,zijn),verb(is,    zijn, sg_heeft, [aux_simple(inf)])).
+m(v_root(ben,zijn),verb(bent,  zijn, sg_bent,  [aux_simple(inf)])).
+m(v_root(ben,zijn),verb(is,    zijn, sg_is,    [aux_simple(inf)])).
 m(v_root(ben,zijn),verb(zijn,  zijn, pl,       [aux_simple(inf)])).
 m(v_root(ben,zijn),verb(was,   zijn, past(sg), [aux_simple(inf)])).
 m(v_root(ben,zijn),verb(waren, zijn, past(pl), [aux_simple(inf)])).
@@ -269,10 +269,10 @@ m(v_root(ben,zijn),verb(wezen, zijn, inf_ipp,  [aux_simple(inf)])).
 m(v_root(ben,zijn),verb(geweest,hebben,psp,[copula])).
 
 m(v_root(ben,zijn),verb(wezen, zijn, inf,      List)) :-
-    m(v_root(ben,zijn),verb_heb(ben,bent,is,zijn,geweest,was,waren,unacc,List)).
+    m(v_root(ben,zijn),verb_ben(ben,bent,is,zijn,geweest,was,waren,unacc,List)).
 
 m(v_root(ben,zijn),
-  verb_heb(ben,bent,is,zijn,geweest,was,waren,unacc,
+  verb_ben(ben,bent,is,zijn,geweest,was,waren,unacc,
 	   [copula,		% ik ben dom
             
             % fixed([pred,[me]],no_passive), % hij is me toch kwaad
@@ -13476,8 +13476,10 @@ v(lijk,lijkt,lijken,geleken,leek,leken,
 	passive,       % omdat zijn dagen lijken geteld
                        % omdat gefraudeerd leek met toegangskaarten
                        % omdat het wat ver lijkt gezocht dat ...
-                       % omdat hiermee lijkt bewezen dat ..
+		       % omdat hiermee lijkt bewezen dat ..
+	dat_passive,   % omdat zijn dagen mij lijken geteld
 	te_passive,    % omdat hij lijkt te verslaan
+	dat_te_passive,    % omdat hij mij lijkt te verslaan (ambigu!)
 	intransitive,
 	dip_sbar_subj, % we moeten , leek het , naar huis
 	dip_sbar_subj_so_np_opt_het,

@@ -1482,6 +1482,8 @@ impossible_nominalization_frame(so_copula_vp).
 impossible_nominalization_frame(so_copula_sbar).
 impossible_nominalization_frame(so_copula_np).
 impossible_nominalization_frame(te_passive).   
+impossible_nominalization_frame(dat_te_passive).   
+impossible_nominalization_frame(dat_passive).   
 impossible_nominalization_frame(aux_psp_hebben).
 impossible_nominalization_frame(aux_psp_zijn).
 impossible_nominalization_frame(simple_cleft).
@@ -4313,15 +4315,19 @@ sg2(sg1).
 sg2(sg_hebt).
 sg2(modal_not_u).
 sg2(modal_inv).
+sg2(sg_bent).
 
 singular(sg3).
 singular(sg1).
 singular(past(sg)).
 singular(sg_hebt).
 singular(sg_heeft).
+singular(sg_bent).
+singular(sg_is).
 
 non_3sg(sg1).
 non_3sg(sg_hebt).
+non_3sg(sg_bent).
 non_3sg(pl).
 non_3sg(past(pl)).
 non_3sg(both(pl)).
@@ -4330,6 +4336,7 @@ non_3sg(modal_inv).
 non_3(sg1).
 non_3(modal_inv).
 non_3(sg_hebt).
+non_3(sg_bent).
 
 finite(past(_)).
 finite(both(_)).
@@ -4338,6 +4345,8 @@ finite(sg1).
 finite(sg3).
 finite(sg_heeft).
 finite(sg_hebt).
+finite(sg_bent).
+finite(sg_is).
 finite(modal_u).
 finite(modal_not_u).
 finite(modal_inv).
