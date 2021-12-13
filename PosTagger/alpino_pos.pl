@@ -106,7 +106,7 @@ all_tags(Tags,RefsTags) :-
     findall(Ref-Ts,a_tag(Ref,Ts),RefsTags),
     select_all_tags(RefsTags,Tags0),
     sort(Tags0,Tags),
-    debug_message(2,"Tags before pos-tagger: ~p~n",[RefsTags]).
+    debug_message(2,"Tags before pos-tagger: ~p~n",[Tags]).
 
 select_all_tags([],[]).
 select_all_tags([_-Ts|T0],Tags) :-
