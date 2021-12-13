@@ -623,3 +623,74 @@ px.test:test-score   92.13  92.10
 px.test:phi-score    81.52  80.75
 px.test:lemma/pos-score   96.49
 END RUN
+START RUN
+total result after 9 tests
+first 75.14
+best  93.66
+test  90.18
+rate  81.19
+p/s-first 78.41
+p/s-best  95.29
+p/s-test  92.01
+p/s-rate  80.59
+   5938 pZ.weights
+   6819 pc.weights
+   6805 pd.weights
+   7124 pe.weights
+   6923 pi.weights
+   6857 pl.weights
+   6943 pp.weights
+   7287 pu.weights
+   7454 pw.weights
+   7757 px.weights
+  69907 total
+out of memory 0
+timed out 0
+sentences 5743
+1029603 parses in total
+pc.test:first-score  75.30  77.79
+pc.test:best-score   93.84  95.74
+pc.test:test-score   90.00  92.09
+pc.test:phi-score    79.29  79.66
+pc.test:lemma/pos-score   96.17
+pd.test:first-score  75.24  77.18
+pd.test:best-score   94.65  95.63
+pd.test:test-score   91.07  92.21
+pd.test:phi-score    81.56  81.43
+pd.test:lemma/pos-score   95.74
+pe.test:first-score  74.09  78.20
+pe.test:best-score   91.95  94.01
+pe.test:test-score   88.41  90.78
+pe.test:phi-score    80.19  79.60
+pe.test:lemma/pos-score   95.71
+pi.test:first-score  75.31  77.32
+pi.test:best-score   94.37  96.01
+pi.test:test-score   91.03  92.79
+pi.test:phi-score    82.50  82.75
+pi.test:lemma/pos-score   97.44
+pl.test:first-score  73.47  77.51
+pl.test:best-score   92.48  94.67
+pl.test:test-score   89.07  91.55
+pl.test:phi-score    82.04  81.80
+pl.test:lemma/pos-score   96.09
+pp.test:first-score  77.00  79.40
+pp.test:best-score   95.91  97.06
+pp.test:test-score   92.55  93.65
+pp.test:phi-score    82.24  80.70
+pp.test:lemma/pos-score   97.67
+pu.test:first-score  76.52  78.27
+pu.test:best-score   95.70  96.25
+pu.test:test-score   92.49  93.09
+pu.test:phi-score    83.30  82.46
+pu.test:lemma/pos-score   97.51
+pw.test:first-score  75.17  81.24
+pw.test:best-score   92.90  95.10
+pw.test:test-score   89.09  91.65
+pw.test:phi-score    78.52  75.15
+pw.test:lemma/pos-score   94.84
+px.test:first-score  79.32  79.87
+px.test:best-score   94.92  94.86
+px.test:test-score   91.98  91.89
+px.test:phi-score    81.17  80.13
+px.test:lemma/pos-score   96.44
+END RUN

@@ -27,10 +27,6 @@ t(verb(_,B0,C0),            verb(B,C)) :-
     ->  B  = Agr
     ;   B0 = both(Agr)
     ->  B  = Agr
-    ;   B0 = sg_bent
-    ->  B = sg_hebt		% temp
-    ;   B0 = sg_is
-    ->  B = sg_heeft
     ;   B0 = B
     ),
     t_subcat(C0,C).

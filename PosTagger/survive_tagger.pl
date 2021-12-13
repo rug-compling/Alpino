@@ -143,6 +143,8 @@ finite(sg).
 finite(pl).
 finite(sg_hebt).
 finite(sg_heeft).
+finite(sg_bent).
+finite(sg_is).
 finite(modal_not_u).
 finite(modal_inv).
 finite(past(_)).
