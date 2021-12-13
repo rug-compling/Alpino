@@ -231,7 +231,7 @@ generate_list_continue([],Sem,Sems,[Result|Results],Context) :-
 
 generate_list_continue([],Sem,Sems,[Result|Results],Context) :-
     lexical_adt(Sem,Root),
-    alpino_genlex:surf_to_list(Root,Str),
+    alpino_genlex:surf_to_list(Root,Str,[]),
     lists:append(Context,Str,Context2),
     alpino_data:result_term(p(0.0,[]),Str,robust([MAX]),tree(MAX,robust,lex(ref(none,none,Root,Root,P0,P0,R0,R0,_,_,_)),_),[],Result),
     alpino_data:max_dt(MAX),
@@ -257,7 +257,7 @@ generate_word_fallback(Score,Str,Cat,Ref,Context,ContextStr,BcAll) :-
     %% we should accept combinations of lex s.t. their bc add to BcAll...
     if(   lex(Frame,Root,BcAll,_,_,Surfs),
         (   member(Surf,Surfs),
-	    alpino_genlex:surf_to_list(Surf,Str)
+	    alpino_genlex:surf_to_list(Surf,Str,[])
 	),
         (   lex(Frame,Root,Bc1,_,_,Surfs0),
 	    lex(particle(_),_Root1,Bc2,_,_,Surfs1),
@@ -775,7 +775,7 @@ number_terminals(tree(_,_,Ds,_),N,NextN,Str0,Str) :-
 
 number_terminals_tree_ds(lex(ref(_,_,_,Terminal,N,N,NextN,NextN,_,_,_)),N,NextN,
                          Str0,Str) :-
-    alpino_genlex:surf_to_list(Terminal,Words),
+    alpino_genlex:surf_to_list(Terminal,Words,[]),
     length(Words,Len),
     NextN is N + Len,
     append(Words,Str,Str0).
@@ -792,7 +792,7 @@ terminals(tree(_,_,Ds,_),Str0,Str) :-
     terminals_tree_ds(Ds,Str0,Str).
 
 terminals_tree_ds(lex(ref(_,_,_,Terminal,_,_,_,_,_,_,_)),Str0,Str) :-
-    alpino_genlex:surf_to_list(Terminal,Words),
+    alpino_genlex:surf_to_list(Terminal,Words,[]),
     append(Words,Str,Str0).
 terminals_tree_ds([],Str,Str).
 terminals_tree_ds([H|T],Str0,Str) :-
