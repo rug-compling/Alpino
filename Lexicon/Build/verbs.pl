@@ -25062,7 +25062,6 @@ v(verleid,verleidt,verleiden,verleid,verleidde,verleidden,
 	intransitive,
         np_vp_obj,    % hij liet zich verleiden om te gaan slapen
         np_vp_obj1,   % hij werd verleid
-	np_pc_pp(door),
 	np_pc_pp(met),
 	np_pc_pp(tot)])]).
 
