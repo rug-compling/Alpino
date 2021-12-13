@@ -423,6 +423,7 @@ verb_disallows_passive(hecht,ben,_,not_door).
 verb_disallows_passive(open,ben,_,not_door).
 verb_disallows_passive(ontwikkel,ben,_,not_door).
 verb_disallows_passive(overtuig,ben,_,not_door).
+verb_disallows_passive(rechtvaardig,ben,_,not_door).
 verb_disallows_passive(relateer,ben,_,not_door).
 verb_disallows_passive(sluit,ben,_,not_door).
 verb_disallows_passive(vestig,ben,_,not_door).

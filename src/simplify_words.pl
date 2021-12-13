@@ -23,8 +23,9 @@ words_transformation(r(Rel,p(Cat0)),Ds0,r(Rel,p(Cat)),[Hd|Ds]) :-
     Hd0 = tree(r(HD,adt_lex(Cat0,Old,Old,D,E0)),[]),
     Hd  = tree(r(HD,adt_lex(Cat,New,New,D,E)),[]),
     head_rel(HD),
-    lists:select(Hd0,Ds0,Ds),
-    simplify(Old,New,Cat0,Cat,D,E0,E).
+    lists:select(Hd0,Ds0,Ds1),
+    simplify(Old,New,Cat0,Cat,D,E0,E),
+    adapt_det(Ds1,Ds).
 
 words_transformation(r(Rel,p(mwu(_,_))),Ds,
 		     r(Rel,adt_lex(Cat,Lem,Lem,Pos,Atts)),[]):-
@@ -244,20 +245,15 @@ simplify(cruciaal,belangrijk,Cat,Cat,_,E,E).
 simplify(cultus,verering,Cat,Cat,_,E,E).
 simplify(daadwerkelijk,echt,Cat,Cat,_,E,E).
 simplify(daar,omdat,Cat,Cat,comp,E,E).
-simplify(dat,{[die,dat]},detp,detp,det,E,E).
 simplify(decadent,smakeloos,Cat,Cat,_,E,E).
 simplify(declameer,draag_voor,Cat,Cat,_,E,E).
-simplify(de,{[de,het]},detp,detp,det,E,E).
 simplify(deel_mede,zeg,Cat,Cat,_,E,E).
 simplify(delicaat,gevoelig,Cat,Cat,_,E,E).
 simplify(derving,verlies,Cat,Cat,_,E,E).
-simplify(deze,{[deze,dit]},detp,detp,det,E,E).
-simplify(die,{[die,dat]},detp,detp,det,E,E).
 simplify(diffuus,onduidelijk,Cat,Cat,_,E,E).
 simplify(discrepantie,verschil,Cat,Cat,_,E,E).
 simplify(discutabel,twijfelachtig,Cat,Cat,_,E,E).
 simplify(dissertatie,proefschrift,Cat,Cat,_,E,E).
-simplify(dit,{[deze,dit]},Cat,Cat,_,E,E).
 simplify(dogmatisch,star,Cat,Cat,_,E,E).
 simplify(dominant,overheers,Cat,Cat,_,E,E).
 simplify(donatie,schenking,Cat,Cat,_,E,E).
@@ -306,7 +302,6 @@ simplify(hectiek,drukte,Cat,Cat,_,E,E).
 simplify(hectisch,druk,Cat,Cat,_,E,E).
 simplify(heden,nu,advp,advp,_,E,E).
 simplify(hermetisch,helemaal,Cat,Cat,_,E,E).
-simplify(het,{[de,het]},detp,detp,det,E,E).
 simplify(heterogeen,mengen,ap,ppart,_,E,E).
 simplify(hiërarchie,rangorde,Cat,Cat,_,E,E).
 simplify(hypothese,aanname,Cat,Cat,_,E,E).
@@ -438,3 +433,19 @@ simplify(wederrechtelijk,onwettig,Cat,Cat,_,E,E).
 simplify(weifel,aarzel,Cat,Cat,_,E,E).
 simplify(wend_aan,gebruik,Cat,Cat,_,E,E).
 simplify(wetgeving_resolutie,resolutie,Cat,Cat,_,E,E).
+
+adapt_det(List0,List):-
+    Det0 = tree(r(det,adt_lex(Cat0,Old,Old,Pos,Atts)),[]),
+    Det  = tree(r(det,adt_lex(Cat0,New,New,Pos,Atts)),[]),
+    lists:select(Det0,List0,List1),
+    simplify_det(Old,New),
+    !,
+    List = [Det|List1].
+
+simplify_det(dat,{[die,dat]}).
+simplify_det(de,{[de,het]}).
+simplify_det(deze,{[deze,dit]}).
+simplify_det(die,{[die,dat]}).
+simplify_det(dit,{[deze,dit]}).
+simplify_det(het,{[de,het]}).
+
