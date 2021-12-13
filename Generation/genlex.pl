@@ -386,7 +386,7 @@ add_simple_frames(X,X) :-
 
 dict_entry_with_dt(Root,Frame,SurfaceAtom) :-
     alpino_lex:inv_lex(Root,SurfaceAtom),
-    surf_to_list(SurfaceAtom,SurfaceList),
+    surf_to_list(SurfaceAtom,SurfaceList,[]),
     %% format(user_error,"lexical lookup with_dt: ~w~n",[SurfaceList]),
     alpino_lex:lexicon(Frame,Root0,SurfaceList,[],_),
     simplify_lemma(Root0,Root).
@@ -413,29 +413,40 @@ simplify_lemma(v_root(Root0,_),Root) :-
     Root0=Root.
 simplify_lemma(Root,Root).
 
-root_surface(Root,Root,List) :-
-    surf_to_list(Root,List).
-root_surface(Root,Surf,List) :-
+root_surface(Root,SurfAtom,SurfList) :-
+    split_atom(Root," ",AtomList),
+    root_surface_list(AtomList,SurfList,[]),
+    hdrug_util:concat_all(SurfList,SurfAtom,' ').
+
+root_surface_list([],L,L).
+root_surface_list([H|T],L0,L) :-
+    root_surface__(H,L0,L1),
+    root_surface_list(T,L1,L).
+
+root_surface__(Root,L0,L) :-
+    surf_to_list(Root,L0,L).
+	
+root_surface__(Root,L0,L) :-
     alpino_lex:inv_lex(Root,Surf),
-    surf_to_list(Surf,List).
+    surf_to_list(Surf,L0,L).
 
 %% for genitive inflection of names
-root_surface(Root,Surf,[Surf]) :-
+root_surface__(Root,[Surf|L],L) :-
     (   Root = Surf0
     ;   alpino_lex:inv_lex(Root,Surf0)
     ),
     alpino_lex:in_names_dictionary(_Name,Root,Surf0,[],[],_),
     add_gen(Surf0,Surf).
 
-surf_to_list(Surf,List) :-
+surf_to_list(Surf,List0,List) :-
     atom_codes(Surf,Codes),
     alpino_util:split_string(Codes," ",CodesList),
-    atom_codes_list(CodesList,List).
+    atom_codes_list(CodesList,List0,List).
 
-atom_codes_list([],[]).
-atom_codes_list([H0|T0],[H|T]) :-
+atom_codes_list([],L,L).
+atom_codes_list([H0|T0],[H|L0],L) :-
     atom_codes(H,H0),
-    atom_codes_list(T0,T).
+    atom_codes_list(T0,L0,L).
 
 /*
 atom_or_list([],H,H).
