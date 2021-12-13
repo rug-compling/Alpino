@@ -4266,6 +4266,7 @@ impossible_subcat_infl_combination(simple_aux_psp_zijn,psp).
 impossible_subcat_infl_combination(obj_control(te),psp).
 impossible_subcat_infl_combination(obj_control(te_inf),psp).
 impossible_subcat_infl_combination(passive,psp).
+impossible_subcat_infl_combination(dat_passive,psp).
 %impossible_subcat_infl_combination(norm_passive,psp).  % omdat het woonhuis behouden is gebleven
 impossible_subcat_infl_combination(sbar_passive,psp).
 impossible_subcat_infl_combination(sbar_subj_te_passive,psp).
