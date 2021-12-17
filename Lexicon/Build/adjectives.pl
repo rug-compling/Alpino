@@ -32396,7 +32396,7 @@ a([e(simpele),
    ere(simpelere),
    no_e(simpel),
    st(simpelst),
-   ste(simpelste)],adv,[],[]).
+   ste(simpelste)],adv,[subject_vp],[]).
 
 a([e(simplistische),
    no_e(simplistisch)],adv,[],[]).

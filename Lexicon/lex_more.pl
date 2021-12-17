@@ -3812,6 +3812,14 @@ phrasal_entry(verb(hebben,inf,transitive),Label,verNvoudig) -->
        simple_convert_number(N,_),
        concat_stems([ver,N,voudig],Label,'')
     }.
+phrasal_entry(verb(hebben,pl,transitive),Label,verNvoudig) -->
+    n_word(VerNVoudig),
+    {  atom(VerNVoudig),
+       atom_concat(ver,NVoudig,VerNVoudig),
+       atom_concat(N,voudigen,NVoudig),
+       simple_convert_number(N,_),
+       concat_stems([ver,N,voudig],Label,'')
+    }.
 phrasal_entry(verb(hebben,psp,transitive),Label,verNvoudig) -->
     n_word(VerNVoudig),
     {  atom(VerNVoudig),
