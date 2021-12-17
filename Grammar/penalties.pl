@@ -590,6 +590,12 @@ syntactic_penalty_nl(Id,_,_,r1(Id)).
 syntactic_penalty_nl(Id,_,Ds,Feature) :-
     nth(N,Ds,D),
     nth_syntactic_penalty(Id,N,D,Feature).
+syntactic_penalty_nl(vp_arg_v(pred),_,[Pred,tree(Vproj,_,_,_)],subj_pred_agree(Num1,Num2)) :-
+    Pred = tree(_,pred_np,[tree(NP,_,_,_)],_),
+    alpino_data:np_agr(NP,Agr1),
+    alpino_data:subj_agr(Vproj,Agr2),
+    num(Agr1,Num1),
+    num(Agr2,Num2).
 
 %% punish some ungrammatical constructions which the grammar cannot rule out
 %% "een [bomalarm en demonstraties]
@@ -597,6 +603,15 @@ syntactic_penalty_nl(np_det_n,_NP,[tree(Det,_,_,_), Conj],p2(det_n_agr)) :-
     det_conj_n_no_agr(Det,Conj).
 syntactic_penalty_nl(np_det_n_q,_NP,[_, tree(Det,_,_,_), Conj, _],p2(det_n_agr)) :-
     det_conj_n_no_agr(Det,Conj).
+
+%% ?waar is dat nodig voor/waar is dat voor nodig
+%% waar is dat belangrijk voor/?waar is dat voor belangrijk
+
+syntactic_penalty_nl(a_a_er_pp_comp,_,[NodigTree,VoorTree],a_er(Nodig,Voor)) :-
+    NodigTree = tree(NodigCat,_,_,_),
+    VoorTree = tree(VoorCat,_,_,_),
+    alpino_data:prep(VoorCat,Voor),
+    alpino_data:hstem(NodigCat,Nodig).
 
 %% we want to recognize non-standard orderings in the `middle field'. For
 %% instance:
@@ -649,6 +664,12 @@ nth_syntactic_penalty(Id,N,D,r2(Id,N,DId)) :-
 
 nth_syntactic_penalty(Id,N,D,r2(Id,N,DId)) :-
     rulename_lex(D,DId).
+
+
+num(Agr,sg) :-
+    \+ alpino_data:pl(Agr).
+num(Agr,pl) :-
+    \+ alpino_data:sg(Agr).
 
 coord_agr(Cat,Conj,sg) :-
     alpino_data:conj(Cat,Conj),
