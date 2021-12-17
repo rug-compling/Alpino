@@ -1474,6 +1474,7 @@ strip_part(F,F).
 %% *het gekomen zijn is fijn
 %% *he zijn gekomen is fijn
 
+impossible_nominalization_frame(het_subj).
 impossible_nominalization_frame(so_nonp_copula).
 impossible_nominalization_frame(so_nonp_copula_vp).
 impossible_nominalization_frame(so_nonp_copula_sbar).

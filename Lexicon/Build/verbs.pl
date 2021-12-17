@@ -1018,6 +1018,7 @@ m(v_root(wil,willen),
 	er_pp_sbar(aan),         % hij wil er niet aan dat ..
         part_pc_er_transitive(aan),    % omdat zij er niet aanwilden
 
+	%% eigenlijk kan dat niet: verplichte modifier...
 	fixed([er_pp(in),nor_mod_pp(bij)],no_passive), % deze redenering wil er bij mij niet in
 	fixed([er_pp(in),nor_mod_pp(bij),sbar_subj],no_passive), % het wil er bij mij niet in dat ...
 	     % ik wil (het) niet hebben dat ...
@@ -7827,6 +7828,7 @@ v(ga,gaat,inflected(gaan,gane),gegaan,ging,gingen,ga,
 	part_ld_pp(in),
 	part_pc_pp(in,op),
 	part_pc_pp(in,tegen),
+	%% eigenlijk kan dat niet: verplichte modifier...
 	fixed([er_pp(in),nor_mod_pp(bij)],no_passive), % deze redenering gaat er bij mij niet in
 	fixed([er_pp(in),nor_mod_pp(bij),sbar_subj],no_passive), % het gaat er bij mij niet in dat ...
 %	part_pc_pp(in,bij),     
@@ -26909,10 +26911,12 @@ v(voer,voert,voeren,gevoerd,voerde,voerden,
 	fixed([ap_pred(ver),vp_subj],no_passive),
 	fixed([ap_pred(ver),dat,vp_subj],no_passive),
 	fixed([[ten,tonele],acc],norm_passive),
-	fixed([{[pc(over),acc(discussie)]}],norm_passive),
-	fixed([{[pc(over),acc(onderhandeling)]}],norm_passive),
-	fixed([{[pc(met),acc(gesprek)]}],norm_passive),
-	fixed([{[pc(over),acc(gesprek)]}],norm_passive),
+	np_mod_pp(met),
+	np_mod_pp(over),
+%	fixed([{[pc(over),acc(discussie)]}],norm_passive),
+%	fixed([{[pc(over),acc(onderhandeling)]}],norm_passive),
+%	fixed([{[pc(met),acc(gesprek)]}],norm_passive),
+%	fixed([{[pc(over),acc(gesprek)]}],norm_passive),
 	ld_pp,
 	np_ld_pp,
 	part_als_pred_np(op),

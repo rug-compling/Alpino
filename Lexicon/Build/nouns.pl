@@ -1308,7 +1308,7 @@ n([pl(aannemingen),sg(aanneming)],de,[sbar]).
 
 n([mass(aanpak)],de,[]).
 
-n([pl(aanpassingen),sg(aanpassing)],de,[]).
+n([pl(aanpassingen),sg(aanpassing)],de,[sbar,vp]).
 
 n([mass(aanplant),pl(aanplanten),sg(aanplant)],de,[]).
 
@@ -40107,7 +40107,7 @@ n([pl(werkvormen),sg(werkvorm)],de,[]).
 
 n([pl(werkweken),sg(werkweek)],de,[]).
 
-n([pl(werkwijzen),sg(werkwijze)],de,[sbar]).
+n([pl(werkwijzen),sg(werkwijze)],de,[sbar,vp]).
 
 n([pl(werkzaamheden),sg(werkzaamheid)],de,[sbar,vp]).
 
@@ -40365,6 +40365,7 @@ n([pl(wijzers),sg(wijzer)],de,[],[dim(wijzertje)]).
 
 n([pl(wijzigingen),sg(wijziging)],de,
   [sbar,
+   vp,
    subject_sbar],
   [s(beleid),
    i(grond_wet,grondwets),
