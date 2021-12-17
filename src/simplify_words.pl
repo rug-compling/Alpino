@@ -27,6 +27,19 @@ words_transformation(r(Rel,p(Cat0)),Ds0,r(Rel,p(Cat)),[Hd|Ds]) :-
     simplify(Old,New,Cat0,Cat,D,E0,E),
     adapt_det(Ds1,Ds).
 
+words_transformation(r(Rel,p(Cat)),Ds0,
+		     r(Rel,p(Cat)),[Hd,VC|Ds]) :-
+    Hd0 = tree(r(hd,adt_lex(Cat0,Old,Old,Pos,Atts)),[]),
+    lists:select(Hd0,Ds0,Ds1),
+    lists:member(Old,[heb,ben]),
+    Hd  = tree(r(hd,adt_lex(Cat0,{[heb,ben]},{[heb,ben]},Pos,Atts)),[]),
+    VC0 = tree(r(vc,p(ppart)),VC0Ds),
+    lists:select(VC0,Ds1,Ds),
+    subjects(Ds,VC0Ds),
+    VC  = tree(r(vc,p(ppart)),_),
+    apply_words_transformations(VC0,VC),
+    VC0 \== VC.
+
 words_transformation(r(Rel,p(mwu(_,_))),Ds,
 		     r(Rel,adt_lex(Cat,Lem,Lem,Pos,Atts)),[]):-
     mwu(Ds,Words),
@@ -45,6 +58,18 @@ words_transformation(r(Rel,Cat),Ds0,r(Rel,Cat),Ds) :-
     pattern_rule(Left,Right),
     match_left_pattern(Left,Ds0,Ds1),
     add_right_pattern(Right,Ds1,Ds).
+
+subjects(List0,List) :-
+    S1 = tree(r(su,L1),_),
+    lists:member(S1,List0),
+    S = tree(r(su,L),_),
+    lists:member(S,List),
+    id(L1,L).
+
+id(i(N),i(N)).
+id(i(N,_),i(N)).
+id(i(N),i(N,_)).
+    
 
 head_rel(hd).
 head_rel(cmp).
@@ -181,6 +206,18 @@ stree_ds([Rel=Stree|StreeDs],[tree(r(Rel,Cat),N)|Ds]):-
 
 lemma_to_stree(anderzijds,p(pp),[hd=aan,obj1=np(det=de,mod=ander,hd=kant)]).
 
+%% NAVO-interventie --> interventie
+simplify(Compound,Atom,Cat,Cat,noun,E,E) :-
+    atom(Compound),
+    alpino_util:split_atom(Compound,"_",[Left,Atom]),
+    \+ Atom = 'DIM',
+    \+ (   hdrug_util:concat_all([Left,Atom],LeftAtom,''),
+	   alpino_lex:lexicon(_,_,[LeftAtom],[],normal)
+       ),
+    \+ (   hdrug_util:concat_all([Left,Atom],LeftAtom,'-'),
+	   alpino_lex:lexicon(_,_,[LeftAtom],[],normal)
+       ).
+
 simplify(aandachtig,goed,Cat,Cat,_,E,E).
 simplify(aangaande,over,Cat,Cat,_,E,E).
 simplify(aangezien,omdat,Cat,Cat,_,E,E).
@@ -193,7 +230,7 @@ simplify(abuis,fout,Cat,Cat,_,E,E).
 simplify(acceptatie,goedkeuring,Cat,Cat,_,E,E).
 simplify(accomodatie,{[gebouw,locatie]},Cat,Cat,_,E,E).
 simplify(accordeer,keur_goed,Cat,Cat,_,E,E).
-simplify(acht,vind,Cat,Cat,_,E,E).
+simplify(acht,vind,Cat,Cat,verb,E,E).
 simplify(actualiseer,{[pas_aan,moderniseer,werk_bij]},Cat,Cat,_,E,E).
 simplify(acuut,direct,Cat,Cat,_,E,E).
 simplify(additioneel,voeg_toe,ap,ppart,_,E,E).
@@ -428,7 +465,7 @@ simplify(verifieer,controleer,Cat,Cat,_,E,E).
 simplify(verklaar,zeg,Cat,Cat,_,E,E).
 simplify(volgaarne,graag,Cat,Cat,_,E,E).
 simplify(voorts,ook,Cat,Cat,_,E,E).
-simplify(vorder,eis,Cat,Cat,_,E,E).
+% simplify(vorder,eis,Cat,Cat,_,E,E).  alleen als er obj1 is? 
 simplify(wederrechtelijk,onwettig,Cat,Cat,_,E,E).
 simplify(weifel,aarzel,Cat,Cat,_,E,E).
 simplify(wend_aan,gebruik,Cat,Cat,_,E,E).

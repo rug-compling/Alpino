@@ -161,6 +161,7 @@ important_mod_stem(fout,_).
 important_mod_stem(geenszins,_).
 important_mod_stem(goed,_).
 important_mod_stem(hier,_).
+important_mod_stem(hoe,_).   % ik vraag me af hoe eerlijk ze zijn -> *ik vraag me af eerlijk ze zijn
 important_mod_stem(nauwelijks,_).
 important_mod_stem(negatief,_).
 important_mod_stem(positief,_).
@@ -177,13 +178,22 @@ important_mod_stem_hd(ModLem,_,adt_lex(_,Lem,_,_,_),[]):-
 
 important_mod_stem_hd0(eigen,been).
 
-important_mod(r(_,adt_lex(_,_,_,num,[numtype=rang])),_,_).
-important_mod(r(_,adt_lex(_,Lem,_,adj,[aform=compar])),_,_) :-
+important_mod(r(_,Cat),A,B) :-
+    important_mod(Cat,A,B).
+important_mod(i(_,L),A,B) :-
+    important_mod(L,A,B).
+important_mod(adt_lex(_,_,_,num,Atts),_,_) :-
+    lists:member(numtype=rang,Atts).
+important_mod(adt_lex(_,Lem,_,adj,Atts),_,_) :-
+    lists:member(aform=compar,Atts),
     \+ lists:member(Lem,[eerder,laat,nader,ver]).
-important_mod(r(_,adt_lex(_,_,_,adj,[aform=super])),_,_).
-important_mod(r(_,adt_lex(_,Stem,_,Pos,_)),_,_):-
+important_mod(adt_lex(_,_,_,adj,Atts),_,_) :-
+    lists:member(aform=super,Atts).
+important_mod(adt_lex(_,_,_,adj,Atts),_,_) :-
+    lists:member(iets=true,Atts).
+important_mod(adt_lex(_,Stem,_,Pos,_),_,_):-
 	important_mod_stem(Stem,Pos).
-important_mod(r(_,adt_lex(_,Stem,_,Pos,_)),Hd,HdDs):-
+important_mod(adt_lex(_,Stem,_,Pos,_),Hd,HdDs):-
 	important_mod_stem_hd(Stem,Pos,Hd,HdDs).
 
 important_modifier(tree(Cat,_),Hd,HdDs,_):-
@@ -192,6 +202,8 @@ important_modifier(tree(_Cat,Ds),Hd,HdDs,_) :-
     lists:member(Mod,Ds),
     important_modifier1(Mod,Hd,HdDs).
 important_modifier(tree(r(mod,p(rel)),_),_,_,[r('--',p(np))|_]).
+important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,er,_,_,_),[],_).   % clefts, er zijn er die problemen hebben
+important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,het,_,_,_),[],_).  % clefts, het zijn schurken die dat doen
 
 important_modifier1(tree(Cat,_),Hd,HdDs):-
     important_mod(Cat,Hd,HdDs).

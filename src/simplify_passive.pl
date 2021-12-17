@@ -1,7 +1,5 @@
 :- module(alpino_simplify_passive, [ apply_passive_transformations/2 ]).
 
-%% --------------------------------------------------------------------------------------------- %%
-
 apply_passive_transformations(Tree0,Tree) :-
     dont_paraphrase(Tree0), !,
     Tree0 = Tree.
@@ -17,7 +15,8 @@ passive_transformations(tree(Cat0,Ds0),tree(Cat,Ds),C) :-
     passive_transformations(tree(Cat1,Ds1),tree(Cat,Ds),C).
 passive_transformations(tree(Cat,Ds0),tree(Cat,Ds),C) :-
     Cat = r(Rel,_),
-    passive_transformations_list(Ds0,Ds,[Rel|C]).
+    raiser_head(Ds0,Raiser),
+    passive_transformations_list(Ds0,Ds,[Raiser/Rel|C]).
 
 passive_transformations_list([],[],_).
 passive_transformations_list([H0|T0],[H|T],C) :-
@@ -144,12 +143,12 @@ passive_transformation(Cat0,Ds0,Cat,Ds,Context) :-
 passive_transformation(r(Rel,Cat),Ds0,
 		       r(Rel,Cat),Ds, Context,Door ) :-
 
-    context_allows_passive(Rel,Cat,Context),
     Su = tree(r(su,SUCAT1),SUDS1),
     Hd = tree(r(hd,adt_lex(LexCat,word,word,verb,Feats)),[]),
     Vc = tree(r(vc,p(ppart)),VcDs0),
 
-    lists:select(Su,Ds0,Ds1),  \+ men(Su),   % \+ empty(Su),   ??? removed because of relatives
+    lists:select(Su,Ds0,Ds1),  \+ men(Su),  
+    context_allows_passive(Rel,Cat,Context,Su),
     lists:select(Hd,Ds1,Ds2),  
     lists:select(Vc,Ds2,DsRest), 
 
@@ -184,7 +183,7 @@ passive_transformation(r(Rel,Cat),Ds0,
 passive_transformation(r(Rel,Cat),Ds0,
 		       r(Rel,Cat),Ds,  Context, Door ) :-
 
-    context_allows_passive(Rel,Cat,Context),
+    context_allows_passive(Rel,Cat,Context,none),
 
     Su = tree(r(su,_),_),
     Hd = tree(r(hd,adt_lex(LexCat,word,word,verb,Feats)),[]),
@@ -216,13 +215,13 @@ passive_transformation(r(Rel,Cat),Ds0,
 passive_transformation(r(Rel,Cat),Ds0,
 		       r(Rel,Cat),Ds,  Context, Door ) :-
 
-    context_allows_passive(Rel,Cat,Context),
 
     Su = tree(r(su,SUCAT1),SUDS1),
     Hd = tree(r(hd,adt_lex(_,ben,ben,verb,Feats)),[]),
     Vc = tree(r(vc,p(ppart)),VcDs0),
 
-    lists:select(Su,Ds0,Ds1),  \+ men(Su), % \+ empty(Su),  removed because of e.g. relatives
+    lists:select(Su,Ds0,Ds1),  \+ men(Su), 
+    context_allows_passive(Rel,Cat,Context,Su),
     lists:select(Hd,Ds1,Ds2),  
     lists:select(Vc,Ds2,DsRest), 
 
@@ -256,7 +255,7 @@ passive_transformation(r(Rel,Cat),Ds0,
 passive_transformation(r(Rel,Cat),Ds0,
 		       r(Rel,Cat),Ds,  Context, Door ) :-
 
-    context_allows_passive(Rel,Cat,Context),
+    context_allows_passive(Rel,Cat,Context,none),
 
     Su = tree(r(su,_),_),
     Hd = tree(r(hd,adt_lex(_,ben,ben,verb,Feats)),[]),
@@ -397,15 +396,19 @@ remove_er(List0,List) :-
     lists:select(Er,List0,List).
 remove_er(List,List).
 
+%% Maria wil worden gekust door Noa =/= Noa wil Maria kussen
+context_allows_passive(vc,p(inf),[noraiser/_|_],Su) :- \+ empty(Su), Su \= none.
+%% Frankrijk verzoekt op de hoogte te worden gesteld =/= Frankrijk verzoekt men stelt op de hoogte
+context_allows_passive(body,p(inf),[_/vc,noraiser/_|_],Su) :- \+ empty(Su), Su \= none.
+%% Maria zou worden gekust door Noa = Noa zou Maria kussen
+context_allows_passive(vc,p(inf),[raiser/_|_],_).
+%% Maria bleek te worden gekust door Noa = Noa bleek Maria te kussen
+context_allows_passive(body,p(inf),[_/vc,raiser/_|_],_).
+context_allows_passive(_,p(smain),_,_).
+context_allows_passive(_,p(ssub),_,_).
+context_allows_passive(_,p(sv1),_,_).
 
-context_allows_passive(vc,p(inf),_).
-context_allows_passive(body,p(inf),[vc|_]).
-context_allows_passive(body,p(inf),[body,vc|_]).
-context_allows_passive(_,p(smain),_).
-context_allows_passive(_,p(ssub),_).
-context_allows_passive(_,p(sv1),_).
-
-%% verb_allows_passive(Verb,word/bin,person/not_person,door/not_door)
+%% verb_allows_passive(Verb,word/ben,person/not_person,door/not_door)
 
 verb_allows_passive(V,Word,Person,Door) :-
     verb_disallows_passive(V,Word,Person,Door),
@@ -415,6 +418,7 @@ verb_allows_passive(_,_,_,_).
 
 verb_disallows_passive(bedek,ben,_,not_door).
 verb_disallows_passive(beken,_,_,_).
+verb_disallows_passive(ben,_,_,_).                 % zoals jarenlang het geval is geweest
 verb_disallows_passive(bevriend,_,_,_).
 verb_disallows_passive(breek_aan,ben,_,not_door).  % het moment is aangebroken =/= men breekt het moment aan
 verb_disallows_passive(geboren,_,_,_).
@@ -514,3 +518,14 @@ tree_member(Sub,Sub).
 tree_member(Sub,tree(_,Ds)) :-
     lists:member(D,Ds),
     tree_member(Sub,D).
+
+raiser_head(Ds0,Raiser) :-
+    Hd = tree(r(hd,adt_lex(_,L,_M,_V,_F)),[]),
+    lists:select(Hd,Ds0,Ds1),
+    raiser(L),
+    Vc0 = tree(r(vc,p(Inf)),_),
+    lists:select(Vc0,Ds1,_),
+    lists:member(Inf,[inf,ti,oti]),
+    !,
+    Raiser = raiser.
+raiser_head(_,no_raiser).
