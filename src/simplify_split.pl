@@ -2,6 +2,13 @@
 
 %% --------------------------------------------------------------------------------------------- %%
 
+
+%% TODO:
+%% de vraag die we ons moeten stellen is wie er komt
+%% => wie komt er. Deze moeten we stellen.
+%% requires frame for "stellen" requires "vraag", but we only have a pronoun
+%% 
+
 apply_split_transformations(Tree0,Tree) :-
     split_transformations(Tree0,Tree1),
     alpino_cg:collapse_all(Tree1,Tree2,List),
