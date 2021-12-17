@@ -1069,7 +1069,7 @@ v_raiser(obj_control(_)).     % ik heb hem leren fietsen
 v_raiser(subj_control(_)).    % hij heeft staan praten
 v_raiser(aci).                % ik heb hem zien vallen
 v_raiser(aci_no_obj).         % ik heb de schilderijen laten stelen
-
+v_raiser(fixed([vc(_,_,_)|_],_)).  % ik heb laten zien een beslissing te kunnen nemen
 
 check_zijn(P0,P) :-
     check_tag(verb(zijn,PSP,SC),P0,P),
@@ -1640,6 +1640,7 @@ check_ap_copula(P0,P) :-
 
 adj_pred_infl(no_e(_)).
 adj_pred_infl(pred(_)).
+adj_pred_infl(pred_er(_)).
 adj_pred_infl(er(_)).
 adj_pred_infl(st(_)).
 adj_pred_infl(het_st(_)).
@@ -1662,6 +1663,7 @@ check_ap_pp_copula(P0,P) :-
 
 check_nonp_copula(P0,P) :-
     (   check_tag(complementizer(als),P0,P)
+    ;   check_tag(complementizer(zoals),P0,P)
     ;   check_tag(complementizer(om),P0,P)
     ;   check_ap_pp_copula(P0,P)
     ).
