@@ -141,6 +141,15 @@ tags(Mother,Tags) ::-
     cat(Mother),
     if_defined(Mother:tags,Tags,[]).
 
+np_agr(NP,Agr) ::-
+    NP => np,
+    NP:agr <=> Agr.
+
+subj_agr(VP,Agr) ::-
+    VP => vproj,
+    VP:subj <=> Subj,
+    Subj:e_agr <=> Agr.
+
 %% no longer used?
 %agr_val(sg,Val) :-
 %    Val:agr => sg.
