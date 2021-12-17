@@ -122,14 +122,16 @@ remove_existing_particles([H|T0],[H|T],SvpList) :-
 svp_has_part(SvpList,Part) :-
     member(Svp,SvpList),
     alpino_data:dt(Svp,Hwrd,_,_,_),
-    alpino_data:lexical(Hwrd,Part,_,_,_,_,_,_).
+    alpino_data:lexical(Hwrd,Part0,_,_,_,_,_,_),
+    Part0 == Part.
 
 svp_has_part(SvpList,Part) :-
     member(SvpConj,SvpList),
     alpino_data:dt_cnj_crd(SvpConj,Cnj,_),
     member(Svp,Cnj),
     alpino_data:dt(Svp,Hwrd,_,_,_),
-    alpino_data:lexical(Hwrd,Part,_,_,_,_,_,_).
+    alpino_data:lexical(Hwrd,Part0,_,_,_,_,_,_),
+    Part0 == Part.
 
 reassert_lex_bitcode(Frame,Root,Bitcode,Dt,SimpleDt,NewBitcode) :-
     clause(alpino_cg:lex(Frame,Root,Bitcode,Dt,SimpleDt,Surfs),_,Ref),
@@ -391,7 +393,6 @@ dict_entry_with_dt(Root,Frame,SurfaceAtom) :-
     alpino_lex:lexicon(Frame,Root0,SurfaceList,[],_),
     simplify_lemma(Root0,Root).
 
-
 %%% hack
 filter_adj_end(Root,End) :-
     adj_end_v_amb(Root),
@@ -429,6 +430,15 @@ root_surface__(Root,L0,L) :-
 root_surface__(Root,L0,L) :-
     alpino_lex:inv_lex(Root,Surf),
     surf_to_list(Surf,L0,L).
+
+root_surface__(VerNVoudig,[Surf|S],S) :-
+    atom_concat(_,voudig,VerNVoudig),
+    (  atom_concat(VerNVoudig,d,Surf)
+    ;  atom_concat(VerNVoudig,t,Surf)
+    ;  atom_concat(VerNVoudig,en,Surf)
+    ;  atom_concat(VerNVoudig,de,Surf)
+    ;  atom_concat(VerNVoudig,den,Surf)
+    ).
 
 %% for genitive inflection of names
 root_surface__(Root,[Surf|L],L) :-
@@ -891,11 +901,12 @@ condition_sc(nonp_pred_np_ndev,predc).
 condition_sc(ap_pred_np,predc).
 condition_sc(als_pred_np,predc).
 
-condition_sc(pred_np,obj1).
-condition_sc(nonp_pred_np,obj1).
-condition_sc(nonp_pred_np_ndev,obj1).
-condition_sc(ap_pred_np,obj1).
-condition_sc(als_pred_np,obj1).
+%%%% ik verzocht toen op de hoogte te worden gesteld
+%condition_sc(pred_np,obj1).
+%condition_sc(nonp_pred_np,obj1).
+%condition_sc(nonp_pred_np_ndev,obj1).
+%condition_sc(ap_pred_np,obj1).
+%condition_sc(als_pred_np,obj1).
 
 condition_sc(ninv(L,_),Cond) :-
     condition_sc(L,Cond).
@@ -1021,7 +1032,7 @@ apply_check(not_sg_su,DT,_) :-
 apply_check(not_sg_su,DT,_) :-
     DT:su:hwrd:lexical <=> Je,
     nonvar(Je),
-    lists:member(Je,[ik,je,jij,hij,het,zij]),
+    lists:member(Je,[ik,je,jij,hij,het]),
     !,
     fail.
 apply_check(not_sg_su,_,_).
@@ -1537,6 +1548,15 @@ unknown_root_heuristic(num,Root,_,[],number(hoofd(pl_num)),[Root]) :-
     \+ (   atom_concat(_Verb,Rest,Root),
 	   atom_concat('_',_Part,Rest)
        ).
+
+unknown_root_heuristic(num,Lemma,_Sense,Attr,Frame,[LemmaDe]) :-
+    lists:member(numtype=rang,Attr),
+    atom(Lemma),
+    atom_concat(Lemma,de,LemmaDe),
+    alpino_lex:lexicon(Frame,Lemma,[LemmaDe],[],_),
+    alpino_postags:postag_of_frame(Frame,num,CheckAttr),
+    check_attributes(CheckAttr,Attr,num,Frame,Lemma).
+    
 
 %% op een INF (hij zet het op een lopen)
 unknown_root_heuristic(fixed,Root,Root,[],fixed_part(op_een_v),FinalSurfs) :-
