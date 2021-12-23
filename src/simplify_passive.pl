@@ -322,7 +322,7 @@ select_doorpp(VcDs2,VcDs3,Obj1Cat,Obj1Ds,Door) :-
     doorpp(DoorPP,Obj1Cat,Obj1Ds),
     !,
     Door = door.
-select_doorpp(Ds,Ds,adt_lex(np,men,men,pron,[]),[],not_door).
+select_doorpp(Ds,Ds,adt_lex(np,men,men,pron,[rnum=sg]),[],not_door).
 
 doorpp(DoorPP,Obj1Cat,Obj1Ds) :-
     DoorPP = tree(r(mod,p(pp)),PPDS),
@@ -418,7 +418,8 @@ verb_allows_passive(_,_,_,_).
 
 verb_disallows_passive(bedek,ben,_,not_door).
 verb_disallows_passive(beken,_,_,_).
-verb_disallows_passive(ben,_,_,_).                 % zoals jarenlang het geval is geweest
+verb_disallows_passive(ben,_,_,_). % zoals jarenlang het geval is geweest
+verb_disallows_passive(betrek,ben,_,not_door).
 verb_disallows_passive(bevriend,_,_,_).
 verb_disallows_passive(breek_aan,ben,_,not_door).  % het moment is aangebroken =/= men breekt het moment aan
 verb_disallows_passive(geboren,_,_,_).

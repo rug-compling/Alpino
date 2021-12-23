@@ -101,6 +101,15 @@ modifier_transformation(r(Rel,VAR),Ds0,r(Rel,VAR),Ds,Up) :-
     \+ important_modifier(Mod,Head,HeadDs,Up),
     \+ container_head(Ds,Mod).
 
+%% met name om het gebruik te bevorderen -> om het gebruik te bevorderen
+modifier_transformation(r(Rel,VAR),Ds0,r(Rel,VAR),Ds,Up) :-
+    Mod = tree(r(ModRel,ModInfo),_),
+    lists:select(Mod,Ds0,Ds),
+    modifier_rel(ModRel,ModInfo),
+    Hd = tree(r(hd,_),_),
+    \+ lists:member(Hd,Ds),
+    \+ important_modifier(Mod,none,none,Up).
+
 %% veel te leuk -> te leuk
 %% twee meter te ver -> te ver
 modifier_transformation(r(Rel,p(advp)),Ds0,r(Rel,p(advp)),Ds,_) :-
@@ -137,6 +146,8 @@ partitive(Ds0) :-
         AdHd = tree(r(hd,adt_lex(_,van,_,_,_)),[])
     ;   Hd = tree(r(hd,adt_lex(_,één,_,_,_)),[])
     ;   Hd = tree(r(hd,adt_lex(_,deel,_,_,_)),[]),
+        AdHd = tree(r(hd,adt_lex(_,van,_,_,_)),[])
+    ;   Hd = tree(r(hd,adt_lex(_,elk,_,_,_)),[]),
         AdHd = tree(r(hd,adt_lex(_,van,_,_,_)),[])
     ).
 
