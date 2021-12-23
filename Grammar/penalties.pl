@@ -907,7 +907,7 @@ deriv_ds([H|T],[NH|NT]) :-
     deriv(H,NH),
     deriv_ds(T,NT).
 
-lexical_penalty_frame(gen,Stem,Word,_,_,_,lexical_choice(Stem,Word)).
+%% lexical_penalty_frame(gen,Stem,Word,_,_,_,lexical_choice(Stem,Word)).
 
 lexical_penalty_frame(_,Noun,_,noun(Lid,count,sg),noun,_,bal(Noun,Lid)).
 lexical_penalty_frame(_,Stem,_,_,_,_,stem_best(Stem)).
