@@ -2868,24 +2868,24 @@ dt_extract_attribute(Dt,stype=ynquestion) :-
     \+ alpino_data:not_ynquestion(Dt).
 dt_extract_attribute(Dt,stype=whquestion) :-
     \+ alpino_data:not_whquestion(Dt).
-dt_extract_attribute(Dt,stype=declarative) :-
-    \+ alpino_data:not_declarative(Dt).
 dt_extract_attribute(Dt,stype=imparative) :-
     \+ alpino_data:not_imparative(Dt).
 dt_extract_attribute(Dt,stype=topic_drop) :-
     \+ alpino_data:not_topic_drop(Dt).
+dt_extract_attribute(Dt,stype=declarative) :-
+    \+ alpino_data:not_declarative(Dt).
 
 %%% from adt.pl
 %%% before generation, instantiate Dt on the basis of attribute-values of Adt
 
 dt_apply_attributes(Dt,Attributes) :-
-    (   lists:member(rnum=Val,Attributes)
-    ->  dt_apply_rnum(Val,Dt)
+    (   lists:member(rnum=Val1,Attributes)
+    ->  dt_apply_rnum(Val1,Dt)
     ;   true
     ),
-    (   lists:member(stype=Val,Attributes)
-    ->  dt_apply_stype(Val,Dt)
-    ;   true
+    (   lists:member(stype=Val2,Attributes)
+    ->  dt_apply_stype(Val2,Dt)
+    ;   true 
     ).
 
 dt_apply_rnum(sg,Dt) :-
