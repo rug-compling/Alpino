@@ -206,6 +206,8 @@ stree_ds([Rel=Stree|StreeDs],[tree(r(Rel,Cat),N)|Ds]):-
 
 lemma_to_stree(anderzijds,p(pp),[hd=aan,obj1=np(det=de,mod=ander,hd=kant)]).
 
+/* fun, but almost never useful
+
 %% NAVO-interventie --> interventie
 simplify(Compound,Atom,Cat,Cat,noun,E,E) :-
     atom(Compound),
@@ -217,6 +219,7 @@ simplify(Compound,Atom,Cat,Cat,noun,E,E) :-
     \+ (   hdrug_util:concat_all([Left,Atom],LeftAtom,'-'),
 	   alpino_lex:lexicon(_,_,[LeftAtom],[],normal)
        ).
+*/
 
 simplify(aandachtig,goed,Cat,Cat,_,E,E).
 simplify(aangaande,over,Cat,Cat,_,E,E).
