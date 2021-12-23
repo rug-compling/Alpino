@@ -9,7 +9,7 @@ MPARTS=px pp pd pc pZ pw pi pu pl pe
 TPARTS=px pp pd po pq pc pw pi pu pl pe
 TESTPARTS=px pp pd pc pw pi pu pl pe
 
-MIN_FEATURE_FREQ=0
+MIN_FEATURE_FREQ=$(shell cat min_feature_freq)
 
 default: 
 
@@ -113,7 +113,7 @@ prec:
 %.counts: %.sgz ignore_features
 	zcat $*.sgz\
         | $(ALPINO_HOME)/Disambiguation/count_features\
-        | grep -vF -f ignore_features > $*.counts
+        | grep -v -f ignore_features > $*.counts
 
 %.zest : %.features
 	zcat p[$($*_PARTS)].sgz |\
@@ -133,7 +133,7 @@ prec:
 %.sgz : %.gz
 	zcat $*.gz | sed -e 's/MAXENT#//'  | $(ALPINO_HOME)/Disambiguation/extract_subset -n $(MODEL_NUMBER_ANALYSES) | gzip > $*.sgz
 
-%.features: %.tcounts
+%.features: %.tcounts min_feature_freq
 	awk -F\| 'BEGIN { N=0 }\
                   { if ( $$4 > $(MIN_FEATURE_FREQ) )\
                               {  print N "|" $$1; N++} }'\

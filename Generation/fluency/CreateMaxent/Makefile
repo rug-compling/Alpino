@@ -51,7 +51,7 @@ all: weights tests
 %.counts: %.sgz ignore_features
 	zcat $*.sgz\
         | $(ALPINO_HOME)/Disambiguation/count_features -f \
-        | grep -vF -f ignore_features \
+        | grep -v -f ignore_features \
         | python filter_features.py $(filter_features_flags) > $*.counts
 
 %.features: %.tcounts min_feature_freq
