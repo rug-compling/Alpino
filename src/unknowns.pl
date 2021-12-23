@@ -1137,15 +1137,16 @@ unknown_word_heuristic(P1,R1,W,_,"te-Verb|~p~n",[W],_,len(1)) :-
     \+ W = zijnen,
     \+ W = een,
     \+ starts_with_capital(W),
-    (  atom_concat(_,aan,W)  % te veslaan
-    ;  atom_concat(_,en,W)
+    (  atom_concat(_,aan,W),	% te veslaan
+       atom_concat(Stem,an,W)
+    ;  atom_concat(Stem,en,W)
     ),
     te_context(P1,R1),
     P is P1 + 1, R is R1 + 1,
     (   member(Tag,[ verb('hebben/zijn',inf,intransitive),
 		     verb('hebben/zijn',inf,transitive)
 		   ]),
-	assert_tag(P1,P,R1,R,W,te_verb,Tag),
+	assert_tag(P1,P,R1,R,Stem,te_verb,Tag),
 	fail
     ;   true
     ).

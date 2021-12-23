@@ -1719,6 +1719,11 @@ add_morphology(verb(_,inf,_),BelOp,OpBellen) :-
     add_en(Bel,Bellen),
     atom_concat(Op,Bellen,OpBellen).
 
+%% ze zijn te veslaan
+add_morphology(verb(_,inf,_),Bel,Bellen) :-
+    atom_concat(_,a,Bel),
+    !,
+    atom_concat(Bel,an,Bellen).
 add_morphology(verb(_,inf,_),Bel,Bellen) :-
     !,
     add_en(Bel,Bellen).
