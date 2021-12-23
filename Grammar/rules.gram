@@ -5174,6 +5174,14 @@ grammar_rule(np_np_adv,NP,[N,ADV]):-
     N:nform => (temp;norm;meas_mod;temp_meas_mod),
     n_post_mod_structure(N,ADV,NP).
 
+%% de scheepsbouw , bijvoorbeeld , kan geen verdere offers brengen
+grammar_rule(np_np_comma_adv,NP,[N,COMMA,ADV,OPTCOMMA]):-
+    ADV => post_np_adv,
+    comma(COMMA),
+    optcomma(OPTCOMMA),
+    N:nform => (temp;norm;meas_mod;temp_meas_mod),
+    n_post_mod_structure(N,ADV,NP).
+
 grammar_rule(n_n_loc_adv,NP,[N,ADV]):-
     ADV => adv,
     ADV:tmploc => loc,
@@ -8056,12 +8064,12 @@ short_max_hoe_advp(X) :-
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 %% top_cat --> start (Punc)
-grammar_rule(top_start, TOP, [ START, PUNCT ]):-
+grammar_rule(top_start, TOP, [ START, PUNCT_D ]):-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
-    optend_punct(PUNCT,Type),
+    optend_punct(PUNCT_D,PUNCT),
     TOP => top_cat,
     START => start,
-    START:puncttype <=> Type,
+    START:puncttype <=> PUNCT,
     hd_structure(START,TOP).
 
 grammar_rule(top_start_g1,TOP,[START,PUNCT]) :-
