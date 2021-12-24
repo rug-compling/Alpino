@@ -2370,6 +2370,7 @@ grammar_rule(ecomp,EmptyComp,[]) :-
 %% root --> topic v1 (local) 
 grammar_rule(non_wh_topicalization(np),ROOT,[Topic,OPTCOMMA,Ques]) :-
     Topic => np,
+    not_er_topic_with_men_subject(Topic,Ques),
     non_wh_topic_structure(Ques,Topic,ROOT,OPTCOMMA).
 
 grammar_rule(non_wh_topicalization(pred),ROOT,[Topic,OPTCOMMA,Ques]) :-
