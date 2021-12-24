@@ -23,7 +23,7 @@ else
 EXTRACXXFLAGS=
 endif
 
-PLS=maxent_feature_weights.pl maxent_feature_weights_d.pl maxent_feature_weights_p.pl maxent_feature_weights_c.pl maxent_feature_weights_x.pl maxent_feature_weights_w.pl maxent_feature_weights_i.pl
+PLS=maxent_feature_weights.pl maxent_feature_weights_d.pl maxent_feature_weights_p.pl maxent_feature_weights_c.pl maxent_feature_weights_x.pl maxent_feature_weights_w.pl maxent_feature_weights_i.pl maxent_feature_weights_u.pl maxent_feature_weights_e.pl maxent_feature_weights_l.pl
 POS=maxent_feature_weights.po
 
 ifeq "$(PROLOG)" "sicstus"
@@ -89,6 +89,18 @@ maxent_feature_weights_w.pl:maxent_feature_weights_w.t index.pl estimate2pl
 maxent_feature_weights_i.pl:maxent_feature_weights_i.t index.pl estimate2pl
 	./estimate2pl < maxent_feature_weights_i.t |\
           $(HDRUG) -l index > maxent_feature_weights_i.pl
+
+maxent_feature_weights_u.pl:maxent_feature_weights_u.t index.pl estimate2pl
+	./estimate2pl < maxent_feature_weights_u.t |\
+          $(HDRUG) -l index > maxent_feature_weights_u.pl
+
+maxent_feature_weights_e.pl:maxent_feature_weights_e.t index.pl estimate2pl
+	./estimate2pl < maxent_feature_weights_e.t |\
+          $(HDRUG) -l index > maxent_feature_weights_e.pl
+
+maxent_feature_weights_l.pl:maxent_feature_weights_l.t index.pl estimate2pl
+	./estimate2pl < maxent_feature_weights_l.t |\
+          $(HDRUG) -l index > maxent_feature_weights_l.pl
 
 maxent_feature_weights.po: maxent_feature_weights.pl
 	echo "compile(feature_weights:'maxent_feature_weights.pl'), save_files(maxent_feature_weights,maxent_feature_weights)." | $(HDRUG) -notk
