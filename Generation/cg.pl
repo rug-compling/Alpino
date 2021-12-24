@@ -1481,7 +1481,7 @@ collapse_one(i(Ix),[],Out,Ds,Ps) :-
     (   var(Val)          % we see the index for the first time
     ->  Val = s(Cat,Ds),  % therefore its content should show up here
 	Out = i(Ix,Cat)
-    ;   Val = s(Cat,_),   % seen before, nothing changes
+    ;   Val = s(_,_),   % seen before, nothing changes
 	Out = i(Ix),
 	Ds = []
     ).
