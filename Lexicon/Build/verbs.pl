@@ -8120,7 +8120,7 @@ v(geef,geeft,geven,gegeven,gaf,gaven,
 	                        % ik geef jullie tot vrijdag om ...
         so_control(pass_te),  % hij geeft ons dat te doen
         part_so_control(mee,pass_te),  % hij geeft ons dat boek mee te lezen / te lezen mee
-	np_pc_pp(op),  % ik geef hem op zijn donder/flikker/...
+%	np_pc_pp(op),  % ik geef hem op zijn donder/flikker/...
 	np_mod_pp(bij), % geef er stokbrood bij
         fixed([als_pred,sbar],imp_passive),
         fixed([als_pred,vp],imp_passive),
@@ -12269,7 +12269,7 @@ v(krijg,krijgt,krijgen,gekregen,kreeg,kregen,
 	np_ld_dir,
         np_mod_pp(bovenop),
         pc_pp(met),  % met de wapenstok
-	pc_pp(op),  % op mijn donder/flikker/...
+	% pc_pp(op),  % op mijn donder/flikker/...
         fixed([svp_er_pp(door),acc],no_passive),  % we moeten die veranderingen erdoor krijgen
 	fixed([svp_er_pp(bij),acc],no_passive),	% we krijgen er een kindje / 10 procent / .. bij
 	part_np_pc_er_transitive(bij), % we hebben er een ton bijgekregen
