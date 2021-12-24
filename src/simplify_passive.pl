@@ -1,10 +1,6 @@
 :- module(alpino_simplify_passive, [ apply_passive_transformations/2 ]).
 
 apply_passive_transformations(Tree0,Tree) :-
-    dont_paraphrase(Tree0), !,
-    Tree0 = Tree.
-
-apply_passive_transformations(Tree0,Tree) :-
     apply_unraise_transformations(Tree0,Tree1),
     passive_transformations(Tree1,Tree2,[]),
     apply_raise_transformations(Tree2,Tree).
@@ -425,6 +421,7 @@ verb_disallows_passive(breek_aan,ben,_,not_door).  % het moment is aangebroken =
 verb_disallows_passive(geboren,_,_,_).
 verb_disallows_passive(interesseer,ben,_,not_door).
 verb_disallows_passive(hecht,ben,_,not_door).
+verb_disallows_passive(kleed,ben,_,_).     % ik ben gekleed in jeans
 verb_disallows_passive(open,ben,_,not_door).
 verb_disallows_passive(ontwikkel,ben,_,not_door).
 verb_disallows_passive(overtuig,ben,_,not_door).
@@ -505,20 +502,6 @@ su_node(SuNode,NewSuNode,NewSu) :-
 	NewSuNode = i(Index,SuNodeRest)
     ),
     NewSu = tree(r(su,i(Index)),[]).
-
-dont_paraphrase(Tree) :-
-    tree_member(Sub,Tree),
-    dont_paraphrase_sub(Sub).
-
-dont_paraphrase_sub(tree(r(_,adt_lex(_,_,_,_,Atts)),[])) :-
-    lists:member(stype=topic_drop,Atts).
-dont_paraphrase_sub(tree(r(_,i(_,adt_lex(_,_,_,_,Atts))),[])) :-
-    lists:member(stype=topic_drop,Atts).
-
-tree_member(Sub,Sub).
-tree_member(Sub,tree(_,Ds)) :-
-    lists:member(D,Ds),
-    tree_member(Sub,D).
 
 raiser_head(Ds0,Raiser) :-
     Hd = tree(r(hd,adt_lex(_,L,_M,_V,_F)),[]),

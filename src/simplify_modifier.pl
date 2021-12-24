@@ -215,6 +215,7 @@ important_modifier(tree(_Cat,Ds),Hd,HdDs,_) :-
 important_modifier(tree(r(mod,p(rel)),_),_,_,[r('--',p(np))|_]).
 important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,er,_,_,_),[],_).   % clefts, er zijn er die problemen hebben
 important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,het,_,_,_),[],_).  % clefts, het zijn schurken die dat doen
+important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,iets,_,_,_),[],_). % dat is iets waar we naar verlangen
 
 important_modifier1(tree(Cat,_),Hd,HdDs):-
     important_mod(Cat,Hd,HdDs).
