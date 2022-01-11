@@ -1,4 +1,3 @@
-cdb_part=0
 DATA_NUMBER_ANALYSES=3000
 PARSE_CANDIDATES_BEAM=$(DATA_NUMBER_ANALYSES)
 DATA_MAX_SENTENCE_LENGTH=1000
@@ -25,12 +24,10 @@ ALPINO=Alpino -notk cmdint=off\
           number_analyses=$(DATA_NUMBER_ANALYSES)\
           max_sentence_length=$(DATA_MAX_SENTENCE_LENGTH)\
           parse_candidates_beam=$(PARSE_CANDIDATES_BEAM)\
-          -flag suite ../../../Suites/cdb_part\
           display_main_parts=off\
           -flag treebank ../../../Treebank/cdb\
           unpack_bestfirst=off disambiguation=off\
           end_hook=train_penalties\
-          cdb_part=$(cdb_part)\
           list_all_maxent_features=on\
           batch_command='parser_comparisons_int($(FIRSTKEY),$(LASTKEY))'
 
