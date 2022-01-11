@@ -92,6 +92,7 @@ nodata: make_guide_vector
          sort -u |\
          awk -F\| '{ print $$1}' |\
          ./make_guide_vector > ../src/guides_data.c.$(PROLOG)
+	cp guides_data.c ../src/guides_data.c.$(PROLOG)
 
 TTS=tt_part00001.log.gz tt_part00002.log.gz tt_part00003.log.gz tt_part00004.log.gz tt_part00005.log.gz tt_part00006.log.gz tt_part00007.log.gz tt_part00008.log.gz tt_part00009.log.gz tt_part00010.log.gz tt_part00011.log.gz tt_part00012.log.gz tt_part00013.log.gz tt_part00014.log.gz tt_part00015.log.gz tt_part00016.log.gz tt_part00017.log.gz tt_part00018.log.gz tu_part00001.log.gz tu_part00002.log.gz tu_part00003.log.gz tu_part00004.log.gz tu_part00005.log.gz tu_part00006.log.gz tu_part00007.log.gz tu_part00008.log.gz tu_part00009.log.gz
 
