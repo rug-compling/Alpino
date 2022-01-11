@@ -596,6 +596,15 @@ syntactic_penalty_nl(vp_arg_v(pred),_,[Pred,tree(Vproj,_,_,_)],subj_pred_agree(N
     alpino_data:subj_agr(Vproj,Agr2),
     num(Agr1,Num1),
     num(Agr2,Num2).
+syntactic_penalty_nl(_,Cat,[D,_|_],center_embedding) :-
+    alpino_data:vproj_with_eps3(Cat,EPS),
+    var(EPS),			% eps3=yes iff empty vc in vproj
+    contains_vp(D).
+syntactic_penalty_nl(_,Cat,[Punct,D,_|_],center_embedding) :-
+    alpino_data:punct(Punct),
+    alpino_data:vproj_with_eps3(Cat,EPS),
+    var(EPS),			% eps3=yes iff empty vc in vproj
+    contains_vp(D).
 
 %% punish some ungrammatical constructions which the grammar cannot rule out
 %% "een [bomalarm en demonstraties]
@@ -1114,3 +1123,8 @@ triples_to_freq_feature(Rels,Feature) :-
 
 :- use_module(frames).
 
+contains_vp(tree(C,_,_,_)) :-
+    alpino_data:vp(C).
+contains_vp(tree(_,_,Ds,_)) :-
+    lists:member(D,Ds),
+    contains_vp(D).

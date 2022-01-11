@@ -474,6 +474,9 @@ vp_cat(Cat,Mf) ::-
     Cat => v2_vp,
     Cat:mf <=> Mf.
 
+vp(Cat) ::-
+    Cat => vp.
+
 case(Cat,Case) ::-
     Cat => np,
     Cat:case => case,
@@ -711,6 +714,12 @@ dt_cnj_crd(Dt,Cnj,Crd) ::-
     Dt => dt,
     Dt:cnj <=> Cnj,
     Dt:crd <=> Crd.
+
+vproj_with_eps3(Cat,EPS) ::-
+    Cat => vproj,
+    Cat:eps3 <=> EPS.
+rel(Cat) ::-
+    Cat => rel.
 
 weaken_slash(A,B) ::-
     A => np,
