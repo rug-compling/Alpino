@@ -65,7 +65,7 @@ modifier_transformation(r(Rel,p(np)),Ds0,r(Rel,NPCat),Ds,_) :-
     De = tree(r(det,adt_lex(_,de,_,_,_)),[]),
     Hd = tree(r(hd, adt_lex(_,V,_,_,_)),[]),
     lists:select(Hd,Ds0,Ds1),
-    lists:member(V,[verwezenlijking,realisering]),
+    lists:member(V,[kwestie,vraagstuk,verwezenlijking,realisering]),
     lists:select(De, Ds1, Ds2),
     Mod = tree(r(mod,p(pp)),PPDs0),
     lists:select(Mod,Ds2,[]),
@@ -188,6 +188,15 @@ important_mod_stem_hd(ModLem,_,adt_lex(_,Lem,_,_,_),[]):-
     important_mod_stem_hd0(ModLem,Lem).
 
 important_mod_stem_hd0(eigen,been).
+important_mod_stem_hd0(van,percent).
+important_mod_stem_hd0(van,procent).
+important_mod_stem_hd0(van,'%').
+important_mod_stem_hd0(van,promille).
+important_mod_stem_hd0(Year,Begin) :-
+    lists:member(Begin,[begin,eind,half]),
+    (  alpino_lex:date_year([Year],[])
+    ;  alpino_lex:data_month([Year],[])
+    ).
 
 important_mod(r(_,Cat),A,B) :-
     important_mod(Cat,A,B).
@@ -207,6 +216,20 @@ important_mod(adt_lex(_,Stem,_,Pos,_),_,_):-
 important_mod(adt_lex(_,Stem,_,Pos,_),Hd,HdDs):-
 	important_mod_stem_hd(Stem,Pos,Hd,HdDs).
 
+
+%% "in het algemeen"
+ignore_modifier(tree(r(mod,p(pp)),
+		     [tree(r(hd,adt_lex(pp,in,_,prep,_)),[]),
+		      tree(r(obj1,p(np)),
+			   [tree(r(hd,adt_lex(np,algemeen,_,noun,_)),[]),
+			    tree(r(det,adt_lex(detp,het,_,det,_)),[])])])).
+
+
+important_modifier(Tree,_,_,_) :-
+    ignore_modifier(Tree),
+    !,
+    fail.
+
 important_modifier(tree(Cat,_),Hd,HdDs,_):-
     important_mod(Cat,Hd,HdDs).
 important_modifier(tree(_Cat,Ds),Hd,HdDs,_) :-
@@ -216,6 +239,30 @@ important_modifier(tree(r(mod,p(rel)),_),_,_,[r('--',p(np))|_]).
 important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,er,_,_,_),[],_).   % clefts, er zijn er die problemen hebben
 important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,het,_,_,_),[],_).  % clefts, het zijn schurken die dat doen
 important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,iets,_,_,_),[],_). % dat is iets waar we naar verlangen
+important_modifier(tree(r(mod,adt_lex(VanCat,Van,_,VanPos,_)),[]),adt_lex(GebruikCat,Gebruik,_,GebruikPos,_),[],_) :-
+    check_pmi(Gebruik,GebruikPos,GebruikCat,Van,VanPos,VanCat).
+
+important_modifier(tree(r(mod,p(_)),PPDS),adt_lex(GebruikCat,Gebruik,_,GebruikPos,_),[],_) :-
+    PREPD = tree(r(hd,adt_lex(VanCat,Van,_,VanPos,_)),[]),
+    lists:member(PREPD,PPDS),
+    check_pmi(Gebruik,GebruikPos,GebruikCat,Van,VanPos,VanCat).
+
+check_pmi(Gebruik0,GebruikPos,GebruikCat,Van0,VanPos,VanCat) :-
+    adapt_psp(GebruikCat,Gebruik0,Gebruik),
+    adapt_psp(VanCat,Van0,Van),
+    hdrug_util:debug_message(2,"checking modifier ~w ~w ~w ~w... ~n",[Gebruik,GebruikPos,Van,VanPos]),
+    alpino_penalties:corpus_frequency_lookup(dep35(Van,VanPos,hd/mod,GebruikPos,Gebruik),Val),
+    hdrug_util:debug_message(2,"checking modifier ~w ~w ~w ~w: ~w ~n",[Gebruik,GebruikPos,Van,VanPos,Val]),
+    Val > 1500,
+    hdrug_util:debug_message(1,"keeping modifier ~w ~w ~w ~w: ~w ~n",[Gebruik,GebruikPos,Van,VanPos,Val]).
+
+adapt_psp(_,X,X).
+adapt_psp(ppart,Zeggen,Gezegd) :-
+    alpino_lexical_analysis:search_tag_stem(Zeggen,tag(_,_,_,_,Zeggen,Gezegd,_,adjective(Inf))),
+    ge_adj(Inf).
+
+ge_adj(ge_no_e(_)).
+ge_adj(ge_both(_)).
 
 important_modifier1(tree(Cat,_),Hd,HdDs):-
     important_mod(Cat,Hd,HdDs).
