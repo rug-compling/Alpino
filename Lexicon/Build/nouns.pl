@@ -29566,7 +29566,7 @@ n([pl(riolen),sg(riool)],both,[],[dim(riooltje)]). % Vlaams: de
 
 n([sg(rip),pl(rips)],de,[]).
 
-n([pl('risico\'s'),sg(risico)],het,[sbar,vp]).
+n([pl('risico\'s'),sg(risico)],het,[sbar,vp,subject_sbar,subject_vp]).
  
 n([pl('risico\'s'),sg(risico)],het,[pred_pp(zonder)],
   [s(gezondheid)]).
