@@ -2,24 +2,36 @@
 
 %% --------------------------------------------------------------------------------------------- %%
 
-apply_modifier_transformations(tree(Cat0,Ds0),tree(Cat,Ds)) :-
-    modifier_transformation(Cat0,Ds0,Cat1,Ds1,[Cat]),
-    !,
-    apply_modifier_transformations(tree(Cat1,Ds1),tree(Cat,Ds)).
-apply_modifier_transformations(tree(Cat,Ds0),tree(Cat,Ds)) :-
-    apply_modifier_transformations_list(Ds0,Ds,[Cat]).
+%%% now: just do a transformation anywhere, until no further transformations are possible
+%%%      so we do not assume that a single tree-walk suffices, because a transformation downstairs
+%%%      may make another transformation upstairs possible
+%%% old situation: pragmatisch maar ook zeer juist => pragmatisch maar zeer juist
+%%%                pragmatisch maar zeer juist => pragmatisch maar juist
 
-apply_modifier_transformations(tree(Cat0,Ds0),tree(Cat,Ds),Up) :-
-    modifier_transformation(Cat0,Ds0,Cat1,Ds1,[Cat0|Up]),
+apply_modifier_transformations(Tree0,Tree) :-
+    apply_a_transformation(Tree0,Tree1),
     !,
-    apply_modifier_transformations(tree(Cat1,Ds1),tree(Cat,Ds),Up).
-apply_modifier_transformations(tree(Cat,Ds0),tree(Cat,Ds),Up) :-
-    apply_modifier_transformations_list(Ds0,Ds,[Cat|Up]).
+    apply_modifier_transformations(Tree1,Tree).
+apply_modifier_transformations(Tree,Tree).
 
-apply_modifier_transformations_list([],[],_).
-apply_modifier_transformations_list([H0|T0],[H|T],Up) :-
-    apply_modifier_transformations(H0,H,Up),
-    apply_modifier_transformations_list(T0,T,Up).
+apply_a_transformation(tree(Cat0,Ds0),tree(Cat,Ds)) :-
+    modifier_transformation_and_flatten(Cat0,Ds0,Cat,Ds,[Cat0]).
+apply_a_transformation(tree(Cat,Ds0),tree(Cat,Ds)) :-
+    apply_a_transformation_list(Ds0,Ds,[Cat]).
+
+apply_a_transformation(tree(Cat0,Ds0),tree(Cat,Ds),Up) :-
+    modifier_transformation_and_flatten(Cat0,Ds0,Cat,Ds,[Cat0|Up]).
+apply_a_transformation(tree(Cat,Ds0),tree(Cat,Ds),Up) :-
+    apply_a_transformation_list(Ds0,Ds,[Cat|Up]).
+
+apply_a_transformation_list([H0|T],[H|T],Up) :-
+    apply_a_transformation(H0,H,Up).
+apply_a_transformation_list([H|T0],[H|T],Up) :-
+    apply_a_transformation_list(T0,T,Up).
+
+modifier_transformation_and_flatten(r(Rel,Cat0),Ds0,r(Rel,Cat),Ds,Up) :-
+    modifier_transformation(r(Rel,Cat0),Ds0,r(Rel,Cat1),Ds1,Up),
+    flatten(Cat1,Ds1,Cat,Ds).
 
 modifier_transformation(r(Rel,VAR),A,
 			r(Rel2,i(X,Cat2)),B,Up) :-
@@ -184,20 +196,6 @@ important_mod_stem(te,adv).   % als prep can be ignored "ten vroegste"
 important_mod_stem(vaag,_).
 important_mod_stem(verkeerd,_).
 
-important_mod_stem_hd(ModLem,_,adt_lex(_,Lem,_,_,_),[]):-
-    important_mod_stem_hd0(ModLem,Lem).
-
-important_mod_stem_hd0(eigen,been).
-important_mod_stem_hd0(van,percent).
-important_mod_stem_hd0(van,procent).
-important_mod_stem_hd0(van,'%').
-important_mod_stem_hd0(van,promille).
-important_mod_stem_hd0(Year,Begin) :-
-    lists:member(Begin,[begin,eind,half]),
-    (  alpino_lex:date_year([Year],[])
-    ;  alpino_lex:data_month([Year],[])
-    ).
-
 important_mod(r(_,Cat),A,B) :-
     important_mod(Cat,A,B).
 important_mod(i(_,L),A,B) :-
@@ -212,18 +210,123 @@ important_mod(adt_lex(_,_,_,adj,Atts),_,_) :-
 important_mod(adt_lex(_,_,_,adj,Atts),_,_) :-
     lists:member(iets=true,Atts).
 important_mod(adt_lex(_,Stem,_,Pos,_),_,_):-
-	important_mod_stem(Stem,Pos).
-important_mod(adt_lex(_,Stem,_,Pos,_),Hd,HdDs):-
-	important_mod_stem_hd(Stem,Pos,Hd,HdDs).
+    important_mod_stem(Stem,Pos).
 
+
+%% todo
+%% "in sommige/bepaalde gevallen"
+ignore_modifier(tree(r(mod,p(pp)),
+		     [tree(r(hd,adt_lex(pp,in,_,_,_)),[]),
+		      tree(r(obj1,p(np)),[tree(r(hd,adt_lex(np,geval,_,_,_)),[]),
+					  tree(r(DetMod,adt_lex(_,Sommig,_,_,_)),[])])])) :-
+    lists:member(DetMod,[det,mod]),
+    lists:member(Sommig,[ander,bepalen,dat,de,deze,die,dit,elk,ieder,kom_voor,sommig,veel]).
 
 %% "in het algemeen"
 ignore_modifier(tree(r(mod,p(pp)),
-		     [tree(r(hd,adt_lex(pp,in,_,prep,_)),[]),
+		     [tree(r(hd,adt_lex(pp,In,_,prep,_)),[]),
 		      tree(r(obj1,p(np)),
 			   [tree(r(hd,adt_lex(np,algemeen,_,noun,_)),[]),
-			    tree(r(det,adt_lex(detp,het,_,det,_)),[])])])).
+			    tree(r(det,adt_lex(detp,het,_,det,_)),[])])])) :-
+    lists:member(In,[in,over]).
 
+%% "een beetje"
+ignore_modifier(tree(r(mod,p(np)),
+		     [tree(r(hd,adt_lex(np,beetje,_,noun,_)),[]),
+		      tree(r(det,adt_lex(detp,een,_,det,_)),[])]
+		    )).
+%% "op X moment"
+ignore_modifier(tree(r(mod,p(pp)),
+		     [tree(r(hd,adt_lex(pp,op,_,prep,_)),[]),
+		      tree(r(obj1,p(np)),
+			   [tree(r(hd,adt_lex(np,moment,_,noun,_)),[]),
+			    tree(r(det,adt_lex(detp,_,_,det,_)),[])])])).
+
+%% eens te meer
+ignore_modifier(tree(r(mod,p(advp)),
+		     [tree(r(hd,adt_lex(advp,eens,_,_,_)),[]),
+		      tree(r(mod,p(mwu('te veel','te veel'))),
+			   [tree(r(mwp,adt_lex(advp,te,_,_,_)),[]),
+			    tree(r(mwp,adt_lex(advp,veel,_,_,_)),[])])])).
+
+
+ignore_modifier(tree(r(mod,adt_lex(_,W,_,Pos,Atts)),[])) :-
+    ignore_modifier_stem(W,Pos,Atts).
+
+
+ignore_modifier_stem(al,_,_).
+ignore_modifier_stem(alleen,_,_).
+ignore_modifier_stem(altijd,_,_).
+ignore_modifier_stem(amper,_,_).
+ignore_modifier_stem(bepaald,_,_).
+ignore_modifier_stem(beslist,_,_).
+ignore_modifier_stem(bijvoorbeeld,_,_).
+ignore_modifier_stem(bovendien,_,_).
+ignore_modifier_stem(circa,_,_).
+ignore_modifier_stem(daarom,_,_).
+ignore_modifier_stem(daarbij,_,_).
+ignore_modifier_stem(daarnaast,_,_).
+ignore_modifier_stem(daarna,_,_).
+ignore_modifier_stem(daarnet,_,_).
+ignore_modifier_stem(dan,_,_).
+ignore_modifier_stem(derhalve,_,_).
+ignore_modifier_stem(destijds,_,_).
+ignore_modifier_stem(duidelijk,_,_).
+ignore_modifier_stem(dus,_,_).
+ignore_modifier_stem(echt,_,_).
+ignore_modifier_stem(echter,_,_).
+ignore_modifier_stem(eens,_,_).
+ignore_modifier_stem(eerst,_,_).
+ignore_modifier_stem(enkel,adj,_).
+ignore_modifier_stem(erg,_,_).
+ignore_modifier_stem(even,_,_).
+ignore_modifier_stem(evenwel,_,_).
+ignore_modifier_stem(heel,_,_).
+ignore_modifier_stem(helaas,_,_).
+ignore_modifier_stem(hierbij,_,_).
+ignore_modifier_stem(immers,_,_).
+ignore_modifier_stem(inderdaad,_,_).
+ignore_modifier_stem(inmiddels,_,_).
+ignore_modifier_stem(langzamerhand,_,_).
+ignore_modifier_stem(maar,_,_).
+ignore_modifier_stem(meestal,_,_).
+ignore_modifier_stem(misschien,_,_).
+ignore_modifier_stem(namelijk,_,_).
+ignore_modifier_stem(natuurlijk,_,_).
+ignore_modifier_stem(nauwgezet,_,_).
+ignore_modifier_stem(net,adv,_).
+ignore_modifier_stem(nochtans,_,_).
+ignore_modifier_stem(nog,_,_).
+ignore_modifier_stem(nogal,_,_).
+ignore_modifier_stem(nogmaals,_,_).
+ignore_modifier_stem(nu,_,_).
+ignore_modifier_stem(ongetwijfeld,_,_).
+ignore_modifier_stem(ongeveer,_,_).
+ignore_modifier_stem(onlangs,_,_).
+ignore_modifier_stem(opeens,_,_).
+ignore_modifier_stem(opnieuw,_,_).
+ignore_modifier_stem(overigens,_,_).
+ignore_modifier_stem(ook,_,_).
+ignore_modifier_stem(reeds,_,_).
+ignore_modifier_stem(sowieso,_,_).
+ignore_modifier_stem(steeds,_,_).
+ignore_modifier_stem(tenslotte,_,_).
+ignore_modifier_stem(toch,_,_).
+ignore_modifier_stem(trouwens,_,_).
+ignore_modifier_stem(uiteraard,_,_).
+ignore_modifier_stem(vaak,_,_).
+ignore_modifier_stem(veel,_,_).
+%ignore_modifier_stem(veel,adv,_).  % meer, veel is adj  TODO:  veel meer -> meer
+%% ignore_modifier_stem(ver,adj,Atts) :-  % verder willen met; verder brengen
+%%   lists:member(aform=compar,Atts).
+ignore_modifier_stem(volledig,_,_).
+ignore_modifier_stem(vooral,_,_).
+ignore_modifier_stem(vrijwel,_,_).
+ignore_modifier_stem(weer,_,_).
+ignore_modifier_stem(wel,_,_).
+ignore_modifier_stem(zeer,_,_).
+ignore_modifier_stem(zelfs,_,_).
+ignore_modifier_stem(zojuist,_,_).
 
 important_modifier(Tree,_,_,_) :-
     ignore_modifier(Tree),
@@ -247,14 +350,60 @@ important_modifier(tree(r(mod,p(_)),PPDS),adt_lex(GebruikCat,Gebruik,_,GebruikPo
     lists:member(PREPD,PPDS),
     check_pmi(Gebruik,GebruikPos,GebruikCat,Van,VanPos,VanCat).
 
-check_pmi(Gebruik0,GebruikPos,GebruikCat,Van0,VanPos,VanCat) :-
+check_pmi(Gebruik0,GebruikPos0,GebruikCat,Van0,VanPos0,VanCat) :-
     adapt_psp(GebruikCat,Gebruik0,Gebruik),
     adapt_psp(VanCat,Van0,Van),
+    adapt_pos(GebruikPos0,GebruikPos),
+    adapt_pos(VanPos0,VanPos),
     hdrug_util:debug_message(2,"checking modifier ~w ~w ~w ~w... ~n",[Gebruik,GebruikPos,Van,VanPos]),
     alpino_penalties:corpus_frequency_lookup(dep35(Van,VanPos,hd/mod,GebruikPos,Gebruik),Val),
     hdrug_util:debug_message(2,"checking modifier ~w ~w ~w ~w: ~w ~n",[Gebruik,GebruikPos,Van,VanPos,Val]),
     Val > 1500,
     hdrug_util:debug_message(1,"keeping modifier ~w ~w ~w ~w: ~w ~n",[Gebruik,GebruikPos,Van,VanPos,Val]).
+
+adapt_pos(X,X).
+adapt_pos(noun,noun(tmp)).
+adapt_pos(noun,noun(meas_mod)).
+adapt_pos(noun,noun(amount_meas_mod)).
+adapt_pos(noun,noun(year)).
+adapt_pos(noun,noun(mod)).
+adapt_pos(noun,noun(post_n_n)).
+adapt_pos(noun,noun(ge_v_noun)).
+adapt_pos(name,name('ORG')).
+adapt_pos(name,name('PER')).
+adapt_pos(name,name('LOC')).
+adapt_pos(name,name('MISC')).
+adapt_pos(num,num(hoofd)).
+adapt_pos(num,num(rang)).
+adapt_pos(num,num(score)).
+adapt_pos(det,det(nwh)).
+adapt_pos(det,det(adj_number)).
+adapt_pos(verb,verb(v_noun)).
+adapt_pos(pron,pron(rel)).
+adapt_pos(pron,pron(nwh)).
+adapt_pos(adj,adj(ywh)).
+adapt_pos(adj,adj(iets)).
+adapt_pos(adv,adv(eenmaal)).
+adapt_pos(adv,adv(sentence)).
+adapt_pos(adv,adv(tmp)).
+adapt_pos(adv,adv(ywh)).
+adapt_pos(adv,adv(hoe)).
+adapt_pos(adv,adv(pre_wh)).
+adapt_pos(adv,adv(dir)).
+adapt_pos(adv,adv(loc)).
+adapt_pos(adv,adv(predm)).
+adapt_pos(adv,adv(postadj)).
+adapt_pos(adv,adv(postadv)).
+adapt_pos(adv,adv(post_wh)).
+adapt_pos(adv,adv(tmp_app)).
+adapt_pos(adv,adv(postnp)).
+adapt_pos(adv,adv(intensifier)).
+adapt_pos(adv,adv(me_intensifier)).
+adapt_pos(adv,adv(er_loc)).
+adapt_pos(pp,pp(waar)).
+adapt_pos(pp,pp(er)).
+
+
 
 adapt_psp(_,X,X).
 adapt_psp(ppart,Zeggen,Gezegd) :-
@@ -281,3 +430,11 @@ modifier_rel(app,Cat) :-
     Cat \= adt_lex(_,_,_,name,_),
     Cat \= adt_lex(_,_,_,num,_),
     Cat \= p(mwu(_,_)).
+
+flatten(i(Id,Cat0),Ds0,i(Id,Cat),Ds) :-
+    !,
+    flatten(Cat0,Ds0,Cat,Ds).
+flatten(adt_lex(A,B,C,D,E),[],adt_lex(A,B,C,D,E),[]).
+flatten(p(_),[tree(r(hd,HdCat),Ds)],HdCat,Ds).
+flatten(p(VAR),Ds,p(VAR),Ds) :-
+    Ds = [_,_|_].
