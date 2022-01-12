@@ -16260,6 +16260,7 @@ lemma_root(uit_faken,fake_uit) .
 lemma_root(uit_falen,faal_uit) .
 lemma_root(uit_fantaseren,fantaseer_uit) .
 lemma_root(uit_fascineren,fascineer_uit) .
+lemma_root(uit_faseren,faseer_uit) .
 lemma_root(uit_faxen,fax_uit) .
 lemma_root(uit_feesten,feest_uit) .
 lemma_root(uit_feliciteren,feliciteer_uit) .

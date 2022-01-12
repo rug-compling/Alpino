@@ -3362,15 +3362,17 @@ parse_only_lex(uwen,   uw,     determiner(pron)).
 
 parse_only_lex(zijne,  zijn,   determiner(pron)).
 
-parse_only_lex(moogt,  mag,    verb(hebben,sg3,intransitive)).
-parse_only_lex(moogt,  mag,    verb(hebben,sg3,ld_pp)).
-parse_only_lex(moogt,  mag,    verb(hebben,sg3,ld_adv)).
-parse_only_lex(moogt,  mag,    verb(hebben,sg3,ld_dir)).
-parse_only_lex(moogt,  mag,    verb(hebben,sg3,uit)).
-parse_only_lex(moogt,  mag,    verb(hebben,sg3,transitive_ndev_ndev)).
-parse_only_lex(moogt,  mag,    verb(hebben,sg3,passive)).
-parse_only_lex(moogt,  mag,    verb(hebben,sg3,nonp_pred_np_ndev)).
-parse_only_lex(moogt,  mag,    verb(hebben,sg3,modifier(aux(inf)))).
+parse_only_lex(moogt,  v_root(mag,mogen),    verb(hebben,sg3,intransitive)).
+parse_only_lex(moogt,  v_root(mag,mogen),    verb(hebben,sg3,ld_pp)).
+parse_only_lex(moogt,  v_root(mag,mogen),    verb(hebben,sg3,ld_adv)).
+parse_only_lex(moogt,  v_root(mag,mogen),    verb(hebben,sg3,ld_dir)).
+parse_only_lex(moogt,  v_root(mag,mogen),    verb(hebben,sg3,uit)).
+parse_only_lex(moogt,  v_root(mag,mogen),    verb(hebben,sg3,transitive_ndev_ndev)).
+parse_only_lex(moogt,  v_root(mag,mogen),    verb(hebben,sg3,passive)).
+parse_only_lex(moogt,  v_root(mag,mogen),    verb(hebben,sg3,nonp_pred_np_ndev)).
+parse_only_lex(moogt,  v_root(mag,mogen),    verb(hebben,sg3,modifier(aux(inf)))).
+
+parse_only_lex(geweest, v_root(ben,zijn), verb(hebben,psp,copula)).
 
 parse_only_lex(té,     te,     intensifier).
 parse_only_lex(té,     te,     vp_om_intensifier).
