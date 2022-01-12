@@ -112,7 +112,7 @@ compare_cpu:
                              { F="???" };                                   \
                           if ($$2>1.1*$$1 && $$2>500)                      \
                              { F="!!!" };                                   \
-                          if(F) { print $$1 "\t" $$2 "\t\t" $$3 "\t" F }    \
+                          if(F) { printf "%10d %10d %30s %s\n", $$1, $$2, $$3, F }    \
                           F="";                                             \
                           I=I+1;                                            \
                           N=N+$$1;                                          \
@@ -120,7 +120,7 @@ compare_cpu:
                      }                                                      \
                END {print "------------";                                   \
                     print "AVERAGES after " I-1 " sentences";               \
-                    print "AV " N/(I-1) "\t" M/(I-1) "\t\t\t" (N/(I-1))/(M/(I-1)) "\t\t$(cpu1)"; \
+                    printf "AV %10.1f %10.1f   %8.5f   %30s\n", N/(I-1), M/(I-1), (N/(I-1))/(M/(I-1)),"$(cpu1)"; \
                     print "================================================";           \
                    }' 
 	rm -f $(L1) $(L2) $(L3)

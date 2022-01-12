@@ -23,6 +23,8 @@ l:
 	@$(MAKE) --no-print-directory diffs
 
 include $(ALPINO_HOME)/Makefile.errormining
+cat=cat
+LOGS=*/job*/log
 
 suitepath=../Suites
 suite=g_suite
@@ -164,7 +166,7 @@ compare_field:
          | sed -e 's/^$(pat)#//'\
          | $($(prefix)filter)\
          | awk -F\| '{ print $$ $(field), $$1 }' >$(L2) ;\
-        echo "NEW	PREV		ITEM";\
+        echo "  NEW   PREV  (GTM %)                            ITEM !/?                   SUITE";\
         paste $(L1) $(L2) |\
           awk 'BEGIN {I=1}                                                  \
                      { if (NF==4 && $$2 == $$4) {                           \
@@ -173,15 +175,15 @@ compare_field:
                                  { F="$(more)" };                           \
                               if ($$3>$(diff)*$$1 && $$3>$(min))            \
                                  { F="$(less)" };                           \
-                              if(F) { print $$1 "\t" $$3 "\t\t" $$2 "\t" F "	$(suite)"}\
+                              if(F) { printf "%5.1f  %5.1f %40s %s %23s\n", $$1*100,$$3*100,$$2,F,"$(suite)"}\
                           };                                                \
                           F="";                                             \
                           I=I+1;                                            \
                           N=N+$$1;                                          \
                           M=M+$$3 }                                         \
                      }                                                      \
-               END {print "-------------- $(txt) -------------------";      \
-                    if (I>1) {print N/(I-1) "\t" M/(I-1) "\t\t" I-1 " sentences\t$(score1)\t $(txt)" }; \
+               END {print "------------------------------------ total --------------------------------------";      \
+                    if (I>1) {printf "%6.2f %6.2f %8d sentences %40s %s (%%)\n",  100*N/(I-1), 100*M/(I-1), I-1, "$(score1)", "$(txt)"  }; \
                    }' ; fi
 	@rm -f $(L1) $(L2)
 
@@ -254,7 +256,7 @@ compare_cpu:
                              { F="???" };                                   \
                           if ($$10>1.2*$$4 && $$10>500)                      \
                              { F="!!!" };                                   \
-                          if(F) { print $$4 "\t" $$10 "\t\t" $$1 "\t" F }    \
+                          if(F) { printf "%10d %10d %30s %s\n", $$4, $$10, $$1, F }    \
                           F="";                                             \
                           I=I+1;                                            \
                           N=N+$$4;                                          \
@@ -262,7 +264,7 @@ compare_cpu:
                      }                                                      \
                END {print "------------";                                   \
                     print "AVERAGES after " I-1 " sentences";               \
-                    print "AV " N/(I-1) "\t" M/(I-1) "\t\t\t" (N/(I-1))/(M/(I-1)) "\t\t$(cpu1)"; \
+                    printf "AV %10.1f %10.1f   %8.5f   %30s\n", N/(I-1), M/(I-1), (N/(I-1))/(M/(I-1)),"$(cpu1)"; \
                     print "================================================";           \
                    }' 
 	@rm -f $(L1) $(L2)
