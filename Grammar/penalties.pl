@@ -597,13 +597,13 @@ syntactic_penalty_nl(vp_arg_v(pred),_,[Pred,tree(Vproj,_,_,_)],subj_pred_agree(N
     num(Agr1,Num1),
     num(Agr2,Num2).
 syntactic_penalty_nl(_,Cat,[D,_|_],center_embedding) :-
-    alpino_data:vproj_with_eps3(Cat,EPS),
-    var(EPS),			% eps3=yes iff empty vc in vproj
+    \+ \+ alpino_data:vproj_without_eps3(Cat),
+				% eps3=yes iff empty vc in vproj
     contains_vp(D).
 syntactic_penalty_nl(_,Cat,[Punct,D,_|_],center_embedding) :-
     alpino_data:punct(Punct),
-    alpino_data:vproj_with_eps3(Cat,EPS),
-    var(EPS),			% eps3=yes iff empty vc in vproj
+    \+ \+ alpino_data:vproj_without_eps3(Cat),
+				% eps3=yes iff empty vc in vproj
     contains_vp(D).
 
 %% punish some ungrammatical constructions which the grammar cannot rule out
@@ -668,12 +668,18 @@ syntactic_penalty_nl(a_pp_comp_a,_,[tree(PP,_,_,_),tree(Adj,_,_,_)],meebezig(Pre
     alpino_data:prep(PP,Prep), nonvar(Prep),
     alpino_data:hstem(Adj,Stem), nonvar(Stem).
 
+syntactic_penalty_nl(vp_v_komma_arg(pp),_,[_,_,tree(PP,_,_,_)],s(ld_pp_extra)) :-
+    alpino_data:ld_pp(PP).
+
+%% prevent "we wachten jaar" but generate "we wachten jaren"
+syntactic_penalty_nl(np_n,_,[N],np_n_bare(Surf)) :-
+    rulename_surf(N,Surf).
+
 nth_syntactic_penalty(Id,N,D,r2(Id,N,DId)) :-
     rulename(D,DId).
 
 nth_syntactic_penalty(Id,N,D,r2(Id,N,DId)) :-
     rulename_lex(D,DId).
-
 
 num(Agr,sg) :-
     \+ alpino_data:pl(Agr).
@@ -719,6 +725,10 @@ rulename_lex_postag(tree(_,_,lex(ref(Tag,_,Root,_,_,_,_,_,_,_,_)),_),Root,Tag).
 rulename_lex(tree(_,_,lex(ref(_,_,Root,_,_,_,_,_,_,_,_)),_),Root).
 rulename_lex(tree(_,_,[D],_),RuleName) :-
     rulename_lex(D,RuleName).
+
+rulename_surf(tree(_,_,lex(ref(_,_,_,Root,_,_,_,_,_,_,_)),_),Root).
+rulename_surf(tree(_,_,[D],_),RuleName) :-
+    rulename_surf(D,RuleName).
 
 rulename(tree(_,Name,Ds,_),RuleName) :-
     rulename(Ds,Name,RuleName).
