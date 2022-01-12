@@ -266,7 +266,8 @@ m(v_root(ben,zijn),verb(waren, zijn, past(pl), [aux_simple(inf)])).
 m(v_root(ben,zijn),verb(wezen, zijn, inf_ipp,  [aux_simple(inf)])).
 
 %% VL: het had beter/mooi/leuk geweest
-m(v_root(ben,zijn),verb(geweest,hebben,psp,[copula])).
+%%m(v_root(ben,zijn),verb(geweest,hebben,psp,[copula])).
+%% now in lex.pl, parse_only 
 
 m(v_root(ben,zijn),verb(wezen, zijn, inf,      List)) :-
     m(v_root(ben,zijn),verb_ben(ben,bent,is,zijn,geweest,was,waren,unacc,List)).
@@ -7317,7 +7318,8 @@ v(fascineer,fascineert,fascineren,gefascineerd,fascineerde,fascineerden,
 	vp_subj_so_np])]).
 
 v(faseer,faseert,faseren,gefaseerd,faseerde,faseerden,
-    [h([transitive])]).
+  [h([transitive,
+      part_transitive(uit)])]).
 
 v(fax,faxt,faxen,gefaxt,faxte,faxten,
     [h([transitive,
@@ -13400,9 +13402,9 @@ v(lig,ligt,liggen,gelegen,lag,lagen,
 	fixed([[braak]],no_passive),
 	fixed([[gereed]],no_passive),
 	fixed([[gereed],vp],no_passive),
-	fixed([svp(in,bedoeling)],no_passive),
-	fixed([svp(in,bedoeling),vp_subj],no_passive),
-	fixed([svp(in,bedoeling),sbar_subj],no_passive),
+	fixed([svp_pp(in,bedoeling)],no_passive),
+	fixed([svp_pp(in,bedoeling),vp_subj],no_passive),
+	fixed([svp_pp(in,bedoeling),sbar_subj],no_passive),
 	fixed([[in,de,lijn,der,verwachting]],no_passive),
 	fixed([[in,de,lijn,der,verwachting],sbar_subj],no_passive),
 	fixed([[in,de,lijn,der,verwachting],vp_subj],no_passive),

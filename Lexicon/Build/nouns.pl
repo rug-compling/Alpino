@@ -40563,6 +40563,8 @@ n([mass(wol)],de,[]).
 
 n([pl(wolven),sg(wolf)],de,[],[koren]).
 
+n([pl(wolvinnen),sg(wolvin)],de,[],[]).  % en niet wol_vin
+
 n([mass(wolfram)],het,[]).
 
 n([pl(wolken),sg(wolk)],de,[measure],
