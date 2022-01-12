@@ -715,11 +715,13 @@ dt_cnj_crd(Dt,Cnj,Crd) ::-
     Dt:cnj <=> Cnj,
     Dt:crd <=> Crd.
 
-vproj_with_eps3(Cat,EPS) ::-
+ld_pp(Cat) ::-
+    Cat => pp,
+    Cat:ld_pc => ld_pp.
+
+vproj_without_eps3(Cat) ::-
     Cat => vproj,
-    Cat:eps3 <=> EPS.
-rel(Cat) ::-
-    Cat => rel.
+    Cat:eps3 => no.
 
 weaken_slash(A,B) ::-
     A => np,
