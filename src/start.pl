@@ -3347,6 +3347,7 @@ save_frame(frame(_P0,_P,_Q0,_Q,Stem0,Frame,Surf,His)):-
 	;  His = decap(_)
 	;  His = decap_w_dia
 	;  His = decap_wo_dia
+	;  His = normal(variant(_,_))
 	)
     ->  true
     ;   alpino_genlex:simplify_lemma(Stem0,Stem),
