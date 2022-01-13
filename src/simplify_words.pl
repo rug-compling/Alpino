@@ -78,7 +78,23 @@ mwu([],[]).
 mwu([tree(r(mwp,adt_lex(_,W,_,_,_)),[])|Trees],[W|Ws]) :-
     mwu(Trees,Ws).
 
-%%%
+%%% TODO:
+%%% het is zo dat X => X
+
+
+%%% het verheugt X dat .. => X is blij dat ..
+pattern_rule([sup=l(het,_,_),
+	      hd=l(verheug,verb,Atts),
+	      obj2=OBJ,
+	      su=dt(cp,CP)
+	     ],
+	     [su=OBJ,
+	      hd=l(ben,verb,Atts),
+	      predc=dt(ap,[hd=l(blij,adj,[aform=base]),
+			   vc=dt(cp,CP)
+			  ])
+	     ]).
+
 
 %% ik ben van oordeel => ik vind
 pattern_rule([hd=l(ben,Pos,Atts),
@@ -144,12 +160,21 @@ match_left_pattern_node(Var,Cat,Ds):-
     var(Var),
     !,
     Var = Cat/Ds.
+match_left_pattern_node(Cat/Ds,p(Cat),Ds).
 match_left_pattern_node(dt(Cat,Pattern),p(Cat),Ds) :-
     match_left_pattern(Pattern,Ds,[]).
     
-match_left_pattern_node(l(Lem,Pos,Atts),adt_lex(_,Lem,_,Pos,Atts),[]).
+match_left_pattern_node(l(Lem,Pos,Atts0),adt_lex(_,Lem,_,Pos,Atts),[]):-
+    match_atts(Atts0,Atts).
 match_left_pattern_node(mwu(List),p(mwu(_,_)),Ds) :-
     mwu(Ds,List).
+
+match_atts(Var,_) :-
+    var(Var), !.
+match_atts([],_).
+match_atts([Att|Atts],List) :-
+    lists:member(Att,List),
+    match_atts(Atts,List).
 
 add_right_pattern([],Ds,Ds).
 add_right_pattern([H|T],Ds0,Ds) :-
@@ -160,6 +185,8 @@ add_right_pattern_tree(Rel=Node,Ds,[tree(r(Rel,NewNode),NewDs)|Ds]) :-
     add_right_pattern_node(Node,NewNode,NewDs).
 
 add_right_pattern_node(Cat/Ds,Cat,Ds).
+add_right_pattern_node(dt(Cat,Ds0),p(Cat),Ds) :-
+    add_right_pattern(Ds0,[],Ds).
 add_right_pattern_node(l(Lem,Pos,Atts),adt_lex(_,Lem,_,Pos,Atts),[]).
 
 
