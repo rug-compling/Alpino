@@ -2,6 +2,8 @@ data=px.gz pq.gz pc.gz pp.gz pd.gz pw.gz pi.gz pu.gz pe.gz pl.gz
 
 data: $(data)
 
+## currently, there will be 746 jobs started
+
 install:
 	cp $(data) ../
 
