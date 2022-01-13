@@ -189,12 +189,14 @@ important_mod_stem(nauwelijks,_).
 important_mod_stem(negatief,_).
 important_mod_stem(positief,_).
 important_mod_stem(niet,_).
+important_mod_stem(niets,_).
 important_mod_stem(nimmer,_).
 important_mod_stem(nooit,_).
 important_mod_stem(slecht,_).
 important_mod_stem(te,adv).   % als prep can be ignored "ten vroegste"
 important_mod_stem(vaag,_).
 important_mod_stem(verkeerd,_).
+important_mod_stem(weinig,_).
 
 important_mod(r(_,Cat),A,B) :-
     important_mod(Cat,A,B).
@@ -249,6 +251,12 @@ ignore_modifier(tree(r(mod,p(advp)),
 			   [tree(r(mwp,adt_lex(advp,te,_,_,_)),[]),
 			    tree(r(mwp,adt_lex(advp,veel,_,_,_)),[])])])).
 
+%% volgens mij
+ignore_modifier(tree(r(mod,p(pp)),
+		     [tree(r(hd,adt_lex(pp,volgens,_,_,_)),[]),
+		      tree(r(obj1,adt_lex(np,mij,_,_,_)),[])
+		     ])).
+
 
 ignore_modifier(tree(r(mod,adt_lex(_,W,_,Pos,Atts)),[])) :-
     ignore_modifier_stem(W,Pos,Atts).
@@ -300,6 +308,7 @@ ignore_modifier_stem(nog,_,_).
 ignore_modifier_stem(nogal,_,_).
 ignore_modifier_stem(nogmaals,_,_).
 ignore_modifier_stem(nu,_,_).
+ignore_modifier_stem(onderhand,_,_).
 ignore_modifier_stem(ongetwijfeld,_,_).
 ignore_modifier_stem(ongeveer,_,_).
 ignore_modifier_stem(onlangs,_,_).
@@ -312,7 +321,9 @@ ignore_modifier_stem(sowieso,_,_).
 ignore_modifier_stem(steeds,_,_).
 ignore_modifier_stem(tenslotte,_,_).
 ignore_modifier_stem(toch,_,_).
+ignore_modifier_stem(toen,_,_).
 ignore_modifier_stem(trouwens,_,_).
+ignore_modifier_stem(uiteindelijk,_,_).
 ignore_modifier_stem(uiteraard,_,_).
 ignore_modifier_stem(vaak,_,_).
 ignore_modifier_stem(veel,_,_).
@@ -320,10 +331,12 @@ ignore_modifier_stem(veel,_,_).
 %% ignore_modifier_stem(ver,adj,Atts) :-  % verder willen met; verder brengen
 %%   lists:member(aform=compar,Atts).
 ignore_modifier_stem(volledig,_,_).
+ignore_modifier_stem(volstrekt,_,_).
 ignore_modifier_stem(vooral,_,_).
 ignore_modifier_stem(vrijwel,_,_).
 ignore_modifier_stem(weer,_,_).
 ignore_modifier_stem(wel,_,_).
+ignore_modifier_stem(wellicht,_,_).
 ignore_modifier_stem(zeer,_,_).
 ignore_modifier_stem(zelfs,_,_).
 ignore_modifier_stem(zojuist,_,_).
