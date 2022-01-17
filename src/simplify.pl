@@ -44,3 +44,20 @@ apply_split_transformations(Split,Tree3,Tree) :-
 
     
 
+/*
+
+mysteries
+
+ellipsis? "dat" verwijst naar verwijderd werkwoord:
+Hoewel de gesprekskosten in veel landen zijn verlaagd , zijn niet alle prijzen dat .
+=> Alle prijzen zijn niet dat .
+
+pmi doet het niet:
+Het is een sprong in het diepe.
+=> Het is een sprong 
+
+
+
+
+
+*/
