@@ -1138,3 +1138,5 @@ contains_vp(tree(C,_,_,_)) :-
 contains_vp(tree(_,_,Ds,_)) :-
     lists:member(D,Ds),
     contains_vp(D).
+
+
