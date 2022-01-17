@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="8" id="0" rel="top">
+    <node begin="0" cat="pp" end="7" id="1" rel="--">
+      <node begin="0" end="1" id="2" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" vztype="init" word="Voor"/>
+      <node begin="1" cat="np" end="7" id="3" rel="obj1">
+        <node begin="1" buiging="met-e" case="both" def="indef" end="2" gen="de" getal-n="mv-n" id="4" lemma="al" naamval="stan" num="pl" pdtype="det" per="thi" pos="pron" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,mv-n)" pt="vnw" rel="hd" rnum="pl" root="al" vwtype="onbep" wh="nwh" word="allen"/>
+        <node begin="2" cat="rel" end="7" id="5" rel="mod">
+          <node begin="2" case="no_obl" end="3" gen="de" getal="getal" id="6" index="1" lemma="die" naamval="stan" pdtype="pron" persoon="persoon" pos="pron" postag="VNW(betr,pron,stan,vol,persoon,getal)" pt="vnw" rel="rhd" rnum="pl" root="die" status="vol" vwtype="betr" wh="rel" word="die"/>
+          <node begin="2" cat="ssub" end="7" id="7" rel="body">
+            <node begin="2" end="3" id="8" index="1" rel="su"/>
+            <node begin="3" end="4" genus="onz" getal="ev" id="9" infl="het" lemma="het" naamval="stan" pdtype="pron" persoon="3" pos="det" postag="VNW(pers,pron,stan,red,3,ev,onz)" pt="vnw" rel="obj1" rnum="sg" root="het" status="red" vwtype="pers" wh="nwh" word="het"/>
+            <node begin="4" end="5" id="10" infl="pl" lemma="uit_schreeuwen" pos="verb" postag="WW(pv,tgw,mv)" pt="ww" pvagr="mv" pvtijd="tgw" rel="hd" root="schreeuw_uit" sc="part_transitive(uit)" tense="present" word="uitschreeuwen" wvorm="pv"/>
+            <node begin="5" cat="pp" end="7" id="11" rel="mod">
+              <node begin="5" end="6" id="12" lemma="van" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="van" vztype="init" word="van"/>
+              <node begin="6" end="7" gen="de" genus="zijd" getal="ev" graad="basis" id="13" lemma="pijn" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="obj1" rnum="sg" root="pijn" word="pijn"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="7" end="8" id="14" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Voor allen die het uitschreeuwen van pijn .</sentence>
+</alpino_ds>
