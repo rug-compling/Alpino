@@ -488,7 +488,7 @@ simplify(tevens,ook,Cat,Cat,D,D,E,E).
 simplify(transparantie,duidelijkheid,Cat,Cat,D,D,E,E).
 simplify(tref_aan,vind,Cat,Cat,D,D,E,E).
 simplify(triviaal,gewoon,Cat,Cat,D,D,E,E).
-simplify(uiterst,heel,Cat,Cat,D,D,E,E).
+simplify(uiterst,heel,ap,advp,adj,adv,_,[]).
 simplify(uitfasering,stop,Cat,Cat,D,D,E,E).
 simplify(universeel,algemeen,Cat,Cat,D,D,E,E).
 simplify('up-to-date',actueel,Cat,Cat,D,D,E,E).

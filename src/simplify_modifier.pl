@@ -453,10 +453,17 @@ important_modifier(tree(Cat,_),Hd,HdDs,_):-
 important_modifier(tree(_Cat,Ds),Hd,HdDs,_) :-
     lists:member(Mod,Ds),
     important_modifier1(Mod,Hd,HdDs).
+%% PPs met "geen" function as negation
+%% in geen honderd jaar
+%% met geen mogelijkheid
+important_modifier(tree(r(mod,p(pp)),Ds),_,_,_) :-
+    lists:member(tree(r(obj1,_),ObjDs),Ds),
+    lists:member(tree(r(det,adt_lex(_,geen,_,_,_)),[]),ObjDs).
 important_modifier(tree(r(mod,p(rel)),_),_,_,[r('--',p(np))|_]).
 important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,er,_,_,_),[],_).   % clefts, er zijn er die problemen hebben
 important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,het,_,_,_),[],_).  % clefts, het zijn schurken die dat doen
-important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,iets,_,_,_),[],_). % dat is iets waar we naar verlangen
+important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,IETS,_,_,_),[],_) :-
+    alpino_simplify_split:forbid_lemma_rel_split(IETS).	% dat is iets waar we naar verlangen
 important_modifier(tree(r(mod,adt_lex(VanCat,Van,_,VanPos,_)),[]),adt_lex(GebruikCat,Gebruik,_,GebruikPos,_),[],_) :-
     check_pmi(Gebruik,GebruikPos,GebruikCat,Van,VanPos,VanCat).
 

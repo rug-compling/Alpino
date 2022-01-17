@@ -151,11 +151,14 @@ split_transformation(tree(r('--',p(smain)),Ds0),X1,X2) :-
 new_su([D1,D2|Ds],p(np),[D1,D2|Ds]).
 new_su([tree(r(hd,HdCat),HdDs)],HdCat,HdDs).
 
-forbid_rel_split(adt_lex(_,HdLem,HdLem,_,_)):-
+%%% poor man's version of restricted relative clause
+forbid_rel_split(adt_lex(_,HdLem,_,_,_)):-
     forbid_lemma_rel_split(HdLem).
 
+forbid_lemma_rel_split(al).
 forbid_lemma_rel_split(degeen).
 forbid_lemma_rel_split(één).
+forbid_lemma_rel_split(enig).
 forbid_lemma_rel_split(eerste).
 forbid_lemma_rel_split(tweede).
 forbid_lemma_rel_split(derde).
