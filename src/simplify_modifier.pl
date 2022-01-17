@@ -7,6 +7,7 @@
 %%%      may make another transformation upstairs possible
 %%% old situation: pragmatisch maar ook zeer juist => pragmatisch maar zeer juist
 %%%                pragmatisch maar zeer juist => pragmatisch maar juist
+%%% new situation: pragmatisch maar ook zeer juist => pragmatisch maar juist
 
 apply_modifier_transformations(Tree0,Tree) :-
     apply_a_transformation(Tree0,Tree1),
@@ -39,6 +40,19 @@ modifier_transformation(r(Rel,VAR),A,
     VAR = i(X,Cat),
     modifier_transformation(r(Rel,Cat),A,
 			    r(Rel2,Cat2),B,Up).
+
+
+%% use hd as context if available
+modifier_transformation(Cat,Ds0,Cat,Ds,Ctxt) :-
+    lists:member(tree(r(hd,adt_lex(_,Hd,_,_,_)),[]),Ds0),
+    lists:select(Tree,Ds0,Ds),
+    ignore_modifier(Tree,Ctxt,Hd).
+%% otherwise []
+modifier_transformation(Cat,Ds0,Cat,Ds,Ctxt) :-
+    \+ lists:member(tree(r(hd,adt_lex(_,_,_,_,_)),[]),Ds0),
+    lists:select(Tree,Ds0,Ds),
+    ignore_modifier(Tree,Ctxt,[]).
+
 
 %% het begrip industrialisering --> industrialisering
 %% de voorzitter Carel Jansen -> Carel Jansen
@@ -137,7 +151,7 @@ container_head(Ds,Mod):-
     ;  alpino_lex:lexicon(meas_mod_noun(_,_,_,measure),Zak,[Zakje],[],_)
     ).
 
-%% het creeren van X, is meestal direct object, dus niet weg
+%% het creeren van X, is meestal direct object of subject, dus niet weg
 nominalization_with_van(Ds) :-
     Hd = tree(r(hd,adt_lex(np,_,_,verb,_)),[]),
     lists:select(Hd,Ds,Ds1),
@@ -214,137 +228,225 @@ important_mod(adt_lex(_,_,_,adj,Atts),_,_) :-
 important_mod(adt_lex(_,Stem,_,Pos,_),_,_):-
     important_mod_stem(Stem,Pos).
 
+%% todo: use notation from simplify_words?
 
-%% todo
-%% "in sommige/bepaalde gevallen"
-ignore_modifier(tree(r(mod,p(pp)),
-		     [tree(r(hd,adt_lex(pp,in,_,_,_)),[]),
-		      tree(r(obj1,p(np)),[tree(r(hd,adt_lex(np,geval,_,_,_)),[]),
-					  tree(r(DetMod,adt_lex(_,Sommig,_,_,_)),[])])])) :-
-    lists:member(DetMod,[det,mod]),
-    lists:member(Sommig,[ander,bepalen,dat,de,deze,die,dit,elk,ieder,kom_voor,sommig,veel]).
+ignore_modifier(tree(r(Rel,i(_,Cat)),Ds),Ctxt,Hd) :-
+    ignore_modifier(tree(r(Rel,Cat),Ds),Ctxt,Hd).
 
-%% "in het algemeen"
-ignore_modifier(tree(r(mod,p(pp)),
-		     [tree(r(hd,adt_lex(pp,In,_,prep,_)),[]),
-		      tree(r(obj1,p(np)),
-			   [tree(r(hd,adt_lex(np,algemeen,_,noun,_)),[]),
-			    tree(r(det,adt_lex(detp,het,_,det,_)),[])])])) :-
-    lists:member(In,[in,over]).
+ignore_modifier(Tree,Ctxt,Hd) :-
+    ignore_modifier_pattern(Pattern,Ctxt,Hd),
+    match_pattern(Pattern,Tree).
 
-%% "een beetje"
-ignore_modifier(tree(r(mod,p(np)),
-		     [tree(r(hd,adt_lex(np,beetje,_,noun,_)),[]),
-		      tree(r(det,adt_lex(detp,een,_,det,_)),[])]
-		    )).
-%% "op X moment"
-ignore_modifier(tree(r(mod,p(pp)),
-		     [tree(r(hd,adt_lex(pp,op,_,prep,_)),[]),
-		      tree(r(obj1,p(np)),
-			   [tree(r(hd,adt_lex(np,moment,_,noun,_)),[]),
-			    tree(r(det,adt_lex(detp,_,_,det,_)),[])])])).
+ignore_modifier(tree(r(mod,adt_lex(_,W,_,Pos,Atts)),[]),[r(_,p(MCat))|_],Hd) :-
+    ignore_modifier_stem(W,Pos,Atts,MCat,Hd).
 
-%% eens te meer
-ignore_modifier(tree(r(mod,p(advp)),
-		     [tree(r(hd,adt_lex(advp,eens,_,_,_)),[]),
-		      tree(r(mod,p(mwu('te veel','te veel'))),
-			   [tree(r(mwp,adt_lex(advp,te,_,_,_)),[]),
-			    tree(r(mwp,adt_lex(advp,veel,_,_,_)),[])])])).
+ignore_modifier(tree(r(mod,adt_lex(_,W,_,Pos,Atts)),[]),[r(_,i(_,p(MCat)))|_],Hd) :-
+    ignore_modifier_stem(W,Pos,Atts,MCat,Hd).
 
-%% volgens mij
-ignore_modifier(tree(r(mod,p(pp)),
-		     [tree(r(hd,adt_lex(pp,volgens,_,_,_)),[]),
-		      tree(r(obj1,adt_lex(np,mij,_,_,_)),[])
-		     ])).
+ignore_modifier_pattern(mod=dt(advp,
+			       [hd=wel,
+				mod=degelijk]),_,_).
 
+ignore_modifier_pattern(mod=dt(pp,
+			       [hd={[in,op]},
+				obj1=dt(np,
+					[hd=plaats,
+					 det=de,
+					 mod=l(_,num,[numtype=rang])])]),_,_).
 
-ignore_modifier(tree(r(mod,adt_lex(_,W,_,Pos,Atts)),[])) :-
-    ignore_modifier_stem(W,Pos,Atts).
+ignore_modifier_pattern(mod=dt(pp,
+			       [hd=in,
+				obj1=dt(np,
+					[hd=geval,
+					 {[det,mod]}={[ander,bepalen,dat,de,deze,die,dit,elk,
+						       ieder,kom_voor,sommig,veel]}
+					])]),_,_).
 
+ignore_modifier_pattern(mod=dt(pp,
+			       [hd={[in,over]},
+				obj1=dt(np,[hd=algemeen,
+					    det=het])]),_,_).
 
-ignore_modifier_stem(al,_,_).
-ignore_modifier_stem(alleen,_,_).
-ignore_modifier_stem(altijd,_,_).
-ignore_modifier_stem(amper,_,_).
-ignore_modifier_stem(bepaald,_,_).
-ignore_modifier_stem(beslist,_,_).
-ignore_modifier_stem(bijvoorbeeld,_,_).
-ignore_modifier_stem(bovendien,_,_).
-ignore_modifier_stem(circa,_,_).
-ignore_modifier_stem(daarom,_,_).
-ignore_modifier_stem(daarbij,_,_).
-ignore_modifier_stem(daarnaast,_,_).
-ignore_modifier_stem(daarna,_,_).
-ignore_modifier_stem(daarnet,_,_).
-ignore_modifier_stem(dan,_,_).
-ignore_modifier_stem(derhalve,_,_).
-ignore_modifier_stem(destijds,_,_).
-ignore_modifier_stem(duidelijk,_,_).
-ignore_modifier_stem(dus,_,_).
-ignore_modifier_stem(echt,_,_).
-ignore_modifier_stem(echter,_,_).
-ignore_modifier_stem(eens,_,_).
-ignore_modifier_stem(eerst,_,_).
-ignore_modifier_stem(enkel,adj,_).
-ignore_modifier_stem(erg,_,_).
-ignore_modifier_stem(even,_,_).
-ignore_modifier_stem(evenwel,_,_).
-ignore_modifier_stem(heel,_,_).
-ignore_modifier_stem(helaas,_,_).
-ignore_modifier_stem(hierbij,_,_).
-ignore_modifier_stem(immers,_,_).
-ignore_modifier_stem(inderdaad,_,_).
-ignore_modifier_stem(inmiddels,_,_).
-ignore_modifier_stem(langzamerhand,_,_).
-ignore_modifier_stem(maar,_,_).
-ignore_modifier_stem(meestal,_,_).
-ignore_modifier_stem(misschien,_,_).
-ignore_modifier_stem(namelijk,_,_).
-ignore_modifier_stem(natuurlijk,_,_).
-ignore_modifier_stem(nauwgezet,_,_).
-ignore_modifier_stem(net,adv,_).
-ignore_modifier_stem(nochtans,_,_).
-ignore_modifier_stem(nog,_,_).
-ignore_modifier_stem(nogal,_,_).
-ignore_modifier_stem(nogmaals,_,_).
-ignore_modifier_stem(nu,_,_).
-ignore_modifier_stem(onderhand,_,_).
-ignore_modifier_stem(ongetwijfeld,_,_).
-ignore_modifier_stem(ongeveer,_,_).
-ignore_modifier_stem(onlangs,_,_).
-ignore_modifier_stem(opeens,_,_).
-ignore_modifier_stem(opnieuw,_,_).
-ignore_modifier_stem(overigens,_,_).
-ignore_modifier_stem(ook,_,_).
-ignore_modifier_stem(reeds,_,_).
-ignore_modifier_stem(sowieso,_,_).
-ignore_modifier_stem(steeds,_,_).
-ignore_modifier_stem(tenslotte,_,_).
-ignore_modifier_stem(toch,_,_).
-ignore_modifier_stem(toen,_,_).
-ignore_modifier_stem(trouwens,_,_).
-ignore_modifier_stem(uiteindelijk,_,_).
-ignore_modifier_stem(uiteraard,_,_).
-ignore_modifier_stem(vaak,_,_).
-ignore_modifier_stem(veel,_,_).
-%ignore_modifier_stem(veel,adv,_).  % meer, veel is adj  TODO:  veel meer -> meer
-%% ignore_modifier_stem(ver,adj,Atts) :-  % verder willen met; verder brengen
-%%   lists:member(aform=compar,Atts).
-ignore_modifier_stem(volledig,_,_).
-ignore_modifier_stem(volstrekt,_,_).
-ignore_modifier_stem(vooral,_,_).
-ignore_modifier_stem(vrijwel,_,_).
-ignore_modifier_stem(weer,_,_).
-ignore_modifier_stem(wel,_,_).
-ignore_modifier_stem(wellicht,_,_).
-ignore_modifier_stem(zeer,_,_).
-ignore_modifier_stem(zelfs,_,_).
-ignore_modifier_stem(zojuist,_,_).
+ignore_modifier_pattern(mod=dt(np,
+			       [hd=beetje,
+				det=een]),_,_).
 
-important_modifier(Tree,_,_,_) :-
-    ignore_modifier(Tree),
+ignore_modifier_pattern(mod=dt(pp,
+			      [hd=op,
+			       obj1=dt(np,
+				       [det=l(_,_,_),
+					hd=moment])]),_,_).
+
+ignore_modifier_pattern(mod=dt(advp,
+			       [hd=eens,
+				mod=dt(mwu(_,_),
+				       [mwp=te,
+					mwp=veel])]),_,_).
+
+ignore_modifier_pattern(mod=dt(pp,
+			       [hd=volgens,
+				obj1=mij]),_,_).
+
+ignore_modifier_pattern(mod=dt(pp,
+			       [hd=in,
+				obj1=principe]),_,_).
+
+ignore_modifier_pattern(det=dt(detp,
+			       [hd=wat,
+				mod=heel]),_,_).
+
+match_pattern(RelPat=Pat,tree(r(Rel,Cat),Ds)) :-
+    match_pattern_rel(RelPat,Rel),
+    match_pattern_node(Pat,Cat,Ds).
+
+match_pattern_rel(Var,_) :-
+    var(Var),
+    !.
+match_pattern_rel({List},Rel) :-
     !,
-    fail.
+    lists:member(Rel,List).
+match_pattern_rel(R,R).
+
+match_pattern_node(Var,_,_) :-
+    var(Var), !.
+match_pattern_node({List},Cat,Ds) :-
+    !,
+    Cat = adt_lex(_,Lem,_,_,_),
+    Ds = [],
+    lists:member(Lem,List).
+match_pattern_node(dt(Cat0,PatDs),Cat,Ds) :-
+    !,
+    Cat = p(Cat0),
+    match_pattern_ds(PatDs,Ds).
+match_pattern_node(l(LemPat,Pos,PatAtts),Cat,Ds) :-
+    !,
+    Cat = adt_lex(_,Lem,_,Pos,Atts),
+    Ds=[],
+    match_pattern_lem(LemPat,Lem),
+    match_pattern_atts(PatAtts,Atts).
+match_pattern_node(Atom,Cat,Ds) :-
+    atom(Atom),
+    !,
+    Cat = adt_lex(_,Atom,_,_,_),
+    Ds = [].
+
+match_pattern_lem(Var,_) :-
+    var(Var),
+    !.
+match_pattern_lem({List},Lem) :-
+    !,
+    lists:member(Lem,List).
+match_pattern_lem(L,L).
+
+match_pattern_ds(Var,_) :-
+    var(Var), !.
+match_pattern_ds([],[]).
+match_pattern_ds([H|T],Ds0) :-
+    lists:select(D,Ds0,Ds),
+    match_pattern(H,D),
+    match_pattern_ds(T,Ds).
+
+match_pattern_atts(Var,_):-
+    var(Var),
+    !.
+match_pattern_atts([],_).
+match_pattern_atts([PatAtt|PatAtts],Atts) :-
+    lists:member(PatAtt,Atts),
+    match_pattern_atts(PatAtts,Atts).
+
+
+ignore_modifier_stem(absoluut,_,_,_,_).
+ignore_modifier_stem(al,_,_,_,_).
+ignore_modifier_stem(alleen,_,_,_,_).
+ignore_modifier_stem(allereerst,_,_,_,_).
+ignore_modifier_stem(altijd,_,_,_,_).
+ignore_modifier_stem(amper,_,_,_,_).
+ignore_modifier_stem(bepaald,_,_,_,_).
+ignore_modifier_stem(beslist,_,_,_,_).
+ignore_modifier_stem(bijvoorbeeld,_,_,_,_).
+ignore_modifier_stem(bijzonder,_,_,ap,_).
+ignore_modifier_stem(bovendien,_,_,_,_).
+ignore_modifier_stem(buitengewoon,_,_,ap,_).
+ignore_modifier_stem(circa,_,_,_,_).
+ignore_modifier_stem(daarom,_,_,_,_).
+ignore_modifier_stem(daarbij,_,_,_,_).
+ignore_modifier_stem(daarentegen,_,_,_,_).
+ignore_modifier_stem(daarnaast,_,_,_,_).
+ignore_modifier_stem(daarna,_,_,_,_).
+ignore_modifier_stem(daarnet,_,_,_,_).
+ignore_modifier_stem(dan,_,_,_,_).
+ignore_modifier_stem(derhalve,_,_,_,_).
+ignore_modifier_stem(destijds,_,_,_,_).
+ignore_modifier_stem(duidelijk,_,_,_,_).
+ignore_modifier_stem(dus,_,_,_,_).
+ignore_modifier_stem(echt,_,_,_,_).
+ignore_modifier_stem(echter,_,_,_,_).
+ignore_modifier_stem(eens,_,_,_,_).
+ignore_modifier_stem(eerst,_,_,_,_).
+ignore_modifier_stem(enkel,adj,_,_,_).
+ignore_modifier_stem(erg,_,_,_,_).
+ignore_modifier_stem(even,_,_,_,_).
+ignore_modifier_stem(evenwel,_,_,_,_).
+ignore_modifier_stem(heel,_,_,np,_).
+ignore_modifier_stem(heel,_,_,ap,_).
+ignore_modifier_stem(heel,_,_,advp,_).   % heel wat => *wat  todo: heel weinig, heel veel -> weinig, veel
+ignore_modifier_stem(heel,_,_,detp,weinig).
+ignore_modifier_stem(heel,_,_,detp,veel).
+ignore_modifier_stem(helaas,_,_,_,_).
+ignore_modifier_stem(helemaal,_,_,_,_).
+ignore_modifier_stem(hierbij,_,_,_,_).
+ignore_modifier_stem(immers,_,_,_,_).
+ignore_modifier_stem(inderdaad,_,_,_,_).
+ignore_modifier_stem(inmiddels,_,_,_,_).
+ignore_modifier_stem(langzamerhand,_,_,_,_).
+ignore_modifier_stem(maar,_,_,_,_).
+ignore_modifier_stem(meestal,_,_,_,_).
+ignore_modifier_stem(misschien,_,_,_,_).
+ignore_modifier_stem(namelijk,_,_,_,_).
+ignore_modifier_stem(natuurlijk,_,_,_,_).
+ignore_modifier_stem(nauwgezet,_,_,_,_).
+%ignore_modifier_stem(net,adv,_,_,_).   % ?? net zo goed -> zo goed
+ignore_modifier_stem(nochtans,_,_,_,_).
+ignore_modifier_stem(nog,_,_,_,_).
+ignore_modifier_stem(nogal,_,_,_,_).
+ignore_modifier_stem(nogmaals,_,_,_,_).
+ignore_modifier_stem(nu,_,_,_,_).
+ignore_modifier_stem(onderhand,_,_,_,_).
+ignore_modifier_stem(ongetwijfeld,_,_,_,_).
+ignore_modifier_stem(ongeveer,_,_,_,_).
+ignore_modifier_stem(onlangs,_,_,_,_).
+ignore_modifier_stem(opeens,_,_,_,_).
+ignore_modifier_stem(opnieuw,_,_,_,_).
+ignore_modifier_stem(overigens,_,_,_,_).
+ignore_modifier_stem(ook,_,_,_,_).
+ignore_modifier_stem(precies,_,_,_,_).
+ignore_modifier_stem(reeds,_,_,_,_).
+ignore_modifier_stem(sowieso,_,_,_,_).
+ignore_modifier_stem(steeds,_,_,_,_).
+ignore_modifier_stem(tenslotte,_,_,_,_).
+ignore_modifier_stem(terdege,_,_,_,_).
+ignore_modifier_stem(toch,_,_,_,_).
+ignore_modifier_stem(toen,_,_,_,_).
+ignore_modifier_stem(trouwens,_,_,_,_).
+ignore_modifier_stem(uiteindelijk,_,_,_,_).
+ignore_modifier_stem(uiteraard,_,_,_,_).
+ignore_modifier_stem(vaak,_,_,_,_).
+ignore_modifier_stem(veel,_,_,_,_).
+%ignore_modifier_stem(veel,adv,_,_,_).  % meer, veel is adj  TODO:  veel meer -> meer
+%% ignore_modifier_stem(ver,adj,Atts,_) :-  % verder willen met; verder brengen
+%%   lists:member(aform=compar,Atts).
+ignore_modifier_stem(verdommen,_,_,_,_).
+ignore_modifier_stem(volkomen,_,_,_,_).
+ignore_modifier_stem(volledig,_,_,_,_).
+ignore_modifier_stem(volstrekt,_,_,_,_).
+ignore_modifier_stem(vooral,_,_,_,_).
+ignore_modifier_stem(vrijwel,_,_,_,_).
+ignore_modifier_stem(weer,_,_,_,_).
+ignore_modifier_stem(wel,_,_,_,_).
+ignore_modifier_stem(wellicht,_,_,_,_).
+ignore_modifier_stem(zeer,_,_,_,_).
+ignore_modifier_stem(zelfs,_,_,_,_).
+ignore_modifier_stem(zojuist,_,_,_,_).
 
 important_modifier(tree(Cat,_),Hd,HdDs,_):-
     important_mod(Cat,Hd,HdDs).

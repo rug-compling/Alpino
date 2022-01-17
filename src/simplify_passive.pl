@@ -430,6 +430,7 @@ verb_disallows_passive(relateer,ben,_,not_door).
 verb_disallows_passive(sluit,ben,_,not_door).
 verb_disallows_passive(vestig,ben,_,not_door).
 verb_disallows_passive(verbind,ben,_,not_door).
+verb_disallows_passive(vertegenwoordig,ben,_,not_door).
 verb_disallows_passive(voorzien,ben,_,not_door).
 
 %% dun bevolkt
