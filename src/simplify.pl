@@ -8,41 +8,72 @@
 
 apply_adt_transformations(Tree0,Tree) :-
     hdrug_util:hdrug_flag(simplify_split,Split),
-    apply_split_transformations(Split,Tree0,Tree1),
     hdrug_util:hdrug_flag(simplify_passive,Pass),
+    apply_split_transformations(Split,Tree0,Tree1),
     apply_passive_transformations(Pass,Tree1,Tree2),
+    apply_further_adt_transformations(Tree2,Tree).
+
+apply_split_transformations(on,Tree0,Tree) :-
+    apply_split_transformations(Tree0,Tree).
+
+apply_passive_transformations(on,Tree0,Tree) :-
+    apply_passive_transformations(Tree0,Tree).
+
+apply_further_adt_transformations(Tree2,Tree) :-
     hdrug_util:hdrug_flag(simplify_modifier,Mod),
-    apply_modifier_transformations(Mod,Tree2,Tree3),
     hdrug_util:hdrug_flag(simplify_words,Words),
-    apply_words_transformations(Words,Tree3,Tree).
+    apply_further_adt_transformations(Tree2,Tree,Mod,Words).
 
-apply_modifier_transformations(Mod,Tree0,Tree1) :-
-    (   Mod == on
-    ->  apply_modifier_transformations(Tree0,Tree1)
-    ;   Tree0 = Tree1
-    ).
+apply_further_adt_transformations(Tree0,Tree,Mod,Words) :-
+    apply_a_transformation(Tree0,Tree1,Mod,Words),
+    !,
+    apply_further_adt_transformations(Tree1,Tree,Mod,Words).
+apply_further_adt_transformations(Tree,Tree,_,_).
 
-apply_words_transformations(Words,Tree1,Tree2) :-
-    (   Words == on
-    ->  apply_words_transformations(Tree1,Tree2)
-    ;   Tree1 = Tree2
-    ).
+apply_a_transformation(tree(Cat0,Ds0),tree(Cat,Ds),Mod,Words) :-
+    adt_transformation_and_flatten(Cat0,Ds0,Cat,Ds,[Cat0],Mod,Words).
+apply_a_transformation(tree(Cat,Ds0),tree(Cat,Ds),Mod,Words) :-
+    apply_a_transformation_list(Ds0,Ds,[Cat],Mod,Words).
 
-apply_passive_transformations(Pass,Tree2,Tree3) :-
-    (   Pass == on
-    ->  apply_passive_transformations(Tree2,Tree3)
-    ;   Tree2 = Tree3
-    ).
+apply_a_transformation(tree(Cat0,Ds0),tree(Cat,Ds),Up,Mod,Words) :-
+    adt_transformation_and_flatten(Cat0,Ds0,Cat,Ds,[Cat0|Up],Mod,Words).
+apply_a_transformation(tree(Cat,Ds0),tree(Cat,Ds),Up,Mod,Words) :-
+    apply_a_transformation_list(Ds0,Ds,[Cat|Up],Mod,Words).
 
-apply_split_transformations(Split,Tree3,Tree) :-
-    (   Split == on
-    ->  apply_split_transformations(Tree3,Tree)
-    ;   Tree3 = Tree
-    ).
+apply_a_transformation_list([H0|T],[H|T],Up,Mod,Words) :-
+    apply_a_transformation(H0,H,Up,Mod,Words).
+apply_a_transformation_list([H|T0],[H|T],Up,Mod,Words) :-
+    apply_a_transformation_list(T0,T,Up,Mod,Words).
 
+adt_transformation_and_flatten(r(Rel,Cat0),Ds0,r(Rel,Cat),Ds,Up,Mod,Words) :-
+    adt_transformation(r(Rel,Cat0),Ds0,r(Rel,Cat1),Ds1,Up,Mod,Words),
+    flatten(Cat1,Ds1,Cat,Ds).
 
+adt_transformation(r(Rel,VAR),A,r(Rel2,i(X,Cat2)),B,Up,Mod,Words) :-
+    nonvar(VAR),
+    VAR = i(X,Cat),
+    adt_transformation(r(Rel,Cat),A,r(Rel2,Cat2),B,Up,Mod,Words).
 
+adt_transformation(Node0,Ds0,Node,Ds,Up,Mod,_Words) :-
+    adt_transformation_mod(Mod,Node0,Ds0,Node,Ds,Up).
+
+adt_transformation(Node0,Ds0,Node,Ds,Up,_Mod,Words) :-
+    adt_transformation_words(Words,Node0,Ds0,Node,Ds,Up).
     
+adt_transformation_mod(on,Node0,Ds0,Node,Ds,Up) :-
+    alpino_simplify_modifier:modifier_transformation(Node0,Ds0,Node,Ds,Up).
+
+adt_transformation_words(on,Node0,Ds0,Node,Ds,_) :-
+    alpino_simplify_words:words_transformation(Node0,Ds0,Node,Ds).
+
+
+flatten(i(Id,Cat0),Ds0,i(Id,Cat),Ds) :-
+    !,
+    flatten(Cat0,Ds0,Cat,Ds).
+flatten(adt_lex(A,B,C,D,E),[],adt_lex(A,B,C,D,E),[]).
+flatten(p(_),[tree(r(hd,HdCat),Ds)],HdCat,Ds).
+flatten(p(VAR),Ds,p(VAR),Ds) :-
+    Ds = [_,_|_].
 
 /*
 
