@@ -1,23 +1,4 @@
-:- module(alpino_simplify_words, [ apply_words_transformations/2 ]).
-
-%% --------------------------------------------------------------------------------------------- %%
-
-apply_words_transformations(tree(Cat0,Ds0),tree(Cat,Ds)) :-
-    words_transformation(Cat0,Ds0,Cat1,Ds1),
-    !,
-    apply_words_transformations(tree(Cat1,Ds1),tree(Cat,Ds)).
-apply_words_transformations(tree(Cat,Ds0),tree(Cat,Ds)) :-
-    apply_words_transformations_list(Ds0,Ds).
-
-apply_words_transformations_list([],[]).
-apply_words_transformations_list([H0|T0],[H|T]) :-
-    apply_words_transformations(H0,H),
-    apply_words_transformations_list(T0,T).
-
-words_transformation(r(Rel,VAR),A,r(Rel2,i(X,Cat2)),C) :-
-    nonvar(VAR),
-    VAR = i(X,Cat),
-    words_transformation(r(Rel,Cat),A,r(Rel2,Cat2),C).
+:- module(alpino_simplify_words, [ words_transformation/4 ]).
 
 words_transformation(r(Rel,p(Cat0)),Ds0,r(Rel,p(Cat)),[Hd|Ds]) :-
     Hd0 = tree(r(HD,adt_lex(Cat0,Old,Old,D0,E0)),[]),
@@ -26,6 +7,7 @@ words_transformation(r(Rel,p(Cat0)),Ds0,r(Rel,p(Cat)),[Hd|Ds]) :-
     lists:select(Hd0,Ds0,Ds1),
     simplify(Old,New,Cat0,Cat,D0,D,E0,E),
     adapt_det(Ds1,Ds).
+
 
 words_transformation(r(Rel,p(Cat)),Ds0,
 		     r(Rel,p(Cat)),[Hd,VC|Ds]) :-
@@ -37,7 +19,7 @@ words_transformation(r(Rel,p(Cat)),Ds0,
     lists:select(VC0,Ds1,Ds),
     subjects(Ds,VC0Ds),
     VC  = tree(r(vc,p(ppart)),_),
-    apply_words_transformations(VC0,VC),
+    alpino_user_transformation:apply_further_adt_transformations(VC0,VC),
     VC0 \== VC.
 
 words_transformation(r(Rel,p(mwu(_,_))),Ds,
@@ -80,6 +62,14 @@ mwu([tree(r(mwp,adt_lex(_,W,_,_,_)),[])|Trees],[W|Ws]) :-
 
 %%% TODO:
 %%% het is zo dat X => X
+
+%%% uiterst ADJ => heel ADJ
+pattern_rule([mod=l(uiterst,adj,_),
+	      hd=l(ADJ,adj,Atts)
+	     ],
+	     [mod=l(heel,adv,[]),
+	      hd=l(ADJ,adj,Atts)
+	     ]).
 
 
 %%% het verheugt X dat .. => X is blij dat ..
@@ -169,8 +159,9 @@ match_left_pattern_node(l(Lem,Pos,Atts0),adt_lex(_,Lem,_,Pos,Atts),[]):-
 match_left_pattern_node(mwu(List),p(mwu(_,_)),Ds) :-
     mwu(Ds,List).
 
-match_atts(Var,_) :-
-    var(Var), !.
+match_atts(Var,Var2) :-
+    var(Var), !,
+    Var=Var2.
 match_atts([],_).
 match_atts([Att|Atts],List) :-
     lists:member(Att,List),
@@ -488,7 +479,6 @@ simplify(tevens,ook,Cat,Cat,D,D,E,E).
 simplify(transparantie,duidelijkheid,Cat,Cat,D,D,E,E).
 simplify(tref_aan,vind,Cat,Cat,D,D,E,E).
 simplify(triviaal,gewoon,Cat,Cat,D,D,E,E).
-simplify(uiterst,heel,ap,advp,adj,adv,_,[]).
 simplify(uitfasering,stop,Cat,Cat,D,D,E,E).
 simplify(universeel,algemeen,Cat,Cat,D,D,E,E).
 simplify('up-to-date',actueel,Cat,Cat,D,D,E,E).

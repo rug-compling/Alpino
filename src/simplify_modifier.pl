@@ -1,46 +1,4 @@
-:- module(alpino_simplify_modifier, [ apply_modifier_transformations/2 ]).
-
-%% --------------------------------------------------------------------------------------------- %%
-
-%%% now: just do a transformation anywhere, until no further transformations are possible
-%%%      so we do not assume that a single tree-walk suffices, because a transformation downstairs
-%%%      may make another transformation upstairs possible
-%%% old situation: pragmatisch maar ook zeer juist => pragmatisch maar zeer juist
-%%%                pragmatisch maar zeer juist => pragmatisch maar juist
-%%% new situation: pragmatisch maar ook zeer juist => pragmatisch maar juist
-
-apply_modifier_transformations(Tree0,Tree) :-
-    apply_a_transformation(Tree0,Tree1),
-    !,
-    apply_modifier_transformations(Tree1,Tree).
-apply_modifier_transformations(Tree,Tree).
-
-apply_a_transformation(tree(Cat0,Ds0),tree(Cat,Ds)) :-
-    modifier_transformation_and_flatten(Cat0,Ds0,Cat,Ds,[Cat0]).
-apply_a_transformation(tree(Cat,Ds0),tree(Cat,Ds)) :-
-    apply_a_transformation_list(Ds0,Ds,[Cat]).
-
-apply_a_transformation(tree(Cat0,Ds0),tree(Cat,Ds),Up) :-
-    modifier_transformation_and_flatten(Cat0,Ds0,Cat,Ds,[Cat0|Up]).
-apply_a_transformation(tree(Cat,Ds0),tree(Cat,Ds),Up) :-
-    apply_a_transformation_list(Ds0,Ds,[Cat|Up]).
-
-apply_a_transformation_list([H0|T],[H|T],Up) :-
-    apply_a_transformation(H0,H,Up).
-apply_a_transformation_list([H|T0],[H|T],Up) :-
-    apply_a_transformation_list(T0,T,Up).
-
-modifier_transformation_and_flatten(r(Rel,Cat0),Ds0,r(Rel,Cat),Ds,Up) :-
-    modifier_transformation(r(Rel,Cat0),Ds0,r(Rel,Cat1),Ds1,Up),
-    flatten(Cat1,Ds1,Cat,Ds).
-
-modifier_transformation(r(Rel,VAR),A,
-			r(Rel2,i(X,Cat2)),B,Up) :-
-    nonvar(VAR),
-    VAR = i(X,Cat),
-    modifier_transformation(r(Rel,Cat),A,
-			    r(Rel2,Cat2),B,Up).
-
+:- module(alpino_simplify_modifier, [ modifier_transformations/5 ]).
 
 %% use hd as context if available
 modifier_transformation(Cat,Ds0,Cat,Ds,Ctxt) :-
@@ -553,10 +511,3 @@ modifier_rel(app,Cat) :-
     Cat \= adt_lex(_,_,_,num,_),
     Cat \= p(mwu(_,_)).
 
-flatten(i(Id,Cat0),Ds0,i(Id,Cat),Ds) :-
-    !,
-    flatten(Cat0,Ds0,Cat,Ds).
-flatten(adt_lex(A,B,C,D,E),[],adt_lex(A,B,C,D,E),[]).
-flatten(p(_),[tree(r(hd,HdCat),Ds)],HdCat,Ds).
-flatten(p(VAR),Ds,p(VAR),Ds) :-
-    Ds = [_,_|_].
