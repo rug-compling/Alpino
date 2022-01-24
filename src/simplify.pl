@@ -88,6 +88,21 @@ Het is een sprong in het diepe.
 => Het is een sprong 
 
 
+motivatie voor pmi:
+boter bij de vis => boter
+op eigen benen staan => op benen staan
+
+negatie bij splitsen is fout:
+Men had geen enkele richtlijn voorgesteld die voorzag in de bescherming van de consument  =>
+Men had geen enkele richtlijn voorgesteld . Ze voorzag in de bescherming van de consument .
+
+weghalen mod bij de .. PROPN:
+?daar heeft de bekende X gepredikt -> daar heeft de X gepredikt
+
+
+split gek:
+Het duurt niet lang . Of de politie verhoort hem .
+Er gaat hier in het Europees Parlement geen zitting voorbij . Of we zeggen iets .
 
 
 

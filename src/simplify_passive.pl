@@ -1,9 +1,16 @@
 :- module(alpino_simplify_passive, [ apply_passive_transformations/2 ]).
 
+%% TODO:
+%% only raise if you unraised before...
+%% counter-examples: su sbar if no sup
 apply_passive_transformations(Tree0,Tree) :-
     apply_unraise_transformations(Tree0,Tree1),
+    hdrug_util:debug_call(3,hdrug_show:show(tree(adt),user,[value(Tree1)])),
     passive_transformations(Tree1,Tree2,[]),
-    apply_raise_transformations(Tree2,Tree).
+    Tree1 \= Tree2,
+    apply_raise_transformations(Tree2,Tree),
+    !.
+apply_passive_transformations(Tree,Tree).
 
 passive_transformations(tree(Cat0,Ds0),tree(Cat,Ds),C) :-
     passive_transformation(Cat0,Ds0,Cat1,Ds1,C),
@@ -48,7 +55,9 @@ apply_raise_transformations_list([H0|T0],[H|T]) :-
 unraise_transformation(r(Rel,Cat),Ds0,
 		       r(Rel,Cat),Ds) :-
     Hd = tree(r(hd,adt_lex(_,L,_M,_V,_F)),[]),
-    Su = tree(r(su,i(Var,_)),_),
+    (   Su = tree(r(su,i(Var,_)),_)
+    ;   Su = tree(r(su,i(Var)),_)
+    ),
     VCCAT = p(inf),
     Vc0 = tree(r(vc,VCCAT),VCDS0),
     lists:select(Hd,Ds0,Ds1),
@@ -62,7 +71,9 @@ unraise_transformation(r(Rel,Cat),Ds0,
 unraise_transformation(r(Rel,Cat),Ds0,
 		       r(Rel,Cat),Ds) :-
     Hd = tree(r(hd,adt_lex(_,L,_M,_V,_F)),[]),
-    Su = tree(r(su,i(Var,_)),_),
+    (  Su = tree(r(su,i(Var,_)),_)
+    ;  Su = tree(r(su,i(Var)),_)
+    ),
     VCCAT = p(ti),
     Vc0 = tree(r(vc,VCCAT),VCDS0),
     Comp = tree(r(cmp,_),_),
@@ -91,11 +102,12 @@ raise_transformation(r(Rel,Cat),Ds0,
     Vc0 = tree(r(vc,VCCAT),VCDS0),
     Su0 = tree(r(su,SuSu),SuDs),
     lists:select(Su0,VCDS0,VCDS),
-    (   SuSu = i(IX,SuCat)
-    ;   SuSu = SuCat,
+    (   SuSu = i(IX,SuCat), NewSu = i(IX,SuCat)
+    ;   SuSu = i(IX),       NewSu = i(IX)
+    ;   SuSu = SuCat,       NewSu = i(IX,SuCat),
 	hdrug_util:gen_sym(IX,adt_index)
     ),
-    Su  = tree(r(su,i(IX,SuCat)),SuDs),
+    Su  = tree(r(su,NewSu),SuDs),
     Vc = tree(r(vc,VCCAT),[tree(r(su,i(IX)),[])|VCDS]),
     Ds = [Hd,Su,Vc].
 
@@ -114,11 +126,12 @@ raise_transformation(r(Rel,Cat),Ds0,
     
     Su0 = tree(r(su,SuSu),SuDs),
     lists:select(Su0,BODYDS0,BODYDS),
-    (   SuSu = i(IX,SuCat)
-    ;   SuSu = SuCat,
+    (   SuSu = i(IX,SuCat), NewSu = i(IX,SuCat)
+    ;   SuSu = i(IX),       NewSu = i(IX)
+    ;   SuSu = SuCat,       NewSu = i(IX,SuCat),
 	hdrug_util:gen_sym(IX,adt_index)
     ),
-    Su  = tree(r(su,i(IX,SuCat)),SuDs),
+    Su = tree(r(su,NewSu),SuDs),
     Vc = tree(r(vc,VCCAT),[Comp,Body]),
     Ds = [Hd,Su,Vc].
 
@@ -143,7 +156,10 @@ passive_transformation(r(Rel,Cat),Ds0,
     Hd = tree(r(hd,adt_lex(LexCat,word,word,verb,Feats)),[]),
     Vc = tree(r(vc,p(ppart)),VcDs0),
 
-    lists:select(Su,Ds0,Ds1),  \+ men(Su),  
+    lists:select(Su,Ds0,Ds1),  \+ men(Su),  % \+ SUCAT1=i(_),
+    %% niet i(_) vanwege: * welke plannen moeten worden gekozen
+    %% maar dan kan "welke plannen worden gekozen" ook niet meer
+
     context_allows_passive(Rel,Cat,Context,Su),
     lists:select(Hd,Ds1,Ds2),  
     lists:select(Vc,Ds2,DsRest), 
@@ -181,7 +197,7 @@ passive_transformation(r(Rel,Cat),Ds0,
 
     context_allows_passive(Rel,Cat,Context,none),
 
-    Su = tree(r(su,_),_),
+    Su = tree(r(su,_),_), 
     Hd = tree(r(hd,adt_lex(LexCat,word,word,verb,Feats)),[]),
     Vc = tree(r(vc,p(ppart)),VcDs0),
 
@@ -283,8 +299,7 @@ passive_transformation(r(Rel,Cat),Ds0,
 add_su_control(not_door,Node,Ds0,Node,Ds) :-
     Hd = tree(r(hd,adt_lex(_,Proberen,_,verb,_)),[]),
     lists:member(Hd,Ds0),
-    lists:member(Proberen,[wens,wensen,besluit,besluiten,
-		     probeer,proberen,begin,beginnen,hoef,hoeven]),
+    lists:member(Proberen,[wens,besluit,eis,probeer,begin,hoef]),
     Su0 = tree(r(su,SuNode),SuDs),  
     Su  = tree(r(su,NewSuNode),SuDs),
     replace(Su0,Su,Ds0,Ds1),
@@ -390,6 +405,9 @@ er(adv,noun,advp,np,ergens,iets,ergens,iets,[],[rnum=sg]).
 remove_er(List0,List) :-
     Er = tree(r(mod,adt_lex(_,er,er,adv,_)),[]),
     lists:select(Er,List0,List).
+remove_er(List0,List) :-
+    Er = tree(r(mod,i(_,adt_lex(_,er,er,adv,_))),[]),
+    lists:select(Er,List0,List).
 remove_er(List,List).
 
 %% Maria wil worden gekust door Noa =/= Noa wil Maria kussen
@@ -428,6 +446,7 @@ verb_disallows_passive(overtuig,ben,_,not_door).
 verb_disallows_passive(rechtvaardig,ben,_,not_door).
 verb_disallows_passive(relateer,ben,_,not_door).
 verb_disallows_passive(sluit,ben,_,not_door).
+verb_disallows_passive(sta_toe,ben,_,not_door).
 verb_disallows_passive(vestig,ben,_,not_door).
 verb_disallows_passive(verbind,ben,_,not_door).
 verb_disallows_passive(vertegenwoordig,ben,_,not_door).

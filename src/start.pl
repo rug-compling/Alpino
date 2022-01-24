@@ -1176,7 +1176,7 @@ end_hook(generate,_A,_B,_C) :-
     ->  format("~n",[])    % always produce a line of output for each input
     ;   NumberOfSolutions < 1,
 	Th == print_generated_sentence,
-	Copy=on(Chars,_)
+	Copy=on(Chars)
     ->  format("~s~n",[Chars]),	% always produce a line of output for each input
 	format(user_error,"warning: cannot generate adt for ~w ~s~n",[Key,Chars])
     ;   true
@@ -3229,14 +3229,23 @@ paraphrase(Ref,Tokens,Chars) :-
     format("~a~n",Result).
 
 paraphrase(Ref,Tokens,Chars,Result) :-
-    flag(copy_input_if_no_transformation,On),
-%    set_flag(end_hook,print_generated_sentence),
-    set_flag(geneval,off),
-    flag(demo,Demo),
-    set_flag(robustness,if_required),
+    flag(copy_input_if_no_parse,CopyOnFailParse),
+    set_flag(robustness,off),
     set_flag(order_canonical_dt,off),
     alpino_parse_tokens(Ref,Tokens),
-    hdrug:object(1,o(Cat,_,_)),
+    (   hdrug:object(1,o(Cat,_,_))
+    ->  paraphrase_continue(Chars,Cat,Result)
+    ;   CopyOnFailParse == on
+    ->  Result = Chars
+    ;   CopyOnFailParse = msg(Msg)
+    ->  Result = Msg
+    ;   Result = ''
+    ).
+
+paraphrase_continue(Chars,Cat,Result) :-
+    set_flag(geneval,off),
+    flag(copy_input_if_no_transformation,On),
+    flag(demo,Demo),
     alpino_dt:result_to_dt(Cat,Dt),
     alpino_adt:dt_to_adt(Dt,Adt0),
     
@@ -3266,11 +3275,16 @@ paraphrase(Ref,Tokens,Chars,Result) :-
 	set_flag(robustness,off),
 	flag(copy_input_if_paraphrase_failed,Off),
 	(   Off == off
-	->  true
-	;   set_flag(copy_input_if_paraphrase_failed,on(Chars,Tokens))
+	->  FailResult=''
+	;   Off = msg(Msg)
+	->  FailResult=Msg
+	;   atom_codes(Chars,FailResult)
 	),
-	generate_or_split(Adt,GenTokens,[]),
-	hdrug_util:concat_all(GenTokens,Result,' ')
+	if(generate_or_split(Adt,GenTokens,[]),
+	   hdrug_util:concat_all(GenTokens,Result,' '),
+	   Result=FailResult
+	  )
+	
     ).
 
 paraphrase :-
@@ -3374,10 +3388,8 @@ generate_list([H|T],Toks0,Toks) :-
 
 generate(H,Toks0,Toks) :-
     generate(H),
-    (  object(1,o(_,Ts,_))
-    -> lists:append(Ts,Toks,Toks0)
-    ;  Toks0 = Toks
-    ).
+    object(1,o(_,Ts,_)),
+    lists:append(Ts,Toks,Toks0).
 
 :- public has_rule/1.
 hdrug_command(hasrule,has_rule(Rule),[Rule]).
