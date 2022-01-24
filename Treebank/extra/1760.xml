@@ -2,16 +2,16 @@
 <alpino_ds version="1.3">
   <node begin="0" cat="top" end="7" id="0" rel="top">
     <node begin="0" cat="du" end="6" id="1" rel="--">
-      <node begin="0" end="1" id="2" lemma="dus" pos="adv" postag="BW()" pt="bw" rel="dlink" root="dus" word="Dus"/>
+      <node begin="0" conjtype="neven" end="1" id="2" lemma="en" pos="comp" postag="VG(neven)" pt="vg" rel="dlink" root="en" sc="root" word="En"/>
       <node begin="1" cat="sv1" end="6" id="3" rel="nucl">
-        <node begin="1" end="2" id="4" lemma="na_roepen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="roep_na" word="roept" wvorm="pv"/>
-        <node begin="2" end="3" getal="ev" id="5" lemma="mij" naamval="obl" pdtype="pron" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj1" root="mij" status="vol" vwtype="pr" word="mij"/>
-        <node begin="3" end="4" id="6" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" word="nu"/>
-        <node begin="4" buiging="met-e" end="5" getal-n="mv-n" id="7" lemma="al" naamval="stan" pdtype="det" pos="adv" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,mv-n)" pt="vnw" rel="predm" root="al" vwtype="onbep" word="allen"/>
+        <node begin="1" end="2" id="4" infl="sg3" lemma="na_roepen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="roep_na" sc="part_transitive(na)" stype="topic_drop" tense="present" word="roept" wvorm="pv"/>
+        <node begin="2" case="dat_acc" def="def" end="3" gen="de" getal="ev" id="5" lemma="mij" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,vol,1,ev)" pt="vnw" rel="obj1" rnum="sg" root="mij" status="vol" vwtype="pr" wh="nwh" word="mij"/>
+        <node begin="3" end="4" id="6" lemma="nu" pos="adv" postag="BW()" pt="bw" rel="mod" root="nu" special="tmp" word="nu"/>
+        <node begin="4" buiging="met-e" end="5" getal-n="mv-n" id="7" lemma="al" naamval="stan" pdtype="det" pos="adv" positie="nom" postag="VNW(onbep,det,stan,nom,met-e,mv-n)" pt="vnw" rel="predm" root="al" special="predm" vwtype="onbep" word="allen"/>
         <node begin="5" end="6" id="8" lemma="na" pos="part" postag="VZ(fin)" pt="vz" rel="svp" root="na" vztype="fin" word="na"/>
       </node>
     </node>
-    <node begin="6" end="7" id="9" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" word=":"/>
+    <node begin="6" end="7" id="9" lemma=":" pos="punct" postag="LET()" pt="let" rel="--" root=":" special="dubb_punt" word=":"/>
   </node>
-  <sentence>Dus roept mij nu allen na :</sentence>
+  <sentence>En roept mij nu allen na :</sentence>
 </alpino_ds>

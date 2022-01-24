@@ -1517,12 +1517,6 @@ with_dt([ja,ofte,nee],
                  cnj=l(nee,tag,advp,2,3)
                 ])).
 
-with_dt([sterker,nog],
-	tag,
-	dt(ap,[hd=l(sterk,adjective(er(adv)),0,1),
-	       mod=l(nog,adverb,advp,1,2)
-	      ])).
-
 with_dt([weet,je],
 	tag,
 	dt(sv1,[hd=l(v_root(weet,weten),verb(hebben,sg,tr_sbar),0,1),
