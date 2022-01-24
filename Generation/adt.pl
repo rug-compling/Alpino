@@ -391,12 +391,12 @@ list_to_root([],R,R).
 list_to_root([H|T],F,{[F,H|T]}).
 
 pers_pronoun1(Root0,Root,Attrs) :-
-    findall(Root1,pers_pronoun_pair(Root0,Root1,Attrs),[LH|LT]),
-    list_to_root(LT,LH,Root).
+    findall(Root1,pers_pronoun_pair(Root0,Root1,Attrs),List),
+    list_to_root(List,Root0,Root).
 
 pers_pronoun2(Root0,Root,Attrs) :-
-    findall(Root1,pers_pronoun_pair(Root1,Root0,Attrs),[LH|LT]),
-    list_to_root(LT,LH,Root).
+    findall(Root1,pers_pronoun_pair(Root1,Root0,Attrs),List),
+    list_to_root(List,Root0,Root).
 
 pers_pronoun_pair(ik, me, _).
 pers_pronoun_pair(ik, mij, _).
@@ -473,9 +473,13 @@ adt_to_fs(tree(r(Rel,p(Cat)),Ds0),tree(r(Rel,p(Cat,Fs)),Ds),Rel:Fs,
     adt_to_fs_ds(Ds0,Ds,Dts,[],Idx,Idx1,Fs,Parts0,Parts,0,Bc),
     add_dts(Fs,Dts,Bc).
 
-adt_to_fs(tree(r(Rel,adt_lex(Cat,Root,Bc,Frames,Attrs)),[]),
+adt_to_fs(tree(r(Rel,adt_lex(Cat,Root0,Bc,Frames,Attrs)),[]),
 	  tree(r(Rel,adt_lex(Cat,Root,Bc,Frames,Attrs,Dt)),[]),
 	  Rel:Dt,Idx,Idx,[Dt|Parts],Parts,Bc) :-
+%%%    (  Root0 = {List},
+%%%	when(nonvar(Root),lists:member(Root,List))
+%%%     maybe try this at some point, but prettyvars will fail on such structures
+    Root0 = Root,
     alpino_data:lexical(Hwrd,Root,_,_,_,_,_,Bc),
     alpino_data:dt(Dt,Hwrd,_,_,Cat,_,Attrs),
 
