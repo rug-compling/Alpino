@@ -2904,7 +2904,8 @@ grammar_rule(dip_pp,DIPP,[DIP]) :-
     DIPP => dip,
     pp_modifier(DIP),
     unify_mods(DIP),
-    DIP:prep ==> aldus,
+    DIP:prep <=> PREP,
+    alpino_wappend:wwmember(PREP,[aldus,volgens]),
     hd_structure(DIP,DIPP).
 
 grammar_rule(sv1_dip_sv1,VP,[COMMAL,DIP,COMMAR,V]) :-
@@ -8319,8 +8320,10 @@ grammar_rule(tag_np,Tag,[NP]) :-
     Tag:np => yes,
     Tag:adv => no,
     NP:hstem <=> HSTEM,
-    alpino_wappend:wwmember(HSTEM,[mijnheer,meneer,mevrouw,heer,dame,jongen,meisje,
-				   professor,sire,buurman,buurvrouw,man]),
+    alpino_wappend:wwmember(HSTEM,[mijnheer,meneer,mevrouw,heer,dame,jongen,meisje,voorzitter,
+				   commissaris,vertegenwoordiger,minister,rapporteur,president,
+				   af_vaardigen,collega,mens,vriend,familie_lid,kind,
+				   staatssecretaris,ombudsman,professor,sire,buurman,buurvrouw,man]),
     hd_structure(NP,Tag).
 
 grammar_rule(tag_pn,Tag,[NP]) :-

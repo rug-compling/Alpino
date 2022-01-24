@@ -1781,6 +1781,13 @@ root_complementizer(C) :-
         Root:sv1 => no
     ;   dif(Val,dus)
     ).
+%% "en vertrekt naar huis"  ok
+%% "dus vertrekt naar huis"  disallowed because of confusion
+%% with "dus" as ordinary modifier - this would allow too many amb
+%% it really should only disallow dus + topic_drop, because these are fine:
+%% dus kom je nu wel of niet?
+%% dus ga snel naar de winkel!
+%% dus ga jij eens even snel naar de winkel!
 
 van_complementizer(C) :-
     C => comp,

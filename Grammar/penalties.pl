@@ -574,7 +574,7 @@ syntactic_penalty_nl(_,Cat,_,s1(Name)) :-
 syntactic_penalty_nl(_,_,Ds,s1(Name)) :-
     member(tree(Node,_,_,_),Ds),
     alpino_data:syntactic_penalty_cat_d(Node,Name).
-    
+
 syntactic_penalty_nl(_,Cat,_,coord(Conj,Agr)) :-
     coord_agr(Cat,Conj,Agr).
 syntactic_penalty_nl(_,Cat,_,s1(extra_from_topic)) :-
@@ -743,6 +743,7 @@ mf_pos(Cat,Val) :-
 mf_pos(np,Cat,Type) :-
     !,
     alpino_data:case(Cat,CaseVal),
+    nonvar(CaseVal),
     hdrug_feature:give_boolean_type(CaseVal,Case),
     alpino_data:postag(Cat,PosTagValTerm),
     nonvar(PosTagValTerm),
@@ -752,11 +753,13 @@ mf_pos(np,Cat,Type) :-
 mf_pos(modifier,Cat,Type) :-
     !,
     alpino_data:modifier(Cat,DtrCat),
+    nonvar(DtrCat),
     hdrug_feature:give_boolean_type(DtrCat,Type0),
     add_niet(Type0,Type,Cat).
 mf_pos(pred,Cat,Type) :-
     !,
     alpino_data:predicative(Cat,DtrCat),
+    nonvar(DtrCat),
     hdrug_feature:give_boolean_type(DtrCat,Type).
 mf_pos(F,_Cat,F).
 
