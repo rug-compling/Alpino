@@ -4,4 +4,6 @@ Alpino user_max=300000 \
        simplify_passive=on\
        simplify_modifier=on\
        demo=on -notk\
-       copy_input_if_no_transformation=off copy_input_if_paraphrase_failed=off  $*
+       copy_input_if_no_parse=msg\(noparse\)\
+       copy_input_if_paraphrase_failed=msg\(noparaphrase\)\
+       copy_input_if_no_transformation=off  $*

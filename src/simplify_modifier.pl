@@ -11,18 +11,49 @@ modifier_transformation(Cat,Ds0,Cat,Ds,Ctxt) :-
     lists:select(Tree,Ds0,Ds),
     ignore_modifier(Tree,Ctxt,[]).
 
+%% mijnheer de voorzitter => voorzitter
+modifier_transformation(r(Rel,p(np)),Ds0,r(Rel,VZCAT),VZDS,_) :-
+    Hd = tree(r(hd,adt_lex(_,Mijnheer,_,_,_)),[]),
+    lists:select(Hd,Ds0,Ds1),
+    lists:member(Mijnheer,[mijnheer,meneer,mevrouw]),
+    App = tree(r(app,p(np)),DeVz),
+    lists:select(App,Ds1,[]),
+    De = tree(r(det,adt_lex(_,de,_,_,_)),[]),
+    VZ = tree(r(hd,VZCAT),VZDS),
+    lists:select(De,DeVz,DeVz0),
+    lists:select(VZ,DeVz0,[]).
+
+%% me dunkt => 0
+modifier_transformation(r(Rel,p(du)),Ds0,r(Rel,Cat),Ds,_) :-
+    Nucl = tree(r(nucl,Cat),Ds),
+    Tag =  tree(r(tag,p(sv1)),TagDs0),
+    lists:select(Nucl,Ds0,Ds1),
+    lists:select(Tag,Ds1,[]),
+    Hd = tree(r(hd,adt_lex(_,Denk,_,_,_)),[]),
+    Me = tree(r(su,adt_lex(_,Mij,_,_,_)),[]),
+    lists:select(Hd,TagDs0,TagDs1),
+    lists:select(Me,TagDs1,[]),
+    me_dunkt(Denk,Mij).
 
 %% het begrip industrialisering --> industrialisering
 %% de voorzitter Carel Jansen -> Carel Jansen
+%% voorzitter Jansen -> Jansen
+%% het jaar 1990 -> 1990
 modifier_transformation(r(Rel,_),Ds0,r(Rel,AppCat),AppDs,_) :-
     Hd = tree(r(hd,HdLex),_),
     lists:select(Hd,Ds0,Ds1),
-    App = tree(r(app,AppCat),AppDs),
+    App = tree(r(app,AppCat0),AppDs),
     lists:select(App,Ds1,Ds2),
-    (   AppCat = adt_lex(_,_,_,name,_)
-    ;   AppCat = p(mwu(_,_))
+    (   AppCat0 = adt_lex(_,_,_,name,_), AppCat0 = AppCat
+    ;   AppCat0 = p(mwu(_,_)), AppCat0 = AppCat
     ;   HdLex = adt_lex(_,B,_,noun,_),
-	lists:member(B,[begrip,jaar,maand,periode,term,uitdrukking,woord])
+     	lists:member(B,[begrip,term,uitdrukking,woord]),
+	AppCat0 = AppCat
+    ;   HdLex = adt_lex(_,B,_,noun,_),
+     	lists:member(B,[jaar]),
+	AppCat0 = adt_lex(_,N,_,num,_),
+	AppCat = adt_lex(_,N,_,noun,[neclass=year]),
+	alpino_lex:date_year([N],[])
     ),
     (   Ds2 = [tree(r(det,adt_lex(_,De,_,_,_)),[])],
 	lists:member(De,[de,het])
@@ -80,9 +111,9 @@ modifier_transformation(r(Rel,VAR),Ds0,r(Rel,VAR),Ds,Up) :-
     Mod = tree(r(ModRel,ModInfo),_),
     lists:select(Mod,Ds0,Ds),
     Hd = tree(r(hd,Head),HeadDs),
-    lists:member(Hd,Ds),
+    lists:select(Hd,Ds,DsRest),
     modifier_rel(ModRel,ModInfo),
-    \+ important_modifier(Mod,Head,HeadDs,Up),
+    \+ important_modifier(Mod,Head,HeadDs,Up,DsRest),
     \+ container_head(Ds,Mod).
 
 %% met name om het gebruik te bevorderen -> om het gebruik te bevorderen
@@ -92,7 +123,7 @@ modifier_transformation(r(Rel,VAR),Ds0,r(Rel,VAR),Ds,Up) :-
     modifier_rel(ModRel,ModInfo),
     Hd = tree(r(hd,_),_),
     \+ lists:member(Hd,Ds),
-    \+ important_modifier(Mod,none,none,Up).
+    \+ important_modifier(Mod,none,none,Up,Ds).
 
 %% veel te leuk -> te leuk
 %% twee meter te ver -> te ver
@@ -152,17 +183,20 @@ important_mod_stem(ander,adj).
 important_mod_stem(anders,_).
 important_mod_stem(daar,_).
 important_mod_stem(er,_).
+important_mod_stem(evenmin,_).
 important_mod_stem(fout,_).
 important_mod_stem(geenszins,_).
 important_mod_stem(goed,_).
 important_mod_stem(hier,_).
 important_mod_stem(hoe,_).   % ik vraag me af hoe eerlijk ze zijn -> *ik vraag me af eerlijk ze zijn
+important_mod_stem(incoherent,_).
 important_mod_stem(nauwelijks,_).
 important_mod_stem(negatief,_).
 important_mod_stem(positief,_).
 important_mod_stem(niet,_).
 important_mod_stem(niets,_).
 important_mod_stem(nimmer,_).
+important_mod_stem(noch,_).  % zij kon gisteren noch vandaag aanwezig zijn -> *zij kon aanwezig zijn
 important_mod_stem(nooit,_).
 important_mod_stem(slecht,_).
 important_mod_stem(te,adv).   % als prep can be ignored "ten vroegste"
@@ -235,11 +269,27 @@ ignore_modifier_pattern(mod=dt(pp,
 				       [det=l(_,_,_),
 					hd=moment])]),_,_).
 
+ignore_modifier_pattern(mod=dt(pp,
+			      [hd=in,
+			       obj1=dt(np,
+				       [det=l(_,_,_),
+					hd=context])]),_,_).
+
 ignore_modifier_pattern(mod=dt(advp,
 			       [hd=eens,
 				mod=dt(mwu(_,_),
 				       [mwp=te,
 					mwp=veel])]),_,_).
+
+ignore_modifier_pattern(mod=dt(ap,
+			       [hd=hoe,
+				mod=dt(mwu(_,_),
+				       [mwp=dan,
+					mwp=ook])]),_,_).
+
+ignore_modifier_pattern(mod=dt(mwu(_,_),
+			       [mwp=met,
+				mwp=name]),_,_).
 
 ignore_modifier_pattern(mod=dt(pp,
 			       [hd=volgens,
@@ -379,6 +429,7 @@ ignore_modifier_stem(overigens,_,_,_,_).
 ignore_modifier_stem(ook,_,_,_,_).
 ignore_modifier_stem(precies,_,_,_,_).
 ignore_modifier_stem(reeds,_,_,_,_).
+ignore_modifier_stem(ronduit,_,_,_,_).
 ignore_modifier_stem(sowieso,_,_,_,_).
 ignore_modifier_stem(steeds,_,_,_,_).
 ignore_modifier_stem(tenslotte,_,_,_,_).
@@ -401,31 +452,34 @@ ignore_modifier_stem(vooral,_,_,_,_).
 ignore_modifier_stem(vrijwel,_,_,_,_).
 ignore_modifier_stem(weer,_,_,_,_).
 ignore_modifier_stem(wel,_,_,_,_).
+ignore_modifier_stem(weliswaar,_,_,_,_).
 ignore_modifier_stem(wellicht,_,_,_,_).
 ignore_modifier_stem(zeer,_,_,_,_).
 ignore_modifier_stem(zelfs,_,_,_,_).
 ignore_modifier_stem(zojuist,_,_,_,_).
 
-important_modifier(tree(Cat,_),Hd,HdDs,_):-
+important_modifier(_,adt_lex(_,Die,_,_,_),[],[r(obj1,p(np)),r(_,p(pp))|_],[]) :-
+    lists:member(Die,[die,dat]).
+important_modifier(tree(Cat,_),Hd,HdDs,_,_):-
     important_mod(Cat,Hd,HdDs).
-important_modifier(tree(_Cat,Ds),Hd,HdDs,_) :-
+important_modifier(tree(_Cat,Ds),Hd,HdDs,_,_) :-
     lists:member(Mod,Ds),
     important_modifier1(Mod,Hd,HdDs).
 %% PPs met "geen" function as negation
 %% in geen honderd jaar
 %% met geen mogelijkheid
-important_modifier(tree(r(mod,p(pp)),Ds),_,_,_) :-
+important_modifier(tree(r(mod,p(pp)),Ds),_,_,_,_) :-
     lists:member(tree(r(obj1,_),ObjDs),Ds),
     lists:member(tree(r(det,adt_lex(_,geen,_,_,_)),[]),ObjDs).
-important_modifier(tree(r(mod,p(rel)),_),_,_,[r('--',p(np))|_]).
-important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,er,_,_,_),[],_).   % clefts, er zijn er die problemen hebben
-important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,het,_,_,_),[],_).  % clefts, het zijn schurken die dat doen
-important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,IETS,_,_,_),[],_) :-
+important_modifier(tree(r(mod,p(rel)),_),_,_,[r('--',p(np))|_],_).
+important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,er,_,_,_),[],_,_).   % clefts, er zijn er die problemen hebben
+important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,het,_,_,_),[],_,_).  % clefts, het zijn schurken die dat doen
+important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,IETS,_,_,_),[],_,_) :-
     alpino_simplify_split:forbid_lemma_rel_split(IETS).	% dat is iets waar we naar verlangen
-important_modifier(tree(r(mod,adt_lex(VanCat,Van,_,VanPos,_)),[]),adt_lex(GebruikCat,Gebruik,_,GebruikPos,_),[],_) :-
+important_modifier(tree(r(mod,adt_lex(VanCat,Van,_,VanPos,_)),[]),adt_lex(GebruikCat,Gebruik,_,GebruikPos,_),[],_,_) :-
     check_pmi(Gebruik,GebruikPos,GebruikCat,Van,VanPos,VanCat).
 
-important_modifier(tree(r(mod,p(_)),PPDS),adt_lex(GebruikCat,Gebruik,_,GebruikPos,_),[],_) :-
+important_modifier(tree(r(mod,p(_)),PPDS),adt_lex(GebruikCat,Gebruik,_,GebruikPos,_),[],_,_) :-
     PREPD = tree(r(hd,adt_lex(VanCat,Van,_,VanPos,_)),[]),
     lists:member(PREPD,PPDS),
     check_pmi(Gebruik,GebruikPos,GebruikCat,Van,VanPos,VanCat).
@@ -511,3 +565,11 @@ modifier_rel(app,Cat) :-
     Cat \= adt_lex(_,_,_,num,_),
     Cat \= p(mwu(_,_)).
 
+me_dunkt(dunk,me).
+me_dunkt(dunk,mij).
+me_dunkt(denk,ik).
+me_dunkt(vermoed,ik).
+me_dunkt(vrees,ik).
+me_dunkt(geloof,ik).
+me_dunkt(lijk,me).
+me_dunkt(lijk,mij).
