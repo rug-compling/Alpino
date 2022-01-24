@@ -214,7 +214,8 @@ lex_particle(Term,Particle) :-          % for verbs, v_noun
 %%   roots.
 %% - If bitcoding is used, the bits associated with the individual roots are
 %%   OR'ed to retrieve the bitcode of the with_dt item.
-
+%%
+%% - complication for with_dt(complex_etc...
 
 introduce_with_dt(FsAdt,Roots) :-
     introduce_with_dt(FsAdt,Roots,[]).
@@ -254,6 +255,11 @@ find_matching_with_dt_aux([Root|Roots],[Root-Code|Tail],[Root|Rs],[Code|Cs]) :-
     find_matching_with_dt_aux(Roots,Tail,Rs,Cs).
 find_matching_with_dt_aux([Root|Roots],[_|Tail],Rs,Cs) :-
     find_matching_with_dt_aux([Root|Roots],Tail,Rs,Cs).
+
+potential_with_dt_root(Roots,Root-Code) :-
+    member({RootList}-Code,Roots),
+    member(Root,RootList),
+    alpino_lex:with_dt_root(Root).
 
 potential_with_dt_root(Roots,Root-Code) :-
     member(Root-Code,Roots),
@@ -440,6 +446,11 @@ root_surface__(VerNVoudig,[Surf|S],S) :-
     ;  atom_concat(VerNVoudig,den,Surf)
     ).
 
+root_surface__(Root,L0,L) :-
+    atom_concat(Pre,tal,Root),
+    atom_concat(Pre,tallen,N),
+    surf_to_list(N,L0,L).
+
 %% for genitive inflection of names
 root_surface__(Root,[Surf|L],L) :-
     (   Root = Surf0
@@ -477,7 +488,8 @@ pos2frames(Root,Sense,Pos,Attr,Frames) :-
     tag_mismatch_heuristics(Frames1,Frames2,Root,Sense,Pos,Attr),
     unknown_root_heuristics(Frames2,Frames3,Root,Sense,Pos,Attr),
     last_resort_heuristics(Frames3,Frames4,Root,Sense,Pos,Attr),
-    prefer_best_words_in_frames(Frames4,Frames).
+    added_paraphrase_heuristics(Frames4,Frames5,Root,Sense,Pos,Attr),
+    prefer_best_words_in_frames(Frames5,Frames).
 
 pos2frames_aux(Root,Sense,Pos,Attr,Frame,Surfs) :-
     setof(Surf,dict_entry(Root,Frame,Surf),Surfs),
@@ -1032,7 +1044,7 @@ apply_check(not_sg_su,DT,_) :-
 apply_check(not_sg_su,DT,_) :-
     DT:su:hwrd:lexical <=> Je,
     nonvar(Je),
-    lists:member(Je,[ik,je,jij,hij,het]),
+    lists:member(Je,[ik,je,jij,hij /*,het*/]),   %het zijn belastingbetalers
     !,
     fail.
 apply_check(not_sg_su,_,_).
@@ -1407,10 +1419,16 @@ dep_if_cat(Rel,Cat,Dt) :-
 ipp(Dt) :-
     vc(Dt,VC),
     VC:cat ==> inf,
-    vc(VC,SubVC),
+    ( vc(VC,SubVC)
+    ; svp(VC,SubVC)  % we hebben laten zien ..
+    ),
     ( SubVC:cat ==> inf
     ; SubVC:cat ==> ti
     ).
+
+svp(Dt,VC) :-
+    Dt:svp <=> [VC],
+    VC => dt.
 
 vc(Dt,VC) :-
     Dt:vc <=> VC,
@@ -1645,9 +1663,14 @@ last_resort_heuristic(Pos,Root,_,Attr,Frame,Surfs):-
     add_morphology(Frame,Root,Surf1),
     findall(Surf,realize_surf(Surf1,Surf),Surfs).
 
+added_paraphrase_heuristics(Frames0,Frames,Root,Sense,Pos,Attr):-
+    findall(Frame-Surf,added_paraphrase_heuristic(Pos,Root,Sense,Attr,Frame,Surf),Frames1),
+    lists:append(Frames0,Frames1,Frames2),
+    sort(Frames2,Frames).
+
 %% if we do paraphrasing, and we cannot find a lexical entry,
 %% use the same entry as in the input parse
-last_resort_heuristic(Pos,Root,_Sense,Attr,Frame,[Surf]):-
+added_paraphrase_heuristic(Pos,Root,_Sense,Attr,Frame,[Surf]):-
     alpino_paraphrase:add_lex(Root,Surf,Frame),
     alpino_postags:postag_of_frame(Frame,Pos,CheckAttr),
     check_attributes(CheckAttr,Attr,Pos,Frame,Root).

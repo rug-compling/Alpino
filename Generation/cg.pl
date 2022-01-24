@@ -815,7 +815,9 @@ lookup_tag(Tag,Label,Cat,Ref,Dt,Word) :-
     findall(Cat-Constraints1,alpino_lex_types:lex(Cat,Tag,Hwrd,Constraints1),List),
     nth(N,List,Cat-Constraints),
     alpino_genlex:call_constraints(Constraints),
-    alpino_data:dt_if_defined(Cat,Dt),
+    (   Tag = with_dt(complex_etc,_)
+    ;   alpino_data:dt_if_defined(Cat,Dt)
+    ),
     alpino_data:lexical(Hwrd,Label,_,Word,_,_,gen,_),
     alpino_tr_tag:tr_tag(Tag,Class),
     Ref=ref(Class,Tag,Label,Word,_,_,_,_,gen,N,_).
