@@ -2075,7 +2075,6 @@ with_dt_all('\'n',[miljoen]).
 with_dt_all('\'n',[miljoen,paar]).
 with_dt_all(nodig,[zo]).
 with_dt_all(nogal,[vaak]).
-with_dt_all(nog,[sterk]).
 with_dt_all(nog,[toe,tot]).
 with_dt_all(nooit,[of,zelden]).
 with_dt_all(nooit,[voorheen]).
@@ -2970,7 +2969,6 @@ with_dt_root(stede).
 with_dt_root(steeds).
 with_dt_root(stel).
 with_dt_root(stelletje).
-with_dt_root(sterk).
 with_dt_root(stief_moeder).
 with_dt_root(stief_vader).
 with_dt_root(stijl).
