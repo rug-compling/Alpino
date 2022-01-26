@@ -6004,9 +6004,9 @@ not_a_second_name_word('The').
 not_a_second_name_word('Volksgezondheid').
 not_a_second_name_word('Zuid-Holland').
 
-decap_normal(Word) :-
-    decap_first(Word,Decap),
-    alpino_lex:lexicon(_,_,[Decap],[],normal).
+%decap_normal(Word) :-
+%    decap_first(Word,Decap),
+%    alpino_lex:lexicon(_,_,[Decap],[],normal).
 
 verb_ster(W,W,noun(de,count,sg)):-
     atom(W),

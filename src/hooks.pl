@@ -84,7 +84,7 @@ alpino_genrules:grammar_rule_unpack(_,_,_,_).
 alpino_disambiguation_weights:feature_weight(_,_).
 
 alpino_penalties:syntactic_penalty(_,_,_,_).
-alpino_penalties:additional_weight(_,_).
+% alpino_penalties:additional_weight(_,_).
 
 result_to_gerlof(_,_,_).
 
@@ -179,12 +179,17 @@ alpino_data:whquestion(_).
 alpino_data:declarative(_).
 alpino_data:imparative(_).
 alpino_data:topic_drop(_).
-alpino_data:conj(_,_).
-alpino_data:pl_conj(_,_).
-alpino_data:sg_conj(_,_).
+alpino_data:conj(_,_,_).
 alpino_data:hstem(_,_).
 alpino_data:prep(_,_).
 alpino_data:max_dt(_).
+alpino_data:np_agr(_,_).
+alpino_data:subj_agr(_,_).
+alpino_data:vproj_without_eps3(_).
+alpino_data:ld_pp(_).
+alpino_data:def(_).
+alpino_data:indef(_).
+alpino_data:vp(_).
 
 alpino_lex:inv_spelling_variant(_,_).
 alpino_lex:inv_spelling_variant21(_,_,_).
