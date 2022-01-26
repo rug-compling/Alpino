@@ -336,9 +336,9 @@ relevant_att(numtype).
 %% bitcode_adt: since we need particle information for bitcoding,
 %% this does also first step of lexical lookup. Frames are kept
 %% as list in adt_lex(...)
-bitcode_lookup_frames_adt(adt_lex(Cat,Root0,Sense0,PosTag,Attrs),
-			  adt_lex(Cat,Root,Bc,Frames,Attrs),N,M,Rel) :-
-    adapt_case_root(PosTag,Rel,Root0,Sense0,Root,Sense,Attrs),
+bitcode_lookup_frames_adt(adt_lex(Cat,Root,Sense,PosTag,Attrs),
+			  adt_lex(Cat,Root,Bc,Frames,Attrs),N,M,_Rel) :-
+%    adapt_case_root(PosTag,Rel,Root0,Sense0,Root,Sense,Attrs),
 
     %%% check if Root is uninstantiated, in that case attempt to guess it
     %%% from lemma or sense information in Attrs
@@ -366,6 +366,7 @@ bitcode_lookup_frames_adt_ds([Head|Tail],[NewHead|NewTail],N,O) :-
 %% paraphrase 'hij en zijn vrouw werden benaderd' => men heeft hem en zijn vrouw benaderd
 %% nope
 
+/*
 %% {}
 adapt_case_root(Pron,Rel,Root0,Sense0,Root,Sense,Attrs) :-
     (   adapt_case_root_(Pron,Rel,Root0,Sense0,Root1,Sense1,Attrs)
@@ -386,6 +387,7 @@ nominative(su).
 non_nominative(obj1).
 non_nominative(obj2).
 non_nominative(predc).
+
 
 list_to_root([],R,R).
 list_to_root([H|T],F,{[F,H|T]}).
@@ -431,6 +433,7 @@ pers_pronoun_pair(Ze0,Ze1,Atts) :-
     ->  Ze1 == ze,
 	Ze0 == ze
     ).
+*/
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ADT to dt feature structure %
