@@ -10,7 +10,7 @@
 
 %% all called from cg.pl
 :- public filter_tags/0, pos2frames/5, check_conditions/4,
-          dict_entry/3, surf_to_list/2, lex_lookup/1.
+          dict_entry/3, surf_to_list/3, lex_lookup/1.
 
 
 lex_lookup(AdtNoRefs) :-
@@ -19,7 +19,7 @@ lex_lookup(AdtNoRefs) :-
     introduce_particles_lex,
     introduce_with_dt(AdtNoRefs,Roots),
     filter_tags,
-    adapt_surface_of_roots,
+%%    adapt_surface_of_roots,
     debug_call(1,check_missing_roots(Roots)).
 
 %% The create_lex and create_lex_daughters predicates find all leave nodes
@@ -488,8 +488,9 @@ pos2frames(Root,Sense,Pos,Attr,Frames) :-
     tag_mismatch_heuristics(Frames1,Frames2,Root,Sense,Pos,Attr),
     unknown_root_heuristics(Frames2,Frames3,Root,Sense,Pos,Attr),
     last_resort_heuristics(Frames3,Frames4,Root,Sense,Pos,Attr),
-    added_paraphrase_heuristics(Frames4,Frames5,Root,Sense,Pos,Attr),
-    prefer_best_words_in_frames(Frames5,Frames).
+%    added_paraphrase_heuristics(Frames4,Frames5,Root,Sense,Pos,Attr),
+    prefer_best_words_in_frames(Frames4,Frames5),
+    added_paraphrase_heuristics(Frames5,Frames,Root,Sense,Pos,Attr).   % add later, so are not removed
 
 pos2frames_aux(Root,Sense,Pos,Attr,Frame,Surfs) :-
     setof(Surf,dict_entry(Root,Frame,Surf),Surfs),
@@ -1665,8 +1666,26 @@ last_resort_heuristic(Pos,Root,_,Attr,Frame,Surfs):-
 
 added_paraphrase_heuristics(Frames0,Frames,Root,Sense,Pos,Attr):-
     findall(Frame-Surf,added_paraphrase_heuristic(Pos,Root,Sense,Attr,Frame,Surf),Frames1),
-    lists:append(Frames0,Frames1,Frames2),
-    sort(Frames2,Frames).
+    add_frames(Frames1,Frames0,Frames).
+
+add_frames([],F,F).
+add_frames([Frame|Frames],F0,F) :-
+    add_frame(Frame,F0,F1),
+    add_frames(Frames,F1,F).
+
+add_frame(Tag-Surfs,F0,F) :-
+    add_frame(F0,Tag,Surfs,F).
+
+add_frame([],Tag,Surfs,[Tag-Surfs]).
+add_frame([T-S|F0],Tag,Surfs0,F) :-
+    (  T == Tag
+    ->
+	lists:append(S,Surfs0,Surfs1),
+	sort(Surfs1,Surfs),
+	F = [Tag-Surfs|F0]
+    ;   F = [T-S|F2],
+	add_frame(F0,Tag,Surfs0,F2)
+    ).
 
 %% if we do paraphrasing, and we cannot find a lexical entry,
 %% use the same entry as in the input parse
@@ -2049,6 +2068,7 @@ not_sent_cat(_).
 %%% the input, in case the tag is identical.
 %%%
 %%% this may not always be desirable...
+/*
 adapt_surface_of_roots :-
     (   clause(alpino_cg:lex(Tag,Root,Bit,Cat1,Cat2,SurfList),_,Ref),
 	alpino_paraphrase:add_lex(Root,SurfAtom,Tag),
@@ -2058,6 +2078,7 @@ adapt_surface_of_roots :-
 	fail
     ;   true
     ).
+*/
 
 en(heid,heden).
 

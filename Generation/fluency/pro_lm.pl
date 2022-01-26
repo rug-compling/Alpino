@@ -1,4 +1,4 @@
-:- module(alpino_ngram_lm, [ %init_lm/6,
+:- module(alpino_ngram_lm, [ evaluate_fluency/0,
 			     fluency_model_initialize/0,
 			     phrase_fluency/2,
 			     unigram_fluency/2,
