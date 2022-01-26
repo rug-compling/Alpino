@@ -70,8 +70,9 @@ construction_features(Tree,DT,Frames,P0,P) :-
 
 construction_features(Tree,DT,Frames,Pens0,Pens,Bool) :-    
     tree_penalties(Bool,Tree,Pens0,Pens1),
-    distance_score(DT,Pens1,Pens2),
-    frames_features(Frames,Pens2,Pens).
+    global_tree_penalties(Tree,Pens1,Pens2),
+    distance_score(DT,Pens2,Pens3),
+    frames_features(Frames,Pens3,Pens).
 
 frames_features(Frames,P0,P) :-
     findall(Pen,frame_feature(Frames,Pen),P0,P).
@@ -87,6 +88,27 @@ frame_feature(Frames,Pen) :-
     ),
     lexical_penalty_frame(His,Stem,Surf,Frame,Frame1,Len,Pen),
     debug_message(6,"    ~w:~n",[Pen]).
+
+
+%%% TODO!    
+
+g_subtree(Tree,Tree).
+g_subtree(tree(_,_,Ds,_),Tree) :-
+    lists:member(El,Ds),
+    g_subtree(El,Tree).
+
+global_tree_penalties(Tree,His0,His) :-
+    findall(H,global_tree_penalty(Tree,H),His0,His).
+
+global_tree_penalty(Tree,H) :-
+    g_subtree(Tree,SubTree),
+    global_tree_penalty1(SubTree,H).
+
+global_tree_penalty1(tree(Cat,_,_,_),H):-
+    global_tree_penalty_cat(Cat,H).
+
+global_tree_penalty_cat(Cat,coord(Conj,Agr)) :-
+    coord_agr(Cat,Conj,Agr).
 
 
 nv_member(El,List) :-
@@ -575,8 +597,6 @@ syntactic_penalty_nl(_,_,Ds,s1(Name)) :-
     member(tree(Node,_,_,_),Ds),
     alpino_data:syntactic_penalty_cat_d(Node,Name).
 
-syntactic_penalty_nl(_,Cat,_,coord(Conj,Agr)) :-
-    coord_agr(Cat,Conj,Agr).
 syntactic_penalty_nl(_,Cat,_,s1(extra_from_topic)) :-
     alpino_data:sv1_extra(Cat,[_|_]).
 syntactic_penalty_nl(_,Cat,_,s1(extra_from_topic,comparative)) :-
@@ -686,15 +706,9 @@ num(Agr,sg) :-
 num(Agr,pl) :-
     \+ alpino_data:sg(Agr).
 
-coord_agr(Cat,Conj,sg) :-
-    alpino_data:conj(Cat,Conj),
-    \+ alpino_data:pl_conj(Cat,Conj),
-    alpino_data:sg_conj(Cat,Conj).
-
-coord_agr(Cat,Conj,pl) :-
-    alpino_data:conj(Cat,Conj),
-    \+ alpino_data:sg_conj(Cat,Conj),
-    alpino_data:pl_conj(Cat,Conj).
+coord_agr(Cat,Conj,Val) :-
+    alpino_data:conj(Cat,Conj,Agr),
+    num(Agr,Val).
 
 det_conj_n_no_agr(Det,Conj) :-
     alpino_data:det_agr(Det, Agr),
@@ -720,7 +734,7 @@ det_conj_n_no_agr(Det,Conj) :-
 %    count_words(H,C0,C1),
 %    count_words_ds(T,C1,C).
 
-rulename_lex_postag(tree(_,_,lex(ref(Tag,_,Root,_,_,_,_,_,_,_,_)),_),Root,Tag).
+%rulename_lex_postag(tree(_,_,lex(ref(Tag,_,Root,_,_,_,_,_,_,_,_)),_),Root,Tag).
 
 rulename_lex(tree(_,_,lex(ref(_,_,Root,_,_,_,_,_,_,_,_)),_),Root).
 rulename_lex(tree(_,_,[D],_),RuleName) :-
