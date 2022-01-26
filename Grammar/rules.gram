@@ -726,12 +726,24 @@ optcomma_end(OPTCOMMA) :-
     comma_end(COMMA).
 
 comma_end(COMMA) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     COMMA => punct,
     COMMA:puncttype => (komma;schuin_streep;uitroep;vraag;punt;ligg_streep).
 
+comma_end(COMMA) :-
+    hdrug_util:hdrug_flag(parse_or_generate,generate),
+    COMMA => punct,
+    COMMA:puncttype => (komma;uitroep;vraag;punt;ligg_streep).
+
 comma(COMMA) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     COMMA => punct,
     COMMA:puncttype => (komma;schuin_streep).
+
+comma(COMMA) :-
+    hdrug_util:hdrug_flag(parse_or_generate,generate),
+    COMMA => punct,
+    COMMA:puncttype => komma.
 
 optcomma_hellip(OPTCOMMA) :-
     OPTCOMMA => optpunct,
@@ -739,8 +751,14 @@ optcomma_hellip(OPTCOMMA) :-
     comma_hellip(COMMA).
 
 comma_hellip(COMMA) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     COMMA => punct,
     COMMA:puncttype => (komma;hellip;schuin_streep).
+
+comma_hellip(COMMA) :-
+    hdrug_util:hdrug_flag(parse_or_generate,generate),
+    COMMA => punct,
+    COMMA:puncttype => (komma;hellip).
 
 hellip(COMMA) :-
     COMMA => punct,
@@ -755,16 +773,28 @@ haak_sluit(COMMA) :-
     COMMA:puncttype => haak_sluit.
 
 comma_dash(COMMA) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     COMMA => punct,
     COMMA:puncttype => (komma;ligg_streep;schuin_streep).
+
+comma_dash(COMMA) :-
+    hdrug_util:hdrug_flag(parse_or_generate,generate),
+    COMMA => punct,
+    COMMA:puncttype => (komma;ligg_streep).
 
 dash(COMMA) :-
     COMMA => punct,
     COMMA:puncttype => ligg_streep.
 
 comma_dubb(COMMA):-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     COMMA => punct,
     COMMA:puncttype => (komma;dubb_punt;schuin_streep).
+
+comma_dubb(COMMA):-
+    hdrug_util:hdrug_flag(parse_or_generate,generate),
+    COMMA => punct,
+    COMMA:puncttype => (komma;dubb_punt).
 
 dubb(DUBB) :-
     DUBB => punct,
@@ -8089,9 +8119,25 @@ grammar_rule(top_start_g2,TOP,[START,PUNCT]) :-
     TOP => top_cat,
     START => start,
     START:puncttype <=> Type,
-    START:dt:stype => (ynquestion;whquestion),
+    START:dt:stype => whquestion,
     hd_structure(START,TOP),
     Type => vraag.
+grammar_rule(top_start_g3,TOP,[START,PUNCT]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,generate),
+    end_punct(PUNCT,Type),
+    TOP => top_cat,
+    START => start,
+    START:puncttype <=> Type,
+    START:dt:stype => ynquestion,
+    hd_structure(START,TOP),
+    (   START:dt:hwrd:lexical ==> laat,
+	Type => punt
+    ;   START:dt:hwrd => [],
+	Type => vraag
+    ;   START:dt:hwrd:lexical <=> X,
+	dif(X,laat),
+	Type => vraag
+    ).
 
 %% ze vroeg: En?
 %% Want :
