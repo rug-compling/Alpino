@@ -41,6 +41,89 @@ words_transformation(r(Rel,Cat),Ds0,r(Rel,Cat),Ds) :-
     match_left_pattern(Left,Ds0,Ds1),
     add_right_pattern(Right,Ds1,Ds).
 
+%% X wordt geacht VP => X moet VP
+words_transformation(r(Rel,Cat),Ds0,r(Rel,Cat),[SU,NEWHD,tree(r(vc,p(inf)),INFDS)]) :-
+    SU = tree(r(su,i(I,_)),_),
+    HD = tree(r(hd,adt_lex(_,word,_,_,Atts)),[]),
+    VC = tree(r(vc,p(ppart)),VCDS0),
+    lists:select(SU,Ds0,Ds1),
+    lists:select(HD,Ds1,Ds2),
+    lists:select(VC,Ds2,[]),
+    OBJ = tree(r(obj1,i(I)),[]),
+    lists:select(OBJ,VCDS0,VCDS1),
+    ACHT = tree(r(hd,adt_lex(_,acht,_,_,_)),[]),
+    lists:select(ACHT,VCDS1,VCDS2),
+    VC2 = tree(r(vc,p(ti)),TIDS),
+    lists:select(VC2,VCDS2,VCDS),
+    INF = tree(r(body,p(inf)),INFDS0),
+    lists:select(INF,TIDS,_),
+    lists:append(VCDS,INFDS0,INFDS),
+    NEWHD = tree(r(hd,adt_lex(_,moet,_,verb,Atts)),[]).
+
+%% opgemerkt zij dat X => X
+words_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(smain)),BODYDS) :-
+    HD = tree(r(hd,adt_lex(smain,ben,_,verb,Atts)),[]),
+    lists:select(HD,Ds0,[VC]),
+    lists:member(tense=subjunctive,Atts),
+    lists:member(stype=declarative,Atts),
+    VC = tree(r(vc,p(ppart)),VCDS0),
+    MERK = tree(r(hd,adt_lex(ppart,merk_op,_,_,_)),[]),
+    lists:select(MERK,VCDS0,[CP]),
+    CP = tree(r(vc,p(cp)),CPDS0),
+    DAT = tree(r(cmp,adt_lex(_,dat,_,_,_)),[]),
+    lists:select(DAT,CPDS0,[BODY]),
+    BODY = tree(r(body,p(ssub)),BODYDS0),
+    A0 = tree(r(hd,adt_lex(_,ARR1,ARR2,ARR3,ARR4)),[]),
+    A1 = tree(r(hd,adt_lex(smain,ARR1,ARR2,ARR3,ARR4)),[]),
+    replace(A0,A1,BODYDS0,BODYDS).
+
+%% er zij op/aan gewezen/herinnerd dat X => X  
+words_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(smain)),BODYDS) :-
+    HD = tree(r(hd,adt_lex(smain,ben,_,verb,Atts)),[]),
+    lists:select(HD,Ds0,[VC]),
+    lists:member(tense=subjunctive,Atts),
+    lists:member(stype=declarative,Atts),
+    VC = tree(r(vc,p(ppart)),VCDS0),
+    MERK = tree(r(hd,adt_lex(ppart,Wijs,_,_,_)),[]),
+    lists:select(MERK,VCDS0,[PP]),
+    (   OPL = op, Wijs = wijs
+    ;   OPL = aan, Wijs = herinner
+    ),
+    PP = tree(r(pc,p(pp)),PPDS0),
+    (   OP = tree(r(hd,adt_lex(_,OPL,_,_,_)),[]),
+	lists:select(OP,PPDS0,PPDS1),
+	POP = tree(r(pobj1,_),_),
+	lists:select(POP,PPDS1,[CP])
+    ;   EROP = tree(r(hd,adt_lex(_,EROPL,_,_,_)),[]),
+	lists:select(EROP,PPDS0,[CP]),
+	erop(EROPL,OPL)
+    ),
+    CP = tree(r(vc,p(cp)),CPDS0),
+    DAT = tree(r(cmp,adt_lex(_,dat,_,_,_)),[]),
+    lists:select(DAT,CPDS0,[BODY]),
+    BODY = tree(r(body,p(ssub)),BODYDS0),
+    A0 = tree(r(hd,adt_lex(_,ARR1,ARR2,ARR3,ARR4)),[]),
+    A1 = tree(r(hd,adt_lex(smain,ARR1,ARR2,ARR3,ARR4)),[]),
+    replace(A0,A1,BODYDS0,BODYDS).
+
+%%% TODO:
+%%% het is zo dat X => X
+
+words_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(smain)),BODYDS) :-
+    HD = tree(r(hd,adt_lex(smain,ben,_,verb,_)),[]),
+    lists:select(HD,Ds0,Ds1),
+    SUP = tree(r(sup,adt_lex(_,het,_,_,_)),[]),
+    lists:select(SUP,Ds1,Ds2),
+    PREDC = tree(r(predc,adt_lex(_,zo,_,_,_)),[]),
+    lists:select(PREDC,Ds2,[CP]),
+    CP = tree(r(su,p(cp)),CPDS0),
+    DAT = tree(r(cmp,adt_lex(_,dat,_,_,_)),[]),
+    lists:select(DAT,CPDS0,[BODY]),
+    BODY = tree(r(body,p(ssub)),BODYDS0),
+    A0 = tree(r(hd,adt_lex(_,ARR1,ARR2,ARR3,ARR4)),[]),
+    A1 = tree(r(hd,adt_lex(smain,ARR1,ARR2,ARR3,ARR4)),[]),
+    replace(A0,A1,BODYDS0,BODYDS).
+
 subjects(List0,List) :-
     S1 = tree(r(su,L1),_),
     lists:member(S1,List0),
@@ -59,9 +142,6 @@ head_rel(cmp).
 mwu([],[]).
 mwu([tree(r(mwp,adt_lex(_,W,_,_,_)),[])|Trees],[W|Ws]) :-
     mwu(Trees,Ws).
-
-%%% TODO:
-%%% het is zo dat X => X
 
 %%% uiterst ADJ => heel ADJ
 pattern_rule([mod=l(uiterst,adj,_),
@@ -249,6 +329,14 @@ simplify(Compound,Atom,Cat,Cat,noun,noun,E,E) :-
        ).
 */
 
+simplify(Ik,{List},np,np,pron,pron,Atts,Atts,[]) :-
+    eq_pronoun(List,Atts),
+    lists:member(Ik,List).
+
+simplify(Ik,{List},np,np,pron,pron,Atts,Atts,[]) :-
+    eq_pronoun(Ik,List,Atts).
+
+
 simplify(aandachtig,goed,Cat,Cat,D,D,E,E,_).
 simplify(aangaande,over,Cat,Cat,D,D,E,E,_).
 simplify(aangezien,omdat,Cat,Cat,D,D,E,E,_).
@@ -261,7 +349,7 @@ simplify(abuis,fout,Cat,Cat,D,D,E,E,_).
 simplify(acceptatie,goedkeuring,Cat,Cat,D,D,E,E,_).
 simplify(accomodatie,{[gebouw,locatie]},Cat,Cat,D,D,E,E,_).
 simplify(accordeer,keur_goed,Cat,Cat,D,D,E,E,_).
-simplify(acht,vind,Cat,Cat,verb,verb,E,E,_).
+simplify(acht,{[vind,acht]},Cat,Cat,verb,verb,E,E,_).
 simplify(actualiseer,{[pas_aan,moderniseer,werk_bij]},Cat,Cat,D,D,E,E,_).
 simplify(acuut,direct,Cat,Cat,D,D,E,E,_).
 simplify(additioneel,voeg_toe,ap,ppart,D,D,E,E,_).
@@ -274,6 +362,7 @@ simplify(aldaar,daar,Cat,Cat,D,D,E,E,_).
 simplify(aldus,{[zo,volgens]},Cat,Cat,D,D,E,E,_).
 simplify(alloceer,wijs_toe,Cat,Cat,D,D,E,E,_).
 simplify(alom,overal,Cat,Cat,D,D,E,E,_).
+simplify(alternatief,ander,ap,ap,D,D,_,[aform=compar],_).
 simplify(alvorens,voordat,Cat,Cat,D,D,E,E,_).
 simplify(ambivalent,dubbel,Cat,Cat,D,D,E,E,_).
 simplify(amendement,wijziging,Cat,Cat,D,D,E,E,_).
@@ -299,6 +388,8 @@ simplify(cineast,filmmaker,Cat,Cat,D,D,E,E,_).
 simplify(coherentie,samenhang,Cat,Cat,D,D,E,E,_).
 simplify(communiceer,praat,Cat,Cat,D,D,E,E,_).
 simplify(compliceren,moeilijk,ppart,ap,adj,adj,E,E,_).
+simplify(concretiseer,verduidelijk,Cat,Cat,D,D,E,E,_).
+simplify(concretisering,verduidelijking,Cat,Cat,D,D,E,E,_).
 simplify(confirmeer,bevestig,Cat,Cat,D,D,E,E,_).
 simplify(conform,volgens,Cat,Cat,D,D,E,E,_).
 simplify(constructief,bruikbaar,Cat,Cat,D,D,E,E,_).
@@ -338,6 +429,7 @@ simplify(eminent,munt_uit,Cat,Cat,D,D,E,E,_).
 simplify(enerverend,spannend,Cat,Cat,D,D,E,E,_).
 simplify(enigma,raadsel,Cat,Cat,D,D,E,E,_).
 simplify(epiloog,slotwoord,Cat,Cat,D,D,E,E,_).
+simplify(essentieel,belangrijk,Cat,Cat,D,D,E,E,_).
 simplify(etisch,moreel,Cat,Cat,D,D,E,E,_).
 simplify(evident,duidelijk,Cat,Cat,D,D,E,E,_).
 simplify(excessief,overdreven,Cat,Cat,D,D,E,E,_).
@@ -430,7 +522,8 @@ simplify(participatie,deelname,Cat,Cat,D,D,E,E,_).
 simplify(partieel,gedeeltelijk,Cat,Cat,D,D,E,E,_).
 simplify(pendule,klok,Cat,Cat,D,D,E,E,_).
 simplify(percipieer,neem_waar,Cat,Cat,D,D,E,E,_).
-simplify(perspectief,zicht,Cat,Cat,D,D,E,E,_).
+simplify(perspectief,zicht,Cat,Cat,D,D,E,E,_) :-
+    lists:member(rnum=sg,E).
 simplify(pertinent,echt,Cat,Cat,D,D,E,E,_).
 simplify(plausibel,redelijk,Cat,Cat,D,D,E,E,_).
 simplify(poog,probeer,Cat,Cat,D,D,E,E,_).
@@ -438,7 +531,6 @@ simplify(potentieel,mogelijk,Cat,Cat,adj,adj,E,E,_).
 simplify(potentieel,mogelijkheid,Cat,Cat,noun,noun,E,E,_).
 simplify(prerogatief,voorrecht,Cat,Cat,D,D,E,E,_).
 simplify(prioritair,belangrijk,Cat,Cat,D,D,E,E,_).
-simplify(prioriteit,{[voorrang,kern_punt,prioriteit]},Cat,Cat,D,D,E,E,_).
 simplify(procedure,werkwijze,Cat,Cat,D,D,E,E,_).
 simplify(prolongatie,verlenging,Cat,Cat,D,D,E,E,_).
 simplify(prominent,belangrijk,Cat,Cat,D,D,E,E,_).
@@ -521,6 +613,8 @@ simplify_det(die,{[die,dat]}).
 simplify_det(dit,{[deze,dit]}).
 simplify_det(het,{[de,het]}).
 
+
+
 np(X) :-
     np0(X).
 np(dt(conj,[cnj=NP|_])):-
@@ -528,3 +622,26 @@ np(dt(conj,[cnj=NP|_])):-
 
 np0(dt(np,_)).
 np0(l(_,noun,_)).
+
+eq_pronoun([ik,me,mij],_).
+eq_pronoun([je,jij,jou],_).
+eq_pronoun([hij,hem],_).
+eq_pronoun([zij,haar],Atts) :-
+    lists:member(rnum=sg,Atts).
+eq_pronoun([wij,we,ons],_).
+eq_pronoun([zij,ze,hun],Atts) :-
+    lists:member(rnum=pl,Atts).
+
+eq_pronoun(ze,[zij,haar],Atts) :-
+    lists:member(rnum=sg,Atts).
+eq_pronoun(hen,[zij,ze,hun],Atts) :-
+    lists:member(rnum=pl,Atts).
+
+erop(EROP,OP) :-
+    atom_concat(er,OP,EROP).
+erop(EROP,OP) :-
+    atom_concat(daar,OP,EROP).
+erop(EROP,OP) :-
+    atom_concat(hier,OP,EROP).
+erop(EROP,OP) :-
+    atom_concat(waar,OP,EROP).
