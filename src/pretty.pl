@@ -314,6 +314,7 @@ value(clause(val(Key,Val),BodyL),Ls) :-
 :- public
     compare_dt/2,           % cmdint
     compare_score/2,        % cmdint
+    all_compare_score/2,    % cmdint
     analyse_differences/2,  % cmdint
     analyse_differences/0.  % tcltk, cmint, start.pl
 
@@ -604,6 +605,7 @@ select_all([H|T],Left1,His2,His2Left) :-
 
 :- public
     display_penalties_of_obj/1,
+    all_display_penalties_of_obj/1,
     format_features_of_obj/1.
 
 hdrug_command(features,display_penalties_of_obj(Obj),[Obj]).

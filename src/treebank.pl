@@ -786,7 +786,7 @@ deptree_xml_label_rest(l(FrameTerm,Cat,Root0/[P0,P]),String,_,
 
 % ADT
 deptree_xml_label_rest(adt_lex(Cat,Root,Sense,PosTag,LexAtts),_,_,
-                       [root-Root,sense-Sense,pos-PosTag,cat-Cat|Atts],_,_) :-
+                       [root-Root,sense-Sense,pos-PosTag,cat-Cat|Atts],_,His,His) :-
     adt_lex_atts(LexAtts,Atts).
 
 extract_category_features(mwu(_Root,_Sense),mwu,Atts0,Atts) :-
@@ -2186,7 +2186,7 @@ xml_save_adt(Result,File) :-
 
 deptree_xml_adt(Cat) -->
     { alpino_adt:result_to_adt(Cat,Tree0),
-      deptree_xml_tree(Tree0,Tree,_,0,_,[],[]) },
+      deptree_xml_tree(Tree0,Tree,_,0,_,[],[],_) },
     deptree_xml_start_adt,
     deptree_xml_tree_format(Tree,2),
     deptree_xml_end_adt.

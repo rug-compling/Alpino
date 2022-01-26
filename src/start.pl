@@ -422,7 +422,7 @@ slow_options :-
 %% NB: veryfast is now the default!
 :- veryfast_options.
 
-:- public no_heur_options/0.
+:- public no_heur_options/0, annotate_options/0.
 no_heur_options:-
     set_flag(pos_tagger,off),
     set_flag(use_guides,off).
@@ -2416,11 +2416,11 @@ process_and_save(_Kind,Stream,_Peer,_Timeout) :-
 print_error_stream(Stream,Error) :-
     format(Stream,"Error: ~w~n",[Error]).
 
-print_realizations([],_).
-print_realizations([H|T],Stream) :-
-    concat_all(H,Atom,' '),
-    format(Stream,"~a~n",[Atom]),
-    print_realizations(T,Stream).
+% print_realizations([],_).
+% print_realizations([H|T],Stream) :-
+%     concat_all(H,Atom,' '),
+%     format(Stream,"~a~n",[Atom]),
+%     print_realizations(T,Stream).
 
 :- if(current_prolog_flag(dialect,swi)).
 
