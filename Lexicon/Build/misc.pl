@@ -2525,7 +2525,7 @@ particle(vandoor).
 particle(vaneen).
 particle(vast).
 particle(veilig).
-m(ver,particle(verder),verder).
+particle(verder).
 particle(verrot).
 particle(vet).
 particle(vlam).
