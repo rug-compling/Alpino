@@ -11,6 +11,18 @@ modifier_transformation(Cat,Ds0,Cat,Ds,Ctxt) :-
     lists:select(Tree,Ds0,Ds),
     ignore_modifier(Tree,Ctxt,[]).
 
+%% in obcomp, body can be dp-dp. Remove second dp.
+%% meer dan alleen maar codificatie
+%% => meer dan codificatie
+%% are we sure we select the intended DP? No. But that is bad
+%% choice in grammar.
+modifier_transformation(r(obcomp,p(cp)),Ds0,r(obcomp,p(cp)),Ds,_) :-
+    CMP = tree(r(cmp,_),_),
+    BODY = tree(r(body,p(du)),[DU1|_]),
+    lists:select(CMP,Ds0,[BODY]),
+    DU1 = tree(r(dp,NPCAT),NPBODY),
+    Ds = [CMP,tree(r(body,NPCAT),NPBODY)].   
+
 %% mijnheer de voorzitter => voorzitter
 modifier_transformation(r(Rel,p(np)),Ds0,r(Rel,VZCAT),VZDS,_) :-
     Hd = tree(r(hd,adt_lex(_,Mijnheer,_,_,_)),[]),
@@ -44,7 +56,8 @@ modifier_transformation(r(Rel,_),Ds0,r(Rel,AppCat),AppDs,_) :-
     lists:select(Hd,Ds0,Ds1),
     App = tree(r(app,AppCat0),AppDs),
     lists:select(App,Ds1,Ds2),
-    (   AppCat0 = adt_lex(_,_,_,name,_), AppCat0 = AppCat
+    (   AppCat0 = adt_lex(_,_,_,name,_), 
+        check_app_name(Rel,AppCat0,AppCat)
     ;   AppCat0 = p(mwu(_,_)), AppCat0 = AppCat
     ;   HdLex = adt_lex(_,B,_,noun,_),
      	lists:member(B,[begrip,term,uitdrukking,woord]),
@@ -177,32 +190,41 @@ simple_np(p(np)).
 simple_np(adt_lex(np,_,_,_,_)).
 
 
+important_mod_stem(Lem,_) :-
+    negatief_element(Lem).
+
 important_mod_stem(afschuwelijk,_).
-important_mod_stem(amper,_).
 important_mod_stem(ander,adj).
 important_mod_stem(anders,_).
 important_mod_stem(daar,_).
 important_mod_stem(er,_).
-important_mod_stem(evenmin,_).
 important_mod_stem(fout,_).
-important_mod_stem(geenszins,_).
 important_mod_stem(goed,_).
 important_mod_stem(hier,_).
 important_mod_stem(hoe,_).   % ik vraag me af hoe eerlijk ze zijn -> *ik vraag me af eerlijk ze zijn
 important_mod_stem(incoherent,_).
-important_mod_stem(nauwelijks,_).
 important_mod_stem(negatief,_).
 important_mod_stem(positief,_).
-important_mod_stem(niet,_).
-important_mod_stem(niets,_).
-important_mod_stem(nimmer,_).
-important_mod_stem(noch,_).  % zij kon gisteren noch vandaag aanwezig zijn -> *zij kon aanwezig zijn
-important_mod_stem(nooit,_).
 important_mod_stem(slecht,_).
 important_mod_stem(te,adv).   % als prep can be ignored "ten vroegste"
 important_mod_stem(vaag,_).
 important_mod_stem(verkeerd,_).
-important_mod_stem(weinig,_).
+
+
+negatief_element(amper).
+negatief_element(evenmin).
+negatief_element(geen).
+negatief_element(geenszins).
+negatief_element(nauwelijks).
+negatief_element(niemand).
+negatief_element(nergens).
+negatief_element(niet).
+negatief_element(niets).
+negatief_element(nimmer).
+negatief_element(noch).  % zij kon gisteren noch vandaag aanwezig zijn -> *zij kon aanwezig zijn
+negatief_element(nooit).
+negatief_element(weinig).
+
 
 important_mod(r(_,Cat),A,B) :-
     important_mod(Cat,A,B).
@@ -219,8 +241,6 @@ important_mod(adt_lex(_,_,_,adj,Atts),_,_) :-
     lists:member(iets=true,Atts).
 important_mod(adt_lex(_,Stem,_,Pos,_),_,_):-
     important_mod_stem(Stem,Pos).
-
-%% todo: use notation from simplify_words?
 
 ignore_modifier(tree(r(Rel,i(_,Cat)),Ds),Ctxt,Hd) :-
     ignore_modifier(tree(r(Rel,Cat),Ds),Ctxt,Hd).
@@ -263,11 +283,21 @@ ignore_modifier_pattern(mod=dt(np,
 			       [hd=beetje,
 				det=een]),_,_).
 
+ignore_modifier_pattern(mod=dt(advp,
+			       [hd=ongeveer,
+				mod=zo]),_,_).
+
 ignore_modifier_pattern(mod=dt(pp,
 			      [hd=op,
 			       obj1=dt(np,
 				       [det=l(_,_,_),
 					hd=moment])]),_,_).
+
+ignore_modifier_pattern(mod=dt(pp,
+			      [hd=met,
+			       obj1=dt(np,
+				       [mod=ander,
+					hd=woord])]),_,_).
 
 ignore_modifier_pattern(mod=dt(pp,
 			      [hd=in,
@@ -458,8 +488,13 @@ ignore_modifier_stem(zeer,_,_,_,_).
 ignore_modifier_stem(zelfs,_,_,_,_).
 ignore_modifier_stem(zojuist,_,_,_,_).
 
+important_modifier_pattern(mod=dt(mwu(_,_),[mwp=dan,mwp=ook])).
+
 important_modifier(_,adt_lex(_,Die,_,_,_),[],[r(obj1,p(np)),r(_,p(pp))|_],[]) :-
     lists:member(Die,[die,dat]).
+important_modifier(Tree,_,_,_,_) :-
+    important_modifier_pattern(Pattern),
+    match_pattern(Pattern,Tree).
 important_modifier(tree(Cat,_),Hd,HdDs,_,_):-
     important_mod(Cat,Hd,HdDs).
 important_modifier(tree(_Cat,Ds),Hd,HdDs,_,_) :-
@@ -573,3 +608,10 @@ me_dunkt(vrees,ik).
 me_dunkt(geloof,ik).
 me_dunkt(lijk,me).
 me_dunkt(lijk,mij).
+
+check_app_name(tag,adt_lex(A,B,C,D,Atts0),Result) :-
+    lists:select(neclass=Val,Atts0,Atts),
+    Val \= 'PER',
+    !,
+    Result=adt_lex(A,B,C,D,[neclass='PER'|Atts]).
+check_app_name(_,L,L).

@@ -15,9 +15,11 @@ apply_adt_transformations(Tree0,Tree) :-
 
 apply_split_transformations(on,Tree0,Tree) :-
     apply_split_transformations(Tree0,Tree).
+apply_split_transformations(off,Tree,Tree).
 
 apply_passive_transformations(on,Tree0,Tree) :-
     apply_passive_transformations(Tree0,Tree).
+apply_passive_transformations(off,Tree,Tree).
 
 apply_further_adt_transformations(Tree2,Tree) :-
     hdrug_util:hdrug_flag(simplify_modifier,Mod),
@@ -103,6 +105,18 @@ weghalen mod bij de .. PROPN:
 split gek:
 Het duurt niet lang . Of de politie verhoort hem .
 Er gaat hier in het Europees Parlement geen zitting voorbij . Of we zeggen iets .
+
+
+ONDUIDELIJKE/FOUTE PARSES
+
+Volgens de ramingen van de ECB zou zo ongeveer vier vijfde van de werkloosheid *van aard* zijn .
+
+
+OPEN PROBLEMEN
+
+- generation of topic drop, "Mijnheer de Voorzitter , neem mij niet kwalijk , maar ik heb een opmerking over de Notulen ."
+
+- generation of number expressions "De behandeling van een malariapatiënt kost tussen de 10 en 25 dollar"
 
 
 
