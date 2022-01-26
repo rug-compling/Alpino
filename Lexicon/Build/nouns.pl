@@ -16605,7 +16605,7 @@ n([sg(jihadist),pl(jihadisten)],de,[]).
 
 n([sg(jingle),pl(jingles)],de,[]).
 
-n([pl(jobs),sg(job),sg('Job'),pl('Jobs')],de,[]).
+n([pl(jobs),sg(job)],de,[]).
 
 n([mass(joch)],het,[]).
 
@@ -27558,8 +27558,17 @@ n([pl(primeurs),sg(primeur)],de,[sbar,vp],[dim(primeurtje)]).
 
 n([sg([primeur,card]),pl([primeur,cards])],de,[]).
 
-n([pl(principes),sg(principe),
-   pl(princiepen),sg(princiep)],het,
+n([pl(principes),sg(principe)],het,
+  [sbar,
+   vp,
+   subject_sbar,
+   np_app_measure,
+   start_app_measure
+  ],
+  [kern,
+   s(voorzorg)]).
+
+n([pl(princiepen),sg(princiep)],het,
   [sbar,
    vp,
    subject_sbar,

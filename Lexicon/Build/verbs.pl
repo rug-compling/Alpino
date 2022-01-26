@@ -3473,7 +3473,7 @@ v(beveel,beveelt,bevelen,bevolen,beval,bevalen,
 	part_sbar(aan),
 	part_np_sbar(aan),
 	part_transitive(aan),
-	part_vp(aan)])]).
+	part_vp_no_control(aan)])]).
 
 v(beveilig,beveiligt,beveiligen,beveiligd,beveiligde,beveiligden,
     [h([transitive,
