@@ -377,39 +377,17 @@ adjective_er_plural(Cat,Agr,Sg) ::-
     Sg => agr,
     Sg => sg.
 
-conj(Cat,Conj) ::-
-    Cat => clist,
-    Cat:cform <=> Conj,
-    Cat:cat => np.
-
-conj(Cat,Conj) ::-
-    Cat => clist,
-    Cat:cform <=> Conj,
-    Cat:cat => n.
-
-sg_conj(Cat,Conj) ::-
+conj(Cat,Conj,Agr) ::-
     Cat => clist,
     Cat:cform <=> Conj,
     Cat:cat => np,
-    Cat:cat:e_agr => sg.
+    Cat:cat:e_agr <=> Agr.
 
-sg_conj(Cat,Conj) ::-
+conj(Cat,Conj,Agr) ::-
     Cat => clist,
     Cat:cform <=> Conj,
     Cat:cat => n,
-    Cat:cat:e_agr => sg.
-
-pl_conj(Cat,Conj) ::-
-    Cat => clist,
-    Cat:cform <=> Conj,
-    Cat:cat => np,
-    Cat:cat:e_agr => pl.
-
-pl_conj(Cat,Conj) ::-
-    Cat => clist,
-    Cat:cform <=> Conj,
-    Cat:cat => n,
-    Cat:cat:e_agr => pl.
+    Cat:cat:e_agr <=> Agr.
 
 det_loc(Cat) ::-
     Cat => n,
