@@ -1,4 +1,4 @@
-- module(alpino_survive_tagger, [ survive_tagger/2 ]).
+:- module(alpino_survive_tagger, [ survive_tagger/2 ]).
 
 :- expects_dialect(sicstus).
 
