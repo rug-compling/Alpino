@@ -4313,8 +4313,12 @@ np_n_structure(NP,N) :-
     NP0:case => ~gen,
     N:hdet => no,
     N:bmeas <=> NP:bmeas,
-    N:cj => ncj,		% Lenooor: prevent '[np [N and N]]' because
-				% that would assign cat=np instead of cat=conj
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+
+	N:cj => ncj	%% Lenooor: prevent '[np [N and N]]' because
+			%% that would assign cat=np instead of cat=conj
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     hd_structure(N,NP0,np),
     add_rel(NP0,NP).
 
@@ -10102,16 +10106,21 @@ coord_daughter_paths(L,M) :-
     %% removed tmploc: 'overal en altijd'
     %% ccat0 is not right either: 'niet of te weinig'
     %% removed redrel: "Dat zal afhangen van wat je gebruikt en de behoeften van de gebruiker"
-    %% removed case: voor mijn vrouw en ik
     Paths = [vform,aform,nform,wh,app,tpart,amount,exs,cleft,
              compar_form,vslash,relform,ld_pc,me_adj,adj_can_postv,
              modifies_a,slash,sc,parts,pro_deps,e_deps,pred,
              % question,
 	     % pp_er, %% in de schaatswereld en daarbuiten werd fel gespeculeerd
              allows_root_imp,
-             pp_role,haswh],
+             pp_role,haswh|Case],
+    case_features(Case),
     unify_paths(Paths,L,M).
 
+%%% removed case: voor mijn vrouw en ik
+case_features([]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse).
+case_features([case]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,generate).
 
 %% subj cannot be unified for vp etc in case the subj has
 %% been realized in the conjunct already
