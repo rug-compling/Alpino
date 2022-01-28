@@ -203,14 +203,14 @@ split_transformation(tree(r('--',p(conj)),Ds0),NewList) :-
     conj_list_split(ConjList,NewList).
 
 split_transformation(tree(r('--',p(du)),Ds0),[TagFirst|NewList]) :-
-    Tag = tree(r(tag,_),_),
-    Nucl = tree(r(nucl,p(conj)),NuclDs0),
+    Nucl = tree(r(OtherRel,p(conj)),NuclDs0),
     lists:select(Tag,Ds0,[Nucl]),
+    short_du_part(Tag,OtherRel),
     D1 = tree(r(crd,adt_lex(_,en,_,_,_)),[]),
     lists:select(D1,NuclDs0,ConjList),
     conj_list_split(ConjList,[First|NewList]),
     First = tree(r(top,p(top)),[tree(r('--',FirstCat),FirstDs)]),
-    TagFirst = tree(r(top,p(top)),[tree(r('--',p(du)),[Tag,tree(r(nucl,FirstCat),FirstDs)])]).
+    TagFirst = tree(r(top,p(top)),[tree(r('--',p(du)),[Tag,tree(r(OtherRel,FirstCat),FirstDs)])]).
 
 %% ap: sterker nog, smain
 %% advp: dan nog een korte opmerking over ..
@@ -221,6 +221,41 @@ split_transformation(tree(r('--',p(du)),[D2,D3]),[X1,X2]) :-
     D3 = tree(r(dp,p(Cat2)),L2),
     X1 = tree(r(top,p(top)),[tree(r('--',p(Cat1)),L1)]),
     X2 = tree(r(top,p(top)),[tree(r('--',p(Cat2)),L2)]).
+
+%% neem me niet kwalijk , ik moet weg
+%% neem me niet kwalijk. Ik moet weg.
+split_transformation(tree(r('--',p(du)),Ds),[X1,X2]) :-
+    D2 = tree(r(tag,p(sv1)),L1),
+    lists:select(D2,Ds,[D3]),
+    imparative_hd(D2),
+    \+ alpino_simplify_modifier:me_dunkt_ds(L1),
+    D3 = tree(r(nucl,p(smain)),L2),
+    X1 = tree(r(top,p(top)),[tree(r('--',p(sv1)),L1)]),
+    X2 = tree(r(top,p(top)),[tree(r('--',p(smain)),L2)]).
+
+%% meneer , neem me niet kwalijk , ik moet weg
+%% => meneer , neem me niet kwalijk. Ik  moet weg.
+split_transformation(tree(r('--',p(du)),Ds0),[X1,X2]) :-
+    Tag =  tree(r(tag,_),_),
+    Nucl = tree(r(nucl,p(du)),Ds),
+    lists:select(Tag,Ds0,[Nucl]),
+    D2 = tree(r(tag,p(sv1)),L1),
+    lists:select(D2,Ds,[D3]),
+    imparative_hd(D2),
+    \+ alpino_simplify_modifier:me_dunkt_ds(L1),
+    D3 = tree(r(nucl,p(smain)),L2),
+    X1 = tree(r(top,p(top)),[tree(r('--',p(du)),[Tag,tree(r(nucl,p(sv1)),L1)])]),
+    X2 = tree(r(top,p(top)),[tree(r('--',p(smain)),L2)]).
+
+%% er was een probleem : ik ging weg
+split_transformation(tree(r('--',p(du)),Ds),[X1,X2]) :-
+    D2 = tree(r(nucl,p(Smain)),L1),
+    lists:select(D2,Ds,[D3]),
+    lists:member(Smain,[smain,du]),
+    D3 = tree(r(sat,SMAIN),L2),
+    smain(SMAIN,L2),
+    X1 = tree(r(top,p(top)),[tree(r('--',p(Smain)),L1)]),
+    X2 = tree(r(top,p(top)),[tree(r('--',SMAIN),L2)]).
 
 %% smain of smain ==> smain. Of smain.
 %% must rule out "balansschikking" E-ANS ch 26.7
@@ -239,6 +274,7 @@ split_transformation(tree(r('--',p(conj)),Ds0),[A1,A2]) :-
     DLINK = tree(r(dlink,adt_lex(_,of,_,_,[])),[]),
     BODY  = tree(r(nucl,P),L).
 
+%% smain maar smain -> smain. Maar smain.
 split_transformation(tree(r('--',p(conj)),Ds0),[A1,A2]) :-
     D1 = tree(r(crd,adt_lex(_,Maar,_,_,_)),[]),
     D2 = tree(r(cnj,p(P1)),L1),
@@ -247,6 +283,22 @@ split_transformation(tree(r('--',p(conj)),Ds0),[A1,A2]) :-
     lists:member(Maar,[maar,dus,want]),
     correct_conjunct(P1,P2,P,L2,L),
     A1 = tree(r(top,p(top)),[tree(r('--',p(P1)),L1)]),
+    A2 = tree(r(top,p(top)),[tree(r('--',p(du)),[DLINK,BODY])]),
+    DLINK = tree(r(dlink,adt_lex(_,Maar,_,_,[])),[]),
+    BODY  = tree(r(nucl,P),L).
+
+%% tag, smain maar smain -> tag, smain. Maar smain.
+split_transformation(tree(r('--',p(du)),Ds0),[A1,A2]) :-
+    Nucl = tree(r(OtherRel,p(conj)),NuclDs0),
+    lists:select(Tag,Ds0,[Nucl]),
+    short_du_part(Tag,OtherRel),
+    D1 = tree(r(crd,adt_lex(_,Maar,_,_,_)),[]),
+    D2 = tree(r(cnj,p(P1)),L1),
+    D3 = tree(r(cnj,P2),L2),
+    lists:select(D1,NuclDs0,[D2,D3]),
+    lists:member(Maar,[maar,dus,want]),
+    correct_conjunct(P1,P2,P,L2,L),
+    A1 = tree(r(top,p(top)),[tree(r('--',p(du)),[Tag,tree(r(OtherRel,p(P1)),L1)])]),
     A2 = tree(r(top,p(top)),[tree(r('--',p(du)),[DLINK,BODY])]),
     DLINK = tree(r(dlink,adt_lex(_,Maar,_,_,[])),[]),
     BODY  = tree(r(nucl,P),L).
@@ -285,6 +337,7 @@ forbid_rel_split(adt_lex(_,HdLem,_,_,_)):-
     forbid_lemma_rel_split(HdLem).
 
 forbid_lemma_rel_split(al).
+forbid_lemma_rel_split(daar).
 forbid_lemma_rel_split(datgeen).
 forbid_lemma_rel_split(degeen).
 forbid_lemma_rel_split(diegene).
@@ -382,13 +435,13 @@ pronoun_(Lemma,_,sg,_,{[ze,hen,hun]},A0,A) :-
 pronoun_(_Lemma,_,sg,per,{[hij,zij,ze,hem,haar]},A,A).
 pronoun_(Lemma,_,pl,_,{[ze,hen,hun]},A,A) :-
     human(Lemma,_).
-pronoun_(Lemma,dat,sg,nonper,{[het]},A,A) :-
+pronoun_(Lemma,dat,sg,nonper,het,A,A) :-
     \+ human(Lemma,_).
-pronoun_(Lemma,dit,sg,nonper,{[het]},A,A) :-
+pronoun_(Lemma,dit,sg,nonper,het,A,A) :-
     \+ human(Lemma,_).
 pronoun_(Lemma,die,sg,nonper,{[deze,die,ze]},A,A) :-
     \+ human(Lemma,_).
-pronoun_(Lemma,het,sg,nonper,{[het]},A,A) :-
+pronoun_(Lemma,het,sg,nonper,het,A,A) :-
     \+ human(Lemma,_).
 pronoun_(Lemma,de,sg,nonper,{[deze,die,ze]},A,A) :-
     \+ human(Lemma,_).
@@ -509,17 +562,56 @@ conj_split(tree(r(cnj,P2),L2), P1, [tree(r(top,p(top)),[tree(r('--',P),L)])|List
 
 conj_split(tree(r(crd,adt_lex(_,en,_,_,_)),[]),_,L,L).
 
-correct_conjunct(P1, P2, P, L2, L) :-
-    (   P1 = smain, P2 = p(ssub)
-    ->  P = p(smain),
-	lists:select(tree(r(hd,adt_lex(ssub,X1,X2,X3,X4)),[]),L2,L3),
-	L = [tree(r(hd,adt_lex(smain,X1,X2,X3,X4)),[])|L3]
-    ;   P2 = p(cp),
-	lists:select(tree(r(mod,MOD),MODDS),L2,L3),
-	P = p(du),
-	DP1 = tree(r(dp,MOD),MODDS),
-	DP2 = tree(r(dp,P2),L3),
-	L = [DP1,DP2]
-    ;   P = P2,
-	L = L2
-    ).
+
+
+correct_conjunct(smain, p(ssub), P, L2, L) :-
+    !,
+    P = p(smain),
+    lists:select(tree(r(hd,adt_lex(ssub,X1,X2,X3,X4)),[]),L2,L3),
+    L = [tree(r(hd,adt_lex(smain,X1,X2,X3,X4)),[])|L3].
+correct_conjunct(_,P2,P,L2,L):-
+    correct_conjunct(P2,P,L2,L),
+    !.
+correct_conjunct(_,P,P,L,L).
+
+correct_conjunct(p(cp),p(du),L2,[DP1,DP2]) :-
+    lists:select(tree(r(mod,MOD),MODDS),L2,L3),
+    DP1 = tree(r(dp,MOD),MODDS),
+    DP2 = tree(r(dp,p(cp)),L3).
+correct_conjunct(p(pp),p(du),L2,[DP1,DP2]) :-
+    lists:select(tree(r(mod,MOD),MODDS),L2,L3),
+    DP1 = tree(r(dp,MOD),MODDS),
+    DP2 = tree(r(dp,p(pp)),L3).
+correct_conjunct(p(Smain),p(Cat),L2,L) :-
+    lists:member(Smain,[smain,whq]),
+    replace(tree(r(hd,adt_lex(Smain,Prep,Prep2,Pos,Atts)),[]),
+	    tree(r(hd,adt_lex(Cat,Prep,Prep2,Pos,[])),[]),
+	    L2,L),
+    lists:member(stype=whquestion,Atts),
+    correct_wh_cat(Cat,Pos).
+correct_conjunct(adt_lex(Smain,Prep,Prep2,Pos,Atts),[],adt_lex(Cat,Prep,Prep2,Pos,[]),[]) :-
+    lists:member(Smain,[smain,whq]),
+    lists:member(stype=whquestion,Atts),
+    correct_wh_cat(Cat,Pos).
+
+imparative_hd(tree(r(tag,p(sv1)),Ds)) :-
+    Hd = tree(r(hd,adt_lex(_,_,_,_,Atts)),[]),
+    lists:member(Hd,Ds),
+    lists:member(stype=imparative,Atts).
+
+smain(p(smain),_).
+smain(p(whq),_).
+smain(p(conj),List) :-
+    lists:member(tree(r(cnj,Cat),List2),List),
+    smain(Cat,List2).
+
+short_du_part(tree(r(tag,_),_),nucl).
+short_du_part(tree(r(dlink,_),_),nucl).
+short_du_part(tree(r(dp,p(Cat)),Ds),dp) :-
+    do_not_split_du(Cat,Ds).
+
+correct_wh_cat(pp,prep).
+correct_wh_cat(np,noun).
+correct_wh_cat(np,pron).
+correct_wh_cat(ap,adj).
+correct_wh_cat(advp,adv).

@@ -1,5 +1,11 @@
 :- module(alpino_simplify_modifier, [ modifier_transformations/5 ]).
 
+%% correction of alleen/adv => alleen/adj
+modifier_transformation(r(Rel,p(du)),[D1,D2],r(Rel,p(du)),[DN,D2],_) :-
+    D1 = tree(r(dp,adt_lex(advp,Lem,Alleen,adv,Atts)),[]),
+    DN = tree(r(dp,adt_lex(ap,Lem,Alleen,adj,Atts)),[]),
+    adv_adj(Alleen).
+
 %% use hd as context if available
 modifier_transformation(Cat,Ds0,Cat,Ds,Ctxt) :-
     lists:member(tree(r(hd,adt_lex(_,Hd,_,_,_)),[]),Ds0),
@@ -24,14 +30,14 @@ modifier_transformation(r(obcomp,p(cp)),Ds0,r(obcomp,p(cp)),Ds,_) :-
     Ds = [CMP,tree(r(body,NPCAT),NPBODY)].   
 
 %% mijnheer de voorzitter => voorzitter
-modifier_transformation(r(Rel,p(np)),Ds0,r(Rel,VZCAT),VZDS,_) :-
-    Hd = tree(r(hd,adt_lex(_,Mijnheer,_,_,_)),[]),
+modifier_transformation(r(Rel,p(np)),Ds0,r(Rel,adt_lex(H1,Mijnheer,H3,H4,H5)),[],_) :-
+    Hd = tree(r(hd,adt_lex(H1,Mijnheer,H3,H4,H5)),[]),
     lists:select(Hd,Ds0,Ds1),
     lists:member(Mijnheer,[mijnheer,meneer,mevrouw]),
     App = tree(r(app,p(np)),DeVz),
     lists:select(App,Ds1,[]),
     De = tree(r(det,adt_lex(_,de,_,_,_)),[]),
-    VZ = tree(r(hd,VZCAT),VZDS),
+    VZ = tree(r(hd,_),_),
     lists:select(De,DeVz,DeVz0),
     lists:select(VZ,DeVz0,[]).
 
@@ -41,11 +47,7 @@ modifier_transformation(r(Rel,p(du)),Ds0,r(Rel,Cat),Ds,_) :-
     Tag =  tree(r(tag,p(sv1)),TagDs0),
     lists:select(Nucl,Ds0,Ds1),
     lists:select(Tag,Ds1,[]),
-    Hd = tree(r(hd,adt_lex(_,Denk,_,_,_)),[]),
-    Me = tree(r(su,adt_lex(_,Mij,_,_,_)),[]),
-    lists:select(Hd,TagDs0,TagDs1),
-    lists:select(Me,TagDs1,[]),
-    me_dunkt(Denk,Mij).
+    me_dunkt_ds(TagDs0).
 
 %% het begrip industrialisering --> industrialisering
 %% de voorzitter Carel Jansen -> Carel Jansen
@@ -302,6 +304,18 @@ ignore_modifier_pattern(mod=dt(pp,
 ignore_modifier_pattern(mod=dt(pp,
 			      [hd=in,
 			       obj1=dt(np,
+				       [mod=_,
+					hd=opzicht])]),_,_).
+
+ignore_modifier_pattern(mod=dt(pp,
+			      [hd=in,
+			       obj1=dt(np,
+				       [det=_,
+					hd=opzicht])]),_,_).
+
+ignore_modifier_pattern(mod=dt(pp,
+			      [hd=in,
+			       obj1=dt(np,
 				       [det=l(_,_,_),
 					hd=context])]),_,_).
 
@@ -332,6 +346,18 @@ ignore_modifier_pattern(mod=dt(pp,
 ignore_modifier_pattern(det=dt(detp,
 			       [hd=wat,
 				mod=heel]),_,_).
+
+ignore_modifier_pattern(mod=dt(pp,
+			       [hd=tot,
+				hdf=toe,
+				obj1=nu
+			       ]),_,_).
+ignore_modifier_pattern(mod=dt(pp,
+			       [hd=tot,
+				hdf=toe,
+				obj1=nog
+			       ]),_,_).
+
 
 match_pattern(RelPat=Pat,tree(r(Rel,Cat),Ds)) :-
     match_pattern_rel(RelPat,Rel),
@@ -511,6 +537,9 @@ important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,er,_,_,_),[],_,_).   % clefts
 important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,het,_,_,_),[],_,_).  % clefts, het zijn schurken die dat doen
 important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,IETS,_,_,_),[],_,_) :-
     alpino_simplify_split:forbid_lemma_rel_split(IETS).	% dat is iets waar we naar verlangen
+important_modifier(tree(r(mod,p(conj)),Ds),C0,C1,C2,C3) :-
+    lists:member(tree(r(cnj,p(rel)),XX),Ds),
+    important_modifier(tree(r(mod,p(rel)),XX),C0,C1,C2,C3).
 important_modifier(tree(r(mod,adt_lex(VanCat,Van,_,VanPos,_)),[]),adt_lex(GebruikCat,Gebruik,_,GebruikPos,_),[],_,_) :-
     check_pmi(Gebruik,GebruikPos,GebruikCat,Van,VanPos,VanCat).
 
@@ -600,6 +629,12 @@ modifier_rel(app,Cat) :-
     Cat \= adt_lex(_,_,_,num,_),
     Cat \= p(mwu(_,_)).
 
+me_dunkt_ds(TagDs) :-
+    Hd = tree(r(hd,adt_lex(_,Denk,_,_,_)),[]),
+    Me = tree(r(su,adt_lex(_,Mij,_,_,_)),[]),
+    lists:select(Hd,TagDs,[Me]),
+    me_dunkt(Denk,Mij).
+
 me_dunkt(dunk,me).
 me_dunkt(dunk,mij).
 me_dunkt(denk,ik).
@@ -615,3 +650,6 @@ check_app_name(tag,adt_lex(A,B,C,D,Atts0),Result) :-
     !,
     Result=adt_lex(A,B,C,D,[neclass='PER'|Atts]).
 check_app_name(_,L,L).
+
+adv_adj(alleen).
+adv_adj(onmiddellijk).

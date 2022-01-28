@@ -3229,12 +3229,13 @@ paraphrase(Ref,Tokens,Chars) :-
     format("~a~n",Result).
 
 paraphrase(Ref,Tokens,Chars,Result) :-
+    statistics(runtime,[Start,_]),
     flag(copy_input_if_no_parse,CopyOnFailParse),
     set_flag(robustness,off),
     set_flag(order_canonical_dt,off),
     alpino_parse_tokens(Ref,Tokens),
     (   hdrug:object(1,o(Cat,_,_))
-    ->  paraphrase_continue(Chars,Cat,Result)
+    ->  paraphrase_continue(Chars,Cat,Result,Start)
     ;   CopyOnFailParse == on
     ->  Result = Chars
     ;   CopyOnFailParse = msg(Msg)
@@ -3242,7 +3243,8 @@ paraphrase(Ref,Tokens,Chars,Result) :-
     ;   Result = ''
     ).
 
-paraphrase_continue(Chars,Cat,Result) :-
+paraphrase_continue(Chars,Cat,Result,Start) :-
+    statistics(runtime,[Mid,_]),
     set_flag(geneval,off),
     flag(copy_input_if_no_transformation,On),
     flag(demo,Demo),
@@ -3283,9 +3285,13 @@ paraphrase_continue(Chars,Cat,Result) :-
 	if(generate_or_split(Adt,GenTokens,[]),
 	   hdrug_util:concat_all(GenTokens,Result,' '),
 	   Result=FailResult
-	  )
+	  )	
+    ),
+    statistics(runtime,[End,_]),
+    ParTime is End - Start,
+    GenTime is End - Mid,
+    format(user_error,"paraphrase cputime total ~w msec (~w msec without parser)~n",[ParTime,GenTime]).
 	
-    ).
 
 paraphrase :-
     initialize_flag(current_line_no,0),

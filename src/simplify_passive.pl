@@ -56,7 +56,7 @@ apply_raise_transformations_list([H0|T0],[H|T]) :-
 %% inf-vp
 unraise_transformation(r(Rel,Cat),Ds0,
 		       r(Rel,Cat),Ds) :-
-    Hd = tree(r(hd,adt_lex(_,L,_M,_V,_F)),[]),
+    Hd = tree(r(hd,adt_lex(_,L,M,_V,_F)),[]),
     (   Su = tree(r(su,i(Var,_)),_)
     ;   Su = tree(r(su,i(Var)),_)
     ),
@@ -65,7 +65,7 @@ unraise_transformation(r(Rel,Cat),Ds0,
     lists:select(Hd,Ds0,Ds1),
     lists:select(Su,Ds1,Ds2),
     lists:select(Vc0,Ds2,Ds3),
-    raiser(L),
+    raiser(L,M),
     lists:select(tree(r(su,i(Var)),[]),VCDS0,VCDS),
     Vc = tree(r(vc,VCCAT),[Su|VCDS]),
     Ds = [Hd,Vc|Ds3].
@@ -73,7 +73,7 @@ unraise_transformation(r(Rel,Cat),Ds0,
 %% te-vp
 unraise_transformation(r(Rel,Cat),Ds0,
 		       r(Rel,Cat),Ds) :-
-    Hd = tree(r(hd,adt_lex(_,L,_M,_V,_F)),[]),
+    Hd = tree(r(hd,adt_lex(_,L,M,_V,_F)),[]),
     (  Su = tree(r(su,i(Var,_)),_)
     ;  Su = tree(r(su,i(Var)),_)
     ),
@@ -86,7 +86,7 @@ unraise_transformation(r(Rel,Cat),Ds0,
     lists:select(Su,Ds1,Ds2),
     lists:select(Vc0,Ds2,Ds3),
     lists:select(Comp,VCDS0,[Body0]),    
-    raiser(L),
+    raiser(L,M),
     lists:select(tree(r(su,i(Var)),[]),BODYDS0,BODYDS),
     Vc = tree(r(vc,VCCAT),[Comp,Body]),
     Ds = [Hd,Vc|Ds3].
@@ -99,10 +99,10 @@ unraise_transformation(r(Rel,Cat),Ds0,
 %% inf-vp
 raise_transformation(r(Rel,Cat),Ds0,
 		     r(Rel,Cat),Ds) :-
-    Hd = tree(r(hd,adt_lex(_,L,_M,_V,_F)),[]),
+    Hd = tree(r(hd,adt_lex(_,L,M,_V,_F)),[]),
     lists:select(Hd,Ds0,Ds1),
     \+ lists:member(tree(r(su,_),_),Ds1),
-    raiser(L),
+    raiser(L,M),
     VCCAT = p(inf),
     Vc0 = tree(r(vc,VCCAT),VCDS0),
     lists:select(Vc0,Ds1,Ds2),
@@ -120,9 +120,9 @@ raise_transformation(r(Rel,Cat),Ds0,
 %% te-vp
 raise_transformation(r(Rel,Cat),Ds0,
 		     r(Rel,Cat),Ds) :-
-    Hd = tree(r(hd,adt_lex(_,L,_M,_V,_F)),[]),
+    Hd = tree(r(hd,adt_lex(_,L,M,_V,_F)),[]),
     lists:select(Hd,Ds0,Ds1),
-    raiser(L),
+    raiser(L,M),
     VCCAT = p(ti),
     Vc0 = tree(r(vc,VCCAT),VCDS0),
     lists:select(Vc0,Ds1,Ds2),
@@ -306,18 +306,18 @@ passive_transformation(r(Rel,Cat),Ds0,
     PERFECT = {[heb,ben]}.
 
 add_su_control(D,Node,Ds0,Node,Ds) :-
-    Hd = tree(r(hd,adt_lex(_,Proberen,_,verb,_)),[]),
+    Hd = tree(r(hd,adt_lex(_,Proberen,Proberen2,verb,_)),[]),
     lists:member(Hd,Ds0),
-    raiser(Proberen),
+    raiser(Proberen,Proberen2),
     VC0 = tree(r(vc,VCCAT0),VCDS0),
     VC  = tree(r(vc,VCCAT),VCDS),
     replace(VC0,VC,Ds0,Ds),
     add_su_control(D,VCCAT0,VCDS0,VCCAT,VCDS).
 
 add_su_control(not_door,Node,Ds0,Node,Ds) :-
-    Hd = tree(r(hd,adt_lex(_,Proberen,_,verb,_)),[]),
+    Hd = tree(r(hd,adt_lex(_,Proberen,Proberen2,verb,_)),[]),
     lists:member(Hd,Ds0),
-    su_control(Proberen),
+    su_control(Proberen,Proberen2),
     Su0 = tree(r(su,SuNode),SuDs),  
     Su  = tree(r(su,NewSuNode),SuDs),
     replace(Su0,Su,Ds0,Ds1),
@@ -328,9 +328,9 @@ add_su_control(not_door,Node,Ds0,Node,Ds) :-
     replace(VC0,VC,Ds1,Ds),
     !.
 add_su_control(not_door,Node,Ds0,Node,Ds) :-
-    Hd = tree(r(hd,adt_lex(_,Proberen,_,verb,_)),[]),
+    Hd = tree(r(hd,adt_lex(_,Proberen,Proberen2,verb,_)),[]),
     lists:member(Hd,Ds0),
-    su_control_in_pp(Proberen,Prep),
+    su_control_in_pp(Proberen,Proberen2),
     Su0 = tree(r(su,SuNode),SuDs),  
     Su  = tree(r(su,NewSuNode),SuDs),
     replace(Su0,Su,Ds0,Ds1),
@@ -338,7 +338,7 @@ add_su_control(not_door,Node,Ds0,Node,Ds) :-
     su_node(SuNode,NewSuNode,NewSu),
     VC0=tree(r(pc,p(pp)),_),
     lists:member(VC0,Ds1),
-    pp_vp_argument(VC0,Prep,VC,NewSu),
+    pp_vp_argument(VC0,VC,NewSu),
     replace(VC0,VC,Ds1,Ds),
     !.
 add_su_control(_,N,D,N,D).
@@ -369,6 +369,7 @@ doorpp(DoorPP,Obj1Cat,Obj1Ds) :-
     Obj  = tree(r(obj1,Obj1Cat0),Obj1Ds0),
     lists:select(Door,PPDS,PPDS1),
     lists:select(Obj,PPDS1,Rest),
+    \+ impossible_subject(Obj),
     transform_er(Obj1Ds0,Obj1Ds1,Obj1Cat0,Obj1Cat1),
     add_ds(Rest,Obj1Cat1,Obj1Ds1,Obj1Cat,Obj1Ds).
 
@@ -496,54 +497,59 @@ verb_disallows_passive(sluit,ben,_,not_door).
 verb_disallows_passive(sta_toe,ben,_,not_door).
 verb_disallows_passive(vestig,ben,_,not_door).
 verb_disallows_passive(verbind,ben,_,not_door).
+verb_disallows_passive(verhinder,ben,_,_).   % ik ben verhinderd =/= men verhindert mij
 verb_disallows_passive(vertegenwoordig,ben,_,not_door).
 verb_disallows_passive(voorzien,ben,_,not_door).
 verb_disallows_passive(wikkel_in,_,_,_).
+verb_disallows_passive(word,_,_,_).
 
 %% dun bevolkt
 %% beperkt?
 %% haar ogen zijn gesloten
 
-raiser({[heb,ben]}).
-raiser(begin).
-raiser(behoef).
-raiser(behoor).
-raiser(blijk).
-raiser(dien).
-raiser(dreig).
-raiser(ga).
-raiser(heb).
-raiser(hoef).
-raiser(hoor).
-raiser(kan).
-raiser(lijk).
-raiser(mag).
-raiser(moet).
-raiser(placht).
-raiser(schijn).
-raiser(zal).
+raiser({[heb,ben]},_).
+raiser(begin,_).
+raiser(behoef,_).
+raiser(behoor,_).
+raiser(blijk,_).
+raiser(dien,_).
+raiser(dreig,_).
+raiser(ga,_).
+raiser(heb,_).
+raiser(hoef,_).
+raiser(hoor,_).
+raiser(kan,_).
+raiser(lijk,_).
+raiser(mag,_).
+raiser(moet,_).
+raiser(placht,_).
+raiser(schijn,_).
+raiser(zal,_).
 
-su_control(begin).
-su_control(beoog).
-su_control(besluit).
-su_control(eis).
-su_control(hoef).
-su_control(probeer).
-su_control(tracht).
-su_control(vermijd).
-su_control(wens).
+su_control(begin,_).
+su_control(beoog,_).
+su_control(besluit,_).
+su_control(eis,_).
+su_control(hoef,_).
+su_control(poog,_).
+su_control(probeer,_).
+su_control(stel,'in-het-werk-stel').
+su_control(tracht,_).
+su_control(vermijd,_).
+su_control(verzuim,_).
+su_control(wens,_).
 
-su_control_in_pp(doe,aan).
-su_control_in_pp(pleit,voor).
-su_control_in_pp(richt,op).
+su_control_in_pp(doe,'doe-aan').
+su_control_in_pp(pleit,'pleit-voor').
+su_control_in_pp(richt,'richt-op').
+su_control_in_pp(zet_aan,'zet_aan-tot').
 
 %% must replace something...
 replace(El0,El,[El0|Tail],[El|Tail]).
 replace(El0,El,[X|Tail0],[X|Tail]):-
     replace(El0,El,Tail0,Tail).
 
-%% todo: check prep
-pp_vp_argument(tree(r(pc,p(pp)),PPDs0),_prep,
+pp_vp_argument(tree(r(pc,p(pp)),PPDs0),
 	       tree(r(pc,p(pp)),PPDs),NewSu) :-
     lists:select(tree(r(vc,VcCat0),VcDs0),PPDs0,PPDs1),
     PPDs = [VP|PPDs1],
@@ -593,12 +599,22 @@ su_node(SuNode,NewSuNode,NewSu) :-
     NewSu = tree(r(su,i(Index)),[]).
 
 raiser_head(Ds0,Raiser) :-
-    Hd = tree(r(hd,adt_lex(_,L,_M,_V,_F)),[]),
+    Hd = tree(r(hd,adt_lex(_,L,M,_V,_F)),[]),
     lists:select(Hd,Ds0,Ds1),
-    raiser(L),
+    raiser(L,M),
     Vc0 = tree(r(vc,p(Inf)),_),
     lists:select(Vc0,Ds1,_),
     lists:member(Inf,[inf,ti,oti]),
     !,
     Raiser = raiser.
 raiser_head(_,no_raiser).
+
+impossible_subject(tree(r(_,adt_lex(_,Lex,_,_,_)),[])) :-
+    impossible_subject_lemma(Lex).
+impossible_subject(tree(r(_,_),Ds)) :-
+    lists:member(tree(r(hd,adt_lex(_,Lex,_,_,_)),[]),Ds),
+    impossible_subject_lemma(Lex).
+
+impossible_subject_lemma(elkaar).
+impossible_subject_lemma(elkander).
+impossible_subject_lemma(zichzelf).
