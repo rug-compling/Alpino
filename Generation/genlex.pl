@@ -1428,7 +1428,8 @@ ipp(Dt) :-
     ).
 
 svp(Dt,VC) :-
-    Dt:svp <=> [VC],
+    Dt:svp <=> LIST,
+    lists:member(VC,LIST),
     VC => dt.
 
 vc(Dt,VC) :-
