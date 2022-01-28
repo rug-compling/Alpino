@@ -1,10 +1,10 @@
 :- module(alpino_simplify_words, [ words_transformation/4 ]).
 
-words_transformation(r(Rel,p(Cat0)),Ds0,r(Rel,p(Cat)),[Hd|Ds]) :-
+words_transformation(r(Rel,p(Cat0)),Ds0,r(Rel,p(Cat)),Ds) :-
     Hd0 = tree(r(HD,adt_lex(Cat0,Old,Old,D0,E0)),[]),
     Hd  = tree(r(HD,adt_lex(Cat,New,New,D,E)),[]),
     head_rel(HD),
-    lists:select(Hd0,Ds0,Ds1),
+    replace(Hd0,Hd,Ds0,Ds1),
     simplify(Old,New,Cat0,Cat,D0,D,E0,E,Ds1),
     adapt_det(Ds1,Ds).
 
@@ -34,12 +34,13 @@ words_transformation(r(Rel,adt_lex(_,Lem,Lem,_,_)),[],
 words_transformation(r(Rel,adt_lex(Cat0,Old,Old,D0,E0)),[],
 		     r(Rel,adt_lex(Cat,New,New,D,E)),[]) :-
     \+ Rel = mwp,
+    \+ Rel = svp,
     simplify(Old,New,Cat0,Cat,D0,D,E0,E,[]).
 
 words_transformation(r(Rel,Cat),Ds0,r(Rel,Cat),Ds) :-
     pattern_rule(Left,Right),
     match_left_pattern(Left,Ds0,Ds1),
-    add_right_pattern(Right,Ds1,Ds).
+    add_right_pattern(Right,Ds,Ds1).
 
 %% X wordt geacht VP => X moet VP
 words_transformation(r(Rel,Cat),Ds0,r(Rel,Cat),[SU,NEWHD,tree(r(vc,p(inf)),INFDS)]) :-
@@ -262,14 +263,13 @@ add_right_pattern([H|T],Ds0,Ds) :-
     add_right_pattern_tree(H,Ds0,Ds1),
     add_right_pattern(T,Ds1,Ds).
 
-add_right_pattern_tree(Rel=Node,Ds,[tree(r(Rel,NewNode),NewDs)|Ds]) :-
+add_right_pattern_tree(Rel=Node,[tree(r(Rel,NewNode),NewDs)|Ds],Ds) :-
     add_right_pattern_node(Node,NewNode,NewDs).
 
 add_right_pattern_node(Cat/Ds,Cat,Ds).
 add_right_pattern_node(dt(Cat,Ds0),p(Cat),Ds) :-
-    add_right_pattern(Ds0,[],Ds).
+    add_right_pattern(Ds0,Ds,[]).
 add_right_pattern_node(l(Lem,Pos,Atts),adt_lex(_,Lem,_,Pos,Atts),[]).
-
 
 %% must replace something...
 replace(El0,El,[El0|Tail],[El|Tail]).
@@ -415,7 +415,7 @@ simplify(discrepantie,verschil,Cat,Cat,D,D,E,E,_).
 simplify(discutabel,twijfelachtig,Cat,Cat,D,D,E,E,_).
 simplify(dissertatie,proefschrift,Cat,Cat,D,D,E,E,_).
 simplify(dogmatisch,star,Cat,Cat,D,D,E,E,_).
-simplify(dominant,overheers,Cat,Cat,D,D,E,E,_).
+simplify(dominant,overheers,ap,ppres,D,D,E,E,_).
 simplify(donatie,schenking,Cat,Cat,D,D,E,E,_).
 simplify(doneer,schenk,Cat,Cat,D,D,E,E,_).
 simplify(doorgaans,meestal,Cat,Cat,D,D,E,E,_).
@@ -449,7 +449,7 @@ simplify(fluctueer,schommel,Cat,Cat,D,D,E,E,_).
 simplify(frictie,wrijving,Cat,Cat,D,D,E,E,_).
 simplify(furieus,boos,Cat,Cat,D,D,E,E,_).
 simplify(futiliteit,kleinigheid,Cat,Cat,D,D,E,E,_).
-simplify(gaarne,graag,Cat,Cat,D,D,E,E,_).
+simplify(gaarne,graag,advp,ap,adv,adj,E,E,_).
 simplify(geenszins,niet,Cat,Cat,D,D,E,E,_).
 simplify(gedurende,tijdens,Cat,Cat,D,D,E,E,_).
 simplify(geëquipeerd,toegerust,Cat,Cat,D,D,E,E,_).
@@ -600,10 +600,10 @@ simplify(wetgeving_resolutie,resolutie,Cat,Cat,D,D,E,E,_).
 adapt_det(List0,List):-
     Det0 = tree(r(det,adt_lex(Cat0,Old,Old,Pos,Atts)),[]),
     Det  = tree(r(det,adt_lex(Cat0,New,New,Pos,Atts)),[]),
-    lists:select(Det0,List0,List1),
+    replace(Det0,Det,List0,List1),
     simplify_det(Old,New),
     !,
-    List = [Det|List1].
+    List = List1.
 adapt_det(List,List).
 
 simplify_det(dat,{[die,dat]}).
@@ -632,9 +632,21 @@ eq_pronoun([wij,we,ons],_).
 eq_pronoun([zij,ze,hun],Atts) :-
     lists:member(rnum=pl,Atts).
 
+eq_pronoun([ikzelf,mezelf,mijzelf],_).
+eq_pronoun([jezelf,jijzelf,jouzelf],_).
+eq_pronoun([hijzelf,hemzelf],_).
+eq_pronoun([zijzelf,haarzelf],Atts) :-
+    lists:member(rnum=sg,Atts).
+eq_pronoun([wijzelf,onszelf],_).
+eq_pronoun([zijzelf,hunzelf],Atts) :-
+    lists:member(rnum=pl,Atts).
+
 eq_pronoun(ze,[zij,haar],Atts) :-
     lists:member(rnum=sg,Atts).
 eq_pronoun(hen,[zij,ze,hun],Atts) :-
+    lists:member(rnum=pl,Atts).
+
+eq_pronoun(henzelf,[zijzelf,hunzelf],Atts) :-
     lists:member(rnum=pl,Atts).
 
 erop(EROP,OP) :-

@@ -118,6 +118,43 @@ OPEN PROBLEMEN
 
 - generation of number expressions "De behandeling van een malariapatiënt kost tussen de 10 en 25 dollar"
 
+CONJ MODIFIERS?
+
+Desalniettemin spelen deze ziekten in menselijk en economisch opzicht wel degelijk een rol van betekenis . =>
+Desalniettemin spelen deze ziekten in opzicht wel degelijk een rol van betekenis .
+
+
+SPLIT:
+
+we hebben het hoofd bedekt en de voeten daarbij onbedekt moeten laten
+
+TODO GENERATION:
+
+* TOPIC DROP
+
+* imperatives with subject
+
+* Denkt u zich eens in ...
+
+* Tegelijkertijd dient er een aantal hervormingen te worden doorgevoerd
+ld=er doorgevoerd =/= men voert ld=erdoor
+
+* UNKNOWN LEMMA's
+
+- heuristics do not check pos/attributes
+"dat wordt gelagerd" -> men X dat
+
+tussen X en Y  : dynamic with_dt, available in alpino_paraphrase:add_lex/3
+
+?
+
+- Er is de Unie veel aan gelegen om efficiënt gebruik te maken van de fondsen voor hulpverlening .
+
+
+GRAMMAR:
+
+Het is geen geheim dat Van Miert en mezelf een grotere samenhang hadden gewild .
+
 
 
 */
