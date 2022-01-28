@@ -665,5 +665,22 @@ remove_punct_ds([H|T],Ds) :-
 remove_punct_d(tree(r('--',adt_lex(_,_,_,punct,_)),[]),Ds0,Ds) :-
     !,
     Ds0 = Ds.
+remove_punct_d(tree(r('--',adt_lex('--',_,_,'--',_)),[]),Ds0,Ds) :-
+    !,
+    Ds0 = Ds.
+remove_punct_d(tree(r('--',p(mwu(_,_))),MwuDs),Ds0,Ds) :-
+    all_punct(MwuDs),
+    !,
+    Ds0 = Ds.
 remove_punct_d(Tree,[Tree|Ds],Ds).
+
+
+all_punct([]).
+all_punct([H|T]) :-
+    punct_d(H),
+    all_punct(T).
+
+punct_d(tree(r(mwp,adt_lex(_,_,_,punct,_)),[])).
+punct_d(tree(r(mwp,adt_lex('--',_,_,'--',_)),[])). % things like ·
+
 
