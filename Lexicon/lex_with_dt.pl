@@ -862,8 +862,8 @@ with_dt_all('\'97',['\'98']).
 with_dt_all('97',['98',en,tussen]).
 with_dt_all('\'98',['\'99']).
 with_dt_all('9',['9',bij]).
-with_dt_all(aan,[af,jongs,van]).
-with_dt_all(aan,[af,jongs,vanaf]).
+with_dt_all('aan af',[jongs,van]).
+with_dt_all('aan af',[jongs,vanaf]).
 with_dt_all(aan,[denk,geen]).
 with_dt_all(aan,[goed]).
 with_dt_all(aan,[ik,neem_aan]).
@@ -932,21 +932,21 @@ with_dt_all(achttien,[de,en,tussen,twaalf]).
 with_dt_all(acht,[u]).
 with_dt_all(acht,[wij]).
 with_dt_all(acht,[zij]).
-with_dt_all(af,[aan,jongs,sinds]).
-with_dt_all(af,[aan,jongs,van]).
-with_dt_all(af,[aan,jongs,vanaf]).
-with_dt_all(af,[aan,kindsbeen,sinds]).
-with_dt_all(af,[aan,kindsbeen,van]).
-with_dt_all(af,[aan,kindsbeen,vanaf]).
-with_dt_all(af,[aan,kinds,sinds]).
-with_dt_all(af,[aan,kinds,van]).
-with_dt_all(af,[aan,kinds,vanaf]).
-with_dt_all(af,[aan,kleins,sinds]).
-with_dt_all(af,[aan,kleins,van]).
-with_dt_all(af,[aan,kleins,vanaf]).
-with_dt_all(af,[aan,nu,van]).
-with_dt_all(af,[aan,van,voor]).
-with_dt_all(af,[aan,van,voren]).
+with_dt_all('af aan',[jongs,sinds]).
+with_dt_all('af aan',[jongs,van]).
+with_dt_all('af aan',[jongs,vanaf]).
+with_dt_all('af aan',[kindsbeen,sinds]).
+with_dt_all('af aan',[kindsbeen,van]).
+with_dt_all('af aan',[kindsbeen,vanaf]).
+with_dt_all('af aan',[kinds,sinds]).
+with_dt_all('af aan',[kinds,van]).
+with_dt_all('af aan',[kinds,vanaf]).
+with_dt_all('af aan',[kleins,sinds]).
+with_dt_all('af aan',[kleins,van]).
+with_dt_all('af aan',[kleins,vanaf]).
+with_dt_all('af aan',[nu,van]).
+with_dt_all('af aan',[van,voor]).
+with_dt_all('af aan',[van,voren]).
 with_dt_all(af,[bij]).
 with_dt_all(af,[fabriek]).
 with_dt_all(af,[jongs,sinds]).
@@ -1182,7 +1182,7 @@ with_dt_all(bij,[zestig,zestig]).
 with_dt_all(bij,[zes,zes]).
 with_dt_all(bijzonder,[heel,het,in]).
 with_dt_all(bijzonder,[het,in]).
-with_dt_all(bij,[zoverre,zelfs]).
+with_dt_all('bij zoverre',[zelfs]).
 with_dt_all(biljoen,[de,paar]).
 with_dt_all(biljoen,[deze,paar]).
 with_dt_all(biljoen,[die,paar]).
@@ -1226,7 +1226,7 @@ with_dt_all(daarom,[wellicht]).
 with_dt_all(dag,[deze]).
 with_dt_all(dage,[dien,te]).
 with_dt_all(dame,[en,goedenavond,heer]).
-with_dt_all(dan,[dwaal,goed,keer,ten,halve,ten,hele]).
+with_dt_all(dan,[dwaal,goed,keer,'ten halve','ten hele']).
 with_dt_all(dan,[eerst,geloof,zie]).
 with_dt_all(dan,[en]).
 with_dt_all(dan,[ineens]).
@@ -1376,7 +1376,7 @@ with_dt_all(dertiental,[een]).
 with_dt_all(dertig,[en,tussen,twintig]).
 with_dt_all(dertig,[en,tussen,veertig]).
 with_dt_all(dertigtal,[een]).
-with_dt_all(des,[te,veel]).
+with_dt_all('des te',[veel]).
 with_dt_all(de,[stief_moeder]).
 with_dt_all(de,[stief_vader]).
 with_dt_all(de,[tante]).
@@ -1477,11 +1477,11 @@ with_dt_all(dunk,[mij]).
 with_dt_all(dusdanig,[zelfs]).
 with_dt_all(dus,[mooi,niet]).
 with_dt_all(dus,[niet]).
-with_dt_all(dus,[op,grond,van]).
+with_dt_all(dus,['op grond van']).
 with_dt_all(dus,[vandaar]).
 with_dt_all(duur,[eerlijk,lang]).
 with_dt_all(echt,[en,onecht]).
-with_dt_all(echter,[op,grond,van]).
+with_dt_all(echter,['op grond van']).
 with_dt_all(echt,[het,in]).
 with_dt_all(echt,[ik]).
 with_dt_all(echt,[niet]).
@@ -1514,7 +1514,7 @@ with_dt_all(een,[soort]).
 with_dt_all(een,[stel]).
 with_dt_all(een,[stelletje]).
 with_dt_all(eens,[temeer]).
-with_dt_all(eens,[te,veel]).
+with_dt_all(eens,['te veel']).
 with_dt_all(eens,[zo]).
 with_dt_all(een,[tachtigtal]).
 with_dt_all(een,[tiental]).
@@ -1569,8 +1569,8 @@ with_dt_all(elke,[paar]).
 with_dt_all(en,[groen,rijp]).
 with_dt_all(en,[groot,klein]).
 with_dt_all(en,[hang,met,wurg]).
-with_dt_all(en,[hard,drugs,soft]).
-with_dt_all(en,[hard,soft,drugs]).
+with_dt_all(en,['hard drugs',soft]).
+with_dt_all(en,[hard,'soft drugs']).
 with_dt_all(en,[hard,zacht]).
 with_dt_all(en,[heen,terug]).
 with_dt_all(en,[het,het,hier,nu]).
@@ -1591,7 +1591,7 @@ with_dt_all(en,[negen,tussen,twaalf]).
 with_dt_all(en,[negen,tussen,vijf]).
 with_dt_all(en,[negen,tussen,zes]).
 with_dt_all(en,[negen,tussen,zeven]).
-with_dt_all(en,[niet,'zo\'n',beetje,ook]).
+with_dt_all(en,['niet zo\'n beetje ook']).
 with_dt_all(en,[nieuw,oud]).
 with_dt_all(en,[omgekeerd]).
 with_dt_all(en,[onder,ons,zeg,zwijg]).
@@ -1617,7 +1617,7 @@ with_dt_all(en,[tussen,vijf,zes]).
 with_dt_all(en,[tussen,vijf,zeven]).
 with_dt_all(en,[tussen,zes,zeven]).
 with_dt_all(en,[ver]).
-with_dt_all(en,[vice,versa]).
+with_dt_all(en,['vice versa']).
 with_dt_all(en,[wat,wie]).
 with_dt_all(en,[zo]).
 with_dt_all(eraan,[vooraf]).
@@ -1817,13 +1817,13 @@ with_dt_all(ik,[waar]).
 with_dt_all(ik,[weet]).
 with_dt_all(ik,[zal,zeg]).
 with_dt_all(ik,[zeg]).
-with_dt_all(in,[die,mate,zelfs]).
-with_dt_all(in,[dier,voege,zelfs]).
+with_dt_all('in die mate',[zelfs]).
+with_dt_all('in dier voege',[zelfs]).
 with_dt_all(in,[levende,lijve]).
 with_dt_all(in,[levenden,lijve]).
 with_dt_all(in,[punt]).
 with_dt_all(in,[ruste]).
-with_dt_all(in,[tegenstelling,tot,vroeg]).
+with_dt_all('in tegenstelling tot',[vroeg]).
 with_dt_all(in,[tijden,vroeger]).
 with_dt_all(in,[totaal]).
 with_dt_all(inzoverre,[zelfs]).
@@ -2051,7 +2051,7 @@ with_dt_all(niet,[overal,zeker]).
 with_dt_all(niet,[reden,zonder]).
 with_dt_all(niets,[voor]).
 with_dt_all(niet,[temeer]).
-with_dt_all(niet,[te,veel]).
+with_dt_all(niet,['te veel']).
 with_dt_all(niet,[te,vergeet]).
 with_dt_all(niet,[toch]).
 with_dt_all(niet,[vaak]).
@@ -2088,11 +2088,11 @@ with_dt_all(nummer,[positie,één]).
 with_dt_all(nu,[waarom,weer]).
 with_dt_all(of,[omgekeerd]).
 with_dt_all(of,[veel,één]).
-with_dt_all(of,[vice,versa]).
+with_dt_all(of,['vice versa']).
 with_dt_all(of,[wat,wie]).
 with_dt_all(of,[wel]).
 with_dt_all(of,[zo]).
-with_dt_all(of,[zo,iets]).
+with_dt_all(of,['zo iets']).
 with_dt_all(of,[zoiets]).
 with_dt_all(oma,[u]).
 with_dt_all(oma,[zijn]).
@@ -2157,7 +2157,7 @@ with_dt_all(strijde,[ten]).
 with_dt_all(tante,[u]).
 with_dt_all(tante,[zijn]).
 with_dt_all(telkens,[weer]).
-with_dt_all(ten,[overvloede,wellicht]).
+with_dt_all('ten overvloede',[wellicht]).
 with_dt_all(te,[veel]).
 with_dt_all(te,[velde]).
 with_dt_all(te,[voet]).
@@ -2191,7 +2191,7 @@ with_dt_all(vaak,[zeer]).
 with_dt_all(vader,[zijn]).
 with_dt_all(vandaar,[waarschijnlijk]).
 with_dt_all(vandaar,[wellicht]).
-with_dt_all(van,[dien,aard,zelfs]).
+with_dt_all('van dien aard',[zelfs]).
 with_dt_all(van,[weggeweest]).
 with_dt_all(van,[zulk]).
 with_dt_all(ver,[weg]).
@@ -2535,6 +2535,7 @@ with_dt_root('\'98').
 with_dt_root('98').
 with_dt_root('\'99').
 with_dt_root(aan).
+with_dt_root('aan af').
 with_dt_root(aanschijn).
 with_dt_root(aantal).
 with_dt_root(aanverwant).
@@ -2547,6 +2548,7 @@ with_dt_root(achthonderdtal).
 with_dt_root(achttal).
 with_dt_root(achttien).
 with_dt_root(af).
+with_dt_root('af aan').
 with_dt_root(afstand).
 with_dt_root(al).
 with_dt_root(alle).
@@ -2570,7 +2572,6 @@ with_dt_root(baan).
 with_dt_root(bed).
 with_dt_root(bedde).
 with_dt_root(bedoel).
-with_dt_root(beetje).
 with_dt_root(beginne).
 with_dt_root(begrijp).
 with_dt_root(beide).
@@ -2587,6 +2588,7 @@ with_dt_root(biecht).
 with_dt_root(bij).
 with_dt_root(bijna).
 with_dt_root(bijzonder).
+with_dt_root('bij zoverre').
 with_dt_root(biljoen).
 with_dt_root(binnen).
 with_dt_root(binnenkort).
@@ -2628,13 +2630,12 @@ with_dt_root(dertien).
 with_dt_root(dertiental).
 with_dt_root(dertig).
 with_dt_root(dertigtal).
-with_dt_root(des).
+with_dt_root('des te').
 with_dt_root(deze).
 with_dt_root(dichter).
 with_dt_root(die).
 with_dt_root(dien).
 with_dt_root(diep).
-with_dt_root(dier).
 with_dt_root(dikwijls).
 with_dt_root(direck).
 with_dt_root(direct).
@@ -2649,7 +2650,6 @@ with_dt_root(drie_DIM).
 with_dt_root(driehonderd).
 with_dt_root(driehonderdtal).
 with_dt_root(drietal).
-with_dt_root(drugs).
 with_dt_root(duizend).
 with_dt_root(duizendtal).
 with_dt_root(dunk).
@@ -2715,17 +2715,16 @@ with_dt_root(goedenavond).
 with_dt_root(graag).
 with_dt_root(grabbel).
 with_dt_root(groen).
-with_dt_root(grond).
 with_dt_root(groot).
 with_dt_root(grootmoeder).
 with_dt_root(grootvader).
 with_dt_root(gunste).
 with_dt_root(haar).
 with_dt_root(haast).
-with_dt_root(halve).
 with_dt_root(handvol).
 with_dt_root(hang).
 with_dt_root(hard).
+with_dt_root('hard drugs').
 with_dt_root(haren).
 with_dt_root(heb).
 with_dt_root(heel).
@@ -2766,7 +2765,10 @@ with_dt_root(iemand).
 with_dt_root(iets).
 with_dt_root(ik).
 with_dt_root(in).
+with_dt_root('in die mate').
+with_dt_root('in dier voege').
 with_dt_root(ineens).
+with_dt_root('in tegenstelling tot').
 with_dt_root(inzoverre).
 with_dt_root(ja).
 with_dt_root(jaar).
@@ -2836,7 +2838,6 @@ with_dt_root(majesteit).
 with_dt_root(makkelijk).
 with_dt_root(mam).
 with_dt_root(man).
-with_dt_root(mate).
 with_dt_root(me).
 with_dt_root(meerdere).
 with_dt_root(men).
@@ -2880,6 +2881,7 @@ with_dt_root(negentigtal).
 with_dt_root(niemand).
 with_dt_root(niet).
 with_dt_root(niets).
+with_dt_root('niet zo\'n beetje ook').
 with_dt_root(nieuw).
 with_dt_root(niks).
 with_dt_root(nodig).
@@ -2913,6 +2915,7 @@ with_dt_root(ook).
 with_dt_root(oordeel).
 with_dt_root(op).
 with_dt_root(opa).
+with_dt_root('op grond van').
 with_dt_root(opnieuw).
 with_dt_root(opzichte).
 with_dt_root(oud).
@@ -2921,7 +2924,6 @@ with_dt_root(over).
 with_dt_root(overal).
 with_dt_root(overheidswege).
 with_dt_root(overvloed).
-with_dt_root(overvloede).
 with_dt_root(pa).
 with_dt_root(paar).
 with_dt_root(paard).
@@ -2959,6 +2961,7 @@ with_dt_root(seizoen).
 with_dt_root(sinds).
 with_dt_root(slaap).
 with_dt_root(soft).
+with_dt_root('soft drugs').
 with_dt_root(soort).
 with_dt_root(soortgelijk).
 with_dt_root(soortgelijks).
@@ -2978,15 +2981,18 @@ with_dt_root(tachtig).
 with_dt_root(tachtigtal).
 with_dt_root(tante).
 with_dt_root(te).
-with_dt_root(tegenstelling).
 with_dt_root(telkens).
 with_dt_root(temeer).
 with_dt_root(ten).
+with_dt_root('ten halve').
+with_dt_root('ten hele').
+with_dt_root('ten overvloede').
 with_dt_root(ter).
 with_dt_root(terecht).
 with_dt_root(terug).
 with_dt_root(terzijde).
 with_dt_root(tesamen).
+with_dt_root('te veel').
 with_dt_root(tezamen).
 with_dt_root(thuis).
 with_dt_root(tien).
@@ -3025,6 +3031,7 @@ with_dt_root(vanaf).
 with_dt_root(vanavond).
 with_dt_root(vandaag).
 with_dt_root(vandaar).
+with_dt_root('van dien aard').
 with_dt_root(vanmiddag).
 with_dt_root(vanmorgen).
 with_dt_root(vannacht).
@@ -3043,9 +3050,8 @@ with_dt_root(vergeet).
 with_dt_root(verkeerd).
 with_dt_root(vermoed).
 with_dt_root(verrast).
-with_dt_root(versa).
 with_dt_root(verwachting).
-with_dt_root(vice).
+with_dt_root('vice versa').
 with_dt_root(vier).
 with_dt_root(vierde).
 with_dt_root(vier_DIM).
@@ -3062,7 +3068,6 @@ with_dt_root(vijftig).
 with_dt_root(vijftigtal).
 with_dt_root(vind).
 with_dt_root(vlam).
-with_dt_root(voege).
 with_dt_root(voet).
 with_dt_root(vol).
 with_dt_root(volg).
@@ -3139,6 +3144,7 @@ with_dt_root('z\'n').
 with_dt_root(zo).
 with_dt_root(zodanig).
 with_dt_root(zogauw).
+with_dt_root('zo iets').
 with_dt_root(zoiets).
 with_dt_root(zolang).
 with_dt_root(zomin).
@@ -3147,7 +3153,6 @@ with_dt_root(zonder).
 with_dt_root(zorg).
 with_dt_root(zoveel).
 with_dt_root(zover).
-with_dt_root(zoverre).
 with_dt_root(zowat).
 with_dt_root(zowel).
 with_dt_root(zozeer).

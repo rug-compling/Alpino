@@ -400,23 +400,24 @@ list_entries :-
     close(LEMMA),
     check_wrong_arity.
 
-write_with_dt(Tag,Stem,Stream) :-
-    Tag = with_dt(_,_),
+write_with_dt(Tag,_,Stream) :-
+    Tag = with_dt(_,Dt),
     !,
-    atom_codes(Stem,Codes),
-    alpino_util:split_string(Codes," ",Roots),
-    format_with_dt(Roots,Atoms,Stream),
-    format_with_dt2(Atoms,Stream).
+%%%    atom_codes(Stem,Codes),
+%%%    alpino_util:split_string(Codes," ",Roots),
+    roots_from_dt(Dt,Roots0,[]),
+    sort_not_unique(Roots0,Roots),
+    format_with_dt(Roots,Stream),
+    format_with_dt2(Roots,Stream).
 write_with_dt(_,_,_).
 
 format_with_dt2([H|T],Stream) :-
     format(Stream,"with_dt_all(~q,~q).~n",[H,T]).
 
-format_with_dt([],[],_).
-format_with_dt([H|T],[Atom|Atoms],Stream) :-
-    atom_codes(Atom,H),  % create atom first, because we need ~q 
+format_with_dt([],_).
+format_with_dt([Atom|Atoms],Stream) :-
     format(Stream,"with_dt_root(~q).~n",[Atom]),
-    format_with_dt(T,Atoms,Stream).
+    format_with_dt(Atoms,Stream).
 
 write_exc_inv_lex(Tag,Root,Surf,INVLEX) :-
     (   write_exc_pattern(Tag,Surf,NewSurf,Root,NewRoot),

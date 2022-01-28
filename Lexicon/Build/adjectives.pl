@@ -9017,7 +9017,9 @@ a([stem(dringend),
    ere(dringendere),
    no_e(dringend),
    st(dringendst),
-   ste(dringendste)],adv,[],[]).
+   ste(dringendste)],adv,
+  [subject_sbar,
+   subject_vp],[]).
 
 a([e(drinkbare),
    no_e(drinkbaar)],nonadv,[],[]).
