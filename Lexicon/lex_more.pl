@@ -9,16 +9,279 @@
 :- expects_dialect(sicstus).
 
 :- discontiguous
-    phrasal_entry/4,
-    phrasal_entry/5.
+    phrasal_entry/4.
+%    phrasal_entry/5.
 
 :- use_module(alpino('src/latin1')).
 
+%% phrasal_entry/5
 phrasal_entry(Cat,Label,His,In,Out) :-
     phrasal_entry(Cat,His,In,Out),
     lists:append(Used,Out,In),
-    hdrug_util:concat_all(Used,Label,' ').
+    (   Cat = with_dt(Tag,Dt)
+    ->  generate_with_dt_stem(with_dt(Tag,Dt),Label)
+    ;   hdrug_util:concat_all(Used,Label,' ')
+    ).
 
+phrasal_entry(number(rang),Stem,number_rang) -->
+    { hdrug_util:debug_message(4,"numbere~n",[]) },
+    n_word(NumberE),
+    { numbere(NumberE, Stem) }.
+
+%% de zesmiljardste aardbewoner
+phrasal_entry(number(rang),Stem,number_rang) -->
+    { hdrug_util:debug_message(4,"zesmiljardste~n",[]) },
+    zesmiljardste(Stem).
+
+phrasal_entry(adjective(E),Root,numberjarig) -->
+    { hdrug_util:debug_message(4,"numberjarig",[]) },
+    n_word(NumberJarig),
+    { numberjarig(NumberJarig,E,Root) }.
+
+phrasal_entry(nominalized_adjective,Root,numberjarig) -->
+    { hdrug_util:debug_message(4,"numberjarig~n",[]) },
+    n_word(NumberJarig),
+    { numberjarigen(NumberJarig,Root) }.
+
+phrasal_entry(adjective(e),Root,numbereeuwse) -->
+    { hdrug_util:debug_message(4,"numbereeuwse~n",[]) },
+    n_word(NumberPersoons),
+    { rangnumbereeuwse(NumberPersoons,Root) }.
+
+phrasal_entry(noun(het,count,pl),Stem,numbercilinders) -->
+    { hdrug_util:debug_message(4,"numbercilinders~n",[]) },
+    n_word(NumberTal),
+    { numbersuffix(NumberTal,cilinders,_,Stem,cilinder) }.
+
+phrasal_entry(noun(de,count,pl),Stem,numberklassers) -->
+    { hdrug_util:debug_message(4,"numberklasser~n",[]) },
+    n_word(NumberTal),
+    { numbersuffix(NumberTal,klassers,_,Stem,klasser) }.
+
+phrasal_entry(noun(het,count,pl),Stem,numberluik) -->
+    { hdrug_util:debug_message(4,"numberluik~n",[]) },
+    n_word(NumberTal),
+    { numbersuffix(NumberTal,luiken,_,Stem,luik) }.
+
+phrasal_entry(noun(het,count,pl,measure),Stem,numbertallen) -->
+    { hdrug_util:debug_message(4,"numbertallen~n",[]) },
+    n_word(NumberTal),
+    { numbersuffix(NumberTal,tallen,_,Stem,tal) }.
+
+phrasal_entry(noun(het,count,pl),Stem,numbertallen) -->
+    { hdrug_util:debug_message(4,"numbertallen~n",[]) },
+    n_word(NumberTal),
+    { numbersuffix(NumberTal,tallen,_,Stem,tal) }.
+
+phrasal_entry(noun(de,count,pl,measure),Stem,numberkaarten) -->
+    { hdrug_util:debug_message(4,"numberkaarten~n",[]) },
+    n_word(NumberKaarten),
+    { numbersuffix(NumberKaarten,kaarten,_,Stem,kaart) }.
+
+phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
+    { hdrug_util:debug_message(4,"numberplusser~n",[]) },
+    n_word(NumberKaarten),
+    { numbersuffix(NumberKaarten,minners,_,Stem,minner) }.
+
+phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
+    { hdrug_util:debug_message(4,"numberplusser~n",[]) },
+    n_word(NumberKaarten),
+    { numbersuffix(NumberKaarten,kampen,_,Stem,kamp) }.
+
+phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
+    { hdrug_util:debug_message(4,"numberplusser~n",[]) },
+    n_word(NumberKaarten),
+    { numbersuffix(NumberKaarten,sprongen,_,Stem,sprong) }.
+
+phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
+    { hdrug_util:debug_message(4,"numberplusser~n",[]) },
+    n_word(NumberKaarten),
+    { numbersuffix(NumberKaarten,setters,_,Stem,setter) }.
+
+phrasal_entry(noun(de,count,pl),Stem,numberwielers) -->
+    { hdrug_util:debug_message(4,"numberwielers~n",[]) },
+    n_word(NumberKaarten),
+    { numbersuffix(NumberKaarten,wielers,_,Stem,wieler) }.
+
+phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
+    { hdrug_util:debug_message(4,"numberplusser~n",[]) },
+    n_word(NumberKaarten),
+    { numbersuffix(NumberKaarten,plussers,_,Stem,plusser) }.
+
+phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
+    { hdrug_util:debug_message(4,"numberplusser~n",[]) },
+    n_word(NumberKaarten),
+    { numbersuffix(NumberKaarten,setters,_,Stem,setter) }.
+
+phrasal_entry(noun(de,count,sg),Label,topnumber) -->
+    { hdrug_util:debug_message(4,"topnumber~n",[]) },
+    n_word(TopTien),
+    { toptien(TopTien,Label) }.
+
+phrasal_entry(Tag,Stem,num_meter_loper,[NumberMeterLoper|L],L) :-
+    hdrug_util:debug_message(4,"num_meter_loper 1~n",[]),
+    atom(NumberMeterLoper),
+    once(alpino_unknowns:atom_split(NumberMeterLoper,'-',Number,MeterLoper)),
+    atom_length(Number,Length), Length < 12,
+    num_meter_loper_entry(Tag,Stem,[Number,MeterLoper|L],L,'_').
+
+phrasal_entry(Tag,Stem,num_meter_loper,L0,L) :-
+    hdrug_util:debug_message(4,"num_meter_loper 2~n",[]),
+    num_meter_loper_entry(Tag,Stem,L0,L,' ').
+
+%% verNvoudig
+phrasal_entry(verb(hebben,sg1,transitive),Label,verNvoudig) -->
+    { hdrug_util:debug_message(4,"verNvoudig~n",[]) },
+    n_word(VerNVoudig),
+    {  atom(VerNVoudig),
+       atom_concat(ver,NVoudig,VerNVoudig),
+       atom_concat(N,voudig,NVoudig),
+       simple_convert_number(N,_),
+       concat_stems([ver,N,voudig],Label,'')
+    }.
+phrasal_entry(verb(hebben,sg3,transitive),Label,verNvoudig) -->
+    n_word(VerNVoudig),
+    {  atom(VerNVoudig),
+       atom_concat(ver,NVoudig,VerNVoudig),
+       atom_concat(N,voudigt,NVoudig),
+       simple_convert_number(N,_),
+       concat_stems([ver,N,voudig],Label,'')
+    }.
+phrasal_entry(verb(hebben,inf,transitive),Label,verNvoudig) -->
+    n_word(VerNVoudig),
+    {  atom(VerNVoudig),
+       atom_concat(ver,NVoudig,VerNVoudig),
+       atom_concat(N,voudigen,NVoudig),
+       simple_convert_number(N,_),
+       concat_stems([ver,N,voudig],Label,'')
+    }.
+phrasal_entry(verb(hebben,pl,transitive),Label,verNvoudig) -->
+    n_word(VerNVoudig),
+    {  atom(VerNVoudig),
+       atom_concat(ver,NVoudig,VerNVoudig),
+       atom_concat(N,voudigen,NVoudig),
+       simple_convert_number(N,_),
+       concat_stems([ver,N,voudig],Label,'')
+    }.
+phrasal_entry(verb(hebben,psp,transitive),Label,verNvoudig) -->
+    n_word(VerNVoudig),
+    {  atom(VerNVoudig),
+       atom_concat(ver,NVoudig,VerNVoudig),
+       atom_concat(N,voudigd,NVoudig),
+       simple_convert_number(N,_),
+       concat_stems([ver,N,voudig],Label,'')
+    }.
+phrasal_entry(verb(hebben,past(sg),transitive),Label,verNvoudig) -->
+    n_word(VerNVoudig),
+    {  atom(VerNVoudig),
+       atom_concat(ver,NVoudig,VerNVoudig),
+       atom_concat(N,voudigde,NVoudig),
+       simple_convert_number(N,_),
+       concat_stems([ver,N,voudig],Label,'')
+    }.
+phrasal_entry(verb(hebben,past(pl),transitive),Label,verNvoudig) -->
+    n_word(VerNVoudig),
+    {  atom(VerNVoudig),
+       atom_concat(ver,NVoudig,VerNVoudig),
+       atom_concat(N,voudigden,NVoudig),
+       simple_convert_number(N,_),
+       concat_stems([ver,N,voudig],Label,'')
+    }.
+
+phrasal_entry(verb(unacc,sg1,intransitive),Label,verNvoudig) -->
+    n_word(VerNVoudig),
+    {  atom(VerNVoudig),
+       atom_concat(ver,NVoudig,VerNVoudig),
+       atom_concat(N,voudig,NVoudig),
+       simple_convert_number(N,_),
+       concat_stems([ver,N,voudig],Label,'')
+    }.
+phrasal_entry(verb(unacc,sg3,intransitive),Label,verNvoudig) -->
+    n_word(VerNVoudig),
+    {  atom(VerNVoudig),
+       atom_concat(ver,NVoudig,VerNVoudig),
+       atom_concat(N,voudigt,NVoudig),
+       simple_convert_number(N,_),
+       concat_stems([ver,N,voudig],Label,'')
+    }.
+phrasal_entry(verb(unacc,inf,intransitive),Label,verNvoudig) -->
+    n_word(VerNVoudig),
+    {  atom(VerNVoudig),
+       atom_concat(ver,NVoudig,VerNVoudig),
+       atom_concat(N,voudigen,NVoudig),
+       simple_convert_number(N,_),
+       concat_stems([ver,N,voudig],Label,'')
+    }.
+phrasal_entry(verb(unacc,psp,intransitive),Label,verNvoudig) -->
+    { hdrug_util:debug_message(4,"verNvoudig~n",[]) },
+    n_word(VerNVoudig),
+    {  atom(VerNVoudig),
+       atom_concat(ver,NVoudig,VerNVoudig),
+       atom_concat(N,voudigd,NVoudig),
+       simple_convert_number(N,_),
+       concat_stems([ver,N,voudig],Label,'')
+    }.
+phrasal_entry(verb(unacc,past(sg),intransitive),Label,verNvoudig) -->
+    { hdrug_util:debug_message(4,"verNvoudig~n",[]) },
+    n_word(VerNVoudig),
+    {  atom(VerNVoudig),
+       atom_concat(ver,NVoudig,VerNVoudig),
+       atom_concat(N,voudigde,NVoudig),
+       simple_convert_number(N,_),
+       concat_stems([ver,N,voudig],Label,'')
+    }.
+phrasal_entry(verb(unacc,past(pl),intransitive),Label,verNvoudig) -->
+    { hdrug_util:debug_message(4,"verNvoudig~n",[]) },
+    n_word(VerNVoudig),
+    {  atom(VerNVoudig),
+       atom_concat(ver,NVoudig,VerNVoudig),
+       atom_concat(N,voudigden,NVoudig),
+       simple_convert_number(N,_),
+       concat_stems([ver,N,voudig],Label,'')
+    }.
+
+phrasal_entry(adjective(no_e(adv)),Label,verNvoudig) -->
+    { hdrug_util:debug_message(4,"verNvoudig~n",[]) },
+    n_word(VerNVoudig),
+    {  atom(VerNVoudig),
+       atom_concat(ver,NVoudig,VerNVoudig),
+       atom_concat(N,voudigd,NVoudig),
+       simple_convert_number(N,_),
+       concat_stems([ver,N,voudig],Label,'')
+    }.
+phrasal_entry(adjective(e),Label,verNvoudig) -->
+    { hdrug_util:debug_message(4,"verNvoudig~n",[]) },
+    n_word(VerNVoudig),
+    {  atom(VerNVoudig),
+       atom_concat(ver,NVoudig,VerNVoudig),
+       atom_concat(N,voudigde,NVoudig),
+       simple_convert_number(N,_),
+       concat_stems([ver,N,voudig],Label,'')
+    }.
+
+%% huis voor huis, meter voor meter etc.
+phrasal_entry(sentence_adverb,Label,x_voor_x) -->
+    { hdrug_util:debug_message(4,"x voor x~n",[]) },
+    n_word(X),
+    n_word_preposition(Voor),
+    n_word(X),
+    { xl(X,TAG,Root,[],[]),
+      sg_noun(TAG,_),
+      hdrug_util:concat_all([Root,Voor,Root],Label,' ')
+    }.
+
+phrasal_entry(Tag,Label,spaced_letters) -->
+    { hdrug_util:debug_message(4,"spaced letters~n",[]) },
+    long_single_letter_sequence(Letters),
+    {  (  capitals(Letters,Letters2)
+       ;  Letters = Letters2
+       ),
+       hdrug_util:concat_all(Letters2,Atom,''),
+       lexicon_(Tag,Label,[Atom],[],_,[])
+    }.
+
+
+%% phrasal_entry/4
 phrasal_entry(postnp_adverb,bracketed_year) -->
     bracketed_year.
 
@@ -449,11 +712,6 @@ drie --> "vijf".
 drie --> "zes".
 drie --> "zeven".
 
-phrasal_entry(number(rang),Stem,number_rang) -->
-    { hdrug_util:debug_message(4,"numbere~n",[]) },
-    n_word(NumberE),
-    { numbere(NumberE, Stem) }.
-
 %% twaalf miljoenste bezoeker
 phrasal_entry(number(rang),number_rang) -->
     { hdrug_util:debug_message(4,"twaalf miljoenste~n",[]) },
@@ -467,11 +725,6 @@ phrasal_entry(number(rang),number_rang) -->
     [e],
     { parse_number_simple(Rang) }.
 
-%% de zesmiljardste aardbewoner
-phrasal_entry(number(rang),Stem,number_rang) -->
-    { hdrug_util:debug_message(4,"zesmiljardste~n",[]) },
-    zesmiljardste(Stem).
-
 zesmiljardste(Stem) -->
     [Word],
     { atom(Word),
@@ -482,11 +735,6 @@ zesmiljardste(Stem) -->
     }.
 
 %% TODO: add proper stems to some!
-
-phrasal_entry(adjective(E),Root,numberjarig) -->
-    { hdrug_util:debug_message(4,"numberjarig",[]) },
-    n_word(NumberJarig),
-    { numberjarig(NumberJarig,E,Root) }.
 
 phrasal_entry(adjective(no_e(nonadv)),numberjarig) -->
     { hdrug_util:debug_message(4,"number jarig~n",[]) },
@@ -505,11 +753,6 @@ phrasal_entry(adjective(e),numberjarig) -->
     number_expression_word,
     n_word(Jarige),
     { jarige(Jarige,_) }.  % todo correct stem
-
-phrasal_entry(nominalized_adjective,Root,numberjarig) -->
-    { hdrug_util:debug_message(4,"numberjarig~n",[]) },
-    n_word(NumberJarig),
-    { numberjarigen(NumberJarig,Root) }.
 
 phrasal_entry(adjective(both(nonadv)),numberpersoons) -->
     { hdrug_util:debug_message(4,"numberpersoons~n",[]) },
@@ -566,11 +809,6 @@ phrasal_entry(adjective(no_e(nonadv)),numbereeuws) -->
     { hdrug_util:debug_message(4,"numbereeuws~n",[]) },
     n_word(NumberPersoons),
     { rangnumbereeuws(NumberPersoons) }.
-
-phrasal_entry(adjective(e),Root,numbereeuwse) -->
-    { hdrug_util:debug_message(4,"numbereeuwse~n",[]) },
-    n_word(NumberPersoons),
-    { rangnumbereeuwse(NumberPersoons,Root) }.
 
 phrasal_entry(adjective(no_e(nonadv)),numbereeuws) -->
     { hdrug_util:debug_message(4,"numbereeuws~n",[]) },
@@ -633,40 +871,15 @@ phrasal_entry(noun(both,count,sg),numbercilinder) -->
     n_word(NumberTal),
     { numbersuffix(NumberTal,cilinder) }.
 
-phrasal_entry(noun(het,count,pl),Stem,numbercilinders) -->
-    { hdrug_util:debug_message(4,"numbercilinders~n",[]) },
-    n_word(NumberTal),
-    { numbersuffix(NumberTal,cilinders,_,Stem,cilinder) }.
-
 phrasal_entry(noun(de,count,sg),numberklasser) -->
     { hdrug_util:debug_message(4,"numberklasser~n",[]) },
     n_word(NumberTal),
     { numbersuffix(NumberTal,klasser) }.
 
-phrasal_entry(noun(de,count,pl),Stem,numberklassers) -->
-    { hdrug_util:debug_message(4,"numberklasser~n",[]) },
-    n_word(NumberTal),
-    { numbersuffix(NumberTal,klassers,_,Stem,klasser) }.
-
 phrasal_entry(noun(het,count,sg),numberluik) -->
     { hdrug_util:debug_message(4,"numberluik~n",[]) },
     n_word(NumberTal),
     { numbersuffix(NumberTal,luik) }.
-
-phrasal_entry(noun(het,count,pl),Stem,numberluik) -->
-    { hdrug_util:debug_message(4,"numberluik~n",[]) },
-    n_word(NumberTal),
-    { numbersuffix(NumberTal,luiken,_,Stem,luik) }.
-
-phrasal_entry(noun(het,count,pl,measure),Stem,numbertallen) -->
-    { hdrug_util:debug_message(4,"numbertallen~n",[]) },
-    n_word(NumberTal),
-    { numbersuffix(NumberTal,tallen,_,Stem,tal) }.
-
-phrasal_entry(noun(het,count,pl),Stem,numbertallen) -->
-    { hdrug_util:debug_message(4,"numbertallen~n",[]) },
-    n_word(NumberTal),
-    { numbersuffix(NumberTal,tallen,_,Stem,tal) }.
 
 phrasal_entry(noun(de,count,sg,measure),numberkaart) -->
     { hdrug_util:debug_message(4,"numberkaart~n",[]) },
@@ -678,80 +891,40 @@ phrasal_entry(noun(de,count,sg),numberkaart) -->
     n_word(NumberKaart),
     { numbersuffix(NumberKaart,kaart) }.
 
-phrasal_entry(noun(de,count,pl,measure),Stem,numberkaarten) -->
-    { hdrug_util:debug_message(4,"numberkaarten~n",[]) },
-    n_word(NumberKaarten),
-    { numbersuffix(NumberKaarten,kaarten,_,Stem,kaart) }.
-
 phrasal_entry(noun(de,count,sg),numberwieler) -->
     { hdrug_util:debug_message(4,"numberwieler~n",[]) },
     n_word(NumberKaart),
     { numbersuffix(NumberKaart,wieler) }.
-
-phrasal_entry(noun(de,count,pl),Stem,numberwielers) -->
-    { hdrug_util:debug_message(4,"numberwielers~n",[]) },
-    n_word(NumberKaarten),
-    { numbersuffix(NumberKaarten,wielers,_,Stem,wieler) }.
 
 phrasal_entry(noun(de,count,sg),numberplusser) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaart),
     { numbersuffix(NumberKaart,plusser) }.
 
-phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
-    { hdrug_util:debug_message(4,"numberplusser~n",[]) },
-    n_word(NumberKaarten),
-    { numbersuffix(NumberKaarten,plussers,_,Stem,plusser) }.
-
 phrasal_entry(noun(de,count,sg),numberplusser) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaart),
     { numbersuffix(NumberKaart,minner) }.
-
-phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
-    { hdrug_util:debug_message(4,"numberplusser~n",[]) },
-    n_word(NumberKaarten),
-    { numbersuffix(NumberKaarten,minners,_,Stem,minner) }.
 
 phrasal_entry(noun(de,count,sg),numberplusser) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaart),
     { numbersuffix(NumberKaart,kamp) }.
 
-phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
-    { hdrug_util:debug_message(4,"numberplusser~n",[]) },
-    n_word(NumberKaarten),
-    { numbersuffix(NumberKaarten,kampen,_,Stem,kamp) }.
-
 phrasal_entry(noun(de,count,sg),numberplusser) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaart),
     { numbersuffix(NumberKaart,sprong) }.
-
-phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
-    { hdrug_util:debug_message(4,"numberplusser~n",[]) },
-    n_word(NumberKaarten),
-    { numbersuffix(NumberKaarten,sprongen,_,Stem,sprong) }.
 
 phrasal_entry(noun(de,count,sg),numberplusser) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaart),
     { numbersuffix(NumberKaart,setter) }.
 
-phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
-    { hdrug_util:debug_message(4,"numberplusser~n",[]) },
-    n_word(NumberKaarten),
-    { numbersuffix(NumberKaarten,setters,_,Stem,setter) }.
-
 phrasal_entry(noun(de,count,sg),numberplusser) -->
     { hdrug_util:debug_message(4,"numberplusser~n",[]) },
     n_word(NumberKaart),
     { numbersuffix(NumberKaart,klapper) }.
-
-phrasal_entry(noun(de,count,pl),Stem,numberplussers) -->
-    { hdrug_util:debug_message(4,"numberplusser~n",[]) },
-    n_word(NumberKaarten),
-    { numbersuffix(NumberKaarten,setters,_,Stem,setter) }.
 
 phrasal_entry(nominalized_adjective,numberjarig) -->
     { hdrug_util:debug_message(4,"numberjarig~n",[]) },
@@ -764,11 +937,6 @@ phrasal_entry(nominalized_adjective,numberjarig) -->
     number_expression(_),
     n_word(Jarigen),
     { jarigen(Jarigen,_) }.
-
-phrasal_entry(noun(de,count,sg),Label,topnumber) -->
-    { hdrug_util:debug_message(4,"topnumber~n",[]) },
-    n_word(TopTien),
-    { toptien(TopTien,Label) }.
 
 wekelijks(wekelijks).
 wekelijks(jaarlijks).
@@ -3359,17 +3527,6 @@ procents(jaars).
 procents(maands).
 procents(sterren).  % een vijfsterren restaurant
 
-phrasal_entry(Tag,Stem,num_meter_loper,[NumberMeterLoper|L],L) :-
-    hdrug_util:debug_message(4,"num_meter_loper 1~n",[]),
-    atom(NumberMeterLoper),
-    once(alpino_unknowns:atom_split(NumberMeterLoper,'-',Number,MeterLoper)),
-    atom_length(Number,Length), Length < 12,
-    num_meter_loper_entry(Tag,Stem,[Number,MeterLoper|L],L,'_').
-
-phrasal_entry(Tag,Stem,num_meter_loper,L0,L) :-
-    hdrug_util:debug_message(4,"num_meter_loper 2~n",[]),
-    num_meter_loper_entry(Tag,Stem,L0,L,' ').
-
 %% nondet atom_concat
 num_meter_loper_entry(noun(A,B,C),MStem,[Number,MeterLoper|L],L,Sep) :-
     number_expression(_,[Number],[]),
@@ -3786,136 +3943,6 @@ num_meter_num -->
     n_word(meter),
     number_expression(_).
 
-%% verNvoudig
-phrasal_entry(verb(hebben,sg1,transitive),Label,verNvoudig) -->
-    { hdrug_util:debug_message(4,"verNvoudig~n",[]) },
-    n_word(VerNVoudig),
-    {  atom(VerNVoudig),
-       atom_concat(ver,NVoudig,VerNVoudig),
-       atom_concat(N,voudig,NVoudig),
-       simple_convert_number(N,_),
-       concat_stems([ver,N,voudig],Label,'')
-    }.
-phrasal_entry(verb(hebben,sg3,transitive),Label,verNvoudig) -->
-    n_word(VerNVoudig),
-    {  atom(VerNVoudig),
-       atom_concat(ver,NVoudig,VerNVoudig),
-       atom_concat(N,voudigt,NVoudig),
-       simple_convert_number(N,_),
-       concat_stems([ver,N,voudig],Label,'')
-    }.
-phrasal_entry(verb(hebben,inf,transitive),Label,verNvoudig) -->
-    n_word(VerNVoudig),
-    {  atom(VerNVoudig),
-       atom_concat(ver,NVoudig,VerNVoudig),
-       atom_concat(N,voudigen,NVoudig),
-       simple_convert_number(N,_),
-       concat_stems([ver,N,voudig],Label,'')
-    }.
-phrasal_entry(verb(hebben,pl,transitive),Label,verNvoudig) -->
-    n_word(VerNVoudig),
-    {  atom(VerNVoudig),
-       atom_concat(ver,NVoudig,VerNVoudig),
-       atom_concat(N,voudigen,NVoudig),
-       simple_convert_number(N,_),
-       concat_stems([ver,N,voudig],Label,'')
-    }.
-phrasal_entry(verb(hebben,psp,transitive),Label,verNvoudig) -->
-    n_word(VerNVoudig),
-    {  atom(VerNVoudig),
-       atom_concat(ver,NVoudig,VerNVoudig),
-       atom_concat(N,voudigd,NVoudig),
-       simple_convert_number(N,_),
-       concat_stems([ver,N,voudig],Label,'')
-    }.
-phrasal_entry(verb(hebben,past(sg),transitive),Label,verNvoudig) -->
-    n_word(VerNVoudig),
-    {  atom(VerNVoudig),
-       atom_concat(ver,NVoudig,VerNVoudig),
-       atom_concat(N,voudigde,NVoudig),
-       simple_convert_number(N,_),
-       concat_stems([ver,N,voudig],Label,'')
-    }.
-phrasal_entry(verb(hebben,past(pl),transitive),Label,verNvoudig) -->
-    n_word(VerNVoudig),
-    {  atom(VerNVoudig),
-       atom_concat(ver,NVoudig,VerNVoudig),
-       atom_concat(N,voudigden,NVoudig),
-       simple_convert_number(N,_),
-       concat_stems([ver,N,voudig],Label,'')
-    }.
-
-phrasal_entry(verb(unacc,sg1,intransitive),Label,verNvoudig) -->
-    n_word(VerNVoudig),
-    {  atom(VerNVoudig),
-       atom_concat(ver,NVoudig,VerNVoudig),
-       atom_concat(N,voudig,NVoudig),
-       simple_convert_number(N,_),
-       concat_stems([ver,N,voudig],Label,'')
-    }.
-phrasal_entry(verb(unacc,sg3,intransitive),Label,verNvoudig) -->
-    n_word(VerNVoudig),
-    {  atom(VerNVoudig),
-       atom_concat(ver,NVoudig,VerNVoudig),
-       atom_concat(N,voudigt,NVoudig),
-       simple_convert_number(N,_),
-       concat_stems([ver,N,voudig],Label,'')
-    }.
-phrasal_entry(verb(unacc,inf,intransitive),Label,verNvoudig) -->
-    n_word(VerNVoudig),
-    {  atom(VerNVoudig),
-       atom_concat(ver,NVoudig,VerNVoudig),
-       atom_concat(N,voudigen,NVoudig),
-       simple_convert_number(N,_),
-       concat_stems([ver,N,voudig],Label,'')
-    }.
-phrasal_entry(verb(unacc,psp,intransitive),Label,verNvoudig) -->
-    { hdrug_util:debug_message(4,"verNvoudig~n",[]) },
-    n_word(VerNVoudig),
-    {  atom(VerNVoudig),
-       atom_concat(ver,NVoudig,VerNVoudig),
-       atom_concat(N,voudigd,NVoudig),
-       simple_convert_number(N,_),
-       concat_stems([ver,N,voudig],Label,'')
-    }.
-phrasal_entry(verb(unacc,past(sg),intransitive),Label,verNvoudig) -->
-    { hdrug_util:debug_message(4,"verNvoudig~n",[]) },
-    n_word(VerNVoudig),
-    {  atom(VerNVoudig),
-       atom_concat(ver,NVoudig,VerNVoudig),
-       atom_concat(N,voudigde,NVoudig),
-       simple_convert_number(N,_),
-       concat_stems([ver,N,voudig],Label,'')
-    }.
-phrasal_entry(verb(unacc,past(pl),intransitive),Label,verNvoudig) -->
-    { hdrug_util:debug_message(4,"verNvoudig~n",[]) },
-    n_word(VerNVoudig),
-    {  atom(VerNVoudig),
-       atom_concat(ver,NVoudig,VerNVoudig),
-       atom_concat(N,voudigden,NVoudig),
-       simple_convert_number(N,_),
-       concat_stems([ver,N,voudig],Label,'')
-    }.
-
-phrasal_entry(adjective(no_e(adv)),Label,verNvoudig) -->
-    { hdrug_util:debug_message(4,"verNvoudig~n",[]) },
-    n_word(VerNVoudig),
-    {  atom(VerNVoudig),
-       atom_concat(ver,NVoudig,VerNVoudig),
-       atom_concat(N,voudigd,NVoudig),
-       simple_convert_number(N,_),
-       concat_stems([ver,N,voudig],Label,'')
-    }.
-phrasal_entry(adjective(e),Label,verNvoudig) -->
-    { hdrug_util:debug_message(4,"verNvoudig~n",[]) },
-    n_word(VerNVoudig),
-    {  atom(VerNVoudig),
-       atom_concat(ver,NVoudig,VerNVoudig),
-       atom_concat(N,voudigde,NVoudig),
-       simple_convert_number(N,_),
-       concat_stems([ver,N,voudig],Label,'')
-    }.
-
 phrasal_entry(adjective(e),eneenhalve) -->
     { hdrug_util:debug_message(4,"Neneenhalve~n",[]) },
     number_expression(pl_num),
@@ -3989,17 +4016,6 @@ never_compound_part(L) :-
     alpino_unknowns:never_compound_part(L).
 never_compound_part(L) :-
     alpino_unknowns:contains_never_compound_part(L).
-
-%% huis voor huis, meter voor meter etc.
-phrasal_entry(sentence_adverb,Label,x_voor_x) -->
-    { hdrug_util:debug_message(4,"x voor x~n",[]) },
-    n_word(X),
-    n_word_preposition(Voor),
-    n_word(X),
-    { xl(X,TAG,Root,[],[]),
-      sg_noun(TAG,_),
-      hdrug_util:concat_all([Root,Voor,Root],Label,' ')
-    }.
 
 n_word_preposition(Voor) -->
     n_word(Prep),
@@ -4104,16 +4120,6 @@ phrasal_entry(Tag,'Nx') -->
 
 nx_tag(tmp_noun(both,count,bare_meas)).
 nx_tag(tmp_noun(both,count,bare_meas,measure)).
-
-phrasal_entry(Tag,Label,spaced_letters) -->
-    { hdrug_util:debug_message(4,"spaced letters~n",[]) },
-    long_single_letter_sequence(Letters),
-    {  (  capitals(Letters,Letters2)
-       ;  Letters = Letters2
-       ),
-       hdrug_util:concat_all(Letters2,Atom,''),
-       lexicon_(Tag,Label,[Atom],[],_,[])
-    }.
 
 capitals([],[]).
 capitals([C|Cs],[D|Ds]):-
