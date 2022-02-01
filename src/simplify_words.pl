@@ -503,7 +503,7 @@ simplify(nietemin,toch,Cat,Cat,D,D,E,E,_).
 simplify(nimmer,nooit,Cat,Cat,D,D,E,E,_).
 simplify(nochtans,toch,Cat,Cat,D,D,E,E,_).
 simplify(noodzakelijk,nodig,Cat,Cat,D,D,E,E,_).
-simplify(noop,dwing,Cat,Cat,D,D,E,E,_).
+%%%simplify(noop,dwing,Cat,Cat,D,D,E,E,_).  TODO obj2 <-> obj1 mismatch
 simplify(notificatie,melding,Cat,Cat,D,D,E,E,_).
 simplify(omineus,onheilspellend,Cat,Cat,D,D,E,E,_).
 simplify(omtrent,over,Cat,Cat,D,D,E,E,_).
@@ -657,3 +657,4 @@ erop(EROP,OP) :-
     atom_concat(hier,OP,EROP).
 erop(EROP,OP) :-
     atom_concat(waar,OP,EROP).
+

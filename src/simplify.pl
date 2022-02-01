@@ -16,10 +16,12 @@ apply_adt_transformations(Tree0,Tree) :-
 apply_split_transformations(on,Tree0,Tree) :-
     apply_split_transformations(Tree0,Tree).
 apply_split_transformations(off,Tree,Tree).
+apply_split_transformations(undefined,Tree,Tree).
 
 apply_passive_transformations(on,Tree0,Tree) :-
     apply_passive_transformations(Tree0,Tree).
 apply_passive_transformations(off,Tree,Tree).
+apply_passive_transformations(undefined,Tree,Tree).
 
 apply_further_adt_transformations(Tree2,Tree) :-
     hdrug_util:hdrug_flag(simplify_modifier,Mod),
@@ -122,11 +124,15 @@ CONJ MODIFIERS?
 
 Desalniettemin spelen deze ziekten in menselijk en economisch opzicht wel degelijk een rol van betekenis . =>
 Desalniettemin spelen deze ziekten in opzicht wel degelijk een rol van betekenis .
-
+?DONE?
 
 SPLIT:
 
 we hebben het hoofd bedekt en de voeten daarbij onbedekt moeten laten
+
+tot slot , de verschillende systemen waarin alternerend geleerd wordt , hebben een ondoorzichtige structuur en zijn niet afgestemd :
+
+
 
 TODO GENERATION:
 
@@ -136,15 +142,21 @@ TODO GENERATION:
 
 * Denkt u zich eens in ...
 
-* Tegelijkertijd dient er een aantal hervormingen te worden doorgevoerd
+DONE * Tegelijkertijd dient er een aantal hervormingen te worden doorgevoerd
 ld=er doorgevoerd =/= men voert ld=erdoor
+
+* EMBEDDED DIP???
+
+Ik heb geprobeerd tegen hem te zeggen : ik kom niet
+yet ok:
+Ik heb geprobeerd te zeggen : ik kom niet
 
 * UNKNOWN LEMMA's
 
 - heuristics do not check pos/attributes
 "dat wordt gelagerd" -> men X dat
 
-tussen X en Y  : dynamic with_dt, available in alpino_paraphrase:add_lex/3
+DONE tussen X en Y  : dynamic with_dt, available in alpino_paraphrase:add_lex/3
 
 ?
 
@@ -153,7 +165,7 @@ tussen X en Y  : dynamic with_dt, available in alpino_paraphrase:add_lex/3
 
 GRAMMAR:
 
-Het is geen geheim dat Van Miert en mezelf een grotere samenhang hadden gewild .
+DONE Het is geen geheim dat Van Miert en mezelf een grotere samenhang hadden gewild .
 
 
 

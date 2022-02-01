@@ -314,7 +314,8 @@ add_su_control(D,Node,Ds0,Node,Ds) :-
     replace(VC0,VC,Ds0,Ds),
     add_su_control(D,VCCAT0,VCDS0,VCCAT,VCDS).
 
-add_su_control(not_door,Node,Ds0,Node,Ds) :-
+%% not_door -> _
+add_su_control(_,Node,Ds0,Node,Ds) :-
     Hd = tree(r(hd,adt_lex(_,Proberen,Proberen2,verb,_)),[]),
     lists:member(Hd,Ds0),
     su_control(Proberen,Proberen2),
@@ -327,7 +328,8 @@ add_su_control(not_door,Node,Ds0,Node,Ds) :-
     vp_argument(VC0,VC,NewSu),
     replace(VC0,VC,Ds1,Ds),
     !.
-add_su_control(not_door,Node,Ds0,Node,Ds) :-
+%% not_door => _
+add_su_control(_,Node,Ds0,Node,Ds) :-
     Hd = tree(r(hd,adt_lex(_,Proberen,Proberen2,verb,_)),[]),
     lists:member(Hd,Ds0),
     su_control_in_pp(Proberen,Proberen2),
@@ -531,8 +533,10 @@ su_control(beoog,_).
 su_control(besluit,_).
 su_control(eis,_).
 su_control(hoef,_).
+su_control(overweeg,_).
 su_control(poog,_).
 su_control(probeer,_).
+su_control(spreek_af,_).
 su_control(stel,'in-het-werk-stel').
 su_control(tracht,_).
 su_control(vermijd,_).
