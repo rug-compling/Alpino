@@ -29,6 +29,14 @@ modifier_transformation(r(obcomp,p(cp)),Ds0,r(obcomp,p(cp)),Ds,_) :-
     DU1 = tree(r(dp,NPCAT),NPBODY),
     Ds = [CMP,tree(r(body,NPCAT),NPBODY)].   
 
+modifier_transformation(r(TOP,p(du)),Ds0,r(TOP,Cat),Ds,_) :-
+    Tag = tree(r(tag,p(ppart)),TagDs),
+    lists:select(Tag,Ds0,[Nucl]),
+    Nucl = tree(r(nucl,Cat),Ds),
+    Anders = tree(r(mod,adt_lex(ap,anders,_,_,_)),[]),
+    lists:select(Anders,TagDs,[Gezegd]),
+    Gezegd = tree(r(hd,adt_lex(ppart,zeg,_,_,_)),[]).
+
 %% mijnheer de voorzitter => voorzitter
 modifier_transformation(r(Rel,p(np)),Ds0,r(Rel,adt_lex(H1,Mijnheer,H3,H4,H5)),[],_) :-
     Hd = tree(r(hd,adt_lex(H1,Mijnheer,H3,H4,H5)),[]),
@@ -179,6 +187,8 @@ partitive(Ds0) :-
         AdHd = tree(r(hd,adt_lex(_,van,_,_,_)),[])
     ;   Hd = tree(r(hd,adt_lex(_,elk,_,_,_)),[]),
         AdHd = tree(r(hd,adt_lex(_,van,_,_,_)),[])
+    ;   Hd = tree(r(hd,adt_lex(_,veel,_,_,_)),[]),
+        AdHd = tree(r(hd,adt_lex(_,van,_,_,_)),[])
     ).
 
 np(tree(r(_Rel,Cat),_Ds)):-
@@ -204,6 +214,10 @@ important_mod_stem(fout,_).
 important_mod_stem(goed,_).
 important_mod_stem(hier,_).
 important_mod_stem(hoe,_).   % ik vraag me af hoe eerlijk ze zijn -> *ik vraag me af eerlijk ze zijn
+important_mod_stem(hoeveel,_).   % ik vraag me af hoeveel gemakkelijker ...
+important_mod_stem(hoelaat,_).   
+important_mod_stem(hoelang,_).   
+important_mod_stem(hoeveelste,_).   
 important_mod_stem(incoherent,_).
 important_mod_stem(negatief,_).
 important_mod_stem(positief,_).
@@ -256,6 +270,10 @@ ignore_modifier(tree(r(mod,adt_lex(_,W,_,Pos,Atts)),[]),[r(_,p(MCat))|_],Hd) :-
 
 ignore_modifier(tree(r(mod,adt_lex(_,W,_,Pos,Atts)),[]),[r(_,i(_,p(MCat)))|_],Hd) :-
     ignore_modifier_stem(W,Pos,Atts,MCat,Hd).
+
+ignore_modifier_pattern(mod=dt(conj,[crd=en,
+				     cnj=meer,
+				     cnj=meer]),_,_).
 
 ignore_modifier_pattern(mod=dt(advp,
 			       [hd=wel,
