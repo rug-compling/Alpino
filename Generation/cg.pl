@@ -133,7 +133,7 @@ generate_one(Obj,Sem0,TopRobust) :-
 	format(user_error,"No feature-structures for root '~w'~n",[R]),
 	fail
     ),
-    process_agenda(Agenda),
+    process_agenda(Agenda,Sem),
     extract_and_score_sentences(Fs,BitcodeAll,Obj,Str,UseFluency,SortedResults,TopRobust),
     member(_-o(Obj,Str),SortedResults),
     debug_message(1,"generated: ~w~n",[Str]).
@@ -363,26 +363,26 @@ prepare_adt_and_lex(CombinedAdt,Fs,BcAll,Robust) :-
 % Main generator %
 %%%%%%%%%%%%%%%%%%
 
-process_agenda([]).
-process_agenda([Edge|Edges]) :-
+process_agenda([],_).
+process_agenda([Edge|Edges],Sem) :-
     (   terms:cyclic_term(Edge)
     ->  debug_message(1,"cyclic term detected (ignored)~n",[]),
 	Edges = NewEdges
-    ;   next_step(Edge,Edges,NewEdges)
+    ;   next_step(Edge,Edges,NewEdges,Sem)
     ),
-    process_agenda(NewEdges).
+    process_agenda(NewEdges,Sem).
 
 %% Process the next edge:
 %%
 %% - Pack the edge if possible, otherwise
 %% - find interactions with the chart and grammar rules.
-next_step(Edge0,Edges,NewEdges) :-
+next_step(Edge0,Edges,NewEdges,Sem) :-
     freeze_edge(Edge0,EdgeFrozen),
     (   pack_edge(Edge0,EdgeFrozen)
     ->  Edges=NewEdges
     ;   number_inactive_edge(Edge0,Edge1),
         inactive_edge_history(Edge1,Edge),
-        findall(NewEdge,gen_edge(Edge,NewEdge),NewEdges,Edges),
+        findall(NewEdge,gen_edge(Edge,NewEdge,Sem),NewEdges,Edges),
         put_on_chart(EdgeFrozen,Edge)
     ).
 
@@ -400,9 +400,9 @@ inactive_edge_history(inactive_edge(SynSem,Bitcode,His,Count),
     assert_history(Count,His).
 inactive_edge_history(E,E).
 
-gen_edge(inactive_edge(Cat,Bc,N),NewEdge) :-
-    rule_invocation(inactive_edge(Cat,Bc,N),NewEdge).
-gen_edge(Edge,NewEdge) :-
+gen_edge(inactive_edge(Cat,Bc,N),NewEdge,Sem) :-
+    rule_invocation(inactive_edge(Cat,Bc,N),NewEdge,Sem).
+gen_edge(Edge,NewEdge,_) :-
     dot_movement(Edge,NewEdge).
 
 %% For all the signs that appear in the input bag, create inactive edges.
@@ -416,10 +416,11 @@ initial_item(inactive_edge(SynSem,0,gap(ID))) :-
     alpino_genrules:gap(ID,SynSem).
 
 %% Initialize active edges from inactive edges.
-rule_invocation(inactive_edge(OldMother,Bitcode,N),EDGE) :-
+rule_invocation(inactive_edge(OldMother,Bitcode,N),EDGE,Sem) :-
     %% The mother of an inactive edge is the head daugther of the
     %% rules that we are interested in.
     alpino_genrules:headed_grammar_rule(OldMother,Id,Mother,Rest),
+    rule_condition(Id,Sem),
     %% Since we already know the head daughter, we can make a tree node for
     %% the daughter representing the head.
     substitute(OldMother,Rest,N,UDaughters),
@@ -1304,6 +1305,22 @@ generic_transform_rule(tree(r(Rel,i(I,adt_lex(A,B,C,D,E0))),[]),
 		       tree(r(Rel,i(I,adt_lex(A,B,C,D,[stype=imparative|E]))),[])) :-
     select(stype=topic_drop,E0,E).
 
+generic_transform_rule(tree(RelCat,Ds0),tree(RelCat,[Hd,LD|Ds])) :-
+    LD0=tree(r(ld,adt_lex(advp,ER,_,_,_)),[]),
+    lists:select(LD0,Ds0,Ds1),
+    lists:member(ER,[er,daar,hier,waar]),
+    Hd0=tree(r(hd,adt_lex(HdCat,VOER_DOOR,_,verb,Atts)),[]),
+    lists:select(Hd0,Ds1,Ds),
+    atom_concat(VOER,DOOR,VOER_DOOR),
+    atom_concat('_',PREP,DOOR),
+    lists:member(PREP,[af,door,tussen,heen,uit,vandoor,in,vandaan,vanaf]),
+    Hd=tree(r(hd,adt_lex(HdCat,VOER,VOER,verb,Atts)),[]),
+    LD = tree(r(ld,p(pp)),[tree(r(hd,adt_lex(pp,PREP,PREP,prep,[])),[]),
+			   tree(r(obj1,adt_lex(advp,ER,ER,adv,[])),[])]).
+	    
+	    
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Combine MWU nodes to a single node %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1506,3 +1523,74 @@ find_missing_p(Ind=s(Var,Ds),Ps0,Ps) :-
 	Var = none, Ds = []
     ;   Ps0 = Ps
     ).
+
+%% rule_condition(Id,ADT)
+rule_condition(vp_c_rootbar_c_v,ADT) :-
+    !,
+    has_rel(ADT,dlink),
+    !.
+rule_condition(vp_c_whq_c_v,ADT) :-
+    !,
+    mod_has_root(ADT),
+    !.
+rule_condition(vp_v_komma_arg(np_heavy),ADT) :-
+    !,
+    has_cat(ADT,whrel),
+    !.
+rule_condition(vp_v_komma_arg(pred_heavy),ADT) :-
+    !,
+    rel_has_cat(ADT,predc,whrel),
+    !.
+rule_condition(vp_v_extra,ADT) :-
+    !,
+    has_rel(ADT,obcomp),
+    !.
+rule_condition(vp_v_m_extra,ADT) :-
+    !,
+    has_cat(ADT,rel),
+    !.
+rule_condition(vp_v_m_extra_vp,ADT) :-
+    !,
+    rel_has_cat(ADT,mod,oti),
+    !.
+      
+rule_condition(_,_).
+
+has_rel(tree(r(Rel,_),_),Rel).
+has_rel(tree(_,Ds),R) :-
+    lists:member(D,Ds),
+    has_rel(D,R).
+
+rel_has_cat(tree(r(Rel,p(Cat)),_),Rel,Cat).
+rel_has_cat(tree(r(Rel,i(_,p(Cat))),_),Rel,Cat).
+rel_has_cat(tree(_,Ds),Rel,Cat) :-
+    lists:member(D,Ds),
+    rel_has_cat(D,Rel,Cat).
+
+has_cat(tree(r(_,p(Cat)),_),Cat).
+has_cat(tree(r(_,i(_,p(Cat))),_),Cat).
+has_cat(tree(_,Ds),R) :-
+    lists:member(D,Ds),
+    has_cat(D,R).
+
+mod_has_root(tree(r(mod,Cat),_)) :-
+    root(Cat).
+mod_has_root(tree(_,Ds)) :-
+    lists:member(D,Ds),
+    mod_has_root(D).
+
+root(p(smain)).
+root(p(sv1)).
+root(p(whq)).
+root(i(_,X)):-
+    root(X).
+
+%%%para Na Nice zullen we verder onze gedachten kunnen laten gaan over een juridische verankering
+%%%      Histories: 21289
+%%%  Active edges: 28845
+%%%Inactive edges: 18367
+%%% =>
+%%%  Active edges: 25563
+%%%  Active edges: 22281
+%%%  Active edges: 17577
+%%%  Active edges: 12461
