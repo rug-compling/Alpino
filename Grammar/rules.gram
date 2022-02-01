@@ -9683,7 +9683,12 @@ start_coord_struct_all(Name,ConjDt,M,XP,Dts,Clist) :-
     Clist:etc <=> ETC,
     conjunction_cat(Name,M0,CnjType,ETC),
     slash_edeps(M0),
-    CnjType => ~ncj,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	CnjType => ~ncj	%% only flat conjunctions in parsing   A and B and C [A,B,C]
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+                        %% but generate also [A and B] and C ;  A and [ B and C ] if input is like that
+    ),
+
     M0:dt:crd <=> ConjDt,
     M0:dt:cat ==> conj,
     initialize_dt([cnj,crd],M),
