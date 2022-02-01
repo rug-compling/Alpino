@@ -4681,3 +4681,58 @@ replace_spaces([H0|T0],[H|T]) :-
     ;   H0  = H
     ),
     replace_spaces(T0,T).
+
+%% as in Build/decl.pl
+generate_with_dt_stem(with_dt(_,Dt),Stem) :-
+    roots_from_dt(Dt,Roots0,[]),
+    sort_not_unique(Roots0,Roots1),
+    %% Daniel: Any chance of having duplicates? 
+    %% GJ: Would it matter?
+    %% GJ: YES. If a sentence contains "was" twice, then lookup
+    %% is attempted of "was" once, which is slow (and perhaps could
+    %% even succeed...
+    hdrug_util:concat_all(Roots1,Stem,' ').
+
+%% Extract roots from a with_dt frame.
+%% GJ: added cases for ix(..)
+%%     changed order of 2 and 3 argument, to be standard DCG ordering
+roots_from_dt(dt(_,Ds),Roots0,Roots) :-
+    roots_from_dt_ds(Ds,Roots0,Roots).
+roots_from_dt(_=R,Roots0,Roots) :-
+    roots_from_dt(R,Roots0,Roots).
+roots_from_dt(l(Root,_,_,_,_),Roots0,Roots):-
+    roots_from_l(Root,Roots0,Roots).
+roots_from_dt(l(Root,_,_,_),Roots0,Roots):-
+    roots_from_l(Root,Roots0,Roots).
+roots_from_dt(orig(_),Roots,Roots).
+roots_from_dt(ix(_),Roots,Roots).
+roots_from_dt(ix(_,B),Roots0,Roots) :-
+    roots_from_dt(B,Roots0,Roots).
+
+%roots_from_dt(l(Root,_,_,_),[Root|Roots],Roots).
+%roots_from_dt(l(Root,_,_,_,_),[Root|Roots],Roots).
+
+roots_from_l(v_root(Root,_),L0,L) :-
+    !,
+    L0 = [Root|L].
+roots_from_l(Root,[Root|Roots],Roots).
+
+roots_from_dt_ds([],Roots,Roots).
+roots_from_dt_ds([H|T],Roots0,Roots) :-
+    roots_from_dt(H,Roots0,Roots1),
+    roots_from_dt_ds(T,Roots1,Roots).
+
+sort_not_unique(List,Sorted) :-
+    add_vals(List,KeyList),
+    keysort(KeyList,SortedKeyList),
+    del_vals(SortedKeyList,Sorted).
+
+add_vals([],[]).
+add_vals([H|T0],[H-_|T]) :-
+    add_vals(T0,T).
+
+%% keys with args swappen. Have first arg indexing.
+del_vals([],[]).
+del_vals([H-_|T0],[H|T]) :-
+    del_vals(T0,T).
+
