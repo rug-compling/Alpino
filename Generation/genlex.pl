@@ -242,11 +242,18 @@ construct_with_dts(Pairs0,Pdt) :-
 	construct_with_dts_aux(Roots,Codes,Pdt),
 	fail
     ;   true
-    ).	
+    ).
+
+
 
 find_matching_with_dt([Root-Code|Pairs0],[Root|Roots],[Code|Codes]) :-
     alpino_lex:with_dt_all(Root,List),
     find_matching_with_dt_aux(List,Pairs0,Roots,Codes).
+find_matching_with_dt([Root-Code|Pairs0],[Root|Roots],[Code|Codes]) :-
+    alpino_paraphrase:add_lex(RootConcat,_,with_dt(_,_)),
+    alpino_util:split_atom(RootConcat," ",Atoms),
+    lists:append(_,[Root|Roots],Atoms),
+    find_matching_with_dt_aux(Roots,Pairs0,Roots,Codes).
 find_matching_with_dt([_|Pairs],Roots,Codes) :-
     find_matching_with_dt(Pairs,Roots,Codes).
 
@@ -399,6 +406,9 @@ dict_entry_with_dt(Root,Frame,SurfaceAtom) :-
     alpino_lex:lexicon(Frame,Root0,SurfaceList,[],_),
     simplify_lemma(Root0,Root).
 
+dict_entry_with_dt(Root,with_dt(A,B),SurfaceAtom) :-
+    alpino_paraphrase:add_lex(Root,SurfaceAtom,with_dt(A,B)).
+
 %%% hack
 filter_adj_end(Root,End) :-
     adj_end_v_amb(Root),
@@ -489,7 +499,7 @@ pos2frames(Root,Sense,Pos,Attr,Frames) :-
     unknown_root_heuristics(Frames2,Frames3,Root,Sense,Pos,Attr),
     last_resort_heuristics(Frames3,Frames4,Root,Sense,Pos,Attr),
 %    added_paraphrase_heuristics(Frames4,Frames5,Root,Sense,Pos,Attr),
-    prefer_best_words_in_frames(Frames4,Frames5),
+    prefer_best_words_in_frames(Root,Frames4,Frames5),
     added_paraphrase_heuristics(Frames5,Frames,Root,Sense,Pos,Attr).   % add later, so are not removed
 
 pos2frames_aux(Root,Sense,Pos,Attr,Frame,Surfs) :-
@@ -1278,9 +1288,14 @@ apply_check(infl_adj(Adj),Dt,Path) :-
 apply_check(mod_pp(Prep),Dt,_Path) :-
     Dt:mod <=> List,
     member(El,List),
-    (   root(El,Prep0), Prep0 == Prep
-    ;   El:cnj <=> [_|_]
-    ).
+    has_prep(El,Prep).
+
+has_prep(El,Prep) :-
+    root(El,Prep0),
+    prep(Prep,Prep0).
+has_prep(El,Prep) :-
+    El:cnj <=> [H|_],
+    has_prep(H,Prep).
 
 illegal_infl_adj(e,_Dt,Path) :-
     sentential_mod(Path).
@@ -1482,25 +1497,29 @@ unknown_root_heuristics([],Frames,Root,Sense,Pos,Attr) :-
     sort(Frames0,Frames).
 
 :- initialize_flag(prefer_best_words,on).
-prefer_best_words_in_frames(In,Out) :-
+prefer_best_words_in_frames(Root,In,Out) :-
     hdrug_flag(prefer_best_words,OnOff),
-    prefer_best_words_in_frames(OnOff,In,Out).
+    prefer_best_words_in_frames(OnOff,Root,In,Out).
 
-prefer_best_words_in_frames(off,X,X).
-prefer_best_words_in_frames(on,In,Out) :-
-    prefer_best_words_in_frames_(In,Out).
+prefer_best_words_in_frames(off,_,X,X).
+prefer_best_words_in_frames(on,Root,In,Out) :-
+    prefer_best_words_in_frames_(Root,In,Out).
 
-prefer_best_words_in_frames_([],[]).
-prefer_best_words_in_frames_([Frame-Surfs0|Frames0],[Frame-Surfs|Frames]):-
-    prefer_best_words(Surfs0,Surfs),
-    prefer_best_words_in_frames_(Frames0,Frames).
+prefer_best_words_in_frames_(_,[],[]).
+prefer_best_words_in_frames_(Root,[Frame-Surfs0|Frames0],[Frame-Surfs|Frames]):-
+    prefer_best_words(Root,Surfs0,Surfs),
+    prefer_best_words_in_frames_(Root,Frames0,Frames).
 
-% prefer_best
-% mwu will always be dis-prefered over single words
-prefer_best_words(Surfs0,[Word|Surfs]) :-
-    score_words(Surfs0,Surfs1),
-    keysort(Surfs1,[F0-Word|Surfs2]),
-    filter_best(Surfs2,F0,Surfs).
+%%% prefer_best
+%%% mwu will always be dis-prefered over single words
+
+prefer_best_words(Root,Surfs0,[Word|Surfs]) :-
+    (   Surfs0 = [_]
+    ->  Surfs0 = [Word],Surfs = []
+    ;   score_words(Root,Surfs0,Surfs1),
+	keysort(Surfs1,[F0-Word|Surfs2]),
+	filter_best(Surfs2,F0,Surfs)
+    ).
 
 filter_best([],_,[]).
 filter_best([Score-W|Ws],F,Result) :-
@@ -1510,10 +1529,16 @@ filter_best([Score-W|Ws],F,Result) :-
     ;   Result=[]
     ).
 
-score_words([],[]).
-score_words([W|Ws],[F-W|Ws1]) :-
-    alpino_ngram_lm:unigram_fluency([W],F),
-    score_words(Ws,Ws1).
+score_words(_,[],[]).
+score_words(Root,[W|Ws],[F-W|Ws1]) :-
+    alpino_ngram_lm:unigram_fluency([W],F0),
+    subtract_if_para(Root,W,F0,F),
+    score_words(Root,Ws,Ws1).
+
+subtract_if_para(Root,W,F0,F) :-
+    alpino_paraphrase:add_lex(Root,W,_),!,
+    F is F0 - 0.1.
+subtract_if_para(_,_,F,F).
 
 unknown_root_heuristic(Pos,{RootList},Root,Atts,Pos,Surfs) :-
     !,
