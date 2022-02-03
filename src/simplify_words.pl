@@ -8,6 +8,10 @@ words_transformation(r(Rel,p(Cat0)),Ds0,r(Rel,p(Cat)),Ds) :-
     simplify(Old,New,Cat0,Cat,D0,D,E0,E,Ds1),
     adapt_det(Ds1,Ds).
 
+%% constructief en (of, maar) positief => positief en (of, maar) positief => positief
+words_transformation(r(Rel,p(conj)),Ds0,r(Rel,Cat),D) :-
+    CRD = tree(r(crd,_),_),
+    lists:select(CRD,Ds0,[tree(r(cnj,Cat),D),tree(r(cnj,Cat),D)]).
 
 words_transformation(r(Rel,p(Cat)),Ds0,
 		     r(Rel,p(Cat)),[Hd,VC|Ds]) :-
@@ -379,7 +383,7 @@ simplify(autonoom,zelfstandig,Cat,Cat,D,D,E,E,_).
 simplify(behels,houd_in,Cat,Cat,D,D,E,E,_).
 simplify(behoedzaam,voorzichtig,Cat,Cat,D,D,E,E,_).
 simplify(bemachtig,krijg,Cat,Cat,D,D,E,E,_).
-simplify(bemiddeling_procedure,procedure,Cat,Cat,D,D,E,E,_).
+simplify(bemiddeling_procedure,bemiddeling,Cat,Cat,D,D,E,E,_).
 simplify(bijgevolg,daarom,advp,pp,adv,prep,_,[],_).
 simplify(blijkens,volgens,Cat,Cat,D,D,E,E,_).
 simplify(bonafide,betrouwbaar,Cat,Cat,D,D,E,E,_).	% oh brother where art thou
@@ -392,7 +396,7 @@ simplify(concretiseer,verduidelijk,Cat,Cat,D,D,E,E,_).
 simplify(concretisering,verduidelijking,Cat,Cat,D,D,E,E,_).
 simplify(confirmeer,bevestig,Cat,Cat,D,D,E,E,_).
 simplify(conform,volgens,Cat,Cat,D,D,E,E,_).
-simplify(constructief,bruikbaar,Cat,Cat,D,D,E,E,_).
+simplify(constructief,positief,Cat,Cat,D,D,E,E,_).
 simplify(consulteer,raadpleeg,Cat,Cat,D,D,E,E,_).
 simplify(continueer,zet_voort,Cat,Cat,D,D,E,E,_).
 simplify(continuïteit,voortgang,Cat,Cat,D,D,E,E,_).
@@ -415,7 +419,7 @@ simplify(discrepantie,verschil,Cat,Cat,D,D,E,E,_).
 simplify(discutabel,twijfelachtig,Cat,Cat,D,D,E,E,_).
 simplify(dissertatie,proefschrift,Cat,Cat,D,D,E,E,_).
 simplify(dogmatisch,star,Cat,Cat,D,D,E,E,_).
-simplify(dominant,overheers,ap,ppres,D,D,E,E,_).
+simplify(dominant,overheersen,Cat,Cat,D,D,E,E,_).
 simplify(donatie,schenking,Cat,Cat,D,D,E,E,_).
 simplify(doneer,schenk,Cat,Cat,D,D,E,E,_).
 simplify(doorgaans,meestal,Cat,Cat,D,D,E,E,_).
@@ -612,7 +616,11 @@ simplify_det(deze,{[deze,dit]}).
 simplify_det(die,{[die,dat]}).
 simplify_det(dit,{[deze,dit]}).
 simplify_det(het,{[de,het]}).
-
+simplify_det(hetzelfde,{[dezelfde,hetzelfde]}).
+simplify_det(dezelfde,{[dezelfde,hetzelfde]}).
+simplify_det(diezelfde,{[datzelfde,diezelfde]}).
+simplify_det(datzelfde,{[datzelfde,diezelfde]}).
+simplify_det(ditzelfde,{[ditzelfde,diezelfde]}).
 
 
 np(X) :-

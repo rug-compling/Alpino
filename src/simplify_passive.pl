@@ -546,6 +546,7 @@ su_control(wens,_).
 su_control_in_pp(doe,'doe-aan').
 su_control_in_pp(pleit,'pleit-voor').
 su_control_in_pp(richt,'richt-op').
+su_control_in_pp(werk,'werk-aan').
 su_control_in_pp(zet_aan,'zet_aan-tot').
 
 %% must replace something...

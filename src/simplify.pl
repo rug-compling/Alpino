@@ -167,6 +167,11 @@ GRAMMAR:
 
 DONE Het is geen geheim dat Van Miert en mezelf een grotere samenhang hadden gewild .
 
+?
+
+het wil er bij mij niet in dat ...
+frame: mod_pp(bij)
+maar mod is hier verlicht. Echter, er is al een pc (er in)...
 
 
 */
