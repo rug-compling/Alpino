@@ -2841,6 +2841,7 @@ never_compound_part_sc(air).
 never_compound_part_sc(al).
 never_compound_part_sc(ama).
 never_compound_part_sc(an).
+never_compound_part_sc(anw).
 never_compound_part_sc(app).
 never_compound_part_sc(are).
 never_compound_part_sc(aren).
