@@ -4,6 +4,8 @@
     m/3,
     a/4.
 
+%%%% TODO: verbal adjectives should have v_root(,) stems!
+
 m(Stem,Tag,Surf) :-
     a(Forms,Adv,Subcat,Suffixes),
     candidate_stem(Stem0,Forms),
@@ -29263,6 +29265,13 @@ a([ge_e(overhaaste),
 
 a([ge_e(overhandigde),
    ge_no_e(overhandigd)],adv,[],[]).
+
+a([stem(overheersen),
+   end(overheersend),
+   ende(overheersende),
+   er(overheersender),
+   ere(overheersendere)
+  ],padv,[],[]).
 
 a([ge_e(overheerste),
    ge_no_e(overheerst)],adv,[],[]).

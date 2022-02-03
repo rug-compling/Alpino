@@ -80,6 +80,7 @@ survives_trigram(alles,_,noun(het,mass,sg),of,_,conj(of),niets,_,meas_mod_noun(h
 surviving_word(_):-
     fail.
 
+surviving_root('aantal een').
 surviving_root('high tech').      % temp
 surviving_root('naar schatting').
 surviving_root('om het even').
