@@ -62,12 +62,6 @@ create_lex_daughters([Hd|Tl],Path) :-
     create_lex(Hd,Path),
     create_lex_daughters(Tl,Path).
 
-/*
-create_frames(Root,Sense,Pos,Attrs,Bc,Dt,SimpleDt,REL) :-
-    pos2frames(Root,Sense,Pos,Attrs,FramesSurfs0),
-    create_frames(FramesSurfs0,Root,Bc,Dt,SimpleDt,REL).
-*/
-
 create_frames(FramesSurfs0,Root,Bc,Dt,SimpleDt,REL) :-
     filter_frames(FramesSurfs0,[Fr|FramesSurfs],Dt,SimpleDt,REL),
     !,
@@ -78,8 +72,9 @@ create_frames(FramesSurfs,Root,Bc,Dt,SimpleDt,_REL) :-
 
 filter_frames([],[],_,_,_).
 filter_frames([Frame-Surfs|T],N,Dt,SimpleDt,REL) :-
-    
-    (   check_conditions(Frame,Dt,SimpleDt,REL)
+    (   check_parse_only(Surfs,Frame)
+    ->  N = T2
+    ;   check_conditions(Frame,Dt,SimpleDt,REL)
     ->  N = [Frame-Surfs|T2]
     ;   N = T2
     ),
@@ -89,6 +84,12 @@ assert_lex([],_,_,_,_).
 assert_lex([Frame-Surfs|Tail],Label,Bitcode,Dt,SimpleDt) :-
     assertz(alpino_cg:lex(Frame,Label,Bitcode,Dt,SimpleDt,Surfs)),
     assert_lex(Tail,Label,Bitcode,Dt,SimpleDt).
+
+check_parse_only(List,Frame) :-
+    lists:member(Root,List),
+    check_parse_only_root(Root,Frame).
+
+check_parse_only_root(wezen,verb(zijn,inf,_)).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 % Particle introduction %
@@ -137,19 +138,6 @@ reassert_lex_bitcode(Frame,Root,Bitcode,Dt,SimpleDt,NewBitcode) :-
     clause(alpino_cg:lex(Frame,Root,Bitcode,Dt,SimpleDt,Surfs),_,Ref),
     erase(Ref),
     assertz(alpino_cg:lex(Frame,Root,NewBitcode,Dt,SimpleDt,Surfs)).
-
-
-/*
-frames_particle_lengths([],[]).
-frames_particle_lengths([Frame|FrameTail],[Length|LengthTail]) :-
-    particles_of_frame(Frame,Particles),
-    length(Particles,Length),
-    frames_particle_lengths(FrameTail,LengthTail).
-
-particles_of_frame(Frame,Particles) :-
-    alpino_postags:postag_of_frame(Frame,_,Attrs),
-    attr_particles(Attrs,Particles).
-*/
 
 assert_particles_lex([],Bc,Bc).
 assert_particles_lex([Particle|RestParticles],Bc,FinalBc) :-
@@ -280,43 +268,6 @@ construct_with_dts_aux(CatRoots,Bcs,Pdt) :-
 	    WithDts),
     merge_bc_list(Bcs,Bc),
     assert_with_dts(WithDts,Bc,Pdt).
-
-/*
-construct_with_dts(Roots0,Pdt) :-
-    findall(R,potential_with_dt_root(Roots0,R), Roots),
-    findall([W1,W2|T],sublist([W1,W2|T],Roots),SubLists),
-    construct_with_dts_aux(SubLists,Pdt).
-
-construct_with_dts_aux([],_).
-construct_with_dts_aux([Roots|T],Pdt) :-
-    findall(Root,member(Root-_,Roots),CatRoots0),
-    sort_not_unique(CatRoots0,CatRoots),
-    concat_all(CatRoots,Stem,' '),
-    findall(dict_entry(Stem,with_dt(Frame,Dt),Surface),
-    	    dict_entry_with_dt(Stem,with_dt(Frame,Dt),Surface),
-
-	    WithDts),
-    findall(Bitcode,member(_-Bitcode,Roots),Bcs),
-    merge_bc_list(Bcs,Bc),
-    assert_with_dts(WithDts,Bc,Pdt),
-    construct_with_dts_aux(T,Pdt).
-
-sort_not_unique(List,Sorted) :-
-    add_vals(List,KeyList),
-    keysort(KeyList,SortedKeyList),
-    del_vals(SortedKeyList,Sorted).
-
-add_vals([],[]).
-add_vals([H|T0],[H-_|T]) :-
-    add_vals(T0,T).
-
-%% keys with args swappen. Have first arg indexing.
-del_vals([],[]).
-del_vals([H-_|T0],[H|T]) :-
-    del_vals(T0,T).
-
-
-*/
 
 assert_with_dts([],_,_).
 assert_with_dts([dict_entry(Label,Frame,Surface)|T],Bc,Pdt) :-
@@ -515,13 +466,6 @@ pos2frames_aux_robust(Root,Sense,Pos,Attr,Frame,Surfs) :-
     check_attributes(CheckAttr,Attr,Pos,Frame,Root).
 
 root_mismatch_heuristics([H|T],[H|T],_,_,_,_).
-%root_mismatch_heuristics([],Frames,Lemma,_Sense,Pos,Attr) :-
-%    Pos == verb,
-%    findall(Frame-Surfs,
-%            pos2frames_aux_lemma(Lemma,Pos,Attr,Frame,Surfs),
-%            Frames),
-%    Frames = [_|_],
-%    !.
 root_mismatch_heuristics([],Frames,Lemma,_Sense,Pos,Attr) :-
     alpino_lex:lexicon(_,RealStem,[Lemma],[],_),
     atomic(RealStem),
@@ -534,14 +478,6 @@ root_mismatch_heuristics([],Frames,Lemma,_Sense,Pos,Attr) :-
     !.
 root_mismatch_heuristics([],[],_,_,_,_).
 
-%pos2frames_aux_lemma(Lemma,Pos,Attr,Frame,Surfs) :-
-%    un_is_verb_lemma(Lemma,Root),
-%    debug_message(2,"assuming root '~w' is specified as lemma '~w' in ADT~n",
-%		  [Root,Lemma]),    
-%    pos2frames_aux(Root,_,Pos,Attr,Frame,Surfs).
-
- 
-
 tag_mismatch_heuristics([H|T],[H|T],_,_,_,_).
 tag_mismatch_heuristics([],Frames,Root,Sense,Pos,Attr) :-
     (   Pos == prefix
@@ -553,8 +489,7 @@ tag_mismatch_heuristics([],Frames,Root,Sense,Pos,Attr) :-
 	    \+ Attr = [_|_]
 	->  Frames = [noun(both,both,both)-[Sense]|Frames0]
 	;   Frames = Frames0
-	)
-    
+	)    
     ).
 
 check_attributes(CheckAtts,Atts,Pos,Frame,Root) :-
@@ -955,7 +890,7 @@ condition_fixed_el({List},Cond) :-
 condition_fixed_el({[acc,dat]},np_np).
 condition_fixed_el({[dat,acc]},np_np).
 condition_fixed_el(vp,dt(vc)).
-condition_fixed_el(extra_obj_vp(_,_),dt(vc)).
+%%condition_fixed_el(extra_obj_vp(_,_),dt(vc)).  no, the vc is within the pc
 condition_fixed_el(pc(Prep),pc(Prep)).
 condition_fixed_el(er_pp(Prep),pc(Prep)).
 condition_fixed_el(er_pp(Prep,_),pc(Prep)).

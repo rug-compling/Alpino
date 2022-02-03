@@ -463,7 +463,7 @@ dot_movement_aux(_IMother,IBitcode,INum,AMother,ABitcode,AId,
     construct_edge(AMother,NewBitcode,AId,[INum|PDtrs],UDtrs,EDGE).
 
 construct_edge(Mother,Bitcode,Id,PDtrs0,UDtrs0,EDGE) :-
-    \+ \+ check_part_of_dt(Mother),
+    \+ \+ check_part_of_dt(Id,Mother),
     skip_head(UDtrs0,PDtrs0,UDtrs,PDtrs),
     active_inactive(UDtrs,Bitcode,Id,Mother,PDtrs,EDGE).
 
@@ -866,7 +866,7 @@ lex_or_punct(Tag,Label,Bitcode,Dt,Dt2,Surfs) :-
 %% these checks are crucial to keep the number
 %% of edges small
 
-check_part_of_dt(Mother) :-
+check_part_of_dt(_,Mother) :-
     (   alpino_data:dt(Mother,Dt)
     ->  (   var(Dt)  % e.g. rule imp, imp_imp
         ->  true
@@ -934,7 +934,7 @@ dt_check_percolation_f([H|T],Att,Dt):-
     dt_check_percolation(H,Att,Dt),
     dt_check_percolation_f(T,Att,Dt).
 
-%% Val must unify with a member of Dt:(vc|body)*:Att
+%% Val must unify with a member of Dt:(vc|body)*:Att  also tag
 dt_check_percolation(Val,Att,Dt) :-
     hdrug_feature:e(Att,Dt,List),
     member(Val,List).
@@ -947,6 +947,10 @@ dt_check_percolation(Val,Att,Dt) :-
     hdrug_feature:e(cnj,Dt,List),
     member(BODY,List), % typically in each cnj..
     dt_check_percolation(Val,Att,BODY).
+
+dt_check_percolation(Val,Att,Dt) :-
+    hdrug_feature:e(tag,Dt,Tag),
+    dt_check_percolation(Val,Att,Tag).
 
 dt_check_percolation(Val,Att,Dt) :-
     hdrug_feature:e(cmp,Dt,COMP),
@@ -1584,13 +1588,3 @@ root(p(sv1)).
 root(p(whq)).
 root(i(_,X)):-
     root(X).
-
-%%%para Na Nice zullen we verder onze gedachten kunnen laten gaan over een juridische verankering
-%%%      Histories: 21289
-%%%  Active edges: 28845
-%%%Inactive edges: 18367
-%%% =>
-%%%  Active edges: 25563
-%%%  Active edges: 22281
-%%%  Active edges: 17577
-%%%  Active edges: 12461
