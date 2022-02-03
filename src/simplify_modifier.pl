@@ -37,11 +37,11 @@ modifier_transformation(r(TOP,p(du)),Ds0,r(TOP,Cat),Ds,_) :-
     lists:select(Anders,TagDs,[Gezegd]),
     Gezegd = tree(r(hd,adt_lex(ppart,zeg,_,_,_)),[]).
 
-%% mijnheer de voorzitter => voorzitter
+%% mijnheer de voorzitter => mijnheer
 modifier_transformation(r(Rel,p(np)),Ds0,r(Rel,adt_lex(H1,Mijnheer,H3,H4,H5)),[],_) :-
     Hd = tree(r(hd,adt_lex(H1,Mijnheer,H3,H4,H5)),[]),
     lists:select(Hd,Ds0,Ds1),
-    lists:member(Mijnheer,[mijnheer,meneer,mevrouw]),
+    lemma_in(Mijnheer,[mijnheer,meneer,mevrouw]),
     App = tree(r(app,p(np)),DeVz),
     lists:select(App,Ds1,[]),
     De = tree(r(det,adt_lex(_,de,_,_,_)),[]),
@@ -57,7 +57,6 @@ modifier_transformation(r(Rel,p(du)),Ds0,r(Rel,Cat),Ds,_) :-
     lists:select(Tag,Ds1,[]),
     me_dunkt_ds(TagDs0).
 
-%% het begrip industrialisering --> industrialisering
 %% de voorzitter Carel Jansen -> Carel Jansen
 %% voorzitter Jansen -> Jansen
 %% het jaar 1990 -> 1990
@@ -66,20 +65,20 @@ modifier_transformation(r(Rel,_),Ds0,r(Rel,AppCat),AppDs,_) :-
     lists:select(Hd,Ds0,Ds1),
     App = tree(r(app,AppCat0),AppDs),
     lists:select(App,Ds1,Ds2),
-    (   AppCat0 = adt_lex(_,_,_,name,_), 
+    (   is_name(AppCat0,AppDs),
         check_app_name(Rel,AppCat0,AppCat)
-    ;   AppCat0 = p(mwu(_,_)), AppCat0 = AppCat
-    ;   HdLex = adt_lex(_,B,_,noun,_),
-     	lists:member(B,[begrip,term,uitdrukking,woord]),
+    ;   HdLex = adt_lex(_,Begrip,_,_,_),
+	lemma_in(Begrip,[begrip,woord]),
+	AppCat0 = adt_lex(np,_,_,_,_),
 	AppCat0 = AppCat
     ;   HdLex = adt_lex(_,B,_,noun,_),
-     	lists:member(B,[jaar]),
+     	lemma_in(B,[jaar]),
 	AppCat0 = adt_lex(_,N,_,num,_),
 	AppCat = adt_lex(_,N,_,noun,[neclass=year]),
 	alpino_lex:date_year([N],[])
     ),
     (   Ds2 = [tree(r(det,adt_lex(_,De,_,_,_)),[])],
-	lists:member(De,[de,het])
+	lemma_in(De,[de,het])
     ;   Ds2 = []
     ).
 
@@ -92,10 +91,33 @@ modifier_transformation(r(Rel,_),Ds0,r(Rel,AppCat),AppDs,_) :-
     lists:select(App,Ds1,Ds2),
     np(App),
     HdLex = adt_lex(_,B,_,noun,_),
-    lists:member(B,[maand]),
+    lemma_in(B,[maand]),
     (   Ds2 = [tree(r(det,adt_lex(_,De,_,_,_)),[])],
-	lists:member(De,[de,het])
+	lemma_in(De,[de,het])
     ;   Ds2 = []
+    ).
+
+modifier_transformation(r(Rel,p(np)),Ds0,r(Rel,p(np)),[Hd|Ds2],_) :-
+    Hd = tree(r(hd,HdLex),HdDs),
+    lists:select(Hd,Ds0,Ds1),
+    is_name(HdLex,HdDs),
+    App = tree(r(app,_),_),
+    lists:select(App,Ds1,Ds2).
+
+modifier_transformation(r(Rel,p(np)),Ds0,r(Rel,p(np)),Ds,_) :-
+    App = tree(r(app,_),AppDs),
+    lists:select(App,Ds0,Ds),
+    Det = tree(r(det,_),_),
+    (   lists:member(Det,AppDs)
+    ;   Cnj = tree(r(cnj,_),CnjDs),
+	lists:member(Cnj,AppDs),
+	lists:member(Det,CnjDs)
+    ;   Hd = tree(r(hd,adt_lex(_,AppHdLex,_,_,_)),[]),
+	lists:member(Hd,AppDs),
+	lemma_in(AppHdLex,[die,één])
+    ;   lists:member(tree(r(mod,p(mwu('met name',_))),_),AppDs)
+    ;   lists:member(tree(r(hd,adt_lex(_,Wij,_,_,_)),[]),Ds0),
+	lemma_in(Wij,[wij])
     ).
 
 %% de realisering van de verbouwing --> de verbouwing
@@ -103,7 +125,7 @@ modifier_transformation(r(Rel,p(np)),Ds0,r(Rel,NPCat),Ds,_) :-
     De = tree(r(det,adt_lex(_,de,_,_,_)),[]),
     Hd = tree(r(hd, adt_lex(_,V,_,_,_)),[]),
     lists:select(Hd,Ds0,Ds1),
-    lists:member(V,[kwestie,vraagstuk,verwezenlijking,realisering]),
+    lemma_in(V,[kwestie,vraagstuk,verwezenlijking,realisering]),
     lists:select(De, Ds1, Ds2),
     Mod = tree(r(mod,p(pp)),PPDs0),
     lists:select(Mod,Ds2,[]),
@@ -118,7 +140,7 @@ modifier_transformation(r(Rel,p(np)),Ds0,r(Rel,NPCat),Ds,_) :-
 modifier_transformation(r(Rel,p(np)),Ds0,r(Rel,NPCat),Ds,_) :-
     Hd = tree(r(hd, adt_lex(_,V,_,_,_)),[]),
     lists:select(Hd,Ds0,Ds1),
-    lists:member(V,[tal]), 
+    lemma_in(V,[tal]), 
     Mod = tree(r(mod,p(pp)),PPDs0),
     lists:select(Mod,Ds1,[]), 
     Van = tree(r(hd,adt_lex(_,van,_,_,_)),[]),
@@ -226,7 +248,7 @@ important_mod_stem(te,adv).   % als prep can be ignored "ten vroegste"
 important_mod_stem(vaag,_).
 important_mod_stem(verkeerd,_).
 
-
+%% alleen, alleen maar, slechts?
 negatief_element(amper).
 negatief_element(evenmin).
 negatief_element(geen).
@@ -250,7 +272,7 @@ important_mod(adt_lex(_,_,_,num,Atts),_,_) :-
     lists:member(numtype=rang,Atts).
 important_mod(adt_lex(_,Lem,_,adj,Atts),_,_) :-
     lists:member(aform=compar,Atts),
-    \+ lists:member(Lem,[eerder,laat,nader,ver]).
+    \+ lemma_in(Lem,[eerder,laat,nader,ver]).
 important_mod(adt_lex(_,_,_,adj,Atts),_,_) :-
     lists:member(aform=super,Atts).
 important_mod(adt_lex(_,_,_,adj,Atts),_,_) :-
@@ -336,6 +358,18 @@ ignore_modifier_pattern(mod=dt(pp,
 			       obj1=dt(np,
 				       [det=l(_,_,_),
 					hd=context])]),_,_).
+
+ignore_modifier_pattern(mod=dt(pp,
+			      [hd=naar,
+			       obj1=dt(np,
+				       [det=mijn,
+					hd=idee])]),_,_).
+
+ignore_modifier_pattern(mod=dt(pp,
+			      [hd=naar,
+			       obj1=dt(np,
+				       [det=mijn,
+					hd=smaak])]),_,_).
 
 ignore_modifier_pattern(mod=dt(advp,
 			       [hd=eens,
@@ -535,7 +569,7 @@ ignore_modifier_stem(zojuist,_,_,_,_).
 important_modifier_pattern(mod=dt(mwu(_,_),[mwp=dan,mwp=ook])).
 
 important_modifier(_,adt_lex(_,Die,_,_,_),[],[r(obj1,p(np)),r(_,p(pp))|_],[]) :-
-    lists:member(Die,[die,dat]).
+    lemma_in(Die,[die,dat]).
 important_modifier(Tree,_,_,_,_) :-
     important_modifier_pattern(Pattern),
     match_pattern(Pattern,Tree).
@@ -549,7 +583,8 @@ important_modifier(tree(_Cat,Ds),Hd,HdDs,_,_) :-
 %% met geen mogelijkheid
 important_modifier(tree(r(mod,p(pp)),Ds),_,_,_,_) :-
     lists:member(tree(r(obj1,_),ObjDs),Ds),
-    lists:member(tree(r(det,adt_lex(_,geen,_,_,_)),[]),ObjDs).
+    lists:member(tree(r(det,adt_lex(_,Geen,_,_,_)),[]),ObjDs),
+    lemma_in(Geen,[geen]).
 important_modifier(tree(r(mod,p(rel)),_),_,_,[r('--',p(np))|_],_).
 important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,er,_,_,_),[],_,_).   % clefts, er zijn er die problemen hebben
 important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,het,_,_,_),[],_,_).  % clefts, het zijn schurken die dat doen
@@ -642,10 +677,6 @@ modifier_rel(Rel,i(X,P)) :-
 
 modifier_rel(predm,_).
 modifier_rel(mod,_).
-modifier_rel(app,Cat) :-
-    Cat \= adt_lex(_,_,_,name,_),
-    Cat \= adt_lex(_,_,_,num,_),
-    Cat \= p(mwu(_,_)).
 
 me_dunkt_ds(TagDs) :-
     Hd = tree(r(hd,adt_lex(_,Denk,_,_,_)),[]),
@@ -662,6 +693,8 @@ me_dunkt(geloof,ik).
 me_dunkt(lijk,me).
 me_dunkt(lijk,mij).
 
+%% meneer X , ik begrijp u niet  ==>
+%% X , ik begrijp u niet (only if X is a PER)
 check_app_name(tag,adt_lex(A,B,C,D,Atts0),Result) :-
     lists:select(neclass=Val,Atts0,Atts),
     Val \= 'PER',
@@ -671,3 +704,18 @@ check_app_name(_,L,L).
 
 adv_adj(alleen).
 adv_adj(onmiddellijk).
+
+is_name(adt_lex(_,_,_,name,_),_).
+is_name(_,Ds) :-
+    lists:member(tree(r(mwp,Cat),MwpDs),Ds),
+    is_name(Cat,MwpDs).
+is_name(_,Ds) :-
+    lists:member(tree(r(cnj,Cat),MwpDs),Ds),
+    is_name(Cat,MwpDs).
+
+lemma_in({Lemma},List):-
+    !,
+    lists:member(L,Lemma),
+    lists:member(L,List).
+lemma_in(Lemma,List) :-
+    lists:member(Lemma,List).
