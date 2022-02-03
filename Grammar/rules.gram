@@ -2977,6 +2977,7 @@ grammar_rule(sv1_dip_sv1_ligg,VP,[COMMAL,DIP,COMMAR,V]) :-
     sv1_dip_sv1_structure(V,DIP,VP,LQ).
 
 grammar_rule(sv1_dip_sv1_haak,VP,[COMMAL,DIP,OptQm, COMMAR,V]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     COMMAL => punct,
     COMMAL:puncttype => haak_open,
     COMMAR => punct,
@@ -3113,6 +3114,7 @@ grammar_rule(vp_dip_vp_ligg2,VP1,[COMMAL,Sv1,COMMAR,OPTQL,V]) :-
     vp_dip_vp_structure(V,Sv1,VP1,LQ).
 
 grammar_rule(vp_dip_vp_haak,VP1,[QR,COMMAL,Sv1,OptQm,COMMAR,OPTQL,V]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     qr(QR),
     optql(OPTQL),
     COMMAL => punct,
@@ -3125,6 +3127,7 @@ grammar_rule(vp_dip_vp_haak,VP1,[QR,COMMAL,Sv1,OptQm,COMMAR,OPTQL,V]) :-
     vp_dip_vp_structure(V,Sv1,VP1,LQ).
 
 grammar_rule(vp_dip_vp_haak2,VP1,[COMMAL,Sv1,OptQm,COMMAR,OPTQL,V]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     optql(OPTQL),
     COMMAL => punct,
     COMMAL:puncttype => haak_open,
@@ -4312,6 +4315,7 @@ np_n_structure(NP,N) :-
     NP0:subn => ~sub_def_adj & ~sub_indef_adj,       % cf np_adjn,
     NP0:case => ~gen,
     N:hdet => no,
+    N:has_app2 <=> NP:has_app2,
     N:bmeas <=> NP:bmeas,
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 
@@ -4561,6 +4565,9 @@ grammar_rule(np_n_napp_app, NP, [ APP_N, N ]) :-
     N:agr => def,  % reduce spurious ambiguities "Mevrouw Sanders"
     N:e_deps => [],
     N:pred => npred,
+    NP:has_app2 => yes,
+    N:has_app2 => no,
+    N:has_app => no,
     NP:subn => sub_noun,
     N:subn => (sub_noun;sub_name),
     hd_app_structure(APP_N,N,NP).
@@ -5331,10 +5338,15 @@ grammar_rule(n_n_modnp(komma), N, [ N0, Cl, NP, OPTCr ]) :-
 
 n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr) :-
     np_np_modnp_structure(N0,NP,N),
-    NP:cj => ~no_crd,	% improved HACK reduce ambiguities in pn, pn, .. seqs
-    N0:cj => ~no_crd,	% improved HACK reduce ambiguities in pn, pn, .. seqs
-    N:has_app => yes, % ,,
-    NP:has_app => no, % ,,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	NP:cj => ~no_crd, % improved HACK reduce ambiguities in pn, pn, .. seqs
+	N0:cj => ~no_crd, % improved HACK reduce ambiguities in pn, pn, .. seqs
+	N:has_app => yes, % ,,
+	NP:has_app => no, % ,,
+	N0:has_app2 => no
+    %%    N:has_app2 => yes,
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     NP:subn => ~sub_indef_adj,
     NP:wkpro => ~weakpro, % ?? 29 jan 2020
     optcomma(OPTCr),
@@ -5352,10 +5364,13 @@ grammar_rule(pn_n_modpn(komma), N, [ N0, Cl, NP, OPTCr ]) :-
     N:nform => norm,
     N0:redrel => no,
     N0:wkpro => ~weakpro,
-    NP:cj => ncj,	% improved HACK reduce ambiguities in pn, pn, .. seqs
-    N0:cj => ncj,	% improved HACK reduce ambiguities in pn, pn, .. seqs
-    N:has_app => yes, % ,,
-    N0:has_app => no, % ,,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	NP:cj => ncj, % improved HACK reduce ambiguities in pn, pn, .. seqs
+	N0:cj => ncj, % improved HACK reduce ambiguities in pn, pn, .. seqs
+	N:has_app => yes,	% ,,
+	N0:has_app => no	% ,,
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     optcomma(OPTCr),
     Cl => punct, 
     Cl:puncttype => komma,
@@ -6012,18 +6027,17 @@ grammar_rule(adv_adv_modroot(haak), Adv, [ Adv0, Cl, ROOT, OptQm, Cr ]) :-
     Adv => adv,
     Adv0 => adv,
     Adv:modifies_v => yes,
-%    Adv:sel => to_topic,
     Adv:subadv => ~subadv_adj,
     hd_mod_structure(Adv0,ROOT,Adv).
 
 grammar_rule(adv_adv_modroot(min), Adv, [ Adv0, Cl, ROOT, Cr ]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     Cl => punct, Cr => punct,
     Cl:puncttype => ligg_streep, Cr:puncttype => ligg_streep,
     ROOT => start,
     Adv => adv,
     Adv0 => adv,
     Adv:modifies_v => yes,
-%    Adv:sel => to_topic,
     Adv:subadv => ~subadv_adj,
     hd_mod_structure(Adv0,ROOT,Adv).
 
@@ -8158,6 +8172,7 @@ grammar_rule(start_comp, TOP, [ COMP1, PUNCT ]) :-
 %% top_cat --> start Punc
 %% Bla bla bla . ( FOTO ANP )
 grammar_rule(top_start_anp, TOP, [ START, PUNCT, OPEN, START2, CLOSE, P2 ]):-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     OPEN => punct, OPEN:puncttype => haak_open,
     CLOSE => punct, CLOSE:puncttype => haak_sluit,
     end_punct(PUNCT,Type),
