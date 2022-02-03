@@ -192,7 +192,7 @@ cat_type(sv1,     [iexs,imexs,subj,haswh,slash,tense,cj,sv1_mod,tags,can_be_max]
 cat_type(imp,     [cj,tags]).
 cat_type(dip,     []).
 cat_type(n,       [wh,wh_reltmploc,case,meas,subn,bmeas,hdet,exs,mexs,haspre,
-                   neclass,can_mod,
+                   neclass,can_mod,has_app2,
                    pn,agr,e_agr,lex,nform,e_deps,pred,rightm,cj,hstem,amount]).
 cat_type(app_n,             [agr,bmeas,meas,amount,nform,e_agr,can_mod]).
 cat_type(app_n_app,         [agr,bmeas,meas,amount,nform,e_agr,can_mod]).
@@ -209,7 +209,7 @@ cat_type(pn,      [lex,neclass,agr,cj]).
 cat_type(np,      [agr,e_agr,prs,case,wh,wh_reltmploc,meas,nform,parg,
                    wkpro,redrel,can_mod,hdet,
                    neclass,cleft_has_rel,allows_drop,
-                   sel,exs,mexs,e_deps,passivizes,subn,has_app,pred,
+                   sel,exs,mexs,e_deps,passivizes,subn,has_app,has_app2,pred,
                    hstem,bmeas,cj]).
 cat_type(pron,    [agr,prs,hstem,
                    case,wh,wh_reltmploc,nform,parg,wkpro,subn,exs]).
