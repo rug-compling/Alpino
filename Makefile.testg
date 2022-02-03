@@ -166,7 +166,7 @@ compare_field:
          | sed -e 's/^$(pat)#//'\
          | $($(prefix)filter)\
          | awk -F\| '{ print $$ $(field), $$1 }' >$(L2) ;\
-        echo "  NEW   PREV  (GTM %)                            ITEM !/?                   SUITE";\
+        echo "  NEW   PREV  (GTM %)                            ITEM DELTA                 SUITE";\
         paste $(L1) $(L2) |\
           awk 'BEGIN {I=1}                                                  \
                      { if (NF==4 && $$2 == $$4) {                           \
