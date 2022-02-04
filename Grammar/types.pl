@@ -317,6 +317,8 @@ type(dt,
       attrs,                    % input/output attributes for generation
       num,                      % number input/output for generation
       stype,                    % type of sentence for generation
+      dropped_agr,              % number of dropped topic
+      dropped_prs,              % person of dropped topic
 
       app,			% apposition
       body,			% rompzin
