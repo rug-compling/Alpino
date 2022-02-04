@@ -627,7 +627,7 @@ deptree_xml(Cat,String,Comments,Meta,Flag,Tags,HisList) -->
 %% version 1.6: parser tag for number of categories and skips; attribute 'his' for words
 %% currently, parser tag and his attribute only for output
 %% version 1.7: dscsense dscmanual attributes
-:- initialize_flag(alpino_ds_version,'1.6').
+:- initialize_flag(alpino_ds_version,'1.14').
 :- initialize_flag(xml_format_header,on).
 
 deptree_xml_start -->
