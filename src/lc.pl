@@ -759,6 +759,7 @@ goal_fas(Goals):-
     sort(Goals0,Goals).
 
 check_compiled_rules(Ids) :-
+    set_flag(parse_or_generate,parse),
     (   member(Id,Ids),
         \+ alpino_grammar:grammar_rule(Id,_,_),
         format(user_error,"warning: previous rule ~w not created!~n",[Id]),
@@ -767,6 +768,7 @@ check_compiled_rules(Ids) :-
     ).
 
 check_compiled_rules_g(Ids) :-
+    set_flag(parse_or_generate,generate),
     (   member(Id,Ids),
         \+ alpino_grammar:grammar_rule(Id,_,_),
         format(user_error,"warning: previous rule ~w not created!~n",[Id]),
