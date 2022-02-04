@@ -174,4 +174,9 @@ frame: mod_pp(bij)
 maar mod is hier verlicht. Echter, er is al een pc (er in)...
 
 
+ADT REPRESENTATION
+
+topic-drop: no info on person/number of dropped subject
+komt niet -> kom niet/komen niet/komt niet
+
 */

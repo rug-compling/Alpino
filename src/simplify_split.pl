@@ -494,6 +494,7 @@ swap_index_cat(i(Ix0,Cat0),Cat,Ds0,Ds,Ix,C,D) :-
     Cat = i(Ix),
     Ds = [].
 
+do_not_split_du(detp,_).
 do_not_split_du(ap,_).
 do_not_split_du(advp,_).
 do_not_split_du(ppart,_).
@@ -536,11 +537,12 @@ conj_split(tree(r(crd,adt_lex(_,en,_,_,_)),[]),_,L,L).
 
 
 
-correct_conjunct(smain, p(ssub), P, L2, L) :-
+correct_conjunct(Cat, p(ssub), P, L2, L) :-
+    lists:member(Cat,[smain,sv1]),
     !,
-    P = p(smain),
+    P = p(Cat),
     lists:select(tree(r(hd,adt_lex(ssub,X1,X2,X3,X4)),[]),L2,L3),
-    L = [tree(r(hd,adt_lex(smain,X1,X2,X3,X4)),[])|L3].
+    L = [tree(r(hd,adt_lex(Cat,X1,X2,X3,X4)),[])|L3].
 correct_conjunct(_,P2,P,L2,L):-
     correct_conjunct(P2,P,L2,L),
     !.
