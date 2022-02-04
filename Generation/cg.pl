@@ -934,7 +934,7 @@ dt_check_percolation_f([H|T],Att,Dt):-
     dt_check_percolation(H,Att,Dt),
     dt_check_percolation_f(T,Att,Dt).
 
-%% Val must unify with a member of Dt:(vc|body)*:Att  also tag
+%% Val must unify with a member of Dt:(vc|body)*:Att  also tag and nucl
 dt_check_percolation(Val,Att,Dt) :-
     hdrug_feature:e(Att,Dt,List),
     member(Val,List).
@@ -950,6 +950,10 @@ dt_check_percolation(Val,Att,Dt) :-
 
 dt_check_percolation(Val,Att,Dt) :-
     hdrug_feature:e(tag,Dt,Tag),
+    dt_check_percolation(Val,Att,Tag).
+
+dt_check_percolation(Val,Att,Dt) :-
+    hdrug_feature:e(nucl,Dt,Tag),
     dt_check_percolation(Val,Att,Tag).
 
 dt_check_percolation(Val,Att,Dt) :-
@@ -1301,14 +1305,16 @@ generic_transform_ds([H0|T0],[H|T]):-
 %% topic_drop is currently not allowed for generation (explicitly
 %% ruled out in the grammar), so we'll try to generate a ynquestion
 %% or imparative instead (which should be pretty close).
-generic_transform_rule(tree(r(Rel,adt_lex(A,B,C,D,E0)),[]),
-		       tree(r(Rel,adt_lex(A,B,C,D,[stype=imparative|E])),[])) :-
-    select(stype=topic_drop,E0,E).
+% generic_transform_rule(tree(r(Rel,adt_lex(A,B,C,D,E0)),[]),
+% 		       tree(r(Rel,adt_lex(A,B,C,D,[stype=imparative|E])),[])) :-
+%     select(stype=topic_drop,E0,E).
 
-generic_transform_rule(tree(r(Rel,i(I,adt_lex(A,B,C,D,E0))),[]),
-		       tree(r(Rel,i(I,adt_lex(A,B,C,D,[stype=imparative|E]))),[])) :-
-    select(stype=topic_drop,E0,E).
+% generic_transform_rule(tree(r(Rel,i(I,adt_lex(A,B,C,D,E0))),[]),
+% 		       tree(r(Rel,i(I,adt_lex(A,B,C,D,[stype=imparative|E]))),[])) :-
+%     select(stype=topic_drop,E0,E).
 
+%% ik moet [ld er] wel doorvaren
+%% = ik moet wel [ld er door] varen
 generic_transform_rule(tree(RelCat,Ds0),tree(RelCat,[Hd,LD|Ds])) :-
     LD0=tree(r(ld,adt_lex(advp,ER,_,_,_)),[]),
     lists:select(LD0,Ds0,Ds1),

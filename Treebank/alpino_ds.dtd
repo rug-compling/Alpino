@@ -3,6 +3,8 @@
 <!-- Alpino Dependency Structures DTD -->
 
 <!--
+Versie 1.14 dropped_prs, dropped_agr
+
 Versie 1.13 mwu_sense and mwu_root are gone, no longer used
 
 Versie 1.12 per 16 september 2020
@@ -286,6 +288,8 @@ recursion_limit CDATA			#IMPLIED
 	  personalized	CDATA	#IMPLIED
 	  rnum		CDATA	#IMPLIED
 	  stype		CDATA	#IMPLIED
+	  dropped_prs   CDATA	#IMPLIED
+	  dropped_agr	CDATA	#IMPLIED
 
 	  pb
 	  (Arg0|Arg1|Arg2|Arg3|Arg4|Arg5|ArgM-ADV|ArgM-CAU|ArgM-DIR|ArgM-DIS|
