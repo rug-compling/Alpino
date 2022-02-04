@@ -301,7 +301,8 @@ filter_attribute(Att,Val,T0,T) :-
     ;   T0 = T
     ).
 
-
+relevant_att(dropped_agr).
+relevant_att(dropped_prs).
 relevant_att(rnum).
 relevant_att(stype).
 relevant_att(per).
@@ -362,78 +363,6 @@ bitcode_lookup_frames_adt_ds([Head|Tail],[NewHead|NewTail],N,O) :-
     bitcode_lookup_frames_adt(Head,NewHead,N,M),
     bitcode_lookup_frames_adt_ds(Tail,NewTail,M,O).
 
-%% this does not work yet for pronouns in a conjunction:
-%% paraphrase 'hij en zijn vrouw werden benaderd' => men heeft hem en zijn vrouw benaderd
-%% nope
-
-/*
-%% {}
-adapt_case_root(Pron,Rel,Root0,Sense0,Root,Sense,Attrs) :-
-    (   adapt_case_root_(Pron,Rel,Root0,Sense0,Root1,Sense1,Attrs)
-    ->  Sense1 = Sense, Root1 = Root
-    ;   Sense0 = Sense, Root0 = Root
-    ).
-
-adapt_case_root_(pron,Rel,Root0,Root0,Root,Root,Attrs) :-
-    non_nominative(Rel),
-    pers_pronoun1(Root0,Root,Attrs).
-
-adapt_case_root_(pron,Rel,Root0,Root0,Root,Root,Attrs) :-
-    nominative(Rel),
-    pers_pronoun2(Root0,Root,Attrs).
-
-nominative(su).
-
-non_nominative(obj1).
-non_nominative(obj2).
-non_nominative(predc).
-
-
-list_to_root([],R,R).
-list_to_root([H|T],F,{[F,H|T]}).
-
-pers_pronoun1(Root0,Root,Attrs) :-
-    findall(Root1,pers_pronoun_pair(Root0,Root1,Attrs),List),
-    list_to_root(List,Root0,Root).
-
-pers_pronoun2(Root0,Root,Attrs) :-
-    findall(Root1,pers_pronoun_pair(Root1,Root0,Attrs),List),
-    list_to_root(List,Root0,Root).
-
-pers_pronoun_pair(ik, me, _).
-pers_pronoun_pair(ik, mij, _).
-pers_pronoun_pair(jij,jou,_).
-pers_pronoun_pair(je,jou,_).
-pers_pronoun_pair(je,je,_).
-pers_pronoun_pair(hij,hem,_).
-pers_pronoun_pair(zij,haar,Atts) :-
-    member(rnum=sg,Atts).
-pers_pronoun_pair(ze,haar,Atts) :-
-    member(rnum=sg,Atts).
-pers_pronoun_pair(wij,ons,_).
-pers_pronoun_pair(we,ons,_).
-pers_pronoun_pair(zij,hen,Atts) :-
-    member(rnum=pl,Atts).
-pers_pronoun_pair(zij,Hun,Atts) :-
-    Hun == hun,  % do not generate "hun" for "hen", but allow zij for "hun" if "hun" given
-    member(rnum=pl,Atts).
-pers_pronoun_pair(ze,hen,Atts) :-
-    member(rnum=pl,Atts).
-pers_pronoun_pair(ze,Hun,Atts) :-
-    Hun == hun,  % do not generate "hun" for "hen", but allow ze for "hun" if "hun" given
-    member(rnum=pl,Atts).
-pers_pronoun_pair(ze,ze,Atts) :-
-    member(rnum=pl,Atts).
-%% don't use singular ze for accusative,
-%% even if the grammar allows it (the grammar
-%% allows it in order to parse Flemish input)
-pers_pronoun_pair(Ze0,Ze1,Atts) :-
-    member(rnum=sg,Atts),
-    (   var(Ze0)
-    ->  Ze1 == ze,
-	Ze0 == ze
-    ).
-*/
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ADT to dt feature structure %

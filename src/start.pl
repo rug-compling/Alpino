@@ -2875,6 +2875,22 @@ dt_extract_attribute(Dt,stype=topic_drop) :-
 dt_extract_attribute(Dt,stype=declarative) :-
     \+ alpino_data:not_declarative(Dt).
 
+dt_extract_attribute(Dt,dropped_prs=fir) :-
+    \+ alpino_data:not_topic_drop(Dt),
+    \+ alpino_data:not_dropped_fir(Dt).
+
+dt_extract_attribute(Dt,dropped_prs=thi) :-
+    \+ alpino_data:not_topic_drop(Dt),
+    \+ alpino_data:not_dropped_thi(Dt).
+
+dt_extract_attribute(Dt,dropped_agr=sg) :-
+    \+ alpino_data:not_topic_drop(Dt),
+    \+ alpino_data:not_dropped_sg(Dt).
+
+dt_extract_attribute(Dt,dropped_agr=pl) :-
+    \+ alpino_data:not_topic_drop(Dt),
+    \+ alpino_data:not_dropped_pl(Dt).
+
 %%% from adt.pl
 %%% before generation, instantiate Dt on the basis of attribute-values of Adt
 
@@ -2886,7 +2902,25 @@ dt_apply_attributes(Dt,Attributes) :-
     (   lists:member(stype=Val2,Attributes)
     ->  dt_apply_stype(Val2,Dt)
     ;   true 
+    ),
+    (   lists:member(dropped_agr=Val3,Attributes)
+    ->  dt_apply_dropped_agr(Val3,Dt)
+    ;   true
+    ),
+    (   lists:member(dropped_prs=Val4,Attributes)
+    ->  dt_apply_dropped_prs(Val4,Dt)
+    ;   true
     ).
+
+dt_apply_dropped_agr(sg,Dt) :-
+    alpino_data:dropped_sg(Dt).
+dt_apply_dropped_agr(pl,Dt) :-
+    alpino_data:dropped_pl(Dt).
+
+dt_apply_dropped_prs(fir,Dt) :-
+    alpino_data:dropped_fir(Dt).
+dt_apply_dropped_prs(thi,Dt) :-
+    alpino_data:dropped_thi(Dt).
 
 dt_apply_rnum(sg,Dt) :-
     alpino_data:dt_num(Dt,Num),

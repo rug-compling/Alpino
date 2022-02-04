@@ -566,6 +566,8 @@ ignore_input_att(H,_,_,Pos,Frame) :-
 ignore_input_att(tense,_,_).  % after paraphrasing un-passive "para er worden door schepen veel containers overboord gezet
 ignore_input_att(rnum,_,_).   % not really ignored, of course, but treated differently
 ignore_input_att(stype,_,_).  % not really ignored, of course, but treated differently
+ignore_input_att(dropped_agr,_,_). % not really ignored, of course, but treated differently
+ignore_input_att(dropped_prs,_,_). % not really ignored, of course, but treated differently
 ignore_input_att(lemma,_,_).
 ignore_input_att(per,Tag,Frame) :-
     ignore_per(Tag,Frame).
