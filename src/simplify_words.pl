@@ -363,7 +363,8 @@ simplify(adstrueer,leg_uit,Cat,Cat,D,D,E,E,_).
 simplify(affirmatief,bevestig,ap,ppres,D,D,E,E,_).
 simplify(ageer,treed_op,Cat,Cat,D,D,E,E,_).
 simplify(aldaar,daar,Cat,Cat,D,D,E,E,_).
-simplify(aldus,{[zo,volgens]},Cat,Cat,D,D,E,E,_).
+simplify(aldus,zo,advp,advp,D,D,E,E,_).
+simplify(aldus,volgens,pp,pp,D,D,E,E,_).
 simplify(alloceer,wijs_toe,Cat,Cat,D,D,E,E,_).
 simplify(alom,overal,Cat,Cat,D,D,E,E,_).
 simplify(alternatief,ander,ap,ap,D,D,_,[aform=compar],_).

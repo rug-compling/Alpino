@@ -6,6 +6,12 @@ modifier_transformation(r(Rel,p(du)),[D1,D2],r(Rel,p(du)),[DN,D2],_) :-
     DN = tree(r(dp,adt_lex(ap,Lem,Alleen,adj,Atts)),[]),
     adv_adj(Alleen).
 
+%% correction niet alleen
+modifier_transformation(r(dp,p(advp)),[D1,D2],r(dp,p(ap)),[DN,D2],_) :-
+    D1 = tree(r(hd,adt_lex(advp,Lem,Alleen,adv,Atts)),[]),
+    DN = tree(r(hd,adt_lex(ap,Lem,Alleen,adj,Atts)),[]),
+    adv_adj(Alleen).
+
 %% use hd as context if available
 modifier_transformation(Cat,Ds0,Cat,Ds,Ctxt) :-
     lists:member(tree(r(hd,adt_lex(_,Hd,_,_,_)),[]),Ds0),
@@ -60,13 +66,14 @@ modifier_transformation(r(Rel,p(du)),Ds0,r(Rel,Cat),Ds,_) :-
 %% de voorzitter Carel Jansen -> Carel Jansen
 %% voorzitter Jansen -> Jansen
 %% het jaar 1990 -> 1990
-modifier_transformation(r(Rel,_),Ds0,r(Rel,AppCat),AppDs,_) :-
+modifier_transformation(r(Rel,_),Ds0,r(Rel,AppCat),AppDs,Ctxt) :-
     Hd = tree(r(hd,HdLex),_),
     lists:select(Hd,Ds0,Ds1),
     App = tree(r(app,AppCat0),AppDs),
     lists:select(App,Ds1,Ds2),
     (   is_name(AppCat0,AppDs),
-        check_app_name(Rel,AppCat0,AppCat)
+        check_app_name(Rel,AppCat0,AppCat),
+	\+ Ctxt = [r(obj1,_),r(predc,p(pp))|_] % predc [van type X] =/= prec [van X]
     ;   HdLex = adt_lex(_,Begrip,_,_,_),
 	lemma_in(Begrip,[begrip,woord]),
 	AppCat0 = adt_lex(np,_,_,_,_),
@@ -223,6 +230,8 @@ np(tree(r(_,p(conj)),Ds)):-
 simple_np(p(np)).
 simple_np(adt_lex(np,_,_,_,_)).
 
+important_mod_stem(aldus,_,geschied,_).
+important_mod_stem(zo,_,geschied,_).
 
 important_mod_stem(Lem,_) :-
     negatief_element(Lem).
@@ -278,7 +287,12 @@ important_mod(adt_lex(_,_,_,adj,Atts),_,_) :-
 important_mod(adt_lex(_,_,_,adj,Atts),_,_) :-
     lists:member(iets=true,Atts).
 important_mod(adt_lex(_,Stem,_,Pos,_),_,_):-
-    important_mod_stem(Stem,Pos).
+    lemma(Stem,Stem2),
+    important_mod_stem(Stem2,Pos).
+important_mod(adt_lex(_,Stem,_,Pos,_),adt_lex(_,Stem2,_,Pos2,_),_):-
+    lemma(Stem,StemA),
+    lemma(Stem2,Stem2A),
+    important_mod_stem(StemA,Pos,Stem2A,Pos2).
 
 ignore_modifier(tree(r(Rel,i(_,Cat)),Ds),Ctxt,Hd) :-
     ignore_modifier(tree(r(Rel,Cat),Ds),Ctxt,Hd).
@@ -719,3 +733,8 @@ lemma_in({Lemma},List):-
     lists:member(L,List).
 lemma_in(Lemma,List) :-
     lists:member(Lemma,List).
+
+lemma({Lemma},Lem) :-
+    !,
+    lists:member(Lem,Lemma).
+lemma(L,L).
