@@ -2359,7 +2359,7 @@ grammar_rule(imp_part_imp,Imp, [Vmain0, Part, call(put_val(IDENTIFIER,VSLASH)), 
 % %% zeg ik niet
 % %% heeft niemand last van
 grammar_rule(topic_drop,ROOT,[EmptyTopic,Ques]) :-
-    hdrug_util:hdrug_flag(parse_or_generate,parse),
+%    hdrug_util:hdrug_flag(parse_or_generate,parse),
     EmptyTopic => etopic,
     Ques:iexs => [],
     Ques:imexs => [],
@@ -2380,7 +2380,10 @@ grammar_rule(topic_drop,ROOT,[EmptyTopic,Ques]) :-
     ROOT => max,
     ROOT:max_type => t_topic_drop,
     ROOT:sv1 => yes,
+    ROOT:dt:dropped_agr <=> Topic:agr,
+    ROOT:dt:dropped_prs <=> Topic:prs,
     ROOT:dt:stype => topic_drop,
+    
 %    ROOT:puncttype => ~vraag,   % vindt u niet erg ?
 %    unify_mods(Ques),
     projected_hd_filler_structure(Ques,Topic,ROOT,sv1).
@@ -2388,7 +2391,7 @@ grammar_rule(topic_drop,ROOT,[EmptyTopic,Ques]) :-
 %% element.
 
 grammar_rule(etopic,EmptyTopic,[]) :-
-    hdrug_util:hdrug_flag(parse_or_generate,parse),
+%    hdrug_util:hdrug_flag(parse_or_generate,parse),
     structure,
     EmptyTopic => etopic.
 
@@ -5398,6 +5401,7 @@ grammar_rule(n_n_modnp(dubb_punt), N, [ N0, Cl, NP, OPTCr ]) :-
     Cl => punct,
     Cl:puncttype => dubb_punt,
     optcomma(OPTCr),
+    N0:has_app2 => no,
     np_np_modnp_structure(N0,NP,N).
 
 np_np_modnp_structure(N0,NP,N) :-
@@ -7641,11 +7645,14 @@ grammar_rule(adv_pp_dp,MAX,[ADV,COMMA,XP]) :-
     MAX:max_type => t_dp,
     max_advp(ADV),
     ADV:wk => no,
-    ADV:tmploc => ~loc & ~tmp & ~wk_er & ~str_er,   % cf adv_adv_pps...
-    %%    ADV:subadv => ~subadv_adj,         % cf a_a_pps...
-    %%    vaak onder de allerarmsten
-    %%    dikwijls zonder jas
-    ADV:redrel => no,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	ADV:tmploc => ~loc & ~tmp & ~wk_er & ~str_er, % cf adv_adv_pps...
+	%%    ADV:subadv => ~subadv_adj,         % cf a_a_pps...
+	%%    vaak onder de allerarmsten
+	%%    dikwijls zonder jas
+	ADV:redrel => no
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     max_pp(XP),
     dp_dp_structure(ADV,XP,MAX).
 
@@ -8140,7 +8147,7 @@ grammar_rule(top_start_g2,TOP,[START,PUNCT]) :-
     START:dt:stype => whquestion,
     hd_structure(START,TOP),
     Type => vraag.
-grammar_rule(top_start_g3,TOP,[START,PUNCT]) :-
+grammar_rule(top_start_g3(ID),TOP,[START,PUNCT]) :-
     hdrug_util:hdrug_flag(parse_or_generate,generate),
     end_punct(PUNCT,Type),
     TOP => top_cat,
@@ -8149,12 +8156,15 @@ grammar_rule(top_start_g3,TOP,[START,PUNCT]) :-
     START:dt:stype => ynquestion,
     hd_structure(START,TOP),
     (   START:dt:hwrd:lexical ==> laat,
-	Type => punt
+	Type => punt,
+	ID=laat
     ;   START:dt:hwrd => [],
-	Type => vraag
+	Type => vraag,
+	ID=vraag
     ;   START:dt:hwrd:lexical <=> X,
 	dif(X,laat),
-	Type => vraag
+	Type => vraag,
+	ID=vraag2
     ).
 
 %% ze vroeg: En?
@@ -10128,7 +10138,7 @@ coord_daughter_paths(L,M) :-
     %% removed redrel: "Dat zal afhangen van wat je gebruikt en de behoeften van de gebruiker"
     Paths = [vform,aform,nform,wh,app,tpart,amount,exs,cleft,
              compar_form,vslash,relform,ld_pc,me_adj,adj_can_postv,
-             modifies_a,slash,sc,parts,pro_deps,e_deps,pred,
+             modifies_a,slash,sc,parts,pro_deps,e_deps,pred,has_app2,
              % question,
 	     % pp_er, %% in de schaatswereld en daarbuiten werd fel gespeculeerd
              allows_root_imp,
@@ -10252,7 +10262,10 @@ conjunction_cat(num,M,_,ETC) :-
 
 conjunction_cat(max,M,Crd,ETC) :-
     ETC => no,
-    Crd => one_crd,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	Crd => one_crd
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     M => max,
     M:max_type => t_part.
 
@@ -10274,19 +10287,28 @@ conjunction_cat(sv1,M,Crd,ETC) :-
 
 conjunction_cat(imp,M,Crd,ETC) :-
     ETC => no,
-    Crd => one_crd,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	Crd => one_crd
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     max_imp(M).
 
 %% zowel binnen als buiten ..
 conjunction_cat(prep,M,Crd,ETC) :-
     ETC => no,
-    Crd => ~no_crd,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	Crd => ~no_crd
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     M => p,
     M:pp_role /=> pp_pobj1.  % 2nd phase: "Zelf heb ik er problemen mee , maar aan [ commentaren te lezen ]
 
 conjunction_cat(part,M,Crd,ETC) :-
     ETC => no,
-    Crd => ~no_crd,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	Crd => ~no_crd
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     M => part.
 
 % vform fin: "omdat ik hem moet en zal hebben"
@@ -10322,13 +10344,19 @@ conjunction_cat(vb,M,Crd,ETC) :-
 
 conjunction_cat(adv,M,Crd,ETC) :-
     ETC => no,
-    Crd => ~no_crd,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	Crd => ~no_crd
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     M => adv,
     M:wk => no,
     M:tmploc => ~wk_er & ~str_er.
 
 conjunction_cat(root,M,Crd,_) :-
-    Crd => one_crd,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	Crd => one_crd
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     max_root(M0),
     unify_except(M0,M,mods),
     M:tags => [],
@@ -10336,13 +10364,19 @@ conjunction_cat(root,M,Crd,_) :-
 
 conjunction_cat(a,M,Crd,ETC) :-
     ETC => no,
-    Crd => ~no_crd,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	Crd => ~no_crd
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     M => a,
     M:aform => ~only_n. % problems in case of etc, due to ccat0=/=ccat
 
 conjunction_cat(pp,M,Crd,ETC) :-
     ETC => no,
-    Crd => ~no_crd,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	Crd => ~no_crd
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     M => pp,
     M:slash => [],
     M:nnform => ~refl.
@@ -10354,7 +10388,10 @@ conjunction_cat(np,Np,_,_) :-
 
 conjunction_cat(rel,Rel,Crd,ETC) :-
     ETC => no,
-    Crd => one_crd,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	Crd => one_crd
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     Rel => rel.
 
 conjunction_cat(pred,P,_,_) :-
@@ -10363,11 +10400,17 @@ conjunction_cat(pred,P,_,_) :-
 
 conjunction_cat(pn,N,Crd,ETC) :-
     ETC => no,
-    Crd => one_crd,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	Crd => one_crd
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     N => pn.
 
 conjunction_cat(n,N,Crd,_) :-
-    Crd => (one_crd;swapped_two_crd),
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	Crd => (one_crd;swapped_two_crd)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     N => n,
     %% * de [ Nederlandse Antillen en Aruba ]
     %% * de [ Veluwe en Betuwe ]
@@ -10386,7 +10429,10 @@ conjunction_cat(n,N,Crd,_) :-
 	).
 
 conjunction_cat(sbar,S,Crd,_) :-
-    Crd => ~no_crd,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	Crd => ~no_crd
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     S => sbar,
     S:tags => [].
 
@@ -10397,7 +10443,10 @@ conjunction_cat(sbar,S,Crd,_) :-
 
 conjunction_cat(det,S,Crd,ETC) :-
     ETC => no,
-    Crd => ~no_crd,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	Crd => ~no_crd
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     S:wkpro => ~weakpro,
     S:neclass ==> none,
     S => det.
@@ -10428,18 +10477,27 @@ conjunction_cat(vc_noun,V,Crd,ETC) :-
 
 conjunction_cat(comp,V,Crd,ETC) :-
     ETC => no,
-    Crd => one_crd,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	Crd => one_crd
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     V => comp.
 
 conjunction_cat(modifier,V,Crd,_) :-
     V => modifier,
     V:mcat => ~mcat_bracket,  % also to prevent "vandaag en vooral (in Assen)"
-    Crd => ~no_crd.
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	Crd => ~no_crd
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ).
 
 conjunction_cat(enumeration,V,Crd,ETC) :-
     ETC => no,
     V => enumeration,
-    Crd => one_crd.
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	Crd => one_crd
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% COMPARATIVES %%%%%%%%

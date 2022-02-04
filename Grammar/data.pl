@@ -661,6 +661,28 @@ not_declarative(Dt) ::-
 not_topic_drop(Dt) ::-
     Dt:stype => ~topic_drop.
 
+not_dropped_fir(Dt) ::-
+    Dt:dropped_prs => ~fir.
+not_dropped_thi(Dt) ::-
+    Dt:dropped_prs => ~thi.
+
+not_dropped_sg(Dt) ::-
+    Dt:dropped_agr => ~sg.
+not_dropped_pl(Dt) ::-
+    Dt:dropped_agr => ~pl.
+
+dropped_fir(Dt) ::-
+    Dt:dropped_prs => fir.
+dropped_thi(Dt) ::-
+    Dt:dropped_prs => thi.
+
+dropped_sg(Dt) ::-
+    Dt:dropped_agr => sg.
+dropped_pl(Dt) ::-
+    Dt:dropped_agr => pl.
+
+
+
 ynquestion(Dt) ::-
     Dt:stype => ynquestion.
 whquestion(Dt) ::-
