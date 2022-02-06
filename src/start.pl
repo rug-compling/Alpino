@@ -2172,6 +2172,10 @@ hdrug_command(inactive_edges,inactive_edges,[]).
 hdrug_command_help(inactive_edges,"inactive_edges",
 	"list all generated inactive edges").
 
+hdrug_command(analyse_edges,alpino_cg:analyse_edges,[]).
+hdrug_command_help(analyse_edges,"analyse_edges",
+	"count how often inactive edges (generation) are used").
+
 %% this allows stuff like:
 %% edge deriv 2099
 %% and
@@ -3076,6 +3080,7 @@ roundtrip(Ref) :-
     veryfast_options,
     set_flag(robustness,if_required),
     set_flag(order_canonical_dt,off),
+    set_flag(robust_attr,frag),  % dt.pl; so the various dp parts of fragments are not connected with puncts
     a_sentence(Ref,_,_),
     set_flag(current_ref,Ref),
     set_flag(end_hook,best_score(adt)),
@@ -3247,9 +3252,40 @@ find_missing_frame(Frame,List,_Sent) :-
 :- initialize_flag(copy_input_if_no_transformation,off).
 
 hdrug_command(para,paraphrase,[]).
-
 hdrug_command(para,paraphrase([H|T]),[H|T]).
+hdrug_command(psen,psen(Key),[Key]).
+hdrug_command(pnext,pnext,[]).
+hdrug_command(pn,pnext,[]).
+hdrug_command(pprev,pprev,[]).
+hdrug_command(pp,pprev,[]).
+hdrug_command(pr,pcurrent,[]).
+hdrug_command_help(para,"para Sentence","to paraphrase the sentence given as argument (without sentence, paraphrase prompt)").
+hdrug_command_help(psen,"psen Key","paraphrase sentence with key Key").
+hdrug_command_help(pnext,"pnext","paraphrase next sentence").
+hdrug_command_help(pprev,"pprev","paraphrase previous sentence").
+hdrug_command_help(pr,"pr","paraphrase current sentence once more").
 
+pcurrent :-
+    hdrug_flag(current_ref,Key),
+    psen(Key).
+
+pnext :-
+    hdrug_flag(current_ref,Key0),
+    find_next_ref(Key0,Key,_),
+    psen(Key).
+
+pprev :-
+    hdrug_flag(current_ref,Key0),
+    find_prev_ref(Key0,Key,_),
+    psen(Key).
+
+psen(Key0) :-
+    a_sentence_with_map(Key0,Key,Tokens0),
+    if_gui(tcl('set pp_nr {~w}',[Key])),
+    set_flag(current_ref,Key),
+    try_hook(extern_phon(Tokens0,Tokens),Tokens0=Tokens),
+    concat_all(Tokens,Chars,' '),
+    paraphrase(Key0,Tokens,Chars).
 
 :- public paraphrase/0, paraphrase/1.
 
@@ -3260,7 +3296,8 @@ paraphrase(Tokens0) :-
 
 paraphrase(Ref,Tokens,Chars) :-
     paraphrase(Ref,Tokens,Chars,Result),
-    format("~a~n",Result).
+    format("~a~n",Result),
+    format(user_error,"orginal: ~s~n",[Chars]).
 
 paraphrase(Ref,Tokens,Chars,Result) :-
     statistics(runtime,[Start,_]),
