@@ -2118,8 +2118,11 @@ grammar_rule(vp_v_bracketed_m_extra_vp, VP, [V,OPEN,Extra,OPTPUNCT,CLOSE]) :-
 
 %% vproj --> vproj , MOD
 grammar_rule(vp_v_komma_mod, VP, [ V, COMMA, Mod ] ) :-
-    hdrug_util:hdrug_flag(parse_or_generate,parse),
     VP => vproj, V => vproj, Mod => modifier,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	Mod:mcat => mcat_sbar
+    ),
     VP:eps3 <=> V:eps3,
     VP:rightx => yes,
     VP:mf <=> V:mf,
@@ -2963,6 +2966,7 @@ grammar_rule(sv1_smain_sv1,VP,[COMMAL,MAX,COMMAR,V]) :-
     xp_dip_xp_structure(V,MAX,VP,LQ).
 
 grammar_rule(sv1_dip_sv1_q,VP,[QR,COMMAL,DIP,COMMAR,QL,V]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     optcomma(COMMAL),
     optcomma(COMMAR),
     ql(QL),
@@ -3055,6 +3059,7 @@ initialize_dt_in(Result) :-
 %% Ik denk , zei Jan , dat dit niet mogelijk is
 %% I think, John said , that this is not possible
 grammar_rule(vp_dip_vp,VP1,[QR,COMMAL,Sv1,COMMAR,OPTQL,V]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     qr(QR),
     optql(OPTQL),
     comma(COMMAL),
@@ -3071,7 +3076,17 @@ grammar_rule(vp_dip_vp1,VP1,[COMMAL,Sv1,COMMAR,OPTQL,V]) :-
     LQ => no,
     vp_dip_vp_structure(V,Sv1,VP1,LQ).
 
+grammar_rule(vp_dip_vp2,VP1,[QR,Sv1,OPTCOMMA,QL,V]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
+    qr(QR),
+    ql(QL),
+    optcomma(OPTCOMMA),
+    Sv1 => dip,
+    LQ => yes,
+    vp_dip_vp_structure(V,Sv1,VP1,LQ).
+
 grammar_rule(vp_tag_vp1,VP1,[COMMAL,TAG,COMMAR,V]) :-
+%    hdrug_util:hdrug_flag(parse_or_generate,parse),
     comma(COMMAL),
     comma(COMMAR),
     TAG => tag,
@@ -3079,19 +3094,12 @@ grammar_rule(vp_tag_vp1,VP1,[COMMAL,TAG,COMMAR,V]) :-
     vp_dip_vp_structure(V,TAG,VP1,_).
 
 grammar_rule(vp_vp1_tag,VP1,[V,COMMAL,TAG,COMMAR]) :-
+%    hdrug_util:hdrug_flag(parse_or_generate,parse),
     comma(COMMAL),
     comma(COMMAR),
     TAG => tag,
     TAG:adv => no,
     vp_dip_vp_structure(V,TAG,VP1,_).
-
-grammar_rule(vp_dip_vp2,VP1,[QR,Sv1,OPTCOMMA,QL,V]) :-
-    qr(QR),
-    ql(QL),
-    optcomma(OPTCOMMA),
-    Sv1 => dip,
-    LQ => yes,
-    vp_dip_vp_structure(V,Sv1,VP1,LQ).
 
 grammar_rule(vp_dip_vp_ligg,VP1,[QR,COMMAL,Sv1,COMMAR,OPTQL,V]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
@@ -3173,6 +3181,7 @@ grammar_rule(dip_scope_imp,ROOT,[NUCL]) :-
 %% " Zoiets zit er altijd in , als je begint .
 %% todo: limit to cases where DIP is not on the left edge
 grammar_rule(dip_scope_root_q,ROOT,[QL,NUCL,QR]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     ql(QL),
     optqr(QR),
     ROOT => root, NUCL => root,
@@ -3206,6 +3215,7 @@ grammar_rule(vp_vp_dip,VP,[V,COLON,NUCL]) :-
     VP:haspre2 => yes.
 
 grammar_rule(vp_vp_dip_q,VP,[V,COLON,QL,NUCL,OPTEND,QR]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     optend_punct(OPTEND,Type),
     ql(QL),
     qr(QR),
@@ -3221,6 +3231,7 @@ grammar_rule(vp_vp_dip_q,VP,[V,COLON,QL,NUCL,OPTEND,QR]) :-
     vp_vp_dip_structure(V1,NUCL,VP).
 
 grammar_rule(vp_vp_dip_q_nocolon,VP,[V,QL,NUCL,OPTEND,QR]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     optend_punct(OPTEND),
     ql(QL),
     qr(QR),
@@ -3237,7 +3248,7 @@ grammar_rule(vp_vp_dip_q_nocolon,VP,[V,QL,NUCL,OPTEND,QR]) :-
 %% specifically for cdb corpus, where : is often treated as sentence
 %% boundary:
 grammar_rule(vp_vp_colon,VP,[V,COLON]) :-
-    hdrug_util:hdrug_flag(parse_or_generate,parse),
+%    hdrug_util:hdrug_flag(parse_or_generate,parse),
     COLON => punct,
     COLON:puncttype => dubb_punt,
     max_np(NP),
@@ -3294,6 +3305,7 @@ grammar_rule(start_max_dip,START,[NUCL,OPTPUNCT,COMMA,TAG]) :-
 
 %% " Wie ben jij ? " , vroeg ik 
 grammar_rule(start_dq1_max_dip,START,[DQ1,NUCL,OPTPUNCT,DQ2,COMMA,TAG]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     ql(DQ1),
     qr(DQ2),
     START => max,
@@ -3307,6 +3319,7 @@ grammar_rule(start_dq1_max_dip,START,[DQ1,NUCL,OPTPUNCT,DQ2,COMMA,TAG]) :-
 
 %% " Wie ben jij ? " , vroeg ik 
 grammar_rule(start_dq2_max_dip,START,[NUCL,OPTPUNCT,DQ2,COMMA,TAG]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     qr(DQ2),
     START => max,
     START:max_type => t_dp,
@@ -3319,6 +3332,7 @@ grammar_rule(start_dq2_max_dip,START,[NUCL,OPTPUNCT,DQ2,COMMA,TAG]) :-
 
 %% ik kom , " zei hij 
 grammar_rule(start_dq3_max_dip,START,[NUCL,COMMA,DQ2,TAG]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     qr(DQ2),
     START => max,
     START:max_type => t_dp,
@@ -3329,6 +3343,7 @@ grammar_rule(start_dq3_max_dip,START,[NUCL,COMMA,DQ2,TAG]) :-
 
 %% " ik kom , " zei hij 
 grammar_rule(start_dq4_max_dip,START,[DQ1,NUCL,COMMA,DQ2,TAG]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     ql(DQ1),
     qr(DQ2),
     START => max,
@@ -3351,6 +3366,7 @@ grammar_rule(start_max_dip_no_comma,START,[NUCL,PUNCT,TAG]) :-
 
 %% " Wie ben jij ? " vroeg hij
 grammar_rule(start_dq1_max_dip_no_comma,START,[DQ1,NUCL,PUNCT,DQ2,TAG]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     ql(DQ1),
     qr(DQ2),
     START => max,
@@ -3364,6 +3380,7 @@ grammar_rule(start_dq1_max_dip_no_comma,START,[DQ1,NUCL,PUNCT,DQ2,TAG]) :-
 
 %% Wie ben jij ? " vroeg hij
 grammar_rule(start_dq2_max_dip_no_comma,START,[NUCL,PUNCT,DQ2,TAG]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     qr(DQ2),
     START => max,
     START:max_type => t_dp,
@@ -3414,6 +3431,7 @@ grammar_rule(ap_dip,MAX,[AP,DUBB,XP,OPTEND]) :-
 
 %% Lachend : " ik hou er mee op "
 grammar_rule(ap_quoted_dip,MAX,[AP,DUBB,DQ1,XP,OPTEND,DQ2]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     optend_punct(OPTEND,Type),
     MAX => start,
     % ap_arg(AP),
@@ -3426,7 +3444,6 @@ grammar_rule(ap_quoted_dip,MAX,[AP,DUBB,DQ1,XP,OPTEND,DQ2]) :-
     nucl_tag_structure(XP,AP,MAX).
 
 %% " dat is raar " zei hij " dat doet hij anders nooit "
-
 grammar_rule(start_max_dip_max,START,[START1,COMMA1,DIP,COMMA2,START2]) :-
     START => start,
     max_root(START1), START1:needs_dip => no,
@@ -3439,6 +3456,7 @@ grammar_rule(start_max_dip_max,START,[START1,COMMA1,DIP,COMMA2,START2]) :-
     nucl_tag_structure(START0,DIP,START).
 
 grammar_rule(start_max_dip_max_q,START,[QL1,START1,OPTEND1,QR1,COMMA1,DIP,COMMA2,QL2,START2,OPTEND2,QR2]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     START => start,
     max_root(START1), START1:needs_dip => no,
     max_root(START2), START2:needs_dip => no,
@@ -3456,6 +3474,7 @@ grammar_rule(start_max_dip_max_q,START,[QL1,START1,OPTEND1,QR1,COMMA1,DIP,COMMA2
     nucl_tag_structure(START0,DIP,START).
 
 grammar_rule(start_max_dip_max_q2,START,[QL1,START1,OPTEND1,QR1,COMMA1,DIP,COMMA2,QL2,START2,END]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     START => start,
     max_root(START1), START1:needs_dip => no,
     max_root(START2), START2:needs_dip => no,
@@ -3496,6 +3515,7 @@ grammar_rule(start_tag_dip_max,START,[TAG,COMMA1,DIP,COMMA2,START1] ):-
     nucl_tag_structure(START0,DIP,START).
 
 grammar_rule(start_tag_dip_max_q,START,[QL1,TAG,QR1,COMMA1,DIP,COMMA2,QL2,START1,OPTEND,QR2] ):-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     START => start,
     START1 => start,
     START0 => start,
@@ -3514,6 +3534,7 @@ grammar_rule(start_tag_dip_max_q,START,[QL1,TAG,QR1,COMMA1,DIP,COMMA2,QL2,START1
     nucl_tag_structure(START0,DIP,START).
 
 grammar_rule(start_tag_dip_max_q2,START,[QL1,TAG,QR1,COMMA1,DIP,COMMA2,QL2,START1,END] ):-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     START => start,
     START1 => start,
     START0 => start,
@@ -6511,6 +6532,7 @@ grammar_rule(sbar_want_dip,SBAR, [ Comp, COMMA1, DIP, COMMA2, ROOT ]) :-
     nucl_tag_structure(SBAR0,DIP,SBAR).
 
 grammar_rule(sbar_want_dip_q,SBAR, [ QL1,Comp,QR1,OPTCOMMA1,DIP,OPTCOMMA2,QL2,ROOT,OPTEND,QR2 ]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     optcomma(OPTCOMMA1),
     optcomma(OPTCOMMA2),
     optend_punct(OPTEND,Type),
@@ -6533,6 +6555,7 @@ grammar_rule(sbar_want_dip_q,SBAR, [ QL1,Comp,QR1,OPTCOMMA1,DIP,OPTCOMMA2,QL2,RO
     nucl_tag_structure(SBAR0,DIP,SBAR).
 
 grammar_rule(sbar_want_dip_q2,SBAR, [ QL1,Comp,QR1,OPTCOMMA1,DIP,OPTCOMMA2,QL2,ROOT,END ]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     optcomma(OPTCOMMA1),
     optcomma(OPTCOMMA2),
     end_punct(END,Type),
@@ -6800,10 +6823,10 @@ grammar_rule(sbar(vpx),SBAR,[ Comp, XP ]) :-
 %% ik kom , tenzij...
 %% ik kom , omdat :
 grammar_rule(sbar_punct,SBAR, [ Comp, DUBB ]) :-
-    hdrug_util:hdrug_flag(parse_or_generate,parse),
     Comp => comp,
     Comp:ctype => c_mod,
     Comp:wh => nwh,
+    SBAR:sel => to_right,
     SBAR => sbar,
     SBAR:slash => [],
     SBAR:tags => [],
@@ -6841,6 +6864,7 @@ grammar_rule(pp_p_arg(start1), PP, [ P, DUBB, OPTQL, XP, OPTPUNCT, OPTQR ]) :-
     optqr(OPTQR).
 
 grammar_rule(pp_p_arg(start2), PP, [ P, QL, XP, OPTPUNCT, QR ]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     XP => start,
     sbar_comp_xp_structure(P,XP,PP),
     P:ctype => c_compare_np,
@@ -7348,20 +7372,21 @@ grammar_rule(adv_zo_van_sbar_dp,MAX,[ADV,SBAR]) :-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 grammar_rule(start_start_punt_komma,M,[A,COMMA,B]) :-
-    COMMA => punct, COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep),
-    (   hdrug_util:hdrug_flag(parse_or_generate,generate),
-	COMMA:puncttype => punt_komma
-    ;   hdrug_util:hdrug_flag(parse_or_generate,parse)
-    ),
     A => start,
     B => start,
     M => start,
-    M:branch => yes,
-    A:branch => no,   % for a;b;c;d only allow a;(b;(c;d))
+    COMMA => punct, COMMA:puncttype => (punt_komma;hellip;dubb_punt;schuin_streep;punt;vraag;uitroep),
+    (   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	COMMA:puncttype => punt_komma
+    ;   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	M:branch => yes,
+	A:branch => no		% for a;b;c;d only allow a;(b;(c;d))
+    ),
     M:puncttype <=> B:puncttype,
     dp_dp_structure(A,B,M).
 
 grammar_rule(start_start_ligg_streep,M,[A,COMMA,B]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     COMMA => punct, COMMA:puncttype => ligg_streep,
     A => start,
     B => start,
@@ -7377,12 +7402,16 @@ grammar_rule(start_start_dubb_punt,M,[A,COMMA,B]) :-
     A => start,
     B => start,
     M => start,
-    M:branch => yes,
-    A:branch => no,   % for a;b;c;d only allow a;(b;(c;d))
+    (   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	M:branch => yes,
+	A:branch => no		% for a;b;c;d only allow a;(b;(c;d))
+    ),
     M:puncttype <=> B:puncttype,
     nucl_sat_structure(A,B,M).
 
 grammar_rule(start_start_dubb_punt_q,M,[A,COMMA,QL,B,QR]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     COMMA => punct, COMMA:puncttype => dubb_punt,
     ql(QL),
     qr(QR),
@@ -8277,6 +8306,14 @@ grammar_rule(top_tag_start_xp, Start, [Tag,OPTCOMMA,Max]):-
     unify_mods(Tag),
     tag_max_structure(Max,Tag,Start).
 
+grammar_rule(top_tag_start_xp, Start, [Tag,COMMA,Max]):-
+    hdrug_util:hdrug_flag(parse_or_generate,generate),
+    Tag => tag,
+    Tag:adv => no,
+    comma(COMMA),
+    unify_mods(Tag),
+    tag_max_structure(Max,Tag,Start).
+
 %% Allemachtig , moeten we dat allemaal doen?
 grammar_rule(top_adv_tag_start_sv1, Start, [Tag,COMMA,Max]):-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
@@ -8296,14 +8333,6 @@ grammar_rule(top_np_tag_start_xp, Start, [Tag,COMMA,Max]):-
     Tag:np => yes,
     COMMA => punct,
     COMMA:puncttype => (komma;dubb_punt;hellip),
-    unify_mods(Tag),
-    tag_max_structure(Max,Tag,Start).
-
-grammar_rule(top_tag_start_xp, Start, [Tag,COMMA,Max]):-
-    hdrug_util:hdrug_flag(parse_or_generate,generate),
-    Tag => tag,
-    Tag:adv => no,
-    comma(COMMA),
     unify_mods(Tag),
     tag_max_structure(Max,Tag,Start).
 
@@ -9388,6 +9417,7 @@ grammar_rule(start_coord(dipq1,root,en), M, [ QL, XP, QR, COMMA, DIP, Clist ]) :
 
 grammar_rule(start_coord(dipq,root,en), M,
              [QL,XP,QR,COMMA,DIP,COMMA2,QL2,Clist,QR2 ]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     optcomma(COMMA),
     ql(QL),
     qr(QR),
@@ -9403,6 +9433,7 @@ grammar_rule(start_coord(dipq,root,en), M,
 
 grammar_rule(start_coord(dipq2,root,en), M,
              [QL,XP,QR,COMMA,DIP,COMMA2,Clist,QR2 ]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     optcomma(COMMA),
     ql(QL),
     qr(QR),
