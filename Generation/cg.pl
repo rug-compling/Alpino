@@ -29,6 +29,13 @@
 %%		 optrel   % currently not used!
 		 ]).
 
+
+%%% TODO: robustness should not do dp-dp (punctuation is inserted)
+%%%       but something special so that no additional punctuation is inserted
+%%% [ ik verslijt hem voor ] [ zwakzinnig ]
+%%% => ik verslijt hem voor ; zwakzinnig
+%%% 
+
 %%%
 %%% FLUENCY
 %%%
@@ -583,8 +590,15 @@ add_punt_if_not([],[]).
 add_punt_if_not([H|T],Result):-
     add_punt_if_not(T,H,Result).
 
+%% hack: vp_vp_colon rule has been applied, so we get "aslkfjlskdj : ."
+add_punt_if_not(['.'],':',Rest) :-
+    !,
+    Rest = [':'].
 add_punt_if_not([],Last,[Last|Rest]):-
-    (   (   Last == '.' ;   Last == '?'  )
+    (   (   Last == '.'
+	;   Last == '?'
+	;   Last == ':'
+	)
     ->  Rest = []
     ;   Rest = ['.']
     ).
@@ -1547,6 +1561,10 @@ rule_condition(vp_v_komma_arg(np_heavy),ADT) :-
     !,
     has_cat(ADT,whrel),
     !.
+rule_condition(vp_arg_comma_v(np),ADT) :-
+    !,
+    has_cat(ADT,whrel),
+    !.
 rule_condition(vp_v_komma_arg(pred_heavy),ADT) :-
     !,
     rel_has_cat(ADT,predc,whrel),
@@ -1563,6 +1581,10 @@ rule_condition(vp_v_m_extra_vp,ADT) :-
     !,
     rel_has_cat(ADT,mod,oti),
     !.
+rule_condition(vp_v_komma_mod,ADT) :-
+    !,
+    has_cat(ADT,cp),
+    !.
       
 rule_condition(_,_).
 
@@ -1573,11 +1595,14 @@ has_rel(tree(_,Ds),R) :-
 
 rel_has_cat(tree(r(Rel,p(Cat)),_),Rel,Cat).
 rel_has_cat(tree(r(Rel,i(_,p(Cat))),_),Rel,Cat).
+rel_has_cat(tree(r(Rel,adt_lex(Cat,_,_,_,_)),_),Rel,Cat).
+rel_has_cat(tree(r(Rel,i(_,adt_lex(Cat,_,_,_,_))),_),Rel,Cat).
 rel_has_cat(tree(_,Ds),Rel,Cat) :-
     lists:member(D,Ds),
     rel_has_cat(D,Rel,Cat).
 
 has_cat(tree(r(_,p(Cat)),_),Cat).
+has_cat(tree(r(_,adt_lex(Cat,_,_,_,_)),_),Cat).
 has_cat(tree(r(_,i(_,p(Cat))),_),Cat).
 has_cat(tree(_,Ds),R) :-
     lists:member(D,Ds),
@@ -1594,3 +1619,26 @@ root(p(sv1)).
 root(p(whq)).
 root(i(_,X)):-
     root(X).
+
+
+:- public analyse_edges/0.
+
+analyse_edges :-
+    findall(Rule,his(_,r(Rule,_)),Rules0),
+    sort(Rules0,Rules),
+    count_usage(Rules,CountedIds0),
+    keysort(CountedIds0,CountedIds),
+    format(user_error,"~w~n",[CountedIds]).
+
+count_usage([],[]).
+count_usage([Rule|Ids0],[C-Rule|Ids]) :-
+    findall([],used_id(Rule),L),
+    length(L,C),
+    count_usage(Ids0,Ids).
+
+used_id(Rule) :-
+    his(Id,r(Rule,_)),
+    (   his(_,r(_,List)),
+	lists:member(Id,List)
+    ;   top_edge(top,Id)
+    ).
