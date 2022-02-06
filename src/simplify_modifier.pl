@@ -165,6 +165,7 @@ modifier_transformation(r(Rel,VAR),Ds0,r(Rel,VAR),Ds,Up) :-
     Hd = tree(r(hd,Head),HeadDs),
     lists:select(Hd,Ds,DsRest),
     modifier_rel(ModRel,ModInfo),
+    \+ pre_wh(VAR,Ds0,Mod),
     \+ important_modifier(Mod,Head,HeadDs,Up,DsRest),
     \+ container_head(Ds,Mod).
 
@@ -219,6 +220,18 @@ partitive(Ds0) :-
     ;   Hd = tree(r(hd,adt_lex(_,veel,_,_,_)),[]),
         AdHd = tree(r(hd,adt_lex(_,van,_,_,_)),[])
     ).
+
+pre_wh(p(np),Ds,Mod) :-
+    Det = tree(r(det,adt_lex(_,Welk,_,_,_)),[]),
+    lists:member(Det,Ds),
+    lemma(Welk,W),
+    lists:member(W,[welk,wat]),
+    (   Mod = tree(r(mod,adt_lex(_,Onverschillig,_,_,_)),[]),
+	lemma(Onverschillig,O),
+	lists:member(O,[eender,gelijk,ongeacht,onverschillig,willekeurig])
+    ;   Mod = tree(r(mod,p(mwu('om het even',_))),_)
+    ).
+    
 
 np(tree(r(_Rel,Cat),_Ds)):-
     simple_np(Cat).
@@ -582,6 +595,7 @@ ignore_modifier_stem(zojuist,_,_,_,_).
 
 important_modifier_pattern(mod=dt(mwu(_,_),[mwp=dan,mwp=ook])).
 
+important_modifier(tree(r(mod,adt_lex(_,zo,_,_,_)),[]),_,_,[r(tag,p(smain))|_],_).  % introduces dip. "root, zo begin hij zijn verhaal"
 important_modifier(_,adt_lex(_,Die,_,_,_),[],[r(obj1,p(np)),r(_,p(pp))|_],[]) :-
     lemma_in(Die,[die,dat]).
 important_modifier(Tree,_,_,_,_) :-
