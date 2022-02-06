@@ -169,8 +169,11 @@ nds_to_tree([H|T],F,Tree) :-
 
 list_to_ds([],[]).
 list_to_ds([tree(top/Node,Ix,Ds)|T],
-	   [tree(dp/Node,Ix,Ds)|NT]) :-
+	   [tree(ATT/Node,Ix,Ds)|NT]) :-
+    hdrug_flag(robust_attr,ATT),
     list_to_ds(T,NT).
+
+:- initialize_flag(robust_attr,dp).
 
 graphic_path_dt_list_([],Ts,Ts,Nr,Nr).
 graphic_path_dt_list_([Dtr|T],Ts0,Ts,Nr0,Nr) :-

@@ -1168,8 +1168,8 @@ apply_check(svp_pp(P,N),Dt,_) :-
     obj1(PP,NP),
     root(NP,N).   
 
-apply_check(des_der,_,[_,Rel/_|_]) :-
-    \+ Rel=su, \+ Rel=obj1, \+ Rel=obj2, \+ Rel=body.
+apply_check(des_der,_,Path) :-
+    apply_des_der(Path).
 
 apply_check(mcat(Cat),_,[_,_/Cat|_]).
 
@@ -1226,6 +1226,16 @@ apply_check(mod_pp(Prep),Dt,_Path) :-
     Dt:mod <=> List,
     member(El,List),
     has_prep(El,Prep).
+
+apply_des_der(Path) :-
+    \+ simple_des_der(Path),
+    \+ conj_des_der(Path).
+
+simple_des_der([det,Rel/_|_]) :-
+    lists:member(Rel,[su,obj1,obj2,body]).
+
+conj_des_der([det,cnj/_,Rel/_|_]) :-
+    lists:member(Rel,[su,obj1,obj2,body]).
 
 has_prep(El,Prep) :-
     root(El,Prep0),
