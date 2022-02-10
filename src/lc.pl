@@ -762,7 +762,7 @@ check_compiled_rules(Ids) :-
     set_flag(parse_or_generate,parse),
     (   member(Id,Ids),
         \+ alpino_grammar:grammar_rule(Id,_,_),
-        format(user_error,"warning: previous rule ~w not created!~n",[Id]),
+        format(user_error,"warning: previous parsing rule ~w not created!~n",[Id]),
         fail
     ;   true
     ).
@@ -771,7 +771,7 @@ check_compiled_rules_g(Ids) :-
     set_flag(parse_or_generate,generate),
     (   member(Id,Ids),
         \+ alpino_grammar:grammar_rule(Id,_,_),
-        format(user_error,"warning: previous rule ~w not created!~n",[Id]),
+        format(user_error,"warning: previous generation rule ~w not created!~n",[Id]),
         fail
     ;   true
     ).
@@ -785,6 +785,7 @@ check_compiled_rules_g(Ids) :-
 %     ).
 
 check_rules_unique :-
+    set_flag(parse_or_generate,parse),
     findall(Id,alpino_grammar:grammar_rule(Id,_,_),Ids0),
     sort(Ids0,Ids),
     check_rules(Ids).
