@@ -4155,12 +4155,12 @@ with_dt([en,niet,andersom],
 	complex_etc,
 	dt(conj,[crd=l(en,conj(en),vg,0,1),
 		 cnj=dt(advp,[mod=l(niet,adverb,advp,1,2),
-			      hd=l(andersom,adverb,2,3)])])).
+			      hd=l(andersom,adjective(pred(adv)),2,3)])])).
 
 with_dt([en,andersom],
 	complex_etc,
 	dt(conj,[crd=l(en,conj(en),vg,0,1),
-		 cnj=l(andersom,adverb,advp,1,2)])).
+		 cnj=l(andersom,adjective(pred(adv)),advp,1,2)])).
 
 with_dt([en,zo],
 	complex_etc,
@@ -4205,7 +4205,7 @@ with_dt([en,verder],
 with_dt([of,andersom],
 	complex_etc,
 	dt(conj,[crd=l(of,conj(of),vg,0,1),
-		 cnj=l(andersom,adverb,advp,1,2)])).
+		 cnj=l(andersom,adjective(pred(adv)),advp,1,2)])).
 
 with_dt([of,vice,versa],
 	complex_etc,
