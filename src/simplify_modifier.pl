@@ -252,6 +252,7 @@ important_mod_stem(Lem,_) :-
 important_mod_stem(afschuwelijk,_).
 important_mod_stem(ander,adj).
 important_mod_stem(anders,_).
+important_mod_stem(behalve,_).
 important_mod_stem(daar,_).
 important_mod_stem(er,_).
 important_mod_stem(fout,_).
@@ -263,6 +264,7 @@ important_mod_stem(hoelaat,_).
 important_mod_stem(hoelang,_).   
 important_mod_stem(hoeveelste,_).   
 important_mod_stem(incoherent,_).
+important_mod_stem(moeilijk,_).   % je kunt moeilijk gaan lopen; ze kunnen daar moeilijk terecht
 important_mod_stem(negatief,_).
 important_mod_stem(positief,_).
 important_mod_stem(slecht,_).
@@ -595,6 +597,10 @@ ignore_modifier_stem(zojuist,_,_,_,_).
 
 important_modifier_pattern(mod=dt(mwu(_,_),[mwp=dan,mwp=ook])).
 
+%% ik lust geen brood met kaas =/= ik lust geen brood
+important_modifier(tree(r(mod,p(Cat)),_),adt_lex(np,_,_,_,_),_,_,DsRest) :-
+    lists:member(Cat,[rel,pp]),
+    alpino_simplify_split:contains_negatief_element(DsRest).
 important_modifier(tree(r(mod,adt_lex(_,zo,_,_,_)),[]),_,_,[r(tag,p(smain))|_],_).  % introduces dip. "root, zo begin hij zijn verhaal"
 important_modifier(_,adt_lex(_,Die,_,_,_),[],[r(obj1,p(np)),r(_,p(pp))|_],[]) :-
     lemma_in(Die,[die,dat]).
