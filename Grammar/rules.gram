@@ -2449,7 +2449,9 @@ grammar_rule(non_wh_topicalization(modifier),ROOT,[Topic,OPTCOMMA,Ques]) :-
     not_er_topic_with_men_subject(Topic,Ques),    
     non_wh_topic_structure(Ques,Topic,ROOT1,OPTCOMMA).
 
+%% this rule does not yet work in generation, therefore switch it off
 grammar_rule(non_wh_topicalization(vc),ROOT,[Topic,OPTCOMMA,Ques]) :-
+    hdrug_util:hdrug_flag(parse_or_generate,parse),
     Topic => vc,
     no_vslash(Topic),
     Topic:vform => (psp;aan_het;uit;op;wk_te;te;inf;pass_te),
@@ -3844,7 +3846,7 @@ modifier_p_start_structure(Mod,Mod1,P1,P2) :-
 
 %% modifier --> ( modifier )
 grammar_rule(modifier_p(1), Mod1,[P1, Mod, OptQm, P2 ]):-
-    hdrug_util:hdrug_flag(parse_or_generate,parse),
+    hdrug_util:hdrug_flag(parse_or_generate,parse),  
     modifier_p_start_structure(Mod,Mod1,P1,P2),
     optend_mod_punct(OptQm),
     P1:puncttype => haak_open,
@@ -3854,11 +3856,14 @@ grammar_rule(modifier_p(1), Mod1,[P1, Mod, OptQm, P2 ]):-
     hdrug_util:hdrug_flag(parse_or_generate,generate),
     Mod1 => modifier,
     Mod1:eps => no,
-    max_np(Mod), 
-    Mod:nform => ~temp,
-    Mod:subn => ~sub_indef_adj,
-    Mod:can_mod => no,
-    Mod1:mcat => mcat_bracket,
+    (   max_np(Mod), 
+	Mod:nform => ~temp,
+	Mod:subn => ~sub_indef_adj,
+	Mod:can_mod => no,
+	Mod1:mcat => mcat_bracket
+    ;   max_ap(Mod),
+	Mod:adv => (nadv;padv)
+    ),
     P1 => punct,
     P2 => punct,
     hd_structure(Mod,Mod1),
@@ -4500,13 +4505,6 @@ grammar_rule(n_n_napp, NP, [ APP_N, N ]) :-
     N:subn => ~sub_num,
     NP:subn => sub_noun,
     NP:bmeas <=> APP_N:bmeas,
-    hdrug_util:hdrug_flag(parse_or_generate,PG),
-    (   PG == parse
-    ;   PG == generate,               % *een scherm volledige
-	N:subn => ~sub_indef_adj,     % alleenstaande massa's --> *massa's alleenstaanden
-	N:subn => ~sub_def_adj
-    ),
-
 %    N:subn => ~sub_verb & ~sub_name,
 				% but:   een rondje fietsen
 				%        een eindje rijden

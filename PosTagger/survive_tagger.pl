@@ -77,10 +77,14 @@ survives_trigram(_,zou,verb(hebben,past(sg),aux(inf)),_,ik,pronoun(nwh,fir,sg,de
 %% because alles of niets is also adjective
 survives_trigram(alles,_,noun(het,mass,sg),of,_,conj(of),niets,_,meas_mod_noun(het,mass,sg)).
 
+surviving_word('collega \' s').
+
+
 surviving_word(_):-
     fail.
 
 surviving_root('aantal een').
+surviving_root('aantal een groot').
 surviving_root('high tech').      % temp
 surviving_root('naar schatting').
 surviving_root('om het even').
