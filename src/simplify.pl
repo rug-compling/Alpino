@@ -91,6 +91,8 @@ pmi doet het niet:
 Het is een sprong in het diepe.
 => Het is een sprong 
 
+      original: Het belooft een mooi 2009 te worden
+=> paraphrased: Het belooft een 2009 te worden .
 
 motivatie voor pmi:
 boter bij de vis => boter
@@ -104,9 +106,20 @@ weghalen mod bij de .. PROPN:
 ?daar heeft de bekende X gepredikt -> daar heeft de X gepredikt
 
 
-split gek:
-Het duurt niet lang . Of de politie verhoort hem .
-Er gaat hier in het Europees Parlement geen zitting voorbij . Of we zeggen iets .
+
+%% ik lust geen brood met kaas =/= ik lust geen brood
+
+
+DONE split gek:
+DONE Het duurt niet lang . Of de politie verhoort hem .
+DONE Er gaat hier in het Europees Parlement geen zitting voorbij . Of we zeggen iets .
+
+
+
+STYPE van conjunctie van smain/sv1
+      original: De koning is dood , troost je de koningin ?
+=> paraphrased: De koning is dood , troost je de koningin .
+
 
 
 ONDUIDELIJKE/FOUTE PARSES
@@ -116,9 +129,9 @@ Volgens de ramingen van de ECB zou zo ongeveer vier vijfde van de werkloosheid *
 
 OPEN PROBLEMEN
 
-- generation of topic drop, "Mijnheer de Voorzitter , neem mij niet kwalijk , maar ik heb een opmerking over de Notulen ."
-
-- generation of number expressions "De behandeling van een malariapatiënt kost tussen de 10 en 25 dollar"
+DONE - generation of topic drop, "Mijnheer de Voorzitter , neem mij niet kwalijk , maar ik heb een opmerking over de Notulen ."
+DONE 
+DONE - generation of number expressions "De behandeling van een malariapatiënt kost tussen de 10 en 25 dollar"
 
 CONJ MODIFIERS?
 
@@ -136,9 +149,8 @@ tot slot , de verschillende systemen waarin alternerend geleerd wordt , hebben e
 
 TODO GENERATION:
 
-* TOPIC DROP
 
-* imperatives with subject
+* imperatives with subject are parsed as ynquestion...
 
 * Denkt u zich eens in ...
 
@@ -174,9 +186,6 @@ frame: mod_pp(bij)
 maar mod is hier verlicht. Echter, er is al een pc (er in)...
 
 
-ADT REPRESENTATION
 
-topic-drop: no info on person/number of dropped subject
-komt niet -> kom niet/komen niet/komt niet
 
 */

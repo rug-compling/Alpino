@@ -284,9 +284,9 @@ split_transformation(tree(r('--',p(smain)),Ds0),[X1,X2]) :-
     ),
     lists:select(Su1,Ds0,Ds),
     lists:member(tree(r(hd,HdCat),HdDs),SuDs1),
-    \+ forbid_rel_split(HdCat),
     Rel = tree(r(mod,p(rel)), RelDs),
     lists:select(Rel,SuDs1,SuDs2),
+    \+ forbid_rel_split(HdCat,SuDs2),
     Rhd = tree(r(rhd,i(Ix,adt_lex(_,Die,Die,_,RelAtts))),[]),
     Body= tree(r(body,p(ssub)),BodyDs0),
     lists:select(Rhd,RelDs,RelDs1),
@@ -305,8 +305,12 @@ new_su([D1,D2|Ds],p(np),[D1,D2|Ds]).
 new_su([tree(r(hd,HdCat),HdDs)],HdCat,HdDs).
 
 %%% poor man's version of restricted relative clause
-forbid_rel_split(adt_lex(_,HdLem,_,_,_)):-
+forbid_rel_split(adt_lex(_,HdLem,_,_,_),_):-
     forbid_lemma_rel_split(HdLem).
+
+%% er is geen mens die dat wil =/= er is geen mens. Hij wil dat.
+forbid_rel_split(_,Ds):-
+    contains_negatief_element(Ds).
 
 forbid_lemma_rel_split(al).
 forbid_lemma_rel_split(daar).
@@ -564,7 +568,7 @@ correct_conjunct(p(Smain),p(Cat),L2,L) :-
 	    L2,L),
     lists:member(stype=whquestion,Atts),
     correct_wh_cat(Cat,Pos).
-correct_conjunct(adt_lex(Smain,Prep,Prep2,Pos,Atts),[],adt_lex(Cat,Prep,Prep2,Pos,[]),[]) :-
+correct_conjunct(adt_lex(Smain,Prep,Prep2,Pos,Atts),adt_lex(Cat,Prep,Prep2,Pos,[]),[],[]) :-
     lists:member(Smain,[smain,whq]),
     lists:member(stype=whquestion,Atts),
     correct_wh_cat(Cat,Pos).
@@ -585,6 +589,7 @@ short_du_part(tree(r(dlink,_),_),nucl).
 short_du_part(tree(r(dp,p(Cat)),Ds),dp) :-
     do_not_split_du(Cat,Ds).
 
+correct_wh_cat(pp,pp).
 correct_wh_cat(pp,prep).
 correct_wh_cat(np,noun).
 correct_wh_cat(np,pron).
