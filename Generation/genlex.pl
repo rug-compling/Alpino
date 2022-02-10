@@ -254,11 +254,17 @@ find_matching_with_dt_aux([Root|Roots],[_|Tail],Rs,Cs) :-
 potential_with_dt_root(Roots,Root-Code) :-
     member({RootList}-Code,Roots),
     member(Root,RootList),
-    alpino_lex:with_dt_root(Root).
+    is_root(Root).
 
 potential_with_dt_root(Roots,Root-Code) :-
     member(Root-Code,Roots),
-    alpino_lex:with_dt_root(Root).
+    is_root(Root).
+
+is_root(Root) :-
+    alpino_lex:with_dt_root(Root), !.
+
+is_root(Root) :-
+    alpino_paraphrase:add_root(Root), !.
 
 construct_with_dts_aux(CatRoots,Bcs,Pdt) :-
     concat_all(CatRoots,Stem,' '),
@@ -611,24 +617,18 @@ filter_tags :-
     ).
 
 %% these are *local* checks; there could also be co-occurrences checks.
-check_conditions(Frame,Dt,SimpleDt,REL) :-
+check_conditions(Frame,_,SimpleDt,REL) :-
     findall(Check,condition(Frame,Check),Checks),
     (   \+ apply_checks(Checks,SimpleDt,REL)
     ->  debug_message(3,"frame ~w discarded~n",[Frame]),
 	fail
     ;   true
-    ),
-    \+ \+ lookup(Frame,Dt).
+    ).
 
 apply_checks([],_,_).
 apply_checks([H|T],Dt,REL) :-
     apply_check(H,Dt,REL),
     apply_checks(T,Dt,REL).
-
-lookup(Frame,Dt) :-
-    alpino_lex_types:lex(Cat,Frame,_,Constraints),
-    call_constraints(Constraints),
-    alpino_data:dt(Cat,Dt).
 
 call_constraints([]).
 call_constraints([H|T]) :-
@@ -640,6 +640,9 @@ call_constraint(als_word) :-
 
 call_constraint(er_word) :-
     er_tag(Tag),
+    alpino_cg:lex(Tag,_,_,_,_,_).
+
+call_constraint(tag(Tag)) :-
     alpino_cg:lex(Tag,_,_,_,_,_).
 
 er_tag(er_vp_adverb).     % er
@@ -688,7 +691,7 @@ condition(amount_meas_mod_noun(_,_,_,Sc),Cond) :-
 condition(vandaar_adverb,rel(dp)).
 condition(preposition(Prep,_,pc_adv),Cond) :-
     pc_adv_condition(Prep,not_cat(obj1,np),Cond).
-condition(preposition(_,_,pc_vp),cat(obj1,ti)).
+condition(preposition(_,_,pc_vp),cat(vc,ti)).
 condition(preposition(_,_,voor_pred),rel(predc)).
 
 condition(comp_adverb(_),obcomp).
@@ -696,22 +699,28 @@ condition(comp_adverb(_),obcomp).
 condition(adjective(Infl),infl_adj(Infl)).
 condition(adjective(Infl,_),infl_adj(Infl)).
 
-pc_adv_condition(NotVan,Cond0,(Cond0,(rel(pc);rel(whd);rel(rhd)))) :-
+%% added obj1 "tot op vandaag de dag"
+pc_adv_condition(NotVan,Cond0,(Cond0,(rel(pc);rel(whd);rel(rhd);rel(obj1)))) :-  
     NotVan \== van,
+    NotVan \== met,
     !.
 pc_adv_condition(_NotVan,Cond,Cond).
 
 condition_infl(Infl,_,Cond) :-
     condition_infl(Infl,Cond).
+condition_infl(X, SC, not_plural_su) :-
+    sg_infl(X),
+    \+ short_sbar_subj(SC).
 
 condition_infl(pl,passive,real_su).
 condition_infl(sg1,passive,real_su).
 condition_infl(sg_hebt,passive,real_su).
-condition_infl(Infl,Subcat,su_not_het) :-
-    pl_infl(Infl),
-    Subcat \= cleft.
-condition_infl(Infl,_,su_not_het) :-
-    not_third_infl(Infl).
+%condition_infl(Infl,Subcat,su_not_het) :-
+%    pl_infl(Infl),
+%    Subcat \= cleft_np,
+%    Subcat \= cleft.
+%condition_infl(Infl,_,su_not_het) :-
+%    not_third_infl(Infl).
 
 condition_infl(psp,cat(ppart)).
 condition_infl(psp,not_stype).
@@ -729,11 +738,6 @@ condition_infl(X,( cat(smain)
                  )) :-
     finite_infl(X).
 
-%%% fout:
-%%%%  Welke liedjes laat me koud
-
-condition_infl(X, not_plural_su) :-
-    sg_infl(X).
 condition_infl(X, not_sg_su) :-
     pl_infl(X).
 
@@ -853,7 +857,7 @@ condition_sc(so_vp_obj,(  cat(vc,ti)
 condition_sc(copula_np,predc_obj).
 condition_sc(so_copula_np,predc_obj).
 
-condition_sc(copula,predc).
+% condition_sc(copula,predc).    "keurig als we zijn, ..."
 
 condition_sc(pred_np,predc).
 condition_sc(nonp_pred_np,predc).
@@ -1357,6 +1361,7 @@ dep_cat(Rel,Cat,Dt) :-
     RelDT => dt,
     (  RelDT:cat ==> conj
     ;  RelDT:cat ==> Cat
+    ;  RelDT:cat ==> du
     ).
 
 not_dep_cat(Rel,Cat,Dt) :-
@@ -1387,6 +1392,7 @@ ipp(Dt) :-
     ),
     ( SubVC:cat ==> inf
     ; SubVC:cat ==> ti
+    ; SubVC:cat ==> conj
     ).
 
 svp(Dt,VC) :-
@@ -1427,6 +1433,7 @@ prep(uit_op,_).
 prep(met,mee).
 prep(tot,toe).
 prep(van,af).
+prep(om,omheen).
 prep(Prep,Prep).
 prep(Prep,ErPrep) :-
     atom(Prep),
@@ -2032,27 +2039,6 @@ not_sent_cat([_,_/Cat|_]) :-
     fail.
 not_sent_cat(_).
 
-%%% DIESELGATE
-%%% do this only in case the application can reasonably assume knowledge
-%%% of input sentence, i.e., for paraphrasing this is ok, but not for
-%%% potential other applications...
-%%%
-%%% if we do paraphrasing, we only allow the same surface form as
-%%% the input, in case the tag is identical.
-%%%
-%%% this may not always be desirable...
-/*
-adapt_surface_of_roots :-
-    (   clause(alpino_cg:lex(Tag,Root,Bit,Cat1,Cat2,SurfList),_,Ref),
-	alpino_paraphrase:add_lex(Root,SurfAtom,Tag),
-	\+ member(SurfAtom,SurfList),
-	erase(Ref),
-	assertz(alpino_cg:lex(Tag,Root,Bit,Cat1,Cat2,[SurfAtom])),
-	fail
-    ;   true
-    ).
-*/
-
 en(heid,heden).
 
 en(aan).
@@ -2061,3 +2047,20 @@ en(ing).
 en(iteit).
 en(tal).
 
+%% singular verbs with plural subject!
+%% "... maar welke liedjes laat me koud"
+short_sbar_subj(sbar_subj).
+short_sbar_subj(sbar_subj_np).
+short_sbar_subj(sbar_subj_so_np).
+short_sbar_subj(sbar_subj_np_np).
+short_sbar_subj(pp_sbar_subj(_)).
+short_sbar_subj(copula_sbar).
+short_sbar_subj(so_copula_sbar).
+short_sbar_subj(nonp_copula_sbar).
+short_sbar_subj(so_nonp_copula_sbar).
+short_sbar_subj(part_so_nonp_copula_sbar(_)).
+short_sbar_subj(pp_copula_sbar).
+short_sbar_subj(ap_pp_copula_sbar).
+short_sbar_subj(part_ap_pp_copula_sbar(_)).
+short_sbar_subj(fixed(List,_)) :-
+    lists:member(sbar_subj,List).
