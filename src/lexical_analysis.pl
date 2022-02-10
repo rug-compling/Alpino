@@ -979,7 +979,8 @@ requires_longest_match(normal(spaced_letters)).
 requires_longest_match(name(not_begin)).
 requires_longest_match(name(begin)).
 
-
+requires_unique_match(normal(variant(wrong_quote_s,normal)),normal(variant(variant21('\'s','\'',s),normal)),0,0).
+requires_unique_match(normal(variant(wrong_quote_s,normal)),normal(variant(variant21('\'s','\'',s),variant)),0,0).
 requires_unique_match(normal(spaced_letters),normal(_),6,0).
 requires_unique_match(normal(bridge),normal(bridge),5,0).
 requires_unique_match(normal(number_sequence),normal(number_sequence),5,0).
