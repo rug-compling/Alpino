@@ -594,6 +594,9 @@ add_punt_if_not([H|T],Result):-
 add_punt_if_not(['.'],':',Rest) :-
     !,
     Rest = [':'].
+add_punt_if_not(['?'],':',Rest) :-
+    !,
+    Rest = [':'].
 add_punt_if_not([],Last,[Last|Rest]):-
     (   (   Last == '.'
 	;   Last == '?'
@@ -1642,3 +1645,4 @@ used_id(Rule) :-
 	lists:member(Id,List)
     ;   top_edge(top,Id)
     ).
+
