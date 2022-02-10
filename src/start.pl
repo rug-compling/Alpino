@@ -3297,7 +3297,8 @@ paraphrase(Tokens0) :-
 paraphrase(Ref,Tokens,Chars) :-
     paraphrase(Ref,Tokens,Chars,Result),
     format("~a~n",Result),
-    format(user_error,"orginal: ~s~n",[Chars]).
+    format(user_error,"      original: ~s~n",[Chars]),
+    format(user_error,"=> paraphrased: ~a~n",[Result]).
 
 paraphrase(Ref,Tokens,Chars,Result) :-
     statistics(runtime,[Start,_]),
@@ -3410,6 +3411,7 @@ create_parse_prompt(Prompt):-
 
 save_additional_lexical_entries(Cat) :-
     retractall(alpino_paraphrase:add_lex(_,_,_)),
+    retractall(alpino_paraphrase:add_root(_)),
     alpino_format_syntax:result_to_frames(Cat,Frames,_),
     save_frames(Frames).
 
@@ -3419,7 +3421,8 @@ save_frames([_-Frame|Frames]) :-
     save_frames(Frames).
 
 :- dynamic
-    alpino_paraphrase:add_lex/3.
+    alpino_paraphrase:add_lex/3,
+    alpino_paraphrase:add_root/1.
 
 save_frame(frame(P0,P,Q0,Q,Stem,Frame,Surf0,His)) :-
     His == normal(decap(normal)),
@@ -3442,8 +3445,20 @@ save_frame(frame(_P0,_P,_Q0,_Q,Stem0,Frame,Surf,His)):-
 	)
     ->  true
     ;   alpino_genlex:simplify_lemma(Stem0,Stem),
-	alpino_paraphrase:noclp_assertz(add_lex(Stem,Surf,Frame))
+	alpino_paraphrase:noclp_assertz(add_lex(Stem,Surf,Frame)),
+	add_roots(Frame,Stem)
     ).
+
+add_roots(with_dt(_,_),Stem) :-
+    !,
+    alpino_util:split_atom(Stem," ",List),
+    assert_roots(List).
+add_roots(_,_).
+
+assert_roots([]).
+assert_roots([H|T]) :-
+    alpino_paraphrase:noclp_assertz(add_root(H)),
+    assert_roots(T).
 
 generate_or_split(tree(r(split,p(split)),Ds0),Toks0,Toks) :-
     !,
