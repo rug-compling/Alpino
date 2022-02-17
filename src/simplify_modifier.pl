@@ -620,10 +620,8 @@ important_modifier(tree(r(mod,p(pp)),Ds),_,_,_,_) :-
     lists:member(tree(r(det,adt_lex(_,Geen,_,_,_)),[]),ObjDs),
     lemma_in(Geen,[geen]).
 important_modifier(tree(r(mod,p(rel)),_),_,_,[r('--',p(np))|_],_).
-important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,er,_,_,_),[],_,_).   % clefts, er zijn er die problemen hebben
-important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,het,_,_,_),[],_,_).  % clefts, het zijn schurken die dat doen
-important_modifier(tree(r(mod,p(rel)),_),adt_lex(_,IETS,_,_,_),[],_,_) :-
-    alpino_simplify_split:forbid_lemma_rel_split(IETS).	% dat is iets waar we naar verlangen
+important_modifier(tree(r(mod,p(rel)),_),ADTLEX,[],_,_) :-
+    alpino_simplify_split:forbid_rel_split(ADTLEX,[]).
 important_modifier(tree(r(mod,p(conj)),Ds),C0,C1,C2,C3) :-
     lists:member(tree(r(cnj,p(rel)),XX),Ds),
     important_modifier(tree(r(mod,p(rel)),XX),C0,C1,C2,C3).

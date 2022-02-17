@@ -58,6 +58,9 @@ adt_transformation(r(Rel,VAR),A,r(Rel2,i(X,Cat2)),B,Up,Mod,Words) :-
     VAR = i(X,Cat),
     adt_transformation(r(Rel,Cat),A,r(Rel2,Cat2),B,Up,Mod,Words).
 
+adt_transformation(Node0,Ds0,Node,Ds,_,_,_) :-
+    alpino_simplify_split:simple_split_transformation(Node0,Ds0,Node,Ds).
+
 adt_transformation(Node0,Ds0,Node,Ds,Up,Mod,_Words) :-
     adt_transformation_mod(Mod,Node0,Ds0,Node,Ds,Up).
 
@@ -185,6 +188,16 @@ het wil er bij mij niet in dat ...
 frame: mod_pp(bij)
 maar mod is hier verlicht. Echter, er is al een pc (er in)...
 
+
+%% TODO:
+%% de vraag die we ons moeten stellen is wie er komt
+%% => wie komt er. Deze moeten we stellen.
+%% requires frame for "stellen" requires "vraag", but we only have a pronoun
+%% 
+
+
+ADT:
+ten aanzien ervan/daarvan/hiervan get same lemma...
 
 
 
