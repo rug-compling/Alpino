@@ -273,7 +273,7 @@ label_dt_to_d(Ix,Label,Pos,Cat,Node,Dtr,N0,N) :-
 
 dt_list_to_ds([],[],N,N).
 dt_list_to_ds([H0|T0],Out,N0,N) :-
-      dt_to_d(H0,N0,N1,Out,Out1),
+    dt_to_d(H0,N0,N1,Out,Out1),
     dt_list_to_ds(T0,Out1,N1,N).
 
 graphic_path_dt_list_simple(Ds,Tree) :-
