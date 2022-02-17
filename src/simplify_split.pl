@@ -3,37 +3,73 @@
 %% --------------------------------------------------------------------------------------------- %%
 
 
-%% TODO:
-%% de vraag die we ons moeten stellen is wie er komt
-%% => wie komt er. Deze moeten we stellen.
-%% requires frame for "stellen" requires "vraag", but we only have a pronoun
-%% 
-
 apply_split_transformations(Tree0,Tree) :-
-    split_transformations(Tree0,Tree1),
-    alpino_cg:collapse_all(Tree1,Tree2,List),
+    simple_split_transformations(Tree0,Tree1),
+    !,
+    apply_split_transformations(Tree1,Tree).
+apply_split_transformations(tree(Cat0,Ds0),Tree) :-
+    split_transformation(Cat0,Ds0,Cat1,Ds1),
+    alpino_cg:collapse_all(tree(Cat1,Ds1),Tree2,List),
 				% if the relative is removed, we need to ensure
                                 % its contents end up at the co-indexed node
-    expand_all(Tree2,Tree,List).  % if i(I) occurs in a split as first mention, it must become a pronoun
+    expand_all(Tree2,Tree3,List),  % if i(I) occurs in a split as first mention, it must become a pronoun
 
-split_transformations(tree(Cat0,Ds0),tree(Cat,Ds)) :-
-    split_transformation(Cat0,Ds0,Cat1,Ds1),
     !,
-    split_transformations(tree(Cat1,Ds1),tree(Cat,Ds)).
-split_transformations(tree(Cat,Ds0),tree(Cat,Ds)) :-
-    split_transformations_list(Ds0,Ds).
+    apply_split_transformations(Tree3,Tree).
+apply_split_transformations(Tree,Tree).
 
-split_transformations_list([],[]).
-split_transformations_list([H0|T0],[H|T]) :-
-    split_transformations(H0,H),
-    split_transformations_list(T0,T).
 
 split_transformation(r(top,p(top)),Ds0,r(split,p(split)),Ds) :-
     select_replace(Ds0,D,Xs,Ds),
     split_transformation(D,Xs).
+split_transformation(r(Rel,Node), Ds0,r(Rel,Node),Ds) :-
+    split_transformations_list(Ds0,Ds).
+
+split_transformations_list([tree(Node0,H0)|T],[tree(Node,H)|T]) :-
+    split_transformation(Node0,H0,Node,H).
+split_transformations_list([H|T0],[H|T]) :-
+    split_transformations_list(T0,T).
 
 
-split_transformation(r(Rel,p(MAIN)),Ds0,r(Rel,p(conj)),[CRD,N1,N2]) :-
+simple_split_transformations(tree(Node0,Ds0),tree(Node,Ds)) :-
+    simple_split_transformation(Node0,Ds0,Node,Ds).
+
+simple_split_transformations(tree(Node,Ds0),tree(Node,Ds)) :-
+    simple_split_transformations_list(Ds0,Ds).
+
+simple_split_transformations_list([H0|Ds],[H|Ds]):-
+    simple_split_transformations(H0,H).
+simple_split_transformations_list([H|Ds0],[H|Ds]):-
+    simple_split_transformations_list(Ds0,Ds).
+
+
+simple_split_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(SMAIN)),BODYDS) :-
+    HD = tree(r(hd,adt_lex(smain,ben,_,verb,_)),[]),
+    lists:select(HD,Ds0,Ds1),
+    SUP = tree(r(sup,adt_lex(_,het,_,_,_)),[]),
+    lists:select(SUP,Ds1,Ds2),
+    PREDC = tree(r(predc,adt_lex(_,Zo,_,_,_)),[]),
+    lists:select(PREDC,Ds2,[CP]),
+    lemma_in(Zo,[duidelijk,zo]),
+    CP = tree(r(su,p(cp)),CPDS0),
+    DAT = tree(r(cmp,adt_lex(_,dat,_,_,_)),[]),
+    lists:select(DAT,CPDS0,[BODY]),
+    BODY = tree(r(body,p(SSUB_OR_CONJ)),BODYDS0),
+    replace_hd_ssub_smain(SSUB_OR_CONJ,SMAIN,BODYDS0,BODYDS).
+
+%% het klopt dat X => X
+simple_split_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(SMAIN)),BODYDS) :-
+    HD = tree(r(hd,adt_lex(smain,klop,_,verb,_)),[]),
+    lists:select(HD,Ds0,Ds1),
+    SUP = tree(r(sup,adt_lex(_,het,_,_,_)),[]),
+    lists:select(SUP,Ds1,[CP]),
+    CP = tree(r(su,p(cp)),CPDS0),
+    DAT = tree(r(cmp,adt_lex(_,dat,_,_,_)),[]),
+    lists:select(DAT,CPDS0,[BODY]),
+    BODY = tree(r(body,p(SSUB_OR_CONJ)),BODYDS0),
+    replace_hd_ssub_smain(SSUB_OR_CONJ,SMAIN,BODYDS0,BODYDS).
+
+simple_split_transformation(r(Rel,p(MAIN)),Ds0,r(Rel,p(conj)),[CRD,N1,N2]) :-
     lists:member(MAIN,[smain,sv1]),
     get_su_and_index(Ds0,Ds1,tree(r(su,i(Ix,SuCat)),SuDs)),
     VC = tree(r(vc,p(conj)),VCDS0),
@@ -108,8 +144,8 @@ generate_rel_pronoun(p(mwu(Lemma,_)),Ds,Die,RelAtts,Atts,Pronoun) :-
     pronoun(Lemma,Die,Atts2,Atts,Pronoun).
 
 %% don't touch it if it is a pronoun / single word already
-generate_pronoun(adt_lex(np,B,_,pron,Atts),[],adt_lex(np,B,_,pron,Atts),[]).
-generate_pronoun(adt_lex(np,B,_,det,Atts),[],adt_lex(np,B,_,det,Atts),[]).
+generate_pronoun(adt_lex(np,B,_,PronDet,Atts),[],adt_lex(np,B,_,PronDet,Atts),[]) :-
+    \+ \+ lists:member(PronDet,[pron,det]).
 
 %% a new pronoun
 generate_pronoun(adt_lex(np,B,_,_,Atts0),[],adt_lex(np,Pronoun,_,_,Atts),[]) :-
@@ -146,7 +182,7 @@ generate_pronoun(p(mwu(Lemma,_)),Ds0,adt_lex(np,Pronoun,Pronoun,_,Atts),[]) :-
     lists:member(Hd,Ds0),
     pronoun(Lemma,_,Atts0,Atts,Pronoun).
 
-generate_pronoun(p(conj),_,adt_lex(np,{[deze,die,ze]},_,_,[rnum=pl]),[]).
+generate_pronoun(p(conj),_,adt_lex(np,{[deze,die]},_,_,[rnum=pl]),[]).
 
 %% replace element by N elements
 select_replace([H|T],H,List,Result) :-
@@ -307,29 +343,28 @@ new_su([tree(r(hd,HdCat),HdDs)],HdCat,HdDs).
 %%% poor man's version of restricted relative clause
 forbid_rel_split(adt_lex(_,HdLem,_,_,_),_):-
     forbid_lemma_rel_split(HdLem).
+forbid_rel_split(adt_lex(_,_,_,num,_),_).
 
 %% er is geen mens die dat wil =/= er is geen mens. Hij wil dat.
 forbid_rel_split(_,Ds):-
     contains_negatief_element(Ds).
 
 forbid_lemma_rel_split(al).
+forbid_lemma_rel_split(alles).
 forbid_lemma_rel_split(daar).
+forbid_lemma_rel_split(dat).
 forbid_lemma_rel_split(datgeen).
 forbid_lemma_rel_split(degeen).
 forbid_lemma_rel_split(diegene).
 forbid_lemma_rel_split(één).
 forbid_lemma_rel_split(enig).
-forbid_lemma_rel_split(eerste).
-forbid_lemma_rel_split(tweede).
-forbid_lemma_rel_split(derde).
-forbid_lemma_rel_split(iets).
-forbid_lemma_rel_split(niets).
-forbid_lemma_rel_split(dat).
-forbid_lemma_rel_split(alles).
-forbid_lemma_rel_split(weinig).
+forbid_lemma_rel_split(er).
+forbid_lemma_rel_split(het).
 forbid_lemma_rel_split(ieder).
 forbid_lemma_rel_split(iedereen).
-forbid_lemma_rel_split(het).
+forbid_lemma_rel_split(iets).
+forbid_lemma_rel_split(niets).
+forbid_lemma_rel_split(weinig).
 
 diedat(Var,Lemma,Atts,DieDat) :-
     var(Var),
@@ -359,9 +394,11 @@ guess_die_dat(Lemma,_,Dat) :-
 	Dat = dat
     ;   alpino_lex:lexicon(noun(de,_,_),_,[Word],[],normal),
 	Dat = die
-    ;   atom_concat('De ',_,Lemma),
+    ;   atom(Lemma),
+	atom_concat('De ',_,Lemma),
 	Dat = die
-    ;   atom_concat('Het ',_,Lemma),
+    ;   atom(Lemma),
+	atom_concat('Het ',_,Lemma),
 	Dat = dat
     ).
 guess_die_dat(_,_,_).
@@ -392,9 +429,11 @@ limit_to_pronoun_atts(Atts0,Atts) :-
 :- use_module(gadata).
 
 pronoun_(L,DieDat,A,nonper,B,Atts0,Atts) :-
+    atom(L),
     atom_concat(Lem,'_DIM',L),
     pronoun_(Lem,DieDat,A,nonper,B,Atts0,Atts).
 pronoun_(L,DieDat,A,nonper,B,Atts0,Atts) :-
+    atom(L),
     atom_concat(_,Right,L),
     atom_concat('_',Lem,Right),
     pronoun_(Lem,DieDat,A,nonper,B,Atts0,Atts).
@@ -415,16 +454,16 @@ pronoun_(Lemma,dat,sg,nonper,het,A,A) :-
     \+ human(Lemma,_).
 pronoun_(Lemma,dit,sg,nonper,het,A,A) :-
     \+ human(Lemma,_).
-pronoun_(Lemma,die,sg,nonper,{[deze,die,ze]},A,A) :-
+pronoun_(Lemma,die,sg,nonper,{[deze,die]},A,A) :-
     \+ human(Lemma,_).
 pronoun_(Lemma,het,sg,nonper,het,A,A) :-
     \+ human(Lemma,_).
-pronoun_(Lemma,de,sg,nonper,{[deze,die,ze]},A,A) :-
+pronoun_(Lemma,de,sg,nonper,{[deze,die]},A,A) :-
     \+ human(Lemma,_).
-pronoun_(Lemma,Det,sg,nonper,{[deze,die,het,ze]},A,A) :-
+pronoun_(Lemma,Det,sg,nonper,{[deze,die,het]},A,A) :-
     \+ lists:member(Det,[de,het,die,dat,dit]),
     \+ human(Lemma,_).
-pronoun_(Lemma,_,pl,nonper,{[deze,die,ze]},A,A) :-
+pronoun_(Lemma,_,pl,nonper,{[deze,die]},A,A) :-
     \+ human(Lemma,_).
 
 lex_replace(Cat0,Cat,Ds0,Ds) :-
@@ -498,6 +537,7 @@ swap_index_cat(i(Ix0,Cat0),Cat,Ds0,Ds,Ix,C,D) :-
     Cat = i(Ix),
     Ds = [].
 
+do_not_split_du(whrel,_).  % hoe sneller ... hoe beter
 do_not_split_du(detp,_).
 do_not_split_du(ap,_).
 do_not_split_du(advp,_).
@@ -607,3 +647,52 @@ cnj_ds_vc([CNJ2|CNJS],[N2|NS],SuCat2,SuDs2,CAT,Ix,Hd) :-
 
 
 do_not_split_conj(adt_lex(_,andersom,_,_,_),[]).
+
+/*
+add_pronouns_for_su_in_conj([],[],_,_,_).
+add_pronouns_for_su_in_conj([H0|T0],[H|T],Ix,Cat,Ds) :-
+    add_pronouns_for_su_in_conj1(H0,H,Ix,Cat,Ds),
+    add_pronouns_for_su_in_conj(T0,T,Ix,Cat,Ds).
+
+add_pronouns_for_su_in_conj1(tree(r(crd,CRD),CRDDS),tree(r(crd,CRD),CRDDS),_,_,_).
+add_pronouns_for_su_in_conj1(tree(r(cnj,Cat),CNJDS0),tree(r(cnj,Cat),CNJDS),IX,SuCat,SuDs) :-
+    Su0 = tree(r(su,i(IXS)),[]),
+    Su = tree(r(su,i(XX,SuCat2)),SuDs2),
+    replace(Su0,Su,CNJDS0,CNJDS1),
+    IX == IXS,
+    generate_pronoun(SuCat,SuDs,SuCat2,SuDs2),
+    hdrug_util:gen_sym(XX,adt_index),
+    replace_index(CNJDS1,CNJDS,IX,XX).
+*/
+
+replace_hd_ssub_smain(ssub,smain,BODYDS0,BODYDS) :-
+    A0 = tree(r(hd,adt_lex(_,ARR1,ARR2,ARR3,ARR4)),[]),
+    A1 = tree(r(hd,adt_lex(smain,ARR1,ARR2,ARR3,[stype=declarative|ARR4])),[]),
+    replace(A0,A1,BODYDS0,BODYDS).
+
+replace_hd_ssub_smain(conj,conj,BODYDS0,BODYDS) :-
+    replace_hd_ssub_smain_ds(BODYDS0,BODYDS).
+
+replace_hd_ssub_smain_ds([],[]).
+replace_hd_ssub_smain_ds([H0|T0],[H|T]) :-
+    replace_hd_ssub_smain_d(H0,H),
+    replace_hd_ssub_smain_ds(T0,T).
+
+replace_hd_ssub_smain_d(tree(r(crd,CRD),CDS),tree(r(crd,CRD),CDS)).
+replace_hd_ssub_smain_d(tree(r(cnj,p(ssub)),DS0), tree(r(cnj,p(smain)),DS)) :-
+    replace_hd_ssub_smain(ssub,_,DS0,DS).
+
+
+
+lemma_in({Lemma},List):-
+    !,
+    lists:member(L,Lemma),
+    lists:member(L,List).
+lemma_in(Lemma,List) :-
+    lists:member(Lemma,List).
+
+lemma({Lemma},Lem) :-
+    !,
+    lists:member(Lem,Lemma).
+lemma(L,L).
+

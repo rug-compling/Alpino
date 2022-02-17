@@ -111,24 +111,6 @@ words_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(smain)),BODYDS) :-
     A1 = tree(r(hd,adt_lex(smain,ARR1,ARR2,ARR3,ARR4)),[]),
     replace(A0,A1,BODYDS0,BODYDS).
 
-%%% TODO:
-%%% het is zo dat X => X
-
-words_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(smain)),BODYDS) :-
-    HD = tree(r(hd,adt_lex(smain,ben,_,verb,_)),[]),
-    lists:select(HD,Ds0,Ds1),
-    SUP = tree(r(sup,adt_lex(_,het,_,_,_)),[]),
-    lists:select(SUP,Ds1,Ds2),
-    PREDC = tree(r(predc,adt_lex(_,zo,_,_,_)),[]),
-    lists:select(PREDC,Ds2,[CP]),
-    CP = tree(r(su,p(cp)),CPDS0),
-    DAT = tree(r(cmp,adt_lex(_,dat,_,_,_)),[]),
-    lists:select(DAT,CPDS0,[BODY]),
-    BODY = tree(r(body,p(ssub)),BODYDS0),
-    A0 = tree(r(hd,adt_lex(_,ARR1,ARR2,ARR3,ARR4)),[]),
-    A1 = tree(r(hd,adt_lex(smain,ARR1,ARR2,ARR3,ARR4)),[]),
-    replace(A0,A1,BODYDS0,BODYDS).
-
 subjects(List0,List) :-
     S1 = tree(r(su,L1),_),
     lists:member(S1,List0),

@@ -3,12 +3,16 @@
 %% TODO:
 %% only raise if you unraised before...
 %% counter-examples: su sbar if no sup
+%%
+%% TODO:
+%% do not unpassivize if you share subject with
+%% other conjunct
+%% "dat wil niet zeggen dat alle wordt doorgezet en ons vertrouwen geniet"
 apply_passive_transformations(Tree0,Tree) :-
     apply_unraise_transformations(Tree0,Tree1),
     hdrug_util:debug_call(2,hdrug_show:show(tree(adt),user,[value(Tree1)])),
     passive_transformations(Tree1,Tree2,[]),
     Tree1 \= Tree2,
-    hdrug_util:debug_call(2,hdrug_show:show(tree(adt),user,[value(Tree2)])),
     apply_raise_transformations(Tree2,Tree),
     hdrug_util:debug_call(2,hdrug_show:show(tree(adt),user,[value(Tree)])),
     !.
@@ -17,6 +21,7 @@ apply_passive_transformations(Tree,Tree).
 passive_transformations(tree(Cat0,Ds0),tree(Cat,Ds),C) :-
     passive_transformation(Cat0,Ds0,Cat1,Ds1,C),
     !,
+    hdrug_util:debug_call(2,hdrug_show:show(tree(adt),user,[value(tree(Cat1,Ds1))])),
     passive_transformations(tree(Cat1,Ds1),tree(Cat,Ds),C).
 passive_transformations(tree(Cat,Ds0),tree(Cat,Ds),C) :-
     Cat = r(Rel,X),
