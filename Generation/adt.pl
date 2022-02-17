@@ -343,7 +343,7 @@ bitcode_lookup_frames_adt(adt_lex(Cat,Root,Sense,PosTag,Attrs),
 
     %%% check if Root is uninstantiated, in that case attempt to guess it
     %%% from lemma or sense information in Attrs
-    alpino_genlex:frames_and_particles(Root,Sense,PosTag,Attrs,Parts,Frames),
+    alpino_genlex:frames_and_particles(Root,Sense,PosTag,Attrs,Cat,Parts,Frames),
     length(Parts,PartsLength),
     NBits is PartsLength + 1,
     give_bits(NBits, Bits),

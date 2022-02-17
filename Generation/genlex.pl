@@ -7,11 +7,11 @@
 :- use_module(alpino('src/utils')).
 :- use_module(alpino('src/latin1')).
 :- use_module(bitcode).
+:- use_module('fluency/stem_word_freq').
 
 %% all called from cg.pl
-:- public filter_tags/0, pos2frames/5, check_conditions/4,
+:- public check_conditions/4,
           dict_entry/3, surf_to_list/3, lex_lookup/1.
-
 
 lex_lookup(AdtNoRefs) :-
     retractall(alpino_cg:lex(_,_,_,_,_,_)),
@@ -152,10 +152,10 @@ assert_particles_lex([Particle|RestParticles],Bc,FinalBc) :-
     assert_particles_lex(RestParticles,BcRest,FinalBc).
 
 :- public attr_particles/2.  % called from adt.pl
-:- public frames_and_particles/6.  % called from adt.pl
+:- public frames_and_particles/7.  % called from adt.pl
 
-frames_and_particles(Root,Sense,PosTag,Attrs,Parts,Frames) :-
-    pos2frames(Root,Sense,PosTag,Attrs,Frames),
+frames_and_particles(Root,Sense,PosTag,Attrs,Cat,Parts,Frames) :-
+    pos2frames(Root,Sense,PosTag,Cat,Attrs,Frames),
     findall(Part,frames_particle(Frames,Part),Parts0),
     sort(Parts0,Parts).
 
@@ -387,6 +387,10 @@ simplify_lemma(v_root(Root0,_),Root) :-
     Root0=Root.
 simplify_lemma(Root,Root).
 
+root_surface(Root,Surf,[SurfAtom|SurfList]) :-
+    alpino_lex:inv_lex(Root,Surf),
+    split_atom(Surf," ",[SurfAtom|SurfList]).
+
 root_surface(Root,SurfAtom,SurfList) :-
     split_atom(Root," ",AtomList),
     root_surface_list(AtomList,SurfList,[]),
@@ -445,38 +449,39 @@ atom_or_list([H|T],F,[F,H|T]).
 % POS tag and attributes to frames %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-pos2frames(Root,Sense,Pos,Attr,Frames) :-
+pos2frames(Root,Sense,Pos,Cat,Attr,Frames) :-
     findall(Frame-Surfs,
-            pos2frames_aux(Root,Sense,Pos,Attr,Frame,Surfs),
+            pos2frames_aux(Root,Sense,Pos,Cat,Attr,Frame,Surfs),
             Frames0),
     (  var(Sense)  -> Sense = Root ; true ),
     (  var(Root)   -> Sense = Root ; true ),
     root_mismatch_heuristics(Frames0,Frames1,Root,Sense,Pos,Attr),
-    tag_mismatch_heuristics(Frames1,Frames2,Root,Sense,Pos,Attr),
-    unknown_root_heuristics(Frames2,Frames3,Root,Sense,Pos,Attr),
-    last_resort_heuristics(Frames3,Frames4,Root,Sense,Pos,Attr),
-%    added_paraphrase_heuristics(Frames4,Frames5,Root,Sense,Pos,Attr),
+    unknown_root_heuristics(Frames1,Frames2,Root,Sense,Pos,Attr),
+    last_resort_heuristics(Frames2,Frames3,Root,Sense,Pos,Attr),
+    tag_mismatch_heuristics(Frames0,Frames3,Frames4,Root,Sense,Pos,Attr),
     prefer_best_words_in_frames(Root,Frames4,Frames5),
     added_paraphrase_heuristics(Frames5,Frames,Root,Sense,Pos,Attr).   % add later, so are not removed
 
-pos2frames_aux(Root,Sense,Pos,Attr,Frame,Surfs) :-
+pos2frames_aux(Root,Sense,Pos,Cat,Attr,Frame,Surfs) :-
     setof(Surf,dict_entry(Root,Frame,Surf),Surfs),
     alpino_treebank:frame2sense(Root,Frame,Sense),
     alpino_postags:postag_of_frame(Frame,Pos,CheckAttr),
-    check_attributes(CheckAttr,Attr,Pos,Frame,Root).
+    check_attributes(CheckAttr,Attr,Pos,Frame,Root),
+    \+ wrong_cat(Frame,Cat).
 
-pos2frames_aux_robust(Root,Sense,Pos,Attr,Frame,Surfs) :-
+pos2frames_aux_robust(Root,Sense,Pos,Cat,Attr,Frame,Surfs) :-
     setof(Surf,dict_entry_robust(Root,Frame,Surf),Surfs),
     alpino_treebank:frame2sense(Root,Frame,Sense),
     alpino_postags:postag_of_frame(Frame,Pos,CheckAttr),
-    check_attributes(CheckAttr,Attr,Pos,Frame,Root).
+    check_attributes(CheckAttr,Attr,Pos,Frame,Root),
+    \+ wrong_cat(Frame,Cat).
 
 root_mismatch_heuristics([H|T],[H|T],_,_,_,_).
 root_mismatch_heuristics([],Frames,Lemma,_Sense,Pos,Attr) :-
     alpino_lex:lexicon(_,RealStem,[Lemma],[],_),
     atomic(RealStem),
     findall(Frame-Surfs,
-            pos2frames_aux(RealStem,RealStem,Pos,Attr,Frame,Surfs),
+            pos2frames_aux(RealStem,RealStem,Pos,_,Attr,Frame,Surfs),
             Frames),
     Frames = [_|_],
     debug_message(2,"assuming root '~w' is specified as lemma '~w' in ADT~n",
@@ -484,17 +489,17 @@ root_mismatch_heuristics([],Frames,Lemma,_Sense,Pos,Attr) :-
     !.
 root_mismatch_heuristics([],[],_,_,_,_).
 
-tag_mismatch_heuristics([H|T],[H|T],_,_,_,_).
-tag_mismatch_heuristics([],Frames,Root,Sense,Pos,Attr) :-
+tag_mismatch_heuristics([_|_],Fs,Fs,_,_,_,_).
+tag_mismatch_heuristics([],Frames0,Frames,Root,Sense,Pos,Attr) :-
     (   Pos == prefix
-    ->  Frames = []
-    ;   findall(Frame-Surfs,pos2frames_aux(Root,Sense,_,Attr,Frame,Surfs),Frames0),
+    ->  Frames0 = Frames
+    ;   findall(Frame-Surfs,pos2frames_aux(Root,Sense,_,_,Attr,Frame,Surfs),Frames1,Frames0),
 	(   Pos == noun,
 	    \+ (  nonvar(Sense), sub_atom(Sense,_,_,_,'_') ),
 	    \+ (  nonvar(Sense), sub_atom(Sense,_,_,_,' ') ),
 	    \+ Attr = [_|_]
-	->  Frames = [noun(both,both,both)-[Sense]|Frames0]
-	;   Frames = Frames0
+	->  Frames = [noun(both,both,both)-[Sense]|Frames1]
+	;   Frames1 = Frames
 	)    
     ).
 
@@ -617,13 +622,18 @@ filter_tags :-
     ).
 
 %% these are *local* checks; there could also be co-occurrences checks.
-check_conditions(Frame,_,SimpleDt,REL) :-
+check_conditions(Frame,Dt,SimpleDt,REL) :-
     findall(Check,condition(Frame,Check),Checks),
     (   \+ apply_checks(Checks,SimpleDt,REL)
     ->  debug_message(3,"frame ~w discarded~n",[Frame]),
 	fail
     ;   true
-    ).
+    ),
+    \+ \+ lookup(Frame,Dt).
+
+lookup(Frame,Dt) :-
+    alpino_lex_types:lex(Cat,Frame,_,_),  % ignore constrains for now, because not all lexical items are present
+    alpino_data:dt(Cat,Dt).
 
 apply_checks([],_,_).
 apply_checks([H|T],Dt,REL) :-
@@ -651,9 +661,9 @@ er_tag(er_wh_loc_adverb). % waar
 er_tag(iets_adverb).      % ergens nergens (anders)
 er_tag(wh_iets_adverb).   % waar (anders)
 
-condition(determiner(der),des_der).
-condition(determiner(ener),des_der).
-condition(determiner(des),des_der).
+condition(determiner(der),der).
+condition(determiner(ener),der).
+condition(determiner(des),des).
 condition(postnp_adverb,rel(mod)).
 condition(postadv_adverb,(mcat(advp);mcat(pp))).
 condition(postadj_adverb,mcat(ap)).
@@ -706,6 +716,7 @@ pc_adv_condition(NotVan,Cond0,(Cond0,(rel(pc);rel(whd);rel(rhd);rel(obj1)))) :-
     !.
 pc_adv_condition(_NotVan,Cond,Cond).
 
+
 condition_infl(Infl,_,Cond) :-
     condition_infl(Infl,Cond).
 condition_infl(X, SC, not_plural_su) :-
@@ -746,6 +757,19 @@ condition_infl(X, not_first_person) :-
 
 condition_infl(X, not_third_person) :-
     not_third_infl(X).
+
+condition_infl(sg_bent,not_first_person).
+condition_infl(sg_bent,not_third_person).
+
+condition_infl(sg_heeft,not_first_person).
+condition_infl(sg_heeft,not_second_person).
+
+condition_infl(sg_is,not_first_person).
+condition_infl(sg_is,not_second_person).
+
+condition_infl(sg1,not_u_person).
+
+condition_infl(sg_hebt,not_third_person).
 
 condition_infl(imp(_),not_su).
 
@@ -874,7 +898,9 @@ condition_sc(als_pred_np,predc).
 
 condition_sc(ninv(L,_),Cond) :-
     condition_sc(L,Cond).
-condition_sc(ninv(_,_),ninv).
+condition_sc(ninv(L,_),ninv) :-
+    \+ L = incorporated_subj_topic(_).
+
 condition_sc(incorporated_subj_topic(L),Cond) :-
     condition_sc(L,Cond).
 condition_sc(fixed(List,_),Cond) :-
@@ -1048,6 +1074,22 @@ apply_check(not_third_person,DT,_) :-
     !,
     fail.
 
+apply_check(not_second_person,DT,_) :-
+    DT:su:attrs <=> List,
+    nonvar(List),  % how does this happen?
+    lists:member(per=je,List),
+    !,
+    fail.
+apply_check(not_second_person,_,_).
+
+apply_check(not_u_person,DT,_) :-
+    DT:su:attrs <=> List,
+    nonvar(List),  % how does this happen?
+    lists:member(per=u,List),
+    !,
+    fail.
+apply_check(not_u_person,_,_).
+
 %%% things with a determiner are "always" third person
 apply_check(not_third_person,DT,_) :-
     DT:su:det <=> [_|_],
@@ -1172,8 +1214,11 @@ apply_check(svp_pp(P,N),Dt,_) :-
     obj1(PP,NP),
     root(NP,N).   
 
-apply_check(des_der,_,Path) :-
-    apply_des_der(Path).
+apply_check(des,_,Path) :-
+    apply_des(Path).
+
+apply_check(der,_,Path) :-
+    apply_der(Path).
 
 apply_check(mcat(Cat),_,[_,_/Cat|_]).
 
@@ -1231,15 +1276,29 @@ apply_check(mod_pp(Prep),Dt,_Path) :-
     member(El,List),
     has_prep(El,Prep).
 
-apply_des_der(Path) :-
-    \+ simple_des_der(Path),
-    \+ conj_des_der(Path).
+apply_der(Path) :-
+    \+ simple_der(Path),
+    \+ conj_der(Path).
 
-simple_des_der([det,Rel/_|_]) :-
-    lists:member(Rel,[su,obj1,obj2,body]).
+apply_des(Path) :-
+    \+ simple_des(Path),
+    \+ conj_des(Path).
 
-conj_des_der([det,cnj/_,Rel/_|_]) :-
+simple_des([det,Rel/_|_]) :-
     lists:member(Rel,[su,obj1,obj2,body]).
+simple_des([det,mod/np,_/Cat|_]) :-
+    \+ Cat = np.
+
+conj_des([det,cnj/_,Rel/Cat|Rest]) :-
+    simple_des([det,Rel/Cat|Rest]).
+
+simple_der([det,Rel/_|_]) :-
+    lists:member(Rel,[su,obj1,obj2,body,predc]).
+simple_der([det,mod/np,_/Cat|_]) :-
+    \+ Cat = np.
+
+conj_der([det,cnj/_,Rel/Cat|Rest]) :-
+    simple_der([det,Rel/Cat|Rest]).
 
 has_prep(El,Prep) :-
     root(El,Prep0),
@@ -1444,7 +1503,7 @@ prep(Prep,ErPrep) :-
     ; atom_concat(Er,af,ErPrep)
     ).
 
-unknown_root_heuristics([Fr0|Fr],[Fr0|Fr],_Root,_Sense,_Pos,_Attr).
+unknown_root_heuristics([Fr|Frs],[Fr|Frs],_Root,_Sense,_Pos,_Attr).
 unknown_root_heuristics([],Frames,Root,Sense,Pos,Attr) :-
     findall(Frame-Surf,
             unknown_root_heuristic(Pos,Root,Sense,Attr,Frame,Surf),Frames0),
@@ -1465,33 +1524,41 @@ prefer_best_words_in_frames_(Root,[Frame-Surfs0|Frames0],[Frame-Surfs|Frames]):-
     prefer_best_words_in_frames_(Root,Frames0,Frames).
 
 %%% prefer_best
-%%% mwu will always be dis-prefered over single words
-
-prefer_best_words(Root,Surfs0,[Word|Surfs]) :-
+%%% ensure that order is not changed in case of a tie
+%%% since we prefer e.g. zenuwactiviteit over zenuwaktiviteit (activiteit precedes aktiviteit in dict)
+prefer_best_words(Root,Surfs0,Surfs) :-
     (   Surfs0 = [_]
-    ->  Surfs0 = [Word],Surfs = []
+    ->  Surfs0 = [Word],Surfs = [Word]
     ;   score_words(Root,Surfs0,Surfs1),
-	keysort(Surfs1,[F0-Word|Surfs2]),
-	filter_best(Surfs2,F0,Surfs)
+	filter_best(Surfs1,Surfs)
     ).
 
-filter_best([],_,[]).
-filter_best([Score-W|Ws],F,Result) :-
-    (   Score =< F
-    ->  Result=[W|Rest],
-	filter_best(Ws,F,Rest)
-    ;   Result=[]
+filter_best([],[]).
+filter_best([Score-Word|Words],Result) :-
+    filter_best(Words,Score,[Word|Rest],Rest,Result).
+
+filter_best([],_,Result,[],Result).
+filter_best([Score-Word|Words],Score0,R0,R,Result):-
+    (   Score > Score0
+    ->  filter_best(Words,Score,[Word|Rest],Rest,Result)
+    ;   Score =:= Score0
+    ->  R=[Word|R1],
+	filter_best(Words,Score,R0,R1,Result)
+    ;   filter_best(Words,Score0,R0,R,Result)
     ).
 
 score_words(_,[],[]).
 score_words(Root,[W|Ws],[F-W|Ws1]) :-
-    alpino_ngram_lm:unigram_fluency([W],F0),
+    (   lemma_word_freq(Root,W,F0)
+    ->  true
+    ;   F0 = 0
+    ),
     subtract_if_para(Root,W,F0,F),
     score_words(Root,Ws,Ws1).
 
 subtract_if_para(Root,W,F0,F) :-
     alpino_paraphrase:add_lex(Root,W,_),!,
-    F is F0 - 0.1.
+    F is F0 + 1.
 subtract_if_para(_,_,F,F).
 
 unknown_root_heuristic(Pos,{RootList},Root,Atts,Pos,Surfs) :-
@@ -1528,19 +1595,19 @@ unknown_root_heuristic(verb,Root,_,Attr,Frame,Surfs) :-
     atom_concat(Verb,Rest,Root),
     atom_concat('_',Part,Rest),
     dict_entry(Part,particle(Part),_),
-    pos2frames_aux_robust(Verb,_,verb,Attr,Frame0,Surfs0),
+    pos2frames_aux_robust(Verb,_,verb,_,Attr,Frame0,Surfs0),
     add_bare_prefixes(Frame0,Frame,Surfs0,Part,Surfs).
 
 unknown_root_heuristic(Pos,Root,_,Attr,Frame,Surfs) :-
     atom_concat(Prefix,Rest,Root),
     atom_concat(Pref,'_',Prefix),
-    pos2frames_aux(Rest,__Sense,Pos,Attr,Frame,Surfs0),
+    pos2frames_aux(Rest,__Sense,Pos,_,Attr,Frame,Surfs0),
     add_prefixes(Surfs0,Pref,Surfs,'_').
 
 unknown_root_heuristic(Pos,Root,_,Attr,Frame,Surfs) :-
     atom_concat(Prefix,Rest,Root),
     atom_concat(Pref,' ',Prefix),
-    pos2frames_aux(Rest,__Sense,Pos,Attr,Frame,Surfs0),
+    pos2frames_aux(Rest,__Sense,Pos,_,Attr,Frame,Surfs0),
     add_prefixes(Surfs0,Pref,Surfs,' ').
 
 unknown_root_heuristic(num,Root,_,[],number(hoofd(pl_num)),[Root]) :-
@@ -1560,7 +1627,7 @@ unknown_root_heuristic(num,Lemma,_Sense,Attr,Frame,[LemmaDe]) :-
 %% op een INF (hij zet het op een lopen)
 unknown_root_heuristic(fixed,Root,Root,[],fixed_part(op_een_v),FinalSurfs) :-
     atom_concat('op een ',Loop,Root),
-    pos2frames(Loop,Loop,verb,[],Frames),
+    pos2frames(Loop,Loop,verb,_,[],_,Frames),
     findall(Surfs0,lists:member(verb(_,inf,_)-Surfs0,Frames), SurfsList0),
     sort(SurfsList0,SurfsList1),
     findall(FinalSurf, (   member(Surfs,SurfsList1),
@@ -2064,3 +2131,15 @@ short_sbar_subj(ap_pp_copula_sbar).
 short_sbar_subj(part_ap_pp_copula_sbar(_)).
 short_sbar_subj(fixed(List,_)) :-
     lists:member(sbar_subj,List).
+
+wrong_cat(adjective(Infl),Cat) :-
+    nonvar(Cat),
+    wrong_adj_cat(Infl,Cat).
+wrong_cat(adjective(Infl,_),Cat) :-
+    nonvar(Cat),
+    wrong_adj_cat(Infl,Cat).
+
+wrong_adj_cat(end(_),ap).
+wrong_adj_cat(ende(_),ap).
+
+

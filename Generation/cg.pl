@@ -1219,18 +1219,21 @@ pack_edge(inactive_edge(__SynSem,Bitcode,Ds),fs(Hash,Copy,Bitcode,Cons)) :-
     assert_history(N,Ds).
 
 %%%%%%%
-
+%%% survive if at least one of your derivs is not ruled out
 filter_edge(Id,DtrPs) :-
-    rule_out(Id,_Pattern),  % don't bother if there is no filter
-    !,
-    unpack_rules(Id,DtrPs,tree(Rule,Ds)),
-    \+ rule_out(Rule,Ds),
-    !.
-filter_edge(_,_).
+    (   rule_out(Id,_)        % only try if there is a filter for this rule anyway
+    ->  unpack_rules(Id,DtrPs,tree(Rule,Ds)),
+	\+ rule_out(Rule,Ds),
+	!
+    ;   true
+    ).
+
 
 %%
 %%
 %%
+
+rule_out(n_n_mod(komma),[_,_,tree(modifier_p(1),_),_]).
 rule_out(n_n_modroot(min),
 	 [_,_,tree(top_start_xp,[tree(max_xp(post_pp),_)]),_]
 	).
@@ -1252,7 +1255,12 @@ rule_out(n_n_modroot(haak),
 rule_out(n_n_modroot(haak),
 	 [_,_,tree(top_start_xp,[tree(max_xp(om_rel),_)]),_,_]
 	).
-rule_out(n_n_mod_a,[_,l(_)]).
+rule_out(n_n_mod_a,[_,l(ref(Tag,_,_,_,_,_,_,_,_,_,_))]) :-
+    lists:member(Tag,[adjective(ge_no_e(_)),
+		      adjective(end(_)),
+		      adjective(ende(_)),
+		      adjective(ge_both(_))
+		     ]).
 rule_out(n_n_mod_a,[_,tree(a_part_a,_)]).
 rule_out(n_n_mod_a,[_,tree(a_pred_a,_)]).
 rule_out(n_n_mod_a,[_,tree(a_a_np_comp,_)]).
@@ -1596,20 +1604,22 @@ has_rel(tree(_,Ds),R) :-
     lists:member(D,Ds),
     has_rel(D,R).
 
-rel_has_cat(tree(r(Rel,p(Cat)),_),Rel,Cat).
-rel_has_cat(tree(r(Rel,i(_,p(Cat))),_),Rel,Cat).
-rel_has_cat(tree(r(Rel,adt_lex(Cat,_,_,_,_)),_),Rel,Cat).
-rel_has_cat(tree(r(Rel,i(_,adt_lex(Cat,_,_,_,_))),_),Rel,Cat).
+rel_has_cat(tree(r(Rel,Val),_),Rel,Cat):-
+    has_cat0(Val,Cat).
 rel_has_cat(tree(_,Ds),Rel,Cat) :-
     lists:member(D,Ds),
     rel_has_cat(D,Rel,Cat).
 
-has_cat(tree(r(_,p(Cat)),_),Cat).
-has_cat(tree(r(_,adt_lex(Cat,_,_,_,_)),_),Cat).
-has_cat(tree(r(_,i(_,p(Cat))),_),Cat).
+has_cat(tree(r(_,Val),_),Cat):-
+    has_cat0(Val,Cat).
 has_cat(tree(_,Ds),R) :-
     lists:member(D,Ds),
     has_cat(D,R).
+
+has_cat0(p(Cat),Cat).
+has_cat0(adt_lex(Cat,_,_,_,_),Cat).
+has_cat0(i(_,Val),Cat) :-
+    has_cat0(Val,Cat).
 
 mod_has_root(tree(r(mod,Cat),_)) :-
     root(Cat).
@@ -1617,12 +1627,14 @@ mod_has_root(tree(_,Ds)) :-
     lists:member(D,Ds),
     mod_has_root(D).
 
-root(p(smain)).
-root(p(sv1)).
-root(p(whq)).
+root(p(Cat)):-
+    root0(Cat).
 root(i(_,X)):-
     root(X).
 
+root0(smain).
+root0(sv1).
+root0(whq).
 
 :- public analyse_edges/0.
 
