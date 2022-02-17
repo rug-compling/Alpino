@@ -101,7 +101,7 @@ $(DISK)/tag-trigrams.tpl: $(DISK)/tag-trigrams $(DISK)/tags.fsa
 	$(MAKETUPLE) total=4 words=3 sep='	' out=$(DISK)/tag-trigrams.tpl $(DISK)/tag-trigrams +$(DISK)/tags +$(DISK)/tags +$(DISK)/tags
 
 targets = $(DISK)/bigrams.tpl  $(DISK)/tag-bigrams.tpl  $(DISK)/tags.fsa  $(DISK)/tag-trigrams.tpl \
-          $(DISK)/tag-unigrams.tpl  $(DISK)/trigrams.tpl  $(DISK)/unigrams.tpl  $(DISK)/words.fsa
+          $(DISK)/tag-unigrams.tpl  $(DISK)/trigrams.tpl  $(DISK)/unigrams.tpl  $(DISK)/words.fsa $(DISK)/stem_word_freq.pl
 
 temps = $(DISK)/words $(DISK)/tags $(DISK)/unigrams $(DISK)/bigrams $(DISK)/trigrams\
         $(DISK)/tag-unigrams $(DISK)/tag-bigrams $(DISK)/tag-trigrams $(DISK)/*.wd[012]
@@ -156,4 +156,30 @@ evaluate:
 # threshold 10, only AD1994
 # total score 1141197.0 after 7136 sentences
 # total score 1377176.0 after 7136 sentences
+
+LOGS=$(PARTS:%=$(DIR)/%.log.gz )
+
+$(DISK)/stem_word:
+	zcat $(LOGS) \
+        | grep '^FRAME#' \
+        | awk -F\| '{ print $$8 "|" $$1 }' \
+        | sed -e 's/FRAME#//'  \
+        | sort \
+        | uniq -c \
+        | sed -e 's/^\(.......\) /\1|/' \
+        > $(DISK)/stem_word
+
+THR=5
+$(DISK)/stem_word_freq: $(DISK)/stem_word
+	cat $(DISK)/stem_word \
+        | awk -F\| '{ if ($$1 > $(THR)) { print $$0 }}'\
+        | awk -F\| '{ if (P==$$2 && ok==0) { print L; print $$0; ok=1} else {if (P==$$2 && ok==1)  print $$0 ; else { ok=0} } ; P=$$2; L=$$0}'\
+        | awk -F\| '{ printf "%s\t%s\t%d\n",$$2,$$3,$$1 }' \
+        > $(DISK)/stem_word_freq
+
+$(DISK)/stem_word_freq.pl: toprolog.pl
+	echo ":- module(alpino_lemma_word_freq,[ lemma_word_freq/3 ])." > $(DISK)/stem_word_freq.pl
+	echo >> $(DISK)/stem_word_freq.pl
+	Alpino debug=0 cmdint=off -u  -notk -l toprolog < disk/stem_word_freq >> $(DISK)/stem_word_freq.pl
+
 
