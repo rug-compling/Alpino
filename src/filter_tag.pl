@@ -1408,7 +1408,9 @@ check_subject_pred_vp(P0,P) :-
     check_vform(te,P0,P).
 
 check_adj_subject_pred_sbar(P0,P) :-
-    (	check_tag(adjective(_,subject_sbar),P0,P)
+    (	check_tag(adjective(_,subject_vp_sbar_no_het),P0,P)
+    ;	check_tag(adjective(_,subject_vp_sbar),P0,P)
+    ;	check_tag(adjective(_,subject_sbar),P0,P)
     ;	check_tag(adjective(_,subject_sbar_no_het),P0,P)
     ;	check_tag(adjective(_,pp_subject_sbar(_)),P0,P)
     ;	check_tag(adjective(_,pp_subject_sbar_no_het(_)),P0,P)
