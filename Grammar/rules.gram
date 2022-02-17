@@ -4253,7 +4253,6 @@ grammar_rule(det_np_det,DP,[NP,DET]) :-
     DP:exs => [],
     hd_mod_structure(DET,NP,DP0).
 
-%% re-implemented in order to satisfy requirements of CGN annotation guide
 grammar_rule(np_det_n, NP, [ Det, N ] ) :-
     np_det_n_structure(NP,Det,N).
 
@@ -10165,6 +10164,10 @@ coord_daughter_paths(L,M) :-
     %% removed tmploc: 'overal en altijd'
     %% ccat0 is not right either: 'niet of te weinig'
     %% removed redrel: "Dat zal afhangen van wat je gebruikt en de behoeften van de gebruiker"
+
+    %% e_deps: not quite right:
+    %%         het is nodig en wenselijk dat hij arriveert
+    %%         does not work because of subj_nform opt_het vs obl_het
     Paths = [vform,aform,nform,wh,app,tpart,amount,exs,cleft,
              compar_form,vslash,relform,ld_pc,me_adj,adj_can_postv,
              modifies_a,slash,sc,parts,pro_deps,e_deps,pred,has_app2,
@@ -10514,6 +10517,8 @@ conjunction_cat(comp,V,Crd,ETC) :-
 
 conjunction_cat(modifier,V,Crd,_) :-
     V => modifier,
+    V:hstem <=> STEM,
+    dif(STEM,er),
     V:mcat => ~mcat_bracket,  % also to prevent "vandaag en vooral (in Assen)"
     (   hdrug_util:hdrug_flag(parse_or_generate,parse),
 	Crd => ~no_crd
