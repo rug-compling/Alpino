@@ -5349,8 +5349,8 @@ m(Stem, waar_adverb(Prep), Surf ):-
 
 m(Stem,waar_adverb(Prep), Words) :-
     collocational_preposition(Prep),
-    stem_from_surf(Prep,Stem),
-    replace_last_adverbial(Prep,Words,waar).
+    replace_last_adverbial(Prep,Words,waar),
+    stem_from_surf(Words,Stem).
 
 m(Stem, er_adverb(Prep), Surf ):-
     er_adverb(Surf,Prep),
@@ -5358,11 +5358,11 @@ m(Stem, er_adverb(Prep), Surf ):-
 
 m(Stem,er_adverb(Prep),Words) :-
     collocational_preposition(Prep),
-    stem_from_surf(Prep,Stem),
     (	replace_last_adverbial(Prep,Words,daar)
     ;   replace_last_adverbial(Prep,Words,er)
     ;   replace_last_adverbial(Prep,Words,hier)
-    ).
+    ),
+    stem_from_surf(Words,Stem).
 
 %% todo: ten koste van wie/wat
 
