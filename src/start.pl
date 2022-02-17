@@ -887,6 +887,7 @@ check_flags :-
 
 %% hdrug_hook
 start_hook0(parse,_,o(_,Wg,_),_):-
+    clear_additional_lexical_entries,
     lexical_analysis(Wg).
 
 construct_identifier(Key,No,Identifier) :-
@@ -3322,7 +3323,8 @@ paraphrase_continue(Chars,Cat,Result,Start) :-
     flag(demo,Demo),
     alpino_dt:result_to_dt(Cat,Dt),
     alpino_adt:dt_to_adt(Dt,Adt0),
-    
+
+    clear_additional_lexical_entries,
     save_additional_lexical_entries(Cat),
 
     (   Demo == on
@@ -3409,9 +3411,11 @@ create_parse_prompt(Prompt):-
     ),
     name(Prompt,Chars).
 
-save_additional_lexical_entries(Cat) :-
+clear_additional_lexical_entries :-
     retractall(alpino_paraphrase:add_lex(_,_,_)),
-    retractall(alpino_paraphrase:add_root(_)),
+    retractall(alpino_paraphrase:add_root(_)).
+
+save_additional_lexical_entries(Cat) :-
     alpino_format_syntax:result_to_frames(Cat,Frames,_),
     save_frames(Frames).
 
@@ -3445,8 +3449,9 @@ save_frame(frame(_P0,_P,_Q0,_Q,Stem0,Frame,Surf,His)):-
 	)
     ->  true
     ;   alpino_genlex:simplify_lemma(Stem0,Stem),
-	alpino_paraphrase:noclp_assertz(add_lex(Stem,Surf,Frame)),
-	add_roots(Frame,Stem)
+	hdrug_util:un_prettyvars(Frame,Frame1),
+	alpino_paraphrase:noclp_assertz(add_lex(Stem,Surf,Frame1)),
+	add_roots(Frame1,Stem)
     ).
 
 add_roots(with_dt(_,_),Stem) :-
