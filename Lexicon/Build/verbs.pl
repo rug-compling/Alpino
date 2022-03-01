@@ -1020,6 +1020,7 @@ m(v_root(wil,willen),
         part_pc_er_transitive(aan),    % omdat zij er niet aanwilden
 
 	%% eigenlijk kan dat niet: verplichte modifier...
+	%% maar een tweede pc kan óók niet :-(
 	fixed([er_pp(in),nor_mod_pp(bij)],no_passive), % deze redenering wil er bij mij niet in
 	fixed([er_pp(in),nor_mod_pp(bij),sbar_subj],no_passive), % het wil er bij mij niet in dat ...
 	     % ik wil (het) niet hebben dat ...
@@ -16151,7 +16152,8 @@ v(opper,oppert,opperen,geopperd,opperde,opperden,
     [h([intransitive,
 	sbar,
 	transitive,
-	vp])]).
+	vp_no_control
+       ])]).
 
 v(opteer,opteert,opteren,geopteerd,opteerde,opteerden,
     [h([intransitive,
@@ -25050,7 +25052,8 @@ v(verlam,verlamt,verlammen,verlamd,verlamde,verlamden,
 v(verlang,verlangt,verlangen,verlangd,verlangde,verlangden,
     [h([sbar,
 	transitive,
-	vp,
+	vp,			% su control is not correct
+	                        % we verlangen van de EU de democratie te stimuleren
 	np_pc_pp(van),
 	part_intransitive(terug),
 	part_pc_pp(terug,naar),
@@ -26149,8 +26152,9 @@ v(vervoeg,vervoegt,vervoegen,vervoegd,vervoegde,vervoegden,
 	refl_ld_pp])]).
 
 v(vervoer,vervoert,vervoeren,vervoerd,vervoerde,vervoerden,
-    [h([transitive,
-        np_mod_pp(in)])]).
+  [h([transitive,
+      intransitive,
+      np_mod_pp(in)])]).
 
 v(vervolg,vervolgt,vervolgen,vervolgd,vervolgde,vervolgden,
     [h([transitive,

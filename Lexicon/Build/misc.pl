@@ -1714,9 +1714,15 @@ with_dt([niet,in,de,laatste,plaats],
 
 with_dt([al,te,zeer],
 	adverb,
-	dt(advp,[hd=l(zeer,adverb,2,3),
+	dt(advp,[hd=l(zeer,adverb,advp,2,3),
 		 mod=dt(advp,[mod=l(al,adverb,advp,0,1),
-			      hd=l(te,intensifier,1,2)])
+			      hd=l(te,intensifier,advp,1,2)])
+		])).
+
+with_dt([te,zeer],
+	adverb,
+	dt(advp,[hd=l(zeer,adverb,advp,1,2),
+		 mod=l(te,intensifier,advp,0,1)
 		])).
 
 %%%%%%%%%%%%%%%%%%%%%
@@ -1938,7 +1944,7 @@ m('de ene na de andere',determiner(de,nwh,nmod,pro,yparg), [de,een,na,de,andere]
 
 m(al,          determiner(alle,nwh,mod,pro,nparg), alle).
 m(al,          determiner(der),                aller).
-m(al,          determiner(pron),               aller).
+%%m(al,          determiner(pron),               aller). ??
 m(allerlei,      determiner(wat,nwh,mod,pro,yparg),                allerlei).
 m(andermans,     determiner(pron),               andermans).
 m(dat,           determiner(het,nwh,nmod,pro,nparg),      dat).
@@ -3596,7 +3602,7 @@ m(naar,             preposition(naar,[],tmp_adv),            naar).
 m(per,              preposition(per,[],tmp_adv),             per).
 m(sedert,           preposition(sedert,[],tmp_adv),          sedert).
 m(sinds,            preposition(sinds,[],tmp_adv),           sinds).
-m(tegen,            preposition(sinds,[],tmp_adv),           tegen).
+m(tegen,            preposition(tegen,[],tmp_adv),           tegen).
 m(tot,              preposition(tot,[toe],tmp_adv),          tot).
 m('tot en met',     preposition([tot,en,met],[],tmp_adv),    [tot,en,met]).
 m('tot en met',     preposition([tot,en,met],[],tmp_adv),    [t,/,m]).
@@ -4020,7 +4026,7 @@ with_dt([liever,vandaag,dan,morgen],
 	sentence_adverb,
 	dt(du,[dp=l(vandaag,tmp_adverb,advp,1,2),
 	       dp=dt(ap,[hd=l(lief,adjective(er(adv)),0,1),
-			 obcomp=dt(cp,[cmp=l(dan,comparative(dan),cp,2,3),
+			 obcomp=dt(cp,[cmp=l(dan,comparative(dan),comparative,2,3),
 				       body=l(morgen,tmp_adverb,advp,3,4)])])])).
 
 %%%%%%%%%%%%%%%%%%%%%%
@@ -5227,62 +5233,62 @@ with_dt([vanwaar,toch,altijd],
                 ])).
 
 with_dt([waarom,dan],
-        wh_adverb,
-        dt(advp,[hd=l(waarom,wh_adverb,0,1),
+        waar_adverb(om),
+        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
                  mod=l(dan,tmp_adverb,advp,1,2)
                 ])).
 
 with_dt([waarom,dan,toch],
-        wh_adverb,
-        dt(advp,[hd=l(waarom,wh_adverb,0,1),
+        waar_adverb(om),
+        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
                  mod=l(dan,tmp_adverb,advp,1,2),
                  mod=l(toch,adverb,advp,2,3)
                 ])).
 
 with_dt([waarom,eigenlijk,niet],
-        wh_adverb,
-        dt(advp,[hd=l(waarom,wh_adverb,0,1),
+        waar_adverb(om),
+        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
                  mod=l(eigenlijk,adjective(no_e(adv)),ap,1,2),
                  mod=l(niet,adverb,advp,2,3)
                 ])).
 
 with_dt([waarom,dan,toch,altijd],
-        wh_adverb,
-        dt(advp,[hd=l(waarom,wh_adverb,0,1),
+        waar_adverb(om),
+        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
                  mod=l(dan,tmp_adverb,advp,1,2),
                  mod=l(toch,adverb,advp,2,3),
                  mod=l(altijd,sentence_adverb,advp,3,4)
                 ])).
 
 with_dt([waarom,niet],
-        wh_adverb,
-        dt(advp,[hd=l(waarom,wh_adverb,0,1),
+        waar_adverb(om),
+        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
                  mod=l(niet,adverb,advp,1,2)
                 ])).
 
 with_dt([waarom,toch],
-        wh_adverb,
-        dt(advp,[hd=l(waarom,wh_adverb,0,1),
+        waar_adverb(om),
+        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
                  mod=l(toch,adverb,advp,1,2)
                 ])).
 
 with_dt([waarom,toch,altijd],
-        wh_adverb,
-        dt(advp,[hd=l(waarom,wh_adverb,0,1),
+        waar_adverb(om),
+        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
                  mod=l(toch,adverb,advp,1,2),
                  mod=l(altijd,sentence_adverb,advp,2,3)
                 ])).
 
 with_dt([waarom,nu,weer],
-        wh_adverb,
-        dt(advp,[hd=l(waarom,wh_adverb,0,1),
+        waar_adverb(om),
+        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
                  mod=l(nu,tmp_adverb,advp,1,2),
                  mod=l(weer,adverb,advp,2,3)
                 ])).
 
 with_dt([waarom,steeds,weer],
-        wh_adverb,
-        dt(advp,[hd=l(waarom,wh_adverb,0,1),
+        waar_adverb(om),
+        dt(advp,[hd=l(waarom,waar_adverb(om),0,1),
                  mod=l(steeds,adverb,advp,1,2),
                  mod=l(weer,adverb,advp,2,3)
                 ])).

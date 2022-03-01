@@ -2163,6 +2163,7 @@ with_dt_all(te,[velde]).
 with_dt_all(te,[voet]).
 with_dt_all(te,[water]).
 with_dt_all(te,[wereld]).
+with_dt_all(te,[zeer]).
 with_dt_all(tien,[u]).
 with_dt_all(tien,[wij]).
 with_dt_all(tien,[zij]).

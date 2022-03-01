@@ -10779,12 +10779,9 @@ n([pl(eunuchen),sg(eunuch)],de,[]).
 
 n([stem(euro),
    bare_meas(euro),
-   meas(eur),pl('euro\'s'),
-   meas('C='),
-   meas('€'),
-   meas('¤'),
-   meas(eu),
-   meas(['&','#',x20ac,';'])  % frequent in Sonar
+   bare_meas(eur),pl('euro\'s'),
+   bare_meas('€'),
+   bare_meas(eu)  % frequent in Sonar
   ],de,[meas_mod,measure]).
 
 n([mass([euro,ongelood])],de,[]).
