@@ -3,6 +3,9 @@
 				  format_some_syntax_of_result/3,
 				  format_deriv_of_obj/1,
 				  format_deriv_of_result/2,
+				  format_nderiv_of_obj/1,
+				  format_nderiv_of_result/2,
+				  format_nderiv_of_result_unknowns/2,
 				  format_palm_of_obj/1,
 				  format_palm_of_result/2,
 				  format_palm_score_of_obj/1,
@@ -135,7 +138,7 @@ tree_to_some_bracketed_string_ds([H|T],S0,S,Sent) :-
 %%%%%%%%% with deriv %%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-:- public format_deriv_of_obj/1, format_palm_of_obj/1, format_palm_score_of_obj/1.
+:- public format_nderiv_of_obj/1, format_deriv_of_obj/1, format_palm_of_obj/1, format_palm_score_of_obj/1.
 
 format_deriv_of_obj(N) :-
     hdrug_flag(current_ref,Key),
@@ -145,6 +148,25 @@ format_deriv_of_obj(N) :-
 format_deriv_of_result(Result,Key) :-
     result_to_bracketed_string_deriv(Result,String,[]),
     format("~w|~s~n",[Key,String]).
+
+format_nderiv_of_obj(N) :-
+    hdrug_flag(current_ref,Key),
+    hdrug:object(N,o(Cat,_,_)),
+    format_nderiv_of_result(Cat,Key).
+
+format_nderiv_of_obj_unknowns(N) :-
+    hdrug_flag(current_ref,Key),
+    hdrug:object(N,o(Cat,_,_)),
+    format_nderiv_of_result_unknowns(Cat,Key).
+
+format_nderiv_of_result(Result,Key) :-
+    result_to_deriv_tree(Result,Tree),
+    format("~q.~n",[deriv(Key,Tree)]),
+    format_local_trees(Tree,Key).
+
+format_nderiv_of_result_unknowns(Result,Key) :-
+    result_to_deriv_tree(Result,Tree),
+    format_local_trees_unknowns(Tree,Key).
 
 format_palm_of_obj(N) :-
     hdrug_flag(current_ref,Key),
@@ -701,3 +723,92 @@ get_stem(v_root(_A,B),C) :-
     !,
     B = C.
 get_stem(A,A).
+
+format_local_trees(Result,Key):-
+    local_trees(Result,Trees),
+    format_local_list(Trees,Key).
+
+format_local_trees_unknowns(Result,Key):-
+    local_trees(Result,Trees0),
+    ignore_existing(Trees0,Trees),
+    format_local_list(Trees,Key),
+    (   print_unknown_bigrams(Result),
+        fail
+    ;   true
+    ).
+
+format_local_list([],_).
+format_local_list([M-Ds|T],Key) :-
+    format("~q.~n",[local(M,Ds)]),
+    format_local_list(T,Key).
+
+local_trees(tree(M,_,Ds0),[M-Ds|Trees]) :-
+    local_trees_ds(Ds0,Ds,Trees,[]).
+
+local_trees_ds([],[],Ts,Ts).
+local_trees_ds([H0|T0],[H|T],Ts0,Ts):-
+    local_trees(H0,H,Ts0,Ts1),
+    local_trees_ds(T0,T,Ts1,Ts).
+
+local_trees(tree(Node,_,Ds),Result,Ts0,Ts):-
+    local_trees_i(Ds,Node,Result,Ts0,Ts).
+
+local_trees_i([],gap(Gap),gap(Gap),Ts,Ts).
+
+local_trees_i([],lex(Tag),lex(Tag),Ts,Ts).
+local_trees_i([D0|S0],Rule,Rule,[Rule-Ds|Ts0],Ts) :-
+    local_trees_ds([D0|S0],Ds,Ts0,Ts).
+
+		
+ignore_existing([],[]).
+ignore_existing([H|T],Trees):-
+    ignore_ex(H,Trees,Trees1),
+    ignore_existing(T,Trees1).
+
+ignore_ex(M-Ds0,L0,L) :-
+    alpino_cg:adapt(Ds0,Ds),
+    (   alpino_cg:local(M,Ds)
+    ->  L0=L
+    ;   L0=[M-Ds|L]
+    ).
+
+print_unknown_bigrams(tree(_,_,Ds)) :-
+    print_unknown_bigrams_ds(Ds).
+print_unknown_bigrams(tree(M,_,Ds0)) :-
+    l_trees_ds(Ds0,Ds),
+    \+ alpino_cg:bigram(M,Ds),
+    format("~q.~n",[bigram(M,Ds)]).
+
+print_unknown_bigrams_ds(Ds) :-
+    lists:member(tree(M,_,[D|E]),Ds),
+    print_unknown_bigrams(tree(M,_,[D|E])).
+
+l_trees_ds([],[]).
+l_trees_ds([H0|T0],[H|T]):-
+    l_trees(H0,H),
+    l_trees_ds(T0,T).
+
+l_trees(tree(Node,_,Ds),Result):-
+    l_trees_i(Ds,Node,Result).
+
+l_trees_i([],gap(Gap),gap(Gap)).
+
+l_trees_i([],lex(Tag),lex(Class)):-
+    alpino_tr_tag:tr_tag(Tag,Class).
+l_trees_i([D0|S0],Rule,tree(Rule,Ds)):-
+    l_trees_ds1([D0|S0],Ds).
+
+l_trees_ds1([],[]).
+l_trees_ds1([H0|T0],[H|T]):-
+    l_trees1(H0,H),
+    l_trees_ds1(T0,T).
+
+l_trees1(tree(Node,_,Ds),Result):-
+    l_trees_i1(Ds,Node,Result).
+
+l_trees_i1([],gap(Gap),gap(Gap)).
+
+l_trees_i1([],lex(Tag),lex(Class)):-
+    alpino_tr_tag:tr_tag(Tag,Class).
+l_trees_i1([_|_],Rule,Rule).
+
