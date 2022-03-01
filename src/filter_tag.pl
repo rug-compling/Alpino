@@ -1475,6 +1475,10 @@ check_stem(parse,Stem,P0,P,H) :-
 check_stem(generate,Stem,_,_,_) :-
     alpino_cg:lex(_,Stem,_,_,_,_).
 
+check_stem(generate,Stem,_,_,_) :-
+    alpino_cg:lex(_,{List},_,_,_,_),
+    lists:member(Stem,List).
+
 check_tag(Tag,P0,P) :-
     check_tag(Tag,P0,P,_,_).
 check_tag(Tag,Tag,P0,P) :-
