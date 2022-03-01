@@ -1,10 +1,15 @@
-:- module(alpino_simplify_modifier, [ modifier_transformations/5 ]).
+:- module(alpino_simplify_modifier, [ modifier_transformation/5 ]).
 
 %% correction of alleen/adv => alleen/adj
 modifier_transformation(r(Rel,p(du)),[D1,D2],r(Rel,p(du)),[DN,D2],_) :-
     D1 = tree(r(dp,adt_lex(advp,Lem,Alleen,adv,Atts)),[]),
     DN = tree(r(dp,adt_lex(ap,Lem,Alleen,adj,Atts)),[]),
     adv_adj(Alleen).
+
+modifier_transformation(r(Rel,p(du)),[D1,D2],r(Rel,p(du)),[DN,D2],_) :-
+    D1 = tree(r(dp,adt_lex(advp,Lem,Alleen,adv,Atts)),[]),
+    DN = tree(r(dp,adt_lex(ppart,Lem,Alleen,adj,Atts)),[]),
+    adv_ppart(Alleen).
 
 %% correction niet alleen
 modifier_transformation(r(dp,p(advp)),[D1,D2],r(dp,p(ap)),[DN,D2],_) :-
@@ -30,7 +35,7 @@ modifier_transformation(Cat,Ds0,Cat,Ds,Ctxt) :-
 %% choice in grammar.
 modifier_transformation(r(obcomp,p(cp)),Ds0,r(obcomp,p(cp)),Ds,_) :-
     CMP = tree(r(cmp,_),_),
-    BODY = tree(r(body,p(du)),[DU1|_]),
+    BODY = tree(r(body,p(du)),[_,DU1|_]),
     lists:select(CMP,Ds0,[BODY]),
     DU1 = tree(r(dp,NPCAT),NPBODY),
     Ds = [CMP,tree(r(body,NPCAT),NPBODY)].   
@@ -73,7 +78,7 @@ modifier_transformation(r(Rel,_),Ds0,r(Rel,AppCat),AppDs,Ctxt) :-
     lists:select(App,Ds1,Ds2),
     (   is_name(AppCat0,AppDs),
         check_app_name(Rel,AppCat0,AppCat),
-	\+ Ctxt = [r(obj1,_),r(predc,p(pp))|_] % predc [van type X] =/= prec [van X]
+	\+ Ctxt = [r(obj1,_)/_,r(predc,p(pp))/_|_] % predc [van type X] =/= prec [van X]
     ;   HdLex = adt_lex(_,Begrip,_,_,_),
 	lemma_in(Begrip,[begrip,woord]),
 	AppCat0 = adt_lex(np,_,_,_,_),
@@ -87,7 +92,8 @@ modifier_transformation(r(Rel,_),Ds0,r(Rel,AppCat),AppDs,Ctxt) :-
     (   Ds2 = [tree(r(det,adt_lex(_,De,_,_,_)),[])],
 	lemma_in(De,[de,het])
     ;   Ds2 = []
-    ).
+    ),
+    \+ conj_and_index(AppCat0,Rel).
 
 %% de maanden mei en juni --> mei en juni
 %% but in that case, it really should be app?
@@ -254,6 +260,7 @@ important_mod_stem(ander,adj).
 important_mod_stem(anders,_).
 important_mod_stem(behalve,_).
 important_mod_stem(daar,_).
+important_mod_stem(dan,_).  % for als/dan zinnen. If not als/dan, then already removed
 important_mod_stem(er,_).
 important_mod_stem(fout,_).
 important_mod_stem(goed,_).
@@ -316,11 +323,14 @@ ignore_modifier(Tree,Ctxt,Hd) :-
     ignore_modifier_pattern(Pattern,Ctxt,Hd),
     match_pattern(Pattern,Tree).
 
-ignore_modifier(tree(r(mod,adt_lex(_,W,_,Pos,Atts)),[]),[r(_,p(MCat))|_],Hd) :-
+ignore_modifier(tree(r(mod,adt_lex(_,W,_,Pos,Atts)),[]),[r(_,p(MCat))/_|_],Hd) :-
     ignore_modifier_stem(W,Pos,Atts,MCat,Hd).
 
-ignore_modifier(tree(r(mod,adt_lex(_,W,_,Pos,Atts)),[]),[r(_,i(_,p(MCat)))|_],Hd) :-
+ignore_modifier(tree(r(mod,adt_lex(_,W,_,Pos,Atts)),[]),[r(_,i(_,p(MCat)))/_|_],Hd) :-
     ignore_modifier_stem(W,Pos,Atts,MCat,Hd).
+
+ignore_modifier(tree(r(mod,adt_lex(_,dan,_,_,_)),[]),Ctxt,_) :-
+    \+ lists: append(_,[r(nucl,p(smain))/_,r(_,p(du))/[tree(r(sat,_),_)|_]|_],Ctxt).
 
 ignore_modifier_pattern(mod=dt(conj,[crd=en,
 				     cnj=meer,
@@ -519,7 +529,6 @@ ignore_modifier_stem(daarentegen,_,_,_,_).
 ignore_modifier_stem(daarnaast,_,_,_,_).
 ignore_modifier_stem(daarna,_,_,_,_).
 ignore_modifier_stem(daarnet,_,_,_,_).
-ignore_modifier_stem(dan,_,_,_,_).
 ignore_modifier_stem(derhalve,_,_,_,_).
 ignore_modifier_stem(destijds,_,_,_,_).
 ignore_modifier_stem(duidelijk,_,_,_,_).
@@ -532,6 +541,9 @@ ignore_modifier_stem(enkel,adj,_,_,_).
 ignore_modifier_stem(erg,_,_,_,_).
 ignore_modifier_stem(even,_,_,_,_).
 ignore_modifier_stem(evenwel,_,_,_,_).
+ignore_modifier_stem(detailleren,adj,_,np,_).
+ignore_modifier_stem(globaal,_,_,_,_).
+ignore_modifier_stem(grondig,_,_,_,_).
 ignore_modifier_stem(heel,_,_,np,_).
 ignore_modifier_stem(heel,_,_,ap,_).
 ignore_modifier_stem(heel,_,_,advp,_).   % heel wat => *wat  todo: heel weinig, heel veel -> weinig, veel
@@ -568,9 +580,11 @@ ignore_modifier_stem(precies,_,_,_,_).
 ignore_modifier_stem(reeds,_,_,_,_).
 ignore_modifier_stem(ronduit,_,_,_,_).
 ignore_modifier_stem(sowieso,_,_,_,_).
+ignore_modifier_stem(specifiek,_,_,np,_).
 ignore_modifier_stem(steeds,_,_,_,_).
 ignore_modifier_stem(tenslotte,_,_,_,_).
 ignore_modifier_stem(terdege,_,_,_,_).
+ignore_modifier_stem(tevens,_,_,_,_).
 ignore_modifier_stem(toch,_,_,_,_).
 ignore_modifier_stem(toen,_,_,_,_).
 ignore_modifier_stem(trouwens,_,_,_,_).
@@ -586,6 +600,7 @@ ignore_modifier_stem(volkomen,_,_,_,_).
 ignore_modifier_stem(volledig,_,_,_,_).
 ignore_modifier_stem(volstrekt,_,_,_,_).
 ignore_modifier_stem(vooral,_,_,_,_).
+ignore_modifier_stem(duur_voort,_,_,_,_).
 ignore_modifier_stem(vrijwel,_,_,_,_).
 ignore_modifier_stem(weer,_,_,_,_).
 ignore_modifier_stem(wel,_,_,_,_).
@@ -601,8 +616,8 @@ important_modifier_pattern(mod=dt(mwu(_,_),[mwp=dan,mwp=ook])).
 important_modifier(tree(r(mod,p(Cat)),_),adt_lex(np,_,_,_,_),_,_,DsRest) :-
     lists:member(Cat,[rel,pp]),
     alpino_simplify_split:contains_negatief_element(DsRest).
-important_modifier(tree(r(mod,adt_lex(_,zo,_,_,_)),[]),_,_,[r(tag,p(smain))|_],_).  % introduces dip. "root, zo begin hij zijn verhaal"
-important_modifier(_,adt_lex(_,Die,_,_,_),[],[r(obj1,p(np)),r(_,p(pp))|_],[]) :-
+important_modifier(tree(r(mod,adt_lex(_,zo,_,_,_)),[]),_,_,[r(tag,p(smain))/_|_],_).  % introduces dip. "root, zo begin hij zijn verhaal"
+important_modifier(_,adt_lex(_,Die,_,_,_),[],[r(obj1,p(np))/_,r(_,p(pp))/_|_],[]) :-
     lemma_in(Die,[die,dat]).
 important_modifier(Tree,_,_,_,_) :-
     important_modifier_pattern(Pattern),
@@ -619,7 +634,7 @@ important_modifier(tree(r(mod,p(pp)),Ds),_,_,_,_) :-
     lists:member(tree(r(obj1,_),ObjDs),Ds),
     lists:member(tree(r(det,adt_lex(_,Geen,_,_,_)),[]),ObjDs),
     lemma_in(Geen,[geen]).
-important_modifier(tree(r(mod,p(rel)),_),_,_,[r('--',p(np))|_],_).
+important_modifier(tree(r(mod,p(rel)),_),_,_,[r('--',p(np))/_|_],_).
 important_modifier(tree(r(mod,p(rel)),_),ADTLEX,[],_,_) :-
     alpino_simplify_split:forbid_rel_split(ADTLEX,[]).
 important_modifier(tree(r(mod,p(conj)),Ds),C0,C1,C2,C3) :-
@@ -633,7 +648,10 @@ important_modifier(tree(r(mod,p(_)),PPDS),adt_lex(GebruikCat,Gebruik,_,GebruikPo
     lists:member(PREPD,PPDS),
     check_pmi(Gebruik,GebruikPos,GebruikCat,Van,VanPos,VanCat).
 
+:- hdrug_util:initialize_flag(pmi_modifier_threshold,1500).
+
 check_pmi(Gebruik0,GebruikPos0,GebruikCat,Van0,VanPos0,VanCat) :-
+    hdrug_util:hdrug_flag(pmi_modifier_threshold,THRESHOLD),
     adapt_psp(GebruikCat,Gebruik0,Gebruik),
     adapt_psp(VanCat,Van0,Van),
     adapt_pos(GebruikPos0,GebruikPos),
@@ -641,7 +659,7 @@ check_pmi(Gebruik0,GebruikPos0,GebruikCat,Van0,VanPos0,VanCat) :-
     hdrug_util:debug_message(2,"checking modifier ~w ~w ~w ~w... ~n",[Gebruik,GebruikPos,Van,VanPos]),
     alpino_penalties:corpus_frequency_lookup(dep35(Van,VanPos,hd/mod,GebruikPos,Gebruik),Val),
     hdrug_util:debug_message(2,"checking modifier ~w ~w ~w ~w: ~w ~n",[Gebruik,GebruikPos,Van,VanPos,Val]),
-    Val > 1500,
+    Val > THRESHOLD,
     hdrug_util:debug_message(1,"keeping modifier ~w ~w ~w ~w: ~w ~n",[Gebruik,GebruikPos,Van,VanPos,Val]).
 
 adapt_pos(X,X).
@@ -687,11 +705,11 @@ adapt_pos(pp,pp(waar)).
 adapt_pos(pp,pp(er)).
 
 
-
-adapt_psp(_,X,X).
-adapt_psp(ppart,Zeggen,Gezegd) :-
-    alpino_lexical_analysis:search_tag_stem(Zeggen,tag(_,_,_,_,Zeggen,Gezegd,_,adjective(Inf))),
+adapt_psp(ap,achterste,achterst).
+adapt_psp(ppart,Zeggen,Gezegd) :- 
+    alpino_genlex:dict_entry(Zeggen,adjective(Inf),Gezegd),
     ge_adj(Inf).
+adapt_psp(_,X,X).
 
 ge_adj(ge_no_e(_)).
 ge_adj(ge_both(_)).
@@ -737,6 +755,8 @@ check_app_name(_,L,L).
 adv_adj(alleen).
 adv_adj(onmiddellijk).
 
+adv_ppart(gemiddeld).
+
 is_name(adt_lex(_,_,_,name,_),_).
 is_name(_,Ds) :-
     lists:member(tree(r(mwp,Cat),MwpDs),Ds),
@@ -756,3 +776,5 @@ lemma({Lemma},Lem) :-
     !,
     lists:member(Lem,Lemma).
 lemma(L,L).
+
+conj_and_index(i(_,_),cnj).

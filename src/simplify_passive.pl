@@ -322,11 +322,14 @@ add_su_control(D,Node,Ds0,Node,Ds) :-
     (  Hd = tree(r(hd,adt_lex(_,Proberen,Proberen2,verb,_)),[])
     ;  Hd = tree(r(hd,i(_,adt_lex(_,Proberen,Proberen2,verb,_))),[])
     ),
+    SU = tree(r(su,_),_),
     lists:member(Hd,Ds0),
     raiser(Proberen,Proberen2),
+    \+ lists:member(SU,Ds0),
     VC0 = tree(r(vc,VCCAT0),VCDS0),
     VC  = tree(r(vc,VCCAT),VCDS),
     replace(VC0,VC,Ds0,Ds),
+    !,
     add_su_control(D,VCCAT0,VCDS0,VCCAT,VCDS).
 
 %% not_door -> _
@@ -335,7 +338,9 @@ add_su_control(_,Node,Ds0,Node,Ds) :-
     ;  Hd = tree(r(hd,i(_,adt_lex(_,Proberen,Proberen2,verb,_))),[])
     ),
     lists:member(Hd,Ds0),
-    su_control(Proberen,Proberen2),
+    (  su_control(Proberen,Proberen2)
+    ;  raiser(Proberen,Proberen2)  % if case above does not apply, since there is subject anyway
+    ),
     Su0 = tree(r(su,SuNode),SuDs),  
     Su  = tree(r(su,NewSuNode),SuDs),
     replace(Su0,Su,Ds0,Ds1),
@@ -382,7 +387,7 @@ select_doorpp(VcDs2,VcDs3,Obj1Cat,Obj1Ds,Door) :-
     doorpp(DoorPP,Obj1Cat,Obj1Ds),
     !,
     Door = door.
-select_doorpp(Ds,Ds,adt_lex(np,men,men,pron,[rnum=sg]),[],not_door).
+select_doorpp(Ds,Ds,adt_lex(np,men,men,pron,[per=thi,def=def,rnum=sg]),[],not_door).
 
 doorpp(DoorPP,Obj1Cat,Obj1Ds) :-
     DoorPP = tree(r(mod,p(pp)),PPDS),
@@ -499,6 +504,7 @@ verb_disallows_passive(baseer,ben,_,not_door).
 verb_disallows_passive(bedek,ben,_,not_door).
 verb_disallows_passive(beken,_,_,_).
 verb_disallows_passive(ben,_,_,_). % zoals jarenlang het geval is geweest
+verb_disallows_passive(betaal_onder,ben,_,_).
 verb_disallows_passive(betrek,ben,_,not_door).
 verb_disallows_passive(bevriend,_,_,_).
 verb_disallows_passive(bind,ben,_,not_door).
@@ -507,7 +513,8 @@ verb_disallows_passive(breek_aan,ben,_,not_door).  % het moment is aangebroken =
 verb_disallows_passive(geboren,_,_,_).
 verb_disallows_passive(interesseer,ben,_,not_door).
 verb_disallows_passive(hecht,ben,_,not_door).
-verb_disallows_passive(kleed,ben,_,_).     % ik ben gekleed in jeans
+verb_disallows_passive(kleed,ben,_,_). % ik ben gekleed in jeans
+verb_disallows_passive(kom,_,_,_).
 verb_disallows_passive(neem_in,_,_,_).
 verb_disallows_passive(open,ben,_,not_door).
 verb_disallows_passive(ontwikkel,ben,_,not_door).
@@ -553,12 +560,14 @@ su_control(beoog,_).
 su_control(besluit,_).
 su_control(eis,_).
 su_control(hoef,_).
+su_control(kom_overeen,_).
 su_control(overweeg,_).
 su_control(poog,_).
 su_control(probeer,_).
 su_control(spreek_af,_).
 su_control(stel,'in-het-werk-stel').
 su_control(tracht,_).
+su_control(verlang,_).
 su_control(vermijd,_).
 su_control(verzuim,_).
 su_control(wens,_).
@@ -581,22 +590,38 @@ pp_vp_argument(tree(r(pc,p(pp)),PPDs0),
     PPDs = [VP|PPDs1],
     vp_argument(tree(r(vc,VcCat0),VcDs0),VP,NewSu).
 
+
+vp_argument(tree(r(vc,p(conj)),Conj0),
+	    tree(r(vc,p(conj)),Conj),NewSu) :-
+    add_new_su_vp(Conj0,Conj,NewSu).
+
+%%% Besloten werd het vraagstuk verder te onderzoeken en een werkgroep voor ftalaten op te richten .
 vp_argument(tree(r(vc,p(ti)),CmpInf0),
 	    tree(r(vc,p(ti)),[tree(r(cmp,Cmp),[]),
-			      tree(r(body,InfCat),[NewSu|VCDs])
+			      tree(r(body,InfCat),VCDs)
 			     ]),
 	    NewSu) :-
     lists:select(tree(r(cmp,Cmp),[]),CmpInf0,[tree(r(body,InfCat0),VCDs0)]),
     Cmp = adt_lex(_,te,_,_,_),
     NotSu = tree(r(su,_),_),
     \+ lists:member(NotSu,VCDs0),
-    add_hd_if_lex(VCDs0,InfCat0,VCDs,InfCat).
+    add_hd_if_lex(VCDs0,InfCat0,VCDs1,InfCat1),
+    add_su_control(_,InfCat1,[NewSu|VCDs1],InfCat,VCDs).
+
+vp_argument(tree(r(vc,p(oti)),OmDs0),
+	    tree(r(vc,p(oti)),[Om,Body]),NewSu) :-
+    Om = tree(r(cmp,_),[]),
+    lists:select(Om,OmDs0,[Body0]),
+    Body0 = tree(r(body,p(conj)),CnjDs0),
+    Body = tree(r(body,p(conj)),CnjDs),
+    add_new_su_vp(CnjDs0,CnjDs,NewSu).
 
 
+%% TODO conjunction of ti within oti
 vp_argument(tree(r(vc,p(oti)),CmpInf0),
 	    tree(r(vc,p(oti)),[tree(r(cmp,Cmp1),[]),
 			       tree(r(body,p(ti)),[tree(r(cmp,Cmp2),[]),
-						   tree(r(body,InfCat),[NewSu|VCDs])
+						   tree(r(body,InfCat),VCDs)
 						  ]
 				   )
 			      ]),
@@ -607,7 +632,27 @@ vp_argument(tree(r(vc,p(oti)),CmpInf0),
     Cmp2 = adt_lex(_,te,_,_,_),
     NotSu = tree(r(su,_),_),
     \+ lists:member(NotSu,VCDs0),
-    add_hd_if_lex(VCDs0,InfCat0,VCDs,InfCat).
+    add_hd_if_lex(VCDs0,InfCat0,VCDs1,InfCat1),
+    add_su_control(_,InfCat1,[NewSu|VCDs1],InfCat,VCDs).
+
+vp_argument(tree(r(vc,InfCat0),VCDs0),
+	    tree(r(vc,InfCat),VCDs),NewSu):-
+    inf_cat(InfCat0),
+    NotSu = tree(r(su,_),_),
+    \+ lists:member(NotSu,VCDs0),!,
+    add_hd_if_lex(VCDs0,InfCat0,VCDs1,InfCat1),
+    add_su_control(_,InfCat1,[NewSu|VCDs1],InfCat,VCDs).
+
+vp_argument(tree(r(vc,InfCat0),VCDs0),
+	    tree(r(vc,InfCat),VCDs),_):-
+    inf_cat(InfCat0),
+    add_su_control(_,InfCat0,VCDs0,InfCat,VCDs).
+
+inf_cat(p(ppart)).
+inf_cat(p(inf)).
+inf_cat(adt_lex(ppart,_,_,_,_)).
+inf_cat(adt_lex(inf,_,_,_,_)).
+
 
 add_hd_if_lex([],adt_lex(Cat,A,B,C,D),[tree(r(hd,adt_lex(Cat,A,B,C,D)),[])],p(Cat)).
 add_hd_if_lex([H|T],Cat,[H|T],Cat).
@@ -646,3 +691,14 @@ impossible_subject(tree(r(_,_),Ds)) :-
 impossible_subject_lemma(elkaar).
 impossible_subject_lemma(elkander).
 impossible_subject_lemma(zichzelf).
+
+add_new_su_vp([],[],_).
+add_new_su_vp([tree(r(crd,CRD),CRDDS)|Tail0],[tree(r(crd,CRD),CRDDS)|Tail],NewSu) :-
+    add_new_su_vp(Tail0,Tail,NewSu).    
+add_new_su_vp([tree(r(cnj,VP0),VPDS0)|Tail0],[tree(r(cnj,VP),VPDS)|Tail],NewSu) :-
+    vp_argument(tree(r(vc,VP0),VPDS0),tree(r(vc,VP),VPDS),NewSu),
+    add_new_su_vp(Tail0,Tail,NewSu).
+
+
+		
+
