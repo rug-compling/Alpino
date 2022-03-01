@@ -11,7 +11,7 @@ apply_adt_transformations(Tree0,Tree) :-
     hdrug_util:hdrug_flag(simplify_passive,Pass),
     apply_split_transformations(Split,Tree0,Tree1),
     apply_passive_transformations(Pass,Tree1,Tree2),
-    apply_further_adt_transformations(Tree2,Tree).
+    apply_further_adt_transformations(Tree2,Tree,Split).
 
 apply_split_transformations(on,Tree0,Tree) :-
     apply_split_transformations(Tree0,Tree).
@@ -23,55 +23,61 @@ apply_passive_transformations(on,Tree0,Tree) :-
 apply_passive_transformations(off,Tree,Tree).
 apply_passive_transformations(undefined,Tree,Tree).
 
-apply_further_adt_transformations(Tree2,Tree) :-
+apply_further_adt_transformations(Tree2,Tree,Split) :-
     hdrug_util:hdrug_flag(simplify_modifier,Mod),
     hdrug_util:hdrug_flag(simplify_words,Words),
-    apply_further_adt_transformations(Tree2,Tree,Mod,Words).
+    apply_further_adt_transformations(Tree2,Tree,Mod,Words,Split).
 
-apply_further_adt_transformations(Tree0,Tree,Mod,Words) :-
-    apply_a_transformation(Tree0,Tree1,Mod,Words),
+apply_further_adt_transformations(Tree0,Tree,Mod,Words,Split) :-
+    apply_a_transformation(Tree0,Tree1,Mod,Words,Split),
     !,
-    apply_further_adt_transformations(Tree1,Tree,Mod,Words).
-apply_further_adt_transformations(Tree,Tree,_,_).
+    apply_further_adt_transformations(Tree1,Tree,Mod,Words,Split).
+apply_further_adt_transformations(Tree,Tree,_,_,_).
 
-apply_a_transformation(tree(Cat0,Ds0),tree(Cat,Ds),Mod,Words) :-
-    adt_transformation_and_flatten(Cat0,Ds0,Cat,Ds,[Cat0],Mod,Words).
-apply_a_transformation(tree(Cat,Ds0),tree(Cat,Ds),Mod,Words) :-
-    apply_a_transformation_list(Ds0,Ds,[Cat],Mod,Words).
+apply_further_adt_transformations(Tree0,Tree,Mod,Words,Split,Up) :-
+    apply_a_transformation(Tree0,Tree1,Up,Mod,Words,Split),
+    !,
+    apply_further_adt_transformations(Tree1,Tree,Mod,Words,Split,Up).
+apply_further_adt_transformations(Tree,Tree,_,_,_,_).
 
-apply_a_transformation(tree(Cat0,Ds0),tree(Cat,Ds),Up,Mod,Words) :-
-    adt_transformation_and_flatten(Cat0,Ds0,Cat,Ds,[Cat0|Up],Mod,Words).
-apply_a_transformation(tree(Cat,Ds0),tree(Cat,Ds),Up,Mod,Words) :-
-    apply_a_transformation_list(Ds0,Ds,[Cat|Up],Mod,Words).
+apply_a_transformation(tree(Cat0,Ds0),tree(Cat,Ds),Mod,Words,Split) :-
+    adt_transformation_and_flatten(Cat0,Ds0,Cat,Ds,[Cat0/Ds0],Mod,Words,Split).
+apply_a_transformation(tree(Cat,Ds0),tree(Cat,Ds),Mod,Words,Split) :-
+    apply_a_transformation_list(Ds0,Ds,[Cat/Ds0],Mod,Words,Split).
 
-apply_a_transformation_list([H0|T],[H|T],Up,Mod,Words) :-
-    apply_a_transformation(H0,H,Up,Mod,Words).
-apply_a_transformation_list([H|T0],[H|T],Up,Mod,Words) :-
-    apply_a_transformation_list(T0,T,Up,Mod,Words).
+apply_a_transformation(tree(Cat0,Ds0),tree(Cat,Ds),Up,Mod,Words,Split) :-
+    adt_transformation_and_flatten(Cat0,Ds0,Cat,Ds,[Cat0/Ds0|Up],Mod,Words,Split).
+apply_a_transformation(tree(Cat,Ds0),tree(Cat,Ds),Up,Mod,Words,Split) :-
+    apply_a_transformation_list(Ds0,Ds,[Cat/Ds0|Up],Mod,Words,Split).
 
-adt_transformation_and_flatten(r(Rel,Cat0),Ds0,r(Rel,Cat),Ds,Up,Mod,Words) :-
-    adt_transformation(r(Rel,Cat0),Ds0,r(Rel,Cat1),Ds1,Up,Mod,Words),
+apply_a_transformation_list([H0|T],[H|T],Up,Mod,Words,Split) :-
+    apply_a_transformation(H0,H,Up,Mod,Words,Split).
+apply_a_transformation_list([H|T0],[H|T],Up,Mod,Words,Split) :-
+    apply_a_transformation_list(T0,T,Up,Mod,Words,Split).
+
+adt_transformation_and_flatten(r(Rel,Cat0),Ds0,r(Rel,Cat),Ds,Up,Mod,Words,Split) :-
+    adt_transformation(r(Rel,Cat0),Ds0,r(Rel,Cat1),Ds1,Up,Mod,Words,Split),
     flatten(Cat1,Ds1,Cat,Ds).
 
-adt_transformation(r(Rel,VAR),A,r(Rel2,i(X,Cat2)),B,Up,Mod,Words) :-
+adt_transformation(r(Rel,VAR),A,r(Rel2,i(X,Cat2)),B,Up,Mod,Words,Split) :-
     nonvar(VAR),
     VAR = i(X,Cat),
-    adt_transformation(r(Rel,Cat),A,r(Rel2,Cat2),B,Up,Mod,Words).
+    adt_transformation(r(Rel,Cat),A,r(Rel2,Cat2),B,Up,Mod,Words,Split).
 
-adt_transformation(Node0,Ds0,Node,Ds,_,_,_) :-
+adt_transformation(Node0,Ds0,Node,Ds,_,_,_,on) :-
     alpino_simplify_split:simple_split_transformation(Node0,Ds0,Node,Ds).
 
-adt_transformation(Node0,Ds0,Node,Ds,Up,Mod,_Words) :-
+adt_transformation(Node0,Ds0,Node,Ds,Up,Mod,_Words,_) :-
     adt_transformation_mod(Mod,Node0,Ds0,Node,Ds,Up).
 
-adt_transformation(Node0,Ds0,Node,Ds,Up,_Mod,Words) :-
+adt_transformation(Node0,Ds0,Node,Ds,Up,_Mod,Words,_) :-
     adt_transformation_words(Words,Node0,Ds0,Node,Ds,Up).
     
 adt_transformation_mod(on,Node0,Ds0,Node,Ds,Up) :-
     alpino_simplify_modifier:modifier_transformation(Node0,Ds0,Node,Ds,Up).
 
-adt_transformation_words(on,Node0,Ds0,Node,Ds,_) :-
-    alpino_simplify_words:words_transformation(Node0,Ds0,Node,Ds).
+adt_transformation_words(on,Node0,Ds0,Node,Ds,Up) :-
+    alpino_simplify_words:words_transformation(Node0,Ds0,Node,Ds,Up).
 
 
 flatten(i(Id,Cat0),Ds0,i(Id,Cat),Ds) :-
@@ -101,16 +107,16 @@ motivatie voor pmi:
 boter bij de vis => boter
 op eigen benen staan => op benen staan
 
-negatie bij splitsen is fout:
-Men had geen enkele richtlijn voorgesteld die voorzag in de bescherming van de consument  =>
-Men had geen enkele richtlijn voorgesteld . Ze voorzag in de bescherming van de consument .
+DONE negatie bij splitsen is fout:
+DONE Men had geen enkele richtlijn voorgesteld die voorzag in de bescherming van de consument  =>
+DONE Men had geen enkele richtlijn voorgesteld . Ze voorzag in de bescherming van de consument .
 
 weghalen mod bij de .. PROPN:
 ?daar heeft de bekende X gepredikt -> daar heeft de X gepredikt
 
 
 
-%% ik lust geen brood met kaas =/= ik lust geen brood
+DONE ik lust geen brood met kaas =/= ik lust geen brood
 
 
 DONE split gek:
@@ -144,7 +150,7 @@ Desalniettemin spelen deze ziekten in opzicht wel degelijk een rol van betekenis
 
 SPLIT:
 
-we hebben het hoofd bedekt en de voeten daarbij onbedekt moeten laten
+DONE we hebben het hoofd bedekt en de voeten daarbij onbedekt moeten laten
 
 tot slot , de verschillende systemen waarin alternerend geleerd wordt , hebben een ondoorzichtige structuur en zijn niet afgestemd :
 
@@ -186,7 +192,7 @@ DONE Het is geen geheim dat Van Miert en mezelf een grotere samenhang hadden gew
 
 het wil er bij mij niet in dat ...
 frame: mod_pp(bij)
-maar mod is hier verlicht. Echter, er is al een pc (er in)...
+maar mod is hier verplicht. Echter, er is al een pc (er in)...
 
 
 %% TODO:
@@ -196,8 +202,8 @@ maar mod is hier verlicht. Echter, er is al een pc (er in)...
 %% 
 
 
-ADT:
-ten aanzien ervan/daarvan/hiervan get same lemma...
+DONE ADT:
+DONE ten aanzien ervan/daarvan/hiervan get same lemma...
 
 
 

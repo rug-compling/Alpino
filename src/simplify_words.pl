@@ -1,6 +1,6 @@
-:- module(alpino_simplify_words, [ words_transformation/4 ]).
+:- module(alpino_simplify_words, [ words_transformation/5 ]).
 
-words_transformation(r(Rel,p(Cat0)),Ds0,r(Rel,p(Cat)),Ds) :-
+words_transformation(r(Rel,p(Cat0)),Ds0,r(Rel,p(Cat)),Ds,_) :-
     Hd0 = tree(r(HD,adt_lex(Cat0,Old,Old,D0,E0)),[]),
     Hd  = tree(r(HD,adt_lex(Cat,New,New,D,E)),[]),
     head_rel(HD),
@@ -9,12 +9,18 @@ words_transformation(r(Rel,p(Cat0)),Ds0,r(Rel,p(Cat)),Ds) :-
     adapt_det(Ds1,Ds).
 
 %% constructief en (of, maar) positief => positief en (of, maar) positief => positief
-words_transformation(r(Rel,p(conj)),Ds0,r(Rel,Cat),D) :-
+words_transformation(r(Rel,p(conj)),Ds0,r(Rel,Cat),D,_) :-
     CRD = tree(r(crd,_),_),
     lists:select(CRD,Ds0,[tree(r(cnj,Cat),D),tree(r(cnj,Cat),D)]).
 
+words_transformation(r('--',p(pp)),Ds0,r('--',p(du)),[Niet,PP],_) :-
+    Niet0 = tree(r(mod,adt_lex(A,niet,B,C,D)),[]),
+    Niet  = tree(r(dp,adt_lex(A,niet,B,C,D)),[]),
+    lists:select(Niet0,Ds0,Ds1),
+    PP = tree(r(dp,p(pp)),Ds1).
+
 words_transformation(r(Rel,p(Cat)),Ds0,
-		     r(Rel,p(Cat)),[Hd,VC|Ds]) :-
+		     r(Rel,p(Cat)),[Hd,VC|Ds],Up) :-
     Hd0 = tree(r(hd,adt_lex(Cat0,Old,Old,Pos,Atts)),[]),
     lists:select(Hd0,Ds0,Ds1),
     lists:member(Old,[heb,ben]),
@@ -23,31 +29,33 @@ words_transformation(r(Rel,p(Cat)),Ds0,
     lists:select(VC0,Ds1,Ds),
     subjects(Ds,VC0Ds),
     VC  = tree(r(vc,p(ppart)),_),
-    alpino_user_transformation:apply_further_adt_transformations(VC0,VC),
+    hdrug_util:hdrug_flag(simplify_modifier,Mod),
+    hdrug_util:hdrug_flag(simplify_words,Words),
+    alpino_user_transformation:apply_further_adt_transformations(VC0,VC,Mod,Words,Up),
     VC0 \== VC.
 
 words_transformation(r(Rel,p(mwu(_,_))),Ds,
-		     r(Rel,adt_lex(Cat,Lem,Lem,Pos,Atts)),[]):-
+		     r(Rel,adt_lex(Cat,Lem,Lem,Pos,Atts)),[],_):-
     mwu(Ds,Words),
     simplify_mwu(Words,Lem,Pos,Cat,Atts).
 
 words_transformation(r(Rel,adt_lex(_,Lem,Lem,_,_)),[],
-		     r(Rel,Cat),Ds):-
+		     r(Rel,Cat),Ds,_):-
     lemma_to_tree(Lem,Cat,Ds).
 
 words_transformation(r(Rel,adt_lex(Cat0,Old,Old,D0,E0)),[],
-		     r(Rel,adt_lex(Cat,New,New,D,E)),[]) :-
+		     r(Rel,adt_lex(Cat,New,New,D,E)),[],_) :-
     \+ Rel = mwp,
     \+ Rel = svp,
     simplify(Old,New,Cat0,Cat,D0,D,E0,E,[]).
 
-words_transformation(r(Rel,Cat),Ds0,r(Rel,Cat),Ds) :-
+words_transformation(r(Rel,Cat),Ds0,r(Rel,Cat),Ds,_) :-
     pattern_rule(Left,Right),
     match_left_pattern(Left,Ds0,Ds1),
     add_right_pattern(Right,Ds,Ds1).
 
 %% X wordt geacht VP => X moet VP
-words_transformation(r(Rel,Cat),Ds0,r(Rel,Cat),[SU,NEWHD,tree(r(vc,p(inf)),INFDS)]) :-
+words_transformation(r(Rel,Cat),Ds0,r(Rel,Cat),[SU,NEWHD,tree(r(vc,p(inf)),INFDS)],_) :-
     SU = tree(r(su,i(I,_)),_),
     HD = tree(r(hd,adt_lex(_,word,_,_,Atts)),[]),
     VC = tree(r(vc,p(ppart)),VCDS0),
@@ -66,7 +74,7 @@ words_transformation(r(Rel,Cat),Ds0,r(Rel,Cat),[SU,NEWHD,tree(r(vc,p(inf)),INFDS
     NEWHD = tree(r(hd,adt_lex(_,moet,_,verb,Atts)),[]).
 
 %% opgemerkt zij dat X => X
-words_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(smain)),BODYDS) :-
+words_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(smain)),BODYDS,_) :-
     HD = tree(r(hd,adt_lex(smain,ben,_,verb,Atts)),[]),
     lists:select(HD,Ds0,[VC]),
     lists:member(tense=subjunctive,Atts),
@@ -83,7 +91,7 @@ words_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(smain)),BODYDS) :-
     replace(A0,A1,BODYDS0,BODYDS).
 
 %% er zij op/aan gewezen/herinnerd dat X => X  
-words_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(smain)),BODYDS) :-
+words_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(smain)),BODYDS,_) :-
     HD = tree(r(hd,adt_lex(smain,ben,_,verb,Atts)),[]),
     lists:select(HD,Ds0,[VC]),
     lists:member(tense=subjunctive,Atts),
@@ -402,7 +410,8 @@ simplify(discrepantie,verschil,Cat,Cat,D,D,E,E,_).
 simplify(discutabel,twijfelachtig,Cat,Cat,D,D,E,E,_).
 simplify(dissertatie,proefschrift,Cat,Cat,D,D,E,E,_).
 simplify(dogmatisch,star,Cat,Cat,D,D,E,E,_).
-simplify(dominant,overheersen,Cat,Cat,D,D,E,E,_).
+simplify(dominant,overheersen,ap,VAR,D,D,E,E,_) :- % ppres or ap, depending on dominant/dominanter
+    when(nonvar(VAR),( VAR=ap; VAR=ppres )).
 simplify(donatie,schenking,Cat,Cat,D,D,E,E,_).
 simplify(doneer,schenk,Cat,Cat,D,D,E,E,_).
 simplify(doorgaans,meestal,Cat,Cat,D,D,E,E,_).
@@ -489,7 +498,7 @@ simplify(nauwgezet,precies,Cat,Cat,D,D,E,E,_).
 simplify(nietemin,toch,Cat,Cat,D,D,E,E,_).
 simplify(nimmer,nooit,Cat,Cat,D,D,E,E,_).
 simplify(nochtans,toch,Cat,Cat,D,D,E,E,_).
-simplify(noodzakelijk,nodig,Cat,Cat,D,D,E,E,_).
+%%%simplify(noodzakelijk,nodig,Cat,Cat,D,D,E,E,_). subject_sbar(_nohet)  mismatch
 %%%simplify(noop,dwing,Cat,Cat,D,D,E,E,_).  TODO obj2 <-> obj1 mismatch
 simplify(notificatie,melding,Cat,Cat,D,D,E,E,_).
 simplify(omineus,onheilspellend,Cat,Cat,D,D,E,E,_).

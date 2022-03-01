@@ -42,7 +42,7 @@ simple_split_transformations_list([H0|Ds],[H|Ds]):-
 simple_split_transformations_list([H|Ds0],[H|Ds]):-
     simple_split_transformations_list(Ds0,Ds).
 
-
+%% het is zo/duidelijk dat X ==> X
 simple_split_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(SMAIN)),BODYDS) :-
     HD = tree(r(hd,adt_lex(smain,ben,_,verb,_)),[]),
     lists:select(HD,Ds0,Ds1),
@@ -69,6 +69,29 @@ simple_split_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(SMAIN)),BODYDS) :-
     BODY = tree(r(body,p(SSUB_OR_CONJ)),BODYDS0),
     replace_hd_ssub_smain(SSUB_OR_CONJ,SMAIN,BODYDS0,BODYDS).
 
+%% iedereen weet dat X => X
+simple_split_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(SMAIN)),BODYDS) :-
+    HD = tree(r(hd,adt_lex(smain,weet,_,verb,_)),[]),
+    lists:select(HD,Ds0,Ds1),
+    SU = tree(r(su,adt_lex(np,iedereen,_,_,_)),[]),
+    lists:select(SU,Ds1,CPLIST),  
+    CPLIST = [tree(r(vc,CPCAT),CPDS)],
+    cp_to_smain(CPCAT,CPDS,SMAIN,BODYDS).
+
+%% dat ik een boek koop en een plaat luister
+%% dat ik een boek koop en dat PRON een plaat luister
+simple_split_transformation(r(Rel,p(cp)),Ds0,Cat,D) :-
+    \+ Rel = obcomp,
+    CMP = tree(r(cmp,_),_),
+    lists:select(CMP,Ds0,[BODY]),
+    BODY = tree(r(body,p(conj)),CNJDS0),
+    ssub_to_cp_conj(CNJDS0,CMP,CNJDS1),
+    alpino_cg:collapse_all(tree(r(Rel,p(conj)),CNJDS1),tree(Cat,D0),List),
+    expand_split_ds(D0,D1,List),
+    rename_indices(D1,D).
+
+%% 
+%% Mijnheer de Voorzitter , ik zal het heel kort houden en de reglementaire spreektijd van één minuut niet overschrijden .
 simple_split_transformation(r(Rel,p(MAIN)),Ds0,r(Rel,p(conj)),[CRD,N1,N2]) :-
     lists:member(MAIN,[smain,sv1]),
     get_su_and_index(Ds0,Ds1,tree(r(su,i(Ix,SuCat)),SuDs)),
@@ -115,6 +138,9 @@ expand_all(tree(r(Rel,Cat0),Ds0), tree(r(Rel,Cat),Ds), All, Locals) :-
 
 expand_one(i(Ix,Cat),Ds,i(Ix,Cat),Ds,_All,Locals) :-
     !,
+    nonvar(Ds),
+    nonvar(Cat),  % fail for cases in which antecedent "too far" above
+    %  Zo : het gaat om wat de mensen denken dat de werkelijkheid is of wordt .
     lists:memberchk(Ix=s(Cat,Ds),Locals).
 expand_one(i(Ix),[],i(Ix),[],_,Locals) :-
     lists:memberchk(Ix=Var,Locals),
@@ -148,19 +174,21 @@ generate_pronoun(adt_lex(np,B,_,PronDet,Atts),[],adt_lex(np,B,_,PronDet,Atts),[]
     \+ \+ lists:member(PronDet,[pron,det]).
 
 %% a new pronoun
-generate_pronoun(adt_lex(np,B,_,_,Atts0),[],adt_lex(np,Pronoun,_,_,Atts),[]) :-
-    pronoun(B,_Dat,Atts0,Atts,Pronoun).
+generate_pronoun(adt_lex(np,B,_,_,Atts0),[],adt_lex(np,Pronoun,_,PronDet,Atts),[]) :-
+    pronoun(B,_Dat,Atts0,Atts,Pronoun),
+    when(nonvar(PronDet),(PronDet=pron; PronDet=det)).
 
 %% long np: find pronoun for its head
-generate_pronoun(p(_),Ds0,adt_lex(np,Pronoun,_,_,Atts),[]) :-
+generate_pronoun(p(_),Ds0,adt_lex(np,Pronoun,_,PronDet,Atts),[]) :-
     Hd = tree(r(hd,adt_lex(_,B,_,_,Atts0)),[]),
     Det = tree(r(det,adt_lex(_,DetL,_,_,_)),[]), 
     lists:member(Hd,Ds0),
     lists:member(Det,Ds0),
     !,
+    when(nonvar(PronDet),(PronDet=pron; PronDet=det)),
     pronoun(B,DetL,Atts0,Atts,Pronoun).
 
-generate_pronoun(p(_),Ds0,adt_lex(np,Pronoun,_,_,Atts),[]) :-
+generate_pronoun(p(_),Ds0,adt_lex(np,Pronoun,_,PronDet,Atts),[]) :-
     Hd = tree(r(hd,p(mwu(Lemma,_))),MWU),
     Det = tree(r(det,adt_lex(_,DetL,_,_,_)),[]), 
     lists:member(Hd,Ds0),
@@ -168,6 +196,7 @@ generate_pronoun(p(_),Ds0,adt_lex(np,Pronoun,_,_,Atts),[]) :-
     MWP = tree(r(mwp,adt_lex(np,_,_,_,Atts0)),[]),
     lists:select(MWP,MWU,_),
     !,
+    when(nonvar(PronDet),(PronDet=pron; PronDet=det)),
     pronoun(Lemma,DetL,Atts0,Atts,Pronoun).
 
 %% long np: find pronoun for its head
@@ -177,9 +206,10 @@ generate_pronoun(p(_),Ds0,Pronoun,Ds) :-
     generate_pronoun(HdCat,[],Pronoun,Ds).
 
 %% long name: find pronoun
-generate_pronoun(p(mwu(Lemma,_)),Ds0,adt_lex(np,Pronoun,Pronoun,_,Atts),[]) :-
+generate_pronoun(p(mwu(Lemma,_)),Ds0,adt_lex(np,Pronoun,Pronoun,PronDet,Atts),[]) :-
     Hd = tree(r(mwp,adt_lex(np,_,_,_,Atts0)),[]),  % attributes are identical for all mwp's, right?
     lists:member(Hd,Ds0),
+    when(nonvar(PronDet),(PronDet=pron; PronDet=det)),
     pronoun(Lemma,_,Atts0,Atts,Pronoun).
 
 generate_pronoun(p(conj),_,adt_lex(np,{[deze,die]},_,_,[rnum=pl]),[]).
@@ -197,13 +227,29 @@ split_transformation(tree(r(_,p(MAIN)),Ds0),[N1|NS]) :-
     Hd = tree(r(hd,_),_),
     lists:select(Hd,Ds1,Ds2),
     lists:select(VC,Ds2,[]),
-    CRD = tree(r(crd,_),_),
+    CRD = tree(r(crd,adt_lex(_,en,_,_,_)),_),
     lists:select(CRD,VCDS0,[CNJ1|CNJS]),
     CNJ1 = tree(r(cnj,CNJCAT1),CNJDS1),
     Su1 = tree(r(su,i(Ix,SuCat)),SuDs),
     generate_pronoun(SuCat,SuDs,SuCat2,SuDs2),
     N1 = tree(r(top,p(top)),[tree(r('--',p(MAIN)),[Su1,Hd,tree(r(vc,CNJCAT1),CNJDS1)])]),
     cnj_ds_vc(CNJS,NS,SuCat2,SuDs2,MAIN,Ix,Hd).
+
+split_transformation(tree(r(_,p(MAIN)),Ds0),[N1|NS]) :-
+    lists:member(MAIN,[smain,sv1]),
+    get_su_and_index(Ds0,Ds1,tree(r(su,i(Ix,SuCat)),SuDs)),
+    VC = tree(r(vc,p(conj)),VCDS0),
+    Hd = tree(r(hd,_),_),
+    lists:select(Hd,Ds1,Ds2),
+    lists:select(VC,Ds2,[]),
+    CRD = tree(r(crd,adt_lex(_,Maar,_,_,_)),_),
+    lists:select(CRD,VCDS0,[CNJ1|CNJS]),
+    lists:member(Maar,[maar,dus,want]),
+    CNJ1 = tree(r(cnj,CNJCAT1),CNJDS1),
+    Su1 = tree(r(su,i(Ix,SuCat)),SuDs),
+    generate_pronoun(SuCat,SuDs,SuCat2,SuDs2),
+    N1 = tree(r(top,p(top)),[tree(r('--',p(MAIN)),[Su1,Hd,tree(r(vc,CNJCAT1),CNJDS1)])]),
+    cnj_ds_vc_dlink(CNJS,NS,SuCat2,SuDs2,MAIN,Ix,Hd,Maar).
 
 split_transformation(tree(r('--',p(conj)),Ds0),NewList) :-
     D1 = tree(r(crd,adt_lex(_,en,_,_,_)),[]),
@@ -232,9 +278,8 @@ split_transformation(tree(r('--',p(du)),[D2,D3]),[X1,X2]) :-
 
 %% neem me niet kwalijk , ik moet weg
 %% neem me niet kwalijk. Ik moet weg.
-split_transformation(tree(r('--',p(du)),Ds),[X1,X2]) :-
+split_transformation(tree(r('--',p(du)),[D2,D3]),[X1,X2]) :-
     D2 = tree(r(tag,p(sv1)),L1),
-    lists:select(D2,Ds,[D3]),
     imparative_hd(D2),
     \+ alpino_simplify_modifier:me_dunkt_ds(L1),
     D3 = tree(r(nucl,p(smain)),L2),
@@ -256,11 +301,10 @@ split_transformation(tree(r('--',p(du)),Ds0),[X1,X2]) :-
     X2 = tree(r(top,p(top)),[tree(r('--',p(smain)),L2)]).
 
 %% er was een probleem : ik ging weg
-split_transformation(tree(r('--',p(du)),Ds),[X1,X2]) :-
+split_transformation(tree(r('--',p(du)),[D2,D3]),[X1,X2]) :-
     D2 = tree(r(nucl,p(Smain)),L1),
-    lists:select(D2,Ds,[D3]),
-    lists:member(Smain,[smain,du]),
     D3 = tree(r(sat,SMAIN),L2),
+    lists:member(Smain,[smain,du]),
     smain(SMAIN,L2),
     X1 = tree(r(top,p(top)),[tree(r('--',p(Smain)),L1)]),
     X2 = tree(r(top,p(top)),[tree(r('--',SMAIN),L2)]).
@@ -329,7 +373,8 @@ split_transformation(tree(r('--',p(smain)),Ds0),[X1,X2]) :-
     lists:member(Die,[die,dat]),
     lists:select(Body,RelDs1,[]),
     generate_rel_pronoun(HdCat,HdDs,Die,RelAtts,Atts,Pronoun),!,
-    lex_replace(i(Ix),i(Ix,adt_lex(_,Pronoun,Pronoun,_,Atts)),BodyDs0,BodyDs1),
+    lex_replace(i(Ix),i(Ix,adt_lex(_,Pronoun,Pronoun,PronDet,Atts)),BodyDs0,BodyDs1),
+    when(nonvar(PronDet),(PronDet=pron; PronDet=det)),
     BHd0 = tree(r(hd,adt_lex(ssub,B,C,D,E)),[]),
     BHd  = tree(r(hd,adt_lex(smain,B,C,D,E)),[]),
     replace(BHd0,BHd,BodyDs1,BodyDs),
@@ -444,11 +489,11 @@ pronoun_(Lemma,_,sg,_,{[zij,ze,haar]},A,A) :-
     human(Lemma,f).
 pronoun_(Lemma,_,sg,_,{[hij,zij,ze,hem,haar]},A,A) :-
     human(Lemma,'').
-pronoun_(Lemma,_,sg,_,{[ze,hen,hun]},A0,A) :-
+pronoun_(Lemma,_,sg,_,{[zij,ze,hen,hun]},A0,A) :-
     human(Lemma,p),
     replace(rnum=sg,rnum=pl,A0,A).
 pronoun_(_Lemma,_,sg,per,{[hij,zij,ze,hem,haar]},A,A).
-pronoun_(Lemma,_,pl,_,{[ze,hen,hun]},A,A) :-
+pronoun_(Lemma,_,pl,_,{[zij,ze,hen,hun]},A,A) :-
     human(Lemma,_).
 pronoun_(Lemma,dat,sg,nonper,het,A,A) :-
     \+ human(Lemma,_).
@@ -571,7 +616,7 @@ conj_list_split([Conj|List],P1,NewList) :-
 
 %% de eerste, check cat
 conj_split0(tree(r(cnj,p(P2)),L2), P2, [tree(r(top,p(top)),[tree(r('--',p(P2)),L2)])|List],List) :-
-    lists:member(P2,[du,smain,sv1,whq]).
+    lists:member(P2,[du,smain,sv1,whq,conj]).
 conj_split0(tree(r(crd,adt_lex(_,en,_,_,_)),[]),_,L,L).
 
 conj_split(tree(r(cnj,P2),L2), P1, [tree(r(top,p(top)),[tree(r('--',P),L)])|List],List) :-
@@ -645,6 +690,16 @@ cnj_ds_vc([CNJ2|CNJS],[N2|NS],SuCat2,SuDs2,CAT,Ix,Hd) :-
     N2 = tree(r(top,p(top)),[tree(r('--',p(CAT)),[Su2,Hd,tree(r(vc,CNJCAT2),CNJDS22)])]),
     cnj_ds_vc(CNJS,NS,SuCat2,SuDs2,CAT,Ix,Hd).
 
+cnj_ds_vc_dlink([],[],_,_,_,_,_,_).
+cnj_ds_vc_dlink([CNJ2|CNJS],[N2|NS],SuCat2,SuDs2,CAT,Ix,Hd,Maar) :-
+    CNJ2 = tree(r(cnj,CNJCAT2),CNJDS2),
+    Su2 = tree(r(su,i(XX,SuCat2)),SuDs2),
+    hdrug_util:gen_sym(XX,adt_index),
+    replace_index(CNJDS2,CNJDS22,Ix,XX),
+    N2 = tree(r(top,p(top)),[tree(r('--',p(du)),[tree(r(dlink,adt_lex(_,Maar,_,_,[])),[]),
+						 tree(r(nucl,p(CAT)),[Su2,Hd,tree(r(vc,CNJCAT2),CNJDS22)])])]),
+    cnj_ds_vc_dlink(CNJS,NS,SuCat2,SuDs2,CAT,Ix,Hd,Maar).
+
 
 do_not_split_conj(adt_lex(_,andersom,_,_,_),[]).
 
@@ -694,5 +749,57 @@ lemma_in(Lemma,List) :-
 lemma({Lemma},Lem) :-
     !,
     lists:member(Lem,Lemma).
-lemma(L,L).
+lemma(L,L).%
+
+cp_to_smain(p(cp),CPDS0,CAT,BODYDS) :-
+    DAT = tree(r(cmp,adt_lex(_,dat,_,_,_)),[]),
+    lists:select(DAT,CPDS0,[BODY]),
+    BODY = tree(r(body,p(SSUBORCONJ)),BODYDS0),
+    replace_hd_ssub_smain(SSUBORCONJ,CAT,BODYDS0,BODYDS).
+
+cp_to_smain(p(conj),CPDS0,conj,BODYDS) :-
+    cp_to_smain_conj(CPDS0,BODYDS).
+
+cp_to_smain_conj([],[]).
+cp_to_smain_conj([Tree0|Trees0],[Tree|Trees]):-
+    cp_so_smain_conj1(Tree0,Tree),
+    cp_to_smain_conj(Trees0,Trees).
+
+cp_so_smain_conj1(tree(r(crd,CRDCAT),CRDDS),tree(r(crd,CRDCAT),CRDDS)).
+cp_so_smain_conj1(tree(r(cnj,p(cp)),CPDS0),tree(r(cnj,p(SMAIN)),CPDS)):-
+    cp_to_smain(p(cp),CPDS0,SMAIN,CPDS).
+
+ssub_to_cp_conj([],_,[]).
+ssub_to_cp_conj([H0|T0],CMP,[H|T]) :-
+    ssub_to_cp_conj1(H0,CMP,H),
+    ssub_to_cp_conj(T0,CMP,T).
+
+ssub_to_cp_conj1(tree(r(crd,CRD),DS),_,tree(r(crd,CRD),DS)).
+ssub_to_cp_conj1(tree(r(cnj,p(ssub)),DS),CMP,tree(r(cnj,p(cp)),[CMP,tree(r(body,p(ssub)),DS)])).
+
+rename_indices([],[]).
+rename_indices([tree(r(Rel,Cat0),Ds0)|T0],[tree(r(Rel,Cat),Ds)|T]) :-
+    rename_indices(Cat0,Cat,Ds0,Ds),
+    rename_indices(T0,T).
+
+rename_indices(Cat0,Cat,Ds0,Ds) :-
+    rename_indices_cat(Cat0,Cat,Map),
+    rename_indices_ds(Ds0,Ds,Map).
+
+rename_indices_cat(p(Cat),p(Cat),_).
+rename_indices_cat(adt_lex(A,B,C,D,E),adt_lex(A,B,C,D,E),_).
+rename_indices_cat(i(X),i(Y),Map) :-
+    lists:memberchk(X=Y,Map).
+rename_indices_cat(i(X,Cat),i(Y,Cat),Map) :-
+    hdrug_util:gen_sym(Y,adt_index),
+    lists:memberchk(X=Y,Map).
+
+rename_indices_ds([],[],_).
+rename_indices_ds([tree(r(Rel,Cat0),Ds0)|T0],[tree(r(Rel,Cat),Ds)|T],Map) :-
+    rename_indices_cat(Cat0,Cat,Map),
+    rename_indices_ds(Ds0,Ds,Map),
+    rename_indices_ds(T0,T,Map).
+
+
+
 
