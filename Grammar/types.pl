@@ -177,7 +177,7 @@ cat_type(vpx,     [rightx,cleft,eps3,haswh,
                    rightm,cj,vform,vslash,tags,slash,subj,pro_deps,e_deps,mf,
                    exs,mexs]).
 cat_type(v2_vp,   [vslash,haswh,slash,subj,mf,tags]).
-cat_type(num,     [cj,agr,pro,app]).
+cat_type(num,     [cj,e_agr,agr,pro,app]).
 cat_type(pre_det_quant,[agr]).
 cat_type(pred,    [slash,exs,mexs,e_deps,wh,wh_reltmploc,subn,redrel,deverbal,
                    avform,pcat,cform,hstem,nhstem,wkpro,sel,cj]).
@@ -260,7 +260,7 @@ cat_type(zom_a,        [agr,aform,cform]).
 cat_type(iets_adv,     [wh,wh_reltmploc]).
 cat_type(score_cat,    []).
 cat_type(pre_np_adv,   []).
-cat_type(sbar,         [wh,e_deps,tmploc,ctype,slash,sel,tags,subj_nform,cj]).
+cat_type(sbar,         [wh,e_deps,tmploc,ctype,slash,sel,tags,subj_nform,cj,hstem]).
 cat_type(redrel,       [sub_wh,haswh,e_deps,tmploc,agr,relhd]).
 cat_type(rootbar,      []).
 cat_type(rel,          [hstem,nform,tmploc,relform,agr,sel,cj]).
