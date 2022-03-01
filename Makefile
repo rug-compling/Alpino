@@ -4,7 +4,7 @@ include Makefile.include
 ## Derivbank gave segmentation violation when loaded in SICStus
 
 DIRS= TreebankTools fadd unix SuffixArrays PosTagger\
-      Names Tokenization Generation/fluency Suites Lexicon\
+      Names Tokenization Generation Generation/fluency Suites Lexicon\
       Grammar src
 
 .PHONY: all install clean realclean xref checks

@@ -328,10 +328,14 @@ dict_entry(Root,Frame,SurfaceAtom) :-
     root_surface(Root,SurfaceAtom,SurfaceList),
     debug_message(3,"lex lookup for surface form ~w~n",
                              [SurfaceAtom]),
-    alpino_lex:lexicon(Frame,Root0,SurfaceList,[],_),
+    alpino_lex:lexicon(Frame0,Root0,SurfaceList,[],_),
 
     simplify_lemma(Root0,Root),
-    \+ filter_adj_end(Root,Frame).
+    \+ filter_adj_end(Root,Frame0),
+    (   adapt_frame(SurfaceAtom,Frame0,Frame)
+    ->  true
+    ;   Frame0=Frame
+    ).
 
 dict_entry_robust(Root,Frame,SurfaceAtom) :-
     root_surface(Root,SurfaceAtom,SurfaceList),
@@ -457,10 +461,28 @@ pos2frames(Root,Sense,Pos,Cat,Attr,Frames) :-
     (  var(Root)   -> Sense = Root ; true ),
     root_mismatch_heuristics(Frames0,Frames1,Root,Sense,Pos,Attr),
     unknown_root_heuristics(Frames1,Frames2,Root,Sense,Pos,Attr),
-    last_resort_heuristics(Frames2,Frames3,Root,Sense,Pos,Attr),
+    last_resort_heuristics(Frames2,Frames3,Root,Sense,Pos,Cat,Attr),
     tag_mismatch_heuristics(Frames0,Frames3,Frames4,Root,Sense,Pos,Attr),
     prefer_best_words_in_frames(Root,Frames4,Frames5),
-    added_paraphrase_heuristics(Frames5,Frames,Root,Sense,Pos,Attr).   % add later, so are not removed
+    added_paraphrase_heuristics(Frames5,Frames6,Root,Sense,Pos,Attr),
+    remove_redundant_frames(Frames6,Frames).				% add later, so are not removed
+
+remove_redundant_frames([],[]).
+remove_redundant_frames([Frame0|Frames0],Frames):-
+    redundant_frame(Frame0,Frames0), !,
+    remove_redundant_frames(Frames0,Frames).
+remove_redundant_frames([Frame|Frames0],[Frame|Frames]):-
+    remove_redundant_frames(Frames0,Frames).
+
+redundant_frame(Frame0-Surf,Frames) :-
+    redundant(Frame0,Frame1),
+    lists:member(Frame1-Surf,Frames).
+
+redundant(noun(X,Y,_),noun(X,Y,both)).
+redundant(noun(X,_,Y),noun(X,both,Y)).
+redundant(noun(_,X,Y),noun(both,X,Y)).
+redundant(proper_name(sg,X),proper_name(both,X)).
+redundant(proper_name(pl,X),proper_name(both,X)).
 
 pos2frames_aux(Root,Sense,Pos,Cat,Attr,Frame,Surfs) :-
     setof(Surf,dict_entry(Root,Frame,Surf),Surfs),
@@ -664,6 +686,7 @@ er_tag(wh_iets_adverb).   % waar (anders)
 condition(determiner(der),der).
 condition(determiner(ener),der).
 condition(determiner(des),des).
+condition(determiner(pron),rel(det)).
 condition(postnp_adverb,rel(mod)).
 condition(postadv_adverb,(mcat(advp);mcat(pp))).
 condition(postadj_adverb,mcat(ap)).
@@ -687,6 +710,7 @@ condition(v_noun(_),cat(np)).
 condition(v_noun(_),not_stype).
 condition(v_noun(Sc),Cond) :-
     condition_sc(Sc,Cond).
+condition(v_noun(transitive),has_obj1).
 condition(noun(_,_,_,Sc),Cond) :-
     condition_noun_sc(Sc,Cond).
 condition(tmp_noun(_,_,_,Sc),Cond) :-
@@ -708,6 +732,8 @@ condition(comp_adverb(_),obcomp).
 
 condition(adjective(Infl),infl_adj(Infl)).
 condition(adjective(Infl,_),infl_adj(Infl)).
+
+condition(pronoun(_,_,_,_,gen,_),der).
 
 %% added obj1 "tot op vandaag de dag"
 pc_adv_condition(NotVan,Cond0,(Cond0,(rel(pc);rel(whd);rel(rhd);rel(obj1)))) :-  
@@ -760,16 +786,22 @@ condition_infl(X, not_third_person) :-
 
 condition_infl(sg_bent,not_first_person).
 condition_infl(sg_bent,not_third_person).
+condition_infl(sg_bent,not_plural_su).
 
 condition_infl(sg_heeft,not_first_person).
 condition_infl(sg_heeft,not_second_person).
+condition_infl(sg_heeft,not_plural_su).
 
 condition_infl(sg_is,not_first_person).
 condition_infl(sg_is,not_second_person).
+condition_infl(sg_is,not_plural_su).
 
 condition_infl(sg1,not_u_person).
 
 condition_infl(sg_hebt,not_third_person).
+
+condition_infl(modal_inv,not_third_person).
+condition_infl(modal_inv,not_first_person).
 
 condition_infl(imp(_),not_su).
 
@@ -800,6 +832,7 @@ sg_infl(imp(modal_u)).
 
 pl_infl(pl).
 pl_infl(past(pl)).
+pl_infl(both(pl)).
 
 condition_noun_sc(measure,ne_list(mod)).
 condition_noun_sc(app_measure,ne_list(app)).
@@ -1074,22 +1107,6 @@ apply_check(not_third_person,DT,_) :-
     !,
     fail.
 
-apply_check(not_second_person,DT,_) :-
-    DT:su:attrs <=> List,
-    nonvar(List),  % how does this happen?
-    lists:member(per=je,List),
-    !,
-    fail.
-apply_check(not_second_person,_,_).
-
-apply_check(not_u_person,DT,_) :-
-    DT:su:attrs <=> List,
-    nonvar(List),  % how does this happen?
-    lists:member(per=u,List),
-    !,
-    fail.
-apply_check(not_u_person,_,_).
-
 %%% things with a determiner are "always" third person
 apply_check(not_third_person,DT,_) :-
     DT:su:det <=> [_|_],
@@ -1110,16 +1127,38 @@ apply_check(not_third_person,DT,_) :-
 apply_check(not_third_person,DT,_) :-
     DT:su:attrs <=> List,
     nonvar(List),  % how does this happen?
-    lists:member(noun,List),
+    lists:member(pos=noun,List),
     !,
     fail.
 apply_check(not_third_person,DT,_) :-
     DT:su:attrs <=> List,
     nonvar(List),  % how does this happen?
-    lists:member(name,List),
+    lists:member(pos=name,List),
+    !,
+    fail.
+apply_check(not_third_person,DT,_) :-
+    DT:su:attrs <=> List,
+    nonvar(List),  % how does this happen?
+    lists:member(pos=det,List),
     !,
     fail.
 apply_check(not_third_person,_,_).
+
+apply_check(not_second_person,DT,_) :-
+    DT:su:attrs <=> List,
+    nonvar(List),  % how does this happen?
+    lists:member(per=je,List),
+    !,
+    fail.
+apply_check(not_second_person,_,_).
+
+apply_check(not_u_person,DT,_) :-
+    DT:su:attrs <=> List,
+    nonvar(List),  % how does this happen?
+    lists:member(per=u,List),
+    !,
+    fail.
+apply_check(not_u_person,_,_).
 
 apply_check(dt_part(Cond),_,_) :-
     alpino_adt:dt_part(DT),
@@ -1255,6 +1294,10 @@ apply_check(passive,_,_).
 apply_check(no_subj,Dt,_) :-
     Dt:su => [].
 
+apply_check(has_obj1,Dt,_) :-
+    Dt:obj1 <=> Obj1,
+    \+ Obj1 = [].
+
 apply_check(np_np,Dt,_) :-
     Dt:obj1 <=> Obj1,
     Dt:obj2 <=> Obj2,
@@ -1284,16 +1327,21 @@ apply_des(Path) :-
     \+ simple_des(Path),
     \+ conj_des(Path).
 
+simple_des([Rel|_]) :-
+    lists:member(Rel,[su,obj1,obj2,body,predc,dp,nucl,sat,tag]).    
 simple_des([det,Rel/_|_]) :-
-    lists:member(Rel,[su,obj1,obj2,body]).
+    lists:member(Rel,[su,obj1,obj2,body,dp,nucl,sat,tag]).
 simple_des([det,mod/np,_/Cat|_]) :-
     \+ Cat = np.
 
 conj_des([det,cnj/_,Rel/Cat|Rest]) :-
     simple_des([det,Rel/Cat|Rest]).
 
+
+simple_der([Rel|_]) :-
+    lists:member(Rel,[su,obj1,obj2,body,predc,dp,nucl,sat,tag]).    
 simple_der([det,Rel/_|_]) :-
-    lists:member(Rel,[su,obj1,obj2,body,predc]).
+    lists:member(Rel,[su,obj1,obj2,body,predc,dp,nucl,sat,tag]).
 simple_der([det,mod/np,_/Cat|_]) :-
     \+ Cat = np.
 
@@ -1409,6 +1457,7 @@ finite_infl(sg3).
 finite_infl(sg_heeft).
 finite_infl(sg_hebt).
 finite_infl(pl).
+finite_infl(both(_)).
 finite_infl(past(_)).
 finite_infl(modal_u).
 finite_infl(modal_not_u).
@@ -1654,6 +1703,7 @@ add_bare_prefixes(verb(HZ,VF,SC),
     SC =.. [Fun|Args],
     atom_concat(part_,Fun,Fun2),
     T1=.. [Fun2,Part|Args],
+    \+ impossible_frame(T1),
     (   SC2 = ninv(SC,T1),
 	add_bare_prefixes(Surfs0,Part,Surfs)
     ;   SC2 = T1,
@@ -1677,9 +1727,9 @@ add_prefix(H,Pref,Surf,Sep) :-
     atom_concat(Pref2,H,Pref3),
     realize_surf(Pref3,Surf).
 
-last_resort_heuristics([Fr0|Fr],[Fr0|Fr],_Root,_Sense,_Pos,_Attr).
-last_resort_heuristics([],Frames,Root,Sense,Pos,Attr) :-
-    findall(Frame-Surf,last_resort_heuristic(Pos,Root,Sense,Attr,Frame,Surf),Frames0),
+last_resort_heuristics([Fr0|Fr],[Fr0|Fr],_,_,_,_,_).
+last_resort_heuristics([],Frames,Root,Sense,Pos,Cat,Attr) :-
+    findall(Frame-Surf,last_resort_heuristic(Pos,Cat,Root,Sense,Attr,Frame,Surf),Frames0),
     sort(Frames0,Frames1),
     filter_specific(Frames1,Frames).
 
@@ -1699,17 +1749,18 @@ specific_frames(proper_name(both,Type),proper_name(pl,Type)).
 
 %% todo: adapt surface form for some inflectional variants
 
-last_resort_heuristic(Pos,{RootList},Root,Atts,Pos,Surfs) :-
+last_resort_heuristic(Pos,Cat,{RootList},Root,Atts,Frame,Surfs) :-
     !,
     lists:member(Root0,RootList),
-    last_resort_heuristic(Pos,Root0,Root,Atts,Pos,Surfs).
+    last_resort_heuristic(Pos,Cat,Root0,Root,Atts,Frame,Surfs).
 
-last_resort_heuristic(Pos,Root,_,Attr,Frame,Surfs):-
+last_resort_heuristic(Pos,Cat,Root,_,Attr,Frame,Surfs):-
     last_resort_tag(Frame),
     alpino_postags:postag_of_frame(Frame,Pos,CheckAttr),
     check_attributes(CheckAttr,Attr,Pos,Frame,Root),
     add_morphology(Frame,Root,Surf1),
-    findall(Surf,realize_surf(Surf1,Surf),Surfs).
+    findall(Surf,realize_surf(Surf1,Surf),Surfs),
+    \+ wrong_cat(Frame,Cat).
 
 added_paraphrase_heuristics(Frames0,Frames,Root,Sense,Pos,Attr):-
     findall(Frame-Surf,added_paraphrase_heuristic(Pos,Root,Sense,Attr,Frame,Surf),Frames1),
@@ -1827,7 +1878,13 @@ add_morphology(name_determiner(pron,_),Root,Roots) :-
 add_morphology(name_determiner(pron),Root,Roots) :-
     !,
     add_gen(Root,Roots).
-	      
+
+add_morphology(adjective(ende(_)),Root,Surf) :-
+    atom_concat(Pref,end,Root),
+    !,
+    atom_concat(Pref,ende,Surf).
+      
+
 add_morphology(_,R,R).
 
 add_gen(Root,Roots) :-
@@ -2142,4 +2199,44 @@ wrong_cat(adjective(Infl,_),Cat) :-
 wrong_adj_cat(end(_),ap).
 wrong_adj_cat(ende(_),ap).
 
+wrong_adj_cat(ge_e,ppres).
+wrong_adj_cat(ge_no_e(_),ppres).
+wrong_adj_cat(ge_both(_),ppres).
 
+wrong_adj_cat(e,ppres).
+wrong_adj_cat(no_e(_),ppres).
+wrong_adj_cat(both(_),ppres).
+
+%%  adapt_frame(SurfaceAtom,Frame0,Frame).
+adapt_frame(maand,tmp_noun(de,count,bare_meas),tmp_noun(de,count,sg)).
+adapt_frame(maand,tmp_noun(de,count,bare_meas,SC),tmp_noun(de,count,sg,SC)).
+
+impossible_frame(part_fixed(_,_,_)).
+impossible_frame(part_cleft(_)).
+impossible_frame(part_passive(_)).
+impossible_frame(part_uit(_)).
+impossible_frame(part_sbar_subj_te_passive(_)).
+impossible_frame(part_copula(_)).
+impossible_frame(part_copula_sbar(_)).
+impossible_frame(part_copula_vp(_)).
+impossible_frame(part_so_copula(_)).
+impossible_frame(part_so_copula_sbar(_)).
+impossible_frame(part_so_copula_vp(_)).
+impossible_frame(part_aux_simple(_,_)).
+impossible_frame(part_aux_psp_zijn(_)).
+impossible_frame(part_te_passive(_)).
+impossible_frame(part_sbar_subj(_)).
+impossible_frame(part_sbar_subj_het(_)).
+impossible_frame(part_vp_subj(_)).
+impossible_frame(part_vp_subj_het(_)).
+impossible_frame(part_pp_vp_subj(_,_)).
+impossible_frame(part_pp_sbar_subj(_,_)).
+impossible_frame(part_copula_np(_)).
+impossible_frame(part_alsof_sbar_subj(_)).
+impossible_frame(part_aan_het(_)).
+impossible_frame(part_er_pp_sbar(_,_)).
+impossible_frame(part_mod_pp(_,_)).
+impossible_frame(part_er_er(_)).
+
+%impossible_frame(X) :-
+%    format(user_error,"~w~n",[X]).

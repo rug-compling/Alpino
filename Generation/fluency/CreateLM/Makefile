@@ -177,7 +177,7 @@ $(DISK)/stem_word_freq: $(DISK)/stem_word
         | awk -F\| '{ printf "%s\t%s\t%d\n",$$2,$$3,$$1 }' \
         > $(DISK)/stem_word_freq
 
-$(DISK)/stem_word_freq.pl: toprolog.pl
+$(DISK)/stem_word_freq.pl: toprolog.pl $(DISK)/stem_word_freq
 	echo ":- module(alpino_lemma_word_freq,[ lemma_word_freq/3 ])." > $(DISK)/stem_word_freq.pl
 	echo >> $(DISK)/stem_word_freq.pl
 	Alpino debug=0 cmdint=off -u  -notk -l toprolog < disk/stem_word_freq >> $(DISK)/stem_word_freq.pl

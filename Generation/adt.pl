@@ -338,7 +338,7 @@ relevant_att(numtype).
 %% this does also first step of lexical lookup. Frames are kept
 %% as list in adt_lex(...)
 bitcode_lookup_frames_adt(adt_lex(Cat,Root,Sense,PosTag,Attrs),
-			  adt_lex(Cat,Root,Bc,Frames,Attrs),N,M,_Rel) :-
+			  adt_lex(Cat,Root,Bc,Frames,[pos=PosTag|Attrs]),N,M,_Rel) :-
 %    adapt_case_root(PosTag,Rel,Root0,Sense0,Root,Sense,Attrs),
 
     %%% check if Root is uninstantiated, in that case attempt to guess it
