@@ -89,3 +89,9 @@ allframes.pl:allframes
 	cat allframes | Alpino debug=0 cmdint=off -u -notk -l allframes2pl > allframes.pl
 
 
+stem_word:
+	zcat *.log.gz | grep '^FRAME#' | awk -F\| '{ print $$8 "|" $$1 }' | sed -e 's/FRAME#//'  | sort | uniq -c |awk '{ print $$1 "|" $$2 } ' > stem_word
+
+amb_stem_word_freq: stem_word
+	cat stem_word | awk -F\| '{ if (P==$$2 && ok==0) { print L; print $$0; ok=1} else {if (P==$$2 && ok==1)  print $$0 ; else { ok=0} } ; P=$$2; L=$$0}' > amb_stem_word_freq
+
