@@ -2983,12 +2983,17 @@ spelling_variant41(negen,en,een,half,negenenhalf).
 spelling_variant41(in,en,in,triest,'in-en-in-triest').
 spelling_variant41('in-',en,in,triest,'in-en-in-triest').
 
+spelling_variant41('&','#',x20ac,';', euro).  % frequent in Sonar
+
 spelling_variant51(blijf,van,mijn,lijf,huis,'blijf-van-mijn-lijf-huis').
 spelling_variant51(blijf,van,me,lijf,huis,'blijf-van-mijn-lijf-huis').
 
 %% diacritics missing (alternative is in lexicon too)
 spelling_variant(a,           à).
 
+spelling_variant('C=', euro).
+spelling_variant('¤',  euro).
+		 
 %% special for IMIX
 spelling_variant('anti_RSI_oefening','anti-RSI-oefening').
 spelling_variant('anti_RSI_oefeningen','anti-RSI-oefeningen').

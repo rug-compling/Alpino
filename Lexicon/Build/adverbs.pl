@@ -427,7 +427,6 @@ adverb([te,elfder,ure]).
 adverb([te,elfer,ure]).
 adverb([te,enen,male]).
 adverb([te,hooi,en,te,gras]).
-adverb([te,zeer]).
 adverb([te,vuur,en,te,zwaard]).
 adverb(temeer).	   %  requires sbar:  'dit is temeer een probleem, omdat ..'
 adverb([te,alle,prijze]).
