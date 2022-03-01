@@ -112,6 +112,8 @@ generate(o(Obj,Str,Sem0)) :-
     capitalize_first(Str0,Str1),
     add_punt_if_not(Str1,Str).
 
+%% to try, instead of generating all parts:
+%% check if two "complete" edges together can be joined 
 generate_one(Obj,Sem0,TopRobust) :-
     debug_message(2,"generating for ~w~n",[Sem0]),
     ensure_indices_ok(Sem0,Sem),
@@ -478,7 +480,7 @@ active_inactive(UDtrs,Bitcode,Id,Mother,PDtrs0,EDGE) :-
     (	UDtrs == []
     ->	reverse(PDtrs0,PDtrs),
         EDGE = inactive_edge(Mother,Bitcode,r(Id,PDtrs)),
-	filter_edge(Id,PDtrs)
+	filter_local_tree(Id,PDtrs)
     ;	EDGE = active_edge(Mother,Bitcode,Id,PDtrs0,UDtrs)
     ).
 
@@ -1026,7 +1028,8 @@ active_edges :-
     (   active_edge(_,_,Bc,Id,Dtrs1,Dtrs2,N),
         start_it_deepening(debug_edges,0,10,Cur),
 	unpack_ds(Dtrs1,_,_,Trees,0,Cur,Cur,0),
-	get_terminals_ds(Trees,Terms,Terms1),
+	lists:reverse(Trees,RTrees),
+	get_terminals_ds(RTrees,Terms,Terms1),
 	get_terminals_uds(Dtrs2,Terms1,[]),
         end_it_deepening(debug_edges),
         write(active_edge(N,Bc,Id,Terms)),nl,
@@ -1132,8 +1135,9 @@ show_edge(N,Type,Output) :-
      start_it_deepening(debug_edges,0,10,Cur),
      active_edge(Next,Cat,_Bc,Id,Dtrs1,Dtrs2,N),
      unpack_ds(Dtrs1,_,_,Trees1,0,Pu,Cur,0),
+     lists:reverse(Trees1,RTrees1),
      unpack_show([Next|Dtrs2],Trees2,Pu,Cur),
-     lists:append(Trees1,Trees2,Trees),
+     lists:append(RTrees1,Trees2,Trees),
      end_it_deepening(debug_edges),
      alpino_data:result_term(_,_,Cat,tree(Cat,Id,Trees,_),_,Result),
      hdrug_show:show(Type,Output,[value(Result)]).
@@ -1170,6 +1174,12 @@ combine_rule_edges(Rule,Id1) :-
     substitute(OldMother,Rest,Id1,UDaughters),
     construct_edge(Mother,BitCode,Rule,[],UDaughters,EDGE),
     dot_movement(EDGE,_NEDGE).
+
+%% 21 44
+combine_edges(Id1,Id2) :-
+    active_edge(IMother,AMother,ABitCode,Rule,APDtrs,AUDtrs,Id1),
+    inactive_edge(IMother,IBitCode,Id2),
+    dot_movement_aux(IMother,IBitCode,Id2,AMother,ABitCode,Rule,APDtrs,AUDtrs,_Edge).
 
 glex(N) :-
     set_flag(parse_or_generate,generate),
@@ -1220,13 +1230,60 @@ pack_edge(inactive_edge(__SynSem,Bitcode,Ds),fs(Hash,Copy,Bitcode,Cons)) :-
 
 %%%%%%%
 %%% survive if at least one of your derivs is not ruled out
-filter_edge(Id,DtrPs) :-
-    (   rule_out(Id,_)        % only try if there is a filter for this rule anyway
-    ->  unpack_rules(Id,DtrPs,tree(Rule,Ds)),
-	\+ rule_out(Rule,Ds),
+%filter_edge(Id,tree(Rule,Ds)) :-
+%    (   rule_out(Id,_)	% only try if there is a filter for this rule anyway
+%    ->  \+ rule_out(Rule,Ds),
+%	!
+%    ;   true
+%    ).
+
+:- hdrug_util:initialize_flag(filter_local_trees,on).
+
+%% it is unsafe to throw away an item, if it has no "seen" derivations,
+%% because perhaps for one of its daugher items, the histories are not yet
+%% complete
+%% this hardly ever occurs, but it does.
+%% for this example, "on" fails, where "bigram" succeeds!!!
+%% "het derde terrein is dat van de benchmarking dat we behandelen"
+
+filter_local_tree(Rule,PDtrs):-
+    hdrug_util:hdrug_flag(filter_local_trees,OnOff),
+    unpack_rules(Rule,PDtrs,tree(Rule,Ds0)),
+    (   OnOff == on
+    ->  local_trees(Ds0,Ds),
+	local(Rule,Ds),
+	!
+    ;   OnOff == bigram
+    ->  bigram_trees(Ds0,Ds),
+	bigram(Rule,Ds),
 	!
     ;   true
-    ).
+    ),
+    \+ rule_out(Rule,Ds0),
+    !.
+
+:- use_module(filter).
+
+local_trees([],[]).
+local_trees([H|T],[I|Is]):-
+    local_tree(H,I),
+    local_trees(T,Is).
+
+local_tree(tree(Id,_),Id).
+local_tree(gap(Id),gap(Id)).
+local_tree(vgap,gap(vgap)).
+local_tree(l(ref(Class,_,_,_,_,_,_,_,_,_,_)),lex(Class)).
+
+bigram_trees([],[]).
+bigram_trees([H|T],[I|Is]):-
+    bigram_tree(H,I),
+    bigram_trees(T,Is).
+
+bigram_tree(tree(Id,Ds0),tree(Id,Ds)):-
+    local_trees(Ds0,Ds).
+bigram_tree(gap(Id),gap(Id)).
+bigram_tree(vgap,gap(vgap)).
+bigram_tree(l(ref(Class,_,_,_,_,_,_,_,_,_,_)),lex(Class)).
 
 
 %%
@@ -1234,6 +1291,15 @@ filter_edge(Id,DtrPs) :-
 %%
 
 rule_out(n_n_mod(komma),[_,_,tree(modifier_p(1),_),_]).
+rule_out(n_n_mod(komma),[_,_,tree(mod1,[tree(adv_a,_)]),_]).
+rule_out(n_n_mod(komma),[tree(Rule,_),_,tree(mod2,[tree(pp_p_arg(np),_)]),_]):-
+    \+ Rule = xp_modal_xp(np),
+    \+ Rule = start_coord(_,_).
+%%% exception for:
+%%% Dit is niet alleen het geval in Groot-Brittannië maar ook elders , in Duitsland , Italië , Frankrijk enz.
+%%% and
+%%% Men besteedt veel tijd aan het vaststellen van normen en het nemen van maatregelen , met name op milieugebied .
+
 rule_out(n_n_modroot(min),
 	 [_,_,tree(top_start_xp,[tree(max_xp(post_pp),_)]),_]
 	).
@@ -1248,6 +1314,9 @@ rule_out(n_n_modroot(haak),
 	).
 rule_out(n_n_modroot(haak),
 	 [_,_,tree(top_start_xp,[tree(max_xp(pp),_)]),_,_]
+	).
+rule_out(n_n_modroot(haak),
+	 [_,_,tree(top_start_xp,[tree(max_xp(adj),_)]),_,_]
 	).
 rule_out(n_n_modroot(haak),
 	 [_,_,tree(top_start_xp,[tree(max_xp(pred),_)]),_,_]
@@ -1265,10 +1334,13 @@ rule_out(n_n_mod_a,[_,tree(a_part_a,_)]).
 rule_out(n_n_mod_a,[_,tree(a_pred_a,_)]).
 rule_out(n_n_mod_a,[_,tree(a_a_np_comp,_)]).
 rule_out(n_n_mod_a,[_,tree(a_np_comp_a,_)]).
+rule_out(n_n_mod_adv(komma),[_,_,tree(adv_a,_),_]).
 
 rule_out(vp_v_mod,[_,tree(mod1a,[l(_)])]).
 
 rule_out(a_a_bracketed_mod,[_,_,tree(top_start_xp,[tree(max_xp(pp),_)]),_,_]).
+
+rule_out(a_a_bracketed_mod,[_,_,tree(top_start_xp,[tree(max_xp(pred),[tree(pred_a,_)])]),_,_]).
 
 rule_out(modifier_p(1),[_,tree(np_det_n,[_,tree(n_n_modroot(haak),_)]),_,_]).
 
@@ -1592,10 +1664,6 @@ rule_condition(vp_v_m_extra_vp,ADT) :-
     !,
     rel_has_cat(ADT,mod,oti),
     !.
-rule_condition(vp_v_komma_mod,ADT) :-
-    !,
-    has_cat(ADT,cp),
-    !.
       
 rule_condition(_,_).
 
@@ -1658,3 +1726,16 @@ used_id(Rule) :-
     ;   top_edge(top,Id)
     ).
 
+:- public adapt/2.
+adapt([],[]).
+adapt([H0|T0],[H|T]):-
+    adapt_h(H0,H),
+    adapt(T0,T).
+
+adapt_h(lex(Tag),lex(Class)) :-
+    !,
+    alpino_tr_tag:tr_tag(Tag,Class).
+adapt_h(X,X).
+
+
+% alpino_cg:unpack_rules(pron_pron_rel,[528,486,460,486],t
