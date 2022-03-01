@@ -978,6 +978,8 @@ result_hook(parse,_,o(Result,String,_),Flag) :-
     ->	format_triples_harmen_of_result(Result,Identifier)
     ;   Th==deriv
     ->  format_deriv_of_result(Result,Identifier)
+    ;   Th==nderiv
+    ->  format_nderiv_of_result(Result,Identifier)
     ;   Th==palm
     ->  format_palm_of_result(Result,Identifier)
     ;   Th==palm_score
@@ -1102,6 +1104,10 @@ end_hook(parse,_,_,String) :-
     ;	Th=best_score(Sub)
     ->	best_score_end_parse(No),
 	best_score_end_parse_sub(Sub)
+    ;   Th==adt
+    ->  object(1,o(Result,_,_)),
+	alpino_adt:result_to_adt(Result,Adt),
+	assertz(alpino_gen_suite:lf(Key,Adt))
     ;   Th==joost
     ->  hook(user:vraag_joost(StringNoBrackets)) % external
     ;	true	
@@ -1615,6 +1621,8 @@ create_object_hook(Menu,No) :-
              prolog $module:format_syntax_of_obj(~w)}",[Menu,No]),
     tcl("~a add command -label DerivationTree -command {\
              prolog $module:format_deriv_of_obj(~w)}",[Menu,No]),
+    tcl("~a add command -label New DerivationTree -command {\
+             prolog $module:format_nderiv_of_obj(~w)}",[Menu,No]),
     tcl("~a add command -label Evaluate -command {\
              prolog $module:tree_comparison(~w)}",[Menu,No]).
 
@@ -2257,6 +2265,9 @@ hdrug_command(some_syntax,format_some_syntax_of_obj(1),[]).
 hdrug_command(deriv,format_deriv_of_obj(Obj),[Obj]).
 hdrug_command(deriv,format_deriv_of_obj(1),[]).
 
+hdrug_command(nderiv,format_nderiv_of_obj(Obj),[Obj]).
+hdrug_command(nderiv,format_nderiv_of_obj(1),[]).
+
 hdrug_command(palm,format_palm_of_obj(Obj),[Obj]).
 hdrug_command(palm,format_palm_of_obj(1),[]).
 hdrug_command(palm_score,format_palm_score_of_obj(Obj),[Obj]).
@@ -2844,8 +2855,11 @@ parse_ids([H|T],[none/H|NT],Word) :-
 
 %%% from dt.pl
 %%% after parsing, create output attribute-values on the basis of Dt
-dt_extract_attributes(Dt,Attributes) :-
-    findall(Att,dt_extract_attribute(Dt,Att),Attributes).
+dt_extract_attributes(Dt,Attributes,Rel) :-
+    (   Rel == se
+    ->  Attributes = []
+    ;   findall(Att,dt_extract_attribute(Dt,Att),Attributes)
+    ).
 
 %% if it cannot be singular, it must be plural
 dt_extract_attribute(Dt,rnum=pl) :-
@@ -3076,17 +3090,41 @@ show_xml_adt_bare(File) :-
 hdrug_command(roundtrip,roundtrip(Ref),[Ref]).
 hdrug_command(trip,     roundtrip(Ref),[Ref]).
 hdrug_command(pg,       roundtrip(Ref),[Ref]).
+hdrug_command(roundtrip,roundtrip(Ref),[]) :-
+    hdrug_flag(current_ref,Ref).
+hdrug_command(trip,     roundtrip(Ref),[]) :-
+    hdrug_flag(current_ref,Ref).
+hdrug_command(pg,       roundtrip(Ref),[]) :-
+    hdrug_flag(current_ref,Ref).
+
+hdrug_command(proundtrip,proundtrip,[]).
+hdrug_command(ptrip,proundtrip,[]).
+hdrug_command(ppg,proundtrip,[]).
+hdrug_command(nroundtrip,nroundtrip,[]).
+hdrug_command(ntrip,nroundtrip,[]).
+hdrug_command(npg,nroundtrip,[]).
+
+nroundtrip :-
+    hdrug_flag(current_ref,Key0),
+    find_next_ref(Key0,Key,_),
+    roundtrip(Key).
+
+proundtrip :-
+    hdrug_flag(current_ref,Key0),
+    find_prev_ref(Key0,Key,_),
+    roundtrip(Key).
+
 
 roundtrip(Ref) :-
     veryfast_options,
-    set_flag(robustness,if_required),
     set_flag(order_canonical_dt,off),
     set_flag(robust_attr,frag),  % dt.pl; so the various dp parts of fragments are not connected with puncts
     a_sentence(Ref,_,_),
     set_flag(current_ref,Ref),
-    set_flag(end_hook,best_score(adt)),
+%    set_flag(end_hook,best_score(adt)),
+    set_flag(end_hook,adt),
     sen(Ref),
-    veryfast_options,
+    set_flag(geneval,on),
     generator_comparison(Ref).
 
 roundtrip :-
@@ -3385,11 +3423,21 @@ paraphrase :-
     ;   Chars == end_of_file
     ->  !
     ;   update_line_number(Int),
-
-	debug_message(1,"**** paraphrasing line number ~w~n",[Int]),
-	codes_to_words_or_tokenize(Chars,Tokens),
-	paraphrase(Int,Tokens,Chars),
-	debug_message(1,"**** paraphrased line number ~w~n",[Int]),
+	(   append(Prefix,[124|ParseLine],Chars)
+	->  (   Prefix = [_|_],
+		atom_codes(Ref,Prefix),
+		Key=Ref
+	    ;   Prefix = [],
+		Key=Int
+	    )
+	;   Key=Int,
+	    Chars = ParseLine
+	),
+	set_flag(current_ref,Key),
+	debug_message(1,"**** paraphrasing line ~w (~w)~n",[Int,Key]),
+	codes_to_words_or_tokenize(ParseLine,Tokens),
+	paraphrase(Key,Tokens,ParseLine),
+	debug_message(1,"**** paraphrased line ~w (~w)~n",[Int,Key]),
 	fail
     ).
 
@@ -3485,7 +3533,15 @@ generate_list([H|T],Toks0,Toks) :-
 
 generate(H,Toks0,Toks) :-
     generate(H),
-    object(1,o(_,Ts,_)),
+    object(1,o(Obj,Ts,_)),
+    hdrug_flag(paraphrase_nderiv,OnOff),
+    hdrug_flag(current_ref,Key),
+    (   OnOff == on
+    ->  format_nderiv_of_result(Obj,Key)
+    ;   OnOff == unknowns
+    ->  format_nderiv_of_result_unknowns(Obj,Key)
+    ;   true
+    ),
     lists:append(Ts,Toks,Toks0).
 
 :- public has_rule/1.

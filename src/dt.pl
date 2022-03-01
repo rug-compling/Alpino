@@ -111,7 +111,8 @@ dt_canonical_dt(on,Tree0,Tree) :-
     dt_canonical_dt_indices(Tree1,Tree),
     prettyvars(Tree).
 dt_canonical_dt(off,Tree0,Tree) :-
-    dt_canonical_dt_indices(Tree0,Tree),
+    order_somewhat(Tree0,Tree1),
+    dt_canonical_dt_indices(Tree1,Tree),
     prettyvars(Tree).
 
 rewrite_labels(tree(Rel/L,i(I,R),Ds0),tree(r(Rel,Label),_,Ds)) :-
@@ -230,7 +231,7 @@ dt_to_d(Rel/Node,N0,N,Trees0,Trees):-
 	    dt_list_to_ds(List,Ds0,N1,N2),
 	    (   nonvar(Label), Label \== []
 	    ->  alpino_data:lix(Node,LIX),
-		label_dt_to_d(LIX,Label,Pos,Cat,Node,Dtr,N2,N),
+		label_dt_to_d(LIX,Label,Pos,Cat,Node,Dtr,N2,N,Rel),
 		Ds=[Dtr|Ds0]
 	    ;   Ds=Ds0,
 		N2=N
@@ -241,7 +242,7 @@ dt_to_d(Rel/Node,N0,N,Trees0,Trees):-
 	)
     ).
 
-label_dt_to_d(Ix,Label,Pos,Cat,Node,Dtr,N0,N) :-
+label_dt_to_d(Ix,Label,Pos,Cat,Node,Dtr,N0,N,Rel) :-
     alpino_data:label(Label,Root,Lemma,_His,Q0,Q),
     (   Root == Lemma
     ->  Root = Word
@@ -261,7 +262,7 @@ label_dt_to_d(Ix,Label,Pos,Cat,Node,Dtr,N0,N) :-
     ;	P0=Q0, P=Q
     ),
 
-    try_hook(user:dt_extract_attributes(Node,Attributes),Attributes=[]),
+    try_hook(user:dt_extract_attributes(Node,Attributes,Rel),Attributes=[]),
     
     (   var(Ix)
     ->  Ix=i(N0,_), N is N0+1,
@@ -292,13 +293,17 @@ nds_to_tree_simple([H|T],F,tree(top/du,_,Ds)) :-
 %%%%%%%%%%% CONVERSE_DEPENDENCY_STRUCTURE %%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+:- initialize_flag(converse_dependency,on).
+
 converse_dependency_structure(Tree0,Tree) :-
-    if(converse_dependency_structure0(Tree0,Tree),
+    hdrug_flag(converse_dependency,OnOff),
+    if(converse_dependency_structure0(OnOff,Tree0,Tree),
        true,
        raise_exception('converse_dependency_structure fails!')
       ).
 
-converse_dependency_structure0(Tree0,Tree) :-
+converse_dependency_structure0(off,Tree,Tree).
+converse_dependency_structure0(on,Tree0,Tree) :-
     converse_conj(Tree0,Tree1),
     (   Tree0 == Tree1
     ->  true
@@ -1564,3 +1569,41 @@ replace_rel([],Tail,Tail).
 replace_rel([tree(r(mwp,Cat),Ix,[])|T0],
 	    [tree(r('--',Cat),Ix,[])|T1],Result) :-
     replace_rel(T0,T1,Result).
+
+
+order_somewhat(tree(r(Rel,Cat),I,Ds0), tree(r(Rel,Cat),I,Ds)):-
+    order_somewhat(Cat,Ds0,Ds1),
+    order_ds(Ds1,Ds).
+
+order_somewhat(p(du),Ds0,Ds):-
+    !,
+    order_real_ds(Ds0,Ds).
+order_somewhat(p(conj),Ds0,Ds):-
+    !,
+    order_real_ds(Ds0,Ds).
+order_somewhat(_,Ds,Ds).
+
+order_ds([],[]).
+order_ds([H0|T0],[H|T]):-
+    order_somewhat(H0,H),
+    order_ds(T0,T).
+
+order_real_ds(Ds0,Ds):-
+    simple_pos(Ds0,Ds1),
+    keysort(Ds1,Ds2),
+    vals(Ds2,Ds).
+
+simple_pos([],[]).
+simple_pos([H|T0],[Key-H|T]):-
+    simple_pos1(H,Key), !,
+    simple_pos(T0,T).
+
+simple_pos1(tree(r(_,Cat),_,Ds),Pos):-
+    simple_pos1_cat(Cat,Ds,Pos).
+
+simple_pos1_cat(l(_,_,_/[Pos,_]),_,Pos).
+simple_pos1_cat(i(_,Cat),Ds,Pos):-
+    simple_pos1_cat(Cat,Ds,Pos).
+simple_pos1_cat(p(_),Ds,Pos):-
+    lists:member(D,Ds),
+    simple_pos1(D,Pos).
