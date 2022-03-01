@@ -1522,10 +1522,13 @@ number_features(sg_num,Sign) :-
     %Sign:agr => indef, % één mooi boek; * één mooie boek
     %                   %% TODO: onder de 1 euro
     %                   %%       rond de 1 procent
+    Sign:dt:num <?=?> Sign:e_agr,
     Sign:agr => sg.
 number_features(pl_num,Sign) :-
+    Sign:dt:num <?=?> Sign:e_agr,
     Sign:agr => pl.
-number_features(both,_).
+number_features(both,_) :-
+    Sign:dt:num <?=?> Sign:e_agr.
 
 %% ouderwets: "jullie" kan ook enkelvoud zijn
 pronoun_features(nwh,je,pl,de,both,def,Sign) :-
