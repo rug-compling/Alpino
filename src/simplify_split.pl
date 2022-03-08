@@ -227,29 +227,18 @@ split_transformation(tree(r(_,p(MAIN)),Ds0),[N1|NS]) :-
     Hd = tree(r(hd,_),_),
     lists:select(Hd,Ds1,Ds2),
     lists:select(VC,Ds2,[]),
-    CRD = tree(r(crd,adt_lex(_,en,_,_,_)),_),
+    CRD = tree(r(crd,adt_lex(_,EN,_,_,_)),_),
     lists:select(CRD,VCDS0,[CNJ1|CNJS]),
+    !, % the first crd
     CNJ1 = tree(r(cnj,CNJCAT1),CNJDS1),
     Su1 = tree(r(su,i(Ix,SuCat)),SuDs),
     generate_pronoun(SuCat,SuDs,SuCat2,SuDs2),
     N1 = tree(r(top,p(top)),[tree(r('--',p(MAIN)),[Su1,Hd,tree(r(vc,CNJCAT1),CNJDS1)])]),
-    cnj_ds_vc(CNJS,NS,SuCat2,SuDs2,MAIN,Ix,Hd).
-
-split_transformation(tree(r(_,p(MAIN)),Ds0),[N1|NS]) :-
-    lists:member(MAIN,[smain,sv1]),
-    get_su_and_index(Ds0,Ds1,tree(r(su,i(Ix,SuCat)),SuDs)),
-    VC = tree(r(vc,p(conj)),VCDS0),
-    Hd = tree(r(hd,_),_),
-    lists:select(Hd,Ds1,Ds2),
-    lists:select(VC,Ds2,[]),
-    CRD = tree(r(crd,adt_lex(_,Maar,_,_,_)),_),
-    lists:select(CRD,VCDS0,[CNJ1|CNJS]),
-    lists:member(Maar,[maar,dus,want]),
-    CNJ1 = tree(r(cnj,CNJCAT1),CNJDS1),
-    Su1 = tree(r(su,i(Ix,SuCat)),SuDs),
-    generate_pronoun(SuCat,SuDs,SuCat2,SuDs2),
-    N1 = tree(r(top,p(top)),[tree(r('--',p(MAIN)),[Su1,Hd,tree(r(vc,CNJCAT1),CNJDS1)])]),
-    cnj_ds_vc_dlink(CNJS,NS,SuCat2,SuDs2,MAIN,Ix,Hd,Maar).
+    (   EN == en
+    ->  cnj_ds_vc(CNJS,NS,SuCat2,SuDs2,MAIN,Ix,Hd)
+    ;   lists:member(EN,[maar,dus,want]),
+	cnj_ds_vc_dlink(CNJS,NS,SuCat2,SuDs2,MAIN,Ix,Hd,EN)
+    ).
 
 split_transformation(tree(r('--',p(conj)),Ds0),NewList) :-
     D1 = tree(r(crd,adt_lex(_,en,_,_,_)),[]),
@@ -682,6 +671,10 @@ correct_wh_cat(ap,adj).
 correct_wh_cat(advp,adv).
 
 cnj_ds_vc([],[],_,_,_,_,_).
+cnj_ds_vc([CRD|CNJS],NS,SuCat2,SuDs2,CAT,Ix,Hd) :-
+    CRD = tree(r(crd,adt_lex(_,EN,_,_,_)),[]),
+    lists:member(EN,[en,maar,dus,want]),
+    cnj_ds_vc_dlink(CNJS,NS,SuCat2,SuDs2,CAT,Ix,Hd,EN).
 cnj_ds_vc([CNJ2|CNJS],[N2|NS],SuCat2,SuDs2,CAT,Ix,Hd) :-
     CNJ2 = tree(r(cnj,CNJCAT2),CNJDS2),
     Su2 = tree(r(su,i(XX,SuCat2)),SuDs2),
@@ -690,7 +683,7 @@ cnj_ds_vc([CNJ2|CNJS],[N2|NS],SuCat2,SuDs2,CAT,Ix,Hd) :-
     N2 = tree(r(top,p(top)),[tree(r('--',p(CAT)),[Su2,Hd,tree(r(vc,CNJCAT2),CNJDS22)])]),
     cnj_ds_vc(CNJS,NS,SuCat2,SuDs2,CAT,Ix,Hd).
 
-cnj_ds_vc_dlink([],[],_,_,_,_,_,_).
+cnj_ds_vc_dlink([],[],_,_,_,_,_,_).  %how can this happen?
 cnj_ds_vc_dlink([CNJ2|CNJS],[N2|NS],SuCat2,SuDs2,CAT,Ix,Hd,Maar) :-
     CNJ2 = tree(r(cnj,CNJCAT2),CNJDS2),
     Su2 = tree(r(su,i(XX,SuCat2)),SuDs2),
@@ -698,7 +691,7 @@ cnj_ds_vc_dlink([CNJ2|CNJS],[N2|NS],SuCat2,SuDs2,CAT,Ix,Hd,Maar) :-
     replace_index(CNJDS2,CNJDS22,Ix,XX),
     N2 = tree(r(top,p(top)),[tree(r('--',p(du)),[tree(r(dlink,adt_lex(_,Maar,_,_,[])),[]),
 						 tree(r(nucl,p(CAT)),[Su2,Hd,tree(r(vc,CNJCAT2),CNJDS22)])])]),
-    cnj_ds_vc_dlink(CNJS,NS,SuCat2,SuDs2,CAT,Ix,Hd,Maar).
+    cnj_ds_vc(CNJS,NS,SuCat2,SuDs2,CAT,Ix,Hd).
 
 
 do_not_split_conj(adt_lex(_,andersom,_,_,_),[]).

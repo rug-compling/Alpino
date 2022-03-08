@@ -6,6 +6,25 @@ modifier_transformation(r(Rel,p(du)),[D1,D2],r(Rel,p(du)),[DN,D2],_) :-
     DN = tree(r(dp,adt_lex(ap,Lem,Alleen,adj,Atts)),[]),
     adv_adj(Alleen).
 
+%% de motor van en drijfveer achter X =>
+%% de motor van X en drijfveer erachter
+%% after that, each of the individual PPs might be removed without
+%% causing trouble
+modifier_transformation(r(Rel,p(conj)),[Cnj1,Crd,Cnj2],r(Rel,p(conj)),[CnjA,Crd,CnjB],_) :-
+    Crd = tree(r(crd,_),_),
+    Cnj1 = tree(r(cnj,p(np)),Cnj1Ds),
+    Cnj2 = tree(r(cnj,p(np)),Cnj2Ds0),
+    MOD1 = tree(r(mod,p(pp)),[tree(r(hd,_),_),OBJ1]),
+    lists:member(MOD1,Cnj1Ds),
+    OBJ1 = tree(r(obj1,i(X,_)),_),
+    MOD2 = tree(r(mod,p(pp)),[tree(r(hd,adt_lex(_,Prep,_,_,_)),[]),OBJ2]),
+    ERPREP=tree(r(mod,adt_lex(pp,ErPrep,_,_,[])),[]),
+    replace(MOD2,ERPREP,Cnj2Ds0,Cnj2Ds),
+    er_adverb_prep(Prep,ErPrep),
+    OBJ2 = tree(r(obj1,i(X)),[]),
+    CnjA = tree(r(cnj,p(np)),Cnj1Ds),
+    CnjB = tree(r(cnj,p(np)),Cnj2Ds).
+
 modifier_transformation(r(Rel,p(du)),[D1,D2],r(Rel,p(du)),[DN,D2],_) :-
     D1 = tree(r(dp,adt_lex(advp,Lem,Alleen,adv,Atts)),[]),
     DN = tree(r(dp,adt_lex(ppart,Lem,Alleen,adj,Atts)),[]),
@@ -332,6 +351,8 @@ ignore_modifier(tree(r(mod,adt_lex(_,W,_,Pos,Atts)),[]),[r(_,i(_,p(MCat)))/_|_],
 ignore_modifier(tree(r(mod,adt_lex(_,dan,_,_,_)),[]),Ctxt,_) :-
     \+ lists: append(_,[r(nucl,p(smain))/_,r(_,p(du))/[tree(r(sat,_),_)|_]|_],Ctxt).
 
+ignore_modifier(tree(r(mod,p(ap)),[tree(r(hd,adt_lex(_,zo,_,_,_)),[]),tree(r(obcomp,i(_)),[])]),_,_).
+
 ignore_modifier_pattern(mod=dt(conj,[crd=en,
 				     cnj=meer,
 				     cnj=meer]),_,_).
@@ -612,6 +633,12 @@ ignore_modifier_stem(zojuist,_,_,_,_).
 
 important_modifier_pattern(mod=dt(mwu(_,_),[mwp=dan,mwp=ook])).
 
+important_modifier(_,adt_lex(smain,_,_,_,_),[],_,[]). % final dependent of main verb in smain should stay
+                                                     % "hierin staat : we vertrekken "
+%% werkt niet voor:
+%% In dit artikel staat aangegeven dat de Raad als enige instelling de uitvoerende bevoegdheden van de Commissie mag vaststellen .
+
+important_modifier(_,p(mwu('\'s','\'s')),_,_,_).
 %% ik lust geen brood met kaas =/= ik lust geen brood
 important_modifier(tree(r(mod,p(Cat)),_),adt_lex(np,_,_,_,_),_,_,DsRest) :-
     lists:member(Cat,[rel,pp]),
@@ -641,14 +668,23 @@ important_modifier(tree(r(mod,p(conj)),Ds),C0,C1,C2,C3) :-
     lists:member(tree(r(cnj,p(rel)),XX),Ds),
     important_modifier(tree(r(mod,p(rel)),XX),C0,C1,C2,C3).
 important_modifier(tree(r(mod,adt_lex(VanCat,Van,_,VanPos,_)),[]),adt_lex(GebruikCat,Gebruik,_,GebruikPos,_),[],_,_) :-
-    check_pmi(Gebruik,GebruikPos,GebruikCat,Van,VanPos,VanCat).
+    (   check_pmi(Gebruik,GebruikPos,GebruikCat,Van,VanPos,VanCat)
+    ->  true
+    ;   hdrug_util:debug_message(1,"check_pmi: dropping modifier ~w ~w~n",[Gebruik,Van]),
+	fail
+    ).
+
 
 important_modifier(tree(r(mod,p(_)),PPDS),adt_lex(GebruikCat,Gebruik,_,GebruikPos,_),[],_,_) :-
     PREPD = tree(r(hd,adt_lex(VanCat,Van,_,VanPos,_)),[]),
     lists:member(PREPD,PPDS),
-    check_pmi(Gebruik,GebruikPos,GebruikCat,Van,VanPos,VanCat).
+    (   check_pmi(Gebruik,GebruikPos,GebruikCat,Van,VanPos,VanCat)
+    ->  true
+    ;   hdrug_util:debug_message(1,"check_pmi: dropping modifier ~w ~w~n",[Gebruik,Van]),
+	fail
+    ).
 
-:- hdrug_util:initialize_flag(pmi_modifier_threshold,1500).
+:- hdrug_util:initialize_flag(pmi_modifier_threshold,2000).
 
 check_pmi(Gebruik0,GebruikPos0,GebruikCat,Van0,VanPos0,VanCat) :-
     hdrug_util:hdrug_flag(pmi_modifier_threshold,THRESHOLD),
@@ -660,7 +696,8 @@ check_pmi(Gebruik0,GebruikPos0,GebruikCat,Van0,VanPos0,VanCat) :-
     alpino_penalties:corpus_frequency_lookup(dep35(Van,VanPos,hd/mod,GebruikPos,Gebruik),Val),
     hdrug_util:debug_message(2,"checking modifier ~w ~w ~w ~w: ~w ~n",[Gebruik,GebruikPos,Van,VanPos,Val]),
     Val > THRESHOLD,
-    hdrug_util:debug_message(1,"keeping modifier ~w ~w ~w ~w: ~w ~n",[Gebruik,GebruikPos,Van,VanPos,Val]).
+    !,
+    hdrug_util:debug_message(1,"keeping modifier ~w ~w: ~w ~n",[Gebruik,Van,Val]).
 
 adapt_pos(X,X).
 adapt_pos(noun,noun(tmp)).
@@ -778,3 +815,34 @@ lemma({Lemma},Lem) :-
 lemma(L,L).
 
 conj_and_index(i(_,_),cnj).
+
+%% must replace something...
+replace(El0,El,[El0|Tail],[El|Tail]).
+replace(El0,El,[X|Tail0],[X|Tail]):-
+    replace(El0,El,Tail0,Tail).
+
+er_adverb_prep(aan,eraan).
+er_adverb_prep(achter,erachter).
+er_adverb_prep(bij,erbij).
+er_adverb_prep(binnen,erbinnen).
+er_adverb_prep(boven,erboven).
+er_adverb_prep(buiten,erbuiten).
+er_adverb_prep(door,erdoor).
+er_adverb_prep(in,erin).
+er_adverb_prep(langs,erlangs).
+er_adverb_prep(met,ermee).
+er_adverb_prep(na,erna).
+er_adverb_prep(naar,ernaar).
+er_adverb_prep(naast,ernaast).
+er_adverb_prep(om,erom).
+er_adverb_prep(onder,eronder).
+er_adverb_prep(op,erop).
+er_adverb_prep(over,erover).
+er_adverb_prep(tegen,ertegen).
+er_adverb_prep(tot,ertoe).
+er_adverb_prep(tussen,ertussen).
+er_adverb_prep(uit,eruit).
+er_adverb_prep(van,ervan).
+er_adverb_prep(vanaf,ervanaf).
+er_adverb_prep(vanuit,ervanuit).
+er_adverb_prep(voor,ervoor).
