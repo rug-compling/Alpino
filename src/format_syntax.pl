@@ -359,6 +359,7 @@ find_left_corner([tree(Name,_,Ds)|_],[Name|Rules]) :-
 
 result_to_deriv_tree(Result,DerivTree) :-
     alpino_data:result_term(_,_,_,Tree,_,Result),
+    nonvar(Tree),  % if timed out, sometimes no tree available
     tree_to_deriv_tree(Tree,DerivTree).
 
 tree_to_deriv_tree(tree(Term,R,Ds0,_),tree(Name,Fun,Ds)) :-
