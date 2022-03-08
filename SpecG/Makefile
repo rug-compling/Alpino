@@ -67,16 +67,18 @@ ws:
 
 PAT=
 
-ALL=$(wildcard $(PAT)*.lc.gz)
+ALL=$(wildcard *.lc.gz)
 BIGS=$(ALL:%.lc.gz=%.big)
 
-sorted.pl: $(wildcard $(PAT)*.lc.gz)
+bigs:$(BIGS)
+
+sorted.pl: $(ALL)
 	zcat $(wildcard $(PAT)*.lc.gz) | grep ^local | sort -u > sorted.pl
 
 local.pl: sorted.pl
 	Alpino -notk -l map cmdint=off batch_command=create_locals| sort -u > local.pl
 
-install:
+install: local.c bigram.c
 	cp local.c ../Generation/local.c.$(PROLOG)
 	cp bigram.c ../Generation/bigram.c.$(PROLOG)
 
@@ -91,9 +93,9 @@ local_indexes: local.pl
 	cat local.pl | Alpino -notk -l index_bigrams batch_command=index > local_indexes
 
 bigram.c: bigram_indexes ../Specialization/make_guide_vector
-	awk -F\| '{ print $$1}' bigram_indexes | ../Specialization/make_guide_vector |\
+	cat bigram_indexes | ../Specialization/make_guide_vector |\
             sed -e 's/guideVector/bigramGuideVector/' -e 's/guideSize/bigramGuideSize/' > bigram.c
 
 local.c: local_indexes ../Specialization/make_guide_vector
-	awk -F\| '{ print $$1}' local_indexes | ../Specialization/make_guide_vector |\
+	cat local_indexes | ../Specialization/make_guide_vector |\
             sed -e 's/guideVector/localGuideVector/'  -e 's/guideSize/localGuideSize/' > local.c

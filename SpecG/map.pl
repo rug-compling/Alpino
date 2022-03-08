@@ -39,7 +39,7 @@ local_trees(tree(Node,_,Ds),Result):-
 local_trees_i([],gap(Gap),gap(Gap)).
 
 local_trees_i([],lex(Tag),lex(Class)):-
-    alpino_tr_tag:tr_tag(Tag,Class).
+    alpino_cg:tr_tag(Tag,Class).
 local_trees_i([D0|S0],Rule,tree(Rule,Ds)):-
     local_trees_ds1([D0|S0],Ds).
 
@@ -55,6 +55,6 @@ local_trees1(tree(Node,_,Ds),Result):-
 local_trees_i1([],gap(Gap),gap(Gap)).
 
 local_trees_i1([],lex(Tag),lex(Class)):-
-    alpino_tr_tag:tr_tag(Tag,Class).
+    alpino_cg:tr_tag(Tag,Class).
 local_trees_i1([_|_],Rule,Rule).
 
