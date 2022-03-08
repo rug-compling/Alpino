@@ -31,7 +31,8 @@ words_transformation(r(Rel,p(Cat)),Ds0,
     VC  = tree(r(vc,p(ppart)),_),
     hdrug_util:hdrug_flag(simplify_modifier,Mod),
     hdrug_util:hdrug_flag(simplify_words,Words),
-    alpino_user_transformation:apply_further_adt_transformations(VC0,VC,Mod,Words,Up),
+    hdrug_util:hdrug_flag(simplify_split,Split),
+    alpino_user_transformation:apply_further_adt_transformations(VC0,VC,Mod,Words,Split,Up),
     VC0 \== VC.
 
 words_transformation(r(Rel,p(mwu(_,_))),Ds,
