@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="13" id="0" rel="top">
+    <node begin="0" cat="smain" end="12" id="1" rel="--">
+      <node begin="0" cat="np" end="2" id="2" rel="su">
+        <node begin="0" buiging="zonder" end="1" getal="ev" id="3" infl="pron" lemma="mijn" naamval="stan" npagr="agr" pdtype="det" persoon="1" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,1,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="mijn" status="vol" vwtype="bez" word="Mijn"/>
+        <node begin="1" end="2" gen="de" getal="mv" graad="basis" id="4" lemma="vriend" ntype="soort" num="pl" pos="noun" postag="N(soort,mv,basis)" pt="n" rel="hd" rnum="pl" root="vriend" word="vrienden"/>
+      </node>
+      <node begin="2" end="3" id="5" infl="pl" lemma="verklaren" pos="verb" postag="WW(pv,verl,mv)" pt="ww" pvagr="mv" pvtijd="verl" rel="hd" root="verklaar" sc="fixed([voor_pred(gek),acc,sbar],norm_passive)" stype="declarative" tense="past" word="verklaarden" wvorm="pv"/>
+      <node begin="3" case="dat_acc" def="def" end="4" gen="de" getal="ev" id="6" lemma="me" naamval="obl" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pr,pron,obl,red,1,ev)" pt="vnw" rel="obj1" rnum="sg" root="me" special="wkpro" status="red" vwtype="pr" wh="nwh" word="me"/>
+      <node begin="4" cat="pp" end="6" id="7" rel="predc">
+        <node begin="4" end="5" id="8" lemma="voor" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="voor" sc="voor_pred" vztype="init" word="voor"/>
+        <node aform="base" begin="5" buiging="zonder" end="6" graad="basis" id="9" infl="no_e" lemma="gek" pos="adj" positie="vrij" postag="ADJ(vrij,basis,zonder)" pt="adj" rel="obj1" root="gek" vform="adj" word="gek"/>
+      </node>
+      <node begin="6" cat="cp" end="12" id="10" rel="vc">
+        <node begin="6" conjtype="onder" end="7" id="11" lemma="dat" pos="comp" postag="VG(onder)" pt="vg" rel="cmp" root="dat" sc="dat" word="dat"/>
+        <node begin="7" cat="ssub" end="12" id="12" rel="body">
+          <node begin="7" case="nom" def="def" end="8" gen="de" getal="ev" id="13" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+          <node begin="8" end="9" id="14" lemma="terug" pos="part" postag="BW()" pt="bw" rel="svp" root="terug" word="terug"/>
+          <node begin="9" end="10" id="15" infl="sg" lemma="terug_willen" pos="verb" postag="WW(pv,verl,ev)" pt="ww" pvagr="ev" pvtijd="verl" rel="hd" root="wil_terug" sc="part_ld_pp(terug)" tense="past" word="wilde" wvorm="pv"/>
+          <node begin="10" cat="pp" end="12" id="16" rel="ld">
+            <node begin="10" end="11" id="17" lemma="naar" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="naar" vztype="init" word="naar"/>
+            <node begin="11" end="12" genus="onz" getal="ev" graad="basis" id="18" lemma="Kosovo" naamval="stan" neclass="LOC" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,onz,stan)" pt="n" rel="obj1" rnum="sg" root="Kosovo" word="Kosovo"/>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node begin="12" end="13" id="19" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Mijn vrienden verklaarden me voor gek dat ik terug wilde naar Kosovo .</sentence>
+</alpino_ds>
