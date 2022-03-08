@@ -1107,6 +1107,7 @@ end_hook(parse,_,_,String) :-
     ;   Th==adt
     ->  object(1,o(Result,_,_)),
 	alpino_adt:result_to_adt(Result,Adt),
+	retractall(alpino_gen_suite:lf(Key,_)),
 	assertz(alpino_gen_suite:lf(Key,Adt))
     ;   Th==joost
     ->  hook(user:vraag_joost(StringNoBrackets)) % external
@@ -1621,7 +1622,7 @@ create_object_hook(Menu,No) :-
              prolog $module:format_syntax_of_obj(~w)}",[Menu,No]),
     tcl("~a add command -label DerivationTree -command {\
              prolog $module:format_deriv_of_obj(~w)}",[Menu,No]),
-    tcl("~a add command -label New DerivationTree -command {\
+    tcl("~a add command -label NewDerivationTree -command {\
              prolog $module:format_nderiv_of_obj(~w)}",[Menu,No]),
     tcl("~a add command -label Evaluate -command {\
              prolog $module:tree_comparison(~w)}",[Menu,No]).
@@ -2181,6 +2182,10 @@ hdrug_command(inactive_edges,inactive_edges,[]).
 hdrug_command_help(inactive_edges,"inactive_edges",
 	"list all generated inactive edges").
 
+hdrug_command(top_edges,top_edges,[]).
+hdrug_command_help(top_edges,"top_edges",
+	"list all generated inactive edges with top category").
+
 hdrug_command(analyse_edges,alpino_cg:analyse_edges,[]).
 hdrug_command_help(analyse_edges,"analyse_edges",
 	"count how often inactive edges (generation) are used").
@@ -2554,6 +2559,7 @@ compressed_sentence([_-remove|T],NewT) :-
 :- initialize_flag(generate_failsafe,off).
 
 %% TODO: take threads into account here
+%% TODO: this is a mess
 after_timeout_options(alpino_lc:parse(_)) :-
     hdrug_flag(current_input_sentence,Sentence0),
     ignore_brackets(Sentence0,Sentence),
@@ -2571,15 +2577,26 @@ after_timeout_options(alpino_lc:parse(_)) :-
     set_flag(last_one_timeout,on).
 
 after_timeout_options(alpino_cg:generate(_)) :-
-    flag(generate_failsafe,off),
-    set_flag(generate_failsafe,on).
+    hdrug_flag(after_timeout_options,on),
+    hdrug_flag(generate_failsafe,off),
+    hdrug_flag(filter_local_trees,on),
+    set_flag(filter_local_trees,bigram),
+    set_flag(after_timeout_options,on2).
 
 after_timeout_options(alpino_cg:generate(_)) :-
-    flag(generate_failsafe,on),
-    set_flag(generate_failsafe,last).
+    hdrug_flag(after_timeout_options,on2),
+    set_flag(generate_failsafe,on),
+    set_flag(after_timeout_options,on3).
+
+after_timeout_options(alpino_cg:generate(_)) :-
+    hdrug_flag(after_timeout_options,on3),
+    set_flag(generate_failsafe,last),
+    set_flag(after_timeout_options,on4).
 
 undo_timeout_options(alpino_cg:generate(_)) :-
-    set_flag(generate_failsafe,off).
+    set_flag(filter_local_trees,on),
+    set_flag(generate_failsafe,off),
+    set_flag(after_timeout_options,on).
 
 undo_timeout_options(alpino_lc:parse(_)) :-
     hdrug_flag(after_timeout_options,on),
@@ -3121,10 +3138,11 @@ roundtrip(Ref) :-
     set_flag(robust_attr,frag),  % dt.pl; so the various dp parts of fragments are not connected with puncts
     a_sentence(Ref,_,_),
     set_flag(current_ref,Ref),
-%    set_flag(end_hook,best_score(adt)),
     set_flag(end_hook,adt),
     sen(Ref),
     set_flag(geneval,on),
+    set_flag(print_table_total,on),
+    set_flag(compare_object_saving,on),
     generator_comparison(Ref).
 
 roundtrip :-
@@ -3341,7 +3359,7 @@ paraphrase(Ref,Tokens,Chars) :-
 
 paraphrase(Ref,Tokens,Chars,Result) :-
     statistics(runtime,[Start,_]),
-    flag(copy_input_if_no_parse,CopyOnFailParse),
+    hdrug_flag(copy_input_if_no_parse,CopyOnFailParse),
     set_flag(robustness,off),
     set_flag(order_canonical_dt,off),
     alpino_parse_tokens(Ref,Tokens),
@@ -3357,8 +3375,8 @@ paraphrase(Ref,Tokens,Chars,Result) :-
 paraphrase_continue(Chars,Cat,Result,Start) :-
     statistics(runtime,[Mid,_]),
     set_flag(geneval,off),
-    flag(copy_input_if_no_transformation,On),
-    flag(demo,Demo),
+    hdrug_flag(copy_input_if_no_transformation,On),
+    hdrug_flag(demo,Demo),
     alpino_dt:result_to_dt(Cat,Dt),
     alpino_adt:dt_to_adt(Dt,Adt0),
 
@@ -3387,7 +3405,7 @@ paraphrase_continue(Chars,Cat,Result,Start) :-
 	;   true
 	),
 	set_flag(robustness,off),
-	flag(copy_input_if_paraphrase_failed,Off),
+	hdrug_flag(copy_input_if_paraphrase_failed,Off),
 	(   Off == off
 	->  FailResult=''
 	;   Off = msg(Msg)
@@ -3522,7 +3540,7 @@ generate_or_split(Tree,Toks0,Toks) :-
 
 generate_list([],Toks,Toks).
 generate_list([H|T],Toks0,Toks) :-
-    flag(demo,Demo),
+    hdrug_flag(demo,Demo),
     (   Demo == on
     ->  if_gui(Output=clig,Output=user),	
 	debug_call(1,show(tree(adt),Output,[value(H)]))
@@ -3537,9 +3555,15 @@ generate(H,Toks0,Toks) :-
     hdrug_flag(paraphrase_nderiv,OnOff),
     hdrug_flag(current_ref,Key),
     (   OnOff == on
-    ->  format_nderiv_of_result(Obj,Key)
+    ->  (   format_nderiv_of_result(Obj,Key)
+	->  true
+	;   true
+	)
     ;   OnOff == unknowns
-    ->  format_nderiv_of_result_unknowns(Obj,Key)
+    ->  (   format_nderiv_of_result_unknowns(Obj,Key)
+	->  true
+	;   true
+	)
     ;   true
     ),
     lists:append(Ts,Toks,Toks0).
