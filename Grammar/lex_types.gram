@@ -3197,13 +3197,19 @@ pp_arg(PP,Prep) :-
 pred_arg(PRED) :-
     PRED => pred,
     PRED:deverbal => no,
-    PRED:pcat => ~voor_pred,
+    PRED:pcat => ~voor_pred_np & ~voor_pred_ap,
 %    PRED:dt => dt,
     unify_mods(PRED).
 
 voor_pred_arg(PRED) :-
     PRED => pred,
-    PRED:pcat => voor_pred,
+    PRED:pcat => (voor_pred_np;voor_pred_ap),
+    PRED:dt => dt,
+    unify_mods(PRED).
+
+voor_pred_ap_arg(PRED) :-
+    PRED => pred,
+    PRED:pcat => voor_pred_ap,
     PRED:dt => dt,
     unify_mods(PRED).
 
@@ -4606,7 +4612,7 @@ pp_so_pred(V,Type,Sdat,Obj2,C,C) :-
 %% *je maakt het leuk dat je komt
 %% *het maakt me leuk dat je komt
 pred_np(V,C0,C) :-
-    PCAT:pcat => ~voor_pred,
+    PCAT:pcat => ~voor_pred_np & ~voor_pred_ap,
     pred_np(V,PCAT,C0,C).
 
 pred_np(V,Obj2,C,C) :-
@@ -4678,11 +4684,11 @@ pred_np_ndev(V,Obj2,C,C) :-
 
 nonp_pred_np_ndev(V,C0,C) :-
     pred_np_ndev(V,PCAT,C0,C),
-    PCAT:pcat => ~np_pred & ~voor_pred.
+    PCAT:pcat => ~np_pred & ~voor_pred_np & ~voor_pred_ap.
 
 nonp_pred_np(V,C0,C) :-
     pred_np(V,PCAT,C0,C),
-    PCAT:pcat => ~np_pred & ~voor_pred.
+    PCAT:pcat => ~np_pred & ~voor_pred_np & ~voor_pred_ap.
 
 als_pred_np(V,C0,C) :-
     pred_np(V,PCAT,C0,C),
@@ -4690,7 +4696,7 @@ als_pred_np(V,C0,C) :-
 
 voor_pred_np(V,C0,C) :-
     pred_np(V,PCAT,C0,C),
-    PCAT:pcat => voor_pred.
+    PCAT:pcat => (voor_pred_np;voor_pred_ap).
 
 ap_pred_np(V,C0,C) :-
     pred_np(V,PCAT,C0,C),
@@ -4711,11 +4717,11 @@ np_pred_np(V,C0,C) :-
     PCAT:pcat => np_pred.
 
 pred_np_sbar(V,C0,C) :-
-    Pred:pcat => ~voor_pred,
+    Pred:pcat => ~voor_pred_np & ~voor_pred_ap,
     pred_np(V,sbar,Pred,C0,C).
 
 pred_np_vp(V,C0,C) :-
-    Pred:pcat => ~voor_pred,
+    Pred:pcat => ~voor_pred_np & ~voor_pred_ap,
     pred_np(V,vp,Pred,C0,C).
 
 pp_pred_np_sbar(V,C0,C) :-
@@ -4744,7 +4750,7 @@ als_pred_np_sbar(V,C0,C) :-
 
 voor_pred_np_sbar(V,C0,C) :-
     pred_np(V,sbar,Pcat,C0,C),
-    Pcat:pcat => voor_pred.
+    Pcat:pcat => (voor_pred_np;voor_pred_ap).
 
 als_pred_np_vp(V,C0,C) :-
     pred_np(V,vp,Pcat,C0,C),
@@ -4752,7 +4758,7 @@ als_pred_np_vp(V,C0,C) :-
 
 voor_pred_np_vp(V,C0,C) :-
     pred_np(V,vp,Pcat,C0,C),
-    Pcat:pcat => voor_pred.
+    Pcat:pcat => (voor_pred_np;voor_pred_ap).
 
 pred_np(V,Type,Pred,C,C) :-
     main_v(V),
@@ -4867,7 +4873,7 @@ pred_refl(V,PCAT,C,C) :-
 
 nonp_pred_refl(V,C0,C) :-
     pred_refl(V,PCAT,C0,C),
-    PCAT => ~np_pred & ~voor_pred.
+    PCAT => ~np_pred & ~voor_pred_np & ~voor_pred_ap.
 
 np_pred_refl(V,C0,C) :-
     pred_refl(V,PCAT,C0,C),
@@ -6249,17 +6255,14 @@ map_dep(pred,predc,Pred,_) :-
 map_dep(nonp_pred,predc,Pred,_) :-
     pred_arg(Pred),
     Pred:slash => [],
-    Pred:pcat => ~np_pred & ~voor_pred,
+    Pred:pcat => ~np_pred & ~voor_pred_np & ~voor_pred_ap,
     Pred:e_deps => [].
 map_dep(np_pred,predc,Pred,_) :-
     pred_arg(Pred),
     Pred:pcat => np_pred,
     Pred:e_deps => [].
-map_dep(voor_pred,predc,Pred,_) :-
-    voor_pred_arg(Pred),
-    Pred:e_deps => [].
 map_dep(voor_pred(Nstem),predc,Pred,_) :-
-    voor_pred_arg(Pred),
+    voor_pred_ap_arg(Pred),
     Pred:nhstem ==> Nstem,
     Pred:e_deps => [].
 map_dep(als_pred,predc,Pred,_) :-
