@@ -13,5 +13,8 @@ index :-
 
 index_term(Term):-
     terms:term_hash(Term,Index),
-    format("~w~n",[Index]).
+    (  var(Index)
+    -> format(user_error,"variable in derivation tree: ~w~n",[Term])
+    ;  format("~w~n",[Index])
+    ).
 
