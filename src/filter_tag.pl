@@ -824,7 +824,6 @@ check_fixed_el(np_pred,               Cs,Cs).
 check_fixed_el(nonp_pred,             [check_nonp_copula|Cs],Cs).
 check_fixed_el(no_subj,               Cs,Cs).
 check_fixed_el(als_pred,              [check_tag(complementizer(als))|Cs],Cs).
-check_fixed_el(voor_pred,             [check_tag(preposition(_,_,voor_pred))|Cs],Cs).
 check_fixed_el(voor_pred(A),          [check_tag(preposition(_,_,voor_pred)),
 				       check_stem(A)|Cs],Cs).
 check_fixed_el(svp_pp(V,R),           [prep(V),check_stem(R)|Cs],Cs).
@@ -952,9 +951,6 @@ check_voor(P0,P) :-
     check_verb_sc(voor_pred_np_vp,P0,P).
 check_voor(P0,P) :-
     check_verb_sc(voor_pred_np_sbar,P0,P).
-check_voor(P0,P) :-
-    check_verb_sc(fixed(List,_),P0,P),
-    member(voor_pred,List).
 check_voor(P0,P) :-
     check_verb_sc(fixed(List,_),P0,P),
     member(voor_pred(_),List).

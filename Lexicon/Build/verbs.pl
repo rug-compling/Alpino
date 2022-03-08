@@ -177,7 +177,7 @@ m(v_root(kom,komen),
 
 m(v_root(kom,komen),
   verb(kwam,hebben,past(sg),[ninv(incorporated_subj_topic(er_pp_sbar(achter)),
-				   incorporated_subj_topic(er_pp_sbar(achter)))])).
+				  incorporated_subj_topic(er_pp_sbar(achter)))])).
 
 %% kvind
 m(v_root(vind,vinden),

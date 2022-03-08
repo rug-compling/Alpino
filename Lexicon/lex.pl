@@ -1748,7 +1748,7 @@ adapt_part_label(verb(_A,_B,Frame),Label0,Label) :-
     concat_part_to_root(Label0,Part,Label).
     % hdrug_util:concat_all([Label0,'_',Part],Label,'').
 adapt_part_label(verb(_A,_B,ninv(_,Frame)),Label0,Label) :-
-    functor(Frame,Fun,_),
+    functor(Frame,Fun,_), 
     atom_concat(part_,_,Fun),
     !,
     arg(1,Frame,Part),
