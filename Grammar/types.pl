@@ -226,7 +226,7 @@ cat_type(p,       [cj,sc,wh,wh_reltmploc,slash,prep,preptype,
                    ppost,nhstem,nnform,pp_role,nagr,ndt,ld_pc]).
 cat_type(abs_p,   [sc]).
 cat_type(pp,      [hcj,wh,wh_reltmploc,haspart,slash,exs,mexs,prep,preptype,pp_er,
-                   sel,vc,allow_modal,pp_role,vhasmod,veps,
+                   sel,vc,allow_modal,pp_role,vhasmod,veps,pcat,
                    e_deps,nhstem,nnform,ndt,nagr,cj,ld_pc]).
 cat_type(tag,     [adv,np]).
 cat_type(enumeration,[cj]).
@@ -524,7 +524,7 @@ boolean_type(yn_adv,[[yboth,nboth],[yadv,nadv,padv,oadv,detadv]]).
 boolean_type(sel,[[to_left,to_right,to_topic]]).
 
 boolean_type(pcat,[[om_pred,np_pred,ap_pred,
-                    als_pred,voor_pred,pp_pred,zoals_pred]]).
+                    als_pred,voor_pred_np,voor_pred_ap,pp_pred,zoals_pred]]).
 
 boolean_type(subn,[[sub_num,sub_indef_adj,sub_def_adj,sub_rang,
                     sub_def_verb,sub_indef_verb,sub_adj_pl,

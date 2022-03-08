@@ -3247,7 +3247,11 @@ grammar_rule(dip_scope_vp,ROOT,[NUCL]) :-
 grammar_rule(vp_vp_dip,VP,[V,COLON,NUCL]) :-
     NUCL => start,
     unify_mods(NUCL),
-    comma_dubb(COLON),
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+        comma_dubb(COLON)
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate),
+	dubb(COLON)
+    ),
     max_sbar(SBAR),
     SBAR:ctype => c_dip,
     SBAR:dt => [], % !
@@ -3644,7 +3648,7 @@ grammar_rule(pred_pp_vol,Pred,[PP]) :-
 %% "voor onbenullig" in "ik houd hem voor onbenullig"
 grammar_rule(pred_pp_voor,Pred,[PP]) :-
     pred_pp_structure(Pred,PP),
-    Pred:pcat => voor_pred,
+    Pred:pcat => (voor_pred_ap;voor_pred_np),
     PP:ld_pc => pred_pp,
     PP:prep ==> voor.
 
@@ -3895,6 +3899,9 @@ grammar_rule(modifier_p(1), Mod1,[P1, Mod, OptQm, P2 ]):-
 grammar_rule(modifier_p(1), Mod1,[P1, Mod, OptQm, P2 ]):-
     hdrug_util:hdrug_flag(parse_or_generate,generate),
     Mod1 => modifier,
+    unify_mods(Mod),
+    Mod1:mexs <=> Mexs,
+    alpino_wappend:unify_inout(Mexs),
     Mod1:eps => no,
     (   max_np(Mod), 
 	Mod:nform => ~temp,
@@ -6216,7 +6223,8 @@ pp_p_arg_np_structure(PP,P,OPTPUNCT,XP) :-
     XP:nform => ~er,
     XP:parg => yes,
     XP:pred => npred,
-    pp_p_arg_structure(P,XP,PP).
+    pp_p_arg_structure(P,XP,PP),
+    PP:pcat => voor_pred_np.
 
 grammar_rule(pp_p_mod_arg(np), PP, [ P, COMMA1, MOD, COMMA2, XP ]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
@@ -6289,7 +6297,8 @@ grammar_rule(pp_p_arg(a), PP, [ P, XP ]) :-
     XP => a,
     XP:wh => nwh,
     XP:sc => [],
-    pp_p_arg_structure(P,XP,PP).
+    pp_p_arg_structure(P,XP,PP),
+    PP:pcat => voor_pred_ap.
 
 grammar_rule(pp_p_arg(n), PP, [ P, XP ]) :-
     XP => n,
