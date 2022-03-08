@@ -67,6 +67,8 @@ survives_bigram(op,_,preposition(op,_),bezoek,_,tmp_noun(het,count,sg)).
 survives_bigram(op,_,preposition(op,_),bezoek,_,tmp_noun(het,count,sg,pred_pp(op))).
 %% temp
 survives_bigram(het,_,determiner(het,nwh,nmod,pro,nparg,wkpro),laatste,_,number(rang)).
+%% dat soort is mwu too
+survives_bigram(dat,_,determiner(het,nwh,nmod,pro,nparg),soort,_,noun(both,count,sg,_)).
 
 %% because "dames en heren" is also tag
 survives_trigram(dame,_,noun(de,count,pl),en,_,conj(en),heer,_,noun(de,count,pl)).
@@ -85,6 +87,7 @@ surviving_word(_):-
 
 surviving_root('aantal een').
 surviving_root('aantal een groot').
+surviving_root('dat soort').
 surviving_root('high tech').      % temp
 surviving_root('naar schatting').
 surviving_root('om het even').
