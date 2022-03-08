@@ -33,7 +33,7 @@ part=
 debug=1
 
 ## defaults for test1 target
-default_test_options=debug=$(debug) use_fluency_model=on user_max=600000
+default_test_options=debug=$(debug) use_fluency_model=on user_max=300000 generate_robustness=on
 cdb_test_options= -flag fluency_feature_weights ../Generation/fluency/maxent_feature_weights_c
 extra_test_options= -flag fluency_feature_weights ../Generation/fluency/maxent_feature_weights_x
 PPH_test_options= -flag fluency_feature_weights ../Generation/fluency/maxent_feature_weights_p
@@ -100,7 +100,6 @@ trees:
 	$(ALPINO_HOME)/src/Alpino\
           -flag suite $(suitepath)/$(suite)\
           penalties=undefined\
-          treex_corrections=off\
           $(default_test_options)\
           $($(suite)_test_options)\
           $(extra) -notk cmdint=off\
@@ -204,14 +203,13 @@ sss:
 	echo $(suites)
 
 cf00:
-	@$(MAKE) --no-print-directory score
-	@$(MAKE) --no-print-directory score file=$(suite)/scores
+	@if [ -r $(file) ]; then make --no-print-directory score; make --no-print-directory score file=$(suite)scores ; fi
 
 cf:
 	@for suite in $(suites) ; do $(MAKE) --no-print-directory cf0 suite=$$suite; done
 
 cf0:
-	@if [ -r $(suite)/job*/scores ]; then for file in $(suite)/job*/scores; do $(MAKE) --no-print-directory cf00 file=$$file suite=$(suite); done ;fi
+	@for file in $(suite)job*/scores; do $(MAKE) --no-print-directory cf00 file=$$file suite=$(suite); done
 
 
 scores:
