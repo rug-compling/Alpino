@@ -1,5 +1,6 @@
 :- module(alpino_cg, [active_edges/0,
 		      inactive_edges/0,
+		      top_edges/0,
 		      update_inactive_edges/0
 		     ]).
 
@@ -26,7 +27,6 @@
 		 bitcode,
 		 'fluency/pro_lm',
 		 'fluency/maxent'
-%%		 optrel   % currently not used!
 		 ]).
 
 
@@ -34,7 +34,8 @@
 %%%       but something special so that no additional punctuation is inserted
 %%% [ ik verslijt hem voor ] [ zwakzinnig ]
 %%% => ik verslijt hem voor ; zwakzinnig
-%%% 
+%%% DONE: if you change the flag robust_attr from dp to something else, e.g. "frag"
+
 
 %%%
 %%% FLUENCY
@@ -88,6 +89,8 @@ extract_and_score_sentence(Fs,BitcodeAll,o(Obj,Str),P,UseFluency,Robust) :-
 
 generate(o(Obj,Str,Sem0)) :-
     hdrug_flag(generate_failsafe,Val),
+    hdrug_flag(filter_local_trees,Val2),
+    format(user_error,"Generating with generate_failsafe=~w and filter_local_trees=~w~n",[Val,Val2]),
     alpino_data:result_term(Sc,Str0,Cat,DerivTree,Frames,Obj0),
     alpino_data:result_term(Sc,Str, Cat,DerivTree,Frames,Obj),
     
@@ -135,7 +138,7 @@ generate_one(Obj,Sem0,TopRobust) :-
     (   All == BitcodeAll
     ->  true
     ;   format(user_error,"Lexical lookup incomplete (bitcodes: found ~w for ~w)~n",[All,BitcodeAll]),
-	%% attempt to give informative message, but this fails if multiple roots missing
+	%% attempt to give informative message, but this may fail if multiple roots missing
 	Missing is BitcodeAll - All,
 	findall(Root,lex(_,Root,Missing,_,_,_),Roots0),
 	sort(Roots0,[R|_Roots]),
@@ -149,14 +152,14 @@ generate_one(Obj,Sem0,TopRobust) :-
 
 %% this is called after time-out
 generate_last_resort(Obj,Sem) :-
-    \+ hdrug_flag(robustness,off),
+    \+ hdrug_flag(generate_robustness,off),
     findall(Part,get_lexical_part(Sem,Part),[Part|Parts]),
     debug_message(2,"No full generation; attempting to generate parts...~n",[]),
     generate_list([Part|Parts],Results,[]),
     combine_results(Results,_Sc,Obj,_Str).
 
 generate_last_last_resort(Obj,Sem,Results) :-
-    \+ hdrug_flag(robustness,off),
+    \+ hdrug_flag(generate_robustness,off),
     get_yield(Sem,Results,[]),
     alpino_data:result_term(_,Results,_,_,_,Obj).
 
@@ -183,7 +186,7 @@ get_lexical_yield(adt_lex(_,Root,_,_,_), [Root|Rs],Rs).
 
 %% ensure renumbering of positions in the parts!
 generate_parts(Obj,Sem) :-
-    \+ hdrug_flag(robustness,off),
+    \+ hdrug_flag(generate_robustness,off),
     findall(Part,get_part(Sem,Part),[Part|Parts]),
     debug_message(2,"No full generation; attempting to generate parts...~n",[]),
     generate_list([Part|Parts],Results,[]),
@@ -391,7 +394,9 @@ next_step(Edge0,Edges,NewEdges,Sem) :-
     ->  Edges=NewEdges
     ;   number_inactive_edge(Edge0,Edge1),
         inactive_edge_history(Edge1,Edge),
-        findall(NewEdge,gen_edge(Edge,NewEdge,Sem),NewEdges,Edges),
+%%%        findall(NewEdge,gen_edge(Edge,NewEdge,Sem),NewEdges,Edges),
+	findall(NewEdge,gen_edge(Edge,NewEdge,Sem),Edges2),
+	lists:append(Edges,Edges2,NewEdges),	% breadth-first. Reduce risk of filtering local trees too early?
         put_on_chart(EdgeFrozen,Edge)
     ).
 
@@ -839,7 +844,7 @@ lookup_tag(Tag,Label,Cat,Ref,Dt,Word) :-
     ;   alpino_data:dt_if_defined(Cat,Dt)
     ),
     alpino_data:lexical(Hwrd,Label,_,Word,_,_,gen,_),
-    alpino_tr_tag:tr_tag(Tag,Class),
+    tr_tag(Tag,Class),
     Ref=ref(Class,Tag,Label,Word,_,_,_,_,gen,N,_).
 
 %% Add syntax/semantics to the lexical entries.
@@ -1006,7 +1011,7 @@ check_clist(Mother) :-
 %%% Printing and other debugging tools
 %%%
 
-:- public active_edges/0, inactive_edges/0,
+:- public active_edges/0, inactive_edges/0, top_edges/0,
           print_active_edge_ids/0,
           print_inactive_edge_ids/0.
 
@@ -1070,6 +1075,20 @@ inactive_edges :-
 
 inactive_edge_words(Words) :-
     (   inactive_edge(_,Bc,N),
+	format("inactive edge: ~w ~w~n",[N,Bc]),
+        start_it_deepening(debug_edges,0,10,Cur),
+	unpack_all(Bc,_,N,Cur,Tree,on,0),
+        end_it_deepening(debug_edges),
+	get_terminals(Tree,Words),
+        get_id(Tree,Id),
+	format("    ~w ~w~n",[Id,Words]),
+        fail
+    ;	true
+    ).
+
+top_edges :-
+    (   top_edge(_,N),
+	inactive_edge(_,Bc,N),
 	format("inactive edge: ~w ~w~n",[N,Bc]),
         start_it_deepening(debug_edges,0,10,Cur),
 	unpack_all(Bc,_,N,Cur,Tree,on,0),
@@ -1239,13 +1258,13 @@ pack_edge(inactive_edge(__SynSem,Bitcode,Ds),fs(Hash,Copy,Bitcode,Cons)) :-
 
 :- hdrug_util:initialize_flag(filter_local_trees,on).
 
-%% it is unsafe to throw away an item, if it has no "seen" derivations,
+%% it is unsafe to throw away an inference, if it has no "seen" derivations,
 %% because perhaps for one of its daugher items, the histories are not yet
 %% complete
 %% this hardly ever occurs, but it does.
 %% for this example, "on" fails, where "bigram" succeeds!!!
 %% "het derde terrein is dat van de benchmarking dat we behandelen"
-
+/*
 filter_local_tree(Rule,PDtrs):-
     hdrug_util:hdrug_flag(filter_local_trees,OnOff),
     unpack_rules(Rule,PDtrs,tree(Rule,Ds0)),
@@ -1261,6 +1280,30 @@ filter_local_tree(Rule,PDtrs):-
     ),
     \+ rule_out(Rule,Ds0),
     !.
+*/
+
+filter_local_tree(Rule,PDtrs):-
+    hdrug_util:hdrug_flag(filter_local_trees,OnOff),
+    filter_local_tree(OnOff,Rule,PDtrs).
+
+filter_local_tree(off,Rule,PDtrs) :-
+    unpack_rules(Rule,PDtrs,tree(Rule,Ds0)),
+    \+ rule_out(Rule,Ds0),
+    !.
+filter_local_tree(on,Rule,PDtrs) :-
+    unpack_rules(Rule,PDtrs,tree(Rule,Ds0)),
+    local_trees(Ds0,Ds),
+    local(Rule,Ds),
+    \+ rule_out(Rule,Ds0),
+    !.
+filter_local_tree(bigram,Rule,PDtrs) :-
+    unpack_rules(Rule,PDtrs,tree(Rule,Ds0)),
+    bigram_trees(Ds0,Ds),
+    bigram(Rule,Ds),
+    \+ rule_out(Rule,Ds0),
+    !.
+
+
 
 :- use_module(filter).
 
@@ -1334,7 +1377,10 @@ rule_out(n_n_mod_a,[_,tree(a_part_a,_)]).
 rule_out(n_n_mod_a,[_,tree(a_pred_a,_)]).
 rule_out(n_n_mod_a,[_,tree(a_a_np_comp,_)]).
 rule_out(n_n_mod_a,[_,tree(a_np_comp_a,_)]).
+
 rule_out(n_n_mod_adv(komma),[_,_,tree(adv_a,_),_]).
+
+rule_out(n_n_modnp(komma),[tree(np_n,[l(_)]),_,tree(np_n,[tree(n_pn,_)]),_]).
 
 rule_out(vp_v_mod,[_,tree(mod1a,[l(_)])]).
 
@@ -1358,14 +1404,6 @@ unpack_rule(gap(G),gap(G)).
 unpack_rule(vgap,vgap).
 unpack_rule(r(Id,Ptrs),Pat) :-
     unpack_rules(Id,Ptrs,Pat).
-
-/*
-survive_rule_out([tree(Id,Tree)|T]) :-
-    (   rule_out(Id,Tree)
-    ->  survive_rule_out(T)
-    ;   true
-    ).
-*/
 
 :- initialize_flag(treex_corrections,off).
 
@@ -1397,18 +1435,6 @@ generic_transform_ds([],[]).
 generic_transform_ds([H0|T0],[H|T]):-
     apply_generic_transformations(H0,H),
     generic_transform_ds(T0,T).
-
-%% for any input
-%% topic_drop is currently not allowed for generation (explicitly
-%% ruled out in the grammar), so we'll try to generate a ynquestion
-%% or imparative instead (which should be pretty close).
-% generic_transform_rule(tree(r(Rel,adt_lex(A,B,C,D,E0)),[]),
-% 		       tree(r(Rel,adt_lex(A,B,C,D,[stype=imparative|E])),[])) :-
-%     select(stype=topic_drop,E0,E).
-
-% generic_transform_rule(tree(r(Rel,i(I,adt_lex(A,B,C,D,E0))),[]),
-% 		       tree(r(Rel,i(I,adt_lex(A,B,C,D,[stype=imparative|E]))),[])) :-
-%     select(stype=topic_drop,E0,E).
 
 %% ik moet [ld er] wel doorvaren
 %% = ik moet wel [ld er door] varen
@@ -1734,8 +1760,7 @@ adapt([H0|T0],[H|T]):-
 
 adapt_h(lex(Tag),lex(Class)) :-
     !,
-    alpino_tr_tag:tr_tag(Tag,Class).
+    tr_tag(Tag,Class).
 adapt_h(X,X).
 
 
-% alpino_cg:unpack_rules(pron_pron_rel,[528,486,460,486],t

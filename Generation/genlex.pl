@@ -89,6 +89,7 @@ check_parse_only(List,Frame) :-
     lists:member(Root,List),
     check_parse_only_root(Root,Frame).
 
+check_parse_only_root(eentje,_). % use één; dim should be in adt somehow...
 check_parse_only_root(wezen,verb(zijn,inf,_)).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -340,9 +341,8 @@ dict_entry(Root,Frame,SurfaceAtom) :-
 dict_entry_robust(Root,Frame,SurfaceAtom) :-
     root_surface(Root,SurfaceAtom,SurfaceList),
     debug_message(3,"lex lookup for surface form ~w~n",
-                             [SurfaceAtom]),
+		  [SurfaceAtom]),
     alpino_lex:lexicon(Frame0,Root0,SurfaceList,[],_),
-
     simplify_lemma(Root0,Root),
     \+ filter_adj_end(Root,Frame0),
     add_simple_frames(Frame0,Frame).
@@ -397,6 +397,8 @@ root_surface(Root,Surf,[SurfAtom|SurfList]) :-
 
 root_surface(Root,SurfAtom,SurfList) :-
     split_atom(Root," ",AtomList),
+    length(AtomList,Len),
+    Len < 6,
     root_surface_list(AtomList,SurfList,[]),
     hdrug_util:concat_all(SurfList,SurfAtom,' ').
 
@@ -711,6 +713,8 @@ condition(v_noun(_),not_stype).
 condition(v_noun(Sc),Cond) :-
     condition_sc(Sc,Cond).
 condition(v_noun(transitive),has_obj1).
+condition(v_noun(copula),predc).
+condition(v_noun(nonp_copula),predc).
 condition(noun(_,_,_,Sc),Cond) :-
     condition_noun_sc(Sc,Cond).
 condition(tmp_noun(_,_,_,Sc),Cond) :-
@@ -1140,6 +1144,12 @@ apply_check(not_third_person,DT,_) :-
     DT:su:attrs <=> List,
     nonvar(List),  % how does this happen?
     lists:member(pos=det,List),
+    !,
+    fail.
+apply_check(not_third_person,DT,_) :-
+    DT:su:hwrd:lexical <=> Stem,
+    nonvar(Stem),
+    lists:member(Stem,[die,dat,wie,wat]),
     !,
     fail.
 apply_check(not_third_person,_,_).
@@ -1701,6 +1711,7 @@ add_bare_prefixes(verb(HZ,VF,SC),
 		  verb(HZ,VF,SC2),Surfs0,Part,Surfs) :-
     !,
     SC =.. [Fun|Args],
+    \+ Fun = ninv,
     atom_concat(part_,Fun,Fun2),
     T1=.. [Fun2,Part|Args],
     \+ impossible_frame(T1),
