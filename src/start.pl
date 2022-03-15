@@ -2178,6 +2178,7 @@ hdrug_command(active_edges,active_edges,[]).
 hdrug_command_help(active_edges,"active_edges",
 	"list all generated active edges").
 
+hdrug_command(edges,inactive_edges,[]).
 hdrug_command(inactive_edges,inactive_edges,[]).
 hdrug_command_help(inactive_edges,"inactive_edges",
 	"list all generated inactive edges").
