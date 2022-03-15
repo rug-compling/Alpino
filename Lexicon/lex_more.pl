@@ -26,7 +26,8 @@ phrasal_entry(Cat,Label,His,In,Out) :-
 phrasal_entry(number(rang),Stem,number_rang) -->
     { hdrug_util:debug_message(4,"numbere~n",[]) },
     n_word(NumberE),
-    { numbere(NumberE, Stem) }.
+    { dif(NumberE, drieste),
+      numbere(NumberE, Stem) }.
 
 %% de zesmiljardste aardbewoner
 phrasal_entry(number(rang),Stem,number_rang) -->

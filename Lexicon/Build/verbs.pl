@@ -8671,7 +8671,7 @@ v(glooi,glooit,glooien,geglooid,glooide,glooiden,
 v(gloor,gloort,gloren,gegloord,gloorde,gloorden,
     [h([intransitive])]).
 
-v(glorieer,glorieert,glorieren,geglorieerd,glorieerde,glorieerden,
+v(glorieer,glorieert,gloriëren,geglorieerd,glorieerde,glorieerden,
     [h([intransitive])]).
 
 v(glunder,glundert,glunderen,geglunderd,glunderde,glunderden,
@@ -24952,6 +24952,10 @@ v(verkneukel,verkneukelt,verkneukelen,verkneukeld,verkneukelde,verkneukelden,
 
 v(verknoei,verknoeit,verknoeien,verknoeid,verknoeide,verknoeiden,
     [h([transitive])]).
+
+v(verkoker,verkokert,verkokeren,verkokerd,verkokerde,verkokerden,
+  [h([intransitive,
+      transitive])]).
 
 v(verkommer,verkommert,verkommeren,verkommerd,verkommerde,verkommerden,
     [unacc([intransitive])]).

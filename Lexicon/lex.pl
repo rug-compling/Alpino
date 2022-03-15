@@ -2697,6 +2697,7 @@ spelling_variant(desalnietemin,desalniettemin).
 spelling_variant(destijd,     destijds).
 spelling_variant(dezelfe,     dezelfde).
 spelling_variant(dichts,      dichtst).
+spelling_variant(dichtsbijzijnde,      dichtstbijzijnde).
 spelling_variant(dindsdag,    dinsdag).
 spelling_variant(doogeschoten,doodgeschoten).
 spelling_variant(doorbereken, doorberekenen).
@@ -2737,6 +2738,8 @@ spelling_variant(geleidde,    geleide).
 spelling_variant(geplaats,    geplaatst).
 spelling_variant(gepushed,    gepusht).
 spelling_variant(geruimte,    geruime).
+spelling_variant(geschikst,   geschiktst).
+spelling_variant(geschikste,  geschiktste).
 spelling_variant(gestichtte,  gestichte).
 spelling_variant(gezamelijk,  gezamenlijk).
 spelling_variant(haden,       hadden).
@@ -2770,6 +2773,8 @@ spelling_variant(keeg,        kreeg).
 spelling_variant(kijgen,      krijgen).
 spelling_variant(kijgt,       krijgt).
 spelling_variant(knieen,      knieën).
+spelling_variant(kunsstof,    kunststof).
+spelling_variant(kunsstoffen, kunststoffen).
 spelling_variant(premiere,    première).
 spelling_variant(koninging,   koningin).
 spelling_variant(kunen,       kunnen).
@@ -2853,6 +2858,8 @@ spelling_variant(symphatiek,  sympathiek).
 spelling_variant(symphatieke, sympathieke).
 spelling_variant(onsymphatiek,onsympathiek).
 spelling_variant(onsymphatieke,onsympathieke).
+spelling_variant(onsymphathiek,onsympathiek).
+spelling_variant(onsymphathieke,onsympathieke).
 spelling_variant(tegenoverstelde,
                               tegenovergestelde).
 spelling_variant(tjdens,      tijdens).

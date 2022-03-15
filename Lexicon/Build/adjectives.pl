@@ -3063,9 +3063,9 @@ a([e(akoestische),
 
 a([both([al,dente])],adv,[],[]).
 
-a([e(alcolholhoudende),
+a([e(alcoholhoudende),
    no_e(alcoholhoudend),
-   e(alkolholhoudende),
+   e(alkoholhoudende),
    no_e(alkoholhoudend)],nonadv,[],[]).
 
 a([e(alcoholische),

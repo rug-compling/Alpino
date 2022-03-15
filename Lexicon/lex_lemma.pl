@@ -3625,7 +3625,7 @@ lemma_root(door_globaliseren,globaliseer_door) .
 lemma_root(door_gloeien,gloei_door) .
 lemma_root(door_glooien,glooi_door) .
 lemma_root(door_gloren,gloor_door) .
-lemma_root(door_glorieren,glorieer_door) .
+lemma_root(door_gloriëren,glorieer_door) .
 lemma_root(door_glunderen,glunder_door) .
 lemma_root(door_gluren,gluur_door) .
 lemma_root(door_gniffelen,gniffel_door) .
@@ -5924,7 +5924,7 @@ lemma_root(globaliseren,globaliseer) .
 lemma_root(gloeien,gloei) .
 lemma_root(glooien,glooi) .
 lemma_root(gloren,gloor) .
-lemma_root(glorieren,glorieer) .
+lemma_root(gloriëren,glorieer) .
 lemma_root(glunderen,glunder) .
 lemma_root(gluren,gluur) .
 lemma_root(gniffelen,gniffel) .
@@ -11224,7 +11224,7 @@ lemma_root(raak_globaliseren,globaliseer_raak) .
 lemma_root(raak_gloeien,gloei_raak) .
 lemma_root(raak_glooien,glooi_raak) .
 lemma_root(raak_gloren,gloor_raak) .
-lemma_root(raak_glorieren,glorieer_raak) .
+lemma_root(raak_gloriëren,glorieer_raak) .
 lemma_root(raak_glunderen,glunder_raak) .
 lemma_root(raak_gluren,gluur_raak) .
 lemma_root(raak_gniffelen,gniffel_raak) .
@@ -16378,7 +16378,7 @@ lemma_root(uit_globaliseren,globaliseer_uit) .
 lemma_root(uit_gloeien,gloei_uit) .
 lemma_root(uit_glooien,glooi_uit) .
 lemma_root(uit_gloren,gloor_uit) .
-lemma_root(uit_glorieren,glorieer_uit) .
+lemma_root(uit_gloriëren,glorieer_uit) .
 lemma_root(uit_glunderen,glunder_uit) .
 lemma_root(uit_gluren,gluur_uit) .
 lemma_root(uit_gniffelen,gniffel_uit) .
@@ -21180,7 +21180,7 @@ lemma_root(voort_globaliseren,globaliseer_voort) .
 lemma_root(voort_gloeien,gloei_voort) .
 lemma_root(voort_glooien,glooi_voort) .
 lemma_root(voort_gloren,gloor_voort) .
-lemma_root(voort_glorieren,glorieer_voort) .
+lemma_root(voort_gloriëren,glorieer_voort) .
 lemma_root(voort_glunderen,glunder_voort) .
 lemma_root(voort_gluren,gluur_voort) .
 lemma_root(voort_gniffelen,gniffel_voort) .
