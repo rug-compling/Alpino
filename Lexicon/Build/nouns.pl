@@ -212,14 +212,16 @@ n([mass(['basis-',',',voortgezet,en,beroepsonderwijs])],het,[]).
 
 n([mass(['basis-',',',bijzonder,en,beroepsonderwijs])],het,[]).
 
-n([sg([olympisch,en,wereldkampioen]),
-   sg(['Olympisch',en,wereldkampioen]),
-   sg([olympisch,en,wereldkampioene]),
+n([sg([olympisch,en,wereldkampioene]),
    sg(['Olympisch',en,wereldkampioene])],de,[app_measure]).
 
+n([sg([olympisch,en,wereldkampioen]),
+   sg(['Olympisch',en,wereldkampioen])],de,[app_measure]).
+
 n([sg([europees,en,wereldkampioen]),
-   sg(['Europees',en,wereldkampioen]),
-   sg([europees,en,wereldkampioene]),
+   sg(['Europees',en,wereldkampioen])],de,[app_measure]).
+
+n([sg([europees,en,wereldkampioene]),
    sg(['Europees',en,wereldkampioene])],de,[app_measure]).
 
 %% ik heb een 7 voor geschiedenis maar een 1 voor grieks
@@ -2790,14 +2792,19 @@ n([sg(artefact),pl(artefacten)],both,[]).
 n([pl(artiesten),sg(artiest),sg(artieste)],de,[]).
 
 n([pl(artikelen),pl(artikels),sg(artikel)],het,
-  [start_app_measure,
-   app_measure,
-   np_app_measure],
-  [hoofd,
+  [],
+  [feest,
+   hoofd,
    kantoor,
    i(krant,kranten),
    i(weg_werp,wegwerp),
    dim(artikeltje)]).
+
+n([pl(artikelen),pl(artikels),sg(artikel)],het,
+  [start_app_measure,
+   app_measure,
+   np_app_measure],
+  [dim(artikeltje)]).
 
 n([mass(artillerie)],de,[]).
 
@@ -6031,6 +6038,7 @@ n([pl(brancards),sg(brancard)],de,[]).
 n([pl(branches),sg(branche)],de,[],
   [auto,
    kleding,
+   nieuws,
    reis,
    taxi,
    uitzend]).
@@ -9567,7 +9575,7 @@ n([pl(doorreizen),sg(doorreis)],de,[]).
 
 n([pl(doorslagen),sg(doorslag)],de,[]).
 
-n([pl(doorsneden),sg(doorsnede),pl(doorsneeën),sg(doorsnee)],de,[measure]).
+n([sg(doorsnee),pl(doorsneden),sg(doorsnede),pl(doorsneeën)],de,[measure]).
 
 n([sg(doorstap),pl(doorstappen)],de,[]).
 
@@ -11198,8 +11206,11 @@ n([pl(feestmalen),sg(feestmaal)],het,[]).
 
 n([mass(feestverlichtingen)],de,[]).
 
-n([pl(feiten),sg(feit)],het,[sbar,subject_sbar],[dim(feitje),
-                                                 wapen]).
+n([pl(feiten),sg(feit)],het,
+  [sbar,subject_sbar],
+  [dim(feitje),
+   nieuws,
+   wapen]).
 
 n([pl(feitelijkheden),sg(feitelijkheid)],de,[sbar]).
 
@@ -15634,6 +15645,8 @@ n([pl(impassen),pl(impasses),sg(impasse)],de,[]).
 n([mass(imperialisme)],het,[]).
 
 n([pl(imperia),pl(imperiums),sg(imperium)],het,[]).
+
+n([sg(imperialist),pl(imperialisten)],de,[]).  % not imperium_list
 
 n([sg(implantaat),pl(implantaten)],het,[],[borst]).
 
@@ -28138,6 +28151,7 @@ n([sg(punt),pl(punten),
    begin,
    breek,
    diepte,
+   discussie,
    eind,
    geschil,
    hoofd,
@@ -30587,6 +30601,7 @@ n([pl(schepen),sg(schip)],het,[np_app_measure],
    cruise,
    moeder,
    s(oorlog),oorlog,
+   s(passagier),
    ruimte,
    slag,
    stoom,
@@ -35092,6 +35107,7 @@ n([pl(toeschouwers),sg(toeschouwer)],de,[]).
 
 n([pl(toeslagen),sg(toeslag)],de,[],
   [koude,
+   i(kind_opvang,kinderopvang),
    s(onregelmatigheid),
    s(overheveling),
    zorg]).
@@ -37500,8 +37516,13 @@ n([pl(verslagen),sg(verslag)],het,[],
 
 n([mass(verslagenheid)],de,[]).
 
-n([pl(verslaggevers),sg(verslaggever),
-   pl(verslaggeefsters),sg(verslaggeefster)],de,[],
+n([pl(verslaggeefsters),sg(verslaggeefster)],de,[],
+  [misdaad,
+   radio,
+   h(tv),televisie,tv,f([tv]),i(tv,'TV-'),
+   sport]).
+
+n([pl(verslaggevers),sg(verslaggever)],de,[],
   [misdaad,
    radio,
    h(tv),televisie,tv,f([tv]),i(tv,'TV-'),
@@ -39938,8 +39959,11 @@ n([pl(werelddelen),sg(werelddeel)],het,[]).
 n([mass(wereldgebeuren)],het,[]).
 
 n([pl(wereldkampioenen),
-   sg(wereldkampioen),
-   sg(wereldkampioene)],de,[app_measure],
+   sg(wereldkampioen)],de,[app_measure],
+  [h(ex),
+   h(oud),oud]).
+
+n([sg(wereldkampioene)],de,[app_measure],
   [h(ex),
    h(oud),oud]).
 
