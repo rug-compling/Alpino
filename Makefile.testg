@@ -87,9 +87,12 @@ test1rest:
                                  > $(suite)$(part)/$(job)/sents
 	-grep '^K#' $(suite)$(part)/$(job)/log\
                                  > $(suite)$(part)/$(job)/scores
-	$(MAKE) score file=$(suite)$(part)/$(job)/scores\
+	$(MAKE) --no-print-directory score file=$(suite)$(part)/$(job)/scores\
                                  >> $(suite)$(part)/$(job)/times
-	$(MAKE) report
+	-grep '^##' $(suite)$(part)/$(job)/log\
+         | awk '{ print $$2, $$3 }' | sort | uniq -c\
+                                 >> $(suite)$(part)/$(job)/times
+	$(MAKE) --no-print-directory report
 
 trees:
 	@echo > $(dir)/times
@@ -106,10 +109,11 @@ trees:
           batch_command=roundtrip\
                           2>$(dir)/log >> $(dir)/times
 
-n=5
+n=10
 report:
 	@if [ -f $(suite)$(part)/times ]; then\
-         grep XX $(suite)$(part)/times | tail -n $(n); fi
+         grep XX $(suite)$(part)/times | tail -n $(n); \
+         grep 'mean GTM' $(suite)$(part)/times | tail -n $(n); fi
 
 
 
@@ -216,7 +220,7 @@ scores:
 	@for file in */job*/log; do $(MAKE) -s score file=$$file; done
 
 score:
-	@if [ -r $(file) ]; then awk -F\| '/^K#/ { if ($$2<2) { N=N+1; R=R+$$3} } END {printf "%s mean GTM: %.3f\n","$(file)",R/N}' $(file) ; fi
+	@if [ -r $(file) ]; then awk -F\| '/^K#/ { if ($$2<2) { N=N+1; R=R+$$3} } END {printf "%s mean GTM: %.3f after  %d items\n","$(file)",R/N,N}' $(file) ; fi
 
 
 
