@@ -2587,24 +2587,29 @@ guess_compound_(W,FinalPart,Len0,Len,[PrefixStem|Parts],Previous):-
 
 guess_compound__(W,W,L,L,[Wstem],_,_) :-
     compound_part(final,W,Wstem).
-%guess_compound__(SW,W,L,L,[Wstem],PreviousList,_) :-
-%    atom(SW),
-%    atom_concat(s,W,SW),
-%    W \= schap, % no -s- with schap
-%    allow_verbindings_s(PreviousList),
-%    compound_part(final,W,Wstem).   % why final??? overgang*s*klasse*club
 guess_compound__(SW,FinalPart,L0,L,Parts,Prev,PrevPrefix) :-
     atom(SW),
     atom_concat(s,W,SW),
     W \= schap, % no -s- with schap
     allow_verbindings_s(Prev),
-    guess_compound__(W,FinalPart,L0,L,Parts,Prev,PrevPrefix).
+    guess_compound__nos(W,FinalPart,L0,L,Parts,Prev,PrevPrefix).  % not 2x s "ademhalingsspieren =/= ademhaling_pier
 guess_compound__(W,FinalPart,L0,L,Parts,Prev,PrevPrefix):-
     \+ do_not_split(W),
-    %% reverse(Prev,RevPrev),
-    %% format(user_error,"~p~n",[RevPrev]),
     guess_compound___(W,FinalPart,L0,L,Parts,Prev,PrevPrefix).
 
+guess_compound__nos(W,W,L,L,[Wstem],_,_) :-
+    compound_part(final,W,Wstem).
+guess_compound__nos(W,FinalPart,L0,L,Parts,Prev,PrevPrefix):-
+    \+ do_not_split(W),
+    guess_compound___(W,FinalPart,L0,L,Parts,Prev,PrevPrefix).
+
+
+allow_verbindings_s([her|_]):-
+    !,
+    fail.
+allow_verbindings_s([nieuw|_]):-
+    !,
+    fail.
 allow_verbindings_s([H0|_]) :-
     (   H0 = v_root(H1,_)
     ->  H1 = H
@@ -2719,10 +2724,11 @@ unique_open_class_stem_tag_pair(Final,W,Stem) :-
 %% try non-verbs/adjs before adjs before verbs, because the resulting lemma is more
 %% often correct...
 open_class_stem_tag_pair(Final,W,Stem,Cat) :-
-    (   alpino_lex:xl(W,Cat0,Stem,[],[]),
+    (   alpino_lex:xl(W,Cat0,Stem0,[],[]), 
 	\+ Cat0 = verb(_,_,_),
 	\+ Cat0 = adjective(_),
-	\+ Cat0 = adjective(_,_)
+	\+ Cat0 = adjective(_,_),
+	exc_stem(W,Stem0,Stem)
     ;   alpino_lex:xl(W,adjective(ADV),Stem,[],[]),
         Cat0 = adjective(ADV)
     ;   alpino_lex:in_names_dictionary(Cat0,W,Stem,[],[],_),
@@ -2734,6 +2740,11 @@ open_class_stem_tag_pair(Final,W,Stem,Cat) :-
 	Cat0 = verb(_,_,_)
     ),
     open_class_tag_or_name(Final,Cat0,Cat).
+
+exc_stem(vol,volume,vol).
+exc_stem(media,medium,media).
+exc_stem(data,datum,data).
+exc_stem(_,B,B).
 
 open_class_tag_or_name(Final,Cat,Cat) :-
     open_class_tag_or_name(Final,Cat).
@@ -2784,6 +2795,7 @@ never_final_compound_part(amen).
 never_final_compound_part(end).
 never_final_compound_part(enden).
 never_final_compound_part(ere).
+never_final_compound_part(ex).
 never_final_compound_part(in).
 never_final_compound_part(ion).
 never_final_compound_part(ijk).
@@ -3018,10 +3030,11 @@ guess_form_of_suffix(W,Root,Suffix,Tag,CompTag) :-
     findall(Suffix-RootSuffix-Tag-CompTag,apply_suffix_rule(Suffix,RootSuffix,Tag,CompTag,W),[H|T]),
     !,
     member(Suffix-RootSuffix-Tag-CompTag,[H|T]),
-    atom_concat(Pref0,Suffix,W),
-    remove_ge_if_psp(Tag,Pref0,Pref),
-    atom_concat(Pref,RootSuffix,Root0),
-    decap(Root0,Root).
+    construct_root(Tag,Suffix,RootSuffix,W,Root).
+%    atom_concat(Pref0,Suffix,W),
+%    remove_ge_if_psp(Tag,Pref0,Pref),
+%    atom_concat(Pref,RootSuffix,Root0),
+%    decap(Root0,Root).
 
 guess_form_of_suffix(W,Stem,ge_dt,verb('hebben/zijn',psp,intransitive),verb(_,psp,intransitive)) :-
     atom_concat(ge,Rest,W),
@@ -3121,6 +3134,7 @@ form_of_suffix_rule(esk,esk,adjective(no_e(adv)),[desk]).
 form_of_suffix_rule(eus,eus,adjective(no_e(adv)),[keus,
 						  reus]).
 form_of_suffix_rule(ieel,ieel,adjective(no_e(adv)),[]).
+form_of_suffix_rule(iële,ieel,adjective(e),[]).
 form_of_suffix_rule(ief,ief,adjective(no_e(adv)),[brief,
 						  chief, % archief
 						  dief,
@@ -3250,26 +3264,26 @@ form_of_suffix_rule('iteiten','iteit',noun(de,count,pl),[]).
 
 form_of_suffix_rule('ingen','ing',noun(de,count,pl),[]).
 
-form_of_suffix_rule(eert,eren,verb(hebben,sg3,intransitive),[]).
-form_of_suffix_rule(eert,eren,verb(hebben,sg3,transitive),[]).
-form_of_suffix_rule(eren,eren,verb(hebben,pl,intransitive),[jongeren,
+form_of_suffix_rule(eert,eer/eren,verb(hebben,sg3,intransitive),[]).
+form_of_suffix_rule(eert,eer/eren,verb(hebben,sg3,transitive),[]).
+form_of_suffix_rule(eren,eer/eren,verb(hebben,pl,intransitive),[jongeren,
 							   kinderen]).
-form_of_suffix_rule(eren,eren,verb(hebben,pl,transitive),[jongeren,
+form_of_suffix_rule(eren,eer/eren,verb(hebben,pl,transitive),[jongeren,
 							   kinderen]).
-form_of_suffix_rule(eren,eren,verb(hebben,inf,intransitive),[jongeren,
+form_of_suffix_rule(eren,eer/eren,verb(hebben,inf,intransitive),[jongeren,
 							   kinderen]).
-form_of_suffix_rule(eren,eren,verb(hebben,inf,transitive),[jongeren,
+form_of_suffix_rule(eren,eer/eren,verb(hebben,inf,transitive),[jongeren,
 							   kinderen]).
-form_of_suffix_rule(ëren,ëren,verb(hebben,pl,intransitive),[]).
-form_of_suffix_rule(ëren,ëren,verb(hebben,pl,transitive),[]).
-form_of_suffix_rule(ëren,ëren,verb(hebben,inf,intransitive),[]).
-form_of_suffix_rule(ëren,ëren,verb(hebben,inf,transitive),[]).
-form_of_suffix_rule(eerd,eren,verb(hebben,psp,intransitive),[]).  % wrong root
-form_of_suffix_rule(eerd,eren,verb(hebben,psp,transitive),[]).    % wrong root
-form_of_suffix_rule(eerde,eren,verb(hebben,past(sg),intransitive),[]).
-form_of_suffix_rule(eerde,eren,verb(hebben,past(sg),transitive),[]).
-form_of_suffix_rule(eerden,eren,verb(hebben,past(pl),intransitive),[]).
-form_of_suffix_rule(eerden,eren,verb(hebben,past(pl),transitive),[]).
+form_of_suffix_rule(ëren,eer/ëren,verb(hebben,pl,intransitive),[]).
+form_of_suffix_rule(ëren,eer/ëren,verb(hebben,pl,transitive),[]).
+form_of_suffix_rule(ëren,eer/ëren,verb(hebben,inf,intransitive),[]).
+form_of_suffix_rule(ëren,eer/ëren,verb(hebben,inf,transitive),[]).
+form_of_suffix_rule(eerd,eer/eren,verb(hebben,psp,intransitive),[]).  % wrong root
+form_of_suffix_rule(eerd,eer/eren,verb(hebben,psp,transitive),[]).    % wrong root
+form_of_suffix_rule(eerde,eer/eren,verb(hebben,past(sg),intransitive),[]).
+form_of_suffix_rule(eerde,eer/eren,verb(hebben,past(sg),transitive),[]).
+form_of_suffix_rule(eerden,eer/eren,verb(hebben,past(pl),intransitive),[]).
+form_of_suffix_rule(eerden,eer/eren,verb(hebben,past(pl),transitive),[]).
 
 form_of_suffix_rule(achtigen,achtig,nominalized_adjective,[]).
 
@@ -6426,7 +6440,20 @@ adapt_with_dt_l([Rel=DT0|L0],[Rel=DT|L]):-
     adapt_with_dt(DT0,DT),
     adapt_with_dt_l(L0,L).
 
-remove_ge_if_psp(verb(_,psp,_),Stem0,Stem) :-
+construct_root(verb(_,Inf,_),Suffix,Eer/Eren,W,v_root(Prefeer,Preferen)) :-
+    !,
+    atom_concat(Pref0,Suffix,W),
+    remove_ge_if_psp(Inf,Pref0,Pref),
+    atom_concat(Pref,Eer,Prefeer0),
+    atom_concat(Pref,Eren,Preferen0),
+    decap(Prefeer0,Prefeer),
+    decap(Preferen0,Preferen).
+construct_root(_,Suffix,RootSuffix,W,Root) :-
+    atom_concat(Pref,Suffix,W),
+    atom_concat(Pref,RootSuffix,Root0),
+    decap(Root0,Root).
+
+remove_ge_if_psp(psp,Stem0,Stem) :-
     atom(Stem0),
     atom_concat(ge,Stem,Stem0),
     !.

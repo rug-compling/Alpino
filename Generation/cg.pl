@@ -88,9 +88,10 @@ extract_and_score_sentence(Fs,BitcodeAll,o(Obj,Str),P,UseFluency,Robust) :-
 :- public generate/1.
 
 generate(o(Obj,Str,Sem0)) :-
+    hdrug_flag(current_ref,Flag),
     hdrug_flag(generate_failsafe,Val),
     hdrug_flag(filter_local_trees,Val2),
-    format(user_error,"Generating with generate_failsafe=~w and filter_local_trees=~w~n",[Val,Val2]),
+    format(user_error,"Generating ~w with generate_failsafe=~w and filter_local_trees=~w~n",[Flag,Val,Val2]),
     alpino_data:result_term(Sc,Str0,Cat,DerivTree,Frames,Obj0),
     alpino_data:result_term(Sc,Str, Cat,DerivTree,Frames,Obj),
     
@@ -113,7 +114,8 @@ generate(o(Obj,Str,Sem0)) :-
         generate_last_last_resort(_,Sem0,Str0)
     ),
     capitalize_first(Str0,Str1),
-    add_punt_if_not(Str1,Str).
+    add_punt_if_not(Str1,Str),
+    debug_message(1,"##~w	~w	~w~n",[Flag,Val,Val2]).
 
 %% to try, instead of generating all parts:
 %% check if two "complete" edges together can be joined 
@@ -121,7 +123,7 @@ generate_one(Obj,Sem0,TopRobust) :-
     debug_message(2,"generating for ~w~n",[Sem0]),
     ensure_indices_ok(Sem0,Sem),
     hdrug_flag(use_fluency_model,UseFluency),
-    prepare_adt_and_lex(Sem,Fs,BitcodeAll,TopRobust),
+    prepare_adt_and_lex(Sem,Fs,BitcodeAll,TopRobust,Stems),
     count_edges(lex(_,_,_,_,_,_),Edges),
     (   Edges > 0
     ->  debug_message(1,"~w lexical frames for generation~n",[Edges])
@@ -144,6 +146,10 @@ generate_one(Obj,Sem0,TopRobust) :-
 	sort(Roots0,[R|_Roots]),
 	format(user_error,"No feature-structures for root '~w'~n",[R]),
 	fail
+    ),
+    (   TopRobust == top
+    ->  debug_call(1,alpino_genlex:check_missing_surfs(Stems))
+    ;   true
     ),
     process_agenda(Agenda,Sem),
     extract_and_score_sentences(Fs,BitcodeAll,Obj,Str,UseFluency,SortedResults,TopRobust),
@@ -233,7 +239,7 @@ generate_list([Sem|Sems],Results,Context) :-
 
 generate_list_continue([],Sem,Sems,[Result|Results],Context) :-
     lexical_adt(Sem,_),
-    prepare_adt_and_lex(Sem,_,BcAll,robust),
+    prepare_adt_and_lex(Sem,_,BcAll,robust,_),
     findall(Score-l(Str,Cat,Ref,Context2),generate_word_fallback(Score,Str,Cat,Ref,Context,Context2,BcAll),KeyList0),
     sort(KeyList0,[Score-l(Str,Cat,Ref,Context2)|_]),
     !,				% only one, the first available one
@@ -363,10 +369,10 @@ clean_edges :-
     retractall(active_edge(_,_,_,_,_,_,_)),
     retractall(his(_,_)).
 
-prepare_adt_and_lex(CombinedAdt,Fs,BcAll,Robust) :-
+prepare_adt_and_lex(CombinedAdt,Fs,BcAll,Robust,Stems) :-
 %    alpino_adt:combine_mwu(Adt,CombinedAdt0),
 %    transform_adt(CombinedAdt0,CombinedAdt),
-    alpino_adt:bitcode_lookup_frames_adt(CombinedAdt,BcAdt,0,NBits),
+    alpino_adt:bitcode_lookup_frames_adt(CombinedAdt,BcAdt,0,NBits,Stems,[]),
     give_bits(NBits,BcAll),
     alpino_adt:adt_to_fs(BcAdt,FsAdt,Fs,Robust),
     alpino_genlex:lex_lookup(FsAdt).
@@ -1122,7 +1128,7 @@ update_inactive_edges :-
 gen_init(Ref):-
     clean,
     hdrug:a_lf(Ref,Sem),
-    prepare_adt_and_lex(Sem,_Fs,_Bitcodeall,top),
+    prepare_adt_and_lex(Sem,_Fs,_Bitcodeall,top,_),
     count_edges(lex(_,_,_,_,_,_),Edges),
     debug_message(2,"~w lexical frames for generation~n",[Edges]).
 
@@ -1211,7 +1217,7 @@ glex(N) :-
     alpino_treebank:xml_file_to_dt(FileXml,DT),
     clean,
     alpino_adt:dt_to_adt(DT,Sem),    
-    prepare_adt_and_lex(Sem,_Fs,_Bc,top),
+    prepare_adt_and_lex(Sem,_Fs,_Bc,top,_),
     count_edges(lex(_,_,_,_,_,_),Edges),
     debug_message(1,"~w lexical frames for generation~n",[Edges]),
     gtags.
@@ -1367,6 +1373,14 @@ rule_out(n_n_modroot(haak),
 rule_out(n_n_modroot(haak),
 	 [_,_,tree(top_start_xp,[tree(max_xp(om_rel),_)]),_,_]
 	).
+rule_out(n_n_modroot(haak),
+	 [l(ref(_,_,Label,_,_,_,_,_,_,_,_)),_,tree(top_start_xp,[tree(max_xp(np),_)]),_,_]
+	):-
+    lists:member(Label,[soort,aantal,hoop,heleboel,handvol,miljoen,paar,stel]).
+rule_out(n_n_modroot(haak),
+	 [tree(n_num_n,[_,l(ref(_,_,Label,_,_,_,_,_,_,_,_))]),_,tree(top_start_xp,[tree(max_xp(np),_)]),_,_]
+	):-
+    lists:member(Label,[soort,aantal,hoop,heleboel,handvol,miljoen,paar,stel]).
 rule_out(n_n_mod_a,[_,l(ref(Tag,_,_,_,_,_,_,_,_,_,_))]) :-
     lists:member(Tag,[adjective(ge_no_e(_)),
 		      adjective(end(_)),
@@ -1381,6 +1395,8 @@ rule_out(n_n_mod_a,[_,tree(a_np_comp_a,_)]).
 rule_out(n_n_mod_adv(komma),[_,_,tree(adv_a,_),_]).
 
 rule_out(n_n_modnp(komma),[tree(np_n,[l(_)]),_,tree(np_n,[tree(n_pn,_)]),_]).
+
+rule_out(n_n_modnp(komma),[tree(np_det_n,[_,l(_)]),_,tree(np_n,[tree(n_pn,_)]),_]).
 
 rule_out(vp_v_mod,[_,tree(mod1a,[l(_)])]).
 
