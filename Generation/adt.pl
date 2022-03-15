@@ -338,7 +338,7 @@ relevant_att(numtype).
 %% this does also first step of lexical lookup. Frames are kept
 %% as list in adt_lex(...)
 bitcode_lookup_frames_adt(adt_lex(Cat,Root,Sense,PosTag,Attrs),
-			  adt_lex(Cat,Root,Bc,Frames,[pos=PosTag|Attrs]),N,M,_Rel) :-
+			  adt_lex(Cat,Root,Bc,Frames,[pos=PosTag|Attrs]),N,M,_Rel,[Root|Roots],Roots) :-
 %    adapt_case_root(PosTag,Rel,Root0,Sense0,Root,Sense,Attrs),
 
     %%% check if Root is uninstantiated, in that case attempt to guess it
@@ -349,19 +349,19 @@ bitcode_lookup_frames_adt(adt_lex(Cat,Root,Sense,PosTag,Attrs),
     give_bits(NBits, Bits),
     Bc is Bits << N,
     M is N + NBits.
-bitcode_lookup_frames_adt(i(Index,L),i(Index,L1),N,M,Rel) :-
-    bitcode_lookup_frames_adt(L,L1,N,M,Rel).
-bitcode_lookup_frames_adt(i(Index),i(Index),N,N,_).
-bitcode_lookup_frames_adt(p(Cat),p(Cat),N,N,_).
+bitcode_lookup_frames_adt(i(Index,L),i(Index,L1),N,M,Rel,Roots0,Roots) :-
+    bitcode_lookup_frames_adt(L,L1,N,M,Rel,Roots0,Roots).
+bitcode_lookup_frames_adt(i(Index),i(Index),N,N,_,Roots,Roots).
+bitcode_lookup_frames_adt(p(Cat),p(Cat),N,N,_,Roots,Roots).
 
-bitcode_lookup_frames_adt(tree(r(Rel,Cat),Ds),tree(r(Rel,NewCat),NewDs),N,O) :-
-    bitcode_lookup_frames_adt(Cat,NewCat,N,M,Rel),
-    bitcode_lookup_frames_adt_ds(Ds,NewDs,M,O).
+bitcode_lookup_frames_adt(tree(r(Rel,Cat),Ds),tree(r(Rel,NewCat),NewDs),N,O,Roots0,Roots) :-
+    bitcode_lookup_frames_adt(Cat,NewCat,N,M,Rel,Roots0,Roots1),
+    bitcode_lookup_frames_adt_ds(Ds,NewDs,M,O,Roots1,Roots).
 
-bitcode_lookup_frames_adt_ds([],[],N,N).
-bitcode_lookup_frames_adt_ds([Head|Tail],[NewHead|NewTail],N,O) :-
-    bitcode_lookup_frames_adt(Head,NewHead,N,M),
-    bitcode_lookup_frames_adt_ds(Tail,NewTail,M,O).
+bitcode_lookup_frames_adt_ds([],[],N,N,Roots,Roots).
+bitcode_lookup_frames_adt_ds([Head|Tail],[NewHead|NewTail],N,O,Roots0,Roots) :-
+    bitcode_lookup_frames_adt(Head,NewHead,N,M,Roots0,Roots1),
+    bitcode_lookup_frames_adt_ds(Tail,NewTail,M,O,Roots1,Roots).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

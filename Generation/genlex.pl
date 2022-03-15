@@ -19,7 +19,6 @@ lex_lookup(AdtNoRefs) :-
     introduce_particles_lex,
     introduce_with_dt(AdtNoRefs,Roots),
     filter_tags,
-%%    adapt_surface_of_roots,
     debug_call(1,check_missing_roots(Roots)).
 
 %% The create_lex and create_lex_daughters predicates find all leave nodes
@@ -230,10 +229,25 @@ construct_with_dts(Pairs0,Pdt) :-
     (   find_matching_with_dt(Pairs2,Roots,Codes),
 	construct_with_dts_aux(Roots,Codes,Pdt),
 	fail
+    ;   een_of(Pairs2,Pdt),
+	fail
     ;   true
     ).
 
-
+een_of(Pairs0,Pdt) :-
+    lists:select('een of'-C,Pairs0,Pairs1),
+    lists:select(Jaar-B,Pairs1,Pairs2),
+    lists:select(Dertig-A,Pairs2,Pairs3),
+    (   phrasal_entry(Tag,een_N_of_NUM,[een,Jaar,of,Dertig],[]),
+	merge_bc_list([A,B,C],Bc),
+	hdrug_util:concat_all([een,Jaar,of,Dertig],Surf,' ')
+    ;   lists:select(Veertig-D,Pairs3,_),
+	merge_bc_list([A,B,C,D],Bc),
+	phrasal_entry(Tag,een_N_of_NUM,[een,Jaar,of,Dertig,Veertig],[]),
+	hdrug_util:concat_all([een,Jaar,of,Dertig,Veertig],Surf,' ')
+    ),
+    alpino_lex:generate_with_dt_stem(Tag,Label),
+    assert_with_dts([dict_entry(Label,Tag,Surf)],Bc,Pdt).
 
 find_matching_with_dt([Root-Code|Pairs0],[Root|Roots],[Code|Codes]) :-
     alpino_lex:with_dt_all(Root,List),
@@ -260,6 +274,12 @@ potential_with_dt_root(Roots,Root-Code) :-
 potential_with_dt_root(Roots,Root-Code) :-
     member(Root-Code,Roots),
     is_root(Root).
+
+potential_with_dt_root(Roots,Root-Code) :-
+    member('een of'-_,Roots),
+    member(Root-Code,Roots).
+
+is_root('een of').
 
 is_root(Root) :-
     alpino_lex:with_dt_root(Root), !.
@@ -461,8 +481,8 @@ pos2frames(Root,Sense,Pos,Cat,Attr,Frames) :-
             Frames0),
     (  var(Sense)  -> Sense = Root ; true ),
     (  var(Root)   -> Sense = Root ; true ),
-    root_mismatch_heuristics(Frames0,Frames1,Root,Sense,Pos,Attr),
-    unknown_root_heuristics(Frames1,Frames2,Root,Sense,Pos,Attr),
+    root_mismatch_heuristics(Frames0,Frames1,Root,Sense,Pos,Attr,Cat),
+    unknown_root_heuristics(Frames1,Frames2,Root,Sense,Pos,Attr,Cat),
     last_resort_heuristics(Frames2,Frames3,Root,Sense,Pos,Cat,Attr),
     tag_mismatch_heuristics(Frames0,Frames3,Frames4,Root,Sense,Pos,Attr),
     prefer_best_words_in_frames(Root,Frames4,Frames5),
@@ -500,18 +520,18 @@ pos2frames_aux_robust(Root,Sense,Pos,Cat,Attr,Frame,Surfs) :-
     check_attributes(CheckAttr,Attr,Pos,Frame,Root),
     \+ wrong_cat(Frame,Cat).
 
-root_mismatch_heuristics([H|T],[H|T],_,_,_,_).
-root_mismatch_heuristics([],Frames,Lemma,_Sense,Pos,Attr) :-
+root_mismatch_heuristics([H|T],[H|T],_,_,_,_,_).
+root_mismatch_heuristics([],Frames,Lemma,_Sense,Pos,Attr,Cat) :-
     alpino_lex:lexicon(_,RealStem,[Lemma],[],_),
     atomic(RealStem),
     findall(Frame-Surfs,
-            pos2frames_aux(RealStem,RealStem,Pos,_,Attr,Frame,Surfs),
+            pos2frames_aux(RealStem,RealStem,Pos,Cat,Attr,Frame,Surfs),
             Frames),
     Frames = [_|_],
     debug_message(2,"assuming root '~w' is specified as lemma '~w' in ADT~n",
 		  [RealStem,Lemma]),    
     !.
-root_mismatch_heuristics([],[],_,_,_,_).
+root_mismatch_heuristics([],[],_,_,_,_,_).
 
 tag_mismatch_heuristics([_|_],Fs,Fs,_,_,_,_).
 tag_mismatch_heuristics([],Frames0,Frames,Root,Sense,Pos,Attr) :-
@@ -1562,11 +1582,9 @@ prep(Prep,ErPrep) :-
     ; atom_concat(Er,af,ErPrep)
     ).
 
-unknown_root_heuristics([Fr|Frs],[Fr|Frs],_Root,_Sense,_Pos,_Attr).
-unknown_root_heuristics([],Frames,Root,Sense,Pos,Attr) :-
-    findall(Frame-Surf,
-            unknown_root_heuristic(Pos,Root,Sense,Attr,Frame,Surf),Frames0),
-    sort(Frames0,Frames).
+unknown_root_heuristics([Fr|Frs],[Fr|Frs],_Root,_Sense,_Pos,_Attr,_).
+unknown_root_heuristics([],Frames,Root,Sense,Pos,Attr,Cat) :-
+    findall(Frame-Surfs,setof(Surf,unknown_root_heuristic(Pos,Root,Sense,Attr,Frame,Cat,Surf),Surfs),Frames).
 
 :- initialize_flag(prefer_best_words,on).
 prefer_best_words_in_frames(Root,In,Out) :-
@@ -1620,12 +1638,12 @@ subtract_if_para(Root,W,F0,F) :-
     F is F0 + 1.
 subtract_if_para(_,_,F,F).
 
-unknown_root_heuristic(Pos,{RootList},Root,Atts,Pos,Surfs) :-
+unknown_root_heuristic(Pos,{RootList},Root,Atts,Pos,Cat,Surfs) :-
     !,
     lists:member(Root0,RootList),
-    unknown_root_heuristic(Pos,Root0,Root,Atts,Pos,Surfs).
+    unknown_root_heuristic(Pos,Root0,Root,Atts,Pos,Cat,Surfs).
 
-unknown_root_heuristic(noun,Root,_,Attr,noun(Gen,both,Num),Surfs) :-
+unknown_root_heuristic(noun,Root,_,Attr,noun(Gen,both,Num),_,Surf) :-
     \+ sub_atom(Root,_,1,_,'_'),
     (   member(gen=Gen,Attr)
     ->  true
@@ -1637,12 +1655,12 @@ unknown_root_heuristic(noun,Root,_,Attr,noun(Gen,both,Num),Surfs) :-
     ;   Num=both
     ),
     add_morphology(noun(Gen,both,Num),Root,Surf0),
-    findall(Surf,realize_surf(Surf0,Surf),Surfs).
+    realize_surf(Surf0,Surf).
 
-unknown_root_heuristic(prefix,Root,Root,_,within_word_conjunct,[RootDash]) :-
+unknown_root_heuristic(prefix,Root,Root,_,within_word_conjunct,_,RootDash) :-
     atom_concat(Root,'-',RootDash).
 
-unknown_root_heuristic(verb,Root,Root,Attrs,verb(HZ,subjunctive,Sc),[Surf]) :-
+unknown_root_heuristic(verb,Root,Root,Attrs,verb(HZ,subjunctive,Sc),_,Surf) :-
     lists:member(tense=subjunctive,Attrs),
     dict_entry(Root,verb(HZ,inf,Sc),Inf),
     atom_concat(Inf0,en,Inf),
@@ -1650,55 +1668,105 @@ unknown_root_heuristic(verb,Root,Root,Attrs,verb(HZ,subjunctive,Sc),[Surf]) :-
     alpino_postags:postag_of_frame(verb(HZ,subjunctive,Sc),verb,CheckAttr),
     check_attributes(CheckAttr,Attrs,verb,verb(HZ,subjunctive,Sc),Root).
 
-unknown_root_heuristic(verb,Root,_,Attr,Frame,Surfs) :-
+unknown_root_heuristic(verb,Root,_,Attr,Frame,Cat,Surf) :-
     atom_concat(Verb,Rest,Root),
     atom_concat('_',Part,Rest),
     dict_entry(Part,particle(Part),_),
-    pos2frames_aux_robust(Verb,_,verb,_,Attr,Frame0,Surfs0),
-    add_bare_prefixes(Frame0,Frame,Surfs0,Part,Surfs).
+    pos2frames_aux_robust(Verb,_,verb,Cat,Attr,Frame0,Surfs0),
+    add_bare_prefixes(Frame0,Frame,Surfs0,Part,Surfs),
+    lists:member(Surf,Surfs).
 
-unknown_root_heuristic(Pos,Root,_,Attr,Frame,Surfs) :-
+unknown_root_heuristic(Pos,Root,_,Attr,Frame,Cat,Surf) :-
     atom_concat(Prefix,Rest,Root),
     atom_concat(Pref,'_',Prefix),
-    pos2frames_aux(Rest,__Sense,Pos,_,Attr,Frame,Surfs0),
-    add_prefixes(Surfs0,Pref,Surfs,'_').
+    pos2frames_aux(Rest,__Sense,Pos,Cat,Attr,Frame,Surfs0),
+    add_prefixes(Surfs0,Pref,Surfs,'_'),
+    lists:member(Surf,Surfs).
 
-unknown_root_heuristic(Pos,Root,_,Attr,Frame,Surfs) :-
+unknown_root_heuristic(Pos,Root,_,Attr,Frame,Cat,Surf) :-
     atom_concat(Prefix,Rest,Root),
     atom_concat(Pref,' ',Prefix),
-    pos2frames_aux(Rest,__Sense,Pos,_,Attr,Frame,Surfs0),
-    add_prefixes(Surfs0,Pref,Surfs,' ').
+    pos2frames_aux(Rest,__Sense,Pos,Cat,Attr,Frame,Surfs0),
+    add_prefixes(Surfs0,Pref,Surfs,' '),
+    lists:member(Surf,Surfs).
 
-unknown_root_heuristic(num,Root,_,[],number(hoofd(pl_num)),[Root]) :-
+unknown_root_heuristic(num,Root,_,[],number(hoofd(pl_num)),_,Root) :-
     \+ (   atom_concat(_Verb,Rest,Root),
 	   atom_concat('_',_Part,Rest)
        ).
 
-unknown_root_heuristic(num,Lemma,_Sense,Attr,Frame,[LemmaDe]) :-
+unknown_root_heuristic(num,Lemma,_Sense,Attr,Frame,_,LemmaDe) :-
     lists:member(numtype=rang,Attr),
     atom(Lemma),
-    atom_concat(Lemma,de,LemmaDe),
+    (  atom_concat(Lemma,de,LemmaDe)
+    ;  atom_concat(Lemma,ste,LemmaDe)
+    ),
     alpino_lex:lexicon(Frame,Lemma,[LemmaDe],[],_),
     alpino_postags:postag_of_frame(Frame,num,CheckAttr),
     check_attributes(CheckAttr,Attr,num,Frame,Lemma).
-    
+
+unknown_root_heuristic(Pos,Pitloos,_,Attr,Frame,_,Surf) :-
+    heur_prefix(Pos,Loos,NoE,Frame),
+    atom_concat(Pit,Loos,Pitloos),
+    \+ sub_atom(Pit,_,_,_,'_'),
+    atom_concat(Pit,NoE,Surf),
+    alpino_postags:postag_of_frame(Frame,adj,CheckAttr),
+    check_attributes(CheckAttr,Attr,adj,Frame,Pitloos).
 
 %% op een INF (hij zet het op een lopen)
-unknown_root_heuristic(fixed,Root,Root,[],fixed_part(op_een_v),FinalSurfs) :-
+unknown_root_heuristic(fixed,Root,Root,[],fixed_part(op_een_v),_,FinalSurf) :-
     atom_concat('op een ',Loop,Root),
     pos2frames(Loop,Loop,verb,_,[],_,Frames),
     findall(Surfs0,lists:member(verb(_,inf,_)-Surfs0,Frames), SurfsList0),
     sort(SurfsList0,SurfsList1),
-    findall(FinalSurf, (   member(Surfs,SurfsList1),
-			   member(Surf,Surfs),
-			   concat_all([op,een,Surf], FinalSurf,' ')
-		       ),FinalSurfs).
+    member(Surfs,SurfsList1),
+    member(Surf,Surfs),
+    concat_all([op,een,Surf], FinalSurf,' ').
 
-unknown_root_heuristic(Pos,Root,_,Attr,Frame,Surfs) :-
-    exc_pos2frames_aux(Root,Pos,Attr,Frame,Surfs).
+/*
+unknown_root_heuristic(verb,Iseren,_,_,Frame,_,Surf) :-
+    atom_concat(Pref,eren,Iseren),
+    atom_concat(Pref,eerd,Surf0),
+    atom_concat(ge,Surf0,Surf),
+    Frame = verb(hebben,psp,SC),
+    last_resort_sc(SC).
 
-exc_pos2frames_aux(Root,Pos,Attr,Frame,Surfs) :-
-    setof(Surf,dict_entry(Root,Frame,Surf),Surfs),
+unknown_root_heuristic(verb,Iseren,_,_,Frame,_,Surf) :-
+    atom_concat(Pref,eren,Iseren),
+    atom_concat(Pref,eer,Surf),
+    Frame = verb(hebben,sg1,SC),
+    last_resort_sc(SC).
+
+unknown_root_heuristic(verb,Iseren,_,_,Frame,_,Surf) :-
+    atom_concat(Pref,eren,Iseren),
+    atom_concat(Pref,eert,Surf),
+    Frame = verb(hebben,sg3,SC),
+    last_resort_sc(SC).
+
+unknown_root_heuristic(verb,Iseren,_,_,Frame,_,Surf) :-
+    atom_concat(Pref,eren,Iseren),
+    atom_concat(Pref,eerde,Surf),
+    Frame = verb(hebben,past(sg),SC),
+    last_resort_sc(SC).
+
+unknown_root_heuristic(verb,Iseren,_,_,Frame,_,Surf) :-
+    atom_concat(Pref,eren,Iseren),
+    atom_concat(Pref,eerden,Surf),
+    Frame = verb(hebben,past(pl),SC),
+    last_resort_sc(SC).
+
+unknown_root_heuristic(verb,Iseren,_,_,Frame,_,Iseren) :-
+    atom_concat(_,eren,Iseren),
+    Frame = verb(hebben,inf,SC),
+    last_resort_sc(SC).
+
+unknown_root_heuristic(verb,Iseren,_,_,Frame,_,Iseren) :-
+    atom_concat(_,eren,Iseren),
+    Frame = verb(hebben,pl,SC),
+    last_resort_sc(SC).
+*/
+unknown_root_heuristic(Pos,Root,_,Attr,Frame,_,Surf) :-
+    dict_entry(Root,Frame,Surf),
     exc_postag_of_frame(Frame,Pos,CheckAttr),
     check_attributes(CheckAttr,Attr,Pos,Frame,Root).
 
@@ -1733,16 +1801,29 @@ add_prefixes([H|T],Pref,Results,Sep) :-
     findall(Form,add_prefix(H,Pref,Form,Sep),Results,Results1),
     add_prefixes(T,Pref,Results1,Sep).
 
+add_prefix(Organisatie,DierRecht,Surf,Sep) :-
+    atom_concat(Dier0,Recht,DierRecht),
+    atom_concat(Dier,'_',Dier0),
+    add_prefix(Organisatie,Recht,RechtenOrganisatie,Sep),
+    add_prefix(RechtenOrganisatie,Dier,Surf,'_').
+
 add_prefix(H,Pref,Surf,Sep) :-
     atom_concat(Pref,Sep,Pref2),
     atom_concat(Pref2,H,Pref3),
     realize_surf(Pref3,Surf).
 
+add_prefix(Affaire,Toeslag,ToeslagenAffaire,'_') :-
+    inflected_compound_part(Toeslag,Toeslagen),
+    atom_concat(Toeslagen,Affaire,ToeslagenAffaire).
+
 last_resort_heuristics([Fr0|Fr],[Fr0|Fr],_,_,_,_,_).
 last_resort_heuristics([],Frames,Root,Sense,Pos,Cat,Attr) :-
-    findall(Frame-Surf,last_resort_heuristic(Pos,Cat,Root,Sense,Attr,Frame,Surf),Frames0),
-    sort(Frames0,Frames1),
-    filter_specific(Frames1,Frames).
+    (   Root == 'een of'
+    ->  Frames = []
+    ;   findall(Frame-Surf,last_resort_heuristic(Pos,Cat,Root,Sense,Attr,Frame,Surf),Frames0),
+	sort(Frames0,Frames1),
+	filter_specific(Frames1,Frames)
+    ).
 
 filter_specific(Frames0,Frames) :-
     lists:select(FrameA-Ws,Frames0,Frames1),
@@ -1805,6 +1886,10 @@ added_paraphrase_heuristic(Pos,Root,_Sense,Attr,Frame,[Surf]):-
     
 
 add_morphology(noun(_,_,pl),Root,Surf) :-
+    atom_concat(Pref,Suf,Root),
+    en(Suf,Suf2),!,
+    atom_concat(Pref,Suf2,Surf).
+add_morphology(noun(_,_,pl),Root,Surf) :-
     atom_concat(_,s,Root),
     !,
     Root = Surf.
@@ -1812,10 +1897,6 @@ add_morphology(noun(_,_,pl),Root,Surf) :-
     atom_concat(_,en,Root),
     !,
     Root = Surf.
-add_morphology(noun(_,_,pl),Root,Surf) :-
-    atom_concat(Pref,Suf,Root),
-    en(Suf,Suf2),!,
-    atom_concat(Pref,Suf2,Surf).
 add_morphology(noun(_,_,pl),Root,Surf) :-
     atom_concat(_,Suf,Root),
     en(Suf),!,
@@ -1875,6 +1956,10 @@ add_morphology(verb(_,inf,_),Bel,Bellen) :-
     atom_concat(_,a,Bel),
     !,
     atom_concat(Bel,an,Bellen).
+add_morphology(verb(_,inf,_),Bel,Bellen) :-
+    atom_concat(Pref,ieer,Bel),
+    !,
+    atom_concat(Pref,iëren,Bellen).
 add_morphology(verb(_,inf,_),Bel,Bellen) :-
     !,
     add_en(Bel,Bellen).
@@ -2163,10 +2248,50 @@ check_missing_roots([H-C|T]) :-
     (   alpino_cg:lex(_,_,C1,_,_,_),
         C /\ C1 =\= 0
     ->  true
-    ;   format(user_error,"warning: missing lex for root ~w~n",[H]),
+    ;   hdrug_flag(generate_failsafe,off),
+	format(user_error,"warning: missing lex for root ~w~n",[H]),
 	fail
     ),
     check_missing_roots(T).
+
+check_missing_surfs(Stems) :-
+    findall(Surf-Stem,( alpino_lexical_analysis:tag(_,_,_,_,Stem0,Surf0,His,Tag),
+			simplify_lemma(Stem0,Stem),
+			lists:member(Stem,Stems),
+			\+ Tag = punct(_),
+			\+ His = normal(decap(normal)),
+			\+ His = skip(_,_,_,_),
+			alpino_unknowns:decap(Surf0,Surf)
+		      ),Surfs0),
+    sort(Surfs0,Surfs),
+    check_missing_surfsG(Surfs).
+
+check_missing_surfsG([]).
+check_missing_surfsG([H-Stem|T]) :-
+    check_missing_surf(H,Stem),
+    check_missing_surfsG(T).
+
+check_missing_surf(W,_) :-
+    sub_atom(W,_,_,_,' '),
+    !.
+
+check_missing_surf(W,Stem) :-
+    (   alpino_cg:lex(_,_,_,_,_,Surfs),
+	(   member(W,Surfs)
+	;   member(W1,Surfs),
+	    alpino_unknowns:decap(W1,W)
+	;   member(W1,Surfs),
+	    alpino_util:split_atom(W1," ",Atoms),
+	    member(W1,Atoms),
+	    alpino_unknowns:decap(W1,W)
+	)
+    ->  true
+    ;   findall(Surf,( alpino_cg:lex(_,Stem,_,_,_,SurfList),
+		       member(Surf,SurfList)
+		     ),Surfs0),
+	sort(Surfs0,Surfs),
+	format(user_error,"~w is not a candidate for generation (use ~w instead)~n",[W,Surfs])
+    ).
 
 not_sent_cat([_,_/Cat|_]) :-
     nonvar(Cat),
@@ -2175,12 +2300,13 @@ not_sent_cat([_,_/Cat|_]) :-
 not_sent_cat(_).
 
 en(heid,heden).
+en(jaar,jaren).
+en(aan,anen).
+en(ees,ezen).
+en(tal,tallen).
 
-en(aan).
-en(ees).
 en(ing).
 en(iteit).
-en(tal).
 
 %% singular verbs with plural subject!
 %% "... maar welke liedjes laat me koud"
@@ -2222,6 +2348,9 @@ wrong_adj_cat(both(_),ppres).
 adapt_frame(maand,tmp_noun(de,count,bare_meas),tmp_noun(de,count,sg)).
 adapt_frame(maand,tmp_noun(de,count,bare_meas,SC),tmp_noun(de,count,sg,SC)).
 
+adapt_frame(punt,meas_mod_noun(both,count,bare_meas),meas_mod_noun(both,count,sg)).
+adapt_frame(punt,meas_mod_noun(both,count,bare_meas,measure),meas_mod_noun(both,count,sg,measure)).
+
 impossible_frame(part_fixed(_,_,_)).
 impossible_frame(part_cleft(_)).
 impossible_frame(part_passive(_)).
@@ -2251,3 +2380,78 @@ impossible_frame(part_er_er(_)).
 
 %impossible_frame(X) :-
 %    format(user_error,"~w~n",[X]).
+
+inflected_compound_part(miljard,miljarden). % miljardenlening
+inflected_compound_part(half,halve).	    % halvefinalisten
+inflected_compound_part(hoog,hoge).	    % hogedrukgebied
+inflected_compound_part(kort,korte).	    % korteafstandraket
+inflected_compound_part(vrij,vrije).	    % vrijemarkteconomie
+inflected_compound_part(gelijk,gelijke).    % gelijkekansenbudget
+inflected_compound_part(sociaal,sociale).   % socialezekerheidstelsel
+inflected_compound_part(kind,kinder).
+inflected_compound_part(Toeslag,Toeslagen) :-
+    root_surface(Toeslag,Toeslagen,ToeslagenList),
+    atom_concat(_,n,Toeslagen),
+    alpino_lex:lexicon(noun(_,_,pl),Toeslag,ToeslagenList,[],_).
+
+adj_prefix(aal,aal,ale,alen).
+adj_prefix(aans,aans,aanse,aansen).
+adj_prefix(air,air,aire,airen).
+adj_prefix(baar,baar,bare,baren).
+adj_prefix('_delig',delig,delige,deligen).
+adj_prefix(eerd,eerd,eerde,eerden).
+adj_prefix(eus,eus,euze,euzen).
+adj_prefix(half,half,halve,halven).
+adj_prefix(ieel,ieel,iële,iëlen).
+adj_prefix(iek,iek,ieke,ieken).
+adj_prefix(iel,iel,iele,ielen).
+adj_prefix(ig,ig,ige,igen).
+adj_prefix(isch,isch,ische,ischen).
+adj_prefix(loos,loos,loze,lozen).
+adj_prefix(lijk,lijk,lijke,lijken).
+adj_prefix(oir,oir,oire,oiren).
+adj_prefix('_voudig',voudig,voudige,voudigen).
+
+heur_prefix(adj,Stem,Loos,adjective(no_e(adv))):-
+    adj_prefix(Stem,Loos,_,_).
+heur_prefix(adj,Loos,Loze,adjective(e)):-
+    adj_prefix(Loos,_,Loze,_).
+heur_prefix(adj,Loos,Lozer,adjective(er(adv))):-
+    adj_prefix(Loos,_,Loze,_),
+    atom_concat(Loze,r,Lozer).
+heur_prefix(adj,Loos,Lozere,adjective(ere)):-
+    adj_prefix(Loos,_,Loze,_),
+    atom_concat(Loze,re,Lozere).
+heur_prefix(adj,Loos,Lozen,nominalized_adjective):-
+    adj_prefix(Loos,_,_,Lozen).
+
+heur_prefix(num,half,half,number(hoofd(both))).
+heur_prefix(num,half,halve,number(hoofd(both))).
+
+heur_prefix(num,ste,ste,number(rang)).
+
+phrasal_entry(with_dt(CAT,
+                      dt(np,[hd=l(Boek,TAG,1,2),
+			     det=dt(detp,[hd=l(Tien,number(hoofd(pl_num)),3,4),
+					  mod=l('een of',pre_num_adv(pl_indef),[0,2],[1,3])])])),
+	      een_N_of_NUM,[een,Boek,of,Tien],[]) :-
+    Boek \= stuk,
+    alpino_lex:xl(Boek,TAG,_,[],[]),
+    alpino_lex:sg_noun(TAG,CAT),
+    alpino_lex:number_expression(pl_num,[Tien],[]).
+
+phrasal_entry(with_dt(CAT,
+      dt(np,[hd=l(Boek,TAG,1,2),
+	     det=dt(conj,[cnj=dt(detp,
+				 [hd=l(Tien,number(hoofd(pl_num)),3,4),
+				  mod=ix(A,l('een of',pre_num_adv(pl_indef),[0,2],[1,3]))]),
+			  cnj=dt(detp,
+				 [hd=l(Twintig,number(hoofd(pl_num)),4,5),
+				  mod=ix(A)])])])),
+	      een_N_of_NUM,[een,Boek,of,Tien,Twintig],[]) :-
+    Boek \= stuk,
+    alpino_lex:xl(Boek,TAG,_,[],[]),
+    alpino_lex:sg_noun(TAG,CAT),
+    alpino_lex:number_expression(pl_num,[Tien],[]),
+    alpino_lex:number_expression(pl_num,[Twintig],[]).
+
