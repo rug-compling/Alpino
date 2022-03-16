@@ -148,7 +148,7 @@ generate_one(Obj,Sem0,TopRobust) :-
 	fail
     ),
     (   TopRobust == top
-    ->  debug_call(1,alpino_genlex:check_missing_surfs(Stems))
+    ->  debug_call(2,alpino_genlex:check_missing_surfs(Stems))
     ;   true
     ),
     process_agenda(Agenda,Sem),
