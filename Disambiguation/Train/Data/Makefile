@@ -16,6 +16,10 @@ install:
 FIRSTKEY=0
 LASTKEY=1000000
 
+ALPINODIR=../../../
+OUTDIR=/dev/shm
+
+
 ALPINO=Alpino -notk cmdint=off\
           debug=1 user_max=$(USER_MAX)\
           display_quality=off\
@@ -25,25 +29,19 @@ ALPINO=Alpino -notk cmdint=off\
           max_sentence_length=$(DATA_MAX_SENTENCE_LENGTH)\
           parse_candidates_beam=$(PARSE_CANDIDATES_BEAM)\
           display_main_parts=off\
-          -flag treebank ../../../Treebank/cdb\
           unpack_bestfirst=off disambiguation=off\
           end_hook=train_penalties\
           list_all_maxent_features=on\
           batch_command='parser_comparisons_int($(FIRSTKEY),$(LASTKEY))'
 
-
-run:
-	$(ALPINO) 2>$(PREFIX).log | gzip > $(PREFIX).gz
-
-
 realclean:
 	rm -f *gz d_part*.log p_part*.log p?.log p??.log ?_part*.log nohup.out
 
 po.gz:
-	$(ALPINO) -flag suite ../../../Suites/ovistrain -flag treebank ../../../Treebank/ovis 2>po.log | gzip > po.gz
+	$(ALPINO) -flag suite $(ALPINODIR)/Suites/ovistrain -flag treebank $(ALPINODIR)/Treebank/ovis 2>po.log | gzip > po.gz
 
 pq.gz:
-	$(ALPINO) -flag suite ../../../Suites/qa -flag treebank ../../../Treebank/qa 2>pq.log | gzip > pq.gz
+	$(ALPINO) -flag suite $(ALPINODIR)/Suites/qa -flag treebank $(ALPINODIR)/Treebank/qa 2>pq.log | gzip > pq.gz
 
 cgz=c_part00001.cgz c_part00002.cgz c_part00003.cgz c_part00004.cgz c_part00005.cgz c_part00006.cgz c_part00007.cgz c_part00008.cgz c_part00009.cgz c_part00010.cgz c_part00011.cgz c_part00012.cgz c_part00013.cgz c_part00014.cgz c_part00015.cgz c_part00016.cgz c_part00017.cgz c_part00018.cgz c_part00019.cgz c_part00020.cgz c_part00021.cgz c_part00022.cgz c_part00023.cgz c_part00024.cgz c_part00025.cgz c_part00026.cgz c_part00027.cgz c_part00028.cgz c_part00029.cgz c_part00030.cgz c_part00031.cgz c_part00032.cgz c_part00033.cgz c_part00034.cgz c_part00035.cgz c_part00036.cgz c_part00037.cgz c_part00038.cgz c_part00039.cgz c_part00040.cgz c_part00041.cgz c_part00042.cgz c_part00043.cgz c_part00044.cgz c_part00045.cgz c_part00046.cgz c_part00047.cgz c_part00048.cgz c_part00049.cgz c_part00050.cgz c_part00051.cgz c_part00052.cgz c_part00053.cgz c_part00054.cgz c_part00055.cgz c_part00056.cgz c_part00057.cgz c_part00058.cgz c_part00059.cgz c_part00060.cgz c_part00061.cgz c_part00062.cgz c_part00063.cgz c_part00064.cgz c_part00065.cgz c_part00066.cgz c_part00067.cgz c_part00068.cgz c_part00069.cgz c_part00070.cgz c_part00071.cgz c_part00072.cgz
 
@@ -90,30 +88,39 @@ lgz=l_part00001.lgz l_part00002.lgz l_part00003.lgz l_part00004.lgz l_part00005.
 pl.gz: $(lgz)
 	zcat $(lgz) | gzip > pl.gz
 
-%.xgz: ../../../Suites/X/%.pl
-	$(ALPINO) -flag suite $< -flag treebank ../../../Treebank/extra 2>$*.log | gzip > $*.xgz
+%.xgz: $(ALPINODIR)/Suites/X/%.pl
+	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/extra 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.xgz
+	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.xgz .
 
-%.dgz:../../../Suites/D/%.pl
-	$(ALPINO) -flag suite $< -flag treebank ../../../Treebank/dpc 2>$*.log | gzip > $*.dgz
+%.dgz:$(ALPINODIR)/Suites/D/%.pl
+	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/dpc 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.dgz
+	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.dgz .
 
-%.pgz:../../../Suites/P/%.pl
-	$(ALPINO) -flag suite $< -flag treebank ../../../Treebank/PPH 2>$*.log | gzip > $*.pgz
+%.pgz:$(ALPINODIR)/Suites/P/%.pl
+	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/PPH 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.pgz
+	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.pgz .
 
-%.wgz:../../../Suites/W/%.pl
-	$(ALPINO) -flag suite $< -flag treebank ../../../Treebank/WIKI 2>$*.log | gzip > $*.wgz
+%.wgz:$(ALPINODIR)/Suites/W/%.pl
+	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/WIKI 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.wgz
+	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.wgz .
 
-%.cgz:../../../Suites/C/%.pl
-	$(ALPINO) -flag suite $< -flag treebank ../../../Treebank/cdb 2>$*.log | gzip > $*.cgz
+%.cgz:$(ALPINODIR)/Suites/C/%.pl
+	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/cdb 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.cgz
+	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.cgz .
 
-%.igz: ../../../Suites/I/%.pl
-	$(ALPINO) -flag suite $< -flag treebank ../../../Treebank/PPI 2>$*.log | gzip > $*.igz
+%.igz: $(ALPINODIR)/Suites/I/%.pl
+	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/PPI 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.igz
+	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.igz .
 
-%.ugz: ../../../Suites/U/%.pl
-	$(ALPINO) -flag suite $< -flag treebank ../../../Treebank/WSU 2>$*.log | gzip > $*.ugz
+%.ugz: $(ALPINODIR)/Suites/U/%.pl
+	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/WSU 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.ugz
+	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.ugz .
 
-%.egz: ../../../Suites/E/%.pl
-	$(ALPINO) -flag suite $< -flag treebank ../../../Treebank/PE 2>$*.log | gzip > $*.egz
+%.egz: $(ALPINODIR)/Suites/E/%.pl
+	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/PE 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.egz
+	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.egz .
 
-%.lgz: ../../../Suites/L/%.pl
-	$(ALPINO) -flag suite $< -flag treebank ../../../Treebank/PL 2>$*.log | gzip > $*.lgz
+%.lgz: $(ALPINODIR)/Suites/L/%.pl
+	$(ALPINO) -flag suite $< -flag treebank $(ALPINODIR)/Treebank/PL 2> $(OUTDIR)/$*.log | gzip > $(OUTDIR)/$*.lgz
+	mv $(OUTDIR)/$*.log $(OUTDIR)/$*.lgz .
 
