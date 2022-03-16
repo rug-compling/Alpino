@@ -489,6 +489,15 @@ pos2frames(Root,Sense,Pos,Cat,Attr,Frames) :-
     added_paraphrase_heuristics(Frames5,Frames6,Root,Sense,Pos,Attr),
     remove_redundant_frames(Frames6,Frames).				% add later, so are not removed
 
+remove_redundant_frames(Frames0,Frames):-
+    redundant(Frame,GenFrame),
+    lists:select(Frame-Surf,Frames0,Frames1),
+    lists:member(GenFrame-Surf,Frames1),
+    !,
+    remove_redundant_frames(Frames1,Frames).
+remove_redundant_frames(F,F).
+
+/*
 remove_redundant_frames([],[]).
 remove_redundant_frames([Frame0|Frames0],Frames):-
     redundant_frame(Frame0,Frames0), !,
@@ -499,12 +508,14 @@ remove_redundant_frames([Frame|Frames0],[Frame|Frames]):-
 redundant_frame(Frame0-Surf,Frames) :-
     redundant(Frame0,Frame1),
     lists:member(Frame1-Surf,Frames).
+*/
 
 redundant(noun(X,Y,_),noun(X,Y,both)).
 redundant(noun(X,_,Y),noun(X,both,Y)).
 redundant(noun(_,X,Y),noun(both,X,Y)).
 redundant(proper_name(sg,X),proper_name(both,X)).
 redundant(proper_name(pl,X),proper_name(both,X)).
+redundant(verb(hebben,Inf,Sc),verb('hebben/zijn',Inf,Sc)).
 
 pos2frames_aux(Root,Sense,Pos,Cat,Attr,Frame,Surfs) :-
     setof(Surf,dict_entry(Root,Frame,Surf),Surfs),
@@ -1679,6 +1690,7 @@ unknown_root_heuristic(verb,Root,_,Attr,Frame,Cat,Surf) :-
 unknown_root_heuristic(Pos,Root,_,Attr,Frame,Cat,Surf) :-
     atom_concat(Prefix,Rest,Root),
     atom_concat(Pref,'_',Prefix),
+    \+ atom_concat('DIM_',_,Rest),
     pos2frames_aux(Rest,__Sense,Pos,Cat,Attr,Frame,Surfs0),
     add_prefixes(Surfs0,Pref,Surfs,'_'),
     lists:member(Surf,Surfs).
@@ -1801,6 +1813,12 @@ add_prefixes([H|T],Pref,Results,Sep) :-
     findall(Form,add_prefix(H,Pref,Form,Sep),Results,Results1),
     add_prefixes(T,Pref,Results1,Sep).
 
+add_prefix(Organisatie,SpelDim,Surf,Sep) :-
+    atom_concat(_,'_DIM',SpelDim),
+    !,
+    alpino_lex:inv_lex(SpelDim,Spelletje),
+    add_prefix(Organisatie,Spelletje,Surf,Sep).
+
 add_prefix(Organisatie,DierRecht,Surf,Sep) :-
     atom_concat(Dier0,Recht,DierRecht),
     atom_concat(Dier,'_',Dier0),
@@ -1916,7 +1934,8 @@ add_morphology(verb(_,psp,_),BelOp,Opgebeld) :-
 add_morphology(verb(_,psp,_),Bel,Gebeld) :-
     !,
     add_dt(Bel,Beld),
-    atom_concat(ge,Beld,Gebeld).
+    add_ge(Beld,Gebeld).
+%    atom_concat(ge,Beld,Gebeld).
 
 add_morphology(verb(_,past(sg),_),BelOp,OpBelde) :-
     atom_concat(Bel,UOp,BelOp),
@@ -1963,6 +1982,12 @@ add_morphology(verb(_,inf,_),Bel,Bellen) :-
 add_morphology(verb(_,inf,_),Bel,Bellen) :-
     !,
     add_en(Bel,Bellen).
+add_morphology(v_noun(_),Bel,Bellen) :-
+    !,
+    add_morphology(verb(_,inf,_),Bel,Bellen).
+add_morphology(verb(_,pl,_),Bel,Bellen) :-
+    !,
+    add_morphology(verb(_,inf,_),Bel,Bellen).
 
 add_morphology(verb(_,sg3,_),Bel,Belt) :-
     !,
@@ -2042,6 +2067,16 @@ add_en(Bel,Bellen) :-
     atom_concat(Pref,SuffixEn,Bellen).
 add_en(Toep,Toepen) :-
     atom_concat(Toep,en,Toepen).
+
+ver(ver).
+
+add_ge(Beld,Gebeld) :-
+    ver(Ver),
+    atom_concat(Ver,_,Beld),
+    !,
+    Beld=Gebeld.
+add_ge(Beld,Gebeld) :-
+    atom_concat(ge,Beld,Gebeld).
 
 open(Aar,Aren) :-
     atom_codes(Aar,[V,V,C]),
@@ -2400,7 +2435,9 @@ adj_prefix(air,air,aire,airen).
 adj_prefix(baar,baar,bare,baren).
 adj_prefix('_delig',delig,delige,deligen).
 adj_prefix(eerd,eerd,eerde,eerden).
+adj_prefix(ees,ees,ese,esen).
 adj_prefix(eus,eus,euze,euzen).
+adj_prefix(gewijs,gewijs,gewijze,gewijzen).
 adj_prefix(half,half,halve,halven).
 adj_prefix(ieel,ieel,iële,iëlen).
 adj_prefix(iek,iek,ieke,ieken).
