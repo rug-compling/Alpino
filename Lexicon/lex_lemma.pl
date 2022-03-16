@@ -5203,6 +5203,7 @@ lemma_root(door_verklaren,verklaar_door) .
 lemma_root(door_verkleinen,verklein_door) .
 lemma_root(door_verkleumen,verkleum_door) .
 lemma_root(door_verkleuren,verkleur_door) .
+lemma_root(door_verkokeren,verkoker_door) .
 lemma_root(door_verkolen,verkool_door) .
 lemma_root(door_verkommeren,verkommer_door) .
 lemma_root(door_verkopen,verkoop_door) .
@@ -12700,6 +12701,7 @@ lemma_root(raak_verklaren,verklaar_raak) .
 lemma_root(raak_verkleinen,verklein_raak) .
 lemma_root(raak_verkleumen,verkleum_raak) .
 lemma_root(raak_verkleuren,verkleur_raak) .
+lemma_root(raak_verkokeren,verkoker_raak) .
 lemma_root(raak_verkolen,verkool_raak) .
 lemma_root(raak_verkommeren,verkommer_raak) .
 lemma_root(raak_verkopen,verkoop_raak) .
@@ -17772,6 +17774,7 @@ lemma_root(uit_verkeren,verkeer_uit) .
 lemma_root(uit_verkiezen,verkies_uit) .
 lemma_root(uit_verklaren,verklaar_uit) .
 lemma_root(uit_verkleinen,verklein_uit) .
+lemma_root(uit_verkokeren,verkoker_uit) .
 lemma_root(uit_verkopen,verkoop_uit) .
 lemma_root(uit_verkrachten,verkracht_uit) .
 lemma_root(uit_verkrampen,verkramp_uit) .
@@ -20082,6 +20085,7 @@ lemma_root(verkloten,verkloot) .
 lemma_root(verknallen,verknal) .
 lemma_root(verkneukelen,verkneukel) .
 lemma_root(verknoeien,verknoei) .
+lemma_root(verkokeren,verkoker) .
 lemma_root(verkolen,verkool) .
 lemma_root(verkommeren,verkommer) .
 lemma_root(verkondigen,verkondig) .
@@ -22659,6 +22663,7 @@ lemma_root(voort_verklaren,verklaar_voort) .
 lemma_root(voort_verkleinen,verklein_voort) .
 lemma_root(voort_verkleumen,verkleum_voort) .
 lemma_root(voort_verkleuren,verkleur_voort) .
+lemma_root(voort_verkokeren,verkoker_voort) .
 lemma_root(voort_verkolen,verkool_voort) .
 lemma_root(voort_verkommeren,verkommer_voort) .
 lemma_root(voort_verkopen,verkoop_voort) .

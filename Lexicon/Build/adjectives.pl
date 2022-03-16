@@ -40066,7 +40066,11 @@ a([e(wettelijke),
    no_e(wettelijk)],adv,[],[boven]).
 
 a([e(wettige),
-   no_e(wettig)],adv,[],[]).
+   no_e(wettig),
+   er(wettiger),
+   ere(wettigere),
+   st(wettigst),
+   ste(wettigste)],adv,[],[]).
 
 a([e(wezenlijke),
    ere(wezenlijkere),
