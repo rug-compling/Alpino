@@ -237,13 +237,16 @@ construct_with_dts(Pairs0,Pdt) :-
 een_of(Pairs0,Pdt) :-
     lists:select('een of'-C,Pairs0,Pairs1),
     lists:select(Jaar-B,Pairs1,Pairs2),
+    sg_noun(Jaar,TAG,Cat),
     lists:select(Dertig-A,Pairs2,Pairs3),
-    (   phrasal_entry(Tag,een_N_of_NUM,[een,Jaar,of,Dertig],[]),
+    pl_num(Dertig),
+    (   phrasal_entry(Tag,TAG,Cat,een_N_of_NUM,[een,Jaar,of,Dertig],[]),
 	merge_bc_list([A,B,C],Bc),
 	hdrug_util:concat_all([een,Jaar,of,Dertig],Surf,' ')
     ;   lists:select(Veertig-D,Pairs3,_),
+	pl_num(Veertig),
 	merge_bc_list([A,B,C,D],Bc),
-	phrasal_entry(Tag,een_N_of_NUM,[een,Jaar,of,Dertig,Veertig],[]),
+	phrasal_entry(Tag,TAG,Cat,een_N_of_NUM,[een,Jaar,of,Dertig,Veertig],[]),
 	hdrug_util:concat_all([een,Jaar,of,Dertig,Veertig],Surf,' ')
     ),
     alpino_lex:generate_with_dt_stem(Tag,Label),
@@ -2467,15 +2470,20 @@ heur_prefix(num,half,halve,number(hoofd(both))).
 
 heur_prefix(num,ste,ste,number(rang)).
 
+sg_noun(Boek,TAG,CAT):-
+    alpino_lex:xl(Boek,TAG,_,[],[]),
+    alpino_lex:sg_noun(TAG,CAT).
+
+pl_num(Tien) :-
+    alpino_lex:number_expression(pl_num,[Tien],[]).
+
 phrasal_entry(with_dt(CAT,
                       dt(np,[hd=l(Boek,TAG,1,2),
 			     det=dt(detp,[hd=l(Tien,number(hoofd(pl_num)),3,4),
 					  mod=l('een of',pre_num_adv(pl_indef),[0,2],[1,3])])])),
+	      TAG,CAT,
 	      een_N_of_NUM,[een,Boek,of,Tien],[]) :-
-    Boek \= stuk,
-    alpino_lex:xl(Boek,TAG,_,[],[]),
-    alpino_lex:sg_noun(TAG,CAT),
-    alpino_lex:number_expression(pl_num,[Tien],[]).
+    Boek \= stuk.
 
 phrasal_entry(with_dt(CAT,
       dt(np,[hd=l(Boek,TAG,1,2),
@@ -2485,10 +2493,7 @@ phrasal_entry(with_dt(CAT,
 			  cnj=dt(detp,
 				 [hd=l(Twintig,number(hoofd(pl_num)),4,5),
 				  mod=ix(A)])])])),
+	      TAG,CAT,
 	      een_N_of_NUM,[een,Boek,of,Tien,Twintig],[]) :-
-    Boek \= stuk,
-    alpino_lex:xl(Boek,TAG,_,[],[]),
-    alpino_lex:sg_noun(TAG,CAT),
-    alpino_lex:number_expression(pl_num,[Tien],[]),
-    alpino_lex:number_expression(pl_num,[Twintig],[]).
+    Boek \= stuk.
 
