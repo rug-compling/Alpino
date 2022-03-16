@@ -23866,6 +23866,7 @@ n([pl(omstandigheden),sg(omstandigheid)],de,[],
    leef,
    s(leven),
    markt,
+   s(weer),
    weer,
    werk]).
 
