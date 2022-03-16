@@ -863,12 +863,12 @@ a_lex(preposition(Word,List,me_adj),Sign) :-
     preposition_me_adj(Word,Sign,List).
 
 a_lex(number(hoofd(Det)),Sign) :-
-    number_features(Det,Sign),
-    hoofd_num(Sign).
+    hoofd_num(Sign),
+    number_features(Det,Sign).
 
 a_lex(adj_number(Det),Sign) :-
-    determiner_features(Det,Sign),
-    adj_number(Sign).
+    adj_number(Sign),
+    determiner_features(Det,Sign).
 
 %% de drie tweede plaatsen
 a_lex(number(rang),Sign) :-
@@ -1527,7 +1527,7 @@ number_features(sg_num,Sign) :-
 number_features(pl_num,Sign) :-
     Sign:dt:num <?=?> Sign:e_agr,
     Sign:agr => pl.
-number_features(both,_) :-
+number_features(both,Sign) :-
     Sign:dt:num <?=?> Sign:e_agr.
 
 %% ouderwets: "jullie" kan ook enkelvoud zijn
