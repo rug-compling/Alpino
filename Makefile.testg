@@ -249,8 +249,8 @@ L2 := $(shell mktemp)
 
 compare_cpu:
 	@echo "NEW	PREV		ITEM"
-	@grep '^T#' $(cpu1) | tr '\|' '\t' > $(L1)
-	@grep '^T#' $(cpu2) | tr '\|' '\t' > $(L2)
+	@grep '^T#' $(cpu1) | sed -e 's/^T#//' | tr '\|' '\t' > $(L1)
+	@grep '^T#' $(cpu2) | sed -e 's/^T#//' | tr '\|' '\t' > $(L2)
 	@paste $(L1) $(L2)  |\
           awk 'BEGIN {I=1}                                                  \
                      { if (NF==12) {                                         \
