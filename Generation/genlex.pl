@@ -11,15 +11,18 @@
 
 %% all called from cg.pl
 :- public check_conditions/4,
-          dict_entry/3, surf_to_list/3, lex_lookup/1.
+          dict_entry/3, surf_to_list/3, lex_lookup/2.
 
-lex_lookup(AdtNoRefs) :-
+lex_lookup(AdtNoRefs,Robust) :-
     retractall(alpino_cg:lex(_,_,_,_,_,_)),
     create_lex(AdtNoRefs,[]),
     introduce_particles_lex,
     introduce_with_dt(AdtNoRefs,Roots),
     filter_tags,
-    debug_call(1,check_missing_roots(Roots)).
+    (   Robust == top
+    ->  debug_call(1,check_missing_roots(Roots))
+    ;   true
+    ).
 
 %% The create_lex and create_lex_daughters predicates find all leave nodes
 %% that are lexical items, and assert them as facts.
@@ -447,10 +450,11 @@ root_surface__(VerNVoudig,[Surf|S],S) :-
     ).
 
 root_surface__(Root,L0,L) :-
-    atom_concat(Pre,tal,Root),
-    atom_concat(Pre,tallen,N),
+    root_surf_pat(Plusser,Plussers),
+    atom_concat(Pre,Plusser,Root),
+    atom_concat(Pre,Plussers,N),
     surf_to_list(N,L0,L).
-
+    
 %% for genitive inflection of names
 root_surface__(Root,[Surf|L],L) :-
     (   Root = Surf0
@@ -458,6 +462,19 @@ root_surface__(Root,[Surf|L],L) :-
     ),
     alpino_lex:in_names_dictionary(_Name,Root,Surf0,[],[],_),
     add_gen(Surf0,Surf).
+
+root_surf_pat(cilinder,cilinders).
+root_surf_pat(eeuws,eeuwse).
+root_surf_pat(heid,heden).
+root_surf_pat(kaart,kaarten).
+root_surf_pat(kamp,kampen).
+root_surf_pat(klasser,klassers).
+root_surf_pat(luik,luiken).
+root_surf_pat(plusser,plussers).
+root_surf_pat(setter,setters).
+root_surf_pat(sprong,sprongen).
+root_surf_pat(tal,tallen).
+root_surf_pat(wieler,wielers).
 
 surf_to_list(Surf,List0,List) :-
     atom_codes(Surf,Codes),
@@ -2452,6 +2469,8 @@ adj_prefix(lijk,lijk,lijke,lijken).
 adj_prefix(oir,oir,oire,oiren).
 adj_prefix('_voudig',voudig,voudige,voudigen).
 
+ge_adj_prefix(eerd,eerd,eerde,eerden).
+
 heur_prefix(adj,Stem,Loos,adjective(no_e(adv))):-
     adj_prefix(Stem,Loos,_,_).
 heur_prefix(adj,Loos,Loze,adjective(e)):-
@@ -2464,6 +2483,13 @@ heur_prefix(adj,Loos,Lozere,adjective(ere)):-
     atom_concat(Loze,re,Lozere).
 heur_prefix(adj,Loos,Lozen,nominalized_adjective):-
     adj_prefix(Loos,_,_,Lozen).
+
+heur_prefix(adj,Stem,Loos,adjective(ge_no_e(adv))):-
+    ge_adj_prefix(Stem,Loos,_,_).
+heur_prefix(adj,Loos,Loze,adjective(ge_e)):-
+    ge_adj_prefix(Loos,_,Loze,_).
+heur_prefix(adj,Loos,Lozen,nominalized_adjective):-
+    ge_adj_prefix(Loos,_,_,Lozen).
 
 heur_prefix(num,half,half,number(hoofd(both))).
 heur_prefix(num,half,halve,number(hoofd(both))).
