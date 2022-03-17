@@ -194,7 +194,7 @@ get_lexical_yield(adt_lex(_,Root,_,_,_), [Root|Rs],Rs).
 generate_parts(Obj,Sem) :-
     \+ hdrug_flag(generate_robustness,off),
     findall(Part,get_part(Sem,Part),[Part|Parts]),
-    debug_message(2,"No full generation; attempting to generate parts...~n",[]),
+    debug_message(1,"No full generation; attempting to generate parts...~n",[]),
     generate_list([Part|Parts],Results,[]),
     combine_results(Results,_Sc,Obj,_Str).
 
@@ -375,7 +375,7 @@ prepare_adt_and_lex(CombinedAdt,Fs,BcAll,Robust,Stems) :-
     alpino_adt:bitcode_lookup_frames_adt(CombinedAdt,BcAdt,0,NBits,Stems,[]),
     give_bits(NBits,BcAll),
     alpino_adt:adt_to_fs(BcAdt,FsAdt,Fs,Robust),
-    alpino_genlex:lex_lookup(FsAdt).
+    alpino_genlex:lex_lookup(FsAdt,Robust).
 
 %%%%%%%%%%%%%%%%%%
 % Main generator %
@@ -1376,11 +1376,11 @@ rule_out(n_n_modroot(haak),
 rule_out(n_n_modroot(haak),
 	 [l(ref(_,_,Label,_,_,_,_,_,_,_,_)),_,tree(top_start_xp,[tree(max_xp(np),_)]),_,_]
 	):-
-    lists:member(Label,[soort,aantal,hoop,heleboel,handvol,miljoen,paar,stel]).
+    lists:member(Label,[soort,aantal,hoop,heleboel,handvol,miljard,miljoen,paar,stel]).
 rule_out(n_n_modroot(haak),
 	 [tree(n_num_n,[_,l(ref(_,_,Label,_,_,_,_,_,_,_,_))]),_,tree(top_start_xp,[tree(max_xp(np),_)]),_,_]
 	):-
-    lists:member(Label,[soort,aantal,hoop,heleboel,handvol,miljoen,paar,stel]).
+    lists:member(Label,[soort,aantal,hoop,heleboel,handvol,miljard,miljoen,paar,stel]).
 rule_out(n_n_mod_a,[_,l(ref(Tag,_,_,_,_,_,_,_,_,_,_))]) :-
     lists:member(Tag,[adjective(ge_no_e(_)),
 		      adjective(end(_)),
