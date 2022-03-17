@@ -25,7 +25,7 @@ Alpino.bin: ../src/Alpino.sav
         --config=spconfig\
         --static\
         --moveable\
-        --respath=../src:../fadd:../TreebankTools/IndexedCorpus/prolog:../Tokenization:../PosTagger:../Generation/fluency:../unix\
+        --respath=../src:../fadd:../TreebankTools/IndexedCorpus/prolog:../Tokenization:../PosTagger:../Generation:../Generation/fluency:../unix\
         -o Alpino.bin \
         --resources=../src/Alpino.sav=/alpino.sav \
         -LD -Wall  -L../TreebankTools/IndexedCorpus   \
