@@ -872,6 +872,7 @@ not_third_infl(sg_hebt).
 third_infl(sg3).
 third_infl(sg_heeft).
 third_infl(sg_hebt).
+third_infl(sg_is).
 
 sg_infl(sg).
 sg_infl(sg1).
@@ -1517,6 +1518,7 @@ finite_infl(sg1).
 finite_infl(sg3).
 finite_infl(sg_heeft).
 finite_infl(sg_hebt).
+finite_infl(sg_is).
 finite_infl(pl).
 finite_infl(both(_)).
 finite_infl(past(_)).
@@ -2391,9 +2393,16 @@ wrong_cat(adjective(Infl,_),Cat) :-
 wrong_adj_cat(end(_),ap).
 wrong_adj_cat(ende(_),ap).
 
+wrong_adj_cat(end(_),ppart).
+wrong_adj_cat(ende(_),ppart).
+
 wrong_adj_cat(ge_e,ppres).
 wrong_adj_cat(ge_no_e(_),ppres).
 wrong_adj_cat(ge_both(_),ppres).
+
+wrong_adj_cat(ge_e,ap).
+wrong_adj_cat(ge_no_e(_),ap).
+wrong_adj_cat(ge_both(_),ap).
 
 wrong_adj_cat(e,ppres).
 wrong_adj_cat(no_e(_),ppres).
