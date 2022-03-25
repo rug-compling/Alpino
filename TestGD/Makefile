@@ -66,11 +66,11 @@ nops: $(suites:%.sents=%.nop)
 
 %.v: %.para %.sents
 	@paste -d @ $*.para $*.sents | grep -v -e noparse -e noparaphrase | cut -d@ -f2 |wc | awk '{ print "normal",$$2, $$1, $$2/$$1}'
-	@paste -d @ $*.para $*.sents | grep -v -e noparse -e noparaphrase | cut -d@ -f1 | $(ALPINO_HOME)/Tokenization/tokenize.sh | wc | awk '{ print "simplified", $$2, $$1, $$2/$$1}'
+	@paste -d @ $*.para $*.sents | grep -v -e noparse -e noparaphrase | cut -d@ -f1 | $(ALPINO_HOME)/Tokenization/tokenize.sh | wc | awk '{ print "paraphrased", $$2, $$1, $$2/$$1}'
 
 v:
 	@make -s $(suites:%.sents=%.v) | \
-       awk '/^normal/ { NW=NW+$$2; NS=NS+$$3 } /^simplified/ { SW=SW+$$2; SS=SS+$$3 } END {print "normal:",NW,NS,NW/NS,"simplified:",SW,SS,SW/SS }'
+       awk '/^normal/ { NW=NW+$$2; NS=NS+$$3 } /^paraphrased/ { SW=SW+$$2; SS=SS+$$3 } END {print "normal:",NW,NS,NW/NS,"paraphrased:",SW,SS,SW/SS }'
 
 
 
