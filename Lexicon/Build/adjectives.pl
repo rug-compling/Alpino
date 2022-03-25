@@ -9889,9 +9889,6 @@ a([e(essentiële),
    no_e(essentieel)],adv,
   [subject_sbar_no_het,
    subject_vp_no_het,
-   pp(aan),
-   pp(bij),
-   pp(in),
    pp(voor)],[h(niet)]).
 
 a([no_e(esthetisch),

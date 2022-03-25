@@ -1219,6 +1219,7 @@ with_dt_all(buiten,[dat]).
 with_dt_all(buiten,[de]).
 with_dt_all(communie,[te]).
 with_dt_all(daaraan,[vooraf]).
+with_dt_all(daarmee,[en,uit]).
 with_dt_all(daarom,[misschien]).
 with_dt_all(daarom,[ook]).
 with_dt_all(daaromtrent,[of]).
@@ -2609,6 +2610,7 @@ with_dt_root(buiten).
 with_dt_root(buitenland).
 with_dt_root(communie).
 with_dt_root(daaraan).
+with_dt_root(daarmee).
 with_dt_root(daarom).
 with_dt_root(daaromtrent).
 with_dt_root(dag).

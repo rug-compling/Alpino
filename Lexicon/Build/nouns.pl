@@ -21893,6 +21893,10 @@ n([meas(micron)],de,[meas_mod,measure]).
 n([pl(microscopen),sg(microscoop)],both,[]).
 
 n([sg(middag),pl(middagen)],de,[temp_mod,sbar,measure],
+  [dim(middagje)
+  ]).
+
+n([sg(middag),pl(middagen)],de,[temp_mod,sbar],
   [zondag,
    maandag,
    dinsdag,
@@ -25845,13 +25849,23 @@ n([sg(partij),pl(partijen)],de,
 %% hoeveelheid
 %% een partij bureaustoelen
 
-n([sg(partij),pl(partijen)],de,
+n([sg(partij),pl(partijen),
+   ignore(m(partij,noun(de,count,sg),partij)),
+   ignore(m(partij,noun(de,count,sg,measure),partij)),
+   ignore(m(partij,noun(de,count,pl),partijen)),
+   ignore(m(partij,noun(de,count,pl,measure),partijen))
+  ],de,
   [measure],
   [dim(partijtje)]).
 
 %% groepering
 
-n([sg(partij),pl(partijen)],de,[np_app_measure],
+n([sg(partij),pl(partijen),
+   ignore(m(partij,noun(de,count,sg),partij)),
+   ignore(m(partij,noun(de,count,sg,measure),partij)),
+   ignore(m(partij,noun(de,count,pl),partijen)),
+   ignore(m(partij,noun(de,count,pl,measure),partijen))
+  ],de,[np_app_measure],
   [s(arbeider),
    coalitie,
    college,
@@ -25866,7 +25880,10 @@ n([sg(partij),pl(partijen)],de,[np_app_measure],
 
 %% "hele gebeurtenis"
 
-n([sg(partij),pl(partijen)],de,[],
+n([sg(partij),pl(partijen),
+   ignore(m(partij,noun(de,count,sg),partij)),
+   ignore(m(partij,noun(de,count,pl),partijen))
+  ],de,[],
   [moord,
    rots,  % en niet rot_spar_tij
    scheld,
@@ -34019,7 +34036,7 @@ n([pl(tabletten),sg(tablet)],both,[],
   [slaap,
    dim(tabletje)]).
 
-n([pl(tablets),sg(tablet)],de,[]).
+n([stem(tablet),pl(tablets)],both,[]).
 
 n([sg(tabloid),pl(tabloids)],both,[]).
 
