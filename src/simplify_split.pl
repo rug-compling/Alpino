@@ -50,7 +50,7 @@ simple_split_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(SMAIN)),BODYDS) :-
     lists:select(SUP,Ds1,Ds2),
     PREDC = tree(r(predc,adt_lex(_,Zo,_,_,_)),[]),
     lists:select(PREDC,Ds2,[CP]),
-    lemma_in(Zo,[duidelijk,zo]),
+    lemma_in(Zo,[duidelijk,over_duidelijk,zo]),
     CP = tree(r(su,p(cp)),CPDS0),
     DAT = tree(r(cmp,adt_lex(_,dat,_,_,_)),[]),
     lists:select(DAT,CPDS0,[BODY]),
@@ -74,6 +74,17 @@ simple_split_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(SMAIN)),BODYDS) :-
     HD = tree(r(hd,adt_lex(smain,weet,_,verb,_)),[]),
     lists:select(HD,Ds0,Ds1),
     SU = tree(r(su,adt_lex(np,iedereen,_,_,_)),[]),
+    lists:select(SU,Ds1,CPLIST),  
+    CPLIST = [tree(r(vc,CPCAT),CPDS)],
+    cp_to_smain(CPCAT,CPDS,SMAIN,BODYDS).
+
+%% ik denk/vind dat X => X
+simple_split_transformation(r(Rel,p(smain)),Ds0,r(Rel,p(SMAIN)),BODYDS) :-
+    HD = tree(r(hd,adt_lex(smain,Vind,_,verb,Atts)),[]),
+    lists:select(HD,Ds0,Ds1),
+    lemma_in(Vind,[denk,meen,vind]),
+    lists:member(tense=present,Atts),
+    SU = tree(r(su,adt_lex(np,ik,_,_,_)),[]),
     lists:select(SU,Ds1,CPLIST),  
     CPLIST = [tree(r(vc,CPCAT),CPDS)],
     cp_to_smain(CPCAT,CPDS,SMAIN,BODYDS).
@@ -695,6 +706,8 @@ cnj_ds_vc_dlink([CNJ2|CNJS],[N2|NS],SuCat2,SuDs2,CAT,Ix,Hd,Maar) :-
 
 
 do_not_split_conj(adt_lex(_,andersom,_,_,_),[]).
+do_not_split_conj(p(ap),[tree(r(hd,adt_lex(_,uit,_,_,_)),[]),
+			 tree(r(mod,adt_lex(_,daarmee,_,_,_)),[])]).
 
 /*
 add_pronouns_for_su_in_conj([],[],_,_,_).

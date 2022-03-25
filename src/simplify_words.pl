@@ -1,11 +1,11 @@
 :- module(alpino_simplify_words, [ words_transformation/5 ]).
 
 words_transformation(r(Rel,p(Cat0)),Ds0,r(Rel,p(Cat)),Ds,_) :-
-    Hd0 = tree(r(HD,adt_lex(Cat0,Old,Old,D0,E0)),[]),
-    Hd  = tree(r(HD,adt_lex(Cat,New,New,D,E)),[]),
+    Hd0 = tree(r(HD,adt_lex(Cat0,Old,OldS,D0,E0)),[]),
+    Hd  = tree(r(HD,adt_lex(Cat,New,NewS,D,E)),[]),
     head_rel(HD),
     replace(Hd0,Hd,Ds0,Ds1),
-    simplify(Old,New,Cat0,Cat,D0,D,E0,E,Ds1),
+    simplify(Old,OldS,New,NewS,Cat0,Cat,D0,D,E0,E,Ds1),
     adapt_det(Ds1,Ds).
 
 %% constructief en (of, maar) positief => positief en (of, maar) positief => positief
@@ -44,11 +44,11 @@ words_transformation(r(Rel,adt_lex(_,Lem,Lem,_,_)),[],
 		     r(Rel,Cat),Ds,_):-
     lemma_to_tree(Lem,Cat,Ds).
 
-words_transformation(r(Rel,adt_lex(Cat0,Old,Old,D0,E0)),[],
-		     r(Rel,adt_lex(Cat,New,New,D,E)),[],_) :-
+words_transformation(r(Rel,adt_lex(Cat0,Old,OldS,D0,E0)),[],
+		     r(Rel,adt_lex(Cat,New,NewS,D,E)),[],_) :-
     \+ Rel = mwp,
     \+ Rel = svp,
-    simplify(Old,New,Cat0,Cat,D0,D,E0,E,[]).
+    simplify(Old,OldS,New,NewS,Cat0,Cat,D0,D,E0,E,[]).
 
 words_transformation(r(Rel,Cat),Ds0,r(Rel,Cat),Ds,_) :-
     pattern_rule(Left,Right),
@@ -161,7 +161,7 @@ pattern_rule([sup=l(het,_,_),
 			  ])
 	     ]).
 
-%% ik ben van oordeel => ik vind
+%% X ben van oordeel => X vind
 pattern_rule([hd=l(ben,Pos,Atts),
 	      svp=mwu([van,oordeel])
 	     ],
@@ -196,6 +196,17 @@ pattern_rule([hd=l(stel,Pos,Atts),
 				   ])])
 	     ],
 	     [hd=l(kondig_aan,Pos,Atts)
+	     ]
+	    ).
+
+%% aan de orde stellen => bespreken
+pattern_rule([hd=l(stel,Pos,Atts),
+	      predc=dt(pp,[hd=l(aan,_,_),
+			   obj1=dt(np,[hd=l(orde,_,_),
+				       det=l(de,_,_)
+				      ])])
+	     ],
+	     [hd=l(bespreek,Pos,Atts)
 	     ]
 	    ).
 
@@ -324,6 +335,11 @@ simplify(Compound,Atom,Cat,Cat,noun,noun,E,E) :-
        ).
 */
 
+simplify(Old,Old,New,New,Cat0,Cat,Pos0,Pos,Atts0,Atts,Ctxt):-
+    simplify(Old,New,Cat0,Cat,Pos0,Pos,Atts0,Atts,Ctxt).
+simplify(essentiaal,'essentieel-voor',belangrijk,'belangrijk-voor',Cat,Cat,D,D,E,E,_).
+
+
 simplify(Ik,{List},np,np,pron,pron,Atts,Atts,[]) :-
     eq_pronoun(List,Atts),
     lists:member(Ik,List).
@@ -426,7 +442,7 @@ simplify(eminent,munt_uit,Cat,Cat,D,D,E,E,_).
 simplify(enerverend,spannend,Cat,Cat,D,D,E,E,_).
 simplify(enigma,raadsel,Cat,Cat,D,D,E,E,_).
 simplify(epiloog,slotwoord,Cat,Cat,D,D,E,E,_).
-simplify(essentieel,belangrijk,Cat,Cat,D,D,E,E,_).
+simplify(essentiaal,belangrijk,Cat,Cat,D,D,E,E,_).
 simplify(etisch,moreel,Cat,Cat,D,D,E,E,_).
 simplify(evident,duidelijk,Cat,Cat,D,D,E,E,_).
 simplify(excessief,overdreven,Cat,Cat,D,D,E,E,_).
@@ -512,6 +528,7 @@ simplify(onverwijld,onmiddellijk,Cat,Cat,D,D,E,E,_).
 simplify(onvolkomenheid,fout,Cat,Cat,D,D,E,E,_).
 simplify(opgetogen,blij,Cat,Cat,D,D,E,E,_).
 simplify(opteer,kies,Cat,Cat,D,D,E,E,_).
+simplify(optimaal,goed,Cat,Cat,D,D,E,E,_).
 simplify(optimaliseer,verbeter,Cat,Cat,D,D,E,E,_).
 simplify(overeenkomstig,volgens,Cat,Cat,D,D,E,E,_).
 simplify(paraaf,handtekening,Cat,Cat,D,D,E,E,_).
