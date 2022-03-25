@@ -288,7 +288,8 @@ important_mod_stem(hoe,_).   % ik vraag me af hoe eerlijk ze zijn -> *ik vraag m
 important_mod_stem(hoeveel,_).   % ik vraag me af hoeveel gemakkelijker ...
 important_mod_stem(hoelaat,_).   
 important_mod_stem(hoelang,_).   
-important_mod_stem(hoeveelste,_).   
+important_mod_stem(hoeveelste,_).
+important_mod_stem(hoogstens,_).
 important_mod_stem(incoherent,_).
 important_mod_stem(moeilijk,_).   % je kunt moeilijk gaan lopen; ze kunnen daar moeilijk terecht
 important_mod_stem(negatief,_).
