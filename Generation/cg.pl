@@ -1373,14 +1373,22 @@ rule_out(n_n_modroot(haak),
 rule_out(n_n_modroot(haak),
 	 [_,_,tree(top_start_xp,[tree(max_xp(om_rel),_)]),_,_]
 	).
+rule_out(n_n_mod(komma),
+	 [tree(np_n,[l(ref(_,_,Label,_,_,_,_,_,_,_,_))]),_,tree(mod1a,[tree(adv_meas_np,[tree(np_n,[_])])]),_]
+	):-
+    lists:member(Label,[soort,aantal,hoop,heleboel,handvol,miljard,miljoen,paar,stel,partij]).
+rule_out(n_n_mod(komma),
+	 [tree(np_n,[tree(n_num_n,[_,l(ref(_,_,Label,_,_,_,_,_,_,_,_))])]),_,tree(mod1a,[tree(adv_meas_np,[tree(np_n,[_])])]),_]
+	):-
+    lists:member(Label,[soort,aantal,hoop,heleboel,handvol,miljard,miljoen,paar,stel,partij]).
 rule_out(n_n_modroot(haak),
 	 [l(ref(_,_,Label,_,_,_,_,_,_,_,_)),_,tree(top_start_xp,[tree(max_xp(np),_)]),_,_]
 	):-
-    lists:member(Label,[soort,aantal,hoop,heleboel,handvol,miljard,miljoen,paar,stel]).
+    lists:member(Label,[soort,aantal,hoop,heleboel,handvol,miljard,miljoen,paar,stel,partij]).
 rule_out(n_n_modroot(haak),
 	 [tree(n_num_n,[_,l(ref(_,_,Label,_,_,_,_,_,_,_,_))]),_,tree(top_start_xp,[tree(max_xp(np),_)]),_,_]
 	):-
-    lists:member(Label,[soort,aantal,hoop,heleboel,handvol,miljard,miljoen,paar,stel]).
+    lists:member(Label,[soort,aantal,hoop,heleboel,handvol,miljard,miljoen,paar,stel,partij]).
 rule_out(n_n_mod_a,[_,l(ref(Tag,_,_,_,_,_,_,_,_,_,_))]) :-
     lists:member(Tag,[adjective(ge_no_e(_)),
 		      adjective(end(_)),
@@ -1405,6 +1413,10 @@ rule_out(a_a_bracketed_mod,[_,_,tree(top_start_xp,[tree(max_xp(pp),_)]),_,_]).
 rule_out(a_a_bracketed_mod,[_,_,tree(top_start_xp,[tree(max_xp(pred),[tree(pred_a,_)])]),_,_]).
 
 rule_out(modifier_p(1),[_,tree(np_det_n,[_,tree(n_n_modroot(haak),_)]),_,_]).
+
+rule_out(n_measn_n,[tree(adv_meas_np,[tree(np_n,[l(_)])]),_]).
+
+rule_out(sbar(mod_np),[_,_,tree(mod1,[tree(adv_a,_)]),_,tree(np_n,_)]).
 
 unpack_rules(Id,Ptrs,tree(Id,Ids)) :-
     unpack_rules_ds(Ptrs,Ids).
