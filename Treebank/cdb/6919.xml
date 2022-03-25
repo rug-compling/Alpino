@@ -18,9 +18,9 @@
           <node begin="4" cat="inf" end="20" id="13" rel="vc">
             <node begin="4" end="6" id="14" index="1" rel="su"/>
             <node begin="6" end="7" id="15" lemma="nog" pos="adv" postag="BW()" pt="bw" rel="mod" root="nog" word="nog"/>
-            <node begin="7" cat="mwu" end="9" id="16" rel="mod">
-              <node begin="7" end="8" id="17" lemma="te" pos="adv" postag="BW()" pt="bw" rel="mwp" root="te" word="te"/>
-              <node begin="8" end="9" id="18" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="mwp" root="zeer" word="zeer"/>
+            <node begin="7" cat="advp" end="9" id="16" rel="mod">
+              <node begin="7" end="8" id="17" lemma="te" pos="adv" postag="BW()" pt="bw" rel="mod" root="te" word="te"/>
+              <node begin="8" end="9" id="18" lemma="zeer" pos="adv" postag="BW()" pt="bw" rel="hd" root="zeer" word="zeer"/>
             </node>
             <node begin="9" cat="pp" end="12" id="19" rel="mod">
               <node begin="9" end="10" id="20" lemma="met" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="met" vztype="init" word="met"/>
