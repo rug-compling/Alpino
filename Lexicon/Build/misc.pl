@@ -4168,6 +4168,13 @@ with_dt([en,andersom],
 	dt(conj,[crd=l(en,conj(en),vg,0,1),
 		 cnj=l(andersom,adjective(pred(adv)),advp,1,2)])).
 
+with_dt([en,daarmee,uit],
+	complex_etc,
+	dt(conj,[crd=l(en,conj(en),vg,0,1),
+		 cnj=dt(du,[dp=l(daarmee,er_adverb(met),pp,1,2),
+			    dp=l(uit,adjective(pred(adv)),ap,2,3)])
+		])).
+
 with_dt([en,zo],
 	complex_etc,
 	dt(conj,[crd=l(en,conj(en),vg,0,1),
