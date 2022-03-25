@@ -3104,7 +3104,7 @@ het_np_arg(NP) :-
     NP:sel => to_left.
 
 dat_np_arg(NP) :-
-    NP:can_mod => no,  % de partij
+%    NP:can_mod => no,  % de partij
     np_arg(NP), % num: Cohen besloot 13 van hen een verg. te g.
     NP:case => dat.
 

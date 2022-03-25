@@ -177,7 +177,7 @@ cat_type(vpx,     [rightx,cleft,eps3,haswh,
                    rightm,cj,vform,vslash,tags,slash,subj,pro_deps,e_deps,mf,
                    exs,mexs]).
 cat_type(v2_vp,   [vslash,haswh,slash,subj,mf,tags]).
-cat_type(num,     [cj,e_agr,agr,pro,app]).
+cat_type(num,     [cj,n_meas,e_agr,agr,pro,app]).
 cat_type(pre_det_quant,[agr]).
 cat_type(pred,    [slash,exs,mexs,e_deps,wh,wh_reltmploc,subn,redrel,deverbal,
                    avform,pcat,cform,hstem,nhstem,wkpro,sel,cj]).
