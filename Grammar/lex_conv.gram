@@ -1475,16 +1475,19 @@ determiner_features(pl,Sign) :-
     Sign:agr => pl,
     Sign:case =?> ~gen.
 determiner_features(enkel,Sign)  :-
-    Sign:agr => sg & indef & het,   % combines with een/geen
+    Sign:agr => sg & indef & het, % combines with een/geen
+    Sign:n_meas =?> no,  % * enkel miljoen, * enkel jaar
     Sign:case =?> ~gen.
 determiner_features(sg_num,Sign) :-
     Sign:agr => sg,
     Sign:case =?> ~gen.
 determiner_features(pl_num,Sign) :-
+    Sign:n_meas =?> no,
     Sign:agr => pl,
     Sign:case =?> ~gen.
 determiner_features(both,_).
 determiner_features(enkele,Sign) :-
+    Sign:n_meas =?> no,
     Sign:agr => ~(sg & het & indef),
     Sign:case =?> ~gen.
 %% zulke goede informatie

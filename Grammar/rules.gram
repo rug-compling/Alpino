@@ -496,7 +496,7 @@ default_head_features([d(meas,no),
 default_features([d(lex,no)]).
 
 head_features([agr,e_agr,subj,prep,preptype,adv,question,pron,
-	       tense,vform,adj_agr,hdet,fixed_dep,pp_role,
+	       tense,vform,adj_agr,hdet,fixed_dep,pp_role,n_meas,
 	       case,aform, modf,pro,wkpro,pcat,amount,allows_drop,
 	       subn,inv,tpart,modifies_a,avform,sel,haswh,can_mod,
 	       nform,wh_reltmploc,vframe,sv1_mod,subadv,cleft,veps,vhasmod,
@@ -9249,6 +9249,7 @@ n_num_n_structure(N1,Num,N0) :-
     Num:agr <=> N:agr,
     N0:haspre => yes,
     N0:subn => ~sub_def_verb & ~sub_indef_verb,
+    Num:n_meas <=> N:meas,   % * ettelijke miljoen
     hd_det_structure(Num,N0,N).
 
 %% 'bijna 6 flessen'
