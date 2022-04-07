@@ -1912,6 +1912,7 @@ foreign_word(we).
 foreign_word(well).
 foreign_word(were).
 foreign_word(what).
+foreign_word(whatever).
 foreign_word(when).
 foreign_word(where).
 foreign_word(white).

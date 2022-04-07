@@ -3577,6 +3577,8 @@ n([pl(bastaarden),pl(bastaards),sg(bastaard)],de,[]).
 
 n([sg(bastion),pl(bastions)],het,[]).
 
+n([sg(batakker),pl(batakkers),sg('Batakker'),pl('Batakkers')],de,[]).
+
 n([pl(bataljons),sg(bataljon)],het,[measure]).
 
 n([pl(batterijen),sg(batterij)],de,[measure],[dim(batterijtje)]).
@@ -4989,6 +4991,8 @@ n([pl(beëdigingen),sg(beëdiging)],de,[]).
 n([mass(beëindiging)],de,[]).
 
 n([mass(beïnvloeding),pl(beïnvloedingen),sg(beïnvloeding)],de,[]).
+
+n([sg(bh),pl('bh\'s')],de,[]).
 
 n([sg(bibber),pl(bibbers)],de,[]).
 
@@ -13992,6 +13996,8 @@ n([sg(gym)],het,[]).   % gymnasium
 n([pl(gymnasia),pl(gymnasiums),sg(gymnasium)],het,[]).
 
 n([mass(gymnastiek)],de,[]).
+
+n([pl(gympen)],both,[]).  % en niet gym_pen
 
 n([pl(gynaecologen),sg(gynaecoloog),
    pl(gynecologen), sg(gynecoloog),
@@ -28144,6 +28150,8 @@ n([mass(punctualiteit)],de,[]).
 
 n([sg(punk),pl(punks)],de,[]).
 
+n([sg(punker),pl(punkers)],de,[]).
+
 n([bare_meas(punt),pl(punten)],both,
   [meas_mod,
    measure],
@@ -34828,7 +34836,11 @@ n([bare_meas(tienmaal),pl(tienmalen)],both,[temp_mod,measure,sbar]).
 n([stem(tien_DIM),
    pl(tientjes),sg(tientje)],het,[measure]). % een tientje korting
 
-n([pl(tieten),sg(tiet)],de,[measure]).
+n([pl(tieten),sg(tiet)],de,[measure], % measure?
+  []).
+
+n([pl(tieten),sg(tiet)],de,[],
+  [dim(tietje)]).
 
 n([pl(tifosi)],de,[]).
 
@@ -35523,6 +35535,8 @@ n([pl(trapgaten),sg(trapgat)],het,[]).
 n([pl(trappehuizen),sg(trappehuis)],het,[]).
 
 n([pl(trappenhuizen),sg(trappenhuis)],het,[]).
+
+n([sg(trapper),pl(trappers)],de,[]). % en niet trap_pers
 
 n([pl(traptreden),sg(traptrede)],de,[]).
 
@@ -38285,6 +38299,7 @@ n([pl(vloeren),sg(vloer)],de,[],
   [beurs,
    keuken,
    laad,
+   laminaat,
    speel]).
 
 n([mass(vloerbedekking)],de,[]).
