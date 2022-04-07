@@ -694,6 +694,8 @@ m(v_root(heb,hebben),
 	fixed([{[acc(moeite),er_pp(met,C),extra_vp(C)]}],no_passive),
         fixed([{[acc(nominalization(kijk_om)),pc(naar)]}],no_passive),
 	fixed([[om,het,lijf],acc],no_passive),
+	fixed([[om,handen],acc],no_passive),
+	fixed([[omhanden],acc],no_passive),
 	fixed([{[acc(oog),er_pp(in)]}],no_passive),
 				% VL: ik heb er (geen) goed oog in
 	fixed([{[acc(oog),pc(op)]}],no_passive),
