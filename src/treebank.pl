@@ -927,8 +927,11 @@ check_atts([A0-V0|Tail],[A0-V0|Tail1]) :-
 check_atts([],_,_,[]).
 check_atts([A1-V1|Tail],A,V,Rest) :-
     (   A1 == A
-    ->  format(user_error,"error: duplicate attributes: ~w ~w~n",[A=V,A=V1]),
-	Rest=Rest1
+    ->  (   V1==V
+	->  Rest=Rest1
+	;   format(user_error,"error: duplicate inconsistent attributes: ~w ~w~n",[A=V,A=V1]),
+	    Rest=Rest1
+	)
     ;   Rest=[A1-V1|Rest1]
     ),
     check_atts(Tail,A1,V1,Rest1).
