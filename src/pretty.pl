@@ -77,10 +77,19 @@ hdrug_command(rule,hdrug_show:show(Type,Output,Things),L0) :-
     (   Type0 == default -> Type = fs ; Type0 = Type ),
     findall_atmost(N,Thing,prule(Thing,L1,[]),Things).
 
-:- public prule/3.
+hdrug_command(grule,hdrug_show:show(Type,Output,Things),L0) :-
+    hdrug_flag(pretty_print_atmost,N),
+    hdrug_cmdint:show_command(Type0,Output,L0,L1),
+    (   Type0 == default -> Type = fs ; Type0 = Type ),
+    findall_atmost(N,Thing,grule(Thing,L1,[]),Things).
+
+:- public prule/3, grule/3.
 
 prule(clause(grammar_rule(Label,M,Ds),[]),[Label|L],L):-
     alpino_lc_in:grammar_rule(Label,M,Ds).
+
+grule(clause(grammar_rule(Label,M,Ds),[]),[Label|L],L):-
+    alpino_lc_in:grammar_rule_g(Label,M,Ds).
 
 plex(clause(lex(Cat,Tag,Label,His),Constraints),L0,L):-
     lex_lexicon(Tag,Label,L0,L,His),
@@ -226,6 +235,23 @@ a_rule1(Name0,clause(grammar_rule(Name,Cat,Ds),[])) :-
 	  fail
 	 ),
     alpino_lc_in:grammar_rule(Name,Cat,Ds).
+
+a_grule(Name,Clause) :-
+    if(a_grule0(Name,Clause),
+       true,
+       a_grule1(Name,Clause)
+      ).
+
+a_grule0(Name,clause(grammar_rule(Name,Cat,Ds),[])) :-
+    alpino_lc_in:grammar_rule_g(Name,Cat,Ds).
+
+a_grule1(Name0,clause(grammar_rule(Name,Cat,Ds),[])) :-
+    atomic(Name0),
+    catch(atom_term(Name0,Name),
+	  syntax_error(_,_,_,_,_),
+	  fail
+	 ),
+    alpino_lc_in:grammar_rule_g(Name,Cat,Ds).
 
 :- public show_relation/2.
 show_relation(F/A,Medium) :-
