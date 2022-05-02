@@ -76,11 +76,17 @@ show_node2(syn,tree(_,Rule,_,_),Medium) :-
     ;	show_lex(Rule,fs,Medium) % pretty.pl
     ).
 
-show_node3(Type,Tree,Medium) :-
-    show_node2(Type,Tree,Medium).
+%%% if you press button 3 on a node label:  RULE for generation
+show_node3(syn,tree(_,Rule,_,_),Medium) :-
+    nonvar(Rule),
+    (	alpino_lc_in:grammar_rule_g(Rule,_,_)
+    ->	findall(Clause,a_grule(Rule,Clause),Clauses),
+	show(fs,Medium,Clauses)
+    ;	show_lex(Rule,fs,Medium) % pretty.pl
+    ).
 
 %% display what would happen if you'd click on a node
-tk_tree_show_node_help(syn,'<1> clig <2/3> rule clig').
+tk_tree_show_node_help(syn,'<1> clig <2> rule clig <3>rule clig generation').
 
 %% FORMAT MATRIX(SYN)
 
@@ -121,8 +127,17 @@ show_node2(deriv,tree(_,Rule,_,_),Medium) :-
     ;	show_lex(Rule,fs,Medium) % pretty.pl
     ).
 
+%%% if you press button 3 on a node label:  RULE for generation
+show_node3(deriv,tree(_,Rule,_,_),Medium) :-
+    nonvar(Rule),
+    (	alpino_lc_in:grammar_rule_g(Rule,_,_)
+    ->	findall(Clause,a_grule(Rule,Clause),Clauses),
+	show(fs,Medium,Clauses)
+    ;	show_lex(Rule,fs,Medium) % pretty.pl
+    ).
+
 %% display what would happen if you'd click on a node
-tk_tree_show_node_help(deriv,'<1> clig <2> rule clig').
+tk_tree_show_node_help(deriv,'<1> clig <2> rule clig <3> rule clig generation').
 
 %% FORMAT DERIV0 (DERIV WITH FULL LEXICAL DETAILS)
 
@@ -172,8 +187,17 @@ show_node2(deriv0,tree(_,Rule,_,_),Medium) :-
     ;	show_lex_id(Rule,fs,Medium)  % pretty.pl
     ).
 
+%%% if you press button 3 on a node label:  RULE for generation
+show_node3(deriv0,tree(_,Rule,_,_),Medium) :-
+    nonvar(Rule),
+    (	alpino_lc_in:grammar_rule_g(Rule,_,_)
+    ->	findall(Clause,a_grule(Rule,Clause),Clauses),
+	show(fs,Medium,Clauses)
+    ;	show_lex_id(Rule,fs,Medium)  % pretty.pl
+    ).
+
 %% display what would happen if you'd click on a node
-tk_tree_show_node_help(deriv0,'<1> clig <2> rule clig').
+tk_tree_show_node_help(deriv0,'<1> clig <2> rule clig <3> rule clig for generation').
 
 
 %% FORMAT DERIV1 (DERIV WITH SOME LEXICAL DETAILS)
