@@ -314,30 +314,44 @@ split_transformation(tree(r('--',p(du)),[D2,D3]),[X1,X2]) :-
 %% if there is a "negatief element" in the first clause
 %% "we waren nog niet thuis of de telefoon ging"
 %% 
-split_transformation(tree(r('--',p(conj)),Ds0),[A1,A2]) :-
-    D1 = tree(r(crd,adt_lex(_,of,_,_,_)),[]),
-    D2 = tree(r(cnj,p(P1)),L1),
-    D3 = tree(r(cnj,P2),L2),
-    lists:select(D1,Ds0,[D2,D3]),
-    \+ contains_negatief_element(L1),
-    correct_conjunct(P1,P2,P,L2,L),
-    A1 = tree(r(top,p(top)),[tree(r('--',p(P1)),L1)]),
-    A2 = tree(r(top,p(top)),[tree(r('--',p(du)),[DLINK,BODY])]),
-    DLINK = tree(r(dlink,adt_lex(_,of,_,_,[])),[]),
-    BODY  = tree(r(nucl,P),L).
-
 %% smain maar smain -> smain. Maar smain.
 split_transformation(tree(r('--',p(conj)),Ds0),[A1,A2]) :-
     D1 = tree(r(crd,adt_lex(_,Maar,_,_,_)),[]),
     D2 = tree(r(cnj,p(P1)),L1),
     D3 = tree(r(cnj,P2),L2),
     lists:select(D1,Ds0,[D2,D3]),
-    lists:member(Maar,[maar,dus,want]),
+    lists:member(Maar,[of,maar,dus,want]),
+    \+ (   Maar == of,
+	   contains_negatief_element(L1)
+       ),
     correct_conjunct(P1,P2,P,L2,L),
     A1 = tree(r(top,p(top)),[tree(r('--',p(P1)),L1)]),
     A2 = tree(r(top,p(top)),[tree(r('--',p(du)),[DLINK,BODY])]),
     DLINK = tree(r(dlink,adt_lex(_,Maar,_,_,[])),[]),
     BODY  = tree(r(nucl,P),L).
+
+%% a of b en c -> a. Of b. En c.
+split_transformation(tree(r('--',p(conj)),Ds0),[A1,A2,A3]) :-
+    D1 = tree(r(crd,adt_lex(_,En1,_,_,_)),[]),
+    D2 = tree(r(cnj,P1),L1),
+    lists:select(D1,Ds0,Ds1),
+    lists:select(D2,Ds1,Ds2),
+    D3 = tree(r(crd,adt_lex(_,En2,_,_,_)),[]),
+    D4 = tree(r(cnj,P2),L2),
+    D5 = tree(r(cnj,P3),L3),
+    lists:select(D3,Ds2,Ds3),
+    lists:member(En1,[en,of,maar,dus,want]),
+    lists:member(En2,[en,of,maar,dus,want]),
+    lists:select(D4,Ds3,Ds4),
+    lists:select(D5,Ds4,[]),
+    \+ contains_negatief_element(L1),
+    A1 = tree(r(top,p(top)),[tree(r('--',P1),L1)]),
+    A2 = tree(r(top,p(top)),[tree(r('--',p(du)),[DLINK1,BODY1])]),
+    A3 = tree(r(top,p(top)),[tree(r('--',p(du)),[DLINK2,BODY2])]),
+    DLINK1 = tree(r(dlink,adt_lex(_,En1,_,_,[])),[]),
+    BODY1  = tree(r(nucl,P2),L2),
+    DLINK2 = tree(r(dlink,adt_lex(_,En2,_,_,[])),[]),
+    BODY2  = tree(r(nucl,P3),L3).
 
 %% tag, smain maar smain -> tag, smain. Maar smain.
 split_transformation(tree(r('--',p(du)),Ds0),[A1,A2]) :-

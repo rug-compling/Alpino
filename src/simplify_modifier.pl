@@ -36,6 +36,13 @@ modifier_transformation(r(dp,p(advp)),[D1,D2],r(dp,p(ap)),[DN,D2],_) :-
     DN = tree(r(hd,adt_lex(ap,Lem,Alleen,adj,Atts)),[]),
     adv_adj(Alleen).
 
+%% remove modifiers from categories where these are unexpected
+%% "wat houdt dat in en , anders geformuleerd , hoe moet dat"
+%% more categories?
+modifier_transformation(r(Rel,p(whq)),Ds0,r(Rel,p(whq)),Ds,_) :-
+    Mod = tree(r(mod,_),_),
+    lists:select(Mod,Ds0,Ds).
+
 %% use hd as context if available
 modifier_transformation(Cat,Ds0,Cat,Ds,Ctxt) :-
     lists:member(tree(r(hd,adt_lex(_,Hd,_,_,_)),[]),Ds0),
