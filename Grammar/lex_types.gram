@@ -3126,13 +3126,17 @@ exp_amb_np_arg(NP) :-
     np_arg(NP),
 %    NP:redrel => no,  % wie zeurt krijgt niet betaald
     NP:case => (acc;dat),
+    NP:hstem <=> STEM,
+    alpino_wappend:nomember(STEM,[alle,dat,datzelfde,deze,dezelfde,die,diezelfde,
+				  dit,ditzelfde,genoeg,het,hetzelfde,paar,
+				  wat,welk,'zo\'n',zulk]),
     NP:subn => (sub_name;sub_noun;sub_def_pron;sub_indef_pron;
-                sub_def_adj;sub_adj_pl;sub_rang;sub_num).
+                sub_def_adj;sub_adj_pl;sub_rang;sub_num;sub_det).
                                 % num: twee van ons beviel dat niet
 				% adj: verpleegkundige
                                 % adj_pl: dat is velen een doorn in het oog
-                                % det: het lukte geen van de aanwezigen ...
-				% but this gives too many additional false readings
+                                % det: het lukte elk/geen van de aanwezigen ...
+				%      remove unlikely ones above with nomember/2
 
 acc_np_arg(NP) :-
     np_arg(NP),
@@ -7374,6 +7378,9 @@ realize_arg(Dep,Deps,Deps,Sc0,Sc,Slash0,Slash,Sign,Ers,Ers,Cs,Cs) :-
     Dep:sc <=> Inh0,
     normal_sbar_passive_object(Inh0,Dep,Subj,Inh),
     slash_or_subcat(_E,Dep,Sc0,Sc1,Slash0,Slash1,Sign),
+    alpino_wappend:wappend(Inh0,Slash1,All),
+    sbar_arg(Sbar),
+    alpino_wappend:wmember(Sbar,All), % can also be on slash: "dat hij komt staat vermeld .."
     inherit_slash_normal(Dep,Deps,Deps,Slash,Slash1),
     alpino_wappend:add_at_end_list(Sc,Inh,Sc1).
 
@@ -7457,8 +7464,6 @@ normal_passive_object(DepSc,Dep,Subj,Inh) :-
 
 normal_sbar_passive_object(Inh,Dep,Subj,Inh) :-
     Dep:passive => imp_passive,
-    sbar_arg(Sbar),
-    alpino_wappend:wselect(Sbar,Inh,_),
     dummy_subj(Subj).
 
 personal_passive_object(DepSc,Subj,Inh) :-    
