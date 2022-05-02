@@ -152,10 +152,13 @@ wwselect([Head|Tail], First, Element,[First|Rest]) :-
 	     wwselect(Tail, Head, Element,Rest)
 	    ).
 
-nomember(_W,[]).
-nomember(W,[X|Tail]) :-
-    dif(W,X),
-    nomember(W,Tail).
+nomember(W,List) :-
+    when(nonvar(W), \+ lists:member(W,List)).
+
+%nomember(_W,[]).
+%nomember(W,[X|Tail]) :-
+%    dif(W,X),
+%    nomember(W,Tail).
 
 %:- block nomember_iflist(?,-).
 %nomember_iflist(_,[]).
