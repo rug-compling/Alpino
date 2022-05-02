@@ -2812,6 +2812,7 @@ never_final_compound_part(ping).
 never_final_compound_part(pro).
 never_final_compound_part(ren).
 never_final_compound_part(sis).
+never_final_compound_part(tal).
 never_final_compound_part(tel).
 never_final_compound_part(tij).
 never_final_compound_part(ven).
