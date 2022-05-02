@@ -4434,8 +4434,12 @@ grammar_rule(np_adjn, NP,  [ N ] ) :-
     NP0:subn => sub_indef_adj,
     NP0:case => ~gen,
     N:hdet => no,
-    N:cj => ncj,		% Lenooor: prevent '[np [N and N]]' because
-				% that would assign cat=np instead of cat=conj
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+
+	N:cj => ncj	%% Lenooor: prevent '[np [N and N]]' because
+			%% that would assign cat=np instead of cat=conj
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     hd_structure(N,NP0,np),
     add_rel(NP0,NP).
 
@@ -5698,7 +5702,7 @@ a_adv_a_structure(AP,Adv,A0) :-
     Adv:wh <=> A:wh,
     Adv:wh_reltmploc <=> A:wh_reltmploc,
     AP:can_postv <=> Adv:adj_can_postv,
-    Adv:tmploc => (ntmploc;sent;tmp;tmp_n;loc;ld_dir;wk_er),
+    Adv:tmploc => (ntmploc;sent;tmp;tmp_n;loc;ld_dir),  % why was there wk_er???
     Adv:redrel => no,
     Adv:modifies_a => yes,
     haspreyes(A0),
@@ -10157,7 +10161,10 @@ allows_within_word_conjunction(modifier).
 final_coord_daughter(Name,L,M,Type,Mods,ETC) :-
     conjunction_cat(Name,L,Type,ETC),
     slash_edeps(L),
-    L:cj => ncj,
+    (   hdrug_util:hdrug_flag(parse_or_generate,parse),
+	L:cj => ncj
+    ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
+    ),
     finish_mexs(L),
     L:imexs =?> [],
     functor(L,F,A),
