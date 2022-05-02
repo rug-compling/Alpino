@@ -10370,6 +10370,8 @@ n([pl(eilanden),sg(eiland)],het,[],
 
 n([sg(eilandenrijk),pl(eilandenrijken)],het,[],[dim(eilandenrijkje)]).
 
+n([sg(eilander),pl(eilanders)],de,[]).
+
 n([sg(eind),pl(einden)],het,
   [measure,
    subject_sbar,

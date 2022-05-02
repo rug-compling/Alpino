@@ -9605,6 +9605,8 @@ a([stof(eikenhouten)],nonadv,[],[]).
 
 a([stof(eiken)],nonadv,[],[]).
 
+a([both(eilander)],nonadv,[],[]).
+
 a([e(eindelijke),
    no_e(eindelijk)],adv,[],[]).
 
