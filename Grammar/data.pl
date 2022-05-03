@@ -533,7 +533,9 @@ vslash_empty(Vslash) ::-
 context_embed_node(Node) ::-
     Node => sv1.
 context_embed_node(Node) ::-
-    Node => sbar.
+%%%    Node => sbar. "als voorbeeld" is sbar too, therefore:
+    Node => vp.
+    
 context_embed_node(Node) ::-
     Node => rel.
 
