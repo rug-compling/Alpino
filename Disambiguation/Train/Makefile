@@ -74,6 +74,7 @@ test:
               awk '{ N=N+$$2 } END {print N,"parses in total"} '   >>tenfold.log
 	( mv parses parses0 ; $(MAKE) -s parses )
 	grep -w score *.test >>tenfold.log
+	grep phi-score *.test | mean
 	echo "END RUN" >> tenfold.log
 	cat tenfold.log >>log
 
