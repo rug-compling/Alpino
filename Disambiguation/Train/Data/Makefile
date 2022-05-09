@@ -35,7 +35,7 @@ ALPINO=Alpino -notk cmdint=off\
           batch_command='parser_comparisons_int($(FIRSTKEY),$(LASTKEY))'
 
 realclean:
-	rm -f *gz d_part*.log p_part*.log p?.log p??.log ?_part*.log nohup.out
+	rm -f *gz p?.log p??.log ?_part*.log nohup.out
 
 po.gz:
 	$(ALPINO) -flag suite $(ALPINODIR)/Suites/ovistrain -flag treebank $(ALPINODIR)/Treebank/ovis 2>po.log | gzip > po.gz

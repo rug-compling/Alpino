@@ -148,6 +148,8 @@ triple_to_feature(DEPREL,FEATURE) :-
 
 :- initialize_flag(dep_with_pos,off).
 
+triple_to_feature(_,deprel(ArgPos:Arg/_,Rel,_),dep1(Rel,ArgPos,Arg)).
+triple_to_feature(_,deprel(_,Rel,ArgPos:Arg/_),dep2(Rel,ArgPos,Arg)).
 triple_to_feature(_,deprel(HdPos:_Hd/_,Rel,ArgPos:_Arg  /_),dep23(    ArgPos,Rel,HdPos   )) :- Rel \= cnj/cnj.
 triple_to_feature(off,deprel(HdPos: Hd/_,Rel,ArgPos: Arg  /_),dep35(Arg,ArgPos,Rel,HdPos,Hd)).
 triple_to_feature(_,deprel(HdPos:_Hd/_,Rel,ArgPos: Arg  /_),dep34(Arg,ArgPos,Rel,HdPos   )) :- Rel \= cnj/cnj.
@@ -374,6 +376,7 @@ score_corpus_feature(dep35(A,B,C,D,E),z_dep35(D,C),Val) :-
     Val is Val0/10000,
     !,			       % if z_dep35, then do not use w2v
     debug_message(3,"~w ~w~n",[Feature,Val]).
+score_corpus_feature(dep35(_,_,C,D,_),no_z_dep35(D,C),1).
 
 /*
 score_corpus_feature(dep35(S1,_,Rel,P2,S2),w2v(P2,Rel),Count) :-
