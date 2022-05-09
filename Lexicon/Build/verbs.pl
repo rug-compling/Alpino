@@ -28674,6 +28674,7 @@ v(zie,ziet,inflected(zien,ziene),gezien,zag,zagen,
                            % zie dan maar eens ...
 	fixed([{[acc(aanleiding),pc(in)]},vp],norm_passive),
 	fixed([{[[brood],pc(in)]}],imp_passive),
+	fixed([[door,de,vingers],acc],norm_passive),
 	fixed([{[[geen,been],pc(in)]},vp],imp_passive),
 	fixed([{[[geen,graten],er_pp(in,C)]},extra_sbar(C)],no_passive), % VL
 	fixed([{[[geen,graten],er_pp(in,C)]},extra_vp(C)],no_passive),  % VL
