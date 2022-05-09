@@ -516,8 +516,10 @@ all_compare_score(Obj1,Obj2) :-
 compare_score(Long,Obj1,Obj2,R) :-
     object(Obj1,o(Cat1,_,_)),
     object(Obj2,o(Cat2,_,_)),
-    alpino_data:result_term(p(Tot1,His1),_,_,_,_,Cat1),
-    alpino_data:result_term(p(Tot2,His2),_,_,_,_,Cat2),
+    alpino_data:result_term(p(Tot1,His10),_,_,_,_,Cat1),
+    add_counts_if_missing(His10,His1),
+    alpino_data:result_term(p(Tot2,His20),_,_,_,_,Cat2),
+    add_counts_if_missing(His20,His2),
     (	His1 == His2
     ->	format(user_error,"*** ~w and ~w have identical scores ***~n",
 	       [Obj1,Obj2]),
@@ -538,8 +540,8 @@ compare_score(Long,Obj1,Obj2,R) :-
     ).
 
 display_penalties(Pens0) :-
-    add_weights(Pens0,Pens1),
-    keysort(Pens1,Pens),
+    add_weights(Pens0,Pens),
+%    keysort(Pens1,Pens),
     display_weighted_penalties(Pens).
 
 add_weights([],[]).
@@ -657,7 +659,7 @@ display_penalties_of_obj(N) :-
 
 display_penalties_of_result(Result,_) :-
     alpino_data:result_term(p(_,His0),_,_,_,_,Result),
-    sort_not_uniq(His0,His),
+    sort_not_uniq_with_count(His0,His),
     display_penalties(His).
 
 format_features_of_obj(N) :-
@@ -924,3 +926,18 @@ check_suite(H) :-
 
 user:portray(X/mod) :-
     format("~w/~w",[X,mod]).
+
+sort_not_uniq_with_count(List0,List) :-
+    add_counts_if_missing(List0,List1),
+    sort_not_uniq(List1,List).
+
+add_counts_if_missing([],[]).
+add_counts_if_missing([H0|T0],[H|T]) :-
+    add_count_if_missing(H0,H),
+    add_counts_if_missing(T0,T).
+
+add_count_if_missing(Pen0,Pen) :-
+    (  Pen0 = _-_
+    -> Pen = Pen0
+    ;  Pen = Pen0-1
+    ).
