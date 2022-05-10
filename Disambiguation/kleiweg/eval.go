@@ -388,7 +388,7 @@ func lexer(filename string, ch chan<- token) {
 	breaks := make([]int, 0, 1000)
 
 	for {
-		bline, isP, err := rd.ReadLine()
+		bline, err := rd.ReadBytes('\n')
 		if err == io.EOF {
 			break
 		}
@@ -396,10 +396,8 @@ func lexer(filename string, ch chan<- token) {
 			fmt.Fprintln(os.Stderr, err)
 			os.Exit(1)
 		}
-		if isP {
-			fmt.Fprintln(os.Stderr, "Line too long")
-			os.Exit(1)
-		}
+		bline = bytes.TrimRight(bline, "\n\r")
+
 		lineno++
 
 		line = string(bline)
@@ -502,7 +500,7 @@ func getWeights(filename string) {
 	splitBar := []byte{'|'}
 
 	for {
-		line, isP, err := rd.ReadLine()
+		line, err := rd.ReadBytes('\n')
 		if err == io.EOF {
 			break
 		}
@@ -510,10 +508,7 @@ func getWeights(filename string) {
 			fmt.Fprintln(os.Stderr, err)
 			os.Exit(1)
 		}
-		if isP {
-			fmt.Fprintln(os.Stderr, "Line too long")
-			os.Exit(1)
-		}
+		line = bytes.TrimRight(line, "\n\r")
 
 		items := bytes.Split(line, splitBar)
 		if len(items) == 2 {
