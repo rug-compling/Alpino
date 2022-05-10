@@ -3363,7 +3363,8 @@ n([pl(banaliteiten),sg(banaliteit)],de,[sbar,pred_pp(van)]).
 n([mass(banco)],het,[]).
 
 n([pl(banden),sg(band)],de,[],
-  [kruis,
+  [s(aanvoerder),
+   kruis,
    lei,
    pols, % en niet pol_band_DIM
    winter,
@@ -5572,7 +5573,8 @@ n([pl(boekhouders),sg(boekhouder)],de,[]).
 n([pl(boekhoudsters),sg(boekhoudster)],de,[]).
 
 n([pl(boekhoudingen),sg(boekhouding)],de,[],
-  [schaduw]).
+  [i(mineraal,mineralen),
+   schaduw]).
 
 n([pl(boekingen),sg(boeking)],de,[]).
 
@@ -5663,6 +5665,7 @@ n([pl(bommen),sg(bom)],de,[measure]). % duiten
 n([pl(bommen),sg(bom)],de,[],
   [atoom,
    auto,
+   brand,
    cluster,
    kern,
    tijd,
@@ -6017,7 +6020,9 @@ n([pl(boxen),sg(box)],de,[],[mail]).
 
 n([pl(boys),sg(boy)],de,[]).
 
-n([pl(boycots),sg(boycot)],de,[],[i(consument,consumenten)]).
+n([pl(boycots),sg(boycot)],de,[],
+  [i(consument,consumenten),
+   olie]).
 
 % n([mass(boze)],het,[]).
 
@@ -6464,6 +6469,7 @@ n([pl(bureaus),pl('bureau\'s'),sg(bureau),sg(buro),pl('buro\'s')],both,
    consultancy,
    consultatie,
    i(consultatie,konsultatie),
+   controle,
    hoofd,
    incasso,
    s(ingenieur),
@@ -7035,6 +7041,8 @@ n([pl(chauffeurs),sg(chauffeur)],de,[],
   [bus,
    i(vracht_wagen,vrachtwagen)]).
 
+n([sg(chauvinisme)],het,[]).
+
 n([pl(checks),sg(check)],de,
   [sbar]).
 
@@ -7056,7 +7064,8 @@ n([pl(chefs),sg(chef)],de,[],
    leger,
    pers,
    s(personeel),
-   politie]).
+   politie,
+   s(station)]).
 
 n([sg([chef,de,bureau]),pl([chefs,de,bureau])],de,[]).
 
@@ -7759,7 +7768,8 @@ n([pl(concurrenten),sg(concurrent)],de,[]).
 n([pl(concurrentes),sg(concurrente)],de,[]).
 
 n([mass(concurrentie)],de,[],
-  [s(beleid)]).
+  [s(beleid),
+   prijs]).
 
 n([pl('concurrentie-posities'),sg('concurrentie-positie')],de,[]).
 
@@ -9174,7 +9184,8 @@ n([pl(directeuren),pl(directeurs),sg(directeur)],de,[app_measure],
    h(president),
    programma,
    school,
-   sport
+   sport,
+   toernooi
   ]).
 
 n([pl('directeuren-generaal'),pl('directeurs-generaal'),
@@ -11478,6 +11489,8 @@ n([sg(flinter),pl(flinters)],de,[measure],[dim(flintertje)]).
 n([sg(flip),pl(flippen),pl(flips)],de,[]).
 
 n([sg(flipper),pl(flippers)],de,[]).
+
+n([sg(flippo),pl('flippo\'s')],de,[]).
 
 n([sg(flirt),pl(flirten)],de,[]).
 
@@ -25258,6 +25271,8 @@ n([pl(overalls),sg(overall)],de,[]).
 
 n([mass(overbelasting)],de,[]).
 
+n([mass(overbevissing)],de,[]).
+
 n([mass(overbevolking)],de,[]).
 
 n([mass(overblijf)],de,[]).
@@ -26211,6 +26226,7 @@ n([pl(percentages),sg(percentage)],het,[measure]).
 
 n([pl(percentages),sg(percentage)],het,[],
   [groei,
+   opkomst,
    rente,
    h(rsi),h('RSI'),
    i(werkeloosheid,werkloosheids),s(werkeloosheid),
@@ -27129,6 +27145,10 @@ n([pl(polen),pl(pools),sg(pool)],de,[],
   [s(arbeid),
    haven]).
 
+n([sg(pooler),pl(poolers)],de,[],
+  [i(baan,banen)
+  ]).
+
 n([mass(poolshoogte)],de,[]).
 
 n([sg(poolster)],de,[]).
@@ -27514,6 +27534,7 @@ n([pl(prijzen),sg(prijs)],de,[app_measure],
    s(gevatheid),
    goud,
    grond,
+   grondstof,
    i(grondstof,grondstoffen),
    hoofd,
    i(huis,huizen),
@@ -28189,6 +28210,7 @@ n([sg(punt),pl(punten),
    knel,
    licht,
    min,
+   omslag,
    speer,
    start,
    top,
@@ -28627,6 +28649,8 @@ n([sg(reces)],het,[],[zomer]).
 
 n([mass(recessie)],de,[]).
 
+n([sg(recette),pl(recettes)],de,[]).
+
 n([pl(recherches),sg(recherche)],de,[],[s(rijk)]).
 
 n([pl(rechercheurs),sg(rechercheur)],de,[]).
@@ -28952,6 +28976,7 @@ n([pl(regelingen),sg(regeling)],de,[],
    compensatie,
    dienst,
    levensloop,
+   s(omgang),
    opkoop,
    optie,
    i(oud,ouderen),
@@ -31108,6 +31133,8 @@ n([pl(selecties),sg(selectie),
 
 n([sg(selfie),pl(selfies)],de,[]).
 
+n([sg(semafoon),pl(semafoons)],de,[]).
+
 n([sg(semester),pl(semesters)],het,[temp_mod]).
 
 n([sg(seminar),pl(seminars)],both,[]).
@@ -31163,6 +31190,7 @@ n([pl(series),pl(seriën),sg(serie)],de,[],
    politie,
    reality,
    soap,
+   i(strafschop,strafschoppen),
    i(teken_film,tekenfilm),
    televisie,tv,h(tv),f([tv]),i(tv,'TV-')
   ]).
@@ -32701,6 +32729,7 @@ n([pl(staten),sg(staat)],de,[],
    h(lid),
    recht,s(recht),
    i(schurk,schurken),
+   stad,
    s(verzorging),
    s(welvaart)]).
 
@@ -32919,7 +32948,7 @@ n([pl(stations),sg(station)],het,[],
    televisie,tv,h(tv),f([tv]),i(tv,'TV-'),
    dim(stationnetje)]).
 
-n([pl(stationschefs),sg(stationschef)],de,[]).
+n([sg(stationering),pl(stationeringen)],de,[]).
 
 n([sg(stationwagon),pl(stationwagons)],de,[]).
 
@@ -34189,6 +34218,7 @@ n([pl(tarieven),sg(tarief)],het,[app_measure],
   [belasting,
    bodem,
    douane,
+   i(geld_markt,geldmarkt),
    maximum,
    piek,
    rente,
@@ -35448,7 +35478,8 @@ n([mass(training),pl(trainingen),sg(training)],de,
   []).
 n([mass(training),pl(trainingen),sg(training)],de,
   [temp_mod],
-  [kracht]).
+  [s(groep),
+   kracht]).
 
 n([pl(trainingspakken),sg(trainingspak)],het,[]).
 
@@ -35593,7 +35624,8 @@ n([pl(trekken),sg(trek)],de,[],
   [s(gelaat)]).
 
 n([pl(trekkers),sg(trekker)],de,[],
-  [s(publiek)]).
+  [s(publiek),
+   s(uitkering)]).
 
 n([pl(trekkingen),sg(trekking)],de,[]).
 
@@ -35961,6 +35993,8 @@ n([pl(uitbaters),sg(uitbater)],de,[]).
 n([pl(uitbaatsters),sg(uitbaatster)],de,[]).
 
 n([pl(uitbeeldingen),sg(uitbeelding)],de,[]).
+
+n([sg(uitbesteding),pl(uitbestedingen)],de,[]).
 
 n([pl(uitbetalingen),sg(uitbetaling)],de,[]).
 

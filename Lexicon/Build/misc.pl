@@ -7773,8 +7773,10 @@ nominalized_adjective(wild,wilden).
 nominalized_adjective(wit,witten).
 nominalized_adjective(zalig,zaligen).
 nominalized_adjective(zelfstandig,zelfstandigen).
+nominalized_adjective(werk_zoeken,werkzoekenden).
 nominalized_adjective(woning_zoeken,woningzoekenden).
 nominalized_adjective(ziek,zieken).
+nominalized_adjective(ziekenfonds_verzekeren,ziekenfondsverzekerden).
 nominalized_adjective(zoveel,zovelen).
 nominalized_adjective(zwaar_gewond,zwaargewonden).
 nominalized_adjective(zwakzinnig,zwakzinnigen).
