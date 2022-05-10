@@ -376,7 +376,6 @@ score_corpus_feature(dep35(A,B,C,D,E),z_dep35(D,C),Val) :-
     Val is Val0/10000,
     !,			       % if z_dep35, then do not use w2v
     debug_message(3,"~w ~w~n",[Feature,Val]).
-score_corpus_feature(dep35(_,_,C,D,_),no_z_dep35(D,C),1).
 
 /*
 score_corpus_feature(dep35(S1,_,Rel,P2,S2),w2v(P2,Rel),Count) :-
