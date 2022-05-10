@@ -1268,6 +1268,7 @@ accent(stoicijns,stoïcijns).
 accent(stoicijnste,stoïcijnste).
 accent(stoicijnst,stoïcijnst).
 accent(stookolien,stookoliën).
+accent(strafschoppenserien,strafschoppenseriën).
 accent(strategieen,strategieën).
 accent(studien,studiën).
 accent(subsidieren,subsidiëren).
