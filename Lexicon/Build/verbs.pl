@@ -2287,6 +2287,9 @@ v(beits,beitst,beitsen,gebeitst,beitste,beitsten,
     [h([intransitive,
 	transitive])]).
 
+v(bejaag,bejaagt,bejagen,bejaagd,bejaagde,bejaagden,
+    [h([transitive])]).
+
 v(bejegen,bejegent,bejegenen,bejegend,bejegende,bejegenden,
     [h([transitive,
 	np_mod_pp(met)])]).
@@ -3032,8 +3035,9 @@ v(besluit,besluit,besluiten,besloten,besloot,besloten,
        ])]).
 
 v(besmeer,besmeert,besmeren,besmeerd,besmeerde,besmeerden,
-    [h([transitive,
-	np_pc_pp(met)])]).
+  [h([transitive,
+      intransitive,   % Rooster het brood en besmeer desgewenst met boter . 
+      np_pc_pp(met)])]).
 
 v(besmet,besmet,besmetten,besmet,besmette,besmetten,
     [h([transitive,
@@ -19566,9 +19570,9 @@ v(schik,schikt,schikken,geschikt,schikte,schikten,
         refl_pc_pp(naar),
 	so_np,
 	transitive,
-	fixed([[in,der,minne],acc],norm_passive)
+	fixed([[in,der,minne],acc],norm_passive),
 	%refl_ld_pp,
-	%np_ld_pp,
+	np_ld_pp  % schik er wat sla op; schik er wat kaas op
 	]),
      b([part_intransitive(in)
 	])]).

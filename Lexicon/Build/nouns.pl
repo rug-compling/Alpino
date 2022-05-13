@@ -1763,6 +1763,8 @@ n([pl(aderlatingen),sg(aderlating)],de,[]).
 
 n([mass(aderverkalking)],de,[]).
 
+n([mass(adieu)],het,[]).
+
 n([pl(adjectieven),sg(adjectief),
    pl(adjektieven),sg(adjektief)],het,[]).
 
@@ -23728,6 +23730,8 @@ n([pl(officieren),pl(officiers),sg(officier)],de,[],
 
 n([sg('officier-fiscaal'),pl('officieren-fiscaal')],de,[]).
 
+n([sg(offshore)],de,[]).
+
 n([sg(ogenblik),pl(ogenblikken)],het,[measure,temp_mod,sbar],[dim(ogenblikje)]).
 
 n([meas(ohm)],both,[meas_mod,measure]).
@@ -30825,7 +30829,7 @@ n([pl(schoten),pl(schotten),sg(schot)],het,
   [pred_pp(buiten),
    measure]).
 
-n([pl(schotten),sg(schot)],het,[]).
+n([pl(schotten),sg(schot)],het,[],[tussen]).
 
 n([pl(schoten),sg(schot)],het,[],
   [s(afstand),
@@ -35649,6 +35653,8 @@ n([sg(triatlon),pl(triatlons),
 n([pl(tribunalen),sg(tribunaal)],het,[]).
 
 n([pl(tribunes),sg(tribune)],de,[]).
+
+n([sg(trigger),pl(triggers)],de,[]).
 
 n([meas(triljoen),pl(triljoenen)],both,
   [meas_mod,measure]).

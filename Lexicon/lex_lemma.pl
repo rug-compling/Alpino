@@ -402,6 +402,7 @@ lemma_root(aan_scheren,scheer_aan) .
 lemma_root(aan_scherpen,scherp_aan) .
 lemma_root(aan_scheuren,scheur_aan) .
 lemma_root(aan_schieten,schiet_aan) .
+lemma_root(aan_schikken,schik_aan) .
 lemma_root(aan_schoppen,schop_aan) .
 lemma_root(aanschouwen,aanschouw) .
 lemma_root(aan_schouwen,schouw_aan) .
@@ -1425,6 +1426,7 @@ lemma_root(af_scheren,scheer_af) .
 lemma_root(af_schermen,scherm_af) .
 lemma_root(af_scheuren,scheur_af) .
 lemma_root(af_schieten,schiet_af) .
+lemma_root(af_schikken,schik_af) .
 lemma_root(af_schilderen,schilder_af) .
 lemma_root(af_schillen,schil_af) .
 lemma_root(af_schoppen,schop_af) .
@@ -1892,6 +1894,7 @@ lemma_root(beijveren,beijver) .
 lemma_root(beïnvloeden,beïnvloed) .
 lemma_root(beitelen,beitel) .
 lemma_root(beitsen,beits) .
+lemma_root(bejagen,bejaag) .
 lemma_root(bejegenen,bejegen) .
 lemma_root(bejubelen,bejubel) .
 lemma_root(bekabelen,bekabel) .
@@ -3101,6 +3104,7 @@ lemma_root(door_beschimmelen,beschimmel_door) .
 lemma_root(door_beslaan,besla_door) .
 lemma_root(door_beslissen,beslis_door) .
 lemma_root(door_besluiten,besluit_door) .
+lemma_root(door_besmeren,besmeer_door) .
 lemma_root(door_besparen,bespaar_door) .
 lemma_root(door_besprenkelen,besprenkel_door) .
 lemma_root(door_bestaan,besta_door) .
@@ -6373,6 +6377,7 @@ lemma_root(heen_scheppen,schep_heen) .
 lemma_root(heen_scheren,scheer_heen) .
 lemma_root(heen_scheuren,scheur_heen) .
 lemma_root(heen_schieten,schiet_heen) .
+lemma_root(heen_schikken,schik_heen) .
 lemma_root(heen_schilderen,schilder_heen) .
 lemma_root(heen_schoppen,schop_heen) .
 lemma_root(heen_schrappen,schrap_heen) .
@@ -8221,6 +8226,7 @@ lemma_root(langs_scheppen,schep_langs) .
 lemma_root(langs_scheren,scheer_langs) .
 lemma_root(langs_scheuren,scheur_langs) .
 lemma_root(langs_schieten,schiet_langs) .
+lemma_root(langs_schikken,schik_langs) .
 lemma_root(langs_schoppen,schop_langs) .
 lemma_root(langs_schrappen,schrap_langs) .
 lemma_root(langs_schrijden,schrijd_langs) .
@@ -10721,6 +10727,7 @@ lemma_root(raak_beschimmelen,beschimmel_raak) .
 lemma_root(raak_beslaan,besla_raak) .
 lemma_root(raak_beslissen,beslis_raak) .
 lemma_root(raak_besluiten,besluit_raak) .
+lemma_root(raak_besmeren,besmeer_raak) .
 lemma_root(raak_besparen,bespaar_raak) .
 lemma_root(raak_besprenkelen,besprenkel_raak) .
 lemma_root(raak_bestaan,besta_raak) .
@@ -14851,6 +14858,7 @@ lemma_root(toe_scheren,scheer_toe) .
 lemma_root(toe_scheuren,scheur_toe) .
 lemma_root(toe_schieten,schiet_toe) .
 lemma_root(toe_schijnen,schijn_toe) .
+lemma_root(toe_schikken,schik_toe) .
 lemma_root(toe_schoppen,schop_toe) .
 lemma_root(toe_schrappen,schrap_toe) .
 lemma_root(toe_schreeuwen,schreeuw_toe) .
@@ -15517,6 +15525,7 @@ lemma_root(tussen_scheppen,schep_tussen) .
 lemma_root(tussen_scheren,scheer_tussen) .
 lemma_root(tussen_scheuren,scheur_tussen) .
 lemma_root(tussen_schieten,schiet_tussen) .
+lemma_root(tussen_schikken,schik_tussen) .
 lemma_root(tussen_schoppen,schop_tussen) .
 lemma_root(tussen_schrappen,schrap_tussen) .
 lemma_root(tussen_schrijven,schrijf_tussen) .
@@ -15901,6 +15910,7 @@ lemma_root(uit_berusten,berust_uit) .
 lemma_root(uit_beschikken,beschik_uit) .
 lemma_root(uit_beslissen,beslis_uit) .
 lemma_root(uit_besluiten,besluit_uit) .
+lemma_root(uit_besmeren,besmeer_uit) .
 lemma_root(uit_besparen,bespaar_uit) .
 lemma_root(uit_besprenkelen,besprenkel_uit) .
 lemma_root(uit_bestaan,besta_uit) .
@@ -18432,6 +18442,7 @@ lemma_root(vanaf_scheppen,schep_vanaf) .
 lemma_root(vanaf_scheren,scheer_vanaf) .
 lemma_root(vanaf_scheuren,scheur_vanaf) .
 lemma_root(vanaf_schieten,schiet_vanaf) .
+lemma_root(vanaf_schikken,schik_vanaf) .
 lemma_root(vanaf_schoppen,schop_vanaf) .
 lemma_root(vanaf_schrappen,schrap_vanaf) .
 lemma_root(vanaf_schrijden,schrijd_vanaf) .
@@ -19024,6 +19035,7 @@ lemma_root(vandaan_scheppen,schep_vandaan) .
 lemma_root(vandaan_scheren,scheer_vandaan) .
 lemma_root(vandaan_scheuren,scheur_vandaan) .
 lemma_root(vandaan_schieten,schiet_vandaan) .
+lemma_root(vandaan_schikken,schik_vandaan) .
 lemma_root(vandaan_schoppen,schop_vandaan) .
 lemma_root(vandaan_schrappen,schrap_vandaan) .
 lemma_root(vandaan_schrijven,schrijf_vandaan) .
@@ -19609,6 +19621,7 @@ lemma_root(vandoor_scheppen,schep_vandoor) .
 lemma_root(vandoor_scheren,scheer_vandoor) .
 lemma_root(vandoor_scheuren,scheur_vandoor) .
 lemma_root(vandoor_schieten,schiet_vandoor) .
+lemma_root(vandoor_schikken,schik_vandoor) .
 lemma_root(vandoor_schoppen,schop_vandoor) .
 lemma_root(vandoor_schrappen,schrap_vandoor) .
 lemma_root(vandoor_schrijven,schrijf_vandoor) .
@@ -20679,6 +20692,7 @@ lemma_root(voort_beschimmelen,beschimmel_voort) .
 lemma_root(voort_beslaan,besla_voort) .
 lemma_root(voort_beslissen,beslis_voort) .
 lemma_root(voort_besluiten,besluit_voort) .
+lemma_root(voort_besmeren,besmeer_voort) .
 lemma_root(voort_besparen,bespaar_voort) .
 lemma_root(voort_besprenkelen,besprenkel_voort) .
 lemma_root(voort_bestaan,besta_voort) .

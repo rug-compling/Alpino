@@ -7183,6 +7183,25 @@ with_dt([zo,iemand],
 	       hd=l(iemand,noun(de,count,sg),1,2)
 	      ])).
 
+
+with_dt([helemaal,niets],
+	pronoun(nwh,thi,sg,het,both,indef,strpro),
+	dt(np,[mod=l(helemaal,adverb,advp,0,1),
+	       hd=l(niets,noun(het,mass,sg),1,2)
+	      ])).
+
+with_dt([helemaal,niks],
+	pronoun(nwh,thi,sg,het,both,indef,strpro),
+	dt(np,[mod=l(helemaal,adverb,advp,0,1),
+	       hd=l(niks,noun(het,mass,sg),1,2)
+	      ])).
+
+with_dt([zo,eentje],
+	pronoun(nwh,thi,sg,de,both,indef,strpro),
+	dt(np,[mod=l(zo,adverb,advp,0,1),
+	       hd=l(eentje,pronoun(nwh,thi,sg,de,both,indef,strpro),1,2)
+	      ])).
+
 with_dt([niet,iedereen],
 	pronoun(nwh,thi,sg,de,both,def,strpro),
 	dt(np,[mod=l(niet,adverb,advp,0,1),
@@ -7214,24 +7233,6 @@ with_dt([lang,niet,alles],
 	dt(np,[mod=dt(advp,[mod=l(lang,adverb,advp,0,1),
 			    hd=l(niet,adverb,1,2)]),
 	       hd=l(alles,noun(het,mass,sg),2,3)
-	      ])).
-
-with_dt([helemaal,niets],
-	pronoun(nwh,thi,sg,het,both,indef,strpro),
-	dt(np,[mod=l(helemaal,adverb,advp,0,1),
-	       hd=l(niets,noun(het,mass,sg),1,2)
-	      ])).
-
-with_dt([helemaal,niks],
-	pronoun(nwh,thi,sg,het,both,indef,strpro),
-	dt(np,[mod=l(helemaal,adverb,advp,0,1),
-	       hd=l(niks,noun(het,mass,sg),1,2)
-	      ])).
-
-with_dt([zo,eentje],
-	pronoun(nwh,thi,sg,de,both,indef,strpro),
-	dt(np,[mod=l(zo,adverb,advp,0,1),
-	       hd=l(eentje,pronoun(nwh,thi,sg,de,both,indef,strpro),1,2)
 	      ])).
 
 with_dt([Het,hoe,en,wat],
@@ -8579,6 +8580,7 @@ term([business,class]).
 term([business,to,business]).
 term([business,manager],[business,managers]).
 term([buy]).
+term([buy,out]).
 term([carpe,diem]).
 term([carte,blanche]).
 term([cause,célèbre]).
@@ -8704,12 +8706,14 @@ term([lees,meer]).  % klik op lees meer
 term([lees,verder]).  % klik op lees meer
 term(['let\'s',make,things,better]).
 term(['Let\'s',make,things,better]).
+term([leveraged,buy,out]).
 term([lex,specialis]).
 term([liber,amicorum]).
 term([licence,to,kill]).
 term([limbo,de,muje]). % traditioneel reinigingsritueel
 term([low,profile]).
 term([man,of,the,match]).
+term([management,buy,out]).
 term([management,by,speech]).
 term([mea,culpa]).
 term([memento,mori]).
