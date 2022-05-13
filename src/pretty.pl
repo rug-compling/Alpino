@@ -91,9 +91,12 @@ prule(clause(grammar_rule(Label,M,Ds),[]),[Label|L],L):-
 grule(clause(grammar_rule(Label,M,Ds),[]),[Label|L],L):-
     alpino_lc_in:grammar_rule_g(Label,M,Ds).
 
-plex(clause(lex(Cat,Tag,Label,His),Constraints),L0,L):-
-    lex_lexicon(Tag,Label,L0,L,His),
-    alpino_lex_types:lex(Cat0,Tag,_,_),
+plex(clause(lex(Cat,Tag,Label,His),Constraints),Words,[]):-
+    lex_lexicon(Tag,Label,Words,[],His),
+    length(Words,Len),
+    hdrug_util:concat_all(Words,Surf,' '),
+    alpino_data:lexical(Word,Label,lemma,Surf,0,Len,His,_),
+    alpino_lex_types:lex(Cat0,Tag,Word,_),
     copy_term(Cat0,Cat,Constraints).
 
 :- public slex/3, taglex/3.
