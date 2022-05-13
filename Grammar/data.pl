@@ -103,6 +103,14 @@ dt_if_defined(Cat,DT) ::-
 dt_num(DT,Num) ::-
     DT:num <=> Num.
 
+dt_with_pos(DT,Hwrd,Frame,Cat,Ix,Begin) ::-
+    DT => dt,
+    DT:hwrd <=> Hwrd,
+    Hwrd:beginpos <?=?> Begin,
+    DT:frame <=> Frame,
+    DT:cat <=> Cat,
+    DT:ix <=> Ix.
+
 dt(DT,Hwrd,Frame,Cat,Ix) ::-
     DT => dt,
     DT:hwrd <=> Hwrd,

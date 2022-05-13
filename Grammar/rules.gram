@@ -493,7 +493,7 @@ default_head_features([d(meas,no),
 		      ]).
 
 %% assign default value to mother
-default_features([d(lex,no)]).
+default_features([d(lex,no),d(niet,no)]).
 
 head_features([agr,e_agr,subj,prep,preptype,adv,question,pron,
 	       tense,vform,adj_agr,hdet,fixed_dep,pp_role,n_meas,
@@ -656,6 +656,10 @@ max_predm(ADV) :-
     ADV => predm_adv,
     max(ADV).
 
+ind_max_pp(PP) :-
+    max_pp(PP),
+    PP:sel => ~to_topic.
+
 max_pp(PP) :-
     PP => pp,
     PP:ld_pc => (n_pp;mod_pp;pred_pp),
@@ -670,6 +674,10 @@ max_vp(X) :-
     unify_except(X0,X,e_deps), % allow e_deps for vp
     X:vform => (om;te),
     no_missing_subj(X).
+
+ind_max_np(X) :-
+    max_np(X),
+    X:sel => ~to_topic.
 
 max_np(X) :-
     X => np,
@@ -2335,8 +2343,7 @@ grammar_rule(imp_imp, Imp, [ Vmain, call(put_val(IDENTIFIER,VSLASH)), VP ]):-
 %% In Google, type de volgende zoekopdracht in
 
 grammar_rule(imp_mod_imp,ImpMother,[Mod, Imp]) :-
-    max_pp(Mod),
-    Mod:sel => ~to_topic,
+    ind_max_pp(Mod),
     Mod:pp_er => no,
     Imp => imp,
     ImpMother => imp,
@@ -2429,17 +2436,23 @@ grammar_rule(non_wh_topicalization(np),ROOT,[Topic,OPTCOMMA,Ques]) :-
     Topic => np,
     not_er_topic_with_men_subject(Topic,Ques),
     optcomma(OPTCOMMA),
-    non_wh_topic_structure(Ques,Topic,ROOT).
+    non_wh_topic_structure(Ques,Topic,ROOT0),
+    unify_except(ROOT0,ROOT,niet),
+    ROOT:niet <=> Topic:niet.
 
 grammar_rule(non_wh_topicalization(pred),ROOT,[Topic,OPTCOMMA,Ques]) :-
     Topic => pred,
     optcomma(OPTCOMMA),
-    non_wh_topic_structure(Ques,Topic,ROOT).
+    non_wh_topic_structure(Ques,Topic,ROOT0),
+    unify_except(ROOT0,ROOT,niet),
+    ROOT:niet <=> Topic:niet.
 
 grammar_rule(non_wh_topicalization(pp),ROOT,[Topic,OPTCOMMA,Ques]) :-
     Topic => pp,
     optcomma(OPTCOMMA),
-    non_wh_topic_structure(Ques,Topic,ROOT).
+    non_wh_topic_structure(Ques,Topic,ROOT0),
+    unify_except(ROOT0,ROOT,niet),
+    ROOT:niet <=> Topic:niet.
 
 grammar_rule(non_wh_topicalization(sbar),ROOT,[Topic,OPTCOMMA,Ques]) :-
     Topic => sbar,
@@ -3322,7 +3335,7 @@ grammar_rule(vp_vp_colon,VP,[V,COLON]) :-
 %% beste luisteraars , zet uw radio maar op 3
 grammar_rule(np_imp,START,[NP,COMMA,IMP,OPTPUNCT]) :-
     START => start,
-    max_np(NP),
+    ind_max_np(NP),
     comma(COMMA),
     max_imp(IMP),
     optend_punct(OPTPUNCT,Type),
@@ -3332,7 +3345,7 @@ grammar_rule(np_imp,START,[NP,COMMA,IMP,OPTPUNCT]) :-
 %%% ga onmiddellijk naar binnen , spelbreker
 grammar_rule(imp_np,START,[IMP,COMMA,NP,OPTPUNCT]) :-
     START => start,
-    max_np(NP),
+    ind_max_np(NP),
     comma(COMMA),
     max_imp(IMP),
     optend_punct(OPTPUNCT,Type),
@@ -3454,7 +3467,7 @@ grammar_rule(np_dip,MAX,[NP,DUBB,XP,OPTEND]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     optend_punct(OPTEND,Type),
     MAX => start,
-    max_np(NP),
+    ind_max_np(NP),
     NP:redrel => no,
     NP:subn => (sub_name;sub_noun),
     dubb(DUBB),
@@ -3466,7 +3479,7 @@ grammar_rule(np_quoted_dip,MAX,[NP,DUBB,DQ1,XP,OPTEND,DQ2]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
     optend_punct(OPTEND,Type),
     MAX => start,
-    max_np(NP),
+    ind_max_np(NP),
     NP:redrel => no,
     NP:subn => (sub_name;sub_noun),
     dubb(DUBB),
@@ -3623,7 +3636,7 @@ grammar_rule(pred_a,Pred,[A]) :-
     hd_structure(A,Pred).
 
 grammar_rule(pred_np,Pred,[NP]) :-
-    Pred => pred,
+    Pred0 => pred,
     NP => np,
     NP:cj => ncj,     % reduce spur amb
     NP:nform => (norm;meas_mod),
@@ -3638,18 +3651,21 @@ grammar_rule(pred_np,Pred,[NP]) :-
     %% NP:redrel => no,   no: 'ik ben wie ik ben' 'wat je zegt ben je zelf'
     NP:case => (acc;gen),  % geef de keizer wat des keizers is
                            % dat is niet des Ajax
-    Pred:pcat => np_pred,
-    hd_structure(NP,Pred).
+    Pred0:pcat => np_pred,
+    hd_structure(NP,Pred0),
+    unify_except(Pred0,Pred,niet),
+    Pred:niet <=> NP:niet.
 
 pred_pp_structure(Pred,PP) :-
-    Pred => pred, Pred0 => pred,
+    Pred0 => pred,
     PP => pp,
     PP:cj => ncj,  % reduce spur.amb.
     PP:nnform => ~refl,
     PP:pp_role => pp_obj1,
+    unify_except_l(Pred0,Pred,[hstem,niet]),
+    hd_structure(PP,Pred0),
     Pred:hstem <=> PP:prep,
-    unify_except(Pred0,Pred,hstem),
-    hd_structure(PP,Pred0).
+    Pred:niet <=> PP:niet.
 
 grammar_rule(pred_pp_vol,Pred,[PP]) :-
     pred_pp_structure(Pred,PP),
@@ -3915,7 +3931,7 @@ grammar_rule(modifier_p(1), Mod1,[P1, Mod, OptQm, P2 ]):-
     Mod1:mexs <=> Mexs,
     alpino_wappend:unify_inout(Mexs),
     Mod1:eps => no,
-    (   max_np(Mod), 
+    (   ind_max_np(Mod), 
 	Mod:nform => ~temp,
 	Mod:subn => ~sub_indef_adj,
 	Mod:can_mod => no,
@@ -4042,10 +4058,27 @@ grammar_rule(xp_modal_xp(prep),X,[Adv,Y]):-
     xp_modal_xp_structure(Y,Adv,X).
 
 grammar_rule(niet_pp,X,[Adv,Y]):-
-    X => pp,
+    X0 => pp,
     Y => pp,
-    X:pp_er => no,
-    X:sel => to_topic,
+    Y:niet => no,
+    X0:pp_er => no,
+    X0:sel => to_topic,
+    Y:sel => to_topic,
+    X0:wh => nwh,
+    Adv => adv,
+    Adv:hstem ==> niet,
+    Adv:redrel => no,
+    Adv:subadv => subadv_adv,
+    Adv:tmploc => ntmploc,
+    hd_mod_structure(Y,Adv,X0),
+    overwrite(X0,X,niet,niet_pp).
+
+grammar_rule(niet_np,X,[Adv,Y]):-
+    X0 => np,
+    X0:wkpro => (strongpro;normpro),
+    Y => np,
+    Y:niet => no,
+    X0:sel => to_topic,
     Y:sel => to_topic,
     X:wh => nwh,
     Adv => adv,
@@ -4053,7 +4086,8 @@ grammar_rule(niet_pp,X,[Adv,Y]):-
     Adv:redrel => no,
     Adv:subadv => subadv_adv,
     Adv:tmploc => ntmploc,
-    hd_mod_structure(Y,Adv,X).
+    hd_mod_structure(Y,Adv,X0),
+    overwrite(X0,X,niet,niet_np).
 
 grammar_rule(xp_modal_xp(pp),X,[Adv,Y]):-
     X => pp,
@@ -4293,7 +4327,7 @@ grammar_rule(np_tmp_det_num_n, NP, [ Det, Num, N ]) :-
 grammar_rule(det_np_det,DP,[NP,DET]) :-
     DET => gen_det,
     DP0 => det,
-    max_np(NP0),
+    ind_max_np(NP0),
     unify_except_l(DP0,DP,[wh,agr]),  % resulting determiner phrase has arb agr?
     DP:agr => def,
     DP:neclass ==> none,
@@ -5442,6 +5476,7 @@ n_n_modnp_komma_structure(N,N0,Cl,NP,OPTCr) :-
 grammar_rule(pn_n_modpn(komma), N, [ N0, Cl, NP, OPTCr ]) :-
     N => np, N0 => np,
     nwh_np_arg(NP),
+    NP:sel => ~to_topic,
     NP:wkpro => ~weakpro,
     NP:redrel => no,
     NP:subn => ~sub_indef_adj,
@@ -5490,6 +5525,7 @@ np_np_modnp_structure(N0,NP,N) :-
     nwh_np_arg(NP),
     NP:wkpro => ~weakpro,
     NP:redrel => no,
+    NP:sel => ~to_topic,
     N:nform => norm,
     N:redrel => no,
     N0:redrel => no,
@@ -5771,6 +5807,7 @@ grammar_rule(a_int_me_adv_a,AP,[NP,Adv,A]):-
     haspreyes(A),
     A:exs => [],
     NP => np,
+    NP:sel => ~to_topic,
     NP:wh => nwh,
     hd_comp_structure(Adv,NP,Adv1),
     hd_mod_structure(A,Adv1,AP0),
@@ -6236,6 +6273,7 @@ pp_p_arg_r_structure(PP,XP,P) :-
 pp_p_arg_np_structure(PP,P,OPTPUNCT,XP) :-
     optdubb(OPTPUNCT),
     XP => np,
+    XP:sel => ~to_topic,
     XP:nform => ~er,
     XP:parg => yes,
     XP:pred => npred,
@@ -6365,6 +6403,7 @@ grammar_rule(pred_van_belang,PRED,[VAN,BELANG]) :-
     VAN:pp_role => pp_obj1,
     nwh_np_arg(BELANG0),
     unify_except_l(BELANG0,BELANG,[pred,e_deps]),
+    BELANG:sel => ~to_topic,
     BELANG:pred:predp <=> VAN:prep,
     BELANG:e_deps <=> PRED:e_deps, % het is van groot belang dat je komt
     unify_except_l(PRED0,PRED,[hstem,e_deps]),
@@ -6461,6 +6500,7 @@ grammar_rule(abs_p_predc_mod_vp_inv,PP,[Met,PRED,MOD,SBAR]) :-
 
 abs_p_np_predc_structure(Met,NP,PRED,PP):-
     nwh_np_arg(NP),
+    NP:sel => ~to_topic,
     NP:wkpro => ~weakpro,
     abs_p_predc_structure(Met,NP,PRED,PP).
 
@@ -6470,6 +6510,7 @@ abs_p_predc_structure(Met,ARG,PRED,PP) :-
     PRED:slash => [],
     PRED:e_deps => [],
     PRED:subn => ~sub_indef_verb & ~sub_def_verb,
+    PRED:sel => ~to_topic,
     abs_p_structure(Met,ARG,PRED,PP).
 
 abs_p_structure(Met,ARG1,ARG2,PP) :-
@@ -6488,6 +6529,7 @@ abs_p_structure(Met,ARG1,ARG2,PP) :-
 
 abs_p_mod_structure(Met,NP,MOD,PP) :-
     nwh_np_arg(NP),
+    NP:sel => ~to_topic,
     NP:wkpro => ~weakpro,
     Met => abs_p,
     PP0 => pp,
@@ -6570,6 +6612,7 @@ grammar_rule(sbar_want_tag,SBAR, [ Comp, COMMA1, TAG, COMMA2, ROOT ]) :-
     comma(COMMA1),
     comma(COMMA2),
     nwh_np_arg(TAG),
+    TAG:sel => ~to_topic,
     SBAR => rootbar,
     unify_except(SBAR0,SBAR,dt),
     nucl_tag_structure(SBAR0,TAG,SBAR),
@@ -6802,13 +6845,12 @@ grammar_rule(sbar(dubb),SBAR,[ Comp, DUBB ]) :-
     SBAR:predms <=> Comp:predms.
 
 grammar_rule(sbar(pp),SBAR,[ Comp, XP ]) :-
-    max_pp(XP0),
+    ind_max_pp(XP0),
     unify_except_l(XP0,XP,[wh,e_deps]),
     sbar_comp_xp_structure(Comp,XP,SBAR).
 
 grammar_rule(sbar(behalve_pp),SBAR,[Comp,Mod,XP]) :-
-    max_pp(XP0),
-    XP0:sel => ~to_topic,
+    ind_max_pp(XP0),
     unify_except_l(XP0,XP,[wh,e_deps]),
     sbar_comp_behalve_xp_structure(Comp,XP,SBAR,Mod).
 
@@ -6994,8 +7036,7 @@ grammar_rule(pp_imp,ROOT,[Ques, OPTC, Dan]) :-
     comma(OPTC),
     ROOT => max,
     ROOT:max_type => t_dp,
-    max_pp(Ques),
-    Ques:sel => ~to_topic,
+    ind_max_pp(Ques),
     max_imp(Dan),
     nucl_sat_structure(Dan,Ques,ROOT).
 
@@ -7040,7 +7081,7 @@ root_nucl_sat_tag_structure(Dan,Max,TAG,ROOT) :-
 %% Piet , ik vind hem een vervelende vent
 grammar_rule(sat_nucl(np),ROOT,[Max, COMMA, Dan]) :-
     comma(COMMA),
-    max_np(Max1),
+    ind_max_np(Max1),
     Max:subn => ~sub_det,
     unify_except(Max1,Max,wh), %% welke minister , dat wist hij niet
     Max:redrel => no,
@@ -7051,7 +7092,7 @@ grammar_rule(sat_nucl(np),ROOT,[Max, COMMA, Dan]) :-
 %% informeel en gesproken taalgebruik
 grammar_rule(sat_nucl(aanloop),ROOT,[Max, Dan]) :-
     hdrug_util:hdrug_flag(parse_or_generate,parse),
-    max_np(Max),
+    ind_max_np(Max),
     Max:subn => ~sub_det,
     Max:redrel => no,
     root_nucl_sat_structure(Dan,Max,ROOT),
@@ -7061,7 +7102,7 @@ grammar_rule(sat_nucl(aanloop),ROOT,[Max, Dan]) :-
 grammar_rule(sat_tag_nucl(np),ROOT,[Max, OPTCOMMA, TAG, COMMA, Dan]) :-
     COMMA => punct, COMMA:puncttype => komma,
     optcomma(OPTCOMMA),
-    max_np(Max),
+    ind_max_np(Max),
     Max:subn => ~sub_det,
     Max:redrel => no,
     root_nucl_sat_tag_structure(Dan,Max,TAG,ROOT).
@@ -7069,15 +7110,14 @@ grammar_rule(sat_tag_nucl(np),ROOT,[Max, OPTCOMMA, TAG, COMMA, Dan]) :-
 %% In Amsterdam , daar kun je goed uitgaan
 grammar_rule(sat_nucl(pp),ROOT,[Max, COMMA, Dan]) :-
     COMMA => punct, COMMA:puncttype => komma,
-    max_pp(Max1),
-    Max1:sel => ~to_topic,
+    ind_max_pp(Max1),
     unify_except(Max1,Max,wh),  %% waarom, dat wist hij niet
     root_nucl_sat_structure(Dan,Max,ROOT).
 
 grammar_rule(sat_tag_nucl(pp),ROOT,[Max, OPTCOMMA, TAG, COMMA, Dan]) :-
     COMMA => punct, COMMA:puncttype => komma,
     optcomma(OPTCOMMA),
-    max_pp(Max),
+    ind_max_pp(Max),
     root_nucl_sat_tag_structure(Dan,Max,TAG,ROOT).
 
 %% Als je wilt , dan komen we later
@@ -7180,7 +7220,7 @@ grammar_rule(sat_tag_nucl(redrel),ROOT,[Max, OPTCOMMA, TAG, COMMA, Dan]) :-
 %% Het is een vervelende vent , die kerel
 grammar_rule(nucl_sat(np),ROOT,[Dan, COMMA, Max]) :-
     comma_dash(COMMA),
-    max_np(Max),
+    ind_max_np(Max),
     Max:subn => ~sub_det,
     Max:redrel => no,
     root_nucl_sat_structure(Dan,Max,ROOT).
@@ -7188,7 +7228,7 @@ grammar_rule(nucl_sat(np),ROOT,[Dan, COMMA, Max]) :-
 grammar_rule(nucl_tag_sat(np),ROOT,[Dan, OPTCOMMA, TAG, COMMA, Max]) :-
     COMMA => punct, COMMA:puncttype => komma,
     optcomma(OPTCOMMA),
-    max_np(Max),
+    ind_max_np(Max),
     Max:subn => ~sub_det,
     Max:redrel => no,
     root_nucl_sat_tag_structure(Dan,Max,TAG,ROOT).
@@ -7246,8 +7286,8 @@ grammar_rule(nucl_sat_brackets,ROOT,[Dan, BrL, Max, OptQm, BrR]) :-
 grammar_rule(np_is_np,START,[NPA,EQUALS,NPB]) :-
     START => max,
     START:max_type => t_xp,
-    max_np(NPA),
-    max_np(NPB),
+    ind_max_np(NPA),
+    ind_max_np(NPB),
     EQUALS => punct,
     EQUALS:puncttype => is_gelijk,
     dp_dp_structure(NPA,NPB,START).
@@ -7257,7 +7297,7 @@ grammar_rule(predm_adv_np_dp,MAX,[ADV,XP]) :-
     MAX => max,
     MAX:max_type => t_xp,
     max_predm(ADV),
-    max_np(XP),
+    ind_max_np(XP),
     XP:subn => ~sub_indef_verb & ~sub_det,
     dp_dp_structure(ADV,XP,MAX).
 
@@ -7266,7 +7306,7 @@ grammar_rule(predm_adv_pp_dp,MAX,[ADV,XP]) :-
     MAX => max,
     MAX:max_type => t_xp,
     max_predm(ADV),
-    max_pp(XP),
+    ind_max_pp(XP),
     dp_dp_structure(ADV,XP,MAX).
 
 %% allemaal om indruk te maken
@@ -7341,7 +7381,7 @@ grammar_rule(preda_adv_np_dp,MAX,[ADV,XP]) :-
     MAX:max_type => t_xp,
     max_ap(ADV),
     ADV:adv => padv,
-    max_np(XP),
+    ind_max_np(XP),
     XP:subn => ~sub_indef_verb & ~sub_det,
     dp_dp_structure(ADV,XP,MAX).
 
@@ -7557,12 +7597,12 @@ grammar_rule(dit_allemaal_om,Start,[PRON,ALLEMAAL,OPTCOMMA,SBAR]) :-
     dit_omdat_structure(Start,PRON,ALLEMAAL,SBAR).
 
 grammar_rule(dit_vanwege,Start,[PRON,OPTCOMMA,SBAR]) :-
-    max_pp(SBAR),
+    ind_max_pp(SBAR),
     optcomma(OPTCOMMA),
     dit_omdat_structure(Start,PRON,SBAR).
 
 grammar_rule(dit_allemaal_vanwege,Start,[PRON,ALLEMAAL,OPTCOMMA,SBAR]) :-
-    max_pp(SBAR),
+    ind_max_pp(SBAR),
     max_predm(ALLEMAAL),
     optcomma(OPTCOMMA),
     dit_omdat_structure(Start,PRON,ALLEMAAL,SBAR).
@@ -7580,7 +7620,7 @@ grammar_rule(start_mod_np,M,[MOD,NP]) :-
     max_modifier(MOD),
     MOD:mcat => (mcat_pp;mcat_adv;mcat_vp;mcat_sbar),
     MOD:wh => nwh,  % separate rule for wh case
-    max_np(NP),
+    ind_max_np(NP),
     NP:subn => ~sub_indef_verb, %  & ~sub_det,   "en nu dit, maar eerst even dit"
     dp_dp_structure(MOD,NP,M).
 
@@ -7598,7 +7638,7 @@ grammar_rule(start_mod_mod_np,M,[MOD1,MOD2,NP]) :-
     M:mod_np => yes,
     max_dp_modifier(MOD1),
     max_dp_modifier(MOD2),
-    max_np(NP),
+    ind_max_np(NP),
     NP:subn => ~sub_indef_verb, %  & ~sub_det,   "en nu dit, maar eerst even dit"
     dp_dp_structure(MOD1,MOD2,NP,M).
 
@@ -7609,7 +7649,7 @@ grammar_rule(start_mod_np_mod,M,[MOD1,NP,MOD2]) :-
     M:mod_np => yes,
     max_dp_modifier(MOD1),
     max_dp_modifier(MOD2),
-    max_np(NP),
+    ind_max_np(NP),
     NP:subn => ~sub_indef_verb, %  & ~sub_det,   "en nu dit, maar eerst even dit"
     dp_dp_structure(MOD1,NP,MOD2,M).
 
@@ -7621,7 +7661,7 @@ grammar_rule(start_np_mod_mod,M,[NP,MOD1,MOD2]) :-
     M:mod_np => yes,
     max_dp_modifier(MOD1),
     max_dp_modifier(MOD2),
-    max_np(NP),
+    ind_max_np(NP),
     NP:subn => ~sub_indef_verb, %  & ~sub_det,   "en nu dit, maar eerst even dit"
     dp_dp_structure(NP,MOD1,MOD2,M).
 
@@ -7632,7 +7672,7 @@ grammar_rule(start_mod_comma_np,M,[MOD,COMMA,NP]) :-
     max_modifier(MOD),
     MOD:mcat => (mcat_pp;mcat_adv;mcat_vp),
     MOD:wh => nwh,  % separate rule for wh case
-    max_np(NP),
+    ind_max_np(NP),
     NP:subn => ~sub_indef_verb & ~sub_det,
     dp_dp_structure(MOD,NP,M).
 
@@ -7677,7 +7717,7 @@ grammar_rule(adv_np_dp,MAX,[ADV,COMMA,XP]) :-
     MAX => start,
     max_advp(ADV),
     ADV:redrel => no,
-    max_np(XP0),
+    ind_max_np(XP0),
     unify_except(XP0,XP,wh),
     XP:subn => ~sub_indef_verb & ~sub_det,
     dp_dp_structure(ADV,XP,MAX).
@@ -7688,7 +7728,7 @@ grammar_rule(adv_tag_np_dp,MAX,[ADV,OPTCOMMA,TAG,COMMA,XP]) :-
     MAX => start,
     max_advp(ADV),
     ADV:redrel => no,
-    max_np(XP),
+    ind_max_np(XP),
     XP:subn => ~sub_indef_verb & ~sub_det,
     dp_tag_dp_structure(ADV,TAG,XP,MAX).
 
@@ -7707,7 +7747,7 @@ grammar_rule(np_adv_dp,MAX,[XP,OPTCOMMA,ADV]) :-
     MAX:max_type => t_dp,
     max_advp(ADV),
     ADV:redrel => no,
-    max_np(XP),
+    ind_max_np(XP),
     XP:subn => ~sub_num & ~sub_indef_adj & ~sub_def_adj & ~sub_rang & ~sub_tmp & ~sub_veel,
     dp_dp_structure(XP,ADV,MAX).
 
@@ -7718,7 +7758,7 @@ grammar_rule(num_adv_dp,MAX,[XP,OPTCOMMA,ADV]) :-
     MAX:max_type => t_part,
     max_advp(ADV),
     ADV:redrel => no,
-    max_np(XP),
+    ind_max_np(XP),
     XP:subn => (sub_num ; sub_indef_adj ; sub_def_adj ; sub_rang ; sub_tmp ; sub_veel),
     dp_dp_structure(XP,ADV,MAX).
 
@@ -7727,8 +7767,8 @@ grammar_rule(num_pp_dp,MAX,[XP,OPTCOMMA,ADV]) :-
     optcomma(OPTCOMMA),
     MAX => max,
     MAX:max_type => t_part,
-    max_pp(ADV),
-    max_np(XP),
+    ind_max_pp(ADV),
+    ind_max_np(XP),
     dp_dp_structure(XP,ADV,MAX).
 
 grammar_rule(np_adv_tag_dp,MAX,[XP,ADV,OPTCOMMA,TAG]) :-
@@ -7737,7 +7777,7 @@ grammar_rule(np_adv_tag_dp,MAX,[XP,ADV,OPTCOMMA,TAG]) :-
     MAX:max_type => t_dp,
     max_advp(ADV),
     ADV:redrel => no,
-    max_np(XP),
+    ind_max_np(XP),
     XP:subn => ~sub_indef_verb & ~sub_det & ~sub_num & ~sub_indef_adj & ~sub_def_adj & ~sub_rang & ~sub_tmp & ~sub_veel,
     dp_tag_dp_structure(ADV,TAG,XP,MAX).
 
@@ -7757,7 +7797,7 @@ grammar_rule(adv_pp_dp,MAX,[ADV,COMMA,XP]) :-
 	ADV:redrel => no
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
     ),
-    max_pp(XP),
+    ind_max_pp(XP),
     dp_dp_structure(ADV,XP,MAX).
 
 grammar_rule(tag_adv_pp_dp,MAX,[TAG,COMMA,ADV,XP]) :-
@@ -7767,14 +7807,14 @@ grammar_rule(tag_adv_pp_dp,MAX,[TAG,COMMA,ADV,XP]) :-
     ADV:tmploc => ~loc & ~tmp & ~wk_er & ~str_er,   % cf adv_adv_pps...
     ADV:subadv => ~subadv_adj,         % cf a_a_pps...
     ADV:redrel => no,
-    max_pp(XP),
+    ind_max_pp(XP),
     dp_tag_dp_structure(ADV,TAG,XP,MAX).
 
 grammar_rule(a_pp_dp,MAX,[A,COMMA,XP]) :-
     comma_hellip(COMMA),
     MAX => start,
     max_ap(A),
-    max_pp(XP),
+    ind_max_pp(XP),
     dp_dp_structure(A,XP,MAX).
 
 %% tot nu toe zonder succes
@@ -7782,9 +7822,9 @@ grammar_rule(pp_part_pp_dp,MAX,[PP,COMMA,XP]) :-
     optcomma(COMMA),
     MAX => max,
     MAX:max_type => t_xp,
-    max_pp(PP),
+    ind_max_pp(PP),
     PP:haspart => yes,
-    max_pp(XP),
+    ind_max_pp(XP),
     dp_dp_structure(PP,XP,MAX).
 
 %% misschien wel ja , in bepaalde omstandigheden
@@ -7792,7 +7832,7 @@ grammar_rule(a_tag_pp_dp,MAX,[A,TAG,COMMA,XP]) :-
     comma_hellip(COMMA),
     MAX => start,
     max_ap(A),
-    max_pp(XP),
+    ind_max_pp(XP),
     dp_tag_dp_structure(A,TAG,XP,MAX).
 
 %% liever niet
@@ -7868,7 +7908,7 @@ grammar_rule(pp_adv_dp,MAX,[XP,COMMA,ADV]) :-
     max_advp(ADV),
     ADV:subadv => ~subadv_adj,
     ADV:redrel => no,
-    max_pp(XP),
+    ind_max_pp(XP),
     dp_dp_structure(XP,ADV,MAX).
 
 %% desondanks , graag !
@@ -7891,8 +7931,8 @@ grammar_rule(adv_adv_dp,MAX,[XP,COMMA,ADV]) :-
 %% van - naar -
 grammar_rule(pp_pp_dp,MAX,[PP1,PP2]) :-
     MAX => start,
-    max_pp(PP1),PP1:prep ==> van,
-    max_pp(PP2),PP2:prep ==> naar,
+    ind_max_pp(PP1),PP1:prep ==> van,
+    ind_max_pp(PP2),PP2:prep ==> naar,
     dp_dp_structure(PP1,PP2,MAX).
 
 %% loc-np naar -
@@ -7901,7 +7941,7 @@ grammar_rule(loc_pp_dp,MAX,[NP1,PP2]) :-
     Subn => sub_name,
     short_np(NP1,Subn),
     NP1:neclass ==> 'LOC',
-    max_pp(PP2),PP2:prep ==> naar,
+    ind_max_pp(PP2),PP2:prep ==> naar,
     dp_dp_structure(NP1,PP2,MAX).
 
 %% kortom, omdat ik je miste
@@ -7997,15 +8037,16 @@ max_mod_wh_xp_structure(WH,XP,MAX) :-
 
 max_np_wh_xp_structure(WH,XP,MAX) :-
     WH => np,
+    WH:sel => ~to_topic,
     max_wh_xp_structure(WH,XP,MAX).
 
 grammar_rule(max_wh_adv_np,MAX,[ADV,XP]) :-
-    max_np(XP),
+    ind_max_np(XP),
     XP:subn => ~sub_indef_verb, %  & ~sub_det,  hoezo dat?
     max_mod_wh_xp_structure(ADV,XP,MAX).
 
 grammar_rule(max_wh_adv_mod_np,MAX,[ADV,MOD,XP]) :-
-    max_np(XP),
+    ind_max_np(XP),
     max_modifier(MOD),
     Tussen => max,
     Tussen:max_type => t_dp,
@@ -8019,7 +8060,7 @@ grammar_rule(max_wh_adv_ap,MAX,[ADV,XP]) :-
     max_mod_wh_xp_structure(ADV,XP,MAX).
 
 grammar_rule(max_wh_adv_pp,MAX,[ADV,XP]) :-
-    max_pp(XP),
+    ind_max_pp(XP),
     XP:sel => ~to_topic,
     max_mod_wh_xp_structure(ADV,XP,MAX).
 
@@ -8054,7 +8095,7 @@ grammar_rule(max_np_wh_adv_mod_adv,MAX,[WH,MOD,ADVP]) :-
     max_np_wh_xp_structure(WH,Tussen,MAX).
 
 short_np(NP1,SUBN) :-
-    max_np(NP1),
+    ind_max_np(NP1),
     NP1:hdet => no,
     NP1:nform => norm,
     NP1:subn <=> SUBN,
@@ -8168,9 +8209,9 @@ grammar_rule(hoe_np_hoe_np,M,[A0,B0,COMMA,A1,B1]) :-
     M => start,
     optcomma(COMMA),
     short_max_hoe_advp(A0),
-    max_np(B0),
+    ind_max_np(B0),
     short_max_hoe_advp(A1),
-    max_np(B1),
+    ind_max_np(B1),
     C0 => start,
     C1 => start,
     dp_dp_structure(A0,B0,C0),
@@ -8181,7 +8222,7 @@ grammar_rule(hoe_np_short_hoe,M,[A0,B0,COMMA,C1]) :-
     M => start,
     optcomma(COMMA),
     short_max_hoe_advp(A0),
-    max_np(B0),
+    ind_max_np(B0),
     short_max_hoe_advp(C1),
     C0 => start,
     dp_dp_structure(A0,B0,C0),
@@ -8191,7 +8232,7 @@ grammar_rule(hoe_np_hoe,M,[A0,B0,COMMA,C1]) :-
     M => start,
     optcomma(COMMA),
     short_max_hoe_advp(A0),
-    max_np(B0),
+    ind_max_np(B0),
     max_hoe_advp(C1),
     C0 => start,
     dp_dp_structure(A0,B0,C0),
@@ -8201,7 +8242,7 @@ grammar_rule(hoe_hoe_np,M,[C1,COMMA,A0,B0]) :-
     M => start,
     optcomma(COMMA),
     short_max_hoe_advp(A0),
-    max_np(B0),
+    ind_max_np(B0),
     max_hoe_advp(C1),
     C0 => start,
     dp_dp_structure(A0,B0,C0),
@@ -8568,7 +8609,7 @@ grammar_rule(top_start_tag_root_imp, Start, [Max,COMMA,Tag]):-
 %% De « King of Pop » , laat me niet lachen
 grammar_rule(top_start_tag_np_imp, Start, [NP,COMMA,Tag]):-
     max_imp(Tag),
-    max_np(NP),
+    ind_max_np(NP),
     NP:subn => ~sub_det,
     comma(COMMA),
     Start => start,
@@ -8660,7 +8701,7 @@ grammar_rule(root_en_dp,Start,[XP,OPTCOMMA,CRD,ROOT]) :-
     xp_en_root_structure(Start,XP,CRD,ROOT).
 
 grammar_rule(max_xp(np),Max,[X]) :-
-    max_np(X),
+    ind_max_np(X),
     X:subn => ~sub_indef_adj,
     top_max_structure(X,Max).
 
@@ -8720,8 +8761,7 @@ grammar_rule(max_xp(pred),Max,[X]) :-
     top_max_structure(X,Max).
 
 grammar_rule(max_xp(pp),Max,[X]) :-
-    max_pp(X),
-    X:sel => ~to_topic,
+    ind_max_pp(X),
     top_max_structure(X,Max).
 
 grammar_rule(max_xp(post_pp),Max,[X]) :-
@@ -9627,6 +9667,77 @@ grammar_rule(start_coord(sv1_imparative,en),M,[XP,ImpList]) :-
     ImpList:last => last,
     ImpList:last:ccat ==> sv1.
 
+%% niet Piet heeft dat gedaan maar Klaas
+grammar_rule(start_coord(root_niet,maar),M,[XP,NPList]):-
+    start_coord_name_en_structure(root,M,XP0,RootList),
+    RootList => clist,
+    NPList => clist,
+    NPList:within_word => no,
+    overwrite(XP0,XP,niet,niet_np),
+    NPList:cat <=> NP,
+    NPList:cform ==> maar,
+    max_np(NP),
+%    NP => np,
+%    NP:wh => nwh,
+    NP:cj => one_crd, % !!
+
+    NPList:last => last,
+    NPList:last:ccat0 <=> NPList:last:ccat,
+    
+    NP:mods => [],
+    NP:dets => [],
+    NP:apps => [],
+    NP:predms => [],
+
+    RootList:cats <=> NPList:cats,
+    RootList:conj <=> NPList:conj,
+    RootList:left_conj <=> NPList:left_conj,
+    NPList:etc => no,
+    RootList:cat <=> Root,
+    Root => root,
+    Root:question => no,
+    Root:dt <=> NP:dt,
+    unify_subj(M,XP).
+
+%% niet in Amsterdam woont hij maar in Rotterdam
+grammar_rule(start_coord(root_niet_pp,maar),M,[XP,PPList]):-
+    start_coord_name_en_structure(root,M,XP0,RootList),
+    RootList => clist,
+    PPList => clist,
+    PPList:within_word => no,
+    overwrite(XP0,XP,niet,niet_pp),
+    PPList:cat <=> PP,
+    PPList:cform ==> maar,
+    max_pp(PP),
+    PP:cj => one_crd, % !!
+
+    PPList:last => last,
+    PPList:last:ccat0 <=> PPList:last:ccat,
+    
+    PP:mods => [],
+    PP:dets => [],
+    PP:apps => [],
+    PP:predms => [],
+
+    RootList:cats <=> PPList:cats,
+    RootList:conj <=> PPList:conj,
+    RootList:left_conj <=> PPList:left_conj,
+    PPList:etc => no,
+    RootList:cat <=> Root,
+    Root => root,
+    Root:question => no,
+    Root:dt <=> PP:dt,
+    unify_subj(M,XP).
+
+%% niet Piet heeft dat gedaan maar Klaas heeft dat gedaan
+%% niet in Amsterdam woont hij maar hij woont in Rotterdam
+grammar_rule(start_coord(root_niet_root,maar),M,[XP,RootList]):-
+    start_coord_name_en_structure(root,M,XP0,RootList),
+    
+    overwrite(XP0,XP,niet,niet),
+    RootList => clist,
+    RootList:cform ==> maar,
+    RootList:etc => no.
 
 %% hij komt wel maar onder protest en niet van harte
 grammar_rule(start_coord(root_modifier,en),M,[XP,ModList]) :-
@@ -10166,6 +10277,7 @@ final_coord_daughter(Name,L,M,Type,Mods,ETC) :-
     ;   hdrug_util:hdrug_flag(parse_or_generate,generate)
     ),
     finish_mexs(L),
+    L:niet =?> no,
     L:imexs =?> [],
     functor(L,F,A),
     functor(M,F,A),
@@ -10644,7 +10756,7 @@ comparative_structure(Comp,XP,CompP) :-
 
 
 grammar_rule(comparative(np), CompP, [ Comp, XP ]) :-
-    max_np(XP),
+    ind_max_np(XP),
     XP:subn => ~sub_indef_verb,
     comparative_structure(Comp,XP,CompP).
 
@@ -10652,7 +10764,7 @@ grammar_rule(comparative(mod_np), CompP, [ Comp, COMMA, MOD, COMMA2, XP ]) :-
     comma_dash(COMMA),
     comma_dash(COMMA2),
     max_modifier(MOD),
-    max_np(XP),
+    ind_max_np(XP),
     XP:subn => ~sub_indef_verb,
     XP1 => np,
     hd_mod_structure(XP,MOD,XP1),
@@ -10662,22 +10774,21 @@ grammar_rule(comparative(adv_np), CompP, [ Comp, MOD, XP ]) :-
     max_advp(MOD),
     MOD:subadv => ~subadv_adj,
     MOD:subadv => ~subadv_noun,
-    max_np(XP),
+    ind_max_np(XP),
     XP:subn => ~sub_indef_verb,
     XP1 => np,
     dp_dp_structure(MOD,XP,XP1),
     comparative_structure(Comp,XP1,CompP).
 
 grammar_rule(comparative(pp), CompP, [ Comp, XP ]) :-
-    max_pp(XP),
-    XP:sel => ~to_topic,
+    ind_max_pp(XP),
     comparative_structure(Comp,XP,CompP).
 
 grammar_rule(comparative(adv_pp), CompP, [ Comp, MOD, XP ]) :-
     max_advp(MOD),
     MOD:subadv => ~subadv_adj,
     MOD:subadv => ~subadv_noun,
-    max_pp(XP),
+    ind_max_pp(XP),
     XP1 => pp,
     XP1:sel => ~to_topic,
     dp_dp_structure(MOD,XP,XP1),
@@ -10749,7 +10860,7 @@ grammar_rule(compar_np_dan_obcomp,Start,[MOD0,XP,OBCOMP]) :-
     MOD => modifier,
     OBCOMP => comparativep,
     MOD0:exs <=> [OBCOMP],
-    max_np(XP),
+    ind_max_np(XP),
     hd_extra_structure(MOD0,OBCOMP,MOD),
     dp_dp_structure(MOD,XP,Start).
 
@@ -10759,7 +10870,7 @@ grammar_rule(compar_pp_dan_obcomp,Start,[MOD0,XP,OBCOMP]) :-
     MOD => modifier,
     OBCOMP => comparativep,
     MOD0:exs <=> [OBCOMP],
-    max_pp(XP),
+    ind_max_pp(XP),
     hd_extra_structure(MOD0,OBCOMP,MOD),
     dp_dp_structure(MOD,XP,Start).
 

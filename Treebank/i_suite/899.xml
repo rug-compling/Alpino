@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="16" id="0" rel="top">
+    <node begin="4" end="5" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="conj" end="15" id="2" rel="--">
+      <node begin="0" cat="smain" end="4" id="3" rel="cnj">
+        <node begin="0" cat="np" end="2" id="4" index="1" rel="su">
+          <node begin="0" end="1" id="5" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="mod" root="niet" word="Niet"/>
+          <node begin="1" case="nom" def="def" end="2" gen="de" getal="ev" id="6" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="hd" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+        </node>
+        <node begin="2" end="3" id="7" infl="sg1" lemma="hebben" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="heb" sc="aux_psp_hebben" stype="declarative" tense="present" word="heb" wvorm="pv"/>
+        <node begin="0" cat="ppart" end="4" id="8" rel="vc">
+          <node begin="0" end="2" id="9" index="1" rel="su"/>
+          <node begin="3" buiging="zonder" end="4" id="10" infl="psp" lemma="falen" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="faal" sc="intransitive" word="gefaald" wvorm="vd"/>
+        </node>
+      </node>
+      <node begin="5" conjtype="neven" end="6" id="11" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+      <node begin="6" cat="smain" end="15" id="12" rel="cnj">
+        <node begin="6" case="nom" def="def" end="7" gen="de" getal="ev" id="13" index="2" lemma="ik" naamval="nomin" num="sg" pdtype="pron" per="fir" persoon="1" pos="pron" postag="VNW(pers,pron,nomin,vol,1,ev)" pt="vnw" rel="su" rnum="sg" root="ik" status="vol" vwtype="pers" wh="nwh" word="ik"/>
+        <node begin="7" end="8" id="14" infl="sg1" lemma="zijn" pos="verb" postag="WW(pv,tgw,ev)" pt="ww" pvagr="ev" pvtijd="tgw" rel="hd" root="ben" sc="passive" stype="declarative" tense="present" word="ben" wvorm="pv"/>
+        <node begin="6" cat="ppart" end="15" id="15" rel="vc">
+          <node begin="6" end="7" id="16" index="2" rel="obj1"/>
+          <node begin="8" cat="pp" end="11" id="17" rel="mod">
+            <node begin="8" end="9" id="18" lemma="door" pos="prep" postag="VZ(init)" pt="vz" rel="hd" root="door" vztype="init" word="door"/>
+            <node begin="9" cat="np" end="11" id="19" rel="obj1">
+              <node begin="9" end="10" id="20" infl="het" lemma="het" lwtype="bep" naamval="stan" npagr="evon" pos="det" postag="LID(bep,stan,evon)" pt="lid" rel="det" root="het" wh="nwh" word="het"/>
+              <node begin="10" end="11" gen="het" genus="onz" getal="ev" graad="basis" id="21" lemma="ambtenaar_apparaat" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,onz,stan)" pt="n" rel="hd" rnum="sg" root="ambtenaar_apparaat" word="ambtenarenapparaat"/>
+            </node>
+          </node>
+          <node begin="11" cat="mwu" end="14" id="22" rel="svp">
+            <node begin="11" end="12" id="23" lemma="in" pos="fixed" postag="VZ(init)" pt="vz" rel="mwp" root="in" vztype="init" word="in"/>
+            <node begin="12" end="13" id="24" lemma="de" lwtype="bep" naamval="stan" npagr="rest" pos="fixed" postag="LID(bep,stan,rest)" pt="lid" rel="mwp" root="de" word="de"/>
+            <node begin="13" end="14" genus="zijd" getal="ev" graad="basis" id="25" lemma="steek" naamval="stan" ntype="soort" pos="fixed" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="mwp" root="steek" word="steek"/>
+          </node>
+          <node begin="14" buiging="zonder" end="15" id="26" infl="psp" lemma="laten" pos="verb" positie="vrij" postag="WW(vd,vrij,zonder)" pt="ww" rel="hd" root="laat" sc="fixed([[in,de,steek],acc],norm_passive)" word="gelaten" wvorm="vd"/>
+        </node>
+      </node>
+    </node>
+    <node begin="15" end="16" id="27" lemma="." pos="punct" postag="LET()" pt="let" rel="--" root="." special="punt" word="."/>
+  </node>
+  <sentence>Niet ik heb gefaald , maar ik ben door het ambtenarenapparaat in de steek gelaten .</sentence>
+</alpino_ds>

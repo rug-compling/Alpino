@@ -180,11 +180,11 @@ cat_type(v2_vp,   [vslash,haswh,slash,subj,mf,tags]).
 cat_type(num,     [cj,n_meas,e_agr,agr,pro,app]).
 cat_type(pre_det_quant,[agr]).
 cat_type(pred,    [slash,exs,mexs,e_deps,wh,wh_reltmploc,subn,redrel,deverbal,
-                   avform,pcat,cform,hstem,nhstem,wkpro,sel,cj]).
+                   avform,pcat,cform,hstem,nhstem,wkpro,sel,cj,niet]).
 cat_type(conj,    [left_conj,cform]).
 cat_type(lconj,   [needs_right_cform]).
 cat_type(root,    [question,allows_root_imp,puncttype,
-                   subj,needs_dip,cj,tags,topic_hstem]).
+                   subj,needs_dip,cj,tags,topic_hstem,niet]).
 cat_type(start,   [sv1,branch,puncttype]).
 cat_type(max,     [cj,sv1,max_type,mod_np,puncttype]).
 cat_type(top_cat, []).
@@ -210,7 +210,7 @@ cat_type(np,      [agr,e_agr,prs,case,wh,wh_reltmploc,meas,nform,parg,
                    wkpro,redrel,can_mod,hdet,
                    neclass,cleft_has_rel,allows_drop,
                    sel,exs,mexs,e_deps,passivizes,subn,has_app,has_app2,pred,
-                   hstem,bmeas,cj]).
+                   hstem,bmeas,cj,niet]).
 cat_type(pron,    [agr,prs,hstem,
                    case,wh,wh_reltmploc,nform,parg,wkpro,subn,exs]).
 cat_type(det,     [neclass,agr,hstem,case,wh,wh_reltmploc,name,nsubn,
@@ -227,7 +227,7 @@ cat_type(p,       [cj,sc,wh,wh_reltmploc,slash,prep,preptype,
 cat_type(abs_p,   [sc]).
 cat_type(pp,      [hcj,wh,wh_reltmploc,haspart,slash,exs,mexs,prep,preptype,pp_er,
                    sel,vc,allow_modal,pp_role,vhasmod,veps,pcat,
-                   e_deps,nhstem,nnform,ndt,nagr,cj,ld_pc]).
+                   e_deps,nhstem,nnform,ndt,nagr,cj,ld_pc,niet]).
 cat_type(tag,     [adv,np]).
 cat_type(enumeration,[cj]).
 cat_type(adv,     [haspre,tmploc,redrel,mexs,exs,wh,hstem,wh_reltmploc,cj,pron,
@@ -449,6 +449,7 @@ boolean_type(agr,  [[sg,pl],
 
 boolean_type(per,  [[fir,invje,ninvje,u,thi]]  ).
 
+boolean_type(niet, [[niet_np,niet_pp]] ).
 
 boolean_type(mcat,[[mcat_pp,mcat_adv,mcat_vp,mcat_sbar,mcat_imp,
 		    mcat_redrel,mcat_rootbar,mcat_bracket,mcat_tag]]).
