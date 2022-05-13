@@ -223,13 +223,13 @@ dt_to_d(Rel/Node,N0,N,Trees0,Trees):-
     ->  Trees0=Trees,
 	N0=N 
     ;   Trees0=[TREE|Trees],
-	alpino_data:dt(Node,Label,Pos,Cat,Ix),
+	alpino_data:dt_with_pos(Node,Label,Pos,Cat,Ix,Begin),
 	(   var(Ix)
 	->  Ix=i(N0,_), N1 is N0+1,
 	    TREE=tree(Rel/Cat,Ix,Ds),
 	    daughters(Node,List),
 	    dt_list_to_ds(List,Ds0,N1,N2),
-	    (   nonvar(Label), Label \== []
+	    (   nonvar(Begin), Label \== []
 	    ->  alpino_data:lix(Node,LIX),
 		label_dt_to_d(LIX,Label,Pos,Cat,Node,Dtr,N2,N,Rel),
 		Ds=[Dtr|Ds0]
@@ -1445,7 +1445,11 @@ renumber_positions_node(l(PosTerm,Cat,Word0),l(PosTerm,Cat,Word),Ps) :-
 renumber_positions_node(i(Index),i(Index),_Ps).
 renumber_positions_node(p(Index),p(Index),_Ps).
 renumber_positions_node(Word/[P0,P],Word/[Q0,Q],Ps) :-
-    renumber_positions_pos(P0,P,Q0,Q,Ps).
+    (   nonvar(P0), nonvar(P)
+    ->  renumber_positions_pos(P0,P,Q0,Q,Ps)
+    ;   format(user_error,"ERROR: variables in renumber position~n",[]),
+	fail
+    ).
 
 
 renumber_positions_pos_list([],[],[],[],_).

@@ -209,8 +209,8 @@ create_skip_tree(P0,P,W,tree(skip,robust_skips(W),lex(W),_),
     %%% hack
     (   alpino_lexical_analysis:tag(P0,P,R0,R,_,_,_,_)
     ->  true
-    ;   alpino_lexical_analysis:rpos(P0,R0),
-	Pd is P-P0,
+    ;   alpino_lexical_analysis:rpos(P0,R0)
+    ->  Pd is P-P0,
 	R is R0+Pd
     ;   P0=R0, P=R	  % wrong, but has worked for years until 2020
     ).
