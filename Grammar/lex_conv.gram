@@ -24,7 +24,6 @@ lex(Sign,Tag,Word,Constraints) :-
 %% this is for (multi-word)-units with a complex dependency structure:
 call_lex(with_dt(TagCopy,_),Sign,with_dt(Tag,Deriv),Word,Constraints) :-
     !,
-    format("~w~n",[Word]),
     a_lex(Tag,Sign0,Word,Constraints),
     unify_except(Sign0,Sign,dt),
     Sign0:dt <=> Dt0,
