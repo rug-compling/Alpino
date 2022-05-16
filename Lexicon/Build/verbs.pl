@@ -28666,6 +28666,7 @@ v(zie,ziet,inflected(zien,ziene),gezien,zag,zagen,
 	part_transitive(in),
 	part_pc_pp(in,van),  % er de lol/humor/belang inzien van
 	part_transitive(tegemoet),
+	part_np_mod_pp(tegemoet,op), 
 	part_transitive(terug),
 	part_np_pc_pp(terug,van),
 	part_transitive(uit),
