@@ -60,10 +60,12 @@ cleaner: $(suites:%.sents=%.clean) $(suites:%.sents.gz=%.clean)
 
 views: $(suites:%.sents=%.view) $(suites:%.sents.gz=%.view)
 %.view: %.para %.sents
-	@pr --width=200 -m -t $*.para $*.sents | cat -n | head -n `cat $*.para | wc -l`
+#	@pr --width=200 -m -t $*.para $*.sents | cat -n | head -n `cat $*.para | wc -l`
+	paste -d '\n' $*.sents $*.para
 
 %.view: %.para %.sents.gz
-	@pr --width=200 -m -t $*.para <(zcat $*.sents.gz | sed -e 's/^[^|]*[|]//') | cat -n | head -n `cat $*.para| wc -l`
+#	@pr --width=200 -m -t $*.para <(zcat $*.sents.gz | sed -e 's/^[^|]*[|]//') | cat -n | head -n `cat $*.para| wc -l`
+	paste -d '\n' <(zcat $*.sents | sed -e 's/^[^|]*[|]//') $*.para
 
 
 times: *.log
