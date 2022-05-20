@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alpino_ds version="1.3">
+  <node begin="0" cat="top" end="10" id="0" rel="top">
+    <node begin="5" end="6" id="1" lemma="," pos="punct" postag="LET()" pt="let" rel="--" root="," special="komma" word=","/>
+    <node begin="0" cat="conj" end="10" id="2" rel="--">
+      <node begin="0" cat="smain" end="5" id="3" rel="cnj">
+        <node begin="0" cat="np" end="3" id="4" rel="su">
+          <node begin="0" cat="advp" end="2" id="5" rel="mod">
+            <node begin="0" end="1" id="6" lemma="niet" pos="adv" postag="BW()" pt="bw" rel="hd" root="niet" word="Niet"/>
+            <node begin="1" end="2" id="7" lemma="alleen" pos="adv" postag="BW()" pt="bw" rel="mod" root="alleen" word="alleen"/>
+          </node>
+          <node begin="2" end="3" genus="zijd" getal="ev" graad="basis" id="8" lemma="Piet" naamval="stan" neclass="PER" ntype="eigen" num="sg" pos="name" postag="N(eigen,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="Piet" word="Piet"/>
+        </node>
+        <node begin="3" end="4" id="9" infl="sg3" lemma="wonen" pos="verb" postag="WW(pv,tgw,met-t)" pt="ww" pvagr="met-t" pvtijd="tgw" rel="hd" root="woon" sc="ld_adv" stype="declarative" tense="present" word="woont" wvorm="pv"/>
+        <node begin="4" end="5" getal="getal" id="10" lemma="daar" naamval="obl" pdtype="adv-pron" persoon="3o" pos="adv" postag="VNW(aanw,adv-pron,obl,vol,3o,getal)" pt="vnw" rel="ld" root="daar" special="er_loc" status="vol" vwtype="aanw" word="daar"/>
+      </node>
+      <node begin="6" conjtype="neven" end="7" id="11" lemma="maar" pos="vg" postag="VG(neven)" pt="vg" rel="crd" root="maar" word="maar"/>
+      <node begin="7" cat="np" end="10" id="12" rel="cnj">
+        <node begin="7" end="8" id="13" lemma="ook" pos="adv" postag="BW()" pt="bw" rel="mod" root="ook" sc="modal" word="ook"/>
+        <node begin="8" buiging="zonder" end="9" getal="ev" id="14" infl="pron" lemma="zijn" naamval="stan" npagr="agr" pdtype="det" persoon="3" pos="det" positie="prenom" postag="VNW(bez,det,stan,vol,3,ev,prenom,zonder,agr)" pron="true" pt="vnw" rel="det" root="zijn" status="vol" vwtype="bez" word="zijn"/>
+        <node begin="9" end="10" gen="de" genus="zijd" getal="ev" graad="basis" id="15" lemma="zus" naamval="stan" ntype="soort" num="sg" pos="noun" postag="N(soort,ev,basis,zijd,stan)" pt="n" rel="hd" rnum="sg" root="zus" word="zus"/>
+      </node>
+    </node>
+  </node>
+  <sentence>Niet alleen Piet woont daar , maar ook zijn zus</sentence>
+</alpino_ds>
