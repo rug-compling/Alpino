@@ -33,7 +33,7 @@ alpino_table_goal:unknown_predicate_handler(_,fail).
 :- set_flag(max_number_of_objects,250000).
 :- initialize_flag(geneval,on).
 
-:- initialize_flag(application_type,news).
+%% :- initialize_flag(application_type,news).
 
 %% FADD DATA FILES
 :- initialize_flag(names_dict,

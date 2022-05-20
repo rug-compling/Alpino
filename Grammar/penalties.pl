@@ -40,7 +40,10 @@ count_maxent_features(Cat,Tree,Frames,Pens,Bool) :-
     hdrug_flag(include_gen_output_features,BoolGen),
     include_gen_output_features(BoolGen,Tree,Pens2,[]),
     hdrug_util:hdrug_flag(application_type,Domain),
-    domain_features(PensInitial,Pens,Domain).
+    (   Domain == undefined
+    ->  PensInitial = Pens
+    ;   domain_features(PensInitial,Pens,Domain)
+    ).
 
 domain_features([],[],_).
 domain_features([H|T],[H|Features0],Domain) :-
@@ -553,7 +556,10 @@ tree_penalties(off,tree(A,B,Ds,Cache),[Cache|His],His) :-
     (   var(Cache)
     ->  findall(H, tree_penalty(A,B,Ds,H), List0),
 	hdrug_util:hdrug_flag(application_type,Domain),
-	domain_features(List0,List,Domain),
+	(   Domain == undefined
+	->  List0 = List
+	;   domain_features(List0,List,Domain)
+	),
 	penalty_weights(List,Weight)
     ;   true
     ),
