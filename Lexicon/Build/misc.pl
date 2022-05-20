@@ -6391,8 +6391,16 @@ with_dt([jammer,genoeg],
 
 with_dt([niet,alleen],
 	modal_adverb,
-	dt(advp,[hd=l(alleen,adverb,1,2),
+	dt(advp,[hd=l(alleen,adverb,advp,1,2),
 		 mod=l(niet,adverb,advp,0,1)
+		])).
+
+%% for
+%% niet alleen Piet woont daar maar ook zijn zus
+with_dt([niet,alleen],
+	adverb,
+	dt(advp,[mod=l(alleen,adverb,advp,1,2),
+		 hd=l(niet,adverb,advp,0,1)
 		])).
 
 with_dt([M,H],adverb,dt(advp,[mod=l(M,Tag,Cat,0,1),
