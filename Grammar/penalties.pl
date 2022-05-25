@@ -301,7 +301,8 @@ triples_to_feature(Triples,q(Feature)) :-
 %% binnen .. tijd
 %% op .. schaal
 %% uit angst [..]
-%% are typically verbal modifiers
+%% in .. hevigheid
+%% are typically verbal modifiers; but this is not really picked up by the model :-(
 
 triples_to_feature(Triples,depprep(HdPos,Rel,Prep,Wijze)) :-
     triple_member(Triples,deprel(HdPos:_,Rel,prep:Prep/Pos)),
@@ -547,23 +548,29 @@ try_penalty_weight(P,S1) :-
 
 tree_penalties(on,tree(A,B,Ds,List),His0,His) :-
     (   var(List)
-    ->  findall(H, tree_penalty(A,B,Ds,H), List)
+    ->  tree_penalties_with_domain(A,B,Ds,List)
     ;   true 
     ),
     append(List,His,His0).
 
 tree_penalties(off,tree(A,B,Ds,Cache),[Cache|His],His) :-
     (   var(Cache)
-    ->  findall(H, tree_penalty(A,B,Ds,H), List0),
-	hdrug_util:hdrug_flag(application_type,Domain),
-	(   Domain == undefined
-	->  List0 = List
-	;   domain_features(List0,List,Domain)
-	),
+    ->  tree_penalties_with_domain(A,B,Ds,List),
 	penalty_weights(List,Weight)
     ;   true
     ),
     Cache=weight(Weight).
+
+tree_penalties_with_domain(A,B,Ds,List) :-
+    hdrug_util:hdrug_flag(application_type,Domain),
+    tree_penalties_with_domain(Domain,A,B,Ds,List).
+
+tree_penalties_with_domain(undefined,A,B,Ds,List) :-
+    !,
+    findall(H, tree_penalty(A,B,Ds,H), List).
+tree_penalties_with_domain(Domain,A,B,Ds,List) :-
+    findall(H, tree_penalty(A,B,Ds,H), List0),
+    domain_features(List0,List,Domain).
 
 tree_penalty(Node,Rule,Ds,H) :-
     syntactic_penalty(Ds,Node,Rule,H).
