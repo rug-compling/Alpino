@@ -74,7 +74,7 @@ test:
               awk '{ N=N+$$2 } END {print N,"parses in total"} '   >>tenfold.log
 	( mv parses parses0 ; $(MAKE) -s parses )
 	grep -w score *.test >>tenfold.log
-	grep phi-score *.test | mean
+	grep phi-score *.test | mean >> tenfold.log
 	echo "END RUN" >> tenfold.log
 	cat tenfold.log >>log
 
@@ -114,7 +114,7 @@ prec:
 %.counts: %.sgz ignore_features
 	zcat $*.sgz\
         | $(ALPINO_HOME)/Disambiguation/count_features\
-        | grep -v -f ignore_features > $*.counts
+        | grep -v -F -f ignore_features > $*.counts
 
 %.zest : %.features
 	zcat p[$($*_PARTS)].sgz |\
