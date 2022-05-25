@@ -9,7 +9,7 @@ VARIANCES=$(shell cat variances)
 MIN_FEATURE_FREQ=$(shell cat min_feature_freq)
 filter_features_flags=
 
-gzs= px.gz pc.gz pp.gz pd.gz pw.gz pZ.gz pi.gz pu.gz pl.gz pe.gz
+gzs= px.gz pc.gz pp.gz pd.gz pw.gz pZ.gz pi.gz pu.gz pl.gz pe.gz pq.gz
 sgzs= $(gzs:%.gz=%.sgz)
 tcounts= $(gzs:%.gz=%.tcounts)
 zests=$(gzs:%.gz=%.zest)
@@ -93,3 +93,4 @@ install:
 	cp pu.weights ../maxent_feature_weights_u.t
 	cp pe.weights ../maxent_feature_weights_e.t
 	cp pl.weights ../maxent_feature_weights_l.t
+	cp pq.weights ../maxent_feature_weights_q.t
