@@ -678,6 +678,8 @@ a([e('Delftse'),
 a([e('Democratische'),
    no_e('Democratisch')],adv,[],[]).
 
+a([both('Deventer')],nonadv,[],[]).
+
 a([e('Dietse'),
    no_e('Diets')],nonadv,[],[]).
 
