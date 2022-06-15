@@ -38,6 +38,7 @@ cdb_test_options= -flag fluency_feature_weights ../Generation/fluency/maxent_fea
 extra_test_options= -flag fluency_feature_weights ../Generation/fluency/maxent_feature_weights_x
 PPH_test_options= -flag fluency_feature_weights ../Generation/fluency/maxent_feature_weights_p
 PPI_test_options= -flag fluency_feature_weights ../Generation/fluency/maxent_feature_weights_i
+qa_test_options= -flag fluency_feature_weights ../Generation/fluency/maxent_feature_weights_q
 dpc-ind_test_options= -flag fluency_feature_weights ../Generation/fluency/maxent_feature_weights_d -flag treebank $(ALPINO_HOME)/Treebank/dpc
 
 
@@ -61,7 +62,7 @@ g4:
 g5:
 	$(MAKE) test suite=lassy
 
-testgsl: g6 g7 g8 g9 g10 g11
+testgsl: g6 g7 g8 g9 g10 g11 g12
 
 g6:
 	$(MAKE) test suite=extra
@@ -75,6 +76,8 @@ g10:
 	$(MAKE) test suite=PPH
 g11:
 	$(MAKE) test suite=PPI
+g12:
+	$(MAKE) test suite=wpspel
 
 tests:
 	$(MAKE) testgsl testgss
