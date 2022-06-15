@@ -2879,6 +2879,10 @@ dt_extract_attributes(Dt,Attributes,Rel) :-
     ;   findall(Att,dt_extract_attribute(Dt,Att),Attributes)
     ).
 
+dt_extract_attribute(Dt,rnum=pl) :-
+    alpino_data:dt(Dt,_,Frame,_,_),
+    lists:member(Frame,[noun(_,_,pl),noun(_,_,pl,_)]).
+
 %% if it cannot be singular, it must be plural
 dt_extract_attribute(Dt,rnum=pl) :-
     alpino_data:dt_num(Dt,Num), 
@@ -3103,7 +3107,7 @@ show_xml_adt_bare(File) :-
     alpino_cg:combine_mwu(ADT0,ADT),
     show(tree(adt),Output,[value(ADT)]).
 
-:- public roundtrip/0, roundtrip/1.
+:- public roundtrip/0, roundtrip/1, nroundtrip/0, proundtrip/0.
 
 hdrug_command(roundtrip,roundtrip(Ref),[Ref]).
 hdrug_command(trip,     roundtrip(Ref),[Ref]).
@@ -3139,8 +3143,9 @@ roundtrip(Ref) :-
     set_flag(robust_attr,frag),  % dt.pl; so the various dp parts of fragments are not connected with puncts
     a_sentence(Ref,_,_),
     set_flag(current_ref,Ref),
-    set_flag(end_hook,adt),
+    set_flag(end_hook,best_score(adt)),
     sen(Ref),
+    veryfast_options,
     set_flag(geneval,on),
     set_flag(print_table_total,on),
     set_flag(compare_object_saving,on),
@@ -3174,7 +3179,7 @@ train_generation(Ref) :-
     a_sentence(Ref,_,_),
     set_flag(current_ref,Ref),
     set_flag(end_hook,best_score(adt)),
-    sen(Ref),
+    parser_comparison(Ref),
     slow_options,
     set_flag(list_all_maxent_features,on),
     set_flag(treex_corrections,off),
@@ -3322,6 +3327,8 @@ hdrug_command_help(psen,"psen Key","paraphrase sentence with key Key").
 hdrug_command_help(pnext,"pnext","paraphrase next sentence").
 hdrug_command_help(pprev,"pprev","paraphrase previous sentence").
 hdrug_command_help(pr,"pr","paraphrase current sentence once more").
+
+:- public pcurrent/0, pnext/0, pprev/0, psen/1.
 
 pcurrent :-
     hdrug_flag(current_ref,Key),
