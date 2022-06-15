@@ -50,6 +50,9 @@ domain_features([H|T],[H|Features0],Domain) :-
     domain_feature(H,Domain,Features0,Features),
     domain_features(T,Features,Domain).
 
+domain_feature(Domain:_,Domain,F0,F):-
+    !,
+    F0=F.
 domain_feature(weight(_W),_,F0,F) :-
     !,
     F0=F.
@@ -968,6 +971,10 @@ lexical_penalty_frame(_,_,Surf,_,Frame,_,f2(Surf,Frame)) :-
 lexical_penalty_frame(_,_,_,_,Frame,_,f1(Frame)).
 lexical_penalty_frame(_,_,Surf,_,Frame,_,z_f2-Score) :-
     z_f2(Surf,Frame,Score).
+lexical_penalty_frame(His,_,_,_,_,_,_):-
+    var(His),
+    !,
+    fail.
 lexical_penalty_frame(His,_,_,_,_Frame,Len,h1(His)) :-
     nonvar(Len), % for generation!
     generate_i(Len).
