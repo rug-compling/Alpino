@@ -103,13 +103,18 @@ dt_if_defined(Cat,DT) ::-
 dt_num(DT,Num) ::-
     DT:num <=> Num.
 
-dt_with_pos(DT,Hwrd,Frame,Cat,Ix,Begin) ::-
+dt_with_hwrd(DT,Hwrd,Frame,Cat,Ix) ::-
     DT => dt,
     DT:hwrd <=> Hwrd,
-    Hwrd:beginpos <?=?> Begin,
     DT:frame <=> Frame,
     DT:cat <=> Cat,
     DT:ix <=> Ix.
+
+
+hwrd_with_pos(Hwrd,Begin) ::-
+    (  Hwrd = []
+    ;  Hwrd:beginpos <=> Begin
+    ).
 
 dt(DT,Hwrd,Frame,Cat,Ix) ::-
     DT => dt,
@@ -343,6 +348,11 @@ syntactic_penalty_cat_d(Cat,er_def) :-
     Cat:subj <=> Subj,
     Subj => np,
     Subj:agr => def.
+
+syntactic_penalty_cat_d(Cat,topic_mod(Hstem)):-
+    Cat => modifier,
+    Cat:sel => to_topic,
+    Cat:hstem <=> Hstem.
 
 %% this one could be employed during first phase of parsing
 syntactic_penalty_cat(Cat,non_subj_np_rel) ::-
