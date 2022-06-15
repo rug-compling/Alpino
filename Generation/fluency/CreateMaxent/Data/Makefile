@@ -1,4 +1,8 @@
-data=px.gz pq.gz pc.gz pp.gz pd.gz pw.gz pi.gz pu.gz pe.gz pl.gz
+include $(ALPINO_HOME)/Makefile.errormining
+LOGS=*.log
+cat=cat
+
+data=px.gz pq.gz pc.gz pp.gz pd.gz pw.gz pi.gz pu.gz pe.gz pl.gz po.gz
 
 data: $(data)
 
@@ -19,6 +23,9 @@ ALPINO=../../../../src/Alpino \
 
 pq.gz:
 	$(ALPINO) -flag suite ../../../../Suites/qa -flag treebank ../../../../Treebank/qa 2>pq.log | gzip > pq.gz
+
+po.gz:
+	$(ALPINO) -flag suite ../../../../Suites/ovistrain -flag treebank ../../../../Treebank/ovis 2>po.log | gzip > po.gz
 
 cgz=c_part00001.cgz c_part00002.cgz c_part00003.cgz c_part00004.cgz c_part00005.cgz c_part00006.cgz c_part00007.cgz c_part00008.cgz c_part00009.cgz c_part00010.cgz c_part00011.cgz c_part00012.cgz c_part00013.cgz c_part00014.cgz c_part00015.cgz c_part00016.cgz c_part00017.cgz c_part00018.cgz c_part00019.cgz c_part00020.cgz c_part00021.cgz c_part00022.cgz c_part00023.cgz c_part00024.cgz c_part00025.cgz c_part00026.cgz c_part00027.cgz c_part00028.cgz c_part00029.cgz c_part00030.cgz c_part00031.cgz c_part00032.cgz c_part00033.cgz c_part00034.cgz c_part00035.cgz c_part00036.cgz c_part00037.cgz c_part00038.cgz c_part00039.cgz c_part00040.cgz c_part00041.cgz c_part00042.cgz c_part00043.cgz c_part00044.cgz c_part00045.cgz c_part00046.cgz c_part00047.cgz c_part00048.cgz c_part00049.cgz c_part00050.cgz c_part00051.cgz c_part00052.cgz c_part00053.cgz c_part00054.cgz c_part00055.cgz c_part00056.cgz c_part00057.cgz c_part00058.cgz c_part00059.cgz c_part00060.cgz c_part00061.cgz c_part00062.cgz c_part00063.cgz c_part00064.cgz c_part00065.cgz c_part00066.cgz c_part00067.cgz c_part00068.cgz c_part00069.cgz c_part00070.cgz c_part00071.cgz c_part00072.cgz
 
