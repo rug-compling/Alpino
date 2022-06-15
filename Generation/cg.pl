@@ -1201,6 +1201,7 @@ combine_rule_edges(Rule,Id1) :-
     dot_movement(EDGE,_NEDGE).
 
 %% 21 44
+:- public combine_edges/2.
 combine_edges(Id1,Id2) :-
     active_edge(IMother,AMother,ABitCode,Rule,APDtrs,AUDtrs,Id1),
     inactive_edge(IMother,IBitCode,Id2),
