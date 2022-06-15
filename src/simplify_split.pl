@@ -766,10 +766,11 @@ lemma_in({Lemma},List):-
 lemma_in(Lemma,List) :-
     lists:member(Lemma,List).
 
-lemma({Lemma},Lem) :-
-    !,
-    lists:member(Lem,Lemma).
-lemma(L,L).%
+%
+%lemma({Lemma},Lem) :-
+%    !,
+%    lists:member(Lem,Lemma).
+%lemma(L,L).%
 
 cp_to_smain(p(cp),CPDS0,CAT,BODYDS) :-
     DAT = tree(r(cmp,adt_lex(_,dat,_,_,_)),[]),
