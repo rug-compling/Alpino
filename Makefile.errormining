@@ -79,6 +79,7 @@ e:
          grep -iw -e killed\
                   -e warning\
 		  -e 'relocation undefined,'\
+		  -e resource_error\
                   -e error\
                   -e segmentation\
                   -e failure    |\
