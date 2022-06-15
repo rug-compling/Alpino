@@ -20,7 +20,6 @@
 
 :- public print_adt_lex/0,
 	  show_adt/3,
-          bitcode_lookup_frames_adt/4,
           adt_to_fs/4,
           dt_to_adt/2.
 

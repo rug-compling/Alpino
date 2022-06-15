@@ -1704,7 +1704,9 @@ unknown_root_heuristic(verb,Root,Root,Attrs,verb(HZ,subjunctive,Sc),_,Surf) :-
 unknown_root_heuristic(verb,Root,_,Attr,Frame,Cat,Surf) :-
     atom_concat(Verb,Rest,Root),
     atom_concat('_',Part,Rest),
-    dict_entry(Part,particle(Part),_),
+    (  dict_entry(Part,particle(Part),_)
+    ;  dict_entry(Part,dir_adverb,_)   % voorover_buigen
+    ),
     pos2frames_aux_robust(Verb,_,verb,Cat,Attr,Frame0,Surfs0),
     add_bare_prefixes(Frame0,Frame,Surfs0,Part,Surfs),
     lists:member(Surf,Surfs).
@@ -1746,17 +1748,17 @@ unknown_root_heuristic(Pos,Pitloos,_,Attr,Frame,_,Surf) :-
     atom_concat(Pit,NoE,Surf),
     alpino_postags:postag_of_frame(Frame,adj,CheckAttr),
     check_attributes(CheckAttr,Attr,adj,Frame,Pitloos).
-
+/*
 %% op een INF (hij zet het op een lopen)
 unknown_root_heuristic(fixed,Root,Root,[],fixed_part(op_een_v),_,FinalSurf) :-
     atom_concat('op een ',Loop,Root),
-    pos2frames(Loop,Loop,verb,_,[],_,Frames),
+    pos2frames(Loop,Loop,verb,_,[],Frames),
     findall(Surfs0,lists:member(verb(_,inf,_)-Surfs0,Frames), SurfsList0),
     sort(SurfsList0,SurfsList1),
     member(Surfs,SurfsList1),
     member(Surf,Surfs),
     concat_all([op,een,Surf], FinalSurf,' ').
-
+*/
 /*
 unknown_root_heuristic(verb,Iseren,_,_,Frame,_,Surf) :-
     atom_concat(Pref,eren,Iseren),
