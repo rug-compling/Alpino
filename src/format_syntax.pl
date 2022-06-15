@@ -138,7 +138,7 @@ tree_to_some_bracketed_string_ds([H|T],S0,S,Sent) :-
 %%%%%%%%% with deriv %%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-:- public format_nderiv_of_obj/1, format_deriv_of_obj/1, format_palm_of_obj/1, format_palm_score_of_obj/1.
+:- public format_nderiv_of_obj/1, format_deriv_of_obj/1, format_palm_of_obj/1, format_palm_score_of_obj/1, format_nderiv_of_obj_unknowns/1.
 
 format_deriv_of_obj(N) :-
     hdrug_flag(current_ref,Key),
