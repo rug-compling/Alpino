@@ -218,12 +218,21 @@ single_valued_daughters([Att/Arg|Atts],List0,List) :-
 dt_to_d(Rel/Node,N0,N,Trees0,Trees):-
     (   var(Node)
     ->  Trees0=Trees,
-	N0=N
+	N0=N,
+	debug_message(1,"warning: variable value for ~w~n",[Rel])
     ;   Node == []
     ->  Trees0=Trees,
 	N0=N 
     ;   Trees0=[TREE|Trees],
-	alpino_data:dt_with_pos(Node,Label,Pos,Cat,Ix,Begin),
+	%%% there was something wrong with hwrd/fwrd in with_dt
+	%%% train_generation('WS-U-E-A-0000000040.p.4.s.1').
+	%%% solved by instantiating hwrd to be [] for some categories in lex_types.gram l 7787
+	%%% also h_suite/866 gave multiple solutions - solved by initializing dt in van_en rule
+	alpino_data:dt_with_hwrd(Node,Label,Pos,Cat,Ix),
+	(   var(Label)
+	->  debug_message(3,"warning: variable hwrd in ~w~n",[Rel/Node])
+	;   alpino_data:hwrd_with_pos(Label,Begin)
+	),
 	(   var(Ix)
 	->  Ix=i(N0,_), N1 is N0+1,
 	    TREE=tree(Rel/Cat,Ix,Ds),
