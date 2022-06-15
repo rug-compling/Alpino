@@ -190,6 +190,17 @@ alpino_data:ld_pp(_).
 alpino_data:def(_).
 alpino_data:indef(_).
 alpino_data:vp(_).
+alpino_data:not_dropped_fir(_).
+alpino_data:not_dropped_thi(_).
+alpino_data:not_dropped_sg(_).
+alpino_data:not_dropped_pl(_).
+alpino_data:dropped_fir(_).
+alpino_data:dropped_thi(_).
+alpino_data:dropped_sg(_).
+alpino_data:dropped_pl(_).
+alpino_data:dt_with_hwrd(_,_,_,_,_).
+alpino_data:hwrd_with_pos(_,_).
+
 
 alpino_lex:inv_spelling_variant(_,_).
 alpino_lex:inv_spelling_variant21(_,_,_).
