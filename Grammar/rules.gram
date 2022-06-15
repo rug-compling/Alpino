@@ -6690,6 +6690,7 @@ grammar_rule(sbar_want_dip_q2,SBAR, [ QL1,Comp,QR1,OPTCOMMA1,DIP,OPTCOMMA2,QL2,R
 %% sbar --> comp vp
 grammar_rule(sbar(al), SBAR, [ Comp, SV1 ]) :-
     SBAR => sbar, Comp => comp, SV1 => sv1,
+    SBAR:sel => ~to_topic,	% *al was hij moe vertrok hij
     SV1:iexs => [],
     SV1:imexs => [],
     cmp_body_structure(Comp,SV1,SBAR).
@@ -9483,6 +9484,8 @@ grammar_rule(van_en,NP4,[NP1,Van,En,NP2,Op,NP3]) :-
     Conj1:dt <=> Conj1Dt,
     Conj2:dt <=> Conj2Dt,
     NP:dt => dt,
+    initialize_dt([crd,cnj],NP),
+    NP:dt:hwrd => [],
     NP:dt:crd <=> [EnDt],
     NP:dt:cnj <=> [Conj1Dt,Conj2Dt],
     unify_except(NP,NP4,hstem).

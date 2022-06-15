@@ -1025,7 +1025,7 @@ a_lex(denk_ik_dip,Sign) :-
 
 hstem(Sign) :-
     Sign:dt => dt,
-    Sign:dt:hwrd:lexical <=> Lexical,
+    Sign:dt:fwrd:lexical <=> Lexical,
     Lexical <?=?> Sign:hstem.
 
 noun_features(De,MC,Num,Sign) :-
