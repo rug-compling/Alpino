@@ -7750,7 +7750,7 @@ what_with_rest(_Deriv,Sign,Dt,AppRest,ModRest,DetRest,PmRest,Dp) :-
 
 construct_dt_node(dt(InCat,List),Dt,Dt,P0,D0,D,A0,A,M0,M,Sv0,Sv,Pm0,Pm,
 		  Cn0,Cn,Cr0,Cr,Mwp0,Mwp,F,Dp0,Dp,Dt0,Init0,Init) :-
-    construct_dt_cat(InCat,Dt,Dt0),
+    construct_dt_cat_without_hwrd(InCat,Dt,Dt0),
     construct_dt_list(List,Dt,P0,D0,D,A0,A,M0,M,Sv0,Sv,Pm0,Pm,
 		      Cn0,Cn,Cr0,Cr,Mwp0,Mwp,F,Dp0,Dp,Dt0,Init0,Init).
 construct_dt_node(orig(Path),_,Dt,_,D,D,A,A,M,M,S,S,P,P,
@@ -7779,11 +7779,20 @@ first_att(Path,First) :-
     ;   Path = (First:_Rest)
     ).
 
-construct_dt_cat(orig(Path),Dt,Dt0) :-
+construct_dt_cat_without_hwrd(Pat,DT,Orig) :-
+    construct_dt_cat(Pat,DT,Orig,Val),
+    (   lists:member(Val,[du,whq,rel,whrel,whsub,ahi,cp,conj,ti,oti])
+    ->  DT:hwrd => []
+    ;   true
+    ).
+    
+
+construct_dt_cat(orig(Path),Dt,Dt0,[]) :-
     !,
     Dt:cat <=> Dt0:Path.
-construct_dt_cat(Val,DT,_) :-
+construct_dt_cat(Val,DT,_,Val) :-
     DT:cat ==> Val.
+		    
 
 construct_lexical_node(ix(Dt,Node),Dt,P0,F,Orig) :-
     construct_lexical_node(Node,Dt,P0,F,Orig).
@@ -7817,7 +7826,7 @@ construct_lexical_node(l(Word0,Pos,Cat,R0,R),Dt,P0,_F,Orig) :-
 %    when(nonvar(P0),( S0 is P0 + R0, S is P0 + R )),
     when(nonvar(P0), construct_pos(P0,R0,S0)),
     when(nonvar(P0), construct_pos(P0,R, S )),
-    construct_dt_cat(Cat,Dt,Orig),
+    construct_dt_cat(Cat,Dt,Orig,_),
     Dt:frame ==> Pos,
     Dt:hwrd:beginpos <=> S0,
     Dt:hwrd:endpos <=> S,
