@@ -99,7 +99,7 @@ additional_weight(para_gtm,-3).
 
 additional_weight(q(q),        -2.0).
 additional_weight(q(yesno),    -2.0).
-additional_weight(coord(en,sg), 1.0).
+%additional_weight(coord(en,sg), 1.0).
 
 /*
 additional_weight(r1(imp_mod_imp), 1.0).
