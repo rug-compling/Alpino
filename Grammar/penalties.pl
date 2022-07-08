@@ -270,7 +270,10 @@ triples_to_feature(Triples,appos_person(TYPE,Noun)) :-
 
 %% it is a wh question
 triples_to_feature(Triples,q(Feature)) :-
-    triple_member(Triples,deprel(WH,whd/body,Body)),
+    tf(Triples,q(Feature)).
+
+tf(Triples,q(Feature)) :-
+    member(deprel(WH,whd/body,Body),Triples),
     find_wh_trace(Body,WH,Arg,Rel,Triples,[Body]),
     find_wh_word(WH,Triples,WHword,[WH]),
     Arg = _:VERB/_,
@@ -352,12 +355,17 @@ wh_pos(det(rwh)).
 wh_pos(noun(_,ywh)).
 wh_pos(pp(waar)).
 
+/*
 find_wh_trace(Body,WH,Body,Rel,Triples,_) :-
     member(deprel(Body,Rel,WH),Triples).
 find_wh_trace(Body,WH,Arg,Rel,Triples,His) :-
     member(deprel(Body,_,Body2),Triples),
     \+ member(Body2,His),
     find_wh_trace(Body2,WH,Arg,Rel,Triples,[Body2|His]).
+*/
+
+find_wh_trace(_,WH,Arg,Rel,Triples,_):-
+    member(deprel(Arg,Rel,WH),Triples).
 
 integrate_corpus_frequency_features(His0, His) :-
     findall(Feature,integrate_corpus_frequency_feature(His0,Feature),His1),
